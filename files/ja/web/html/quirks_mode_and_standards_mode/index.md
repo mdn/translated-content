@@ -1,16 +1,8 @@
 ---
 title: 後方互換モードと標準準拠モード
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
-tags:
-  - Gecko
-  - Guide
-  - HTML
-  - NeedsUpdate
-  - Web Development
-  - Web Standards
-  - XHTML
-translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
+
 {{HTMLRef}}
 
 かつてウェブでは、よく 2 つのバージョンのページを作成していました。ひとつは Netscape Navigator 向け、もうひとつは Microsoft Internet Explorer 向けです。W3C がウェブ標準を作成したとき、ウェブ上のほとんどの既存サイトの表示が壊れるため、ブラウザーはウェブ標準を採用し始めることができませんでした。そのためブラウザーは、標準に準拠した新しいサイトと以前の古いサイトを区別して扱うために、2 つのモードを導入しました。

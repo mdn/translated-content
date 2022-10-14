@@ -1,15 +1,8 @@
 ---
 title: 関数式
 slug: Web/JavaScript/Reference/Operators/function
-tags:
-  - Function
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Primary Expressions
-browser-compat: javascript.operators.function
-translation_of: Web/JavaScript/Reference/Operators/function
 ---
+
 {{jsSidebar("Operators")}}
 
 **`function`** キーワードは、式の中で関数を定義するために使用されます。

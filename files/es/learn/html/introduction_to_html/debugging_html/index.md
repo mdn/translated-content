@@ -73,9 +73,9 @@ HTML en sí mismo no suele producir errores sintácticos porque los navegadores 
 
 Es hora de estudiar la naturaleza permisiva del código HTML por nosotros mismos.
 
-1.  En primer lugar, hagamos una copia de nuestro [ejemplo-demo a depurar](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) y guardémoslo de forma local. Está escrito para generar diversos errores que deberemos descubrir (se dice que el marcado de HTML está **mal formado**, en contraposición a un marcado **bien formado**).
-2.  A continuación, abrámoslo en un navegador; veremos lo siguiente:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](https://mdn.mozillademos.org/files/12437/badly-formed-html.png)
-3.  No parece que esté bien; veamos el código fuente para ver qué podemos hacer (solo mostramos el contenido del \<body>):
+1. En primer lugar, hagamos una copia de nuestro [ejemplo-demo a depurar](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) y guardémoslo de forma local. Está escrito para generar diversos errores que deberemos descubrir (se dice que el marcado de HTML está **mal formado**, en contraposición a un marcado **bien formado**).
+2. A continuación, abrámoslo en un navegador; veremos lo siguiente:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](https://mdn.mozillademos.org/files/12437/badly-formed-html.png)
+3. No parece que esté bien; veamos el código fuente para ver qué podemos hacer (solo mostramos el contenido del \<body>):
 
     ```html
     <h1>HTML debugging examples</h1>
@@ -96,16 +96,16 @@ Es hora de estudiar la naturaleza permisiva del código HTML por nosotros mismos
     </ul>
     ```
 
-4.  Veamos qué problemas podemos descubrir:
+4. Veamos qué problemas podemos descubrir:
 
     - El elemento {{htmlelement("p")}} y el {{htmlelement("li")}} no tienen etiquetas de cierre. Si comprobamos el resultado, no parece que haya generado un efecto grave en la representación del lenguaje de marcado, porque es fácil deducir que donde un elemento acaba, debería comenzar otro.
     - El primer elemento {{htmlelement("strong")}} no tiene etiqueta de cierre. Este resulta ser un poco más problemático porque no es fácil deducir dónde se supone que termina el elemento. De hecho, el énfasis fuerte se ha aplicado al resto del texto.
     - Esta sección está mal anidada: `<strong>strong <em>strong emphasised?</strong> what is this?</em>`. No es fácil de explicar la forma en que ha sido interpretado, debido al problema anterior.
     - Al valor del atributo {{htmlattrxref("href","a")}} le faltan las comillas de cierre. Esto parece haber causado el problema más grave: el enlace ha desaparecido totalmente.
 
-5.  Ahora veamos lo que el navegador ha mostrado en contraposición al código fuente. Para ello podemos usar las herramientas de desarrollo del navegador. Si no estamos familiarizados con el uso de estas herramientas, echemos un vistazo rápido a [Descubrir las herramientas de desarrollo del navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), y luego continuaremos.
-6.  En el inspector de objetos (DOM), puedes comprobar la apariencia de cada elemento: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](https://mdn.mozillademos.org/files/12439/html-inspector.png)
-7.  Vamos a explorar nuestro código en detalle con el inspector de objetos DOM para ver cómo el navegador ha arreglado nuestros errores de código HTML (lo hemos hecho con Firefox; otros navegadores modernos deberían conducir al mismo resultado):
+5. Ahora veamos lo que el navegador ha mostrado en contraposición al código fuente. Para ello podemos usar las herramientas de desarrollo del navegador. Si no estamos familiarizados con el uso de estas herramientas, echemos un vistazo rápido a [Descubrir las herramientas de desarrollo del navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), y luego continuaremos.
+6. En el inspector de objetos (DOM), puedes comprobar la apariencia de cada elemento: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](https://mdn.mozillademos.org/files/12439/html-inspector.png)
+7. Vamos a explorar nuestro código en detalle con el inspector de objetos DOM para ver cómo el navegador ha arreglado nuestros errores de código HTML (lo hemos hecho con Firefox; otros navegadores modernos deberían conducir al mismo resultado):
 
     - Se han añadido etiquetas de cierre a los párrafos y las líneas de las listas.
     - Al no estar claro el final del elemento `<strong>`, el navegador lo ha aplicado individualmente a todos los bloques de texto siguientes, a cada uno le ha añadido su etiqueta `strong` propia, desde donde está ¡hasta el final del documento!
@@ -141,10 +141,10 @@ Para validar el HTML, podemos proporcionar al validador una dirección web a la 
 
 Vamos a probar de validar nuestro [documento ejemplo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html).
 
-1.  Primero, cargamos el [servicio de validación](https://validator.w3.org/) en una pestaña del navegador, si no lo tenemos ya.
-2.  Hacemos clic en la subpestaña [Validate by Direct Input](https://validator.w3.org/#validate_by_input).
-3.  Copiamos el código del documento ejemplo (no solo el `body`) y lo pegamos en el cuadro de texto grande.
-4.  Hacemos clic en el botón _Check_.
+1. Primero, cargamos el [servicio de validación](https://validator.w3.org/) en una pestaña del navegador, si no lo tenemos ya.
+2. Hacemos clic en la subpestaña [Validate by Direct Input](https://validator.w3.org/#validate_by_input).
+3. Copiamos el código del documento ejemplo (no solo el `body`) y lo pegamos en el cuadro de texto grande.
+4. Hacemos clic en el botón _Check_.
 
 Esto debería proporcionar una lista de errores y otras informaciones:
 
@@ -161,7 +161,7 @@ La lista de mensajes de error que nos presenta el validador suele ayudar, pero a
 - "End of file reached when inside an attribute value. Ignoring tag": Esta es bastante enigmática; se refiere al hecho de que el valor de un atributo no ha sido bien construido, posiblemente cerca del final del archivo porque el final aparece dentro del valor del atributo. El hecho de que el navegador no muestre el enlace nos debería dar una buena pista de qué elemento es el erróneo.
 - "End of file seen and there were open elements": Este es un poco ambiguo, pero básicamente se refiere al hecho de que hay elementos abiertos que necesitan ser cerrados adecuadamente. Los números de línea apuntan a las últimas líneas del archivo, y este mensaje de error viene con una línea de código que indica un ejemplo de un elemento abierto:
 
-      example: `<a href="https://www.mozilla.org/>link to Mozilla homepage</a> ↩ </ul>↩ </body>↩</html>`
+  example: `<a href="https://www.mozilla.org/>link to Mozilla homepage</a> ↩ </ul>↩ </body>↩</html>`
 
   > **Nota:** Un atributo al que le falten las comillas de cierre puede ser un elemento abierto, porque el resto del documento será interpretado como si fuera parte de este atributo.
 

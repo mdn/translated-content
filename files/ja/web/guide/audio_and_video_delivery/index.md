@@ -1,14 +1,8 @@
 ---
 title: 音声と動画の配信
 slug: Web/Guide/Audio_and_video_delivery
-tags:
-  - Audio
-  - HTML5
-  - Media
-  - NeedsTranslation
-  - Video
-translation_of: Web/Guide/Audio_and_video_delivery
 ---
+
 「静的」メディアファイルからアダプティブライブストリームまで、さまざまな方法で Web 上にオーディオとビデオを配信できます。この記事は、Web ベースのメディアのさまざまな配信メカニズムおよび一般的なブラウザとの互換性を探るための出発点として意図されています。
 
 ## The Audio and Video Elements
@@ -20,10 +14,10 @@ Whether we are dealing with pre-recorded audio files or live streams, the mechan
 
 To deliver video and audio, the general workflow is usually something like this:
 
-1.  Check what format the browser supports via feature detection (usually a choice of two, as stated above.)
-2.  If the browser doesn't support playback of any of the provided formats natively, provide a fallback (such as a Flash movie.)
-3.  Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
-4.  Deliver the media file to the player.
+1. Check what format the browser supports via feature detection (usually a choice of two, as stated above.)
+2. If the browser doesn't support playback of any of the provided formats natively, provide a fallback (such as a Flash movie.)
+3. Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
+4. Deliver the media file to the player.
 
 ### HTML Audio
 
@@ -41,7 +35,7 @@ To deliver video and audio, the general workflow is usually something like this:
 
 The code above will create an audio player that attempts to preload as much audio as possible for smooth playback.
 
-> **Note:** The preload attribute may be ignored by some mobile browsers.
+> **メモ:** The preload attribute may be ignored by some mobile browsers.
 
 For further info see [Cross Browser Audio Basics (HTML5 Audio In Detail)](/ja/Apps/Build/Manipulating_media/Cross-browser_audio_basics#HTML5_audio_in_detail)
 
@@ -65,7 +59,7 @@ For further info see [Cross Browser Audio Basics (HTML5 Audio In Detail)](/ja/Ap
 
 The code above creates a video player of dimensions 640x480 pixels, displaying a poster image until the video is played. We instruct the video to autoplay but to be muted by default.
 
-> **Note:** The autoplay attribute may be ignored by some mobile browsers.
+> **メモ:** The autoplay attribute may be ignored by some mobile browsers.
 
 For further info see [\<video> element](/ja/docs/Web/HTML/Element/video) and [Creating a cross-browser video player](/ja/Apps/Build/Manipulating_media/cross_browser_video_player).
 
@@ -107,7 +101,7 @@ myAudio.play();
 
 We set the source of the audio depending on the type of audio file the browser supports, then set the play-head 5 seconds in and attempt to play it.
 
-> **Note:** Play will be ignored by some mobile browsers unless issued by a user-initiated event.
+> **メモ:** Play will be ignored by some mobile browsers unless issued by a user-initiated event.
 
 It's also possible to feed an {{ htmlelement("audio") }} element a base64 encoded WAV file, allowing to generate audio on the fly:
 
@@ -248,7 +242,7 @@ New formats and protocols are being rolled out to facilitate adaptive streaming.
 
 The main formats used for adaptive streaming are [HLS](/ja/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#HLS) and [MPEG-DASH](/ja/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#MPEG-DASH). MSE has been designed with DASH in mind. MSE defines byte streams according to [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) and [M2TS](http://en.wikipedia.org/wiki/M2ts) (both supported in DASH, the latter supported in HLS). Generally speaking, if you are interested in standards, are looking for flexibility, or wish to support most modern browsers, you are probably better off with DASH.
 
-> **Note:** Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.
+> **メモ:** Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.
 
 DASH also provides a number of profiles including simple onDemand profiles that no preprocessing and splitting up of media files. There are also a number of cloud based services that will convert your media to both HLS and DASH.
 
@@ -349,16 +343,16 @@ The time can be specified as a number of seconds (as a floating-point value) or 
 
 A few examples:
 
-- http\://example.com/video.ogv#t=10,20
+- `http://example.com/video.ogv#t=10,20`
   - : Specifies that the video should play the range 10 seconds through 20 seconds.
-- http\://example.com/video.ogv#t=,10.5
+- `http://example.com/video.ogv#t=,10.5`
   - : Specifies that the video should play from the beginning through 10.5 seconds.
-- http\://example.com/video.ogv#t=,02:00:00
+- `http://example.com/video.ogv#t=,02:00:00`
   - : Specifies that the video should play from the beginning through two hours.
-- http\://example.com/video.ogv#t=60
+- `http://example.com/video.ogv#t=60`
   - : Specifies that the video should start playing at 60 seconds and play through the end of the video.
 
-> **Note:** The playback range portion of the media element URI specification was added to Gecko 9.0 {{ geckoRelease("9.0") }}. At this time, this is the only part of the [Media Fragments URI specification](http://www.w3.org/TR/media-frags/) implemented by Gecko, and it can only be used when specifying the source for media elements, and not in the address bar.
+> **メモ:** The playback range portion of the media element URI specification was added to Gecko 9.0 {{ geckoRelease("9.0") }}. At this time, this is the only part of the [Media Fragments URI specification](http://www.w3.org/TR/media-frags/) implemented by Gecko, and it can only be used when specifying the source for media elements, and not in the address bar.
 
 ## Error handling
 
@@ -516,15 +510,15 @@ A number of audio and video JavaScript libaries exist. The most popular librarie
 ## Advanced tutorials
 
 - [Adding captions and subtitles to HTML5 video](/ja/Apps/Build/Manipulating_media/Adding_captions_and_subtitles_to_HTML5_video)
-  - : This article explains how to add captions and subtitles to HTML5 {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/ja/docs/Web/API/Web_Video_Text_Tracks_Format "WebVTT is a format for displaying timed text tracks (e.g. subtitles) with the <track> element. The primary purpose of WebVTT files is to add subtitles to a <video>.") and the {{ htmlelement("track") }} element.
-- [Writing Web Audio API code that works in every browser](/ja/docs/Web/Apps/Developing/Manipulating_media/Web_Audio_API_cross_browser "/en-US/docs/Web/Apps/Developing/Manipulating_media/Web_Audio_API_cross_browser")
+  - : This article explains how to add captions and subtitles to HTML5 {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/ja/docs/Web/API/Web_Video_Text_Tracks_Format) and the {{ htmlelement("track") }} element.
+- [Writing Web Audio API code that works in every browser](/ja/docs/Web/Apps/Developing/Manipulating_media/Web_Audio_API_cross_browser)
   - : A guide to writing cross browser Web Audio API code.
 - [H.264 support in Firefox](/ja/Apps/Developing/Manipulating_media/H.264_support_in_Firefox)
   - : This article explains the state of support for the H.264 video format in Firefox/Firefox OS, including code examples, tips and tricks.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
   - : Explains the basics of using the MediaRecorder API to directly record a media stream.
 
-> **Note:** Firefox OS versions 1.3 and above support the [RTSP](http://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol) protocol for streaming video delivery. A fallback solution for older versions would be to use `<video>` along with a suitable format for Gecko (such as WebM) to serve fallback content. More information will be published on this in good time.
+> **メモ:** Firefox OS versions 1.3 and above support the [RTSP](http://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol) protocol for streaming video delivery. A fallback solution for older versions would be to use `<video>` along with a suitable format for Gecko (such as WebM) to serve fallback content. More information will be published on this in good time.
 
 ## References
 

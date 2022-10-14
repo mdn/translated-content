@@ -1,14 +1,8 @@
 ---
 title: URL.username
 slug: Web/API/URL/username
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - username
-translation_of: Web/API/URL/username
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`username`** プロパティは、ドメイン名の前に指定されたユーザー名を含む {{domxref("USVString")}} です。

@@ -1,17 +1,8 @@
 ---
 title: MessageEvent.origin
 slug: Web/API/MessageEvent/origin
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - プロパティ
-  - リファレンス
-  - messaging
-  - origin
-browser-compat: api.MessageEvent.origin
-translation_of: Web/API/MessageEvent/origin
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`origin`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、メッセージ送信元のオリジンを表す {{domxref("USVString")}} です。

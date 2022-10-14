@@ -1,14 +1,8 @@
 ---
 title: WeakSet.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 ---
+
 {{JSRef}}
 
 **`delete()`** メソッドは、`WeakSet` オブジェクトから指定された要素を取り除きます。

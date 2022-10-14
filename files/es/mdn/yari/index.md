@@ -6,7 +6,7 @@ original_slug: MDN/Kuma
 ---
 {{MDNSidebar}}
 
-Kuma es la plataforma wiki que impulsa Mozilla Developer Network. Es una plataforma open source escrita en [Python](http://www.python.org/ "http://www.python.org/") usando el framework [Django](https://www.djangoproject.com/).
+Kuma es la plataforma wiki que impulsa Mozilla Developer Network. Es una plataforma open source escrita en [Python](http://www.python.org/) usando el framework [Django](https://www.djangoproject.com/).
 
 ## Documentación de Kuma
 
@@ -28,7 +28,7 @@ Artículos antiguos para clasificar:
 
 ## Herramientas y tareas
 
-- [Bugs](https://bugzilla.mozilla.org/buglist.cgi?cmdtype=dorem&remaction=run&namedcmd=mdn-backlog&sharer_id=416309&list_id=6206936 "https://bugzilla.mozilla.org/buglist.cgi?cmdtype=dorem&remaction=run&namedcmd=mdn-backlog&sharer_id=416309&list_id=6206936")
+- [Bugs](https://bugzilla.mozilla.org/buglist.cgi?cmdtype=dorem&remaction=run&namedcmd=mdn-backlog&sharer_id=416309&list_id=6206936)
   - Una lista de los bugs de Kuma. Sientase libre para buscar lo que quiera y lo que quieras arreglas! _Este link requiere que entres en Bugzilla con su respectiva cuenta._
 - [Reportar un bug](https://bugzilla.mozilla.org/enter_bug.cgi?product=Mozilla%20Developer%20Network)
   - Si usted tiene un problema con Kuma, o tiene una idea para hacerlo mejor, ¡tú puedes reportar un bug!

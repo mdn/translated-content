@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/strong
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<strong>`** indique que le texte a une importance particulière ou un certain sérieux voire un caractère urgent. Cela se traduit généralement par un affichage en gras.
@@ -126,15 +127,11 @@ En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'�
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-strong-element', '&lt;strong&gt;')}}             | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-strong-element', '&lt;strong&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'struct/text.html#edef-STRONG', '&lt;strong&gt;')}}                     | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.strong")}}
+{{Compat}}
 
 ## Voir aussi
 

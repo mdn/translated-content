@@ -1,9 +1,6 @@
 ---
 title: Client-Server overview
 slug: Learn/Server-side/First_steps/Client-Server_overview
-tags:
-  - 서버측 프로그래밍
-translation_of: Learn/Server-side/First_steps/Client-Server_overview
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 

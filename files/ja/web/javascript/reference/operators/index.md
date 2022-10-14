@@ -1,15 +1,8 @@
 ---
 title: 式と演算子
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - JavaScript
-  - Landing page
-  - 演算子
-  - 概要
-  - Reference
-browser-compat: javascript.operators
-translation_of: Web/JavaScript/Reference/Operators
 ---
+
 {{JSSidebar("Operators")}}
 
 この節では、JavaScript 言語のすべての演算子、式、キーワードについて記述しています。
@@ -130,7 +123,7 @@ JavaScript の基本的なキーワードと一般的な式です。
 - {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
   - : 大なりイコール演算子です。
 
-> **Note:** `=>` は演算子ではなく、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)のための記法です。
+> **メモ:** `=>` は演算子ではなく、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)のための記法です。
 
 <h3 id="Equality_operators">等値演算子</h3>
 

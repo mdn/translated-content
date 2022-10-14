@@ -15,7 +15,9 @@ translation_of: Web/API/RTCPeerConnection/restartIce
 
 ## Syntax
 
-    RTCPeerConnection.restartIce();
+```js
+RTCPeerConnection.restartIce();
+```
 
 ### 매개변수
 

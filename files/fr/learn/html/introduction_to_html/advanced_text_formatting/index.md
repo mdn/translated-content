@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 original_slug: Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks", "Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML")}}
 
 Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'ont pas été mentionnés dans l'article [Les concepts fondamentaux du HTML liés au texte](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals). Les éléments abordés ici sont moins connus mais tout aussi utiles (et ce n'est aucunement une liste complète). Nous voyons ici comment marquer des citations, des listes de description, du code informatique et autres choses relatives au texte : indices et exposants, informations de contact, etc.
@@ -298,8 +299,8 @@ Il est temps de faire un autre apprentissage actif&nbsp;! Dans cet exemple, nous
 
 L'origine des citations dont vous aurez besoin se trouvent aux pages&nbsp;:
 
-- http\://www\.brainyquote.com/quotes/authors/c/confucius.html pour la citation de Confucius,
-- http\://www\.affirmationsforpositivethinking.com/index.html pour «&nbsp;The Need To Eliminate Negative Self Talk&nbsp;» (_De la nécessité d'éliminer un discours négatif sur soi‑même_).
+- `http://www.brainyquote.com/quotes/authors/c/confucius.html` pour la citation de Confucius,
+- `http://www.affirmationsforpositivethinking.com/index.html` pour «&nbsp;The Need To Eliminate Negative Self Talk&nbsp;» (_De la nécessité d'éliminer un discours négatif sur soi‑même_).
 
 Si vous faites une erreur, vous pourrez toujours tout réinitialiser en pressant le bouton de même nom. Si vous êtes vraiment bloqué, pressez le bouton _Voir la solution_ pour obtenir la réponse.
 

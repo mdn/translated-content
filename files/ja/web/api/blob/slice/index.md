@@ -1,20 +1,8 @@
 ---
 title: Blob.slice()
 slug: Web/API/Blob/slice
-tags:
-  - API
-  - Blob
-  - File
-  - File API
-  - Method
-  - Reference
-  - Section
-  - Subset
-  - data
-  - slice
-  - split
-translation_of: Web/API/Blob/slice
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}} インターフェイスの **`slice()`** メソッドは、呼び出された blob のサブセットのデータを含む新しい `Blob` オブジェクトを作成して返します。

@@ -1,17 +1,8 @@
 ---
 title: webNavigation
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - webNavigation
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation
 ---
+
 {{AddonSidebar}}
 
 ナビゲーションのいろいろな段階でイベントリスナーを追加します。ナビゲーションにはある URL から他に移動するブラウザーフレームにより成り立っていて、それは(いつもではなく)通常はリンクのクリックやロケーションバーへの URL 入力といったユーザー操作の応答として発生します。
@@ -85,7 +76,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

@@ -1,14 +1,8 @@
 ---
 title: マージンの相殺の習得
 slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Reference
-spec-urls: https://www.w3.org/TR/CSS22/box.html#collapsing-margins
-translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 ---
+
 {{CSSRef}}
 
 ブロックの[上端](/ja/docs/Web/CSS/margin-top)と[下端](/ja/docs/Web/CSS/margin-bottom)のマージンは、それぞれのマージンの最も大きい寸法 (または等しい場合はいずれか 1 つ) の単一のマージンに結合される (折り畳まれる、collapsed) ことがあり、**マージンの相殺**という動作として知られています。なお、[浮動](/ja/docs/Web/CSS/float)要素と[絶対位置指定](/ja/docs/Web/CSS/position#types_of_positioning)要素では折り畳まれません。

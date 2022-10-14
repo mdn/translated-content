@@ -4,6 +4,7 @@ slug: Learn/CSS/Building_blocks/The_box_model
 translation_of: Learn/CSS/Building_blocks/The_box_model
 original_slug: Apprendre/CSS/Building_blocks/Le_modele_de_boite
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
 
 En CSS, tout élément est inclus dans une boîte ("_box_" en anglais). Comprendre le fonctionnement de ces boîtes est essentiel pour maîtriser la mise en page CSS ainsi que le positionement des éléments d'une page HTML. Dans cette leçon, nous verrons en détails le _Modèle de Boîtes CSS_ - son fonctionnement ainsi que sa terminologie - pour vous permettre de réaliser des mises en pages plus complexes.

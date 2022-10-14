@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/Accessibility/Mobile
 original_slug: Apprendre/a11y/Mobile
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
 
 L'accès Web sur les appareils mobiles étant si populaire et les plates-formes populaires telles qu'IOS et Android disposant d'outils d'aide à l'accessibilité complets, il est important de prendre en compte l'accessibilité de votre contenu Web sur ces plates-formes. Cet article examine les considérations relatives à l'accessibilité spécifiques aux mobiles.

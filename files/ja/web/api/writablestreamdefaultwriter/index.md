@@ -1,16 +1,8 @@
 ---
 title: WritableStreamDefaultWriter
 slug: Web/API/WritableStreamDefaultWriter
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - Streams
-  - Streams API
-  - WritableStream
-translation_of: Web/API/WritableStreamDefaultWriter
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 [Streams API](/ja/docs/Web/API/Streams_API) の **`WritableStreamDefaultWriter`** インターフェイスは、{{domxref("WritableStream.getWriter()")}} によって返されるオブジェクトであり、作成されるとライターを `WritableStream` にロックし、他のストリームが基になるシンクに書き込めないようにします。

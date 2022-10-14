@@ -1,15 +1,6 @@
 ---
 title: '<body>: 文書の本文要素'
 slug: Web/HTML/Element/body
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Sectioning Root Element
-  - Sections
-  - Web
-browser-compat: html.elements.body
-translation_of: Web/HTML/Element/body
 ---
 
 {{HTMLRef}}

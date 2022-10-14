@@ -34,7 +34,7 @@ Recientemente, la popularidad de JavaScript se ha expandido aún más gracias a 
 
 ### Aprende JavaScript
 
-- {{Link("/es/docs/Web/JavaScript/Guide")}} en MDN
+- [Guía de JavaScript](/es/docs/Web/JavaScript/Guide) en MDN
 - [El taller de "javascripting" en NodeSchool](http://nodeschool.io/#workshoppers)
 - [El curso de JavaScript en codecademy.com](https://www.codecademy.com/tracks/javascript)
 - [_Aprendizaje avanzado de JavaScript_](http://ejohn.org/apps/learn/) de John Resig
@@ -42,5 +42,5 @@ Recientemente, la popularidad de JavaScript se ha expandido aún más gracias a 
 ### Referencia técnica
 
 - [El último estándar ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
-- {{Link("/es/docs/Web/JavaScript/referencia")}} en MDN
+- [Referencia de JavaScript](/es/docs/Web/JavaScript/referencia) en MDN
 - [El libro _JavaScript elocuente_](http://eloquentjavascript.net/)

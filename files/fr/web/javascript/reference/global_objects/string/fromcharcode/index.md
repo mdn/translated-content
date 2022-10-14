@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/fromCharCode
 ---
+
 {{JSRef}}
 
 La méthode statique **`String.fromCharCode()`** renvoie une chaîne de caractères créée à partir de points de code UTF-16.
@@ -72,16 +73,11 @@ Bien qu'il y ait une relation mathématique entre la valeur composée et les deu
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.3.2', 'StringfromCharCode')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-string.fromcharcodes', 'String.fromCharCode')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-string.fromcharcodes', 'String.fromCharCode')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.fromCharCode")}}
+{{Compat}}
 
 ## Voir aussi
 

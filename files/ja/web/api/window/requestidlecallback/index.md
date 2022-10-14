@@ -1,21 +1,15 @@
 ---
 title: requestIdleCallback
 slug: Web/API/Window/requestIdleCallback
-tags:
-  - API
-  - HTML DOM
-  - JavaScript timer
-  - Reference
-  - Window
-translation_of: Web/API/Window/requestIdleCallback
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 **`window.requestIdleCallback()`** メソッドを利用すると、ブラウザーがアイドル状態の時に実行される関数をキューに登録できます。これにより、アニメーションや入力への応答など、遅延が問題となる処理に影響を与えることなく、優先度の低いバックグラウンド処理をメインスレッド内で実行させられます。キューに登録された関数は、関数登録時に設定したタイムアウト時間（`timeout`）に達していない限り、登録順に呼び出されます。
 
 `requestIdleCallback()` をアイドルコールバック関数からコールし、次のイベントループ以降で実行されるようにスケジュールもできます。
 
-> **Note:** `timeout` は必須のタスクにおいては設定することを強くおすすめします。設定しない場合、コールバックが実行するまでに数秒かかってしまう可能性もあるからです。
+> **メモ:** `timeout` は必須のタスクにおいては設定することを強くおすすめします。設定しない場合、コールバックが実行するまでに数秒かかってしまう可能性もあるからです。
 
 ## 構文
 

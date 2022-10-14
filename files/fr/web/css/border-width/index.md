@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-width
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`border-width`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui définit la largeur de la bordure d'un élément.
@@ -70,9 +71,13 @@ La propriété `border-width` peut être définie avec une, deux, trois ou quatr
 
     La spécification ne définit pas précisément l'épaisseur correspondante à chacun de ces mots-clés, les rendant dépendants de l'implémentation. Toutefois, la spécification indique que l'épaisseur doit suivre la relation d'inégalité suivante : `thin ≤ medium ≤ thick` et que les valeurs pour chaque mot-clé doivent être constantes pour un même document.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -138,17 +143,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                     | Commentaires                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-width', 'border-width')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification directe. La modification du type de données {{cssxref("&lt;length&gt;")}} impacte cette propriété. |
-| {{SpecName('CSS2.1', 'box.html#border-width-properties', 'border-width')}} | {{Spec2('CSS2.1')}}                 | Ajout de la contrainte indiquant que la signification des valeurs doit être constante au sein d'un document.                      |
-| {{SpecName('CSS1', '#border-width', 'border-width')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                              |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-width")}}
+{{Compat}}
 
 ## Voir aussi
 

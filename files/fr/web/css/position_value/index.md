@@ -5,6 +5,7 @@ translation_of: Web/CSS/position_value
 original_slug: Web/CSS/Type_position
 browser-compat: css.types.position
 ---
+
 {{CSSRef}}
 
 Le type de donnée [CSS](/fr/docs/Web/CSS) **`<position>`** (ou **`<bg-position>`**) définit une paire de coordonnées dans l'espace (bidimensionnel) afin de définir la position relative d'une boîte. Ce type de donnée est notamment utilisé avec les propriétés [`background-position`](/fr/docs/Web/CSS/background-position) et [`offset-anchor`](/fr/docs/Web/CSS/offset-anchor).

@@ -2,9 +2,10 @@
 title: HTMLMediaElement.load()
 slug: Web/API/HTMLMediaElement/load
 ---
+
 {{APIRef("HTML DOM")}}
 
-**`load()`** 方法重置媒体成初始化状态，选择一个播放源， 为载入媒体重新播放做准备。 媒体预播放的信息是由 **`preload`** 这个参数决定的。
+**`load()`** 方法重置媒体成初始化状态，选择一个播放源，为载入媒体重新播放做准备。媒体预播放的信息是由 **`preload`** 这个参数决定的。
 
 此方法只在对媒体做动态更改时管用，要么更改`src`属性，要么添加或删除`source` 。 `load()` 将会重置元素重新扫描可用的源，从而让改动生效。
 
@@ -24,7 +25,7 @@ None.
 
 ## 用法
 
-调用 `load()` 会使媒体上所有正在进行的操作中止，然后根据 `audio` 或者 `video` 元素的 `src` 或者 `source` 属性里寻找合适的播放源并重新加载媒体内容。 更多查看 [Supporting multiple formats](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#Supporting_multiple_formats) 和 [Video and audio content](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) 。
+调用 `load()` 会使媒体上所有正在进行的操作中止，然后根据 `audio` 或者 `video` 元素的 `src` 或者 `source` 属性里寻找合适的播放源并重新加载媒体内容。更多查看 [Supporting multiple formats](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#Supporting_multiple_formats) 和 [Video and audio content](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) 。
 
 The process of aborting any ongoing activities will cause any outstanding {{jsxref("Promise")}}s returned by {{domxref("HTMLMediaElement.play", "play()")}} being resolved or rejected as appropriate based on their status before the loading of new media can begin. Pending play promises are aborted with an `"AbortError"` {{domxref("DOMException")}}.
 
@@ -51,4 +52,4 @@ mediaElem.load();
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.load")}}
+{{Compat}}

@@ -10,6 +10,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceNavigationTiming/unloadEventEnd
 ---
+
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
 La propriété **`unloadEventEnd`** en lecture seule retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement après la fin de l'événement de déchargement du document précédent par l'agent utilisateur. S'il n'y a pas de document précédent, la valeur de cette propriété est `0`.

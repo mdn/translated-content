@@ -11,7 +11,9 @@ translation_of: Web/API/RTCPeerConnection/createDataChannel
 
 ## Syntax
 
-    dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
+```js
+dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
+```
 
 ### 매개변수
 

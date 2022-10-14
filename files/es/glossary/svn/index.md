@@ -17,4 +17,4 @@ Apache Subversion (**SVN**) es un sistema ({{Glossary("SCM")}}) de código abier
 
 ### Véase tambiém
 
-- [Guía SVN para localizadores en MDN](https://developer.mozilla.org/en-US/docs/Mozilla/Localization/SVN_guide_for_localizers)
+- [Guía SVN para localizadores en MDN](/en-US/docs/Mozilla/Localization/SVN_guide_for_localizers)

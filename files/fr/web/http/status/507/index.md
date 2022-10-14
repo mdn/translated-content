@@ -3,6 +3,7 @@ title: 507 Insufficient Storage
 slug: Web/HTTP/Status/507
 translation_of: Web/HTTP/Status/507
 ---
+
 {{HTTPSidebar}}
 
 Le code de réponse HTTP **`507 Insufficient Storage`** peut être donné dans le contexte du protocole WebDAV (voir [RFC 4918](https://tools.ietf.org/html/rfc4918)).

@@ -1,13 +1,8 @@
 ---
 title: CSSStyleRule.style
 slug: Web/API/CSSStyleRule/style
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-translation_of: Web/API/CSSStyleRule/style
 ---
+
 {{ APIRef("CSSOM") }}
 
 ## 概要
@@ -39,4 +34,4 @@ function stilo() {
 
 ## 関連情報
 
-- [DOM CSS プロパティ](/CSS/CSS_Reference "/DOM/CSS")
+- [DOM CSS プロパティ](/CSS/CSS_Reference)

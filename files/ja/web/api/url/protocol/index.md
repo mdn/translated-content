@@ -1,14 +1,8 @@
 ---
 title: URL.protocol
 slug: Web/API/URL/protocol
-tags:
-  - API
-  - Property
-  - Protocol
-  - Reference
-  - URL
-translation_of: Web/API/URL/protocol
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`protocol`** プロパティは、最後の `':'` を含む URL のプロトコルスキームを表す {{domxref("USVString")}} です。

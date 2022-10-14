@@ -2,6 +2,7 @@
 title: TouchEvent
 slug: Web/API/TouchEvent
 ---
+
 {{ ApiRef() }}
 
 `TouchEvent` 是一类描述手指在触摸平面（触摸屏、触摸板等）的状态变化的事件。这类事件用于描述一个或多个触点，使开发者可以检测触点的移动，触点的增加和减少，等等。
@@ -87,7 +88,7 @@ _{{ domxref("TouchEvent") }}的属性继承了 {{domxref("UIEvent")}} 和 {{domx
 
 ## 实例
 
-请看 [example on the main Touch events article](/en/DOM/Touch_events#Example).
+请看 [example on the main Touch events article](/zh-CN/DOM/Touch_events#Example).
 
 ## 规范
 

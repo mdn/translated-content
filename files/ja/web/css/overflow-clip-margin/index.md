@@ -1,15 +1,8 @@
 ---
 title: overflow-clip-margin
 slug: Web/CSS/overflow-clip-margin
-tags:
-  - CSS
-  - CSS Overflow
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.overflow-clip-margin
-translation_of: Web/CSS/overflow-clip-margin
 ---
+
 {{CSSRef}}
 
 **`overflow-clip-margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [`overflow: clip`](/ja/docs/Web/CSS/overflow) を持つ要素がクリップされる前に、要素の辺からどれだけ外側に描画できるかを指定します。
@@ -29,7 +22,7 @@ overflow-clip-margin: unset;
 
 `overflow-clip-margin` プロパティは長さで指定します。負の値は許可されていません。
 
-> **Note:** `overflow: clip` を持たない要素では、このプロパティは無視されます。
+> **メモ:** `overflow: clip` を持たない要素では、このプロパティは無視されます。
 
 ## 公式定義
 

@@ -1,14 +1,8 @@
 ---
 title: <input type="submit">
-slug: Web/HTML/Element/Input/submit
-tags:
-  - Element
-  - Formulaire
-  - HTML
-  - Input
-  - Reference
-translation_of: Web/HTML/Element/input/submit
+slug: Web/HTML/Element/input/submit
 ---
+
 {{HTMLRef}}
 
 Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"submit"`** sont affichés comme des boutons permettant d'envoyer les données d'un formulaire. Cliquer sur un tel bouton déclenchera l'envoi des données du formulaire vers le serveur.
@@ -214,14 +208,11 @@ Voir les exemples ci-avant.
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#submit-button-state-(type=submit)', '&lt;input type="submit"&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'forms.html#submit-button-state-(type=submit)', '&lt;input type="submit"&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.input.input-submit")}}
+{{Compat}}
 
 ## Voir aussi
 

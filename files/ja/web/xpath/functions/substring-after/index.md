@@ -1,13 +1,8 @@
 ---
 title: substring-after
 slug: Web/XPath/Functions/substring-after
-tags:
-  - XPath 関数
-  - XSLT
-  - XSLT_Reference
-  - substring-after
-translation_of: Web/XPath/Functions/substring-after
 ---
+
 {{ XsltRef() }}
 
 `substring-after` 関数は、与えられた文字列内で、与えられた部分文字列よりも後にある残りの部分を返します。

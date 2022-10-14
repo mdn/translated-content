@@ -1,17 +1,8 @@
 ---
 title: text-transform
 slug: Web/CSS/text-transform
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - レイアウト
-  - Reference
-  - recipe:css-property
-  - 日本語処理
-browser-compat: css.properties.text-transform
-translation_of: Web/CSS/text-transform
 ---
+
 {{CSSRef}}
 
 **`text-transform`** は CSS のプロパティで、要素のテキストを大文字表記する方法を指定します。テキストをすべて大文字にしたり、すべて小文字にしたり、各単語の先頭を大文字にしたりすることを指定します。フリガナの読みやすさを向上するのにも役立ちます。
@@ -29,7 +20,7 @@ translation_of: Web/CSS/text-transform
 
 言語は HTML の [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性や XML の [`xml:lang`](/ja/docs/Web/SVG/Attribute/xml:lang) 属性で定義します。
 
-> **Note:** これらの特定のケースはブラウザーにより異なりますので、[ブラウザーの互換性一覧表](#browser_compatibility)を確認してください。
+> **メモ:** これらの特定のケースはブラウザーにより異なりますので、[ブラウザーの互換性一覧表](#browser_compatibility)を確認してください。
 
 ## 構文
 
@@ -53,9 +44,9 @@ text-transform: unset;
 
   - : それぞれの単語の最初の*文字*を強制的に大文字に変換させるキーワードです。ほかの文字は変更しません。すなわち、要素のテキストで記載した元の表記を維持します。文字とは、文字または数字の一般カテゴリーの一部である任意の Unicode 文字です {{experimental_inline}}。単語の先頭にある句読点や記号は無視されます。
 
-    > **Note:** `capitalize` が言語固有の先頭文字を大文字にする慣習 (英語で冠詞を除外するなど) に従うと期待するべきではありません。
+    > **メモ:** `capitalize` が言語固有の先頭文字を大文字にする慣習 (英語で冠詞を除外するなど) に従うと期待するべきではありません。
 
-    > **Note:** `capitalize` キーワードは CSS 1 および CSS 2.1 で定義されていたものでした。この結果、最初の文字を計算する方法は、ブラウザーによって異なっていました (Firefox は `-` および `_` を文字として捉えていましたが、他はそうではありませんでした。 Webkit 及び Gecko は `ⓐ` のような文字から作られた記号を、誤って文字として認識していました。 Internet Explorer 9 は最も CSS 2 の定義に近かったのですが、いくつかおかしいものがありました)。正しいふるまいを詳細に定義したので、 CSS Text Level 3 ではこれを一掃しました。ブラウザーの互換性表の `capitalize` の行は、それぞれのエンジンがこの詳細に定義された振る舞いに対応し始めたバージョンを記載しています。
+    > **メモ:** `capitalize` キーワードは CSS 1 および CSS 2.1 で定義されていたものでした。この結果、最初の文字を計算する方法は、ブラウザーによって異なっていました (Firefox は `-` および `_` を文字として捉えていましたが、他はそうではありませんでした。 Webkit 及び Gecko は `ⓐ` のような文字から作られた記号を、誤って文字として認識していました。 Internet Explorer 9 は最も CSS 2 の定義に近かったのですが、いくつかおかしいものがありました)。正しいふるまいを詳細に定義したので、 CSS Text Level 3 ではこれを一掃しました。ブラウザーの互換性表の `capitalize` の行は、それぞれのエンジンがこの詳細に定義された振る舞いに対応し始めたバージョンを記載しています。
 
 - `uppercase`
   - : すべての文字を大文字に変換させるキーワードです。

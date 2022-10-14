@@ -1,11 +1,9 @@
 ---
 title: Router (ルーター)
 slug: Glossary/routers
-tags:
-  - Intro
-translation_of: Glossary/routers
 original_slug: Glossary/ルーター
 ---
+
 ウェブでは**ルーター**には 3 つの定義があります。
 
 1. ネットワーク層において、ルーターはデータ{{Glossary('Packet','パケット')}}の方向を決めるネットワーク機器です。これらは、ユーザーがインターネットに接続できるように小売店で販売されています。
@@ -16,7 +14,7 @@ original_slug: Glossary/ルーター
 
 ネットワーク層の文脈:
 
-- {{Interwiki("wikipedia", "ルーター")}} (ウィキペディア)
+- [ルーター](https://ja.wikipedia.org/wiki/ルーター) (ウィキペディア)
 
 アプリケーション層の SPA の文脈 (主要な SPA フレームワークのライブラリー):
 

@@ -1,15 +1,8 @@
 ---
 title: MDN のサンプルサーバー
 slug: MDN/Tools/Sample_server
-tags:
-  - Advanced
-  - Draft
-  - Guide
-  - MDN Meta
-  - Site-wide
-  - Tools
-translation_of: MDN/Tools/Sample_server
 ---
+
 {{MDNSidebar}}
 
 MDN は内蔵の[ライブサンプルシステム](/ja/docs/MDN/Writing_guidelines/Page_structures)を提供しており、単純な (時にはそう単純でない) コードのサンプルをその出力と共にページの中で表示する機能を提供していますが、サーバーへの通信を必要とするサンプルもあります。私たちは MDN サンプルサーバーを用意し、このような、またその他の問題も合わせて、解決することにしました。 この記事は、そのサンプルサーバーを利用するためのガイドです。

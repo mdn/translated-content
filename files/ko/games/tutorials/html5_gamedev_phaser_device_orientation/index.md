@@ -1,7 +1,6 @@
 ---
 title: 2D maze game with device orientation
 slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
-translation_of: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 ---
 {{GamesSidebar}}
 

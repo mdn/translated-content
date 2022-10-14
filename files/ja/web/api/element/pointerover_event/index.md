@@ -3,6 +3,7 @@ title: GlobalEventHandlers.onpointerover
 slug: Web/API/Element/pointerover_event
 original_slug: Web/API/GlobalEventHandlers/onpointerover
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`onpointerover`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("pointerover")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。

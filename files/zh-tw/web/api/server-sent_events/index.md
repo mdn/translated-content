@@ -2,6 +2,7 @@
 title: Server-sent events
 slug: Web/API/Server-sent_events
 ---
+
 網頁一般來說是由客戶端向伺服器請求資料. 藉由 server-sent 事件, 伺服器在任何時候都可以向客戶端推送資料. 即將推送進來的訊息可以自客戶端上做 _[Events](/zh-TW/docs/DOM/event) + data_ 處理.
 
 ## 文件

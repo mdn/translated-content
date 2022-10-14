@@ -1,15 +1,8 @@
 ---
 title: '<fieldset>: フィールドセット要素'
 slug: Web/HTML/Element/fieldset
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/fieldset
 ---
+
 {{HTMLRef}}
 
 **HTML の `<fieldset>` 要素**は、ウェブフォーム内のラベル ({{HTMLElement("label")}}) などのようにいくつかのコントロールをグループ化するために使用します。
@@ -30,7 +23,7 @@ translation_of: Web/HTML/Element/fieldset
 
   - : グループに関連付けられた名前です。
 
-    > **Note:** fieldset 要素自身のラベルの役割は、その最初の子要素として配置した {{HTMLElement("legend")}} 要素が担います。
+    > **メモ:** fieldset 要素自身のラベルの役割は、その最初の子要素として配置した {{HTMLElement("legend")}} 要素が担います。
 
 ## CSS でのスタイル付け
 

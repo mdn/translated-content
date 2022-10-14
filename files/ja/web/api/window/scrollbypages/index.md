@@ -1,17 +1,8 @@
 ---
 title: Window.scrollByPages()
 slug: Web/API/Window/scrollByPages
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Reference
-  - Window
-  - scrollByPages
-  - scrolling
-translation_of: Web/API/Window/scrollByPages
 ---
+
 {{ ApiRef() }} {{Non-standard_header}}
 
 **`Window.scrollByPages()`** メソッドは、現在の文書を指定されたページ数だけスクロールさせます。

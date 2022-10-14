@@ -1,12 +1,8 @@
 ---
 title: Firefox 98 for developers
 slug: Mozilla/Firefox/Releases/98
-tags:
-  - '98'
-  - Firefox
-  - Mozilla
-  - Release
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 98 の変更点をまとめています。Firefox 98 は、米国時間 2022 年 3 月 8 日にリリースされました。

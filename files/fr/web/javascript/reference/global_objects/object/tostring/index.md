@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaîne de caractères représentant l'objet.
@@ -95,16 +96,11 @@ toString.call(null);        // [object Null]
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                                                                                                                                         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0.                                                                                                                |
-| {{SpecName('ES5.1', '#sec-15.2.4.2', 'Object.prototype.toString')}}                             | {{Spec2('ES5.1')}}     | Lorsque la méthode est appelée sur {{jsxref("null")}}, elle renvoie `[object Null]`, et sur {{jsxref( "undefined")}} elle renvoie `[object Undefined]` |
-| {{SpecName('ES6', '#sec-object.prototype.tostring', 'Object.prototype.toString')}}         | {{Spec2('ES6')}}         |                                                                                                                                                                      |
-| {{SpecName('ESDraft', '#sec-object.prototype.tostring', 'Object.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

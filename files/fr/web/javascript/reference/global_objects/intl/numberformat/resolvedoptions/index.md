@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat/resolvedOptions
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.NumberFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés correspondent aux options de locales et de format calculées à l'initialisation de l'objet {{jsxref("NumberFormat", "Intl.NumberFormat")}}.
@@ -68,15 +69,11 @@ usedOptions.useGrouping;           // true
 
 ## Spécifications
 
-| Spécification                                                                                                                                                            | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('ES Int 1.0', '#sec-11.3.3', 'Intl.NumberFormat.prototype.resolvedOptions')}}                                                     | {{Spec2('ES Int 1.0')}} | Définition initiale. |
-| {{SpecName('ES Int 2.0', '#sec-11.3.3', 'Intl.NumberFormat.prototype.resolvedOptions')}}                                                     | {{Spec2('ES Int 2.0')}} |                      |
-| {{SpecName('ES Int Draft', '#sec-Intl.NumberFormat.prototype.resolvedOptions', 'Intl.NumberFormat.prototype.resolvedOptions')}} | {{Spec2('ES Int Draft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.NumberFormat.resolvedOptions")}}
+{{Compat}}
 
 ## Voir aussi
 

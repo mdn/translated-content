@@ -1,8 +1,8 @@
 ---
 title: WebGLRenderingContext.bufferData()
 slug: Web/API/WebGLRenderingContext/bufferData
-translation_of: Web/API/WebGLRenderingContext/bufferData
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) **`WebGLRenderingContext.bufferData()`** メソッドは、バッファーオブジェクトのデータストアを初期化、作成します。

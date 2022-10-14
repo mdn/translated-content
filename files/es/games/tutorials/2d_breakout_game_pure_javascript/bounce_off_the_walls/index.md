@@ -6,8 +6,6 @@ original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off
 ---
 {{GamesSidebar}}
 
-{{IncludeSubnav("/es/docs/Games")}}
-
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado")}}
 
 Este es el **tercer** paso de 10 del [tutorial Canvas para el desarrollo de juegos](/es/docs/Games/Workflows/Breakout_game_from_scratch). Puedes encontrar el código fuente y pegarle un vistazo después de completar esta lección [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).
@@ -107,6 +105,6 @@ Chequea el código acabado para esta parte con el tuyo, y juega:
 
 ## Siguientes pasos
 
-Ahora hemos llegado al punto donde nuestra pelota se mueve y permanece en el tablero de juego. En el capítulo cuarto, veremos la implementación del control de una pala - vea [Control de Pala y teclado](https://developer.mozilla.org/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado).
+Ahora hemos llegado al punto donde nuestra pelota se mueve y permanece en el tablero de juego. En el capítulo cuarto, veremos la implementación del control de una pala - vea [Control de Pala y teclado](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado")}}

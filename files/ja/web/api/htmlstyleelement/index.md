@@ -1,12 +1,8 @@
 ---
 title: HTMLStyleElement
 slug: Web/API/HTMLStyleElement
-tags:
-  - DOM
-  - DOM Reference
-  - 要更新
-translation_of: Web/API/HTMLStyleElement
 ---
+
 {{ApiRef}}
 
 `HTMLStyleElement` インタフェースは {{HTMLElement("style")}} 要素を表すインタフェースです。{{domxref("HTMLElement")}} と {{domxref("LinkStyle")}} のプロパティとメソッドを継承しています。

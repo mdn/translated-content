@@ -1,15 +1,8 @@
 ---
 title: ビット論理積 (&)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
-tags:
-  - ビット演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.bitwise_and
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND
 ---
+
 {{jsSidebar("Operators")}}
 
 ビット論理積演算子 (`&`) は、両方のオペランドの対応するビットのいずれもが `1` である位置のビットで `1` を返します。

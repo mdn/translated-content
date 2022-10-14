@@ -1,17 +1,8 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
-tags:
-  - Expressions
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-  - Regular
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
-browser-compat: javascript.builtins.String.replace
 ---
+
 {{JSRef}}
 
 **`replace()`** メソッドは、`pattern` に一致する文字列の一部またはすべてを `replacement` で置き換えた新しい文字列を返します。 `pattern` には文字列または正規表現 ({{jsxref("RegExp")}}) を指定することができ、 `replacement` には文字列または一致するごとに呼び出される関数を指定することができます。 `pattern` が文字列の場合、最初に一致した箇所のみを置き換えます。
@@ -111,7 +102,7 @@ console.log(newstr);  // Twas the night before Christmas...
 
 これは `'Twas the night before Christmas...'` と出力します。
 
-> **Note:** 正規表現についてのその他の例は[このガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)を参照してください。
+> **メモ:** 正規表現についてのその他の例は[このガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)を参照してください。
 
 ### 大文字小文字を区別しないフラグとグローバルフラグの使用
 

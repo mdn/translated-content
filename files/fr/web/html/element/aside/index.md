@@ -14,6 +14,7 @@ tags:
 translation_of: Web/HTML/Element/aside
 browser-compat: html.elements.aside
 ---
+
 {{HTMLRef}}
 
 L'élément **`<aside>`** (en français, « aparté ») représente une partie d'un document dont le contenu n'a qu'un rapport indirect avec le contenu principal du document. Les apartés sont fréquemment présents sous la forme d'encadrés ou de boîtes de légende.

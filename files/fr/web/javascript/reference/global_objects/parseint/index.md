@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 original_slug: Web/JavaScript/Reference/Objets_globaux/parseInt
 ---
+
 {{jsSidebar("Objects")}}
 
 La fonction **`parseInt()`** analyse une chaîne de caractère fournie en argument et renvoie un entier exprimé dans une base donnée.
@@ -160,16 +161,11 @@ console.log(filterInt('1.61803398875'));     // NaN
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                                 | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.2.2', 'parseInt')}}                     | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-parseint-string-radix', 'parseInt')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-parseint-string-radix', 'parseInt')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.parseInt")}}
+{{Compat}}
 
 ## Voir aussi
 

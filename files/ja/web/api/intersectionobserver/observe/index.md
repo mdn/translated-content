@@ -1,16 +1,8 @@
 ---
 title: IntersectionObserver.observe()
 slug: Web/API/IntersectionObserver/observe
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Method
-  - Reference
-  - observe
-translation_of: Web/API/IntersectionObserver/observe
 ---
+
 {{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
 {{domxref("IntersectionObserver")}} の **`observe()`** メソッドは、要素を `IntersectionObserver` によって監視される対象要素に追加します。各オブザーバーはそれぞれ個別の閾値とルートを持っていますが、複数の対象要素について可視部分の変化を監視できます。要素の監視を停止するには、{{domxref("IntersectionObserver.unobserve()")}} を呼び出します。

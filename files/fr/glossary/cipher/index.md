@@ -10,6 +10,7 @@ tags:
 translation_of: Glossary/Cipher
 original_slug: Glossaire/Chiffre
 ---
+
 En {{glossary("cryptography","cryptographie")}}, un **chiffre** est un algorithme qui permet de {{glossary("encryption","chiffrer")}} du {{glossary("cleartext","texte brut")}} dans le but de le rendre illisible et de le {{glossary("decryption", "déchiffrer")}} par la suite.
 
 Les chiffres étaient communs bien avant l'âge de l'informatique (par exemple, [le chiffrement par substitution](https://fr.wikipedia.org/wiki/Chiffrement_par_substitution), [le chiffrement par transposition](https://fr.wikipedia.org/wiki/Chiffrement_par_transposition) ou le chiffrement par permutation), mais aucun d'entre eux n'était cryptologiquement sûr à l'exception du [masque jetable](https://fr.wikipedia.org/wiki/Masque_jetable).
@@ -23,8 +24,6 @@ Ils sont également classés en fonction de la manière dont leurs {{glossary("K
 - les algorithmes à [clefs symétriques](https://fr.wikipedia.org/wiki/Cryptographie_symétrique) utilisent la même clef pour chiffrer et déchiffrer un message. Cette clef doit également être envoyée de manière sécurisée afin que le message reste confidentiel.
 - les algorithmes à [clefs asymétriques](https://fr.wikipedia.org/wiki/Cryptographie_asymétrique) utilisent une clef différente pour le chiffrement et le déchiffrement.
 
-## En savoir plus
-
-### Connaissances générales
+## Voir aussi
 
 - [Chiffrement](https://fr.wikipedia.org/wiki/Chiffrement) sur Wikipédia

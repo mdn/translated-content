@@ -1,16 +1,8 @@
 ---
 title: <number>
 slug: Web/CSS/number
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-browser-compat: css.types.number
-translation_of: Web/CSS/number
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`<number>`** [データ型](/ja/docs/Web/CSS/CSS_Types)は、整数または小数部分のある数値を表します。

@@ -2,6 +2,7 @@
 title: HTMLImageElement
 slug: Web/API/HTMLImageElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLImageElement`** 接口提供了特别的属性和方法 (在常规的 {{domxref("HTMLElement")}}之外，它也能通过继承使用) 来操纵 {{HTMLElement("img")}} 元素的布局和图像。
@@ -11,7 +12,7 @@ slug: Web/API/HTMLImageElement
 ## Constructor
 
 - {{domxref("HTMLImageElement.Image()", "Image()")}}
-  - : `Image()` 构造器，带有两个可选的参数，分别表示资源的宽度和高度，创建了一个尚未被插入 DOM 树中的 `HTMLImageElement` 实例。When called without parameters, ` new ``Image() ` is equivalent to calling {{DOMxRef("Document.createElement()", 'document.createElement("img")')}}.
+  - : `Image()` 构造器，带有两个可选的参数，分别表示资源的宽度和高度，创建了一个尚未被插入 DOM 树中的 `HTMLImageElement` 实例。When called without parameters, `new Image()` is equivalent to calling {{DOMxRef("Document.createElement()", 'document.createElement("img")')}}.
 
 ## 属性
 
@@ -110,7 +111,7 @@ alert(document.images[0].src);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLImageElement")}}
+{{Compat}}
 
 ## 参见
 

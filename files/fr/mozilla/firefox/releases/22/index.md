@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/22
 translation_of: Mozilla/Firefox/Releases/22
 original_slug: Mozilla/Firefox/Versions/22
 ---
+
 {{FirefoxSidebar}}
 
 Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui ont besoin d'être documentés](http://beta.elchi3.de/doctracker/#list=fx&version=22.0) et lancez-vous !
@@ -50,7 +51,7 @@ Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui on
 - Certains onglets des outils pour développeurs sont passés de [XUL à HTML](https://bugzilla.mozilla.org/show_bug.cgi?id=875727). Par exemple, l'onglet présentant les règles css fait maintenant partie de chrome://browser/content/devtools/cssruleview\.xhtml, et pas de  `cssruleview.xul`. Au lieu d'ajouter une couche pour ajouter des fonctionnalités directement sur ces onglets, vous pouvez ajouter une couche et la lier par script au document xul externe afin d'ajouter des écouteurs d'événements et de changer ces documents html.
 - L'affichage en pile est maintenant affiché en fil d'Ariane en haut de l'onglet et la liste des scripts est maintenant sur la gauche du débuggeur.
 
-## A voir aussi
+## Voir aussi
 
 - [Notes de version de Firefox 22 Beta](http://www.mozilla.org/en-US/firefox/22.0beta/releasenotes/)
 - [Compatibilité des sites avec Firefox 22](/fr/docs/Site_Compatibility_for_Firefox_22)

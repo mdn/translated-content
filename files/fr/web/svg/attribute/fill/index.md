@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/fill
 ---
+
 {{SVGRef}}
 
 L'attribut **`fill`** a deux significations différentes: 1. pour les formes et le texte, il définit le remplissage (_couleur, dégradé, motif, etc_); 2. pour les animations, il définit l'état final.
@@ -481,15 +482,10 @@ Pour {{SVGElement('tspan')}}, `fill` est un attribut de présentation qui défin
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                                   | Commentaire                                                                        |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------------------------------------------------- |
-| {{SpecName("SVG Animations 2", "#FillAttribute", "transform")}} | {{Spec2("SVG Animations 2")}} | Définition pour les animations.                                                    |
-| {{SpecName("SVG2", "painting.html#FillProperty", "fill")}}         | {{Spec2("SVG2")}}                 | Définition pour les formes et le texte. Ajoute `context-fill` et `context-stroke`. |
-| {{SpecName("SVG1.1", "animate.html#FillAttribute", "fill")}}     | {{Spec2("SVG1.1")}}                 | Définition initiale pour les animations.                                           |
-| {{SpecName("SVG1.1", "painting.html#FillProperty", "fill")}}     | {{Spec2("SVG1.1")}}                 | Définition initiale pour les formes et le texte.                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.fill")}}
+{{Compat}}
 
 > **Note :** Pour plus d'informations sur les valeurs de `context-fill` (et `context-stroke`) dans des documents HTML, voir la documentation pour la propriété non-standard {{cssxref("-moz-context-properties")}}.

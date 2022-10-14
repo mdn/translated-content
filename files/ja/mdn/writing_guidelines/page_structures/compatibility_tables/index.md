@@ -1,16 +1,11 @@
 ---
 title: 互換性一覧表とブラウザー互換性データリポジトリー (BCD)
 slug: MDN/Writing_guidelines/Page_structures/Compatibility_tables
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-translation_of: MDN/Writing_guidelines/Page_structures/Compatibility_tables
 original_slug: MDN/Structures/Compatibility_tables
-browser-compat: api.AbortController
 l10n:
   sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
 ---
+
 {{MDNSidebar}}
 
 MDN には、オープンウェブのドキュメントにおいて、互換性一覧表の標準形式があります。これは、すべてのブラウザーにわたって共有される DOM, HTML, CSS, JavaScript, SVG などの技術の文書で使用されます。この記事は、作成した互換性一覧表をデータベースにどのように追加して維持するか、また、一覧表を記事に統合する方法についての「始め方」のガイドです。
@@ -405,7 +400,7 @@ API の場合、上位 2 つのレベルを `api.インターフェイス名` �
 ],
 ```
 
-> **Note:** ​​​​配列の中には、最新または重要な対応ポイントを最初に配置するべきです。こうすることで、単に最新の情報を取得したい人にとって読みやすいデータとなります。
+> **メモ:** ​​​​配列の中には、最新または重要な対応ポイントを最初に配置するべきです。こうすることで、単に最新の情報を取得したい人にとって読みやすいデータとなります。
 
 ### 別名を含める
 
@@ -413,7 +408,7 @@ API の場合、上位 2 つのレベルを `api.インターフェイス名` �
 
 このようなケースをブラウザーの互換性データに含めるには、 "alternative_name" メンバーの中に代替名を指定する対応情報ポイントを含めます。
 
-> **Note:** 代替名は正確なエイリアスではないかもしれません。標準版とは異なる動作をするかもしれません。
+> **メモ:** 代替名は正確なエイリアスではないかもしれません。標準版とは異なる動作をするかもしれません。
 
 では例を見てみましょう。 {{cssxref("border-top-right-radius")}} プロパティ（[border-top-right-radius.json](https://github.com/mdn/browser-compat-data/blob/2a0cc3f6bb17aa4345441bed47a059dffd847793/css/properties/border-top-right-radius.json)も参照）の Firefox での対応は以下の通りです。
 
@@ -483,6 +478,7 @@ slug: Web/API/AbortController
 
 browser-compat: api.AbortController
 ---
+
 ```
 
 そして、そのキーに対応する互換性一覧表と仕様書一覧表が、ソース中の `\{{Compat}}` と `\{{Specifications}}` マクロの代わりに自動的にレンダリングされます。

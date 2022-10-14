@@ -1,15 +1,8 @@
 ---
 title: Map.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/delete
 ---
+
 {{JSRef}}
 
 **`delete()`** メソッドは `Map` オブジェクトから特定の要素を削除します。

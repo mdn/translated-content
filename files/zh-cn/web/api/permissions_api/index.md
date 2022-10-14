@@ -2,13 +2,14 @@
 title: Permissions API
 slug: Web/API/Permissions_API
 ---
+
 {{DefaultAPISidebar("Permissions API")}}
 
 The **Permissions API** provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied.
 
 ## Concepts and usage
 
-Historically different APIs handle their own permissions inconsistently — for example the [Notifications API](/en-US/docs/Web/API/Notifications_API) allows for explicit checking of permission status and requesting permission, whereas the [Geolocation API](/en-US/docs/Web/API/Geolocation) doesn't (which causes problems if the user denied the initial permission request). The Permissions API provides the tools to allow developers to implement a better user experience as far as permissions are concerned.
+Historically different APIs handle their own permissions inconsistently — for example the [Notifications API](/zh-CN/docs/Web/API/Notifications_API) allows for explicit checking of permission status and requesting permission, whereas the [Geolocation API](/zh-CN/docs/Web/API/Geolocation) doesn't (which causes problems if the user denied the initial permission request). The Permissions API provides the tools to allow developers to implement a better user experience as far as permissions are concerned.
 
 The `permissions` property has been made available on the {{domxref("Navigator")}} object, both in the standard browsing context and the worker context ({{domxref("WorkerNavigator")}} — so permission checks are available inside workers), and returns a {{domxref("Permissions")}} object that provides access to the Permissions API functionality.
 
@@ -16,9 +17,9 @@ Once you have this object you can then perform permission-related tasks, for exa
 
 Not all APIs' permission statuses can be queried using the Permissions API. Notable APIs that are Permissions-aware include:
 
-- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
-- [Notifications API](/en-US/docs/Web/API/Notifications_API)
-- [Push API](/en-US/docs/Web/API/Push_API)
+- [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API)
+- [Notifications API](/zh-CN/docs/Web/API/Notifications_API)
+- [Push API](/zh-CN/docs/Web/API/Push_API)
 - Web MIDI API
 
 More APIs will gain Permissions API support over time.
@@ -27,7 +28,7 @@ More APIs will gain Permissions API support over time.
 
 We have made a simple example available called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on Github](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages).
 
-Read more about how it works in our article [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API).
+Read more about how it works in our article [Using the Permissions API](/zh-CN/docs/Web/API/Permissions_API/Using_the_Permissions_API).
 
 ## Interfaces
 
@@ -46,11 +47,11 @@ Read more about how it works in our article [Using the Permissions API](/en-US/d
 
 ### Permissions interface
 
-{{Compat("api.Permissions")}}
+{{Compat}}
 
 ## See also
 
-- [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)
+- [Using the Permissions API](/zh-CN/docs/Web/API/Permissions_API/Using_the_Permissions_API)
 - [Using the Permissions API to Detect How Often Users Allow or Deny Camera Access](https://blog.addpipe.com/using-permissions-api-to-detect-getusermedia-responses/)
 - {{DOMxRef("Notification.permission")}}
-- [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)
+- [Privacy, permissions, and information security](/zh-CN/docs/Web/Privacy)

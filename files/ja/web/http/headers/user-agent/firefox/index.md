@@ -1,15 +1,8 @@
 ---
 title: Firefox ユーザーエージェント文字列リファレンス
 slug: Web/HTTP/Headers/User-Agent/Firefox
-tags:
-  - Compatibility
-  - Firefox
-  - Firefox 4
-  - Gecko
-  - Gecko 2.0
-  - Guide
-translation_of: Web/HTTP/Headers/User-Agent/Firefox
 ---
+
 {{HTTPSidebar}}
 
 この文書では、 Firefox 4 以降および Gecko 2.0 以降ベースのアプリケーションで用いられるユーザーエージェント文字列について説明します。 Gecko 2.0 での変更点について詳しくは [Final User Agent string for Firefox 4](https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/)E (ブログ記事) をご覧ください。[ユーザーエージェントの検出](/ja/docs/Web/HTTP/Browser_detection_using_the_user_agent)に関する文書や [Hacks の投稿](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)もご覧ください。
@@ -23,7 +16,7 @@ Firefox 自身のユーザーエージェント文字列は、 4 つの部分に
 - `Mozilla/5.0` はブラウザーが Mozilla 互換であることを示す一般的なトークンであり、今日のほとんどすべてのブラウザーで共通しています。
 - `platform` は、ブラウザーが動作しているネイティブプラットフォーム (例: Windows、Mac、Linux、または Android)、およびモバイル端末であるかを表します。 Firefox OS 端末は単に "`Mobile`" となり、ウェブがプラットフォームです。 `platform` は "; " (セミコロン) 区切りの複数トークンで構成されることがある点に注意してください。詳細や例については後述します。
 
-  > **Note:** Firefox 69 で修正されましたが、以前の 32 ビット版の Firefox は 64 ビットプロセッサーで実行されている場合、システムが 32 ビット CPU であると報告していました。
+  > **メモ:** Firefox 69 で修正されましたが、以前の 32 ビット版の Firefox は 64 ビットプロセッサーで実行されている場合、システムが 32 ビット CPU であると報告していました。
 
 - `rv:geckoversion` は、Gecko のリリースバージョンを示します (例: "`17.0`")。最近のブラウザーでは `geckoversion` と `firefoxversion` が同じです。
 - `Gecko/geckotrail` は、ブラウザーが Gecko ベースであることを示します。
@@ -31,7 +24,7 @@ Firefox 自身のユーザーエージェント文字列は、 4 つの部分に
 - `Firefox/firefoxversion` はブラウザーが Firefox であることを示すとともに、バージョン番号を提供します (例: "`17.0`")。
 - モバイル版は Firefox 10 より、 `geckotrail` と `firefoxversion` が同じです。
 
-> **Note:** Gecko ベースのブラウザー向けに推奨する推定法（機能の検出を行う代わりにブラウザーエンジンの推定を行わ**なければならない**場合）は、 "`Gecko`" および "`rv:`" の文字列が存在するかの検出です。これは、他ブラウザーの一部に "`like Gecko`" というトークンが含まれるためです。
+> **メモ:** Gecko ベースのブラウザー向けに推奨する推定法（機能の検出を行う代わりにブラウザーエンジンの推定を行わ**なければならない**場合）は、 "`Gecko`" および "`rv:`" の文字列が存在するかの検出です。これは、他ブラウザーの一部に "`like Gecko`" というトークンが含まれるためです。
 
 Gecko ベースの他製品では下記 2 つの形式のいずれかであり、各トークンの意味は以下に記載した内容を除いて同じです:
 
@@ -45,7 +38,7 @@ Firefox 4 と Gecko 2.0 以前では、拡張機能やプラグインがユー�
 
 ## モバイルおよびタブレットの標示
 
-> **Note:** Firefox 11 以降のみです。
+> **メモ:** Firefox 11 以降のみです。
 
 UA 文字列で `platform` の部分は、 Firefox が携帯電話サイズまたはタブレットの機器で動作しているかを示します。携帯電話フォームファクターの機器で Firefox が動作している場合は、 `Mobile;` というトークンが UA 文字列で `platform` の部分に現れます。一方タブレット機器で Firefox が動作している場合は、 `Tablet;` というトークンが UA 文字列で `platform` の部分に現れます。
 
@@ -54,11 +47,11 @@ Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0
 Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0
 ```
 
-> **Note:** のバージョン番号は重要ではありません。バージョン番号を基に判断しないでください。
+> **メモ:** のバージョン番号は重要ではありません。バージョン番号を基に判断しないでください。
 
 ある機器のフォームファクター向けのコンテンツを決めるために好ましい方法は、CSS メディアクエリーの使用です。しかし機器のフォームファクターの対象コンテンツを決めるために UA 推定を用いている場合は、携帯電話フォームファクターでは **Mobi** (Opera Mobile が "Mobile" ではなく "Mobi" と表記するため) を検索するようにして、"Android" と機器のフォームファクターに対応関連があるとは**考えない**ようにしてください。そうすることで Firefox を他の携帯電話やタブレットのオペレーティングシステム向けに公開した場合や Android がラップトップ PC に使用された場合でもコードが動作します。また、タッチ対応端末を検出するには "Mobi" や "Tablet" を検索するのではなく、タッチ機能を検出してください。タブレットではないタッチ対応端末の場合もあります。
 
-> **Note:** Firefox OS 端末では、オペレーティングシステムを示す部分がない形式となります (例: "Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0")。ウェブがプラットフォームです。
+> **メモ:** Firefox OS 端末では、オペレーティングシステムを示す部分がない形式となります (例: "Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0")。ウェブがプラットフォームです。
 
 ## Windows
 
@@ -205,7 +198,7 @@ Firefox OS のバージョン番号は UA 文字列に含まれませんが、 U
 | 2.2                       | 37                   |
 | 2.5                       | 44                   |
 
-> **Note:** この対応関係は [Mercurial リポジトリー名](https://hg.mozilla.org/releases)から容易に判断できます。`mozilla-b2g` で始まるリポジトリーが Firefox OS のリリースリポジトリーであり、Firefox OS と Gecko の両バージョンがその名前に含まれています。
+> **メモ:** この対応関係は [Mercurial リポジトリー名](https://hg.mozilla.org/releases)から容易に判断できます。`mozilla-b2g` で始まるリポジトリーが Firefox OS のリリースリポジトリーであり、Firefox OS と Gecko の両バージョンがその名前に含まれています。
 
 Firefox OS のバージョン番号は 4 つの数字があります: `X.X.X.Y`. 始めの 2 つの数字は Mozilla の製品チームが管理しており、新機能を伴うバージョンを表します (例: v1.1、1.2 など)。3 番目の番号はセキュリティ更新向けの定期的なバージョンの識別 (最大 6 週間ごと) として増えていきます。4 番目の番号は OEM が管理します。
 

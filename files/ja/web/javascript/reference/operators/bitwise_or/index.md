@@ -1,15 +1,8 @@
 ---
 title: ビット論理和 (|)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR
-tags:
-  - ビット演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.bitwise_or
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_OR
 ---
+
 {{jsSidebar("Operators")}}
 
 ビット論理和演算子 (`|`) は、両方のオペランドの対応するビットのどちらか一方が `1` である位置のビットで `1` を返します。

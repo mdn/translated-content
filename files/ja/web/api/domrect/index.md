@@ -2,6 +2,7 @@
 title: DOMRect
 slug: Web/API/DOMRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`DOMRect`** は矩形の大きさと位置を記述します。

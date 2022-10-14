@@ -2,13 +2,14 @@
 title: JavaScript と DOM インターフェイスによる HTML の表の操作
 slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 ## はじめに
 
 この記事では、強力で基本的な DOM レベル 1 のメソッドと、それを JavaScript からどのように使用するかを概観します。どのようにして HTML 要素を動的に生成、アクセス、制御、削除するかを学ぶことができます。ここで紹介する DOM メソッドは HTML に限ったものではなく、XML に対しても用いることができます。ここで用意しているデモは、Firefox のすべてのバージョンや IE 5 以上を含むすべての最近のブラウザーで正常に動作します。
 
-> **Note:** ここで紹介する DOM メソッドは ドキュメントオブジェクトモデル (コア) レベル 1 仕様の一部に過ぎません。DOM レベル 1 には HTML ドキュメント特有のメソッド (DOM 1 HTML) と共に、一般的なドキュメントアクセスと操作 (DOM 1 コア) のためのメソッドが含まれています。
+> **メモ:** ここで紹介する DOM メソッドは ドキュメントオブジェクトモデル (コア) レベル 1 仕様の一部に過ぎません。DOM レベル 1 には HTML ドキュメント特有のメソッド (DOM 1 HTML) と共に、一般的なドキュメントアクセスと操作 (DOM 1 コア) のためのメソッドが含まれています。
 
 ## 例: 動的な HTML の表の生成
 
@@ -205,7 +206,7 @@ myP.appendChild(myTextNode);
 
 ![](sample2b2.jpg)
 
-> **Note:** `createTextNode()` と `appendChild` は、hello と world という単語の間にホワイトスペースを入れる簡単な方法です。もう 1 つの重要な注意点は、hello の後に world という単語が追加されたように、`appendChild` メソッドは最後の子の後に子を追加するということです。ですから、hello と world の間にテキストノードを追加したい場合は、 `insertBefore` を `appendChild` の代わりに使用する必要があります。
+> **メモ:** `createTextNode()` と `appendChild` は、hello と world という単語の間にホワイトスペースを入れる簡単な方法です。もう 1 つの重要な注意点は、hello の後に world という単語が追加されたように、`appendChild` メソッドは最後の子の後に子を追加するということです。ですから、hello と world の間にテキストノードを追加したい場合は、 `insertBefore` を `appendChild` の代わりに使用する必要があります。
 
 ### 文書オブジェクトと createElement(..) メソッドによる新しい要素の生成
 
@@ -252,7 +253,7 @@ sample1.html における基本的な表の生成の手順は次の通りです�
 - すべての要素を生成する。
 - 最後に、各子要素を (上の図のように) 表構造に従って付加していきます。以下のソースコードは sample1.html のコメント付き版になります。
 
-> **Note:** `start` 関数の最後には新たなコードがあります。DOM のメソッド `setAttribute()` を用いて表のの `border` プロパティが設定されており、`setAttribute()` は属性名と属性値という 2 つの引数を取ります。`setAttribute` メソッドを用いて任意の要素の任意の属性を設定することができます。
+> **メモ:** `start` 関数の最後には新たなコードがあります。DOM のメソッド `setAttribute()` を用いて表のの `border` プロパティが設定されており、`setAttribute()` は属性名と属性値という 2 つの引数を取ります。`setAttribute` メソッドを用いて任意の要素の任意の属性を設定することができます。
 
 ```html
 <head>
@@ -311,7 +312,7 @@ sample1.html における基本的な表の生成の手順は次の通りです�
 
 そして、この例では結果を表示するために、内容が `myceltext` のデータである新しいテキストノードを作成し、`<body>` 要素の子として追加します。
 
-> **Note:** オブジェクトがテキストノードである場合、data 属性を使用して当該ノードのテキスト内容を得ることができます。
+> **メモ:** オブジェクトがテキストノードである場合、data 属性を使用して当該ノードのテキスト内容を得ることができます。
 
 ```js
 mybody = document.getElementsByTagName("body")[0];
@@ -379,4 +380,4 @@ JavaScript 変数にオブジェクトを納めさえすれば、スタイルプ
 - 著者
   - : Marcio Galli
 - 引用元
-  - : https\://web.archive.org/web/20000815054125/https\://mozilla.org/docs/dom/technote/tn-dom-table/
+  - : <https://web.archive.org/web/20000815054125/https://mozilla.org/docs/dom/technote/tn-dom-table/>

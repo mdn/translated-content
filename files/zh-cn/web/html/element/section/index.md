@@ -2,6 +2,7 @@
 title: <section>
 slug: Web/HTML/Element/section
 ---
+
 {{HTMLRef}}
 
 **HTML \<section\> 元素**表示 HTML 文档中一个通用独立章节，它没有更具体的语义元素来表示。一般来说会包含一个标题。
@@ -70,7 +71,7 @@ slug: Web/HTML/Element/section
 注意事项：
 
 - 当该元素的内容可以作为一个独立的作品在多个媒体上发表，使用 {{HTMLElement("article")}} 是一个更好的选择。
-- 当内容包含代表与主要内容一同展示的有用的切入信息，但不是直接的一部分（如相关链接,作者简历等），请使用 {{HTMLElement("main")}}。
+- 当内容包含代表与主要内容一同展示的有用的切入信息，但不是直接的一部分（如相关链接，作者简历等），请使用 {{HTMLElement("main")}}。
 - 当内容代表文档中的主要内容区域，请使用 {{HTMLElement("main")}}。
 - 将该元素作为一个样式包装时，请使用 {{HTMLElement("div")}}。一般来说，`<section>` 应该出现在文档大纲中。
 
@@ -152,7 +153,7 @@ slug: Web/HTML/Element/section
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.section")}}
+{{Compat}}
 
 ## 参见
 

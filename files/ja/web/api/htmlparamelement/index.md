@@ -1,16 +1,8 @@
 ---
 title: HTMLParamElement
 slug: Web/API/HTMLParamElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-  - 非推奨
-browser-compat: api.HTMLParamElement
-translation_of: Web/API/HTMLParamElement
 ---
+
 {{ APIRef("HTML DOM") }}{{Deprecated_Header}}
 
 **`HTMLParamElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものに加えて） {{HTMLElement("param")}} 要素を操作するための特別なプロパティを提供し、 {{HTMLElement("object")}} 要素の引数として機能するキーと値の組を表します。

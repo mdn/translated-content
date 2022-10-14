@@ -1,8 +1,8 @@
 ---
 title: unload
 slug: Web/API/Window/unload_event
-translation_of: Web/API/Window/unload_event
 ---
+
 {{APIRef}}
 
 `unload` イベントは、文書または子リソースがアンロードされるときに発生します。

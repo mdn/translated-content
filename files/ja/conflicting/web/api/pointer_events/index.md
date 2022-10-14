@@ -1,13 +1,9 @@
 ---
 title: TouchEvent と MouseEvent の両方をサポートする
 slug: conflicting/Web/API/Pointer_events
-tags:
-  - Guide
-  - TouchEvent
-  - touch
-translation_of: Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
 original_slug: Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 {{domxref("Touch_events","touch")}} インターフェースは、タッチできるデバイス 上で高いユーザーエクスペリエンスを生み出すアプリケーションを可能にします。しかし、ウェブコンテンツの大部分がマウス入力でだけ操作できるように設計されている現実があります。したがって、ブラウザがタッチをサポートしていても、マウス入力のみを想定したコンテンツを直接修正することなく*従来通り*動作させるために、ブラウザはまだマウスイベントを*エミュレート*しなくてはなりません。

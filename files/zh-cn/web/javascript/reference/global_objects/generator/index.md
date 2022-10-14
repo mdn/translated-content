@@ -2,6 +2,7 @@
 title: Generator
 slug: Web/JavaScript/Reference/Global_Objects/Generator
 ---
+
 {{JSRef}}
 
 **生成器**对象是由一个 {{jsxref("Statements/function*", "generator function", "", 1)}} 返回的，并且它符合[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterable)和[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterator)。
@@ -52,7 +53,7 @@ console.log(gen.next().value);
 
 ## 传统的生成器对象
 
-Firefox (SpiderMonkey) 在 [JavaScript 1.7](/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7) 中也实现了一个较早版本的生成器，其中函数声明中的星号（\*）不是必需的 (只需在函数体中使用`yield` 关键字)。但是，旧式生成器已弃用。不要使用它们;他们将被删除 ({{bug(1083482)}})。
+Firefox (SpiderMonkey) 在 [JavaScript 1.7](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/1.7) 中也实现了一个较早版本的生成器，其中函数声明中的星号（\*）不是必需的 (只需在函数体中使用`yield` 关键字)。但是，旧式生成器已弃用。不要使用它们;他们将被删除 ({{bug(1083482)}})。
 
 ### 传统的生成器方法
 
@@ -61,7 +62,7 @@ Firefox (SpiderMonkey) 在 [JavaScript 1.7](/en-US/docs/Web/JavaScript/New_in_Ja
 - `Generator.prototype.close()` {{non-standard_inline}}
   - : 关闭生成器，因此执行该函数后调用`next() 函数时将会抛出` {{jsxref("StopIteration")}} 错误。与 ES2015 生成器对象的 return() 方法对应..
 - `Generator.prototype.send()` {{non-standard_inline}}
-  - : 用于将值发送到生成器。 该值由 {{jsxref("Operators/yield", "yield")}} 表达式返回，并且返回下一个 {{jsxref("Operators/yield", "yield")}} 表达式产生的值。`send(x)` 对应于 ES2015 生成器对象中的 `next(x)`
+  - : 用于将值发送到生成器。该值由 {{jsxref("Operators/yield", "yield")}} 表达式返回，并且返回下一个 {{jsxref("Operators/yield", "yield")}} 表达式产生的值。`send(x)` 对应于 ES2015 生成器对象中的 `next(x)`
 - **`Generator.`**`prototype.`**`throw()` **{{non-standard_inline}}
   - : 向生成器抛出错误。与 ES2015 生成器对象的 throw() 方法对应。
 
@@ -96,7 +97,7 @@ console.log(it.next());   // throws StopIteration (as the generator is now close
 - {{jsxref("Statements/Legacy_generator_function", "The legacy generator function", "", 1)}}
 - {{jsxref("Operators/Legacy_generator_function", "The legacy generator function expression", "", 1)}}
 - {{jsxref("StopIteration")}}
-- [The legacy Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol)
+- [The legacy Iterator protocol](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol)
 
 ### ES2015 generators
 
@@ -107,4 +108,4 @@ console.log(it.next());   // throws StopIteration (as the generator is now close
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("GeneratorFunction")}}
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol)

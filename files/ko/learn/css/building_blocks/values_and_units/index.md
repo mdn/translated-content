@@ -1,7 +1,6 @@
 ---
 title: CSS 값 과 단위
 slug: Learn/CSS/Building_blocks/Values_and_units
-translation_of: Learn/CSS/Building_blocks/Values_and_units
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 

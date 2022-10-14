@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::placeholder
 ---
+
 {{CSSRef}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-%C3%A9l%C3%A9ments) **`::placeholder`** représente [le texte de substitution](/fr/docs/Web/Guide/HTML/Forms_in_HTML#The_placeholder_attribute) pour un élément {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}. Cela permet aux développeurs web de personnaliser l'apparence de ce texte.
@@ -105,13 +106,11 @@ Les textes de substitution ne doivent pas remplacer les éléments {{htmlelement
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                         | Commentaires           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#placeholder-pseudo', '::placeholder')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Définitions initiales. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.placeholder")}}
+{{Compat}}
 
 ## Voir aussi
 

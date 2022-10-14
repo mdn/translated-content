@@ -1,16 +1,9 @@
 ---
 title: saturate()
 slug: Web/CSS/filter-function/saturate
-tags:
-  - CSS
-  - CSS 関数
-  - フィルター効果
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/filter-function/saturate()
 original_slug: Web/CSS/filter-function/saturate()
-browser-compat: css.types.filter-function.saturate
 ---
+
 {{CSSRef}}
 
 **`saturate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、入力画像の彩度を上げたり下げたりします。結果は {{cssxref("&lt;filter-function&gt;")}} です。

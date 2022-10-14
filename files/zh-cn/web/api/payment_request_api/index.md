@@ -2,6 +2,7 @@
 title: 支付请求接口
 slug: Web/API/Payment_Request_API
 ---
+
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
 支付请求 API 为商家和支付者提供了统一的用户体验。它并非提供一种新的支付方式，而是让用户可以在原有的支付方式中进行选择，并使商家可以获悉用户的支付情况。
@@ -69,7 +70,7 @@ slug: Web/API/Payment_Request_API
 
 ### 支付请求接口
 
-{{Compat("api.PaymentRequest", 0)}}
+{{Compat}}
 
 ## 相关文档
 

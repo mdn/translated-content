@@ -3,6 +3,7 @@ title: Loading and running WebAssembly code
 slug: WebAssembly/Loading_and_running
 translation_of: WebAssembly/Loading_and_running
 ---
+
 {{WebAssemblySidebar}}Pour utiliser webassembly au sein de javascript, votre module doit être placé en mémoire. La mise en mémoire du module précède les étapes de compiliation et d'instantiation. Cet article fournit une référence pour les différents méchanismes qui permettent de récupérer le bytecode webassembly, ainsi que des informations sur la manière de le compiler, l'instancier, et l'exécuter.
 
 ## Quelles sont les différentes options?

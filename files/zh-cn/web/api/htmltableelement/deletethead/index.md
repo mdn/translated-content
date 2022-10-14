@@ -2,6 +2,7 @@
 title: HTMLTableElement.deleteTHead()
 slug: Web/API/HTMLTableElement/deleteTHead
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.deleteTHead()`** 方法删除指定 {{HtmlElement("table")}} 的 {{HTMLElement("thead")}} 元素。
@@ -43,4 +44,4 @@ table.deleteTHead();
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLTableElement.deleteTHead")}}
+{{Compat}}

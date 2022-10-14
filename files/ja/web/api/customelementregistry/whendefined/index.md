@@ -1,16 +1,8 @@
 ---
 title: CustomElementRegistry.whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
-tags:
-  - API
-  - CustomElementRegistry
-  - メソッド
-  - リファレンス
-  - ウェブコンポーネント
-  - カスタム要素
-  - whenDefined
-translation_of: Web/API/CustomElementRegistry/whenDefined
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 **`whenDefined()`** は {{domxref("CustomElementRegistry")}} インターフェイスのメソッドで、指定した名前の要素が定義されたときに解決されるプロミス ({{jsxref("Promise")}}) を返します。</span>

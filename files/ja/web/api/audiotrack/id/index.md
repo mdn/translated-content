@@ -1,23 +1,8 @@
 ---
 title: AudioTrack.id
 slug: Web/API/AudioTrack/id
-page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Audio Track
-  - AudioTrack
-  - HTML DOM
-  - Interface
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - id
-  - track
-browser-compat: api.AudioTrack.id
-translation_of: Web/API/AudioTrack/id
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`id`** プロパティには、**{{domxref("AudioTrack")}}** によって表されるトラックを一意に識別する文字列が含まれています。

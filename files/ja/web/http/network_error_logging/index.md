@@ -1,13 +1,8 @@
 ---
 title: Network Error Logging
 slug: Web/HTTP/Network_Error_Logging
-tags:
-  - Guide
-  - HTTP
-  - Network Error Logging
-  - Reference
-translation_of: Web/HTTP/Network_Error_Logging
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 ネットワークエラーロギングは、HTTP の {{HTTPHeader("NEL")}} *[レスポンスヘッダー](/ja/docs/Glossary/Response_header)*を使って設定できるメカニズムです。この実験的なヘッダーにより、ウェブサイトやアプリケーションは、対応しているブラウザーから、失敗した (必要であれば成功した) ネットワーク読み取りに関するレポートを受け取ることを選択することができます。

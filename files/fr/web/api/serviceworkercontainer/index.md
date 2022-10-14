@@ -3,6 +3,7 @@ title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
 translation_of: Web/API/ServiceWorkerContainer
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 L’interface `ServiceWorkerContainer` de l’[API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API) fournit un objet représentant le service worker comme une unité globale de l’écosystème réseau, incluant des fonctionnalités pour enregistrer, désenregistrer et mettre à jour des services workers, et accéder à l’état des services workers et de leurs enregistrements.

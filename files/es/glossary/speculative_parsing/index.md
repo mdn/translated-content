@@ -27,5 +27,5 @@ La generación de árbol especulativo falla cuando `document.write()` cambia el 
 - No escriba un token sin finalizar. `<script>document.write("<div></div");</script>` esta mal.
 - No termine con un carater de retorno de carro. `<script>document.write("Hello World!\r");</script>` está mal. `<script>document.write("Hello World!\n");</script>` es correcto.
 - Note que escribiendo etiquetas balanceadas pueden causarse que se creen otras etiquetas desbalanceadas. Ej. `<script>document.write("<div></div>");</script>` dentro del elemento `head` será interpretado como `<script>document.write("</head><body><div></div>");</script>` el cual está desbalanceado.
-- No formatee parte de una tabla. `<table><script>document.write("<tr><td>Hello World!</td></tr>");</script></table>` está mal. Sin embargo, ` <script>document.write("``<table>``<tr><td>Hello World!</td></tr>``</table>``");</script> ` está correcto.
+- No formatee parte de una tabla. `<table><script>document.write("<tr><td>Hello World!</td></tr>");</script></table>` está mal. Sin embargo, `<script>document.write("<table><tr><td>Hello World!</td></tr></table>");</script>` está correcto.
 - HAGA: document.write dentro de otro elemento de formateo.

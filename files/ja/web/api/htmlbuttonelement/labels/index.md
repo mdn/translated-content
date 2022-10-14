@@ -1,14 +1,8 @@
 ---
 title: HTMLButtonElement.labels
 slug: Web/API/HTMLButtonElement/labels
-tags:
-  - API
-  - HTML DOM
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLButtonElement.labels
-translation_of: Web/API/HTMLButtonElement/labels
 ---
+
 {{APIRef("DOM")}}
 
 **`HTMLButtonElement.labels`** は読み取り専用プロパティで、この

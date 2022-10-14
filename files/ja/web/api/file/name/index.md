@@ -2,6 +2,7 @@
 title: File.name
 slug: Web/API/File/name
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("File")}} オブジェクトによって表されるファイルの名前を返します。セキュリティ上の理由から、パスはこのプロパティから除外されます。

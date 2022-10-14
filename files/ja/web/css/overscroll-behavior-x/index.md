@@ -1,15 +1,8 @@
 ---
 title: overscroll-behavior-x
 slug: Web/CSS/overscroll-behavior-x
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Reference
-  - overscroll-behavior-x
-  - recipe:css-property
-translation_of: Web/CSS/overscroll-behavior-x
 ---
+
 {{CSSRef}}
 
 **`overscroll-behavior-x`** は CSS のプロパティで、スクロール領域の水平方向の境界に達したときのブラウザーの挙動を設定します。

@@ -1,7 +1,6 @@
 ---
 title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/create
 ---
 {{AddonSidebar()}}
 

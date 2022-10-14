@@ -1,19 +1,9 @@
 ---
 title: WindowOrWorkerGlobalScope.isSecureContext
 slug: Web/API/isSecureContext
-tags:
-  - API
-  - DOM
-  - Window
-  - WindowOrWorkerGlobalContext
-  - Workers
-  - isSecureContext
-  - ウェブ
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/WindowOrWorkerGlobalScope/isSecureContext
 original_slug: Web/API/WindowOrWorkerGlobalScope/isSecureContext
 ---
+
 {{APIRef()}}{{SeeCompatTable}}
 
 {{domxref("WindowOrWorkerGlobalScope")}} インターフェイスの読み取り専用 **`isSecureContext`** プロパティは、現在のコンテキストが安全（`true`）かそうではない（`false`）を示すブール値を返します。

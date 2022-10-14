@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/entries
 ---
+
 {{JSRef}}
 
 La méthode **`entries()`** renvoie un nouvel objet de type  **`Array Iterator`** qui contient le couple clef/valeur pour chaque éléments du tableau.
@@ -59,14 +60,11 @@ for (let e of eArr) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype.entries', 'Array.prototype.entries')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype.entries', 'Array.prototype.entries')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.entries")}}
+{{Compat}}
 
 ## Voir aussi
 

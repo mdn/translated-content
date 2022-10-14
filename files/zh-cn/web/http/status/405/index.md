@@ -2,6 +2,7 @@
 title: 405 Method Not Allowed
 slug: Web/HTTP/Status/405
 ---
+
 {{HTTPSidebar}}
 
 状态码 **`405 Method Not Allowed`** 表明服务器禁止了使用当前 HTTP 方法的请求。

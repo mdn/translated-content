@@ -2,7 +2,8 @@
 title: 读取主文件信息方法 - runtime.getManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 ---
-{{AddonSidebar()}}该方法会获取一个完整的主文件 [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), 并返回一个序列化后的 JSON 对象。
+
+{{AddonSidebar()}}该方法会获取一个完整的主文件 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json), 并返回一个序列化后的 JSON 对象。
 
 ## 语法
 
@@ -20,7 +21,7 @@ browser.runtime.getManifest()
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.runtime.getManifest")}}
+{{Compat}}
 
 ## 示例
 

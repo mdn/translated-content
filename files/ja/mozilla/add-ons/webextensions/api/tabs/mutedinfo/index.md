@@ -1,8 +1,8 @@
 ---
 title: tabs.MutedInfo
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
 ---
+
 {{AddonSidebar()}}
 
 This object contains a boolean indicating whether the tab is muted, and the reason for the last state change.
@@ -24,7 +24,7 @@ This object contains a boolean indicating whether the tab is muted, and the reas
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-MutedInfo) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-MutedInfo) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

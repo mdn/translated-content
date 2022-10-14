@@ -1,20 +1,9 @@
 ---
 title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - gradient
-translation_of: Web/CSS/gradient/radial-gradient()
 original_slug: Web/CSS/gradient/radial-gradient()
-browser-compat: css.types.image.gradient.radial-gradient
 ---
+
 {{CSSRef}}
 
 **`radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、二つ以上の色の連続的な推移が原点から放射状に広がる画像を生成します。形状は円形または楕円形にになります。関数の結果は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊形です。

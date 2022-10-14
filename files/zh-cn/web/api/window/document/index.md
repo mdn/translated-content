@@ -2,6 +2,7 @@
 title: window.document
 slug: Web/API/Window/document
 ---
+
 {{ ApiRef() }}
 
 **`window.document`** 返回当前窗口内的文档节点（{{domxref("document")}}）
@@ -30,7 +31,7 @@ doc = window.document
 
 <script type="text/javascript">
    var doc = window.document;
-   alert( doc.title);    // 弹出: Hello, World!
+   alert( doc.title);    // 弹出：Hello, World!
 </script>
 
 </body>
@@ -43,4 +44,4 @@ doc = window.document
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.document")}}
+{{Compat}}

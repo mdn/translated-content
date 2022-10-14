@@ -1,17 +1,6 @@
 ---
 title: '<noframes>: フレームフォールバック要素'
 slug: Web/HTML/Element/noframes
-tags:
-  - 要素
-  - フレーム
-  - HTML
-  - HTML フレーム
-  - 非推奨
-  - リファレンス
-  - ウェブ
-  - noframes
-browser-compat: html.elements.noframes
-translation_of: Web/HTML/Element/noframes
 ---
 
 {{deprecated_header}}
@@ -22,7 +11,7 @@ translation_of: Web/HTML/Element/noframes
 
 `<noframes>` は、ユーザーのブラウザーがフレームに対応していないことを説明するメッセージを表示するために利用することができますが、できればフレームを使わなくても同じ（または同等の）機能を提供するための別なフォームを表現するために使用するべきです。
 
-> **Note:** HTML 5 以降では、 {{HTMLElement("frame")}} 要素および {{HTMLElement("frameset")}} 要素が廃止されたため、この要素も廃止されており使用するべきではありません。フレームがどうしても必要であれば、 {{HTMLElement("iframe")}} 要素を用いて表現するべきです。
+> **メモ:** HTML 5 以降では、 {{HTMLElement("frame")}} 要素および {{HTMLElement("frameset")}} 要素が廃止されたため、この要素も廃止されており使用するべきではありません。フレームがどうしても必要であれば、 {{HTMLElement("iframe")}} 要素を用いて表現するべきです。
 
 ## 属性
 

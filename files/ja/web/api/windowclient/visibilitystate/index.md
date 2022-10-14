@@ -1,16 +1,8 @@
 ---
 title: WindowClient.visibilityState
 slug: Web/API/WindowClient/visibilityState
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - WindowClient
-  - visibilityState
-translation_of: Web/API/WindowClient/visibilityState
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("WindowClient")}} インターフェイスの **`visibilityState`** 読み取り専用プロパティは、現在のクライアントの可視性を示します。 この値は、`"hidden"`、`"visible"`、`"prerender"` のいずれかです。

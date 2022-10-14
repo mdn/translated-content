@@ -1,15 +1,8 @@
 ---
 title: 非同期関数式
 slug: Web/JavaScript/Reference/Operators/async_function
-tags:
-  - 関数
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Primary Expression
-browser-compat: javascript.operators.async_function
-translation_of: Web/JavaScript/Reference/Operators/async_function
 ---
+
 {{jsSidebar("Operators")}}
 
 **`async function`** キーワードは、式の中で `async` 関数を定義するために使用できます。

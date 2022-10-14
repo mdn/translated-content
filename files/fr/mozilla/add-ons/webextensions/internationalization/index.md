@@ -13,6 +13,7 @@ tags:
   - predefined
 translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 ---
+
 {{AddonSidebar}}
 
 L'API [WebExtensions](/fr/Add-ons/WebExtensions) dispose d'un module assez pratique pour l'internationalisation des extensions — [i18n](/fr/Add-ons/WebExtensions/API/i18n). Dans cet article, nous allons explorer ses fonctionnalités et fournir un exemple pratique de son fonctionnement. Le système i18n pour les extensions construites à l'aide des APIs WebExtension est similaire aux bibliothèques JavaScript courantes pour i18n telles que [i18n.js](http://i18njs.com/).

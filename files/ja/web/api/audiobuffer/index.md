@@ -1,15 +1,8 @@
 ---
 title: AudioBuffer
 slug: Web/API/AudioBuffer
-tags:
-  - API
-  - AudioBuffer
-  - インターフェイス
-  - リファレンス
-  - ウェブ音声 API
-browser-compat: api.AudioBuffer
-translation_of: Web/API/AudioBuffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AudioBuffer`** インターフェイスはメモリー上の短い音声を表すもので、 {{ domxref("AudioContext.decodeAudioData()") }} メソッドで音声ファイルから生成されたり、 {{ domxref("AudioContext.createBuffer()") }} を使って生のデータから生成されたりします。 AudioBuffer に入れた後、その音声は {{ domxref("AudioBufferSourceNode") }} に渡せば再生できます。

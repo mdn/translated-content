@@ -1,16 +1,8 @@
 ---
 title: ':required'
 slug: Web/CSS/:required
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.required
-translation_of: Web/CSS/:required
 ---
+
 {{ CSSRef }}
 
 **`:required`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素のうち {{ htmlattrxref("required", "input") }} 属性が設定されているものを表します。
@@ -24,11 +16,13 @@ input:required {
 
 この擬似クラスは、フォームを送信する前に有効なデータを持っている必要がある入力欄を強調表示するのに便利です。
 
-> **Note:** {{cssxref(":optional")}} 擬似クラスは*省略可能*なフォーム欄を選択します。
+> **メモ:** {{cssxref(":optional")}} 擬似クラスは*省略可能*なフォーム欄を選択します。
 
 ## 構文
 
-{{csssyntax}}
+```
+:required
+```
 
 ## 例
 

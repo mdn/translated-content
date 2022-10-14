@@ -9,6 +9,7 @@ tags:
   - toString()
 translation_of: Web/API/URL/toString
 ---
+
 {{ApiRef("URL API")}}
 
 La méthode **`URL.toString()`** retourne un {{domxref("USVString")}} contenant tout l'URL. C'est en effet, une version de {{domxref("URL.href")}} en lecture seule.

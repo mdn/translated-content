@@ -2,11 +2,12 @@
 title: Large-Allocation
 slug: Web/HTTP/Headers/Large-Allocation
 ---
+
 {{HTTPSidebar}}
 
 非标准的**`Large-Allocation`** 响应头部是用来告诉浏览器加载该页面可能需要申请大内存。当前只有 Firefox 实现该特性，但是对其他浏览器也无损害。
 
-[WebAssembly](/zh-CN/docs/WebAssembly) 或者 asm.js 会使用比较大的连续内存空间。例如，对于一些复杂的游戏， 其申请的空间将会非常大，甚至会达到 1GB。`Large-Allocation` 告诉浏览器其将要加载的页面可能需要申请一个大的连续内存空间，浏览器依据该头部可能会单独启动一个专有的进程用于处理该页面。
+[WebAssembly](/zh-CN/docs/WebAssembly) 或者 asm.js 会使用比较大的连续内存空间。例如，对于一些复杂的游戏，其申请的空间将会非常大，甚至会达到 1GB。`Large-Allocation` 告诉浏览器其将要加载的页面可能需要申请一个大的连续内存空间，浏览器依据该头部可能会单独启动一个专有的进程用于处理该页面。
 
 | Header type                                      | {{Glossary("Response header")}} |
 | ------------------------------------------------ | ---------------------------------------- |
@@ -58,7 +59,7 @@ Large-Allocation: 500
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.Large-Allocation")}}
+{{Compat}}
 
 ## 参见
 

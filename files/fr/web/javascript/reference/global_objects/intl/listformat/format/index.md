@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/format
 ---
+
 {{JSRef}}
 
 La méthode **`format()`** renvoie une chaîne de caractères représentant la liste passée en argument, mise en forme selon la langue choisie (lors de la construction de l'objet `Intl.ListFormat`).

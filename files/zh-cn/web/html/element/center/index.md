@@ -2,6 +2,7 @@
 title: <center>
 slug: Web/HTML/Element/center
 ---
+
 {{deprecated_header()}}
 
 ## Summary

@@ -14,6 +14,7 @@ tags:
 translation_of: Web/HTML/Element/bgsound
 browser-compat: html.elements.bgsound
 ---
+
 {{HTMLRef}}
 
 > **Attention :** Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.

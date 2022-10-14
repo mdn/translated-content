@@ -2,6 +2,7 @@
 title: <meta>：文档级元数据元素
 slug: Web/HTML/Element/meta
 ---
+
 {{HTMLRef}}
 
 **HTML `<meta>` 元素**表示那些不能由其它 HTML 元相关（meta-related）元素（({{HTMLElement("base")}}、{{HTMLElement("link")}}, {{HTMLElement("script")}}、{{HTMLElement("style")}} 或 {{HTMLElement("title")}}）之一表示的任何{{Glossary("Metadata","元数据")}}信息。
@@ -26,7 +27,7 @@ slug: Web/HTML/Element/meta
 
 此元素包括[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-> **备注：** 全局属性 {{htmlattrxref("name", "meta")}} 在 {{HTMLElement("meta")}} 元素中具有特殊的语义；另外， 在同一个 \<meta> 标签中，{{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} 或者 {{htmlattrxref("charset", "meta")}} 三者中任何一个属性存在时，{{htmlattrxref("itemprop", "meta")}} 属性不能被使用。
+> **备注：** 全局属性 {{htmlattrxref("name", "meta")}} 在 {{HTMLElement("meta")}} 元素中具有特殊的语义；另外，在同一个 \<meta> 标签中，{{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} 或者 {{htmlattrxref("charset", "meta")}} 三者中任何一个属性存在时，{{htmlattrxref("itemprop", "meta")}} 属性不能被使用。
 
 **{{htmlattrdef("charset")}}**
 
@@ -39,7 +40,7 @@ slug: Web/HTML/Element/meta
   - : 属性定义了一个编译指示指令。这个属性叫做 `http-equiv(alent)` 是因为所有允许的值都是特定 HTTP 头部的名称，如下：
 
     - `content-security-policy`
-      它允许页面作者定义当前页的[内容策略](/zh-CN/docs/Web/Security/CSP/CSP_policy_directives)。 内容策略主要指定允许的服务器源和脚本端点，这有助于防止跨站点脚本攻击。
+      它允许页面作者定义当前页的[内容策略](/zh-CN/docs/Web/Security/CSP/CSP_policy_directives)。内容策略主要指定允许的服务器源和脚本端点，这有助于防止跨站点脚本攻击。
 
     - `content-type`
       如果使用这个属性，其值必须是"`text/html; charset=utf-8`"。注意：该属性只能用于 [MIME type](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 为 `text/html` 的文档，不能用于 MIME 类型为 XML 的文档。
@@ -53,7 +54,7 @@ slug: Web/HTML/Element/meta
       这个属性指定：
 
       - 如果 {{htmlattrxref("content", "meta")}} 只包含一个正整数，则为重新载入页面的时间间隔 (秒)；
-      - 如果 {{htmlattrxref("content", "meta")}} 包含一个正整数，并且后面跟着字符串 '`;url=`' 和一个合法的 URL，则是重定向到指定链接的时间间隔 (秒)无障碍相关考虑：设置了 `refresh` 值的页面可能有时间间隔太短的风险。使用诸如屏幕朗读这样的辅助技术来浏览网页的人可能会由于自动跳转而来不及读完或理解网页的内容。这样不经提示而突然进行的页面刷新也可能会让有视力障碍的人群感到迷惑。
+      - 如果 {{htmlattrxref("content", "meta")}} 包含一个正整数，并且后面跟着字符串 '`;url=`' 和一个合法的 URL，则是重定向到指定链接的时间间隔 (秒) 无障碍相关考虑：设置了 `refresh` 值的页面可能有时间间隔太短的风险。使用诸如屏幕朗读这样的辅助技术来浏览网页的人可能会由于自动跳转而来不及读完或理解网页的内容。这样不经提示而突然进行的页面刷新也可能会让有视力障碍的人群感到迷惑。
 
     - [MDN Understanding WCAG, Guideline 2.1 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
     - [MDN Understanding WCAG, Guideline 3.1 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.2_%E2%80%94_Predictable_Make_Web_pages_appear_and_operate_in_predictable_ways)

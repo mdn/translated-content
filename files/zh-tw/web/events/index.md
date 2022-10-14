@@ -2,6 +2,7 @@
 title: Event reference
 slug: Web/Events
 ---
+
 事件為一些有趣事情，發生後會被傳出以通知 code。每個事件被表示為一個根據{{domxref("Event")}}所定義的物件，且可能會有額外自訂欄位與(或)函式來描述發生了什麼事。事件可以表示從使用者互動到自動通知等渲染 model 所有的事情。
 
 Events are sent to notify code of interesting things that have taken place. Each event is represented by an object which is based on the {{domxref("Event")}} interface, and may have additional custom fields and/or functions used to get additional information about what happened. Events can represent everything from basic user interactions to automated notifications of things happening in the rendering model.

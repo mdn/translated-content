@@ -1,13 +1,8 @@
 ---
 title: HTMLModElement
 slug: Web/API/HTMLModElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLModElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLModElement`** インターフェイスは、 (継承によって {{domxref("HTMLElement")}} を通じて利用できる通常のメソッドやプロパティに加えて) 改変 (modification) 要素、すなわち {{HTMLElement("del")}} と {{HTMLElement("ins")}} を操作するための特有のプロパティを提供します。

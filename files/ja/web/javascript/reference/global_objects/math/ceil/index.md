@@ -1,13 +1,8 @@
 ---
 title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
 ---
+
 {{JSRef}}
 
 **`Math.ceil()`** 関数は、引数として与えた数以上の最小の整数を返します。

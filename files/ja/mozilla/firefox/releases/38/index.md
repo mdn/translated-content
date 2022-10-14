@@ -1,11 +1,8 @@
 ---
 title: Firefox 38 for developers
 slug: Mozilla/Firefox/Releases/38
-tags:
-  - Firefox
-  - Release
-translation_of: Mozilla/Firefox/Releases/38
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 38 は、米国時間 2015 年 5 月 12 日にリリースされました。この記事では、ウェブ開発者だけでなく、Firefox や Gecko の開発者、アドオン開発者にとっても有用な主な変更点を挙げています。

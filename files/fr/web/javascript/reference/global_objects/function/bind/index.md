@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/bind
 ---
+
 {{JSRef}}
 
 La méthode **`bind()`** crée une nouvelle fonction qui, lorsqu'elle est appelée, a pour contexte [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) la valeur passée en paramètre et éventuellement une suite d'arguments qui précéderont ceux fournis à l'appel de la fonction créée.
@@ -210,15 +211,11 @@ slice(arguments);
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                           |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------ |
-| {{SpecName('ES5.1', '#sec-15.3.4.5', 'Function.prototype.bind')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5 |
-| {{SpecName('ES2015', '#sec-function.prototype.apply', 'Function.prototype.bind')}} | {{Spec2('ES2015')}}     |                                                        |
-| {{SpecName('ESDraft', '#sec-function.prototype.bind', 'Function.prototype.bind')}} | {{Spec2('ESDraft')}} |                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.bind")}}
+{{Compat}}
 
 ## Voir aussi
 

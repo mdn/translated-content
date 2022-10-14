@@ -1,21 +1,13 @@
 ---
 title: '<big>: 大きめの文字列要素'
 slug: Web/HTML/Element/big
-tags:
-  - 要素
-  - HTML
-  - 非推奨
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.big
-translation_of: Web/HTML/Element/big
 ---
 
 {{deprecated_header}}
 
 **`<big>`** は [HTML](/ja/docs/Web/HTML) の非推奨の要素で、内包するテキストを周りの文字列よりも1段階大きいフォントの大きさで描画します（例えば `medium` が `large` になります）。大きさはブラウザーの最大フォントの大きさに制限されます。
 
-> **Warning:** この要素は仕様書から削除され、もう使用するべきではありません。ウェブ開発者は CSS の {{cssxref("font-size")}} プロパティを使用して、フォントの大きさを調整してください。
+> **警告:** この要素は仕様書から削除され、もう使用するべきではありません。ウェブ開発者は CSS の {{cssxref("font-size")}} プロパティを使用して、フォントの大きさを調整してください。
 
 ## 属性
 

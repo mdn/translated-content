@@ -1,16 +1,8 @@
 ---
 title: 正規表現
 slug: Web/JavaScript/Guide/Regular_Expressions
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
 正規表現とは、文字列内で文字の組み合わせを照合するために用いられるパターンです。 JavaScript では、正規表現はオブジェクトでもあります。これらのパターンは {{jsxref("RegExp")}} の {{jsxref("RegExp.exec", "exec()")}} および {{jsxref("RegExp.test", "test()")}} メソッドや、{{jsxref("String")}} の {{jsxref("String.match", "match()")}}、 {{jsxref("String.matchAll", "matchAll()")}}、{{jsxref("String.replace", "replace()")}}、{{jsxref("String.replaceAll", "replaceAll()")}}、{{jsxref("String.search", "search()")}}、{{jsxref("String.split", "split()")}} メソッドで使用できます。本章では、 JavaScript の正規表現について説明します。
@@ -40,7 +32,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 正規表現パターンは、 `/abc/` のような単純な文字、または `/ab*c/` や `/Chapter (\d+)\.\d*/` のような単純な文字と特殊文字との組み合わせからなります。最後の例には記憶装置として用いられる丸括弧があります。パターンのこの丸括弧で囲まれた部分に一致した箇所は、後で使用できるように記憶されます。詳しくは[グループの使用](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences#using_groups)を参照してください。
 
-> **Note:** すでに正規表現の形式に慣れている方は、[早見表](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet)を見て特定のパターンや構造を素早く検索することもできます。
+> **メモ:** すでに正規表現の形式に慣れている方は、[早見表](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet)を見て特定のパターンや構造を素早く検索することもできます。
 
 ### 単純なパターンの使い方
 
@@ -153,7 +145,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
   </tbody>
 </table>
 
-> **Note:** [もっと大きな早見表もあります](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) (個別の記事の一部を集約しただけです)。
+> **メモ:** [もっと大きな早見表もあります](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) (個別の記事の一部を集約しただけです)。
 
 ### エスケープ
 
@@ -393,13 +385,13 @@ Unicode 正規表現と非 Unicode 正規表現との間には、他にも注意
 
 - Unicode の正規表現はいわゆる "identity escapes" に対応していません。つまり、バックスラッシュをエスケープする必要がなく、事実上無視されるパターンです。例えば、 `/\a/` は文字 'a' に一致する有効な正規表現ですが、 `/\a/u` はそうではありま せん。
 
-- 波括弧は[数量詞](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)として使用されない場合は、エスケープする必要がありま す。例えば、`/{/` は中括弧 '{' に一致する有効な正規表現ですが、`/{/u` はそうではありません - 代わりに、中括弧をエスケープして `/\{/u` を使用しなければなりません。
+- 波括弧は[数量詞](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)として使用されない場合は、エスケープする必要がありま す。例えば、`/{/` は中括弧 '{' に一致する有効な正規表現ですが、`/{/u` はそうではありません - 代わりに、中括弧をエスケープして `/\\{/u` を使用しなければなりません。
 
 - `-` の文字は文字クラスの中では異なった解釈をされます。特に、 Unicode の正規表現では、 `-` はパターンの先頭または末尾に現れた場合にのみリテラルの `-` として解釈されます（範囲指定はできません）。例えば、 `/[\w-:]/` は単語、`-`、または `:` に一致する有効な正規表現ですが、 `/\w-:/u` は無効な正規表現です。なぜなら `\w` から `:` という範囲は文字の範囲としてきちんと定義されていないので、無効な正規表現だからです。
 
 ## 例
 
-> **Note:** 複数の例が次の場所にあります。
+> **メモ:** 複数の例が次の場所にあります。
 >
 > - {{jsxref("RegExp.exec", "exec()")}}、{{jsxref("RegExp.test", "test()")}}、{{jsxref("String.match", "match()")}}、{{jsxref("String.matchAll", "matchAll()")}}、{{jsxref("String.search", "search()")}}、{{jsxref("String.replace", "replace()")}}、{{jsxref("String.split", "split()")}} のリファレンスページ
 > - ガイド記事の[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)、[言明](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)、[グループと範囲](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)、[数量詞](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)、[Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)

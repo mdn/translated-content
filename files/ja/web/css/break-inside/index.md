@@ -1,17 +1,8 @@
 ---
 title: break-inside
 slug: Web/CSS/break-inside
-tags:
-  - CSS
-  - CSS 断片化
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - NeedsExample
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.break-inside
-translation_of: Web/CSS/break-inside
 ---
+
 {{CSSRef}}
 
 **`break-inside`** は [CSS](/ja/docs/Web/CSS) のプロパティで、生成されたボックスの途中で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。

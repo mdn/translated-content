@@ -3,6 +3,7 @@ title: 'HTMLMediaElement: ended'
 slug: Web/API/HTMLMediaElement/ended_event
 translation_of: Web/API/HTMLMediaElement/ended_event
 ---
+
 L'événement **ended** est déclenché lorsque la lecture ou le streaming s'est arrêté parce que la fin du média a été atteinte ou qu'aucune donnée n'est disponible.
 
 L'événement se produit dans deux contextes liés mais unique:

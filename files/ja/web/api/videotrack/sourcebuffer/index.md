@@ -1,21 +1,8 @@
 ---
 title: VideoTrack.sourceBuffer
 slug: Web/API/VideoTrack/sourceBuffer
-tags:
-  - API
-  - HTML DOM
-  - MSE
-  - Media
-  - Media Source Extensions
-  - Property
-  - Read-only
-  - Reference
-  - SourceBuffer
-  - Video
-  - VideoTrack
-  - track
-translation_of: Web/API/VideoTrack/sourceBuffer
 ---
+
 {{APIRef("HTML DOM")}}
 
 読み取り専用の **{{domxref("VideoTrack")}}** の **`sourceBuffer`** プロパティは、トラックを作成した {{domxref("SourceBuffer")}} を返します。 トラックが {{domxref("SourceBuffer")}} によって作成されなかった場合、または {{domxref("SourceBuffer")}} がその親メディアソースの {{domxref("MediaSource.sourceBuffers")}} 属性から取り除かれた場合は null を返します。

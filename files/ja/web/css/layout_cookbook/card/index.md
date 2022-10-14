@@ -1,15 +1,8 @@
 ---
 title: カード
 slug: Web/CSS/Layout_cookbook/Card
-tags:
-  - CSS
-  - CSS 料理帳
-  - CSS グリッド
-  - ガイド
-  - カード
-  - css レイアウト
-translation_of: Web/CSS/Layout_cookbook/Card
 ---
+
 {{CSSRef}}
 
 このパターンは、オプションでフッターが付く「カード」部品のリストです。
@@ -28,7 +21,7 @@ translation_of: Web/CSS/Layout_cookbook/Card
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/card.html", '100%', 1720)}}
 
-> **Callout:**
+> **注目:**
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/card--download.html)
 
@@ -47,7 +40,7 @@ translation_of: Web/CSS/Layout_cookbook/Card
 
 暗黙的にグリッドに作成された行は、既定で自動的にサイズ変更されるため、トラックにフッターがある場合は自動的にサイズ変更されます。 したがって、これは追加されたコンテンツに合わせられます。
 
-> **Note:** 各カードは独立したグリッドであるため、別々のカードのさまざまな要素は互いに整列しません。 Grid Level  2 で提案されたサブグリッド機能は、この問題を解決するでしょう。
+> **メモ:** 各カードは独立したグリッドであるため、別々のカードのさまざまな要素は互いに整列しません。 Grid Level  2 で提案されたサブグリッド機能は、この問題を解決するでしょう。
 
 ## 有用な代替策またはその他の方法
 

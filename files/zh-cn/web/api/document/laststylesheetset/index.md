@@ -2,6 +2,7 @@
 title: Document.lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 **`Document.lastStyleSheetSet`** 返回最后一个启用的样式表集合。当 {{domxref("document.selectedStyleSheetSet")}} 属性发生变化时，这个属性的值就会随之发生变化。
@@ -31,7 +32,7 @@ else {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.lastStyleSheetSet")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -1,20 +1,8 @@
 ---
 title: ':where()'
 slug: Web/CSS/:where
-tags:
-  - ':where'
-  - CSS
-  - 実験的
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsExample
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.where
-translation_of: Web/CSS/:where
 ---
+
 {{CSSRef}}
 
 **`:where()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、セレクターリストを引数として取り、列挙されたセレクターのうちの何れかに当てはまるすべての要素を選択します。
@@ -131,13 +119,15 @@ footer a {
 
 しかし、 `:where()` 内のセレクターは詳細度が 0 なので、オレンジ色のフッターリンクは単純セレクターによって上書きされます。
 
-> **Note:** この例は GitHub からも見ることができます。 [is-where](https://mdn.github.io/css-examples/is-where/) を参照してください。
+> **メモ:** この例は GitHub からも見ることができます。 [is-where](https://mdn.github.io/css-examples/is-where/) を参照してください。
 
 {{EmbedLiveSample('Examples', '100%', 600)}}
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:where( <complex-selector-list> )
+```
 
 ## 仕様書
 

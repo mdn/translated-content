@@ -2,6 +2,7 @@
 title: Content-Range
 slug: Web/HTTP/Headers/Content-Range
 ---
+
 {{HTTPSidebar}}
 
 在 HTTP 协议中，响应首部 **`Content-Range`** 显示的是一个数据片段在整个文件中的位置。

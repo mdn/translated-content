@@ -1,12 +1,6 @@
 ---
 title: '실력을 평가해 보세요: 함수'
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Functions
-tags:
-  - Beginner
-  - Functions
-  - JavaScript
-  - Learn
-  - test your skills
 ---
 {{learnsidebar}}
 

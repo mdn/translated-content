@@ -1,8 +1,8 @@
 ---
 title: WebGL の型
 slug: Web/API/WebGL_API/Types
-translation_of: Web/API/WebGL_API/Types
 ---
+
 {{WebGLSidebar}}
 
 [WebGL](/ja/docs/Web/API/WebGL_API) インターフェースでは次の型が使用されます。

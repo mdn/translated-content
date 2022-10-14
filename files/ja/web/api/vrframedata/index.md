@@ -1,24 +1,13 @@
 ---
 title: VRFrameData
 slug: Web/API/VRFrameData
-page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Interface
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-browser-compat: api.VRFrameData
-translation_of: Web/API/VRFrameData
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`VRFrameData`** は [WebVR API]("/ja/docs/Web/API/WebVR_API) のインターフェイスで、 VR シーンの 1 つのフレームを描画するのに必要となるすべての情報を表現します。 {{domxref("VRDisplay.getFrameData()")}} で構築します。
 
-> **Note:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ## コンストラクター
 

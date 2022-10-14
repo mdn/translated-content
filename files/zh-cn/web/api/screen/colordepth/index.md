@@ -2,6 +2,7 @@
 title: Screen.colorDepth
 slug: Web/API/Screen/colorDepth
 ---
+
 {{APIRef("CSSOM View")}}
 
 ## 概述

@@ -1,7 +1,6 @@
 ---
 title: Graceful asynchronous programming with Promises
 slug: Learn/JavaScript/Asynchronous/Promises
-translation_of: Learn/JavaScript/Asynchronous/Promises
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}
 

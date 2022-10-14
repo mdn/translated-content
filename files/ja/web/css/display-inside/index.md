@@ -1,15 +1,8 @@
 ---
 title: <display-inside>
 slug: Web/CSS/display-inside
-tags:
-  - CSS
-  - CSS データ型
-  - CSS 表示
-  - データ型
-  - リファレンス
-  - display-inside
-translation_of: Web/CSS/display-inside
 ---
+
 {{CSSRef}}
 
 以下のキーワードは、要素の内部の {{CSSxRef("display")}} 種別を指定し、これは要素 (置換要素ではないものとする) の内容物をレイアウトする整形コンテキストの種類を定義します。これらのキーワードは `display` プロパティの値として使用され、単一のキーワードとしては伝統的な目的に、または Level 3 仕様書では {{CSSxRef("&lt;display-outside&gt;")}} のキーワードと共に使用されます。
@@ -37,7 +30,7 @@ translation_of: Web/CSS/display-inside
 - `ruby` {{Experimental_Inline}}
   - : 要素は、インライン要素のように動作しつつ、そのコンテンツをルビ (ruby) モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
 
-> **Note:** 二つの値の構文に対応しているブラウザーは、 `display: flex` や `display: grid` などの内部表示種別のみが指定されていると、外部表示種別を `block` に設定します。これで期待通りに動作します。例えば、ある要素を `display: grid` に指定した場合、そのボックスはブロックレベルボックスのグリッドコンテナーとして生成されることが期待されるでしょう。
+> **メモ:** 二つの値の構文に対応しているブラウザーは、 `display: flex` や `display: grid` などの内部表示種別のみが指定されていると、外部表示種別を `block` に設定します。これで期待通りに動作します。例えば、ある要素を `display: grid` に指定した場合、そのボックスはブロックレベルボックスのグリッドコンテナーとして生成されることが期待されるでしょう。
 
 <h2 id="Examples">例</h2>
 

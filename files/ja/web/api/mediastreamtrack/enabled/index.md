@@ -1,20 +1,8 @@
 ---
 title: MediaStreamTrack.enabled
 slug: Web/API/MediaStreamTrack/enabled
-page-type: web-api-instance-property
-tags:
-  - Media
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Muting a Media Track
-  - Muting a Track
-  - Property
-  - Reference
-  - WebRTC
-  - enabled
-browser-compat: api.MediaStreamTrack.enabled
-translation_of: Web/API/MediaStreamTrack/enabled
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`enabled`** は {{domxref("MediaStreamTrack")}} インターフェイスのプロパティで、このトラックがソースストリームから出力が許可されている場合は `true`、そうでない場合は `false` となる論理値です。これは意図的にトラックをミュートするために使用することができます。
@@ -25,7 +13,7 @@ translation_of: Web/API/MediaStreamTrack/enabled
 
 一方 {{domxref("MediaStreamTrack.muted", "muted")}} プロパティは、トラックが一時的にデータを出力できない状態（転送中にフレームが失われた場合など）を示しています。
 
-> **Note:** トラックが接続されていない場合でも、このプロパティの値は変更可能ですが、効果はありません。
+> **メモ:** トラックが接続されていない場合でも、このプロパティの値は変更可能ですが、効果はありません。
 
 ## 値
 
@@ -33,7 +21,7 @@ translation_of: Web/API/MediaStreamTrack/enabled
 
 空のオーディオフレームは、すべてのサンプルの値が 0 に設定されます。空のビデオフレームは、すべてのピクセルが黒に設定されます。
 
-> **Note:** ミュート/ミュート解除機能を実装する場合は、 `enabled` プロパティを使用してください。
+> **メモ:** ミュート/ミュート解除機能を実装する場合は、 `enabled` プロパティを使用してください。
 
 ## 使用上のメモ
 

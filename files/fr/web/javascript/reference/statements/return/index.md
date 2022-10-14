@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/return
 original_slug: Web/JavaScript/Reference/Instructions/return
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`return`** met fin à l'exécution d'une fonction et définit une valeur à renvoyer à la fonction appelante.
@@ -130,16 +131,11 @@ réponse(1337); // 56154
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                                     | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-12.9', 'Return statement')}}                     | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-return-statement', 'Return statement')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-return-statement', 'Return statement')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.return")}}
+{{Compat}}
 
 ## Voir aussi
 

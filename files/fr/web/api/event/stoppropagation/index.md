@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Event/stopPropagation
 ---
+
 {{APIRef("DOM")}}
 
 Évite que l'évènement courant ne se propage plus loin dans les phases de capture et de déploiement.

@@ -2,6 +2,7 @@
 title: HTMLElement.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.offsetHeight`** 是一个只读属性，它返回该元素的像素高度，高度包含该元素的垂直内边距和边框，且是一个整数。
@@ -38,7 +39,7 @@ offsetHeight 是一个 DOM 属性，由 MSIE 首次提出。它有时被称为�
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLElement.offsetHeight")}}
+{{Compat}}
 
 ## 相关链接
 

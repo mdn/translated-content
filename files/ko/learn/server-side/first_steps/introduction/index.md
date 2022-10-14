@@ -1,11 +1,6 @@
 ---
 title: Introduction to the server side
 slug: Learn/Server-side/First_steps/Introduction
-tags:
-  - 서버
-  - 서버측 프로그래밍
-  - 초보자
-translation_of: Learn/Server-side/First_steps/Introduction
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 

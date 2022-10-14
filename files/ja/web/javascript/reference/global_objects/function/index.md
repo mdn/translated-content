@@ -1,12 +1,8 @@
 ---
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
-tags:
-  - Class
-  - Function
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/Function
 ---
+
 {{JSRef}}
 
 JavaScript の関数は、実際にはすべて `Function` オブジェクトです。これは、 `(function(){}).constructor === Function` というコードが true を返すことで確認することができます。

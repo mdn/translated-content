@@ -2,6 +2,7 @@
 title: isSecureContext
 slug: Web/API/isSecureContext
 ---
+
 {{APIRef()}}{{SeeCompatTable}}
 
 **`isSecureContext`** 是 `WindowOrWorkerGlobalScope` 的一个只读属性，返回一个布尔值，标识当前上下文是否安全，安全（true）或不安全（false）。
@@ -22,8 +23,8 @@ var isItSecure = self.isSecureContext; // 或者直接使用 isSecureContext
 
 ## 浏览器兼容性
 
-{{Compat("api.isSecureContext")}}
+{{Compat}}
 
 ## 参考
 
-- [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)
+- [Secure contexts](/zh-CN/docs/Web/Security/Secure_Contexts)

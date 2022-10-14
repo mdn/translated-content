@@ -4,6 +4,7 @@ slug: Web/HTML/Element/portal
 translation_of: Web/HTML/Element/portal
 browser-compat: html.elements.portal
 ---
+
 {{HTMLRef}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<portal>`** permet d'embarquer une autre page HTML à l'intérieur de la page courante afin de permettre une navigation plus souple vers de nouvelles pages.

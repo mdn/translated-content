@@ -1,14 +1,8 @@
 ---
 title: CSS 封じ込め
 slug: Web/CSS/CSS_Containment
-tags:
-  - CSS
-  - CSS 封じ込め
-  - Guide
-  - Paint
-  - Performance
-translation_of: Web/CSS/CSS_Containment
 ---
+
 {{CSSRef}}
 CSS 封じ込め (CSS Containment) 仕様の目的は、ウェブページの表示性能を向上させるために、開発者がページの任意のサブツリーをページのそれ以外の部分から独立させることができるようにすることです。もしページの一部が独立していることをブラウザーが知っていれば、レンダリングを最適化し、表示性能を向上させることができます。この仕様では、単一の CSS プロパティ {{cssxref("contain")}} を定義しています。この文書では、その仕様の基本的な目的を説明しています。
 
@@ -103,7 +97,7 @@ article {
 
 `contain: style` を使用すると、{{cssxref("counter-increment")}} と {{cssxref("counter-set")}} プロパティがそのサブツリーにのみ限定された新しいカウンターを作成することを保証します。
 
-> **Note:** `style` の封じ込め仕様上「リスクがあり」、どこでも対応しているとは限りません (現在 Firefox は対応していません)。
+> **メモ:** `style` の封じ込め仕様上「リスクがあり」、どこでも対応しているとは限りません (現在 Firefox は対応していません)。
 
 ### 特殊な値
 

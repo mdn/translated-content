@@ -1,15 +1,9 @@
 ---
 title: キャンバスの基本的な使い方
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
-tags:
-  - キャンバス
-  - グラフィック
-  - HTML
-  - 中級者
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_usage
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
 
 このチュートリアルを、 {{HTMLElement("canvas")}} という {{Glossary("HTML")}} の要素を見てみることから始めましょう。このページの最後では、ブラウザーでキャンバス 2D コンテキストの設定し、最初の例を描画する方法を学びます。
@@ -22,7 +16,7 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_usage
 
 一見すると、 {{HTMLElement("canvas")}} は {{HTMLElement("img")}} 要素と似ていますが、 `src` 属性と `alt` 属性がない点が明確に異なります。一方、 `<canvas>` には {{htmlattrxref("width", "canvas")}} と {{htmlattrxref("height", "canvas")}} の 2 つの属性のみがあります。これらはどちらもオプションで、 {{Glossary("DOM")}} [プロパティ](/ja/docs/Web/API/HTMLCanvasElement)を用いて設定することもできます。を利用できます。 `width` 属性と `height` 属性が指定されていない場合、キャンバスは幅 **300 ピクセル**、高さ **150 ピクセル**で初期化されます。要素の大きさは {{Glossary("CSS")}} で変更できますが、画像を描画される際にはそのレイアウト上の大きさに合わせて拡縮されます。 CSS での大きさは初期のキャンバスの比率を考慮しないため、歪んで表示されることになります。
 
-> **Note:** 画像が歪んでいると感じた時は、 CSS を使用するのではなく、 `width` および `height` 属性を `<canvas>` の属性に明示的に指定してください。
+> **メモ:** 画像が歪んでいると感じた時は、 CSS を使用するのではなく、 `width` および `height` 属性を `<canvas>` の属性に明示的に指定してください。
 
 [`id`](/ja/docs/Web/HTML/Global_attributes/id) は `<canvas>` 要素に固有の属性ではありませんが、[HTML のグローバル属性](/ja/docs/Web/HTML/Global_attributes)の一つで、（[`class`](/ja/docs/Web/HTML/Global_attributes/class) のように）すべての HTML 要素に適用することができます。常に `id` を設定するようにすると、スクリプトから要素を特定しやすくなります。
 
@@ -86,7 +80,7 @@ if (canvas.getContext) {
 
 ここでは、この後の例で開始点として使用する、最小限のテンプレートを紹介します。
 
-> **Note:** スクリプトを HTML に埋め込むのは、よいやり方ではありません。この例では分かりやすさのために、仕方なく埋め込んでいます。
+> **メモ:** スクリプトを HTML に埋め込むのは、よいやり方ではありません。この例では分かりやすさのために、仕方なく埋め込んでいます。
 
 ```html
 <!DOCTYPE html>

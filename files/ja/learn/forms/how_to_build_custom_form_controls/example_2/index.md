@@ -1,9 +1,12 @@
 ---
 title: 例 2
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_2
+l10n:
+  sourceCommit: d09e279cd88f41649a23418f494b65149c3b53a0
 original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_2
 ---
-これは、[カスタムフォームウィジェットの作成方法](/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)を説明する 2 番目の例です。
+
+これは、[カスタムフォームウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)を説明する 2 番目の例です。
 
 ## JS
 
@@ -77,7 +80,6 @@ original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_2
   font-size   : 0.625em; /* 10px */
   font-family : Verdana, Arial, sans-serif;
 
-  -moz-box-sizing : border-box;
   box-sizing : border-box;
 
   padding : 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
@@ -89,7 +91,6 @@ original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_2
   box-shadow : 0 0.1em 0.2em rgba(0,0,0,.45); /* 0 1px 2px */
 
   background : #F0F0F0;
-  background : -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
   background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -114,7 +115,6 @@ original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_2
 
   padding-top : .1em;
 
-  -moz-box-sizing : border-box;
   box-sizing : border-box;
 
   text-align : center;
@@ -140,7 +140,6 @@ original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_2
 
   box-shadow: 0 .2em .4em rgba(0,0,0,.4);
 
-  -moz-box-sizing : border-box;
   box-sizing : border-box;
 
   min-width : 100%;
@@ -162,8 +161,8 @@ original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_2
 ### JavaScript コンテンツ
 
 ```js
-window.addEventListener("load", function () {
-  var form = document.querySelector('form');
+window.addEventListener("load", () => {
+  const form = document.querySelector('form');
 
   form.classList.remove("no-widget");
   form.classList.add("widget");

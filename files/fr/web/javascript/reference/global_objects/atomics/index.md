@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics
 ---
+
 {{JSRef}}
 
 L'objet **`Atomics`** fournit des opérations atomiques sous la forme de méthodes statiques. Celles-ci sont utilisées avec les objets {{jsxref("SharedArrayBuffer")}}.
@@ -57,23 +58,11 @@ Le méthodes `wait`() et `notify()` sont basées sur les _futex_ Linux (selon le
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-atomics-object', 'Atomics')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES8', '#sec-atomics-object', 'Atomics')}}     | {{Spec2('ES8')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics")}}
-
-### Notes de compatibilité
-
-Avant Firefox 48 {{geckoRelease(48)}}, les noms les plus récents et la sémantique la plus récente n'étaient pas encore implémentés. Les changements qui ont eu lieu entre la version 46 et la version 48 de Firefox sont :
-
-- Les méthodes `Atomics.futexWakeOrRequeue()` et `Atomics.fence()` sont désormais complètement retirées (cf. {{bug(1259544)}} et {{bug(1225028)}}).
-- Les méthodes {{jsxref("Atomics.wait()")}} et  {{jsxref("Atomics.wake()")}} qui étaient nommées `Atomics.futexWait()` ete `Atomics.futexWake()` (cf. {{bug(1260910)}}). Les anciens noms seront définitivement supprimés à partir de la version 49 ({{bug(1262062)}}). `Atomics.wake()` a été renommé en `Atomics.notify()` à partir de la version 63.
-- Les propriétés `Atomics.OK`, `Atomics.TIMEDOUT`, `Atomics.NOTEQUAL` ont été retirées. La méthode {{jsxref("Atomics.wait()")}} renvoie désormais les chaînes de caractères `"ok"`, `"timed-out"` ou `"not-equal"` (cf. {{bug(1260835)}}).
-- Le paramètre `count` de la méthode {{jsxref("Atomics.wake()")}} a été modifié, sa valeur par défaut est désormais `+Infinity` et non `0` ({{bug(1253350)}}).
+{{Compat}}
 
 ## Voir aussi
 

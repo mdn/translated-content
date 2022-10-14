@@ -1,14 +1,8 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-tags:
-  - 例外
-  - JavaScript
-  - 言語機能
-  - 文
-browser-compat: javascript.statements.try_catch
-translation_of: Web/JavaScript/Reference/Statements/try...catch
 ---
+
 {{jsSidebar("Statements")}}
 
 **`try...catch`** 文は、試す文のブロックをマークし、例外が発生したときの応答を指定します。

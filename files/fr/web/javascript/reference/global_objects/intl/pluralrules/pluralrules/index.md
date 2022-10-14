@@ -3,6 +3,7 @@ title: Constructeur Intl.PluralRules()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
 browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
 ---
+
 {{JSRef}}
 
 Le constructeur **`Intl.PluralRules()`** permet de créer des objets [`Intl.PluralRules`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules).

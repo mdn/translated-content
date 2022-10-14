@@ -6,6 +6,7 @@ translation_of: >-
   Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 ---
+
 ## Introduction
 
 Cet article propose une vue d'ensemble de certaines méthodes DOM Level 1 fondamentales et la façon de les utiliser depuis JavaScript. Vous y apprendrez à créer, accéder, contrôler et supprimer dynamiquement des éléments HTML. Les méthodes DOM décrites ne sont pas spécifiques au HTML et s'appliquent également au XML. Les exemples fonctionneront dans tous les navigateurs offrant le support complet du DOM niveau 1, ce qui est le cas de tous les navigateurs basés sur Mozilla comme Firefox ou Netscape. Les morceaux de code de ce document fonctionneront également dans Internet Explorer 5.
@@ -376,6 +377,6 @@ Une fois que vous avez l'objet dans une variable JavaScript, vous pouvez défini
 - Author(s)
   - : Marcio Galli
 - Migrated from
-  - : http\://web.archive.org/web/20000815054125/http\://mozilla.org/docs/dom/technote/tn-dom-table/
+  - : <http://web.archive.org/web/20000815054125/http://mozilla.org/docs/dom/technote/tn-dom-table/>
 
 Interwik

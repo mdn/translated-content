@@ -1,19 +1,13 @@
 ---
 title: シャドウ DOM の使用
 slug: Web/Web_Components/Using_shadow_DOM
-tags:
-  - API
-  - DOM
-  - ガイド
-  - ウェブコンポーネント
-  - シャドウ DOM
-translation_of: Web/Web_Components/Using_shadow_DOM
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 ウェブコンポーネントにおける重要な側面の一つが、カプセル化です。マークアップ構造、スタイル、動作を隠蔽し、コード上の他のコードから分離することで、他の部分でクラッシュすることを防ぎ、コードをきれいにしておくことができます。シャドウ DOM API はこの主要部分であり、隠蔽され分離された DOM を要素に取り付けるための方法を提供しています。この記事ではシャドウ DOM を使う基本を記述しています。
 
-> **Note:** シャドウ DOM は Firefox (バージョン 63 以降)、Chrome、Opera、 Safari が対応しています。 Chromium ベースの新しい Edge （75 以降）も対応しています。古い Edge は対応していません。
+> **メモ:** シャドウ DOM は Firefox (バージョン 63 以降)、Chrome、Opera、 Safari が対応しています。 Chromium ベースの新しい Edge （75 以降）も対応しています。古い Edge は対応していません。
 
 ## 高水準のビュー
 
@@ -71,7 +65,7 @@ let myShadowDom = myCustomElem.shadowRoot;
 
 シャドウルートを `mode: closed` で取り付けた場合、外部からシャドウ DOM にアクセスすることができません。 `myCustomElem.shadowRoot` は `null` を返します。シャドウ DOM を含む既成の要素、例えば `<video>` などは `closed` になっています。
 
-> **Note:** [このブログ記事](https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af)を見ると、実は closed のシャドウ DOM を回避するのはさほど難しいことではなく、また、これを完全に隠すことはその価値の割には面倒です。
+> **メモ:** [このブログ記事](https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af)を見ると、実は closed のシャドウ DOM を回避するのはさほど難しいことではなく、また、これを完全に隠すことはその価値の割には面倒です。
 
 シャドウ DOM をカスタム要素のコンストラクターの一部として取り付けた場合（シャドウ DOM の最も有用な用途です）、次のような方法を使用することになります。
 

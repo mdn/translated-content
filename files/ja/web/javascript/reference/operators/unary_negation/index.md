@@ -1,14 +1,8 @@
 ---
 title: 単項マイナス (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.unary_negation
-translation_of: Web/JavaScript/Reference/Operators/Unary_negation
 ---
+
 {{jsSidebar("Operators")}}
 
 単項マイナス演算子 (`-`) はオペランドの前に置かれ、符号を反転します。

@@ -1,10 +1,8 @@
 ---
 title: XSLT - パラメータの設定
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
-tags:
-  - XSLT
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 ---
+
 ## パラメータの設定
 
 プリコードされた .xsl ファイルと .xml ファイルを使用して変換を実行するのは非常に便利ですが、JavaScript から .xsl ファイルを構成する方がさらに便利です。たとえば、JavaScript と XSLT を使用して XML データをソートして表示することができます。並べ替えは昇順ソートと降順ソートの間で交互に行わなければなりません。

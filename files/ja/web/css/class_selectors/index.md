@@ -1,13 +1,8 @@
 ---
 title: クラスセレクター
 slug: Web/CSS/Class_selectors
-tags:
-  - CSS
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.class
-translation_of: Web/CSS/Class_selectors
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の**クラスセレクター** (class selector) は、 {{htmlattrxref("class")}} 属性の内容に基づいて要素を選択します。

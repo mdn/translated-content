@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/findIndex
 ---
+
 {{JSRef}}
 
 La méthode **`findIndex()`** renvoie l'**indice** du **premier élément** du tableau qui satisfait une condition donnée par une fonction. Si la fonction renvoie faux pour tous les éléments du tableau, le résultat vaut -1.
@@ -148,14 +149,11 @@ S'il est vraiment nécessaire de prendre en charge les moteurs JavaScript qui ne
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype.findindex', 'Array.prototype.findIndex')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype.findIndex', 'Array.prototype.findIndex')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.findIndex")}}
+{{Compat}}
 
 ## Voir aussi
 

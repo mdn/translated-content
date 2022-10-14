@@ -1,15 +1,8 @@
 ---
 title: Map.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/values
 ---
+
 {{JSRef}}
 
 **`values()`** メソッドは、 `Map` オブジェクトに挿入された要素を挿入順に列挙する新しい **[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)** オブジェクトを返します。

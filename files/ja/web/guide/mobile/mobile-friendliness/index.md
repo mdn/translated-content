@@ -1,11 +1,8 @@
 ---
 title: モバイルの親しみやすさ
 slug: Web/Guide/Mobile/Mobile-friendliness
-tags:
-  - Mobile
-  - Web Development
-translation_of: Web/Guide/Mobile/Mobile-friendliness
 ---
+
 ## モバイルの親しみやすさとは？
 
 あなたが誰に話しているかによって、モバイルの親しみやすさ（friendliness）は多くのことを意味します。サイトのユーザーエクスペリエンスを向上させるための 3 つの目標（プレゼンテーション、コンテンツ、パフォーマンス）の観点から考えると便利です。

@@ -1,14 +1,8 @@
 ---
 title: ime-mode
 slug: Web/CSS/ime-mode
-tags:
-  - CSS
-  - CSS プロパティ
-  - Deprecated
-  - recipe:css-property
-browser-compat: css.properties.ime-mode
-translation_of: Web/CSS/ime-mode
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
 **`ime-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストフィールドで Input Method Editor (以下 IME) をコントロールします。このプロパティは廃止されました。
@@ -30,7 +24,7 @@ ime-mode: unset;
 
 `ime-mode`は、一部のブラウザーで無秩序に実装されたプロパティです。これは、Microsoft が独自の拡張機能として Internet Explorer 5 で導入したものです。{{spec("https://msdn.microsoft.com/library/ms530767(VS.85).aspx","-ms-ime-mode Attribute | imeMode Property")}}
 
-> **Note:** 一般に、公開されたウェブサイトが IME モードを変更することは適切ではありません。このプロパティは、私的ななウェブアプリケーションでのみ使用すべきです。また、以前に古いコードで設定されていた場合は、プロパティを元に戻すべきです。
+> **メモ:** 一般に、公開されたウェブサイトが IME モードを変更することは適切ではありません。このプロパティは、私的ななウェブアプリケーションでのみ使用すべきです。また、以前に古いコードで設定されていた場合は、プロパティを元に戻すべきです。
 
 ## 構文
 
@@ -79,7 +73,7 @@ Gecko 1.9 (Firefox 3) の Mac 版では、disabled に設定されたフィー�
 <input type="text" name="name" value="initial value" style="ime-mode: disabled">
 ```
 
-> **Note:** IME を無効にしたからといって、拡張文字がフォームを通過しないとは限りません。IME を無効にしても、ユーザーは拡張文字をフォームのフィールドに貼り付けることができます。
+> **メモ:** IME を無効にしたからといって、拡張文字がフォームを通過しないとは限りません。IME を無効にしても、ユーザーは拡張文字をフォームのフィールドに貼り付けることができます。
 
 ## 仕様書
 

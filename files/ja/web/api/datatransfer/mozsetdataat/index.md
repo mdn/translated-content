@@ -2,6 +2,7 @@
 title: DataTransfer.mozSetDataAt()
 slug: Web/API/DataTransfer/mozSetDataAt
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{deprecated_header}}{{Non-standard_header()}}
@@ -15,7 +16,7 @@ slug: Web/API/DataTransfer/mozSetDataAt
 
 データは文字列、論理値、数値型（文字列に変換される）、または `nsISupports` のいずれかでなければなりません。
 
-> **Note:** このメソッドは Firefox 固有のものです。
+> **メモ:** このメソッドは Firefox 固有のものです。
 
 ## 構文
 

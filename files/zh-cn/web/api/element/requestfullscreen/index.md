@@ -2,6 +2,7 @@
 title: Element.requestFullscreen()
 slug: Web/API/Element/requestFullScreen
 ---
+
 {{APIRef("Fullscreen API")}}
 
 **`Element.requestFullscreen()`** 方法用于发出异步请求使元素进入全屏模式。
@@ -50,7 +51,7 @@ _`requestFullscreen()` 通过拒绝返回的 `Promise`来生成错误条件，�
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.requestFullscreen")}}
+{{Compat}}
 
 ## 参阅
 

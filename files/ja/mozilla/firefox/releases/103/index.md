@@ -1,12 +1,8 @@
 ---
 title: Firefox 103 for developers
 slug: Mozilla/Firefox/Releases/103
-tags:
-  - '103'
-  - Firefox
-  - Mozilla
-  - Release
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 103 の変更点をまとめています。Firefox 103 は、2022 年 7 月 26 日にリリースされました。
@@ -28,6 +24,7 @@ tags:
 - {{CSSxRef("backdrop-filter")}} プロパティ (要素の背後の領域に、ぼかしや色変化のようなグラフィック効果を適用するために使用できます) がデフォルトで有効になりました。以前は設定項目で無効にしていました ({{bug(1578503)}})。
 - {{CSSxRef("scroll-snap-stop")}} プロパティが使用可能になりました ({{bug(1312165)}})。速くスクロールするときでもスナップ位置を通り過ぎることを許可するかどうかを指定するために、このプロパティの値 `always` および `normal` を使用できます。
 - {{CSSxRef(":modal")}} 擬似クラスをサポートしました。これはインタラクションが却下されるまでの間、他の要素とのすべてのインタラクションを除外する状態にある要素を選択します ({{bug(1768535)}})。
+- `contain` プロパティの値 [`style`](/ja/docs/Web/CSS/contain#style) をサポートしました。この値は、ある要素とその子孫以外に影響を及ぼす可能性のあるプロパティに対して、包含している要素の外に影響を与えないようにするために使用できます。詳しくは {{bug(1463600)}} をご覧ください。
 
 #### 廃止
 
@@ -51,7 +48,7 @@ tags:
 
 ### API
 
-- [`ReadableStream`](/ja/docs/Web/API/ReadableStream)、[`WritableStream`](/ja/docs/Web/API/WritableStream)、[`TransformStream`](/ja/docs/Web/API/TransformStream) が [転送可能なオブジェクト](/ja/docs/Glossary/Transferable_objects) になりました。これは、`postMessage` を使用して window と worker でオブジェクト共有するときや、オブジェクトをコピーするために [structuredClone()](/ja/docs/Web/API/structuredClone) を使用するときに、所有権を渡せることを意味します。
+- [`ReadableStream`](/ja/docs/Web/API/ReadableStream)、[`WritableStream`](/ja/docs/Web/API/WritableStream)、[`TransformStream`](/ja/docs/Web/API/TransformStream) が [移譲可能なオブジェクト](/ja/docs/Glossary/Transferable_objects) になりました。これは、`postMessage` を使用して window と worker でオブジェクト共有するときや、オブジェクトをコピーするために [structuredClone()](/ja/docs/Web/API/structuredClone) を使用するときに、所有権を渡せることを意味します。
   転送後は、元のオブジェクトを使用できなくなります。
   詳しくは {{bug(1659025)}} をご覧ください。
 
@@ -86,6 +83,8 @@ tags:
 ## アドオン開発者向けの変更点一覧
 
 #### 廃止
+
+- WebExtensions で ServiceWorker API を削除しました (拡張機能の内部で実行するときに `'serviceWorker' in navigator` が false を返すようになりました) ({{bug(1593931)}})。
 
 ### その他
 

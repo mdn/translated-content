@@ -3,6 +3,7 @@ title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
 translation_of: Web/API/Worker/postMessage
 ---
+
 {{ apiref("Worker") }}
 
 La méthode **`Worker.postMessage()`** envoie un message à la portée locale du worker. Cette fonction accepte un seul paramètre, qui est la donnée à envoyer au worker. Cette donnée peut-être de n'importe quelle valeur ou un objet JavaScript pris en charge par l'algorithme de clone structuré, qui inclut les références cycliques.

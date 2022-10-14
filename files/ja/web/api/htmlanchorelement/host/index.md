@@ -1,16 +1,9 @@
 ---
 title: HTMLAnchorElement.host
 slug: Web/API/HTMLAnchorElement/host
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.host
-translation_of: Web/API/HTMLAnchorElement/host
 original_slug: Web/API/HTMLHyperlinkElementUtils/host
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.host`** プロパティは、ホストを含む文字列です。すなわち、*ホスト名*の後に、 URL の*ポート*が空でない場合は、`':'`、および URL の*ポート*が続きます。

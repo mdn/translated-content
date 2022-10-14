@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultController.close()
 slug: Web/API/ReadableStreamDefaultController/close
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultController")}} 接口的 **`close()`** 方法用于关闭关联的流。

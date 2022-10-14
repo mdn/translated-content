@@ -1,23 +1,13 @@
 ---
 title: WebRTC 接続
 slug: Web/API/WebRTC_API/Connectivity
-page-type: guide
-tags:
-  - API
-  - Advanced
-  - Audio
-  - Draft
-  - Guide
-  - Media
-  - Video
-  - WebRTC
-translation_of: Web/API/WebRTC_API/Connectivity
 ---
+
 {{WebRTCSidebar}}
 
 WebRTC ではさまざまなプロトコルが相互作用してピアー間の接続を確立し、データやメディアの転送を行いますが、この記事ではその仕組みを解説します。
 
-> **Note:** このページは、構造的な完全性と内容の完全性のために、大幅な書き換えが必要です。多くの情報があるのは良いことですが、ここは現在ゴミ捨て場のようなものなので、構成はめちゃくちゃです。
+> **メモ:** このページは、構造的な完全性と内容の完全性のために、大幅な書き換えが必要です。多くの情報があるのは良いことですが、ここは現在ゴミ捨て場のようなものなので、構成はめちゃくちゃです。
 
 ## シグナリング
 
@@ -63,15 +53,15 @@ When reading the description (returned by {{domxref("RTCPeerConnection.localDesc
 
 When changing the description by calling `setLocalDescription()` or `setRemoteDescription()`, the specified description is set as the pending description, and the WebRTC layer begins to evaluate whether or not it's acceptable. Once the proposed description has been agreed upon, the value of `currentLocalDescription` or `currentRemoteDescription` is changed to the pending description, and the pending description is set to null again, indicating that there isn't a pending description.
 
-> **Note:** The `pendingLocalDescription` contains not just the offer or answer under consideration, but any local ICE candidates which have already been gathered since the offer or answer was created. Similarly, `pendingRemoteDescription` includes any remote ICE candidates which have been provided by calls to {{domxref("RTCPeerConnection.addIceCandidate()")}}.
+> **メモ:** The `pendingLocalDescription` contains not just the offer or answer under consideration, but any local ICE candidates which have already been gathered since the offer or answer was created. Similarly, `pendingRemoteDescription` includes any remote ICE candidates which have been provided by calls to {{domxref("RTCPeerConnection.addIceCandidate()")}}.
 
-See the individual articles on these properties and methods for more specifics, and [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for information about codecs supported by WebRTC and which are compatible with which browsers. The codecs guide also offers guidance to help you choose the best codecs for your needs.
+See the individual articles on these properties and methods for more specifics, and [Codecs used by WebRTC](/ja/docs/Web/Media/Formats/WebRTC_codecs) for information about codecs supported by WebRTC and which are compatible with which browsers. The codecs guide also offers guidance to help you choose the best codecs for your needs.
 
 ## ICE candidates
 
 As well as exchanging information about the media (discussed above in Offer/Answer and SDP), peers must exchange information about the network connection. This is known as an **ICE candidate** and details the available methods the peer is able to communicate (directly or through a TURN server). Typically, each peer will propose its best candidates first, making their way down the line toward their worse candidates. Ideally, candidates are UDP (since it's faster, and media streams are able to recover from interruptions relatively easily), but the ICE standard does allow TCP candidates as well.
 
-> **Note:** Generally, ICE candidates using TCP are only going to be used when UDP is not available or is restricted in ways that make it not suitable for media streaming. Not all browsers support ICE over TCP, however.
+> **メモ:** Generally, ICE candidates using TCP are only going to be used when UDP is not available or is restricted in ways that make it not suitable for media streaming. Not all browsers support ICE over TCP, however.
 
 ICE allows candidates to represent connections over either {{Glossary("TCP")}} or {{Glossary("UDP")}}, with UDP generally being preferred (and being more widely supported). Each protocol supports a few types of candidate, with the candidate types defining how the data makes its way from peer to peer.
 
@@ -129,7 +119,7 @@ In addition, the ICE agent will automatically initiate a rollback when a peer th
 
 ### ICE restarts
 
-For now, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}}.
+For now, see {{SectionOnPage("/ja/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}}.
 
 ## The entire exchange in a complicated diagram
 

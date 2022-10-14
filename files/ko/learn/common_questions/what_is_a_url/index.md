@@ -1,13 +1,6 @@
 ---
 title: What is a URL?
 slug: Learn/Common_questions/What_is_a_URL
-tags:
-  - URL
-  - urls
-  - 자원
-  - 초급자
-  - 초보자
-translation_of: Learn/Common_questions/What_is_a_URL
 ---
 이 글은 Uniform Resource Locators (URLs) 를 설명한다. 또한, URL이 무엇이고 어떻게 구성되어 있는 지도 설명한다.
 

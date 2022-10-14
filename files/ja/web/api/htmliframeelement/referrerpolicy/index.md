@@ -1,16 +1,8 @@
 ---
 title: HTMLIFrameElement.referrerPolicy
 slug: Web/API/HTMLIFrameElement/referrerPolicy
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLIFrameElement
-  - プロパティ
-  - リファレンス
-  - リファラーポリシー
-browser-compat: api.HTMLIFrameElement.referrerPolicy
-translation_of: Web/API/HTMLIFrameElement/referrerPolicy
 ---
+
 {{APIRef}}
 
 **`HTMLIFrameElement.referrerPolicy`** プロパティは HTML の
@@ -36,7 +28,7 @@ translation_of: Web/API/HTMLIFrameElement/referrerPolicy
 - `unsafe-url`
   - : 同一オリジンまたはオリジン間リクエストを実行するときに、完全な URL を送信します。
   
-  > **Note:** このポリシーは、 TLS で保護されたリソースから安全でないオリジンへのオリジンとパスを漏洩します
+  > **メモ:** このポリシーは、 TLS で保護されたリソースから安全でないオリジンへのオリジンとパスを漏洩します
     この設定の影響を慎重に検討してください。
 
 ## 例

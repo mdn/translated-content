@@ -1,15 +1,8 @@
 ---
 title: 浮動ブロックの重ね合わせ
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - リファレンス
-  - Understanding_CSS_z-index
-  - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 ---
+
 {{CSSRef}}
 
 浮動 (floated) ブロックについては、重ね合わせ順序が少し異なります。浮動ブロックは位置指定なしのブロックと位置指定ブロックの間に配置されます。
@@ -31,7 +24,7 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 
 {{EmbedLiveSample("Source_code_for_the_example", 600, 250)}}
 
-> **Note:** 位置指定なしのブロック (DIV #4) の `opacity` の値を変更すると、そのブロックの背景と境界が、浮動ブロックや位置指定ブロックの上に飛び出し、おかしな結果になります。これは、仕様書の中で、 `opacity` の値を適用すると新しい重ね合わせコンテキストを作成するという、奇妙な部分によるものです ([What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/) を参照してください)。
+> **メモ:** 位置指定なしのブロック (DIV #4) の `opacity` の値を変更すると、そのブロックの背景と境界が、浮動ブロックや位置指定ブロックの上に飛び出し、おかしな結果になります。これは、仕様書の中で、 `opacity` の値を適用すると新しい重ね合わせコンテキストを作成するという、奇妙な部分によるものです ([What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/) を参照してください)。
 
 <h2 id="Source_code_for_the_example">例のソースコード</h2>
 

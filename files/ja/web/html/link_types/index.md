@@ -1,14 +1,6 @@
 ---
 title: リンク種別
 slug: Web/HTML/Link_types
-tags:
-  - Attribute
-  - HTML
-  - Link
-  - Link types
-  - Reference
-browser-compat: html.elements.link.rel
-translation_of: Web/HTML/Link_types
 ---
 
 {{HTMLSidebar}}

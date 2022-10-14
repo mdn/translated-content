@@ -1,16 +1,8 @@
 ---
 title: HTMLTableElement.cellPadding
 slug: Web/API/HTMLTableElement/cellPadding
-tags:
-  - API
-  - HTML DOM
-  - NeedsSpecTable
-  - プロパティ
-  - リファレンス
-  - 非推奨
-browser-compat: api.HTMLTableElement.cellPadding
-translation_of: Web/API/HTMLTableElement/cellPadding
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 **`HTMLTableElement.cellPadding`** プロパティは、表のそれぞれのセルの周囲にあるパディングを表します。

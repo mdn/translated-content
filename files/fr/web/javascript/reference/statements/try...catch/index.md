@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/try...catch
 original_slug: Web/JavaScript/Reference/Instructions/try...catch
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`try...catch`** regroupe des instructions à exécuter et définit une réponse si l'une de ces instructions provoque une exception.
@@ -256,16 +257,11 @@ Le "oups" externe n'est pas renvoyé car l'instruction `return` est utilisée da
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.4                                                                                                                                                       |
-| {{SpecName('ES5.1', '#sec-12.14', 'instruction try')}}             | {{Spec2('ES5.1')}}     |                                                                                                                                                                                                            |
-| {{SpecName('ES6', '#sec-try-statement', 'Instruction try')}}     | {{Spec2('ES6')}}         |                                                                                                                                                                                                            |
-| {{SpecName('ESDraft', '#sec-try-statement', 'try statement')}} | {{Spec2('ESDraft')}} | Points ne faisant pas partie du standard ECMA-262 actuel : utilisation de plusieurs clauses catch et de plusieurs clauses conditionnelles (extension liée à SpiderMonkey, correspondant à JavaScript 1.5). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.try_catch")}}
+{{Compat}}
 
 ## Voir aussi
 

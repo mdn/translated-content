@@ -2,6 +2,7 @@
 title: HTTP Cookie
 slug: Web/HTTP/Cookies
 ---
+
 {{HTTPSidebar}}
 
 HTTP Cookie（也叫 Web Cookie 或浏览器 Cookie）是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器下次向同一服务器再发起请求时被携带并发送到服务器上。通常，它用于告知服务端两个请求是否来自同一浏览器，如保持用户的登录状态。Cookie 使基于[无状态](/zh-CN/docs/Web/HTTP/Overview#HTTP_is_stateless_but_not_sessionless)的 HTTP 协议记录稳定的状态信息成为了可能。
@@ -79,7 +80,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 
 > **备注：** 从 Chrome 52 和 Firefox 52 开始，不安全的站点（`http:`）无法使用 Cookie 的 `Secure` 标记。
 
-JavaScript {{domxref("Document.cookie")}} API 无法访问带有 `HttpOnly` 属性的 cookie；此类 Cookie 仅作用于服务器。例如，持久化服务器端会话的 Cookie 不需要对 JavaScript 可用，而应具有 `HttpOnly` 属性。此预防措施有助于缓解[跨站点脚本（XSS）](</zh-CN/docs/Web/Security/Types_of_attacks#Cross-site_scripting_(XSS)>)攻击。
+JavaScript {{domxref("Document.cookie")}} API 无法访问带有 `HttpOnly` 属性的 cookie；此类 Cookie 仅作用于服务器。例如，持久化服务器端会话的 Cookie 不需要对 JavaScript 可用，而应具有 `HttpOnly` 属性。此预防措施有助于缓解[跨站点脚本（XSS）](/zh-CN/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss) 攻击。
 
 示例：
 
@@ -124,8 +125,8 @@ Set-Cookie: key=value; SameSite=Strict
 SameSite 可以有下面三种值：
 
 - **`None`**。浏览器会在同站请求、跨站请求下继续发送 cookies，不区分大小写。
-- **`Strict`**。浏览器将只在访问相同站点时发送 cookie。（在原有 Cookies 的限制条件上的加强，如上文 “Cookie 的作用域” 所述）
-- **`Lax`**。与 **`Strict`** 类似，但用户从外部站点导航至 URL 时（例如通过链接）除外。 在新版本浏览器中，为默认选项，Same-site cookies 将会为一些跨站子请求保留，如图片加载或者 frames 的调用，但只有当用户从外部站点导航到 URL 时才会发送。如 link 链接
+- **`Strict`**。浏览器将只在访问相同站点时发送 cookie。（在原有 Cookies 的限制条件上的加强，如上文“Cookie 的作用域”所述）
+- **`Lax`**。与 **`Strict`** 类似，但用户从外部站点导航至 URL 时（例如通过链接）除外。在新版本浏览器中，为默认选项，Same-site cookies 将会为一些跨站子请求保留，如图片加载或者 frames 的调用，但只有当用户从外部站点导航到 URL 时才会发送。如 link 链接
 
 > **备注：** 以前，如果 SameSite 属性没有设置，或者没有得到运行浏览器的支持，那么它的行为等同于 None，Cookies 会被包含在任何请求中——包括跨站请求。大多数主流浏览器正在将 [SameSite 的默认值迁移至 Lax](https://www.chromestatus.com/feature/5088147346030592)。如果想要指定 Cookies 在同站、跨站请求都被发送，现在需要明确指定 SameSite 为 None。
 
@@ -133,7 +134,7 @@ SameSite 可以有下面三种值：
 
 cookie 的机制使得服务器无法确认 cookie 是在安全来源上设置的，甚至无法确定 cookie 最初是在哪里设置的。
 
-子域上的易受攻击的应用程序可以使用 Domain 属性设置 cookie，从而可以访问所有其他子域上的该 cookie。会话固定攻击中可能会滥用此机制。有关主要缓解方法，请参阅[会话劫持（ session fixation）](/zh-CN/docs/Web/Security/Types_of_attacks#Session_fixation)。
+子域上的易受攻击的应用程序可以使用 Domain 属性设置 cookie，从而可以访问所有其他子域上的该 cookie。会话固定攻击中可能会滥用此机制。有关主要缓解方法，请参阅[会话劫持（session fixation）](/zh-CN/docs/Web/Security/Types_of_attacks#Session_fixation)。
 
 但是，作为[深度防御措施](<https://en.wikipedia.org/wiki/Defense_in_depth_(computing)>)，可以使用 cookie 前缀来断言有关 cookie 的特定事实。有两个前缀可用：
 
@@ -142,7 +143,7 @@ cookie 的机制使得服务器无法确认 cookie 是在安全来源上设置�
 - `__Secure-`
   - : 如果 cookie 名称具有此前缀，则仅当它也用 `Secure` 属性标记，是从安全来源发送的，它才在 {{HTTPHeader("Set-Cookie")}} 标头中接受。该前缀限制要弱于 `__Host-` 前缀。
 
-带有这些前缀点 Cookie， 如果不符合其限制的会被浏览器拒绝。请注意，这确保了如果子域要创建带有前缀的 cookie，那么它将要么局限于该子域，要么被完全忽略。由于应用服务器仅在确定用户是否已通过身份验证或 CSRF 令牌正确时才检查特定的 cookie 名称，因此，这有效地充当了针对会话劫持的防御措施。
+带有这些前缀点 Cookie，如果不符合其限制的会被浏览器拒绝。请注意，这确保了如果子域要创建带有前缀的 cookie，那么它将要么局限于该子域，要么被完全忽略。由于应用服务器仅在确定用户是否已通过身份验证或 CSRF 令牌正确时才检查特定的 cookie 名称，因此，这有效地充当了针对会话劫持的防御措施。
 
 > **备注：** 在应用程序服务器上，Web 应用程序**必须**检查完整的 cookie 名称，包括前缀 —— 用户代理程序在从请求的 {{HTTPHeader("Cookie")}} 标头中发送前缀之前，**不会**从 cookie 中剥离前缀。
 
@@ -201,7 +202,7 @@ console.log(document.cookie);
 
 ### 第三方 Cookie
 
-Cookie 与域关联。如果此域与您所在页面的域相同，则该 cookie 称为*第一方 cookie（ first-party cookie）*。如果域不同，则它是*第三方 cookie（third-party cookie）*。当托管网页的服务器设置第一方 Cookie 时，该页面可能包含存储在其他域中的服务器上的图像或其他组件（例如，广告横幅），这些图像或其他组件可能会设置第三方 Cookie。这些主要用于在网络上进行广告和跟踪。例如，[types of cookies used by Google](https://policies.google.com/technologies/types)。第三方服务器可以基于同一浏览器在访问多个站点时发送给它的 cookie 来建立用户浏览历史和习惯的配置文件。Firefox 默认情况下会阻止已知包含跟踪器的第三方 cookie。第三方 cookie（或仅跟踪 cookie）也可能被其他浏览器设置或扩展程序阻止。阻止 Cookie 会导致某些第三方组件（例如社交媒体窗口小部件）无法正常运行。
+Cookie 与域关联。如果此域与您所在页面的域相同，则该 cookie 称为*第一方 cookie（first-party cookie）*。如果域不同，则它是*第三方 cookie（third-party cookie）*。当托管网页的服务器设置第一方 Cookie 时，该页面可能包含存储在其他域中的服务器上的图像或其他组件（例如，广告横幅），这些图像或其他组件可能会设置第三方 Cookie。这些主要用于在网络上进行广告和跟踪。例如，[types of cookies used by Google](https://policies.google.com/technologies/types)。第三方服务器可以基于同一浏览器在访问多个站点时发送给它的 cookie 来建立用户浏览历史和习惯的配置文件。Firefox 默认情况下会阻止已知包含跟踪器的第三方 cookie。第三方 cookie（或仅跟踪 cookie）也可能被其他浏览器设置或扩展程序阻止。阻止 Cookie 会导致某些第三方组件（例如社交媒体窗口小部件）无法正常运行。
 
 如果你没有公开你网站上第三方 Cookie 的使用情况，当它们被发觉时用户对你的信任程度可能受到影响。一个较清晰的声明（比如在隐私策略里面提及）能够减少或消除这些负面影响。在某些国家已经开始对 Cookie 制订了相应的法规，可以查看维基百科上例子[cookie statement](https://wikimediafoundation.org/wiki/Cookie_statement)。
 

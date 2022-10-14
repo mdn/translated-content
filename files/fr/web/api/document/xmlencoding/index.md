@@ -10,6 +10,7 @@ tags:
   - XML
 translation_of: Web/API/Document/xmlEncoding
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 Renvoie le codage déterminé par la déclaration XML. Devrait être `null` si non précisé ou inconnu.

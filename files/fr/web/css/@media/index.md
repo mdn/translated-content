@@ -4,6 +4,7 @@ slug: Web/CSS/@media
 translation_of: Web/CSS/@media
 browser-compat: css.at-rules.media
 ---
+
 {{CSSRef}}
 
 La [règle @](/fr/docs/Web/CSS/At-rule) **`@media`** permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs [requêtes média (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/Media_Queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.

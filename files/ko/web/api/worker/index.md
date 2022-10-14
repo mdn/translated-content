@@ -95,6 +95,6 @@ first.onchange = function() {
 
 ## 같이 보기
 
-- [웹 워커 사용하기](/ko/docs/Web/API/Web_Workers_API/Using_web_workers "en/Using DOM workers")
-- [워커에서 사용할 수 있는 함수와 클래스](/ko/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers "https://developer.mozilla.org/En/DOM/Worker/Functions_available_to_workers")
+- [웹 워커 사용하기](/ko/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [워커에서 사용할 수 있는 함수와 클래스](/ko/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
 - 다른 종류의 워커: {{domxref("SharedWorker")}}와 [서비스 워커](/ko/docs/Web/API/Service_Worker_API).

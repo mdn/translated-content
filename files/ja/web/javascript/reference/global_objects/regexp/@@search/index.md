@@ -1,15 +1,8 @@
 ---
 title: RegExp.prototype[@@search]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expression
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 ---
+
 {{JSRef}}
 
 **`[@@search]()`** メソッドは、`this` 正規表現と文字列の間で一致させるための検索を実行します。

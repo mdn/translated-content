@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/parse
 ---
+
 {{JSRef}}
 
 La méthode **`Date.parse()`** analyse la représentation textuelle d'une date, et renvoie le nombre de millisecondes depuis le 1er janvier 1970, 00:00:00 UTC jusqu'à cette date ou `NaN` si la chaîne n'est pas reconnue ou décrit une date invalide (par exemple 2015-02-31).
@@ -160,21 +161,11 @@ Renvoie `14400000` quel que soit le fuseau car l'indicateur GMT est fourni.
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.4.2', 'Date.parse')}}         | {{Spec2('ES5.1')}}     | Ajout du format ISO 8601 simplifié.                   |
-| {{SpecName('ES6', '#sec-date.parse', 'Date.parse')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.parse', 'Date.parse')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.parse")}}
-
-## Notes de compatibilité
-
-- À partir de Firefox 49 ({{geckoRelease(49)}}, l'interprétation des années exprimées sur deux chiffres est alignée avec Google Chrome (et non plus avec Internet Explorer). Désormais, les années exprimées sur deux chiffres et strictement inférieures à 50 seront considérées comme des années du XXIe siècle. Ainsi, `04/16/17` correspondait avant au 16 avril 1917 et correspond désormais au 16 avril 2017. Cela évite des problèmes d'interopérabilité et d'ambiguïté et cette méthode est recommandée par le format ISO 8601 (cf. {{bug(1265136)}}).
-- Google Chrome acceptera une chaîne de caractères avec un nombre pour le paramètre `dateString`. Ainsi, si on exécute `!!Date.parse("42")` dans Firefox, on obtiendra `false` tandis que que Google Chrome donnera `true` car `"42"` sera interprété comme la date du premier janvier 2042.
+{{Compat}}
 
 ## Voir aussi
 

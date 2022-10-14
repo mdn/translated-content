@@ -1,26 +1,15 @@
 ---
 title: HTMLMediaElement.srcObject
 slug: Web/API/HTMLMediaElement/srcObject
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
-  - srcObject
-browser-compat: api.HTMLMediaElement.srcObject
-translation_of: Web/API/HTMLMediaElement/srcObject
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`srcObject`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、 {{domxref("HTMLMediaElement")}} に関連付けられたメディアソースを提供するオブジェクトを設定または取得します。
 
 このオブジェクトは {{domxref("MediaStream")}}、{{domxref("MediaSource")}}、{{domxref("Blob")}} や（Blob から派生している） {{domxref("File")}} です。
 
-> **Note:** 2020 年 3 月現在、 Safari のみが `MediaStream` 以外のオブジェクトを設定することに対応しています。他のブラウザーが追いつくまで、 `MediaSource`、`Blob`、および `File` の場合は、{{domxref("URL.createObjectURL()")}} を使用して URL を作成し、それを {{domxref("HTMLMediaElement.src")}} に割り当てる必要があります。以下の例を参照してください。
+> **メモ:** 2020 年 3 月現在、 Safari のみが `MediaStream` 以外のオブジェクトを設定することに対応しています。他のブラウザーが追いつくまで、 `MediaSource`、`Blob`、および `File` の場合は、{{domxref("URL.createObjectURL()")}} を使用して URL を作成し、それを {{domxref("HTMLMediaElement.src")}} に割り当てる必要があります。以下の例を参照してください。
 
 ## 値
 

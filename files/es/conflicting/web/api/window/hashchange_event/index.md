@@ -17,15 +17,21 @@ El evento **hashchange** se dispara cuando la almohadilla ha cambiado (ver {{dom
 
 ## Sintaxis
 
-    window.onhashchange = funcRef;
+```js
+window.onhashchange = funcRef;
+```
 
 **ó**
 
-    <body onhashchange="funcRef();">
+```html
+<body onhashchange="funcRef();">
+```
 
 **ó**
 
-    window.addEventListener("hashchange", funcRef, false);
+```js
+window.addEventListener("hashchange", funcRef, false);
+```
 
 ### Parámetros
 

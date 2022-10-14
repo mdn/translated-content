@@ -1,25 +1,15 @@
 ---
 title: BaseAudioContext.createIIRFilter()
 slug: Web/API/BaseAudioContext/createIIRFilter
-tags:
-  - API
-  - 音声
-  - AudioContext
-  - BaseAudioContext
-  - CreateIIRFilter
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - filter
-browser-compat: api.BaseAudioContext.createIIRFilter
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`createIIRFilter()`** は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("IIRFilterNode") }} を生成します。
-これは一般的な**{{interwiki("wikipedia", "無限インパルス応答")}}** (IIR) フィルターを生成し、これはよって様々な種類のフィルターとして提供できるように構成することができます。
+これは一般的な**[無限インパルス応答](https://ja.wikipedia.org/wiki/無限インパルス応答)** (IIR) フィルターを生成し、これはよって様々な種類のフィルターとして提供できるように構成することができます。
 of filter.
 
-> **Note:** {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}} コンストラクターは {{domxref("IIRFilterNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}} コンストラクターは {{domxref("IIRFilterNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
 ## 構文
 

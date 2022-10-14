@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
 browser-compat: javascript.builtins.Intl.Segmenter
 ---
+
 {{JSRef}}
 
 L'objet **`Intl.Segmenter`** permet de segmenter un texte en tenant compte de la locale. On peut ainsi obtenir les éléments utiles (graphèmes, mots ou phrases) d'une chaîne de caractères.

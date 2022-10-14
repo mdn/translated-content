@@ -1,15 +1,8 @@
 ---
 title: z-index の使用
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - リファレンス
-  - Understanding_CSS_z-index
-  - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 ---
+
 {{CSSRef}}
 
 この記事の最初の部分、[z-index なしの重ね合わせ](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index)は、既定でどのように重ね合わせが行われるのかを説明します。独自の重ね合わせ順を定義したい場合は、[位置指定](/ja/docs/Web/CSS/position#types_of_positioning)要素に {{cssxref("z-index")}} プロパティを使用して行うことができます。
@@ -28,7 +21,7 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 - ...
 - 最上位レイヤー _(観ている人に最も近い)_
 
-> **Note:**
+> **メモ:**
 >
 > - z-index プロパティが定義されていなければ、要素は既定の描画レイヤー 0 (ゼロ) に描画されます。
 > - 同じ `z-index` 値を持つ要素が複数あれば (＝同じレイヤー上にある場合)、 [z-index なしの重ね合わせ](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index)で説明した重ね合わせ規則が当てはまります。

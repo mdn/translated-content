@@ -1,22 +1,8 @@
 ---
 title: HTMLMediaElement.videoTracks
 slug: Web/API/HTMLMediaElement/videoTracks
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
-  - Tracks
-  - Video
-  - Video Tracks
-  - Web
-  - videoTracks
-browser-compat: api.HTMLMediaElement.videoTracks
-translation_of: Web/API/HTMLMediaElement/videoTracks
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`videoTracks`** は {{DOMxRef("HTMLMediaElement")}} オブジェクトの読み取り専用プロパティで、メディア要素の動画トラックを表すすべての {{DOMxRef("VideoTrack")}} オブジェクトを列挙した {{DOMxRef("VideoTrackList")}} オブジェクトを返します。

@@ -1,12 +1,8 @@
 ---
 title: MDN 製品諮問委員会
 slug: MDN/MDN_Product_Advisory_Board
-tags:
-  - MDN
-  - PAB
-  - 製品諮問委員会
-translation_of: MDN/MDN_Product_Advisory_Board
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs は、Wiki 技術に基づいたオープンソースのウェブ開発ドキュメントプラットフォーム上に構築されたウェブ開発者向けの技術ドキュメントの信頼できるソースです。これにより、ほぼ誰でもコンテンツを作成および編集できます。

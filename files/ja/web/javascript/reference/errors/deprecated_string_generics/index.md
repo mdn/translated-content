@@ -1,13 +1,8 @@
 ---
 title: 'Warning: String.x is deprecated; use String.prototype.x instead'
 slug: Web/JavaScript/Reference/Errors/Deprecated_String_generics
-tags:
-  - JavaScript
-  - Warning
-  - エラー
-  - 警告
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_String_generics
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の警告で、 Firefox 68 以前で使用されていた String ジェネリックに関するものです。 String ジェネリックは Firefox 68 から削除されました。

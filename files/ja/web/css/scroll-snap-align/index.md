@@ -1,16 +1,8 @@
 ---
 title: scroll-snap-align
 slug: Web/CSS/scroll-snap-align
-tags:
-  - 上級者
-  - CSS
-  - Example
-  - NeedsLiveSample
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.scroll-snap-align
-translation_of: Web/CSS/scroll-snap-align
 ---
+
 {{CSSRef}}
 
 `scroll-snap-align` プロパティは、ボックスのスナップ位置を、そのスナップコンテナーの (配置コンテナーとしての) スナップポート内における (配置主体としての) スナップ領域の配置として指定します。2つの値は、それぞれブロック軸とインライン軸内のスナップ位置合わせを指定します。値が1つだけ指定された場合、2番目の値は同じ値を既定値とします。

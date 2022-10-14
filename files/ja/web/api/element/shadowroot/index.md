@@ -2,6 +2,7 @@
 title: Element.shadowRoot
 slug: Web/API/Element/shadowRoot
 ---
+
 {{APIRef("Shadow DOM")}}
 
 `Element.shadowRoot` は読み取り専用のプロパティで、その要素がホストになっているシャドウルートを表します。

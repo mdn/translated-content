@@ -1,13 +1,8 @@
 ---
 title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
+
 {{JSRef}}
 
 **`Math.pow()`** 関数は `base` を `exponent` 乗した値、つまり、`baseexponent` の値を返します。

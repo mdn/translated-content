@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/encodeURI
 original_slug: Web/JavaScript/Reference/Objets_globaux/encodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 La fonction **`encodeURI()`** encode un Uniform Resource Identifier (URI) en remplaçant chaque exemplaire de certains caractères par une, deux, trois ou quatre séquences d'échappement représentant le caractère encodé en UTF-8 (les quatre séquences d'échappement ne seront utilisées que si le caractère est composé de deux caractères « _surrogate_ »).
@@ -80,16 +81,11 @@ function fixedEncodeURI(str) {
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-encodeuri-uri', 'encodeURI')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES6', '#sec-encodeuri-uri', 'encodeURI')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ES5.1', '#sec-15.1.3.3', 'encodeURI')}}         | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES3')}}                                                     | {{Spec2('ES3')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.encodeURI")}}
+{{Compat}}
 
 ## Voir aussi
 

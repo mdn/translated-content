@@ -2,6 +2,7 @@
 title: GlobalEventHandlers.onpointermove
 slug: Web/API/Element/pointermove_event
 ---
+
 {{ApiRef("HTML DOM")}}
 
 一个{{domxref("GlobalEventHandlers","global event handler")}}(全局事件) {{event("pointermove")}} 事件。
@@ -45,7 +46,7 @@ function init() {
 
 ## 浏览器兼容性
 
-{{Compat("api.GlobalEventHandlers.onpointermove")}}
+{{Compat}}
 
 ## 相关链接
 

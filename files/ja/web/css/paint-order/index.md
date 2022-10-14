@@ -1,15 +1,8 @@
 ---
 title: paint-order
 slug: Web/CSS/paint-order
-tags:
-  - CSS
-  - Experimental
-  - Reference
-  - SVG
-  - ウェブ
-  - 描画順序
-translation_of: Web/CSS/paint-order
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`paint-order`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストコンテンツやシェイプが描画されるときの塗りつぶしと輪郭 (およびマーカーの描画) の順序を制御することができます。
@@ -33,7 +26,7 @@ paint-order: markers stroke fill; /* マーカー、輪郭、塗りつぶしの�
 
 一つの値で指定されると、それが最初に描画され、続いて他の二つが互いの既定の順序で描画されます。二つの値が指定されると、指定された順序で描画を行い、続いて指定されなかった一つが描画されます。
 
-> **Note:** **メモ**: このプロパティの場合、マーカーは `marker-*` プロパティ (例えば [`marker-start`](/ja/docs/Web/SVG/Attribute/marker-start)) および [`<marker>`](/ja/docs/Web/SVG/Element/marker) 要素を使用した SVG 図形を描く場合のみ適用されます。 HTML テキストには適用されませんので、その場合は `stroke` および `fill` の順序のみが指定できます。
+> **メモ:** このプロパティの場合、マーカーは `marker-*` プロパティ (例えば [`marker-start`](/ja/docs/Web/SVG/Attribute/marker-start)) および [`<marker>`](/ja/docs/Web/SVG/Element/marker) 要素を使用した SVG 図形を描く場合のみ適用されます。 HTML テキストには適用されませんので、その場合は `stroke` および `fill` の順序のみが指定できます。
 
 ### 値
 

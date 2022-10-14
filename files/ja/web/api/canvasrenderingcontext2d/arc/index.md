@@ -1,15 +1,8 @@
 ---
 title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.arc
-translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.arc()`** は[キャンバス 2D API](/ja/docs/Web/API/CanvasRenderingContext2D) のメソッドで、サブパスに円弧を加えます。

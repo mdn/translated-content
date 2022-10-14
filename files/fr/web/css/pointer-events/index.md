@@ -4,6 +4,7 @@ slug: Web/CSS/pointer-events
 translation_of: Web/CSS/pointer-events
 browser-compat: css.properties.pointer-events
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](fr/docs/Web/CSS) **`pointer-events`** permet de contrôler les circonstances dans lesquelles un élément graphique peut être [une cible](/fr/docs/Web/API/Event/target), c'est-à-dire recevoir des évènements de la souris, du pointeur ou du doigt.
@@ -92,7 +93,7 @@ img {
 
 ### Désactiver les événements de pointeur pour un lien
 
-Dans l'exemple qui suit, on désactive les événements de pointeur pour le lien http\://example.com.
+Dans l'exemple qui suit, on désactive les événements de pointeur pour le lien `http://example.com`.
 
 #### HTML
 

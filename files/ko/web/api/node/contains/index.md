@@ -9,7 +9,9 @@ translation_of: Web/API/Node/contains
 
 ## Syntax
 
-    node.contains( otherNode )
+```js
+node.contains( otherNode )
+```
 
 ## Example
 

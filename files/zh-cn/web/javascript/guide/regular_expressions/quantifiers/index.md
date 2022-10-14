@@ -3,6 +3,7 @@ title: 量词
 slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
 original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 量词表示要匹配的字符或表达式的数量。

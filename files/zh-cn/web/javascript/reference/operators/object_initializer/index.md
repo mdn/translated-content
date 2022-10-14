@@ -2,9 +2,10 @@
 title: 对象初始化
 slug: Web/JavaScript/Reference/Operators/Object_initializer
 ---
+
 {{JsSidebar("Operators")}}
 
-可以通过[`new Object()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)，`Object.create()`方法，或者使用字面量标记（初始化标记）初始化对象。 一个对象初始化器，由花括号/大括号 (`{}`) 包含的一个由零个或多个对象属性名和其关联值组成的一个逗号分隔的列表构成。
+可以通过[`new Object()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)，`Object.create()`方法，或者使用字面量标记（初始化标记）初始化对象。一个对象初始化器，由花括号/大括号 (`{}`) 包含的一个由零个或多个对象属性名和其关联值组成的一个逗号分隔的列表构成。
 
 ## 语法
 
@@ -68,7 +69,7 @@ let obj = {
 
 ### 属性访问
 
-创建对象后，可以读取或者修改它。对象属性可以用下标小圆点标记或者方括号标记访问。参考[属性访问](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 获取更多信息。
+创建对象后，可以读取或者修改它。对象属性可以用下标小圆点标记或者方括号标记访问。参考[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 获取更多信息。
 
 ```js
 object.foo; // "bar"
@@ -116,7 +117,7 @@ var a = {x: 1, x: 2};
 console.log(a); // { x: 2}
 ```
 
-在 ECMAScript 5 严格模式的代码中， 重复的属性名会被当做{{jsxref("SyntaxError")}}。引入计算的属性名以后，属性名会在运行时出现重复。ECMAScript 2015 移除了这个限制。
+在 ECMAScript 5 严格模式的代码中，重复的属性名会被当做{{jsxref("SyntaxError")}}。引入计算的属性名以后，属性名会在运行时出现重复。ECMAScript 2015 移除了这个限制。
 
 ```js
 function haveES6DuplicatePropertySemantics(){
@@ -135,7 +136,7 @@ function haveES6DuplicatePropertySemantics(){
 
 ### 方法定义
 
-对象属性也可以是一个[函数](/en-US/docs/Web/JavaScript/Reference/Functions)、[getter](/en-US/docs/Web/JavaScript/Reference/Functions/get)、[setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)方法。
+对象属性也可以是一个[函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)、[getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)、[setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)方法。
 
 ```js
 var o = {
@@ -177,11 +178,11 @@ var o = {
 };
 ```
 
-获取更多信息和范例，请参考 [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)。
+获取更多信息和范例，请参考 [method definitions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)。
 
 ### 计算属性名
 
-从 ECMAScript 2015 开始，对象初始化语法开始支持计算属性名。其允许在 \[] 中放入表达式，计算结果可以当做属性名。这种用法和用方括号访问[属性](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)非常类似，也许你已经用来读取和设置属性了。现在同样的语法也可以用于对象字面值了：
+从 ECMAScript 2015 开始，对象初始化语法开始支持计算属性名。其允许在 \[] 中放入表达式，计算结果可以当做属性名。这种用法和用方括号访问[属性](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)非常类似，也许你已经用来读取和设置属性了。现在同样的语法也可以用于对象字面值了：
 
 ```js
 // Computed property names (ES6)
@@ -226,7 +227,7 @@ var mergedObj = { ...obj1, ...obj2 };
 
 ### 变更原型
 
-定义属性为`__proto__: 值` 或 `"__proto__": 值` 时，不会创建名为`__proto__`属性。如果给出的值是对象或者[`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)，那么对象的`[[Prototype]]`会被设置为给出的值。（如果给出的值不是对象也不是 null，那么对象的原型不会改变。）
+定义属性为`__proto__: 值` 或 `"__proto__": 值` 时，不会创建名为`__proto__`属性。如果给出的值是对象或者[`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null)，那么对象的`[[Prototype]]`会被设置为给出的值。（如果给出的值不是对象也不是 null，那么对象的原型不会改变。）
 
 ```js
 var obj1 = {};
@@ -265,7 +266,7 @@ assert(obj3.__proto__ === 17);
 
 ## 对象字面量表示法与 JSON
 
-对象字面量表示法和 **J**ava**S**cript **O**bject **N**otation（[JSON](/en-US/docs/Glossary/JSON)）是不同的。虽然他们看起来相似，不同点有：
+对象字面量表示法和 **J**ava**S**cript **O**bject **N**otation（[JSON](/zh-CN/docs/Glossary/JSON)）是不同的。虽然他们看起来相似，不同点有：
 
 - JSON 只允许`"property": value` syntax 形式的属性定义。属性名必须用双引号括起来。且属性定义不允许使用简便写法。
 - JSON 中，属性的值仅允许字符串，数字，数组，`true`，`false`，`null`或其他（JSON）对象。
@@ -284,6 +285,6 @@ assert(obj3.__proto__ === 17);
 ## 相关链接
 
 - [Property accessors](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
-- [`get`](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [`get`](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)
 - [Method definitions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 - [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)

@@ -1,8 +1,8 @@
 ---
 title: WebGLRenderingContext.drawArrays()
 slug: Web/API/WebGLRenderingContext/drawArrays
-translation_of: Web/API/WebGLRenderingContext/drawArrays
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.drawArrays()`** メソッドは、配列データからプリミティブを描画します。

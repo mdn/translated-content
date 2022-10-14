@@ -1,13 +1,6 @@
 ---
 title: '장고 튜토리얼 강좌 2 : 뼈대 사이트 만들기'
 slug: Learn/Server-side/Django/skeleton_website
-tags:
-  - 가이드
-  - 입문서
-  - 장고
-  - 초심자
-  - 튜토리얼
-translation_of: Learn/Server-side/Django/skeleton_website
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 

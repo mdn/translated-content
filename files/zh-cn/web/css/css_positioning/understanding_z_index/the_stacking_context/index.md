@@ -3,13 +3,14 @@ title: 层叠上下文
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 original_slug: Web/Guide/CSS/Understanding_z_index/The_stacking_context
 ---
+
 {{cssref}}
 
 我们假定用户正面向（浏览器）视窗或网页，而 HTML 元素沿着其相对于用户的一条虚构的 z 轴排开，**层叠上下文**就是对这些 HTML 元素的一个三维构想。众 HTML 元素基于其元素属性按照优先级顺序占据这个空间。
 
 ## 层叠上下文
 
-在本篇之前的部分——[运用 z-index](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index)，（我们认识到）某些元素的渲染顺序是由其 `z-index` 的值影响的。这是因为这些元素具有能够使他们形成一个*层叠上下文*的特殊属性*。*
+在本篇之前的部分——[运用 z-index](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index)，（我们认识到）某些元素的渲染顺序是由其 `z-index` 的值影响的。这是因为这些元素具有能够使他们形成一个*层叠上下文*的特殊属性。
 
 文档中的层叠上下文由满足以下任意一个条件的元素形成：
 

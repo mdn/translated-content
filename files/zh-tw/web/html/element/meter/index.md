@@ -2,6 +2,7 @@
 title: <meter>
 slug: Web/HTML/Element/meter
 ---
+
 ## 摘要
 
 **HTML `<meter>` Element** represents either a scalar value within a known range or a fractional value.
@@ -63,7 +64,7 @@ On Google Chrome, the resulting meter looks like this:
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.meter")}}
+{{Compat}}
 
 ## See also
 

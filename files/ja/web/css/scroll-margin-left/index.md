@@ -1,18 +1,8 @@
 ---
 title: scroll-margin-left
 slug: Web/CSS/scroll-margin-left
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - Scroll margin left
-  - Web
-  - recipe:css-property
-  - scroll-margin
-  - scroll-margin-left
-browser-compat: css.properties.scroll-margin-left
-translation_of: Web/CSS/scroll-margin-left
 ---
+
 {{CSSRef}}
 
 `scroll-margin-left` プロパティは、スクロールスナップ領域の左側のマージンを定義し、このボックスをスナップポートにスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して (スクロールコンテナーの座標空間における軸に合わせられ)、それから指定された外部距離が追加されます。

@@ -1,17 +1,8 @@
 ---
 title: コンテンツセキュリティポリシー (CSP)
 slug: Web/HTTP/CSP
-tags:
-  - CSP
-  - Content Security Policy
-  - Example
-  - Guide
-  - access
-  - コンテンツセキュリティポリシー
-  - セキュリティ
-translation_of: Web/HTTP/CSP
-browser-compat: http.headers.csp
 ---
+
 {{HTTPSidebar}}
 
 **コンテンツセキュリティポリシー** ({{Glossary("CSP")}}) は、クロスサイトスクリプティング ({{Glossary("Cross-site_scripting")}}) やデータインジェクション攻撃などのような、特定の種類の攻撃を検知し、影響を軽減するために追加できるセキュリティレイヤーです。これらの攻撃はデータの窃取からサイトの改ざん、マルウェアの拡散に至るまで、様々な目的に用いられます。

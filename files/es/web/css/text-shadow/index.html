@@ -48,7 +48,9 @@ text-shadow: unset;
 
 <dl>
  <dt>&lt;color&gt;</dt>
- <dd>Opcional. Puede ser especificado antes o después de los valores de offset. Si el color no es especificado, se usa el predeterminado del agente usuario. {{note("Para asegurar consistencia entre navegadores, se recomienda especificar un color explícito.")}}</dd>
+ <dd>Opcional. Puede ser especificado antes o después de los valores de offset. Si el color no es especificado, se usa el predeterminado del agente usuario.
+  <div class="note"><p><strong>Nota:</strong> Para asegurar consistencia entre navegadores, se recomienda especificar un color explícito.</p></div>
+ </dd>
  <dt>&lt;offset-x&gt; &lt;offset-y&gt;</dt>
  <dd>Requeridos. Estos valores <code>length</code> especifican el ófset de la sombra del texto. <code>&lt;offset-x&gt;</code> especifica la distancia horizontal; un valor negativo pone la sombra a la izquierda del texto. <code>&lt;offset-y&gt;</code> especifica la distancia vertical; un valor negativo pone la sombra encima del texto. Si ambos valores son <code>0</code>, la sombra es colocada detrás del texto (y puede generar un efecto de difuminado cuando se define el valor <code>&lt;blur-radius&gt;</code>).<br>
  Para más detalles de las unidades que se pueden usar, véase {{cssxref("length")}}.</dd>

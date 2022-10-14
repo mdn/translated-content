@@ -1,20 +1,9 @@
 ---
 title: max()
 slug: Web/CSS/max
-tags:
-  - CSS
-  - CSS 関数
-  - Calculate
-  - Compute
-  - 関数
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - max
-translation_of: Web/CSS/max()
 original_slug: Web/CSS/max()
-browser-compat: css.types.max
 ---
+
 {{CSSRef}}
 
 **`max()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 CSS プロパティの値としてカンマで区切られた式のリストから最大の (最も正である) 値を設定できます。 `max()` 関数は {{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}}、{{CSSxRef("&lt;angle&gt;")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} が使用できるところならばどこでも使用することができます。

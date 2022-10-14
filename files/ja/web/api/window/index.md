@@ -1,21 +1,8 @@
 ---
 title: Window
 slug: Web/API/Window
-page-type: web-api-interface
-tags:
-  - API
-  - Browser
-  - HTML DOM
-  - Interface
-  - Reference
-  - Tab
-  - Window
-  - global
-  - global scope
-  - scope
-browser-compat: api.Window
-translation_of: Web/API/Window
 ---
+
 {{APIRef("DOM")}}
 
 **`Window`** インターフェイスは、 {{glossary("DOM")}} 文書を収めるウィンドウを表します。 `document` プロパティは、そのウィンドウに読み込まれた [DOM の document オブジェクト](/ja/docs/Web/API/Document) を指します。

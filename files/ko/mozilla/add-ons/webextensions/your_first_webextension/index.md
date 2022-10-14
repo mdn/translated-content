@@ -1,10 +1,6 @@
 ---
 title: Your first extension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-tags:
-  - WebExtensions
-  - 가이드
-translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 {{AddonSidebar}}
 

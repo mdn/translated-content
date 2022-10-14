@@ -1,16 +1,8 @@
 ---
 title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-browser-compat: javascript.builtins.String.localeCompare
-translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
+
 {{JSRef}}
 
 **`localeCompare()`** メソッドは、参照先の文字列が整列順で与えられた文字列より前に来るか、後に来るか、同じであるかを示す数値を返します。
@@ -49,7 +41,7 @@ referenceStr.localeCompare(compareString, locales, options)
 - `referenceStr` が `compareString` より後に出現するものである場合は正の数
 - 等しい場合は `0`
 
-> **Warning:** 返値が正確な `-1` または `1` であると思わないでください。
+> **警告:** 返値が正確な `-1` または `1` であると思わないでください。
 >
 > 結果の負の整数と正の整数は、ブラウザー間 (およびブラウザーのバージョン間) で異なります。これは W3C の仕様が負の値か正の値かとだけ指定しているためです。ブラウザーによっては `-2` や `2` を、あるいは他の負の値、正の値を返却するかもしれません。
 

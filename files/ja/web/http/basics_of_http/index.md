@@ -1,13 +1,8 @@
 ---
 title: HTTP の基本
 slug: Web/HTTP/Basics_of_HTTP
-tags:
-  - Guide
-  - HTTP
-  - ガイド
-  - 概要
-translation_of: Web/HTTP/Basics_of_HTTP
 ---
+
 {{HTTPSidebar}}
 
 HTTP はとても拡張性のあるプロトコルです。リソースの記述や URI などわずかな基本概念に基づいており、メッセージ構造が単純で、コミュニケーションの流れはクライアント・サーバー構造です。これらの基本概念の上に、いくつもの拡張が何年にもわたって行われ、新しい機能や新しい意味が新しい HTTP メソッドやヘッダーによって追加されています。

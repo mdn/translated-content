@@ -2,6 +2,7 @@
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
+
 {{JSRef}}
 
 **`some()`** 方法會透過給定函式、測試陣列中是否至少有一個元素，通過該函式所實作的測試。這方法回傳的是布林值。
@@ -42,7 +43,7 @@ The `some()` method executes the `callback` function once for each element prese
 
 `callback` is invoked with three arguments: the value of the element, the index of the element, and the Array object being traversed.
 
-If a `thisArg` parameter is provided to `some()`, it will be used as the callback's `this` value. Otherwise, the value {{jsxref("undefined")}} will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+If a `thisArg` parameter is provided to `some()`, it will be used as the callback's `this` value. Otherwise, the value {{jsxref("undefined")}} will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/zh-TW/docs/Web/JavaScript/Reference/Operators/this).
 
 `some()` does not mutate the array on which it is called.
 
@@ -176,7 +177,7 @@ if (!Array.prototype.some) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.some")}}
+{{Compat}}
 
 ## 參見
 

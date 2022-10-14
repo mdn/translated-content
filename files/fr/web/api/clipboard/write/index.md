@@ -3,6 +3,7 @@ title: Clipboard.write()
 slug: Web/API/Clipboard/write
 translation_of: Web/API/Clipboard/write
 ---
+
 {{APIRef("Clipboard API")}}
 
 La methode **`write()`** de {{domxref("Clipboard")}} écrie des données arbitraire, comme des images, vers le presse-papier. Elle peut être utilisé pour implémenter une fonctionalité de copier coller.

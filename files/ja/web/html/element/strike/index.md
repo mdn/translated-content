@@ -1,21 +1,13 @@
 ---
 title: <strike>
 slug: Web/HTML/Element/strike
-tags:
-  - 要素
-  - HTML
-  - 非推奨
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.strike
-translation_of: Web/HTML/Element/strike
 ---
 
 {{HTMLRef}}{{deprecated_header}}
 
 **`<strike>`** は [HTML](/ja/docs/Web/HTML) の要素で、テキストの上に取り消し線（水平線）を引きます。
 
-> **Warning:** この要素は HTML 4 および XHTML 1 で非推奨になり、 HTML5 で廃止されました。意味的に適切であれば、すなわち、*削除された*コンテンツを表すのであれば、代わりに {{HTMLElement("del")}} を使用してください。それ以外の場合は {{HTMLElement("s")}} を使用してください。
+> **警告:** この要素は HTML 4 および XHTML 1 で非推奨になり、 HTML5 で廃止されました。意味的に適切であれば、すなわち、*削除された*コンテンツを表すのであれば、代わりに {{HTMLElement("del")}} を使用してください。それ以外の場合は {{HTMLElement("s")}} を使用してください。
 
 <table class="properties">
   <tbody>

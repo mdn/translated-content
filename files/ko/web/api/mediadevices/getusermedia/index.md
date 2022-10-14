@@ -51,15 +51,53 @@ navigator.mediaDevices.getUserMedia(constraints)
 
 ## 구문
 
-    const promise = navigator.mediaDevices.getUserMedia(constraints);
+```js
+const promise = navigator.mediaDevices.getUserMedia(constraints);
+```
 
 ### 매개변수
 
 - `constraints`
-  - : 요청할 미디어 유형과 각각에 대한 요구사항을 지정하는 {{domxref("MediaStreamConstraints")}} 객체.`constraints` 매개변수는 두 개의 구성 요소, `video`와 `audio`를 가지는 객체로, 요청할 미디어 유형에 대해 설명합니다. 둘 중 적어도 하나는 지정해야 합니다. 브라우저가 주어진 유형과 제약을 만족하는 미디어 트랙을 하나도 찾을 수 없는 경우 프로미스는 `NotFoundError`와 함께 거부합니다.다음은 특별한 요구사항 없이 오디오와 비디오 둘 다 요청하는 매개변수입니다.`js { audio: true, video: true } `미디어 타입에 true 가 지정된 경우 각 타입에 맞는 장치가 사용 준비된 상태이어야 하며, 만약 사용 준비가 안 된 상태에서 getUserMedia() 를 호출하면 오류를 반환합니다.constraints 매개변수에 세부사항을 지정하여 카메라와 마이크에 세부적인 요청을 할 수 있습니다. 아래의 코드는 비디오의 해상도를 1280x720로 지정하는 예제입니다.`js { audio: true, video: { width: 1280, height: 720 } } `브라우저는 지정한 해상도의 비디오 트랙을 가져오기 위해 시도하지만, 어떤 이유로든 지정한 해상도의 트랙을 가져올 수 없다면 다른 해상도의 비디오 트랙을 반환합니다.아래와 같이 `min`, `max` 키워드를 사용하여 최소 해상도를 1280x720으로 지정할 수도 있으며, `exact` (논리적으로 `min == max` 와 같음) 키워드를 사용하여 특정 해상도를 지정할 수도 있습니다.`js { audio: true, video: { width: { min: 1280 }, height: { min: 720 } } } `만약 카메라에서 지원하는 해상도 중에서 1280x720해상도가 없거나 이 이상의 해상도 역시 없는 경우 promise는 rejected 상태로 `OverconstrainedError` 를 반환하며, 사용자에게 미디어 장치 사용 권한 요청을 하지 않습니다.`min`, `max` 키워드만 사용한 경우 최소, 최대 해상도를 지정할 수는 있지만, 브라우저는 최솟값을 기준으로 제공할 수 있는 해상도를 찾아 미디어 스트림을 반환합니다. 일반적으로 이러한 동작은 우리의 의도와 다릅니다. 그래서 `ideal` 키워드를 사용하여 이상적인 해상도를 지정할 수 있습니다.아래의 코드를 논리적으로 해석하면 1024x776 - 1120x800 - 1350x1020 - 1920x1080 와 같이 지원하는 여러 해상도가 있으면 브라우저는 `ideal` 해상도와 가장 근사하는 1120x800 해상도를 미디어 장치에 요청 후 반환합니다.`js { audio: true, video: { width: { min: 1024, ideal: 1280, max: 1920 }, height: { min: 776, ideal: 720, max: 1080 } } } `아래와 같이 최솟값 최댓값 지정 없이 `ideal` 해상도만 지정할 수도 있습니다.`js { audio: true, video: { width: { ideal: 1280 }, height: { ideal: 720 } } } `모바일 장치의 전면 카메라를 요청하기 위한 코드:`js { audio: true, video: { facingMode: "user" } } `모바일 장치의 후면 카메라를 요청하기 위한 코드:```js
-    { audio: true, video: { facingMode: { exact: "environment" } } }
+  - : 요청할 미디어 유형과 각각에 대한 요구사항을 지정하는 {{domxref("MediaStreamConstraints")}} 객체.`constraints` 매개변수는 두 개의 구성 요소, `video`와 `audio`를 가지는 객체로, 요청할 미디어 유형에 대해 설명합니다. 둘 중 적어도 하나는 지정해야 합니다. 브라우저가 주어진 유형과 제약을 만족하는 미디어 트랙을 하나도 찾을 수 없는 경우 프로미스는 `NotFoundError`와 함께 거부합니다.다음은 특별한 요구사항 없이 오디오와 비디오 둘 다 요청하는 매개변수입니다.
+
+    ```js
+    { audio: true, video: true }
     ```
 
+    미디어 타입에 true 가 지정된 경우 각 타입에 맞는 장치가 사용 준비된 상태이어야 하며, 만약 사용 준비가 안 된 상태에서 getUserMedia() 를 호출하면 오류를 반환합니다.constraints 매개변수에 세부사항을 지정하여 카메라와 마이크에 세부적인 요청을 할 수 있습니다. 아래의 코드는 비디오의 해상도를 1280x720로 지정하는 예제입니다.
+
+    ```js
+    { audio: true, video: { width: 1280, height: 720 } }
+    ```
+
+    브라우저는 지정한 해상도의 비디오 트랙을 가져오기 위해 시도하지만, 어떤 이유로든 지정한 해상도의 트랙을 가져올 수 없다면 다른 해상도의 비디오 트랙을 반환합니다.아래와 같이 `min`, `max` 키워드를 사용하여 최소 해상도를 1280x720으로 지정할 수도 있으며, `exact` (논리적으로 `min == max` 와 같음) 키워드를 사용하여 특정 해상도를 지정할 수도 있습니다.
+
+    ```js
+    { audio: true, video: { width: { min: 1280 }, height: { min: 720 } } }
+    ```
+
+    만약 카메라에서 지원하는 해상도 중에서 1280x720해상도가 없거나 이 이상의 해상도 역시 없는 경우 promise는 rejected 상태로 `OverconstrainedError` 를 반환하며, 사용자에게 미디어 장치 사용 권한 요청을 하지 않습니다.`min`, `max` 키워드만 사용한 경우 최소, 최대 해상도를 지정할 수는 있지만, 브라우저는 최솟값을 기준으로 제공할 수 있는 해상도를 찾아 미디어 스트림을 반환합니다. 일반적으로 이러한 동작은 우리의 의도와 다릅니다. 그래서 `ideal` 키워드를 사용하여 이상적인 해상도를 지정할 수 있습니다.아래의 코드를 논리적으로 해석하면 1024x776 - 1120x800 - 1350x1020 - 1920x1080 와 같이 지원하는 여러 해상도가 있으면 브라우저는 `ideal` 해상도와 가장 근사하는 1120x800 해상도를 미디어 장치에 요청 후 반환합니다.
+
+    ```js
+    { audio: true, video: { width: { min: 1024, ideal: 1280, max: 1920 }, height: { min: 776, ideal: 720, max: 1080 } } }
+    ```
+
+    아래와 같이 최솟값 최댓값 지정 없이 `ideal` 해상도만 지정할 수도 있습니다.
+
+    ```js
+    { audio: true, video: { width: { ideal: 1280 }, height: { ideal: 720 } } }
+    ```
+
+    모바일 장치의 전면 카메라를 요청하기 위한 코드:
+
+    ```js
+    { audio: true, video: { facingMode: "user" } }
+    ```
+
+    모바일 장치의 후면 카메라를 요청하기 위한 코드:
+
+    ```js
+    { audio: true, video: { facingMode: { exact: "environment" } } }
     ```
 
 ### 반환 값
@@ -99,18 +137,20 @@ In Firefox, for example, the URL bar displays a pulsing red icon to indicate tha
 
 This example gives a preference for camera resolution, and assigns the resulting {{domxref("MediaStream")}} object to a video element.
 
-    // Prefer camera resolution nearest to 1280x720.
-    var constraints = { audio: true, video: { width: 1280, height: 720 } };
+```js
+// Prefer camera resolution nearest to 1280x720.
+var constraints = { audio: true, video: { width: 1280, height: 720 } };
 
-    navigator.mediaDevices.getUserMedia(constraints)
-    .then(function(mediaStream) {
-      var video = document.querySelector('video');
-      video.srcObject = mediaStream;
-      video.onloadedmetadata = function(e) {
-        video.play();
-      };
-    })
-    .catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+navigator.mediaDevices.getUserMedia(constraints)
+.then(function(mediaStream) {
+  var video = document.querySelector('video');
+  video.srcObject = mediaStream;
+  video.onloadedmetadata = function(e) {
+    video.play();
+  };
+})
+.catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+```
 
 ### Using the new API in older browsers
 

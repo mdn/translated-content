@@ -1,16 +1,8 @@
 ---
 title: HTMLSlotElement.assignedNodes()
 slug: Web/API/HTMLSlotElement/assignedNodes
-tags:
-  - API
-  - HTMLSlotElement
-  - メソッド
-  - リファレンス
-  - assignedNodes
-  - シャドウ DOM
-browser-compat: api.HTMLSlotElement.assignedNodes
-translation_of: Web/API/HTMLSlotElement/assignedNodes
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 `assignedNodes()` は {{domxref("HTMLSlotElement")}} インターフェイスのプロパティで、このスロットに割り当てられた一連のノードを返します。

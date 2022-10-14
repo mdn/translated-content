@@ -64,6 +64,40 @@ yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크]
 
 ## 번역 가이드
 
+### 메타데이터
+
+문서의 상단에 있는 메타데이터는 `title`, `slug`, `original_slug` 그리고 `l10n.*`만 번역해줍니다. (참고: [#7412](https://github.com/mdn/translated-content/issues/7412))
+
+영어 원문
+```markdown
+---
+title: Proxy
+slug: Web/JavaScript/Reference/Global_Objects/Proxy
+tags:
+  - Class
+  - ECMAScript 2015
+  - JavaScript
+  - Proxy
+- browser-compat: javascript.builtins.Proxy
+---
+{{JSRef}}
+
+The `Proxy` object enables you to create a proxy for another ...
+  :
+```
+
+번역본
+```markdown
+---
+title: Proxy
+slug: Web/JavaScript/Reference/Global_Objects/Proxy
+---
+{{JSRef}}
+
+**`Proxy`** 객체는 기본적인 동작(속성 접근, 할당, 순회, 열거, 함수 ...
+  :
+```
+
 ### heading ID 번역
 
 기사 제목에는 거의 항상 ID가 주어지는데, 기사 내에서 네비게이션을 자동으로 생성하고 실시간 샘플을 생성하기 위한 코드 블록을 식별하는 등의 이유가 있습니다. 제목을 번역 할 때 ID도 같이 번역 할 필요가 없습니다. 나머지 슬러그는 번역되지 않으므로 모든 것이 일관되게 유지됩니다.
@@ -256,7 +290,7 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 | Demo | 데모 | [링크](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders#demo)
 | Description | 설명 | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#description)  
 | Example | 예제 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
-| Examples | 예제들 | [링크](https://developer.mozilla.org/en-US/docs/Glossary/loop#examples) |
+| Examples | 예제 | [링크](https://github.com/mdn/translated-content/blob/main/files/ko/web/javascript/reference/global_objects/proxy/proxy/apply/index.md) |
 | Guides | 가이드 | |
 | In this module | 이번 과정에서는 | [링크](https://developer.mozilla.org/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started#in_this_module) |
 | Learn More | 더 알아보기 | [링크](https://developer.mozilla.org/en-US/docs/Glossary/Mutable) |
@@ -416,7 +450,7 @@ issue: [#1008](https://github.com/mdn/translated-content/issues/1008)
 
 다음은 `en-us locale`에 대한 기본 compatibility 항목입니다. 현재 `ko locale`에는 여러 번역 문구들이 있습니다. 이 문구들은 모두 삭제돼야합니다.
 
-1차적으로 https://gist.github.com/hochan222/ad801f7a6325e2b2e391ab634d6d18ce 로 30가지 경우에 대해 [PR 1176](https://github.com/mdn/translated-content/pull/1176) 에서 처리했으며, 나머지 경우에 대해 정규표현식을 작성해 삭제하거나 발견시 삭제 바랍니다.
+1차적으로 <https://gist.github.com/hochan222/ad801f7a6325e2b2e391ab634d6d18ce> 로 30가지 경우에 대해 [PR 1176](https://github.com/mdn/translated-content/pull/1176) 에서 처리했으며, 나머지 경우에 대해 정규표현식을 작성해 삭제하거나 발견시 삭제 바랍니다.
 
 #### 기본 항목
 
@@ -445,31 +479,25 @@ issue: [#1008](https://github.com/mdn/translated-content/issues/1008)
 
 ## 자주 묻는 질문
 
-**1. `{{Compat}}` 하고 `{{Specifications}}` 이건 ko 에서는 보이지 않습니다.**
+**1. 한국어로된 MDN 사이트는 못보나요?**
 
-문서 frontmatter에 browser-compat 키 추가해주세요. (참고: 퀵에디터로 수정하면 frontmatter가 보이지 않습니다.)
-
-<img src="https://user-images.githubusercontent.com/22424891/118590427-61b77300-b7dd-11eb-803e-daf51bb8edbe.png" height="300px" />
-
-**2. 한국어로된 MDN 사이트는 못보나요?**
-
-https://developer.mozilla.org/en-US/docs/Web/HTML 와같이 영문 페이지라면 중간에 en-US만 https://developer.mozilla.org/ko/docs/Web/HTML 와같이 ko로 바꿔주시면 번역본으로 보실 수 있습니다.
+<https://developer.mozilla.org/en-US/docs/Web/HTML> 와같이 영문 페이지라면 중간에 en-US만 <https://developer.mozilla.org/ko/docs/Web/HTML> 와같이 ko로 바꿔주시면 번역본으로 보실 수 있습니다.
 
 페이지가 존재하지 않는 경우 번역을 통해 기여를 하실 수 있습니다. 번역 기준 버전은 en-US입니다.
 
-**3. MDN 강의를 보면서 공부를 하고 있는데 다음과 같은 문장을 보게 되었습니다. 번역이 이상합니다.**
+**2. MDN 강의를 보면서 공부를 하고 있는데 다음과 같은 문장을 보게 되었습니다. 번역이 이상합니다.**
 
 특정기간 MDN 문서의 편집이 자유로워서 이상한 번역이 많습니다. 괜찮으시다면 PR을 보내주시거나 issue를 생성해서 해당 페이지가 조치 받게 해주실 수 있으신가요?
 
-**4. 제가 초보라서 번역에 어떻게 기여하는지, 또 따라야 할 공식 지침 같은 것이 있는지 몰라서 손을 못 대고 있는 상황입니다.**
+**3. 제가 초보라서 번역에 어떻게 기여하는지, 또 따라야 할 공식 지침 같은 것이 있는지 몰라서 손을 못 대고 있는 상황입니다.**
 
-단순한 제보는 https://github.com/mdn/translated-content/issues 다음 페이지에서 New issue를 눌러서 이슈 작성을 해주시면 됩니다! 혹시 직접 수정해서 기여하고 싶으시면 https://github.com/mdn/translated-content/issues/827 이 절차대로 진행해주실 수 있으신가요? 기여해주셔서 감사합니다.
+단순한 제보는 <https://github.com/mdn/translated-content/issues> 다음 페이지에서 New issue를 눌러서 이슈 작성을 해주시면 됩니다! 혹시 직접 수정해서 기여하고 싶으시면 <https://github.com/mdn/translated-content/issues/827> 이 절차대로 진행해주실 수 있으신가요? 기여해주셔서 감사합니다.
 
-**5. Issue의 라벨은 어떻게 붙이나요?**
+**4. Issue의 라벨은 어떻게 붙이나요?**
 
 라벨은 레파지토리 관리자분들께서 확인 후 붙여주십니다.
 
-**6. content(en) 레포에는 index.md 파일로 저장되어 있는데, translated-content(ko) 레포에는 index.html 으로 되어 있습니다. 이런 경우에는 translated-content 레포의 index.html 파일이 번역된 index.md 파일로 교체되어도 되는건가요? 꼭 .html 포멧을 지켜야 한다 같은 규칙이 있는지 궁금합니다.**
+**5. content(en) 레포에는 index.md 파일로 저장되어 있는데, translated-content(ko) 레포에는 index.html 으로 되어 있습니다. 이런 경우에는 translated-content 레포의 index.html 파일이 번역된 index.md 파일로 교체되어도 되는건가요? 꼭 .html 포멧을 지켜야 한다 같은 규칙이 있는지 궁금합니다.**
 
 2021년 10월 17일 기준, html 형식에서 md 형식으로 옮겨가고 있는 과도기에있습니다. 자세한 내용은 [다음 링크](https://egas.tistory.com/m/52)를 참고해주세요.
 

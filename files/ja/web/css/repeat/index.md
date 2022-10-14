@@ -1,18 +1,9 @@
 ---
 title: repeat()
 slug: Web/CSS/repeat
-tags:
-  - CSS
-  - CSS 関数
-  - CSS グリッド
-  - 関数
-  - レイアウト
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/repeat()
 original_slug: Web/CSS/repeat()
-browser-compat: css.properties.grid-template-columns.repeat
 ---
+
 {{CSSRef}}
 
 **`repeat()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、トラックリスト内での部分的な繰り返しを表し、列や行の繰り返しをよりコンパクトに書くことができます。

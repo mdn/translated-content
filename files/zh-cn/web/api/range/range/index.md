@@ -2,6 +2,7 @@
 title: Range()
 slug: Web/API/Range/Range
 ---
+
 {{ APIRef("DOM") }}{{seeCompatTable}}
 
 构造函数 **`Range()`** 返回一个新创建的 {{domxref("Range")}} 对象，新创建的对象属于全局 {{domxref("Document")}} 对象。
@@ -56,7 +57,7 @@ selection.addRange(range);
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.Range")}}
+{{Compat}}
 
 ## 扩展
 

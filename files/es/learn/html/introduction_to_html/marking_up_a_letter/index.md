@@ -76,7 +76,7 @@ Semánticas intralínea:
 - Marca apropiadamente los seis sub/superíndices.
 - Los símbolos de los grados, los mayor que y los símbolos de multiplicar deben ser marcados usando las referencias correctas.
 - Marca al menos dos palabras en el texto con fuerte importancia/énfasis.
-- Hay dos lugares donde deberíamos añadir hyperlinks; añádelos con títulos. Como sitio donde apuntan simplemente usa: http\://example.com.
+- Hay dos lugares donde deberíamos añadir hyperlinks; añádelos con títulos. Como sitio donde apuntan simplemente usa: `http://example.com`.
 - Marca con el elemento apropiado el lema de la universidad y la cita del autor.
 
 El encabezamiento del documento:

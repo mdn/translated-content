@@ -1,17 +1,10 @@
 ---
 title: console.count()
 slug: Web/API/console/count
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - リファレンス
-  - ウェブ開発
-  - ウェブコンソール
-browser-compat: api.console.count
-translation_of: Web/API/console/count
+l10n:
+  sourceCommit: 710132ffea066697d23e1978478d36090fb448d7
 ---
+
 {{APIRef("Console API")}}
 
 **`console.count()`** メソッドは、 `count()` を実際に呼び出した回数を記録します。
@@ -21,13 +14,18 @@ translation_of: Web/API/console/count
 ## 構文
 
 ```js
-console.count([label]);
+count()
+count(label)
 ```
 
 ### 引数
 
 - `label` {{Optional_Inline}}
   - : 文字列です。指定した場合、 `count()` はそのラベルを用いて呼び出した回数を出力します。省略した場合は、 `count()` は "default" ラベルで呼び出されたように動作します。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -38,7 +36,7 @@ let user = "";
 
 function greet() {
   console.count();
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";
@@ -67,7 +65,7 @@ let user = "";
 
 function greet() {
   console.count(user);
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";

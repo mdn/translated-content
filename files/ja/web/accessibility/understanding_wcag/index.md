@@ -1,12 +1,8 @@
 ---
 title: ウェブコンテンツ・アクセシビリティガイドラインを理解する
 slug: Web/Accessibility/Understanding_WCAG
-tags:
-  - Accessibility
-  - WCAG
-  - Web Content Accessibility Guidelines
-translation_of: Web/Accessibility/Understanding_WCAG
 ---
+
 この一連の記事では、W3C {{glossary("WCAG","ウェブコンテンツ・アクセシビリティガイドライン")}} 2.0 または 2.1（WCAG、Web Content Accessibility Guidelines）で概説されている推奨事項に準拠するために必要な手順を理解するのに役立つ簡単な説明を提供します。
 
 WCAG 2.0 と 2.1 は、さまざまな障碍を持つ人々にとってウェブコンテンツをよりアクセスしやすくするための詳細なガイドラインを提供しています。 それは包括的ですが信じられないほど詳細であり、そして迅速な理解を得ることは非常に困難です。 このため、さまざまな推奨事項を満たすために必要な実際的な手順をまとめ、必要に応じて詳細へのリンクを追加しました。

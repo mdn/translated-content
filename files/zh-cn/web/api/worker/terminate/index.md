@@ -2,6 +2,7 @@
 title: Worker.terminate()
 slug: Web/API/Worker/terminate
 ---
+
 {{APIRef("Web Workers API")}}
 
 {{domxref("Worker")}} 接口中的 **`terminate()`** 方法用于立即终止 {{domxref("Worker")}} 的行为。本方法并不会等待 worker 去完成它剩余的操作；worker 将会被立刻停止
@@ -36,7 +37,7 @@ myWorker.terminate();
 
 ## Browser compatibility
 
-{{Compat("api.Worker.terminate")}}
+{{Compat}}
 
 ## See also
 

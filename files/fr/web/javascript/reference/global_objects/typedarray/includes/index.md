@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/includes
 ---
+
 {{JSRef}}
 
 La méthode **`includes()`** détermine si un tableau typé possède un certain élément et renvoie `true` ou `false` selon le cas de figure. Cette méthode utilise le même algorithme que la méthode {{jsxref("Array.prototype.includes()")}}. Dans le reste de l'article _TypedArray_ fait référence à un des [types de tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
@@ -51,14 +52,11 @@ new Float64Array([NaN]).includes(NaN); // true;
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES7', '#sec-%typedarray%.prototype.includes', 'TypedArray.prototype.includes')}}     | {{Spec2('ES7')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.includes', 'TypedArray.prototype.includes')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.includes")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: HTML 基础
 slug: Learn/Getting_started_with_the_web/HTML_basics
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
@@ -141,7 +142,7 @@ My cat is very grumpy
 
 可以尝试在 {{htmlelement("img")}} 元素上面添加一个合适的标题。
 
-> **备注：** 你可以看到第一级标题是有隐式的主题样式。不要使用标题元素来加大、加粗字体，因为标题对于 [无障碍访问](/zh-CN/docs/learn/Accessibility) 和 [搜索引擎优化](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化) 等问题非常有意义。要保持页面结构清晰，标题整洁，不要发生标题级别跳跃。
+> **备注：** 你可以看到第一级标题是有隐式的主题样式。不要使用标题元素来加大、加粗字体，因为标题对于 [无障碍访问](/zh-CN/docs/learn/Accessibility) 和 [搜索引擎优化](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化？) 等问题非常有意义。要保持页面结构清晰，标题整洁，不要发生标题级别跳跃。
 
 ### 段落（Paragraph）
 

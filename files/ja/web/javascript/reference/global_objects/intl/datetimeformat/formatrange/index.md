@@ -1,18 +1,8 @@
 ---
 title: Intl.DateTimeFormat.prototype.formatRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRange
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat.prototype.formatRange()`** は、 {{jsxref("Intl.DateTimeFormat")}} オブジェクトがインスタンス化されたときに提供された **`locale`** と **`options`** に基づいて、もっとも簡明な方法で日付の範囲を書式化します。

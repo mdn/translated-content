@@ -1,20 +1,6 @@
 ---
 title: '<script>: スクリプト要素'
 slug: Web/HTML/Element/script
-tags:
-  - 要素
-  - HTML
-  - HTML スクリプト
-  - HTML:フローコンテンツ
-  - HTML:メタデータコンテンツ
-  - HTML:スクリプト対応要素
-  - HTML:記述コンテンツ
-  - リファレンス
-  - Script
-  - ウェブ
-  - タグ
-browser-compat: html.elements.script
-translation_of: Web/HTML/Element/script
 ---
 
 {{HTMLRef}}
@@ -86,7 +72,7 @@ translation_of: Web/HTML/Element/script
 
     `defer` 属性の付いたスクリプトは、スクリプトが読み込まれて評価が完了するまで、 `DOMContentLoaded` イベントの発生が抑制されます。
 
-    > **Warning:** この属性は、 `src` 属性がない場合 (すなわちインラインスクリプト) に使用してはいけません。そのような場合は効果がありません。
+    > **警告:** この属性は、 `src` 属性がない場合 (すなわちインラインスクリプト) に使用してはいけません。そのような場合は効果がありません。
     >
     > `defer` 属性は[モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules)には効果がありません。既定で延期が行われます。
 
@@ -113,7 +99,7 @@ translation_of: Web/HTML/Element/script
     - `strict-origin-when-cross-origin`: 同一オリジンのリクエストを行う際は URL 全体を送信しますが、プロトコルのセキュリティ水準が同等 (例えば HTTPS→HTTPS) である場合は文書のオリジンのみをリファラーとして送信し、宛先の安全性がより低い場合 (例えば HTTPS→HTTP) にはヘッダーを送信しません。
     - `unsafe-url`: リファラーはオリジンとパスを含みます (ただし、[フラグメント](/ja/docs/Web/API/HTMLAnchorElement/hash)、[パスワード](/ja/docs/Web/API/HTMLAnchorElement/password)、[ユーザー名](/ja/docs/Web/API/HTMLAnchorElement/username)は含みません)。これはオリジンやパスの情報が TLS で保護されたリソースからセキュアでない生成元へ漏えいしますので、**安全ではありません**。
 
-    > **Note:** 既定値および `referrerpolicy` に対応していない場合の代替値は空文字列 (`""`) です。 `referrerpolicy` が `<script>` 要素で明示的に指定されていない場合はより高次元、つまり文書全体やドメイン全体のリファラーポリシーに合わせられます。より高次元のポリシーが利用できない場合は、空文字列は `strict-origin-when-cross-origin` と同等のものとして扱われます。
+    > **メモ:** 既定値および `referrerpolicy` に対応していない場合の代替値は空文字列 (`""`) です。 `referrerpolicy` が `<script>` 要素で明示的に指定されていない場合はより高次元、つまり文書全体やドメイン全体のリファラーポリシーに合わせられます。より高次元のポリシーが利用できない場合は、空文字列は `strict-origin-when-cross-origin` と同等のものとして扱われます。
 
 - {{htmlattrdef("src")}}
   - : この属性は外部スクリプトの URI を指定します。文書に直接スクリプトを埋め込む代わりに使用することができます。
@@ -194,7 +180,7 @@ translation_of: Web/HTML/Element/script
 
 `document.createElement("script").async` が `true` と評価されるブラウザー (Firefox 4 など) で、スクリプトによって挿入された外部スクリプトを挿入順に実行することを要求するには、順序を制御したいスクリプトに対して `async="false"` を設定してください。
 
-> **Warning:** 非同期スクリプトから `document.write()` を呼び出さないでください。 Firefox 3.6 では `document.write()` を呼び出すと予期せぬ影響をもたらします。Firefox 4 では `async` スクリプトから `document.write()` を呼び出しても効果がありません（エラーコンソールに警告を出力するだけです）。
+> **警告:** 非同期スクリプトから `document.write()` を呼び出さないでください。 Firefox 3.6 では `document.write()` を呼び出すと予期せぬ影響をもたらします。Firefox 4 では `async` スクリプトから `document.write()` を呼び出しても効果がありません（エラーコンソールに警告を出力するだけです）。
 
 ## 関連情報
 

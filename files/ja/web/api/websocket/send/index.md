@@ -1,15 +1,8 @@
 ---
 title: WebSocket.send()
 slug: Web/API/WebSocket/send
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - Web API
-  - WebSocket
-browser-compat: api.WebSocket.send
-translation_of: Web/API/WebSocket/send
 ---
+
 {{APIRef("Web Sockets API")}}
 
 **`WebSocket.send()`** メソッドは、 WebSocket 接続を介してサーバーに送るために指定されたデータを、格納するために必要なバイト数だけ `bufferedAmount` の値を増加させながらキューに入れます。もしデータが送信できなかった場合（例えば、バッファリングが必要だが、バッファが一杯であるなどの理由で）、ソケットは自動的に閉じられます。

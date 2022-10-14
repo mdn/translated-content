@@ -2,6 +2,7 @@
 title: HTTP 身份验证
 slug: Web/HTTP/Authentication
 ---
+
 {{HTTPSidebar}}
 
 HTTP 提供一个用于权限控制和认证的通用框架。最常用的 HTTP 认证方案是 HTTP Basic authentication。本页介绍了通用的 HTTP 认证框架以及展示如何通过 HTTP Basic authentication 来限制权限访问您的服务器。
@@ -16,7 +17,7 @@ HTTP 提供一个用于权限控制和认证的通用框架。最常用的 HTTP 
 
 ### 代理认证
 
-与上述同样的询问质疑和响应原理使用于代理认证。下面介绍一个中间代理需要认证的例子。资源认证和代理认证可以并存，区别于独立的头信息和响应状态码。代理认证，询问质疑的状态码是 {{HTTPStatus("407")}}（必须提供代理证书），响应头{{HTTPHeader("Proxy-Authenticate")}}至少包含一个可用的质制，并且请求头{{HTTPHeader("Proxy-Authorization")}}用作提供证书给代理服务器。
+与上述同样的询问质疑和响应原理适用于代理认证。下面介绍一个中间代理需要认证的例子。资源认证和代理认证可以并存，区别于独立的头信息和响应状态码。代理认证，询问质疑的状态码是 {{HTTPStatus("407")}}（必须提供代理证书），响应头{{HTTPHeader("Proxy-Authenticate")}}至少包含一个可用的质制，并且请求头{{HTTPHeader("Proxy-Authorization")}}用作提供证书给代理服务器。
 
 ### 访问拒绝
 
@@ -24,7 +25,7 @@ HTTP 提供一个用于权限控制和认证的通用框架。最常用的 HTTP 
 
 ### 跨域图片认证
 
-一个被浏览器最近修复了的潜在的安全漏洞是跨域图片的认证。从 [Firefox 59](https://developer.mozilla.org/en-US/Firefox/Releases/59) 起，浏览器在加载不同域的图片资源时，将不会再弹出 HTTP 认证对话框（{{bug(1423146)}}）。如果攻击者可以将任意图片嵌入到第三方页面中，禁止弹出 HTTP 认证对话框可避免用户的身份凭证被窃取。
+一个被浏览器最近修复了的潜在的安全漏洞是跨域图片的认证。从 [Firefox 59](/zh-CN/Firefox/Releases/59) 起，浏览器在加载不同域的图片资源时，将不会再弹出 HTTP 认证对话框（{{bug(1423146)}}）。如果攻击者可以将任意图片嵌入到第三方页面中，禁止弹出 HTTP 认证对话框可避免用户的身份凭证被窃取。
 
 ### HTTP 认证的字符编码
 
@@ -54,7 +55,7 @@ Proxy-Authorization: <type> <credentials>
 
 通用 HTTP 身份验证框架可以被多个验证方案使用。不同的验证方案会在安全强度以及在客户端或服务器端软件中可获得的难易程度上有所不同。
 
-最常见的验证方案是“基本验证方案”（"Basic"），该方案会在下面进行详细阐述。 IANA 维护了[一系列的验证方案](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)，除此之外还有其他类型的验证方案由虚拟主机服务提供，例如 Amazon AWS 。常见的验证方案包括：
+最常见的验证方案是“基本验证方案”（"Basic"），该方案会在下面进行详细阐述。IANA 维护了[一系列的验证方案](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)，除此之外还有其他类型的验证方案由虚拟主机服务提供，例如 Amazon AWS。常见的验证方案包括：
 
 - **Basic** (查看 {{rfc(7617)}}，base64 编码凭证。详情请参阅下文.),
 - **Bearer** (查看 {{rfc(6750)}}，bearer 令牌通过 OAuth 2.0 保护资源),
@@ -73,7 +74,7 @@ Proxy-Authorization: <type> <credentials>
 
 ### 使用 Apache 限制访问和基本身份验证
 
-要对 Apache 服务器上的目录进行密码保护， 你需要一个 `.htaccess` 和 a `.htpasswd` 文件。
+要对 Apache 服务器上的目录进行密码保护，你需要一个 `.htaccess` 和 a `.htpasswd` 文件。
 
 该 `.htaccess` 文件格式通常看起来像这样：
 
@@ -84,7 +85,7 @@ AuthUserFile /path/to/.htpasswd
 Require valid-user
 ```
 
-该 `.htaccess` 文件引用一个 `.htpasswd` 文件，其中每行用冒号（“：”）分隔的用户名和密码。你不能看到真实的密码因为它们是 [encrypted](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html) (在这个例子中是使用了 MD5). 你可以命名`.htpasswd` 文件 为你所喜欢的名字，但是应该保证这个文件不被其他人访问. (Apache 通常配置阻止访问 `.ht*` 类的文件).
+该 `.htaccess` 文件引用一个 `.htpasswd` 文件，其中每行用冒号（“：”）分隔的用户名和密码。你不能看到真实的密码因为它们是 [encrypted](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html) (在这个例子中是使用了 MD5). 你可以命名`.htpasswd` 文件 为你所喜欢的名字，但是应该保证这个文件不被其他人访问。(Apache 通常配置阻止访问 `.ht*` 类的文件).
 
 ```plain
 aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
@@ -112,7 +113,7 @@ location /status {
 https://username:password@www.example.com/
 ```
 
-**这种 URL 是不赞成使用的。**在 Chrome 中， URL 中的 username:password@ 部分甚至会因为安全原因而被移除。Firefox 则会检查该站点是否真的需要身份验证，假如不是，则会弹出一个警告窗口：你即将使用用户名 “username” 登录 ”www\.example.com“ 站点，但是该站点不需要进行身份验证。这可能是在试图进行欺诈。
+**这种 URL 是不赞成使用的。**在 Chrome 中，URL 中的 username:password@ 部分甚至会因为安全原因而被移除。Firefox 则会检查该站点是否真的需要身份验证，假如不是，则会弹出一个警告窗口：你即将使用用户名“username”登录”www\.example.com“站点，但是该站点不需要进行身份验证。这可能是在试图进行欺诈。
 
 ## 相关内容
 

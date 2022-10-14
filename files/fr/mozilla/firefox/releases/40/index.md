@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/40
 translation_of: Mozilla/Firefox/Releases/40
 original_slug: Mozilla/Firefox/Versions/40
 ---
+
 {{FirefoxSidebar}}
 
 ## Changements pour les développeurs Web
@@ -85,7 +86,7 @@ Amélioration de notre implémentation des animations Web expérimentales, princ
 
 #### WebRTC
 
-- WebRTC: the {{event("negotiationneeded")}} event is now also sent for initial negotiations, not only for re-negotiations ({{bug(1149838)}}).
+- WebRTC: the [`negotiationneeded`](/fr/docs/Web/API/RTCPeerConnection/negotiationneeded_event) event is now also sent for initial negotiations, not only for re-negotiations ({{bug(1149838)}}).
 
 #### DOM & HTML DOM
 

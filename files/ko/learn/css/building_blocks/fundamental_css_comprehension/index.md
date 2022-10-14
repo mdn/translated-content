@@ -1,7 +1,6 @@
 ---
 title: 기본적인 CSS 이해
 slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
-translation_of: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 original_slug: Learn/CSS/Introduction_to_CSS/기본적인_CSS_이해
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}

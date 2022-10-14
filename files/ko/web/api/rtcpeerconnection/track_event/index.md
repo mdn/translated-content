@@ -12,7 +12,9 @@ original_slug: Web/API/RTCPeerConnection/ontrack
 
 ## Syntax
 
-    RTCPeerConnection.ontrack = eventHandler;
+```js
+RTCPeerConnection.ontrack = eventHandler;
+```
 
 ### 값
 

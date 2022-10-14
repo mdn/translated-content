@@ -2,6 +2,7 @@
 title: Proxy servers and tunneling
 slug: Web/HTTP/Proxy_servers_and_tunneling
 ---
+
 {{HTTPSidebar}}
 
 当访问不同的网站时，代理服务器和 HTTP 管道帮助访问万维网 . 一个代理可以是用户的本地计算机，或者介于用户计算机和终端服务器之间的地方。本章节概述一些关于代理和相关配置选项的基础知识。
@@ -10,7 +11,7 @@ slug: Web/HTTP/Proxy_servers_and_tunneling
 
 ## 正向代理
 
-正向代理，也可以叫“网关” 或者仅仅为一个或多个客户端提供代理服务的“代理”。在互联网上像这样的代理不计其数。 他们存储并转发网络服务（如 DNS，网页）以减少和控制大家所使用的带宽。
+正向代理，也可以叫“网关”或者仅仅为一个或多个客户端提供代理服务的“代理”。在互联网上像这样的代理不计其数。他们存储并转发网络服务（如 DNS，网页）以减少和控制大家所使用的带宽。
 
 正向代理可以是匿名代理，并允许用户在浏览 web 或者使用其他服务时隐藏自己的 IP。 [TOR](https://www.torproject.org/) (洋葱路由), 匿名地在多个代理间路由因特网。
 
@@ -55,7 +56,7 @@ See also the [HTTP tunnel article on Wikipedia](https://en.wikipedia.org/wiki/HT
 
 ## Proxy Auto-Configuration (PAC)
 
-A [Proxy Auto-Configuration (PAC)](</en-US/docs/Mozilla/Projects/Necko/Proxy_Auto-Configuration_(PAC)_file>) file is a [JavaScript](/en-US/docs/Web/JavaScript) function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:
+A [Proxy Auto-Configuration (PAC)](/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) file is a [JavaScript](/zh-CN/docs/Web/JavaScript) function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:
 
 The auto-config file should be saved to a file with a `.pac` filename extension:
 
@@ -80,9 +81,9 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-See [Proxy Auto-Configuration (PAC)](</en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file>) for more examples.
+See [Proxy Auto-Configuration (PAC)](/zh-/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) for more examples.
 
-## See also
+## 参见
 
 - {{HTTPMethod("CONNECT")}}
-- [Proxy server on Wikipedia](https://en.wikipedia.org/wiki/Proxy_server)
+- [维基百科上的代理服务器](https://zh.wikipedia.org/wiki/代理服务器)

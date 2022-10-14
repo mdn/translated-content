@@ -1,16 +1,8 @@
 ---
 title: size-adjust
 slug: Web/CSS/@font-face/size-adjust
-tags:
-  - '@font-face'
-  - アットルール記述子
-  - CSS
-  - リファレンス
-  - 記述子
-  - size-adjust
-browser-compat: css.at-rules.font-face.size-adjust
-translation_of: Web/CSS/@font-face/size-adjust
 ---
+
 {{CSSRef}}
 
 **`size-adjust`** は CSS の記述子で、記述子は、このフォントに関連する字体のアウトラインとメトリックの乗数を定義します。これにより、同じフォントサイズでレンダリングしたときに、様々なフォントのデザインを調和させることが容易になります。

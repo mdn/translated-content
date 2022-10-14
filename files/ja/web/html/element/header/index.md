@@ -1,13 +1,8 @@
 ---
 title: <header>
 slug: Web/HTML/Element/header
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-translation_of: Web/HTML/Element/header
 ---
+
 {{HTMLRef}}
 
 **HTML の `<header>` 要素**は、導入的なコンテンツ、ふつうは導入部やナビゲーション等のグループを表します。見出し要素だけでなく、ロゴ、検索フォーム、作者名、その他の要素を含むこともできます。

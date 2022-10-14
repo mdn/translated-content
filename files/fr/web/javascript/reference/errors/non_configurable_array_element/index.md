@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Non_configurable_array_element
 original_slug: Web/JavaScript/Reference/Erreurs/Non_configurable_array_element
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

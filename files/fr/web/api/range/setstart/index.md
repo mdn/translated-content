@@ -8,6 +8,7 @@ tags:
   - Range
 translation_of: Web/API/Range/setStart
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`Range.setStart()`** définit la position de départ d'un objet [`Range`](/fr/docs/Web/API/Range).

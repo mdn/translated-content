@@ -1,18 +1,8 @@
 ---
 title: HTMLObjectElement.height
 slug: Web/API/HTMLObjectElement/height
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - height
-browser-compat: api.HTMLObjectElement.height
-translation_of: Web/API/HTMLObjectElement/height
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`height`** は {{domxref("HTMLObjectElement")}} インターフェイスのプロパティで、 HTML の {{htmlattrxref("height", "object")}} 属性を反映した文字列を返します。リソースを表示する高さを CSS ピクセル単位で指定します。

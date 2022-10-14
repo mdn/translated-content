@@ -1,14 +1,6 @@
 ---
 title: Website security
 slug: Learn/Server-side/First_steps/Website_security
-tags:
-  - 가이드
-  - 보안
-  - 서버측 프로그래밍
-  - 웹 보안
-  - 초보자
-  - 학습
-translation_of: Learn/Server-side/First_steps/Website_security
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 

@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS
 ---
+
 {{CSSRef}}
 
 {{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS", "Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture","Web/CSS/CSS_Grid_Layout")}}

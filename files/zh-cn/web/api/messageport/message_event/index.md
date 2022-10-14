@@ -2,6 +2,7 @@
 title: MessagePort.onmessage
 slug: Web/API/MessagePort/message_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessagePort")}} 接口的 **`onmessage`** 事件处理程序是一个 {{domxref("EventListener")}}, 当在端口上触发一个类型为 **message** 的{{domxref("MessageEvent")}} 时被调用 - 即，当端口接收到消息时。
@@ -45,8 +46,8 @@ For a full working example, see our [channel messaging basic demo](https://githu
 
 ## Browser compatibility
 
-{{Compat("api.MessagePort.onmessage")}}
+{{Compat}}
 
 ## See also
 
-- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

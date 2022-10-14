@@ -1,13 +1,8 @@
 ---
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
+
 {{JSRef}}
 
 **`Object.getPrototypeOf()`** メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部プロパティ `[[Prototype]]` の値) を返します。

@@ -1,14 +1,8 @@
 ---
 title: MessagePort.close()
 slug: Web/API/MessagePort/close
-tags:
-  - API
-  - Channel messaging
-  - MessagePort
-  - Method
-  - Reference
-translation_of: Web/API/MessagePort/close
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessagePort")}} インターフェイスの **`close()`** メソッドは、ポートの接続を切断し、ポートがアクティブではなくなります。これは、そのポートへのメッセージの送信を停止します。

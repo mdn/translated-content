@@ -1,20 +1,8 @@
 ---
 title: Intl.Locale.prototype.textInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/textInfo
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - プロパティ
-  - Locale
-  - ローカライズ
-  - プロトタイプ
-  - リファレンス
-  - textInfo
-  - 書字方向
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/textInfo
-browser-compat: javascript.builtins.Intl.Locale.textInfo
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.textInfo`** プロパティは、関連する `Locale` に対して `ltr` （左書き）または `rtl` （右書き）で示される文字の並び順を返すアクセサープロパティです。

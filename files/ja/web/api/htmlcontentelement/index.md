@@ -1,14 +1,8 @@
 ---
 title: HTMLContentElement
 slug: Web/API/HTMLContentElement
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - インターフェース
-  - リファレンス
-translation_of: Web/API/HTMLContentElement
 ---
+
 {{ APIRef("Web Components") }}
 
 {{Deprecated_header}}

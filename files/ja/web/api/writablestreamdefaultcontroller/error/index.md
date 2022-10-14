@@ -1,16 +1,8 @@
 ---
 title: WritableStreamDefaultController.error()
 slug: Web/API/WritableStreamDefaultController/error
-tags:
-  - API
-  - Error
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultController
-translation_of: Web/API/WritableStreamDefaultController/error
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("WritableStreamDefaultController")}} インターフェイスの **`error()`** メソッドにより、関連するストリームとの今後のやり取りがエラーになります。

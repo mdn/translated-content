@@ -1,15 +1,8 @@
 ---
 title: '-moz-user-input'
 slug: Web/CSS/-moz-user-input
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS:Mozilla 拡張
-  - 非推奨
-  - 標準外
-  - リファレンス
-translation_of: Web/CSS/-moz-user-input
 ---
+
 {{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 Mozilla アプリケーションでは、 **`-moz-user-input`** はある要素がユーザの入力を受け付けるかどうかを決定します。
@@ -28,7 +21,7 @@ Mozilla アプリケーションでは、 **`-moz-user-input`** はある要素�
 
 {{HTMLElement("textarea")}} のようなユーザーからの入力を通常受け付ける要素では `-moz-user-input` の初期値は `enabled` です。
 
-> **Note:** `-moz-user-input` は、 CSS 3 の {{cssxref("user-input")}} プロパティの先行実装案の一つでしたが、これはまだ (実装を要求する) 勧告候補に達していません。類似のプロパティ `user-focus` が [CSS3 UI 仕様の前身であった初期の草稿](https://www.w3.org/TR/2000/WD-css3-userint-20000216) で提案されましたが、作業グループによって却下されました。
+> **メモ:** `-moz-user-input` は、 CSS 3 の {{cssxref("user-input")}} プロパティの先行実装案の一つでしたが、これはまだ (実装を要求する) 勧告候補に達していません。類似のプロパティ `user-focus` が [CSS3 UI 仕様の前身であった初期の草稿](https://www.w3.org/TR/2000/WD-css3-userint-20000216) で提案されましたが、作業グループによって却下されました。
 
 ## 構文
 
@@ -39,7 +32,7 @@ Mozilla アプリケーションでは、 **`-moz-user-input`** はある要素�
 - enabled
   - : 要素はユーザーからの入力を受け付ける。テキストボックスではこれが標準の動作。**この値は Firefox 60 以降は対応していませんので注意してください ({{bug(1405087)}})。**
 - disabled
-  - : 要素はユーザーからの入力を受け付けない。しかし、これは {{XULAttr("disabled")}} を true にするのとは等しくなく、要素は普通に (無効にならずに) 描画される。**この値は Firefox 60 以降は対応していませんので注意してください ({{bug(1405087)}})。**
+  - : 要素はユーザーからの入力を受け付けない。しかし、これは `disabled` を true にするのとは等しくなく、要素は普通に (無効にならずに) 描画される。**この値は Firefox 60 以降は対応していませんので注意してください ({{bug(1405087)}})。**
 
 ## 公式定義
 

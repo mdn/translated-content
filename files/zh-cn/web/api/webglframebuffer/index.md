@@ -2,9 +2,10 @@
 title: WebGLFramebuffer
 slug: Web/API/WebGLFramebuffer
 ---
+
 {{APIRef("WebGL")}}
 
-**WebGLFramebuffer** 接口时 [WebGL API](/en-US/docs/Web/API/WebGL_API) 的一部分，它提供了一个缓冲区的集合，这些缓冲区可以作为一个整体用作渲染操作的目标缓冲区。
+**WebGLFramebuffer** 接口时 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一部分，它提供了一个缓冲区的集合，这些缓冲区可以作为一个整体用作渲染操作的目标缓冲区。
 
 ## 摘要
 
@@ -31,7 +32,7 @@ var buffer = gl.createFramebuffer();
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLFramebuffer")}}
+{{Compat}}
 
 ## 参见
 
@@ -39,4 +40,4 @@ var buffer = gl.createFramebuffer();
 - {{domxref("WebGLRenderingContext.createFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.isFramebuffer()")}}
-- 其他缓冲区: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- 其他缓冲区：{{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}

@@ -2,6 +2,7 @@
 title: <rt>
 slug: Web/HTML/Element/rt
 ---
+
 **HTML Ruby 文本 (`<rt>`) 元素**包含字符的发音，字符在 ruby 注解中出现，它用于描述东亚字符的发音。这个元素始终在 {{ HTMLElement("ruby") }} 元素中使用。
 
 <table class="properties">
@@ -52,7 +53,7 @@ slug: Web/HTML/Element/rt
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.rt")}}
+{{Compat}}
 
 ## 另见
 

@@ -3,6 +3,7 @@ title: InputEvent
 slug: Web/API/InputEvent
 translation_of: Web/API/InputEvent
 ---
+
 {{APIRef("DOM Events")}} {{SeeCompatTable}}
 
 L’interface **`InputEvent`** représente un évènement notifiant la modification d’un contenu éditable.
@@ -44,5 +45,5 @@ Cette interface hérite des méthodes de ses parents, {{domxref("UIEvent")}} et 
 
 ## Voir aussi
 
-- {{ event("beforeinput") }}
-- [l’évènement `input`](/docs/Web/API/InputEvent/input_event)
+- L'évènement [`beforeinput`](/fr/docs/Web/API/HTMLElement/beforeinput_event)
+- L'évènement [`input`](/fr/docs/Web/API/HTMLElement/input_event)

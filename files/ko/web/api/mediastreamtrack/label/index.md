@@ -16,7 +16,9 @@ translation_of: Web/API/MediaStreamTrack/label
 
 ## 구문
 
-    const label = track.label
+```js
+const label = track.label
+```
 
 ### 값
 

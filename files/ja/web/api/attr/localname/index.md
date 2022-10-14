@@ -1,21 +1,15 @@
 ---
 title: Attr.localName
 slug: Web/API/Attr/localName
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Attr.localName
-translation_of: Web/API/Attr/localName
 ---
+
 {{APIRef("DOM")}}
 
 **`localName`** は {{domxref("Attr")}} インターフェイスのプロパティで、属性の*修飾名*の*ローカル部分*、すなわち属性の名前からその前の名前空間を外したものを返します。例えば、修飾名が `xml:lang` であった場合、要素が名前空間に対応していればローカル名は `lang` となります。
 
 ローカル名は、属性の作成時に大文字であっても小文字であっても、常に小文字になります。
 
-> **Note:** HTML は SVG と MathML の要素に対して、固定された一連の名前空間のみに対応しています。これらは `xml` （`xml:lang` 属性）、 `xlink` （`xlink:href`, `xlink:show`, `xlink:target`, `xlink:title` 属性）、`xpath` です。
+> **メモ:** HTML は SVG と MathML の要素に対して、固定された一連の名前空間のみに対応しています。これらは `xml` （`xml:lang` 属性）、 `xlink` （`xlink:href`, `xlink:show`, `xlink:target`, `xlink:title` 属性）、`xpath` です。
 >
 > つまり、 HTML 要素の属性のローカル名は常にその修飾名と等しくなります。コロンは通常の文字として扱われます。 XML では、 SVG や MathML のように、コロンは接頭辞の終わりを表し、それ以前は名前空間となります。ローカル名は、修飾名と異なる場合があります。
 

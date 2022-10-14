@@ -1,12 +1,8 @@
 ---
 title: Constructor (コンストラクター)
 slug: Glossary/Constructor
-tags:
-  - CodingScripting
-  - Glossary
-  - 用語集
-translation_of: Glossary/Constructor
 ---
+
 **コンストラクター**は、インスタンス化された特定のクラス{{glossary("object","オブジェクト")}}に属しています。コンストラクターは、そのオブジェクトを初期化し、オブジェクトの非公開の情報にアクセスできるようにします。コンストラクターの概念は、ほとんどの{{glossary("OOP","オブジェクト指向プログラミング")}}言語にあります。本質的に、{{glossary("JavaScript")}} のコンストラクターは{{glossary("class","クラス")}}のインスタンスで宣言します。
 
 ## 構文
@@ -37,7 +33,7 @@ var defaultReference = new Default();
 
 ### 一般知識
 
-- ウィキペディアの{{Interwiki("wikipedia", "コンストラクタ")}}の記事
+- ウィキペディアの[コンストラクタ](https://ja.wikipedia.org/wiki/コンストラクタ)の記事
 
 ### 技術リファレンス
 

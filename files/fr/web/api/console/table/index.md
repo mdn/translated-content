@@ -10,6 +10,7 @@ tags:
   - débogage
 translation_of: Web/API/Console/table
 ---
+
 {{APIRef("Console API")}}
 
 Affiche des données tabulaires sous la forme d'un tableau.

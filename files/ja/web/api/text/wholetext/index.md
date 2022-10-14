@@ -1,20 +1,15 @@
 ---
 title: Text.wholeText
 slug: Web/API/Text/wholeText
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Text.wholeText
-translation_of: Web/API/Text/wholeText
 ---
+
 {{ apiref("DOM") }}
 
 **`wholeText`** は {{domxref("Text")}} インターフェイスのプロパティで、そのノードに論理的に隣接するすべての {{domxref("Text")}} ノードのすべてのテキストを返すものです。
 テキストは文書中の順序で連結されます。
 これにより、任意のテキストノードを指定し、隣接するすべてのテキストを 1 つの文字列として取得することができます。
 
-> **Note:** これは {{domxref("Node.normalize()")}} を呼び出してそのテキストノードの値を読み取るのに似ていますが、ツリーを変更することはありません。
+> **メモ:** これは {{domxref("Node.normalize()")}} を呼び出してそのテキストノードの値を読み取るのに似ていますが、ツリーを変更することはありません。
 
 ## 値
 

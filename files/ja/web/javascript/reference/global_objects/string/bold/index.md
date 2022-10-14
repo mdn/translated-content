@@ -1,16 +1,8 @@
 ---
 title: String.prototype.bold()
 slug: Web/JavaScript/Reference/Global_Objects/String/bold
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/bold
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`bold()`** メソッドは、文字列を太字で表示させる HTML の {{HTMLElement("b")}} 要素を生成します。

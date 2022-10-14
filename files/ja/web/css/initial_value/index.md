@@ -1,13 +1,8 @@
 ---
 title: 初期値
 slug: Web/CSS/initial_value
-tags:
-  - CSS
-  - Guide
-  - Reference
-spec-urls: https://www.w3.org/TR/CSS22/cascade.html#specified-value
-translation_of: Web/CSS/initial_value
 ---
+
 {{CSSRef}}
 
 **初期値 (initial value)** は [CSS](/ja/docs/Web/CSS) のプロパティの既定値であり、仕様書の定義表に挙げられているものです。初期値の使い方はプロパティが継承されているかどうかで異なります。
@@ -17,7 +12,7 @@ translation_of: Web/CSS/initial_value
 
 {{cssxref("initial")}} キーワードを使用すると、明示的に初期値を指定することができます。
 
-> **Note:** 初期値をブラウザーのスタイルシートで指定された値と混同しないでください。
+> **メモ:** 初期値をブラウザーのスタイルシートで指定された値と混同しないでください。
 
 ## 仕様書
 

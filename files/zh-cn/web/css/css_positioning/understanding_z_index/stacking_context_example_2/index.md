@@ -3,7 +3,8 @@ title: Stacking context example 2
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_2
 ---
-« [CSS](/en/CSS) « [理解 CSS z-index](/en/CSS/Understanding_z-index)
+
+« [CSS](/zh-CN/CSS) « [理解 CSS z-index](/zh-CN/CSS/Understanding_z-index)
 
 ### 层叠上下文示例 2
 
@@ -111,12 +112,12 @@ span.bold { font-weight: bold; }
 
 ### 相关文章
 
-- [Stacking without z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
-- [Stacking and float](/en/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
-- [Adding z-index](/en/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
-- [The stacking context](/en/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
-- [Stacking context example 1](/en/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 3](/en/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
+- [Stacking without z-index](/zh-CN/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
+- [Stacking and float](/zh-CN/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
+- [Adding z-index](/zh-CN/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
+- [The stacking context](/zh-CN/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
+- [Stacking context example 1](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 3](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
 
 ### 原文信息
 

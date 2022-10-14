@@ -2,6 +2,7 @@
 title: Response.url
 slug: Web/API/Response/url
 ---
+
 {{APIRef("Fetch")}}
 
 The **`url`** read-only property of the {{domxref("Response")}} interface contains the URL of the response. The value of the `url` property will be the final URL obtained after any redirects.
@@ -42,10 +43,10 @@ fetch(myRequest).then(function(response) {
 
 ## Browser compatibility
 
-{{Compat("api.Response.url")}}
+{{Compat}}
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

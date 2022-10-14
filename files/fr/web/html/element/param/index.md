@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/param
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<param>`** définit les paramètres qui peuvent être employés dans un élément {{HTMLElement("object")}}.
@@ -86,15 +87,11 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'the-iframe-element.html#the-param-element', '&lt;param&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-param-element', '&lt;param&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'struct/objects.html#h-13.3.2', '&lt;param&gt;')}}                         | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.param")}}
+{{Compat}}
 
 ## Voir aussi
 

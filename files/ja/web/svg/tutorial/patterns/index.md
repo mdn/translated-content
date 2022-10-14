@@ -1,12 +1,8 @@
 ---
 title: パターン
 slug: Web/SVG/Tutorial/Patterns
-tags:
-  - 上級者
-  - SVG
-  - SVG:チュートリアル
-translation_of: Web/SVG/Tutorial/Patterns
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
 
 ## パターン

@@ -1,15 +1,8 @@
 ---
 title: Window.scrollMaxX
 slug: Web/API/Window/scrollMaxX
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Non-standard
-  - Property
-  - Window
-translation_of: Web/API/Window/scrollMaxX
 ---
+
 {{APIRef}} {{Non-standard_header}}
 
 **`Window.scrollMaxX`** は読み取り専用プロパティで、文書が横方向にスクロールできる最大ピクセル数を返します。

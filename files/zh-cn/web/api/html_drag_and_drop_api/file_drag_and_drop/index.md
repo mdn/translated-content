@@ -2,17 +2,18 @@
 title: File drag and drop
 slug: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 HTML 拖放接口使得 web 应用能够在网页中拖放文件。这篇文档介绍了 web 应用如何接受从底层平台的文件管理器拖动一个或多个文件到网页的操作。
 
 拖放的主要步骤是为 {{event("drop")}} 事件定义一个*释放区*(释放文件的目标元素) 和为{{event("dragover")}}事件定义一个事件处理程序。下面描述了这些步骤，包括示例程序片段。完整的源码在[MDN's drag-and-drop repository](https://github.com/mdn/dom-examples/tree/master/drag-and-drop) (欢迎提交 pull requests 和/或 issues).
 
-注意: {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}}定义了两套不同的 API 来支持拖放文件。一个{{domxref("DataTransfer")}}接口和另一个{{domxref("DataTransferItem")}}与{{domxref("DataTransferItemList")}}接口。这个示例介绍了这两种 API 的用法 (没有使用任何 Gecko 专用的接口)。
+注意：{{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}}定义了两套不同的 API 来支持拖放文件。一个{{domxref("DataTransfer")}}接口和另一个{{domxref("DataTransferItem")}}与{{domxref("DataTransferItemList")}}接口。这个示例介绍了这两种 API 的用法 (没有使用任何 Gecko 专用的接口)。
 
 ## 定义拖放区域
 
-触发 {{event("drop")}} 事件的目标元素需要一个{{domxref("GlobalEventHandlers.ondrop","ondrop")}} 事件处理函数 。下面这一段代码以一个 {{HTMLelement("div")}} 元素为例展示了这些工作是如何完成的：
+触发 {{event("drop")}} 事件的目标元素需要一个{{domxref("GlobalEventHandlers.ondrop","ondrop")}} 事件处理函数。下面这一段代码以一个 {{HTMLelement("div")}} 元素为例展示了这些工作是如何完成的：
 
 ```html
 <div id="drop_zone" ondrop="dropHandler(event);">

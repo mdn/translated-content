@@ -19,7 +19,9 @@ Puedes ver los cambios en el estado de red escuchando los eventos `window.ononli
 
 ## Sintaxis
 
-    online = window.navigator.onLine;
+```js
+online = window.navigator.onLine;
+```
 
 ### Valor
 

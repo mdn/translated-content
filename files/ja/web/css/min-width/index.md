@@ -1,21 +1,8 @@
 ---
 title: min-width
 slug: Web/CSS/min-width
-tags:
-  - CSS
-  - CSS プロパティ
-  - 水平
-  - レイアウト
-  - 最小
-  - リファレンス
-  - 寸法
-  - min-width
-  - recipe:css-property
-  - size
-  - width
-browser-compat: css.properties.min-width
-translation_of: Web/CSS/min-width
 ---
+
 {{CSSRef}}
 
 **`min-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最小幅を設定します。これは {{Cssxref("width")}} プロパティの[使用値](/ja/docs/Web/CSS/used_value)が、`min-width` で指定した値を下回ることを防ぎます。

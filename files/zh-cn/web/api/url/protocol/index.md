@@ -2,7 +2,8 @@
 title: URL.protocol
 slug: Web/API/URL/protocol
 ---
-{{ApiRef("URL API")}}{{domxref("URL")}}接口的**`protocol`**是一个包含 URL 协议的{{domxref("USVString")}}值，此值包含协议后的`':'`.
+
+{{ApiRef("URL API")}}{{domxref("URL")}}接口的 **`protocol`** 是一个包含 URL 协议的{{domxref("USVString")}}值，此值包含协议后的`':'`.
 
 {{AvailableInWorkers}}
 
@@ -30,7 +31,7 @@ var result = url.protocol; // Returns:"https:"
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.protocol")}}
+{{Compat}}
 
 ## 其他链接
 

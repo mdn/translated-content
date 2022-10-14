@@ -1,19 +1,8 @@
 ---
 title: HTMLObjectElement.checkValidity()
 slug: Web/API/HTMLObjectElement/checkValidity
-page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - Method
-  - NeedsExample
-  - Reference
-  - checkValidity
-  - checkValidity()
-browser-compat: api.HTMLObjectElement.checkValidity
-translation_of: Web/API/HTMLObjectElement/checkValidity
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`checkValidity()`** は {{domxref("HTMLObjectElement")}} インターフェイスのメソッドで、常に真である論理値を返します。なぜなら、オブジェクトオブジェクトは制約検証の候補になることがないからです。

@@ -2,6 +2,7 @@
 title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 ---
+
 {{JSRef}}
 
 **`Object.getOwnPropertyDescriptors()`** 方法用来获取一个对象的所有自身属性的描述符。
@@ -36,7 +37,7 @@ Object.create(
 
 ### 创建子类
 
-创建子类的典型方法是定义子类，将其原型设置为超类的实例，然后在该实例上定义属性。这么写很不优雅，特别是对于 getters 和 setter 而言。 相反，您可以使用此代码设置原型：
+创建子类的典型方法是定义子类，将其原型设置为超类的实例，然后在该实例上定义属性。这么写很不优雅，特别是对于 getters 和 setter 而言。相反，您可以使用此代码设置原型：
 
 ```js
 function superclass() {}

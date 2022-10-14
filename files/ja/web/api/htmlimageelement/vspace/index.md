@@ -1,27 +1,8 @@
 ---
 title: HTMLImageElement.vspace
 slug: Web/API/HTMLImageElement/vspace
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - 画像
-  - プロパティ
-  - リファレンス
-  - Vertical
-  - bottom
-  - img
-  - margin
-  - space
-  - spacing
-  - top
-  - vspace
-  - 非推奨
-browser-compat: api.HTMLImageElement.vspace
-translation_of: Web/API/HTMLImageElement/vspace
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 **`vspace`** は {{domxref("HTMLImageElement")}} インターフェイスの廃止されたプロパティで、ページをレイアウトする際に {{HTMLElement("img")}} 要素の上下に空ける空間のピクセル数を指定します。
@@ -34,7 +15,7 @@ translation_of: Web/API/HTMLImageElement/vspace
 
 `vspace` に指定された値は {{cssxref("margin-top")}} と {{cssxref("margin-bottom")}} プロパティに対応付けられ、それらのマージンの高さをピクセル単位で指定します。
 
-> **Warning:** このプロパティは廃止されています。代わりに、 CSS の {{cssxref("margin")}} プロパティとその個別指定形を使用して、`<img>` の周囲にマージンを設定してください。
+> **警告:** このプロパティは廃止されています。代わりに、 CSS の {{cssxref("margin")}} プロパティとその個別指定形を使用して、`<img>` の周囲にマージンを設定してください。
 
 ## 仕様書
 

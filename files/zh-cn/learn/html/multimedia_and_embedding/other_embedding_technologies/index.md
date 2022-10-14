@@ -2,6 +2,7 @@
 title: 从对象到 iframe - 其他嵌入技术
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
 到目前为止，你应该掌握了将图像、视频和音频嵌入到网页上的诀窍了。此刻，让我们继续深入学习，来看一些能让你在网页中嵌入各种内容类型的元素：{{htmlelement("iframe")}}, {{htmlelement("embed")}}
@@ -78,7 +79,7 @@ Youtube 如何让我们通过[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)�
 4. 选择嵌入地图选项，这将给你一些`<iframe>`代码 - 复制一下。
 5. 粘贴到下面的*输入*框，看看*输出*结果是什么。
 
-如果你犯了某些错误，你可以点击 _Reset_ 按钮以重置编辑器。如果你确实被卡住了， 按下 _Show solution_ 按钮以借鉴答案。
+如果你犯了某些错误，你可以点击 _Reset_ 按钮以重置编辑器。如果你确实被卡住了，按下 _Show solution_ 按钮以借鉴答案。
 
 ```html hidden
 <!DOCTYPE html> <html lang="zh-CN"> <head> <meta charset="utf-8"> <style> body { font-family: '微软雅黑', Helvetica, Arial, sans-serif; margin: 10px; background: #f5f9fa; } h2 { font-size: 16px; } code, textarea { font-family: Consolas, Menlo, monospace; } .output { min-height: 200px; } .input { min-height: 100px; width: 95%; } .a11y-label { margin: 0; text-align: right; font-size: 0.7rem; width: 98%; } .controls { width: 96%; text-align: right; } </style> </head> <body> <h2>实时输出</h2> <div class="output"></div> <h2>可编辑代码</h2> <p class="a11y-label">按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code> </p> <textarea id="code" class="input"></textarea> <div class="controls"> <button id="btn-reset">重置</button> <button id="btn-solution">显示答案</button> </div> <script> const btnReset = document.getElementById('btn-reset'); const btnSolution = document.getElementById('btn-solution'); const blockOutput = document.querySelector('.output'); const blockInput = document.querySelector('.input'); const original = '<p>改革春风吹满地</p>'; const answer = `<iframe src="https://player.bilibili.com/player.html?aid=19390801&cid=31621681&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> <p>改革春风吹满地</p>`; let userEntry = ""; init(); btnReset.addEventListener('click', init); btnSolution.addEventListener('click', () => { if (btnSolution.textContent === '显示答案') { blockInput.value = blockOutput.innerHTML = answer; btnSolution.textContent = '隐藏答案'; } else { blockInput.value = blockOutput.innerHTML = userEntry; btnSolution.textContent = '显示答案'; } }); blockInput.addEventListener('keydown', (e) => { switch (e.key) { case 'Tab': e.preventDefault(); insertAtCursor('\t'); break; case "Escape": blockInput.blur(); break; } }); blockInput.addEventListener('keyup', () => { userEntry = blockInput.value; blockOutput.innerHTML = blockInput.value; if (btnSolution.textContent === '隐藏答案') { btnSolution.textContent = '显示答案'; } }); function init() { userEntry = blockOutput.innerHTML = blockInput.value = original; btnSolution.textContent = '显示答案'; } function insertAtCursor(text) { const scrollPos = blockInput.scrollTop; const cursorPos = blockInput.selectionStart; const front = blockInput.value.substring(0, cursorPos); const back = blockInput.value.substring( blockInput.selectionEnd, blockInput.value.length); blockInput.value = front + text + back; blockInput.selectionStart = blockInput.selectionEnd = cursorPos + text.length; blockInput.focus(); blockInput.scrollTop = scrollPos; } </script> </body> </html>
@@ -137,9 +138,9 @@ Youtube 如何让我们通过[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)�
 > **备注：** [单击劫持](https://en.wikipedia.org/wiki/Clickjacking)是一种常见的 iframe 攻击，黑客将隐藏的 iframe
 > 嵌入到你的文档中（或将你的文档嵌入到他们自己的恶意网站），并使用它来捕获用户的交互。这是误导用户或窃取敏感数据的常见方式。
 
-一个快速的例子——尝试在浏览器中加载上面的例子——你也可以[在
+一个快速的例子——尝试在浏览器中加载上面的例子——你也可以 [在
 Github 上找到它](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)（[参见源代码](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)）。你将不会看到任何内容，但如果你点击[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)中的*控制台*，你会看到一条消息，告诉你为什么没有显示内容。在
-Firefox 中，你会*被告知：“X-Frame-Options 拒绝加载 https\://developer.mozilla.org/zh-CN/docs/Glossary”*。这是因为构建 MDN
+Firefox 中，你会*被告知：“X-Frame-Options 拒绝加载 `https\://developer.mozilla.org/zh-CN/docs/Glossary`*。这是因为构建 MDN
 的开发人员已经在网站页面的服务器上设置了一个不允许被嵌入到`<iframe>`的设置（请参阅[配置 CSP 指令](#配置_csp_指令)）这是有必要的——整个
 MDN 页面被嵌入在其它页面中没有多大意义，除非你想要将其嵌入到你的网站上并将其声称为自己的内容，或尝试通过单击劫持来窃取数据，这都是非常糟糕的事情。此外，如果每个人都这样做，所有额外的带宽将花费 Mozilla
 很多资金。
@@ -150,9 +151,9 @@ MDN 页面被嵌入在其它页面中没有多大意义，除非你想要将其�
 视频和地图）是有意义的，但如果你只在完全需要时嵌入第三方内容，你可以省去很多麻烦。网络安全的一个很好的经验法则是*“你怎么谨慎都不为过，如果你决定要做这件事，多检查一遍；如果是别人做的，在被证明是安全的之前，都假设这是危险的。”*
 
 除了安全问题，你还应该意识到知识产权问题。无论在线内容还是离线内容，绝大部分内容都是有版权的，甚至是一些你没想到有版权的内容（例如，[Wikimedia
-Commons](https://commons.wikimedia.org/wiki/Main_Page)上的大多数图片）。不要在网页上展示一些不属于你的内容，除非你是所有者或所有者给了你明确的、书面的许可。对于侵犯版权的惩罚是严厉的。再说一次，你再小心也不为过。
+Commons](https://commons.wikimedia.org/wiki/Main_Page) 上的大多数图片）。不要在网页上展示一些不属于你的内容，除非你是所有者或所有者给了你明确的、书面的许可。对于侵犯版权的惩罚是严厉的。再说一次，你再小心也不为过。
 
-如果内容获得许可，你必须遵守许可条款。例如，MDN 上的内容是[在
+如果内容获得许可，你必须遵守许可条款。例如，MDN 上的内容是 [在
 CC-BY-SA 下许可的](/zh-CN/docs/MDN/About#版权和许可)，这意味着，如果你要引用我们的内容，就必须[用适当的方式注明来源](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution)，即使你对内容做了实质性的修改。
 
 #### 使用 HTTPS
@@ -187,8 +188,7 @@ Google Maps 或 Youtube，当你嵌入内容时，`<iframe>`将通过 HTTPS 提�
 文档的安全性。在`<iframe>`的安全性方面，你可以*[将服务器配置为发送适当的`X-Frame-Options`
 标题。](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)*这样做可以防止其他网站在其网页中嵌入你的内容（这将导致[点击](https://en.wikipedia.org/wiki/clickjacking)和一系列其他攻击），正如我们之前看到的那样，MDN 开发人员已经做了这些工作。
 
-> **备注：** 你可以阅读 Frederik Braun 的帖子[在
-> X-Frame-Options 安全性头上](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)来获取有关此主题的更多背景信息。显然，在这篇文章中已经解释得很清楚了。
+> **备注：** 你可以阅读 Frederik Braun 的帖子[在 X-Frame-Options 安全性头上](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)来获取有关此主题的更多背景信息。显然，在这篇文章中已经解释得很清楚了。
 
 ## \<embed> 和 \<object> 元素
 
@@ -247,12 +247,10 @@ PDF 是纸与数据之间重要的阶梯，但它们[在无障碍上有些问题
 - **扩大你对大家的影响力**。每个人都有一个浏览器，但插件越来越少，特别是在移动用户中。由于 Web 在很大程度上不需要依赖插件而运行，所以人们宁愿只是去竞争对手的网站而不是安装插件。
 - **从 Flash 和其他插件附带的[额外的无障碍问题](https://webaim.org/techniques/flash/)中摆脱**。
 - **避免额外的安全隐患**。即使经过无数次补丁[，](http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53) Adobe Flash 也是[非常不安全的](http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53)。2015
-  年，Facebook 的首席安全官 Alex Stamos 甚至[要求 Adobe 停止
-  Flash。](http://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso)
+  年，Facebook 的首席安全官 Alex Stamos 甚至[要求 Adobe 停止  Flash。](http://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso)
 
 那你该怎么办？如果你需要交互性，HTML 和[JavaScript](/zh-CN/docs/Glossary/JavaScript)可以轻松地为你完成工作，而不需要 Java 小程序或过时的 ActiveX /
-BHO 技术。你可以使用[HTML5
-视频](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)来满足媒体需求，矢量图形[SVG](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)，以及复杂图像和动画[画布](/zh-CN/docs/Web/API/Canvas_API/Tutorial)。[彼得·埃尔斯特（Peter Elst）几年前已经提到](https://plus.google.com/+PeterElst/posts/P5t4pFhptvp)，对于工作 Adobe Flash
+BHO 技术。你可以使用 [HTML5 视频](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)来满足媒体需求，矢量图形[SVG](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)，以及复杂图像和动画[画布](/zh-CN/docs/Web/API/Canvas_API/Tutorial)。[彼得·埃尔斯特（Peter Elst）几年前已经提到](https://plus.google.com/+PeterElst/posts/P5t4pFhptvp)，对于工作 Adobe Flash
 极少是正确的工具，除了专门的游戏和商业应用。对于 ActiveX，即使微软的[Edge](/zh-CN/docs/Glossary/Microsoft_Edge)浏览器也不再支持。
 
 ## 总结

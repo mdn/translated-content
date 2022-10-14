@@ -1,14 +1,8 @@
 ---
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
-tags:
-  - Boolean
-  - クラス
-  - JavaScript
-  - リファレンス
-browser-compat: javascript.builtins.Boolean
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
+
 {{JSRef}}
 
 **`Boolean`** オブジェクトは論理値のオブジェクトラッパーです。
@@ -56,7 +50,7 @@ var s = Boolean(myString);      // 初期値は true
 
 `Boolean` プリミティブの代わりに `Boolean` オブジェクトを使用しないでください。
 
-> **Note:** 標準外の [`document.all`](/ja/docs/Web/API/Document#properties) プロパティがこのコンストラクターの引数として使用された場合、結果は `Boolean` オブジェクトで値は `false` となります。このプロパティは古く、標準外で、使用するべきではありません。
+> **メモ:** 標準外の [`document.all`](/ja/docs/Web/API/Document#properties) プロパティがこのコンストラクターの引数として使用された場合、結果は `Boolean` オブジェクトで値は `false` となります。このプロパティは古く、標準外で、使用するべきではありません。
 
 `==` を使用して緩い比較でオブジェクトと boolean プリミティブを比較した場合、実際にはどのように比較が行われるのかを明確に理解することが重要です。以下の例を考えてみてください。
 

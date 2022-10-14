@@ -1,15 +1,8 @@
 ---
 title: AudioBuffer.getChannelData()
 slug: Web/API/AudioBuffer/getChannelData
-tags:
-  - API
-  - AudioBuffer
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-browser-compat: api.AudioBuffer.getChannelData
-translation_of: Web/API/AudioBuffer/getChannelData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`getChannelData()`** は {{ domxref("AudioBuffer") }} インターフェイスのメソッドで、 channel 引数（0 が最初のチャンネル）で定義されたチャンネルに結び付けられた PCM データを {{jsxref("Float32Array")}} で返します。

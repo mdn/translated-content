@@ -1,10 +1,8 @@
 ---
 title: 'ARIA: gridcell ロール'
 slug: Web/Accessibility/ARIA/Roles/Gridcell_role
-tags:
-  - ARIA
-  - HTML
 ---
+
 [グリッドセル (gridcell) ロール](https://www.w3.org/TR/wai-aria-1.1/#gridcell)は、グリッド ([grid](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role)) やツリーグリッド ([treegrid](/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_role)) にセルを作成するために使用します。 これは、情報を表スタイルでグループ化する [HTML の `td` 要素](/ja/docs/Web/HTML/Element/td)の機能を模倣することを意図しています。
 
 ```html
@@ -166,4 +164,4 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 - [gridcell: Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria-1.1/#gridcell)
 - [Gridcell Role - Maxability](http://www.maxability.co.in/wai-aria-overview/gridcell-role/)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

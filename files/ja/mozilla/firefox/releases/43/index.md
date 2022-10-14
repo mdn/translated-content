@@ -1,10 +1,8 @@
 ---
 title: Firefox 43 for developers
 slug: Mozilla/Firefox/Releases/43
-tags:
-  - Firefox
-translation_of: Mozilla/Firefox/Releases/43
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 43 は、米国時間 2015 年 12 月 15 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者、アドオン開発者にとっても有用な主な変更点を挙げています。

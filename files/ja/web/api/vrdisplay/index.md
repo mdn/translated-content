@@ -1,27 +1,14 @@
 ---
 title: VRDisplay
 slug: Web/API/VRDisplay
-page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Experimental
-  - Interface
-  - Media
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-browser-compat: api.VRDisplay
-translation_of: Web/API/VRDisplay
 original_slug: Web/API/VRDevice
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`VRDisplay`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、この API が対応している VR 機器を表します。機器 ID や説明文のような汎用的な情報が含まれており、 VR シーンの表示を開始するためのメソッドや、視線パラメーターやディスプレイの備える機能の取得、その他の重要な機能を含んでいます。
 
-> **Note:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 {{domxref("Navigator.getVRDisplays()")}} を呼び出すことで、すべての接続されている VR 機器の配列が返されます。
 
@@ -85,7 +72,7 @@ if(navigator.getVRDisplays) {
 }
 ```
 
-> **Note:** この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で確認できます。
+> **メモ:** この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で確認できます。
 
 ## 仕様書
 

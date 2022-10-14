@@ -8,7 +8,7 @@ original_slug: Web/API/File/Using_files_from_web_applications
 
 HTML5의 DOM으로 추가된 File API를 사용하여, 이제 웹 컨텐츠가 사용자에게 로컬 파일을 선택한 후 파일의 컨텐츠를 읽도록 요청할 수 있습니다. 이 선택은 HTML {{HTMLElement("input")}} 엘리먼트나 드래그 앤 드랍을 사용하는 것으로도 수행할 수 있습니다.
 
-원하신다면 확장 기능이나 다른 브라우저 크롬 코드에서도 DOM File API를 사용하실 수 있습니다. 하지만, 조심해야할 몇 가지 부가적인 기능들이 있음을 유의하세요. 자세한 내용은 [크롬 코드에서 DOM File API 사용하기](/ko/docs/Extensions/Using_the_DOM_File_API_in_chrome_code "en/Extensions/Using the DOM File API in chrome code") 글을 확인하세요.
+원하신다면 확장 기능이나 다른 브라우저 크롬 코드에서도 DOM File API를 사용하실 수 있습니다. 하지만, 조심해야할 몇 가지 부가적인 기능들이 있음을 유의하세요. 자세한 내용은 [크롬 코드에서 DOM File API 사용하기](/ko/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) 글을 확인하세요.
 
 ## 선택한 파일에 접근하기
 
@@ -336,16 +336,16 @@ function handleFiles(files) {
 
 `handleFiles()`로 전달된 {{DOMxRef("FileList")}} 객체가 `null`인 경우, 블록의 inner HTML을 간단하게 "No files selected!"를 표시하도록 설정합니다. `null`이 아닌 경우, 다음과 같이 파일 리스트를 구축합니다.
 
-1.  새로운 순서가 없는 리스트({{HTMLElement("ul")}}) 엘리먼트가 생성됩니다.
-2.  새로운 리스트 엘리먼트가 {{DOMxRef("Node.appendChild()")}} 메소드 호출에 의해 {{HTMLElement("div")}} 블록으로 삽입됩니다.
-3.  `files`에 의해 나타나는 {{DOMxRef("FileList")}} 내의 각 {{DOMxRef("File")}}에 대해 :
+1. 새로운 순서가 없는 리스트({{HTMLElement("ul")}}) 엘리먼트가 생성됩니다.
+2. 새로운 리스트 엘리먼트가 {{DOMxRef("Node.appendChild()")}} 메소드 호출에 의해 {{HTMLElement("div")}} 블록으로 삽입됩니다.
+3. `files`에 의해 나타나는 {{DOMxRef("FileList")}} 내의 각 {{DOMxRef("File")}}에 대해 :
 
-    1.  새로운 리스트 항목({{HTMLElement("li")}}) 엘리먼트를 생성하고 리스트로 삽입합니다.
-    2.  새로운 이미지({{HTMLElement("img")}}) 엘리먼트를 생성합니다.
-    3.  {{DOMxRef("window.URL.createObjectURL()")}}을 사용하여 이미지의 소스를 파일을 나타내는 새로운 객체 URL로 설정해 blob URL을 생성합니다.
-    4.  이미지의 height를 60 픽셀로 설정합니다.
-    5.  이미지가 로드된 이후에 더 이상 필요하지 않게되므로 객체 URL을 해제하기 위한 이미지의 로드 이벤트 핸들러를 설정합니다. {{DOMxRef("window.URL.revokeObjectURL()")}} 메소드를 호출하고 `img.src`로 지정한 객체 URL 문자열을 전달하면됩니다.
-    6.  리스트로 새로운 리스트 항목을 추가합니다.
+    1. 새로운 리스트 항목({{HTMLElement("li")}}) 엘리먼트를 생성하고 리스트로 삽입합니다.
+    2. 새로운 이미지({{HTMLElement("img")}}) 엘리먼트를 생성합니다.
+    3. {{DOMxRef("window.URL.createObjectURL()")}}을 사용하여 이미지의 소스를 파일을 나타내는 새로운 객체 URL로 설정해 blob URL을 생성합니다.
+    4. 이미지의 height를 60 픽셀로 설정합니다.
+    5. 이미지가 로드된 이후에 더 이상 필요하지 않게되므로 객체 URL을 해제하기 위한 이미지의 로드 이벤트 핸들러를 설정합니다. {{DOMxRef("window.URL.revokeObjectURL()")}} 메소드를 호출하고 `img.src`로 지정한 객체 URL 문자열을 전달하면됩니다.
+    6. 리스트로 새로운 리스트 항목을 추가합니다.
 
 다음은 위 코드의 라이브 데모입니다.
 
@@ -408,12 +408,12 @@ The `FileUpload()` function shown above creates a throbber, which is used to dis
 
 Before actually transferring the data, several preparatory steps are taken:
 
-1.  The `XMLHttpRequest`'s upload `progress` listener is set to update the throbber with new percentage information so that as the upload progresses the throbber will be updated based on the latest information.
-2.  The `XMLHttpRequest`'s upload `load` event handler is set to update the throbber progress information to 100% to ensure the progress indicator actually reaches 100% (in case of granularity quirks during the process). It then removes the throbber since it's no longer needed. This causes the throbber to disappear once the upload is complete.
-3.  The request to upload the image file is opened by calling `XMLHttpRequest`'s `open()` method to start generating a POST request.
-4.  The MIME type for the upload is set by calling the `XMLHttpRequest` function `overrideMimeType()`. In this case, we're using a generic MIME type; you may or may not need to set the MIME type at all depending on your use case.
-5.  The `FileReader` object is used to convert the file to a binary string.
-6.  Finally, when the content is loaded the `XMLHttpRequest` function `send()` is called to upload the file's content.
+1. The `XMLHttpRequest`'s upload `progress` listener is set to update the throbber with new percentage information so that as the upload progresses the throbber will be updated based on the latest information.
+2. The `XMLHttpRequest`'s upload `load` event handler is set to update the throbber progress information to 100% to ensure the progress indicator actually reaches 100% (in case of granularity quirks during the process). It then removes the throbber since it's no longer needed. This causes the throbber to disappear once the upload is complete.
+3. The request to upload the image file is opened by calling `XMLHttpRequest`'s `open()` method to start generating a POST request.
+4. The MIME type for the upload is set by calling the `XMLHttpRequest` function `overrideMimeType()`. In this case, we're using a generic MIME type; you may or may not need to set the MIME type at all depending on your use case.
+5. The `FileReader` object is used to convert the file to a binary string.
+6. Finally, when the content is loaded the `XMLHttpRequest` function `send()` is called to upload the file's content.
 
 > **참고:** The non-standard `sendAsBinary` method which was previously used in the example above is considered deprecated as of Gecko 31 {{geckoRelease(31)}}; use the standard `send(Blob data)` method instead.
 
@@ -517,6 +517,6 @@ window.URL.revokeObjectURL(obj_url);
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileList")}}
 - {{DOMxRef("FileReader")}}
-- [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest "En/Using XMLHttpRequest")
-- [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code "en/Extensions/Using the DOM File API in chrome code")
+- [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code)
 - {{DOMxRef("XMLHttpRequest")}}

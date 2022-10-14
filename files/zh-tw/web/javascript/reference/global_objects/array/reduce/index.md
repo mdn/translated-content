@@ -2,6 +2,7 @@
 title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ---
+
 {{JSRef}}
 
 **`reduce()`** 方法將一個累加器及陣列中每項元素（由左至右）傳入回呼函式，將陣列化為單一值。
@@ -346,7 +347,7 @@ if (!Array.prototype.reduce) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.reduce")}}
+{{Compat}}
 
 ## 參見
 

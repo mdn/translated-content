@@ -2,6 +2,7 @@
 title: JavaScript オブジェクトの基本
 slug: Learn/JavaScript/Objects/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 この記事では、基本的な JavaScript オブジェクトの構文を学び、このコースで以前に見た一部の JavaScript の機能を復習し、すでに提供された多くの機能がオブジェクトであるという事実を再確認します。
@@ -60,7 +61,7 @@ person.greeting()
 
 オブジェクトから、データと機能を追加することができました。これで簡単な書き方で情報が引き出せます。
 
-> **Note:** もし動かないようなら、完成版のソースコードと見比べてみてください (完成版: [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) さらに[ライブ版もあります](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)) 。ライブ版は空白の画面ですが、それで OK です。また開発ツールを開いて上記のコマンドを入力してオブジェクトの構造を見てみます。
+> **メモ:** もし動かないようなら、完成版のソースコードと見比べてみてください (完成版: [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) さらに[ライブ版もあります](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)) 。ライブ版は空白の画面ですが、それで OK です。また開発ツールを開いて上記のコマンドを入力してオブジェクトの構造を見てみます。
 
 さて、何が起きているのでしょうか。オブジェクトには複数のメンバーがあり、それぞれに名前がついていて(例えば上の例では `name` や `age`)、それぞれに値 (`['Bob', 'Smith']` や `32`) があります。それぞれの名前と値の組はカンマ ( , ) で区切られていて、名前と値はコロン ( : ) で区切られています。常にそのように書きます。
 
@@ -260,7 +261,7 @@ const myVideo = document.querySelector('video');
 
 [`Document`](/ja/docs/Web/API/Document) クラスのインスタンスで使用可能なメソッドを使っています。各ウェブページが読み込まれると、`document` と呼ばれる `Document` のインスタンスが作られ、それはウェブページ全体の構造、コンテンツ、その URL 等その他の機能を表現します。もう一度述べますが、これはいくつかの共通なメソッドやプロパティを使用できることを意味します。
 
-今まで使用してきた、`Array や `[`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math) 等の、他の多くの組み込みのオブジェクトや API でも全く同じです。
+今まで使用してきた、`Array` や [`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math) 等の、他の多くの組み込みのオブジェクトや API でも全く同じです。
 
 組み込みのオブジェクトと API では常に自動でオブジェクトのインスタンスが生成される訳ではないことを注意する必要があります。例えば、モダンなブラウザーがシステム通知を発行することを許可する [Notifications API](/ja/docs/Web/API/Notifications_API) では、発行したい各通知のためにコンストラクターを使用した新しいオブジェクトを生成する必要があります。JavaScript コンソールに次を入力してみてください。
 
@@ -270,7 +271,7 @@ const myNotification = new Notification('Hello!');
 
 コンストラクターは後の記事でもう一度見ることができます。
 
-> **Note:** オブジェクトのやり取りを**メッセージの受け渡し**と考えると便利です。オブジェクトが他のオブジェクトにある処理の実行を要求したとき、そのオブジェクトはメソッドを通じて他のオブジェクトにメッセージを送信して、そして応答を待ちます。ご存知の通り、応答とは返り値のことです。
+> **メモ:** オブジェクトのやり取りを**メッセージの受け渡し**と考えると便利です。オブジェクトが他のオブジェクトにある処理の実行を要求したとき、そのオブジェクトはメソッドを通じて他のオブジェクトにメッセージを送信して、そして応答を待ちます。ご存知の通り、応答とは返り値のことです。
 
 ## スキルをテストしましょう!
 

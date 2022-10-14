@@ -11,7 +11,9 @@ translation_of: Web/API/RTCDataChannelEvent/RTCDataChannelEvent
 
 ## Syntax
 
-     var event = new RTCDataChannelEvent(type, RtcDataChannelEventInit);
+```js
+var event = new RTCDataChannelEvent(type, RtcDataChannelEventInit);
+```
 
 ### 패러미터
 

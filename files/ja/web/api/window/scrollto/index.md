@@ -1,14 +1,8 @@
 ---
 title: window.scrollTo
 slug: Web/API/Window/scrollTo
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - NeedsMarkupWork
-  - Reference
-translation_of: Web/API/Window/scrollTo
 ---
+
 {{APIRef}}
 
 **`Window.scrollTo()`** は文書内の特定の組み合わせの座標までスクロールします。

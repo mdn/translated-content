@@ -1,8 +1,8 @@
 ---
 title: User Timing API
 slug: Web/API/User_Timing_API
-translation_of: Web/API/User_Timing_API
 ---
+
 {{DefaultAPISidebar("User Timing API")}}
 
 **`User Timing`** インターフェイスを使用すると、開発者はブラウザのパフォーマンスタイムラインの一部であるアプリケーション固有の {{domxref("DOMHighResTimeStamp","timestamps")}} を作成できます。ユーザー定義のタイミングイベントタイプには 2 種類あります。"`mark`" {{domxref("PerformanceEntry.entryType","イベントタイプ")}} と "`measure`" {{domxref("PerformanceEntry.entryType","イベントタイプ")}}です。

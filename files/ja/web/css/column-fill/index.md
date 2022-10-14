@@ -1,15 +1,8 @@
 ---
 title: column-fill
 slug: Web/CSS/column-fill
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.column-fill
-translation_of: Web/CSS/column-fill
 ---
+
 {{CSSRef}}
 
 **`column-fill`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで要素の内容物が複数の段に分割されるとき、どのようにバランスを取るのかを制御します。
@@ -97,7 +90,7 @@ p.fill-balance {
 
 {{Compat}}
 
-> **Warning:** 仕様上の未解決の問題により、 `column-fill` にはブラウザ－間の相互運用性の問題やバグがあることに注意してください。
+> **警告:** 仕様上の未解決の問題により、 `column-fill` にはブラウザ－間の相互運用性の問題やバグがあることに注意してください。
 >
 > 特に、 `column-fill: auto` を使用して連続的に段を埋める場合、 Chrome は、段組みコンテナーにブロック方向の寸法 (例: 横書きモードならば高さ) がある場合にのみこの値を参照します。 Firefox は常にこのプロパティを参照するため、寸法がない場合は最初の段をすべての内容物で埋めます。
 

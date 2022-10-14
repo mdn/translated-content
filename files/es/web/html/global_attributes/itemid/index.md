@@ -86,4 +86,3 @@ Este ejemplo utiliza atributos de microdatos para representar los siguientes dat
   - [`itemref`](/es/docs/Web/HTML/Global_attributes/itemref)
   - [`itemscope`](/es/docs/Web/HTML/Global_attributes/itemscope)
   - [`itemtype`](/es/docs/Web/HTML/Global_attributes/itemtype)
-  

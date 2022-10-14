@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: ''x'' is not iterable'
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
-tags:
-  - Error
-  - JavaScript
-  - Reference
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/is_not_iterable
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "is not iterable" は、 [for…of](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) の右辺として与えられた値や、 {{jsxref("Promise.all")}} または {{jsxref("TypedArray.from")}} のような関数の引数として与えられた値が[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)ではなかった場合に発生します。

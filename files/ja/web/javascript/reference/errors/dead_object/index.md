@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: can''t access dead object'
 slug: Web/JavaScript/Reference/Errors/Dead_object
-tags:
-  - Addons
-  - Error
-  - Errors
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Errors/Dead_object
 ---
+
 {{JSSidebar("Errors")}}
 
 JavaScript の例外 "can't access dead object" は、メモリ使用量の改善とメモリリークの防止のために、 Firefox がアドオンに対して DOM オブジェクトへの強い参照を保持することを許可しなかったときに発生します。

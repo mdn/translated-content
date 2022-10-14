@@ -1,22 +1,11 @@
 ---
 title: Window.find()
 slug: Web/API/Window/find
-tags:
-  - API
-  - HTML DOM
-  - メソッド
-  - NeedsCompatTable
-  - NeedsContent
-  - 標準外
-  - リファレンス
-  - Window
-  - find
-browser-compat: api.Window.find
-translation_of: Web/API/Window/find
 ---
+
 {{ApiRef}}{{Non-standard_Header}}
 
-> **Note:** `Window.find()` の対応は、 Gecko の将来のバージョンで変更される可能性があります。 {{Bug("672395")}} を参照してください。
+> **メモ:** `Window.find()` の対応は、 Gecko の将来のバージョンで変更される可能性があります。 {{Bug("672395")}} を参照してください。
 
 **`Window.find()`** メソッドは、ウィンドウ内の文字列を順次検索します。
 

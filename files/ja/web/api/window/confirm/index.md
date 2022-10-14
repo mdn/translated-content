@@ -1,13 +1,8 @@
 ---
 title: window.confirm
 slug: Web/API/Window/confirm
-tags:
-  - DOM
-  - DOM_0
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/Window/confirm
 ---
+
 {{ApiRef("Window")}}
 
 **`Window.confirm()`** メソッドは、メッセージと、OK, キャンセルの 2 つのボタンを持つモーダルダイアログを表示します。

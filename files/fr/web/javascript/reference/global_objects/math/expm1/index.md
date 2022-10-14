@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/expm1
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/expm1
 ---
+
 {{JSRef}}
 
 La fonction **`Math.expm1()`** renvoie `e^x` - 1, avec `x` l'argument donné et {{jsxref("Objets_globaux/Math/E","e")}} la base du logarithme nepérien.
@@ -58,14 +59,11 @@ Math.expm1 = Math.expm1 || function(x) {
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-math.expm1', 'Math.expm1')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.expm1")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -3,6 +3,7 @@ title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
 translation_of: Web/API/DOMHighResTimeStamp
 ---
+
 {{APIRef("High Resolution Time")}}
 
 Le type **`DOMHighResTimeStamp`** est un `double` et est utilisé pour stocker une valeur temporelle. La valeur peut représenter un point dans le temps ou la différence entre deux points dans le temps.

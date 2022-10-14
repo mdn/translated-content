@@ -2,9 +2,10 @@
 title: border-bottom-width
 slug: Web/CSS/border-bottom-width
 ---
+
 {{CSSRef}}
 
-[CSS](/en/CSS) 属性 **`border-bottom-width`** 设置一个元素的底部边框宽度。
+[CSS](/zh-CN/CSS) 属性 **`border-bottom-width`** 设置一个元素的底部边框宽度。
 
 ```css
 /* Keyword values */
@@ -31,7 +32,7 @@ border-bottom-width: unset;
 
 - <`br-width>`
 
-  - : 定义边框宽度，取值为非负的宽度值{{cssxref("&lt;length&gt;")}}或关键字。 如果是关键字的话，其取值必须是以下之一：
+  - : 定义边框宽度，取值为非负的宽度值{{cssxref("&lt;length&gt;")}}或关键字。如果是关键字的话，其取值必须是以下之一：
 
     | `thin`   |     | 细边框   |
     | -------- | --- | -------- |

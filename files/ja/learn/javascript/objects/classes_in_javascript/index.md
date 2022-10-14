@@ -3,6 +3,7 @@ title: JavaScript での継承
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 original_slug: Learn/JavaScript/Objects/Inheritance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 OOJS のぞっとするような細部はほとんど説明されたので、ここでは”親”クラスからの機能を継承する”子供”のオブジェクトクラス (コンストラクタ) の生成方法について解説します。さらに、いつ、どこで OOJS を使うかについてのアドバイスを提示し、最新の ECMAScript の構文でクラスがどのように扱われるかを見ていきます。
@@ -41,12 +42,12 @@ Person.prototype.greeting = function() {
 };
 ```
 
-> **Note:** ソースコードに、`bio()` と `farewell()` が定義されています。後ほどこれらのメソッドがどのようにほかのコンストラクタで継承されるのかを確認します。
+> **メモ:** ソースコードに、`bio()` と `farewell()` が定義されています。後ほどこれらのメソッドがどのようにほかのコンストラクタで継承されるのかを確認します。
 
 `Teacher` クラスを作成したい場合を考えましょう。これは最初のオブジェクト指向の特徴にて述べたもののようなクラスで、`Person` からすべてのメンバーを継承しますが、次のものも内包しています。
 
-1.  新しいプロパティの `subject` — これはその先生の教える科目を格納します。
-2.  上書きされた `greeting()` メソッド、標準の `greeting()` メソッドよりわずかに固く感じられる — 学校で生徒に語りかける先生により相応しい。
+1. 新しいプロパティの `subject` — これはその先生の教える科目を格納します。
+2. 上書きされた `greeting()` メソッド、標準の `greeting()` メソッドよりわずかに固く感じられる — 学校で生徒に語りかける先生により相応しい。
 
 ## Teacher() コンストラクタの機能を定義しよう
 
@@ -111,7 +112,7 @@ function BlueGlassBrick() {
 
 今まではすべて順調でしたが、1 点問題があります。新しいコンストラクタを定義して、その中に 1 つの `prototype` プロパティを持たせ、これはデフォルトでただ自身のコンストラクタ関数への参照を保持しています。Person のコンストラクタの `prototype` プロパティへのメソッド群は持っていません。このことを見てみたいのならば `Object.getOwnPropertyNames(Teacher.prototype)` をテキスト入力フィールドや JavaScript コンソールへ入力を試してみてください。そして再度入力する時には、`Teacher` を `Person` で置き換えてみてください。新しいコンストラクタもそれらのメソッドを継承していません。このことを確認するために、`Person.prototype.greeting` と `Teacher.prototype.greeting` の出力結果を比べてみてください。`Person()` のプロトタイプに定義されたメソッドを継承するために `Teacher()` を生成する必要があります。ではどのようにすればよいのでしょうか。
 
-1.  前回追加した部分の下に以下の行を追加してみましょう:
+1. 前回追加した部分の下に以下の行を追加してみましょう:
 
     ```js
     Teacher.prototype = Object.create(Person.prototype);
@@ -119,9 +120,9 @@ function BlueGlassBrick() {
 
     ここで我々に馴染み深い [`create()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create) に再度助けてもらいましょう。この場合に新しいオブジェクトを作ってそれを `Teacher.prototype` の値とするのに使います。新しいオブジェクトは `Person.prototype` を自身のプロトタイプとして保持し、それがゆえに(必要となる時には) `Person.prototype` 上で利用できるすべてのメソッドを継承します。
 
-2.  先に進む前にもう一つやることがあります。
-    最後の行を追加した後、` Teacher.``prototype ` の `constructor` プロパティは `Person()` と同じになりました。なぜなら、`Person.prototype` からプロパティを継承するオブジェクトを参照するように `Teacher.prototype` を設定しただけだからです。コードを保存し、ブラウザーでページを読み込み、コンソールに `Teacher.prototype.constructor` と入力して確認してみてください。
-3.  これは問題になるかもしれません、なので以下の内容をすぐに設定しましょう。 ソースコードにまた戻って最後に以下の行を追加しましょう。
+2. 先に進む前にもう一つやることがあります。
+    最後の行を追加した後、`Teacher.prototype` の `constructor` プロパティは `Person()` と同じになりました。なぜなら、`Person.prototype` からプロパティを継承するオブジェクトを参照するように `Teacher.prototype` を設定しただけだからです。コードを保存し、ブラウザーでページを読み込み、コンソールに `Teacher.prototype.constructor` と入力して確認してみてください。
+3. これは問題になるかもしれません、なので以下の内容をすぐに設定しましょう。 ソースコードにまた戻って最後に以下の行を追加しましょう。
 
     ```js
     Object.defineProperty(Teacher.prototype, 'constructor', {
@@ -130,7 +131,7 @@ function BlueGlassBrick() {
         writable: true });
     ```
 
-4.  ソースコードを保存およびページの再読み込みを行って、 `Teacher.prototype.constructor` と入力したならば `Teacher()` と返すでしょう、希望した通りに `Person()` から継承することができました！
+4. ソースコードを保存およびページの再読み込みを行って、 `Teacher.prototype.constructor` と入力したならば `Teacher()` と返すでしょう、希望した通りに `Person()` から継承することができました！
 
 ## Teacher() に greeting() ファンクションを付け加える
 
@@ -177,7 +178,7 @@ teacher1.farewell();
 
 これらはすべて正常に動作するはずです。1, 2, 3, 6 行目のクエリは、ジェネリックな `Person()` コンストラクタ (クラス) から継承されたメンバにアクセスします。4 行目のクエリは、より特殊な `Teacher()` コンストラクタ (クラス) でのみ利用可能なメンバにアクセスしています。5 行目のクエリは `Person()` から継承したメンバにアクセスしていますが、`Teacher()` には同じ名前の独自のメンバがあるため、そのメンバにアクセスしています。
 
-> **Note:** もしここまでの例がうまく動作しないなら、あなたのコードと[完成版](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html)([ライブ版](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)も参照)を比較してみてください。
+> **メモ:** もしここまでの例がうまく動作しないなら、あなたのコードと[完成版](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html)([ライブ版](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)も参照)を比較してみてください。
 
 ここで述べている手法は JavaScript でクラスを継承する唯一の方法ではなく、問題なく動作し、JavaScript でのどのように実装するかの良いアイデアを提示しています。
 
@@ -189,16 +190,16 @@ teacher1.farewell();
 
 [OOP 理論のセクション](/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters)では、概念として `Student` クラスも取り上げました。このクラスは `Person` のすべての機能を継承しており、また `Person` とは異なる `Teacher` の greeting よりもはるかにくだけた `greeting()` メソッドを持っています。このセクションで生徒の挨拶がどのように見えるかを見て、`Person()` のすべての機能を継承し、異なる `greeting()` 関数を実装した独自の `Student()` コンストラクタを実装してみてください。
 
-> **Note:** もしここまでの例がうまく動作しないなら、あなたのコードと[完成版](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html)([動作するライブ版](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)も参照)を比較してみてください。
+> **メモ:** もしここまでの例がうまく動作しないなら、あなたのコードと[完成版](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html)([動作するライブ版](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)も参照)を比較してみてください。
 
 ## Object メンバーの概要
 
 要約すると、気になるプロパティ/メソッドは 4 種類あります。
 
-1.  コンストラクタ関数の内部で定義され、オブジェクトインスタンスに与えられるもの。独自のカスタムコードでは、コンストラクタの内部で `this.x = x` 型の行を使用して定義されたメンバです。組み込みのブラウザーコードでは、オブジェクトインスタンス (通常は `new` キーワードを使用してコンストラクタを呼び出すことで作成されます。例: `let myInstance = new myConstructor()`) のみが利用可能なメンバです
-2.  コンストラクタ自身で直接定義されたもので、コンストラクタ上でのみ利用可能なもの。これらは一般的に組み込みのブラウザーオブジェクトでのみ利用可能であり、インスタンスではなくコンストラクタに直接連結されていることで認識されます。たとえば [`Object.keys()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) などです。これらは**静的プロパティ/メソッド**としても知られています
-3.  コンストラクタのプロトタイプに定義されているもので、すべてのインスタンスに継承され、オブジェクトクラスを継承しているもの。これらには、コンストラクタの `prototype` プロパティに定義されている任意のメンバ (例: `myConstructor.prototype.x()`) が含まれます
-4.  これらは、上で見たようにコンストラクタがインスタンス化されたときに作成されるオブジェクト (例えば `let teacher1 = new Teacher('Chris');` の後に `teacher1.name`)、またはオブジェクトリテラル (`let teacher1 = { name : 'Chris' }` の後に `teacher1.name`) のいずれかであることができます
+1. コンストラクタ関数の内部で定義され、オブジェクトインスタンスに与えられるもの。独自のカスタムコードでは、コンストラクタの内部で `this.x = x` 型の行を使用して定義されたメンバです。組み込みのブラウザーコードでは、オブジェクトインスタンス (通常は `new` キーワードを使用してコンストラクタを呼び出すことで作成されます。例: `let myInstance = new myConstructor()`) のみが利用可能なメンバです
+2. コンストラクタ自身で直接定義されたもので、コンストラクタ上でのみ利用可能なもの。これらは一般的に組み込みのブラウザーオブジェクトでのみ利用可能であり、インスタンスではなくコンストラクタに直接連結されていることで認識されます。たとえば [`Object.keys()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) などです。これらは**静的プロパティ/メソッド**としても知られています
+3. コンストラクタのプロトタイプに定義されているもので、すべてのインスタンスに継承され、オブジェクトクラスを継承しているもの。これらには、コンストラクタの `prototype` プロパティに定義されている任意のメンバ (例: `myConstructor.prototype.x()`) が含まれます
+4. これらは、上で見たようにコンストラクタがインスタンス化されたときに作成されるオブジェクト (例えば `let teacher1 = new Teacher('Chris');` の後に `teacher1.name`)、またはオブジェクトリテラル (`let teacher1 = { name : 'Chris' }` の後に `teacher1.name`) のいずれかであることができます
 
 もしどれがどれを指すかを区別できないのであれば、まだ気にしないでください — あなたはまだ学習中で、実践を通じて精通することでしょう。
 
@@ -206,7 +207,7 @@ teacher1.farewell();
 
 ECMAScript 2015 では、C++ や Java のクラスに似た、より簡単で洗練された構文を使用して再利用可能なクラスを記述する方法として、JavaScript に[クラス構文](/ja/docs/Web/JavaScript/Reference/Classes)を導入しています。このセクションでは、Person と Teacher の例をプロトタイプの継承からクラスに変更して、どのようにして行うかを示します。
 
-> **Note:** この近代的なクラスの作成方法は現在のすべてのブラウザーでサポートされていますが、この構文をサポートしていないブラウザー (特に Internet Explorer) をサポートする必要があるプロジェクトで作業する場合に備えて、基本的なプロトタイプの継承の仕組みについて知っておくことはまだ価値があります。
+> **メモ:** この近代的なクラスの作成方法は現在のすべてのブラウザーでサポートされていますが、この構文をサポートしていないブラウザー (特に Internet Explorer) をサポートする必要があるプロジェクトで作業する場合に備えて、基本的なプロトタイプの継承の仕組みについて知っておくことはまだ価値があります。
 
 Person の例を class-style で書き直したバージョンを見てみましょう：
 
@@ -249,7 +250,7 @@ leia.farewell();
 // Leia has left the building. Bye for now
 ```
 
-> **Note:** 内部ではクラスはプロトタイプの継承モデルに変換されています。これはシンタックスシュガーです。しかし、私たちはあなたがそれを書く方が簡単だと考えるだろうと確信しています。
+> **メモ:** 内部ではクラスはプロトタイプの継承モデルに変換されています。これはシンタックスシュガーです。しかし、私たちはあなたがそれを書く方が簡単だと考えるだろうと確信しています。
 
 ### クラス構文による継承
 
@@ -295,7 +296,7 @@ snape.subject; // Dark arts
 
 Teachers と同じように、基本クラスを変更せずに `Person` をさらに特化したものにするために、他のサブクラスを作成できます。
 
-> **Note:** この例は、GitHub で [es2015-class-inheritance.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html) として見つけることができます([これも実際に参照してください](https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-class-inheritance.html))。
+> **メモ:** この例は、GitHub で [es2015-class-inheritance.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html) として見つけることができます([これも実際に参照してください](https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-class-inheritance.html))。
 
 ## Getter と Setter
 
@@ -346,9 +347,9 @@ snape.subject = "Balloon animals" // Sets _subject to "Balloon animals"
 console.log(snape.subject) // Returns "Balloon animals"
 ```
 
-> **Note:** この例は、GitHub で [es2015-class-inheritance.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html) として見つけることができます([これも実際に参照してください](https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-class-inheritance.html))。
+> **メモ:** この例は、GitHub で [es2015-class-inheritance.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html) として見つけることができます([これも実際に参照してください](https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-class-inheritance.html))。
 
-> **Note:** ゲッターやセッターは、プロパティが要求されたり設定されたりするたびにコードを実行したい場合など、非常に便利な場合があります。しかし、単純なケースでは、ゲッターやセッターを使用しないプレーンなプロパティアクセスで十分です。
+> **メモ:** ゲッターやセッターは、プロパティが要求されたり設定されたりするたびにコードを実行したい場合など、非常に便利な場合があります。しかし、単純なケースでは、ゲッターやセッターを使用しないプレーンなプロパティアクセスで十分です。
 
 ## JavaScript でいつ継承を使用するのでしょうか？
 
@@ -358,7 +359,7 @@ console.log(snape.subject) // Returns "Balloon animals"
 
 コードに継承を使用していることに関して、特に開始時には、そして小さなプロジェクトでは多分頻繁には使っていないでしょう。不要にも関わらず、継承のためだけにオブジェクトおよび継承を使用するのは時間の浪費です。しかしコードの母体が大きくなればなるほど、継承についての必要性が目に付きやすくなってきます。同じような機能を持ついくつものオブジェクトを作成していることに気付いた場合は、共有機能を持つ汎化オブジェクトタイプを作成し、特化オブジェクトタイプでそれらの機能を継承させるのがお手軽であり、便利です。
 
-> **Note:** プロトタイプチェーンなどを使って JavaScript が動作する方法のために、オブジェクト間での機能の共有をしばしば **移譲** と呼ぶ事があります。特化オブジェクトは汎化オブジェクトタイプから機能的に移譲されています。
+> **メモ:** プロトタイプチェーンなどを使って JavaScript が動作する方法のために、オブジェクト間での機能の共有をしばしば **移譲** と呼ぶ事があります。特化オブジェクトは汎化オブジェクトタイプから機能的に移譲されています。
 
 継承を使用している時、継承をやたら多いレベルに行わないように、メソッドとプロパティをどこに定義したかを注意深く追跡し続けるようにアドバイスされるでしょう。組み込みブラウザーのオブジェクトのプロトタイプを一時的に変更するコードを書き始めることは可能ですが、実際に良い理由がないのであれば、そうすべきではありません。過剰な継承は終わりない混乱や、そんなコードをデバッグする時は終わりない痛みに繋がりかねません。
 
@@ -366,7 +367,7 @@ console.log(snape.subject) // Returns "Balloon animals"
 
 ## プロトタイプチェーンを拡張するための代替案
 
-JavaScript では、上で示したものとは別に、オブジェクトのプロトタイプを拡張する方法がいくつかあります。その他の方法についての詳細は、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#Different_ways_to_create_objects_and_the_resulting_prototype_chain)の記事を参照してください。
+JavaScript では、上で示したものとは別に、オブジェクトのプロトタイプを拡張する方法がいくつかあります。その他の方法についての詳細は、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#プロトタイプチェーンを作成・変更する様々な方法)の記事を参照してください。
 
 ## あなたのスキルをテストしてみましょう!
 

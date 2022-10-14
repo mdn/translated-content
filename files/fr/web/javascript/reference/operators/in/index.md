@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/in
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_in
 ---
+
 {{jsSidebar("Operators")}}
 
 L'**opérateur `in`** renvoie `true` si une propriété donnée appartient à l'objet donné (directement ou via sa chaîne de prototype).
@@ -99,16 +100,11 @@ L'opérateur `in` renvoie `true` pour les propriétés qui appartiennent à la c
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-relational-operators', 'Relational Operators')}}     | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES2015', '#sec-relational-operators', 'Opérateurs relationnels')}} | {{Spec2('ES2015')}}     |                                                       |
-| {{SpecName('ES5.1', '#sec-11.8.7', 'Opérateur in')}}                                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES3', '#sec-11.8.7', 'Opérateurs in')}}                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.4. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.in")}}
+{{Compat}}
 
 ## Voir aussi
 

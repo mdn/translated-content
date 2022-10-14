@@ -2,6 +2,7 @@
 title: Window.menubar
 slug: Web/API/Window/menubar
 ---
+
 {{ APIRef() }}
 
 ## 概要
@@ -38,4 +39,4 @@ objRef = window.menubar
 
 ## 相关链接：
 
-[window.locationbar](/en/DOM/window.locationbar), [window.personalbar](/en/DOM/window.personalbar), [window.scrollbars](/en/DOM/window.scrollbars), [window.statusbar](/en/DOM/window.statusbar), [window.toolbar](/en/DOM/window.toolbar)
+[window.locationbar](/zh-CN/DOM/window.locationbar), [window.personalbar](/zh-CN/DOM/window.personalbar), [window.scrollbars](/zh-CN/DOM/window.scrollbars), [window.statusbar](/zh-CN/DOM/window.statusbar), [window.toolbar](/zh-CN/DOM/window.toolbar)

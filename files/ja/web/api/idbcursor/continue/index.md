@@ -1,17 +1,8 @@
 ---
 title: IDBCursor.continue()
 slug: Web/API/IDBCursor/continue
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Reference
-  - continue
-  - ストレージ
-  - メソッド
-translation_of: Web/API/IDBCursor/continue
 ---
+
 {{APIRef("IndexedDB")}}
 
 **`continue()`** は {{domxref("IDBCursor")}} インターフェースのメソッドで、カーソルを現在の方向に次の位置、任意のキーパラメーターに一致するキーを持つアイテムまで進めます。キーを指定しない場合、カーソルはその方向に基づいて、すぐ隣の位置へ進みます。
@@ -73,7 +64,7 @@ cursor.continue(key);
 
 ## 例
 
-この単純で部分的な実例ではトランザクションを作り、オブジェクトストアを取得した後、オブジェクトストア内の全ての反復処理するためカーソルを使用しています。カーソルはキーに基づいてデータを選択するには必要ありません。その全てを捕らえることができます。また、それぞれのループ内での繰り返しでカーソルオブジェクトを用い、 `cursor.value.foo` とすることで、現在のレコードからカーソルの下のデータを取得できることには注目です。完全な例については [IDBCursor の例](https://github.com/mdn/indexeddb-examples/tree/master/idbcursor) ([ライブデモを見る](https://mdn.github.io/indexeddb-examples/idbcursor/)) を参照してください。
+この単純で部分的な実例ではトランザクションを作り、オブジェクトストアを取得した後、オブジェクトストア内の全ての反復処理するためカーソルを使用しています。カーソルはキーに基づいてデータを選択するには必要ありません。その全てを捕らえることができます。また、それぞれのループ内での繰り返しでカーソルオブジェクトを用い、 `cursor.value.foo` とすることで、現在のレコードからカーソルの下のデータを取得できることには注目です。完全な例については [IDBCursor の例](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([ライブデモを見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)) を参照してください。
 
 ```
 function displayData() {

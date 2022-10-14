@@ -2,13 +2,14 @@
 title: Clients.openWindow()
 slug: Web/API/Clients/openWindow
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 {{domxref("Clients")}}接口的 **`openWindow()`** 方法创建一个顶级的浏览器上下文并加载给定的 URL. 如果调用脚本没有显示弹出窗口的权限， **`openWindow()`** 将抛出 InvalidAccessError.
 
 在 Firefox 中，只有在作为通知点击事件的结果调用时，才允许该方法显示弹出窗口。
 
-在 Chrome for Android 中，该方法可以改为在先前添加到用户主屏幕的 [standalone web app](/en-US/Apps/Progressive/Installable) 提供的现有浏览上下文中打开 URL.
+在 Chrome for Android 中，该方法可以改为在先前添加到用户主屏幕的 [standalone web app](/zh-CN/Apps/Progressive/Installable) 提供的现有浏览上下文中打开 URL.
 
 ## 语法
 
@@ -59,4 +60,4 @@ onotificationclick = function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Clients.openWindow")}}
+{{Compat}}

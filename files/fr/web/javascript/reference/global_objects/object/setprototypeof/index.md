@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/setPrototypeOf
 ---
+
 {{JSRef}}
 
 > **Attention :** Étant donnée la façon dont la plupart des moteurs JavaScript optimisent les performances, modifier le `[[Prototype]]` d'un objet est une opération lente pour chaque navigateur et moteur JavaScript. Les impacts liés aux performances sur ce point sont vastes et subtiles : ils concernent pas uniquement le temps passé à effectuer `Object.setPrototypeOf`, mais peuvent concerner n'importe quel code pour n'importe quel objet dont `[[Prototype]]` a été modifié. Si vous souhaitez obtenir des performances optimales, évitez de modifier le `[[Prototype]]` d'un objet. À la place, il est conseillé de créer un objet avec le prototype voulu en utilisant {{jsxref("Object/create","Object.create()")}}
@@ -177,14 +178,11 @@ george(); // "Salut !!"
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires        |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-object.setprototypeof', 'Object.setPrototypeOf')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-object.setprototypeof', 'Object.setPrototypeOf')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.setPrototypeOf")}}
+{{Compat}}
 
 ## Voir aussi
 

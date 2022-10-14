@@ -1,12 +1,8 @@
 ---
 title: Firefox 5 for developers
 slug: Mozilla/Firefox/Releases/5
-tags:
-  - Firefox
-  - Firefox 5
-  - Gecko 5.0
-translation_of: Mozilla/Firefox/Releases/5
 ---
+
 Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日にリリースされました。このページは Firefox 5 のリリースにあたり、開発者に影響する変更について情報をまとめたものです。
 
 ## Web 開発者向けの変更点一覧
@@ -66,7 +62,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 ### HTTP
 
 - Firefox は `Keep-Alive` HTTP ヘッダを送信しないようになります。私たちはこのヘッダを正しく整形していませんでした。また、{{ httpheader("Connection") }} や {{ httpheader("Proxy-Connection") }} ヘッダに "keep-alive" を指定していたため重複しており、意味がなかったのです。
-- HTTP のトランザクションモデルを変更し、持続的接続プール内の接続を再利用するというより高度なものになりました。Necko はプールを {{ interwiki("wikipedia", "FIFO") }} と扱うのではなく、プール内の接続を {{ interwiki("wikipedia", "congestion window") }} (CWND) の大きい順に並べ替えます。Window のサイズ拡大を避けることで、多くのケースで HTTP トランザクションの確認応答時間 (RTT) を減少させることができるでしょう。
+- HTTP のトランザクションモデルを変更し、持続的接続プール内の接続を再利用するというより高度なものになりました。Necko はプールを [FIFO](https://ja.wikipedia.org/wiki/FIFO) と扱うのではなく、プール内の接続を [congestion window](https://en.wikipedia.org/wiki/congestion_window) (CWND) の大きい順に並べ替えます。Window のサイズ拡大を避けることで、多くのケースで HTTP トランザクションの確認応答時間 (RTT) を減少させることができるでしょう。
 - Firefox は `Content-Disposition` HTTP レスポンスヘッダについて、`filename`, `filename*` パラメタがどちらも与えられている場合にそれらをより効果的に処理するようになりました。これは `filename` が先に与えられている場合でも `filename*` をまず調べすべての名前を読み取ることで実現しています。これまでは最初にマッチしたパラメタが使われており、後により適切な名前が与えられていた場合でもそれが使われなかったのです。詳細は {{ bug(588781) }} をお読みください。
 
 ### MathML
@@ -81,7 +77,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 
 すでに開発済みのアドオンを Firefox 5 向けにアップデートを行う方法については [Firefox 5 へのアドオンのアップデート方法](/ja/docs/Firefox/Updating_add-ons_for_Firefox_5)をご覧ください。
 
-> **Note:** Firefox 5 は他のメジャーリリース版の Firefox と同様に、再コンパイルされたバイナリコンポーネントが必要となります。詳しくは[バイナリインターフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces)をご覧ください。
+> **メモ:** Firefox 5 は他のメジャーリリース版の Firefox と同様に、再コンパイルされたバイナリコンポーネントが必要となります。詳しくは[バイナリインターフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces)をご覧ください。
 
 ### JavaScript コードモジュールに対する変更点
 
@@ -99,7 +95,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 - {{ HTMLElement("canvas") }} エレメントの {{ htmlattrxref("width", "canvas") }} と {{ htmlattrxref("height", "canvas") }} 属性は今回から符号付き整数から符合なし整数に変わり、IDL におけるリフレクトを行います（[`HTMLCanvasElement`](/ja/docs/DOM/HTMLCanvasElement) をご覧ください）。
 - `nsIAppStartup2` と `nsIAppStartup_MOZILLA_2_0` インターフェースは`nsIAppStartup` インターフェースに統合されました。
 - `nsIDocShell_MOZILLA_2_0_BRANCH は` `nsIDocShell` インターフェースに統合されました。
-- ` nsIFocusManager_MOZILLA_2_0_BRANCH インターフェースは ``nsIFocusManager ` インターフェースに統合されました。
+- `nsIFocusManager_MOZILLA_2_0_BRANCH` インターフェースは `nsIFocusManager` インターフェースに統合されました。
 - `nsIHTMLEditor_MOZILLA_2_0_BRANCH` インターフェースは `nsIHTMLEditor` インターフェースに統合されました。
 
 #### 新しいインターフェース
@@ -117,11 +113,11 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 
 ### デバッグの補助
 
-- 新しい[` DebugOnly<T>`](/ja/docs/Namespace/Mozilla/DebugOnly%3CT%3E) ヘルパーはデバッグモードにおけるビルドにおいてのみ変数の定義を可能にしました。
+- 新しい [`DebugOnly<T>`](/ja/docs/Namespace/Mozilla/DebugOnly%3CT%3E) ヘルパーはデバッグモードにおけるビルドにおいてのみ変数の定義を可能にしました。
 
 ### JavaScript API (SpiderMonkey)
 
-- [`jsdouble`](/ja/docs/SpiderMonkey/JSAPI_Reference/jsdouble)` の値を C の符号付き整数型と符合なし整数型に変換するために JS_DoubleToInt32()` と [`JS_DoubleToUint32()`](/ja/docs/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32) が追加されました。
+- [`jsdouble`](/ja/docs/SpiderMonkey/JSAPI_Reference/jsdouble) の値を C の符号付き整数型と符合なし整数型に変換するために `JS_DoubleToInt32()` と [`JS_DoubleToUint32()`](/ja/docs/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32) が追加されました。
 
 ### ビルドシステムの変更点
 

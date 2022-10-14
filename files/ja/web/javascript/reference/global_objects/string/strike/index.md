@@ -1,15 +1,8 @@
 ---
 title: String.prototype.strike()
 slug: Web/JavaScript/Reference/Global_Objects/String/strike
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/strike
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`strike()`** メソッドは、文字列が取り消されたテキストとして表示されるように HTML の {{HTMLElement("strike")}} 要素を生成します。

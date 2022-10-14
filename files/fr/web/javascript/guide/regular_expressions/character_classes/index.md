@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 original_slug: Web/JavaScript/Guide/Expressions_régulières/Classes_de_caractères
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Les classes de caractères permettent de distinguer différents ensembles de caractères dans les expressions rationnelles (par exemple les chiffres d'une part et les lettres d'autre part).
@@ -250,13 +251,11 @@ Les classes de caractères permettent de distinguer différents ensembles de car
 
 ## Spécifications
 
-| Spécification            | État                 | Commentaires                                          |
-| ------------------------ | -------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}} | {{Spec2('ES3')}} | Définition initiale. Implémentée avec JavaScript 1.1. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.property_escapes")}}
+{{Compat}}
 
 ## Voir aussi
 

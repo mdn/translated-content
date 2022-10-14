@@ -17,8 +17,10 @@ translation_of: Web/API/URL/protocol
 
 ## 구문
 
-    const protocol = url.protocol
-    url.protocol = newProtocol
+```js
+const protocol = url.protocol
+url.protocol = newProtocol
+```
 
 ### 값
 

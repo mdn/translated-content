@@ -6,6 +6,7 @@ tags:
   - Manifeste
 translation_of: Web/Manifest
 ---
+
 Le manifeste d'une application web fournit des informations concernant celle-ci (comme son nom, son auteur, une icône et une description) dans un document texte JSON. Le but du manifeste est d'installer des applications sur l'écran d'accueil d'un appareil, offrant aux utilisateurs un accès plus rapide et une expérience plus riche.
 
 Les manifestes font partie d'un ensemble de technologies appelées les [applications web progressives](/fr/docs/Web/Apps/Progressive) (_progressive web apps_). Il s'agit d'applications web qui peuvent être installées sur la page d'accueil d'un appareil sans que l'utilisateur ait à se rendre dans une boutique d'applications. De plus, une fois installées, elles peuvent être utilisées sans connexion internet et sont capables de recevoir des notifications _push._
@@ -292,13 +293,11 @@ Les manifestes doivent être servies en utilisant l'`application/manifest+json` 
 
 ## Spécifications
 
-| Spécification                    | Statut                       | Commentaire         |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Manifest')}} | {{Spec2('Manifest')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.manifest")}}
+{{Compat}}
 
 ## Voir aussi
 

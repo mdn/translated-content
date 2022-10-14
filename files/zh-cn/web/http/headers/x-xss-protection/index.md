@@ -2,9 +2,10 @@
 title: X-XSS-Protection
 slug: Web/HTTP/Headers/X-XSS-Protection
 ---
+
 {{HTTPSidebar}}
 
-HTTP **`X-XSS-Protection`** 响应头是 Internet Explorer，Chrome 和 Safari 的一个特性，当检测到跨站脚本攻击 ({{Glossary("XSS")}}) 时，浏览器将停止加载页面。若网站设置了良好的 {{HTTPHeader("Content-Security-Policy")}} 来禁用内联 JavaScript (`'unsafe-inline'`)，现代浏览器不太需要这些保护， 但其仍然可以为尚不支持 {{Glossary("CSP")}} 的旧版浏览器的用户提供保护。
+HTTP **`X-XSS-Protection`** 响应头是 Internet Explorer，Chrome 和 Safari 的一个特性，当检测到跨站脚本攻击 ({{Glossary("XSS")}}) 时，浏览器将停止加载页面。若网站设置了良好的 {{HTTPHeader("Content-Security-Policy")}} 来禁用内联 JavaScript (`'unsafe-inline'`)，现代浏览器不太需要这些保护，但其仍然可以为尚不支持 {{Glossary("CSP")}} 的旧版浏览器的用户提供保护。
 
 | Header type                                      | {{Glossary("Response header")}} |
 | ------------------------------------------------ | ---------------------------------------- |
@@ -22,11 +23,11 @@ X-XSS-Protection: 1; report=<reporting-uri>
 - 0
   - : 禁止 XSS 过滤。
 - 1
-  - : 启用 XSS 过滤（通常浏览器是默认的）。 如果检测到跨站脚本攻击，浏览器将清除页面（删除不安全的部分）。
+  - : 启用 XSS 过滤（通常浏览器是默认的）。如果检测到跨站脚本攻击，浏览器将清除页面（删除不安全的部分）。
 - 1;mode=block
-  - : 启用 XSS 过滤。 如果检测到攻击，浏览器将不会清除页面，而是阻止页面加载。
+  - : 启用 XSS 过滤。如果检测到攻击，浏览器将不会清除页面，而是阻止页面加载。
 - 1; report=\<reporting-URI> (Chromium only)
-  - : 启用 XSS 过滤。 如果检测到跨站脚本攻击，浏览器将清除页面并使用 CSP {{CSP("report-uri")}}指令的功能发送违规报告。
+  - : 启用 XSS 过滤。如果检测到跨站脚本攻击，浏览器将清除页面并使用 CSP {{CSP("report-uri")}}指令的功能发送违规报告。
 
 ## 范例
 
@@ -62,7 +63,7 @@ add_header "X-XSS-Protection" "1; mode=block";
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.X-XSS-Protection")}}
+{{Compat}}
 
 ## 了解更多
 

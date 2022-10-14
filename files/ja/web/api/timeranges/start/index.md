@@ -1,17 +1,8 @@
 ---
 title: TimeRanges.start()
 slug: Web/API/TimeRanges/start
-page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Method
-  - Reference
-  - TimeRanges
-browser-compat: api.TimeRanges.start
-translation_of: Web/API/TimeRanges/start
 ---
+
 {{APIRef("DOM")}}
 
 **`start()`** は {{domxref("TimeRanges")}} インターフェイスのメソッドで、指定した時間範囲が開始する時刻オフセットを返します。

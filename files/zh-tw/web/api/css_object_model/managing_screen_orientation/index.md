@@ -2,6 +2,7 @@
 title: 控制畫面方向
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
 ---
+
 {{SeeCompatTable}}{{APIRef}}
 
 ## 摘要
@@ -142,7 +143,7 @@ screen.lockOrientation('landscape');
 
 ## Firefox OS and Android: Orientation lock using the manifest
 
-For a Firefox OS and Firefox Android (soon to work on Firefox desktop too) specific way to lock orientation, you can set the [orientation](/en-US/Apps/Build/Manifest#orientation) field in app's your manifest file, for example:
+For a Firefox OS and Firefox Android (soon to work on Firefox desktop too) specific way to lock orientation, you can set the [orientation](/zh-TW/Apps/Build/Manifest#orientation) field in app's your manifest file, for example:
 
 ```json
 "orientation": "portrait"

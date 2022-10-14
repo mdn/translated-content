@@ -2,6 +2,7 @@
 title: Stream API
 slug: Web/API/Streams_API
 ---
+
 {{DefaultAPISidebar("Streams")}}
 
 Streams API 允许 JavaScript 以编程方式访问从网络接收的数据流，并且允许开发人员根据需要处理它们。
@@ -53,7 +54,7 @@ Streams API 允许 JavaScript 以编程方式访问从网络接收的数据流�
 - {{domxref("TransformStream")}}
   - : 表示一组可转化的数据。
 - {{domxref("TransformStreamDefaultController")}}
-  - : 提供操作和转换流关联的 {{domxref("ReadableStream")}} 和 {{domxref("WritableStream")}} 的方法.
+  - : 提供操作和转换流关联的 {{domxref("ReadableStream")}} 和 {{domxref("WritableStream")}} 的方法。
 
 ### 流相关的 API 和操作
 

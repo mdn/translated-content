@@ -3,6 +3,7 @@ title: HTMLMediaElement.msClearEffects
 slug: Web/API/HTMLMediaElement/msClearEffects
 translation_of: Web/API/HTMLMediaElement/msClearEffects
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 {{Non-standard_header()}}

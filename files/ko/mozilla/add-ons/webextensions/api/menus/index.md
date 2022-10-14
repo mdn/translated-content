@@ -1,7 +1,6 @@
 ---
 title: contextMenus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 ---
 {{AddonSidebar}}

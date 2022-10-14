@@ -1,8 +1,8 @@
 ---
 title: vrdisplaydisconnected
 slug: Web/API/Window/vrdisplaydisconnect_event
-translation_of: Web/API/Window/vrdisplaydisconnect_event
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 [WebVR API](/ja/docs/Web/API/WebVR_API) の **`vrdisplaydisconnected`** イベントは，互換性のある VR デバイスがコンピュータから接続解除された時に発火します．

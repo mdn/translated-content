@@ -2,6 +2,7 @@
 title: Introduction to automated testing
 slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Manually running tests on several browsers and devices, several times per day, can get tedious, and time consuming. To handle this efficiently, you should become familiar with automation tools. In this article, we look at what is available, how to use task runners, and how to use the basics of commercial browser test automation apps such as, Sauce Labs and Browser Stack.
@@ -11,12 +12,12 @@ Manually running tests on several browsers and devices, several times per day, c
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea
+        Familiarity with the core <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>, and
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> languages; an idea
         of the high level
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >principles of cross browser testing</a
         >.
       </td>
@@ -62,7 +63,7 @@ As we said above, you can drastically speed up common tasks such as linting and 
     npm -v
     ```
 
-4. 安装 Node/npm 后，还应将其更新到最新的版本。 更新 Node 最有效可靠的方式是从它的网站（链接见上）下载一个最新的安装包进行安装。而更新 npm，可以在你的命令行终端运行如下命令：
+4. 安装 Node/npm 后，还应将其更新到最新的版本。更新 Node 最有效可靠的方式是从它的网站（链接见上）下载一个最新的安装包进行安装。而更新 npm，可以在你的命令行终端运行如下命令：
 
     ```bash
     npm install npm@latest -g
@@ -265,7 +266,7 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
 
 4. Add `'js'` as an item inside the array in the `default` task.
 
-Here we grab our `main.js` file, run `jshint` on it and output the results to the terminal using `jshint.reporter`; we then pass the file to babel, which converts it to old style syntax and outputs the result into the `build` directory. Our original code included a [fat arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), which babel has modified into an old style function.
+Here we grab our `main.js` file, run `jshint` on it and output the results to the terminal using `jshint.reporter`; we then pass the file to babel, which converts it to old style syntax and outputs the result into the `build` directory. Our original code included a [fat arrow function](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions), which babel has modified into an old style function.
 
 #### Further ideas
 

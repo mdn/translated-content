@@ -2,6 +2,7 @@
 title: Getting started with Vue
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Now let's introduce Vue, the third of our frameworks. In this article we'll look at a little bit of Vue background, learn how to install it and create a new project, study the high-level structure of the whole project and an individual component, see how to run the project locally, and get it prepared to start building our example.
@@ -39,10 +40,10 @@ To use Vue in an existing site, you can drop one of the following [`<script>`](/
 
 However, this approach has some limitations. To build more complex apps, you’ll want to use the [Vue NPM package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and take advantage of bundlers like WebPack. To make building apps with Vue easier, there is a CLI to streamline the development process. To use the npm package & the CLI you will need:
 
-1.  Node.js 8.11+ installed.
-2.  npm or yarn.
+1. Node.js 8.11+ installed.
+2. npm or yarn.
 
-> **Note:** If you don't have the above installed, find out [more about installing npm and Node.js](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups) here.
+> **メモ:** If you don't have the above installed, find out [more about installing npm and Node.js](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups) here.
 
 To install the CLI, run the following command in your terminal:
 
@@ -64,38 +65,38 @@ We’ll look at using this below.
 
 To explore various features of Vue, we will be building up a sample todo list app. We'll begin by using the Vue CLI to create a new app framework to build our app into. Follow the steps below:
 
-1.  In terminal, `cd` to where you'd like to create your sample app, then run `vue create moz-todo-vue`.
-2.  Use the arrow keys and&#x20;
+1. In terminal, `cd` to where you'd like to create your sample app, then run `vue create moz-todo-vue`.
+2. Use the arrow keys and&#x20;
 
     <kbd>Enter</kbd>
 
     &#x20;to select the "Manually select features" option.
 
-3.  The first menu you’ll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press&#x20;
+3. The first menu you’ll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press&#x20;
 
     <kbd>Enter</kbd>
 
     &#x20;to proceed.
 
-4.  Next you’ll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit&#x20;
+4. Next you’ll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit&#x20;
 
     <kbd>Enter</kbd>
 
     &#x20;again. This will help us catch common errors, but not be overly opinionated.
 
-5.  Next you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit&#x20;
+5. Next you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit&#x20;
 
     <kbd>Enter</kbd>
 
     &#x20;to continue.
 
-6.  Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's `package.json` file. Select "In dedicated config files" and push&#x20;
+6. Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's `package.json` file. Select "In dedicated config files" and push&#x20;
 
     <kbd>Enter</kbd>
 
     .
 
-7.  Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type&#x20;
+7. Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type&#x20;
 
     <kbd>y</kbd>
 
@@ -109,7 +110,7 @@ The CLI will now begin scaffolding out your project, and installing all of your 
 
 If you've never run the Vue CLI before, you'll get one more question — you'll be asked to choose a package manager. You can use the arrow keys to select which one you prefer. The Vue CLI will default to this package manager from now on. If you need to use a different package manager after this, you can pass in a flag `--packageManager=<package-manager>`, when you run `vue create`. So if you wanted to create the `moz-todo-vue` project with npm and you'd previously chosen yarn, you’d run `vue create moz-todo-vue --packageManager=npm`.
 
-> **Note:** We've not gone over all of the options here, but you can [find more information on the CLI](https://cli.vuejs.org) in the Vue docs.
+> **メモ:** We've not gone over all of the options here, but you can [find more information on the CLI](https://cli.vuejs.org) in the Vue docs.
 
 ## プロジェクトの構造
 
@@ -123,7 +124,7 @@ If everything went successfully, the CLI should have created a series of files a
   - `favicon.ico`: This is the favicon for your app. Currently, it's the Vue logo.
   - `index.html`: This is the template for your app. Your Vue app is run from this HTML page, and you can use lodash template syntax to interpolate values into it.
 
-    > **Note:** this is not the template for managing the layout of your application — this template is for managing static HTML that sits outside of your Vue app. Editing this file typically only occurs in advanced use cases.
+    > **メモ:** this is not the template for managing the layout of your application — this template is for managing static HTML that sits outside of your Vue app. Editing this file typically only occurs in advanced use cases.
 
 - `src`: This directory contains the core of your Vue app.
 
@@ -132,7 +133,7 @@ If everything went successfully, the CLI should have created a series of files a
   - `components`: this directory is where you keep your components. Currently it just has one example component.
   - `assets`: This directory is for storing static assets like CSS and images. Because these files are in the source directory, they can be processed by Webpack. This means you can use pre-processors like [Sass/SCSS](https://sass-lang.com/) or [Stylus](https://stylus-lang.com/).
 
-> **Note:** Depending on the options you select when creating a new project, there might be other directories present (for example, if you choose a router, you will also have a `views` directory).
+> **メモ:** Depending on the options you select when creating a new project, there might be other directories present (for example, if you choose a router, you will also have a `views` directory).
 
 ## .vue ファイル (単一ファイルコンポーネント)
 
@@ -150,7 +151,7 @@ Open your `App.vue` file — you’ll see that it has three parts: `<template>`,
 
 `<template>` contains all the markup structure and display logic of your component. Your template can contain any valid HTML, as well as some Vue-specific syntax that we'll cover later.
 
-> **Note:** By setting the `lang` attribute on the `<template>` tag, you can use Pug template syntax instead of standard HTML — `<template lang="pug">`. We'll stick to standard HTML through this tutorial, but it is worth knowing that this is possible.
+> **メモ:** By setting the `lang` attribute on the `<template>` tag, you can use Pug template syntax instead of standard HTML — `<template lang="pug">`. We'll stick to standard HTML through this tutorial, but it is worth knowing that this is possible.
 
 `<script>` contains all of the non-display logic of your component. Most importantly, your `<script>` tag needs to have a default exported JS object. This object is where you locally register components, define component inputs (props), handle local state, define methods, and more. Your build step will process this object and transform it (with your template) into a Vue component with a `render()` function.
 
@@ -168,11 +169,11 @@ export default {
 };
 ```
 
-> **Note:** If you want to use [TypeScript](https://www.typescriptlang.org/) syntax, you need to set the `lang` attribute on the `<script>` tag to signify to the compiler that you're using TypeScript — `<script lang="ts">`.
+> **メモ:** If you want to use [TypeScript](https://www.typescriptlang.org/) syntax, you need to set the `lang` attribute on the `<script>` tag to signify to the compiler that you're using TypeScript — `<script lang="ts">`.
 
 `<style>` is where you write your CSS for the component. If you add a `scoped` attribute — `<style scoped>` — Vue will scope the styles to the contents of your SFC. This works similar to CSS-in-JS solutions, but allows you to just write plain CSS.
 
-> **Note:** If you select a CSS pre-processor when creating the project via the CLI, you can add a `lang` attribute to the `<style>` tag so that the contents can be processed by Webpack at build time. For example, `<style lang="scss">` will allow you to use SCSS syntax in your styling information.
+> **メモ:** If you select a CSS pre-processor when creating the project via the CLI, you can add a `lang` attribute to the `<style>` tag so that the contents can be processed by Webpack at build time. For example, `<style lang="scss">` will allow you to use SCSS syntax in your styling information.
 
 ## アプリをローカルで実行する
 

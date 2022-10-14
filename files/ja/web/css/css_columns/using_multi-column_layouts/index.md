@@ -1,17 +1,10 @@
 ---
 title: 段組みレイアウトの使用
 slug: Web/CSS/CSS_Columns/Using_multi-column_layouts
-tags:
-  - Advanced
-  - CSS
-  - CSS Multi-column Layout
-  - Guide
-  - Layout
-  - Web
-translation_of: Web/CSS/CSS_Columns/Using_multi-column_layouts
 l10n:
   sourceCommit: 77abaefce3b90a6439c5bd4a162956e7d0cf8fda
 ---
+
 {{CSSRef}}
 
 CSS の**段組みレイアウト** (Multi-column Layout) は、*ブロックレイアウトモード*を拡張して、文章の段組みを定義しやすくするものです。行が長すぎると、文章が読みづらくなるものです。行末から次の行の先頭まで目を移動する距離が長すぎると、どの行を読んでいたか見失ってしまうことがあります。したがって、大きな画面を最大限に活用するためには、新聞のように幅が狭い段を並べた方が適切です。

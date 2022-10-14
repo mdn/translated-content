@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Lexical_grammar
 original_slug: Web/JavaScript/Reference/Grammaire_lexicale
 ---
+
 {{JsSidebar("More")}}
 
 Cette page décrit la grammaire lexicale de JavaScript. Le code source d'un script ECMAScript est analysé de gauche à droite et est converti en une série d'éléments qui sont : des jetons, des caractères de contrôle, des terminateurs de lignes, des commentaires ou des blancs. ECMAScript définit également certains mots-clés et littéraux. ECMAScript possède également des règles pour insérer automatiquement des points-virgules à la fin des instructions.
@@ -461,16 +462,11 @@ a + b;
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------- |
-| {{SpecName("ES1")}}                                                                                             | {{Spec2("ES1")}}         | Définition initiale.                                                                  |
-| {{SpecName('ES5.1', '#sec-7', 'Lexical Conventions')}}                                             | {{Spec2('ES5.1')}}     |                                                                                       |
-| {{SpecName('ES6', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}         | {{Spec2('ES6')}}         | Ajout : littéraux binaires et octaux, échappements de points de code Unicode, modèles |
-| {{SpecName('ESDraft', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}} | {{Spec2('ESDraft')}} |                                                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.grammar")}}
+{{Compat}}
 
 ## Voir aussi
 

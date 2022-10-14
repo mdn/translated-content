@@ -82,4 +82,3 @@ test[Symbol.toStringTag];  // Devuelve HTMLButtonElement
 
 - [Polyfill de `Symbol.toStringTag` en `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Object.prototype.toString()")}}
-

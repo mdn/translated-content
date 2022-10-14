@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/color_value
 original_slug: Web/CSS/Type_color
 ---
+
 {{CSSRef}}
 
 Le type de données CSS **`<color>`** permet de représenter des couleurs dans [l'espace de couleurs sRGB](https://fr.wikipedia.org/wiki/SRGB). Une couleur pourra être décrite de trois façons :
@@ -66,7 +67,7 @@ Voici quelques inconvénients liés aux mots-clés :
   </thead>
   <tbody>
     <tr style="position: relative">
-      <td rowspan="16">{{SpecName("CSS1")}}</td>
+      <td rowspan="16">CSS1</td>
       <td style="background: #000"></td>
       <td style="text-align: center"><code>black</code></td>
       <td><code>#000000</code></td>
@@ -163,14 +164,14 @@ Voici quelques inconvénients liés aux mots-clés :
       <td style="background: aqua"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS2.1")}}</td>
+      <td>CSS2.1</td>
       <td style="background: #ffa500"></td>
       <td style="text-align: center"><code>orange</code></td>
       <td><code>#ffa500</code></td>
       <td style="background: orange"></td>
     </tr>
     <tr>
-      <td rowspan="130">{{SpecName("CSS3 Colors")}}</td>
+      <td rowspan="130">CSS3 Colors</td>
       <td style="background: #f0f8ff"></td>
       <td style="text-align: center"><code>aliceblue</code></td>
       <td><code>#f0f8ff</code></td>
@@ -955,7 +956,7 @@ Voici quelques inconvénients liés aux mots-clés :
       <td style="background: yellowgreen"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS4 Colors")}}</td>
+      <td>CSS4 Colors</td>
       <td style="background: #639"></td>
       <td style="text-align: center"><code>rebeccapurple</code></td>
       <td><code>#663399</code></td>
@@ -1303,64 +1304,11 @@ La recommandation du W3C : [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-c
 
 ## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">État</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('CSS4 Colors', '#colorunits', '&lt;color&gt;')}}
-      </td>
-      <td>{{Spec2('CSS4 Colors')}}</td>
-      <td>
-        Ajout de la couleur <code>rebeccapurple</code>, de la notation
-        hexadécimale sur quatre chiffres (<code>#RGBA</code>) et sur huit
-        chiffres (<code>#RRGGBBAA</code>). <code>rgba()</code> et
-        <code>hsla()</code> sont désormais synonymes de <code>rgb()</code> et
-        <code>hsl()</code>, les paramètres des fonctions peuvent être séparés
-        par des espaces plutôt que ds virgules, les valeurs de transparence
-        (alpha) peuvent être exprimées en pourcentages et les valeurs de teinte
-        avec un angle.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('CSS3 Colors', '#colorunits', '&lt;color&gt;')}}
-      </td>
-      <td>{{Spec2('CSS3 Colors')}}</td>
-      <td>
-        Les couleurs système sont désormais dépréciée. Les couleurs SVG sont
-        ajoutées ainsi que les notations fonctionnelles <code>rgba()</code>,
-        <code>hsl()</code>, <code>hsla()</code>.
-      </td>
-    </tr>
-    <tr style="vertical-align: top">
-      <td style="vertical-align: top">
-        {{SpecName('CSS2.1', 'syndata.html#value-def-color', '&lt;color&gt;')}}
-      </td>
-      <td style="vertical-align: top">{{Spec2('CSS2.1')}}</td>
-      <td style="vertical-align: top">
-        Ajout de la couleur <code>orange</code> et des couleurs système.
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top">
-        {{SpecName('CSS1', '#color-units', '&lt;color&gt;')}}
-      </td>
-      <td style="vertical-align: top">{{Spec2('CSS1')}}</td>
-      <td style="vertical-align: top">Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.color")}}
+{{Compat}}
 
 ## Voir aussi
 

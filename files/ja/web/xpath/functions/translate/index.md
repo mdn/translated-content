@@ -1,11 +1,8 @@
 ---
 title: translate
 slug: Web/XPath/Functions/translate
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/translate
 ---
+
 {{ XsltRef() }}
 
 `translate` 関数は、文字列と、その文字列を変換するための文字の集合を評価し、変換された文字列を返します。

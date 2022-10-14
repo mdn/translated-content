@@ -1,17 +1,10 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Prototype
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.Array.find
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
+l10n:
+  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
 ---
+
 {{JSRef}}
 
 `find()` メソッドは、提供されたテスト関数を満たす配列内の最初の要素を返します。
@@ -19,28 +12,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 
 {{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}
 
-- 配列内で見つかった要素の**添字**が必要な場合は、{{jsxref("Array.findIndex", "findIndex()")}} を使用してください。
-- **値の添字**を検索する必要がある場合は、{{jsxref("Array.prototype.indexOf()")}} を使用してください。({{jsxref("Array.findIndex", "findIndex()")}} と似ていますが、それぞれの要素の等価性はテスト関数ではなく値でチェックします。)
-- 配列内に値が**存在する**かどうかを調べる必要がある場合は、{{jsxref("Array.prototype.includes()")}} を使用してください。
-- 指定したテスト関数を満たす要素があるかどうかを調べる必要がある場合は、{{jsxref("Array.prototype.some()")}} を使用してください。
+- 配列内で見つかった要素の**添字**が必要な場合は、{{jsxref("Array/findIndex", "findIndex()")}} を使用してください。
+- **値の添字**を検索する必要がある場合は、{{jsxref("Array/indexOf", "indexOf()")}} を使用してください。({{jsxref("Array/findIndex", "findIndex()")}} と似ていますが、それぞれの要素の等価性はテスト関数ではなく値でチェックします。)
+- 配列内に値が**存在する**かどうかを調べる必要がある場合は、 {{jsxref("Array/includes", "includes()")}} を使用してください。
+- 指定したテスト関数を満たす要素があるかどうかを調べる必要がある場合は、 {{jsxref("Array/some", "some()")}} を使用してください。
 
 ## 構文
 
 ```js
 // アロー関数
-find((element) => { /* ... */ } )
-find((element, index) => { /* ... */ } )
-find((element, index, array) => { /* ... */ } )
+find((element) => { /* … */ } )
+find((element, index) => { /* … */ } )
+find((element, index, array) => { /* … */ } )
 
 // コールバック関数
 find(callbackFn)
 find(callbackFn, thisArg)
 
 // インラインコールバック関数
-find(function(element) { /* ... */ })
-find(function(element, index) { /* ... */ })
-find(function(element, index, array){ /* ... */ })
-find(function(element, index, array) { /* ... */ }, thisArg)
+find(function(element) { /* … */ })
+find(function(element, index) { /* … */ })
+find(function(element, index, array){ /* … */ })
+find(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 引数
@@ -83,7 +76,7 @@ find(function(element, index, array) { /* ... */ }, thisArg)
 - 配列の、既存のまだ呼び出していない要素が `callbackFn` によって変更された場合、`callbackFn` に渡される値は `find` がその要素の添字を処理した時点での値になります。
 - {{jsxref("Operators/delete", "削除")}}された要素も処理されます。
 
-> **Warning:** 前項で説明したような同時進行の修正は、理解しにくいコードになることが多いので、一般的には避けるべきです（特殊な場合を除く）。
+> **警告:** 前項で説明したような同時進行の修正は、理解しにくいコードになることが多いので、一般的には避けるべきです（特殊な場合を除く）。
 
 ## 例
 
@@ -113,7 +106,7 @@ const inventory = [
   {name: 'cherries', quantity: 5}
 ];
 
-const result = inventory.find( ({ name }) => name === 'cherries' );
+const result = inventory.find(({ name }) => name === 'cherries');
 
 console.log(result) // { name: 'cherries', quantity: 5 }
 ```
@@ -144,12 +137,12 @@ console.log([4, 5, 8, 12].find(isPrime)); // 5
 const array = [0,1,,,,5,6];
 
 // 値が割り当てられているものに限らず、すべての添字を表示
-array.find(function(value, index) {
+array.find((value, index) => {
   console.log('Visited index ', index, ' with value ', value);
 });
 
 // 削除されたものを含め、すべての添字を表示
-array.find(function(value, index) {
+array.find((value, index) => {
   // 初回で要素 5 を削除
   if (index === 0) {
     console.log('Deleting array[5] with value ', array[5]);
@@ -187,8 +180,8 @@ array.find(function(value, index) {
 ## 関連情報
 
 - [`Array.prototype.find` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.findIndex()")}} – インデックスを見つけて返す
+- {{jsxref("Array.prototype.findIndex()")}} – 要素を見つけて位置を返す
 - {{jsxref("Array.prototype.includes()")}} – 配列内に値が存在するかどうかをテストする
-- {{jsxref("Array.prototype.filter()")}} – マッチしない要素をすべて削除する
+- {{jsxref("Array.prototype.filter()")}} – 一致しない要素をすべて除外する
 - {{jsxref("Array.prototype.every()")}} – すべての要素をテストする
 - {{jsxref("Array.prototype.some()")}} – 1 つの要素が一致するまでテストする

@@ -1,16 +1,8 @@
 ---
 title: IDBFactory
 slug: Web/API/IDBFactory
-tags:
-  - API
-  - HTTP
-  - IndexedDB
-  - Interface
-  - Offline
-  - Reference
-  - Storage
-translation_of: Web/API/IDBFactory
 ---
+
 {{APIRef("IndexedDB")}}
 
 [IndexedDB API](/ja/docs/IndexedDB) の **`IDBFactory`** インターフェイスは、indexedDB への非同期アクセスを提供します。 このインターフェイスを実装するオブジェクトは、`window.indexedDB` です。このオブジェクトを使用すれば、`IDBFactory` インターフェイスに直接アクセスせずに、IndexedDB を開いたり (生成したり接続したり)、削除したりできます。

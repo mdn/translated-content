@@ -1,23 +1,15 @@
 ---
 title: 'Feature-Policy: fullscreen'
 slug: Web/HTTP/Headers/Feature-Policy/fullscreen
-tags:
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - fullscreen
-  - ヘッダー
-  - 実験的
-browser-compat: http.headers.Feature-Policy.fullscreen
-translation_of: Web/HTTP/Headers/Feature-Policy/fullscreen
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `fullscreen` ディレクティブは、現在の文書が {{domxref('Element.requestFullScreen()')}} を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 返却された {{jsxref('Promise')}} が {{jsxref('TypeError')}} で拒否されます。
 
 既定では、最上位の文書およびその同じオリジンの子フレームが全画面モードを要求し、入ることができます。このディレクティブは別オリジンのフレームが全画面モードを使用することを許可したり拒否したりします。同じオリジンのフレームも含みます。
 
-> **Note:** このディレクティブ (つまり `allow` 属性で設定したもの) と `allowfullscreen` 属性の両方が `<iframe>` 要素に存在する場合、このディレクティブが優先されます。以前は `fullscreen` ディレクティブが `allowfullscreen` 属性と同時に存在しないと動作しないバグがありましたが、Firefox 80 では修正されています ({{bug(1608358)}})。
+> **メモ:** このディレクティブ (つまり `allow` 属性で設定したもの) と `allowfullscreen` 属性の両方が `<iframe>` 要素に存在する場合、このディレクティブが優先されます。以前は `fullscreen` ディレクティブが `allowfullscreen` 属性と同時に存在しないと動作しないバグがありましたが、Firefox 80 では修正されています ({{bug(1608358)}})。
 
 ## 構文
 

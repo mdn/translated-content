@@ -24,11 +24,13 @@ translation_of: Web/API/WebRTC_API/Using_data_channels
 
 createDataChannel()를 통해 RTCDataChannel 객체가 즉시 반환됩니다. 그후 {{domxref("RTCDataChannel.open_event", "open")}}의 이벤트가 RTCDataChannel로 송신되는 것을 확인한다면 성공적으로 연결되었다고 말할 수 있습니다.
 
-    let dataChannel = pc.createDataChannel("MyApp Channel");
+```js
+let dataChannel = pc.createDataChannel("MyApp Channel");
 
-    dataChannel.addEventListener("open", (event) => {
-      beginTransmission(dataChannel);
-    });
+dataChannel.addEventListener("open", (event) => {
+  beginTransmission(dataChannel);
+});
+```
 
 ### 수동 협상(Manual negotiation)
 
@@ -36,15 +38,17 @@ Data channel의 수동협상을 위해서 우선 {{domxref("RTCPeerConnection")}
 
 대역외의 연결 협상은 웹서버나 다른 방법을 이용해야 합니다. 이 절차들은 수동으로 RTCDataChannel을 원격 피어에게 신호를 보내야 하며 동일한 {{domxref("RTCDataChannel.id", "id")}}를 사용해야 하고 negotiated 프로퍼티는 true로 설정해야합니다. 이 설정들은 RTCPeerConnection를 이용해 두 오브젝트가 연결되게 합니다.
 
-    let dataChannel = pc.createDataChannel("MyApp Channel", {
-      negotiated: true
-    });
+```js
+let dataChannel = pc.createDataChannel("MyApp Channel", {
+  negotiated: true
+});
 
-    dataChannel.addEventListener("open", (event) => {
-      beginTransmission(dataChannel);
-    });
+dataChannel.addEventListener("open", (event) => {
+  beginTransmission(dataChannel);
+});
 
-    requestRemoteChannel(dataChannel.id);
+requestRemoteChannel(dataChannel.id);
+```
 
 위의 코드에서는 채널 생성시 negotiated 프로퍼티를 true로 설정해주었고 requestRemoteChannel()을 호출함으로 원격 채널과 동일한 로컬 채널 ID를 만들기 위한 협상(negotiation)을 발동시켰습니다.
 

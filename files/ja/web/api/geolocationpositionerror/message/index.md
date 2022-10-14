@@ -2,6 +2,7 @@
 title: GeolocationPositionError.message
 slug: Web/API/GeolocationPositionError/message
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationPositionError.message`** は読み取り専用のプロパティで、エラーの詳細を説明する、人間が読める {{domxref("DOMString")}} を返します。

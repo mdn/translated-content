@@ -8,6 +8,7 @@ tags:
 translation_of: Learn/Common_questions/What_is_a_web_server
 original_slug: Apprendre/Qu_est-ce_qu_un_serveur_web
 ---
+
 Dans cet article, nous verrons ce que sont les serveurs web, comment ils fonctionnent et pourquoi ils sont importants.
 
 <table class="standard-table">

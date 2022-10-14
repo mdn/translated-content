@@ -1,14 +1,8 @@
 ---
 title: TypedArray.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
 ---
+
 {{JSRef}}
 
 **`buffer`** アクセサープロパティは、構築時に _TypedArray_ から参照されるようになった {{jsxref("ArrayBuffer")}} を表します。

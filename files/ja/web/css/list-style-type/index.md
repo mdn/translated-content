@@ -1,15 +1,8 @@
 ---
 title: list-style-type
 slug: Web/CSS/list-style-type
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS リスト
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.list-style-type
-translation_of: Web/CSS/list-style-type
 ---
+
 {{CSSRef}}
 
 **`list-style-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リスト項目要素のマーカーを設定します (円、文字、独自のカウンタースタイルなど)。
@@ -121,7 +114,7 @@ list-style-type: unset;
 - `hiragana` {{experimental_inline}}
   - : ひらがなの辞書順の文字です。
 - `hiragana-iroha` {{experimental_inline}}
-  - : ひらがなの{{interwiki('wikipedia', 'いろは歌', 'いろは順')}}の文字です。
+  - : ひらがなの[いろは順](https://ja.wikipedia.org/wiki/いろは歌)の文字です。
 - `japanese-formal` {{experimental_inline}}
   - : 法律や金融関係の書類に使用される日本の公的な数値表記です。漢字は、他の正しい文字に似せて修正することができないように設計されています。
 - `japanese-informal` {{experimental_inline}}
@@ -131,7 +124,7 @@ list-style-type: unset;
 - `katakana` {{experimental_inline}}
   - : カタカナの辞書順の文字です。
 - `katakana-iroha` {{experimental_inline}}
-  - : カタカナの{{interwiki('wikipedia', 'いろは歌', 'いろは順')}}の文字です。
+  - : カタカナの[いろは順](https://ja.wikipedia.org/wiki/いろは歌)の文字です。
 - `korean-hangul-formal` {{experimental_inline}}
   - : 韓国語のハングルの数値表記です。
 - `korean-hanja-formal` {{experimental_inline}}

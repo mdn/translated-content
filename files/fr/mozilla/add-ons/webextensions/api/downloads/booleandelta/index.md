@@ -13,6 +13,7 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/BooleanDelta
 ---
+
 {{AddonSidebar()}}
 
 Le type `BooleanDelta` de l'API {{WebExtAPIRef("downloads")}} représente la différence entre deux booléens.
@@ -38,30 +39,32 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre> // Copyright 2015 Les auteurs de chrome. Tous les droits sont réservés.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
-// Redistribution et utilisation sous forme source et binaire, avec ou sans
-// modification, sont autorisées à condition que les conditions suivantes soient
-// rencontré:
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
 //
-// * Les redistributions de code source doivent conserver le copyright ci-dessus
-// remarque, cette liste de conditions et la clause de non-responsabilité suivante.
-// * Les redistributions sous forme binaire doivent reproduire ce qui précède
-// avis de droit d'auteur, cette liste de conditions et la clause de non-responsabilité suivante // dans la documentation et / ou les autres éléments fournis avec le
-// Distribution.
-// * Ni le nom de Google Inc. ni les noms de ses
-// les contributeurs peuvent être utilisés pour approuver ou promouvoir des produits dérivés de
-// ce logiciel sans autorisation écrite préalable spécifique.
+//    * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//    * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
 //
-// CE LOGICIEL EST FOURNI PAR LES TITULAIRES DE COPYRIGHT ET LES CONTRIBUTEURS
-// "EN L'ETAT" ET TOUTE GARANTIE EXPRESSE OU IMPLICITE, Y COMPRIS MAIS NON
-// LIMITE AUX GARANTIES IMPLICITES DE QUALITÉ MARCHANDE ET D'ADÉQUATION À
-// UN OBJECTIF PARTICULIER EST REFUSÉ. EN AUCUN CAS, LE COPYRIGHT
-// LE PROPRIÉTAIRE OU LES CONTRIBUTEURS SONT RESPONSABLES DE TOUT ASSISTANCE DIRECTE, INDIRECTE, ACCESSOIRE,
-// DOMMAGES PARTICULIERS, EXEMPLAIRES OU CONSÉCUTIFS (Y COMPRIS, MAIS NON
-// LIMITÉE À L'ACQUISITION DE MARCHANDISES OU DE SERVICES DE SUBSTITUTION; PERTE D'USAGE,
-// DATA, OR PROFITS; OU INTERRUPTION COMMERCIALE) TOUTEFOIS CAUSÉE ET SUR TOUTE
-// THÉORIE DE LA RESPONSABILITÉ, QU'IL SOIT UN CONTRAT, UNE RESPONSABILITÉ STRICTE OU UN TORT
-// (INCLUANT LA NÉGLIGENCE OU AUTREMENT) SURVENANT DE TOUTE MANIÈRE DE L'UTILISER
-// DE CE LOGICIEL, MÊME SI AVISÉ DE LA POSSIBILITÉ D'UN TEL DOMMAGE.
-</pre></div>
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->

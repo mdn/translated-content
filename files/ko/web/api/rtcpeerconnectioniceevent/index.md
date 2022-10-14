@@ -52,5 +52,5 @@ pc.onicecandidate = function( ev ) {
 
 ## See also
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC "/en-US/docs/CSS/Using_CSS_animations")
+- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
 - Its usual target: {{domxref("RTCPeerConnection")}}.

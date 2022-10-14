@@ -2,9 +2,10 @@
 title: <time-percentage>
 slug: Web/CSS/time-percentage
 ---
+
 {{CSSRef}}
 
-[CSS 数据类型](/en-US/docs/Web/CSS/CSS_Types)`<time-percentage> 的值`可以表示为时间或百分比。
+[CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_Types)`<time-percentage> 的值`可以表示为时间或百分比。
 
 ## Syntax
 
@@ -20,4 +21,4 @@ slug: Web/CSS/time-percentage
 
 ## Browser compatibility
 
-{{Compat("css.types.time-percentage")}}
+{{Compat}}

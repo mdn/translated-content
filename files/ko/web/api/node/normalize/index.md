@@ -16,7 +16,9 @@ translation_of: Web/API/Node/normalize
 
 ## 문법
 
-    element.normalize();
+```js
+element.normalize();
+```
 
 ## 예제
 
@@ -46,4 +48,4 @@ wrapper.normalize();
 
 ## 함께 보기
 
-- [`Text.splitText`](/ko/docs/Web/API/Text/splitText "DOM/Text.splitText")
+- [`Text.splitText`](/ko/docs/Web/API/Text/splitText)

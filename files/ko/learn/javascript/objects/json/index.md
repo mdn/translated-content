@@ -1,13 +1,6 @@
 ---
 title: JSON으로 작업하기
 slug: Learn/JavaScript/Objects/JSON
-tags:
-  - JSON
-  - JSON 객체
-  - JSON 문자열로 변환
-  - 입문자
-  - 초보자
-translation_of: Learn/JavaScript/Objects/JSON
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 

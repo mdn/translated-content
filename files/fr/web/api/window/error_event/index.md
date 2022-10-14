@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onerror
 original_slug: Web/API/GlobalEventHandlers/onerror
 ---
+
 {{ApiRef("HTML DOM")}}
 
 Un [gestionnaire d'événement](/fr/docs/Web/Guide/Events/Event_handlers) pour l'événement [`error`](/fr/docs/Web/Events/error). Des événements d'erreur sont déclenchés vers diverses cibles et pour différents types d'erreurs:

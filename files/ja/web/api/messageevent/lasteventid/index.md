@@ -1,17 +1,8 @@
 ---
 title: MessageEvent.lastEventId
 slug: Web/API/MessageEvent/lastEventId
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - プロパティ
-  - リファレンス
-  - lastEventID
-  - messaging
-browser-compat: api.MessageEvent.lastEventId
-translation_of: Web/API/MessageEvent/lastEventId
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`lastEventId`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、このイベントの固有の ID を表す {{domxref("DOMString")}} です。

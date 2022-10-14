@@ -2,6 +2,7 @@
 title: URLSearchParams.values()
 slug: Web/API/URLSearchParams/values
 ---
+
 {{APIRef("URL API")}}
 
 URLSearchParams.values() 方法返回一个{{jsxref("Iteration_protocols",'iterator')}}，该遍历器允许遍历对象中包含的所有值。这些值都是{{domxref("USVString")}}对象。
@@ -39,8 +40,8 @@ value2
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams.values")}}
+{{Compat}}
 
 ## 另请参考
 
-- 其他 URL 相关接口: {{domxref("URL")}}, {{domxref("URLUtils")}}.
+- 其他 URL 相关接口：{{domxref("URL")}}, {{domxref("URLUtils")}}.

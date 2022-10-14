@@ -1,15 +1,8 @@
 ---
 title: テキストの分割と折り返し
 slug: Web/CSS/CSS_Text/Wrapping_Text
-tags:
-  - CSS
-  - CSS テキスト
-  - Guide
-  - overflow
-  - overflow-wrap
-  - word-break
-translation_of: Web/CSS/CSS_Text/Wrapping_Text
 ---
+
 {{CSSRef}}
 
 このガイドは CSS で管理することができるテキストのはみ出しの様々な方法を説明します。
@@ -40,7 +33,7 @@ CSS はこのようにあふれて表示させますが、これは他の方法�
 
 {{EmbedGHLiveSample("css-examples/css-text/overflow-wrap.html", '100%', 660)}}
 
-> **Note:** `overflow-wrap` プロパティは、標準外のプロパティの `word-wrap` と同じように動作します。 `word-wrap` プロパティは、現在ブラウザーでは標準プロパティの別名として扱われています。
+> **メモ:** `overflow-wrap` プロパティは、標準外のプロパティの `word-wrap` と同じように動作します。 `word-wrap` プロパティは、現在ブラウザーでは標準プロパティの別名として扱われています。
 
 別のプロパティとして、{{cssxref("word-break")}} を試すことができます。このプロパティは、あふれた時点で単語を改行します。単語を改行することで分割せずに表示できる場合でも分割されます。
 

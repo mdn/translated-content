@@ -1,17 +1,8 @@
 ---
 title: ':read-write'
 slug: Web/CSS/:read-write
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-  - read-write
-browser-compat: css.selectors.read-write
-translation_of: Web/CSS/:read-write
 ---
+
 {{CSSRef}}
 
 **`:read-write`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーが編集できる要素 (`input` や `textarea` など) を表します。
@@ -28,7 +19,9 @@ p:read-write {
 
 ## 構文
 
-{{csssyntax}}
+```
+:read-write
+```
 
 ## 例
 

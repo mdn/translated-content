@@ -2,6 +2,7 @@
 title: イベントへの入門
 slug: Learn/JavaScript/Building_blocks/Events
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
 イベントは、あなたがプログラムを書いているシステムで生じた動作、出来事を指します。システムからあなたへ、イベントとして何かあった事を知らせてくるので、必要であればそれに何らかの反応を返す事ができます。例えば、ユーザーがウェブページ上でボタンを押したとき、ある情報を表示するように反応させたいと思うかもしれません。この記事では、イベントに関する重要な概念を取り上げ、ブラウザーの中でのイベントの振る舞いを見ていきます。ここでは、全てを説明するのではなく、この段階で知っておくべき内容を取り上げます。
@@ -30,7 +31,7 @@ slug: Learn/JavaScript/Building_blocks/Events
 
 それぞれの利用可能なイベントには**イベントハンドラー**があり、これはイベントに発火した時に実行される (通常はユーザー定義の JavaScript 関数) コードのブロックのことです。イベントの発火に対する応答としてコードのブロックが実行されるように定義する事を、**イベントハンドラーを登録する**と言います。イベントハンドラーは時に**イベントリスナー** と呼ばれる事を付記しておきます—我々の目的から見ると言い変えてもほとんど問題ないのですが、厳密に言えば一緒に動作する別のものです。イベントリスナーはイベントの発生を監視し、イベントハンドラーは発生したイベントの応答として動作するコードです。
 
-> **Note:** 大事な事ですがウェブのイベントは JavaScript 言語の主要部分の一部ではありません — ブラウザーに組み込まれた JavaScript API の一部として定義されたものです。
+> **メモ:** 大事な事ですがウェブのイベントは JavaScript 言語の主要部分の一部ではありません — ブラウザーに組み込まれた JavaScript API の一部として定義されたものです。
 
 ### 簡単な例
 
@@ -71,7 +72,7 @@ btn.onclick = function() {
 
 ここで言及しておくべき事は、イベントは JavaScript 固有のものではないという事です — ほとんどのプログラミング言語はいくつかのイベントモデルを持ち、その動作する方法はしばしは JavaScript の方式とは異なっています。実際、ウェブページの JavaScript のイベントモデルは他の環境で用いられている JavaScript のイベントモデルと異なっています。
 
-例えば、[Node.js](/ja/docs/Learn/Server-side/Express_Nodejs) は開発者に JavaScript でネットワークとサーバーサイドのアプリケーションを構築することを可能にするとても有名な JavaScript ランタイムです。[Node.js event model](https://nodejs.org/docs/latest-v12.x/api/events.html) はイベントを待ち受けるリスナー、イベントを定期的に発生させるエミッターに依拠しています —たいして違ってないように聞こえますが、コードは極めて異なっていて、イベントリスナーを登録する `on()` や、一度実行したら登録を解除するイベントリスナーを登録するための `once() `のような関数を使っていきます。[HTTP connect event docs](https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect) が使い方の良い例を教えてくれます。
+例えば、[Node.js](/ja/docs/Learn/Server-side/Express_Nodejs) は開発者に JavaScript でネットワークとサーバーサイドのアプリケーションを構築することを可能にするとても有名な JavaScript ランタイムです。[Node.js event model](https://nodejs.org/docs/latest-v12.x/api/events.html) はイベントを待ち受けるリスナー、イベントを定期的に発生させるエミッターに依拠しています —たいして違ってないように聞こえますが、コードは極めて異なっていて、イベントリスナーを登録する `on()` や、一度実行したら登録を解除するイベントリスナーを登録するための `once()` のような関数を使っていきます。[HTTP connect event docs](https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect) が使い方の良い例を教えてくれます。
 
 その他の例として、[WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) と呼ばれる技術を使って、クロスブラウザーアドオン (ブラウザーの機能拡張) を JavaScript で作成できます。イベントモデルは Web イベントモデルと似ていますが、ほんの少し違いがあります (イベントリスナーのプロパティはキャメルケース (例 `onmessage` でなく `onMessage`) で命名されていて、`addListener` 関数で結び付ける必要があります。例として [`runtime.onMessage` page](/ja/Add-ons/WebExtensions/API/runtime/onMessage#Examples) を確認してください。
 
@@ -118,7 +119,7 @@ btn.onclick = bgChange;
 - [`window.onkeypress`](/ja/docs/Web/API/GlobalEventHandlers/onkeypress), [`window.onkeydown`](/ja/docs/Web/API/GlobalEventHandlers/onkeydown), [`window.onkeyup`](/ja/docs/Web/API/GlobalEventHandlers/onkeyup) — キーボードのキーが押された時に色が変わります。`keypress` は普通のキー入力(ボタンを押して離して)を示しますが、`keydown` と `keyup` はキーストロークのうち押すだけ、離すだけの部分それぞれを指します。ボタンそのもののイベントハンドラーに登録しても上手く動かないことに注意してください — [window](/ja/docs/Web/API/Window) オブジェクトに登録しなければならず、これはブラウザーのウィンドウ全体を表わしています。
 - [`btn.onmouseover`](/ja/docs/Web/API/GlobalEventHandlers/onmouseover) と [`btn.onmouseout`](/ja/docs/Web/API/GlobalEventHandlers/onmouseout) — マウスポインタがボタンの上に来たときとボタンの上から外れた時に色が変わります。
 
-いくつかのイベントはとても汎用的なのでほとんどどこでも使えます(例えば onlick ハンドラはほぼ全ての要素に登録できます)が、いくつかはもっと限定的で、特定の状況でしか使えません(例えば [onplay ](/ja/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay)は{{htmlelement("video")}}のような特定の要素でのみ意味を持ちます)。
+いくつかのイベントはとても汎用的なのでほとんどどこでも使えます(例えば onlick ハンドラはほぼ全ての要素に登録できます)が、いくつかはもっと限定的で、特定の状況でしか使えません(例えば [onplay](/ja/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay) は{{htmlelement("video")}}のような特定の要素でのみ意味を持ちます)。
 
 ### インラインイベントハンドラー — 使っちゃだめ
 
@@ -135,7 +136,7 @@ function bgChange() {
 }
 ```
 
-> **Note:** メモ: [こちら](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html)に GitHub 上のサンプルがあります (また、[こちら](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)で実際に動くところを見られます)。
+> **メモ:** [こちら](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html)に GitHub 上のサンプルがあります (また、[こちら](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)で実際に動くところを見られます)。
 
 Web 上で見かける最初期のイベントハンドラー登録方法には、上の例のような**イベントハンドラー HTML 属性**(**インラインイベントハンドラー**とも言う)があります — 属性値がイベント発生時に実行したい JavaScript コードそのものです。上の例では{{htmlelement("script")}}要素の中で定義された関数を起動していますが、直接 JavsScript そのものを属性の中に入れる事もできます。例えば:
 
@@ -165,7 +166,7 @@ buttons.forEach(function(button) {
 });
 ```
 
-> **Note:** プログラムロジックをコンテンツから分離しておくと、あなたのサイトはサーチエンジンにとってより好ましいものになります。
+> **メモ:** プログラムロジックをコンテンツから分離しておくと、あなたのサイトはサーチエンジンにとってより好ましいものになります。
 
 ### addEventListener() と removeEventListener()
 
@@ -182,7 +183,7 @@ function bgChange() {
 btn.addEventListener('click', bgChange);
 ```
 
-> **Note:** メモ: [こちら](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html)に GitHub 上のサンプルがあります (また、[こちら](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)で実際に動くところが見られます)。
+> **メモ:** [こちら](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html)に GitHub 上のサンプルがあります (また、[こちら](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)で実際に動くところが見られます)。
 
 `addEventListener()` 関数のカッコの中で、二つの引数を指定しています — ハンドラーを登録したいイベントの名前と、それに反応して実行させたいコードを含んだ関数です。匿名関数を使って、実行したいコードを全部 addEventListener() 関数の引数に書いてしまっても全く問題ありません。こんな具合です:
 
@@ -238,7 +239,7 @@ element.onclick = function2;
 etc.
 ```
 
-> **Note:** もし仕事で IE8 より古いブラウザーをサポートするよう言われているなら、そのような古代のブラウザーは新しいものとは違ったイベントモデルを使っているため、困難にぶつかるかもしれません。でも怖がらないで。大半の JavaScript ライブラリ(例えば `jQuery`)には、ブラウザー間の差異をとっぱらえる関数が備わっています。勉強中のあなたがこの点について心配しすぎる必要はありません。
+> **メモ:** もし仕事で IE8 より古いブラウザーをサポートするよう言われているなら、そのような古代のブラウザーは新しいものとは違ったイベントモデルを使っているため、困難にぶつかるかもしれません。でも怖がらないで。大半の JavaScript ライブラリ(例えば `jQuery`)には、ブラウザー間の差異をとっぱらえる関数が備わっています。勉強中のあなたがこの点について心配しすぎる必要はありません。
 
 ## その他、イベントに関する概念
 
@@ -259,11 +260,11 @@ function bgChange(e) {
 btn.addEventListener('click', bgChange);
 ```
 
-> **Note:** [こちら](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) に GitHub 上のサンプルがあります (また、[こちら](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)で実際に動くところが見れらます)。
+> **メモ:** [こちら](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) に GitHub 上のサンプルがあります (また、[こちら](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)で実際に動くところが見れらます)。
 
 イベントオブジェクト **e** が関数に含まれていて、関数内で `e.target` — これはボタンそのもの — の背景色スタイルを設定しているのがわかるでしょう。イベントオブジェクトの `target` プロパティは、常にイベントが生じた要素への参照となっています。ですからこの例ではページではなくボタンの背景色がランダムに変わります。
 
-> **Note:** イベントオブジェクトには好きな名前を使えます — イベントハンドラー関数のカッコの中に使いたい名前を書くだけです。`e`/`evt`/`event` が開発者の間でとても良く使われていますが、これらが短くて覚えやすいからです。標準に従うのはいつだって良いやり方です。
+> **メモ:** イベントオブジェクトには好きな名前を使えます — イベントハンドラー関数のカッコの中に使いたい名前を書くだけです。`e`/`evt`/`event` が開発者の間でとても良く使われていますが、これらが短くて覚えやすいからです。標準に従うのはいつだって良いやり方です。
 
 複数の要素に同じイベントハンドラを割り当てて、どれかでイベントがあったときに何かさせたいような場合、`e.target` はとてつもなく有用なものです。複数の要素に同じイベントハンドラーを割り当てて、どれかでイベントがあったときに何かさせたいような場合、e.target はとてつもなく有用なものです。例えばクリックすると見えなくなるタイルが 16 個あるとします。`e.target` を使ってそれをただ消せるなら、もっと難解な手段で選びだすのよりも使いすいでしょう。続く例では (完全なソースコードは [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html) を見てください; ここで [ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) も見られます)、16 個の {{htmlelement("div")}} 要素を JavaScript で生成します。そしてこれらを全部 {{domxref("document.querySelectorAll()")}}を使って選択し、ループで一つ一つに `onclick` ハンドラを追加して、それぞれがクリックされた時にランダムな色が表われるようにしています:
 
@@ -377,7 +378,7 @@ form.onsubmit = function(e) {
 
 {{ EmbedLiveSample('Preventing_default_behavior', '100%', 140, "", "", "hide-codepen-jsfiddle") }}
 
-> **Note:** ソースコード全体については、[preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (及び [ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html)も) をご覧ください。
+> **メモ:** ソースコード全体については、[preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (及び [ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html)も) をご覧ください。
 
 ### イベントのバブリングとキャプチャリング
 
@@ -518,7 +519,7 @@ video.onclick = function() {
 - `video.onclick...` ハンドラーがあるので実行し、最初ビデオが始まります。
 - `videoBox.onclick...` ハンドラーがあるので実行し、よってビデオも隠されます。
 
-> **Note:** 両方のイベントハンドラーが存在する場合バブリングとキャプチャリングでは、キャプチャフェーズが最初に走り、バブリングフェーズが続きます。
+> **メモ:** 両方のイベントハンドラーが存在する場合バブリングとキャプチャリングでは、キャプチャフェーズが最初に走り、バブリングフェーズが続きます。
 
 #### stopPropagation()で問題を解決する
 
@@ -535,9 +536,9 @@ video.onclick = function(e) {
 
 [show-video-box.html ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html)のローカルコピーを作成してみて、自分で修正してみるか、修正された結果は [show-video-box-fixed.html](http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html) で見ることができます (こちらで[ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html)も見られます)。
 
-> **Note:** なんだってキャプチャリングとバブリングなんてあるのか? それはね、むかーしむかしの悪き時代、ブラウザーに今ほど互換性がなかった頃、ネットスケープはキャプチャリングだけを、IE はバブリングだけを使っていたのさ。W3C が動作について標準化と合意を作ろうと決めた時、結局どっちもシステムに入れることにし、モダンブラウザーはそのように実装されたのさ。
+> **メモ:** なんだってキャプチャリングとバブリングなんてあるのか? それはね、むかーしむかしの悪き時代、ブラウザーに今ほど互換性がなかった頃、ネットスケープはキャプチャリングだけを、IE はバブリングだけを使っていたのさ。W3C が動作について標準化と合意を作ろうと決めた時、結局どっちもシステムに入れることにし、モダンブラウザーはそのように実装されたのさ。
 
-> **Note:** 上で述べたように、デフォルトでイベントハンドラーはバブリング段階に登録され、そしてほとんどの場合はこれが妥当です。もし本当にイベントをキャプチャリング段階の方に登録したいのであれば、[`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener)を使って、省略可能な第三引数に `true` を指定すれば実現できます。
+> **メモ:** 上で述べたように、デフォルトでイベントハンドラーはバブリング段階に登録され、そしてほとんどの場合はこれが妥当です。もし本当にイベントをキャプチャリング段階の方に登録したいのであれば、[`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener)を使って、省略可能な第三引数に `true` を指定すれば実現できます。
 
 #### イベントの移譲
 

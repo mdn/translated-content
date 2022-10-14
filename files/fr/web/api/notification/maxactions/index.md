@@ -11,6 +11,7 @@ tags:
   - actions
 translation_of: Web/API/Notification/maxActions
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 L'attribut **`maxActions`** de l'interface {{domxref ("Notification")}} renvoie le nombre maximal d'actions prises en charge par l'appareil et l'agent utilisateur. En effet, c'est le nombre maximum d'éléments dans le tableau {{domxref ("Notification.actions")}} qui seront respectés par l'agent utilisateur.

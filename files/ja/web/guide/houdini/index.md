@@ -1,16 +1,9 @@
 ---
 title: CSS Houdini
 slug: Web/Guide/Houdini
-tags:
-  - API
-  - CSS
-  - Houdini
-  - JavaScript
-  - Landing
-  - Web
-translation_of: Web/Houdini
 original_slug: Web/Houdini
 ---
+
 Houdini は、CSS エンジンの一部を公開する低レベル API のセットであり、開発者はブラウザーのレンダリングエンジンのスタイリングおよびレイアウトプロセスにフックすることで CSS を拡張できます。 Houdini は、開発者が [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)（CSSOM）に直接アクセスできるようにする API のグループです。 開発者は、ブラウザーが CSS として解析できるコードを記述できるため、ブラウザーにネイティブに実装されるのを待たずに新しい CSS 機能を作成できます。
 
 ## Houdini の利点
@@ -33,13 +26,13 @@ CSS の `paint()` 関数のパラメーターには、オプションのパラ�
 
 ```css
 li {
-	background-image: paint(myComponent, stroke, 10px);
+    background-image: paint(myComponent, stroke, 10px);
     --highlights: blue;
     --lowlights: green;
 }
 ```
 
-> **Note:** 大きな力には大きな責任が伴います。 Houdini を使用すると、独自の石積み（masonry）、グリッド、またはリージョンの実装を発明できますが、そうすることが必ずしも最良の考えであるとは限りません。 CSS ワーキンググループは、すべての機能が確実に実行され、すべてのエッジケースを処理し、セキュリティ、プライバシー、およびアクセシビリティを考慮するために多くの作業を行います。 Houdini で CSS を拡張するときは、これらの考慮事項を念頭に置き、より野心的なプロジェクトに進む前に、まずは小さいものから始めてください。
+> **メモ:** 大きな力には大きな責任が伴います。 Houdini を使用すると、独自の石積み（masonry）、グリッド、またはリージョンの実装を発明できますが、そうすることが必ずしも最良の考えであるとは限りません。 CSS ワーキンググループは、すべての機能が確実に実行され、すべてのエッジケースを処理し、セキュリティ、プライバシー、およびアクセシビリティを考慮するために多くの作業を行います。 Houdini で CSS を拡張するときは、これらの考慮事項を念頭に置き、より野心的なプロジェクトに進む前に、まずは小さいものから始めてください。
 
 ## Houdini の API
 

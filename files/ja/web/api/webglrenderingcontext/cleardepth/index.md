@@ -1,8 +1,8 @@
 ---
 title: WebGLRenderingContext.clearDepth()
 slug: Web/API/WebGLRenderingContext/clearDepth
-translation_of: Web/API/WebGLRenderingContext/clearDepth
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.clearDepth()`** メソッドは、深度バッファーを消去する値を指定します。

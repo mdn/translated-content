@@ -1,22 +1,8 @@
 ---
 title: HTMLImageElement.crossOrigin
 slug: Web/API/HTMLImageElement/crossOrigin
-page-type: web-api-instance-property
-tags:
-  - API
-  - CORS
-  - Cross-Origin
-  - Crossorigin
-  - HTML DOM
-  - HTMLImageElement
-  - 画像
-  - プロパティ
-  - リファレンス
-  - Security
-  - origin
-browser-compat: api.HTMLImageElement.crossOrigin
-translation_of: Web/API/HTMLImageElement/crossOrigin
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} インターフェイスの **`crossOrigin`** 属性は、画像を取得する際に使用する {{Glossary("CORS")}} (Cross-Origin Resource Sharing) 設定を指定するための文字列です。

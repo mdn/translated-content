@@ -1,17 +1,8 @@
 ---
 title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
-tags:
-  - JavaScript
-  - メソッド
-  - プロミス
-  - リファレンス
-  - allSettled
-  - 非同期
-  - ポリフィル
-browser-compat: javascript.builtins.Promise.allSettled
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 ---
+
 {{JSRef}}
 
 **`Promise.allSettled()`** メソッドは、与えられたすべてのプロミスが履行されたか拒否された後に、それぞれのプロミスの結果を記述した配列オブジェクトで解決されるプロミスを返します。

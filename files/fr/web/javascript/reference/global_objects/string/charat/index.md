@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/charAt
 ---
+
 {{JSRef}}
 
 La méthode **`charAt()`** renvoie une nouvelle chaîne contenant le caractère (ou, plus précisément, le point de code UTF-16)  à la position indiquée en argument.
@@ -205,16 +206,11 @@ function fixedCharAt (str, idx) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale |
-| {{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}                     | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ESDraft', '#sec-string.prototype.charat', 'String.prototype.charAt')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.charAt")}}
+{{Compat}}
 
 ## Voir aussi
 

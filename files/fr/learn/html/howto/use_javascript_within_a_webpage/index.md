@@ -9,6 +9,7 @@ tags:
 translation_of: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
 original_slug: Apprendre/HTML/Comment/Utiliser_JavaScript_au_sein_d_une_page_web
 ---
+
 Dans cet article, nous verrons comment améliorer les pages web en ajoutant du code JavaScript dans des documents HTML.
 
 <table class="standard-table">
@@ -90,7 +91,7 @@ L'accessibilité est un enjeu majeur du développement logiciel. JavaScript peut
   - Si vous souhaitez mettre en place des effets visuels, CSS vous permettra d'y parvenir plus intuitivement.
   - _Puisque tout le monde, ou presque, a JavaScript activé, `<noscript>` ne représente donc pas une excuse pour écrire des scripts inaccessibles._
 
-## En savoir plus
+## Voir aussi
 
 - {{htmlelement("script")}}
 - {{htmlelement("noscript")}}

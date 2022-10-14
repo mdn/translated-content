@@ -1,15 +1,8 @@
 ---
 title: Date.prototype.toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 ---
+
 {{JSRef}}
 
 **`toISOString()`** メソッドは、*簡潔な*拡張表記の ISO 形式 ([ISO 8601](https://ja.wikipedia.org/wiki/ISO_8601)) の文字列を返します。これは、常に 24 文字または 27 文字の長さになります (それぞれ、`YYYY-MM-DDTHH:mm:ss.sssZ` または `±YYYYYY-MM-DDTHH:mm:ss.sssZ`)。タイムゾーンは常に 0 UTC オフセットになり、接尾辞 "`Z`" で表記されます。

@@ -10,6 +10,7 @@ tags:
   - Styles
 translation_of: Web/CSS
 ---
+
 {{CSSRef}}
 
 CSS est l'un des langages principaux du **Web ouvert** et a été standardisé [par le W3C](https://w3.org/Style/CSS/#specs). Ce standard évolue sous forme de niveaux (_levels_), CSS1 est désormais considéré comme obsolète, CSS2.1 correspond à la recommandation et [CSS3](/fr/docs/Web/CSS/CSS3), qui est découpé en modules plus petits, est en voie de standardisation.

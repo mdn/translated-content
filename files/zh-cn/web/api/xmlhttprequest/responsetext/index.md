@@ -2,6 +2,7 @@
 title: XMLHttpRequest.responseText
 slug: Web/API/XMLHttpRequest/responseText
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **XMLHttpRequest.responseText** 在一个请求被发送后，从服务器端返回文本。
@@ -47,4 +48,4 @@ xhr.send(null);
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.responseText")}}
+{{Compat}}

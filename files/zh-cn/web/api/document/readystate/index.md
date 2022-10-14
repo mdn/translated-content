@@ -2,6 +2,7 @@
 title: document.readyState
 slug: Web/API/Document/readyState
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.readyState` **属性描述了{{ domxref("document") }} 的加载状态。

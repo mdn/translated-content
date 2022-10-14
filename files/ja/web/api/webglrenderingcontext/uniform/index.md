@@ -1,20 +1,13 @@
 ---
 title: WebGLRenderingContext.uniform[1234][fi][v]()
 slug: Web/API/WebGLRenderingContext/uniform
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - WebGL
-  - WebGLRenderingContext
-browser-compat: api.WebGLRenderingContext.uniform1f
-translation_of: Web/API/WebGLRenderingContext/uniform
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.uniform[1234][fi][v]()`** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッドで、ユニフォーム変数の値を指定します。プログラムオブジェクトで定義されたすべてのアクティブなユニフォーム変数は、プログラムオブジェクトが正常にリンクされたときに 0 に初期化されます。それらは、プログラムオブジェクトのリンクが成功し、再び 0 に初期化されるまで、このメソッドの呼び出しによって割り当てられた値を保持します。
 
-> **Note:** ここで書かれている関数の多くは WebGL 2 インターフェイスで拡張されており、
+> **メモ:** ここで書かれている関数の多くは WebGL 2 インターフェイスで拡張されており、
 > {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}} 以下にあります。
 
 ## 構文

@@ -1,21 +1,8 @@
 ---
 title: 'HTMLMediaElement: ended イベント'
 slug: Web/API/HTMLMediaElement/ended_event
-page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Media Streams API
-  - Reference
-  - Video
-  - ウェブ音声 API
-  - ended
-browser-compat: api.HTMLMediaElement.ended_event
-translation_of: Web/API/HTMLMediaElement/ended_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `ended` イベントは、メディアの終わりに達したため、またはそれ以上利用できるデータがないために再生またはストリーミングが停止したときに発生します。
@@ -51,7 +38,7 @@ translation_of: Web/API/HTMLMediaElement/ended_event
   </tbody>
 </table>
 
-> **Note:** このイベントは、[メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API) および [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) でも定義されています。
+> **メモ:** このイベントは、[メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API) および [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) でも定義されています。
 
 ## 例
 

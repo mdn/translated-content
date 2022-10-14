@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/locationbar
 ---
+
 {{APIRef}}
 
 Renvoie l'objet `locationbar`, dont la visibilité peut être vérifiée.

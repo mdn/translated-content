@@ -1,14 +1,8 @@
 ---
 title: HTMLOutputElement
 slug: Web/API/HTMLOutputElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-  - インターフェイス
-translation_of: Web/API/HTMLOutputElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLOutputElement`** インターフェイスは、 ({{domxref("HTMLElement")}} から継承したものより詳細に) {{HTMLElement("output")}} 要素のレイアウトと表示を操作するためのプロパティやメソッドを提供します。

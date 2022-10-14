@@ -6,6 +6,7 @@ tags:
   - HTML-DOM
 translation_of: Web/API/History
 ---
+
 {{APIRef}}
 
 L'interface **`History`** permet de manipuler l'historique de navigation du navigateur, soit la liste des pages visitées au sein de l'onglet ou fenêtre ou cadre dans lequelle la page actuelle est ouverte.

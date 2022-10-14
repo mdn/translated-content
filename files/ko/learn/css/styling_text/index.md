@@ -1,15 +1,6 @@
 ---
 title: 텍스트 스타일링
 slug: Learn/CSS/Styling_text
-tags:
-  - CSS
-  - 그림자
-  - 리스트
-  - 모듈
-  - 웹 폰트
-  - 초보자
-  - 폰트
-translation_of: Learn/CSS/Styling_text
 ---
 {{LearnSidebar}}
 

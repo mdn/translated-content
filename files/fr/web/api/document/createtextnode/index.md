@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/createTextNode
 ---
+
 {{APIRef("DOM")}}
 
 Crée un nouveau nœud de texte.

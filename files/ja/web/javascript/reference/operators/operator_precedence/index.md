@@ -1,12 +1,8 @@
 ---
 title: 演算子の優先順位
 slug: Web/JavaScript/Reference/Operators/Operator_Precedence
-tags:
-  - ガイド
-  - JavaScript
-  - 優先順位
-translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 ---
+
 {{jsSidebar("Operators")}}
 
 **演算子の優先順位**は、演算子が互いにどのように解釈されるかを決定します。優先度の高い演算子は、優先度の低い演算子のオペランドになります。

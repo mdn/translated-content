@@ -8,6 +8,7 @@ tags:
   - Réponse
 translation_of: Web/HTTP/Headers/X-Content-Type-Options
 ---
+
 L'entête **`X-Content-Type-Options`** est un marqueur utilisé par le serveur pour indiquer que les [types MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types) annoncés dans les en-têtes {{HTTPHeader("Content-Type")}} ne doivent pas être modifiés ou et suivis. Cela permet de se détacher du sniffing de type [MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types#détection_de_type_mime), ou, en d'autres termes, c'est une façon de dire que les webmasters savaient ce qu'ils faisaient.
 
 Cet en-tête a été introduit par Microsoft dans IE 8 comme un moyen pour les webmasters de bloquer le reniflement de contenu qui se passait et pouvait transformer les types MIME non exécutables en types MIME exécutables. Depuis, d'autres navigateurs l'ont introduit, même si leurs algorithmes de reniflage MIME étaient moins agressifs.
@@ -53,15 +54,13 @@ X-Content-Type-Options: nosniff
     - `text/json`, `application/json` ou tout autre type avec une extension JSON: `*/*+json`
     - `text/xml`, `application/xml` ou tout autre type avec une extension XML: `*/*+xml` (hors `image/svg+xml`)
 
-## Caractéristiques
+## Spécifications
 
-| Caractéristique                                                                                                              | Statut                   | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName("Fetch", "#x-content-type-options-header", "X-Content-Type-Options definition")}} | {{Spec2("Fetch")}} | Définition initiale |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("http.headers.X-Content-Type-Options")}}
+{{Compat}}
 
 ## Voir aussi
 

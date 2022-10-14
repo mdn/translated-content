@@ -1,20 +1,8 @@
 ---
 title: HTMLMediaElement.play()
 slug: Web/API/HTMLMediaElement/play
-page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - HTMLMediaElement
-  - Interface
-  - Media
-  - Method
-  - Reference
-  - Video
-  - play
-browser-compat: api.HTMLMediaElement.play
-translation_of: Web/API/HTMLMediaElement/play
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLMediaElement")}} の **`play()`** メソッドは、メディアの再生を開始しようとします。
@@ -36,7 +24,7 @@ play()
 
 再生が開始されたときに解決される、または何らかの理由で再生を開始できない場合は拒否されるプロミス ({{jsxref("Promise")}}) です。
 
-> **Note:** 古いブラウザーは `play()` から値を返さない可能性があります。
+> **メモ:** 古いブラウザーは `play()` から値を返さない可能性があります。
 
 ### 例外
 
@@ -55,7 +43,7 @@ play()
 
 {{Glossary("user agent","ユーザーエージェント")}}が自動またはスクリプト起動によるメディアの再生を許可しないように設定されている場合、`play()` を呼び出すと返されたプロミスが直ちに `NotAllowedError` で拒否されます。 ウェブサイトはこの状況に対処する準備をしておくべきです。 例えば、サイトには再生が自動的に開始されたことを前提としたユーザーインターフェイスを表示するのではなく、返されたプロミスが解決されたか拒否されたかに基づいて UI を更新する必要があります。 詳しくは、以下の[例](#例)を参照してください。
 
-> **Note:** `play()` メソッドを使用すると、ユーザーはメディアの再生を許可するように要求され、返されたプロミスが解決されるまでに遅延が生じる可能性があります。 コードが即座の応答を期待していないことを確認してください。
+> **メモ:** `play()` メソッドを使用すると、ユーザーはメディアの再生を許可するように要求され、返されたプロミスが解決されるまでに遅延が生じる可能性があります。 コードが即座の応答を期待していないことを確認してください。
 
 自動再生および自動再生のブロックの詳細については、[メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。
 

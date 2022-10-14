@@ -2,6 +2,7 @@
 title: DataTransfer
 slug: Web/API/DataTransfer
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 `DataTransfer` 对象用于保存拖动并放下（drag and drop）过程中的数据。它可以保存一项或多项数据，这些数据项可以是一种或者多种数据类型。关于拖放的更多信息，请参见 [Drag and Drop](/En/DragDrop/Drag_and_Drop).
@@ -89,7 +90,7 @@ slug: Web/API/DataTransfer
 
 ## 浏览器兼容性
 
-{{Compat("api.DataTransfer")}}
+{{Compat}}
 
 ## 参见
 

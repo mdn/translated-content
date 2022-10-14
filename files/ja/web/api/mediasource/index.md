@@ -1,8 +1,8 @@
 ---
 title: MediaSource
 slug: Web/API/MediaSource
-translation_of: Web/API/MediaSource
 ---
+
 {{SeeCompatTable}}
 
 **`MediaSource`**`インターフェイスは、`{{domxref("HTMLMediaElement")}}のデータを扱っています。MediaSource をオブジェクトは、ユーザが再生する{{domxref("HTMLMediaElement")}}につけることができます。

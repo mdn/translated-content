@@ -1,16 +1,8 @@
 ---
 title: ':nth-last-child()'
 slug: Web/CSS/:nth-last-child
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.nth-last-child
-translation_of: Web/CSS/:nth-last-child
 ---
+
 {{CSSRef}}
 
 **`:nth-last-child()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中での位置に基づいて選択します。
@@ -23,11 +15,15 @@ translation_of: Web/CSS/:nth-last-child
 }
 ```
 
-> **Note:** この擬似クラスは、最初から後に向けてではなく*最後*から前に向けて数えるという点を除けば、本質的に {{Cssxref(":nth-child")}} と同じです。
+> **メモ:** この擬似クラスは、最初から後に向けてではなく*最後*から前に向けて数えるという点を除けば、本質的に {{Cssxref(":nth-child")}} と同じです。
 
 ## 構文
 
 `nth-last-child` 擬似クラスは、要素を選択する最後から数えるパターンを表す引数を 1 つ取ります。
+
+```
+:nth-last-child( <nth> [ of <complex-selector-list> ]? )
+```
 
 ### キーワード値
 
@@ -40,10 +36,6 @@ translation_of: Web/CSS/:nth-last-child
 
 - `<An+B>`
   - : 一連の兄弟要素の中で、 `n` に正の整数か0が入るとき、 `An+B` のパターンに一致する位置の要素を表します。後ろから数えた最初の要素の番号は `1` です。 `A` と `B` の値は両方とも {{cssxref("&lt;integer&gt;")}} です。
-
-### 形式文法
-
-{{csssyntax}}
 
 ## 例
 

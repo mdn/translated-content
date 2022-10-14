@@ -10,6 +10,7 @@ tags:
   - Propriétaire
 translation_of: Web/API/Document/adoptNode
 ---
+
 {{ ApiRef("DOM") }}
 
 Adopte un noeud. Le noeud (et son sous-arbre) est supprimé du document dans lequel il se trouve (le cas échéant) et son [`ownerDocument`](/fr/docs/Web/API/Node/ownerDocument) (_document propriétaire_) est remplacé par le document en cours. Le noeud peut ensuite être inséré dans le document en cours.

@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 original_slug: Apprendre/Commencer_avec_le_web/Gérer_les_fichiers
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site", "Apprendre/Commencer_avec_le_web/Les_bases_HTML","Apprendre/Commencer_avec_le_web")}}
 

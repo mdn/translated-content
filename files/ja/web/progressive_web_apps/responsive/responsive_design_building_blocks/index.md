@@ -1,13 +1,8 @@
 ---
 title: レスポンシブデザインの構成要素
 slug: Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
-tags:
-  - Apps
-  - CSS
-  - HTML5
-  - Mobile
-  - Responsive Design
 ---
+
 この記事では、レスポンシブデザインの主な基本要素について説明し、必要に応じてさらなる情報へのリンクを紹介します。
 
 ウェブ開発者にとって、サイトにアクセスするブラウザーや端末に応じてユーザーインターフェイスを変化させ、使い勝手を最適にするウェブサイトやアプリを作成することは、かなり一般的になっています。そのためには、プラットフォームやブラウザーごとに異なるバージョンのサイトやアプリを作成し、どのブラウザーやプラットフォームからサイトが見られているかを検知した上で、適切なサービスを提供するという方法があります。しかし、これはどんどん非効率的になりあｍす。ブラウザーを検知させることは、本質的にエラーが発生しやすく、コードの複数のコピーを維持することは悪夢のような作業になりかねません。
@@ -18,7 +13,7 @@ tags:
 
 この方法にはデメリットもあります。コンテンツやレイアウト、機能を端末ごとに大きく変える必要がある場合は、あまり良い方法ではないかもしれません。また、既存のサイトにレスポンシブデザインを追加してモバイル/タブレットに対応させると、個別にモバイルサイトやアプリを作成するよりもはるかに手間がかかる場合もあります。詳しくは[レスポンシブデザインのメリット・デメリット](/ja/docs/Web/Progressive_web_apps)を参照してください。
 
-> **Note:** もっと背景の情報と基本について知りたいのであれば、[レスポンシブデザイン](/ja/docs/Web/Progressive_web_apps)の基本についての解説を参照してください。
+> **メモ:** もっと背景の情報と基本について知りたいのであれば、[レスポンシブデザイン](/ja/docs/Web/Progressive_web_apps)の基本についての解説を参照してください。
 
 ## 流動グリッド
 
@@ -26,7 +21,7 @@ tags:
 
 このアプリケーションは、ウェブカメラからビデオストリームを取得し（{{domxref("navigator.getUserMedia", "getUserMedia()")}} を使用）、そのビデオストリームから静止画をキャプチャして（HTML5 {{HTMLElement("canvas")}} を使用）、ギャラリーに保存します。その後、以前に撮影した画像を表示したり、削除したりすることができます。機能については他の記事で詳しく説明しますが、ここではレイアウトに注目します。
 
-> **Note:** [Snapshot app on Github](https://github.com/chrisdavidmills/snapshot) では、 [Snapshot app] が公開されています。コードをチェックして、改善に役立ててください。また、 [Snapshot のライブ実行](https://chrisdavidmills.github.io/snapshot/)もご覧いただけます。なお、 `getUserMedia()` は実験的な技術であり、現在は Google Chrome と Firefox デスクトップでしか動作しません。将来的には、より多くの機能を追加したり、 Snapshot のスタイルを整理したりする予定です。
+> **メモ:** [Snapshot app on Github](https://github.com/chrisdavidmills/snapshot) では、 [Snapshot app] が公開されています。コードをチェックして、改善に役立ててください。また、 [Snapshot のライブ実行](https://chrisdavidmills.github.io/snapshot/)もご覧いただけます。なお、 `getUserMedia()` は実験的な技術であり、現在は Google Chrome と Firefox デスクトップでしか動作しません。将来的には、より多くの機能を追加したり、 Snapshot のスタイルを整理したりする予定です。
 
 Snapshot のデスクトップレイアウトは 3 列で、それぞれカメラビューアー、画像キャプチャビュー、ギャラリーが配置されています。
 
@@ -48,7 +43,7 @@ Snapshot のデスクトップレイアウトは 3 列で、それぞれカメ�
 </x-deck>
 ```
 
-> **Note:** この x- で始まる要素は見慣れないかもしれませんが、 Mozilla のモバイルウェブアプリ用 UI 要素ライブラリである [Brick](https://mozbrick.github.io/) の一部です。私たちは Brick を使って Snapshot のモバイルレイアウトを作成しましたが、その詳細については後述します。
+> **メモ:** この x- で始まる要素は見慣れないかもしれませんが、 Mozilla のモバイルウェブアプリ用 UI 要素ライブラリである [Brick](https://mozbrick.github.io/) の一部です。私たちは Brick を使って Snapshot のモバイルレイアウトを作成しましたが、その詳細については後述します。
 
 並んで配置するために、以下のルールを採用しました。
 
@@ -119,7 +114,7 @@ x-card:nth-child(1) video, x-card:nth-child(2) img {
 
 流動グリッドは素晴らしいスタートですが、特定のポイント（ブレイクポイントと呼ばれる）でレイアウトが崩れ始めることに気づくでしょう。これらのポイントでは、レイアウトの問題を修正するためにレイアウトを変更したいと思うでしょうが、これはメディアクエリーを使って行うことができます。
 
-> **Note:** メディアクエリーとは、 CSS3 の機能の一つで、メディア特性の検査結果に応じて CSS を選択的に適用することができるものです。基本的なことについては、[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)を参照してください。
+> **メモ:** メディアクエリーとは、 CSS3 の機能の一つで、メディア特性の検査結果に応じて CSS を選択的に適用することができるものです。基本的なことについては、[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)を参照してください。
 
 ### 典型的なデスクトップレイアウト
 
@@ -330,7 +325,7 @@ body {
 
 ![](viewport-fail-fixed.png)
 
-> **Note:** 向きに関する別の解決策は、アプリの向きを縦か横に固定することです。インストールされたアプリで作業している場合は、[マニフェストの orientation フィールド](/ja/docs/Web/Apps/Build/Manifest#orientation)を使って簡単に行うことができます。一般的なウェブアプリで動作する解決策を求めるのであれば、 [Screen orientation API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation#locking_the_screen_orientation) を使用したり、間違った方向を使用している場合にユーザーに画面の回転を求めるメッセージを表示したりすることができます（例えば、 `window.innerWidth` が `window.innerHeight` よりも大きい場合、ゲームが横向きモードであると仮定して、「回転してください」というメッセージを表示します）。
+> **メモ:** 向きに関する別の解決策は、アプリの向きを縦か横に固定することです。インストールされたアプリで作業している場合は、[マニフェストの orientation フィールド](/ja/docs/Web/Apps/Build/Manifest#orientation)を使って簡単に行うことができます。一般的なウェブアプリで動作する解決策を求めるのであれば、 [Screen orientation API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation#locking_the_screen_orientation) を使用したり、間違った方向を使用している場合にユーザーに画面の回転を求めるメッセージを表示したりすることができます（例えば、 `window.innerWidth` が `window.innerHeight` よりも大きい場合、ゲームが横向きモードであると仮定して、「回転してください」というメッセージを表示します）。
 
 ## ビューポート
 
@@ -346,7 +341,7 @@ body {
 
 これにより、ブラウザーはモバイルアプリのレイアウトを適切にレンダリングします。 `width=480` はブラウザーに「このマークアップを 480 ピクセル幅でレンダリングしてください」と伝え、その結果、メディアクエリーが適切に機能するようになります。 viewport meta タグには、他にも多くのオプションがあり、[viewport meta タグを使ってモバイルブラウザーでのレイアウトを制御する](/ja/docs/Mozilla/Mobile/Viewport_meta_tag)で紹介されています。
 
-> **Note:** [device adaptation](https://dev.w3.org/csswg/css-device-adapt/) という仕様があり、同じ機能を CSS で、 `@viewport` アットルールを使用して定義しています。これはおそらく、そのような情報を置くのにより合理的な場所ですが、この仕様は viewport meta タグほど対応されていないので、今のところはそちらを使うべきでしょう。
+> **メモ:** [device adaptation](https://dev.w3.org/csswg/css-device-adapt/) という仕様があり、同じ機能を CSS で、 `@viewport` アットルールを使用して定義しています。これはおそらく、そのような情報を置くのにより合理的な場所ですが、この仕様は viewport meta タグほど対応されていないので、今のところはそちらを使うべきでしょう。
 
 ## レスポンシブな画像や動画
 

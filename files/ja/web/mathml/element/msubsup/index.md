@@ -1,10 +1,8 @@
 ---
 title: <msubsup>
 slug: Web/MathML/Element/msubsup
-tags:
-  - MathML
-translation_of: Web/MathML/Element/msubsup
 ---
+
 {{MathMLRef}}
 
 MathML `<msubsup>`要素は、下付き文字と上付き文字の両方を一緒に式に付けるために使用されます。

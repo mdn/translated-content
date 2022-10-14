@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt/valueOf
 ---
+
 {{JSRef}}
 
 La méthode **`valueOf()`** renvoie la valeur primitive encapsulée dans un objet {{jsxref("BigInt")}}.

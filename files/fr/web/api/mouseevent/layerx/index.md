@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/UIEvent/layerX
 original_slug: Web/API/UIEvent/layerX
 ---
+
 {{APIRef("DOM Events")}} {{Non-standard_header}}
 
 La propriété en lecture seule **`UIEvent.layerX`** retourne la coordonnée horizontale de l'évènement relativement à la couche en cours.

@@ -1,27 +1,8 @@
 ---
 title: '<img>: 画像埋め込み要素'
 slug: Web/HTML/Element/img
-tags:
-  - コンテンツ
-  - 要素
-  - グラフィック
-  - HTML
-  - HTML グラフィック
-  - HTML 画像
-  - HTML 写真
-  - HTML Pictures
-  - HTML embedded content
-  - 画像
-  - 画像要素
-  - メディア
-  - マルチメディア
-  - 写真
-  - Pictures
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.img
-translation_of: Web/HTML/Element/img
 ---
+
 {{HTMLRef}}
 
 **`<img>`**  は [HTML](/ja/docs/Web/HTML) の要素で、文書に画像を埋め込みます。
@@ -43,7 +24,7 @@ translation_of: Web/HTML/Element/img
 
 HTML 標準では、対応する画像形式を指定していないので、{{Glossary("user agent", "ユーザーエージェント")}}によって対応する画像形式は異なります。
 
-> **Note:** [画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Formats/Image_types) には、画像ファイルとウェブブラウザーの対応に関する包括的な情報があります。
+> **メモ:** [画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Formats/Image_types) には、画像ファイルとウェブブラウザーの対応に関する包括的な情報があります。
 > この節は概要のみです。
 
 ウェブで最もよく使われる画像ファイル形式は、以下の通りです。
@@ -78,7 +59,7 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 
   - : この属性は、画像を説明する代替文字列を定義します。
 
-    > **Note:** ブラウザーは常に画像を表示するわけではありません。ブラウザーが画像を表示しない状況はいくつかがあります。
+    > **メモ:** ブラウザーは常に画像を表示するわけではありません。ブラウザーが画像を表示しない状況はいくつかがあります。
     >
     > - 視覚ブラウザー以外のブラウザー（視覚障碍者向けのものを含む）で閲覧された場合
     > - ユーザーが画像を非表示に設定している場合（帯域の節約、プライバシー上の理由）
@@ -135,7 +116,7 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 
   - : 論理属性で、この画像が[サーバーサイドマップ](https://en.wikipedia.org/wiki/Image_map#Server-side)の一部であるかを示します。そうである場合は、クリック位置の正確な座標をサーバーに送信します。
 
-    > **Note:** この属性は `<img>` 要素が、有効な {{htmlattrxref("href","a")}} 属性を持つ {{htmlelement("a")}} 要素の子孫である場合に限り許可されます。これにより、ポインティングデバイスを持たないユーザーのフォールバック先を提供します。
+    > **メモ:** この属性は `<img>` 要素が、有効な {{htmlattrxref("href","a")}} 属性を持つ {{htmlelement("a")}} 要素の子孫である場合に限り許可されます。これにより、ポインティングデバイスを持たないユーザーのフォールバック先を提供します。
 
 - {{htmlattrdef("loading")}}
 
@@ -144,7 +125,7 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
     - `eager`: 画像が現在可視ビューポートに入っているかどうかにかかわらず、直ちに画像を読み込みます (これが既定値です)。
     - `lazy`: 画像がブラウザーで定義されたビューポートからの距離に達するまで、画像の読み込みを遅延させます。これは、画像が必要とされるのが合理的に確実になるまで、処理に必要なネットワークやストレージの帯域幅を使用しないようにするためです。これは一般的に、ほとんどの典型的な使用法において、コンテンツの性能を向上させることができます。
 
-      > **Note:** 読み込みが延期されるのは JavaScript が有効になっているときだけです。これはトラッキング対策であり、スクリプトが無効になっているときにユーザーエージェントが遅延読み込みに対応している場合でも、サーバーがいつ何枚の画像が要求されたかを追跡できるようにページのマークアップに画像を戦略的に配置することで、サイトがセッション全体を通してユーザーのおおよそのスクロール位置を追跡することが可能になるからです。
+      > **メモ:** 読み込みが延期されるのは JavaScript が有効になっているときだけです。これはトラッキング対策であり、スクリプトが無効になっているときにユーザーエージェントが遅延読み込みに対応している場合でも、サーバーがいつ何枚の画像が要求されたかを追跡できるようにページのマークアップに画像を戦略的に配置することで、サイトがセッション全体を通してユーザーのおおよそのスクロール位置を追跡することが可能になるからです。
 
 - {{htmlattrdef("referrerpolicy")}}
 
@@ -194,7 +175,7 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 
   - : 要素に関連づけられた[イメージマップ](/ja/docs/Web/HTML/Element/map)の部分的な {{Glossary("URL")}} ('`#`' で始まる) です。
 
-    > **Note:** `<img>` 要素が {{htmlelement("a")}} または {{HTMLElement("button")}} 要素の子孫である場合は、この属性を使用することはできません。
+    > **メモ:** `<img>` 要素が {{htmlelement("a")}} または {{HTMLElement("button")}} 要素の子孫である場合は、この属性を使用することはできません。
 
 ### 非推奨の属性
 
@@ -221,7 +202,7 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 
   - : 画像の詳細な説明へのリンクです。有効な値は、 {{Glossary("URL")}} または要素の {{htmlattrxref("id")}} です。
 
-    > **Note:** この属性は、最新の {{Glossary("W3C")}} のバージョンである [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc) でも言及されていますが、 {{Glossary("WHATWG")}} の [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) では完全に削除されています。将来が不確実なので、代わりに、[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) または[`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details) のような {{Glossary("WAI")}}-{{Glossary("ARIA")}} の代替手段を使用してください。
+    > **メモ:** この属性は、最新の {{Glossary("W3C")}} のバージョンである [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc) でも言及されていますが、 {{Glossary("WHATWG")}} の [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) では完全に削除されています。将来が不確実なので、代わりに、[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) または[`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details) のような {{Glossary("WAI")}}-{{Glossary("ARIA")}} の代替手段を使用してください。
 
 - {{htmlattrdef("name")}} {{deprecated_inline}}
   - : 要素の名前です。代わりに {{htmlattrxref("id")}} 属性を使用してください。
@@ -290,7 +271,7 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 
 {{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}
 
-> **Note:** その場で大きさを変更してみるには、{{LiveSampleLink('Using_the_srcset_and_sizes_attributes', 'この例を別なページで表示')}}させる必要があり、そうすればコンテンツ領域の大きさを実際に使用することができます。
+> **メモ:** その場で大きさを変更してみるには、{{LiveSampleLink('Using_the_srcset_and_sizes_attributes', 'この例を別なページで表示')}}させる必要があり、そうすればコンテンツ領域の大きさを実際に使用することができます。
 
 ## セキュリティとプライバシーの考慮事項
 

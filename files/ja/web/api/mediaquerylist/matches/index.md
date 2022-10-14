@@ -1,21 +1,6 @@
 ---
 title: MediaQueryList.matches
 slug: Web/API/MediaQueryList/matches
-tags:
-  - API
-  - Adaptive Design
-  - CSSOM
-  - CSSOM View
-  - DOM
-  - Media Queries
-  - MediaQueryList
-  - Property
-  - Reference
-  - matches
-  - アダプティブデザイン
-  - プロパティ
-  - メディアクエリー
-translation_of: Web/API/MediaQueryList/matches
 ---
 
 {{APIRef("CSSOM")}}

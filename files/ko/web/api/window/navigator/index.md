@@ -16,7 +16,9 @@ translation_of: Web/API/Window/navigator
 
 ## 구문
 
-    const navigatorObject = window.navigator
+```js
+const navigatorObject = window.navigator
+```
 
 ## 명세
 

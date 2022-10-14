@@ -1,14 +1,6 @@
 ---
 title: 파일 다루기
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-tags:
-  - Beginner
-  - CodingScripting
-  - Files
-  - Guide
-  - HTML
-  - l10n:priority
-translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 original_slug: Learn/Getting_started_with_the_web/파일들_다루기
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}

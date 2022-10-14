@@ -3,6 +3,7 @@ title: 进行测试的策略
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 这篇文章主要是讨论如何进行跨浏览器测试，回答一些比较常见的疑惑，譬如：“什么是跨浏览器测试？”，“会遇到哪些常见的问题？”以及“如何测试、区分以及修复问题？”
@@ -12,10 +13,10 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
     <tr>
       <th scope="row">准备：</th>
       <td>
-        熟练掌握 <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, 和
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+        熟练掌握 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 和
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a
+          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >跨浏览器测试的核心概念</a
         >。
       </td>
@@ -189,7 +190,7 @@ You may notice from the text in the example that it won't work in IE8 — this i
 
 仿真器基本上是在计算机内运行并模拟某种设备或特定设备条件的程序，允许您比查找要测试的特定硬件/软件组合更方便地执行某些测试。
 
-仿真器可能与测试设备条件一样简单。例如，如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计，则可以使用 Firefox 的[Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode)。Safari 也有类似的模式，可以通过访问“*Safari > 首选项”*和"显示开发"菜单，然后选择"开发"\&gt;"输入响应式设计模式"来启用。 Chrome 也有类似的功能：设备模式 (请参阅[Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/))。
+仿真器可能与测试设备条件一样简单。例如，如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计，则可以使用 Firefox 的[Responsive Design Mode](/zh-CN/docs/Tools/Responsive_Design_Mode)。Safari 也有类似的模式，可以通过访问“*Safari > 首选项”*和"显示开发"菜单，然后选择"开发"\&gt;"输入响应式设计模式"来启用。Chrome 也有类似的功能：设备模式 (请参阅[Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/))。
 
 不过，您经常必须安装某种仿真器。要测试的最常见设备/浏览器如下所示：
 

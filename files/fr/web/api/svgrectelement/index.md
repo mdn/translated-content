@@ -3,6 +3,7 @@ title: SVGRectElement
 slug: Web/API/SVGRectElement
 translation_of: Web/API/SVGRectElement
 ---
+
 {{APIRef("SVG")}}
 
 L'interface `SVGRectElement` fournit un accès aux propriétés et aux méthodes de l'élément {{SVGElement("rect")}}.

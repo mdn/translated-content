@@ -1,12 +1,8 @@
 ---
 title: content_security_policy
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

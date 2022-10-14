@@ -2,6 +2,7 @@
 title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
 ---
+
 {{JSRef}}
 
 **`Uint8Array`** 数组类型表示一个 8 位无符号整型数组，创建时内容被初始化为 0。创建完后，可以以对象的方式或使用数组下标索引的方式引用数组中的元素。
@@ -16,7 +17,7 @@ new Uint8Array(object);
 new Uint8Array(buffer [, byteOffset [, length]]);
 ```
 
-构造语法和参数的更多信息请参见 _[TypedArray](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+构造语法和参数的更多信息请参见 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
 
 ## 属性
 
@@ -25,7 +26,7 @@ new Uint8Array(buffer [, byteOffset [, length]]);
 - Uint8Array.length
   - : 静态属性 length 一直为 0。想获知其真实长度（元素个数），请参阅 {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}.
 - {{jsxref("TypedArray.name", "Uint8Array.name")}}
-  - : 返回构造名的字符串，对 Uint8Array 类型而言返回 “Uint8Array”
+  - : 返回构造名的字符串，对 Uint8Array 类型而言返回“Uint8Array”
 - {{jsxref("TypedArray.prototype", "Uint8Array.prototype")}}
   - : _TypedArray_ 对象的原型。
 
@@ -51,7 +52,7 @@ new Uint8Array(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.prototype.byteOffset", "Uint8Array.prototype.byteOffset")}} {{readonlyInline}}
   - : 返回`Uint8Array` 距离其 {{jsxref("ArrayBuffer")}} 起始位置的偏移（字节数）。在构造时期固定，所以是 **只读的**。
 - {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}} {{readonlyInline}}
-  - : 返回保存在 `Uint8Array`中的元素数量。 在构造时期固定，所以是 **只读的**。
+  - : 返回保存在 `Uint8Array`中的元素数量。在构造时期固定，所以是 **只读的**。
 
 ### 方法
 
@@ -86,9 +87,9 @@ new Uint8Array(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.move", "Uint8Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
   - : {{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}的之前的非标准版本。
 - {{jsxref("TypedArray.reduce", "Uint8Array.prototype.reduce()")}}
-  - : 对累加器和数组的每个值应用函数（从左到右），使其归约为单一的值， 另见 {{jsxref("Array.prototype.reduce()")}}。
+  - : 对累加器和数组的每个值应用函数（从左到右），使其归约为单一的值，另见 {{jsxref("Array.prototype.reduce()")}}。
 - {{jsxref("TypedArray.reduceRight", "Uint8Array.prototype.reduceRight()")}}
-  - : 对累加器和数组的每个值应用函数（从右到左），使其归约为单一的值， 另见 {{jsxref("Array.prototype.reduceRight()")}}。
+  - : 对累加器和数组的每个值应用函数（从右到左），使其归约为单一的值，另见 {{jsxref("Array.prototype.reduceRight()")}}。
 - {{jsxref("TypedArray.reverse", "Uint8Array.prototype.reverse()")}}
   - : 翻转数组中的元素顺序 — 第一个变为最后，最后变为第一个。另见 {{jsxref("Array.prototype.reverse()")}}。
 - {{jsxref("TypedArray.set", "Uint8Array.prototype.set()")}}
@@ -163,6 +164,6 @@ var dv = new Uint8Array([1, 2, 3]);
 
 ## 相关内容
 
-- [JavaScript 类型化数组](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

@@ -1,18 +1,11 @@
 ---
 title: HTMLSlotElement
 slug: Web/API/HTMLSlotElement
-tags:
-  - API
-  - HTMLSlotElement
-  - インターフェイス
-  - リファレンス
-  - シャドウ DOM
-browser-compat: api.HTMLSlotElement
-translation_of: Web/API/HTMLSlotElement
 ---
+
 {{APIRef('Web Components')}}
 
-**`HTMLSlotElement`** は [Shadow DOM API](/en-US/docs/Web/Web_Components/Using_shadow_DOM) のインターフェイスで、 HTML の {{HTMLElement("slot")}} 要素の名前と割り当てられたノードにアクセスできるようにします。
+**`HTMLSlotElement`** は [Shadow DOM API](/ja/docs/Web/Web_Components/Using_shadow_DOM) のインターフェイスで、 HTML の {{HTMLElement("slot")}} 要素の名前と割り当てられたノードにアクセスできるようにします。
 
 ## プロパティ
 
@@ -31,7 +24,7 @@ translation_of: Web/API/HTMLSlotElement
 ## イベント
 
 - {{domxref('HTMLSlotElement.slotchange_event', 'slotchange')}}
-  - : スロットに含まれるノードが変更されたときに `HTMLSlotElement` インスタンス ([`<slot>`](/en-US/docs/Web/HTML/Element/slot) 要素) に発生します。
+  - : スロットに含まれるノードが変更されたときに `HTMLSlotElement` インスタンス ([`<slot>`](/ja/docs/Web/HTML/Element/slot) 要素) に発生します。
 
 ## 例
 

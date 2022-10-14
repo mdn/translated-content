@@ -6,6 +6,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 original_slug: Mozilla/Add-ons/WebExtensions/Ajouter_un_bouton_a_la_barre_d_outils
 ---
+
 {{AddonSidebar}}
 
 Les boutons de la barre d’outils sont l’un des principaux composants UI disponibles aux WebExtensions. Les boutons de la barre d’outils sont présents dans la barre d’outils principale du navigateur et contiennent une icône. Lorsque l’utilisateur clique sur l’icône, une des deux choses peut arriver&nbsp;:

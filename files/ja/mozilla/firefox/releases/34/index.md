@@ -1,11 +1,8 @@
 ---
 title: Firefox 34 for developers
 slug: Mozilla/Firefox/Releases/34
-tags:
-  - Firefox
-  - Releases
-translation_of: Mozilla/Firefox/Releases/34
 ---
+
 Gecko 34 を搭載した Firefox 34 は、米国時間 2014 年 12 月 1 日にリリースされました。このページでは、開発者に影響する Firefox 34 の変更点をまとめています。
 
 ## Web 開発者向けの変更点一覧
@@ -54,12 +51,12 @@ _変更なし。_
 - ES6 の新たなオブジェクトである {{jsxref("WeakSet")}} を実装しました ({{bug(792439)}})。
 - 最近の仕様の変更に合致するよう、ES6 の [Symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (Nightly チャンネルのみ有効) を更新しました ({{bug(1042602)}}):
 
-  - symbol を数値に変換しようとしたときに、[`TypeError`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError "The TypeError object represents an error when a value is not of the expected type.") が発生するようになりました。
+  - symbol を数値に変換しようとしたときに、[`TypeError`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError) が発生するようになりました。
   - 寛容な等価性を使用するとき、`Object(sym) == sym` は `true` を返すようになりました。
 
 - 実験的な実装であった {{jsxref("TypedArray.prototype.move()")}} メソッド (以前の Nightly および Aurora チャンネルでのみ有効) を、ES6 標準の {{jsxref("TypedArray.prototype.copyWithin()")}} メソッドの実装で置き換えました ({{bug(1021379)}})。
 - [Strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で、ES6 の仕様に応じて[オブジェクトリテラルでの重複するプロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#Duplicate_property_names)に対して `SyntaxError` が発生しないようになりました ({{bug(1041128)}})。
-- 正規表現において (`String.replace` を含む)、量指定子が妨げたために捕獲式集合が調査されなかったときのマッチ文字列が、空文字列から `undefined` に変わりました ({{bug(369778)}} および[サンプルコード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#Gecko_specific_notes)を参照)。Web 互換性のため、RegExp.$N は引き続き空文字列を返します ({{bug(1053944)}})。
+- 正規表現において (`String.replace` を含む)、量指定子が妨げたために捕獲式集合が調査されなかったときのマッチ文字列が、空文字列から `undefined` に変わりました ({{bug(369778)}} および[サンプルコード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#firefox_固有の注意事項)を参照)。Web 互換性のため、RegExp.$N は引き続き空文字列を返します ({{bug(1053944)}})。
 - [Destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) で、ES6 の [Spread Operator](/ja/docs/Web/JavaScript/Reference/Operators/Spread_operator)をサポートしました ({{bug(933276)}})。
 - [Destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) で、配列のような手順に代わりイテレータの手順を使用するようになりました ({{bug(933276)}})。
 - {{jsxref("Proxy.revocable()")}} を実装しました ({{bug(978279)}})。

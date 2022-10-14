@@ -10,8 +10,10 @@ El método **`toSource()`** devuelve un string representando el código fuente d
 
 ## Sintaxis
 
-    function.toSource();
-    Function.toSource();
+```js
+function.toSource();
+Function.toSource();
+```
 
 ### Parámetros
 

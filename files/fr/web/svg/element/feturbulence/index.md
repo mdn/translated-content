@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feTurbulence
 ---
+
 {{SVGRef}}
 
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feTurbulence>`** crée une image en utilisant la [fonction de turbulence de Perlin](https://fr.wikipedia.org/wiki/Bruit_de_Perlin). Cela permet de créer des textures artificielles comme des nuages, du marbre, etc.
@@ -58,14 +59,11 @@ Cet élément implémente l'interface {{domxref("SVGFETurbulenceElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Filters 1.0', '#feTurbulenceElement', '&lt;feTurbulence&gt;')}}         | {{Spec2('Filters 1.0')}} | Aucun changement    |
-| {{SpecName('SVG1.1', 'filters.html#feTurbulenceElement', '&lt;feTurbulence&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feTurbulence")}}
+{{Compat}}
 
 ## Voir aussi
 

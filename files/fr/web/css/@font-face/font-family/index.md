@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@font-face/font-family
 ---
+
 {{CSSRef}}
 
 Le descripteur **`font-family`** permet aux auteurs d'un document de définir la police de caractères à utiliser au sein d'une règle @ {{cssxref("@font-face")}}.
@@ -28,9 +29,13 @@ font-family: exemplepolice;
 - `<family-name>`
   - : Définit le nom de la police de caractères.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -43,12 +48,8 @@ font-family: exemplepolice;
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#font-family-desc', 'font-family')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face.font-family")}}
+{{Compat}}

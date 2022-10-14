@@ -2,6 +2,7 @@
 title: Window.ondeviceorientationabsolute
 slug: Web/API/Window/deviceorientationabsolute_event
 ---
+
 {{ ApiRef() }}{{Non-standard_header}}
 
 ## 摘要
@@ -21,11 +22,11 @@ This event handler is not currently part of any specification.
 
 ## Browser compatibility
 
-{{Compat("api.Window.ondeviceorientationabsolute")}}
+{{Compat}}
 
 ## See also
 
 - {{ event("deviceorientation") }}
 - {{ domxref("DeviceOrientationEvent") }}
 - {{domxref("Window.ondeviceorientation","ondeviceorientation")}}
-- [Detecting device orientation](/en/Detecting_device_orientation)
+- [Detecting device orientation](/zh-CN/Detecting_device_orientation)

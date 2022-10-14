@@ -12,6 +12,7 @@ tags:
   - query
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/query
 ---
+
 {{AddonSidebar()}}
 
 Obtient des informations sur toutes les identités contextuelles ou sur les identités contextuelles correspondant à un argument de filtre donné.

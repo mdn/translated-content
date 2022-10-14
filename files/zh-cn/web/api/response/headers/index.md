@@ -2,6 +2,7 @@
 title: Response.headers
 slug: Web/API/Response/headers
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} 接口的只读属性 **`headers`** 包含与响应关联的{{domxref("Headers")}}对象。
@@ -42,10 +43,10 @@ fetch(myRequest).then(function(response) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.headers")}}
+{{Compat}}
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

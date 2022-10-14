@@ -1,18 +1,8 @@
 ---
 title: width
 slug: Web/CSS/width
-tags:
-  - CSS
-  - CSS プロパティ
-  - レイアウト
-  - リファレンス
-  - 寸法
-  - recipe:css-property
-  - size
-  - width
-browser-compat: css.properties.width
-translation_of: Web/CSS/width
 ---
+
 {{CSSRef}}
 
 **`width`** は CSS のプロパティで、要素の幅を設定します。既定では、このプロパティは[コンテンツ領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)の幅を設定しますが、 {{cssxref("box-sizing")}} を `border-box` に設定すると、[境界領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area)の幅を設定します。

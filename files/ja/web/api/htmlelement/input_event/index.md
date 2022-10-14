@@ -1,22 +1,8 @@
 ---
 title: 'HTMLElement: input イベント'
 slug: Web/API/HTMLElement/input_event
-tags:
-  - コンテンツ
-  - 編集
-  - Event
-  - フォーム
-  - HTML DOM
-  - HTMLElement
-  - Input
-  - InputEvent
-  - NeedsMobileBrowserCompatibility
-  - リファレンス
-  - データ
-  - 値
-browser-compat: api.HTMLElement.input_event
-translation_of: Web/API/HTMLElement/input_event
 ---
+
 {{APIRef}}
 
 **`input`** イベントは、 {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} の各要素の値 (`value`) が変更されたときに発生します。
@@ -48,7 +34,7 @@ translation_of: Web/API/HTMLElement/input_event
 
 {{htmlelement("textarea")}} およびテキスト入力を受け入れる {{htmlelement("input")}} 要素（`type=text`、`type=tel`、など）では、インターフェイスは {{DOMxRef("InputEvent")}} です。それ以外の場合は、インターフェイスは {{DOMxRef("Event")}} になります。
 
-> **Note:** `input` イベントは、要素の `value` の値が変化するたびに発生します。これは、 {{domxref("HTMLElement/change_event", "change")}} イベントが Enter キーが押されたり、選択肢から値が選択されたりするような、値が決定したときに発生するのとは異なります。
+> **メモ:** `input` イベントは、要素の `value` の値が変化するたびに発生します。これは、 {{domxref("HTMLElement/change_event", "change")}} イベントが Enter キーが押されたり、選択肢から値が選択されたりするような、値が決定したときに発生するのとは異なります。
 
 ## 例
 

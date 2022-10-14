@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/spellcheck
 original_slug: Web/HTML/Attributs_universels/spellcheck
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'attribut universel **`spellcheck`** est un attribut à valeur contrainte qui définit si l'orthographe du contenu de l'élément doit être vérifiée.
@@ -133,14 +134,11 @@ La valeur par défaut sera différente selon l'élément et le navigateur :
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "interaction.html#spelling-and-grammar-checking", "spellcheck")}} | {{Spec2('HTML WHATWG')}} | Pas de changement depuis la dernière dérivation, {{SpecName('HTML5.1')}} |
-| {{SpecName('HTML5.1', "editing.html#spelling-and-grammar-checking", "spellcheck")}}         | {{Spec2('HTML5.1')}}     | Dérivée de {{SpecName('HTML WHATWG')}}, définition initiale.             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.spellcheck")}}
+{{Compat}}
 
 ## Voir aussi
 

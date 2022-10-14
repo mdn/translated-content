@@ -3,6 +3,7 @@ title: Findbar API
 slug: orphaned/Findbar_API
 original_slug: Findbar_API
 ---
+
 Mozilla 1.9 から検索バー機能が拡張や XULRunner アプリケーション向けに toolkit xul ウィジットとして利用可能になります。
 
 ### API
@@ -20,7 +21,14 @@ findbar 要素は次のいずれかの方法で特定の browser 要素に追加
 
     - aMode - 使う検索モード。`FIND_NORMAL` か `FIND_TYPEAHEAD`、`FIND_LINKS` のどれか。指定されなければ最後の検索モードか、それもなければ `FIND_NORMAL` が使われます。
 
-<dl><dt>close</dt><dd>検索バーを閉じる。</dd><dt>startFind</dt><dd>検索バーを開き、検索フィールドにフォーカスをあて中身を選択します。このメソッドを呼ぶと最初に検索バーが使われるときに内容を空にします。<ul><li>aMode - 使う検索モード。<code>FIND_NORMAL</code> か <code>FIND_TYPEAHEAD</code>、<code>FIND_LINKS</code> のどれか。指定されなければ最後の検索モードか それもなければ <code>FIND_NORMAL</code> が使われます。</li></ul></dd><dd>通常、ウィンドウの検索コマンドはこのメソッドにマップされるべきです。例えば</dd></dl>
+- close
+  - : 検索バーを閉じる。
+- startFind
+  - : 検索バーを開き、検索フィールドにフォーカスをあて中身を選択します。このメソッドを呼ぶと最初に検索バーが使われるときに内容を空にします。
+
+    - aMode - 使う検索モード。`FIND_NORMAL` か `FIND_TYPEAHEAD`、`FIND_LINKS` のどれか。指定されなければ最後の検索モードか それもなければ `FIND_NORMAL` が使われます。
+
+    通常、ウィンドウの検索コマンドはこのメソッドにマップされるべきです。例えば
 
 ```
 <command name="cmd_find" oncommand="gFindBar.startFind(gFindBar.FIND_NORMAL);"/>

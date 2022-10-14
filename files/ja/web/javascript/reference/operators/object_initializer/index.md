@@ -1,21 +1,8 @@
 ---
 title: オブジェクト初期化子
 slug: Web/JavaScript/Reference/Operators/Object_initializer
-tags:
-  - ECMAScript 2015
-  - JSON
-  - JavaScript
-  - 言語機能
-  - リテラル
-  - メソッド
-  - オブジェクト
-  - Primary Expression
-  - computed
-  - mutation
-  - プロパティ
-browser-compat: javascript.operators.object_initializer
-translation_of: Web/JavaScript/Reference/Operators/Object_initializer
 ---
+
 {{JsSidebar("Operators")}}
 
 オブジェクトは [`new Object()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object)、[`Object.create()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create)、*リテラル*表記法 (*初期化子*表記法) を使用して初期化されます。オブジェクト初期化子はオブジェクトのプロパティ名と関連した値のゼロ以上のペアのリストで、中括弧 (`{}`) で囲まれます。
@@ -258,7 +245,7 @@ let mergedObj = { ...obj1, ...obj2 }
 // Object { foo: "baz", x: 42, y: 13 }
 ```
 
-> **Warning:** {{jsxref("Object.assign()")}} は[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を起動しますが、スプレッド構文は起動しません。
+> **警告:** {{jsxref("Object.assign()")}} は[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を起動しますが、スプレッド構文は起動しません。
 
 ### プロトタイプの変更
 

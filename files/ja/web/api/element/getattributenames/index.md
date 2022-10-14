@@ -2,6 +2,7 @@
 title: Element.getAttributeNames()
 slug: Web/API/Element/getAttributeNames
 ---
+
 {{APIRef("DOM")}}
 
 **`getAttributeNames()`** は {{domxref("Element")}} インターフェースのメソッドで、この要素の属性名を文字列の {{jsxref("Array")}} で返します。要素に属性がない場合は、空の配列を返します。

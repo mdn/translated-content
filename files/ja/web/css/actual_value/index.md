@@ -1,13 +1,8 @@
 ---
 title: 実効値
 slug: Web/CSS/actual_value
-tags:
-  - CSS
-  - Guide
-  - Reference
-spec-urls: https://www.w3.org/TR/CSS22/cascade.html#actual-value
-translation_of: Web/CSS/actual_value
 ---
+
 {{CSSRef}}
 
 **実効値** (actual value) は [CSS](/ja/docs/Web/CSS) プロパティにおいて、すべての必要な推定が適用された後の [使用値](/ja/docs/Web/CSS/used_value) (used value) です。例えば、境界を整数値のピクセル幅でしか描けない{{glossary("user agent", "ユーザーエージェント")}}は、境界の太さを近似値の整数に丸めるかもしれません。

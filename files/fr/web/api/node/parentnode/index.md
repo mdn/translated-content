@@ -9,6 +9,7 @@ tags:
   - parent
 translation_of: Web/API/Node/parentNode
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **parentNode** renvoie le parent du nœud spécifié dans l'arborescence de DOM.

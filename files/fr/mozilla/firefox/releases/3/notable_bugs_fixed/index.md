@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 translation_of: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 original_slug: Bugs_importants_corrigés_dans_Firefox_3
 ---
+
 {{FirefoxSidebar}}
 
 Cet article fait la liste des corrections importantes faisant partie de Firefox 3 qui ne sont pas nécessairement évidentes à trouver dans la documentation.

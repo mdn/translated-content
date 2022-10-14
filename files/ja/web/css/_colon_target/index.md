@@ -1,16 +1,8 @@
 ---
 title: ':target'
 slug: Web/CSS/:target
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.target
-translation_of: Web/CSS/:target
 ---
+
 {{CSSRef}}
 
 **`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 URL のフラグメントに一致する {{htmlattrxref("id")}} を持つ固有の要素 (*対象要素*) を表します。
@@ -36,7 +28,9 @@ http://www.example.com/index.html#section2
 
 ## 構文
 
-{{csssyntax}}
+```
+:target
+```
 
 ## 例
 
@@ -91,7 +85,7 @@ p:target i {
 
 `:target` 擬似クラスを使用して JavaScript を使わずにライトボックスを作成することができます。このテクニックはページ内の最初は非表示の要素にリンクを作ることができることを利用しています。いったん対象となれば、 CSS で `display` を変更して表示させます。
 
-> **Note:** `:target` 擬似クラスを使用した純粋な CSS のライトボックスのもっと完全な版は、 [GitHub で利用できます](https://github.com/madmurphy/takefive.css/) ([デモ](https://madmurphy.github.io/takefive.css/))。
+> **メモ:** `:target` 擬似クラスを使用した純粋な CSS のライトボックスのもっと完全な版は、 [GitHub で利用できます](https://github.com/madmurphy/takefive.css/) ([デモ](https://madmurphy.github.io/takefive.css/))。
 
 #### HTML
 

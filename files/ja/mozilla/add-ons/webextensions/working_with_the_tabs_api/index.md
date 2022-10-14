@@ -1,15 +1,8 @@
 ---
 title: Tabs API を使う
 slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
-tags:
-  - Add-ons
-  - Beginner
-  - Extensions
-  - How-to
-  - WebExtensions
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 ---
+
 {{AddonSidebar}}
 
 タブを使うとユーザーはブラウザーウィンドウに複数のウェブページを開いてウェブページ間をスイッチできるようになります。Tabs API により、タブを操作して、新しい方法でタブを使ったり拡張機能の機能として配布できます。
@@ -24,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 
 その次には、API で提供されるその他のいろいろな機能を見て終わります。
 
-> **Note:** **注:** There are some Tab API features covered elsewhere. These are the methods you can use to manipulate tab content with scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, and {{WebExtAPIRef("tabs.executeScript")}}). If you want more information on these methods, see the Concepts article [Content scripts](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) and the how-to guide [Modify a web page](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page).
+> **メモ:** There are some Tab API features covered elsewhere. These are the methods you can use to manipulate tab content with scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, and {{WebExtAPIRef("tabs.executeScript")}}). If you want more information on these methods, see the Concepts article [Content scripts](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) and the how-to guide [Modify a web page](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page).
 
 ## 権限と Tabs API
 
@@ -85,7 +78,7 @@ Tabs API 機能の大半では権限は不要ですが、次の例外はあり�
 }
 ```
 
-> **Note:** 次のことに注意します:
+> **メモ:** 次のことに注意します:
 >
 > - **tabs.html は `browser_action` の `default_popup` で定義されていること。**これはユーザーが拡張機能のツールバーアイコンをクリックするといつでも表示されます。
 > - **権限にタブが入っていること。**これはタブリスト機能をサポートするのに必要であり、なぜなら拡張機能がポップアップに表示するためにタブのタイトルを読み取るためです。
@@ -137,9 +130,9 @@ Define the other menu items
 
 上記のまとめとして:
 
-1.  メニュー項目が定義されます。
-2.  タブのリストを入れるため、ID が `tabs-list` の空の `div` が定義されます。
-3.  tabs.js が呼ばれます。
+1. メニュー項目が定義されます。
+2. タブのリストを入れるため、ID が `tabs-list` の空の `div` が定義されます。
+3. tabs.js が呼ばれます。
 
 ### tabs.js
 
@@ -165,10 +158,10 @@ function getCurrentWindowTabs() {
 
 開始するには:
 
-1.  `tabs-list` `div` を取得。
-2.  文書のフラグメントを作成 (ここにリストが作成される)。
-3.  カウンターをセット。
-4.  `tabs-list` `div` のコンテンツをクリアする。
+1. `tabs-list` `div` を取得。
+2. 文書のフラグメントを作成 (ここにリストが作成される)。
+3. カウンターをセット。
+4. `tabs-list` `div` のコンテンツをクリアする。
 
 ```js
 function listTabs() {
@@ -183,8 +176,8 @@ function listTabs() {
 
 次に、それぞれのタブのリンクを作ります:
 
-1.  {{WebExtAPIRef("tabs.Tab")}} オブジェクトからの最初の 5 項目でループする。
-2.  各項目ごとに、文書のフラグメントのハイパーリンクを追加する。
+1. {{WebExtAPIRef("tabs.Tab")}} オブジェクトからの最初の 5 項目でループする。
+2. 各項目ごとに、文書のフラグメントのハイパーリンクを追加する。
 
     - リンクのラベル—つまり、そのテキスト—が、タブのタイトル (ない場合はその ID)を使って、セットされる
     - タブの ID を使ってリンクのアドレスがセットされる。
@@ -259,7 +252,7 @@ The following functions are available:
 - update the tab’s URL—effectively browse to a new page—({{WebExtAPIRef("tabs.update")}}).
 - reload the tab’s page ({{WebExtAPIRef("tabs.reload")}}).
 
-> **Note:** **NOTE:**
+> **メモ:**
 >
 > These functions all require the ID (or IDs) of the tab they are manipulating:
 >

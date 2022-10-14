@@ -4,6 +4,7 @@ slug: Web/API/Gamepad_API/Using_the_Gamepad_API
 translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 original_slug: Web/Guide/API/Gamepad
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}
 
 HTML5 a introduit de nombreuses briques technologiques qui permettent le développement de jeux interactifs. Les fonctionnalités offertes par `<canvas>`, WebGL, `<audio>`, et `<video>`, ainsi que les API JavaScript correspondantes, ont suffisamment gagné en maturité pour réaliser des tâches qui nécessitaient auparavant du code natif. L'API <i lang="en">Gamepad</i> est un outil qui permet d'accéder et d'utiliser les manettes et autres contrôleurs de jeux.

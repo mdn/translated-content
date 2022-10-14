@@ -1,13 +1,8 @@
 ---
 title: Signature (署名 (セキュリティ) )
 slug: Glossary/Signature/Security
-tags:
-  - 暗号
-  - 用語集
-  - プライバシー
-  - セキュリティ
-translation_of: Glossary/Signature/Security
 ---
+
 **署名** もしくは*デジタル署名*とは、メッセージが正当であることを示す {{glossary("protocol", "プロトコル")}} です。
 
 **署名プロセス**では最初に、与えられたメッセージの{{glossary("hash", "ハッシュ")}}から、署名する主体にリンクされたデジタル署名を、主体の秘密{{glossary("key", "鍵")}}を用いて生成します。
@@ -21,5 +16,5 @@ translation_of: Glossary/Signature/Security
 
 ## 関連情報
 
-- Wikipedia 上の {{Interwiki("wikipedia", "デジタル署名")}}
+- Wikipedia 上の [デジタル署名](https://ja.wikipedia.org/wiki/デジタル署名)
 - {{glossary("digest", "ダイジェスト")}}, {{glossary("encryption", "暗号化")}} を参照

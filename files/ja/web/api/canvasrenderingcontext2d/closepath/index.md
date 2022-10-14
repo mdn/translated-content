@@ -1,15 +1,8 @@
 ---
 title: CanvasRenderingContext2D.closePath()
 slug: Web/API/CanvasRenderingContext2D/closePath
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.closePath
-translation_of: Web/API/CanvasRenderingContext2D/closePath
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.closePath()`** はキャンバス 2D API のメソッドで、現在の点から現在のサブパスの開始点までの間に直線を追加することを試みます。図形がすでに閉じていたり、 1 つしか点がなかったりした場合は、この関数は何もしません。
@@ -58,7 +51,7 @@ ctx.stroke();
 
 この例では、非接続のサブパス3つからなるスマイリーの顔マークを描画します。
 
-> **Note:** すべての弧について、作成された後で `closePath()` が呼び出されていますが、最後の弧 (サブパス) のみが閉じられます。
+> **メモ:** すべての弧について、作成された後で `closePath()` が呼び出されていますが、最後の弧 (サブパス) のみが閉じられます。
 
 #### HTML
 

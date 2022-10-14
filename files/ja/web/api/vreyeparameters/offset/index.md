@@ -1,8 +1,8 @@
 ---
 title: VREyeParameters.offset
 slug: Web/API/VREyeParameters/offset
-translation_of: Web/API/VREyeParameters/offset
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 {{domxref("VREyeParameters")}} インターフェイスの **`offset`** 読取専用プロパティは，ユーザの両眼の中心からのオフセット量を表します．単位はメートルです．
@@ -19,7 +19,7 @@ var myEyeTranslation = myVRDisplay.getEyeParameters('left').offset;
 
 {{domxref("Float32Array")}}．
 
-> **Note:** _**注記**: 左目の値は負で，右目の場合は正の値になります．_
+> **メモ:** _左目の値は負で，右目の場合は正の値になります．_
 
 ## 例
 

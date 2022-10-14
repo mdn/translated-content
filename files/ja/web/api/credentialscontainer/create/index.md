@@ -1,16 +1,9 @@
 ---
 title: PublicKeyCredentialCreationOptions.authenticatorSelection
 slug: Web/API/CredentialsContainer/create
-tags:
-  - API
-  - Property
-  - PublicKeyCredentialCreationOptions
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-translation_of: Web/API/PublicKeyCredentialCreationOptions/authenticatorSelection
 original_slug: Web/API/PublicKeyCredentialCreationOptions/authenticatorSelection
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`authenticatorSelection`** は {{domxref("PublicKeyCredentialCreationOptions")}} 辞書の任意のプロパティであり、生成操作に使用される認証機器をフィルタリングする条件を指定するオブジェクトです。
@@ -41,7 +34,7 @@ authenticatorSelection = publicKeyCredentialCreationOptions.authenticatorSelecti
 
 The authenticator used for the creation of the public key credential must comply with the requirements.
 
-> **Note:**See {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}} which resolves to `true` when a user-verifiying platform authenticator is available.
+> **メモ:** See {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}} which resolves to `true` when a user-verifiying platform authenticator is available.
 
 ## 例
 

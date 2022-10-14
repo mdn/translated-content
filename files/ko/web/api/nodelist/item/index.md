@@ -9,9 +9,11 @@ translation_of: Web/API/NodeList/item
 
 ## Syntax
 
-    nodeItem = nodeList.item(index)
+```js
+nodeItem = nodeList.item(index)
+```
 
-- `nodeList` 는 `NodeList` 입니다. 일반적으로 [childNodes](/ko/docs/Web/API/Node/childNodes "childNodes") 와 같은 다른 DOM 속성(property) 또는 메서드에서 가져옵니다.
+- `nodeList` 는 `NodeList` 입니다. 일반적으로 [childNodes](/ko/docs/Web/API/Node/childNodes) 와 같은 다른 DOM 속성(property) 또는 메서드에서 가져옵니다.
 - `index` 는 fetch될 node의 index입니다. index는 0 에서 부터 시작합니다.
 - `nodeItem` 은 `item` 메서드가 반환 한 `nodeList` 의 node `index` 입니다.
 
@@ -19,7 +21,9 @@ translation_of: Web/API/NodeList/item
 
 자바스크립트는 NodeList 에서 index를 얻기 위한, 배열과 같은 브라켓 문법(\[])을 제공합니다 :
 
-    nodeItem = nodeList[index]
+```js
+nodeItem = nodeList[index]
+```
 
 ## Example
 

@@ -1,16 +1,8 @@
 ---
 title: Client.id
 slug: Web/API/Client/id
-tags:
-  - API
-  - Client
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - id
-translation_of: Web/API/Client/id
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Client")}} インターフェイスの **`id`** 読み取り専用プロパティは、{{domxref("Client")}} オブジェクトの汎用一意識別子を返します。

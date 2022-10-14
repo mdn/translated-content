@@ -1,16 +1,9 @@
 ---
 title: HTMLAreaElement.hostname
 slug: Web/API/HTMLAreaElement/hostname
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.hostname
-translation_of: Web/API/HTMLAreaElement/hostname
 original_slug: Web/API/HTMLHyperlinkElementUtils/hostname
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAreaElement.hostname`** プロパティは、URL のドメインを含む文字列です。

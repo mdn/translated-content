@@ -1,15 +1,8 @@
 ---
 title: 301 Moved Permanently
 slug: Web/HTTP/Status/301
-tags:
-  - HTTP
-  - Redirect
-  - Reference
-  - Status code
-  - ステータスコード
-  - リダイレクト
-translation_of: Web/HTTP/Status/301
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) の **`301 Moved Permanently`** リダイレクトステータスコードは、リクエストされたリソースが {{HTTPHeader("Location")}} ヘッダーで示された URL へ完全に移動したことを示します。ブラウザーはこのページにリダイレクトし、検索エンジンはリソースへのリンクを更新します (「SEO 用語」では、「リンクジュース」が新しい URL に送られたと言われます)。

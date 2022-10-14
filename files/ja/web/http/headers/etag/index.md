@@ -1,15 +1,8 @@
 ---
 title: ETag
 slug: Web/HTTP/Headers/ETag
-tags:
-  - HTTP
-  - Reference
-  - ヘッダー
-  - リファレンス
-  - レスポンス
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/ETag
 ---
+
 {{HTTPSidebar}}
 
 **`ETag`** は HTTP のレスポンスヘッダーで、リソースの特定バージョンの識別子です。ウェブサーバーは、コンテンツが変更されていない場合はレスポンス全体を再送する必要がないので、キャッシュがより効率的になり通信帯域を節約することができます。加えて、 ETag はリソースが同時に更新されて互いを上書きすること ([「空中衝突」](#Caching_of_unchanged_resources)) を防ぐのに役立ちます。
@@ -96,6 +89,6 @@ If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("304")}}` Not Modified`
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("304")}} `Not Modified`
+- {{HTTPStatus("412")}} `Precondition Failed`
 - [W3C Note: Editing the Web – Detecting the Lost Update Problem Using Unreserved Checkout](https://www.w3.org/1999/04/Editing/)

@@ -5,6 +5,7 @@ translation_of: Web/CSS/transform-function/translate3d()
 original_slug: Web/CSS/transform-function/translate3d()
 browser-compat: css.types.transform-function.translate3d
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`translate3d()`** permet de déplacer un élément dans l'espace tridimensionnel. Cette transformation est définie à l'aide d'un vecteur dont les coordonnées définissent l'amplitude du déplacement pour chaque direction.

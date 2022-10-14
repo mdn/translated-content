@@ -1,13 +1,8 @@
 ---
 title: XPath
 slug: Glossary/XPath
-tags:
-  - CodingScripting
-  - Glossary
-  - XML
-  - XPath
-translation_of: Glossary/XPath
 ---
+
 **XPath** とは{{glossary("XML")}} ドキュメント内のセクションやコンテンツにアクセスできる問い合わせ言語です。
 
 ## 関連項目
@@ -20,4 +15,4 @@ translation_of: Glossary/XPath
 ### 一般知識
 
 - [Official website](http://www.w3.org/standards/techs/xpath#w3c_all)
-- Wikipedia の {{interwiki("wikipedia", "XPath")}}
+- Wikipedia の [XPath](https://ja.wikipedia.org/wiki/XPath)

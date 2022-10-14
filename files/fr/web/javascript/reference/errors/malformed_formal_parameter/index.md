@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
 original_slug: Web/JavaScript/Reference/Erreurs/Malformed_formal_parameter
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

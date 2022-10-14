@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/mark
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<mark>`** représente un texte marqué ou surligné à cause de sa pertinence dans le contexte. Il peut par exemple être utilisé afin d'indiquer les correspondances d'un mot-clé recherché au sein d'un document.
@@ -151,11 +152,8 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-mark-element','&lt;mark&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.mark")}}
+{{Compat}}

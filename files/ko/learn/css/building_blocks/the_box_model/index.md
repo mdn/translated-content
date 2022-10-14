@@ -1,16 +1,6 @@
 ---
 title: 상자 모델
 slug: Learn/CSS/Building_blocks/The_box_model
-tags:
-  - CSS
-  - 디스플레이
-  - 상자 모델
-  - 여백
-  - 초보자
-  - 테두리
-  - 패딩
-  - 학습
-translation_of: Learn/CSS/Building_blocks/The_box_model
 original_slug: Learn/CSS/Building_blocks/상자_모델
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}

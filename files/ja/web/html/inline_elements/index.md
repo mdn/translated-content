@@ -1,19 +1,11 @@
 ---
 title: インライン要素
 slug: Web/HTML/Inline_elements
-tags:
-  - Beginner
-  - HTML
-  - HTML 要素
-  - HTML:Element Reference
-  - Reference
-  - レイアウト
-  - 要素
-translation_of: Web/HTML/Inline_elements
 ---
+
 HTML (**Hypertext Markup Language**) の要素は従来、[「ブロックレベル」要素](/ja/docs/Web/HTML/Block-level_elements)と「インライン」要素に分類されていました。インライン要素は、コンテンツの流れを分断せずに、要素を定義するタグで囲まれた範囲だけを占有するものです。この記事では、 HTML のインライン要素と、 [ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)との違いについて説明します。
 
-> **Note:** インライン要素は新しい行から始まらず、必要な幅のみを占有します。
+> **メモ:** インライン要素は新しい行から始まらず、必要な幅のみを占有します。
 
 ## デモによるインライン要素とブロックレベル要素の比較
 

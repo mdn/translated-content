@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
 ---
+
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API)的 WebGLRenderingContext.bindBuffer() 方法将给定的{{domxref("WebGLBuffer")}}绑定到目标。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API)的 WebGLRenderingContext.bindBuffer() 方法将给定的{{domxref("WebGLBuffer")}}绑定到目标。
 
 ## 语法
 
@@ -16,7 +17,7 @@ void gl.bindBuffer(target, buffer);
 
 - target
 
-  - : {{domxref("GLenum")}} 指定绑定点 (target)。 可能的值：
+  - : {{domxref("GLenum")}} 指定绑定点 (target)。可能的值：
 
     - `gl.ARRAY_BUFFER`: 包含顶点属性的 Buffer，如顶点坐标，纹理坐标数据或顶点颜色数据。
     - `gl.ELEMENT_ARRAY_BUFFER`: 用于元素索引的 Buffer。
@@ -38,7 +39,7 @@ None.
 
 ### 异常
 
-只有一个目标可以绑定到给定的 {{domxref("WebGLBuffer")}} 。 尝试将缓冲区绑定到另一个目标将引发 `INVALID_OPERATION` 错误，并且当前的缓冲区绑定将保持不变。
+只有一个目标可以绑定到给定的 {{domxref("WebGLBuffer")}} 。尝试将缓冲区绑定到另一个目标将引发 `INVALID_OPERATION` 错误，并且当前的缓冲区绑定将保持不变。
 
 一个被{{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}}标记为删除的{{domxref("WebGLBuffer")}}不可重新被绑定，尝试这样做将生成 `INVALID_OPERATION` 错误，并且当前绑定将保持不变。
 
@@ -69,7 +70,7 @@ gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindBuffer")}}
+{{Compat}}
 
 ## 另见
 

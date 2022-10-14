@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 translation-of: Web/JavaScript/Reference/Global_Objects/Date/Date
 browser-compat: javascript.builtins.Date.Date
 ---
+
 {{JSRef}}
 
 Crée une instance d'un objet JavaScript **`Date`** qui représente un instant donné de façon indépendante de la plateforme. Les objets `Date` contiennent un nombre (`Number`) qui représente le nombre de millisecondes écoulées depuis le premier janvier 1970 (UTC).

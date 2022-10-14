@@ -1,19 +1,8 @@
 ---
 title: '<cite>: 引用元要素'
 slug: Web/HTML/Element/cite
-tags:
-  - Attribution
-  - Citation
-  - Citing References
-  - Citing Works
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Quotations
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/cite
 ---
+
 {{HTMLRef}}
 
 **HTML の引用元要素** (**`<cite>`**) は、引用された創作物の参照を表し、作品のタイトルを含む必要があります。参照は、引用メタデータに関する利用場面に合わせた慣習に応じて省略形が用いられることがあります。

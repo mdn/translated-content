@@ -7,6 +7,7 @@ tags:
   - Méthode
 translation_of: Web/API/HTMLFormElement/submit
 ---
+
 {{APIRef("HTML DOM")}}
 
 La méthode  **`HTMLFormElement.submit()`**  soumet un {{HtmlElement("form")}} donné

@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/table
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<table>`** permet de représenter un tableau de données, c'est-à-dire des informations exprimées sur un tableau en deux dimensions.
@@ -352,14 +353,11 @@ Si le tableau ne peut pas être subdivisé, on pourra utiliser les attributs {{h
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG','tables.html#the-table-element','table element')}}     | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C','tabular-data.html#the-table-element','table element')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.table")}}
+{{Compat}}
 
 ## Voir aussi
 

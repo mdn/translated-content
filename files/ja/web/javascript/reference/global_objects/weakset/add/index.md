@@ -1,14 +1,8 @@
 ---
 title: WeakSet.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 ---
+
 {{JSRef}}
 
 **`add()`** メソッドは、新しい要素を `WeakSet` オブジェクトの最後に追加します。

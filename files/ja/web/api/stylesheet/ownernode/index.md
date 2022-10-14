@@ -2,6 +2,7 @@
 title: StyleSheet.ownerNode
 slug: Web/API/StyleSheet/ownerNode
 ---
+
 {{APIRef("CSSOM")}}
 
 ## 概要

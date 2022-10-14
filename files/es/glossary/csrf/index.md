@@ -14,4 +14,4 @@ translation_of: Glossary/CSRF
 
 - [Cross site request forgery](https://es.wikipedia.org/wiki/Cross-site_request_forgery) en Wikipedia
 - [Medidas de prevención](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>)
-- [Tutorial de seguridad de MDN](https://developer.mozilla.org/en-US/docs/Web/Security/Information_Security_Basics)
+- [Tutorial de seguridad de MDN](/en-US/docs/Web/Security/Information_Security_Basics)

@@ -2,6 +2,7 @@
 title: 初始值
 slug: Web/CSS/initial_value
 ---
+
 {{cssref}}
 
 [CSS](/zh-CN/docs/Web/CSS)属性的**初始值**是其默认值，如其定义表中所列。初始值的使用取决于属性是否被继承：
@@ -9,7 +10,7 @@ slug: Web/CSS/initial_value
 - 对于[继承属性](/zh-CN/docs/CSS/inheritance#Inherited_properties)，初始值只能被用于没有指定值的**根元素**上。
 - 对于[非继承属性](/zh-CN/docs/CSS/inheritance#Non-inherited_properties)，初始值可以被用于**任意**没有指定值的元素上。
 
-> **备注：** 你可以使用 [`initial`](/en-US/docs/CSS/initial) 关键词明确指定初始值。
+> **备注：** 你可以使用 [`initial`](/zh-CN/docs/CSS/initial) 关键词明确指定初始值。
 
 ## 规范
 

@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/bindBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.bindBuffer()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) lie un {{domxref("WebGLBuffer")}} donné à une cible.

@@ -1,18 +1,8 @@
 ---
 title: appearance (-moz-appearance, -webkit-appearance)
 slug: Web/CSS/appearance
-tags:
-  - '-moz-appearance'
-  - '-webkit-appearance'
-  - CSS
-  - CSS プロパティ
-  - CSS 基本ユーザーインターフェイス
-  - Reference
-  - appearance
-  - recipe:css-property
-browser-compat: css.properties.appearance
-translation_of: Web/CSS/appearance
 ---
+
 {{CSSRef}}
 
 **`appearance`** は CSS のプロパティで、 OS のテーマに基づいたプラットフォームネイティブのスタイル付けを使用して要素を表示するために使用されます。**`-moz-appearance`** および **`-webkit-appearance`** はこのプロパティの標準外のバージョンで、(それぞれ) Gecko (Firefox) と Webkit ベース (Safari など) や Blink ベース (Chrome、Opera など) のブラウザーで同じことを実現するために使用されます。なお、 Firefox や Edge もまた、互換性の理由から **`-webkit-appearance`** に対応しています。
@@ -21,7 +11,7 @@ translation_of: Web/CSS/appearance
 
 **`-moz-appearance`** プロパティは [XUL](/ja/docs/Mozilla/Tech/XUL/Tutorial) スタイルシート内で、プラットフォーム固有のカスタムウィジェットをデザインするために頻繁に使用されていました。また、 Mozilla プラットフォームに搭載するウィジェットの [XBL](/ja/docs/XBL) 実装でも使用されていました。Gecko/Firefox 80 以降では、これらの使い方は **`-moz-default-appearance`** に変更され、内部スタイルシートの外では使用するべきではなくなりました。
 
-> **Note:** ウェブサイトでこのプロパティを使いたいのであれば、とても注意深くテストする必要があります。現在のブラウザーのほとんどは対応していますが、その実装は大きく異なります。古いブラウザーでは、 `none` キーワードであっても、ブラウザーによってフォーム要素すべてに同じ効果があるわけではなく、まったく対応していないものもあります。最新のブラウザーでは、その差は小さくなっています。
+> **メモ:** ウェブサイトでこのプロパティを使いたいのであれば、とても注意深くテストする必要があります。現在のブラウザーのほとんどは対応していますが、その実装は大きく異なります。古いブラウザーでは、 `none` キーワードであっても、ブラウザーによってフォーム要素すべてに同じ効果があるわけではなく、まったく対応していないものもあります。最新のブラウザーでは、その差は小さくなっています。
 
 ## 構文
 

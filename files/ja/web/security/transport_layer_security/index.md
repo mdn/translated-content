@@ -1,16 +1,6 @@
 ---
 title: Transport Layer Security
 slug: Web/Security/Transport_Layer_Security
-tags:
-  - Cryptography
-  - Guide
-  - SSL
-  - Security
-  - TLS
-  - セキュリティ
-  - 暗号化
-  - 認証
-translation_of: Web/Security/Transport_Layer_Security
 ---
 Transport Layer Security (TLS) を使用した接続のセキュリティは、選択されている暗号スイートとセキュリティ引数に強く依存します。この記事の目的は、クライアントとサーバの間の機密性と完全性の通信を確実にするために、選択の参考になることです。 Mozilla Operations Security (OpSec) チームは、サーバの設定項目のリファレンスが付いた[ウィキ記事を管理しています](https://wiki.mozilla.org/Security/Server_Side_TLS)。
 
@@ -20,7 +10,7 @@ Transport Layer Security (TLS) プロトコルは、ネットワークで結ば�
 
 HTTPS が導入されたときは Secure Sockets Layer (SSL) 2.0 という、 Netscape がもたらした技術に基づいていました。その後で間もなく SSL 3.0 に更新され、用途が拡大し、Web ブラウザーとサーバの間の相互運用性を保証するために、共通で標準化された暗号化技術を規定することが必要になりました。 [Internet Engineering Task Force](https://www.ietf.org/) (IETF) は TLS 1.0 を {{RFC(2246)}} で 1999 年 1 月に規定しました。 TLS の現在のバージョンは 1.3 ({{RFC(8446)}}) です。
 
-> **Note:** Web では暗号化に TLS を使用するようになったという事実に関わらず、多くの人々はまだ習慣的に "SSL" と呼んでいます。
+> **メモ:** Web では暗号化に TLS を使用するようになったという事実に関わらず、多くの人々はまだ習慣的に "SSL" と呼んでいます。
 
 TLS はどのような低水準のトランスポートプロトコルの上でも使用することができますが、このプロトコルの本来の目標は HTTP トラフィックを暗号化することでした。 HTTP を TLS で暗号化することは、一般に {{Glossary("HTTPS")}} と呼ばれています。暗号化されていない HTTP が既定で 80 番ポートを使用するのに対し、 TLS で暗号化された Web トラフィックは、慣習として既定で 443 番ポートで交わされます。 HTTPS は引き続き、 TLS の重要な用途です。
 
@@ -39,7 +29,7 @@ TLS 接続は、クライアントとサーバが共有シークレットに合�
 
 ### 暗号スイート
 
-TLS のハンドシェイクがネゴシエートする主なパラメータは {{interwiki("wikipedia", "cipher suite")}} です。
+TLS のハンドシェイクがネゴシエートする主なパラメータは [cipher suite](https://en.wikipedia.org/wiki/Cipher_suite) です。
 
 TLS 1.2 およびそれ以前のバージョンでは、ネゴシエートされた暗号スイートには、共有秘密のネゴシエート、サーバの認証手段、データの暗号化に使用される方法を提供する一連の暗号アルゴリズムが含まれています。
 
@@ -79,7 +69,7 @@ TLS 1.3 の主な変更点は以下の通りです。
 - TLS 1.3 は、接続が再開されるか、事前に共有された鍵を使用しない限り、フォワードセキュアモードのみをサポートしています
 - TLS 1.3 は、TLS 1.3 専用の新しい暗号スイートを定義しています。これらの暗号化スイートはすべて最新の Authenticated Encryption with Associated Data (AEAD) アルゴリズムを使用しています
 - TLS 1.3 のハンドシェイクは、共有シークレットを確立するために必要なメッセージを除き、暗号化されています。特に、これはサーバ証明書とクライアント証明書が暗号化されていることを意味します。ただし、クライアントがサーバに送信するサーバ ID (サーバ名または SNI 拡張子) は暗号化されないことに注意してください
-- 数多くのメカニズムが無効化されています: リネゴシエーション、一般的なデータ圧縮、{{interwiki("wikipedia", "デジタル署名アルゴリズム")}}。(DSA) 証明書、静的 RSA 鍵交換、カスタム Diffie-Hellman (DH) グループとの鍵交換
+- 数多くのメカニズムが無効化されています: リネゴシエーション、一般的なデータ圧縮、[デジタル署名アルゴリズム](https://ja.wikipedia.org/wiki/Digital_Signature_Algorithm)。(DSA) 証明書、静的 RSA 鍵交換、カスタム Diffie-Hellman (DH) グループとの鍵交換
 
 TLS 1.3 のドラフト版の実装が公開されています。TLS 1.3 は 0-RTT モードを含むいくつかのブラウザで有効になっています。TLS 1.3 を有効にしている Web サーバでは、TLS 1.3 が正常に動作するように設定を調整する必要があるかもしれません。
 

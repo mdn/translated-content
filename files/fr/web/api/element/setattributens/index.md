@@ -8,6 +8,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/setAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `setAttributeNS` ajoute un nouvel attribut ou modifie la valeur d'un attribut avec un espace de noms et un nom donnés.

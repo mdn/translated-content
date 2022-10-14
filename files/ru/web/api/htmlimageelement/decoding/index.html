@@ -16,19 +16,15 @@ translation_of: Web/API/HTMLImageElement/decoding
 
 <p>{{domxref("DOMString")}} предоставляет указания по декодированию. Возможные значения:</p>
 
-<dl>
- <dd>
  <ul>
   <li><strong><code>sync</code></strong>: Декодировать изображение синхронно для отображения одновременно с другим содержимым.</li>
   <li><strong><code>async</code></strong>: Декодировать содержимое асинхронно для уменьшения задержки в отображении другого содержимого.</li>
   <li><strong><code>auto</code></strong>: Режим по умолчанию, который не отдаёт предпочтения ни одному режиму декодирования, предоставляя браузеру решать, какой режим для пользователя оптимальное.</li>
  </ul>
- </dd>
-</dl>
 
 <h2 id="Примеры">Примеры</h2>
 
-<pre class="brush: js;highlight:[3]">var img = new Image();
+<pre class="brush: js;">var img = new Image();
 img.decoding = 'sync';
 img.src = 'img/logo.png';
 </pre>

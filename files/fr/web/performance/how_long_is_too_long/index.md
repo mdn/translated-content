@@ -3,6 +3,7 @@ title: "Temps de chargement\_: à partir de quel moment un site est-il «\_lent\
 slug: Web/Performance/How_long_is_too_long
 translation_of: Web/Performance/How_long_is_too_long
 ---
+
 Il n'y a pas de règle stricte définissant ce qui constitue un site trop long à charger, mais il y a des bonnes pratiques spécifiques pour définir un bon temps de chargement du contenu (1 seconde), de fonctionnement au ralenti (50 millisecondes), d'animation (16,7 secondes) ou encore de réponse à la saisie d'un visiteur (50 à 200 millisecondes).
 
 ## Objectifs de chargement

@@ -1,13 +1,6 @@
 ---
 title: MDN at 10
 slug: MDN/At_ten
-tags:
-  - MDN
-  - MDN 메타
-  - MDN 변천
-  - 역사
-  - 출발
-translation_of: MDN_at_ten
 original_slug: MDN_at_ten
 ---
 당신의 웹을 문서화 하는 것의 10주년을 기념하세요.

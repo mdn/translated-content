@@ -19,7 +19,9 @@ Devuelve el nombre del archivo. Por razones de seguridad la ruta es excluída de
 
 ## Sintaxis
 
-    var name = instanceOfFile.fileName;
+```js
+var name = instanceOfFile.fileName;
+```
 
 ### Valor
 

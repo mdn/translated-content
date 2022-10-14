@@ -2,12 +2,13 @@
 title: gamepadconnected
 slug: Web/API/Window/gamepadconnected_event
 ---
+
 `gamepadconnected` 事件会在浏览器检测到游戏控制器第一次连接或者第一次按下游戏键/摇杆的时候触发。
 
 ## 基本信息
 
 - 文档
-  - [: Gamepad](http://www.w3.org/TR/gamepad/#the-gamepadconnected-event)
+  - : [Gamepad](http://www.w3.org/TR/gamepad/#the-gamepadconnected-event)
 - 类型
   - : 事件
 - 冒泡

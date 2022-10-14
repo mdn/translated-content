@@ -1,12 +1,8 @@
 ---
 title: Firefox 102 for developers
 slug: Mozilla/Firefox/Releases/102
-tags:
-  - '102'
-  - Firefox
-  - Mozilla
-  - Release
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 102 の変更点をまとめています。Firefox 102 は、米国時間 2022 年 6 月 28 日にリリースされました。

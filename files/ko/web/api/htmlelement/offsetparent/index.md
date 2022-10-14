@@ -10,7 +10,9 @@ translation_of: Web/API/HTMLElement/offsetParent
 
 ## 문법
 
-    parentObj = element.offsetParent;
+```js
+parentObj = element.offsetParent;
+```
 
 - \_parentObj는 현재 엘리먼트가 그 안에서 offset된 엘리먼트의 객체 참조이다. \_is an object reference to the element in which the current element is offset.
 

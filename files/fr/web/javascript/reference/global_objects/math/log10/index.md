@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log10
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/log10
 ---
+
 {{JSRef}}
 
 La fonction **`Math.log10()`** renvoie le logarithme en base 10 d'un nombre, donné par la formule :
@@ -64,14 +65,11 @@ Math.log10 = Math.log10 || function(x) {
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-math.log10', 'Math.log10')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.log10', 'Math.log10')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.log10")}}
+{{Compat}}
 
 ## Voir aussi
 

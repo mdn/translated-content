@@ -18,7 +18,9 @@ translation_of: Web/API/MediaStreamTrack/stop
 
 ## 구문
 
-    track.stop()
+```js
+track.stop()
+```
 
 ## 설명
 

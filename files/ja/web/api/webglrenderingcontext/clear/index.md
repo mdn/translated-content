@@ -1,8 +1,8 @@
 ---
 title: WebGLRenderingContext.clear()
 slug: Web/API/WebGLRenderingContext/clear
-translation_of: Web/API/WebGLRenderingContext/clear
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.clear()`** メソッドは、バッファーをプリセット値で消去します。

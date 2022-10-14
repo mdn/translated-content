@@ -2,6 +2,7 @@
 title: document.documentElement
 slug: Web/API/Document/documentElement
 ---
+
 {{ApiRef("DOM")}}
 
 **`Document.documentElement`** 是一个会返回文档对象（{{domxref("document")}}）的根{{domxref("Element", "元素")}}的只读属性（如 HTML 文档的 {{HTMLElement("html")}} 元素）。

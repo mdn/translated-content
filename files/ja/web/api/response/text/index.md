@@ -3,6 +3,7 @@ title: Response.text()
 slug: Web/API/Response/text
 original_slug: Web/API/Body/text
 ---
+
 {{APIRef("Fetch")}}
 
 **`text()`** は {{domxref("Response")}} インターフェイスのメソッドで、 {{domxref("Response")}} ストリームを取得して完全に読み込みます。 {{jsxref("String")}} で解決するプロミスを返します。 レスポンスは*常に* UTF-8 としてデコードされます。

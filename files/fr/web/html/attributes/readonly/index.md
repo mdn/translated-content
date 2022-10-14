@@ -9,6 +9,7 @@ tags:
   - required
 translation_of: Web/HTML/Attributes/readonly
 ---
+
 {{HTMLSidebar}}
 
 L'attribut booléen **`readonly`**, lorsqu'il est présent, rend l'élément non mutable, ce qui signifie que l'utilisateur ne peut pas modifier le contrôle. Si l'attribut `readonly` est spécifié sur un élément de saisie, comme l'utilisateur ne peut pas modifier la saisie, l'élément ne participe pas à la validation des contraintes.
@@ -68,15 +69,11 @@ Si l'élément est en lecture seule, la valeur de l'élément ne peut pas être 
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#attr-input-readonly', 'l\'attribut readonly')}}     | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'forms.html#attr-input-readonly', 'l\'attribut readonly')}}     | {{Spec2('HTML5 W3C')}}     |
-| {{SpecName('HTML5.1', 'sec-forms.html#the-readonly-attribute', 'l\'attribut readonly')}} | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attributes.readonly")}}
+{{Compat}}
 
 ## Voir aussi
 

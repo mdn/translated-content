@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/this
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_this
 ---
+
 {{jsSidebar("Operators")}}
 
 En JavaScript, **le mot-clé `this`** se comporte légèrement différemment des autres langages de programmation. Son comportement variera également légèrement selon qu'on utilise le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) ou le mode non-strict.
@@ -389,17 +390,11 @@ Ici, on utilise `this` à l'intérieur d'une fonction et il n'est pas défini en
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-this-keyword', 'Le mot-clé this')}} | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES2015', '#sec-this-keyword', 'Le mot-clé this')}} | {{Spec2('ES2015')}}     |                                                       |
-| {{SpecName('ES5.1', '#sec-11.1.1', 'Le mot-clé this')}}         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES3', '#sec-11.1.1', 'Le mot-clé this')}}             | {{Spec2('ES3')}}         |                                                       |
-| {{SpecName('ES1', '#sec-11.1.1', 'Le mot-clé this')}}             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.this")}}
+{{Compat}}
 
 ## Voir aussi
 

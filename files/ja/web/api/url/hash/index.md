@@ -1,14 +1,8 @@
 ---
 title: URL.hash
 slug: Web/API/URL/hash
-tags:
-  - API
-  - Hash
-  - Property
-  - Reference
-  - URL
-translation_of: Web/API/URL/hash
 ---
+
 {{ APIRef("URL API") }}
 
 {{domxref("URL")}} インターフェイスの **`hash`** プロパティは、`'#'` の後に URL のフラグメント識別子が続く {{domxref("USVString")}} を返します。

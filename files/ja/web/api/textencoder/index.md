@@ -1,16 +1,8 @@
 ---
 title: TextEncoder
 slug: Web/API/TextEncoder
-tags:
-  - API
-  - エンコーディング
-  - 実験的
-  - インターフェイス
-  - リファレンス
-  - TextEncoder
-browser-compat: api.TextEncoder
-translation_of: Web/API/TextEncoder
 ---
+
 {{APIRef("Encoding API")}}
 
 **`TextEncoder`** はコードポイントのストリームを入力として受け取り、 UTF-8 のバイトストリームを出力します。

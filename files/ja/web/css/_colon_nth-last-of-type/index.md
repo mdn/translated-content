@@ -1,16 +1,8 @@
 ---
 title: ':nth-last-of-type()'
 slug: Web/CSS/:nth-last-of-type
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.nth-last-of-type
-translation_of: Web/CSS/:nth-last-of-type
 ---
+
 {{CSSRef}}
 
 **`:nth-last-of-type()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で指定された型の要素を、最後から数えた位置に基づいて選択します。
@@ -23,7 +15,7 @@ p:nth-last-of-type(4n) {
 }
 ```
 
-> **Note:** この擬似クラスは、最初から後に向けてではなく*最後*から前に向けて数えるという点を除けば、本質的に {{Cssxref(":nth-of-type")}} と同じです。
+> **メモ:** この擬似クラスは、最初から後に向けてではなく*最後*から前に向けて数えるという点を除けば、本質的に {{Cssxref(":nth-of-type")}} と同じです。
 
 ## 構文
 
@@ -31,9 +23,9 @@ p:nth-last-of-type(4n) {
 
 構文の詳しい説明は {{Cssxref(":nth-last-child")}} を参照してください。
 
-### 形式文法
-
-{{csssyntax}}
+```
+:nth-last-of-type( <an-plus-b> | even | odd )
+```
 
 ## 例
 

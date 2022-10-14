@@ -1,7 +1,6 @@
 ---
 title: 첫 번째 Vue 컴포넌트 만들기
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

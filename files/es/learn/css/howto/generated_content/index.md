@@ -67,4 +67,3 @@ a.glossary::after {
 ```
 
 {{ EmbedLiveSample('Contenido_de_imagen', 600, 40) }}
-

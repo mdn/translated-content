@@ -62,5 +62,5 @@ Fetch는 이러한 Request의 비동기적인 성질을 한걸음 진화시킨 {
 헤더 가드는 헤더의 콘텐츠를 변경하는 {{domxref("Headers.set","set()")}}{{domxref("Headers.delete","delete()")}},{{domxref("Headers.append","append()")}}메서드에 영향을 끼칩니다.가드는 `immutable`의 {{domxref("Headers")}}를 수정하려고 한 경우, `TypeError`를 반환합니다. 예외의 경우도 있는데 다음과 같은 상황에서는 동작합니다.
 
 - 가드가 `request`에서 헤더의 이름이{{Glossary("forbidden header name")}}가 아닌 경우
-- 가드가`request-no-cors에서 헤더의 `_name또는 \_\_value값이_ {{Glossary("simple header")}}인 경우
+- 가드가`request-no-cors` 에서 헤더의`_name` 또는 \_\_value값이_ {{Glossary("simple header")}}인 경우
 - 가드가 `response`며 헤더의 이름이 {{Glossary("forbidden response header name")}}가 아닌 경우

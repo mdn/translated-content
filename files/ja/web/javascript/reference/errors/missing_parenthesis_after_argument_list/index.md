@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: missing ) after argument list'
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "missing ) after argument list" は、関数の呼び出し方にエラーがあった場合に発生します。これは入力ミス、演算子の欠落、文字列のエスケープ忘れなどの可能性があります。

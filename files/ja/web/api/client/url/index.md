@@ -1,15 +1,8 @@
 ---
 title: Client.url
 slug: Web/API/Client/url
-tags:
-  - API
-  - Client
-  - Property
-  - Reference
-  - Service Workers
-  - URL
-translation_of: Web/API/Client/url
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Client")}} インターフェイスの **`url`** 読み取り専用プロパティは、現在のサービスワーカークライアントの URL を返します。

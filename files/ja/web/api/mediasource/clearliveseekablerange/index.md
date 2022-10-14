@@ -1,19 +1,8 @@
 ---
 title: MediaSource.clearLiveSeekableRange()
 slug: Web/API/MediaSource/clearLiveSeekableRange
-tags:
-  - API
-  - Audio
-  - Extensions
-  - Media
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Video
-  - clearLiveSeekableRange()
-translation_of: Web/API/MediaSource/clearLiveSeekableRange
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} インターフェイスの **`clearLiveSeekableRange()`** メソッドは、{{domxref("MediaSource.setLiveSeekableRange()","setLiveSeekableRange()")}} の呼び出しで以前に設定されたシーク可能な範囲をクリアします。

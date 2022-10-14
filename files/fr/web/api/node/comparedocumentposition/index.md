@@ -10,6 +10,7 @@ tags:
   - Position
 translation_of: Web/API/Node/compareDocumentPosition
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.compareDocumentPosition()`**compare la position du noeud courant par rapport à un autre noeud dans tout autre document.

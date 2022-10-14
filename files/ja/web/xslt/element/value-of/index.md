@@ -1,11 +1,8 @@
 ---
 title: <xsl:value-of>
 slug: Web/XSLT/Element/value-of
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/value-of
 ---
+
 {{ XsltRef() }}
 
 `<xsl:value-of>` 要素は XPath 式を評価し、それを文字列に変換し、その文字列を result tree に書きます。

@@ -2,6 +2,7 @@
 title: <option>
 slug: Web/HTML/Element/option
 ---
+
 {{HTMLRef}}
 
 **HTML 元素\_ _`<option>`_ \_**用于定义在 {{HTMLElement("select")}}, {{HTMLElement("optgroup")}} 或 {{HTMLElement("datalist")}} 元素中包含的项。`<option>` 可以在弹出窗口和 HTML 文档中的其他项目列表中表示菜单项。
@@ -21,7 +22,7 @@ slug: Web/HTML/Element/option
 此元素包括[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - {{htmlattrdef("disabled")}}
-  - : 如果设置了这个布尔属性，则该选项不可选。浏览器通常会将这种控件显示为灰色，并且不再接受任何浏览器事件，例如鼠标点击或者焦点相关的事件。如果这个属性没有设置，而这个元素的其中一个父元素是被禁用的 {{HTMLElement("optgroup")}} 元素，则这个元素仍然是禁用的 。
+  - : 如果设置了这个布尔属性，则该选项不可选。浏览器通常会将这种控件显示为灰色，并且不再接受任何浏览器事件，例如鼠标点击或者焦点相关的事件。如果这个属性没有设置，而这个元素的其中一个父元素是被禁用的 {{HTMLElement("optgroup")}} 元素，则这个元素仍然是禁用的。
 - {{htmlattrdef("label")}}
   - : 这个属性是用于表示选项含义的文本。如果 **`label`** 属性没有定义，它的值就是元素文本内容。
 - {{htmlattrdef("selected")}}
@@ -39,7 +40,7 @@ slug: Web/HTML/Element/option
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.option")}}
+{{Compat}}
 
 ## 另见
 

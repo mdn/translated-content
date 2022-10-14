@@ -1,10 +1,6 @@
 ---
 title: Introducing workers
 slug: Learn/JavaScript/Asynchronous/Introducing_workers
-translation_of: Learn/JavaScript/Asynchronous/Introducing_workers
-tags:
-  - JavaScript
-  - Learn
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
@@ -225,7 +221,7 @@ function generatePrimes(quota) {
 
 > **참고:** 이 사이트를 실행하려면 로컬 웹 서버를 실행해야 합니다. file:// URL로는 워커를 로드할 수 없기 때문입니다. [테스트 로컬 서버 설정](/ko/docs/Learn/Common_questions/set_up_a_local_testing_server) 가이드를 참조하시기 바랍니다. 이렇게 하면 "Generate primes"를 눌러 기본 페이지를 응답할 수 있는 상태로 유지할 수 있습니다.
 >
-> 예제를 만들거나 실행하는 데 문제가 있는 경우 https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished에서 완성된 버전을 확인하고 https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished에서 라이브로 사용해 볼 수 있습니다.
+> 예제를 만들거나 실행하는 데 문제가 있는 경우 <https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished>에서 완성된 버전을 확인하고 <https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished> 에서 라이브로 사용해 볼 수 있습니다.
 
 ## 다른 종류의 워커
 

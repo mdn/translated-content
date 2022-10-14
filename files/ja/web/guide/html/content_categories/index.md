@@ -1,15 +1,8 @@
 ---
 title: コンテンツカテゴリー
 slug: Web/Guide/HTML/Content_categories
-tags:
-  - Advanced
-  - Guide
-  - HTML
-  - HTML5
-  - NeedsUpdate
-  - Web
-translation_of: Web/Guide/HTML/Content_categories
 ---
+
 ほとんどの [HTML](/ja/docs/Web/HTML) 要素は 1 つ以上の**コンテンツカテゴリー**に属していて、カテゴリーごとに共通した特徴を持つ要素を分類しています。これは緩やかなグループ分けです（実際にはこれらのカテゴリーの要素間の関係を作成していません）。しかし、これらは、特にその複雑な詳細に遭遇したときに、カテゴリーの共有動作とその関連ルールを定義し記述するのに役立ちます。*どの*カテゴリーにも属さない要素も存在します。
 
 コンテンツカテゴリーは 3 種類あります。
@@ -18,7 +11,7 @@ translation_of: Web/Guide/HTML/Content_categories
 - フォーム関連コンテンツカテゴリー。これはフォーム関連の要素に共通のルールを定義します。
 - 固有のコンテンツカテゴリー。これはいくつかの要素だけ、場合によっては特定の文脈でだけ使われる、稀なカテゴリーです。
 
-> **Note:** コンテンツカテゴリーとその機能比較についての詳細な説明は、この記事の範囲外です。詳しく知りたければ、 [HTML 仕様書の関連部分](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content)を読みましょう。
+> **メモ:** コンテンツカテゴリーとその機能比較についての詳細な説明は、この記事の範囲外です。詳しく知りたければ、 [HTML 仕様書の関連部分](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content)を読みましょう。
 
 [![様々なコンテンツカテゴリーの相互関係を示すベン図。以下の節では、これらの関係をテキストで説明します。](content_categories_venn.png)](/ja/docs/Web/Guide/HTML/Content_categories/content_categories_venn.png)
 
@@ -49,7 +42,7 @@ translation_of: Web/Guide/HTML/Content_categories
 
 このカテゴリーに属する要素は、 {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}} です。
 
-> **Note:** このコンテンツモデルを[区分化ルート](/ja/docs/Web/HTML/Element/Heading_Elements#sectioning_roots)カテゴリーと混同しないでください。区分化ルートは、通常のアウトラインからそれ自身のコンテンツを分離させるものです。
+> **メモ:** このコンテンツモデルを[区分化ルート](/ja/docs/Web/HTML/Element/Heading_Elements#sectioning_roots)カテゴリーと混同しないでください。区分化ルートは、通常のアウトラインからそれ自身のコンテンツを分離させるものです。
 
 ### 見出しコンテンツ
 
@@ -57,9 +50,9 @@ translation_of: Web/Guide/HTML/Content_categories
 
 このカテゴリーに属する要素は、 {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}} です。
 
-> **Note:** {{HTMLElement("header")}} 要素は見出しを含む可能性がありますが、それ自身は見出しコンテンツではありません。
+> **メモ:** {{HTMLElement("header")}} 要素は見出しを含む可能性がありますが、それ自身は見出しコンテンツではありません。
 
-> **Note:** {{HTMLElement("hgroup")}} 要素は、支援技術で適切に動作しないため、推奨されません。 HTML 5 が完成する前に W3C の HTML 仕様書から削除されましたが、 WHATWG の仕様書の一部として残っており、ほとんどのブラウザーは最低限部分的に対応しています。
+> **メモ:** {{HTMLElement("hgroup")}} 要素は、支援技術で適切に動作しないため、推奨されません。 HTML 5 が完成する前に W3C の HTML 仕様書から削除されましたが、 WHATWG の仕様書の一部として残っており、ほとんどのブラウザーは最低限部分的に対応しています。
 
 ### 記述コンテンツ
 

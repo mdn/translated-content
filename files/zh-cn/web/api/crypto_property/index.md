@@ -2,6 +2,7 @@
 title: Window.crypto
 slug: Web/API/crypto_property
 ---
+
 {{APIRef}}
 
 Window\.crypto 只读属性返回与全局对象关联的 {{domxref("Crypto")}}对象。此对象允许网页访问某些加密相关服务。
@@ -14,7 +15,7 @@ var cryptoObj = window.crypto || window.msCrypto; // for IE 11
 
 ## 范例
 
-#### 使用 {{domxref("Window.crypto")}} 来访问[getRandomValues()](/en-US/docs/Web/API/RandomSource/getRandomValues) 方法。
+#### 使用 {{domxref("Window.crypto")}} 来访问[getRandomValues()](/zh-CN/docs/Web/API/RandomSource/getRandomValues) 方法。
 
 ### JavaScript
 
@@ -48,7 +49,7 @@ genRandomNumbers = function getRandomNumbers() {
 
 ## 浏览器支持
 
-{{Compat("api.crypto")}}
+{{Compat}}
 
 ## 另见
 

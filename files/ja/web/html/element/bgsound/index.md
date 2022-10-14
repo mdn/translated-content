@@ -1,25 +1,13 @@
 ---
 title: '<bgsound>: 背景音要素'
 slug: Web/HTML/Element/bgsound
-tags:
-  - 音声
-  - 背景音
-  - 要素
-  - HTML
-  - Internet Explorer
-  - 標準外
-  - 非推奨
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.bgsound
-translation_of: Web/HTML/Element/bgsound
 ---
 
 {{deprecated_header}}{{non-standard_header}}
 
 **`<bgsound>`** は [HTML](/ja/docs/Web/HTML) の非推奨の要素です。そのページが使用されている間の背景として再生される音声ファイルを設定します。代わりに {{HTMLElement("audio")}} 要素を使用してください。
 
-> **Warning:** この要素を使用しないでください! ウェブページに音声を埋め込むには、{{HTMLElement("audio")}} 要素を使用してください。
+> **警告:** この要素を使用しないでください! ウェブページに音声を埋め込むには、{{HTMLElement("audio")}} 要素を使用してください。
 
 ## 属性
 

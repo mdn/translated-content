@@ -1,13 +1,8 @@
 ---
 title: CSS 雑題
 slug: Web/CSS/CSS_Miscellaneous
-tags:
-  - CSS
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Miscellaneous
 ---
+
 {{CSSRef}}
 
 このページでは、非常に実験的であるか、他の分類に適合しない CSS プロパティを扱います。

@@ -1,14 +1,8 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
-tags:
-  - JavaScript
-  - Math
-  - Namespace
-  - Reference
-  - 名前空間
-translation_of: Web/JavaScript/Reference/Global_Objects/Math
 ---
+
 {{JSRef}}
 
 **`Math`** は、数学的な定数と関数を提供するプロパティとメソッドを持つ、組み込みのオブジェクトです。関数オブジェクトではありません。
@@ -19,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
 
 他のグローバルオブジェクトと異なり、`Math` はコンストラクタではありません。`Math` オブジェクトのすべてのプロパティとメソッドは、静的です。円周率を表す定数 π は、`Math.PI` として参照でき、正弦関数は、 `Math.sin(x)` として呼び出すことができます (ここでの `x` は、メソッドの引数です)。定数は、 JavaScript における実数での完全な精度で定義されています。
 
-> **Note:** **メモ:** 多くの `Math` 関数の精度は*実装に依存します*。
+> **メモ:** 多くの `Math` 関数の精度は*実装に依存します*。
 >
 > これは、ブラウザーごとに結果が異なる場合があることを意味し、同じ JavaScript エンジン上であっても、 OS やアーキテクチャが異なれば結果が異なる場合があります。
 
@@ -77,7 +71,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
 - {{jsxref("Global_Objects/Math/floor", "Math.floor(<var>x</var>)")}}
   - : `x` 以下の最大の整数を返す。
 - {{jsxref("Global_Objects/Math/fround", "Math.fround(<var>x</var>)")}}
-  - : `x` に近似の [単精度](https://ja.wikipedia.org/wiki/%E5%8D%98%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0 "WikiPedia ページへのリンク") 浮動小数点数を返す。
+  - : `x` に近似の [単精度](https://ja.wikipedia.org/wiki/%E5%8D%98%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0) 浮動小数点数を返す。
 - {{jsxref("Global_Objects/Math/hypot", "Math.hypot([<var>x</var>[, <var>y</var>[, …]]])")}}
   - : 引数の二乗和の平方根を返す。
 - {{jsxref("Global_Objects/Math/imul", "Math.imul(<var>x</var>, <var>y</var>)")}}

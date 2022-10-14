@@ -53,13 +53,13 @@ Cada una de estas partes provee información específica sobre el nombre de domi
 - Los TLDs que contienen `.gov` son solamente permitidos para ser usados por los departamentos de gobierno.
 - Los TLDs como `.edu` y `.ac` `.uk` se supone que se usen solamente en instituciones educacionales o académicas.
 
-[]()
+<!-- -->
 
-- {{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel.  
+- {{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel.
   - : El TLD proporciona la información más genérica. Los TLDs les dicen a usuarios el propósito general del servicio que se esconde tras el nombre de dominio. Los TLDs más genéricos (.com, .org, .net) no requieren que los servicios web cumplan ningún criterio particular, pero algunos TLDs hacen cumplir políticas más estrictas por lo que es más claro su propósito. Por ejemplo:
-  
+
     **Etiqueta (o componente)**
-   
+
     Las etiquetas son lo que siguen al TLD. Una etiqueta puede se cualquier cosa desde una letra hasta una oración completa. La etiqueta localizada a la derecha antes del TLD puede ser llamada también Dominio de Nivel Secundario, en inglés _Secondary Level Domain_ (SLD). Un nombre de dominio puede tener muchas etiquetas (o componentes), no es obligatorio ni necesario tener tres etiquetas para formar un nombre de dominio. Por ejemplo, www.inf.ed.ac.uk es un nombre de dominio correcto. Para cualquier dominio sobre el que se tenga control (por ejemplo [mozilla.org](https://mozilla.org)), uno puede crear otros nombres de dominio (a veces llamados "subdominios", por ejemplo [developer.mozilla.org](https://developer.mozilla.org) o [iot.mozilla.org](https://iot.mozilla.org/)).
 
 ### Comprar un nombre de dominio
@@ -119,10 +119,10 @@ Como se observa, el dominio no existe en la base de datos de `whois` (en el mome
 
 El proceso es bastante sencillo:
 
-1.  Ir a un sitio de registro.
-2.  Generalmente hay un letrero que llama la atención que dice “Get a domain name”. Hacer click en él.
-3.  Rellenar el formulario con todos los detalles requeridos. Asegúrese de no haber escrito incorrectamente el nombre de dominio deseado. ¡Una vez que esté pagado, es muy tarde!.
-4.  El registrador te permitirá conocer cuando un nombre de dominio esté correctamente registrado. Dentro de unas pocas horas, todos los servidores DNS habrán recibido su información de DNS.
+1. Ir a un sitio de registro.
+2. Generalmente hay un letrero que llama la atención que dice “Get a domain name”. Hacer click en él.
+3. Rellenar el formulario con todos los detalles requeridos. Asegúrese de no haber escrito incorrectamente el nombre de dominio deseado. ¡Una vez que esté pagado, es muy tarde!.
+4. El registrador te permitirá conocer cuando un nombre de dominio esté correctamente registrado. Dentro de unas pocas horas, todos los servidores DNS habrán recibido su información de DNS.
 
 > **Nota:** En este proceso se le pide su dirección real. Asegúrese de escribirla correctamente, ya que en algunos países los registradores pueden verse obligados a cerrar el dominio si no pueden proporcionar una dirección válida.
 
@@ -136,10 +136,10 @@ Las bases de datos DNS son almacenadas en cada servidor DNS del mundo, y todos e
 
 Como ya hemos visto, cuando usted quiere visualizar una página web en su navegador es más simple escribir un nombre de dominio que una dirección IP. Echemos un vistazo al proceso:
 
-1.  Escriba `mozilla.org` en la barra de direcciones de su navegador.
-2.  Su navegador le pregunta a su computadora si reconoce la dirección IP identificada por este nombre de dominio (usando una caché DNS local) Si lo hace, el nombre es traducido a la IP y el navegador gestiona el contenido con el servidor web. Fin de la historia.
-3.  Si la computadora no sabe qué IP está detrás del nombre `mozilla.org`, hay que pedírselo a un servidor DNS, cuyo trabajo es precisamente decirle a la computadora cuál es la dirección IP de cada nombre de dominio registrado.
-4.  Ahora que la computadora conoce la dirección IP requerida, su navegador puede gestionar contenidos con el servidor web.
+1. Escriba `mozilla.org` en la barra de direcciones de su navegador.
+2. Su navegador le pregunta a su computadora si reconoce la dirección IP identificada por este nombre de dominio (usando una caché DNS local) Si lo hace, el nombre es traducido a la IP y el navegador gestiona el contenido con el servidor web. Fin de la historia.
+3. Si la computadora no sabe qué IP está detrás del nombre `mozilla.org`, hay que pedírselo a un servidor DNS, cuyo trabajo es precisamente decirle a la computadora cuál es la dirección IP de cada nombre de dominio registrado.
+4. Ahora que la computadora conoce la dirección IP requerida, su navegador puede gestionar contenidos con el servidor web.
 
 ![Explanation of the steps needed to obtain the result to a DNS request](https://mdn.mozillademos.org/files/8961/2014-10-dns-request2.png)
 

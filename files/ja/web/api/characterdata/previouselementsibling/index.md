@@ -1,13 +1,8 @@
 ---
 title: CharacterData.previousElementSibling
 slug: Web/API/CharacterData/previousElementSibling
-tags:
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Element.previousElementSibling
-translation_of: Web/API/CharacterData/previousElementSibling
 ---
+
 {{APIRef("DOM")}}
 
 **`previousElementSibling`** は {{domxref("CharacterData")}} インターフェイスの読み取り専用プロパティで、親の子リストの中で、現在のノードの一つ前の {{domxref("Element")}} を返します。存在しなければ `null` を返します。

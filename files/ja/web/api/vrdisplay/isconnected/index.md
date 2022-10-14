@@ -1,26 +1,14 @@
 ---
 title: VRDisplay.isConnected
 slug: Web/API/VRDisplay/isConnected
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - isConnected
-browser-compat: api.VRDisplay.isConnected
-translation_of: Web/API/VRDisplay/isConnected
 original_slug: Web/API/VRDevice/isConnected
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`isConnected`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、この `VRDisplay` がコンピューターに接続されているかどうかを示す論理値を返します。
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ### 値
 

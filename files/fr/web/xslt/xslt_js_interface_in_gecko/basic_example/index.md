@@ -4,6 +4,7 @@ slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
 l10n:
   sourceCommit: 96f68b50c1eac0af56f185d82c17c9ccaf212b67
 ---
+
 L'exemple que nous allons voir va charger un fichier XML et lui appliquer une transformation XSL. Nous utiliserons les mêmes fichiers que dans l'exemple [Génération de HTML](/fr/docs/Web/API/XSLTProcessor/Generating_HTML) de l'article [XSLT dans Gecko](/fr/docs/Web/API/XSLTProcessor). Le fichier XML décrit un article et le fichier XSL formate les informations pour l'affichage.
 
 ## Fichier XML

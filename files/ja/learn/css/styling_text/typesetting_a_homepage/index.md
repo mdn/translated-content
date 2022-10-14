@@ -2,6 +2,7 @@
 title: コミュニティスクールのホームページの組版
 slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 この評価では、コミュニティスクールのホームページ用にテキストを装飾することで、このモジュール全体でカバーしてきたすべてのテキスト装飾テクニックについての理解をテストします。 途中で楽しい時間があるかもしれません。
@@ -17,7 +18,7 @@ slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 - 練習用の [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/index.html) ファイルと [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/style.css) ファイルと、提供されている[外部リンクアイコン](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/external-link-52.png)を入手してください。
 - ローカルコンピュータにそれらのコピーを作成します。
 
-> **Note:** あるいは、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力し、[この URL](http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) を使用して背景画像を指定することができます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
+> **メモ:** あるいは、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力し、[この URL](http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) を使用して背景画像を指定することができます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
 
 ## プロジェクトの概要
 
@@ -31,7 +32,7 @@ slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 
 一般的なテキスト装飾
 
-- サイト全体の `font-size `を `10px` にします。
+- サイト全体の `font-size` を `10px` にします。
 - 見出しや他の要素タイプには、適切な相対単位を使用して定義された適切な `font-size` を与えます。
 - 本文に適切な `line-height` を与えます。
 - トップレベルの見出しをページの中央に配置します。

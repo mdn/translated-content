@@ -1,13 +1,8 @@
 ---
 title: レイアウトモード
 slug: Web/CSS/Layout_mode
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - リファレンス
-translation_of: Web/CSS/Layout_mode
 ---
+
 {{CSSRef}}
 
  [CSS](/ja/docs/Web/CSS) の**レイアウトモード** (または単に「レイアウト」) は、ボックスの位置やサイズを、兄弟要素や祖先要素のボックスとの相互作用を踏まえて決めるアルゴリズムです。複数のレイアウトモードがあります。
@@ -20,7 +15,7 @@ translation_of: Web/CSS/Layout_mode
 - [*フレックスボックスレイアウト*](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)は、滑らかに大きさが変更できる複雑なページのレイアウトに使われます。
 - [*グリッドレイアウト*](/ja/docs/Web/CSS/CSS_Grid_Layout)は、固定グリッドを基準にした要素配置に使われます。
 
-> **Note:** レイアウトモードによって、使える [CSS プロパティ](/ja/docs/Web/CSS/Reference)に制限があります。多くは 1 つか 2 つのレイアウトモードで用いられ、別のレイアウトモードに関わる要素に設定しても効果がありません。
+> **メモ:** レイアウトモードによって、使える [CSS プロパティ](/ja/docs/Web/CSS/Reference)に制限があります。多くは 1 つか 2 つのレイアウトモードで用いられ、別のレイアウトモードに関わる要素に設定しても効果がありません。
 
 ## 関連情報
 

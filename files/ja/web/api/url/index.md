@@ -1,22 +1,8 @@
 ---
 title: URL
 slug: Web/API/URL
-tags:
-  - API
-  - Address
-  - Domain
-  - Interface
-  - Location
-  - Networking
-  - Reference
-  - URI
-  - URL API
-  - Web
-  - hostname
-  - href
-  - origin
-translation_of: Web/API/URL
 ---
+
 {{APIRef("URL API")}}
 
 **`URL`** インターフェイスは、{{glossary("URL", "URL")}} の解析、構築、正規化、およびエンコードに使用します。 URL のコンポーネントを簡単に読み取って変更できるプロパティを提供することで機能します。 通常、新しい `URL` オブジェクトを作成するにはコンストラクターを呼び出すときに URL を文字列として指定するか、相対 URL とベース URL を指定します。その後、解析された URL のコンポーネントを簡単に読み取ったり、URL を変更したりすることができます。

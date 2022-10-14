@@ -1,21 +1,22 @@
 ---
-title: TextEncoder.prototype.encode()
+title: TextEncoder.encode()
 slug: Web/API/TextEncoder/encode
 ---
+
 {{APIRef("Encoding API")}}
 
-**`TextEncoder.prototype.encode()`** 方法接受一个 {{domxref("USVString")}} 作为参数，返回一个以给定的文本（字符串）参数，通过 `TextEncoder` 中指定的方法（默认 UTF-8）编码后的 {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}} 类型的值。
+**`TextEncoder.encode()`** 方法接受一个字符串作为输入，返回一个对参数中给定的文本的编码后的 {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}}，编码的方法通过 {{domxref("TextEncoder")}} 对象指定。
 
 ## 语法
 
-```plain
-b1 = encoder.encode(string);
+```js-nolint
+encode(string)
 ```
 
 ### 参数
 
 - `string`
-  - : 一个包含了将要编码的文本的 {{DOMxRef("USVString")}}。
+  - : 一个包含了将要编码的文本。
 
 ### 返回值
 
@@ -39,7 +40,7 @@ let encoded = textEncoder.encode(string);
 resultPara.textContent += encoded;
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 
@@ -47,8 +48,8 @@ resultPara.textContent += encoded;
 
 ## 浏览器兼容性
 
-{{Compat("api.TextEncoder.encode")}}
+{{Compat}}
 
-## 另见
+## 参见
 
-- The {{DOMxRef("TextEncoder")}} interface it belongs to.
+- 属于 {{DOMxRef("TextEncoder")}} 接口。

@@ -1,17 +1,8 @@
 ---
 title: HTMLMediaElement.readyState
 slug: Web/API/HTMLMediaElement/readyState
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
-  - Web
-browser-compat: api.HTMLMediaElement.readyState
-translation_of: Web/API/HTMLMediaElement/readyState
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.readyState`** プロパティは、メディアの準備状態を示します。

@@ -1,11 +1,6 @@
 ---
 title: TLD (トップレベルドメイン)
 slug: Glossary/TLD
-tags:
-  - Glossary
-  - Web
-  - WebMechanics
-translation_of: Glossary/TLD
 ---
 TLD (トップレベルドメイン)は、インターネットの階層的な {{Glossary("DNS")}} (ドメインネームシステム) で最も一般的な {{Glossary("domain")}} です。TLD は {{Glossary("domain name")}} の最後の要素です。例えば、`developer.mozilla.org` の "org" です。
 
@@ -33,5 +28,5 @@ Here org is the TLD; mozilla.org is the second-level domain name; and developer 
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "TLD")}} on Wikipedia
+- [トップレベルドメイン](https://ja.wikipedia.org/wiki/トップレベルドメイン) (Wikipedia)
 - [List of top-level domains](http://www.iana.org/domains/root/db)

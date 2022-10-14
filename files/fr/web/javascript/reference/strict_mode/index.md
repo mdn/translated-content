@@ -8,6 +8,7 @@ tags:
   - Strict Mode
 translation_of: Web/JavaScript/Reference/Strict_mode
 ---
+
 {{JsSidebar("More")}}
 
 Le mode strict de [ECMAScript 5](https://www.ecma-international.org/publications/standards/Ecma-262.htm) permet de choisir une variante restrictive de JavaScript. Le mode strict n'est pas seulement un sous-ensemble de JavaScript : il possède _intentionnellement_ des sémantiques différentes du code normal. Les navigateurs ne supportant pas le mode strict exécuteront le code d'une façon légèrement différente de ceux le supportant, il ne faut donc pas compter sur le mode strict pour éviter des tests sur les navigateurs qui ne le supportent pas. Les codes en mode strict et en mode non-strict peuvent coexister, ce qui permet de réécrire les scripts en mode strict de façon incrémentale.
@@ -78,7 +79,7 @@ Premièrement, en mode strict, il est impossible de créer accidentellement des 
 
 ```js
 "use strict";
-varialeMalDéclarée = 17; // lève une ReferenceError
+variableMalDéclarée = 17; // lève une ReferenceError
 ```
 
 Deuxièmement, le mode strict fait en sorte que les affectations qui échoueraient silencieusement lèveront aussi une exception. Par exemple, {{jsxref("Objets_globaux/NaN","NaN")}} est une variable globale en lecture seule. En mode normal, une affectation à `NaN` ne fera rien ; le développeur ne recevra aucun retour par rapport à cette faute. En mode strict, affecter une valeur quelconque à `NaN` lèvera une exception. Toute affectation qui échouera silencieusement en mode non-strict (affectation à une propriété en lecture seule, affectation à une propriété sans méthode `set`, affectation à une nouvelle propriété sur un objet [non-extensible](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/preventExtensions)) lèvera une exception en mode strict :
@@ -355,14 +356,6 @@ Cette interdiction n'est pas, à proprement parler, liée au mode strict. En eff
 ## Le mode strict dans les navigateurs
 
 Désormais, l'ensemble des navigateurs majeurs implémentent le mode strict. Cependant, il existe toujours un certain nombre de disparités et certains navigateurs actuels ou avec leurs anciennes versions ne supportent pas le mode strict. Le mode strict modifie des éléments de sémantique de JavaScript ; faire appel au mode strict pour des navigateurs qui ne le supportent pas peut donc entraîner des erreurs indésirables. Pour cette raison, il faut faire attention à la façon dont on exécute du code strict et bien tester ce code sur l'ensemble des navigateurs : ceux qui supportent le mode strict comme ceux qui ne supportent pas ce mode.
-
-## Spécifications
-
-| Spécification                                                                                                                                                                                                                 | État                         | Commentaires                                                                                                                                  |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-10.1.1', 'Strict Mode Code')}} {{SpecName('ES5.1', '#sec-C', 'Strict mode restriction and exceptions')}}                                                 | {{Spec2('ES5.1')}}     | Définition initiale. Voir aussi : [les restrictions du mode strict et les exceptions](https://www.ecma-international.org/ecma-262/5.1/#sec-C) |
-| {{SpecName('ES2015', '#sec-strict-mode-code', 'Strict Mode Code')}} {{SpecName('ES2015', '#sec-strict-mode-of-ecmascript', 'Strict mode restriction and exceptions')}} | {{Spec2('ES2015')}}     | [Les restrictions du mode strict et les exceptions](https://www.ecma-international.org/ecma-262/6.0/#sec-strict-mode-of-ecmascript)           |
-| {{SpecName('ESDraft', '#sec-strict-mode-code', 'Strict Mode Code')}}                                                                                                                                  | {{Spec2('ESDraft')}} | [Les restrictions du mode strict et les exceptions](https://tc39.github.io/ecma262/#sec-strict-mode-of-ecmascript)                            |
 
 ## Voir aussi
 

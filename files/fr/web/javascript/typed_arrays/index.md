@@ -4,6 +4,7 @@ slug: Web/JavaScript/Typed_arrays
 translation_of: Web/JavaScript/Typed_arrays
 original_slug: Web/JavaScript/Tableaux_typés
 ---
+
 {{JsSidebar("Advanced")}}
 
 Les **tableaux typés JavaScript** sont des objets semblables à des tableaux qui fournissent un mécanisme pour lire et écrire des données binaires brutes dans des tampons mémoires.

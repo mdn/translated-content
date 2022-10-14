@@ -2,6 +2,7 @@
 title: DataView.prototype.getInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
 ---
+
 {{JSRef}}
 
 **`getInt8()`** 方法从 {{jsxref("DataView")}} 相对于起始位置偏移 n 个字节处开始，获取一个有符号的 8-bit 整数 (一个字节)。

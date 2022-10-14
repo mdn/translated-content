@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable
 ---
+
 {{JSRef}}
 
 La méthode **`propertyIsEnumerable()`** renvoie un booléen qui indique si la propriété donnée est énumérable.
@@ -104,16 +105,11 @@ o.propertyIsEnumerable('premièreMéthode'); // renvoie false
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES3')}}                                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.2.4.7', 'Object.prototype.propertyIsEnumerable')}}                                             | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.propertyIsEnumerable")}}
+{{Compat}}
 
 ## Voir aussi
 

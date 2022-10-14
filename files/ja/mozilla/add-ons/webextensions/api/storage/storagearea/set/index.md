@@ -1,19 +1,8 @@
 ---
 title: StorageArea.set()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Storage
-  - StorageArea
-  - WebExtensions
-  - set
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 ---
+
 {{AddonSidebar()}}
 
 1 つ以上のアイテムをストレージ領域に保存または上書きします。
@@ -30,7 +19,7 @@ let settingItem = browser.storage.<storageType>.set(
 )
 ```
 
-`<storageType>` は [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync "sync ストレージ領域を指します。 sync ストレージ内のアイテムはブラウザーによって同期され、ログイン(Firefox sync や Google アカウントなど)しているブラウザー・デバイスの全てのインスタンスで利用できます。") または [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local "この項目についての文書はまだ書かれていません。書いてみませんか？") の書き込み可能なストレージタイプです。
+`<storageType>` は [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) または [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) の書き込み可能なストレージタイプです。
 
 ### Parameters
 
@@ -94,4 +83,4 @@ browser.storage.local.get("monster")
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。
+> **メモ:** この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。

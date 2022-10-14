@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/style
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<style>`** contient des informations de mise en forme pour un document ou une partie d'un document. Par défaut, les instructions de mise en forme écrites dans cet élément sont écrites en [CSS](/fr/docs/Web/CSS).
@@ -183,15 +184,11 @@ Dans cet exemple (basé sur le précédent), on ajoute un attribut `media` sur l
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires                         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-style-element', 'style')}}         | {{Spec2('HTML WHATWG')}} | Ajout de l'attribut `nonce`.         |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-style-element', 'style')}} | {{Spec2('HTML5 W3C')}}     | L'attribut `type` devient optionnel. |
-| {{SpecName('HTML4.01', 'present/styles.html#h-14.2.3', 'style')}}                 | {{Spec2('HTML4.01')}}     |                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.style")}}
+{{Compat}}
 
 ## Voir aussi
 

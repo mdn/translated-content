@@ -2,6 +2,7 @@
 title: EventSource()
 slug: Web/API/EventSource/EventSource
 ---
+
 {{APIRef('WebSockets API')}}
 
 **`EventSource()`** 构造函数返回一个新建的{{domxref("EventSource")}}，它代表了一个远程资源。
@@ -24,7 +25,7 @@ pc = new EventSource(url, configuration);
 
 ### 返回值
 
-一个新建的 {{domxref("EventSource")}} 对象，如果指定了`configuration`， 则按其配置；否则，配置为合适的基本默认值。
+一个新建的 {{domxref("EventSource")}} 对象，如果指定了`configuration`，则按其配置；否则，配置为合适的基本默认值。
 
 ## 示例
 
@@ -48,7 +49,7 @@ evtSource.onmessage = function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.EventSource.EventSource")}}
+{{Compat}}
 
 ## 相关链接
 

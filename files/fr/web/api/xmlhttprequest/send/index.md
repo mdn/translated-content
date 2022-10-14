@@ -15,6 +15,7 @@ tags:
   - send
 translation_of: Web/API/XMLHttpRequest/send
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 La méthode  {{domxref("XMLHttpRequest")}} **`send()`** envoie la requête au serveur.  Si la requête est asynchrone (elle l'est par défaut), la méthode envoie un retour dés que la requête est partie et le résultat est intégré en utilisant les évènements. En cas de requête synchrone, elle ne renvoie rien tant que la réponse n'est pas retournée.

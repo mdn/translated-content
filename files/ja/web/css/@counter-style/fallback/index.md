@@ -1,16 +1,8 @@
 ---
 title: fallback
 slug: Web/CSS/@counter-style/fallback
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
-browser-compat: css.at-rules.counter-style.fallback
-translation_of: Web/CSS/@counter-style/fallback
 ---
+
 {{CSSRef}}
 
 **`fallback`** 記述子は、現在のカウンタースタイルが特定のカウンター値でマーカー表現を生成できなかった場合に、代替で使用されるカウンタースタイルを指定するために使用します。

@@ -1,15 +1,8 @@
 ---
 title: CanvasRenderingContext2D.canvas
 slug: Web/API/CanvasRenderingContext2D/canvas
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.canvas
-translation_of: Web/API/CanvasRenderingContext2D/canvas
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.canvas`** は[キャンバス API](/ja/docs/Web/API/Canvas_API) の一部で、このコンテキストに関連付けられた {{domxref("HTMLCanvasElement")}} オブジェクトへの読み取り専用の参照です。 {{HTMLElement("canvas")}} に関連づけられていない場合は {{jsxref("null")}} になることがあります。

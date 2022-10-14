@@ -1,14 +1,8 @@
 ---
 title: UIEvent()
 slug: Web/API/UIEvent/UIEvent
-tags:
-  - API
-  - コンストラクター
-  - リファレンス
-  - UIEvent
-browser-compat: api.UIEvent.UIEvent
-translation_of: Web/API/UIEvent/UIEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`UIEvent()`** コンストラクターは新しい {{domxref("UIEvent")}} を生成します。
@@ -34,7 +28,7 @@ event = new UIEvent(typeArg [, UIEventInit])
     - **`sourceCapabilities`**: {{non-standard_inline}}
       {{domxref("InputDeviceCapabilities")}} インターフェイスのインスタンスで、タッチイベントを生成する原因となった物理的な危機についての情報を提供します。
 
-    > **Note:** `UIEventInit` は {{domxref("Event.Event", "EventInit")}} 辞書のフィールドも受け入れます。
+    > **メモ:** `UIEventInit` は {{domxref("Event.Event", "EventInit")}} 辞書のフィールドも受け入れます。
 
 ## 仕様書
 

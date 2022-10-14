@@ -1,22 +1,13 @@
 ---
 title: ':empty'
 slug: Web/CSS/:empty
-tags:
-  - CSS
-  - レイアウト
-  - NeedsUpdate
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.empty
-translation_of: Web/CSS/:empty
 ---
+
 {{CSSRef}}
 
 **`:empty`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、子を持たない要素を表します。子とは要素のノードまたは文字列 (ホワイトスペースを含む) です。コメント、処理指示、 CSS の {{cssxref("content")}} は要素が空であるかどうかの判断には影響しません。
 
-> **Note:** {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} では、 `:empty` 擬似クラスは {{CSSxRef(":-moz-only-whitespace")}} のような動作に変更されましたが、現在これに対応しているブラウザーはありません。
+> **メモ:** {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} では、 `:empty` 擬似クラスは {{CSSxRef(":-moz-only-whitespace")}} のような動作に変更されましたが、現在これに対応しているブラウザーはありません。
 
 ```css
 /* 内容を含まない <div> 要素を選択 */
@@ -27,7 +18,9 @@ div:empty {
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:empty
+```
 
 ## 例
 
@@ -73,7 +66,7 @@ body {
 
 画面リーダーなどの支援技術は、空の対話型コンテンツを解釈することができません。すべての対話型コンテンツは、対話型コントロールの親要素 ([アンカー](/ja/docs/Web/HTML/Element/a)や[ボタン](/ja/docs/Web/HTML/Element/button)など) に文字列の値を設定することで作成されるアクセシブル名を持つ必要があります。アクセシブル名は、支援技術に有益な情報を通信する API である [アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) で使用されます。
 
-対話型コントロールのアクセシブル名を提供する文字列は、[プロパティの組み合わせ](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link" rel="noopener)を使用して非表示にすることができ、画面からは視覚的に削除されますが、支援技術からは解釈できるようにすることができます。これは、アイコンだけで目的を示すボタンでよく使用されます。
+対話型コントロールのアクセシブル名を提供する文字列は、[プロパティの組み合わせ](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)を使用して非表示にすることができ、画面からは視覚的に削除されますが、支援技術からは解釈できるようにすることができます。これは、アイコンだけで目的を示すボタンでよく使用されます。
 
 - [What is an accessible name? | The Paciello Group](https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/)
 - [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)

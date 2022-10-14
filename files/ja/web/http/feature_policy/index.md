@@ -1,20 +1,13 @@
 ---
 title: Feature Policy
 slug: Web/HTTP/Feature_Policy
-tags:
-  - Feature-Policy
-  - HTTP
-  - Reference
-  - セキュリティ
-  - ヘッダー
-  - 機能ポリシー
-translation_of: Web/HTTP/Feature_Policy
 ---
+
 {{HTTPSidebar}}
 
 機能ポリシーで、ウェブ開発者はブラウザーの特定の機能や API を有効化、無効化したり、動作を変更したりすることができます。これは{{Glossary("CSP", "コンテンツセキュリティポリシー")}}に似ていますが、セキュリティの動作ではなく機能の制御を行うものです。
 
-> **Note:** `Feature-Policy` ヘッダーは仕様書で `Permissions-Policy` に改名されたので、この記事もそのうち、変更を反映するために更新されます。
+> **メモ:** `Feature-Policy` ヘッダーは仕様書で `Permissions-Policy` に改名されたので、この記事もそのうち、変更を反映するために更新されます。
 
 ## 概要
 

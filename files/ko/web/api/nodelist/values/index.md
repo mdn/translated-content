@@ -9,7 +9,9 @@ translation_of: Web/API/NodeList/values
 
 ## Syntax
 
-    nodeList.values();
+```js
+nodeList.values();
+```
 
 ### Return value
 
@@ -37,9 +39,11 @@ for(var value of list.values()) {
 
 결과는 다음과 같습니다 :
 
-    <p>
-    #text "hey"
-    <span>
+```
+<p>
+#text "hey"
+<span>
+```
 
 ## Specifications
 

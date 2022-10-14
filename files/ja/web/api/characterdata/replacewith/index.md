@@ -1,15 +1,8 @@
 ---
 title: CharacterData.replaceWith()
 slug: Web/API/CharacterData/replaceWith
-tags:
-  - API
-  - DOM
-  - メソッド
-  - CharacterData
-  - リファレンス
-browser-compat: api.CharacterData.replaceWith
-translation_of: Web/API/CharacterData/replaceWith
 ---
+
 {{APIRef("DOM")}}
 
 **`replaceWith()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、親ノードの子リスト内にあるこのノードを、一連の {{domxref("Node")}} オブジェクトまたは文字列で置き換えます。
@@ -27,7 +20,7 @@ replaceWith(nodes);
 - `nodes` {{optional_inline}}
   - : カンマ区切りの {{domxref("Node")}} オブジェクトまたは文字列のリストで、現在のノードを置き換えるものです。
 
-> **Note:** 引数が渡されなかった場合、このメソッドはこのノードを DOM ツリーから取り除くだけの動作をします。
+> **メモ:** 引数が渡されなかった場合、このメソッドはこのノードを DOM ツリーから取り除くだけの動作をします。
 
 ### 例外
 

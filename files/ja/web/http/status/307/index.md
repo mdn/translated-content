@@ -1,13 +1,8 @@
 ---
 title: 307 Temporary Redirect
 slug: Web/HTTP/Status/307
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Reference
-  - リダイレクト
-translation_of: Web/HTTP/Status/307
 ---
+
 {{HTTPSidebar}}
 
 {{Glossary("HTTP")}} の **`307 Temporary Redirect`** リダイレクトステータスレスポンスコードは、リクエストされたリソースが一時的に {{HTTPHeader("Location")}} で示された URL へ移動したことを示します。

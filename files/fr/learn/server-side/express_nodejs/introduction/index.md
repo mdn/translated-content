@@ -11,6 +11,7 @@ tags:
   - server-side
 translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
 
 Dans ce tout premier article consacré à Express, nous répondons aux questions «&nbsp;Qu'est-ce que Node&nbsp;?&nbsp;» et «&nbsp;Qu'est-ce que Express ?&nbsp;», et vous donnons un aperçu de ce qui fait d'Express un framework web si spécial. Nous décrivons les principales fonctionnalités et montrons quelques-uns des principaux composants d'une application Express (bien que vous ne disposiez pas encore d'un environnement de développement pour le tester).
@@ -443,7 +444,7 @@ Les apps _Express_ peuvent utiliser tout mécanisme de base de données pris en 
 Pour les utiliser, vous devez d'abord installer le pilote de base de données à l'aide de NPM. Par exemple, pour installer le pilote de la populaire base de données NoSQL MongoDB, vous devez utiliser la commande suivante :
 
 ```bash
-$ npm install mongodb
+npm install mongodb
 ```
 
 La base de données elle-même peut être installée localement ou sur un serveur en nuage. Dans votre code Express, vous avez besoin du pilote, vous vous connectez à la base de données, puis vous effectuez des opérations de création, lecture, mise à jour et suppression (en anglais, on utilise l'acronyme CRUD qui signifie _Create, Read, Update, Delete_). L'exemple ci-dessous (tiré de la documentation d'Express) montre comment vous pouvez trouver des enregistrements « mammifères » en utilisant MongoDB.

@@ -1,20 +1,6 @@
 ---
 title: '<template>: コンテンツテンプレート要素'
 slug: Web/HTML/Element/template
-tags:
-  - Element
-  - HTML
-  - HTML ウェブコンポーネント
-  - HTML:フローコンテンツ
-  - HTML:メタデータコンテンツ
-  - HTML:記述コンテンツ
-  - HTML:スクリプト対応要素
-  - リファレンス
-  - Template
-  - ウェブ
-  - ウェブコンポーネント
-browser-compat: html.elements.template
-translation_of: Web/HTML/Element/template
 ---
 
 {{HTMLRef}}

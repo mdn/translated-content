@@ -1,14 +1,8 @@
 ---
 title: 403 Forbidden
 slug: Web/HTTP/Status/403
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Reference
-  - クライアントエラー
-  - ステータスコード
-translation_of: Web/HTTP/Status/403
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`403 Forbidden`** クライアントエラーレスポンスコードは、サーバーがリクエストを理解したものの、認証が拒否されたことを示します。

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/EventLoop
 original_slug: Web/JavaScript/Concurrence_et_boucle_des_événements
 ---
+
 {{jsSidebar("Advanced")}}
 
 JavaScript gère la concurrence grâce à une « boucle d'événements ». Ce modèle est différent de la gestion faite par des langages comme C ou Java.
@@ -138,7 +139,4 @@ Il existe certaines exceptions historiques comme `alert` ou des appels XHR synch
 
 ## Spécifications
 
-| Spécification                                                                                                                | É tat                            | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'webappapis.html#event-loops', 'Event loops')}}                             | {{Spec2('HTML WHATWG')}} |              |
-| [Boucle d'évènements pour Node.js](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#what-is-the-event-loop) | Standard évolutif                |              |
+{{Specifications}}

@@ -9,6 +9,7 @@ tags:
   - vrdisplaypresentchange
 translation_of: Web/API/Window/vrdisplaypresentchange_event
 ---
+
 {{APIRef("Window")}}
 
 L'événement **`vrdisplaypresentchange`** de l'[API WebVR](/fr/docs/Web/API/WebVR_API) est déclenché lorsque l'état de présentation d'un affichage VR change — c'est à dire passe de la présentation à la non présentation, ou vice versa.

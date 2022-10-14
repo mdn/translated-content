@@ -1,19 +1,9 @@
 ---
 title: HTMLElement.nonce
 slug: Web/API/HTMLElement/nonce
-tags:
-  - API
-  - Content Security Policy
-  - Experimental
-  - HTML DOM
-  - HTMLElement
-  - プロパティ
-  - リファレンス
-  - nonce
-browser-compat: api.HTMLElement.nonce
-translation_of: Web/API/HTMLElement/nonce
 original_slug: Web/API/HTMLElement/nonce
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`nonce`** は {{DOMxRef("HTMLElement")}} インターフェイスのプロパティで、特定の読み取りを続行できるかどうかを決定するためにコンテンツセキュリティポリシー ([Content Security Policy](/ja/docs/Web/HTTP/CSP)) で使用される一度だけの暗号化番号を返します。

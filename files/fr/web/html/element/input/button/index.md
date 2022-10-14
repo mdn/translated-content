@@ -1,14 +1,8 @@
 ---
 title: <input type ="button">
-slug: Web/HTML/Element/Input/button
-tags:
-  - Element
-  - HTML
-  - Input
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/input/button
+slug: Web/HTML/Element/input/button
 ---
+
 {{HTMLRef}}
 
 Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page via un gestionnaire d'évènement (la plupart du temps pour l'évènement {{event("click")}}).
@@ -323,14 +317,11 @@ draw();
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.input.input-button")}}
+{{Compat}}
 
 ## Voir aussi
 

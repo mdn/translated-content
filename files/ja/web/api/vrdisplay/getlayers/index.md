@@ -1,27 +1,14 @@
 ---
 title: VRDisplay.getLayers()
 slug: Web/API/VRDisplay/getLayers
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - getLayers()
-browser-compat: api.VRDisplay.getLayers
-translation_of: Web/API/VRDisplay/getLayers
 original_slug: Web/API/VRDevice/getLayers
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`getLayers()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 `VRDisplay` が現在表示しているレイヤーを返します。
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ## 構文
 

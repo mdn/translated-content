@@ -1,15 +1,8 @@
 ---
 title: HTMLMetaElement
 slug: Web/API/HTMLMetaElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLMetaElement
-translation_of: Web/API/HTMLMetaElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLMetaElement`** インターフェイスは、文書に関する説明的なメタデータが入ります。 {{domxref("HTMLElement")}} インターフェイスから、すべてのプロパティとメソッドを継承しています。

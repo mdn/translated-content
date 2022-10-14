@@ -1,13 +1,13 @@
 ---
 title: Headers.entries()
 slug: Web/API/Headers/entries
-translation_of: Web/API/Headers/entries
 ---
+
 {{APIRef}}
 
 **`Headers.entries()`** メソッドは {{jsxref("Iteration_protocols",'iterator')}} を返し、このオブジェクトに含まれるすべてのキーと値のペアを通過できるようにします。各ペアのキーと値は両方とも {{domxref("ByteString")}} オブジェクトです。
 
-> **Note:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
+> **メモ:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
 
 ## 構文
 

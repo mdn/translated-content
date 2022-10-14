@@ -3,6 +3,7 @@ title: URLSearchParams.entries()
 slug: Web/API/URLSearchParams/entries
 translation_of: Web/API/URLSearchParams/entries
 ---
+
 {{APIRef("URL API")}}{{SeeCompatTable}}
 
 La méthode **`URLSearchParams.entries()`** retourne un itérateur( {{jsxref("Iteration_protocols",'iterator')}}) permettant de parcourir les paires de clé/valeur contenues dans cet objet. La clé et la valeur de chaque paire est un objet  {{domxref("USVString")}} .

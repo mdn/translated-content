@@ -1,19 +1,8 @@
 ---
 title: HTMLTableCellElement
 slug: Web/API/HTMLTableCellElement
-page-type: web-api-interface
-tags:
-  - API
-  - セル
-  - HTML DOM
-  - HTMLTableCellElement
-  - インターフェイス
-  - リファレンス
-  - 表のセル
-  - 表
-browser-compat: api.HTMLTableCellElement
-translation_of: Web/API/HTMLTableCellElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLTableCellElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} インターフェイスに加えて）表のセルのレイアウトを操作したり行を表したりするための特別なプロパティとメソッドを提供します。
@@ -55,7 +44,7 @@ _親である {{domxref("HTMLElement")}} からメソッドを継承していま
 
 ## 非推奨のプロパティ
 
-> **Warning:** これらのプロパティは{{Glossary("deprecated", "非推奨")}}になっており、もう使用するべきではありません。これらは主に古いコードベースを理解しやすくすることを目的に文書化されています。
+> **警告:** これらのプロパティは{{Glossary("deprecated", "非推奨")}}になっており、もう使用するべきではありません。これらは主に古いコードベースを理解しやすくすることを目的に文書化されています。
 
 - {{domxref("HTMLTableCellElement.align")}} {{deprecated_inline}}
   - : 文字列で、 {{htmlattrxref("align", "td")}} 属性を反映した列挙値です。これは、周囲のコンテキストに対する要素の内容の整列を示す。指定できる値は `"left"`, `"right"`, `"center"` です。

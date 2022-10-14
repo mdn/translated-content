@@ -2,6 +2,7 @@
 title: RegExp.prototype[@@replace]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
 ---
+
 {{JSRef}}
 
 **`[@@replace]()`** 方法会在一个字符串中用给定的替换器，替换所有符合正则模式的匹配项，并返回替换后的新字符串结果。用来替换的参数可以是一个字符串或是一个针对每次匹配的回调函数。
@@ -19,7 +20,7 @@ regexp[Symbol.replace](str, newSubStr|function)
 - `str`
   - : 正则替换的目标字符串。
 - `newSubStr (replacement)`
-  - : 类型为 {{jsxref("String")}} 的替换器。支持大多数特殊的替换匹配模式； 见{{jsxref("String.prototype.replace()")}}页的{{jsxref("String.prototype.replace", "Specifying a string as a parameter", "#Specifying_a_string_as_a_parameter", 1)}}部分。
+  - : 类型为 {{jsxref("String")}} 的替换器。支持大多数特殊的替换匹配模式；见{{jsxref("String.prototype.replace()")}}页的{{jsxref("String.prototype.replace", "Specifying a string as a parameter", "#Specifying_a_string_as_a_parameter", 1)}}部分。
 - `function (replacement)`
   - : 生成新的子字符串的回调函数替换器。作用于该函数的参数的详细描述见{{jsxref("String.prototype.replace()")}}页的 {{jsxref("String.prototype.replace", "Specifying a function as a parameter", "#Specifying_a_function_as_a_parameter", 1)}} 部分。
 

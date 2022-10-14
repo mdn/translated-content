@@ -2,9 +2,10 @@
 title: WebGLUniformLocation
 slug: Web/API/WebGLUniformLocation
 ---
+
 {{APIRef("WebGL")}}
 
-**WebGLUniformLocation** 接口是 [WebGL API](/en-US/docs/Web/API/WebGL_API) 的一部分，在一个着色器程序中表示一个统一变量的位置。
+**WebGLUniformLocation** 接口是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一部分，在一个着色器程序中表示一个统一变量的位置。
 
 ## 说明
 

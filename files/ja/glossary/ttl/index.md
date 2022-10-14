@@ -1,14 +1,6 @@
 ---
 title: TTL
 slug: Glossary/TTL
-tags:
-  - Caching
-  - Domain Name System
-  - Glossary
-  - Infrastructure
-  - Networking
-  - Performance
-translation_of: Glossary/TTL
 ---
 TTL には以下の意味があります。
 
@@ -28,7 +20,7 @@ TTL には以下の意味があります。
 
 ### 一般知識
 
-- Wikipedia の {{Interwiki("wikipedia", "Time to live", "TTL")}}
+- Wikipedia の [TTL](https://en.wikipedia.org/wiki/Time_to_live)
 
 ### 技術リファレンス
 

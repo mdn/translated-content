@@ -6,7 +6,7 @@ tags:
   - Reference
 translation_of: Web/CSS/used_value
 ---
-{{cssref}}**Используемое значение** - [CSS ](/ru/docs/Web/CSS)свойство, которое используется, когда все вычисления уже выполнены, смотрите [вычисленное значение](/ru/docs/Web/CSS/computed_value).
+{{cssref}}**Используемое значение** - [CSS](/ru/docs/Web/CSS) свойство, которое используется, когда все вычисления уже выполнены, смотрите [вычисленное значение](/ru/docs/Web/CSS/computed_value).
 
 После того как {{glossary("user agent")}} закончил свои расчёты каждое свойство CSS имеет своё значение. Используемые значения (например, {{cssxref("width")}}, {{cssxref("line-height")}}) в пикселях. Используемые значения сокращённых свойств (например, {{cssxref("background")}}) согласуются с теми из свойств компонентов (например, {{cssxref("background-color")}} или {{cssxref("background-size")}}) и с {{cssxref("position")}} и {{cssxref("float")}}.
 
@@ -59,21 +59,23 @@ div {
 
 ### JavaScript
 
-    function updateUsedWidth(id) {
-      var div = document.querySelector(`#${id}`);
-      var par = div.querySelector('.show-used-width');
-      var wid = window.getComputedStyle(div)["width"];
-      par.textContent = `Used width: ${wid}.`;
-    }
+```js
+function updateUsedWidth(id) {
+  var div = document.querySelector(`#${id}`);
+  var par = div.querySelector('.show-used-width');
+  var wid = window.getComputedStyle(div)["width"];
+  par.textContent = `Used width: ${wid}.`;
+}
 
-    function updateAllUsedWidths() {
-      updateUsedWidth("no-width");
-      updateUsedWidth("width-50");
-      updateUsedWidth("width-inherit");
-    }
+function updateAllUsedWidths() {
+  updateUsedWidth("no-width");
+  updateUsedWidth("width-50");
+  updateUsedWidth("width-inherit");
+}
 
-    updateAllUsedWidths();
-    window.addEventListener('resize', updateAllUsedWidths);
+updateAllUsedWidths();
+window.addEventListener('resize', updateAllUsedWidths);
+```
 
 ### Результат
 

@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/function*
 original_slug: Web/JavaScript/Reference/Instructions/function*
 ---
+
 {{jsSidebar("Statements")}}
 
 La déclaration **`function*`** (le mot-clé `function` suivi par un astérisque) permet de définir un générateur (aussi appelé une fonction génératrice) (un générateur est un objet {{jsxref("Generator")}}).
@@ -183,25 +184,11 @@ console.log(truc.next()); // {value: 10, done: false}
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                                                                                             |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES2015', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ES2015')}}     | Définition initiale                                                                                                      |
-| {{SpecName('ES2016', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ES2016')}}     | Les générateurs ne doivent pas gérer la trappe [[Construct]] et déclencher une exception s'ils sont utilisés avec `new`. |
-| {{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ESDraft')}} |                                                                                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.generator_function")}}
-
-## Notes spécifiques à Firefox
-
-### Les générateurs et itérateurs dans Firefox pour les versions antérieures à Firefox 26
-
-Les anciennes versions de Firefox implémentaient une ancienne version de la proposition pour les générateurs. Dans cette version, les générateurs étaient définis avec le mot-clé `function` (sans astérisque) et étaient différents selon d'autres aspects. Voir [la page sur les générateurs historiques](/fr/docs/Web/JavaScript/Reference/Instructions/Fonction_génératrice_historique) pour plus d'informations.
-
-### `IteratorResult` au lieu d'une exception
-
-À partir de Gecko 29 {{geckoRelease(29)}}, lorsqu'un générateur est terminé, il ne renvoie plus une exception {{jsxref("TypeError")}} « generator has already finished ». Il renvoie désormais un objet `IteratorResult` comme `{ value: undefined, done: true }` ({{bug(958951)}}).
+{{Compat}}
 
 ## Voir aussi
 

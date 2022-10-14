@@ -12,6 +12,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
 ---
+
 {{AddonSidebar()}}
 
 Modifie la relation de succession pour un groupe d'onglets.

@@ -1,18 +1,8 @@
 ---
 title: プロトコルのアップグレードメカニズム
 slug: Web/HTTP/Protocol_upgrade_mechanism
-tags:
-  - HTTP
-  - HTTP/2
-  - TLS
-  - WebSocket
-  - WebSockets
-  - アップグレード
-  - ガイド
-  - ネットワーキング
-  - プロトコル
-translation_of: Web/HTTP/Protocol_upgrade_mechanism
 ---
+
 {{HTTPSidebar}}
 
 [HTTP/1.1 プロトコル](/ja/docs/Web/HTTP)は、すでに確立された接続を、 {{HTTPHeader("Upgrade")}} ヘッダーフィールドを使用して異なるプロトコルにアップグレードするために使用することができる特殊な仕組みを提供します。
@@ -54,7 +44,7 @@ webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");
 
 The {{domxref("WebSocket.WebSocket", "WebSocket()")}} constructor does all the work of creating an initial HTTP/1.1 connection then handling the handshaking and upgrade process for you.
 
-> **Note:** You can also use the `"wss://"` URL scheme to open a secure WebSocket connection.
+> **メモ:** You can also use the `"wss://"` URL scheme to open a secure WebSocket connection.
 
 If you need to create a WebSocket connection from scratch, you'll have to handle the handshaking process yourself. After creating the initial HTTP/1.1 session, you need to request the upgrade by adding to a standard request the {{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}} headers, as follows:
 
@@ -147,7 +137,7 @@ Sec-WebSocket-Accept: hash
 ```
 
 - `hash`
-  - : If a {{HTTPHeader("Sec-WebSocket-Key")}} header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the {{interwiki("wikipedia", "SHA-1")}} hash of that concatenated string, resulting in a 20-byte value. That value is then [base64](/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) encoded to obtain the value of this property.
+  - : If a {{HTTPHeader("Sec-WebSocket-Key")}} header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the [SHA-1](https://ja.wikipedia.org/wiki/SHA-1) hash of that concatenated string, resulting in a 20-byte value. That value is then [base64](/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) encoded to obtain the value of this property.
 
 ## リファレンス
 

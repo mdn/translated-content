@@ -1,22 +1,8 @@
 ---
 title: MediaTrackSupportedConstraints.aspectRatio
 slug: Web/API/MediaTrackSupportedConstraints/aspectRatio
-page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - aspectRatio
-browser-compat: api.MediaTrackSupportedConstraints.aspectRatio
-translation_of: Web/API/MediaTrackSupportedConstraints/aspectRatio
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 {{domxref("MediaTrackSupportedConstraints")}} 辞書の **`aspectRatio`** プロパティは読み取り専用の論理値で、 {{domxref("MediaDevices.getSupportedConstraints()")}} が返すオブジェクトに存在（`true` に設定）するならば、{{Glossary("user agent", "ユーザーエージェント")}}が `aspectRatio` 制約に対応しています。制約に対応していない場合、リストには含まれなくなりますので、この値が `false` になることはありません。

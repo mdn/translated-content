@@ -22,6 +22,7 @@ tags:
 translation_of: Web/HTML/Element/bdo
 browser-compat: html.elements.bdo
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<bdo>`** (pour élément de remplacement du texte bidirectionnel) est utilisé afin d'outrepasser la direction du texte. Cela permet d'imposer une direction donnée à un texte. L'orientation du texte est inversée mais pas celle des caractères.

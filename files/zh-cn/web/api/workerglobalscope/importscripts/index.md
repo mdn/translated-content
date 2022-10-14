@@ -2,6 +2,7 @@
 title: WorkerGlobalScope.importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
 ---
+
 {{APIRef("Web Workers API")}}
 
 {{domxref("WorkerGlobalScope")}} 接口的**`importScripts()`** 方法将一个或多个脚本同步导入到工作者的作用域中。

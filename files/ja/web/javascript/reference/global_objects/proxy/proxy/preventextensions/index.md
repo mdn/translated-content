@@ -1,14 +1,8 @@
 ---
 title: handler.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
-tags:
-  - ECMAScript 2015
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 ---
+
 {{JSRef}}
 
 **`handler.preventExtensions()`** は {{jsxref("Object.preventExtensions()")}} に対するトラップです。

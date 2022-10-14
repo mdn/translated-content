@@ -1,14 +1,8 @@
 ---
 title: レスポンシブなナビゲーションパターン
 slug: Web/Progressive_web_apps/Responsive/Responsive_navigation_patterns
-tags:
-  - ガイド
-  - モバイル
-  - ナビゲーション
-  - レスポンシブデザイン
-  - patterns
-translation_of: Web/Progressive_web_apps/Responsive/Responsive_navigation_patterns
 ---
+
 アプリのナビゲーションデザインに困っていませんか？これらのパターンを参考にしてみてください。ここでは、大きな画面と小さな画面でのナビゲーションの扱い方をいくつか紹介します。大きな画面では、上や左のナビゲーションメニューが一般的ですが、小さな画面では、画面の面積が小さくなるため、情報を表示するのに最適な方法ではないことがよくあります。そのため、すべての画面サイズにおいて、コンテンツの表示とナビゲーションのしやすさを考慮する必要があります。
 
 ## パターン 1: 先頭のトグルメニュー

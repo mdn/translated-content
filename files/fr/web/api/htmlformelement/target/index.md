@@ -3,6 +3,7 @@ title: HTMLFormElement.target
 slug: Web/API/HTMLFormElement/target
 translation_of: Web/API/HTMLFormElement/target
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété **`HTMLFormElement.target`** représente la cible de l'action (i.e., le cadre de destination dans lequel produire le résultat).

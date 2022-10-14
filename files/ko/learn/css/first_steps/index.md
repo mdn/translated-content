@@ -1,7 +1,6 @@
 ---
 title: CSS 첫 번째 단계
 slug: Learn/CSS/First_steps
-translation_of: Learn/CSS/First_steps
 ---
 {{LearnSidebar}}
 

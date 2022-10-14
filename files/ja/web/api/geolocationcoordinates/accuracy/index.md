@@ -2,6 +2,7 @@
 title: GeolocationCoordinates.accuracy
 slug: Web/API/GeolocationCoordinates/accuracy
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationCoordinates.accuracy`** は読み取り専用プロパティで、厳密な正の `double` 値で、信頼度 95% の {{domxref("GeolocationCoordinates.latitude")}} および

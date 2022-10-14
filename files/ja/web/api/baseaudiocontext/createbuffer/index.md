@@ -1,29 +1,16 @@
 ---
 title: BaseAudioContext.createBuffer()
 slug: Web/API/BaseAudioContext/createBuffer
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - バッファー
-  - メディア
-  - メソッド
-  - リファレンス
-  - ウェブ音声
-  - ウェブ音声 API
-  - createBuffer
-browser-compat: api.BaseAudioContext.createBuffer
-translation_of: Web/API/BaseAudioContext/createBuffer
 original_slug: Web/API/AudioContext/createBuffer
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createBuffer()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、新しい空の {{ domxref("AudioBuffer") }} オブジェクトを生成するために使用されます。このオブジェクトにデータを代入し、{{ domxref("AudioBufferSourceNode") }} を介して再生することができます。
 
 音声バッファーの詳細については、 {{ domxref("AudioBuffer") }} のリファレンスページを参照してください。
 
-> **Note:** 以前は `createBuffer()` が圧縮されたデータを受け取り、デコードされたサンプルを返すことができましたが、デコードがすべてメインスレッドで行われるため `createBuffer()` が他のコードの実行をブロックするので、この機能は仕様書から削除されました。非同期メソッド `decodeAudioData()` は同じことをします。 MP3 ファイルのような圧縮された音声を受け取り、{{ domxref("AudioBuffer") }} を直接返します。そして {{ domxref("AudioBufferSourceNode") }} で再生することができるのです。 MP3 を再生するような単純な用途では、 `decodeAudioData()` を使用する必要があります。
+> **メモ:** 以前は `createBuffer()` が圧縮されたデータを受け取り、デコードされたサンプルを返すことができましたが、デコードがすべてメインスレッドで行われるため `createBuffer()` が他のコードの実行をブロックするので、この機能は仕様書から削除されました。非同期メソッド `decodeAudioData()` は同じことをします。 MP3 ファイルのような圧縮された音声を受け取り、{{ domxref("AudioBuffer") }} を直接返します。そして {{ domxref("AudioBufferSourceNode") }} で再生することができるのです。 MP3 を再生するような単純な用途では、 `decodeAudioData()` を使用する必要があります。
 
 ## 構文
 
@@ -33,7 +20,7 @@ createBuffer(numOfChannels, length, sampleRate)
 
 ### 引数
 
-> **Note:** 音声バッファーの仕組みと、これらの引数の意味についての詳しい説明は、基本概念ガイドの[音声バッファー：フレーム、サンプル、チャンネル](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels)に書かれています。
+> **メモ:** 音声バッファーの仕組みと、これらの引数の意味についての詳しい説明は、基本概念ガイドの[音声バッファー：フレーム、サンプル、チャンネル](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels)に書かれています。
 
 - `numOfChannels`
   - : 整数で、このバッファーが持つべきチャンネル数を表します。既定値は 1 で、すべてのユーザエージェントは少なくとも 32 チャンネルに対応しなければなりません。
@@ -71,7 +58,7 @@ var buffer = audioCtx.createBuffer(1, 22050, 22050);
 
 この呼び出しを使用した場合、モノラルバッファー（1 チャネル）が得られ、 AudioContext が 44100Hz で動作している状態で再生すると、自動的に\*リサンプル\*されて 44100Hz となり（すなわち 44100 フレームになる）、 1.0 秒間（44100 フレーム / 44100Hz = 1 秒）になります。
 
-> **Note:** 音声のリサンプリングは、画像のリサイズにとても似ています。 16 x 16 の画像を持っていて、それを 32 x 32 の領域いっぱいにしたい場合、それをリサイズ（リサンプリング）します。結果は、（リサイズのアルゴリズムによっては、ぼやけたりエッジが立ったりして）品質が落ちますが、うまくいき、リサイズした画像はよりスペースが小さくなります。リサンプルされた音声も全く同じで、スペースは節約できますが、実際には高い周波数のコンテンツ（高音）を適切に再生することはできません。
+> **メモ:** 音声のリサンプリングは、画像のリサイズにとても似ています。 16 x 16 の画像を持っていて、それを 32 x 32 の領域いっぱいにしたい場合、それをリサイズ（リサンプリング）します。結果は、（リサイズのアルゴリズムによっては、ぼやけたりエッジが立ったりして）品質が落ちますが、うまくいき、リサイズした画像はよりスペースが小さくなります。リサンプルされた音声も全く同じで、スペースは節約できますが、実際には高い周波数のコンテンツ（高音）を適切に再生することはできません。
 
 次は少し複雑な `createBuffer()` の例を見てみましょう。 3 秒間のバッファーを生成し、ホワイトノイズを書き込み、 {{ domxref("AudioBufferSourceNode") }} で再生します。コメントでは、何が起こっているのかを明確に説明しています。 [コードをライブで実行](https://mdn.github.io/webaudio-examples/audio-buffer/)したり、[ソースを表示](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html)したりすることができます。
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/initial-letter-align
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`initial-letter-align`** définit l'alignement des premières lettres d'un paragraphe lorsque celles-ci sont mises en avant grâce à {{cssxref("initial-letter")}} pour former une lettrine.
@@ -47,9 +48,13 @@ La valeur de cette propriété peut être l'un des mots-clés parmi ceux défini
 - `ideographic`
   - : La première lettre est centrée par rapport à la N-ième ligne utilisée pour la lettrine.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -80,12 +85,8 @@ La valeur de cette propriété peut être l'un des mots-clés parmi ceux défini
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Inline', '#aligning-initial-letter', 'initial-letter-align')}} | {{Spec2('CSS3 Inline')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.initial-letter-align")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: PushManager.getSubscription()
 slug: Web/API/PushManager/getSubscription
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
 {{domxref("PushManager")}} インターフェースの **`PushManager.getSubscription()`** メソッドは、既存のプッシュサブスクリプションを取得します。
@@ -24,7 +25,7 @@ slug: Web/API/PushManager/getSubscription
 
 ## 例
 
-このコードスニペットは、[push messaging and notification sample ](https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications)から取ってきました（使用できるライブデモはありません）。
+このコードスニペットは、[push messaging and notification sample](https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications) から取ってきました（使用できるライブデモはありません）。
 
 ```js
 // サブスクリプションをチェックするために、service worker の登録が必要である。

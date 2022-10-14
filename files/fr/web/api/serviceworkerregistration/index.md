@@ -14,6 +14,7 @@ tags:
   - Workers
 translation_of: Web/API/ServiceWorkerRegistration
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 The `ServiceWorkerRegistration` interface of the [ServiceWorker API](/fr/docs/Web/API/ServiceWorker_API) represents the service worker registration. You register a service worker to control one or more pages that share the same origin.

@@ -1,16 +1,8 @@
 ---
 title: ':nth-child()'
 slug: Web/CSS/:nth-child
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.nth-child
-translation_of: Web/CSS/:nth-child
 ---
+
 {{CSSRef}}
 
 **`:nth-child()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中での位置に基づいて選択します。
@@ -31,6 +23,10 @@ li:nth-child(2) {
 
 `:nth-child()` 擬似クラスは、引数を 1 つ指定し、リストの子要素を要素の位置で選択するためのパターンを記述します。要素の位置は 1 から始まります。
 
+```
+:nth-child( <nth> [ of <complex-selector-list> ]? )
+```
+
 ### キーワード値
 
 - `odd`
@@ -49,10 +45,6 @@ li:nth-child(2) {
     - `n` はすべての正の整数で、 0 から始まります。
 
     リスト中の *An+B* 番目の要素として読むことができます。
-
-### 形式文法
-
-{{csssyntax}}
 
 ## 例
 

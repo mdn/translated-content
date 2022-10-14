@@ -1,15 +1,8 @@
 ---
 title: HTMLElement.contentEditable
 slug: Web/API/HTMLElement/contentEditable
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLElement.contentEditable
-translation_of: Web/API/HTMLElement/contentEditable
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`contentEditable`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、要素が編集可能かどうかを指定します。

@@ -6,6 +6,7 @@ tags:
   - Reference
 translation_of: Web/HTTP/Headers/If-Modified-Since
 ---
+
 {{HTTPSidebar}}
 
 L'entête de requête HTTP **`If-Modified-Since`** rend la requête conditionnelle : le serveur renverra la ressource demandée, avec un status {{HTTPStatus("200")}}, seulement si elle a été modifiée pour la dernière fois après la date donnée. Si la ressource n'a pas été modifiée depuis, la réponse sera un {{HTTPStatus("304")}} sans aucun contenu; le header {{HTTPHeader("Last-Modified")}} contiendra la date de la dernière modification. À l'inverse de {{HTTPHeader("If-Unmodified-Since")}}, `If-Modified-Since` ne peut être utilisé qu'avec un {{HTTPMethod("GET")}} ou un {{HTTPMethod("HEAD")}}.
@@ -68,7 +69,7 @@ If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 
 {{Compat("http.headers.If-Modified-Since")}}
 
-## À voir aussi
+## Voir aussi
 
 - {{HTTPHeader("ETag")}}
 - {{HTTPHeader("If-Unmodified-since")}}

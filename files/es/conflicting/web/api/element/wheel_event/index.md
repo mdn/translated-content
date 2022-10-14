@@ -20,7 +20,9 @@ La propiedad `onwheel` devuelve el código del controlador de eventos `onwheel` 
 
 ### Syntax
 
-    element.onwheel = event handling code
+```
+element.onwheel = event handling code
+```
 
 ### Notas
 

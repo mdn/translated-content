@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 ---
+
 {{JSRef}}
 
 **`getUTCDate()`** メソッドは、協定世界時に基づき、指定された日時の月内の日 (1 ～ 31) を返します。
@@ -40,8 +34,7 @@ var dayOfMonth = today.getUTCDate();
 
 | 仕様書                                                                                                                       |
 | ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.getutcdate',
-        'Date.prototype.getUTCDate')}} |
+| {{SpecName('ESDraft', '#sec-date.prototype.getutcdate', 'Date.prototype.getUTCDate')}} |
 
 ## ブラウザーの互換性
 

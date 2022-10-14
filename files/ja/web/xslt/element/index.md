@@ -1,13 +1,8 @@
 ---
 title: XSLT 要素リファレンス
 slug: Web/XSLT/Element
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - 概要
-translation_of: Web/XSLT/Element
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XSLT")}}
 
 ここでは、最上位要素と指示の 2 種類の要素について説明します。最上位の要素は `<xsl:stylesheet>` または `<xsl:transform>` の子として表示する必要があります。一方、指示はテンプレートに関連付けられています。スタイルシートにはいくつかのテンプレートが含まれています。ここでは説明しない第 3 のタイプの要素はリテラル結果要素 (LRE) です。 LRE もテンプレートに表示されます。これは、HTML 変換スタイルシートの `<hr>` 要素など、結果ドキュメントにそのままコピーする必要のある非命令要素から構成されます。

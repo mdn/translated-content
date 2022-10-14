@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Microsoft_Extensions
 original_slug: Web/CSS/Extensions_CSS_Microsoft
 ---
+
 {{CSSRef}}
 
 Les applications Microsoft, telles que Edge ou Internet Explorer, prennent en charge différentes extensions à **[CSS](/fr/docs/Web/CSS)**. Ces extensions sont préfixées par `-ms`.

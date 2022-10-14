@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/replace
 ---
+
 {{JSRef}}
 
 La méthode **`replace()`** renvoie une nouvelle chaîne de caractères dans laquelle tout ou partie des correspondances à un `modèle` sont remplacées par un `remplacement`. Le `modèle` utilisé peut être une {{jsxref("RegExp")}} et le remplacement peut être une chaîne ou une fonction à appeler pour chaque correspondance. Si `modèle` est une chaîne de caractères, seule la première correspondance sera remplacée.
@@ -252,6 +253,7 @@ Une chaîne de caractères composée des caractères `x`, `-` et `_`
 ```js
 x-x_
 x---x---x---x---
+
 x-xxx-xx-x-
 x_x_x___x___x___
 ```
@@ -284,24 +286,11 @@ Ce fragment génère un tableau de 3 objets au format désiré sans utiliser de 
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                       | Commentaire                                        |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}         | Définition initiale. Implémentée en JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-15.5.4.11', 'String.prototype.replace')}}                         | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.replace', 'String.prototype.replace')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-string.prototype.replace', 'String.prototype.replace')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.replace")}}
-
-## Notes spécifiques à Firefox
-
-- `flags` était un troisième argument non standard disponible uniquement dans Gecko : *str*.replace(_regexp_|_substr_, _newSubStr_|_function, flags_)
-- À partir de Gecko 27 {{geckoRelease(27)}}, cette méthode a été modifiée pour être conforme à la spécification ECMAScript. Lorsque `replace()` est appelée avec une expression régulière globale, la propriété {{jsxref("RegExp.lastIndex")}} (si elle est définie) sera remise à `0` ({{bug(501739)}}).
-- À partir de Gecko 39 {{geckoRelease(39)}}, l'argument non-standard `flags` est désapprouvé et déclenche un avertissement dans la console ({{bug(1142351)}}).
-- À partir de Gecko 47 {{geckoRelease(47)}}, l'argument non-standard `flags` n'est plus supporté dans les versions non distribution et sera bientôt retiré complètement ({{bug(1245801)}}).
-- À partir de Gecko 49 {{geckoRelease(49)}}, l'argument non-standard `flags` n'est plus supporté ({{bug(1108382)}}).
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,11 +2,12 @@
 title: PushMessageData
 slug: Web/API/PushMessageData
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
-The **`PushMessageData`** interface of the [Push API](/en-US/docs/Web/API/Push_API) provides methods which let you retrieve the push data sent by a server in various formats.
+The **`PushMessageData`** interface of the [Push API](/zh-CN/docs/Web/API/Push_API) provides methods which let you retrieve the push data sent by a server in various formats.
 
-Unlike the similar methods in the [Fetch API](/en-US/docs/Web/API/Fetch_API), which only allow the method to be invoked once, these methods can be called multiple times.
+Unlike the similar methods in the [Fetch API](/zh-CN/docs/Web/API/Fetch_API), which only allow the method to be invoked once, these methods can be called multiple times.
 
 ## Properties
 
@@ -19,7 +20,7 @@ None.
 - {{domxref("PushMessageData.blob()")}}
   - : Extracts the data as a {{domxref("Blob")}} object.
 - {{domxref("PushMessageData.json()")}}
-  - : Extracts the data as a [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) object.
+  - : Extracts the data as a [JSON](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON) object.
 - {{domxref("PushMessageData.text()")}}
   - : Extracts the data as a plain text string.
 
@@ -56,8 +57,8 @@ self.addEventListener('push', function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.PushMessageData")}}
+{{Compat}}
 
 ## See also
 
-- [Using the Push API](/en-US/docs/Web/API/Push_API/Using_the_Push_API)
+- [Using the Push API](/zh-CN/docs/Web/API/Push_API/Using_the_Push_API)

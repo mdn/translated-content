@@ -2,6 +2,7 @@
 title: windows
 slug: Mozilla/Add-ons/WebExtensions/API/windows
 ---
+
 {{AddonSidebar}}
 
 与浏览器窗口互动。您可以使用此 API 获取有关已打开窗口的信息，以及打开、修改和关闭窗口。您也可以监听窗口的打开、关闭和其激活事件。
@@ -52,7 +53,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.windows")}}
+{{Compat}}
 
 ### Edge 的不兼容
 

@@ -1,13 +1,8 @@
 ---
 title: Attr
 slug: Web/API/Attr
-page-type: web-api-interface
-tags:
-  - インターフェイス
-  - リファレンス
-browser-compat: api.Attr
-translation_of: Web/API/Attr
 ---
+
 {{APIRef("DOM")}}
 
 **`Attr`** インターフェイスは要素の属性の一つをオブジェクトとして表します。多くの場合、属性値を直接文字列として取得しますが（例: {{domxref("Element.getAttribute()")}}）、一部の関数（例: {{domxref("Element.getAttributeNode()")}}）や反復処理の場面では `Attr` のインスタンスを返します。
@@ -24,7 +19,7 @@ translation_of: Web/API/Attr
 | `myAttr`  | `mynamespace`  | _なし_           | `myAttr`             | `myAttr`                 |
 | `myAttr`  | `mynamespace`  | `myns`           | `myAttr`             | `myns:myAttr`            |
 
-> **Note:** このインターフェイスは、SVG、HTML、MathML のいずれかの要素である {{domxref("Element")}} のツリー表現に存在する属性のみを表します。例えば {{HTMLElement("table")}} 要素に対する {{domxref("HTMLTableElement")}} のような、その要素に関連付けられたインターフェイスの*プロパティ*を表すことはありません。（属性とそれがどのようにプロパティに*反映*されるかについての詳細は{{Glossary("Attribute", "この記事")}}を参照してください。）
+> **メモ:** このインターフェイスは、SVG、HTML、MathML のいずれかの要素である {{domxref("Element")}} のツリー表現に存在する属性のみを表します。例えば {{HTMLElement("table")}} 要素に対する {{domxref("HTMLTableElement")}} のような、その要素に関連付けられたインターフェイスの*プロパティ*を表すことはありません。（属性とそれがどのようにプロパティに*反映*されるかについての詳細は{{Glossary("Attribute", "この記事")}}を参照してください。）
 
 ## プロパティ
 

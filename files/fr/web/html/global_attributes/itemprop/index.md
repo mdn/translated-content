@@ -10,6 +10,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/itemprop
 original_slug: Web/HTML/Attributs_universels/itemprop
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemprop`** est utilisé afin d'ajouter des propriétés à un objet. C'est un attribut universel et chaque élément HTML peut donc avoir un attribut `itemprop` qui permettra de former un couple de nom (la valeur de l'attribut) et de valeur (la valeur de l'élément). Chacune de ces paires constitue une **propriété** et un groupe de propriété forme un **objet (_item_)**. Les valeurs des propriétés sont généralement des chaînes de caractères ou des URL et peuvent être associées à de nombreux éléments comme {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}} et {{HTMLElement("video")}}.
@@ -408,14 +409,11 @@ Un exemple sur un livre qu'on décrit avec les différents attributs.
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                 | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('HTML Microdata', "#dfn-attr-itemprop", "itemprop")}}                                 | {{Spec2('HTML Microdata')}} |              |
-| {{SpecName('HTML WHATWG', "microdata.html#names:-the-itemprop-attribute", "itemprop")}} | {{Spec2('HTML WHATWG')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.itemprop")}}
+{{Compat}}
 
 ## Voir aussi
 

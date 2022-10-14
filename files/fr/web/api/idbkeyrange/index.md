@@ -12,6 +12,7 @@ tags:
   - TopicStub
 translation_of: Web/API/IDBKeyRange
 ---
+
 {{APIRef("IndexedDB")}}
 
 L'interface **`IDBKeyRange`** de l'API [IndexedDB](/fr/docs/Web/API/API_IndexedDB) représente un intervalle continue sur un type de donnée utilisé pour représenter des clés. Les enregistrements peuvent être récupérés depuis des objets {{domxref("IDBObjectStore")}} et {{domxref("IDBIndex")}} grâce à des clés ou à des intervalles de clé. Il est possible de préciser les bornes inférieure et supérieure de l'intervalle. Si les clés sont des chaînes de caractères, on pourrait ainsi parcourir l'ensemble des valeurs pour l'intervalle A–Z.
@@ -103,7 +104,7 @@ function displayData() {
   };
 ```
 
-> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) ([ainsi que la démonstration associée](https://mdn.github.io/IDBKeyRange-example/)).
+> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) ([ainsi que la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
 
 ## Spécifications
 

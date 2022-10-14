@@ -1,13 +1,8 @@
 ---
 title: XQuery
 slug: Glossary/XQuery
-tags:
-  - CodingScripting
-  - Glossary
-  - XML
-  - XQuery
-translation_of: Glossary/XQuery
 ---
+
 **XQuery** は {{glossary("XML")}} データベースでデータを更新、検索、計算するためのコンピューター言語です。
 
 ## より詳しく学ぶ
@@ -15,7 +10,7 @@ translation_of: Glossary/XQuery
 ### 一般知識
 
 - [公式ウェブサイト](http://www.w3.org/XML/Query/)
-- Wikipedia の {{Interwiki("wikipedia", "XQuery")}}
+- Wikipedia の [XQuery](https://ja.wikipedia.org/wiki/XQuery)
 
 ### 技術参考資料
 

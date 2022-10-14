@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/@@iterator
 ---
+
 {{JSRef}}
 
 La valeur initiale de la propriété @@iterator est le même objet fonction que la valeur initiale de {{jsxref("TypedArray.prototype.values()", "values")}}.
@@ -54,14 +55,11 @@ console.log(eArr.next().value); // 50
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                         | Commentaires        |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-%typedarray%.prototype-@@iterator', '%TypedArray%.prototype[@@iterator]()')}}     | {{Spec2('ES6')}}         | Définition initiale |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype-@@iterator', '%TypedArray%.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.@@iterator")}}
+{{Compat}}
 
 ## Voir aussi
 

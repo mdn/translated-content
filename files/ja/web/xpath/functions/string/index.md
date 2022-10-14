@@ -1,11 +1,8 @@
 ---
 title: string
 slug: Web/XPath/Functions/string
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/string
 ---
+
 {{ XsltRef() }}
 
 `string` 関数は与えられた引数を文字列に変換します。

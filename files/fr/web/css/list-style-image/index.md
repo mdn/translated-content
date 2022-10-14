@@ -4,6 +4,7 @@ slug: Web/CSS/list-style-image
 translation_of: Web/CSS/list-style-image
 browser-compat: css.properties.list-style-image
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`list-style-image`** définit l'image utilisée comme puce devant les [éléments de listes](/fr/docs/Web/HTML/Element/li).

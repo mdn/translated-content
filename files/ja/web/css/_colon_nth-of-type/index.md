@@ -1,16 +1,8 @@
 ---
 title: ':nth-of-type()'
 slug: Web/CSS/:nth-of-type
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.nth-of-type
-translation_of: Web/CSS/:nth-of-type
 ---
+
 {{CSSRef}}
 
 **`:nth-of-type()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で指定された型 (タグ名) の要素を、位置に基づいて選択します。
@@ -29,9 +21,9 @@ p:nth-of-type(4n) {
 
 構文の詳しい説明は {{Cssxref(":nth-child")}} を参照してください。
 
-### 形式文法
-
-{{csssyntax}}
+```
+:nth-of-type( <an-plus-b> | even | odd )
+```
 
 ## 例
 
@@ -79,7 +71,7 @@ p.fancy:nth-of-type(2n+1) {
 
 {{EmbedLiveSample('Basic_example', 250, 250)}}
 
-> **Note:** このセレクターを使用して n 番目のクラスを選択する方法はありません。このセレクターは、一致するリストを作成する際に型だけを見ます。しかし、上の例のように `:nth-of-type` の位置**と**クラスに基づいて要素に CSS を適用することができます。
+> **メモ:** このセレクターを使用して n 番目のクラスを選択する方法はありません。このセレクターは、一致するリストを作成する際に型だけを見ます。しかし、上の例のように `:nth-of-type` の位置**と**クラスに基づいて要素に CSS を適用することができます。
 
 ## 仕様書
 

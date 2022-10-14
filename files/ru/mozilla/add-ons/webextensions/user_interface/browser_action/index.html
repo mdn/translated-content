@@ -16,17 +16,17 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 
 <p>Применимые лишь к определённым страницам кнопки следует реализовывать с помощью кнопки в адресной строке (<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Page_actions">page action</a>).</p>
 
-<h2 id="Объявление_в_manifest.json"><span class="short_text" id="result_box" lang="ru"><span>Объявление в manifest.json</span></span></h2>
+<h2 id="Объявление_в_manifest.json">Объявление в manifest.json</h2>
 
 <p>За кнопку на панели инструментов отвечает свойство манифеста  <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code>:</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"browser_action":</span> <span class="punctuation token">{</span>
-  <span class="key token">"default_icon":</span> <span class="punctuation token">{</span>
-    <span class="key token">"19":</span> <span class="string token">"button/geo-19.png"</span><span class="punctuation token">,</span>
-    <span class="key token">"38":</span> <span class="string token">"button/geo-38.png"</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="key token">"default_title":</span> <span class="string token">"Whereami?"</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">"browser_action": {
+  "default_icon": {
+    "19": "button/geo-19.png",
+    "38": "button/geo-38.png"
+  },
+  "default_title": "Whereami?"
+}</code></pre>
 
 <p>Свойство кнопки <code>default_icon</code> обязательно, оно определяет внешний вид кнопки - иконку, которая окажется на панели инструментов.</p>
 
@@ -34,7 +34,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 
 <p>Возможны два способа реакции на нажатие кнопки: отображение <a href="/en-US/Add-ons/WebExtensions/Popups">всплывающего окна</a> (описано в отдельном разделе) или отправка события в background script расширения. В таком случае реакция на нажатие обеспечивают обработчики событий, подключённые к <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>browserAction.onClicked</code></a>:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>browserAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">browser.browserAction.onClicked.addListener(handleClick);</code></pre>
 
 <p>Если же указать в качестве реакции на нажатие всплывающее окно, то событие передано не будет. Вместо этого около кнопки отобразится всплывающее окно - отдельная маленькая страница, дальнейшее взаимодействие с пользователем берёт на себя она. Подробнее этот сценарий описан на отдельной странице, посвящённой <a href="/en-US/Add-ons/WebExtensions/Popups">всплывающим окнам</a>.</p>
 
@@ -42,7 +42,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 
 <h2 id="Примеры">Примеры</h2>
 
-<p><span id="result_box" lang="ru"><span>В GitHub репозитории</span></span> <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> представлены <span id="result_box" lang="ru"><span>несколько примеров расширений, которые создают кнопку на панели инструментов:</span></span></p>
+<p>В GitHub репозитории <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> представлены несколько примеров расширений, которые создают кнопку на панели инструментов:</p>
 
 <ul>
  <li><a href="https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/">bookmark-it</a> использует событие browserAction.onClicked.</li>

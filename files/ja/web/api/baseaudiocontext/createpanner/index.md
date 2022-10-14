@@ -1,25 +1,16 @@
 ---
 title: BaseAudioContext.createPanner()
 slug: Web/API/BaseAudioContext/createPanner
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createPanner
-browser-compat: api.BaseAudioContext.createPanner
-translation_of: Web/API/BaseAudioContext/createPanner
 original_slug: Web/API/AudioContext/createPanner
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createPanner()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、新しい {{domxref("PannerNode") }} を作成するために使用されます。これは、入力される音声ストリームを三次元空間で空間化するのに使われます。
 
 パナーノードは AudioContext の {{domxref("AudioListener") }} （{{domxref("BaseAudioContext/listener", "AudioContext.listener") }} 属性によって定義）に関連して空間化され、音声を聞く人の位置と向きを表現します。
 
-> **Note:** {{domxref("PannerNode.PannerNode", "PannerNode()")}} コンストラクターは {{domxref("PannerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("PannerNode.PannerNode", "PannerNode()")}} コンストラクターは {{domxref("PannerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
 ## 構文
 
@@ -128,7 +119,7 @@ function positionPanner() {
 }
 ```
 
-> **Note:** リスナーやパンナーの位置値をどのように設定すれば、画面上のビジュアルに適したサウンドになるかという点では、少し面倒な計算が必要となりますが、すこしやれば慣れる類のものです。
+> **メモ:** リスナーやパンナーの位置値をどのように設定すれば、画面上のビジュアルに適したサウンドになるかという点では、少し面倒な計算が必要となりますが、すこしやれば慣れる類のものです。
 
 ## 仕様書
 

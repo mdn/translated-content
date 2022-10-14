@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">

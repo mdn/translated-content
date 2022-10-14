@@ -1,13 +1,8 @@
 ---
 title: <xsl:apply-templates>
 slug: Web/XSLT/Element/apply-templates
-tags:
-  - XSLT
-  - apply-templates
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/apply-templates
 ---
+
 {{ XsltRef() }}
 
 `<xsl:apply-templates>` 要素は、入力ツリー内のノードのセットを選択し、適切なテンプレートを適用するようにプロセッサに指示します。
@@ -16,8 +11,8 @@ translation_of: Web/XSLT/Element/apply-templates
 
 ```
 <xsl:apply-templates select=EXPRESSION mode=NAME>
-	<xsl:with-param> [optional]
-	<xsl:sort> [optional]
+  <xsl:with-param> [optional]
+  <xsl:sort> [optional]
 </xsl:apply-templates>
 ```
 

@@ -1,11 +1,8 @@
 ---
 title: プロパティの列挙可能性と所有権
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
-tags:
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 ---
+
 {{JsSidebar("More")}}
 
 列挙可能プロパティは、内部の列挙可能（enumerable）フラグが true に設定されているプロパティです。これは、単純な代入や初期化で作成されたプロパティのデフォルトです ([Object.defineProperty](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) で追加したプロパティはデフォルトで列挙可能性が false になります）。プロパティのキーが [Symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) でない限り、列挙可能なプロパティは [for...in](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループにの対象になります。プロパティの所有権は、プロパティがプロトタイプチェーンではなく、オブジェクトに直接属しているかどうかによって決まります。オブジェクトのプロパティはまとめて取り扱うこともでき、プロパティを検出、反復、列挙、取得するための多くの組み込み機能があります。以下に、使用可能なチャートと不足しているカテゴリを取得する方法を示すサンプルコードを示します。

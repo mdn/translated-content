@@ -1,19 +1,13 @@
 ---
 title: 502 Bad Gateway
 slug: Web/HTTP/Status/502
-tags:
-  - HTTP
-  - Server error
-  - Status code
-  - サーバーエラー
-  - ステータスコード
-translation_of: Web/HTTP/Status/502
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) の **`502 Bad Gateway`** サーバーエラーレスポンスコードは、ゲートウェイまたはプロキシとして機能しているサーバーが上流のサーバーから無効なレスポンスを受け取ったことを示しています。
 
-> **Note:** **メモ:** {{interwiki("wikipedia", "Gateway_(telecommunications)", "ゲートウェイ")}}はネットワークの様々なものを指す可能性があり、 502 エラーは通常修正できるものではありませんが、ウェブサーバーまたはアクセスを中継させようとしているプロキシによる修正が必要です。
+> **メモ:** [ゲートウェイ](https://ja.wikipedia.org/wiki/ゲートウェイ)はネットワークの様々なものを指す可能性があり、 502 エラーは通常修正できるものではありませんが、ウェブサーバーまたはアクセスを中継させようとしているプロキシによる修正が必要です。
 
 ## ステータス
 

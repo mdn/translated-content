@@ -2,6 +2,7 @@
 title: DOMTokenList.add()
 slug: Web/API/DOMTokenList/add
 ---
+
 {{APIRef("DOM")}}
 
 **`add()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、指定されたトークンをリストに追加します。既に存在する場合は何もしません。

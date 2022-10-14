@@ -1,15 +1,8 @@
 ---
 title: 符号なし右シフト代入 (>>>=)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
-tags:
-  - 代入演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.unsigned_right_shift_assignment
-translation_of: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 符号なし右シフト代入演算子 (_`>>>=`_) は、指定された数だけビットを右に移動し、結果を変数に代入します。

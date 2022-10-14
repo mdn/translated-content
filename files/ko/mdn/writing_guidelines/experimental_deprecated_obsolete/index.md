@@ -1,11 +1,6 @@
 ---
 title: 모범 사례
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
-tags:
-  - Guide
-  - Guidelines
-  - MDN Meta
-translation_of: MDN/Guidelines/Conventions_definitions
 original_slug: MDN/Guidelines/Conventions_definitions
 ---
 {{MDNSidebar}}

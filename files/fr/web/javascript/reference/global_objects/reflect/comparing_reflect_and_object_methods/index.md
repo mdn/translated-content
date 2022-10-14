@@ -13,6 +13,7 @@ translation_of: >-
 original_slug: >-
   Web/JavaScript/Reference/Objets_globaux/Reflect/Comparaison_entre_Reflect_et_les_méthodes_Object
 ---
+
 {{jssidebar}}
 
 L'objet {{jsxref("Reflect")}}, introduit avec ES2015, est un objet natif fournissant des méthodes pour s'interfacer avec les objets JavaScript. Certaines fonctions statiques de `Reflect` ont une correspondance avec les méthodes fournies par {{jsxref("Object")}} et disponibles avant ES2015. Bien que ces méthodes aient un comportement similaire, il y a souvent de subtiles différences entre elles.

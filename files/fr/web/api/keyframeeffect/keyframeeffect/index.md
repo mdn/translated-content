@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/EffectTiming/delay
 original_slug: Web/API/EffectTiming/delay
 ---
+
 {{SeeCompatTable}}{{APIRef("Web Animations")}}
 
 La propriété **`delay`** est un dictionnaire pour {{domxref("AnimationEffectTimingProperties")}} qui représente le nombre de millisecondes à attendre avant de démarrer une animation.

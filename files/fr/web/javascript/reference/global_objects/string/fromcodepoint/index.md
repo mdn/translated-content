@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/fromCodePoint
 ---
+
 {{JSRef}}
 
 La méthode statique **`String.fromCodePoint()`** renvoie une chaîne de caractères créée à partir d'un suite de codets.
@@ -77,14 +78,11 @@ String.fromCodePoint(0x1F303); // ou 127747 en notation décimale
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires        |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-string.fromcodepoint', 'String.fromCodePoint')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-string.fromcodepoint', 'String.fromCodePoint')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.fromCodePoint")}}
+{{Compat}}
 
 ## Voir aussi
 

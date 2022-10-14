@@ -2,6 +2,7 @@
 title: 511 Network Authentication Required
 slug: Web/HTTP/Status/511
 ---
+
 {{HTTPSidebar}}
 
 **`511 Network Authentication Required`** 是一种 HTTP 协议的错误状态代码，表示客户端需要通过验证才能使用该网络。

@@ -1,13 +1,9 @@
 ---
 title: おわりに
 slug: Web/API/Canvas_API/Tutorial/Finale
-tags:
-  - キャンバス
-  - グラフィック
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Finale
 original_slug: Web/Guide/HTML/Canvas_tutorial/Finale
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
 おめでとうございます。[キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)は終了です。この知識は、ウェブ上で素晴らしい二次元グラフィックを作るのに役立ちます。

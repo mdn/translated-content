@@ -1,14 +1,8 @@
 ---
 title: CompositionEvent
 slug: Web/API/CompositionEvent
-tags:
-  - API
-  - CompositionEvent
-  - DOM
-  - Event
-  - Reference
-translation_of: Web/API/CompositionEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 DOM **`CompositionEvent`** は間接的なテキストの入力によって発生するイベントを表します。
@@ -52,5 +46,5 @@ _このインターフェイスは、親である {{domxref("UIEvent")}} およ�
 - [compositionstart](/ja/docs/Web/API/Element/compositionstart_event)
 - [compositionend](/ja/docs/Web/Reference/Events/compositionend)
 - [compositionupdate](/ja/docs/Web/API/Element/compositionupdate_event)
-- [UIEvent](/ja/docs/DOM/Event/UIEvent "UIEvent")
-- [Event](/ja/docs/DOM/event "Event")
+- [UIEvent](/ja/docs/DOM/Event/UIEvent)
+- [Event](/ja/docs/DOM/event)

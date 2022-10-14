@@ -9,6 +9,7 @@ tags:
   - Performance web
 translation_of: Web/API/Performance/getEntries
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 La méthode **`getEntries()`** renvoie une liste de tous les objets {{domxref("PerformanceEntry")}} pour la page. Les membres de la liste (_entrées_) peuvent être créés en faisant des _marqueurs_ ou des _mesures_ de performance (par exemple en appelant la méthode {{domxref("Performance.mark", "mark()")}}) à des moments explicites. Si vous souhaitez filtrer les entrées de performance en fonction de leur type ou de leur nom, consultez la documentation des méthodes {{domxref("Performance.getEntriesByType", "getEntriesByType()")}} et {{domxref("Performance.getEntriesByName", "getEntriesByName()")}}.

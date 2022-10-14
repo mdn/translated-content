@@ -1,17 +1,8 @@
 ---
 title: text-size-adjust
 slug: Web/CSS/text-size-adjust
-tags:
-  - CSS
-  - CSS Mobile Text Size Adjustment
-  - CSS プロパティ
-  - Experimental
-  - NeedsExample
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.text-size-adjust
-translation_of: Web/CSS/text-size-adjust
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`text-size-adjust`** は [CSS](/ja/docs/Web/API/CSS) のプロパティで、一部のモバイル端末で使われる、テキストの自動拡大アルゴリズムを制御します。他のブラウザーはこのプロパティを無視します。

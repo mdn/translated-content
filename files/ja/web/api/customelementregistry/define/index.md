@@ -1,17 +1,8 @@
 ---
 title: CustomElementRegistry.define()
 slug: Web/API/CustomElementRegistry/define
-tags:
-  - API
-  - CustomElementRegistry
-  - メソッド
-  - リファレンス
-  - ウェブコンポーネント
-  - カスタム要素
-  - define
-browser-compat: api.CustomElementRegistry.define
-translation_of: Web/API/CustomElementRegistry/define
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 **`define()`** は {{domxref("CustomElementRegistry")}} インターフェイスのメソッドで、新しいカスタム要素を定義します。
@@ -52,7 +43,7 @@ customElements.define(name, constructor, options);
 - `TypeError` {{domxref("DOMException")}}
   - : 参照されたコンストラクターがコンストラクターではなかった場合に発生します。
 
-> **Note:** `NotSupportedError` 例外が多く発生する場合、 `define()` が失敗しているように思えるかもしれませんが、多くの場合は {{domxref("Element.attachShadow()")}} に問題があります。
+> **メモ:** `NotSupportedError` 例外が多く発生する場合、 `define()` が失敗しているように思えるかもしれませんが、多くの場合は {{domxref("Element.attachShadow()")}} に問題があります。
 
 ## 例
 
@@ -145,7 +136,7 @@ customElements.define('popup-info', PopUpInfo);
                                     numbers on the back of your card.">
 ```
 
-> **Note:** 自律カスタム要素のコンストラクターは {{domxref("HTMLElement")}} を継承していなければなりません。
+> **メモ:** 自律カスタム要素のコンストラクターは {{domxref("HTMLElement")}} を継承していなければなりません。
 
 ### カスタム組み込み要素
 

@@ -1,13 +1,8 @@
 ---
 title: Crypto
 slug: Web/API/Crypto
-tags:
-  - API
-  - Interface
-  - Reference
-  - Web Crypt API
-translation_of: Web/API/Crypto
 ---
+
 {{APIRef("Web Crypto API")}}
 
 **`Crypto`** インターフェイスは、現在のコンテキストで利用できる基本的な暗号機能を表します。これは、暗号強度の強い乱数生成器と暗号プリミティブへのアクセスを許可します。

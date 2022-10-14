@@ -1,15 +1,6 @@
 ---
 title: 'Django 튜토리얼 파트 11: Django 웹사이트 공개하기'
 slug: Learn/Server-side/Django/Deployment
-tags:
-  - Django deployment
-  - django
-  - heroku
-  - whitenoise
-  - 웹 서버
-  - 장고
-  - 장고 배포
-translation_of: Learn/Server-side/Django/Deployment
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
@@ -214,7 +205,7 @@ git 으로 작업하는 수많은 방법이 있지만, [Github](https://github.c
 
 4. " **Create repository"** 버튼을 누른다
 5. 신규 저장소 페이지에서 초록색의 "**Clone or download**" 버튼을 클릭한다.
-6. 아래와 같은 형태의 URL 값을 다이얼로그 박스내의 텍스트 필드에서 복사한다.(예시: **https\://github.com/_\<your_git_user_id>_/django_local_library.git**).
+6. 아래와 같은 형태의 URL 값을 다이얼로그 박스내의 텍스트 필드에서 복사한다.(예시: `https\://github.com/<your_git_user_id>/django_local_library.git`).
 
 이제 원격 저장소 ("repo")가 생성되었으니 로컬 컴퓨터에 복제(clone)하길 원할 것이다:
 
@@ -328,7 +319,7 @@ pip3 install gunicorn
 Heroku에서 원격 서버에 설치하기 위한 [요구조건](/ko/docs/Learn/Server-side/Django/Deploymentt#requirements)의 일부가 되었으니, _dj-database-url_ 를 로컬에 설치한다:
 
 ```
-$ pip3 install dj-database-url
+pip3 install dj-database-url
 ```
 
 ##### settings.py 수정하기
@@ -408,7 +399,7 @@ STATIC_URL = '/static/'
 아래 명령으로 whitenoise를 로컬에 설치한다 :
 
 ```
-$ pip3 install whitenoise
+pip3 install whitenoise
 ```
 
 ##### settings.py 수정하기

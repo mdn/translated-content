@@ -1,13 +1,6 @@
 ---
 title: "@scroll-timeline"
 slug: Web/CSS/@scroll-timeline
-tags:
-  - アニメーション
-  - スクロール
-  - アットルール
-  - CSS
-  - リファレンス
-browser-compat: css.at-rules.scroll-timeline
 ---
 
 {{CSSRef}}

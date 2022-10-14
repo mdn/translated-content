@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 original_slug: Apprendre/Tester_le_bon_fonctionnement_de_votre_site_web
 ---
+
 Dans cet article, nous présenterons les différentes étapes permettant de diagnostiquer les problèmes d'un site web ainsi que les mesures à prendre pour corriger certains de ces problèmes.
 
 <table class="standard-table">
@@ -159,6 +160,7 @@ PING mozilla.org (63.245.215.20): 56 data bytes
 64 bytes from 63.245.215.20: icmp_seq=3 ttl=44 time=147.857 ms
 ^C
 --- mozilla.org ping statistics ---
+
 4 packets transmitted, 4 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 ```

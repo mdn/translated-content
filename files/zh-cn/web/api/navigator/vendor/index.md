@@ -2,6 +2,7 @@
 title: Navigator.vendor
 slug: Web/API/Navigator/vendor
 ---
+
 {{ ApiRef() }}
 
 ### 概述

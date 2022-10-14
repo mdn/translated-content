@@ -1,19 +1,14 @@
 ---
 title: API メソッドサブページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template
-page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-browser-compat: path.to.feature.NameOfTheMethod
-translation_of: MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template
 original_slug: MDN/Structures/Page_types/API_method_subpage_template
 l10n:
   sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
 ---
+
 {{MDNSidebar}}
 
-> **Note:** _この説明文全体を削除してから公開してください_
+> **メモ:** _この説明文全体を削除してから公開してください_
 >
 > ---
 >
@@ -104,7 +99,7 @@ l10n:
 - `parameter2`
   - : 同様です。
 
-> **Note:** この章は必須です。引数がない場合は、定義リストの代わりに「なし。」と記述してください。
+> **メモ:** この章は必須です。引数がない場合は、定義リストの代わりに「なし。」と記述してください。
 
 ### 返値
 
@@ -141,7 +136,7 @@ l10n:
 
 詳しくは、[コード例](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)を追加する方法のガイドをご覧ください。
 
-> **Note:** 他のページで紹介されている例にリンクしたい場合もあるでしょう。
+> **メモ:** 他のページで紹介されている例にリンクしたい場合もあるでしょう。
 >
 > **シナリオ 1:** このページにいくつかの例があり、別のページにさらにいくつかの例がある場合。
 >

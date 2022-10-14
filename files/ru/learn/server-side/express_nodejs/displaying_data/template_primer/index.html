@@ -15,13 +15,13 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 <p><strong>Примечание:</strong> недостаток применения <em>Pug</em> - это чувствительность к отступам и пробелам (если добавить лишний пробел в "плохом" месте, можно получить невразумительный код ошибки). Однако, если ваши шаблоны уже действуют, их очень легко читать и поддерживать.</p>
 </div>
 
-<h2 class="highlight-spanned" id="Конфигурация_шаблона"><span class="highlight-span">Конфигурация шаблона</span></h2>
+<h2 class="highlight-spanned" id="Конфигурация_шаблона">Конфигурация шаблона</h2>
 
 <p>Когда создавался каркас (<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">the skeleton website</a>) веб-сайта <em>LocalLibrary, </em>он был настроен  на использование <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a> . Можно было заметить, что модуль pug включён в зависимости в файле <strong>package.json</strong>, и установлен (app.set(...)) как движок представлений в файле <strong>app.js</strong>. Эта установка показывает,, что движок представлений -  pug, и что  <em>Express</em> должен искать шаблоны в подкаталоге <strong>/views</strong>.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// View engine setup.</span>
-app<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">(</span><span class="string token">'views'</span><span class="punctuation token">,</span> path<span class="punctuation token">.</span><span class="function token">join</span><span class="punctuation token">(</span>__dirname<span class="punctuation token">,</span> <span class="string token">'views'</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-app<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">(</span><span class="string token">'view engine'</span><span class="punctuation token">,</span> <span class="string token">'pug'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// View engine setup.
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');</code></pre>
 
 <p>Если посмотреть содержимое каталога <strong>views</strong>, можно увидеть файлы с расширением .pug, в которых шаблоны представлений по умолчанию.  Это представление  для домашней страницы (<strong>index.pug</strong>) и базовый шаблон (<strong>layout.pug</strong>), который следует заменить нашим содержимым.</p>
 
@@ -32,7 +32,7 @@ app<span class="punctuation token">.</span><span class="keyword token">set</span
     layout.pug</code>
 </pre>
 
-<h2 class="highlight-spanned" id="Синтаксис_шаблонов"><span class="highlight-span">Синтаксис шаблонов</span></h2>
+<h2 class="highlight-spanned" id="Синтаксис_шаблонов">Синтаксис шаблонов</h2>
 
 <p>Пример файла шаблона (ниже) демонстрирует многие наиболее полезные черты  Pug.</p>
 
@@ -47,11 +47,11 @@ html(lang="en")
     h1= title
 
     p This is a line with #[em some emphasis] and #[strong strong text] markup.
-    p This line has un-escaped data: !{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'} and escaped data: #{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is not emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}.
+    p This line has un-escaped data: !{'&lt;em&gt; is emphasised&lt;/em&gt;'} and escaped data: #{'&lt;em&gt; is not emphasised&lt;/em&gt;'}.
       | This line follows on.
-    p= 'Evaluated and <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>escaped expression<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>:' + title
+    p= 'Evaluated and &lt;em&gt;escaped expression&lt;/em&gt;:' + title
 
-    <span class="comment token">&lt;!-- You can add HTML comments directly --&gt;</span>
+    &lt;!-- You can add HTML comments directly --&gt;
     // You can add single line JavaScript comments and they are generated to HTML comments
     //- Introducing a single line JavaScript comment with "//-" ensures the comment isn't rendered to HTML
 
@@ -86,12 +86,12 @@ html(lang="en")
 <p>Если после тэга стоит знак = , следующий текст рассматривается как <em>выражение</em> JavaScript. Например, ниже в первой строке, содержимое тэга <code>h1</code> будет <em>переменной </em> <code>title</code> (которая определена в файле или передана в шаблон из Express). Во второй строке содержимое параграфа - это текстовая строка, соединённая с переменной  <code>title</code> . В каждом из случаев поведение по умолчанию - экранировать строки.</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">h1= title
-p= 'Evaluated and <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>escaped expression<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>:' + title</code></pre>
+p= 'Evaluated and &lt;em&gt;escaped expression&lt;/em&gt;:' + title</code></pre>
 
 <p>Если после тэга знак = отсутствует, тогда содержимое рассматривается как обычный текст. Внутри текста можно вставить экранированные или неэкранированные данные, применяя синтаксис  <code>#{}</code> и<code> !{}</code>, как показано ниже. В простой текст можно также вставлять "сырой" HTML.</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">p This is a line with #[em some emphasis] and #[strong strong text] markup.
-p This line has an un-escaped string: !{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}, an escaped string: #{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is not emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}, and escaped variables: #{title}.</code></pre>
+p This line has an un-escaped string: !{'&lt;em&gt; is emphasised&lt;/em&gt;'}, an escaped string: #{'&lt;em&gt; is not emphasised&lt;/em&gt;'}, and escaped variables: #{title}.</code></pre>
 
 <div class="note">
 <p><strong>Совет:</strong> Почти всегда желательно экранировать данные, полученные от пользователей (при помощи синтаксиса <strong><code>#{}</code></strong> ). Данные, которым можно верить (т.е. подсчитанное количество  записей,  могут быть выведены без экранирования значений.</p>
@@ -117,9 +117,9 @@ else
 
 <p>Синтаксис разрешает также комментарии (которые попадут в результат или нет, по вашему желанию), смеси для создания повторно используемых блоков кода, операторы выбора case, и много другого. Более подробная информация - в документации <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">The Pug docs</a>.</p>
 
-<h2 class="highlight-spanned" id="Расширение_шаблонов"><span class="highlight-span">Расширение шаблонов</span></h2>
+<h2 class="highlight-spanned" id="Расширение_шаблонов">Расширение шаблонов</h2>
 
-<p>Принято иметь общую структуру для всех страниц сайта, <span class="highlight-span">включая стандартную HTML-разметку для </span>заголовка, футера, навигации и т.д. Вместо того, чтобы заставлять разработчиков дублировать эти образцы на каждой странице, <em>Pug</em> позволяет объявить базовой шаблон, а затем модифицировать его, заменяя только те небольшие части, которые различны на каждой конкретной странице.</p>
+<p>Принято иметь общую структуру для всех страниц сайта, включая стандартную HTML-разметку для заголовка, футера, навигации и т.д. Вместо того, чтобы заставлять разработчиков дублировать эти образцы на каждой странице, <em>Pug</em> позволяет объявить базовой шаблон, а затем модифицировать его, заменяя только те небольшие части, которые различны на каждой конкретной странице.</p>
 
 <p>Например, базовый шаблон <strong>layout.pug,</strong> созданный в каркасе проекта, имеет такой вид:</p>
 

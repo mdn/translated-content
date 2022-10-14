@@ -1,17 +1,8 @@
 ---
 title: 'Feature-Policy: autoplay'
 slug: Web/HTTP/Headers/Feature-Policy/autoplay
-tags:
-  - ディレクティブ
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - リファレンス
-  - autoplay
-  - 実験的
-browser-compat: http.headers.Feature-Policy.autoplay
-translation_of: Web/HTTP/Headers/Feature-Policy/autoplay
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `autoplay` ディレクティブは、現在の文書で {{domxref("HTMLMediaElement")}} インターフェイスによってメディアの自動再生をリクエストすることを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("HTMLMediaElement.play()")}} から返却された {{jsxref("Promise")}} が {{domxref("DOMException")}} で拒否されます。 {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素の {{htmlattrxref("autoplay", "audio")}} 属性は無視されます。

@@ -2,6 +2,7 @@
 title: Web 和 Web 标准
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 ---
+
 {{learnsidebar}}
 
 这篇文章提供了一些有用的 Web 背景知识——它是如何产生的，什么是 Web 标准技术，它们是如何协同工作的，为什么“Web 开发人员”是一个很好的职业选择，以及您将在本课程中学习哪些最佳做法。
@@ -10,17 +11,17 @@ slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 
 我们会简单叙述，因为别处已有很多关于 Web 历史的详尽说明，稍后我们会链接到它们（如果那您对更多细节内容感兴趣，也请试着在您惯用的搜索引擎中搜索“Web 的历史”以获取相关内容。）
 
-在 20 世纪 60 年代末期，美国军方开发了一个名为 [ARPANET](/en-US/docs/Glossary/Arpanet) 的通信网络。这可以认为是 Web 的先驱，因为它基于 [分组交换（ packet switching）](https://en.wikipedia.org/wiki/Packet_switching) 进行工作，并且首次实现了 [TCP/IP 协议族（TCP/IP protocol suite）](https://en.wikipedia.org/wiki/Internet_protocol_suite) 。这两种技术构成了互联网基础设施的基础。
+在 20 世纪 60 年代末期，美国军方开发了一个名为 [ARPANET](/zh-CN/docs/Glossary/Arpanet) 的通信网络。这可以认为是 Web 的先驱，因为它基于 [分组交换（packet switching）](https://en.wikipedia.org/wiki/Packet_switching) 进行工作，并且首次实现了 [TCP/IP 协议族（TCP/IP protocol suite）](https://en.wikipedia.org/wiki/Internet_protocol_suite) 。这两种技术构成了互联网基础设施的基础。
 
 1980 年，Tim Berners-Lee（通常称之为 TimBL）写了一个叫 ENQUIRE 的笔记本程序，这个程序实现了不同节点之间链接的概念。听起来有点熟悉对吧？
 
-快进到 1989 年，TimBL 在 CERN 撰写了 [《Information Management: A Proposal》](https://www.w3.org/History/1989/proposal.html) 和《HyperText》 ； 这两个出版物共同为 Web 将如何工作做了铺垫。两个出版物获得了极大的关注，这足以说服 TimBL 的上司让他继续前进，并创建一个全球超文本系统。
+快进到 1989 年，TimBL 在 CERN 撰写了 [《Information Management: A Proposal》](https://www.w3.org/History/1989/proposal.html) 和《HyperText》 ；这两个出版物共同为 Web 将如何工作做了铺垫。两个出版物获得了极大的关注，这足以说服 TimBL 的上司让他继续前进，并创建一个全球超文本系统。
 
-到 1990 年底，TimBL 已经创建了运行第一个版本的 Web 所需的所有东西—— [HTTP](/en-US/docs/Web/HTTP)，[HTML](/en-US/docs/Web/HTML)，名为 [WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb) 的第一个 Web 浏览器，一个 HTTP 服务器和一些用于查看的网页。
+到 1990 年底，TimBL 已经创建了运行第一个版本的 Web 所需的所有东西—— [HTTP](/zh-CN/docs/Web/HTTP)，[HTML](/zh-CN/docs/Web/HTML)，名为 [WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb) 的第一个 Web 浏览器，一个 HTTP 服务器和一些用于查看的网页。
 
 在随后的几年中，随着多个浏览器的发布，数以千计 Web 服务器的建立，上百万网页的生成，Web 爆发式发展。OK，这只是对事件非常粗略的描述，但我向您说过会简单叙述。
 
-最后一个值得分享的重要事件在 1994 年，TimBL 建立了[万维网联盟（World Wide Web Consortium，W3C）](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)，该组织汇集了来自许多不同技术公司的代表，共同制定 Web 技术规范。随后其他的技术像 [CSS](/en-US/docs/Web/CSS) 和 [JavaScript](/en-US/docs/Web/JavaScript) 出现了，Web 开始看起来更像我们现在所了解的 Web。
+最后一个值得分享的重要事件在 1994 年，TimBL 建立了[万维网联盟（World Wide Web Consortium，W3C）](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)，该组织汇集了来自许多不同技术公司的代表，共同制定 Web 技术规范。随后其他的技术像 [CSS](/zh-CN/docs/Web/CSS) 和 [JavaScript](/zh-CN/docs/Web/JavaScript) 出现了，Web 开始看起来更像我们现在所了解的 Web。
 
 ## Web 标准
 
@@ -34,7 +35,7 @@ Web 标准是由标准机构创建的——这些机构邀请不同技术公司�
 
 Web 标准的关键方面之一，TimBL 和 W3C 从一开始就认同的一点，Web（和 Web 技术）应该自由地贡献和使用，并且不受专利/许可的约束。因此，任何人都可以编写代码免费建立网站，并且任何人都可以为编写规范的标准创建过程做出贡献。
 
-由于 Web 技术是开放的，因此在许多不同公司之间的协作中，这意味着没有一家公司可以控制它，这确实是一件好事。 您不会希望任何一家公司突然决定将整个 Web 置于付费壁垒之后，或者发布每个人都必须购买以继续制作网站的新版 HTML，或者更糟糕的是，仅仅将他们不再感兴趣的网站关闭。
+由于 Web 技术是开放的，因此在许多不同公司之间的协作中，这意味着没有一家公司可以控制它，这确实是一件好事。您不会希望任何一家公司突然决定将整个 Web 置于付费壁垒之后，或者发布每个人都必须购买以继续制作网站的新版 HTML，或者更糟糕的是，仅仅将他们不再感兴趣的网站关闭。
 
 这一点允许 Web 保持免费可用，使其成为公共资源。
 
@@ -56,7 +57,7 @@ _唯一不变的就是变化。_
 
 ## 现代网络技术概述
 
-如果您想成为前端 Web 开发人员，可以学习多种技术。在本节中，我们将简要描述它们。有关其中某些功能是如何协同工作的详尽说明，请阅读我们的文章 [Web 是如何工作的](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)。
+如果您想成为前端 Web 开发人员，可以学习多种技术。在本节中，我们将简要描述它们。有关其中某些功能是如何协同工作的详尽说明，请阅读我们的文章 [Web 是如何工作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)。
 
 ### 浏览器
 
@@ -64,7 +65,7 @@ _唯一不变的就是变化。_
 
 ### HTTP
 
-超文本传输协议（Hypertext Transfer Protocol，[HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP)），它允许 Web 浏览器与 Web 服务器（存储网站的位置）进行通信。典型的通信就像这样
+超文本传输协议（Hypertext Transfer Protocol，[HTTP](/zh-CN/docs/Web/HTTP/Basics_of_HTTP)），它允许 Web 浏览器与 Web 服务器（存储网站的位置）进行通信。典型的通信就像这样
 
 ```plain
 "你好 Web 服务器。你可以给我用于渲染 bbc.co.uk 的文件吗？"
@@ -78,7 +79,7 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 
 ### HTML , CSS , 和 JavaScript
 
-[HTML](/en-US/docs/Web/HTML)，[CSS](/en-US/docs/Web/CSS)，和 [JavaScript](/en-US/docs/Web/JavaScript) 是您用来建立网站的三种主要技术：
+[HTML](/zh-CN/docs/Web/HTML)，[CSS](/zh-CN/docs/Web/CSS)，和 [JavaScript](/zh-CN/docs/Web/JavaScript) 是您用来建立网站的三种主要技术：
 
 - 超文本标记语言（HTML）是一种标记语言，由可以包装（标记）内容以赋予其含义（语义）和结构的各种元素组成。简单的 HTML 看起来像这样：
 
@@ -113,10 +114,10 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 
 ### 开发工具
 
-一旦了解了可用于构建网页的“原始”技术（例如 HTML，CSS 和 JavaScript），您很快就会发现各种可用于使工作更轻松或更有效的工具。 例如：
+一旦了解了可用于构建网页的“原始”技术（例如 HTML，CSS 和 JavaScript），您很快就会发现各种可用于使工作更轻松或更有效的工具。例如：
 
-- 现代浏览器中的 [开发人员工具（developer tools）](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)可用于调试代码。
-- 可用于运行测试以显示您的代码是否按预期运行的 [测试工具（Testing tools）](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing)。
+- 现代浏览器中的 [开发人员工具（developer tools）](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)可用于调试代码。
+- 可用于运行测试以显示您的代码是否按预期运行的 [测试工具（Testing tools）](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
 - 建立在 JavaScript 之上的库和框架，使您可以更快，更有效地构建某些类型的网站。
 - 所谓的“Linters” ，它包含了一组规则，检查您的代码之后，会突出显示您未正确遵循规则的地方。
 - Minifiers，它将代码文件中的所有空格删除以使其更小，从而可以更快地从服务器下载。
@@ -144,14 +145,14 @@ HTML，CSS 和 JavaScript 是前端（或客户端）语言，这意味着它们
 
 在学习的某些时候，您将遇到以下概念。
 
-- **跨浏览器兼容性（Cross-browser compatibility）**是一种确保您的网页能够在尽可能多的设备上运行的做法。这包括使用所有浏览器都支持的技术，为可以处理这些浏览器的浏览器提供更好的体验（逐步增强），和/或编写代码，从而使之退回到较旧的浏览器中更简单但仍可用的体验（平稳降级）。它还涉及大量测试，以查看某些浏览器是否有任何故障，然后进行更多工作来修复这些故障。
-- **响应式网页设计（Responsive Web design）**是一种使功能和布局变得灵活以便它们可以自动适应不同的浏览器的做法。一个明显的例子是在桌面上的宽屏浏览器中以一种方式进行布局，但在手机浏览器中以另一种更紧凑的单列布局的网站。现在请尝试调整浏览器窗口的宽度，然后看看会发生什么。
-- **性能（Performance）**意味着要尽快加载网站，而且还应使其直观易用，以使用户不会碰壁离开。
-- **无障碍（Accessibility）**意味着使您的网站可供尽可能多的不同类型的人使用（相关概念是多样性和包容性，以及包容性设计）。这包括视力障碍，听力障碍，认知障碍或肢体障碍的人。它也不仅仅局限于残疾人——也包含年轻人或老年人、来自不同文化的人、使用移动设备的人、或网络连接不可靠或缓慢的人。
-- **国际化（Internationalization）**意味着使网站可以供来自不同文化背景的人使用，这些人会说和您不同的语言。这一点可以考虑一些技术手段（例如，更改布局以使其对于从右到左甚至垂直的语言仍然可以正常使用）和人为手段（例如，使用简单的非俚语，以便使以您的语言作为第二或第三语言的人更可能理解您的文字）。
-- **隐私与安全（Privacy & Security）** 这两个概念相关但不同。隐私是指允许人们私下从事其业务，而不是监视他们或收集您绝对不需要的更多数据。安全性是指以安全的方式构建您的网站，以使恶意用户无法从您或您的用户那里窃取信息。
+- **跨浏览器兼容性**（Cross-browser compatibility）是一种确保您的网页能够在尽可能多的设备上运行的做法。这包括使用所有浏览器都支持的技术，为可以处理这些浏览器的浏览器提供更好的体验（逐步增强），和/或编写代码，从而使之退回到较旧的浏览器中更简单但仍可用的体验（平稳降级）。它还涉及大量测试，以查看某些浏览器是否有任何故障，然后进行更多工作来修复这些故障。
+- **响应式网页设计**（Responsive Web design）是一种使功能和布局变得灵活以便它们可以自动适应不同的浏览器的做法。一个明显的例子是在桌面上的宽屏浏览器中以一种方式进行布局，但在手机浏览器中以另一种更紧凑的单列布局的网站。现在请尝试调整浏览器窗口的宽度，然后看看会发生什么。
+- **性能**（Performance）意味着要尽快加载网站，而且还应使其直观易用，以使用户不会碰壁离开。
+- **无障碍**（Accessibility）意味着使您的网站可供尽可能多的不同类型的人使用（相关概念是多样性和包容性，以及包容性设计）。这包括视力障碍，听力障碍，认知障碍或肢体障碍的人。它也不仅仅局限于残疾人——也包含年轻人或老年人、来自不同文化的人、使用移动设备的人、或网络连接不可靠或缓慢的人。
+- **国际化**（Internationalization）意味着使网站可以供来自不同文化背景的人使用，这些人会说和您不同的语言。这一点可以考虑一些技术手段（例如，更改布局以使其对于从右到左甚至垂直的语言仍然可以正常使用）和人为手段（例如，使用简单的非俚语，以便使以您的语言作为第二或第三语言的人更可能理解您的文字）。
+- **隐私与安全**（Privacy & Security）这两个概念相关但不同。隐私是指允许人们私下从事其业务，而不是监视他们或收集您绝对不需要的更多数据。安全性是指以安全的方式构建您的网站，以使恶意用户无法从您或您的用户那里窃取信息。
 
-## See also
+## 参见
 
 - [History of the World Wide Web](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web)
-- [How does the internet work?](/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
+- [How does the internet work?](/zh-CN/docs/Learn/Common_questions/How_does_the_Internet_work)

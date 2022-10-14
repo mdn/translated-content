@@ -2,6 +2,7 @@
 title: <font>
 slug: Web/HTML/Element/font
 ---
+
 {{deprecated_header}}
 
 ## 概要
@@ -27,6 +28,6 @@ _HTML Font 元素_（`<font>`）定義了該內容的字體大小、顏色與表
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.font")}}
+{{Compat}}
 
 {{HTMLRef}}

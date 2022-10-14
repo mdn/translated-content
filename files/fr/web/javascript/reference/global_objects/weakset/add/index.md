@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakSet/add
 ---
+
 {{JSRef}}
 
 La méthode **`add()`** permet d'ajouter un nouvel objet à un objet `WeakSet`.
@@ -49,14 +50,11 @@ ws.add(1);
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-weakset.prototype.add', 'WeakSet.prototype.add')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-weakset.prototype.add', 'WeakSet.prototype.add')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WeakSet.add")}}
+{{Compat}}
 
 ## Voir aussi
 

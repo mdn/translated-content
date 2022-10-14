@@ -3,6 +3,7 @@ title: GlobalEventHandlers.onpointermove
 slug: Web/API/Element/pointermove_event
 original_slug: Web/API/GlobalEventHandlers/onpointermove
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`onpointermove`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、{{event("pointermove")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。

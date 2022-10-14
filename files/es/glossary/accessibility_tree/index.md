@@ -28,7 +28,6 @@ Además, el árbol de accesibilidad usualmente contiene información sobre lo qu
 <section id="Quick_links">
  <ol>
   <li><a href="/es/docs/Glossary">Glossary</a>
- 
    <ol>
     <li>{{Glossary("Accessibility")}}</li>
     <li>{{Glossary("ARIA")}}</li>

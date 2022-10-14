@@ -2,6 +2,7 @@
 title: JavaScript 对象基础
 slug: Learn/JavaScript/Objects/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 在这学习 JavaScript 的对象的首篇文章中，我们将会学习有关对象基础的语法，并且回顾一些之前学过的 JavaScript 的一些特点，使你明白你所使用过的一些功能实际上是由对象提供的。
@@ -13,9 +14,9 @@ slug: Learn/JavaScript/Objects/Basics
       <td>
         基础计算机基础，了解基础的 HTML 和 CSS, 熟悉 JavaScript 基础
         (基础知识看这里
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a>
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">First steps</a>
         和这里
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >Building blocks</a
         >).
       </td>
@@ -36,16 +37,18 @@ slug: Learn/JavaScript/Objects/Basics
 
 首先，将 [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html) 文件复制到本地。此文件包含非常少 — 一个供我们写源代码的 {{HTMLElement("script")}} 标签，一个供我们输入示例指令的 {{HTMLElement("input")}} 标签，当页面被渲染时，一些变量定义，一个输出任何输入到{{HTMLElement("input")}}的内容输出到{{HTMLElement("p")}}标签的函数。我们用这个文件做为基础探索对象的基础语法。
 
-如同 Javascript 中的很多东西一样，创建一个对象通常先定义初始化变量。 尝试在您已有的文件中 JavaScript 代码下面输入以下内容，保存刷新页面：
+如同 Javascript 中的很多东西一样，创建一个对象通常先定义初始化变量。尝试在您已有的文件中 JavaScript 代码下面输入以下内容，保存刷新页面：
 
 ```js
 var person = {};
 ```
 
-如果你在浏览器控制台输入 person，然后按下 Enter(确认) 键，你会得到如下结果：
+如果你在浏览器的 [JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools#javascript_控制台)输入 `person`，然后按下 Enter（确认）键，你可能会得到以下结果中的一种：
 
 ```js
 [object Object]
+Object { }
+{ }
 ```
 
 恭喜，你刚创建了你的第一个对象。干的漂亮！但这是一个空对象，所以我们做不了更多的事情。像下面一样更新下我们的对象：
@@ -234,7 +237,7 @@ greeting: function() {
 }
 ```
 
-你也许想知道"this"是什么，关键字"this"指向了当前代码运行时的对象 ( 原文：the current object the code is being written inside )——这里即指 person 对象，为什么不直接写 person 呢？当你学到下一篇[Object-oriented JavaScript for beginners](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)文章时，我们开始使用构造器 (constructor) 时，"this"是非常有用的——它保证了当代码的上下文 (context) 改变时变量的值的正确性（比如：不同的 person 对象拥有不同的 name 这个属性，很明显 greeting 这个方法需要使用的是它们自己的 name）。
+你也许想知道"this"是什么，关键字"this"指向了当前代码运行时的对象 ( 原文：the current object the code is being written inside )——这里即指 person 对象，为什么不直接写 person 呢？当你学到下一篇[Object-oriented JavaScript for beginners](/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS)文章时，我们开始使用构造器 (constructor) 时，"this"是非常有用的——它保证了当代码的上下文 (context) 改变时变量的值的正确性（比如：不同的 person 对象拥有不同的 name 这个属性，很明显 greeting 这个方法需要使用的是它们自己的 name）。
 
 让我们以两个简单的 person 对象来说明：
 
@@ -266,7 +269,7 @@ var person2 = {
 myString.split(',');
 ```
 
-你正在使用一个字符串实例上可用的方法，你随时都可以在代码里使用字面量创建一个字符串，字符串会自动的被创建为字符串 ([`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)) 的实例，因此会有一些常见的方法和属性可用。
+你正在使用一个字符串实例上可用的方法，你随时都可以在代码里使用字面量创建一个字符串，字符串会自动的被创建为字符串 ([`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)) 的实例，因此会有一些常见的方法和属性可用。
 
 当你这样访问 document 对象时：
 
@@ -275,11 +278,11 @@ var myDiv = document.createElement('div');
 var myVideo = document.querySelector('video');
 ```
 
-你正在使用[`Document`](/en-US/docs/Web/API/Document)实例上可用的方法。每个页面在加载完毕后，会有一个 Document 的实例被创建，叫做 document，它代表了整个页面的结构，内容和一些功能，比如页面的 URL。同样的，这意味 document 有一些可用的方法和属性。
+你正在使用[`Document`](/zh-CN/docs/Web/API/Document)实例上可用的方法。每个页面在加载完毕后，会有一个 Document 的实例被创建，叫做 document，它代表了整个页面的结构，内容和一些功能，比如页面的 URL。同样的，这意味 document 有一些可用的方法和属性。
 
-这同样适用许多其他内建的对象或 API，你使用过有—— [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)，[`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)，等。
+这同样适用许多其他内建的对象或 API，你使用过有—— [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)，[`Math`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)，等。
 
-请注意内建的对象或 API 不会总是自动地创建对象的实例，举例来说，这个 [Notifications API](/en-US/docs/Web/API/Notifications_API)——允许浏览器发起系统通知，需要你为每一个你想发起的通知都使用构造器进行实例化。尝试在 JavaScript 终端里输入以下代码
+请注意内建的对象或 API 不会总是自动地创建对象的实例，举例来说，这个 [Notifications API](/zh-CN/docs/Web/API/Notifications_API)——允许浏览器发起系统通知，需要你为每一个你想发起的通知都使用构造器进行实例化。尝试在 JavaScript 终端里输入以下代码
 
 ```js
 var myNotification = new Notification('Hello!');

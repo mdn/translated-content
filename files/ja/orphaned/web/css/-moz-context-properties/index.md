@@ -1,20 +1,9 @@
 ---
 title: '-moz-context-properties'
 slug: orphaned/Web/CSS/-moz-context-properties
-tags:
-  - '-moz-context-properties'
-  - CSS
-  - CSS プロパティ
-  - CSS:Mozilla 拡張
-  - Experimental
-  - Needs Privileges
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-translation_of: Web/CSS/-moz-context-properties
 original_slug: Web/CSS/-moz-context-properties
-browser-compat: css.properties.-moz-context-properties
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`-moz-context-properties`** プロパティは Firefox の特権モードで使用することができ、子に SVG 画像を持つ要素の指定されたプロパティの値を共有します。
@@ -81,7 +70,7 @@ browser-compat: css.properties.-moz-context-properties
 
 ここで、画像の `src` に単純な SVG 画像を含む data URI を設定しました。内部の `<rect>` は、 `<img>` 要素の {{SVGAttr("fill")}} および {{SVGAttr("stroke")}} から `fill` および `stroke` の値を取り、これらの値の `context-fill`/`context-stroke` キーワードに設定して、 fill には SVG が最上位ウィンドウに単独で読み込まれた場合 (コンテンツの値を提供するコンテキストの要素がない場合) に使われる代替色 (red) を設定します。なお、色が SVG に直接設定され、コンテキストの色も設定された場合、コンテキストの色は直接設定された色を上書きします。
 
-> **Note:** [Github に動作するサンプル](https://mdn.github.io/css-examples/moz-context-properties/)があります。
+> **メモ:** [Github に動作するサンプル](https://mdn.github.io/css-examples/moz-context-properties/)があります。
 
 ## 仕様書
 

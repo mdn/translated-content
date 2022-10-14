@@ -2,13 +2,14 @@
 title: overflow-x
 slug: Web/CSS/overflow-x
 ---
+
 {{ CSSRef() }}
 
 {{ SeeCompatTable() }}
 
 ## 概述
 
-当一个块级元素的内容在水平方向发生溢出时，[CSS](/en/CSS)属性 overflow-x 决定应该截断溢出内容，或者显示滚动条，或者直接显示溢出内容。
+当一个块级元素的内容在水平方向发生溢出时，[CSS](/zh-CN/CSS)属性 overflow-x 决定应该截断溢出内容，或者显示滚动条，或者直接显示溢出内容。
 
 {{cssinfo}}
 

@@ -1,17 +1,8 @@
 ---
 title: scroll-margin-inline
 slug: Web/CSS/scroll-margin-inline
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - Web
-  - recipe:css-shorthand-property
-  - scroll-margin
-  - scroll-margin-inline
-browser-compat: css.properties.scroll-margin-inline
-translation_of: Web/CSS/scroll-margin-inline
 ---
+
 {{CSSRef}}
 
 `scroll-margin-inline` は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、インライン方向のスクロールマージンを設定します。
@@ -131,7 +122,7 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 
 つまり、真ん中の子要素を過ぎてスクロールした場合、2 番目の `<div>` のインラインの末尾から `1rem`、3 番目の `<div>` のインラインの末尾から `2rem` のところでスナップすることになります。
 
-> **Note:** ここでは `scroll-margin` をインライン軸 (この場合は X 軸) の先頭*と*末尾に一度に設定していますが、実際に関係するのは末尾側だけです。例えば `scroll-margin-inline: 0 1rem` や `scroll-margin-inline-end: 1rem` などのように、一辺のみにスクロールマージンを設定しても同様に機能します。
+> **メモ:** ここでは `scroll-margin` をインライン軸 (この場合は X 軸) の先頭*と*末尾に一度に設定していますが、実際に関係するのは末尾側だけです。例えば `scroll-margin-inline: 0 1rem` や `scroll-margin-inline-end: 1rem` などのように、一辺のみにスクロールマージンを設定しても同様に機能します。
 
 #### 結果
 

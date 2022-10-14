@@ -1,14 +1,8 @@
 ---
 title: URL.port
 slug: Web/API/URL/port
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - port
-translation_of: Web/API/URL/port
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`port`** プロパティは、URL のポート番号を含む {{domxref("USVString")}} です。 URL に明示的なポート番号が含まれていない場合は、`''` に設定されます。

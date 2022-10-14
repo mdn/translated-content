@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Classes/Public_class_fields
 original_slug: Web/JavaScript/Reference/Classes/Class_fields
 ---
+
 {{JsSidebar("Classes")}}{{SeeCompatTable}}
 
 > **Note :** Cette page décrit des fonctionnalités expérimentales.
@@ -262,13 +263,11 @@ console.log(instance.msg);
 
 ## Spécifications
 
-| Spécification                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Public and private instance fields', '#prod-FieldDefinition', 'FieldDefinition')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.classes.public_class_fields")}}
+{{Compat}}
 
 ## Voir aussi
 

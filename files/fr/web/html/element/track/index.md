@@ -4,6 +4,7 @@ slug: Web/HTML/Element/track
 translation_of: Web/HTML/Element/track
 browser-compat: html.elements.track
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<track>`** est utilisé comme élément fils d'un élément [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video) et permet de fournir une piste texte pour le média (par exemple afin de gérer automatiquement les sous-titres). Les pistes texte utilisées avec cet élément sont formatées selon [le format WebVTT](/fr/docs/Web/API/WebVTT_API) (ce sont des fichiers `.vtt`) (WebVTT pour <i lang="en">Web Video Text Tracks</i>).

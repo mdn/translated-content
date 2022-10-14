@@ -2,6 +2,7 @@
 title: よくあるアクセシビリティの問題を扱う
 slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 次に、私たちはアクセシビリティに注意を向け、一般的な問題、簡単なテストの方法、そしてアクセシビリティの問題を見つけるための監査/自動化ツールの使い方を説明します。
@@ -25,17 +26,17 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
 - 最新のブラウザーを搭載していない可能性がある古いデバイスのユーザー。
 - 低速プロセッサを搭載している可能性がある、低スペックデバイスのユーザー。
 
-ある意味では、このモジュール全体がアクセシビリティについてのものです — クロスブラウザーテストは、あなたのサイトができるだけ多くの人々によって使用できることを確認します。[ アクセシビリティとは？](/ja/docs/Learn/Accessibility/What_is_accessibility)では、この記事よりも完全かつ徹底的にアクセシビリティを定義します。
+ある意味では、このモジュール全体がアクセシビリティについてのものです — クロスブラウザーテストは、あなたのサイトができるだけ多くの人々によって使用できることを確認します。[アクセシビリティとは？](/ja/docs/Learn/Accessibility/What_is_accessibility)では、この記事よりも完全かつ徹底的にアクセシビリティを定義します。
 
 とは言っても、この記事では、クロスブラウザーと障碍のある人々を取り巻く問題のテスト、そして彼らのウェブの使い方について説明します。 モジュール内の他の場所で、[レスポンシブデザイン](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems)と[パフォーマンス](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Performance_issues)のような他の分野についてはすでに説明しました。
 
-> **Note:** ウェブ開発における多くのことと同様に、アクセシビリティは 100% 成功したかどうかではありません。 特にサイトが複雑になるにつれて、100% のアクセシビリティを全てのコンテンツに対して達成することはほとんど不可能です。 その代わりに、防御的なコーディングを介して、できるだけ多くの人があなたのコンテンツのできるだけ多くにアクセスできるようにし、ベストプラクティスに従うようにする努力をします。
+> **メモ:** ウェブ開発における多くのことと同様に、アクセシビリティは 100% 成功したかどうかではありません。 特にサイトが複雑になるにつれて、100% のアクセシビリティを全てのコンテンツに対して達成することはほとんど不可能です。 その代わりに、防御的なコーディングを介して、できるだけ多くの人があなたのコンテンツのできるだけ多くにアクセスできるようにし、ベストプラクティスに従うようにする努力をします。
 
 ## よくあるアクセシビリティの問題
 
 このセクションでは、従うべきベストプラクティスと共に、特定の技術と結びつけて、ウェブのアクセシビリティに関して生じる主な問題のいくつかと、サイトが正しい方向に進んでいるかどうかを確認するための簡単なテストについて、詳細を説明します。
 
-> **Note:** アクセシビリティは道徳的に正しいことであり、ビジネスには適していますし（多くの障碍のあるユーザー、モバイルデバイスのユーザーなどが重要な市場セグメントを提示しています）、ウェブ資産を障碍のある人々がアクセスできないようにすることは、世界の多くの地域で法律にも違反しています。 詳しくは[アクセシビリティのガイドラインと法律](/ja/docs/Learn/Accessibility/What_is_accessibility#Accessibility_guidelines_and_the_law)を読んでください。
+> **メモ:** アクセシビリティは道徳的に正しいことであり、ビジネスには適していますし（多くの障碍のあるユーザー、モバイルデバイスのユーザーなどが重要な市場セグメントを提示しています）、ウェブ資産を障碍のある人々がアクセスできないようにすることは、世界の多くの地域で法律にも違反しています。 詳しくは[アクセシビリティのガイドラインと法律](/ja/docs/Learn/Accessibility/What_is_accessibility#Accessibility_guidelines_and_the_law)を読んでください。
 
 ### HTML
 
@@ -101,7 +102,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
 - Mac 用の Firefox はデフォルトではタブ移動を行いません。 オンにするには、 \[環境設定] > \[詳細] > \[一般] の順に選択してから、\[常にページ内を移動するにはカーソルキーを使用する] のチェックを外します。 次に、Mac のシステム環境設定アプリを開き、\[キーボード] > \[ショートカット] の順に選択して、\[全てのコントロール] ラジオボタンを選択します。
 - Safari では、デフォルトではリンクをタブ操作することはできません。 これを有効にするには、Safari の \[環境設定] を開き、\[詳細] に移動し、\[Tab キーを押してウェブページの各項目をハイライトする] チェックボックスをオンにする必要があります。
 
-> **Warning:** **重要**: あなたが書く新しいページのどれでも、この種のテストを実行するべきです — 機能がキーボードによってアクセスできることを確認してください。
+> **警告:** あなたが書く新しいページのどれでも、この種のテストを実行するべきです — 機能がキーボードによってアクセスできることを確認してください。
 
 この例では、正しい仕事に正しい意味論的要素を使用することの重要性を強調しています。 任意の要素を、CSS でリンクやボタンのように見せたり、JavaScript でリンクやボタンのように振る舞うようにスタイルすることは可能ですが、実際にはリンクやボタンにはならず、あなたはこれらの要素が無料で与えるアクセシビリティの多くを失うでしょう。 あなたがそれを避けることができるならばしないでください。
 
@@ -114,15 +115,15 @@ a:focus, input:focus, button:focus, select:focus {
 }
 ```
 
-> **Note:** CSS を使用してデフォルトのフォーカススタイルを取り除く場合は、デザインに適した他のスタイルに置き換えてください — これは非常に有用なアクセシビリティツールであり、取り除くべきではありません。
+> **メモ:** CSS を使用してデフォルトのフォーカススタイルを取り除く場合は、デザインに適した他のスタイルに置き換えてください — これは非常に有用なアクセシビリティツールであり、取り除くべきではありません。
 
 #### キーボード・アクセシビリティを組み込む
 
 時にはキーボード・アクセシビリティを失うことが避けられないこともあります。 意味論的にあまり良くないサイトを継承したかもしれませんし（`<div>` で作られたボタンを生成する恐ろしい {{glossary("CMS")}} に行き着くかもしれません）、HTML5 の {{htmlelement("video")}} 要素のようにキーボード・アクセシビリティが組み込まれていない複雑なコントロールを使用しているかもしれません（驚くべきことに、Opera は `<video>` 要素のデフォルトのブラウザーコントロールをタブ操作できる唯一のブラウザーです）。 次のようないくつかの選択肢があります。
 
-1.  `<button>` 要素（デフォルトでタブ移動可能）と JavaScript を使用してカスタムコントロールを作成し、それらの機能を関連付けます。 これについての良い例は、[クロスブラウザーのビデオプレーヤーの作成](/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
-2.  JavaScript でキーボードショートカットを作成すると、キーボードの特定のキーを押すことで機能をアクティブにできます。 あらゆる目的に適応できるゲーム関連の例については、[デスクトップのマウスとキーボードのコントロール](/ja/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)を参照してください。
-3.  偽のボタンの振る舞いのために、いくつかの興味深い戦術を使ってください。 例えば、[fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) の例を見てください（[ソースコード](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)を見る）。 ここでは、それぞれの属性に `tabindex="0"` という属性を与えることで（もっと有用な詳細については WebAIM の [tabindex の記事](http://webaim.org/techniques/keyboard/tabindex)（英語）を見てください）、偽の `<div>` ボタンにフォーカスできるようにしました（タブを介すことも含む）。 これにより、ボタンにタブ移動することはできますが、
+1. `<button>` 要素（デフォルトでタブ移動可能）と JavaScript を使用してカスタムコントロールを作成し、それらの機能を関連付けます。 これについての良い例は、[クロスブラウザーのビデオプレーヤーの作成](/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
+2. JavaScript でキーボードショートカットを作成すると、キーボードの特定のキーを押すことで機能をアクティブにできます。 あらゆる目的に適応できるゲーム関連の例については、[デスクトップのマウスとキーボードのコントロール](/ja/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)を参照してください。
+3. 偽のボタンの振る舞いのために、いくつかの興味深い戦術を使ってください。 例えば、[fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) の例を見てください（[ソースコード](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)を見る）。 ここでは、それぞれの属性に `tabindex="0"` という属性を与えることで（もっと有用な詳細については WebAIM の [tabindex の記事](http://webaim.org/techniques/keyboard/tabindex)（英語）を見てください）、偽の `<div>` ボタンにフォーカスできるようにしました（タブを介すことも含む）。 これにより、ボタンにタブ移動することはできますが、
 
     <kbd>Enter</kbd>
 
@@ -150,13 +151,13 @@ a:focus, input:focus, button:focus, select:focus {
 
     &#x20;と一致するキーコードであれば、`document.activeElement.onclick()` を使用してボタンの `onclick` ハンドラに格納されている関数を実行します。 [`activeElement`](/ja/docs/Web/API/Document/activeElement) は現在ページにフォーカスしている要素を与えます。
 
-> **Note:** この手法は、イベントハンドラ・プロパティ（`onclick` など）を使ってオリジナルのイベントハンドラを設定した場合にのみ機能します。 `addEventListener` は機能しません。 これは、機能を再構築するための非常に面倒な作業です。 それに他にも問題があるはずです。 そもそも正しい要素を正しい仕事に使うほうがよいでしょう。
+> **メモ:** この手法は、イベントハンドラ・プロパティ（`onclick` など）を使ってオリジナルのイベントハンドラを設定した場合にのみ機能します。 `addEventListener` は機能しません。 これは、機能を再構築するための非常に面倒な作業です。 それに他にも問題があるはずです。 そもそも正しい要素を正しい仕事に使うほうがよいでしょう。
 
 #### 代替テキスト
 
 代替テキストは、アクセシビリティにとって非常に重要です — ある人が視覚障碍または聴覚障碍を抱えているためにコンテンツを見たり聞いたりすることができなくなると、これが問題になります。 最も単純な代替テキストは、控え目な {{htmlattrxref("alt","img")}} 属性で、関連するコンテンツを含む全ての画像に含めるべきです。 これはスクリーンリーダーが拾ってユーザーに読み上げるために、ページ上にその意味と内容をうまく伝える画像の説明を含むべきです。
 
-> **Note:** 詳しくは、[代替テキスト](/ja/docs/Learn/Accessibility/HTML#Text_alternatives)をお読みください。
+> **メモ:** 詳しくは、[代替テキスト](/ja/docs/Learn/Accessibility/HTML#Text_alternatives)をお読みください。
 
 欠落している代替テキストは、アクセシビリティ[監査ツール](#auditing_tools)を使用するなど、さまざまな方法でテストできます。
 
@@ -170,13 +171,13 @@ HTML には、他に存在しない要素間のコンテキストと関係を提
 
 次に、フォームの {{htmlelement("label")}} 要素は、フォームをアクセス可能にすることを可能にする中心的な機能の 1 つです。 フォームの悩みは、各フォーム入力にどのデータを入力するべきかを示すためにラベルが必要なことです。 各ラベルを {{htmlelement("label")}} 内に含めて相方のフォーム入力に明確にリンクする必要があり（各 `<label>` の `for` 属性値はフォーム要素の `id` 値と一致する必要があります）、ソース順が完全に論理的ではなくても（これは公平であるべきです）、それは意味があります。
 
-> **Note:** リンクテキストとフォームラベルの詳細については、[わかりやすいテキストラベル](/ja/docs/Learn/Accessibility/HTML#Meaningful_text_labels)を参照してください。
+> **メモ:** リンクテキストとフォームラベルの詳細については、[わかりやすいテキストラベル](/ja/docs/Learn/Accessibility/HTML#Meaningful_text_labels)を参照してください。
 
 最後に、データ表について簡単に説明します。 基本的なデータ表は非常に簡単なマークアップで書くことができますが（bad-table.html の[ライブ](http://mdn.github.io/learning-area/accessibility/html/bad-table.html)と[ソース](https://github.com/mdn/learning-area/blob/master/accessibility/html/bad-table.html)を見る）、問題があります — スクリーンリーダーのユーザーがデータのグループとして行や列を関連付ける方法はありません — これを行うには、ヘッダー行がどれであるか、そしてそれらが行、列などを見出ししているかどうかを知る必要があります。 これはそのような表に対しては視覚的にしかできません。
 
 代わりに punk-bands-complete.html の例（[ライブ](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)、[ソース](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html)）を見ると、表のヘッダー（{{htmlelement("th")}} と `scope` 属性）、{{htmlelement("caption")}} 要素など、いくつかのアクセシビリティ補助機能が働いていることがわかります。
 
-> **Note:** アクセス可能な表の詳細については、[アクセス可能なデータ表](/ja/docs/Learn/Accessibility/HTML#Accessible_data_tables)を参照してください。
+> **メモ:** アクセス可能な表の詳細については、[アクセス可能なデータ表](/ja/docs/Learn/Accessibility/HTML#Accessible_data_tables)を参照してください。
 
 ### CSS
 
@@ -194,7 +195,7 @@ CSS は HTML よりもはるかに少ない基本的なアクセシビリティ�
 
 もう 1 つのヒントは、道標や情報を色だけに頼らないようにすることです。 これは、色が見えない人には良くないでしょう。 例えば、必須のフォームフィールドを赤でマークする代わりに、赤いアスタリスクでマークします。
 
-> **Note:** コントラスト比が高いと、光沢のある画面を備えたスマートフォンやタブレットを使用している人は誰でも、日光のような明るい環境にいるときにページを読みやすくなります。
+> **メモ:** コントラスト比が高いと、光沢のある画面を備えたスマートフォンやタブレットを使用している人は誰でも、日光のような明るい環境にいるときにページを読みやすくなります。
 
 #### コンテンツを隠す
 
@@ -206,7 +207,7 @@ CSS は HTML よりもはるかに少ない基本的なアクセシビリティ�
 
 一方で、スクリーンリーダーからコンテンツを隠すので、{{cssxref("visibility")}}`:hidden` や {{cssxref("display")}}`:none` は使用しないでください。 正当な理由があるのでなければ、なぜこのコンテンツをスクリーンリーダーから隠したいのでしょうか。
 
-> **Note:** [スクリーンリーダーのユーザーには見えないコンテンツ](http://webaim.org/techniques/css/invisiblecontent/)（英語）には、このトピックに関するもっと有用な詳細があります。
+> **メモ:** [スクリーンリーダーのユーザーには見えないコンテンツ](http://webaim.org/techniques/css/invisiblecontent/)（英語）には、このトピックに関するもっと有用な詳細があります。
 
 ### JavaScript
 
@@ -219,7 +220,7 @@ JavaScript はアクセシビリティに関して CSS と同じ種類の問題�
 - クライアント側のフォーム検証を提供します。 これは、サーバーがデータをチェックするのを待たずに、フォームエントリに関する問題をユーザーにすばやく知らせるものです。 利用できない場合でもフォームは機能しますが、検証が遅くなる可能性があります。
 - キーボードのみのユーザーがアクセスできる HTML5 の `<video>` のカスタムコントロールを提供します（前述したように、デフォルトのブラウザーコントロールはほとんどのブラウザーでキーボードからアクセスできません）。
 
-> **Note:** WebAIM の[アクセス可能な JavaScript](http://webaim.org/techniques/javascript/)（英語）は、アクセス可能な JavaScript の考慮事項に関する有用な詳細をいくつか提供します。
+> **メモ:** WebAIM の[アクセス可能な JavaScript](http://webaim.org/techniques/javascript/)（英語）は、アクセス可能な JavaScript の考慮事項に関する有用な詳細をいくつか提供します。
 
 より複雑な JavaScript による実装はアクセシビリティに問題をもたらす可能性があります — できる限りのことをする必要があります。 例えば、[WebGL](/ja/docs/Web/API/WebGL_API/Tutorial) を 100% を使用して書かれた複雑な 3D ゲームを視覚障碍者が利用できるようにすることは期待できませんが、マウス以外のユーザーが使用できるように[キーボードコントロール](/ja/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)を実装し、色覚異常のある人にも使えるように配色に十分なコントラストがあるようにすることができます。
 
@@ -250,7 +251,7 @@ JavaScript はアクセシビリティに関して CSS と同じ種類の問題�
 <p><span id="LiveRegion1" aria-live="polite" aria-atomic="false"></span></p>
 ```
 
-Freedom Scientific の [ARIA（Accessible Rich Internet Applications）のライブリージョン](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)（英語）の例で実行中の例を見ることができます — 強調表示された段落はその内容を 10 秒ごとに更新し、スクリーンリーダーはユーザーにこれを読み上げるべきです。[ ARIA のライブリージョン - Atomic](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm)（英語）は別の有用な例を提 ​​ 供しています。
+Freedom Scientific の [ARIA（Accessible Rich Internet Applications）のライブリージョン](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)（英語）の例で実行中の例を見ることができます — 強調表示された段落はその内容を 10 秒ごとに更新し、スクリーンリーダーはユーザーにこれを読み上げるべきです。[ARIA のライブリージョン - Atomic](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm)（英語）は別の有用な例を提 ​​ 供しています。
 
 ここでは WAI-ARIA を詳細にカバーするためのスペースはありません。 [WAI-ARIA の基本](/ja/docs/Learn/Accessibility/WAI-ARIA_basics)でもっと詳しく学ぶことができます。
 
@@ -268,15 +269,15 @@ Freedom Scientific の [ARIA（Accessible Rich Internet Applications）のライ
 
 Tenon を使って例を見てみましょう。
 
-1.  [Tenon のホームページ](https://tenon.io)（英語）に行きます。
-2.  [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html) の例の URL（または分析したい別のウェブページの URL）をページ上部のテキスト入力に入力して \[Analyze Your Webpage] を押します。
-3.  次に示すように、error/description のセクションが見つかるまで下にスクロールします。
+1. [Tenon のホームページ](https://tenon.io)（英語）に行きます。
+2. [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html) の例の URL（または分析したい別のウェブページの URL）をページ上部のテキスト入力に入力して \[Analyze Your Webpage] を押します。
+3. 次に示すように、error/description のセクションが見つかるまで下にスクロールします。
 
 ![](tenon-screenshot.png)
 
 また、Tenon をプログラム的に使用するための API と同様に、探索できるいくつかのオプション（ページ上部の近くにある \[Show Options] リンクを参照）もあります。
 
-> **Note:** このようなツールは、アクセシビリティの問題を全て自分で解決するのに十分ではありません。 全体像を把握するには、これらの組み合わせ、知識と経験、ユーザーテストなどが必要です。
+> **メモ:** このようなツールは、アクセシビリティの問題を全て自分で解決するのに十分ではありません。 全体像を把握するには、これらの組み合わせ、知識と経験、ユーザーテストなどが必要です。
 
 ### 自動化ツール
 
@@ -303,7 +304,7 @@ aXe は `npm` を使ってもインストール可能で、[Grunt](http://gruntj
 
 いくつかの異なるスクリーンリーダーを使っていくつかのテストを行い、それらがどのように機能するのか、またどのようにテストするのかについての一般的な考えを説明しましょう。
 
-> **Note:** WebAIM の[スクリーンリーダーの互換性のための設計](http://webaim.org/techniques/screenreader/)（英語）では、スクリーンリーダーの使用方法とスクリーンリーダーに最適な機能についての役立つ情報が提供されています。 いくつかの興味深いスクリーンリーダーの使用統計については、[第 6 回スクリーンリーダーのユーザー調査の結果](http://webaim.org/projects/screenreadersurvey6/#used)（英語）も参照してください。
+> **メモ:** WebAIM の[スクリーンリーダーの互換性のための設計](http://webaim.org/techniques/screenreader/)（英語）では、スクリーンリーダーの使用方法とスクリーンリーダーに最適な機能についての役立つ情報が提供されています。 いくつかの興味深いスクリーンリーダーの使用統計については、[第 6 回スクリーンリーダーのユーザー調査の結果](http://webaim.org/projects/screenreadersurvey6/#used)（英語）も参照してください。
 
 #### VoiceOver
 
@@ -311,7 +312,7 @@ VoiceOver（VO）は Mac / iPhone / iPad には無料で含まれているので
 
 オンにするには、<kbd>Cmd</kbd> + <kbd>Fn</kbd> + <kbd>F5</kbd> を押します。 今までに VO を使ったことがない場合は、ようこそ画面が表示され、そこで VO を起動するかどうかを選択できます。 また、使い方を学ぶためにかなり役に立つチュートリアルを実行することもできます。 再びオフにするには、もう一度 <kbd>Cmd</kbd> + <kbd>Fn</kbd> + <kbd>F5</kbd> を押します。
 
-> **Note:** チュートリアルは少なくとも一度は実行するべきです — これは VO を学ぶ上で非常に便利な方法です。
+> **メモ:** チュートリアルは少なくとも一度は実行するべきです — これは VO を学ぶ上で非常に便利な方法です。
 
 VO がオンになっていると、ディスプレイはほぼ同じに見えますが、画面の左下に、現在選択されている VO に関する情報を含む黒いボックスが表示されます。 現在の選択範囲も黒枠で強調表示されます — この強調表示は **VO カーソル**と呼ばれます。
 
@@ -347,9 +348,9 @@ VO にはたくさんのキーボードコマンドがありますので、こ�
 
 NVDA は Windows 専用で、インストールする必要があります。
 
-1.  [nvaccess.org](http://www.nvaccess.org/) からダウンロードしてください。 寄付をするか無料でダウンロードするかを選択できます。 ダウンロードできるようになる前にあなたのメールアドレスを与える必要もあるでしょう。
-2.  ダウンロードしたら、インストールします — インストーラをダブルクリックし、ライセンスに同意して指示に従います。
-3.  NVDA を起動するには、プログラムファイル/ショートカットをダブルクリックするか、キーボードショートカットの&#x20;
+1. [nvaccess.org](http://www.nvaccess.org/) からダウンロードしてください。 寄付をするか無料でダウンロードするかを選択できます。 ダウンロードできるようになる前にあなたのメールアドレスを与える必要もあるでしょう。
+2. ダウンロードしたら、インストールします — インストーラをダブルクリックし、ライセンスに同意して指示に従います。
+3. NVDA を起動するには、プログラムファイル/ショートカットをダブルクリックするか、キーボードショートカットの&#x20;
 
     <kbd>Ctrl</kbd>
 
@@ -367,7 +368,7 @@ NVDA は Windows 専用で、インストールする必要があります。
 
 NVDA を使用するには、「NVDA 修飾キー」を多用します — これは、実際の NVDA のキーボードショートカットに加えて、それらを機能させるために押す必要があるキーです。 このような修飾キーを使用するのは、スクリーンリーダーに共通で、他のコマンドとコマンドが衝突しないようにするためです。 NVDA の場合、修飾キーは <kbd>Insert</kbd>（デフォルト）、または <kbd>CapsLock</kbd>（\[OK] を押す前に NVDA へようこそダイアログボックスの最初のチェックボックスをオンにして選択できます）のいずれかになります。
 
-> **Note:** NVDA は、VoiceOver よりも、それがどこにあるのか、また何をしているのかを強調する方法という点では微妙です。 あなたが見出しやリストなどをスクロールしているとき、あなたが選択している項目は一般的に微妙なアウトラインでハイライトされますが、これはいつも全てのことに当てはまるわけではありません。 完全に迷子になった場合は、<kbd>Ctrl</kbd> + <kbd>F5</kbd> を押して現在のページを更新し、もう一度上から始めることができます。
+> **メモ:** NVDA は、VoiceOver よりも、それがどこにあるのか、また何をしているのかを強調する方法という点では微妙です。 あなたが見出しやリストなどをスクロールしているとき、あなたが選択している項目は一般的に微妙なアウトラインでハイライトされますが、これはいつも全てのことに当てはまるわけではありません。 完全に迷子になった場合は、<kbd>Ctrl</kbd> + <kbd>F5</kbd> を押して現在のページを更新し、もう一度上から始めることができます。
 
 NVDA にはたくさんのキーボードコマンドがありますので、ここではそれら全てをリストしません。 ウェブページのテストに必要な基本的なものは、次の表のとおりです。 キーボードショートカットでは、<kbd>NVDA</kbd> は「NVDA 修飾キー」を意味します。
 
@@ -412,9 +413,9 @@ NVDA にはたくさんのキーボードコマンドがありますので、こ
 
 次のリストは、プロジェクトで推奨されるアクセシビリティテストを確実に実行したことを確認するためのチェックリストです。
 
-1.  HTML が意味論的にできるだけ正しいことを確認してください。 [監査ツール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools)を使用して、[それを検証する](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Validation)ことは良いスタートです。
-2.  CSS がオフになっているときにコンテンツが意味をなすことを確認してください。
-3.  機能が[キーボードからアクセス可能であること](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility)を確認してください。&#x20;
+1. HTML が意味論的にできるだけ正しいことを確認してください。 [監査ツール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools)を使用して、[それを検証する](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Validation)ことは良いスタートです。
+2. CSS がオフになっているときにコンテンツが意味をなすことを確認してください。
+3. 機能が[キーボードからアクセス可能であること](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility)を確認してください。&#x20;
 
     <kbd>Tab</kbd>
 
@@ -428,12 +429,12 @@ NVDA にはたくさんのキーボードコマンドがありますので、こ
 
     &#x20;などを使ってテストします。
 
-4.  テキスト以外のコンテンツに[代替テキスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives)があることを確認してください。 [監査ツール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools)はそのような問題を捉えるのに適しています。
-5.  適切なチェックツールを使用して、サイトの[カラーコントラスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Color_and_color_contrast)が許容範囲内であることを確認してください。
-6.  [隠されたコンテンツ](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Hiding_content)がスクリーンリーダーに見えるようにしてください。
-7.  可能な限り JavaScript がなくても機能が使えることを確認してください。
-8.  適切な場合は、ARIA を使用してアクセシビリティを向上させます。
-9.  [監査ツール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools)を通してサイトを運営してください。
+4. テキスト以外のコンテンツに[代替テキスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives)があることを確認してください。 [監査ツール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools)はそのような問題を捉えるのに適しています。
+5. 適切なチェックツールを使用して、サイトの[カラーコントラスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Color_and_color_contrast)が許容範囲内であることを確認してください。
+6. [隠されたコンテンツ](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Hiding_content)がスクリーンリーダーに見えるようにしてください。
+7. 可能な限り JavaScript がなくても機能が使えることを確認してください。
+8. 適切な場合は、ARIA を使用してアクセシビリティを向上させます。
+9. [監査ツール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools)を通してサイトを運営してください。
 10. スクリーンリーダーでテストしてください。
 11. あなたが行ったことを言うために、あなたのサイトのどこかに見つけることができるアクセシビリティの方針/声明を含めてください。
 

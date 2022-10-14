@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: switch ロール'
 slug: Web/Accessibility/ARIA/Roles/Switch_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Switch_role
 ---
+
 ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`checkbox`](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role)) ロールと機能的に同じですが、かなり一般的な意味を持つ「チェックされた」状態と「チェックされていない」状態を表す代わりに、スイッチ (`switch`) ロールは「オン」と「オフ」の状態を表す点が異なります。
 
 この例では、ウィジェットを作成し、それに ARIA のスイッチ (`switch`) ロールを割り当てています。
@@ -54,7 +50,7 @@ ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`c
 
 - スクリーンリーダーは、要素をスイッチとしてアナウンスし、任意でスイッチをアクティブ化する方法についての指示を提供するべきです。
 
-> **Note:** 支援技術がこのロールをどのように扱うべきかについては、さまざまな意見があります。 上記は推奨される実践方法の 1 つであり、他の情報源とは異なる場合があります。
+> **メモ:** 支援技術がこのロールをどのように扱うべきかについては、さまざまな意見があります。 上記は推奨される実践方法の 1 つであり、他の情報源とは異なる場合があります。
 
 ## 例
 
@@ -164,4 +160,4 @@ label.switch {
 - [ARIA: checkbox ロール](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
 - [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

@@ -2,6 +2,7 @@
 title: CompositionEvent
 slug: Web/API/CompositionEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 DOM 接口 **`CompositionEvent`** 表示用户间接输入文本（如使用输入法）时发生的事件。此接口的常用事件有{{domxref("Element/compositionstart_event", "compositionstart")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}} 和 {{domxref("Element/compositionend_event", "compositionend")}}
@@ -35,12 +36,12 @@ _这个接口也从 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承方法
 
 ## 浏览器兼容性
 
-{{Compat("api.CompositionEvent")}}
+{{Compat}}
 
 ## 参见
 
-- [compositionstart](/en-US/docs/Web/API/Element/compositionstart_event)
-- [compositionend](/en-US/docs/Web/API/Element/compositionend_event)
-- [compositionupdate](/en-US/docs/Web/API/Element/compositionupdate_event)
-- [UIEvent](/en-US/docs/DOM/Event/UIEvent)
-- [Event](/en-US/docs/DOM/event)
+- [compositionstart](/zh-CN/docs/Web/API/Element/compositionstart_event)
+- [compositionend](/zh-CN/docs/Web/API/Element/compositionend_event)
+- [compositionupdate](/zh-CN/docs/Web/API/Element/compositionupdate_event)
+- [UIEvent](/zh-CN/docs/DOM/Event/UIEvent)
+- [Event](/zh-CN/docs/DOM/event)

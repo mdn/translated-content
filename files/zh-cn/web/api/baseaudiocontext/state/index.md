@@ -2,9 +2,10 @@
 title: AudioContext.state
 slug: Web/API/BaseAudioContext/state
 ---
+
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioContext") }}的`state属性是只读的，`返回`AudioContext`的当前状态。
+{{ domxref("AudioContext") }}的 `state` 属性是只读的，返回 `AudioContext` 的当前状态。
 
 ## 语法
 
@@ -37,8 +38,8 @@ audioCtx.onstatechange = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.state")}}
+{{Compat}}
 
 ## 另见
 
-- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

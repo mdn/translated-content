@@ -1,11 +1,6 @@
 ---
 title: 가변 벡터 도형 (SVG)
 slug: Glossary/SVG
-tags:
-  - SVG
-  - 가변 벡터 도형
-  - 그래픽
-translation_of: Glossary/SVG
 ---
 _Scalable Vector Graphics_ (**SVG**)는 {{Glossary("XML")}} 신텍스에 기반을 둔 2D 벡터 이미지 형식(포맷)이다.
 

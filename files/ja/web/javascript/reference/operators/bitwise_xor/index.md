@@ -1,15 +1,8 @@
 ---
 title: ビット排他的論理和 (^)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
-tags:
-  - ビット演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.bitwise_xor
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_XOR
 ---
+
 {{jsSidebar("Operators")}}
 
 ビット排他的論理和演算子 (`^`) は、両方のオペランドの対応するビットの一方だけが `1` である位置のビットで `1` を返します。

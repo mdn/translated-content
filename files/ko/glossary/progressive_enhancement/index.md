@@ -1,11 +1,6 @@
 ---
 title: 점진적 향상
 slug: Glossary/Progressive_Enhancement
-tags:
-  - 단계적 향상
-  - 점진적 향상
-  - 접근성
-translation_of: Glossary/Progressive_Enhancement
 ---
 **점진적 향상**은 가능한 많은 사용자에게 필수 콘텐츠와 기능을 제공하기 위한 설계 철학이다. 나아가 필요한 모든 코드를 실행할 수 있는 최신 브라우저 사용자에게 최상의 경험을 제공한다.
 

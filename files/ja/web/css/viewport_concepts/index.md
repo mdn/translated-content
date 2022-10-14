@@ -1,17 +1,8 @@
 ---
 title: ビューポートの概念
 slug: Web/CSS/Viewport_concepts
-tags:
-  - Best practices
-  - CSS
-  - Guide
-  - Mobile
-  - Resource
-  - layout viewport
-  - viewport
-  - virtual viewport
-translation_of: Web/CSS/Viewport_concepts
 ---
+
 {{CSSRef}}
 
 この記事では、ビューポートの概念 — ビューポートとは何か、ビューポートとは何か、 CSS, SVG, モバイル端末における影響 — および、視覚ビューポートとレイアウトビューポートの違いをを説明します。

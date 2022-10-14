@@ -3,6 +3,7 @@ title: Web 媒体技术
 slug: Web/Media
 original_slug: Web/媒体
 ---
+
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 逐年来，Web 呈现、创建并管理音频、视频和其他媒体的能力以不断增长的步伐发展。今日有着大量可用的 API、HTML 元素、DOM 界面和其他不仅仅限于完成这些任务，而是为了将媒体和其他技术联合使用以实现非凡事物的特性可供使用。这篇文章列出了可能对你掌握这些技术有帮助的多种 API 与其文档链接。
@@ -60,7 +61,7 @@ original_slug: Web/媒体
   - : Canvas API 允许你在 {{HTMLElement("canvas")}} 上绘画、操纵并改变图像内容。这样可以与媒体以多种方式使用，包括设置 `<canvas>` 元素作为视频播放或摄像头捕获的终点以捕获或操纵视频帧。
 - [WebGL](/zh-CN/docs/Web/API/WebGL_API)
   - : WebGL 在已存在的 Canvas API 上提供了与 OpenGL ES 兼容的 API，使得在 Web 上制作强大的 3D 图像成为可能。通过一张画布，这可以用于为媒体内容添加 3D 图像。
-- [WebXR](/zh-CN/docs/Web/API/WebXR_Device_API) 
+- [WebXR](/zh-CN/docs/Web/API/WebXR_Device_API)
   - : 作为取代 WebVR API 的存在，WebXR 是一种支持创建虚拟现实（VR）和增强现实 (AR) 内容的技术。混合现实内容可以显示在设备的屏幕上，或者是显示在目镜或耳机内。
 - [WebVR](/zh-CN/docs/Web/API/WebVR_API) {{deprecated_inline}}
   - : Web Virtual Reality API 支持虚拟现实（VR）设备，如 Oculus Rift 或 HTC Vive，使开发人员能够将用户的位置和移动转换为 3D 场景中的移动，然后在设备上显示。WebVR 已经被 WebXR 所取代，并将从浏览器中移除。

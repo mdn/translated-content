@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/script
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<script>`** est utilisé pour intégrer ou faire référence à un script exécutable. Cela fait généralement référence à du code JavaScript mais ce peut également être un autre type de script (par exemple [WebGL](/fr/docs/Apprendre/WebGL)).
@@ -32,7 +33,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
   - : Les balises de `script` classiques enverront un minimum d'informations à {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} pour les scripts qui ne respectent pas les contrôles standard du [CORS](/fr/docs/HTTP/Access_control_CORS). Afin de disposer de plus de renseignements sur les erreurs pour les sites utilisant des domaines séparés pour des documents statiques, on pourra utiliser cet attribut. Voir [la page de réglages des attributs CORS](/fr/docs/Web/HTML/Reglages_des_attributs_CORS) pour plus d'explications quant aux valeurs valides.
 - {{htmlattrdef("defer")}}
 
-  - : Cet attribut booléen permet d'indiquer au navigateur que le script doit être exécuté après l'analyse du document et avant l'évènement {{event("DOMContentLoaded")}}. **_Cet attribut ne doit pas être utilisé si l'attribut `src` est absent (c'est-à-dire pour les scripts contenus déclarés dans les éléments), dans ce cas il n'aurait aucun effet._** Pour obtenir un effet similaire avec les scripts insérés de façon dynamique, on utilisera explicitement `async=false`. Les scripts qui possèdent un attribut `defer` seront exécutés dans l'ordre dans lequel ils apparaissent dans le document.
+  - : Cet attribut booléen permet d'indiquer au navigateur que le script doit être exécuté après l'analyse du document et avant l'évènement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event). **_Cet attribut ne doit pas être utilisé si l'attribut `src` est absent (c'est-à-dire pour les scripts contenus déclarés dans les éléments), dans ce cas il n'aurait aucun effet._** Pour obtenir un effet similaire avec les scripts insérés de façon dynamique, on utilisera explicitement `async=false`. Les scripts qui possèdent un attribut `defer` seront exécutés dans l'ordre dans lequel ils apparaissent dans le document.
 
     Les scripts qui utilisent l'attribut `defer` empêche le déclenchement de l'évènement `DOMContentLoaded` tant que le script n'a pas été chargé et que son évaluation n'est pas terminée.
 
@@ -78,7 +79,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ## Notes
 
-Le script doit être servi avec le type MIME `text/javascript`. Cependant, les navigateurs appliquent cette règle avec une certaine flexibilité et ne bloquent que si le script est servi avec un type image (`image/*`), vidéo (`video/*`) ou audio (`audio/*`) ou CSV (`text/csv`). Si le script est bloqué, un évènement {{event("error")}} sera déclenché sur l'élément, sinon, l'évènement {{event("load")}} sera envoyé.
+Le script doit être servi avec le type MIME `text/javascript`. Cependant, les navigateurs appliquent cette règle avec une certaine flexibilité et ne bloquent que si le script est servi avec un type image (`image/*`), vidéo (`video/*`) ou audio (`audio/*`) ou CSV (`text/csv`). Si le script est bloqué, un évènement {{event("error")}} sera déclenché sur l'élément, sinon, l'évènement [`load`](/fr//docs/Web/API/Window/load_event) sera envoyé.
 
 ## Exemples
 
@@ -163,27 +164,11 @@ Les navigateurs qui prennent en charge le type `module` prennent également en c
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                         | Commentaires                                                                  |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "scripting.html#the-script-element", "&lt;script&gt;")}}         | {{Spec2("HTML WHATWG")}}             | Retrait de l'attribut {{HTMLAttrxRef("charset", "script")}}.       |
-| {{SpecName("HTML5.3", "semantics-scripting.html#the-script-element", "&lt;script&gt;")}} | {{Spec2("HTML5.3")}}                 | Retrait de l'attribut {{HTMLAttrxRef("charset", "script")}}.       |
-| {{SpecName("HTML5.2", "semantics-scripting.html#the-script-element", "&lt;script&gt;")}} | {{Spec2("HTML5.2")}}                 | Ajout de la valeur `module` pour {{HTMLAttrxRef("type", "script")}} |
-| {{SpecName("HTML5.1", "semantics-scripting.html#the-script-element", "&lt;script&gt;")}} | {{Spec2("HTML5.1")}}                 |                                                                               |
-| {{SpecName("HTML5 W3C", "scripting-1.html#script", "&lt;script&gt;")}}                         | {{Spec2("HTML5 W3C")}}                 |                                                                               |
-| {{SpecName("HTML4.01", "interact/scripts.html#h-18.2.1", "&lt;script&gt;")}}                 | {{Spec2("HTML4.01")}}                 |                                                                               |
-| {{SpecName("Subresource Integrity", "#htmlscriptelement", "&lt;script&gt;")}}             | {{Spec2("Subresource Integrity")}} | Ajout de l'attribut {{HTMLAttrxRef("integrity", "script")}}.     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.script",2)}}
-
-### Notes de compatibilité
-
-Pour les anciens navigateurs qui ne prennent pas en charge l'attribut `async` attribute, les scripts insérés lors de l'analyse (_parsing_) bloquent l'analyseur, les scripts insérés par d'autres scripts s'exécutent en asynchrone sous IE et WebKit et en synchrone sous Opera et sous Firefox pour les versions antérieures à Firefox 4.0.
-
-Sous Firefox 4.0, la propriété `async` du DOM vaut `true` par défaut pour les scripts créés avec `document.createElement("script").async` afin que le comportement par défaut corresponde au comportement d'IE et de WebKit. Afin que les scripts insérés par des scripts externes soient lancés dans l'ordre d'insertion, on définira `.async=false` pour les scripts dont on souhaite conserver l'ordre d'exécution.
-
-`document.write()` ne doit jamais être appelé sur un script asynchrone avec `async`. Sous Gecko 1.9.2, si on appelle `document.write()`, cela aura un effet imprévisible. Pour Gecko 2.0, appeler `document.write()` depuis un script asynchrone n'aura aucun effet (en dehors d'afficher un message d'erreur dans la console).
+{{Compat}}
 
 ## Voir aussi
 

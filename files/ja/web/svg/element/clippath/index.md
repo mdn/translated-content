@@ -1,13 +1,8 @@
 ---
 title: <clipPath>
 slug: Web/SVG/Element/clipPath
-tags:
-  - 要素
-  - リファレンス
-  - SVG
-browser-compat: svg.elements.clipPath
-translation_of: Web/SVG/Element/clipPath
 ---
+
 {{SVGRef}}
 
 **`<clipPath>`** は [SVG](/ja/docs/Web/SVG) の要素で、 {{SVGAttr("clip-path")}} プロパティで使用されるクリッピングパスを定義します。

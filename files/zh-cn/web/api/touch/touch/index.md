@@ -2,6 +2,7 @@
 title: Touch()
 slug: Web/API/Touch/Touch
 ---
+
 {{APIRef("Touch Events")}}{{SeeCompatTable}}
 
 **`Touch()`** 构造器创建一个新的 {{domxref("Touch")}} 对象。

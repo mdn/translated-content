@@ -1,14 +1,6 @@
 ---
 title: JavaScript - 동적인 클라이언트 사이드 스크립트 언어
 slug: Learn/JavaScript
-tags:
-  - Beginner
-  - JavaScript
-  - 입문
-  - 입문자
-  - 자바스크립트
-  - 자바스크립트 입문자
-translation_of: Learn/JavaScript
 ---
 {{LearnSidebar}}
 

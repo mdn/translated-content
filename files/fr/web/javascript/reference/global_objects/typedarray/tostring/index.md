@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaîne de caractères qui représente le tableau typé et ses éléments. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.toString()")}}_._ Dans la suite de cet article, _TypedArray_ fait référence à [l'un des types de tableau typé listés ici](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
@@ -49,14 +50,11 @@ numbers.toString(); // "[object Uint8Array]"
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.tostring', 'TypedArray.prototype.toString')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.tostring', 'Array.prototype.toString')}}         | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

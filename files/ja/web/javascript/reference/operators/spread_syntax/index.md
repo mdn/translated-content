@@ -1,15 +1,8 @@
 ---
 title: スプレッド構文
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-tags:
-  - ECMAScript 2015
-  - イテレーター
-  - JavaScript
-  - 言語機能
-  - Reference
-browser-compat: javascript.operators.spread
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
+
 {{jsSidebar("Operators")}}
 
 **スプレッド構文** (`...`) を使うと、配列式や文字列などの反復可能オブジェクトを、0 個以上の引数 (関数呼び出しの場合) や要素 (配列リテラルの場合) を期待された場所で展開したり、オブジェクト式を、0 個以上のキーと値の組 (オブジェクトリテラルの場合) を期待された場所で展開したりすることができます。
@@ -161,7 +154,7 @@ arr2.push(4);
 //  arr は変更されません
 ```
 
-> **Note:** コピーは 1 段階の深さで行われます。そのため、次の例のような多次元配列のようなオブジェクトをコピーする場合には適さないでしょう。({{jsxref("Object.assign()")}} についても同じことが言えます。)
+> **メモ:** コピーは 1 段階の深さで行われます。そのため、次の例のような多次元配列のようなオブジェクトをコピーする場合には適さないでしょう。({{jsxref("Object.assign()")}} についても同じことが言えます。)
 >
 > ```js example-bad
 > let a = [[1], [2], [3]];
@@ -220,7 +213,7 @@ arr1 = [...arr2, ...arr1];
 //  arr1 is now [3, 4, 5, 0, 1, 2]
 ```
 
-> **Note:** `unshift()` とは異なり、これは新しい `arr1` を生成しており、その場では元の `arr1` を変更しません。
+> **メモ:** `unshift()` とは異なり、これは新しい `arr1` を生成しており、その場では元の `arr1` を変更しません。
 
 ### オブジェクトリテラルでのスプレッド構文
 

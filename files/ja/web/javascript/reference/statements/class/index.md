@@ -1,16 +1,8 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Statements/class
-tags:
-  - Classes
-  - Declaration
-  - ECMAScript6
-  - JavaScript
-  - Reference
-  - クラス
-  - 宣言
-translation_of: Web/JavaScript/Reference/Statements/class
 ---
+
 {{jsSidebar("Statements")}}
 
 **クラス宣言**は、プロトタイプベースの継承を使って、指定された名前の新しいクラスを作成します。

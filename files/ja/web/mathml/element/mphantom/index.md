@@ -1,8 +1,8 @@
 ---
 title: <mphantom>
 slug: Web/MathML/Element/mphantom
-translation_of: Web/MathML/Element/mphantom
 ---
+
 {{MathMLRef}}
 
 MathML の `<mphantom>` 要素は、表示上は不可視だが一定の広がり（高さ、幅、ベースライン位置）を維持した要素です。

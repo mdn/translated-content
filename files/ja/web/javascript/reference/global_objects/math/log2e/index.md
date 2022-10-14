@@ -1,13 +1,8 @@
 ---
 title: Math.LOG2E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
 ---
+
 {{JSRef}}
 
 **`Math.LOG2E`** プロパティは 2 を底とした e の対数、約 1.442 を表します。

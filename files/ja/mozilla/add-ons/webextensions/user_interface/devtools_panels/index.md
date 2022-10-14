@@ -1,16 +1,11 @@
 ---
 title: 開発者ツールパネル
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-tags:
-  - 初心者
-  - ガイド
-  - ユーザーインターフェイス
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 ---
+
 {{AddonSidebar}}
 
-> **Note:** この機能は Firefox 54 以降で利用できます。
+> **メモ:** この機能は Firefox 54 以降で利用できます。
 
 拡張機能が開発者にとって有用なツールを提供する場合、その UI をブラウザーの開発者ツールに新しいパネルとして追加することが可能です。
 

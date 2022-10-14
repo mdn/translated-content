@@ -1,19 +1,8 @@
 ---
 title: object-fit
 slug: Web/CSS/object-fit
-tags:
-  - CSS
-  - CSS 画像
-  - CSS プロパティ
-  - レイアウト
-  - Reference
-  - css レイアウト
-  - object-fit
-  - recipe:css-property
-  - 寸法
-browser-compat: css.properties.object-fit
-translation_of: Web/CSS/object-fit
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`object-fit`** プロパティは、[置換要素](/ja/docs/Web/CSS/Replaced_element)、例えば {{HTMLElement("img")}} や {{HTMLElement("video")}} などの中身を、コンテナーにどのようにはめ込むかを設定します。

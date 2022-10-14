@@ -10,6 +10,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/shadow
 ---
+
 {{deprecated_header}}{{HTMLRef}}
 
 L'élément HTML **`<shadow>`** était utilisé comme un point d'insertion ({{glossary("insertion point")}}) du _shadow DOM_. Cet élément a été retiré de la spécification et est [désormais obsolète](https://github.com/w3c/webcomponents/commit/041ba5518b9372768234d2766de503b98a03fa45).

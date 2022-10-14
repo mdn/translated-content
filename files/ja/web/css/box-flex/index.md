@@ -1,19 +1,11 @@
 ---
 title: box-flex
 slug: Web/CSS/box-flex
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - box-flex
-  - recipe:css-property
-browser-compat: css.properties.box-flex
-translation_of: Web/CSS/box-flex
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
-> **Warning:** このプロパティは XUL ボックスモデルの部品を制御するためのものです。古い CSS Flexible Box Layout Module の草稿の '`box-flex`' (このプロパティの元になったもの) または '`-webkit-box-flex`' (草稿の元になったもの) の動作のどちらとも一致しません。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
+> **警告:** このプロパティは XUL ボックスモデルの部品を制御するためのものです。古い CSS Flexible Box Layout Module の草稿の '`box-flex`' (このプロパティの元になったもの) または '`-webkit-box-flex`' (草稿の元になったもの) の動作のどちらとも一致しません。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
 
 **`-moz-box-flex`** および **`-webkit-box-flex`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 `-moz-box` または `-webkit-box` が、これを内包するボックスを、包含ボックスのレイアウトの方向で埋めるまで拡張する方法を指定します。
 

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/HTML_Drag_and_Drop_API
 original_slug: Web/API/API_HTML_Drag_and_Drop
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 **L'interface HTML _Drag and Drop_** (pour glisser-déposer) permet à des applications d'utiliser des fonctionnalités de glisser-déposer dans le navigateur.

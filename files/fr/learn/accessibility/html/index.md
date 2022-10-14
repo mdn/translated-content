@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/Accessibility/HTML
 original_slug: Apprendre/a11y/HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 Une grande partie des contenus web peut être rendue accessible simplement en s'assurant d'utiliser les éléments HTML appropriés systématiquement. Cet article détaille comment HTML peut être utilisé pour un maximum d'accessibilité.

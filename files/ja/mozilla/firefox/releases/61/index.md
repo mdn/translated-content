@@ -1,12 +1,8 @@
 ---
 title: Firefox 61 for developers
 slug: Mozilla/Firefox/Releases/61
-tags:
-  - '61'
-  - Firefox
-  - Release
-translation_of: Mozilla/Firefox/Releases/61
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 61 は、米国時間 2018 年 6 月 26 日 にリリースされました。このページでは、開発者に影響する Firefox 61 の変更点をまとめています。

@@ -1,21 +1,8 @@
 ---
 title: HTMLInputElement.webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
-tags:
-  - API
-  - ファイルシステム API
-  - ファイルとディレクトリー項目 API
-  - ファイル
-  - HTML DOM
-  - HTMLInputElement
-  - 標準外
-  - プロパティ
-  - リファレンス
-  - Web
-  - webkitdirectory
-  - プロパティ
-translation_of: Web/API/HTMLInputElement/webkitdirectory
 ---
+
 {{APIRef("HTML DOM")}}{{non-standard_header}}
 
 **`HTMLInputElement.webkitdirectory`** はプロパティで、 {{htmlattrxref("webkitdirectory", "input")}} という HTML 属性の値を反映し、 {{HTMLElement("input")}} 要素によってユーザーがファイルの代わりにディレクトリーを選択できることを示します。ディレクトリーが選択された場合、ディレクトリーとその内容の階層構造が選択されたアイテムのセットに含まれます。選択されているファイルシステムのファイルアイテムは、 {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} を使用して受け取ることができます。
@@ -63,7 +50,7 @@ translation_of: Web/API/HTMLInputElement/webkitdirectory
 
 ユーザーが `PhotoAlbums` を選択すると、 files によって報告されるリストは上記のすべてのファイルに対する {{domxref("File")}} オブジェクトを含みます。 — しかし、ディレクトリーは含みません。 `PIC2343.jpg` の項目では `webkitRelativePath` が `PhotoAlbums/Birthdays/Don's 40th birthday/PIC2343.jpg` となります。これによって {{domxref("FileList")}} が平坦でも階層構造を知ることができます。
 
-> **Note:** `webkitRelativePath` の挙動は *Chromium 72 より前*では異なります。詳しくは[このバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=124187)を参照してください。
+> **メモ:** `webkitRelativePath` の挙動は *Chromium 72 より前*では異なります。詳しくは[このバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=124187)を参照してください。
 
 ## 例
 

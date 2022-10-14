@@ -2,20 +2,21 @@
 title: 'Django Tutorial Part 2: 创建网站的地基'
 slug: Learn/Server-side/Django/skeleton_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
-[Django 教程](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)的第二篇文章会展示怎样创建一个网站的"框架"，在这个框架的基础上，你可以继续填充整站使用的 settings， urls，模型 (models)，视图 (views) 和模板 (templates)。
+[Django 教程](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)的第二篇文章会展示怎样创建一个网站的"框架"，在这个框架的基础上，你可以继续填充整站使用的 settings，urls，模型 (models)，视图 (views) 和模板 (templates)。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
       <th scope="row">前提：</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/development_environment"
+        <a href="/zh-CN/docs/Learn/Server-side/Django/development_environment"
           >创建 Django 的开发环境</a
         >。复习
         <a
-          href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          href="/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website"
           >Django 教程</a
         >。
       </td>
@@ -29,7 +30,7 @@ slug: Learn/Server-side/Django/skeleton_website
 
 ## 概述
 
-这篇文章会展示怎样创建一个网站的"框架"，在这个框架的基础上，你可以继续填充整站使用的 settings， urls，模型 (models)，视图 (views) 和模板 (templates)（我们会在接下来的文章里讨论）。
+这篇文章会展示怎样创建一个网站的"框架"，在这个框架的基础上，你可以继续填充整站使用的 settings，urls，模型 (models)，视图 (views) 和模板 (templates)（我们会在接下来的文章里讨论）。
 
 搭建“框架”的过程很直接：
 
@@ -41,7 +42,7 @@ slug: Learn/Server-side/Django/skeleton_website
 3. 在工程里注册新的应用。
 4. 为每个应用分配 url。
 
-为 [locallibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 这个项目创建的网站文件夹和它的工程文件夹都命名为*locallibrary*。我们只创建一个名为*catalog*的应用。最高层的项目文件结构如下所示：
+为 [locallibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 这个项目创建的网站文件夹和它的工程文件夹都命名为*locallibrary*。我们只创建一个名为*catalog*的应用。最高层的项目文件结构如下所示：
 
 ```bash
 locallibrary/         # 网站文件夹
@@ -128,7 +129,7 @@ locallibrary/
 
 既然应用已经创建好了，我们还必须在项目里注册它，以便工具在运行时它会包括在里面（比如在数据库里添加模型时）。在项目的 settings 里，把应用添加进`INSTALLED_APPS` ，就完成了注册。
 
-打开项目设置文件 **locallibrary/locallibrary/settings.py** 找到 `INSTALLED_APPS` 列表里的定义。 如下所示，在列表的最后添加新的一行。
+打开项目设置文件 **locallibrary/locallibrary/settings.py** 找到 `INSTALLED_APPS` 列表里的定义。如下所示，在列表的最后添加新的一行。
 
 ```bash
 INSTALLED_APPS = [
@@ -144,7 +145,7 @@ INSTALLED_APPS = [
 
 新的这行详细说明了应用配置文件在 (`CatalogConfig`) **/locallibrary/catalog/apps.py** 里，当你创建应用时就完成了这个过程。
 
-> **备注：** 注意到`INSTALLED_APPS已经有许多其他的应用了` (还有 `MIDDLEWARE`, 在 settings 的下面)。这些应用为 [Django administration site](/en-US/docs/Learn/Server-side/Django/Admin_site) 提供了支持和许多功能 (包括会话，认证系统等)。
+> **备注：** 注意到 `INSTALLED_APPS` 已经有许多其他的应用了（还有 `MIDDLEWARE`，在 settings 的下面）。这些应用为 [Django administration site](/zh-CN/docs/Learn/Server-side/Django/Admin_site) 提供了支持和许多功能（包括会话，认证系统等）。
 
 ## 配置数据库
 
@@ -165,7 +166,7 @@ DATABASES = {
 
 ## 其他项目设置
 
-settings.py 里还包括其他的一些设置，现在只需要改变[时区](https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-TIME_ZONE) — 改为和 标准[tz 时区数据表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 里的字符串相同就可以了（数据表里的 TZ 列有你想要的时区）。 把`TIME_ZONE`的值改为你的时区，比如
+settings.py 里还包括其他的一些设置，现在只需要改变[时区](https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-TIME_ZONE) — 改为和 标准[tz 时区数据表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 里的字符串相同就可以了（数据表里的 TZ 列有你想要的时区）。把`TIME_ZONE`的值改为你的时区，比如
 
 ```python
 TIME_ZONE = 'Asia/Shanghai'
@@ -206,11 +207,11 @@ urlpatterns = [
 ]
 ```
 
-URL 映射通过`urlpatterns` 变量管理，它是`path()` 函数的一个 Python 列表结构。 每个`path()`函数要么将 URL 式样 (URL pattern) 关联到特定视图 (_specific view)_，将在模式匹配时显示；要么关联到某个 URL 式样列表的测试代码。 (第二种情况下，URL 式样是目标模型里的“base URL”). `urlpatterns` 列表最开始定义了一个函数，这个函数将所有带有模型 _admin/_ 的 URL 映射到模块`admin.site.urls`。这个函数包含了 Administration 应用自己的 URL 映射定义。
+URL 映射通过`urlpatterns` 变量管理，它是`path()` 函数的一个 Python 列表结构。每个`path()`函数要么将 URL 式样 (URL pattern) 关联到特定视图 (_specific view)_，将在模式匹配时显示；要么关联到某个 URL 式样列表的测试代码。 (第二种情况下，URL 式样是目标模型里的“base URL”). `urlpatterns` 列表最开始定义了一个函数，这个函数将所有带有模型 _admin/_ 的 URL 映射到模块`admin.site.urls`。这个函数包含了 Administration 应用自己的 URL 映射定义。
 
 > **备注：** path() 中的路由是一个字符串，用于定义要匹配的 URL 模式。该字符串可能包括一个命名变量（尖括号中）
 >
-> 例：`'catalog/<id>/'`。此模式将匹配如 **/catalog/_any_chars_/** 的 URL ，并将 any_chars 作为具有参数名称 `id` 的字符串传递给视图。我们将在后面的主题中进一步讨论路径方法和路由模式
+> 例：`'catalog/<id>/'`。此模式将匹配如 **/catalog/_any_chars_/** 的 URL，并将 any_chars 作为具有参数名称 `id` 的字符串传递给视图。我们将在后面的主题中进一步讨论路径方法和路由模式
 
 将下面的行添加到文件的底部，以便将新的项添加到 `urlpatterns` 列表中。这个新项目包括一个 `path()` ，它将带有 `catalog/` 的请求转发到模块 `catalog.urls` (使用相对路径 URL **/catalog/urls.py**)。
 
@@ -247,7 +248,7 @@ Remove this slash as it is unnecessary.
 If this pattern is targeted in an include(), ensure the include() pattern has a trailing '/'.
 ```
 
-Django 默认不提供 CSS, JavaScript, 和图片等静态文件 。但是当你在开发环境中开发时，这些静态文件也很有用。作为对这个 URL 映射器的最后一项添加，你可以通过添加以下行在开发期间启用静态文件的服务。
+Django 默认不提供 CSS, JavaScript, 和图片等静态文件。但是当你在开发环境中开发时，这些静态文件也很有用。作为对这个 URL 映射器的最后一项添加，你可以通过添加以下行在开发期间启用静态文件的服务。
 
 把下面的代码加到文件最后：
 
@@ -312,7 +313,7 @@ python3 manage.py migrate
 在开发期间，你首先要使用开发网络服务器和浏览你本机的浏览器，来测试你的网站。
 
 > **备注：** 这个开发网络服务器并不够强大以及不足以用于生产使用，但是它能非常容易得使你在开发期间，获得你的 Django 网站和运行它，以此来进行快速测试。
-> 默认情况下，服务器会开通（http\://127.0.0.1:8000/),但你也可以选择其他端口。有关更多信息，查阅（ [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/1.10/ref/django-admin/#runserver) ）(Django docs).
+> 默认情况下，服务器会开通（`http://127.0.0.1:8000/`),但你也可以选择其他端口。有关更多信息，查阅（[django-admin and manage.py: runserver](https://docs.djangoproject.com/en/1.10/ref/django-admin/#runserver)）(Django docs).
 
 通过调用 `runserver` 命令运行 Web 服务器（与**manage.py**位于同一目录下）：
 
@@ -350,7 +351,7 @@ python3 manage.py runserver
 
 你现在已经创建了一个完整的基本网站项目骨架，你可以继续填加网址，模型，视图和模版。
 
-现在， [Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 的骨架已经完成并运行，是时候开始编写代码，让这个网站做它应该做的事情了。
+现在， [Local Library website](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 的骨架已经完成并运行，是时候开始编写代码，让这个网站做它应该做的事情了。
 
 ## 更多
 

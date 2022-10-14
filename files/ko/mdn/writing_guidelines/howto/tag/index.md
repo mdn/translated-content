@@ -1,16 +1,6 @@
 ---
 title: 페이지에 올바르게 태그하는 방법
 slug: MDN/Writing_guidelines/Howto/Tag
-tags:
-  - Beginner
-  - Contribute
-  - Glossary
-  - Guide
-  - Howto
-  - Intro
-  - MDN Meta
-  - Tutorial
-translation_of: MDN/Contribute/Howto/Tag
 original_slug: MDN/Contribute/Howto/Tag
 ---
 {{MDNSidebar}}

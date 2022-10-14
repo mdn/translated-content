@@ -1,11 +1,8 @@
 ---
 title: Native
 slug: Glossary/Native
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Native
 ---
+
 *ネイティブ*アプリケーションは、ターゲットアーキテクチャを構成するハードウェア/ソフトウェア環境で実行するようにコンパイルされています。
 
 ネイティブ Android アプリの例は、 Android ツールチェインを使用して Java で記述されたモバイルアプリケーションです。
@@ -16,4 +13,4 @@ translation_of: Glossary/Native
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "Native (computing)")}}
+- Wikipedia 上の [Native (computing)](https://en.wikipedia.org/wiki/Native_(computing)) (英語)

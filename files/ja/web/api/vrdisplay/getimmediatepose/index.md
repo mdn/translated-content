@@ -1,27 +1,14 @@
 ---
 title: VRDisplay.getImmediatePose()
 slug: Web/API/VRDisplay/getImmediatePose
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Deprecated
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - getImmediatePose()
-browser-compat: api.VRDisplay.getImmediatePose
-translation_of: Web/API/VRDisplay/getImmediatePose
 original_slug: Web/API/VRDevice/getImmediatePose
 ---
+
 {{deprecated_header}}{{APIRef("WebVR API")}}
 
 **`getImmediatePose()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 `VRDisplay` の現在のポーズを定義した {{domxref("VRPose")}} オブジェクトを返します。
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ## 構文
 

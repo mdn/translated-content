@@ -1,16 +1,8 @@
 ---
 title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
-tags:
-  - API
-  - コンストラクター
-  - DOM
-  - MouseEvent
-  - リファレンス
-  - イベント
-browser-compat: api.MouseEvent.MouseEvent
-translation_of: Web/API/MouseEvent/MouseEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent()`** コンストラクターは、新しい {{domxref("MouseEvent")}} を生成します。
@@ -78,7 +70,7 @@ translation_of: Web/API/MouseEvent/MouseEvent
 
     実装によっては、 screen と client フィールドに数値以外のものを渡すと `TypeError` が発生します。
 
-    > **Note:** `MouseEventInit` ディクショナリーは {{domxref("UIEvent.UIEvent", "UIEventInit")}} および {{domxref("Event.Event", "EventInit")}} のフィールドも受け入れます。
+    > **メモ:** `MouseEventInit` ディクショナリーは {{domxref("UIEvent.UIEvent", "UIEventInit")}} および {{domxref("Event.Event", "EventInit")}} のフィールドも受け入れます。
 
 ## 仕様書
 

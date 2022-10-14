@@ -1,17 +1,8 @@
 ---
 title: text-underline-offset
 slug: Web/CSS/text-underline-offset
-tags:
-  - CSS
-  - CSS Text Decoration
-  - プロパティ
-  - Reference
-  - recipe:css-property
-  - text-decoration
-  - text-underline-offset
-browser-compat: css.properties.text-underline-offset
-translation_of: Web/CSS/text-underline-offset
 ---
+
 {{CSSRef}}
 
 **`text-underline-offset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 ({{cssxref("text-decoration")}} を使用して適用された) 下線のテキスト装飾線の本来の位置からのオフセット距離を設定します。

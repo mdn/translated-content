@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaine de caractères représentant l'objet renseigné.
@@ -41,16 +42,11 @@ console.log(x.toString()); // affiche "coucou monde"
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.5.4.2', 'String.prototype.toString')}}                             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.tostring', 'String.prototype.toString')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.tostring', 'String.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

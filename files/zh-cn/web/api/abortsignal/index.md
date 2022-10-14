@@ -2,6 +2,7 @@
 title: AbortSignal
 slug: Web/API/AbortSignal
 ---
+
 {{APIRef("DOM")}}
 
 **`AbortSignal`** 接口表示一个信号对象（signal object），它允许你通过 {{domxref("AbortController")}} 对象与 DOM 请求（如 Fetch）进行通信并在需要时将其中止。

@@ -1,14 +1,8 @@
 ---
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 ---
+
 {{JSRef}}
 
 **`set()`** メソッドは、指定されたキーと値をもつ新しい要素を `WeakMap` オブジェクトへ追加します。

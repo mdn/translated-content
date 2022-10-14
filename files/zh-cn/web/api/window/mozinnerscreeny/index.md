@@ -2,13 +2,14 @@
 title: Window.mozInnerScreenY
 slug: Web/API/Window/mozInnerScreenY
 ---
+
 {{APIRef}}
 
 ## 概要
 
 在屏幕坐标下获取窗口视口左上角的 Y 坐标
 
-> **备注：**该坐标是以 CSS 像素报告显示的，而不是以硬件像素。 这意味着它可以受缩放级别的影响; 要计算物理屏幕像素的实际数量，需要使用[`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/zh-CN/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils) 属性
+> **备注：**该坐标是以 CSS 像素报告显示的，而不是以硬件像素。这意味着它可以受缩放级别的影响; 要计算物理屏幕像素的实际数量，需要使用[`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/zh-CN/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils) 属性
 
 ## 语法
 

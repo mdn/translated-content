@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/map
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/map
 ---
+
 {{JSRef}}
 
 La méthode **`map()`** crée un nouveau tableau typé dont les éléments sont les images des éléments du tableau typé courant par une fonction donnée. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.map()")}}_._ _TypedArray_ est utilisé ici de façon générique pour représenter [l'un des types de tableaux typés possibles](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
@@ -84,14 +85,11 @@ var doubles = nombres.map(function(num) {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.map', 'TypedArray.prototype.map')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.map', 'TypedArray.prototype.map')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.map")}}
+{{Compat}}
 
 ## Voir aussi
 

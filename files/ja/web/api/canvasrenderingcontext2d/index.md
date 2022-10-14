@@ -1,17 +1,8 @@
 ---
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
-page-type: web-api-interface
-tags:
-  - API
-  - キャンバス
-  - CanvasRenderingContext2D
-  - ゲーム
-  - グラフィック
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D
-translation_of: Web/API/CanvasRenderingContext2D
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D`** は[キャンバス API](/ja/docs/Web/API/Canvas_API) のインターフェイスで、 {{HTMLElement("canvas")}} 要素の描画面のための二次元描画コンテキストを提供します。図形、文字、画像、その他のオブジェクトを描画するのに使用します。

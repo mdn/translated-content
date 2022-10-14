@@ -1,14 +1,9 @@
 ---
 title: プロキシー自動設定ファイル
 slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
-tags:
-  - Necko
-  - Networking
-  - PAC
-  - Proxy
-translation_of: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 ---
+
 {{HTTPSidebar}}
 
 **プロキシー自動設定 (Proxy Auto-Configuration, PAC)** ファイルは、ウェブブラウザーのリクエスト (HTTP, HTTPS, FTP 等) を直接宛先に送るか、ウェブプロキシーサーバーに転送するか決める JavaScript の関数です。次の JavaScript 関数を PAC ファイル内に記述します。
@@ -89,7 +84,7 @@ application/x-ns-proxy-autoconfig
 
 次に、 .pac 拡張子をこの MIME タイプに結び付けるようサーバーを設定してください。
 
-> **Note:**
+> **メモ:**
 >
 > - JavaScript 関数は常に単体のファイルで保存し、 HTML ファイルやその他のファイルに埋め込まないでください。
 > - この文書の最後にある例は完全なものです。ファイルを保存して使用するのに追加する必要がある構文はありません。 (もちろん、 JavaScript を編集して自分のサイトのドメイン名やサブネットマスクに合わせる必要があります。)
@@ -131,7 +126,7 @@ PAC ファイルを作成するために、以下の関数を使用できます�
 
   - `ProxyConfig.bindings` {{deprecated_inline}}
 
-> **Note:** 以下の例をテストするために、 pactester ([pacparser](https://github.com/manugarg/pacparser) パッケージの一部) を使用しました。
+> **メモ:** 以下の例をテストするために、 pactester ([pacparser](https://github.com/manugarg/pacparser) パッケージの一部) を使用しました。
 >
 > - PAC ファイルは `proxy.pac` という名前です
 > - コマンドライン: `pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org` (引数 `host` に `www.mozilla.org` を、引数 `url` に `http://www.mozilla.org` を渡します)
@@ -322,7 +317,7 @@ myIpAddress()
 
 Firefox が動作しているマシンのサーバー IP アドレスを、ドット区切りの整数形式の文字列で返します。
 
-> **Warning:** myIpAddress() は Linux マシンでは、 **`nslookup localhost`** が返すサーバーアドレスと同じ IP アドレスを返します。パブリック IP アドレスは返しません。
+> **警告:** myIpAddress() は Linux マシンでは、 **`nslookup localhost`** が返すサーバーアドレスと同じ IP アドレスを返します。パブリック IP アドレスは返しません。
 
 #### 例
 
@@ -372,7 +367,7 @@ shExpMatch(str, shexp)
 
 特定のグロブ式の構文に対応しているかどうかは、ブラウザーによって異なります。 `*` （任意の数の文字に一致）と `?` （1 文字に一致）は常に対応していますが、 `[characters]` と `[^characters]` は（Firefoxを含む）いくつかの実装で追加的に対応しています。
 
-> **Note:** クライアントが対応している場合、JavaScript の正規表現は通常 URL (および他の文字列) をパターン一致させるより強力で一貫した方法を提供します。
+> **メモ:** クライアントが対応している場合、JavaScript の正規表現は通常 URL (および他の文字列) をパターン一致させるより強力で一貫した方法を提供します。
 
 #### 例
 
@@ -389,7 +384,7 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 weekdayRange(wd1, wd2, [gmt])
 ```
 
-> **Note:** （Firefox 49以前） 関数でこれらの引数を範囲として評価したい場合は、 wd1 が wd2 より小さくなければなりません。以下の警告を参照してください。
+> **メモ:** （Firefox 49以前） 関数でこれらの引数を範囲として評価したい場合は、 wd1 が wd2 より小さくなければなりません。以下の警告を参照してください。
 
 #### 引数
 
@@ -404,7 +399,7 @@ weekdayRange(wd1, wd2, [gmt])
 
 **wd1** と **wd1** の両方が定義されている場合、現在の曜日がその 2 つの曜日の間にあるとき、条件は true となります。境界を含みますが、_順序付けされたものです_。 "GMT" 引数が指定された場合、時刻は GMT とみなされます。それ以外の場合は、ローカルのタイムゾーンが使用されます。
 
-> **Warning:** _曜日の順番が重要です_。
+> **警告:** _曜日の順番が重要です_。
 > Firefox 49 以前では、`weekdayRange("SUN", "SAT")` は常に `true` と評価されます。
 > `weekdayRange("WED", "SUN")` は、現在の曜日が水曜日か日曜日の場合にのみ `true` と評価されるようになりました。
 
@@ -432,7 +427,7 @@ dateRange(<month1>, <year1>, <month2>, <year2>, [gmt])
 dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 ```
 
-> **Note:** （Firefox 49 以前）関数がこれらの引数を範囲として評価したい場合、 day1 は day2 よりも小さく、 month1 は month2 よりも小さく、 year1 は year2 よりも小さくなければなりません。以下の警告を参照してください。
+> **メモ:** （Firefox 49 以前）関数がこれらの引数を範囲として評価したい場合、 day1 は day2 よりも小さく、 month1 は month2 よりも小さく、 year1 は year2 よりも小さくなければなりません。以下の警告を参照してください。
 
 #### 引数
 
@@ -457,7 +452,7 @@ dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 
 1つの値のみが指定された場合（日、月、年のカテゴリーから）、この関数はその指定に一致する日にのみ真値を返します。両方の値が指定された場合、結果はそれらの時間の間で true となり、境界も含まれますが、境界は順序付けされます_。
 
-> **Warning:** **日、月、年の順序が重要です**。 Firefox 49 以前では、 `dateRange("JAN", "DEC")` は常に `true` と評価されます。現在では、 `dateRange("DEC", "JAN")` は現在の月が 12 月か 1 月のときのみ、 true と評価されます。
+> **警告:** **日、月、年の順序が重要です**。 Firefox 49 以前では、 `dateRange("JAN", "DEC")` は常に `true` と評価されます。現在では、 `dateRange("DEC", "JAN")` は現在の月が 12 月か 1 月のときのみ、 true と評価されます。
 
 #### 例
 
@@ -495,7 +490,7 @@ dateRange(1995, 1997);
 timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 ```
 
-> **Note:** （Firefox 49以前）関数がこれらの引数を範囲として評価したい場合、カテゴリー hour1, min1, sec1 は、カテゴリー hour2, min2, sec2 よりも小さくなければなりません。下記の警告を参照してください。
+> **メモ:** （Firefox 49以前）関数がこれらの引数を範囲として評価したい場合、カテゴリー hour1, min1, sec1 は、カテゴリー hour2, min2, sec2 よりも小さくなければなりません。下記の警告を参照してください。
 
 #### 引数
 
@@ -510,7 +505,7 @@ timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 
 1 つの値のみが指定された場合（各カテゴリー：時、分、秒）、この関数は、その指定に一致する時間でのみ真値を返します。両方の値が指定された場合、結果はそれらの時間の間で真となり、境界を含みますが、境界は順序付けされます_。
 
-> **Warning:** **時、分、秒の順序が重要です**。 Firefox 49 以前では、 `timeRange(0, 23)` は常に true と評価されます。現在は `timeRange(23, 0)` は現在の時刻が 23:00 か 0:00 のときだけ true と評価されます。
+> **警告:** **時、分、秒の順序が重要です**。 Firefox 49 以前では、 `timeRange(0, 23)` は常に true と評価されます。現在は `timeRange(23, 0)` は現在の時刻が 23:00 か 0:00 のときだけ true と評価されます。
 
 #### 例
 
@@ -549,7 +544,7 @@ alert("Error: shouldn't reach this clause.");      // log a simple message
 
 ### ローカルホスト以外ではプロキシーを使用する
 
-> **Note:** この後の例はすべて非常に特殊なものであるため、テストはしていません。
+> **メモ:** この後の例はすべて非常に特殊なものであるため、テストはしていません。
 
 完全修飾されていないホストや、ローカルドメインにあるホストはすべて直接接続されます。それ以外はすべて `w3proxy.mozilla.org:8080` を介して接続されます。プロキシーがダウンした場合、自動的に直接接続になります。
 
@@ -563,7 +558,7 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-> **Note:** これは、プロキシーが 1 つしかない場合の、最も単純で最も効率的な自動設定ファイルです。
+> **メモ:** これは、プロキシーが 1 つしかない場合の、最も単純で最も効率的な自動設定ファイルです。
 
 ## 例 2
 
@@ -587,7 +582,7 @@ function FindProxyForURL(url, host) {
 
 上記の例では、mozilla.org ドメインのローカルホスト以外のすべてにプロキシーを使用します。さらに例外として、ホスト `www.mozilla.org` と `merchant.mozilla.org` はプロキシーを経由して接続されることになります。
 
-> **Note:** 効率化のための例外処理、 `localHostOrDomainIs()` の関数はローカルドメインにある URL に対してのみ実行され、すべての URL に対して実行されるわけではありません。上記の効率的な動作を実現するために、 _and_ 式の前に _or_ 式を括弧で囲むことに注意してください。
+> **メモ:** 効率化のための例外処理、 `localHostOrDomainIs()` の関数はローカルドメインにある URL に対してのみ実行され、すべての URL に対して実行されるわけではありません。上記の効率的な動作を実現するために、 _and_ 式の前に _or_ 式を括弧で囲むことに注意してください。
 
 ## 例 3
 
@@ -713,7 +708,7 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-> **Note:** 同じことは、先に記述した [`shExpMatch()`](#shexpmatch) 関数を使って実現することができます。
+> **メモ:** 同じことは、先に記述した [`shExpMatch()`](#shexpmatch) 関数を使って実現することができます。
 
 例:
 
@@ -723,7 +718,7 @@ if (shExpMatch(url, "http:*")) {
 }
 ```
 
-> **Note:** autoconfig ファイルは CGI スクリプトによって出力することができます。これは例えば、クライアントの IP アドレス（CGI では `REMOTE_ADDR` 環境変数）に基づいて autoconfig ファイルが異なる動作をするようにする場合に便利です。
+> **メモ:** autoconfig ファイルは CGI スクリプトによって出力することができます。これは例えば、クライアントの IP アドレス（CGI では `REMOTE_ADDR` 環境変数）に基づいて autoconfig ファイルが異なる動作をするようにする場合に便利です。
 >
 > `isInNet()`, `isResolvable()`, `dnsResolve()` 関数の使用は、 DNS サーバーを参照する必要があるため、慎重に検討されるべきです。その他の autoconfig 関連の関数はすべて、 DNS サーバーを使用する必要のない単なる文字列一致関数である。プロキシーを使用した場合は、プロキシーが DNS ルックアップを行うため、 DNS サーバーへの影響が倍増する。ほとんどの場合、これらの関数は目的の結果を得るためには必要ない。
 

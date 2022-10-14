@@ -117,7 +117,7 @@ translation_of: Web/API/Pointer_events
   <tr>
    <td>{{event('pointerout')}}</td>
    <td>{{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}</td>
-   <td>Вызывается по нескольким причинам, в том числе: когда указывающее устройство перемещается за пределы элемента (его <a href="#term_hit_test">теста попадания</a>); запуск события <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">pointerup</span></font> для устройства, которое не поддерживает наведение "hover"; после запуска события <code>pointercancel</code>; когда перо покидает область обнаружения планшетом наведения указателя.</td>
+   <td>Вызывается по нескольким причинам, в том числе: когда указывающее устройство перемещается за пределы элемента (его <a href="#term_hit_test">теста попадания</a>); запуск события pointerup для устройства, которое не поддерживает наведение "hover"; после запуска события <code>pointercancel</code>; когда перо покидает область обнаружения планшетом наведения указателя.</td>
   </tr>
   <tr>
    <td>{{event('pointerleave')}}</td>
@@ -335,7 +335,7 @@ translation_of: Web/API/Pointer_events
  </tbody>
 </table>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Примечание:</strong> Свойство <code>button</code> указывает на изменение состояния кнопки. Однако, как и в случае с касанием, когда одно событие влечёт за собой ещё несколько событий, все они имеют одинаковое значение.</p>
 </div>
 
@@ -473,7 +473,7 @@ translation_of: Web/API/Pointer_events
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility"><span>Browser compatibility</span></h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("api.PointerEvent")}}</p>
 

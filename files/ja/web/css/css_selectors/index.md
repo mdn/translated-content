@@ -1,19 +1,13 @@
 ---
 title: CSS セレクター
 slug: Web/CSS/CSS_Selectors
-tags:
-  - CSS
-  - ガイド
-  - 概要
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/CSS_Selectors
 ---
+
 {{CSSRef("Selectors")}}
 
 **CSS セレクター**は、一連の CSS のルールが適用される要素を定義します。
 
-> **Note:** 親のアイテム、親の兄弟、親の兄弟の子を選択するセレクターや結合子はありません。
+> **メモ:** 親のアイテム、親の兄弟、親の兄弟の子を選択するセレクターや結合子はありません。
 
 ## 基本セレクター
 

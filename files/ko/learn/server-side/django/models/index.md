@@ -1,7 +1,6 @@
 ---
 title: 'Django Tutorial Part 3: Using models'
 slug: Learn/Server-side/Django/Models
-translation_of: Learn/Server-side/Django/Models
 ---
 803{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
@@ -121,7 +120,7 @@ my_field_name = models.CharField(max_length=20, help_text='Enter field documenta
 
 - [CharField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#django.db.models.CharField)는 작거나 중간 크기의 고정된 길이의 문자열을 정의할 때 사용합니다. 저장되기 위해서는 데이터의 최대 길이(`max_length`)를 정해주어야 합니다.
 - [TextField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#django.db.models.TextField)는 임의의 긴 문자열에 사용됩니다. 필드의 최대 길이(`max_length`)를 지정해야 할 수도 있지만, 그것은 필드가 양식(form) 안에 표시될 때만 지정하면 됩니다(데이터베이스 레벨에서 강제되지 않습니다).
-- [IntegerField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#django.db.models.IntegerField "django.db.models.IntegerField")은 정수값(모든 숫자)을 저장하는 필드입니다. 그리고 양식(form)에 입력된 값이 정수임을 검증하기도 합니다.
+- [IntegerField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#django.db.models.IntegerField)은 정수값(모든 숫자)을 저장하는 필드입니다. 그리고 양식(form)에 입력된 값이 정수임을 검증하기도 합니다.
 - [DateField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#datefield)와 [DateTimeField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#datetimefield)는 날짜와 날짜시간 정보를 저장, 표현하는데 사용됩니다 (각각 파이썬 `datetime.date`와 `datetime.datetime` 객체로). 이 필드들은 추가적으로 (서로 독점적인) `auto_now=True` (모델이 저장될 때 마다 필드를 현재 날짜로 설정하기 위해), `auto_now_add` (모델이 처음 생성되었을 때만 날짜를 설정하기 위해) , 그리고 `default` (사용자에 의해 변경될 수 있는 기본 날짜를 설정하기 위해) 매개 변수를 선언할 수 있습니다.
 - [EmailField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#emailfield)는 이메일 주소를 저장하고 검증하기 위해 사용합니다.
 - [FileField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#filefield)와 [ImageField](https://docs.djangoproject.com/en/2.0/ref/models/fields/#imagefield)는 각각 파일과 이미지를 업로드하기 위해 사용됩니다 (`ImageField`는 단지 업로드된 파일이 이미지임을 확인하는 추가 검증을 더할 뿐입니다). 이것들은 업로드된 파일들이 어디에 어떻게 저장되는지 정의하는 매개 변수를 가집니다.

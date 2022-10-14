@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: invalid Array.prototype.sort argument'
 slug: Web/JavaScript/Reference/Errors/Array_sort_argument
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Array_sort_argument
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "invalid Array.prototype.sort argument" は、 {{jsxref("Array.prototype.sort()")}} の引数が {{jsxref("undefined")}} でもオペランドを比較する関数でもない場合に発生します。

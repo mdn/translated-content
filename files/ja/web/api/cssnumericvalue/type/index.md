@@ -1,18 +1,8 @@
 ---
 title: CSSNumericValue.type()
 slug: Web/API/CSSNumericValue/type
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - CSSNumericValue
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - Type
-browser-compat: api.CSSNumericValue.type
-translation_of: Web/API/CSSNumericValue/type
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`type()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、 `CSSNumericValue` の型をf `angle`, `flex`,

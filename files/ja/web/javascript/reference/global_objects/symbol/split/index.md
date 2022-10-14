@@ -1,13 +1,8 @@
 ---
 title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 ---
+
 {{JSRef}}
 
 **`Symbol.split`** ウェルノウンシンボルは、正規表現に一致する位置で文字列を分割するメソッドを指定します。この関数は {{jsxref("String.prototype.split()")}} メソッドによって呼び出されます。

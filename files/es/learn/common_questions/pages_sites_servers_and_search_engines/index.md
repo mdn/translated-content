@@ -40,13 +40,13 @@ Cubriremos estos términos y tecnologías con más detalle mientras exploramos m
 - Servidor web
   - : Una computadora que aloja un sitio web en Internet.
 - Motores de búsqueda
-  - : Un servicio web que sirve para encontrar páginas web; es el caso de Google, Bing, Yahoo o DuckDuckGo. Normalmente se accede a los motores de búsqueda a través de un navegador web (por ejemplo, se pueden realizar búsquedas en motores de búsqueda directamente en la barra de direcciones de Firefox, Chrome, etc.) o a través de una página web (por ejemplo, [https://www.bing.com](bing.com) o [https://duckduckgo.com](duckduckgo.com)).
+  - : Un servicio web que sirve para encontrar páginas web; es el caso de Google, Bing, Yahoo o DuckDuckGo. Normalmente se accede a los motores de búsqueda a través de un navegador web (por ejemplo, se pueden realizar búsquedas en motores de búsqueda directamente en la barra de direcciones de Firefox, Chrome, etc.) o a través de una página web (por ejemplo, <https://www.bing.com> o <https://duckduckgo.com>).
 
 Veamos una analogía simple: una biblioteca pública. Esto es lo que generalmente harías al visitar una biblioteca:
 
-1.  Buscar en un índice de busqueda el título del libro que quieres.
-2.  Tomar nota del número de catálogo del libro.
-3.  Ir a la sección particular que contiene el libro, buscar el número de catálogo del libro y obtener el libro.
+1. Buscar en un índice de busqueda el título del libro que quieres.
+2. Tomar nota del número de catálogo del libro.
+3. Ir a la sección particular que contiene el libro, buscar el número de catálogo del libro y obtener el libro.
 
 Vamos a comparar la biblioteca con un servidor web:
 
@@ -55,7 +55,7 @@ Vamos a comparar la biblioteca con un servidor web:
 - Los libros en cada sección son como páginas web. Un sitio web puede tener varias páginas web, por ejemplo, la sección de Ciencias (el sitio web) tendrá libros sobre calor, sonido, termodinámica, estadísticas, etc. (las páginas web). Cada una de las páginas web puede ser encontrada en una ubicación única (URL).
 - El índice de búsqueda es como el motor de búsqueda. Cada libro tiene su propia ubicación única en la biblioteca (dos libros no se pueden mantener en el mismo lugar) que se especifica mediante el número de catálogo.
 
-_No esta disponible aprendizaje activo aun. [Por favor, considere la posibilidad de contribuir](https://developer.mozilla.org/en-US/docs/MDN/Getting_started)._
+_No esta disponible aprendizaje activo aun. [Por favor, considere la posibilidad de contribuir](/en-US/docs/MDN/Getting_started)._
 
 ## Profundizando
 
@@ -63,7 +63,7 @@ Entonces, vamos a profundizar en cómo estos cuatro términos serán relacionado
 
 ### Página web
 
-Una **página web** es un simple documento que puede ser mostrado por un {{Glossary("browser")}}. Estos documentos están escritos en lenguaje {{Glossary("HTML")}} (el que veremos en más detalle en [otros artículos](https://developer.mozilla.org/en-US/docs/Web/HTML)). Una página web puede incluir una variedad de diferentes tipos de recursos, tales como:
+Una **página web** es un simple documento que puede ser mostrado por un {{Glossary("browser")}}. Estos documentos están escritos en lenguaje {{Glossary("HTML")}} (el que veremos en más detalle en [otros artículos](/en-US/docs/Web/HTML)). Una página web puede incluir una variedad de diferentes tipos de recursos, tales como:
 
 - _información de estilos_ — para controlar la apariencia de una página
 - _scripts_ — que agrega interactividad a la página

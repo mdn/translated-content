@@ -3,6 +3,7 @@ title: XMLHttpRequest.setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
 translation_of: Web/API/XMLHttpRequest/setRequestHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 La méthode **`setRequestHeader()`** de l'objet {{domxref("XMLHttpRequest")}} permet d'éditer le header d'une requête HTTP. Vous devez appeler la méthode `setRequestHeader()`, après la méthode {{domxref("XMLHttpRequest.open", "open()")}}, et avant {{domxref("XMLHttpRequest.send", "send()")}}. Si vous faite appel plusieurs fois à `setRequestHeader()` dans une même requête, tout sera combiné au sein d'un même header.

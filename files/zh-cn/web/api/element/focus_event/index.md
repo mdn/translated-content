@@ -2,6 +2,7 @@
 title: 元素：focus 事件
 slug: Web/API/Element/focus_event
 ---
+
 **`focus`** 事件在元素获取焦点时触发。这个事件和 {{domxref("Element/focusin_event", "focusin")}} 最大的区别仅仅在于后者会事件冒泡。
 
 `focus` 与 {{domxref("Element/blur_event", "blur")}} 正好相反。

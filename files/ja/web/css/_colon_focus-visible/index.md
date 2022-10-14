@@ -1,17 +1,8 @@
 ---
 title: ':focus-visible'
-slug: 'Web/CSS/:focus-visible'
-tags:
-  - ':focus'
-  - ':focus-visible'
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-translation_of: 'Web/CSS/:focus-visible'
+slug: Web/CSS/:focus-visible
 ---
+
 {{CSSRef}}
 
 **`:focus-visible`** 擬似クラスは、要素が {{CSSxRef(":focus")}} 擬似クラスに一致している時で、{{glossary("User Agent", "ユーザーエージェント")}}が要素にフォーカスを明示するべきであると推測的に判断した場合に適用されます (多くのブラウザーではこの場合、既定で「フォーカスリング」を表示します)。
@@ -20,7 +11,9 @@ translation_of: 'Web/CSS/:focus-visible'
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:focus-visible
+```
 
 ## 例
 

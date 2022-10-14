@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/flex-shrink
 ---
+
 {{CSSRef}}
 
 La propriété **`flex-shrink`** définit le facteur de rétrécissement d'un élément flexible. Si la taille de l'ensemble des éléments flexibles est supérieure à la taille du conteneur, les éléments seront comprimés selon leur facteur `flex-shrink`.
@@ -38,9 +39,13 @@ La propriété `flex-shrink` est définie grâce à une valeur de type [`<number
 - `<number>`
   - : Un nombre (type {{cssxref("&lt;number&gt;")}}) qui correspond au facteur de rétrécissement utilisé. Plus la valeur est élevée, plus l'élément sera compressé si nécessaire. Les valeurs négatives sont invalides. La valeur par défaut est `1`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -85,15 +90,11 @@ La propriété `flex-shrink` est définie grâce à une valeur de type [`<number
 
 ## Spécifications
 
-| Spécification                                                                    | État                             | Commentaires         |
-| -------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Flexbox', '#flex-shrink', 'flex-shrink')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## Voir aussi
 

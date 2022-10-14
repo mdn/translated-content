@@ -1,16 +1,8 @@
 ---
 title: '<del>: 削除済み文字列要素'
 slug: Web/HTML/Element/del
-tags:
-  - Deleted Text
-  - Element
-  - HTML
-  - HTML edits
-  - Reference
-  - Web
-  - del
-translation_of: Web/HTML/Element/del
 ---
+
 {{HTMLRef}}
 
 **HTML の `<del>` 要素**は、文書から削除された文字列の範囲を表します。これは例えば、「変更の追跡」や、ソースコードの差分情報を描画するときに使用することができます。 {{HTMLElement("ins")}} 要素は逆の目的に、文書に追加された文字列を示すために用いることができます。

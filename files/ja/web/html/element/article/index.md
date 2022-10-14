@@ -1,14 +1,8 @@
 ---
 title: '<article>: 記事コンテンツ要素'
 slug: Web/HTML/Element/article
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/article
 ---
+
 {{HTMLRef}}
 
 **HTML の `<article>` 要素**は文書、ページ、アプリケーション、サイトなどの中で自己完結しており、 (集合したものの中で) 個別に配信や再利用を行うことを意図した構成物を表します。例えば、フォーラムの投稿、雑誌や新聞の記事、ブログの記事、商品カード、ユーザーが投稿したコメント、対話型のウィジェットやガジェット、その他の独立したコンテンツの項目が含まれます。
@@ -84,7 +78,7 @@ translation_of: Web/HTML/Element/article
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes "HTML/Global attributes")のみがあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
 ## 使用上の注意
 

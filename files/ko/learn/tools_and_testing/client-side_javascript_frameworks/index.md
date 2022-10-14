@@ -1,7 +1,6 @@
 ---
 title: Understanding client-side JavaScript frameworks
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
 {{LearnSidebar}}
 
@@ -87,9 +86,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
   - : 이제 Vue에 대해 자세히 살펴보고 우리만의 커스텀 컴포넌트를 만들겠습니다. Todo list의 각 항목을 나타내는 컴포넌트를 만드는 것으로 시작합니다. 그 과정에서, 다른 컴포넌트 내에서 컴포넌트를 호출하고, props(properties)를 통해 데이터를 전달하고 데이터 상태를 저장하는 등 중요한 개념을 학습합니다.
 - [3. Vue 컴포넌트 리스트 렌더링](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
 
-  - :
-
-    <span class="author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qoxwoxz78zz83zz84zz69z2z80zgwxsgnz83zfkt5e5tz70zz68zmsnjz122zz71z">이 시점에서 우리는 충분히 잘 작동하는 컴포넌트를 얻었습니다. 이제 앱에 여러 <code>ToDoItem</code> 컴포넌트를 추가할 준비가 되었습니다. 이 글에서는 <code>App.vue</code> 컴포넌트에 todo 항목 데이터 셋을 추가하는 방법을 살펴보고, <code>v-for</code> 지시문(directive)을 사용하여 <code>ToDoItem</code> 컴포넌트를 반복하여 출력합니다.</span>
+  - : 이 시점에서 우리는 충분히 잘 작동하는 컴포넌트를 얻었습니다. 이제 앱에 여러 `ToDoItem` 컴포넌트를 추가할 준비가 되었습니다. 이 글에서는 `App.vue` 컴포넌트에 todo 항목 데이터 셋을 추가하는 방법을 살펴보고, `v-for` 지시문(directive)을 사용하여 `ToDoItem` 컴포넌트를 반복하여 출력합니다.
 
 - [4. 새로운 todo form추가: Vue events, methods, models](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
   - : 이제 샘플 데이터와 각 비트의 데이터를 가져와서 앱의 `ToDoItem` 내에 렌더링하는 루프가 준비되었습니다. 다음으로 필요한 것은 사용자가 todo 항목을 앱에 입력할 수 있게 하는 기능입니다. 이를 위해 text `<input>`, 데이터가 제출될 때 발생하는 이벤트, 데이터 제출 시 데이터를 추가하고 목록을 다시 렌더링하기 위한 방법, 데이터를 제어하는 모델이 필요합니다. 이것이 이 글에서 다룰 내용입니다.

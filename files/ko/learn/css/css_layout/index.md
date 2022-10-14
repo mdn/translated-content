@@ -1,21 +1,6 @@
 ---
 title: CSS 레이아웃
 slug: Learn/CSS/CSS_layout
-tags:
-  - 가변상자
-  - 격자
-  - 다단
-  - 단위
-  - 부동
-  - 부동체
-  - 씨에스에스
-  - 안내서
-  - 위치잡기
-  - 조판
-  - 초보자
-  - 테이블
-  - 학습
-translation_of: Learn/CSS/CSS_layout
 ---
 {{LearnSidebar}}
 

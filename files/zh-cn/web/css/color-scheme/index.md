@@ -65,7 +65,7 @@ color-scheme: unset;
 
 ## 推荐阅读
 
-- [使用 CSS 将颜色应用于 HTML 元素](/en-US/docs/Web/HTML/Applying_color)
+- [使用 CSS 将颜色应用于 HTML 元素](/zh-CN/docs/Web/HTML/Applying_color)
 - 其他与颜色相关的属性： {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
 - {{cssxref("-webkit-print-color-adjust")}}

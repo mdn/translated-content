@@ -1,18 +1,8 @@
 ---
 title: HTMLObjectElement.form
 slug: Web/API/HTMLObjectElement/form
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - form
-browser-compat: api.HTMLObjectElement.form
-translation_of: Web/API/HTMLObjectElement/form
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`form`** は {{domxref("HTMLObjectElement")}} インターフェイスの読み取り専用プロパティで、この object 要素のフォームのオーナーを表す {{domxref("HTMLFormElement")}} を返します。オーナーがない場合は null を返します。

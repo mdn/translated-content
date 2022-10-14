@@ -1,14 +1,8 @@
 ---
 title: Number.prototype.toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
-tags:
-  - JavaScript
-  - メソッド
-  - Number
-  - Prototype
-browser-compat: javascript.builtins.Number.toPrecision
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 ---
+
 {{JSRef}}
 
 **`toPrecision()`** メソッドは {{jsxref("Number")}} オブジェクトを指定された精度で表した文字列を返します。

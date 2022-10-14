@@ -1,18 +1,8 @@
 ---
 title: Intl.Locale.prototype.calendar
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - プロパティ
-  - Locale
-  - ローカライズ
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Locale.calendar
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.calendar`** プロパティは、 `Locale` で使用される暦の種類を返すアクセサープロパティです。
@@ -61,7 +51,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
   - : 中華民国暦 (中華民国)
 - `islamicc`
   - : シビル（アルゴリズム）アラビア暦
-    > **Warning:** `islamicc` 暦は非推奨です。 `islamic-civil` を使用してください。
+    > **警告:** `islamicc` 暦は非推奨です。 `islamic-civil` を使用してください。
 
 ## 例
 

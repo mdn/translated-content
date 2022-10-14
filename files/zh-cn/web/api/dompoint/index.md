@@ -2,6 +2,7 @@
 title: DOMPoint
 slug: Web/API/DOMPoint
 ---
+
 {{APIRef("DOM")}}
 
 DOMPoint 对象表示坐标系中的 2D 或 3D 点;它包括三维度的坐标值以及可选的透视值。DOMPoint 基于 DOMPointReadOnly，但允许更改其属性值。
@@ -68,7 +69,7 @@ function setView() {
 
 ## Browser compatibility
 
-{{Compat("api.DOMPoint")}}
+{{Compat}}
 
 ## See also
 

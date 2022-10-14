@@ -1,13 +1,9 @@
 ---
 title: CSS プロパティの記事を作成するには
 slug: MDN/Writing_guidelines/Howto/Document_a_CSS_property
-tags:
-  - CSS
-  - ガイド
-  - Howto
-  - MDN Meta
 original_slug: MDN/Contribute/Howto/Document_a_CSS_property
 ---
+
 {{MDNSidebar}}
 
 [CSS](/ja/docs/Web/CSS) 標準が進化するにつれて、新しいプロパティが常に追加されています。MDN の [CSS リファレンス](/ja/docs/Web/CSS/Reference)は、これらの開発に合わせて最新の状態に維持する必要があります。この文書では、CSS プロパティのリファレンスページを作成するためのステップごとの手順を説明します。
@@ -18,7 +14,7 @@ original_slug: MDN/Contribute/Howto/Document_a_CSS_property
 
 まず、どのプロパティを文書化するかを決定する必要があります。ページが欠けていることに気づいたり、[問題リスト](https://github.com/mdn/content/issues)で報告されているコンテンツの欠落を見たことがあるかもしれません。 CSS プロパティの詳細については、その関連する仕様（たとえば [W3C 仕様](https://www.w3.org/Style/CSS/) や、Gecko や Blink などのレンダリングエンジンで使われている非標準のプロパティに関するバグレポート）を見つける必要があります。
 
-> **Note:** W3C の仕様を使うときは、公開版（例: Working Draft）ではなく、常 **Editor's Draft** （左側の赤いバナーに注目してください）を使ってください。 Editor's Draft は常に最終版に近いのです。
+> **メモ:** W3C の仕様を使うときは、公開版（例: Working Draft）ではなく、常 **Editor's Draft** （左側の赤いバナーに注目してください）を使ってください。 Editor's Draft は常に最終版に近いのです。
 
 実装と仕様が乖離している場合、遠慮なく実装のバグに言及してください。実装のバグ（そしてフォローアップのバグが提出されます）、新しい仕様の発行の遅れ、仕様の誤り（この場合、仕様のバグを提出する価値があります）である場合があります。
 

@@ -3,6 +3,7 @@ title: Element.children
 slug: Web/API/Element/children
 original_slug: Web/API/ParentNode/children
 ---
+
 {{ APIRef("DOM") }}
 
 **`children`** は読み取り専用のプロパティで、生きた {{domxref("HTMLCollection")}} で呼び出された要素の子{{domxref("Element", "要素", "", 1)}}をすべて返します。

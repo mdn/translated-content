@@ -1,13 +1,8 @@
 ---
 title: 451 Unavailable For Legal Reasons
 slug: Web/HTTP/Status/451
-tags:
-  - Client error
-  - HTTP
-  - Reference
-  - Status code
-translation_of: Web/HTTP/Status/451
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) の **`451 Unavailable For Legal Reasons`** はユーザーの要求したリソースが法的理由で使用できない場合のクライアントエラーのレスポンスコードです。
@@ -20,7 +15,7 @@ HyperText Transfer Protocol (HTTP) の **`451 Unavailable For Legal Reasons`** �
 
 ## 例
 
-このレスポンス例は IETF RFC 文書 (リンクは後述) にあるもので、モンティ・パイソンの{{interwiki("wikipedia", "Monty_Python's_Life_of_Brian", "ライフ・オブ・ブライアン")}}からの引用を例に用いています。
+このレスポンス例は IETF RFC 文書 (リンクは後述) にあるもので、モンティ・パイソンの[ライフ・オブ・ブライアン](https://ja.wikipedia.org/wiki/ライフ・オブ・ブライアン)からの引用を例に用いています。
 
 **注:** ISP や DNS サーバーなど、実際にユーザーによるリソースの使用を阻んでいる主体を示すときには `rel="blocked-by"` という値のついた {{HTTPHeader("Link")}} HTTP ヘッダーを使用します。
 
@@ -59,5 +54,5 @@ Content-Type: text/html
 
 ## 関連情報
 
-- ウィキペディア上の {{interwiki("wikipedia", "ja:HTTP_451", "HTTP 451")}} の記事
-- ウィキペディア上の {{interwiki("wikipedia", "ja:華氏451度", "華氏451度")}} の記事 (このステータスコードの由来)
+- ウィキペディア上の [HTTP 451](https://ja.wikipedia.org/wiki/HTTP_451) の記事
+- ウィキペディア上の [華氏451度](https://ja.wikipedia.org/wiki/華氏451度) の記事 (このステータスコードの由来)

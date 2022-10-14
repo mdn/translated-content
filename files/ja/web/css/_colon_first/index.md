@@ -1,17 +1,8 @@
 ---
 title: ':first'
 slug: Web/CSS/:first
-tags:
-  - '@page'
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - Reference
-  - セレクター
-  - Web
-browser-compat: css.selectors.first
-translation_of: Web/CSS/:first
 ---
+
 {{CSSRef}}
 
 **`:first`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/At-rule)で使用され、印刷文書の最初のページを表します。 (一般的なノードの最初の要素については {{cssxref(":first-child")}} を参照してください。)
@@ -24,11 +15,13 @@ translation_of: Web/CSS/:first
 }
 ```
 
-> **Note:** この擬似クラスを使用してすべての CSS プロパティを変更できるわけではありません。変更できるのは文書のマージン、 {{cssxref("orphans")}}、{{cssxref("widows")}}、ページ区切りのみです。さらに、マージンを定義するときには[絶対的な長さ](/ja/docs/Web/CSS/length#absolute_length_units)の単位のみしか使用できません。他のすべてのプロパティは無視されます。
+> **メモ:** この擬似クラスを使用してすべての CSS プロパティを変更できるわけではありません。変更できるのは文書のマージン、 {{cssxref("orphans")}}、{{cssxref("widows")}}、ページ区切りのみです。さらに、マージンを定義するときには[絶対的な長さ](/ja/docs/Web/CSS/length#absolute_length_units)の単位のみしか使用できません。他のすべてのプロパティは無視されます。
 
 ## 構文
 
-{{csssyntax}}
+```
+:first
+```
 
 <h2 id="Examples">例</h2>
 

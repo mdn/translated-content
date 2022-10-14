@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/return
 original_slug: Web/JavaScript/Reference/Objets_globaux/Generator/return
 ---
+
 {{JSRef}}
 
 La méthode **`return()`** renvoie la valeur fournie et termine le générateur.
@@ -69,14 +70,11 @@ g.next();         // { value: undefined, done: true }
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-generator.prototype.return', 'Generator.prototype.return')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-generator.prototype.return', 'Generator.prototype.return')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Generator.return")}}
+{{Compat}}
 
 ## Voir aussi
 

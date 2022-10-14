@@ -9,5 +9,5 @@ Un valor **{{Glossary("primitivo")}}** automáticamente asignado a las **variabl
 
 ### Conocimientos generales
 
-- [Tipos de datos y estructuras de datos en JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+- [Tipos de datos y estructuras de datos en JavaScript](/en-US/docs/Web/JavaScript/Data_structures)
 - [Valor undefined en Wikipedia](http://en.wikipedia.org/wiki/Undefined_value)

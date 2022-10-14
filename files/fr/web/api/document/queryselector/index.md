@@ -12,6 +12,7 @@ tags:
   - Échappement
 translation_of: Web/API/Document/querySelector
 ---
+
 {{ ApiRef("DOM") }}
 
 La méthode **`querySelector()`** de l'interface {{domxref("Document")}} retourne le premier {{domxref("Element")}} dans le document correspondant au sélecteur - ou groupe de sélecteurs - spécifié(s), ou `null` si aucune correspondance n'est trouvée.

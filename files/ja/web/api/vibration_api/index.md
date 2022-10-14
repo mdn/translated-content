@@ -1,14 +1,9 @@
 ---
 title: Vibration API
 slug: Web/API/Vibration_API
-tags:
-  - API
-  - Beginner
-  - Mobile
-  - Vibration
-translation_of: Web/API/Vibration_API
 original_slug: Web/Guide/API/Vibration
 ---
+
 {{DefaultAPISidebar("Vibration API")}}
 
 現代のモバイル端末は、たいていバイブレーションハードウェアを内蔵しており、ソフトウェアのコードが端末を振動させることによりユーザーに物理的なフィードバックを与えることができます。 **Vibration API** はウェブアプリに、このハードウェアが存在すればアクセスすることができるようにし、端末が対応していない場合は何もしません。

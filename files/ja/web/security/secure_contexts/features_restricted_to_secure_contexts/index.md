@@ -1,27 +1,15 @@
 ---
 title: 安全なコンテキストに制限されている機能
 slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
-tags:
-  - API
-  - Browsers
-  - Reference
-  - Secure contexts
-  - Security
-  - Web
-  - features
-  - support
-  - セキュリティ
-  - ブラウザー
-  - 安全なコンテキスト
-translation_of: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 ---
+
 このリファレンスは、安全なコンテキストでのみ使用できるウェブプラットフォーム機能の一覧です — 定義や詳細については、[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)を参照してください。
 
 ## 安全なコンテキストでのみ使用できる現在の機能
 
 この節では、安全なコンテキストでのみ利用できる API の一覧を、制限が導入されたブラウザーのバージョンと共に示します。
 
-> **Note:** **メモ**: 実際に安全なコンテキストに対応しているブラウザーのみ表示しています。安全なコンテキストの対応の詳細は[こちらをご覧ください](/ja/docs/Web/Security/Secure_Contexts#Browser_compatibility)。
+> **メモ:** 実際に安全なコンテキストに対応しているブラウザーのみ表示しています。安全なコンテキストの対応の詳細は[こちらをご覧ください](/ja/docs/Web/Security/Secure_Contexts#Browser_compatibility)。
 
 | API                                                                                                                                         | Chrome/Opera | Edge                                                                                                             | Safari                                                                                  | Firefox                                                |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------ |

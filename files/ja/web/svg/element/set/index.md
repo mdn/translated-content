@@ -1,13 +1,8 @@
 ---
 title: set
 slug: Web/SVG/Element/set
-tags:
-  - Element
-  - NeedsExample
-  - SVG
-  - SVG Animation
-translation_of: Web/SVG/Element/set
 ---
+
 {{SVGRef}}
 
 ## 概要
@@ -38,7 +33,7 @@ translation_of: Web/SVG/Element/set
 
 ## DOM インターフェース
 
-この要素は [`SVGSetElement`](/ja/DOM/SVGSetElement "en/DOM/SVGSetElement") インターフェースを提供します。
+この要素は [`SVGSetElement`](/ja/DOM/SVGSetElement) インターフェースを提供します。
 
 ## 仕様
 

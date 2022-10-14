@@ -1,17 +1,8 @@
 ---
 title: right
 slug: Web/CSS/right
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - CSS プロパティ
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.right
-translation_of: Web/CSS/right
 ---
+
 {{CSSRef}}
 
 **`right`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の水平位置の決定に関与します。位置指定されていない要素には効果はありません。

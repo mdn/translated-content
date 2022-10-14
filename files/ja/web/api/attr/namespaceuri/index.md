@@ -1,14 +1,8 @@
 ---
 title: Attr.namespaceURI
 slug: Web/API/Attr/namespaceURI
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Attr.namespaceURI
-translation_of: Web/API/Attr/namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 **`namespaceURI`** は {{domxref("Attr")}} インターフェイスの読み取り専用プロパティで、この属性の名前空間 URI を返し、この要素が名前空間にない場合は `null` を返します。
@@ -16,7 +10,7 @@ translation_of: Web/API/Attr/namespaceURI
 名前空間 URI は {{domxref("Attr")}} の作成時に設定され、変更することができません。
 名前空間付きの属性は、 {{domxref("Element.setAttributeNS()")}} で作成することができます。
 
-> **Note:** 属性は、装着されている要素から名前空間を継承しません。
+> **メモ:** 属性は、装着されている要素から名前空間を継承しません。
 > 属性に明示的に名前空間が与えられなかった場合は、名前空間なしになります。
 
 ブラウザーは名前空間の検証そのものは行いませんし、強制もしません。必要な検証を行うのは JavaScript アプリケーションに任されています。また、名前空間接頭辞は一度特定の属性ノードに関連づけられると、変更することができないので注意してください。

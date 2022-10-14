@@ -7,6 +7,7 @@ tags:
 translation_of: Learn/HTML/Howto
 original_slug: Apprendre/HTML/Comment
 ---
+
 Une fois [les bases acquises](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_HTML), il n'existe pas de voie idéale pour apprendre {{Glossary("HTML")}}. Vous pouvez ensuite progresser à votre rythme, en utilisant les balises qui vous sont utiles. HTML n'est qu'un ensemble de balises que vous pouvez utiliser pour structurer votre document et lui ajouter des fonctionnalités supplémentaires. Dans les articles suivants, nous travaillerons sur différents exemples illustrant comment utiliser HTML pour résoudre des problèmes fréquents qu'on rencontre lorsqu'on développe pour le Web. Si vous avez besoin d'explications détaillées sur une balise HTML donnée, n'hésitez pas à consulter [notre référence HTML](/fr/docs/Web/HTML/Reference).
 
 ## Cas d'utilisation fréquents

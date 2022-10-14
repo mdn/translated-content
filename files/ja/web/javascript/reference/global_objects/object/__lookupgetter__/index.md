@@ -1,16 +1,8 @@
 ---
 title: Object.prototype.__lookupGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Polyfill
-browser-compat: javascript.builtins.Object.lookupGetter
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`__lookupGetter__`** メソッドは、指定されたプロパティに結びつけられているゲッター関数を返します。

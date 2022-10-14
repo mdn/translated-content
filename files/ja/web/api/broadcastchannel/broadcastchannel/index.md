@@ -1,16 +1,8 @@
 ---
 title: BroadcastChannel()
 slug: Web/API/BroadcastChannel/BroadcastChannel
-tags:
-  - API
-  - Broadcast Channel API
-  - BroadcastChannel
-  - Constructor
-  - Experimental
-  - HTML API
-  - Reference
-translation_of: Web/API/BroadcastChannel/BroadcastChannel
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 **`BroadcastChannel()`** コンストラクタは新しい {{domxref("BroadcastChannel")}} を作成し、それを基礎となるチャネルに接続します。

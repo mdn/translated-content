@@ -1,14 +1,8 @@
 ---
 title: 'WebSocket: message イベント'
 slug: Web/API/WebSocket/message_event
-tags:
-  - Event
-  - リファレンス
-  - WebSocket
-  - message
-browser-compat: api.WebSocket.message_event
-translation_of: Web/API/WebSocket/message_event
 ---
+
 {{APIRef}}
 
 `message` イベントは、 `WebSocket` を通してデータを受け取ったときに発生します。

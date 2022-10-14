@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/isArray
 ---
+
 {{JSRef}}
 
 La méthode **`Array.isArray()`** permet de déterminer si l'objet passé en argument est un objet {{jsxref("Array")}}, elle renvoie `true` si le paramètre passé à la fonction est de type `Array` et `false` dans le cas contraire.
@@ -82,15 +83,11 @@ if(!Array.isArray) {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                            |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.3.2', 'Array.isArray')}}             | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-array.isarray', 'Array.isArray')}}         | {{Spec2('ES6')}}         |                                                         |
-| {{SpecName('ESDraft', '#sec-array.isarray', 'Array.isArray')}} | {{Spec2('ESDraft')}} |                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.isArray")}}
+{{Compat}}
 
 ## Voir aussi
 

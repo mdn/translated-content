@@ -1,15 +1,8 @@
 ---
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-tags:
-  - 国際化
-  - JavaScript
-  - メソッド
-  - Number
-  - プロトタイプ
-browser-compat: javascript.builtins.Number.toLocaleString
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 ---
+
 {{JSRef}}
 
 **`toLocaleString()`** メソッドは、この数値を表す言語依存の文字列を返します。

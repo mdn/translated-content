@@ -1,22 +1,11 @@
 ---
 title: '@viewport'
 slug: Web/CSS/@viewport
-tags:
-  - '@viewport'
-  - アットルール
-  - CSS
-  - 実験的
-  - レイアウト
-  - モバイル
-  - リファレンス
-  - 画面レイアウト
-  - ビューポート
-browser-compat: css.at-rules.viewport
-translation_of: Web/CSS/@viewport
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
-> **Note:** <https://github.com/w3c/csswg-drafts/issues/4766> に @viewport を標準化路線から除外することに関する議論があります。
+> **メモ:** <https://github.com/w3c/csswg-drafts/issues/4766> に @viewport を標準化路線から除外することに関する議論があります。
 
 **`@viewport`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、文書が表示される{{glossary("viewport", "ビューポート")}}を構成することができます。主にモバイル端末のために使用されますが、 (Microsoft Edge などの) "snap to edge" のような機能に対応するデスクトップブラウザーでも使用されます。
 
@@ -30,7 +19,7 @@ translation_of: Web/CSS/@viewport
 }
 ```
 
-> **Note:** `<meta name="viewport">` タグを使用すると、 `@viewport` より優先します。
+> **メモ:** `<meta name="viewport">` タグを使用すると、 `@viewport` より優先します。
 
 ## 構文
 

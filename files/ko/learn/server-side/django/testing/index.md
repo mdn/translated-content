@@ -1,7 +1,6 @@
 ---
 title: 'Django 튜토리얼 파트 10: Django 웹 어플리케이션 테스트하기'
 slug: Learn/Server-side/Django/Testing
-translation_of: Learn/Server-side/Django/Testing
 ---
 ## {{LearnSidebar}}
 
@@ -111,7 +110,7 @@ class Author(models.Model):
 
 무엇을 테스트 할 지 자세히 보기 전에, 간단히 어디서 그리고 어떻게 테스트가 정의되는지 대략 살펴 봅시다.
 
-장고는 유닛테스트의 모듈인 [built-in test discovery](https://docs.python.org/3/library/unittest.html#unittest-test-discovery "(in Python v3.5)")을 사용하는데, 이는 현재 작업중인 디렉토리의 **test\*.py**라는 패턴을 가진 모든 파일들을 체크합니다. 그 파일들의 이름을 적당하게 붙이는 한, 당신은 당신이 원하는 어떤 구조라도 이용할 수 있습니다. 우리는 당신의 테스트코드를 위한 한 모듈을 만들 것을 추천합니다. 그리고 모델들, 뷰들, 폼들 그리고 테스트가 필요한 어떤 다른 타입의 코드라도 각각을 분리하기를 바랍니다. 예를 들면:
+장고는 유닛테스트의 모듈인 [built-in test discovery](https://docs.python.org/3/library/unittest.html#unittest-test-discovery)을 사용하는데, 이는 현재 작업중인 디렉토리의 **test\*.py**라는 패턴을 가진 모든 파일들을 체크합니다. 그 파일들의 이름을 적당하게 붙이는 한, 당신은 당신이 원하는 어떤 구조라도 이용할 수 있습니다. 우리는 당신의 테스트코드를 위한 한 모듈을 만들 것을 추천합니다. 그리고 모델들, 뷰들, 폼들 그리고 테스트가 필요한 어떤 다른 타입의 코드라도 각각을 분리하기를 바랍니다. 예를 들면:
 
 ```
 catalog/

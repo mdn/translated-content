@@ -11,6 +11,7 @@ tags:
 translation_of: Web/CSS/:defined
 browser-compat: css.selectors.defined
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:defined`** représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur, ainsi que les éléments personnalisés (« _custom elements_ ») ayant correctement été définis (c'est-à-dire grâce à la méthode [`CustomElementRegistry.define()`](/fr/docs/Web/API/CustomElementRegistry/define)).

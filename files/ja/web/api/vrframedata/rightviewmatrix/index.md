@@ -1,29 +1,17 @@
 ---
 title: VRFrameData.rightViewMatrix
 slug: Web/API/VRFrameData/rightViewMatrix
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-  - rightViewMatrix
-browser-compat: api.VRFrameData.rightViewMatrix
-translation_of: Web/API/VRFrameData/rightViewMatrix
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`rightViewMatrix`** は {{domxref("VRFrameData")}} インターフェイスの読み取り専用プロパティで、 4 行 4 列の行列を表す {{jsxref("Float32Array")}} を返します。この行列は、右目の描画に利用されるビュー変換を表します。
 
-> **Note:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 この値は、 WebGL の {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix4fv")}} 関数へ直接渡されるでしょう。
 
-> **Warning:** 描画時にアプリケーションがこの行列を使用することを強く薦めます。
+> **警告:** 描画時にアプリケーションがこの行列を使用することを強く薦めます。
 
 ## 値
 

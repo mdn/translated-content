@@ -5,6 +5,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 ---
+
 {{AddonSidebar}}
 
 Native messaging permet à une extension d'échanger des messages avec une application native installée sur l'ordinateur de l'utilisateur. Ceci permet que des applications natives puissent fournir un service à des extensions sans avoir besoin d'être atteignables via internet. Un exemple typique est le gestionnaire de mots de passe : l'application native s'occupe du stockage et du chiffrement des mots de passe et communique avec l'extension afin de remplir les formulaires web. Native messaging permet aussi aux extensions d'accéder à des ressources qui ne sont pas accessibles via les API WebExtension, par exemple le matériel hardware particulier.

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/XPath/Functions
 original_slug: Web/XPath/Fonctions
 ---
+
 {{ XsltRef() }} La liste ci-dessous regroupe les principales fonctions de [XPath](XPath) et les ajouts à XPath qui sont spécifiques à [XSLT](/XSLT). Chaque lien fournit pour la fonction correspondante description, syntaxe, liste d'arguments, types de résultats, description originelle dans les recommandations du W3C, et niveau de support actuel dans [Gecko](/Gecko). Pour plus d'informations sur l'utilisation des fonctions XPath/XSLT, reportez-vous à la page [Autres ressources](/Transformations_XML_avec_XSLT/Autres_ressources).
 
 - [boolean()](Fonctions/boolean)

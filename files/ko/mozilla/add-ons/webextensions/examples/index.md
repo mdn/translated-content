@@ -1,7 +1,6 @@
 ---
 title: Example extensions
 slug: Mozilla/Add-ons/WebExtensions/Examples
-translation_of: Mozilla/Add-ons/WebExtensions/Examples
 ---
 {{AddonSidebar}}
 

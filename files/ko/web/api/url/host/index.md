@@ -17,8 +17,10 @@ translation_of: Web/API/URL/host
 
 ## 구문
 
-    const host = url.host
-    url.host = newHost
+```js
+const host = url.host
+url.host = newHost
+```
 
 ### 값
 

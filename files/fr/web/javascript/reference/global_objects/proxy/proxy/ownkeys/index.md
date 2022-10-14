@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/ownKeys
 ---
+
 {{JSRef}}
 
 La méthode **`handler.ownKeys()`** est une trappe pour {{jsxref("Object.getOwnPropertyNames()")}}.
@@ -96,14 +97,11 @@ console.log(Object.getOwnPropertyNames(p));
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-ownpropertykeys', '[[OwnPropertyKeys]]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-ownpropertykeys', '[[OwnPropertyKeys]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.ownKeys")}}
+{{Compat}}
 
 ## Voir aussi
 

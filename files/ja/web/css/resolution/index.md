@@ -1,16 +1,8 @@
 ---
 title: <resolution>
 slug: Web/CSS/resolution
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - リファレンス
-  - ウェブ
-  - レイアウト
-browser-compat: css.types.resolution
-translation_of: Web/CSS/resolution
 ---
+
 {{CSSRef}}
 
 **`<resolution>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/CSS_Types) で、[メディアクエリ](/ja/docs/Web/CSS/Media_Queries)の [resolution](/ja/docs/Web/CSS/@media/resolution) で使われ、出力端末のピクセル密度である、解像度を表します。
@@ -32,7 +24,7 @@ translation_of: Web/CSS/resolution
 - `x`
   - : `dppx` の別名です。
 
-> **Note:** 仮に値 `0` に対しすべての単位が同じ解像度を表すとしても、単位を省略してはいけません。言い換えると `0` は無効で、`0dpi`、`0dpcm`、`0dppx` のどれも表しません。
+> **メモ:** 仮に値 `0` に対しすべての単位が同じ解像度を表すとしても、単位を省略してはいけません。言い換えると `0` は無効で、`0dpi`、`0dpcm`、`0dppx` のどれも表しません。
 
 ## 例
 

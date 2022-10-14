@@ -1,15 +1,8 @@
 ---
 title: max-content
 slug: Web/CSS/max-content
-tags:
-  - CSS
-  - CSS グリッド
-  - リファレンス
-  - max-content
-  - 大きさ
-browser-compat: css.properties.width.max-content
-translation_of: Web/CSS/max-content
 ---
+
 `max-content` は大きさのキーワードで、コンテンツの内在的な最大幅や高さを表しています。テキストコンテンツの場合は、オーバーフローが発生しても、コンテンツはまったく折り返されないことを意味します。
 
 ## 構文

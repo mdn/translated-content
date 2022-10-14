@@ -1,7 +1,6 @@
 ---
 title: menus.getTargetElement()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/getTargetElement
 ---
 {{AddonSidebar}}

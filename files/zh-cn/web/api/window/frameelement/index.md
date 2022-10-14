@@ -2,6 +2,7 @@
 title: window.frameElement
 slug: Web/API/Window/frameElement
 ---
+
 {{ ApiRef() }}
 
 ### 概述
@@ -38,4 +39,4 @@ if (frameEl)
 
 ### 浏览器兼容性
 
-{{Compat("api.Window.frameElement")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: XMLHttpRequest.responseText
 slug: Web/API/XMLHttpRequest/responseText
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} の **`responseText`** プロパティは読み取り専用で、送信されたリクエストに続いてサーバーから受け取ったテキストを返します。

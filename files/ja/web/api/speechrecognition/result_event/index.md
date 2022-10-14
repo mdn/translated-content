@@ -3,6 +3,7 @@ title: SpeechRecognition.onresult
 slug: Web/API/SpeechRecognition/result_event
 original_slug: Web/API/SpeechRecognition/onresult
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechRecognition")}}インターフェイスの **`onresult`** プロパティは、音声認識サービスが結果を返した時に、つまり正しく言葉や文法が認識でき、アプリに通信した時 ({{event("result")}}イベントが発生した時) に、実行するイベントハンドラーになります。

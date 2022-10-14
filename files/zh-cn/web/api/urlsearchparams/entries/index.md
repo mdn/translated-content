@@ -2,6 +2,7 @@
 title: URLSearchParams.entries()
 slug: Web/API/URLSearchParams/entries
 ---
+
 {{APIRef("URL API")}}{{SeeCompatTable}}
 
 **`URLSearchParams.entries()`**方法返回一个{{jsxref("Iteration_protocols",'iterator')}}，允许遍历该对象中包含的所有键/值对。每一组键值对都是 {{domxref("USVString")}}对象
@@ -39,8 +40,8 @@ key2, value2
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams.entries")}}
+{{Compat}}
 
 ## 另请参阅
 
-- 其他 URL 相关接口: {{domxref("URL")}}, {{domxref("URLUtils")}}.
+- 其他 URL 相关接口：{{domxref("URL")}}, {{domxref("URLUtils")}}.

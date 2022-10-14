@@ -1,16 +1,8 @@
 ---
 title: quotes
 slug: Web/CSS/quotes
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 生成コンテンツ
-  - リファレンス
-  - ウェブ
-  - レイアウト
-  - 生成コンテンツ
-translation_of: Web/CSS/quotes
 ---
+
 {{CSSRef}}
 
 **`quotes`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [`content`](/ja/docs/Web/CSS/content) プロパティの `open-quotes` や `close-quotes` を使用して追加された引用符をどのように表示するかを設定します。

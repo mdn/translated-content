@@ -1,14 +1,8 @@
 ---
 title: CSS 基本ボックスモデル入門
 slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Layout
-spec-urls: https://drafts.csswg.org/css-box/#intro
-translation_of: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 ---
+
 {{CSSRef}}
 
 ブラウザーのレンダリングエンジンは文書をレイアウトする際に、それぞれの要素を標準的な **CSS 基本ボックスモデル**に基づいた長方形のボックスとして表現します。 CSS はこれらのボックスの寸法、位置、プロパティ（色、背景、境界の幅など）を決定します。

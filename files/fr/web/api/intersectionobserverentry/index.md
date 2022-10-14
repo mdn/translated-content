@@ -9,6 +9,7 @@ tags:
   - IntersectionObserverEntry
 translation_of: Web/API/IntersectionObserverEntry
 ---
+
 {{SeeCompatTable}}{{APIRef("Intersection Observer API")}}
 
 L'interface **`IntersectionObserverEntry`** de l'[API Intersection Observer](/fr/docs/Web/API/Intersection_Observer_API) décrit l'intersection entre l'élément cible et son conteneur (appelé racine) à un moment spécifique de transition.

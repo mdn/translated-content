@@ -1,11 +1,8 @@
 ---
 title: position
 slug: Web/XPath/Functions/position
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/position
 ---
+
 {{ XsltRef() }}
 
 `position` 関数は、式評価コンテキストのコンテキスト位置に等しい数値を返します。

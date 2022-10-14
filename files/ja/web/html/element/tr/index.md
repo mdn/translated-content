@@ -1,18 +1,6 @@
 ---
 title: '<tr>: 表の行要素'
 slug: Web/HTML/Element/tr
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
-  - tag
-  - tr
-  - tr tag
-browser-compat: html.elements.tr
-translation_of: Web/HTML/Element/tr
 ---
 
 {{HTMLRef}}
@@ -50,32 +38,32 @@ translation_of: Web/HTML/Element/tr
 
     `align` の値が明示的に設定されていない場合は、親ノードの値を継承します。
 
-    > **Note:** 行内のセルで配置方法を指定するには、廃止された `align` 属性の代わりに CSS の {{CSSxRef("text-align")}} プロパティで `left`, `center`, `right`, `justify` を指定してください。文字ベースの配置方法を適用するには、 CSS の {{CSSxRef("text-align")}} プロパティに揃える文字 (`"."` や `","` など) を設定してください。
+    > **メモ:** 行内のセルで配置方法を指定するには、廃止された `align` 属性の代わりに CSS の {{CSSxRef("text-align")}} プロパティで `left`, `center`, `right`, `justify` を指定してください。文字ベースの配置方法を適用するには、 CSS の {{CSSxRef("text-align")}} プロパティに揃える文字 (`"."` や `","` など) を設定してください。
 
 - {{HTMLAttrDef("bgcolor")}} {{deprecated_inline}}
 
   - : 文字列で、行の各セルの背景色を定義します。値は [16 進 `#RRGGBB` または `#RGB` 値](/ja/docs/Web/CSS/color_value/rgb)、あるいは[色キーワード](/ja/docs/Web/CSS/color_value#color_keywords)を使用できます。属性を省略するか JavaScript で `null` を設定すると、行のセルは親要素の背景色を継承します。
 
-    > **Note:** {{HTMLElement("tr")}} 要素は [CSS](/ja/docs/Web/CSS) を使用してスタイルを設定するべきです。 `bgcolor` 属性と同様の効果を与えるには、[CSS](/ja/docs/Web/CSS) の {{CSSxRef("background-color")}} プロパティを使用してください。
+    > **メモ:** {{HTMLElement("tr")}} 要素は [CSS](/ja/docs/Web/CSS) を使用してスタイルを設定するべきです。 `bgcolor` 属性と同様の効果を与えるには、[CSS](/ja/docs/Web/CSS) の {{CSSxRef("background-color")}} プロパティを使用してください。
 
 - {{HTMLAttrDef("char")}} {{deprecated_inline}}
 
   - : 文字列で、行のそれぞれの列のセルで揃える文字を設定します（同一の文字を使用して、それぞれの行の中心がほかの行と揃えられます）。典型的な値に、数値や金額を揃えようとするときのピリオド (`"."`) やカンマ (`","`) があります。 {{htmlattrxref("align", "tr")}} 属性が `char` ではない場合は、この属性は無視されます。
 
-    > **Note:** この属性は廃止されただけでなく、ほとんど実装されていませんでした。 {{htmlattrxref("char", "tr")}} と同様の効果を得るには、 CSS の {{CSSxRef("text-align")}} プロパティの値として `char` の値を使用します（例えば `text-align: "."`）。
+    > **メモ:** この属性は廃止されただけでなく、ほとんど実装されていませんでした。 {{htmlattrxref("char", "tr")}} と同様の効果を得るには、 CSS の {{CSSxRef("text-align")}} プロパティの値として `char` の値を使用します（例えば `text-align: "."`）。
 
 - {{HTMLAttrDef("charoff")}} {{deprecated_inline}}
 
   - : 文字列で、 `char` 属性で指定した揃え文字から行のデータをオフセットする文字数を示します。例えば通貨単位の 100 分の 1 の値を使用する通貨 (例えばドルであり、100 セントに分割されます) の金額を表示するときは、一般的に値 2 を指定するでしょう。 `char` に `"."` を設定することと組み合わせると、列内の値が小数点できれいに揃い、セントの数値が小数点の右側へ適切に表示されます。
 
-    > **Note:** この属性は廃止されただけでなく、ほとんど実装されていませんでした。
+    > **メモ:** この属性は廃止されただけでなく、ほとんど実装されていませんでした。
 
 - {{HTMLAttrDef("valign")}} {{deprecated_inline}}
 
   - : 文字列で、行の各セルにおける垂直方向のテキスト配置方法を指定します。以下の値が指定可能です。
 
     - `baseline`
-      - : 異なるフォントやフォントサイズの文字列を、その行で使用されているフォントの{{interwiki("wikipedia", "en:baseline", "ベースライン")}}に沿って整列させることによって処理します。もし行の全ての文字が同じサイズであれば、効果は `bottom` と同じになります。
+      - : 異なるフォントやフォントサイズの文字列を、その行で使用されているフォントの[ベースライン](https://en.wikipedia.org/wiki/Baseline_(typography))に沿って整列させることによって処理します。もし行の全ての文字が同じサイズであれば、効果は `bottom` と同じになります。
     - `bottom`
       - : 行の各セル内のテキストを、セルの下辺に可能な限り近づけて描画します。
     - `middle`
@@ -83,7 +71,7 @@ translation_of: Web/HTML/Element/tr
     - `top`
       - : 各セルのテキストは、含まれるセルの上端に可能な限り沿って描画されます。
 
-    > **Note:** `valign` 属性は廃止されたため、使用しないでください。代わりに CSS の {{CSSxRef("vertical-align")}} プロパティを使用してください。
+    > **メモ:** `valign` 属性は廃止されたため、使用しないでください。代わりに CSS の {{CSSxRef("vertical-align")}} プロパティを使用してください。
 
 ## 例
 

@@ -2,6 +2,7 @@
 title: Element.insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
 ---
+
 {{APIRef("DOM")}}
 
 **`insertAdjacentElement()`** は {{domxref("Element")}} インターフェイスのメソッドで、呼び出された要素から相対的に指定された位置に、指定された要素ノードを挿入します。
@@ -49,7 +50,7 @@ targetElement.insertAdjacentElement(position, element);
 <!-- afterend -->
 ```
 
-> **Note:** `beforebegin` および `afterend` の位置は、そのノードがツリー内にあり、親が要素である場合のみ動作します。
+> **メモ:** `beforebegin` および `afterend` の位置は、そのノードがツリー内にあり、親が要素である場合のみ動作します。
 
 ## 例
 

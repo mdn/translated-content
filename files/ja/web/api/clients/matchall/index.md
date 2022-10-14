@@ -1,15 +1,8 @@
 ---
 title: Clients.matchAll()
 slug: Web/API/Clients/matchAll
-tags:
-  - API
-  - Clients
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-translation_of: Web/API/Clients/matchAll
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Clients")}} インターフェイスの **`matchAll()`** メソッドは、サービスワーカークライアント（{{domxref("Client")}}）オブジェクトのリストの {{jsxref("Promise")}} を返します。 関連するサービスワーカーのオリジンと同じオリジンを持つすべてのサービスワーカークライアントを返すには、`options` パラメーターを含めます。 オプションが含まれていない場合、メソッドは、サービスワーカーによって制御されるサービスワーカークライアントのみを返します。

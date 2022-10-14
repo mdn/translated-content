@@ -2,6 +2,7 @@
 title: CacheStorage.delete()
 slug: Web/API/CacheStorage/delete
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("CacheStorage")}} 接口的 **`delete()`** 方法查找匹配 `cacheName` 的 {{domxref("Cache")}} 对象，如果找到，则删除 {{domxref("Cache")}} 对象并返回一个 resolve 为 true 的 {{jsxref("Promise")}} . 如果未找到 {{domxref("Cache")}} 对象，则返回 `false`.
@@ -49,10 +50,10 @@ this.addEventListener('activate', function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CacheStorage.delete")}}
+{{Compat}}
 
 ## See also
 
-- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches")}}

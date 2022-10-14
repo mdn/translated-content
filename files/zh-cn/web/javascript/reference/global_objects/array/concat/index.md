@@ -2,6 +2,7 @@
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 ---
+
 {{JSRef}}
 
 **`concat()`** 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
@@ -32,7 +33,7 @@ concat(value0, value1, /* … ,*/ valueN)
 
 `concat` 方法不会改变 `this` 或任何作为参数提供的数组，而是返回一个浅拷贝，它包含与原始数组相结合的相同元素的副本。原始数组的元素将复制到新数组中，如下所示：
 
-- 对象引用（而不是实际对象）：`concat` 将对象引用复制到新数组中。 原始数组和新数组都引用相同的对象。 也就是说，如果引用的对象被修改，则更改对于新数组和原始数组都是可见的。 这包括也是数组的数组参数的元素。
+- 对象引用（而不是实际对象）：`concat` 将对象引用复制到新数组中。原始数组和新数组都引用相同的对象。也就是说，如果引用的对象被修改，则更改对于新数组和原始数组都是可见的。这包括也是数组的数组参数的元素。
 
 - 数据类型如字符串，数字和布尔（不是 {{jsxref("Global_Objects/String", "String")}}，{{jsxref("Global_Objects/Number", "Number")}} 和 {{jsxref("Global_Objects/Boolean", "Boolean")}} 对象）：`concat` 将字符串和数字的值复制到新数组中。
 
@@ -120,10 +121,14 @@ console.log([0].concat(obj1, obj2));
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} — add/remove elements from the end of the array
-- {{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} — add/remove elements from the beginning of the array
-- {{jsxref("Array.splice", "splice")}} — add/remove elements from the specified location of the array
+- [Polyfill of `Array.prototype.concat` in `core-js` with fixes and implementation of modern behavior like `Symbol.isConcatSpreadable` support](https://github.com/zloirock/core-js#ecmascript-array)
+- {{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} — add/remove
+  elements from the end of the array
+- {{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} —
+  add/remove elements from the beginning of the array
+- {{jsxref("Array.splice", "splice")}} — add/remove elements from the specified
+  location of the array
 - {{jsxref("String.prototype.concat()")}}
-- {{jsxref("Symbol.isConcatSpreadable")}} – control flattening.
+- {{jsxref("Symbol.isConcatSpreadable")}} — control flattening.

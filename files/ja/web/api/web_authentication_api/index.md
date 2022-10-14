@@ -1,23 +1,15 @@
 ---
 title: ウェブ認証 API
 slug: Web/API/Web_Authentication_API
-tags:
-  - 2FA
-  - API
-  - 認証
-  - Landing
-  - Reference
-  - ウェブ認証 API
-  - WebAuthn
-translation_of: Web/API/Web_Authentication_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
 ウェブ認証 API は、公開鍵暗号を用いて強力な認証を可能にする[資格情報管理 API](/ja/docs/Web/API/Credential_Management_API) の拡張機能で、パスワードレス認証や、 SMS テキストを用いない安全な二要素認証を実現します。
 
 ## ウェブ認証の概念と使い方
 
-ウェブ認証 API (別名 WebAuthn) は、ウェブサイトで登録、認証、{{interwiki("wikipedia", "多要素認証", "二要素認証")}}を行うためにパスワードや SMS のテキストを使用するのではなく、{{interwiki("wikipedia", "公開鍵暗号")}}を使用します。これにはいくつかの利点があります。
+ウェブ認証 API (別名 WebAuthn) は、ウェブサイトで登録、認証、[二要素認証](https://ja.wikipedia.org/wiki/多要素認証)を行うためにパスワードや SMS のテキストを使用するのではなく、[公開鍵暗号](https://ja.wikipedia.org/wiki/公開鍵暗号)を使用します。これにはいくつかの利点があります。
 
 - **フィッシングからの保護:** 偽のログインサイトを作成した攻撃者は、サイトの[オリジン](/ja/docs/Glossary/Origin)で署名が変わるため、ユーザーとしてログインすることができません。
 - **情報漏洩の影響を軽減:** 開発者は公開鍵をハッシュ化する必要がなく、攻撃者が認証に使用した公開鍵にアクセスしても、秘密鍵が必要なため認証ができません。
@@ -28,7 +20,7 @@ translation_of: Web/API/Web_Authentication_API
 - {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} - publicKey オプションと併用すると、新しいアカウントの登録または既存のアカウントへの新しい非対称鍵ペアの関連付けを行うために新しい認証情報を作成します。
 - {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} - publicKey オプションと併用すると、サービスに対する認証のために、ログインまたは二要素認証として既存の認証情報セットを使用します。
 
-> **Note:** `create()` と `get()` は両方とも[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) （すなわち、サーバーに https で接続している、サーバーがローカルホストの場合）であることを必要とし、ブラウザーが安全なコンテキストで動作していない場合は利用できません。
+> **メモ:** `create()` と `get()` は両方とも[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) （すなわち、サーバーに https で接続している、サーバーがローカルホストの場合）であることを必要とし、ブラウザーが安全なコンテキストで動作していない場合は利用できません。
 
 最も基本的な形式としては、`create()` と `get()` の両方が「チャレンジ」と呼ばれる非常に大きな乱数をサーバーから受け取り、秘密鍵によって署名されたチャレンジをサーバーに返します。これにより、ネットワーク上で秘密を明かすことなく、ユーザーが認証に必要な秘密鍵を持っていることをサーバー－に証明することができます。
 
@@ -121,7 +113,7 @@ _図 2 - 図 1 と同様、ウェブ認証による認証手順と各アクシ�
 
 ### 使用法の例
 
-> **Warning:** セキュリティの観点から、ウェブ認証の呼び出し（{{domxref('CredentialsContainer.create','create()')}} や {{domxref('CredentialsContainer.get','get()')}}）が保留されている間にブラウザーウィンドウのフォーカスが失われると、呼び出しはキャンセルされます。
+> **警告:** セキュリティの観点から、ウェブ認証の呼び出し（{{domxref('CredentialsContainer.create','create()')}} や {{domxref('CredentialsContainer.get','get()')}}）が保留されている間にブラウザーウィンドウのフォーカスが失われると、呼び出しはキャンセルされます。
 
 ```js
 // 登録のサンプル引数

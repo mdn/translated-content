@@ -1,17 +1,8 @@
 ---
 title: '::slotted()'
 slug: Web/CSS/::slotted
-tags:
-  - '::slotted'
-  - CSS
-  - レイアウト
-  - 擬似要素
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.slotted
-translation_of: Web/CSS/::slotted
 ---
+
 {{ CSSRef }}
 
 **`::slotted()`** は [CSS](/ja/docs/Web/CSS) の [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 HTML テンプレート内にあるスロットに配置された任意の要素を表します (詳しくは[テンプレートとスロットの利用](/ja/docs/Web/Web_Components/Using_templates_and_slots)をご覧ください)。

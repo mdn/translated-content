@@ -2,9 +2,10 @@
 title: StorageManager
 slug: Web/API/StorageManager
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}
 
-[Storage API](/zh-CN/docs/Web/API/Storage_API)的**`StorageManager`**接口提供了用于管理数据本地存储权限和估算可用存储空间的接口。 您可以使用{{domxref("navigator.storage")}}或{{domxref("WorkerNavigator.storage")}}对此接口进行引用。
+[Storage API](/zh-CN/docs/Web/API/Storage_API)的 **`StorageManager`** 接口提供了用于管理数据本地存储权限和估算可用存储空间的接口。您可以使用{{domxref("navigator.storage")}}或{{domxref("WorkerNavigator.storage")}}对此接口进行引用。
 
 ## 方法
 
@@ -21,4 +22,4 @@ slug: Web/API/StorageManager
 
 ## 浏览器兼容性
 
-{{Compat("api.StorageManager")}}
+{{Compat}}

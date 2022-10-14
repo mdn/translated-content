@@ -10,8 +10,10 @@ El método **`toSource()`** regresa una cadena representando el código fuente d
 
 ## Syntax
 
-    Object.toSource();
-    obj.toSource();
+```js
+Object.toSource();
+obj.toSource();
+```
 
 ### Return value
 
@@ -101,7 +103,7 @@ function Dog(name, breed, color, sex) {
 theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
 ```
 
-Llamando al método `toSource() de` `theDog` muestra el código JavaScript que define al objeto:
+Llamando al método `toSource()` de `theDog` muestra el código JavaScript que define al objeto:
 
 ```js
 theDog.toSource();

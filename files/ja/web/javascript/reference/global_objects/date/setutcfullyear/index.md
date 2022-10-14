@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.setUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
 ---
+
 {{JSRef}}
 
 **`setUTCFullYear()`** メソッドは、協定世界時に基づき、指定された日付の年を設定します。

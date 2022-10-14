@@ -1,43 +1,62 @@
 ---
 title: 基本的なネイティブフォームコントロール
 slug: Learn/Forms/Basic_native_form_controls
+l10n:
+  sourceCommit: 25233e77fc3d3de84511203fd41eaddf361880ef
 original_slug: Learn/Forms/The_native_form_widgets
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 
 [一つ前の記事](/ja/docs/Learn/Forms/How_to_structure_a_web_form)では、機能的なウェブフォームの例をマークアップし、いくつかのフォームコントロールとよくある構造要素を導入し、アクセシビリティのベストプラクティスを見てきました。次にさまざまなフォームコントロールやウィジェットの機能を詳しく見ていきます。 — 色々な種類のデータを集めるのにどんなオプションが使えるのかを見ていきます。とりわけこの記事では、ウェブの初期からありすべてのブラウザーで利用できる、元からあるフォームコントロールを見ていきます。
 
-| 前提条件: | 基本的なコンピューターリテラシーと、基本的な [HTML の理解](/ja/docs/Learn/HTML/Introduction_to_HTML)。                               |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| 目的:     | データを収集するためにブラウザーで使用できるネイティブフォームウィジェットの種類と、それらを HTML を使用して実装する方法を理解する。 |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        基本的なコンピューターリテラシーと、基本的な
+        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+          >HTML の理解</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>
+        データを収集するためにブラウザーで使用できる基本的なネイティブフォームコントロールの種類と、それらを HTML を使用して実装する方法を理解する。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 既にいくつかのフォーム要素を見てきました。 {{HTMLelement('form')}}, {{HTMLelement('fieldset')}}, {{HTMLelement('legend')}}, {{HTMLelement('textarea')}}, {{HTMLelement('label')}}, {{HTMLelement('button')}}, {{HTMLelement('input')}} などです。この記事では、以下の要素を扱います。
 
 - よく使われる入力型である {{HTMLelement('input/button', 'button')}}, {{HTMLelement('input/checkbox', 'checkbox')}}, {{HTMLelement('input/file', 'file')}}, {{HTMLelement('input/hidden', 'hidden')}}, {{HTMLelement('input/image', 'image')}}, {{HTMLelement('input/password', 'password')}}, {{HTMLelement('input/radio', 'radio')}}, {{HTMLelement('input/reset', 'reset')}}, {{HTMLelement('input/submit', 'submit')}}, {{HTMLelement('input/text', 'text')}}
 - すべてのフォームコントロールに共通する属性のいくつか
 
-> **Note:** この記事で取り上げている機能は、すべてのブラウザーが対応していますが、すべてのフォームコントロールに当てはまるわけではありません。次の 2 回分の記事で、 HTML5 で追加された新しいフォームコントロールを取り上げます。より高度なリファレンスを読みたい方は、 [HTML フォーム要素のリファレンス](/ja/docs/Web/HTML/Element#forms)、全般的には [\<input> 型](/ja/docs/Web/HTML/Element/input) のリファレンスを参照してください。
+> **メモ:** 次の 2 回分の記事で、 HTML5 で追加された、もっと強力なフォームコントロールを取り上げます。より高度なリファレンスを読みたい方は、 [HTML フォーム要素のリファレンス](/ja/docs/Web/HTML/Element#フォーム)、全般的には [`<input>` 型](/ja/docs/Web/HTML/Element/input) のリファレンスを参照してください。
 
 ## テキスト入力フィールド
 
 テキスト入力 ({{htmlelement("input")}}) フィールドは、最も基本的なフォームウィジェットです。これらはユーザーがあらゆる種類のデータを入力できるとても便利な方法です。
 
-> **Note:** HTML フォームのテキストフィールドは単純なプレーンテキストの入力コントロールです。つまり、これらを使って[リッチエディット](/ja/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla) (太字、斜体など) を実現することはできません。見かけるリッチテキストエディターは、すべて HTML、CSS、JavaScript で作成されたカスタムウィジェットです。
+> **メモ:** HTML フォームのテキストフィールドは単純なプレーンテキストの入力コントロールです。つまり、これらを使ってリッチテキストの編集（太字、斜体など）を実現することはできません。見かけるリッチテキストエディターは、すべて HTML、CSS、JavaScript で作成されたカスタムウィジェットです。
 
 すべてのテキストフィールドに共通する動作があります。
 
-- {{htmlattrxref("readonly","input")}} (ユーザーは入力値が変更できないが、他のフォームデータとともに送信される) あるいは {{htmlattrxref("disabled","input")}} (入力値が変更できず、他のフォームデータとともに送られない) とすることができます。
+- {{htmlattrxref("readonly","input")}} （ユーザーは入力値が変更できないが、他のフォームデータとともに送信される）あるいは {{htmlattrxref("disabled","input")}} （入力値が変更できず、他のフォームデータとともに送られない）とすることができます。
 - {{htmlattrxref("placeholder","input")}} を設定することができます。これは、ボックスの目的を簡単に説明する、ボックス内に表示されるテキストです。
-- [`size`](/ja/docs/Web/HTML/Attributes/size) (ボックスの物理的な大きさ) や [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength) (ボックスに入力できる最大文字数) による制限が可能です。
-- ブラウザーが対応していれば、[スペルチェック](/ja/docs/Web/HTML/Element/input#attr-spellcheck)の便宜を図ることができます ([`spellcheck`](/ja/docs/Web/HTML/Global_attributes/spellcheck)属性を用いて)。
+- [`size`](/ja/docs/Web/HTML/Attributes/size) （ボックスの物理的な大きさ）や [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength) （ボックスに入力できる最大文字数）による制限が可能です。
+- ブラウザーが対応していれば、スペルチェックの便宜を図ることができます ([`spellcheck`](/ja/docs/Web/HTML/Global_attributes/spellcheck)属性を用いて)。
 
-> **Note:** {{htmlelement("input")}} 要素は [`type`](/ja/docs/Web/HTML/Attributes/type) 属性によってさまざまな形になるため、 HTML 要素の中でも独特です。単一行のテキストフィールド、時間と日付のコントロール、チェックボックス、ラジオボタン、カラーピッカー、ボタンのようなテキスト入力のないコントロールなど、ほとんどの種類のフォームウィジェットの作成に使用されます。
+> **メモ:** {{htmlelement("input")}} 要素は [`type`](/ja/docs/Web/HTML/Element/input#type) 属性によってさまざまな形になるため、 HTML 要素の中でも独特です。単一行のテキストフィールド、時間と日付のコントロール、チェックボックス、ラジオボタン、カラーピッカー、ボタンのようなテキスト入力のないコントロールなど、ほとんどの種類のフォームウィジェットの作成に使用されます。
 
 ### 単一行のテキストフィールド
 
 単一行のテキストフィールドを生成するには、 {{HTMLElement("input")}} 要素で {{htmlattrxref("type","input")}} 属性値を `text` に設定するか、 {{htmlattrxref("type","input")}} 属性を省略するかします (`text` が既定値です)。この属性の `text` の値は、 {{htmlattrxref("type","input")}} 属性に指定した値をブラウザーに認識できない場合 (たとえば `type="color"` を指定した場合で、ブラウザーがネイティブの色ピッカーに対応していない場合) の代替値になります。
 
-> **Note:** GitHub の [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html) に、すべての単一行テキストフィールド型の例があります ([ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html))。
+> **メモ:** GitHub の [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html) に、すべての単一行テキストフィールド型の例があります ([ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html))。
 
 基本的な単一行のテキストフィールドの例を示します。
 
@@ -51,7 +70,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 
 ![Firefox、Safari、Chrome、Edge における、テキスト入力の disabled 属性と既定の :focus スタイルを表示したスクリーンショットです。](disabled.png)
 
-> **Note:** HTML5 では {{htmlattrxref("type","input")}} 属性に専用の値を追加することで、基本的な単一行のテキストフィールドを拡張しています。これらの値もやはり {{HTMLElement("input")}} 要素を単一行のテキストフィールドにしますが、フィールドに対して追加の制約や機能を付加します。これは次の記事、 [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)で紹介します。
+> **メモ:** 特定の検証制約を強制する {{htmlattrxref("type","input")}} 属性の値、例えば color、email、url 入力型については、次の記事の [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)で説明します。
 
 #### パスワードフィールド
 
@@ -63,7 +82,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 
 `password` の値は、入力されるテキストに特別な制約を加えるものではありませんが、フィールドに入力された値を (ドットやアスタリスクなどで) 不明瞭にして、他の人が簡単に読めないようにします。
 
-これはユーザーインターフェイスの機能でしかないことに注意してください。テキストは JavaScript を使用してあなた自身でエンコードしなければ、平文で送信されてしまい、セキュリティ上で好ましくありません。 — 悪意のある第三者がデータを傍受し、パスワードやクレジットカード情報などを盗む可能性があります。このようなことからユーザーを保護する最善の方法は、フォームを含むページを安全な接続 (すなわち、 `https://` ... のアドレス) でホストし、データを送信する前に暗号化することです。
+これはユーザーインターフェイスの機能でしかないことに注意してください。テキストは JavaScript を使用してあなた自身でエンコードしなければ、平文で送信されてしまい、セキュリティ上で好ましくありません。 — 悪意のある第三者がデータを傍受し、パスワードやクレジットカード情報などを盗む可能性があります。このようなことからユーザーを保護する最善の方法は、フォームを含むページを安全な接続（すなわち、 `https://` ... を指すアドレス）でホストし、データを送信する前に暗号化することです。
 
 ブラウザーは、安全でない接続でフォームデータを送信することのセキュリティ上の影響を認識しており、ユーザーが安全でないフォームを使用することを抑止するために警告を表示します。 Firefox が実装している機能の詳細については、[安全でないパスワード](/ja/docs/Web/Security/Insecure_passwords)を参照してください。
 
@@ -77,27 +96,27 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 
 このような要素を作成する場合は、 `name` 属性と `value` 属性の設定が必要です。この値は JavaScript にて動的にセットできます。`hidden` 入力型には関連したラベルはありません。
 
-その他のテキスト型、{{HTMLElement("input/search", "search")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/tel", "tel")}}, は HTML5 で追加されたものです。これは次のチュートリアルの「HTML5 入力型」にて扱います。
+その他のテキスト型、{{HTMLElement("input/search", "search")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/tel", "tel")}}, は次のチュートリアルの [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)にて扱います。
 
 ## チェック可能項目: チェックボックスとラジオボタン
 
-チェック可能項目は、そのものや、関連したラベルをクリックすることで状態を変更できるコントロールです。チェック可能項目は 2 種類あります。チェックボックスとラジオボタンです。どちらもそのウィジェットが既定でチェック状態にするかどうかを示すために、 [`checked`](/ja/docs/Web/HTML/Attributes/checked) 属性を使用します。
+チェック可能項目は、そのものや、関連したラベルをクリックすることで状態を変更できるコントロールです。チェック可能項目は 2 種類あります。チェックボックスとラジオボタンです。どちらもそのウィジェットが既定でチェック状態にするかどうかを示すために、 [`checked`](/ja/docs/Web/HTML/Element/input/checkbox#attr-checked) 属性を使用します。
 
-これらのウィジェットは、他のフォームウィジェットと同じようには動作しない点が特徴です。ほとんどのフォームウィジェットでは、フォームを送信すると [`name`](/ja/docs/Web/HTML/Attributes/name) 属性を持つすべてのウィジェットが、値が入力されていなくても送信されます。チェック可能項目では、チェックされている場合にのみ値が送信されます。チェックされていない場合は、 name も含めて何も送信されません。チェックされているが値がない場合、 name が _on_ という値で送信されます。
+これらのウィジェットは、他のフォームウィジェットと同じようには動作しない点が特徴です。ほとんどのフォームウィジェットでは、フォームを送信すると [`name`](/ja/docs/Web/HTML/Element/input#name) 属性を持つすべてのウィジェットが、値が入力されていなくても送信されます。チェック可能項目では、チェックされている場合にのみ値が送信されます。チェックされていない場合は、 name も含めて何も送信されません。チェックされているが値がない場合、 name が _on_ という値で送信されます。
 
-> **Note:** この節の例は、[checkable-items.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/checkable-items.html) として GitHub にあります ([ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html))。
+> **メモ:** この節の例は、[checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html) として GitHub にあります（[ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)）。
 
-最大限のユーザービリティ/アクセシビリティを実現するために、関連項目の各リストを {{htmlelement("fieldset")}} で囲み、リストの全体的な説明を示す {{htmlelement("legend")}} で囲むことをお勧めします。 {{htmlelement("label")}}/{{htmlelement("input")}} 要素の個々のペアは、それぞれ独自のリスト項目 (または同様のもの) に含める必要があります。関連した {{htmlelement('label')}} はラジオボタンやチェックボックスの直後に、 {{htmlelement("legend")}} の中身にラジオボタンやチェックボックスのグループの説明が置かれます。これは上の例に示されています。
+最大限のユーザビリティ/アクセシビリティを実現するために、関連項目の各リストを {{htmlelement("fieldset")}} で囲み、リストの全体的な説明を示す {{htmlelement("legend")}} で囲むことをお勧めします。 {{htmlelement("label")}}/{{htmlelement("input")}} 要素の個々のペアは、それぞれ独自のリスト項目（または同様のもの）に含める必要があります。関連した {{htmlelement('label')}} はラジオボタンやチェックボックスの直後に、 {{htmlelement("legend")}} の中身にラジオボタンやチェックボックスのグループの説明が置かれます。これは上の例に示されています。
 
 ### チェックボックス
 
-チェックボックスは、 {{HTMLElement("input")}} 要素で [`type`](/ja/docs/Web/HTML/Attributes/type) 属性を {{HTMLElement("input/checkbox", "checkbox")}} に設定して作成します。
+チェックボックスは、 {{HTMLElement("input")}} 要素で [`type`](/ja/docs/Web/HTML/Element/input#type) 属性を {{HTMLElement("input/checkbox", "checkbox")}} に設定して作成します。
 
 ```html
 <input type="checkbox" id="questionOne" name="subscribe" value="yes" checked>
 ```
 
-関連するチェックボックス項目には、同じ {{htmlattrxref("name","input")}} 属性を使用してください。 [`checked`](/ja/docs/Web/HTML/Attributes/checked) 属性を含めると、ページが読み込まれたときにチェックボックスが自動的にチェックされます。チェックボックス自体または関連づけられたラベルをクリックすると、チェックボックスのオンとオフが切り替わります。
+関連するチェックボックス項目には、同じ [`name`](/ja/docs/Web/HTML/Element/input#name) 属性を使用してください。 [`checked`](/ja/docs/Web/HTML/Element/input/checkbox#checked) 属性を含めると、ページが読み込まれたときにチェックボックスが自動的にチェックされます。チェックボックス自体または関連づけられたラベルをクリックすると、チェックボックスのオンとオフが切り替わります。
 
 ```html
 <fieldset>
@@ -123,9 +142,9 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 
 ![Mac での Firefox 71 および Safari 13 と、 Windows 10 での Chrome 79 および Edge 18 の既定、フォーカス、無効状態のチェックボックス](checkboxes.png)
 
-> **Note:** チェックボックスやラジオボタンで読み込み時に [`checked`](/ja/docs/Web/HTML/Attributes/checked) 属性が付いていれば、チェック状態が解除されても {{cssxref(':default')}} 擬似クラスに一致します。現在チェックされているものは `{{cssxref(':checked')}}` 擬似クラスに一致します。
+> **メモ:** チェックボックスやラジオボタンで読み込み時に [`checked`](/ja/docs/Web/HTML/Element/input/checkbox#attr-checked) 属性が付いていれば、チェック状態が解除されても {{cssxref(':default')}} 擬似クラスに一致します。現在チェックされているものは `{{cssxref(':checked')}}` 擬似クラスに一致します。
 
-チェックボックスにはオンとオフになるという性質があるため、チェックボックスはトグルボタンと考えられており、多くの開発者やデザイナーが既定のチェックボックスのスタイルを拡張して、トグルスイッチのように見えるボタンを作成しています。[ここで動作する例を](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/)見ることができます　([ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html)も見られます)。
+チェックボックスにはオンとオフになるという性質があるため、チェックボックスはトグルボタンと考えられており、多くの開発者やデザイナーが既定のチェックボックスのスタイルを拡張して、トグルスイッチのように見えるボタンを作成しています。[ここで動作する例を](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/)見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/toggle-switch-example/index.html)も見られます）。
 
 ### ラジオボタン
 
@@ -166,7 +185,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 ラジオボタンはその名に反して、実際のボタンではありません。実際のボタンを見てみましょう。ボタンを生成するための入力型は 3 種類あります。
 
 - `submit`
-  - : フォームデータをサーバーに送信します。{{HTMLElement("button")}} 要素の場合、`type` 属性を省略した場合 (または `type` の値が無効であった場合)、送信ボタンが表示されます。
+  - : フォームデータをサーバーに送信します。 {{HTMLElement("button")}} 要素の場合、`type` 属性を省略した場合（または `type` の値が無効であった場合）、送信ボタンが表示されます。
 - `reset`
   - : すべてのフォームウィジェットを既定値にリセットします。
 - `button`
@@ -174,9 +193,9 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 
 また、ボタンそのものを示す {{htmlelement("button")}} 要素もあります。これは `type` 属性に `submit`, `reset`, `button` の値を取り、上記の 3 つの `<input>` 型を模倣できます。この 2 つの主な違いは、実際の `<button>` 要素の方がはるかにスタイル付けしやすいことです。
 
-> **Note:** `image` 入力型もボタンとしてレンダリングされます。それについては後で触れます。
+> **メモ:** `image` 入力型もボタンとしてレンダリングされます。それについては後で触れます。
 
-> **Note:** この節の例は [button-examples.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/button-examples.html) として GitHub にあります ([ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html))。
+> **メモ:** この節の例は [button-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html) として GitHub にあります（[ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)）。
 
 以下に、それぞれのボタンの `<input>` 型と、同等の `<button>` 型の例を示します。
 
@@ -210,7 +229,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 <input type="button" value="これはただのボタンです">
 ```
 
-ボタンは {{HTMLElement("button")}} 要素と {{HTMLElement("input")}} 要素のどちらを使用しても常に同じ動作になります。しかし、上記の例で分かるように、{{HTMLElement("button")}} 要素は中身として HTML を使用することができ、これが `<button>` の開始・終了タグの間に挿入されます。一方で{{HTMLElement("input")}} 要素は空要素です。つまり `value` 属性に中身が挿入され、したがってプレーンテキストのコンテンツのみ使用できます。
+ボタンは {{HTMLElement("button")}} 要素と {{HTMLElement("input")}} 要素のどちらを使用しても常に同じ動作になります。しかし、上記の例で分かるように、 {{HTMLElement("button")}} 要素は中身として HTML を使用することができ、これが `<button>` の開始・終了タグの間に挿入されます。一方で{{HTMLElement("input")}} 要素は空要素です。つまり `value` 属性に中身が挿入され、したがってプレーンテキストのコンテンツのみ使用できます。
 
 下記の例は macOS での Firefox 71 と Safari 13、および Windows 10 の Chrome 79 と Edge 18 にて、ボタンの既定、フォーカス、無効状態を示しています。
 
@@ -218,7 +237,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 
 ### 画像ボタン
 
-**画像ボタン**コントロールは {{HTMLElement("img")}} 要素とまったく同じように表示されますが、ユーザーがクリックすると送信ボタン (前述) のように動作します。
+**画像ボタン**コントロールは {{HTMLElement("img")}} 要素とまったく同じように表示されますが、ユーザーがクリックすると送信ボタン（前述）のように動作します。
 
 画像ボタンは、 {{HTMLElement("input")}} 要素の{{htmlattrxref("type","input")}} 属性を `image` に設定することで作成します。この要素は {{HTMLElement("img")}} 要素とまったく同じ属性に対応しており、さらに他のフォームボタンが対応している属性にもすべて対応しています。
 
@@ -255,7 +274,7 @@ http://foo.com?pos.x=123&pos.y=456
 
 いくつかのモバイル端末では、ファイルピッカーは、次のようにキャプチャー情報を `accept` 属性に追加することで、端末のカメラやマイクでキャプチャーされた写真、動画、音声にアクセスすることができます。
 
-```
+```html
 <input type="file" accept="image/*;capture=camera">
 <input type="file" accept="video/*;capture=camcorder">
 <input type="file" accept="audio/*;capture=microphone">
@@ -265,13 +284,64 @@ http://foo.com?pos.x=123&pos.y=456
 
 フォームコントロールの定義に使われる要素の多くは、それぞれ固有の属性を持っています。しかし、すべてのフォーム要素に共通する属性があります。これらの属性のいくつかはすでに見たことがあると思いますが、参考までに共通の属性を以下に列挙します。
 
-| 属性名                                                | 既定値 | 説明                                                                                                                                                                                                                                                                                                                       |
-| ----------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`autofocus`](/ja/docs/Web/HTML/Attributes/autofocus) | false  | この論理属性を使用すると、ページ読み込み時に自動的に要素に入力フォーカスを設定するように指定できます。この属性を指定できるのは、文書内の 1 つのフォーム関連要素だけです。                                                                                                                                                  |
-| [`disabled`](/ja/docs/Web/HTML/Attributes/disabled)   | false  | この論理属性は、ユーザーが要素と対話できないことを示します。この属性が指定されていない場合、要素はそれを含む要素 (例えば {{HTMLElement("fieldset")}}) からその設定を継承します。`disabled` 属性が設定されている包含要素がない場合は、その要素が有効になります。                                                   |
-| [`form`](/ja/docs/Web/HTML/Attributes/form)           |        | ウィジェットが関連付けられている `<form>` 要素で、そのフォーム内に含まれていない場合に使用されます。属性の値は、同じ文書内の {{HTMLElement("form")}} 要素の `id` 属性でなければなりません。これにより、フォームコントロールをフォームに外側から、他のフォーム要素の中にあったとしても、関連付けることができます。 |
-| [`name`](/ja/docs/Web/HTML/Attributes/name)           |        | 要素の名前。これはフォームデータとともに送信されます。                                                                                                                                                                                                                                                                     |
-| [`value`](/ja/docs/Web/HTML/Attributes/value)         |        | 要素の初期値です。                                                                                                                                                                                                                                                                                                         |
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">属性名</th>
+      <th scope="col">既定値</th>
+      <th scope="col">説明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code
+          ><a href="/ja/docs/Web/HTML/Global_attributes/autofocus"
+            >autofocus</a
+          ></code
+        >
+      </td>
+      <td>false</td>
+      <td>
+        この論理属性を使用すると、ページ読み込み時に自動的に要素に入力フォーカスを設定するように指定できます。この属性を指定できるのは、文書内の 1 つのフォーム関連要素だけです。
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><a href="/ja/docs/Web/HTML/Attributes/disabled">disabled</a></code
+        >
+      </td>
+      <td>false</td>
+      <td>
+        この論理属性は、ユーザーが要素と対話できないことを示します。この属性が指定されていない場合、要素はそれを含む要素（例えば {{HTMLElement("fieldset")}}）からその設定を継承します。 <code>disabled</code> 属性が設定されている包含要素がない場合は、その要素が有効になります。
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/ja/docs/Web/HTML/Element/form">form</a></code>
+      </td>
+      <td></td>
+      <td>
+        ウィジェットが関連付けられている <code>&#x3C;form></code> 要素で、そのフォーム内に含まれていない場合に使用されます。属性の値は、同じ文書内の {{HTMLElement("form")}} 要素の <code>id</code> 属性でなければなりません。これにより、フォームコントロールをフォームに外側から、他のフォーム要素の中にあったとしても、関連付けることができます。
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/ja/docs/Web/HTML/Element/input#name">name</a></code>
+      </td>
+      <td></td>
+      <td>要素の名前。これはフォームデータとともに送信されます。</td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/ja/docs/Web/HTML/Element/input#value">value</a></code>
+      </td>
+      <td></td>
+      <td>要素の初期値です。</td>
+    </tr>
+  </tbody>
+</table>
 
 ## スキルをテストしましょう!
 
@@ -279,7 +349,7 @@ http://foo.com?pos.x=123&pos.y=456
 
 ## まとめ
 
-この記事では古い入力型を扱ってきました。 — これは HTML の初期の頃に導入された元からのもので、すべてのブラウザーがよく対応しています。次の節では、HTML 5 で追加された新しい `type` 属性の値を見ていきます。
+この記事では古い入力型を扱ってきました。 — これは HTML の初期の頃に導入された元からのもので、すべてのブラウザーがよく対応しています。次の節では、もっと新しい `type` 属性の値を見ていきます。
 
 {{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 
@@ -300,4 +370,4 @@ http://foo.com?pos.x=123&pos.y=456
 
 - [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームウィジェット向けプロパティ実装状況一覧](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

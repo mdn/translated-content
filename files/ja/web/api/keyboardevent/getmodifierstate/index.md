@@ -1,17 +1,8 @@
 ---
 title: KeyboardEvent.getModifierState()
 slug: Web/API/KeyboardEvent/getModifierState
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Method
-  - Reference
-  - getModifierState
-browser-compat: api.KeyboardEvent.getModifierState
-translation_of: Web/API/KeyboardEvent/getModifierState
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.getModifierState()`** メソッドは、指定された修飾キーの現在の状態を返します。修飾キーが有効な場合（すなわち修飾キーが押されているかロックされている場合）は `true`、そうでなければ `false` になります。
@@ -186,7 +177,7 @@ Gecko で `getModifierState()` が true を返すときです。
 
 ## `"Accel"` 仮想修飾子
 
-> **Note:** `"Accel"` 仮想修飾子は、 DOM3 Events 仕様の現在のドラフトでは、事実上**非推奨**とされています。
+> **メモ:** `"Accel"` 仮想修飾子は、 DOM3 Events 仕様の現在のドラフトでは、事実上**非推奨**とされています。
 
 `getModifierState()` は `"Accel"` という名前の非推奨の仮想修飾子も受け入れます。`event.getModifierState("Accel")` は {{domxref("KeyboardEvent.ctrlKey")}} または {{domxref("KeyboardEvent.metaKey")}} の少なくともどちらかが `true` である場合に `true` を返します。
 
@@ -262,7 +253,7 @@ if ((event.getModifierState("ScrollLock") ||
 }
 ```
 
-> **Note:** この例は `.getModifierState()` を `"Alt"`,
+> **メモ:** この例は `.getModifierState()` を `"Alt"`,
 > `"Control"`, `"Meta"`, `"Shift"` で使用していますが、
 > `event.altKey`, `event.ctrlKey`, `event.metaKey`,
 > `event.shiftKey` の方がよりお勧めです。

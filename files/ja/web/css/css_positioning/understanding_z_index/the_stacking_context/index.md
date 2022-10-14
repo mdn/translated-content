@@ -1,14 +1,8 @@
 ---
 title: 重ね合わせコンテキスト
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - リファレンス
-  - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 ---
+
 {{CSSRef}}
 
 **重ね合わせコンテキスト** (Stacking context) は、ビューポートまたはウェブページに面していると想定されるユーザーに対する仮想的な Z 軸に沿って並べられた HTML 要素の三次元の概念化です。 HTML 要素は、要素の属性に基づいてこの空間を優先度つきの順序で占有します。
@@ -47,7 +41,7 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_conte
 - 重ね合わせコンテキストはすべて、その兄弟要素と完全に独立しています。重ね合わせ処理では、子孫要素だけが考慮されます。
 - 重ね合わせコンテキストははめ込み式です。要素の中身が重ねられた後、その要素がまるごと、今度は親の重ね合わせコンテキストの重ね合わせ順の中にあるとみなされます。
 
-> **Note:** 重ね合わせコンテキストを作れるのが一部の要素に限定されるため、重ね合わせコンテキストは HTML 要素の階層構造の部分集合です。それ自身の重ね合わせコンテキストを作らない要素は、その親の重ね合わせコンテキストに*同化される*、と言えます。
+> **メモ:** 重ね合わせコンテキストを作れるのが一部の要素に限定されるため、重ね合わせコンテキストは HTML 要素の階層構造の部分集合です。それ自身の重ね合わせコンテキストを作らない要素は、その親の重ね合わせコンテキストに*同化される*、と言えます。
 
 ## 例
 
@@ -67,7 +61,7 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_conte
 
 重要なのは、 DIV #4, DIV #5, DIV #6 は DIV #3 の子要素なので、DIV #3 の内側で重なり方が完全に決まることです。いったん DIV #3 内部の重ね合わせと描画が終われば、DIV #3 はルート要素に丸ごと渡され、兄弟要素との重ね合わせ処理が行われます。
 
-> **Note:**
+> **メモ:**
 >
 > - DIV #4 は DIV #1 の下に描画されます。これは、DIV #1 の z-index (5) はルート要素の重ね合わせコンテキストでだけ有効な値で、DIV #4 の z-index (6) は DIV #3 の重ね合わせコンテキストでだけ有効な値だからです。DIV #4 は DIV #3 の内部にあり、DIV #3 は DIV #1 よりも小さな z-index 値を持っているので、DIV #4 は DIV #1 の下になります。
 > - 同じ理由で DIV #2 (z-index 2) は DIV #5 (z-index 1) の下に描画されます。これは DIV #5 が DIV #3 に含まれていて、DIV #3は DIV #2 より高い z-index 値を持っているからです。

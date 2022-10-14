@@ -1,13 +1,9 @@
 ---
 title: alertdialog ロールの使用
 slug: Web/Accessibility/ARIA/Roles/alertdialog_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 ---
+
 ### 説明
 
 このテクニックは、[`alertdialog`](http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#alertdialog) ロールの使用方法を示しています。
@@ -22,7 +18,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 
 その緊急性のために、アラートダイアログは常にモーダルでなければなりません。
 
-> **Note:** このロールは、インタラクティブなコントロールに関連付けられているアラートメッセージにのみ使用するべきです。 アラートダイアログに静的コンテンツしか含まれておらず、インタラクティブなコントロールがまったくない場合は、`alertdialog` がここで使用する適切なロールではない可能性があります。 その場合は、代わりに `alert` ロールを使用するべきです（[ARIA: `alert` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Alert_Role)の説明を参照）。
+> **メモ:** このロールは、インタラクティブなコントロールに関連付けられているアラートメッセージにのみ使用するべきです。 アラートダイアログに静的コンテンツしか含まれておらず、インタラクティブなコントロールがまったくない場合は、`alertdialog` がここで使用する適切なロールではない可能性があります。 その場合は、代わりに `alert` ロールを使用するべきです（[ARIA: `alert` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Alert_Role)の説明を参照）。
 
 ### ユーザーエージェントと支援技術への影響
 
@@ -35,7 +31,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 
 アラートダイアログが正しくラベル付けされ、ダイアログ内のコントロールにフォーカスが移動したら、スクリーンリーダーは、フォーカスが当たっている要素をアナウンスする前に、ダイアログのアクセス可能なロール、名前、およびオプションの説明をアナウンスするべきです。
 
-> **Note:** 支援技術がこの技術をどのように処理するかについては、意見が異なる場合があります。 上記の情報はそれらの意見の一つであり、したがって規範的なものではありません。
+> **メモ:** 支援技術がこの技術をどのように処理するかについては、意見が異なる場合があります。 上記の情報はそれらの意見の一つであり、したがって規範的なものではありません。
 
 ### 例
 

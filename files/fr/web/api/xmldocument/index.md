@@ -7,6 +7,7 @@ tags:
   - Experimental
 translation_of: Web/API/XMLDocument
 ---
+
 {{ ApiRef("DOM") }} {{SeeCompatTable}}
 
 L'interface XMLDocument représente un document XML. Elle hérite du {{domxref("Document")}} générique et ne lui ajoute aucune méthode ou propriété spécifique : néanmoins, plusieurs algorithmes se comportent différemment avec les deux types de documents.

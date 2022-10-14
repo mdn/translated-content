@@ -1,24 +1,13 @@
 ---
 title: '<noembed>: 埋め込みフォールバック要素'
 slug: Web/HTML/Element/noembed
-tags:
-  - 要素
-  - Embedded content
-  - Embedding
-  - HTML
-  - Non-standard
-  - 非推奨
-  - リファレンス
-  - noembed
-browser-compat: html.elements.noembed
-translation_of: Web/HTML/Element/noembed
 ---
 
 {{HTMLRef}}{{Non-standard_header}}{{deprecated_header}}
 
 **`<noembed>`** は [HTML](/ja/docs/Web/HTML) の要素で、廃止された、標準外の方法であり、 {{HTMLElement("embed")}} 要素に対応していないブラウザーや、ユーザーが仕様とした種類の[埋め込みコンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#埋め込みコンテンツ)に対応していないブラウザーで代替または「フォールバック」コンテンツを提供するものです。これは HTML 4.01 で非推奨となり、代替コンテンツは {{HTMLElement("object")}} 要素の開始タグと終了タグの間に配置されるようになりました。
 
-> **Note:** 現在のところ、この要素はまだ多くのブラウザーで動作しますが、廃止されており、使用するべきではありません。代わりに {{HTMLElement("object")}} 要素の開始タグと終了タグの間にフォールバックコンテンツを入れて使用して下さい。
+> **メモ:** 現在のところ、この要素はまだ多くのブラウザーで動作しますが、廃止されており、使用するべきではありません。代わりに {{HTMLElement("object")}} 要素の開始タグと終了タグの間にフォールバックコンテンツを入れて使用して下さい。
 
 ## 例
 

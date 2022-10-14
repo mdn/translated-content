@@ -1,20 +1,8 @@
 ---
 title: 'Reason: Multiple CORS header ''Access-Control-Allow-Origin'' not allowed'
 slug: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
-tags:
-  - CORS
-  - CORSMultipleAllowOriginNotAllowed
-  - HTTP
-  - HTTPS
-  - エラー
-  - オリジン間
-  - コンソール
-  - セキュリティ
-  - トラブルシューティング
-  - メッセージ
-  - 理由
-translation_of: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
 ---
+
 {{HTTPSidebar}}
 
 ## 理由

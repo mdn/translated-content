@@ -12,6 +12,7 @@ tags:
   - onRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
 ---
+
 {{AddonSidebar()}}
 
 Déclenché lorsqu'une requête Web est sur le point d'être effectuée, pour donner à l'extension la possibilité de l'utiliser comme proxy.

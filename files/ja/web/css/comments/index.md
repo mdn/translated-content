@@ -1,12 +1,8 @@
 ---
 title: コメント
 slug: Web/CSS/Comments
-tags:
-  - CSS
-  - Guide
-  - Reference
-translation_of: Web/CSS/Comments
 ---
+
 {{CSSRef}}
 
 CSS の**コメント**は、説明的なメモをコードに追加したり、スタイルシートの特定の部分をブラウザーに解釈させないようにしたりするために使用します。設計上、コメントは文書のレイアウトにおいて効果を持ちません。

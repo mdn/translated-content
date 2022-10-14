@@ -1,17 +1,8 @@
 ---
 title: '::marker'
 slug: Web/CSS/::marker
-tags:
-  - CSS
-  - CSS リスト
-  - 実験的
-  - レイアウト
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.marker
-translation_of: Web/CSS/::marker
 ---
+
 {{CSSRef}}
 
 **`::marker`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、リスト項目の箇条書き記号ボックス (ふつうは黒丸や番号) を選択します。これは `[display: list-item](/ja/docs/Web/CSS/display)` が設定された要素や擬似要素、例えば {{HTMLElement("li")}} 要素や {{HTMLElement("summary")}} 要素で利用できます。
@@ -34,7 +25,7 @@ translation_of: Web/CSS/::marker
 - {{CSSxRef("content")}} プロパティ
 - すべての[アニメーション](/ja/docs/Web/CSS/CSS_Animations#css_プロパティ)および[トランジション](/ja/docs/Web/CSS/CSS_Transitions#プロパティ)プロパティ
 
-> **Note:** この仕様書は、将来追加の CSS プロパティにも対応する可能性があることを示しています。
+> **メモ:** この仕様書は、将来追加の CSS プロパティにも対応する可能性があることを示しています。
 
 ## 構文
 

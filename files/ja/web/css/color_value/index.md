@@ -1,24 +1,8 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - 色
-  - hsl
-  - hsla
-  - rgb
-  - rgba
-  - 単位
-  - lch
-  - lab
-browser-compat: css.types.color
-translation_of: Web/CSS/color_value
 ---
+
 {{CSSRef}}
 
 **`<color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、一つの色を表します。
@@ -37,13 +21,13 @@ translation_of: Web/CSS/color_value
   これは任意の視覚可能な色を指定することができます。
 - {{cssxref("color_value/color()","color()")}} 関数表記を使用して、様々な定義済みまたは独自の色空間で色を指定することができます。
 
-> **Note:** この記事は `<color>` データ型の詳細を説明しています。 HTML での色の使い方について詳しくは、 [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/HTML/Applying_color)を参照してください。
+> **メモ:** この記事は `<color>` データ型の詳細を説明しています。 HTML での色の使い方について詳しくは、 [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/HTML/Applying_color)を参照してください。
 
 ## 構文
 
 `<color>` データ型は以下のいずれか 1 つの方法を使って指定されます。
 
-> **Note:** `<color>` の色は詳細に定義されていますが、出力機器によって (時には著しく) 違って見えるかもしれません。出力機器の大半は色補正がされておらず、ブラウザーによっては出力機器の[色プロファイル](https://ja.wikipedia.org/wiki/ICC%E3%83%97%E3%83%AD%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB)に対応していないからです。
+> **メモ:** `<color>` の色は詳細に定義されていますが、出力機器によって (時には著しく) 違って見えるかもしれません。出力機器の大半は色補正がされておらず、ブラウザーによっては出力機器の[色プロファイル](https://ja.wikipedia.org/wiki/ICC%E3%83%97%E3%83%AD%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB)に対応していないからです。
 
 ### 色キーワード
 
@@ -68,7 +52,7 @@ translation_of: Web/CSS/color_value
 
 - キーワードは [X11](https://ja.wikipedia.org/wiki/X_Window_System) の色名からとられたものですが、メーカーが X11 の色を特定のハードウェアに合わせて変えていることがあるので、 RGB 値は X11 システムでの色とは異なる可能性があります。
 
-> **Note:** 利用可能なキーワードの一覧は、様々な CSS の仕様書によって異なります。
+> **メモ:** 利用可能なキーワードの一覧は、様々な CSS の仕様書によって異なります。
 >
 > - CSS Level 1 では基本的な 16 色だけを受け付けていました。これは *VGA 色*と呼ばれ、[VGA](https://ja.wikipedia.org/wiki/Video_Graphics_Array) グラフィックカードで表示可能な色です。
 > - CSS Level 2 では `orange` キーワードが追加されました。
@@ -844,9 +828,9 @@ translation_of: Web/CSS/color_value
 
 `transparent` は完全な透明色を表すキーワードです。この色が付いた項目の背後の背景は完全に見えます。厳密には、`transparent` は `rgba(0,0,0,0)` のショートカットです。
 
-> **Note:** {{cssxref("gradient","グラデーション")}}の場合の同様、予期しない動きを避けるために、現在の CSS の仕様書は `transparent` を[アルファ乗算色空間](https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax)で計算するように定めています。しかし、古いブラウザーはアルファチャンネルが `0` の値である黒として扱うかもしれません。
+> **メモ:** {{cssxref("gradient","グラデーション")}}の場合の同様、予期しない動きを避けるために、現在の CSS の仕様書は `transparent` を[アルファ乗算色空間](https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax)で計算するように定めています。しかし、古いブラウザーはアルファチャンネルが `0` の値である黒として扱うかもしれません。
 
-> **Note:** `transparent` キーワードは CSS Level 2 (Revision 1) では色ではありませんでした。これは {{Cssxref("background")}} プロパティと {{Cssxref("border")}} プロパティの 2 つにおいて、通常の `<color>` の代わりに使用することができた特殊なキーワードでした。基本的に、継承された色を開発者が上書きすることができるように追加されたものです。 CSS Colors Level 3 でアルファチャンネルが出現し、 `transparent` は色として再定義されました。 `<color>` の値を使用することができる場所ならば、どこでも使用することができるようになりました。
+> **メモ:** `transparent` キーワードは CSS Level 2 (Revision 1) では色ではありませんでした。これは {{Cssxref("background")}} プロパティと {{Cssxref("border")}} プロパティの 2 つにおいて、通常の `<color>` の代わりに使用することができた特殊なキーワードでした。基本的に、継承された色を開発者が上書きすることができるように追加されたものです。 CSS Colors Level 3 でアルファチャンネルが出現し、 `transparent` は色として再定義されました。 `<color>` の値を使用することができる場所ならば、どこでも使用することができるようになりました。
 
 ### `currentColor` キーワード
 
@@ -874,7 +858,7 @@ RGB 色モデルは赤、緑、青の成分によって指定された[sRGB 色�
 
 RGB 色は 16 進表記 (`#` の接頭辞つき) と関数表記 (`rgb()`, `rgba()`) の両方で表現することができます。
 
-> **Note:** CSS Colors Level 4 では、 `rgba()` は `rgb()` の別名です。 Level 4 標準を実装するブラウザーでは、同じ引数を受け取り同じ挙動をします。
+> **メモ:** CSS Colors Level 4 では、 `rgba()` は `rgb()` の別名です。 Level 4 標準を実装するブラウザーでは、同じ引数を受け取り同じ挙動をします。
 
 - 16 進表記: `#RRGGBB[AA]`
   - : `R` (赤)、 `G` (緑)、 `B` (青) と `A` (アルファ) は 16 進数の文字 (0–9, A–F) です。 `A` は任意です。例えば、 `#ff0000` は `#ff0000ff` と同等です。
@@ -896,7 +880,7 @@ HSL は、色相、彩度、明度をそれぞれ独立して調整できるた�
 
 HSL 色は関数表記の `hsl()` および `hsla()` を通して表現されます。
 
-> **Note:** CSS Colors Level 4 では、 `hsla()` は `hsl()` の別名です。 Level 4 標準を実装するブラウザーでは、同じ引数を受け取り同じ挙動をします。
+> **メモ:** CSS Colors Level 4 では、 `hsla()` は `hsl()` の別名です。 Level 4 標準を実装するブラウザーでは、同じ引数を受け取り同じ挙動をします。
 
 - 関数表記: `hsl[a](H, S, L[, A])`
 
@@ -915,7 +899,7 @@ HSL 色は関数表記の `hsl()` および `hsla()` を通して表現されま
 
 以下のリストにあるキーワードは、 CSS Color Module Level 4 仕様書で定義されています。
 
-> **Note:** なお、これらのキーワードは*大文字小文字を区別しません*が、読みやすさのために大文字小文字を交ぜて表記しています。
+> **メモ:** なお、これらのキーワードは*大文字小文字を区別しません*が、読みやすさのために大文字小文字を交ぜて表記しています。
 
 - ActiveText
   - : アクティブなリンクのテキスト

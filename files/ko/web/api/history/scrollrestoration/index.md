@@ -15,7 +15,9 @@ translation_of: Web/API/History/scrollRestoration
 
 ## 구문
 
-    let scrollRestore = history.scrollRestoration;
+```js
+let scrollRestore = history.scrollRestoration;
+```
 
 ### 값
 

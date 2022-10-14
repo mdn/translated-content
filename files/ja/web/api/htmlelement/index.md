@@ -1,16 +1,8 @@
 ---
 title: HTMLElement
 slug: Web/API/HTMLElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - インターフェイス
-  - NeedsNewLayout
-  - リファレンス
-browser-compat: api.HTMLElement
-translation_of: Web/API/HTMLElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLElement`** インターフェイスは、任意の [HTML](/ja/docs/Web/HTML) 要素を表します。要素によってはこのインターフェイスで直接実装されていたり、これを継承したインターフェイスを通して実装されていたりします。

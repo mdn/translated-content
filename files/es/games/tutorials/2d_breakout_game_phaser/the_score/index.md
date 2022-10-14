@@ -12,7 +12,7 @@ tags:
   - juegos
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/The_score
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}
 
@@ -50,7 +50,7 @@ El último parámetro se parece mucho a los estilos de CSS. En nuestro caso, el 
 
 ## Actualizar el juego cuando los ladrillos se han destruido
 
-Incrementaremos el número de puntos cada vez que la pelota golpee en un ladrillo y actualizaremos el `scoreText` para mostrar la puntuación actual. Esto, lo podremos hacer usando el método `setText()` — añade las dos siguientes líneas a la función` ballHitBrick()`:
+Incrementaremos el número de puntos cada vez que la pelota golpee en un ladrillo y actualizaremos el `scoreText` para mostrar la puntuación actual. Esto, lo podremos hacer usando el método `setText()` — añade las dos siguientes líneas a la función `ballHitBrick()`:
 
 ```js
 function ballHitBrick(ball, brick) {

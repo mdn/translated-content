@@ -1,9 +1,8 @@
 ---
 title: MediaTrackSupportedConstraints.width
 slug: Web/API/MediaTrackSupportedConstraints/width
-page-type: web-api-instance-property
-browser-compat: api.MediaTrackSupportedConstraints.width
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 {{domxref("MediaTrackSupportedConstraints")}} 辞書の **`width`** プロパティは読み取り専用の論理値で、 {{domxref("MediaDevices.getSupportedConstraints()")}} が返すオブジェクトに存在（`true` に設定）するならば、{{Glossary("user agent", "ユーザーエージェント")}}が `width` 制約に対応しています。制約に対応していない場合、リストには含まれなくなりますので、この値が `false` になることはありません。

@@ -1,15 +1,8 @@
 ---
 title: top
 slug: Web/CSS/top
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.top
-translation_of: Web/CSS/top
 ---
+
 {{CSSRef}}
 
 **`top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の垂直位置の決定に関与します。位置指定されていない要素には効果はありません。

@@ -1,15 +1,8 @@
 ---
 title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/italics
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`italics()`** メソッドは、文字列がイタリックになるように HTML の {{HTMLElement("i")}} 要素を生成します。

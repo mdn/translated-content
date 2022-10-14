@@ -11,6 +11,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/SecurityInfo
 ---
+
 {{AddonSidebar()}}
 
 Objet décrivant les propriétés de sécurité d'une requête Web particulière. Un objet de ce type est retourné depuis l'API {{WebExtAPIRef("webRequest.getSecurityInfo()")}}.

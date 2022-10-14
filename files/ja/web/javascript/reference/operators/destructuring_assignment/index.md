@@ -1,18 +1,8 @@
 ---
 title: 分割代入
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-tags:
-  - Destructuring
-  - 分割代入
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - 言語機能
-  - 階層オブジェクトと配列の分割代入
-  - 演算子
-browser-compat: javascript.operators.destructuring
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 **分割代入** (Destructuring assignment) 構文は、配列から値を取り出して、あるいはオブジェクトからプロパティを取り出して別個の変数に代入することを可能にする JavaScript の式です。
@@ -248,7 +238,7 @@ let a, b;
 ({a, b} = {a: 1, b: 2});
 ```
 
-> **Note:** 代入文の周りの `( ... )` は宣言のないオブジェクトリテラル分割代入を使用するときに必要な構文です。
+> **メモ:** 代入文の周りの `( ... )` は宣言のないオブジェクトリテラル分割代入を使用するときに必要な構文です。
 >
 > `{a, b} = {a: 1, b: 2}` は有効なスタンドアロンの構文ではありません。というのも、左辺の `{a, b}` はブロックでありオブジェクトリテラルではないと考えられるからです。
 >
@@ -335,7 +325,7 @@ drawChart({
 });
 ```
 
-> **Note:** 上記の **`drawChart`** の関数シグネチャでは、次のようにして、分割代入の左辺に、右辺側で空のオブジェクトリテラルを代入しています。
+> **メモ:** 上記の **`drawChart`** の関数シグネチャでは、次のようにして、分割代入の左辺に、右辺側で空のオブジェクトリテラルを代入しています。
 >
 > ```js
 > {size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}

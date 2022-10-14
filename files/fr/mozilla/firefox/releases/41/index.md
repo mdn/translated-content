@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/41
 original_slug: Mozilla/Firefox/Versions/41
 ---
+
 {{FirefoxSidebar}}
 
 ## Changements pour les développeurs Web

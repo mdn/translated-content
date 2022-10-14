@@ -14,7 +14,6 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
 original_slug: Games/Tutorials/2D_breakout_game_Phaser/Rebotar_en_las_paredes
 ---
 {{GamesSidebar}}
-{{IncludeSubnav("/en-US/docs/Games")}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Physics", "Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls")}}
 
@@ -46,6 +45,6 @@ Puedes consultar el código terminado para esta lección en la demostración en 
 
 ## Próximos pasos
 
-Esto está empezando a parecerse más a un juego ahora, Pero no podemos controlarlo de ninguna manera — es hora de que introduzacamos [reproductor de paletas y controles](https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls).
+Esto está empezando a parecerse más a un juego ahora, Pero no podemos controlarlo de ninguna manera — es hora de que introduzacamos [reproductor de paletas y controles](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Physics", "Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls")}}

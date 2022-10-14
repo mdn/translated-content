@@ -6,6 +6,7 @@ browser-compat: css.properties.animation-timeline
 l10n:
   sourceCommit: 9f958fd33582b47bd3e365c64eb2cdd9cee8f527
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-timeline`** indique le nom d'une ou plusieurs règles @ [`@scroll-timeline`](/fr/docs/Web/CSS/@scroll-timeline) décrivant les animations de défilement à appliquer à l'élément.

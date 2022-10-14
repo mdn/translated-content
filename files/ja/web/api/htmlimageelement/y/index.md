@@ -1,12 +1,8 @@
 ---
 title: HTMLImageElement.y
 slug: Web/API/HTMLImageElement/y
-page-type: web-api-instance-property
-tags:
-- プロパティ
-browser-compat: api.HTMLImageElement.y
-translation_of: Web/API/HTMLImageElement/y
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} の **`y`** プロパティは読み取り専用で、ルート要素の原点からの相対座標で {{HTMLElement("img")}} 要素の上端の y 座標を示します。
@@ -22,7 +18,7 @@ translation_of: Web/API/HTMLImageElement/y
 
 ![要素に関連するさまざまなボックスの関係を示す図](boxmodel-3.png)
 
-> **Note:** `y` プロパティは、画像の {{cssxref("display")}} プロパティの計算値が `table-column` または `table-column-group` である場合にのみ有効です。言い換えれば、いずれかが {{HTMLElement("img")}} に直接設定されているか、包含要素から継承されているか、または {{HTMLElement("col")}} や {{HTMLElement("colgroup")}} で記述されている列内にあることが必要です。
+> **メモ:** `y` プロパティは、画像の {{cssxref("display")}} プロパティの計算値が `table-column` または `table-column-group` である場合にのみ有効です。言い換えれば、いずれかが {{HTMLElement("img")}} に直接設定されているか、包含要素から継承されているか、または {{HTMLElement("col")}} や {{HTMLElement("colgroup")}} で記述されている列内にあることが必要です。
 
 ## 例
 

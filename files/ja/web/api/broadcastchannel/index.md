@@ -1,15 +1,8 @@
 ---
 title: BroadcastChannel
 slug: Web/API/BroadcastChannel
-tags:
-  - API
-  - Broadcast Channel API
-  - Experimental
-  - HTML API
-  - Interface
-  - Reference
-translation_of: Web/API/BroadcastChannel
 ---
+
 {{APIRef("Broadcast Channel API")}}
 
 **`BroadcastChannel`** インターフェイスは、特定の{{glossary("origin","オリジン")}}の{{glossary("browsing context","閲覧コンテキスト")}}が購読できる名前付きチャネルを表します。 それは、同じオリジンの異なるドキュメント間（異なるウィンドウ、タブ、フレーム、iframe）の通信を可能にします。 メッセージは、チャンネルをリッスンしているすべての `BroadcastChannel` オブジェクトで発生する {{event("message")}} イベントを介して放送されます。
@@ -27,12 +20,11 @@ _このインターフェイスは、その親である {{domxref("EventTarget")
 
 - {{domxref("BroadcastChannel.name")}}
   - : チャネルの名前である {{domxref("DOMString")}} を返します。
-- ### イベントハンドラ
 
-  {{domxref("BroadcastChannel.onmessage")}}
+### イベントハンドラ
 
+- {{domxref("BroadcastChannel.onmessage")}}
   - : このオブジェクトで {{event("message")}} イベントが発生したときに実行する関数を指定する {{event("Event_handlers", "event handler")}} プロパティ。
-
 - {{domxref("BroadcastChannel.onmessageerror")}}
   - : {{event("Event_handlers", "event handler")}} は、{{domxref("MessageError")}} 型の {{domxref("MessageEvent")}} が発生したとき、つまり逆シリアル化できないメッセージを受け取ったときに呼び出されます。
 

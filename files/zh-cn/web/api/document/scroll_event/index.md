@@ -2,7 +2,8 @@
 title: 'Document: scroll event'
 slug: Web/API/Document/scroll_event
 ---
-文档视图或者一个元素在滚动时，会触发元素的**`scroll`**事件。
+
+文档视图或者一个元素在滚动时，会触发元素的 **`scroll`** 事件。
 
 <table class="properties">
   <thead></thead>
@@ -28,7 +29,7 @@ slug: Web/API/Document/scroll_event
   </tbody>
 </table>
 
-> **备注：** 在 iOS UIWebViews 中， 滚动进行时不会触发 `scroll` 事件；只有当滚动结束后事件才会被触发。参见 [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202)。Safari 和 WKWebViews 则没有这个问题。
+> **备注：** 在 iOS UIWebViews 中，滚动进行时不会触发 `scroll` 事件；只有当滚动结束后事件才会被触发。参见 [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202)。Safari 和 WKWebViews 则没有这个问题。
 
 ## 示例
 
@@ -39,7 +40,7 @@ slug: Web/API/Document/scroll_event
 然而需要注意的是，输入事件和动画帧常常以差不多的频率被触发，因此以下优化常常不必要。这个例子使用 `requestAnimationFrame` 优化 `scroll` 事件。
 
 ```js
-// 参见: http://www.html5rocks.com/en/tutorials/speed/animations/
+// 参见：http://www.html5rocks.com/en/tutorials/speed/animations/
 
 let last_known_scroll_position = 0;
 let ticking = false;
@@ -62,7 +63,7 @@ window.addEventListener('scroll', function(e) {
 });
 ```
 
-在 [`resize`](/en-US/docs/Web/API/Document/defaultView/resize_event) 事件页面中查看更多类似的例子。
+在 [`resize`](/zh-CN/docs/Web/API/Document/defaultView/resize_event) 事件页面中查看更多类似的例子。
 
 ## 规范
 
@@ -70,7 +71,7 @@ window.addEventListener('scroll', function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.scroll_event")}}
+{{Compat}}
 
 ## 参见
 

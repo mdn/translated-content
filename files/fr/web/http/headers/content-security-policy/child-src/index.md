@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/child-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/child-src
 browser-compat: http.headers.csp.Content-Security-Policy.child-src
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`child-src`** définit les sources valides de [<i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API) et de contextes de navigations imbriqués chargés au moyen d'éléments tels que [`<frame>`](/fr/docs/Web/HTML/Element/frame) et [`<iframe>`](/fr/docs/Web/HTML/Element/iframe). Pour les <i lang="en">workers</i>, les requêtes non-conformes sont traitées comme des erreurs de réseau fatales par l'agent utilisateur.

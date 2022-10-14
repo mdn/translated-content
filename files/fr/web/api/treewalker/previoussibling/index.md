@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/TreeWalker/previousSibling
 ---
+
 {{ APIRef("DOM") }}
 
 La méthode **`TreeWalker.previousSibling()`** déplace le {{domxref("Node")}} courant vers son frère précédent, le cas échéant, et renvoie le frère trouvé. S'il n'y en a pas, elle renvoie `null` et le noeud actuel est inchangé.

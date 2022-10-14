@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: return not in function'
 slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "return (or yield) not in function" は、 [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文または [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) 文が[関数](/ja/docs/Web/JavaScript/Guide/Functions)の外側で呼び出されたときに発生します。

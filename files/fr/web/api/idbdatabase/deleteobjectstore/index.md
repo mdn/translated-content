@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBDatabase/deleteObjectStore
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`deleteObjectStore()`** de l'interface {{domxref("IDBDatabase")}} supprime un magasin d'objet et ses index de la base de données.

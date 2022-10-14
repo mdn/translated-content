@@ -1,18 +1,8 @@
 ---
 title: '<image>: 画像要素'
 slug: Web/HTML/Element/image
-tags:
-  - 要素
-  - HTML
-  - HTML 要素リファレンス
-  - HTML リファレンス
-  - HTML 要素
-  - 標準外
-  - 非推奨
-  - リファレンス
-browser-compat: html.elements.image
-translation_of: Web/HTML/Element/image
 ---
+
 {{HTMLRef}}{{deprecated_header}}
 
 **`<image>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("img")}} 要素の古く、対応が不十分な前身です。

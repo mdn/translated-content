@@ -1,14 +1,8 @@
 ---
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 ---
+
 {{JSRef}}
 
 **`Math.tanh()`** 関数は、引数として与えた数のハイパーボリックタンジェントを返します。すなわち

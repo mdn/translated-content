@@ -2,6 +2,7 @@
 title: XMLHttpRequest.upload
 slug: Web/API/XMLHttpRequest/upload
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **XMLHttpRequest.upload 属性返回一个** {{domxref("XMLHttpRequestUpload")}}对象，用来表示上传的进度。这个对象是不透明的，但是作为一个{{domxref("XMLHttpRequestEventTarget")}}，可以通过对其绑定事件来追踪它的进度。

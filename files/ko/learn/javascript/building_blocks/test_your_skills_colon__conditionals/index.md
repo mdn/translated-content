@@ -1,11 +1,6 @@
 ---
 title: '실력을 평가해 보세요: 조건문'
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals
-tags:
-  - Beginner
-  - Conditionals
-  - JavaScript
-  - Learn
 ---
 {{learnsidebar}}
 

@@ -2,6 +2,7 @@
 title: Window.console
 slug: Web/API/Window/console
 ---
+
 {{ APIRef }}
 
 只读属性 Window\.console 返回一个对{{domxref("Console")}}对象的引用，Window\.console 提供了向浏览器控制台输出日志信息的方法。这些方法仅应该用于调试，并不应该用来给最终用户呈现信息。

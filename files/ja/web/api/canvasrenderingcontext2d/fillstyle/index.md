@@ -1,20 +1,13 @@
 ---
 title: CanvasRenderingContext2D.fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.fillStyle
-translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.fillStyle`** は[キャンバス 2D API](/ja/docs/Web/API/Canvas_API) のプロパティで、図形の内側を塗りつぶすために使用する色、グラデーション、またはパターンを指定します。既定値は `#000` (黒色)です。
 
-> **Note:** 輪郭と塗りつぶしのスタイル例については、[キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の[スタイルと色を適用する](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)をご覧ください。
+> **メモ:** 輪郭と塗りつぶしのスタイル例については、[キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の[スタイルと色を適用する](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)をご覧ください。
 
 ## 構文
 

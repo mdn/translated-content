@@ -1,17 +1,6 @@
 ---
 title: '<form>: フォーム要素'
 slug: Web/HTML/Element/form
-tags:
-  - 要素
-  - フォーム要素
-  - フォーム
-  - HTML
-  - HTML フォーム要素
-  - HTML フォーム
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.form
-translation_of: Web/HTML/Element/form
 ---
 
 {{HTMLRef}}
@@ -84,7 +73,7 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
 
   - : サーバーが受け付けるコンテンツ型のカンマ区切りリストです。
 
-    > **Note:**  この属性は HTML5 の仕様から削除されており、すでに使用不可となっています。代わりに個々の {{HTMLElement("input")}} 要素の {{htmlattrxref("accept", "input")}} 属性を使用してください。
+    > **メモ:** この属性は HTML5 の仕様から削除されており、すでに使用不可となっています。代わりに個々の {{HTMLElement("input")}} 要素の {{htmlattrxref("accept", "input")}} 属性を使用してください。
 
 - {{htmlattrdef("accept-charset")}}
   - : サーバーが受け付ける空白区切りの[文字エンコーディング](/ja/docs/Glossary/character_encoding)です。ブラウザーは、列挙されたされた順に使用します。既定値は、[ページと同じエンコーディング](/ja/docs/Web/HTTP/Headers/Content-Encoding)を意味します。
@@ -149,7 +138,7 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
 
     この値は、 {{HTMLElement("button")}}, [`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit), [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) の {{htmlattrxref("formtarget", "button")}} 属性によって上書きすることが可能です。
 
-    > **Note:** `target="_blank"` を `<form>` 要素に設定すると、暗黙で `rel` の動作が [`rel="noopener"`](/ja/docs/Web/HTML/Link_types/noopener) を設定したのと同じになり、 `window.opener` を設定しません。
+    > **メモ:** `target="_blank"` を `<form>` 要素に設定すると、暗黙で `rel` の動作が [`rel="noopener"`](/ja/docs/Web/HTML/Link_types/noopener) を設定したのと同じになり、 `window.opener` を設定しません。
 
 ## 例
 

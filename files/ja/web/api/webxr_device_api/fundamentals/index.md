@@ -1,23 +1,8 @@
 ---
 title: WebXR の基礎
 slug: Web/API/WebXR_Device_API/Fundamentals
-page-type: guide
-tags:
-  - API
-  - AR
-  - Getting Started
-  - Guide
-  - Reality
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
-  - basics
-  - memory
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 WebXRは、 [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) を中核として、拡張現実と仮想現実（AR および VR）の両方をウェブ上で実現するために必要な機能を提供します。これらの技術を合わせて、**複合現実 (MR)** または**クロス現実 (XR)** と呼びます。複合現実は大規模で複雑なテーマであり、学ぶべきことが多く、また、ユーザーにとって魅力的な体験を生み出すために他の多くの API をまとめる必要があります。
@@ -154,7 +139,7 @@ XR ゴーグルは、シミュレーションシーンの奥行きを再現す�
 
 ### VR 酔い
 
-{{interwiki("wikipedia", "VR酔い", "VR 酔い")}}とは、仮想現実を体験した人が、体験中や体験後しばらくの間、不快感や方向感覚の喪失、あるいは深刻な吐き気などを感じる症状のことです。
+[VR 酔い](https://ja.wikipedia.org/wiki/VR酔い)とは、仮想現実を体験した人が、体験中や体験後しばらくの間、不快感や方向感覚の喪失、あるいは深刻な吐き気などを感じる症状のことです。
 
 仮想現実の何が不快感や気持ち悪さを引き起こすのかについては、さまざまな説がありますが、その多くは、脳が考えていることと見ていることの間に微妙な違いがあっても、こうした症状を引き起こすという考え方に重点を置いています。
 

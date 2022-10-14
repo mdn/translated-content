@@ -1,14 +1,6 @@
 ---
 title: '<h1>–<h6>: HTML の見出し要素'
 slug: Web/HTML/Element/Heading_Elements
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
-browser-compat: html.elements.h1
-translation_of: Web/HTML/Element/Heading_Elements
 ---
 
 {{HTMLRef}}
@@ -54,7 +46,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 見出し要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-> **Note:** `align` 属性は廃止されたので、使用しないでください。
+> **メモ:** `align` 属性は廃止されたので、使用しないでください。
 
 ## 使用上の注意
 

@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/19
 original_slug: Mozilla/Firefox/Versions/19
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 19, basé sur Gecko 19.0, est sorti le 19 février 2013. Cette page résume les principaux changements dans Firefox 19 qui sont utiles aux développeurs.
@@ -59,7 +60,7 @@ Le support des [XForms](/fr/docs/XForms) a été [**retiré**](http://www.philip
 - `nsIChannel`
   - : La propriété `contentLength` a changée de `long` à `int64_t`
 
-## A voir également
+## Voir aussi
 
 - [Notes de versions de Firefox 19](http://www.mozilla.org/en-US/firefox/19.0beta/releasenotes/)
 - [Compatibilité des sites avec Firefox 19](/fr/docs/Site_Compatibility_for_Firefox_19)

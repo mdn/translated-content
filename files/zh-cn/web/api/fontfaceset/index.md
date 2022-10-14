@@ -2,9 +2,10 @@
 title: FontFaceSet
 slug: Web/API/FontFaceSet
 ---
+
 {{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}
 
-[CSS 字体加载 API](/en-US/docs/Web/API/CSS_Font_Loading_API) 的 **`FontFaceSet`** 管理着字体们的加载和可查询的字体们下载状态。
+[CSS 字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API) 的 **`FontFaceSet`** 管理着字体们的加载和可查询的字体们下载状态。
 
 ## Properties
 
@@ -41,4 +42,4 @@ slug: Web/API/FontFaceSet
 
 ## Browser compatibility
 
-{{Compat("api.FontFaceSet")}}
+{{Compat}}

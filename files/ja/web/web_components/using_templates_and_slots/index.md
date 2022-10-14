@@ -1,14 +1,8 @@
 ---
 title: テンプレートとスロットの使用
 slug: Web/Web_Components/Using_templates_and_slots
-tags:
-  - Template
-  - ウェブコンポーネント
-  - シャドウ DOM
-  - slot
-  - スロット
-translation_of: Web/Web_Components/Using_templates_and_slots
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 この記事では、{{htmlelement("template")}} と {{htmlelement("slot")}} 要素を使用して柔軟なテンプレートを作成し、それをウェブコンポーネントのシャドウ DOM を表示するために使用する方法について説明します。
@@ -84,7 +78,7 @@ HTML 文書に次のように追加するだけで利用できるようになり
 <my-paragraph></my-paragraph>
 ```
 
-> **Note:** テンプレートはブラウザーの対応が進んでいます。 Shadow DOM API は既定で、 Firefox (バージョン 63 以降) 、Chrome、Opera、Safari、Edge (バージョン 79 以降) で対応しています。
+> **メモ:** テンプレートはブラウザーの対応が進んでいます。 Shadow DOM API は既定で、 Firefox (バージョン 63 以降) 、Chrome、Opera、Safari、Edge (バージョン 79 以降) で対応しています。
 
 ## スロットによる柔軟性の強化
 
@@ -121,9 +115,9 @@ HTML 文書に次のように追加するだけで利用できるようになり
 </my-paragraph>
 ```
 
-> **Note:** スロットに挿入できるのは _Slotable_ な要素に限られます; 要素がスロットに挿入されたとき、_slotted_ と呼ばれます。
+> **メモ:** スロットに挿入できるのは _Slotable_ な要素に限られます; 要素がスロットに挿入されたとき、_slotted_ と呼ばれます。
 
-> **Note:** 無名の {{HTMLElement("slot")}} には、カスタム要素のトップレベルの子ノードのうち {{htmlattrxref("slot")}} 属性を持たないすべてのノードが入ります。これにはテキストノードも含まれます。
+> **メモ:** 無名の {{HTMLElement("slot")}} には、カスタム要素のトップレベルの子ノードのうち {{htmlattrxref("slot")}} 属性を持たないすべてのノードが入ります。これにはテキストノードも含まれます。
 
 簡単な例での説明は以上です。
 もっと実行してみたい場合は、 [GitHub 上にあります](https://github.com/mdn/web-components-examples/tree/master/simple-template) ([ライブ実行版](https://mdn.github.io/web-components-examples/simple-template/)もあります)。
@@ -142,7 +136,7 @@ HTML 文書に次のように追加するだけで利用できるようになり
 
 また、まだレンダリングされていない場合でも、 {{HTMLElement("template")}} を使用することで、テンプレートとしてのコンテナーの目的がより意味的に明確になるはずです。また、 {{HTMLElement("template")}} には、 {{HTMLElement("td")}} のような、 {{HTMLElement("div")}} に追加すると消えてしまうような項目を直接追加することができます。
 
-> **Note:** 完全な例は [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) で ([ライブ実行版](https://mdn.github.io/web-components-examples/element-details/)も) 参照することができます。
+> **メモ:** 完全な例は [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) で ([ライブ実行版](https://mdn.github.io/web-components-examples/element-details/)も) 参照することができます。
 
 ### template をスロットと共に作成
 

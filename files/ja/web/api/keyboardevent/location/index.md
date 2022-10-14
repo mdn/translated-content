@@ -1,17 +1,8 @@
 ---
 title: KeyboardEvent.location
 slug: Web/API/KeyboardEvent/location
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.KeyboardEvent.location
-translation_of: Web/API/KeyboardEvent/location
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.location`** は読み取り専用のプロパティで、キーボードやその他の入力機器上のキーの位置を表す `unsigned long` を返します。
@@ -79,7 +70,7 @@ translation_of: Web/API/KeyboardEvent/location
         </p>
         <div class="note">
           <p>
-            <strong>Note:</strong> Gecko では <code>DOM_KEY_LOCATION_MOBILE</code> を Android （18 以前）、Maemo、<a href="/en-US/docs/Mozilla/Boot_to_Gecko" title="Boot to Gecko">Boot to Gecko</a>で常に返します。しかし、 {{gecko("38")}} では、これは削除されました。
+            <strong>Note:</strong> Gecko では <code>DOM_KEY_LOCATION_MOBILE</code> を Android （18 以前）、Maemo、<a href="/ja/docs/Mozilla/Boot_to_Gecko" title="Boot to Gecko">Boot to Gecko</a>で常に返します。しかし、 {{gecko("38")}} では、これは削除されました。
           </p>
         </div>
       </td>

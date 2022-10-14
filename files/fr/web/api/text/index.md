@@ -6,6 +6,7 @@ tags:
   - DOM
 translation_of: Web/API/Text
 ---
+
 {{ApiRef("DOM")}}
 
 L'interface **`Text`** représente le contenu textuel d'un élément {{domxref("Element")}} ou d'un attribut {{domxref("Attr")}}. Si un élément n'a pas de balisage dans son contenu, il a un seul enfant implémentant `Text` qui contient le texte de l'élément.  Par contre, si l'élément contient un balisage, il est analysé par les éléments d'information et les noeuds `Text` qui sont ses enfants.

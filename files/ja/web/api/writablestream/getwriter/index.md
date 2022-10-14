@@ -1,16 +1,8 @@
 ---
 title: WritableStream.getWriter()
 slug: Web/API/WritableStream/getWriter
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - WritableStream
-  - getWriter
-translation_of: Web/API/WritableStream/getWriter
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("WritableStream")}} インターフェイスの **`getWriter()`** メソッドは、{{domxref("WritableStreamDefaultWriter")}} の新しいインスタンスを返し、そのインスタンスにストリームをロックします。 ストリームがロックされている間、このライターが開放されるまで他のライターを取得することはできません。

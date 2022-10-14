@@ -1,14 +1,6 @@
 ---
 title: CSS 구성 블록
 slug: Learn/CSS/Building_blocks
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - NeedsTranslation
-  - TopicStub
-  - building blocks
-translation_of: Learn/CSS/Building_blocks
 ---
 {{LearnSidebar}}
 

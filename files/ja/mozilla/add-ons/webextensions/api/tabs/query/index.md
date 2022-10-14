@@ -1,8 +1,8 @@
 ---
 title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/query
 ---
+
 {{AddonSidebar()}}
 
 指定されたプロパティを持つ全てのタブを取得します。何も指定しない場合、全てのタブを取得します。
@@ -182,7 +182,7 @@ querying.then(logTabs, onError);
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-duplicate) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> **メモ:** この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-duplicate) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

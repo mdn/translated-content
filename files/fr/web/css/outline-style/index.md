@@ -3,6 +3,7 @@ title: outline-style
 slug: Web/CSS/outline-style
 translation_of: Web/CSS/outline-style
 ---
+
 {{CSSRef}}
 
 La propriété **`outline-style`** permet de définir la mise en forme utilisée pour dessiner la bordure d'un élément. Cette bordure est dessinée autour de [la boîte de bordure](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et peut être utilisée afin de faire ressortir l'élément.
@@ -55,9 +56,13 @@ outline-style: unset;
 - `outset`
   - : La forme obtenue est opposée à `inset` : la bordure semble ressortir du document.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -119,13 +124,8 @@ La valeur `auto` indique une bordure sur mesure selon l'interface du système d'
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires                    |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------- |
-| {{SpecName('CSS3 Basic UI', '#outline-style', 'outline-style')}}             | {{Spec2('CSS3 Basic UI')}} | La valeur `auto` a été ajoutée. |
-| {{SpecName('CSS2.1', 'ui.html#propdef-outline-style', 'outline-style')}} | {{Spec2('CSS2.1')}}             | Définition initiale.            |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.outline-style")}}
+{{Compat}}

@@ -2,9 +2,10 @@
 title: DeviceMotionEvent.interval
 slug: Web/API/DeviceMotionEvent/interval
 ---
+
 {{ apiref("Device Orientation Events") }}
 
-返回从底层硬件获取数据的时间间隔（单位：毫秒）。 您可以使用它来确定运动事件的粒度。
+返回从底层硬件获取数据的时间间隔（单位：毫秒）。您可以使用它来确定运动事件的粒度。
 
 ## 语法
 
@@ -18,7 +19,7 @@ var interval = instanceOfDeviceMotionEvent.interval;
 
 ## 浏览器兼容性
 
-{{Compat("api.DeviceMotionEvent.interval")}}
+{{Compat}}
 
 ## 推荐浏览
 
@@ -27,5 +28,5 @@ var interval = instanceOfDeviceMotionEvent.interval;
 - {{ domxref("window.ondevicemotion") }}
 - {{ event("deviceorientation") }}
 - {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/en-US/docs/WebAPI/Detecting_device_orientation)
-- [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)
+- [Detecting device orientation](/zh-CN/docs/WebAPI/Detecting_device_orientation)
+- [Orientation and motion data explained](/zh-CN/DOM/Orientation_and_motion_data_explained)

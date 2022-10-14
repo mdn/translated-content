@@ -3,6 +3,7 @@ title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getPrototypeOf
 ---
+
 {{JSRef("Global_Objects", "Proxy")}}
 
 **`handler.getPrototypeOf()`** 是一个代理（Proxy）方法，当读取代理对象的原型时，该方法就会被调用。
@@ -42,7 +43,7 @@ const p = new Proxy(obj, {
 
 如果遇到了下面两种情况，JS 引擎会抛出 {{jsxref("TypeError")}} 异常：
 
-- `getPrototypeOf()` 方法返回的不是对象也不是 `null。`
+- `getPrototypeOf()` 方法返回的不是对象也不是 `null`。
 - 目标对象是不可扩展的，且 `getPrototypeOf()` 方法返回的原型不是目标对象本身的原型。
 
 ## 示例

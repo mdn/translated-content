@@ -1,18 +1,8 @@
 ---
 title: Intl.RelativeTimeFormat() コンストラクター
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat
-tags:
-  - Constructor
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-  - RelativeTimeFormat
-translation_of: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat
+slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat
 ---
+
 {{JSRef}}
 
 **`Intl.RelativeTimeFormat()`** コンストラクターは、 {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} オブジェクトを生成します。

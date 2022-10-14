@@ -11,7 +11,7 @@ tags:
   - ganando
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
 
@@ -42,7 +42,7 @@ function ballHitBrick(ball, brick) {
 }
 ```
 
-Recorremos los ladrillos del grupo usando `bricks.children`, verificando la vida de cada uno con el método `.alive() `. Si no quedan más ladrillos con vida, mostramos un mensaje de victoria, reiniciando el juego una vez que la alerta desaparezca.
+Recorremos los ladrillos del grupo usando `bricks.children`, verificando la vida de cada uno con el método `.alive()`. Si no quedan más ladrillos con vida, mostramos un mensaje de victoria, reiniciando el juego una vez que la alerta desaparezca.
 
 ## Compare su código
 

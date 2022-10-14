@@ -266,13 +266,15 @@ Los elementos flexbox permiten crear algunos diseños de página bastante comple
 
 El HTML para ello es bastante simple. Hay un elemento {{htmlelement ("section")}} que contiene tres elementos {{htmlelement ("article")}}. El tercer elemento {{htmlelement ("article")}} contiene tres elementos {{htmlelement ("div")}}:
 
-    section - article
-              article
-              article - div - button
-                        div   button
-                        div   button
-                              button
-                              button
+```
+section - article
+          article
+          article - div - button
+                    div   button
+                    div   button
+                          button
+                          button
+```
 
 Veamos el código que hemos usado para esta compaginación.
 

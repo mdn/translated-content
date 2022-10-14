@@ -3,6 +3,7 @@ title: 読み込みが速い HTML ページを作成するための豆知識
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 ---
+
 これらの豆知識は、一般の知識や実験に基づくものです。
 
 ウェブページを最適化すると、訪問者に対して応答性のよいサイトを提供するだけでなく、ウェブサーバーやインターネット接続の負荷を低減する効果もあります。これは大規模なサイトや、緊急事態で通信量が急増するニュース速報のようなサイトでは重要でしょう。
@@ -53,10 +54,10 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 
 詳細情報:
 
-1.  [HTTP Conditional Get for RSS Hackers](https://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-2.  [HTTP 304: Not Modified](https://annevankesteren.nl/archives/2005/05/http-304)
-3.  [Wikipedia の HTTP ETag の記事](https://ja.wikipedia.org/wiki/HTTP_ETag)
-4.  [Caching in HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
+1. [HTTP Conditional Get for RSS Hackers](https://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
+2. [HTTP 304: Not Modified](https://annevankesteren.nl/archives/2005/05/http-304)
+3. [Wikipedia の HTTP ETag の記事](https://ja.wikipedia.org/wiki/HTTP_ETag)
+4. [Caching in HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
 
 ### ページのコンポーネントの最適な順序
 
@@ -154,23 +155,22 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 
 ## ページ構造の例
 
-· `{{htmlelement('html')}}`
-
-- · `{{htmlelement('head')}}`
+- `{{htmlelement('html')}}`
+- `{{htmlelement('head')}}`
 
   - :&#x20;
 
-    - · `{{htmlelement('link')}}` ...
+    - `{{htmlelement('link')}}` ...
       - : ページの外観に必要な CSS ファイルです。管理しやすくするため、関連性のない CSS は別のファイルに分けるとともに、パフォーマンスのためにファイル数は最小限にしてください。
-    - · `{{htmlelement('script')}}` ...
+    - `{{htmlelement('script')}}` ...
       - : ページの読み込み中に**必要な**機能の JavaScript ファイルですが、ページの読み込み後にしか実行しない対話操作に関するものは含めないようにしてください。
         管理のために関連性のない JavaScript は別のファイルに分けるとともに、パフォーマンスのためにファイル数は最小限にしてください。
 
-- · `{{htmlelement('body')}}`
+- `{{htmlelement('body')}}`
 
-  - : · ユーザーが閲覧可能なページコンテンツを小さな塊 ( `{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) にまとめると、ページ全体のダウンロードを待たずに表示できるようにすることができる。
+  - : ユーザーが閲覧可能なページコンテンツを小さな塊 ( `{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) にまとめると、ページ全体のダウンロードを待たずに表示できるようにすることができる。
 
-    - · `{{htmlelement('script')}}` ...
+    - `{{htmlelement('script')}}` ...
       - : 対話操作を実行するのに用いるスクリプトです。対話操作のスクリプトはたいてい、ページが完全に読み込まれて必要なオブジェクトがすべて初期化された後にのみ実行されます。よって、ページのコンテンツより先に読み込む必要はありません。先に読み込むと、ページが最初に表示されるのが遅くなります。
         管理のために関連性のない JavaScript は別のファイルに分けるとともに、パフォーマンスのためにファイル数は最小限にしてください。
         ロールオーバー効果で用いる画像がある場合は、ページのコンテンツをダウンロードした後に画像の先読みをしておきましょう。

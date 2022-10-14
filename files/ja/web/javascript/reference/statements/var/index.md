@@ -1,14 +1,8 @@
 ---
 title: var
 slug: Web/JavaScript/Reference/Statements/var
-tags:
-  - JavaScript
-  - 言語機能
-  - リファレンス
-  - 文
-browser-compat: javascript.statements.var
-translation_of: Web/JavaScript/Reference/Statements/var
 ---
+
 {{jsSidebar("Statements")}}
 
 **`var` 文**は関数スコープまたはグローバルスコープの変数を宣言し、任意でそれをある値に初期化します。

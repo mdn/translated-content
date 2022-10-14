@@ -1,18 +1,6 @@
 ---
 title: '<summary>: 概要明示要素'
 slug: Web/HTML/Element/summary
-tags:
-  - Disclosure Box
-  - Disclosure Control
-  - Disclosure Summary
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Summary
-  - Web
-browser-compat: html.elements.summary
-translation_of: Web/HTML/Element/summary
 ---
 
 {{HTMLRef}}
@@ -118,7 +106,7 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
 
 これは現在のところ、間隔の問題をいくつか抱えており、 CSS を使用して修正することができます。
 
-> **Warning:** `<summary>` 要素の既定のロールは [button](/ja/docs/Web/Accessibility/ARIA/Roles/button_role)（子要素からはすべてのロールを外す）ですので、この例は画面リーダーのような支援技術のユーザーには動作しません。 `<h4>` のロールが削除されますので、これらのユーザーからは見出しとして扱われなくなります。
+> **警告:** `<summary>` 要素の既定のロールは [button](/ja/docs/Web/Accessibility/ARIA/Roles/button_role)（子要素からはすべてのロールを外す）ですので、この例は画面リーダーのような支援技術のユーザーには動作しません。 `<h4>` のロールが削除されますので、これらのユーザーからは見出しとして扱われなくなります。
 </div>
 
 ## 概要の中の HTML

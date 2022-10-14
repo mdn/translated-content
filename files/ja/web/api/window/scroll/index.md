@@ -1,11 +1,8 @@
 ---
 title: window.scroll
 slug: Web/API/Window/scroll
-tags:
-  - CSSOM View
-  - DOM
-translation_of: Web/API/Window/scroll
 ---
+
 {{ApiRef}}
 
 ## 概要

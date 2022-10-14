@@ -2,6 +2,7 @@
 title: Reactをはじめる
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 この記事では React のはじめかたを説明します。React の背景と使い方について説明し、ローカル環境で基本的な React ツールチェーンを設定します。また、シンプルな基本アプリを作成して、React がどのようなプロセスで機能するのかを学んでいきます。
@@ -26,7 +27,7 @@ React は[インターフェイスの一部](https://reactjs.org/docs/add-react-
 
 さらに、JSX のインターフェースの作成など、React アプリの開発者体験にはコンパイルプロセスが必要とします。Babel のようなコンパイラーをウェブサイトに追加すると、コードの実行が遅くなるため、開発者はビルドステップでそのようなツールをセットアップすることがよくあります。間違いなく React には厳しいツール要件がありますが、学習することはできます。
 
-この記事では、Facebook 独自の[ create-react-app](https://create-react-app.dev/) を使って、アプリケーションのインターフェイスを構築していきます。
+この記事では、Facebook 独自の [create-react-app](https://create-react-app.dev/) を使って、アプリケーションのインターフェイスを構築していきます。
 
 ## React における JavaScript の書き方
 
@@ -48,7 +49,7 @@ const header = (
 );
 ```
 
-> **Note:** このスニペットの括弧は JSX に固有のものではなく、あなたのアプリケーションに影響を与えません。それらは、あなた (またあなたのコンピューター) にとって、内部の複数行のコードが同じ式の一部であるという意味です。次のように header を定義することもできます。
+> **メモ:** このスニペットの括弧は JSX に固有のものではなく、あなたのアプリケーションに影響を与えません。それらは、あなた (またあなたのコンピューター) にとって、内部の複数行のコードが同じ式の一部であるという意味です。次のように header を定義することもできます。
 >
 > ```
 > const header = <header>
@@ -109,7 +110,7 @@ npx create-react-app moz-todo-react
 - 基本的なアプリアーキテクチャを定義するファイルとディレクトリーの構造を作成します。
 - コンピュータに git がインストールされている場合、ディレクトリーを git リポジトリーとして初期化します。
 
-> **Note:** Yarn パッケージマネージャーがインストールされている場合、create-react-app はデフォルトで npm の代わりにそれを使用します。両方のパッケージマネージャーがインストールされていて、明示的に NPM を使用したい場合、create-react-app を実行するときに `--use-npm` フラグを追加できます。
+> **メモ:** Yarn パッケージマネージャーがインストールされている場合、create-react-app はデフォルトで npm の代わりにそれを使用します。両方のパッケージマネージャーがインストールされていて、明示的に NPM を使用したい場合、create-react-app を実行するときに `--use-npm` フラグを追加できます。
 >
 > ```bash
 > npx create-react-app moz-todo-react --use-npm
@@ -292,7 +293,7 @@ serviceWorker.unregister();
 
 これらはすべて、`App` コンポーネントを最初のコンポーネントとして React アプリケーションをレンダリングすることを React に伝えます。
 
-> **Note:** JSX では、React コンポーネントと HTML 要素には閉じスラッシュが必要です。そのまま `<App>` または `<img>` と書くとエラーが発生します。
+> **メモ:** JSX では、React コンポーネントと HTML 要素には閉じスラッシュが必要です。そのまま `<App>` または `<img>` と書くとエラーが発生します。
 
 [Service Worker](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers) は、アプリケーションのパフォーマンスを向上させ、ウェブアプリケーションの機能をオフラインで動作させることができる興味深いコードですが、この記事の対象ではありません。5 行目と 9 〜 12 行目を削除します。
 

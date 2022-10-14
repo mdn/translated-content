@@ -3,6 +3,7 @@ title: TransitionEvent
 slug: Web/API/TransitionEvent
 translation_of: Web/API/TransitionEvent
 ---
+
 {{APIRef("CSSOM")}} {{SeeCompatTable}}
 
 L'interface **`TransitionEvent`** représente des événements fournissant des informations relatives aux [transitions](/fr/docs/Web/Guide/CSS/Using_CSS_transitions) .

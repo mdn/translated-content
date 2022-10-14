@@ -2,6 +2,7 @@
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.insertBefore()`** 方法將一個節點安插在參考節點之前，作為某個特定父節點之子節點。If the given child is a reference to an existing node in the document, `insertBefore()` moves it from its current position to the new position (there is no requirement to remove the node from its parent node before appending it to some other node).
@@ -83,7 +84,7 @@ parentDiv.insertBefore(sp1, sp2);
 </script>
 ```
 
-There is no `insertAfter` method. It can be emulated by combining the `insertBefore` method with [`nextSibling`](/en-US/docs/DOM/Node.nextSibling).
+There is no `insertAfter` method. It can be emulated by combining the `insertBefore` method with [`nextSibling`](/zh-TW/docs/DOM/Node.nextSibling).
 
 In the previous example, `sp1` could be inserted after `sp2` using:
 
@@ -114,7 +115,7 @@ When the element does not have a first child, then `firstChild` is `null`. The e
 
 ## Browser compatibility
 
-{{Compat("api.Node.insertBefore")}}
+{{Compat}}
 
 ## Specifications
 

@@ -1,21 +1,6 @@
 ---
 title: '<tt>: テレタイプテキスト要素'
 slug: Web/HTML/Element/tt
-tags:
-  - 要素
-  - HTML
-  - Monospace
-  - Monotype
-  - Non-proportional Type
-  - 非推奨
-  - リファレンス
-  - Teletype
-  - Teletype Text
-  - ウェブ
-  - font-family
-  - tt
-browser-compat: html.elements.tt
-translation_of: Web/HTML/Element/tt
 ---
 
 {{HTMLRef}}{{deprecated_header}}
@@ -26,7 +11,7 @@ translation_of: Web/HTML/Element/tt
 
 しかし、この要素は廃止されました。等幅フォントで表現する必要がある行内テキストには、より意味的に役立つ {{HTMLElement("code")}}, {{HTMLElement("kbd")}}, {{HTMLElement("samp")}}, {{HTMLElement("var")}} 要素を使用するか、中身を独自のブロックとして表現する場合は {{HTMLElement("pre")}} タグを使用してください。
 
-> **Note:** 使用する場面に適切な意味的要素がない場合（例えば、一部のコンテンツを等幅フォントで表示する必要がある場合）は、 {{ HTMLElement("span") }} 要素を使用し、 CSS を使用して好きに整形することを検討してください。 {{cssxref("font-family")}} プロパティは始めるのにいいところです。
+> **メモ:** 使用する場面に適切な意味的要素がない場合（例えば、一部のコンテンツを等幅フォントで表示する必要がある場合）は、 {{ HTMLElement("span") }} 要素を使用し、 CSS を使用して好きに整形することを検討してください。 {{cssxref("font-family")}} プロパティは始めるのにいいところです。
 
 <table class="properties">
   <tbody>
@@ -114,7 +99,7 @@ The telnet client should display: <tt>Local Echo is on</tt></p>
 
 既定では `<tt>` 要素はブラウザーの既定の等幅フォントを使って表示されます。前述の[既定のフォントの上書き](#既定のフォントの上書き)にある通り、 CSS で `tt セレクターを使用した規則を作成することで、これを上書きすることができます。
 
-> **Note:** 既定の等幅フォントの設定を変更するユーザー設定が CSS よりも優先することがあります。
+> **メモ:** 既定の等幅フォントの設定を変更するユーザー設定が CSS よりも優先することがあります。
 
 この要素は HTML 4.01 では公式には非推奨にされませんでしたが、使用は避けて意味的要素や CSS を使用するとされていました。 `<tt>` 要素は HTML 5 で廃止されました。
 

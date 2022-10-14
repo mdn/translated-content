@@ -1,14 +1,8 @@
 ---
 title: If-Match
 slug: Web/HTTP/Headers/If-Match
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - リクエストヘッダー
-  - 条件付きリクエスト
-translation_of: Web/HTTP/Headers/If-Match
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`If-Match`** リクエストヘッダーは、リクエストを条件付きにします。 {{HTTPMethod("GET")}} および {{HTTPMethod("HEAD")}} メソッドの場合、リストされた `ETag` のいずれかと一致する場合にのみ、サーバーは要求されたリソースを返します。{{HTTPMethod("PUT")}} と他の安全ではないメソッドでは、この場合のみリソースをアップロードします。
@@ -77,5 +71,5 @@ If-Match: *
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("416")}}` Range Not Satisfiable`
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("416")}} `Range Not Satisfiable`
+- {{HTTPStatus("412")}} `Precondition Failed`

@@ -1,16 +1,8 @@
 ---
 title: カスタム要素の使用
 slug: Web/Web_Components/Using_custom_elements
-tags:
-  - クラス
-  - ガイド
-  - HTML
-  - ウェブコンポーネント
-  - autonomous
-  - カスタム要素
-  - customized
-translation_of: Web/Web_Components/Using_custom_elements
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 ウェブコンポーネント標準の主な特徴の 1 つは、 HTML ページに機能をカプセル化するカスタム要素を作成できることで、カスタムページの機能を提供する要素の長いネストしたバッチを作成する必要がありません。この記事では、 Custom Elements API の使い方を紹介します。
@@ -22,7 +14,7 @@ translation_of: Web/Web_Components/Using_custom_elements
 ページにカスタム要素を登録するには、 {{domxref("CustomElementRegistry.define()")}} メソッドを使います。引数に次のものを取ります。
 
 - 要素に与える名前を表す {{domxref("DOMString")}}。カスタム要素の名前は、[ダッシュが使われている名前](https://html.spec.whatwg.org/#valid-custom-element-name) (kebab-case) である必要があります。単一の単語にすることはできません。
-- 要素の振る舞いを定義した[クラス](/en-US/docs/Web/JavaScript/Reference/Classes)のオブジェクト。
+- 要素の振る舞いを定義した[クラス](/ja/docs/Web/JavaScript/Reference/Classes)のオブジェクト。
 - {{optional_inline}} `extends` プロパティを含むオプションオブジェクトです。このプロパティは、もしあれば、要素が継承する組み込み要素を指定します（カスタマイズされた組み込み要素にのみ関係します）。
 
 例えば、カスタムの [word-count 要素](https://mdn.github.io/web-components-examples/word-count-web-component/)を定義するには次のようにします。
@@ -80,7 +72,7 @@ class PopUpInfo extends HTMLElement {
 }
 ```
 
-前述のコードスニペットはクラスのコンストラクター ([`constructor()`](/ja/docs/Web/JavaScript/Reference/Classes/constructor)) の定義を含んでいます。ここでは常に [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) を最初に呼び出し、正しいプロタイプチェーンが確立されるようにします。
+前述のコードスニペットはクラスのコンストラクター ([`constructor()`](/ja/docs/Web/JavaScript/Reference/Classes/constructor)) の定義を含んでいます。ここでは常に [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を最初に呼び出し、正しいプロトタイプチェーンが確立されるようにします。
 
 コンストラクターの内部では、その要素のインスタンスが生成されたときに持つすべての機能を定義します。この場合、カスタム要素にシャドウルートを添付し、いくつかの DOM 操作を使用して要素の内部シャドウ DOM 構造を作成します。それをシャドウルートに添付します。そして最後に、いくつかの CSS をシャドウルートに添付してスタイル付けを行います。
 
@@ -126,7 +118,7 @@ customElements.define('popup-info', PopUpInfo);
   back of your card."></popup-info>
 ```
 
-> **Note:** こちらで[完全な JavaScript ソース](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) を見ることができます。
+> **メモ:** こちらで[完全な JavaScript ソース](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) を見ることができます。
 
 ### 内部スタイルと外部スタイル
 
@@ -187,7 +179,7 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 
 通常のように `<ul>` を使用していますが、カスタム要素の名前が `is` 属性で指定されています。
 
-> **Note:** 繰り返しますが、完全な [JavaScript のソースコード](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js)はこちらにあります。
+> **メモ:** 繰り返しますが、完全な [JavaScript のソースコード](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js)はこちらにあります。
 
 ## ライフサイクルコールバックの使用
 
@@ -195,7 +187,7 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 
 - `connectedCallback`: 文書に接続された要素にカスタム要素が追加されるたびに呼び出されます。これはそのノードが移動するために発生するので、要素の内容が完全に解釈される前に発生することがあります。
 
-  > **Note:** `connectedCallback` は要素の接続が終了したときにも呼び出されることがあります。 {{domxref("Node.isConnected")}} を使用して確認してください。
+  > **メモ:** `connectedCallback` は要素の接続が終了したときにも呼び出されることがあります。 {{domxref("Node.isConnected")}} を使用して確認してください。
 
 - `disconnectedCallback`: カスタム要素が文書の DOM から切断されるたびに呼び出されます。
 - `adoptedCallback`: カスタム要素が新しい文書に移動するたびに呼び出されます。
@@ -271,7 +263,7 @@ static get observedAttributes() { return ['c', 'l']; }
 
 この例では、これはコンストラクターの最上部に配置されています。
 
-> **Note:** [完全な JavaScript のソース](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js)はこちらから探してください。
+> **メモ:** [完全な JavaScript のソース](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js)はこちらから探してください。
 
 ## トランスパイラーとクラス
 

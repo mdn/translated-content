@@ -1,15 +1,8 @@
 ---
 title: find
 slug: Mozilla/Add-ons/WebExtensions/API/find
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - find
-translation_of: Mozilla/Add-ons/WebExtensions/API/find
 ---
+
 {{AddonSidebar}}
 
 ウェブページのテキストを検索し、マッチしたものをハイライトします。

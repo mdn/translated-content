@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/eval
 original_slug: Web/JavaScript/Reference/Objets_globaux/eval
 ---
+
 {{jsSidebar("Objects")}}
 
 La fonction **`eval()`** permet d'évaluer du code JavaScript représenté sous forme d'une chaîne de caractères.
@@ -244,20 +245,11 @@ var fct2 = eval(fctStr2)  // renvoie une function
 
 ## Spécifications
 
-| Spécification                                                | État                         | Commentaires         |
-| ------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                     | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.2.1', 'eval')}} | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-eval-x', 'eval')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-eval-x', 'eval')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.eval")}}
-
-## Notes spécifiques à Firefox
-
-- Historiquement, `eval()` utilisait un deuxième argument qui définissait l'objet qui était le contexte pour lequel effectuer l'évaluation. Cet argument était non-standard et a été retiré de SpiderMonkey avec Firefox 4 (cf. {{bug(531675)}}).
+{{Compat}}
 
 ## Voir aussi
 

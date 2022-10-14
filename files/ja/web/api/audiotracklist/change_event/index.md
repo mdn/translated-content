@@ -1,14 +1,8 @@
 ---
 title: 'AudioTrackList: change イベント'
 slug: Web/API/AudioTrackList/change_event
-tags:
-  - API
-  - AudioTrackList
-  - Change
-  - Event
-  - HTML API
-translation_of: Web/API/AudioTrackList/change_event
 ---
+
 {{APIRef}}
 
 `change` イベントは、音声トラックが有効または無効になったとき（トラックの [`enabled`](/ja/docs/Web/API/AudioTrack/enabled) プロパティを変更したときなど）に発生します。

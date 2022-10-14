@@ -1,19 +1,9 @@
 ---
 title: MediaRecorder.onstart
 slug: Web/API/MediaRecorder/start_event
-tags:
-  - API
-  - Audio
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Property
-  - Reference
-  - Video
-  - onstart
-translation_of: Web/API/MediaRecorder/onstart
 original_slug: Web/API/MediaRecorder/onstart
 ---
+
 {{APIRef("Media Recorder API")}}
 
 **`MediaRecorder.onstartevent`** ハンドラ（[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は `start` イベントを処理します。 これにより、`MediaRecorder` によってメディアの記録が開始されたことに応答してコードを実行できるようにします。

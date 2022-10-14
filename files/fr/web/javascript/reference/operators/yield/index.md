@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/yield
 original_slug: Web/JavaScript/Reference/Opérateurs/yield
 ---
+
 {{jsSidebar("Operators")}}
 
 Le mot-clé `yield` est utilisé pour suspendre et reprendre une fonction génératrice ({{jsxref("Statements/function*", "function*")}} ou [une fonction génératrice historique](/fr/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)).
@@ -71,21 +72,11 @@ console.log(magasinPommes.next()); // { value: undefined, done: true }
 
 ## Spécifications
 
-| Spécification                                                                | Statut                       | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#prod-YieldExpression', 'Yield')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#prod-YieldExpression', 'Yield')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.yield")}}
-
-## Notes spécifiques à Firefox
-
-- À partir de Gecko 29 {{geckoRelease(29)}}, une fonction génératrice terminée ne déclenche plus une {{jsxref("TypeError")}} "generator has already finished". À la place, elle renvoie un objet `IteratorResult` tel que `{ value: undefined, done: true }` ({{bug(958951)}}).
-- À partir de Gecko 33 {{geckoRelease(33)}}, l'analyse de l'expression `yield` a été mise à jour afin d'être conforme aux spécifications ES2015 ({{bug(981599)}}):
-
-  - L'expression après le mot-clé `yield` est optionnelle et l'omettre ne déclenche plus une {{jsxref("SyntaxError")}} : `function* compteVentesPommes() { yield; }`
+{{Compat}}
 
 ## Voir aussi
 

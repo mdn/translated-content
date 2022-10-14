@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/getPrototypeOf
 ---
+
 {{JSRef}}
 
 La méthode **`handler.getPrototypeOf()`** représente une trappe pour la méthode interne `[[GetPrototypeOf]]`.
@@ -115,14 +116,11 @@ Object.getPrototypeOf(p); // TypeError : on attend la même valeur pour le proto
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof', '[[GetPrototypeOf]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof', '[[GetPrototypeOf]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.getPrototypeOf")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/character_encoding
 original_slug: Glossaire/codage_caracteres
 ---
+
 Un encodage définit une correspondance entre les octets et le texte. Une séquence d'octets permet différentes interprétations textuelles. En spécifiant un codage particulier (tel que UTF-8), nous spécifions comment la séquence d'octets doit être interprétée.
 
 Par exemple, en HTML, nous déclarons généralement l'usage du codage de caractères UTF-8 en utilisant la ligne suivante :

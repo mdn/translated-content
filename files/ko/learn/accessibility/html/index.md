@@ -1,16 +1,6 @@
 ---
 title: 'HTML: 접근성을 위한 기초'
 slug: Learn/Accessibility/HTML
-tags:
-  - HTML
-  - HTML 접근성
-  - 스크린리더
-  - 시멘틱
-  - 시멘틱 웹
-  - 시멘틱웹
-  - 웹 접근성
-  - 접근성 향상
-translation_of: Learn/Accessibility/HTML
 original_slug: Learn/접근성/HTML
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}

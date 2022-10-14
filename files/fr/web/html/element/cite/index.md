@@ -15,6 +15,7 @@ tags:
 translation_of: Web/HTML/Element/cite
 browser-compat: html.elements.cite
 ---
+
 {{HTMLRef}}
 
 L'élément **`<cite>`** contient le titre d'une œuvre telle qu'un livre, une chanson, un film, une sculpture… Cet élément doit inclure le titre de l'œuvre. Cette référence peut-être abrégée en accord avec les conventions d'usages pour l'ajout des métadonnées de citations.

@@ -1,13 +1,8 @@
 ---
 title: TreeWalker
 slug: Web/API/TreeWalker
-page-type: web-api-interface
-tags:
-  - API
-  - DOM
-browser-compat: api.TreeWalker
-translation_of: Web/API/TreeWalker
 ---
+
 {{ APIRef("DOM") }}
 
 **`TreeWalker`** オブジェクトは、文書のサブツリーのノードおよびその位置を表します。
@@ -49,7 +44,7 @@ _このインターフェイスが継承するプロパティはありません�
 
 _このインターフェイスが継承しているメソッドはありません。_
 
-> **Note:** `TreeWalker` のコンテキストでは、 `whatToShow` と `filter` 引数で決定される論理ビューにノードが存在する場合、ノードは*可視状態*となります。(ノードが画面上に表示されているかどうかは関係ありません)。
+> **メモ:** `TreeWalker` のコンテキストでは、 `whatToShow` と `filter` 引数で決定される論理ビューにノードが存在する場合、ノードは*可視状態*となります。(ノードが画面上に表示されているかどうかは関係ありません)。
 
 - {{domxref("TreeWalker.parentNode()")}}
   - : 現在の {{domxref("Node")}} を文書内の順序で最初の*可視状態*である祖先ノードに移動して、発見したノードを返します。また、現在のノードをこの位置に移動します。該当するノードがない、あるいはオブジェクト生成時に定義した*ルートノード*より前にある場合は、`null` を返して現在のノードは変更しません。

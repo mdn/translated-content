@@ -8,6 +8,7 @@ tags:
   - Interface
 translation_of: Web/API/HTMLFormControlsCollection
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLFormControlsCollection`** représente une _collection_ _d'éléments de contrôle de formulaires_. Il représente les listes retournées par le {{domxref("HTMLFormElement")}} et le {{domxref("HTMLFieldSetElement")}} de la propriété d'interface {{domxref("HTMLFieldSetElement.elements", "elements")}}.

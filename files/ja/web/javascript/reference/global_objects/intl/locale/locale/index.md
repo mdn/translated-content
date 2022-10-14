@@ -1,16 +1,8 @@
 ---
 title: Intl.Locale() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
-tags:
-  - コンストラクター
-  - 国際化
-  - Intl
-  - JavaScript
-  - ロケール
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Locale.Locale
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
 ---
+
 {{JSRef}}
 
 **`Intl.Locale`** コンストラクターは、 Intl オブジェクトの標準組み込みプロパティで、 Unicode ロケール識別子を表します。

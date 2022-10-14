@@ -12,6 +12,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
 ---
+
 {{AddonSidebar}}
 
 Renvoie les informations sur le navigateur dans lequel l'extension est installée.

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
 browser-compat: javascript.builtins.Intl.Segmenter.constructor
 ---
+
 {{JSRef}}
 
 Le constructeur **`Intl.Segmenter()`** crée un objet [`Intl.Segmenter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) permettant la segmentation d'un texte selon la locale.

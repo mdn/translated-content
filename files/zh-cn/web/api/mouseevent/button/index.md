@@ -2,6 +2,7 @@
 title: MouseEvent.button
 slug: Web/API/MouseEvent/button
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.button`**是只读属性，它返回一个值，代表用户按下并触发了事件的鼠标按键。
@@ -75,7 +76,7 @@ function logMouseButton(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.button")}}
+{{Compat}}
 
 ## 参阅
 

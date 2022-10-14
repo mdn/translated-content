@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/find
 ---
+
 {{JSRef}}
 
 La méthode **`find()`** renvoie la **valeur** du **premier élément trouvé** dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur {{jsxref("undefined")}} est renvoyée.
@@ -110,14 +111,11 @@ console.log( [4, 5, 8, 12].find(estPremier) ); // 5
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires        |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype.find', 'Array.prototype.find')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-array.prototype.find', 'Array.prototype.find')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.find")}}
+{{Compat}}
 
 ## Voir aussi
 

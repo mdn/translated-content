@@ -1,25 +1,16 @@
 ---
 title: BaseAudioContext.createAnalyser()
 slug: Web/API/BaseAudioContext/createAnalyser
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createAnalyser
-browser-compat: api.BaseAudioContext.createAnalyser
-translation_of: Web/API/BaseAudioContext/createAnalyser
 original_slug: Web/API/AudioContext/createAnalyser
 ---
+
 {{APIRef("Web Audio API")}}
 
 `createAnalyser()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("AnalyserNode")}} を作成します。これは音声の時間と周波数データを公開し、データの可視化を行います。
 
-> **Note:** {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} コンストラクターが {{domxref("AnalyserNode")}} を生成するのに推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} コンストラクターが {{domxref("AnalyserNode")}} を生成するのに推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
-> **Note:** このノードの詳しい説明は、 {{domxref("AnalyserNode")}} のページを参照してください。
+> **メモ:** このノードの詳しい説明は、 {{domxref("AnalyserNode")}} のページを参照してください。
 
 ## 構文
 

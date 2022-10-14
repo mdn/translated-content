@@ -1,26 +1,14 @@
 ---
 title: VRDisplay.resetPose()
 slug: Web/API/VRDisplay/resetPose
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDevice
-  - Virtual Reality
-  - WebVR
-  - resetPose()
-browser-compat: api.VRDisplay.resetPose
-translation_of: Web/API/VRDisplay/resetPose
 original_slug: Web/API/VRDevice/resetPose
 ---
+
 {{APIRef("WebVR API")}}{{deprecated_header}}
 
 **`resetPose()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、`VRDisplay` のポーズをリセットして、現在の {{domxref("VRPose.position")}} と {{domxref("VRPose.orientation")}} を "原点/ゼロ位置" の値として扱います。
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 `resetPost()` を呼出した後は、 {{domxref("VRDisplay.getPose()")}}/{{domxref("VRDisplay.getImmediatePose()")}}  から返された未来予測ポーズは、`resetPose()` が最後に呼び出された時点からの相対的な `VRDisplay` の位置になります。また、`resetPose()` が最後に呼び出された時点の VR ディスプレイのヨー (yaw) を前方として扱います。
 

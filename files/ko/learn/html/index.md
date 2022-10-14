@@ -1,11 +1,6 @@
 ---
 title: HTML
 slug: Learn/HTML
-tags:
-  - Beginner
-  - HTML
-  - 입문자
-translation_of: Learn/HTML
 ---
 {{LearnSidebar}}
 

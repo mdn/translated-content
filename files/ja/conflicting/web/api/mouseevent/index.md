@@ -1,17 +1,9 @@
 ---
 title: MouseEvent.region
 slug: conflicting/Web/API/MouseEvent
-tags:
-  - API
-  - Canvas
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
 original_slug: Web/API/MouseEvent/region
-browser-compat: api.MouseEvent.region
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.region`** は読み取り専用のプロパティで、イベントが影響する [canvas のヒット領域](/ja/docs/Web/API/CanvasRenderingContext2D/addHitRegion)の id を返します。

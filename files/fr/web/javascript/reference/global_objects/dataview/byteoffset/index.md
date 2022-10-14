@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/byteOffset
 ---
+
 {{JSRef}}
 
 La propriété **`byteOffset`** est un accesseur représentant le décalage, exprimé en octets, entre la vue et le début de l'objet {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} correspondant.
@@ -42,14 +43,11 @@ dataview2.byteOffset; // 3 (décalage défini lors de la construction de la vue)
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                       | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-dataview.prototype.byteoffset', 'DataView.prototype.byteOffset')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-dataview.prototype.byteoffset', 'DataView.prototype.byteOffset')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.byteOffset")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,21 +1,14 @@
 ---
 title: matrix()
 slug: Web/CSS/transform-function/matrix
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/matrix()
 original_slug: Web/CSS/transform-function/matrix()
-browser-compat: css.types.transform-function.matrix
 ---
+
 {{CSSRef}}
 
 **`matrix()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、二次元同次変換行列を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-> **Note:** `matrix(a, b, c, d, tx, ty)` は `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` の短縮形です。
+> **メモ:** `matrix(a, b, c, d, tx, ty)` は `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` の短縮形です。
 
 ## 構文
 

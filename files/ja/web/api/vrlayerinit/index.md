@@ -1,25 +1,14 @@
 ---
 title: VRLayerInit
 slug: Web/API/VRLayerInit
-page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Deprecated
-  - Interface
-  - Reference
-  - VR
-  - VRLayerInit
-  - Virtual Reality
-  - WebVR
-translation_of: Web/API/VRLayerInit
 original_slug: Web/API/VRLayer
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`VRLayerInit`** 辞書は [WebVR API](/ja/docs/Web/API/WebVR_API) の辞書で、 VR ディスプレイに表示したいコンテンツレイヤー （{{domxref("HTMLCanvasElement")}} または {{domxref("OffscreenCanvas")}}） を表します。
 
-> **Note:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 `VRLayerInit` オブジェクトは {{domxref("VRDisplay.getLayers()")}} メソッドを使用して受ける取り、 {{domxref("VRDisplay.requestPresent()")}} メソッドを使用して表示することができます。
 
@@ -72,7 +61,7 @@ if(navigator.getVRDisplays) {
 }
 ```
 
-> **Note:** `canvasReference` は {{htmlelement("canvas")}} 要素そのものを指すものであり、キャンバスに関連付けられた WebGL コンテキストを指すわけではありません。他の 2 つのメンバーは配列です。
+> **メモ:** `canvasReference` は {{htmlelement("canvas")}} 要素そのものを指すものであり、キャンバスに関連付けられた WebGL コンテキストを指すわけではありません。他の 2 つのメンバーは配列です。
 
 ## 仕様書
 

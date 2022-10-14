@@ -1,23 +1,15 @@
 ---
 title: Expires
 slug: Web/HTTP/Headers/Expires
-tags:
-  - Caching
-  - HTTP
-  - HTTPResponse
-  - header
-  - キャッシング
-  - ヘッダー
-  - レスポンス
-translation_of: Web/HTTP/Headers/Expires
 ---
+
 {{HTTPSidebar}}
 
 **`Expires`** ヘッダーには、レスポンスが古くなると見なされる日時が入ります。
 
 値 0 のような無効な日付は過去の日付を表し、リソースがすでに有効期限切れであることを意味します。
 
-> **Note:** レスポンスに `max-age` または `s-maxage` ディレクティブを持つ {{HTTPHeader("Cache-Control")}} ヘッダーがある場合、`Expires` ヘッダーは無視されます。
+> **メモ:** レスポンスに `max-age` または `s-maxage` ディレクティブを持つ {{HTTPHeader("Cache-Control")}} ヘッダーがある場合、`Expires` ヘッダーは無視されます。
 
 <table class="properties">
   <tbody>

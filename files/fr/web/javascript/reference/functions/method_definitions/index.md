@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 original_slug: Web/JavaScript/Reference/Fonctions/Définition_de_méthode
 ---
+
 {{JsSidebar("Functions")}}
 
 Avec ECMAScript 2015 (ES6), il est possible d'utiliser une notation plus courte pour définir des méthodes au sein des littéraux objets. On peut ainsi définir plus rapidement une fonction qui sera utilisée comme méthode.
@@ -190,15 +191,11 @@ console.log(bar.toto2()); // 2
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES2015', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ES2015')}}     | Définition initiale.                                                                                                                             |
-| {{SpecName('ES2016', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ES2016')}}     | Les méthodes génératrices ne doivent pas implémenter la trappe [[Construct]] et déclencher une exception lorsqu'elles sont utilisées avec `new`. |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                                                                                                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.functions.method_definitions")}}
+{{Compat}}
 
 ## Voir aussi
 

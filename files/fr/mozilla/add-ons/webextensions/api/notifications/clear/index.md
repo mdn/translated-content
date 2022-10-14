@@ -13,6 +13,7 @@ tags:
   - clear
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/clear
 ---
+
 {{AddonSidebar()}}
 
 Efface une notification, compte tenu de son identifiant.

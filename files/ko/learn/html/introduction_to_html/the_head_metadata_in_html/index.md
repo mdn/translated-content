@@ -1,7 +1,6 @@
 ---
 title: head 태그에는 무엇이 있을까? HTML의 메타데이터
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
-translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
 

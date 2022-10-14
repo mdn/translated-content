@@ -66,6 +66,6 @@ color: #d9480f;
 - {{cssxref("grid")}}
 - {{cssxref("grid-template")}}
 
-### <span class="short_text" id="result_box" lang="es"><span>Otras lecturas</span></span>
+### Otras lecturas
 
 - Guía de diseño CSS Grid: _[Conceptos Básicos de Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_

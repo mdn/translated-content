@@ -1,14 +1,8 @@
 ---
-title: >-
-  SyntaxError: a declaration in the head of a for-of loop can't have an
-  initializer
+title: 'SyntaxError: a declaration in the head of a for-of loop can''t have an initializer'
 slug: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
-tags:
-  - Error
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "a declaration in the head of a for-of loop can't have an initializer" は、 [for...of](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループの先頭に |`for (var i = 0 of iterable)`| のように初期化子が含まれている場合に発生します。これは for-of ループでは許可されていません。

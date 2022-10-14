@@ -8,6 +8,7 @@ tags:
   - Screen Orientation
 translation_of: Web/API/CSS_Object_Model/Managing_screen_orientation
 ---
+
 {{SeeCompatTable}}{{APIRef}}
 
 ## Sommaire
@@ -127,7 +128,7 @@ L'API Screen Orientation (orientation de l'écran) est faite pour empêcher ou g
 
 ### Écouter les changements d'orientation
 
-L'événement {{event("orientationchange")}} est déclenché chaque fois que l'appareil change l'orientation de l'écran et l'orientation peut elle-même être lue avec la propriété {{domxref("Screen.orientation")}}.
+L'événement [`orientationchange`](/fr/docs/Web/API/Window/orientationchange_event) est déclenché chaque fois que l'appareil change l'orientation de l'écran et l'orientation peut elle-même être lue avec la propriété {{domxref("Screen.orientation")}}.
 
 ```js
 screen.addEventListener("orientationchange", function () {
@@ -145,9 +146,9 @@ Toute application web peut verrouiller l'écran dans une orientation pour répon
 screen.lockOrientation('landscape');
 ```
 
-> **Note :** Un verrouillage d'écran est dépendant de l'application web. Si une a application A est verrouillée à `landscape` et l'application B est verrouillée à `portrait`, passer de l'application A à B ou à A ne va pas déclencher un événement {{event("orientationchange")}} parce que les deux applications gardent l'orientation qu'elles avaient.
+> **Note :** Un verrouillage d'écran est dépendant de l'application web. Si une a application A est verrouillée à `landscape` et l'application B est verrouillée à `portrait`, passer de l'application A à B ou à A ne va pas déclencher un événement [`orientationchange`](/fr/docs/Web/API/Window/orientationchange_event) parce que les deux applications gardent l'orientation qu'elles avaient.
 >
-> En revanche, verrouiller l'orientation peut décléncher l'événement {{event("orientationchange")}} si l'orientation a dû être changée pour satisfaire aux critères du verrouillage.
+> En revanche, verrouiller l'orientation peut décléncher l'événement [`orientationchange`](/fr/docs/Web/API/Window/orientationchange_event) si l'orientation a dû être changée pour satisfaire aux critères du verrouillage.
 
 ## Firefox OS et Android: Verrouiller l'orientation avec le manifeste
 

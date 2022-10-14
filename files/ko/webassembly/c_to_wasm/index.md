@@ -1,10 +1,6 @@
 ---
 title: C/C++ 모듈을 웹어셈블리로 컴파일하기
 slug: WebAssembly/C_to_wasm
-tags:
-  - 엠스크립튼
-  - 웹어셈블리
-translation_of: WebAssembly/C_to_wasm
 ---
 {{WebAssemblySidebar}}
 

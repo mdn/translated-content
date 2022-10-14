@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/forEach
 original_slug: Web/JavaScript/Reference/Objets_globaux/Set/forEach
 ---
+
 {{JSRef}}
 
 La méthode **`forEach()`** permet d'exécuter une fonction donnée, une fois pour chaque valeur de l'ensemble `Set`. L'ordre appliqué est celui dans lequel les valeurs ont été ajoutées à l'ensemble.
@@ -78,14 +79,11 @@ new Set(["toto", "truc", undefined]).forEach(logSetElements);
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-set.prototype.foreach', 'Set.prototype.forEach')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-set.prototype.foreach', 'Set.prototype.forEach')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Set.forEach")}}
+{{Compat}}
 
 ## Voir aussi
 

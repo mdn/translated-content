@@ -1,15 +1,8 @@
 ---
 title: TreeWalker.root
 slug: Web/API/TreeWalker/root
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - TreeWalker
-browser-compat: api.TreeWalker.root
-translation_of: Web/API/TreeWalker/root
 ---
+
 {{ APIRef("DOM") }}
 
 **`TreeWalker.root`** は読み取り専用のプロパティで、 `TreeWalker` を作成したときに指定したルートノードを返します。

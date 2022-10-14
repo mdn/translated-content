@@ -9,6 +9,7 @@ tags:
   - contenteditable
 translation_of: Web/API/HTMLElement/contentEditable
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété **`HTMLElement.contentEditable`** est utilisée pour indiquer si un élément HTML est ou non éditable. Cet attribut peut avoir 3 valeurs&nbsp;:

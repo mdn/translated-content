@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.lineJoin
 slug: Web/API/CanvasRenderingContext2D/lineJoin
 translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 ---
+
 {{APIRef}}
 
 La propriété **`CanvasRenderingContext2D.lineJoin`** de l'API Canvas 2D détermine la forme à utiliser pour joindre deux segments de ligne à leur intersection.

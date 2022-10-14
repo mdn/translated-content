@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function
 browser-compat: javascript.builtins.Function
 ---
+
 {{JSRef}}
 
 Chaque fonction JavaScript est en réalité un objet `Function` (ce qu'on peut vérifier avec l'expression `(function(){}).constructor === Function` qui donne `true`).

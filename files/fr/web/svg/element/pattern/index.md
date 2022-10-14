@@ -8,6 +8,7 @@ tags:
 translation_of: Web/SVG/Element/pattern
 browser-compat: svg.elements.pattern
 ---
+
 {{SVGRef}}
 
 L'élément **`<pattern>`** définit un objet graphique qui peut être redessiné à des intervalles de coordonnées x et y répétés ("en mosaïque") pour couvrir une surface.

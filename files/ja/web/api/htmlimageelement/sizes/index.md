@@ -1,22 +1,8 @@
 ---
 title: HTMLImageElement.sizes
 slug: Web/API/HTMLImageElement/sizes
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - プロパティ
-  - リファレンス
-  - Responsive Design
-  - Responsive Images
-  - size
-  - sizes
-  - width
-browser-compat: api.HTMLImageElement.sizes
-translation_of: Web/API/HTMLImageElement/sizes
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} の **`sizes`** プロパティによって、メディア条件のリストごとに、画像のレイアウト幅を指定することができます。これにより、様々なメディア条件に合わせて文書の状態が変化したときに、異なる画像（方向やアスペクト比の異なる画像も含む）を自動的に選択する機能が提供されます。
@@ -35,7 +21,7 @@ translation_of: Web/API/HTMLImageElement/sizes
 
 ソースサイズの値は [CSS の長さ](/ja/docs/Web/CSS/length)です。フォントと相対的な単位 (`em` や `ex` など)、絶対的な単位 (`px` や `cm` など)、または `vw` という単位を使って指定することができ、ビューポート幅に対する割合（`1vw` はビューポート幅の 1%）で指定することができます。
 
-> **Note:** ソースサイズ値は、コンテナーサイズに対するパーセント値として指定してはいけません。つまり、`50%` や `100%` といった長さの指定は、指定した値が何に対するパーセント値であるかが不明確になるため、許されません。
+> **メモ:** ソースサイズ値は、コンテナーサイズに対するパーセント値として指定してはいけません。つまり、`50%` や `100%` といった長さの指定は、指定した値が何に対するパーセント値であるかが不明確になるため、許されません。
 
 ## 例
 

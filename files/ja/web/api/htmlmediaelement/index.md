@@ -1,20 +1,8 @@
 ---
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
-page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - HTML
-  - HTML DOM
-  - HTMLMediaElement
-  - Interface
-  - Media
-  - Reference
-  - Video
-browser-compat: api.HTMLMediaElement
-translation_of: Web/API/HTMLMediaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement`** インターフェイスは {{domxref("HTMLElement")}} に音声や動画で一般的なメディアに関する基本的な能力の対応に必要なプロパティやメソッドを追加します。
@@ -33,7 +21,7 @@ _このインターフェイスは祖先である {{domxref("HTMLElement")}}, {{
 
   - : 論理値で、 HTML の {{htmlattrxref("autoplay", "video")}} 属性の値を反映し、中断なしに再生できるだけの十分なデータが揃った時点で自動的に再生を始めるかどうかを示します。
 
-    > **Note:** ユーザーが期待していない、あるいは望んでいないときに自動的に音声を再生すると、ユーザーに不快な体験をさせることになるため、ほとんどの場合避けるべきですが、例外も存在します。詳しくは、[メディアとウェブ音声 API のガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。ブラウザーは自動再生要求を無視する可能性があることを念頭に置き、コードが自動再生の動作に依存していないことを確認する必要があります。
+    > **メモ:** ユーザーが期待していない、あるいは望んでいないときに自動的に音声を再生すると、ユーザーに不快な体験をさせることになるため、ほとんどの場合避けるべきですが、例外も存在します。詳しくは、[メディアとウェブ音声 API のガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。ブラウザーは自動再生要求を無視する可能性があることを念頭に置き、コードが自動再生の動作に依存していないことを確認する必要があります。
 
 - {{domxref("HTMLMediaElement.buffered")}} {{readonlyinline}}
   - : `buffered` プロパティにアクセスした時点で、ブラウザーがバッファリングしているメディアソースの範囲を（もしあれば） {{domxref("TimeRanges")}} オブジェクトで返します。
@@ -129,7 +117,7 @@ _このインターフェイスには祖先である {{domxref("HTMLElement")}},
 - {{domxref("HTMLMediaElement.fastSeek()")}}
   - : 低い精度で素早く指定時刻にシークします。
 - {{domxref("HTMLMediaElement.load()")}}
-  - : メディア要素をリセットし、メディアリソースをリスタートします。処理されなかったイベントは破棄されます。メディアデータがダウンロードされる量は `preload `属性の値に影響されます。`src `属性の値、もしくは `source `要素内の要素を削除した際のリソース解放、もしくは `source `の子要素が動的に変更される場合の再スキャンのために利用します。それ以外の場合に呼びだす必要はありません。
+  - : メディア要素をリセットし、メディアリソースをリスタートします。処理されなかったイベントは破棄されます。メディアデータがダウンロードされる量は `preload` 属性の値に影響されます。`src` 属性の値、もしくは `source` 要素内の要素を削除した際のリソース解放、もしくは `source` の子要素が動的に変更される場合の再スキャンのために利用します。それ以外の場合に呼びだす必要はありません。
 - {{domxref("HTMLMediaElement.pause()")}}
   - : 再生を一時停止します。
 - {{domxref("HTMLMediaElement.play()")}}

@@ -1,16 +1,8 @@
 ---
 title: ':optional'
 slug: Web/CSS/:optional
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.optional
-translation_of: Web/CSS/:optional
 ---
+
 {{ CSSRef }}
 
 **`:optional`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{ htmlattrxref("required", "input") }} 属性が設定されていない {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素を表します。
@@ -24,11 +16,13 @@ input:optional {
 
 この擬似クラスは。フォームを送信するにあたって必須ではない入力欄にスタイルを適用するのに便利です。
 
-> **Note:** {{cssxref(":required")}} 擬似クラスは<em>必須</em>のフォーム欄を選択します。
+> **メモ:** {{cssxref(":required")}} 擬似クラスは<em>必須</em>のフォーム欄を選択します。
 
 ## 構文
 
-{{csssyntax}}
+```
+:optional
+```
 
 ## 例
 

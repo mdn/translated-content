@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/var
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<var>`** représente une variable dans une expression mathématique ou un texte lié à la programmation. Son contenu est généralement représenté avec une version italique de la police environnante utilisée, toutefois, ce comportement peut dépendre du navigateur utilisé.
@@ -139,11 +140,8 @@ var {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-var-element', '&lt;var&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-var-element', '&lt;var&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.var")}}
+{{Compat}}

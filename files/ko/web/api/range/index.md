@@ -52,9 +52,9 @@ _상속한 메서드는 없다._
 - {{ domxref("Range.setEndAfter()")}}
   - : 다른 {{ domxref("Node") }} 와 관계가 있는 `Range 의 끝 위치를 설정한다`.
 - {{ domxref("Range.selectNode()")}}
-  - : `Range 에 `{{ domxref("Node") }} 와 그것의 내용물을 포함 시킨`다`.
+  - : `Range` 에 {{ domxref("Node") }} 와 그것의 내용물을 포함 시킨`다`.
 - {{ domxref("Range.selectNodeContents()")}}
-  - : `Range 에 `{{ domxref("Node") }} 의 내용물을 포함 시킨`다`.
+  - : `Range` 에 {{ domxref("Node") }} 의 내용물을 포함 시킨`다`.
 - {{ domxref("Range.collapse()")}}
   - : `Range` 의 경계 지점 중 하나로 영역을 붕괴 시킨다.
 - {{ domxref("Range.cloneContents()")}}
@@ -100,4 +100,4 @@ _상속한 메서드는 없다._
 
 ## 같이 보기
 
-- [The DOM interfaces index](/ko/docs/DOM/DOM_Reference "/en-US/docs/DOM/DOM_Reference")
+- [The DOM interfaces index](/ko/docs/DOM/DOM_Reference)

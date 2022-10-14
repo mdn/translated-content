@@ -21,4 +21,4 @@ El descifrado es el reverso del {{glossary("Encryption", "cifrado")}} y si la cl
 
 ### Referencia técnica
 
-- [Cifrado y descifrado](https://developer.mozilla.org/es/docs/Archive/Security/Encriptación_y_Desencriptación)
+- [Cifrado y descifrado](/es/docs/Archive/Security/Encriptación_y_Desencriptación)

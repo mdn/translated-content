@@ -1,12 +1,8 @@
 ---
 title: CSS JSON DB を更新するには
 slug: MDN/Contribute/Howto/Update_the_CSS_JSON_DB
-tags:
-  - Guide
-  - Howto
-  - MDN Meta
-translation_of: MDN/Contribute/Howto/Update_the_CSS_JSON_DB
 ---
+
 {{MDNSidebar}}
 
 CSS プロパティのいくつかの特徴、例えばその構文やアニメーションが可能かどうかなどは、 MDN 上の複数のページで言及されているため、アドホックな「データベース」に保存されています。このデータベースは、実際には CSS 関連の情報を含むいくつかの JSON ファイルから構成されており、 [GitHub に格納](https://github.com/mdn/data/tree/main/css)されています。この記事では、この構造を更新する方法について説明します。

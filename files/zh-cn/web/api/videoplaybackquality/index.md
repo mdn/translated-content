@@ -2,6 +2,7 @@
 title: VideoPlaybackQuality
 slug: Web/API/VideoPlaybackQuality
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 **`VideoPlaybackQuality`** 对象表示了一系列描述视频播放质量的指标。
@@ -33,7 +34,7 @@ _`VideoPlaybackQuality` 对象没有实现任何特定方法，也没有继承�
 
 ## 浏览器兼容性
 
-{{Compat("api.VideoPlaybackQuality")}}
+{{Compat}}
 
 ## 另见
 

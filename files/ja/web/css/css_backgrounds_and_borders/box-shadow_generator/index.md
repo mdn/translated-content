@@ -1,12 +1,8 @@
 ---
 title: ボックスの影作成ツール
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
-tags:
-  - CSS
-  - Tools
-  - box-shadow
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 ---
+
 このツールで CSS の {{cssxref("box-shadow")}} 効果を組み立てて、 CSS オブジェクトにボックスの影の効果を追加することができます。
 
 {{EmbedGHLiveSample("css-examples/tools/box-shadow-generator/", '100%', 900)}}

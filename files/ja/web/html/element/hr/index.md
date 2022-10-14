@@ -1,15 +1,8 @@
 ---
 title: '<hr>: 主題区切り (水平線) 要素'
 slug: Web/HTML/Element/hr
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - ウェブ
-  - 要素
-translation_of: Web/HTML/Element/hr
 ---
+
 {{HTMLRef}}
 
 **HTML の `<hr>` 要素**は、段落レベルの要素間において、テーマの意味的な区切りを表します。例えば、話の場面の切り替えや、節内での話題の転換などです。

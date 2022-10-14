@@ -1,14 +1,8 @@
 ---
 title: '<figcaption>: 図キャプション要素'
 slug: Web/HTML/Element/figcaption
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/figcaption
-browser-compat: html.elements.figcaption
 ---
+
 {{HTMLRef}}
 
 **HTML の `<figcaption>` 要素または図キャプション要素**は、親の {{HTMLElement("figure")}} 要素内にあるその他のコンテンツを説明するキャプションや凡例を表します。

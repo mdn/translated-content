@@ -1,16 +1,8 @@
 ---
 title: History.replaceState()
 slug: Web/API/History/replaceState
-tags:
-  - API
-  - HTML DOM
-  - History
-  - 履歴 API
-  - メソッド
-  - リファレンス
-browser-compat: api.History.replaceState
-translation_of: Web/API/History/replaceState
 ---
+
 {{APIRef("History API")}}
 
 **`History.replaceState()`** メソッドは、現在の履歴を編集し、メソッドに引数で渡された状態オブジェクトや URL で置き換えます。このメソッドは、ユーザーのアクションに応じて現在の履歴項目の状態オブジェクトや URL を更新したい場合に特に便利です。
@@ -33,7 +25,7 @@ history.replaceState(stateObj, unused, url)
 
 ## 例
 
-https\://www\.mozilla.org/foo.html が以下の JavaScript を実行したとします。
+`https://www.mozilla.org/foo.html` が以下の JavaScript を実行したとします。
 
 ```js
 const stateObj = { foo: 'bar' };
@@ -48,7 +40,7 @@ history.replaceState(stateObj, '', 'bar2.html');
 
 これにより、URL バーに `https://www.mozilla.org/bar2.html` が表示されるようになりますが、ブラウザーが `bar2.html` を読み込んだり、`bar2.html` が存在するかどうかを確認したりすることはありません。
 
-ユーザーが `https://www.microsoft.com` に移動し、戻るボタンをクリックしたとします。この時点で、URL バーには `https://www.mozilla.org/bar2.html` が表示されます。ユーザーがもう一度「戻る」ボタンをクリックすると、URL バーには https\://www\.mozilla.org/foo.html が表示され、 bar.html は完全にバイパスされます。
+ユーザーが `https://www.microsoft.com` に移動し、戻るボタンをクリックしたとします。この時点で、URL バーには `https://www.mozilla.org/bar2.html` が表示されます。ユーザーがもう一度「戻る」ボタンをクリックすると、URL バーには `https://www.mozilla.org/foo.html` が表示され、 bar.html は完全にバイパスされます。
 
 ## 仕様書
 

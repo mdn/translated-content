@@ -1,16 +1,8 @@
 ---
 title: Blob()
 slug: Web/API/Blob/Blob
-tags:
-  - API
-  - Blob
-  - Constructor
-  - Experimental
-  - File API
-  - Reference
-  - コンストラクター
-translation_of: Web/API/Blob/Blob
 ---
+
 {{APIRef("File API")}}
 
 **`Blob()`** コンストラクターは、新たな {{domxref("Blob")}} オブジェクトを返します。その blob の中身は、引数 `array` で与えられた値を連結したものから構成されています。
