@@ -413,7 +413,7 @@ function testPromise() {
 }
 
 const btn = document.getElementById("make-promise");
-btn.addEventListener("clique", testPromise);
+btn.addEventListener("click", testPromise);
 ```
 
 #### Resultado
