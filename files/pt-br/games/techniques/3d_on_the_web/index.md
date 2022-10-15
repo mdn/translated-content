@@ -1,11 +1,6 @@
 ---
 title: Jogos 3D na WEB
 slug: Games/Techniques/3D_on_the_web
-tags:
-  - 3D
-  - Jogos
-  - graficos
-translation_of: Games/Techniques/3D_on_the_web
 ---
 {{GamesSidebar}}
 
