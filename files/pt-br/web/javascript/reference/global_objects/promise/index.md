@@ -128,7 +128,7 @@ console.log("log imediato");
 // registro assíncrono tem valor: 777
 ```
 
-### Entãoables
+### Thenables
 
 O ecossistema JavaScript fez várias implementações do Promise muito antes de se tornar parte da linguagem. Apesar de serem representados de forma diferente internamente, no mínimo, todos os objetos do tipo Promise implementam a interface _Thenable_. Um thenable implementa o método [`.then()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/then), que é chamado com dois retornos de chamada: um para quando a promise é cumprida, um para quando for rejeitado. Promises também são possíveis.
 
