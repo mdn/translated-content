@@ -1,11 +1,6 @@
 ---
 title: Contribuindo para o MDN
 slug: MDN/Contribute
-tags:
-  - Guía
-  - MDN Meta
-  - Página de destino
-translation_of: MDN/Contribute
 ---
 {{MDNSidebar}}
 

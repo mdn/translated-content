@@ -1,12 +1,6 @@
 ---
 title: Etiqueta básica para projetos open source
 slug: MDN/Community/Open_source_etiquette
-tags:
-  - Boas práticas
-  - Comunidade
-  - Código aberto
-  - MDN
-  - Iniciantes
 original_slug: MDN/Contribute/Open_source_etiquette
 ---
 {{MDNSidebar}}
