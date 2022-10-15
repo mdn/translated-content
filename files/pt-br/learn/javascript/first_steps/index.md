@@ -1,28 +1,6 @@
 ---
 title: Primeiros passos com JavaScript
 slug: Learn/JavaScript/First_steps
-tags:
-  - Arrays
-  - Artigo
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - Guia(2)
-  - Guide
-  - Iniciante
-  - JavaScript
-  - Landing
-  - Matrizes
-  - Module
-  - NeedsTranslation
-  - Numbers
-  - Operadores
-  - Operators
-  - TopicStub
-  - Variables
-  - maths
-  - strings
-translation_of: Learn/JavaScript/First_steps
 ---
 {{LearnSidebar}}
 

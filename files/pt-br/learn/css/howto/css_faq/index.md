@@ -1,15 +1,6 @@
 ---
 title: CSS - Perguntas frequentes
 slug: Learn/CSS/Howto/CSS_FAQ
-tags:
-  - CSS
-  - Exemplo
-  - FAQ
-  - Guía
-  - Perguntas
-  - Perguntas Frequentes
-  - Web
-translation_of: Learn/CSS/Howto/CSS_FAQ
 original_slug: Learn/CSS/Howto/CSS_Perguntas_Frequentes
 ---
 ## Por que meu CSS, que é válido, não é renderizado corretamente?

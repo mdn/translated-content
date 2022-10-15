@@ -1,8 +1,6 @@
 ---
 title: Manipulando Listas
 slug: Learn/CSS/Styling_text/Styling_lists
-translation_of: Learn/CSS/Styling_text/Styling_lists
-translation_of_original: Web/Guide/CSS/Getting_started/Lists
 original_slug: Web/CSS/Getting_Started/Lists
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}

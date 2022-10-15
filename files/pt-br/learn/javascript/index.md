@@ -1,16 +1,6 @@
 ---
 title: JavaScript
 slug: Learn/JavaScript
-tags:
-  - Beginner
-  - CodingScripting
-  - Iniciante Javascript
-  - JavaScript
-  - NeedsContent
-  - Principiante
-  - Tópico
-  - modulo
-translation_of: Learn/JavaScript
 original_slug: Aprender/JavaScript
 ---
 {{LearnSidebar}}

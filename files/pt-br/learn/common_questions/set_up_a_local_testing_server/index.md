@@ -1,18 +1,6 @@
 ---
 title: Como configurar um servidor de testes local
 slug: Learn/Common_questions/set_up_a_local_testing_server
-tags:
-  - Aprender
-  - Express
-  - Flask
-  - Iniciante
-  - Node
-  - PHP
-  - Python
-  - django
-  - lamp
-  - servidores
-translation_of: Learn/Common_questions/set_up_a_local_testing_server
 original_slug: Learn/Common_questions/Como_configurar_um_servidor_de_testes_local
 ---
 Este artigo explica como configurar um simples servidor de testes local em seu computador e o básico para utiliza-lo.

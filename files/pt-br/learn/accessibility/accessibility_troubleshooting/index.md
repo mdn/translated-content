@@ -1,17 +1,6 @@
 ---
 title: 'Avaliação: solucionando problemas de acessibilidade'
 slug: Learn/Accessibility/Accessibility_troubleshooting
-tags:
-  - Acessibilidade
-  - Avaliação
-  - CSS
-  - Codificação
-  - CodingScripting
-  - Iniciante
-  - JavaScript
-  - WAI-ARIA
-  - aprendizado
-translation_of: Learn/Accessibility/Accessibility_troubleshooting
 original_slug: Learn/Accessibility/Acessibilidade_problemas
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}

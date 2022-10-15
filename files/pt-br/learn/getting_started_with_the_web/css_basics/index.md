@@ -1,15 +1,6 @@
 ---
 title: CSS básico
 slug: Learn/Getting_started_with_the_web/CSS_basics
-tags:
-  - Aprender
-  - CSS
-  - Codificação de Scripts
-  - Estilo
-  - Iniciante
-  - Web
-  - l10n:prioridade
-translation_of: Learn/Getting_started_with_the_web/CSS_basics
 original_slug: Aprender/Getting_started_with_the_web/CSS_basico
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
