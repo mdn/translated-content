@@ -14,11 +14,11 @@ original_slug: Web/XSLT/sort
 
 ```
 <xsl:sort
-	select=EXPRESSION
-	order="ascending" | "descending"
-	case-order="upper-first"| "lower-first"
-	lang=XML:LANG-CODE
-	data-type="html" | "xml" | "text" />
+  select=EXPRESSION
+  order="ascending" | "descending"
+  case-order="upper-first"| "lower-first"
+  lang=XML:LANG-CODE
+  data-type="html" | "xml" | "text" />
 ```
 
 ### 필수 속성

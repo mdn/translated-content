@@ -29,7 +29,7 @@ ARIA - это набор специальных атрибутов, которы
 ### Простое улучшение ARIA
 
 - [Улучшение навигации по странице с помощью ARIA Landmarks](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
-  - : Хорошее введение в использование ARIA landmarks для улучшения навигации для пользователей с экранными читалками. [Стоит также заглянуть в заметки по поддержке ARIA landmarks читалками ](http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/)и примеры использования на реальных сайтах (опубликовано в Июле 2011).
+  - : Хорошее введение в использование ARIA landmarks для улучшения навигации для пользователей с экранными читалками. [Стоит также заглянуть в заметки по поддержке ARIA landmarks читалками](http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) и примеры использования на реальных сайтах (опубликовано в Июле 2011).
 - [Улучшение доступности форм](/ru/docs/ARIA/forms)
   - : ARIA используется не только для обозначения динамического контента! Узнайте, как улучшить доступность форм HTML используя дополнительные ARIA-атрибуты.
 - [Live regions (в процессе написания)](/ru/docs/Accessibility/ARIA/ARIA_Live_Regions "Live Regions")
