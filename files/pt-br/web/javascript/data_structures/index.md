@@ -239,5 +239,5 @@ Leia a [página de referência](/pt-BR/docs/Web/JavaScript/Reference/Operators/t
 
 - [Estruturas de dados e algoritmos JavaScript por Oleksii Trekhleb](https://github.com/trekhleb/javascript-algorithms)
 - [Coleção de Nicholas Zakas de estrutura de dados comum e algoritmos comuns em JavaScript.](https://github.com/humanwhocodes/computer-science-in-javascript)
-- [Search Tre(i)es implementado em JavaScript](https://github.com/monmohan/dsjslib)
+- [Search Tre(i)es implementados em JavaScript](https://github.com/monmohan/dsjslib)
 - [Tipos de dados e valores na especificação ECMAScript](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)
