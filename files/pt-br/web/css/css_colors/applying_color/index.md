@@ -15,7 +15,7 @@ Em seguida, encerraremos as coisas com uma breve discussão sobre como [usar cor
 
 ## Coisas que podem ter cor
 
-No nível do elemento, tudo em HTML pode ter cores aplicadas. Em vez disso, vamos ver as coisas em termos dos tipos de coisas que são desenhadas nos elementos, como texto e bordas e assim por diante. Para cada um, veremos uma lista das propriedades CSS que aplicam cores a eles.
+No nível dos elementos, tudo em HTML pode ter cores aplicadas. Em vez disso, vamos ver as coisas em termos dos tipos de coisas que são desenhadas nos elementos, como texto e bordas e assim por diante. Para cada um, veremos uma lista das propriedades CSS que aplicam cores a eles.
 
 Em um nível fundamental, a propriedade {{cssxref("color")}} define a cor de primeiro plano do conteúdo de um elemento HTML e a propriedade {{cssxref("background-color")}} define a cor de fundo do elemento. Estes podem ser usados em praticamente qualquer elemento.
 
@@ -24,9 +24,9 @@ Em um nível fundamental, a propriedade {{cssxref("color")}} define a cor de pri
 Sempre que um elemento é renderizado, essas propriedades são usadas para determinar a cor do texto, seu plano de fundo e quaisquer decorações no texto.
 
 - {{cssxref("cor")}}
-  - : a cor a ser usada ao desenhar o texto e quaisquer [decorações de texto](/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (como a adição de sublinhados ou sublinhados, linhas tachadas, e assim por diante.
+  - : A cor a ser usada ao desenhar o texto e quaisquer [decorações de texto](/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (como a adição de sublinhados ou sublinhados, linhas tachadas, e assim por diante.
 - {{cssxref("cor de fundo")}}
-  - : a cor de fundo do texto.
+  - : A cor de fundo do texto.
 - {{cssxref("texto-sombra")}}
   - : Configura um efeito de sombra para aplicar ao texto. Entre as opções para a sombra está a cor base da sombra (que é então desfocada e misturada com o fundo com base nos outros parâmetros). Consulte {{SectionOnPage("/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals", "Text drop shadows")}} para saber mais.
 - {{cssxref("text-decoration-color")}}
@@ -56,15 +56,15 @@ Qualquer elemento pode ter uma [borda](/pt-BR/docs/Learn/CSS/Building_blocks/Bac
 Você pode usar a propriedade abreviada {{cssxref("border")}}, que permite configurar tudo sobre o borda de uma só vez (incluindo recursos não coloridos de bordas, como sua [largura](/pt-BR/docs/Web/CSS/border-width), [estilo](/pt-BR/docs/Web/CSS/border-style) (sólido, tracejado, etc.), e assim por diante.
 
 - {{cssxref("cor da borda")}}
-  - : especifica uma única cor a ser usada para cada lado da borda do elemento.
+  - : Especifica uma única cor a ser usada para cada lado da borda do elemento.
 - {{cssxref("border-left-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-top-color")}} e {{cssxref ("cor da borda inferior")}}
   - : Permite definir a cor do lado correspondente da borda do elemento.
 - {{cssxref("border-block-start-color")}} e {{cssxref("border-block-end-color")}}
   - : Com estes, você pode definir a cor usada para desenhar as bordas que estão mais próximas do início e do fim do bloco que a borda circunda. Em um modo de escrita da esquerda para a direita (como a forma como o inglês é escrito), a borda inicial do bloco é a borda superior e o final do bloco é a parte inferior. Isso difere do início e do fim embutidos, que são as bordas esquerda e direita (correspondendo a onde cada linha de texto na caixa começa e termina).
 - {{cssxref("border-inline-start-color")}} e {{cssxref("border-inline-end-color")}}
-  - : permitem colorir as bordas da borda mais próximas ao início e ao final do início das linhas de texto dentro da caixa. De que lado isso está irá variar dependendo das propriedades {{cssxref("writing-mode")}}, {{cssxref("direction")}} e {{cssxref("text-orientation")}}, que são normalmente (mas nem sempre) usado para ajustar a direcionalidade do texto com base no idioma exibido. Por exemplo, se o texto da caixa estiver sendo renderizado da direita para a esquerda, a cor da borda em linha será aplicada ao lado direito da borda.
+  - : Permitem colorir as bordas da borda mais próximas ao início e ao final do início das linhas de texto dentro da caixa. De que lado isso está irá variar dependendo das propriedades {{cssxref("writing-mode")}}, {{cssxref("direction")}} e {{cssxref("text-orientation")}}, que são normalmente (mas nem sempre) usado para ajustar a direcionalidade do texto com base no idioma exibido. Por exemplo, se o texto da caixa estiver sendo renderizado da direita para a esquerda, a cor da borda em linha será aplicada ao lado direito da borda.
 
-### Outras maneiras de usar cores
+### Outras formas de usar cores
 
 CSS não é a única tecnologia da web que suporta cores. Existem tecnologias gráficas disponíveis na web que também suportam cores.
 
@@ -115,7 +115,7 @@ A notação funcional RGB (Vermelho/Verde/Azul), como a notação de string hexa
 Os valores legais para cada um desses parâmetros são:
 
 - `vermelho`, `verde` e `azul`
-  - : cada um deve ter um valor {{cssxref("&lt;integer&gt;")}} entre 0 e 255 (inclusive), ou um {{cssxref("&lt;percentage&gt;")}} de 0% a 100%.
+  - : Cada um deve ter um valor {{cssxref("&lt;integer&gt;")}} entre 0 e 255 (inclusive), ou um {{cssxref("&lt;percentage&gt;")}} de 0% a 100%.
 - `alfa`
   - : O canal alfa é um número entre 0,0 (totalmente transparente) e 1,0 (totalmente opaco). Você também pode especificar uma porcentagem em que 0% é igual a 0,0 e 100% é igual a 1,0.
 
@@ -407,7 +407,7 @@ O primeiro passo é escolher sua **cor base**. Esta é a cor que de alguma forma
 
 Ao tentar decidir sobre uma cor base, você pode descobrir que as extensões do navegador que permitem selecionar cores do conteúdo da Web podem ser particularmente úteis. Alguns deles são projetados especificamente para ajudar nesse tipo de trabalho. Por exemplo, o site [ColorZilla](https://www.colorzilla.com/) oferece uma extensão ([Chrome](https://www.colorzilla.com/chrome/) / [Firefox](https:// www.colorzilla.com/firefox/)) que oferece uma ferramenta conta-gotas para escolher cores da web. Também pode obter médias das cores dos pixels em áreas de vários tamanhos ou até mesmo em uma área selecionada da página.
 
-> **Observação:** A vantagem da média de cores pode ser que, muitas vezes, o que parece uma cor sólida é, na verdade, um número surpreendentemente variado de cores relacionadas, todas usadas em conjunto, misturando-se para criar o efeito desejado. Escolher apenas um desses pixels pode resultar na obtenção de uma cor que, por si só, parece muito fora do lugar.
+> **Nota:** A vantagem da média de cores pode ser que, muitas vezes, o que parece uma cor sólida é, na verdade, um número surpreendentemente variado de cores relacionadas, todas usadas em conjunto, misturando-se para criar o efeito desejado. Escolher apenas um desses pixels pode resultar na obtenção de uma cor que, por si só, parece muito fora do lugar.
 
 #### Confeccionando a paleta
 
@@ -415,7 +415,7 @@ Depois de decidir a cor base, existem muitas ferramentas on-line que podem ajud�
 
 Alguns exemplos (todos gratuitos para uso a partir do momento em que esta lista foi revisada pela última vez):
 
-- [ferramenta seletora de cores do MDN](/pt-BR/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [Ferramenta seletora de cores do MDN](/pt-BR/docs/Web/CSS/CSS_Colors/Color_picker_tool)
 - [Paletton](https://paletton.com/)
 - [Roda de cores on-line do Adobe Color CC](https://color.adobe.com/create/color-wheel)
 
@@ -428,9 +428,9 @@ Ao projetar sua paleta, lembre-se de que, além das cores que essas ferramentas 
 Uma revisão completa da teoria das cores está além do escopo deste artigo, mas há muitos artigos sobre a teoria das cores disponíveis, bem como cursos que você pode encontrar em escolas e universidades próximas. Alguns recursos úteis sobre a teoria das cores:
 
 - [Ciência das cores](https://www.khanacademy.org/computing/pixar/color) ([Khan Academy](https://www.khanacademy.org/) em associação com a [Pixar](https://www.pixar.com/))
-  - : um curso online que apresenta conceitos como o que é a cor, como ela é percebida e como usar as cores para expressar ideias. Apresentado por artistas e designers da Pixar.
+  - : Um curso online que apresenta conceitos como o que é a cor, como ela é percebida e como usar as cores para expressar ideias. Apresentado por artistas e designers da Pixar.
 - [Teoria das cores](https://en.wikipedia.org/wiki/Color_theory) na Wikipedia
-  - : entrada da Wikipedia sobre teoria das cores, que tem muitas informações excelentes do ponto de vista técnico. Não é realmente um recurso para ajudá-lo com o processo de seleção de cores, mas ainda está cheio de informações úteis.
+  - : Entrada da Wikipedia sobre teoria das cores, que tem muitas informações excelentes do ponto de vista técnico. Não é realmente um recurso para ajudá-lo com o processo de seleção de cores, mas ainda está cheio de informações úteis.
 
 ### Cor e acessibilidade
 
