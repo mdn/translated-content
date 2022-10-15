@@ -307,24 +307,24 @@ const THRESHOLD_A = 8; // pode usar zero 0 para garantir o erro
 function tetheredGetNumber(resolve, reject) {
   setTimeout(() => {
     const randomInt = Date.now();
-    valor const = randomInt % 10;
-    if (valor < THRESHOLD_A) {
-      resolve(valor);
+    const value = randomInt % 10;
+    if (value < THRESHOLD_A) {
+      resolve(value);
     } else {
-      reject(`Muito grande: ${valor}`);
+      reject(`Muito grande: ${value}`);
     }
   }, 500);
 }
 
-função determinaParidade(valor) {
+function determinaParidade(valor) {
   const isOdd = valor % 2 === 1;
   return { valor, isOdd };
 }
 
-função problemWithGetNumber(motivo) {
-  const err = new Error("Problema para obter o número", { causa: motivo });
+function troubleWithGetNumber(reason) {
+  const err = new Error("Problema para obter o número", { cause: reason });
   console.error(err);
-  jogar errar;
+  throw err;
 }
 
 function promiseGetWord(parityInfo) {
@@ -346,8 +346,8 @@ new Promise(tetheredGetNumber)
     console.log(`Recebido: ${info.value}, ${info.wordEvenOdd}`);
     return info;
   })
-  .catch((motivo) => {
-    if (motivo.causa) {
+  .catch((reason) => {
+    if (reason.cause) {
       console.error("Já havia tratado o erro anteriormente");
     } else {
       console.error(`Problema com promiseGetWord(): ${reason}`);
@@ -371,7 +371,7 @@ Ao clicar no botão várias vezes em um curto espaço de tempo, você verá até
 <div id="log"></div>
 ```
 
-####Javascript
+#### JavaScript
 
 ```js
 "use strict";
