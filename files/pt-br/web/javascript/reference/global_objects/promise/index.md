@@ -374,9 +374,9 @@ Ao clicar no botão várias vezes em um curto espaço de tempo, você verá até
 ####Javascript
 
 ``` js
-"usar estrito";
+"use strict";
 
-deixe contagemdepromise = 0;
+let promiseCount = 0;
 
 function testPromise() {
   const thisPromiseCount = ++promiseCount;
@@ -389,7 +389,7 @@ function testPromise() {
     // A função executora é chamada com a habilidade
     // para resolver ou rejeitar a promise
     log.insertAdjacentHTML(
-      "antes",
+      "beforeend",
       `${thisPromiseCount}) Construtor de promise<br>`
     );
     // Este é apenas um exemplo para criar assincronismo
@@ -404,7 +404,7 @@ function testPromise() {
   p1.then((val) => {
     // Registra o valor de atendimento
     log.insertAdjacentHTML("beforeend", `${val}) Promise cumprida<br>`);
-  }).catch((motivo) => {
+  }).catch((reason) => {
     // Registra o motivo da rejeição
     console.log(`Manuseie a promise rejeitada (${reason}) aqui.`);
   });
