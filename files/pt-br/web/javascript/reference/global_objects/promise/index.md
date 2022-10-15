@@ -44,12 +44,12 @@ Essa promise já está _resolvida_ no momento em que é criada (porque o `resolv
 
 ### Promises em cadeia
 
-Os métodos `{{jsxref("Promise.prototype.then()")}}`, `{{jsxref("Promise.prototype.catch()")}}` e `{{jsxref("Promise.prototype .finally()")}}` são usados para associar uma ação adicional com uma promise que se torna liquidada. Como `{{JSxRef("Promise/then", "Promise.prototype.then()")}}` e `{{JSxRef("Promise/catch", "Promise.prototype.catch()")}} ` métodos retornam promises, eles podem ser encadeados.
+Os métodos `{{jsxref("Promise.prototype.then()")}}`, `{{jsxref("Promise.prototype.catch()")}}` e `{{jsxref("Promise.prototype.finally()")}}` são usados para associar uma ação adicional com uma promise que se torna liquidada. Como `{{JSxRef("Promise/then", "Promise.prototype.then()")}}` e `{{JSxRef("Promise/catch", "Promise.prototype.catch()")}} ` métodos retornam promises, eles podem ser encadeados.
 
 O método `.then()` aceita até dois argumentos; o primeiro argumento é uma função de retorno de chamada para o caso cumprido da promise e o segundo argumento é uma função de retorno de chamada para o caso rejeitado. Cada `.then()` retorna um objeto de promise recém-gerado, que pode ser usado opcionalmente para encadeamento; por exemplo:
 
 ``` js
-const minhaPromise = new Promise((resolver, rejeitar) => {
+const minhaPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("foo");
   }, 300);
@@ -221,7 +221,7 @@ No exemplo acima, o texto interno do `<iframe>` será atualizado somente se o ob
 
 ## Construtor
 
-- {{jsxref("Promete/Promete", "Promete()")}}
+- {{jsxref("Promise/Promise", "Promise()")}}
   - : Cria um novo objeto `Promise`. O construtor é usado principalmente para encapsular funções que ainda não suportam promises.
 
 ## Métodos estáticos
@@ -250,7 +250,7 @@ No exemplo acima, o texto interno do `<iframe>` será atualizado somente se o ob
 
     Se for rejeitado, será rejeitado com o motivo da primeira promise que foi rejeitada.
 
-- {{JSxRef("Promise.rejeitar", "Promise.rejeitar(motivo)")}}
+- {{JSxRef("Promise.reject", "Promise.reject(reason)")}}
   - : Retorna um novo objeto `Promise` que é rejeitado com o motivo fornecido.
 - {{JSxRef("Promise.resolve", "Promise.resolve(value)")}}
 
@@ -274,8 +274,8 @@ Consulte o [Guia do Microtask](/pt-BR/docs/Web/API/HTML_DOM_API/Microtask_guide)
 ### Exemplo básico
 
 ``` js
-const minhaPrimeiraPromise = new Promise((resolver, rejeitar) => {
-  // Chamamos resolve(...) quando o que estávamos fazendo de forma assíncrona foi bem-sucedido e rejeita(...) quando falhou.
+const minhaPrimeiraPromise = new Promise((resolve, reject) => {
+  // Chamamos resolve(...) quando o que estávamos fazendo de forma assíncrona foi bem-sucedido e reject(...) quando falhou.
   // Neste exemplo, usamos setTimeout(...) para simular código assíncrono.
   // Na realidade, você provavelmente estará usando algo como XHR ou uma API HTML.
   setTimeout(() => {
@@ -304,14 +304,14 @@ Este código pode ser executado em NodeJS. A compreensão é aprimorada ao ver o
 // Para experimentar o tratamento de erros, os valores "threshold" causam erros aleatoriamente
 const THRESHOLD_A = 8; // pode usar zero 0 para garantir o erro
 
-function tetheredGetNumber(resolver, rejeitar) {
+function tetheredGetNumber(resolve, reject) {
   setTimeout(() => {
     const randomInt = Date.now();
     valor const = randomInt % 10;
     if (valor < THRESHOLD_A) {
-      resolver(valor);
-    } senão {
-      rejeita(`Muito grande: ${valor}`);
+      resolve(valor);
+    } else {
+      reject(`Muito grande: ${valor}`);
     }
   }, 500);
 }
@@ -328,13 +328,13 @@ função problemWithGetNumber(motivo) {
 }
 
 function promiseGetWord(parityInfo) {
-  return new Promise((resolver, rejeitar) => {
-    const { valor, isOdd } = parityInfo;
-    if (valor >= THRESHOLD_A - 1) {
-      rejeita(`Ainda muito grande: ${valor}`);
-    } senão {
-      parityInfo.wordEvenOdd = isOdd ? "ímpar Par";
-      resolve(paridadeInfo);
+  return new Promise((resolve, reject) => {
+    const { value, isOdd } = parityInfo;
+    if (value >= THRESHOLD_A - 1) {
+      reject(`Ainda muito grande: ${valor}`);
+    } else {
+      parityInfo.wordEvenOdd = isOdd ? "ímpar" : "par";
+      resolve(parityInfo);
     }
   });
 }
@@ -344,12 +344,12 @@ new Promise(tetheredGetNumber)
   .then(promiseGetWord)
   .then((info) => {
     console.log(`Recebido: ${info.value}, ${info.wordEvenOdd}`);
-    informações de retorno;
+    return info;
   })
   .catch((motivo) => {
     if (motivo.causa) {
       console.error("Já havia tratado o erro anteriormente");
-    } senão {
+    } else {
       console.error(`Problema com promiseGetWord(): ${reason}`);
     }
   })
@@ -385,7 +385,7 @@ function testePromise() {
   log.insertAdjacentHTML("beforeend", `${thisPromiseCount}) Iniciado<br>`);
   // Fazemos uma nova promise: prometemos uma contagem numérica dessa promise,
   // a partir de 1 (após esperar 3s)
-  const p1 = new Promise((resolver, rejeitar) => {
+  const p1 = new Promise((resolve, reject) => {
     // A função executora é chamada com a habilidade
     // para resolver ou rejeitar a promise
     log.insertAdjacentHTML(
