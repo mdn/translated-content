@@ -14,8 +14,8 @@ original_slug: Web/XSLT/apply-templates
 
 ```
 <xsl:apply-templates select=EXPRESSION mode=NAME>
-	<xsl:with-param> [optional]
-	<xsl:sort> [optional]
+  <xsl:with-param> [optional]
+  <xsl:sort> [optional]
 </xsl:apply-templates>
 ```
 

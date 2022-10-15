@@ -14,7 +14,7 @@ original_slug: Web/XSLT/text
 
 ```
 <xsl:text disable-output-escaping="yes" | "no">
-	TEXT
+  TEXT
 </xsl:text>
 ```
 

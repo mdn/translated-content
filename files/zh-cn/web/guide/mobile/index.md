@@ -60,7 +60,7 @@ slug: Web/Guide/Mobile
 
 ### 多浏览器中测试
 
-在多个浏览器中测试你的网站。这意味着在多个平台测试—至少 iOS 和 Android。
+在多个浏览器中测试你的网站。这意味着在多个平台测试——至少 iOS 和 Android。
 
-- 使用 [iOS simulator](https://developer.apple.com/devcenter/ios/index.action) 在 IPhone 上测试移动版 Safari。
-- 使用 [Android SDK](https://developer.android.com/sdk/index.html) 测试 Opera 和 Firefox。详细方法请点击 [running Firefox for Android using the Android emulator](https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator) 查看。
+- 使用 [iOS simulator](https://developer.apple.com/devcenter/ios/index.action) 在 iPhone 上测试移动版 Safari。
+- 使用 [Android SDK](https://developer.android.google.cn/studio?hl=zh-cn#command-tools) 测试 Opera 和 Firefox。详细方法请点击 [running Firefox for Android using the Android emulator](https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator) 查看。

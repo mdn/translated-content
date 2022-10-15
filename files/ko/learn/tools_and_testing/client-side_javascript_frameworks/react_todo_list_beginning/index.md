@@ -9,8 +9,8 @@ slug: >-
 
 여러분이 React로 개념 증명을 만드는, 곧 사용자가 원하는 작업을 추가, 편집, 그리고 삭제할 수 있으며, 작업을 삭제하지 않고 완료로 표시할 수도 있는 앱을 만드는 작업을 맡게 되었다고 가정해 보겠습니다. 이 기사는 기본 `App` 컴포넌트 구조와 스타일링을 설정하는 방법에 대해서 다루며, 여러분은 개별 컴포넌트 정의와 상호작용성을 배울 준비를 갖추게 될 겁니다.
 
-<div class="notecard note">
-<p class="summary"><strong>참고</strong>: 여러분의 코드를 우리의 것과 비교하고 싶다면 <a href="https://github.com/mdn/todo-react">todo-react repository</a>에서 최종적인 버전의 샘플 React 앱 코드를 확인해보세요. 실행 중인 라이브 버전은 <a href="https://mdn.github.io/todo-react-build/">https://mdn.github.io/todo-react-build/</a>에서 볼 수 있습니다.</p></div>
+> **참고:** 여러분의 코드를 우리의 것과 비교하고 싶다면 [todo-react repository](https://github.com/mdn/todo-react) 에서 최종적인 버전의 샘플 React 앱 코드를 확인해보세요. 실행 중인 라이브 버전은 <https://mdn.github.io/todo-react-build/> 에서 볼 수 있습니다.
+
 <table class="learn-box standard-table">
  <tbody>
   <tr>

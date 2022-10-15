@@ -10,7 +10,7 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego
 ---
-{{GamesSidebar}}{{IncludeSubnav("/es-ES/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Construye_grupo_bloques")}}
 
