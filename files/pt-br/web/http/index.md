@@ -16,7 +16,7 @@ Aprenda como usar HTTP com guias e tutoriais.
 - [Cache HTTP](/pt-BR/docs/Web/HTTP/Caching)
   - : O Cache é muito importante para websites rápidos. Este artigo descreve diferentes métodos de cache e como utilizar os cabeçalhos HTTP para controlá-los.
 - [Cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies)
-  - : O funcionamento dos cookies é definido pela [RFC 6265](http://tools.ietf.org/html/rfc6265). Ao receber uma requisição HTTP, o servidor pode enviar um cabeçalho `Set-Cookie` com a resposta. Depois, o cliente retorna o valor do cookie a cada requisição ao mesmo servidor na forma de um cabeçalho `Cookie` HTTP. O cookie também pode ser configurado para expirar em um determinado tempo ou permanecer restrito a um domínio ou endereço específicos.
+  - : O funcionamento dos cookies é definido pela [RFC 6265](https://tools.ietf.org/html/rfc6265). Ao receber uma requisição HTTP, o servidor pode enviar um cabeçalho `Set-Cookie` com a resposta. Depois, o cliente retorna o valor do cookie a cada requisição ao mesmo servidor na forma de um cabeçalho `Cookie` HTTP. O cookie também pode ser configurado para expirar em um determinado tempo ou permanecer restrito a um domínio ou endereço específicos.
 - [Controle de Acesso HTTP (CORS)](/pt-BR/docs/Web/HTTP/CORS)
   - : **As requisições CORS** são requisições HTTP de recursos de domínios diferentes do domínio que está fazendo a requisição. um exemplo é um site A (SiteA.com) realizando uma requisição de uma imagem por meio de um elemento _img_ para um site B (SiteB.com/img.png). Hoje em dia encontramos o CORS em grande maioria das páginas webs, carregando scripts, imagens, folhas de estilos, etc.
 - [Dicas de cliente HTTP](/pt-BR/docs/Web/HTTP/Client_hints)
@@ -40,7 +40,7 @@ Aprenda como usar HTTP com guias e tutoriais.
 Navegue por uma detalhada documentação de referências em HTTP.
 
 - [Cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers)
-  - : As mensagens de cabeçalho HTTP são utilizadas para realizar a descrição de algum recurso ou comportamento do cliente ou servidor. Propriedades customizadas nos cabeçalhos utilizam o prefixo 'X-' ; Outras no [registro IANA](/pt-BR/docs/), cujo conteúdo original foi definido na [RFC 4229](http://tools.ietf.org/html/rfc4229). IANA também mantém o [registro de novas propostas para mensagens de cabeçalhos HTTP](http://www.iana.org/assignments/message-headers/prov-headers.html).
+  - : As mensagens de cabeçalho HTTP são utilizadas para realizar a descrição de algum recurso ou comportamento do cliente ou servidor. Propriedades personalizadas nos cabeçalhos utilizam o prefixo 'X-' ; Outras no [registro IANA](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers), cujo conteúdo original foi definido na [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA também mantém o [registro de novas propostas para mensagens de cabeçalhos HTTP](https://www.iana.org/assignments/message-headers/prov-headers.html).
 - [Métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods)
   - : As mais diferentes requisições podem ser utilizadas pelos métodos de requisições HTTP: {{HTTPMethod("GET")}} e {{HTTPMethod("POST")}}, mas também algumas requisições menos comuns pelos métodos {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("DELETE")}} ou {{HTTPMethod("TRACE")}}.
 - [Respostas de códigos de status em HTTP](/pt-BR/docs/Web/HTTP/Response_codes)
