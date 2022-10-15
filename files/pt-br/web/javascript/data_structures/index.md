@@ -131,7 +131,7 @@ No entanto, ainda é possível criar outra string com base em uma operação na 
 - Uma substring do original escolhendo letras individuais ou usando [`substring()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/substring).
 - Uma concatenação de duas strings usando o operador de concatenação (`+`) ou [`concat()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
 
-#### Cuidado com a "digitação" do seu código!
+#### Cuidado com a tipagem do seu código!
 
 Pode ser tentador usar strings para representar dados complexos. Fazer isso traz benefícios a curto prazo:
 
