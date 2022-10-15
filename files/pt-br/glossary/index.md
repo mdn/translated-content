@@ -1,10 +1,6 @@
 ---
 title: Glossário
 slug: Glossary
-tags:
-  - Glossário
-  - Iniciante
-translation_of: Glossary
 original_slug: Glossario
 ---
 Tecnologias da Web contém longas listas de jargões e abreviações usadas em documentação e codificação. Este glossário fornece definições de palavras e abreviaturas que você precisa saber para entender e desenvolver para a web com sucesso.
