@@ -45,7 +45,7 @@ Navegue por uma detalhada documentação de referências em HTTP.
   - : As mais diferentes requisições podem ser utilizadas pelos métodos de requisições HTTP: {{HTTPMethod("GET")}} e {{HTTPMethod("POST")}}, mas também algumas requisições menos comuns pelos métodos {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("DELETE")}} ou {{HTTPMethod("TRACE")}}.
 - [Respostas de códigos de status em HTTP](/pt-BR/docs/Web/HTTP/Response_codes)
   - : Os códigos de status do HTTP indicam quando uma requisição foi completada. Códigos de status são agrupados em cinco classes: Informações, respostas, respostas de sucesso, redirecionamentos, erros de cliente e erros de servidor.
-- [diretivas CSP](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy)
+- [Diretivas CSP](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy)
    - : Os campos de cabeçalho de resposta {{HTTPHeader("Content-Security-Policy")}} permitem que os administradores do site controlem os recursos que o agente do usuário pode carregar para uma determinada página. Com algumas exceções, as políticas envolvem principalmente a especificação de origens de servidor e endpoints de script.
 
 ## Ferramentas & recursos
