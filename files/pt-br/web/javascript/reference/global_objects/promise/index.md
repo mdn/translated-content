@@ -426,7 +426,7 @@ Outro exemplo simples usando `Promise` e {{domxref("XMLHttpRequest")}} para carr
 
 ## Especificações
 
-{{Especificações}}
+{{Specifications}}
 
 ## Compatibilidade do navegador
 
