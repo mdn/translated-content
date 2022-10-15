@@ -1,10 +1,6 @@
 ---
 title: browserSettings
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings
-tags:
-  - Extensões
-  - Referencia
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings
 ---
 {{AddonSidebar}}Habilita uma extensão para modificar certas configurações globais do navegador. Cada propriedade desta API é um objeto {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}}, provendo a capacidade de modificar uma configuração particular.Devido estas serem configurações globais, é possível haver conflito entre extensões. Veja a documentação [`BrowserSetting.set()`](/en-US/Add-ons/WebExtensions/API/types/BrowserSetting/set) para detalhes de como ligar com conflitos .
 

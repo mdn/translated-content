@@ -1,7 +1,6 @@
 ---
 title: Pré-requisitos
 slug: Mozilla/Add-ons/WebExtensions/Prerequisites
-translation_of: Mozilla/Add-ons/WebExtensions/Prerequisites
 original_slug: Mozilla/Add-ons/WebExtensions/pre-requisitos
 ---
 Para desenvolver utilizando as APIs de uma WebExtension, você precisa de uma configuração mínima.
