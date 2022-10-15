@@ -23,15 +23,15 @@ Em um nível fundamental, a propriedade {{cssxref("color")}} define a cor de pri
 
 Sempre que um elemento é renderizado, essas propriedades são usadas para determinar a cor do texto, seu plano de fundo e quaisquer decorações no texto.
 
-- {{cssxref("cor")}}
+- {{cssxref("color")}}
   - : A cor a ser usada ao desenhar o texto e quaisquer [decorações de texto](/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (como a adição de sublinhados ou sublinhados, linhas tachadas, e assim por diante.
-- {{cssxref("cor de fundo")}}
+- {{cssxref("background-color")}}
   - : A cor de fundo do texto.
-- {{cssxref("texto-sombra")}}
+- {{cssxref("text-shadow")}}
   - : Configura um efeito de sombra para aplicar ao texto. Entre as opções para a sombra está a cor base da sombra (que é então desfocada e misturada com o fundo com base nos outros parâmetros). Consulte {{SectionOnPage("/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals", "Text drop shadows")}} para saber mais.
 - {{cssxref("text-decoration-color")}}
   - : Por padrão, as decorações de texto (como sublinhados, tachados, etc.) usam a propriedade `color` como suas cores. No entanto, você pode substituir esse comportamento e usar uma cor diferente para eles com a propriedade `text-decoration-color`.
-- {{cssxref("text-enphasis-color")}}
+- {{cssxref("text-emphasis-color")}}
   - : A cor a ser usada ao desenhar símbolos de ênfase adjacentes a cada caractere no texto. Isso é usado principalmente ao desenhar texto para idiomas do Leste Asiático.
 - {{cssxref("caret-color")}}
   - : A cor a ser usada ao desenhar o {{Glossary("caret")}} (às vezes chamado de cursor de entrada de texto) dentro do elemento. Isso só é útil em elementos que são editáveis, como {{HTMLElement("input")}} e {{HTMLElement("textarea")}} ou elementos cujo atributo HTML {{htmlattrxref("contenteditable")}} está definido.
@@ -42,11 +42,11 @@ Cada elemento é uma caixa com algum tipo de conteúdo e tem um fundo e uma bord
 
 - [Borders](#borders)
   - : Consulte a seção [Borders](#borders) para obter uma lista das propriedades CSS que você pode usar para definir as cores das bordas de uma caixa.
-- {{cssxref("cor de fundo")}}
+- {{cssxref("background-color")}}
   - : A cor de fundo a ser usada em áreas do elemento que não possuem conteúdo de primeiro plano.
-- {{cssxref("coluna-regra-cor")}}
+- {{cssxref("column-rule-color")}}
   - : A cor a ser usada ao desenhar a linha que separa as colunas do texto.
-- {{cssxref("cor do contorno")}}
+- {{cssxref("outline-color")}}
   - : A cor a ser usada ao desenhar um contorno ao redor da parte externa do elemento. Esse contorno é diferente da borda, pois não recebe espaço reservado para ele no documento (portanto, pode se sobrepor a outro conteúdo). Geralmente é usado como indicador de foco, para mostrar qual elemento receberá eventos de entrada.
 
 ### Bordas
@@ -55,7 +55,7 @@ Qualquer elemento pode ter uma [borda](/pt-BR/docs/Learn/CSS/Building_blocks/Bac
 
 Você pode usar a propriedade abreviada {{cssxref("border")}}, que permite configurar tudo sobre o borda de uma só vez (incluindo recursos não coloridos de bordas, como sua [largura](/pt-BR/docs/Web/CSS/border-width), [estilo](/pt-BR/docs/Web/CSS/border-style) (sólido, tracejado, etc.), e assim por diante.
 
-- {{cssxref("cor da borda")}}
+- {{cssxref("border-color")}}
   - : Especifica uma única cor a ser usada para cada lado da borda do elemento.
 - {{cssxref("border-left-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-top-color")}} e {{cssxref ("cor da borda inferior")}}
   - : Permite definir a cor do lado correspondente da borda do elemento.
@@ -288,7 +288,7 @@ Nossas duas caixas coloridas compartilham várias propriedades em comum, então,
 }
 ```
 
-Resumidamente, `.box` estabelece o tamanho de cada caixa, bem como a configuração da fonte utilizada dentro dela. Também aproveitamos o [CSS Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout) para centralizar facilmente o conteúdo de cada caixa. Ativamos o modo `flex` usando {{cssxref("display", "display: flex")}} e definimos {{cssxref("justify-content")}} e {{cssxref("align-items") }} para `center`. Então podemos criar uma classe para cada umas duas caixas que definem as propriedades que diferem entre as duas.
+Resumidamente, `.box` estabelece o tamanho de cada caixa, bem como a configuração da fonte utilizada dentro dela. Também aproveitamos o [CSS Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout) para centralizar facilmente o conteúdo de cada caixa. Ativamos o modo `flex` usando {{cssxref("display", "display: flex")}} e definimos {{cssxref("justify-content")}} e {{cssxref("align-items")}} para `center`. Então podemos criar uma classe para cada umas duas caixas que definem as propriedades que diferem entre as duas.
 
 ```css
 .boxLeft {
