@@ -55,7 +55,7 @@ Uma variável que não foi atribuída a um valor específico, assume o valor `un
 
 ### Tipo "Number"
 
-De acordo com os padrões ECMAScript, existe somente um tipo numérico*.* O [double-precision 64-bit binary format IEEE 754 value](http://en.wikipedia.org/wiki/Double_precision_floating-point_format) (número entre -(253 -1) e 253 -1). **Não existe um tipo específico para inteiros**. Além de poderem representar números de ponto-flutuante, o tipo _number_ possui três valores simbólicos: `+Infinity`, `-Infinity`, e [`NaN`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NaN) (não numérico).
+De acordo com os padrões ECMAScript, existe somente um tipo numérico*.* O [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (número entre -(253 -1) e 253 -1). **Não existe um tipo específico para inteiros**. Além de poderem representar números de ponto-flutuante, o tipo _number_ possui três valores simbólicos: `+Infinity`, `-Infinity`, e [`NaN`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NaN) (não numérico).
 
 Para verificar o maior ou o menor valor disponível dentro de +/-`Infinity`, você pode usar as constantes {{jsxref("Number.MAX_VALUE")}} ou {{jsxref("Number.MIN_VALUE")}}, e a partir do ECMAScript 6, você também consegue verificar se um número está dentro da região de um ponto flutuante do tipo `double-precision`, usando {{jsxref("Number.isSafeInteger()")}}, como também {{jsxref("Number.MAX_SAFE_INTEGER")}}, e {{jsxref("Number.MIN_SAFE_INTEGER")}}. Fora dessa região, números inteiros em JavaScript não são mais precisos e serão uma aproximação de um número de ponto flutuante do tipo `double-precision`.
 
@@ -68,7 +68,7 @@ Infinity
 -Infinity
 ```
 
-Apesar de um número frequentemente representar somente seu valor, JavaScript fornece [alguns operadores binários](/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators). Estes podem ser usados para representar muitos valores booleanos dentro de um único número usando [bit masking](http://en.wikipedia.org/wiki/Mask_%28computing%29). Entretanto, isto é usualmente considerado uma má prática, desde que JavaScript oferece outros meios para representar uma configuração de booleanos (como uma array de booleanos ou um objeto com valores booleanos assinalados em propriedades). Bit masking também tende a fazer o código mais difícil de ler, entender e de realizar manutenção. Isto pode ser necessário em um ambiente bastante limitado, como quando tentamos lidar com limitação de armazenamento ou armazenamento local ou em casos extremos quando cada bit na rede conta. Esta técnica somente deveria ser considerada quando é a última medida possível para otimizar o tamanho.
+Apesar de um número frequentemente representar somente seu valor, JavaScript fornece [alguns operadores binários](/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators). Estes podem ser usados para representar muitos valores booleanos dentro de um único número usando [bit masking](https://en.wikipedia.org/wiki/Mask_%28computing%29). Entretanto, isto é usualmente considerado uma má prática, desde que JavaScript oferece outros meios para representar uma configuração de booleanos (como uma array de booleanos ou um objeto com valores booleanos assinalados em propriedades). Bit masking também tende a fazer o código mais difícil de ler, entender e de realizar manutenção. Isto pode ser necessário em um ambiente bastante limitado, como quando tentamos lidar com limitação de armazenamento ou armazenamento local ou em casos extremos quando cada bit na rede conta. Esta técnica somente deveria ser considerada quando é a última medida possível para otimizar o tamanho.
 
 ### Tipo "String"
 
@@ -113,7 +113,7 @@ Associa uma chave com um valor e tem os seguintes atributos:
 | ------------------ | ------------------------ | ------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | \[\[Value]]        | Qualquer tipo JavaScript | Valor retornado por uma chamada get da propriedade.                                                                       | Indefinido    |
 | \[\[Writable]]     | Booleano                 | Se `falso`, o\[\[Value]] da propriedade não pode ser alterado.                                                            | falso         |
-| \[\[Enumerable]]   | Booleano                 | Se `true`, a propriedade será enumerda em [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in) loops.     | falso         |
+| \[\[Enumerable]]   | Booleano                 | Se `true`, a propriedade será enumerada em [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in) loops.     | falso         |
 | \[\[Configurable]] | Booleano                 | Se `falso`, a propriedade não pode ser deletada e atributos além de \[\[Value]] e \[\[Writable]] não podem ser alterados. | falso         |
 
 #### Propriedade de acesso
@@ -124,12 +124,12 @@ Associa uma chave com uma ou duas funções de acesso (get e set) para retornar 
 | ------------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | \[\[Get]]          | Função objeto ou indefinido | A função é chamada com uma lista de argumentos vazia e retorna o valor da propriedade sempre que é realizado um acesso get ao valor. Veja também: [`get`](/pt-BR/docs/Web/JavaScript/Reference/Operators/get).            | Indefinido    |
 | \[\[Set]]          | Função objeto ou indefinido | A função é chamada com um argumento o valor designado e é executada sempre que houver uma tentativa de alteração de uma propriedade específica. Veja também: [`set`](/pt-BR/docs/Web/JavaScript/Reference/Operators/set). | Indefinido    |
-| \[\[Enumerable]]   | Booleano                    | Se `true`, a propriedade será enumerdada em [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in) loops.                                                                                                   | falso         |
+| \[\[Enumerable]]   | Booleano                    | Se `true`, a propriedade será enumerada em [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in) loops.                                                                                                   | falso         |
 | \[\[Configurable]] | Boolean                     | Se `falso`, a propriedade não pode ser deletada e não pode ser alterada para uma propriedade de dados.                                                                                                                    | falso         |
 
 ### Funções e objetos "normais"
 
-Um objeto do JavaScript é um mapeamento entre chaves e valores. Chaves são Strings e valores podem ser de qualquer tipo. Isso faz com que objetos sejam perfeitos para [hashmaps](http://en.wikipedia.org/wiki/Hash_table).
+Um objeto do JavaScript é um mapeamento entre chaves e valores. Chaves são Strings e valores podem ser de qualquer tipo. Isso faz com que objetos sejam perfeitos para [hashmaps](https://en.wikipedia.org/wiki/Hash_table).
 
 Funções são objetos comuns com a capacidade adicional de serem chamados.
 
