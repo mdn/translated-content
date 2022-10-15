@@ -1,13 +1,15 @@
 ---
 title: 'CSP: form-action'
 slug: Web/HTTP/Headers/Content-Security-Policy/form-action
+l10n:
+  sourceCommit: 8e1f45b8c0a3671f6e3de43c0764ad610aa345dd
 ---
 
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form-action`** ディレクティブは、指定のコンテキストからフォームの送信先として使用される URL を制限します。
 
-> **警告:** `form-action` がフォーム送信後のリダイレクトをブロックするかどうかは [議論の最中](https://github.com/w3c/webappsec-csp/issues/8) であり、この点に関する実装はブラウザによって異なります。 (例えば、 Firefox 57 はリダイレクトをブロックしませんが、 Chrome 63 はリダイレクトをブロックします。).
+> **警告:** `form-action` がフォーム送信後のリダイレクトをブロックするかどうかは [議論の最中](https://github.com/w3c/webappsec-csp/issues/8) であり、この点に関する実装はブラウザーによって異なります。 (例えば、 Firefox 57 はリダイレクトをブロックしませんが、 Chrome 63 はリダイレクトをブロックします。)
 
 <table class="properties">
   <tbody>
@@ -28,7 +30,7 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form-action`** デ�
 
 ## 構文
 
-`form-action` ポリシーには、 1つ以上のソースを設定することができます。
+`form-action` ポリシーには、 1 つ以上のソースを設定することができます。
 
 ```http
 Content-Security-Policy: form-action <source>;
@@ -39,7 +41,7 @@ Content-Security-Policy: form-action <source> <source>;
 
 `<source>` には、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "fetch directives")}} (と [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)) で使用できます。
+なお、この同じ値のセットはすべての{{Glossary("fetch directive", "fetch directives")}} (と [number of other directives](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)) で使用できます。
 
 ## 例
 
