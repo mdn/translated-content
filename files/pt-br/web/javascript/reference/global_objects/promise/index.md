@@ -378,7 +378,7 @@ Ao clicar no botão várias vezes em um curto espaço de tempo, você verá até
 
 deixe contagemdepromise = 0;
 
-function testePromise() {
+function testPromise() {
   const thisPromiseCount = ++promiseCount;
   const log = document.getElementById("log");
   // começar
