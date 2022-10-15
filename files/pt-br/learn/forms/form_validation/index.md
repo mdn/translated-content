@@ -170,7 +170,7 @@ Neste exemplo, o elemento {{HTMLElement("input")}} aceita um dos dois valores po
 
 Neste ponto, tente alterar o valor dentro do atributo `pattern` para igualar alguns dos exemplos que você viu anteriormente e veja como isso afeta os valores que você pode inserir para tornar o valor de entrada válido. Tente escrever alguns dos seus próprios, e veja como você se sai! Tente torná-los relacionados a frutas sempre que possível, para que seus exemplos façam sentido!
 
-> **Nota:** Alguns tipos de elemento {{HTMLElement("input")}} não precisam de um atributo {{htmlattrxref("pattern","input")}} para serem validados. Especificar o tipo `email`, por exemplo, valida o valor inserido em relação a uma expressão regular que corresponde a um endereço de e-mail bem formado (ou uma lista de endereços de e-mail separados por vírgula se tiver o {{htmlattrxref("multiple","input")} } atributo). Como outro exemplo, os campos com o tipo `url` requerem automaticamente um URL devidamente formado.
+> **Nota:** Alguns tipos de elemento {{HTMLElement("input")}} não precisam de um atributo {{htmlattrxref("pattern","input")}} para serem validados. Especificar o tipo `email`, por exemplo, valida o valor inserido em relação a uma expressão regular que corresponde a um endereço de e-mail bem formado (ou uma lista de endereços de e-mail separados por vírgula se tiver o {{htmlattrxref("multiple","input")}} atributo). Como outro exemplo, os campos com o tipo `url` requerem automaticamente um URL devidamente formado.
 
 > **Nota:** O elemento {{HTMLElement("textarea")}} não suporta o atributo {{htmlattrxref("pattern","input")}}.
 
