@@ -1,6 +1,8 @@
 ---
 title: 'CSP: font-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/font-src
+l10n:
+  sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
 
 {{HTTPSidebar}}
