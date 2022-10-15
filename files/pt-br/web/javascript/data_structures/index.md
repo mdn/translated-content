@@ -49,15 +49,15 @@ Todos os tipos, exceto objetos, definem valores imutáveis ​​(ou seja, valor
 
 ### Tipo Boolean
 
-Boolean representa uma entidade lógica e pode ter dois valores: `true` e `false`. Consulte [Boolean](/en-US/docs/Glossary/Boolean) e {{jsxref("Boolean")}} para obter mais detalhes.
+Boolean representa uma entidade lógica e pode ter dois valores: `true` e `false`. Consulte [Boolean](/pt-BR/docs/Glossary/Boolean) e {{jsxref("Boolean")}} para obter mais detalhes.
 
 ### Tipo Null
 
-O tipo Null tem exatamente um valor: `null`. Consulte [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) e [Null](/en-US/docs/Glossary/Null) para obter mais detalhes.
+O tipo Null tem exatamente um valor: `null`. Consulte [`null`](/pt-BR/docs/Web/JavaScript/Reference/Operators/null) e [Null](/pt-BR/docs/Glossary/Null) para obter mais detalhes.
 
 ### Tipo Undefined
 
-Uma variável que não recebeu um valor tem o valor `undefined`. Consulte {{jsxref("undefined")}} e [Undefined](/en-US/docs/Glossary/undefined) para mais detalhes.
+Uma variável que não recebeu um valor tem o valor `undefined`. Consulte {{jsxref("undefined")}} e [Undefined](/pt-BR/docs/Glossary/undefined) para mais detalhes.
 
 ### Tipos numéricos
 
@@ -85,7 +85,7 @@ console.log(42 / +0); // Infinity
 console.log(42 / -0); // -Infinity
 ```
 
-Embora um número geralmente represente apenas seu valor, o JavaScript fornece [operadores bitwise](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators).
+Embora um número geralmente represente apenas seu valor, o JavaScript fornece [operadores bitwise](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators).
 
 > **Nota:** embora os operadores bit a bit _podem_ ser usados ​​para representar vários valores booleanos em um único número usando [mascaramento de bits](https://en.wikipedia.org/wiki/Mask_%28computing%29), isso geralmente é considerada uma má prática. JavaScript oferece outros meios para representar um conjunto de booleanos (como uma matriz de booleanos ou um objeto com valores booleanos atribuídos a propriedades nomeadas). O mascaramento de bits também tende a tornar o código mais difícil de ler, entender e manter.
 
@@ -128,8 +128,8 @@ As strings JavaScript são imutáveis. Isso significa que uma vez que uma string
 
 No entanto, ainda é possível criar outra string com base em uma operação na string original. Por exemplo:
 
-- Uma substring do original escolhendo letras individuais ou usando [`substring()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring).
-- Uma concatenação de duas strings usando o operador de concatenação (`+`) ou [`concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
+- Uma substring do original escolhendo letras individuais ou usando [`substring()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/substring).
+- Uma concatenação de duas strings usando o operador de concatenação (`+`) ou [`concat()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
 
 #### Cuidado com a "digitação" do seu código!
 
@@ -137,7 +137,7 @@ Pode ser tentador usar strings para representar dados complexos. Fazer isso traz
 
 - É fácil construir strings complexas com concatenação.
 - Strings são fáceis de depurar (o que você vê impresso é sempre o que está na string).
-- Strings são o denominador comum de muitas APIs ([campos de entrada](/en-US/docs/Web/API/HTMLInputElement), valores de [armazenamento local](/en-US/docs/Web/API/Web_Storage_API) , [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) respostas ao usar `responseText`, etc.) e pode ser tentador trabalhar apenas com strings.
+- Strings são o denominador comum de muitas APIs ([campos de entrada](/pt-BR/docs/Web/API/HTMLInputElement), valores de [armazenamento local](/pt-BR/docs/Web/API/Web_Storage_API) , [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest) respostas ao usar `responseText`, etc.) e pode ser tentador trabalhar apenas com strings.
 
 Com convenções, é possível representar qualquer estrutura de dados em uma string. Isso não faz com que seja uma boa ideia. Por exemplo, com um separador, pode-se emular uma lista (enquanto um array JavaScript seria mais adequado). Infelizmente, quando o separador é usado em um dos elementos da "lista", a lista é quebrada. Um caractere de escape pode ser escolhido, etc. Tudo isso requer convenções e cria uma carga de manutenção desnecessária.
 
@@ -151,11 +151,11 @@ Para mais detalhes veja a página de referência {{jsxref("Symbol")}}.
 
 ## Objetos
 
-Na ciência da computação, um objeto é um valor na memória que possivelmente é referenciado por um [identificador](/en-US/docs/Glossary/Identifier).
+Na ciência da computação, um objeto é um valor na memória que possivelmente é referenciado por um [identificador](/pt-BR/docs/Glossary/Identifier).
 
 ### Propriedades
 
-Em JavaScript, os objetos podem ser vistos como uma coleção de propriedades. Com a [sintaxe literal de objeto](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), um conjunto limitado de propriedades é inicializado; então as propriedades podem ser adicionadas e removidas. Os valores de propriedade podem ser valores de qualquer tipo, incluindo outros objetos, o que permite construir estruturas de dados complexas. As propriedades são identificadas usando valores _key_. Um valor _key_ é um {{Glossary("String", "String value")}} ou um [Symbol value](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol).
+Em JavaScript, os objetos podem ser vistos como uma coleção de propriedades. Com a [sintaxe literal de objeto](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), um conjunto limitado de propriedades é inicializado; então as propriedades podem ser adicionadas e removidas. Os valores de propriedade podem ser valores de qualquer tipo, incluindo outros objetos, o que permite construir estruturas de dados complexas. As propriedades são identificadas usando valores _key_. Um valor _key_ é um {{Glossary("String", "String value")}} ou um [Symbol value](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Symbol).
 
 Existem dois tipos de propriedades de objeto: A [_data_ property](#data_property) e a [_accessor_ property](#accessor_property). Cada propriedade tem _attributes_ correspondentes. Cada atributo é acessado internamente pelo mecanismo JavaScript, mas você pode defini-los por meio de {{jsxref("Object.defineProperty()")}} ou lê-los por meio de {{jsxref("Object.getOwnPropertyDescriptor()")}}. Você pode ler mais sobre as várias nuances na página {{jsxref("Object.defineProperty()")}}.
 
@@ -168,7 +168,7 @@ As propriedades de dados associam uma chave a um valor. Pode ser descrito pelos 
 - `gravável`
   - : Um valor booleano que indica se a propriedade pode ser alterada com uma atribuição.
 - `enumerável`
-  - : Um valor booleano que indica se a propriedade pode ser enumerada por um loop [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in). Consulte também [Enumerabilidade e propriedade de propriedades](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) para saber como a enumerabilidade interage com outras funções e sintaxes.
+  - : Um valor booleano que indica se a propriedade pode ser enumerada por um loop [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in). Consulte também [Enumerabilidade e propriedade de propriedades](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) para saber como a enumerabilidade interage com outras funções e sintaxes.
 - `configurável`
   - : Um valor booleano que indica se a propriedade pode ser excluída, pode ser alterada para uma propriedade acessora e pode ter seus atributos alterados.
 
@@ -181,11 +181,11 @@ Associa uma chave com uma das duas funções de acesso (`get` e `set`) para recu
 Uma propriedade do acessor tem os seguintes atributos:
 
 - `get`
-  - : Uma função chamada com uma lista de argumentos vazia para recuperar o valor da propriedade sempre que um acesso de obtenção ao valor for executado. Consulte também [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get). Pode ser `indefinido`.
+  - : Uma função chamada com uma lista de argumentos vazia para recuperar o valor da propriedade sempre que um acesso de obtenção ao valor for executado. Consulte também [getters](/pt-BR/docs/Web/JavaScript/Reference/Functions/get). Pode ser `indefinido`.
 - `definir`
-  - : Uma função chamada com um argumento que contém o valor atribuído. Executado sempre que se tenta alterar uma propriedade especificada. Consulte também [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set). Pode ser `indefinido`.
+  - : Uma função chamada com um argumento que contém o valor atribuído. Executado sempre que se tenta alterar uma propriedade especificada. Consulte também [setters](/pt-BR/docs/Web/JavaScript/Reference/Functions/set). Pode ser `indefinido`.
 - `enumerável`
-  - : Um valor booleano que indica se a propriedade pode ser enumerada por um loop [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in). Consulte também [Enumerabilidade e propriedade de propriedades](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) para saber como a enumerabilidade interage com outras funções e sintaxes.
+  - : Um valor booleano que indica se a propriedade pode ser enumerada por um loop [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in). Consulte também [Enumerabilidade e propriedade de propriedades](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) para saber como a enumerabilidade interage com outras funções e sintaxes.
 - `configurável`
   - : Um valor booleano que indica se a propriedade pode ser excluída, pode ser alterada para uma propriedade de dados e pode ter seus atributos alterados.
 
@@ -197,15 +197,15 @@ Funções são objetos regulares com a capacidade adicional de serem _callable_.
 
 ### Datas
 
-Ao representar datas, a melhor opção é usar o [utilitário `Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) integrado em JavaScript.
+Ao representar datas, a melhor opção é usar o [utilitário `Date`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date) integrado em JavaScript.
 
 ### Coleções indexadas: Arrays e Arrays tipados
 
-[Arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) são objetos regulares para os quais existe uma relação específica entre propriedades de chave inteira e a propriedade `length`.
+[Arrays](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array) são objetos regulares para os quais existe uma relação específica entre propriedades de chave inteira e a propriedade `length`.
 
-Além disso, arrays herdam de `Array.prototype`, que fornece a eles um punhado de métodos convenientes para manipular arrays. Por exemplo, [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (pesquisando um valor no array) ou [`push()`](/en- US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) (adicionando um elemento à matriz) e assim por diante. Isso torna os Arrays um candidato perfeito para representar listas ou conjuntos.
+Além disso, arrays herdam de `Array.prototype`, que fornece a eles um punhado de métodos convenientes para manipular arrays. Por exemplo, [`indexOf()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (pesquisando um valor no array) ou [`push()`](/en- US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) (adicionando um elemento à matriz) e assim por diante. Isso torna os Arrays um candidato perfeito para representar listas ou conjuntos.
 
-[Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays) apresentam uma visão semelhante a um array de um buffer de dados binários subjacente e oferecem muitos métodos que têm semântica semelhante aos equivalentes de array. "Typed array" é um termo abrangente para uma variedade de estruturas de dados, incluindo `Int8Array`, `Float32Array`, etc. Verifique a página [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) para obter mais informações .
+[Typed Arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays) apresentam uma visão semelhante a um array de um buffer de dados binários subjacente e oferecem muitos métodos que têm semântica semelhante aos equivalentes de array. "Typed array" é um termo abrangente para uma variedade de estruturas de dados, incluindo `Int8Array`, `Float32Array`, etc. Verifique a página [typed array](/pt-BR/docs/Web/JavaScript/Typed_arrays) para obter mais informações .
 
 ### Coleções chaveadas: Maps, Sets, WeakMaps, WeakSets
 
@@ -221,19 +221,19 @@ Normalmente, para vincular dados a um nó DOM, pode-se definir propriedades dire
 
 JSON (**J**ava**S**cript **O**bject **N**otation) é um formato leve de intercâmbio de dados, derivado do JavaScript, mas usado por muitas linguagens de programação. JSON cria estruturas de dados universais.
 
-Consulte [JSON](/en-US/docs/Glossary/JSON) e {{jsxref("JSON")}} para obter mais detalhes.
+Consulte [JSON](/pt-BR/docs/Glossary/JSON) e {{jsxref("JSON")}} para obter mais detalhes.
 
 ### Mais objetos na biblioteca padrão
 
 JavaScript tem uma biblioteca padrão de objetos internos.
 
-Por favor, dê uma olhada na [referência](/en-US/docs/Web/JavaScript/Reference/Global_Objects) para saber mais sobre objetos.
+Por favor, dê uma olhada na [referência](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects) para saber mais sobre objetos.
 
 ## Determinando tipos usando o operador `typeof`
 
 O operador `typeof` pode ajudá-lo a encontrar o tipo de sua variável.
 
-Leia a [página de referência](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) para obter mais detalhes e casos extremos.
+Leia a [página de referência](/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof) para obter mais detalhes e casos extremos.
 
 ## Veja também
 
