@@ -55,7 +55,7 @@ const minhaPromise = new Promise((resolve, reject) => {
   }, 300);
 });
 
-minha promise
+minhaPromise
   .then(handleFulfilledA, handleRejectedA)
   .then(handleFulfilledB, handleRejectedB)
   .then(handleFulfilledC, handleRejectedC);
@@ -66,7 +66,7 @@ O processamento continua para o próximo elo da cadeia mesmo quando um `.then()`
 Manipular uma promise rejeitada em cada `.then()` tem consequências mais adiante na cadeia de promises. Às vezes não há escolha, porque um erro deve ser tratado imediatamente. Nesses casos, devemos lançar um erro de algum tipo para manter o estado de erro na cadeia. Por outro lado, na ausência de uma necessidade imediata, é mais simples deixar de fora o tratamento de erros até uma instrução `.catch()` final. Um `.catch()` é realmente apenas um `.then()` sem um slot para uma função de retorno de chamada para o caso em que a promise é cumprida.
 
 ``` js
-minha promise
+minhaPromise
   .then(handleFulfilledA)
   .then(handleFulfilledB)
   .then(handleFulfilledC)
@@ -76,7 +76,7 @@ minha promise
 Usando {{JSxRef("Functions/Arrow_functions", "Arrow Function Expressions", "", 1)}} para as funções de retorno de chamada, a implementação da cadeia de promises pode ser algo assim:
 
 ``` js
-minha promise
+minhaPromise
   .then((valor) => `${valor} e barra`)
   .then((valor) => `${valor} e barra novamente`)
   .then((valor) => `${valor} e novamente`)
@@ -162,7 +162,7 @@ Para ilustrar isso um pouco mais, podemos dar uma olhada em como um [`<iframe>`]
 <!-- temos um reino aqui -->
 <script>
   // temos um reino aqui também
-  limite const = frames[0].postMessage.bind(frames[0], "alguns dados", "*");
+  const bound = frames[0].postMessage.bind(frames[0], "alguns dados", "*");
   // bound é uma função embutida — não há usuário
   // código na pilha, então qual reino usamos?
   setTimeout(limite);
@@ -178,7 +178,7 @@ O mesmo conceito se aplica às promises. Se modificarmos um pouco o exemplo acim
 <!-- temos um reino aqui -->
 <script>
   // temos um reino aqui também
-  limite const = frames[0].postMessage.bind(frames[0], "alguns dados", "*");
+  const bound = frames[0].postMessage.bind(frames[0], "alguns dados", "*");
   // bound é uma função incorporada — não há usuário
   // código na pilha — qual reino usamos?
   Promise.resolve(undefined).then(bound);
@@ -194,7 +194,7 @@ Se alterarmos isso para que o `<iframe>` no documento esteja ouvindo as mensagen
 <!DOCTYPEhtml>
 <iframe src="x.html"></iframe>
 <script>
-  limite const = frames[0].postMessage.bind(frames[0], "alguns dados", "*");
+  const bound = frames[0].postMessage.bind(frames[0], "alguns dados", "*");
   Promise.resolve(undefined).then(bound);
 </script>
 ```
