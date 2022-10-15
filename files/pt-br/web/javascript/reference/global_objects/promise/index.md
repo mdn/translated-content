@@ -28,7 +28,7 @@ Uma promise é considerada _resolvida_ se for cumprida ou rejeitada, mas não pe
 
 Você também ouvirá o termo _resolved_ usado com promises — isso significa que a promise é liquidada ou "bloqueada" para corresponder ao estado eventual de outra promise e resolvê-la ou rejeitá-la não tem efeito. O documento [Estados e destinos](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) da proposta original da Promise contém mais detalhes sobre a terminologia da promise. Coloquialmente, promises "resolvidas" geralmente são equivalentes a promises "cumpridas", mas, conforme ilustrado em "Estados e destinos", as promises resolvidas também podem estar pendentes ou rejeitadas. Por exemplo:
 
-``` js
+```js
 new Promise((resolveOuter) => {
   resolveOuter(
     new Promise((resolveInner) => {
@@ -48,7 +48,7 @@ Os métodos `{{jsxref("Promise.prototype.then()")}}`, `{{jsxref("Promise.prototy
 
 O método `.then()` aceita até dois argumentos; o primeiro argumento é uma função de retorno de chamada para o caso cumprido da promise e o segundo argumento é uma função de retorno de chamada para o caso rejeitado. Cada `.then()` retorna um objeto de promise recém-gerado, que pode ser usado opcionalmente para encadeamento; por exemplo:
 
-``` js
+```js
 const minhaPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("foo");
@@ -65,7 +65,7 @@ O processamento continua para o próximo elo da cadeia mesmo quando um `.then()`
 
 Manipular uma promise rejeitada em cada `.then()` tem consequências mais adiante na cadeia de promises. Às vezes não há escolha, porque um erro deve ser tratado imediatamente. Nesses casos, devemos lançar um erro de algum tipo para manter o estado de erro na cadeia. Por outro lado, na ausência de uma necessidade imediata, é mais simples deixar de fora o tratamento de erros até uma instrução `.catch()` final. Um `.catch()` é realmente apenas um `.then()` sem um slot para uma função de retorno de chamada para o caso em que a promise é cumprida.
 
-``` js
+```js
 minhaPromise
   .then(handleFulfilledA)
   .then(handleFulfilledB)
@@ -75,7 +75,7 @@ minhaPromise
 
 Usando {{JSxRef("Functions/Arrow_functions", "Arrow Function Expressions", "", 1)}} para as funções de retorno de chamada, a implementação da cadeia de promises pode ser algo assim:
 
-``` js
+```js
 minhaPromise
   .then((valor) => `${valor} e barra`)
   .then((valor) => `${valor} e barra novamente`)
@@ -95,19 +95,19 @@ A condição de término de uma promise determina o estado "estabelecido" da pr�
 
 As promises de uma corrente são aninhadas como bonecas russas, mas são estouradas como o topo de uma pilha. A primeira promise na cadeia está mais profundamente aninhada e é a primeira a aparecer.
 
-``` simples
+```plain
 (promise D, (promise C, (promise B, (promise A))))
 ```
 
 Quando um `nextValue` é uma promise, o efeito é uma substituição dinâmica. O `return` faz com que uma promise seja exibida, mas a promise `nextValue` é colocada em seu lugar. Para o aninhamento mostrado acima, suponha que `.then()` associado a "promise B" retorne um `nextValue` de "promise X". O aninhamento resultante ficaria assim:
 
-``` simples
+```plain
 (promise D, (promise C, (promise X)))
 ```
 
 Uma promise pode participar de mais de um aninhamento. Para o código a seguir, a transição de `promiseA` para um estado "settled" fará com que ambas as instâncias de `.then()` sejam invocadas.
 
-``` js
+```js
 const promiseA = new Promise(myExecutorFunc);
 const promiseB = promiseA.then(handleFulfilled1, handleRejected1);
 const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
@@ -115,7 +115,7 @@ const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 
 Uma ação pode ser atribuída a uma promise já "estabelecida". Nesse caso, a ação (se apropriado) será executada na primeira oportunidade assíncrona. Observe que as promises são garantidas como assíncronas. Portanto, uma ação para uma promise já "estabelecida" ocorrerá somente depois que a pilha for limpa e um tique-taque do relógio passar. O efeito é muito parecido com `setTimeout(action,10)`.
 
-``` js
+```js
 const promiseA = new Promise((resoluçãoFunc, rejeiçãoFunc) => {
   resoluçãoFunc(777);
 });
@@ -134,7 +134,7 @@ O ecossistema JavaScript fez várias implementações do Promise muito antes de 
 
 Para interoperar com as implementações de Promise existentes, a linguagem permite o uso de thenables no lugar de promises. Por exemplo, [`Promise.resolve`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) não apenas resolverá as promises, mas também rastreará os entãoables.
 
-``` js
+```js
 const aThenable = {
   then(onFulfilled, onRejected) {
     onCumprido({
@@ -273,7 +273,7 @@ Consulte o [Guia do Microtask](/pt-BR/docs/Web/API/HTML_DOM_API/Microtask_guide)
 
 ### Exemplo básico
 
-``` js
+```js
 const minhaPrimeiraPromise = new Promise((resolve, reject) => {
   // Chamamos resolve(...) quando o que estávamos fazendo de forma assíncrona foi bem-sucedido e reject(...) quando falhou.
   // Neste exemplo, usamos setTimeout(...) para simular código assíncrono.
@@ -300,7 +300,7 @@ Observe que a função `troubleWithGetNumber()` termina com um `throw`. Isso é 
 
 Este código pode ser executado em NodeJS. A compreensão é aprimorada ao ver os erros realmente ocorrerem. Para forçar mais erros, altere os valores de `threshold`.
 
-``` js
+```js
 // Para experimentar o tratamento de erros, os valores "threshold" causam erros aleatoriamente
 const THRESHOLD_A = 8; // pode usar zero 0 para garantir o erro
 
@@ -373,7 +373,7 @@ Ao clicar no botão várias vezes em um curto espaço de tempo, você verá até
 
 ####Javascript
 
-``` js
+```js
 "use strict";
 
 let promiseCount = 0;
