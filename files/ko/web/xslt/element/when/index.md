@@ -14,7 +14,7 @@ original_slug: Web/XSLT/when
 
 ```
 <xsl:when test=EXPRESSION>
-	TEMPLATE
+  TEMPLATE
 </xsl:when>
 ```
 

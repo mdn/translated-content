@@ -14,7 +14,7 @@ original_slug: Web/XSLT/key
 
 ```
 <xsl:key name=NAME match=EXPRESSION
-	use=EXPRESSION />
+  use=EXPRESSION />
 ```
 
 ### 필수 속성

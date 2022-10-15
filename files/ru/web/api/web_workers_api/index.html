@@ -13,7 +13,7 @@ translation_of: Web/API/Web_Workers_API
 ---
 <p>{{DefaultAPISidebar("Web Workers API")}}</p>
 
-<p class="summary"><strong>Web Workers</strong> это механизм, который позволяет скрипту выполняться в фоновом потоке, который отделен от основного потока веб-приложения. Преимущество заключается в том, ресурсоёмкие вычисления могут выполняться в отдельном потоке, позволяя запустить основной (обычно пользовательский) поток без блокировки и замедления.</p>
+<p class="summary"><strong>Web Workers</strong> это механизм, который позволяет скрипту выполняться в фоновом потоке, который отделен от основного потока веб-приложения. Преимущество заключается в том, что ресурсоёмкие вычисления могут выполняться в отдельном потоке, позволяя запустить основной (обычно пользовательский) поток без блокировки и замедления.</p>
 
 <h2 id="Концепции_и_использование_Web_воркеров">Концепции и использование Web воркеров</h2>
 
@@ -48,11 +48,11 @@ translation_of: Web/API/Web_Workers_API
  <dt>{{domxref("SharedWorker")}}</dt>
  <dd>Представляет конкретный вид воркера, к которому можно получить доступ из нескольких контекстов, будь то несколько окон, iframe или даже воркеров.</dd>
  <dt>{{domxref("WorkerGlobalScope")}}</dt>
- <dd>Represents the generic scope of any worker (doing the same job as {{domxref("Window")}} does for normal web content). Different types of worker have scope objects that inherit from this interface and add more specific features.</dd>
+ <dd>Представляет общее описание для любого воркера ({{domxref("Window")}} делает то же самое для обычного веб-контента). Различные типы воркеров, наследующие этот интерфейс, могут расширять его функциональность.</dd>
  <dt>{{domxref("DedicatedWorkerGlobalScope")}}</dt>
- <dd>Represents the scope of a dedicated worker, inheriting from {{domxref("WorkerGlobalScope")}} and adding some dedicated features.</dd>
+ <dd>Представляет описание dedicated worker, наследуется от {{domxref("WorkerGlobalScope")}} и расширяет его функциональность.</dd>
  <dt>{{domxref("SharedWorkerGlobalScope")}}</dt>
- <dd>Represents the scope of a shared worker, inheriting from {{domxref("WorkerGlobalScope")}} and adding some dedicated features.</dd>
+ <dd>Пердставляет описание shared worker, наследуется от {{domxref("WorkerGlobalScope")}} и расширяет его функциональность.</dd>
  <dt>{{domxref("WorkerNavigator")}}</dt>
  <dd>Представляет идентификатор и состояние пользовательского агента (клиента).</dd>
 </dl>

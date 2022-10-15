@@ -88,10 +88,10 @@ WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 
 [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) несколько старше, чем Fetch, но всё же может успешно использоваться для получения типизированного массива. Опять же, если предположить, что наш модуль называется `simple.wasm`:
 
-1.  Создайте новый экземпляр {{domxref("XMLHttpRequest()")}} и используйте его метод {{domxref("XMLHttpRequest.open","open()")}} для открытия запроса, задав для метода запроса значение `GET` и указав путь к файлу, который мы хотим получить.
-2.  Ключевой частью этого является установка типа ответа `'arraybuffer'` с помощью свойства {{domxref("XMLHttpRequest.responseType","responseType")}}.
-3.  Затем отправьте запрос с помощью {{domxref("XMLHttpRequest.send()")}}.
-4.  Затем мы используем обработчик событий {{domxref("XMLHttpRequest.onload", "onload")}} для вызова функции после завершения загрузки ответа - в этой функции мы получаем буфер массива из {{domxref("XMLHttpRequest.response", "response")}} и затем передайте это в наш метод {{jsxref("WebAssembly.instantiate()")}}, как мы это делали с Fetch.
+1. Создайте новый экземпляр {{domxref("XMLHttpRequest()")}} и используйте его метод {{domxref("XMLHttpRequest.open","open()")}} для открытия запроса, задав для метода запроса значение `GET` и указав путь к файлу, который мы хотим получить.
+2. Ключевой частью этого является установка типа ответа `'arraybuffer'` с помощью свойства {{domxref("XMLHttpRequest.responseType","responseType")}}.
+3. Затем отправьте запрос с помощью {{domxref("XMLHttpRequest.send()")}}.
+4. Затем мы используем обработчик событий {{domxref("XMLHttpRequest.onload", "onload")}} для вызова функции после завершения загрузки ответа - в этой функции мы получаем буфер массива из {{domxref("XMLHttpRequest.response", "response")}} и затем передайте это в наш метод {{jsxref("WebAssembly.instantiate()")}}, как мы это делали с Fetch.
 
 Финальный код выглядит так:
 

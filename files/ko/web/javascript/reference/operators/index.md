@@ -187,7 +187,7 @@ translation_of: Web/JavaScript/Reference/Operators
 ### 선택적 연결 연산자
 
 - {{JSxRef("Operators/Optional_chaining", "?.")}}
-  - : 선택적 연결 연산자는 참조가 [nullish](https://developer.mozilla.org/en-US/docs/Glossary/nullish) ([`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) 또는 [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)) 인 경우 오류를 발생시키는 대신 `undefined`를 반환합니다.
+  - : 선택적 연결 연산자는 참조가 [nullish](/en-US/docs/Glossary/nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) 또는 [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)) 인 경우 오류를 발생시키는 대신 `undefined`를 반환합니다.
 
 ### 할당 연산자
 
