@@ -1,11 +1,6 @@
 ---
 title: XSLT
 slug: Web/XSLT
-tags:
-  - NeedsTranslation
-  - TopicStub
-  - XSLT
-translation_of: Web/XSLT
 ---
 {{XSLTRef}}
 

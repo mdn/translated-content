@@ -1,14 +1,6 @@
 ---
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
-tags:
-  - API
-  - DOM
-  - Gecko
-  - NeedsBrowserCompatibility
-  - Propriedade
-  - Referência(2)
-translation_of: Web/API/Element/innerHTML
 ---
 {{APIRef("DOM")}}
 

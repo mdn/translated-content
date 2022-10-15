@@ -1,15 +1,6 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
-tags:
-  - CSP
-  - Cabeçalho de Resposta
-  - HTTP
-  - Política de Segurança de Conteúdo
-  - Referencia
-  - Segurança
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
 {{HTTPSidebar}}
 

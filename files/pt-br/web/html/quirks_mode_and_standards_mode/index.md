@@ -1,16 +1,6 @@
 ---
 title: Quirks Mode e Standards Mode
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
-tags:
-  - Desenvolvimento Web
-  - Gecko
-  - Guia(2)
-  - Guía
-  - HTML
-  - Padrões Web
-  - Web Standars
-  - XHTML
-translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
 Nos velhos dias da web, páginas eram tipicamente escritas em duas versões: Uma para o Netscape Navigator, e outra para o Microsoft Internet Explorer. Quando os padrões web foram criados pelo W3C, navegadores não puderam começar a usá-los imediatamente, pois isto iria quebrar a maior parte dos sites existentes na web. Portanto os navegadores introduziram dois modos para tratar os novos padrões em sites condescendentes diferentemente dos antigos sites legados.
 

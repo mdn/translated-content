@@ -1,12 +1,6 @@
 ---
 title: Applying SVG effects to HTML content
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
-tags:
-  - CSS
-  - Guía
-  - SVG
-  - XHTML
-translation_of: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
 {{gecko_minversion_header("1.9.1")}}
 

@@ -1,12 +1,6 @@
 ---
 title: writing-mode
 slug: Web/CSS/writing-mode
-tags:
-  - CSS
-  - Layout
-  - Propriedade CSS
-  - Referencia
-translation_of: Web/CSS/writing-mode
 ---
 {{CSSRef}}
 

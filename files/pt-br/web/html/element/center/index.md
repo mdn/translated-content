@@ -1,17 +1,6 @@
 ---
 title: '<center>: O elemento de texto centralizado (obsoleto)'
 slug: Web/HTML/Element/center
-tags:
-  - Alinhamento de Texto
-  - Elemento
-  - HTML
-  - Obsoleto
-  - Referencia
-  - Texto
-  - Web
-  - alinhamento
-  - center
-translation_of: Web/HTML/Element/center
 ---
 {{obsolete_header()}}
 

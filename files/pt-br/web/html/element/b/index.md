@@ -1,12 +1,6 @@
 ---
 title: <b>
 slug: Web/HTML/Element/b
-tags:
-  - Elemento
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/b
 ---
 ## Resumo
 

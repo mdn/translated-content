@@ -1,18 +1,6 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-tags:
-  - AJAX
-  - ARIA
-  - Accessibility
-  - Acessibilidade
-  - Introdução
-  - JavaScript ARIA
-  - TopicStub
-  - W3C
-  - WAI-ARIA
-  - WAI-ARIA+HTML
-translation_of: Web/Accessibility/ARIA
 ---
 Aplicações para a Internet Ricas em Acessibilidade - Accessible Rich Internet Applications (ARIA) definem as formas de tornar o conteúdo e as aplicações da Rede Mundial - _Web_ - (especialmente aqueles desenvolvidos com Ajax e JavaScript) mais acessíveis às pessoas com deficiência.
 

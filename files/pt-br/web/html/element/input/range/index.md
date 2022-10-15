@@ -1,7 +1,6 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/Input/range
-translation_of: Web/HTML/Element/input/range
 ---
 {{HTMLRef}}
 

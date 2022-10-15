@@ -1,7 +1,6 @@
 ---
 title: Utilizando variáveis CSS
 slug: Web/CSS/Using_CSS_custom_properties
-translation_of: Web/CSS/Using_CSS_custom_properties
 ---
 {{cssref}}
 

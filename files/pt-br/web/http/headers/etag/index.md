@@ -1,14 +1,6 @@
 ---
 title: ETag
 slug: Web/HTTP/Headers/ETag
-tags:
-  - Cache
-  - ETag
-  - HTTP
-  - Response
-  - Trafego
-  - header
-translation_of: Web/HTTP/Headers/ETag
 ---
 {{HTTPSidebar}}
 

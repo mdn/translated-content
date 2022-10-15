@@ -1,11 +1,6 @@
 ---
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 ---
 {{JSRef("Global_Objects", "Promise")}}
 

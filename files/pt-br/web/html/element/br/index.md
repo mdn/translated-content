@@ -1,7 +1,6 @@
 ---
 title: <br>
 slug: Web/HTML/Element/br
-translation_of: Web/HTML/Element/br
 ---
 ## Sumário
 

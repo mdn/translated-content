@@ -1,7 +1,6 @@
 ---
 title: <link>
 slug: Web/HTML/Element/link
-translation_of: Web/HTML/Element/link
 ---
 ## Resumo
 

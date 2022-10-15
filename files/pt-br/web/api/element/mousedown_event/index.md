@@ -1,14 +1,6 @@
 ---
 title: mousedown
 slug: Web/API/Element/mousedown_event
-tags:
-  - API
-  - DOM
-  - Interface
-  - NeedsSpecTable
-  - Reference
-  - events
-translation_of: Web/API/Element/mousedown_event
 ---
 {{APIRef}}
 

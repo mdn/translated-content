@@ -1,16 +1,6 @@
 ---
 title: SharedWorker
 slug: Web/API/SharedWorker
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - SharedWorker
-  - TopicStub
-  - Web Workers
-  - Workers
-translation_of: Web/API/SharedWorker
 ---
 {{APIRef("Web Workers API")}}
 

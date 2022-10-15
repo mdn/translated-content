@@ -1,7 +1,6 @@
 ---
 title: <img>
 slug: Web/HTML/Element/img
-translation_of: Web/HTML/Element/img
 ---
 ## Resumo
 

@@ -1,7 +1,6 @@
 ---
 title: Using CSS transitions
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
 {{CSSref}}
 

@@ -1,12 +1,6 @@
 ---
 title: DELETE
 slug: Web/HTTP/Methods/DELETE
-tags:
-  - HTTP
-  - Método HTTP
-  - Método de requisição
-  - Referencia
-translation_of: Web/HTTP/Methods/DELETE
 ---
 {{HTTPSidebar}}O **método de requisição HTTP DELETE** remove o recurso especificado.
 

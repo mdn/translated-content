@@ -1,7 +1,6 @@
 ---
 title: '<h1>–<h6>: Os elementos HTML de cabeçalho da seção'
 slug: Web/HTML/Element/Heading_Elements
-translation_of: Web/HTML/Element/Heading_Elements
 ---
 {{HTMLRef}}
 

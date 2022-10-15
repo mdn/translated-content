@@ -1,15 +1,6 @@
 ---
 title: FormData.has()
 slug: Web/API/FormData/has
-tags:
-  - API
-  - FormData
-  - Referencia
-  - XHR
-  - XMLHttlRequest
-  - has
-  - metodo
-translation_of: Web/API/FormData/has
 ---
 {{APIRef("XMLHttpRequest")}}
 

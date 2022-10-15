@@ -1,7 +1,6 @@
 ---
 title: <var>
 slug: Web/HTML/Element/var
-translation_of: Web/HTML/Element/var
 ---
 ## Resumo
 

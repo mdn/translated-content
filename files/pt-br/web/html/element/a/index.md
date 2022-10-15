@@ -1,16 +1,6 @@
 ---
 title: <a>
 slug: Web/HTML/Element/a
-tags:
-  - Conteúdo
-  - Elemento
-  - HTML
-  - Internet
-  - Rede
-  - Referencia
-  - Semántica HTML a nivel de texto
-  - Web
-translation_of: Web/HTML/Element/a
 ---
 {{HTMLRef}}
 

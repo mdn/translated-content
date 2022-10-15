@@ -1,10 +1,6 @@
 ---
 title: <head>
 slug: Web/HTML/Element/head
-tags:
-  - HTML head
-  - head
-translation_of: Web/HTML/Element/head
 ---
 {{HTMLRef}}
 

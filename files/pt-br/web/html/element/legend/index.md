@@ -1,17 +1,6 @@
 ---
 title: <legend>
 slug: Web/HTML/Element/legend
-tags:
-  - Element
-  - Elemento
-  - Forms
-  - HTML
-  - Web
-  - campos
-  - conjunto de campos
-  - formulários
-  - rótulo
-translation_of: Web/HTML/Element/legend
 ---
 ## Resumo
 

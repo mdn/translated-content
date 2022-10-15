@@ -1,7 +1,6 @@
 ---
 title: header (cabeçalho)
 slug: Web/HTML/Element/header
-translation_of: Web/HTML/Element/header
 ---
 ## Sumário
 

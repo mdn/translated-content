@@ -1,14 +1,6 @@
 ---
 title: Cross-Origin-Resource-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Resource-Policy
-tags:
-  - CORP
-  - Cabeçalho HTTP
-  - Cabeçalho de Resposta
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Cross-Origin-Resource-Policy
 ---
 {{HTTPSidebar}}
 

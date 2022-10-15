@@ -1,18 +1,6 @@
 ---
 title: '<dir>:  O elemento obsoleto Directory'
 slug: Web/HTML/Element/dir
-tags:
-  - Agrupando conteúdo HTML
-  - Directory
-  - Elemento
-  - HTML
-  - Listas HTML
-  - Obsoleto
-  - Referencia
-  - Web
-  - dir
-  - listas
-translation_of: Web/HTML/Element/dir
 ---
 {{Obsolete_header()}}
 

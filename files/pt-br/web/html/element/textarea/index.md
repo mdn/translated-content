@@ -1,7 +1,6 @@
 ---
 title: <textarea>
 slug: Web/HTML/Element/textarea
-translation_of: Web/HTML/Element/textarea
 ---
 {{HTMLRef}}
 

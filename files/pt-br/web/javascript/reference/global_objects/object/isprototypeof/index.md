@@ -1,10 +1,6 @@
 ---
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
-tags:
-  - Objeto
-  - Prototipo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ---
 {{JSRef}}
 

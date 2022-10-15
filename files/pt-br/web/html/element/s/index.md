@@ -1,7 +1,6 @@
 ---
 title: <s>
 slug: Web/HTML/Element/s
-translation_of: Web/HTML/Element/s
 ---
 {{HTMLRef}}
 

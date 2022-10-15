@@ -1,7 +1,6 @@
 ---
 title: <area>
 slug: Web/HTML/Element/area
-translation_of: Web/HTML/Element/area
 ---
 ## Resumo
 

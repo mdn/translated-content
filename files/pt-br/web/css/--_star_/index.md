@@ -1,7 +1,6 @@
 ---
 title: Propriedades personalizadas (--*)
 slug: Web/CSS/--*
-translation_of: Web/CSS/--*
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

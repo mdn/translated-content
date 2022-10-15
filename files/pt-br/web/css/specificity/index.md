@@ -1,7 +1,6 @@
 ---
 title: Especificidade
 slug: Web/CSS/Specificity
-translation_of: Web/CSS/Specificity
 ---
 ## O Conceito
 

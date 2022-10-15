@@ -1,11 +1,6 @@
 ---
 title: <dfn>
 slug: Web/HTML/Element/dfn
-tags:
-  - Elemento
-  - HTML semântico nível texto
-  - Referencia
-translation_of: Web/HTML/Element/dfn
 ---
 ## Resumo
 

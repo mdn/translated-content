@@ -1,19 +1,6 @@
 ---
 title: max-width
 slug: Web/CSS/max-width
-tags:
-  - CSS
-  - Dimensões
-  - Layout
-  - Limites
-  - Máximo
-  - Propriedade CSS
-  - Referencia
-  - largura
-  - max-width
-  - receita:propriedade-css
-  - tamanho
-translation_of: Web/CSS/max-width
 ---
 {{CSSRef}}A propriedade **`max-width`** do [CSS](/pt-BR/docs/CSS) estabelece a largura máxima de um elemento. Ele evita que o [valor usado](/pt-BR/docs/Web/CSS/used_value) da propriedade {{ cssxref("width") }} se torne maior que o valor especificado por `max-width`.{{EmbedInteractiveExample("pages/css/max-width.html")}}
 

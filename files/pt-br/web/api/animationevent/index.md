@@ -1,18 +1,6 @@
 ---
 title: AnimationEvent
 slug: Web/API/AnimationEvent
-tags:
-  - API
-  - Animação Web
-  - Experimental
-  - Expérimental(2)
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Referencia
-  - Référence(2)
-  - TopicStub
-translation_of: Web/API/AnimationEvent
 ---
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
 

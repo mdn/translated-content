@@ -1,7 +1,6 @@
 ---
 title: Introdução a progressive web apps
 slug: Web/Progressive_web_apps/Introduction
-translation_of: Web/Progressive_web_apps/Introduction
 original_slug: Web/Progressive_web_apps/Introdução
 ---
 {{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}

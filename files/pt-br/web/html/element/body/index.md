@@ -1,14 +1,6 @@
 ---
 title: <body>
 slug: Web/HTML/Element/body
-tags:
-  - Elemento raiz
-  - Elemetos
-  - HTML
-  - Referências
-  - Seções
-  - Web
-translation_of: Web/HTML/Element/body
 ---
 {{HTMLRef}}
 

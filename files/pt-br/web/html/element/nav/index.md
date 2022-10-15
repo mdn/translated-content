@@ -1,19 +1,6 @@
 ---
 title: nav
 slug: Web/HTML/Element/nav
-tags:
-  - Elemento
-  - HTML
-  - Internet
-  - Links
-  - Navegação
-  - Rede
-  - Referencia
-  - Seções
-  - Seções HTML
-  - Web
-  - nav
-translation_of: Web/HTML/Element/nav
 ---
 ## Sumário
 

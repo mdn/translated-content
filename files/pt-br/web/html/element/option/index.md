@@ -1,7 +1,6 @@
 ---
 title: <option>
 slug: Web/HTML/Element/option
-translation_of: Web/HTML/Element/option
 ---
 ## Sumário
 

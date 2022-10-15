@@ -1,21 +1,6 @@
 ---
 title: <embed>
 slug: Web/HTML/Element/embed
-tags:
-  - Conteúdo externo
-  - Elemento
-  - HTML
-  - HTML5
-  - Incorporação de conteúdo
-  - Incorporação de conteúdo HTML
-  - Internet
-  - Plugins
-  - Rede
-  - Referencia
-  - Web
-  - embutir
-  - incorporar
-translation_of: Web/HTML/Element/embed
 ---
 ## Sumário
 

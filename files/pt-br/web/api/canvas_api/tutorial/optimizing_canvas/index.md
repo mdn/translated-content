@@ -1,11 +1,6 @@
 ---
 title: Otimizando canvas
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
-tags:
-  - Canvas
-  - Gráfico 2D
-  - Otimização
-translation_of: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 original_slug: Web/Guide/HTML/Canvas_tutorial/Otimizando_Canvas
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}

@@ -1,7 +1,6 @@
 ---
 title: <figure>
 slug: Web/HTML/Element/figure
-translation_of: Web/HTML/Element/figure
 original_slug: Web/HTML/Element/figura
 ---
 ## Resumo

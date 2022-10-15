@@ -1,15 +1,6 @@
 ---
 title: 412 Precondition Failed
 slug: Web/HTTP/Status/412
-tags:
-  - Código de status
-  - Erro
-  - Error
-  - HTTP
-  - Reference
-  - Referencia
-  - Status code
-translation_of: Web/HTTP/Status/412
 ---
 {{HTTPSidebar}}
 

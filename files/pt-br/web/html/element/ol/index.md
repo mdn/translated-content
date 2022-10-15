@@ -1,14 +1,6 @@
 ---
 title: <ol>
 slug: Web/HTML/Element/ol
-tags:
-  - Agrupamento de conteúdo HTML
-  - Elemento
-  - Guía
-  - HTML:Conteúdo flutuante
-  - Listagem <ol>
-  - Referencia
-translation_of: Web/HTML/Element/ol
 ---
 ## Sumário
 

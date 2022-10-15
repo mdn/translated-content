@@ -1,7 +1,6 @@
 ---
 title: SourceMap
 slug: Web/HTTP/Headers/SourceMap
-translation_of: Web/HTTP/Headers/SourceMap
 ---
 {{HTTPSidebar}}
 

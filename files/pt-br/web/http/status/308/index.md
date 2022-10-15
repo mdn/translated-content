@@ -1,11 +1,6 @@
 ---
 title: 308 Permanent Redirect
 slug: Web/HTTP/Status/308
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Redirecionamento
-translation_of: Web/HTTP/Status/308
 ---
 {{HTTPSidebar}}
 

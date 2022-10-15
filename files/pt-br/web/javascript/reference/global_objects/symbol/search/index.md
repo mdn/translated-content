@@ -1,7 +1,6 @@
 ---
 title: Symbol.search
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/search
 ---
 {{JSRef}}
 

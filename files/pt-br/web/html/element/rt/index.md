@@ -1,7 +1,6 @@
 ---
 title: <rt>
 slug: Web/HTML/Element/rt
-translation_of: Web/HTML/Element/rt
 ---
 ## Summary
 

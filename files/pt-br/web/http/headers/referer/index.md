@@ -1,15 +1,6 @@
 ---
 title: Referer
 slug: Web/HTTP/Headers/Referer
-tags:
-  - HTTP
-  - Reference
-  - Referencia
-  - Referenciado
-  - cabeçalho
-  - header
-  - referer
-translation_of: Web/HTTP/Headers/Referer
 ---
 {{HTTPSidebar}}
 

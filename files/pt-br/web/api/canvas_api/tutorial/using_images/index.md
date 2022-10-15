@@ -1,7 +1,6 @@
 ---
 title: Using images
 slug: Web/API/Canvas_API/Tutorial/Using_images
-translation_of: Web/API/Canvas_API/Tutorial/Using_images
 original_slug: Web/Guide/HTML/Canvas_tutorial/Using_images
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}

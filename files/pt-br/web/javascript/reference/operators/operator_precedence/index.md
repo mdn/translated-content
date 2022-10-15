@@ -1,10 +1,6 @@
 ---
 title: Precedência de Operadores
 slug: Web/JavaScript/Reference/Operators/Operator_Precedence
-tags:
-  - JavaScript
-  - precedência de operadores
-translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 ---
 {{jsSidebar("Operators")}}
 

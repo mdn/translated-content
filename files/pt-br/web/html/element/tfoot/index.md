@@ -1,7 +1,6 @@
 ---
 title: '<tfoot>: Elemento para o rodapé da tabela'
 slug: Web/HTML/Element/tfoot
-translation_of: Web/HTML/Element/tfoot
 ---
 {{HTMLRef}}
 

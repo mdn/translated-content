@@ -1,7 +1,6 @@
 ---
 title: <select>
 slug: Web/HTML/Element/select
-translation_of: Web/HTML/Element/select
 ---
 ## Sumário
 

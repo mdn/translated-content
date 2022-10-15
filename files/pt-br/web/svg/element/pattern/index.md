@@ -1,11 +1,6 @@
 ---
 title: pattern
 slug: Web/SVG/Element/pattern
-tags:
-  - Elemento
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/pattern
 ---
 {{SVGRef}}
 

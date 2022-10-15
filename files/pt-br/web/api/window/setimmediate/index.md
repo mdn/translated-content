@@ -1,7 +1,6 @@
 ---
 title: Window.setImmediate()
 slug: Web/API/Window/setImmediate
-translation_of: Web/API/Window/setImmediate
 ---
 {{APIRef("HTML DOM")}}{{Non-standard_header}}
 

@@ -1,15 +1,6 @@
 ---
 title: <acronym>
 slug: Web/HTML/Element/acronym
-tags:
-  - Elemento
-  - HTML
-  - Internet
-  - Obsoleto
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/acronym
 ---
 {{obsolete_header}}
 

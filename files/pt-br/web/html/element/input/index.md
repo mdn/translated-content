@@ -1,7 +1,6 @@
 ---
 title: <input>
 slug: Web/HTML/Element/Input
-translation_of: Web/HTML/Element/input
 ---
 O **elemento HTML `<input>`** é usado para criar controles interativos para formulários baseados na web para receber dados do usuário. A semântica de um `<input>` varia consideravelmente dependendo do valor de seu atributo `type`.
 

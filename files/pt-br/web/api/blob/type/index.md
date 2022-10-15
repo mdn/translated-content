@@ -1,7 +1,6 @@
 ---
 title: Blob.type
 slug: Web/API/Blob/type
-translation_of: Web/API/Blob/type
 ---
 {{APIRef("File API")}}
 

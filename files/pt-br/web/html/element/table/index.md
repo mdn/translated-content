@@ -1,11 +1,6 @@
 ---
 title: <table>
 slug: Web/HTML/Element/table
-tags:
-  - Elemento
-  - Referencia
-  - tabelas
-translation_of: Web/HTML/Element/table
 ---
 ## Resumo
 

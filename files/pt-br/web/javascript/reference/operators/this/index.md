@@ -1,12 +1,6 @@
 ---
 title: this
 slug: Web/JavaScript/Reference/Operators/this
-tags:
-  - Expressões Primárias
-  - JavaScript
-  - Operador
-  - Referencia
-translation_of: Web/JavaScript/Reference/Operators/this
 ---
 {{jsSidebar("Operators")}}
 

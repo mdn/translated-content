@@ -1,11 +1,6 @@
 ---
 title: Mensagens HTTP
 slug: Web/HTTP/Messages
-tags:
-  - Guía
-  - HTTP
-  - Protocolos
-translation_of: Web/HTTP/Messages
 original_slug: Web/HTTP/Mensagens
 ---
 {{HTTPSidebar}}

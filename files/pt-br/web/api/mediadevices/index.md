@@ -1,7 +1,6 @@
 ---
 title: MediaDevices
 slug: Web/API/MediaDevices
-translation_of: Web/API/MediaDevices
 ---
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 

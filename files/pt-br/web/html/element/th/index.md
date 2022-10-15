@@ -1,7 +1,6 @@
 ---
 title: <th>
 slug: Web/HTML/Element/th
-translation_of: Web/HTML/Element/th
 ---
 {{HTMLRef}}
 

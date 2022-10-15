@@ -1,10 +1,6 @@
 ---
 title: Intl.RelativeTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
-tags:
-  - Internacionalização
-  - Intl
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 ---
 {{JSRef}}
 

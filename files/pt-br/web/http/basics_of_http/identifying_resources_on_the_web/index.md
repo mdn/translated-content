@@ -1,17 +1,6 @@
 ---
 title: Identificando recursos na web
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-tags:
-  - Esquema
-  - HTTP
-  - O que é HTTP?
-  - Protocolo HTTP
-  - Sintaxe URL
-  - URI
-  - URL
-  - query
-  - resources
-translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 original_slug: Web/HTTP/Basico_sobre_HTTP/Identifying_resources_on_the_Web
 ---
 {{HTTPSidebar}}

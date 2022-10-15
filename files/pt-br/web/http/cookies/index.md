@@ -1,11 +1,6 @@
 ---
 title: Cookies HTTP
 slug: Web/HTTP/Cookies
-tags:
-  - Cookies
-  - Guía
-  - HTTP
-translation_of: Web/HTTP/Cookies
 ---
 {{HTTPSidebar}}
 
