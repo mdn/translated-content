@@ -11,7 +11,7 @@ La méthode **`findLastIndex()`** parcourt le tableau en sens inverse et renvoie
 
 {{EmbedInteractiveExample("pages/js/array-findlastindex.html","shorter")}}
 
-Voir aussi la méthode [`findLast()`](/fr/docs/Web/JavaScript/Reference/Array/findLast) qui renvoie la valeur du dernier élément qui satisfait au critère de la fonction de test (plutôt que son indice).
+Voir aussi la méthode [`findLast()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast) qui renvoie la valeur du dernier élément qui satisfait au critère de la fonction de test (plutôt que son indice).
 
 ## Syntaxe
 

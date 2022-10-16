@@ -13,11 +13,11 @@ La méthode **`findLast()`** parcourt un tableau dans le sens inverse et renvoie
 
 Si vous souhaitez trouver&nbsp;:
 
-- Le _premier_ élément du tableau qui correspond, utilisez [`find()`](/fr/docs/Web/JavaScript/Reference/Array/find),
-- L'_indice_ du dernier élément du tableau qui correspond, utilisez [`findLastIndex()`](/fr/docs/Web/JavaScript/Reference/Array/findLastIndex).
-- L'_indice d'une valeur_, utilisez [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Array/indexOf). Cette méthode est semblable à [`findIndex()`](/fr/docs/Web/JavaScript/Reference/Array/findIndex), mais compare chaque élément du tableau avec la valeur indiquée plutôt que d'utiliser une fonction de test.
-- Si une valeur _existe_ dans un tableau, utilisez [`includes()`](/fr/docs/Web/JavaScript/Reference/Array/includes). Là encore, cette méthode compare chaque élément du tableau pour une égalité avec la valeur indiquée plutôt que d'utiliser une fonction de test.
-- Si un élément quelconque du tableau respecte le critère d'une fonction de test, utilisez [`some()`](/fr/docs/Web/JavaScript/Reference/Array/some).
+- Le _premier_ élément du tableau qui correspond, utilisez [`find()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/find),
+- L'_indice_ du dernier élément du tableau qui correspond, utilisez [`findLastIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex).
+- L'_indice d'une valeur_, utilisez [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf). Cette méthode est semblable à [`findIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex), mais compare chaque élément du tableau avec la valeur indiquée plutôt que d'utiliser une fonction de test.
+- Si une valeur _existe_ dans un tableau, utilisez [`includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes). Là encore, cette méthode compare chaque élément du tableau pour une égalité avec la valeur indiquée plutôt que d'utiliser une fonction de test.
+- Si un élément quelconque du tableau respecte le critère d'une fonction de test, utilisez [`some()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/some).
 
 ## Syntaxe
 
