@@ -5,21 +5,21 @@ tags:
   - Referencia_DOM_de_Gecko
 translation_of: Web/API/Element/clientTop
 ---
-{{ ApiRef() }}
+{{ ApiRef }}
 
-### Resumen
+## Resumen
 
 El ancho del borde superior de un elemento en pixel. No incluye ni el*margin-top* , ni el*padding-top* . `clientTop` es de sólo lectura.
 
 Las aplicaciones "[Gecko](es/Gecko)-based applications" implementan el uso de `clientTop` a partir de Gecko 1.9 ([Firefox 3](es/Firefox_3),ver {{ Bug(111207) }}). Esta propiedad no está disponible en Firefox 2 o anteriores.
 
-### Sintaxis
+## Sintaxis
 
-```
+```js
 vartop = element.clientTop;
 ```
 
-### Ejemplo
+## Ejemplo
 
 padding-top
 
@@ -35,15 +35,15 @@ padding-bottom
 
 <img alt="Image:clientTop.png">
 
-### Especificación
+## Especificaciones
 
-No es parte de ninguna especificación W3C.
+{{Specifications}}
 
-### Notas
+## Compatibilidad con navegadores
 
-`clientTop` se presento por primera vez en el modelo de objetos de MS IE DHTML.
+{{Compat}}
 
-### Referencias
+## Referencias
 
 - [MSDN's clientTop definition](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/clienttop.asp?frame=true)
 - [MSDN's Measuring Element Dimension and Location](http://msdn.microsoft.com/workshop/author/om/measuring.asp)

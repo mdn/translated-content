@@ -3,13 +3,13 @@ title: Element.attributes
 slug: Web/API/Element/attributes
 translation_of: Web/API/Element/attributes
 ---
-{{ APIRef("DOM") }}
+{{ APIRef }}
 
-La propiedad **`Element.attributes`** retorna una colección "viva" cuyos nodos son todos los atributos registrados en el nodo especificado. Es un {{domxref("NamedNodeMap")}}, no un `Array`, así que no tiene los métodos de {{jsxref("Array")}} y los índices de nodo {{domxref("Attr")}} pueden diferir en cada navegador. Más concretamente `attributes` es un conjunto de pares de cadenas nombre/valor que representan la información relativa a cada atributo.
+La propiedad `Element.attributes` retorna una colección "viva" cuyos nodos son todos los atributos registrados en el nodo especificado. Es un {{domxref("NamedNodeMap")}}, no un `Array`, así que no tiene los métodos de {{jsxref("Array")}} y los índices de nodo {{domxref("Attr")}} pueden diferir en cada navegador. Más concretamente `attributes` es un conjunto de pares de cadenas nombre/valor que representan la información relativa a cada atributo.
 
 ## Sintaxis
 
-```
+```js
 var attr = element.attributes;
 ```
 
@@ -70,18 +70,13 @@ El siguiente ejemplo corre a través de los atributors del elemento con id "p1" 
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                           | Observaciones                                                                                             |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-attributes', 'Element.attributes')}} | {{Spec2('DOM WHATWG')}} | From {{SpecName('DOM3 Core')}}, moved from {{domxref("Node")}} a {{domxref("Element")}} |
-| {{SpecName('DOM3 Core', 'core.html#ID-84CF096', 'Element.attributes')}}     | {{Spec2('DOM3 Core')}}     | Sin cambios desde {{SpecName('DOM2 Core')}}                                                        |
-| {{SpecName('DOM2 Core', 'core.html#ID-84CF096', 'Element.attributes')}}     | {{Spec2('DOM2 Core')}}     | Sin cambios desde {{SpecName('DOM1')}}                                                            |
-| {{SpecName('DOM1', 'level-one-core.html#ID-84CF096', 'Element.attributes')}} | {{Spec2('DOM1')}}         | Definición inicial.                                                                                       |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Element.attributes")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - {{domxref("NamedNodeMap")}}, la interfaz del objeto retornado.
-- Consideracións sobre compatibilidad cruzada entre navegadores: en [quirksmode](http://www.quirksmode.org/dom/w3c_core.html#attributes)
+- Consideracións sobre compatibilidad cruzada entre navegadores: en [quirksmode](https://www.quirksmode.org/dom/w3c_core.html#attributes)

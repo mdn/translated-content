@@ -3,9 +3,9 @@ title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
 translation_of: Web/API/Element/attachShadow
 ---
-{{APIRef('Shadow DOM')}}
+{{APIRef}}
 
-El método **`Element.attachShadow()`** adjunta un árbol DOM "sombra" al elemento especificado y devuelve una referencia a su raíz {{domxref("ShadowRoot")}}.
+El método `Element.attachShadow()` adjunta un árbol DOM "sombra" al elemento especificado y devuelve una referencia a su raíz {{domxref("ShadowRoot")}}.
 
 ## Elementos a los que puedes adjuntar un DOM "sombra"
 
@@ -118,10 +118,8 @@ customElements.define('cuenta-palabras', CuentaPalabras , { extends: 'p' });
 
 ## Especificaciones
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('DOM WHATWG', '#dom-element-attachshadow', 'attachShadow()')}} | {{Spec2('DOM WHATWG')}} |         |
+{{Specifications}}
 
-## Compatibilidad navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Element.attachShadow")}}
+{{Compat}}

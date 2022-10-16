@@ -3,7 +3,7 @@ title: Element.outerHTML
 slug: Web/API/Element/outerHTML
 translation_of: Web/API/Element/outerHTML
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
 ## Resumen
 
@@ -11,7 +11,7 @@ El atributo `outerHTML` del interfaz DOM {{ domxref("element") }} obtiene el fra
 
 ## Sintaxis
 
-```
+```js
 var content = element.outerHTML;
 ```
 
@@ -72,17 +72,15 @@ p.outerHTML = "<div>This div replaced a paragraph.</div>";
 console.log(p.nodeName); // sigue mostrando: "P";
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                       | Estado                               | Observaciones |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
-| {{SpecName('DOM Parsing', '#outerhtml', 'Element.outerHTML')}} | {{ Spec2('DOM Parsing') }} |               |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Element.outerHTML")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - {{domxref("HTMLElement.outerText")}}
 - MSDN: [Propiedad outerHTML](http://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx)

@@ -13,13 +13,13 @@ tags:
   - computedStyleMap()
 translation_of: Web/API/Element/computedStyleMap
 ---
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef}}{{SeeCompatTable}}
 
-El método **`computedStyleMap()`** de la interfaz {{domxref("Element")}} devuelve una interfaz {{domxref("StylePropertyMapReadOnly")}} que provee una representación de solo-lectura de un bloque de declaración de CSS que es una alternativa a {{domxref("CSSStyleDeclaration")}}.
+El método `computedStyleMap()` de la interfaz {{domxref("Element")}} devuelve una interfaz {{domxref("StylePropertyMapReadOnly")}} que provee una representación de solo-lectura de un bloque de declaración de CSS que es una alternativa a {{domxref("CSSStyleDeclaration")}}.
 
 ## Sintaxis
 
-```
+```js
 var stylePropertyMapReadOnly = Element.computedStyleMap()
 ```
 
@@ -65,15 +65,15 @@ const allComputedStyles = myElement.computedStyleMap();
 
 // iteramos a través del mapa de todas las propiedades y valores, añadiendo un <dt> y <dd> para cada mapa
 for (const [prop, val] of allComputedStyles) {
-	// propiedades
-	const cssProperty = document.createElement('dt');
-	cssProperty.appendChild(document.createTextNode(prop));
-	stylesList.appendChild(cssProperty);
+ // propiedades
+ const cssProperty = document.createElement('dt');
+ cssProperty.appendChild(document.createTextNode(prop));
+ stylesList.appendChild(cssProperty);
 
-	// valores
-	const cssValue = document.createElement('dd');
-	cssValue.appendChild(document.createTextNode(val));
-	stylesList.appendChild(cssValue);
+ // valores
+ const cssValue = document.createElement('dd');
+ cssValue.appendChild(document.createTextNode(val));
+ stylesList.appendChild(cssValue);
 }
 ```
 
@@ -85,10 +85,8 @@ En [navegadores que soportan `computedStyleMap()`](/es/docs/Web/API/Element/comp
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                           | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('CSS Typed OM','#dom-element-computedstylemap','computedStyleMap()')}} | {{Spec2('CSS Typed OM')}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad con navedadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Element.computedStyleMap")}}
+{{Compat}}

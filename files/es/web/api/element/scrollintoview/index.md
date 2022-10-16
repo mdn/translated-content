@@ -9,11 +9,11 @@ translation_of: Web/API/Element/scrollIntoView
 ---
 {{ APIRef("DOM")}}
 
-El método **`scrollIntoView()`** de la interfaz {{domxref("Element")}} desplaza el contenedor principal del elemento de forma que el elemento sobre el cual se invoca `scrollIntoView()` sea visible al usuario.
+El método `scrollIntoView()` de la interfaz {{domxref("Element")}} desplaza el contenedor principal del elemento de forma que el elemento sobre el cual se invoca `scrollIntoView()` sea visible al usuario.
 
 ## Sintaxis
 
-```
+```js
 element.scrollIntoView(); // Equivalente a element.scrollIntoView(true)
 element.scrollIntoView(alignToTop); // Argumentos booleanos
 element.scrollIntoView(scrollIntoViewOptions); // Argumento objeto
@@ -21,14 +21,14 @@ element.scrollIntoView(scrollIntoViewOptions); // Argumento objeto
 
 ### Parámetros
 
-- _`alignToTop`_
+- `alignToTop`
 
   - : Es un valor {{jsxref("Boolean")}}:
 
     - Si es `true`, la parte superior del elemento se alineará con la parte superior del área visible del elemento desplazable antecesor.
     - Si es `false`, la parte inferior del elemento se alineará con la parte inferior del área visible del elemento desplazable antecesor.
 
-- _`scrollIntoViewOptions`_ {{optional_inline}} {{experimental_inline}}
+- `scrollIntoViewOptions` {{optional_inline}} {{experimental_inline}}
   - : Un booleano o un objeto con las siguientes opciones:
 - `behavior` {{optional_inline}}
   - : Establece la transición de la animación.
@@ -55,14 +55,10 @@ element.scrollIntoView({block: "end", behavior: "smooth"});
 
 Puede que el desplazamiento no sea llevado completamente a la parte superior o inferior dependiente de la disposición de otros elementos.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                   | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-element-scrollintoview", "Element.scrollIntoView()")}} | {{Spec2("CSSOM View")}} | Definición inicial |
-
-- [CSSOM: Scrolling elements into view](http://dev.w3.org/csswg/cssom-view/#dom-element-scrollintoview)
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Element.scrollIntoView")}}
+{{Compat}}

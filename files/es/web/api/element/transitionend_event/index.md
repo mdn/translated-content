@@ -12,6 +12,8 @@ tags:
 translation_of: Web/API/HTMLElement/transitionend_event
 original_slug: Web/API/HTMLElement/transitionend_event
 ---
+{{ APIRef }}
+
 El evento `transitionend` es lanzado cuando una [transición CSS](/es/docs/CSS/Using_CSS_transitions) se ha completado. Si la transición es eliminada antes de haberse completado, como cuando {{cssxref("transition-property")}} es eliminado o {{cssxref("display")}} se establece a `"none"`, entonces el evento no será generado.
 
 ## Información general
@@ -54,13 +56,11 @@ element.addEventListener("transitionend", function(event) {
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                                   | Comentario          |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName("CSS3 Transitions", "#transitionend", "transitionend")}} | {{Spec2('CSS3 Transitions')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLElement.transitionend_event")}}
+{{Compat}}
 
 ## Véase también
 

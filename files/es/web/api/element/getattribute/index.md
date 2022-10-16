@@ -7,7 +7,7 @@ tags:
   - metodo
 translation_of: Web/API/Element/getAttribute
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
 ## Resumen
 
@@ -15,7 +15,7 @@ translation_of: Web/API/Element/getAttribute
 
 ## Sintaxis
 
-```
+```js
 var atributo = element.getAttribute(nombreAtributo);
 ```
 
@@ -41,7 +41,10 @@ Esencialmente todos los navegadores (Firefox, Internet Explorer, versiones recie
 
 {{DOMAttributeMethods}}
 
-## Especificación
+## Especificaciones
 
-- [DOM Level 2 Core: getAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-666EE0F9) (introducido en [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute))
-- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

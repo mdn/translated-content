@@ -9,7 +9,7 @@ tags:
   - Vista CSSOM
 translation_of: Web/API/Element/scrollHeight
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
 El elemento **Element.scrollHeight** atributo unicamente de lectura es una medida de la altura del contenido de un elemento, incluyendo el contenido que no es visible en la pantalla debido al desbordamiento. El valor `scrollHeight` es igual a la altura mínima (donde la altura incluye el relleno , pero no incluye bordes y márgenes) El elemento lo necesita con el fin de adaptarse a todos los contenidos en el punto de vista sin necesidad de utilizar una barra de desplazamiento vertical. Incluye el elemento relleno pero no su margen.
 
@@ -17,7 +17,7 @@ El elemento **Element.scrollHeight** atributo unicamente de lectura es una medid
 
 ## Sintaxis
 
-```
+```js
 var intElemScrollHeight = element.scrollHeight;
 ```
 
@@ -137,15 +137,13 @@ onload = function () {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-element-scrollheight", "Element.scrollHeight")}} | {{Spec2("CSSOM View")}} | Inicial definición |
+{{Specifications}}
 
-## Compatibilidad de los Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Element.scrollHeight")}}
+{{Compat}}
 
-## Ver También
+## Véase también
 
 - [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
 - {{domxref("Element.clientHeight")}}

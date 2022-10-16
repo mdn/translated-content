@@ -4,7 +4,7 @@ slug: Web/API/Element/touchstart_event
 translation_of: Web/API/GlobalEventHandlers/ontouchstart
 original_slug: Web/API/GlobalEventHandlers/ontouchstart
 ---
-{{ApiRef("HTML DOM")}}
+{{APIRef}}
 
 Un {{domxref("GlobalEventHandlers","global event handler")}} para el evento {{event("touchstart")}}.
 
@@ -14,7 +14,7 @@ Un {{domxref("GlobalEventHandlers","global event handler")}} para el evento {{ev
 
 ## Sintaxis
 
-```
+```js
 var startHandler = cualquierElemento.ontouchstart;
 ```
 
@@ -47,14 +47,12 @@ function init() {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentario          |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Touch Events 2','#widl-GlobalEventHandlers-ontouchstart')}} | {{Spec2('Touch Events 2')}} | Versión no estable. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.GlobalEventHandlers.ontouchstart")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - {{ event("touchstart") }}

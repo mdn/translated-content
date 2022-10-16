@@ -5,19 +5,21 @@ tags:
   - Referencia_DOM_de_Gecko
 translation_of: Web/API/Element
 ---
-{{ ApiRef("DOM") }} Este capítulo proporciona una breve explicación para los métodos generales, las propiedades y los eventos disponibles para los elementos HTML y XML en el DOM de Gecko.
+{{ APIRef }}
+
+Este capítulo proporciona una breve explicación para los métodos generales, las propiedades y los eventos disponibles para los elementos HTML y XML en el DOM de Gecko.
 
 Varias especificaciones aplicadas a los elementos:
 
-- [Especificaciones esenciales del DOM](http://www.w3.org/TR/DOM-Level-2-Core/) —describe las interfaces esenciales compartidas por la mayoría de los objetos DOM en los documentos HTML y XML.
-- [Especificaciones HTML del DOM](http://www.w3.org/TR/DOM-Level-2-HTML/) —describe las interfaces para objetos en documentos HTML y XHTML construidos con la especificación base.
-- [Especificiones de los eventos DOM](http://www.w3.org/TR/DOM-Level-2-Events/) —describe los eventos compartidos por la mayoría de objetos DOM, construidos con las especificaciones y base DOM [Opiniones](http://www.w3.org/TR/DOM-Level-2-Views/).
+- [Especificaciones esenciales del DOM](https://www.w3.org/TR/DOM-Level-2-Core/) —describe las interfaces esenciales compartidas por la mayoría de los objetos DOM en los documentos HTML y XML.
+- [Especificaciones HTML del DOM](https://www.w3.org/TR/DOM-Level-2-HTML/) —describe las interfaces para objetos en documentos HTML y XHTML construidos con la especificación base.
+- [Especificiones de los eventos DOM](https://www.w3.org/TR/DOM-Level-2-Events/) —describe los eventos compartidos por la mayoría de objetos DOM, construidos con las especificaciones y base DOM [Opiniones](https://www.w3.org/TR/DOM-Level-2-Views/).
 
 Los artículos listados aquí amplían lo antedicho e incluyen enlaces a la especificación apropiada del DOM de W3C.
 
 Mientras que estas interfaces son generalmente compartidas por la mayoría de los elementos HTML y XML, hay muchas más especiales para los objetos particulares listados en la especificación HTML del DOM —por ejemplo las interfaces del [elemento tabla de HTML](/es/DOM/table "es/DOM/table") y [elemento formulario de HTML](/es/DOM/form "es/DOM/form").
 
-### Propiedades
+## Propiedades
 
 | Nombre                                                                                | Descripción                                                                                                                  | Tipo                                                                                                                            | Disponibilidad                                           |
 | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
@@ -59,7 +61,7 @@ Mientras que estas interfaces son generalmente compartidas por la mayoría de lo
 | [`tagName`](/es/DOM/element.tagName "es/DOM/element.tagName")                         | El nombre de la etiqueta para el elemento dado.                                                                              | [`Secuencia`](/En/Core_JavaScript_1.5_Reference/Global_Objects/String "En/Core_JavaScript_1.5_Reference/Global_Objects/String") | para [todos](/es/DOM "es/DOM")                           |
 | [`textContent`](/es/DOM/element.textContent "es/DOM/element.textContent")             | Obtiene/establece los contenidos textuales de un elemento y todos sus descendentes.                                          | [`Secuencia`](/En/Core_JavaScript_1.5_Reference/Global_Objects/String "En/Core_JavaScript_1.5_Reference/Global_Objects/String") | para [todos](/es/DOM "es/DOM")                           |
 
-### Métodos
+## Métodos
 
 | Nombre y Descripción                                                                                                                                                           | Devuelve                                                                                                                      | Disponible                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
@@ -95,11 +97,11 @@ Mientras que estas interfaces son generalmente compartidas por la mayoría de lo
 | `setAttributeNode( name, attrNode )` Establece la representación del nodo del atributo nombrado desde el nodo actual.                                                          | -                                                                                                                             | [Todos](/es/DOM "es/DOM")                                |
 | `setAttributeNodeNS( namespace, name, attrNode )` Establece la representación del nodo del atributo con el nombre y nombre de espacio especificado desde el nodo actual.       | -                                                                                                                             | [Todos](/es/DOM "es/DOM")                                |
 
-### Eventos
+## Eventos
 
 Son propiedades correspondientes a los atributos del evento "on" en HTML.
 
-A diferencia de los atributos correspondientes, los valores de esas propiedades son funciones (o cualquier otro objeto trabajando con la interfaz [EventListener](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener)) más bien que una cadena de carácteres. En efecto, asignar un atributo de evento en HTML crea una función envolvente alrededor del código especificado. Por ejemplo, el siguiente HTML:
+A diferencia de los atributos correspondientes, los valores de esas propiedades son funciones (o cualquier otro objeto trabajando con la interfaz [EventListener](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener)) más bien que una cadena de carácteres. En efecto, asignar un atributo de evento en HTML crea una función envolvente alrededor del código especificado. Por ejemplo, el siguiente HTML:
 
 ```
 <div onclick="foo();">clic aquí!</div>
@@ -182,3 +184,11 @@ El objeto [event](/es/DOM/event "es/DOM/event") es pasado al parámetro `event` 
 
 - [onresize](/es/DOM/element.onresize "es/DOM/element.onresize") - (al re-dimensionar la pantalla)
   - : Devuelve el código de manejo de evento para el evento `onresize`.
+
+## Especificaciones
+
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

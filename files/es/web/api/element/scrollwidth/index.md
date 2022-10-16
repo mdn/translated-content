@@ -3,15 +3,15 @@ title: Element.scrollWidth
 slug: Web/API/Element/scrollWidth
 translation_of: Web/API/Element/scrollWidth
 ---
-{{ APIRef("DOM") }}
+{{ APIRef }}
 
-La propiedad de sólo lectura **`Element.scrollWidth`** retorna bien la anchura en pixels del contenido de un elemento o bien la anchura del elemento en si, la que sea mayor de ambas. Si el elemento es más ancho que su área contenedora (por ejemplo, si existen barras de desplazamiento para desplazarse a través del contenido), `scrollWidth` es mayor que `clientWidth`.
+La propiedad de sólo lectura `Element.scrollWidth` retorna bien la anchura en pixels del contenido de un elemento o bien la anchura del elemento en si, la que sea mayor de ambas. Si el elemento es más ancho que su área contenedora (por ejemplo, si existen barras de desplazamiento para desplazarse a través del contenido), `scrollWidth` es mayor que `clientWidth`.
 
 > **Nota:** El valor de esta propiedad será red redondedo a un entero. Si necesita un valor fraccional, use {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Sintaxis
 
-```
+```js
 var xScrollWidth = element.scrollWidth;
 ```
 
@@ -86,17 +86,15 @@ _xScrollWidth_ es el ancho del contenido de _element_ en pixels.
 </html>
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Observaciones      |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-element-scrollwidth", "Element.scrollWidth")}} | {{Spec2("CSSOM View")}} | Definición inicial |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.Element.scrollWidth")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - {{domxref("Element.clientWidth")}}
 - {{domxref("HTMLElement.offsetWidth")}}

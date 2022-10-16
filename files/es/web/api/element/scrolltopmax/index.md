@@ -11,24 +11,24 @@ tags:
   - Solo lectura
 translation_of: Web/API/Element/scrollTopMax
 ---
-{{APIRef("DOM")}}{{Non-standard_header}}
+{{APIRef}}{{Non-standard_header}}
 
-La propiedad de solo lectura(read-only) **`Element.scrollTopMax`** retorna un {{jsxref("Number")}} que representa el máximo offset posible para el elemento.
+La propiedad de solo lectura(read-only) `Element.scrollTopMax` retorna un {{jsxref("Number")}} que representa el máximo offset posible para el elemento.
 
 ## Sintaxis
 
-```
+```js
 var pxl = elt.scrollTopMax;
 ```
 
 ## Especificaciones
 
-_Esta propiedad no es parte de ninguna especificación._
+{{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Element.scrollTopMax")}}
+{{Compat}}
 
-## Ver además
+## Véase también
 
 - {{domxref("Element.scrollLeftMax")}} dada la misma información para otros ejes.

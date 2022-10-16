@@ -9,7 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/Element/setCapture
 ---
-{{ APIRef("DOM") }}{{ gecko_minversion_header("2.0") }}
+{{ APIRef }}
 
 Llame a este método durante el manejo de un evento mousedown para redirigir todos los eventos de mouse a este elemento hasta que se suelte el botón del mouse o se llame {{domxref ( "document.releaseCapture ()")}}.
 
@@ -75,10 +75,14 @@ En este ejemplo, las coordenadas actuales del mouse se dibujan mientras situas e
 
 El elemento no puede desplazarse completamente hacia arriba o hacia abajo dependiendo del diseño de otros elementos.
 
-## Especificación
+## Especificaciones
 
-Ninguna.
+{{Specifications}}
 
-## Ver también
+## Compatibilidad con navegadores
+
+{{Compat}}
+
+## Véase también
 
 - {{ domxref("document.releaseCapture()") }}

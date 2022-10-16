@@ -3,9 +3,9 @@ title: Element.hasAttribute()
 slug: Web/API/Element/hasAttribute
 translation_of: Web/API/Element/hasAttribute
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
-El método **`Elemento.hasAttribute()`** devuelve un valor **Booleano** indicando si el elemento tiene el atributo especificado o no.
+El método `Elemento.hasAttribute()` devuelve un valor **Booleano** indicando si el elemento tiene el atributo especificado o no.
 
 ## Sintaxis
 
@@ -44,12 +44,8 @@ if (foo.hasAttribute("bar")) {
 
 ## Especificaciones
 
-| Specification                                                                                                | Status                           | Comment                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-hasattribute', 'Element.hasAttribute()')}} | {{Spec2('DOM WHATWG')}} | From {{SpecName('DOM3 Core')}}, moved from {{domxref("Node")}} to {{domxref("Element")}} |
-| {{SpecName('DOM3 Core', 'core.html#ID-ElHasAttr', 'Element.hasAttribute()')}}     | {{Spec2('DOM3 Core')}}     | No change from {{SpecName('DOM2 Core')}}                                                            |
-| {{SpecName('DOM2 Core', 'core.html#ID-ElHasAttr', 'Element.hasAttribute()')}}     | {{Spec2('DOM2 Core')}}     | Initial definition.                                                                                        |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Element.hasAttribute")}}
+{{Compat}}

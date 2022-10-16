@@ -13,19 +13,19 @@ tags:
   - metodo
 translation_of: Web/API/Element/insertAdjacentHTML
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
-EL método **`insertAdjacentHTML()`** de la interfaz {{domxref("Element")}} analiza la cadena de texto introducida como cadena HTML o XML e inserta al árbol DOM los nodos resultantes de dicho análisis en la posición especificada. Este método no re-analiza el elemento sobre el cual se está invocando y por lo tanto no corrompe los elementos ya existentes dentro de dicho elemento. Esto evita el paso adicional de la serialización, haciéndolo mucho más rápido que la manipulación directa con {{domxref("Element.innerHTML", "innerHTML")}}.
+EL método `insertAdjacentHTML()` de la interfaz {{domxref("Element")}} analiza la cadena de texto introducida como cadena HTML o XML e inserta al árbol DOM los nodos resultantes de dicho análisis en la posición especificada. Este método no re-analiza el elemento sobre el cual se está invocando y por lo tanto no corrompe los elementos ya existentes dentro de dicho elemento. Esto evita el paso adicional de la serialización, haciéndolo mucho más rápido que la manipulación directa con {{domxref("Element.innerHTML", "innerHTML")}}.
 
 ## Sintaxis
 
-```
+```js
 element.insertAdjacentHTML(posición, texto);
 ```
 
 ### Parámetros
 
-- **`posición`**
+- `posición`
 
   - : Un {{domxref("DOMString")}} que representa la posición relativa al `elemento`, y deberá ser una de las siguientes cadenas:
 
@@ -49,7 +49,7 @@ element.insertAdjacentHTML(posición, texto);
 <!-- afterend -->
 ```
 
-> **Nota:**Las posiciones `beforebegin` y `afterend` funcionan únicamente si el nodo se encuentra en el árbol DOM y tiene un elemento padre.
+> **Nota:** Las posiciones `beforebegin` y `afterend` funcionan únicamente si el nodo se encuentra en el árbol DOM y tiene un elemento padre.
 
 ## Ejemplo
 
@@ -70,17 +70,15 @@ Cuando se inserte texto HTML en una página usando `insertAdjacentHTML()` debe t
 
 Se recomienda no usar `insertAdjacentHTML()` cuando se pretende insertar texto plano; en su lugar, se debe utilizar la propiedad {{domxref("Node.textContent")}} o el método {{domxref("Element.insertAdjacentText()")}}. Este método no interpreta el contenido pasado como HTML, si no que lo inserta como texto plano.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                                                                       | Estado                               | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{SpecName('DOM Parsing', '#widl-Element-insertAdjacentHTML-void-DOMString-position-DOMString-text', 'Element.insertAdjacentHTML()')}} | {{ Spec2('DOM Parsing') }} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Element.insertAdjacentHTML")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("Element.insertAdjacentText()")}}

@@ -4,13 +4,13 @@ slug: Web/API/Element/previousElementSibling
 translation_of: Web/API/NonDocumentTypeChildNode/previousElementSibling
 original_slug: Web/API/NonDocumentTypeChildNode/previousElementSibling
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
-La propiedad de sólo lectura **`NonDocumentTypeChildNode.previousElementSibling`** retorna el {{domxref("Element")}} predecesor inmediato al especificado dentro de la lista de hijos de su padre, o bien `null` si el elemento especificado es el primero de dicha lista.
+La propiedad de sólo lectura `NonDocumentTypeChildNode.previousElementSibling` retorna el {{domxref("Element")}} predecesor inmediato al especificado dentro de la lista de hijos de su padre, o bien `null` si el elemento especificado es el primero de dicha lista.
 
 ## Sintaxis
 
-```
+```js
 prevNode = elementNodeReference.previousElementSibling;
 ```
 
@@ -65,16 +65,13 @@ if(!("previousElementSibling" in document.documentElement)){
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                                   | Estado                                   | Observaciones                                                                                                                                                                                                                                                                                                                             |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-nondocumenttypechildnode-previouselementsibling', 'NonDocumentTypeChildNode.previousElementSibling')}} | {{Spec2('DOM WHATWG')}}         | Dividió el interfaz `ElementTraversal` en {{domxref("ChildNode")}}, {{domxref("ParentNode")}}, y {{domxref("NonDocumentTypeChildNode")}}. Este método queda ahora definida en el primero. Los interfaces {{domxref("Element")}} y {{domxref("CharacterData")}} implementaron la nueva interfaz. |
-| {{SpecName('Element Traversal', '#attribute-previousElementSibling', 'ElementTraversal.previousElementSibling')}}                         | {{Spec2('Element Traversal')}} | Añadida su definición inicial al interfaz puro `ElementTraversal` y lo usa en {{domxref("Element")}}.                                                                                                                                                                                                                               |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Element.previousElementSibling")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - El interfaz puro {{domxref("NonDocumentTypeChildNode")}}.
 - Tipos de objetos que implementan este interfaz puro: {{domxref("CharacterData")}}, y {{domxref("Element")}}.

@@ -9,20 +9,20 @@ tags:
   - metodo
 translation_of: Web/API/Element/closest
 ---
-{{APIRef('Shadow DOM')}}
+{{APIRef}}
 
-El método **`closest()`** de la interfaz {{domxref("Element")}} devuelve el ascendiente más cercano al elemento actual (o el propio elemento actual) que coincida con el selector proporcionado por parámetro. Si no existe dicho ascendiente, devuelve `null`.
+El método `closest()` de la interfaz {{domxref("Element")}} devuelve el ascendiente más cercano al elemento actual (o el propio elemento actual) que coincida con el selector proporcionado por parámetro. Si no existe dicho ascendiente, devuelve `null`.
 
 ## Sintaxis
 
-```
+```js
 var closestElement = element.closest(selectors);
 ```
 
 ### Parámetros
 
-- _`selectors`_ es un {{domxref("DOMString")}} que contiene una lista de selectores como `"p:hover, .toto + q"`
-- _`element`_ es el {{domxref("Element")}} en la parte superior del árbol de elementos a tratar.
+- `selectors` es un {{domxref("DOMString")}} que contiene una lista de selectores como `"p:hover, .toto + q"`
+- `element` es el {{domxref("Element")}} en la parte superior del árbol de elementos a tratar.
 
 ### Valor del resultado
 
@@ -30,7 +30,7 @@ var closestElement = element.closest(selectors);
 
 ### Excepciones
 
-- Se lanza una excepción [`SyntaxError`](/es/docs/Web/API/DOMException#syntaxerror) si _`selectors`_ no es una lista de selectores válida.
+- Se lanza una excepción [`SyntaxError`](/es/docs/Web/API/DOMException#syntaxerror) si `selectors` no es una lista de selectores válida.
 
 ## Ejemplo
 
@@ -105,21 +105,19 @@ if (window.Element && !Element.prototype.closest) {
 }
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-closest', 'Element.closest()')}} | {{Spec2('DOM WHATWG')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Element.closest")}}
+{{Compat}}
 
 ### Notas de compatibilidad
 
 - En Edge `document.createElement(element).closest(element)` devolverá `null` si el elemento no es el primero del DOM
 
-## Ver también
+## Véase también
 
 - La interfaz {{domxref("Element")}}.
 - [Sintaxis de los Selectores](/es/docs/Web/CSS/Introducción/Selectors)

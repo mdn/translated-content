@@ -3,13 +3,13 @@ title: Element.insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
 translation_of: Web/API/Element/insertAdjacentElement
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
-El método **`insertAdjacentElement()`** inserta un elemento nodo dado en una posición dada con respecto al elemento sobre el que se invoca.
+El método `insertAdjacentElement()` inserta un elemento nodo dado en una posición dada con respecto al elemento sobre el que se invoca.
 
 ## Sintaxis
 
-```
+```js
 elementoObjetivo.insertAdjacentElement(posición, elemento);
 ```
 
@@ -70,19 +70,17 @@ afterBtn.addEventListener('click', function() {
 });
 ```
 
-Mira nuestro [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html) demo en Github (mira el[ código fuente](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html) también.) Aquí tenemos una secuencia de elementos {{htmlelement("div")}} dentro de un contenedor. Cuando uno es clickeado, se torna en seleccionado y tu puedes presionar los botones _Insert before_ e _Insert after_ para insertar nuevos divs antes o despues del elemento seleccionado usando `insertAdjacentElement()`.
+Mira nuestro [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html) demo en Github (mira el[código fuente](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html) también.) Aquí tenemos una secuencia de elementos {{htmlelement("div")}} dentro de un contenedor. Cuando uno es clickeado, se torna en seleccionado y tu puedes presionar los botones _Insert before_ e _Insert after_ para insertar nuevos divs antes o despues del elemento seleccionado usando `insertAdjacentElement()`.
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('DOM WHATWG', '#dom-element-insertadjacentelement', 'insertAdjacentElement()')}} | {{ Spec2('DOM WHATWG') }} |            |
+{{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Element.insertAdjacentElement")}}
+{{Compat}}
 
-## Mira también
+## Véase también
 
 - {{domxref("Element.insertAdjacentHTML()")}}
 - {{domxref("Element.insertAdjacentText()")}}

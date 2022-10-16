@@ -3,13 +3,13 @@ title: Element.setAttributeNS()
 slug: Web/API/Element/setAttributeNS
 translation_of: Web/API/Element/setAttributeNS
 ---
-{{ APIRef("DOM") }}
+{{ APIRef }}
 
 `setAttributeNS añade un nuevo atributo o cambia el valor de un atributo con el namespace dado y el nombre.`
 
 ## Sintaxis
 
-```
+```js
 elemento.setAttributeNS(namespace,nombre,valor)
 ```
 
@@ -19,7 +19,7 @@ elemento.setAttributeNS(namespace,nombre,valor)
 
 ## Ejemplo
 
-```
+```js
 var d = document.getElementById("d1");
 d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
 ```
@@ -28,6 +28,10 @@ d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
 
 {{ DOMAttributeMethods() }}
 
-## Especificación
+## Especificaciones
 
-[DOM Level 2 Core: setAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

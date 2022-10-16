@@ -4,12 +4,14 @@ slug: Web/API/Element/animationend_event
 translation_of: Web/API/HTMLElement/animationend_event
 original_slug: Web/API/HTMLElement/animationend_event
 ---
+{{ APIRef }}
+
 El evento `animationend` es lanzado cuando una animación CSS se ha completado.
 
 ## Información General
 
 - Especificación
-  - : [CSS Animations](http://www.w3.org/TR/css3-animations/#animation-events)
+  - : [CSS Animations](https://www.w3.org/TR/css3-animations/#animation-events)
 - Interface
   - : AnimationEvent
 - Bubbles
@@ -38,6 +40,14 @@ El evento `animationend` es lanzado cuando una animación CSS se ha completado.
 - {{Event("animationend")}}
 - {{Event("animationiteration")}}
 
-## Ver también
+## Especificaciones
+
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
+
+## Véase también
 
 - [Using CSS Animations](/es/docs/CSS/Using_CSS_animations)

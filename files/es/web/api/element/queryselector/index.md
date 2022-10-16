@@ -3,13 +3,13 @@ title: Element.querySelector()
 slug: Web/API/Element/querySelector
 translation_of: Web/API/Element/querySelector
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
-El método **`querySelector() `**de la intrefaz \*\*\*\*{{domxref("Element")}} devuelve el primer descendiente del elemento sobre el cual es invocado que coincida con el o los selectores especificados.
+El método `querySelector()` **de la intrefaz \*\*\*\*{{domxref("Element")}} devuelve el primer descendiente del elemento sobre el cual es invocado que coincida con el o los selectores especificados.
 
 ## Sintáxis
 
-```
+```js
 elemento = elementoBase.querySelector(selectores);
 ```
 
@@ -84,17 +84,13 @@ Puedes ver más ejemplos sobre el formato apropiado para los `selectores` aquí 
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                                       | Comentarios |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------- |
-| {{SpecName('DOM4','#dom-parentnode-queryselectorallselectors','querySelectorAll()')}} | {{Spec2('DOM4')}}                     |             |
-| {{SpecName('Selectors API Level 2','#queryselectorall','querySelectorAll()')}}         | {{Spec2('Selectors API Level 2')}} |             |
-| {{SpecName('Selectors API Level 1','#queryselectorall','querySelectorAll()')}}         | {{Spec2('Selectors API Level 1')}} |             |
+{{Specifications}}
 
-## Compatibilidad en los Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Element.querySelector")}}
+{{Compat}}
 
-## También puedes consultar:
+## Véase también
 
 - [Localizando elementos DOM usando selectores](/es/docs/Referencia_DOM_de_Gecko/Localizando_elementos_DOM_usando_selectores)
 - [Selectores de atributo](/es/docs/Web/CSS/Selectores_atributo) en la guia de CSS

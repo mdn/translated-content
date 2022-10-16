@@ -12,13 +12,13 @@ translation_of: Web/API/GlobalEventHandlers/onlostpointercapture
 translation_of_original: Web/API/Element/onlostpointercapture
 original_slug: Web/API/GlobalEventHandlers/onlostpointercapture
 ---
-{{ ApiRef("DOM") }}
+{{ APIRef }}
 
 `onlostpointercapture` es una propiedad {{event("Event_handlers", "event handler")}} de la interfaz {{domxref("Element")}} que devuelve el controlador de eventos (función) para el evento tipo {{event("lostpointercapture")}} .
 
 ## Síntaxis
 
-```
+```js
 var lostCaptureHandler = target.onlostpointercpature;
 ```
 
@@ -49,15 +49,12 @@ function init() {
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estado                                   | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Pointer Events 2','#widl-Element-onlostpointercapture', 'onlostpointercapture')}} | {{Spec2('Pointer Events 2')}} | Versión no estable. |
-| {{SpecName('Pointer Events', '#widl-Element-onlostpointercapture', 'onlostpointercapture')}} | {{Spec2('Pointer Events')}}     | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en los Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.GlobalEventHandlers.onlostpointercapture")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - {{ event("lostpointercapture") }}

@@ -15,13 +15,13 @@ tags:
   - metodo
 translation_of: Web/API/Element/getBoundingClientRect
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
-El método **`Element.getBoundingClientRect()`** devuelve el tamaño de un elemento y su posición relativa respecto a la ventana de visualización (_viewport)._
+El método `Element.getBoundingClientRect()` devuelve el tamaño de un elemento y su posición relativa respecto a la ventana de visualización (_viewport)._
 
 ## Sintaxis
 
-```
+```js
 domRect = element.getBoundingClientRect();
 ```
 
@@ -57,9 +57,7 @@ var rect = obj.getBoundingClientRect();
 
 ## Especificaciones
 
-| Especificación                                                                                                                       | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-element-getboundingclientrect", "Element.getBoundingClientRect()")}} | {{Spec2("CSSOM View")}} | Definición inicial |
+{{Specifications}}
 
 ### Notas
 
@@ -77,11 +75,11 @@ emptyObj = { ...rect }
 {width, ...emptyObj} = rect
 ```
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Element.getBoundingClientRect")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - {{domxref("Element.getClientRects", "getClientRects()")}}
 - [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/en-us/library/ms536433(VS.85).aspx>)

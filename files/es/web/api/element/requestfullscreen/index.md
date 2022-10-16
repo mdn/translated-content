@@ -5,13 +5,13 @@ tags:
   - Pantalla completa
 translation_of: Web/API/Element/requestFullScreen
 ---
-{{APIRef("DOM")}}{{seeCompatTable}}
+{{APIRef}}{{seeCompatTable}}
 
 Asynchronously requests that the element be made full-screen.
 
-## Syntax
+## Sintaxis
 
-```
+```js
 element.mozRequestFullScreen();
 ```
 
@@ -23,15 +23,13 @@ Ve a [Using full-screen mode](/es/docs/Web/Guide/API/DOM/Using_full_screen_mode)
 
 ## Especificaciones
 
-| Specification                                                                                                            | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Fullscreen", "#dom-element-requestfullscreen", "Element.requestFullScreen()")}} | {{Spec2("Fullscreen")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Element.requestFullscreen")}}
+{{Compat}}
 
-## Mira también
+## Véase también
 
 - [Using full-screen mode](/es/docs/Web/Guide/API/DOM/Using_full_screen_mode)
 - {{domxref("document.mozCancelFullScreen()")}}

@@ -11,13 +11,13 @@ tags:
   - webkitMatchesSelector
 translation_of: Web/API/Element/matches
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
-El método **`matches()`** comprueba si el {{domxref("Element")}} sería seleccionable por el selector CSS especificado en la cadena; en caso contrario, retorna `false`.
+El método `matches()` comprueba si el {{domxref("Element")}} sería seleccionable por el selector CSS especificado en la cadena; en caso contrario, retorna `false`.
 
 ## Sintaxis
 
-```
+```js
 var result = element.matches(selectorString);
 ```
 
@@ -60,7 +60,7 @@ Esto mostrará "El Águila Filipina está amenazada de extinción!" en el log de
 
 Para navegadores que no soportan `Element.matches()` o `Element.matchesSelector()`, pero aun incorporan soporte para `document.querySelectorAll()`, existe un polyfill:
 
-```
+```js
 if (!Element.prototype.matches) {
     Element.prototype.matches =
         Element.prototype.matchesSelector ||
@@ -86,17 +86,15 @@ if (!Element.prototype.matches) {
 }
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Observaciones      |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG', '#dom-element-matches', 'Element.prototype.matches')}} | {{Spec2('DOM WHATWG')}} | Definición Inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Element.matches")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - [The syntax of Selectors](/en-US/docs/Web/Guide/CSS/Getting_started/Selectors)
 - Otros métodos que usan selectores: {{domxref("element.querySelector()")}} and {{domxref("element.closest()")}}.

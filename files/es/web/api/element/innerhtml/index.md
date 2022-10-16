@@ -9,21 +9,21 @@ tags:
   - Referencia
 translation_of: Web/API/Element/innerHTML
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
 ## Resumen
 
-La propiedad **`Element.innerHTML`** devuelve o establece la sintaxis HTML describiendo los descendientes del elemento.
+La propiedad `Element.innerHTML` devuelve o establece la sintaxis HTML describiendo los descendientes del elemento.
 
 Al establecerse se reemplaza la sintaxis HTML del elemento por la nueva.
 
-> **Nota:**Si un nodo tiene un texto secundario que incluye los caracteres `(&), (<),` o `(>)`, `innerHTML` devuelve estos caracteres como \&amp, \&lt y \&gt respectivamente. Use {{ domxref("Node.textContent") }} para conseguir una copia correcta del contenido de estos nodos de texto.
+> **Nota:** Si un nodo tiene un texto secundario que incluye los caracteres `(&), (<),` o `(>)`, `innerHTML` devuelve estos caracteres como \&amp, \&lt y \&gt respectivamente. Use {{ domxref("Node.textContent") }} para conseguir una copia correcta del contenido de estos nodos de texto.
 
 Para **insertar el código HTML** en el documento en lugar de cambiar el contenido de un elemento, use el método [insertAdjacentHTML().](/es/docs/Web/API/Element/insertAdjacentHTML)
 
 ## Sintaxis
 
-```
+```js
 const content = element.innerHTML;
 
 element.innerHTML = htmlString;
@@ -31,7 +31,7 @@ element.innerHTML = htmlString;
 
 ### Valor
 
-La variable constante `content` contiene un [DOMString](/es/docs/Web/API/DOMString) que contiene el código HTML serializado describiendo todos los descendientes de `element`. Cuando se establece el valor de innerHTML, **se eliminan todos los descendientes de `element`**, analiza la cadena `htmString` y asigna los nodos resultantes como descendientes de `element`.
+La variable constante `content` contiene un [DOMString](/es/docs/Web/API/DOMString) que contiene el código HTML serializado describiendo todos los descendientes de `element`. Cuando se establece el valor de innerHTML, **se eliminan todos los descendientes de `element`, analiza la cadena `htmString` y asigna los nodos resultantes como descendientes de `element`.
 
 ### Excepciones
 
@@ -70,7 +70,7 @@ document.documentElement.innerHTML = "<pre>" +
             "</pre>";
 ```
 
-> **Nota:** Esta propiedad fue inicialmente implementada por navegadores web, y luego especificada por el WHATWG y el W3C en HTML5. Implementaciones antiguas no la implementarán exactamente igual. Por ejemplo, cuando el texto es ingresado en una caja de **texto multilinea (elemento `textarea`)**, Internet Explorer cambiará el valor de la propiedad `innerHTML` del **elemento `textarea`**, mientras que los navegadores Gecko no lo hacen.
+> **Nota:** Esta propiedad fue inicialmente implementada por navegadores web, y luego especificada por el WHATWG y el W3C en HTML5. Implementaciones antiguas no la implementarán exactamente igual. Por ejemplo, cuando el texto es ingresado en una caja de **texto multilinea (elemento `textarea`)**, Internet Explorer cambiará el valor de la propiedad `innerHTML` del **elemento `textarea`, mientras que los navegadores Gecko no lo hacen.
 
 ### Consideración de seguridad
 
@@ -89,7 +89,7 @@ name = "<script>alert('Soy Juan con una alerta molesta!')</script>";
 el.innerHTML = name; // fíjese que el texto es molesto y no es realmente lo que se esperaba.
 ```
 
-Aunque esto, el ejemplo 2, puede parecer un ataque [cross-site scripting](http://en.wikipedia.org/wiki/Cross-site_scripting), **el resultado es inofensivo**, ya que HTML5 especifica que un tag `<script> `insertado a través innerHTML [no debe ejecutarse](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
+Aunque esto, el ejemplo 2, puede parecer un ataque [cross-site scripting](http://en.wikipedia.org/wiki/Cross-site_scripting), **el resultado es inofensivo**, ya que HTML5 especifica que un tag `<script>` insertado a través innerHTML [no debe ejecutarse](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
 
 Sin embargo, hay maneras de ejecutar JavaScript sin necesidad de utilizar el elemento `<script>`, por lo que todavía hay un riesgo de seguridad cada vez que se utiliza `innerHTML` para establecer cadenas de texto sobre las que no tiene control. Por ejemplo:
 
@@ -130,10 +130,13 @@ La siguiente cadena (string) se muestra en la ventana de la consola:
 
 ## Especificaciones
 
-- W3C's HTML 5 `innerHTML` para [documentos ](http://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0)[HTML](http://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0)
-- W3C's HTML 5 `innerHTML` para [documentos ](http://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml1)[XHTML](http://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml1)
+{{Specifications}}
 
-## Ver también
+## Compatibilidad con navegadores
+
+{{Compat}}
+
+## Véase también
 
 - [`innerDOM`](http://innerdom.sourceforge.net/) - Para aquellos que desean adherirse a los estándares, aquí hay un conjunto de funciones JavaScript que ofrecen serializar o analizar XML para así establecer contenidos de elementos definidos como cadena(s) via el DOM o para conseguir contenidos de elementos obtenidos del DOM como cadenas.
 - [jssaxparser](http://code.google.com/p/jssaxparser/) - Una solución más robusta (aunque más pesada) que innerDOM (soporta análisis con espacios de nombres, atributos entre comillas simples, secciones CDATA, etc) es este analizador SAX2 cuando se utiliza con su manejador de contenido DOM. (Ofrece String to DOM, DOM to string es [significativamente más fácil](http://code.assembla.com/brettz9/subversion/nodes/DOMToString))

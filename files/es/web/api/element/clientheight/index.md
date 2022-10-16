@@ -5,9 +5,9 @@ tags:
   - Propiedad
 translation_of: Web/API/Element/clientHeight
 ---
-{{ APIRef("DOM") }}
+{{ APIRef }}
 
-La propiedad de sólo lectura **`Element.clientHeight`** devuelve la altura de un elemento en píxeles, incluyendo el padding pero no las barras horizontales, el borde o el margen.
+La propiedad de sólo lectura `Element.clientHeight` devuelve la altura de un elemento en píxeles, incluyendo el padding pero no las barras horizontales, el borde o el margen.
 
 `clientHeight` puede ser calculado como CSS `height` + CSS `padding` - alto de la barra horizontal (si existe).
 
@@ -15,7 +15,7 @@ La propiedad de sólo lectura **`Element.clientHeight`** devuelve la altura de u
 
 ## Sintaxis
 
-```
+```js
 var h = element.clientHeight;
 ```
 
@@ -25,17 +25,15 @@ var h = element.clientHeight;
 
 ![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
 
-## Specification
+## Especificaciones
 
-| Specification                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-clientheight', 'clientheight')}} | {{Spec2('CSSOM View')}} |         |
+{{Specifications}}
 
-### Notas
+## Compatibilidad con navegadores
 
-`clientHeight` es una propiedad introducida en el modelo de objeto de Internet Explorer.
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - {{domxref("Element.offsetHeight")}}
 - {{domxref("Element.scrollHeight")}}

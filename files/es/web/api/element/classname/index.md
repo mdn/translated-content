@@ -9,20 +9,20 @@ tags:
   - Referencia
 translation_of: Web/API/Element/className
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
 ## Resumen
 
-**className** obtiene y establece el valor del atributo `class` del elemento especificado.
+`className` obtiene y establece el valor del atributo `class` del elemento especificado.
 
 ## Sintaxis
 
-```
+```js
 var cName = elementNodeReference.className;
 elementNodeReference.className = cName;
 ```
 
-- _cName_ es una variable de cadena representando la clase o la lista de clases separada por espacios, del elemento en cuestión.
+_cName_ es una variable de cadena representando la clase o la lista de clases separada por espacios, del elemento en cuestión.
 
 ## Ejemplo
 
@@ -48,16 +48,12 @@ elm.setAttribute('class', elm.getAttribute('class'))
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Observaciones      |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-element-classname", "element.className")}} | {{Spec2("DOM WHATWG")}} |                    |
-| {{SpecName("DOM4", "#dom-element-classname", "element.className")}}         | {{Spec2("DOM4")}}         |                    |
-| {{SpecName("DOM2 HTML", "html.html#ID-95362176", "element.className")}} | {{Spec2("DOM2 HTML")}}     | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Element.className")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - {{domxref("element.classList")}}

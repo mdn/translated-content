@@ -11,22 +11,22 @@ tags:
   - Vista CSSOM
 translation_of: Web/API/Element/scrollLeft
 ---
-{{ APIRef("DOM") }}
+{{ APIRef }}
 
-La propiedad **`Element.scrollLeft`** obtiene o establece el número de píxeles que desplaza el contenido de un elemento hacia la izquierda.
+La propiedad `Element.scrollLeft` obtiene o establece el número de píxeles que desplaza el contenido de un elemento hacia la izquierda.
 
-Tenga en cuenta que si el elemento `{{cssxref ( "dirección")}} `del elemento es `rtl `(derecha-a-izquierda), entonces` scrollLeft` es 0 cuando la barra de desplazamiento está en su posición más a la derecha (al inicio del contenido desplazado) y cada vez más Negativo mientras se desplaza hacia el final del contenido.
+Tenga en cuenta que si el elemento `{{cssxref ( "dirección")}}` del elemento es `rtl` (derecha-a-izquierda), entonces `scrollLeft` es 0 cuando la barra de desplazamiento está en su posición más a la derecha (al inicio del contenido desplazado) y cada vez más Negativo mientras se desplaza hacia el final del contenido.
 
 ## Síntaxis
 
-```
+```js
 // Obtener el número de píxeles desplazados
 var sLeft = element.scrollLeft;
 ```
 
 _SLeft_ es un número entero que representa el número de píxeles que el elemento ha desplazado hacia la izquierda.
 
-```
+```js
 // Establecer el número de píxeles desplazados
 element.scrollLeft = 10;
 ```
@@ -72,10 +72,8 @@ element.scrollLeft = 10;
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('CSSOM View', '#dom-element-scrollleft', 'scrollLeft')}} | {{Spec2("CSSOM View")}} |            |
+{{Specifications}}
 
-## Compatibilidad en los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Element.scrollLeft")}}
+{{Compat}}

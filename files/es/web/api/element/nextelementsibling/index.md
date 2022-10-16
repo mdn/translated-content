@@ -9,13 +9,13 @@ tags:
 translation_of: Web/API/NonDocumentTypeChildNode/nextElementSibling
 original_slug: Web/API/NonDocumentTypeChildNode/nextElementSibling
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
-La propiedad de sólo lectura **`NonDocumentTypeChildNode.nextElementSibling`** devuelve el elemento inmediatamente posterior al especificado, dentro de la lista de elementos hijos de su padre, o bien `null` si el elemento especificado es el último en dicha lista.
+La propiedad de sólo lectura `NonDocumentTypeChildNode.nextElementSibling` devuelve el elemento inmediatamente posterior al especificado, dentro de la lista de elementos hijos de su padre, o bien `null` si el elemento especificado es el último en dicha lista.
 
 ## Sintaxis
 
-```
+```js
 var nextNode = elementNodeReference.nextElementSibling;
 ```
 
@@ -90,16 +90,13 @@ if(!("nextElementSibling" in document.documentElement)){
 
 ## Especificaciones
 
-| Especificación                                                                                                                                   | Estado                                   | Observaciones                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-nondocumenttypechildnode-nextelementsibling', 'ChildNodenextElementSibling')}} | {{Spec2('DOM WHATWG')}}         | Se dividió la interfaz `ElementTraversal` en {{domxref("ChildNode")}}, {{domxref("ParentNode")}}, y {{domxref("NonDocumentTypeChildNode")}}. Este método queda ahora definido en la primera. Los interfaces {{domxref("Element")}} y {{domxref("CharacterData")}} implementaron la nueva interfaz. |
-| {{SpecName('Element Traversal', '#attribute-nextElementSibling', 'ElementTraversal.nextElementSibling')}}     | {{Spec2('Element Traversal')}} | Añadió su definición inicial a la interfaz pura `ElementTraversal` y su uso en {{domxref("Element")}}.                                                                                                                                                                                                                                 |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.NonDocumentTypeChildNode.nextElementSibling")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - La interfaz pura {{domxref("ChildNode")}}.
 - Tipos de objetos que implementan esta interfaz pura: {{domxref("CharacterData")}}, {{domxref("Element")}}, y {{domxref("DocumentType")}}.

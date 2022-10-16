@@ -6,12 +6,14 @@ tags:
 translation_of: Web/API/Element/blur_event
 original_slug: Web/Events/blur
 ---
+{{ APIRef }}
+
 El evento `blur` es disparado cuando un elemento ha perdido su foco. La diferencia principal entre este evento y [`focusout`](/en-US/docs/Mozilla_event_reference/focusout) es que sólo el último se propaga (bubbles).
 
 ## Información General
 
 - Especificación
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur)
 - Interfaz
   - : {{domxref("FocusEvent")}}
 - Burbujas
@@ -62,9 +64,13 @@ form.addEventListener("blur", function( event ) {
 
 {{EmbedLiveSample('Delegación_de_eventos')}}
 
-## Compatibilidad en navegadores
+## Especificaciones
 
-{{Compat("api.Element.blur_event")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Eventos relacionados
 

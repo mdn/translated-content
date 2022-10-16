@@ -3,12 +3,14 @@ title: click
 slug: Web/API/Element/click_event
 translation_of: Web/API/Element/click_event
 ---
+{{ APIRef }}
+
 El evento "click" se dispara cuando se presiona el botón de un dispositivo de entrada (Mouse o Mousepad) sobre un elemento.
 
 ## Información General
 
 - Especificación
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-click)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-click)
 - Interfaz
   - : {{domxref("MouseEvent")}}
 - Bubbles
@@ -57,48 +59,13 @@ El evento "click" se dispara cuando se presiona el botón de un dispositivo de e
 </script>
 ```
 
-## Compatibilidad con Navegadores
+## Especificaciones
 
-### Internet Explorer
+{{Specifications}}
 
-Internet Explorer 8 & 9 tiene problemas con elementos con un valor {{cssxref("background-color")}} de `transparent que es sobrepuesto a los demas elementos por lo que no les permite recibir el evento.`
+## Compatibilidad con navegadores
 
-Un ejemplo [aqui](http://jsfiddle.net/YUKma/show/)
-
-¿Cómo evitarlo?
-
-- Para IE9 only:
-
-  - Asignar `{{cssxref("background-color")}}: rgba(0,0,0,0)`
-  - Asignar `{{cssxref("opacity")}}: 0` y asignar explicitamente {{cssxref("background-color")}} un valor diferente a [`transparent`](/es/docs/Web/CSS/color_value#transparent_keyword)
-
-- Para IE8 and IE9:
-
-  - Asignar `filter: alpha(opacity=0);` y asignar explicitamente {{cssxref("background-color")}} un valor diferente a [`transparent`](/es/docs/Web/CSS/color_value#transparent_keyword)
-
-### Safari Mobile
-
-En Safari Mobile 7.0+ ( también algunas versiones anteriores) [presenta un problema](https://bugs.webkit.org/show_bug.cgi?id=153887) cuando se da click sobre elementos que no son tipicamente interactivos como es el caso de un div.
-
-¿Cómo evitarlo?
-
-- Asignar {{cssxref("cursor")}}`: pointer;` en el elemento o uno de sus contendores.
-- Ubicar un attributo `onclick="void(0)"` al elemento o cualquiera de sus elementos contenedores, menos {{HTMLElement("body")}}.
-- Usar elementos interactivos (e.g. {{HTMLElement("a")}}) en lugar de no interactivos (e.g. {{HTMLElement("div")}}).
-- No usar [delegacion del evento](http://davidwalsh.name/event-delegate) click.
-
-Lo siguientes elementos son considerados por Safari típicamente interactivos
-
-- {{HTMLElement("a")}} (but it must have an `href`)
-- {{HTMLElement("area")}} (but it must have an `href`)
-- {{HTMLElement("button")}}
-- {{HTMLElement("img")}}
-- {{HTMLElement("input")}}
-- {{HTMLElement("label")}} (but it must be associated with a form control)
-- {{HTMLElement("textarea")}}
-- _This list is incomplete; you can help MDN by doing further testing/research and expanding it._
-
-{{Compat("api.Element.click_event")}}
+{{Compat}}
 
 ## Véase también
 

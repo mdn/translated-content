@@ -4,13 +4,13 @@ slug: Web/API/Element/scroll_event
 translation_of: Web/API/GlobalEventHandlers/onscroll
 original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
-{{ApiRef("HTML DOM")}}
+}}
 
 Un manejador de eventos para desplazamiento en `element`.
 
 ## Sintaxis
 
-```
+```js
 element.onscroll = functionReference
 ```
 
@@ -66,6 +66,8 @@ El evento es generado cuando el usuario realiza desplazamiento (scrolls) sobre e
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                           | Observaciones      |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("DOM3 Events", "#event-type-scroll", "onscroll")}} | {{Spec2("DOM3 Events")}} | Definición inicial |
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

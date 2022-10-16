@@ -3,15 +3,15 @@ title: Element.getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
 translation_of: Web/API/Element/getElementsByClassName
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
-El método **`Element.getElementsByClassName()`** retorna una {{domxref("HTMLCollection")}} "viva" conteniendo todos los elementos hijos que tienen todos los nombres de clase dados. Cuando se llama en el objeto document, se realiza la búsqueda en el documento completo, incluyendo el nodo raíz.
+El método `Element.getElementsByClassName()` retorna una {{domxref("HTMLCollection")}} "viva" conteniendo todos los elementos hijos que tienen todos los nombres de clase dados. Cuando se llama en el objeto document, se realiza la búsqueda en el documento completo, incluyendo el nodo raíz.
 
 De forma similar, el método {{domxref("Document.getElementsByClassName", "Document.getElementsByClassName()")}} actúa en todo el documento; retornará los elementos que sean descendientes del documento raiz especificado que tengan los nombres de clase dados.
 
 ## Sintaxis
 
-```
+```js
 var elements = element.getElementsByClassName(names);
 ```
 
@@ -50,10 +50,8 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 ## Especificaciones
 
-| Especificación                                                                                                                           | Estado                           | Observaciones      |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG', '#dom-element-getelementsbyclassname', 'Element.getElementsByClassName()')}} | {{Spec2('DOM WHATWG')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Element.getElementsByClassName")}}
+{{Compat}}

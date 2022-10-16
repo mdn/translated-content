@@ -8,13 +8,13 @@ tags:
   - Referencia
 translation_of: Web/API/Element/removeAttribute
 ---
-{{ APIRef("DOM") }}
+{{ APIRef }}
 
 `removeAttribute` elimina un atributo del elemento especificado.
 
 ## Sintaxis
 
-```
+```js
 element.removeAttribute(attrName);
 ```
 
@@ -22,7 +22,7 @@ element.removeAttribute(attrName);
 
 ## Ejemplo
 
-```
+```js
 // <div id="div1" align="left" width="200px">
 document.getElementById("div1").removeAttribute("align");
 // ahora: <div id="div1" width="200px">
@@ -36,6 +36,10 @@ Intentar eliminar un atributo que no existe en el elemento no disparará una exc
 
 {{ DOMAttributeMethods() }}
 
-## Especificación
+## Especificaciones
 
-[DOM Level 2 Core: removeAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9) (introducido en [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute))
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

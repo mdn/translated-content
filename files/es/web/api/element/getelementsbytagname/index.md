@@ -5,15 +5,15 @@ tags:
   - Referencia_DOM_de_Gecko
 translation_of: Web/API/Element/getElementsByTagName
 ---
-{{ ApiRef("DOM") }}
+{{ APIRef }}
 
-### Resumen
+## Resumen
 
 Devuelve una lista de elementos que tienen un [tag name](es/DOM/element.tagName) determinado. Se explora el árbol por debajo del elemento dado, excluyendo el propio elemento.
 
-### Sintaxis
+## Sintaxis
 
-```
+```js
 elements =element.getElementsByTagName(tagName)
 ```
 
@@ -25,9 +25,9 @@ elements =element.getElementsByTagName(tagName)
 >
 > Es recomendable usar [DOM:document.getElementsByTagNameNS](es/DOM/document.getElementsByTagNameNS) cuando se manejan documentos con "multi-namespace".
 
-### Ejemplo
+## Ejemplo
 
-```
+```js
 // comprueba la alineación de las celdas en una tabla.
 var table = document.getElementById("forecast-table");
 var cells = table.getElementsByTagName("td");
@@ -39,10 +39,14 @@ for (var i = 0; i < cells.length; i++) {
 }
 ```
 
-### Notas
+## Notas
 
 `element.getElementsByTagName` es similar a [document.getElementsByTagName](es/DOM/document.getElementsByTagName), excepto por que su búsqueda está restringida a los elementos que descienden del elemento especificado.
 
-### Especificación
+## Especificaciones
 
-[DOM Level 2 Core: Element.getElementsByTagName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1938918D)
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

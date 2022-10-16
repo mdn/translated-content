@@ -10,15 +10,15 @@ tags:
   - Referencia
 translation_of: Web/API/Element/prefix
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
-La propiedad **`Element.prefix`** unicamente de lectura devuelve el namespace prefix de el elemento especificado, o` null si no hay especificado `prefix .
+La propiedad `Element.prefix` unicamente de lectura devuelve el namespace prefix de el elemento especificado, o` null si no hay especificado `prefix .
 
 > **Nota:** Antes de DOM4 esta API fué definida dentro de la interfaz {{domxref("Node")}}.
 
 ## Síntaxis
 
-```
+```js
 string = element.prefix
 ```
 
@@ -36,15 +36,13 @@ Solo funcionará cuando se utiliza un analizador de namespace, ej. Cuando un doc
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                   | Comentario         |
-| -------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName("DOM4", "#dom-element-prefix", "Element.prefix")}} | {{Spec2("DOM4")}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad en los Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Element.prefix")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - {{domxref("Element.namespaceURI")}}
 - {{domxref("Element.localName")}}

@@ -5,7 +5,7 @@ tags:
   - Referencia_DOM_de_Gecko
 translation_of: Web/API/Element/tagName
 ---
-{{ ApiRef("DOM") }}
+{{ APIRef }}
 
 ### Resumen
 
@@ -13,7 +13,7 @@ Devuelve el nombre del elemento.
 
 ### Sintaxis
 
-```
+```js
 elementName = element.tagName
 ```
 
@@ -40,6 +40,10 @@ alert(span.tagName);
 
 en XHTML (o alguna otra forma de XML) el resultado de la alerta será el contenido de "span". En HTML, el contenido será el de "SPAN".
 
-### Especificación
+## Especificaciones
 
-[DOM Level 2 Core: tagName](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-104682815)
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

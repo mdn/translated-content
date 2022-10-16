@@ -13,13 +13,13 @@ translation_of: Web/API/GlobalEventHandlers/ongotpointercapture
 translation_of_original: Web/API/Element/ongotpointercapture
 original_slug: Web/API/GlobalEventHandlers/ongotpointercapture
 ---
-{{ ApiRef("DOM") }}
+{{ APIRef }}
 
 `ongotpointercapture` es una propiedad {{event("Event_handlers", "event handler")}} de la interfaz {{domxref("Element")}} que devuelve el controlador de eventos (función) para el evento tipo {{event("gotpointercapture")}}.
 
 ## Síntaxis
 
-```
+```js
 var gotCaptureHandler = target.ongotpointercpature;
 ```
 
@@ -50,15 +50,12 @@ function init() {
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                                   | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{SpecName('Pointer Events 2','#widl-Element-ongotpointercapture', 'ongotpointercapture')}} | {{Spec2('Pointer Events 2')}} | Versión no estable. |
-| {{SpecName('Pointer Events', '#widl-Element-ongotpointercapture', 'ongotpointercapture')}} | {{Spec2('Pointer Events')}}     | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en los Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.GlobalEventHandlers.ongotpointercapture")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - {{ event("gotpointercapture") }}

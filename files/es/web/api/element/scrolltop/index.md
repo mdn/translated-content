@@ -3,9 +3,9 @@ title: Element.scrollTop
 slug: Web/API/Element/scrollTop
 translation_of: Web/API/Element/scrollTop
 ---
-{{ APIRef("DOM") }}
+{{ APIRef }}
 
-La propiedad **`Element.scrollTop`** obtiene o establece el número de pixels que el contenido de un elemento ha sido desplazado (enrollado) hacia arriba. El `scrollTop` de un elemento es una medida de la distancia desde el límite superior de un elemento al límite superior de su contenido visible. Cuando un elemento no genera una barra de scroll vertical, el valor de su `scrollTop` es establecido por defecto a `0`.
+La propiedad `Element.scrollTop` obtiene o establece el número de pixels que el contenido de un elemento ha sido desplazado (enrollado) hacia arriba. El `scrollTop` de un elemento es una medida de la distancia desde el límite superior de un elemento al límite superior de su contenido visible. Cuando un elemento no genera una barra de scroll vertical, el valor de su `scrollTop` es establecido por defecto a `0`.
 
 ## Sintaxis
 
@@ -14,7 +14,7 @@ La propiedad **`Element.scrollTop`** obtiene o establece el número de pixels qu
 var  intElemScrollTop = someElement.scrollTop;
 ```
 
-_Después de ejecutar este código, _`intElemScrollTop` es un entero que corresponde al número de pixesl que el contenido del {{domxref("element")}} ha sido desplazado hacia arriba.
+_Después de ejecutar este código, `intElemScrollTop` es un entero que corresponde al número de pixesl que el contenido del {{domxref("element")}} ha sido desplazado hacia arriba.
 
 ```js
 // Establece el número de pixels desplazados
@@ -43,9 +43,11 @@ padding-bottom
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           | Observaciones |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------- |
-| {{SpecName('CSSOM View', '#dom-element-scrolltop', 'scrollTop')}} | {{Spec2("CSSOM View")}} |               |
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Referencias
 

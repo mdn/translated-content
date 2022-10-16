@@ -10,9 +10,9 @@ tags:
   - Referencia
 translation_of: Web/API/Element/localName
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
-La propiedad únicamente de lectura **`Element.localName`** devuelve la parte local del nombre calificado de un objeto.
+La propiedad únicamente de lectura `Element.localName` devuelve la parte local del nombre calificado de un objeto.
 
 > **Nota:** Antes de DOM4 esta API fué definida dentro de la interfaz{{domxref("Node")}}.
 
@@ -31,8 +31,8 @@ name = element.localName
 (debe ser servido con contenido tipo XML , como `text/xml` o `application/xhtml+xml`.)
 
 ```xml
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:svg="http://www.w3.org/2000/svg">
+<html xmlns="https://www.w3.org/1999/xhtml"
+      xmlns:svg="https://www.w3.org/2000/svg">
 <head>
   <script type="application/javascript"><![CDATA[
   function test() {
@@ -73,15 +73,13 @@ El nombre local de un nodo es la parte del nombre completo del nodo que va situa
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                   | Comentario         |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('DOM4', '#interface-element', 'Element.localName')}} | {{Spec2('DOM4')}} | definición inicial |
+{{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Element.localName")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - {{domxref("Element.namespaceURI")}}
 - {{domxref("Element.prefix")}}

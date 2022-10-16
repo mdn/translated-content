@@ -10,19 +10,19 @@ tags:
   - Sólo-Lectura
 translation_of: Web/API/Element/classList
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
-La propiedad de sólo lectura **`Element.classList`** devuelve una colección activa de [`DOMTokenList`](/es/docs/Web/API/DOMTokenList "The DOMTokenList interface represents a set of space-separated tokens. Such a set is returned by Element.classList, HTMLLinkElement.relList, HTMLAnchorElement.relList or HTMLAreaElement.relList. It is indexed beginning with 0 as with JavaScript Array objects. DOMTokenList is always case-sensitive.") de los atributos de clase del elemento.
+La propiedad de sólo lectura `Element.classList` devuelve una colección activa de [`DOMTokenList`](/es/docs/Web/API/DOMTokenList "The DOMTokenList interface represents a set of space-separated tokens. Such a set is returned by Element.classList, HTMLLinkElement.relList, HTMLAnchorElement.relList or HTMLAreaElement.relList. It is indexed beginning with 0 as with JavaScript Array objects. DOMTokenList is always case-sensitive.") de los atributos de clase del elemento.
 
 Usar `classList` es una forma práctica de acceder a la lista de clases de un elemento como una cadena de texto delimitada por espacios a través de {{domxref("element.className")}}.
 
 ## Sintaxis
 
-```
+```js
 var elementClasses = elementNodeReference.classList;
 ```
 
-_elementClasses_ es un [DOMTokenList](/es/docs/DOM/DOMTokenList) que representa el atributo clase de _elementNodeReference_. Si el atributo clase no está definido o está vacío, _elementClasses.length_ devuelve 0. `element.classList` por sí mismo es de sólo lectura, aunque puede ser modificado usando los métodos` add()` y `remove()`.
+_elementClasses_ es un [DOMTokenList](/es/docs/DOM/DOMTokenList) que representa el atributo clase de _elementNodeReference_. Si el atributo clase no está definido o está vacío, _elementClasses.length_ devuelve 0. `element.classList` por sí mismo es de sólo lectura, aunque puede ser modificado usando los métodos `add()` y `remove()`.
 
 ## Métodos
 
@@ -68,17 +68,13 @@ div.classList.replace("foo", "bar");
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                           | Comentario                                                                                      |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "dom.html#dom-classlist", "Element.classList")}} | {{Spec2("HTML WHATWG")}} | Nota en la especificación de HTML relacionada con el atributo {{htmlattrxref("class")}}. |
-| {{SpecName("DOM WHATWG", "#dom-element-classlist", "Element.classList")}}     | {{Spec2("DOM WHATWG")}} | Definición inicial                                                                              |
-| {{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}             | {{Spec2("DOM4")}}         |                                                                                                 |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Element.classList")}}
+{{Compat}}
 
-## Vea también
+## Véase también
 
 - {{domxref("element.className")}}
 - {{domxref("DOMTokenList")}};

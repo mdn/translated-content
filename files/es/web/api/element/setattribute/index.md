@@ -12,7 +12,7 @@ tags:
   - setAttribute
 translation_of: Web/API/Element/setAttribute
 ---
-{{APIRef("DOM")}}
+{{APIRef}}
 
 Establece el valor de un atributo en el elemento indicado. Si el atributo ya existe, el valor es actualizado, en caso contrario, el nuevo atributo es añadido con el nombre y valor indicado.
 
@@ -20,7 +20,7 @@ Para obtener el valor actual de un atributo, se utiliza {{domxref("Element.getAt
 
 ## Sintaxis
 
-```
+```js
 Element.setAttribute(name, value);
 ```
 
@@ -72,13 +72,10 @@ Esto demuestra dos cosas:
 
 {{DOMAttributeMethods}}
 
-## Especificación
+## Especificaciones
 
-- [DOM Level 2 Core: setAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082) (introducido en [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute))
-- [HTML5: APIs en documentos HTML](http://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents)
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-### Notas Gecko
-
-Utilizando `setAttribute()` para modificar ciertos atributos, el más notable es `value` en XUL, funciona de forma inconsistente, ya que el atributo especifica el valor determinado. Para acceder o modificar los valores actuales, se deben utilizar las propiedades. Por ejemplo, utilizar `Element.value` en lugar de `Element.setAttribute()`.
+{{Compat}}
