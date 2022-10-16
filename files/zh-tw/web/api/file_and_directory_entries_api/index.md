@@ -53,7 +53,7 @@ interface FileHandle
 ```
 
 - open(\[mode="readonly"])
-  - : 可回傳 [LockedFile](#lockedFile_interface)。`mode` 可為「`readonly`」或「`readwrite`」。
+  - : 可回傳 [LockedFile](#lockedfile_介面)。`mode` 可為「`readonly`」或「`readwrite`」。
 - getFile()
   - : 針對檔案而回傳 [DOMRequest](/zh-TW/docs/DOM/DOMRequest)。若成功，就會收到以 [File](/zh-TW/docs/DOM/File) 物件形式呈現的唯讀「snapshot」檔案內容 (可用於任何接受 [Blob](/zh-TW/docs/DOM/Blob) 的地方，如 [FileReader](/zh-TW/docs/DOM/FileReader) 或 [XMLHttpRequest](/zh-TW/docs/DOM/XMLHttpRequest) 等)。
 
