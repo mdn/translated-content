@@ -116,7 +116,7 @@ someString + "";                              // "hi"
 
 ### Iterables nativos
 
-{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} y {{jsxref("Set")}} son objetos iterables nativos, ya que en su objeto prototipo existe un método ` @@``iterator. `
+{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} y {{jsxref("Set")}} son objetos iterables nativos, ya que en su objeto prototipo existe un método `@@iterator`.
 
 ### Iterables personalizados
 
