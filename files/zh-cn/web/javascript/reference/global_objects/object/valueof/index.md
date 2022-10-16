@@ -19,7 +19,7 @@ valueOf()
 
 指定对象的原始值。
 
-> **备注：** 有时候[（一元的）加运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#unary_plus)可以被用于 `valueOf` 的快捷操作，例如在 `+new Number()` 中。另请参见[使用一元加运算符](#使用一元加运算符)。
+> **备注：** 有时候[（一元的）加运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#unary_plus)可以被用于 `valueOf` 的快捷操作，例如 `+new Number()`。参见[使用一元加运算符](#使用一元加运算符)。
 
 ## 描述
 
