@@ -60,11 +60,11 @@ A conflicting page might need more work as content may have been moved/rewritten
    git log -- files/en-us/slug/to/document.md
    ```
    Then check the corresponding PR to have a better understanding of the change.
-1. Applying the same redirect as per `mdn/content` for the source page:
+2. Applying the same redirect as per `mdn/content` for the source page:
     ```bash
     yarn content delete <conflicting/slug/of/page> <locale> --redirect <other/slug>
     ```
-2. Updating the target page to reflect the movement of content in English. You might need to reuse content from the "conflicting" page into the existing target page to follow the English evolution.
+3. Updating the target page to reflect the movement of content in English. You might need to reuse content from the "conflicting" page into the existing target page to follow the English evolution.
 
 ### Deal with generated PRs
 
