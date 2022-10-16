@@ -49,7 +49,7 @@ MyNumberType.prototype.valueOf = function () {
 myNumberType.valueOf()
 ```
 
-> **备注：** 字符串上下文中的对象通过 {{jsxref("Object.toString", "toString()")}} 方法转换，这与使用 `valueOf` 转换为原始字符串的 {{jsxref("String")}} 对象不同。所有对象都能转换成一个“`[object type]`”这种格式的字符串。但是很多对象不能转换为数字、布尔或函数。
+> **备注：** 字符串上下文中的对象通过 {{jsxref("Object.toString", "toString()")}} 方法转换，这与使用 `valueOf` 将 {{jsxref("String")}} 对象转换为原始字符串不同。所有对象都能转换成一个 `"[object type]"` 这种格式的字符串。但是很多对象不能转换为数字、布尔或函数。
 
 ## 示例
 
