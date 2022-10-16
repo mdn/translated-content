@@ -34,8 +34,13 @@ Depending on your team and on the directory you are processing, you may either g
 
 For an orphaned page, the generic approach consists of the following:
 
-1. Check if there is an active redirect for the corresponding page in English (see https://github.com/mdn/content/blob/main/files/en-us/_redirects.txt)
-2. Depending on the presence of a redirect, use either
+1. Identify the `mdn/content` commit for the deletion using:
+   ```bash
+   git log -- files/en-us/slug/to/document.md
+   ```
+   Then check the corresponding PR to have a better understanding of the change.
+2. Check if there is an active redirect for the corresponding page in English (see https://github.com/mdn/content/blob/main/files/en-us/_redirects.txt)
+3. Depending on the presence of a redirect, use either
     ```bash
     yarn content delete <orphaned/slug/of/page> <locale> --redirect <other/slug>
     ```
@@ -50,6 +55,11 @@ For an orphaned page, the generic approach consists of the following:
 
 A conflicting page might need more work as content may have been moved/rewritten on the target page as well and redirection might not suffice. That being written, dealing with a conflicting page usually involves:
 
+1. Identify the `mdn/content` commit for the move using:
+   ```bash
+   git log -- files/en-us/slug/to/document.md
+   ```
+   Then check the corresponding PR to have a better understanding of the change.
 1. Applying the same redirect as per `mdn/content` for the source page:
     ```bash
     yarn content delete <conflicting/slug/of/page> <locale> --redirect <other/slug>
