@@ -39,7 +39,7 @@ slug: >-
 </html>
 ```
 
-在 header 中設定了文字編碼、以及{{htmlelement("title")}}和一些 CSS 樣式。在 body 中包含{{htmlelement("canvas")}}與{{htmlelement("script")}}，前者將用來渲染遊戲畫面，後者將用來撰寫 JavaScript 程式控制渲染。{{htmlelement("canvas")}}元件有 個id為 `myCanvas` 方便當作參考(reference，如許多程式語言中的變數)讓我們設定它的寬度為 480 pixels 與高度 320 pixels，這份教學中全部的 JavaScript 程式碼都會寫在 `<script>` 開始標記與 `</script>` 結束標記中間。
+在 header 中設定了文字編碼、以及{{htmlelement("title")}}和一些 CSS 樣式。在 body 中包含{{htmlelement("canvas")}}與{{htmlelement("script")}}，前者將用來渲染遊戲畫面，後者將用來撰寫 JavaScript 程式控制渲染。{{htmlelement("canvas")}} 元件有個 `id` 為 `myCanvas` 方便當作參考(reference，如許多程式語言中的變數)讓我們設定它的寬度為 480 pixels 與高度 320 pixels，這份教學中全部的 JavaScript 程式碼都會寫在 `<script>` 開始標記與 `</script>` 結束標記中間。
 
 ## Canvas 基礎
 
