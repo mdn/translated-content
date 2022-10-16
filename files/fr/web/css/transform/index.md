@@ -15,7 +15,7 @@ La propriété **`transform`** modifie l'espace de coordonnées utilisé pour la
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
-Si la propriété est différente de `none`, un [contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches) sera créé. Dans ce cas, l'élément agira comme le bloc englobant pour les éléments qu'il contient et qui ont ` position``: fixed; ` ou `position: absolute;`.
+Si la propriété est différente de `none`, un [contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches) sera créé. Dans ce cas, l'élément agira comme le bloc englobant pour les éléments qu'il contient et qui ont `position: fixed;` ou `position: absolute;`.
 
 > **Attention :** Seuls certains éléments peuvent être transformés. Les éléments dont la disposition est gérée avec des [boîtes en ligne non-remplacées](/fr/docs/Web/CSS/Mod%C3%A8le_de_mise_en_forme_visuelle#Les_%C3%A9l%C3%A9ments_en_ligne_et_les_bo%C3%AEtes_en_ligne), des [colonnes de tableau](/fr/docs/Web/HTML/Element/col) ou des [groupes de colonnes de tableau](/fr/docs/Web/HTML/Element/colgroup) ne peuvent pas être transformés.
 
