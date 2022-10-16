@@ -76,7 +76,7 @@ La méthode `findLast()` ne modifie pas le tableau sur lequel elle est appelée,
 - Si un élément existant du tableau et qui n'a pas encore été traité mais est modifié par `fnRappel`, la valeur qui sera passée à `fnRappel` sera la valeur au moment où `findLast()` visite l'indice de l'élément.
 - Les éléments qui sont [supprimés avec `delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete) sont tout de même parcourus.
 
-> **Attention :** Les modifications concurrentes comme celles qui sont décrits dans le paragraphe précédent mènent souvent à du code difficilement compréhensible et devraient généralement être évitées.
+> **Attention :** Les modifications concurrentes comme celles qui sont décrites dans le paragraphe précédent mènent souvent à du code difficilement compréhensible et devraient généralement être évitées.
 
 La méthode `findLast()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_génériques). Elle s'attend uniquement à ce que la valeur `this` ait une propriété `length` et des propriétés dont les clés sont des entiers.
 
@@ -151,7 +151,7 @@ Les emplacements vides d'un tableau _sont_ parcourus. Ils sont traités comme s'
 const array = [0, 1, , , , 5, 6];
 
 // Le parcourt suivant montre tous les indices et pas uniquement
-// ceux avec des valeurs affectés
+// ceux avec des valeurs affectées
 array.findLast((valeur, index) => {
   console.log(`Parcours de l'index ${index} avec la valeur ${valeur}`);
 });

@@ -78,7 +78,7 @@ LA méthode `groupToMap()` est [une méthode de copie](/fr/docs/Web/JavaScript/R
 
 La méthode `groupToMap()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_génériques). Elle s'attend uniquement à ce que la valeur `this` ait une propriété `length` et des propriétés dont les clés sont des entiers.
 
-Cette méthode s'avère utile lorsqu'on veut regrouper les informations associée à un objet donner qui peut évoluer au cours du temps. En effet, si l'objet est modifié, il pourra toujours être utilisé comme clé pour la `Map` renvoyée. En revanche, si on utilise une chaîne de caractères comme représentation d'un objet et qu'on l'utilise comme clé de groupement pour [`Array.prototype.group()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/group), il faudra maintenir la correspondance entre l'objet original et sa représentation lorsque l'objet évolue.
+Cette méthode s'avère utile lorsqu'on veut regrouper les informations associées à un objet donné qui peut évoluer au cours du temps. En effet, si l'objet est modifié, il pourra toujours être utilisé comme clé pour la `Map` renvoyée. En revanche, si on utilise une chaîne de caractères comme représentation d'un objet et qu'on l'utilise comme clé de groupement pour [`Array.prototype.group()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/group), il faudra maintenir la correspondance entre l'objet original et sa représentation lorsque l'objet évolue.
 
 > **Note :** Pour accéder aux groupes dans l'objet `Map` renvoyé, il faut utiliser le même objet que celui qui a été initialement utilisé comme clé (même si ses propriétés peuvent être modifiées). On ne peut pas utiliser un autre objet qui aurait seulement le même nom et les mêmes propriétés.
 
@@ -92,7 +92,7 @@ La méthode `groupToMap()` ne modifie pas le tableau sur lequel elle est appelé
 - Si un élément existant du tableau et qui n'a pas encore été traité mais est modifié par `fnRappel`, la valeur qui sera passée à `fnRappel` sera la valeur au moment où `groupToMap()` visite l'indice de l'élément.
 - Les éléments qui sont [supprimés avec `delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete) sont tout de même parcourus.
 
-> **Attention :** Les modifications concurrentes comme celles qui sont décrits dans le paragraphe précédent mènent souvent à du code difficilement compréhensible et devraient généralement être évitées.
+> **Attention :** Les modifications concurrentes comme celles qui sont décrites dans le paragraphe précédent mènent souvent à du code difficilement compréhensible et devraient généralement être évitées.
 
 ## Exemples
 
