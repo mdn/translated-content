@@ -29,7 +29,7 @@ join(separator)
 
 所有数组元素被转换成字符串并连接到一个字符串中。如果一个元素是 `undefined` 或 `null`，它将被转换为空字符串，而不是字符串 `"undefined"` 或 `"null"`。
 
-`join` 方法在内部由 [`Array.prototype.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 访问，不带参数。覆盖一个数组实例的 `join` 也将覆盖它的 `toString` 行为。
+[`Array.prototype.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 会在内部访问 `join` 方法，不带参数。覆盖一个数组实例的 `join` 也将覆盖它的 `toString` 行为。
 
 当在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)上使用时，`join()` 方法迭代空槽，就像它们的值为 `undefined` 一样。
 
