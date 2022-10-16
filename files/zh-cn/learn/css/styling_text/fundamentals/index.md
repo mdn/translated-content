@@ -174,13 +174,90 @@ CSS 定义了 5 个常用的字体名称：`serif`, `sans-serif`, `monospace`, `
 
 五个名称定义如下：
 
-| 名称         | 定义                                                                     | 示例                |
-| ------------ | ------------------------------------------------------------------------ | ------------------- |
-| `serif`      | 有衬线的字体（衬线一词是指字体笔画尾端的小装饰，存在于某些印刷体字体中） | My big red elephant |
-| `sans-serif` | 没有衬线的字体。                                                         | My big red elephant |
-| `monospace`  | 每个字符具有相同宽度的字体，通常用于代码列表。                           | My big red elephant |
-| `cursive`    | 用于模拟笔迹的字体，具有流动的连接笔画。                                 | My big red elephant |
-| `fantasy`    | 用来装饰的字体                                                           | My big red elephant |
+<table class="standard-table no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">名称</th>
+      <th scope="col">定义</th>
+      <th scope="col">示例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>serif</code></td>
+      <td>
+        衬线字体, 即有衬线的字体 (衬线是指字体笔画尾端的小装饰, 存在于某些印刷体字体中).
+      </td>
+      <td id="serif-example">
+        <pre class="brush: html hidden">My big red elephant</pre>
+        <pre class="brush: css hidden">
+body {
+  font-family: serif;
+}</pre
+        >
+        {{EmbedLiveSample("serif-example", 100, 60)}}
+      </td>
+    </tr>
+    <tr>
+      <td><code>sans-serif</code></td>
+      <td>
+        无衬线字体.
+      </td>
+      <td id="sans-serif-example">
+        <pre class="brush: html hidden">My big red elephant</pre>
+        <pre class="brush: css hidden">
+body {
+  font-family: sans-serif;
+}</pre
+        >
+        {{EmbedLiveSample("sans-serif-example", 100, 60)}}
+      </td>
+    </tr>
+    <tr>
+      <td><code>monospace</code></td>
+      <td>
+        等宽字体, 指包含的全部字符的宽度相同的字体, 通常在编辑代码时使用.
+      </td>
+      <td id="monospace-example">
+        <pre class="brush: html hidden">My big red elephant</pre>
+        <pre class="brush: css hidden">
+body {
+  font-family: monospace;
+}</pre
+        >
+        {{EmbedLiveSample("monospace-example", 100, 60)}}
+      </td>
+    </tr>
+    <tr>
+      <td><code>cursive</code></td>
+      <td>
+        手写字体, 对于英文字符而言通常具有顺滑的连接笔画以模拟手写效果.
+      </td>
+      <td id="cursive-example">
+        <pre class="brush: html hidden">My big red elephant</pre>
+        <pre class="brush: css hidden">
+body {
+  font-family: cursive;
+}</pre
+        >
+        {{EmbedLiveSample("cursive-example", 100, 60)}}
+      </td>
+    </tr>
+    <tr>
+      <td><code>fantasy</code></td>
+      <td>装饰字体.</td>
+      <td id="fantasy-example">
+        <pre class="brush: html hidden">My big red elephant</pre>
+        <pre class="brush: css hidden">
+body {
+  font-family: fantasy;
+}</pre
+        >
+        {{EmbedLiveSample("fantasy-example", 100, 60)}}
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### 字体栈
 
