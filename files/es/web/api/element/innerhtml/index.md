@@ -31,7 +31,7 @@ element.innerHTML = htmlString;
 
 ### Valor
 
-La variable constante `content` contiene un [DOMString](/es/docs/Web/API/DOMString) que contiene el código HTML serializado describiendo todos los descendientes de `element`. Cuando se establece el valor de innerHTML, **se eliminan todos los descendientes de `element`, analiza la cadena `htmString` y asigna los nodos resultantes como descendientes de `element`.
+La variable constante `content` contiene un [DOMString](/es/docs/Web/API/DOMString) que contiene el código HTML serializado describiendo todos los descendientes de `element`. Cuando se establece el valor de innerHTML, **se eliminan todos los descendientes de `element`**, analiza la cadena `htmString` y asigna los nodos resultantes como descendientes de `element`.
 
 ### Excepciones
 

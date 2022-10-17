@@ -9,7 +9,7 @@ translation_of: Web/API/Element/clientTop
 
 ## Resumen
 
-El ancho del borde superior de un elemento en pixel. No incluye ni el*margin-top* , ni el*padding-top* . `clientTop` es de sólo lectura.
+El ancho del borde superior de un elemento en pixel. No incluye ni el *margin-top* , ni el *padding-top* . `clientTop` es de sólo lectura.
 
 Las aplicaciones "[Gecko](es/Gecko)-based applications" implementan el uso de `clientTop` a partir de Gecko 1.9 ([Firefox 3](es/Firefox_3),ver {{ Bug(111207) }}). Esta propiedad no está disponible en Firefox 2 o anteriores.
 
@@ -21,17 +21,23 @@ vartop = element.clientTop;
 
 ## Ejemplo
 
-padding-top
+```html hidden
+<div id="offsetContainer" style="margin: 26px 0px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: absolute; left: 260px;">
+<div id="idDiv" style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
+<p id="PaddingTopLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-top</p>
 
-Suave, individualista y muy leal, los gatos de Birmania tienen un carácter entre los persas y los siameses. Si le gustan los gatos que no son agresivos, disfrutan estar entre los humanos y son generalmente tranquilos, esta es la raza para usted.
+<p>Suave, individualista y muy leal, los gatos de Birmania tienen un carácter entre los persas y los siameses. Si le gustan los gatos que no son agresivos, disfrutan estar entre los humanos y son generalmente tranquilos, esta es la raza para usted.</p>
 
-<img alt="Image:BirmanCat.jpg">Todos los Birmanos tienen pintas y coloración obscura en la cara, orejas, patas y cola.
+<p><span style="float: right;"><img alt="Image:BirmanCat.jpg"></span>Todos los Birmanos tienen pintas y coloración obscura en la cara, orejas, patas y cola.</p>
 
-La imagen del gato y el texto vienen de [www.best-cat-art.com](http://www.best-cat-art.com/)
+<p>La imagen del gato y el texto vienen de <a class="external" href="http://www.best-cat-art.com/">www.best-cat-art.com</a></p>
 
-padding-bottom
+<p id="PaddingBottomLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-bottom</p>
+</div>
+<strong style="color: blue; font-family: Arial,sans-serif; font-size: 13px!important; font-weight: bold; left: -32px; position: absolute; top: 85px;">Left</strong><strong style="color: blue; font-family: Arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 170px; position: absolute; top: -24px;">Top</strong><strong style="color: blue; font-family: Arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;">Right</strong><strong style="color: blue; font-family: Arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 203px;">Bottom</strong></div>
+```
 
-**Left\*\***Top\***\*Right\*\***Bottom\*\*_margin-top**margin-bottom**border-top\_\_border-bottom_{{ mediawiki.external('if IE') }}>\<span id="MrgLeft" style="position: absolute; left: 8px; top: 65px; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl;">margin-left\</span>\<span id="BrdLeft" style="position: absolute; left: 33px; top: 65px; color: white; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl;">border-left\</span>\<span id="PdgLeft" style="position: absolute; left: 55px; top: 65px; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl;">padding-left\</span>\<span id="PdgRight" style="position: absolute; left: 275px; top: 60px; color: black; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl; white-space: nowrap;">padding-right\</span>\<span id="BrdRight" style="position: absolute; left: 310px; top: 65px; color: white; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl;">border-right\</span>\<span id="MrgRight" style="position: absolute; left: 340px; top: 65px; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl;">margin-right\</span>\<!{{ mediawiki.external('endif') }}
+{{EmbedLiveSample("",400,300)}}
 
 <img alt="Image:clientTop.png">
 

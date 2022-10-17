@@ -23,7 +23,7 @@ var pxl = elt.scrollTopMax;
 
 ## Especificaciones
 
-{{Specifications}}
+Esta propiedad no es parte de ninguna especificación.
 
 ## Compatibilidad con navegadores
 
