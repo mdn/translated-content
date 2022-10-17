@@ -25,7 +25,7 @@ La [política de seguridad del mismo origen](/es/docs/Web/Security/Same-origin_p
 - {{HTTPHeader("Access-Control-Allow-Credentials")}}
   - : indica si la respuesta a la solicitud se puede exponer o no cuando el indicador de credenciales es `true`.
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
-  - : Se usa en respuesta a una solicitud de verificación previa para indicar qué encabezados HTTP se pueden usar al realizar la solicitud real.
+  - : Se usa en respuesta a una solicitud de verificación previa para indicar qué encabezados HTTP se pueden usar al realizar la solicitud.
 - {{HTTPHeader("Access-Control-Allow-Methods")}}
   - : Especifica el método o los métodos permitidos al acceder al recurso en respuesta a una solicitud de verificación previa.
 - {{HTTPHeader("Access-Control-Expose-Headers")}}
@@ -33,8 +33,8 @@ La [política de seguridad del mismo origen](/es/docs/Web/Security/Same-origin_p
 - {{HTTPHeader("Access-Control-Max-Age")}}
   - : Indica cuánto tiempo se pueden almacenar en caché los resultados de una solicitud de verificación previa.
 - {{HTTPHeader("Access-Control-Request-Headers")}}
-  - : Se utiliza al emitir una solicitud de verificación previa para que el servidor sepa qué encabezados HTTP se utilizarán cuando se realice la solicitud real.
+  - : Se utiliza al emitir una solicitud de verificación previa para que el servidor sepa qué encabezados HTTP se utilizarán cuando se realice la solicitud.
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - : Se utiliza al emitir una solicitud de verificación previa para que el servidor sepa qué [método HTTP](/es/docs/Web/HTTP/Methods) se utilizará cuando se realice la solicitud real.
+  - : Se utiliza al emitir una solicitud de verificación previa para que el servidor sepa qué [método HTTP](/es/docs/Web/HTTP/Methods) se utilizará cuando se realice la solicitud.
 - {{HTTPHeader("Origin")}}
   - : Indica de dónde se origina una búsqueda.
