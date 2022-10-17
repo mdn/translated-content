@@ -175,7 +175,7 @@ pc.setRemoteDescription(desc).then(function () {
 
 ## 浏览器支持
 
-{{Compat("api.RTCPeerConnection.addTrack")}}
+{{Compat}}
 
 ## 参考
 

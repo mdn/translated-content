@@ -2,6 +2,7 @@
 title: Storage Access API の使用
 slug: Web/API/Storage_Access_API/Using
 ---
+
 {{seecompattable}}{{DefaultAPISidebar("Storage Access API")}}
 
 埋め込まれたクロスオリジンの文書で [Storage Access API](/ja/docs/Web/API/Storage_Access_API) を使用して、ファーストパーティストレージにアクセスできるかどうかを確認し、そうでない場合はアクセスを要求する必要があります。 一般的なストレージアクセスのシナリオについて簡単に説明します。

@@ -2,6 +2,7 @@
 title: ReadableByteStreamController.enqueue()
 slug: Web/API/ReadableByteStreamController/enqueue
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("ReadableByteStreamController")}} インターフェイスの **`enqueue()`** メソッドは、所与のチャンクを関連するストリームのキューに入れます。

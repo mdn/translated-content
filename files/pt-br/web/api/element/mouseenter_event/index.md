@@ -58,7 +58,7 @@ Combinado ao comportamento do seu evento simétrico, `mouseleave`, o evento DOM 
 
 ## Examples
 
-The [`mouseover` ](/pt-BR/docs/Web/Events/mouseover#Example)documentation has an example illustrating the difference between `mouseover` and `mouseenter`.
+The [`mouseover`](/pt-BR/docs/Web/Events/mouseover#Example) documentation has an example illustrating the difference between `mouseover` and `mouseenter`.
 
 The following example illustrates how to use `mouseover` to simulate the principle of event delegation for the mouseenter event.
 

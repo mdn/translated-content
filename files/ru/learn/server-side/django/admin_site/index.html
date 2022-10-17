@@ -9,7 +9,7 @@ translation_of: Learn/Server-side/Django/Admin_site
 
 <p class="summary">Теперь, когда модели для сайта <a href="https://developer.mozilla.org/ru-RU/docs/Learn/Server-side/Django/Tutorial_local_library_website">местной библиотеки</a> созданы, добавим некоторые "настоящие" данные о книгах, используя административную панель Django Admin. Для начала мы покажем, как зарегистрировать в ней модели, потом как войти и создать какие-нибудь данные. В конце статьи мы покажем некоторые способы дальнейшего улучшения вида админ-панели.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Предусловия:</th>
@@ -199,7 +199,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'display_genre')
 </pre>
 
-<p>К сожалению, мы не можем напрямую поместить поле <font face="Consolas, Liberation Mono, Courier, monospace">genre в</font> <code>list_display</code>, так как оно является  <code>ManyToManyField</code> (Django не позволяет это из-за большой "стоимости" доступа к базе данных). Вместо этого мы определим функцию <code>display_genre</code> для получения строкового представления информации (вызов этой функции есть в <code>list_display</code>,  её определение см. ниже).</p>
+<p>К сожалению, мы не можем напрямую поместить поле genre в <code>list_display</code>, так как оно является  <code>ManyToManyField</code> (Django не позволяет это из-за большой "стоимости" доступа к базе данных). Вместо этого мы определим функцию <code>display_genre</code> для получения строкового представления информации (вызов этой функции есть в <code>list_display</code>,  её определение см. ниже).</p>
 
 <div class="note">
 <p><strong>Примечание</strong>: Получение здесь значения поля <code>genre</code> возможно не самая хорошая идея вследствие "стоимости" операции базы данных. Мы показываем это, потому что вызов функций в ваших моделях может быть очень полезен по другим причинам, например, для добавления ссылки  <em>Delete </em>рядом с каждым пунктом списка.</p>

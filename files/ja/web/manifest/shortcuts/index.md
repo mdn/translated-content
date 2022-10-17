@@ -2,7 +2,8 @@
 title: shortcuts
 slug: Web/Manifest/shortcuts
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">
   <tbody>

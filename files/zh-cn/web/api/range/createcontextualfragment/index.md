@@ -36,7 +36,7 @@ document.body.appendChild(documentFragment);
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.createContextualFragment")}}
+{{Compat}}
 
 ## See also
 

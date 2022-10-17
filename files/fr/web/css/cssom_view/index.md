@@ -27,10 +27,8 @@ translation_of: Web/CSS/CSSOM_View
 
 ## Spécifications
 
-| Spécification                        | État                             | Commentaires         |
-| ------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSSOM View')}} | {{Spec2('CSSOM View')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-behavior")}}
+{{Compat}}

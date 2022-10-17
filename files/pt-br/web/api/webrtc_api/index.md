@@ -48,7 +48,7 @@ Estas interfaces são usadas para configurar, abrir e gerenciar conexões WebRTC
 - {{domxref("RTCDataChannelEvent")}}
   - : Represents events that occur while attaching a {{domxref("RTCDataChannel")}} to a {{domxref("RTCPeerConnection")}}. The only event sent with this interface is {{event("datachannel")}}.
 - {{domxref("RTCSessionDescription")}}
-  - : Represents the parameters of a session. Each `RTCSessionDescription` consists of a description [`type`](/pt-BR/docs/Web/API/RTCSessionDescription/type "The property RTCSessionDescription.type is an enum of type RTCSdpType describing the description's type.") indicating which part of the offer/answer negotiation process it describes and of the [SDP](/pt-BR/docs/Glossary/SDP "SDP: SDP (Session Description Protocol) is the standard describing a peer-to-peer connection. SDP contains the codec, source address, and timing information of audio and video.") descriptor of the session.
+  - : Represents the parameters of a session. Each `RTCSessionDescription` consists of a description [`type`](/pt-BR/docs/Web/API/RTCSessionDescription/type) indicating which part of the offer/answer negotiation process it describes and of the [SDP](/pt-BR/docs/Glossary/SDP) descriptor of the session.
 - {{domxref("RTCStatsReport")}}
   - : Provides information detailing statistics for a connection or for an individual track on the connection; the report can be obtained by calling {{domxref("RTCPeerConnection.getStats()")}}.
 - {{domxref("RTCIceCandidate")}}

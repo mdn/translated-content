@@ -2,6 +2,7 @@
 title: z-index なしの重ね合わせ
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 ---
+
 {{CSSRef}}
 
 どの要素にも {{cssxref("z-index")}} プロパティが指定されていない場合、要素は以下の順序で (下から上に) 重ね合わせられます。

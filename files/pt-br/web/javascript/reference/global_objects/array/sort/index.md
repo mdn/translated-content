@@ -23,8 +23,10 @@ arr.sort([funcaoDeComparacao])
   - : O primeiro elemento para a comparação.
 - `segundoElemento`
   - : O segundo elemento para comparação.
-- ### Valor de Retorno
-  - : O array ordenado. Note que o array é ordenado de acordo com a pontuação de código [Unicode](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode) de cada um dos caracteres, e nenhuma cópia é feita.
+
+### Valor de Retorno
+
+O array ordenado. Note que o array é ordenado de acordo com a pontuação de código [Unicode](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode) de cada um dos caracteres, e nenhuma cópia é feita.
 
 ## Descrição
 

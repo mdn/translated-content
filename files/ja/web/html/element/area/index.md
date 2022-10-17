@@ -2,6 +2,7 @@
 title: <area>
 slug: Web/HTML/Element/area
 ---
+
 {{HTMLRef}}
 
 **HTML の `<area>` 要素**は、イメージマップの中でクリック可能な領域をあらかじめ定義します。*イメージマップ*では、画像上の幾何学的な領域を{{Glossary("Hyperlink", "ハイパーテキストリンク")}}と関連付けすることができます。
@@ -126,7 +127,7 @@ slug: Web/HTML/Element/area
 
     この属性は {{htmlattrxref("href", "area")}} 属性が存在する場合にのみ使用してください。
 
-    > **Note:** 新しいブラウザー (例えば Firefox 79 以降) では、 `target="_blank"` を `<area>` 要素に設定すると、暗黙に同じ動作をする `rel` を `rel="noopener"` と設定します。
+    > **メモ:** 新しいブラウザー (例えば Firefox 79 以降) では、 `target="_blank"` を `<area>` 要素に設定すると、暗黙に同じ動作をする `rel` を `rel="noopener"` と設定します。
 
 ### 非推奨の属性
 
@@ -136,7 +137,7 @@ slug: Web/HTML/Element/area
 
   - : 関連づけた領域にハイパーリンクがないことを示します。
 
-    > **Note:** HTML5 では `href` 属性を省略すれば十分です。
+    > **メモ:** HTML5 では `href` 属性を省略すれば十分です。
 
 - {{htmlattrdef("tabindex")}} {{deprecated_inline}}
   - : ブラウザーのタブオーダーにおける、定義した領域の位置を示す数値です。この属性は HTML5 のグローバル属性です。

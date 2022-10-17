@@ -5,7 +5,7 @@ slug: Web/CSS/@media
 
 {{CSSRef}}
 
-`@media` [CSS](/zh-CN/CSS) [@规则](/zh-CN/docs/Web/CSS/At-rule) 可用于基于一个或多个 [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)的结果来应用样式表的一部分。 使用它，您可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
+`@media` [CSS](/zh-CN/CSS) [@规则](/zh-CN/docs/Web/CSS/At-rule) 可用于基于一个或多个 [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)的结果来应用样式表的一部分。使用它，您可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
 
 > **备注：** 在 JavaScript 中，可以使用{{domxref("CSSMediaRule")}}CSS 对象模型接口访问使用 @media 创建的规则。
 
@@ -84,13 +84,13 @@ slug: Web/CSS/@media
 
 [`em`](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#Numeric_values)和[`px`](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#Numeric_values)都是有效单位，但如果用户更改浏览器文本大小，[`em`](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#Numeric_values)的效果会更好。
 
-考虑使用 4 级媒体查询来改善用户体验。 例如，使用`prefers-reduced-motion`以[检测用户是否已请求系统最小化其使用的动画](/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion)或动作量。
+考虑使用 4 级媒体查询来改善用户体验。例如，使用`prefers-reduced-motion`以[检测用户是否已请求系统最小化其使用的动画](/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion)或动作量。
 
 ## 安全
 
 由于媒体查询可以洞察用户正在使用的设备的功能（以及扩展的功能和设计），因此有可能滥用它们来构造“指纹”来识别设备，或者至少 将其分类为某些细节，这可能是用户不希望看到的。
 
-由于存在这种潜力，浏览器可能会选择以某种方式捏造返回的值，以防止它们被用来精确地标识计算机。 浏览器可能还会在此区域提供其他措施。 例如，如果启用了 Firefox 的“抵抗指纹”设置，则许多媒体查询会报告默认值，而不是代表实际设备状态的值。
+由于存在这种潜力，浏览器可能会选择以某种方式捏造返回的值，以防止它们被用来精确地标识计算机。浏览器可能还会在此区域提供其他措施。例如，如果启用了 Firefox 的“抵抗指纹”设置，则许多媒体查询会报告默认值，而不是代表实际设备状态的值。
 
 ## 规范
 

@@ -2,13 +2,14 @@
 title: ScriptProcessorNode
 slug: Web/API/ScriptProcessorNode
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 `ScriptProcessorNode` インターフェイスは、JavaScript を使って音声を生成、処理、または分析することを可能にします。
 
 {{InheritanceDiagram}}
 
-> **Note:** この機能は [AudioWorklets](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
+> **メモ:** この機能は [AudioWorklets](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
 
 `ScriptProcessorNode` インターフェイスは {{domxref("AudioNode")}} 音声処理モジュールであり、入力音声データを含む 2 つのバッファーと処理後の出力音声データを含む 1 つのバッファーにリンクされています。入力バッファーに新しいデータが入るたびに {{domxref("AudioProcessingEvent")}} インターフェイスを実装したイベントがオブジェクトに送られ、出力バッファーがデータでいっぱいになるとイベントハンドラーは終了します。
 

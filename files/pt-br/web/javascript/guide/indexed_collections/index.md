@@ -158,7 +158,7 @@ for (var i = 0; i < cores.length; i++) {
 }
 ```
 
-Se você sabe que nenhum dos elemnetos no seu array é avaliado como `false` em um contexto booleano — se o seu array consiste apenas de nodos do [DOM](/pt-BR/docs/DOM/Referencia_do_DOM "en-US/docs/DOM"), como exemplo, você pode usar um idioma mais eficiente:
+Se você sabe que nenhum dos elemnetos no seu array é avaliado como `false` em um contexto booleano — se o seu array consiste apenas de nodos do [DOM](/pt-BR/docs/DOM/Referencia_do_DOM), como exemplo, você pode usar um idioma mais eficiente:
 
 ```js
 var divs = document.getElementsByTagName('div');
@@ -482,7 +482,7 @@ O {{jsxref("ArrayBuffer")}} é um tipo de dado usado para representar um buffer 
 
 Views de arrays tipados possuem nomes autodescritivos e provêm views para todos os tipos numéricos usuais como `Int8`, `Uint32`, `Float64` e assim por diante. Existe uma view de array tipado especial, o `Uint8ClampedArray`. Ela fixa os valores entre 0 e 255. Isto é útil para [Canvas data processing](/pt-BR/docs/Web/API/ImageData), por exemplo.
 
-{{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}
+{{page("/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}
 
 Para mais informações, veja [Arrays tipados no JavaScript](/pt-BR/docs/Web/JavaScript/Typed_arrays) e documentos de referência para os diferentes objetos {{jsxref("TypedArray")}}.
 

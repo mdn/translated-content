@@ -42,7 +42,7 @@ Intl.NumberFormat.call(this[, locales[, options]])
     - `currency`
       - : A moeda para usar na formatação monetária. Os valores permitidos são os códigos de moedas da ISO 4217, como `"USD"` para dólar estadunidense, `"EUR"` para euro, ou `"CNY"` para RMB chinês — veja a [Lista de códigos de moedas e fundos atuais](http://www.currency-iso.org/en/home/tables/table-a1.html). Não há valor padrão; se o `style` for `"currency"`, a propriedade `currency` deverá ser informada.
     - `currencyDisplay`
-      - : Como será mostrada a moeda na formatação monetária. Os valores permitidos são` "symbol"` para usar um símbolo de moeda localizado como €, `"code"` para usar o código de moeda ISO, `"name"` para usar o nome da moeda localizado como `"dollar"`; o padrão é `"symbol"`.
+      - : Como será mostrada a moeda na formatação monetária. Os valores permitidos são `"symbol"` para usar um símbolo de moeda localizado como €, `"code"` para usar o código de moeda ISO, `"name"` para usar o nome da moeda localizado como `"dollar"`; o padrão é `"symbol"`.
     - `useGrouping`
       - : Se usar separadores de agrupamento, como separadores de milhares ou milhares/cem mil/dez milhões. Os valores permitidos são `true` e `false`; o padrão é `true`.
 
@@ -100,7 +100,7 @@ console.log(new Intl.NumberFormat().format(numero));
 
 ### Usando `locales`
 
-Este exemplo mostra algumas variações de formatos de números localizados. A fim de obter o formato da linguagem utilizada na interface do usuário da sua aplicação, tenha certeza de especificar a língua (e possivelmente algumas línguas reservas) usando o argumento` locales`:
+Este exemplo mostra algumas variações de formatos de números localizados. A fim de obter o formato da linguagem utilizada na interface do usuário da sua aplicação, tenha certeza de especificar a língua (e possivelmente algumas línguas reservas) usando o argumento `locales`:
 
 ```js
 var numero = 123456.789;

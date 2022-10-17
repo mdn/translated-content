@@ -36,9 +36,13 @@ text-emphasis-color: unset;
 - `<color>`
   - : Définit la couleur utilisée pour les marques. Si on ne définit pas de couleur, ce sera la couleur courante du texte qui sera utilisée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -63,15 +67,11 @@ em {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-emphasis-color-property', 'text-emphasis')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-emphasis-color")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -3,6 +3,7 @@ title: 'MediaStream: addtrack イベント'
 slug: Web/API/MediaStream/addtrack_event
 original_slug: Web/API/MediaStream/onaddtrack
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 `addtrack` イベントは、新しい [`MediaStreamTrack`](/ja/docs/Web/API/MediaStreamTrack) オブジェクトが [`MediaStream`](/ja/docs/Web/API/MediaStream) に追加されたときに発行されます。

@@ -23,7 +23,7 @@ void gl.bindBufferBase(target, index, buffer);
     - `gl.UNIFORM_BUFFER`
 
 - `index`
-  - : {{domxref("GLuint")}} 指定目标（`target`）的 index 。
+  - : {{domxref("GLuint")}} 指定目标（`target`）的 index。
 - `buffer`
   - : 绑定到目标点（`target`）的 {{domxref("WebGLBuffer")}} 。
 

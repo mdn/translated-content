@@ -25,7 +25,7 @@ document.getElementById("div1").removeAttribute("align");
 
 ## Observação
 
-Você deve usar `removeAttribute` ao invés de atribuir `null` ao atributo usando [setAttribute](/en/DOM/element.setAttribute "en/DOM/element.setAttribute").
+Você deve usar `removeAttribute` ao invés de atribuir `null` ao atributo usando [setAttribute](/en/DOM/element.setAttribute).
 
 Tentar remover um atributo que não existe no elemento não fará que uma exceção seja lançada.
 

@@ -76,13 +76,11 @@ Atomics.load(ta, 0);   // 1
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                     |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.and', 'Atomics.and')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.and")}}
+{{Compat}}
 
 ## Voir aussi
 

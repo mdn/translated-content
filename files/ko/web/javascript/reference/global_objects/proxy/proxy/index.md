@@ -11,11 +11,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 ---
 {{JSRef}}
 
- **`Proxy`** 생성자는 {{jsxref("Proxy")}} 객체를 만드는 데 사용됩니다.
+**`Proxy`** 생성자는 {{jsxref("Proxy")}} 객체를 만드는 데 사용됩니다.
 
- ## 구문
+## 구문
 
- ```js
+```js
 new Proxy(target, handler)
 ```
 

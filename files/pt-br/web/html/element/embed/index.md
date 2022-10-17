@@ -29,9 +29,8 @@ Lembre-se de que a maioria dos navegadores modernos descontinuou e removeu o sup
 
 - _[Categoria de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), embedded content, interactive content, palpable content.
 - _Conteúdo permitido_ Nenhum, é um {{Glossary("empty element")}}.
-- \_Omissão de Tag_Deve iniciar com uma tag de início, mas não deve ter uma tag de fechamento.
-- \_Elementos pai (ancestral)
-  permitidos_Qualquer elemento que aceita incorporação de conteúdo.
+- _Omissão de Tag_ Deve iniciar com uma tag de início, mas não deve ter uma tag de fechamento.
+- _Elementos pai (ancestral) permitidos_ Qualquer elemento que aceita incorporação de conteúdo.
 - _Interface DOM_ {{domxref("HTMLEmbedElement")}}
 
 ## Atributos

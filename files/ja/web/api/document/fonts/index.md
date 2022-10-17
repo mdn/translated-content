@@ -2,6 +2,7 @@
 title: Document.fonts
 slug: Web/API/Document/fonts
 ---
+
 {{APIRef("DOM")}}
 
 **`fonts`** は {{domxref("Document")}} インターフェイスのプロパティで、文書の {{domxref("FontFaceSet")}} インターフェイスを返します。

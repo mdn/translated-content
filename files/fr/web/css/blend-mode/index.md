@@ -351,13 +351,11 @@ Il n'y a pas d'interpolation pour les modes de fusion. Toute transition se produ
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('Compositing', '#ltblendmodegt', '&lt;blend-mode&gt;')}} | {{Spec2('Compositing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.blend-mode")}}
+{{Compat}}
 
 ## Voir aussi
 

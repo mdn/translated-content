@@ -2,6 +2,7 @@
 title: VRStageParameters.sizeY
 slug: Web/API/VRStageParameters/sizeY
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 {{domxref("VRStageParameters")}} インターフェイスの **`sizeY`** 読取専用プロパティはプレイエリア境界の奥行きをメートル単位で返します．

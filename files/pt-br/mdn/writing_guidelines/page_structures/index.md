@@ -40,25 +40,25 @@ git remote -v
 
 Agora, sempre que você quiser atualizar seu fork, você pode fazer isso:
 
-1.  Certificando-se de que você está no branch master:
+1. Certificando-se de que você está no branch master:
 
     ```bash
     git checkout master
     ```
 
-2.  buscando o conteúdo atualizado do repositório usando:
+2. buscando o conteúdo atualizado do repositório usando:
 
     ```bash
     git fetch upstream
     ```
 
-3.  faça o rebase do seu conteúdo master com o conteúdo do repositório principal:
+3. faça o rebase do seu conteúdo master com o conteúdo do repositório principal:
 
     ```bash
     git rebase upstream/master
     ```
 
-4.  faça o push dessas atualizações de volta ao seu fork remoto usando:
+4. faça o push dessas atualizações de volta ao seu fork remoto usando:
 
     ```bash
     git push -f
@@ -68,9 +68,9 @@ Agora, sempre que você quiser atualizar seu fork, você pode fazer isso:
 
 Em seguida, vá à sua bifurcação remota (será em `https://github.com/seu-nome-de-usuario/browser-compat-data`) e crie um novo ramo para guardar suas mudanças de adição de conteúdo. Isso pode ser feito em:
 
-1.  Clicando no botão "Branch: Master".
-2.  Colocando um novo nome de ramo dentro do campo de texto de "Encontre ou crie seu ramo...".
-3.  Clicando no botão "Criar ramo _nome-do-ramo_ a partir de Master".
+1. Clicando no botão "Branch: Master".
+2. Colocando um novo nome de ramo dentro do campo de texto de "Encontre ou crie seu ramo...".
+3. Clicando no botão "Criar ramo _nome-do-ramo_ a partir de Master".
 
 Por exemplo, se você quisesse adicionar informações sobre WebVR API, você criaria um ramno chamado algo como "webvr".
 
@@ -99,7 +99,7 @@ To add the data, you need to create a new file or files to store your compat dat
 - JS: One file per JS object, contained in [browser-compat-data/javascript/builtins](https://github.com/mdn/browser-compat-data/tree/master/javascript/builtins). The file should be called the exact name of the object, with the casing preserved, e.g. `Date.json` or `InternalError.json`.
 - APIs: One file per interface contained in the API, put in [browser-compat-data/api](https://github.com/mdn/browser-compat-data/tree/master/api). Each file should be called the exact name of the interface, with the casing preserved, e.g. The WebVR API has `VRDisplay.json`, `VRDisplayCapabilities.json`, etc.
 
-> **Nota:** You'll notice that the repo also contains data for [Browser Extensions](/en-US/Add-ons/WebExtensions) and [HTTP](/pt-BR/docs/Web/HTTP). These data sets are basically finished as they stand, but more features may need to be added in the future.
+> **Nota:** You'll notice that the repo also contains data for [Browser Extensions](/pt-BR/Add-ons/WebExtensions) and [HTTP](/pt-BR/docs/Web/HTTP). These data sets are basically finished as they stand, but more features may need to be added in the future.
 
 Each file you create has to follow the pattern defined in the schema contained within our repo; you can see the [detailed schema description here](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md).
 
@@ -137,7 +137,7 @@ In HTML, CSS, and JS pages, you'll normally only need one feature. API interface
 
 Inside a feature `__compat` member, you need to include the following members:
 
-- `mdn_url`: Contains the URL of the reference page for this feature on MDN. Note that this needs to be written without the locale directory inside, e.g. `/docs/...` not `/docs/en-US/...` (or whatever). This is added in by the macro when the data is put on the page, for localization purposes.
+- `mdn_url`: Contains the URL of the reference page for this feature on MDN. Note that this needs to be written without the locale directory inside, e.g. `/docs/...` not `/docs/pt-BR/...` (or whatever). This is added in by the macro when the data is put on the page, for localization purposes.
 - `support`: Contains members representing the browser support information for this feature in all the different browsers we want to report.
 - `status`: Contains members reporting the standards track status of this feature.
 
@@ -209,7 +209,7 @@ The feature data for [border-width](/pt-BR/docs/Web/CSS/border-width#Browser_com
 
 #### Adicionando uma descrição
 
-There is a fourth, optional, member that can go inside the \_\_compat member — `description`. This can be used to include a human-readable description of the feature. You should only include this if it is hard to see what the feature is from glancing at the data. For example, it might not be that obvious what a constructor is from looking at the data structure, so you can include a description like so:
+There is a fourth, optional, member that can go inside the compat member — `description`. This can be used to include a human-readable description of the feature. You should only include this if it is hard to see what the feature is from glancing at the data. For example, it might not be that obvious what a constructor is from looking at the data structure, so you can include a description like so:
 
 ```json
 {

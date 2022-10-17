@@ -2,6 +2,7 @@
 title: 'Reason: CORS request not HTTP'
 slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
+
 {{HTTPSidebar}}
 
 ## 理由

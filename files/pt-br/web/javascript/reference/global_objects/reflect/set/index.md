@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/set
 ---
 {{JSRef}}
 
-O método estático **`Reflect`\*\***`.set()`\*\* define uma propriedade em um objeto.
+O método estático **`Reflect.set()`** define uma propriedade em um objeto.
 
 ## Sintaxe
 
@@ -22,7 +22,7 @@ Reflect.set(alvo, propriedade, valor[, receptor])
 - valor
   - : o valor a ser definido para a propriedade.
 - receptor
-  - : O valor do `this `fornecido para a chamada do alvo se um setter é encontrado.
+  - : O valor do `this` fornecido para a chamada do alvo se um setter é encontrado.
 
 ### Retorno
 

@@ -3,6 +3,7 @@ title: Firefox 2 のための拡張機能の更新
 slug: Mozilla/Firefox/Releases/2/Updating_extensions
 original_slug: Updating_extensions_for_Firefox_2
 ---
+
 {{FirefoxSidebar}}
 
 この記事は、 Firefox 2 で正しく動作するように拡張機能を更新したい開発者にとって有益な情報を提供します。

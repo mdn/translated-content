@@ -7,7 +7,7 @@ slug: Web/API/WebGLRenderingContext
 
 **WebGLRenderingContext** 接口提供基于 OpenGL ES 2.0 的绘图上下文，用于在 HTML {{HTMLElement("canvas")}} 元素内绘图。
 
-要获得这个接口的对象，可以通过在 `<canvas>`  元素上调用{{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 函数，调用时传入 “webgl” 参数：
+要获得这个接口的对象，可以通过在 `<canvas>`  元素上调用{{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 函数，调用时传入“webgl”参数：
 
 ```js
 var canvas = document.getElementById('myCanvas');
@@ -149,7 +149,7 @@ var gl = canvas.getContext('webgl');
 - {{domxref("WebGLRenderingContext.isFramebuffer()")}}
   - : 返回 Boolean 值，表示给入的 `WebGLFrameBuffer` 对象是否有效。
 - {{domxref("WebGLRenderingContext.readPixels()")}}
-  - : 读取 `WebGLFrameBuffer 的像素。`
+  - : 读取 `WebGLFrameBuffer` 的像素。
 
 ## 渲染缓冲区
 
@@ -191,7 +191,7 @@ var gl = canvas.getContext('webgl');
 - {{domxref("WebGLRenderingContext.texImage2D()")}}
   - : 指定 2D 纹理图片。
 - {{domxref("WebGLRenderingContext.texSubImage2D()")}}
-  - : 更新当前 `WebGLTexture 的子矩形。`
+  - : 更新当前 `WebGLTexture` 的子矩形。
 - {{domxref("WebGLRenderingContext.texParameterf()")}}
   - : 设置纹理参数。
 - {{domxref("WebGLRenderingContext.texParameteri()")}}
@@ -200,21 +200,21 @@ var gl = canvas.getContext('webgl');
 ## 程序对象和着色器对象
 
 - {{domxref("WebGLRenderingContext.attachShader()")}}
-  - : 把 `WebGLShader` 添加到 `WebGLProgram。`
+  - : 把 `WebGLShader` 添加到 `WebGLProgram`。
 - {{domxref("WebGLRenderingContext.bindAttribLocation()")}}
   - : 绑定一个普通顶点索引到一个命名的 attribute 变量
 - {{domxref("WebGLRenderingContext.compileShader()")}}
-  - : 编译 `WebGLShader。`
+  - : 编译 `WebGLShader`。
 - {{domxref("WebGLRenderingContext.createProgram()")}}
-  - : 创建 `WebGLProgram。`
+  - : 创建 `WebGLProgram`。
 - {{domxref("WebGLRenderingContext.createShader()")}}
-  - : 创建 `WebGLShader。`
+  - : 创建 `WebGLShader`。
 - {{domxref("WebGLRenderingContext.deleteProgram()")}}
-  - : 删除 `WebGLProgram。`
+  - : 删除 `WebGLProgram`。
 - {{domxref("WebGLRenderingContext.deleteShader()")}}
-  - : 删除 `WebGLShader。`
+  - : 删除 `WebGLShader`。
 - {{domxref("WebGLRenderingContext.detachShader()")}}
-  - : 分离 `WebGLShader。`
+  - : 分离 `WebGLShader`。
 - {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
   - : 返回附加在 `WebGLProgram 上的` `WebGLShader` 对象的列表。
 - {{domxref("WebGLRenderingContext.getProgramParameter()")}}
@@ -236,11 +236,11 @@ var gl = canvas.getContext('webgl');
 - {{domxref("WebGLRenderingContext.linkProgram()")}}
   - : 链接给入的 `WebGLProgram` 对象。
 - {{domxref("WebGLRenderingContext.shaderSource()")}}
-  - : 设置一个 `WebGLShader 的源码。`
+  - : 设置一个 `WebGLShader` 的源码。
 - {{domxref("WebGLRenderingContext.useProgram()")}}
   - : 使用指定的 `WebGLProgram` 作为当前渲染状态的一部分。
 - {{domxref("WebGLRenderingContext.validateProgram()")}}
-  - : 使 `WebGLProgram 生效。`
+  - : 使 `WebGLProgram` 生效。
 
 ## Uniform 和 Attribute
 

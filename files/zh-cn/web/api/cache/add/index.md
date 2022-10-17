@@ -47,7 +47,7 @@ void 返回值的 {{jsxref("Promise")}}
 
 ## 示例
 
-下面的代码块等待 {{domxref("InstallEvent")}} 事件触发，然后运行 {{domxref("ExtendableEvent.waitUntil","waitUntil")}} 来处理该应用程序的安装过程。 包括调用 {{domxref("CacheStorage.open")}} 来创建一个新的缓存，然后使用 {{domxref("Cache.add")}} 来添加一个请求资源到该缓存。
+下面的代码块等待 {{domxref("InstallEvent")}} 事件触发，然后运行 {{domxref("ExtendableEvent.waitUntil","waitUntil")}} 来处理该应用程序的安装过程。包括调用 {{domxref("CacheStorage.open")}} 来创建一个新的缓存，然后使用 {{domxref("Cache.add")}} 来添加一个请求资源到该缓存。
 
 ```js
 this.addEventListener('install', function(event) {

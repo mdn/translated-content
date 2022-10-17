@@ -2,6 +2,7 @@
 title: MediaSession
 slug: Web/API/MediaSession
 ---
+
 {{SeeCompatTable}}{{APIRef("Media Session API")}}
 
 [Media Session API](/ja/docs/Web/API/Media_Session_API) の **`MediaSession`** インターフェースは、ウェブページで標準のメディア再生操作に対する専用の動作を提供します。

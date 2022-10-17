@@ -2,6 +2,7 @@
 title: Community
 slug: Web/Accessibility/Community
 ---
+
 アクセシビリティに関する、役立つメーリングリストやニュースグループ、フォーラム、その他のコミュニティをご存知の方は、ここにリンクを追加してください。
 
 - [Mozilla Accessibility Newsgroup](news://news.mozilla.org/netscape.public.mozilla.accessibility)

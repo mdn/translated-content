@@ -43,7 +43,7 @@ _该接口没有继承任何方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.NamedNodeMap")}}
+{{Compat}}
 
 ## 相关链接
 

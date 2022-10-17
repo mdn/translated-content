@@ -30,7 +30,7 @@ Reflect.has(target, propertyKey)
 
 ## 描述
 
-`Reflect.has` 用于检查一个对象是否拥有某个属性， 相当于[`in` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/in) 。
+`Reflect.has` 用于检查一个对象是否拥有某个属性，相当于[`in` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/in) 。
 
 ## 示例
 

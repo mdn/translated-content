@@ -21,7 +21,7 @@ navigator.getBattery().then(funcRef);
 
 ## 浏览器兼容
 
-{{Compat("api.Navigator.getBattery")}}
+{{Compat}}
 
 ## 请参见
 

@@ -79,7 +79,7 @@ myHeading.textContent = 'Hello world!';</pre>
 
 <h3 id="Переменные">Переменные</h3>
 
-<p>{{Glossary("Variable", "Переменные")}} — это контейнеры, внутри которых вы можете хранить значения. Вы начинаете с того, что объявляете переменную с помощью ключевого слова <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/var">var</a></code> <span class="tlid-translation translation" lang="ru"><span title="">(не рекомендуется, продолжайте читать, чтобы получить объяснения)</span></span> или <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/let">let</a></code>, за которым следует любое имя, которым вы захотите её назвать:</p>
+<p>{{Glossary("Variable", "Переменные")}} — это контейнеры, внутри которых вы можете хранить значения. Вы начинаете с того, что объявляете переменную с помощью ключевого слова <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/var">var</a></code> (не рекомендуется, продолжайте читать, чтобы получить объяснения) или <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/let">let</a></code>, за которым следует любое имя, которым вы захотите её назвать:</p>
 
 <pre class="brush: js">let myVariable;</pre>
 
@@ -366,7 +366,7 @@ var myHeading = document.querySelector('h1');</pre>
   <pre class="brush: js">function setUserName() {
   var myName = prompt('Please enter your name.');
   localStorage.setItem('name', myName);
-  myHeading.<span class="pl-smi">textContent</span> = 'Mozilla is cool, ' + myName;
+  myHeading.textContent = 'Mozilla is cool, ' + myName;
 }</pre>
   Эта функция содержит функцию <a href="/ru/docs/Web/API/Window.prompt"><code>prompt()</code></a>, которая вызывает диалоговое окно, немного похожее на <code>alert()</code> кроме того, что <code>prompt()</code> просит пользователя ввести некоторые данные, и сохраняет эти данные в переменной, после того как пользователь нажимает <strong>OK</strong>. В данном случае, мы просим пользователя ввести его имя. Далее, мы вызываем API под названием <code>localStorage</code>, который позволяет нам хранить данные в браузере и извлекать их позднее. Мы используем функцию <code>setItem()</code> из localStorage для создания и хранения данных в свойстве под названием <code>'name'</code>, и устанавливаем это значение в переменную <code>myName</code>, которая содержит имя введённое пользователем. В конце мы устанавливаем <code>textContent</code> заголовку в виде строки и имени пользователя.</li>
  <li>Затем добавьте блок <code>if ... else</code> - мы могли бы назвать это кодом инициализации, поскольку он структурирует приложение при его первой загрузке:
@@ -374,7 +374,7 @@ var myHeading = document.querySelector('h1');</pre>
   setUserName();
 } else {
   var storedName = localStorage.getItem('name');
-  myHeading.<span class="pl-smi">textContent</span> = 'Mozilla is cool, ' + storedName;
+  myHeading.textContent = 'Mozilla is cool, ' + storedName;
 }</pre>
   Этот блок сначала использует оператор отрицания (логическое НЕ, представленное в виде !) чтобы проверить, существуют ли данные в пункте <code>name</code>. Если нет, то функция <code>setUserName()</code> запускается для их создания. Если данные существуют (то есть, пользователь установил его во время предыдущего посещения), мы извлекаем сохранённое имя, с помощью <code>getItem()</code> и устанавливаем <code>textContent</code> заголовку в виде строки плюс имя пользователя, так же, как мы делали внутри <code>setUserName()</code>.</li>
  <li>Наконец, установите обработчик события <code>onclick</code> на кнопку. При нажатии кнопки запускается функция <code>setUserName()</code>. Это позволяет пользователю установить новое имя, всякий раз, когда он захочет, нажатием кнопки:

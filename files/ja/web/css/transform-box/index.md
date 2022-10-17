@@ -2,6 +2,7 @@
 title: transform-box
 slug: Web/CSS/transform-box
 ---
+
 {{CSSRef}}
 
 CSS の **`transform-box`** プロパティは、 {{cssxref("transform")}} と {{cssxref("transform-origin")}} プロパティに関連したレイアウトボックスを定義します。

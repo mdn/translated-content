@@ -3,6 +3,7 @@ title: Firefox 3 のためのウェブアプリケーションの更新
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
 original_slug: Updating_web_applications_for_Firefox_3
 ---
+
 {{FirefoxSidebar}}
 
 来たる Firefox 3 では、あなたが利用したいであろう新機能と同様に、ウェブサイトやウェブアプリケーションに影響するであろう多くの変更が施されています。この記事は Firefox 3 を最大限活用するためにあなたのコンテンツを更新する作業の出発点となるでしょう。
@@ -62,7 +63,7 @@ content mypackage location/ contentaccessible=yes
 
 これは頻繁に必要となるものではありませんが、ウェブからのアクセスが必要な、まれなケースのために用意されています。Firefox はユーザに拡張が `contentaccessible` フラグをこのような方法で用いることで潜在的セキュリティリスクになることを警告するかもしれないことに注意してください。
 
-> **Note:** Firefox 2 では `contentaccessible` フラグが認識されない (フラグを含む行全体が無視されてしまう) ことから、アドオンを Firefox 2 と Firefox 3 の両方に対応させたい場合は、以下のように指定します。```
+> **メモ:** Firefox 2 では `contentaccessible` フラグが認識されない (フラグを含む行全体が無視されてしまう) ことから、アドオンを Firefox 2 と Firefox 3 の両方に対応させたい場合は、以下のように指定します。```
 > content mypackage location/
 > content mypackage location/ contentaccessible=yes
 >

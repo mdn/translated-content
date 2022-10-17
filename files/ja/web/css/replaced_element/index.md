@@ -2,6 +2,7 @@
 title: 置換要素
 slug: Web/CSS/Replaced_element
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) において、**置換要素**は CSS のスコープの外で表現される要素です。 CSS の整形モデルとは独立して表現される外部オブジェクトです。

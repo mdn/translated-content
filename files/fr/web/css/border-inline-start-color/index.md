@@ -35,9 +35,13 @@ border-inline-start-color: rgb(200, 0, 0);
 - `<'border-color'>`
   - : La couleur de la bordure, voir {{cssxref("border-color")}} et {{cssxref("&lt;color&gt;")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -71,15 +75,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-inline-start-color", "border-inline-start-color")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-inline-start-color")}}
+{{Compat}}
 
 ## Voir aussi
 

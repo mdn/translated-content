@@ -2,6 +2,7 @@
 title: SpeechRecognition.maxAlternatives
 slug: Web/API/SpeechRecognition/maxAlternatives
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechRecognition")}} インターフェイスの **`maxAlternatives`** プロパティは {{domxref("SpeechRecognitionResult")}} で提供される {{domxref("SpeechRecognitionAlternative")}} の最大数を設定します。

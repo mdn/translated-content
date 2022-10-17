@@ -17,7 +17,7 @@ dataview.buffer
 
 ## 描述
 
-`buffer` 属性是一个访问器 (accessor) 属性，它的 set 属性为 undefined，这意味着它是只读的。值在 `DataView 被创建时就确定了，且不能改变。`
+`buffer` 属性是一个访问器 (accessor) 属性，它的 `set` 属性为 `undefined`，这意味着它是只读的。值在 `DataView` 被创建时就确定了，且不能改变。
 
 ## 示例
 

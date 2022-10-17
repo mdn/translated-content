@@ -2,6 +2,7 @@
 title: 'Window: orientationchange イベント'
 slug: Web/API/Window/orientationchange_event
 ---
+
 {{APIRef}}
 
 `orientationchange` イベントは、端末の向きが変化した時に発生します。

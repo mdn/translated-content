@@ -101,7 +101,7 @@ No hay ningún método en un Objeto que sirva para borrar sus propiedades (como 
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
   - : Devuelve un booleano que indica si el objeto por el cual este método está siendo llamado está en la cadena de prototipos del objeto específicado.
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-  - : Devuelve un booleano indicando si el [atributo ECMAScript \[\[Enumerable\]\]](/es/docs/Web/JavaScript/Data_structures#propiedades) interno está establecido.
+  - : Devuelve un booleano indicando si el [atributo ECMAScript [[Enumerable\]\]](/es/docs/Web/JavaScript/Data_structures#propiedades) interno está establecido.
 - {{jsxref("Object.prototype.toLocaleString()")}}
   - : Llama a {{jsxref("Object.toString", "toString()")}}.
 - {{jsxref("Object.prototype.toString()")}}

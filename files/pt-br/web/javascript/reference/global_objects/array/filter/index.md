@@ -55,11 +55,11 @@ Um novo array com os elementos que passaram no teste.
 
 `callback` é invocado com estes três argumentos:
 
-1.  o valor do elemento
-2.  o índice do elemento
-3.  o objeto do array a ser preenchido
+1. o valor do elemento
+2. o índice do elemento
+3. o objeto do array a ser preenchido
 
-Se o parâmetro `thisArg` for provido para o filter, ele será passado para o callback` quando invocado`, para ser usado como o valor do this. Caso contrário, será passado `undefined` como o valor de `this`. O valor do `this` finalmente observado pela função de `callback` é determinado de acordo com [a regra que define o valor do `this` geralmente visto por uma função](/pt-BR/docs/Web/JavaScript/Reference/Operators/this).
+Se o parâmetro `thisArg` for provido para o filter, ele será passado para o `callback` quando invocado, para ser usado como o valor do this. Caso contrário, será passado `undefined` como o valor de `this`. O valor do `this` finalmente observado pela função de `callback` é determinado de acordo com [a regra que define o valor do `this` geralmente visto por uma função](/pt-BR/docs/Web/JavaScript/Reference/Operators/this).
 
 `filter()` não altera o `array` a partir da qual foi invocado.
 

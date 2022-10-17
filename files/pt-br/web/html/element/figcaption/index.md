@@ -12,14 +12,14 @@ translation_of: Web/HTML/Element/figcaption
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">Categorias de conteúdo</a>
+        <a href="/pt-BR/docs/HTML/Content_categories">Categorias de conteúdo</a>
       </th>
       <td>Nenhuma.</td>
     </tr>
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Flow content</a
         >.
       </td>

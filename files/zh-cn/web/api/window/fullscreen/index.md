@@ -37,7 +37,7 @@ if (window.fullScreen) {
 
 ## 规范
 
-DOM 0 级。 window\.fullScreen 并不属于任何 W3C 规范或技术推荐中。
+DOM 0 级。window\.fullScreen 并不属于任何 W3C 规范或技术推荐中。
 
 ## 备注
 

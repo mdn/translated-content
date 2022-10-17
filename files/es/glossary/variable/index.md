@@ -19,5 +19,5 @@ Una variable es una ubicación nombrada para almacenar un {{Glossary("Value", "v
 
 ### Referencia técnica
 
-- {{jsxref("../Guide/Grammar_and_types", "Declarar variables en JavaScript", "#Declaraciones")}}
+- {{jsxref("Guide/Grammar_and_types", "Declarar variables en JavaScript", "#Declaraciones")}}
 - {{jsxref("Sentencias/var", "Declaración var en JavaScript")}}

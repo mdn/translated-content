@@ -3,7 +3,9 @@ title: Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
 translation_of: Web/API/Canvas_API/Tutorial/Transformations
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}Ранее в этом уроке мы узнали о [сетке холста](https://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=ru&ie=UTF8&prev=_t&rurl=translate.google.com&sl=en&sp=nmt4&tl=ru&u=https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes&usg=ALkJrhiuWce927wE2920fN95Jlcrf1HyUg) и **координатном пространстве** . До сих пор мы использовали только сетку по умолчанию и изменили размер всего холста для наших нужд. При преобразованиях существуют более мощные способы изменения исходных координат в различные положение, поворот сетки и даже масштабирование.
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+
+Ранее в этом уроке мы узнали о [сетке холста](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) и **координатном пространстве**. До сих пор мы использовали только сетку по умолчанию и изменили размер всего холста для наших нужд. При преобразованиях существуют более мощные способы изменения исходных координат в различные положение, поворот сетки и даже масштабирование.
 
 ## Сохранение и восстановление состояния
 

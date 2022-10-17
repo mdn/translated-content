@@ -2,6 +2,7 @@
 title: Screen.availTop
 slug: Web/API/Screen/availTop
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 
 固定あるいは半固定されているユーザーインターフェイス部分を含まない、最初のピクセルの Y 座標を示します。

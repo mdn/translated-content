@@ -2,6 +2,7 @@
 title: 'VideoTrackList: addtrack イベント'
 slug: Web/API/VideoTrackList/addtrack_event
 ---
+
 {{APIRef}}
 
 `addtrack` イベントは、トラックが {{domxref("VideoTrackList")}} に追加されたときに発生します。

@@ -9,7 +9,7 @@ Escreve uma mensagem de alerta no Console Web.
 
 {{AvailableInWorkers}}
 
-{{Note("No Firefox, <em>warnings</em> têm um pequeno icone de ponto de exclamação perto deles no log do Console Web.")}}
+> **Nota:** No Firefox, warnings têm um pequeno icone de ponto de exclamação perto deles no log do Console Web.
 
 ## Sintaxe
 
@@ -25,7 +25,7 @@ console.warn(msg [, subst1, ..., substN]);
 - `msg`
   - : Uma string JavaScript contendo zero ou mais strings de substituição.
 - `subst1` ... `substN`
-  - : Objetos JavaScript com qual as strings de substituição `msg `serão substituidas. Isto dá um contriole adicional sobre a mensagem que será escrita.
+  - : Objetos JavaScript com qual as strings de substituição `msg` serão substituidas. Isto dá um contriole adicional sobre a mensagem que será escrita.
 
 Ver [Outputting text to the console](/pt-BR/docs/Web/API/console#Outputting_text_to_the_console) na documentação do {{domxref("console")}} para mais detalhes.
 

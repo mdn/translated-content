@@ -2,11 +2,12 @@
 title: XMLHttpRequest.timeout
 slug: Web/API/XMLHttpRequest/timeout
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **`XMLHttpRequest.timeout`** は `unsigned long` 型で、リクエストが自動的に終了するまでの時間をミリ秒で示します。既定値は 0 で、タイムアウトが無いことを示します。 timeout は{{Glossary('document environment', '文書環境')}}で利用される同期 XMLHttpRequest や `InvalidAccessError` の例外を投げるものに使用することはできません。タイムアウトとなった場合、 [timeout](/ja/docs/Web/API/XMLHttpRequest/timeout_event) イベントが発行されます。
 
-> **Note:** ウィンドウを持つ同期リクエストでは、タイムアウトを使用することはできません。
+> **メモ:** ウィンドウを持つ同期リクエストでは、タイムアウトを使用することはできません。
 
 [非同期リクエストでのタイムアウトの使用](/ja/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#example_using_a_timeout)
 

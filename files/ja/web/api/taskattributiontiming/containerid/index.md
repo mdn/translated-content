@@ -2,6 +2,7 @@
 title: TaskAttributionTiming.containerId
 slug: Web/API/TaskAttributionTiming/containerId
 ---
+
 {{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
 {{domxref("TaskAttributionTiming")}} インタフェースの **`containerId`** 読み取り専用プロパティは、コンテナの `id` 属性を返します。 コンテナは、全体として長いタスクに関係している iframe、embed、object などです。

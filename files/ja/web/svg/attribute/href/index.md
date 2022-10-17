@@ -2,11 +2,12 @@
 title: class
 slug: Web/SVG/Attribute/href
 ---
+
 {{SVGRef}}
 
 The **`href`** attribute defines a link to a resource as a reference [URL](/ja/docs/Web/SVG/Content_type#URL). The exact meaning of that link depends on the context of each element using it.
 
-> **Note:** Specifications before SVG 2 defined an {{SVGAttr("xlink:href")}} attribute, which is now rendered obsolete by the `href` attribute.
+> **メモ:** Specifications before SVG 2 defined an {{SVGAttr("xlink:href")}} attribute, which is now rendered obsolete by the `href` attribute.
 
 Fifteen elements are using this attribute: {{SVGElement("a")}}, {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("discard")}}, {{SVGElement("feImage")}}, {{SVGElement("image")}}, {{SVGElement("linearGradient")}}, {{SVGElement("mpath")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("set")}}, {{SVGElement("textPath")}}, and {{SVGElement("use")}}
 
@@ -84,7 +85,7 @@ Except for any SVG-specific rules explicitly mentioned in this specification, th
 
 For {{SVGElement("discard")}}, `href` defines a URL referring the target element to discard. See the [definition of `href` on animation elements](#href_on_animation_elements) for details on identifying a target element.
 
-> **Note:** Unlike other animation elements, the `<discard>` element does not support the deprecated {{SVGAttr("xlink:href")}} attribute.
+> **メモ:** Unlike other animation elements, the `<discard>` element does not support the deprecated {{SVGAttr("xlink:href")}} attribute.
 
 Note that if the target element is not part of the current SVG document fragment, then whether the target element will be removed or not is defined by the host language.
 

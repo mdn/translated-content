@@ -3,13 +3,14 @@ title: HTML のコード例を整形するためのガイドライン
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
 original_slug: MDN/Guidelines/Code_guidelines/HTML
 ---
+
 {{MDNSidebar}}
 
 以下のガイドラインでは、MDN Web Docs のコードの例で HTML をどのように記述するのかを扱います。
 
 ## HTML コード例のための全般的なガイドライン
 
-> **Note:** この章のガイドラインは、完全に HTML 文書を表示する必要がある場合にのみ適用されます。通常、機能を示すにはスニペットで十分です。 [EmbedLiveSample マクロ](/ja/docs/MDN/Structures/Code_examples#traditional_live_samples)を使用している場合、 HTML スニペットを載せるだけで、表示時に自動的に完全な HTML 文書の中に挿入されます。
+> **メモ:** この章のガイドラインは、完全に HTML 文書を表示する必要がある場合にのみ適用されます。通常、機能を示すにはスニペットで十分です。 [EmbedLiveSample マクロ](/ja/docs/MDN/Structures/Code_examples#traditional_live_samples)を使用している場合、 HTML スニペットを載せるだけで、表示時に自動的に完全な HTML 文書の中に挿入されます。
 
 ### 文書型宣言
 

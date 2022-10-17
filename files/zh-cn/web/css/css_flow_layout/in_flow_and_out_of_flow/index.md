@@ -50,7 +50,7 @@ original_slug: Web/CSS/CSS_Flow_Layout/在Flow中和Flow之外
 
 {{EmbedGHLiveSample("css-examples/flow/in-flow/relative.html", '100%', 800)}}
 
-当你移动一个元素或者使元素脱离文档流，为防止重叠，你可能需要对元素内容和元素周围的内容做一些管理，要么清除浮动， 要么保证相对定位不会覆盖其他元素。
+当你移动一个元素或者使元素脱离文档流，为防止重叠，你可能需要对元素内容和元素周围的内容做一些管理，要么清除浮动，要么保证相对定位不会覆盖其他元素。
 
 ## Summary
 

@@ -2,6 +2,7 @@
 title: Firefox 76 for developers
 slug: Mozilla/Firefox/Releases/76
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 76 の変更点をまとめています。Firefox 76 は、[2020 年 5 月 5 日](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/) にリリースされました。

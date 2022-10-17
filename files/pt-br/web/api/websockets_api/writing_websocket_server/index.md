@@ -81,7 +81,7 @@ Grava bytes do buffer, _offset_ e _size_ determinam o tamanho da mensagem.
 Read(Byte[] buffer, int offset, int size)
 ```
 
-Lê bytes para o _buffer, offset e size_ determinam o tamanho da mensagem.\_\_
+Lê bytes para o _buffer_, _offset_ e _size_ determinam o tamanho da mensagem.
 
 Vamos estender nosso exemplo.
 
@@ -130,10 +130,10 @@ Criar a resposta é mais fácil do que entender porque você deve fazê-lo desta
 
 Você deve,
 
-1.  Obter o valor do cabeçalho da requisição _Sec-WebSocket-Key_ sem qualquer espaço à direita e à esquerda;
-2.  Concatenar com "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
-3.  Calcular o código SHA-1 e Base64 dele;
-4.  Reescreva no cabeçalho de resposta o valor de _Sec-WebSocket-Accept_ como parte de uma resposta HTTP.
+1. Obter o valor do cabeçalho da requisição _Sec-WebSocket-Key_ sem qualquer espaço à direita e à esquerda;
+2. Concatenar com "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
+3. Calcular o código SHA-1 e Base64 dele;
+4. Reescreva no cabeçalho de resposta o valor de _Sec-WebSocket-Accept_ como parte de uma resposta HTTP.
 
 ```cpp
 if (new Regex("^GET").IsMatch(data)) {

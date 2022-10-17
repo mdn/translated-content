@@ -25,7 +25,7 @@ console.log(msg[, subst1, ..., substN]);
 - `subst1` ... `substN`
   - : Strings ou objetos JavaScript para substituirem as marcações de substituição em `msg`. Estas substituições ocorrem de um para um e na ordem em que são passadas para a console.log.
 
-Veja [Exibindo texto na console](/pt-BR/docs/DOM/console#Outputting_text_to_the_console "DOM/console#Outputting_text_to_the_console") na documentação do objeto {{domxref("console")}} para mais detalhes.
+Veja [Exibindo texto na console](/pt-BR/docs/DOM/console#Outputting_text_to_the_console) na documentação do objeto {{domxref("console")}} para mais detalhes.
 
 ## Especificação
 

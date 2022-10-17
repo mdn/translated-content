@@ -4,6 +4,7 @@ slug: Web/API/Worker/postMessage
 l10n:
   sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`postMessage()`** は {{domxref("Worker")}} インターフェイスのメソッドで、ワーカーの内部スコープにメッセージを送信します。これは、ワーカーに送信するデータを単一の引数として受け取ります。このデータは任意の値、または循環参照を含む場合は[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)アルゴリズムで扱う JavaScript オブジェクトが許可されます。
@@ -57,7 +58,7 @@ second.onchange = () => {
 
 完全な例は、[簡単なワーカーの例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) （[例を実行](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)）を参照してください。
 
-> **Note:** **メモ:** `postMessage()` は同時に一つしかオブジェクトを送信できません。上記のように、複数の値を渡したい場合は配列を送信してください。
+> **メモ:** `postMessage()` は同時に一つしかオブジェクトを送信できません。上記のように、複数の値を渡したい場合は配列を送信してください。
 
 ### 移転を伴う例
 

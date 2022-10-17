@@ -2,6 +2,7 @@
 title: color-scheme
 slug: Web/CSS/color-scheme
 ---
+
 {{CSSRef}}
 
 **`color-scheme`** は CSS のプロパティで、要素がどのような配色で快適に表示されるかを示すことができます。

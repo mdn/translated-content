@@ -31,7 +31,7 @@ HTML의 주요 작업 중 하나는 브라우저가 텍스트를 올바르게 �
 
 대부분의 구조화 된 텍스트는 기사, 신문, 대학 교과서, 잡지 등 무엇을 읽든지 간에 제목과 단락으로 구성됩니다.
 
-![An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.](https://mdn.mozillademos.org/files/12371/newspaper_small.jpg "An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.")
+![An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.](https://mdn.mozillademos.org/files/12371/newspaper_small.jpg)
 
 구조화된 컨텐츠는 읽는 경험을 더 쉽고 즐겁게 만들어줍니다.
 
@@ -83,13 +83,13 @@ heading 요소는 총 6개가 있습니다— {{htmlelement("h1")}}, {{htmleleme
 
 하지만, 당신이 브라우저에서 문서를 열어보았을 때 당신은 텍스트가 한 덩어리로 뭉쳐있는 것을 볼 것입니다!
 
-![A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.](https://mdn.mozillademos.org/files/14827/Screen%20Shot%202017-03-29%20at%2009.20.35.png "A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.")
+![A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.](https://mdn.mozillademos.org/files/14827/Screen%20Shot%202017-03-29%20at%2009.20.35.png)
 
 이는 컨텐츠에 구조를 입히는 요소가 없기 때문인데, 그래서 브라우저는 무엇이 heading이고 무엇이 문단인지 알 수 없는 것입니다. 추가로:
 
 - 웹 페이지를 보는 유저는 필요한 컨텐츠를 빠르게 훑어보는 경향이 있고 자주 heading만 읽기도 합니다. (we usually [spend a very short time on a web page](http://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/) 우리는 보통 웹 페이지에서 매우 짧은 시간을 보냅니다.). 몇 초 안에 필요한 어떤 것도 찾지 못하면 그들은 실망하고 다른 곳으로 갈 수도 있습니다.
 - 검색 엔진들은 당신의 페이지 내 heading을 페이지 검색 순위에 영향을 주는 중요한 키워드로 고려해 indexing 합니다. heading이 없다면, 당신의 페이지는 검색 엔진 최적화에 관해서는 형편없게 됩니다. {{glossary("SEO")}} (Search Engine Optimization).
-- 심각한 시각 장애인들은 자주 웹페이지를 읽지 못합니다. 대신 그들은 듣습니다. 이는 [screen reader](http://en.wikipedia.org/wiki/Screen_reader "screen readers") 라고 불리는 소프트웨어를 사용해 이루어집니다. 이 소프트웨어는 텍스트 컨텐츠에 더 빠르게 접근할 수 있는 방안을 제공합니다. 사용된 다양한 기술 중 하나로, 그들은 heading을 읽어줌으로서 문서의 개요를 제공하며 그들의 사용자들이 필요로 하는 정보를 빠르게 찾을 수 있도록 합니다. heading이 없었더라면 그들은 어쩔 수 없이 문서 전체를 읽어야 했을 것입니다.
+- 심각한 시각 장애인들은 자주 웹페이지를 읽지 못합니다. 대신 그들은 듣습니다. 이는 [screen reader](http://en.wikipedia.org/wiki/Screen_reader) 라고 불리는 소프트웨어를 사용해 이루어집니다. 이 소프트웨어는 텍스트 컨텐츠에 더 빠르게 접근할 수 있는 방안을 제공합니다. 사용된 다양한 기술 중 하나로, 그들은 heading을 읽어줌으로서 문서의 개요를 제공하며 그들의 사용자들이 필요로 하는 정보를 빠르게 찾을 수 있도록 합니다. heading이 없었더라면 그들은 어쩔 수 없이 문서 전체를 읽어야 했을 것입니다.
 - 컨텐츠를 {{glossary("CSS")}}로 꾸미거나, {{glossary("JavaScript")}}로 흥미로운 일을 하게 하기 위해서, 당신은 관련 컨텐츠를 감싸는 요소가 필요합니다. 그렇게 하면 CSS/JavaScript는 효과적으로 그에 적용될 수 있습니다.
 
 그러므로 우리는 컨텐츠를 구조적인 markup에 적용시켜야 합니다.

@@ -54,15 +54,13 @@ X-Content-Type-Options: nosniff
     - `text/json`, `application/json` ou tout autre type avec une extension JSON: `*/*+json`
     - `text/xml`, `application/xml` ou tout autre type avec une extension XML: `*/*+xml` (hors `image/svg+xml`)
 
-## Caractéristiques
+## Spécifications
 
-| Caractéristique                                                                                                              | Statut                   | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName("Fetch", "#x-content-type-options-header", "X-Content-Type-Options definition")}} | {{Spec2("Fetch")}} | Définition initiale |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("http.headers.X-Content-Type-Options")}}
+{{Compat}}
 
 ## Voir aussi
 

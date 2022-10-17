@@ -2,6 +2,7 @@
 title: Window.navigator
 slug: Web/API/Window/navigator
 ---
+
 {{APIRef}}
 
 **Window.navigator`** は読み取り専用のプロパティで、スクリプトを実行しているアプリケーションに関するメソッドとプロパティを持つ {{domxref("Navigator")}} オブジェクトへの参照を返します。

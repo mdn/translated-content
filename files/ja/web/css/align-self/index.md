@@ -2,6 +2,7 @@
 title: align-self
 slug: Web/CSS/align-self
 ---
+
 {{CSSRef}}
 
 **`align-self`** は [CSS](/ja/docs/Web/CSS) のプロパティで、グリッドやフレックスのアイテムの {{cssxref("align-items")}} の値を上書きします。グリッドでは、アイテムは{{glossary("Grid Areas", "グリッド領域")}}内で配置されます。フレックスボックスでは、アイテムは{{glossary("cross axis", "交差軸")}}上で配置されます。

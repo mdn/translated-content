@@ -37,9 +37,9 @@ _`History` 接口不继承任何方法。_
 - {{domxref("History.go()","go()")}}
   - : 通过当前页面的相对位置从浏览器历史记录（会话记录）异步加载页面。比如：参数为 -1 的时候为上一页，参数为 1 的时候为下一页。当你指定了一个越界值（例如：当绘画历史记录中没有之前访问的页面时，则传参的值为 -1，那么这个方法没有任何效果也不会报错。调用没有参数的 `go()` 方法或者参数值为 0 时，重新载入当前页面。Internet Explorer 允许你指定一个字符串，而不是整数，以转到历史记录列表中的特定 URL。
 - {{domxref("History.pushState()","pushState()")}}
-  - : 按指定的名称和 URL（如果提供该参数）将数据 push 进会话历史栈，数据被 DOM 进行不透明处理；你可以指定任何可以被序列化的 javascript 对象。请注意，除了 Safria 所有浏览器现在都忽略了 title 参数。更多的信息，请看[使用 History API](/zh-CN/docs/Web/API/History_API)。
+  - : 按指定的名称和 URL（如果提供该参数）将数据 push 进会话历史栈，数据被 DOM 进行不透明处理；你可以指定任何可以被序列化的 javascript 对象。请注意，除了 Safari 所有浏览器现在都忽略了 title 参数。更多的信息，请看[使用 History API](/zh-CN/docs/Web/API/History_API)。
 - {{domxref("History.replaceState()","replaceState()")}}
-  - : 按指定的数据、名称和 URL（如果提供该参数），更新 history 栈上最新的条目。这个数据被 DOM 进行了不透明处理。你可以指定任何可以被序列化的 javascript 对象。请注意，除了 Safria 所有浏览器现在都忽略了 title 参数。更多的信息，请看[使用 History API](/zh-CN/docs/Web/API/History_API)。
+  - : 按指定的数据、名称和 URL（如果提供该参数），更新 history 栈上最新的条目。这个数据被 DOM 进行了不透明处理。你可以指定任何可以被序列化的 javascript 对象。请注意，除了 Safari 所有浏览器现在都忽略了 title 参数。更多的信息，请看[使用 History API](/zh-CN/docs/Web/API/History_API)。
 
 ## 规范
 

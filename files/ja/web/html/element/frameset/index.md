@@ -2,11 +2,12 @@
 title: <frameset>
 slug: Web/HTML/Element/frameset
 ---
+
 {{HTMLRef}}{{Deprecated_header}}
 
 **HTML の `<frameset>` 要素**は、 {{HTMLElement("frame")}} 要素を包含するために使用する HTML 要素です。
 
-> **Note:** **メモ:** {{HTMLElement("iframe")}} の使用が支持されたことからフレームの使用は好ましくないため、一般的に現行のウェブサイトではこの要素を使用しません。
+> **メモ:** {{HTMLElement("iframe")}} の使用が支持されたことからフレームの使用は好ましくないため、一般的に現行のウェブサイトではこの要素を使用しません。
 
 ## 属性
 

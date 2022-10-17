@@ -2,6 +2,7 @@
 title: CSSUnparsedValue.values()
 slug: Web/API/CSSUnparsedValue/values
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 **`CSSUnparsedValue.values()`** メソッドは、 CSSUnparsedValue オブジェクト内のそれぞれの添字の値を持つ新しい **`Array Iterator`** オブジェクトを返します。

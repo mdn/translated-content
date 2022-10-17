@@ -23,9 +23,6 @@ Monitore esses eventos utilizando {{domxref("EventTarget.addEventListener", "add
 - {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
   - : Enviado ao objeto RTCPeerConnection quando o status de conectividade geral do RTCPeerConnection é alterado.
     Também disponível através da propriedade do manipulador de eventos {{domxref ("RTCPeerConnection.onconnectionstatechange", "onconnectionstatechange")}}.
-
-<!---->
-
 - {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}
   - : Sent to the `RTCPeerConnection` object when the remote peer adds an {{domxref("RTCDataChannel")}} to the connection.
     Also available through the {{domxref("RTCPeerConnection.ondatachannel", "ondatachannel")}} event handler property.
@@ -116,7 +113,7 @@ The `RTCIceTransportPolicy` enum defines string constants which can be used to l
 | Constant                            | Description                                                                                                                     |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | `"all"`                             | All ICE candidates will be considered.                                                                                          |
-| `"public" `{{obsolete_inline}} | Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._ |
+| `"public"` {{obsolete_inline}} | Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._ |
 | `"relay"`                           | Only ICE candidates whose IP addresses are being relayed, such as those being passed through a TURN server, will be considered. |
 
 ### RTCPeerConnectionState enum

@@ -18,7 +18,7 @@ slug: Web/API/HTMLImageElement/y
 
 ![要素に関連するさまざまなボックスの関係を示す図](boxmodel-3.png)
 
-> **Note:** `y` プロパティは、画像の {{cssxref("display")}} プロパティの計算値が `table-column` または `table-column-group` である場合にのみ有効です。言い換えれば、いずれかが {{HTMLElement("img")}} に直接設定されているか、包含要素から継承されているか、または {{HTMLElement("col")}} や {{HTMLElement("colgroup")}} で記述されている列内にあることが必要です。
+> **メモ:** `y` プロパティは、画像の {{cssxref("display")}} プロパティの計算値が `table-column` または `table-column-group` である場合にのみ有効です。言い換えれば、いずれかが {{HTMLElement("img")}} に直接設定されているか、包含要素から継承されているか、または {{HTMLElement("col")}} や {{HTMLElement("colgroup")}} で記述されている列内にあることが必要です。
 
 ## 例
 

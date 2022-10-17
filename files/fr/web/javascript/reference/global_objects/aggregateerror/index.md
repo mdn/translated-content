@@ -59,13 +59,11 @@ try {
 
 ## Spécifications
 
-| Spécification                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Promise.any', '#sec-aggregate-error-object-structure', 'AggregateError')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.AggregateError")}}
+{{Compat}}
 
 ## Voir
 

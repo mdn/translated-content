@@ -2,6 +2,7 @@
 title: NodeIterator
 slug: Web/API/NodeIterator
 ---
+
 {{APIRef("DOM")}}
 
 **`NodeIterator`** インターフェイスは、DOM のサブツリー内に存在するノードのリストのメンバーに対する反復子を表します。ノードは文書内に現れる順番で返されます。

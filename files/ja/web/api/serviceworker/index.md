@@ -2,6 +2,7 @@
 title: ServiceWorker
 slug: Web/API/ServiceWorker
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API) のインターフェイスである `ServiceWorker` は service worker に関するレファレンスを提供しています。様々なブラウザー環境（例えばページ、worker など）が同一の service worker に関連付けることができて、一意な `ServiceWorker` オブジェクト ​ からアクセスできます。

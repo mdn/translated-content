@@ -2,6 +2,7 @@
 title: TreeWalker.root
 slug: Web/API/TreeWalker/root
 ---
+
 {{ APIRef("DOM") }}
 
 **`TreeWalker.root`** は読み取り専用のプロパティで、 `TreeWalker` を作成したときに指定したルートノードを返します。

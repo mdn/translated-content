@@ -2,6 +2,7 @@
 title: 'CSP: manifest-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/manifest-src
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}}`: manifest-src` ディレクティブは、どの<a href="/ja/docs/Web/Manifest">マニフェスト</a>がリソースに適用されるかを指定します。

@@ -9,18 +9,18 @@ A **Gamepad API** é uma maneira dos desenvolvedores acessarem e responderem à 
 
 ## Interfaces
 
-- [`Gamepad`](/pt-BR/docs/Web/API/Gamepad "The Gamepad interface of the Gamepad API defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.")
+- [`Gamepad`](/pt-BR/docs/Web/API/Gamepad)
   - : Representa o gamepad/controlador conectado ao computador.
-- [`GamepadButton`](/pt-BR/docs/Web/API/GamepadButton "The GamepadButton interface defines an individual button of a gamepad or other controller, allowing access to the current state of different types of buttons available on the control device.")
+- [`GamepadButton`](/pt-BR/docs/Web/API/GamepadButton)
   - : Representa um botão num dos controles conectados.
-- [`GamepadEvent`](/pt-BR/docs/Web/API/GamepadEvent "The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the system, which is what the gamepad events Window.gamepadconnected and Window.gamepaddisconnected are fired in response to.")
+- [`GamepadEvent`](/pt-BR/docs/Web/API/GamepadEvent)
   - : O objeto de evento representando eventos disparados que são relacionados ao gamepad.
 
 ### Experimental Gamepad extensions
 
-- [`GamepadHapticActuator`](/pt-BR/docs/Web/API/GamepadHapticActuator "The GamepadHapticActuator interface of the Gamepad API represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.")
+- [`GamepadHapticActuator`](/pt-BR/docs/Web/API/GamepadHapticActuator)
   - : Representa o hardware no controlador designado à prover feedbacks táteis ao usuário (Se disponível), mais comumente um hardware de vibração.
-- [`GamepadPose`](/pt-BR/docs/Web/API/GamepadPose "The GamepadPose interface of the Gamepad API represents the pose of a WebVR controller at a given timestamp (which includes orientation, position, velocity, and acceleration information.)")
+- [`GamepadPose`](/pt-BR/docs/Web/API/GamepadPose)
   - : Representa a "localização" de um controle (ex. posição e orientação no espaço 3D) no caso de um controlador WebVR.
 
 Veja também as [extensões para a interface de Gamepad](/pt-BR/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad), para funcionalidades que permitem você acessar as informações acima.

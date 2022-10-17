@@ -4,11 +4,11 @@ slug: Glossary/XHTML
 translation_of: Glossary/XHTML
 original_slug: XHTML
 ---
-O [HTML](/pt-BR/docs/HTML "HTML") pode ser transferido através da internet para o navegador usando duas sintaxes: sintaxe HTML e sintaxe [XML](/pt-BR/docs/XML "XML"), também conhecido como XHTML.
+O [HTML](/pt-BR/docs/HTML) pode ser transferido através da internet para o navegador usando duas sintaxes: sintaxe HTML e sintaxe [XML](/pt-BR/docs/XML), também conhecido como XHTML.
 
 ## HTML5 e HTML/XHTML
 
-Ambas as sintaxes são definidas através do padrão [HTML5](/pt-BR/docs/HTML/HTML5 "HTML5"). A escolha da sintaxe é dedicada ao tipo MIME, que é enviado no cabeçalho HTTP `Content-Type` . O tipo MIME para sintaxe HTML é `text/html`, e o tipo MIME para sintaxe XHTML é `aplication/xhtml+xml`.
+Ambas as sintaxes são definidas através do padrão [HTML5](/pt-BR/docs/HTML/HTML5). A escolha da sintaxe é dedicada ao tipo MIME, que é enviado no cabeçalho HTTP `Content-Type` . O tipo MIME para sintaxe HTML é `text/html`, e o tipo MIME para sintaxe XHTML é `aplication/xhtml+xml`.
 
 O exemplo mostra um documento HTML e um XHTML incluindo os cabeçalhos relevantes do HTTP.
 
@@ -69,13 +69,13 @@ Também é bom observar que muitas bibliotecas populars de JavaScript e ferramen
 
 ## Diferenças entre HTML
 
-Veja [Properly Using CSS and JavaScript in XHTML Documents](/pt-BR/docs/Properly_Using_CSS_and_JavaScript_in_XHTML_Documents "Properly Using CSS and JavaScript in XHTML Documents") para uma lista com algumas das diferenças entre HTML e XHTML.
+Veja [Properly Using CSS and JavaScript in XHTML Documents](/pt-BR/docs/Properly_Using_CSS_and_JavaScript_in_XHTML_Documents) para uma lista com algumas das diferenças entre HTML e XHTML.
 
 ## Ferramentas
 
-- [Standards-Compliant Authoring Tools](/pt-BR/docs/Standards-Compliant_Authoring_Tools "en/Standards-Compliant_Authoring_Tools")
+- [Standards-Compliant Authoring Tools](/pt-BR/docs/Standards-Compliant_Authoring_Tools)
 
 ## Veja também
 
-- [HTML](/pt-BR/docs/HTML "en/HTML")
-- [Namespaces](/pt-BR/docs/Namespaces "en/Namespaces")
+- [HTML](/pt-BR/docs/HTML)
+- [Namespaces](/pt-BR/docs/Namespaces)

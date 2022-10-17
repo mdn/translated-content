@@ -109,7 +109,7 @@ box-decoration-break: clone;
 
 ![A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:clone.](box-decoration-break-block-clone.png)
 
-请注意，每个片段都具有相同的 border， box-shadow 和 background。
+请注意，每个片段都具有相同的 border，box-shadow 和 background。
 
 你可以 [尝试这个例子](https://mdn.mozillademos.org/files/8187/box-decoration-break-block.html)。
 

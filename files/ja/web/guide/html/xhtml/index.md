@@ -2,6 +2,7 @@
 title: XHTML
 slug: Web/Guide/HTML/XHTML
 ---
+
 **XHTML** は、 [HTML](/ja/docs/Web/HTML) 文書のうち {{Glossary("XML")}} の構文規則に適合して書かれたものを指すために歴史的に使用されてきた用語です。
 
 以下の例では HTML 文書とそれに対応する "XHTML" 文書、それにともに提供される適切な {{Glossary("HTTP")}} の {{HTTPHeader("Content-Type")}} ヘッダーを示しています。

@@ -2,6 +2,7 @@
 title: BroadcastChannel.postMessage()
 slug: Web/API/BroadcastChannel/postMessage
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 **`BroadcastChannel.postMessage()`** は、任意の種類の {{jsxref("Object")}} のメッセージを、同じ{{glossary("origin","オリジン")}}を持つ任意の{{glossary("browsing context","閲覧コンテキスト")}}内の各リスナーに送信します。 メッセージは、チャネルに結び付けられた各 `BroadcastChannel` を対象とした {{event("message")}} イベントとして送信します。

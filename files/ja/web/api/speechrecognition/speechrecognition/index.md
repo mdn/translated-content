@@ -2,6 +2,7 @@
 title: SpeechRecognition()
 slug: Web/API/SpeechRecognition/SpeechRecognition
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 **SpeechRecognition()** は {{domxref("SpeechRecognition")}} オブジェクトインスタンスを作成します。

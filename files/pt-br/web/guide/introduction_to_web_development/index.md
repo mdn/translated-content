@@ -42,7 +42,7 @@ Para outro conjunto (sobreposto) de links sobre recursos de aprendizado, consult
 - [Iniciando com JavaScript](/en/JavaScript/Getting_Started) — o que é Javascript e como ele pode ajudar você?
 - [Guia de referência JavaScript](/en/JavaScript/Guide) — um guia completo e regularmente atualizado de JavaScript para todos os níveis de aprendizado, do iniciante ao avançado.
 - [Crockford no JavaScript](https://www.youtube.com/playlist?list=PL7664379246A246CB) — uma série de vídeos aprofundada sobre a linguagem JavaScript.
-- [JavaScript Elouquente ](http://eloquentjavascript.net/contents.html)— um guia completo para metodologias JavaScript intermediárias e avançadas.
+- [JavaScript Elouquente](http://eloquentjavascript.net/contents.html) — um guia completo para metodologias JavaScript intermediárias e avançadas.
 
 #### Intermediário
 

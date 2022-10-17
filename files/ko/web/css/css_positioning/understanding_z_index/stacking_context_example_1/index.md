@@ -120,8 +120,6 @@ span.bold { font-weight: bold; }
 - [Stacking context example 2](/en/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
 - [Stacking context example 3](/en/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
 
-  <span id="cke_bm_89E" class="hidden"></span>
-
 ### Original Document Information
 
 - Author(s): Paolo Lombardi

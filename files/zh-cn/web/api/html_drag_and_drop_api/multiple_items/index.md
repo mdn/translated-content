@@ -29,7 +29,7 @@ dt.mozSetDataAt("text/plain", "Second data to drag", 1);
 event.dataTransfer.mozClearDataAt("text/plain", 1);
 ```
 
-注意：移除一个元素中的全部类型的数据项后将会使整个元素移除，导致后面的元素往前移动，索引将会产生变化（相应减小）。 例如：
+注意：移除一个元素中的全部类型的数据项后将会使整个元素移除，导致后面的元素往前移动，索引将会产生变化（相应减小）。例如：
 
 ```
 var dt = event.dataTransfer;

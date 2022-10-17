@@ -15,22 +15,22 @@ Os _fabricantes de browsers_, por vezes, adicionam prefixos às propriedades exp
 Normalmente, os vendors usam esses prefixos:
 
 - `-webkit- (`Chrome, Safari, versões mais recentes do Opera.)
-- `-moz- `(Firefox)
+- `-moz-` (Firefox)
 - `-o-` (Versões antigas do Opera)
 - `-ms-` (Internet Explorer)
 
 Os vendedores também usam prefixos em APIs. Em interfaces, eles normalmente usam:
 
 - `Webkit (`Chrome, Safari, versões mais recentes do Opera.)
-- `Moz `(Firefox)
+- `Moz` (Firefox)
 - `O` (Versões antigas do Opera)
 - `MS` (Internet Explorer)
 
 Em propriedades e métodos, eles normalmente usam:
 
 - `webkit (`Chrome, Safari, versões mais recentes do Opera.)
-- `moz `(Firefox)
-- `o `(Versões antigas do Opera)
+- `moz` (Firefox)
+- `o` (Versões antigas do Opera)
 - `ms` (Internet Explorer)
 
 ## Aprender mais

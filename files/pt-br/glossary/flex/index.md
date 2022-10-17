@@ -8,7 +8,7 @@ original_slug: Glossario/Flex
 
 A propriedade flex é um atalho para as propriedades flexbox`flex-grow`, `flex-shrink` e `flex-basis`.
 
-Além disso, `<flex> `pode ser também [uma unidade flexível](/pt-BR/docs/Web/CSS/flex_value) em um CSS Grid Layout.
+Além disso, `<flex>` pode ser também [uma unidade flexível](/pt-BR/docs/Web/CSS/flex_value) em um CSS Grid Layout.
 
 ## Veja mais
 

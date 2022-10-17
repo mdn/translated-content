@@ -10,9 +10,9 @@ translation_of: Web/JavaScript/Reference/Operators/this
 ---
 {{jsSidebar("Operators")}}
 
-A palavra-chave **`this`** comporta-se um pouco diferente em Javascript se comparado com outras linguagens. Também possui algumas diferenças entre o [modo estrito](/pt-BR/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto "en-US/docs/JavaScript/Strict mode") e o modo não estrito.
+A palavra-chave **`this`** comporta-se um pouco diferente em Javascript se comparado com outras linguagens. Também possui algumas diferenças entre o [modo estrito](/pt-BR/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto) e o modo não estrito.
 
-Em muitos casos, o valor `this` é determinado pela forma como a função é chamada. Ele não pode ser assinado durante a execução, e isso pode ser diferente a cada vez que a função é chamada. ES5 introduziu o método [`bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) para estabelecer o valor `this` da função, independentemente de como ela seja chamada, e ECMAScript 2015 introduziu o [arrow functions](../Functions/Arrow_functions), cujo `this` é lexicalmente delimitado (o valor `this` é estabelecido segundo o escopo de execução no qual está inserido).
+Em muitos casos, o valor `this` é determinado pela forma como a função é chamada. Ele não pode ser assinado durante a execução, e isso pode ser diferente a cada vez que a função é chamada. ES5 introduziu o método [`bind`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) para estabelecer o valor `this` da função, independentemente de como ela seja chamada, e ECMAScript 2015 introduziu o [arrow functions](../Functions/Arrow_functions), cujo `this` é lexicalmente delimitado (o valor `this` é estabelecido segundo o escopo de execução no qual está inserido).
 
 ## Sintaxe
 
@@ -64,7 +64,7 @@ f2() === undefined; // true
 
 Portanto, em modo estrito, se `this` não for definido durante o contexto da execução, ele permanecerá indefinido (`undefined`).
 
-> **Nota:** No segundo exemplo, `this` deveria ser [`undefined`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined), porque `f2` foi chamada diretamente e não como um método ou popriedade de um objeto (ou seja, `window.f2()`). Esta característica não foi implementada em alguns navegadores quando começaram a dar suporte ao [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode "Strict mode") (modo estrito). Como resultado, eles incorretamente retornavam o objeto `window`.
+> **Nota:** No segundo exemplo, `this` deveria ser [`undefined`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined), porque `f2` foi chamada diretamente e não como um método ou popriedade de um objeto (ou seja, `window.f2()`). Esta característica não foi implementada em alguns navegadores quando começaram a dar suporte ao [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode) (modo estrito). Como resultado, eles incorretamente retornavam o objeto `window`.
 
 ### Funções Arrow (seta)
 
@@ -196,7 +196,7 @@ console.log(o.phase, o.modulus); // logs -0.78 1.4142
 
 ### Como um construtor (constructor)
 
-Quando a função é usada com um construtor (com a palavra chave [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)), seu this é vinculado ao novo objeto sendo contruído.
+Quando a função é usada com um construtor (com a palavra chave [`new`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)), seu this é vinculado ao novo objeto sendo contruído.
 
 Nota: enquanto o padrão para um construtor é retornar o objeto referenciado por this, ele pode retornar, ao invés, algum outro objeto (se o valor de retorno não é um objeto, então o objeto this é retornado).
 
@@ -241,7 +241,7 @@ No último exemplo (C2), porque um objeto foi retornado durante a construção, 
 
 ### `call` e `apply`
 
-Quando uma função usa a palavra-chave this em seu corpo, o seu valor pode ser vinculado a um determinado objeto na chamada utilizando os métodos [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) or [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) que todas as funções herdam de Function.prototype.
+Quando uma função usa a palavra-chave this em seu corpo, o seu valor pode ser vinculado a um determinado objeto na chamada utilizando os métodos [`call`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/call) or [`apply`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) que todas as funções herdam de Function.prototype.
 
 ```js
 function add(c, d){
@@ -273,7 +273,7 @@ bar.call(7); // [object Number]
 
 ### O método `bind`
 
-ECMAScript 5 introduziu [`Function.prototype.bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind). Chamando f.bind(algumObjeto) cria-se uma nova função com o mesmo corpo e escopo que f, mas onde o this ocorrer na função original, na nova função ele será permanentemente ligado ao primeiro argumento de bind, independentemente de como a função esteja sendo usada.
+ECMAScript 5 introduziu [`Function.prototype.bind`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind). Chamando f.bind(algumObjeto) cria-se uma nova função com o mesmo corpo e escopo que f, mas onde o this ocorrer na função original, na nova função ele será permanentemente ligado ao primeiro argumento de bind, independentemente de como a função esteja sendo usada.
 
 ```js
 function f(){

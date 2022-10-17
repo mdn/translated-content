@@ -69,7 +69,7 @@ var container = document.querySelector('#test');
 var matches = container.querySelectorAll('div.highlighted > p');
 ```
 
-Este ejemplo usa un [selector de atributos](es/docs/Web/CSS/Selectores_atributo) para devolver una lista de elementos {{domxref("iframe")}} en el documento que contienen un atributo llamado `"data-src"`:
+Este ejemplo usa un [selector de atributos](/es/docs/Web/CSS/Selectores_atributo) para devolver una lista de elementos {{domxref("iframe")}} en el documento que contienen un atributo llamado `"data-src"`:
 
 ```js
 var matches = document.querySelectorAll('iframe[data-src]');

@@ -2,6 +2,7 @@
 title: Firefox 58 for developers
 slug: Mozilla/Firefox/Releases/58
 ---
+
 Firefox 58 は、米国時間 2018 年 1 月 23 日にリリースされました。このページでは、開発者に影響する Firefox 58 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧

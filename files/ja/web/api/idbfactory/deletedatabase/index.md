@@ -2,6 +2,7 @@
 title: IDBFactory.deleteDatabase
 slug: Web/API/IDBFactory/deleteDatabase
 ---
+
 {{ APIRef("IDBFactory") }}
 
 {{domxref("IDBFactory")}}インターフェイスの`deleteDatabase()`メソッドは、データベースの削除を要求します。 このメソッドは直ちに{{domxref("IDBOpenDBRequest")}} オブジェクトを返し、非同期でデータベースの削除処理を行います。
@@ -49,7 +50,7 @@ DBDeleteRequest.onsuccess = function(event) {
 - options {{ NonStandardBadge() }}
   - : Gecko の[version 26](/ja/Firefox/Releases/26)から、永続的な（既定値）IndexedDB または、一時的なストレージ（shared pool）を削除するための、標準化されていないオプションのストレージパラメーターを含めることができます。
 
-> **Note:** Data in temporary storage persists until the global limit for the pool is reached. The global limit calculation is relatively complex, but we are considering changing it (see {{ Bug("968272") }}). When the global limit is reached, then data for the least recently used origin is deleted. There's also a group limit (eTLD+1 group/domain) which is currently 20% of the global limit. All requests that would exceed the group limit are just rejected.
+> **メモ:** Data in temporary storage persists until the global limit for the pool is reached. The global limit calculation is relatively complex, but we are considering changing it (see {{ Bug("968272") }}). When the global limit is reached, then data for the least recently used origin is deleted. There's also a group limit (eTLD+1 group/domain) which is currently 20% of the global limit. All requests that would exceed the group limit are just rejected.
 
 ## 仕様
 

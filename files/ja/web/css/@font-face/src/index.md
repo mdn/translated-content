@@ -2,6 +2,7 @@
 title: src
 slug: Web/CSS/@font-face/src
 ---
+
 {{CSSRef}}
 
 **`src`** は CSS における {{cssxref("@font-face")}} ルールの記述子で、フォントデータを含むリソースを指定します。 `@font-face` ルールを有効にするためには必要です。

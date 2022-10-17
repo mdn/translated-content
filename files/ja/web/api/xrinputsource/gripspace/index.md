@@ -2,6 +2,7 @@
 title: XRInputSource.gripSpace
 slug: Web/API/XRInputSource/gripSpace
 ---
+
 {{securecontext_header}}{{APIRef("WebXR")}}
 
 {{domxref("XRInputSource")}} の **`gripSpace`** 読み取り専用プロパティは、ネイティブの原点がユーザーの手に保持している（またはユーザーの手の一部の）ように見える仮想オブジェクトのレンダリングに使用するポーズを追跡する {{domxref("XRSpace")}} を返します。 例えば、ユーザーが仮想の真っ直ぐな棒を持っている場合、この `XRSpace` のネイティブの原点は、ユーザーの拳のおおよその重心にあります。

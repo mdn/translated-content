@@ -186,7 +186,7 @@ var arr = () => arguments[0];
 arr(); // 1
 
 function foo(n) {
-  var f = () => arguments[0] + n; // 隐式绑定 foo 函数的 arguments 对象. arguments[0] 是 n，即传给 foo 函数的第一个参数
+  var f = () => arguments[0] + n; // 隐式绑定 foo 函数的 arguments 对象。arguments[0] 是 n，即传给 foo 函数的第一个参数
   return f();
 }
 
@@ -316,7 +316,7 @@ var func = ()
 // SyntaxError: expected expression, got '=>'
 ```
 
-但是，可以通过在 ‘=>’ 之后换行，或者用 ‘( )’、'{ }'来实现换行，如下：
+但是，可以通过在‘=>’之后换行，或者用‘( )’、'{ }'来实现换行，如下：
 
 ```js
 var func = (a, b, c) =>
@@ -451,7 +451,7 @@ v();    //1
 v();    //2
 
 
-//箭头函数体的闭包（ i=0 是默认参数）
+//箭头函数体的闭包（i=0 是默认参数）
 var Add = (i=0) => {return (() => (++i) )};
 var v = Add();
 v();           //1

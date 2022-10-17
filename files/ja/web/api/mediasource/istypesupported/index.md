@@ -2,6 +2,7 @@
 title: MediaSource.isTypeSupported()
 slug: Web/API/MediaSource/isTypeSupported
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 **`MediaSource.isTypeSupported()`** 静的メソッドは、指定された MIME タイプが現在の{{Glossary("user agent","ユーザーエージェント")}}によってサポートされる*可能性が高い*場合に `true` となる {{jsxref("Boolean")}} 値を返します。 つまり、その MIME タイプの {{domxref("SourceBuffer")}} オブジェクトを正常に作成できる場合です。 返された値が `false` の場合、ユーザーエージェントは、指定された形式のメディアにアクセス*できない*と確信しています。

@@ -44,4 +44,4 @@ slug: Web/CSS/:dir
 
 ## 参见
 
-- 语言相关伪类: {{ cssxref(":lang") }}, {{ cssxref(":dir") }}
+- 语言相关伪类：{{ cssxref(":lang") }}, {{ cssxref(":dir") }}

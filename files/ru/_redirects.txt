@@ -766,6 +766,10 @@
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/contains	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
 /ru/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/ru/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly	/ru/docs/WebAssembly/JavaScript_interface
+/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table	/ru/docs/WebAssembly/JavaScript_interface/Table
+/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile	/ru/docs/WebAssembly/JavaScript_interface/compile
+/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming	/ru/docs/WebAssembly/JavaScript_interface/compileStreaming
 /ru/docs/Web/JavaScript/Reference/Global_Objects/null	/ru/docs/Web/JavaScript/Reference/Operators/null
 /ru/docs/Web/JavaScript/Reference/Global_Objects/uneval	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects
 /ru/docs/Web/JavaScript/Reference/Methods_Index	/ru/docs/Web/JavaScript/Reference

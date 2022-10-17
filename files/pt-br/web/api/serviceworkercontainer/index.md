@@ -25,9 +25,6 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 
 - {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
   - : Returns a {{domxref("ServiceWorker")}} object if its state is `activated` (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns `null` during a force-refresh request (_Shift_ + refresh) or if there is no active worker.
-
-<!---->
-
 - {{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}
   - : Provides a way of delaying code execution until a service worker is active. It returns a {{jsxref("Promise")}} that will never reject, and which waits indefinitely until the {{domxref("ServiceWorkerRegistration")}} associated with the current page has an {{domxref("ServiceWorkerRegistration.active")}} worker. Once that condition is met, it resolves with the {{domxref("ServiceWorkerRegistration")}}.
 
@@ -45,9 +42,9 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 - {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}}
   - : Creates or updates a {{domxref("ServiceWorkerRegistration")}} for the given `scriptURL`.
 - {{domxref("ServiceWorkerContainer.getRegistration()")}}
-  - : Gets a {{domxref("ServiceWorkerRegistration")}} object whose scope matches the provided document URL. If the method can't return a {{domxref("ServiceWorkerRegistration")}}, it returns a [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:").
+  - : Gets a {{domxref("ServiceWorkerRegistration")}} object whose scope matches the provided document URL. If the method can't return a {{domxref("ServiceWorkerRegistration")}}, it returns a [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 - {{domxref("ServiceWorkerContainer.getRegistrations()")}}
-  - : Returns all {{domxref("ServiceWorkerRegistration")}} objects associated with a `ServiceWorkerContainer` in an array. If the method can't return {{domxref("ServiceWorkerRegistration")}} objects, it returns a [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:").
+  - : Returns all {{domxref("ServiceWorkerRegistration")}} objects associated with a `ServiceWorkerContainer` in an array. If the method can't return {{domxref("ServiceWorkerRegistration")}} objects, it returns a [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Examples
 
@@ -61,7 +58,7 @@ if ('serviceWorker' in navigator) {
     console.log('Service worker registration succeeded:', registration);
 
     // At this point, you can optionally do something
-    // with registration. See https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration
+    // with registration. See https://developer.mozilla.org/pt-BR/docs/Web/API/ServiceWorkerRegistration
   }).catch(function(error) {
     console.log('Service worker registration failed:', error);
   });

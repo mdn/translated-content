@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
 {{JSRef}}
 
-O método estático **`Reflect`\*\***`.apply()`\*\* chama uma função alvo com os argumentos especificados.
+O método estático **`Reflect.apply()`** chama uma função alvo com os argumentos especificados.
 
 ## Sintaxe
 

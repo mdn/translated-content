@@ -2,6 +2,7 @@
 title: scope
 slug: Web/Manifest/scope
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

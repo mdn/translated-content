@@ -3,6 +3,7 @@ title: Firefox へのフィードリーダーの追加
 slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 original_slug: Adding_feed_readers_to_Firefox
 ---
+
 Firefox 2 より、Firefox はフィードを読む際に使う RSS または Atom フィードリーダを選択できるようになっています。この記事ではデフォルトではサポートされていないリーダを追加サポートさせる方法について説明します。
 
 ## 新しいウェブベースのフィードリーダの追加
@@ -40,7 +41,7 @@ navigator.registerContentHandler(
 
 これを最も簡単に行う方法というのは、単に設定（あるいは オプション、ご使用のプラットフォームによります）ウィンドウの フィード パネルという既存のユーザインタフェースを使用することです。
 
-> **Note:** Firefox 8 よりフィードパネルは無くなっています。フィードリーダーの開発者が、Web フィードの処理の為のオプションをご自分で追加する場合、上記の同様の JavaScript コードを実装することをお勧めします。
+> **メモ:** Firefox 8 よりフィードパネルは無くなっています。フィードリーダーの開発者が、Web フィードの処理の為のオプションをご自分で追加する場合、上記の同様の JavaScript コードを実装することをお勧めします。
 
 これも拡張機能からプログラムで行うこともできます。フィードリーダに使うアプリケーションのパス名を `browser.feeds.handlers.application` オプションの値に設定することで可能です。
 

@@ -17,10 +17,7 @@ Com a finalidade de fornecer suporte de qualidade para interfaces baseadas em to
 
 - Surface
   - : A superfície sensível ao toque. Pode ser uma tela ou trackpad.
-
-<!---->
-
-- **T**ouch point
+- Touch point
   - : Um ponto de contato com a superfície. Pode ser um dedo (ou cotovelo, orelha, nariz, o que seja, mas provavelmente, um dedo) ou uma caneta.
 
 ## Interfaces
@@ -144,7 +141,7 @@ Esta interação sobre os toques também muda, mas parece em cache as informaç�
 
 Isto permite obter as coordenadas da posição anterior de cada contato e usar os métodos de contexto apropriado para desenhar uma linha que une as duas posições.
 
-Depois de desenhar a linha, nós chamamos [`Array.splice()`](/en/JavaScript/Reference/Global_Objects/Array/splice "en/JavaScript/Reference/Global Objects/Array/splice") para substituir as informações previas sobre o ponto de toque com a informação atual no array `ongoingTouches`.
+Depois de desenhar a linha, nós chamamos [`Array.splice()`](/en/JavaScript/Reference/Global_Objects/Array/splice) para substituir as informações previas sobre o ponto de toque com a informação atual no array `ongoingTouches`.
 
 #### Gerenciando o final do evento de toque
 
@@ -177,7 +174,7 @@ function handleEnd(evt) {
 }
 ```
 
-Isto é muito semelhante a função anterior, as únicas diferenças reais são o desenho de um pequeno quadrado para marcar o fim e quando chamamos [`Array.splice()`](/en/JavaScript/Reference/Global_Objects/Array/splice "en/JavaScript/Reference/Global Objects/Array/splice"), nós simplesmente removemos a antiga entrada da lista de toque do ongoing, sem adição das informações atualizadas. O resultado é que paramos o tracking do ponto de contato.
+Isto é muito semelhante a função anterior, as únicas diferenças reais são o desenho de um pequeno quadrado para marcar o fim e quando chamamos [`Array.splice()`](/en/JavaScript/Reference/Global_Objects/Array/splice), nós simplesmente removemos a antiga entrada da lista de toque do ongoing, sem adição das informações atualizadas. O resultado é que paramos o tracking do ponto de contato.
 
 #### Tratando toques cancelados
 

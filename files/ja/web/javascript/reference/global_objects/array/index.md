@@ -128,7 +128,7 @@ JavaScript では、配列は[プリミティブ](/ja/docs/Glossary/Primitive)�
 
 この節では、 JavaScript で一般的な配列操作の例をいくつか紹介します。
 
-> **Note:** まだ配列の基本に慣れていない場合は、最初に [JavaScript の第一歩: 配列](/ja/docs/Learn/JavaScript/First_steps/Arrays) の[配列とは何かの説明](/ja/docs/Learn/JavaScript/First_steps/Arrays#配列とは何か)、およびよくある配列の操作の他の例を読んでみてください。
+> **メモ:** まだ配列の基本に慣れていない場合は、最初に [JavaScript の第一歩: 配列](/ja/docs/Learn/JavaScript/First_steps/Arrays) の[配列とは何かの説明](/ja/docs/Learn/JavaScript/First_steps/Arrays#配列とは何か)、およびよくある配列の操作の他の例を読んでみてください。
 
 ### 配列の作成
 
@@ -235,7 +235,7 @@ console.log(removedItem);
 // みかん
 ```
 
-> **Note:** `pop()` は配列の最後の項目を削除するためだけに使用できます。配列の最後にある複数の項目を削除したい場合は、次の例を参照してください。
+> **メモ:** `pop()` は配列の最後の項目を削除するためだけに使用できます。配列の最後にある複数の項目を削除したい場合は、次の例を参照してください。
 
 ### 配列の最後から複数の項目を取り除く
 
@@ -278,7 +278,7 @@ console.log(removedItem);
 // りんご
 ```
 
-> **Note:** `shift()` は最初の項目を配列から取り除く場合にのみ使用できます。複数の項目を配列の先頭から取り除く場合は、次の例を参照してください。
+> **メモ:** `shift()` は最初の項目を配列から取り除く場合にのみ使用できます。複数の項目を配列の先頭から取り除く場合は、次の例を参照してください。
 
 ### 配列の先頭から複数の項目を取り除く
 
@@ -429,7 +429,7 @@ const fruitsCopy3 = fruits.slice();
 const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 ```
 
-また、 [`structuredClone()`](/ja/docs/Web/API/structuredClone) メソッドを使用してディープコピーを作成することもできます。これは、ソース内の{{Glossary("transferable objects", "転送可能オブジェクト")}}を、コピーするのではなく、新しいコピーに転送できる利点があります。
+また、 [`structuredClone()`](/ja/docs/Web/API/structuredClone) メソッドを使用してディープコピーを作成することもできます。これは、ソース内の{{Glossary("transferable objects", "移譲可能オブジェクト")}}を、コピーするのではなく、新しいコピーに移譲できる利点があります。
 
 最後に、既存の配列を新しい変数に代入しても、配列やその要素のコピーは作成されないことを理解することが重要です。つまり、元の配列の名前と新しい変数の名前は、まったく同じオブジェクトの名前に過ぎません（したがって、常に[厳密等価](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using_)であると評価されます）。したがって、元の配列の値や新しい変数の値に何らかの変更を加えると、もう片方も変更されます。
 

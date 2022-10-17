@@ -43,7 +43,7 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 ## Browser compatibility
 
-{{Compat("api.Notification.close")}}
+{{Compat}}
 
 ## See also
 

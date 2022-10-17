@@ -2,6 +2,7 @@
 title: background-repeat
 slug: Web/CSS/background-repeat
 ---
+
 {{CSSRef}}
 
 **`background-repeat`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景画像をどのように繰り返すかを設定します。背景画像は水平軸方向と垂直軸方向に繰り返したり、まったく繰り返さないようにしたりすることができます。

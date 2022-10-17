@@ -2,6 +2,7 @@
 title: ウェブパフォーマンスの「なぜ」
 slug: Learn/Performance/why_web_performance
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
 
 ウェブパフォーマンスは、遅い処理を速く*見せる*ことも含めて、ウェブサイトを速くすることがすべてです。この記事では、なぜウェブパフォーマンスがサイト訪問者にとって、またビジネスの目標にとって重要なのかを紹介しています。

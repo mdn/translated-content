@@ -7,7 +7,7 @@ translation_of: Web/API/Element/querySelectorAll
 
 ## Sumário
 
-Retorna uma [`NodeList`](/pt-BR/docs/DOM/NodeList "DOM/NodeList") de todos os elementos descendentes do elemento que foi invocado que sejam compatíveis com o grupo de seletores CSS especificados.
+Retorna uma [`NodeList`](/pt-BR/docs/DOM/NodeList) de todos os elementos descendentes do elemento que foi invocado que sejam compatíveis com o grupo de seletores CSS especificados.
 
 ## Sintaxe
 
@@ -17,8 +17,8 @@ elementList = baseElement.querySelectorAll(selectors);
 
 Onde
 
-- `elementList` é uma lista não-viva de objetos [element](/pt-BR/docs/DOM/element "DOM/Element").
-- `baseElement` é um objeto [elemento](/pt-BR/docs/DOM/element "DOM/element").
+- `elementList` é uma lista não-viva de objetos [element](/pt-BR/docs/DOM/element).
+- `baseElement` é um objeto [elemento](/pt-BR/docs/DOM/element).
 - `selectors` é um grupo de [seletores](/pt-BR/docs/Web/Guide/CSS/Getting_Started/Selectors) que serão procurados.
 
 ## Exemplos
@@ -48,7 +48,7 @@ Joga uma excessão `SYNTAX_ERR` se o grupo especificado de seletores for inváli
 
 `querySelectorAll()` foi introduzida na WebApps API.
 
-A _string_ passada como argumento para querySelectorAll` `deve seguir a sintaxe do CSS. veja {{domxref("document.querySelector")}} para um exemplo concreto.
+A _string_ passada como argumento para `querySelectorAll` deve seguir a sintaxe do CSS. veja {{domxref("document.querySelector")}} para um exemplo concreto.
 
 Lembre-se que o valor retornado é uma NodeList, então não é recomendado o uso de recursões for...in, nem de nenhum método de _array_. Se realmente houver a necessidade de usar métodos de uma _array,_ então o NodeList deve ser convertido em uma _array_ antes de ser usado.
 
@@ -56,14 +56,12 @@ Lembre-se que o valor retornado é uma NodeList, então não é recomendado o us
 
 {{Compat("api.Element.querySelectorAll")}}
 
-##
-
 ## Especificações
 
 - [Selectors API](http://www.w3.org/TR/selectors-api/)
 
 ## Veja também
 
-- [`document.querySelectorAll`](/pt-BR/docs/DOM/Document.querySelectorAll "DOM/document.querySelectorAll")
-- [`document.querySelector`](/pt-BR/docs/DOM/Document.querySelector "DOM/document.querySelector")
-- [Code snippets for `querySelector`](/pt-BR/docs/Code_snippets/QuerySelector "Code_snippets/QuerySelector")
+- [`document.querySelectorAll`](/pt-BR/docs/DOM/Document.querySelectorAll)
+- [`document.querySelector`](/pt-BR/docs/DOM/Document.querySelector)
+- [Code snippets for `querySelector`](/pt-BR/docs/Code_snippets/QuerySelector)

@@ -3,13 +3,14 @@ title: ServiceWorkerGlobalScope.onnotificationclick
 slug: orphaned/Web/API/ServiceWorkerGlobalScope/onnotificationclick
 original_slug: Web/API/ServiceWorkerGlobalScope/onnotificationclick
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 **ServiceWorkerGlobalScope.onnotificationclick** プロパティは、{{domxref("ServiceWorkerGlobalScope")}} オブジェクトで {{Event("notificationclick")}} イベントが送り出されるたびに呼び出されるイベントハンドラーです。つまり、ユーザーが {{domxref("ServiceWorkerRegistration.showNotification()")}} で生成された通知をクリックしたときです。
 
 メインスレッド、または {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して Service Worker ではない Worker で生成された通知は、`Notification` オブジェクト自体で {{Event("click")}} イベントを代わりに受け取ります。
 
-> **Note:** {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して {{domxref("ServiceWorkerGlobalScope")}} 内で通知を生成しようとすると、エラーがスローされます。
+> **メモ:** {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して {{domxref("ServiceWorkerGlobalScope")}} 内で通知を生成しようとすると、エラーがスローされます。
 
 ## 構文
 

@@ -5,7 +5,7 @@ slug: Web/API/Web_Workers_API/Using_web_workers
 
 {{DefaultAPISidebar("Web Workers API")}}
 
-Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的方法。线程可以执行任务而不干扰用户界面。此外，他们可以使用[`XMLHttpRequest`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest)执行 I/O (尽管`responseXML`和`channel`属性总是为空)。一旦创建， 一个 worker 可以将消息发送到创建它的 JavaScript 代码，通过将消息发布到该代码指定的事件处理程序（反之亦然）。本文提供了有关使用 Web Worker 的详细介绍。
+Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的方法。线程可以执行任务而不干扰用户界面。此外，他们可以使用[`XMLHttpRequest`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest)执行 I/O (尽管`responseXML`和`channel`属性总是为空)。一旦创建，一个 worker 可以将消息发送到创建它的 JavaScript 代码，通过将消息发布到该代码指定的事件处理程序（反之亦然）。本文提供了有关使用 Web Worker 的详细介绍。
 
 ## Web Workers API
 
@@ -307,7 +307,7 @@ onmessage = function (oEvent) {
 
 ### 传递数据的例子
 
-#### 例子 #1： 创建一个通用的「异步 [`eval()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/eval)」
+#### 例子 #1：创建一个通用的「异步 [`eval()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/eval)」
 
 下面这个例子介绍了，如何在 worker 内使用 `eval()` 来按顺序执行**异步的**任何种类的 JavaScript 代码：
 
@@ -611,7 +611,7 @@ onmessage = function (oEvent) {
 
 ### 通过转让所有权 (可转让对象) 来传递数据
 
-Google Chrome 17 与 Firefox 18 包含另一种性能更高的方法来将特定类型的对象 ([可转让对象](http://w3c.github.io/html/infrastructure.html#transferable-objects)) 传递给一个 worker/从 worker 传回 。可转让对象从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大数据时会获得极大的性能提升。如果你从 C/C++ 世界来，那么把它想象成按照引用传递。然而与按照引用传递不同的是，一旦对象转让，那么它在原来上下文的那个版本将不复存在。该对象的所有权被转让到新的上下文内。例如，当你将一个 [ArrayBuffer](/zh-CN/JavaScript_typed_arrays/ArrayBuffer) 对象从主应用转让到 Worker 中，原始的 `ArrayBuffer` 被清除并且无法使用。它包含的内容会 (完整无差的) 传递给 Worker 上下文。
+Google Chrome 17 与 Firefox 18 包含另一种性能更高的方法来将特定类型的对象 ([可转让对象](http://w3c.github.io/html/infrastructure.html#transferable-objects)) 传递给一个 worker/从 worker 传回。可转让对象从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大数据时会获得极大的性能提升。如果你从 C/C++ 世界来，那么把它想象成按照引用传递。然而与按照引用传递不同的是，一旦对象转让，那么它在原来上下文的那个版本将不复存在。该对象的所有权被转让到新的上下文内。例如，当你将一个 [ArrayBuffer](/zh-CN/JavaScript_typed_arrays/ArrayBuffer) 对象从主应用转让到 Worker 中，原始的 `ArrayBuffer` 被清除并且无法使用。它包含的内容会 (完整无差的) 传递给 Worker 上下文。
 
 ```js
 // Create a 32MB "file" and fill it.
@@ -627,7 +627,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 ## 嵌入式 worker
 
-目前没有一种「官方」的方法能够像 {{ HTMLElement("script") }} 元素一样将 worker 的代码嵌入的网页中。但是如果一个 {{ HTMLElement("script") }} 元素没有 `src 特性，并且它的` `type` 特性没有指定成一个可运行的 mime-type，那么它就会被认为是一个数据块元素，并且能够被 JavaScript 使用。「数据块」是 HTML5 中一个十分常见的特性，它可以携带几乎任何文本类型的数据。所以，你能够以如下方式嵌入一个 worker：
+目前没有一种「官方」的方法能够像 {{ HTMLElement("script") }} 元素一样将 worker 的代码嵌入的网页中。但是如果一个 {{ HTMLElement("script") }} 元素没有 `src` 特性，并且它的 `type` 特性没有指定成一个可运行的 `mime-type`，那么它就会被认为是一个数据块元素，并且能够被 JavaScript 使用。「数据块」是 HTML5 中一个十分常见的特性，它可以携带几乎任何文本类型的数据。所以，你能够以如下方式嵌入一个 worker：
 
 ```html
 <!DOCTYPE html>
@@ -770,7 +770,7 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 </html>
 ```
 
-网页创建了一个 `div` 元素，ID 为 `result` ， 用它来显示运算结果，然后生成 worker。在生成 worker 后，`onmessage` 处理函数配置为通过设置 `div` 元素的内容来显示运算结果，然后 `onerror` 处理函数被设置为 [转储](</en/Debugging_JavaScript#dump()>) 错误信息。
+网页创建了一个 `div` 元素，ID 为 `result` ，用它来显示运算结果，然后生成 worker。在生成 worker 后，`onmessage` 处理函数配置为通过设置 `div` 元素的内容来显示运算结果，然后 `onerror` 处理函数被设置为 [转储](</en/Debugging_JavaScript#dump()>) 错误信息。
 
 最后，向 worker 发送一条信息来启动它。
 

@@ -40,12 +40,12 @@ const myWorker = new Worker(aURL, options);
 ### 异常
 
 - 当 document 不被允许启动 worker 的时候，将抛出一个 SecurityError 异常。例如：如果提供的 aURL 有语法错误，或者与同源策略相冲突（跨域访问）。
-- 如果 worker 的 MIME 类型不正确，将抛出一个 NetworkError 异常。worker 的 MIME 类型必须是 text/javascript 。
+- 如果 worker 的 MIME 类型不正确，将抛出一个 NetworkError 异常。worker 的 MIME 类型必须是 text/javascript。
 - 如果 aURL 无法被解析（格式错误），将抛出一个 SyntaxError 异常。
 
 ## 例子
 
-下面的代码片段展示了通过 Worker() 创建 {{domxref("Worker")}} 对象的过程， 以及随后的使用方法：
+下面的代码片段展示了通过 Worker() 创建 {{domxref("Worker")}} 对象的过程，以及随后的使用方法：
 
 ```js
 let myWorker = new Worker("worker.js");

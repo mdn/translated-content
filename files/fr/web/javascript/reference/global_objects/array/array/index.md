@@ -67,13 +67,11 @@ console.log(fruits[0]);     // "Pomme"
 
 ## Spécifications
 
-| Spécification                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array-constructor', 'Array constructor')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.Array")}}
+{{Compat}}
 
 ## Voir aussi
 

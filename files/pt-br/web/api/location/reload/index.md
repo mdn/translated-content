@@ -24,7 +24,7 @@ object.reload(forcedReload);
 ### Parametros
 
 - _forcedReload_ {{optional_inline}}
-  - : É uma flag {{domxref("Boolean")}}, que quando `true`, faz com que a página sempre seja recarregada do servidor, se é `false ou não for definido, `o navegador pode recarregar a página do cache.
+  - : É uma flag {{domxref("Boolean")}}, que quando `true`, faz com que a página sempre seja recarregada do servidor, se é `false` ou não for definido, o navegador pode recarregar a página do cache.
 
 ## Exemplos
 

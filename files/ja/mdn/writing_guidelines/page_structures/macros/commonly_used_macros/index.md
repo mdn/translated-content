@@ -5,6 +5,7 @@ original_slug: MDN/Structures/Macros/Commonly-used_macros
 l10n:
   sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
 ---
+
 {{MDNSidebar}}
 
 このページには MDN で使うために作られた汎用のマクロの大部分が掲載されています。

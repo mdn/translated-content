@@ -2,6 +2,7 @@
 title: 203 Non-Authoritative Information
 slug: Web/HTTP/Status/203
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`203 Non-Authoritative Information`** レスポンスステータスは、リクエストが成功したものの、変換{{Glossary("Proxy server", "プロキシ")}}によって元のサーバーの{{HTTPStatus("200")}} (`OK`) レスポンスからペイロードが変更されたことを表します。

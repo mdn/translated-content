@@ -2,6 +2,7 @@
 title: Firefox 66 for developers
 slug: Mozilla/Firefox/Releases/66
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 66 は、米国時間 2019 年 3 月 19 日 にリリースされました。このページでは、開発者に影響する Firefox 66 の変更点をまとめています。
