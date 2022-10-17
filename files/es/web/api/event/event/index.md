@@ -54,7 +54,7 @@ myDiv.dispatchEvent(evento);
 
 {{Compat}}
 
-## Ver también
+## Véase también
 
 - {{domxref("Event")}}
 - {{domxref("EventTarget.dispatchEvent()")}}
