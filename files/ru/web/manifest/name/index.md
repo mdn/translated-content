@@ -23,8 +23,7 @@ translation_of: Web/Manifest/name
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json no-line-numbers">
-"name": "Awesome application"</pre
-        >
+"name": "Awesome application"</pre>
       </td>
     </tr>
   </tbody>

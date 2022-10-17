@@ -29,8 +29,7 @@ translation_of: Web/Manifest/related_applications
     "url": "https://play.google.com/store/apps/details?id=com.example.app1",
     "id": "com.example.app1"
   }
-]</pre
-        >
+]</pre>
       </td>
     </tr>
   </tbody>

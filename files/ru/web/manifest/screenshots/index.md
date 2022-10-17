@@ -29,8 +29,7 @@ translation_of: Web/Manifest/screenshots
     "sizes": "1280x720",
     "type": "image/webp"
   }
-]</pre
-        >
+]</pre>
       </td>
     </tr>
   </tbody>

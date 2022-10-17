@@ -23,8 +23,7 @@ translation_of: Web/Manifest/start_url
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json no-line-numbers">
-"start_url": "https://example.com"</pre
-        >
+"start_url": "https://example.com"</pre>
       </td>
     </tr>
   </tbody>
