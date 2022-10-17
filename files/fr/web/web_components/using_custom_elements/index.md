@@ -184,7 +184,7 @@ L'utilisation de l'élément intégré dans un document web se présente égalem
 
 Vous utilisez l'élément `<ul>` comme d'habitude, mais vous spécifiez le nom de l'élément personnalisé dans l'attribut `is`.
 
-> **Note :** à nouveau, vous pouvez voir le [source code javascript](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) complet ici.
+> **Note :** à nouveau, vous pouvez voir le [code source JavaScript](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) complet ici.
 
 ## Utilisation des rappels de cycle de vie
 
