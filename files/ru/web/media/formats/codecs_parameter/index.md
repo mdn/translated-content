@@ -115,22 +115,16 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
     <tr>
       <td><code>LL</code></td>
       <td>
-        Двухзначный номер уровня, который преобразуется в формат X.Y, где<code
-          >X = 2 + (LL >> 2)</code
-        >
-        , и <code>Y = LL &#x26; 3</code>. Подробнее
-        <a href="https://aomediacodec.github.io/av1-spec/#levels"
-          >Дополнение A, секция 3</a
-        >
+        Двухзначный номер уровня, который преобразуется в формат X.Y, где <code>X = 2 + (LL >> 2)</code>,
+        и <code>Y = LL &#x26; 3</code>. Подробнее
+        <a href="https://aomediacodec.github.io/av1-spec/#levels">Дополнение A, секция 3</a>
         в спецификации AV1 .
       </td>
     </tr>
     <tr>
       <td><code>T</code></td>
       <td>
-        The one-character tier indicator. For the Main tier (<code
-          >seq_tier</code
-        >
+        The one-character tier indicator. For the Main tier (<code>seq_tier</code>
         equals 0), this character is the letter <code>M</code>. For the High
         tier (<code>seq_tier</code> is 1), this character is the letter
         <code>H</code>. The High tier is only available for level 4.0 and up.
@@ -223,10 +217,7 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
         system used by the media. For example, BT.2020/BT.2100 color, as used
         for HDR video, is <code>09</code>. The information for this—and for each
         of the remaining components—is found in the
-        <a
-          href="https://aomediacodec.github.io/av1-spec/#color-config-semantics"
-          >Color config semantics section</a
-        >
+        <a href="https://aomediacodec.github.io/av1-spec/#color-config-semantics">Color config semantics section</a>
         of the AV1 specification. The default value is <code>01</code> (ITU-R
         BT.709).
       </td>
@@ -603,9 +594,7 @@ The first five components are required; everything from `cp` (color primaries) o
         <p>
           A two-digit integer specifying which of the color primaries from
           Section 8.1 of the
-          <a href="https://www.itu.int/rec/T-REC-H.273/en"
-            >ISO/IEC 23001-8:2016</a
-          >
+          <a href="https://www.itu.int/rec/T-REC-H.273/en">ISO/IEC 23001-8:2016</a>
           standard. This component, and every component after it, is optional.
         </p>
         <p>The possible values of the color primaries component are:</p>
