@@ -1,7 +1,6 @@
 ---
 title: Serialization（序列化）
 slug: Glossary/Serialization
-original_slug: Glossary/Serialize
 ---
 
 序列化是将一个对象或数据结构转换为适合网络传输或存储的格式（如数组缓冲区或文件格式）的过程。
