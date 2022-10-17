@@ -98,7 +98,7 @@ display: unset;
 ### 列表元素
 
 - {{CSSxRef("&lt;display-listitem&gt;")}}
-  - : 该元素为内容生成一个块级盒子和一个单独 list-item 的内联盒子。
+  - : 该元素为内容生成一个块级盒子和一个单独的列表元素内联盒子。
 
 `list-item` 的单独值将导致元素的行为类似于一个列表元素。其可以与 {{CSSxRef("list-style-type")}} 和 {{CSSxRef("list-style-position")}} 一起使用。
 
