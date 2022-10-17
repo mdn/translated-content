@@ -11,7 +11,7 @@ slug: Web/CSS/display
 
 ## 语法
 
-CSS `display` 规定使用的关键值。
+CSS `display` 规定使用的关键字。
 
 ```css
 /* precomposed values */
@@ -76,14 +76,14 @@ display: unset;
 
     - `flow` {{Experimental_Inline}}
 
-      - : 该元素使用流式布局布局它的内容（块和内联布局）。
+      - : 该元素使用流式布局（块和内联布局）来排布它的内容。
 
         如果它的外部显示类型是 `inline` 或 `run-in`，并且它参与一个块或者内联格式上下文，那么它将生成一个内联盒子。否则它将生成一个块容器盒。
 
         根据其它属性的值（例如 {{CSSxRef("position")}}、{{CSSxRef("float")}} 或 {{CSSxRef("overflow")}}）以及它自身是否参与到块或者内联格式化上下文，它要么为它的内容建立新的[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)（BFC），要么将其内容集成到其父元素的格式化上下文中。
 
     - `flow-root`
-      - : 该元素生成一个块级元素盒，其会建立一个新的[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)，定义格式化根到位置。
+      - : 该元素生成一个块级元素盒，其会建立一个新的[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)，定义格式化上下文的根元素。
     - `table`
       - : 该元素的行为类似于 HTML 中的 {{HTMLElement("table")}} 元素。它定义了一个块级别的盒子。
     - `flex`
@@ -147,10 +147,10 @@ display: unset;
 
       - : 这些元素自身不会产生特定的盒子。它们被伪盒子（pseudo-box）和子盒子取代。请注意，CSS Display Level 3 规范中定义了 `contents` 值如何影响“异常元素”——这些元素不是纯粹由 CSS 盒模型概念呈现的（例如替换元素）。更多的细节请参见[附录 B：display 的影响：异常元素的内容](https://drafts.csswg.org/css-display/#unbox)。
 
-        _由于浏览器的一个错误，目前将从无障碍树中移除该元素——屏幕阅读器将不会看到里面的内容。更多细节，参见下面的[无障碍问题](#无障碍问题)。_
+        _由于浏览器的一个错误，该元素目前不会被添加到无障碍树中——屏幕阅读器将不会看到里面的内容。更多细节，参见下面的[无障碍问题](#无障碍问题)。_
 
     - `none`
-      - : 使元素不再显示，其对布局不会有影响（文档渲染得好像元素不存在）。所有的后代元素也不会再显示。为了使元素占据一个它通常占据的空间，但实际上没有渲染任何东西，应该使用 {{CSSxRef("visibility")}} 属性。
+      - : 使元素不再显示，其对布局不会有影响（文档渲染得好像这个元素并不存在）。所有的后代元素也不会再显示。为了使元素占据一个它通常占据的空间，但实际上没有渲染任何东西，应该使用 {{CSSxRef("visibility")}} 属性。
 
 ### 预组合
 
@@ -184,7 +184,7 @@ display: unset;
 
 ### 你现在应该使用什么语法？
 
-第 3 级提案中详细描述了 `display` 的双值属性——明确地启用外部和内部显示类型的规范——但浏览器尚未很好地支持这一点。
+Level 3 规范中详细描述了 `display` 的双值属性——明确地启用外部和内部显示类型的规范——但浏览器尚未很好地支持这一点。
 
 预组合 `<display-legacy>` 方法允许单关键字产生相同的结果，并且直到双关键值语法有着更好的支持之前，它应该被开发人员青睐。例如，你可以按以下方式使用双值语法指定一个内联的弹性容器：
 
@@ -202,7 +202,7 @@ display: unset;
 }
 ```
 
-有关规范中的这些更改的更多信息，请参考这篇文章[适应 display 的新双值语法](/zh-CN/docs/Web/CSS/display/two-value_syntax_of_display).
+有关规范中的这些更改的更多信息，请参考这篇文章[适应 display 的新的双值语法](/zh-CN/docs/Web/CSS/display/two-value_syntax_of_display).
 
 ### 全局值
 
@@ -219,7 +219,7 @@ display: unset;
 
 - [适应 display 的新双值语法](/zh-CN/docs/Web/CSS/display/two-value_syntax_of_display)
 
-### CSS 流式布局（display: block，display: inline）
+### CSS 流式布局（display: block、display: inline）
 
 - [常规流中的块和内联布局](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
 - [流布局和溢出](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)
@@ -234,9 +234,9 @@ display: unset;
 - [控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
 - [跨浏览器弹性盒的混合](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
 - [掌握弹性物件的包装](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
-- [Flex 项排序](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
+- [弹性元素排序](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
 - [弹性盒子与其他布局方法的联系](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
-- [弹性盒的向下支持](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
+- [弹性盒的向后兼容](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
 - [弹性盒的典型用例](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
 
 ### display: grid
@@ -257,13 +257,13 @@ display: unset;
 
 ### display: none
 
-在一个元素中使用 `display` 的值为 `none` 将会从[无障碍树中](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)移除它。这将导致该元素及其所有后代元素不再通过屏幕阅读（screen reading）技术展示。
+在一个元素中使用 `display` 的值为 `none` 将会从[无障碍树中](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)移除它。这将导致该元素及其所有后代元素不再通过屏幕阅读器技术展示。
 
-如果你想要从视觉上隐藏元素，一个更好的替代方案是使用[属性的组合](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)将其直观地从屏幕删除，但是通过屏幕阅读（screen reader）等辅助技术依然可以解析。
+如果你想要从视觉上隐藏元素，一个更好的替代方案是使用[属性的组合](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)将其直观地从屏幕删除，但是通过屏幕阅读器等辅助技术依然可以解析。
 
 ### display: contents
 
-当前在大多数浏览器的实现是将任意 `display` 值为 `contents` 的元素从[无障碍树中](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)移除（但是保留后代元素）。这将导致该元素自身不再通过屏幕阅读（screen reading）技术展示。根据 [CSS 规范](https://drafts.csswg.org/css-display/#valdef-display-contents)，这是错误的行为。
+当前在大多数浏览器的实现是将任意 `display` 值为 `contents` 的元素从[无障碍树中](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)移除（但是保留后代元素）。这将导致该元素自身不再通过屏幕阅读器技术展示。根据 [CSS 规范](https://drafts.csswg.org/css-display/#valdef-display-contents)，这是错误的行为。
 
 - [更多带有 display: contents 的无障碍标记 | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
 - [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
@@ -377,7 +377,7 @@ updateDisplay();
 
 #### 结果
 
-{{EmbedLiveSample('display 值的比较','100%', 440)}}
+{{EmbedLiveSample('比较 display 的值','100%', 440)}}
 
 > **备注：** 你可以在页面上找到上面链接的每个单独 display 数据类型的更多示例。
 
