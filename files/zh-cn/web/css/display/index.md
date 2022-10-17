@@ -95,7 +95,7 @@ display: unset;
 
 > **备注：** 浏览器支持双值语法，当仅发现外部值时，例如当指定 `display: flex` 或 `display: grid`，其将外部值设置为 `block`。这种行为是预期的；例如，如果你指定一个元素是 `display: grid`，你将期望在网格容器中创建的盒子是块级别的盒子。
 
-### list-item
+### 列表元素
 
 - {{CSSxRef("&lt;display-listitem&gt;")}}
   - : 该元素为内容生成一个块级盒子和一个单独 list-item 的内联盒子。
