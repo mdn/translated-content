@@ -5,7 +5,7 @@ translation_of: Web/API/AnalyserNode
 ---
 {{APIRef("Web Audio API")}}
 
-**`AnalyserNode`\*\*** \*\*интерфейс который предоставляет частоту (frequency) в реальном времени. Элемент {{domxref("AudioNode")}} который пропускает аудиопоток неизменным от ввода (input) до вывода (output), но позволяет использовать генерируемые данные, обрабатывать или создавать аудиовизуализацию.
+`AnalyserNode` интерфейс который предоставляет частоту (frequency) в реальном времени. Элемент {{domxref("AudioNode")}} который пропускает аудиопоток неизменным от ввода (input) до вывода (output), но позволяет использовать генерируемые данные, обрабатывать или создавать аудиовизуализацию.
 
 `AnalyserNode` имеет только один ввод и один вывод. Узел работает даже если вывод не подсоединён.
 
@@ -49,7 +49,7 @@ translation_of: Web/API/AnalyserNode
 
 ## Properties
 
-_Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
+_Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("AnalyserNode.fftSize")}}
   - : Is an unsigned long value representing the size of the FFT ([Fast Fourier Transform](http://en.wikipedia.org/wiki/Fast_Fourier_transform "/en-US/docs/")) to be used to determine the frequency domain.
@@ -64,17 +64,13 @@ _Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
 
 ## Methods
 
-_Inherits methods from its parent,_ _{{domxref("AudioNode")}}_.
+_Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("AnalyserNode.getFloatFrequencyData()")}}
   - : Copies the current frequency data into a {{domxref("Float32Array")}} array passed into it.
 
-<!---->
-
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
   - : Copies the current frequency data into a {{domxref("Uint8Array")}} (unsigned byte array) passed into it.
-
-<!---->
 
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
   - : Copies the current waveform, or time-domain, data into a {{domxref("Float32Array")}} array passed into it.

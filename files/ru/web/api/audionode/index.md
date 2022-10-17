@@ -19,22 +19,14 @@ translation_of: Web/API/AudioNode
 - {{domxref("AudioNode.context")}} {{readonlyInline}}
   - : Возвращает связанный {{domxref("AudioContext")}}, это объект, представляющий граф, в котором находится данный узел.
 
-<!---->
-
 - {{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}
   - : Возвращает количество входов узла. Узлы определённые как источники имеют `numberOfInputs` равное 0.
-
-<!---->
 
 - {{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}
   - : Возвращает количество выходов узла. Узлы назначения — такие как {{ domxref("AudioDestinationNode") }} — имеют количество выходов равное 0.
 
-<!---->
-
 - {{domxref("AudioNode.channelCount")}}
   - : Это целое число, используемое для определения того, сколько каналов используются для [up-mixing and down-mixing](/ru/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing) с любыми входами узла. Его использование точнее определяется значением {{domxref("AudioNode.channelCountMode")}}.
-
-<!---->
 
 - {{domxref("AudioNode.channelCountMode")}}
   - : Это перечисление описывающее путь согласования каналов между входом и выходом.
@@ -44,7 +36,7 @@ translation_of: Web/API/AudioNode
 
 ## Методы
 
-_Так же реализует методы из интерфейса_ {{domxref("EventTarget")}}.
+_Так же реализует методы из интерфейса {{domxref("EventTarget")}}._
 
 - {{domxref("AudioNode.connect(AudioNode)")}}
   - : Позволяет нам подключить один выход данного узла на один вход другого узла.
