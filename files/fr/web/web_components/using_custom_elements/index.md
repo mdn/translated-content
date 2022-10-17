@@ -143,7 +143,7 @@ Il est maintenant disponible pour utilisation dans notre page. Dans notre code H
   back of your card.">
 ```
 
-> **Note :** Vous pouvez voir le [source code JavaScript complet](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) ici.
+> **Note :** Vous pouvez voir le [code source JavaScript complet](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) ici.
 
 ### Eléments intégrés personnalisés
 
