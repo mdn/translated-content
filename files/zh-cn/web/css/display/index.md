@@ -225,7 +225,7 @@ display: unset;
 - [流布局和溢出](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)
 - [流布局和书写模式](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
 - [格式化上下文简介](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
-- [In Flow and Out of Flow](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
+- [流式布局以及如何脱离流式布局](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
 
 ### display: flex
 
