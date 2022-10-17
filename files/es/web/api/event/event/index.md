@@ -61,4 +61,3 @@ myDiv.dispatchEvent(evento);
 - {{domxref("Event")}}
 - {{domxref("EventTarget.dispatchEvent()")}}
 - [Creando y lanzando eventos](/es/docs/Web/Events/Creating_and_triggering_events)
-
