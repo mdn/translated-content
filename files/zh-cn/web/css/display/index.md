@@ -100,7 +100,7 @@ display: unset;
 - {{CSSxRef("&lt;display-listitem&gt;")}}
   - : 该元素为内容生成一个块级盒子和一个单独 list-item 的内联盒子。
 
-`list-item` 的单独值将导致元素的行为类似于一个 list-item。其可以与 {{CSSxRef("list-style-type")}} 和 {{CSSxRef("list-style-position")}} 一起使用。
+`list-item` 的单独值将导致元素的行为类似于一个列表元素。其可以与 {{CSSxRef("list-style-type")}} 和 {{CSSxRef("list-style-position")}} 一起使用。
 
 `list-item` 也可以与任意的 {{CSSxRef("&lt;display-outside&gt;")}} 关键字和 {{CSSxRef("&lt;display-inside&gt;")}} 中的 `flow` 或 `flow-root` 关键字组合。
 
