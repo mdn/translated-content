@@ -26,7 +26,7 @@ Array.of(element0, element1, /* … ,*/ elementN)
 
 ## 描述
 
-`Array.of()` 和 [`Array()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) 构造函数之间的区别在于处理整数参数：`Array.of(7)` 创建一个具有单个元素 `7` 的数组，而 `Array(7)` 创建一个 `length` 为 `7` 的空数组（这意味着一个由 7 个空槽组成的数组，而不是具有实际 {{jsxref("undefined")}} 值的槽）。
+`Array.of()` 和 [`Array()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) 构造函数之间的区别在于对单个参数的处理：`Array.of(7)` 创建一个具有单个元素 `7` 的数组，而 `Array(7)` 创建一个 `length` 为 `7` 的空数组（这意味着一个由 7 个空槽组成的数组，而不是具有实际 {{jsxref("undefined")}} 值的槽）。
 
 ```js
 Array.of(7); // [7]
