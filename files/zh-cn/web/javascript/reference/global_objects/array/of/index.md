@@ -5,9 +5,28 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/of
 
 {{JSRef}}
 
-**`Array.of()`** 方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。
+**`Array.of()`** 方法通过可变数量的参数创建一个新的 `Array` 实例，而不考虑参数的数量或类型。
 
-**`Array.of()`** 和 **`Array`** 构造函数之间的区别在于处理整数参数：**`Array.of(7)`** 创建一个具有单个元素 **7** 的数组，而 **`Array(7)`** 创建一个长度为 7 的空数组（**注意**：这是指一个有 7 个空位 (empty) 的数组，而不是由 7 个`undefined`组成的数组）。
+## 语法
+
+```js-nolint
+Array.of(element0)
+Array.of(element0, element1)
+Array.of(element0, element1, /* … ,*/ elementN)
+```
+
+### 参数
+
+- `elementN`
+  - : 用于创建数组的元素。
+
+### 返回值
+
+新的 {{jsxref("Array")}} 实例。
+
+## 描述
+
+`Array.of()` 和 [`Array()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) 构造函数之间的区别在于处理整数参数：`Array.of(7)` 创建一个具有单个元素 `7` 的数组，而 `Array(7)` 创建一个 `length` 为 `7` 的空数组（这意味着一个由 7 个空槽组成的数组，而不是具有实际 {{jsxref("undefined")}} 值的槽）。
 
 ```js
 Array.of(7); // [7]
@@ -17,26 +36,11 @@ Array.of(1, 2, 3); // [1, 2, 3]
 Array(1, 2, 3);    // [1, 2, 3]
 ```
 
-## 语法
-
-```plain
-Array.of(element0[, element1[, ...[, elementN]]])
-```
-
-### 参数
-
-- element*N*
-  - : 任意个参数，将按顺序成为返回数组中的元素。
-
-### 返回值
-
-新的 {{jsxref("Array")}} 实例。
-
-## 描述
-
-此函数是 ECMAScript 2015 标准的一部分。详见 [`Array.of` 和 `Array.from` proposal](https://gist.github.com/rwaldron/1074126) 和 [`Array.of` polyfill](https://gist.github.com/rwaldron/3186576)。
+`Array.of()` 方法是一个通用的工厂方法。例如，如果 `Array` 的子类继承了 `of()` 方法，继承的 `of()` 方法将返回子类的新实例而不是 `Array` 实例。事实上，`this` 值可以是任何接受单个参数表示新数组长度的构造函数，并且构造函数将与传递给 `of()` 的参数数量一起被调用。当所有元素都被分配时，最终的 `length` 将再次设置。如果 `this` 值不是构造函数，则改用普通的 `Array` 构造函数。
 
 ## 示例
+
+### 使用 Array.of()
 
 ```js
 Array.of(1);         // [1]
@@ -44,16 +48,26 @@ Array.of(1, 2, 3);   // [1, 2, 3]
 Array.of(undefined); // [undefined]
 ```
 
-## 兼容旧环境
+### 非数组构造函数调用 of()
 
-如果原生不支持的话，在其他代码之前执行以下代码会创建 `Array.of()` 。
+`of()` 方法可以在任何接受单个参数表示新数组长度的构造函数上调用。
 
 ```js
-if (!Array.of) {
-  Array.of = function() {
-    return Array.prototype.slice.call(arguments);
-  };
+function NotArray(len) {
+  console.log("NotArray called with length", len);
 }
+
+console.log(Array.of.call(NotArray, 1, 2, 3));
+// NotArray called with length 3
+// NotArray { '0': 1, '1': 2, '2': 3, length: 3 }
+
+console.log(Array.of.call(Object)); // [Number: 0] { length: 0 }
+```
+
+当 `this` 值不是构造函数时，返回一个普通的 `Array` 对象。
+
+```js
+console.log(Array.of.call({}, 1)); // [ 1 ]
 ```
 
 ## 规范
