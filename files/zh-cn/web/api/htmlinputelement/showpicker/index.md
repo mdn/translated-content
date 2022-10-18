@@ -30,7 +30,7 @@ showPicker()
 ### 异常
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : 如果元素不可变，则抛出，这意味着用不不能修改它和/或无法自动预填充它。
+  - : 如果元素不可变，则抛出，这意味着用户不能修改它和/或无法自动预填充它。
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 如果不是由触摸手势或者鼠标点击等显示触发（交互层需要{{Glossary("Transient activation","瞬态激活")}}），则抛出。
 - `SecurityError` {{domxref("DOMException")}}
