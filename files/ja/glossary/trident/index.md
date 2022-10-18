@@ -6,7 +6,7 @@ l10n:
 
 ---
 
-Trident（MSHTML） は、 {{Glossary("Microsoft Internet Explorer","Internet Explorer")}} に搭載されていたレイアウトエンジンです。Internet Explorer の後継である {{Glossary("Microsoft Edge","Edge")}} では、Tridentから{{Glossary("fork","フォーク")}}した _EdgeHTML_ と呼ばれるレイアウトエンジンが使われています。
+Trident（MSHTML）は、 {{Glossary("Microsoft Internet Explorer","Internet Explorer")}} に搭載されていたレイアウトエンジンです。Internet Explorer の後継である {{Glossary("Microsoft Edge","Edge")}} では、Trident から{{Glossary("fork","フォーク")}}した _EdgeHTML_ と呼ばれるレイアウトエンジンが使われています。
 
 ## 関連情報
 
