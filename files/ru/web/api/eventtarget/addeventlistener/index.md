@@ -438,7 +438,7 @@ for(i=0 ; i<els.length ; i++){
 
 ### Улучшение производительности прокрутки с помощью `passive: true`
 
-Значение по умолчанию для параметра `passive` - `false`. Начиная с Chrome 56 (desktop, Chrome for Android, Android webview) значение по умолчанию для {{event("touchstart")}} и {{event("touchmove")}} равно `true`, а вызовы `preventDefault()` не разрешены. Чтобы отменить это поведение, необходимо установить параметр `passive` в `false` (см. пример ниже). Это изменение не позволяет обработчику блокировать показ страницы во время прокрутки пользователя. Демонстрация доступна на [сайте разработчиков Google](https://developers.google.com/web/updates/2016/06/passive-event-listeners). Обратите внимание, что Edge вообще не поддерживает `options`, и добавление его без [проверки поддержки](/ru/docs/Web/API/EventTarget/addEventListener$edit#Safely_detecting_option_support) помешает использовать аргумент `useCapture`.
+Значение по умолчанию для параметра `passive` - `false`. Начиная с Chrome 56 (desktop, Chrome for Android, Android webview) значение по умолчанию для {{event("touchstart")}} и {{event("touchmove")}} равно `true`, а вызовы `preventDefault()` не разрешены. Чтобы отменить это поведение, необходимо установить параметр `passive` в `false` (см. пример ниже). Это изменение не позволяет обработчику блокировать показ страницы во время прокрутки пользователя. Демонстрация доступна на [сайте разработчиков Google](https://developers.google.com/web/updates/2016/06/passive-event-listeners). Обратите внимание, что Edge вообще не поддерживает `options`, и добавление его без [проверки поддержки](/ru/docs/Web/API/EventTarget/addEventListener#Safely_detecting_option_support) помешает использовать аргумент `useCapture`.
 
 ```js
 /* Feature detection */
