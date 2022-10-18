@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 
 {{JSRef}}
 
-`Array` 对象的 **`@@iterator`** 方法实现了[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)，并允许数组被大多数期望可迭代的语法所使用，例如 [展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax) 和 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for…of) 循环。它返回一个迭代器，生成数组中每个索引的值。
+`Array` 对象的 **`@@iterator`** 方法实现了[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)，并允许数组被大多数期望可迭代的语法所使用，例如 [展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax) 和 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环。它返回一个迭代器，生成数组中每个索引的值。
 
 该属性的初始值与 {{jsxref("Array.prototype.values")}} 属性的初始值是相同的函数对象。
 
@@ -17,7 +17,7 @@ array[Symbol.iterator]()
 
 ### 返回值
 
-与 {{jsxref(" array. prototype.values()")}} 相同的返回值：一个新的可迭代迭代器对象，它生成数组中每个索引的值。
+与 {{jsxref("Array.prototype.values()")}} 相同的返回值：一个新的可迭代迭代器对象，它生成数组中每个索引的值。
 
 ## 示例
 
@@ -63,7 +63,7 @@ console.log(arrIter.next().value); // e
 
 ### 使用相同的函数处理字符串和字符串数组
 
-因为 [strings](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) 和数组都实现了可迭代协议，所以可以设计一个通用函数以相同的方式处理这两种输入。这比直接调用 {{jsxref(" array .prototype.values()")}} 更好，后者要求输入是一个数组，或者至少是一个具有这种方法的对象。
+因为 [strings](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) 和数组都实现了可迭代协议，所以可以设计一个通用函数以相同的方式处理这两种输入。这比直接调用 {{jsxref("Array.prototype.values()")}} 更好，后者要求输入是一个数组，或者至少是一个具有这种方法的对象。
 
 ```js
 function logIterable(it) {
