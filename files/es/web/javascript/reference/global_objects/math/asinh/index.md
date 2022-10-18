@@ -12,7 +12,7 @@ La función **`Math.asinh()`** retorna el arcoseno hyperbólico de un número, e
 
 ## Sintáxis
 
-```
+```js
 Math.asinh(x)
 ```
 
