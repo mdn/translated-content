@@ -1,0 +1,169 @@
+---
+title: "HTMLElement: dragstart event"
+slug: Web/API/HTMLElement/dragstart_event
+translation_of: Web/API/HTMLElement/dragstart_event
+original_slug: Web/API/HTMLElement/dragstart_event
+page-type: web-api-event
+tags:
+  - DOM
+  - Event
+  - Reference
+  - drag and drop
+browser-compat: api.HTMLElement.dragstart_event
+---
+
+<h1 id="htmlelement-dragstart-event">HTMLElement: dragstart event</h1>
+<p>
+  El evento <code>dragstart</code> se dispara cuando el usuario arrastra un
+  elemento o una selección de texto.
+</p>
+
+<h2 id="sintaxis">Sintaxis</h2>
+<p>
+  Usar el nombre del evento en métodos como
+  {{domxref(&quot;EventTarget.addEventListener&quot;,
+  &quot;addEventListener()&quot;)}} , o establecer una propiedad de controlador
+  de eventos.
+</p>
+<pre><code class="lang-js">addEventListener(<span class="hljs-string">'dragstart'</span>, <span class="hljs-function"><span class="hljs-params">(event)</span> =&gt;</span> {});
+<span class="hljs-function">
+<span class="hljs-title">ondragstart</span> = <span class="hljs-params">(event)</span> =&gt;</span> { };
+</code></pre>
+
+<h2 id="tipo-de-evento">Tipo de Evento</h2>
+<p>
+  Un {{domxref(&quot;DragEvent&quot;)}}. Hereda de
+  {{domxref(&quot;Event&quot;)}}.
+</p>
+<p>{{InheritanceDiagram(&quot;DragEvent&quot;)}}</p>
+
+<h2 id="propiedades-del-evento">Propiedades del Evento</h2>
+<p>
+  En adición a las propiedades listadas, a continuación las propiedades de la
+  interfaz principal, {{domxref(&quot;Event&quot;)}}, están disponibles.
+</p>
+<ul>
+  <li>
+    {{domxref(&quot;DragEvent/dataTransfer&quot;,
+    &quot;DragEvent.dataTransfer&quot;)}} {{ReadOnlyInline}}
+    <ul>
+      <li>
+        Los datos que se transfieren durante una interacción de arrastrar y
+        soltar.
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="ejemplos">Ejemplos</h2>
+<h3 id="configurar-la-opacidad-al-inicio-del-movimiento">
+  Configurar la opacidad al inicio del movimiento
+</h3>
+<p>
+  En este ejemplo, tenemos un elemento arrastrable dentro de un contenedor.
+  Intenta agarrar el elemento, arrastralo y luego sueltalo.
+</p>
+<p>
+  Escuchamos el evento <code>dragstart</code> para hacer que el elemento sea
+  medio transparente mientras se arrastra.
+</p>
+
+<h4 id="html">HTML</h4>
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"container"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"draggable"</span> draggable=<span class="hljs-string">"true"</span>&gt;This <span class="hljs-keyword">div</span> <span class="hljs-keyword">is</span> draggable&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"dropzone"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+
+<h4 id="css">CSS</h4>
+<pre>
+    <code class="lang-css"><span class="hljs-selector-tag">body</span> {
+  <span class="hljs-comment">/* Prevent the user selecting text in the example */</span>
+  <span class="hljs-attribute">user-select</span>: none;
+}
+<span class="hljs-selector-id">#draggable</span> {
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">background</span>: white;
+}
+<span class="hljs-selector-id">#container</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">background</span>: blueviolet;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span>;
+}
+<span class="hljs-selector-class">.dragging</span> {
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.5</span>;
+}
+</code>
+</pre>
+
+<h4 id="javascript">JavaScript</h4>
+<pre>
+    <code class="lang-js"><span class="hljs-keyword">const</span> source = document.getElementById(<span class="hljs-string">"draggable"</span>);
+source.addEventListener(<span class="hljs-string">"dragstart"</span>, (<span class="hljs-keyword">event</span>) =&gt; {
+  <span class="hljs-comment">// make it half transparent</span>
+  <span class="hljs-keyword">event</span>.target.classList.<span class="hljs-keyword">add</span>(<span class="hljs-string">"dragging"</span>);
+});
+source.addEventListener(<span class="hljs-string">"dragend"</span>, (<span class="hljs-keyword">event</span>) =&gt; {
+  <span class="hljs-comment">// reset the transparency</span>
+  <span class="hljs-keyword">event</span>.target.classList.<span class="hljs-keyword">remove</span>(<span class="hljs-string">"dragging"</span>);
+});
+</code>
+</pre>
+
+<h4 id="resultado">Resultado</h4>
+<p>
+  {{EmbedLiveSample(&#39;Configurar la opacidad al inicio del movimiento&#39;)}}
+</p>
+
+<h2 id="especificaciones">Especificaciones</h2>
+<p>{{Specifications}}</p>
+
+<h2 id="compatibilidad-del-navegador">Compatibilidad del navegador</h2>
+<p>{{Compat}}</p>
+
+<h2 id="ver-tambi-n">Ver también</h2>
+<ul>
+  <li>
+    <p>Otros eventos de arrastre:</p>
+    <ul>
+      <li>{{domxref(&quot;HTMLElement/drag_event&quot;, &quot;drag&quot;)}}</li>
+      <li>
+        {{domxref(&quot;HTMLElement/dragend_event&quot;, &quot;dragend&quot;)}}
+      </li>
+      <li>
+        {{domxref(&quot;HTMLElement/dragover_event&quot;,
+        &quot;dragover&quot;)}}
+      </li>
+      <li>
+        {{domxref(&quot;HTMLElement/dragenter_event&quot;,
+        &quot;dragenter&quot;)}}
+      </li>
+      <li>
+        {{domxref(&quot;HTMLElement/dragleave_event&quot;,
+        &quot;dragleave&quot;)}}
+      </li>
+      <li>{{domxref(&quot;HTMLElement/drop_event&quot;, &quot;drop&quot;)}}</li>
+    </ul>
+  </li>
+  <li>
+    <p>Este evento en otros objetivos:</p>
+    <ul>
+      <li>
+        {{domxref(&quot;Window&quot;)}}:
+        {{domxref(&quot;Window/dragstart_event&quot;, &quot;dragstart&quot;)}}
+        event
+      </li>
+      <li>
+        {{domxref(&quot;Document&quot;)}}:
+        {{domxref(&quot;Document/dragstart_event&quot;, &quot;dragstart&quot;)}}
+        event
+      </li>
+      <li>
+        {{domxref(&quot;SVGElement&quot;)}}:
+        {{domxref(&quot;SVGElement/dragstart_event&quot;,
+        &quot;dragstart&quot;)}} event
+      </li>
+    </ul>
+  </li>
+</ul>
