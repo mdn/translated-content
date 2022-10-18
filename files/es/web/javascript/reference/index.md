@@ -202,7 +202,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 ### Expresiones del lado izquierdo
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
-- [`?.` (Optional chaining)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [`?.` (Optional chaining)](/es/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - {{JSxRef("Operators/new", "new")}}
 - {{JSxRef("Operators/new%2Etarget", "new.target")}}
 - {{JSxRef("Statements/import%2Emeta", "import.meta")}}

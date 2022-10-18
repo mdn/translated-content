@@ -297,7 +297,7 @@ Content-Type: text/plain
 
 Pese a que la línea 11 contiene la Cookie destinada para el contenido en `http://bar.other`, si bar.other no responde con `Access-Control-Allow-Credentials: true` (línea 19) la respuesta será ignorada y no puesta a disposición para el contenido web.
 
-> **Nota Importante:** cuando se responde a una solicitud con credeciales, el servidor **debe** especificar un dominio, y no puede usar comodines. El ejemplo de arriba fallará si la cabecera fuera un comodín como: `Access-Control-Allow-Origin:`. Dado que `Access-Control-Allow-Origin` menciona explícitamente `http://foo.example`, el contenido de credenciales competente es devuelto al contenido web invocador. Observe que, en la línea 22, se establece una cookie adicional.
+> **Nota:** cuando se responde a una solicitud con credeciales, el servidor **debe** especificar un dominio, y no puede usar comodines. El ejemplo de arriba fallará si la cabecera fuera un comodín como: `Access-Control-Allow-Origin:`. Dado que `Access-Control-Allow-Origin` menciona explícitamente `http://foo.example`, el contenido de credenciales competente es devuelto al contenido web invocador. Observe que, en la línea 22, se establece una cookie adicional.
 
 Todos estos ejemplos pueden [verse funcionando aquí](http://arunranga.com/examples/access-control/). La siguiente sección se refiere a las verdaderas cabeceras HTTP.
 
