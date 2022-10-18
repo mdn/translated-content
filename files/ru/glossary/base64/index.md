@@ -35,7 +35,7 @@ original_slug: Web/API/WindowBase64/Base64_encoding_and_decoding
 
   - : In this article is published a library of ours whose aims are:
 
-    - creating a [C](http://en.wikipedia.org/wiki/C_%28programming_language%29)-like interface for strings (i.e. array of characters codes —[ `ArrayBufferView`](/ru/docs/Web/JavaScript/Typed_arrays/ArrayBufferView) in JavaScript) based upon the JavaScript [`ArrayBuffer`](/ru/docs/Web/JavaScript/Typed_arrays/ArrayBuffer) interface,
+    - creating a [C](http://en.wikipedia.org/wiki/C_%28programming_language%29)-like interface for strings (i.e. array of characters codes — [`ArrayBufferView`](/ru/docs/Web/JavaScript/Typed_arrays/ArrayBufferView) in JavaScript) based upon the JavaScript [`ArrayBuffer`](/ru/docs/Web/JavaScript/Typed_arrays/ArrayBuffer) interface,
     - creating a collection of methods for such string-like objects (since now: `stringView`s) which work **strictly on array of numbers** rather than on immutable JavaScript strings,
     - working with other Unicode encodings, different from default JavaScript's UTF-16 [`DOMString`](/ru/docs/Web/API/DOMString)s,
 

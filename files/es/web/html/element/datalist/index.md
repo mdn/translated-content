@@ -9,7 +9,7 @@ original_slug: Web/HTML/Elemento/datalist
 ---
 El **elemento HTML `<datalist>`** contiene un conjunto de elementos {{HTMLElement("option")}} que representan los valores disponibles para otros controles.
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, copia https\://github.com/mdn/interactive-examples y envíenos una solicitud de extracción.
+La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, copia <https://github.com/mdn/interactive-examples> y envíenos una solicitud de extracción.
 
 <table class="properties">
   <tbody>
@@ -92,7 +92,7 @@ Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs
 | {{SpecName('HTML WHATWG', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
 | {{SpecName('HTML5 W3C', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
 
-## Compatibilidad con los distintos navegadores[Edit](/es/docs/Web/HTML/Elemento/option$edit#Compatibilidad_con_los_distintos_navegadores)
+## Compatibilidad con los distintos navegadores
 
 {{Compat("html.elements.datalist")}}
 

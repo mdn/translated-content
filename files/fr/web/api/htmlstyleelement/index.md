@@ -23,7 +23,7 @@ L'objet basique `style` explose les interfaces `StyleSheet` et `CSSStyleSheet` d
 _DOM Level 2 Style_
 . Ces interfaces contiennent des membres comme `insertRule`, `selectorText`, et `parentStyleSheet` permettant d'accéder et de manipuler les règles de style individuelles qui constituent une feuille de style CSS.
 
-Pour obtenir les objets `style` depuis un objet `document`, il est possible d'utiliser la propriété `document.styleSheets` et d'accéder aux objets individuels par un index (par exemple, `document.styleSheets{{ mediawiki.external(0) }}` est la première feuille de style définie pour le document, et ainsi de suite). Bien qu'il existe plusieurs syntaxes pour exprimer les feuilles de style d'un document, les navigateurs basés sur Mozilla gèrent uniquement CSS. Par conséquent, l'objet `style` récupéré depuis ce tableau implémente à la fois les interfaces StyleSheet et CSSStyleSheet.
+Pour obtenir les objets `style` depuis un objet `document`, il est possible d'utiliser la propriété `document.styleSheets` et d'accéder aux objets individuels par un index (par exemple, `document.styleSheets[0]` est la première feuille de style définie pour le document, et ainsi de suite). Bien qu'il existe plusieurs syntaxes pour exprimer les feuilles de style d'un document, les navigateurs basés sur Mozilla gèrent uniquement CSS. Par conséquent, l'objet `style` récupéré depuis ce tableau implémente à la fois les interfaces StyleSheet et CSSStyleSheet.
 
 ```js
 var ss = document.styleSheets[1];

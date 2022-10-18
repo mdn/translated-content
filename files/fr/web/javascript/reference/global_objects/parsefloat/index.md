@@ -66,7 +66,7 @@ parseFloat(titi);
 
 ### Utiliser `parseFloat()` pour renvoyer `NaN`
 
-Dans cet exemple, le résultat obtenu est {{jsxref("<code>NaN</code>")}} :
+Dans cet exemple, le résultat obtenu est {{jsxref("NaN")}} :
 
 ```js
 parseFloat("FF2");
