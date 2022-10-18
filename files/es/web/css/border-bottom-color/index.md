@@ -49,7 +49,7 @@ border-bottom-color: couleur | transparent | inherit
 
 ```
 element {
-	width: 300px;
+ width: 300px;
         padding: 15px;
         border-bottom-size: 1px;
         border-bottom-style: solid;

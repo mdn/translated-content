@@ -65,8 +65,8 @@ div{
 
 ## Especificaciones
 
-- [Css fondos y bordes modulo nivel 3 ](http://dev.w3.org/csswg/css3-background/#the-background-origin)(candidato a recomendación]
+- [Css fondos y bordes modulo nivel 3](http://dev.w3.org/csswg/css3-background/#the-background-origin)(candidato a recomendación]
 
 ## Relacionado
 
-[background](/es/CSS/background "es/CSS/background"), [background-attachment](/es/CSS/background-attachment "es/CSS/background-attachment")[, background-image](/es/CSS/background-image "es/CSS/background-image"),[ background-repeat](/es/CSS/background-repeat "es/CSS/background-repeat")
+[background](/es/CSS/background "es/CSS/background"), [background-attachment](/es/CSS/background-attachment "es/CSS/background-attachment")[, background-image](/es/CSS/background-image "es/CSS/background-image"),[background-repeat](/es/CSS/background-repeat "es/CSS/background-repeat")
