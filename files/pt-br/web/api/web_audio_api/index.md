@@ -193,7 +193,7 @@ Você pode encontrar vários exemplos em nosso [repositório webaudio-example](h
 
 {{Specifications}}
 
-## Compatibilidade do navegador
+## Compatibilidade com navegadores
 
 ### AudioContext
 
