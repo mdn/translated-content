@@ -11,17 +11,18 @@ tags:
   - Referencia
 translation_of: Web/CSS/-webkit-mask-repeat-y
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad CSS <code>-webkit-mask-repeat-y</code> especifica si una imagen de máscara se repite(en mosaico) y cómo se lleva acabo esa repetición de manera vertical.</p>
+La propiedad CSS `-webkit-mask-repeat-y` especifica si una imagen de máscara se repite(en mosaico) y cómo se lleva acabo esa repetición de manera vertical.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
-<pre class="brush:css">/* Palabras Clave Valor */
+```css
+/* Palabras Clave Valor */
 -webkit-mask-repeat-y: repeat;
 -webkit-mask-repeat-y: no-repeat;
 -webkit-mask-repeat-y: space;
@@ -34,29 +35,30 @@ translation_of: Web/CSS/-webkit-mask-repeat-y
 -webkit-mask-repeat-y: inherit;
 -webkit-mask-repeat-y: initial;
 -webkit-mask-repeat-y: unset;
-</pre>
+```
 
-<h2 id="Valores">Valores</h2>
+## Valores
 
-<dl>
- <dt>repeat</dt>
- <dd>La imagen se repite verticalmente</dd>
- <dt>no-repeat</dt>
- <dd>La imagen de máscara no se repite verticalmente; sólo se dibuja una copia de la misma. El resto del contenido del elemento al cual se le ha aplicado la máscara, no es mostrado.</dd>
- <dt>space</dt>
- <dd>La imagen se repite tanta veces como sea posible pero sin aplicarle ningún recorte. La primera y la última imagen estarán pegadas al borde superior e inferior del elemento  y el espacio restante se distribuye de igual manera entre las imágenes. Se ignora la propiedad {{cssxref("mask-position")}} a menos que únicamente se pueda mostrar una sóla imagen sin aplicar recortes. El único caso en el que se aplican recortes usando este valor es cuando no hay suficiente espacio para mostrar una sóla imagen.</dd>
- <dt>round</dt>
- <dd>Al aumentar el espacio vertical  la imágenes repetidas pueden estiarse (sin dejar huecos) hasta que sólo haya hueco para añadir una más. Al añadir la siguiente se encogen para permitir el hueco.Ejemplo: Una imagen con una altura original de 260px, repetida 3 veces, puede estirarse hasta que cada repetición tenga una altura de 300px y, entonces, se añadirá otra que se encogerá hasta una altura 225px.<br><br>
- As the allowed vertical space increases in size, the repeated images will stretch (leaving no gaps) until there is room for another one to be added. When the next image is added, all of the current ones compress to allow room. Example: An image with an original height of 260px, repeated three times, might stretch until each repetition is 300px high, and then another image will be added. They will then compress to a height of 225px.</dd>
-</dl>
+- repeat
+  - : La imagen se repite verticalmente
+- no-repeat
+  - : La imagen de máscara no se repite verticalmente; sólo se dibuja una copia de la misma. El resto del contenido del elemento al cual se le ha aplicado la máscara, no es mostrado.
+- space
+  - : La imagen se repite tanta veces como sea posible pero sin aplicarle ningún recorte. La primera y la última imagen estarán pegadas al borde superior e inferior del elemento y el espacio restante se distribuye de igual manera entre las imágenes. Se ignora la propiedad {{cssxref("mask-position")}} a menos que únicamente se pueda mostrar una sóla imagen sin aplicar recortes. El único caso en el que se aplican recortes usando este valor es cuando no hay suficiente espacio para mostrar una sóla imagen.
+- round
 
-<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
+  - : Al aumentar el espacio vertical la imágenes repetidas pueden estiarse (sin dejar huecos) hasta que sólo haya hueco para añadir una más. Al añadir la siguiente se encogen para permitir el hueco.Ejemplo: Una imagen con una altura original de 260px, repetida 3 veces, puede estirarse hasta que cada repetición tenga una altura de 300px y, entonces, se añadirá otra que se encogerá hasta una altura 225px.
+
+    As the allowed vertical space increases in size, the repeated images will stretch (leaving no gaps) until there is room for another one to be added. When the next image is added, all of the current ones compress to allow room. Example: An image with an original height of 260px, repeated three times, might stretch until each repetition is 300px high, and then another image will be added. They will then compress to a height of 225px.
+
+### Síntaxis Formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: css">.exampleone {
+```css
+.exampleone {
   -webkit-mask-image: url('mask.png');
   -webkit-mask-repeat-y: repeat;
 }
@@ -65,24 +67,25 @@ translation_of: Web/CSS/-webkit-mask-repeat-y
   -webkit-mask-image: url('mask.png');
   -webkit-mask-repeat-y: no-repeat;
 }
-</pre>
+```
 
-<h3 id="Soporte_para_múltiples_imágenes_de_máscara">Soporte para múltiples imágenes de máscara</h3>
+### Soporte para múltiples imágenes de máscara
 
-<p>Es posible especificar un  <code>&lt;repeat-style&gt;</code> diferente para cada una de las imágenes de máscara. Los distintos valores deben separarme mediante el uso de comas:</p>
+Es posible especificar un `<repeat-style>` diferente para cada una de las imágenes de máscara. Los distintos valores deben separarme mediante el uso de comas:
 
-<pre class="brush: css">.examplethree {
+```css
+.examplethree {
   -webkit-mask-image: url('mask1.png'), url('mask2.png');
   -webkit-mask-repeat-y: repeat, space;
 }
-</pre>
+```
 
-<p>Cada imagen se asocia con el correspondiente estilo de repetición, desde la primera hasta la última y siguiendo  el orden que se ha establecido.</p>
+Cada imagen se asocia con el correspondiente estilo de repetición, desde la primera hasta la última y siguiendo el orden que se ha establecido.
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.properties.-webkit-mask-repeat-y")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<p>{{cssxref("-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-x")}}</p>
+{{cssxref("-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-x")}}

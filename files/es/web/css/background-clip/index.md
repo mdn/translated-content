@@ -11,50 +11,53 @@ tags:
   - Web
 translation_of: Web/CSS/background-clip
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p><span id="result_box" lang="es"><span class="hps">La propiedad</span></span> CSS <code>background-clip</code> <span id="result_box" lang="es"><span class="hps">especifica si</span> <span class="hps">el fondo</span> <span class="hps">de</span> <span class="hps">un elemento,</span> <span class="hps">ya sea</span> <span class="hps">el color</span> <span class="hps">o imagen</span><span>,</span> <span class="hps">se extiende por debajo</span> <span class="alt-edited hps">su borde</span><span>.</span></span></p>
+La propiedad CSS `background-clip` especifica si el fondo de un elemento, ya sea el color o imagen, se extiende por debajo su borde.
 
-<p>Si la imagen o color de fondo no esta definido, esta propiedad solo tendrá un efecto visual cuando el borde tenga regiones transparentes o regiones parcialmente opacas (debido a {{ Cssxref("border-style") }} o {{ Cssxref("border-image") }}); <span class="short_text" id="result_box" lang="es"><span class="hps">de lo contrario</span> <span class="alt-edited hps">el borde</span> <span class="hps">cubre</span> <span class="hps">la diferencia</span></span>.</p>
+Si la imagen o color de fondo no esta definido, esta propiedad solo tendrá un efecto visual cuando el borde tenga regiones transparentes o regiones parcialmente opacas (debido a {{ Cssxref("border-style") }} o {{ Cssxref("border-image") }}); de lo contrario el borde cubre la diferencia.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="/en-US/docs/CSS/Value_definition_syntax">Sintaxis Formal</a>: {{csssyntax("background-clip")}}</pre>
+```
+Sintaxis Formal: {{csssyntax("background-clip")}}
+```
 
-<pre>background-clip: border-box
+```
+background-clip: border-box
 background-clip: padding-box
 background-clip: content-box
 
 background-clip: inherit
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>border-box</code></dt>
- <dd><span id="result_box" lang="es"><span class="hps">El</span> <span class="hps">fondo</span> <span class="hps">se extiende hasta el</span> <span class="hps">borde exterior de</span> <span class="alt-edited hps">el contenedor</span> <span class="">(</span><span>pero por debajo de</span> <span class="hps">la frontera, en</span> <span class="hps">orden z</span><span>)</span></span>.</dd>
- <dt><code>padding-box</code></dt>
- <dd>El fondo no se muestra a través del borde (<span id="result_box" lang="es"><span class="alt-edited hps">el fondo</span> <span class="hps">se extiende</span> <span class="hps">hasta el borde exterior</span> <span class="hps">del</span></span> padding).</dd>
- <dt><code>content-box</code></dt>
- <dd>El fondo se dibuja desde donde inicia el contenido.</dd>
-</dl>
+- `border-box`
+  - : El fondo se extiende hasta el borde exterior de el contenedor (pero por debajo de la frontera, en orden z).
+- `padding-box`
+  - : El fondo no se muestra a través del borde (el fondo se extiende hasta el borde exterior del padding).
+- `content-box`
+  - : El fondo se dibuja desde donde inicia el contenido.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;p class="border-box"&gt;The yellow background extends behind the border.&lt;/p&gt;
-&lt;p class="padding-box"&gt;The yellow background extends to the inside edge of the border.&lt;/p&gt;
-&lt;p class="content-box"&gt;The yellow background extends only to the edge of the content box.&lt;/p&gt;
-</pre>
+```html
+<p class="border-box">The yellow background extends behind the border.</p>
+<p class="padding-box">The yellow background extends to the inside edge of the border.</p>
+<p class="content-box">The yellow background extends only to the edge of the content box.</p>
+```
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+### Contenido CSS
 
-<pre class="brush: css">p {
+```css
+p {
    border: 5px navy;
    border-style: dotted double;
    margin: 2em;
@@ -64,38 +67,23 @@ background-clip: inherit
 .border-box { background-clip: border-box; }
 .padding-box { background-clip: padding-box; }
 .content-box { background-clip: content-box; }
-</pre>
+```
 
-<h4 id="Salida">Salida</h4>
+#### Salida
 
-<p>{{ EmbedLiveSample('Ejemplo', 540, 450) }}</p>
+{{ EmbedLiveSample('Ejemplo', 540, 450) }}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip') }}</td>
-   <td>{{ Spec2('CSS3 Backgrounds') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estado                                   | Comentario |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
+| {{ SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip') }} | {{ Spec2('CSS3 Backgrounds') }} |            |
 
-<h2 id="Compatibilidad_del_navegador"><font><font>Compatibilidad del navegador</font></font></h2>
+## Compatibilidad del navegador
 
 {{Compat("css.properties.background-clip")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{ cssxref("clip") }}</li>
- <li><a href="/en-US/docs/Web/CSS/box_model">Modelo de caja CSS</a></li>
-</ul>
+- {{ cssxref("clip") }}
+- [Modelo de caja CSS](/es/docs/Web/CSS/box_model)

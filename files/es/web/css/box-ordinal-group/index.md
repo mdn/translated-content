@@ -11,22 +11,23 @@ translation_of: Web/CSS/box-ordinal-group
 translation_of_original: Web/CSS/-moz-box-ordinal-group
 original_slug: Web/CSS/-moz-box-ordinal-group
 ---
-<p>{{CSSRef}}<br>
- {{warning("Esta propiedad pertenece al borrador original del diseño o esquema de la caja CSS flexible, y ha sido reemplazada en borradores posteriores.")}}</p>
+{{CSSRef}}
+{{warning("Esta propiedad pertenece al borrador original del diseño o esquema de la caja CSS flexible, y ha sido reemplazada en borradores posteriores.")}}
 
-<p>Ver <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" title="/en/CSS/Flexible_boxes">Flexbox</a> para más información sobre qué usar en sustitución de esta propiedad.</p>
+Ver [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes "/en/CSS/Flexible_boxes") para más información sobre qué usar en sustitución de esta propiedad.
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>Indica el grupo ordinal al que pertenece el elemento. Aquellos elementos con un grupo ordinal menor son mostrados antes que aquellos con un grupo ordinal mayor.</p>
+Indica el grupo ordinal al que pertenece el elemento. Aquellos elementos con un grupo ordinal menor son mostrados antes que aquellos con un grupo ordinal mayor.
 
-<h2 id="Valores">Valores</h2>
+## Valores
 
-<p>Los valores deben ser enteros positivos (mayores de cero). El valor por defecto para esta propiedad es 1.</p>
+Los valores deben ser enteros positivos (mayores de cero). El valor por defecto para esta propiedad es 1.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: html">&lt;style type="text/css"&gt;
+```html
+<style type="text/css">
   #Flexbox {
     display: -ms-box;
     display: -moz-box;
@@ -57,12 +58,12 @@ original_slug: Web/CSS/-moz-box-ordinal-group
   #text4 {
     background: orange;
   }
-&lt;/style&gt;
+</style>
 
-&lt;div id="Flexbox"&gt;
-  &lt;div id="text1"&gt;text 1&lt;/div&gt;
-  &lt;div id="text2"&gt;text 2&lt;/div&gt;
-  &lt;div id="text3"&gt;text 3&lt;/div&gt;
-  &lt;div id="text4"&gt;text 4&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+<div id="Flexbox">
+  <div id="text1">text 1</div>
+  <div id="text2">text 2</div>
+  <div id="text3">text 3</div>
+  <div id="text4">text 4</div>
+</div>
+```

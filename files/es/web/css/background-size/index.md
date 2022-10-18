@@ -8,76 +8,70 @@ tags:
   - Reference
 translation_of: Web/CSS/background-size
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad CSS <strong><code>background-size</code></strong> especifica el tamaño de las imágenes de fondo.</p>
+La propiedad CSS **`background-size`** especifica el tamaño de las imágenes de fondo.
 
-<div class="note"><strong>Nota:</strong> Si el valor de esta propiedad no se encuentra en una propiedad abreviada {{ cssxref("background") }} esta es aplicada para los elementos después de la propiedad CSS <code>background-size</code>, el valor de esta propiedad <span id="result_box" lang="es"><span class="gt-trans-draggable hps">se restablece</span> <span class="gt-trans-draggable hps">a su valor</span> <span class="gt-trans-draggable hps">inicial de la</span> <span class="gt-trans-draggable hps">propiedad abreviada</span><span class="gt-trans-draggable">.</span></span></div>
+> **Nota:** Si el valor de esta propiedad no se encuentra en una propiedad abreviada {{ cssxref("background") }} esta es aplicada para los elementos después de la propiedad CSS `background-size`, el valor de esta propiedad se restablece a su valor inicial de la propiedad abreviada.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">background-size:  <em>background-size</em>[ <em>background-size</em>]*
-</pre>
+```
+background-size:  background-size[ background-size]*
+```
 
-<p>donde <strong>: </strong></p>
+donde **:**
 
-<dl>
- <dt><em><strong>background-size</strong></em></dt>
- <dd style="margin-left: 40px;">Es una de las palabras claves:
- <ul>
-  <li style="margin-left: 40px;"><strong><code>contain</code></strong><br>
-   <span id="result_box" lang="es"><span class="hps">Escala la imagen al mayor tamaño posible sin recortarla ni estirarla.</span></span></li>
-  <li style="margin-left: 40px;"><strong><code>cover</code></strong><br>
-   <span id="result_box" lang="es"><span class="gt-trans-draggable">Escala la imagen al mayor tamaño posible sin estirarla. Si las proporciones de la imagen difieren de las del elemento, es recortada vertical u horizontalmente para que no quede un espacio vacío.</span></span></li>
- </ul>
- <span id="result_box" lang="es"><span class="gt-trans-draggable hps">O bien,</span> <span class="gt-trans-draggable hps">uno o dos de</span> <span class="gt-trans-draggable hps">los siguientes valores,</span> <span class="gt-trans-draggable hps">que denota el</span> <span class="gt-trans-draggable hps">tamaño</span> <span class="gt-trans-draggable hps">horizontal</span> <span class="gt-trans-draggable hps">y</span> <span class="gt-trans-draggable hps">el tamaño vertical</span> <span class="">respectivamente (</span><span class="gt-trans-draggable">si sólo es</span> <span class="gt-trans-draggable hps">especificado uno</span><span class="gt-trans-draggable">, el valor predeterminado</span> para el segundo es auto<span class="gt-trans-draggable">):</span></span>
+- _**background-size**_
 
- <ul>
-  <li>Un valor {{cssxref("&lt;percentage&gt;")}} que escala la imagen de fondo en la dimensión correspondiente <span id="result_box" lang="es"><span class="gt-trans-draggable hps">al porcentaje especificado</span> <span class="gt-trans-draggable hps">del área</span><span class="gt-trans-draggable hps"> de posicionamiento</span> <span class="gt-trans-draggable hps">de fondo</span><span class="gt-trans-draggable">,</span></span> que viene el valor determinado {{ cssxref("background-origin") }}. <span id="result_box" lang="es"><span class="gt-trans-draggable hps">El</span> <span class="gt-trans-draggable hps">área de posicionamiento</span> <span class="gt-trans-draggable hps">del fondo es</span><span class="gt-trans-draggable">, por defecto,</span> <span class="gt-trans-draggable hps">el área que contiene</span> <span class="gt-trans-draggable hps">el contenido</span> <span class="gt-trans-draggable hps">de la caja y</span> <span class="gt-trans-draggable hps">su relleno</span><span class="gt-trans-draggable">, el área</span> <span class="gt-trans-draggable hps">también</span> <span class="gt-trans-draggable hps">se puede cambiar a</span> <span class="gt-trans-draggable hps">simplemente el</span> <span class="gt-trans-draggable hps">contenido o</span> <span class="gt-trans-draggable hps">el área que contiene</span> <span class="gt-trans-draggable hps">bordes</span><span class="gt-trans-draggable">, el relleno y</span> <span class="gt-trans-draggable hps">contenido.</span> <span class="gt-trans-draggable hps">Si el fondo</span> <span class="gt-trans-draggable hps">de</span> <span class="">{</span><span class="">{</span><span class="gt-trans-draggable">cssxref</span> <span class="">(</span><span class="">"background-</span><span class="gt-trans-draggable">attachment"</span><span class="gt-trans-draggable">, "attachment</span><span class="gt-trans-draggable">")}</span><span class="gt-trans-draggable">}</span> <span class="gt-trans-draggable hps">es fija, el</span> <span class="gt-trans-draggable hps">área de posicionamiento</span> del <span class="gt-trans-draggable hps">fondo</span> <span class="gt-trans-draggable hps">es más bien</span> <span class="gt-trans-draggable hps">toda el área de</span> <span class="gt-trans-draggable hps">la ventana del navegador</span><span class="gt-trans-draggable">, sin incluir el</span> <span class="gt-trans-draggable hps">área cubierta por</span> <span class="gt-trans-draggable hps">las barras de desplazamiento</span> <span class="gt-trans-draggable hps">si están presentes</span><span class="gt-trans-draggable">.</span> <span class="gt-trans-draggable hps">Porcentajes</span> <span class="gt-trans-draggable hps">negativos no</span> <span class="gt-trans-draggable hps">son permitidos.</span></span></li>
-  <li>Un valor {{cssxref("&lt;length&gt;")}} q<span lang="es"><span class="gt-trans-draggable hps">ue escala</span> <span class="gt-trans-draggable hps">la</span> <span class="gt-trans-draggable hps">imagen de fondo a</span> <span class="gt-trans-draggable hps">la longitud especificada en</span> <span class="gt-trans-draggable hps">la dimensión correspondiente.</span> <span class="gt-trans-draggable hps">Longitudes</span> <span class="gt-trans-draggable hps">negativas no</span> <span class="gt-trans-draggable hps">están permitidos.</span></span></li>
-  <li><span id="result_box" lang="es"><span class="gt-trans-draggable hps">La</span> <span class="gt-trans-draggable hps">palabra clave auto</span> <span class="gt-trans-draggable hps">que escala el</span> <span class="gt-trans-draggable hps">fondo de la imagen</span> <span class="gt-trans-draggable hps">en la dirección correspondiente</span> <span class="gt-trans-draggable hps">de modo que su</span> <span class="gt-trans-draggable hps">proporción</span> escencial <span class="gt-trans-draggable hps">se mantiene</span><span class="gt-trans-draggable">.</span></span></li>
- </ul>
- </dd>
-</dl>
+  - : Es una de las palabras claves:
 
-<p><span id="result_box" lang="es"><span class="gt-trans-draggable hps">La interpretación</span> <span class="gt-trans-draggable hps">de los valores posibles</span> <span class="gt-trans-draggable hps">depende de las dimensiones</span> propias <span class="gt-trans-draggable hps">de la imagen</span> <span class="">(</span><span class="gt-trans-draggable">ancho y alto)</span> <span class="gt-trans-draggable hps">y proporción</span> <span class="">propia (</span><span class="gt-trans-draggable">relación entre la anchura</span> <span class="gt-trans-draggable hps">y altura).</span> <span class="gt-trans-draggable hps">Una imagen de</span> <span class="gt-trans-draggable hps">mapa de bits</span> <span class="gt-trans-draggable hps">siempre tiene</span> <span class="gt-trans-draggable hps">dimensiones propias</span> <span class="gt-trans-draggable hps">y una proporción</span> <span class="gt-trans-draggable hps">propia.</span> <span class="gt-trans-draggable hps">Una imagen del vector</span> <span class="gt-trans-draggable hps">puede tener</span> <span class="gt-trans-draggable hps">ambas dimensiones</span> <span class="">propias (</span><span class="gt-trans-draggable">y por lo tanto</span> <span class="gt-trans-draggable hps">debe tener una</span> <span class="gt-trans-draggable hps">proporción</span> propia<span class="gt-trans-draggable">)</span><span class="gt-trans-draggable">.</span> <span class="gt-trans-draggable hps">También puede tener</span> <span class="gt-trans-draggable hps">una o ningún</span>a <span class="gt-trans-draggable hps">dimensiones propias</span><span class="gt-trans-draggable">,</span> <span class="gt-trans-draggable hps">y</span> <span class="gt-trans-draggable hps">en cualquier caso se</span> <span class="gt-trans-draggable hps">podría o no</span> <span class="gt-trans-draggable hps">tener</span> <span class="gt-trans-draggable hps">una</span> <span class="gt-trans-draggable hps">proporción</span> <span class="gt-trans-draggable hps">propia.</span> <span class="gt-trans-draggable hps">Los gradientes son</span> <span class="gt-trans-draggable hps">tratados como</span> <span class="gt-trans-draggable hps">imágenes</span> <span class="gt-trans-draggable hps">sin</span> <span class="gt-trans-draggable hps">dimensiones propias</span> <span class="gt-trans-draggable hps">o proporción</span> propia<span class="gt-trans-draggable hps">.</span></span></p>
+    - **`contain`**
+      Escala la imagen al mayor tamaño posible sin recortarla ni estirarla.
+    - **`cover`**
+      Escala la imagen al mayor tamaño posible sin estirarla. Si las proporciones de la imagen difieren de las del elemento, es recortada vertical u horizontalmente para que no quede un espacio vacío.
 
-<div class="" style="">
-<p><span id="result_box" lang="es"><span class="hps">Este comportamiento ha cambiado</span> <span class="hps">en</span> <span class="hps">Gecko</span> <span class="hps">8.0</span> <span class="">{</span><span class="">{</span><span>geckoRelease</span> <span class="">("</span><span>8.0"</span><span>)}</span><span>}.</span> <span class="hps">Antes de esto,</span> <span class="hps">los gradientes se</span> <span class="hps">tratan como</span> <span class="hps">imágenes</span> <span class="hps">sin</span> <span class="hps">dimensiones propias</span><span>,</span> <span class="hps">con</span> <span class="hps">una</span> <span class="hps">proporción</span> propi<span class="hps">a</span> <span class="hps">idéntica al área</span><span class="hps"> de posicionamiento</span> <span class="hps">de fondo.</span></span></p>
-</div>
+    O bien, uno o dos de los siguientes valores, que denota el tamaño horizontal y el tamaño vertical respectivamente (si sólo es especificado uno, el valor predeterminado para el segundo es auto):
 
-<p><span id="result_box" lang="es"><span class="hps">Las imágenes de fondo</span> <span class="hps">generados a partir de</span> <span class="hps">elementos</span> <span class="">con </span></span>{{ cssxref("-moz-element") }}<span id="result_box" lang="es"> <span class="hps">(que en realidad</span> <span class="hps">coincide con</span> <span class="hps">un elemento)</span> <span class="hps">se tratan actualmente</span> <span class="hps">como</span> <span class="hps">las imágenes con</span> <span class="hps">las</span> <span class="hps">dimensiones del elemento</span><span>, o</span> <span class="hps">de</span> <span class="hps">la</span> <span class="hps">zona de posicionamiento</span> <span class="hps">de fondo si</span> <span class="hps">el elemento es</span> <span class="hps">SVG</span><span>,</span> <span class="hps">con</span> <span class="hps">la proporción</span> <span class="hps">propia</span> <span class="hps">correspondiente</span><span>.</span></span></p>
+    - Un valor {{cssxref("&lt;percentage&gt;")}} que escala la imagen de fondo en la dimensión correspondiente al porcentaje especificado del área de posicionamiento de fondo, que viene el valor determinado {{ cssxref("background-origin") }}. El área de posicionamiento del fondo es, por defecto, el área que contiene el contenido de la caja y su relleno, el área también se puede cambiar a simplemente el contenido o el área que contiene bordes, el relleno y contenido. Si el fondo de {{r�1���i� ���w歵�!���j�Zr��}} es fija, el área de posicionamiento del fondo es más bien toda el área de la ventana del navegador, sin incluir el área cubierta por las barras de desplazamiento si están presentes. Porcentajes negativos no son permitidos.
+    - Un valor {{cssxref("&lt;length&gt;")}} que escala la imagen de fondo a la longitud especificada en la dimensión correspondiente. Longitudes negativas no están permitidos.
+    - La palabra clave auto que escala el fondo de la imagen en la dirección correspondiente de modo que su proporción escencial se mantiene.
 
-<div class="note"><span id="result_box" lang="es"><span class="hps"><strong>Nota</strong>: El comportamiento de los <code>&lt;degradados&gt;</code> cambió en Gecko 8.0 </span></span>{{geckoRelease("8.0")}}. Anteriormente se trataban como imágenes sin dimensiones intrínsecas, pero con proporciones intrínsecas idénticas a las del área de posicionamiento del fondo.</div>
+La interpretación de los valores posibles depende de las dimensiones propias de la imagen (ancho y alto) y proporción propia (relación entre la anchura y altura). Una imagen de mapa de bits siempre tiene dimensiones propias y una proporción propia. Una imagen del vector puede tener ambas dimensiones propias (y por lo tanto debe tener una proporción propia). También puede tener una o ningúna dimensiones propias, y en cualquier caso se podría o no tener una proporción propia. Los gradientes son tratados como imágenes sin dimensiones propias o proporción propia.
 
-<p><span id="result_box" lang="es"><span class="hps">El</span> <span class="hps">tamaño representado</span> <span class="hps">de</span> <span class="hps">la imagen de fondo</span> <span class="hps">se calcula como</span> <span class="hps">sigue:</span></span></p>
+Este comportamiento ha cambiado en Gecko 8.0 {{��$��y��}}. Antes de esto, los gradientes se tratan como imágenes sin dimensiones propias, con una proporción propia idéntica al área de posicionamiento de fondo.
 
-<dl>
- <dt><span id="result_box" lang="es"><span class="hps">Si</span> <span class="hps">ambos componentes de</span> </span><code>background-size</code><span id="result_box" lang="es"> <span class="hps">se especifican</span> <span class="hps">y no son</span> <span class="hps">auto</span></span>:</dt>
- <dd><span id="result_box" lang="es"><span class="hps">La imagen de fondo</span> <span class="alt-edited hps">representa</span> a<span class="hps">l tamaño</span> <span class="hps">especificado.</span></span></dd>
- <dt>si el <code>background-size</code> es <code>contain</code> o <code>cover</code>:</dt>
- <dd><span id="result_box" lang="es"><span class="hps">La imagen</span> <span class="alt-edited hps">es renderizada</span>, <span class="hps">preservando su</span> <span class="hps">proporción</span> propia<span>,</span> <span class="hps">en el tamaño mayor</span> <span class="hps">contenido dentro de</span><span>, o cubriendo</span><span>,</span> <span class="hps">el</span> <span class="hps">área de posicionamiento</span> <span class="hps">de fondo.</span> <span class="hps">Si</span> <span class="hps">la</span> <span class="hps">imagen no tiene una</span> <span class="hps">proporción</span> <span class="hps">propia</span><span>,</span> <span class="hps">entonces</span> <span class="hps">se representa</span> a<span class="hps">l tamaño de la</span> <span class="hps">zona de posicionamiento</span> <span class="hps">de fondo.</span></span></dd>
- <dt>Si el <code>background-size</code> es <code>auto</code> o <code>auto auto</code>:</dt>
- <dd><span id="result_box" lang="es"><span class="hps">Si la imagen tiene</span> <span class="hps">dos</span> <span class="hps">dimensiones propias</span><span>, se representa</span> <span class="hps">en ese tamaño.</span> <span class="hps">Si</span> <span class="hps">no tiene dimensiones</span> propi<span class="hps">as y</span> <span class="hps">no</span> <span class="hps">proporción</span> <span class="hps">propia</span><span>, se representa</span> <span class="hps">en</span> <span class="hps">el tamaño del área</span><span class="hps"> de posicionamiento</span> <span class="hps">de fondo.</span> <span class="hps">Si no tiene</span> <span class="hps">dimensiones</span><span>, pero tiene una</span> <span class="hps">proporción</span><span>, se</span> <span class="hps">representa como</span> <span class="hps">si</span> <span class="hps">se hubiera especificado</span> <span class="hps">contener</span> <span class="hps">en su lugar.</span> <span class="hps">Si la imagen tiene</span> <span class="hps">una</span> <span class="hps">dimensión</span> <span class="hps">propia y</span> <span class="hps">una</span> <span class="hps">proporción</span><span>, ha</span> <span class="hps">rendido en</span> <span class="hps">el tamaño determinado</span> <span class="hps">por esa</span> <span class="hps">única dimensión</span> <span class="hps">y la proporción</span><span>.</span> <span class="hps">Si la imagen tiene</span> <span class="hps">una dimensión</span> propia <span class="hps">pero</span> <span class="hps">proporción</span> <span class="hps">no, se</span> <span class="hps">representa utilizando</span> <span class="hps">la dimensión propia</span> <span class="hps">y</span> <span class="hps">la dimensión correspondiente del área</span><span class="hps"> de posicionamiento</span> <span class="hps">de fondo.</span></span></dd>
- <dt>Si el background-size tiene un <code>auto</code> componente y un non-<code>auto</code> componente:</dt>
- <dd><span id="result_box" lang="es"><span class="hps">Si la imagen tiene</span> <span class="hps">una</span> <span class="hps">proporción</span> propia<span class="hps">, entonces</span> <span class="hps">hacen</span> <span class="hps">uso de la dimensión</span> <span class="hps">especificada</span><span>,</span> <span class="hps">y</span> <span class="hps">calcula</span> <span class="hps">la otra dimensión</span> <span class="hps">de</span> <span class="hps">la dimensión especificada</span> <span class="hps">y</span> <span class="hps">la proporción</span> propia<span class="hps">.</span> <span class="hps">Si la</span> <span class="hps">imagen no tiene una</span> <span class="hps">parte</span> propia<span>, utilice</span> <span class="hps">la dimensión especificada</span> <span class="hps">para esa dimensión.</span> <span class="hps">Por</span> <span class="hps">la otra dimensión</span><span>, utilice la</span> <span class="hps">imagen</span> <span class="hps">de</span> <span class="hps">dimensión propia</span> <span class="hps">correspondiente, si</span> <span class="hps">es que existe.</span> <span class="hps">Si</span> <span class="hps">no hay ninguna dimensión</span> propia <span class="hps">tal, el uso</span> <span class="hps">de la</span> <span class="hps">dimensión correspondiente del </span><span class="hps">área de posicionamiento</span> <span class="hps">de fondo.</span></span></dd>
-</dl>
+Las imágenes de fondo generados a partir de elementos con {{ cssxref("-moz-element") }} (que en realidad coincide con un elemento) se tratan actualmente como las imágenes con las dimensiones del elemento, o de la zona de posicionamiento de fondo si el elemento es SVG, con la proporción propia correspondiente.
 
-<p><span id="result_box" lang="es"><span class="hps">Tenga en cuenta</span> <span class="hps">que los antecedentes</span> <span class="hps">de tamaño de</span> <span class="hps">imágenes</span> <span class="hps">vectoriales que</span> <span class="hps">carecen de</span> <span class="hps">dimensiones propias</span> <span class="hps">o la proporción</span> <span class="hps">no</span> <span class="hps">se</span> <span class="hps">ha aplicado plenamente</span> <span class="hps">en</span> <span class="hps">todos los navegadores.</span> <span class="hps">Tenga cuidado con</span> <span class="hps">confiar en el</span> <span class="hps">comportamiento descrito anteriormente</span><span>, y la prueba</span> <span class="hps">en varios navegadores</span> <span class="">(</span><span>incluyendo específicamente</span> <span class="hps">las versiones de</span> <span class="hps">Firefox 7</span> <span class="hps">o anterior y</span> <span class="hps">Firefox 8</span> <span class="hps">o superior</span><span>) para asegurarse de</span> <span class="hps">versiones</span> <span class="hps">diferentes</span> <span class="hps">son aceptables.</span></span></p>
+> **Nota:** **Nota**: El comportamiento de los `<degradados>` cambió en Gecko 8.0 {{geckoRelease("8.0")}}. Anteriormente se trataban como imágenes sin dimensiones intrínsecas, pero con proporciones intrínsecas idénticas a las del área de posicionamiento del fondo.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+El tamaño representado de la imagen de fondo se calcula como sigue:
 
-<p>Esta demostración de backround-size: cover y esta demostración de background-size: contain están destinados a ser abiertos en nuevas ventanas para que pueda ver <span id="result_box" lang="es"><span class="gt-trans-draggable hps">cómo</span> contain<span class="gt-trans-draggable hps"> y</span> cover <span class="gt-trans-draggable hps">comportarse</span> <span class="gt-trans-draggable hps">cuando las dimensiones</span> <span class="gt-trans-draggable hps">de</span>l área <span class="gt-trans-draggable hps">de posicionamiento</span> <span class="gt-trans-draggable hps">de</span> <span class="gt-trans-draggable hps">fondo</span> <span class="gt-trans-draggable hps">variar.</span> <span class="gt-trans-draggable hps">Esta serie de</span> <span class="gt-trans-draggable hps">demostraciones de</span> <span class="gt-trans-draggable hps">cómo</span> <span class="gt-trans-draggable hps">funciona</span> <span class="gt-trans-draggable hps">el background-size</span> <span class="gt-trans-draggable hps">e interactúa</span> <span class="gt-trans-draggable hps">con otras</span> <span class="gt-trans-draggable hps">propiedades de</span> background-<span class="gt-trans-draggable hps">*</span> </span><span id="result_box" lang="es"><span class="hps">debe</span> <span class="hps">casi</span> <span class="hps">cubrir el suelo</span> <span class="hps">restante</span> <span class="hps">en el uso de</span> <span class="hps">background-size</span> <span class="hps">solo y</span> <span class="hps">en combinación</span> <span class="hps">con otras propiedades.</span></span></p>
+- Si ambos componentes de `background-size` se especifican y no son auto:
+  - : La imagen de fondo representa al tamaño especificado.
+- si el `background-size` es `contain` o `cover`:
+  - : La imagen es renderizada, preservando su proporción propia, en el tamaño mayor contenido dentro de, o cubriendo, el área de posicionamiento de fondo. Si la imagen no tiene una proporción propia, entonces se representa al tamaño de la zona de posicionamiento de fondo.
+- Si el `background-size` es `auto` o `auto auto`:
+  - : Si la imagen tiene dos dimensiones propias, se representa en ese tamaño. Si no tiene dimensiones propias y no proporción propia, se representa en el tamaño del área de posicionamiento de fondo. Si no tiene dimensiones, pero tiene una proporción, se representa como si se hubiera especificado contener en su lugar. Si la imagen tiene una dimensión propia y una proporción, ha rendido en el tamaño determinado por esa única dimensión y la proporción. Si la imagen tiene una dimensión propia pero proporción no, se representa utilizando la dimensión propia y la dimensión correspondiente del área de posicionamiento de fondo.
+- Si el background-size tiene un `auto` componente y un non-`auto` componente:
+  - : Si la imagen tiene una proporción propia, entonces hacen uso de la dimensión especificada, y calcula la otra dimensión de la dimensión especificada y la proporción propia. Si la imagen no tiene una parte propia, utilice la dimensión especificada para esa dimensión. Por la otra dimensión, utilice la imagen de dimensión propia correspondiente, si es que existe. Si no hay ninguna dimensión propia tal, el uso de la dimensión correspondiente del área de posicionamiento de fondo.
 
-<h2 id="Notas">Notas</h2>
+Tenga en cuenta que los antecedentes de tamaño de imágenes vectoriales que carecen de dimensiones propias o la proporción no se ha aplicado plenamente en todos los navegadores. Tenga cuidado con confiar en el comportamiento descrito anteriormente, y la prueba en varios navegadores (incluyendo específicamente las versiones de Firefox 7 o anterior y Firefox 8 o superior) para asegurarse de versiones diferentes son aceptables.
 
-<p>Si especifíca un degradado como fondo y tiene especificado un background-size para ir con ella, es mejor no especificar un tamaño que utilice un solo componente auto, o es especificado usando solo un valor de anchura (por ejemplo, background-size: 50%). Renderizado de gradientes en tales casos cambiaron en Firefox 8, y en la actualidad es generalmente inconsistente en todos los navegadores, que no todo implementa el renderizadando en total conformidad con la especificación CSS3 background-size y con la especificación de valores de imagen CSS3 gradiente.</p>
+## Ejemplos
 
-<pre class="brush: css">.bar {
+Esta demostración de backround-size: cover y esta demostración de background-size: contain están destinados a ser abiertos en nuevas ventanas para que pueda ver cómo contain y cover comportarse cuando las dimensiones del área de posicionamiento de fondo variar. Esta serie de demostraciones de cómo funciona el background-size e interactúa con otras propiedades de background-\* debe casi cubrir el suelo restante en el uso de background-size solo y en combinación con otras propiedades.
+
+## Notas
+
+Si especifíca un degradado como fondo y tiene especificado un background-size para ir con ella, es mejor no especificar un tamaño que utilice un solo componente auto, o es especificado usando solo un valor de anchura (por ejemplo, background-size: 50%). Renderizado de gradientes en tales casos cambiaron en Firefox 8, y en la actualidad es generalmente inconsistente en todos los navegadores, que no todo implementa el renderizadando en total conformidad con la especificación CSS3 background-size y con la especificación de valores de imagen CSS3 gradiente.
+
+```css
+.bar {
        width: 50px; height: 100px;
        background-image: gradient(...);
 
@@ -91,37 +85,22 @@ translation_of: Web/CSS/background-size
        background-size: 25px 50px;
        background-size: 50% 50%;
 }
-</pre>
+```
 
-<p>Tenga en cuenta que particularmente no es recomendado usar una dimensión de píxeles y una dimensión auto con degradado, porque es imposible replicar el renderizado en las versiones de Firefox anteriores a 8, y en los navegadores que no implementaron el renderizado de Firefox 8,<span class="" id="result_box" lang="es"><span class="gt-trans-draggable"> sin saber</span> <span class="gt-trans-draggable hps">el tamaño exacto</span> <span class="gt-trans-draggable hps">del elemento cuyo</span> <span class="gt-trans-draggable hps">fondo</span> <span class="gt-trans-draggable hps">se ha especificado</span><span class="gt-trans-draggable">.</span></span></p>
+Tenga en cuenta que particularmente no es recomendado usar una dimensión de píxeles y una dimensión auto con degradado, porque es imposible replicar el renderizado en las versiones de Firefox anteriores a 8, y en los navegadores que no implementaron el renderizado de Firefox 8, sin saber el tamaño exacto del elemento cuyo fondo se ha especificado.
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estados</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Backgrounds', '#the-background-size', 'background-size') }}</td>
-   <td>{{ Spec2('CSS3 Backgrounds') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estados                                  | Comentario |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
+| {{ SpecName('CSS3 Backgrounds', '#the-background-size', 'background-size') }} | {{ Spec2('CSS3 Backgrounds') }} |            |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad de navegador</h2>
+## Compatibilidad de navegador
 
 {{Compat("css.properties.background-size")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/CSS/CSS_Reference" title="CSS Reference">CSS Reference</a></li>
- <li><a href="/en-US/docs/CSS/Multiple_backgrounds" title="en-US/docs/CSS/Multiple backgrounds">Multiple backgrounds</a></li>
- <li><a href="/en-US/docs/CSS/Scaling_background_images" title="/en-US/docs/CSS/Scaling_background_images">Scaling background images</a></li>
-</ul>
+- [CSS Reference](/es/docs/CSS/CSS_Reference "CSS Reference")
+- [Multiple backgrounds](/es/docs/CSS/Multiple_backgrounds "en-US/docs/CSS/Multiple backgrounds")
+- [Scaling background images](/es/docs/CSS/Scaling_background_images)

@@ -7,86 +7,68 @@ tags:
   - Referencia
 translation_of: Web/CSS/border-bottom-left-radius
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad CSS<strong> <code>border-bottom-left-radius</code></strong> establece el redondeo de la esquina inferior izquierda del elemento. El redondeo puede ser un círculo o una elipse, o si uno de los valores es <code>0</code>, no se redondeará la esquina, dejándola cuadrada.</p>
+La propiedad CSS** `border-bottom-left-radius`** establece el redondeo de la esquina inferior izquierda del elemento. El redondeo puede ser un círculo o una elipse, o si uno de los valores es `0`, no se redondeará la esquina, dejándola cuadrada.
 
-<div style="text-align: center;"><img alt="border-bottom-left-radius.png" class="default internal" src="/@api/deki/files/6136/=border-bottom-left-radius.png"></div>
+![border-bottom-left-radius.png](/@api/deki/files/6136/=border-bottom-left-radius.png)
 
-<p>Un fondo, siendo una imagen o color, está limitado a los bordes, incluso a los redondeados; la posición exacta del corte será definida por el valor de la propiedad {{cssxref("background-clip")}}.</p>
+Un fondo, siendo una imagen o color, está limitado a los bordes, incluso a los redondeados; la posición exacta del corte será definida por el valor de la propiedad {{cssxref("background-clip")}}.
 
-<div class="note">Si el valor de esta propiedad no se establece en una propiedad reducida {{cssxref("border-radius")}} que es aplicada al elemento después de la propiedad <code>border-bottom-left-radius</code>, el valor de esta propiedad es restaurado a su valor inicial por la <a href="/en-US/docs/Web/CSS/Shorthand_properties">propiedad de forma reducida</a>.</div>
+> **Nota:** Si el valor de esta propiedad no se establece en una propiedad reducida {{cssxref("border-radius")}} que es aplicada al elemento después de la propiedad `border-bottom-left-radius`, el valor de esta propiedad es restaurado a su valor inicial por la [propiedad de forma reducida](/es/docs/Web/CSS/Shorthand_properties).
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush:css">/* la esquina es un círculo */
-/* border-bottom-left-radius: <em>radius</em> */
+```css
+/* la esquina es un círculo */
+/* border-bottom-left-radius: radius */
 border-bottom-left-radius: 3px;
 
 /* la esquina es una elipse */
-/* border-bottom-left-radius: <em>horizontal</em> <em>vertical</em> */
+/* border-bottom-left-radius: horizontal vertical */
 border-bottom-left-radius: 0.5em 1em;
 
 border-bottom-left-radius: inherit;
-</pre>
+```
 
-<div style="font-size: 0.9em;">
-<p style="">donde:</p>
+donde:
 
-<dl style="padding-left: 6em;">
- <dt style="float: left; width: 7.5em;"><em>radius</em></dt>
- <dd style="padding-left: 7.5em;">Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} que denota el radio del círculo que se usará para el borde en esa esquina.</dd>
- <dt style="float: left; width: 7.5em;"><em>horizontal</em></dt>
- <dd style="padding-left: 7.5em;">Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} que denota el eje semi-mayor horizontal de la elipse que se usará en el borde de esa esquina.</dd>
- <dt style="float: left; width: 7.5em;"><em>vertical</em></dt>
- <dd style="padding-left: 7.5em;">Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} que denota el eje semi-mayor vertical de la elipse que se usará en el borde de esa esquina.</dd>
-</dl>
-</div>
+- _radius_
+  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} que denota el radio del círculo que se usará para el borde en esa esquina.
+- _horizontal_
+  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} que denota el eje semi-mayor horizontal de la elipse que se usará en el borde de esa esquina.
+- _vertical_
+  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} que denota el eje semi-mayor vertical de la elipse que se usará en el borde de esa esquina.
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Denota el tamaño del radio de círculo o del eje semi-mayor o semi-menor de la elipse. Puede ser expresado en cualquier tipo de unidad permitida por el tipo de dato CSS {{cssxref("&lt;length&gt;")}}. Los valores negativos no son válidos.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Denota el tamaño del radio del círculo, o de los ejes semi-mayores y semi-menores de la elipse, usando valores porcentuales. Porcentajes del eje horizontal toman como referencia a la anchura de la caja, y porcentajes del eje vertical toman como referencia la altura de la caja. Los valores negativos no son válidos.</dd>
-</dl>
+- `<length>`
+  - : Denota el tamaño del radio de círculo o del eje semi-mayor o semi-menor de la elipse. Puede ser expresado en cualquier tipo de unidad permitida por el tipo de dato CSS {{cssxref("&lt;length&gt;")}}. Los valores negativos no son válidos.
+- `<percentage>`
+  - : Denota el tamaño del radio del círculo, o de los ejes semi-mayores y semi-menores de la elipse, usando valores porcentuales. Porcentajes del eje horizontal toman como referencia a la anchura de la caja, y porcentajes del eje vertical toman como referencia la altura de la caja. Los valores negativos no son válidos.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
 «Tabla»
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#border-bottom-left-radius', 'border-bottom-left-radius')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                           | Estado                                   | Comentarios        |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
+| {{SpecName('CSS3 Backgrounds', '#border-bottom-left-radius', 'border-bottom-left-radius')}} | {{Spec2('CSS3 Backgrounds')}} | Definición inicial |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("css.properties.border-bottom-left-radius")}}
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<p>Las propiedades CSS relacionadas con radio de borde: la forma reducida {{cssxref("border-radius")}}, las propiedades de las otras esquinas: {{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, y {{cssxref("border-top-left-radius")}}.</p>
+Las propiedades CSS relacionadas con radio de borde: la forma reducida {{cssxref("border-radius")}}, las propiedades de las otras esquinas: {{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, y {{cssxref("border-top-left-radius")}}.

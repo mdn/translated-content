@@ -1,82 +1,88 @@
 ---
 title: ':indeterminate'
-slug: 'Web/CSS/:indeterminate'
+slug: Web/CSS/:indeterminate
 tags:
   - CSS
   - Diseño
   - Pseudo-clase
   - Referencia
   - Web
-translation_of: 'Web/CSS/:indeterminate'
+translation_of: Web/CSS/:indeterminate
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <strong><code>:indeterminate</code></strong> de <a href="/es/docs/Web/CSS">CSS</a> representa cualquier elemento de formulario cuyo estado sea indeterminado.</p>
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:indeterminate`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento de formulario cuyo estado sea indeterminado.
 
-<pre class="brush: css no-line-numbers">/* Selecciona cualquier &lt;input&gt; cuyo estado sea indeterminado */
+```css
+/* Selecciona cualquier <input> cuyo estado sea indeterminado */
 input:indeterminate {
   background: lime;
-}</pre>
+}
+```
 
-<p>Los elementos seleccionados por este selector son:</p>
+Los elementos seleccionados por este selector son:
 
-<ul>
- <li>Elementos <code><a href="/es/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code> cuya propiedad <code>indeterminate</code> se establece en <code>true</code> por <a href="/es/docs/Web/JavaScript">JavaScript</a></li>
- <li>Elementos <code><a href="/es/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code>, cuando todos los radio buttons con el mismo valor <code>name</code> en el formulario no están marcados</li>
- <li>Elementos {{HTMLElement("progress")}} en un estado indeterminado</li>
-</ul>
+- Elementos [`<input type="checkbox">`](/es/docs/Web/HTML/Element/input/checkbox) cuya propiedad `indeterminate` se establece en `true` por [JavaScript](/es/docs/Web/JavaScript)
+- Elementos [`<input type="radio">`](/es/docs/Web/HTML/Element/input/radio), cuando todos los radio buttons con el mismo valor `name` en el formulario no están marcados
+- Elementos {{HTMLElement("progress")}} en un estado indeterminado
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Checkbox_y_radio_button">Checkbox y radio button</h3>
+### Checkbox y radio button
 
-<p>Este ejemplo aplica estilos especiales a las etiquetas asociadas con campos de formulario indeterminados.</p>
+Este ejemplo aplica estilos especiales a las etiquetas asociadas con campos de formulario indeterminados.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;input type="checkbox" id="checkbox"&gt;
-  &lt;label for="checkbox"&gt;Esta etiqueta comienza con el color lima.&lt;/label&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;input type="radio" id="radio"&gt;
-  &lt;label for="radio"&gt;Esta etiqueta comienza con el color lima.&lt;/label&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <input type="checkbox" id="checkbox">
+  <label for="checkbox">Esta etiqueta comienza con el color lima.</label>
+</div>
+<div>
+  <input type="radio" id="radio">
+  <label for="radio">Esta etiqueta comienza con el color lima.</label>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="">input:indeterminate + label {
+```
+input:indeterminate + label {
   background: lime;
 }
-</pre>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var inputs = document.getElementsByTagName("input");
+```js
+var inputs = document.getElementsByTagName("input");
 
-for (var i = 0; i &lt; inputs.length; i++) {
+for (var i = 0; i < inputs.length; i++) {
   inputs[i].indeterminate = true;
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample('Checkbox_y_radio_button', 'auto', 50)}}</p>
+{{EmbedLiveSample('Checkbox_y_radio_button', 'auto', 50)}}
 
-<h3 id="Barra_de_progreso">Barra de progreso</h3>
+### Barra de progreso
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;progress&gt;
-</pre>
+```html
+<progress>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="">progress {
+```
+progress {
   margin: 4px;
 }
 
@@ -85,50 +91,21 @@ progress:indeterminate {
   background-color: lightgray;
   box-shadow: 0 0 2px 1px red;
 }
-</pre>
+```
 
-<h3 id="Resultado_2">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample('Barra_de_progreso', 'auto', 30)}}</p>
+{{EmbedLiveSample('Barra_de_progreso', 'auto', 30)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#selector-indeterminate', ':indeterminate')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Ningún cambio.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', '#selector-indeterminate', ':indeterminate')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Define la semántica de HTML y la validación de restricciones.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#indeterminate', ':indeterminate')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Ningún cambio.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#indeterminate', ':indeterminate')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>Define la pseudo-clase, pero no la semántica asociada.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estado                               | Comentarios                                                   |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#selector-indeterminate', ':indeterminate')}} | {{Spec2('HTML WHATWG')}}     | Ningún cambio.                                                |
+| {{SpecName('HTML5 W3C', '#selector-indeterminate', ':indeterminate')}}     | {{Spec2('HTML5 W3C')}}         | Define la semántica de HTML y la validación de restricciones. |
+| {{SpecName('CSS4 Selectors', '#indeterminate', ':indeterminate')}}         | {{Spec2('CSS4 Selectors')}} | Ningún cambio.                                                |
+| {{SpecName('CSS3 Basic UI', '#indeterminate', ':indeterminate')}}         | {{Spec2('CSS3 Basic UI')}} | Define la pseudo-clase, pero no la semántica asociada.        |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<div>
-
-
-<p>{{Compat("css.selectors.indeterminate")}}</p>
-</div>
+{{Compat("css.selectors.indeterminate")}}

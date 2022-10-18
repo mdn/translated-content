@@ -8,19 +8,20 @@ tags:
 translation_of: Web/CSS/box-flex
 original_slug: Web/CSS/-moz-box-flex
 ---
-<div>{{CSSRef}}{{warning("Esta propiedad es para controlar parte del modelo de caja XUL. No coincide ni con el antiguo borrador del módulo CSS para el diseño de caja flexibles  '<code>box-flex</code>' (que se basa en esta propiedad) ni con el comportamiento de '<code>-webkit-box-flex</code>' (que se basa en esos borradores).")}}</div>
+{{CSSRef}}{{warning("Esta propiedad es para controlar parte del modelo de caja XUL. No coincide ni con el antiguo borrador del módulo CSS para el diseño de caja flexibles  '<code>box-flex</code>' (que se basa en esta propiedad) ni con el comportamiento de '<code>-webkit-box-flex</code>' (que se basa en esos borradores).")}}
 
-<p>Ver <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Flexbox</a> para más información acerca de qué usar en vez de esta propiedad.</p>
+Ver [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) para más información acerca de qué usar en vez de esta propiedad.
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>Las propiedades <a href="/en-US/docs/Web/CSS">CSS</a><code>-moz-box-flex</code> y <code>-webkit-box-flex</code> especifican cómo una  <code>-moz-box</code> o <code>-webkit-box</code> crecen para rellenar la caja que los contienen, en la dirección del diseño o esquema (layout) de la caja contenedora.Ver <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Flexbox</a> para más información sobre las propiedades de los elementos flexbox.</p>
+Las propiedades [CSS](/es/docs/Web/CSS)`-moz-box-flex` y `-webkit-box-flex` especifican cómo una `-moz-box` o `-webkit-box` crecen para rellenar la caja que los contienen, en la dirección del diseño o esquema (layout) de la caja contenedora.Ver [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) para más información sobre las propiedades de los elementos flexbox.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
-<pre class="brush:css">/* Valores &lt;number&gt; */
+```css
+/* Valores <number> */
 -moz-box-flex: 0;
 -moz-box-flex: 3;
 -webkit-box-flex: 0;
@@ -30,79 +31,78 @@ original_slug: Web/CSS/-moz-box-flex
 -moz-box-flex: inherit;
 -moz-box-flex: initial;
 -moz-box-flex: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt>0</dt>
- <dd>La caja no crece.</dd>
- <dt>&gt; 0</dt>
- <dd>La caja crece para rellenar un proporción del espacio disponible..</dd>
-</dl>
+- 0
+  - : La caja no crece.
+- \> 0
+  - : La caja crece para rellenar un proporción del espacio disponible..
 
-<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
+### Síntaxis Formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Ejemplo de -moz-box-flex&lt;/title&gt;
-    &lt;style&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplo de -moz-box-flex</title>
+    <style>
       div.example {
         display: -moz-box;
         display: -webkit-box;
         border: 1px solid black;
         width: 100%;
       }
-      div.example &gt; p:nth-child(1) {
+      div.example > p:nth-child(1) {
         -moz-box-flex: 1;       /* Mozilla */
         -webkit-box-flex: 1;    /* WebKit */
         border: 1px solid black;
       }
-      div.example &gt; p:nth-child(2) {
+      div.example > p:nth-child(2) {
         -moz-box-flex: 0;       /* Mozilla */
         -webkit-box-flex: 0;    /* WebKit */
         border: 1px solid black;
       }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div class="example"&gt;
-      &lt;p&gt;Creceré para rellenar un espacio extra&lt;/p&gt;
-      &lt;p&gt;No creceré&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </style>
+  </head>
+  <body>
+    <div class="example">
+      <p>Creceré para rellenar un espacio extra</p>
+      <p>No creceré</p>
+    </div>
+  </body>
+</html>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>La caja contenedora asigna el espacio extra disponible de manera proporcional al valor flex de cada uno de los elementos que contiene.</p>
+La caja contenedora asigna el espacio extra disponible de manera proporcional al valor flex de cada uno de los elementos que contiene.
 
-<p>Los elementos dentro del contenedor que tienen 0 flex no crecen.</p>
+Los elementos dentro del contenedor que tienen 0 flex no crecen.
 
-<p>Si śolo uno de los elementos tiene un valor distinto de cero ocupará todo el espacio disponible.</p>
+Si śolo uno de los elementos tiene un valor distinto de cero ocupará todo el espacio disponible.
 
-<p>Los elementos que tienen el mismo valor para flex crecen en la misma cantidad en términos absolutos.</p>
+Los elementos que tienen el mismo valor para flex crecen en la misma cantidad en términos absolutos.
 
-<p>Si el valor flex se ha establecido usando el atributo flex del elemento, entonces el estilo es ignorado.</p>
+Si el valor flex se ha establecido usando el atributo flex del elemento, entonces el estilo es ignorado.
 
-<p>Para hacer que los elementos XUL dentro de una caja contenedora tengan el mismo tamaño, fijaremos el atributo <code>equalsize </code>de la caja contenedora a <code>always</code>. Este atributo no tiene correspondencia con ninguna propiedad CSS.</p>
+Para hacer que los elementos XUL dentro de una caja contenedora tengan el mismo tamaño, fijaremos el atributo `equalsize `de la caja contenedora a `always`. Este atributo no tiene correspondencia con ninguna propiedad CSS.
 
-<p>Un truco para hacer que todos los elementos dentro una caja contenedora tengan el mismo tamaño es darles un tamaño fijo,(por ejemplo <code>height: 0</code>), y el mismo valor box-flex mayor que cero a todos (por ejemplo <code>-moz-box-flex: 1</code>).</p>
+Un truco para hacer que todos los elementos dentro una caja contenedora tengan el mismo tamaño es darles un tamaño fijo,(por ejemplo `height: 0`), y el mismo valor box-flex mayor que cero a todos (por ejemplo `-moz-box-flex: 1`).
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>Esta propiedad es una extensión no estándar. Había una <a class="external" href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">old draft of the CSS3 Flexbox specification</a> que definía una propiedad<code>box-flex</code> , pero ese borrador nunca ha sido sustituido.</p>
+Esta propiedad es una extensión no estándar. Había una [old draft of the CSS3 Flexbox specification](http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) que definía una propiedad`box-flex` , pero ese borrador nunca ha sido sustituido.
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.properties.box-flex")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<p>{{cssxref("-moz-box-orient")}}, {{cssxref("-moz-box-pack")}}, {{cssxref("-moz-box-direction")}}, {{cssxref("flex")}}</p>
+{{cssxref("-moz-box-orient")}}, {{cssxref("-moz-box-pack")}}, {{cssxref("-moz-box-direction")}}, {{cssxref("flex")}}

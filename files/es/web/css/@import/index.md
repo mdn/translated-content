@@ -3,70 +3,50 @@ title: '@import'
 slug: Web/CSS/@import
 translation_of: Web/CSS/@import
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La regla-at <a href="/en/CSS" title="/en/CSS">CSS</a> <code>@import</code>  permite importar reglas desde otras hojas de estilo. Estas reglas deben preceder a todos los otros tipos de reglas, excepto a las reglas {{ cssxref("@charset") }}; como esto no es una <a href="/en/CSS/Syntax#nested_statements" title="/en/CSS/Syntax#nested_statements">declaración anidada</a>, no puede ser usado dentro de <a href="/en/CSS/At-rule#Conditional_Group_Rules" title="en/CSS/At-rule#Conditional_Group_Rules">grupos condicionales de reglas-at</a>.</p>
+La regla-at [CSS](/en/CSS) `@import` permite importar reglas desde otras hojas de estilo. Estas reglas deben preceder a todos los otros tipos de reglas, excepto a las reglas {{ cssxref("@charset") }}; como esto no es una [declaración anidada](/en/CSS/Syntax#nested_statements), no puede ser usado dentro de [grupos condicionales de reglas-at](/en/CSS/At-rule#Conditional_Group_Rules "en/CSS/At-rule#Conditional_Group_Rules").
 
-<p>Para que los agentes de usuario puedan evitar recuperar recursos para tipos de medios no soportados, los autores pueden especificar reglas dependientes del tipo de medio <code>@import</code>. Estas condiciones @import se especifican separando por una coma las <a href="/en/CSS/Media_queries" title="/en/CSS/Media_queries">consultas de medios (media query)</a> despues de la <em>url</em>. En la ausencia de cualquier consulta de medios (media query), la importación es incondicional. Especificando  <code>all</code> para el medio tiene el mismo efecto.</p>
+Para que los agentes de usuario puedan evitar recuperar recursos para tipos de medios no soportados, los autores pueden especificar reglas dependientes del tipo de medio `@import`. Estas condiciones @import se especifican separando por una coma las [consultas de medios (media query)](/en/CSS/Media_queries) despues de la _url_. En la ausencia de cualquier consulta de medios (media query), la importación es incondicional. Especificando `all` para el medio tiene el mismo efecto.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="eval">@import <em>url</em>;                      <em>or</em>
-@import <em>url</em> <em>list-of-media-queries</em>;
-</pre>
+```
+@import url;                      or
+@import url list-of-media-queries;
+```
 
-<p>Dónde :</p>
+Dónde :
 
-<dl>
- <dt style="margin: 0 40px;"><em>url</em></dt>
- <dd style="margin: 0 40px;">es una <span style="background-color: rgb(250, 251, 252); font-family: consolas,monaco,andale mono,monospace; font-size: 1rem; line-height: 19px; white-space: pre;">{{cssxref("&lt;string&gt;")}} </span>o un {{cssxref("&lt;uri&gt;")}}<br><br>
- Representa la ubicación del recurso a importar. La <em>url</em> puede ser absoluta o relativa.</dd>
- <dt style="margin: 0 40px;"><em>list-of-media-queries</em></dt>
- <dd style="margin: 0 40px;">Es una lista separada por comas de <a href="/en/CSS/Media_queries" title="/en/CSS/Media_queries">consultas de medios (media query)</a> que condicionan la aplicación de las reglas CSS definidas en el enlace <em>url</em>. Si el navegador no soporta cualquiera de estos <a href="/en/CSS/Media_queries" title="/en/CSS/Media_queries">consultas de medios (media query)</a>,  ni siquiera cargará el recurso vinculado.</dd>
-</dl>
+- _url_
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+  - : es una {{cssxref("&lt;string&gt;")}} o un {{cssxref("&lt;uri&gt;")}}
 
-<pre class="eval">@import url("fineprint.css") print;
+    Representa la ubicación del recurso a importar. La _url_ puede ser absoluta o relativa.
+
+- _list-of-media-queries_
+  - : Es una lista separada por comas de [consultas de medios (media query)](/en/CSS/Media_queries) que condicionan la aplicación de las reglas CSS definidas en el enlace _url_. Si el navegador no soporta cualquiera de estos [consultas de medios (media query)](/en/CSS/Media_queries), ni siquiera cargará el recurso vinculado.
+
+## Ejemplos
+
+```
+@import url("fineprint.css") print;
 @import url("bluish.css") projection, tv;
 @import 'custom.css';
 @import "common.css" screen, projection;
 @import url('landscape.css') screen and (orientation:landscape);
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Media Queries', '#media0', '@import') }}</td>
-   <td>{{ Spec2('CSS3 Media Queries') }}</td>
-   <td>Extiende la sintaxis para soportar cualquier <a href="/en/CSS/Media_queries" title="/en/CSS/Media_queries">consultas de medios (media query)</a> y no sólo los <a href="/en/CSS/@media#Media_types" title="/en/CSS/@media#Media_types">tipos de medios</a> simples.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'cascade.html#at-import', '@import') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Añade soporte para <span style="background-color: rgb(250, 251, 252); font-family: consolas,monaco,andale mono,monospace; font-size: 1rem; line-height: 19px; white-space: pre;">{{cssxref("&lt;string&gt;")}}</span><br>
-     para denotar la <em>url</em> de una hoja de estilo,<br>
-    y es requerida para insertar la regla <code>@import</code>  en el principio del documento CSS.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS1', '#the-cascade', '@import') }}</td>
-   <td>{{ Spec2('CSS1') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                   | Estado                                       | Comentario                                                                                                                                                                                  |
+| -------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{ SpecName('CSS3 Media Queries', '#media0', '@import') }}     | {{ Spec2('CSS3 Media Queries') }} | Extiende la sintaxis para soportar cualquier [consultas de medios (media query)](/en/CSS/Media_queries) y no sólo los [tipos de medios](/en/CSS/@media#Media_types) simples.                |
+| {{ SpecName('CSS2.1', 'cascade.html#at-import', '@import') }} | {{ Spec2('CSS2.1') }}                 | Añade soporte para {{cssxref("&lt;string&gt;")}} para denotar la _url_ de una hoja de estilo, y es requerida para insertar la regla `@import` en el principio del documento CSS. |
+| {{ SpecName('CSS1', '#the-cascade', '@import') }}                 | {{ Spec2('CSS1') }}                     |                                                                                                                                                                                             |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("css.at-rules.import")}}

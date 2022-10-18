@@ -3,52 +3,53 @@ title: border-block
 slug: Web/CSS/border-block
 translation_of: Web/CSS/border-block
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propiedad de <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> <strong><code>border-block</code></strong> es una <a href="/en-US/docs/Web/CSS/Shorthand_properties">propiedad abreviada</a> para establecer los valores lógicos individuales del borde de bloque en un solo lugar en la hoja de estilos. </p>
+La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`border-block`** es una [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) para establecer los valores lógicos individuales del borde de bloque en un solo lugar en la hoja de estilos.
 
-<pre class="brush:css no-line-numbers">border-block: 1px;
+```css
+border-block: 1px;
 border-block: 2px dotted;
 border-block: medium dashed blue;
-</pre>
+```
 
-<p><code>border-block</code> puede ser usada para establecer los valores de uno o más {{cssxref("border-block-width")}}, {{cssxref("border-block-style")}}, y {{cssxref("border-block-color")}} estableciendo tanto el inicio como el final en la dimensión del bloque a la vez. Los bordes físicos a los que se asigna dependen del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a las propiedades {{cssxref ("border-top")}} y {{cssxref ("border-bottom")}} o {{cssxref ("border-right")}}, y {{cssxref ("border -left ")}} dependiendo de los valores definidos para {{cssxref (" modo de escritura ")}}, {{cssxref (" dirección ")}}, y {{cssxref (" orientación de texto ")}} .</p>
+`border-block` puede ser usada para establecer los valores de uno o más {{cssxref("border-block-width")}}, {{cssxref("border-block-style")}}, y {{cssxref("border-block-color")}} estableciendo tanto el inicio como el final en la dimensión del bloque a la vez. Los bordes físicos a los que se asigna dependen del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a las propiedades {{cssxref ("border-top")}} y {{cssxref ("border-bottom")}} o {{cssxref ("border-right")}}, y {{cssxref ("border -left ")}} dependiendo de los valores definidos para {{cssxref (" modo de escritura ")}}, {{cssxref (" dirección ")}}, y {{cssxref (" orientación de texto ")}} .
 
-<p>Los bordes en la otra dimensión se pueden establecer con {{cssxref ("border-inline")}}, que establece {{cssxref ("border-inline-start")}}, y {{cssxref ("border-inline- fin")}}.</p>
+Los bordes en la otra dimensión se pueden establecer con {{cssxref ("border-inline")}}, que establece {{cssxref ("border-inline-start")}}, y {{cssxref ("border-inline- fin")}}.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>El <code>border-block</code> es especificado con uno o más de los siguientes valores, en cualquier orden:</p>
+El `border-block` es especificado con uno o más de los siguientes valores, en cualquier orden:
 
-<dl>
- <dt><code>&lt;'border-width'&gt;</code></dt>
- <dd>El ancho del borde. Mirar {{cssxref("border-width")}}.</dd>
- <dt><code>&lt;'border-style'&gt;</code></dt>
- <dd>El estilo de la línea del borde. Mirar {{cssxref("border-style")}}.</dd>
- <dt><code>&lt;'color'&gt;</code></dt>
- <dd>El color del borde. Mirar {{cssxref("color")}}.</dd>
-</dl>
+- `<'border-width'>`
+  - : El ancho del borde. Mirar {{cssxref("border-width")}}.
+- `<'border-style'>`
+  - : El estilo de la línea del borde. Mirar {{cssxref("border-style")}}.
+- `<'color'>`
+  - : El color del borde. Mirar {{cssxref("color")}}.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+### Contenido CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -57,40 +58,24 @@ border-block: medium dashed blue;
 .exampleText {
   writing-mode: vertical-rl;
   border-block: 5px dashed blue;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Ejemplo", 140, 140)}}</p>
+{{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-block", "border-block")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Definition inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estado                                           | Comentario         |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
+| {{SpecName("CSS Logical Properties", "#propdef-border-block", "border-block")}} | {{Spec2("CSS Logical Properties")}} | Definition inicial |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores </h2>
+## Compatibilidad en navegadores
 
-<div class="">
-<p>La tabla de compatibilidad en esta página se genera a partir de datos estructurados. Si desea contribuir con los datos, visite <a href="https://github.com/mdn/browser-compat-data" style="font-size: 1rem; letter-spacing: -0.00278rem;">https://github.com/mdn/browser-compat-data</a><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> y envíanos un pull request.</span></p>
-</div>
+La tabla de compatibilidad en esta página se genera a partir de datos estructurados. Si desea contribuir con los datos, visite <https://github.com/mdn/browser-compat-data> y envíanos un pull request.
 
-<p>{{Compat("css.properties.border-block")}}</p>
+{{Compat("css.properties.border-block")}}
 
-<h2 id="Mira_también">Mira también</h2>
+## Mira también
 
-<ul>
- <li>Esta propiedad se asigna a una de las propiedades del borde físico: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}}.</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- Esta propiedad se asigna a una de las propiedades del borde físico: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}}.
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -1,106 +1,83 @@
 ---
 title: ':dir()'
-slug: 'Web/CSS/:dir'
+slug: Web/CSS/:dir
 tags:
   - CSS
   - Experimental
   - Pseudo-clase
   - Referencia
-translation_of: 'Web/CSS/:dir'
+translation_of: Web/CSS/:dir
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <code>:dir</code> de <a href="/es/docs/Web/CSS">CSS</a> coincide con los elementos en función de la direccionalidad del texto contenido en ellos.</p>
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:dir` de [CSS](/es/docs/Web/CSS) coincide con los elementos en función de la direccionalidad del texto contenido en ellos.
 
-<pre class="brush: css">/* Selecciona cualquier elemento con texto de derecha a izquierda */
+```css
+/* Selecciona cualquier elemento con texto de derecha a izquierda */
 :dir(rtl) {
   background-color: red;
-}</pre>
+}
+```
 
-<p>La pseudo-clase <code>:dir()</code> usa solo el valor <em>semántico</em> de la direccionalidad, es decir, el definido en el documento mismo. No tiene en cuenta la direccionalidad del <em>estilo</em>, es decir, la direccionalidad establecida por las propiedades de CSS como {{cssxref("direction")}}.</p>
+La pseudo-clase `:dir()` usa solo el valor _semántico_ de la direccionalidad, es decir, el definido en el documento mismo. No tiene en cuenta la direccionalidad del _estilo_, es decir, la direccionalidad establecida por las propiedades de CSS como {{cssxref("direction")}}.
 
-<div class="note">
-<p><strong>Nota: </strong>Tenga en cuenta que el comportamiento de la pseudo-clase <code>:dir()</code> no es equivalente a los <a href="/es/docs/Web/CSS/Attribute_selectors">selectores de atributo</a> <code>[dir=...]</code>. Estos últimos coinciden con el atributo HTML {{htmlattrxref("dir")}} e ignoran los elementos que carecen de él, incluso si heredan una dirección de su padre. (De forma similar, <code>[dir=rtl]</code> y <code>[dir=ltr]</code> no coincidirán con el valor <code>auto</code>.) En contraste, <code>:dir()</code> coincidirá con el valor calculado por {{glossary("user agent")}}, incluso si se hereda.</p>
+> **Nota:**Tenga en cuenta que el comportamiento de la pseudo-clase `:dir()` no es equivalente a los [selectores de atributo](/es/docs/Web/CSS/Attribute_selectors) `[dir=...]`. Estos últimos coinciden con el atributo HTML {{htmlattrxref("dir")}} e ignoran los elementos que carecen de él, incluso si heredan una dirección de su padre. (De forma similar, `[dir=rtl]` y `[dir=ltr]` no coincidirán con el valor `auto`.) En contraste, `:dir()` coincidirá con el valor calculado por {{glossary("user agent")}}, incluso si se hereda.
+
+> **Nota:**En HTML, la dirección está determinada por el atributo {{htmlattrxref("dir")}} . Otros tipos de documentos pueden tener diferentes métodos.
+
+## Sintaxis
+
+La pseudoclase `:dir()` requiere un parámetro, que representa la direccionalidad de texto que desea orientar.
+
+### Parámetros
+
+- `ltr`
+  - : Orientar elementos de izquierda a derecha.
+- `rtl`
+  - : Orientar elementos de derecha a izquierda.
+- ### Sintaxis formal
+  - : {{csssyntax}}
+
+## Ejemplo
+
+### HTML
+
+```html
+<div dir="rtl">
+  <span>test1</span>
+  <div dir="ltr">test2
+    <div dir="auto">עִבְרִית</div>
+  </div>
 </div>
+```
 
-<div class="note">
-<p><strong>Nota: </strong>En HTML, la dirección está determinada por el atributo {{htmlattrxref("dir")}} . Otros tipos de documentos pueden tener diferentes métodos.</p>
-</div>
+### CSS
 
-<h2 id="Sintaxis">Sintaxis</h2>
-
-<p>La pseudoclase <code>:dir()</code> requiere un parámetro, que representa la direccionalidad de texto que desea orientar.</p>
-
-<h3 id="Parámetros">Parámetros</h3>
-
-<dl>
- <dt><code>ltr</code></dt>
- <dd>Orientar elementos de izquierda a derecha.</dd>
- <dt><code>rtl</code></dt>
- <dd>Orientar elementos de derecha a izquierda.</dd>
- <dt>
- <h3 id="Sintaxis_formal">Sintaxis formal</h3>
- </dt>
- <dd>{{csssyntax}}</dd>
-</dl>
-
-<h2 id="Ejemplo">Ejemplo</h2>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div dir="rtl"&gt;
-  &lt;span&gt;test1&lt;/span&gt;
-  &lt;div dir="ltr"&gt;test2
-    &lt;div dir="auto"&gt;עִבְרִית&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">:dir(ltr) {
+```css
+:dir(ltr) {
   background-color: yellow;
 }
 
 :dir(rtl) {
   background-color: powderblue;
-}</pre>
+}
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{ EmbedLiveSample('Ejemplo') }}</p>
+{{ EmbedLiveSample('Ejemplo') }}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#selector-ltr', ':dir(ltr)')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Ningún cambio.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#the-dir-pseudo', ':dir()')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Definición Inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estado                               | Comentario          |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
+| {{SpecName('HTML WHATWG', 'scripting.html#selector-ltr', ':dir(ltr)')}} | {{Spec2('HTML WHATWG')}}     | Ningún cambio.      |
+| {{SpecName('CSS4 Selectors', '#the-dir-pseudo', ':dir()')}}                 | {{Spec2('CSS4 Selectors')}} | Definición Inicial. |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<p>{{Compat("css.selectors.dir")}}</p>
+{{Compat("css.selectors.dir")}}
 
-<div id="compat-mobile"> </div>
+## Ver también
 
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>Pseudo-clases relacionadas con el idioma: {{cssxref(":lang")}}, {{cssxref(":dir")}}</li>
-</ul>
+- Pseudo-clases relacionadas con el idioma: {{cssxref(":lang")}}, {{cssxref(":dir")}}

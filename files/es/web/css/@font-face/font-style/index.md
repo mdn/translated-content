@@ -8,78 +8,68 @@ tags:
   - Referências
 translation_of: Web/CSS/@font-face/font-style
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>La propiedad CSS "font-style" permite a los autores esepcificar estilos de fuente para las fuentes especificadas en la regla "<code>@font-face</code>".</p>
+La propiedad CSS "font-style" permite a los autores esepcificar estilos de fuente para las fuentes especificadas en la regla "`@font-face`".
 
-<p>Para un tipo de fuente particular, los autores pueden descargar varios tipos de fuentes que correspondan a diferentes estilos de la misma familia de fuentes, y luego usar la propiedad "font-style" para especificar explicitamente el tipo de fuente descargada. Los valores para esta propiedad CSS son los mismos que los correspondientes a font property.</p>
+Para un tipo de fuente particular, los autores pueden descargar varios tipos de fuentes que correspondan a diferentes estilos de la misma familia de fuentes, y luego usar la propiedad "font-style" para especificar explicitamente el tipo de fuente descargada. Los valores para esta propiedad CSS son los mismos que los correspondientes a font property.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<div class="">
-<pre class="brush: css">font-style: normal;
+```css
+font-style: normal;
 font-style: italic;
-font-style: oblique;</pre>
+font-style: oblique;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p><code><strong>normal</strong></code><br>
- Selecciona la version normal del estilo de fuente.</p>
+**`normal`**
+Selecciona la version normal del estilo de fuente.
 
-<p><strong><code>italic</code></strong><br>
- Especifica que el estilo de fuente es la versión en <em>cursiva</em> de la fuente normal.</p>
+**`italic`**
+Especifica que el estilo de fuente es la versión en _cursiva_ de la fuente normal.
 
-<p><strong><code>oblique</code></strong><br>
- Especifica que el estilo de fuente es la versión en <em>cursiva</em>, también, pero de forma diferente, de la fuente normal.</p>
+**`oblique`**
+Especifica que el estilo de fuente es la versión en _cursiva_, también, pero de forma diferente, de la fuente normal.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>A modo de ejemplo, consideremos Garamond como un tipo de fuente que, en su forma normal, obtenemos el siguiente resultado:</p>
+A modo de ejemplo, consideremos Garamond como un tipo de fuente que, en su forma normal, obtenemos el siguiente resultado:
 
-<pre class="brush: css">@font-face {
+```css
+@font-face {
   font-family: garamond;
   src: url('garamond.ttf');
-}</pre>
+}
+```
 
-<p><img alt="unstyled Garamond" src="https://mdn.mozillademos.org/files/12265/garamondunstyled.JPG" style="height: 101px; width: 276px;"></p>
+![unstyled Garamond](https://mdn.mozillademos.org/files/12265/garamondunstyled.JPG)
 
-<p>La versión en <em>cursiva</em> de este texto utiliza los mismos trazos presentes en la versión sin estilo, pero artificialmente inclinadas unos pocos grados.</p>
+La versión en _cursiva_ de este texto utiliza los mismos trazos presentes en la versión sin estilo, pero artificialmente inclinadas unos pocos grados.
 
-<p><img alt="artificially sloped garamond" src="https://mdn.mozillademos.org/files/12267/garamondartificialstyle.JPG" style="height: 101px; width: 276px;"></p>
+![artificially sloped garamond](https://mdn.mozillademos.org/files/12267/garamondartificialstyle.JPG)
 
-<p>Por otra parte, si existe un verdadera versión en <em>cursiva</em> del estilo de fuente, podemos incluirla en la propiedad "src" y especificar el estilo de fuente como "italic", con que claramente la fuente quedará en <em>cursiva</em>. Las verdaderas <em>cursivas</em> utilizan unos trazos específicos que son un poco diferentes de su versión normal, teniendo algunas características únicas y generalmente con cualidades redondeadas y caligráficas. Estas fuentes son específicamente creadas por diseñadores de fuentes y no son artificialmente inclinadas.</p>
+Por otra parte, si existe un verdadera versión en _cursiva_ del estilo de fuente, podemos incluirla en la propiedad "src" y especificar el estilo de fuente como "italic", con que claramente la fuente quedará en _cursiva_. Las verdaderas _cursivas_ utilizan unos trazos específicos que son un poco diferentes de su versión normal, teniendo algunas características únicas y generalmente con cualidades redondeadas y caligráficas. Estas fuentes son específicamente creadas por diseñadores de fuentes y no son artificialmente inclinadas.
 
-<p>@font-face { font-family: garamond; src: url('garamond-italic.ttf'); font-style: italic; }</p>
+@font-face { font-family: garamond; src: url('garamond-italic.ttf'); font-style: italic; }
 
-<p><img alt="italic garamond" src="https://mdn.mozillademos.org/files/12269/garamonditalic.JPG" style="height: 101px; width: 267px;"></p>
+![italic garamond](https://mdn.mozillademos.org/files/12269/garamonditalic.JPG)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#descdef-font-face-unicode-range', 'unicode-range')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                           | Comment            |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Fonts', '#descdef-font-face-unicode-range', 'unicode-range')}} | {{Spec2('CSS3 Fonts')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.at-rules.font-face.font-style")}}

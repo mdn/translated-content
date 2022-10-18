@@ -11,168 +11,146 @@ tags:
   - box-shadow
 translation_of: Web/CSS/box-shadow
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<p>La propiedad CSS <code>box-shadow</code>  añade efectos de sombra alrededor del marco de un elemento. Se pueden definir múltiples efectos separados por comas. La caja de la sombra se describe por los desplazamientos en X e Y, los radios de desenfoque y dispersión, y el color relativos al elemento.</p>
+La propiedad CSS `box-shadow` añade efectos de sombra alrededor del marco de un elemento. Se pueden definir múltiples efectos separados por comas. La caja de la sombra se describe por los desplazamientos en X e Y, los radios de desenfoque y dispersión, y el color relativos al elemento.
 
-<p class="">El código fuente de este ejemplo interactivo se encuentra almacenado en un repositorio de GitHub. Si desea contribuir al poryecto de ejemplos interactivos, por favor clone el repositiorio <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envie un pull request.</p>
+El código fuente de este ejemplo interactivo se encuentra almacenado en un repositorio de GitHub. Si desea contribuir al poryecto de ejemplos interactivos, por favor clone el repositiorio <https://github.com/mdn/interactive-examples> y envie un pull request.
 
-<p>La propiedad <code>box-shadow</code> permite proyectar una sombra difuminada desde el marco de casi cualquier elemento. Si {{cssxref("border-radius")}} es especificado en un elemento con la propiedad box-shadow, la sombra adopta la misma curva en las esquinas. El z-orden de múltiples cajas de sombra es la misma que de múltiples <a href="https://developer.mozilla.org/en-US/CSS/text-shadow">sombras de texto</a> (la primera sombra definida se ubica hasta arriba).</p>
+La propiedad `box-shadow` permite proyectar una sombra difuminada desde el marco de casi cualquier elemento. Si {{cssxref("border-radius")}} es especificado en un elemento con la propiedad box-shadow, la sombra adopta la misma curva en las esquinas. El z-orden de múltiples cajas de sombra es la misma que de múltiples [sombras de texto](https://developer.mozilla.org/en-US/CSS/text-shadow) (la primera sombra definida se ubica hasta arriba).
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator">Generador de Box-shadow</a> es una herramienta interactiva que permite generar una <code>box-shadow</code>.</p>
+[Generador de Box-shadow](/es/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator) es una herramienta interactiva que permite generar una `box-shadow`.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: css no-line-numbers language-css notranslate"><code class="language-css"><span class="comment token">/* Keyword values */</span>
-<span class="property token">box-shadow</span><span class="punctuation token">:</span> none<span class="punctuation token">;</span>
+```css
+/* Keyword values */
+box-shadow: none;
 
-<span class="comment token">/* offset-x | offset-y | color */</span>
-<span class="property token">box-shadow</span><span class="punctuation token">:</span> <span class="number token">60</span><span class="token unit">px</span> <span class="number token">-16</span><span class="token unit">px</span> teal<span class="punctuation token">;</span>
+/* offset-x | offset-y | color */
+box-shadow: 60px -16px teal;
 
-<span class="comment token">/* offset-x | offset-y | blur-radius | color */</span>
-<span class="property token">box-shadow</span><span class="punctuation token">:</span> <span class="number token">10</span><span class="token unit">px</span> <span class="number token">5</span><span class="token unit">px</span> <span class="number token">5</span><span class="token unit">px</span> black<span class="punctuation token">;</span>
+/* offset-x | offset-y | blur-radius | color */
+box-shadow: 10px 5px 5px black;
 
-<span class="comment token">/* offset-x | offset-y | blur-radius | spread-radius | color */</span>
-<span class="property token">box-shadow</span><span class="punctuation token">:</span> <span class="number token">2</span><span class="token unit">px</span> <span class="number token">2</span><span class="token unit">px</span> <span class="number token">2</span><span class="token unit">px</span> <span class="number token">1</span><span class="token unit">px</span> <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">0.2</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
-<span class="comment token">/* inset | offset-x | offset-y | color */</span>
-<span class="property token">box-shadow</span><span class="punctuation token">:</span> inset <span class="number token">5</span><span class="token unit">em</span> <span class="number token">1</span><span class="token unit">em</span> gold<span class="punctuation token">;</span>
+/* inset | offset-x | offset-y | color */
+box-shadow: inset 5em 1em gold;
 
-<span class="comment token">/* Any number of shadows, separated by commas */</span>
-<span class="property token">box-shadow</span><span class="punctuation token">:</span> <span class="number token">3</span><span class="token unit">px</span> <span class="number token">3</span><span class="token unit">px</span> red<span class="punctuation token">,</span> <span class="number token">-1</span><span class="token unit">em</span> <span class="number token">0</span> <span class="number token">0.4</span><span class="token unit">em</span> olive<span class="punctuation token">;</span>
+/* Any number of shadows, separated by commas */
+box-shadow: 3px 3px red, -1em 0 0.4em olive;
 
-<span class="comment token">/* Global keywords */</span>
-<span class="property token">box-shadow</span><span class="punctuation token">:</span> inherit<span class="punctuation token">;</span>
-<span class="property token">box-shadow</span><span class="punctuation token">:</span> initial<span class="punctuation token">;</span>
-<span class="property token">box-shadow</span><span class="punctuation token">:</span> unset<span class="punctuation token">;</span></code></pre>
+/* Global keywords */
+box-shadow: inherit;
+box-shadow: initial;
+box-shadow: unset;
+```
 
-<p>Especifica una sola box-shadow utilizando:</p>
+Especifica una sola box-shadow utilizando:
 
-<ul>
- <li>Dos, tres, o cuatro valores <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code>.
+- Dos, tres, o cuatro valores [`<length>`](https://developer.mozilla.org/en-US/docs/Web/CSS/length).
 
-  <ul>
-   <li>Si solo dos valores son definidos, son interpretados como valores <code><a href="https://developer.mozilla.org/es/docs/Web/CSS/box-shadow$edit#offset-x">&lt;offset-x&gt;&lt;offset-y&gt;</a></code>.</li>
-   <li>Si un tercer valor es dado, es interpretado como un <code><a href="https://developer.mozilla.org/es/docs/Web/CSS/box-shadow$edit#blur-radius">&lt;blur-radius&gt;</a></code>.</li>
-   <li>Si un cuarto valor es dado, es interpretado como un <code><a href="https://developer.mozilla.org/es/docs/Web/CSS/box-shadow$edit#spread-radius">&lt;spread-radius&gt;</a></code>.</li>
-  </ul>
- </li>
- <li>Opcionalmente, la palabra clave <code><a href="https://developer.mozilla.org/es/docs/Web/CSS/box-shadow$edit#inset">inset</a></code>.</li>
- <li>Opcionalmente, el valor <code><a href="https://developer.mozilla.org/es/docs/Web/CSS/box-shadow$edit#color">&lt;color&gt;</a></code>.</li>
-</ul>
+  - Si solo dos valores son definidos, son interpretados como valores [`<offset-x><offset-y>`](https://developer.mozilla.org/es/docs/Web/CSS/box-shadow$edit#offset-x).
+  - Si un tercer valor es dado, es interpretado como un [`<blur-radius>`](https://developer.mozilla.org/es/docs/Web/CSS/box-shadow$edit#blur-radius).
+  - Si un cuarto valor es dado, es interpretado como un [`<spread-radius>`](https://developer.mozilla.org/es/docs/Web/CSS/box-shadow$edit#spread-radius).
 
-<h3 id="Valores">Valores</h3>
+- Opcionalmente, la palabra clave [`inset`](https://developer.mozilla.org/es/docs/Web/CSS/box-shadow$edit#inset).
+- Opcionalmente, el valor [`<color>`](https://developer.mozilla.org/es/docs/Web/CSS/box-shadow$edit#color).
 
-<dl>
- <dt><code>inset</code></dt>
- <dd>Si no se especifica (por defecto), la sombra asume una sombra difuminada (como si la caja fuera levantada por encima del contenido).<br>
- La presencia de la palabra clave <code>inset</code>  cambia la sombra a una dentro del marco (como si el contenido estuviera deprimido dentro de la caja). Inset shadows dibuja dentro del borde (incluso de los transparentes), por encima del fondo, pero por debajo del contenido.</dd>
- <dt><code>&lt;offset-x&gt; &lt;offset-y&gt;</code></dt>
- <dd>Estos son dos valores {{cssxref("&lt;length&gt;")}} para definir el desplazamiento de la sombra. <code>&lt;offset-x&gt;</code> especifica la distancia horizontal. Los valores negativos colocan las combra a la izquierda de el elemento. <code>&lt;offset-y&gt;</code> Especifica la distancia vertical. Los valores negativos colocan la sombra por encima del elemento. Ver{{cssxref("&lt;length&gt;")}} para posibles unidades.<br>
- Si ambos valores son <code>0</code>, la sombra es ubicada detras del elemento (y puede generar un efecto de difuminación <code>&lt;blur-radius&gt;</code> y/o <code>&lt;spread-radius&gt;</code> está establecido).</dd>
- <dt><code>&lt;blur-radius&gt;</code></dt>
- <dd>Este es el tercer valor {{cssxref("&lt;length&gt;")}}. Cuando mayor sea este valor, mayor sera la difuminación, por consecuencia la sombra se vuelve más grande y ligera. Los valores negativos no son permitidos. Si esto no es especificado, su valor será <code>0</code> (el borde de la sombra es fuerte). La especificación no incluye un algoritmo exacto para como el radio de desenfoque debe ser calculado, sin embargo, explica lo siguiente:</dd>
-</dl>
+### Valores
 
-<blockquote>
-<p>...para una borde largo y recto de la sombra, se debería crear una transición de color con la longitud de la distancia de desenfoque que sea perpendicular a y centrada al borde de la sombra, y en estos rangos desde el color de la sombra total en el punto final del radio dentro de la sombra hasta totalmente transparente en el punto final fuera de ella.</p>
+- `inset`
+  - : Si no se especifica (por defecto), la sombra asume una sombra difuminada (como si la caja fuera levantada por encima del contenido).
+    La presencia de la palabra clave `inset` cambia la sombra a una dentro del marco (como si el contenido estuviera deprimido dentro de la caja). Inset shadows dibuja dentro del borde (incluso de los transparentes), por encima del fondo, pero por debajo del contenido.
+- `<offset-x> <offset-y>`
+  - : Estos son dos valores {{cssxref("&lt;length&gt;")}} para definir el desplazamiento de la sombra. `<offset-x>` especifica la distancia horizontal. Los valores negativos colocan las combra a la izquierda de el elemento. `<offset-y>` Especifica la distancia vertical. Los valores negativos colocan la sombra por encima del elemento. Ver{{cssxref("&lt;length&gt;")}} para posibles unidades.
+    Si ambos valores son `0`, la sombra es ubicada detras del elemento (y puede generar un efecto de difuminación `<blur-radius>` y/o `<spread-radius>` está establecido).
+- `<blur-radius>`
+  - : Este es el tercer valor {{cssxref("&lt;length&gt;")}}. Cuando mayor sea este valor, mayor sera la difuminación, por consecuencia la sombra se vuelve más grande y ligera. Los valores negativos no son permitidos. Si esto no es especificado, su valor será `0` (el borde de la sombra es fuerte). La especificación no incluye un algoritmo exacto para como el radio de desenfoque debe ser calculado, sin embargo, explica lo siguiente:
+
+> ...para una borde largo y recto de la sombra, se debería crear una transición de color con la longitud de la distancia de desenfoque que sea perpendicular a y centrada al borde de la sombra, y en estos rangos desde el color de la sombra total en el punto final del radio dentro de la sombra hasta totalmente transparente en el punto final fuera de ella.
+
+- `<spread-radius>`
+  - : Este es el cuarto valor {{cssxref("&lt;length&gt;")}} . Los valores positivos harán que la sombra se expanda y crezca más, los valores negativos harán que la sombra se reduzca de tamaño. Si no se especifica, este será `0` (la sombra será del mismo tamaño del elemento).
+- `<color>`
+  - : Ver los valores de {{cssxref("&lt;color&gt;")}} para las posibles palabras claves y anotaciones.
+    Si no se especifica, el color depende del navegador - usualmente el valor de la propiedad {{ cssxref("color") }}, pero notar que en Safari, actualmente pinta una sombra transparente en este caso que sea omitido.
+
+## Ejemplos
+
+En nuestro ejemplo, se incluyen tres sombras: una sombra interior, una sombra difuminada normal, y una sombra de 2px que crea un efecto de borde (podría haberse usado un {{cssxref('outline')}} en lugar de una tercera sombra).
+
+### HTML
+
+```html
+<blockquote><q>You may shoot me with your words,<br/>
+You may cut me with your eyes,<br/>
+You may kill me with your hatefulness,<br/>
+But still, like air, I'll rise.</q>
+<p>&mdash; Maya Angelou</p>
 </blockquote>
+```
 
-<dl>
- <dt><code>&lt;spread-radius&gt;</code></dt>
- <dd>Este es el cuarto valor {{cssxref("&lt;length&gt;")}} . Los valores positivos harán que la sombra se expanda y crezca más, los valores negativos harán que la sombra se reduzca de tamaño. Si no se especifica, este será <code>0</code> (la sombra será del mismo tamaño del elemento).</dd>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>Ver los valores de {{cssxref("&lt;color&gt;")}} para las posibles palabras claves y anotaciones.<br>
- Si no se especifica, el color depende del navegador - usualmente el valor de la propiedad {{ cssxref("color") }}, pero notar que en Safari, actualmente pinta una sombra transparente en este caso que sea omitido.</dd>
-</dl>
+_Podrías dispararme con tus palabras,
+podrías cortarme con tus ojos,
+podrías matarme con tu odio,
+y aún, como el aire, levantarme._
+\-Traduccion-
 
-<h2 id="Ejemplos">Ejemplos</h2>
+### CSS
 
-<p>En nuestro ejemplo, se incluyen tres sombras: una sombra interior, una sombra difuminada normal, y una sombra de 2px que crea un efecto de borde (podría haberse usado un {{cssxref('outline')}} en lugar de una tercera sombra).</p>
+```css
+blockquote {
+  padding: 20px;
+  box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+```
 
-<h3 id="HTML">HTML</h3>
+{{EmbedLiveSample('Examples1', '300', '300')}}
 
-<pre class="brush: html line-numbers language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>blockquote</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>q</span><span class="punctuation token">&gt;</span></span>You may shoot me with your words,<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">/&gt;</span></span>
-You may cut me with your eyes,<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">/&gt;</span></span>
-You may kill me with your hatefulness,<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">/&gt;</span></span>
-But still, like air, I'll rise.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>q</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span><span class="entity token" title="—">&amp;mdash;</span> Maya Angelou<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>blockquote</span><span class="punctuation token">&gt;</span></span></code>
-</pre>
+### HTML
 
-<p><em>Podrías dispararme con tus palabras,<br>
- podrías cortarme con tus ojos,<br>
- podrías matarme con tu odio,<br>
- y aún, como el aire, levantarme.</em><br>
- -Traduccion-</p>
+```html
+<div><p>Hello World</p></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css line-numbers language-css notranslate"><code class="language-css"><span class="selector token">blockquote</span> <span class="punctuation token">{</span>
-  <span class="property token">padding</span><span class="punctuation token">:</span> <span class="number token">20</span><span class="token unit">px</span><span class="punctuation token">;</span>
-  <span class="property token">box-shadow</span><span class="punctuation token">:</span>
-       inset <span class="number token">0</span> <span class="number token">-3</span><span class="token unit">em</span> <span class="number token">3</span><span class="token unit">em</span> <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span><span class="punctuation token">,</span><span class="number token">0</span><span class="punctuation token">,</span><span class="number token">0</span><span class="punctuation token">,</span><span class="number token">0.1</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-             <span class="number token">0</span> <span class="number token">0</span>  <span class="number token">0</span> <span class="number token">2</span><span class="token unit">px</span> <span class="function token">rgb</span><span class="punctuation token">(</span><span class="number token">255</span><span class="punctuation token">,</span><span class="number token">255</span><span class="punctuation token">,</span><span class="number token">255</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-             <span class="number token">0.3</span><span class="token unit">em</span> <span class="number token">0.3</span><span class="token unit">em</span> <span class="number token">1</span><span class="token unit">em</span> <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span><span class="punctuation token">,</span><span class="number token">0</span><span class="punctuation token">,</span><span class="number token">0</span><span class="punctuation token">,</span><span class="number token">0.3</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+```css
+p {
+  box-shadow: 0 0 0 2em #F4AAB9,
+              0 0 0 4em #66CCFF;
+  margin: 4em;
+  padding:1em;
+}
+```
 
-<p>{{EmbedLiveSample('Examples1', '300', '300')}}</p>
+{{EmbedLiveSample('Examples2', '300', '300')}}
 
-<div id="Examples2">
-<h3 id="HTML_2">HTML</h3>
+Cuando el `x-offset`, `y-offset`, y `blur` son todos cero, la sombra sera un contorno unifrome. Las sombras son dibujadas desde el fondo hasta el frente, así que la primera sombra se encuentra encima de sombras posteriores. Cuando el `border-radius` es 0, como por defecto, las esquinas de la sombra serán, bien, esquinas. De haberse definido un `border-radius` de cualquier otro valor, las esquinas habrían sido redondeadas.
 
-<pre class="brush: html line-numbers language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Hello World<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
-</div>
+Se ha añadido un margen del tamaño de la sombra más ancha para asegurarse de que la sombra no se superponga a los elementos adyacentes o vaya más allá del borde de la caja de contención. Una sombra de caja no afeta a las dimensiones del [modelo de caja](/es/docs/Web/CSS/CSS_Box_Model).
 
-<h3 id="CSS_2">CSS</h3>
+## Especificaciones
 
-<pre class="brush: css line-numbers language-css notranslate"><code class="language-css"><span class="selector token">p</span> <span class="punctuation token">{</span>
-  <span class="property token">box-shadow</span><span class="punctuation token">:</span> <span class="number token">0</span> <span class="number token">0</span> <span class="number token">0</span> <span class="number token">2</span><span class="token unit">em</span> <span class="hexcode token">#F4AAB9</span><span class="punctuation token">,</span>
-              <span class="number token">0</span> <span class="number token">0</span> <span class="number token">0</span> <span class="number token">4</span><span class="token unit">em</span> <span class="hexcode token">#66CCFF</span><span class="punctuation token">;</span>
-  <span class="property token">margin</span><span class="punctuation token">:</span> <span class="number token">4</span><span class="token unit">em</span><span class="punctuation token">;</span>
-  <span class="property token">padding</span><span class="punctuation token">:</span><span class="number token">1</span><span class="token unit">em</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+| Especificación                                                                   | Estado                                   | Comentario         |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{SpecName('CSS3 Backgrounds', '#box-shadow', 'box-shadow')}} | {{Spec2('CSS3 Backgrounds')}} | Definición inicial |
 
-<p>{{EmbedLiveSample('Examples2', '300', '300')}}</p>
+cssinfo}}
 
-<p>Cuando el <code>x-offset</code>, <code>y-offset</code>, y <code>blur</code> son todos cero, la sombra sera un contorno unifrome. Las sombras son dibujadas desde el fondo hasta el frente, así que la primera sombra se encuentra encima de sombras posteriores. Cuando el <code>border-radius</code> es 0, como por defecto, las esquinas de la sombra serán, bien, esquinas. De haberse definido un <code>border-radius</code> de cualquier otro valor, las esquinas habrían sido redondeadas.</p>
+## Compatibilidad de los navegadores
 
-<p>Se ha añadido un margen del tamaño de la sombra más ancha para asegurarse de que la sombra no se superponga a los elementos adyacentes o vaya más allá del borde de la caja de contención. Una sombra de caja no afeta a las dimensiones del <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model">modelo de caja</a>.</p>
+{{Compat("css.properties.box-shadow")}}
 
+## Ver también
 
-
-<h2 class="cleared" id="Especificaciones">Especificaciones</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#box-shadow', 'box-shadow')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
-
-<p>cssinfo}}</p>
-
-<h2 id="Compatibilidad_de_los_navegadores">Compatibilidad de los navegadores</h2>
-
-
-
-<p>{{Compat("css.properties.box-shadow")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>El tipo de dato {{cssxref("&lt;color&gt;")}}</li>
- <li>Otras propiedades relacionadas al color: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, y {{cssxref("column-rule-color")}}</li>
- <li>{{cssxref("text-shadow")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Applying_color">Aplicando color a los elementos HTML utilizando CSS</a></li>
-</ul>
+- El tipo de dato {{cssxref("&lt;color&gt;")}}
+- Otras propiedades relacionadas al color: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, y {{cssxref("column-rule-color")}}
+- {{cssxref("text-shadow")}}
+- [Aplicando color a los elementos HTML utilizando CSS](/es/docs/Web/HTML/Applying_color)

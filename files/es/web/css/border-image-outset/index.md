@@ -8,81 +8,65 @@ tags:
   - Referencia
 translation_of: Web/CSS/border-image-outset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad <strong><code>border-image-outset</code></strong> describe el monto por el cual se extenderá la imagen de borde más allá del límite de la caja.</p>
+La propiedad **`border-image-outset`** describe el monto por el cual se extenderá la imagen de borde más allá del límite de la caja.
 
-<p>Las porciones de la imagen de borde que se dibujen fuera de los límites de la caja como resultado de esta propiedad no provocarán desplazamiento del contenido. Estas áreas tampoco capturarán o causarán que ocurran eventos del ratón con referencia al elemento al que pertenecen.</p>
+Las porciones de la imagen de borde que se dibujen fuera de los límites de la caja como resultado de esta propiedad no provocarán desplazamiento del contenido. Estas áreas tampoco capturarán o causarán que ocurran eventos del ratón con referencia al elemento al que pertenecen.
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush:css">/* border-image-outset: <em>sides</em> */
+```css
+/* border-image-outset: sides */
 border-image-outset: 1.5;
 
-/* border-image-outset: <em>vertical</em> <em>horizontal</em> */
+/* border-image-outset: vertical horizontal */
 border-image-outset: 1 1.2;
 
-/* border-image-outset: <em>top</em> <em>horizontal</em> <em>bottom */</em>
+/* border-image-outset: top horizontal bottom */
 border-image-outset: 30px 2 45px;
 
-/* border-image-outset: <em>top</em> <em>right</em> <em>bottom</em> <em>left */</em>
+/* border-image-outset: top right bottom left */
 border-image-outset: 7px 12px 14px 5px;
 
 border-image-outset: inherit;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<div class="note">
-<p>Cuando un valor se especifica como valor {{cssxref("&lt;number&gt;")}} sin unidad, el valor es multiplicado por el {{cssxref("border-width")}} calculado correspondiente, para determinar el valor de <code>border-image-outset</code>. Los valores negativos no son permitidos.</p>
-</div>
+> **Nota:** Cuando un valor se especifica como valor {{cssxref("&lt;number&gt;")}} sin unidad, el valor es multiplicado por el {{cssxref("border-width")}} calculado correspondiente, para determinar el valor de `border-image-outset`. Los valores negativos no son permitidos.
 
-<dl>
- <dt><em>sides</em></dt>
- <dd>Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá de los límites de la caja, en las cuatro direcciones.</dd>
- <dt><em>horizontal</em></dt>
- <dd>Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá de los límites de la caja, en sus direcciones horizontales (izquierda y derecha).</dd>
- <dt><em>vertical</em></dt>
- <dd>Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá de los límites de la caja, en sus direcciones verticales (superior e inferior).</dd>
- <dt><em>top</em></dt>
- <dd>Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá del límite del borde superior de la caja.</dd>
- <dt><em>bottom</em></dt>
- <dd>Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá del límite del borde inferior de la caja.</dd>
- <dt><em>right</em></dt>
- <dd>Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá del límite del borde derecho de la caja.</dd>
- <dt><em>left</em></dt>
- <dd>Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá del límite del borde izquierdo de la caja.</dd>
- <dt><code>inherit</code></dt>
- <dd>Es una palabra clave que indica que los cuatro valores serán heredados de los valores calculados de sus elementos padre.</dd>
-</dl>
+- _sides_
+  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá de los límites de la caja, en las cuatro direcciones.
+- _horizontal_
+  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá de los límites de la caja, en sus direcciones horizontales (izquierda y derecha).
+- _vertical_
+  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá de los límites de la caja, en sus direcciones verticales (superior e inferior).
+- _top_
+  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá del límite del borde superior de la caja.
+- _bottom_
+  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá del límite del borde inferior de la caja.
+- _right_
+  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá del límite del borde derecho de la caja.
+- _left_
+  - : Es un valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;number&gt;")}} para la cantidad en la que se extiende la imagen de borde más allá del límite del borde izquierdo de la caja.
+- `inherit`
+  - : Es una palabra clave que indica que los cuatro valores serán heredados de los valores calculados de sus elementos padre.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#border-image-outset', 'border-image-outset')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estatus                                  | Comentarios        |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{SpecName('CSS3 Backgrounds', '#border-image-outset', 'border-image-outset')}} | {{Spec2('CSS3 Backgrounds')}} | Definición inicial |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("css.properties.border-image-outset")}}

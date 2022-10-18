@@ -8,55 +8,57 @@ tags:
   - Web
 translation_of: Web/CSS/box-sizing
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propiedad CSS <strong><code>box-sizing</code></strong> como el {{glossary("user agent")}} debe calcular el ancho y alto total de un elemento.</p>
+La propiedad CSS **`box-sizing`** como el {{glossary("user agent")}} debe calcular el ancho y alto total de un elemento.
 
-<div>{{EmbedInteractiveExample("pages/css/box-sizing.html")}}</div>
+{{EmbedInteractiveExample("pages/css/box-sizing.html")}}
 
+Por defecto en el [modelo de caja de CSS](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), el ancho y alto asignado a un elemento es aplicado solo al contenido de la caja del elemento. Si el elemento tiene algun borde (border) o relleno (padding), este es entonces añadido al ancho y alto a alcanzar el tamaño de la caja que es desplegada en pantalla. Esto significa que cuando se definen el ancho y alto, se tiene que ajustar el valor definido para permitir cualquier borde o relleno que se pueda añadir.
 
+La propiedad `box-sizing` puede ser usada para ajustar el siguiente comportamiento:
 
-<p>Por defecto en el <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">modelo de caja de CSS</a>, el ancho y alto asignado a un elemento es aplicado solo al contenido de la caja del elemento. Si el elemento tiene algun borde (border) o relleno (padding), este es entonces añadido al ancho y alto a alcanzar el tamaño de la caja que es desplegada en pantalla. Esto significa que cuando se definen el ancho y alto, se tiene que ajustar el valor definido para permitir cualquier borde o relleno que se pueda añadir.</p>
+- `content-box` es el comportamiento CSS por defecto para el tamaño de la caja (box-sizing). Si se define el ancho de un elemento en 100 pixeles, la caja del contenido del elemento tendrá 100 pixeles de ancho, y el ancho de cualquier borde o relleno ser añadirá al ancho final desplegado.
+- `border-box` le dice al navegador tomar en cuenta para cualquier valor que se especifique de borde o de relleno para el ancho o alto de un elemento. Es decir, si se define un elemento con un ancho de 100 pixeles. Esos 100 pixeles incluíran cualquier borde o relleno que se añadan, y la caja de contenido se encogerá para absorber ese ancho extra. Esto típicamente hace mucho más fácil dimensionar elementos.
 
-<p>La propiedad <code>box-sizing</code> puede ser usada para ajustar el siguiente comportamiento:</p>
+## Sintaxis
 
-<ul>
- <li><code>content-box</code> es el comportamiento CSS por defecto para el tamaño de la caja (box-sizing). Si se define el ancho de un elemento en 100 pixeles, la caja del contenido del elemento tendrá 100 pixeles de ancho, y el ancho de cualquier borde o relleno ser añadirá al ancho final desplegado.</li>
- <li><code>border-box</code> le dice al navegador tomar en cuenta para cualquier valor que se especifique de borde o de relleno para el ancho o alto de un elemento. Es decir, si se define un elemento con un ancho de 100 pixeles. Esos 100 pixeles incluíran cualquier borde o relleno que se añadan, y la caja de contenido se encogerá para absorber ese ancho extra. Esto típicamente hace mucho más fácil dimensionar elementos.</li>
-</ul>
+La propiedad `box-sizing` es especificada como una sola palabra clave elegida de la lista de valores que aparece abajo.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+### Valores
 
-<p>La propiedad <code>box-sizing</code> es especificada como una sola palabra clave elegida de la lista de valores que aparece abajo.</p>
+- `content-box`
 
-<h3 id="Valores">Valores</h3>
+  - : Este es el valor inicial y por defecto especificado por el estándar CSS. Las propiedades {{Cssxref("width")}} and {{Cssxref("height")}} no incluyen el borde, relleno o margen. Por ejemplo, `.box {width: 350px; border: 10px solid black;}` despliega una caja con un ancho de 370 pixeles.
 
-<dl>
- <dt><code>content-box</code></dt>
- <dd>Este es el valor inicial y por defecto especificado por el estándar CSS. Las propiedades {{Cssxref("width")}} and {{Cssxref("height")}} no incluyen el borde, relleno o margen. Por ejemplo, <code>.box {width: 350px; border: 10px solid black;}</code> despliega una caja con un ancho de 370 pixeles.<br><br>
- Aquí, las dimensiones de un elemento son calculados como: ancho = ancho del contenido, altura = altura del contenido. (Los bordes y rellenos no son incluídos en el cálculo.)</dd>
- <dt><code>border-box</code></dt>
- <dd>Las propiedad de {{Cssxref("width")}} y {{Cssxref("height")}} incluyen el contenido, relleno y borde pero no incluyen el margén. Tenga en cuenta que el relleno y borde estarán dentro de la caja. Por ejemplo, <code>.box {width: 350px; border: 10px solid black;}</code> despliega una caja con un ancho de 350 pixeles. La caja de contenidos no puede ser negativo y tiene un valor mínimo de 0, haciendo imposible usar el <code>border-box</code> para hacer que el elemento desaparezca.<br><br>
- Las dimensiones del elemeno se calculan como: ancho = borde + relleno + ancho del contenido, y altura = borde + relleno + altura del contenido.</dd>
-</dl>
+    Aquí, las dimensiones de un elemento son calculados como: ancho = ancho del contenido, altura = altura del contenido. (Los bordes y rellenos no son incluídos en el cálculo.)
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+- `border-box`
+
+  - : Las propiedad de {{Cssxref("width")}} y {{Cssxref("height")}} incluyen el contenido, relleno y borde pero no incluyen el margén. Tenga en cuenta que el relleno y borde estarán dentro de la caja. Por ejemplo, `.box {width: 350px; border: 10px solid black;}` despliega una caja con un ancho de 350 pixeles. La caja de contenidos no puede ser negativo y tiene un valor mínimo de 0, haciendo imposible usar el `border-box` para hacer que el elemento desaparezca.
+
+    Las dimensiones del elemeno se calculan como: ancho = borde + relleno + ancho del contenido, y altura = borde + relleno + altura del contenido.
+
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>Este ejemplo muesta cómo diferentes valores de tamaño de la caja (<code>box-sizing</code>) alteran el tamaño desplegado de dos elementos idénticos.</p>
+Este ejemplo muesta cómo diferentes valores de tamaño de la caja (`box-sizing`) alteran el tamaño desplegado de dos elementos idénticos.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="content-box"&gt;Contenido de la caja&lt;/div&gt;
-&lt;br&gt;
-&lt;div class="border-box"&gt;Borde de la caja&lt;/div&gt;</pre>
+```html
+<div class="content-box">Contenido de la caja</div>
+<br>
+<div class="border-box">Borde de la caja</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 160px;
   height: 80px;
   padding: 20px;
@@ -79,41 +81,24 @@ translation_of: Web/CSS/box-sizing
      Ancho de la caja de contenido: 160px - (2 * 20px) - (2 * 8px) = 104px
      Altura de la caja de contenido: 80px - (2 * 20px) - (2 * 8px) = 24px */
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample('Ejemplo', 'auto', 300)}}</p>
+{{EmbedLiveSample('Ejemplo', 'auto', 300)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#box-sizing', 'box-sizing')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                               | Estatus                              | Comentario         |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('CSS3 Basic UI', '#box-sizing', 'box-sizing')}} | {{Spec2('CSS3 Basic UI')}} | Definición inicial |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
+{{Compat("css.properties.box-sizing")}}
 
+## Ver también
 
-<p>{{Compat("css.properties.box-sizing")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Modelo de caja de CSS</a></li>
-</ul>
+- [Modelo de caja de CSS](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)

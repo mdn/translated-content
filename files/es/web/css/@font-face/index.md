@@ -3,160 +3,151 @@ title: '@font-face'
 slug: Web/CSS/@font-face
 translation_of: Web/CSS/@font-face
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p><code>@font-face</code> permite al autor especificar fuentes online para visualizar en sus páginas web. Al permitir a los autores proporcionar sus propias fuentes,<code> @font-face </code>elimina la necesidad de depender del numero limitado de fuentes de usuarios instaladas en sus computadoras.</p>
+`@font-face` permite al autor especificar fuentes online para visualizar en sus páginas web. Al permitir a los autores proporcionar sus propias fuentes,` @font-face `elimina la necesidad de depender del numero limitado de fuentes de usuarios instaladas en sus computadoras.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre>@font-face {
-  font-family: &lt;un-nombre-de-fuente-remota&gt;;
-  src: &lt;origen&gt; [,&lt;origen&gt;]*;
-  [font-weight: &lt;peso&gt;];
-  [font-style: &lt;estilo&gt;];
+```
+@font-face {
+  font-family: <un-nombre-de-fuente-remota>;
+  src: <origen> [,<origen>]*;
+  [font-weight: <peso>];
+  [font-style: <estilo>];
 }
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt>&lt;un-nombre-de-fuente-remota&gt; </dt>
- <dd>Especifica el nombre de una fuente que será utilizada como valor de font face por las propiedades de fuente.</dd>
- <dt>&lt;origen&gt; </dt>
- <dd>Dirección URL para la ubicación remota del archivo de fuente, o el nombre de una fuente en la computadora del usuario en la forma <code>local("Nombre de Fuente")</code>.</dd>
- <dt>&lt;peso&gt; </dt>
- <dd>Un valor de <a class="internal" href="/en/CSS/font-weight" title="en/CSS/font-weight">peso/grosor de fuente</a>.</dd>
- <dt>&lt;estilo&gt; </dt>
- <dd>Un valor de <a class="internal" href="/en/CSS/font-style" title="en/CSS/font-style">estilo de fuente</a>.</dd>
-</dl>
+- \<un-nombre-de-fuente-remota>
+  - : Especifica el nombre de una fuente que será utilizada como valor de font face por las propiedades de fuente.
+- \<origen>
+  - : Dirección URL para la ubicación remota del archivo de fuente, o el nombre de una fuente en la computadora del usuario en la forma `local("Nombre de Fuente")`.
+- \<peso>
+  - : Un valor de [peso/grosor de fuente](/en/CSS/font-weight "en/CSS/font-weight").
+- \<estilo>
+  - : Un valor de [estilo de fuente](/en/CSS/font-style "en/CSS/font-style").
 
-<p>Puede especificar una fuente por nombre en la computadora local del usuario utilizando la sintaxis <code>local()</code>. Si esa fuente no es encontrada, se intentarán otros orígenes hasta encontrar una fuente.</p>
+Puede especificar una fuente por nombre en la computadora local del usuario utilizando la sintaxis `local()`. Si esa fuente no es encontrada, se intentarán otros orígenes hasta encontrar una fuente.
 
-<h2 id="Formatos_de_fuentes_soportados">Formatos de fuentes soportados</h2>
+## Formatos de fuentes soportados
 
-<ul>
- <li>Gecko 1.9.1 (Firefox 3.5) soporta fuentes TrueType y OpenType.</li>
- <li>Gecko 1.9.2 (Firefox 3.6) agrega soporte para <a href="/en/WOFF" title="en/About WOFF">WOFF</a>.</li>
-</ul>
+- Gecko 1.9.1 (Firefox 3.5) soporta fuentes TrueType y OpenType.
+- Gecko 1.9.2 (Firefox 3.6) agrega soporte para [WOFF](/en/WOFF "en/About WOFF").
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Este ejemplo simplemente especifica una fuente que puede ser descargada para utilizar, aplicando la fuente a todo el cuerpo del documento.</p>
+Este ejemplo simplemente especifica una fuente que puede ser descargada para utilizar, aplicando la fuente a todo el cuerpo del documento.
 
-<p><a class="internal" href="/@api/deki/files/2935/=webfont-sample.html" title="/@api/deki/files/2935/=webfont-sample.html">Muestra en vivo</a></p>
+[Muestra en vivo](/@api/deki/files/2935/=webfont-sample.html)
 
-<pre>&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Web Font Sample&lt;/title&gt;
-  &lt;style type="text/css" media="screen, print"&gt;
+```
+<html>
+<head>
+  <title>Web Font Sample</title>
+  <style type="text/css" media="screen, print">
     @font-face {
       font-family: "Bitstream Vera Serif Bold";
       src: url("https://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
     }
 
     body { font-family: "Bitstream Vera Serif Bold", serif }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+  </style>
+</head>
+<body>
   This is Bitstream Vera Serif Bold.
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<p>En este ejemplo, es utilizada la copia local de "Helvetica Neue Bold" del usuario; si el usuario no tiene esa fuente instalada (se prueban dos nombre distintos), luego la fuente descargable de nombre "MgOpenModernaBold.ttf" es utilizada en cambio:</p>
+En este ejemplo, es utilizada la copia local de "Helvetica Neue Bold" del usuario; si el usuario no tiene esa fuente instalada (se prueban dos nombre distintos), luego la fuente descargable de nombre "MgOpenModernaBold.ttf" es utilizada en cambio:
 
-<pre class="deki-transform">@font-face {
+```
+@font-face {
   font-family: MyHelvetica;
   src: local("Helvetica Neue Bold"),
   local("HelveticaNeue-Bold"),
   url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
-</pre>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<ul>
- <li><span id="result_box" lang="es"><span class="" title="Haz clic para obtener otras posibles traducciones">En</span> <span class="" title="Haz clic para obtener otras posibles traducciones">Gecko</span><span title="Haz clic para obtener otras posibles traducciones">,</span> <span class="" title="Haz clic para obtener otras posibles traducciones">las fuentes</span> <span class="" title="Haz clic para obtener otras posibles traducciones">web están</span> <span class="" title="Haz clic para obtener otras posibles traducciones">sujetas</span> <span class="" title="Haz clic para obtener otras posibles traducciones">a la restricción del</span> <span class="" title="Haz clic para obtener otras posibles traducciones">mismo dominio</span> <span class="" title="Haz clic para obtener otras posibles traducciones">(los </span><span title="Haz clic para obtener otras posibles traducciones">archivos de</span> <span class="" title="Haz clic para obtener otras posibles traducciones">fuentes</span> <span class="" title="Haz clic para obtener otras posibles traducciones">deben estar en</span> <span class="" title="Haz clic para obtener otras posibles traducciones">el</span> <span class="" title="Haz clic para obtener otras posibles traducciones">mismo dominio</span> <span class="" title="Haz clic para obtener otras posibles traducciones">que</span> <span class="" title="Haz clic para obtener otras posibles traducciones">la página</span> <span class="" title="Haz clic para obtener otras posibles traducciones">que los utiliza</span><span title="Haz clic para obtener otras posibles traducciones">)</span><span title="Haz clic para obtener otras posibles traducciones">,</span> <span class="" title="Haz clic para obtener otras posibles traducciones">a menos que</span> <span class="" title="Haz clic para obtener otras posibles traducciones">los </span></span><a class="internal" href="/En/HTTP_access_control" title="En/HTTP access control">controles de acceso HTTP</a> <span id="result_box" lang="es"><span class="" title="Haz clic para obtener otras posibles traducciones">sean utilizados para</span> <span class="" title="Haz clic para obtener otras posibles traducciones">relajar</span> <span class="" title="Haz clic para obtener otras posibles traducciones">esta restricción.</span></span></li>
- <li>
-  <div class="note"><strong>Nota:</strong> Porque no hay tipos MIME definidos para fuentes TrueType, OpenType, y WOFF, el tipo MIME del archivo especificado no es considerado.</div>
- </li>
- <li>Cuando Gecko muestra una página que usa fuentes web, inicialmente muestra el texto que usa la mejor fuente de reserva CSS disponible en la computadora del usuario mientras espera que la fuente web termine de descargarse. Mientras cada fuente web se termina de descargar, Gecko actualiza el texto que utiliza esa fuente. Esto permite al usuario leer más rápidamente el texto en la página.</li>
-</ul>
+- En Gecko, las fuentes web están sujetas a la restricción del mismo dominio (los archivos de fuentes deben estar en el mismo dominio que la página que los utiliza), a menos que los [controles de acceso HTTP](/En/HTTP_access_control "En/HTTP access control") sean utilizados para relajar esta restricción.
+- > **Nota:** Porque no hay tipos MIME definidos para fuentes TrueType, OpenType, y WOFF, el tipo MIME del archivo especificado no es considerado.
+- Cuando Gecko muestra una página que usa fuentes web, inicialmente muestra el texto que usa la mejor fuente de reserva CSS disponible en la computadora del usuario mientras espera que la fuente web termine de descargarse. Mientras cada fuente web se termina de descargar, Gecko actualiza el texto que utiliza esa fuente. Esto permite al usuario leer más rápidamente el texto en la página.
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td>Chrome (WebKit)</td>
-   <td><strong>4</strong> (532.5)</td>
-   <td>Solo fuentes TrueType y OpenType</td>
-  </tr>
-  <tr>
-   <td></td>
-   <td><strong>6</strong> (534.3)</td>
-   <td>Web Open Font Format (WOFF) soporte agregado</td>
-  </tr>
- </tbody>
- <tbody>
-  <tr>
-   <td>Opera</td>
-   <td><strong>10.0</strong></td>
-   <td>Solo fuentes TrueType y OpenType</td>
-  </tr>
-  <tr>
-   <td>Safari (WebKit)</td>
-   <td><strong>3.1</strong> (525.6)</td>
-   <td>Solo fuentes TrueType y OpenType</td>
-  </tr>
- </tbody>
- <tbody>
-  <tr>
-   <th>Navegador</th>
-   <th>Versión desde</th>
-   <th>Soporte de</th>
-  </tr>
-  <tr>
-   <td>Internet Explorer</td>
-   <td><strong>4.0</strong></td>
-   <td>Solo fuentes OpenType embebidas</td>
-  </tr>
-  <tr>
-   <td>Internet Explorer</td>
-   <td><strong>9.0 Preview 3</strong></td>
-   <td>Web Open Font Format (WOFF) soporte agregado</td>
-  </tr>
-  <tr>
-   <td rowspan="2">Firefox (Gecko)</td>
-   <td><strong>3.5</strong> (1.9.1)</td>
-   <td>Solo fuentes TrueType y OpenType</td>
-  </tr>
-  <tr>
-   <td><strong>3.6</strong> (1.9.2)</td>
-   <td>Web Open Font Format (WOFF) soporte agregado</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>Chrome (WebKit)</td>
+      <td><strong>4</strong> (532.5)</td>
+      <td>Solo fuentes TrueType y OpenType</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><strong>6</strong> (534.3)</td>
+      <td>Web Open Font Format (WOFF) soporte agregado</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Opera</td>
+      <td><strong>10.0</strong></td>
+      <td>Solo fuentes TrueType y OpenType</td>
+    </tr>
+    <tr>
+      <td>Safari (WebKit)</td>
+      <td><strong>3.1</strong> (525.6)</td>
+      <td>Solo fuentes TrueType y OpenType</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th>Navegador</th>
+      <th>Versión desde</th>
+      <th>Soporte de</th>
+    </tr>
+    <tr>
+      <td>Internet Explorer</td>
+      <td><strong>4.0</strong></td>
+      <td>Solo fuentes OpenType embebidas</td>
+    </tr>
+    <tr>
+      <td>Internet Explorer</td>
+      <td><strong>9.0 Preview 3</strong></td>
+      <td>Web Open Font Format (WOFF) soporte agregado</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Firefox (Gecko)</td>
+      <td><strong>3.5</strong> (1.9.1)</td>
+      <td>Solo fuentes TrueType y OpenType</td>
+    </tr>
+    <tr>
+      <td><strong>3.6</strong> (1.9.2)</td>
+      <td>Web Open Font Format (WOFF) soporte agregado</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Vea también <a class="external" href="http://msdn.microsoft.com/en-us/library/ms530757(VS.85).aspx">MSDN Microsoft library @font-face</a>.</p>
+Vea también [MSDN Microsoft library @font-face](<http://msdn.microsoft.com/en-us/library/ms530757(VS.85).aspx>).
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html#font-descriptions">CSS 2 Fonts</a> 1998-05-12 Obsoletas</li>
- <li><a class="external" href="http://www.w3.org/TR/css3-fonts/#font-resources">CSS 3 Fonts</a> 2009 Borrador de trabajo</li>
- <li><a class="external" href="http://people.mozilla.com/~jkew/woff/woff-2009-09-16.html">WOFF file format specification</a> Borrador</li>
-</ul>
+- [CSS 2 Fonts](http://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html#font-descriptions) 1998-05-12 Obsoletas
+- [CSS 3 Fonts](http://www.w3.org/TR/css3-fonts/#font-resources) 2009 Borrador de trabajo
+- [WOFF file format specification](http://people.mozilla.com/~jkew/woff/woff-2009-09-16.html) Borrador
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li><a class="external" href="http://www.fontsquirrel.com/fontface/generator">FontSquirrel @font-face generator</a></li>
- <li><a href="/en/WOFF" title="en/About WOFF">About WOFF</a></li>
- <li><a class="external" href="http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/">Beautiful fonts with @font-face</a></li>
- <li><a class="external" href="http://openfontlibrary.org/">Open Font Library</a></li>
- <li><a class="external" href="http://opentype.info/demo/webfontdemo.html">10 Great Free Fonts for @font-face embedding</a></li>
-</ul>
+- [FontSquirrel @font-face generator](http://www.fontsquirrel.com/fontface/generator)
+- [About WOFF](/en/WOFF "en/About WOFF")
+- [Beautiful fonts with @font-face](http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
+- [Open Font Library](http://openfontlibrary.org/)
+- [10 Great Free Fonts for @font-face embedding](http://opentype.info/demo/webfontdemo.html)

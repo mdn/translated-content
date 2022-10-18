@@ -8,45 +8,44 @@ tags:
   - Reference
 translation_of: Web/CSS/@font-face/unicode-range
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>La regla CSS <strong><code>unicode-range</code></strong> especifica un rango específico de caracteres a ser usados por una fuente definida  {{cssxref("@font-face")}} y hacerla disponible para su uso en la página actual. Si la página no usa algún caracter en ese rango, la fuente no es descargada; si usa al menos uno de ellos, la fuente es descargada.</p>
+La regla CSS **`unicode-range`** especifica un rango específico de caracteres a ser usados por una fuente definida {{cssxref("@font-face")}} y hacerla disponible para su uso en la página actual. Si la página no usa algún caracter en ese rango, la fuente no es descargada; si usa al menos uno de ellos, la fuente es descargada.
 
-<p>El propósito de esta regla es permitir a las fuente ser segmentados, así el navegador solo necesita descargar la fuente necesitada para el contexto de texto en una página en particular. Por ejemplo, un sitio con muchas localizaciones podría proveer fuentes separadas para el inglés, griego y japonés. Para los usuarios que ven la versión en inglés de la página, las fuentes para el griego y el japonés no son necesarias, y por lo tanto no se descargan, ahorrando ancho de banda.</p>
+El propósito de esta regla es permitir a las fuente ser segmentados, así el navegador solo necesita descargar la fuente necesitada para el contexto de texto en una página en particular. Por ejemplo, un sitio con muchas localizaciones podría proveer fuentes separadas para el inglés, griego y japonés. Para los usuarios que ven la versión en inglés de la página, las fuentes para el griego y el japonés no son necesarias, y por lo tanto no se descargan, ahorrando ancho de banda.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush:css">/* valores &lt;unicode-range&gt; */
+```css
+/* valores <unicode-range> */
 unicode-range: U+26;               /* un único código */
 unicode-range: U+0-7F;
 unicode-range: U+0025-00FF;        /* rango de códigos */
 unicode-range: U+4??;              /* rango por expresión */
 unicode-range: U+0025-00FF, U+4??; /* multiples valores */
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><em><strong>un único código</strong></em></dt>
- <dd>Un único código de caracter Unicode, por ejemplo <code>U+26</code>.</dd>
- <dt><em><strong>un rango de código</strong></em></dt>
- <dd>Un rango de códigos de caracter Unicode. Asi que, por ejemplo, <code>U+0025-00FF</code> significa <em>incluir todos caracteres en el rango <code>U+0025</code> a <code>U+00FF</code></em>.</dd>
- <dt><em><strong>rango por expresión</strong></em></dt>
- <dd>Un rango de códigos Unicode que contienen caracteres comodín, usando el caracter <code>'?'</code>, asi que, por ejemplo <code>U+4??</code> significa <em>incluir todos los caracteres en el rango <code>U+400</code> a <code>U+4FF</code></em>.</dd>
-</dl>
+- _**un único código**_
+  - : Un único código de caracter Unicode, por ejemplo `U+26`.
+- _**un rango de código**_
+  - : Un rango de códigos de caracter Unicode. Asi que, por ejemplo, `U+0025-00FF` significa _incluir todos caracteres en el rango `U+0025` a `U+00FF`_.
+- _**rango por expresión**_
+  - : Un rango de códigos Unicode que contienen caracteres comodín, usando el caracter `'?'`, asi que, por ejemplo `U+4??` significa _incluir todos los caracteres en el rango `U+400` a `U+4FF`_.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Hemos creado una etiqueta HTML que contiene un elemento {{HTMLElement("div")}}, que incluye un simbolo &amp;, el cual queremos que se muestre con una fuente diferente. Para hacerlo obvio,  usaremos una fuente sans-serif, <em>Helvetica</em> para el texto, y una fuente serif, <em>Times New Roman</em>, para el caracter &amp;.</p>
+Hemos creado una etiqueta HTML que contiene un elemento {{HTMLElement("div")}}, que incluye un simbolo &, el cual queremos que se muestre con una fuente diferente. Para hacerlo obvio, usaremos una fuente sans-serif, _Helvetica_ para el texto, y una fuente serif, _Times New Roman_, para el caracter &.
 
-<div class="">
-<pre class="brush: html">&lt;div&gt;Me &amp; You = Us&lt;/div&gt;</pre>
-</div>
+```html
+<div>Me & You = Us</div>
+```
 
-<p>En el CSS, puedes ver que en efecto estamos definiendo una separación completa {{cssxref("@font-face")}} el cual solo incluye un caracter, significando que solo ese caracter será estilizado con esa fuente. Podríamos haber hecho esto tambien encapsulando el caracter &amp; en un elemento {{HTMLElement("span")}} y aplicando una fuente solo a ese elemento, pero esto es un elemento y una regla extra.</p>
+En el CSS, puedes ver que en efecto estamos definiendo una separación completa {{cssxref("@font-face")}} el cual solo incluye un caracter, significando que solo ese caracter será estilizado con esa fuente. Podríamos haber hecho esto tambien encapsulando el caracter & en un elemento {{HTMLElement("span")}} y aplicando una fuente solo a ese elemento, pero esto es un elemento y una regla extra.
 
-<div class="">
-<pre class="brush: css">@font-face {
+```css
+@font-face {
   font-family: 'Ampersand';
   src: local('Times New Roman');
   unicode-range: U+26;
@@ -55,32 +54,19 @@ unicode-range: U+0025-00FF, U+4??; /* multiples valores */
 div {
   font-size: 4em;
   font-family: Ampersand, Helvetica, sans-serif;
-}</pre>
+}
+```
 
-<h3 id="Reultado">Reultado</h3>
+### Reultado
 
-<p><img alt="What the example should looks like if your browser supports it." src="https://mdn.mozillademos.org/files/6043/Refresult.png"></p>
-</div>
+![What the example should looks like if your browser supports it.](https://mdn.mozillademos.org/files/6043/Refresult.png)
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#descdef-font-face-unicode-range', 'unicode-range')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estado                           | Comentario         |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Fonts', '#descdef-font-face-unicode-range', 'unicode-range')}} | {{Spec2('CSS3 Fonts')}} | Initial definition |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<p>{{Compat("css.at-rules.font-face.unicode-range")}}</p>
+{{Compat("css.at-rules.font-face.unicode-range")}}

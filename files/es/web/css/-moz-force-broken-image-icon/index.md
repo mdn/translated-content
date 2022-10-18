@@ -7,47 +7,49 @@ tags:
   - Non-standard
 translation_of: Web/CSS/-moz-force-broken-image-icon
 ---
-<div>{{Non-standard_header}}{{ CSSRef() }}</div>
+{{Non-standard_header}}{{ CSSRef() }}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p><code>-moz-force-broken-image-icon</code> es una propiedad CSS extendida. El valor <code>1</code> fuerza un icono de imagen no encontrada aunque la imagen tenga el atributo <code>alt</code>. Cuando el valor es <code>0</code> la imagen actuará normalmente y solo mostrará el atributo  <code>alt</code>.</p>
+`-moz-force-broken-image-icon` es una propiedad CSS extendida. El valor `1` fuerza un icono de imagen no encontrada aunque la imagen tenga el atributo `alt`. Cuando el valor es `0` la imagen actuará normalmente y solo mostrará el atributo `alt`.
 
-<div class="note"><strong>Nota:</strong> Aunque el valor sea <code>1</code> el atributo <code>alt</code> se seguirá mostrando. Más información debajo.</div>
+> **Nota:** Aunque el valor sea `1` el atributo `alt` se seguirá mostrando. Más información debajo.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">-moz-force-broken-image-icon: &lt;integer&gt;;</pre>
+```
+-moz-force-broken-image-icon: <integer>;
+```
 
-<h3 id="Values" name="Values">Valores</h3>
+### Valores
 
 {{cssxref("&lt;integer&gt;")}}
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush:css;">img {
+```css
+img {
   -moz-force-broken-image-icon: 1;
   height:100px;
   width:100px;
-}</pre>
+}
+```
 
-<pre class="brush:html;">&lt;img src='/enlace/roto/imagen.png' alt='Imagen con enlace roto'&gt;</pre>
+```html
+<img src='/enlace/roto/imagen.png' alt='Imagen con enlace roto'>
+```
 
-<p>{{ EmbedLiveSample('Examples','125','125','/files/4619/broken%20image%20link.png') }}</p>
+{{ EmbedLiveSample('Examples','125','125','/files/4619/broken%20image%20link.png') }}
 
-<div class="note"><strong>Nota:</strong> A no ser que la imagen tenga una altura y ancho especificados, el icono de imagen rota no se mostrará, pero el atributo alt no se mostrará si el valor de <code>-moz-force-broken-image-icon</code> es <code>1</code>.</div>
+> **Nota:** A no ser que la imagen tenga una altura y ancho especificados, el icono de imagen rota no se mostrará, pero el atributo alt no se mostrará si el valor de `-moz-force-broken-image-icon` es `1`.
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<ul>
- <li>Esta propiedad solo funcionará en los navegadores basados en Gecko</li>
- <li>No se recomienda el uso de esta propiedad. Se debería usar un atributo alt adecuado.</li>
-</ul>
+- Esta propiedad solo funcionará en los navegadores basados en Gecko
+- No se recomienda el uso de esta propiedad. Se debería usar un atributo alt adecuado.
 
-<h2 id="See_also" name="See_also">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{ Bug(58646) }}</li>
-</ul>
+- {{ Bug(58646) }}

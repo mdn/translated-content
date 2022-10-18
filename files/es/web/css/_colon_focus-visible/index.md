@@ -1,34 +1,37 @@
 ---
 title: ':focus-visible'
-slug: 'Web/CSS/:focus-visible'
-translation_of: 'Web/CSS/:focus-visible'
+slug: Web/CSS/:focus-visible
+translation_of: Web/CSS/:focus-visible
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La pseudo-clase <strong><code>:focus-visible</code></strong>  se aplica mientras un elemento coincide con la pseudo-clase {{CSSxRef(":focus")}} y el  UA (<a href="/en-US/docs/Glossary/User_agent">Agente de Usuario</a>) determina mediante heurística que el foco debe hacerse evidente en el elemento. (Muchos navegdores muestras un "anillo de enfoque" por defecto en este caso.</p>
+La pseudo-clase **`:focus-visible`** se aplica mientras un elemento coincide con la pseudo-clase {{CSSxRef(":focus")}} y el UA ([Agente de Usuario](/es/docs/Glossary/User_agent)) determina mediante heurística que el foco debe hacerse evidente en el elemento. (Muchos navegdores muestras un "anillo de enfoque" por defecto en este caso.
 
-<p>Este selector es útil para proporcionar un indicador de enfoque diferente basado en la modalidad de entrada del usuario (ratón vs teclado).</p>
+Este selector es útil para proporcionar un indicador de enfoque diferente basado en la modalidad de entrada del usuario (ratón vs teclado).
 
-<p>Nótese que Firefox soporta una funcionalidad similar a través de una pseudo-clase prefijada — {{CSSxRef(":-moz-focusring")}}.</p>
+Nótese que Firefox soporta una funcionalidad similar a través de una pseudo-clase prefijada — {{CSSxRef(":-moz-focusring")}}.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
 {{CSSSyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Ejemplos_básicos">Ejemplos básicos</h3>
+### Ejemplos básicos
 
-<p>En este ejemplo, el selector  <code>:focus-visible</code> usa el comportamiento del UA para deteminar cuándo emparejar. Compara lo que sucede cuando haces clic en los diferentes controles con un ratón con lo que sucede cuando los atraviesas con el teclado. Note la diferencia de comportamiento con respecto a los elementos con estilo <code>:focus</code>.</p>
+En este ejemplo, el selector `:focus-visible` usa el comportamiento del UA para deteminar cuándo emparejar. Compara lo que sucede cuando haces clic en los diferentes controles con un ratón con lo que sucede cuando los atraviesas con el teclado. Note la diferencia de comportamiento con respecto a los elementos con estilo `:focus`.
 
-<pre class="brush: html notranslate">&lt;input value="Default styles"&gt;&lt;br&gt;
-&lt;button&gt;Default styles&lt;/button&gt;&lt;br&gt;
-&lt;input class="focus-only" value=":focus only"&gt;&lt;br&gt;
-&lt;button class="focus-only"&gt;:focus only&lt;/button&gt;&lt;br&gt;
-&lt;input class="focus-visible-only" value=":focus-visible only"&gt;&lt;br&gt;
-&lt;button class="focus-visible-only"&gt;:focus-visible only&lt;/button&gt;</pre>
+```html
+<input value="Default styles"><br>
+<button>Default styles</button><br>
+<input class="focus-only" value=":focus only"><br>
+<button class="focus-only">:focus only</button><br>
+<input class="focus-visible-only" value=":focus-visible only"><br>
+<button class="focus-visible-only">:focus-visible only</button>
+```
 
-<pre class="brush: css highlight[9] notranslate">input, button {
+```css
+input, button {
   margin: 10px;
 }
 
@@ -39,17 +42,20 @@ translation_of: 'Web/CSS/:focus-visible'
 .focus-visible-only:focus-visible {
   outline: 4px dashed darkorange;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Basic_example", "100%", 300)}}</p>
+{{EmbedLiveSample("Basic_example", "100%", 300)}}
 
-<h3 id="Mostrando_selectivamente_el_indicador_de_enfoque">Mostrando selectivamente el indicador de enfoque</h3>
+### Mostrando selectivamente el indicador de enfoque
 
-<p>Un control personalizado, como un botón de <a href="/en-US/docs/User:Andreas_Wuest/Custom_Elements">elemento personalizado</a>, puede utilizar <code>:focus-visible</code> para aplicar selectivamente un indicador de enfoque sólo en el enfoque del teclado. Esto coincide con el comportamiento de enfoque nativo para controles como {{htmlelement("button")}}.</p>
+Un control personalizado, como un botón de [elemento personalizado](/es/docs/User:Andreas_Wuest/Custom_Elements), puede utilizar `:focus-visible` para aplicar selectivamente un indicador de enfoque sólo en el enfoque del teclado. Esto coincide con el comportamiento de enfoque nativo para controles como {{htmlelement("button")}}.
 
-<pre class="brush: html notranslate">&lt;custom-button tabindex="0" role="button"&gt;Click Me&lt;/custom-button&gt;</pre>
+```html
+<custom-button tabindex="0" role="button">Click Me</custom-button>
+```
 
-<pre class="">custom-button {
+```
+custom-button {
   display: inline-block;
   margin: 10px;
 }
@@ -73,56 +79,38 @@ custom-button:focus-visible {
      :focus-visible */
   outline: 4px dashed darkorange;
   background: transparent;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Selectively_showing_the_focus_indicator", "100%", 300)}}</p>
+{{EmbedLiveSample("Selectively_showing_the_focus_indicator", "100%", 300)}}
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>You can polyfill <code>:focus-visible</code> usando <a href="https://github.com/WICG/focus-visible">focus-visible.js</a>.</p>
+You can polyfill `:focus-visible` usando [focus-visible.js](https://github.com/WICG/focus-visible).
 
-<h2 id="Problemas_de_accesibilidad">Problemas de accesibilidad</h2>
+## Problemas de accesibilidad
 
-<h3 id="Baja_visión">Baja visión</h3>
+### Baja visión
 
-<p>Asegúrate de que el indicador de enfoque visual pueda ser visto por personas con baja visión. Esto también beneficiará a cualquier persona que utilice una pantalla en un espacio brillantemente iluminado (como el exterior en el sol). <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">WCAG 2.1 SC 1.4.11 Contraste Sin Texto</a> requiere que el indicador de enfoque visual sea al menos 3 a 1.</p>
+Asegúrate de que el indicador de enfoque visual pueda ser visto por personas con baja visión. Esto también beneficiará a cualquier persona que utilice una pantalla en un espacio brillantemente iluminado (como el exterior en el sol). [WCAG 2.1 SC 1.4.11 Contraste Sin Texto](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) requiere que el indicador de enfoque visual sea al menos 3 a 1.
 
-<ul>
- <li>Indicadores de enfoque visual accesibles: <a href="https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/">Déle a su sitio un poco de enfoque! Consejos para diseñar indicadores de enfoque útiles y utilizables</a></li>
-</ul>
+- Indicadores de enfoque visual accesibles: [Déle a su sitio un poco de enfoque! Consejos para diseñar indicadores de enfoque útiles y utilizables](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
 
-<h3 id="Cognición">Cognición</h3>
+### Cognición
 
-<p>Puede que no sea obvio por qué el indicador de enfoque aparece y desaparece si una persona está utilizando formas mixtas de entrada. Para los usuarios con preocupaciones cognitivas, o que tienen menos conocimientos tecnológicos, esta falta de comportamiento consistente para los elementos interactivos puede ser confusa.</p>
+Puede que no sea obvio por qué el indicador de enfoque aparece y desaparece si una persona está utilizando formas mixtas de entrada. Para los usuarios con preocupaciones cognitivas, o que tienen menos conocimientos tecnológicos, esta falta de comportamiento consistente para los elementos interactivos puede ser confusa.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table" style="">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#the-focus-visible-pseudo", ":focus-visible")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estado                               | Comentario          |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName("CSS4 Selectors", "#the-focus-visible-pseudo", ":focus-visible")}} | {{Spec2("CSS4 Selectors")}} | Initial definition. |
 
-<h2 id="Compatibilidad_de_navegador">Compatibilidad de navegador</h2>
+## Compatibilidad de navegador
 
+{{Compat("css.selectors.focus-visible")}}
 
+## Vea también
 
-<p>{{Compat("css.selectors.focus-visible")}}</p>
-
-<h2 id="Vea_también">Vea también</h2>
-
-<ul>
- <li>{{CSSxRef(":focus")}}</li>
- <li>{{CSSxRef(":focus-within")}}</li>
-</ul>
+- {{CSSxRef(":focus")}}
+- {{CSSxRef(":focus-within")}}

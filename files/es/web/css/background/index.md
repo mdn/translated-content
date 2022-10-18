@@ -3,136 +3,114 @@ title: background
 slug: Web/CSS/background
 tags:
   - CSS
-  - 'CSS:Referencias'
+  - CSS:Referencias
   - Todas_las_Categorías
 translation_of: Web/CSS/background
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>La propiedad <code>background</code> es un atajo para definir los valores individuales del fondo en una única regla CSS. Se puede usar <code>background</code> para definir los valores de una o de todas las propiedades siguientes: {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color", "color") }}, {{ Cssxref("background-image", "image") }}, {{ Cssxref("background-position", "position") }}, {{ Cssxref("background-repeat", "repeat") }}.</p>
+La propiedad `background` es un atajo para definir los valores individuales del fondo en una única regla CSS. Se puede usar `background` para definir los valores de una o de todas las propiedades siguientes: {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color", "color") }}, {{ Cssxref("background-image", "image") }}, {{ Cssxref("background-position", "position") }}, {{ Cssxref("background-repeat", "repeat") }}.
 
-<ul>
- <li>{{ Cssxref("initial", "Valor inicial") }}: ver propiedades individuales</li>
- <li>Se aplica a: todos los elementos</li>
- <li>{{ Cssxref("inheritance", "Herencia") }}: no</li>
- <li>Porcentajes: permitido en {{ Cssxref("background-position", "posición") }}</li>
- <li>Medio: {{ Cssxref("Media:Visual", "visual") }}</li>
- <li>{{ Cssxref("computed value", "Valor calculada") }}: ver propiedades individuales</li>
-</ul>
+- {{ Cssxref("initial", "Valor inicial") }}: ver propiedades individuales
+- Se aplica a: todos los elementos
+- {{ Cssxref("inheritance", "Herencia") }}: no
+- Porcentajes: permitido en {{ Cssxref("background-position", "posición") }}
+- Medio: {{ Cssxref("Media:Visual", "visual") }}
+- {{ Cssxref("computed value", "Valor calculada") }}: ver propiedades individuales
 
-<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre>/* Usando &lt;background-color&gt; */
+```
+/* Usando <background-color> */
 background: green;
 
-/* Usando &lt;bg-image&gt; y &lt;repeat-style&gt; */
+/* Usando <bg-image> y <repeat-style> */
 background: url("test.jpg") repeat-y;
 
-/* Usando &lt;box&gt; and &lt;background-color&gt; */
+/* Usando <box> and <background-color> */
 background: border-box red;
 
 /* Una sola imagen, centrada y escalada */
-background: no-repeat center/80% url("../img/image.png");</pre>
+background: no-repeat center/80% url("../img/image.png");
+```
 
-<p>La propiedad  <code>background</code> se especifica como una o más capas de fondo, separadas por comas.</p>
+La propiedad `background` se especifica como una o más capas de fondo, separadas por comas.
 
-<p>La sintaxis de cada capa es la siguiente:</p>
+La sintaxis de cada capa es la siguiente:
 
-<ul>
- <li>Cada capa puede incluir cero o una ocurrencia de cualquiera de los siguientes valores
-  <ul>
-   <li><code><a href="/es/docs/Web/CSS/background$edit#%3Cattachment%3E">&lt;attachment&gt;</a></code></li>
-   <li><code><a href="/es/docs/Web/CSS/background$edit#%3Cbg-image%3E">&lt;bg-image&gt;</a></code></li>
-   <li><code><a href="/es/docs/Web/CSS/background$edit#%3Cposition%3E">&lt;position&gt;</a></code></li>
-   <li><code><a href="/es/docs/Web/CSS/background$edit#%3Cbg-size%3E">&lt;bg-size&gt;</a></code></li>
-   <li><code><a href="/es/docs/Web/CSS/background$edit#%3Crepeat-style%3E">&lt;repeat-style&gt;</a></code></li>
-  </ul>
- </li>
- <li>El valor <code><a href="/es/docs/Web/CSS/background$edit#%3Cbg-size%3E">&lt;bg-size&gt;</a></code> sólo puede ser incluido inmediatamente después de la <a href="/es/docs/Web/CSS/background$edit#%3Cposition%3E">&lt;position&gt;</a>, separado con el carácter '/', así: "<code>center/80%</code>".</li>
- <li>El valor <a href="/es/docs/Web/CSS/background$edit#%3Cbox%3E">&lt;box&gt;</a> puede ser incluido cero, una o dos veces. Si se incluye una vez, establece ambos {{cssxref("background-origin")}} y {{cssxref("background-clip")}}. Si se incluye dos veces, la primera ocurrencia establece {{cssxref("background-origin")}}, y el segundo conjunto {{cssxref("background-clip")}}.</li>
- <li>El valor <code><a href="/es/docs/Web/CSS/background$edit#%3Cbackground-color%3E">&lt;background-color&gt;</a></code> sólo puede ser incluido en la última capa especificada.</li>
-</ul>
+- Cada capa puede incluir cero o una ocurrencia de cualquiera de los siguientes valores
 
-<h2 id="Valores" name="Valores">Valores</h2>
+  - [`<attachment>`](/es/docs/Web/CSS/background$edit#%3Cattachment%3E)
+  - [`<bg-image>`](/es/docs/Web/CSS/background$edit#%3Cbg-image%3E)
+  - [`<position>`](/es/docs/Web/CSS/background$edit#%3Cposition%3E)
+  - [`<bg-size>`](/es/docs/Web/CSS/background$edit#%3Cbg-size%3E)
+  - [`<repeat-style>`](/es/docs/Web/CSS/background$edit#%3Crepeat-style%3E)
 
-<dl>
- <dt>background-color</dt>
- <dd>ver <code><a href="/es/CSS/background-color" title="es/CSS/background-color">color</a></code>.</dd>
- <dt>background-image </dt>
- <dd>ver <code><a href="/es/CSS/background-image" title="es/CSS/background-image">image</a></code>.</dd>
- <dt>background-repeat </dt>
- <dd>ver <code><a href="/es/CSS/background-repeat" title="es/CSS/background-repeat">repeat</a></code>.</dd>
- <dt>background-attachment </dt>
- <dd>ver <code><a href="/es/CSS/background-attachment" title="es/CSS/background-attachment">background-attachment</a></code>.</dd>
- <dt>background-position </dt>
- <dd>ver <code><a href="/es/CSS/background-position" title="es/CSS/background-position">position</a></code>.</dd>
-</dl>
+- El valor [`<bg-size>`](/es/docs/Web/CSS/background$edit#%3Cbg-size%3E) sólo puede ser incluido inmediatamente después de la [\<position>](/es/docs/Web/CSS/background$edit#%3Cposition%3E), separado con el carácter '/', así: "`center/80%`".
+- El valor [\<box>](/es/docs/Web/CSS/background$edit#%3Cbox%3E) puede ser incluido cero, una o dos veces. Si se incluye una vez, establece ambos {{cssxref("background-origin")}} y {{cssxref("background-clip")}}. Si se incluye dos veces, la primera ocurrencia establece {{cssxref("background-origin")}}, y el segundo conjunto {{cssxref("background-clip")}}.
+- El valor [`<background-color>`](/es/docs/Web/CSS/background$edit#%3Cbackground-color%3E) sólo puede ser incluido en la última capa especificada.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Valores
 
-<h3 id="HTML">HTML</h3>
+- background-color
+  - : ver [`color`](/es/CSS/background-color "es/CSS/background-color").
+- background-image
+  - : ver [`image`](/es/CSS/background-image "es/CSS/background-image").
+- background-repeat
+  - : ver [`repeat`](/es/CSS/background-repeat "es/CSS/background-repeat").
+- background-attachment
+  - : ver [`background-attachment`](/es/CSS/background-attachment "es/CSS/background-attachment").
+- background-position
+  - : ver [`position`](/es/CSS/background-position "es/CSS/background-position").
 
-<pre class="brush: html">&lt;p class="topbanner"&gt;
-  Starry sky&lt;br/&gt;
-  Twinkle twinkle&lt;br/&gt;
+## Ejemplos
+
+### HTML
+
+```html
+<p class="topbanner">
+  Starry sky<br/>
+  Twinkle twinkle<br/>
   Starry sky
-&lt;/p&gt;
-&lt;p class="warning"&gt;Here is a paragraph&lt;p&gt;</pre>
+</p>
+<p class="warning">Here is a paragraph<p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="">.warning {
+```
+.warning {
   background: red;
 }
 
 .topbanner {
   background: url("https://mdn.mozillademos.org/files/11983/starsolid.gif") #00D repeat-y fixed;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Ejemplos")}}</p>
+{{EmbedLiveSample("Ejemplos")}}
 
-<h2 id="Notas" name="Notas">Notas</h2>
+## Notas
 
-<p>Tomando una declaración válida, la propiedad <code>background</code> inicia las propiedades individuales a sus valores iniciales para después asignarles los valores especificadas explícitamente en la declaración. No hay que definir un valor por cada propiedad individual, se cambia solo las que necesitamos en relación al valor por defecto.</p>
+Tomando una declaración válida, la propiedad `background` inicia las propiedades individuales a sus valores iniciales para después asignarles los valores especificadas explícitamente en la declaración. No hay que definir un valor por cada propiedad individual, se cambia solo las que necesitamos en relación al valor por defecto.
 
-<h2 id="Especificaciones" name="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/CSS1#background">CSS 1</a></li>
- <li><a class="external" href="http://www.w3.org/TR/CSS21/colors.html#propdef-background">CSS 2.1</a></li>
- <li><a class="external" href="http://www.w3.org/TR/2005/WD-css3-background-20050216/#the-background">CSS 3</a></li>
-</ul>
+- [CSS 1](http://www.w3.org/TR/CSS1#background)
+- [CSS 2.1](http://www.w3.org/TR/CSS21/colors.html#propdef-background)
+- [CSS 3](http://www.w3.org/TR/2005/WD-css3-background-20050216/#the-background)
 
-<h2 id="Compatibilidad_de_navegadores" name="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Navegador</th>
-   <th>Mínima versión</th>
-  </tr>
-  <tr>
-   <td>Internet Explorer</td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td>Firefox</td>
-   <td>1</td>
-  </tr>
-  <tr>
-   <td>Netscape</td>
-   <td>6</td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td>3.5</td>
-  </tr>
- </tbody>
-</table>
+| Navegador         | Mínima versión |
+| ----------------- | -------------- |
+| Internet Explorer | 4              |
+| Firefox           | 1              |
+| Netscape          | 6              |
+| Opera             | 3.5            |
 
-<h2 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h2>
+## Ver también
 
-<p>{{ Cssxref("background") }}, {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}</p>
+{{ Cssxref("background") }}, {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}

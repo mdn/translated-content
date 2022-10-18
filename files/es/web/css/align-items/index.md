@@ -7,15 +7,16 @@ tags:
   - Referencia
 translation_of: Web/CSS/align-items
 ---
-<p>La propiedad <a href="/es/docs/Web/CSS" title="CSS">CSS</a> <strong><code>align-items</code></strong> establece el valor {{cssxref("align-self")}} sobre todos los descendientes directos de un grupo. La propiedad align-self indica la alineación de un elemento dentro del bloque que lo contiene. En Flexbox controla la alineación de los elementos del {{glossary("Cross Axis")}}, en Grid Layout controla la alineación de los elementos en el eje Block dentro de su <a href="/en-US/docs/Glossary/Grid_Areas">área grid</a>.</p>
+La propiedad [CSS](/es/docs/Web/CSS "CSS") **`align-items`** establece el valor {{cssxref("align-self")}} sobre todos los descendientes directos de un grupo. La propiedad align-self indica la alineación de un elemento dentro del bloque que lo contiene. En Flexbox controla la alineación de los elementos del {{glossary("Cross Axis")}}, en Grid Layout controla la alineación de los elementos en el eje Block dentro de su [área grid](/es/docs/Glossary/Grid_Areas).
 
-<p>El ejemplo interactivo a continuación demuestra algunos de los valores de <code>align-items</code> utilizando el sistema grid.</p>
+El ejemplo interactivo a continuación demuestra algunos de los valores de `align-items` utilizando el sistema grid.
 
-<div>{{EmbedInteractiveExample("pages/css/align-items.html")}}</div>
+{{EmbedInteractiveExample("pages/css/align-items.html")}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush:css no-line-numbers notranslate">/* Palabras Clave Basicas */
+```css
+/* Palabras Clave Basicas */
 align-items: normal;
 align-items: stretch;
 
@@ -40,68 +41,52 @@ align-items: unsafe center;
 align-items: inherit;
 align-items: initial;
 align-items: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>El efecto de esta palabra clave depende del modo de diseño utilizado:</dd>
-</dl>
+- `normal`
+  - : El efecto de esta palabra clave depende del modo de diseño utilizado:
 
-<ul>
- <li>en diseños de absolutamente-posicionados, esta clave se comporta como <code>start</code> en cajas-absolutamente-posicionadas <em>reemplazadas</em>. y como <code>stretch</code> en <em>todas las demas </em>cajas-absolutamente-posicionadas.</li>
- <li>En la posicion estatica de diseños absolutamenteposicionados, esta clave se comporta como <code>stretch</code>.</li>
- <li>Para elementos flex, la clave se comporta como <code>stretch</code>.</li>
- <li>Para elementos grid, Esta palabra clave conduce a un comportamiento similar al de <code>stretch</code>, excepto para cuadros con una relación de aspecto o un tamaño intrínseco donde se comporta como <code>start</code>.</li>
- <li>La propiedad no se aplica a cajas de nivel de bloque ni a celdas de tabla.</li>
-</ul>
+<!---->
 
-<dl>
- <dt><code>flex-start</code></dt>
- <dd>El límite del margen transversal inicial del elemento flexible es unido al borde transversal final de la línea.</dd>
- <dt><code>flex-end</code></dt>
- <dd>El límite del margen transversal final del elemento flexible es unido al borde transversal final de la línea.</dd>
- <dt><code>center</code></dt>
- <dd>Los márgenes del elemento flexible son centrados dentro de la línea sobre su eje transversal. Si el tamaño transversal del elemento es mayor al del contenedor, se excederá por igual en ambas direcciones.</dd>
- <dt><code>start</code></dt>
- <dd>Los elementos se agrupan uno junto al otro hacia el borde inicial del contenedor de alineación en el eje apropiado.</dd>
- <dt><code>end</code></dt>
- <dd>Los elementos se agrupan uno junto al otro hacia el borde final del contenedor de alineación en el eje apropiado.</dd>
- <dt><code>baseline</code></dt>
- <dd>Todos los elementos flexibles son ajustados de modo que sus bases queden alineadas. El elemento con la distancia mayor entre su límite transversal inicial y su base es combinado con el borde transversal de la línea.</dd>
- <dt><code>stretch</code></dt>
- <dd>Las elementos flexibles son estirados de modo que el tamaño transversal de sus límites sea el mismo de la línea, manteniendo sus restricciones de anchura y altura.</dd>
-</dl>
+- en diseños de absolutamente-posicionados, esta clave se comporta como `start` en cajas-absolutamente-posicionadas _reemplazadas_. y como `stretch` en _todas las demas_ cajas-absolutamente-posicionadas.
+- En la posicion estatica de diseños absolutamenteposicionados, esta clave se comporta como `stretch`.
+- Para elementos flex, la clave se comporta como `stretch`.
+- Para elementos grid, Esta palabra clave conduce a un comportamiento similar al de `stretch`, excepto para cuadros con una relación de aspecto o un tamaño intrínseco donde se comporta como `start`.
+- La propiedad no se aplica a cajas de nivel de bloque ni a celdas de tabla.
 
- <h3 id="Sintaxis_formal">Sintaxis formal</h3>
+<!---->
+
+- `flex-start`
+  - : El límite del margen transversal inicial del elemento flexible es unido al borde transversal final de la línea.
+- `flex-end`
+  - : El límite del margen transversal final del elemento flexible es unido al borde transversal final de la línea.
+- `center`
+  - : Los márgenes del elemento flexible son centrados dentro de la línea sobre su eje transversal. Si el tamaño transversal del elemento es mayor al del contenedor, se excederá por igual en ambas direcciones.
+- `start`
+  - : Los elementos se agrupan uno junto al otro hacia el borde inicial del contenedor de alineación en el eje apropiado.
+- `end`
+  - : Los elementos se agrupan uno junto al otro hacia el borde final del contenedor de alineación en el eje apropiado.
+- `baseline`
+  - : Todos los elementos flexibles son ajustados de modo que sus bases queden alineadas. El elemento con la distancia mayor entre su límite transversal inicial y su base es combinado con el borde transversal de la línea.
+- `stretch`
+  - : Las elementos flexibles son estirados de modo que el tamaño transversal de sus límites sea el mismo de la línea, manteniendo sus restricciones de anchura y altura.
+
+### Sintaxis formal
+
 {{csssyntax}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#propdef-align-items', 'align-items')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                           | Estado                           | Comentarios        |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Flexbox', '#propdef-align-items', 'align-items')}} | {{Spec2('CSS3 Flexbox')}} | Definición inicial |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("css.properties.align-items")}}
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS" title="CSS/Using_CSS_flexible_boxes">Usando las cajas flexibles CSS</a></li>
-</ul>
+- [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS "CSS/Using_CSS_flexible_boxes")

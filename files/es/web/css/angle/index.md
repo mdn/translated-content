@@ -5,73 +5,37 @@ tags:
   - Ángulo
 translation_of: Web/CSS/angle
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>El tipo de dato <code>&lt;angle&gt;</code> de <a href="/es/docs/Web/CSS" title="CSS">CSS</a> representa valores de ángulo. Los valores positivos representan ángulos en sentido de las agujas del reloj, mientras los valores negativos representan ángulos en sentido opuesto. Su sintáxis es un valor de tipo numérico ({{cssxref("&lt;number&gt;")}}) seguido inmediatamente por la unidad (<code>deg</code>, <code>grad</code>, <code>rad</code> o <code>turn</code>). Al igual que cualquier otra dimensión en CSS, no debe haber espacio entre la unidad y el número.</p>
+El tipo de dato `<angle>` de [CSS](/es/docs/Web/CSS "CSS") representa valores de ángulo. Los valores positivos representan ángulos en sentido de las agujas del reloj, mientras los valores negativos representan ángulos en sentido opuesto. Su sintáxis es un valor de tipo numérico ({{cssxref("&lt;number&gt;")}}) seguido inmediatamente por la unidad (`deg`, `grad`, `rad` o `turn`). Al igual que cualquier otra dimensión en CSS, no debe haber espacio entre la unidad y el número.
 
-<p>Para propiedades estáticas y una unidad dada, un ángulo puede ser representado por muchos valores: <code>90deg</code> y <code>-270deg</code>, o <code>1turn</code> y <code>4turn</code> representan la misma posición final. Sin embargo, para posiciones dinámicas, como aplicar una transición ({{ cssxref("transition") }}) en la propiedad {{ cssxref("transform") }}, el efecto será diferente.</p>
+Para propiedades estáticas y una unidad dada, un ángulo puede ser representado por muchos valores: `90deg` y `-270deg`, o `1turn` y `4turn` representan la misma posición final. Sin embargo, para posiciones dinámicas, como aplicar una transición ({{ cssxref("transition") }}) en la propiedad {{ cssxref("transform") }}, el efecto será diferente.
 
-<p><span style="line-height: 1.5;">Se deben usar las siguientes unidades:</span></p>
+Se deben usar las siguientes unidades:
 
-<ul>
- <li><code><a id="deg">deg</a></code>, que representa un ángulo en <a class="external" href="https://es.wikipedia.org/wiki/Grado_sexagesimal">grados</a>. Un círculo completo equivale a <code>360deg</code>. Ejemplos: <code>0deg</code>, <code>90deg</code>, <code>360deg</code>.</li>
- <li><code><a id="grad">grad</a></code>, que representa un ángulo en <a class="external" href="https://es.wikipedia.org/wiki/Grado_centesimal">grado centesimal</a>. Un circulo completo equivale a <code>400grad</code>. Ejemplos: <code>0grad</code>, <code>100grad</code>, <code>400grad</code>.</li>
- <li><code><a id="rad">rad</a></code>, que representa un ángulo en <a class="external" href="https://es.wikipedia.org/wiki/Radi%C3%A1n">radianes</a>. Un círculo completo equivale a 2π radianes, que se aproxima a <code>6.2832rad</code>. <code>1rad</code> es 180/π grados. Ejemplos: <code>0rad</code>, <code>1.0708rad</code>, <code>6.2832rad</code>.</li>
- <li><code><a id="turn">turn</a></code>, que representa el número de vueltas del ángulo. Un círculo completo equivale a <code>1turn</code>. Ejemplos: <code>0turn</code>, <code>0.25turn</code>, <code>1turn</code>.</li>
-</ul>
+- [`deg`](), que representa un ángulo en [grados](https://es.wikipedia.org/wiki/Grado_sexagesimal). Un círculo completo equivale a `360deg`. Ejemplos: `0deg`, `90deg`, `360deg`.
+- [`grad`](), que representa un ángulo en [grado centesimal](https://es.wikipedia.org/wiki/Grado_centesimal). Un circulo completo equivale a `400grad`. Ejemplos: `0grad`, `100grad`, `400grad`.
+- [`rad`](), que representa un ángulo en [radianes](https://es.wikipedia.org/wiki/Radi%C3%A1n). Un círculo completo equivale a 2π radianes, que se aproxima a `6.2832rad`. `1rad` es 180/π grados. Ejemplos: `0rad`, `1.0708rad`, `6.2832rad`.
+- [`turn`](), que representa el número de vueltas del ángulo. Un círculo completo equivale a `1turn`. Ejemplos: `0turn`, `0.25turn`, `1turn`.
 
-<p>Aun cuando todas las unidades representan lo mismo para el valor <code>0</code>, la unidad no debe ser omitida en ese caso, puesto que no es un valor de tipo {{cssxref("&lt;length&gt;")}}: <code>0</code> es inválido, y no representa <code>0deg</code>, <code>0grad</code>, <code>0rad</code> o <code>0turn</code>.</p>
+Aun cuando todas las unidades representan lo mismo para el valor `0`, la unidad no debe ser omitida en ese caso, puesto que no es un valor de tipo {{cssxref("&lt;length&gt;")}}: `0` es inválido, y no representa `0deg`, `0grad`, `0rad` o `0turn`.
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<table style="width: 100%;">
- <tbody>
-  <tr>
-   <td><img alt="Angle90.png" class="default internal" src="/@api/deki/files/5704/=Angle90.png"></td>
-   <td>
-    <p>Ángulo recto: <code>90deg = 100grad = 0.25turn</code> <code style="white-space: nowrap;">≈</code><code> 1.5708rad</code></p>
-   </td>
-  </tr>
-  <tr>
-   <td><img alt="Angle180.png" class="default internal" src="/@api/deki/files/5706/=Angle180.png"></td>
-   <td>Ángulo llano: <code>180deg = 200grad = 0.5turn</code><code> </code><code style="white-space: nowrap;">≈</code><code> 3.1416rad</code></td>
-  </tr>
-  <tr>
-   <td><img alt="AngleMinus90.png" class="default internal" src="/@api/deki/files/5707/=AngleMinus90.png"></td>
-   <td>Ángulo recto (hacia la izquierda): <code>-90deg = -100grad = -0.25turn</code> <code style="white-space: nowrap;">≈</code><code> -1.5708rad</code></td>
-  </tr>
-  <tr>
-   <td><img alt="Angle0.png" class="default internal" src="/@api/deki/files/5708/=Angle0.png"></td>
-   <td>
-    <p>Ángulo nulo: <code>0deg = 0grad = 0turn</code><code> </code><code style="white-space: nowrap;">=</code><code> 0rad</code></p>
+| ![Angle90.png](/@api/deki/files/5704/=Angle90.png)           | Ángulo recto: `90deg = 100grad = 0.25turn` ` ≈`` 1.5708rad `                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| ![Angle180.png](/@api/deki/files/5706/=Angle180.png)         | Ángulo llano: ` 180deg = 200grad = 0.5turn`` ``≈`` 3.1416rad `                                   |
+| ![AngleMinus90.png](/@api/deki/files/5707/=AngleMinus90.png) | Ángulo recto (hacia la izquierda): `-90deg = -100grad = -0.25turn` ` ≈`` -1.5708rad `            |
+| ![Angle0.png](/@api/deki/files/5708/=Angle0.png)             | Ángulo nulo: ` 0deg = 0grad = 0turn`` ``=`` 0rad `**Nota:** `0` no es un valor de ángulo válido. |
 
-    <div class=""><strong>Nota:</strong> <code>0</code> no es un valor de ángulo válido.</div>
-   </td>
-  </tr>
- </tbody>
-</table>
+## Especificaciones
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+| Especificación                                                               | Estatus                              | Comentarios        |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{ SpecName('CSS3 Values', '#angles', '&lt;angle&gt;') }} | {{ Spec2('CSS3 Values') }} | Definición inicial |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Values', '#angles', '&lt;angle&gt;') }}</td>
-   <td>{{ Spec2('CSS3 Values') }}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("css.types.angle")}}
