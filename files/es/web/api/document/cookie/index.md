@@ -33,7 +33,7 @@ En el código anterior, _`nuevacookie`_ es una cadena de la forma _`clave=valor`
 - Cualquiera de los siguientes atributos opcionales se puede escribir después del par clave-valor, especificando la cookie que se va a crear o actualizar, precedidos de un punto y coma.
 
   - `;path=path` (p. ej.: '/'. '/midir'). Si no se especifica, por defecto corresponde a la ruta del documento actual.
-    La ruta debe ser **absoluta** (ver [RFC 6265](https://tools.ietf.org/html/rfc6265)). Para más información sobre cómo utilizar rutas relativas, ir a [este párrafo](/es/docs/DOM/document.cookie$edit#Using_relative_URLs_in_the_path_parameter).
+    La ruta debe ser **absoluta** (ver [RFC 6265](https://tools.ietf.org/html/rfc6265)). Para más información sobre cómo utilizar rutas relativas, ir a [este párrafo](/es/docs/DOM/document.cookie#Using_relative_URLs_in_the_path_parameter).
   - `;domain=domain` (p. ej. 'example.com', 'subdomain.example.com'). Si no se especifica, su valor por defecto es la porción de la dirección web de la ubicación actual del archivo. A diferencia de lo que ocurría en las primeras especificaciones, los puntos iniciales de los nombre de dominio se ignoran, pero los navegadores pueden impedir crear cookies que contengan dichos puntos. Si se especifica un dominio, los subdominios siempre son incluidos.
   - `;max-age=duración-máxima-en-segundos` Por ejemplo: 60\*60\*24\*365 para un año.
   - `;expires=fecha-en-formato-GMTString` Si no se especifica `max-age` ni `expires`, la cookie expirará al terminar la sesión actual.

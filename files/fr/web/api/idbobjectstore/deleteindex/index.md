@@ -39,7 +39,7 @@ Void.
 
 ## Exemple
 
-Dans l'exemple suivant on peut voir le gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded","<code>onupgradeneeded</code>")}} être utilisé pour mettre à jour la structure de la base de données quand un numéro de version supérieure est chargé.
+Dans l'exemple suivant on peut voir le gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded", "onupgradeneeded")}} être utilisé pour mettre à jour la structure de la base de données quand un numéro de version supérieure est chargé.
 
 Des méthode **`deleteIndex()`** sont utilisées pour supprimer d'anciens index du magasin d'objet `toDoList`.
 
