@@ -80,5 +80,5 @@ original_slug: Games/Ввод
   - : The WebSocket API позволяет подключить ваше приложение или сайт к серверу для передачи данных в реальном времени. Идеально подходит для многопользовательских игр, чатов и т. д.
 - [Web Workers](/ru/docs/DOM/Using_web_workers)
   - : Web Workers даёт вам возможность создавать фоновые потоки, выполняющие собственный код JavaScript, используя преимущества современных многоядерных процессоров.
-- [XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest) и [File API](/ru/docs/Web/API/File_and_Directory_Entries_API "/en-US/docs/DOM/File_API")
+- [XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest) и [File API](/ru/docs/Web/API/File_and_Directory_Entries_API)
   - : Комбинация XMLHttpRequest и File API позволяет отправлять и получать любые нужные для вас данные (не позволяйте «XML» выкинуть вас!) с веб-сервера. Это отличный способ сделать что угодно: от загрузки новых игровых уровней и иллюстраций, до передачи информации о статусе игры в режиме non-real-time и обратно.
