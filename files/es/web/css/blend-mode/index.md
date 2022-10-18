@@ -30,6 +30,10 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
   - : El color final es el de la capa superior, sin importar el color de fondo.
     El efecto es similar a dos trozos de papel sobrepuestos.
 
+    ```html hidden
+    <div id=div></div>
+    ```
+
     ```css
     #div {
         width: 300px;
@@ -40,7 +44,7 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
     }
     ```
 
-    {{ EmbedLiveSample('normal', "300", "300") }}
+    {{ EmbedLiveSample("", "300", "300") }}
 
 - `multiply`
 

@@ -78,7 +78,7 @@ La sintaxis de cada capa es la siguiente:
 
 ### CSS
 
-```
+```css
 .warning {
   background: red;
 }

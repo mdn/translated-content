@@ -11,7 +11,7 @@ translation_of: Web/CSS/border-bottom-left-radius
 
 ## Resumen
 
-La propiedad CSS** `border-bottom-left-radius`** establece el redondeo de la esquina inferior izquierda del elemento. El redondeo puede ser un círculo o una elipse, o si uno de los valores es `0`, no se redondeará la esquina, dejándola cuadrada.
+La propiedad CSS **`border-bottom-left-radius`** establece el redondeo de la esquina inferior izquierda del elemento. El redondeo puede ser un círculo o una elipse, o si uno de los valores es `0`, no se redondeará la esquina, dejándola cuadrada.
 
 ![border-bottom-left-radius.png](/@api/deki/files/6136/=border-bottom-left-radius.png)
 

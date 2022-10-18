@@ -28,14 +28,14 @@ font-style: oblique;
 
 ### Values
 
-**`normal`**
-Selecciona la version normal del estilo de fuente.
+- **`normal`**
+  - : Selecciona la version normal del estilo de fuente.
 
-**`italic`**
-Especifica que el estilo de fuente es la versión en _cursiva_ de la fuente normal.
+- **`italic`**
+  - : Especifica que el estilo de fuente es la versión en _cursiva_ de la fuente normal.
 
-**`oblique`**
-Especifica que el estilo de fuente es la versión en _cursiva_, también, pero de forma diferente, de la fuente normal.
+- **`oblique`**
+  - : Especifica que el estilo de fuente es la versión en _cursiva_, también, pero de forma diferente, de la fuente normal.
 
 ### Formal syntax
 

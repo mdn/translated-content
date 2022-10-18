@@ -51,7 +51,7 @@ Este ejemplo aplica estilos especiales a las etiquetas asociadas con campos de f
 
 #### CSS
 
-```
+```css
 input:indeterminate + label {
   background: lime;
 }
@@ -81,7 +81,7 @@ for (var i = 0; i < inputs.length; i++) {
 
 #### CSS
 
-```
+```css
 progress {
   margin: 4px;
 }

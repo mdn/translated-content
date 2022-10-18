@@ -28,13 +28,11 @@ border-left: [border-width || border-style || border-color | inherit] ;
 
 ## Ejemplos
 
+```css
 element {
-
-```
     border-left: 1px solid #000;
-```
-
 }
+```
 
 ## Notas
 

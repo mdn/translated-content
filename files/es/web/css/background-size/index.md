@@ -43,7 +43,7 @@ donde **:**
 
 La interpretación de los valores posibles depende de las dimensiones propias de la imagen (ancho y alto) y proporción propia (relación entre la anchura y altura). Una imagen de mapa de bits siempre tiene dimensiones propias y una proporción propia. Una imagen del vector puede tener ambas dimensiones propias (y por lo tanto debe tener una proporción propia). También puede tener una o ningúna dimensiones propias, y en cualquier caso se podría o no tener una proporción propia. Los gradientes son tratados como imágenes sin dimensiones propias o proporción propia.
 
-Este comportamiento ha cambiado en Gecko 8.0 {{��$��y��}}. Antes de esto, los gradientes se tratan como imágenes sin dimensiones propias, con una proporción propia idéntica al área de posicionamiento de fondo.
+Este comportamiento ha cambiado en Gecko 8.0 {{geckoRelease ("8.0")}}. Antes de esto, los gradientes se tratan como imágenes sin dimensiones propias, con una proporción propia idéntica al área de posicionamiento de fondo.
 
 Las imágenes de fondo generados a partir de elementos con {{ cssxref("-moz-element") }} (que en realidad coincide con un elemento) se tratan actualmente como las imágenes con las dimensiones del elemento, o de la zona de posicionamiento de fondo si el elemento es SVG, con la proporción propia correspondiente.
 

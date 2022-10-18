@@ -15,8 +15,6 @@ translation_of: Web/CSS/box-shadow
 
 La propiedad CSS `box-shadow` añade efectos de sombra alrededor del marco de un elemento. Se pueden definir múltiples efectos separados por comas. La caja de la sombra se describe por los desplazamientos en X e Y, los radios de desenfoque y dispersión, y el color relativos al elemento.
 
-El código fuente de este ejemplo interactivo se encuentra almacenado en un repositorio de GitHub. Si desea contribuir al poryecto de ejemplos interactivos, por favor clone el repositiorio <https://github.com/mdn/interactive-examples> y envie un pull request.
-
 La propiedad `box-shadow` permite proyectar una sombra difuminada desde el marco de casi cualquier elemento. Si {{cssxref("border-radius")}} es especificado en un elemento con la propiedad box-shadow, la sombra adopta la misma curva en las esquinas. El z-orden de múltiples cajas de sombra es la misma que de múltiples [sombras de texto](https://developer.mozilla.org/en-US/CSS/text-shadow) (la primera sombra definida se ubica hasta arriba).
 
 [Generador de Box-shadow](/es/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator) es una herramienta interactiva que permite generar una `box-shadow`.
@@ -82,8 +80,6 @@ Especifica una sola box-shadow utilizando:
 
 En nuestro ejemplo, se incluyen tres sombras: una sombra interior, una sombra difuminada normal, y una sombra de 2px que crea un efecto de borde (podría haberse usado un {{cssxref('outline')}} en lugar de una tercera sombra).
 
-### HTML
-
 ```html
 <blockquote><q>You may shoot me with your words,<br/>
 You may cut me with your eyes,<br/>
@@ -99,8 +95,6 @@ podrías matarme con tu odio,
 y aún, como el aire, levantarme._
 \-Traduccion-
 
-### CSS
-
 ```css
 blockquote {
   padding: 20px;
@@ -111,15 +105,13 @@ blockquote {
 }
 ```
 
-{{EmbedLiveSample('Examples1', '300', '300')}}
+{{EmbedLiveSample("", '300', '300')}}
 
-### HTML
+### Contorno uniforme
 
 ```html
 <div><p>Hello World</p></div>
 ```
-
-### CSS
 
 ```css
 p {
@@ -130,7 +122,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Examples2', '300', '300')}}
+{{EmbedLiveSample("", '300', '300')}}
 
 Cuando el `x-offset`, `y-offset`, y `blur` son todos cero, la sombra sera un contorno unifrome. Las sombras son dibujadas desde el fondo hasta el frente, así que la primera sombra se encuentra encima de sombras posteriores. Cuando el `border-radius` es 0, como por defecto, las esquinas de la sombra serán, bien, esquinas. De haberse definido un `border-radius` de cualquier otro valor, las esquinas habrían sido redondeadas.
 

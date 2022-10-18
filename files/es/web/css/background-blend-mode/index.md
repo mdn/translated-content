@@ -38,24 +38,27 @@ background-blend-mode: unset;
 
 ## Ejemplos
 
-\<select id="select">
-\<option>normal\</option>
-\<option>multiply\</option>
-\<option selected>screen\</option>
-\<option>overlay\</option>
-\<option>darken\</option>
-\<option>lighten\</option>
-\<option>color-dodge\</option>
-\<option>color-burn\</option>
-\<option>hard-light\</option>
-\<option>soft-light\</option>
-\<option>difference\</option>
-\<option>exclusion\</option>
-\<option>hue\</option>
-\<option>saturation\</option>
-\<option>color\</option>
-\<option>luminosity\</option>
-\</select>
+```html
+<select id="select">
+  <option>normal</option>
+  <option>multiply</option>
+  <option selected>screen</option>
+  <option>overlay</option>
+  <option>darken</option>
+  <option>lighten</option>
+  <option>color-dodge</option>
+  <option>color-burn</option>
+  <option>hard-light</option>
+  <option>soft-light</option>
+  <option>difference</option>
+  <option>exclusion</option>
+  <option>hue</option>
+  <option>saturation</option>
+  <option>color</option>
+  <option>luminosity</option>
+</select>
+<div id="div"></div>
+```
 
 ```css
 #div {
