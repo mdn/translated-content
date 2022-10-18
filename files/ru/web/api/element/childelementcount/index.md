@@ -12,7 +12,7 @@ original_slug: Web/API/ParentNode/childElementCount
 ---
 {{ APIRef("DOM") }}
 
-Свойство**` Node.childElementCount`** предназначено только для чтения и возвращает число дочерних **элементов** узла.
+Свойство **`Node.childElementCount`** предназначено только для чтения и возвращает число дочерних **элементов** узла.
 
 ## Синтаксис
 
