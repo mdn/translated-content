@@ -5,7 +5,7 @@ translation_of: Web/CSS/border-block-start-width
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`border-block-start-width`** define el ancho del borde lógico de bloque inicial de un elemento, que se asigna al estilo de borde físico dependen del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, o {{cssxref("border-left-width")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+La propiedad de [CSS](/es/docs/Web/CSS) **`border-block-start-width`** define el ancho del borde lógico de bloque inicial de un elemento, que se asigna al estilo de borde físico dependen del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, o {{cssxref("border-left-width")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
 
 {{EmbedInteractiveExample("pages/css/border-block-start-width.html")}}
 

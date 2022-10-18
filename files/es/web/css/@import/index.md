@@ -7,7 +7,7 @@ translation_of: Web/CSS/@import
 
 ## Resumen
 
-La regla-at [CSS](/en/CSS) `@import` permite importar reglas desde otras hojas de estilo. Estas reglas deben preceder a todos los otros tipos de reglas, excepto a las reglas {{ cssxref("@charset") }}; como esto no es una [declaración anidada](/en/CSS/Syntax#nested_statements), no puede ser usado dentro de [grupos condicionales de reglas-at](/en/CSS/At-rule#Conditional_Group_Rules "en/CSS/At-rule#Conditional_Group_Rules").
+La regla-at [CSS](/en/CSS) `@import` permite importar reglas desde otras hojas de estilo. Estas reglas deben preceder a todos los otros tipos de reglas, excepto a las reglas {{ cssxref("@charset") }}; como esto no es una [declaración anidada](/en/CSS/Syntax#nested_statements), no puede ser usado dentro de [grupos condicionales de reglas-at](/en/CSS/At-rule#Conditional_Group_Rules).
 
 Para que los agentes de usuario puedan evitar recuperar recursos para tipos de medios no soportados, los autores pueden especificar reglas dependientes del tipo de medio `@import`. Estas condiciones @import se especifican separando por una coma las [consultas de medios (media query)](/en/CSS/Media_queries) despues de la _url_. En la ausencia de cualquier consulta de medios (media query), la importación es incondicional. Especificando `all` para el medio tiene el mismo efecto.
 

@@ -10,7 +10,7 @@ translation_of: Web/CSS/border-style
 ---
 {{CSSRef}}
 
-La propiedad **`border-style`** [CSS](/en/CSS "CSS") es una [shorthand property](/es/docs/Web/CSS/Shorthand_properties) (Propiedad abreviada) que establece el estilo de línea para los cuatro lados del borde de un elemento.
+La propiedad **`border-style`** [CSS](/en/CSS) es una [shorthand property](/es/docs/Web/CSS/Shorthand_properties) (Propiedad abreviada) que establece el estilo de línea para los cuatro lados del borde de un elemento.
 
 {{EmbedInteractiveExample("pages/css/border-style.html")}}
 

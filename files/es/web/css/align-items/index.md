@@ -7,7 +7,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/align-items
 ---
-La propiedad [CSS](/es/docs/Web/CSS "CSS") **`align-items`** establece el valor {{cssxref("align-self")}} sobre todos los descendientes directos de un grupo. La propiedad align-self indica la alineación de un elemento dentro del bloque que lo contiene. En Flexbox controla la alineación de los elementos del {{glossary("Cross Axis")}}, en Grid Layout controla la alineación de los elementos en el eje Block dentro de su [área grid](/es/docs/Glossary/Grid_Areas).
+La propiedad [CSS](/es/docs/Web/CSS) **`align-items`** establece el valor {{cssxref("align-self")}} sobre todos los descendientes directos de un grupo. La propiedad align-self indica la alineación de un elemento dentro del bloque que lo contiene. En Flexbox controla la alineación de los elementos del {{glossary("Cross Axis")}}, en Grid Layout controla la alineación de los elementos en el eje Block dentro de su [área grid](/es/docs/Glossary/Grid_Areas).
 
 El ejemplo interactivo a continuación demuestra algunos de los valores de `align-items` utilizando el sistema grid.
 
@@ -89,4 +89,4 @@ align-items: unset;
 
 ## Véase también
 
-- [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS "CSS/Using_CSS_flexible_boxes")
+- [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS)

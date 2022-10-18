@@ -9,7 +9,7 @@ translation_of: Web/CSS/angle
 
 ## Summary
 
-El tipo de dato `<angle>` de [CSS](/es/docs/Web/CSS "CSS") representa valores de ángulo. Los valores positivos representan ángulos en sentido de las agujas del reloj, mientras los valores negativos representan ángulos en sentido opuesto. Su sintáxis es un valor de tipo numérico ({{cssxref("&lt;number&gt;")}}) seguido inmediatamente por la unidad (`deg`, `grad`, `rad` o `turn`). Al igual que cualquier otra dimensión en CSS, no debe haber espacio entre la unidad y el número.
+El tipo de dato `<angle>` de [CSS](/es/docs/Web/CSS) representa valores de ángulo. Los valores positivos representan ángulos en sentido de las agujas del reloj, mientras los valores negativos representan ángulos en sentido opuesto. Su sintáxis es un valor de tipo numérico ({{cssxref("&lt;number&gt;")}}) seguido inmediatamente por la unidad (`deg`, `grad`, `rad` o `turn`). Al igual que cualquier otra dimensión en CSS, no debe haber espacio entre la unidad y el número.
 
 Para propiedades estáticas y una unidad dada, un ángulo puede ser representado por muchos valores: `90deg` y `-270deg`, o `1turn` y `4turn` representan la misma posición final. Sin embargo, para posiciones dinámicas, como aplicar una transición ({{ cssxref("transition") }}) en la propiedad {{ cssxref("transform") }}, el efecto será diferente.
 

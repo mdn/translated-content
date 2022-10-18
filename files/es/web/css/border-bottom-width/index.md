@@ -7,7 +7,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/CSS/border-bottom-width
 ---
-<< [Volver](/es/Guía_de_referencia_de_CSS "es/Guía_de_referencia_de_CSS")
+<< [Volver](/es/Guía_de_referencia_de_CSS)
 
 ### Resumen
 

@@ -11,7 +11,7 @@ translation_of: Web/CSS/border-block-end-style
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propiedad [CSS](/es/docs/Web/CSS "CSS") **`border-block-end-style`** define el estilo del borde del final lógico del bloque de un elemento, que se mapea a un estilo de borde físico, dependiendo el modo de escritura, direccionalidad y orientación de texto del elemento. Corresponde a las propiedades {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, o {{cssxref("border-left-style")}}, dependiendo de los valores definidos para {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+La propiedad [CSS](/es/docs/Web/CSS) **`border-block-end-style`** define el estilo del borde del final lógico del bloque de un elemento, que se mapea a un estilo de borde físico, dependiendo el modo de escritura, direccionalidad y orientación de texto del elemento. Corresponde a las propiedades {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, o {{cssxref("border-left-style")}}, dependiendo de los valores definidos para {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
 
 ```css
 border-block-end-style: dashed;

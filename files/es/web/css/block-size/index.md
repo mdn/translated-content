@@ -10,13 +10,13 @@ translation_of: Web/CSS/block-size
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`block-size`** [CSS](/es/docs/Web/CSS "CSS") define el tamaño horizontal o vertical de los elementos en bloque, dependiendo de los modos de escritura. estos corresponden ya sea a la propiedad {{cssxref("width")}} o la propiedad {{cssxref("height")}}, dependiendo de los valores de {{cssxref("writing-mode")}}.
+La propiedad de [CSS](/es/docs/Web/CSS) **`block-size`** [CSS](/es/docs/Web/CSS) define el tamaño horizontal o vertical de los elementos en bloque, dependiendo de los modos de escritura. estos corresponden ya sea a la propiedad {{cssxref("width")}} o la propiedad {{cssxref("height")}}, dependiendo de los valores de {{cssxref("writing-mode")}}.
 
 {{EmbedInteractiveExample("pages/css/block-size.html")}}
 
 ## Resumen
 
-La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`block-size`** define el tamaño horizontal y vertical del bloque de un elemento, dependiendo de su modo de escritura. Corresponde a la propiedad {{cssxref("width")}} o {{cssxref("height")}}, dependiendo del valor definido en {{cssxref("writing-mode")}}.
+La propiedad de [CSS](/es/docs/Web/CSS) **`block-size`** define el tamaño horizontal y vertical del bloque de un elemento, dependiendo de su modo de escritura. Corresponde a la propiedad {{cssxref("width")}} o {{cssxref("height")}}, dependiendo del valor definido en {{cssxref("writing-mode")}}.
 
 Si el modo de escritura está orientado verticalmente, el valor de `block-size` se relaciona con la anchura del elemento, de lo contrario, se relaciona con la altura del elemento. Está relacionada con {{cssxref("inline-size")}}, la cual define las otras dimensiones del elemento.
 
