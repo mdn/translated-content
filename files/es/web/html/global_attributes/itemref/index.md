@@ -84,7 +84,7 @@ El atributo itemref puede ser solo especificado en elementos que tienen un atrib
 
 {{ EmbedLiveSample('Example', '', '', '', 'Web/HTML/Global_attributes/itemref') }}
 
-## Especificación[Edit](/es/docs/Web/CSS/font-variant-alternates$edit#Specifications)[Edit](/es/docs/Web/HTML/Global_attributes/itemid$edit#SpecificationsEdit)
+## Especificación
 
 | Especificación                                                         | Estatus                                             |
 | ---------------------------------------------------------------------- | --------------------------------------------------- |

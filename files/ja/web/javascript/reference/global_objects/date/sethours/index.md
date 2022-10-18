@@ -1,6 +1,8 @@
 ---
 title: Date.prototype.setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
 {{JSRef}}
@@ -11,14 +13,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
 
 ## 構文
 
-```
-dateObj.setHours(hoursValue[, minutesValue[, secondsValue[, msValue]]])
-```
-
-### JavaScript 1.3 以前
-
-```
-dateObj.setHours(hoursValue)
+```js-nolint
+setHours(hoursValue)
+setHours(hoursValue, minutesValue)
+setHours(hoursValue, minutesValue, secondsValue)
+setHours(hoursValue, minutesValue, secondsValue, msValue)
 ```
 
 ### 引数
@@ -47,19 +46,17 @@ dateObj.setHours(hoursValue)
 ### setHours() の使用
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setHours(7);
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.setHours")}}
+{{Compat}}
 
 ## 関連情報
 
