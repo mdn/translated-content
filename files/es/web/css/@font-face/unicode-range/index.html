@@ -39,13 +39,13 @@ unicode-range: U+0025-00FF, U+4??; /* multiples valores */
 
 <p>Hemos creado una etiqueta HTML que contiene un elemento {{HTMLElement("div")}}, que incluye un simbolo &amp;, el cual queremos que se muestre con una fuente diferente. Para hacerlo obvio,  usaremos una fuente sans-serif, <em>Helvetica</em> para el texto, y una fuente serif, <em>Times New Roman</em>, para el caracter &amp;.</p>
 
-<div class="example">
+<div class="">
 <pre class="brush: html">&lt;div&gt;Me &amp; You = Us&lt;/div&gt;</pre>
 </div>
 
 <p>En el CSS, puedes ver que en efecto estamos definiendo una separación completa {{cssxref("@font-face")}} el cual solo incluye un caracter, significando que solo ese caracter será estilizado con esa fuente. Podríamos haber hecho esto tambien encapsulando el caracter &amp; en un elemento {{HTMLElement("span")}} y aplicando una fuente solo a ese elemento, pero esto es un elemento y una regla extra.</p>
 
-<div class="example">
+<div class="">
 <pre class="brush: css">@font-face {
   font-family: 'Ampersand';
   src: local('Times New Roman');
