@@ -88,7 +88,7 @@ Neste exemplo, o "filho" terá 150 pixels de largura ou a largura do "pai", o qu
 
 #### Resultado
 
-{{EmbedLiveSample("<code>Setting_max_width_in_pixels</code>", 350, 100)}}
+{{EmbedLiveSample("Definindo_a_largura_máxima_em_pixels", 350, 100)}}
 
 O valor de `fit-content` pode ser usado para atribuir o comprimento de um elemento no tamanho intrínseco necessário pelo seu conteúdo:
 
