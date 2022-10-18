@@ -28,4 +28,4 @@ alert(el.isDefaultNamespace(XULNS)); // true
 ## Спецификация
 
 - [DOM Level 3 Core: isDefaultNamespace](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isDefaultNamespace)
-- [Code snippets: isDefaultNamespace](/ru/docs/Code_snippets/IsDefaultNamespace "Code_snippets/IsDefaultNamespace")
+- [Code snippets: isDefaultNamespace](/ru/docs/Code_snippets/IsDefaultNamespace)

@@ -10,21 +10,21 @@ IndexedDB - это способ постоянного хранения данн
 
 ## Об этом документе
 
-Это руководство по использованию асинхронного API для IndexedDB. Если вы не знакомы с IndexedDB, то обратитесь для начала к документу [Basic Concepts About IndexedDB](https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB "en/IndexedDB/Basic Concepts Behind IndexedDB").[ ](/en/IndexedDB/Basic_Concepts_Behind_IndexedDB "en/IndexedDB/Basic Concepts Behind IndexedDB").
+Это руководство по использованию асинхронного API для IndexedDB. Если вы не знакомы с IndexedDB, то обратитесь для начала к документу [Basic Concepts About IndexedDB](/en/IndexedDB/Basic_Concepts_Behind_IndexedDB).
 
 > **Предупреждение:** Некоторые части документа не переведены, в основном это повсеместно принятые в программировании рекомендации, такие как обработка ошибок или что-то очевидное. Тем не менее вы можете/должны продолжить перевод. Главная цель перевода - понять основные концепции IndexedDB, обратить внимание на важные нюансы, прокомментировать исходный код и может быть добавить примеры.
 
-Справочную документацию по IndexedDB API вы найдёте в документе [IndexedDB.](/en/IndexedDB "https://developer.mozilla.org/en/IndexedDB") В нем описаны типы объектов, используемых в IndexedDB, а также синхронный и асинхронный API.
+Справочную документацию по IndexedDB API вы найдёте в документе [IndexedDB.](/en/IndexedDB) В нем описаны типы объектов, используемых в IndexedDB, а также синхронный и асинхронный API.
 
 ## Типичная схема работы с базой
 
 Обычная последовательность шагов при работе с IndexedDB :
 
-1.  Открыть базу данных.
-2.  Создать хранилище объектов в базе данных, над которой будут выполняться наши операции.
-3.  Запустить транзакцию и выдать запрос на выполнение какой-либо операции с базой данных, например, добавление или извлечение данных.
-4.  Ждать завершения операции, обрабатывая событие DOM, на которое должен быть установлен наш обработчик.
-5.  Сделать что-то с результатами (которые могут быть найдены в возвращаемом по нашему запросу объекте ).
+1. Открыть базу данных.
+2. Создать хранилище объектов в базе данных, над которой будут выполняться наши операции.
+3. Запустить транзакцию и выдать запрос на выполнение какой-либо операции с базой данных, например, добавление или извлечение данных.
+4. Ждать завершения операции, обрабатывая событие DOM, на которое должен быть установлен наш обработчик.
+5. Сделать что-то с результатами (которые могут быть найдены в возвращаемом по нашему запросу объекте ).
 
 Теперь, получив общее представление, переходим к более конкретным деталям.
 
@@ -65,9 +65,9 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 Видите? Открытие базы данных, подобно любым другим операциям, запускается запросом.
 
-На самом деле запрос открытия базы данных не приводит к немедленному открытию базы или запуску транзакции. Вызов функции` open()` вернёт объект [`IDBOpenDBRequest`](/ru/docs/IndexedDB/IDBOpenDBRequest) , содержащий результат (если успешно) или ошибку, которую вы можете обработать как событие. Большинство других асинхронных функций IndexedDB делает то же самое - возвращает объект [`IDBRequest`](/ru/docs/IndexedDB/IDBRequest) с результатом или ошибкой. Результат функции open всегда возвращает экземпляр объекта `IDBDatabase.`
+На самом деле запрос открытия базы данных не приводит к немедленному открытию базы или запуску транзакции. Вызов функции `open()` вернёт объект [`IDBOpenDBRequest`](/ru/docs/IndexedDB/IDBOpenDBRequest) , содержащий результат (если успешно) или ошибку, которую вы можете обработать как событие. Большинство других асинхронных функций IndexedDB делает то же самое - возвращает объект [`IDBRequest`](/ru/docs/IndexedDB/IDBRequest) с результатом или ошибкой. Результат функции open всегда возвращает экземпляр объекта `IDBDatabase.`
 
-Второй параметр метода open - это версия базы данных. Версия определяет схему базы данных - хранилище объектов и их структуру . Если база данных ещё не существует, то она создаётся операцией `open,` затем срабатывает триггер события `onupgradeneeded `и после этого ваш обработчик этого события создаёт схему базы данных. Если же база данных уже существует, а вы указываете новый номер версии, то сразу же срабатывает триггер события `onupgradeneeded,` позволяя вам обновить схему базы данных в обработчике. Подробнее об этом см. в [Обновление версии базы данных](#Updating_the_version_of_the_database) ниже и на странице {{ domxref("IDBFactory.open") }} справочника
+Второй параметр метода open - это версия базы данных. Версия определяет схему базы данных - хранилище объектов и их структуру . Если база данных ещё не существует, то она создаётся операцией `open,` затем срабатывает триггер события `onupgradeneeded` и после этого ваш обработчик этого события создаёт схему базы данных. Если же база данных уже существует, а вы указываете новый номер версии, то сразу же срабатывает триггер события `onupgradeneeded,` позволяя вам обновить схему базы данных в обработчике. Подробнее об этом см. в [Обновление версии базы данных](#Updating_the_version_of_the_database) ниже и на странице {{ domxref("IDBFactory.open") }} справочника
 
 > **Предупреждение:** Версия базы данных имеет внутреннее представление `unsigned long long` number (длинное длинное целое без знака), то есть может принимать очень большие целые значения. Имейте в виду также, что нет смысла использовать в качестве версии базы данных значение с плавающей точкой (float), потому что оно будет сконвертировано в ближайшее меньшее целое. В результате неожиданно может не запуститься транзакция или сработать триггер события `upgradeneeded`. Например, не используйте значение 2.4 как версию базы данных:
 >
@@ -88,13 +88,13 @@ request.onsuccess = function(event) {
 };
 ```
 
-Какая из двух функций` - onsuccess()` или `onerror()` - должна быть вызвана? Если всё в порядке - то инициируется событие успеха (это событие DOM, свойство type которого выставлено в `"success"`) с `request` в качестве `target`. Это вызывает запуск функции `onsuccess()` объекта `request` с событием успеха в качестве аргумента. В противном случае, если возникают какие-то проблемы, то происходит событие ошибки (то есть событие DOM, свойство `type` которого установлено в `"error"`) . Это приводит к запуску функции `onerror()` с событием ошибки в качестве аргумента.
+Какая из двух функций - `onsuccess()` или `onerror()` - должна быть вызвана? Если всё в порядке - то инициируется событие успеха (это событие DOM, свойство type которого выставлено в `"success"`) с `request` в качестве `target`. Это вызывает запуск функции `onsuccess()` объекта `request` с событием успеха в качестве аргумента. В противном случае, если возникают какие-то проблемы, то происходит событие ошибки (то есть событие DOM, свойство `type` которого установлено в `"error"`) . Это приводит к запуску функции `onerror()` с событием ошибки в качестве аргумента.
 
-IndexedDB API разработан так, чтобы минимизировать необходимость обработки ошибок, поэтому скорее всего вы не встретите много событий ошибки запроса (по крайней мере если вы будете использовать этот API!). Однако при открытии базы данных есть несколько общих условий, которые генерируют события ошибок. Наиболее вероятной проблемой является запрет вашему веб-приложению на создание базы данных, установленный пользователем в браузере. Одной из основных целей разработки IndexedDB - это обеспечение возможности сохранения больших объёмов данных для использования офлайн. (Чтобы узнать, сколько памяти вы можете использовать в разных браузерах, обратитесь к [Ограничениям памяти](/en/IndexedDB#Storage_limits "https://developer.mozilla.org/en/IndexedDB#Storage_limits")).
+IndexedDB API разработан так, чтобы минимизировать необходимость обработки ошибок, поэтому скорее всего вы не встретите много событий ошибки запроса (по крайней мере если вы будете использовать этот API!). Однако при открытии базы данных есть несколько общих условий, которые генерируют события ошибок. Наиболее вероятной проблемой является запрет вашему веб-приложению на создание базы данных, установленный пользователем в браузере. Одной из основных целей разработки IndexedDB - это обеспечение возможности сохранения больших объёмов данных для использования офлайн. (Чтобы узнать, сколько памяти вы можете использовать в разных браузерах, обратитесь к [Ограничениям памяти](/en/IndexedDB#Storage_limits)).
 
 Конечно же, браузеры стремятся не позволить назойливым рекламным сетям или вредоносным сайтам засорять ваш компьютер. Поэтому при первой попытке любого веб-приложения открыть хранилище IndexedDB, браузер запрашивает разрешение пользователя. Пользователь может выбрать - то ли разрешить, то ли запретить доступ. Кроме этого, в приватных режимах браузеров (частный просмотр для Firefox и режим инкогнито для Chrome), IndexedDB полностью запрещена для использования. Так как цель приватных режимов - не оставлять следов, то открытие базы данных невозможно в таких режимах.
 
-А теперь предположим, что пользователь разрешил вашему запросу создать базу данных и состоялось событие успеха, запустившее обработчик события успеха. Что дальше? Так как ваш запрос был сгенерирован с вызовом метода ` indexedDB.open(), то ``request.result ` является экземпляром объекта `IDBDatabase` и вы определённо захотите сохранить его для будущего использования. Ваш код может выглядеть примерно так:
+А теперь предположим, что пользователь разрешил вашему запросу создать базу данных и состоялось событие успеха, запустившее обработчик события успеха. Что дальше? Так как ваш запрос был сгенерирован с вызовом метода `indexedDB.open()`, то `request.result` является экземпляром объекта `IDBDatabase` и вы определённо захотите сохранить его для будущего использования. Ваш код может выглядеть примерно так:
 
 ```js
 var db;
@@ -118,7 +118,7 @@ db.onerror = function(event) {
 };
 ```
 
-Одной из возможных ошибок при открытии базы данных является `VER_ERR. `Она сигнализирует о том, что версия базы данных, сохранённая на диске, _больше_, чем версия, которую вы пытаетесь открыть. Такая ошибка должна быть в обязательном порядке обработана обработчиком ошибок.
+Одной из возможных ошибок при открытии базы данных является `VER_ERR`. Она сигнализирует о том, что версия базы данных, сохранённая на диске, _больше_, чем версия, которую вы пытаетесь открыть. Такая ошибка должна быть в обязательном порядке обработана обработчиком ошибок.
 
 ### Создание или обновление версии базы данных
 
@@ -144,11 +144,11 @@ request.onupgradeneeded = function(event) {
 
 Когда вы увеличиваете номер версии, будет инициировано событие onupgradeneeded. В этот момент БД будет хранить старые объекты. Но для всякого объекта прошлой версии стоит создать новый объект, совместимый с новой версией. Если вам необходимо исправить существующий объект в БД (например, для изменения keyPath), то вы можете удалить объект и создать его вновь с новыми параметрами (помните, что удаление стирает информацию, так что не забывайте сохранять то, что вам нужно).
 
-WebKit поддерживает текущую версию спецификации в Google Chrome 23 и старше. Так что там нет события indexedDB.open(name, version).onupgradeneeded. Однако, вы можете ознакомиться с инструкцией [о том, что делать со старым ](</en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated>)[Webkit](</en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated>).
+WebKit поддерживает текущую версию спецификации в Google Chrome 23 и старше. Так что там нет события indexedDB.open(name, version).onupgradeneeded. Однако, вы можете ознакомиться с инструкцией [о том, что делать со старымWebkit](</en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated>).
 
 ### Структура базы данных
 
-Now to structure the database. IndexedDB uses object stores rather than tables, and a single database can contain any number of object stores. Whenever a value is stored in an object store, it is associated with a key. There are several different ways that a key can be supplied depending on whether the object store uses a [key path](/en/IndexedDB#gloss_key_path "https://developer.mozilla.org/en/IndexedDB#gloss_key_path") or a [key generator](/en/IndexedDB#gloss_key_generator "en/IndexedDB#gloss key generator").
+Now to structure the database. IndexedDB uses object stores rather than tables, and a single database can contain any number of object stores. Whenever a value is stored in an object store, it is associated with a key. There are several different ways that a key can be supplied depending on whether the object store uses a [key path](/en/IndexedDB#gloss_key_path) or a [key generator](/en/IndexedDB#gloss_key_generator).
 
 The following table shows the different ways the keys are supplied.
 
@@ -207,7 +207,7 @@ Object stores are created with a single call to `createObjectStore()`. The metho
 
 We've also asked for an index named "name" that looks at the `name` property of the stored objects. As with `createObjectStore()`, `createIndex()` takes an optional `options` object that refines the type of index that you want to create. Adding objects that don't have a `name` property still succeeds, but the object won't appear in the "name" index.
 
-We can now retrieve the stored customer objects using their `ssn` from the object store directly, or using their name by using the index. To learn how this is done, see the section on [using an index](/en/IndexedDB/Using_IndexedDB#Using_an_index "Using IndexedDB#Using an index").
+We can now retrieve the stored customer objects using their `ssn` from the object store directly, or using their name by using the index. To learn how this is done, see the section on [using an index](/en/IndexedDB/Using_IndexedDB#Using_an_index).
 
 ## Adding and removing data
 
@@ -251,7 +251,7 @@ for (var i in customerData) {
 }
 ```
 
-The `result` of a request generated from a call to `add() `is the key of the value that was added. So in this case, it should equal the `ssn` property of the object that was added, since the object store uses the `ssn` property for the key path. Note that the `add()` function requires that no object already be in the database with the same key. If you're trying to modify an existing entry, or you don't care if one exists already, use the `put()` function.
+The `result` of a request generated from a call to `add()` is the key of the value that was added. So in this case, it should equal the `ssn` property of the object that was added, since the object store uses the `ssn` property for the key path. Note that the `add()` function requires that no object already be in the database with the same key. If you're trying to modify an existing entry, or you don't care if one exists already, use the `put()` function.
 
 ## Removing data from the database
 
@@ -312,7 +312,7 @@ objectStore.openCursor().onsuccess = function(event) {
 };
 ```
 
-The` openCursor()` function takes several arguments. First, you can limit the range of items that are retrieved by using a key range object that we'll get to in a minute. Second, you can specify the direction that you want to iterate. In the above example, we're iterating over all objects in ascending order. The success callback for cursors is a little special. The cursor object itself is the `result` of the request (above we're using the shorthand, so it's `event.target.result`). Then the actual key and value can be found on the `key` and `value` properties of the cursor object. If you want to keep going, then you have to call `continue()` on the cursor. When you've reached the end of the data (or if there were no entries that matched your `openCursor()` request) you still get a success callback, but the `result` property is `undefined`.
+The `openCursor()` function takes several arguments. First, you can limit the range of items that are retrieved by using a key range object that we'll get to in a minute. Second, you can specify the direction that you want to iterate. In the above example, we're iterating over all objects in ascending order. The success callback for cursors is a little special. The cursor object itself is the `result` of the request (above we're using the shorthand, so it's `event.target.result`). Then the actual key and value can be found on the `key` and `value` properties of the cursor object. If you want to keep going, then you have to call `continue()` on the cursor. When you've reached the end of the data (or if there were no entries that matched your `openCursor()` request) you still get a success callback, but the `result` property is `undefined`.
 
 One common pattern with cursors is to retrieve all objects in an object store and add them to an array, like this:
 
@@ -1174,13 +1174,13 @@ input {
 
 ## Next step
 
-If you want to start tinkering with the API, jump in to the [reference documentation](/en/IndexedDB "https://developer.mozilla.org/en/IndexedDB") and checking out the different methods.
+If you want to start tinkering with the API, jump in to the [reference documentation](/en/IndexedDB) and checking out the different methods.
 
 ## See also
 
 Reference
 
-- [IndexedDB API Reference](/en/IndexedDB "https://developer.mozilla.org/en/IndexedDB")
+- [IndexedDB API Reference](/en/IndexedDB)
 - [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/ru/docs/IndexedDB/Using_IndexedDB_in_chrome)
 
@@ -1195,4 +1195,4 @@ Related articles
 
 Firefox
 
-- Mozilla [interface files0](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1 "https://mxr.mozilla.org/mozilla-central/find?text=&string=dom/indexedDB/.*\\.idl®exp=1")
+- Mozilla [interface files0](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1)
