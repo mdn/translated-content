@@ -4,11 +4,6 @@ slug: Web/API/HTMLElement/dragstart_event
 translation_of: Web/API/HTMLElement/dragstart_event
 original_slug: Web/API/HTMLElement/dragstart_event
 page-type: web-api-event
-tags:
-  - DOM
-  - Event
-  - Reference
-  - drag and drop
 browser-compat: api.HTMLElement.dragstart_event
 ---
 
@@ -110,12 +105,12 @@ source.addEventListener("dragend", (event) => {
 {{Specifications}}
 
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
 {{Compat}}
 
 
-## Ver también
+## Véase también
 
 - Otros eventos de arrastre:
   
