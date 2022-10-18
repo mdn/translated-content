@@ -140,7 +140,7 @@ document.querySelectorAll("button").forEach((button) => {
 <input autocomplete="name" /> <button>Show autocomplete options</button>
 ```
 
-以下代码展示了当按钮被点击时，input 展示的交互层。.
+以下代码展示了当按钮被点击时，input 展示的交互层。
 
 ```js
   const button = document.querySelector("button");
