@@ -45,7 +45,7 @@ for (const letter of arr) {
 
 #### 结果
 
-{{EmbedLiveSample('Iteration_using_for...of_loop', '', '')}}
+{{EmbedLiveSample('使用 for...of 循环进行迭代')}}
 
 ### 手动执行迭代器
 
