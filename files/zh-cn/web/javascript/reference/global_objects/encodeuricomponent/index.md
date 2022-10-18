@@ -49,7 +49,7 @@ console.log(encodeURI(set4)); // ABC%20abc%20123 (空格被编码为 %20)
 console.log(encodeURIComponent(set1)); // %3B%2C%2F%3F%3A%40%26%3D%2B%24
 console.log(encodeURIComponent(set2)); // -_.!~*'()
 console.log(encodeURIComponent(set3)); // %23
-console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (the space gets encoded as %20)
+console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (空格被编码为 %20)
 ```
 
 注意，如果试图编码一个非高 - 低位完整的代理字符，将会抛出一个 {{jsxref("URIError")}} 错误，例如：

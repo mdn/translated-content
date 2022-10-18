@@ -57,7 +57,7 @@ Vary: User-Agent
 
 {{Compat("http.headers.Vary")}}
 
-## <span class="trans_txt">호환성 노트</span>
+## 호환성 노트
 
 - [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
 
@@ -65,4 +65,4 @@ Vary: User-Agent
 
 - [Understanding The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
 - [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
-- [Content negotiation](https://developer.mozilla.org/docs/Web/HTTP/Content_negotiation)
+- [Content negotiation](/ko/docs/Web/HTTP/Content_negotiation)

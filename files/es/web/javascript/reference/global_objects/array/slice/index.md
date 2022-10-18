@@ -37,7 +37,7 @@ arr.slice([inicio [, fin]])
     Con un índice negativo, `fin` indica un desplazamiento desde el final de la secuencia. `slice(2,-1)` extrae desde el tercer hasta el penúltimo elemento en la secuencia.
 
     Si `fin` es omitido, slice extrae hasta el final de la secuencia (`arr.length`)`.`
-    
+
     Si `fin` es mayor a la longitud del array, `slice` extrae hasta el final de la secuencia (`arr.length`)`.`
 
 ### `Valor de retorno`

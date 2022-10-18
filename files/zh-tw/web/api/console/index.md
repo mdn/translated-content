@@ -173,7 +173,7 @@ The output looks like this:
 
 ### Timers
 
-In order to calculate the duration of a specific operation, Gecko 10 introduced the support of timers in the `console` object. To start a timer, call the ` console.time``() ` method, giving it a name as the only parameter. To stop the timer, and to get the elapsed time in milliseconds, just call the `console.timeEnd()` method, again passing the timer's name as the parameter. Up to 10,000 timers can run simultaneously on a given page.
+In order to calculate the duration of a specific operation, Gecko 10 introduced the support of timers in the `console` object. To start a timer, call the `console.time()` method, giving it a name as the only parameter. To stop the timer, and to get the elapsed time in milliseconds, just call the `console.timeEnd()` method, again passing the timer's name as the parameter. Up to 10,000 timers can run simultaneously on a given page.
 
 For example, given this code:
 

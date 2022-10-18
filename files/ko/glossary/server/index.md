@@ -16,5 +16,5 @@ slug: Glossary/Server
 
 ### 일반적인 지식
 
-- [서버의 소개](https://developer.mozilla.org/en-US/Learn/What_is_a_web_server)
+- [서버의 소개](/en-US/Learn/What_is_a_web_server)
 - Wikipedia의 [Server (computing)](<https://en.wikipedia.org/wiki/Server_(computing)>)

@@ -83,7 +83,7 @@ Agora para um exemplo real — e se quiséssemos carregar imagens dinamicamente,
 
 Ao invés disso, podemos contruir nossa própria promessa para lidar com casos deste tipo. (Veja o exemplo [Promises test](https://github.com/mdn/js-examples/tree/master/promises-test) para o código fonte, ou [veja rodando live](https://mdn.github.io/promises-test/).)
 
-{{note("Uma implementação real de service worker usaria caching e onfetch ao invés da depreciada XMLHttpRequest API. Estes features não são usados aqui para que você foque em entender Promises.")}}
+> **Nota:** Uma implementação real de service worker usaria caching e onfetch ao invés da depreciada XMLHttpRequest API. Estes features não são usados aqui para que você foque em entender Promises.
 
 ```js
 function imgLoad(url) {

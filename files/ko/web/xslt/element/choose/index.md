@@ -14,8 +14,8 @@ original_slug: Web/XSLT/choose
 
 ```
 <xsl:choose>
-	<xsl:when>
-	<xsl:otherwise> [optional]
+  <xsl:when>
+  <xsl:otherwise> [optional]
 </<xsl:choose>
 ```
 

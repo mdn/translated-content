@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/sub
 ---
 {{JSRef}} {{deprecated_header}}
 
-O método `sub()` cria um elemento HTML [`<sub>`](/en-US/docs/Web/HTML/Element/sub) que faz com que uma string seja exibida como subscrito (texto pequeno).
+O método `sub()` cria um elemento HTML [`<sub>`](/pt-BR/docs/Web/HTML/Element/sub) que faz com que uma string seja exibida como subscrito (texto pequeno).
 
 ## Sintaxe
 
@@ -22,7 +22,7 @@ str.sub()
 
 ### Valor retornado
 
-Uma string contendo um elemento HTML [`<sub>`](/en-US/docs/Web/HTML/Element/sub).
+Uma string contendo um elemento HTML [`<sub>`](/pt-BR/docs/Web/HTML/Element/sub).
 
 ## Descrição
 

@@ -27,7 +27,7 @@ Uma {{domxref("USVString")}}.
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123"
+  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/search?q=123"
 );
 console.log(url.search); // Logs "?q=123"
 ```
