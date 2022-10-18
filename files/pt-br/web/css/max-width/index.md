@@ -1,21 +1,8 @@
 ---
 title: max-width
 slug: Web/CSS/max-width
-tags:
-  - CSS
-  - Dimensões
-  - Layout
-  - Limites
-  - Máximo
-  - Propriedade CSS
-  - Referencia
-  - largura
-  - max-width
-  - receita:propriedade-css
-  - tamanho
-translation_of: Web/CSS/max-width
 ---
-{{CSSRef}}A propriedade **`max-width`** do [CSS](/pt-BR/docs/CSS) estabelece a largura máxima de um elemento. Ele evita que o [valor usado](/pt-BR/docs/Web/CSS/used_value) da propriedade {{ cssxref("width") }} se torne maior que o valor especificado por `max-width`.{{EmbedInteractiveExample("pages/css/max-width.html")}}
+{{CSSRef}}A propriedade **`max-width`** do [CSS](/pt-BR/docs/Web/CSS) estabelece a largura máxima de um elemento. Ele evita que o [valor usado](/pt-BR/docs/Web/CSS/used_value) da propriedade {{ cssxref("width")}} se torne maior que o valor especificado por `max-width`.{{EmbedInteractiveExample("pages/css/max-width.html")}}
 
 `max-width` substitui {{cssxref("width")}}, mas {{cssxref("min-width")}} substitui `max-width`.
 
@@ -140,9 +127,9 @@ Garantir que os elementos atribuidos com `max-width` não estejam cortados e/ou 
 
 | Especificação                                                                                | Status                                   | Comentário                                                                                                                                                                                                                        |
 | -------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Sizing', '#width-height-keywords', 'max-width') }} | {{ Spec2('CSS3 Sizing') }}     | Adiciona o `max-content`, `min-content`, `fit-content`, e `fill-available` keywords. _(Ambos CSS3 Box e CSS3 Writing Modes são rascunhos usados para definir essas keywords, mas foram substituídas por essa especificação._) |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'max-width') }}     | {{ Spec2('CSS3 Transitions') }} | Define `max-width` como animável.                                                                                                                                                                                                 |
-| {{ SpecName('CSS2.1', 'visudet.html#min-max-widths', 'max-width') }} | {{ Spec2('CSS2.1') }}             | Definição inicial.                                                                                                                                                                                                                |
+| {{SpecName('CSS3 Sizing', '#width-height-keywords', 'max-width')}} | {{Spec2('CSS3 Sizing')}}     | Adiciona o `max-content`, `min-content`, `fit-content`, e `fill-available` keywords. _(Ambos CSS3 Box e CSS3 Writing Modes são rascunhos usados para definir essas keywords, mas foram substituídas por essa especificação._) |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'max-width')}}     | {{Spec2('CSS3 Transitions')}} | Define `max-width` como animável.                                                                                                                                                                                                 |
+| {{SpecName('CSS2.1', 'visudet.html#min-max-widths', 'max-width')}} | {{Spec2('CSS2.1')}}             | Definição inicial.                                                                                                                                                                                                                |
 
 {{cssinfo}}
 
@@ -152,5 +139,5 @@ Garantir que os elementos atribuidos com `max-width` não estejam cortados e/ou 
 
 ## Veja também
 
-- {{ Cssxref("width") }}, {{ Cssxref("min-width") }}, {{ Cssxref("max-height") }}
-- [The box model](/en/CSS/box_model), {{ Cssxref("box-sizing") }}
+- {{Cssxref("width")}}, {{Cssxref("min-width")}}, {{Cssxref("max-height")}}
+- [The box model](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{Cssxref("box-sizing")}}
