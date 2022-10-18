@@ -184,7 +184,7 @@ slug: Learn/HTML/Tables/Basics
 
 GitHub の[ライブサンプルもご覧ください](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html)。テーブルがもう少し読みやすくなっているということに気付くでしょう。これは、今までこのページで見てきたテーブルには最小限のスタイルしか施されていないからです。対して、GitHub バージョンではより特別な意味を持った CSS が適用されています。
 
-幻想にふけってはいけません。テーブルを Web 上で有効にするには、[CSS](/ja/docs/Learn/CSS) でスタイル情報を提供し、HTML でしっかりとした構造を提供する必要があります。このモジュールでは、HTML 部分に焦点を合わせています。CSS の部分については、ここを終えた後に[表のスタイリング](/ja/docs/Learn/CSS/Styling_boxes/Styling_tables)の記事を参照してください。
+幻想にふけってはいけません。テーブルを Web 上で効果的に使うには、[CSS](/ja/docs/Learn/CSS) でスタイル情報を提供し、HTML でしっかりとした構造を提供する必要があります。このモジュールでは、HTML 部分に焦点を合わせています。CSS の部分については、ここを終えた後に[表のスタイリング](/ja/docs/Learn/CSS/Styling_boxes/Styling_tables)の記事を参照してください。
 
 このモジュールでは CSS に焦点を当てませんが、スタイルを設定しなくてもデフォルトのテーブルより読みやすくなるように、最小限の CSS スタイルシートを使用できます。[スタイルシートはここ](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css)で、そしてスタイルシートを適用する [HTML テンプレート](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html)も見つけることができます。これらを一緒にすると、HTML テーブルを試すための良い出発点になります。
 
