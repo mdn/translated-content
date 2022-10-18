@@ -16,7 +16,7 @@ pc = new RTCPeerConnection([configuration]);
 ### Параметры
 
 - `configuration` {{optional_inline}}
-  - : Объект класса [`RTCConfiguration` ](#RTCConfiguration_dictionary), предоставляющий свойства для конфигурации нового экземпляра соединения.
+  - : Объект класса [`RTCConfiguration`](#RTCConfiguration_dictionary), предоставляющий свойства для конфигурации нового экземпляра соединения.
 
 ### Объект конфигурации RTCConfiguration
 

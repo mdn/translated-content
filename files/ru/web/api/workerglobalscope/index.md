@@ -69,10 +69,10 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("close")}} event is raised.
     Also available via the {{domxref("WorkerGlobalScope.onclose")}} property.
 - `rejectionhandled` {{non-standard_inline}}
-  - : An event handler for handled [`Promise`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.") rejection events.
+  - : An event handler for handled [`Promise`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
     Also available via the {{domxref("WorkerGlobalScope.onrejectionhandled")}} property.
 - `unhandledrejection` {{non-standard_inline}}
-  - : An event handler for unhandled [`Promise`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.") rejection events.
+  - : An event handler for unhandled [`Promise`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
     Also available via the {{domxref("WorkerGlobalScope.onunhandledrejection")}} property.
 
 ## Methods
@@ -82,7 +82,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 ### Standard methods
 
 - {{domxref("WorkerGlobalScope.importScripts()")}}
-  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example:` importScripts('foo.js', 'bar.js');`
+  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
 
 ### Non-standard methods
 
