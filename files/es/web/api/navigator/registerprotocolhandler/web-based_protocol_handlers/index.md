@@ -39,7 +39,7 @@ Cuando un navegador ejecuta este código, se le mostrará un mensaje al usuario,
 
 ![](https://mdn.mozillademos.org/files/9683/protocolregister.png)
 
-> **Nota:** La plantila de la URL proporcionada al registrar **debe** ser del mismo dominio que el de la página que intenta realizar el registro o el registro fallará. Por ejemplo, \`http\://example.com/homepage.html\` puede registrar un controlador de protocolo para \`http\://example.com/handle_mailto/%s\`, pero no para \`http\://example._**org**_/handle_mailto/%s\`.
+> **Nota:** La plantila de la URL proporcionada al registrar **debe** ser del mismo dominio que el de la página que intenta realizar el registro o el registro fallará. Por ejemplo, `http://example.com/homepage.html` puede registrar un controlador de protocolo para `http://example.com/handle_mailto/%s`, pero no para `http://example.org/handle_mailto/%s`.
 
 Al registrar el mismo controlador de protocolo más de una vez aparecerá una notifiación diferente, indicando que el controlador del protocolo ya ha está registrado. Por lo tanto, es una buena idea cuidar el registro del controlador de protocolo con una verificación para saber si ya está registrado, como con el siguiente ejemplo.
 
