@@ -19,7 +19,7 @@ super[expression]
 
 ## 描述
 
-`super` 关键字有两种使用方式：作为“函数调用”（`super(...args)`），或作为“属性查找”（`super.prop` 和 `super[expr]`）。
+`super` 关键字有两种使用方式：作为“函数调用”（`super(...args)`），或作为“属性查询”（`super.prop` 和 `super[expr]`）。
 
 > **备注：** `super` 是一个关键字，并且有一些特殊的语法结构。`super` 不是一个指向原型对象的变量。试图读取 `super` 本身会导致 {{jsxref("SyntaxError")}}。
 >
