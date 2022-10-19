@@ -24,7 +24,7 @@ L'interface **`History`** permet de manipuler l'historique de navigation du navi
 - {{domxref("History.previous")}} {{readOnlyInline}} {{ non-standard_inline() }} {{deprecated_inline}}
   - : Retourne un {{domxref("DOMString")}} de l‘URL précédente dans l'historique de navigation.
 - {{domxref("History.state")}} {{readOnlyInline}}
-  - : Retourne une value `any` représentant l'état le plus haut de l‘historique de navigation. C‘est une manière de vérifier cet état sans avoir à attendre un évenement {{event("popstate")}}.
+  - : Retourne une value `any` représentant l'état le plus haut de l‘historique de navigation. C‘est une manière de vérifier cet état sans avoir à attendre un évenement [`popstate`](/fr/docs/Web/API/Window/popstate_event).
 
 ## Méthodes
 

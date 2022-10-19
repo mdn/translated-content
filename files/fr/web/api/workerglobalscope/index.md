@@ -42,18 +42,13 @@ _Cette interface hérite des propriétés de l'interface {{domxref("EventTarget"
 Cette interface hérite des gestionnaires d'événements de l'interface {{domxref ("EventTarget")}} et implémente les gestionnaires d'événements de {{domxref ("WindowTimers")}} et {{domxref ("WindowBase64")}}.
 
 - {{domxref("WorkerGlobalScope.onerror")}}
-  - : Est un {{domxref ("EventHandler")}} représentant le code à appeler lorsque l'événement {{event ("error")}} est déclenché.
+  - : Est un {{domxref ("EventHandler")}} représentant le code à appeler lorsque l'événement `error` est déclenché.
 - {{domxref("WorkerGlobalScope.onoffline")}}
-  - : Est un {{domxref ("EventHandler")}} représentant le code à appeler lorsque l'événement {{event ("offline")}} est déclenché.
+  - : Est un {{domxref ("EventHandler")}} représentant le code à appeler lorsque l'événement `offline` est déclenché.
 - {{domxref("WorkerGlobalScope.ononline")}}
-  - : Est un {{domxref ("EventHandler")}} représentant le code à appeler lorsque l'événement {{event ("online")}} est déclenché.
+  - : Est un {{domxref ("EventHandler")}} représentant le code à appeler lorsque l'événement `online` est déclenché.
 - {{domxref("WorkerGlobalScope.onlanguagechange")}}
   - : Un {{domxref ("EventHandler")}} déclenché sur l'objet de portée global / worker lorsque les langues préférées de l'utilisateur changent.
-
-<!---->
-
-- {{domxref("WorkerGlobalScope.onclose")}} {{Non-standard_inline}}
-  - : Est un {{domxref ("EventHandler")}} représentant le code à appeler lorsque l'événement {{event ("close")}} est déclenché.
 
 ## Méthodes
 

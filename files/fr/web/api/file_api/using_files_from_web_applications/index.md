@@ -197,7 +197,7 @@ dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 ```
 
-Dans cet exemple, l'élément portant l'ID `dropbox` devient notre zone de dépôt en y ajoutant les gestionnaires d'écoute des événements {{event('dragenter')}}, {{event('dragover')}}, et {{event('drop')}}.
+Dans cet exemple, l'élément portant l'ID `dropbox` devient notre zone de dépôt en y ajoutant les gestionnaires d'écoute des événements [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event), [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event), et [`drop`](/fr/docs/Web/API/HTMLElement/drop_event).
 
 Nous n'avons pas vraiment besoin dans notre cas de gérer les événements `dragenter` et `dragover`. Les deux fonctions associées restent donc assez simples, elle ne servent qu'à stopper la propagation de l'événement et empêcher le déclenchement de l'action par défaut&nbsp;:
 

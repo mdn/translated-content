@@ -89,7 +89,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     </tr>
     <tr>
       <th scope="row">Évènements</th>
-      <td>{{event("slotchange")}}</td>
+      <td><a href="/fr/docs/Web/API/HTMLSlotElement/slotchange_event"><code>slotchange</code></a></td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>

@@ -186,7 +186,7 @@ Voir les exemples ci-avant.
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
-      <td>{{event("click")}}</td>
+      <td><a href="/fr/docs/Web/API/Element/click_event"><code>click</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
