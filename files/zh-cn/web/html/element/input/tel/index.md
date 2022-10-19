@@ -24,10 +24,10 @@ slug: Web/HTML/Element/Input/tel
    <td>代表电话号码的字符串，或为空</td>
   </tr>
   <tr>
-   <td><strong>Events</strong></td>
-   <td> {{domxref("HTMLElement/change_event", "change")}} 和
-        {{domxref("HTMLElement/input_event", "input")}}
-    </td>
+   <td><strong>事件</strong></td>
+   <td> 
+   {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}
+   </td>
   </tr>
   <tr>
    <td><strong>支持的通用属性</strong></td>
@@ -362,7 +362,7 @@ input:valid + span::after {
     </select>
   </div>
   <div>
-    <p>Enter your telephone number:</p>
+    <p>输入你的电话号码：</p>
     <span class="areaDiv">
       <input
         id="areaNo"
