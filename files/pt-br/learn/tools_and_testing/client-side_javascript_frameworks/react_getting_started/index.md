@@ -58,7 +58,7 @@ Enquanto React pode ser utilizado por [pequenos pedaços de interface](https://r
 
 Além disso, muitos dos beneficios da experiencias de desenvolvimento de uma aplicação React, tais como escrever interfaces com JSX, requerem um processo de compilação. Adicionar um compilador como o Babel em um website faz o código funcionar lentamente, então os desenvolvedores geralmente configuram algumas ferramentas para fazer compilações em etapas. React, sem duvídas, tem um grande ecossistema de ferramentas, mas isso pode ser aprendido.
 
-Este artigo será focado no caso de uso do React para renderizar toda a interface do usuario de um aplicativo, usando ferramentas fornecidas pelo prórpio [create-react-app](https://create-react-app.dev/) do Facebook.
+Este artigo será focado no caso de uso do React para renderizar toda a interface do usuario de um aplicativo, usando ferramentas fornecidas pelo próprio [create-react-app](https://create-react-app.dev/) do Facebook.
 
 ## Como React usa JavaScript?
 

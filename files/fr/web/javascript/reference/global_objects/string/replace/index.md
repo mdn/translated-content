@@ -215,7 +215,7 @@ function styleFormatTiret(nomPropriete) {
 }
 ```
 
-Avec ` styleFormatTiret(``'borderTop') `, cela renvoie 'border-top'.
+Avec `styleFormatTiret('borderTop')`, cela renvoie 'border-top'.
 
 Du fait que nous voulons transformer davantage le résultat de la correspondance avant la substitution finale, nous devons utiliser une fonction. Cela force l'évaluation de la correspondance avant la méthode {{jsxref ("String.prototype.toLowerCase()", "toLowerCase()")}}. Si nous avions essayé de le faire en utilisant la correspondance sans fonction, le {{jsxref ("String.prototype.toLowerCase()", "toLowerCase()")}} n'aurait eu aucun effet.
 

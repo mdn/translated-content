@@ -15,7 +15,7 @@ En JavaScript hay dos funciones para decodificar y codificar cadenas base64, res
 
 La función `atob()` decodifica una cadena de datos que ha sido codificada usando la codificación en base 64. Por el contrario, la función `btoa()` crea una cadena ASCII codificada en base 64 a partir de una "cadena" de datos binarios.
 
-Ambas funciones trabajan sobre cadenas de texto. Si desea trabajar con [ArrayBuffers](/es/docs/Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer), lea [este párrafo](/es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando$edit#Solution_.232_.E2.80.93_rewriting_atob%28%29_and_btoa%28%29_using_TypedArrays_and_UTF-8).
+Ambas funciones trabajan sobre cadenas de texto. Si desea trabajar con [ArrayBuffers](/es/docs/Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer), lea [este párrafo](/es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando#Solution_.232_.E2.80.93_rewriting_atob%28%29_and_btoa%28%29_using_TypedArrays_and_UTF-8).
 
 - [`data` URIs](/en-US/docs/data_URIs)
   - `Los URIs de` datos, definidos por [RFC 2397](https://tools.ietf.org/html/rfc2397), permiten a los creadores de contenido introducir pequeños ficheros en línea en documentos.
