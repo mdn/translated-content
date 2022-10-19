@@ -11,8 +11,6 @@ translation_of: Web/API/Element/classList
 
 > **Примечание:** У **classList** есть примитивная альтернатива - свойство **className,** которое содержит значение атрибута **class** элемента.
 
-##
-
 ## Синтаксис
 
 ```
@@ -25,11 +23,11 @@ var elementClasses = elem.classList;
 
 **ClassList** является геттером. Возвращаемый им объект имеет несколько методов:
 
-- add( String **\[,String] )**
+- add( String \[,String] )
   - : Добавляет элементу указанные классы
-- **remove**( String \[,String] **)**
-  - : \***\*Удаляет у элемента указанные классы**item** ( Number )
-    Результат аналогичен вызову **`сlassList[Number]`\*\*
+- remove( String \[,String] )
+  - : **Удаляет у элемента указанные классы **item** ( Number )
+    Результат аналогичен вызову **`сlassList[Number]`**
     **toggle** ( String \[, Boolean])
     Если класс у элемента отсутствует - добавляет, иначе - убирает. Когда вторым параметром передано false - удаляет указанный класс, а если true - добавляет.
     Если вторым параметром передан undefined или переменная с typeof == 'undefined', поведение будет аналогичным передаче только первого параметра при вызове toggle.
@@ -137,8 +135,6 @@ console.log(elem.classList); //DOMTokenList ["ok"]
 
 {{Compat}}
 
-##
-
 ## Спецификация
 
 - <http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-classlist>
@@ -146,4 +142,4 @@ console.log(elem.classList); //DOMTokenList ["ok"]
 
 ## Смотрите также
 
-- [element.className](/ru/docs/DOM/element.className "DOM/element.className")
+- [element.className](/ru/docs/DOM/element.className)

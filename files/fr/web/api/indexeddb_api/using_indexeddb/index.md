@@ -346,7 +346,7 @@ Vous voyez comment ça fonctionne ? Comme il n'y a qu'un seul objet de stockage,
 
 Vous pouvez accélérer l’accès à vos données en limitant la portée et le mode de la transaction. Voici deux astuces :
 
-- Lors de la définition de la [scope](/fr/docs/IndexedDB/Using_IndexedDB$edit#scope) _(portée)_, spécifiez seulement l’objet de stockage dont vous avez besoin. De cette manière, vous pouvez avoir de multiples opérations simultanées sans qu’elles se chevauchent.
+- Lors de la définition de la [scope](/fr/docs/IndexedDB/Using_IndexedDB#scope) _(portée)_, spécifiez seulement l’objet de stockage dont vous avez besoin. De cette manière, vous pouvez avoir de multiples opérations simultanées sans qu’elles se chevauchent.
 - Spécifier une transaction en mode readwrite uniquement lorsque c’est nécessaire. Vous pouvez avoir de multiples opérations simultanées en lecture seule, mais vous ne pouvez avoir qu’une transaction "readwrite" _(lecture/écriture)_ sur un objet de stockage. Pour en savoir plus, voir la définition relative aux [transactions in the Basic Concepts article](/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction).
 
 ### Mettre à jour une entrée dans la base de données
