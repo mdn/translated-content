@@ -36,7 +36,7 @@ b.setAttribute("disabled", "disabled");
 
 Если указанный атрибут уже существует, его значение изменится на новое. Если атрибута ранее не существовало, он будет создан.
 
-Несмотря на то, что метод [`getAttribute()`](/ru/docs/DOM/element.getAttribute "DOM/element.getAttribute") возвращает null у удалённых атрибутов, вы должны использовать [removeAttribute()](/ru/docs/DOM/element.removeAttribute "DOM/element.removeAttribute") вместо _elt_.setAttribute(_attr_, null), чтобы удалить атрибут. Последний заставит значение `null` быть строкой `"null"`, которая, вероятно, не то, что вы хотите.
+Несмотря на то, что метод [`getAttribute()`](/ru/docs/DOM/element.getAttribute) возвращает null у удалённых атрибутов, вы должны использовать [removeAttribute()](/ru/docs/DOM/element.removeAttribute) вместо _elt_.setAttribute(_attr_, null), чтобы удалить атрибут. Последний заставит значение `null` быть строкой `"null"`, которая, вероятно, не то, что вы хотите.
 
 Использование setAttribute() для изменения определённых атрибутов особенно значимо в XUL, так как работает непоследовательно, а атрибут определяет значение по умолчанию. Для того, чтобы получить или изменить текущие значения, вы должны использовать свойства. Например, elt.value вместо elt.setAttribure('value', val).
 
