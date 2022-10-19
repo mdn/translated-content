@@ -4,7 +4,7 @@ In this guide, we will look at how to deal with the files in `files/<locale>/orp
 
 ## What they are
 
-Yari relies on file structure/hierarchy being the same between `files/en-us/` from `mdn/content` and `files/<locale>/` from `mdn/translated-content`. However, from time to time, some differences occur and must be solved by a humain maintainer. Such differences are pushed into `files/<locale>/orphaned` and `files/<locale>/conflicting` directories.
+Yari relies on file structure/hierarchy being the same between `files/en-us/` from `mdn/content` and `files/<locale>/` from `mdn/translated-content`. However, from time to time, some differences occur and must be solved by a human maintainer. Such differences are pushed into `files/<locale>/orphaned` and `files/<locale>/conflicting` directories.
 
 ### Orphaned pages
 
@@ -32,7 +32,7 @@ If your locale already contains a `conflicting` or `orphaned` directory, it has 
 
 Depending on your team and on the directory you are processing, you may either go with a pull request dealing with only on page or with a PR for a small set of pages (e.g. processing the whole `conflicting/web/svg` directory at once if it contains 5-10 pages).
 
-#### Orphaned pages
+#### Dealing with orphaned pages
 
 For an orphaned page, the generic approach consists of the following:
 
@@ -66,7 +66,7 @@ For an orphaned page, the generic approach consists of the following:
    yarn content delete <orphaned/slug/of/page> <locale>
    ```
 
-#### Conflicting pages
+#### Dealing with conflicting pages
 
 A conflicting page might need more work as content may have been moved/rewritten on the target page as well and redirection might not suffice. That being written, dealing with a conflicting page usually involves:
 
