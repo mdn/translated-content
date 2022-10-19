@@ -52,11 +52,11 @@ Las vistas de arreglos tipados tienen nombres autodescriptivos y proporcionan vi
 
 Estos son algunos ejemplos de APIs que utilizan arreglos tipados; hay otras, y todo el tiempo surgen más.
 
-- {{Link("/en-US/docs/Web/API/FileReader", "FileReader.prototype.readAsArrayBuffer()", "#readAsArrayBuffer()")}}
+- [FileReader.prototype.readAsArrayBuffer()](/en-US/docs/Web/API/FileReader)
   - : El método `FileReader.prototype.readAsArrayBuffer()` comienza a leer el contenido del {{Link("/es/docs/Web/API/Blob", "Blob")}} o {{Link("/es/docs/Web/API/File", "File")}}.
 - [`XMLHttpRequest.prototype.send()`](</es/docs/Web/API/XMLHttpRequest#send()>)
   - : El método `send()` de instancias de `XMLHttpRequest` ahora admiten arreglos tipados y objetos {{JSxRef("ArrayBuffer")}} como argumento.
-- {{Link("/en-US/docs/Web/API/ImageData", "ImageData.data")}}
+- [ImageData.data](/en-US/docs/Web/API/ImageData)
   - : Es un {{JSxRef("Uint8ClampedArray")}} que representa un arreglo unidimensional que contiene los datos en el orden RGBA, con valores enteros entre `0` y `255` inclusive.
 
 ## Ejemplos
