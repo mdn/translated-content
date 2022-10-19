@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
 {{JSRef}}
 
-**`entries()`** 메서드는 배열의 각 인덱스에 대한 키/값 쌍을 가지는 새로운 **`Array Iterator`\*\*** \*\*객체를 반환합니다.
+**`entries()`** 메서드는 배열의 각 인덱스에 대한 키/값 쌍을 가지는 새로운 **`Array Iterator`** 객체를 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
