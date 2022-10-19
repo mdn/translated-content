@@ -36,11 +36,20 @@ For an orphaned page, the generic approach consists of the following:
 
 1. Identify the `mdn/content` commit for the deletion using:
    ```bash
-   git log -- files/en-us/slug/to/document.md
+   git log -n 1 -- files/en-us/slug/of/deleted/doc/index.md
    ```
-   Then check the corresponding PR to have a better understanding of the change.
-2. Check if there is an active redirect for the corresponding page in English (see https://github.com/mdn/content/blob/main/files/en-us/_redirects.txt)
-3. Depending on the presence of a redirect, use either
+   This will give you something like
+   ```
+   commit d387c1fe9d861cf0578a5d05b29a47d3a1d5e986
+   Author: John Doe <jdoe@example.com>
+   Date:   Mon Sep 12 03:36:39 2022 -0400
+
+   Remove Glossary/jQuery (#20569)
+   ```
+
+2. Check the corresponding PR to have a better understanding of the change (in the previous example, this is [#20569](https://github.com/mdn/content/pull/20569)).
+3. Check if there is an active redirect for the corresponding page in English (see https://github.com/mdn/content/blob/main/files/en-us/_redirects.txt)
+4. Depending on the presence of a redirect, use either
     ```bash
     yarn content delete <orphaned/slug/of/page> <locale> --redirect <other/slug>
     ```
@@ -57,14 +66,23 @@ A conflicting page might need more work as content may have been moved/rewritten
 
 1. Identify the `mdn/content` commit for the move using:
    ```bash
-   git log -- files/en-us/slug/to/document.md
+   git log -n 1 -- files/en-us/slug/of/redirected/doc/index.md
    ```
-   Then check the corresponding PR to have a better understanding of the change.
-2. Applying the same redirect as per `mdn/content` for the source page:
+   This will give you something like
+   ```
+   commit be2279c2425d7d3eabe5956bc920025b025bdc2c
+   Author: John Doe <john.doe@example.com>
+   Date:   Wed Sep 21 23:51:39 2022 -0400
+
+    Merge "SAB planned changes" into the main page (#20863)
+   ```
+
+2. Check the corresponding PR to have a better understanding of the change (in the previous example, this is [#20863](https://github.com/mdn/content/pull/20863)).
+3. Applying the same redirect as per `mdn/content` for the source page:
     ```bash
     yarn content delete <conflicting/slug/of/page> <locale> --redirect <other/slug>
     ```
-3. Updating the target page to reflect the movement of content in English. You might need to reuse content from the "conflicting" page into the existing target page to follow the English evolution.
+4. Updating the target page to reflect the movement of content in English. You might need to reuse content from the "conflicting" page into the existing target page to follow the English evolution.
 
 ### Deal with generated PRs
 
