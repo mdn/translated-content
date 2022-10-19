@@ -1,3 +1,5 @@
+# Orphaned and conflicting documents
+
 In this guide, we will look at how to deal with the files in `files/<locale>/orphaned` and `files/<locale>/conflicting`. Ideally, those folders should be empty, but in practice, some regular maintenance is needed from each localization team and some more work might be needed if this has not been done since the MDN migration to GitHub.
 
 ## What they are
@@ -35,11 +37,14 @@ Depending on your team and on the directory you are processing, you may either g
 For an orphaned page, the generic approach consists of the following:
 
 1. Identify the `mdn/content` commit for the deletion using:
+
    ```bash
    git log -n 1 -- files/en-us/slug/of/deleted/doc/index.md
    ```
+
    This will give you something like
-   ```
+
+   ```console
    commit d387c1fe9d861cf0578a5d05b29a47d3a1d5e986
    Author: John Doe <jdoe@example.com>
    Date:   Mon Sep 12 03:36:39 2022 -0400
@@ -50,26 +55,30 @@ For an orphaned page, the generic approach consists of the following:
 2. Check the corresponding PR to have a better understanding of the change (in the previous example, this is [#20569](https://github.com/mdn/content/pull/20569)).
 3. Check if there is an active redirect for the corresponding page in English (see https://github.com/mdn/content/blob/main/files/en-us/_redirects.txt)
 4. Depending on the presence of a redirect, use either
-    ```bash
-    yarn content delete <orphaned/slug/of/page> <locale> --redirect <other/slug>
-    ```
 
-    or
+   ```bash
+   yarn content delete <orphaned/slug/of/page> <locale> --redirect <other/slug>
+   ```
 
-    ```bash
-    yarn content delete <orphaned/slug/of/page> <locale>
-    ```
+   or
+
+   ```bash
+   yarn content delete <orphaned/slug/of/page> <locale>
+   ```
 
 #### Conflicting pages
 
 A conflicting page might need more work as content may have been moved/rewritten on the target page as well and redirection might not suffice. That being written, dealing with a conflicting page usually involves:
 
 1. Identify the `mdn/content` commit for the move using:
+
    ```bash
    git log -n 1 -- files/en-us/slug/of/redirected/doc/index.md
    ```
+
    This will give you something like
-   ```
+
+   ```console
    commit be2279c2425d7d3eabe5956bc920025b025bdc2c
    Author: John Doe <john.doe@example.com>
    Date:   Wed Sep 21 23:51:39 2022 -0400
@@ -79,14 +88,16 @@ A conflicting page might need more work as content may have been moved/rewritten
 
 2. Check the corresponding PR to have a better understanding of the change (in the previous example, this is [#20863](https://github.com/mdn/content/pull/20863)).
 3. Applying the same redirect as per `mdn/content` for the source page:
-    ```bash
-    yarn content delete <conflicting/slug/of/page> <locale> --redirect <other/slug>
-    ```
+
+   ```bash
+   yarn content delete <conflicting/slug/of/page> <locale> --redirect <other/slug>
+   ```
+
 4. Updating the target page to reflect the movement of content in English. You might need to reuse content from the "conflicting" page into the existing target page to follow the English evolution.
 
 ### Deal with generated PRs
 
-With the automated PRs workflow, it is now easier to "catch" orphaned or conflicting pages before they fill the stack of pages to be removed in the repository. 
+With the automated PRs workflow, it is now easier to "catch" orphaned or conflicting pages before they fill the stack of pages to be removed in the repository.
 
 The process stays the same as above (using `yarn content delete bla/bla locale --redirect foo/foo` most of the time). However, the changes should be made on the branch created by the bot rather than on a new PR (checkout the existing branch rather than creating your own on your fork).
 
