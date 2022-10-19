@@ -1,21 +1,19 @@
 ---
 title: NetworkInformation.type
 slug: Web/API/NetworkInformation/type
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 
-**`NetworkInformation.type`** 読み取り専用プロパティは、デバイスがネットワーク通信に使用している接続の種類を返します。
+**`NetworkInformation.type`** は読み取り専用プロパティで、端末がネットワーク通信に使用している接続の種類を返します。
 
-## 構文
+{{AvailableInWorkers}}
 
-```
-var type = netInfo.type
-```
+### 値
 
-### 戻り値
-
-次の値のいずれかである列挙値です：
+次の値のいずれかである列挙値です。
 
 - `"bluetooth"`
 - `"cellular"`
@@ -26,12 +24,10 @@ var type = netInfo.type
 - `"other"`
 - `"unknown"`
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                 | ステータス                                   | コメント   |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------- |
-| {{SpecName('Network Information', '#widl-NetworkInformation-type', 'type')}} | {{Spec2('Network Information')}} | 最初の定義 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
-{{Compat("api.NetworkInformation.type")}}
+{{Compat}}
