@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 
 {{JSRef}}
 
-**`entries()`** 方法返回一个新的 **Array Iterator** 对象，该对象包含数组中每个索引的键/值对。
+**`entries()`** 方法返回一个新的**数组迭代器**对象，该对象包含数组中每个索引的键/值对。
 
 {{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
