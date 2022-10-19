@@ -397,7 +397,7 @@ Abra o template base (**/locallibrary/catalog/templates/base_generic.html**) e c
   </ul>
 ```
 
-Como você pode ver, usamos template tags `if`-`else`-`endif` para exibir condicionalmente o texto com base em `\{{ user.is_authenticated }}` ser verdadeiro. Se o usuário estiver autenticado, sabemos que temos um usuário válido, por isso chamamos `\{{ user.get_username }}`\*\* \*\*para exibir o nome deles.
+Como você pode ver, usamos template tags `if`-`else`-`endif` para exibir condicionalmente o texto com base em `\{{ user.is_authenticated }}` ser verdadeiro. Se o usuário estiver autenticado, sabemos que temos um usuário válido, por isso chamamos `\{{ user.get_username }}` para exibir o nome deles.
 
 Criamos os URLs dos links de logon e logout usando a template tag `url` e os nomes das respectivas configurações de URL. Observe também como anexamos `?next=\{{request.path}}` no final dos URLs. O que isso faz é adicionar um parâmetro de URL a seguir, contendo o endereço (URL) da página atual, ao final do URL vinculado. Após o usuário ter efetuado login/logout com sucesso, as visualizações usarão este valor "`next`" para redirecionar o usuário de volta à página em que ele clicou pela primeira vez no link de logon/logout.
 

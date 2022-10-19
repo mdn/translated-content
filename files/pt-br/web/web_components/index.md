@@ -53,7 +53,7 @@ A abordagem básica para se implementar um componente web geralmente se parece c
 
 - Extensões para criação de elementos built-in customizados
 
-  - :&#x20;
+  - : The following extensions are defined:
 
     - O atributo HTML global {{htmlattrxref("is")}}: Permite especificar que um elemento HTML padrão deve se comportar como um elemento built-in customizado registrado.
     - A opção "is" do método {{domxref("Document.createElement()")}}: Permite criar uma instância de um elemento HTML standard que se comporta como um determinado elemento built-in customizado registrado.

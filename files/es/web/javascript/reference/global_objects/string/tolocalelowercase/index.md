@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/toLocaleLowerCa
 ---
 {{JSRef}}El método **`toLocaleLowerCase()`** retorna la cadena de texto desde la que se llama convertida en minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas.{{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}
 
-Los fuentes para este ejemplo interactivo están almacenados en un repositorio GitHub. Si quieres contribuir en el proyecto de ejemplos interactivos, por favor clona https\://github.com/mdn/interactive-examples y envíanos un pull request.
+Los fuentes para este ejemplo interactivo están almacenados en un repositorio GitHub. Si quieres contribuir en el proyecto de ejemplos interactivos, por favor clona `https://github.com/mdn/interactive-examples` y envíanos un pull request.
 
 ## Sintaxis
 

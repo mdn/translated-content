@@ -207,7 +207,7 @@ request.onupgradeneeded = function(event) {
 우리는 또한 저장된 객체의 `name` 프로퍼티를 찾기 위한 인덱스 "name"을 요청합니다.
 또한 `createObjectStore()`, `createIndex()` 도 생성하려는 인덱스의 종류를 결정하는 선택적인 객체인 `options` 을 인자로 받습니다. `name` 프로퍼티가 없는 객체를 추가할 수는 있지만, 이 경우 그 객체는 "name" 인덱스에 나타나지 않습니다.
 
-이제 우리는 저장된 customer 객체를 가져오기 위해 `ssn` 을 이용하여 객체 저장소로부터 바로 가져오거나, 인덱스에서 그들의 이름을 이용해 가져올 수 있습니다. 이 과정이 어떻게 이루어지는지 배우기 위해, [using an index](https://developer.mozilla.org/en/IndexedDB/Using_IndexedDB#Using_an_index) 섹션을 확인할 수 있습니다.
+이제 우리는 저장된 customer 객체를 가져오기 위해 `ssn` 을 이용하여 객체 저장소로부터 바로 가져오거나, 인덱스에서 그들의 이름을 이용해 가져올 수 있습니다. 이 과정이 어떻게 이루어지는지 배우기 위해, [using an index](/en/IndexedDB/Using_IndexedDB#Using_an_index) 섹션을 확인할 수 있습니다.
 
 ### 키 생성기 사용하기
 
@@ -1297,7 +1297,7 @@ Further reading for you to find out more information if desired.
 
 ### Reference
 
-- [IndexedDB API Reference](https://developer.mozilla.org/en/IndexedDB)
+- [IndexedDB API Reference](/en/IndexedDB)
 - [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
 - IndexedDB [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1) in the Firefox source code
 

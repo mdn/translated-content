@@ -10,7 +10,7 @@ original_slug: Glossary/クロージャ
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "クロージャ", "クロージャ")}}
+- Wikipedia の [クロージャ](https://ja.wikipedia.org/wiki/クロージャ)
 
 ### 技術リファレンス
 

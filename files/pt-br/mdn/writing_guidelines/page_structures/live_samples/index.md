@@ -19,7 +19,7 @@ A MDN agora possui um sistema de "exemplos ao vivo", onde a amostra de código e
       <td><strong>Onde isso precisa ser feito?</strong></td>
       <td>
         Artigos tagueados com
-        <a href="/en-US/docs/tag/NeedsLiveSample">NeedsLiveSample</a>
+        <a href="/pt-BR/docs/tag/NeedsLiveSample">NeedsLiveSample</a>
       </td>
     </tr>
     <tr>
@@ -32,7 +32,7 @@ A MDN agora possui um sistema de "exemplos ao vivo", onde a amostra de código e
           </li>
           <li>
             Capacidade de usar macros
-            <a href="/en-US/docs/Project:Introduction_to_KumaScript"
+            <a href="/pt-BR/docs/Project:Introduction_to_KumaScript"
               >KumaScript</a
             >
             dentro dos artigos da MDN.
@@ -47,14 +47,14 @@ A MDN agora possui um sistema de "exemplos ao vivo", onde a amostra de código e
           Para uma descrição completa do sistema de exemplos ao vivo, incluindo
           como criar exemplos ao vivo ,veja
           <a
-            href="/en-US/docs/Project:MDN/Contributing/Editor_guide/Live_samples"
+            href="/pt-BR/docs/Project:MDN/Contributing/Editor_guide/Live_samples"
             >Using the live sample system</a
           >.
         </p>
         <ol>
           <li>
             Escolha um artigo da lista lista de artigos que estao tagueados com
-            <a href="/en-US/docs/tag/NeedsLiveSample">NeedsLiveSample</a>, em
+            <a href="/pt-BR/docs/tag/NeedsLiveSample">NeedsLiveSample</a>, em
             que o exemplo de codigo seja uma feature que seja familiar.
           </li>
           <li>Converta o codigo de exemplo para "ao vivo".</li>

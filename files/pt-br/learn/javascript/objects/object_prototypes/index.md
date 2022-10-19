@@ -99,7 +99,7 @@ Este método — [`Object.valueOf()`](/en-US/docs/Web/JavaScript/Reference/Globa
 
 Então, onde estão as propriedades e os métodos herdados definidos? Se você observar a página de referência do [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object), verá, à esquerda, um grande número de propriedades e métodos — muito mais do que o número de membros herdados que vimos disponíveis no objeto `person1`. Alguns são herdados e outros não — por que isso acontece?
 
-Como mencionado acima, os herdados são os definidos na propriedade `prototype` (você poderia chamá-lo de um subespaço de nomes) — ou seja, aqueles que começam com `Object.prototype.`, e não os que começam com apenas `Object.` O valor da propriedade `prototype` é um objeto, que é basicamente um bucket para armazenar propriedades e métodos que queremos que sejam herdados por objetos mais abaixo na cadeia de protótipos.
+Como mencionado acima, os herdados são os definidos na propriedade `prototype` (você poderia chamá-lo de um subespaço de nomes) — ou seja, aqueles que começam com `Object.prototype`, e não os que começam com apenas `Object`. O valor da propriedade `prototype` é um objeto, que é basicamente um bucket para armazenar propriedades e métodos que queremos que sejam herdados por objetos mais abaixo na cadeia de protótipos.
 
 Portanto, [`Object.prototype.watch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch), [`Object.prototype.valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), etc., estão disponíveis para qualquer tipo de objeto que herda de `Object.prototype`, incluindo novas instâncias de objeto criadas a partir do construtor `Person()`.
 

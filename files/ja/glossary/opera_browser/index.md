@@ -9,5 +9,5 @@ slug: Glossary/Opera_Browser
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "Opera")}}
+- Wikipedia 上の [Opera](https://ja.wikipedia.org/wiki/Opera)
 - [Opera ブラウザーウェブサイト](https://www.opera.com/)

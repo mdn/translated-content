@@ -5,8 +5,6 @@ translation_of: Games/Techniques/2D_collision_detection
 ---
 {{GamesSidebar}}
 
-{{IncludeSubnav("/en-US/docs/Games")}}
-
 Algoritmos para detectar colisões em jogos 2D dependem do tipo de formas que podem colidir (por exemplo, retângulo para retângulo, retângulo para círculo, círculo para círculo). Geralmente, você terá uma forma genérica simples que abrange a entidade conhecida como "hitbox", portanto, mesmo que a colisão não seja perfeita, ela terá boa aparência e terá bom desempenho em várias entidades. Este artigo fornece uma revisão das técnicas mais comuns usadas para fornecer detecção de colisão em jogos 2D.
 
 ## Caixa delimitadora alinhada por eixo

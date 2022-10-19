@@ -35,7 +35,7 @@ Com a maior parte da teoria essencial tratada no artigo anterior, este artigo fo
 
 ## Aprendizagem ativa: vamos construir uma função
 
-A função personalizada que vamos construir será chamada `displayMessage().` Ele exibirá uma caixa de mensagem personalizada em uma página da Web e atuará como um substituto personalizado para a função de [alert()](/pt-BR/docs/Web/API/Window/alert) interna do navegador. Já vimos isso antes, mas vamos apenas refrescar nossas memórias. Digite o seguinte no console JavaScript do seu navegador, em qualquer página de sua preferência:
+A função personalizada que vamos construir será chamada `displayMessage()`. Ele exibirá uma caixa de mensagem personalizada em uma página da Web e atuará como um substituto personalizado para a função de [alert()](/pt-BR/docs/Web/API/Window/alert) interna do navegador. Já vimos isso antes, mas vamos apenas refrescar nossas memórias. Digite o seguinte no console JavaScript do seu navegador, em qualquer página de sua preferência:
 
 ```js
 alert('This is a message');

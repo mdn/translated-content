@@ -40,5 +40,5 @@ CSS обрабатывает замещаемые элементы особым 
 
 ## Смотрите также
 
-- Спецификация HTML https\://html.spec.whatwg.org/multipage/rendering.html#replaced-elements
+- [Спецификация HTML](https://html.spec.whatwg.org/multipage/rendering.html#replaced-elements)
 - {{CSS_key_concepts()}}

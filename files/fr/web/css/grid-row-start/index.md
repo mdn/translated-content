@@ -72,7 +72,7 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 
     Si l'entier n'est pas défini, la valeur par défaut qui sera utilisée sera `1`. Les entiers négatifs ou nuls sont invalides.
 
-    ` <custom-ident``> ` ne peut pas prendre la valeur `span`.
+    `<custom-ident>` ne peut pas prendre la valeur `span`.
 
 ## Définition formelle
 

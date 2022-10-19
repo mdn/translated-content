@@ -4,7 +4,6 @@ slug: Learn/Common_questions/What_are_browser_developer_tools
 translation_of: Learn/Common_questions/What_are_browser_developer_tools
 original_slug: Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador
 ---
-{{IncludeSubnav("/en-US/Learn")}}
 
 Todo navegador web moderno inclui um poderoso conjunto de ferramentas para desenvolvedores. Essas ferramentas fazem muitas coisas, desde inspecionar o HTML, CSS e JavaScript recém carregado e quais recursos foram requeridos até mostrar quanto tempo a página precisou para carregar. Este artigo explica como usar as funções básicas das ferramentas para desenvolvedores do seu navegador.
 
@@ -43,11 +42,11 @@ O devtools usualmente abre por padrão o inspetor, que se parece com a imagem ab
 Se você não vê o inspector,
 
 - Clique a aba _Inspetor._
-- No Internet Explorer, Clique a aba _DOM Explorer,_ ou pressione&#x20;
+- No Internet Explorer, Clique a aba _DOM Explorer,_ ou pressione
 
   <kbd>Ctrl</kbd>
 
-  &#x20;\+
+  \+
 
   <kbd> 1</kbd>
 

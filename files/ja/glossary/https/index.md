@@ -7,7 +7,7 @@ slug: Glossary/https
 
 1. 一般知識
 
-    1. Wikipedia 上の {{Interwiki("wikipedia", "HTTPS")}}
+    1. Wikipedia 上の [HTTPS](https://ja.wikipedia.org/wiki/HTTPS)
     2. [Moving to HTTPS community guide](https://movingtohttps.com/)
     3. [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
 

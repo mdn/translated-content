@@ -16,13 +16,13 @@ O **_elemento_ HTML `<bdo>` **(_bidirectional override_) é usado para substitui
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">Content categories</a>
+        <a href="/pt-BR/docs/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -30,7 +30,7 @@ O **_elemento_ HTML `<bdo>` **(_bidirectional override_) é usado para substitui
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -43,7 +43,7 @@ O **_elemento_ HTML `<bdo>` **(_bidirectional override_) é usado para substitui
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -58,7 +58,7 @@ O **_elemento_ HTML `<bdo>` **(_bidirectional override_) é usado para substitui
         {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4)
         inclusive, Firefox implements the
         <code
-          ><a href="/en-US/docs/Web/API/HTMLSpanElement"
+          ><a href="/pt-BR/docs/Web/API/HTMLSpanElement"
             >HTMLSpanElement</a
           ></code
         >

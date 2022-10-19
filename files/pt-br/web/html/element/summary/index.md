@@ -41,5 +41,3 @@ Veja a página {{ HTMLElement("details") }} para ver exemplos com `<summary>`.
 ## Veja também
 
 - {{ HTMLElement("details") }}
-
-{{ languages({ "en": "en/HTML/Element/summary", "ja": "ja/HTML/Element/summary" }) }}

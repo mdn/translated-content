@@ -22,5 +22,4 @@ The **resolved value** of a CSS property is the value returned by {{domxref("Win
 ## Veja também
 
 - [CSS Reference](/pt-BR/docs/Web/CSS/Reference)
-- {{CSS_key_concepts}}
 - {{domxref("window.getComputedStyle")}}

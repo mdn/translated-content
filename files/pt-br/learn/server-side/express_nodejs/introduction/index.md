@@ -96,7 +96,7 @@ Por último, vá para o terminal e digite o comando a seguir:
 
 `node hello.js`
 
-Enfim, abra o browser e digite `http://localhost:8000.` Você verá o texto "**Olá, Mundo**", no canto superior esquerdo.
+Enfim, abra o browser e digite `http://localhost:8000`. Você verá o texto "**Olá, Mundo**", no canto superior esquerdo.
 
 ## Web Frameworks
 

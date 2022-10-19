@@ -214,19 +214,19 @@ Si deseas contribuir a este documento, edita también [el artículo original](/e
      <tr>
       <td><code>x(?!y)</code></td>
       <td>
-       <p><strong>Aserción de búsqueda anticipada negativa</strong>: reconoce la "x" solo si la "x" <span>no va seguida de</span> "y"<span>.</span> Por ejemplo, <code>/\d+(?!\.)/</code> <span>reconoce un número solo si no va seguido de un punto decimal.</span> <code>/\d+(?!\.)/.exec('3.141')</code> halla el "141" pero no el "3".</p>
+       <p><strong>Aserción de búsqueda anticipada negativa</strong>: reconoce la "x" solo si la "x" no va seguida de "y". Por ejemplo, <code>/\d+(?!\.)/</code> reconoce un número solo si no va seguido de un punto decimal. <code>/\d+(?!\.)/.exec('3.141')</code> halla el "141" pero no el "3".</p>
       </td>
      </tr>
      <tr>
       <td><code>(?&lt;=y)x</code></td>
       <td>
-       <p><strong>Aserción de búsqueda inversa</strong>: encontrará "x" solo si "x" está precedida por "y". Por ejemplo, <code>/(?&lt;=Jack)Sprat/</code><span> reconoce a "Sprat" solo si está precedido por "Jack".</span> <code>/(?&lt;=Jack|Tom)Sprat/</code> empareja "Sprat" solo si está precedido por "Jack" o "Tom". Sin embargo, ni "Jack" ni "Tom" forman parte del resultado.</p>
+       <p><strong>Aserción de búsqueda inversa</strong>: encontrará "x" solo si "x" está precedida por "y". Por ejemplo, <code>/(?&lt;=Jack)Sprat/</code> reconoce a "Sprat" solo si está precedido por "Jack". <code>/(?&lt;=Jack|Tom)Sprat/</code> empareja "Sprat" solo si está precedido por "Jack" o "Tom". Sin embargo, ni "Jack" ni "Tom" forman parte del resultado.</p>
       </td>
      </tr>
      <tr>
       <td><code>(?&lt;!y)x</code></td>
       <td>
-       <p><strong>Aserción de búsqueda inversa negativa</strong>: Reconoce la "x" solo si "x" no está precedida por "y". Por ejemplo, <code>/(?&lt;!-)\d+/</code> <span>encuentra un número solo si no está precedido por un signo menos</span>. <code>/(?&lt;!-)\d+/.exec('3')</code> encuentra el "3". <code>/(?&lt;!-)\d+/.exec('-3')</code> no lo reconoce porque el número está precedido por el signo menos.</p>
+       <p><strong>Aserción de búsqueda inversa negativa</strong>: Reconoce la "x" solo si "x" no está precedida por "y". Por ejemplo, <code>/(?&lt;!-)\d+/</code> encuentra un número solo si no está precedido por un signo menos. <code>/(?&lt;!-)\d+/.exec('3')</code> encuentra el "3". <code>/(?&lt;!-)\d+/.exec('-3')</code> no lo reconoce porque el número está precedido por el signo menos.</p>
       </td>
      </tr>
     </tbody>
