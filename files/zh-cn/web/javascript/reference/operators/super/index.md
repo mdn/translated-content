@@ -5,19 +5,16 @@ slug: Web/JavaScript/Reference/Operators/super
 
 {{jsSidebar("Operators")}}
 
-**super** 关键字用于访问对象字面量或类的原型（[[Prototype]]）上的属性，或调用超类的构造函数。
+**super** 关键字用于访问对象字面量或类的原型（[[Prototype]]）上的属性，或调用父类的构造函数。
 
 `super.prop` 和 `super[expr]` 表达式在[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)和[对象字面量](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)任何[方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)中都是有效的。`super(...args)` 表达式在类的构造函数中有效。
 
 ## 语法
 
-```plain
-super([arguments]);
-// 调用 超类/父类 的构造函数
-
+```js-nolint
+super([arguments]) // 调用父类的构造函数
 super.propertyOnParent
 super[expression]
-// 访问 对象字面量/类 原型上的属性
 ```
 
 ## 描述
@@ -36,7 +33,7 @@ super[expression]
 
 在派生类的构造函数体中（使用 `extends`），`super` 关键字可以作为“函数调用”（`super(...args)`）出现，它必须在使用 `this` 关键字之前和构造函数返回之前被调用。它调用父类的构造函数并绑定父类的公共字段，之后派生类的构造函数可以进一步访问和修改 `this`。
 
-“属性查询”形式可以用来访问一个对象字面或类的[[Prototype]]的方法和属性。在一个类的主体中，`super` 的引用可以是超类的构造函数本身，也可以是构造函数的 `prototype`，这取决于执行环境是实例创建还是类的初始化。更多细节请参见示例部分。
+“属性查询”形式可以用来访问一个对象字面或类的 [[Prototype]] 的方法和属性。在一个类的主体中，`super` 的引用可以是父类的构造函数本身，也可以是构造函数的 `prototype`，这取决于执行环境是实例创建还是类的初始化。更多细节请参见示例部分。
 
 注意，`super` 的引用是由 `super` 声明的类或对象字面决定的，而不是方法被调用的对象。因此，取消绑定或重新绑定一个方法并不会改变其中 `super` 的引用（尽管它们会改变 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的引用）。你可以把 `super` 看作是类或对象字面范围内的一个变量，这些方法在它上面创建了一个闭包。(但也要注意，它实际上并不是一个变量，正如上面所解释的那样)。
 
@@ -46,8 +43,7 @@ super[expression]
 
 ### 在类中使用 `super`
 
-以下代码片段来自于 [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html)([live demo](https://googlechrome.github.io/samples/classes-es6/index.html))。这里调用 `super()` 是为了避免重复在 `Rectangle` 与 `Square` 的构造函数之间共同的部分。
-
+以下代码片段来自于 [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html)（[在线演示](https://googlechrome.github.io/samples/classes-es6/index.html)）。这里调用 `super()` 是为了避免重复在 `Rectangle` 与 `Square` 的构造函数之间共同的部分。
 
 ```js
 class Polygon {
@@ -84,7 +80,7 @@ class Square extends Polygon {
 
 ### 调用父类上的静态方法
 
-你也可以用 `super` 调用父类的[静态方法](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)。
+你也可以用 `super` 调用父类的[静态](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)方法。
 
 ```js
 class Rectangle {
@@ -105,7 +101,6 @@ Square.logDescription(); // 'I have 4 sides which are all equal'
 
 `super` 也可以在类字段初始化时被访问。`super` 的引用取决于当前字段是一个实例字段还是一个静态字段。
 
-
 ```js
 class Base {
   static baseStaticField = 90;
@@ -119,7 +114,7 @@ class Extended extends Base {
 }
 ```
 
-注意，实例字段是在实例上设置的，而不是在构造函数的原型上，所以你不能用 `super` 来访问超类的实例字段。
+注意，实例字段是在实例上设置的，而不是在构造函数的原型上，所以你不能用 `super` 来访问父类的实例字段。
 
 ```js example-bad
 class Base {
@@ -130,7 +125,7 @@ class Extended extends Base {
 }
 ```
 
-在这里，`extendedField` 是 `undefined` 而不是 10，因为 `baseField` 被定义为 `Base` 实例的自有属性，而不是 `Base.prototype`。在这种情况下，`super` 只查找 `Base.prototype` 的属性，因为它是 `Extended.prototype` 的[[Prototype]]。
+在这里，`extendedField` 是 `undefined` 而不是 10，因为 `baseField` 被定义为 `Base` 实例的自有属性，而不是 `Base.prototype`。在这种情况下，`super` 只查找 `Base.prototype` 的属性，因为它是 `Extended.prototype` 的 [[Prototype]]。
 
 ### 删除 super 上的属性将抛出异常
 
@@ -260,7 +255,6 @@ b2.setX.call(null); // TypeError: Cannot assign to read only property 'x' of obj
 ```
 
 然而，`super.x = 1` 仍然会查询原型对象的属性描述符，这意味着你不能重写不可写的属性，而且 setter 会被调用。
-
 
 ```js
 class X {
