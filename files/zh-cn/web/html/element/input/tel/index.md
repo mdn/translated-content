@@ -64,7 +64,7 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 ### maxlength
 
-用户可以在电话号码字段中输入的最大字符数（作为 UTF-16 编码单位）。这必须是一个不低于 0 的整数值。如果没有指定 `maxlength`，或者指定了一个无效的值，则电话号码字段没有最大长度。这个值也必须大于或等于 `minlength' 的值。
+用户可以在电话号码字段中输入的最大字符数（作为 UTF-16 编码单位）。这必须是一个不低于 0 的整数值。如果没有指定 `maxlength`，或者指定了一个无效的值，则电话号码字段没有最大长度。这个值也必须大于或等于 `minlength` 的值。
 
 如果输入字段的文本长度大于 `maxlength` UTF-16 编码单位长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。
 
