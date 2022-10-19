@@ -7,7 +7,7 @@ slug: Web/JavaScript/Guide/Indexed_collections
 
 本章介绍按索引值排序的数据集合。包括数组和类数组结构，如 {{jsxref("Array")}} 对象和 {{jsxref("TypedArray")}} 对象。
 
-_array_ 是用名称和索引引用的值的有序列表。
+*数组*是由名称和索引引用的值构成的有序列表。
 
 例如，考虑一个名为 `emp` 的数组，它包含按数字雇员编号索引的雇员姓名。所以 `emp[0]` 是第 0 位员工，`emp[1]` 是第 1 位员工，以此类推。
 
@@ -23,9 +23,9 @@ const arr2 = Array(element0, element1, /* … ,*/ elementN);
 const arr3 = [element0, element1, /* … ,*/ elementN];
 ```
 
-`element0, element1，...，elementN` 是数组元素的值列表。当指定这些值时，数组将用它们作为数组的元素初始化。数组的 `length` 属性被设置为参数的数量。
+`element0, element1, …, elementN` 是数组元素的值列表。当指定这些值时，数组将用它们作为数组的元素初始化。数组的 `length` 属性被设置为参数的数量。
 
-括号语法称为“数组字面值”或“数组初始化式”。它比其他形式的数组创建更短，因此通常是首选。详见[数组字面量](zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#数组字面量_array_literals)。
+括号语法称为“数组字面量”或“数组初始化式”。它比其他形式的数组创建更短，因此通常是首选。详见[数组字面量](zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#数组字面量_array_literals)。
 
 为了创建一个长度不为 0，但是又没有任何元素的数组，可选以下任何一种方式：
 
