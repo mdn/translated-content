@@ -1,4 +1,4 @@
-name: "[via des pages MDN uniquement]"
+name: "[via des pages MDN uniquement // fr]"
 description: Issue filed via le lien "Report a problem with this content on GitHub" sur des pages MDN.
 labels: ["l10n-fr", "needs triage"]
 body:
