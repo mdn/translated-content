@@ -18,7 +18,7 @@ No SVG, você pode especificar que quaisquer outros objetos gráficos ou element
 
 ## Exemplo
 
-» [mask.svg](https://developer.mozilla.org/files/3269/mask.svg)
+» [mask.svg](/files/3269/mask.svg)
 
 ## Atributos
 

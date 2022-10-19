@@ -166,7 +166,7 @@ Novamente, você teria que obter as credenciais de conexão do seu provedor de h
 
 Github permite você publicar páginas por meio do [GitHub pages](https://pages.github.com/) (gh-pages).
 
-Cobrimos o básico de como usar isso no [Publishing your website](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Publishing_your_website) artigo do guia [Getting started with the Web](/en-US/Learn/Getting_started_with_the_web) , então não vamos repetir tudo aqui.
+Cobrimos o básico de como usar isso no [Publishing your website](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website) artigo do guia [Getting started with the Web](/en-US/Learn/Getting_started_with_the_web) , então não vamos repetir tudo aqui.
 
 No entanto, é importante saber que você também pode hospedar um site no GitHub, mas usar um domínio personalizado com ele. Para obter um guia detalhado, consulte [Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/) .
 
