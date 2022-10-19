@@ -18,7 +18,7 @@ includes(searchElement, fromIndex)
 
 ### 参数
 
-- `valueToFind`
+- `searchElement`
 
   - : 需要查找的元素值。
 
