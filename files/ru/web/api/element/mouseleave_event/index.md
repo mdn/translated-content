@@ -55,7 +55,7 @@ translation_of: Web/API/Element/mouseleave_event
 
 ## Примеры
 
-The [`mouseout` ](/ru/docs/Web/Events/mouseout#Example)documentation has an example illustrating the difference between `mouseout` and `mouseleave`.
+The [`mouseout`](/ru/docs/Web/Events/mouseout#Example) documentation has an example illustrating the difference between `mouseout` and `mouseleave`.
 
 The following example illustrates how to use `mouseout`, to simulate the principle of event delegation for the mouseleave event.
 

@@ -14,7 +14,7 @@ translation_of: Web/API/EventTarget/addEventListener
 
 Метод `EventTarget.addEventListener()` регистрирует определённый обработчик события, вызванного на {{domxref("EventTarget")}}.
 
-{{domxref("EventTarget")}} может быть {{domxref("Element")}}, {{domxref("Document")}}, {{domxref("Window")}}, или любым другим объектом, поддерживающим события (таким как [`XMLHttpRequest`](/ru/docs/DOM/XMLHttpRequest "XMLHttpRequest")).
+{{domxref("EventTarget")}} может быть {{domxref("Element")}}, {{domxref("Document")}}, {{domxref("Window")}}, или любым другим объектом, поддерживающим события (таким как [`XMLHttpRequest`](/ru/docs/DOM/XMLHttpRequest)).
 
 ## Синтаксис
 
@@ -28,9 +28,9 @@ wantsUntrusted {{Non-standard_inline}}]); // только Gecko/Mozilla
 ### Параметры
 
 - `type`
-  - : Чувствительная к регистру строка, представляющая [тип обрабатываемого события](/ru/docs/DOM/event.type "DOM/Event.type").
+  - : Чувствительная к регистру строка, представляющая [тип обрабатываемого события](/ru/docs/DOM/event.type).
 - `listener`
-  - : Объект, который принимает уведомление, когда событие указанного типа произошло. Это должен быть объект, реализующий интерфейс {{domxref("EventListener")}} или просто [функция JavaScript](/ru/docs/JavaScript/Guide/Functions "JavaScript/Guide/Functions").
+  - : Объект, который принимает уведомление, когда событие указанного типа произошло. Это должен быть объект, реализующий интерфейс {{domxref("EventListener")}} или просто [функция JavaScript](/ru/docs/JavaScript/Guide/Functions).
 
 <!---->
 
@@ -41,7 +41,7 @@ wantsUntrusted {{Non-standard_inline}}]); // только Gecko/Mozilla
     - `capture`: {{jsxref("Boolean")}} указывает, что события этого типа будут отправлены зарегистрированному обработчику `listener` перед отправкой на `EventTarget`, расположенный ниже в дереве DOM.
     - `once`: {{jsxref("Boolean")}} указывает, что обработчик должен быть вызван не более одного раза после добавления. Если `true`, обработчик автоматически удаляется при вызове.
     - `passive`: {{jsxref("Boolean")}} указывает, что обработчик никогда не вызовет `preventDefault()`. Если всё же вызов будет произведён, браузер должен игнорировать его и генерировать консольное предупреждение. Пример [Улучшение производительности прокрутки с помощью passive true](#улучшение_производительности_прокрутки_с_помощью_passive_true)
-    - {{non-standard_inline}}` mozSystemGroup`: {{jsxref("Boolean")}} указывает, что обработчик должен быть добавлен в системную группу. Доступно только в коде, запущенном в XBL или в [расширении Chrome](https://chrome.google.com/webstore/detail/open-with-firefox/poeacjbaiakjnaepdjgggojcjoajakmd).
+    - {{non-standard_inline}} `mozSystemGroup`: {{jsxref("Boolean")}} указывает, что обработчик должен быть добавлен в системную группу. Доступно только в коде, запущенном в XBL или в [расширении Chrome](https://chrome.google.com/webstore/detail/open-with-firefox/poeacjbaiakjnaepdjgggojcjoajakmd).
 
 - `useCapture` {{optional_inline}}
 
@@ -52,7 +52,7 @@ wantsUntrusted {{Non-standard_inline}}]); // только Gecko/Mozilla
     > **Примечание:** `useCapture` не всегда был опциональным. Лучше указывать данный параметр для повышения совместимости.
 
 - `wantsUntrusted` {{Non-standard_inline}}
-  - : Если равно `true`, обработчик будет получать сгенерированные события, посланные со страницы (по умолчанию равно `false` для chrome и `true` для обычных веб-страниц). Этот параметр доступен только в Gecko и в основном полезен для использования в дополнениях и самом браузере. Смотрите [Взаимодействие между привилегированными и непривилегированными страницами](/ru/docs/Archive/Add-ons/Interaction_between_privileged_and_non-privileged_pages "Code snippets/Interaction between privileged and non-privileged pages") для примеров использования.
+  - : Если равно `true`, обработчик будет получать сгенерированные события, посланные со страницы (по умолчанию равно `false` для chrome и `true` для обычных веб-страниц). Этот параметр доступен только в Gecko и в основном полезен для использования в дополнениях и самом браузере. Смотрите [Взаимодействие между привилегированными и непривилегированными страницами](/ru/docs/Archive/Add-ons/Interaction_between_privileged_and_non-privileged_pages) для примеров использования.
 
 Прежде чем использовать определённое значение в объекте `options`, рекомендуется убедиться, что браузер пользователя поддерживает его, поскольку это дополнение, которое не все браузеры поддерживали исторически.
 
@@ -228,7 +228,7 @@ el.addEventListener("click", () => { modifyText("four"); }, false);
 
 `addEventListener` — это способ зарегистрировать обработчик события, описанный в документации W3C DOM. Вот список преимуществ его использования:
 
-- Позволяет добавлять множество обработчиков для одного события. Это особенно полезно для [DHTML](/ru/docs/DHTML "DHTML") библиотек или [Mozilla extensions](/ru/docs/Extensions "Extensions"), которые должны работать в условиях использования сторонних библиотек/расширений.
+- Позволяет добавлять множество обработчиков для одного события. Это особенно полезно для [DHTML](/ru/docs/DHTML) библиотек или [Mozilla extensions](/ru/docs/Extensions), которые должны работать в условиях использования сторонних библиотек/расширений.
 - Предоставляет точный контроль фазы срабатывания(вызова) обработчика (захват или всплытие)
 - Срабатывает на любом DOM-элементе, а не только на HTML-элементах.
 
@@ -240,7 +240,7 @@ el.addEventListener("click", () => { modifyText("four"); }, false);
 
 ### Несколько одинаковых обработчиков события
 
-Если зарегистрировано несколько одинаковых `EventListener` на одном `EventTarget` с одинаковыми параметрами, дублирующиеся обработчики игнорируются. Так как одинаковые обработчики игнорируются, не требуется удалять их вручную с помощью метода [removeEventListener](/ru/docs/DOM/EventTarget.removeEventListener "DOM/element.removeEventListener").
+Если зарегистрировано несколько одинаковых `EventListener` на одном `EventTarget` с одинаковыми параметрами, дублирующиеся обработчики игнорируются. Так как одинаковые обработчики игнорируются, не требуется удалять их вручную с помощью метода [removeEventListener](/ru/docs/DOM/EventTarget.removeEventListener).
 
 ### Значение `this` в обработчике
 
@@ -255,7 +255,7 @@ el.addEventListener("click", () => { modifyText("four"); }, false);
 
 Значение переменной `this` внутри `modifyText()` при вызове событием клика будет равно ссылке на глобальный (window) объект (или `undefined` при использовании [strict mode](/ru/docs/Web/JavaScript/Reference/Strict_mode))
 
-> **Примечание:** В JavaScript 1.8.5 введён метод [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind "JavaScript/Reference/Global Objects/Function/bind") , который позволяет указать значение, которое должно быть использовано для всех вызовов данной функции. Он позволяет вам легко обходить ситуации, в которых не ясно, чему будет равно this, в зависимости от того, в каком контексте будет вызвана ваша функция. заметьте, также, что вам будет необходимо иметь внешнюю ссылку на обработчик, чтобы вы могли удалить его позже.
+> **Примечание:** В JavaScript 1.8.5 введён метод [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind), который позволяет указать значение, которое должно быть использовано для всех вызовов данной функции. Он позволяет вам легко обходить ситуации, в которых не ясно, чему будет равно this, в зависимости от того, в каком контексте будет вызвана ваша функция. заметьте, также, что вам будет необходимо иметь внешнюю ссылку на обработчик, чтобы вы могли удалить его позже.
 
 Пример с использованием `bind` и без него:
 
