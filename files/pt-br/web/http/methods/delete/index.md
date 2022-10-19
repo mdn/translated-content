@@ -35,7 +35,7 @@ translation_of: Web/HTTP/Methods/DELETE
     <tr>
       <th scope="row">
         Aceito nos
-        <a href="/en-US/docs/Web/Guide/HTML/Forms">formulários HTML</a>
+        <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulários HTML</a>
       </th>
       <td>Não</td>
     </tr>
