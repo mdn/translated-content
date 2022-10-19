@@ -62,5 +62,6 @@ jobs:
           commit-message: "${{ matrix.lang }}: sync translated content"
           branch: content-sync-${{ matrix.lang }}
           title: "[${{ matrix.lang }}] sync translated content"
-          author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+          author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           body: Yari generated sync
+          token: ${{ secrets.AUTOMERGE_TOKEN }}
