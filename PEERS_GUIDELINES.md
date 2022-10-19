@@ -103,7 +103,7 @@ Please indicate that you agree to our [Requirements for keeping locales up-to-da
 
 ### The team agrees to our CoC and license
 
-Also indicate that your team agrees to adhere by our Code of  and License (see below)
+Also indicate that your team agrees to adhere by our Code of Conduct and License (see below)
 
 ### Acceptance
 
