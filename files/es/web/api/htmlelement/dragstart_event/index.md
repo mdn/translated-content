@@ -32,10 +32,10 @@ Un {{domxref("DragEvent")}}. Hereda de {{domxref("Event")}}.
 
 ## Propiedades del Evento
 
-En adición a las propiedades listadas, a continuación las propiedades de la interfaz principal, {{domxref("Event")}}, están disponibles.
+_En adición a las propiedades listadas, a continuación las propiedades de la interfaz principal, {{domxref("Event")}}, están disponibles._
 
 - {{domxref("DragEvent/dataTransfer", "DragEvent.dataTransfer")}} {{ReadOnlyInline}}
-  - Los datos que se transfieren durante una interacción de arrastrar y soltar.
+  - : Los datos que se transfieren durante una interacción de arrastrar y soltar.
 
 
 ## Ejemplos
@@ -46,12 +46,13 @@ En este ejemplo, tenemos un elemento arrastrable dentro de un contenedor. Intent
 
 Escuchamos el evento `dragstart` para hacer que el elemento sea medio transparente mientras se arrastra.
 
+For a more complete example of [drag](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event) and drop, see the page for the drag event.
 
 #### HTML
 
 ```html
 <div id="container">
-  <div id="draggable" draggable="true">This div is draggable</div>
+  <div id="draggable" draggable="true">Este div es arrastrable</div>
 </div>
 <div class="dropzone"></div>
 ```
@@ -61,7 +62,7 @@ Escuchamos el evento `dragstart` para hacer que el elemento sea medio transparen
 
 ```css
 body {
-  /* Prevent the user selecting text in the example */
+  /* Impedir que el usuario seleccione texto en el ejemplo */
   user-select: none;
 }
 #draggable {
@@ -85,11 +86,11 @@ body {
 ```js
 const source = document.getElementById("draggable");
 source.addEventListener("dragstart", (event) => {
-  // make it half transparent
+  // hazlo medio transparente
   event.target.classList.add("dragging");
 });
 source.addEventListener("dragend", (event) => {
-  // reset the transparency
+  // restablecer la transparencia
   event.target.classList.remove("dragging");
 });
 ```
