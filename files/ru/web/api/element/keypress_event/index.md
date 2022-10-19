@@ -11,7 +11,7 @@ original_slug: Web/API/Document/keypress_event
 - Спецификация
   - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keypress) {{deprecated_inline()}}
 - Интерфейс
-  - : [KeyboardEvent](/ru/docs/DOM/KeyboardEvent "http://en-US/docs/DOM/KeyboardEvent")
+  - : [KeyboardEvent](/ru/docs/DOM/KeyboardEvent)
 - Bubbles
   - : Yes
 - Cancelable

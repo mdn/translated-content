@@ -53,7 +53,7 @@ _Наследует свойства от родительского узла {{
 
   - : Пространство имён URI элемента или null, если это не пространство имён.
 
-    > **Примечание:** В Firefox версии 3.5 и ранее, HTML-элементы не находятся в пространстве имён. В более поздних версиях, HTML-элементы находятся в пространстве имён [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml "Linkification: http://www.w3.org/1999/xhtml") как в деревьях HTML, так и XML. {{ gecko_minversion_inline("1.9.2") }}
+    > **Примечание:** В Firefox версии 3.5 и ранее, HTML-элементы не находятся в пространстве имён. В более поздних версиях, HTML-элементы находятся в пространстве имён [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) как в деревьях HTML, так и XML. {{ gecko_minversion_inline("1.9.2") }}
 
 - {{ domxref("ParentNode.lastElementChild") }}
   - : Является {{ domxref("Element") }}, последним непосредственным дочерним элементом данного элемента, или `null`, если у элемента нет дочерних элементов.
@@ -127,7 +127,7 @@ _Наследует методы от своих родителей {{domxref("N
   - : Извлекает представление узла именованного атрибута из текущего узла и возвращает его в виде {{ domxref("Attr") }}.
 - {{ domxref("Element.getAttributeNodeNS()") }} {{obsolete_inline}}
   - : Извлекает представление узла атрибута с указанным именем и пространством имён из текущего узла и возвращает его в виде {{ domxref("Attr") }}.
-- {{ domxref("Element.getBoundingClientRect()") }}` `{{experimental_inline}}
+- {{ domxref("Element.getBoundingClientRect()") }} {{experimental_inline}}
   - : ...
 - {{ domxref("Element.getClientRects()") }} {{experimental_inline}} TYPE of returnvalue????
   - : Returns a collection of rectangles that indicate the bounding rectangles for each line of text in a client.
@@ -145,7 +145,7 @@ _Наследует методы от своих родителей {{domxref("N
   - : Возвращает {{jsxref("Boolean")}}, указывающий, имеет элемент определённый атрибут в определённом пространстве имён, или нет.
 - {{ domxref("Element.insertAdjacentHTML") }} {{experimental_inline}}
   - : Анализирует текст как HTML или XML и вставляет полученные узлы в указанную позицию дерева элементов.
-- {{ domxref("Element.matches()") }}` `{{experimental_inline}}
+- {{ domxref("Element.matches()") }} {{experimental_inline}}
   - : Возвращает {{jsxref ("Boolean")}}, указывающий, будет ли элемент выбран указанной строкой селектора.
 - {{ domxref("Element.querySelector()") }}
   - : Возвращает первый {{DOMxRef ("Node")}}, который соответствует указанной строке селектора элемента.

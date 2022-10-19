@@ -119,7 +119,7 @@ translation_of: Web/API/Event
   - : Создаёт новое событие, которое затем должно быть проинициализировано вызовом его метода `initEvent()`.
 
 - {{domxref("Event.initEvent()")}} {{deprecated_inline}}
-  - : Инициализация значений созданного с помощью [Document.createEvent()](/ru/docs/Web/API/Document/createEvent "Creates an event of the type specified. The returned object should be first initialized and can then be passed to element.dispatchEvent.") события. Если событие уже отправлено, то эта функция ничего не делает.
+  - : Инициализация значений созданного с помощью [Document.createEvent()](/ru/docs/Web/API/Document/createEvent) события. Если событие уже отправлено, то эта функция ничего не делает.
 - {{domxref("Event.preventBubble()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}
   - : Предотвращает всплытие события. Устаревшая, используйте вместо неё {{domxref("event.stopPropagation")}}.
 - {{domxref("Event.preventCapture()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}

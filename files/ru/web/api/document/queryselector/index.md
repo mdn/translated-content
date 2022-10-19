@@ -101,4 +101,4 @@ var el = document.querySelector("div.user-panel.main input[name=login]");
 - {{domxref("document.querySelectorAll()")}}
 - {{domxref("element.querySelector()")}}
 - {{domxref("element.querySelectorAll()")}}
-- [Фрагменты кода для querySelector](/ru/docs/Code_snippets/QuerySelector "en-US/docs/Code snippets/QuerySelector")
+- [Фрагменты кода для querySelector](/ru/docs/Code_snippets/QuerySelector)
