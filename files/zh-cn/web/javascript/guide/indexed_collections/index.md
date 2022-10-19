@@ -1,79 +1,82 @@
 ---
-title: 索引集合类 (Indexed collections)
+title: 索引集合类（Indexed collections）
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
-这个章节主要介绍了以索引进行排序的数据集合。包括数组以及类似于数组的数据结构，如 **{{jsxref("Array")}}** 、**{{jsxref("TypedArray")}}** 。
+本章介绍按索引值排序的数据集合。包括数组和类数组结构，如 {{jsxref("Array")}} 对象和 {{jsxref("TypedArray")}} 对象。
 
-## 数组对象 (Array object)
+*数组*是由名称和索引引用的值构成的有序列表。
 
-数组 (array) 是一个有序的数据集合，我们可以通过数组名称 (name) 和索引 (index) 进行访问。例如，我们定义了一个数组 emp，数组中的每个元素包含了一个雇员的名字以及其作为索引的员工号。那么 emp\[1] 将会代表 1 号员工，emp\[2] 将会代表 2 号员工，以此类推。
+例如，考虑一个名为 `emp` 的数组，它包含按数字雇员编号索引的雇员姓名。所以 `emp[0]` 是第 0 位员工，`emp[1]` 是第 1 位员工，以此类推。
 
-JavaScript 中没有明确的数组数据类型。但是，我们可以通过使用内置 Array 对象和它的方法对数组进行操作。Array 对象有很多操作数组的方法，比如合并、反转、排序等。数组对象有一个决定数组长度和使用正则表达式操作其他属性的属性。
+JavaScript 中没有明确的数组数据类型。但是，你可以使用预定义的 `Array` 对象及其方法来处理应用程序中的数组。`Array` 对象具有以各种方式操作数组的方法，例如连接、反转和排序。它有一个用于确定数组长度的属性和用于正则表达式的其他属性。
 
-### 创建数组 (creating an array)
+### 创建数组
 
-以下语句创建等效的数组：
+以下语句创建了等效的数组：
 
 ```js
-var arr = new Array(element0, element1, ..., elementN);
-var arr = Array(element0, element1, ..., elementN);
-var arr = [element0, element1, ..., elementN];
-
-// 译者注：var arr=[4] 和 var arr=new Array(4) 是不等效的，
-// 后者 4 指数组长度，所以使用字面值 (literal) 的方式应该不仅仅是便捷，同时也不易踩坑
+const arr1 = new Array(element0, element1, /* … ,*/ elementN);
+const arr2 = Array(element0, element1, /* … ,*/ elementN);
+const arr3 = [element0, element1, /* … ,*/ elementN];
 ```
 
-`element0, element1, ..., elementN` 是数组元素的值的列表。当这些值被指定后，数组将被初始化，他们将被作为数组元素。数组的 length 属性也会被设为参数的个数。
+`element0, element1, …, elementN` 是数组元素的值列表。当指定这些值时，数组将用它们作为数组的元素初始化。数组的 `length` 属性被设置为参数的数量。
 
-括号语法被称为 "数组字面值" 或 "数组初始化器", 它比其他创建数组的方式更便捷，所以通常是首选。详细内容参见 [Array literals](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals) 。
+括号语法称为“数组字面量”或“数组初始化式”。它比其他形式的数组创建更短，因此通常是首选。详见[数组字面量](zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#数组字面量_array_literals)。
 
 为了创建一个长度不为 0，但是又没有任何元素的数组，可选以下任何一种方式：
 
 ```js
-var arr = new Array(arrayLength);
-var arr = Array(arrayLength);
+// This...
+const arr1 = new Array(arrayLength);
 
-// 这样有同样的效果
-var arr = [];
-arr.length = arrayLength;
+// ...results in the same array as this
+const arr2 = Array(arrayLength);
+
+// This has exactly the same effect
+const arr3 = [];
+arr3.length = arrayLength;
 ```
 
-> **备注：** 以上代码，数组长度（arrayLength）必须为一个数字（Number）。否则，将会创建一个只有单个（所输入的）元素的数组。调用 `arr.length` 会返回数组长度，但是数组实际上包含了空的（`undefined`）元素。因此在数组上使用 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环，将不会返回任何的值。
+> **备注：** 以上代码，数组长度（`arrayLength`）必须为一个数字（`Number`）。否则，将会创建一个只有单个元素（提供的值）的数组。调用 `arr.length` 会返回数组长度，但数组不包含任何元素。{{jsxref("Statements/for...in","for...in")}} 循环在数组上找不到任何属性。
 
-除了如上所示创建新定义的变量，数组 (array) 也可以作为一个属性 (property) 分配给一个新的或者已存在的对象 (object)：
+除了上面所示的新定义的变量外，数组还可以被赋值为新对象或现有对象的属性：
 
 ```js
-var obj = {};
-// ...
-obj.prop = [element0, element1, ..., elementN];
+const obj = {};
+// …
+obj.prop = [element0, element1, /* … ,*/ elementN];
 
 // OR
-var obj = {prop: [element0, element1, ...., elementN]}
+const obj = { prop: [element0, element1, /* … ,*/ elementN] };
 ```
 
-如果你希望用单个元素初始化一个数组，而这个元素恰好又是数字 (`Number`)，那么你必须使用括号语法。当单个的数字 (`Number`) 传递给 Array() 构造函数时，将会被解释为数组长度，并非单个元素。
+如果你希望用单个元素初始化一个数组，而这个元素恰好又是数字（`Number`），那么你必须使用括号语法。当单个的数字（`Number`）传递给 `Array()` 构造函数时，将会被解释为 `arrayLength`，并非单个元素。
 
 ```js
-var arr = [42];      // 创建一个只有唯一元素的数组：
-                     // the number 42.
-var arr = Array(42); // 创建一个没有元素的数组，
-                     // 但是数组的长度被设置成 42.
+// 创建一个只有唯一元素的数组：the number 42.
+const arr = [42];
+
+// 创建一个没有元素的数组，但是数组的长度被设置成 42.
+const arr = Array(42);
 
 // 上面的代码与下面的代码等价
-var arr = [];
+const arr = [];
 arr.length = 42;
 ```
 
-如果 N 不是一个整数，调用`Array(N)`将会报`RangeError`错误，以下方法说明了这种行为：
+如果 `N` 不是一个整数，调用 `Array(N)` 将会报 `RangeError` 错误，下面的例子说明了这种行为：
 
 ```js
-var arr = Array(9.3);  // RangeError: Invalid array length
+const arr = Array(9.3); // RangeError: Invalid array length
 ```
 
 如果你需要创建任意类型的单元素数组，安全的方式是使用字面值。或者在向数组添加单个元素之前先创建一个空的数组。
+
+你也可以使用 {{jsxref("Array.of")}} 静态方法来创建包含单个元素的数组。
 
 ### 填充数组 (populating an array)
 
