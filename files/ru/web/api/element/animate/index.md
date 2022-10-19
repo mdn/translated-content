@@ -13,7 +13,7 @@ translation_of: Web/API/Element/animate
 ---
 {{APIRef('Web Animations')}} {{SeeCompatTable}}
 
-Метод **`animate()` **интерфейса\*\* \*\*{{domxref("Element")}} это быстрый способ создания {{domxref("Animation")}}, которая сразу применяется к элементу, а затем проигрывает эту анимацию. Метод возвращает созданный экземпляр класса {{domxref("Animation")}}.
+Метод **`animate()`** интерфейса {{domxref("Element")}} это быстрый способ создания {{domxref("Animation")}}, которая сразу применяется к элементу, а затем проигрывает эту анимацию. Метод возвращает созданный экземпляр класса {{domxref("Animation")}}.
 
 > **Примечание:** Элементы могут иметь несколько, прикреплённых к ним, анимаций. Вы можете получить список анимаций, которые влияют на элемент, вызвав {{domxref("Element.getAnimations()")}}.
 
@@ -32,7 +32,7 @@ var animation = element.animate(keyframes, options);
   - : Целое число**, представляющее продолжительность анимации** (в миллисекундах), **или** объект, содержащий одно или более временных свойств.
 
     - `id {{optional_inline}}`
-      - : Свойство уникальное для `animate()`: [`DOMString`](https://developer.mozilla.org/en-US/docs/Web/API/DOMString "DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."), с помощью которого можно ссылаться на анимацию.
+      - : Свойство уникальное для `animate()`: [`DOMString`](/en-US/docs/Web/API/DOMString), с помощью которого можно ссылаться на анимацию.
 
     {{Page("ru/docs/Web/API/EffectTiming", "Свойства")}}
 
