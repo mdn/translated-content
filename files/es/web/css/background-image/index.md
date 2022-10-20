@@ -1,113 +1,134 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
+page-type: css-property
 translation_of: Web/CSS/background-image
+browser-compat: css.properties.background-image
 ---
-{{ PreviousNext("CSS:background-color", "CSS:background-position") }}
 
-## Resumen
+{{CSSRef}}
 
 La propiedad [CSS](/es/docs/Web/CSS) **`background-image`** establece una o más imágenes de fondo para un elemento.
 
-- {{ Cssxref("initial", "Valor inicial") }}: ninguno
-- Se aplica a: todos los elementos
-- {{ Cssxref("inheritance", "Herencia") }}: no
-- Porcentajes: N/A
-- Medio: {{ Cssxref("visual") }}
-- {{ Cssxref("computed value", "Valor calculada") }}: URI absoluta o ninguna
+{{EmbedInteractiveExample("pages/css/background-image.html")}}
+
+Las imágenes de fondo se dibujan apilando capas de contexto una encima de la otra. La primera capa especificada se dibuja como si estuviera más cerca del usuario.
+
+Los [bordes](/es/docs/Web/CSS/border) del elemento se dibujan encima de ellos y el {{cssxref("background-color")}} se dibuja debajo de ellos. La forma en que se dibujan las imágenes en relación con el cuadro y sus bordes se define mediante las propiedades CSS {{cssxref("background-clip")}} y {{cssxref("background-origin")}}.
+
+Si no se puede dibujar una imagen específica (por ejemplo, cuando no se puede cargar el archivo indicado por el URI especificado), los navegadores lo manejan como si fuera un valor `none`.
+
+> **Nota:** Incluso si las imágenes son opacas y el color no se mostrará en circunstancias normales, los desarrolladores web siempre deben especificar un {{cssxref("background-color")}}. Si las imágenes no se pueden cargar, por ejemplo, cuando la red no funciona, el color de fondo se utilizará como alternativa.
 
 ## Sintaxis
 
-```
-background-image: url | none | inherit
+Cada imagen de fondo se especifica como la palabra clave `none` o como un valor {{cssxref("&lt;image&gt;")}}.
+
+Para especificar varias imágenes de fondo, proporcione varios valores, separados por una coma:
+
+```css
+background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 0, 0.5),
+    rgba(0, 0, 255, 0.5)
+  ), url("catfront.png");
+
+/* Valores globales */
+background-image: inherit;
+background-image: initial;
+background-image: revert;
+background-image: revert-layer;
+background-image: unset;
 ```
 
-## Valores
+### Valores
 
-- url
-  - : Localización de la imagen que se utilizará de fondo.
-- none
-  - : Utilizado para especificar que un elemento no debe tener ninguna imagen de fondo.
+- `none`
+  - : Utilizado para especificar que un elemento no debe tener imagen de fondo.
+- `<image>`
+  - : Es un {{cssxref("&lt;image&gt;")}} que indica la imagen que se va a mostrar. Puede haber varios, separados por comas, ya que se admiten [fondos múltiples](/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds).
+
+## Problemas de accesibilidad
+
+Los navegadores no brindan ninguna información especial sobre imágenes de fondo a la tecnología de asistencia. Esto es importante principalmente para los lectores de pantalla, ya que un lector de pantalla no anunciará su presencia y, por lo tanto, no transmitirá nada a sus usuarios. Si la imagen contiene información crítica para comprender el propósito general de la página, es mejor describirla semánticamente en el documento.
+
+- [MDN Entendiendo las WCAG, Directriz 1.1 explicaciones](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [Comprender el Criterio de Conformidad 1.1.1 | W3C Entendiendo las WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+
+## Definicion formal
+
+{{cssinfo}}
+
+## Sytaxis formal
+
+{{csssyntax}}
 
 ## Ejemplos
 
-Note that the star image is partially transparent and is layered over the cat image.
+### Imagenes por capas
 
-### HTML
+Tenga en cuenta que la imagen de la estrella es parcialmente transparente y se superpone a la imagen del gato.
+
+#### HTML
 
 ```html
 <div>
-    <p class="catsandstars">
-        This paragraph is full of cats<br />and stars.
-    </p>
-    <p>This paragraph is not.</p>
-    <p class="catsandstars">
-        Here are more cats for you.<br />Look at them!
-    </p>
-    <p>And no more.</p>
+  <p class="catsandstars">Este párrafo está lleno de gatos<br />y estrellas.</p>
+  <p>Este párrafo no.</p>
+  <p class="catsandstars">Aquí hay más gatos para ti.<br />¡Míralos!</p>
+  <p>Y no mas.</p>
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
-pre, p {
-    font-size: 1.5em;
-    color: #FE7F88;
-    background-color: transparent;
+p {
+  font-size: 1.5em;
+  color: #fe7f88;
+  background-image: none;
+  background-color: transparent;
 }
 
 div {
-  background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
-}
-
-p {
-  background-image: none;
+  background-image: url("mdn_logo_only_color.png");
 }
 
 .catsandstars {
-  background-image:  url("https://mdn.mozillademos.org/files/11991/startransparent.gif"),
-                     url("https://mdn.mozillademos.org/files/7693/catfront.png");
+  background-image: url("startransparent.gif"), url("catfront.png");
   background-color: transparent;
 }
 ```
 
-### Result
+#### Result
 
 {{EmbedLiveSample('Ejemplos')}}
 
-## Notas
-
-Los desarrolladores deben asegurarse que han especificado un color de fondo ({{ Cssxref("background-color") }}) en el caso de no usar una imagen. Las imágenes de fondo son mostradas encima del color de fondo.
-
-## Sobre Accesibilidad
-
-Los lectores de pantalla no reconocen las imágenes de fondo, si la imagen tiene un significado y no es de carácter meramente decorativa deberás incluirla semánticamente en el documento utilizando la etiqueta `img`.
-
-Para más información (en inglés):
-
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
-
 ## Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#background-image)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/colors.html#propdef-background-image)
-- [CSS 3](http://www.w3.org/TR/2005/WD-css3-background-20050216/#the-background-image)
+{{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Firefox           | 1              |
-| Netscape          | 4              |
-| Opera             | 3.5            |
+{{Compat}}
 
-## Ver también
+## Véase también
 
-{{ Cssxref("background") }}, {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}
+- [Implementando sprites de imagen en CSS](/es/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS)
+- {{HTMLElement("img")}}
+- Tipos de datos relacionados con imágenes: {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;gradient&gt;")}}
+- Funciones relacionadas con la imagen:
+
+  - {{cssxref("cross-fade", "cross-fade()")}}
+  - {{cssxref("element", "element()")}}
+  - {{cssxref("image/image", "image()")}}
+  - {{cssxref("image/image-set", "image-set()")}}
+  - {{cssxref("gradient/linear-gradient", "linear-gradient()")}}
+  - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
+  - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}
+  - {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}
+  - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+  - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+  - {{cssxref("image/paint", "paint()")}}
+  - {{cssxref("url", "url()")}}
+
