@@ -5,13 +5,13 @@ slug: Web/HTML/Element/Input/tel
 
 {{HTMLRef("Input_types")}}
 
-**`"tel"`** 类型的 {{HTMLElement("input")}} 元素用于让用户输入和编辑电话号码。不同于[`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email) 和 [`<input type="url">`](/zh-CN/docs/Web/HTML/Element/input/url) , 在提交表单之前，输入值不会被自动验证为特定格式，因为世界各地的电话号码格式差别很大。
+**`tel`** 类型的 {{HTMLElement("input")}} 元素用于让用户输入和编辑电话号码。不同于 [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email) 和 [`<input type="url">`](/zh-CN/docs/Web/HTML/Element/input/url)，在提交表单之前，输入值不会被自动验证为特定格式，因为世界各地的电话号码格式差别很大。
 
 {{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}
 
 尽管 `tel` 类型的输入在功能上和 `text` 输入一致，但它们确实有用；其中最明显的就是移动浏览器（特别是在手机上），可能会选择提供为输入电话号码而优化的自定义键盘。使用电话号码的特定输入类型也使添加自定义验证和处理电话号码更方便。
 
-> **备注：** 不支持 `"tel"` 类型的浏览器会回退为标准 {{HTMLElement("input/text", "text")}} 类型输入。
+> **备注：** 不支持 `tel` 类型的浏览器会回退为标准 {{HTMLElement("input/text", "text")}} 类型输入。
 
 ```html
 <input id="telNo" type="tel">
@@ -25,7 +25,7 @@ slug: Web/HTML/Element/Input/tel
   </tr>
   <tr>
    <td><strong>事件</strong></td>
-   <td> 
+   <td>
    {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}
    </td>
   </tr>
@@ -206,7 +206,7 @@ Mozilla 的扩展，当用户编辑该字段时按下键盘的 <kbd>Enter</kbd> 
 
 #### 提供建议值
 
-你可以更进一步，提供一个默认电话号码的列表，让用户从中选择。要做到这一点，使用 {{htmlattrxref("list", "input")}} 属性。这不会将用户限制在这些选项中，但确实能让他们更快选择常用的电话号码。这也为 {{htmlattrxref("autocomplete", "input")}} 提供提示。`list` 属性指定了一个 {{HTMLElement("datalist")}} 元素的 ID，该元素又包含了每个建议值的一个 {{HTMLElement("option")}} 元素；每个 `option' 的 `value' 是电话号码输入框的相应建议值。
+你可以更进一步，提供一个默认电话号码的列表，让用户从中选择。要做到这一点，使用 {{htmlattrxref("list", "input")}} 属性。这不会将用户限制在这些选项中，但确实能让他们更快选择常用的电话号码。这也为 {{htmlattrxref("autocomplete", "input")}} 提供提示。`list` 属性指定了一个 {{HTMLElement("datalist")}} 元素的 ID，该元素又包含了每个建议值的一个 {{HTMLElement("option")}} 元素；每个 `option` 的 `value` 是电话号码输入框的相应建议值。
 
 ```html
 <label for="telNo">电话号码：</label>
