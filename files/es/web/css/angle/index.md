@@ -5,6 +5,7 @@ tags:
   - Ángulo
 translation_of: Web/CSS/angle
 ---
+
 {{ CSSRef() }}
 
 ## Summary
@@ -24,17 +25,15 @@ Aun cuando todas las unidades representan lo mismo para el valor `0`, la unidad 
 
 ## Ejemplos
 
-| ![Angle90.png](/@api/deki/files/5704/=Angle90.png)           | Ángulo recto: `90deg = 100grad = 0.25turn` ` ≈`` 1.5708rad `                                     |
+| ![Angle90.png](/@api/deki/files/5704/=Angle90.png)           | Ángulo recto: `90deg = 100grad = 0.25turn ≈ 1.5708rad`                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| ![Angle180.png](/@api/deki/files/5706/=Angle180.png)         | Ángulo llano: ` 180deg = 200grad = 0.5turn`` ``≈`` 3.1416rad `                                   |
-| ![AngleMinus90.png](/@api/deki/files/5707/=AngleMinus90.png) | Ángulo recto (hacia la izquierda): `-90deg = -100grad = -0.25turn` ` ≈`` -1.5708rad `            |
-| ![Angle0.png](/@api/deki/files/5708/=Angle0.png)             | Ángulo nulo: `0deg = 0grad = 0turn`` ``=`` 0rad` <br><br> Nota: `0` no es un valor de ángulo válido. |
+| ![Angle180.png](/@api/deki/files/5706/=Angle180.png)         | Ángulo llano: `180deg = 200grad = 0.5turn ≈ 3.1416rad`                                   |
+| ![AngleMinus90.png](/@api/deki/files/5707/=AngleMinus90.png) | Ángulo recto (hacia la izquierda): `-90deg = -100grad = -0.25turn ≈ -1.5708rad`            |
+| ![Angle0.png](/@api/deki/files/5708/=Angle0.png)             | Ángulo nulo: `0deg = 0grad = 0turn = 0rad` <br><br> Nota: `0` no es un valor de ángulo válido. |
 
 ## Especificaciones
 
-| Especificación                                                               | Estatus                              | Comentarios        |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{ SpecName('CSS3 Values', '#angles', '&lt;angle&gt;') }} | {{ Spec2('CSS3 Values') }} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 
