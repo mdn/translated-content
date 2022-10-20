@@ -1,7 +1,9 @@
 ---
-title: 'Document: pointercancel イベント'
-slug: conflicting/Web/API/Element/pointercancel_event
+title: 'Element: pointercancel イベント'
+slug: Web/API/Element/pointercancel_event
 original_slug: Web/API/Document/pointercancel_event
+l10n:
+  sourceCommit: 1732201134d732af9bfd49ee9e10f7e2086cc783
 ---
 
 {{APIRef}}

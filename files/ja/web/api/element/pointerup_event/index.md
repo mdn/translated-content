@@ -1,6 +1,6 @@
 ---
 title: 'Document: pointerup event'
-slug: conflicting/Web/API/Element/pointerup_event
+slug: Web/API/Element/pointerup_event
 original_slug: Web/API/Document/pointerup_event
 ---
 

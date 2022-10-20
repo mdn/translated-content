@@ -1,6 +1,6 @@
 ---
 title: 'Document: pointerdown イベント'
-slug: conflicting/Web/API/Element/pointerdown_event
+slug: Web/API/Element/pointerdown_event
 original_slug: Web/API/Document/pointerdown_event
 ---
 

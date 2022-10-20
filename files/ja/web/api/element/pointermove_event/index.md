@@ -1,22 +1,22 @@
 ---
-title: 'Document: pointerleave イベント'
-slug: conflicting/Web/API/Element/pointerleave_event
-original_slug: Web/API/Document/pointerleave_event
+title: 'Document: pointermove イベント'
+slug: Web/API/Element/pointermove_event
+original_slug: Web/API/Document/pointermove_event
 ---
 
 {{APIRef}}
 
-`pointerleave` イベントは、ポインティングデバイスが要素のヒットテスト領域を出たときに発生します。ペンデバイスでは、このイベントはデジタイザーが検出可能なホバー範囲をスタイラスが離れたときに発生します。
+`pointermove` はポインターの座標が変化し、かつブラウザーの[タッチ操作](/ja/docs/Web/CSS/touch-action)によってポインターが[キャンセル](/ja/docs/Web/Events/pointercancel)されていないときに発生します。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">バブリング</th>
-      <td>なし</td>
+      <td>あり</td>
     </tr>
     <tr>
       <th scope="row">キャンセル可能</th>
-      <td>いいえ</td>
+      <td>はい</td>
     </tr>
     <tr>
       <th scope="row">インターフェイス</th>
@@ -25,7 +25,7 @@ original_slug: Web/API/Document/pointerleave_event
     <tr>
       <th scope="row">イベントハンドラープロパティ</th>
       <td>
-        {{domxref("GlobalEventHandlers/onpointerleave", "onpointerleave")}}
+        {{domxref("GlobalEventHandlers/onpointermove", "onpointermove")}}
       </td>
     </tr>
   </tbody>
@@ -33,19 +33,19 @@ original_slug: Web/API/Document/pointerleave_event
 
 ## 例
 
-`addEventListener()` の使用例:
+`addEventListener()` を使用した場合
 
 ```js
-document.addEventListener('pointerleave', (event) => {
-  console.log('Pointer left element');
+document.addEventListener('pointermove', (event) => {
+  console.log('Pointer moved');
 });
 ```
 
-`onpointerleave` イベントハンドラープロパティの使用例:
+`onpointermove` イベントハンドラープロパティを使用した場合
 
 ```js
-document.onpointerleave = (event) => {
-  console.log('Pointer left element');
+document.onpointermove = (event) => {
+  console.log('Pointer moved');
 };
 ```
 
@@ -53,7 +53,7 @@ document.onpointerleave = (event) => {
 
 | 仕様書                                                                       | 状態                                 |
 | ---------------------------------------------------------------------------- | ------------------------------------ |
-| {{SpecName('Pointer Events', '#the-pointerleave-event')}} | {{Spec2('Pointer Events')}} |
+| {{SpecName('Pointer Events', '#the-pointermove-event')}} | {{Spec2('Pointer Events')}} |
 
 ## ブラウザーの互換性
 
@@ -66,9 +66,9 @@ document.onpointerleave = (event) => {
 - {{domxref("Document/pointerover_event", "pointerover")}}
 - {{domxref("Document/pointerenter_event", "pointerenter")}}
 - {{domxref("Document/pointerdown_event", "pointerdown")}}
-- {{domxref("Document/pointermove_event", "pointermove")}}
 - {{domxref("Document/pointerup_event", "pointerup")}}
 - {{domxref("Document/pointercancel_event", "pointercancel")}}
 - {{domxref("Document/pointerout_event", "pointerout")}}
-- {{domxref("GlobalEventHandlers/onpointerleave", "onpointerleave")}} イベントハンドラープロパティ
-- `HTMLElement` を対象としたこのイベント: {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} イベント
+- {{domxref("Document/pointerleave_event", "pointerleave")}}
+- {{domxref("GlobalEventHandlers/onpointerout", "onpointerout")}} イベントハンドラープロパティ
+- `HTMLElement` を対象としたこのイベント: {{domxref("HTMLElement/pointermove_event", "pointermove")}} イベント
