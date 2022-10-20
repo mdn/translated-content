@@ -109,6 +109,6 @@ Neste exemplo, o "child" terá 150 pixels de largura ou a largura do "parent", o
 
 ## Veja também
 
-- [The box model](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- [O box model](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{cssxref("width")}}, {{cssxref("min-width")}}
 - The mapped logical properties: {{cssxref("max-inline-size")}}, {{cssxref("max-block-size")}}
