@@ -27,7 +27,7 @@ El espesor del relleno está determinado por las propiedades {{cssxref("padding-
 
 El **área del borde**, delimitada por el límite del borde, extiende el área de relleno para incluir los bordes del elemento. Sus dimensiones son el _ancho de la caja del borde_ y la _altura de la caja del borde_.
 
-El espesor de los bordes está determinado por las propiedades {{cssxref("border-width")}} y la propiedad abreviada {{cssxref("border")}}. Si la propiedad {{cssxref("box-sizing")}} se establece en `border-box`, el tamaño del área del borde se puede definir explícitamente con las propiedades {{cssxref("width")}}, {{cssxref("min-</span> <span>width")}}, {{cssxref("max-width")}}, {{cssxref("height")}}, {{cssxref("min-height")}}, y {{cssxref("max</span><span>-height")}}.
+El espesor de los bordes está determinado por las propiedades {{cssxref("border-width")}} y la propiedad abreviada {{cssxref("border")}}. Si la propiedad {{cssxref("box-sizing")}} se establece en `border-box`, el tamaño del área del borde se puede definir explícitamente con las propiedades {{cssxref("width")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}, {{cssxref("height")}}, {{cssxref("min-height")}}, y {{cssxref("max-height")}}.
 
 El **área del margen**, delimitada por el límite del margen, extiende el área del borde para incluir un área vacía utilizada para separar el elemento de sus vecinos. Sus dimensiones son el _ancho de la caja del margen_ y la _altura de la caja del margen_.
 

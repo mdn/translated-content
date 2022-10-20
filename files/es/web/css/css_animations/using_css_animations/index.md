@@ -17,9 +17,9 @@ original_slug: Web/CSS/CSS_Animations/Usando_animaciones_CSS
 
 Las animaciones CSS tienen tres ventajas principales sobre las técnicas tradicionales de animación basada en scripts:
 
-1.  Son muy fáciles de usar para animaciones sencillas, puedes hacerlo incluso sin tener conocimientos de Javascript.
-2.  La animación se muestra correctamente, incluso en equipos poco potentes. Animaciones simples realizadas en Javascript pueden verse mal (a menos que estén muy bien hechas). El motor de renderizado puede usar técnicas de optimización como el "frame-skipping" u otras técnicas para que la ejecución de la animación se vea tan suave como sea posible.
-3.  Al ser el navegador quien controle la secuencia de la animación, permitimos que optimice el rendimiento y eficiencia de la misma, por ejemplo, reduciendo la frecuencia de actualización de la animación ejecutándola en pestañas que no estén visibles.
+1. Son muy fáciles de usar para animaciones sencillas, puedes hacerlo incluso sin tener conocimientos de Javascript.
+2. La animación se muestra correctamente, incluso en equipos poco potentes. Animaciones simples realizadas en Javascript pueden verse mal (a menos que estén muy bien hechas). El motor de renderizado puede usar técnicas de optimización como el "frame-skipping" u otras técnicas para que la ejecución de la animación se vea tan suave como sea posible.
+3. Al ser el navegador quien controle la secuencia de la animación, permitimos que optimice el rendimiento y eficiencia de la misma, por ejemplo, reduciendo la frecuencia de actualización de la animación ejecutándola en pestañas que no estén visibles.
 
 ## Configurando la animación
 

@@ -10,9 +10,9 @@ original_slug: Web/CSS/CSS_Positioning/entendiendo_z_index/Stacking_without_z-in
 
 Cuando ningún elemento tiene z-index, los elementos son apilados en este orden (de abajo hacia arriba):
 
-1.  El fondo y los bordes del elemento raiz
-2.  Bloques descendientes en el flujo normal, en orden de aparición (en HTML)
-3.  Elementos posicionados descendentemente, en orden de aparición (en HTML)
+1. El fondo y los bordes del elemento raiz
+2. Bloques descendientes en el flujo normal, en orden de aparición (en HTML)
+3. Elementos posicionados descendentemente, en orden de aparición (en HTML)
 
 En el siguiente ejemplo, los bloques con posiciones absolutas y relativas son apropiadamente dimensionados y posicionados para ilustrar las reglas de apilamiento.
 

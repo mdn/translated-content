@@ -8,7 +8,7 @@ translation_of: Web/CSS/clear
 ---
 {{CSSRef}}
 
-La propiedad [CSS](/es/docs/CSS) **`clear `**especifica si un elemento puede estar al lado de elementos [flotantes](/es/docs/CSS/float) que lo preceden o si debe ser movido (cleared) debajo de ellos. La propiedad `clear` aplica a ambos elementos flotantes y no flotantes.
+La propiedad [CSS](/es/docs/CSS) **`clear`**especifica si un elemento puede estar al lado de elementos [flotantes](/es/docs/CSS/float) que lo preceden o si debe ser movido (cleared) debajo de ellos. La propiedad `clear` aplica a ambos elementos flotantes y no flotantes.
 
 Cuando es aplicado a bloques no flotantes, mueve el [border edge](/es/docs/CSS/box_model) del elemento hacia abajo hasta que este debajo del [margin edge](/es/docs/CSS/box_model) de todos los floats relevantes. Este movimiento (cuando acontece) causa que [margin collapsing](/es/docs/CSS/margin_collapsing) no ocurra.
 

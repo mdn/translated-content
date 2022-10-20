@@ -12,7 +12,7 @@ original_slug: Web/CSS/Transiciones_de_CSS
 
 Las transiciones CSS, parte del borrador de la especificación CSS3, proporcionan una forma de animar los cambios de las propiedades CSS, en lugar de que los cambios surtan efecto de manera instantánea. Por ejemplo, si cambias el color de un elemento de blanco a negro, normalmente el cambio es instantáneo. Al habilitar las transiciones CSS, el cambio sucede en un intervalo de tiempo que puedes especificar, siguiendo una curva de aceleración que puedes personalizar.
 
-> **Nota:** como la especificación de las transiciones CSS todavía se encuentra en fase de borrador, a todas las propiedades asociadas con ellas se les añade el prefijo "-moz-" para usarse en Gecko. Para la compatibilidad con WebKit, se aconseja usar también el prefijo "-webkit-" y para la compatibilidad con Opera, el prefijo "-o-". Es decir, por ejemplo, la propiedad de transición se especificaría como `-moz-transition`, `-webkit-transition `y `-o-transition`.
+> **Nota:** como la especificación de las transiciones CSS todavía se encuentra en fase de borrador, a todas las propiedades asociadas con ellas se les añade el prefijo "-moz-" para usarse en Gecko. Para la compatibilidad con WebKit, se aconseja usar también el prefijo "-webkit-" y para la compatibilidad con Opera, el prefijo "-o-". Es decir, por ejemplo, la propiedad de transición se especificaría como `-moz-transition`, `-webkit-transition`y `-o-transition`.
 
 ## Las propiedades de transición CSS
 
@@ -379,7 +379,7 @@ Una vez que hemos establecido los extremos de la secuencia de animación, lo que
 
 > **Nota:** una vez que [la compatibilidad para las animaciones](http://dev.w3.org/csswg/css3-animations/) CSS esté disponible, el código JavaScript no será necesario para lograr este efecto.
 
-En primer lugar, la función` runDemo()` que se llama cuando el documento se carga para inicializar la secuencia de animación:
+En primer lugar, la función`runDemo()` que se llama cuando el documento se carga para inicializar la secuencia de animación:
 
 ```
 function runDemo() {
@@ -392,7 +392,7 @@ function runDemo() {
 }
 ```
 
-Es bastante sencillo: llama a la función` updateTranslation()` que definiremos enseguida, cuyo trabajo es establecer la clase para el elemento que estamos animando según la dirección en la que queramos que viaje. A continuación configura un proceso de escucha de evento para observar el evento "transitionend" que se envía cuando se completa una transición; esto nos permite saber cuándo es el momento para cambiar la clase del elemento para revertir la dirección de la animación.
+Es bastante sencillo: llama a la función`updateTranslation()` que definiremos enseguida, cuyo trabajo es establecer la clase para el elemento que estamos animando según la dirección en la que queramos que viaje. A continuación configura un proceso de escucha de evento para observar el evento "transitionend" que se envía cuando se completa una transición; esto nos permite saber cuándo es el momento para cambiar la clase del elemento para revertir la dirección de la animación.
 
 La función `updateTransition()` tiene este aspecto:
 

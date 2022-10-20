@@ -11,7 +11,7 @@ translation_of: Web/CSS/cursor
 
 La propiedad [CSS:cursor](es/CSS/cursor) especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.
 
-- [CSS:Valor_inicial](es/CSS/Valor_inicial):` CSS:auto`
+- [CSS:Valor_inicial](es/CSS/Valor_inicial):`CSS:auto`
 - Se aplica a: todos los elementos
 - [CSS:inheritance](es/CSS/inheritance): Si
 - Porcentaje: N/A
@@ -224,10 +224,10 @@ Inline:
 External:
 
 .pointer {
-	cursor: pointer;
+ cursor: pointer;
 }
 .move {
-	cursor: move;
+ cursor: move;
 }
 ```
 

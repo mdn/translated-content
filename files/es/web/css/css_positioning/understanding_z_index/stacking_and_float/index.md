@@ -17,20 +17,20 @@ original_slug: Web/CSS/CSS_Positioning/entendiendo_z_index/Apilamiento_y_float
 
 Para los bloques flotantes el orden de apilamiento es un poco diferente. Los bloques flotantes son colocados entre bloques no posicionados y bloques posicionados:
 
-1.  Fondo y bordes del elemento raiz
-2.  Bloques descendientes en el flujo normal, en orden de aparición (en HTML)
-3.  Bloques flotantes
-4.  Elementos posicionados descendentemente , en orden de aparición (en HTML)
+1. Fondo y bordes del elemento raiz
+2. Bloques descendientes en el flujo normal, en orden de aparición (en HTML)
+3. Bloques flotantes
+4. Elementos posicionados descendentemente , en orden de aparición (en HTML)
 
 En realidad, como puedes ver en el siguiente ejemplo, el fondo y el borde del bloque no posicionado (DIV #4) no son afectados por los bloques flotantes, mientras que el contenido si es afectado. Esto ocurre de acuerdo al comportamiento flotante stándar de CSS.
 
 Este comportamiento puede ser explicado con una versión mejorada de la lista previa:
 
-1.  Fondo y bordes del elemento raiz
-2.  Bloques descendientes en el flujo normal, en orden de aparición (en HTML)
-3.  Bloques flotantes
-4.  Descendientes en línea en el flujo normal
-5.  Elementos posicionados descendentemente , en orden de aparición (en HTML)
+1. Fondo y bordes del elemento raiz
+2. Bloques descendientes en el flujo normal, en orden de aparición (en HTML)
+3. Bloques flotantes
+4. Descendientes en línea en el flujo normal
+5. Elementos posicionados descendentemente , en orden de aparición (en HTML)
 
 > **Nota:** En el ejemplo debajo, todos los bloques excepto el no posicionado son translúcidos para mostrar el orden de apilamiento. Si la opacidad del bloque no posicionado (DIV #4) es reducida, entonces algo extraño ocurre: el fondo y el borde de ese bloque sobresale por encima de los bloques flotantes, pero aun debajo de los bloques posicionados. Yo no pude entender si esto es un bug o una interpretación peculiar de la especificación. (Aplicar opacidad debería crear implícitamente un contexto de apilamiento.)
 

@@ -94,7 +94,7 @@ html,body {
 
 ## Sintaxis
 
-La propiedad `flex-shrink` se especifica como un único [`<número>`](#<number>).
+La propiedad `flex-shrink` se especifica como un único [`<número>`](#number).
 
 ### Valores
 
