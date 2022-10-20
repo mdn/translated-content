@@ -160,7 +160,7 @@ Para encontrar la longitud de una cadena (en unidades de código), accede a su p
 'hello'.length; // 5
 ```
 
-¡Aquí está nuestra primer pincelada con objetos JavaScript! ¿Mencionamos que también puedes usar cadenas como {{jsxref("Object", "objectos", "", 1)}}? También tienen {{jsxref("String", "métodos", "#Métodos", 1)}} que te permiten manipular la cadena y acceder a información sobre la cadena:
+¡Aquí está nuestra primer pincelada con objetos JavaScript! ¿Mencionamos que también puedes usar cadenas como {{jsxref("Object", "objetos", "", 1)}}? También tienen {{jsxref("String", "métodos", "#Métodos", 1)}} que te permiten manipular la cadena y acceder a información sobre la cadena:
 
 ```js
 'hello'.charAt(0); // "h"
