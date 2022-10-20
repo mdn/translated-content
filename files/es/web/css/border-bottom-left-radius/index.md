@@ -57,94 +57,96 @@ donde:
 
 ## Ejemplos
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Ejemplo en vivo</th>
-      <th>Código</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding: 1.5em;">
-        <div
-          style="background-color: lightgreen; border: solid 1px black; border-bottom-left-radius: 40px 40px; width: 100px; height: 100px;">
-          <div class="hidden">.</div>
-        </div>
-      </td>
-      <td>Un arco de círculo usado como borde
-        <pre class="brush: css">
-   div {
-     border-bottom-left-radius: 40px 40px;
-   }
-   </pre>
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 1.5em;">
-        <div
-          style="background-color: lightgreen; border: solid 1px black; border-bottom-left-radius: 40px 20px; width: 100px; height: 100px;">
-          <div class="hidden">.</div>
-        </div>
-      </td>
-      <td>Un arco de elipse usado como borde
-        <pre class="brush: css">
-   div {
-     border-bottom-left-radius: 40px 20px;
-   }
-   </pre>
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 1.5em;">
-        <div
-          style="background-color: lightgreen; border: solid 1px black; border-bottom-left-radius: 40%; width: 100px; height: 100px;">
-          <div class="hidden">.</div>
-        </div>
-      </td>
-      <td>La caja es un cuadro: un arco de círculo es usado como borde
-        <pre class="brush: css">
-   div {
-     border-bottom-left-radius: 40%;
-   }
-   </pre>
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 1.5em;">
-        <div
-          style="background-color: lightgreen; border: solid 1px black; border-bottom-left-radius: 40%; width: 100px; height: 200px;">
-          <div class="hidden">.</div>
-        </div>
-      </td>
-      <td>La caja no es un círculo: un arco de elipse es usado como borde
-        <pre class="brush: css">
-   div {
-     border-bottom-left-radius: 40%;
-   }
-   </pre>
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 1.5em;">
-        <div
-          style="border: black 3px double; border-bottom-left-radius: 40%; height: 100px; width: 100px; background-color: rgb(250,20,70); background-clip: content-box;">
-          <div class="hidden">.</div>
-        </div>
-      </td>
-      <td>El color de fondo está delimitado al borde
-        <pre class="brush: css">
-   div {
-     border-bottom-left-radius:40%;
-     border-style: black 3px double;
-     background-color: rgb(250,20,70);
-     background-clip: content-box;
-   }
-   </pre>
-      </td>
-    </tr>
-  </tbody>
-</table>
+#### Un arco de círculo usado como borde
+
+```html hidden
+<div></div>
+```
+
+```css
+div {
+  background-color: lightgreen;
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
+  border-bottom-left-radius: 40px 40px;
+}
+```
+
+{{EmbedLiveSample}}
+
+#### Un arco de elipse usado como borde
+
+```html hidden
+<div></div>
+```
+
+```css
+div {
+  background-color: lightgreen;
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
+  border-bottom-left-radius: 40px 20px;
+}
+```
+
+{{EmbedLiveSample}}
+
+#### La caja es un cuadro: un arco de círculo es usado como borde
+
+```html hidden
+<div></div>
+```
+
+```css
+div {
+  background-color: lightgreen;
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
+  border-bottom-left-radius: 40%;
+}
+```
+
+{{EmbedLiveSample}}
+
+#### La caja no es un círculo: un arco de elipse es usado como borde
+
+```html hidden
+<div></div>
+```
+
+```css
+div {
+  background-color: lightgreen;
+  border: solid 1px black;
+  border-bottom-left-radius: 40%;
+  width: 100px;
+  height: 200px;
+}
+```
+
+{{EmbedLiveSample}}
+
+#### El color de fondo está delimitado al borde
+
+```html hidden
+<div></div>
+```
+
+```css
+div {
+  border: black 3px double;
+  border-bottom-left-radius: 40%;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(250,20,70);
+  background-clip: content-box;
+}
+```
+
+{{EmbedLiveSample}}
 
 ## Especificaciones
 
