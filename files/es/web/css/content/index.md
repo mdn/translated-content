@@ -63,4 +63,3 @@ Categorías
 
 Interwiki Languages
 
-{{ languages( { "en": "en/CSS/content" } ) }}

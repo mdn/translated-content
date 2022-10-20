@@ -94,4 +94,3 @@ Categorías
 
 interwiki links
 
-{{ languages( { "en": "en/CSS3\_Columns", "fr": "fr/Colonnes\_CSS3", "it": "it/Le\_Colonne\_nei\_CSS3", "ja": "ja/CSS3\_Columns", "ko": "ko/CSS3\_Columns", "pl": "pl/Kolumny\_CSS3" } ) }}

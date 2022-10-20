@@ -63,4 +63,3 @@ Categorías
 
 Interwiki Languages
 
-{{ languages( { "fr": "fr/CSS/direction", "pl": "pl/CSS/direction", "en": "en/CSS/direction" } ) }}
