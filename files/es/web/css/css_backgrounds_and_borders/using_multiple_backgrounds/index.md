@@ -48,7 +48,7 @@ En este ejemplo, tres fondos son apilados: el logo de Firefox, un [gradiente lin
 }
 ```
 
-## Resultado
+### Resultado
 
 (Si la imagen no aparece en CodePen, intenta con el botón TIdy en la sección de CSS)
 

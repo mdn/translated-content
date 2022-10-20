@@ -46,7 +46,7 @@ flex-basis: unset;
 
   - : Indica el dimensionamiento automático, basado en el contenido del elemento flexible.
 
-    > **Nota:**Tenga en cuenta que éste valor no fue presentado en el lanzamiento inicial del Diseño de Caja Flexible, así que no será soportado por algunas implementaciones antiguas. El efecto equivalente puede tenerlo usando `auto` junto con un tamaño principal ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) o [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) en auto.
+    > **Nota:** Tenga en cuenta que éste valor no fue presentado en el lanzamiento inicial del Diseño de Caja Flexible, así que no será soportado por algunas implementaciones antiguas. El efecto equivalente puede tenerlo usando `auto` junto con un tamaño principal ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) o [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) en auto.
 
     > **Nota:** Breve historia
     >
