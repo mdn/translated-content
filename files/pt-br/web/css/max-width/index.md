@@ -56,7 +56,7 @@ Certifique-se que os elementos definidos com `max-width` não sejam truncados e/
 - [MDN Understanding WCAG, explicações da Diretriz 1.4](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_inclusive_separating_foreground_from_background)
 - [Compreender o Critério de Sucesso 1.4.4 | W3C Entendendo as WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-## Formal definition
+## Definição formal
 
 {{cssinfo}}
 
