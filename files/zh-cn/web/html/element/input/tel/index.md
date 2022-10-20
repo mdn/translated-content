@@ -70,7 +70,7 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 ### minlength
 
-用户可以在电话号码字段中输入的最小字符数（作为 UTF-16 编码单位）。这必须是一个小于或等于 `maxlength` 所指定的值得非负整数。如果没有指定 `minlength`，或者指定了一个无效的值，电话号码的输入就没有最小长度。
+用户可以在电话号码字段中输入的最小字符数（作为 UTF-16 编码单位）。这必须是一个小于或等于 `maxlength` 所指定的值的非负整数。如果没有指定 `minlength`，或者指定了一个无效的值，电话号码的输入就没有最小长度。
 
 如果输入字段的文本长度小于 `maxlength` UTF-16 编码单位长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。
 
