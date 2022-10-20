@@ -170,7 +170,7 @@ Mozilla 的扩展，当用户编辑该字段时按下键盘的 <kbd>Enter</kbd> 
 <input id="telNo" name="telNo" type="tel" size="20" />
 ```
 
-{{ EmbedLiveSample('物理输入元素大小', 600, 40) }}
+{{ EmbedLiveSample('输入元素的物理长度', 600, 40) }}
 
 #### 元素值的长度
 
