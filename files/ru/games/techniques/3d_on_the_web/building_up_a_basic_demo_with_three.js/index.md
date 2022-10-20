@@ -31,19 +31,19 @@ translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Thr
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>MDN Games: Three.js demo</title>
-	<style>
-		body { margin: 0; padding: 0; }
-		canvas { width: 100%; height: 100%; }
-	</style>
+  <meta charset="utf-8">
+  <title>MDN Games: Three.js demo</title>
+  <style>
+    body { margin: 0; padding: 0; }
+    canvas { width: 100%; height: 100%; }
+  </style>
 </head>
 <body>
 <script src="three.min.js"></script>
 <script>
-	var WIDTH = window.innerWidth;
-	var HEIGHT = window.innerHeight;
-	/* весь наш JavaScript-код будет после этого комментария */
+  var WIDTH = window.innerWidth;
+  var HEIGHT = window.innerHeight;
+  /* весь наш JavaScript-код будет после этого комментария */
 </script>
 </body>
 </html>
@@ -106,8 +106,8 @@ scene.add(camera);
 
 ```js
 function render() {
-	requestAnimationFrame(render);
-	renderer.render(scene, camera);
+  requestAnimationFrame(render);
+  renderer.render(scene, camera);
 }
 render();
 ```

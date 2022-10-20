@@ -44,4 +44,4 @@ La recommandation DOM niveau 1 du W3C ne spécifiait que la méthode `hasFeature
 
 ## Notes propres à Gecko
 
-- À partir de Gecko 19.0 {{geckoRelease ("19.0")}} la méthode {{domxref ("DOMImplementation.hasFeature", "hasFeature")}} retournera toujours true.
+- À partir de Gecko 19.0, la méthode {{domxref ("DOMImplementation.hasFeature", "hasFeature")}} retournera toujours true.

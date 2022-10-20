@@ -91,4 +91,4 @@ Content-Type: image/jpeg
 - [Ajude seus usuários a "salvar-dados" (Help Your Users \`Save-Data\`) - CSS Tricks](https://css-tricks.com/help-users-save-data/)
 - [Entregando aplicações leves e rápidas com Save-Data (Delivering Fast and Light Applications with Save-Data) - Google Developers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/save-data/)
 - Cabeçalho para indicar que o conteúdo servidor varia por `Save-Data`: {{HTTPHeader("Vary")}}
-- Funcionalidade CSS @media [`prefers-reduced-data`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-data) {{experimental_inline}}
+- Funcionalidade CSS @media [`prefers-reduced-data`](https://developer.mozilla.org/pt-BR/docs/Web/CSS/@media/prefers-reduced-data) {{experimental_inline}}
