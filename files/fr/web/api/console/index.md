@@ -113,7 +113,7 @@ L'affichage ressemblera à ceci :
 
 #### Utiliser les caractères de substitution
 
-Gecko 9.0 {{geckoRelease("9.0")}} a amené le support des caractères de substitution. Lorsque l'on passe en argument une chaîne à l'une des méthodes qui acceptent des chaînes de caractère, on peut utiliser ces caractères de substitution :
+Gecko 9.0 a amené le support des caractères de substitution. Lorsque l'on passe en argument une chaîne à l'une des méthodes qui acceptent des chaînes de caractère, on peut utiliser ces caractères de substitution :
 
 <table class="standard-table">
   <tbody>

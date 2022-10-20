@@ -68,5 +68,5 @@ navigator.doNotTrack; // "0" or "1"
 - [donottrack.us](https://donottrack.us/)
 - Ajuda das configurações DNT dos navegadores:
 
-  - [Firefox](https://www.mozilla.org/en-US/firefox/dnt/)
+  - [Firefox](https://www.mozilla.org/pt-BR/firefox/dnt/)
   - [Chrome](https://support.google.com/chrome/answer/2790761)

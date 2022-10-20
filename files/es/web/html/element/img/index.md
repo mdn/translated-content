@@ -68,7 +68,7 @@ Este elemento incluye atributos globales.
 - {{htmlattrdef("align")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}} Use the {{cssxref('vertical-align')}} CSS property
   - : Alineamiento de la texto respecto al contexto que la rodea.
 - {{htmlattrdef("alt")}}
-  - : Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un [formato no soportado](/es/docs/Web/HTML/Elemento/img$edit#Supported_image_formats) o si la imagen aún no se ha descargado.
+  - : Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un [formato no soportado](/es/docs/Web/HTML/Elemento/img#Supported_image_formats) o si la imagen aún no se ha descargado.
   
     > **Nota:** Omitir este atributo indica que la imagen es una parte clave del contenido, y no tiene equivalencia textual. Establecer este atributo como cadena vacía indica que la imagen no es una parte clave del contenido; los navegadores no gráficos pueden omitirlo.
 
@@ -176,7 +176,7 @@ Dependiendo de su tipo, una imagen puede tener ancho y alto intrínseco, pero no
 <img src="mdn-logo-sm.png" alt="MDN">
 ```
 
-![MDN](https://developer.mozilla.org/static/img/favicon144.png)
+![MDN](/static/img/favicon144.png)
 
 ## Ejemplo 2: Enlace con imagen
 
@@ -184,7 +184,7 @@ Dependiendo de su tipo, una imagen puede tener ancho y alto intrínseco, pero no
 <a href="https://developer.mozilla.org/"><img src="mdn-logo-sm.png" alt="MDN"></a>
 ```
 
-[![MDN](https://developer.mozilla.org/static/img/favicon144.png)](https://developer.mozilla.org/)
+[![MDN](/static/img/favicon144.png)](/)
 
 ## Ejemplo 3: Uso del atributo `srcset`
 
