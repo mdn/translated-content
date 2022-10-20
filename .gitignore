@@ -1,6 +1,7 @@
+/node_modules
 _githistory.json
 .DS_Store
+.idea
 mdn/content
-node_modules/
 yarn-debug.log*
 yarn-error.log*

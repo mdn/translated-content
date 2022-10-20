@@ -9,9 +9,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API
 ---
 {{AddonSidebar}}
 
-JavaScript APIs for WebExtensions can be used inside the extension's [background scripts](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) and in any other documents bundled with the extension, including [browser action](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Browser_action) or [page action](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Page_actions) popups, [sidebars](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Sidebars), [options pages](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Options_pages), or [new tab pages](/en-US/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). A few of these APIs can also be accessed by an extension's [content scripts](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) (see the [list in the content script guide](/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)).
+JavaScript APIs for WebExtensions can be used inside the extension's [background scripts](/pt-BR/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) and in any other documents bundled with the extension, including [browser action](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Browser_action) or [page action](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Page_actions) popups, [sidebars](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Sidebars), [options pages](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Options_pages), or [new tab pages](/pt-BR/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). A few of these APIs can also be accessed by an extension's [content scripts](/pt-BR/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) (see the [list in the content script guide](/pt-BR/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)).
 
-To use the more powerful APIs you need to [request permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions) in your extension's manifest.json.
+To use the more powerful APIs you need to [request permission](/pt-BR/Add-ons/WebExtensions/manifest.json/permissions) in your extension's manifest.json.
 
 You can access the APIs using the `browser` namespace:
 
@@ -23,7 +23,7 @@ function logTabs(tabs) {
 browser.tabs.query({currentWindow: true}, logTabs);
 ```
 
-Many of the APIs are asynchronous, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise):
+Many of the APIs are asynchronous, returning a [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise):
 
 ```js
 function logCookie(c) {

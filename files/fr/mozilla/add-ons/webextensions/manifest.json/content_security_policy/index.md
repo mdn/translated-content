@@ -55,7 +55,7 @@ Il existe des restrictions sur la politique que vous pouvez spécifier ici&nbsp;
 
 ### Examples valides
 
-Autoriser les scripts distants de "https\://example.com" : <sup>(<em>voir note</em> <a href="/fr/Add-ons/WebExtensions/manifest.json/content_security_policy$edit#exampleNote_1">1</a>)</sup>
+Autoriser les scripts distants de `https://example.com` : <sup>(_voir note_ [1](/fr/Add-ons/WebExtensions/manifest.json/content_security_policy#exampleNote_1)</sup>
 
 ```json
 "content_security_policy": "script-src 'self' https://example.com; object-src 'self'"

@@ -1,6 +1,8 @@
 ---
 title: Date.prototype.setUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
 {{JSRef}}
@@ -11,8 +13,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 
 ## 構文
 
-```
-dateObj.setUTCSeconds(secondsValue[, msValue])
+```js-nolint
+setUTCSeconds(secondsValue)
+setUTCSeconds(secondsValue, msValue)
 ```
 
 ### 引数
@@ -37,19 +40,17 @@ dateObj.setUTCSeconds(secondsValue[, msValue])
 ### setUTCSeconds() の使用
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setUTCSeconds(20);
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setutcseconds', 'Date.prototype.setUTCSeconds')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.setUTCSeconds")}}
+{{Compat}}
 
 ## 関連情報
 

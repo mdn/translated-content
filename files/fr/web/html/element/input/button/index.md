@@ -171,7 +171,7 @@ function disableBtn() {
 
 ## Validation
 
-Les éléments ` <input`` type="button" ``> ` n'ont pas de contrainte de validation.
+Les éléments `<input type="button">` n'ont pas de contrainte de validation.
 
 ## Exemples
 

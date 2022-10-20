@@ -58,7 +58,7 @@ El uso de encadenamiento opcional con llamadas a funciones hace que la expresió
 let result = someInterface.customMethod?.();
 ```
 
-> **Nota:** Si hay una propiedad con ese nombre y que no es una función, usar `?.` aún levantará una excepción {{JSxRef("TypeError")}} (` x.y`` is not a function `).
+> **Nota:** Si hay una propiedad con ese nombre y que no es una función, usar `?.` aún levantará una excepción {{JSxRef("TypeError")}} (`x.y is not a function`).
 
 #### Manejo de callbacks opcionales o manejadores de eventos
 

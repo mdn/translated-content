@@ -57,4 +57,4 @@ script.src = url;
 document.body.appendChild(script);
 ```
 
-Настройка `src`вместо настройки `innerHTML `делает этот скрипт асинхронным.
+Настройка `src`вместо настройки `innerHTML` делает этот скрипт асинхронным.

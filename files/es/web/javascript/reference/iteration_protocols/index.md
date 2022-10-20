@@ -116,7 +116,7 @@ someString + "";                              // "hi"
 
 ### Iterables nativos
 
-{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} y {{jsxref("Set")}} son objetos iterables nativos, ya que en su objeto prototipo existe un método ` @@``iterator. `
+{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} y {{jsxref("Set")}} son objetos iterables nativos, ya que en su objeto prototipo existe un método `@@iterator`.
 
 ### Iterables personalizados
 
@@ -153,7 +153,7 @@ De igual manera {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Pr
 
 ### Sintaxis que espera un iterable
 
-Algunas declaraciones y expresiones esperan iterables, por ejemplo el bucle [`for-of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of), el[operador de propagación _spread operator_](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator), la expresión [`Yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*), y la [asignación desestructurada _destructuring assignment_](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+Algunas declaraciones y expresiones esperan iterables, por ejemplo el bucle [`for-of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), el[operador de propagación _spread operator_](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator), la expresión [`Yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*), y la [asignación desestructurada _destructuring assignment_](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 ```js
 for(let value of ["a", "b", "c"]){
