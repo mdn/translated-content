@@ -8,88 +8,75 @@ tags:
   - Referencia
 translation_of: Web/CSS/column-count
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propiedad <a href="/es/docs/Web/CSS">CSS</a> <strong><code>column-count</code></strong> divide el contenido de un elemento en el número de columnas indicado.</p>
+La propiedad [CSS](/es/docs/Web/CSS) **`column-count`** divide el contenido de un elemento en el número de columnas indicado.
 
-<div>{{EmbedInteractiveExample("pages/css/column-count.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-count.html")}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 column-count: auto;
 
-/* &lt;integer&gt; value */
+/* <integer> value */
 column-count: 3;
 
 /* Global values */
 column-count: inherit;
 column-count: initial;
-column-count: unset;</pre>
+column-count: unset;
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>El número de columnas es determinado por otras propiedades CSS, como {{cssxref("column-width")}}.</dd>
- <dt><code>{{cssxref("&lt;integer&gt;")}}</code></dt>
- <dd>Es un {{cssxref("&lt;integer&gt;")}} estrictamente positivo que describe el número ideal de columnas en las que el contenido del elemento va a fluir. Si la propiedad {{cssxref("column-width")}} se establece a un valor que no sea <code>auto</code>, se limitará a indicar el número máximo permitido de columnas.</dd>
-</dl>
+- `auto`
+  - : El número de columnas es determinado por otras propiedades CSS, como {{cssxref("column-width")}}.
+- `{{cssxref("&lt;integer&gt;")}}`
+  - : Es un {{cssxref("&lt;integer&gt;")}} estrictamente positivo que describe el número ideal de columnas en las que el contenido del elemento va a fluir. Si la propiedad {{cssxref("column-width")}} se establece a un valor que no sea `auto`, se limitará a indicar el número máximo permitido de columnas.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="content-box"&gt;
+```html
+<p class="content-box">
   This is a bunch of text split into three columns
   using the CSS `column-count` property. The text
   is equally distributed over the columns.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.content-box {
+```css
+.content-box {
   column-count: 3;
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample('Example', 'auto', 120)}}</p>
+{{EmbedLiveSample('Example', 'auto', 120)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#column-count', 'column-count')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estado                               | Comentario         |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
+| {{SpecName('CSS3 Multicol', '#column-count', 'column-count')}} | {{Spec2('CSS3 Multicol')}} | Definición inicial |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<p>{{Compat("css.properties.column-count")}}</p>
+{{Compat("css.properties.column-count")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Diseño con columnas múltiples</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol">Conceptos básicos de Multicol</a></li>
-</ul>
+- [Diseño con columnas múltiples](/es/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Conceptos básicos de Multicol](/es/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)

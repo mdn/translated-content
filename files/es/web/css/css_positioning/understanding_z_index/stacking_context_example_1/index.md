@@ -5,71 +5,69 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_e
 original_slug: >-
   Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_1_del_contexto_de_apilamiento
 ---
-<p>« <a href="/es/CSS" title="CSS">CSS</a> « <a href="/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index" title="Understanding CSS z-index">ENTENDIENDO LA PROPIEDAD CSS Z-INDEX</a></p>
+« [CSS](/es/CSS "CSS") « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index "Understanding CSS z-index")
 
-<h3 id="Ejemplo_1_del_contexto_de_apilamiento">Ejemplo 1 del contexto de apilamiento</h3>
+### Ejemplo 1 del contexto de apilamiento
 
-<p>Empecemos con un ejemplo básico. En el contexto de apilamiento raíz tenemos dos DIVs (DIV #1 and DIV #3), ambos con posición relativa, pero sin propiedad z-index. Dentro del DIV #1 se encuentra el DIV #2 de posición absoluta, mientras que en el DIV #3 se encuentra el DIV #4 con posición absoluta, ambos sin propiedad z-index.</p>
+Empecemos con un ejemplo básico. En el contexto de apilamiento raíz tenemos dos DIVs (DIV #1 and DIV #3), ambos con posición relativa, pero sin propiedad z-index. Dentro del DIV #1 se encuentra el DIV #2 de posición absoluta, mientras que en el DIV #3 se encuentra el DIV #4 con posición absoluta, ambos sin propiedad z-index.
 
-<p>El único contexto de apilamiento es el contexto raíz. Sin la propiedad z-index, los elementos son apilados por orden de ocurrencia.</p>
+El único contexto de apilamiento es el contexto raíz. Sin la propiedad z-index, los elementos son apilados por orden de ocurrencia.
 
-<p><img alt="Stacking context example 1" class="internal" src="/@api/deki/files/914/=Understanding_zindex_05a.png"></p>
+![Stacking context example 1](/@api/deki/files/914/=Understanding_zindex_05a.png)
 
-<p>Si a DIV #2 le asignamos un valor z-index positivo (no-cero y no-auto), es renderizado encima de todos los otros DIVs.</p>
+Si a DIV #2 le asignamos un valor z-index positivo (no-cero y no-auto), es renderizado encima de todos los otros DIVs.
 
-<p><img alt="Stacking context example 1" class="internal" src="/@api/deki/files/915/=Understanding_zindex_05b.png"></p>
+![Stacking context example 1](/@api/deki/files/915/=Understanding_zindex_05b.png)
 
-<p>Luego si al DIV #4 también se le asigna un z-index positivo mayor que el z-index del DIV #2, es renderizado encima de los otros DIVs incluyendo DIV #2.</p>
+Luego si al DIV #4 también se le asigna un z-index positivo mayor que el z-index del DIV #2, es renderizado encima de los otros DIVs incluyendo DIV #2.
 
-<p><img alt="Stacking context example 1" class="internal" src="/@api/deki/files/916/=Understanding_zindex_05c.png"></p>
+![Stacking context example 1](/@api/deki/files/916/=Understanding_zindex_05c.png)
 
-<p>En este último ejemplo puedes ver que el DIV #2 y el DIV #4 no son hermanos, porque pertenecen a padres distintos en la jerarquía de elementos HTML. A pesar de esto, el apilamiento del DIV #4 con respecto al DIV #2 puede ser controlado a través de z-index. Pasa que, dado a que al DIV #1 y al DIV #3 no se le ha asignado ningún valor z-index, ellos no han creado un contexto de apilamiento. Esto significa que todos sus contenidos, incluyendo el DIV #2 y el DIV #4, pertenecen al mismo contexto de apilamiento raíz.</p>
+En este último ejemplo puedes ver que el DIV #2 y el DIV #4 no son hermanos, porque pertenecen a padres distintos en la jerarquía de elementos HTML. A pesar de esto, el apilamiento del DIV #4 con respecto al DIV #2 puede ser controlado a través de z-index. Pasa que, dado a que al DIV #1 y al DIV #3 no se le ha asignado ningún valor z-index, ellos no han creado un contexto de apilamiento. Esto significa que todos sus contenidos, incluyendo el DIV #2 y el DIV #4, pertenecen al mismo contexto de apilamiento raíz.
 
-<p>En términos de contextos de apilamiento, el DIV #1 y el DIV #3 son simplemente asimilados dentro del elemento raíz, y la jerarquía resultante es la siguiente:</p>
+En términos de contextos de apilamiento, el DIV #1 y el DIV #3 son simplemente asimilados dentro del elemento raíz, y la jerarquía resultante es la siguiente:
 
-<ul>
- <li>contexto de apilamiento raíz
-  <ul>
-   <li>DIV #2 (z-index 1)</li>
-   <li>DIV #4 (z-index 2)</li>
-  </ul>
- </li>
-</ul>
+- contexto de apilamiento raíz
 
-<div class="note"><strong>Nota:</strong> El DIV #1 y el DIV #3 no son translúcidos. Es importante recordar que asignar una opacidad menor a 1 a un elemento posicionado implica la creación de un contexto de apilamiento, como ocurre cuando se añade un valor z-index. Y este ejemplo muestra que ocurre cuando un elemento padre no crea un contexto de apilamiento.</div>
+  - DIV #2 (z-index 1)
+  - DIV #4 (z-index 2)
 
-<h2 id="Ejemplo"><strong>Ejemplo</strong></h2>
+> **Nota:** El DIV #1 y el DIV #3 no son translúcidos. Es importante recordar que asignar una opacidad menor a 1 a un elemento posicionado implica la creación de un contexto de apilamiento, como ocurre cuando se añade un valor z-index. Y este ejemplo muestra que ocurre cuando un elemento padre no crea un contexto de apilamiento.
 
-<h3 id="HTML"><strong>HTML</strong></h3>
+## Ejemplo
 
-<pre class="brush: html">&lt;div id="div1"&gt;
-&lt;br /&gt;&lt;span class="bold"&gt;DIV #1&lt;/span&gt;
-&lt;br /&gt;position: relative;
-   &lt;div id="div2"&gt;
-   &lt;br /&gt;&lt;span class="bold"&gt;DIV #2&lt;/span&gt;
-   &lt;br /&gt;position: absolute;
-   &lt;br /&gt;z-index: 1;
-   &lt;/div&gt;
-&lt;/div&gt;
+### HTML
 
-&lt;br /&gt;
+```html
+<div id="div1">
+<br /><span class="bold">DIV #1</span>
+<br />position: relative;
+   <div id="div2">
+   <br /><span class="bold">DIV #2</span>
+   <br />position: absolute;
+   <br />z-index: 1;
+   </div>
+</div>
 
-&lt;div id="div3"&gt;
-&lt;br /&gt;&lt;span class="bold"&gt;DIV #3&lt;/span&gt;
-&lt;br /&gt;position: relative;
-   &lt;div id="div4"&gt;
-   &lt;br /&gt;&lt;span class="bold"&gt;DIV #4&lt;/span&gt;
-   &lt;br /&gt;position: absolute;
-   &lt;br /&gt;z-index: 2;
-   &lt;/div&gt;
-&lt;/div&gt;
+<br />
 
-&lt;/body&gt;&lt;/html&gt;
-</pre>
+<div id="div3">
+<br /><span class="bold">DIV #3</span>
+<br />position: relative;
+   <div id="div4">
+   <br /><span class="bold">DIV #4</span>
+   <br />position: absolute;
+   <br />z-index: 2;
+   </div>
+</div>
 
-<h3 id="CSS">CSS</h3>
+</body></html>
+```
 
-<pre class="brush: css">.bold {
+### CSS
+
+```css
+.bold {
     font-weight: bold;
     font: 12px Arial;
 }
@@ -105,29 +103,24 @@ original_slug: >-
     background-color: #ddddff;
     text-align: left;
     padding-left: 10px;
-}</pre>
+}
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1') }}</p>
+{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1') }}
 
-<h3 id="También_puedes_ver">También puedes ver</h3>
+### También puedes ver
 
-<ul>
- <li><a href="/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Stacking_without_z-index" title="  javichito Apilando sin z-index">Apilando sin z-index</a> : Reglas de apilamiento por defecto</li>
- <li><a href="/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Apilamiento_y_float" title="Apilamiento y float">Apilamiento y float</a> : Cómo son manejados los elementos flotantes</li>
- <li><a href="/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Agregando_z-index" title="Agregando z-index">Agregando z-index</a> : Usando z-index para cambiar el apilamiento por defecto</li>
- <li><a href="/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/El_contexto_de_apilamiento" title="El contexto de apilamiento">El contexto de apilamiento</a> : Notas sobre el contexto de apilamiento</li>
- <li><a href="/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_2_del_contexto_de_apilamiento" title="Ejemplo 2 del contexto de apilamiento">Ejemplo 2 del contexto de apilamiento</a> : Jerarquía HTML de 2 niveles, z-index en todos los niveles</li>
- <li><a href="/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento" title="Ejemplo 3 del contexto de apilamiento">Ejemplo 3 del contexto de apilamiento</a> : Jerarquía HTML de 3 niveles, z-index en el segundo nivel<span id="cke_bm_89E" class=""> </span></li>
-</ul>
+- [Apilando sin z-index](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Stacking_without_z-index "  javichito Apilando sin z-index") : Reglas de apilamiento por defecto
+- [Apilamiento y float](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Apilamiento_y_float "Apilamiento y float") : Cómo son manejados los elementos flotantes
+- [Agregando z-index](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Agregando_z-index "Agregando z-index") : Usando z-index para cambiar el apilamiento por defecto
+- [El contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/El_contexto_de_apilamiento "El contexto de apilamiento") : Notas sobre el contexto de apilamiento
+- [Ejemplo 2 del contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_2_del_contexto_de_apilamiento "Ejemplo 2 del contexto de apilamiento") : Jerarquía HTML de 2 niveles, z-index en todos los niveles
+- [Ejemplo 3 del contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento "Ejemplo 3 del contexto de apilamiento") : Jerarquía HTML de 3 niveles, z-index en el segundo nivel
 
-<div class="originaldocinfo">
-<h3 id="Original_Document_Information" name="Original_Document_Information">Información del documento original</h3>
+### Información del documento original
 
-<ul>
- <li>Autor(es): Paolo Lombardi</li>
- <li>Este artículo es una traducción al inglés de un artículo que escribí en italiano para <a href="http://www.yappy.it">YappY</a>. He dado el derecho de compartir el contenido bajo <a href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution-Sharealike license</a></li>
- <li>Last Updated Date: July 9th, 2005</li>
-</ul>
-</div>
+- Autor(es): Paolo Lombardi
+- Este artículo es una traducción al inglés de un artículo que escribí en italiano para [YappY](http://www.yappy.it). He dado el derecho de compartir el contenido bajo [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
+- Last Updated Date: July 9th, 2005

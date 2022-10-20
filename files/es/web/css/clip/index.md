@@ -3,49 +3,56 @@ title: clip
 slug: Web/CSS/clip
 translation_of: Web/CSS/clip
 ---
-<div>
-<div>{{CSSRef}}{{deprecated_header}}</div>
-</div>
+{{CSSRef}}{{deprecated_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad de CSS <code>clip</code> define qué porción de un elemento es visible. La propiedad <code>clip</code> se aplica solamente sobre elementos con {{ cssxref("position","position:absolute") }} o {{cssxref("position", "position:fixed")}}.</p>
+La propiedad de CSS `clip` define qué porción de un elemento es visible. La propiedad `clip` se aplica solamente sobre elementos con {{ cssxref("position","position:absolute") }} o {{cssxref("position", "position:fixed")}}.
 
-<div class="warning">
-<p><strong>Warning:</strong> This property is deprecated. Use {{cssxref("clip-path")}} instead.</p>
-</div>
+> **Advertencia:** This property is deprecated. Use {{cssxref("clip-path")}} instead.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">Sintaxis formal</a>: {{csssyntax("clip")}}
-</pre>
+```
+Sintaxis formal: {{csssyntax("clip")}}
+```
 
-<pre>clip: rect(1px, 10em, 3rem, 2ch)
+```
+clip: rect(1px, 10em, 3rem, 2ch)
 clip: auto
 
-clip: inherit</pre>
+clip: inherit
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;shape&gt;</code></dt>
- <dd>Una forma rectangular del formulario
- <pre style="margin: 0;">rect(&lt;top&gt;, &lt;right&gt;, &lt;bottom&gt;, &lt;left&gt;)   /* sintaxis estándar */
-</pre>
- o
+- `<shape>`
 
- <pre style="margin: 0;">rect(&lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;)      /* sintaxis compatible inversa */</pre>
- donde<code>&lt;top&gt;</code> y <code>&lt;bottom&gt;</code> especifícan desplazamientos de la <em>esquina del borde superior</em> de la caja, y <code>&lt;right&gt;</code>, y <code>&lt;left&gt;</code> especifican desplazamientos de la <em>esquina del borde izquiedo</em> de la caja.<br><br>
- <code>&lt;top&gt;</code>, <code>&lt;right&gt;</code>, <code>&lt;bottom&gt;</code>, y <code>&lt;left&gt;</code> pueden cada uno tenerun valor {{cssxref("&lt;length&gt;")}} o <code> auto</code>.</dd>
- <dt><code>auto</code></dt>
- <dd>El elemento no se recorta (valor por defecto)</dd>
-</dl>
+  - : Una forma rectangular del formulario
 
-<h2 id="Ejemplos">Ejemplos</h2>
+    ```
+    rect(<top>, <right>, <bottom>, <left>)   /* sintaxis estándar */
+    ```
 
-<pre class="brush:css">p { border:dotted;  position:relative; }
+    o
+
+    ```
+    rect(<top> <right> <bottom> <left>)      /* sintaxis compatible inversa */
+    ```
+
+    donde`<top>` y `<bottom>` especifícan desplazamientos de la _esquina del borde superior_ de la caja, y `<right>`, y `<left>` especifican desplazamientos de la _esquina del borde izquiedo_ de la caja.
+
+    `<top>`, `<right>`, `<bottom>`, y `<left>` pueden cada uno tenerun valor {{cssxref("&lt;length&gt;")}} o `auto`.
+
+- `auto`
+  - : El elemento no se recorta (valor por defecto)
+
+## Ejemplos
+
+```css
+p { border:dotted;  position:relative; }
 
 #img2 {
   position:absolute;  left:263px;
@@ -59,40 +66,22 @@ clip: inherit</pre>
 
   clip: rect(40px  200px  150px  30px);
   /* sintáxis no-estándar, pero soportada por todos los exploradores importantes incluyendo Firefox y IE */
-}</pre>
+}
+```
 
-<p style="position: relative; border: dotted;"><img alt="hut.jpg" src="/@api/deki/files/3613/=hut.jpg"> <img alt="hut.jpg" src="/@api/deki/files/3613/=hut.jpg" style=""> <img alt="hut.jpg" src="/@api/deki/files/3613/=hut.jpg" style=""></p>
+![hut.jpg](/@api/deki/files/3613/=hut.jpg) ![hut.jpg](/@api/deki/files/3613/=hut.jpg) ![hut.jpg](/@api/deki/files/3613/=hut.jpg)
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'clip') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td>Define <code>clip</code> como animatable.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'visufx.html#clipping', 'clip') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                   | Estado                                   | Comentario                     |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------ |
+| {{ SpecName('CSS3 Transitions', '#animatable-css', 'clip') }} | {{ Spec2('CSS3 Transitions') }} | Define `clip` como animatable. |
+| {{ SpecName('CSS2.1', 'visufx.html#clipping', 'clip') }}     | {{ Spec2('CSS2.1') }}             |                                |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad entre exploradores</h2>
+## Compatibilidad entre exploradores
 
 {{Compat("css.properties.clip")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>Propiedades CSS relacionadas: {{ cssxref("text-overflow") }}, {{ cssxref("white-space") }}, {{ Cssxref("overflow-x") }}, {{ Cssxref("overflow-y") }}, {{ Cssxref("overflow") }}, {{ Cssxref("display") }}, {{ Cssxref("position") }}</li>
-</ul>
+- Propiedades CSS relacionadas: {{ cssxref("text-overflow") }}, {{ cssxref("white-space") }}, {{ Cssxref("overflow-x") }}, {{ Cssxref("overflow-y") }}, {{ Cssxref("overflow") }}, {{ Cssxref("display") }}, {{ Cssxref("position") }}

@@ -8,30 +8,31 @@ tags:
   - Referencia
 translation_of: Web/CSS/flex-flow
 ---
-<div>{{ CSSRef}}</div>
+{{ CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad <a href="/en-US/docs/CSS" title="CSS">CSS</a> <strong><code>flex-flow</code></strong>  es una propiedad atajo para las propiedades individuales <code>flex-direction</code> y <code>flex-wrap</code>.</p>
+La propiedad [CSS](/es/docs/CSS "CSS") **`flex-flow`** es una propiedad atajo para las propiedades individuales `flex-direction` y `flex-wrap`.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p>Para más propiedades e información ve <a href="/en-US/docs/CSS/Using_CSS_flexible_boxes" title="/en-US/docs/CSS/Using_CSS_flexible_boxes">Utilizando cajas flexibles CSS</a>.</p>
+Para más propiedades e información ve [Utilizando cajas flexibles CSS](/es/docs/CSS/Using_CSS_flexible_boxes).
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush:css">/* flex-flow: &lt;'flex-direction'&gt; */
+```css
+/* flex-flow: <'flex-direction'> */
 flex-flow: row;
 flex-flow: row-reverse;
 flex-flow: column;
 flex-flow: column-reverse;
 
-/* flex-flow: &lt;'flex-wrap'&gt; */
+/* flex-flow: <'flex-wrap'> */
 flex-flow: nowrap;
 flex-flow: wrap;
 flex-flow: wrap-reverse;
 
-/* flex-flow: &lt;'flex-direction'&gt; and &lt;'flex-wrap'&gt; */
+/* flex-flow: <'flex-direction'> and <'flex-wrap'> */
 flex-flow: row nowrap;
 flex-flow: column wrap;
 flex-flow: column-reverse wrap-reverse;
@@ -40,49 +41,35 @@ flex-flow: column-reverse wrap-reverse;
 flex-flow: inherit;
 flex-flow: initial;
 flex-flow: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>Ve <a href="/en-US/docs/CSS/flex-direction" title="en-US/docs/CSS/flex-direction"><code>flex-direction</code></a> y <a href="/en-US/docs/CSS/flex-wrap" title="flex-wrap"><code>flex-wrap</code></a> para más detalles de los valores.</p>
+Ve [`flex-direction`](/es/docs/CSS/flex-direction "en-US/docs/CSS/flex-direction") y [`flex-wrap`](/es/docs/CSS/flex-wrap "flex-wrap") para más detalles de los valores.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="">element {
+```
+element {
   /* Main-axis es la dirección de bloque con main-start y main-end opuesto. Los artículos flex se distribuyen en múltiples líneas */
   flex-flow: column-reverse wrap;
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Flexbox','#flex-flow','flex-flow') }}</td>
-   <td>{{ Spec2('CSS3 Flexbox') }}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                           | Estado                               | Comentario         |
+| ------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
+| {{ SpecName('CSS3 Flexbox','#flex-flow','flex-flow') }} | {{ Spec2('CSS3 Flexbox') }} | Definición inicial |
 
-<h2 id="Compatibilidad_de_navegador">Compatibilidad de navegador</h2>
+## Compatibilidad de navegador
 
 {{Compat("css.properties.flex-flow")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_flexible_boxes" title="/en-US/docs/CSS/Using_CSS_flexible_boxes">Utilizando cajas flexibles CSS</a></li>
-</ul>
+- [Utilizando cajas flexibles CSS](/es/docs/CSS/Using_CSS_flexible_boxes)

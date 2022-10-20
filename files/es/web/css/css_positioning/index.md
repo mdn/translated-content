@@ -10,58 +10,33 @@ tags:
   - TopicStub
 translation_of: Web/CSS/CSS_Positioning
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><strong>Posicionamiento CSS</strong> es un módulo de CSS que define cómo posicionar elementos absoluta y relativamente en la página.</p>
+**Posicionamiento CSS** es un módulo de CSS que define cómo posicionar elementos absoluta y relativamente en la página.
 
-<h2 id="Referencia">Referencia</h2>
+## Referencia
 
-<h3 id="Propiedades_CSS">Propiedades CSS</h3>
+### Propiedades CSS
 
-<div class="index">
-<ul>
- <li>{{cssxref("bottom")}}</li>
- <li>{{cssxref("clear")}}</li>
- <li>{{cssxref("display")}}</li>
- <li>{{cssxref("float")}}</li>
- <li>{{cssxref("left")}}</li>
- <li>{{cssxref("position")}}</li>
- <li>{{cssxref("right")}}</li>
- <li>{{cssxref("top")}}</li>
- <li>{{cssxref("visibility")}}</li>
- <li>{{cssxref("z-index")}}</li>
-</ul>
-</div>
+- {{cssxref("bottom")}}
+- {{cssxref("clear")}}
+- {{cssxref("display")}}
+- {{cssxref("float")}}
+- {{cssxref("left")}}
+- {{cssxref("position")}}
+- {{cssxref("right")}}
+- {{cssxref("top")}}
+- {{cssxref("visibility")}}
+- {{cssxref("z-index")}}
 
-<h2 id="Guías">Guías</h2>
+## Guías
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index">Entendiendo la propiedad CSS z-index</a></dt>
- <dd>Presenta la noción de contexto de apilamiento y explica cómo funciona el ordenamiento en el eje-Z a través de varios ejemplos.</dd>
-</dl>
+- [Entendiendo la propiedad CSS z-index](/es/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
+  - : Presenta la noción de contexto de apilamiento y explica cómo funciona el ordenamiento en el eje-Z a través de varios ejemplos.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Positioning') }}</td>
-   <td>{{ Spec2('CSS3 Positioning') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'visuren.html') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-
+| Especificación                                       | Estado                                   | Comentario |
+| ---------------------------------------------------- | ---------------------------------------- | ---------- |
+| {{ SpecName('CSS3 Positioning') }}         | {{ Spec2('CSS3 Positioning') }} |            |
+| {{ SpecName('CSS2.1', 'visuren.html') }} | {{ Spec2('CSS2.1') }}             |            |

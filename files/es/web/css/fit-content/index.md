@@ -11,47 +11,49 @@ tags:
   - Web
 translation_of: Web/CSS/fit-content
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La función <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>fit-content()</code></strong> ajusta un tamaño dado a un tamaño disponible de acuerdo a la fórmula: <code>min(<var>maximum size</var>, max(<var>minimum size</var>, <var>argument</var>))</code>.</p>
+La función [CSS](/es/docs/Web/CSS) **`fit-content()`** ajusta un tamaño dado a un tamaño disponible de acuerdo a la fórmula: `min(maximum size, max(minimum size, argument))`.
 
-<pre class="brush: css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 fit-content(200px)
 fit-content(5cm)
 fit-content(30vw)
 fit-content(100ch)
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 fit-content(40%)
-</pre>
+```
 
-<p>La función se puede usar como un tamaño de track en las propiedades de <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a>, donde el tamaño máximo es definido por <code><a href="/en-US/docs/Web/CSS/grid-template-columns#max-content">max-content</a></code> y el mínimo por <code><a href="/en-US/docs/Web/CSS/grid-template-columns#auto">auto</a></code>, el cual es calculado por "<code>auto"</code> (ej. <code><a href="/en-US/docs/Web/CSS/minmax">minmax(auto, max-content)</a></code>), excepto que el tamaño del track se restringe al argumento si éste es mas grande que el "auto" mínimo .</p>
+La función se puede usar como un tamaño de track en las propiedades de [CSS Grid](/es/docs/Web/CSS/CSS_Grid_Layout), donde el tamaño máximo es definido por [`max-content`](/en-US/docs/Web/CSS/grid-template-columns#max-content) y el mínimo por [`auto`](/en-US/docs/Web/CSS/grid-template-columns#auto), el cual es calculado por "`auto"` (ej. [`minmax(auto, max-content)`](/en-US/docs/Web/CSS/minmax)), excepto que el tamaño del track se restringe al argumento si éste es mas grande que el "auto" mínimo .
 
-<p>También puede usarse como tamaño de caja disponible para {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} y {{cssxref("max-height")}}, donde el tamañó máximo se refiere al tamaño máximo contenido y el mínimo al tamaño mínimo contenido.</p>
+También puede usarse como tamaño de caja disponible para {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} y {{cssxref("max-height")}}, donde el tamañó máximo se refiere al tamaño máximo contenido y el mínimo al tamaño mínimo contenido.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<p>Función que acepta un  <code>&lt;length&gt;</code> o un <code>&lt;percentage&gt;</code> como un argumento.</p>
+Función que acepta un `<length>` o un `<percentage>` como un argumento.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Una Longitud Absoluta.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Un porcentaje relativo al espacio disponible en los ejes dados.<br><br>
- In grid properties it is relative to the inline size of the grid container in column tracks and to the block size of the grid container for row tracks. Otherwise it is relative to the available inline size or block size of the laid out box depending on the writing mode.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Una Longitud Absoluta.
+- {{cssxref("&lt;percentage&gt;")}}
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+  - : Un porcentaje relativo al espacio disponible en los ejes dados.
+
+    In grid properties it is relative to the inline size of the grid container in column tracks and to the block size of the grid container for row tracks. Otherwise it is relative to the available inline size or block size of the laid out box depending on the writing mode.
+
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[3]">#container {
+```css
+#container {
   display: grid;
   grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
   grid-gap: 5px;
@@ -62,58 +64,37 @@ fit-content(40%)
   padding: 10px;
 }
 
-#container &gt; div {
+#container > div {
   background-color: #8ca0ff;
   padding: 5px;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;Item as wide as the content.&lt;/div&gt;
-  &lt;div&gt;
+```html
+<div id="container">
+  <div>Item as wide as the content.</div>
+  <div>
     Item con más texto en él. Porque el contenido que es
     mas grande que el ancho máximo, está restringido a los
     300 pixeles.
-  &lt;/div&gt;
-  &lt;div&gt;Flexible item&lt;/div&gt;
-&lt;/div&gt;</pre>
+  </div>
+  <div>Flexible item</div>
+</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Ejemplo", "100%", 200)}}</p>
+{{EmbedLiveSample("Ejemplo", "100%", 200)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Especificación</th>
-   <th>Estado</th>
-   <th>Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Sizing", "#valdef-width-fit-content-length-percentage", "fit-content()")}}</td>
-   <td>{{Spec2("CSS3 Sizing")}}</td>
-   <td>Define la función como el tamaño de caja disponible para {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} y {{cssxref("max-height")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS Grid", "#valdef-grid-template-columns-fit-content", "fit-content()")}}</td>
-   <td>{{Spec2("CSS Grid")}}</td>
-   <td>Define la función cuando es usada como un tamaño de track.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                           | Estado                           | Comentario                                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("CSS3 Sizing", "#valdef-width-fit-content-length-percentage", "fit-content()")}} | {{Spec2("CSS3 Sizing")}} | Define la función como el tamaño de caja disponible para {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} y {{cssxref("max-height")}}. |
+| {{SpecName("CSS Grid", "#valdef-grid-template-columns-fit-content", "fit-content()")}}     | {{Spec2("CSS Grid")}}     | Define la función cuando es usada como un tamaño de track.                                                                                                                                                                                                    |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p> </p>
-
-
-
-<p>{{Compat("css.properties.grid-template-columns.fit-content")}}</p>
-
-<p> </p>
+{{Compat("css.properties.grid-template-columns.fit-content")}}

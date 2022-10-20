@@ -7,21 +7,22 @@ tags:
   - Propiedades CSS
 translation_of: Web/CSS/display
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propiedad CSS <strong><code>display</code></strong> especifica si un elemento es tratado como <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout" rel="nofollow">block or inline element</a> y el diseño usado por sus hijos, como <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout">flow layout</a>(Diseño de Flujo), <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout" rel="nofollow">grid</a>(Cuadricula) o <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" rel="nofollow">flex</a>(Flexible). </p>
+La propiedad CSS **`display`** especifica si un elemento es tratado como [block or inline element](/es/docs/Web/CSS/CSS_Flow_Layout) y el diseño usado por sus hijos, como [flow layout](/es/docs/Web/CSS/CSS_Flow_Layout)(Diseño de Flujo), [grid](/es/docs/Web/CSS/CSS_Grid_Layout)(Cuadricula) o [flex](/es/docs/Web/CSS/CSS_Flexible_Box_Layout)(Flexible).
 
-<p>Formalmente la propiedad <code>display</code> establece los tipos de visualización interna y externa de un elemento. La tipo externa establece la participacion de un elemento en <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout">flow layout</a>; la tipo interna establece el layout(Diseño) de los hijos. Algunos valores de <code>display</code> estan totalmente definidos con sus especificaciones propias; por ejemplo el detalle de que pasa cuando <code>display: flex</code> es declarado y definido en la especificacion de Modelo Flexible de Caja(Flexible Box Model specification) de CSS. <strong>Vea</strong> la siguientes tablas para mas especificaciones individuales.</p>
+Formalmente la propiedad `display` establece los tipos de visualización interna y externa de un elemento. La tipo externa establece la participacion de un elemento en [flow layout](/es/docs/Web/CSS/CSS_Flow_Layout); la tipo interna establece el layout(Diseño) de los hijos. Algunos valores de `display` estan totalmente definidos con sus especificaciones propias; por ejemplo el detalle de que pasa cuando `display: flex` es declarado y definido en la especificacion de Modelo Flexible de Caja(Flexible Box Model specification) de CSS. **Vea** la siguientes tablas para mas especificaciones individuales.
 
-<p>Además de los Diferentes Tipos de caja de Visualizacion, el valor de <code>none</code> permite Desactivar la Visualizacion DE UN Elemento; cuando no se utiliza <code>none</code>, todos los elementos descendentes también quedan desactivados. El documento se procesa como si el elemento no existiera en el árbol de documentos.</p>
+Además de los Diferentes Tipos de caja de Visualizacion, el valor de `none` permite Desactivar la Visualizacion DE UN Elemento; cuando no se utiliza `none`, todos los elementos descendentes también quedan desactivados. El documento se procesa como si el elemento no existiera en el árbol de documentos.
 
-<pre class="brush:css no-line-numbers notranslate">/ * Valores &lt;display-outside&gt; * /
+```css
+/ * Valores <display-outside> * /
 
 display: block;
 display: inline;
 display: run-in;
 
-/ * Valores &lt;display-inside&gt; * /
+/ * Valores <display-inside> * /
 display: flow;
 display: flow-root;
 display: table;
@@ -30,12 +31,12 @@ display: grid;
 display: ruby;
 display: subgrid;
 
-/ * Valores &lt;display-outside&gt; más valores &lt;display-inside&gt; * /
+/ * Valores <display-outside> más valores <display-inside> * /
 display: block flow;
 display: inline table;
 display: flex run-in;
 
-/ * Valores &lt;display-listitem&gt; * /
+/ * Valores <display-listitem> * /
 display: list-item;
 display: list-item block;
 display: list-item inline;
@@ -45,7 +46,7 @@ display: list-item block flow;
 display: list-item block flow-root;
 display: flow list-item block;
 
-/ * Valores &lt;display-internal&gt; * /
+/ * Valores <display-internal> * /
 display: table-row-group;
 display: table-header-group;
 display: table-footer-group;
@@ -59,11 +60,11 @@ display: ruby-text;
 display: ruby-base-container;
 display: ruby-text-container;
 
-/ * Valores &lt;display-box&gt; * /
+/ * Valores <display-box> * /
 display: contents;
 display: none;
 
-/ * Valores &lt;display-legacy&gt; * /
+/ * Valores <display-legacy> * /
 display: inline-block;
 display: inline-table;
 display: inline-flex;
@@ -73,342 +74,166 @@ display: inline-grid;
 display: heredar;
 display: initial;
 display: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<p>La propiedad <code>display</code> se especifica mediante valores de palabras clave. Los valores de palabras clave se agrupan en seis categorías:</p>
+La propiedad `display` se especifica mediante valores de palabras clave. Los valores de palabras clave se agrupan en seis categorías:
 
-<ul>
- <li><a href="#display-outside">&lt;display-outside&gt;</a></li>
- <li><a href="#display-inside">&lt;display-inside&gt;</a></li>
- <li><a href="#display-listitem">&lt;display-listitem&gt;</a></li>
- <li><a href="#display-internal">&lt;display-internal&gt;</a></li>
- <li><a href="#display-box">&lt;display-box&gt;</a></li>
- <li><a href="#display-legacy">&lt;display-legacy&gt;</a></li>
-</ul>
+- [\<display-outside>](#display-outside)
+- [\<display-inside>](#display-inside)
+- [\<display-listitem>](#display-listitem)
+- [\<display-internal>](#display-internal)
+- [\<display-box>](#display-box)
+- [\<display-legacy>](#display-legacy)
 
-<p>En la actualidad, es mejor especificar <code>display</code> utilizando una sola palabra clave; aunque las últimas especificaciones permiten combinar algunas palabras clave, esto aún no está bien soportado por los navegadores.</p>
+En la actualidad, es mejor especificar `display` utilizando una sola palabra clave; aunque las últimas especificaciones permiten combinar algunas palabras clave, esto aún no está bien soportado por los navegadores.
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><a id="display-outside" name="display-outside">&lt;display-outside&gt;</a></dt>
- <dd>Estas palabras clave especifican el tipo de pantalla externa del elemento, que es esencialmente su función en el diseño de flujo: A continuación se definen:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <td class="header">Valor</td>
-    <td class="header">Descripción</td>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>block</code></td>
-    <td>El elemento genera un cuadro de elemento de bloque.</td>
-   </tr>
-   <tr>
-    <td><code>inline</code></td>
-    <td>El elemento genera uno o más cuadros de elemento en línea.</td>
-   </tr>
-   <tr>
-    <td><code>run-in</code> {{experimental_inline}}</td>
-    <td>El elemento genera un cuadro de ejecución. Los elementos de ejecución actúan como líneas o bloques, dependiendo de los elementos circundantes. Es decir: Si el cuadro de ejecución contiene un cuadro de bloque, igual que el bloque. Si un cuadro de bloque sigue el cuadro de ejecución, el cuadro de ejecución se convierte en el primer cuadro en línea del cuadro de bloque. Si sigue un cuadro en línea, el cuadro de ejecución se convierte en un cuadro de bloque.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><a id="display-inside" name="display-inside">&lt;display-inside&gt;</a></dt>
- <dd>Estas palabras clave especifican el tipo de pantalla interna del elemento, que define el tipo de contexto de formato que establece su contenido (suponiendo que es un elemento no reemplazado). Se definen como sigue:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <td class="header">Valor</td>
-    <td class="header">Descripción</td>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>flow</code> {{experimental_inline}}</td>
-    <td>El elemento expone su contenido utilizando el diseño de flujo (diseño en bloque y en línea).
-     <p>Si su tipo de pantalla externa es inline o run-in, y está participando en un contexto de formato de bloque o en línea, entonces genera un cuadro en línea. De lo contrario genera una caja de contenedor de bloques.</p>
+- \<display-outside>
 
-     <p>Dependiendo del valor de otras propiedades (como {{cssxref("position")}}, {{cssxref("float")}} o {{cssxref("overflow")}} en un contexto de formato en bloque o en línea, establece un nuevo <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">contexto de formato de bloque</a> para su contenido o integra su contenido en su contexto de formato padre.</p>
-    </td>
-   </tr>
-   <tr>
-    <td><code>flow-root</code> {{experimental_inline}}</td>
-    <td>El elemento genera un cuadro de elemento de bloque que establece un nuevo <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">contexto de formato de bloque</a> .</td>
-   </tr>
-   <tr>
-    <td><code>table</code></td>
-    <td>Estos elementos se comportan como elementos HTML {{HTMLElement ("table")}}. Define un cuadro de nivel de bloque.</td>
-   </tr>
-   <tr>
-    <td><code>flex</code></td>
-    <td>El elemento se comporta como un elemento de bloque y establece su contenido de acuerdo con el <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">modelo de flexbox</a> .</td>
-   </tr>
-   <tr>
-    <td><code>grid</code></td>
-    <td>El elemento se comporta como un elemento de bloque y establece su contenido de acuerdo con el modelo de cuadrícula.</td>
-   </tr>
-   <tr>
-    <td><code>subgrid</code> {{experimental_inline}}</td>
-    <td>Si el elemento padre tiene <code>display:grid</code>, el elemento en sí y su contenido se establecen de acuerdo con el modelo de cuadrícula.</td>
-   </tr>
-   <tr>
-    <td><code>ruby</code> {{experimental_inline}}</td>
-    <td>El elemento se comporta como un elemento en línea y establece su contenido de acuerdo con el modelo de formato ruby. Se comporta como los elementos HTML {{HTMLElement ("ruby")}} correspondientes.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><a id="display-listitem" name="display-listitem">&lt;display-listitem&gt;</a></dt>
- <dd>
- <p>El elemento genera un cuadro de bloque para el contenido y un cuadro en línea de elemento de lista independiente.</p>
+  - : Estas palabras clave especifican el tipo de pantalla externa del elemento, que es esencialmente su función en el diseño de flujo: A continuación se definen:
 
- <p>Si no se especifica ningún valor <code>&lt;display-inside&gt;</code>, el tipo de pantalla interna de la caja principal es el predeterminado <code>flow</code>. Si no se especifica ningún valor <code>&lt;display-outside&gt;</code>, el tipo de pantalla externa de la caja principal tiene el valor predeterminado <code>block</code>.</p>
- </dd>
- <dt><a id="display-internal" name="display-internal">&lt;display-internal&gt;</a></dt>
- <dd>
- <p>Algunos modelos de disposición, como <span class="">table y ruby</span>, tienen una estructura interna completa, con varios papeles diferentes que sus hijos y descendientes pueden llenar. Esta sección define los valores de visualización "internos", que sólo tienen significado dentro de ese modo de disposición particular.</p>
+    | Valor                                     | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+    | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `block`                                   | El elemento genera un cuadro de elemento de bloque.                                                                                                                                                                                                                                                                                                                                                                                                                        |
+    | `inline`                                  | El elemento genera uno o más cuadros de elemento en línea.                                                                                                                                                                                                                                                                                                                                                                                                                 |
+    | `run-in` {{experimental_inline}} | El elemento genera un cuadro de ejecución. Los elementos de ejecución actúan como líneas o bloques, dependiendo de los elementos circundantes. Es decir: Si el cuadro de ejecución contiene un cuadro de bloque, igual que el bloque. Si un cuadro de bloque sigue el cuadro de ejecución, el cuadro de ejecución se convierte en el primer cuadro en línea del cuadro de bloque. Si sigue un cuadro en línea, el cuadro de ejecución se convierte en un cuadro de bloque. |
 
- <p>A menos que se especifique lo contrario, el tipo de visualización interno y el tipo de visualización exterior de los elementos que utilizan estos valores de visualización se establecen en la palabra clave dada.</p>
+- \<display-inside>
 
- <table class="standard-table">
-  <thead>
-   <tr>
-    <td class="header">Valor</td>
-    <td class="header">Descripción</td>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>table-row-group</code></td>
-    <td>Estos elementos se comportan como {{HTMLElement ("tbody")}} Elementos HTML</td>
-   </tr>
-   <tr>
-    <td><code>table-header-group</code></td>
-    <td>Estos elementos se comportan como elementos HTML de {{HTMLElement ("thead")}}.</td>
-   </tr>
-   <tr>
-    <td><code>table-footer-group</code></td>
-    <td>Estos elementos se comportan como elementos HTML {{HTMLElement ("tfoot")}}.</td>
-   </tr>
-   <tr>
-    <td><code>table-row</code></td>
-    <td>Estos elementos se comportan como elementos HTML {{HTMLElement ("tr")}}.</td>
-   </tr>
-   <tr>
-    <td><code>table-cell</code></td>
-    <td>Estos elementos se comportan como elementos HTML de {{HTMLElement ("td")}}.</td>
-   </tr>
-   <tr>
-    <td><code>table-column-group</code></td>
-    <td>Estos elementos se comportan como elementos HTML {{HTMLElement ("colgroup")}}.</td>
-   </tr>
-   <tr>
-    <td><code>table-column</code></td>
-    <td>Estos elementos se comportan como elementos HTML {{HTMLElement ("col")}}.</td>
-   </tr>
-   <tr>
-    <td><code>table-caption</code></td>
-    <td>Estos elementos se comportan como elementos HTML de {{HTMLElement ("caption")}}.</td>
-   </tr>
-   <tr>
-    <td><code>ruby-base</code> {{experimental_inline}}</td>
-    <td>Estos elementos se comportan como elementos {{HTMLElement ("rb")}}.</td>
-   </tr>
-   <tr>
-    <td><code>ruby-text</code> {{experimental_inline}}</td>
-    <td>Estos elementos se comportan como elementos {{HTMLElement ("rt")}}.</td>
-   </tr>
-   <tr>
-    <td><code>ruby-base-container</code> {{experimental_inline}}</td>
-    <td>Estos elementos se comportan como elementos {{HTMLElement ("rbc")}} generados como cajas anónimas.</td>
-   </tr>
-   <tr>
-    <td><code>ruby-text-container</code> {{experimental_inline}}</td>
-    <td>Estos elementos se comportan como elementos {{HTMLElement ("rtc")}}.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><a id="display-box" name="display-box">&lt;display-box&gt;</a></dt>
- <dd>Estos valores se definen si un elemento genera cuadros de visualización en absoluto.
- <table class="standard-table">
-  <thead>
-   <tr>
-    <td class="header">Valor</td>
-    <td class="header">Descripción</td>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>contents</code> {{experimental_inline}}</td>
-    <td>Estos elementos no producen una caja específica por sí mismos. Son reemplazados por su pseudo-caja y sus cajas infantiles.</td>
-   </tr>
-   <tr>
-    <td><code>none</code></td>
-    <td>
-     <p>Desaparece la visualización de un elemento para que no tenga ningún efecto en el diseño (el documento se representa como si el elemento no existiera). Todos los elementos descendentes también tienen su pantalla apagada.</p>
+  - : Estas palabras clave especifican el tipo de pantalla interna del elemento, que define el tipo de contexto de formato que establece su contenido (suponiendo que es un elemento no reemplazado). Se definen como sigue:
 
-     <p>Para que un elemento ocupe el espacio que normalmente tendría, pero sin producir nada, utilice la propiedad {{cssxref("visibility")}}.</p>
-    </td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><a id="display-legacy" name="display-legacy">&lt;display-legacy&gt;</a></dt>
- <dd>CSS 2 usó una sintaxis de palabra clave única para la propiedad <code>display</code>, requiriendo palabras clave separadas para variantes de nivel de bloque e inline del mismo modo de disposición. Se definen como sigue:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <td class="header">Valor</td>
-    <td class="header">Descripción</td>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>inline-block</code></td>
-    <td>
-     <p>El elemento genera una caja de elemento de bloque que fluye con el contenido circundante como si fuera una sola caja en línea (comportándose como un elemento reemplazado)</p>
+    | Valor                                        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+    | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | `flow` {{experimental_inline}}      | El elemento expone su contenido utilizando el diseño de flujo (diseño en bloque y en línea).Si su tipo de pantalla externa es inline o run-in, y está participando en un contexto de formato de bloque o en línea, entonces genera un cuadro en línea. De lo contrario genera una caja de contenedor de bloques.Dependiendo del valor de otras propiedades (como {{cssxref("position")}}, {{cssxref("float")}} o {{cssxref("overflow")}} en un contexto de formato en bloque o en línea, establece un nuevo [contexto de formato de bloque](/es/docs/Web/Guide/CSS/Block_formatting_context) para su contenido o integra su contenido en su contexto de formato padre. |
+    | `flow-root` {{experimental_inline}} | El elemento genera un cuadro de elemento de bloque que establece un nuevo [contexto de formato de bloque](/es/docs/Web/Guide/CSS/Block_formatting_context) .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+    | `table`                                      | Estos elementos se comportan como elementos HTML {{HTMLElement ("table")}}. Define un cuadro de nivel de bloque.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+    | `flex`                                       | El elemento se comporta como un elemento de bloque y establece su contenido de acuerdo con el [modelo de flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout) .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+    | `grid`                                       | El elemento se comporta como un elemento de bloque y establece su contenido de acuerdo con el modelo de cuadrícula.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+    | `subgrid` {{experimental_inline}}   | Si el elemento padre tiene `display:grid`, el elemento en sí y su contenido se establecen de acuerdo con el modelo de cuadrícula.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+    | `ruby` {{experimental_inline}}      | El elemento se comporta como un elemento en línea y establece su contenido de acuerdo con el modelo de formato ruby. Se comporta como los elementos HTML {{HTMLElement ("ruby")}} correspondientes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
-     <p>Es equivalente a <code>inline flow-root</code>.</p>
-    </td>
-   </tr>
-   <tr>
-    <td><code>inline-table</code></td>
-    <td>
-     <p>El  valor <code>inline-table</code> no tiene una asignación directa en HTML. Se comporta como un elemento HTML {{HTMLElement ("tabla")}}, pero como un cuadro en línea, en el lugar de un cuadro a nivel de bloque. Dentro del cuadro de la tabla hay un contexto de nivel de bloque.</p>
+- \<display-listitem>
 
-     <p>Es equivalente a  <code>inline table</code>.</p>
-    </td>
-   </tr>
-   <tr>
-    <td><code>inline-flex</code></td>
-    <td>
-     <p>El elemento se comporta como un elemento en línea y se establece su contenido de acuerdo con el modelo flexbox.</p>
+  - : El elemento genera un cuadro de bloque para el contenido y un cuadro en línea de elemento de lista independiente.
 
-     <p>Es equivalente a  <code>inline flex</code>.</p>
-    </td>
-   </tr>
-   <tr>
-    <td><code>inline-grid</code></td>
-    <td>El elemento se comporta como un elemento en línea y se establece su contenido de acuerdo con el modelo de cuadrícula.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+    Si no se especifica ningún valor `<display-inside>`, el tipo de pantalla interna de la caja principal es el predeterminado `flow`. Si no se especifica ningún valor `<display-outside>`, el tipo de pantalla externa de la caja principal tiene el valor predeterminado `block`.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+- \<display-internal>
+
+  - : Algunos modelos de disposición, como table y ruby, tienen una estructura interna completa, con varios papeles diferentes que sus hijos y descendientes pueden llenar. Esta sección define los valores de visualización "internos", que sólo tienen significado dentro de ese modo de disposición particular.
+
+    A menos que se especifique lo contrario, el tipo de visualización interno y el tipo de visualización exterior de los elementos que utilizan estos valores de visualización se establecen en la palabra clave dada.
+
+    | Valor                                                  | Descripción                                                                                                 |
+    | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+    | `table-row-group`                                      | Estos elementos se comportan como {{HTMLElement ("tbody")}} Elementos HTML                           |
+    | `table-header-group`                                   | Estos elementos se comportan como elementos HTML de {{HTMLElement ("thead")}}.                       |
+    | `table-footer-group`                                   | Estos elementos se comportan como elementos HTML {{HTMLElement ("tfoot")}}.                          |
+    | `table-row`                                            | Estos elementos se comportan como elementos HTML {{HTMLElement ("tr")}}.                              |
+    | `table-cell`                                           | Estos elementos se comportan como elementos HTML de {{HTMLElement ("td")}}.                           |
+    | `table-column-group`                                   | Estos elementos se comportan como elementos HTML {{HTMLElement ("colgroup")}}.                      |
+    | `table-column`                                         | Estos elementos se comportan como elementos HTML {{HTMLElement ("col")}}.                          |
+    | `table-caption`                                        | Estos elementos se comportan como elementos HTML de {{HTMLElement ("caption")}}.                   |
+    | `ruby-base` {{experimental_inline}}           | Estos elementos se comportan como elementos {{HTMLElement ("rb")}}.                                   |
+    | `ruby-text` {{experimental_inline}}           | Estos elementos se comportan como elementos {{HTMLElement ("rt")}}.                                   |
+    | `ruby-base-container` {{experimental_inline}} | Estos elementos se comportan como elementos {{HTMLElement ("rbc")}} generados como cajas anónimas. |
+    | `ruby-text-container` {{experimental_inline}} | Estos elementos se comportan como elementos {{HTMLElement ("rtc")}}.                               |
+
+- \<display-box>
+
+  - : Estos valores se definen si un elemento genera cuadros de visualización en absoluto.
+
+    | Valor                                       | Descripción                                                                                                                                                                                                                                                                                                                                                              |
+    | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | `contents` {{experimental_inline}} | Estos elementos no producen una caja específica por sí mismos. Son reemplazados por su pseudo-caja y sus cajas infantiles.                                                                                                                                                                                                                                               |
+    | `none`                                      | Desaparece la visualización de un elemento para que no tenga ningún efecto en el diseño (el documento se representa como si el elemento no existiera). Todos los elementos descendentes también tienen su pantalla apagada.Para que un elemento ocupe el espacio que normalmente tendría, pero sin producir nada, utilice la propiedad {{cssxref("visibility")}}. |
+
+- \<display-legacy>
+
+  - : CSS 2 usó una sintaxis de palabra clave única para la propiedad `display`, requiriendo palabras clave separadas para variantes de nivel de bloque e inline del mismo modo de disposición. Se definen como sigue:
+
+    | Valor          | Descripción                                                                                                                                                                                                                                                                                                      |
+    | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `inline-block` | El elemento genera una caja de elemento de bloque que fluye con el contenido circundante como si fuera una sola caja en línea (comportándose como un elemento reemplazado)Es equivalente a `inline flow-root`.                                                                                                   |
+    | `inline-table` | El valor `inline-table` no tiene una asignación directa en HTML. Se comporta como un elemento HTML {{HTMLElement ("tabla")}}, pero como un cuadro en línea, en el lugar de un cuadro a nivel de bloque. Dentro del cuadro de la tabla hay un contexto de nivel de bloque.Es equivalente a `inline table`. |
+    | `inline-flex`  | El elemento se comporta como un elemento en línea y se establece su contenido de acuerdo con el modelo flexbox.Es equivalente a `inline flex`.                                                                                                                                                                   |
+    | `inline-grid`  | El elemento se comporta como un elemento en línea y se establece su contenido de acuerdo con el modelo de cuadrícula.                                                                                                                                                                                            |
+
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Sobre_Accesibilidad">Sobre Accesibilidad</h2>
+## Sobre Accesibilidad
 
-<h3 id="display_none"><code>display: none;</code></h3>
+### `display: none;`
 
-<p>Al utilizar un valor de <code>none </code>en la propiedad <code>display </code>el elemento se elimina del <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">árbol de accesibilidad</a>. El efecto de esto será que este elemento y sus hijos no serán anunciados a los lectores de pantalla utilizados por no videntes.</p>
+Al utilizar un valor de `none `en la propiedad `display `el elemento se elimina del [árbol de accesibilidad](/es/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs). El efecto de esto será que este elemento y sus hijos no serán anunciados a los lectores de pantalla utilizados por no videntes.
 
-<p>Si deseas ocultar el elemento solo de forma visible, pero que los lectores de accesibilidad lo sigan anunciando, puedes utilizar <a href="https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link">un método alternativo con una combinación de propiedades de CSS</a>.</p>
+Si deseas ocultar el elemento solo de forma visible, pero que los lectores de accesibilidad lo sigan anunciando, puedes utilizar [un método alternativo con una combinación de propiedades de CSS](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link).
 
-<h3 id="display_contents"><code>display: contents;</code></h3>
+### `display: contents;`
 
-<p>Los navegadores eliminarán el atributo predeterminado de <code>role</code> de cualquier elemento con una propiedad <code>display</code> que tenga un valor de <code>contents</code> del árbol de accesibilidad. Esto causará que los elementos y sus descendientes no sean anunciados a los lectores de pantalla.</p>
+Los navegadores eliminarán el atributo predeterminado de `role` de cualquier elemento con una propiedad `display` que tenga un valor de `contents` del árbol de accesibilidad. Esto causará que los elementos y sus descendientes no sean anunciados a los lectores de pantalla.
 
-<p>Esto es un bug ya reportado, para encontrar más información por favor referirse a los siguientes artículos</p>
+Esto es un bug ya reportado, para encontrar más información por favor referirse a los siguientes artículos
 
-<ul>
- <li><a class="external external-icon" href="http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html">Display: Contents Is Not a CSS Reset | Adrian Roselli</a></li>
- <li><a class="external external-icon" href="https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents">More accessible markup with display: contents — hiddedevries.nl</a></li>
-</ul>
+- [Display: Contents Is Not a CSS Reset | Adrian Roselli](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [More accessible markup with display: contents — hiddedevries.nl](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
 
-<h3 id="Tablas">Tablas</h3>
+### Tablas
 
-<p>Al trabajar con una tabla, si la propiedad <code>display</code> cambia al valor de <code>block</code>, <code>grid</code> o <code>flex</code> se altera la representación de ese elemento en el árbol de accessibilidad. Esto causará que el elemento ya no será anunciado como una tabla.</p>
+Al trabajar con una tabla, si la propiedad `display` cambia al valor de `block`, `grid` o `flex` se altera la representación de ese elemento en el árbol de accessibilidad. Esto causará que el elemento ya no será anunciado como una tabla.
 
-<p>Para más información por favor referirse a los siguientes artículos:</p>
+Para más información por favor referirse a los siguientes artículos:
 
-<ul>
- <li><a class="external external-icon" href="https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/">Short note on what CSS display properties do to table semantics — The Paciello Group</a></li>
- <li><a class="external external-icon" href="https://gomakethings.com/hidden-content-for-better-a11y/">Hidden content for better a11y | Go Make Things</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
- <li><a class="external external-icon" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [Short note on what CSS display properties do to table semantics — The Paciello Group](https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/)
+- [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
+- [MDN Understanding WCAG, Guideline 1.3 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Hide_element" name="Hide_element">Ocultar Elementos</h3>
+### Ocultar Elementos
 
-<h4 id="Contenido_HTML">Contenido HTML</h4>
+#### Contenido HTML
 
-<pre class="brush: html notranslate">&lt;p&gt; Texto visible &lt;/ p&gt;</pre>
+```html
+<p> Texto visible </ p>
+```
 
-<h4 id="Contenido_CSS">Contenido CSS</h4>
+#### Contenido CSS
 
-<pre class="brush: css notranslate">  display: none;</pre>
+```css
+  display: none;
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample ("Hide_element", 300, 60)}}</p>
+{{EmbedLiveSample ("Hide_element", 300, 60)}}
 
-<p><a href="/samples/cssref/display.html">Ver El Ejemplo Vivo</a></p>
+[Ver El Ejemplo Vivo](/samples/cssref/display.html)
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName ('CSS3 Display', '# the-display-properties', 'display')}}</td>
-   <td>{{Spec2 ('Pantalla CSS3')}}</td>
-   <td>Agregado <code>run-in</code>, <code>flow</code>, <code>flow-root</code>, <code>contents</code>, y los valores de varias palabras clave.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName ('CSS3 Ruby', '# ruby-display', 'display')}}</td>
-   <td>{{Spec2 ('CSS3 Ruby')}}</td>
-   <td>Agregado <code>ruby</code>, <code>ruby-base</code>, <code>ruby-text</code>, <code>ruby-base-container</code>, y <code>ruby-text-container</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName ('CSS3 Grid', '# grid-containers', 'display')}}</td>
-   <td>{{Spec2 ('Cuadrícula CSS3')}}</td>
-   <td>Se agregaron los valores del modelo de cuadrícula.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName ('CSS3 Flexbox', '# flex-containers', 'display')}}</td>
-   <td>{{Spec2 ('CSS3 Flexbox')}}</td>
-   <td>Se agregaron los valores del modelo de caja flexible.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName ('CSS2.1', 'visuren.html # display-prop', 'display')}}</td>
-   <td>{{Spec2 ('CSS2.1')}}</td>
-   <td>Se agregaron los valores del modelo de tabla e <code>inline-block<em>.</em></code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName ('CSS1', '#display', 'display')}}</td>
-   <td>{{Spec2 ('CSS1')}}</td>
-   <td>Definición inicial. Valores básicos: <code>none</code>, <code>block</code>, <code>inline</code>, y <code>list-item</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                               | Estado                                   | Comentario                                                                                  |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------- |
+| {{SpecName ('CSS3 Display', '# the-display-properties', 'display')}} | {{Spec2 ('Pantalla CSS3')}}     | Agregado `run-in`, `flow`, `flow-root`, `contents`, y los valores de varias palabras clave. |
+| {{SpecName ('CSS3 Ruby', '# ruby-display', 'display')}}                     | {{Spec2 ('CSS3 Ruby')}}         | Agregado `ruby`, `ruby-base`, `ruby-text`, `ruby-base-container`, y `ruby-text-container`.  |
+| {{SpecName ('CSS3 Grid', '# grid-containers', 'display')}}                 | {{Spec2 ('Cuadrícula CSS3')}} | Se agregaron los valores del modelo de cuadrícula.                                          |
+| {{SpecName ('CSS3 Flexbox', '# flex-containers', 'display')}}             | {{Spec2 ('CSS3 Flexbox')}}     | Se agregaron los valores del modelo de caja flexible.                                       |
+| {{SpecName ('CSS2.1', 'visuren.html # display-prop', 'display')}}     | {{Spec2 ('CSS2.1')}}             | Se agregaron los valores del modelo de tabla e `inline-block.`                              |
+| {{SpecName ('CSS1', '#display', 'display')}}                                 | {{Spec2 ('CSS1')}}                 | Definición inicial. Valores básicos: `none`, `block`, `inline`, y `list-item`.              |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
 {{Compat("css.properties.display")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{cssxref("visibility")}}, {{cssxref("float")}}, {{cssxref("posición")}}</li>
- <li>{{cssxref("flex")}}</li>
-</ul>
+- {{cssxref("visibility")}}, {{cssxref("float")}}, {{cssxref("posición")}}
+- {{cssxref("flex")}}

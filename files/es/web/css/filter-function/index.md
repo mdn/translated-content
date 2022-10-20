@@ -8,58 +8,41 @@ tags:
   - Tipos de dato CSS
 translation_of: Web/CSS/filter-function
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>El <a href="/es/docs/Web/CSS/CSS_Types">tipo de datos</a> <a href="/es/docs/Web/CSS">CSS</a> <code><strong>&lt;filter-function&gt;</strong></code> representa un efecto gráfico que puede cambiar la apariencia de una imagen de entrada. Se usa en las propiedades {{cssxref("filter")}} y {{cssxref("backdrop-filter")}}.</p>
+El [tipo de datos](/es/docs/Web/CSS/CSS_Types) [CSS](/es/docs/Web/CSS) **`<filter-function>`** representa un efecto gráfico que puede cambiar la apariencia de una imagen de entrada. Se usa en las propiedades {{cssxref("filter")}} y {{cssxref("backdrop-filter")}}.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<p>El tipo de datos <code>&lt;filter-function&gt;</code> se especifica utilizando una de las funciones de filtro enumeradas a continuación. Cada función requiere un argumento que, si no es válido, da como resultado que no se aplique ningún filtro.</p>
+El tipo de datos `<filter-function>` se especifica utilizando una de las funciones de filtro enumeradas a continuación. Cada función requiere un argumento que, si no es válido, da como resultado que no se aplique ningún filtro.
 
-<dl>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur">blur()</a></code></dt>
- <dd>Difumina la imagen.</dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/brightness">brightness()</a></code></dt>
- <dd>Hace que la imagen sea más brillante o más oscura.</dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/contrast">contrast()</a></code></dt>
- <dd>Aumenta o disminuye el contraste de la imagen.</dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow">drop-shadow()</a></code></dt>
- <dd>Aplica una sombra paralela detrás de la imagen.</dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/grayscale">grayscale()</a></code></dt>
- <dd>Convierte la imagen a escala de grises.</dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/hue-rotate">hue-rotate()</a></code></dt>
- <dd>Cambia el tono general de la imagen.</dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/invert">invert()</a></code></dt>
- <dd>Invierte los colores de la imagen.</dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/opacity">opacity()</a></code></dt>
- <dd>Hace que la imagen sea transparente.</dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/saturate">saturate()</a></code></dt>
- <dd>Super-saturado o desaturado la imagen de entrada.</dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/sepia">sepia()</a></code></dt>
- <dd>Convierte la imagen a sepia.</dd>
-</dl>
+- [`blur()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur)
+  - : Difumina la imagen.
+- [`brightness()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/brightness)
+  - : Hace que la imagen sea más brillante o más oscura.
+- [`contrast()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/contrast)
+  - : Aumenta o disminuye el contraste de la imagen.
+- [`drop-shadow()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow)
+  - : Aplica una sombra paralela detrás de la imagen.
+- [`grayscale()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/grayscale)
+  - : Convierte la imagen a escala de grises.
+- [`hue-rotate()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/hue-rotate)
+  - : Cambia el tono general de la imagen.
+- [`invert()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/invert)
+  - : Invierte los colores de la imagen.
+- [`opacity()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/opacity)
+  - : Hace que la imagen sea transparente.
+- [`saturate()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/saturate)
+  - : Super-saturado o desaturado la imagen de entrada.
+- [`sepia()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/sepia)
+  - : Convierte la imagen a sepia.
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Filters 1.0', '#typedef-filter-function', '&lt;filter-function&gt;') }}</td>
-   <td>{{ Spec2('Filters 1.0') }}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                   | Estado                               | Comentarios         |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{ SpecName('Filters 1.0', '#typedef-filter-function', '&lt;filter-function&gt;') }} | {{ Spec2('Filters 1.0') }} | Definición inicial. |
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>Propiedades que usan este tipo de datos: {{cssxref("filter")}} y {{cssxref("backdrop-filter")}}</li>
-</ul>
+- Propiedades que usan este tipo de datos: {{cssxref("filter")}} y {{cssxref("backdrop-filter")}}

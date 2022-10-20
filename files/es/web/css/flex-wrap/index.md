@@ -3,73 +3,59 @@ title: flex-wrap
 slug: Web/CSS/flex-wrap
 translation_of: Web/CSS/flex-wrap
 ---
-<p>{{ CSSRef("CSS Flexible Boxes") }}</p>
+{{ CSSRef("CSS Flexible Boxes") }}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad <strong><code>flex-wrap</code></strong> de <a href="/en-US/docs/CSS" title="CSS">CSS</a>  especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas. Si la cobertura (wrap) está permitida, esta propiedad también te permite controlar la dirección en la cual serán apilados los elementos.</p>
+La propiedad **`flex-wrap`** de [CSS](/es/docs/CSS "CSS") especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas. Si la cobertura (wrap) está permitida, esta propiedad también te permite controlar la dirección en la cual serán apilados los elementos.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p>Ver <a href="/es/docs/Web/Guide/CSS/Cajas_flexibles" title="/en/CSS/Using_CSS_flexible_boxes">Usando cajas flexibles CSS</a> para conocer más propiedades e información.</p>
+Ver [Usando cajas flexibles CSS](/es/docs/Web/Guide/CSS/Cajas_flexibles "/en/CSS/Using_CSS_flexible_boxes") para conocer más propiedades e información.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="/en-US/docs/CSS/Value_definition_syntax">Sintaxis formal</a>: {{csssyntax("flex-wrap")}}
-</pre>
+```
+Sintaxis formal: {{csssyntax("flex-wrap")}}
+```
 
-<pre>flex-wrap: nowrap
+```
+flex-wrap: nowrap
 flex-wrap: wrap
 flex-wrap: wrap-reverse
 
 flex-wrap: inherit
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>Se aceptan los siguientes valores:</p>
+Se aceptan los siguientes valores:
 
-<dl>
- <dt><code>nowrap</code></dt>
- <dd>Los elementos flex son distribuidos en una sola línea, lo cual puede llevar a que se desborde el contenedor flex. El valor <strong>cross-start</strong> es equivalente a <strong>start</strong> o <strong>before</strong> según el valor de {{cssxref("flex-direction")}}.</dd>
- <dt><code>wrap</code></dt>
- <dd>Los elementos flex son colocados en varias líneas. El valor <strong>cross-start</strong> equivale a <strong>start</strong> o <strong>before</strong> dependiendo del valor <code>flex-direction</code> y <strong>cross-end</strong> implicaría lo opuesto a lo especificado por<strong> cross-start</strong>.</dd>
- <dt><code>wrap-reverse</code></dt>
- <dd>Actúa como <code>wrap</code> pero <strong>cross-start</strong> y <strong>cross-end</strong> están intercambiados.</dd>
-</dl>
+- `nowrap`
+  - : Los elementos flex son distribuidos en una sola línea, lo cual puede llevar a que se desborde el contenedor flex. El valor **cross-start** es equivalente a **start** o **before** según el valor de {{cssxref("flex-direction")}}.
+- `wrap`
+  - : Los elementos flex son colocados en varias líneas. El valor **cross-start** equivale a **start** o **before** dependiendo del valor `flex-direction` y **cross-end** implicaría lo opuesto a lo especificado por **cross-start**.
+- `wrap-reverse`
+  - : Actúa como `wrap` pero **cross-start** y **cross-end** están intercambiados.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="">element {
+```
+element {
   flex-wrap: nowrap;
 }
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Especificacion</th>
-   <th>Estado</th>
-   <th>Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Flexbox', '#flex-wrap', 'flex-wrap') }}</td>
-   <td>{{ Spec2('CSS3 Flexbox') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificacion                                                               | Estado                               | Comentario |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ---------- |
+| {{ SpecName('CSS3 Flexbox', '#flex-wrap', 'flex-wrap') }} | {{ Spec2('CSS3 Flexbox') }} |            |
 
-<h2 id="Compatibilidad">Compatibilidad</h2>
+## Compatibilidad
 
 {{Compat("css.properties.flex-wrap")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/es/docs/Web/Guide/CSS/Cajas_flexibles" title="/en-US/docs/CSS/Using_CSS_flexible_boxes">Usando cajas flexibles CSS</a></li>
-</ul>
+- [Usando cajas flexibles CSS](/es/docs/Web/Guide/CSS/Cajas_flexibles "/en-US/docs/CSS/Using_CSS_flexible_boxes")

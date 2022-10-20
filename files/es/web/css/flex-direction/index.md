@@ -9,150 +9,131 @@ tags:
   - flexbox
 translation_of: Web/CSS/flex-direction
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>La propiedad CSS <code><strong>flex-direction</strong></code> especifica cómo colocar los objetos flexibles en el contenedor flexible definiendo el eje principal y la dirección (normal o al revés).</p>
+La propiedad CSS **`flex-direction`** especifica cómo colocar los objetos flexibles en el contenedor flexible definiendo el eje principal y la dirección (normal o al revés).
 
-<p>{{EmbedInteractiveExample("pages/css/flex-direction.html")}}</p>
+{{EmbedInteractiveExample("pages/css/flex-direction.html")}}
 
-<p><span lang="es"><span class="">Tenga en cuenta que</span> <span class="">el</span> <span class="">valor de</span> <code>row </code><span class="">y  <code>row-reverse</code></span> <span class="">se verán afectados por</span> <span class="">la direccionalidad</span> <span class="">del contenedor</span> <span class="">flexible.</span> <span class="">Si</span> <span class="">su atributo</span> <code>dir </code><span class="">es</span> <code>ltr</code>, <code>row</code><span class=""> representa</span> <span class="">el eje horizontal</span> <span class="">orientado</span> <span class="">de  izquierda</span> <span class="">a derecha,</span> <span class="">y <code>row-reverse</code></span> <span class="">desde la derecha</span> <span class="">hacia la izquierda;</span> <span class="">si el atributo</span> <code>dir </code><span class="">es</span> <code>rtl</code>, <code>row </code><span class="">representa</span> <span class="">el</span> <span class="">eje orientado</span> <span class="">de derecha</span> <span class="">a izquierda</span><span>,</span> <span class="">y  <code>row-reverse</code></span> <span class="">de izquierda a</span> <span class="">derecha.</span></span></p>
+Tenga en cuenta que el valor de `row `y `row-reverse` se verán afectados por la direccionalidad del contenedor flexible. Si su atributo `dir `es `ltr`, `row` representa el eje horizontal orientado de izquierda a derecha, y `row-reverse` desde la derecha hacia la izquierda; si el atributo `dir `es `rtl`, `row `representa el eje orientado de derecha a izquierda, y `row-reverse` de izquierda a derecha.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush:css no-line-numbers  language-css"><code class="language-css"><span class="comment token">/* La dirección del texto se presenta en una línea */</span>
-<span class="property token">flex-direction</span><span class="punctuation token">:</span> row<span class="punctuation token">;</span>
+```css
+/* La dirección del texto se presenta en una línea */
+flex-direction: row;
 
-<span class="comment token">/* Como &lt;row&gt;, pero al revés */</span>
-<span class="property token">flex-direction</span><span class="punctuation token">:</span> row-reverse<span class="punctuation token">;</span>
+/* Como <row>, pero al revés */
+flex-direction: row-reverse;
 
-<span class="comment token">/* La dirección en la que se apilas las líneas de texto */</span>
-<span class="property token">flex-direction</span><span class="punctuation token">:</span> column<span class="punctuation token">;</span>
+/* La dirección en la que se apilas las líneas de texto */
+flex-direction: column;
 
-<span class="comment token">/* Como &lt;column&gt;, pero al revés */</span>
-<span class="property token">flex-direction</span><span class="punctuation token">:</span> column-reverse<span class="punctuation token">;</span>
+/* Como <column>, pero al revés */
+flex-direction: column-reverse;
 
-<span class="comment token">/* Valores globales */</span>
-<span class="property token">flex-direction</span><span class="punctuation token">:</span> inherit<span class="punctuation token">;</span>
-<span class="property token">flex-direction</span><span class="punctuation token">:</span> initial<span class="punctuation token">;</span>
-<span class="property token">flex-direction</span><span class="punctuation token">:</span> unset<span class="punctuation token">;</span></code></pre>
+/* Valores globales */
+flex-direction: inherit;
+flex-direction: initial;
+flex-direction: unset;
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p><span class="short_text" id="result_box" lang="es"><span class="">Se aceptan los siguientes</span> <span class="">valores:</span></span></p>
+Se aceptan los siguientes valores:
 
-<dl>
- <dt><code>row</code></dt>
- <dd>El eje principal del contenedor flexible está definido para ser el mismo que la dirección del texto. Los <strong>puntos principales de inicio y final</strong> son los mismos que la dirección del contenido.</dd>
- <dt><code>row-reverse</code></dt>
- <dd>
- <p>Se comporta igual que <code>row</code> pero los <strong>puntos principales de inicio</strong> y <strong>final</strong> son intercambiados.</p>
- </dd>
- <dt><code>column</code></dt>
- <dd>El eje principal del contenedor flexible es el mismo que el eje del bloque. Los <strong>puntos principales de inicio y final</strong> son los mismos que los <strong>puntos de antes y después</strong> del modo escritura.</dd>
- <dt><code>column-reverse</code></dt>
- <dd>Se comporta igual que <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">column</span></font> pero los <strong>puntos principales de inicio</strong> y <strong>final</strong> son intercambiados.</dd>
-</dl>
+- `row`
+  - : El eje principal del contenedor flexible está definido para ser el mismo que la dirección del texto. Los **puntos principales de inicio y final** son los mismos que la dirección del contenido.
+- `row-reverse`
+  - : Se comporta igual que `row` pero los **puntos principales de inicio** y **final** son intercambiados.
+- `column`
+  - : El eje principal del contenedor flexible es el mismo que el eje del bloque. Los **puntos principales de inicio y final** son los mismos que los **puntos de antes y después** del modo escritura.
+- `column-reverse`
+  - : Se comporta igual que column pero los **puntos principales de inicio** y **final** son intercambiados.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h4</span><span class="punctuation token">&gt;</span></span>Esto es un Column-Reverse<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h4</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>content<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>box<span class="punctuation token">"</span></span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">background-color</span><span class="punctuation token">:</span>red<span class="punctuation token">;</span></span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>A<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>box<span class="punctuation token">"</span></span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">background-color</span><span class="punctuation token">:</span>lightblue<span class="punctuation token">;</span></span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>B<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>box<span class="punctuation token">"</span></span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">background-color</span><span class="punctuation token">:</span>yellow<span class="punctuation token">;</span></span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>C<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h4</span><span class="punctuation token">&gt;</span></span>Esto es un Row-Reverse<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h4</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>content1<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>box1<span class="punctuation token">"</span></span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">background-color</span><span class="punctuation token">:</span>red<span class="punctuation token">;</span></span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>A<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>box1<span class="punctuation token">"</span></span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">background-color</span><span class="punctuation token">:</span>lightblue<span class="punctuation token">;</span></span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>B<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>box1<span class="punctuation token">"</span></span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">background-color</span><span class="punctuation token">:</span>yellow<span class="punctuation token">;</span></span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>C<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+```html
+<h4>Esto es un Column-Reverse</h4>
+<div id="content">
+    <div class="box" style="background-color:red;">A</div>
+    <div class="box" style="background-color:lightblue;">B</div>
+    <div class="box" style="background-color:yellow;">C</div>
+</div>
+<h4>Esto es un Row-Reverse</h4>
+<div id="content1">
+    <div class="box1" style="background-color:red;">A</div>
+    <div class="box1" style="background-color:lightblue;">B</div>
+    <div class="box1" style="background-color:yellow;">C</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css line-numbers  language-css"><code class="language-css"><span class="selector token"><span class="id token">#content</span> </span><span class="punctuation token">{</span>
-  <span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">200</span>px<span class="punctuation token">;</span>
-  <span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">200</span>px<span class="punctuation token">;</span>
-  <span class="property token">border</span><span class="punctuation token">:</span> <span class="number token">1</span>px solid <span class="hexcode token">#c3c3c3</span><span class="punctuation token">;</span>
-  <span class="property token">display</span><span class="punctuation token">:</span> -webkit-flex<span class="punctuation token">;</span>
-  <span class="property token">-webkit-flex-direction</span><span class="punctuation token">:</span> column-reverse<span class="punctuation token">;</span>
-  <span class="property token">display</span><span class="punctuation token">:</span> flex<span class="punctuation token">;</span>
-  <span class="property token">flex-direction</span><span class="punctuation token">:</span> column-reverse<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```css
+#content {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #c3c3c3;
+  display: -webkit-flex;
+  -webkit-flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
+}
 
-<span class="selector token"><span class="class token">.box</span> </span><span class="punctuation token">{</span>
-  <span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">50</span>px<span class="punctuation token">;</span>
-  <span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">50</span>px<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+.box {
+  width: 50px;
+  height: 50px;
+}
 
-<span class="selector token"><span class="id token">#content1</span> </span><span class="punctuation token">{</span>
-  <span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">200</span>px<span class="punctuation token">;</span>
-  <span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">200</span>px<span class="punctuation token">;</span>
-  <span class="property token">border</span><span class="punctuation token">:</span> <span class="number token">1</span>px solid <span class="hexcode token">#c3c3c3</span><span class="punctuation token">;</span>
-  <span class="property token">display</span><span class="punctuation token">:</span> -webkit-flex<span class="punctuation token">;</span>
-  <span class="property token">-webkit-flex-direction</span><span class="punctuation token">:</span> row-reverse<span class="punctuation token">;</span>
-  <span class="property token">display</span><span class="punctuation token">:</span> flex<span class="punctuation token">;</span>
-  <span class="property token">flex-direction</span><span class="punctuation token">:</span> row-reverse<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+#content1 {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #c3c3c3;
+  display: -webkit-flex;
+  -webkit-flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row-reverse;
+}
 
-<span class="selector token"><span class="class token">.box1</span> </span><span class="punctuation token">{</span>
-  <span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">50</span>px<span class="punctuation token">;</span>
-  <span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">50</span>px<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+.box1 {
+  width: 50px;
+  height: 50px;
+}
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{ EmbedLiveSample('Example', '', '300', '', 'Web/CSS/flex-direction') }}</p>
+{{ EmbedLiveSample('Example', '', '300', '', 'Web/CSS/flex-direction') }}
 
-<h2 id="Sobre_Accesibilidad">Sobre Accesibilidad</h2>
+## Sobre Accesibilidad
 
-<p>Si utilizas <code>flex-direction</code> con un valor de <code>row-reverse</code> o <code>column-reverse</code> en elementos que necesitan foco (como botones) el orden de visualización será distinto al orden el DOM, por lo que los usuarios de lectores de pantalla no verán reflejado el mismo orden de los elementos que un usuario vidente. Para más información (en inglés):</p>
+Si utilizas `flex-direction` con un valor de `row-reverse` o `column-reverse` en elementos que necesitan foco (como botones) el orden de visualización será distinto al orden el DOM, por lo que los usuarios de lectores de pantalla no verán reflejado el mismo orden de los elementos que un usuario vidente. Para más información (en inglés):
 
-<ul>
- <li><a class="external external-icon" href="https://tink.uk/flexbox-the-keyboard-navigation-disconnect/" rel="noopener">Flexbox &amp; the keyboard navigation disconnect — Tink</a></li>
- <li><a class="external external-icon" href="http://adrianroselli.com/2015/09/source-order-matters.html" rel="noopener">Source Order Matters | Adrian Roselli</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
- <li><a class="external external-icon" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html" rel="noopener">Understanding Success Criterion 1.3.2  | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [Flexbox & the keyboard navigation disconnect — Tink](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
+- [Source Order Matters | Adrian Roselli](http://adrianroselli.com/2015/09/source-order-matters.html)
+- [MDN Understanding WCAG, Guideline 1.3 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
-<h2 id="Specificaciones">Specificaciones</h2>
+## Specificaciones
 
+| Especificación                                                                           | Estado                               | Comentario         |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{ SpecName('CSS3 Flexbox', '#flex-direction', 'flex-direction') }} | {{ Spec2('CSS3 Flexbox') }} | Definición inicial |
 
+{{cssinfo}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Especificación</th>
-   <th>Estado</th>
-   <th>
-    <p>Comentario</p>
-   </th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Flexbox', '#flex-direction', 'flex-direction') }}</td>
-   <td>{{ Spec2('CSS3 Flexbox') }}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidad de Navegadores
 
-<p>{{cssinfo}}</p>
+{{Compat("css.properties.flex-direction")}}
 
-<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
+## Ver también
 
-<p>{{Compat("css.properties.flex-direction")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>Guía de CSS Flexbox: <em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Conceptos básicos de Flexbox</a></em></li>
- <li>Guía de CSS Flexbox: <em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Ordenar items flex</a></em></li>
-</ul>
+- Guía de CSS Flexbox: _[Conceptos básicos de Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- Guía de CSS Flexbox: _[Ordenar items flex](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_

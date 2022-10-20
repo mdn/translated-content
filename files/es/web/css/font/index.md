@@ -3,121 +3,105 @@ title: font
 slug: Web/CSS/font
 tags:
   - CSS
-  - 'CSS:Referencias'
+  - CSS:Referencias
   - Todas_las_Categorías
 translation_of: Web/CSS/font
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Resumen" name="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad {{ Cssxref("font") }} permite establecer de una sola vez los valores para todas las propiedades: {{ Cssxref("font-style") }}, {{ Cssxref("font-variant") }}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{ Cssxref("line-height") }} y {{ Cssxref("font-family") }} en una hoja de estilo.</p>
+La propiedad {{ Cssxref("font") }} permite establecer de una sola vez los valores para todas las propiedades: {{ Cssxref("font-style") }}, {{ Cssxref("font-variant") }}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{ Cssxref("line-height") }} y {{ Cssxref("font-family") }} en una hoja de estilo.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<p><code>font:</code> [ &lt;<a href="es/CSS/font-style">font-style</a>&gt; || &lt;<a href="es/CSS/font-variant">font-variant</a>&gt; || &lt;<a href="es/CSS/font-weight">font-weight</a>&gt; ]? &lt;<a href="es/CSS/font-size">font-size</a>&gt; [ / &lt;<a href="es/CSS/line-height">line-height</a>&gt; ]? &lt;<a href="es/CSS/font-family">font-family</a>&gt;</p>
+`font:` \[ <[font-style](es/CSS/font-style)> || <[font-variant](es/CSS/font-variant)> || <[font-weight](es/CSS/font-weight)> ]? <[font-size](es/CSS/font-size)> \[ / <[line-height](es/CSS/line-height)> ]? <[font-family](es/CSS/font-family)>
 
-<p><code>font:</code> <code>caption</code> | <code>icon</code> | <code>menu</code> | <code>message-box</code> | <code>small-caption</code> | <code>status-bar</code> | <code>-moz-window</code> | <code>-moz-document</code> | <code>-moz-workspace</code> | <code>-moz-desktop</code> | <code>-moz-info</code> | <code>-moz-dialog</code> | <code>-moz-button</code> | <code>-moz-pull-down-menu</code> | <code>-moz-list</code> | <code>-moz-field</code></p>
+`font:` `caption` | `icon` | `menu` | `message-box` | `small-caption` | `status-bar` | `-moz-window` | `-moz-document` | `-moz-workspace` | `-moz-desktop` | `-moz-info` | `-moz-dialog` | `-moz-button` | `-moz-pull-down-menu` | `-moz-list` | `-moz-field`
 
-<p><code>font:</code> {{ Cssxref("inherit") }}</p>
+`font:` {{ Cssxref("inherit") }}
 
-<h3 id="Valores" name="Valores">Valores</h3>
+### Valores
 
-<p>La propiedad {{ Cssxref("font") }} establece los valores individuales tal como se especifica y a las otras su valor inicial.</p>
+La propiedad {{ Cssxref("font") }} establece los valores individuales tal como se especifica y a las otras su valor inicial.
 
-<p>Ver las propiedades individuales: {{ Cssxref("font-style") }}, {{ Cssxref("font-variant") }}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }} y {{ Cssxref("font-family") }}.</p>
+Ver las propiedades individuales: {{ Cssxref("font-style") }}, {{ Cssxref("font-variant") }}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }} y {{ Cssxref("font-family") }}.
 
-<p>También se pueden especificar los tipos de letra del sistema usando la propiedad {{ Cssxref("font") }},<em>en lugar</em> de tener que especificar cada propiedad individualmente:</p>
+También se pueden especificar los tipos de letra del sistema usando la propiedad {{ Cssxref("font") }},_en lugar_ de tener que especificar cada propiedad individualmente:
 
-<dl>
- <dt>caption </dt>
- <dd>el tipo de letra para elementos de control (por ejemplo: botones, cajas de selección, etc.).</dd>
- <dt>icon </dt>
- <dd>el tipo de letra usado para etiquetar iconos.</dd>
- <dt>menu </dt>
- <dd>el tipo de letra usado en menús (por ejemplo: barra de menú o menús desplegables).</dd>
- <dt>message-box </dt>
- <dd>el tipo de letra usado en cajas de diálogo.</dd>
- <dt>small-caption </dt>
- <dd>el tipo de letra usado para etiquetar pequeños controles (<small>small control</small>).</dd>
- <dt>status-bar </dt>
- <dd>el tipo de letra usado en la barra de estado de la ventana.</dd>
- <dt>-moz-window </dt>
- <dd>Empty</dd>
- <dt>-moz-document </dt>
- <dd>Empty</dd>
- <dt>-moz-workspace </dt>
- <dd>Empty</dd>
- <dt>-moz-desktop </dt>
- <dd>Empty</dd>
- <dt>-moz-info </dt>
- <dd>Empty</dd>
- <dt>-moz-dialog </dt>
- <dd>Empty</dd>
- <dt>-moz-button </dt>
- <dd>Empty</dd>
- <dt>-moz-pull-down-menu </dt>
- <dd>Empty</dd>
- <dt>-moz-list </dt>
- <dd>Empty</dd>
- <dt>-moz-field </dt>
- <dd>Empty</dd>
-</dl>
+- caption
+  - : el tipo de letra para elementos de control (por ejemplo: botones, cajas de selección, etc.).
+- icon
+  - : el tipo de letra usado para etiquetar iconos.
+- menu
+  - : el tipo de letra usado en menús (por ejemplo: barra de menú o menús desplegables).
+- message-box
+  - : el tipo de letra usado en cajas de diálogo.
+- small-caption
+  - : el tipo de letra usado para etiquetar pequeños controles (small control).
+- status-bar
+  - : el tipo de letra usado en la barra de estado de la ventana.
+- \-moz-window
+  - : Empty
+- \-moz-document
+  - : Empty
+- \-moz-workspace
+  - : Empty
+- \-moz-desktop
+  - : Empty
+- \-moz-info
+  - : Empty
+- \-moz-dialog
+  - : Empty
+- \-moz-button
+  - : Empty
+- \-moz-pull-down-menu
+  - : Empty
+- \-moz-list
+  - : Empty
+- \-moz-field
+  - : Empty
 
-<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p><a href="/samples/cssref/font.html">Ver El Ejemplo Vivo</a></p>
+[Ver El Ejemplo Vivo](/samples/cssref/font.html)
 
-<pre>/* Ajusta el tamaño de letra a 12pt y el alto de línea a 14pt. La familia tipográfica es sans-serif */
+```
+/* Ajusta el tamaño de letra a 12pt y el alto de línea a 14pt. La familia tipográfica es sans-serif */
 p { font: 12pt/14pt sans-serif }
-</pre>
+```
 
-<pre>/* Ajusta el tamaño de letra al 80% del elemento padre o al tamaño por defecto (si no hay elemento padre) y la familia tipográfica a sans-serif */
+```
+/* Ajusta el tamaño de letra al 80% del elemento padre o al tamaño por defecto (si no hay elemento padre) y la familia tipográfica a sans-serif */
 p { font: 80% sans-serif }
-</pre>
+```
 
-<pre>/* Ajusta el peso tipográfico a '''bold''' (negrita), el estilo de letra a ''italic'' (cursiva), el tamaño de letra a large (grande) y la familia a serif. */
+```
+/* Ajusta el peso tipográfico a '''bold''' (negrita), el estilo de letra a ''italic'' (cursiva), el tamaño de letra a large (grande) y la familia a serif. */
 p { font: bold italic large serif }
-</pre>
+```
 
-<h2 id="Notas" name="Notas">Notas</h2>
+## Notas
 
-<p>Las partes {{ Cssxref("font-size") }} y {{ Cssxref("font-family") }} de {{ Cssxref("font") }} son obligatorias. Omitirlas causa un error de sintaxis y la declaración CSS será completamente ignorada.</p>
+Las partes {{ Cssxref("font-size") }} y {{ Cssxref("font-family") }} de {{ Cssxref("font") }} son obligatorias. Omitirlas causa un error de sintaxis y la declaración CSS será completamente ignorada.
 
-<p>Si no se establece un valor concreto, las propiedades tomarán el valor por defecto: <code>normal</code>. Las propiedades que se pueden omitir son: ({{ Cssxref("font-style") }}, {{ Cssxref("font-variant") }}, {{ Cssxref("font-weight") }} y {{ Cssxref("line-height") }}).</p>
+Si no se establece un valor concreto, las propiedades tomarán el valor por defecto: `normal`. Las propiedades que se pueden omitir son: ({{ Cssxref("font-style") }}, {{ Cssxref("font-variant") }}, {{ Cssxref("font-weight") }} y {{ Cssxref("line-height") }}).
 
-<p>La propiedad {{ Cssxref("font-size-adjust") }} también se establece a su valor inicial (<code>none</code>) cuando se usa la propiedad general {{ Cssxref("font") }}.</p>
+La propiedad {{ Cssxref("font-size-adjust") }} también se establece a su valor inicial (`none`) cuando se usa la propiedad general {{ Cssxref("font") }}.
 
-<h2 id="Especificaciones" name="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/CSS1#font">CSS 1</a></li>
- <li><a class="external" href="http://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html#propdef-font">CSS 2</a> (para {{ Cssxref("font-size-adjust") }})</li>
- <li><a class="external" href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font">CSS 2.1</a></li>
- <li><a class="external" href="http://www.w3.org/TR/css3-ui/#font">css3-ui</a> (para los nuevos valores de fuentes de sistema])</li>
-</ul>
+- [CSS 1](http://www.w3.org/TR/CSS1#font)
+- [CSS 2](http://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html#propdef-font) (para {{ Cssxref("font-size-adjust") }})
+- [CSS 2.1](http://www.w3.org/TR/CSS21/fonts.html#propdef-font)
+- [css3-ui](http://www.w3.org/TR/css3-ui/#font) (para los nuevos valores de fuentes de sistema])
 
-<h2 id="Compatibilidades" name="Compatibilidades">Compatibilidades</h2>
+## Compatibilidades
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Navegador</th>
-   <th>Versión mínima</th>
-  </tr>
-  <tr>
-   <td>Internet Explorer</td>
-   <td>3</td>
-  </tr>
-  <tr>
-   <td>Netscape</td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td>3.5</td>
-  </tr>
- </tbody>
-</table>
+| Navegador         | Versión mínima |
+| ----------------- | -------------- |
+| Internet Explorer | 3              |
+| Netscape          | 4              |
+| Opera             | 3.5            |

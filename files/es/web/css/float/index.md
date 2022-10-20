@@ -6,96 +6,45 @@ tags:
   - CSS Float
   - CSS Posicionamiento
   - CSS Propiedad
-  - 'CSS:Referencias'
+  - CSS:Referencias
   - Todas_las_Categorías
 translation_of: Web/CSS/float
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>La propiedad CSS <code>float</code> ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la página, aunque aún sigue siendo parte del flujo (a diferencia del  <a href="/en-US/docs/Web/CSS/position#Absolute_positioning">posicionamiento absoluto</a>).</p>
+La propiedad CSS `float` ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la página, aunque aún sigue siendo parte del flujo (a diferencia del [posicionamiento absoluto](/es/docs/Web/CSS/position#Absolute_positioning)).
 
-<p>{{EmbedInteractiveExample("pages/css/float.html")}}</p>
+{{EmbedInteractiveExample("pages/css/float.html")}}
 
-<div class="">
-<p>La fuente de este ejemplo interactivo está almacenada en un repositorio de GitHub. Si deseas contribuír a los ejemplos interactivos del proyecto, por favor clonar <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y enviarnos una solicitud de extracción -pull request-.</p>
-</div>
+La fuente de este ejemplo interactivo está almacenada en un repositorio de GitHub. Si deseas contribuír a los ejemplos interactivos del proyecto, por favor clonar <https://github.com/mdn/interactive-examples> y enviarnos una solicitud de extracción -pull request-.
 
-<p>Un elemento <strong>flotante</strong> es un elemento en el que el {{ Cssxref("computed value", "valor calculado") }} de <code>float</code> <em>no</em> es igual a <code>none</code>.</p>
+Un elemento **flotante** es un elemento en el que el {{ Cssxref("computed value", "valor calculado") }} de `float` _no_ es igual a `none`.
 
-<p>Como <code>float</code> implica el uso del layout de bloques, este modifica el valor calculado de los valores {{cssxref("display")}} , en algunos casos:</p>
+Como `float` implica el uso del layout de bloques, este modifica el valor calculado de los valores {{cssxref("display")}} , en algunos casos:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><strong>Valor especificado</strong></th>
-   <th scope="col"><strong>Valor Computado</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>inline</td>
-   <td>block</td>
-  </tr>
-  <tr>
-   <td>inline-block</td>
-   <td>block</td>
-  </tr>
-  <tr>
-   <td>inline-table</td>
-   <td>table</td>
-  </tr>
-  <tr>
-   <td>table-row</td>
-   <td>block</td>
-  </tr>
-  <tr>
-   <td>table-row-group</td>
-   <td>block</td>
-  </tr>
-  <tr>
-   <td>table-column</td>
-   <td>block</td>
-  </tr>
-  <tr>
-   <td>table-column-group</td>
-   <td>block</td>
-  </tr>
-  <tr>
-   <td>table-cell</td>
-   <td>block</td>
-  </tr>
-  <tr>
-   <td>table-caption</td>
-   <td>block</td>
-  </tr>
-  <tr>
-   <td>table-header-group</td>
-   <td>block</td>
-  </tr>
-  <tr>
-   <td>table-footer-group</td>
-   <td>block</td>
-  </tr>
-  <tr>
-   <td>inline-flex</td>
-   <td>flex</td>
-  </tr>
-  <tr>
-   <td>inline-grid</td>
-   <td>grid</td>
-  </tr>
-  <tr>
-   <td>otros</td>
-   <td>sin cambios</td>
-  </tr>
- </tbody>
-</table>
+| **Valor especificado** | **Valor Computado** |
+| ---------------------- | ------------------- |
+| inline                 | block               |
+| inline-block           | block               |
+| inline-table           | table               |
+| table-row              | block               |
+| table-row-group        | block               |
+| table-column           | block               |
+| table-column-group     | block               |
+| table-cell             | block               |
+| table-caption          | block               |
+| table-header-group     | block               |
+| table-footer-group     | block               |
+| inline-flex            | flex                |
+| inline-grid            | grid                |
+| otros                  | sin cambios         |
 
-<p>Nota: Al referirse a una propiedad desde JavaScript como un miembro del objeto <a href="/es/DOM/element#element.style" title="es/DOM/element#element.style">element.style</a>, hay que tener en cuenta que los navegadores modernos soportan <code>float</code> pero en navegadores más antiguos hay que escribir la propiedad como <code>cssFloat</code>, otros navegadores como Internet Explorer 8 y anteriores utilizan <code>styleFloat</code>. Fue una excepción a la regla, que el nombre del miembro DOM sea el nombre <em>camel-case</em> (styleFloat) del nombre CSS (style-float) separado por guión (debido al hecho que "float" es una palabra reservada en JavaScript, es necesario escapar "class" como "className" y escapar "for" de la etiqueta como "htmlFor" ).</p>
+Nota: Al referirse a una propiedad desde JavaScript como un miembro del objeto [element.style](/es/DOM/element#element.style "es/DOM/element#element.style"), hay que tener en cuenta que los navegadores modernos soportan `float` pero en navegadores más antiguos hay que escribir la propiedad como `cssFloat`, otros navegadores como Internet Explorer 8 y anteriores utilizan `styleFloat`. Fue una excepción a la regla, que el nombre del miembro DOM sea el nombre _camel-case_ (styleFloat) del nombre CSS (style-float) separado por guión (debido al hecho que "float" es una palabra reservada en JavaScript, es necesario escapar "class" como "className" y escapar "for" de la etiqueta como "htmlFor" ).
 
-<h2 id="Sintáxis">Sintáxis</h2>
+## Sintáxis
 
-<pre class="notranslate">/* Valores clave || Keyword values */
+```
+/* Valores clave || Keyword values */
 float: left;
 float: right;
 float: none;
@@ -105,67 +54,69 @@ float: inline-end;
 /* Valores globales || Global values */
 float: inherit;
 float: initial;
-float: unset;</pre>
+float: unset;
+```
 
-<h3 id="Valores" name="Valores">Valores</h3>
+### Valores
 
-<p><code><strong>left</strong> </code></p>
+**`left`**
 
-<p>El elemento debe flotar a la izquierda de su bloque contenedor.</p>
+El elemento debe flotar a la izquierda de su bloque contenedor.
 
-<p><code><strong>right</strong> </code></p>
+**`right`**
 
-<p>El elemento debe flotar a la derecha de su bloque contenedor.</p>
+El elemento debe flotar a la derecha de su bloque contenedor.
 
-<p><code><strong>none</strong> </code></p>
+**`none`**
 
-<p>El elemento no deberá flotar.</p>
+El elemento no deberá flotar.
 
-<p><strong><code>inline-start</code></strong></p>
+**`inline-start`**
 
-<p>El elemento debe flotar en el costado de inicio de su bloque contenedor. Esto es el lado izquierdo con scripts <code>ltr</code> y el lado derecho con scripts <code>rtl</code>.</p>
+El elemento debe flotar en el costado de inicio de su bloque contenedor. Esto es el lado izquierdo con scripts `ltr` y el lado derecho con scripts `rtl`.
 
-<dl>
- <dt><code>inline-end</code></dt>
- <dd>El elemento debe flotar en el costado de término de su bloque contenedor . Esto es el lado derecho con scripts <code>ltr</code> y el lado izquierdo con scripts <code>rtl</code>.</dd>
-</dl>
+- `inline-end`
+  - : El elemento debe flotar en el costado de término de su bloque contenedor . Esto es el lado derecho con scripts `ltr` y el lado izquierdo con scripts `rtl`.
 
-<h2 id="Definición_Formal">Definición Formal</h2>
+## Definición Formal
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintáxis_Formal">Sintáxis Formal</h2>
+## Sintáxis Formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Como_son_ubicados_los_elements_flotantes">Como son ubicados los elements flotantes </h3>
+### Como son ubicados los elements flotantes
 
-<p><a href="/samples/cssref/float.html">Ver El Ejemplo Vivo</a></p>
+[Ver El Ejemplo Vivo](/samples/cssref/float.html)
 
-<p>Como se ha mencionado más arriba, cuando un elemento flota, es removido del flujo normal del documento (aunque sigue perteneciendo a él). Se cambia hacia la izquierda, o hacia la derecha, hasta que toca el límite de su caja contenedora, u <em>otro elemento flotante.</em></p>
+Como se ha mencionado más arriba, cuando un elemento flota, es removido del flujo normal del documento (aunque sigue perteneciendo a él). Se cambia hacia la izquierda, o hacia la derecha, hasta que toca el límite de su caja contenedora, u _otro elemento flotante._
 
-<p>En este ejemplo, hay tres cuadrados de color. Dos flotan hacia la izquierda, y uno hacia la derecha. Nota cómo el segundo cuadrado de la izquierda se coloca a la derecha del primero. Si agregamos cuadrados adicionales se continuarían apilando hacia la derecha, hasta que hayan llenado la caja contenedora, y luego rellenarían la siguiente línea.</p>
+En este ejemplo, hay tres cuadrados de color. Dos flotan hacia la izquierda, y uno hacia la derecha. Nota cómo el segundo cuadrado de la izquierda se coloca a la derecha del primero. Si agregamos cuadrados adicionales se continuarían apilando hacia la derecha, hasta que hayan llenado la caja contenedora, y luego rellenarían la siguiente línea.
 
-<p>Un elemento flotante es al menos tan alto como su elemento hijo flotante más alto. En el ejemplo se le da al elemento padre <code>width: 100% </code>y la propiedad de flotante para asegurar que es lo suficientemente alto para encajar con sus hijos flotantes, y asegurar que ocupa el ancho -width- del padre de modo de no tener que limpiar su pariente adyacente.</p>
+Un elemento flotante es al menos tan alto como su elemento hijo flotante más alto. En el ejemplo se le da al elemento padre `width: 100% `y la propiedad de flotante para asegurar que es lo suficientemente alto para encajar con sus hijos flotantes, y asegurar que ocupa el ancho -width- del padre de modo de no tener que limpiar su pariente adyacente.
 
-<p><strong>HTML</strong></p>
+**HTML**
 
-<pre class="notranslate">&lt;section&gt;
-  &lt;div class="left"&gt;1&lt;/div&gt;
-  &lt;div class="left"&gt;2&lt;/div&gt;
-  &lt;div class="right"&gt;3&lt;/div&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+```
+<section>
+  <div class="left">1</div>
+  <div class="left">2</div>
+  <div class="right">3</div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
      Morbi tristique sapien ac erat tincidunt, sit amet dignissim
      lectus vulputate. Donec id iaculis velit. Aliquam vel
      malesuada erat. Praesent non magna ac massa aliquet tincidunt
-     vel in massa. Phasellus feugiat est vel leo finibus congue.&lt;/p&gt;
-&lt;/section&gt;</pre>
+     vel in massa. Phasellus feugiat est vel leo finibus congue.</p>
+</section>
+```
 
-<p><strong>CSS</strong></p>
+**CSS**
 
-<pre class="notranslate">section {
+```
+section {
   border: 1px solid blue;
   width: 100%;
   float: left;
@@ -185,52 +136,34 @@ div {
 .right {
   float: right;
   background: cyan;
-}</pre>
+}
+```
 
-<p><strong>RESULTADO:</strong></p>
+**RESULTADO:**
 
-<p>{{EmbedLiveSample('How_floated_elements_are_positioned','400','180')}}</p>
+{{EmbedLiveSample('How_floated_elements_are_positioned','400','180')}}
 
-<h3 id="Notas" name="Notas">Limpiando (clearing) flotantes:</h3>
+### Limpiando (clearing) flotantes:
 
-<p>A veces querrás forzar un item a moverse por debajo de elementos flotantes. Por ejemplo, párrafos que han de permanecer adyacentes a elementos flotantes, pero forzar a los encabezados a estar en su propia línea. Para ello revisa el siguiente ejemplo: {{cssxref("clear")}}</p>
+A veces querrás forzar un item a moverse por debajo de elementos flotantes. Por ejemplo, párrafos que han de permanecer adyacentes a elementos flotantes, pero forzar a los encabezados a estar en su propia línea. Para ello revisa el siguiente ejemplo: {{cssxref("clear")}}
 
-<h3 id="Especificaciones" name="Especificaciones">Especificaciones</h3>
+### Especificaciones
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/CSS1#float">CSS 1</a></li>
- <li><a class="external" href="http://www.w3.org/TR/CSS21/visuren.html#propdef-float">CSS 2.1</a></li>
-</ul>
+- [CSS 1](http://www.w3.org/TR/CSS1#float)
+- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#propdef-float)
 
-<h3 id="Compatibilidad_de_navegadores" name="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h3>
+### Compatibilidad de navegadores
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Navegador</th>
-   <th>Versión mínima</th>
-  </tr>
-  <tr>
-   <td>Internet Explorer</td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td>Netscape</td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td>3.5</td>
-  </tr>
- </tbody>
-</table>
+| Navegador         | Versión mínima |
+| ----------------- | -------------- |
+| Internet Explorer | 4              |
+| Netscape          | 4              |
+| Opera             | 3.5            |
 
-<h3 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h3>
+### Ver también
 
-<p>{{ Cssxref("clear") }}, {{ Cssxref("display") }}, {{ Cssxref("position") }}</p>
+{{ Cssxref("clear") }}, {{ Cssxref("display") }}, {{ Cssxref("position") }}
 
-<div class="noinclude">
-<p><span class="comment">Categorías</span></p>
+Categorías
 
-<p><span class="comment">Interwiki Language</span></p>
-</div>
+Interwiki Language

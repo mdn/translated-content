@@ -3,23 +3,20 @@ title: flex
 slug: Web/CSS/flex
 translation_of: Web/CSS/flex
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p> </p>
+La propiedad CSS flex es una propiedad resumida que indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. Los elementos flexibles pueden ser estirados para utilizar el espacio disponible proporcional a su factor de crecimiento flexible o su factor de contracción flexible para evitar desbordamiento.
 
-<p>La propiedad CSS flex es una propiedad resumida que indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. Los elementos flexibles pueden ser estirados para utilizar el espacio disponible proporcional a su factor de crecimiento flexible o su factor de contracción flexible para evitar desbordamiento.</p>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+Consulte [Cómo usar las cajas flexibles de CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS/) para conocer más propiedades e información.
 
-<p> </p>
+## Sintáxis
 
-<p>Consulte <a href="/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS/">Cómo usar las cajas flexibles de CSS</a> para conocer más propiedades e información.</p>
-
-<h2 id="Syntax" name="Syntax">Sintáxis</h2>
-
-<pre class="brush:css">/* 0 0 auto */
+```css
+/* 0 0 auto */
 flex: none;
 
 /* Un valor, número sin unidades: flex-grow */
@@ -44,104 +41,88 @@ flex: 2 2 10%;
 flex: inherit;
 flex: initial;
 flex: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;'flex-grow'&gt;</code></dt>
- <dd>
- <p>Define el <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow">flex-grow</a> del elemento flexible. Ver { { Xref_cssnumber ( ) } } para obtener más detalles . Los valores negativos no se consideran válidos . El valor predeterminado es 1 cuando se omite.</p>
- </dd>
- <dt><code>&lt;'flex-shrink'&gt;</code></dt>
- <dd>Define el <code><a href="/en-US/docs/Web/CSS/flex-shrink">flex-shrink</a></code> del elemento flexible. Ver { { Xref_cssnumber ( ) } } para obtener más detalles . Los valores negativos no se consideran válidos . El valor predeterminado es 1 cuando se omite.</dd>
- <dt><code>&lt;'flex-basis'&gt;</code></dt>
- <dd>Define el <a href="/en-US/docs/CSS/flex-basis" title="CSS/flex-basis"><code>flex-basis</code></a> del elemento flexible. Se acepta cualquier valor válido para las propiedades  <code>width</code> y <code>height</code> . Un tamaño preferente de 0 debe tener una unidad para evitar ser interpretado como flexible. El valor predeterminado es 0% cuando se omite.</dd>
- <dt><code>none</code></dt>
- <dd>Esta palabra clave se computa a <code>0 0 auto</code>.</dd>
-</dl>
+- `<'flex-grow'>`
+  - : Define el [flex-grow](/es/docs/Web/CSS/flex-grow) del elemento flexible. Ver { { Xref_cssnumber ( ) } } para obtener más detalles . Los valores negativos no se consideran válidos . El valor predeterminado es 1 cuando se omite.
+- `<'flex-shrink'>`
+  - : Define el [`flex-shrink`](/en-US/docs/Web/CSS/flex-shrink) del elemento flexible. Ver { { Xref_cssnumber ( ) } } para obtener más detalles . Los valores negativos no se consideran válidos . El valor predeterminado es 1 cuando se omite.
+- `<'flex-basis'>`
+  - : Define el [`flex-basis`](/es/docs/CSS/flex-basis "CSS/flex-basis") del elemento flexible. Se acepta cualquier valor válido para las propiedades `width` y `height` . Un tamaño preferente de 0 debe tener una unidad para evitar ser interpretado como flexible. El valor predeterminado es 0% cuando se omite.
+- `none`
+  - : Esta palabra clave se computa a `0 0 auto`.
 
- <h3 id="Sintaxis_normal">Sintaxis normal</h3>
+### Sintaxis normal
+
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: css">#flex-container {
+```css
+#flex-container {
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-direction: row;
 	flex-direction: row;
 }
 
-#flex-container &gt; .flex-item {
+#flex-container > .flex-item {
 	-webkit-flex: auto;
 	flex: auto;
 }
 
-#flex-container &gt; .raw-item {
+#flex-container > .raw-item {
 	width: 5rem;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div id="flex-container"&gt;
-    &lt;div class="flex-item" id="flex"&gt;Flex box (click to toggle raw box)&lt;/div&gt;
-    &lt;div class="raw-item" id="raw"&gt;Raw box&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="flex-container">
+    <div class="flex-item" id="flex">Flex box (click to toggle raw box)</div>
+    <div class="raw-item" id="raw">Raw box</div>
+</div>
+```
 
-<div class="hidden">
-<pre class="brush: js">var flex = document.getElementById("flex");
+```js hidden
+var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
 flex.addEventListener("click", function() {
 	raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
-</pre>
+```
 
-<pre class="brush: css">#flex-container {
+```css hidden
+#flex-container {
 	width: 100%;
 	font-family: Consolas, Arial, sans-serif;
 }
 
-#flex-container &gt; div {
+#flex-container > div {
 	border: 1px solid #f00;
 	padding: 1rem;
 }
 
-#flex-container &gt; .raw-item {
+#flex-container > .raw-item {
 	border: 1px solid #000;
 }
-</pre>
-</div>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample('Example','100%','60')}}</p>
+{{EmbedLiveSample('Example','100%','60')}}
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#flex-property', 'flex')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Status                           | Comment            |
+| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Flexbox', '#flex-property', 'flex')}} | {{Spec2('CSS3 Flexbox')}} | Initial definition |
 
-<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
+## Compatibilidad de Navegadores
 
 {{Compat("css.properties.flex")}}
 
-<h2 id="See_also" name="See_also">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS/">Usar las cajas felxibles de CSS</a></li>
-</ul>
+- [Usar las cajas felxibles de CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS/)

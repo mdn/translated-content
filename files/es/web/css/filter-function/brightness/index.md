@@ -4,43 +4,43 @@ slug: Web/CSS/filter-function/brightness
 translation_of: Web/CSS/filter-function/brightness()
 original_slug: Web/CSS/filter-function/brightness()
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>La función <strong><code>brightness()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> aplica un multiplicador linear a la imagen, haciendo que su apariencia sea más brallante u oscura. Su resultado es un {{cssxref("&lt;filter-function&gt;")}}.</p>
+La función **`brightness()`** [CSS](/es/docs/Web/CSS) aplica un multiplicador linear a la imagen, haciendo que su apariencia sea más brallante u oscura. Su resultado es un {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-brightness.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-brightness.html")}}
 
-<p class="">El código de este ejemplo interactivo se encuentra en GitHub repository. Si desea contribuir en el proyecto de ejemplos interactivos, por favor clone el repositorio <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envie un pull request.</p>
+El código de este ejemplo interactivo se encuentra en GitHub repository. Si desea contribuir en el proyecto de ejemplos interactivos, por favor clone el repositorio <https://github.com/mdn/interactive-examples> y envie un pull request.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox notranslate">brightness(<em>valor</em>)</pre>
+```
+brightness(valor)
+```
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<dl>
- <dt><code>valor</code></dt>
- <dd>El brillo resultante, es definido como un {{cssxref("&lt;number&gt;")}} o un {{cssxref("&lt;percentage&gt;")}}. Un valor debajo del <code>100%</code> oscurecerá la imagen, como así un valor superior al <code>100%</code> le dará más brillo. Un valor de <code>0%</code> dará como resultado una imagen completamente negra, siendo el valor de <code>100%</code> una imagen sin cambios. El valor de la Interpolación es <code>1</code>.</dd>
-</dl>
+- `valor`
+  - : El brillo resultante, es definido como un {{cssxref("&lt;number&gt;")}} o un {{cssxref("&lt;percentage&gt;")}}. Un valor debajo del `100%` oscurecerá la imagen, como así un valor superior al `100%` le dará más brillo. Un valor de `0%` dará como resultado una imagen completamente negra, siendo el valor de `100%` una imagen sin cambios. El valor de la Interpolación es `1`.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: css notranslate">brightness(0%)   /* Completamente negro */
+```css
+brightness(0%)   /* Completamente negro */
 brightness(0.4)  /* 40% de brillo */
 brightness(1)    /* Sin Efecto */
-brightness(200%) /* Doble de Brillo */</pre>
+brightness(200%) /* Doble de Brillo */
+```
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>{{cssxref("filter-function/blur", "blur()")}}</li>
- <li>{{cssxref("filter-function/contrast", "contrast()")}}</li>
- <li>{{cssxref("filter-function/drop-shadow", "drop-shadow()")}}</li>
- <li>{{cssxref("filter-function/grayscale", "grayscale()")}}</li>
- <li>{{cssxref("filter-function/hue-rotate", "hue-rotate()")}}</li>
- <li>{{cssxref("filter-function/invert", "invert()")}}</li>
- <li>{{cssxref("filter-function/opacity", "opacity()")}}</li>
- <li>{{cssxref("filter-function/saturate", "saturate()")}}</li>
- <li>{{cssxref("filter-function/sepia", "sepia()")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxref("filter-function/blur", "blur()")}}
+- {{cssxref("filter-function/contrast", "contrast()")}}
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- {{cssxref("filter-function/grayscale", "grayscale()")}}
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+- {{cssxref("filter-function/invert", "invert()")}}
+- {{cssxref("filter-function/opacity", "opacity()")}}
+- {{cssxref("filter-function/saturate", "saturate()")}}
+- {{cssxref("filter-function/sepia", "sepia()")}}

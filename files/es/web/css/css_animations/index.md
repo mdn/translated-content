@@ -9,73 +9,46 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Animations
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong>CSS Animations</strong> is a module of CSS that defines how to animate the values of CSS properties over time, using keyframes. The behavior of these keyframe animations can be controlled by specifying their duration, their number of repetitions, and how they repeat.</p>
+**CSS Animations** is a module of CSS that defines how to animate the values of CSS properties over time, using keyframes. The behavior of these keyframe animations can be controlled by specifying their duration, their number of repetitions, and how they repeat.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="CSS_Properties">CSS Properties</h3>
+### CSS Properties
 
-<div class="index">
-<ul>
- <li>{{cssxref("animation")}}</li>
- <li>{{cssxref("animation")}}</li>
- <li>{{cssxref("animation-delay")}}</li>
- <li>{{cssxref("animation-direction")}}</li>
- <li>{{cssxref("animation-duration")}}</li>
- <li>{{cssxref("animation-fill-mode")}}</li>
- <li>{{cssxref("animation-iteration-count")}}</li>
- <li>{{cssxref("animation-name")}}</li>
- <li>{{cssxref("animation-play-state")}}</li>
- <li>{{cssxref("animation-timing-function")}}</li>
-</ul>
-</div>
+- {{cssxref("animation")}}
+- {{cssxref("animation")}}
+- {{cssxref("animation-delay")}}
+- {{cssxref("animation-direction")}}
+- {{cssxref("animation-duration")}}
+- {{cssxref("animation-fill-mode")}}
+- {{cssxref("animation-iteration-count")}}
+- {{cssxref("animation-name")}}
+- {{cssxref("animation-play-state")}}
+- {{cssxref("animation-timing-function")}}
 
-<h3 id="CSS_At-rules">CSS At-rules</h3>
+### CSS At-rules
 
-<div class="index">
-<ul>
- <li>{{cssxref("@keyframes")}}</li>
-</ul>
-</div>
+- {{cssxref("@keyframes")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support">Detecting CSS animation support</a></dt>
- <dd>Describes a technique for detecting if the browser supports CSS animations.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS animations</a></dt>
- <dd>Step-by-step tutorial about how to create animations using CSS, this article describes each relevant CSS property and at-rule and explains how they interact.</dd>
-</dl>
+- [Detecting CSS animation support](/es/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
+  - : Describes a technique for detecting if the browser supports CSS animations.
+- [Using CSS animations](/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+  - : Step-by-step tutorial about how to create animations using CSS, this article describes each relevant CSS property and at-rule and explains how they interact.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Animations') }}</td>
-   <td>{{ Spec2('CSS3 Animations') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                | Status                                   | Comment             |
+| -------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{ SpecName('CSS3 Animations') }} | {{ Spec2('CSS3 Animations') }} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.animation")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related to CSS Animations, <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a> can trigger animations on user actions.</li>
-</ul>
-
-<p> </p>
+- Related to CSS Animations, [CSS Transitions](/es/docs/Web/CSS/CSS_Transitions) can trigger animations on user actions.

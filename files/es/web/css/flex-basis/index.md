@@ -7,17 +7,18 @@ tags:
   - Propiedad de CSS
 translation_of: Web/CSS/flex-basis
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad de <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>flex-basis</code></strong> especifíca la base flexible, la cual es el <strong>tamaño inicial </strong>de un elemento flexible. Ésta propiedad determina el tamaño de una caja de contenidos a no ser que se haya especificado de otra forma usando {{Cssxref("box-sizing")}}.</p>
+La propiedad de [CSS](/es/docs/Web/CSS) **`flex-basis`** especifíca la base flexible, la cual es el **tamaño inicial** de un elemento flexible. Ésta propiedad determina el tamaño de una caja de contenidos a no ser que se haya especificado de otra forma usando {{Cssxref("box-sizing")}}.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush:css notranslate">/* Especificar &lt;'width'&gt; */
+```css
+/* Especificar <'width'> */
 flex-basis: 10em;
 flex-basis: 3px;
 flex-basis: auto;
@@ -35,53 +36,50 @@ flex-basis: content;
 flex-basis: inherit;
 flex-basis: initial;
 flex-basis: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>width</code></dt>
- <dd>Definido por un número seguido de una unidad absoluta tal como <code>px</code>, <code>mm</code> o <code>pt</code>, o un porcentaje del tamaño principal de un contenedor flexible padre. Los valores negativos no son válidos.</dd>
- <dt><code>content</code></dt>
- <dd>Indica el dimensionamiento automático, basado en el contenido del elemento flexible.<br><br>
- <div class="note"><strong>Nota: </strong>Tenga en cuenta que éste valor no fue presentado en el lanzamiento inicial del Diseño de Caja Flexible, así que no será soportado por algunas implementaciones antiguas. El efecto equivalente puede tenerlo usando <code>auto</code> junto con un tamaño principal (<a href="https://drafts.csswg.org/css2/visudet.html#propdef-width">width</a> o <a href="https://drafts.csswg.org/css2/visudet.html#propdef-height">height</a>) en auto.</div>
+- `width`
+  - : Definido por un número seguido de una unidad absoluta tal como `px`, `mm` o `pt`, o un porcentaje del tamaño principal de un contenedor flexible padre. Los valores negativos no son válidos.
+- `content`
 
- <div class="note">
- <p id="comment_text_0"><strong>Nota:</strong> Breve historia</p>
+  - : Indica el dimensionamiento automático, basado en el contenido del elemento flexible.
 
- <ul>
-  <li>Originalmente, "flex-basis:auto" significa "observa mi propiedad width o height".</li>
-  <li>Después, flex-basis:auto fue cambiado a automatic-sizing, y fue introducido "main-size" como palabra clave "observa mi propiedad width o height". Ésto fue implementado en <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1032922" title='RESOLVED FIXED - Rename "flex-basis:auto" to "main-size", while preserving "flex:auto" shorthand value'>bug 1032922</a>.</li>
-  <li>Después, ese cambio fue revertido en <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1093316" title='RESOLVED FIXED - Back out flexbox "flex-basis:main-size" rename, since the CSSWG removed it from the spec'>bug 1093316</a>, y nuevamente "auto" significa "observa mi propiedad width o height"; y se está introduciendo una nueva palabra clave 'content' para provocar un dimensionamiento automático. ({{bug("1105111")}} incluye la inclusión de dicha palabra clave).</li>
- </ul>
- </div>
- </dd>
-</dl>
+    > **Nota:**Tenga en cuenta que éste valor no fue presentado en el lanzamiento inicial del Diseño de Caja Flexible, así que no será soportado por algunas implementaciones antiguas. El efecto equivalente puede tenerlo usando `auto` junto con un tamaño principal ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) o [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) en auto.
 
-<h3 id="Sintaxis_Formal">Sintaxis Formal</h3>
+    > **Nota:** Breve historia
+    >
+    > - Originalmente, "flex-basis:auto" significa "observa mi propiedad width o height".
+    > - Después, flex-basis:auto fue cambiado a automatic-sizing, y fue introducido "main-size" como palabra clave "observa mi propiedad width o height". Ésto fue implementado en [bug 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922 'RESOLVED FIXED - Rename "flex-basis:auto" to "main-size", while preserving "flex:auto" shorthand value').
+    > - Después, ese cambio fue revertido en [bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316 'RESOLVED FIXED - Back out flexbox "flex-basis:main-size" rename, since the CSSWG removed it from the spec'), y nuevamente "auto" significa "observa mi propiedad width o height"; y se está introduciendo una nueva palabra clave 'content' para provocar un dimensionamiento automático. ({{bug("1105111")}} incluye la inclusión de dicha palabra clave).
+
+### Sintaxis Formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;ul class="container"&gt;
-  &lt;li class="flex flex1"&gt;1: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex2"&gt;2: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex3"&gt;3: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex4"&gt;4: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex5"&gt;5: flex-basis test&lt;/li&gt;
-&lt;/ul&gt;
+```html
+<ul class="container">
+  <li class="flex flex1">1: flex-basis test</li>
+  <li class="flex flex2">2: flex-basis test</li>
+  <li class="flex flex3">3: flex-basis test</li>
+  <li class="flex flex4">4: flex-basis test</li>
+  <li class="flex flex5">5: flex-basis test</li>
+</ul>
 
-&lt;ul class="container"&gt;
-  &lt;li class="flex flex6"&gt;6: flex-basis test&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+<ul class="container">
+  <li class="flex flex6">6: flex-basis test</li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">.container {
+```css
+.container {
   font-family: arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -167,38 +165,23 @@ flex-basis: unset;
 .flex6:after {
   content: 'fill/-webkit-fill-available/-moz-available';
 }
-</pre>
+```
 
-<h3 id="Resultados">Resultados</h3>
+### Resultados
 
-<p>{{EmbedLiveSample('Example', '860', '360', '', 'Web/CSS/flex-basis')}}</p>
+{{EmbedLiveSample('Example', '860', '360', '', 'Web/CSS/flex-basis')}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Especificación</th>
-   <th>Estado</th>
-   <th>Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#propdef-flex-basis', 'flex-basis')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Definición Inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                           | Estado                           | Comentario         |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Flexbox', '#propdef-flex-basis', 'flex-basis')}} | {{Spec2('CSS3 Flexbox')}} | Definición Inicial |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("css.properties.flex-basis")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a></li>
- <li>{{cssxref("width")}}</li>
-</ul>
+- [Using CSS flexible boxes](/es/docs/CSS/Using_CSS_flexible_boxes)
+- {{cssxref("width")}}

@@ -4,346 +4,236 @@ slug: Web/CSS/CSS_Images/Using_CSS_gradients
 translation_of: Web/CSS/CSS_Images/Using_CSS_gradients
 original_slug: CSS/Using_CSS_gradients
 ---
-<p><a href="/en-US/docs/CSS/CSS3" title="CSS3">CSS3</a> posee soporte para nuevos tipos de <em>gradientes</em>  en las propiedades CSS. Usarlos <span id="result_box" lang="es"><span class="hps">en</span> <span class="hps">un</span> <span class="hps">segundo plano,</span> <span class="hps">permite mostrar</span> <span class="hps">transiciones suaves</span> <span class="hps">entre dos o</span> <span class="hps">más</span> <span class="hps">colores especificados,</span></span> <span id="result_box" lang="es"><span class="hps">evitando así</span> <span class="hps">el uso de imágenes</span> <span class="hps">para estos efectos</span></span>, lo que reduce<span id="result_box" lang="es"><span class="hps"> el tiempo</span> <span class="hps">de descarga y</span> <span class="hps">el uso de</span> <span class="hps">ancho de banda</span></span>. <span id="result_box" lang="es"><span class="hps">Además</span><span>,</span> <span class="hps">debido a que el</span> <span class="hps">gradiente</span> <span class="hps">es generado por el</span> <span class="hps">navegador</span><span>,</span></span> los <span id="result_box" lang="es"><span class="hps">objetos</span> <span class="hps">degradados</span> <span class="hps">se ven mejor</span> <span class="hps">cuando se hace un acercamiento</span></span>, y el ajuste de diseño es mucho más flexible.</p>
+[CSS3](/es/docs/CSS/CSS3 "CSS3") posee soporte para nuevos tipos de _gradientes_ en las propiedades CSS. Usarlos en un segundo plano, permite mostrar transiciones suaves entre dos o más colores especificados, evitando así el uso de imágenes para estos efectos, lo que reduce el tiempo de descarga y el uso de ancho de banda. Además, debido a que el gradiente es generado por el navegador, los objetos degradados se ven mejor cuando se hace un acercamiento, y el ajuste de diseño es mucho más flexible.
 
-<p>Los navegadores soportan dos tipos de gradientes: <em>lineal</em>, definido con la función <em>linear-gradient</em>, y <em>radial</em>, definido con <em>radial-gradient</em>.</p>
+Los navegadores soportan dos tipos de gradientes: _lineal_, definido con la función _linear-gradient_, y _radial_, definido con _radial-gradient_.
 
-<h2 id="Gradientes_lineales">Gradientes lineales</h2>
+## Gradientes lineales
 
-<p>Para crear un gradiente lineal, <span id="result_box" lang="es"><span class="hps">se establece un</span> <span class="hps">punto</span> <span class="hps">de partida y una</span> <span class="hps">dirección</span> <span class="hps">(indicada por</span> <span class="hps">un ángulo)</span> <span class="hps">a lo largo de</span> <span class="hps">la cual se aplica</span> <span class="hps">el</span> <span class="hps">efecto</span></span>. Usted también puede definir <strong>paradas de color</strong>. las paradas de color son los colores que usted desea que Gecko renderise con suaves transiciones entre ellos, y usted puede específicar al menos dos de ellas, pero puede específicar más para crear efectos de gradientes más complejos.</p>
+Para crear un gradiente lineal, se establece un punto de partida y una dirección (indicada por un ángulo) a lo largo de la cual se aplica el efecto. Usted también puede definir **paradas de color**. las paradas de color son los colores que usted desea que Gecko renderise con suaves transiciones entre ellos, y usted puede específicar al menos dos de ellas, pero puede específicar más para crear efectos de gradientes más complejos.
 
-<h3 id="Gradientes_lineales_simples">Gradientes lineales simples</h3>
+### Gradientes lineales simples
 
-<p>Aquí está un gradiente lineal que inicia en el centro (horizontalmente) y arriba (verticalmente), e inicia en azul, transicionando a blanco.</p>
+Aquí está un gradiente lineal que inicia en el centro (horizontalmente) y arriba (verticalmente), e inicia en azul, transicionando a blanco.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Captura de pantalla</td>
-   <td class="header">Demo en vivo</td>
-  </tr>
-  <tr>
-   <td><img alt="" src="/@api/deki/files/3950/=basic_linear_bluetop.png" style="text-align: center;"></td>
-   <td>
-    <div class="" style=""> </div>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Captura de pantalla                                  | Demo en vivo |
+| ---------------------------------------------------- | ------------ |
+| ![](/@api/deki/files/3950/=basic_linear_bluetop.png) |              |
 
-<div style="margin-right: 255px;">
-<pre class="brush: css">/* La sintaxis vieja, obsoleta, pero todavía necesaria, con prefijo, para Opera y navegadores basados en WebKit-based */
+```css
+/* La sintaxis vieja, obsoleta, pero todavía necesaria, con prefijo, para Opera y navegadores basados en WebKit-based */
 background: -prefix-linear-gradient(top, blue, white);
 
 /* La nueva sintaxis necesaria para navegadores apegados al estandar (IE 10 y Firefox 10 en adelante), sin prefijo */
 background: linear-gradient(to bottom, blue, white);
-</pre>
-</div>
+```
 
-<h3 id="Cambiando_el_mismo_gradiente_para_correr_de_izquierda_a_derecha">Cambiando el mismo gradiente para correr de izquierda a derecha:</h3>
+### Cambiando el mismo gradiente para correr de izquierda a derecha:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Captura de pantalla</td>
-   <td class="header">Demo en vivo</td>
-  </tr>
-  <tr>
-   <td><img alt="basic_linear_blueleft.png" class="default internal" src="/@api/deki/files/3951/=basic_linear_blueleft.png"></td>
-   <td>
-    <div> </div>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Captura de pantalla                                                            | Demo en vivo |
+| ------------------------------------------------------------------------------ | ------------ |
+| ![basic_linear_blueleft.png](/@api/deki/files/3951/=basic_linear_blueleft.png) |              |
 
-<pre class="brush: css">/* la vieja sintaxis, obsoleta, pero todavía necesaria, prefijada, para Opera y Navegadores basados en Webkit */
+```css
+/* la vieja sintaxis, obsoleta, pero todavía necesaria, prefijada, para Opera y Navegadores basados en Webkit */
 background: -prefix-linear-gradient(left, blue, white);
 
 /* La nueva sintaxis necesaria para navegadores apegados al estandar (IE 10 y Firefox 10 en adelante), sin prefijo */
 background: linear-gradient(to right, blue, white);
-</pre>
+```
 
-<p>Usted puede hace el gradiente sea generado diagonalmente mediante la especificación de la posición de inicio vertical y horizontal. Por ejemplo:</p>
+Usted puede hace el gradiente sea generado diagonalmente mediante la especificación de la posición de inicio vertical y horizontal. Por ejemplo:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Captura de pantalla</td>
-   <td class="header">Demo en vivo</td>
-  </tr>
-  <tr>
-   <td><img alt="basic_linear_bluetopleft.png" class="default internal" src="/@api/deki/files/3952/=basic_linear_bluetopleft.png"></td>
-   <td>
-    <div> </div>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Captura de pantalla                                                                  | Demo en vivo |
+| ------------------------------------------------------------------------------------ | ------------ |
+| ![basic_linear_bluetopleft.png](/@api/deki/files/3952/=basic_linear_bluetopleft.png) |              |
 
-<pre class="brush: css">/* la vieja sintaxis, obsoleta, pero todavía necesaria, prefijada, para Opera y Navegadores basados en Webkit */
+```css
+/* la vieja sintaxis, obsoleta, pero todavía necesaria, prefijada, para Opera y Navegadores basados en Webkit */
 background: -prefix-linear-gradient(left top, blue, white);
 
 /* La nueva sintaxis necesaria para navegadores apegados al estandar (IE 10 y Firefox 10 en adelante), sin prefijo */
 background: linear-gradient(to bottom right, blue, white);
-</pre>
+```
 
-<h3 id="Usando_Angulos">Usando Angulos</h3>
+### Usando Angulos
 
-<p>Si usted no específica un ángulo, uno es determinado automáticamente basado en la dirección dada. Si usted desea más control sobre la dirección del gradiente, usted necesita establecer el ángulo específicamente.</p>
+Si usted no específica un ángulo, uno es determinado automáticamente basado en la dirección dada. Si usted desea más control sobre la dirección del gradiente, usted necesita establecer el ángulo específicamente.
 
-<p>Por ejemplo, aquí hay dos gradientes, el primero con una dirección hacia la derecha, y el segundo tiene un ángulo de 70 grados.</p>
+Por ejemplo, aquí hay dos gradientes, el primero con una dirección hacia la derecha, y el segundo tiene un ángulo de 70 grados.
 
-<p><img alt="linear_gradient_angle.png" class="default internal" src="/@api/deki/files/3953/=linear_gradient_angle.png"></p>
+![linear_gradient_angle.png](/@api/deki/files/3953/=linear_gradient_angle.png)
 
-<p>El de la derecha usa un CSS Como este:</p>
+El de la derecha usa un CSS Como este:
 
-<pre class="brush: css">background: linear-gradient(70deg, black, white);
-</pre>
+```css
+background: linear-gradient(70deg, black, white);
+```
 
-<p>El ángulo es especificado como un ángulo entre una línea vertical y la línea del gradiente, contando en el sentido horario. En otras palabras, <code>0deg crea un gradiente vertical desde el fondo hasta el tope, mientras 90deg genera un gradiente horizontal de izquierda a derecha:</code></p>
+El ángulo es especificado como un ángulo entre una línea vertical y la línea del gradiente, contando en el sentido horario. En otras palabras, `0deg crea un gradiente vertical desde el fondo hasta el tope, mientras 90deg genera un gradiente horizontal de izquierda a derecha:`
 
-<p><img alt="linear_redangles.png" class="default internal" src="/files/3811/linear_red_angles.png"></p>
+![linear_redangles.png](/files/3811/linear_red_angles.png)
 
-<pre class="brush: css">background: linear-gradient(&lt;angle&gt;, red, white);
-</pre>
+```css
+background: linear-gradient(<angle>, red, white);
+```
 
-<div class="note style-wrap">
-<p><strong>Note:</strong> several browsers implement, prefixed, an older draft of the specification where <code>0deg</code> was pointing to the right rather than to the top. Pay attention in the value of the angle when mixing prefixed and standard linear-gradient, some may need to have <code>90deg</code> added to the <code>&lt;angle&gt;</code>.</p>
-</div>
+> **Nota:** several browsers implement, prefixed, an older draft of the specification where `0deg` was pointing to the right rather than to the top. Pay attention in the value of the angle when mixing prefixed and standard linear-gradient, some may need to have `90deg` added to the `<angle>`.
 
-<h3 id="Color_stops">Color stops</h3>
+### Color stops
 
-<p>Color stops are points along the gradient line that will have a specific color at that location. The location can be specified as either a percentage of the length of the line, or as an absolute length. You may specify as many color stops as you like in order to achieve the desired effect.</p>
+Color stops are points along the gradient line that will have a specific color at that location. The location can be specified as either a percentage of the length of the line, or as an absolute length. You may specify as many color stops as you like in order to achieve the desired effect.
 
-<p>If you specify the location as a percentage, <code>0%</code> represents the starting point, while <code>100%</code> represents the ending point; however, you can use values outside that range if necessary to get the effect you want.</p>
+If you specify the location as a percentage, `0%` represents the starting point, while `100%` represents the ending point; however, you can use values outside that range if necessary to get the effect you want.
 
-<h4 id="Example_Three_color_stops">Example: Three color stops</h4>
+#### Example: Three color stops
 
-<p>This example specifies three color stops:</p>
+This example specifies three color stops:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Screen Shot</td>
-   <td class="header">Live Demo</td>
-  </tr>
-  <tr>
-   <td><img alt="linear_colorstops1.png" class="default internal" src="/@api/deki/files/3955/=linear_colorstops1.png"></td>
-   <td>
-    <div> </div>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Screen Shot                                                              | Live Demo |
+| ------------------------------------------------------------------------ | --------- |
+| ![linear_colorstops1.png](/@api/deki/files/3955/=linear_colorstops1.png) |           |
 
-<pre class="brush: css">/* The old syntax, deprecated, but still needed, prefixed, for Opera and WebKit-based browsers */
+```css
+/* The old syntax, deprecated, but still needed, prefixed, for Opera and WebKit-based browsers */
 background: -prefix-linear-gradient(top, blue, white 80%, orange);
 
 /* The new syntax needed by standard-compliant browsers (IE 10 and Firefox 10 onwards), without prefix */
 background: linear-gradient(to bottom, blue, white 80%, orange);
-</pre>
+```
 
-<p>Note that the first and last color stops don't specify a location; because of that, values of 0% and 100% are assigned automatically. The middle color stop specifies a location of 80%, putting it most of the way toward the bottom.</p>
+Note that the first and last color stops don't specify a location; because of that, values of 0% and 100% are assigned automatically. The middle color stop specifies a location of 80%, putting it most of the way toward the bottom.
 
-<h4 id="Example_Evenly_spaced_color_stops">Example: Evenly spaced color stops</h4>
+#### Example: Evenly spaced color stops
 
-<p>Here's an example using a wide variety of colors, all evenly spaced:</p>
+Here's an example using a wide variety of colors, all evenly spaced:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Screen Shot</td>
-   <td class="header">Live Demo</td>
-  </tr>
-  <tr>
-   <td><img alt="linear_rainbow.png" class="default internal" src="/@api/deki/files/3956/=linear_rainbow.png"></td>
-   <td>
-    <div> </div>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Screen Shot                                                      | Live Demo |
+| ---------------------------------------------------------------- | --------- |
+| ![linear_rainbow.png](/@api/deki/files/3956/=linear_rainbow.png) |           |
 
-<pre class="brush: css">/* The old syntax, deprecated, but still needed, prefixed, for Opera and WebKit-based browsers */
+```css
+/* The old syntax, deprecated, but still needed, prefixed, for Opera and WebKit-based browsers */
 background: -prefix-linear-gradient(left, red, orange, yellow, green, blue);
 
 /* The new syntax needed by standard-compliant browsers (IE 10 and Firefox 10 onwards), without prefix */
 background: linear-gradient(to right, red, orange, yellow, green, blue);
-</pre>
+```
 
-<p>Notice that the color stops are automatically spaced evenly when no locations are specified.</p>
+Notice that the color stops are automatically spaced evenly when no locations are specified.
 
-<h3 id="Transparency_and_gradients">Transparency and gradients</h3>
+### Transparency and gradients
 
-<p>Gradients support transparency. You can use this, for example, when stacking multiple backgrounds, to create fading effects on background images. For example:</p>
+Gradients support transparency. You can use this, for example, when stacking multiple backgrounds, to create fading effects on background images. For example:
 
-<p><img alt="linear_multibg_transparent.png" class="default internal" src="/@api/deki/files/3957/=linear_multibg_transparent.png"></p>
+![linear_multibg_transparent.png](/@api/deki/files/3957/=linear_multibg_transparent.png)
 
-<pre class="brush: css">/* The old syntax, deprecated, but still needed, prefixed, for Opera and WebKit-based browsers */
+```css
+/* The old syntax, deprecated, but still needed, prefixed, for Opera and WebKit-based browsers */
 background: linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1)), url(http://foo.com/image.jpg);
 
 /* The new syntax needed by standard-compliant browsers (IE 10 and Firefox 10 onwards), without prefix */
 background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)), url(http://foo.com/image.jpg);
-</pre>
+```
 
-<p>The backgrounds are stacked with the first specified background on top, and each successive background farther away. By stacking backgrounds this way, you can create very creative effects as seen above.</p>
+The backgrounds are stacked with the first specified background on top, and each successive background farther away. By stacking backgrounds this way, you can create very creative effects as seen above.
 
-<h2 id="Radial_gradients">Radial gradients</h2>
+## Radial gradients
 
-<p>Radial gradients are specified using the {{ cssxref("radial-gradient") }} functional notation. The syntax is similar to that for linear gradients, except you can specify the gradient's ending shape (whether it should be a circle or ellipse) as well as its size. By default, the ending shape is an ellipse with the same proportions than the container's box.</p>
+Radial gradients are specified using the {{ cssxref("radial-gradient") }} functional notation. The syntax is similar to that for linear gradients, except you can specify the gradient's ending shape (whether it should be a circle or ellipse) as well as its size. By default, the ending shape is an ellipse with the same proportions than the container's box.
 
-<h3 id="Color_stops_2">Color stops</h3>
+### Color stops
 
-<p>You specify color stops the same way as for linear gradients. The gradient line extends out from the starting position in all directions.</p>
+You specify color stops the same way as for linear gradients. The gradient line extends out from the starting position in all directions.
 
-<h4 id="Example_Evenly_spaced_color_stops_2">Example: Evenly spaced color stops</h4>
+#### Example: Evenly spaced color stops
 
-<p>By default, as with linear gradients, the color stops are evenly spaced:</p>
+By default, as with linear gradients, the color stops are evenly spaced:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Screen Shot</td>
-   <td class="header">Live Demo</td>
-  </tr>
-  <tr>
-   <td><img alt="radial_gradient_even.png" class="default internal" src="/@api/deki/files/3958/=radial_gradient_even.png"></td>
-   <td>
-    <div> </div>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Screen Shot                                                                  | Live Demo |
+| ---------------------------------------------------------------------------- | --------- |
+| ![radial_gradient_even.png](/@api/deki/files/3958/=radial_gradient_even.png) |           |
 
-<pre class="brush: css">background: radial-gradient(red, yellow, rgb(30, 144, 255));
-</pre>
+```css
+background: radial-gradient(red, yellow, rgb(30, 144, 255));
+```
 
-<h4 id="Example_Explicitly_spaced_color_stops">Example: Explicitly spaced color stops</h4>
+#### Example: Explicitly spaced color stops
 
-<p>Here we specify specific locations for the color stops:</p>
+Here we specify specific locations for the color stops:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Screen Shot</td>
-   <td class="header">Live Demo</td>
-  </tr>
-  <tr>
-   <td><img alt="radial_gradient_varied.png" class="default internal" src="/@api/deki/files/3959/=radial_gradient_varied.png"></td>
-   <td>
-    <div> </div>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Screen Shot                                                                      | Live Demo |
+| -------------------------------------------------------------------------------- | --------- |
+| ![radial_gradient_varied.png](/@api/deki/files/3959/=radial_gradient_varied.png) |           |
 
-<pre class="brush: css">background: radial-gradient(red 5%, yellow 25%, #1E90FF 50%);
-</pre>
+```css
+background: radial-gradient(red 5%, yellow 25%, #1E90FF 50%);
+```
 
-<h3 id="Size">Size</h3>
+### Size
 
-<p>This is one of the areas in which radial gradients differ from linear gradients. You can provide a size value that specifies the point that defines the size of the circle or ellipse. See <a href="/en-US/docs/CSS/radial-gradient#Size_constants" title="en-US/docs/CSS/-moz-radial-gradient#Size constants">this description of the size constants</a> for specifics.</p>
+This is one of the areas in which radial gradients differ from linear gradients. You can provide a size value that specifies the point that defines the size of the circle or ellipse. See [this description of the size constants](/es/docs/CSS/radial-gradient#Size_constants "en-US/docs/CSS/-moz-radial-gradient#Size constants") for specifics.
 
-<h4 id="Example_closest-side_for_ellipses">Example: closest-side for ellipses</h4>
+#### Example: closest-side for ellipses
 
-<p>This ellipse uses the <code>closest-side</code> size value, which means the size is set by the distance from the starting point (the center) to the closest side of the enclosing box.</p>
+This ellipse uses the `closest-side` size value, which means the size is set by the distance from the starting point (the center) to the closest side of the enclosing box.
 
-<table class="standard-table" style="width: 520px;">
- <tbody>
-  <tr>
-   <td class="header">Screen Shot</td>
-   <td class="header">Live Demo</td>
-  </tr>
-  <tr>
-   <td><img alt="radial_ellipse_size1.png" class="default internal" src="/@api/deki/files/3960/=radial_ellipse_size1.png"></td>
-   <td>
-    <div> </div>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Screen Shot                                                                  | Live Demo |
+| ---------------------------------------------------------------------------- | --------- |
+| ![radial_ellipse_size1.png](/@api/deki/files/3960/=radial_ellipse_size1.png) |           |
 
-<pre class="brush: css">background: radial-gradient(ellipse closest-side, red, yellow 10%, #1E90FF 50%, white);
-</pre>
+```css
+background: radial-gradient(ellipse closest-side, red, yellow 10%, #1E90FF 50%, white);
+```
 
-<h4 id="Example_farthest-corner_for_ellipses">Example: farthest-corner for ellipses</h4>
+#### Example: farthest-corner for ellipses
 
-<p>This example is similar to the previous one, except that its size is specified as <code>farthest-corner</code>, which sets the size of the gradient by the distance from the starting point to the farthest corner of the enclosing box from the starting point.</p>
+This example is similar to the previous one, except that its size is specified as `farthest-corner`, which sets the size of the gradient by the distance from the starting point to the farthest corner of the enclosing box from the starting point.
 
-<table class="standard-table" style="width: 520px;">
- <tbody>
-  <tr>
-   <td class="header">Screen Shot</td>
-   <td class="header">Live Demo</td>
-  </tr>
-  <tr>
-   <td><img alt="radial_ellipse_size2.png" class="default internal" src="/@api/deki/files/3961/=radial_ellipse_size2.png"></td>
-   <td>
-    <div> </div>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Screen Shot                                                                  | Live Demo |
+| ---------------------------------------------------------------------------- | --------- |
+| ![radial_ellipse_size2.png](/@api/deki/files/3961/=radial_ellipse_size2.png) |           |
 
-<pre class="brush: css">background: radial-gradient(ellipse farthest-corner, red, yellow 10%, #1E90FF 50%, white);
-</pre>
+```css
+background: radial-gradient(ellipse farthest-corner, red, yellow 10%, #1E90FF 50%, white);
+```
 
-<h4 id="Example_closest-side_for_circles">Example: closest-side for circles</h4>
+#### Example: closest-side for circles
 
-<p>This example uses <code>closest-side</code>, which determines the circle's size as the distance between the start point (the center) and the closest side.</p>
+This example uses `closest-side`, which determines the circle's size as the distance between the start point (the center) and the closest side.
 
-<table class="standard-table" style="width: 520px;">
- <tbody>
-  <tr>
-   <td class="header">Screen Shot</td>
-   <td class="header">Live Demo</td>
-  </tr>
-  <tr>
-   <td><img alt="radial_circle_size1.png" class="default internal" src="/@api/deki/files/3962/=radial_circle_size1.png"></td>
-   <td>
-    <div> </div>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Screen Shot                                                                | Live Demo |
+| -------------------------------------------------------------------------- | --------- |
+| ![radial_circle_size1.png](/@api/deki/files/3962/=radial_circle_size1.png) |           |
 
-<pre class="brush: css">background: radial-gradient(circle closest-side, red, yellow 10%, #1E90FF 50%, white);
-</pre>
+```css
+background: radial-gradient(circle closest-side, red, yellow 10%, #1E90FF 50%, white);
+```
 
-<p>Here, the circle's radius is half the height of the box, since the top and bottom edges are equidistant from the start point and are closer than the left and right edges.</p>
+Here, the circle's radius is half the height of the box, since the top and bottom edges are equidistant from the start point and are closer than the left and right edges.
 
-<h2 id="Repeating_gradients">Repeating gradients</h2>
+## Repeating gradients
 
-<p>The {{ cssxref("linear-gradient") }} and {{ cssxref("radial-gradient") }} properties don't support automatically repeating the color stops. However, the {{ cssxref("repeating-linear-gradient") }} and {{ cssxref("repeating-radial-gradient") }} properties are available to offer this functionality.</p>
+The {{ cssxref("linear-gradient") }} and {{ cssxref("radial-gradient") }} properties don't support automatically repeating the color stops. However, the {{ cssxref("repeating-linear-gradient") }} and {{ cssxref("repeating-radial-gradient") }} properties are available to offer this functionality.
 
-<h3 id="Examples_Repeating_linear_gradient">Examples: Repeating linear gradient</h3>
+### Examples: Repeating linear gradient
 
-<p>This example uses {{ cssxref("repeating-linear-gradient") }} to create a gradient:</p>
+This example uses {{ cssxref("repeating-linear-gradient") }} to create a gradient:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Screen Shot</td>
-   <td class="header">Live Demo</td>
-  </tr>
-  <tr>
-   <td><img alt="repeating_linear_gradient.png" class="default internal" src="/@api/deki/files/3964/=repeating_linear_gradient.png"></td>
-   <td>
-    <div> </div>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Screen Shot                                                                            | Live Demo |
+| -------------------------------------------------------------------------------------- | --------- |
+| ![repeating_linear_gradient.png](/@api/deki/files/3964/=repeating_linear_gradient.png) |           |
 
-<pre class="brush: css">background: repeating-linear-gradient(-45deg, red, red 5px, white 5px, white 10px);
-</pre>
+```css
+background: repeating-linear-gradient(-45deg, red, red 5px, white 5px, white 10px);
+```
 
-<p>Another example using the {{ cssxref("repeating-linear-gradient") }} property.</p>
+Another example using the {{ cssxref("repeating-linear-gradient") }} property.
 
-<p><a href="/@api/deki/files/6192/=repeat_background_gradient_checked.png" title="repeat_background_gradient_checked.png"><img alt="repeat_background_gradient_checked.png" class="default internal" src="/@api/deki/files/6192/=repeat_background_gradient_checked.png?size=thumb" style="height: 160px; width: 160px;"></a></p>
+[![repeat_background_gradient_checked.png](/@api/deki/files/6192/=repeat_background_gradient_checked.png?size=thumb)](/@api/deki/files/6192/=repeat_background_gradient_checked.png "repeat_background_gradient_checked.png")
 
-<pre class="brush: css">background-color: #000;
+```css
+background-color: #000;
 background-image: repeating-linear-gradient(90deg, transparent, transparent 50px,
       rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px,
       rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px,
@@ -356,32 +246,20 @@ repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(143, 77, 63
       rgba(143, 77, 63, 0.25) 10px),
 repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px,
       rgba(143, 77, 63, 0.25) 10px);
-</pre>
+```
 
-<h3 id="Example_Repeating_radial_gradient">Example: Repeating radial gradient</h3>
+### Example: Repeating radial gradient
 
-<p>This example uses {{ cssxref("repeating-radial-gradient") }} to create a gradient:</p>
+This example uses {{ cssxref("repeating-radial-gradient") }} to create a gradient:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Screen Shot</td>
-   <td class="header">Live Demo</td>
-  </tr>
-  <tr>
-   <td><img alt="repeating_radial_gradient.png" class="default internal" src="/@api/deki/files/3965/=repeating_radial_gradient.png"></td>
-   <td>
-    <div> </div>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Screen Shot                                                                            | Live Demo |
+| -------------------------------------------------------------------------------------- | --------- |
+| ![repeating_radial_gradient.png](/@api/deki/files/3965/=repeating_radial_gradient.png) |           |
 
-<pre class="brush: css">background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
-</pre>
+```css
+background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Gradient-related reference articles: {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}.</li>
-</ul>
+- Gradient-related reference articles: {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}.

@@ -3,43 +3,40 @@ title: font-variant
 slug: Web/CSS/font-variant
 tags:
   - CSS
-  - 'CSS:Referencias'
+  - CSS:Referencias
   - Todas_las_Categorías
 translation_of: Web/CSS/font-variant
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumen" name="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad <code>font-variant</code> selecciona entre los aspectos <code>normal</code> y <code>small-caps</code> para la {{ Cssxref("font-family", "familia de fuente") }} determinado.</p>
+La propiedad `font-variant` selecciona entre los aspectos `normal` y `small-caps` para la {{ Cssxref("font-family", "familia de fuente") }} determinado.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<code>font-variant:</code> {{ mediawiki.external('<code>normal</code> | <code>small-caps</code>') }} ;
+`font-variant:` {{ mediawiki.external('<code>normal</code> | <code>small-caps</code>') }} ;
 
-<h3 id="Valores" name="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt>normal</dt>
- <dd>Especifica un aspecto de letra normal.</dd>
-</dl>
+- normal
+  - : Especifica un aspecto de letra normal.
 
-<dl>
- <dt>small-caps</dt>
- <dd>Especifica un tipo de letra que está declarado como tipo de letra small-caps. Si no hay un tipo de letra small-caps disponible, Mozilla simulará un tipo de letra small-caps, por ejemplo tomando un tipo de letra normal y reemplazando las letras en minúsculas por caracteres en mayúsculas escalados.</dd>
-</dl>
+<!---->
 
-<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
+- small-caps
+  - : Especifica un tipo de letra que está declarado como tipo de letra small-caps. Si no hay un tipo de letra small-caps disponible, Mozilla simulará un tipo de letra small-caps, por ejemplo tomando un tipo de letra normal y reemplazando las letras en minúsculas por caracteres en mayúsculas escalados.
 
-<pre>h1 { font-variant: small-caps }
+## Ejemplos
+
+```
+h1 { font-variant: small-caps }
 p { font-variant: small-caps}
-</pre>
+```
 
-<h2 id="Especificaciones" name="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/CSS2/fonts.html#propdef-font-variant">Fuentes en CSS 2 (en)</a></li>
- <li><a class="external" href="http://www.w3.org/TR/css3-fonts/#font-variant">Fuentes en CSS 3 (en)</a></li>
-</ul>
+- [Fuentes en CSS 2 (en)](http://www.w3.org/TR/CSS2/fonts.html#propdef-font-variant)
+- [Fuentes en CSS 3 (en)](http://www.w3.org/TR/css3-fonts/#font-variant)
