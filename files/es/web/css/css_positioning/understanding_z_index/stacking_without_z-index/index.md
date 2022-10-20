@@ -6,8 +6,6 @@ original_slug: Web/CSS/CSS_Positioning/entendiendo_z_index/Stacking_without_z-in
 ---
 « [CSS](/es/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index)
 
-### Apilando sin z-index
-
 Cuando ningún elemento tiene z-index, los elementos son apilados en este orden (de abajo hacia arriba):
 
 1. El fondo y los bordes del elemento raiz

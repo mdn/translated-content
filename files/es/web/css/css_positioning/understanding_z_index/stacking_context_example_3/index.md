@@ -7,8 +7,6 @@ original_slug: >-
 ---
 « [CSS](/en/CSS) « [Understanding CSS z-index](/en/CSS/Understanding_z-index)
 
-### Ejemplo 3 del contexto de apilamiento
-
 Este último ejemplo muestra los problemas que surgen cuando se combinan varios elementos posicionados en una jerarquía HTML multi nivel y cuando los valores z-index son asignados usando selectores de clase.
 
 Tomemos como ejemplo un menú jerárquico de tres niveles formado por varios DIVs posicionados. DIVs de segundo y tercer nivel aparecen cuando se pone el cursor encima o se hace clic en sus padres. Usualmente este tipo de menú es generado mediante un script del lado del cliente o del lado del servidor, así que las reglas de estilos son asignadas con un selector de clase en lugar de un selector de id.

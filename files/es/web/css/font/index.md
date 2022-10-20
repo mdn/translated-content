@@ -43,26 +43,26 @@ También se pueden especificar los tipos de letra del sistema usando la propieda
   - : el tipo de letra usado para etiquetar pequeños controles (small control).
 - status-bar
   - : el tipo de letra usado en la barra de estado de la ventana.
-- \-moz-window
-  - : Empty
-- \-moz-document
-  - : Empty
-- \-moz-workspace
-  - : Empty
-- \-moz-desktop
-  - : Empty
-- \-moz-info
-  - : Empty
-- \-moz-dialog
-  - : Empty
-- \-moz-button
-  - : Empty
-- \-moz-pull-down-menu
-  - : Empty
-- \-moz-list
-  - : Empty
-- \-moz-field
-  - : Empty
+-moz-window
+
+  \-moz-document
+
+  \-moz-workspace
+
+  \-moz-desktop
+
+  \-moz-info
+
+  \-moz-dialog
+
+  \-moz-button
+
+  \-moz-pull-down-menu
+
+  \-moz-list
+
+  \-moz-field
+
 
 ## Ejemplos
 

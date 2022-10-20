@@ -298,9 +298,11 @@ En lugar de describir el efecto con todo detalle, puedes echar un [vistazo a la 
 
 En este ejemplo, una pequeña caja con texto dentro se mueve hacia atrás y hacia delante a través de la pantalla y los colores de fondo y del texto se difuminan entre dos valores mientras tiene lugar la animación.
 
+```html hidden
+<video controls autoplay src="https://developer.mozilla.org/samples/cssref/transitions/sample1/transitiondemo1.ogv"></video>
 ```
 
-```
+{{EmbedLiveSample}}
 
 Antes de que miremos los fragmentos de código, tal vez desees [echar un vistazo a la demo en vivo](http://developer.mozilla.org/samples/cssref/transitions/sample1/) (suponiendo que tu navegador admita transiciones). También puedes echar un [vistazo directamente a la CSS](http://developer.mozilla.org/samples/cssref/transitions/sample1/transitions.css) que usa.
 

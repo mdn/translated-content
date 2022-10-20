@@ -22,6 +22,8 @@ La propiedad de CSS **`color`** selecciona el [valor de color](/es/docs/Web/CSS/
 
 Para obtener una descripción general del uso del color en HTML, consulte [Aplicando color a los elementos HTML mediante CSS](/es/docs/Web/HTML/Applying_color).
 
+#### Ejemplo
+
 ```css
 /* Valores de palabras clave */
 color: currentcolor;
@@ -169,7 +171,7 @@ p:first-child {
 .c17 { color: hsla(30 100% 50% / 0.6); }
 ```
 
-{{EmbedLiveSample("color", "100%", 630, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("", "100%", 630, "", "", "")}}
 
 {{cssinfo}}
 

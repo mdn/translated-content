@@ -232,7 +232,7 @@ p {
 }
 ```
 
-> **Nota:**Puedes encontrar más detalles en la página de referencia {{cssxref("animation")}}
+> **Nota:** Puedes encontrar más detalles en la página de referencia {{cssxref("animation")}}
 
 ### Estableciendo multiples valores de propiedades animation
 

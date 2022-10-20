@@ -100,7 +100,7 @@ Un elemento flotante es al menos tan alto como su elemento hijo flotante más al
 
 **HTML**
 
-```
+```html
 <section>
   <div class="left">1</div>
   <div class="left">2</div>
@@ -115,7 +115,7 @@ Un elemento flotante es al menos tan alto como su elemento hijo flotante más al
 
 **CSS**
 
-```
+```css
 section {
   border: 1px solid blue;
   width: 100%;
@@ -141,7 +141,7 @@ div {
 
 **RESULTADO:**
 
-{{EmbedLiveSample('How_floated_elements_are_positioned','400','180')}}
+{{EmbedLiveSample('','400','180')}}
 
 ### Limpiando (clearing) flotantes:
 

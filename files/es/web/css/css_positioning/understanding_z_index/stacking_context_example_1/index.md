@@ -7,8 +7,6 @@ original_slug: >-
 ---
 « [CSS](/es/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index)
 
-### Ejemplo 1 del contexto de apilamiento
-
 Empecemos con un ejemplo básico. En el contexto de apilamiento raíz tenemos dos DIVs (DIV #1 and DIV #3), ambos con posición relativa, pero sin propiedad z-index. Dentro del DIV #1 se encuentra el DIV #2 de posición absoluta, mientras que en el DIV #3 se encuentra el DIV #4 con posición absoluta, ambos sin propiedad z-index.
 
 El único contexto de apilamiento es el contexto raíz. Sin la propiedad z-index, los elementos son apilados por orden de ocurrencia.

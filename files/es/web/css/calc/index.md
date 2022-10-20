@@ -25,7 +25,7 @@ calc(expresión)
 
 ### Expresiones
 
-{{todo("mod,min,max : http://hacks.mozilla.org/2010/06/css3-calc/")}}La expresión puede ser una combinación de los siguientes operadores:
+La expresión puede ser una combinación de los siguientes operadores:
 
 - **+**
   - : Suma
