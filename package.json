@@ -15,7 +15,9 @@
   },
   "scripts": {
     "fix:json": "prettier -w \"**/*.json\"",
-    "lint:json": "prettier -c \"**/*.json\""
+    "fix:yml": "prettier -w \"**/*.yml\"",
+    "lint:json": "prettier -c \"**/*.json\"",
+    "lint:yml": "prettier -c \"**/*.yml\""
   },
   "engines": {
     "node": "^16.0.0 || >=18.0.0"
