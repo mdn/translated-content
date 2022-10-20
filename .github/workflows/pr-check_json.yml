@@ -1,13 +1,13 @@
-name: Markdown lint (project files)
+name: JSON lint
 
 on:
   pull_request:
     branches:
       - main
     paths:
-      - "*.md"
-      - .github/workflows/markdown-lint.yml
-      - .markdownlint.json
+      - "**/*.json"
+      - "**/*.jsonc"
+      - .github/workflows/pr-check_json.yml
 
 jobs:
   docs:
@@ -20,7 +20,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
+          cache: yarn
 
-      - name: Lint markdown files
-        run: |
-          npx markdownlint-cli '*.md' -i LICENSE.md -i CODE_OF_CONDUCT.md
+      - name: Install all yarn packages
+        run: yarn --frozen-lockfile
+
+      - name: Lint JSON files
+        run: yarn lint:json
