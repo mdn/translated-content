@@ -12,7 +12,7 @@ translation_of: Web/CSS/flex-flow
 
 ## Resumen
 
-La propiedad [CSS](/es/docs/CSS "CSS") **`flex-flow`** es una propiedad atajo para las propiedades individuales `flex-direction` y `flex-wrap`.
+La propiedad [CSS](/es/docs/CSS) **`flex-flow`** es una propiedad atajo para las propiedades individuales `flex-direction` y `flex-wrap`.
 
 {{cssinfo}}
 
@@ -45,7 +45,7 @@ flex-flow: unset;
 
 ### Valores
 
-Ve [`flex-direction`](/es/docs/CSS/flex-direction "en-US/docs/CSS/flex-direction") y [`flex-wrap`](/es/docs/CSS/flex-wrap "flex-wrap") para más detalles de los valores.
+Ve [`flex-direction`](/es/docs/CSS/flex-direction) y [`flex-wrap`](/es/docs/CSS/flex-wrap) para más detalles de los valores.
 
 ### Sintaxis formal
 

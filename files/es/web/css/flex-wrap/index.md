@@ -7,11 +7,11 @@ translation_of: Web/CSS/flex-wrap
 
 ## Resumen
 
-La propiedad **`flex-wrap`** de [CSS](/es/docs/CSS "CSS") especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas. Si la cobertura (wrap) está permitida, esta propiedad también te permite controlar la dirección en la cual serán apilados los elementos.
+La propiedad **`flex-wrap`** de [CSS](/es/docs/CSS) especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas. Si la cobertura (wrap) está permitida, esta propiedad también te permite controlar la dirección en la cual serán apilados los elementos.
 
 {{cssinfo}}
 
-Ver [Usando cajas flexibles CSS](/es/docs/Web/Guide/CSS/Cajas_flexibles "/en/CSS/Using_CSS_flexible_boxes") para conocer más propiedades e información.
+Ver [Usando cajas flexibles CSS](/es/docs/Web/Guide/CSS/Cajas_flexibles) para conocer más propiedades e información.
 
 ## Sintaxis
 
@@ -58,4 +58,4 @@ element {
 
 ## Ver también
 
-- [Usando cajas flexibles CSS](/es/docs/Web/Guide/CSS/Cajas_flexibles "/en-US/docs/CSS/Using_CSS_flexible_boxes")
+- [Usando cajas flexibles CSS](/es/docs/Web/Guide/CSS/Cajas_flexibles)

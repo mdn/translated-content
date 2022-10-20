@@ -31,7 +31,7 @@ El espesor de los bordes está determinado por las propiedades {{cssxref("border
 
 El **área del margen**, delimitada por el límite del margen, extiende el área del borde para incluir un área vacía utilizada para separar el elemento de sus vecinos. Sus dimensiones son el _ancho de la caja del margen_ y la _altura de la caja del margen_.
 
-El tamaño del área del margen está determinado por las propiedades {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref ("margin-bottom")}}, { {cssxref("margin-left")}}, y la propiedad abreviada {{cssxref ("margin")}}. Cuando se produce el [colapso del margen](/en/CSS/margin_collapsing "en/CSS/margin_collapsing"), el área del margen no está claramente definida ya que los márgenes se comparten entre las cajas.
+El tamaño del área del margen está determinado por las propiedades {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref ("margin-bottom")}}, { {cssxref("margin-left")}}, y la propiedad abreviada {{cssxref ("margin")}}. Cuando se produce el [colapso del margen](/en/CSS/margin_collapsing), el área del margen no está claramente definida ya que los márgenes se comparten entre las cajas.
 
 Finalmente, ten en cuenta que para elementos en línea no reemplazados, la cantidad de espacio ocupado (la contribución a la altura de la línea) está determinada por la propiedad {{cssxref ('line-height')}}, aunque los bordes y el relleno todavía se muestran alrededor del contenido.
 

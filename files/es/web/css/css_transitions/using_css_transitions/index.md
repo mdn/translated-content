@@ -326,7 +326,7 @@ Lo único que hay que observar aquí es que establecemos la clase para nuestra c
 
 #### La CSS
 
-Para crear nuestro efecto de animación, usamos dos clases de CSS, "slideRight" y "slideLeft". Si deseas ver el código completo de CSS, puedes mirar el archivo [`transitions.css`](/samples/cssref/transitions/sample1/transitions.css "https://developer.mozilla.org/samples/cssref/transitions/sample1/transitions.css") en su totalidad. A continuación se muestran sólo los trozos relevantes:
+Para crear nuestro efecto de animación, usamos dos clases de CSS, "slideRight" y "slideLeft". Si deseas ver el código completo de CSS, puedes mirar el archivo [`transitions.css`](/samples/cssref/transitions/sample1/transitions.css) en su totalidad. A continuación se muestran sólo los trozos relevantes:
 
 ```
 .slideRight {

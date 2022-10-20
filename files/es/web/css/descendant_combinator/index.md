@@ -7,7 +7,7 @@ translation_of: Web/CSS/Descendant_combinator
 
 ## Sumario
 
-El `␣` combinador (que se supone que representan un espacio, o mejor dicho uno o más espacios en blanco) combina dos selectores tales que el selector combinado incluye sólo los elementos que coinciden con el segundo selector para los que hay un elemento ancestro que coincide con el primer selector. Los selectores descendientes son similares a [selectores hijos](https://developer.mozilla.org/en/CSS/Child_selectors "selectores es / CSS / Niños") , pero que no requieren que la relación entre los elementos coincidentes ser estrictamente entre padres e hijos.
+El `␣` combinador (que se supone que representan un espacio, o mejor dicho uno o más espacios en blanco) combina dos selectores tales que el selector combinado incluye sólo los elementos que coinciden con el segundo selector para los que hay un elemento ancestro que coincide con el primer selector. Los selectores descendientes son similares a [selectores hijos](https://developer.mozilla.org/en/CSS/Child_selectors) , pero que no requieren que la relación entre los elementos coincidentes ser estrictamente entre padres e hijos.
 
 ## Sintaxis
 

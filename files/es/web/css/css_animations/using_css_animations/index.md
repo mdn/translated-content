@@ -365,5 +365,5 @@ Solo nos falta mostrar el código HTML necesario para mostrar el ejemplo en la p
 ## Te puede interesar también
 
 - {{ domxref("AnimationEvent", "AnimationEvent") }}
-- [Detecting CSS animation support](/es/docs/CSS/CSS_animations/Detecting_CSS_animation_support "en/CSS/CSS animations/Detecting CSS animation support")
+- [Detecting CSS animation support](/es/docs/CSS/CSS_animations/Detecting_CSS_animation_support)
 - [Using CSS transitions](/es/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)

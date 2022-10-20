@@ -10,7 +10,7 @@ original_slug: Web/CSS/Selectores_CSS/Usando_la_pseudo-clase_:target_en_selector
 ---
 When a URL points at a specific piece of a document, it can be difficult to ascertain. Find out how you can use some simple CSS to draw attention to the target of a URL and improve the user's experience. {{CSSRef}}
 
-Como ayuda para identificar el destino de un enlace que apunta a una parte específica de un documento, los [Selectores CSS3](http://www.w3.org/TR/css3-selectors/#target-pseudo) incluyen la [pseudo-clase](/en/CSS/Pseudo-classes "Pseudo-classes") {{ Cssxref(":target") }}.
+Como ayuda para identificar el destino de un enlace que apunta a una parte específica de un documento, los [Selectores CSS3](http://www.w3.org/TR/css3-selectors/#target-pseudo) incluyen la [pseudo-clase](/en/CSS/Pseudo-classes) {{ Cssxref(":target") }}.
 
 ### Seleccionando un objetivo (target)
 
@@ -58,7 +58,7 @@ En los casos en los que un identificador de fragmento apunte a una porción del 
 ### Enlaces relacionados
 
 - [Selectores CSS3 #target-pseudo](http://www.w3.org/TR/css3-selectors/#target-pseudo)
-- [Referencia CSS :target](/es/CSS/:target "En/CSS/:target")
+- [Referencia CSS :target](/es/CSS/:target)
 
 ### Información del Documento Original
 

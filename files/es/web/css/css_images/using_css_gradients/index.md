@@ -4,7 +4,7 @@ slug: Web/CSS/CSS_Images/Using_CSS_gradients
 translation_of: Web/CSS/CSS_Images/Using_CSS_gradients
 original_slug: CSS/Using_CSS_gradients
 ---
-[CSS3](/es/docs/CSS/CSS3 "CSS3") posee soporte para nuevos tipos de _gradientes_ en las propiedades CSS. Usarlos en un segundo plano, permite mostrar transiciones suaves entre dos o más colores especificados, evitando así el uso de imágenes para estos efectos, lo que reduce el tiempo de descarga y el uso de ancho de banda. Además, debido a que el gradiente es generado por el navegador, los objetos degradados se ven mejor cuando se hace un acercamiento, y el ajuste de diseño es mucho más flexible.
+[CSS3](/es/docs/CSS/CSS3) posee soporte para nuevos tipos de _gradientes_ en las propiedades CSS. Usarlos en un segundo plano, permite mostrar transiciones suaves entre dos o más colores especificados, evitando así el uso de imágenes para estos efectos, lo que reduce el tiempo de descarga y el uso de ancho de banda. Además, debido a que el gradiente es generado por el navegador, los objetos degradados se ven mejor cuando se hace un acercamiento, y el ajuste de diseño es mucho más flexible.
 
 Los navegadores soportan dos tipos de gradientes: _lineal_, definido con la función _linear-gradient_, y _radial_, definido con _radial-gradient_.
 
@@ -172,7 +172,7 @@ background: radial-gradient(red 5%, yellow 25%, #1E90FF 50%);
 
 ### Size
 
-This is one of the areas in which radial gradients differ from linear gradients. You can provide a size value that specifies the point that defines the size of the circle or ellipse. See [this description of the size constants](/es/docs/CSS/radial-gradient#Size_constants "en-US/docs/CSS/-moz-radial-gradient#Size constants") for specifics.
+This is one of the areas in which radial gradients differ from linear gradients. You can provide a size value that specifies the point that defines the size of the circle or ellipse. See [this description of the size constants](/es/docs/CSS/radial-gradient#Size_constants) for specifics.
 
 #### Example: closest-side for ellipses
 
@@ -230,7 +230,7 @@ background: repeating-linear-gradient(-45deg, red, red 5px, white 5px, white 10p
 
 Another example using the {{ cssxref("repeating-linear-gradient") }} property.
 
-[![repeat_background_gradient_checked.png](/@api/deki/files/6192/=repeat_background_gradient_checked.png?size=thumb)](/@api/deki/files/6192/=repeat_background_gradient_checked.png "repeat_background_gradient_checked.png")
+[![repeat_background_gradient_checked.png](/@api/deki/files/6192/=repeat_background_gradient_checked.png?size=thumb)](/@api/deki/files/6192/=repeat_background_gradient_checked.png)
 
 ```css
 background-color: #000;
