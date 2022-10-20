@@ -65,7 +65,7 @@ Los navegadores no brindan ninguna información especial sobre imágenes de fond
 
 ## Ejemplos
 
-### Layering background images
+### Imagenes por capas
 
 Tenga en cuenta que la imagen de la estrella es parcialmente transparente y se superpone a la imagen del gato.
 
