@@ -14,7 +14,9 @@
     "url": "git+https://github.com/mdn/translated-content.git"
   },
   "scripts": {
+    "fix:json": "prettier -w \"**/*.json\"",
     "fix:yml": "prettier -w \"**/*.yml\"",
+    "lint:json": "prettier -c \"**/*.json\"",
     "lint:yml": "prettier -c \"**/*.yml\""
   },
   "engines": {
