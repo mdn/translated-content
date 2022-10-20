@@ -243,7 +243,7 @@ Access-Control-Max-Age: 86400
 
 또한 `Access-Control-Allow-Headers` 의 값을 "`X-PINGOTHER, Content-Type`" 으로 전송하여 실제 요청에 헤더를 사용할 수 있음을 확인합니다. `Access-Control-Allow-Methods`와 마찬가지로 `Access-Control-Allow-Headers` 는 쉼표로 구분된 허용 가능한 헤더 목록입니다.
 
-마지막으로{{HTTPHeader("Access-Control-Max-Age")}}는 다른 preflight request를 보내지 않고, preflight request에 대한 응답을 캐시할 수 있는 시간(초)을 제공합니다. 위의 코드는 86400 초(24시간) 입니다. 각 브라우저의 [최대 캐싱 시간 ](/ko/docs/Web/HTTP/Headers/Access-Control-Max-Age)은 `Access-Control-Max-Age` 가 클수록 우선순위가 높습니다.
+마지막으로{{HTTPHeader("Access-Control-Max-Age")}}는 다른 preflight request를 보내지 않고, preflight request에 대한 응답을 캐시할 수 있는 시간(초)을 제공합니다. 위의 코드는 86400 초(24시간) 입니다. 각 브라우저의 [최대 캐싱 시간](/ko/docs/Web/HTTP/Headers/Access-Control-Max-Age)은 `Access-Control-Max-Age` 가 클수록 우선순위가 높습니다.
 
 #### Preflighted requests 와 리다이렉트
 
@@ -262,8 +262,8 @@ CORS 프로토콜은 본래 그 동작(리다이렉트)이 필요했지만, [이
 
 이것이 가능하지 않은 경우 다른 방법도 있습니다.
 
-1.  Fetch API를 통해 {{domxref("Response.url")}} 이나 {{domxref("XMLHttpRequest.responseURL")}}를 사용하여 [simple request](/ko/docs/Web/HTTP/Access_control_CORS$edit#Simple_requests) 를 작성합니다. 이 simple request를 이용하여 실제 preflighted request가 끝나는 URL을 판별하세요.
-2.  첫 번째 단계에서 `Response.url` 혹은 `XMLHttpRequest.responseURL` 로부터 얻은 URL을 사용하여 또 다른 요청(실제 요청)을 만듭니다.
+1. Fetch API를 통해 {{domxref("Response.url")}} 이나 {{domxref("XMLHttpRequest.responseURL")}}를 사용하여 [simple request](/ko/docs/Web/HTTP/Access_control_CORS$edit#Simple_requests) 를 작성합니다. 이 simple request를 이용하여 실제 preflighted request가 끝나는 URL을 판별하세요.
+2. 첫 번째 단계에서 `Response.url` 혹은 `XMLHttpRequest.responseURL` 로부터 얻은 URL을 사용하여 또 다른 요청(실제 요청)을 만듭니다.
 
 그러나 요청에 `Authorization` 헤더가 있기 때문에 preflight를 트리거하는 요청일 경우에, 위의 단계를 사용하여 제한을 제거할 수 없습니다. 또한 요청이 있는 서버를 제어하지 않으면 문제를 해결할 수 없습니다.
 
@@ -287,7 +287,7 @@ function callOtherDomain() {
 }
 ```
 
-7행은 쿠키와 함께 호출하기위한 {{domxref("XMLHttpRequest")}} 의 플래그를 보여줍니다. 이 플래그는 `withCredentials` 라고 불리며 부울 값을 갖습니다. 기본적으로 호출은 쿠키 없이 이루어집니다. 이것은 simple `GET` request이기 때문에 preflighted 되지 않습니다. 그러나 브라우저는 {{HTTPHeader("Access-Control-Allow-Credentials")}}: `true` 헤더가 없는 응답을 **거부합니다**.\*\* **따라서 호출된 웹 컨텐츠에 응답을 제공하지 **않습니다\*\*.
+7행은 쿠키와 함께 호출하기위한 {{domxref("XMLHttpRequest")}} 의 플래그를 보여줍니다. 이 플래그는 `withCredentials` 라고 불리며 부울 값을 갖습니다. 기본적으로 호출은 쿠키 없이 이루어집니다. 이것은 simple `GET` request이기 때문에 preflighted 되지 않습니다. 그러나 브라우저는 {{HTTPHeader("Access-Control-Allow-Credentials")}}: `true` 헤더가 없는 응답을 **거부합니다**. 따라서 호출된 웹 컨텐츠에 응답을 제공하지 **않습니다.**
 
 ![](cred-req-updated.png)
 

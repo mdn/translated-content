@@ -14,8 +14,8 @@ original_slug: Web/XSLT/for-each
 
 ```
 <xsl:for-each select=EXPRESSION>
-	<xsl:sort> [optional]
-	TEMPLATE
+  <xsl:sort> [optional]
+  TEMPLATE
 </xsl:for-each>
 ```
 

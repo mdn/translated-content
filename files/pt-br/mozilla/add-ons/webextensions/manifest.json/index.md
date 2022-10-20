@@ -17,7 +17,7 @@ Using manifest.json, you specify basic metadata about your extension such as the
 
 manifest.json keys are listed below:
 
-{{ ListSubpages ("/en-US/Add-ons/WebExtensions/manifest.json") }}
+{{ ListSubpages ("/pt-BR/Add-ons/WebExtensions/manifest.json") }}
 
 `"manifest_version"`, `"version"`, and `"name"` are the only mandatory keys. `"default_locale"` must be present if the "\_locales" directory is present and must be absent otherwise. `"applications"` is not supported in Google Chrome, and is mandatory in Firefox before Firefox 48 and Firefox for Android.
 

@@ -3,7 +3,7 @@ title: Create Author form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
 ---
 
-[Edi](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_author_form)本章節演示，如何為創建作者對象 `Author`定義一個頁面。
+本章節演示，如何為創建作者對象 `Author`定義一個頁面。
 
 ## 導入驗證和清理方法
 

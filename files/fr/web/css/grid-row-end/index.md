@@ -50,7 +50,7 @@ grid-row-end: unset;
 
     Si aucune zone ne correspond, la valeur est traitée comme la combinaison de l'entier 1 et de `<custom-ident>` (cf. définition suivante).
 
-    ` <custom-ident``> ` ne peut pas prendre la valeur `span`.
+    `<custom-ident>` ne peut pas prendre la valeur `span`.
 
 - `<integer> && <custom-ident>?`
 

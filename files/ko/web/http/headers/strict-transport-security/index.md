@@ -39,7 +39,7 @@ Strict-Transport-Security: max-age=<expire-time>; preload
 
 ## Description
 
-만약 이 웹사이트가 HTTP 요청을 받고 HTTPS 로 리다이렉트 하는 경우에, 유저가 만약 http\://www\.foo.com/ 을 입력하거나, 심지어 foo.com 만 입력하는 경우에, 리다이렉트 되기 이전의 암호화 되지 않은 버전의 사이트와 통신하게 된다. 이 경우, 안전한 버전의 원본 페이지가 아닌 악의적인 다른 페이지로 리다이렉트 되는 man-in-the-middle attack 의 잠재적 위험이 있다.
+만약 이 웹사이트가 HTTP 요청을 받고 HTTPS 로 리다이렉트 하는 경우에, 유저가 만약 `http://www.foo.com/` 을 입력하거나, 심지어 foo.com 만 입력하는 경우에, 리다이렉트 되기 이전의 암호화 되지 않은 버전의 사이트와 통신하게 된다. 이 경우, 안전한 버전의 원본 페이지가 아닌 악의적인 다른 페이지로 리다이렉트 되는 man-in-the-middle attack 의 잠재적 위험이 있다.
 
 HTTP Strict Transport Security 헤더는 웹사이트가 브라우저에게 절대로 HTTP 로 사이트를 연결하면 안되고 HTTP 로 연결하려는 모든 시도는 자동으로 HTTPS로 변경해야 된다고 알린다.
 
