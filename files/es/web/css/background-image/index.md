@@ -133,4 +133,3 @@ div {
   - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
   - {{cssxref("image/paint", "paint()")}}
   - {{cssxref("url", "url()")}}
-
