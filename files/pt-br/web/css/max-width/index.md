@@ -49,7 +49,7 @@ max-width: unset;
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Use a fórmula `fit-content` com o espaço disponível substituído pelo argumento especificado, i.e. `min(max-content, max(min-content, argumento)).`
 
-#### Preocupações de Acessibilidade
+## Preocupações de Acessibilidade
 
 Certifique-se que os elementos definidos com `max-width` não sejam truncados e/ou não obscureçam outros conteúdos quando a página for ampliada para aumentar o tamanho do texto.
 
