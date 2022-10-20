@@ -182,7 +182,7 @@ The following steps show how you can use NPM to download a package, save it into
 
 3. Now install Express in the `myapp` directory and save it in the dependencies list of your **package.json** file
 
-4. ```bash
+   ```bash
     npm install express
     ```
 
@@ -205,7 +205,7 @@ The following steps show how you can use NPM to download a package, save it into
     }
     ```
 
-5. To use the Express library you call the `require()` function in your index.js file to include it in your application. Create this file now, in the root of the "myapp" application directory, and give it the following contents:
+4. To use the Express library you call the `require()` function in your index.js file to include it in your application. Create this file now, in the root of the "myapp" application directory, and give it the following contents:
 
     ```js
     const express = require('express')
@@ -222,14 +222,14 @@ The following steps show how you can use NPM to download a package, save it into
 
     This code shows a minimal "HelloWorld" Express web application. This imports the "express" module using `require()` and uses it to create a server (`app`) that listens for HTTP requests on port 8000 and prints a message to the console explaining what browser URL you can use to test the server. The `app.get()` function only responds to HTTP `GET` requests with the specified URL path ('/'), in this case by calling a function to send our _Hello World!_ message.
 
-6. You can start the server by calling node with the script in your command prompt:
+5. You can start the server by calling node with the script in your command prompt:
 
     ```bash
     >node index.js
     Example app listening on port 8000
     ```
 
-7. Navigate to the URL (<http://127.0.0.1:8000/>). If everything is working, the browser should simply display the string "Hello World!".
+6. Navigate to the URL (<http://127.0.0.1:8000/>). If everything is working, the browser should simply display the string "Hello World!".
 
 ### Development dependencies
 

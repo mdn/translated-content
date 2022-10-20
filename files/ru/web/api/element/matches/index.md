@@ -64,8 +64,6 @@ var result = element.matches(selectorString)
 })(Element.prototype);
 ```
 
-##
-
 ## Спецификация
 
 {{Specifications}}

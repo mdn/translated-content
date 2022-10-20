@@ -26,7 +26,7 @@ formData.append(name, value, filename);
   - : Имя поля, которое будет содержать данные из `value`.
 - `value`
   - : Значение поля. В варианте с двумя параметрами, это является {{domxref("USVString")}}, если значение не является строкой, то оно будет в неё конвертировано. В варианте с тремя параметрами это может быть {{domxref("Blob")}}, {{domxref("File")}}, или {{domxref("USVString")}}, И снова, если ни один из них не указан в значении то оно будет конвертировано в строку.
-- `filename `{{optional_inline}}
+- `filename` {{optional_inline}}
   - : Имя файла которое будет отправлено серверу ({{domxref("USVString")}}), когда {{domxref("Blob")}} или {{domxref("File")}} прошёл проверку как второй параметр. Стандартное имя файла для {{domxref("Blob")}} объектов это "blob".
 
 > **Примечание:** Если вы укажете {{domxref("Blob")}} в качестве данных для включения в объект `FormData`, имя файла будет указано для сервера в заголовке "Content-Disposition" и может отличаться от браузера к браузеру.
@@ -72,6 +72,6 @@ formData.append('userpic[]', myFileInput2.files[0], 'chris2.jpg');
 ## Смотрите также
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Using FormData objects](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

@@ -130,11 +130,11 @@ div {
 
 ## Compatibilidade com navegadores
 
-Please see the [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) data type for compatibility info.
+Please see the [`<transform-function>`](/pt-BR/docs/Web/CSS/transform-function#Browser_compatibility) data type for compatibility info.
 
 ## See also
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`matrix3d()`](/en-US/docs/Web/CSS/transform-function/matrix3d)
+- [`matrix3d()`](/pt-BR/docs/Web/CSS/transform-function/matrix3d)
 - [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

@@ -43,7 +43,7 @@ element.scrollHeight - element.scrollTop === element.clientHeight
 
 ## Пример работы scrollHeight
 
-Если объединить это выражение с событием [`onscroll`](/en-US/docs/DOM/element.onscroll "en-US/docs/DOM/element.onscroll"), оно может быть использовано для того, чтобы определить, прочитал ли пользователь текст, или нет (см. также свойства [`element.scrollTop`](/en-US/docs/DOM/element.scrollTop "en-US/docs/DOM/element.scrollTop") и [`element.clientHeight`](/en-US/docs/DOM/element.clientHeight "en-US/docs/DOM/element.clientHeight")). Например:
+Если объединить это выражение с событием [`onscroll`](/en-US/docs/DOM/element.onscroll), оно может быть использовано для того, чтобы определить, прочитал ли пользователь текст, или нет (см. также свойства [`element.scrollTop`](/en-US/docs/DOM/element.scrollTop) и [`element.clientHeight`](/en-US/docs/DOM/element.clientHeight)). Например:
 
 ### HTML
 
@@ -149,4 +149,4 @@ onload = function () {
 - [MSDN Измерение размера и положения элемента с помощью CSSOM в Internet Explorer 9](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
 - {{domxref("Element.clientHeight")}}
 - {{domxref("HTMLElement.offsetHeight")}}
-- [Определение размеров элементов](/ru/docs/Determining_the_dimensions_of_elements "en/Determining_the_dimensions_of_elements")
+- [Определение размеров элементов](/ru/docs/Determining_the_dimensions_of_elements)
