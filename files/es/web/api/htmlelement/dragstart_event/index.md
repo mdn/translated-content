@@ -7,10 +7,7 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.dragstart_event
 ---
 
-# HTMLElement: dragstart event
-
 El evento `dragstart` se dispara cuando el usuario arrastra un elemento o una selección de texto.
-
 
 ## Sintaxis
 
@@ -22,13 +19,11 @@ addEventListener('dragstart', (event) => {});
 ondragstart = (event) => { };
 ```
 
-
 ## Tipo de Evento
 
 Un {{domxref("DragEvent")}}. Hereda de {{domxref("Event")}}.
 
 {{InheritanceDiagram("DragEvent")}}
-
 
 ## Propiedades del Evento
 
@@ -36,7 +31,6 @@ _En adición a las propiedades listadas, a continuación las propiedades de la i
 
 - {{domxref("DragEvent/dataTransfer", "DragEvent.dataTransfer")}} {{ReadOnlyInline}}
   - : Los datos que se transfieren durante una interacción de arrastrar y soltar.
-
 
 ## Ejemplos
 
@@ -56,7 +50,6 @@ For a more complete example of [drag](https://developer.mozilla.org/en-US/docs/W
 </div>
 <div class="dropzone"></div>
 ```
-
 
 #### CSS
 
@@ -80,7 +73,6 @@ body {
 }
 ```
 
-
 #### JavaScript
 
 ```js
@@ -95,26 +87,22 @@ source.addEventListener("dragend", (event) => {
 });
 ```
 
-
 #### Resultado
 
 {{EmbedLiveSample('Configurar la opacidad al inicio del movimiento')}}
-
 
 ## Especificaciones
 
 {{Specifications}}
 
-
 ## Compatibilidad con navegadores
 
 {{Compat}}
 
-
 ## Véase también
 
 - Otros eventos de arrastre:
-  
+
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragend_event", "dragend")}}
   - {{domxref("HTMLElement/dragover_event", "dragover")}}
@@ -123,7 +111,7 @@ source.addEventListener("dragend", (event) => {
   - {{domxref("HTMLElement/drop_event", "drop")}}
 
 - Este evento en otros objetivos:
-  
+
   - {{domxref("Window")}}: {{domxref("Window/dragstart_event", "dragstart")}} event
   - {{domxref("Document")}}: {{domxref("Document/dragstart_event", "dragstart")}} event
   - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragstart_event", "dragstart")}} event

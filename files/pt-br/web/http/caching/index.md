@@ -22,7 +22,7 @@ _Caching_ é uma técnica que guarda uma cópia de dado recurso e mostra de volt
 
 Há muitos tipos de caches: estes podem ser agrupados em duas categorias principais, caches privados ou compartilhados. Um _cache compartilhado_ é um cache que armazena respostas para serem reusadas por mais de um usuário. Um _cache privado_ é dedicado a um único usuário. Esta página irá falar principalmente sobre caches em navegadores e em _proxy_, mas há também caches de _gateway_, CDN, cache de proxy reverso e balanceadores de carga (_load balancers)_ que são implantados em servers da web para melhor confiabilidade, desempenho e dimensionamento de sites e aplicativos da web.
 
-![What a cache provide, advantages/disadvantages of shared/private caches.](/en-US/docs/Web/HTTP/Caching/http_cache_type.png)
+![What a cache provide, advantages/disadvantages of shared/private caches.](/pt-BR/docs/Web/HTTP/Caching/http_cache_type.png)
 
 ### Caches privados de browser
 
