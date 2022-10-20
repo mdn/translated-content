@@ -1,6 +1,6 @@
 ---
 title: 'Document: pointerout イベント'
-slug: conflicting/Web/API/Element/pointerout_event
+slug: Web/API/Element/pointerout_event
 original_slug: Web/API/Document/pointerout_event
 ---
 

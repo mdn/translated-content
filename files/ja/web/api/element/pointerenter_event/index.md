@@ -1,6 +1,6 @@
 ---
 title: 'Document: pointerenter イベント'
-slug: conflicting/Web/API/Element/pointerenter_event
+slug: Web/API/Element/pointerenter_event
 original_slug: Web/API/Document/pointerenter_event
 ---
 
