@@ -24,7 +24,7 @@ jobs:
       github.event.workflow_run.conclusion == 'success' }}
 
     steps:
-      - name: 'Download artifact'
+      - name: "Download artifact"
         uses: actions/github-script@v6
         with:
           script: |
