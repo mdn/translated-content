@@ -288,7 +288,7 @@ input:valid + span::after {
 
 ### 模式验证
 
-如果你想进一步限制输入的数字，使它们也必须符合特定的模式，你可以使用 {{htmlattrxref("pattern", "input")}} 属性，它的值是 {{Glossary("regular expression", "正则表达式")}}，输入的值必须符合这个正则表达式。
+如果你想进一步限制输入的数字，使它们也必须符合特定的模式，你可以使用 {{htmlattrxref("pattern", "input")}} 属性，它的值是{{Glossary("regular expression", "正则表达式")}}，输入的值必须符合这个正则表达式。
 
 在这个示例中我们将使用同样的 CSS 代码，但是 HTML 代码将做一些修改：
 
