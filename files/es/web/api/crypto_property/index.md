@@ -4,38 +4,26 @@ slug: Web/API/crypto_property
 translation_of: Web/API/Window/crypto
 original_slug: Web/API/Window/crypto
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>La propiedad de sólo lectura {{domxref("Window.crypto")}} devuelve el objeto <a href="/es/docs/Web/API/Crypto">Crypto</a> asociado a un objeto global. Este objeto permite a las páginas web acceder a ciertos servicios relacionados con criptografía.</p>
+La propiedad de sólo lectura {{domxref("Window.crypto")}} devuelve el objeto [Crypto](/es/docs/Web/API/Crypto) asociado a un objeto global. Este objeto permite a las páginas web acceder a ciertos servicios relacionados con criptografía.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <em>cryptoObj</em> = window.crypto || window.msCrypto; // para IE 11
-</pre>
+```
+var cryptoObj = window.crypto || window.msCrypto; // para IE 11
+```
 
-<h2 id="Specification" name="Specification">Especificaciones</h2>
+## Especificaciones
 
-<table class="">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Crypto API')}}</td>
-   <td>{{Spec2('Web Crypto API')}}</td>
-   <td>Definición Inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                           | Estado                               | Comentario         |
+| ---------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('Web Crypto API')}} | {{Spec2('Web Crypto API')}} | Definición Inicial |
 
-<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
+## Compatibilidad de Navegadores
 
 {{Compat("api.crypto")}}
 
-<h2 id="Ver_También">Ver También</h2>
+## Ver También
 
-<ul>
- <li>El objeto Global {{domxref("Window")}}</li>
-</ul>
+- El objeto Global {{domxref("Window")}}

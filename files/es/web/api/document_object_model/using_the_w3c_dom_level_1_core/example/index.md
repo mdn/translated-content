@@ -6,10 +6,11 @@ tags:
   - Ejemplo
 translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
 ---
-<pre> &lt;html&gt;
- &lt;head&gt;
-   &lt;title&gt;Mi Documento&lt;/title&gt;
-   &lt;script type="text/javascript"&gt;
+```
+ <html>
+ <head>
+   <title>Mi Documento</title>
+   <script type="text/javascript">
    function cambio() {
      // document.getElementsByTagName("H1") retorna un NodeList de elementos
      // h1 en el documento, y el primero es numero 0:
@@ -29,12 +30,12 @@ translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Exa
      // BODY (el cuál es el padre de "para")
      para.parentNode.appendChild(newElement);
    }
-   &lt;/script&gt;
- &lt;/head&gt;
- &lt;body&gt;
-   &lt;input type="button" value="Cambia este documento." onclick="cambio()"&gt;
-   &lt;h1&gt;Encabezado&lt;/h1&gt;
-   &lt;p&gt;Parrafo&lt;/p&gt;
- &lt;/body&gt;
- &lt;/head&gt;
-</pre>
+   </script>
+ </head>
+ <body>
+   <input type="button" value="Cambia este documento." onclick="cambio()">
+   <h1>Encabezado</h1>
+   <p>Parrafo</p>
+ </body>
+ </head>
+```

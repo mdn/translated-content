@@ -9,211 +9,191 @@ tags:
 translation_of: Web/API/Document_Object_Model/Introduction
 original_slug: Referencia_DOM_de_Gecko/Introducción
 ---
-<p> </p>
+Ésta sección da una breve introducción conceptual del [DOM](es/DOM): qué es, cómo proporciona la estructura para los documentos [HTML](es/HTML) y [XML](es/XML), cómo se accede a él, y cómo esta ["API"](https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones) presenta la información de referencia y ejemplos.
 
-<p>Ésta sección da una breve introducción conceptual del <a href="es/DOM">DOM</a>: qué es, cómo proporciona la estructura para los documentos <a href="es/HTML">HTML</a> y <a href="es/XML">XML</a>, cómo se accede a él, y cómo esta <a href="https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones">"API"</a> presenta la información de referencia y ejemplos.</p>
+## ¿Qué es el DOM?
 
-<h2 id=".C2.BFQu.C3.A9_es_el_DOM.3F" name=".C2.BFQu.C3.A9_es_el_DOM.3F">¿Qué es el DOM?</h2>
+El modelo de objeto de documento (DOM) es una interfaz de programación para los documentos HTML y XML. Facilita una representación estructurada del documento y define de qué manera los programas pueden acceder, al fin de modificar, tanto su estructura, estilo y contenido. El DOM da una representación del documento como un grupo de nodos y objetos estructurados que tienen propiedades y métodos. Esencialmente, conecta las páginas web a scripts o lenguajes de programación.
 
-<p>El modelo de objeto de documento (DOM) es una interfaz de programación para los documentos HTML y XML. Facilita una representación estructurada del documento y define de qué manera los programas pueden acceder, al fin de modificar, tanto su estructura, estilo y contenido. El DOM da una representación del documento como un grupo de nodos y objetos estructurados que tienen propiedades y métodos. Esencialmente, conecta las páginas web a scripts o lenguajes de programación.</p>
+Una página web es un documento. Éste documento puede exhibirse en la ventana de un navegador o también como código fuente HTML. Pero, en los dos casos, es el mismo documento. El modelo de objeto de documento (DOM) proporciona otras formas de presentar, guardar y manipular este mismo documento. El DOM es una representación completamente orientada al objeto de la página web y puede ser modificado con un lenguaje de script como JavaScript.
 
-<p>Una página web es un documento. Éste documento puede exhibirse en la ventana de un navegador o también como código fuente HTML. Pero, en los dos casos, es el mismo documento. El modelo de objeto de documento (DOM) proporciona otras formas de presentar, guardar y manipular este mismo documento. El DOM es una representación completamente orientada al objeto de la página web y puede ser modificado con un lenguaje de script como JavaScript.</p>
+El [W3C DOM](http://www.w3.org/DOM/) estándar forma la base del funcionamiento del DOM en muchos navegadores modernos. Varios navegadores ofrecen extensiones más allá del estándar W3C, hay que ir con extremo cuidado al utilizarlas en la web, ya que los documentos pueden ser consultados por navegadores que tienen DOMs diferentes.
 
-<p>El <a class="external" href="http://www.w3.org/DOM/">W3C DOM</a> estándar forma la base del funcionamiento del DOM en muchos navegadores modernos. Varios navegadores ofrecen extensiones más allá del estándar W3C, hay que ir con extremo cuidado al utilizarlas en la web, ya que los documentos pueden ser consultados por navegadores que tienen DOMs diferentes.</p>
+Por ejemplo, el DOM de W3C especifica que el método `getElementsByTagName` en el código de abajo debe devolver una lista de todos los elementos `<p>` del documento:
 
-<p>Por ejemplo, el DOM de W3C especifica que el método <code>getElementsByTagName</code> en el código de abajo debe devolver una lista de todos los elementos <code>&lt;p&gt;</code> del documento:</p>
+```js
+paragraphs = document.getElementsByTagName ("p");
+// paragraphs[0] es el primer elemento <p>
+// paragraphs[1] es el segundo elemento <p>, etc.
+alert (paragraphs [0].nodeName);
+```
 
-<pre class="brush: js">paragraphs<font><font> = document.getElementsByTagName ("p");</font></font>
-// paragraphs[0] es el primer elemento &lt;p&gt;
-// paragraphs[1] es el segundo elemento &lt;p&gt;, etc.<font><font>
-alert (</font></font>paragraphs<font><font> [0].nodeName);</font></font>
-</pre>
+Todas las propiedades, métodos y eventos disponibles para la manipulación y la creación de páginas web está organizado dentro de objetos. Un ejemplo: el objeto `document` representa al documento mismo, el objeto `table` hace funcionar la interfaz especial `HTMLTableElement` del DOM para acceder a tablas HTML, y así sucesivamente. Ésta documentación procura una relación objeto-por-objeto del DOM que funciona con los navegadores basados en Gecko.
 
-<p>Todas las propiedades, métodos y eventos disponibles para la manipulación y la creación de páginas web está organizado dentro de objetos. Un ejemplo: el objeto <code>document</code> representa al documento mismo, el objeto <code>table</code> hace funcionar la interfaz especial <code>HTMLTableElement</code> del DOM para acceder a tablas HTML, y así sucesivamente. Ésta documentación procura una relación objeto-por-objeto del DOM que funciona con los navegadores basados en Gecko.</p>
+## DOM y JavaScript
 
-<h2 id="DOM_y_JavaScript" name="DOM_y_JavaScript"><font><font><font><font>DOM y JavaScript</font></font></font></font></h2>
+El ejemplo corto de abajo, como casi todos los ejemplos de esta referencia, es [JavaScript](es/JavaScript). Es decir, es _escrito_ en JavaScript pero _utiliza_ el DOM para acceder al documento y a sus elementos. El DOM no es un lenguaje de programación pero sin él, el lenguaje JavaScript no tiene ningún modelo o noción de las páginas web, de la páginas XML ni de los elementos con los cuales es usualmente relacionado. Cada elemento -"el documento íntegro, el título, las tablas dentro del documento, los títulos de las tablas, el texto dentro de las celdas de las tablas"- es parte del modelo de objeto del documento para cada documento, así se puede acceder y manipularlos utilizando el DOM y un lenguaje de escritura, como JavaScript.
 
-<p>El ejemplo corto de abajo, como casi todos los ejemplos de esta referencia, es <a href="es/JavaScript">JavaScript</a>. Es decir, es <em>escrito</em> en JavaScript pero <em>utiliza</em> el DOM para acceder al documento y a sus elementos. El DOM no es un lenguaje de programación pero sin él, el lenguaje JavaScript no tiene ningún modelo o noción de las páginas web, de la páginas XML ni de los elementos con los cuales es usualmente relacionado. Cada elemento -"el documento íntegro, el título, las tablas dentro del documento, los títulos de las tablas, el texto dentro de las celdas de las tablas"- es parte del modelo de objeto del documento para cada documento, así se puede acceder y manipularlos utilizando el DOM y un lenguaje de escritura, como JavaScript.</p>
+En el comienzo, JavaScript y el DOM estaban herméticamente enlazados, pero después se desarrollaron como entidades separadas. El contenido de la página es almacenado en DOM y el acceso y la manipulación se hace vía JavaScript, podría representarse aproximadamente así:
 
-<p>En el comienzo, JavaScript y el DOM estaban herméticamente enlazados, pero después se desarrollaron como entidades separadas. El contenido de la página es almacenado en DOM y el acceso y la manipulación se hace vía JavaScript, podría representarse aproximadamente así:</p>
+API(web o página XML) = DOM + JS(lenguaje de script)
 
-<p>API(web o página XML) = DOM + JS(lenguaje de script)</p>
+El DOM fue diseñado para ser independiente de cualquier lenguaje de programación particular, hace que la presentación estructural del documento sea disponible desde un simple y consistente API. Aunque en este manual nos centramos exclusivamente en JavaScript, la directrices del DOM pueden construirse para cualquier lenguaje, así lo demuestra el siguiente ejemplo de Python:
 
-<p>El DOM fue diseñado para ser independiente de cualquier lenguaje de programación particular, hace que la presentación estructural del documento sea disponible desde un simple y consistente API. Aunque en este manual nos centramos exclusivamente en JavaScript, la directrices del DOM pueden construirse para cualquier lenguaje, así lo demuestra el siguiente ejemplo de Python:</p>
-
-<pre class="brush: python line-numbers  language-python"><code class="language-python"># Ejemplo DOM de Python
+```python
+# Ejemplo DOM de Python
 import xml.dom.minidom as m
 doc = m.parse("C:\\Projects\\Py\\chap1.xml");
 doc.nodeName # Propiedad DOM del objeto document;
-p_list = doc.getElementsByTagName("para");</code></pre>
+p_list = doc.getElementsByTagName("para");
+```
 
-<h2 id=".C2.BFC.C3.B3mo_se_accede_al_DOM.3F" name=".C2.BFC.C3.B3mo_se_accede_al_DOM.3F">¿Cómo se accede al DOM?</h2>
+## ¿Cómo se accede al DOM?
 
-<p>No se tiene que hacer nada especial para empezar a utilizar el DOM. Los diferentes navegadores tienen directrices DOM distintas, y éstas directrices tienen diversos grados de conformidad al actual estándar DOM (un tema que se intenta evitar en este manual), pero todos los navegadores web usan el modelo de objeto de documento para hacer accesibles las páginas web al script.</p>
+No se tiene que hacer nada especial para empezar a utilizar el DOM. Los diferentes navegadores tienen directrices DOM distintas, y éstas directrices tienen diversos grados de conformidad al actual estándar DOM (un tema que se intenta evitar en este manual), pero todos los navegadores web usan el modelo de objeto de documento para hacer accesibles las páginas web al script.
 
-<p>Cuando se crea un script –esté en un elemento <code>&lt;SCRIPT&gt;</code> o incluido en una página web por la instrucción de cargar un script– inmediatamente está disponible para usarlo con el API, accediendo así a los elementos <code><a href="es/DOM/document">document</a></code> o <code><a href="es/DOM/window">window</a></code>, para manipular el documento mismo o sus diferentes partes, las cuales son los varios elementos de una página web. La programación DOM hace algo tan simple como lo siguiente, lo cual abre un mensaje de alerta usando la función <code><a href="es/DOM/window.alert">alert()</a></code> desde el objeto <code><a href="es/DOM/window">window</a></code>, o permite métodos DOM más sofisticados para crear realmente un nuevo contenido, como en el largo ejemplo de más abajo.</p>
+Cuando se crea un script –esté en un elemento `<SCRIPT>` o incluido en una página web por la instrucción de cargar un script– inmediatamente está disponible para usarlo con el API, accediendo así a los elementos [`document`](es/DOM/document) o [`window`](es/DOM/window), para manipular el documento mismo o sus diferentes partes, las cuales son los varios elementos de una página web. La programación DOM hace algo tan simple como lo siguiente, lo cual abre un mensaje de alerta usando la función [`alert()`](es/DOM/window.alert) desde el objeto [`window`](es/DOM/window), o permite métodos DOM más sofisticados para crear realmente un nuevo contenido, como en el largo ejemplo de más abajo.
 
-<pre class="brush: html">&lt;body onload="window.alert('Bienvenido a mi página!');"&gt;
-</pre>
+```html
+<body onload="window.alert('Bienvenido a mi página!');">
+```
 
-<p>Aparte del elemento <code>&lt;script&gt;</code> en el cual JavaScript es definido, el ejemplo siguiente muestra la función a ejecutar cuando el documento se está cargando (y que el DOM completo es disponible para su uso). Esta función crea un nuevo elemento <code>H1</code>, le pone texto y después lo agrega al árbol del documento:</p>
+Aparte del elemento `<script>` en el cual JavaScript es definido, el ejemplo siguiente muestra la función a ejecutar cuando el documento se está cargando (y que el DOM completo es disponible para su uso). Esta función crea un nuevo elemento `H1`, le pone texto y después lo agrega al árbol del documento:
 
-<pre class="brush: html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span><span class="punctuation token">&gt;</span></span></code><code class="language-html">
-  </code><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
-       <span class="comment token">// ejecuta esta función cuando se cargue el documento</span>
-       window<span class="punctuation token">.</span>onload <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+```html
+<html>
+  <head>
+    <script>
+       // ejecuta esta función cuando se cargue el documento
+       window.onload = function() {
 
-         <span class="comment token">// </span></span></code>crea dinámicamente un par de elementos HTML en una página vacia<code class="language-html"><span class="language-javascript script token">
-         <span class="keyword token">var</span> heading <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"h1"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-         <span class="keyword token">var</span> heading_text <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createTextNode</span><span class="punctuation token">(</span><span class="string token">"</span></span></code>el texto que desee<code class="language-html"><span class="language-javascript script token"><span class="string token">"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-         heading<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>heading_text<span class="punctuation token">)</span><span class="punctuation token">;</span>
-         document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>heading<span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="punctuation token">}</span>
-    </span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
+         // crea dinámicamente un par de elementos HTML en una página vacia
+         var heading = document.createElement("h1");
+         var heading_text = document.createTextNode("el texto que desee");
+         heading.appendChild(heading_text);
+         document.body.appendChild(heading);
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+```
 
-<h2 id="Tipos_de_datos_importantes" name="Tipos_de_datos_importantes">Tipos de datos importantes</h2>
+## Tipos de datos importantes
 
-<p>Esta parte intenta describir, de la manera más simple posible, los diferentes objetos y tipos. Pero hay que conocer una cantidad de tipos de datos diferentes que son utilizados por el API. Para simplificarlo, los ejemplos de sintaxis en esta API se refieren a nodos como <code>elements</code>, a una lista de nodos como <code>nodeLists</code> (o simples <code>elementos</code>) y a nodos de <code>atributo</code> como <code>attributes</code>.</p>
+Esta parte intenta describir, de la manera más simple posible, los diferentes objetos y tipos. Pero hay que conocer una cantidad de tipos de datos diferentes que son utilizados por el API. Para simplificarlo, los ejemplos de sintaxis en esta API se refieren a nodos como `elements`, a una lista de nodos como `nodeLists` (o simples `elementos`) y a nodos de `atributo` como `attributes`.
 
-<p>La siguiente tabla describe brevemente estos tipos de datos.</p>
+La siguiente tabla describe brevemente estos tipos de datos.
 
 «Tabla»
 
-<h2 id="Interfaces_del_DOM" name="Interfaces_del_DOM">Interfaces del DOM</h2>
+## Interfaces del DOM
 
-<p>Uno de los propósitos de esta guía es minimizar el hablar de interfaces abstractas, heredadas y otros detalles de funcionamiento. Más bien, concentrarse sobre los objetos en el DOM y sobre las actuales <em>cosas</em> que se pueden usar para manipular la jerarquía de DOM. Desde el punto de vista del programador web, es bastante indiferente saber que la representación del objeto del elemento <code>HTML form</code> toma la propidedad <strong>name</strong> desde la interfaz <code>HTMLFormElement</code> pero que las propiedades <code><strong>className</strong> </code>se toman desde la propia interfaz <code>HTMLElement</code>. En ambos casos, la propiedad está sólo en el objeto <code>form</code>.</p>
+Uno de los propósitos de esta guía es minimizar el hablar de interfaces abstractas, heredadas y otros detalles de funcionamiento. Más bien, concentrarse sobre los objetos en el DOM y sobre las actuales _cosas_ que se pueden usar para manipular la jerarquía de DOM. Desde el punto de vista del programador web, es bastante indiferente saber que la representación del objeto del elemento `HTML form` toma la propidedad **name** desde la interfaz `HTMLFormElement` pero que las propiedades `className `se toman desde la propia interfaz `HTMLElement`. En ambos casos, la propiedad está sólo en el objeto `form`.
 
-<p>Pero puede resultar confuso el funcionamiento de la fuerte relación entre objetos e interfaces en el DOM, por eso esta sección intentará hablar un poquito sobre las interfaces actuales en la especificación del DOM y de como se dispone de ellas.</p>
+Pero puede resultar confuso el funcionamiento de la fuerte relación entre objetos e interfaces en el DOM, por eso esta sección intentará hablar un poquito sobre las interfaces actuales en la especificación del DOM y de como se dispone de ellas.
 
-<h2 id="Interfaces_y_objetos" name="Interfaces_y_objetos">Interfaces y objetos</h2>
+## Interfaces y objetos
 
-<p>En algunos casos un objeto pone en ejecución a una sola interfaz. Pero a menudo un objeto toma prestada una tabla HTML (<code>table</code>) desde muchas interfaces diversas. El objeto table, por ejemplo, pone en funcionamiento una <a href="es/DOM/tabla">Interfaz especial del elemento table HTML</a>, la cual incluye métodos como <code>createCaption</code> y <code>insertRow</code>. Pero como también es un elemento HTML, table pone en marcha a la interfaz del <code>Element</code> descrita en el capítulo <a href="es/Referencia_DOM_de_Gecko/elemento">La referencia al elemento del DOM</a>. Y finalmente, puesto que un elemento HTML es también, por lo que concierna al DOM, un nodo en el árbol de nodos que hace el modelo de objeto para una página web o XML, el elemento de table hace funcionar la interfaz más básica de <code>Node</code>, desde el cual deriva <code>Element</code>.</p>
+En algunos casos un objeto pone en ejecución a una sola interfaz. Pero a menudo un objeto toma prestada una tabla HTML (`table`) desde muchas interfaces diversas. El objeto table, por ejemplo, pone en funcionamiento una [Interfaz especial del elemento table HTML](es/DOM/tabla), la cual incluye métodos como `createCaption` y `insertRow`. Pero como también es un elemento HTML, table pone en marcha a la interfaz del `Element` descrita en el capítulo [La referencia al elemento del DOM](es/Referencia_DOM_de_Gecko/elemento). Y finalmente, puesto que un elemento HTML es también, por lo que concierna al DOM, un nodo en el árbol de nodos que hace el modelo de objeto para una página web o XML, el elemento de table hace funcionar la interfaz más básica de `Node`, desde el cual deriva `Element`.
 
-<p>La referencia a un objeto <code>table</code>, como en el ejemplo siguiente, utiliza estas interfaces intercambiables sobre el objeto.</p>
+La referencia a un objeto `table`, como en el ejemplo siguiente, utiliza estas interfaces intercambiables sobre el objeto.
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> table <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"table"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> tableAttrs <span class="operator token">=</span> table<span class="punctuation token">.</span>attributes<span class="punctuation token">;</span> <span class="comment token">// Node/interfaz Element</span>
-<span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> tableAttrs<span class="punctuation token">.</span>length<span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// interfaz HTMLTableElement: atributo border</span>
-  <span class="keyword token">if</span><span class="punctuation token">(</span>tableAttrs<span class="punctuation token">[</span>i<span class="punctuation token">]</span><span class="punctuation token">.</span>nodeName<span class="punctuation token">.</span><span class="function token">toLowerCase</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">==</span> <span class="string token">"border"</span><span class="punctuation token">)</span>
-    table<span class="punctuation token">.</span>border <span class="operator token">=</span> <span class="string token">"1"</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-<span class="comment token">// interfaz HTMLTableElement: atributo summary</span>
-table<span class="punctuation token">.</span>summary <span class="operator token">=</span> <span class="string token">"nota: borde aumentado"</span><span class="punctuation token">;</span></code></pre>
+```js
+var table = document.getElementById("table");
+var tableAttrs = table.attributes; // Node/interfaz Element
+for (var i = 0; i < tableAttrs.length; i++) {
+  // interfaz HTMLTableElement: atributo border
+  if(tableAttrs[i].nodeName.toLowerCase() == "border")
+    table.border = "1";
+}
+// interfaz HTMLTableElement: atributo summary
+table.summary = "nota: borde aumentado";
+```
 
-<h2 id="Interfaces_esenciales_en_el_DOM" name="Interfaces_esenciales_en_el_DOM">Interfaces esenciales en el DOM</h2>
+## Interfaces esenciales en el DOM
 
-<p>Esta sección lista las interfaces más comúnmente utilizadas en el DOM. La idea no es describir qué hacen estas APIs pero sí dar una idea de las clases de métodos y propiedades que se encuentran con el uso del DOM. Muchos ejemplos de uso común de esta API se encuentran en el capítulo <a href="es/Referencia_DOM_de_Gecko/Ejemplos">Ejemplos DOM</a> al final de este manual.</p>
+Esta sección lista las interfaces más comúnmente utilizadas en el DOM. La idea no es describir qué hacen estas APIs pero sí dar una idea de las clases de métodos y propiedades que se encuentran con el uso del DOM. Muchos ejemplos de uso común de esta API se encuentran en el capítulo [Ejemplos DOM](es/Referencia_DOM_de_Gecko/Ejemplos) al final de este manual.
 
-<p><code>document</code> y <code>window</code> son objetos cuya interfaces son generalmente muy usadas en la programación de DOM. En término simple, el objeto <code>window</code> representa algo como podría ser el navegador, y el objeto <code>document</code> es la raíz del documento en sí. <code>Element</code> hereda de la interfaz genérica <code>Node</code>, y juntos, estas dos interfaces proporcionan muchos métodos y propiedades utilizables sobre los elementos individuales. Éstos elementos pueden igualmente tener interfaces específicas según el tipo de datos representados, como en el ejemplo anterior del objeto <code>table</code>. Lo siguiente es una breve lista de los APIS comunes en la web y en las páginas escritas en XML utilizando el DOM.</p>
+`document` y `window` son objetos cuya interfaces son generalmente muy usadas en la programación de DOM. En término simple, el objeto `window` representa algo como podría ser el navegador, y el objeto `document` es la raíz del documento en sí. `Element` hereda de la interfaz genérica `Node`, y juntos, estas dos interfaces proporcionan muchos métodos y propiedades utilizables sobre los elementos individuales. Éstos elementos pueden igualmente tener interfaces específicas según el tipo de datos representados, como en el ejemplo anterior del objeto `table`. Lo siguiente es una breve lista de los APIS comunes en la web y en las páginas escritas en XML utilizando el DOM.
 
-<ul>
- <li><code><a href="es/DOM/document.getElementById">document.getElementById</a>(id)</code></li>
- <li><code>element.<a href="es/DOM/element.getElementsByTagName">getElementsByTagName</a>(name)</code></li>
- <li><code><a href="es/DOM/document.createElement">document.createElement</a>(name)</code></li>
- <li><code>parentNode.<a href="es/DOM/element.appendChild">appendChild</a>(node)</code></li>
- <li><code>element.<a href="es/DOM/element.innerHTML">innerHTML</a></code></li>
- <li><code>element.<a href="es/DOM/element.style">style</a>.left</code></li>
- <li><code>element.<a href="es/DOM/element.setAttribute">setAttribute</a></code></li>
- <li><code>element.<a href="es/DOM/element.getAttribute">element.getAttribute</a></code></li>
- <li><code>element.<a href="es/DOM/element.addEventListener">addEventListener</a></code></li>
- <li><code><a href="es/DOM/window.content">window.content</a></code></li>
- <li><code><a href="es/DOM/window.onload">window.onload</a></code></li>
- <li><code><a href="es/DOM/window.dump">window.dump</a></code></li>
- <li><code><a href="es/DOM/window.scrollTo">window.scrollTo</a></code></li>
-</ul>
+- `document.getElementById(id)`
+- `element.getElementsByTagName(name)`
+- `document.createElement(name)`
+- `parentNode.appendChild(node)`
+- `element.innerHTML`
+- `element.style.left`
+- `element.setAttribute`
+- `element.element.getAttribute`
+- `element.addEventListener`
+- [`window.content`](es/DOM/window.content)
+- [`window.onload`](es/DOM/window.onload)
+- [`window.dump`](es/DOM/window.dump)
+- [`window.scrollTo`](es/DOM/window.scrollTo)
 
-<h2 id="Probando_el_API_del_DOM" name="Probando_el_API_del_DOM">Probando el API del DOM</h2>
+## Probando el API del DOM
 
-<p>Ésta parte procura ejemplos para todas las interfaces usadas en el desarrollo web. En algunos casos, los ejemplos son páginas HTML enteras, con el acceso del DOM a un elemento de &lt;script&gt;, la interfaz necesaria (por ejemplo, botones) para la ejecución del script en un formulario, y también que los elementos HTML sobre los cuales opera el DOM se listen. Según el caso, los ejemplos se pueden copiar y pegar en un documento web para probarlos.</p>
+Ésta parte procura ejemplos para todas las interfaces usadas en el desarrollo web. En algunos casos, los ejemplos son páginas HTML enteras, con el acceso del DOM a un elemento de \<script>, la interfaz necesaria (por ejemplo, botones) para la ejecución del script en un formulario, y también que los elementos HTML sobre los cuales opera el DOM se listen. Según el caso, los ejemplos se pueden copiar y pegar en un documento web para probarlos.
 
-<p>No es el caso donde los ejemplos son muchos más concisos. Para la ejecución de estos ejemplos que sólo demuestran la relación básica entre la interfaz y los elementos HTML, resulta útil tener una página de prueba en la cual las interfaces serán fácilmente accesibles por los scripts. La muy simple página siguiente proporciona en las cabeceras un elemento de script en el cual se pondrán las funciones para testar la interfaz elegida, algunos elementos HTML con atributos que se puedan leer, editar y también manipular, así como la interfaz web necesaria para llamar esas funciones desde el navegador.</p>
+No es el caso donde los ejemplos son muchos más concisos. Para la ejecución de estos ejemplos que sólo demuestran la relación básica entre la interfaz y los elementos HTML, resulta útil tener una página de prueba en la cual las interfaces serán fácilmente accesibles por los scripts. La muy simple página siguiente proporciona en las cabeceras un elemento de script en el cual se pondrán las funciones para testar la interfaz elegida, algunos elementos HTML con atributos que se puedan leer, editar y también manipular, así como la interfaz web necesaria para llamar esas funciones desde el navegador.
 
-<p>Para probar y ver como trabajan en la plataforma del navegador las interfaces del DOM, esta página de prueba o una nueva similar son factibles. El contenido de la función <code>test()</code> se puede actualizar según la necesidad, para crear más botones o poner más elementos.</p>
+Para probar y ver como trabajan en la plataforma del navegador las interfaces del DOM, esta página de prueba o una nueva similar son factibles. El contenido de la función `test()` se puede actualizar según la necesidad, para crear más botones o poner más elementos.
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>title</span><span class="punctuation token">&gt;</span></span>Pruebas DOM<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>title</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>application/javascript<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
-    <span class="keyword token">function</span> <span class="function token">setBodyAttr</span><span class="punctuation token">(</span>attr<span class="punctuation token">,</span> value<span class="punctuation token">)</span><span class="punctuation token">{</span>
-      <span class="keyword token">if</span> <span class="punctuation token">(</span>document<span class="punctuation token">.</span>body<span class="punctuation token">)</span> <span class="function token">eval</span><span class="punctuation token">(</span><span class="string token">'document.body.'</span><span class="operator token">+</span>attr<span class="operator token">+</span><span class="string token">'="'</span><span class="operator token">+</span>value<span class="operator token">+</span><span class="string token">'"'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="keyword token">else</span> <span class="function token">notSupported</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    </span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">margin</span><span class="punctuation token">:</span> <span class="number token">.5</span>in<span class="punctuation token">;</span> <span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">400</span><span class="punctuation token">;</span></span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>b</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>tt</span><span class="punctuation token">&gt;</span></span>texto<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>tt</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>b</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>form</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>select</span> <span class="attr-name token">onChange</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>setBodyAttr(<span class="punctuation token">'</span>text<span class="punctuation token">'</span>,
-        this.options[this.selectedIndex].value);<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-          <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>black<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>negro
-          <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>darkblue<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>azul oscuro
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>select</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>b</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>tt</span><span class="punctuation token">&gt;</span></span>bgColor<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>tt</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>b</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>select</span> <span class="attr-name token">onChange</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>setBodyAttr(<span class="punctuation token">'</span>bgColor<span class="punctuation token">'</span>,
-        this.options[this.selectedIndex].value);<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-          <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>white<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>blanco
-          <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>lightgrey<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>gris
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>select</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>b</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>tt</span><span class="punctuation token">&gt;</span></span>link<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>tt</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>b</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>select</span> <span class="attr-name token">onChange</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>setBodyAttr(<span class="punctuation token">'</span>link<span class="punctuation token">'</span>,
-        this.options[this.selectedIndex].value);<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-          <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>blue<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>azul
-          <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>green<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>verde
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>select</span><span class="punctuation token">&gt;</span></span>  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>small</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>a</span> <span class="attr-name token">href</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>http://www.brownhen.com/dom_api_top.html<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>sample<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-        (sample link)<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>a</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>small</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>form</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>form</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>button<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>version<span class="punctuation token">"</span></span> <span class="attr-name token">onclick</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>ver()<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>form</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
+```html
+<html>
+  <head>
+    <title>Pruebas DOM</title>
+    <script type="application/javascript">
+    function setBodyAttr(attr, value){
+      if (document.body) eval('document.body.'+attr+'="'+value+'"');
+      else notSupported();
+    }
+    </script>
+  </head>
+  <body>
+    <div style="margin: .5in; height: 400;">
+      <p><b><tt>texto</tt></b></p>
+      <form>
+        <select onChange="setBodyAttr('text',
+        this.options[this.selectedIndex].value);">
+          <option value="black">negro
+          <option value="darkblue">azul oscuro
+        </select>
+        <p><b><tt>bgColor</tt></b></p>
+        <select onChange="setBodyAttr('bgColor',
+        this.options[this.selectedIndex].value);">
+          <option value="white">blanco
+          <option value="lightgrey">gris
+        </select>
+        <p><b><tt>link</tt></b></p>
+        <select onChange="setBodyAttr('link',
+        this.options[this.selectedIndex].value);">
+          <option value="blue">azul
+          <option value="green">verde
+        </select>  <small>
+        <a href="http://www.brownhen.com/dom_api_top.html" id="sample">
+        (sample link)</a></small><br>
+      </form>
+      <form>
+        <input type="button" value="version" onclick="ver()" />
+      </form>
+    </div>
+  </body>
+</html>
+```
 
-<p>La creación de una página de prueba con una paleta de botones, campos de texto u otros elementos HTML, permitirá testar una gran cantidad de interfaces en un mismo documento, por ejemplo una serie de propiedades que afectan a los colores de una página web. Lo siguiente permite hacerse una idea de como pueden agruparse las interfaces para probarlas.</p>
+La creación de una página de prueba con una paleta de botones, campos de texto u otros elementos HTML, permitirá testar una gran cantidad de interfaces en un mismo documento, por ejemplo una serie de propiedades que afectan a los colores de una página web. Lo siguiente permite hacerse una idea de como pueden agruparse las interfaces para probarlas.
 
-<p><font><font>Figura 0.1 Muestra DOM página de prueba</font></font></p>
+Figura 0.1 Muestra DOM página de prueba
 
-<p><img alt="" src="https://developer.mozilla.org/@api/deki/files/173/=DOM_Ref_Introduction_to_the_DOM.gif" style="height: 375px; width: 199px;"></p>
+![](https://developer.mozilla.org/@api/deki/files/173/=DOM_Ref_Introduction_to_the_DOM.gif)
 
-<p>En este ejemplo, los menúes desplegables actualizan dinámicamente los aspectos de la página web accesibles al DOM como el color de fondo (<code>bgColor</code>), de los hiper-enlaces (<code>aLink</code>), y el del texto (<code>text</code>). El hecho de diseñar páginas, testar las interfaces que se encuentren a lo largo de la lectura son una parte importante del aprendizaje para una utilización eficaz del DOM.</p>
+En este ejemplo, los menúes desplegables actualizan dinámicamente los aspectos de la página web accesibles al DOM como el color de fondo (`bgColor`), de los hiper-enlaces (`aLink`), y el del texto (`text`). El hecho de diseñar páginas, testar las interfaces que se encuentren a lo largo de la lectura son una parte importante del aprendizaje para una utilización eficaz del DOM.
 
-<h2 id="Otros_enlaces"><strong>Otros enlaces</strong></h2>
+## Otros enlaces
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"><font><font>Referencia DOM</font></font></a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"><font><font>Introducción al DOM</font></font></a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events"><font><font>Eventos y el DOM</font></font></a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples"><font><font>Ejemplos</font></font></a></li>
-</ul>
-
-<div class="" id="s3gt_translate_tooltip_mini" style="background: initial !important; border: initial !important; border-radius: initial !important; border-collapse: initial !important; direction: ltr !important; font-weight: initial !important; height: initial !important; letter-spacing: initial !important; max-width: initial !important; min-height: initial !important; margin: auto !important; outline: initial !important; padding: initial !important; position: absolute; text-align: initial !important; text-shadow: initial !important; width: initial !important; display: initial !important; color: inherit !important; font-size: 13px !important; font-family: X-LocaleSpecific,sans-serif,Tahoma,Helvetica !important; line-height: 13px !important; vertical-align: top !important; white-space: inherit !important; left: 10px; top: 35px; opacity: 0.85;">
-<div class="" id="s3gt_translate_tooltip_mini_logo" title="Traducir texto seleccionado"> </div>
-
-<div class="" id="s3gt_translate_tooltip_mini_sound" title="Reproducir"> </div>
-
-<div class="" id="s3gt_translate_tooltip_mini_copy" title="Copy text to Clipboard"> </div>
-</div>
-
-<div class="" id="s3gt_translate_tooltip_mini" style="background: initial !important; border: initial !important; border-radius: initial !important; border-collapse: initial !important; direction: ltr !important; font-weight: initial !important; height: initial !important; letter-spacing: initial !important; max-width: initial !important; min-height: initial !important; margin: auto !important; outline: initial !important; padding: initial !important; position: absolute; text-align: initial !important; text-shadow: initial !important; width: initial !important; display: initial !important; color: inherit !important; font-size: 13px !important; font-family: X-LocaleSpecific,sans-serif,Tahoma,Helvetica !important; line-height: 13px !important; vertical-align: top !important; white-space: inherit !important; left: 39px; top: 1952px; opacity: 0.45;">
-<div class="" id="s3gt_translate_tooltip_mini_logo" title="Traducir texto seleccionado"> </div>
-
-<div class="" id="s3gt_translate_tooltip_mini_sound" title="Escuchar"> </div>
-
-<div class="" id="s3gt_translate_tooltip_mini_copy" title="Copiar texto al Portapapeles"> </div>
-</div>
-
-<div class="" id="s3gt_translate_tooltip_mini" style="background: initial !important; border: initial !important; border-radius: initial !important; border-collapse: initial !important; direction: ltr !important; font-weight: initial !important; height: initial !important; letter-spacing: initial !important; max-width: initial !important; min-height: initial !important; margin: auto !important; outline: initial !important; padding: initial !important; position: absolute; text-align: initial !important; text-shadow: initial !important; width: initial !important; display: initial !important; color: inherit !important; font-size: 13px !important; font-family: X-LocaleSpecific,sans-serif,Tahoma,Helvetica !important; line-height: 13px !important; vertical-align: top !important; white-space: inherit !important; left: 307px; top: 1961px; opacity: 0;">
-<div class="" id="s3gt_translate_tooltip_mini_logo" title="Traducir texto seleccionado"> </div>
-
-<div class="" id="s3gt_translate_tooltip_mini_sound" title="Escuchar"> </div>
-
-<div class="" id="s3gt_translate_tooltip_mini_copy" title="Copiar texto al Portapapeles"> </div>
-</div>
+- [Referencia DOM](/es/docs/Web/API/Document_Object_Model)
+- [Introducción al DOM](/es/docs/Web/API/Document_Object_Model/Introduction)
+- [Eventos y el DOM](/es/docs/Web/API/Document_Object_Model/Events)
+- [Ejemplos](/es/docs/Web/API/Document_Object_Model/Examples)

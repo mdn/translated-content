@@ -9,20 +9,21 @@ tags:
 translation_of: Web/API/Document_Object_Model/Examples
 original_slug: Referencia_DOM_de_Gecko/Ejemplos
 ---
-<p>En este capítulo se brindan ejemplos relativamente extensos que ilustran el uso del DOM para el desarrollo web y XML. Siempre que sea posible, usaremos las APIs, trucos y patrones comunes en JavaScript para la manipulación del objeto <code>document</code>.</p>
+En este capítulo se brindan ejemplos relativamente extensos que ilustran el uso del DOM para el desarrollo web y XML. Siempre que sea posible, usaremos las APIs, trucos y patrones comunes en JavaScript para la manipulación del objeto `document`.
 
-<h3 id="Ejemplo_1:_Altos_y_anchos" name="Ejemplo_1:_Altos_y_anchos">Ejemplo 1: Altos y anchos</h3>
+### Ejemplo 1: Altos y anchos
 
-<p>El ejemplo siguiente muestra el uso de las propiedades de alto (<code>height</code>) y ancho (<code>width</code>) junto a imágenes de dimensiones variadas:</p>
+El ejemplo siguiente muestra el uso de las propiedades de alto (`height`) y ancho (`width`) junto a imágenes de dimensiones variadas:
 
-<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd"&gt;
+```
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
 
-&lt;html lang="es"&gt;
+<html lang="es">
 
-&lt;head&gt;
-&lt;title&gt;Ejemplo de height/width&lt;/title&gt;
-&lt;script type="text/javascript"&gt;
+<head>
+<title>Ejemplo de height/width</title>
+<script type="text/javascript">
 function iniciar()
 {
   var arrImages = new Array(3);
@@ -30,153 +31,159 @@ function iniciar()
   arrImages[1] = document.getElementById("imagen2");
   arrImages[2] = document.getElementById("imagen3");
   var objOutput = document.getElementById("salida");
-  var strHtml = "&lt;ul&gt;";
-  for (var i = 0; i &lt; arrImages.length; i++)
-    strHtml += "&lt;li&gt;imagen" + (i+1) +
+  var strHtml = "<ul>";
+  for (var i = 0; i < arrImages.length; i++)
+    strHtml += "<li>imagen" + (i+1) +
             ": height=" + arrImages[i].height +
             ", width=" + arrImages[i].width +
             ", style.height=" + arrImages[i].style.height +
             ", style.width=" + arrImages[i].style.width +
-            "&lt;\/li&gt;";
-  strHtml += "&lt;\/ul&gt;";
+            "<\/li>";
+  strHtml += "<\/ul>";
   salida.innerHTML = strHtml;
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="iniciar();"&gt;
+</script>
+</head>
+<body onload="iniciar();">
 
-&lt;p&gt;La 1ª imagen:
+<p>La 1ª imagen:
 - alto (height): no
 - ancho (width): no
 - estilo (style): no
-    &lt;img id="imagen1" src="http://www.mozilla.org/images/mozilla-banner.gif"&gt;
-&lt;/p&gt;
-&lt;p&gt;La 2ª imagen:
+    <img id="imagen1" src="http://www.mozilla.org/images/mozilla-banner.gif">
+</p>
+<p>La 2ª imagen:
 - height="50"
 - width="500"
 - style: no
-    &lt;img id="imagen2" src="http://www.mozilla.org/images/mozilla-banner.gif"
-         height="50" width="500"&gt;
-&lt;/p&gt;
-&lt;p&gt;La 3ª imagen:
+    <img id="imagen2" src="http://www.mozilla.org/images/mozilla-banner.gif"
+         height="50" width="500">
+</p>
+<p>La 3ª imagen:
 - height y width: no
 - style="height: 50px; width: 500px;": sí
-    &lt;img id="imagen3" src="http://www.mozilla.org/images/mozilla-banner.gif"
-         style="height: 50px; width: 500px;"&gt;
-&lt;/p&gt;
+    <img id="imagen3" src="http://www.mozilla.org/images/mozilla-banner.gif"
+         style="height: 50px; width: 500px;">
+</p>
 
-&lt;div id="salida"&gt; &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<div id="salida"> </div>
+</body>
+</html>
+```
 
-<p><code>height</code> y <code>width</code> son además propiedades de los elementos <code>OBJECT</code> y <code>APPLET</code>.</p>
+`height` y `width` son además propiedades de los elementos `OBJECT` y `APPLET`.
 
-<h3 id="Ejemplo_2:_Atributos_de_una_imagen" name="Ejemplo_2:_Atributos_de_una_imagen">Ejemplo 2: Atributos de una imagen</h3>
+### Ejemplo 2: Atributos de una imagen
 
-<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd"&gt;
+```
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
 
-&lt;html lang="es"&gt;
+<html lang="es">
 
-&lt;head&gt;
-&lt;title&gt;Modificación del borde de una imagen&lt;/title&gt;
-&lt;script type="text/javascript"&gt;
+<head>
+<title>Modificación del borde de una imagen</title>
+<script type="text/javascript">
 function setBorderWidth(width) {
   document.getElementById("img1").style.borderWidth = width + "px";
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-&lt;p&gt;
-  &lt;img id="img1" src="image1.gif" style="border: 5px solid green;" width="100"
-height="100" alt="test de borde"&gt;
-&lt;/p&gt;
+<body>
+<p>
+  <img id="img1" src="image1.gif" style="border: 5px solid green;" width="100"
+height="100" alt="test de borde">
+</p>
 
-&lt;form name="Formulario"&gt;
-  &lt;p&gt;&lt;input type="button" value="Definir un borde de 20px"
-onclick="setBorderWidth(20);"&gt; &lt;input type="button" value="Definir un borde de 5px"
-onclick="setBorderWidth(5);"&gt;&lt;/p&gt;
-&lt;/form&gt;
+<form name="Formulario">
+  <p><input type="button" value="Definir un borde de 20px"
+onclick="setBorderWidth(20);"> <input type="button" value="Definir un borde de 5px"
+onclick="setBorderWidth(5);"></p>
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h3 id="Ejemplo_3:_Manipulaci.C3.B3n_de_estilos" name="Ejemplo_3:_Manipulaci.C3.B3n_de_estilos">Ejemplo 3: Manipulación de estilos</h3>
+### Ejemplo 3: Manipulación de estilos
 
-<p>En este ejemplo sencillo, algunas propiedades de estilo básicas de un elemento párrafo HTML son accedidas utilizando el objeto estilo en el elemento y aquellas propiedades de estilo CSS del objeto, pueden ser entregadas y establecidas desde el DOM. En este caso, está manipulando los estilos directamente. En el siguiente ejemplo (ver ejemplo 4), puede utilizar las hojas de estilo y sus reglas para cambiar estilos para el documento entero.</p>
+En este ejemplo sencillo, algunas propiedades de estilo básicas de un elemento párrafo HTML son accedidas utilizando el objeto estilo en el elemento y aquellas propiedades de estilo CSS del objeto, pueden ser entregadas y establecidas desde el DOM. En este caso, está manipulando los estilos directamente. En el siguiente ejemplo (ver ejemplo 4), puede utilizar las hojas de estilo y sus reglas para cambiar estilos para el documento entero.
 
-<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd"&gt;
+```
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
 
-&lt;html lang="en"&gt;
+<html lang="en">
 
-&lt;head&gt;
-&lt;title&gt;Changing color and font-size example&lt;/title&gt;
-&lt;script type="text/javascript"&gt;
+<head>
+<title>Changing color and font-size example</title>
+<script type="text/javascript">
 function changeText() {
 	var p = document.getElementById("pid");
 	p.style.color = "blue"
 	p.style.fontSize = "18pt"
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;p id="pid"
-onclick="window.location.href = 'http://www.cnn.com/';"&gt;linker&lt;/p&gt;
-&lt;form&gt;
-&lt;p&gt;&lt;input value="rec" type="button" onclick="changeText();"&gt;&lt;/p&gt;
-&lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+</head>
+<body>
+<p id="pid"
+onclick="window.location.href = 'http://www.cnn.com/';">linker</p>
+<form>
+<p><input value="rec" type="button" onclick="changeText();"></p>
+</form>
+</body>
+</html>
+```
 
-<h3 id="Ejemplo_4:_Utilizaci.C3.B3n_de_las_hojas_de_estilo" name="Ejemplo_4:_Utilizaci.C3.B3n_de_las_hojas_de_estilo">Ejemplo 4: Utilización de las hojas de estilo</h3>
+### Ejemplo 4: Utilización de las hojas de estilo
 
-<p>La propiedad de las hojas de estilo en un objeto de documento muestra una lista de las hojas de estilo que acompañan a ése documento. Usando los objetos de la hoja de estilo, del estilo y de las reglas de CSS se puede acceder individualmente a esas hojas de estilo y sus reglas, como se demuestra en este ejemplo, el cual muestra todos los selectores de reglas de estilo en la consola.</p>
+La propiedad de las hojas de estilo en un objeto de documento muestra una lista de las hojas de estilo que acompañan a ése documento. Usando los objetos de la hoja de estilo, del estilo y de las reglas de CSS se puede acceder individualmente a esas hojas de estilo y sus reglas, como se demuestra en este ejemplo, el cual muestra todos los selectores de reglas de estilo en la consola.
 
-<pre>ss = document.styleSheets;
-for(i=0; i&lt;ss.length; i++)
+```
+ss = document.styleSheets;
+for(i=0; i<ss.length; i++)
  {
- for(j=0; j&lt;ss[0].cssRules.length; j++)
+ for(j=0; j<ss[0].cssRules.length; j++)
   {
   dump( ss[i].cssRules[j].selectorText + "\n" );
   }
  }
-</pre>
+```
 
-<p>Para un documento con una sola hoja de estilo en la cual son definidas las tres reglas siguientes:</p>
+Para un documento con una sola hoja de estilo en la cual son definidas las tres reglas siguientes:
 
-<pre class="eval">BODY { background-color: darkblue; }
+```
+BODY { background-color: darkblue; }
 P { font-face: Arial; font-size: 10pt; margin-left: .125in; }
 #lumpy { display: none; }
-</pre>
+```
 
-<p>El script sale así:</p>
+El script sale así:
 
-<pre class="eval">BODY
+```
+BODY
 P
 #LUMPY
-</pre>
+```
 
-<h3 id="Ejemplo_5:_Propagaci.C3.B3n_del_evento" name="Ejemplo_5:_Propagaci.C3.B3n_del_evento">Ejemplo 5: Propagación del evento</h3>
+### Ejemplo 5: Propagación del evento
 
-<p>Este ejemplo muestra de una forma muy simple como los eventos se inician y son gestionados en el DOM. Cuando el cuerpo (<em>body</em> ) de ese documento HTML se carga,<em>un evento listener es registrado con la columna superior de la TABLA. El evento listener maneja el evento ejecutando la función stopEvent, que cambia el valor en el final de la celda de la tabla.</em></p>
+Este ejemplo muestra de una forma muy simple como los eventos se inician y son gestionados en el DOM. Cuando el cuerpo (_body_ ) de ese documento HTML se carga,_un evento listener es registrado con la columna superior de la TABLA. El evento listener maneja el evento ejecutando la función stopEvent, que cambia el valor en el final de la celda de la tabla._
 
-<p>Sin embargo, stopEvent también llama a un método del objeto evento, <a href="es/DOM/event.stopPropagation">event.stopPropagation</a>, que mantiene el evento del burbujeo a continuación dentro del DOM. Note que la tabla misma tiene un manejador de evento <a href="es/DOM/element.onclick">onclick</a> que muestra un mensaje cuando la tabla es seleccionada. Pero el método stopEvent ha detenido la propagación, y así despues los datos en la tabla son actualizados, la fase de evento es efectivamente finalizada, y un cuadro de alerta es mostrado para confirmar esto.</p>
+Sin embargo, stopEvent también llama a un método del objeto evento, [event.stopPropagation](es/DOM/event.stopPropagation), que mantiene el evento del burbujeo a continuación dentro del DOM. Note que la tabla misma tiene un manejador de evento [onclick](es/DOM/element.onclick) que muestra un mensaje cuando la tabla es seleccionada. Pero el método stopEvent ha detenido la propagación, y así despues los datos en la tabla son actualizados, la fase de evento es efectivamente finalizada, y un cuadro de alerta es mostrado para confirmar esto.
 
-<pre>&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Propagación del evento&lt;/title&gt;
+```
+<html>
+<head>
+<title>Propagación del evento</title>
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
  #t-daddy { border: 1px solid red }
  #c1 { background-color: pink; }
-&lt;/style&gt;
+</style>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function stopEvent(ev) {
   c2 = document.getElementById("c2");
@@ -191,39 +198,40 @@ function load() {
   elem = document.getElementById("tbl1");
   elem.addEventListener("click", stopEvent, false);
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onload="load();"&gt;
+<body onload="load();">
 
-&lt;table id="t-daddy" onclick="alert('hi');"&gt;
- &lt;tr id="tbl1"&gt;
-  &lt;td id="c1"&gt;uno&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
-  &lt;td id="c2"&gt;dos&lt;/td&gt;
- &lt;/tr&gt;
-&lt;/table&gt;
+<table id="t-daddy" onclick="alert('hi');">
+ <tr id="tbl1">
+  <td id="c1">uno</td>
+ </tr>
+ <tr>
+  <td id="c2">dos</td>
+ </tr>
+</table>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h3 id="Ejemplo_6:_Conseguir_el_estilo_computado_.28getComputedStyle.29" name="Ejemplo_6:_Conseguir_el_estilo_computado_.28getComputedStyle.29">Ejemplo 6: Conseguir el estilo computado (getComputedStyle)</h3>
+### Ejemplo 6: Conseguir el estilo computado (getComputedStyle)
 
-<p>Este ejemplo demuestra como el método <a href="es/DOM/window.getComputedStyle">window.getComputedStyle</a> puedes utilizarse para obtener los estilos de un elemento que no son especificados en el atributo <code>style</code> o con JavaScript (por ejemplo, <strong><span class=""><code>element.style.backgroundColor="rgb(173, 216, 230)"</code></span></strong>). Estos últimos tipos de estilos se pueden recuperar con el atributo <a href="es/DOM/element.style">element.style</a>, las propiedades del cual están en la <a href="es/DOM/CSS">lista de propiedades de CSS</a> del DOM.</p>
+Este ejemplo demuestra como el método [window.getComputedStyle](es/DOM/window.getComputedStyle) puedes utilizarse para obtener los estilos de un elemento que no son especificados en el atributo `style` o con JavaScript (por ejemplo, **`element.style.backgroundColor="rgb(173, 216, 230)"`**). Estos últimos tipos de estilos se pueden recuperar con el atributo [element.style](es/DOM/element.style), las propiedades del cual están en la [lista de propiedades de CSS](es/DOM/CSS) del DOM.
 
-<p><code>getComputedStyle()</code> devuelve un objeto <code>ComputedCSSStyleDeclaration</code>, cuyas propiedades de estilo individuales pueden ser referenciadas con este método del objeto <code>getPropertyValue()</code>, el siguiente documento de ejemplo lo muestra.</p>
+`getComputedStyle()` devuelve un objeto `ComputedCSSStyleDeclaration`, cuyas propiedades de estilo individuales pueden ser referenciadas con este método del objeto `getPropertyValue()`, el siguiente documento de ejemplo lo muestra.
 
-<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd"&gt;
+```
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
 
-&lt;html lang="en"&gt;
+<html lang="en">
 
-&lt;head&gt;
- &lt;title&gt;Ejemplo de ''getComputedStyle''&lt;/title&gt;
+<head>
+ <title>Ejemplo de ''getComputedStyle''</title>
 
- &lt;script type="text/javascript"&gt;
+ <script type="text/javascript">
    function cStyles()
   {
    var RefDiv = document.getElementById("d1");
@@ -244,52 +252,53 @@ document.defaultView.getComputedStyle(RefDiv,
 null).getPropertyValue("background-color");
    txtBackgroundColor.value = b_style;
   }
- &lt;/script&gt;
+ </script>
 
- &lt;style type="text/css"&gt;
+ <style type="text/css">
    #d1 { margin-left: 10px; background-color: rgb(173, 216, 230);
 height: 20px; max-width: 20px; }
- &lt;/style&gt;
+ </style>
 
-&lt;/head&gt;
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;div id="d1"&gt;&amp;nbsp;&lt;/div&gt;
+<div id="d1">&nbsp;</div>
 
-&lt;form action=""&gt;
-&lt;p&gt;&lt;button type="button" onclick="cStyles();"&gt;getComputedStyle&lt;/button&gt;
-  height&lt;input id="t1" type="text" value="1"&gt;
-  max-width&lt;input id="t2" type="text" value="2"&gt;
-  bg-color&lt;input id="t3" type="text" value="3"&gt;&lt;/p&gt;
-&lt;/form&gt;
+<form action="">
+<p><button type="button" onclick="cStyles();">getComputedStyle</button>
+  height<input id="t1" type="text" value="1">
+  max-width<input id="t2" type="text" value="2">
+  bg-color<input id="t3" type="text" value="3"></p>
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h3 id="Ejemplo_7:_Mostrar_las_propiedades_del_objeto_de_evento" name="Ejemplo_7:_Mostrar_las_propiedades_del_objeto_de_evento">Ejemplo 7: Mostrar las propiedades del objeto de evento</h3>
+### Ejemplo 7: Mostrar las propiedades del objeto de evento
 
-<p>Este ejemplo utiliza métodos del DOM para mostrar todas las propiedades del <a href="es/DOM/event">evento</a> de <a href="es/DOM/window.onload">window.onload</a> y sus valores en una tabla. Muestra además una cómoda técnica del uso de un bucle<em><strong>for...in</strong></em> para iterar sobre las propiedades de un objeto y conseguir sus valores.</p>
+Este ejemplo utiliza métodos del DOM para mostrar todas las propiedades del [evento](es/DOM/event) de [window.onload](es/DOM/window.onload) y sus valores en una tabla. Muestra además una cómoda técnica del uso de un bucle***for...in*** para iterar sobre las propiedades de un objeto y conseguir sus valores.
 
-<p>Las propiedades de los objetos de evento difieren bastante entre los navegadores, la <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html">especificación W3C de los eventos del DOM 2</a> enumera las propiedades estándares, sin embargo algunos navegadores han extendido estas diferencias.</p>
+Las propiedades de los objetos de evento difieren bastante entre los navegadores, la [especificación W3C de los eventos del DOM 2](http://www.w3.org/TR/DOM-Level-2-Events/events.html) enumera las propiedades estándares, sin embargo algunos navegadores han extendido estas diferencias.
 
-<p>El siguiente código colocado dentro de un nuevo archivo de texto y cargado en un surtido de navegadores, sorprenderá por las diferencias de los números y nombres de propiedades y/o al ponerle más elementos a la página y llamar esa función desde diferentes gestores de evento.</p>
+El siguiente código colocado dentro de un nuevo archivo de texto y cargado en un surtido de navegadores, sorprenderá por las diferencias de los números y nombres de propiedades y/o al ponerle más elementos a la página y llamar esa función desde diferentes gestores de evento.
 
-<pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd"&gt;
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
 
-&lt;title&gt;Muestra las propiedades del evento&lt;/title&gt;
+<title>Muestra las propiedades del evento</title>
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
   table {border-collapse: collapse;}
   thead {font-weight: bold;}
   td {padding: 2px 10px 2px 10px;}
   .odd {background-color: #efdfef;}
   .even {background-color: #ffffff;}
-&lt;/style&gt;
+</style>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function showEventProperties(e)
 {
@@ -307,7 +316,7 @@ function showEventProperties(e)
   var lableList = ['#', 'Propriété', 'Valeur'];
   var len = lableList.length;
 
-  for (var i=0; i&lt;len; i++) {
+  for (var i=0; i<len; i++) {
     addCell(row, lableList[i]);
   }
 
@@ -327,42 +336,41 @@ function showEventProperties(e)
 window.onload = function(event){
   showEventProperties(event);
 }
-&lt;/script&gt;
+</script>
 
-&lt;h1&gt;Propiedades del objeto evento del DOM&lt;span id="eventType"&gt;&lt;/span&gt;&lt;/h1&gt;
-</pre>
+<h1>Propiedades del objeto evento del DOM<span id="eventType"></span></h1>
+```
 
-<h3 id="Ejemplo_8:_Utilizaci.C3.B3n_del_interfaz_de_tabla_del_DOM" name="Ejemplo_8:_Utilizaci.C3.B3n_del_interfaz_de_tabla_del_DOM">Ejemplo 8: Utilización del interfaz de tabla del DOM</h3>
+### Ejemplo 8: Utilización del interfaz de tabla del DOM
 
-<p>La interfaz HTMLTableElement del DOM provee algunos métodos de conveniencia para crear y manipular tablas. Dos métodos usados frecuentemente son <code><a href="es/DOM/table.insertRow">table.insertRow</a></code> y <code><a href="es/DOM/table/row.insertCell">row.insertCell</a></code>.</p>
+La interfaz HTMLTableElement del DOM provee algunos métodos de conveniencia para crear y manipular tablas. Dos métodos usados frecuentemente son [`table.insertRow`](es/DOM/table.insertRow) y [`row.insertCell`](es/DOM/table/row.insertCell).
 
-<p>Para agregar una columna y algunas celdas a una tabla existente:</p>
+Para agregar una columna y algunas celdas a una tabla existente:
 
-<pre>&lt;table id="table0"&gt;
- &lt;tr&gt;
-  &lt;td&gt;Row 0 Cell 0&lt;/td&gt;
-  &lt;td&gt;Row 0 Cell 1&lt;/td&gt;
- &lt;/tr&gt;
-&lt;/table&gt;
+```
+<table id="table0">
+ <tr>
+  <td>Row 0 Cell 0</td>
+  <td>Row 0 Cell 1</td>
+ </tr>
+</table>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 var table = document.getElementById('table0');
 var row = table.insertRow(-1);
 var cell, text;
-for (var i=0; i&lt;2; i++) {
+for (var i=0; i<2; i++) {
   cell = row.insertCell(-1);
   text = 'Row ' + row.rowIndex + ' Cell ' + i;
   cell.appendChild(document.createTextNode(text));
 }
 
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h4 id="Notas" name="Notas">Notas</h4>
+#### Notas
 
-<ul>
- <li>Una propiedad <code><a href="es/DOM/element.innerHTML">innerHTML</a></code> de la tabla nunca debería ser utilizada para modificar una tabla, aunque puede utilizarla para escribir una tabla entera o el contenido de una celda.</li>
- <li>Si los métodos Core del DOM<code><a href="es/DOM/document.createElement">document.createElement</a></code> y <code><a href="es/DOM/element.appendChild">element.appendChild</a></code> son utilizados para crear columnas y celdas, IE requiere que sean agregadas a un elemento tbody, mientras que otros navegadores permitirán agregar a un elemento de la tabla (las columnas serán agregadas al último elemento tbody).</li>
- <li>Hay un número de otros métodos de conveniencia pertenecientes a la <a href="es/DOM/table#M.C3.A9todos">interfaz de tabla</a> que pueden ser utilizados para crear y modificar tablas.</li>
-</ul>
+- Una propiedad [`innerHTML`](es/DOM/element.innerHTML) de la tabla nunca debería ser utilizada para modificar una tabla, aunque puede utilizarla para escribir una tabla entera o el contenido de una celda.
+- Si los métodos Core del DOM[`document.createElement`](es/DOM/document.createElement) y [`element.appendChild`](es/DOM/element.appendChild) son utilizados para crear columnas y celdas, IE requiere que sean agregadas a un elemento tbody, mientras que otros navegadores permitirán agregar a un elemento de la tabla (las columnas serán agregadas al último elemento tbody).
+- Hay un número de otros métodos de conveniencia pertenecientes a la [interfaz de tabla](es/DOM/table#M.C3.A9todos) que pueden ser utilizados para crear y modificar tablas.

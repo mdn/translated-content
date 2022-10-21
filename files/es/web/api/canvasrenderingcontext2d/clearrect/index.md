@@ -3,50 +3,47 @@ title: CanvasRenderingContext2D.clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
 translation_of: Web/API/CanvasRenderingContext2D/clearRect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}El método **`CanvasRenderingContext2D`\*\***`.clearRect() `\*\*`del API Canvas 2D convierte todos los pixeles en el rectangulo definido por el punto de inicio (x, y) y tamaño `_(width, height)_ a negro transparente, borrando cualquier contenido dibujado anteriormente.
 
-<div>El método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.clearRect() </code></strong><code>del API Canvas 2D convierte todos los pixeles en el rectangulo definido por el punto de inicio<em> (x, y) </em>y tamaño </code><em>(width, height)</em> a negro transparente, borrando cualquier contenido dibujado anteriormente.</div>
+## Syntaxis
 
-<div> </div>
+### HTML Content
 
-<h2 id="Syntaxis">Syntaxis</h2>
+```html
+void ctx.clearRect(x, y, width, height);
+```
 
-<div>
-<h3 id="HTML_Content">HTML Content</h3>
+### Parametros
 
-<pre class="brush: html">void <var><em>ctx</em>.clearRect(x, y, width, height);</var></pre>
+- **x**
+  - : El eje **x** de la coordenada para el punto de inicio del rectangulo.
+- y
+  - : El eje **y** de la coordenada para el punto de inicio del rectangulo.
+- width
+  - : El ancho del rectangulo.
+- heigth
+  - : el alto del rectangulo.
 
-<h3 id="Parametros">Parametros</h3>
+## Notas de uso
 
-<dl>
- <dt><strong>x</strong></dt>
- <dd>El eje <strong>x </strong> de la coordenada para el punto de inicio del rectangulo.</dd>
- <dt>y</dt>
- <dd>El eje <strong>y </strong> de la coordenada para el punto de inicio del rectangulo.</dd>
- <dt>width</dt>
- <dd>El ancho del rectangulo.</dd>
- <dt>heigth</dt>
- <dd>el alto del rectangulo.</dd>
-</dl>
+Un problema común con **`clearRect `**es que puede parecer que no funciona cuando no se usan las [trayectorias de dibujo](/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_paths) ([paths](/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_paths)) de forma adecuada. No olvide llamar {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} antes de comenzar a dibujar el nuevo cuadro después de llamar **`clearRect`**`.`
 
-<h2 id="Notas_de_uso">Notas de uso</h2>
+## Ejemplos
 
-<p>Un problema común con <strong><code>clearRect </code></strong>es que puede parecer que no funciona cuando no se usan las <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_paths">trayectorias de dibujo</a> (<a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_paths">paths</a>) de forma adecuada. No olvide llamar {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} antes de comenzar a dibujar el nuevo cuadro después de llamar <strong><code>clearRect</code></strong><code>.</code></p>
+### Usando el método `clearRect`
 
-<h2 id="Ejemplos">Ejemplos</h2>
+Este es un simple fragmento (snippet) de código que usa el método **`clearRect`**.
 
-<h3 id="Usando_el_método_clearRect">Usando el método <code>clearRect</code></h3>
+#### HTML
 
-<p><span class=""> </span> Este es un simple fragmento (snippet) de código que usa el método <strong><code>clearRect</code></strong>.</p>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="HTML">HTML</h4>
+#### JavaScript
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
-</div>
-
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d'); c
 
 tx.beginPath(); ctx.moveTo(20, 20);
@@ -58,40 +55,28 @@ ctx.stroke();
 ctx.clearRect(10, 10, 100, 100);
 
 // clear the whole canvas
-// ctx.clearRect(0, 0, canvas.width, canvas.height);</pre>
+// ctx.clearRect(0, 0, canvas.width, canvas.height);
+```
 
-<h2 id="sect1"><span class=""> </span> </h2>
+##
 
-<p>Edite el código de abajo y vea sus cambios actualizados en vivo en el canvas:</p>
+Edite el código de abajo y vea sus cambios actualizados en vivo en el canvas:
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 400) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 400) }}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-clearrect", "CanvasRenderingContext2D.clearRect")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                                   | Estado                           | Comentario |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-clearrect", "CanvasRenderingContext2D.clearRect")}} | {{Spec2('HTML WHATWG')}} |            |
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code" style="height:140px;"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code" style="height:140px;">
 ctx.beginPath();
 ctx.moveTo(20,20);
 ctx.lineTo(200,20);
@@ -99,10 +84,11 @@ ctx.lineTo(120,120);
 ctx.closePath(); // draws last line of the triangle
 ctx.stroke();
 
-ctx.clearRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.clearRect(10, 10, 100, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -125,23 +111,14 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
+```
 
-</pre>
-</div>
-
-<table class="standard-table">
- <tbody>
- </tbody>
-</table>
-
-<h2 id="Compatibilidad_con_exploradores">Compatibilidad con exploradores</h2>
+## Compatibilidad con exploradores
 
 {{Compat("api.CanvasRenderingContext2D.clearRect")}}
 
-<h2 id="Vea_También">Vea También</h2>
+## Vea También
 
-<ul>
- <li>The interface defining it, {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fillRect()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</li>
-</ul>
+- The interface defining it, {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.fillRect()")}}
+- {{domxref("CanvasRenderingContext2D.strokeRect()")}}

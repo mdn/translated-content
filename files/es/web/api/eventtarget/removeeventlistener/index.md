@@ -7,162 +7,149 @@ tags:
   - Event
 translation_of: Web/API/EventTarget/removeEventListener
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>El método <strong><code>EventTarget.removeEventListener()</code></strong> remueve del {{domxref("EventTarget")}} un detector de evento previamente registrado con {{domxref("EventTarget.addEventListener")}}. El detector de evento a ser removido es identificado usando una combinación de tipos de eventos, la misma funcion del detector de eventos, y muchas opciones adicionales que pueden afectar</p>
+El método **`EventTarget.removeEventListener()`** remueve del {{domxref("EventTarget")}} un detector de evento previamente registrado con {{domxref("EventTarget.addEventListener")}}. El detector de evento a ser removido es identificado usando una combinación de tipos de eventos, la misma funcion del detector de eventos, y muchas opciones adicionales que pueden afectar
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>target</var>.removeEventListener(<var>type</var>, <var>listener</var>[, <var>options</var>]);
-<em>target</em>.removeEventListener(<em>tipo</em>, <em>listener</em>[, <em>useCapture</em>])</pre>
+```
+target.removeEventListener(type, listener[, options]);
+target.removeEventListener(tipo, listener[, useCapture])
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><var>tipo</var></dt>
- <dd>Un string representando el tipo de evento del que se está removiendo un detector de evento.</dd>
- <dt><var>detector (listener)</var></dt>
- <dd>La función {{domxref("EventListener")}} del manejador de evento a eliminar del objetivo del evento.</dd>
- <dt><var>options</var> {{optional_inline}}</dt>
- <dd>Un objeto que especifíca diversas características acerca del detector de eventos. Las opciones disponibles son:
- <ul>
-  <li><code>capture</code>: Un {{jsxref("Boolean")}} que indica que eventos de este tipo serán enviados al <code>listener</code> antes de ser enviado a cualquier <code>EventTarget</code> debado de éste en el DOM.</li>
-  <li>{{non-standard_inline}}<code> mozSystemGroup</code>: Sólo disponible ejecutando XBL o Firefox' chrome, es un {{jsxref("Boolean")}} que define si el detector es añadido al grupo del sistema.</li>
- </ul>
- </dd>
- <dt><code>useCapture</code> {{optional_inline}}</dt>
- <dd>Especifíca si el {{domxref("EventListener")}} que se está eliminando fue registrado como un detector de captura o no. Si no se indica, por defecto <code>useCapture</code> asumirá el valor <code>false</code>.<br><br>
- Si un detector se registro dos veces, uno con captura y otro sin, cada uno debe ser eliminado por separado. La eliminación de un detector de captura no afecta a una versión de "no-captura" del mismo detector, y viceversa.</dd>
-</dl>
+- _tipo_
+  - : Un string representando el tipo de evento del que se está removiendo un detector de evento.
+- _detector (listener)_
+  - : La función {{domxref("EventListener")}} del manejador de evento a eliminar del objetivo del evento.
+- _options_ {{optional_inline}}
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+  - : Un objeto que especifíca diversas características acerca del detector de eventos. Las opciones disponibles son:
 
-<p><code>undefined</code>.</p>
+    - `capture`: Un {{jsxref("Boolean")}} que indica que eventos de este tipo serán enviados al `listener` antes de ser enviado a cualquier `EventTarget` debado de éste en el DOM.
+    - {{non-standard_inline}}` mozSystemGroup`: Sólo disponible ejecutando XBL o Firefox' chrome, es un {{jsxref("Boolean")}} que define si el detector es añadido al grupo del sistema.
 
-<h3 id="Coincidiendo_disparadores_de_evento_para_su_eliminación">Coincidiendo disparadores de evento para su eliminación</h3>
+- `useCapture` {{optional_inline}}
 
-<p>Habiendose añadido detector de evento llamando {{domxref("EventTarget.addEventListener", "addEventListener()")}}, puede llegar un punto donde se requiera eliminar. Obviamente, se necesita especificar los mismos parámetros de <code>tipo</code> y <code>listener</code> a <code>removeEventListener()</code>, pero que hay acerca de los parámetros de <code>options</code> o de <code>useCapture</code>?</p>
+  - : Especifíca si el {{domxref("EventListener")}} que se está eliminando fue registrado como un detector de captura o no. Si no se indica, por defecto `useCapture` asumirá el valor `false`.
 
-<p>Mientras <code>addEventListener()</code> permite añadir el mismo detector más de una vez para el mismo tipo, si la opción es diferente, la única opción que <code>removeEventListener()</code> revisará es la bandera de <code>capture</code>/<code>useCapture</code>. Su valor debe coincidir con <code>removeEventListener()</code> para coincidir, pero otros valores no necesitan corresponder.</p>
+    Si un detector se registro dos veces, uno con captura y otro sin, cada uno debe ser eliminado por separado. La eliminación de un detector de captura no afecta a una versión de "no-captura" del mismo detector, y viceversa.
 
-<p>Por ejemplo, considerar la siguiente llamada a <code>addEventListener()</code>:</p>
+### Valor de retorno
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">element<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> handleMouseDown<span class="punctuation token">,</span> <span class="boolean token">true</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+`undefined`.
 
-<p>Ahora, considera  <code>removeEventListener()</code>:</p>
+### Coincidiendo disparadores de evento para su eliminación
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">element<span class="punctuation token">.</span><span class="function token">removeEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> handleMouseDown<span class="punctuation token">,</span> <span class="boolean token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span>     <span class="comment token">// Fallo</span>
-element<span class="punctuation token">.</span><span class="function token">removeEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> handleMouseDown<span class="punctuation token">,</span> <span class="boolean token">true</span><span class="punctuation token">)</span><span class="punctuation token">;</span>      <span class="comment token">// Éxito</span></code></pre>
+Habiendose añadido detector de evento llamando {{domxref("EventTarget.addEventListener", "addEventListener()")}}, puede llegar un punto donde se requiera eliminar. Obviamente, se necesita especificar los mismos parámetros de `tipo` y `listener` a `removeEventListener()`, pero que hay acerca de los parámetros de `options` o de `useCapture`?
 
-<p>La primera llamada falla porque el valor de <code>useCapture</code> no coincide. El segundo valor funciona, puesto que <code>useCapture</code> es igual a su valor cuando se añadió el detector.</p>
+Mientras `addEventListener()` permite añadir el mismo detector más de una vez para el mismo tipo, si la opción es diferente, la única opción que `removeEventListener()` revisará es la bandera de `capture`/`useCapture`. Su valor debe coincidir con `removeEventListener()` para coincidir, pero otros valores no necesitan corresponder.
 
-<p>Ahora considera lo siguiente:</p>
+Por ejemplo, considerar la siguiente llamada a `addEventListener()`:
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">element<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> handleMouseDown<span class="punctuation token">,</span> <span class="punctuation token">{</span> passive<span class="punctuation token">:</span> <span class="boolean token">true</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+```js
+element.addEventListener("mousedown", handleMouseDown, true);
+```
 
-<p>Aqui, especificamos un objeto <code>options</code> en el cual <code>passive</code> esta definido como <code>true</code>, mientras que otras opciones son dejados con su valor por defecto de <code>false</code>.</p>
+Ahora, considera `removeEventListener()`:
 
-<p>Vea consecutivamente, cada una de las siguientes llamadas a  <code>removeEventListener()</code>. Cualquiera de éstas donde <code>capture</code> o <code>useCapture</code> es <code>true</code> falla; en todas las demás funciona. Solo la configuración <code>capture</code> importa a <code>removeEventListener()</code>.</p>
+```js
+element.removeEventListener("mousedown", handleMouseDown, false);     // Fallo
+element.removeEventListener("mousedown", handleMouseDown, true);      // Éxito
+```
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">element<span class="punctuation token">.</span><span class="function token">removeEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> handleMouseDown<span class="punctuation token">,</span> <span class="punctuation token">{</span> passive<span class="punctuation token">:</span> <span class="boolean token">true</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>     <span class="comment token">// Funciona</span>
-element<span class="punctuation token">.</span><span class="function token">removeEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> handleMouseDown<span class="punctuation token">,</span> <span class="punctuation token">{</span> capture<span class="punctuation token">:</span> <span class="boolean token">false</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>    <span class="comment token">// Funciona</span>
-element<span class="punctuation token">.</span><span class="function token">removeEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> handleMouseDown<span class="punctuation token">,</span> <span class="punctuation token">{</span> capture<span class="punctuation token">:</span> <span class="boolean token">true</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>     <span class="comment token">// Falla</span>
-element<span class="punctuation token">.</span><span class="function token">removeEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> handleMouseDown<span class="punctuation token">,</span> <span class="punctuation token">{</span> passive<span class="punctuation token">:</span> <span class="boolean token">false</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>    <span class="comment token">// Funciona</span>
-element<span class="punctuation token">.</span><span class="function token">removeEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> handleMouseDown<span class="punctuation token">,</span> <span class="boolean token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span>                 <span class="comment token">// Funciona</span>
-element<span class="punctuation token">.</span><span class="function token">removeEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> handleMouseDown<span class="punctuation token">,</span> <span class="boolean token">true</span><span class="punctuation token">)</span><span class="punctuation token">;</span>                  <span class="comment token">// Falla</span></code></pre>
+La primera llamada falla porque el valor de `useCapture` no coincide. El segundo valor funciona, puesto que `useCapture` es igual a su valor cuando se añadió el detector.
 
-<p>Vale la pena mencionar que algunos navegadores tienen un comportamiento inconsistente, y a menos que se tengan razones específicas, es probablemente una buena idea usar los mismos valores usados por la llamada a <code>addEventListener()</code> al momento de utilizar <code>removeEventListener()</code>.</p>
+Ahora considera lo siguiente:
 
-<h2 id="Notas">Notas</h2>
+```js
+element.addEventListener("mousedown", handleMouseDown, { passive: true });
+```
 
-<p>Si un {{ domxref("EventListener") }} es removido de un {{ domxref("EventTarget") }} cuando aún se está procesando el evento, no será ejecutado. Después de ser removido, un {{ domxref("EventListener") }} no será invocado por el evento al cual se registró, sin embargo se podrá adjuntar de nuevo a dicho evento.</p>
+Aqui, especificamos un objeto `options` en el cual `passive` esta definido como `true`, mientras que otras opciones son dejados con su valor por defecto de `false`.
 
-<p>Llamar {{ domxref("<code>removeEventListener</code>") }}  en algún {{ domxref("EventTarget") }} que no contenga el {{ domxref("EventListener") }} especificado será un acción sin efecto, es decir, se podrá llamar {{ domxref("<code>removeEventListener</code>") }} sin efectos negativos en los scripts.</p>
+Vea consecutivamente, cada una de las siguientes llamadas a `removeEventListener()`. Cualquiera de éstas donde `capture` o `useCapture` es `true` falla; en todas las demás funciona. Solo la configuración `capture` importa a `removeEventListener()`.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+```js
+element.removeEventListener("mousedown", handleMouseDown, { passive: true });     // Funciona
+element.removeEventListener("mousedown", handleMouseDown, { capture: false });    // Funciona
+element.removeEventListener("mousedown", handleMouseDown, { capture: true });     // Falla
+element.removeEventListener("mousedown", handleMouseDown, { passive: false });    // Funciona
+element.removeEventListener("mousedown", handleMouseDown, false);                 // Funciona
+element.removeEventListener("mousedown", handleMouseDown, true);                  // Falla
+```
 
-<p>Este es un ejemplo en donde se agrega y después se elimina un {{ domxref("EventListener") }} </p>
+Vale la pena mencionar que algunos navegadores tienen un comportamiento inconsistente, y a menos que se tengan razones específicas, es probablemente una buena idea usar los mismos valores usados por la llamada a `addEventListener()` al momento de utilizar `removeEventListener()`.
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">var</span> body <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'body'</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-    clickTarget <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'click-target'</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-    mouseOverTarget <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'mouse-over-target'</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-    toggle <span class="operator token">=</span> <span class="boolean token">false</span><span class="punctuation token">;</span>
+## Notas
 
-<span class="keyword token">function</span> <span class="function token">makeBackgroundYellow</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="string token">'use strict'</span><span class="punctuation token">;</span>
+Si un {{ domxref("EventListener") }} es removido de un {{ domxref("EventTarget") }} cuando aún se está procesando el evento, no será ejecutado. Después de ser removido, un {{ domxref("EventListener") }} no será invocado por el evento al cual se registró, sin embargo se podrá adjuntar de nuevo a dicho evento.
 
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>toggle<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        body<span class="punctuation token">.</span>style<span class="punctuation token">.</span>backgroundColor <span class="operator token">=</span> <span class="string token">'white'</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-        body<span class="punctuation token">.</span>style<span class="punctuation token">.</span>backgroundColor <span class="operator token">=</span> <span class="string token">'yellow'</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
+Llamar {{ domxref("<code>removeEventListener</code>") }} en algún {{ domxref("EventTarget") }} que no contenga el {{ domxref("EventListener") }} especificado será un acción sin efecto, es decir, se podrá llamar {{ domxref("<code>removeEventListener</code>") }} sin efectos negativos en los scripts.
 
-    toggle <span class="operator token">=</span> <span class="operator token">!</span>toggle<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+## Ejemplo
 
-clickTarget<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'click'</span><span class="punctuation token">,</span>
-    makeBackgroundYellow<span class="punctuation token">,</span>
-    <span class="boolean token">false</span>
-<span class="punctuation token">)</span><span class="punctuation token">;</span>
+Este es un ejemplo en donde se agrega y después se elimina un {{ domxref("EventListener") }}
 
-mouseOverTarget<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'mouseover'</span><span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="string token">'use strict'</span><span class="punctuation token">;</span>
+```js
+var body = document.querySelector('body'),
+    clickTarget = document.getElementById('click-target'),
+    mouseOverTarget = document.getElementById('mouse-over-target'),
+    toggle = false;
 
-    clickTarget<span class="punctuation token">.</span><span class="function token">removeEventListener</span><span class="punctuation token">(</span><span class="string token">'click'</span><span class="punctuation token">,</span>
-        makeBackgroundYellow<span class="punctuation token">,</span>
-        <span class="boolean token">false</span>
-    <span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+function makeBackgroundYellow() {
+    'use strict';
 
-<h2 id="Especificaciones">Especificaciones</h2>
+    if (toggle) {
+        body.style.backgroundColor = 'white';
+    } else {
+        body.style.backgroundColor = 'yellow';
+    }
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Especificación</th>
-   <th>Estado</th>
-   <th>Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Events", "#Events-EventTarget-removeEventListener", "EventTarget.removeEventListener()")}}</td>
-   <td>{{Spec2("DOM2 Events")}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+    toggle = !toggle;
+}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad de los navegadores</h2>
+clickTarget.addEventListener('click',
+    makeBackgroundYellow,
+    false
+);
 
+mouseOverTarget.addEventListener('mouseover', function () {
+    'use strict';
 
+    clickTarget.removeEventListener('click',
+        makeBackgroundYellow,
+        false
+    );
+});
+```
 
-<p>{{Compat("api.EventTarget.removeEventListener", 3)}}</p>
+## Especificaciones
 
-<ul>
-</ul>
+| Especificación                                                                                                                                   | Estado                           | Comentario         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName("DOM WHATWG", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}         | {{Spec2("DOM WHATWG")}} |                    |
+| {{SpecName("DOM4", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}                 | {{Spec2("DOM4")}}         |                    |
+| {{SpecName("DOM2 Events", "#Events-EventTarget-removeEventListener", "EventTarget.removeEventListener()")}} | {{Spec2("DOM2 Events")}} | Definición inicial |
 
-<h2 id="Polyfill_to_support_older_browsers">Polyfill to support older browsers</h2>
+## Compatibilidad de los navegadores
 
-<p><code>addEventListener()</code> and <code>removeEventListener()</code> are not present in older browsers. You can work around this by inserting the following code at the beginning of your scripts, allowing use of <code>addEventListener()</code> and <code>removeEventListener()</code> in implementations which do not natively support it. However, this method will not work on Internet Explorer 7 or earlier, since extending the Element.prototype was not supported until Internet Explorer 8.</p>
+{{Compat("api.EventTarget.removeEventListener", 3)}}
 
-<pre class="brush: js">if (!Element.prototype.addEventListener) {
+## Polyfill to support older browsers
+
+`addEventListener()` and `removeEventListener()` are not present in older browsers. You can work around this by inserting the following code at the beginning of your scripts, allowing use of `addEventListener()` and `removeEventListener()` in implementations which do not natively support it. However, this method will not work on Internet Explorer 7 or earlier, since extending the Element.prototype was not supported until Internet Explorer 8.
+
+```js
+if (!Element.prototype.addEventListener) {
   var oListeners = {};
   function runListeners(oEvent) {
     if (!oEvent) { oEvent = window.event; }
-    for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+    for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId < oEvtListeners.aEls.length; iElId++) {
       if (oEvtListeners.aEls[iElId] === this) {
-        for (iLstId; iLstId &lt; oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
+        for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
         break;
       }
     }
@@ -170,7 +157,7 @@ mouseOverTarget<span class="punctuation token">.</span><span class="function tok
   Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
     if (oListeners.hasOwnProperty(sEventType)) {
       var oEvtListeners = oListeners[sEventType];
-      for (var nElIdx = -1, iElId = 0; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+      for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
         if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
       }
       if (nElIdx === -1) {
@@ -183,7 +170,7 @@ mouseOverTarget<span class="punctuation token">.</span><span class="function tok
           aElListeners.splice(0);
           this["on" + sEventType] = runListeners;
         }
-        for (var iLstId = 0; iLstId &lt; aElListeners.length; iLstId++) {
+        for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
           if (aElListeners[iLstId] === fListener) { return; }
         }
         aElListeners.push(fListener);
@@ -196,22 +183,20 @@ mouseOverTarget<span class="punctuation token">.</span><span class="function tok
   Element.prototype.removeEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
     if (!oListeners.hasOwnProperty(sEventType)) { return; }
     var oEvtListeners = oListeners[sEventType];
-    for (var nElIdx = -1, iElId = 0; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+    for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
       if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
     }
     if (nElIdx === -1) { return; }
-    for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId &lt; aElListeners.length; iLstId++) {
+    for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId < aElListeners.length; iLstId++) {
       if (aElListeners[iLstId] === fListener) { aElListeners.splice(iLstId, 1); }
     }
   };
 }
-</pre>
+```
 
-<h3 id="Example" name="Example"></h3>
+###
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{ domxref("EventTarget.addEventListener()") }}.</li>
- <li>{{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}.</li>
-</ul>
+- {{ domxref("EventTarget.addEventListener()") }}.
+- {{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}.

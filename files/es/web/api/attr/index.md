@@ -3,140 +3,118 @@ title: Attr
 slug: Web/API/Attr
 translation_of: Web/API/Attr
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Este tipo representa un atributo de un elemento DOM como un objeto. En muchos métodos DOM, probablemente vas a obtener el atributo como una cadena (e.g., {{domxref("Element.getAttribute()")}}, pero algunas funciones (e.g., {{domxref("Element.getAttributeNode()")}}) or means of iterating give <code>Attr</code> types.</p>
+Este tipo representa un atributo de un elemento DOM como un objeto. En muchos métodos DOM, probablemente vas a obtener el atributo como una cadena (e.g., {{domxref("Element.getAttribute()")}}, pero algunas funciones (e.g., {{domxref("Element.getAttributeNode()")}}) or means of iterating give `Attr` types.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<div class="warning"><strong>Advertencia:En el DOM Core 1, 2 y 3</strong>, <code>Attr</code> se hereda del {{domxref("Node")}}. Este ya no es el caso en <a class="external" href="https://www.w3.org/TR/dom/">DOM4</a>.Para llevar la implementación de Attr  a la especifiación, se esta trabajando para cambiarlo y dejar de heredar de{{domxref("Node")}}. No debe de utilizar ninguna propiedad o método de nodo en los objetos <code>Attr</code>. <span class="tlid-translation translation" lang="es"><span title="">A partir de Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4), los que se eliminarán enviarán mensajes de advertencia a la consola</span></span>. <span class="tlid-translation translation" lang="es"><span title="">Debe revisar su código en consecuencia.</span> <span title="">Consulte Propiedades y métodos en desuso para obtener una lista completa.</span></span></div>
+> **Advertencia:** **Advertencia:En el DOM Core 1, 2 y 3**, `Attr` se hereda del {{domxref("Node")}}. Este ya no es el caso en [DOM4](https://www.w3.org/TR/dom/).Para llevar la implementación de Attr a la especifiación, se esta trabajando para cambiarlo y dejar de heredar de{{domxref("Node")}}. No debe de utilizar ninguna propiedad o método de nodo en los objetos `Attr`. A partir de Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4), los que se eliminarán enviarán mensajes de advertencia a la consola. Debe revisar su código en consecuencia. Consulte Propiedades y métodos en desuso para obtener una lista completa.
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<dl>
- <dt>{{domxref("Attr.name", "name")}} {{readOnlyInline}}</dt>
- <dd>El nombre del atributo.</dd>
- <dt>{{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}</dt>
- <dd>Un {{domxref("DOMString")}} representing the namespace URI of the attribute, or <code>null</code> if there is no namespace.</dd>
- <dt>{{domxref("Attr.localName", "localName")}} {{readOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} representing the local part of the qualified name of the attribute.</dd>
- <dt>{{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} representing the namespace prefix of the attribute, or <code>null</code> if no prefix is specified.</dd>
- <dt>{{domxref("Attr.specified", "specified")}} {{readOnlyInline}}</dt>
- <dd>This property always returns <code>true</code>. Originally, it returned <code>true </code>if the attribute was explicitly specified in the source code or by a script, and <code>false</code> if its value came from the default one defined in the document's DTD.</dd>
- <dt>{{domxref("Attr.value", "value")}}</dt>
- <dd>El valor del atributo.</dd>
-</dl>
+- {{domxref("Attr.name", "name")}} {{readOnlyInline}}
+  - : El nombre del atributo.
+- {{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}
+  - : Un {{domxref("DOMString")}} representing the namespace URI of the attribute, or `null` if there is no namespace.
+- {{domxref("Attr.localName", "localName")}} {{readOnlyInline}}
+  - : A {{domxref("DOMString")}} representing the local part of the qualified name of the attribute.
+- {{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}
+  - : A {{domxref("DOMString")}} representing the namespace prefix of the attribute, or `null` if no prefix is specified.
+- {{domxref("Attr.specified", "specified")}} {{readOnlyInline}}
+  - : This property always returns `true`. Originally, it returned `true `if the attribute was explicitly specified in the source code or by a script, and `false` if its value came from the default one defined in the document's DTD.
+- {{domxref("Attr.value", "value")}}
+  - : El valor del atributo.
 
-<div class="note">
-<p><strong>Note:</strong> DOM Level 3 defined <code>namespaceURI</code>, <code>localName</code> and <code>prefix</code> on the {{domxref("Node")}} interface. In DOM4 they were moved to <code>Attr</code>.</p>
+> **Nota:** DOM Level 3 defined `namespaceURI`, `localName` and `prefix` on the {{domxref("Node")}} interface. In DOM4 they were moved to `Attr`.
+>
+> This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.
 
-<p>This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.</p>
-</div>
+## Propiedades y métodos obsoletos
 
-<h2 id="Propiedades_y_métodos_obsoletos">Propiedades y métodos obsoletos</h2>
+Las siguientes propiedades son obsoletos. Where available, the appropriate replacement is provided.
 
-<p>Las siguientes propiedades son obsoletos. Where available, the appropriate replacement is provided.</p>
+- `attributes`
+  - : Este propiedad ahora siempre devuelve `NULL`.
+- `childNodes`
+  - : Este propiedad ahora siempre devuelve `NULL`.
+- `firstChild`
+  - : Este propiedad ahora siempre devuelve `NULL`.
+- `isId` {{readOnlyInline}}
+  - : Indicates whether the attribute is an "ID attribute". An "ID attribute" being an attribute which value is expected to be unique across a DOM Document. In HTML DOM, "id" is the only ID attribute, but XML documents could define others. Whether or not an attribute is unique is often determined by a {{Glossary("DTD")}} or other schema description.
+- `lastChild`
+  - : Este propiedad ahora siempre devuelve `NULL`.
+- `nextSibling`
+  - : Este propiedad ahora siempre devuelve `NULL`.
+- `nodeName`
+  - : Utilizar {{domxref("Attr.name")}} en su lugar.
+- `nodeType`
+  - : Esta propiedad ahora siempre devuelve 2 (`ATTRIBUTE_NODE`).
+- `nodeValue`
+  - : Utilizar {{domxref("Attr.value")}} en su lugar.
+- `ownerDocument`
+  - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
+- `ownerElement` {{deprecated_inline("7.0")}} {{obsolete_inline("29.0")}} {{readOnlyInline}}
 
-<dl>
- <dt><code>attributes</code></dt>
- <dd>Este propiedad ahora siempre devuelve <code>NULL</code>.</dd>
- <dt><code>childNodes</code></dt>
- <dd>Este propiedad ahora siempre devuelve <code>NULL</code>.</dd>
- <dt><code>firstChild</code></dt>
- <dd>Este propiedad ahora siempre devuelve <code>NULL</code>.</dd>
- <dt><code>isId</code> {{readOnlyInline}}</dt>
- <dd>Indicates whether the attribute is an "ID attribute". An "ID attribute" being an attribute which value is expected to be unique across a DOM Document. In HTML DOM, "id" is the only ID attribute, but XML documents could define others. Whether or not an attribute is unique is often determined by a {{Glossary("DTD")}} or other schema description.</dd>
- <dt><code>lastChild</code></dt>
- <dd>Este propiedad ahora siempre devuelve <code>NULL</code>.</dd>
- <dt><code>nextSibling</code></dt>
- <dd>Este propiedad ahora siempre devuelve <code>NULL</code>.</dd>
- <dt><code>nodeName</code></dt>
- <dd>Utilizar {{domxref("Attr.name")}} en su lugar.</dd>
- <dt><code>nodeType</code></dt>
- <dd>Esta propiedad ahora siempre devuelve 2 (<code>ATTRIBUTE_NODE</code>).</dd>
- <dt><code>nodeValue</code></dt>
- <dd>Utilizar {{domxref("Attr.value")}} en su lugar.</dd>
- <dt><code>ownerDocument</code></dt>
- <dd>Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.</dd>
- <dt><code>ownerElement</code> {{deprecated_inline("7.0")}} {{obsolete_inline("29.0")}} {{readOnlyInline}}</dt>
- <dd>Since you get an <code>Attr</code> object from an {{domxref("Element")}}, you should already know the associated element.<br><br>
- Contrary to above claim, {{domxref("Document.evaluate")}} can return <code>Attr</code> objects from an XPath, in which case you would not easily know the owner.</dd>
- <dt><code>parentNode</code></dt>
- <dd>Estra propiedad ahora siempre devuelve <code>NULL</code>.</dd>
- <dt><code>previousSibling</code></dt>
- <dd>Estra propiedad ahora siempre devuelve <code>NULL</code>.</dd>
- <dt><code>schemaTypeInfo</code> {{obsolete_inline}} {{readOnlyInline}}</dt>
- <dd>The type information associated with this attribute. While the type information contained in this attribute is guaranteed to be correct after loading the document or invoking {{domxref("Document.normalizeDocument")}}, this property may not be reliable if the node was moved.</dd>
- <dt><code>specified</code></dt>
- <dd>Estra propiedad ahora siempre devuelve <code>true</code>.</dd>
- <dt><code>textContent</code></dt>
- <dd>Utilizar {{domxref("Attr.value")}} en su lugar.</dd>
-</dl>
+  - : Since you get an `Attr` object from an {{domxref("Element")}}, you should already know the associated element.
 
-<p>Los siguientes metodos ahora son obsoletos.</p>
+    Contrary to above claim, {{domxref("Document.evaluate")}} can return `Attr` objects from an XPath, in which case you would not easily know the owner.
 
-<dl>
- <dt><code>appendChild()</code></dt>
- <dd>Modify the value of {{domxref("Attr.value")}} instead.</dd>
- <dt><code>cloneNode()</code></dt>
- <dd>Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.</dd>
- <dt><code>createAttribute()</code></dt>
- <dd>Use {{domxref("Element.setAttribute()")}} instead.</dd>
- <dt><code>createAttributeNS()</code></dt>
- <dd>Use {{domxref("Element.setAttributeNS()")}} instead.</dd>
- <dt><code>getAttributeNode()</code></dt>
- <dd>Use {{domxref("Element.getAttribute()")}} instead.</dd>
- <dt><code>getAttributeNodeNS()</code></dt>
- <dd>Use {{domxref("Element.getAttributeNS()")}} instead.</dd>
- <dt><code>hasAttributes() </code>{{obsolete_inline("21.0")}}</dt>
- <dd>Estra propiedad ahora retorna false.</dd>
- <dt><code>hasChildNodes()</code></dt>
- <dd>Estra propiedad ahora devuelve <code>false</code>.</dd>
- <dt><code>insertBefore()</code></dt>
- <dd>Modify the value of {{domxref("Attr.value")}} instead.</dd>
- <dt><code>isSupported()</code></dt>
- <dd>Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.</dd>
- <dt><code>isEqualNode()</code></dt>
- <dd>Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.</dd>
- <dt><code>normalize()</code></dt>
- <dd>Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.</dd>
- <dt><code>removeAttributeNode()</code></dt>
- <dd>Use {{domxref("Element.removeAttribute()")}} instead.</dd>
- <dt><code>removeChild()</code></dt>
- <dd>Modify the value of {{domxref("Attr.value")}} instead.</dd>
- <dt><code>replaceChild()</code></dt>
- <dd>Modify the value of {{domxref("Attr.value")}} instead.</dd>
- <dt><code>setAttributeNode()</code></dt>
- <dd>Use {{domxref("Element.setAttribute()")}} instead.</dd>
- <dt><code>setAttributeNodeNS()</code></dt>
- <dd>Use {{domxref("Element.setAttributeNS()")}} instead.</dd>
-</dl>
+- `parentNode`
+  - : Estra propiedad ahora siempre devuelve `NULL`.
+- `previousSibling`
+  - : Estra propiedad ahora siempre devuelve `NULL`.
+- `schemaTypeInfo` {{obsolete_inline}} {{readOnlyInline}}
+  - : The type information associated with this attribute. While the type information contained in this attribute is guaranteed to be correct after loading the document or invoking {{domxref("Document.normalizeDocument")}}, this property may not be reliable if the node was moved.
+- `specified`
+  - : Estra propiedad ahora siempre devuelve `true`.
+- `textContent`
+  - : Utilizar {{domxref("Attr.value")}} en su lugar.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+Los siguientes metodos ahora son obsoletos.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM4", "#interface-attr", "Attr")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td>Moved <code>namespaceURI</code>, <code>prefix</code> and <code>localName</code> from {{domxref("Node")}} to this API and removed <code>ownerElement</code>, <code>schemaTypeInfo</code> and <code>isId</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Core", "core.html#ID-637646024", "Attr")}}</td>
-   <td>{{Spec2("DOM3 Core")}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+- `appendChild()`
+  - : Modify the value of {{domxref("Attr.value")}} instead.
+- `cloneNode()`
+  - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
+- `createAttribute()`
+  - : Use {{domxref("Element.setAttribute()")}} instead.
+- `createAttributeNS()`
+  - : Use {{domxref("Element.setAttributeNS()")}} instead.
+- `getAttributeNode()`
+  - : Use {{domxref("Element.getAttribute()")}} instead.
+- `getAttributeNodeNS()`
+  - : Use {{domxref("Element.getAttributeNS()")}} instead.
+- `hasAttributes() `{{obsolete_inline("21.0")}}
+  - : Estra propiedad ahora retorna false.
+- `hasChildNodes()`
+  - : Estra propiedad ahora devuelve `false`.
+- `insertBefore()`
+  - : Modify the value of {{domxref("Attr.value")}} instead.
+- `isSupported()`
+  - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
+- `isEqualNode()`
+  - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
+- `normalize()`
+  - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
+- `removeAttributeNode()`
+  - : Use {{domxref("Element.removeAttribute()")}} instead.
+- `removeChild()`
+  - : Modify the value of {{domxref("Attr.value")}} instead.
+- `replaceChild()`
+  - : Modify the value of {{domxref("Attr.value")}} instead.
+- `setAttributeNode()`
+  - : Use {{domxref("Element.setAttribute()")}} instead.
+- `setAttributeNodeNS()`
+  - : Use {{domxref("Element.setAttributeNS()")}} instead.
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Especificaciones
+
+| Especificación                                                                   | Estado                       | Comentario                                                                                                                                        |
+| -------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("DOM4", "#interface-attr", "Attr")}}                 | {{Spec2("DOM4")}}     | Moved `namespaceURI`, `prefix` and `localName` from {{domxref("Node")}} to this API and removed `ownerElement`, `schemaTypeInfo` and `isId`. |
+| {{SpecName("DOM3 Core", "core.html#ID-637646024", "Attr")}} | {{Spec2("DOM3 Core")}} | Definición inicial                                                                                                                                |
+
+## Compatibilidad con navegadores
 
 {{Compat("api.Attr")}}

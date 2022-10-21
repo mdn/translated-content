@@ -3,383 +3,325 @@ title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
 translation_of: Web/API/CanvasRenderingContext2D
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La interfaz <code><strong>CanvasRenderingContext2D</strong></code> proporciona el contexto de renderizado 2D para la superficie de dibujo de un elemento {{ HTMLElement("canvas") }}.</p>
+La interfaz **`CanvasRenderingContext2D`** proporciona el contexto de renderizado 2D para la superficie de dibujo de un elemento {{ HTMLElement("canvas") }}.
 
-<p>Para obtener un objeto de esta interfaz, llama a {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} en un <code>&lt;canvas&gt;</code>, proporcionando "2d" como argumento:</p>
+Para obtener un objeto de esta interfaz, llama a {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} en un `<canvas>`, proporcionando "2d" como argumento:
 
-<pre class="brush: js">var canvas = document.getElementById('mycanvas');
+```js
+var canvas = document.getElementById('mycanvas');
 var ctx = canvas.getContext('2d');
-</pre>
+```
 
-<p>Una vez que tengas el contexto de renderizado 2D para un canvas, podrás dibujar en ella. Por ejemplo:</p>
+Una vez que tengas el contexto de renderizado 2D para un canvas, podrás dibujar en ella. Por ejemplo:
 
-<pre class="brush: js">ctx.fillStyle = "rgb(200,0,0)";
+```js
+ctx.fillStyle = "rgb(200,0,0)";
 ctx.fillRect(10, 10, 55, 50);
-</pre>
+```
 
-<p>Mira las propiedades y métodos en la barra lateral. El <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">tutorial de canvas</a> tiene más información, ejemplos y recursos también.</p>
+Mira las propiedades y métodos en la barra lateral. El [tutorial de canvas](/es/docs/Web/API/Canvas_API/Tutorial) tiene más información, ejemplos y recursos también.
 
-<h2 id="Dibujando_rectángulos">Dibujando rectángulos</h2>
+## Dibujando rectángulos
 
-<p>Hay 3 métodos que inmediatamente dibujan rectángulos en el bitmap.</p>
+Hay 3 métodos que inmediatamente dibujan rectángulos en el bitmap.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.clearRect()")}}</dt>
- <dd>Establece todos los píxeles del rectangulo definido por los puntos <em>(x, y) </em>y tamaños <em>(ancho, alto)</em> a negro transparente, borrando cualquier contenido previo.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.fillRect()")}}</dt>
- <dd>Dibuja un rectángulo relleno en la posición <em>(x, y)</em> cuyo tamaño está determinado por la anchura y la altura.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</dt>
- <dd>Dibuja un rectángulo que tiene como posición inicial <em>(x, y)</em> con un ancho w y altura h sobre el canvas, utilizando el estilo de trazo actual.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.clearRect()")}}
+  - : Establece todos los píxeles del rectangulo definido por los puntos _(x, y)_ y tamaños _(ancho, alto)_ a negro transparente, borrando cualquier contenido previo.
+- {{domxref("CanvasRenderingContext2D.fillRect()")}}
+  - : Dibuja un rectángulo relleno en la posición _(x, y)_ cuyo tamaño está determinado por la anchura y la altura.
+- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
+  - : Dibuja un rectángulo que tiene como posición inicial _(x, y)_ con un ancho w y altura h sobre el canvas, utilizando el estilo de trazo actual.
 
-<h2 id="Dibujando_texto">Dibujando texto</h2>
+## Dibujando texto
 
-<p>Los siguientes métodos  se proporcionan para dibujar texto. Mira también el objeto {{domxref("TextMetrics")}} para propiedades de texto.</p>
+Los siguientes métodos se proporcionan para dibujar texto. Mira también el objeto {{domxref("TextMetrics")}} para propiedades de texto.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.fillText()")}}</dt>
- <dd>Dibuja (llena) un texto dado en una posición (x, y) dada.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.strokeText()")}}</dt>
- <dd>Dibuja (trazas) un texto dado en una posición (x, y) dada.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.measureText()")}}</dt>
- <dd>Devuelve el objeto {{domxref("TextMetrics")}}.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.fillText()")}}
+  - : Dibuja (llena) un texto dado en una posición (x, y) dada.
+- {{domxref("CanvasRenderingContext2D.strokeText()")}}
+  - : Dibuja (trazas) un texto dado en una posición (x, y) dada.
+- {{domxref("CanvasRenderingContext2D.measureText()")}}
+  - : Devuelve el objeto {{domxref("TextMetrics")}}.
 
-<h2 id="Los_estilos_de_línea">Los estilos de línea</h2>
+## Los estilos de línea
 
-<p>Los siguientes métodos y propiedades controlan como las líneas son dibujadas.</p>
+Los siguientes métodos y propiedades controlan como las líneas son dibujadas.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.lineWidth")}}</dt>
- <dd>Ancho de líneas. Por defecto <code>1.0</code></dd>
- <dt>{{domxref("CanvasRenderingContext2D.lineCap")}}</dt>
- <dd>Tipo de terminaciones en el final de las líneas. Posibles valores: <code>butt</code> (defecto), <code>round</code>, <code>square</code>.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.lineJoin")}}</dt>
- <dd>Define el tipo de esquinas donde dos líneas se encuentran. Pislbes valores: <code>round</code>, <code>bevel</code>, <code>miter</code> (defecto).</dd>
- <dt>{{domxref("CanvasRenderingContext2D.miterLimit")}}</dt>
- <dd>Relación límite angular. Defecto <code>10</code>.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.getLineDash()")}}</dt>
- <dd>Devuelve la matriz patrón de trazos actual que contiene un número de par de números no negativos.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.setLineDash()")}}</dt>
- <dd>Establece el patrón de trazos linea actual.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.lineDashOffset")}}</dt>
- <dd>Especifica donde inicia una gama de instrumentos en una línea.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.lineWidth")}}
+  - : Ancho de líneas. Por defecto `1.0`
+- {{domxref("CanvasRenderingContext2D.lineCap")}}
+  - : Tipo de terminaciones en el final de las líneas. Posibles valores: `butt` (defecto), `round`, `square`.
+- {{domxref("CanvasRenderingContext2D.lineJoin")}}
+  - : Define el tipo de esquinas donde dos líneas se encuentran. Pislbes valores: `round`, `bevel`, `miter` (defecto).
+- {{domxref("CanvasRenderingContext2D.miterLimit")}}
+  - : Relación límite angular. Defecto `10`.
+- {{domxref("CanvasRenderingContext2D.getLineDash()")}}
+  - : Devuelve la matriz patrón de trazos actual que contiene un número de par de números no negativos.
+- {{domxref("CanvasRenderingContext2D.setLineDash()")}}
+  - : Establece el patrón de trazos linea actual.
+- {{domxref("CanvasRenderingContext2D.lineDashOffset")}}
+  - : Especifica donde inicia una gama de instrumentos en una línea.
 
-<h2 id="Estilos_de_texto">Estilos de texto</h2>
+## Estilos de texto
 
-<p>Las siguientes propiedades control como el texto es presentado.</p>
+Las siguientes propiedades control como el texto es presentado.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.font")}}</dt>
- <dd>Ajuste de fuente. Valor por defecto <code>10px sans-serif</code>.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.textAlign")}}</dt>
- <dd>Text alignment setting. Possible values: <code>start</code> (default), <code>end</code>, <code>left</code>, <code>right</code> or <code>center</code>.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.textBaseline")}}</dt>
- <dd>Baseline alignment setting. Possible values: <code>top</code>, <code>hanging</code>, <code>middle</code>, <code>alphabetic</code> (default), <code>ideographic</code>, <code>bottom</code>.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.direction")}}</dt>
- <dd>Directionality. Possible values: <code>ltr, rtl</code>, <code>inherit</code> (default).</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.font")}}
+  - : Ajuste de fuente. Valor por defecto `10px sans-serif`.
+- {{domxref("CanvasRenderingContext2D.textAlign")}}
+  - : Text alignment setting. Possible values: `start` (default), `end`, `left`, `right` or `center`.
+- {{domxref("CanvasRenderingContext2D.textBaseline")}}
+  - : Baseline alignment setting. Possible values: `top`, `hanging`, `middle`, `alphabetic` (default), `ideographic`, `bottom`.
+- {{domxref("CanvasRenderingContext2D.direction")}}
+  - : Directionality. Possible values: `ltr, rtl`, `inherit` (default).
 
-<h2 id="Estilo_del_relleno_y_de_los_bordes">Estilo del relleno y de los bordes</h2>
+## Estilo del relleno y de los bordes
 
-<p>Fill styling es utilizado para estilizar los colores del relleno y los bordes de las  formas.</p>
+Fill styling es utilizado para estilizar los colores del relleno y los bordes de las formas.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.fillStyle")}}</dt>
- <dd>Utilizado para dar color al relleno de las formas. Color por defecto <code>#000</code> (negro).</dd>
- <dt>{{domxref("CanvasRenderingContext2D.strokeStyle")}}</dt>
- <dd>Utilizado para dar color al borde de las formas. Color por defecto <code>#000</code> (negro)..</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.fillStyle")}}
+  - : Utilizado para dar color al relleno de las formas. Color por defecto `#000` (negro).
+- {{domxref("CanvasRenderingContext2D.strokeStyle")}}
+  - : Utilizado para dar color al borde de las formas. Color por defecto `#000` (negro)..
 
-<h2 id="Degradados_y_patrones">Degradados y patrones</h2>
+## Degradados y patrones
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.createLinearGradient()")}}</dt>
- <dd>Creates a linear gradient along the line given by the coordinates represented by the parameters.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.createRadialGradient()")}}</dt>
- <dd>Creates a radial gradient along the line given by the coordinates represented by the parameters.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.createPattern()")}}</dt>
- <dd>Creates a pattern using the specified image (a {{domxref("CanvasImageSource")}}). It repeats the source in the directions specified by the repetition argument. This method returns a {{domxref("CanvasPattern")}}.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.createLinearGradient()")}}
+  - : Creates a linear gradient along the line given by the coordinates represented by the parameters.
+- {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}
+  - : Creates a radial gradient along the line given by the coordinates represented by the parameters.
+- {{domxref("CanvasRenderingContext2D.createPattern()")}}
+  - : Creates a pattern using the specified image (a {{domxref("CanvasImageSource")}}). It repeats the source in the directions specified by the repetition argument. This method returns a {{domxref("CanvasPattern")}}.
 
-<h2 id="Sombras">Sombras</h2>
+## Sombras
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.shadowBlur")}}</dt>
- <dd>Especifica el efecto de desenfoque. Predeterminado <code>0</code></dd>
- <dt>{{domxref("CanvasRenderingContext2D.shadowColor")}}</dt>
- <dd>Color de la sombra. Predeterminado totalmente transparente negro.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetX")}}</dt>
- <dd>Distancia horizontal del desplazamiento de la sombra. Predeterminado 0.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetY")}}</dt>
- <dd>Distancia vertical del desplazamiento de la sombra. Predeterminado 0.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.shadowBlur")}}
+  - : Especifica el efecto de desenfoque. Predeterminado `0`
+- {{domxref("CanvasRenderingContext2D.shadowColor")}}
+  - : Color de la sombra. Predeterminado totalmente transparente negro.
+- {{domxref("CanvasRenderingContext2D.shadowOffsetX")}}
+  - : Distancia horizontal del desplazamiento de la sombra. Predeterminado 0.
+- {{domxref("CanvasRenderingContext2D.shadowOffsetY")}}
+  - : Distancia vertical del desplazamiento de la sombra. Predeterminado 0.
 
-<h2 id="Paths">Paths</h2>
+## Paths
 
-<p>The following methods can be used to manipulate paths of objects.</p>
+The following methods can be used to manipulate paths of objects.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.beginPath()")}}</dt>
- <dd>Starts a new path by emptying the list of sub-paths. Call this method when you want to create a new path.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.closePath()")}}</dt>
- <dd>Causes the point of the pen to move back to the start of the current sub-path. It tries to draw a straight line from the current point to the start. If the shape has already been closed or has only one point, this function does nothing.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.moveTo()")}}</dt>
- <dd>Moves the starting point of a new sub-path to the <strong>(x, y)</strong> coordinates.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.lineTo()")}}</dt>
- <dd>Connects the last point in the subpath to the <code>x, y</code> coordinates with a straight line.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.bezierCurveTo()")}}</dt>
- <dd>Adds a cubic Bézier curve to the path. It requires three points. The first two points are control points and the third one is the end point. The starting point is the last point in the current path, which can be changed using <code>moveTo()</code> before creating the Bézier curve.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.quadraticCurveTo()")}}</dt>
- <dd>Adds a quadratic Bézier curve to the current path.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.arc()")}}</dt>
- <dd>Adds an arc to the path which is centered at <em>(x, y)</em> position with radius<em> r</em> starting at <em>startAngle</em> and ending at <em>endAngle</em> going in the given direction by <em>anticlockwise</em> (defaulting to clockwise).</dd>
- <dt>{{domxref("CanvasRenderingContext2D.arcTo()")}}</dt>
- <dd>Adds an arc to the path with the given control points and radius, connected to the previous point by a straight line.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.ellipse()")}} {{experimental_inline}}</dt>
- <dd>Adds an ellipse to the path which is centered at <em>(x, y)</em> position with the radii <em>radiusX</em> and <em>radiusY</em> starting at <em>startAngle</em> and ending at <em>endAngle</em> going in the given direction by <em>anticlockwise</em> (defaulting to clockwise).</dd>
- <dt>{{domxref("CanvasRenderingContext2D.rect()")}}</dt>
- <dd>Creates a path for a rectangle at<em> </em>position <em>(x, y)</em> with a size that is determined by <em>width</em> and <em>height</em>.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.beginPath()")}}
+  - : Starts a new path by emptying the list of sub-paths. Call this method when you want to create a new path.
+- {{domxref("CanvasRenderingContext2D.closePath()")}}
+  - : Causes the point of the pen to move back to the start of the current sub-path. It tries to draw a straight line from the current point to the start. If the shape has already been closed or has only one point, this function does nothing.
+- {{domxref("CanvasRenderingContext2D.moveTo()")}}
+  - : Moves the starting point of a new sub-path to the **(x, y)** coordinates.
+- {{domxref("CanvasRenderingContext2D.lineTo()")}}
+  - : Connects the last point in the subpath to the `x, y` coordinates with a straight line.
+- {{domxref("CanvasRenderingContext2D.bezierCurveTo()")}}
+  - : Adds a cubic Bézier curve to the path. It requires three points. The first two points are control points and the third one is the end point. The starting point is the last point in the current path, which can be changed using `moveTo()` before creating the Bézier curve.
+- {{domxref("CanvasRenderingContext2D.quadraticCurveTo()")}}
+  - : Adds a quadratic Bézier curve to the current path.
+- {{domxref("CanvasRenderingContext2D.arc()")}}
+  - : Adds an arc to the path which is centered at _(x, y)_ position with radius _r_ starting at _startAngle_ and ending at _endAngle_ going in the given direction by _anticlockwise_ (defaulting to clockwise).
+- {{domxref("CanvasRenderingContext2D.arcTo()")}}
+  - : Adds an arc to the path with the given control points and radius, connected to the previous point by a straight line.
+- {{domxref("CanvasRenderingContext2D.ellipse()")}} {{experimental_inline}}
+  - : Adds an ellipse to the path which is centered at _(x, y)_ position with the radii _radiusX_ and _radiusY_ starting at _startAngle_ and ending at _endAngle_ going in the given direction by _anticlockwise_ (defaulting to clockwise).
+- {{domxref("CanvasRenderingContext2D.rect()")}}
+  - : Creates a path for a rectangle at\_ _position _(x, y)_ with a size that is determined by \_width_ and _height_.
 
-<h2 id="Drawing_paths">Drawing paths</h2>
+## Drawing paths
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.fill()")}}</dt>
- <dd>Fills the subpaths with the current fill style.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.stroke()")}}</dt>
- <dd>Strokes the subpaths with the current stroke style.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}}</dt>
- <dd>If a given element is focused, this method draws a focus ring around the current path.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}}</dt>
- <dd>Scrolls the current path or a given path into the view.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.clip()")}}</dt>
- <dd>Creates a clipping path from the current sub-paths. Everything drawn after <code>clip()</code> is called appears inside the clipping path only. For an example, see <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing" title="Clipping paths">Clipping paths</a> in the Canvas tutorial.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.isPointInPath()")}}</dt>
- <dd>Reports whether or not the specified point is contained in the current path.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.isPointInStroke()")}}</dt>
- <dd>Reports whether or not the specified point is inside the area contained by the stroking of a path.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.fill()")}}
+  - : Fills the subpaths with the current fill style.
+- {{domxref("CanvasRenderingContext2D.stroke()")}}
+  - : Strokes the subpaths with the current stroke style.
+- {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}}
+  - : If a given element is focused, this method draws a focus ring around the current path.
+- {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}}
+  - : Scrolls the current path or a given path into the view.
+- {{domxref("CanvasRenderingContext2D.clip()")}}
+  - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/es/docs/Web/API/Canvas_API/Tutorial/Compositing "Clipping paths") in the Canvas tutorial.
+- {{domxref("CanvasRenderingContext2D.isPointInPath()")}}
+  - : Reports whether or not the specified point is contained in the current path.
+- {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}
+  - : Reports whether or not the specified point is inside the area contained by the stroking of a path.
 
-<h2 id="Transformations">Transformations</h2>
+## Transformations
 
-<p>Objects in the <code>CanvasRenderingContext2D</code> rendering context have a current transformation matrix and methods to manipulate it. The transformation matrix is applied when creating the current default path, painting text, shapes and {{domxref("Path2D")}} objects. The methods listed below remain for historical and compatibility reasons as {{domxref("SVGMatrix")}} objects are used in most parts of the API nowadays and will be used in the future instead.</p>
+Objects in the `CanvasRenderingContext2D` rendering context have a current transformation matrix and methods to manipulate it. The transformation matrix is applied when creating the current default path, painting text, shapes and {{domxref("Path2D")}} objects. The methods listed below remain for historical and compatibility reasons as {{domxref("SVGMatrix")}} objects are used in most parts of the API nowadays and will be used in the future instead.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.currentTransform")}}</dt>
- <dd>Current transformation matrix ({{domxref("SVGMatrix")}} object).</dd>
- <dt>{{domxref("CanvasRenderingContext2D.rotate()")}}</dt>
- <dd>Adds a rotation to the transformation matrix. The angle argument represents a clockwise rotation angle and is expressed in radians.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.scale()")}}</dt>
- <dd>Adds a scaling transformation to the canvas units by x horizontally and by y vertically.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.translate()")}}</dt>
- <dd>Adds a translation transformation by moving the canvas and its origin x horzontally and y vertically on the grid.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.transform()")}}</dt>
- <dd>Multiplies the current transformation matrix with the matrix described by its arguments.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.setTransform()")}}</dt>
- <dd>Resets the current transform to the identity matrix, and then invokes the <code>transform()</code> method with the same arguments.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.resetTransform()")}} {{experimental_inline}}</dt>
- <dd>Resets the current transform by the identity matrix.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.currentTransform")}}
+  - : Current transformation matrix ({{domxref("SVGMatrix")}} object).
+- {{domxref("CanvasRenderingContext2D.rotate()")}}
+  - : Adds a rotation to the transformation matrix. The angle argument represents a clockwise rotation angle and is expressed in radians.
+- {{domxref("CanvasRenderingContext2D.scale()")}}
+  - : Adds a scaling transformation to the canvas units by x horizontally and by y vertically.
+- {{domxref("CanvasRenderingContext2D.translate()")}}
+  - : Adds a translation transformation by moving the canvas and its origin x horzontally and y vertically on the grid.
+- {{domxref("CanvasRenderingContext2D.transform()")}}
+  - : Multiplies the current transformation matrix with the matrix described by its arguments.
+- {{domxref("CanvasRenderingContext2D.setTransform()")}}
+  - : Resets the current transform to the identity matrix, and then invokes the `transform()` method with the same arguments.
+- {{domxref("CanvasRenderingContext2D.resetTransform()")}} {{experimental_inline}}
+  - : Resets the current transform by the identity matrix.
 
-<h2 id="Compositing">Compositing</h2>
+## Compositing
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.globalAlpha")}}</dt>
- <dd>Alpha value that is applied to shapes and images before they are composited onto the canvas. Default <code>1.0</code> (opaque).</dd>
- <dt>{{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}</dt>
- <dd>With <code>globalAlpha</code> applied this sets how shapes and images are drawn onto the existing bitmap.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.globalAlpha")}}
+  - : Alpha value that is applied to shapes and images before they are composited onto the canvas. Default `1.0` (opaque).
+- {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}
+  - : With `globalAlpha` applied this sets how shapes and images are drawn onto the existing bitmap.
 
-<h2 id="Drawing_images">Drawing images</h2>
+## Drawing images
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.drawImage()")}}</dt>
- <dd>Draws the specified image. This method is available in multiple formats, providing a great deal of flexibility in its use.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.drawImage()")}}
+  - : Draws the specified image. This method is available in multiple formats, providing a great deal of flexibility in its use.
 
-<h2 id="Pixel_manipulation">Pixel manipulation</h2>
+## Pixel manipulation
 
-<p>See also the {{domxref("ImageData")}} object.</p>
+See also the {{domxref("ImageData")}} object.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.createImageData()")}}</dt>
- <dd>Creates a new, blank {{domxref("ImageData")}} object with the specified dimensions. All of the pixels in the new object are transparent black.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.getImageData()")}}</dt>
- <dd>Returns an {{domxref("ImageData")}} object representing the underlying pixel data for the area of the canvas denoted by the rectangle which starts at <em>(sx, sy)</em> and has an <em>sw</em> width and <em>sh</em> height.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.putImageData()")}}</dt>
- <dd>Paints data from the given {{domxref("ImageData")}} object onto the bitmap. If a dirty rectangle is provided, only the pixels from that rectangle are painted.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.createImageData()")}}
+  - : Creates a new, blank {{domxref("ImageData")}} object with the specified dimensions. All of the pixels in the new object are transparent black.
+- {{domxref("CanvasRenderingContext2D.getImageData()")}}
+  - : Returns an {{domxref("ImageData")}} object representing the underlying pixel data for the area of the canvas denoted by the rectangle which starts at _(sx, sy)_ and has an _sw_ width and _sh_ height.
+- {{domxref("CanvasRenderingContext2D.putImageData()")}}
+  - : Paints data from the given {{domxref("ImageData")}} object onto the bitmap. If a dirty rectangle is provided, only the pixels from that rectangle are painted.
 
-<h2 id="Image_smoothing">Image smoothing</h2>
+## Image smoothing
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} {{experimental_inline}}</dt>
- <dd>Image smoothing mode; if disabled, images will not be smoothed if scaled.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} {{experimental_inline}}
+  - : Image smoothing mode; if disabled, images will not be smoothed if scaled.
 
-<h2 id="The_canvas_state">The canvas state</h2>
+## The canvas state
 
-<p>The <code>CanvasRenderingContext2D</code> rendering context contains a variety of drawing style states (attributes for line styles, fill styles, shadow styles, text styles). The following methods help you to work with that state:</p>
+The `CanvasRenderingContext2D` rendering context contains a variety of drawing style states (attributes for line styles, fill styles, shadow styles, text styles). The following methods help you to work with that state:
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.save()")}}</dt>
- <dd>Saves the current drawing style state using a stack so you can revert any change you make to it using <code>restore()</code>.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.restore()")}}</dt>
- <dd>Restores the drawing style state to the last element on the 'state stack' saved by <code>save()</code>.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.canvas")}}</dt>
- <dd>A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be {{jsxref("null")}} if it is not associated with a {{HTMLElement("canvas")}} element.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.save()")}}
+  - : Saves the current drawing style state using a stack so you can revert any change you make to it using `restore()`.
+- {{domxref("CanvasRenderingContext2D.restore()")}}
+  - : Restores the drawing style state to the last element on the 'state stack' saved by `save()`.
+- {{domxref("CanvasRenderingContext2D.canvas")}}
+  - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be {{jsxref("null")}} if it is not associated with a {{HTMLElement("canvas")}} element.
 
-<h2 id="Hit_regions">Hit regions</h2>
+## Hit regions
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.addHitRegion()")}} {{experimental_inline}}</dt>
- <dd>Adds a hit region to the canvas.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.removeHitRegion()")}} {{experimental_inline}}</dt>
- <dd>Removes the hit region with the specified <code>id</code> from the canvas.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.clearHitRegions()")}} {{experimental_inline}}</dt>
- <dd>Removes all hit regions from the canvas.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.addHitRegion()")}} {{experimental_inline}}
+  - : Adds a hit region to the canvas.
+- {{domxref("CanvasRenderingContext2D.removeHitRegion()")}} {{experimental_inline}}
+  - : Removes the hit region with the specified `id` from the canvas.
+- {{domxref("CanvasRenderingContext2D.clearHitRegions()")}} {{experimental_inline}}
+  - : Removes all hit regions from the canvas.
 
-<h2 id="Non-standard_APIs">Non-standard APIs</h2>
+## Non-standard APIs
 
-<h3 id="Blink_and_WebKit">Blink and WebKit</h3>
+### Blink and WebKit
 
-<p>Most of these APIs are <a href="https://code.google.com/p/chromium/issues/detail?id=363198">deprecated and will be removed in the future</a>.</p>
+Most of these APIs are [deprecated and will be removed in the future](https://code.google.com/p/chromium/issues/detail?id=363198).
 
-<dl>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.clearShadow()</code></dt>
- <dd>Removes all shadow settings like {{domxref("CanvasRenderingContext2D.shadowColor")}} and {{domxref("CanvasRenderingContext2D.shadowBlur")}}.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.drawImageFromRect()</code></dt>
- <dd>This is redundant with an equivalent overload of <code>drawImage</code>.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.setAlpha()</code></dt>
- <dd>Use {{domxref("CanvasRenderingContext2D.globalAlpha")}} instead.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.setCompositeOperation()</code></dt>
- <dd>Use {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}} instead.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.setLineWidth()</code></dt>
- <dd>Use {{domxref("CanvasRenderingContext2D.lineWidth")}} instead.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.setLineJoin()</code></dt>
- <dd>Use {{domxref("CanvasRenderingContext2D.lineJoin")}} instead.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.setLineCap()</code></dt>
- <dd>Use {{domxref("CanvasRenderingContext2D.lineCap")}} instead.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.setMiterLimit()</code></dt>
- <dd>Use {{domxref("CanvasRenderingContext2D.miterLimit")}} instead.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.setStrokeColor()</code></dt>
- <dd>Use {{domxref("CanvasRenderingContext2D.strokeStyle")}} instead.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.setFillColor()</code></dt>
- <dd>Use {{domxref("CanvasRenderingContext2D.fillStyle")}} instead.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.setShadow()</code></dt>
- <dd>Use {{domxref("CanvasRenderingContext2D.shadowColor")}} and {{domxref("CanvasRenderingContext2D.shadowBlur")}} instead.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.webkitLineDash</code></dt>
- <dd>Use {{domxref("CanvasRenderingContext2D.getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()")}} instead.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.webkitLineDashOffset</code></dt>
- <dd>Use {{domxref("CanvasRenderingContext2D.lineDashOffset")}} instead.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.webkitImageSmoothingEnabled</code></dt>
- <dd>Use {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} instead.</dd>
-</dl>
+- {{non-standard_inline}} `CanvasRenderingContext2D.clearShadow()`
+  - : Removes all shadow settings like {{domxref("CanvasRenderingContext2D.shadowColor")}} and {{domxref("CanvasRenderingContext2D.shadowBlur")}}.
+- {{non-standard_inline}} `CanvasRenderingContext2D.drawImageFromRect()`
+  - : This is redundant with an equivalent overload of `drawImage`.
+- {{non-standard_inline}} `CanvasRenderingContext2D.setAlpha()`
+  - : Use {{domxref("CanvasRenderingContext2D.globalAlpha")}} instead.
+- {{non-standard_inline}} `CanvasRenderingContext2D.setCompositeOperation()`
+  - : Use {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}} instead.
+- {{non-standard_inline}} `CanvasRenderingContext2D.setLineWidth()`
+  - : Use {{domxref("CanvasRenderingContext2D.lineWidth")}} instead.
+- {{non-standard_inline}} `CanvasRenderingContext2D.setLineJoin()`
+  - : Use {{domxref("CanvasRenderingContext2D.lineJoin")}} instead.
+- {{non-standard_inline}} `CanvasRenderingContext2D.setLineCap()`
+  - : Use {{domxref("CanvasRenderingContext2D.lineCap")}} instead.
+- {{non-standard_inline}} `CanvasRenderingContext2D.setMiterLimit()`
+  - : Use {{domxref("CanvasRenderingContext2D.miterLimit")}} instead.
+- {{non-standard_inline}} `CanvasRenderingContext2D.setStrokeColor()`
+  - : Use {{domxref("CanvasRenderingContext2D.strokeStyle")}} instead.
+- {{non-standard_inline}} `CanvasRenderingContext2D.setFillColor()`
+  - : Use {{domxref("CanvasRenderingContext2D.fillStyle")}} instead.
+- {{non-standard_inline}} `CanvasRenderingContext2D.setShadow()`
+  - : Use {{domxref("CanvasRenderingContext2D.shadowColor")}} and {{domxref("CanvasRenderingContext2D.shadowBlur")}} instead.
+- {{non-standard_inline}} `CanvasRenderingContext2D.webkitLineDash`
+  - : Use {{domxref("CanvasRenderingContext2D.getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()")}} instead.
+- {{non-standard_inline}} `CanvasRenderingContext2D.webkitLineDashOffset`
+  - : Use {{domxref("CanvasRenderingContext2D.lineDashOffset")}} instead.
+- {{non-standard_inline}} `CanvasRenderingContext2D.webkitImageSmoothingEnabled`
+  - : Use {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} instead.
 
-<h3 id="Blink_only">Blink only</h3>
+### Blink only
 
-<dl>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.getContextAttributes()</code></dt>
- <dd>Inspired by the same <code>WebGLRenderingContext</code> method it returns an <code>Canvas2DContextAttributes</code> object that contains the attributes "storage" to indicate which storage is used ("persistent" by default) and the attribute "alpha" (<code>true</code> by default) to indicate that transparency is used in the canvas.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.isContextLost()</code></dt>
- <dd>Inspired by the same <code>WebGLRenderingContext</code> method it returns <code>true</code> if the Canvas context has been lost, or <code>false</code> if not.</dd>
-</dl>
+- {{non-standard_inline}} `CanvasRenderingContext2D.getContextAttributes()`
+  - : Inspired by the same `WebGLRenderingContext` method it returns an `Canvas2DContextAttributes` object that contains the attributes "storage" to indicate which storage is used ("persistent" by default) and the attribute "alpha" (`true` by default) to indicate that transparency is used in the canvas.
+- {{non-standard_inline}} `CanvasRenderingContext2D.isContextLost()`
+  - : Inspired by the same `WebGLRenderingContext` method it returns `true` if the Canvas context has been lost, or `false` if not.
 
-<h3 id="WebKit_only">WebKit only</h3>
+### WebKit only
 
-<dl>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.webkitBackingStorePixelRatio</code></dt>
- <dd>The backing store size in relation to the canvas element. See <a href="http://www.html5rocks.com/en/tutorials/canvas/hidpi/">High DPI Canvas</a>.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.webkitGetImageDataHD</code></dt>
- <dd>Intended for HD backing stores, but removed from canvas specifications.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.webkitPutImageDataHD</code></dt>
- <dd>Intended for HD backing stores, but removed from canvas specifications.</dd>
-</dl>
+- {{non-standard_inline}} `CanvasRenderingContext2D.webkitBackingStorePixelRatio`
+  - : The backing store size in relation to the canvas element. See [High DPI Canvas](http://www.html5rocks.com/en/tutorials/canvas/hidpi/).
+- {{non-standard_inline}} `CanvasRenderingContext2D.webkitGetImageDataHD`
+  - : Intended for HD backing stores, but removed from canvas specifications.
+- {{non-standard_inline}} `CanvasRenderingContext2D.webkitPutImageDataHD`
+  - : Intended for HD backing stores, but removed from canvas specifications.
 
-<dl>
-</dl>
+<!---->
 
-<h3 id="Gecko_only">Gecko only</h3>
+### Gecko only
 
-<dl>
- <dt>{{non-standard_inline}} {{domxref("CanvasRenderingContext2D.filter")}}</dt>
- <dd><span id="summary_alias_container"><span id="short_desc_nonedit_display">CSS and SVG filters as Canvas APIs</span></span>. Likely to be standardized in a new version of the specification.</dd>
-</dl>
+- {{non-standard_inline}} {{domxref("CanvasRenderingContext2D.filter")}}
+  - : CSS and SVG filters as Canvas APIs. Likely to be standardized in a new version of the specification.
 
-<h4 id="Prefixed_APIs">Prefixed APIs</h4>
+#### Prefixed APIs
 
-<dl>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozCurrentTransform</code></dt>
- <dd>Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.  {{ gecko_minversion_inline("7.0") }}</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozCurrentTransformInverse</code></dt>
- <dd>Sets or gets the current inversed transformation matrix.  {{ gecko_minversion_inline("7.0") }}</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozFillRule</code></dt>
- <dd>The <a class="external" href="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t">fill rule</a> to use. This must be one of <code>evenodd</code> or <code>nonzero</code> (default).</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozImageSmoothingEnabled</code></dt>
- <dd>See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.</dd>
- <dt>{{non-standard_inline}} {{deprecated_inline}} <code>CanvasRenderingContext2D.mozDash</code></dt>
- <dd>An array which specifies the lengths of alternating dashes and gaps {{ gecko_minversion_inline("7.0") }}. Use {{domxref("CanvasRenderingContext2D.getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()")}} instead.</dd>
- <dt>{{non-standard_inline}} {{deprecated_inline}} <code>CanvasRenderingContext2D.mozDashOffset</code></dt>
- <dd>Specifies where to start a dash array on a line. {{ gecko_minversion_inline("7.0") }}. Use {{domxref("CanvasRenderingContext2D.lineDashOffset")}} instead.</dd>
- <dt>{{non-standard_inline}} {{deprecated_inline}} <code>CanvasRenderingContext2D.mozTextStyle</code></dt>
- <dd>Introduced in in Gecko 1.9, deprecated in favor of the {{domxref("CanvasRenderingContext2D.font")}} property.</dd>
- <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.mozDrawText()</code></dt>
- <dd>This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.strokeText()")}} or {{domxref("CanvasRenderingContext2D.fillText()")}} instead.</dd>
- <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.mozMeasureText()</code></dt>
- <dd>This method was introduced in Gecko 1.9 and is unimplemented starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.measureText()")}} instead.</dd>
- <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.mozPathText()</code></dt>
- <dd>This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.</dd>
- <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.mozTextAlongPath()</code></dt>
- <dd>This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.</dd>
-</dl>
+- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransform`
+  - : Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}. {{ gecko_minversion_inline("7.0") }}
+- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransformInverse`
+  - : Sets or gets the current inversed transformation matrix. {{ gecko_minversion_inline("7.0") }}
+- {{non-standard_inline}} `CanvasRenderingContext2D.mozFillRule`
+  - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
+- {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`
+  - : See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.
+- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozDash`
+  - : An array which specifies the lengths of alternating dashes and gaps {{ gecko_minversion_inline("7.0") }}. Use {{domxref("CanvasRenderingContext2D.getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()")}} instead.
+- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozDashOffset`
+  - : Specifies where to start a dash array on a line. {{ gecko_minversion_inline("7.0") }}. Use {{domxref("CanvasRenderingContext2D.lineDashOffset")}} instead.
+- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextStyle`
+  - : Introduced in in Gecko 1.9, deprecated in favor of the {{domxref("CanvasRenderingContext2D.font")}} property.
+- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozDrawText()`
+  - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.strokeText()")}} or {{domxref("CanvasRenderingContext2D.fillText()")}} instead.
+- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozMeasureText()`
+  - : This method was introduced in Gecko 1.9 and is unimplemented starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.measureText()")}} instead.
+- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozPathText()`
+  - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
+- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozTextAlongPath()`
+  - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
 
-<h4 id="Internal_APIs_(chrome-context_only)">Internal APIs (chrome-context only)</h4>
+#### Internal APIs (chrome-context only)
 
-<dl>
- <dt>{{non-standard_inline}} {{domxref("CanvasRenderingContext2D.asyncDrawXULElement()")}}</dt>
- <dd>Renders a region of a XUL element into the <code>canvas</code>.</dd>
- <dt>{{non-standard_inline}} {{domxref("CanvasRenderingContext2D.drawWindow()")}}</dt>
- <dd>Renders a region of a window into the <code>canvas</code>. The contents of the window's viewport are rendered, ignoring viewport clipping and scrolling.</dd>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.demote()</code></dt>
- <dd>This causes a context that is currently using a hardware-accelerated backend to fallback to a software one. All state should be preserved.</dd>
-</dl>
+- {{non-standard_inline}} {{domxref("CanvasRenderingContext2D.asyncDrawXULElement()")}}
+  - : Renders a region of a XUL element into the `canvas`.
+- {{non-standard_inline}} {{domxref("CanvasRenderingContext2D.drawWindow()")}}
+  - : Renders a region of a window into the `canvas`. The contents of the window's viewport are rendered, ignoring viewport clipping and scrolling.
+- {{non-standard_inline}} `CanvasRenderingContext2D.demote()`
+  - : This causes a context that is currently using a hardware-accelerated backend to fallback to a software one. All state should be preserved.
 
-<h3 id="Internet_Explorer">Internet Explorer</h3>
+### Internet Explorer
 
-<dl>
- <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.msFillRule</code></dt>
- <dd>The <a class="external" href="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t">fill rule</a> to use. This must be one of <code>evenodd</code> or <code>nonzero</code> (default).</dd>
-</dl>
+- {{non-standard_inline}} `CanvasRenderingContext2D.msFillRule`
+  - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#2dcontext:canvasrenderingcontext2d", "CanvasRenderingContext2D")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                    | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', "scripting.html#2dcontext:canvasrenderingcontext2d", "CanvasRenderingContext2D")}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.CanvasRenderingContext2D")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLCanvasElement")}}</li>
-</ul>
+- {{domxref("HTMLCanvasElement")}}

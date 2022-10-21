@@ -14,47 +14,42 @@ tags:
   - Tutorial
 translation_of: Web/API/Canvas_API/Tutorial/Compositing
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
-<div class="summary">
-<p>En todos nuestros <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations">ejemplos a</a>nteriores, las formas siempre fueron dibujadas una encima de la anterior. Estos es más que adecuado para la mayoría de las situaciones pero se limita al orden compuesto de las figuras. Podemos, sin embargo, cambiar este comportamiento estableciendo  el valor de la propiedad <code>globalCompositeOperation</code>. Además, la proeidad <code>clip</code> nos permite ocultar partes de figuras que no queremos mostrar.</p>
-</div>
+En todos nuestros [ejemplos a](/es/docs/Web/API/Canvas_API/Tutorial/Transformations)nteriores, las formas siempre fueron dibujadas una encima de la anterior. Estos es más que adecuado para la mayoría de las situaciones pero se limita al orden compuesto de las figuras. Podemos, sin embargo, cambiar este comportamiento estableciendo el valor de la propiedad `globalCompositeOperation`. Además, la proeidad `clip` nos permite ocultar partes de figuras que no queremos mostrar.
 
-<h2 id="globalCompositeOperation" name="globalCompositeOperation"><code>globalCompositeOperation</code></h2>
+## `globalCompositeOperation`
 
-<p>No solo podemos dibujar formas nuevas detrás de las ya existentes sino que las podemos utilizar para enmascarar ciertas áreas, limpiar secciones del lienzo (canvas no se limita a utilizar rectángulos como en el método {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}) y algunas cosas más.</p>
+No solo podemos dibujar formas nuevas detrás de las ya existentes sino que las podemos utilizar para enmascarar ciertas áreas, limpiar secciones del lienzo (canvas no se limita a utilizar rectángulos como en el método {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}) y algunas cosas más.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}</dt>
- <dd>Esto establece el tipo de operación compuesta a aplicar cuando se dibujan nuevas figuras, en donde tipo (type) es una cadena de caracteres que identifica cual de las doce operaciones compuestas se utilizará.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
+  - : Esto establece el tipo de operación compuesta a aplicar cuando se dibujan nuevas figuras, en donde tipo (type) es una cadena de caracteres que identifica cual de las doce operaciones compuestas se utilizará.
 
-<p>Vea <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing/Example">ejemplos de composición</a> para el código de los siguientes ejemplos.</p>
+Vea [ejemplos de composición](/es/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) para el código de los siguientes ejemplos.
 
-<p>{{EmbedLiveSample("Compositing_example", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}</p>
+{{EmbedLiveSample("Compositing_example", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
 
-<h2 id="Clipping_paths" name="Clipping_paths">Trazado de Recorte</h2>
+## Trazado de Recorte
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png" style="float: right;">Un trazado de recoirte es como una figura normal en el lienzo pero actúa como una máscara para ocultar las partes de la misma que no se quieren mostrar. Este efecto se muestra en la figura de la derecha. La estrella roja es nuestro trazado de recorte. Todo lo que cae fuera de este trazado no se dibujará en el lienzo.</p>
+![](https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png)Un trazado de recoirte es como una figura normal en el lienzo pero actúa como una máscara para ocultar las partes de la misma que no se quieren mostrar. Este efecto se muestra en la figura de la derecha. La estrella roja es nuestro trazado de recorte. Todo lo que cae fuera de este trazado no se dibujará en el lienzo.
 
-<p>Si comparamos el trazado de recorte con la propiedad <code>globalCompositeOperation</code> que hemos visto antes, vemos dos modos compuestos que logran mas o menos los mismos efectos en <code>source-in</code> y <code>source-atop</code>. Las diferencias mas importantes entre éstos dos son que el trazado de recorte no dibujan nunca en el lienzo y que nunca se afecta por agregar nuevas figuras. Esto vuelve al trazado de recorte ideal para dibujar múltiples figuras en un área delimitada.</p>
+Si comparamos el trazado de recorte con la propiedad `globalCompositeOperation` que hemos visto antes, vemos dos modos compuestos que logran mas o menos los mismos efectos en `source-in` y `source-atop`. Las diferencias mas importantes entre éstos dos son que el trazado de recorte no dibujan nunca en el lienzo y que nunca se afecta por agregar nuevas figuras. Esto vuelve al trazado de recorte ideal para dibujar múltiples figuras en un área delimitada.
 
-<p>En el capítulo acerca de <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes" title="Web/Guide/HTML/Canvas_tutorial/Drawing_shapes#Drawing_paths">dibujo de figuras</a> solo menciono a los métodos <code>stroke()</code> y <code>fill()</code> pero existe un tercer método que se usa para trazados llamado <code>clip()</code>.</p>
+En el capítulo acerca de [dibujo de figuras](/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes "Web/Guide/HTML/Canvas_tutorial/Drawing_shapes#Drawing_paths") solo menciono a los métodos `stroke()` y `fill()` pero existe un tercer método que se usa para trazados llamado `clip()`.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.clip", "clip()")}}</dt>
- <dd>Convierte al trazado en ejecución a un trazado de recorte.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.clip", "clip()")}}
+  - : Convierte al trazado en ejecución a un trazado de recorte.
 
-<p>Se utiliza <code>clip()</code> en lugar de <code>closePath()</code> para cerrar el trazado y volverlo uno de recorte, en vez de marcar (stroke) o rellenar el trazado.</p>
+Se utiliza `clip()` en lugar de `closePath()` para cerrar el trazado y volverlo uno de recorte, en vez de marcar (stroke) o rellenar el trazado.
 
-<p>Por edfecto el elemento {{HTMLElement("canvas")}} tiene un trazado de recorte que es de extacamente el mismo tamaño del propio lienzo. En otras palabras, la máscara de recorte (clipping) no se da.</p>
+Por edfecto el elemento {{HTMLElement("canvas")}} tiene un trazado de recorte que es de extacamente el mismo tamaño del propio lienzo. En otras palabras, la máscara de recorte (clipping) no se da.
 
-<h3 id="A_clip_example" name="A_clip_example">Un ejemplo de <code>clip</code></h3>
+### Un ejemplo de `clip`
 
-<p>En este ejemplo, utilizamos un trazado de recorte de forma circular para restringir el dibujo de un conjunto de estrellas aleatorias dentro de una región particular del lienzo.</p>
+En este ejemplo, utilizamos un trazado de recorte de forma circular para restringir el dibujo de un conjunto de estrellas aleatorias dentro de una región particular del lienzo.
 
-<pre class="">function dibuja() {
+```
+function dibuja() {
   var ctx = document.getElementById('lienzo').getContext('2d');
   ctx.fillRect(0, 0, 150, 150);
   ctx.translate(75, 75);
@@ -73,7 +68,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Compositing
   ctx.fillRect(-75, -75, 150, 150);
 
   // dibuja las estrellas
-  for (var j = 1; j &lt; 50; j++) {
+  for (var j = 1; j < 50; j++) {
     ctx.save();
     ctx.fillStyle = '#fff';
     ctx.translate(75 - Math.floor(Math.random() * 150),
@@ -88,7 +83,7 @@ function dibujaEstrella(ctx, r) {
   ctx.save();
   ctx.beginPath();
   ctx.moveTo(r, 0);
-  for (var i = 0; i &lt; 9; i++) {
+  for (var i = 0; i < 9; i++) {
     ctx.rotate(Math.PI / 5);
     if (i % 2 === 0) {
       ctx.lineTo((r / 0.525731) * 0.200811, 0);
@@ -100,18 +95,20 @@ function dibujaEstrella(ctx, r) {
   ctx.fill();
   ctx.restore();
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="lienzo" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="lienzo" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js notranslate">dibuja();</pre>
-</div>
+```js hidden
+dibuja();
+```
 
-<p>En las primeras líneas de código, dibujamos un rectángulo negro del tamaño del lienzo como telón de fondo, luego trasladamos el origen del mismo al centro. A continuación, creamos un trazado de recorte de forma circular, a través de dibujar un arco y mediante la llamada a <code>clip()</code>. El recorte también es parte del estado guardado del lienzo. Si queremos mantener el recorte original, podríamos haber guardado el estado anterior del lienzo justo antes de que creamos el nuevo.</p>
+En las primeras líneas de código, dibujamos un rectángulo negro del tamaño del lienzo como telón de fondo, luego trasladamos el origen del mismo al centro. A continuación, creamos un trazado de recorte de forma circular, a través de dibujar un arco y mediante la llamada a `clip()`. El recorte también es parte del estado guardado del lienzo. Si queremos mantener el recorte original, podríamos haber guardado el estado anterior del lienzo justo antes de que creamos el nuevo.
 
-<p>Todo lo que se dibuja después de crear un recorte aparecerá dentro de su trazado. Se puede ver claramente esto en el dibujo de gradiente lineal que realizamos a continuación. Después se ubican estrellas en 50 posiciones alteatorias y escaladas utilizando la función <code>drawStar()</code>. Una vez más, las estrellas solo aparecen dentro del recorte trazado  en el lienzo.</p>
+Todo lo que se dibuja después de crear un recorte aparecerá dentro de su trazado. Se puede ver claramente esto en el dibujo de gradiente lineal que realizamos a continuación. Después se ubican estrellas en 50 posiciones alteatorias y escaladas utilizando la función `drawStar()`. Una vez más, las estrellas solo aparecen dentro del recorte trazado en el lienzo.
 
-<p>{{EmbedLiveSample("A_clip_example", "180", "180", "https://mdn.mozillademos.org/files/208/Canvas_clip.png")}}</p>
+{{EmbedLiveSample("A_clip_example", "180", "180", "https://mdn.mozillademos.org/files/208/Canvas_clip.png")}}
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

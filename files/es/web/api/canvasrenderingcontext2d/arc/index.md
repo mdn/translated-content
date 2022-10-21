@@ -3,69 +3,70 @@ title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
 translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="notranslate">El método <code><strong>CanvasRenderingContext2D</strong></code> <strong><code>.arc()</code></strong> de la API de Canvas 2D añade un arco a la trayectoria centrada en la posición <em>(x, y)</em> con el radio <em>r</em> comenzando en <em>startAngle</em> y terminando en <em>endAngle que</em> va en la dirección dada en sentido <em>antihorario</em> (predeterminado en sentido  horario) .</span></p>
+El método **`CanvasRenderingContext2D`** **`.arc()`** de la API de Canvas 2D añade un arco a la trayectoria centrada en la posición _(x, y)_ con el radio _r_ comenzando en _startAngle_ y terminando en _endAngle que_ va en la dirección dada en sentido _antihorario_ (predeterminado en sentido horario) .
 
-<h2 id="Sintaxis"><span class="highlight-span"><span class="notranslate">Sintaxis</span></span></h2>
+## Sintaxis
 
-<pre class="syntaxbox"><span class="notranslate"><var>Void <em>ctx</em> .arc (x, y, radio, startAngle, endAngle, antihorario);</var></span></pre>
+```
+Void ctx .arc (x, y, radio, startAngle, endAngle, antihorario);
+```
 
-<h3 id="Parámetros"><span class="notranslate">Parámetros</span></h3>
+### Parámetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd><span class="notranslate">La coordenada x del centro del arco.</span></dd>
- <dt><code>y</code></dt>
- <dd><span class="notranslate">La coordenada y del centro del arco.</span></dd>
- <dt><code>radius</code></dt>
- <dd><span class="notranslate">El radio del arco.</span></dd>
- <dt><code>startAngle</code></dt>
- <dd><span class="notranslate">El ángulo en el que se inicia el arco, medido en sentido horario desde el eje x positivo y expresado en radianes.</span></dd>
- <dt><code>endAngle</code></dt>
- <dd><span class="notranslate">El ángulo en el que termina el arco, medido en sentido horario desde el eje x positivo y expresado en radianes.</span></dd>
- <dt><span class="notranslate"><code>anticlockwise</code> <span class="">Opcional</span></span></dt>
- <dd><span class="notranslate">Un <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a> opcional que, si es <code>true</code> , hace que el arco se dibuje en sentido contrario a las agujas del reloj entre los dos ángulos.</span> <span class="notranslate"> De forma predeterminada, se dibuja en el sentido de las agujas del reloj.</span></dd>
-</dl>
+- `x`
+  - : La coordenada x del centro del arco.
+- `y`
+  - : La coordenada y del centro del arco.
+- `radius`
+  - : El radio del arco.
+- `startAngle`
+  - : El ángulo en el que se inicia el arco, medido en sentido horario desde el eje x positivo y expresado en radianes.
+- `endAngle`
+  - : El ángulo en el que termina el arco, medido en sentido horario desde el eje x positivo y expresado en radianes.
+- `anticlockwise` Opcional
+  - : Un [`Boolean`](/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean) opcional que, si es `true` , hace que el arco se dibuje en sentido contrario a las agujas del reloj entre los dos ángulos. De forma predeterminada, se dibuja en el sentido de las agujas del reloj.
 
-<h2 id="Ejemplos"><span class="highlight-span"><span class="notranslate">Ejemplos</span></span></h2>
+## Ejemplos
 
-<h3 id="Using_the_arc_method" name="Using_the_arc_method"><span class="notranslate">Utilizando el método del <code>arc</code></span></h3>
+### Utilizando el método del `arc`
 
-<p><span class="notranslate">Esto es sólo un simple fragmento de código dibujando un círculo.</span></p>
+Esto es sólo un simple fragmento de código dibujando un círculo.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.beginPath();
 ctx.arc(75, 75, 50, 0, 2 * Math.PI);
 ctx.stroke();
-</pre>
+```
 
-<p><span class="notranslate">Edite el código de abajo y vea su actualización de cambios en vivo en el lienzo:</span></p>
+Edite el código de abajo y vea su actualización de cambios en vivo en el lienzo:
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.arc(50, 50, 50, 0, 2 * Math.PI, false);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -88,30 +89,25 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h3 id="Different_shapes_demonstrated" name="Different_shapes_demonstrated"><span class="notranslate">Diferentes formas demostradas</span></h3>
+### Diferentes formas demostradas
 
-<p><span class="notranslate">En este ejemplo se dibujan diferentes formas para mostrar lo que es posible al usar <code>arc()</code> .</span></p>
+En este ejemplo se dibujan diferentes formas para mostrar lo que es posible al usar `arc()` .
 
-<div class="hidden">
-<h6 id="HTML_2">HTML</h6>
+```html hidden
+<canvas id="canvas" width="150" height="200"></canvas>
+```
 
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="200"&gt;&lt;/canvas&gt;
-</pre>
-
-<h6 id="JavaScript_2">JavaScript</h6>
-</div>
-
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 // Draw shapes
-for (var i = 0; i &lt; 4; i++) {
-  for(var j = 0; j &lt; 3; j++) {
+for (var i = 0; i < 4; i++) {
+  for(var j = 0; j < 3; j++) {
     ctx.beginPath();
     var x              = 25 + j * 50;               // x coordinate
     var y              = 25 + i * 50;               // y coordinate
@@ -122,53 +118,34 @@ for (var i = 0; i &lt; 4; i++) {
 
     ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
 
-    if (i &gt; 1) {
+    if (i > 1) {
       ctx.fill();
     } else {
       ctx.stroke();
     }
   }
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png") }}</p>
+{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png") }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col"><span class="notranslate">Especificación</span></th>
-   <th scope="col"><span class="notranslate">Estado</span></th>
-   <th scope="col"><span class="notranslate">Comentario</span></th>
-   <td><span class="notranslate"><a class="external external-icon" href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-arc" hreflang="en" lang="en">WHATWG HTML Estándar de vida</a></span><br>
-    <span class="notranslate"><a class="external external-icon" href="https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-arc" hreflang="en" lang="en"><small lang="en-US">La definición de 'CanvasRenderingContext2D.arc' en esa especificación.</small></a></span></td>
-   <td><span class="notranslate"><span class="">Estándar de vida</span></span></td>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arc", "CanvasRenderingContext2D.arc")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                   | Estado                           | Comentario | [WHATWG HTML Estándar de vida](https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-arc) [La definición de 'CanvasRenderingContext2D.arc' en esa especificación.](https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-arc) | Estándar de vida | Status | Comment |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------ | ------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arc", "CanvasRenderingContext2D.arc")}} | {{Spec2('HTML WHATWG')}} |            |                                                                                                                                                                                                                                                             |                  |        |         |
 
-<h2 id="Compatibilidad_del_navegador"><span class="highlight-span"><span class="notranslate">Compatibilidad del navegador</span></span></h2>
+## Compatibilidad del navegador
 
 {{Compat("api.CanvasRenderingContext2D.arc")}}
 
-<h2 class="highlight-spanned" id="Notas_específicas_de_Gecko"><span class="highlight-span"><span class="notranslate">Notas específicas de Gecko</span> </span></h2>
+## Notas específicas de Gecko
 
-<p><span class="notranslate">Comenzando con Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1):</span></p>
+Comenzando con Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1):
 
-<ul>
- <li><span class="notranslate">El parámetro <code>anticlockwise</code> es opcional,</span></li>
- <li><span class="notranslate">Especificar un radio negativo ahora arroja un error <a href="/en-US/docs/Web/API/DOMError"><code>IndexSizeError</code></a> ("Índice o tamaño es negativo o mayor que la cantidad permitida").</span></li>
-</ul>
+- El parámetro `anticlockwise` es opcional,
+- Especificar un radio negativo ahora arroja un error [`IndexSizeError`](/es/docs/Web/API/DOMError) ("Índice o tamaño es negativo o mayor que la cantidad permitida").
 
-<h2 class="highlight-spanned" id="Ver_también"><span class="highlight-span"><span class="notranslate">Ver también</span> </span></h2>
+## Ver también
 
-<ul>
- <li><span class="notranslate">La interfaz que lo define, <a href="/en-US/docs/Web/API/CanvasRenderingContext2D"><code>CanvasRenderingContext2D</code></a></span></li>
-</ul>
+- La interfaz que lo define, [`CanvasRenderingContext2D`](/es/docs/Web/API/CanvasRenderingContext2D)

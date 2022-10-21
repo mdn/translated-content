@@ -3,71 +3,50 @@ title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
 translation_of: Web/API/DeviceMotionEvent
 ---
-<p>{{APIRef("Device Orientation Events")}}{{SeeCompatTable}}</p>
+{{APIRef("Device Orientation Events")}}{{SeeCompatTable}}
 
-<p>El evento <code>DeviceMotionEvent</code> proporciona a los desarrolladores información acerca de la velocidad de los cambios en la posición y orientación del dispositivo.</p>
+El evento `DeviceMotionEvent` proporciona a los desarrolladores información acerca de la velocidad de los cambios en la posición y orientación del dispositivo.
 
-<div class="warning">
-<p><strong>Aviso:</strong> Acualmente, Firefox and Chrome no manejan las corrdenadas de la misma forma. Tenga en cuenta esto cuando lo use.</p>
-</div>
+> **Advertencia:** **Aviso:** Acualmente, Firefox and Chrome no manejan las corrdenadas de la misma forma. Tenga en cuenta esto cuando lo use.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{DOMxRef("DeviceMotionEvent.DeviceMotionEvent()")}} {{Non-standard_Inline}}</dt>
- <dd>Crea un nuevo <code>DeviceMotionEvent</code>.</dd>
-</dl>
+- {{DOMxRef("DeviceMotionEvent.DeviceMotionEvent()")}} {{Non-standard_Inline}}
+  - : Crea un nuevo `DeviceMotionEvent`.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{DOMxRef("DeviceMotionEvent.acceleration")}}{{ReadOnlyInline}}</dt>
- <dd>Objeto que nos proporciona la aceleración del dispositivo en los ejes X, Y y Z. La aceleración está expresada en <a href="https://en.wikipedia.org/wiki/Meter_per_second_squared">m/s<sup>2</sup></a>.</dd>
- <dt>{{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}{{ReadOnlyInline}}</dt>
- <dd>Objeto que nos proporciona la aceleración del dispositivo en los ejes X, Y y Z con el efecto de la gravedad. La aceleración está expresada en <a href="https://en.wikipedia.org/wiki/Meter_per_second_squared">m/s<sup>2</sup></a>.</dd>
- <dt>{{DOMxRef("DeviceMotionEvent.rotationRate")}}{{ReadOnlyInline}}</dt>
- <dd>Objeto que nos proporciona los cambios en la orientación del dispositivo en los ejes alpha, beta y gamma. La velocidad de rotación se expresa en grados por segundo</dd>
- <dt>{{DOMxRef("DeviceMotionEvent.interval")}}{{ReadOnlyInline}}</dt>
- <dd>Número que representa el intervalo de tiempo, en milisegundos, en el que se obtienen los datos del dispositivo..</dd>
-</dl>
+- {{DOMxRef("DeviceMotionEvent.acceleration")}}{{ReadOnlyInline}}
+  - : Objeto que nos proporciona la aceleración del dispositivo en los ejes X, Y y Z. La aceleración está expresada en [m/s2](https://en.wikipedia.org/wiki/Meter_per_second_squared).
+- {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}{{ReadOnlyInline}}
+  - : Objeto que nos proporciona la aceleración del dispositivo en los ejes X, Y y Z con el efecto de la gravedad. La aceleración está expresada en [m/s2](https://en.wikipedia.org/wiki/Meter_per_second_squared).
+- {{DOMxRef("DeviceMotionEvent.rotationRate")}}{{ReadOnlyInline}}
+  - : Objeto que nos proporciona los cambios en la orientación del dispositivo en los ejes alpha, beta y gamma. La velocidad de rotación se expresa en grados por segundo
+- {{DOMxRef("DeviceMotionEvent.interval")}}{{ReadOnlyInline}}
+  - : Número que representa el intervalo de tiempo, en milisegundos, en el que se obtienen los datos del dispositivo..
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: js">window.addEventListener('devicemotion', function(event) {
+```js
+window.addEventListener('devicemotion', function(event) {
   console.log(event.acceleration.x + ' m/s2');
-});</pre>
+});
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Device Orientation", "#devicemotionevent", "DeviceMotionEvent")}}</td>
-   <td>{{Spec2("Device Orientation")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estado                                   | Comentario          |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{SpecName("Device Orientation", "#devicemotionevent", "DeviceMotionEvent")}} | {{Spec2("Device Orientation")}} | Initial definition. |
 
-<h2 id="Compativilidad_con_los_navegadores">Compativilidad con los navegadores</h2>
+## Compativilidad con los navegadores
 
+{{Compat("api.DeviceMotionEvent")}}
 
+## Ver también
 
-<p>{{Compat("api.DeviceMotionEvent")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{Event("deviceorientation")}}</li>
- <li>{{DOMxRef("DeviceOrientationEvent")}}</li>
- <li>{{Event("devicemotion")}}</li>
- <li><a href="/en-US/docs/WebAPI/Detecting_device_orientation" title="/en-US/docs/WebAPI/Detecting_device_orientation">Detecting device orientation</a></li>
- <li><a href="https://developer.mozilla.org/en/DOM/Orientation_and_motion_data_explained" title="Orientation and motion data explained">Orientation and motion data explained</a></li>
-</ul>
+- {{Event("deviceorientation")}}
+- {{DOMxRef("DeviceOrientationEvent")}}
+- {{Event("devicemotion")}}
+- [Detecting device orientation](/es/docs/WebAPI/Detecting_device_orientation)
+- [Orientation and motion data explained](https://developer.mozilla.org/en/DOM/Orientation_and_motion_data_explained "Orientation and motion data explained")
