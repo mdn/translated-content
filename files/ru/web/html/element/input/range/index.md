@@ -52,7 +52,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 {{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}
 
-Смотрите [управление диапазоном с помощью решётки](/ru/docs/Web/HTML/Element/Input/range$edit#A_range_control_with_hash_marks) ниже, для примера того, как параметры диапазона обозначаются в поддерживаемых браузерах.
+Смотрите [управление диапазоном с помощью решётки](/ru/docs/Web/HTML/Element/Input/range#A_range_control_with_hash_marks) ниже, для примера того, как параметры диапазона обозначаются в поддерживаемых браузерах.
 
 ### {{htmlattrdef("max")}}
 

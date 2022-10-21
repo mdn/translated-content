@@ -33,7 +33,7 @@ const request = new XMLHttpRequest();
 
 ## Нестандартный синтаксис Firefox
 
-В Firefox 16 в конструктор добавлен нестандартный параметр, который позволяет включать анонимный режим (см. {{Bug("692677")}}). Установка флага `mozAnon` в значение `true` по сути напоминает конструктор [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest "see AnonXMLHttpRequest in the XMLHttpRequest specification"), описанный в более старых версиях спецификации XMLHttpRequest.
+В Firefox 16 в конструктор добавлен нестандартный параметр, который позволяет включать анонимный режим (см. {{Bug("692677")}}). Установка флага `mozAnon` в значение `true` по сути напоминает конструктор [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest), описанный в более старых версиях спецификации XMLHttpRequest.
 
 ```
 const request = new XMLHttpRequest(paramsDictionary);
@@ -46,7 +46,7 @@ const request = new XMLHttpRequest(paramsDictionary);
   - : Существует два флага, которые можно установить:
 
     - `mozAnon`
-      - : Boolean: Установка этого флага в значение `true` приведёт к тому, что браузер не будет раскрывать {{Glossary("origin")}} и [учётные данные пользователя](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials "Defintion of “User credentials” in the XMLHttpRequest specification.") при получении ресурсов. Главным образом это означает, что файлы {{Glossary("Cookie", "cookies")}} не будут отправлены, если они не добавлены явно с использованием setRequestHeader.
+      - : Boolean: Установка этого флага в значение `true` приведёт к тому, что браузер не будет раскрывать {{Glossary("origin")}} и [учётные данные пользователя](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) при получении ресурсов. Главным образом это означает, что файлы {{Glossary("Cookie", "cookies")}} не будут отправлены, если они не добавлены явно с использованием setRequestHeader.
     - `mozSystem`
       - : Boolean: Установка этого флага в значение `true` позволяет устанавливать межсайтовые соединения не требуя подключения сервера с помощью {{Glossary("CORS")}}. _Требует установки флага `mozAnon: true`, т.к. это нельзя сочетать с отправкой файлов cookie или других учётных данных пользователя. Это работает только в привилегированных (проверенных) приложениях ({{Bug ("692677")}})); не работает на произвольных веб-страницах, загруженных в Firefox._
 
