@@ -66,19 +66,13 @@ grid-auto-rows: unset;
  <dt><code>max-content</code></dt>
  <dd>representa el largo maximo del contenido de cada uno de los items de la pista en la cuadricula(grid)</dd>
  <dt><code>min-content</code></dt>
-</dl>
-
+<dd>
 <p>representa el largo minimo del contenido de cada uno de los items de la pista en la cuadricula(grid)</p>
-
-<dl>
+</dd>
  <dt><code>minmax(minimo, maximo)</code></dt>
  <dd>es una notacion funcional que define el rango del tamano, dicho tamano debe ser mayor o igual al (minimo) y menor o igual al (maximo). si el parametro (maximo) es mas pequeno que el parametro (minimo), entonces el parametro (maximo) es ignorado y la funcion se tratara con el parametro (minimo). De otra manera si, a valor <code>&lt;flex&gt;</code> pone como minimo el factor flex de la pista, sera tratado como cero( or el contenido minimo, si el contenedor grid es inicializado con el tamano minimo permitido ).</dd>
-</dl>
-
-<dl>
  <dt><code>auto</code></dt>
- <dd>Es una palabra clave que es identica a contenido máximo si es un máximo. Como mínimo representa el valor mínimo más grande (como esté especificado por  {{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la grilla que ocupan la pista de la grilla.</dd>
- <dd>
+ <dd>Es una palabra clave que es identica a contenido máximo si es un máximo. Como mínimo representa el valor mínimo más grande (como esté especificado por  {{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la grilla que ocupan la pista de la grilla.<br><br>
  <p class="note">Nota: los tamaños de la pista <code>auto</code> (y sólo los tamaños de la pista <code>auto</code>) pueden ser estirados por las propiedades {{cssxref("align-content")}} y {{cssxref("justify-content")}}.</p>
  </dd>
 </dl>

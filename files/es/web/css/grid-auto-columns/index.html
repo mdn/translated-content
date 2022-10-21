@@ -13,7 +13,7 @@ translation_of: Web/CSS/grid-auto-columns
 
 <div>{{EmbedInteractiveExample("pages/css/grid-auto-columns.html")}}</div>
 
-<p class="hidden">La version original interactiva de este artículo se guarda en un repositorio GitHub . If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+<p class="">La version original interactiva de este artículo se guarda en un repositorio GitHub . If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 
 <p>Si un item grid se posiciona dentro de una columna que no tenga un tamaño explícito para  {{cssxref("grid-template-columns")}}, implícito{{glossary("grid", "grid")}}las pistan se crean para sostenerlo. Esto puede suceder posicionándose explícitamente en una columna que está fuera de rango, o mediante el algoritmo de auto colocación creando columnas adicionales.</p>
 
@@ -69,8 +69,8 @@ grid-auto-columns: unset;
  <dt><code>&lt;percentage&gt;</code></dt>
  <dd>Es un valor no negativo {{cssxref("percentage", "&lt;percentage&gt;")}} en relación con el tamaño del bloque del contenedor de la grilla. Si el tamaño de bloque del contenedor de cuadrícula es indefinido, el valor porcentual se trata como automático.</dd>
  <dt><code>&lt;flex&gt;</code></dt>
- <dd>Es una dimensión -valor- no negativa con la unidad <code>fr</code> especificando el 'factor flex' del espacio entre dos celdas. Si el espacio entre dos celdas está designado como <code>&lt;flex&gt;</code> tomará una porción del espacio remanente entre celdas en proporción a su 'factor flex' - o flex factor <code>fr</code>-.</dd>
- <dd>Si aparece en una función <code>minmax()</code> implica un mínimo automático (ejemplo: <code>minmax(auto, &lt;flex&gt;)</code>).</dd>
+ <dd>Es una dimensión -valor- no negativa con la unidad <code>fr</code> especificando el 'factor flex' del espacio entre dos celdas. Si el espacio entre dos celdas está designado como <code>&lt;flex&gt;</code> tomará una porción del espacio remanente entre celdas en proporción a su 'factor flex' - o flex factor <code>fr</code>-.<br><br>
+ Si aparece en una función <code>minmax()</code> implica un mínimo automático (ejemplo: <code>minmax(auto, &lt;flex&gt;)</code>).</dd>
  <dt><code>max-content</code></dt>
  <dd>Es una keyword o palabra clave que representa el contenido máximo de los items que ocupan el espacio de la grid o cuadrilla.</dd>
  <dt><code>min-content</code></dt>
@@ -80,8 +80,7 @@ grid-auto-columns: unset;
  <dt><code>fit-content(<em>argument</em>)</code></dt>
  <dd>Representa la fórmula <code>min(max-content, max(auto, <var>argument</var>))</code>, que se calcula similar a <code>auto</code> (por ejemplo: <code>minmax(auto, max-content)</code>), excepto que el <em>track size</em> o espacio entre celdas es mayor que el auto mínimo.</dd>
  <dt><code>auto</code></dt>
- <dd>Es una palabra reservada -o keyword- que es idéntica a contenido máximo si es un máximo. Como mínimo representa el máximo valor mínimo aceptado (según lo especificado por{{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la cuadrícula que ocupan el espacio de la cuadrícula.</dd>
- <dd>
+ <dd>Es una palabra reservada -o keyword- que es idéntica a contenido máximo si es un máximo. Como mínimo representa el máximo valor mínimo aceptado (según lo especificado por{{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la cuadrícula que ocupan el espacio de la cuadrícula.<br><br>
  <p class="note">Note: Los valores de tamaño <code>auto</code>  (y solo los <code>auto</code>) pueden ser estirados por las propiedades {{cssxref("align-content")}} y {{cssxref("justify-content")}} .</p>
  </dd>
 </dl>
