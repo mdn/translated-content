@@ -23,7 +23,7 @@ _No hereda ninguna propiedad_
 - {{domxref("Navigator.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Proporciona un objeto {{domxref("NetworkInformation")}} que contiene información sobre la conexión de red de un dispositivo.
 - {{domxref("Navigator.cookieEnabled")}} {{ReadOnlyInline}}
-  - : Devuelve false si se ignorará la configuración de una cookie y true en caso contrario.
+  - : Devuelve _false_ si se ignorará la configuración de una _cookie_ y _true_ en caso contrario.
 - {{domxref("Navigator.credentials")}} {{ReadOnlyInline}}
   - : Devuelve la interfaz {{domxref("CredentialsContainer")}} que expone métodos para solicitar credenciales y notificar al agente de usuario cuando ocurren eventos interesantes, como iniciar o cerrar sesión correctamente.
 - {{domxref("Navigator.deviceMemory")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -39,7 +39,7 @@ _No hereda ninguna propiedad_
 - {{domxref("Navigator.language")}} {{ReadOnlyInline}}
   - : Devuelve una cadena que representa el idioma preferido del usuario, generalmente el idioma de la interfaz de usuario del navegador. El valor `null` se devuelve cuando se desconoce.
 - {{domxref("Navigator.languages")}} {{ReadOnlyInline}}
-  - :Devuelve una matriz de cadenas que representan los idiomas que conoce el usuario, por orden de preferencia.
+  - : Devuelve una matriz de cadenas que representan los idiomas que conoce el usuario, por orden de preferencia.
 - {{domxref("Navigator.locks")}} {{ReadOnlyInline}}
   - : Devuelve un objeto {{domxref("LockManager")}} que proporciona métodos para solicitar un nuevo objeto {{domxref('Lock')}} y consultar un objeto {{domxref('Lock')}} existente.
 - {{domxref("Navigator.maxTouchPoints")}} {{ReadOnlyInline}}
@@ -61,7 +61,7 @@ _No hereda ninguna propiedad_
 - {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Devuelve un objeto {{domxref("Serial")}}, que representa el punto de entrada a {{domxref("Web Serial API")}} para habilitar el control de los puertos serie.
 - {{domxref("Navigator.serviceWorker")}} {{ReadOnlyInline}}
-  - : Devuelve un objeto {{domxref("ServiceWorkerContainer")}}, que proporciona acceso al registro, eliminación, actualización y comunicación con los objetos {{domxref("ServiceWorker")}} para el [documento asociado](https:// html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
+  - : Devuelve un objeto {{domxref("ServiceWorkerContainer")}}, que proporciona acceso al registro, eliminación, actualización y comunicación con los objetos {{domxref("ServiceWorker")}} para el [documento asociado](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - {{domxref("Navigator.storage")}} {{ReadOnlyInline}}
   - : Devuelve el objeto singleton {{domxref('StorageManager')}} que se usa para administrar los permisos de persistencia y estimar el almacenamiento disponible sitio por sitio y aplicación por aplicación.
 - {{domxref("Navigator.userActivation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -92,7 +92,7 @@ _No hereda ninguna propiedad_
 - {{domxref("Navigator.wakeLock")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Devuelve una interfaz {{domxref("WakeLock")}} que puede usar para solicitar bloqueos de activación de pantalla y evitar que la pantalla se atenúe, apague o muestre un protector de pantalla.
 
-### Propiedades deprecadas
+### Propiedades obsoletas
 
 - {{domxref("Navigator.appCodeName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Siempre devuelve `'Mozilla'`, en cualquier navegador.
@@ -115,7 +115,7 @@ _No hereda ninguna propiedad_
 - {{domxref("Navigator.product")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Siempre devuelve `'Gecko'`, en cualquier navegador.
 - {{domxref("Navigator.productSub")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Devuelve la cadena `'20030107'', o `'"20100101''.
+  - : Devuelve la cadena `'20030107'`, o `'"20100101'`.
 - {{domxref("Navigator.vendor")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Devuelve la cadena vacía, `'Apple Computer Inc.'` o `'Google Inc.'`.
 - {{domxref("Navigator.vendorSub")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
@@ -134,19 +134,19 @@ _No hereda ningun metodo_
 - {{domxref("Navigator.registerProtocolHandler()")}}
   - : Permite que los sitios web se registren como un posible controlador para un protocolo determinado.
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}}
-  - : Devuelve un {{jsxref("Promise")}} para un objeto MediaKeySystemAccess.
+  - : Devuelve un {{jsxref("Promise")}} para un objeto `MediaKeySystemAccess`.
 - {{domxref("Navigator.requestMIDIAccess()")}}
   - : Devuelve un {{jsxref('Promise')}} que representa una solicitud de acceso a dispositivos MIDI en el sistema del usuario.
 - {{domxref("Navigator.sendBeacon()")}}
-  - : se utiliza para transferir de forma asíncrona una pequeña cantidad de datos mediante {{Glossary("HTTP")}} desde el agente de usuario a un servidor web.
+  - : Se utiliza para transferir de forma asíncrona una pequeña cantidad de datos mediante {{Glossary("HTTP")}} desde el agente de usuario a un servidor web.
 - {{domxref("Navigator.setAppBadge()")}} {{Experimental_Inline}}
-  - : establece una insignia en el ícono asociado con esta aplicación y devuelve un {{jsxref("Promise")}} que se resuelve con {{jsxref("undefined")}}.
+  - : Establece una insignia en el ícono asociado con esta aplicación y devuelve un {{jsxref("Promise")}} que se resuelve con {{jsxref("undefined")}}.
 - {{domxref("Navigator.share()")}}
   - : Invoca el mecanismo de uso compartido nativo de la plataforma actual.
 - {{domxref("Navigator.vibrate()")}}
   - : Provoca vibración en dispositivos compatibles. No hace nada si el soporte de vibración no está disponible.
 
-### Metodos deprecados
+### Metodos obsoletos
 
 - {{domxref("Navigator.getVRDisplays()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Devuelve una promesa que se resuelve en una matriz de {{domxref("VRDisplay")}} objetos que representan cualquier dispositivo VR disponible conectado a la computadora.

@@ -124,7 +124,7 @@ if ( isset ( $_GET["value"] ) ) {
 
 ## Véase también
 
-- `nsIProtocolHandler` (XUL only)
-- [RegisterProtocolHandler Mejora de la web federada](https://blog.mozilla.org/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) at Mozilla Webdev
-- [Registrar un controlador de protocolo personalizado](https://web.dev/registering-a-custom-protocol-handler/) at web.dev.
+- `nsIProtocolHandler` (solo XUL)
+- [RegisterProtocolHandler Mejora de la web federada](https://blog.mozilla.org/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) en Mozilla Webdev.
+- [Registrar un controlador de protocolo personalizado](https://web.dev/registering-a-custom-protocol-handler/) en Google Developers.
 
