@@ -13,7 +13,7 @@ translation_of: Web/API/Node/ownerDocument
 document = element.ownerDocument
 ```
 
-- `document` это объект [`document`](/ru/docs/DOM/document "DOM/document") родитель текущего элемента.
+- `document` это объект [`document`](/ru/docs/DOM/document) родитель текущего элемента.
 
 ## Пример
 

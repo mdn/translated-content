@@ -9,9 +9,9 @@ translation_of: Web/API/MediaRecorder/requestData
 
 When the `requestData()` method is invoked, the browser queues a task that runs the following steps:
 
-1.  If {{domxref("MediaRecorder.state")}} is not "recording", raise a DOM `InvalidState` error and terminate these steps. If {{domxref("MediaRecorder.state")}} is "recording", continue to the next step.
-2.  Raise a {{domxref("dataavailable")}} event containing a {{domxref("Blob")}} of the currently captured data (the Blob is available under the event's `data` attribute.)
-3.  Create a new Blob and place subsequently captured data into it.
+1. If {{domxref("MediaRecorder.state")}} is not "recording", raise a DOM `InvalidState` error and terminate these steps. If {{domxref("MediaRecorder.state")}} is "recording", continue to the next step.
+2. Raise a {{domxref("dataavailable")}} event containing a {{domxref("Blob")}} of the currently captured data (the Blob is available under the event's `data` attribute.)
+3. Create a new Blob and place subsequently captured data into it.
 
 ## Syntax
 

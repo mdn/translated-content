@@ -21,7 +21,7 @@ Dans WebExtensions, ces types de boutons s’appellent « actions du navigateur 
 
 ## Un bouton simple
 
-Dans cette section, nous créerons une WebExtension qui ajoute un bouton à la barre d’outils. Lorsque l’utilisateur clique sur le bouton, nous ouvrirons [https&nbsp;://developer.mozilla.org](https://developer.mozilla.org) dans un nouveau onglet.
+Dans cette section, nous créerons une WebExtension qui ajoute un bouton à la barre d’outils. Lorsque l’utilisateur clique sur le bouton, nous ouvrirons [https://developer.mozilla.org](/) dans un nouveau onglet.
 
 Tout d’abord, créez un nouveau dossier, «&nbsp;bouton&nbsp;», et créez un fichier appelé «&nbsp;manifest.json&nbsp;» à l’intérieur avec le contenu suivant&nbsp;:
 

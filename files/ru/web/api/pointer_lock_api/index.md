@@ -11,7 +11,7 @@ translation_of: Web/API/Pointer_Lock_API
 
 ## Основные концепции
 
-Pointer lock is related to [mouse capture](/en/DOM/element.setCapture "element.setCapture"). Mouse capture provides continued delivery of events to a target element while a mouse is being dragged, but it stops when the mouse button is released. Pointer lock is different from mouse capture in the following ways:
+Pointer lock is related to [mouse capture](/en/DOM/element.setCapture). Mouse capture provides continued delivery of events to a target element while a mouse is being dragged, but it stops when the mouse button is released. Pointer lock is different from mouse capture in the following ways:
 
 - It is persistent: Pointer lock does not release the mouse until an explicit API call is made or the user uses a specific release gesture.
 - It is not limited by browser or screen boundaries.

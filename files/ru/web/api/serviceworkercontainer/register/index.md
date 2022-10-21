@@ -5,9 +5,9 @@ translation_of: Web/API/ServiceWorkerContainer/register
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-**`register()`** метод {{domxref("ServiceWorkerContainer")}} интерфейса который создаёт и обновляет [`ServiceWorkerRegistration`](/ru/docs/Web/API/ServiceWorkerRegistration "The ServiceWorkerRegistion interface of the ServiceWorker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin.") для указанного `URL js скрипта`.
+**`register()`** метод {{domxref("ServiceWorkerContainer")}} интерфейса который создаёт и обновляет [`ServiceWorkerRegistration`](/ru/docs/Web/API/ServiceWorkerRegistration) для указанного `URL` js скрипта.
 
-Если удачно, service worker registration связывается по указанному URL js скрипта , который соответственно используется для проверки совпадения при навигации по URL. Если метод не возвращает `ServiceWorkerRegistration`, он возвращает [`Promise`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:"). Есть возможность вызвать этот метод без проверки на условие, т.е. нет необходимости сначала проверять существует ли активная регистрация в данный момент или нет.
+Если удачно, service worker registration связывается по указанному URL js скрипта , который соответственно используется для проверки совпадения при навигации по URL. Если метод не возвращает `ServiceWorkerRegistration`, он возвращает [`Promise`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise). Есть возможность вызвать этот метод без проверки на условие, т.е. нет необходимости сначала проверять существует ли активная регистрация в данный момент или нет.
 
 ## Синтаксис
 

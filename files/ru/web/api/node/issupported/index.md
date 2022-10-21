@@ -16,7 +16,7 @@ boolValue = element.isSupported(feature, version)
 ### Параметры
 
 - _feature_
-  - : Это {{domxref("DOMString")}} содержащая имя свойства для проверки. Это тоже имя, которое может быть передано в метод `hasFeature` в [DOMImplementation](/en/DOM/document.implementation "en/DOM/document.implementation"). Возможные значения определённые в спецификации ядра DOM перечислены в DOM Level 2 [соответствующий раздел](http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance).
+  - : Это {{domxref("DOMString")}} содержащая имя свойства для проверки. Это тоже имя, которое может быть передано в метод `hasFeature` в [DOMImplementation](/en/DOM/document.implementation). Возможные значения определённые в спецификации ядра DOM перечислены в DOM Level 2 [соответствующий раздел](http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance).
 - _version_
   - : Это {{domxref("DOMString")}} содержащая номер версии свойства для ис проверки.В DOM уровень 2, version 1, это строка `2.0`. если версия не указана, поддерживает любую версию свойства, вызывает метод и возвращает true.
 

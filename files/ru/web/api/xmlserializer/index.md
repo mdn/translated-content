@@ -3,9 +3,10 @@ title: XMLSerializer
 slug: Web/API/XMLSerializer
 translation_of: Web/API/XMLSerializer
 ---
-`XMLSerializer `может быть использован для конвертации веток DOM-дерева или дерева целиком в текст. `XMLSerializer `доступен непривилегированным скриптам.
 
-Для получения более подробной информации об `XMLSerializer` в расширениях для браузера Firefox, пожалуйста обратитесь к документации [`nsIDOMSerializer`](/en-US/docs/nsIDOMSerializer "nsIDOMSerializer").
+`XMLSerializer` может быть использован для конвертации веток DOM-дерева или дерева целиком в текст. `XMLSerializer` доступен непривилегированным скриптам.
+
+Для получения более подробной информации об `XMLSerializer` в расширениях для браузера Firefox, пожалуйста обратитесь к документации [`nsIDOMSerializer`](/en-US/docs/nsIDOMSerializer).
 
 ## Методы
 
@@ -41,6 +42,6 @@ document.body.insertAdjacentHTML('afterbegin', inp_xmls);
 
 ## Смотрите также
 
-- [Parsing and serializing XML](/en-US/Parsing_and_serializing_XML "en-US/Parsing_and_serializing_XML")
-- [XMLHttpRequest](/en-US/XMLHttpRequest "en-US/XMLHttpRequest")
-- [DOMParser](/en-US/DOMParser "en-US/DOMParser")
+- [Parsing and serializing XML](/en-US/Parsing_and_serializing_XML)
+- [XMLHttpRequest](/en-US/XMLHttpRequest)
+- [DOMParser](/en-US/DOMParser)

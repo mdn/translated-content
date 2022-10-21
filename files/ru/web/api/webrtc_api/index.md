@@ -40,7 +40,7 @@ _**more details and links to relevant guides and tutorials needed**_
 - {{domxref("RTCPeerConnection")}}
   - : Представляет WebRTC соединение между локальным компьютером и удалённым узлом. Используется для обработки успешной передачи данных между двумя узлами.
 - {{domxref("RTCSessionDescription")}}
-  - : Представляет параметры сессии. Каждый `RTCSessionDescription `содержит описания [типа](/ru/docs/Web/API/RTCSessionDescription/type), показывающего какую часть (предложение/ответ) процесса переговоров он описывает, и [SDP](/ru/docs/Glossary/SDP)-дескриптор сессии`.`
+  - : Представляет параметры сессии. Каждый `RTCSessionDescription` содержит описания [типа](/ru/docs/Web/API/RTCSessionDescription/type), показывающего какую часть (предложение/ответ) процесса переговоров он описывает, и [SDP](/ru/docs/Glossary/SDP)-дескриптор сессии`.`
 - {{domxref("RTCIceCandidate")}}
   - : Представляет собой кандидата сервера установки интернет соединения (ICE) для установленовки соединения {{domxref("RTCPeerConnection")}}.
 - {{domxref("RTCIceTransport")}}

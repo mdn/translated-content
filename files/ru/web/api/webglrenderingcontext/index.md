@@ -16,7 +16,7 @@ var gl = canvas.getContext('webgl');
 
 После того, как вы получили WebGL контекст, вы можете его использовать для рендеринга.
 
-[WebGL tutorial](/ru/docs/Web/API/WebGL_API/Tutorial "WebGL tutorial") содержит больше информации, примеров, ссылок на ресурсы которые помогут начать использовать WebGL.
+[WebGL tutorial](/ru/docs/Web/API/WebGL_API/Tutorial) содержит больше информации, примеров, ссылок на ресурсы которые помогут начать использовать WebGL.
 
 ## Константы
 
@@ -35,7 +35,7 @@ var gl = canvas.getContext('webgl');
 - {{domxref("WebGLRenderingContext.drawingBufferHeight")}}
   - : Доступная только для чтения высота текущего буфера отрисовки. Должна совпадать с высотой холста связанного с данным контекстом.
 - {{domxref("WebGLRenderingContext.getContextAttributes()")}}
-  - : Возвращает `WebGLContextAttributes объект который содержит атрибуты текущего контекста. Может возвращать `{{jsxref("null")}} если контекст утерян.``
+  - : Возвращает `WebGLContextAttributes объект который содержит атрибуты текущего контекста. Может возвращать {{jsxref("null")}} если контекст утерян.
 - {{domxref("WebGLRenderingContext.isContextLost()")}}
   - : Возвращает `true` если контекст утерян, в противном случае возвращает `false`.
 
