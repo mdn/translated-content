@@ -43,7 +43,7 @@ Requisições HTTP são mensagens enviadas pelo cliente para iniciar uma ação 
     - Um caminho absoluto, seguido de um `'?'` e o texto da consulta. Esta é a forma mais comum, conhecida como a _forma original_, e é usada com os métodos `GET`, `POST`, `HEAD`, e `OPTIONS`.
       `POST / HTTP/1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
     - Uma URL completa, conhecida como a _forma absoluta_, usada principalmente com `GET` quando conectado a um proxy.
-      `GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
+      `GET http://developer.mozilla.org/pt-BR/docs/Web/HTTP/Messages HTTP/1.1`
     - O componente autoridade de um URL, que consiste no nome do domínio e opcionalmente uma porta (prefixada por `':'`), chamada de _forma autoridade_. Só usada com `CONNECT` ao estabelecer um túnel HTTP.
       `CONNECT developer.mozilla.org:80 HTTP/1.1`
     - A _forma asterisco_, um simples asterisco (`'*'`), usada com `OPTIONS`. Representa o servidor como um todo.

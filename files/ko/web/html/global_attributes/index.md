@@ -44,7 +44,7 @@ translation_of: Web/HTML/Global_attributes
 - [{{htmlattrdef("contenteditable")}}](/ko/docs/Web/HTML/Global_attributes/contenteditable)
   - : 해당 요소를 사용자가 편집할 수 있는지를 나타내는 열거형 특성입니다. 편집 가능한 경우에 브라우저는 편집을 허용하도록 위젯을 수정합니다.
 - [{{htmlattrdef("data-*")}}](/ko/docs/Web/HTML/Global_attributes/data-*)
-  - : 사용자 지정 데이터 특성(custom data attributes)이라는 특성 클래스를 형성함으로써 임의의 데이터를 스크립트로 [HTML](/ko/docs/Web/HTML "en/HTML")과 [DOM](/ko/docs/Web/API/Document_Object_Model "en/DOM") 사이에서 교환할 수 있는 방법을 제공합니다.
+  - : 사용자 지정 데이터 특성(custom data attributes)이라는 특성 클래스를 형성함으로써 임의의 데이터를 스크립트로 [HTML](/ko/docs/Web/HTML)과 [DOM](/ko/docs/Web/API/Document_Object_Model) 사이에서 교환할 수 있는 방법을 제공합니다.
 - [{{htmlattrdef("dir")}}](/ko/docs/Web/HTML/Global_attributes/dir)
   - : 요소의 쓰기 방향을 나타내는 열거형 특성입니다.
 - [{{htmlattrdef("draggable")}}](/ko/docs/Web/HTML/Global_attributes/draggable)

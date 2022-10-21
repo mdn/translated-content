@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_in
 
 ### Invalid cases
 
-reduce 함수를 filter ({{jsxref("Array.prototype.filter()")}}, {{jsxref("TypedArray.prototype.filter()")}})와 조합해서 사용할 때 이 에러가 자주 발생합니다. filter가 리스트의 모든 원소를 삭제하면 초기값으로 사용할 값이 없어집니다. 
+reduce 함수를 filter ({{jsxref("Array.prototype.filter()")}}, {{jsxref("TypedArray.prototype.filter()")}})와 조합해서 사용할 때 이 에러가 자주 발생합니다. filter가 리스트의 모든 원소를 삭제하면 초기값으로 사용할 값이 없어집니다.
 
 ```js example-bad
 var ints = [0, -1, -2, -3, -4, -5];
@@ -54,6 +54,7 @@ var ints = [0, -1, -2, -3, -4, -5];
 ints.filter(x => x > 0)         // 모든 원소 삭제함
     .reduce((x, y) => x + y, 0) // 덧셈에 대한 중립 원소를 초기값으로 지정
 ```
+
 두 번째는 `reduce`를 호출하기 전이나 callback 내부에서 잘못된 초기값을 더하기 전에 빈 인자 문제를 처리하는 방법입니다.
 
 ```js example-good

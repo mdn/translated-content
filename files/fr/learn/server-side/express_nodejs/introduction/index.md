@@ -53,7 +53,7 @@ Dans une perspective de développement de serveur web, Node présente un certain
 - Le JavaScript est un langage de programmation plutôt récent et bénéficie encore d'améliorations dans sa conception en comparaison à d'autres langages web côté serveur (Python, PHP, etc.). Beaucoup d'autres langages nouveaux et populaires compilent/convertissent en JavaScript pour pouvoir utiliser TypeScript, CoffeeScript, ClojureScript, Scala, LiveScript, etc.
 - Le gestionnaire de paquets (NPM) offre l'accès à des milliers de bibliothèques réutilisables. Il dispose d'une excellente résolution de dépendances et peut être utilisé pour automatiser la plupart des chaines de compilation.
 - Node.js est portable. Il est disponible sous Microsoft Windows, macOS, Linux, etc. De plus, il est bien supporté par beaucoup d'hébergeurs web qui fournissent souvent une infrastructure spécifique et une documentation pour héberger des sites Node.
-- Node possède une communauté et un écosystème très dynamiques eavec beaucoup de gens désireux d'aider.
+- Node possède une communauté et un écosystème très dynamiques avec beaucoup de gens désireux d'aider.
 
 Vous pouvez utiliser Node.js pour créer un simple serveur web en utilisant l'API Node HTTP.
 

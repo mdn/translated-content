@@ -170,5 +170,3 @@ AddType video/webm .webm
 - [使用 HTML5 audio 和 video](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [使用 canvas 操作 video](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Ogg 格式媒体文件的服务器配置](/zh-CN/docs/Web/HTTP/Configuring_servers_for_Ogg_media)
-
-{{HTMLRef}}

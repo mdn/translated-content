@@ -28,7 +28,7 @@ translation_of: Glossary/Accessibility_tree
 
 Пока ещё в черновике Web Incubator Community Group, **[Объектная модель доступности](https://wicg.github.io/aom/explainer.html) (AOM)** намерена внедрить API, которые упрощают выражение семантики доступности и потенциально разрешают доступ к вычисленному дереву доступности.
 
-1.  [Глоссарий](/ru/docs/Glossary)
+1. [Глоссарий](/ru/docs/Glossary)
 
-    1.  {{Glossary("Accessibility", "Доступность")}}
-    2.  {{Glossary("ARIA")}}
+    1. {{Glossary("Accessibility", "Доступность")}}
+    2. {{Glossary("ARIA")}}

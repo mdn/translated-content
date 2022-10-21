@@ -28,7 +28,7 @@ Sempre que um elemento é renderizado, essas propriedades são usadas para deter
 - {{cssxref("background-color")}}
   - : A cor de fundo do texto.
 - {{cssxref("text-shadow")}}
-  - : Configura um efeito de sombra para aplicar ao texto. Entre as opções para a sombra está a cor base da sombra (que é então desfocada e misturada com o fundo com base nos outros parâmetros). Consulte {{SectionOnPage("/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals", "Text drop shadows")}} para saber mais.
+  - : Configura um efeito de sombra aplicado ao texto. Entre as opções para os aspectos da sombra, está a cor base da sombra (que será então desfocada e mesclada com o plano de fundo, com base nos outros parâmetros). Veja {{SectionOnPage("/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals", "Sombras projetadas em texto")}} para descobrir mais.
 - {{cssxref("text-decoration-color")}}
   - : Por padrão, as decorações de texto (como sublinhados, tachados, etc.) usam a propriedade `color` como suas cores. No entanto, você pode substituir esse comportamento e usar uma cor diferente para eles com a propriedade `text-decoration-color`.
 - {{cssxref("text-emphasis-color")}}
@@ -85,7 +85,7 @@ Para uma discussão mais detalhada de cada um dos tipos de valor de cor, veja a 
 
 Um conjunto de nomes de cores padrão foi definido, permitindo que você use essas palavras-chave em vez de representações numéricas de cores se você optar por fazer isso e houver uma palavra-chave representando a cor exata que você deseja usar. As palavras-chave de cores incluem as cores primárias e secundárias padrão (como `red`, `blue` ou `orange`), tons de cinza (de `black` a `white`, incluindo cores como `darkgray` e `lightgrey`), e uma variedade de outras cores misturadas, incluindo `lightseagreen`, `cornflowerblue` e `rebeccapurple`.
 
-Consulte {{SectionOnPage("/pt-BR/docs/Web/CSS/color_value", "Palavras-chave de cores", "código")}} para obter uma lista de todas as palavras-chave de cores disponíveis.
+Veja {{SectionOnPage("/pt-BR/docs/Web/CSS/color_value", "Palavras-chave de cor", "code")}} para uma lista de todas as palavras-chave de cores disponíveis.
 
 ### valores RGB
 
