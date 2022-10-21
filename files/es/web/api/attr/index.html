@@ -23,7 +23,7 @@ translation_of: Web/API/Attr
  <dt>{{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}</dt>
  <dd>A {{domxref("DOMString")}} representing the namespace prefix of the attribute, or <code>null</code> if no prefix is specified.</dd>
  <dt>{{domxref("Attr.specified", "specified")}} {{readOnlyInline}}</dt>
- <dd>This property always returns <code>true</code>. Originally, it returned <code>true </code>if the attribute was explicitly specified in the source code or by a script, and <code>false</code> if its value came from the default one defined in the document's <acronym title="Document Type Definition">DTD</acronym>.</dd>
+ <dd>This property always returns <code>true</code>. Originally, it returned <code>true </code>if the attribute was explicitly specified in the source code or by a script, and <code>false</code> if its value came from the default one defined in the document's DTD.</dd>
  <dt>{{domxref("Attr.value", "value")}}</dt>
  <dd>El valor del atributo.</dd>
 </dl>
@@ -60,8 +60,8 @@ translation_of: Web/API/Attr
  <dt><code>ownerDocument</code></dt>
  <dd>Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.</dd>
  <dt><code>ownerElement</code> {{deprecated_inline("7.0")}} {{obsolete_inline("29.0")}} {{readOnlyInline}}</dt>
- <dd>Since you get an <code>Attr</code> object from an {{domxref("Element")}}, you should already know the associated element.</dd>
- <dd>Contrary to above claim, {{domxref("Document.evaluate")}} can return <code>Attr</code> objects from an XPath, in which case you would not easily know the owner.</dd>
+ <dd>Since you get an <code>Attr</code> object from an {{domxref("Element")}}, you should already know the associated element.<br><br>
+ Contrary to above claim, {{domxref("Document.evaluate")}} can return <code>Attr</code> objects from an XPath, in which case you would not easily know the owner.</dd>
  <dt><code>parentNode</code></dt>
  <dd>Estra propiedad ahora siempre devuelve <code>NULL</code>.</dd>
  <dt><code>previousSibling</code></dt>
