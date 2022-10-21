@@ -8,7 +8,7 @@ translation_of_original: Web/CSS/margin-new
 
 ## Resumen
 
-La propiedad CSS **`margin `**establece el margen para los cuatro lados. Es una abreviación para evitar tener que establecer cada lado por separado con las otras propiedades de margen: {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }} y {{ cssxref("margin-left") }}.
+La propiedad CSS **`margin`**establece el margen para los cuatro lados. Es una abreviación para evitar tener que establecer cada lado por separado con las otras propiedades de margen: {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }} y {{ cssxref("margin-left") }}.
 
 También se permiten valores negativos.
 
@@ -130,8 +130,6 @@ Sin embargo, en navegadores antiguos como IE8-9, **flexbox** no está disponible
 ## Compatibilidad en navegadores
 
 {{Compat("css.properties.margin")}}
-
-##
 
 ## Ver también
 

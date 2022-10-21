@@ -54,7 +54,7 @@ A diferencia de Internet Explorer, la implementación de Firefox de `ime-mode` p
 
 ```
 input[type=password] {
-	ime-mode: auto !important;
+ ime-mode: auto !important;
 }
 ```
 

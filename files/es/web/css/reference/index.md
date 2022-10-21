@@ -10,7 +10,7 @@ original_slug: Web/CSS/Referencia_CSS
 ---
 Estamos trabajando sobre este documento. Si deseas ayudarnos a redactar o mejorar alguna de las páginas listadas a continuación, te animamos a que lo hagas.
 
-Si vas a agregar o modificar una página, por favor, ajústate a la plantilla [Referencia CSS:Plantilla de propiedades ](/en/CSS/CSS_Reference/Property_Template "en/CSS Reference/Property Template")y modifica según sea necesario.
+Si vas a agregar o modificar una página, por favor, ajústate a la plantilla [Referencia CSS:Plantilla de propiedades](/en/CSS/CSS_Reference/Property_Template "en/CSS Reference/Property Template")y modifica según sea necesario.
 
 La plantilla básica para las páginas de ejemplo se puede encontrar aquí: [samples/cssref/TEMPLATE.html](/samples/cssref/TEMPLATE.html "https://developer.mozilla.org/samples/cssref/TEMPLATE.html ").
 

@@ -21,7 +21,7 @@ En el atributo {{HTMLElement ("style")}} del elemento {{htmlattrxref ("media", "
 
 ### Consultas de medios en JavaScript
 
-En [JavaScript ](/es/docs/Web/JavaScript)puede usar el método {{domxref ("Window.matchMedia ()")}} para probar la ventana contra una consulta de medios. También puede usar {{domxref ("MediaQueryList.addListener ()")}} para recibir notificaciones cada vez que cambie el estado de una consulta. Con esta funcionalidad, su sitio o aplicación puede responder a los cambios en la configuración, orientación o estado del dispositivo.
+En [JavaScript](/es/docs/Web/JavaScript)puede usar el método {{domxref ("Window.matchMedia ()")}} para probar la ventana contra una consulta de medios. También puede usar {{domxref ("MediaQueryList.addListener ()")}} para recibir notificaciones cada vez que cambie el estado de una consulta. Con esta funcionalidad, su sitio o aplicación puede responder a los cambios en la configuración, orientación o estado del dispositivo.
 
 Puede obtener más información sobre el uso programático de consultas de medios en [Pruebas de consultas de medios.](/es/docs/Web/CSS/Media_Queries/Testing_media_queries)
 

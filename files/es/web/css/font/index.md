@@ -63,7 +63,6 @@ También se pueden especificar los tipos de letra del sistema usando la propieda
 
   \-moz-field
 
-
 ## Ejemplos
 
 [Ver El Ejemplo Vivo](/samples/cssref/font.html)

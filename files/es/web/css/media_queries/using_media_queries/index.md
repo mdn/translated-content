@@ -464,7 +464,7 @@ Ejemplo:
        (min-resolution: 192dpi)             /* compatibilidad con dppx */
 ```
 
-Vea este [articulo CSSWG ](http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)sobre buenas practicas para compatibilidad en relación a `resolution` y `dppx`.
+Vea este [articulo CSSWG](http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)sobre buenas practicas para compatibilidad en relación a `resolution` y `dppx`.
 
 > **Nota:** Nota: Esta funcion multimedia tambien esta implementada en Webkit como -webkit-device-pixel-ratio. Los prefijos minimos y maximos de esta funcion implementados por Gecko se llaman asi: min--moz-device-pixel-ratio y max--moz-device-pixel-ratio; y los mismos prefijos implementados por Webkit se llaman asi: -webkit-min-device-pixel-ratio y -webkit-max-device-pixel-ratio.
 

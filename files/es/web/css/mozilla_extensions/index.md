@@ -5,7 +5,7 @@ translation_of: Web/CSS/Mozilla_Extensions
 ---
 {{CSSRef}}
 
-Mozilla soporta ciertas extensiones de [CSS](/es/docs/CSS "CSS") con el prefijo` -moz-`.
+Mozilla soporta ciertas extensiones de [CSS](/es/docs/CSS "CSS") con el prefijo`-moz-`.
 
 Algunas de estas propiedades han sido incluidas en una especificación de CSS en borrador para incluirlas en la recomendación final, pero aún están en proceso experimental. La propiedad final estándar puede ser diferente de la implementación actual con prefijo. Algunas de estas propiedades no estándares solo son aplicables en elementos XUL.
 
@@ -276,7 +276,7 @@ W—Z
 
 ### {{Cssxref("border-style")}} y {{Cssxref("outline-style")}}
 
-- `-moz-bg-inset | -moz-bg-outset | -moz-bg-solid `{{obsolete_inline}} abandonado en Gecko 1.9 (Firefox 3.0)
+- `-moz-bg-inset | -moz-bg-outset | -moz-bg-solid`{{obsolete_inline}} abandonado en Gecko 1.9 (Firefox 3.0)
 
 ### Palabras clave de {{cssxref("&lt;color&gt;")}}
 

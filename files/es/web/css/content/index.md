@@ -62,4 +62,3 @@ content: attr(alt)
 Categorías
 
 Interwiki Languages
-
