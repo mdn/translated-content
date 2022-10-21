@@ -78,7 +78,7 @@ slug: Web/HTML/Element/tbody
 
     由于该属性已经废弃，请使用 CSS {{cssxref("text-align")}} 属性作为替代。
 
-    > **备注：** `text-align` 属性的 `align="char"` 取值尚未在任何浏览器中实现。请参阅 [`text-align` 的浏览器兼容性章节](/zh-CN/docs/Web/CSS/text-align#浏览器兼容性)以获取 `<string>` 的可能取值。
+    > **备注：** `text-align` 属性的 `align="char"` 取值尚未在任何浏览器中实现。请参阅 [`text-align` 的浏览器兼容性小节](/zh-CN/docs/Web/CSS/text-align#浏览器兼容性)以获取 `<string>` 的可能取值。
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
@@ -185,23 +185,23 @@ thead > tr > th {
 
 最后，包含在 {{HTMLElement("thead")}} 块中的标题单元被赋予额外的样式。它们使用更深的 {{cssxref("background-color")}}，更大的字体大小，以及比其他单元格边框更厚、更深的底边。
 
-#### 运行结果
+#### 结果
 
 生成的表格看起来像这样：
 
 {{EmbedLiveSample("基本示例", 650, 150)}}
 
-### 多个表格体
+### 多个表格主体
 
 你可以使用多个 `<tbody>` 元素来在一个表格中建立多个部分。每个部分可能包含它自己的表头或一些行；然而，*每个表格里只能有一个 {{HTMLElement("thead")}} 元素！* 由于刚才所述的原因，你需要用 {{HTMLElement("tr")}} 填充 {{HTMLElement("th")}} 元素，在每个 `<tbody>` 内创建标题。让我们来看看这是怎么做到的。
 
 让我们以前面的例子为例，在列表中增加一些学生，并更新表格，使其不再在每一行列出每个学生的专业，而是按专业分组，每个专业都有标题行。
 
-#### 运行结果
+#### 结果
 
 为了让你知道我们在做什么，首先在这里给出生成的表格：
 
-{{EmbedLiveSample("多个表格体", 650, 250)}}
+{{EmbedLiveSample("多个表格主体", 650, 250)}}
 
 #### HTML
 
