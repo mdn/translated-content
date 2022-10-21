@@ -5,14 +5,14 @@ body:
   - type: markdown
     attributes:
       value: |
-        ### Before you start
+        ### 👋 Hola! Antes de comenzar
 
-        **Want to change this page yourself?** This content is open source!
-        ↩ Go back and use the _Edit on GitHub_ link on the page.
+        **¿te gustaría solucionar este issue por ti mismo?** El contenido es de código abierto!
+        ↩ Regresa al documento y hasta abajo del mismo usa el botón que dice _Editar en GitHub_.
 
         **Is your issue about the browser compatibility table?**
         ↩ Go back and use the _Report problems with this compatibility data on GitHub_ link on the page.
-
+S es
         **Need help with a browser?**
         🙋 To get help with [Firefox](https://support.mozilla.org/en-US/kb/file-bug-report-or-feature-request-mozilla), [Chrome](https://support.google.com/chrome/answer/95315?hl=en-GB&ref_topic=7439544), [Safari](https://www.apple.com/feedback/safari.html), or another browser, check the browser's support site.
 
