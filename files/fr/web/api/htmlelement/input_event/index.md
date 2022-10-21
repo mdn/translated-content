@@ -47,7 +47,6 @@ De plus, l'évènement  `input` se déclenche sur les éditeurs [`contenteditabl
 
 ## Voir aussi
 
-- {{event("keydown")}}
-- {{event("keyup")}}
-- {{event("keypress")}}
-- {{event("input")}}
+- [`beforeinput`](/fr/docs/Web/API/HTMLElement/beforeinput_event)
+- [`change`](/fr/docs/Web/API/HTMLElement/change_event)
+- [`invalid`](/fr/docs/Web/API/HTMLElement/invalid_event)

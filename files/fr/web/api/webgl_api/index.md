@@ -77,9 +77,9 @@ L'élément {{HTMLElement("canvas")}} est aussi utilisé par [Canvas 2D](/fr-FR/
 
 ### Evènements
 
-- {{Event("webglcontextlost")}}
-- {{Event("webglcontextrestored")}}
-- {{Event("webglcontextcreationerror")}}
+- [`webglcontextlost`](/fr/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
+- [`webglcontextrestored`](/fr/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
+- [`webglcontextcreationerror`](/fr/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
 
 ### Constantes et types
 

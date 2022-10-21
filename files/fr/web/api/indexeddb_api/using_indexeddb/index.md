@@ -593,11 +593,11 @@ Lorsque le navigateur s'arrête (parce que l'utilisateur a choisi l'option Quit 
 
 1. Chaque transaction sur chaque base de données affectée (ou toutes les bases de données ouvertes, dans le cas de l'arrêt du navigateur) est interrompue avec un `AbortError`. L'effet est le même que si {{domxref("IDBTransaction.abort()")}} est appelé sur chaque transaction.
 2. Une fois toutes les transactions terminées, la connexion à la base de données est fermée .
-3. Enfin, l'objet {{domxref("IDBDatabase")}} représentant la connexion à la base de données reçoit un évènement {{event("close")}} . Vous pouvez utiliser un gestionnaire d'évènements  {{domxref("IDBDatabase.onclose")}} pour écouter ces évènements, afin de savoir quand une base de données est fermée de façon inattendue .
+3. Enfin, l'objet {{domxref("IDBDatabase")}} représentant la connexion à la base de données reçoit un évènement [`close`](/fr/docs/Web/API/IDBDatabase/close_event). Vous pouvez utiliser un gestionnaire d'évènements  {{domxref("IDBDatabase.onclose")}} pour écouter ces évènements, afin de savoir quand une base de données est fermée de façon inattendue .
 
 Le comportement décrit ci-dessus est nouveau et n'est disponible que pour les versions de navigateur suivantes : Firefox 50, Google Chrome 31 (approximativement).
 
-Avant ces versions de navigateurs, les transactions étaient interrompues silencieusement et aucun événement {{event ("close")}} n'était déclenché, donc il n'y avait aucun moyen de détecter une fermeture de base de données inattendue.
+Avant ces versions de navigateurs, les transactions étaient interrompues silencieusement et aucun événement [`close`](/fr/docs/Web/API/IDBDatabase/close_event) n'était déclenché, donc il n'y avait aucun moyen de détecter une fermeture de base de données inattendue.
 
 Étant donné que l'utilisateur peut quitter le navigateur à tout moment, cela signifie que vous ne pouvez pas compter sur une transaction particulière à compléter, et sur les navigateurs plus anciens, vous n'êtes même pas informé quand elles ne sont pas terminées. Il y a plusieurs conséquences à ce comportement.
 
