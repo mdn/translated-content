@@ -57,9 +57,9 @@ Les ajouts à [l'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_W
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
   - : Retourne une référence de l'interface {{domxref("PushManager")}} pour gèrer les souscriptions push incluant la souscription, récupèrer une souscription existante, et accèder au statut des permissions push. C'est le point d'entrée dans l'utilisation de la communication push.
 - {{domxref("ServiceWorkerGlobalScope.onpush")}}
-  - : Un gestionnaire d'événement lancé chaque fois qu'un événement {{Event("push")}} se produit ; c'est à chaque fois qu'un message push du serveur est reçu.
+  - : Un gestionnaire d'événement lancé chaque fois qu'un événement [`push`](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event) se produit ; c'est à chaque fois qu'un message push du serveur est reçu.
 - {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}}
-  - : Un gestionnaire d'événement lancé chaque fois qu'un événement {{Event("pushsubscriptionchange")}} se produit; par exemple, quand une souscription push a été invalidée, ou va être invalidée (c.à.d. quand un service push définit une durée d'expiration).
+  - : Un gestionnaire d'événement lancé chaque fois qu'un événement [`pushsubscriptionchange`](/fr/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event) se produit; par exemple, quand une souscription push a été invalidée, ou va être invalidée (c.à.d. quand un service push définit une durée d'expiration).
 
 ## Spécifications
 

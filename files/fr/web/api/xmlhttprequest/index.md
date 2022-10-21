@@ -34,7 +34,7 @@ Si vos opérations de communication nécessitent l'échange d'évènements ou de
 _Cette interface hérite également des propriétés de {{domxref("XMLHttpRequestEventTarget")}} et de {{domxref("EventTarget")}}._
 
 - {{domxref("XMLHttpRequest.onreadystatechange")}}
-  - : Un gestionnaire d'évènement ({{event("Event_handlers", "event handler")}}) invoqué à chaque fois que l'attribut `readyState` change.
+  - : Un gestionnaire d'évènement invoqué à chaque fois que l'attribut `readyState` change.
 - {{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}
   - : L'état de la requête sous la forme d'un `unsigned short`.
 - {{domxref("XMLHttpRequest.response")}} {{readonlyinline}}
@@ -57,7 +57,7 @@ _Cette interface hérite également des propriétés de {{domxref("XMLHttpReques
 - {{domxref("XMLHttpRequest.timeout")}}
   - : Un entier `unsigned long` qui représente le nombre de millisecondes qu'une requête peut prendre avant d'être terminée automatiquement.
 - {{domxref("XMLHttpRequestEventTarget.ontimeout")}}
-  - : Un gestionnaire d'évènement ({{event("Event_handlers", "event handler")}}) appelé lorsque la requête a expiré.
+  - : Un gestionnaire d'évènement appelé lorsque la requête a expiré.
 - {{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}
   - : Un objet {{domxref("XMLHttpRequestUpload")}} qui représente le processus d'_upload_.
 - {{domxref("XMLHttpRequest.withCredentials")}}

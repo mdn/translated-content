@@ -18,7 +18,7 @@ En HTML, excepté le comportement par défaut des images, des liens et des séle
 Pour rendre un autre élément HTML glissable, deux choses doivent être faites&nbsp;:
 
 - Définissez l'attribut `{{htmlattrxref("draggable")}}` à `true` sur l'élément que vous voulez rendre glissable.
-- Ajoutez un scrutateur sur l'événement `{{event("dragstart")}}` et définissez les données du glissement dans ce scrutateur.
+- Ajoutez un scrutateur sur l'événement [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event) et définissez les données du glissement dans ce scrutateur.
 - {{domxref("DataTransfer.setData","Définir la donnée de glissement")}} au sein du scrutateur ajouté précédemment.
 
 Voici un exemple qui permet à une section de contenu d'être glissée&nbsp;:
