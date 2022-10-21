@@ -9,62 +9,46 @@ tags:
 translation_of: Web/CSS/General_sibling_combinator
 original_slug: Web/CSS/Selectores_hermanos_generales
 ---
-<div><span class="">{{CSSRef("Selectors")}}</span></div>
+{{CSSRef("Selectors")}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>El combinador <code>~</code> separa dos selectores y selecciona el segundo elemento sólo si está precedido por el primero y ambos comparten un padre común.</p>
+El combinador `~` separa dos selectores y selecciona el segundo elemento sólo si está precedido por el primero y ambos comparten un padre común.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">elemento ~ elemento { <em>estilos</em> }
-</pre>
+```
+elemento ~ elemento { estilos }
+```
 
-<h2 id="Example" name="Example">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: css">p ~ span {
+```css
+p ~ span {
   color: red;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;span&gt;Este span no es rojo.&lt;/span&gt;
-&lt;p&gt;Aquí hay un párrafo.&lt;/p&gt;
-&lt;code&gt;Aquí hay algo de código.&lt;/code&gt;
-&lt;span&gt;Aquí hay un span. Es rojo porque va precedido de un párrafo y ambos comparten el mismo padre.&lt;/span&gt;</pre>
+```html
+<span>Este span no es rojo.</span>
+<p>Aquí hay un párrafo.</p>
+<code>Aquí hay algo de código.</code>
+<span>Aquí hay un span. Es rojo porque va precedido de un párrafo y ambos comparten el mismo padre.</span>
+```
 
-<p>{{ EmbedLiveSample('Example', 320, 150) }}</p>
+{{ EmbedLiveSample('Example', 320, 150) }}
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#general-sibling-combinators', 'following-sibling combinator') }}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Selectors', '#general-sibling-combinators', 'general sibling combinator') }}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                   | Estado                               | Comentarios |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
+| {{ SpecName('CSS4 Selectors', '#general-sibling-combinators', 'following-sibling combinator') }} | {{Spec2('CSS4 Selectors')}} |             |
+| {{ SpecName('CSS3 Selectors', '#general-sibling-combinators', 'general sibling combinator') }}     | {{Spec2('CSS3 Selectors')}} |             |
 
-<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
+## Compatibilidad entre navegadores
 
 {{Compat("css.selectors.general_sibling")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<p> </p>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Adjacent_sibling_selectors">Selectores de hermanos adyacentes</a></li>
-</ul>
+- [Selectores de hermanos adyacentes](/es/docs/Web/CSS/Adjacent_sibling_selectors)

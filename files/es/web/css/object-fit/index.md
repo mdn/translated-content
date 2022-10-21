@@ -9,75 +9,76 @@ tags:
   - Referencia
   - css layout
   - object-fit
-  - 'recipe:css-property'
+  - recipe:css-property
   - size
 translation_of: Web/CSS/object-fit
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propiedad <a href="/es/docs/Web/CSS">CSS</a> <strong><code>object-fit</code></strong> indica cómo el contenido de un <a href="/es/docs/Web/CSS/Elemento_reemplazo">elemento reemplazado</a>, por ejemplo un {{HTMLElement("img")}} o {{HTMLElement("video")}}, debería redimensionarse para ajustarse a su contenedor.</p>
+La propiedad [CSS](/es/docs/Web/CSS) **`object-fit`** indica cómo el contenido de un [elemento reemplazado](/es/docs/Web/CSS/Elemento_reemplazo), por ejemplo un {{HTMLElement("img")}} o {{HTMLElement("video")}}, debería redimensionarse para ajustarse a su contenedor.
 
-<p>Se puede alterar la alineación del contenido del elemento reemplazado utilizando la propiedad {{cssxref("object-position")}}.</p>
+Se puede alterar la alineación del contenido del elemento reemplazado utilizando la propiedad {{cssxref("object-position")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/object-fit.html")}}</div>
+{{EmbedInteractiveExample("pages/css/object-fit.html")}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<p>La propiedad <code>object-fit</code> se especifica con una de las palabras claves elegidas de la siguiente lista de valores.</p>
+La propiedad `object-fit` se especifica con una de las palabras claves elegidas de la siguiente lista de valores.
 
-<h3 id="Valores" name="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>contain</code></dt>
- <dd>El contenido reemplazado está dimensionado para mantener su relación de aspecto mientras se ajusta dentro del cuadro de contenido del elemento: su tamaño de objeto concreto se resuelve como una restricción de contenido contra el ancho y la altura utilizados del elemento.</dd>
- <dt><code>cover</code></dt>
- <dd><span class="tlid-translation translation" lang="es"><span title="">El contenido reemplazado se dimensiona para mantener su relación de aspecto mientras llena el cuadro de contenido completo del elemento.</span> <span title="">Si la relación de aspecto del objeto no coincide con la relación de aspecto de su caja, entonces el objeto se recortará para que se ajuste.</span></span></dd>
- <dt><code>fill</code></dt>
- <dd>Modifica el tamaño del elemento remplazado para llenar el cuadro de contenido. El objeto completo ocupará todo el espacio de la caja. Si el tamaño del elemento no concuerda con el de su caja, se estirará para llenarlo.</dd>
- <dt><code>none</code></dt>
- <dd>El contenido reemplazado no se redimensiona.</dd>
- <dt><code>scale-down</code></dt>
- <dd><span class="tlid-translation translation" lang="es"><span title="">El contenido se dimensiona como si <code>none</code> o <code>contain</code> estuvieran especificados, lo que resultaría en un tamaño de objeto concreto más pequeño.</span></span></dd>
-</dl>
+- `contain`
+  - : El contenido reemplazado está dimensionado para mantener su relación de aspecto mientras se ajusta dentro del cuadro de contenido del elemento: su tamaño de objeto concreto se resuelve como una restricción de contenido contra el ancho y la altura utilizados del elemento.
+- `cover`
+  - : El contenido reemplazado se dimensiona para mantener su relación de aspecto mientras llena el cuadro de contenido completo del elemento. Si la relación de aspecto del objeto no coincide con la relación de aspecto de su caja, entonces el objeto se recortará para que se ajuste.
+- `fill`
+  - : Modifica el tamaño del elemento remplazado para llenar el cuadro de contenido. El objeto completo ocupará todo el espacio de la caja. Si el tamaño del elemento no concuerda con el de su caja, se estirará para llenarlo.
+- `none`
+  - : El contenido reemplazado no se redimensiona.
+- `scale-down`
+  - : El contenido se dimensiona como si `none` o `contain` estuvieran especificados, lo que resultaría en un tamaño de objeto concreto más pequeño.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;section&gt;
-  &lt;h2&gt;object-fit: fill&lt;/h2&gt;
-  &lt;img class="fill" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+```html
+<section>
+  <h2>object-fit: fill</h2>
+  <img class="fill" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;img class="fill narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <img class="fill narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;h2&gt;object-fit: contain&lt;/h2&gt;
-  &lt;img class="contain" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <h2>object-fit: contain</h2>
+  <img class="contain" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;img class="contain narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <img class="contain narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;h2&gt;object-fit: cover&lt;/h2&gt;
-  &lt;img class="cover" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <h2>object-fit: cover</h2>
+  <img class="cover" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;img class="cover narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <img class="cover narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;h2&gt;object-fit: none&lt;/h2&gt;
-  &lt;img class="none" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <h2>object-fit: none</h2>
+  <img class="none" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;img class="none narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <img class="none narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;h2&gt;object-fit: scale-down&lt;/h2&gt;
-  &lt;img class="scale-down" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <h2>object-fit: scale-down</h2>
+  <img class="scale-down" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;img class="scale-down narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
-&lt;/section&gt;</pre>
+  <img class="scale-down narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
+</section>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">h2 {
+```css
+h2 {
   font-family: Courier New, monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
@@ -122,43 +123,24 @@ img {
 .scale-down {
   object-fit: scale-down;
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{ EmbedLiveSample('Example', 500, 450) }}</p>
+{{ EmbedLiveSample('Example', 500, 450) }}
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Images', '#the-object-fit', 'object-fit')}}</td>
-   <td>{{Spec2('CSS4 Images')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Images', '#the-object-fit', 'object-fit')}}</td>
-   <td>{{Spec2('CSS3 Images')}}</td>
-   <td>Definicion inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                   | Estado                           | Comentario          |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('CSS4 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS4 Images')}} |                     |
+| {{SpecName('CSS3 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS3 Images')}} | Definicion inicial. |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad</h2>
+## Compatibilidad
 
-<p>{{Compat("css.properties.object-fit")}}</p>
+{{Compat("css.properties.object-fit")}}
 
-<h2 id="See_also" name="See_also">Ver también</h2>
+## Ver también
 
-<ul>
- <li>Otras propiedades CSS relacionadas con imágenes: {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.</li>
- <li>{{cssxref("background-size")}}</li>
-</ul>
+- Otras propiedades CSS relacionadas con imágenes: {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
+- {{cssxref("background-size")}}

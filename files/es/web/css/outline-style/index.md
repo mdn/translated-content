@@ -6,19 +6,20 @@ tags:
   - Propiedad CSS
 translation_of: Web/CSS/outline-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad CSS <strong><code>outline-style</code></strong> es usada para establecer el estilo del contorno de un elemento. Un contorno es una línea que se dibuja al rededor de elementos, fuera de los límites del borde, para resaltar un elemento.</p>
+La propiedad CSS **`outline-style`** es usada para establecer el estilo del contorno de un elemento. Un contorno es una línea que se dibuja al rededor de elementos, fuera de los límites del borde, para resaltar un elemento.
 
-<p>Por lo general, es más conveniente usar la propiedad de forma reducida {{cssxref("outline")}} en vez de<code> outline-style</code>,<code> outline-width </code>y<code> outline-color</code> por separado.</p>
+Por lo general, es más conveniente usar la propiedad de forma reducida {{cssxref("outline")}} en vez de` outline-style`,` outline-width `y` outline-color` por separado.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush:css">/* Valores clave */
+```css
+/* Valores clave */
 outline-style: auto;
 outline-style: none;
 outline-style: dotted;
@@ -34,50 +35,51 @@ outline-style: outset;
 outline-style: inherit;
 outline-style: initial;
 outline-style: unset;
-</pre>
+```
 
-<h2 id="Valores">Valores</h2>
+## Valores
 
-<p><code>&lt;br-style&gt; </code>puede ser uno de los siguientes:</p>
+`<br-style> `puede ser uno de los siguientes:
 
-<dl>
- <dt>none</dt>
- <dd>Sin contorno ({{Cssxref("outline-width")}} es<code> 0</code>).</dd>
- <dt>dotted</dt>
- <dd style="outline: 10px dotted red;">Línea punteada. El contorno es una serie de puntos.</dd>
- <dt>dashed</dt>
- <dd style="outline: 10px dashed red;">Línea discontinua. El contorno es una serie de segmentos de línea cortos.</dd>
- <dt>solid</dt>
- <dd style="outline: 10px solid red;">El contorno es una línea simple.</dd>
- <dt>double</dt>
- <dd style="outline: 10px double red;">El contorno son dos líneas paralelas. El valor de {{Cssxref("outline-width")}} es la suma de los dos líneas y el espacio entre ellas.</dd>
- <dt>groove</dt>
- <dd style="outline: 10px groove red;">El contorno parece estar tallado dentro del lienzo.</dd>
- <dt>ridge</dt>
- <dd style="outline: 10px ridge red;">Lo opuesto a <code> groove</code>: el contorno parece salir del lienzo.</dd>
- <dt>inset</dt>
- <dd style="outline: 10px inset red;">El contorno hace a la caja verse como si estuviera embedida dentro del lienzo.</dd>
- <dt>outset</dt>
- <dd style="outline: 10px outset red;">Lo opuesto a <code> inset</code>: el contorno hace a la caja verse como si estuviera saliendo del lienzo.</dd>
-</dl>
+- none
+  - : Sin contorno ({{Cssxref("outline-width")}} es` 0`).
+- dotted
+  - : Línea punteada. El contorno es una serie de puntos.
+- dashed
+  - : Línea discontinua. El contorno es una serie de segmentos de línea cortos.
+- solid
+  - : El contorno es una línea simple.
+- double
+  - : El contorno son dos líneas paralelas. El valor de {{Cssxref("outline-width")}} es la suma de los dos líneas y el espacio entre ellas.
+- groove
+  - : El contorno parece estar tallado dentro del lienzo.
+- ridge
+  - : Lo opuesto a `groove`: el contorno parece salir del lienzo.
+- inset
+  - : El contorno hace a la caja verse como si estuviera embedida dentro del lienzo.
+- outset
+  - : Lo opuesto a `inset`: el contorno hace a la caja verse como si estuviera saliendo del lienzo.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Example_1_-_dotted_and_dashed" name="Example_1_-_dotted_and_dashed">Ejemplo 1 - <code>dotted</code> y <code>dashed</code></h2>
+## Ejemplo 1 - `dotted` y `dashed`
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="dotted"&gt;
-    &lt;p class="dashed"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt; </pre>
+```html
+<div>
+  <div class="dotted">
+    <p class="dashed">Outline Demo</p>
+  </div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.dotted {
+```css
+.dotted {
   outline-style: dotted; /* same result as "outline: dotted" */
 }
 .dashed {
@@ -85,23 +87,27 @@ outline-style: unset;
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; } </pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<p>{{ EmbedLiveSample('Example_1_-_dotted_and_dashed') }}</p>
+{{ EmbedLiveSample('Example_1_-_dotted_and_dashed') }}
 
-<h2 id="Example_2_-_solid_and_double" name="Example_2_-_solid_and_double">Ejemplo 2 - <code>solid</code> y <code>double</code></h2>
+## Ejemplo 2 - `solid` y `double`
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="solid"&gt;
-    &lt;p class="double"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt; </pre>
+```html
+<div>
+  <div class="solid">
+    <p class="double">Outline Demo</p>
+  </div>
+</div>
+```
 
-<h3 id="CSS_2">CSS</h3>
+### CSS
 
-<pre class="brush: css">.solid {
+```css
+.solid {
   outline-style: solid;
 }
 .double {
@@ -109,23 +115,27 @@ outline-style: unset;
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; } </pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<p>{{ EmbedLiveSample('Example_2_-_solid_and_double') }}</p>
+{{ EmbedLiveSample('Example_2_-_solid_and_double') }}
 
-<h2 id="Example_3_-_groove_and_ridge" name="Example_3_-_groove_and_ridge">Ejemplo 3 - <code>groove</code> y <code>ridge</code></h2>
+## Ejemplo 3 - `groove` y `ridge`
 
-<h3 id="HTML_3">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="groove"&gt;
-    &lt;p class="ridge"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <div class="groove">
+    <p class="ridge">Outline Demo</p>
+  </div>
+</div>
+```
 
-<h3 id="CSS_3">CSS</h3>
+### CSS
 
-<pre class="brush: css">.groove {
+```css
+.groove {
   outline-style: groove;
 }
 .ridge {
@@ -133,23 +143,27 @@ outline-style: unset;
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }</pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<p>{{ EmbedLiveSample('Example_3_-_groove_and_ridge') }}</p>
+{{ EmbedLiveSample('Example_3_-_groove_and_ridge') }}
 
-<h2 id="Example_4_-_inset_and_outset" name="Example_4_-_inset_and_outset">Ejemplo 4 - <code>inset</code> y <code>outset</code></h2>
+## Ejemplo 4 - `inset` y `outset`
 
-<h3 id="HTML_4">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="inset"&gt;
-    &lt;p class="outset"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <div class="inset">
+    <p class="outset">Outline Demo</p>
+  </div>
+</div>
+```
 
-<h3 id="CSS_4">CSS</h3>
+### CSS
 
-<pre class="brush: css">.inset {
+```css
+.inset {
   outline-style: inset;
 }
 .outset {
@@ -157,34 +171,18 @@ outline-style: unset;
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }</pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<p>{{ EmbedLiveSample('Example_4_-_inset_and_outset') }}</p>
+{{ EmbedLiveSample('Example_4_-_inset_and_outset') }}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#outline-style', 'outline-style')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>Se añade el valor <code>auto</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'ui.html#propdef-outline-style', 'outline-style')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estado                               | Comentarios              |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------ |
+| {{SpecName('CSS3 Basic UI', '#outline-style', 'outline-style')}}             | {{Spec2('CSS3 Basic UI')}} | Se añade el valor `auto` |
+| {{SpecName('CSS2.1', 'ui.html#propdef-outline-style', 'outline-style')}} | {{Spec2('CSS2.1')}}             | Definición inicial       |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("css.properties.outline-style")}}

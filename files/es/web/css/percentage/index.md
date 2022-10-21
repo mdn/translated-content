@@ -4,78 +4,53 @@ slug: Web/CSS/percentage
 translation_of: Web/CSS/percentage
 original_slug: Web/CSS/porcentaje
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Sumario">Sumario</h2>
+## Sumario
 
-<p>Los tipos de dato <code>&lt;porcentaje&gt; </code>de <a href="/en/CSS" style="font-size: 14px; line-height: inherit;" title="CSS">CSS</a> representan un valor en forma de porcentaje. Muchas <a href="/en/CSS_Reference">propiedades de CSS</a> pueden tomar valores porcentuales, siempre para definir longitudes con respecto al tamaño de los elementos padre. Los porcentajes estan formados por un <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/number">&lt;numero&gt;</a> seguido por el signo de porcentaje <code>%</code>. No hay un espacio entre el '%' y el numero.</p>
+Los tipos de dato `<porcentaje> `de [CSS](/en/CSS "CSS") representan un valor en forma de porcentaje. Muchas [propiedades de CSS](/en/CSS_Reference) pueden tomar valores porcentuales, siempre para definir longitudes con respecto al tamaño de los elementos padre. Los porcentajes estan formados por un [\<numero>](/es/docs/Web/CSS/number) seguido por el signo de porcentaje `%`. No hay un espacio entre el '%' y el numero.
 
-<p>Varias propriedades de longitud usan porcentajes, tales como <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width">width</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin">margin</a></code> y <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding">padding</a>. </code>Los porcentajes tambien se pueden ver en <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a>, </code>donde el tamaño del texto esta directamente relacionado al tamaño de su elemento padre.</p>
+Varias propriedades de longitud usan porcentajes, tales como `width, margin` y `padding. `Los porcentajes tambien se pueden ver en `font-size, `donde el tamaño del texto esta directamente relacionado al tamaño de su elemento padre.
 
-<div class="note"><strong>Nota:</strong> Solo los valores calculados son heredados. Entonces, incluso si un valor porcentual es usado en en la propiedad padre, un valor real, como una anchura en pixeles para un valor <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">&lt;length&gt;</a>, </code>sera accesible en la propiedad heredada, no el valor porcentual.</div>
+> **Nota:** Solo los valores calculados son heredados. Entonces, incluso si un valor porcentual es usado en en la propiedad padre, un valor real, como una anchura en pixeles para un valor `<length>, `sera accesible en la propiedad heredada, no el valor porcentual.
 
-<h2 id="Interpolación">Interpolación</h2>
+## Interpolación
 
-<p>Los valores del tipo de dato <code>&lt;porcentaje&gt;</code> de CSS pueden ser interpolados en orden de permitir animaciones. En ese caso ellos son interpolados como numeros reales de punto flotante. La velocidad de la interpolación se determina por medio de la <a href="/en/CSS/timing-function">funcion de temporizacion</a> asociada con la animacion.</p>
+Los valores del tipo de dato `<porcentaje>` de CSS pueden ser interpolados en orden de permitir animaciones. En ese caso ellos son interpolados como numeros reales de punto flotante. La velocidad de la interpolación se determina por medio de la [funcion de temporizacion](/en/CSS/timing-function) asociada con la animacion.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">&lt;div style="background-color:#0000FF;"&gt;
-  &lt;div style="width:50%;margin-left:20%;background-color:#00FF00;"&gt;Width: 50%, Left margin: 20%&lt;/div&gt;
-  &lt;div style="width:30%;margin-left:60%;background-color:#FF0000;"&gt;Width: 30%, Left margin: 60%&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>El codigo de arriba se va a renderizar así:</p>
-
-<div style="background-color: #0000FF;">
-<div style="width: 50%; margin-left: 20%; background-color: #00FF00;">Width: 50%, Left margin: 20%</div>
-
-<div style="width: 30%; margin-left: 60%; background-color: #FF0000;">Width: 30%, Left margin: 60%</div>
+```html
+<div style="background-color:#0000FF;">
+  <div style="width:50%;margin-left:20%;background-color:#00FF00;">Width: 50%, Left margin: 20%</div>
+  <div style="width:30%;margin-left:60%;background-color:#FF0000;">Width: 30%, Left margin: 60%</div>
 </div>
+```
 
-<p> </p>
+El codigo de arriba se va a renderizar así:
 
-<pre class="brush: html">&lt;div style="font-size:18px;"&gt;
+Width: 50%, Left margin: 20%Width: 30%, Left margin: 60%
+
+```html
+<div style="font-size:18px;">
   Full size text (18px)
-  &lt;span style="font-size:50%;"&gt;50%&lt;/span&gt;
-  &lt;span style="font-size:200%;"&gt;200%&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+  <span style="font-size:50%;">50%</span>
+  <span style="font-size:200%;">200%</span>
+</div>
+```
 
-<p>El codigo de arriba de renderizara así:</p>
+El codigo de arriba de renderizara así:
 
-<div style="font-size: 18px;">Full size text (18px) <span style="font-size: 50%;">50%</span> <span style="font-size: 200%;">200%</span></div>
+Full size text (18px) 50% 200%
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificacion</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Values', '#percentages', '&lt;percentage&gt;') }}</td>
-   <td>{{ Spec2('CSS3 Values') }}</td>
-   <td>No hay cambios significantes desde CSS Level 2 (Revision 1)</td>
-  </tr>
-  <tr style="vertical-align: top;">
-   <td style="vertical-align: top;">{{ SpecName('CSS2.1', 'syndata.html#percentage-units', '&lt;percentage&gt;') }}</td>
-   <td style="vertical-align: top;">{{ Spec2('CSS2.1') }}</td>
-   <td style="vertical-align: top;">No hay cambios desde CSS Level 1</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;">{{ SpecName('CSS1', '#percentage-units', '&lt;percentage&gt;') }}</td>
-   <td style="vertical-align: top;">{{ Spec2('CSS1') }}</td>
-   <td style="vertical-align: top;"> </td>
-  </tr>
- </tbody>
-</table>
+| Especificacion                                                                                           | Estatus                              | Comentarios                                                 |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------- |
+| {{ SpecName('CSS3 Values', '#percentages', '&lt;percentage&gt;') }}                 | {{ Spec2('CSS3 Values') }} | No hay cambios significantes desde CSS Level 2 (Revision 1) |
+| {{ SpecName('CSS2.1', 'syndata.html#percentage-units', '&lt;percentage&gt;') }} | {{ Spec2('CSS2.1') }}         | No hay cambios desde CSS Level 1                            |
+| {{ SpecName('CSS1', '#percentage-units', '&lt;percentage&gt;') }}                 | {{ Spec2('CSS1') }}             |                                                             |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("css.types.percentage")}}

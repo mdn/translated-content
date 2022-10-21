@@ -3,47 +3,48 @@ title: object-position
 slug: Web/CSS/object-position
 translation_of: Web/CSS/object-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Summary" name="Summary">Summary</h2>
+## Summary
 
-<p>La propiedad <strong><code>object-position</code></strong> determina el alineamiento del elemento dentro de la caja.</p>
+La propiedad **`object-position`** determina el alineamiento del elemento dentro de la caja.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush:css">/* &lt;position&gt; valores */
+```css
+/* <position> valores */
 object-position: 100px 50px;
 
 /* Valores globales */
 object-position: inherit;
 object-position: initial;
 object-position: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>{{ cssxref("&lt;position&gt;") }}, este es un valor de cuatro que representa una posición en 2D con respecto a los bordes de la caja. Posiciones Relativas o absolutas pueden presentar compensaciones. Tenga en cuenta que la posición puede ser establecida fuera de la caja.</dd>
-</dl>
+- `<position>`
+  - : {{ cssxref("&lt;position&gt;") }}, este es un valor de cuatro que representa una posición en 2D con respecto a los bordes de la caja. Posiciones Relativas o absolutas pueden presentar compensaciones. Tenga en cuenta que la posición puede ser establecida fuera de la caja.
 
-<h3 id="Sitaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">Ejemplo</h2>
+## Ejemplo
 
-<h4 id="Ejemplo_de_HTML">Ejemplo de HTML</h4>
+#### Ejemplo de HTML
 
-<pre class="brush: html">&lt;img id="object-position-1" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"/&gt;
-&lt;img id="object-position-2" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"/&gt;
-</pre>
+```html
+<img id="object-position-1" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"/>
+<img id="object-position-2" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"/>
+```
 
-<h4 id="Ejemplo_de_CSS">Ejemplo de CSS</h4>
+#### Ejemplo de CSS
 
-<pre class="brush: css">img {
+```css
+img {
   width: 150px;
   height: 100px;
   border: 1px solid #000;
@@ -58,44 +59,23 @@ object-position: unset;
 #object-position-2 {
   object-position: 20% 10%;
 }
-</pre>
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{ EmbedLiveSample('Example', 360, 120) }}</p>
+{{ EmbedLiveSample('Example', 360, 120) }}
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Images', '#the-object-position', 'object-position')}}</td>
-   <td>{{Spec2('CSS4 Images')}}</td>
-   <td>
-    <p>Las  <code>palabras clave from-image</code> y <code>flip</code> an sido añadidas.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Images', '#the-object-position', 'object-position')}}</td>
-   <td>{{Spec2('CSS3 Images')}}</td>
-   <td>Definición incial</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                           | Comment                                                    |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------- |
+| {{SpecName('CSS4 Images', '#the-object-position', 'object-position')}} | {{Spec2('CSS4 Images')}} | Las `palabras clave from-image` y `flip` an sido añadidas. |
+| {{SpecName('CSS3 Images', '#the-object-position', 'object-position')}} | {{Spec2('CSS3 Images')}} | Definición incial                                          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("css.properties.object-position")}}
 
-<h2 id="See_also" name="See_also">Contenido relacionado</h2>
+## Contenido relacionado
 
-<ul>
- <li>Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.</li>
-</ul>
+- Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.

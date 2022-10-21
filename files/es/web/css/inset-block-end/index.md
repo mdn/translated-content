@@ -3,15 +3,16 @@ title: inset-block-end
 slug: Web/CSS/inset-block-end
 translation_of: Web/CSS/inset-block-end
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propiedad de <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a><span class="seoSummary"> <strong><code>inset-block-end</code></strong> define el desplazamiento de final de bloque lógico de un elemento, que se asigna a una inserción física en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a la propiedad {{cssxref ("top")}}, {{cssxref ("right")}}, {{cssxref ("bottom")}}, o {{cssxref ("left")}} dependiendo de la propiedad en los valores definidos para {{cssxref ("modo de escritura")}}, {{cssxref ("dirección")}} y {{cssxref ("orientación de texto")}}.</span></p>
+La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`inset-block-end`** define el desplazamiento de final de bloque lógico de un elemento, que se asigna a una inserción física en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a la propiedad {{cssxref ("top")}}, {{cssxref ("right")}}, {{cssxref ("bottom")}}, o {{cssxref ("left")}} dependiendo de la propiedad en los valores definidos para {{cssxref ("modo de escritura")}}, {{cssxref ("dirección")}} y {{cssxref ("orientación de texto")}}.
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 inset-block-end: 3px;
 inset-block-end: 2.4em;
 
-/* &lt;percentage&gt;s of the width or height of the containing block */
+/* <percentage>s of the width or height of the containing block */
 inset-block-end: 10%;
 
 /* Keyword value */
@@ -21,32 +22,34 @@ inset-block-end: auto;
 inset-block-end: inherit;
 inset-block-end: initial;
 inset-block-end: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>La propiedad <code>inset-block-end</code> toma los mismos valores de la propiedad {{cssxref("left")}}.</p>
+La propiedad `inset-block-end` toma los mismos valores de la propiedad {{cssxref("left")}}.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+### Contenido CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -57,37 +60,23 @@ inset-block-end: unset;
   position: relative;
   inset-block-end: 20px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Ejemplo", 140, 140)}}</p>
+{{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-inset-block-end", "inset-block-end")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                   | Estado                                           | Comentario          |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-inset-block-end", "inset-block-end")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
-<p>{{Compat("css.properties.inset-block-end")}}</p>
+{{Compat("css.properties.inset-block-end")}}
 
-<h2 id="Mira_también">Mira también</h2>
+## Mira también
 
-<ul>
- <li>Las propiedades que definen otras inserciones:: {{cssxref("inset-block-start")}}, {{cssxref("inset-inline-start")}}, y {{cssxref("inset-inline-end")}}</li>
- <li>Las propiedades físicas mapeadas: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, y {{cssxref("left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- Las propiedades que definen otras inserciones:: {{cssxref("inset-block-start")}}, {{cssxref("inset-inline-start")}}, y {{cssxref("inset-inline-end")}}
+- Las propiedades físicas mapeadas: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, y {{cssxref("left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -3,25 +3,24 @@ title: justify-content
 slug: Web/CSS/justify-content
 translation_of: Web/CSS/justify-content
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad <a href="/en-US/docs/CSS" title="CSS">CSS</a> <strong><code>justify-content</code></strong> define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.</p>
+La propiedad [CSS](/es/docs/CSS "CSS") **`justify-content`** define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.
 
-<p>El alineamiento se produce luego de que las longitudes y márgenes automáticos son aplicados, lo que significa que, si existe al menos un elemento flexible con {{cssxref("flex-grow")}} diferente a 0, no tendrá efecto ya que no habrá espacio disponible.</p>
+El alineamiento se produce luego de que las longitudes y márgenes automáticos son aplicados, lo que significa que, si existe al menos un elemento flexible con {{cssxref("flex-grow")}} diferente a 0, no tendrá efecto ya que no habrá espacio disponible.
 
-<div class="note">
-<p>No se debe asumir que esta propiedad sólo se aplicará a contenedores flex en el futuro y por lo tanto no ocultarla simplemente estableciendo otro valor para {{cssxref("display")}}. El CSSWG está trabajano para <a href="http://dev.w3.org/csswg/css3-align/#justify-content">extender su uso a cualquier elemento en bloque</a>. La especificación preliminar se encuentra en una etapa muy temprana y aún no está implementada.</p>
-</div>
+> **Nota:** No se debe asumir que esta propiedad sólo se aplicará a contenedores flex en el futuro y por lo tanto no ocultarla simplemente estableciendo otro valor para {{cssxref("display")}}. El CSSWG está trabajano para [extender su uso a cualquier elemento en bloque](http://dev.w3.org/csswg/css3-align/#justify-content). La especificación preliminar se encuentra en una etapa muy temprana y aún no está implementada.
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<p>Véase <a href="/es/docs/CSS/Using_CSS_flexible_boxes" title="CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a> para más propiedades e información.</p>
+Véase [Using CSS flexible boxes](/es/docs/CSS/Using_CSS_flexible_boxes "CSS/Using_CSS_flexible_boxes") para más propiedades e información.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush:css">/* Alinear items flex desde el comienzo */
+```css
+/* Alinear items flex desde el comienzo */
 justify-content: flex-start;
 
 /* Alinear items desde el final */
@@ -42,77 +41,77 @@ justify-content: space-around;
 justify-content: inherit;
 justify-content: initial;
 justify-content: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>flex-start</code></dt>
- <dd>Los items flex se colocan comenzando desde el <strong>comienzo principal</strong>. El margen del primer item es alineado al ras con el borde del comienzo principal de la línea y cada item siguiente es alineado al ras con el precedente.</dd>
- <dt><code>flex-end</code></dt>
- <dd>Los items flex se colocan comenzando desde el <strong>final principal</strong>. El margen del último item es alineado al ras con el borde del final principal de la línea y cada item precedente es alineado al ras con el siguiente.</dd>
- <dt><code>center</code></dt>
- <dd>Los items flex son colocados hacia el centro de la línea. Los items flex se alinean al ras entre sí y en torno al centro de la línea. El espacio entre el borde del comienzo principal de la línea y el primer item es el mismo que el espacio entre el borde del final principal y el último item de la línea.</dd>
- <dt><code>space-between</code></dt>
- <dd>Los items flex se distribuyen uniformemente sobre la línea. El espaciamiento se hace de tal manera que el espacio adyacente entre dos items es el mismo. El borde del comienzo principal y el borde del final principal se alinean al ras con el borde del primer y último item respectivamente.</dd>
- <dt><code>space-around</code></dt>
- <dd>Los items flex se alinean uniformemente de tal manera que el espacio entre dos items adyacentes es el mismo. El espacio vacío anterior al primer item y posterior al último item equivale a la mitad del espacio entre dos items adyacentes.</dd>
-</dl>
+- `flex-start`
+  - : Los items flex se colocan comenzando desde el **comienzo principal**. El margen del primer item es alineado al ras con el borde del comienzo principal de la línea y cada item siguiente es alineado al ras con el precedente.
+- `flex-end`
+  - : Los items flex se colocan comenzando desde el **final principal**. El margen del último item es alineado al ras con el borde del final principal de la línea y cada item precedente es alineado al ras con el siguiente.
+- `center`
+  - : Los items flex son colocados hacia el centro de la línea. Los items flex se alinean al ras entre sí y en torno al centro de la línea. El espacio entre el borde del comienzo principal de la línea y el primer item es el mismo que el espacio entre el borde del final principal y el último item de la línea.
+- `space-between`
+  - : Los items flex se distribuyen uniformemente sobre la línea. El espaciamiento se hace de tal manera que el espacio adyacente entre dos items es el mismo. El borde del comienzo principal y el borde del final principal se alinean al ras con el borde del primer y último item respectivamente.
+- `space-around`
+  - : Los items flex se alinean uniformemente de tal manera que el espacio entre dos items adyacentes es el mismo. El espacio vacío anterior al primer item y posterior al último item equivale a la mitad del espacio entre dos items adyacentes.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Contenido_HTML"><strong>Contenido HTML</strong></h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;p&gt;justify-content: flex-start&lt;/p&gt;
-  &lt;div id="flex-start"&gt;
-    &lt;div&gt;&lt;/div&gt;
-    &lt;div&gt;&lt;/div&gt;
-    &lt;div&gt;&lt;/div&gt;
-  &lt;/div&gt;
+```html
+<div id="container">
+  <p>justify-content: flex-start</p>
+  <div id="flex-start">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
-  &lt;p&gt;justify-content: flex-end&lt;/p&gt;
-  &lt;div id="flex-end"&gt;
-    &lt;div&gt;&lt;/div&gt;
-    &lt;div&gt;&lt;/div&gt;
-    &lt;div&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  <p>justify-content: flex-end</p>
+  <div id="flex-end">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
-  &lt;p&gt;justify-content: center&lt;/p&gt;
-  &lt;div id="center"&gt;
-    &lt;div&gt;&lt;/div&gt;
-    &lt;div&gt;&lt;/div&gt;
-    &lt;div&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  <p>justify-content: center</p>
+  <div id="center">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
-  &lt;p&gt;justify-content: space-between&lt;/p&gt;
-  &lt;div id="space-between"&gt;
-    &lt;div&gt;&lt;/div&gt;
-    &lt;div&gt;&lt;/div&gt;
-    &lt;div&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  <p>justify-content: space-between</p>
+  <div id="space-between">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
-  &lt;p&gt;justify-content: space-around&lt;/p&gt;
-  &lt;div id="space-around"&gt;
-    &lt;div&gt;&lt;/div&gt;
-    &lt;div&gt;&lt;/div&gt;
-    &lt;div&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  <p>justify-content: space-around</p>
+  <div id="space-around">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+```
 
-<h3 id="CSS"><strong>CSS</strong></h3>
+### CSS
 
-<pre class="brush: css">#container &gt; div {
+```css
+#container > div {
   display: flex;
   font-family: "Courier New", "Lucida Console", monospace;
 }
 
-#container &gt; div &gt; div {
+#container > div > div {
   width: 50px;
   height: 50px;
   background: linear-gradient(-45deg, #788cff, #b4c8ff);
@@ -137,37 +136,22 @@ justify-content: unset;
 #space-around {
   justify-content: space-around;
 }
-</pre>
+```
 
-<p>Resultados en:</p>
+Resultados en:
 
-<p>{{ EmbedLiveSample('Ejemplos', 600, 550) }}</p>
+{{ EmbedLiveSample('Ejemplos', 600, 550) }}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Especificación</th>
-   <th>Estado</th>
-   <th>Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#justify-content', 'justify-content')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                           | Estado                           | Comentario         |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Flexbox', '#justify-content', 'justify-content')}} | {{Spec2('CSS3 Flexbox')}} | Definición inicial |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat("css.properties.justify-content")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/es/docs/CSS/Using_CSS_flexible_boxes" title="CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a></li>
-</ul>
+- [Using CSS flexible boxes](/es/docs/CSS/Using_CSS_flexible_boxes "CSS/Using_CSS_flexible_boxes")

@@ -9,31 +9,32 @@ tags:
   - Referencia
 translation_of: Web/CSS/grid-auto-columns
 ---
-<p>La propiedad de css <strong><code>grid-auto-columns</code></strong>   especifíca el tamaño de una columna de cuadrícula creada implícitamente {{glossary("grid tracks", "track")}}.</p>
+La propiedad de css **`grid-auto-columns`** especifíca el tamaño de una columna de cuadrícula creada implícitamente {{glossary("grid tracks", "track")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/grid-auto-columns.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-auto-columns.html")}}
 
-<p class="">La version original interactiva de este artículo se guarda en un repositorio GitHub . If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+La version original interactiva de este artículo se guarda en un repositorio GitHub . If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
 
-<p>Si un item grid se posiciona dentro de una columna que no tenga un tamaño explícito para  {{cssxref("grid-template-columns")}}, implícito{{glossary("grid", "grid")}}las pistan se crean para sostenerlo. Esto puede suceder posicionándose explícitamente en una columna que está fuera de rango, o mediante el algoritmo de auto colocación creando columnas adicionales.</p>
+Si un item grid se posiciona dentro de una columna que no tenga un tamaño explícito para {{cssxref("grid-template-columns")}}, implícito{{glossary("grid", "grid")}}las pistan se crean para sostenerlo. Esto puede suceder posicionándose explícitamente en una columna que está fuera de rango, o mediante el algoritmo de auto colocación creando columnas adicionales.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: css no-line-numbers notranslate">/* Keyword values */
+```css
+/* Keyword values */
 grid-auto-columns: min-content;
 grid-auto-columns: max-content;
 grid-auto-columns: auto;
 
-/* &lt;length&gt; values */
+/* <length> values */
 grid-auto-columns: 100px;
 grid-auto-columns: 20cm;
 grid-auto-columns: 50vmax;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 grid-auto-columns: 10%;
 grid-auto-columns: 33.3%;
 
-/* &lt;flex&gt; values */
+/* <flex> values */
 grid-auto-columns: 0.5fr;
 grid-auto-columns: 3fr;
 
@@ -59,49 +60,54 @@ grid-auto-columns: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
 grid-auto-columns: inherit;
 grid-auto-columns: initial;
 grid-auto-columns: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Es una longitud no negativa.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Es un valor no negativo {{cssxref("percentage", "&lt;percentage&gt;")}} en relación con el tamaño del bloque del contenedor de la grilla. Si el tamaño de bloque del contenedor de cuadrícula es indefinido, el valor porcentual se trata como automático.</dd>
- <dt><code>&lt;flex&gt;</code></dt>
- <dd>Es una dimensión -valor- no negativa con la unidad <code>fr</code> especificando el 'factor flex' del espacio entre dos celdas. Si el espacio entre dos celdas está designado como <code>&lt;flex&gt;</code> tomará una porción del espacio remanente entre celdas en proporción a su 'factor flex' - o flex factor <code>fr</code>-.<br><br>
- Si aparece en una función <code>minmax()</code> implica un mínimo automático (ejemplo: <code>minmax(auto, &lt;flex&gt;)</code>).</dd>
- <dt><code>max-content</code></dt>
- <dd>Es una keyword o palabra clave que representa el contenido máximo de los items que ocupan el espacio de la grid o cuadrilla.</dd>
- <dt><code>min-content</code></dt>
- <dd>Es una keyword o palabra clave que representa el contenido mínimo de los items que ocupan el espacio de la grid o cuadrilla.</dd>
- <dt><code>minmax(min, max)</code></dt>
- <dd>Es una notación funcional (una función) que define un rango de tamaño mayor que o igual a <em>min</em> y menor que o igual a <em>max</em>. Si <em>max</em> es menor que <em>min</em>, entonces <em>max</em> será ignorado y la función será tratada como un <em>min</em>. Si establecemos un valor máximo como <code>&lt;flex&gt;</code>, se define el 'factor flex' del espacio entre las celdas del grid. Si establecemos el valor mínimo como <code>&lt;flex&gt;</code>, se tratará como cero, o contenido mínimo si el contenedor de la grid/cuadrilla tiene la restricción de valor mínimo (min-content).</dd>
- <dt><code>fit-content(<em>argument</em>)</code></dt>
- <dd>Representa la fórmula <code>min(max-content, max(auto, <var>argument</var>))</code>, que se calcula similar a <code>auto</code> (por ejemplo: <code>minmax(auto, max-content)</code>), excepto que el <em>track size</em> o espacio entre celdas es mayor que el auto mínimo.</dd>
- <dt><code>auto</code></dt>
- <dd>Es una palabra reservada -o keyword- que es idéntica a contenido máximo si es un máximo. Como mínimo representa el máximo valor mínimo aceptado (según lo especificado por{{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la cuadrícula que ocupan el espacio de la cuadrícula.<br><br>
- <p class="note">Note: Los valores de tamaño <code>auto</code>  (y solo los <code>auto</code>) pueden ser estirados por las propiedades {{cssxref("align-content")}} y {{cssxref("justify-content")}} .</p>
- </dd>
-</dl>
+- `<length>`
+  - : Es una longitud no negativa.
+- `<percentage>`
+  - : Es un valor no negativo {{cssxref("percentage", "&lt;percentage&gt;")}} en relación con el tamaño del bloque del contenedor de la grilla. Si el tamaño de bloque del contenedor de cuadrícula es indefinido, el valor porcentual se trata como automático.
+- `<flex>`
 
-<h3 id="Sintaxis_Formal">Sintaxis Formal</h3>
+  - : Es una dimensión -valor- no negativa con la unidad `fr` especificando el 'factor flex' del espacio entre dos celdas. Si el espacio entre dos celdas está designado como `<flex>` tomará una porción del espacio remanente entre celdas en proporción a su 'factor flex' - o flex factor `fr`-.
+
+    Si aparece en una función `minmax()` implica un mínimo automático (ejemplo: `minmax(auto, <flex>)`).
+
+- `max-content`
+  - : Es una keyword o palabra clave que representa el contenido máximo de los items que ocupan el espacio de la grid o cuadrilla.
+- `min-content`
+  - : Es una keyword o palabra clave que representa el contenido mínimo de los items que ocupan el espacio de la grid o cuadrilla.
+- `minmax(min, max)`
+  - : Es una notación funcional (una función) que define un rango de tamaño mayor que o igual a _min_ y menor que o igual a _max_. Si _max_ es menor que _min_, entonces _max_ será ignorado y la función será tratada como un _min_. Si establecemos un valor máximo como `<flex>`, se define el 'factor flex' del espacio entre las celdas del grid. Si establecemos el valor mínimo como `<flex>`, se tratará como cero, o contenido mínimo si el contenedor de la grid/cuadrilla tiene la restricción de valor mínimo (min-content).
+- `fit-content(argument)`
+  - : Representa la fórmula `min(max-content, max(auto, argument))`, que se calcula similar a `auto` (por ejemplo: `minmax(auto, max-content)`), excepto que el _track size_ o espacio entre celdas es mayor que el auto mínimo.
+- `auto`
+
+  - : Es una palabra reservada -o keyword- que es idéntica a contenido máximo si es un máximo. Como mínimo representa el máximo valor mínimo aceptado (según lo especificado por{{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la cuadrícula que ocupan el espacio de la cuadrícula.
+
+    > **Nota:** Note: Los valores de tamaño `auto` (y solo los `auto`) pueden ser estirados por las propiedades {{cssxref("align-content")}} y {{cssxref("justify-content")}} .
+
+### Sintaxis Formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html notranslate">&lt;div id="grid"&gt;
-  &lt;div id="item1"&gt;&lt;/div&gt;
-  &lt;div id="item2"&gt;&lt;/div&gt;
-  &lt;div id="item3"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="grid">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+</div>
+```
 
-<h3 id="Contenido_CSS">Contenido CSS </h3>
+### Contenido CSS
 
-<pre class="brush: css; highlight[6] notranslate">#grid {
+```css
+#grid {
   height: 100px;
   display: grid;
   grid-template-areas: "a a";
@@ -109,102 +115,77 @@ grid-auto-columns: unset;
   grid-auto-columns: 200px;
 }
 
-#grid &gt; div {
+#grid > div {
   background-color: lime;
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado:</h3>
+### Resultado:
 
-<p>{{EmbedLiveSample("Example", "410px", "100px")}}</p>
+{{EmbedLiveSample("Example", "410px", "100px")}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Grid", "#propdef-grid-auto-columns", "grid-auto-columns")}}</td>
-   <td>{{Spec2("CSS3 Grid")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                       | Estatus                      | Comentario         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("CSS3 Grid", "#propdef-grid-auto-columns", "grid-auto-columns")}} | {{Spec2("CSS3 Grid")}} | Initial definition |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilidad_con_Navegadores">Compatibilidad con Navegadores</h2>
-
-
+## Compatibilidad con Navegadores
 
 {{Compat("css.properties.grid-auto-columns")}}
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li>Propiedades CSS relacionadas: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}</li>
- <li>Guía de Layout tipo Grid (en inglés): <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid">Auto-placement in grid layout - sizing rows in the implicit grid</a></em></li>
- <li>Video tutorial (inglés): <em><a href="http://gridbyexample.com/video/series-auto-placement-order/">Introducing Grid auto-placement and order</a></em></li>
-</ul>
+- Propiedades CSS relacionadas: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
+- Guía de Layout tipo Grid (en inglés): _[Auto-placement in grid layout - sizing rows in the implicit grid](/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid)_
+- Video tutorial (inglés): _[Introducing Grid auto-placement and order](http://gridbyexample.com/video/series-auto-placement-order/)_
 
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><strong><a href="/en-US/docs/Web/CSS/Reference">R</a>eferencia a  CSS</strong></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>
+1.  [**CSS**](/es/docs/Web/CSS)
+2.  **[R](/es/docs/Web/CSS/Reference)eferencia a CSS**
+3.  [CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout)
+4.  **Guides**
+
+    1.  [Basics concepts of grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+    2.  [Relationship to other layout methods](/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+    3.  [Line-based placement](/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+    4.  [Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+    5.  [Layout using named grid lines](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+    6.  [Auto-placement in grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+    7.  [Box alignment in grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+    8.  [Grids, logical values and writing modes](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+    9.  [CSS Grid Layout and Accessibility](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+    10. [CSS Grid Layout and Progressive Enhancement](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+    11. [Realizing common layouts using grids](/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+
+5.  **Properties**
+
+    1.  [grid](/es/docs/Web/CSS/grid)
+    2.  [grid-area](/es/docs/Web/CSS/grid-area)
+    3.  [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
+    4.  [grid-auto-flow](/es/docs/Web/CSS/grid-auto-flow)
+    5.  [grid-auto-rows](/es/docs/Web/CSS/grid-auto-rows)
+    6.  [grid-column](/es/docs/Web/CSS/grid-column)
+    7.  [grid-column-end](/es/docs/Web/CSS/grid-column-end)
+    8.  [grid-column-gap](/es/docs/Web/CSS/grid-column-gap)
+    9.  [grid-column-start](/es/docs/Web/CSS/grid-column-start)
+    10. [grid-gap](/es/docs/Web/CSS/grid-gap)
+    11. [grid-row](/es/docs/Web/CSS/grid-row)
+    12. [grid-row-end](/es/docs/Web/CSS/grid-row-end)
+    13. [grid-row-gap](/es/docs/Web/CSS/grid-row-gap)
+    14. [grid-row-start](/es/docs/Web/CSS/grid-row-start)
+    15. [grid-template](/es/docs/Web/CSS/grid-template)
+    16. [grid-template-areas](/es/docs/Web/CSS/grid-template-areas)
+    17. [grid-template-columns](/es/docs/Web/CSS/grid-template-columns)
+    18. [grid-template-rows](/es/docs/Web/CSS/grid-template-rows)
+
+6.  **Glossary**
+
+    1.  [Grid lines](/es/docs/Glossary/Grid_lines)
+    2.  [Grid tracks](/es/docs/Glossary/Grid_tracks)
+    3.  [Grid cell](/es/docs/Glossary/Grid_cell)
+    4.  [Grid areas](/es/docs/Glossary/Grid_areas)
+    5.  [Gutters](/es/docs/Glossary/Gutters)
+    6.  [Grid row](/es/docs/Glossary/Grid_rows)
+    7.  [Grid column](/es/docs/Glossary/Grid_column)

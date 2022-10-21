@@ -7,50 +7,47 @@ translation_of: Web/CSS/mask-clip
 translation_of_original: Web/CSS/-webkit-mask-clip
 original_slug: Web/CSS/-webkit-mask-clip
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<p>Si se especificado {{ Cssxref("-webkit-mask-image") }} , <code style="font-size: 14px; font-style: normal; line-height: 1.5;">-webkit-mask-clip</code> determina el comportamiento de recorte (clipping) de la imagen de máscara.</p>
+Si se especificado {{ Cssxref("-webkit-mask-image") }} , `-webkit-mask-clip` determina el comportamiento de recorte (clipping) de la imagen de máscara.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
 {{csssyntax}}
 
-<p>donde:</p>
+donde:
 
-<dl>
- <dt>&lt;clip-style&gt;</dt>
- <dd><code>border | padding | content | text</code></dd>
-</dl>
+- \<clip-style>
+  - : `border | padding | content | text`
 
-<h2 id="Valores">Valores</h2>
+## Valores
 
-<dl>
- <dt>border</dt>
- <dd><code><font face="Open Sans, Arial, sans-serif">Si se ha especificado </font>border</code> , la máscara de imagen se extiende hasta el borde del elemento.</dd>
- <dt>padding</dt>
- <dd>Si se ha especificado <code>padding</code> , la imagen de máscara de extiendo hasta el padding (relleno) del elemento.</dd>
- <dt>content</dt>
- <dd>Si se ha espeficiado c<code>ontent</code> , la imagen de máscara se recorta al tamaño del contenido del elemento.</dd>
- <dt>text</dt>
- <dd>Si se ha especificado  <code>text</code> , la imagen de máscara de recorta al tamaño del texto del elemento.</dd>
-</dl>
+- border
+  - : `Si se ha especificado border` , la máscara de imagen se extiende hasta el borde del elemento.
+- padding
+  - : Si se ha especificado `padding` , la imagen de máscara de extiendo hasta el padding (relleno) del elemento.
+- content
+  - : Si se ha espeficiado c`ontent` , la imagen de máscara se recorta al tamaño del contenido del elemento.
+- text
+  - : Si se ha especificado `text` , la imagen de máscara de recorta al tamaño del texto del elemento.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: css">div {
+```css
+div {
     -webkit-mask-image: url('images/mask.png');
     -webkit-mask-clip: padding;
 }
-</pre>
+```
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.properties.mask-clip")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<p>{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-box-image") }}, {{ cssxref("-webkit-mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("-webkit-mask-repeat") }}</p>
+{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-box-image") }}, {{ cssxref("-webkit-mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("-webkit-mask-repeat") }}

@@ -12,9 +12,10 @@ tags:
 translation_of: Web/CSS/minmax()
 original_slug: Web/CSS/minmax()
 ---
-<p>La función <code><strong>minmax</strong></code><strong><code>()</code></strong> <a href="/en-US/docs/Web/CSS">en CSS</a> define un rango de tamaño mayor o igual que <var>min</var> y menor o igual que <var>max</var>. Se emplea con <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">rejillas CSS</a>.</p>
+La función **`minmax`\*\***`()`\*\* [en CSS](/es/docs/Web/CSS) define un rango de tamaño mayor o igual que _min_ y menor o igual que _max_. Se emplea con [rejillas CSS](/es/docs/Web/CSS/CSS_Grid_Layout).
 
-<pre class="brush: css no-line-numbers notranslate">/* valores &lt;ancho no-flexible&gt;, &lt;ancho de la banda&gt; */
+```css
+/* valores <ancho no-flexible>, <ancho de la banda> */
 minmax(200px, 1fr)
 minmax(400px, 50%)
 minmax(30%, 300px)
@@ -24,7 +25,7 @@ minmax(max-content, auto)
 minmax(auto, 300px)
 minmax(min-content, auto)
 
-/* valores &lt;ancho fijo&gt;, &lt;ancho de la banda&gt; */
+/* valores <ancho fijo>, <ancho de la banda> */
 minmax(200px, 1fr)
 minmax(30%, 300px)
 minmax(400px, 50%)
@@ -32,59 +33,56 @@ minmax(50%, min-content)
 minmax(300px, max-content)
 minmax(200px, auto)
 
-/* valores &lt;ancho no-flexible&gt;, &lt;ancho fijo&gt; */
+/* valores <ancho no-flexible>, <ancho fijo> */
 minmax(400px, 50%)
 minmax(30%, 300px)
 minmax(min-content, 200px)
 minmax(max-content, 200px)
 minmax(auto, 300px)
-</pre>
+```
 
-<h2 id="Sintáxis">Sintáxis</h2>
+## Sintáxis
 
-<p>Una función que toma dos parámetros, <em>min</em> y <em>max</em>.</p>
+Una función que toma dos parámetros, _min_ y _max_.
 
-<p>Cada parámetro puede ser un valor <code>&lt;length&gt;</code>, <code>&lt;percentage&gt;</code>, <code>&lt;flex&gt;</code> o uno de los valores de las palabras clave <code>max-content</code>, <code>min-content</code> o <code>auto</code>.</p>
+Cada parámetro puede ser un valor `<length>`, `<percentage>`, `<flex>` o uno de los valores de las palabras clave `max-content`, `min-content` o `auto`.
 
-<p>Si <var>max</var> &lt; <var>min</var>, entonces <var>max</var> es ignorado y se trata a <code>minmax(min,max)</code> como <var>min</var>. Como un máximo, un valor {{cssxref("flex_value","&lt;flex&gt;")}} establece el factor flex de una banda; no es válido como un mínimo.</p>
+Si _max_ < _min_, entonces _max_ es ignorado y se trata a `minmax(min,max)` como _min_. Como un máximo, un valor {{cssxref("flex_value","&lt;flex&gt;")}} establece el factor flex de una banda; no es válido como un mínimo.
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Una medida no negativa.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Un porcentaje no negativo, relativo al tamaño en línea del contenedor de la rejilla en bandas de columna y el tamaño de bloque del contenedor de rejilla en bandas de fila. Si el tamaño del contenedor de la rejilla depende del tamaño de sus bandas, entonces <code>&lt;percentage&gt;</code> debe ser tratado como <code>auto</code>. El {{glossary("user agent")}} puede ajustar las contribuciones del tamaño implícito de la banda al tamaño del contenedor de rejilla y así incrementar el tamaño final de la banda y así incrementar el tamaño final en la cantidad mínima que resultase al respetar el porcentaje.</dd>
- <dt>{{cssxref("&lt;flex&gt;")}}</dt>
- <dd>Una dimension no-negativa con la unidad <code>fr</code> especificando el factor flex de la banda. Cada banda de tamaño <code>&lt;flex&gt;</code> toma una parte del espacio disponible en proporción a su factor flex.</dd>
- <dt><code>max-content</code></dt>
- <dd>Representa la mayor contribución max-content de los elementos de rejilla que ocupan la banda.</dd>
- <dt><code>min-content</code></dt>
- <dd>Representa la mayor contribución min-content de los elementos de rejilla que ocupan la banda.</dd>
- <dt><code>auto</code></dt>
- <dd>Como un máximo, idéntico a <code>max-content</code>. Como un mínimo representa el mayor tamaño mínimo (como se especifica en {{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de rejilla que ocupan la banda.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Una medida no negativa.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Un porcentaje no negativo, relativo al tamaño en línea del contenedor de la rejilla en bandas de columna y el tamaño de bloque del contenedor de rejilla en bandas de fila. Si el tamaño del contenedor de la rejilla depende del tamaño de sus bandas, entonces `<percentage>` debe ser tratado como `auto`. El {{glossary("user agent")}} puede ajustar las contribuciones del tamaño implícito de la banda al tamaño del contenedor de rejilla y así incrementar el tamaño final de la banda y así incrementar el tamaño final en la cantidad mínima que resultase al respetar el porcentaje.
+- {{cssxref("&lt;flex&gt;")}}
+  - : Una dimension no-negativa con la unidad `fr` especificando el factor flex de la banda. Cada banda de tamaño `<flex>` toma una parte del espacio disponible en proporción a su factor flex.
+- `max-content`
+  - : Representa la mayor contribución max-content de los elementos de rejilla que ocupan la banda.
+- `min-content`
+  - : Representa la mayor contribución min-content de los elementos de rejilla que ocupan la banda.
+- `auto`
+  - : Como un máximo, idéntico a `max-content`. Como un mínimo representa el mayor tamaño mínimo (como se especifica en {{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de rejilla que ocupan la banda.
 
-<h3 id="Sintáxis_formal">Sintáxis formal</h3>
+### Sintáxis formal
 
 {{csssyntax}}
 
-<h3 id="Propiedades_CSS">Propiedades CSS</h3>
+### Propiedades CSS
 
-<p>La función <code>minmax()</code> puede ser usada dentro de: </p>
+La función `minmax()` puede ser usada dentro de:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
- <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-rows</a></li>
- <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
- <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-</ul>
+- [grid-template-columns](/es/docs/Web/CSS/grid-template-columns)
+- [grid-template-rows](/es/docs/Web/CSS/grid-template-columns)
+- [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
+- [grid-auto-rows](/es/docs/Web/CSS/grid-auto-rows)
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[3] notranslate">#container {
+```css
+#container {
   display: grid;
   grid-template-columns: minmax(max-content, 300px) minmax(200px, 1fr) 150px;
   grid-gap: 5px;
@@ -95,121 +93,96 @@ minmax(auto, 300px)
   padding: 10px;
 }
 
-#container &gt; div {
+#container > div {
   background-color: #8ca0ff;
   padding: 5px;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div id="container"&gt;
-  &lt;div&gt;
-    Elemento tan ancho como el contenido,&lt;br/&gt;
+```html
+<div id="container">
+  <div>
+    Elemento tan ancho como el contenido,<br/>
     pero de máximo 300 píxeles.
-  &lt;/div&gt;
-  &lt;div&gt;
+  </div>
+  <div>
     Elemento con un ancho flexible, pero con un mínimo de 200 píxeles.
-  &lt;/div&gt;
-  &lt;div&gt;
+  </div>
+  <div>
     Elemento inflexible de 150 píxeles de ancho.
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+  </div>
+</div>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Example", "100%", 200)}}</p>
+{{EmbedLiveSample("Example", "100%", 200)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Especificación</th>
-   <th>Estado</th>
-   <th>Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Grid", "#valdef-grid-template-columns-minmax", "minmax()")}}</td>
-   <td>{{Spec2("CSS Grid")}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                       | Estado                       | Comentario         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("CSS Grid", "#valdef-grid-template-columns-minmax", "minmax()")}} | {{Spec2("CSS Grid")}} | Definición inicial |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
+{{Compat("css.properties.grid-template-columns.minmax")}}
 
+## Mira también
 
-<p>{{Compat("css.properties.grid-template-columns.minmax")}}</p>
+- Guía de Grid Layout: _[Conceptos básicos del diseño con rejilla - tamaño de bandas con minmax()](</es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Track_sizing_and_minmax()>)_
+- [Rejillas CSS, valores lógicos y modos de escritura](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+- Video tutorial: _[Presentando minmax()](http://gridbyexample.com/video/series-minmax/)_
 
-<h2 id="Mira_también">Mira también</h2>
+1.  [**CSS**](/es/docs/Web/CSS)
+2.  [**Referencia CSS**](/es/docs/Web/CSS/Reference)
+3.  [CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout)
+4.  **Guías**
 
-<ul>
- <li>Guía de Grid Layout: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Track_sizing_and_minmax()">Conceptos básicos del diseño con rejilla - tamaño de bandas con minmax()</a></em></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Rejillas CSS, valores lógicos y modos de escritura</a></li>
- <li>
-  <p>Video tutorial: <em><a href="http://gridbyexample.com/video/series-minmax/">Presentando minmax()</a></em></p>
- </li>
-</ul>
+    1.  [Conceptos básicos del diseño con rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+    2.  [Relación a otros métodos de diseño](/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+    3.  [Posicionamiento basado en líneas](
+/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+    4.  [Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+    5.  [Diseño usando lineas con nombre](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+    6.  [Posicionamiento automático en el diseño con rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+    7.  [Alineamiento de cajas en el diseño con rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+    8.  [Rejillas, valores lógicos y modos de escritura](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+    9.  [CSS Grid Layout y la Accesibilidad](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+    10. [CSS Grid Layout y una Mejora Progresiva](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+    11. [Elaborando diseños comunes utilizando rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>Referencia CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guías</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Conceptos básicos del diseño con rejillas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relación a otros métodos de diseño</a></li>
-   <li><a href="
-/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Posicionamiento basado en líneas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Diseño usando lineas con nombre</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Posicionamiento automático en el diseño con rejillas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Alineamiento de cajas en el diseño con rejillas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Rejillas, valores lógicos y modos de escritura</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout y la Accesibilidad</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout y una Mejora Progresiva</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Elaborando diseños comunes utilizando rejillas</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Propiedades</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glosario</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid">Rejilla</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Líneas de rejilla</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Bandas de rejilla</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Celdas de rejilla</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Áreas de rejilla</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Canaletes</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_Axis">Eje de rejilla</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Fila</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Columna</a></li>
-  </ol>
- </li>
-</ol>
-</section>
+5.  **Propiedades**
+
+    1.  [grid](/es/docs/Web/CSS/grid)
+    2.  [grid-area](/es/docs/Web/CSS/grid-area)
+    3.  [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
+    4.  [grid-auto-flow](/es/docs/Web/CSS/grid-auto-flow)
+    5.  [grid-auto-rows](/es/docs/Web/CSS/grid-auto-rows)
+    6.  [grid-column](/es/docs/Web/CSS/grid-column)
+    7.  [grid-column-end](/es/docs/Web/CSS/grid-column-end)
+    8.  [grid-column-gap](/es/docs/Web/CSS/grid-column-gap)
+    9.  [grid-column-start](/es/docs/Web/CSS/grid-column-start)
+    10. [grid-gap](/es/docs/Web/CSS/grid-gap)
+    11. [grid-row](/es/docs/Web/CSS/grid-row)
+    12. [grid-row-end](/es/docs/Web/CSS/grid-row-end)
+    13. [grid-row-gap](/es/docs/Web/CSS/grid-row-gap)
+    14. [grid-row-start](/es/docs/Web/CSS/grid-row-start)
+    15. [grid-template](/es/docs/Web/CSS/grid-template)
+    16. [grid-template-areas](/es/docs/Web/CSS/grid-template-areas)
+    17. [grid-template-columns](/es/docs/Web/CSS/grid-template-columns)
+    18. [grid-template-rows](/es/docs/Web/CSS/grid-template-rows)
+
+6.  **Glosario**
+
+    1.  [Rejilla](/es/docs/Glossary/Grid)
+    2.  [Líneas de rejilla](/es/docs/Glossary/Grid_lines)
+    3.  [Bandas de rejilla](/es/docs/Glossary/Grid_tracks)
+    4.  [Celdas de rejilla](/es/docs/Glossary/Grid_cell)
+    5.  [Áreas de rejilla](/es/docs/Glossary/Grid_areas)
+    6.  [Canaletes](/es/docs/Glossary/Gutters)
+    7.  [Eje de rejilla](/es/docs/Glossary/Grid_Axis)
+    8.  [Fila](/es/docs/Glossary/Grid_rows)
+    9.  [Columna](/es/docs/Glossary/Grid_column)

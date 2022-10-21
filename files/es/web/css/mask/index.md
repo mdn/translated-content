@@ -10,17 +10,18 @@ translation_of: Web/CSS/mask
 translation_of_original: Web/CSS/-webkit-mask
 original_slug: Web/CSS/-webkit-mask
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad <code>-webkit-mask</code> es una  manera corta de establecer, en un único sitio en una hoja de estilos, los valores individuales de máscara. <code>-webkit-mask </code> puede ser utilizado para fijar los valores en una o más de las siguiente propiedades: {{Cssxref("-webkit-mask-image")}}, {{Cssxref("-webkit-mask-repeat")}}, {{Cssxref("-webkit-mask-attachment")}}, {{Cssxref("-webkit-mask-position")}}, {{Cssxref("-webkit-mask-origin")}}, y {{Cssxref("-webkit-mask-clip")}}.</p>
+La propiedad `-webkit-mask` es una manera corta de establecer, en un único sitio en una hoja de estilos, los valores individuales de máscara. `-webkit-mask `puede ser utilizado para fijar los valores en una o más de las siguiente propiedades: {{Cssxref("-webkit-mask-image")}}, {{Cssxref("-webkit-mask-repeat")}}, {{Cssxref("-webkit-mask-attachment")}}, {{Cssxref("-webkit-mask-position")}}, {{Cssxref("-webkit-mask-origin")}}, y {{Cssxref("-webkit-mask-clip")}}.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
-<pre class="brush:css">/* Palabras clave valor */
+```css
+/* Palabras clave valor */
 -webkit-mask: none;
 
 /* Valores de imágene */
@@ -39,42 +40,39 @@ original_slug: Web/CSS/-webkit-mask
 -webkit-mask: inherit;
 -webkit-mask: initial;
 -webkit-mask: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt>mask-image</dt>
- <dd><em>Requierido</em>.Ver {{Cssxref("-webkit-mask-image")}}.</dd>
- <dt>mask-repeat</dt>
- <dd><em>Opcional</em>. Ver {{Cssxref("-webkit-mask-repeat")}}.</dd>
- <dt>mask-attachment</dt>
- <dd><em>Opcional</em> Ver {{Cssxref("-webkit-mask-attachment")}}.</dd>
- <dt>mask-position</dt>
- <dd><em>Opcional</em>. Ver {{Cssxref("-webkit-mask-position")}}.</dd>
- <dt>mask-origin</dt>
- <dd><em>Opcional</em>. Ver {{Cssxref("-webkit-mask-origin")}}.</dd>
- <dt>mask-clip</dt>
- <dd><em>Opcional</em> Ver {{Cssxref("-webkit-mask-clip")}}.</dd>
-</dl>
+- mask-image
+  - : _Requierido_.Ver {{Cssxref("-webkit-mask-image")}}.
+- mask-repeat
+  - : _Opcional_. Ver {{Cssxref("-webkit-mask-repeat")}}.
+- mask-attachment
+  - : _Opcional_ Ver {{Cssxref("-webkit-mask-attachment")}}.
+- mask-position
+  - : _Opcional_. Ver {{Cssxref("-webkit-mask-position")}}.
+- mask-origin
+  - : _Opcional_. Ver {{Cssxref("-webkit-mask-origin")}}.
+- mask-clip
+  - : _Opcional_ Ver {{Cssxref("-webkit-mask-clip")}}.
 
-<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
+### Síntaxis Formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: css">.example {
+```css
+.example {
   -webkit-mask: url('mask.png') no-repeat fixed 20px 20px padding padding;
 }
-</pre>
+```
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.properties.mask")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-box-image")}}, {{cssxref("-webkit-mask-attachment")}}, {{cssxref("-webkit-mask-clip")}}, {{cssxref("-webkit-mask-image")}}, {{cssxref("-webkit-mask-composite")}}, {{cssxref("-webkit-mask-repeat")}}</li>
-</ul>
+- {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-box-image")}}, {{cssxref("-webkit-mask-attachment")}}, {{cssxref("-webkit-mask-clip")}}, {{cssxref("-webkit-mask-image")}}, {{cssxref("-webkit-mask-composite")}}, {{cssxref("-webkit-mask-repeat")}}
