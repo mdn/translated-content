@@ -13,11 +13,10 @@ original_slug: Web/JavaScript/Reference/Instructions/async_function
 
 {{jsSidebar("Statements")}}
 
-La déclaration **`async function`** définit une fonction asynchrone qui renvoie un objet {{jsxref("Objets_globaux/AsyncFunction","AsyncFunction")}}. Une fonction asynchrone est une fonction qui s'exécute de façon asynchrone grâce à la boucle d'évènement en utilisant une promesse ({{jsxref("Promise")}}) comme valeur de retour.
-
-On peut également définir des fonctions asynchrones grâce au constructeur {{jsxref("AsyncFunction")}} et via une {{jsxref("Opérateurs/async_function", "expression de fonction asynchrone","",1)}}.
-
-{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
+Une fonction async est une fonction précédée par le mot `async`, et qui peut contenir le mot `await`. `async` et `await` permettent un comportement asynchrone,
+basé sur une promesse ({{jsxref("Promise")}}), écrite de façon simple, et évitant de configurer explicitement les chaines de promesse.  
+  
+Les fonctions asynchrones peuvent également être définies comme des {{jsxref("Opérateurs/async_function", "expressions","",1)}}.
 
 ## Syntaxe
 
