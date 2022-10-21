@@ -58,11 +58,11 @@ input[type=password] {
 }
 ```
 
-> > **Nota:** En general, no es apropiado por un sitio público la manipulación el estado del modo de IME. Esta propiedad debería usarse para aplicaciones web o similares.
+> **Nota:** En general, no es apropiado por un sitio público la manipulación el estado del modo de IME. Esta propiedad debería usarse para aplicaciones web o similares.
 
 La versión de Gecko 1.9 para Macintosh no es capaz de recuperar el estado previo del IME cuando el campo para el cual se ha desactivado pierde el foco, por tanto, los usuarios de Mac podrían enfadarse cuando se utiliza el valor `disabled`.
 
-> > **Nota:** Desactivar el IME para prevenir la entrada de caracteres extendidos en los formularios no impide que los usuarios puedan pegar caracteres extendidos en los campos del formulario.
+> **Nota:** Desactivar el IME para prevenir la entrada de caracteres extendidos en los formularios no impide que los usuarios puedan pegar caracteres extendidos en los campos del formulario.
 
 ### Especificaciones
 

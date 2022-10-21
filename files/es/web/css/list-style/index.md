@@ -28,7 +28,9 @@ list-style: {{ mediawiki.external(' list-style-type || list-style-position || li
 ### Valores
 
 ver {{ Cssxref("list-style-type", "list-style-type") }}.
+
 ver {{ Cssxref("list-style-image", "list-style-image") }}.
+
 ver {{ Cssxref("list-style-position", "list-style-position") }}.
 
 ## Ejemplos

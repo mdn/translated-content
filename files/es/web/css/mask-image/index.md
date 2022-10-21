@@ -14,7 +14,7 @@ original_slug: Web/CSS/-webkit-mask-image
 
 ## Resumen
 
-`La propiedad CSS -webkit-mask-image` establece la imagen de máscara para un elemento. Una imagen de máscara fija que partes del elemento serán visibles de acuerdo a la transparencia de la imagen de máscara.
+La propiedad CSS `-webkit-mask-image` establece la imagen de máscara para un elemento. Una imagen de máscara fija que partes del elemento serán visibles de acuerdo a la transparencia de la imagen de máscara.
 
 {{cssinfo}}
 

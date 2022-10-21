@@ -18,7 +18,7 @@ Un **modo de diseño** [CSS](/es/docs/Web/CSS)(CSS layout mode), a veces simplem
 - El _[flexible box layout](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Conceptos_Basicos_de_Flexbox)_, diseñado para presentar páginas complejas que pueden redimensionarse de forma fluida.
 - El _[grid layout](/es/docs/Web/CSS/CSS_Grid_Layout)_, diseñado para presentar elementos relativos a una cuadrícula fija (fixed grid).
 
-> **Nota:**No todas las [propiedades CSS](/es/docs/Web/CSS/Referencia_CSS) aplican a todos los _**modos de diseño**_. La mayoría de ellos aplican a uno o dos de ellos y no tienen efecto si se configuran en un elemento que es parte de otro modo de diseño.
+> **Nota:** No todas las [propiedades CSS](/es/docs/Web/CSS/Referencia_CSS) aplican a todos los _**modos de diseño**_. La mayoría de ellos aplican a uno o dos de ellos y no tienen efecto si se configuran en un elemento que es parte de otro modo de diseño.
 
 ## Ver También
 

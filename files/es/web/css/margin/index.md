@@ -8,7 +8,7 @@ translation_of_original: Web/CSS/margin-new
 
 ## Resumen
 
-La propiedad CSS **`margin`**establece el margen para los cuatro lados. Es una abreviación para evitar tener que establecer cada lado por separado con las otras propiedades de margen: {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }} y {{ cssxref("margin-left") }}.
+La propiedad CSS **`margin`** establece el margen para los cuatro lados. Es una abreviación para evitar tener que establecer cada lado por separado con las otras propiedades de margen: {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }} y {{ cssxref("margin-left") }}.
 
 También se permiten valores negativos.
 
@@ -62,7 +62,7 @@ Acepta uno, dos , tres o cuatro valores de los siguientes:
 
 ### Ejemplo simple
 
-#### HTML
+HTML
 
 ```html
 <div class="ex1">
@@ -77,7 +77,7 @@ Acepta uno, dos , tres o cuatro valores de los siguientes:
 </div>
 ```
 
-#### CSS
+CSS
 
 ```css
 .ex1 {

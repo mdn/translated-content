@@ -10,7 +10,7 @@ tags:
   - Referencia
 translation_of: Web/CSS
 ---
-**Hojas de Estilo en Cascada** (del inglés* \_\_**C**ascading **S**tyle **S**heets*) o **CSS** es el lenguaje de [estilos](/es/docs/Web/API/StyleSheet) utilizado para describir la presentación de documentos [HTML](/es/docs/HTML) o [XML](/es/docs/XML) (incluyendo varios languages basados en XML como [SVG](/es/docs/Web/SVG), [MathML](/es/docs/Web/MathML) o {{Glossary("XHTML")}}). CSS describe como debe ser renderizado el elemento estructurado en la pantalla, en papel, en el habla o en otros medios.
+**Hojas de Estilo en Cascada** (del inglés _**C**ascading **S**tyle **S**heets_) o **CSS** es el lenguaje de [estilos](/es/docs/Web/API/StyleSheet) utilizado para describir la presentación de documentos [HTML](/es/docs/HTML) o [XML](/es/docs/XML) (incluyendo varios languages basados en XML como [SVG](/es/docs/Web/SVG), [MathML](/es/docs/Web/MathML) o {{Glossary("XHTML")}}). CSS describe como debe ser renderizado el elemento estructurado en la pantalla, en papel, en el habla o en otros medios.
 
 **CSS** es uno de los lenguajes base de la _Open Web_ y posee una [especificación estandarizada](http://www.w3.org/Style/CSS/#specs) por parte del W3C. Anteriormente , el desarrollo de varias partes de las especificaciones de CSS era realizado de manera sincrónica, lo que permiía el versionado de las recomendaciones. Probablemente habrás escuchado acerca de CSS1, CSS2.1, CSS3. Sin embargo, CSS4 nunca se ha lanzado como una versión oficial.
 
@@ -18,15 +18,15 @@ Desde CSS3, el alcance de las especificaciones se incrementó de forma significa
 
 - Introducción a CSS
 
-  Si eres nuevo en el desarrollo web, asegúrate de leer nuestro artículo de [conceptos básicos de CSS](/es/docs/Learn/Getting_started_with_the_web/CSS_basics) para saber qué es CSS y cómo usarlo.
+  - : Si eres nuevo en el desarrollo web, asegúrate de leer nuestro artículo de [conceptos básicos de CSS](/es/docs/Learn/Getting_started_with_the_web/CSS_basics) para saber qué es CSS y cómo usarlo.
 
 - Tutoriales CSS
 
-  Nuestra [área de aprendizaje de CSS](/es/docs/Learn/CSS) contiene una gran cantidad de tutoriales que te llevan desde el nivel de principiante hasta el nivel de competencia, cubriendo todos los aspectos fundamentales.
+  - : Nuestra [área de aprendizaje de CSS](/es/docs/Learn/CSS) contiene una gran cantidad de tutoriales que te llevan desde el nivel de principiante hasta el nivel de competencia, cubriendo todos los aspectos fundamentales.
 
 - Referencia CSS
 
-  Nuestra [exhaustiva referencia de CSS](/es/docs/Web/CSS/Reference) para desarrolladores web experimentados describe cada propiedad y concepto de CSS.
+  - : Nuestra [exhaustiva referencia de CSS](/es/docs/Web/CSS/Reference) para desarrolladores web experimentados describe cada propiedad y concepto de CSS.
 
 ## Tutoriales
 

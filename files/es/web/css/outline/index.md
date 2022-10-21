@@ -21,11 +21,15 @@ Los bordes y los contornos son muy similares. Sin embargo, los contornos difiere
 - Los contornos no ocupan espacio, son dibujados por encima del elemento. Por lo tanto, su aparición u ocultamiento no causa un redibujado de las cajas. No suma en el tamaño de la caja y no hay movimiento o desplazamiento de los elementos como con {{cssxref("border")}}.
 - Los contornos pueden no ser rectangulares. Si el elemento se distribuye en varias líneas, el contorno no forma un rectágulo para encerrar a todo el elemento. A **diferencia de los bordes**, el contorno no está abierto en algunos lados:
 
-  Ejemplo: contorno aplicado a
-  varias líneas
+  ```html hidden
+  <p><span style="outline: 2px solid #666666;">Ejemplo: contorno aplicado a<br>
+   varias líneas</span></p>
 
-  Ejemplo: borde aplicado a
-  varias líneas
+  <p><span style="border: 2px solid #666666;">Ejemplo: borde aplicado a<br>
+   varias líneas</span></p>
+  ```
+
+  {{EmbedLiveSample}}
 
 {{cssinfo}}
 

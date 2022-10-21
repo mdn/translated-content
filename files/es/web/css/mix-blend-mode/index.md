@@ -558,7 +558,7 @@ html,body {
 .luminosity .item  { mix-blend-mode: luminosity; }
 ```
 
-{{EmbedLiveSample("mix-blend-mode", "100%", 1600, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("", "100%", 1600, "", "", "")}}
 
 ### Ejemplo vivo
 

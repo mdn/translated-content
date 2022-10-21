@@ -65,7 +65,7 @@ La propiedad `position` es especificada como una palabra única elegida de la si
 
 Elementos posicionados relativamente son desplazados una cantidad dada de su posición normal en el documento, pero sin que su desplazamiento afecte a otros elementos. En el ejemplo siguiente, nótese cómo los demás elementos se ubican como si "Two" estuviera ocupando el lugar de su ubicación normal.
 
-#### HTML
+HTML
 
 ```html
 <div class="box" id="one">One</div>
@@ -74,7 +74,7 @@ Elementos posicionados relativamente son desplazados una cantidad dada de su pos
 <div class="box" id="four">Four</div>
 ```
 
-#### CSS
+CSS
 
 ```css
 .box {
@@ -99,7 +99,7 @@ Elementos posicionados relativamente son desplazados una cantidad dada de su pos
 
 Los elementos posicionados relativamente se mantienen en el flujo normal del documento. Por el contrario, un elemento posicionado absolutamente es removido del flujo de esta manera, los demás elementos se posicionan como si el mismo no existiera. El elemento posicionado absolutamente se posiciona relativamente a su _ancestro posicionado más cercano_ (es decir, el ancestro más cercano que no es `static`). Si no hay ningún ancestro posicionado se ubica relativo al [bloque contenedor](/es/docs/Web/CSS/All_About_The_Containing_Block) inicial. En el ejemplo siguiente, la caja "Two" no tiene un ancestro posicionado, por lo tanto se posiciona relativo al `<body>` del documento.
 
-#### HTML
+HTML
 
 ```html
 <div class="box" id="one">One</div>
@@ -108,7 +108,7 @@ Los elementos posicionados relativamente se mantienen en el flujo normal del doc
 <div class="box" id="four">Four</div>
 ```
 
-#### CSS
+CSS
 
 ```css
 .box {
@@ -157,7 +157,7 @@ El posicionamiento fijo es similar al posicionamiento absoluto, con la excepció
 </div>
 ```
 
-#### CSS
+CSS
 
 ```css
 .box {
@@ -196,7 +196,7 @@ El posicionamiento sticky puede considerarse un híbrido de los posicionamientos
 
 Un uso común para el posicionamiento sticky es para los encabezados en una lista alfabética. El encabezado "B" aparecerá justo por debajo de los ítems que comienzan con "A" hasta que se hayan desplazado más allá de la pantalla. En vez de deslizarse fuera de la pantalla como el resto del contenido, el encabezado "B" se mantendrá fijado al límite superior del viewport hasta que todos los ítems "B" se hayan desplazado fuera de la pantalla, en cuyo punto será cubierto por el encabezado "C", y así sucesivamente. Se debe especificar un umbral con al menos uno de `top`, `right`, `bottom`, or `left` para que el posicionamiento sticky se comporte de forma esperada. Caso contrario, será indistinguible del posicionamiento relativo.
 
-#### HTML
+HTML
 
 ```html
 <dl>
@@ -231,7 +231,7 @@ Un uso común para el posicionamiento sticky es para los encabezados en una list
 </dl>
 ```
 
-#### CSS
+CSS
 
 ```css
 * {

@@ -26,54 +26,60 @@ Un gradiente de CSS no es un {{cssxref("&lt;color&gt;")}} pero tampoco es una im
 
 Hay tres tipos de gradientes de color:
 
-- _**Linear gradients**(gradiente lineal)_, generados por la función {{cssxref("linear-gradient", "linear-gradient()")}}, donde el color se desvanece suavemente a lo largo de una línea imaginaria.
+#### _**Linear gradients**(gradiente lineal)_,
 
-  ```html
-  A rainbow made from a gradient
-  ```
+Generados por la función {{cssxref("linear-gradient", "linear-gradient()")}}, donde el color se desvanece suavemente a lo largo de una línea imaginaria.
 
-  ```css
-  body {
-  background: -moz-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-  background: -webkit-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-  background: -ms-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-  background: -o-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-  background: linear-gradient(to right,red,orange,yellow, green, blue,indigo,violet);
-  }
-  ```
+```html
+A rainbow made from a gradient
+```
 
-  {{ EmbedLiveSample('linear-gradient', 600, 20) }}
+```css
+body {
+background: -moz-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
+background: -webkit-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
+background: -ms-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
+background: -o-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
+background: linear-gradient(to right,red,orange,yellow, green, blue,indigo,violet);
+}
+```
 
-- _**Radial gradient** (gradientes radiales)_, generados por la función {{cssxref("radial-gradient", "radial-gradient()")}}. Cuanto más lejos de un origen sea un punto, más lejos del color original será.
+{{ EmbedLiveSample('linear-gradient', 600, 20) }}
 
-  ```html
-  Radial gradient
+#### _**Radial gradient** (gradientes radiales)_,
 
-  ```
+Generados por la función {{cssxref("radial-gradient", "radial-gradient()")}}. Cuanto más lejos de un origen sea un punto, más lejos del color original será.
 
-  ```css
-  body {
-  background: -moz-radial-gradient(red, yellow, rgb(30, 144, 255)) repeat scroll 0% 0% transparent;
-  background: radial-gradient(red, yellow, rgb(30, 144, 255));
-  }
-  ```
+```html
+Radial gradient
 
-  {{ EmbedLiveSample('radial-gradient', 600, 20) }}
+```
 
-- _**Repeating gradient** (gradientes de repetición),_ donde se repiten gradientes lineales o radiales tanto como sea necesario para llenar toda la caja.
+```css
+body {
+background: -moz-radial-gradient(red, yellow, rgb(30, 144, 255)) repeat scroll 0% 0% transparent;
+background: radial-gradient(red, yellow, rgb(30, 144, 255));
+}
+```
 
-  ```html
-  Repeating gradient
-  ```
+{{ EmbedLiveSample('radial-gradient', 600, 20) }}
 
-  ```css
-  body {
-  background: -moz-repeating-linear-gradient(top left -45deg, red, red 5px, white 5px, white 10px);
-  background: repeating-linear-gradient(to top left, red, red 5px, white 5px, white 10px);
-  }
-  ```
+#### _**Repeating gradient** (gradientes de repetición)_,
 
-  {{ EmbedLiveSample('repeating-gradient', 600, 20) }}
+Donde se repiten gradientes lineales o radiales tanto como sea necesario para llenar toda la caja.
+
+```html
+Repeating gradient
+```
+
+```css
+body {
+background: -moz-repeating-linear-gradient(top left -45deg, red, red 5px, white 5px, white 10px);
+background: repeating-linear-gradient(to top left, red, red 5px, white 5px, white 10px);
+}
+```
+
+{{ EmbedLiveSample('repeating-gradient', 600, 20) }}
 
 ## Interpolación
 

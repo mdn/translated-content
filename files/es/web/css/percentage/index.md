@@ -20,6 +20,8 @@ Los valores del tipo de dato `<porcentaje>` de CSS pueden ser interpolados en or
 
 ## Examples
 
+#### Usando `margin` y `width`
+
 ```html
 <div style="background-color:#0000FF;">
   <div style="width:50%;margin-left:20%;background-color:#00FF00;">Width: 50%, Left margin: 20%</div>
@@ -29,7 +31,9 @@ Los valores del tipo de dato `<porcentaje>` de CSS pueden ser interpolados en or
 
 El codigo de arriba se va a renderizar así:
 
-Width: 50%, Left margin: 20%Width: 30%, Left margin: 60%
+{{EmbedLivesample}}
+
+#### Usando `font-size`
 
 ```html
 <div style="font-size:18px;">
@@ -41,7 +45,7 @@ Width: 50%, Left margin: 20%Width: 30%, Left margin: 60%
 
 El codigo de arriba de renderizara así:
 
-Full size text (18px) 50% 200%
+{{EmbedLiveSample}}
 
 ## Especificaciones
 

@@ -47,7 +47,7 @@ outline-width: inherit;
 
 ## Ejemplos
 
-### Contenido HTML
+Contenido HTML
 
 ```html
 <span id="thin">thin</span>
@@ -58,7 +58,7 @@ outline-width: inherit;
 <span id="twoem">2em</span>
 ```
 
-### Contenido CSS
+Contenido CSS
 
 ```css
 span {

@@ -54,6 +54,8 @@ overflow: inherit
 
 ## Ejemplos
 
+#### `visible`
+
 ```css
 p {
      width: 12em;
@@ -62,29 +64,59 @@ p {
 }
 ```
 
-`visible` (por defecto)
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-
+```html hidden
+<p style="overflow: visible; display: inline-block; width: 12em; height: 6em; border: dotted;">
+  <code>visible</code> (por defecto)<br>
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+</p>
 ```
+
+{{EmbedLiveSample}}
+
+#### `hidden`
+
+```css
 p { overflow: hidden; /* no se dibujan barras */ }
 ```
 
-`overflow: hidden`
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-
+```html hidden
+<p style="overflow: hidden; display: inline-block; width: 12em; height: 6em; border: dotted;">
+  <code>overflow: hidden</code><br>
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+</p>
 ```
+
+{{EmbedLiveSample}}
+
+#### `scroll`
+
+```css
 p { overflow: scroll; /* se dibujan ambas barras */ }
 ```
 
-`overflow: scroll`
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-
+```html hidden
+<p style="overflow: scroll; display: inline-block; width: 12em; height: 6em; border: dotted;">
+  <code>overflow: scroll</code><br>
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+</p>
 ```
+
+{{EmbedLiveSample}}
+
+#### `auto`
+
+```css
 p { overflow: auto; /* se dibujan barras según se necesite */ }
 ```
 
-`overflow: auto`
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+```html hidden
+<p style="overflow: auto; display: inline-block; width: 12em; height: 6em; border: dotted;">
+  <code>overflow: auto</code><br>
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+</p>
+```
+
+{{EmbedLiveSample}}
 
 ## Especificaciones
 

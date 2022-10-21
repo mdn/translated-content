@@ -66,7 +66,7 @@ outline-style: unset;
 
 ## Ejemplo 1 - `dotted` y `dashed`
 
-### HTML
+HTML
 
 ```html
 <div>
@@ -76,7 +76,7 @@ outline-style: unset;
 </div>
 ```
 
-### CSS
+CSS
 
 ```css
 .dotted {
@@ -94,7 +94,7 @@ outline-style: unset;
 
 ## Ejemplo 2 - `solid` y `double`
 
-### HTML
+HTML
 
 ```html
 <div>
@@ -104,7 +104,7 @@ outline-style: unset;
 </div>
 ```
 
-### CSS
+CSS
 
 ```css
 .solid {
@@ -122,7 +122,7 @@ outline-style: unset;
 
 ## Ejemplo 3 - `groove` y `ridge`
 
-### HTML
+HTML
 
 ```html
 <div>
@@ -132,7 +132,7 @@ outline-style: unset;
 </div>
 ```
 
-### CSS
+CSS
 
 ```css
 .groove {
@@ -150,7 +150,7 @@ outline-style: unset;
 
 ## Ejemplo 4 - `inset` y `outset`
 
-### HTML
+HTML
 
 ```html
 <div>
@@ -160,7 +160,7 @@ outline-style: unset;
 </div>
 ```
 
-### CSS
+CSS
 
 ```css
 .inset {

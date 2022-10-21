@@ -70,18 +70,22 @@ Esta propiedad puede ser especificada utilizando uno, dos, tres o cuatro de los 
                  /* en dirección de las agujas del reloj */
 ```
 
-border:outset; padding:5% 1em;
+```html hidden
+<p style="padding: 5% 1em; border: outset currentColor;">border:outset; padding:5% 1em;</p>
+```
+
+{{EmbedLiveSample}}
 
 ## Ver ejemplo
 
-### HTML
+HTML
 
 ```html
 <h4>¡Hola Mundo!</h4>
 <h3>El padding es diferente en esta linea.</h3>
 ```
 
-### CSS
+CSS
 
 ```css
 h4{

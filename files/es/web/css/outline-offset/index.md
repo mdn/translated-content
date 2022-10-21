@@ -59,9 +59,19 @@ El código anterior producirá este efecto:
 
 {{ EmbedLiveSample('Examples', '', '', '') }}
 
-Otro ejemplo:
+#### Otro ejemplo:
 
-outline: multiple offsets;
+```html hidden
+<p>
+  <span style="outline-offset: 1px; outline: green solid 3px;">
+    <span style="outline-offset: 1px; outline: blue solid 3px;">
+      outline: multiple offsets;
+    </span>
+</span>
+</p>
+```
+
+{{EmbedLiveSample}}
 
 ## Especificaciones
 
