@@ -19,7 +19,7 @@ doc = window.document
 
 ### Параметры
 
-- `doc` является ссылкой на объект [document](/ru/docs/DOM/document "DOM/document").
+- `doc` является ссылкой на объект [document](/ru/docs/DOM/document).
 
 ## Пример
 
