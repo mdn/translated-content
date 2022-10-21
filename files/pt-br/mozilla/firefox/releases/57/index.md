@@ -82,7 +82,7 @@ Sem mudanças.
 
 #### Media and WebRTC
 
-- Suporte para mensagens de tamanho arbitrário (até 1GiB, apesar de 256kiB é mais interoperável) está agora suportados em {{DOMxRef("RTCDataChannel")}} através do uso da flag end-of-record (EOR) em messagens SCTP. Veja {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding message size limits")}} para mais informações ({{bug(979417)}}).
+- Suporte para mensagens de tamanho arbitrário (até 1GiB, apesar de 256kiB é mais interoperável) está agora suportados em {{DOMxRef("RTCDataChannel")}} através do uso da flag end-of-record (EOR) em messagens SCTP. Veja {{SectionOnPage("/pt-BR/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding message size limits")}} para mais informações ({{bug(979417)}}).
 
   > **Nota:** Porque o Firefox ainda não suporta o protocolo SCTP ndata que fornece a capacidade de intercalar mensagens SCTP de múltiplas fontes, o envio de objetos de dados grandes pode causar atrasos significativos em todos os outros tráfegos SCTP. Veja {{bug(1381145)}} para acompanhar o progresso na implementação e implementação do suporte a ndata no Firefox.
 
@@ -126,111 +126,111 @@ Sem mudanças.
 
 As seguintes APIs foram adicionadas ou estendidas:
 
-- [`bookmarks`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks)
+- [`bookmarks`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks)
 
-  - support for separators through [`bookmarks.BookmarkTreeNodeType`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType)
+  - support for separators through [`bookmarks.BookmarkTreeNodeType`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType)
 
-- [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
+- [`browser_action`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
 
   - `theme_icons` property for light/dark theme icons
 
-- [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)
+- [`browserAction`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)
 
-  - [`browserAction.openPopup()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup)
+  - [`browserAction.openPopup()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup)
 
-- [`browserSettings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings)
+- [`browserSettings`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings)
 
-  - [`allowPopupsForUserEvents`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/allowPopupsForUserEvents)
-  - [`homepageOverride`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride)
-  - [`imageAnimationBehavior`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior)
-  - [`newTabPageOverride`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride)
+  - [`allowPopupsForUserEvents`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/allowPopupsForUserEvents)
+  - [`homepageOverride`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride)
+  - [`imageAnimationBehavior`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior)
+  - [`newTabPageOverride`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride)
 
-- [`browsingData`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
+- [`browsingData`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
 
-  - [`browsingData.removeLocalStorage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage)
+  - [`browsingData.removeLocalStorage()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage)
 
-- [`clipboard`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard)
+- [`clipboard`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/clipboard)
 
-  - [`setImageData()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData)
+  - [`setImageData()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData)
 
-- [`contextualIdentities`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities)
+- [`contextualIdentities`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities)
 
-  - [`onCreated`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated)
-  - [`onRemoved`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved)
-  - [`onUpdated`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated)
-  - `colorCode` and `iconUrl` in [`contextualIdentitities.ContextualIdentity`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity)
+  - [`onCreated`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated)
+  - [`onRemoved`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved)
+  - [`onUpdated`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated)
+  - `colorCode` and `iconUrl` in [`contextualIdentitities.ContextualIdentity`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity)
 
-- [`devtools.panels`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels)
+- [`devtools.panels`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels)
 
-  - [`devtools.panels.ElementsPanel.createSidebarPane()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane)
+  - [`devtools.panels.ElementsPanel.createSidebarPane()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane)
 
-- [`downloads`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
+- [`downloads`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
 
-  - `incognito` option in [`downloads.download()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download)
-  - `estimatedEndTime` property in [`downloads.DownloadItem`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem)
+  - `incognito` option in [`downloads.download()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download)
+  - `estimatedEndTime` property in [`downloads.DownloadItem`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem)
 
-- [`find`](/en-US/Add-ons/WebExtensions/API/find)
+- [`find`](/pt-BR/Add-ons/WebExtensions/API/find)
 
-  - [`find()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find/find)
-  - [`highlightResults()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find/highlightResults)
-  - [`removeHighlighting()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting)
+  - [`find()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/find/find)
+  - [`highlightResults()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/find/highlightResults)
+  - [`removeHighlighting()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting)
 
-- [`pageAction.openPopup()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup)
-- [`privacy`](/en-US/Add-ons/WebExtensions/API/privacy/websites)
+- [`pageAction.openPopup()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup)
+- [`privacy`](/pt-BR/Add-ons/WebExtensions/API/privacy/websites)
 
-  - [`websites.trackingProtectionMode`](/en-US/Add-ons/WebExtensions/API/privacy/websites)
+  - [`websites.trackingProtectionMode`](/pt-BR/Add-ons/WebExtensions/API/privacy/websites)
 
-- [`proxy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
+- [`proxy`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
 
   - `FindProxyForURL()` can now return an object
 
-- [`runtime`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime)
+- [`runtime`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/runtime)
 
-  - [`runtime.openOptionsPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) support on Android
+  - [`runtime.openOptionsPage()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) support on Android
 
-- [`sessions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions)
+- [`sessions`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/sessions)
 
-  - [`setTabValue()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue)
-  - [`getTabValue()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue)
-  - [`removeTabValue()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue)
-  - [`setWindowValue()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setWindowValue)
-  - [`getWindowValue()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getWindowValue)
-  - [`removeWindowValue()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue)
+  - [`setTabValue()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue)
+  - [`getTabValue()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue)
+  - [`removeTabValue()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue)
+  - [`setWindowValue()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setWindowValue)
+  - [`getWindowValue()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getWindowValue)
+  - [`removeWindowValue()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue)
 
-- [`sidebarAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction)
+- [`sidebarAction`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction)
 
-  - [`sidebarAction.open()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/open)
+  - [`sidebarAction.open()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/open)
 
-- [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage)
+- [`storage`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/storage)
 
-  - [`storage.managed`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed)
+  - [`storage.managed`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed)
 
-- [`tabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
+- [`tabs`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
 
-  - `loadReplace` option in [`tabs.update()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update)
-  - `discarded` property in [`tabs.Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab), [`tabs.onUpdated`](/en-US/docs/), and [`tabs.query()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)
-  - [`tabs.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create) can open "view-source:" URLs
-  - `openerTabId` property in [`tabs.Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab), [`tabs.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create), [`tabs.query()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query), and [`tabs.update()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update)
+  - `loadReplace` option in [`tabs.update()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update)
+  - `discarded` property in [`tabs.Tab`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab), [`tabs.onUpdated`](/pt-BR/docs/), and [`tabs.query()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)
+  - [`tabs.create()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create) can open "view-source:" URLs
+  - `openerTabId` property in [`tabs.Tab`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab), [`tabs.create()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create), [`tabs.query()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query), and [`tabs.update()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update)
 
-- [`theme`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme)
+- [`theme`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme)
 
   - `colors.toolbar`
   - `colors.toolbar_field`
   - `colors.toolbar_field_text`
   - `colors.toolbar_text`
 
-- [`theme`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme)
+- [`theme`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/theme)
 
-  - `windowId` option to [`theme.update()`](/en-US/Add-ons/WebExtensions/API/theme/update)
+  - `windowId` option to [`theme.update()`](/pt-BR/Add-ons/WebExtensions/API/theme/update)
 
-- [`webRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
+- [`webRequest`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
 
-  - [`filterResponseData()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData)
-  - `proxyInfo` property in [`webRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) events
+  - [`filterResponseData()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData)
+  - `proxyInfo` property in [`webRequest`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) events
 
-- [`windows`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows)
+- [`windows`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/windows)
 
-  - `allowScriptsToClose` option in [`windows.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create)
+  - `allowScriptsToClose` option in [`windows.create()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/windows/create)
 
 ## Versões anteriores
 

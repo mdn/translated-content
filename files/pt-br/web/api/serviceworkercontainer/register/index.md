@@ -22,7 +22,7 @@ ServiceWorkerContainer.register(scriptURL, options)
 
 - `scriptURL`
   - : A URL do script service worker.
-- `options` `{{optional_inline}}`
+- `options` {{optional_inline}}
 
   - : Um objeto contendo as opções do registro. Atualmente as opções disponíveis são:
 

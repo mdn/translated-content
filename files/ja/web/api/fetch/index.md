@@ -14,7 +14,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 
 `fetch()` メソッドは取得するリソースのディレクティブではなく [Content Security Policy](/ja/docs/Security/CSP/CSP_policy_directives) の `connect-src` ディレクティブによって制御されます。
 
-> **Note:** `fetch()` メソッドの引数は {{domxref("Request.Request","Request()")}} コンストラクターと全く同じです。
+> **メモ:** `fetch()` メソッドの引数は {{domxref("Request.Request","Request()")}} コンストラクターと全く同じです。
 
 ## 構文
 

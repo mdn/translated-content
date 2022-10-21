@@ -29,7 +29,7 @@ Web Audio API は音声操作を**オーディオコンテキスト**内の操�
 
 Web Audio API では、立体音響を制御することもできます。*ソースリスナーモデル*に基づいたシステムを使用することで、*パンモデル*を制御し、音源の移動 (またはリスナーの移動) によって引き起こされる*距離に起因する減衰*を処理することができます。
 
-> **Note:** Web Audio API の理論に関する詳細は [Basic concepts behind Web Audio API](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) をご覧ください。
+> **メモ:** Web Audio API の理論に関する詳細は [Basic concepts behind Web Audio API](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) をご覧ください。
 
 ## Web Audio API がターゲットとする人
 

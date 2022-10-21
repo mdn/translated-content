@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/Feature-Policy/screen-wake-lock
 
 HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける **`screen-wake-lock`** ディレクティブは、現在の文書が [Screen Wake Lock API](/ja/docs/Web/API/Screen_Wake_Lock_API) を使用して、端末が画面を暗くしたりオフにしたりしないよう指示することを許可するかどうか制御します。
 
-> **Note:** 早期の仕様書の草稿では、このディレクティブは `wake-lock` と呼ばれていました。
+> **メモ:** 早期の仕様書の草稿では、このディレクティブは `wake-lock` と呼ばれていました。
 
 ## 構文
 

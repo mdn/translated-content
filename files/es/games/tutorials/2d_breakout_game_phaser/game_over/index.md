@@ -12,7 +12,7 @@ tags:
   - juego terminado
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Game_over
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls", "Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field")}}
 

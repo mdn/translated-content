@@ -58,7 +58,7 @@ slug: Web/API/Request
 - {{domxref("Request.text()")}}
   - : リクエスト本体を表す {{domxref("USVString")}} (テキスト) で解決するプロミスを返します。
 
-> **Note:**  リクエスト本文の関数は 1 度しか呼び出せません。 2 回目以降は空の文字列または ArrayBuffer で解決します。
+> **メモ:** リクエスト本文の関数は 1 度しか呼び出せません。 2 回目以降は空の文字列または ArrayBuffer で解決します。
 
 ## 例
 
@@ -93,7 +93,7 @@ const credentials = request.credentials;
 const bodyUsed = request.bodyUsed;
 ```
 
-> **Note:** **メモ:** body の型は {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} {{domxref("ReadableStream")}} のいずれかで、ペイロードにそのオブジェクトを文字列化するのに必要な JSON オブジェクトでも同様です。
+> **メモ:** body の型は {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} {{domxref("ReadableStream")}} のいずれかで、ペイロードにそのオブジェクトを文字列化するのに必要な JSON オブジェクトでも同様です。
 
 すると `Request` オブジェクトを、例えば {{domxref("WindowOrWorkerGlobalScope.fetch()")}} 呼び出しの引数として渡すことで API リクエストを取得できて、レスポンスを取得できます。
 

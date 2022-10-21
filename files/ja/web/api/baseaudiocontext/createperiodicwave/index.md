@@ -30,7 +30,7 @@ createPeriodicWave(real, imag, constraints)
 
     - `disableNormalization`: `true` に設定すると、周期的な波の正規化を無効にします。既定値は `false` です。
 
-> **Note:** 正規化した場合、結果の波は最大絶対ピーク値が 1 になります。
+> **メモ:** 正規化した場合、結果の波は最大絶対ピーク値が 1 になります。
 
 ### 返値
 

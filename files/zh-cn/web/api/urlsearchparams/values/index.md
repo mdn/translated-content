@@ -40,7 +40,7 @@ value2
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams.values")}}
+{{Compat}}
 
 ## 另请参考
 

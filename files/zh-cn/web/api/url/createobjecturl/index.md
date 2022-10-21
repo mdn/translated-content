@@ -50,7 +50,7 @@ objectURL = URL.createObjectURL(object);
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.createObjectURL")}}
+{{Compat}}
 
 ## 相关链接
 

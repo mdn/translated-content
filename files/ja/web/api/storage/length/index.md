@@ -31,7 +31,7 @@ function populateStorage() {
 }
 ```
 
-> **Note:** 実際の例として、[Web Storage Demo](https://github.com/mdn/web-storage-demo) をご覧ください。
+> **メモ:** 実際の例として、[Web Storage Demo](https://github.com/mdn/web-storage-demo) をご覧ください。
 
 ## 仕様
 

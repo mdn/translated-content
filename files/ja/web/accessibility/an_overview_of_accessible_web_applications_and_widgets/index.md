@@ -131,7 +131,7 @@ var showTip = function(el) {
 
 ### ロールの変化
 
-> **Note:** 作成中
+> **メモ:** 作成中
 
 ARIA によって開発者は、誤った意味を持っていたり意味が存在しない要素に対して意味的なロールを宣言することができます。例えばメニューを作るために順番付けがないリストを使用するとき、{{HTMLElement("ul")}} に `menubar` の **`role`** を、各々の {{HTMLElement("li")}} に `menuitem` の **`role`** を与えるべきです。
 
@@ -143,7 +143,7 @@ ARIA によって開発者は、誤った意味を持っていたり意味が存
 
 ### 非同期のコンテンツ変更
 
-> **Note:** 作成中です。[Live Regions](/ja/docs/ARIA/Live_Regions) もご覧ください。
+> **メモ:** 作成中です。[Live Regions](/ja/docs/ARIA/Live_Regions) もご覧ください。
 
 ## キーボードナビゲーション
 

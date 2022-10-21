@@ -35,7 +35,7 @@ offscreen.transferToImageBitmap();
 
 ## 浏览器兼容
 
-{{Compat("api.OffscreenCanvas.transferToImageBitmap")}}
+{{Compat}}
 
 ## 浏览相关
 

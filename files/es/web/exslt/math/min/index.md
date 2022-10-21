@@ -11,7 +11,7 @@ translation_of: Web/EXSLT/math/min
 
 `math:min()` devuelve el valor mínimo de un conjunto de nodos (node-set).
 
-Para calcular el valor mínimo de un conjunto de nodos, el conjunto de nodos se ordena en orden ascendente como se haría usando [`xsl:sort()`](es/XSLT/sort) con datos de tipo `number` (numéricos). Entonces el valor mínimo será el primer nodo de la lista ordenada, convertido en número.
+Para calcular el valor mínimo de un conjunto de nodos, el conjunto de nodos se ordena en orden ascendente como se haría usando [`xsl:sort()`](/es/XSLT/sort) con datos de tipo `number` (numéricos). Entonces el valor mínimo será el primer nodo de la lista ordenada, convertido en número.
 
 ## Sintaxis
 

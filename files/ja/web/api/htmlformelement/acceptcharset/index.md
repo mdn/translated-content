@@ -9,7 +9,6 @@ l10n:
 
 **`HTMLFormElement.acceptCharset`** プロパティは、指定された {{htmlelement("form")}} 要素で対応している[文字エンコーディング](/ja/docs/Glossary/character_encoding) の一覧を表します。このリストは、カンマ区切りまたはスペース区切りで記述することができます。
 
-
 ## 値
 
 文字列です。

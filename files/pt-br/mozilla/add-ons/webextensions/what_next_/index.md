@@ -14,13 +14,13 @@ Você não precisa de ferramentas de desenvolvimento especiais para criar extens
 
 Se você usa ferramentas de minificação ou obfuscação para entregar seu código final, você precisará entregar seu código fonte para [o processo de revisão AMO](#The_review_process). Além disso, as ferramentas que você utiliza, — para minificação, obfuscação e contrução — devem ser open source ( ou oferecer uso gratuito sem limites ) e disponíveis para execução no computador do revisor (Windows, Mac ou Linux). Infelizmente, nossos revisores não podem trabalhar com ferramentas comerciais ou baseadas em web.
 
-[Aprenda mais acerca de ferramentas de construção](/en-US/Add-ons/Source_Code_Submission#About_build_tools)
+[Aprenda mais acerca de ferramentas de construção](/pt-BR/Add-ons/Source_Code_Submission#About_build_tools)
 
 ## Third-party libraries
 
 Third-party libraries are a great way to add complex features or functionality to your browser extensions quickly. When you submit an extension to the [AMO review process](#The_review_processv), the process will also consider any third-party libraries used. To streamline the review, make sure you always download third-party libraries from their official website or repository, and if the library is minified provide a link to the source code. Please note that third-party libraries cannot be modified in any way.
 
-[Learn more about submitting source code](/en-US/Add-ons/Source_Code_Submission)
+[Learn more about submitting source code](/pt-BR/Add-ons/Source_Code_Submission)
 
 ## The Firefox Add-on Distribution Agreement
 
@@ -28,19 +28,19 @@ Browser extensions need to be signed to install into the release or beta version
 
 [Read the agreement](/Add-ons/AMO/Policy/Agreement)
 
-[Learn more about signing](/en-US/Add-ons/WebExtensions/Distribution)
+[Learn more about signing](/pt-BR/Add-ons/WebExtensions/Distribution)
 
 ## The review process
 
 When a browser extension is submitted for signing, it's subject to automated review. It may also be subject to a manual review, when the automated review determines that a manual review is needed. Your browser extension won't be signed until it’s passed the automated review and may have its signing revoked if it fails to pass the manual review. The review process follows a strict set of guidelines, so it’s easy to check and avoid any likely review problems.
 
-[Check out the review policy and guidelines](/en-US/Add-ons/AMO/Policy/Reviews)
+[Check out the review policy and guidelines](/pt-BR/Add-ons/AMO/Policy/Reviews)
 
 ## AMO featured browser extensions
 
 If you choose to list your browser extension on AMO, your extension could be featured on the AMO website, in the Firefox browser’s add-on manager, or elsewhere on a Mozilla website. We've compiled a list of guidelines about how extensions are selected for featuring, by following these guidelines you give your extension the best chance of being featured.
 
-[Learn more about getting your add-ons featured](/en-US/Add-ons/AMO/Policy/Featured)
+[Learn more about getting your add-ons featured](/pt-BR/Add-ons/AMO/Policy/Featured)
 
 ## Continue your learning experience
 

@@ -50,7 +50,7 @@ targetElement.insertAdjacentElement(position, element);
 <!-- afterend -->
 ```
 
-> **Note:** `beforebegin` および `afterend` の位置は、そのノードがツリー内にあり、親が要素である場合のみ動作します。
+> **メモ:** `beforebegin` および `afterend` の位置は、そのノードがツリー内にあり、親が要素である場合のみ動作します。
 
 ## 例
 

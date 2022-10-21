@@ -15,7 +15,7 @@ slug: Glossary/Progressive_Enhancement
 
 ## 関連情報
 
-- Wikipedia 上の {{Interwiki("wikipedia", "プログレッシブエンハンスメント")}}
+- Wikipedia 上の [プログレッシブエンハンスメント](https://ja.wikipedia.org/wiki/プログレッシブエンハンスメント)
 - [What is Progressive Enhancement, and why it matters](https://www.freecodecamp.org/news/what-is-progressive-enhancement-and-why-it-matters-e80c7aaf834a/) at freeCodeCamp
 - [Progressive Enhancement reading list 2021](https://www.quirksmode.org/blog/archives/2021/02/progressive_enh_1.html) at QuirksMode
 - [Understanding Progressive Enhancement](https://alistapart.com/article/understandingprogressiveenhancement/) by Aaron Gustafson; a 2008 _A List Apart_ article which first "placed progressive enhancement at the forefront of web developer thinking"

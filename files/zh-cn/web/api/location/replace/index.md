@@ -35,7 +35,7 @@ window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Locati
 
 ## 浏览器兼容性
 
-{{Compat("api.Location.replace")}}
+{{Compat}}
 
 ## 参见
 

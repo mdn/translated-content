@@ -17,7 +17,7 @@ slug: Web/CSS/Layout_cookbook/Center_an_element
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
 
-> **Callout:**
+> **注目:**
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html)
 

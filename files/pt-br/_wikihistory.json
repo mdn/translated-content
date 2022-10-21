@@ -5828,10 +5828,6 @@
     "modified": "2019-03-18T21:16:20.736Z",
     "contributors": ["ygormaximo"]
   },
-  "Web/Guide/HTML/Editable_content": {
-    "modified": "2019-03-23T22:43:02.407Z",
-    "contributors": ["expalmer", "fellyph"]
-  },
   "Web/Guide/Introduction_to_Web_development": {
     "modified": "2019-07-28T16:57:13.368Z",
     "contributors": ["rvenson"]
@@ -11215,6 +11211,10 @@
   "conflicting/Web/Guide/Mobile": {
     "modified": "2019-03-23T23:28:19.402Z",
     "contributors": ["clebermatheus1", "wbamberg"]
+  },
+  "conflicting/Web/HTML/Global_attributes/contenteditable": {
+    "modified": "2019-03-23T22:43:02.407Z",
+    "contributors": ["expalmer", "fellyph"]
   },
   "conflicting/Web/HTTP/CORS": {
     "modified": "2020-04-19T11:26:06.291Z",

@@ -16,7 +16,9 @@ slug: Web/CSS/:root
 
 ## 構文
 
-{{csssyntax}}
+```
+:root
+```
 
 ## 例
 

@@ -11,7 +11,7 @@ slug: Web/API/Element/requestFullScreen
 
 このメソッドはユーザーの操作又は機器の方向の変更によって呼び出す必要があり、そうでなければ失敗します。
 
-> **Note:** 全画面で表示することができる要素は、 HTML 名前空間にあり (つまり、標準の HTML の要素であり)、加えて {{HTMLElement("svg")}} 要素や {{HTMLElement("math")}} 要素、文書の最上位にある要素、又は {{htmlattrxref("allowfullscreen", "iframe")}} 属性を持つ {{HTMLElement('iframe')}} だけです。すなわち、 {{HTMLElement('frame')}} や {{HTMLElement('object')}} の内部にある要素は全画面で表示できません。
+> **メモ:** 全画面で表示することができる要素は、 HTML 名前空間にあり (つまり、標準の HTML の要素であり)、加えて {{HTMLElement("svg")}} 要素や {{HTMLElement("math")}} 要素、文書の最上位にある要素、又は {{htmlattrxref("allowfullscreen", "iframe")}} 属性を持つ {{HTMLElement('iframe')}} だけです。すなわち、 {{HTMLElement('frame')}} や {{HTMLElement('object')}} の内部にある要素は全画面で表示できません。
 
 ## 構文
 

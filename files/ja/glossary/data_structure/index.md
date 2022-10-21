@@ -9,4 +9,4 @@ slug: Glossary/Data_structure
 
 ### 一般知識
 
-- Wikipedia 上の {{interwiki("wikipedia", "データ構造")}}
+- Wikipedia 上の [データ構造](https://ja.wikipedia.org/wiki/データ構造)

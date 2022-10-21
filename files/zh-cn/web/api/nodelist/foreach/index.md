@@ -98,7 +98,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 ## Browser Compatibility
 
-{{Compat("api.NodeList.forEach")}}
+{{Compat}}
 
 ## See also
 

@@ -27,7 +27,7 @@ En este módulo, continuamos nuestra cobertura de todas las características cla
 
 Hemos reunido un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
 
-[Empieza aquí](https://developer.mozilla.org/docs/Learn/Front-end_web_developer)
+[Empieza aquí](/es/docs/Learn/Front-end_web_developer)
 
 ## Pre-requisitos
 

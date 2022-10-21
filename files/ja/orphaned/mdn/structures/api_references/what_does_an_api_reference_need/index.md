@@ -8,7 +8,7 @@ original_slug: MDN/Structures/API_references/What_does_an_API_reference_need
 
 この記事では、完全な API リファレンスに必要なページについて説明します。
 
-> **Note:**  API リファレンスで作業しているときに書いたり更新したりする必要があるドキュメントのリストを作成し、完了したらチェックを外すことをお勧めします。
+> **メモ:** API リファレンスで作業しているときに書いたり更新したりする必要があるドキュメントのリストを作成し、完了したらチェックを外すことをお勧めします。
 
 ## API ページの概要
 
@@ -23,9 +23,9 @@ An API reference will generally contain the following pages. You can find more d
 7. Concept/guide pages
 8. Examples
 
-> **Note:** We'll be referring to the [Web Audio API](/ja/docs/Web/API/Web_Audio_API) for examples in this article.
+> **メモ:** We'll be referring to the [Web Audio API](/ja/docs/Web/API/Web_Audio_API) for examples in this article.
 
-> **Note:** To create a page as specified below, the easiest way is to go to the parent page you want it to hang off, and choose _Cog icon > New sub-article_. If you haven't got this option available on your MDN interface, you'll need to request this privilege (ask at `mdn-admins@mozilla.org`), or ask another MDN contributor to create them for you.
+> **メモ:** To create a page as specified below, the easiest way is to go to the parent page you want it to hang off, and choose _Cog icon > New sub-article_. If you haven't got this option available on your MDN interface, you'll need to request this privilege (ask at `mdn-admins@mozilla.org`), or ask another MDN contributor to create them for you.
 
 ### 概要ページ
 
@@ -53,7 +53,7 @@ Each interface will have its own page too, describing the purpose of the interfa
 - Slug: _AudioNode_
 - URL: [https://developer.mozilla.org/ja/docs/Web/API/AudioNode](/ja/docs/Web/API/AudioNode)
 
-> **Note:** We document every member appearing in the interface. You should bear the following rules in mind:
+> **メモ:** We document every member appearing in the interface. You should bear the following rules in mind:
 >
 > - We document methods defined on the **prototype** of an object implementing this interface (instance methods), and methods defined on the actual class itself (static methods). On the rare occasions that they both exist on the same interface, you should list them in separate sections on the page (Static methods/Instance methods). Usually only instance methods exist, in which case you can put these under the title "Methods".
 > - We do not document inherited properties and methods of the interface: they are listed on the respective parent interface. We do hint at their existence though.
@@ -87,7 +87,7 @@ Examples:
 - Slug: _onstatechange_
 - URL: [https://developer.mozilla.org/ja/docs/Web/API/AudioContext/onstatechange](/ja/docs/Web/API/AudioContext/onstatechange)
 
-> **Note:** Event handler properties are treated in the same way as regular properties; they are generally listed in a separate section on the interface page though.
+> **メモ:** Event handler properties are treated in the same way as regular properties; they are generally listed in a separate section on the interface page though.
 
 ### メソッドページ
 

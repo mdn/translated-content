@@ -84,18 +84,13 @@ var noel.setYear(95);
 var annee = noel.getYear(); // renvoie 95
 ```
 
-## Specifications
+## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                                                               |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------ |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3.                                      |
-| {{SpecName('ES5.1', '#sec-B.2.4', 'Date.prototype.getYear')}}                             | {{Spec2('ES5.1')}}     | Défini dans l'annexe informative sur la compatibilité.                                     |
-| {{SpecName('ES6', '#sec-date.prototype.getyear', 'Date.prototype.getYear')}}         | {{Spec2('ES6')}}         | Défini dans l'annexe normative sur les fonctionnalités additionnelles des navigateurs web. |
-| {{SpecName('ESDraft', '#sec-date.prototype.getyear', 'Date.prototype.getYear')}} | {{Spec2('ESDraft')}} |                                                                                            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.getYear")}}
+{{Compat}}
 
 ## Voir aussi
 

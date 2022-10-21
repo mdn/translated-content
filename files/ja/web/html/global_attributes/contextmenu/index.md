@@ -5,7 +5,7 @@ slug: Web/HTML/Global_attributes/contextmenu
 
 {{HTMLSidebar("Global_attributes")}}
 
-> **Warning:** [contextmenu 属性は廃止](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu)されており、今後、すべてのブラウザーから削除される予定です。
+> **警告:** [contextmenu 属性は廃止](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu)されており、今後、すべてのブラウザーから削除される予定です。
 
 **`contextmenu`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes) は、当該要素のコンテキストメニューとして使用する {{HTMLElement("menu")}} 要素の [**id**](/ja/docs/Web/HTML/Global_attributes/id) です。
 

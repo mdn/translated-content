@@ -1,9 +1,6 @@
 ---
 title: Conceitos do WebAssembly
 slug: WebAssembly/Concepts
-tags:
-  - conceitos
-  - plataforma web
 translation_of: WebAssembly/Concepts
 ---
 {{WebAssemblySidebar}}

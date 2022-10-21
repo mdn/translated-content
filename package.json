@@ -1,0 +1,28 @@
+{
+  "name": "@mdn/translated-content",
+  "version": "1.0.0",
+  "description": "Translated content of https://developer.mozilla.org",
+  "private": true,
+  "homepage": "https://github.com/mdn/translated-content#readme",
+  "bugs": {
+    "url": "https://github.com/mdn/translated-content/issues"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "MDN Web Docs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdn/translated-content.git"
+  },
+  "scripts": {
+    "fix:json": "prettier -w \"**/*.json\"",
+    "fix:yml": "prettier -w \"**/*.yml\"",
+    "lint:json": "prettier -c \"**/*.json\"",
+    "lint:yml": "prettier -c \"**/*.yml\""
+  },
+  "engines": {
+    "node": "^16.0.0 || >=18.0.0"
+  },
+  "dependencies": {
+    "prettier": "2.7.1"
+  }
+}

@@ -7,6 +7,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 O método `forEach()` executa uma dada função em cada elemento de um array.
 
+{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+
 ## Sintaxe
 
 ```
@@ -105,7 +107,7 @@ if ( !Array.prototype.forEach ) {
 
 Um algorítimo 100% verdadeiro para a 5ª Edição do ECMA-262, pode ser visto abaixo:
 
-O algoritmo é exatamente o especificado na 5ª Edição da ECMA-262, assumindo `Object` e `TypeError` possuem seus valores originais e avalia `callback.call` para o valor original de [`Function.prototype.call`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/call).
+O algoritmo é exatamente o especificado na 5ª Edição da ECMA-262, assumindo `Object` e `TypeError` possuem seus valores originais e avalia `callback.call` para o valor original de [`Function.prototype.call`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/call).
 
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.18

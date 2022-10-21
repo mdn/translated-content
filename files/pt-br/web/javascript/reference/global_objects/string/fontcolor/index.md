@@ -52,7 +52,7 @@ console.log(worldString.fontcolor('FF00') + ' está vermelho em hexadecimal nest
 // '<font color="FF00">Olá, mundo</font> está vermelho em hexadecimal nesta linha'
 ```
 
-Com o objeto [`element.style`](/en-US/docs/Web/API/ElementCSSInlineStyle/style) você pode obter o atributo `style` do elemento e manipulá-lo de forma mais genérica, por exemplo:
+Com o objeto [`element.style`](/pt-BR/docs/Web/API/ElementCSSInlineStyle/style) você pode obter o atributo `style` do elemento e manipulá-lo de forma mais genérica, por exemplo:
 
 ```js
 document.getElementById('#oIdDoElemento').style.color = 'red';

@@ -21,7 +21,7 @@ WebDAV を使用すると、クライアントから次の事ができます。
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "WebDAV")}}
+- Wikipedia の [WebDAV](https://ja.wikipedia.org/wiki/WebDAV)
 
 ### 技術リファレンス
 

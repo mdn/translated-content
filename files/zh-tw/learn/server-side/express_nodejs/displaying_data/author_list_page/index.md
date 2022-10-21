@@ -60,7 +60,7 @@ Run the application and open your browser to <http://localhost:3000/>. Then sele
 >
 > `return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';`
 
-## Genre list page—challenge\![Edit](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!)
+## Genre list page—challenge!
 
 In this section you should implement your own genre list page. The page should display a list of all genres in the database, with each genre linked to its associated detail page. A screenshot of the expected result is shown below.
 

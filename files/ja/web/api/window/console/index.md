@@ -37,4 +37,4 @@ console.dir(someObject);
 | ------------------------------------ | -------------------------------- | ------------------- |
 | {{SpecName('Console API')}} | {{Spec2('Console API')}} | Initial definition. |
 
-> **Note:** Currently there are many implementation differences among browsers, but work is being done to bring them together and make them more consistent with one another.
+> **メモ:** Currently there are many implementation differences among browsers, but work is being done to bring them together and make them more consistent with one another.

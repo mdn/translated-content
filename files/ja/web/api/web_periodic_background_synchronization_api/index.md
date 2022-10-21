@@ -19,7 +19,7 @@ API が呼び出された際には最小の時間間隔がセットされます�
 
 この API はサービスワーカーに依存しているため、この API も安全なコンテクスト (secure context) でしか利用できません。
 
-> **Note:** At the time of writing, the Web Periodic Background Synchronization API is only available through an installed [Progressive Web App](/ja/docs/Web/Progressive_web_apps)
+> **メモ:** At the time of writing, the Web Periodic Background Synchronization API is only available through an installed [Progressive Web App](/ja/docs/Web/Progressive_web_apps)
 
 ## Web Periodic Background Synchronization Interfaces
 

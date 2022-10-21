@@ -55,13 +55,11 @@ fetch('simple.wasm').then(response =>
 
 ## Spécifications
 
-| Spécification                                                                            | État                                 | Commentaires                                       |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblycompile', 'compile()')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale pour WebAssembly. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.compile")}}
+{{Compat}}
 
 ## Voir aussi
 

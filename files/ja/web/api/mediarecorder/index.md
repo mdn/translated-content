@@ -140,7 +140,7 @@ if (navigator.mediaDevices) {
 }
 ```
 
-> **Note:** このコードサンプルは、ウェブディクタフォン（Web Dictaphone）のデモから着想を得たものです。 簡潔にするために一部の行は省略されています。 完全なコードについては[ソースを参照](https://github.com/mdn/web-dictaphone/)してください。
+> **メモ:** このコードサンプルは、ウェブディクタフォン（Web Dictaphone）のデモから着想を得たものです。 簡潔にするために一部の行は省略されています。 完全なコードについては[ソースを参照](https://github.com/mdn/web-dictaphone/)してください。
 
 ## 仕様
 

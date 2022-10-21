@@ -401,7 +401,7 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 如您所見，我們使用 `if`-`else`-`endif` 模板標籤根據 `\{{ user.is_authenticated }}` \ {{user.is_authenticated}}是否為真來有條件地顯示文本。 如果用戶通過了身份驗證，那麼我們知道我們有一個有效的用戶，因此我們調用 **\\{{ user.get_username }}** 來顯示其名稱。
 
-我們使用`url` 模板標記和相應 URL 配置的名稱來創建登錄和註銷鏈接 URL。 還要注意我們如何將`?next=\{{request.path}}`附加到 URL 的末尾。 這是在鏈接的 URL 的末尾添加一個 URL 參數，其中包含當前頁面的地址（URL）。 用戶成功登錄/註銷後，視圖將使用此\`\``next`''值將用戶重定向到他們首先單擊 login/logout 鏈接的頁面。
+我們使用 `url` 模板標記和相應 URL 配置的名稱來創建登錄和註銷鏈接 URL。 還要注意我們如何將`?next=\{{request.path}}`附加到 URL 的末尾。 這是在鏈接的 URL 的末尾添加一個 URL 參數，其中包含當前頁面的地址（URL）。 用戶成功登錄/註銷後，視圖將使用此 `next` 值將用戶重定向到他們首先單擊 login/logout 鏈接的頁面。
 
 > **備註：** 試試看！ 如果您在主頁上，然後單擊側欄中的“Login/Logout”，那麼在操作完成後，您應該回到同一頁面。
 

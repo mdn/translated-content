@@ -26,42 +26,42 @@ Extensões adicionam novas funcionalidades para aplicativos da Mozilla como Fire
 Há três tipos de técnicas diferentes que você pode utilizar para construir uma extensão: Add-on baseado em extensões SDK, extensões _restartless_ inicializadas manualmente e extensões overlay.
 
 - Desenvolva extensões que não requer a reinicialização do navegador utilizando um conjunto JavaScript APIs de alto nível.
-- [Extensões _Restartless_](/en-US/Add-ons/Bootstrapped_extensions)
+- [Extensões _Restartless_](/pt-BR/Add-ons/Bootstrapped_extensions)
   Desenvolva extensões que não requer a reinicialização do navegador.
-- [Extensões Overlay](/en-US/Add-ons/Overlay_Extensions)
+- [Extensões Overlay](/pt-BR/Add-ons/Overlay_Extensions)
   Extensões que requerem a reinicialização do navegador para instalar, geralmente usando [overlays XUL](/pt-BR/docs/Mozilla/Tech/XUL/Overlays).
 
 Se você puder, é aconselhável utilizar o Add-on SDK, que usa o mecanismo de extensão restartless mas simplifica determinadas tarefas e limpa depois de si mesmo. Se o Add-on SDK não é suficiente para as suas necessidades, implemente uma extensão restartless manual no lugar.
 
-Para obter mais informações sobre como escolher qual a técnica de usar, leia esta [comparação](/en-US/Add-ons/Comparing_Extension_Toolchains).
+Para obter mais informações sobre como escolher qual a técnica de usar, leia esta [comparação](/pt-BR/Add-ons/Comparing_Extension_Toolchains).
 
 ### Práticas Recomendadas
 
 Não importa como você desenvolve uma extensão, existem algumas orientações que você pode seguir para ajudar a garantir que sua extensão fornece uma experiência tão boa para o usuário o quão possível.
 
-- [Desempenho](/en-US/Add-ons/Performance_best_practices_in_extensions)
+- [Desempenho](/pt-BR/Add-ons/Performance_best_practices_in_extensions)
   - : Assegurando que sua extensão é rápida, responsiva e eficiente para a memória.
-- [Segurança](/en-US/Add-ons/Security_best_practices_in_extensions)
+- [Segurança](/pt-BR/Add-ons/Security_best_practices_in_extensions)
   - : Assegurando que sua extensão não exponha o usuário para websites maliciosos.
-- [Etiqueta](/en-US/Add-ons/Extension_etiquette)
+- [Etiqueta](/pt-BR/Add-ons/Extension_etiquette)
   - : Assegurando que sua extensão funcione bem com outras extensões.
 
 ### Aplicativo específico
 
 A maioria das documentações assume que você está desenvolvendo para o Firefox Desktop. Se você está desenvolvendo para algum outro aplicativo baseado no Gecko, há diferenças importantes que você precisa saber sobre.
 
-- [Thunderbird](/en-US/Add-ons/Thunderbird)
+- [Thunderbird](/pt-BR/Add-ons/Thunderbird)
   - : Desenvolvendo extensões para o Thunderbird mail client.
-- [Firefox para Android](/en-US/Add-ons/Firefox_for_Android)
+- [Firefox para Android](/pt-BR/Add-ons/Firefox_for_Android)
   - : Desenvolvendo extensões para Firefox para Android.
-- [SeaMonkey](/en-US/Add-ons/SeaMonkey_2)
+- [SeaMonkey](/pt-BR/Add-ons/SeaMonkey_2)
   - : Desenvolvendo extensões para [SeaMonkey](http://www.seamonkey-project.org/) suíte de software.
 
 ## Temas
 
 Os temas são add-ons que personalizam a IU do aplicativo. Existem dois tipos de temas: temas leves e temas completos.
 
-[Temas Leves](https://addons.mozilla.org/en-US/developers/docs/themes) são muito mais simples de implementar do que temas completos, mas fornece a personalização muito limitada.
+[Temas Leves](https://addons.mozilla.org/pt-BR/developers/docs/themes) são muito mais simples de implementar do que temas completos, mas fornece a personalização muito limitada.
 
 Com [Temas Completos](/pt-BR/docs/Themes) você pode fazer modificações mais profundas na IU. A documentação para temas completos é fora da data, mas está ligada a aqui como uma possível base para a documentação atualizada.
 

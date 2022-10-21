@@ -45,7 +45,7 @@ translation_of: Web/API/Element/touchstart_event
 
 ## Exemplos
 
-Os códigos de exemplos para este evento estão disponíveis nesta página dedicada: [Touch events](/en-US/DOM/Touch_events).
+Os códigos de exemplos para este evento estão disponíveis nesta página dedicada: [Touch events](/pt-BR/DOM/Touch_events).
 
 ## Compatibilidade com navegadores
 

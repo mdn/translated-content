@@ -35,7 +35,7 @@ console.log(params.toString());
 
 ## 浏览器兼容
 
-{{Compat("api.URLSearchParams.toString")}}
+{{Compat}}
 
 ## 参考
 

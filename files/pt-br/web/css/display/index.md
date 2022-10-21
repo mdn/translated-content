@@ -171,7 +171,7 @@ _**display-value**_
     </tr>
     <tr>
       <td colspan="1" rowspan="2">
-        Valores do modelo Flexbox (<a href="/en-US/docs/CSS/CSS3" title="CSS3"
+        Valores do modelo Flexbox (<a href="/pt-BR/docs/CSS/CSS3"
           >CSS3</a
         >)
       </td>
@@ -191,8 +191,7 @@ _**display-value**_
     <tr>
       <td colspan="1" rowspan="2">
         Valores do modelo de caixa de grade (<a
-          href="/en-US/docs/CSS/CSS3"
-          title="CSS3"
+          href="/pt-BR/docs/CSS/CSS3"
           >CSS3</a
         >) {{experimental_inline}}
       </td>
@@ -256,7 +255,7 @@ p.secret  { display: none }
 | {{SpecName('CSS3 Box', '#display', 'display')}}                     | {{Spec2('CSS3 Box')}}     | Adicionado o `run-in` valor.                                       |
 | {{SpecName('CSS3 Grid', '#grid-declaration0', 'display')}}         | {{Spec2('CSS3 Grid')}}     | Adicionado os valores do modelo da caixa de grade.                 |
 | {{SpecName('CSS3 Flexbox', '#flex-containers', 'display')}}     | {{Spec2('CSS3 Flexbox')}} | Adicionado os valores do modelo de caixa flexível.                 |
-| {{SpecName('CSS2.1', 'visuren.html#display-prop', 'display')}} | {{Spec2('CSS2.1')}}         | Foram adicionados os valores do modelo de tabela e `inline-block.` |
+| {{SpecName('CSS2.1', 'visuren.html#display-prop', 'display')}} | {{Spec2('CSS2.1')}}         | Foram adicionados os valores do modelo de tabela e `inline-block`. |
 | {{SpecName('CSS1', '#display', 'display')}}                             | {{Spec2('CSS1')}}         | Valores básicos: `none`, `block`, `inline`, e `list-item`.          |
 
 ## Navegadores compatíveis

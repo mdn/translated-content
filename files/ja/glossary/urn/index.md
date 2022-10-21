@@ -9,4 +9,4 @@ URN (Uniform Resource Name) は {{Glossary("URI")}} の基本的なフォーマ�
 
 ### 一般知識
 
-- ウィキペディアの{{Interwiki("wikipedia", "URN")}} の記事です
+- ウィキペディアの[URN](https://ja.wikipedia.org/wiki/URN) の記事です

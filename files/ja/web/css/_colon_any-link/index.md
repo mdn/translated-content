@@ -16,7 +16,9 @@ slug: Web/CSS/:any-link
 
 ## 構文
 
-{{csssyntax}}
+```
+:any-link
+```
 
 ## 例
 

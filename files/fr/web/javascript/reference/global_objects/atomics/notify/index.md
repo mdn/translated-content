@@ -67,13 +67,11 @@ Atomics.notify(int32, 0, 1);
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaires                     |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.notify', 'Atomics.notify')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.notify")}}
+{{Compat}}
 
 ## Voir aussi
 

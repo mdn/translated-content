@@ -10,7 +10,7 @@ original_slug: Web/CSS/transform-function/translateX()
 
 ![](transform-functions-translatex_2.png)
 
-> **Note:** `translateX(tx)` は `translate(tx, 0)` または `translate3d(tx, 0, 0)` と等価です。
+> **メモ:** `translateX(tx)` は `translate(tx, 0)` または `translate3d(tx, 0, 0)` と等価です。
 
 ## 構文
 

@@ -1,13 +1,6 @@
 ---
 title: <input type="checkbox">
-slug: Web/HTML/Element/Input/checkbox
-tags:
-  - Element
-  - HTML
-  - Input
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/input/checkbox
+slug: Web/HTML/Element/input/checkbox
 ---
 
 {{HTMLRef}}

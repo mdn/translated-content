@@ -35,7 +35,7 @@ url.hash // Returns '#Examples'
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.hash")}}
+{{Compat}}
 
 ## 参考
 
