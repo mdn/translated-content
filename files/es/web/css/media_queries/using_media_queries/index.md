@@ -386,8 +386,10 @@ Para reemplazar la vieja sintaxis (min-device-pixel-ratio: 2):
 
 ### scan
 
-**Valor\*\***:** `progressive` | `interlace`
-**Medio\***\*:** {{cssxref("Media/TV")}}
+**Valor:** `progressive` | `interlace`
+
+**Medio:** {{cssxref("Media/TV")}}
+
 **Acepta prefijos min/max:** no
 
 Describe el proceso de exploración de televisión de los dispositivos de salida.
