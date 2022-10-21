@@ -86,7 +86,36 @@ Esta parte intenta describir, de la manera más simple posible, los diferentes o
 
 La siguiente tabla describe brevemente estos tipos de datos.
 
-«Tabla»
+<table>
+  <tbody>
+    <tr>
+    <td><code>document</code></td>
+    <td>Cuando un miembro devuelve un objeto del tipo <code>document</code> (por ejemplo, la propiedad <strong>ownerDocument</strong> de un elemento devuelve el documento "<code>document</code>" al cual pertenece), este objeto es la raíz del objeto documento en sí mismo. El capítulo <a href="es/DOM/documento">La referencia al documento (<code>document</code>) de DOM</a> lo explica con más detalles.</td>
+    </tr>
+    <tr>
+    <td><code>element</code></td>
+    <td><code>element</code> se refiere a un elemento o a un nodo de tipo de elemento "<code>element</code>" devuelto por un miembro del API de DOM. Dicho de otra manera, por ejemplo, el método <code>document.createElement()</code> devuelve un objeto referido a un <code>nodo</code>, lo que significa que este método devuelve el elemento que acaba de ser creado en el DOM. Los objetos <code>element</code> ponen en funcionamiento a la interfaz <code>Element</code> del DOM y también a la interfaz de nodo "<code>Node</code>" más básica, las cuales son incluidas en esta referencia.</td>
+    </tr>
+    <tr>
+    <td><code>nodeList</code></td>
+    <td>Una "<code>nodeList</code>" es una serie de elementos, parecido a lo que devuelve el método <code>document.getElementsByTagName()</code>. Se accede a los items de la <code>nodeList</code> de cualquiera de las siguientes dos formas:
+      <ul>
+      <li><font><font><font><font>list.item (1)</font></font></font></font></li>
+      <li><font><font>lista {{mediawiki.external (1)}}</font></font></li>
+      </ul>
+      <p>Ambas maneras son equivalentes. En la primera, <strong>item()</strong> es el método del objeto <code>nodeList</code>. En la última se utiliza la típica sintaxis de acceso a listas para llegar al segundo ítem de la lista.</p>
+    </td>
+    </tr>
+    <tr>
+    <td><code>attribute</code></td>
+    <td>Cuando un atributo ("<code>attribute</code>") es devuelto por un miembro (por ej., por el método <strong>createAttribute()</strong>), es una referencia a un objeto que expone una interfaz particular (aunque limitada) a los atributos. Los atributos son nodos en el DOM igual que los elementos, pero no suelen usarse así.</td>
+    </tr>
+    <tr>
+    <td><code>NamedNodeMap</code></td>
+    <td>Un <code>namedNodeMap</code> es una serie, pero los ítems son accesibles tanto por el nombre o por un índice, este último caso es meramente una conveniencia para enumerar ya que no están en ningún orden en particular en la lista. Un <code>NamedNodeMap</code> es un método de ítem() por esa razón, y permite poner o quitar ítems en un <code>NamedNodeMap</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Interfaces del DOM
 
