@@ -60,7 +60,7 @@ Les mots «&nbsp;du texte en emphase&nbsp;» n'ont pas de bordure *en plus* (car
 
 Le mot-clé [`inherit`](/fr/docs/Web/CSS/inherit) permet d'indiquer explicitement l'héritage et fonctionne sur les propriétés héritées comme sur les propriétés non-héritées.
 
-Il est possible de contrôler l'héritage de l'ensemble des propriétés d'un coup en utilisant la propriété raccourci [`all`](/fr/docs/Web/CSS/all), qui applique sa valeur à toutes les propriétés. Par exemple&nbsp;:
+Il est possible de contrôler l'héritage de l'ensemble des propriétés d'un coup en utilisant la propriété raccourcie [`all`](/fr/docs/Web/CSS/all), qui applique sa valeur à toutes les propriétés. Par exemple&nbsp;:
 
 ```css
 p {
