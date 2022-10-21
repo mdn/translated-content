@@ -9,7 +9,7 @@ translation_of: Web/CSS/padding
 
 ## Resumen
 
-La propiedad CSS **`padding`** establece el espacio de relleno requerido por todos los lados de un elemento. El [área de padding](/en/CSS/box_model#padding "http://developer.mozilla.org/en/CSS/Box_model#padding") es el espacio entre el contenido del elemento y su borde (`border`). No se permiten valores negativos.
+La propiedad CSS **`padding`** establece el espacio de relleno requerido por todos los lados de un elemento. El [área de padding](/en/CSS/box_model#padding) es el espacio entre el contenido del elemento y su borde (`border`). No se permiten valores negativos.
 
 La propiedad padding es un atajo para evitar la asignación de cada lado por separado (`padding-top`, `padding-right`, `padding-bottom`, `padding-left`).
 
@@ -111,4 +111,4 @@ h3{
 
 ## Ver también
 
-- [CSS Box Model](/en/CSS/box_model "en/CSS/box model")
+- [CSS Box Model](/en/CSS/box_model)

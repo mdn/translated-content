@@ -419,7 +419,7 @@ Mozilla ofrece varias funciones especificas de Gecko. Algunas de estas pueden se
 **Medio\***\*:** {{cssxref("Media/Visual")}}
 **Acepta prefijos min/max:** no
 
-Si el dispositivo acepta que haya imágenes en menús, el valor es 1; de otro modo sera 0. Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-classes"): {{ cssxref(":-moz-system-metric(images-in-menus)") }}.
+Si el dispositivo acepta que haya imágenes en menús, el valor es 1; de otro modo sera 0. Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(images-in-menus)") }}.
 
 ### -moz-mac-graphite-theme
 
@@ -429,7 +429,7 @@ Si el dispositivo acepta que haya imágenes en menús, el valor es 1; de otro mo
 
 Si el usuario ha configurado su dispositivo para usar la apariencia "Grafito" en Mac OS X, esto sera 1. Si el usuario esta usando la apariencia azul por defecto, o si no usa Mac OS X, esto sera 0.
 
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-classes"): {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }}.
+Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }}.
 
 ### -moz-maemo-classic
 
@@ -439,7 +439,7 @@ Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-clas
 
 Si el usuario esta usando Maemo con el tema original, esto sera 1; Si esta usando el nuevo tema Fremantle, sera 0.
 
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-classes"): {{ cssxref(":-moz-system-metric(maemo-classic)") }}
+Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(maemo-classic)") }}
 
 ### -moz-device-pixel-ratio
 
@@ -492,7 +492,7 @@ Esto se hace para permitir a los skins y a algunos códigos funcionen mejor con 
 
 El valor sera 1 si la interfaz de usuario muestra una fecha inversa al final de la barra de desplazamiento, de lo contrario el valor sera 0.
 
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-classes"): {{ cssxref(":-moz-system-metric(scrollbar-end-backward)") }}.
+Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(scrollbar-end-backward)") }}.
 
 ### -moz-scrollbar-end-forward
 
@@ -502,7 +502,7 @@ Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-clas
 
 El valor sera 1 si la interfaz de usuario muestra una fecha apuntando hacia la derecha al final de la barra de desplazamiento. de lo contrario el valor sera 0.
 
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-classes"): {{ cssxref(":-moz-system-metric(scrollbar-end-forward)") }}.
+Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(scrollbar-end-forward)") }}.
 
 ### -moz-scrollbar-start-backward
 
@@ -512,7 +512,7 @@ Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-clas
 
 El valor sera 1 si la interfaz de usuario muestra una fecha inversa al principio de la barra de desplazamiento, de lo contrario el valor sera 0.
 
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-classes"): {{ cssxref(":-moz-system-metric(scrollbar-start-backward)") }}.
+Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(scrollbar-start-backward)") }}.
 
 ### -moz-scrollbar-start-forward
 
@@ -522,7 +522,7 @@ Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-clas
 
 El valor sera 1 si la interfaz de usuario muestra una fecha apuntando hacia la derecha al principio de la barra de desplazamiento, de lo contrario el valor sera 0.
 
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-classes"): {{ cssxref(":-moz-system-metric(scrollbar-start-forward)") }}.
+Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(scrollbar-start-forward)") }}.
 
 ### -moz-scrollbar-thumb-proportional
 
@@ -532,7 +532,7 @@ Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-clas
 
 El valor sera 1 si la interfaz de usuario muestra la miniatura de la barra de desplazamiento de forma proporcional (basado en el porcentaje del documento que es visible), de lo contrario el valor sera 0.
 
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-classes"): {{ cssxref(":-moz-system-metric(scrollbar-thumb-proportional)") }}.
+Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(scrollbar-thumb-proportional)") }}.
 
 ### -moz-touch-enabled
 
@@ -542,7 +542,7 @@ Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-clas
 
 El valor sera 1 si el dispositivo soporta eventos táctiles (una pantalla táctil), de lo contrario el valor sera 0.
 
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-classes"): {{ cssxref(":-moz-system-metric(touch-enabled)") }}.
+Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(touch-enabled)") }}.
 
 #### Ejemplo
 
@@ -556,7 +556,7 @@ Usted puede usar esto para renderizar sus botones un poco mas grandes, Por Ejemp
 
 El valor sera 1 si el usuario utiliza un windows sin temas visuales (modo clasico); de lo contrario el valor sera 0.
 
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-classes"): {{ cssxref(":-moz-system-metric(windows-classic)") }}.
+Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(windows-classic)") }}.
 
 ### -moz-windows-compositor
 
@@ -566,7 +566,7 @@ Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-clas
 
 El valor sera 1 si el usuario utiliza windows con el compositor de ventanas DWM; de lo contrario el valor sera 0.
 
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-classes"): {{ cssxref(":-moz-system-metric(windows-compositor)") }}.
+Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(windows-compositor)") }}.
 
 ### -moz-windows-default-theme
 
@@ -576,7 +576,7 @@ Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-clas
 
 El valor sera 1 si el usuario actualmente esta utilizando algunos de los temas por defecto de Windows (Luna, Royale, Zune, or Aero), de lo contrario el valor sera 0.
 
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-classes"): {{ cssxref(":-moz-system-metric(windows-default-theme)") }}.
+Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(windows-default-theme)") }}.
 
 ### -moz-windows-theme
 

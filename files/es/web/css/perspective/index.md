@@ -15,7 +15,7 @@ translation_of: Web/CSS/perspective
 
 ## Resumen
 
-La propiedad `perspective` [CSS](/en/CSS "CSS") determina la distancia entre el plano z=0 y el usuario para dar algo de perspectiva al elemento 3D posicionado. Cada elemento 3D con z>0 se hace más grande y con z<0 se vuelve más pequeño. La intensidad del efecto es determinado por el valor de esta propiedad.
+La propiedad `perspective` [CSS](/en/CSS) determina la distancia entre el plano z=0 y el usuario para dar algo de perspectiva al elemento 3D posicionado. Cada elemento 3D con z>0 se hace más grande y con z<0 se vuelve más pequeño. La intensidad del efecto es determinado por el valor de esta propiedad.
 
 Parte de los elementos 3D que se encuentran destrás del usuario, es decir que su coordenada del eje z es mayor que el valor de la propiedad perspective de CSS no es dibujada.
 
