@@ -251,6 +251,3 @@ While this property works on older browsers, not all values are fully supported.
 | Konqueror         | 3.1                                  | 3.1                      |
 | Safari            | 1.2                                  | 1.2                      |
 | Safari (Win)      | 3.0                                  | 3.0                      |
-
-### See also
-
