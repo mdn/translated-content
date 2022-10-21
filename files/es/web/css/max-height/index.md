@@ -63,5 +63,3 @@ form { max-width: none; }
 Categorías
 
 Interwiki Languages
-
-{{ languages( { "en": "en/CSS/max-height", "fr": "fr/CSS/max-height" } ) }}

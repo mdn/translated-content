@@ -83,5 +83,3 @@ element {
 Categorías
 
 Interwiki Languages
-
-{{ languages( { "de": "de/CSS/border-bottom-color", "en": "en/CSS/border-bottom-color", "fr": "fr/CSS/border-bottom-color", "ja": "ja/CSS/border-bottom-color", "pl": "pl/CSS/border-bottom-color" } ) }}

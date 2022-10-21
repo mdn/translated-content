@@ -27,5 +27,3 @@ En CSS3 se propuso el valor [`initial`](es/CSS/initial) para permitir a los auto
 Categorías
 
 Interwiki Languages
-
-{{ languages( { "en": "en/CSS/initial\_value", "fr": "fr/CSS/Valeur\_initiale", "ja": "ja/CSS/initial\_value", "ko": "ko/CSS/initial\_value", "pl": "pl/CSS/Warto\u015b\u0107\_pocz\u0105tkowa" } ) }}

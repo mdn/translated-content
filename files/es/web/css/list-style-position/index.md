@@ -92,5 +92,3 @@ list-style-position: inside | outside | inherit
 ### Ver también
 
 {{ Cssxref("list-style") }}, {{ Cssxref("list-style-type") }}, {{ Cssxref("list-style-image") }}
-
-{{ languages( { "fr": "fr/CSS/list-style-position", "pl": "pl/CSS/list-style-position", "en": "en/CSS/list-style-position" } ) }}
