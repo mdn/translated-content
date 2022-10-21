@@ -70,9 +70,9 @@ Los **selectores** definen sobre qué elementos se aplicará un conjunto de regl
 - [Combinador de descendientes](/es/docs/Web/CSS/Descendant_selectors)
   - : El combinador `(espacio)` selecciona los elementos que son descendientes del primer elemento.
   
-  **Sintaxis:** `A B`
+    **Sintaxis:** `A B`
   
-  **Ejemplo:** La regla`div span` se aplicará a todos los elementos {{HTMLElement('span')}} que están dentro de un elemento {{HTMLElement('div')}}.
+    **Ejemplo:** La regla`div span` se aplicará a todos los elementos {{HTMLElement('span')}} que están dentro de un elemento {{HTMLElement('div')}}.
 - [Combinador de column](/es/docs/Web/CSS/Column_combinator)a {{Experimental_Inline}}
   - : El combinador `||` selecciona los elementos especificados pertenecientes a una columna.
   
