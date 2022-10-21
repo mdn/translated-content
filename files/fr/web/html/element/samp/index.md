@@ -74,7 +74,7 @@ samp {
 
 ### Exemple simple
 
-Dans cet exemple simple, un paragraphe contient une mentiont d'un résultat d'un programme.
+Dans cet exemple simple, un paragraphe contient une mention d'un résultat d'un programme.
 
 #### HTML
 
