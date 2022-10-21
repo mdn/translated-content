@@ -35,7 +35,7 @@ Vea [ejemplos de composición](/es/docs/Web/API/Canvas_API/Tutorial/Compositing/
 
 Si comparamos el trazado de recorte con la propiedad `globalCompositeOperation` que hemos visto antes, vemos dos modos compuestos que logran mas o menos los mismos efectos en `source-in` y `source-atop`. Las diferencias mas importantes entre éstos dos son que el trazado de recorte no dibujan nunca en el lienzo y que nunca se afecta por agregar nuevas figuras. Esto vuelve al trazado de recorte ideal para dibujar múltiples figuras en un área delimitada.
 
-En el capítulo acerca de [dibujo de figuras](/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes "Web/Guide/HTML/Canvas_tutorial/Drawing_shapes#Drawing_paths") solo menciono a los métodos `stroke()` y `fill()` pero existe un tercer método que se usa para trazados llamado `clip()`.
+En el capítulo acerca de [dibujo de figuras](/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) solo menciono a los métodos `stroke()` y `fill()` pero existe un tercer método que se usa para trazados llamado `clip()`.
 
 - {{domxref("CanvasRenderingContext2D.clip", "clip()")}}
   - : Convierte al trazado en ejecución a un trazado de recorte.

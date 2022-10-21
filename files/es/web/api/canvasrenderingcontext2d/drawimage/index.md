@@ -137,8 +137,8 @@ window.addEventListener("load", drawCanvas);
 - Empezando con {{geckoRelease("5.0")}} `drawImage()` maneja argumentos negativos de acuerdo con la especificación, volteando el rectangulo alrededor del eje apopiado.
 - Especificación de una imagen `null` o `undefined` al llamar o `drawImage()` correctamente lanzando una excepción `TYPE_MISMATCH_ERR` empezando con {{geckoRelease("5.0")}}.
 - antes de Gecko 7.0 {{ geckoRelease("7.0") }}, Firefox lanzó una excepción si alguno de los valores de las coordenadas no eran finitos o cero. De acuerado a la especificación esto ya no ocurre.
-- Gecko 9.0 {{ geckoRelease("9.0") }} ahora soporta correctamente CORS para dibujar imágenes a través de dominios sin [manchar el canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F "en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F").
-- Gecko 11.0 {{ geckoRelease("11.0") }} ahora permite SVG-como-una-imagen para ser dibujada en el canvas sin [manchar el canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F "en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F").
+- Gecko 9.0 {{ geckoRelease("9.0") }} ahora soporta correctamente CORS para dibujar imágenes a través de dominios sin [manchar el canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
+- Gecko 11.0 {{ geckoRelease("11.0") }} ahora permite SVG-como-una-imagen para ser dibujada en el canvas sin [manchar el canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
 
 ## Mira también
 

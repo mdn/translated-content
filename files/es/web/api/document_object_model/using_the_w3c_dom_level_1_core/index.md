@@ -13,7 +13,7 @@ The W3C's DOM Level 1 Core is a powerful object model for changing the content t
 
 ## What is a content tree?
 
-Many HTML authors may think of HTML as something flat -- a bunch of text with tags in the middle. However, it is something much more than that. Any HTML document (or for that matter any SGML document or XML document) is a tree structure. For example, the following document and tree structure are similar (although not identical -- see the notes on [whitespace in the DOM](/es/docs/Whitespace_in_the_DOM "Whitespace_in_the_DOM")):
+Many HTML authors may think of HTML as something flat -- a bunch of text with tags in the middle. However, it is something much more than that. Any HTML document (or for that matter any SGML document or XML document) is a tree structure. For example, the following document and tree structure are similar (although not identical -- see the notes on [whitespace in the DOM](/es/docs/Whitespace_in_the_DOM)):
 
 ```html
 <html>
@@ -84,9 +84,9 @@ You can see this script as [a complete example](/@api/deki/files/2866/=example.h
 
 ## How can I learn more?
 
-Now that you are familiar with the basic concepts of the DOM, there is a document explaining the [DOM Level 1 fundamental methods](/es/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces "Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces"). It is the follow-up to this document.
+Now that you are familiar with the basic concepts of the DOM, there is a document explaining the [DOM Level 1 fundamental methods](/es/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces). It is the follow-up to this document.
 
-See also the [DOM Level 1 Core specification](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) from the W3C. It's a reasonably clear spec, although it is formal. The main thing that's useful to authors is the description of the different DOM objects and all their properties and methods. Also see our [other DOM documentation](/es/docs/DOM "DOM").
+See also the [DOM Level 1 Core specification](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) from the W3C. It's a reasonably clear spec, although it is formal. The main thing that's useful to authors is the description of the different DOM objects and all their properties and methods. Also see our [other DOM documentation](/es/docs/DOM).
 
 **Original Document Information**
 

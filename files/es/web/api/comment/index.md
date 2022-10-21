@@ -43,4 +43,4 @@ _Esta interfaz no tiene ninguna propiedad específica, pero hereda las de su pad
 
 ## Lea también
 
-- [Índice de interfaces DOM](/es/docs/Web/API/Document_Object_Model "/en-US/docs/DOM/DOM_Reference")
+- [Índice de interfaces DOM](/es/docs/Web/API/Document_Object_Model)

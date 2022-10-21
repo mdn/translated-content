@@ -49,4 +49,4 @@ window.addEventListener('devicemotion', function(event) {
 - {{DOMxRef("DeviceOrientationEvent")}}
 - {{Event("devicemotion")}}
 - [Detecting device orientation](/es/docs/WebAPI/Detecting_device_orientation)
-- [Orientation and motion data explained](https://developer.mozilla.org/en/DOM/Orientation_and_motion_data_explained "Orientation and motion data explained")
+- [Orientation and motion data explained](https://developer.mozilla.org/en/DOM/Orientation_and_motion_data_explained)

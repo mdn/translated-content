@@ -21,7 +21,7 @@ Esta especificación añade dos nuevos metodos a cualquier objeto implementando 
 
 > **Nota:** El {{domxref("NodeList")}} devuelto por {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} no es dinamico, Es decir que cualquier cambio realizado en el DOM no se vera reflejado en la coleccion. Esto es diferente de otros metodos de querying del dom que si devuelven listados de nodos dinamicos.
 
-Encontraras ejemplos y detalles leyendo el documento de metodos {{domxref("Element.querySelector()")}} y {{domxref("Element.querySelectorAll()")}}, Tambien en el articulo [Code snippets for querySelector](/es/docs/Code_snippets/QuerySelector "en-US/docs/Code snippets/QuerySelector").
+Encontraras ejemplos y detalles leyendo el documento de metodos {{domxref("Element.querySelector()")}} y {{domxref("Element.querySelectorAll()")}}, Tambien en el articulo [Code snippets for querySelector](/es/docs/Code_snippets/QuerySelector).
 
 ## Selectors
 
@@ -48,4 +48,4 @@ Podes usar cualquier selector CSS con los metodos `querySelector()` y `querySele
 - {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}
 - {{domxref("Document.querySelectorAll()")}}
-- [Code snippets for querySelector](/es/docs/Code_snippets/QuerySelector "en-US/docs/Code_snippets/QuerySelector")
+- [Code snippets for querySelector](/es/docs/Code_snippets/QuerySelector)

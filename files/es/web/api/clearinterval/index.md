@@ -18,7 +18,7 @@ window.clearInterval(intervalID)
 
 ## Ejemplo
 
-Vea el [ejemplo de`setInterval()`](/es/docs/DOM/window.setInterval#Example "DOM/window.setInterval#Example").
+Vea el [ejemplo de`setInterval()`](/es/docs/DOM/window.setInterval#Example).
 
 ## Especificación
 
@@ -27,9 +27,9 @@ Vea el [ejemplo de`setInterval()`](/es/docs/DOM/window.setInterval#Example "DOM/
 
 ## Vea también
 
-- [JavaScript timers](/es/docs/JavaScript/Timers "JavaScript/Timers")
+- [JavaScript timers](/es/docs/JavaScript/Timers)
 - {{domxref("WindowTimers.setTimeout")}}
 - {{domxref("WindowTimers.setInterval")}}
 - {{domxref("WindowTimers.clearTimeout")}}
 - {{domxref("window.requestAnimationFrame")}}
-- [_Daemons_ management](/es/docs/JavaScript/Timers/Daemons "JavaScript/Timers/Daemons")
+- [_Daemons_ management](/es/docs/JavaScript/Timers/Daemons)
