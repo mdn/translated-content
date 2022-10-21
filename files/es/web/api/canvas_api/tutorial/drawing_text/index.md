@@ -77,5 +77,3 @@ ctx.stroke()
 Supongamos ahora que quieres agregar un texto que se acomode a un trazo que dibujaste (una línea curva o algo parecido) es donde aparece `mozTextAlongPath`. Al contrario de otras funciones de texto, `mozTextAlongPath` necesita dos argumentos: el texto y qué se quiere hacer con él. `mozTextAlongPath` aproxima el trazo actual como una serie de segmentos de línea y ubica cada carácter encima de ese trazo. Los caracteres no son cambiados de tamaño o transformados de acuerdo a la curvatura de la base; toman la orientación del trazo a la mitad del carácter.
 
 Una vez que `mozTextAlongPath` sabe dónde está el carácter, busca el segundo parámetro para decidir qué hacer con él. Si el segundo parámetro es `false`, entonces dibuja el carácter como lo haría `mozDrawText`. Si es `true`, agrega el carácter al trazo actual, como lo hace `mozPathText`. Esto puede usarse para crear efectos únicos.
-
-{{ languages( { "en": "en/Drawing\_text\_using\_a\_canvas", "fr": "fr/Dessin\_de\_texte\_avec\_canvas", "ja": "ja/Drawing\_text\_using\_a\_canvas", "pl": "pl/Rysowanie\_tekstu\_przy\_u\u017cyciu\_canvas" } ) }}

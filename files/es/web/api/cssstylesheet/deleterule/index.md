@@ -28,5 +28,3 @@ stylesheet.deleteRule(index)
 ### Especificación
 
 [deleteRule](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-CSSStyleSheet-deleteRule)
-
-{{ languages( { "pl": "pl/DOM/stylesheet.deleteRule" } ) }}

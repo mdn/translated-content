@@ -163,5 +163,3 @@ Esto se hace en varias ocasiones mientras el video se reproduce, de manera que f
 ## Consulta también
 
 - [Usar audio y video en Firefox](/es/Usando_audio_y_video_en_Firefox)
-
-{{ languages ( { "en": "En/Manipulating\_video\_using\_canvas" } ) }}
