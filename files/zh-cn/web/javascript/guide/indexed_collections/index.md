@@ -192,7 +192,7 @@ colors.forEach((color) => console.log(color));
 // blue
 ```
 
-被传递给 `forEach` 的函数会在数组的每个元素像上执行一次，元素作为参数传递给该函数。未赋值的值不会在 `forEach` 循环迭代。
+传递给 `forEach` 的函数对数组中的每个元素执行一次，数组元素作为参数传递给该函数。未赋值的值不会在 `forEach` 循环迭代。
 
 注意，在数组定义时省略的元素不会在 `forEach` 遍历时被列出，但是手动赋值为 `undefined` 的元素是会被列出的：
 
