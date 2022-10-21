@@ -22,7 +22,7 @@ _También hereda las propiedades de su padre {{domxref("Event")}}_.
 - {{domxref("AnimationEvent.animationName")}} {{readonlyInline}}
   - : Es un {{domxref("DOMString")}} que contiene el valor de la propiedad CSS {{cssxref("animation-name")}} asociado con la transición.
 - {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
-  - : Es un número flotante que da la cantidad de tiempo que ha estado corriendo la animación, en segundos, cuando este evento es disparado, excluyendo cualquier vez que la aimación fue pausada. Para un evento `"animationstart"`, `elapsedTime` es `0.0` a ménos que hubiera un valor negativo para {{cssxref("animation-delay")}}, en tal caso sería disparado el evento con `elapsedTime` conteniendo `(-1 * `_retraso_`)`.
+  - : Es un número flotante que da la cantidad de tiempo que ha estado corriendo la animación, en segundos, cuando este evento es disparado, excluyendo cualquier vez que la aimación fue pausada. Para un evento `"animationstart"`, `elapsedTime` es `0.0` a ménos que hubiera un valor negativo para {{cssxref("animation-delay")}}, en tal caso sería disparado el evento con `elapsedTime` conteniendo `(-1 *`_retraso_`)`.
 - {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
   - : Es un {{domxref("DOMString")}}, empezando con `'::'`, conteniendo el nombre del [pseudo-element](/es/docs/Web/CSS/Pseudo-elements) en el cual corre la animación. Si la animación no corre sobre un pseudo-element sino en el elemento, un string vacío: ''.
 

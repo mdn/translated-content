@@ -18,7 +18,7 @@ window.clearInterval(intervalID)
 
 ## Ejemplo
 
-Vea el [ejemplo de` setInterval()`](/es/docs/DOM/window.setInterval#Example "DOM/window.setInterval#Example").
+Vea el [ejemplo de`setInterval()`](/es/docs/DOM/window.setInterval#Example "DOM/window.setInterval#Example").
 
 ## Especificación
 

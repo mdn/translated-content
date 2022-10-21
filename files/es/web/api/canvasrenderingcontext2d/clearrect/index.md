@@ -3,7 +3,7 @@ title: CanvasRenderingContext2D.clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
 translation_of: Web/API/CanvasRenderingContext2D/clearRect
 ---
-{{APIRef}}El método **`CanvasRenderingContext2D`\*\***`.clearRect() `\*\*`del API Canvas 2D convierte todos los pixeles en el rectangulo definido por el punto de inicio (x, y) y tamaño `_(width, height)_ a negro transparente, borrando cualquier contenido dibujado anteriormente.
+{{APIRef}}El método **`CanvasRenderingContext2D`\*\***`.clearRect()`\*\*`del API Canvas 2D convierte todos los pixeles en el rectangulo definido por el punto de inicio (x, y) y tamaño`_(width, height)_ a negro transparente, borrando cualquier contenido dibujado anteriormente.
 
 ## Syntaxis
 
@@ -26,7 +26,7 @@ void ctx.clearRect(x, y, width, height);
 
 ## Notas de uso
 
-Un problema común con **`clearRect `**es que puede parecer que no funciona cuando no se usan las [trayectorias de dibujo](/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_paths) ([paths](/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_paths)) de forma adecuada. No olvide llamar {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} antes de comenzar a dibujar el nuevo cuadro después de llamar **`clearRect`**`.`
+Un problema común con **`clearRect`**es que puede parecer que no funciona cuando no se usan las [trayectorias de dibujo](/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_paths) ([paths](/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_paths)) de forma adecuada. No olvide llamar {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} antes de comenzar a dibujar el nuevo cuadro después de llamar **`clearRect`**`.`
 
 ## Ejemplos
 
@@ -57,8 +57,6 @@ ctx.clearRect(10, 10, 100, 100);
 // clear the whole canvas
 // ctx.clearRect(0, 0, canvas.width, canvas.height);
 ```
-
-##
 
 Edite el código de abajo y vea sus cambios actualizados en vivo en el canvas:
 

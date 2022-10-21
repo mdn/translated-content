@@ -120,9 +120,9 @@ En este ejemplo sencillo, algunas propiedades de estilo básicas de un elemento 
 <title>Changing color and font-size example</title>
 <script type="text/javascript">
 function changeText() {
-	var p = document.getElementById("pid");
-	p.style.color = "blue"
-	p.style.fontSize = "18pt"
+ var p = document.getElementById("pid");
+ p.style.color = "blue"
+ p.style.fontSize = "18pt"
 }
 </script>
 </head>

@@ -31,8 +31,6 @@ name = AnimationEvent.animationName
 
 {{Compat("api.AnimationEvent.animationName")}}
 
-##
-
 ## Ver también
 
 - [Usando animaciones CSS](/es/docs/CSS/Using_CSS_animations)

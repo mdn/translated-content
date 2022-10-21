@@ -100,8 +100,8 @@ La siguiente tabla describe brevemente estos tipos de datos.
     <td><code>nodeList</code></td>
     <td>Una "<code>nodeList</code>" es una serie de elementos, parecido a lo que devuelve el método <code>document.getElementsByTagName()</code>. Se accede a los items de la <code>nodeList</code> de cualquiera de las siguientes dos formas:
       <ul>
-      <li><font><font><font><font>list.item (1)</font></font></font></font></li>
-      <li><font><font>lista {{mediawiki.external (1)}}</font></font></li>
+      <li>list.item (1)</li>
+      <li>lista {{mediawiki.external (1)}}</li>
       </ul>
       <p>Ambas maneras son equivalentes. En la primera, <strong>item()</strong> es el método del objeto <code>nodeList</code>. En la última se utiliza la típica sintaxis de acceso a listas para llegar al segundo ítem de la lista.</p>
     </td>
@@ -119,7 +119,7 @@ La siguiente tabla describe brevemente estos tipos de datos.
 
 ## Interfaces del DOM
 
-Uno de los propósitos de esta guía es minimizar el hablar de interfaces abstractas, heredadas y otros detalles de funcionamiento. Más bien, concentrarse sobre los objetos en el DOM y sobre las actuales _cosas_ que se pueden usar para manipular la jerarquía de DOM. Desde el punto de vista del programador web, es bastante indiferente saber que la representación del objeto del elemento `HTML form` toma la propidedad **name** desde la interfaz `HTMLFormElement` pero que las propiedades `className `se toman desde la propia interfaz `HTMLElement`. En ambos casos, la propiedad está sólo en el objeto `form`.
+Uno de los propósitos de esta guía es minimizar el hablar de interfaces abstractas, heredadas y otros detalles de funcionamiento. Más bien, concentrarse sobre los objetos en el DOM y sobre las actuales _cosas_ que se pueden usar para manipular la jerarquía de DOM. Desde el punto de vista del programador web, es bastante indiferente saber que la representación del objeto del elemento `HTML form` toma la propidedad **name** desde la interfaz `HTMLFormElement` pero que las propiedades `className`se toman desde la propia interfaz `HTMLElement`. En ambos casos, la propiedad está sólo en el objeto `form`.
 
 Pero puede resultar confuso el funcionamiento de la fuerte relación entre objetos e interfaces en el DOM, por eso esta sección intentará hablar un poquito sobre las interfaces actuales en la especificación del DOM y de como se dispone de ellas.
 

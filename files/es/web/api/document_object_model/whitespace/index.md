@@ -101,33 +101,33 @@ Debido a esto, establece lo que se llama un {{cssxref("Inline_formatting_context
 
 Dentro de este contexto, el procesamiento de caracteres de espacio en blanco se puede resumir de la siguiente manera:
 
-1.  Primero, todos los espacios y tabulaciones inmediatamente antes y después de un salto de línea se ignoran, por lo que, si tomamos nuestro marcado de ejemplo anterior y aplicamos esta primera regla, obtenemos:
+1. Primero, todos los espacios y tabulaciones inmediatamente antes y después de un salto de línea se ignoran, por lo que, si tomamos nuestro marcado de ejemplo anterior y aplicamos esta primera regla, obtenemos:
 
     ```html
     <h1>◦◦◦¡Hola⏎
     <span>◦mundo!</span>⇥◦◦</h1>
     ```
 
-2.  A continuación, todos los caracteres de tabulación se tratan como caracteres de espacio, por lo que el ejemplo se convierte en:
+2. A continuación, todos los caracteres de tabulación se tratan como caracteres de espacio, por lo que el ejemplo se convierte en:
 
     ```html
     <h1>◦◦◦¡Hola⏎
     <span>◦mundo!</span>◦◦◦</h1>
     ```
 
-3.  A continuación, los saltos de línea se convierten en espacios:
+3. A continuación, los saltos de línea se convierten en espacios:
 
     ```html
     <h1>◦◦◦¡Hola◦<span>◦mundo!</span>◦◦◦</h1>
     ```
 
-4.  Después de eso, cualquier espacio inmediatamente después de otro espacio (incluso a través de dos elementos en línea separados) se ignora, por lo que terminamos con:
+4. Después de eso, cualquier espacio inmediatamente después de otro espacio (incluso a través de dos elementos en línea separados) se ignora, por lo que terminamos con:
 
     ```html
     <h1>◦¡Hola◦<span>mundo!</span>◦</h1>
     ```
 
-5.  Y finalmente, las secuencias de espacios al principio y al final de una línea se eliminan, por lo que eventualmente obtenemos esto:
+5. Y finalmente, las secuencias de espacios al principio y al final de una línea se eliminan, por lo que eventualmente obtenemos esto:
 
     ```html
     <h1>¡Hola◦<span>mundo!</span></h1>
@@ -167,7 +167,7 @@ Esto se renderiza así:
 
 Podemos resumir cómo se maneja el espacio en blanco aquí de la siguiente manera (puede haber algunas pequeñas diferencias en el comportamiento exacto entre los navegadores, pero básicamente, esto funciona):
 
-1.  Debido a que estamos dentro de un contexto de formato de bloque, todo debe ser un bloque, por lo que nuestros 3 nodos de texto también se convierten en bloques, al igual que los 2 `<div>`s. Los bloques ocupan todo el ancho disponible y se apilan unos encima de los otros, lo cual significa que terminamos con un diseño compuesto por esta lista de bloques:
+1. Debido a que estamos dentro de un contexto de formato de bloque, todo debe ser un bloque, por lo que nuestros 3 nodos de texto también se convierten en bloques, al igual que los 2 `<div>`s. Los bloques ocupan todo el ancho disponible y se apilan unos encima de los otros, lo cual significa que terminamos con un diseño compuesto por esta lista de bloques:
 
     ```html
     <block>⏎⇥</block>
@@ -177,7 +177,7 @@ Podemos resumir cómo se maneja el espacio en blanco aquí de la siguiente maner
     <block>◦◦⏎</block>
     ```
 
-2.  Esto luego se simplifica aún más aplicando las reglas de procesamiento para espacios en blanco en contextos de formato en línea a estos bloques:
+2. Esto luego se simplifica aún más aplicando las reglas de procesamiento para espacios en blanco en contextos de formato en línea a estos bloques:
 
     ```html
     <block></block>
@@ -187,7 +187,7 @@ Podemos resumir cómo se maneja el espacio en blanco aquí de la siguiente maner
     <block></block>
     ```
 
-3.  Los 3 bloques vacíos que tenemos ahora no van a ocupar ningún espacio en el diseño final, porque no contienen nada, así que terminaremos con solo 2 bloques ocupando espacio en la página. Las personas que visitan la página web ven las palabras "!Hola" y "mundo!" en 2 líneas separadas, ya que esperarías que se distribuyeran 2 `<div>`s. El motor del navegador esencialmente ha ignorado todos los espacios en blanco que se agregaron en el código fuente.
+3. Los 3 bloques vacíos que tenemos ahora no van a ocupar ningún espacio en el diseño final, porque no contienen nada, así que terminaremos con solo 2 bloques ocupando espacio en la página. Las personas que visitan la página web ven las palabras "!Hola" y "mundo!" en 2 líneas separadas, ya que esperarías que se distribuyeran 2 `<div>`s. El motor del navegador esencialmente ha ignorado todos los espacios en blanco que se agregaron en el código fuente.
 
 ## Espacios entre elementos en línea y bloques en línea
 
