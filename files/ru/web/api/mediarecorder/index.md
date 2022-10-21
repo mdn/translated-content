@@ -17,11 +17,11 @@ The **`MediaRecorder`** это интерфейс [MediaStream Recording API](/r
 - {{domxref("MediaRecorder.mimeType")}} {{readonlyInline}}
   - : Возвращает тип MIME, который был выбран в качестве контейнера записи для объекта MediaRecorder при его создании.
 - {{domxref("MediaRecorder.state")}} {{readonlyInline}}
-  - : Возвращает текущее состояние объекта `MediaRecorder `(`inactive`, `recording`, или `paused`.)
+  - : Возвращает текущее состояние объекта `MediaRecorder` (`inactive`, `recording`, или `paused`.)
 - {{domxref("MediaRecorder.stream")}} {{readonlyInline}}
   - : Возвращает поток который был передан конструктору при создании объекта `MediaRecorder`
 - {{domxref("MediaRecorder.ignoreMutedMedia")}}
-  - : Показывает записывает ли `MediaRecorder `дорожку {{domxref("MediaStreamTrack")}} если она отключена. Если атрибут равен` false, ``MediaRecorder` будет записывать тишину для аудио и чёрные кадры для видео. По умолчанию равно `false`
+  - : Показывает записывает ли `MediaRecorder` дорожку {{domxref("MediaStreamTrack")}} если она отключена. Если атрибут равен `false`, `MediaRecorder` будет записывать тишину для аудио и чёрные кадры для видео. По умолчанию равно `false`
 - {{domxref("MediaRecorder.videoBitsPerSecond")}} {{readonlyInline}}
   - : Возвращает скорость кодирования видео. Она может отличаться от скорости, определённой в конструкторе (если была предоставлена).
 - {{domxref("MediaRecorder.audioBitsPerSecond;")}} {{readonlyInline}}
@@ -38,7 +38,7 @@ The **`MediaRecorder`** это интерфейс [MediaStream Recording API](/r
 - {{domxref("MediaRecorder.resume()")}}
   - : Возобновляет запись медиа после паузы.
 - {{domxref("MediaRecorder.start()")}}
-  - : Начинает запись медиа. В этот метод можно передать аргумент `timeslice `со значением в миллисекундах. Если он определён, то медиа будет записываться в отдельные блоки заданной продолжительности, вместо записи в один большой блок.
+  - : Начинает запись медиа. В этот метод можно передать аргумент `timeslice` со значением в миллисекундах. Если он определён, то медиа будет записываться в отдельные блоки заданной продолжительности, вместо записи в один большой блок.
 - {{domxref("MediaRecorder.stop()")}}
   - : Останавливает запись, после чего запускается событие {{event("dataavailable")}}, содержащее последний `Blob` сохранённых данных.
 

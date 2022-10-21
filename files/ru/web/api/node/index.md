@@ -19,24 +19,24 @@ translation_of: Web/API/Node
 _Наследует свойства от родителей {{domxref("EventTarget")}}_.\[1]
 
 - {{domxref("Node.baseURI")}} {{readonlyInline}}
-  - : Возвращает {{domxref("DOMString")}} показывающие основной URL. Понятие основного URL изменяется из одного языка в другой; В HTML, это соответствует протоколу , доменному имени и структуре каталогов, все до последнего` '/'`.
+  - : Возвращает {{domxref("DOMString")}} показывающие основной URL. Понятие основного URL изменяется из одного языка в другой; В HTML, это соответствует протоколу , доменному имени и структуре каталогов, все до последнего `'/'`.
 - {{domxref("Node.baseURIObject")}} {{Non-standard_inline()}}
   - : (Не доступно для веб-контента.) Только для чтения. Объект `nsIURI`, представляющий базовый URI элемента.
 - {{domxref("Node.childNodes")}} {{readonlyInline}}
   - : Возвращает живой {{domxref("NodeList")}}, содержащий всех потомков данного узла. Живой {{domxref("NodeList")}} означает то, что если потомки `узла` изменяются, объект {{domxref("NodeList")}} автоматически обновляется.
 - {{domxref("Node.firstChild")}} {{readonlyInline}}
-  - : Возвращает {{domxref("Node")}}, представляющий первый прямой узел потомок узла или` null,` если узел не имеет потомков.
+  - : Возвращает {{domxref("Node")}}, представляющий первый прямой узел потомок узла или `null,` если узел не имеет потомков.
 - {{domxref("Node.lastChild")}} {{readonlyInline}}
   - : Возвращает {{domxref("Node")}}, представляющий последний прямой узел потомок узла или `null`, если узел не имеет потомков.
 - {{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}
   - : Возвращает {{domxref("DOMString")}} представляющий локальную часть условного имени элемента. В Firefox 3.5 и более ранних версиях, свойство локального имени в верхнем регистре для HTML-элементов (но не XHTML элементов). В более поздних версиях, такого не произошло, и свойство находится в нижнем регистре для HTML и XHTML {{ gecko_minversion_inline("1.9.2") }}. Хотя недавние спецификации требуют от `localName` быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.
 - {{domxref("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}
-  - : Пространство имён URI данного узла или `null,` если нет пространства имён. В Firefox 3.5 и более ранних версиях, HTML-элементы не имеют пространства имён. В более поздних версиях, HTML-элементы находятся в пространстве имён [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml "Linkification: http://www.w3.org/1999/xhtml") для деревьев HTML и XML. {{ gecko_minversion_inline("1.9.2") }}
+  - : Пространство имён URI данного узла или `null,` если нет пространства имён. В Firefox 3.5 и более ранних версиях, HTML-элементы не имеют пространства имён. В более поздних версиях, HTML-элементы находятся в пространстве имён [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) для деревьев HTML и XML. {{ gecko_minversion_inline("1.9.2") }}
     Хотя недавние спецификации требуют `namespaceURI` быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.
 - {{domxref("Node.nextSibling")}} {{readonlyInline}}
   - : Возвращает {{domxref("Node")}} представляющий следующий узел в древе или `null,` если не такого узла.
 - {{domxref("Node.nodeName")}} {{readonlyInline}}
-  - : Возвращает {{domxref("DOMString")}} содержащий имя `узла`. Структура имени будет отличаться от типа имени. Например, {{domxref("HTMLElement")}} будет содержать имя соответствующего тега:` 'audio'` для {{domxref("HTMLAudioElement")}}, узел {{domxref("Text")}} будет строкой `'#text'` или узел {{domxref("Document")}} будет строкой` '#document'`.
+  - : Возвращает {{domxref("DOMString")}} содержащий имя `узла`. Структура имени будет отличаться от типа имени. Например, {{domxref("HTMLElement")}} будет содержать имя соответствующего тега: `'audio'` для {{domxref("HTMLAudioElement")}}, узел {{domxref("Text")}} будет строкой `'#text'` или узел {{domxref("Document")}} будет строкой `'#document'`.
 - {{domxref("Node.nodePrincipal")}} {{Non-standard_inline()}}
   - : `nsIPrincipal` представляет основной узел.
 - {{domxref("Node.nodeType")}}{{readonlyInline}}
@@ -63,7 +63,7 @@ _Наследует свойства от родителей {{domxref("EventTar
 - {{domxref("Node.ownerDocument")}} {{readonlyInline}}
   - : Возвращает {{domxref("Document")}} к которому принадлежит этот узел. Если нет связанного с ним документа, возвращает `null`.
 - {{domxref("Node.parentNode")}} {{readonlyInline}}
-  - : Возвращает {{domxref("Node")}} который является родителем этого узла. Если нет такого узла, по причине того, что узел находится вверху древа или не относится к древу, данное свойство вернёт` null`.
+  - : Возвращает {{domxref("Node")}} который является родителем этого узла. Если нет такого узла, по причине того, что узел находится вверху древа или не относится к древу, данное свойство вернёт `null`.
 - {{domxref("Node.parentElement")}} {{readonlyInline}}
   - : Возвращает {{domxref("Element")}} который является родителем данного узла. Если узел не имеет родителя или если родитель не {{domxref("Element")}}, это свойство вернёт `null`.
 - {{domxref("Node.prefix")}} {{obsolete_inline}}{{readonlyInline}}
@@ -103,7 +103,7 @@ _Наследует методы от своих родителей {{domxref("E
 - {{domxref("Node.isSameNode()")}} {{obsolete_inline}}
   - : …
 - {{domxref("Node.isSupported()")}} {{obsolete_inline}}
-  - : Возвращает [`Boolean`](/ru/docs/Web/API/Boolean "The Boolean object is an object wrapper for a boolean value.") флаг содержащий результаты теста, реализует ли реализация DOM конкретную особенность и поддерживается ли эта особенность конкретным узлом.
+  - : Возвращает [`Boolean`](/ru/docs/Web/API/Boolean) флаг содержащий результаты теста, реализует ли реализация DOM конкретную особенность и поддерживается ли эта особенность конкретным узлом.
 - {{domxref("Node.lookupPrefix()")}}
   - : …
 - {{domxref("Node.lookupNamespaceURI()")}}
@@ -142,14 +142,14 @@ DOMComb(parentNode, callbackFunction);
 
 #### Описание
 
-Рекурсивный цикл всех дочерних узлов `parentNode` и` `самого `parentNode`, выполняет `callbackFunction` относительно их как [`эти`](/ru/docs/JavaScript/Reference/Operators/this "en-US/docs/JavaScript/Reference/Operators/this") объекты.
+Рекурсивный цикл всех дочерних узлов `parentNode` и самого `parentNode`, выполняет `callbackFunction` относительно их как [`эти`](/ru/docs/JavaScript/Reference/Operators/this) объекты.
 
 #### Параметры
 
 - `parentNode`
   - : Родительский узел (`Node Object`).
 - `callbackFunction`
-  - : Колбэк-функции ([`Function`](/ru/docs/JavaScript/Reference/Global_Objects/Function "en-US/docs/JavaScript/Reference/Global_Objects/Function")).
+  - : Колбэк-функции ([`Function`](/ru/docs/JavaScript/Reference/Global_Objects/Function)).
 
 #### Пример использования
 

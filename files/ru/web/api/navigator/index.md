@@ -63,11 +63,11 @@ translation_of: Web/API/Navigator
 - {{domxref("navigator.doNotTrack")}} {{non-standard_inline}}
   - : Значение сообщает о предпочтении пользователя не отслеживать его действия. Когда это значение "да", ваш веб сайт или приложение не должны отслеживать действия пользователя.
 - {{domxref("navigator.id")}} {{non-standard_inline}}
-  - : Возвращает {{domxref("window.navigator.id", "id")}} объект, который вы можете использовать для добавления поддержки [BrowserID](/ru/docs/BrowserID "BrowserID") на свой сайт.
+  - : Возвращает {{domxref("window.navigator.id", "id")}} объект, который вы можете использовать для добавления поддержки [BrowserID](/ru/docs/BrowserID) на свой сайт.
 - {{domxref("window.navigator.mozApps", "navigator.mozApps")}} {{non-standard_inline}}
-  - : Возвращает {{domxref("window.navigator.mozApps", "Apps")}} объект, который вы можете использовать для установки, управления и контроля [Open Web apps](/Open_Web_Apps "Open Web apps").
+  - : Возвращает {{domxref("window.navigator.mozApps", "Apps")}} объект, который вы можете использовать для установки, управления и контроля [Open Web apps](/Open_Web_Apps).
 - {{domxref("Navigator.mozAudioChannelManager", "navigator.mozAudioChannelManager")}} {{non-standard_inline}}
-  - : Объект `navigator.mozAudioChannelManager `обеспечивает доступ к {{domxref("mozAudioChannelManager")}} интерфейсу, который используется для управления аудио-каналами этого Firefox OS устройства, включая настройку громкости канала, когда кнопка громкости нажата внутри конкретного приложения.
+  - : Объект `navigator.mozAudioChannelManager` обеспечивает доступ к {{domxref("mozAudioChannelManager")}} интерфейсу, который используется для управления аудио-каналами этого Firefox OS устройства, включая настройку громкости канала, когда кнопка громкости нажата внутри конкретного приложения.
 - {{domxref("window.navigator.mozNotification","navigator.mozNotification")}} {{deprecated_inline("22")}} {{non-standard_inline}}
   {{domxref("window.navigator.webkitNotification","navigator.webkitNotification")}}
   - : Возвращает {{domxref("navigator.mozNotification", "notification")}} объект, который можно использовать для доставки уведомлений пользователю из вашего веб-приложения.
@@ -83,8 +83,8 @@ translation_of: Web/API/Navigator
   - : Возвращает имя поставщика текущего браузера (например, "Netscape6").
 - {{domxref("window.navigator.vendorSub", "navigator.vendorSub")}} {{non-standard_inline}}
   - : Возвращает номер версии поставщика (например, "6.1").
-- [`navigator.webkitPointer`](/ru/docs/API/Pointer_Lock_API "Mouse Lock API") {{non-standard_inline}}
-  - : Возвращает объект PointerLock для [Mouse Lock API](/ru/docs/API/Pointer_Lock_API "Mouse Lock API").
+- [`navigator.webkitPointer`](/ru/docs/API/Pointer_Lock_API) {{non-standard_inline}}
+  - : Возвращает объект PointerLock для [Mouse Lock API](/ru/docs/API/Pointer_Lock_API).
 
 ## Методы
 
@@ -110,6 +110,6 @@ translation_of: Web/API/Navigator
 - {{domxref("window.navigator.mozPay", "navigator.mozPay")}} {{non-standard_inline}}
   - : Разрешает оплату в приложении.
 - {{domxref("window.navigator.preference", "navigator.preference")}} {{obsolete_inline("2.0")}} {{non-standard_inline}}
-  - : Устанавливает предпочтение пользователя. Этот метод доступен [только для привилегированного кода](http://www.faqts.com/knowledge_base/view.phtml/aid/1608/fid/125/lang/en) и является устаревшим; вы должны использовать вместо него XPCOM [Preferences API](/ru/docs/Preferences_API "Preferences_API").
+  - : Устанавливает предпочтение пользователя. Этот метод доступен [только для привилегированного кода](http://www.faqts.com/knowledge_base/view.phtml/aid/1608/fid/125/lang/en) и является устаревшим; вы должны использовать вместо него XPCOM [Preferences API](/ru/docs/Preferences_API).
 - {{domxref("window.navigator.requestWakeLock", "navigator.requestWakeLock")}} {{non-standard_inline}}
   - : Запрос установки блокировки пробуждения для ресурса. Блокировка пробуждения препятствует определённой части устройства включится автоматически.
