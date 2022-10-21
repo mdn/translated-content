@@ -43,7 +43,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 - {{jsxref("Array.prototype.length")}}
   - : 反映数组中元素的数量。
 - {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
-  - : 包含 ES2015 版本之前 ECMAScript 标准中没有包含的属性名，在语句绑定目的 [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 时被忽略。
+  - : 包含 ES2015 版本之前 ECMAScript 标准中没有包含的属性名，在使用 [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 绑定语句时会被忽略。
 
 ## 示例
 
