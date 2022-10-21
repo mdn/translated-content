@@ -57,7 +57,7 @@ _No hereda ninguna propiedad_
 - {{domxref("Navigator.permissions")}} {{ReadOnlyInline}}
   - : Devuelve un objeto {{domxref("Permisos")}} que se puede usar para consultar y actualizar el estado de los permisos de las API cubiertas por la [API de permisos](/es/docs/Web/API/Permissions_API).
 - {{domxref("Navigator.presentation")}} {{ReadOnlyInline}}
-  - : Returns a reference to the {{domxref("Presentation")}} API.
+  - : Devuelve una referencia a la API {{domxref("Presentation")}}.
 - {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Devuelve un objeto {{domxref("Serial")}}, que representa el punto de entrada a {{domxref("Web Serial API")}} para habilitar el control de los puertos serie.
 - {{domxref("Navigator.serviceWorker")}} {{ReadOnlyInline}}
