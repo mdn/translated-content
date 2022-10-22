@@ -4608,7 +4608,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype	/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBufferView_temp	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer
-/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype
+/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wake	/ja/docs/Web/JavaScript/Reference/Global_Objects/Atomics/notify
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/constructor	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
