@@ -200,7 +200,7 @@ La position verticale de la barre est calculée comme tel : `HAUTEUR-hauteurBarr
     };
 ```
 
-Là encore, nous invoquons la fonction `dessiner`() pour lancer le processus.
+Là encore, nous invoquons la fonction `dessiner()` pour lancer le processus.
 
 ```js
     dessiner();

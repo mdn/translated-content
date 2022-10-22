@@ -17,7 +17,7 @@ Cette méthode est similaire, mais pas identique, à l’activation du script su
 - Aucun événement [`submit`](/fr/docs/Web/API/HTMLFormElement/submit_event) n'est déclenché. En particulier, le gestionnaire d'événement {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} du formulaire n'est pas exécuté.
 - [Constraint validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) n'est pas déclenché .
 
-Si un contrôle de formulaire (tel qu'un submit bouton ) a un`name` ou un `id` de `submit`, cette méthode masquera la méthode d'envoi du formulaire.
+Si un contrôle de formulaire (tel qu'un submit bouton ) a un `name` ou un `id` de `submit`, cette méthode masquera la méthode d'envoi du formulaire.
 
 ## Syntaxe
 
