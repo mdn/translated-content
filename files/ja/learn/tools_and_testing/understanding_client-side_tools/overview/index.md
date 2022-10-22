@@ -11,23 +11,20 @@ tags:
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-In this article we provide an overview of modern web tooling, what kinds of tools are available and where you'll meet them in the lifecycle of web app development, and how to find help with individual tools.
+この記事では、最新の Web ツールの概要、利用可能なツールの種類、Web アプリ開発のライフサイクルのどこでそれらのツールに使用するか、個々のツールのヘルプを見つける方法について説明します。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">前提条件：</th>
       <td>
-        Familiarity with the core <a href="/ja/docs/Learn/HTML">HTML</a>,
-        <a href="/ja/docs/Learn/CSS">CSS</a>, and
-        <a href="/ja/docs/Learn/JavaScript">JavaScript</a> languages.
+        主要な <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、と <a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">目的：</th>
       <td>
-        To understand what types of client-side tooling there are, and how to
-        find tools and get help with them.
+        クライアント側ツールの種類とその方法を理解する ツールを見つけて、それらのヘルプを取得します。 
       </td>
     </tr>
   </tbody>
