@@ -30,17 +30,18 @@ tags:
   </tbody>
 </table>
 
-## Overview of modern tooling
 
-Writing software for the web has become more sophisticated through the ages. Although it is still entirely reasonable to write HTML, CSS, and JavaScript "by hand" there is now a wealth of tools that developers can use to speed up the process of building a web site, or app.
+## 最新のツールの概要
 
-There are some extremely well-established tools that have become common "household names" amongst the development community, and new tools are being written and released every day to solve specific problems. You might even find yourself writing a piece of software to aid your own development process, to solve a specific problem that existing tools don't already seem to handle.
+Web 用のソフトウェアの作成は、年月を経てより洗練されてきました。 HTML、CSS、および JavaScript を「手作業で」記述することは依然として完全に合理的ですが、開発者が Web サイトまたはアプリの構築プロセスを高速化するために使用できる豊富なツールが現在あります。 
 
-It is easy to become overwhelmed by the sheer number of tools that can be included in a single project. Equally, a single configuration file for a tool like [Webpack](https://webpack.js.org/) can be hundreds of lines long, most of which are magical incantations that seem to do the job but which only a master engineer will fully understand!
+開発コミュニティの間で一般的な「おなじみの名前」になっている非常に確立されたツールがいくつかあり、特定の問題を解決するために毎日新しいツールが作成およびリリースされています。 自分自身の開発プロセスを支援するソフトウェアを作成したり、既存のツールではまだ処理されていないように見える特定の問題を解決したりすることさえあるかもしれません。
 
-From time to time, even the most experienced of web developers get stuck on a tooling problem; it is possible to waste hours attempting to get a tooling pipeline working before even touching a single line of application code. If you have found yourself struggling in the past, then don't worry — you are not alone.
+1 つのプロジェクトに含めることができる膨大な数のツールに圧倒されがちです。 同様に、[Webpack](https://webpack.js.org/) のようなツールの単一の構成ファイルは数百行の長さになる可能性があり、そのほとんどは魔法の呪文であり、動作をしているように見えますが、それはマスターエンジニアだけが完全に理解します！
 
-In these articles, we won't answer every question about web tooling, but we will provide you with a useful starting point of understanding the fundamentals, which you can then build from. As with any complex topic, it is good to start small, and gradually work your way up to more advanced uses.
+最も経験豊富な Web 開発者でさえ、ツールの問題で行き詰まってしまうことがあります。 アプリケーション コードの 1 行に触れる前に、ツール パイプラインを機能させるために何時間も無駄にする可能性があります。 過去に苦労したことがある場合でも、心配しないでください。あなたは一人ではありません。
+
+これらの記事では、Web ツールに関するすべての質問に答えるわけではありませんが、基礎を理解するのに役立つ出発点を提供し、そこから構築することができます。 あらゆる複雑なトピックと同様に、小さく始めて、徐々に高度な用途へと進めていくのが良いでしょう。 
 
 ## The modern tooling ecosystem
 
