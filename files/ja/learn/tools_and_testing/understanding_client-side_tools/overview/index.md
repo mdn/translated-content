@@ -169,9 +169,9 @@ Web アプリのライフサイクルのこの段階では、通常、"将来の
 
 繰り返しますが、おそらくいくつかの異なるツールを試して、適切なツールを探し、それらが理にかなっているか、十分にサポートされているか、目的の機能を実行しているかどうかを確認します. これは問題ありません。すべて学習に適しています。経験を積むにつれて、道はスムーズになります。
 
-## Summary
+## まとめ
 
-That rounds off our gentle introduction to the topic of client-side web tooling, from a high level. Next up we provide you with a crash course on the command line, which is where a lot of tooling is invoked from. We'll take a look at what the command line can do and then try installing and using our first tool.
+これで、クライアント側の Web ツールのトピックの概要についての簡単な紹介を締めくくります。 次に、多くのツールが呼び出されるコマンド ラインの速習コースを提供します。 コマンド ラインで何ができるかを見てから、最初のツールをインストールして使用してみます。
 
 {{NextMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
