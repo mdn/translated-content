@@ -175,7 +175,7 @@ Web アプリのライフサイクルのこの段階では、通常、"将来の
 
 {{NextMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-## In this module
+## このモジュール
 
 - [クライアントサイドツールの概要](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
 - [Command line crash course](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
