@@ -21,10 +21,10 @@ Un intervalle de clé peut être une seule valeur ou un intervalle avec des born
 
 | Intervalle                         | Code                                                              |
 | ---------------------------------- | ----------------------------------------------------------------- |
-| Toutes les clés ≤ **x**            | [`IDBKeyRange.upperBound(x)`](/fr/docs/Web/API/IDBKeyRange/lowerBound)             |
-| Toutes les clés < **x**            | [`IDBKeyRange.upperBound(x, true)`](/fr/docs/Web/API/IDBKeyRange/upperBound)       |
-| Toutes les clés ≥ **y**            | [`IDBKeyRange.lowerBound(y)`](/fr/docs/Web/API/IDBKeyRange/lowerBound)             |
-| Toutes les clés > **y**            | [`IDBKeyRange.lowerBound(y, true)`](/fr/docs/Web/API/IDBKeyRange/lowerBound)       |
+| Toutes les clés ≥ **x**            | [`IDBKeyRange.lowerBound(x)`](/fr/docs/Web/API/IDBKeyRange/lowerBound)             |
+| Toutes les clés > **x**            | [`IDBKeyRangelowerBound(x, true)`](/fr/docs/Web/API/IDBKeyRange/lowerBound)       |
+| Toutes les clés ≤ **y**            | [`IDBKeyRange.upperBound(y)`](/fr/docs/Web/API/IDBKeyRange/upperBound)             |
+| Toutes les clés < **y**            | [`IDBKeyRange.upperBound(y, true)`](/fr/docs/Web/API/IDBKeyRange/upperBound)       |
 | Toutes les clés ≥ **x** && ≤ **y** | [`IDBKeyRange.bound(x, y)`](/fr/docs/Web/API/IDBKeyRange/bound)              |
 | Toutes les clés > **x** &&< **y**  | [`IDBKeyRange.bound(x, y, true, true)`](/fr/docs/Web/API/IDBKeyRange/bound)  |
 | Toutes les clés > **x** && ≤ **y** | [`IDBKeyRange.bound(x, y, true, false)`](/fr/docs/Web/API/IDBKeyRange/bound) |
