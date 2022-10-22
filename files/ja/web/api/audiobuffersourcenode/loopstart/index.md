@@ -13,7 +13,7 @@ l10n:
 
 ## 値
 
-浮動小数点数`で、再生中に各ループを始めるべき音声バッファーへのオフセットを秒単位で示します。この値は {{domxref("AudioBufferSourceNode.loop", "loop")}} 引数が `true` のときのみ使用されます。
+浮動小数点数で、再生中に各ループを始めるべき音声バッファーへのオフセットを秒単位で示します。この値は {{domxref("AudioBufferSourceNode.loop", "loop")}} 引数が `true` のときのみ使用されます。
 
 ## 例
 
