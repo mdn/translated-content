@@ -24,14 +24,14 @@ tags:
     <tr>
       <th scope="row">目的：</th>
       <td>
-        クライアント側ツールの種類とその方法を理解する ツールを見つけて、それらのヘルプを取得します。 
+        クライアントサイドツールの種類とその方法を理解する ツールを見つけて、それらのヘルプを取得します。 
       </td>
     </tr>
   </tbody>
 </table>
 
 
-## 最新のツールの概要
+## 最新ツールの概要
 
 Web 用のソフトウェアの作成は、年月を経てより洗練されてきました。 HTML、CSS、および JavaScript を「手作業で」記述することは依然として完全に合理的ですが、開発者が Web サイトまたはアプリの構築プロセスを高速化するために使用できる豊富なツールが現在あります。 
 
@@ -43,19 +43,19 @@ Web 用のソフトウェアの作成は、年月を経てより洗練されて�
 
 これらの記事では、Web ツールに関するすべての質問に答えるわけではありませんが、基礎を理解するのに役立つ出発点を提供し、そこから構築することができます。 あらゆる複雑なトピックと同様に、小さく始めて、徐々に高度な用途へと進めていくのが良いでしょう。 
 
-## The modern tooling ecosystem
+## 最新ツールのエコシステム 
 
-Today's modern developer tooling ecosystem is huge, so it's useful to have a broad idea of what main problems the tools are solving. If you jump on your favorite search engine and look for "front-end developer tools" you're going to hit a huge spectrum of results ranging from text editors, to browsers, to the type of pens you can use to take notes.
+今日の最新の開発者ツール エコシステムは巨大であるため、ツールがどのような主な問題を解決しているかについて幅広い考えを持っていると役に立ちます。 お気に入りの検索エンジンで、”フロントエンド開発者ツール”と検索すると、テキストエディターからブラウザー、メモを取るのに使用できるタイプのペンに至るまで、膨大な範囲の結果が表示されます。
 
-Though your choice of code editor is certainly a tooling choice, this series of articles will go beyond that, focusing on developer tools that help you produce web code more efficiently.
+コードエディターの選択は確かにツールの選択ですが、この一連の記事ではそれを超えて、Web コードをより効率的に作成するのに役立つ開発者ツールに焦点を当てます。
 
-From a high-level perspective, you can put client-side tools into the following three broad categories of problems to solve:
+大まかな観点から、クライアントサイドツールは、解決すべき問題を次の 3 つの大きなカテゴリに分類できます。
 
-- **Safety net** — Tools that are useful during your code development.
-- **Transformation** — Tools that transform code in some way, e.g. turning an intermediate language into JavaScript that a browser can understand.
-- **Post-development** — Tools that are useful after you have written your code, such as testing and deployment tools.
+- **セーフティネット** — コード開発時に役立つツール。
+- **変換** — 何らかの方法でコードを変換するツール。 中間言語をブラウザーが理解できる JavaScript に変換します。
+- **開発後** — テストツールやデプロイツールなど、コードを記述した後に役立つツール。
 
-Let's look at each one of these in more detail.
+これらをそれぞれ詳しく見ていきましょう。
 
 ### Safety net
 
