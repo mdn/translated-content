@@ -137,7 +137,7 @@ const myArray = ['Mango', 'Apple', 'Orange'];
 记住，JavaScript 数组索引是基于 0 的：他们从 `0` 开始，而不是 `1`。这意味着 `length` 属性将比最大的索引值大 1：
 
 ```js
-var cats = [];
+const cats = [];
 cats[30] = ['Dusty'];
 console.log(cats.length); // 31
 ```
@@ -223,194 +223,261 @@ nonsparseArray.forEach((element) => {
 
 由于 JavaScript 元素被保存为标准对象属性，因此不建议使用 {{jsxref("Statements/for...in","for...in")}} 循环遍历 JavaScript 数组，因为普通元素和所有可枚举属性都将被列出。
 
-### 数组的方法 (array methods)
+### 数组方法
 
 {{jsxref("Array")}} 对象具有下列方法：
 
-{{jsxref("Array.concat", "concat()")}} 连接两个数组并返回一个新的数组。
+[`concat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) 方法连接两个或多个数组并返回一个新的数组。
 
 ```js
-var myArray = new Array("1", "2", "3");
-myArray = myArray.concat("a", "b", "c");
+let myArray = ['1', '2', '3'];
+myArray = myArray.concat('a', 'b', 'c');
 // myArray is now ["1", "2", "3", "a", "b", "c"]
 ```
 
-{{jsxref("Array.join", "join(deliminator = ',')")}} 将数组的所有元素连接成一个字符串。
+[`join()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 方法将数组中的所有元素连接成一个字符串。
 
 ```js
-var myArray = new Array("Wind", "Rain", "Fire");
-var list = myArray.join(" - "); // list is "Wind - Rain - Fire"
+const myArray = ['Wind', 'Rain', 'Fire'];
+const list = myArray.join(' - '); // list is "Wind - Rain - Fire"
 ```
 
-{{jsxref("Array.push", "push()")}} 在数组末尾添加一个或多个元素，并返回数组操作后的长度。
+[`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push) 方法在数组末尾添加一个或多个元素，并返回数组操作后的 `length`。
 
 ```js
-var myArray = new Array("1", "2");
-myArray.push("3"); // myArray is now ["1", "2", "3"]
+const myArray = ['1', '2'];
+myArray.push('3'); // myArray is now ["1", "2", "3"
 ```
 
-{{jsxref("Array.pop", "pop()")}} 从数组移出最后一个元素，并返回该元素。
+[`pop()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) 方法从数组移出最后一个元素，并返回该元素。
 
 ```js
-var myArray = new Array("1", "2", "3");
-var last = myArray.pop();
+const myArray = ['1', '2', '3'];
+const last = myArray.pop();
 // myArray is now ["1", "2"], last = "3"
 ```
 
-{{jsxref("Array.shift", "shift()")}} 从数组移出第一个元素，并返回该元素。
+[`shift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) 方法从数组移出第一个元素，并返回该元素。
 
 ```js
-var myArray = new Array ("1", "2", "3");
-var first = myArray.shift();
+const myArray = ['1', '2', '3'];
+const first = myArray.shift();
 // myArray is now ["2", "3"], first is "1"
 ```
 
-{{jsxref("Array.shift", "unshift()")}} 在数组开头添加一个或多个元素，并返回数组的新长度。
+[`unshift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) 方法在数组开头添加一个或多个元素，并返回数组的新长度。
 
 ```js
-var myArray = new Array ("1", "2", "3");
-myArray.unshift("4", "5");
+const myArray = ['1', '2', '3'];
+myArray.unshift('4', '5');
 // myArray becomes ["4", "5", "1", "2", "3"]
 ```
 
-{{jsxref("Array.slice", "slice(start_index, upto_index)")}} 从数组提取一个片段，并作为一个新数组返回。
+[`slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) 方法从数组提取一个片段，并作为一个新数组返回。
 
 ```js
-var myArray = new Array ("a", "b", "c", "d", "e");
+let myArray = ['a', 'b', 'c', 'd', 'e'];
 myArray = myArray.slice(1, 4); // 包含索引 1，不包括索引 4
                                // returning [ "b", "c", "d"]
 ```
 
-{{jsxref("Array.splice", "splice(index, count_to_remove, addElement1, addElement2, ...)")}}从数组移出一些元素，（可选）并替换它们。
+[`at()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/at) 方法返回数组中指定索引处的元素，如果索引超出范围，则返回 `undefined`。它主要用于从数组末尾访问元素的负下标。
 
 ```js
-var myArray = new Array ("1", "2", "3", "4", "5");
-myArray.splice(1, 3, "a", "b", "c", "d");
+const myArray = ['a', 'b', 'c', 'd', 'e'];
+myArray.at(-2); // "d", the second-last element of myArray
+```
+
+[`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法从数组移出一些元素，（可选）并替换它们。它返回从数组中删除的元素。
+
+```js
+const myArray = ['1', '2', '3', '4', '5'];
+myArray.splice(1, 3, 'a', 'b', 'c', 'd');
 // myArray is now ["1", "a", "b", "c", "d", "5"]
 // This code started at index one (or where the "2" was),
 // removed 3 elements there, and then inserted all consecutive
 // elements in its place.
 ```
 
-{{jsxref("Array.reverse", "reverse()")}} 颠倒数组元素的顺序：第一个变成最后一个，最后一个变成第一个。
+[`reverse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) 方法颠倒数组元素的顺序：第一个数组元素变为最后一个数组元素，最后一个数组元素变为第一个数组元素。它返回对数组的引用。
 
 ```js
-var myArray = new Array ("1", "2", "3");
+const myArray = ['1', '2', '3'];
 myArray.reverse();
 // transposes the array so that myArray = [ "3", "2", "1" ]
 ```
 
-{{jsxref("Array.sort", "sort()")}} 给数组元素排序。
+[`flat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) 方法返回一个新数组，所有子数组元素递归地连接到其中，直到指定的深度。
 
 ```js
-var myArray = new Array("Wind", "Rain", "Fire");
-myArray.sort();
-// sorts the array so that myArray = [ "Fire", "Rain", "Wind" ]
+let myArray = [1, 2, [3, 4]];
+myArray = myArray.flat();
+// myArray is now [1, 2, 3, 4], since the [3, 4] subarray is flattened
 ```
 
-`sort()` 也可以带一个回调函数来决定怎么比较数组元素。这个回调函数比较两个值，并返回 3 个值中的一个：
+[`sort()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) 方法对数组的元素进行适当的排序，并返回对数组的引用。
+
+```js
+const myArray = ['Wind', 'Rain', 'Fire'];
+myArray.sort();
+// sorts the array so that myArray = ["Fire", "Rain", "Wind"]
+```
+
+`sort()` 也可以接受回调函数来决定怎么比较数组元素。
+
+接受回调的 `sort` 方法（以及下面的其他方法）被称为*迭代方法*，因为它们以某种方式遍历整个数组。每一个都有第二个可选参数 `thisObject`。如果提供，`thisObject` 将成为回调函数体中 `this` 关键字的值。如果没有提供，就像在显式对象上下文之外调用函数的其他情况一样，当使用箭头函数作为回调函数时，`this` 将引用全局对象（[`window`](/zh-CN/docs/Web/API/window)），或当使用普通函数作为回调函数时，`undefined` 将引用全局对象。
+
+调用回调函数时使用两个参数，它们是数组的元素。
+
+下面的回调函数比较两个值，并返回 3 个值中的一个：
 
 例如，下面的代码通过字符串的最后一个字母进行排序：
 
 ```js
-var sortFn = function(a, b){
+const sortFn = (a, b) => {
   if (a[a.length - 1] < b[b.length - 1]) return -1;
   if (a[a.length - 1] > b[b.length - 1]) return 1;
-  if (a[a.length - 1] == b[b.length - 1]) return 0;
+  if (a[a.length - 1] === b[b.length - 1]) return 0;
 }
 myArray.sort(sortFn);
 // sorts the array so that myArray = ["Wind","Fire","Rain"]
 ```
 
-- 如果 a 小于 b，返回 -1(或任何负数)
-- 如果 `a` 大于 `b` ，返回 1 (或任何正数)
-- 如果 `a` 和 `b` 相等，返回 0。
+- 如果 `a` 小于 `b`，返回 `-1`（或任何负数）
+- 如果 `a` 大于 `b`，返回 `1`（或任何正数）
+- 如果 `a` 和 `b` 相等，返回 `0`。
 
-{{jsxref("Array.indexOf", "indexOf(searchElement[, fromIndex])")}} 在数组中搜索`searchElement` 并返回第一个匹配的索引。
+[`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) 方法在数组中搜索 `searchElement` 并返回第一个匹配的索引。
 
 ```js
-var a = ['a', 'b', 'a', 'b', 'a'];
+const a = ['a', 'b', 'a', 'b', 'a'];
 console.log(a.indexOf('b')); // logs 1
+
 // Now try again, starting from after the last match
 console.log(a.indexOf('b', 2)); // logs 3
 console.log(a.indexOf('z')); // logs -1, because 'z' was not found
 ```
 
-{{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement[, fromIndex])")}} 和 `indexOf` 差不多，但这是从结尾开始，并且是反向搜索。
+[`lastIndexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf) 方法的工作原理类似于 `indexOf`，但这是从末尾开始，向后搜索。
 
 ```js
-var a = ['a', 'b', 'c', 'd', 'a', 'b'];
-console.log(a.lastIndexOf('b')); // logs 5
+const a = ['a', 'b', 'c', 'd', 'a', 'b'];
+console.log(a.lastIndexOf('b')); // 5
+
 // Now try again, starting from before the last match
-console.log(a.lastIndexOf('b', 4)); // logs 1
-console.log(a.lastIndexOf('z')); // logs -1
+console.log(a.lastIndexOf('b', 4)); // 1
+console.log(a.lastIndexOf('z')); // -1
 ```
 
-{{jsxref("Array.forEach", "forEach(callback[, thisObject])")}} 在数组每个元素项上执行`callback`。
+[`forEach()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 方法对数组中的每个元素执行 `callback` 并返回 `undefined`。
 
 ```js
-var a = ['a', 'b', 'c'];
-a.forEach(function(element) { console.log(element);} );
+const a = ['a', 'b', 'c'];
+a.forEach((element) => {
+  console.log(element);
+});
 // logs each item in turn
 ```
 
-{{jsxref("Array.map", "map(callback[, thisObject])")}} 在数组的每个单元项上执行 callback 函数，并把返回包含回调函数返回值的新数组（译者注：也就是遍历数组，并通过 callback 对数组元素进行操作，并将所有操作结果放入数组中并返回该数组）。
+[`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 方法返回由每个数组元素上执行 `callback` 的返回值所组成的新数组。
 
 ```js
-var a1 = ['a', 'b', 'c'];
-var a2 = a1.map(function(item) { return item.toUpperCase(); });
-console.log(a2); // logs A,B,C
+const a1 = ['a', 'b', 'c'];
+const a2 = a1.map((item) => item.toUpperCase());
+console.log(a2); // ['A', 'B', 'C']
 ```
 
-{{jsxref("Array.filter", "filter(callback[, thisObject])")}} 返回一个包含所有在回调函数上返回为 true 的元素的新数组（译者注：callback 在这里担任的是过滤器的角色，当元素符合条件，过滤器就返回 true，而 filter 则会返回所有符合过滤条件的元素）。
+[`flatMap()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap) 方法先执行 `map()`，再执行深度为 1 的 `flat()`。
 
 ```js
-var a1 = ['a', 10, 'b', 20, 'c', 30];
-var a2 = a1.filter(function(item) { return typeof item == 'number'; });
-console.log(a2); // logs 10,20,30
+const a1 = ['a', 'b', 'c'];
+const a2 = a1.flatMap((item) => [item.toUpperCase(), item.toLowerCase()]);
+console.log(a2); // ['A', 'a', 'B', 'b', 'C', 'c']
 ```
 
-{{jsxref("Array.every", "every(callback[, thisObject])")}} 当数组中每一个元素在 callback 上被返回 true 时就返回 true（译者注：同上，every 其实类似 filter，只不过它的功能是判断是不是数组中的所有元素都符合条件，并且返回的是布尔值）。
+[`filter()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) 方法返回一个新数组，其中包含 `callback` 返回 `true` 的元素。
 
 ```js
-function isNumber(value){
-  return typeof value == 'number';
+const a1 = ['a', 10, 'b', 20, 'c', 30];
+const a2 = a1.filter((item) => typeof item === 'number');
+console.log(a2); // [10, 20, 30]
+```
+
+[`find()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/find) 方法返回 `callback` 返回 `true` 的第一个元素。
+
+```js
+const a1 = ['a', 10, 'b', 20, 'c', 30];
+const i = a1.find((item) => typeof item === 'number');
+console.log(i); // 10
+```
+
+[`findLast()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast) 方法返回 `callback` 返回 `true` 的最后一个元素。
+
+```js
+const a1 = ['a', 10, 'b', 20, 'c', 30];
+const i = a1.findLast((item) => typeof item === 'number');
+console.log(i); // 30
+```
+
+[`findIndex()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex) 方法返回 `callback` 返回 `true` 的第一个元素的索引。
+
+```js
+const a1 = ['a', 10, 'b', 20, 'c', 30];
+const i = a1.findIndex((item) => typeof item === 'number');
+console.log(i); // 1
+```
+
+[`findLastIndex()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex) 方法返回 `callback` 返回 `true` 的最后一个元素的索引。
+
+```js
+const a1 = ['a', 10, 'b', 20, 'c', 30];
+const i = a1.findLastIndex((item) => typeof item === 'number');
+console.log(i); // 5
+```
+
+如果 `callback` 对数组中的每一个元素都返回 `true`，则 [`every()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/every) 方法返回 `true`。
+
+```js
+function isNumber(value) {
+  return typeof value === 'number';
 }
-var a1 = [1, 2, 3];
-console.log(a1.every(isNumber)); // logs true
-var a2 = [1, '2', 3];
-console.log(a2.every(isNumber)); // logs false
+const a1 = [1, 2, 3];
+console.log(a1.every(isNumber)); // true
+const a2 = [1, '2', 3];
+console.log(a2.every(isNumber)); // false
 ```
 
-{{jsxref("Array.some", "some(callback[, thisObject])")}} 只要数组中有一项在 callback 上被返回 true，就返回 true（译者注：同上，类似 every，不过前者要求都符合筛选条件才返回 true，后者只要有符合条件的就返回 true）。
+如果 `callback` 对数组中至少一个元素返回 `true`，则 [`some()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/some) 方法返回 `true`。
 
 ```js
-function isNumber(value){
-  return typeof value == 'number';
+function isNumber(value) {
+  return typeof value === 'number';
 }
-var a1 = [1, 2, 3];
-console.log(a1.some(isNumber)); // logs true
-var a2 = [1, '2', 3];
-console.log(a2.some(isNumber)); // logs true
-var a3 = ['1', '2', '3'];
-console.log(a3.some(isNumber)); // logs false
+const a1 = [1, 2, 3];
+console.log(a1.some(isNumber)); // true
+const a2 = [1, '2', 3];
+console.log(a2.some(isNumber)); // true
+const a3 = ['1', '2', '3'];
+console.log(a3.some(isNumber)); // false
 ```
 
-以上方法都带一个被称为迭代方法的的回调函数，因为他们以某种方式迭代整个数组。都有一个可选的第二参数 `thisObject`，如果提供了这个参数，`thisObject` 变成回调函数内部的 this 关键字的值。如果没有提供，例如函数在一个显示的对象上下文外被调用时，this 将引用全局对象 ({{domxref("window")}}).
+[`reduce()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) 方法对数组中的每个值执行 `callback(accumulator, currentValue, currentIndex, Array)`，目的是将列表中的元素减少到单个值。`reduce` 函数返回 `callback` 函数返回的最终值。
 
-实际上在调用回调函数时传入了 3 个参数。第一个是当前元素项的值，第二个是它在数组中的索引，第三个是数组本身的一个引用。JavaScript 函数忽略任何没有在参数列表中命名的参数，因此提供一个只有一个参数的回调函数是安全的，例如 `alert` 。
+如果指定了 `initialValue`，则调用 `callback`，并将 `initialValue` 作为第一个参数值，将数组中第一个元素的值作为第二个参数值。
 
-{{jsxref("Array.reduce", "reduce(callback[, initialValue])")}} 使用回调函数 `callback(firstValue, secondValue)` 把数组列表计算成一个单一值（译者注：他数组元素两两递归处理的方式把数组计算成一个值）
+如果*没有*指定 `initialValue`，那么 `callback` 的前两个参数值将是数组的第一个和第二个元素。之后的*每一次*调用，第一个参数的值将是前一个调用中返回的 `callback`，第二个参数的值将是数组中的下一个值。
+
+如果 `callback` 需要访问正在处理的元素的索引，或者访问整个数组，它们可以作为可选参数。
 
 ```js
-var a = [10, 20, 30];
-var total = a.reduce(function(first, second) { return first + second; }, 0);
-console.log(total) // Prints 60
+const a = [10, 20, 30];
+const total = a.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(total); // 60
 ```
 
-{{jsxref("Array.reduceRight", "reduceRight(callback[, initalvalue])")}} 和 `reduce()` 相似，但这从最后一个元素开始的。
+[`reduceRight()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) 方法的工作原理类似于 `reduce()`，但这从最后一个元素开始的。
 
-`reduce` 和 `reduceRight` 是迭代数组方法中最不被人熟知的两个函数.。他们应该使用在那些需要把数组的元素两两递归处理，并最终计算成一个单一结果的算法。
+`reduce` 和 `reduceRight` 是迭代数组方法中最不被人熟知的两个函数。它们应该使用在那些需要把数组的元素两两递归处理，并最终计算成一个单一结果的算法。
 
 ### 多维数组 (multi-dimensional arrays)
 
