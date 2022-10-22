@@ -1,11 +1,20 @@
 ---
-title: To Do アイテムのフィルタリング
-slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering
+title: Angular アプリケーションのビルドとその他のリソース
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building
+tags:
+  - Beginner
+  - Frameworks
+  - JavaScript
+  - Learn
+  - client-side
+  - Angular
+  - Building
+  - Resources
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-次に、ユーザーが To Do アイテムをフィルタリングできるようにする機能を追加して、アクティブなアイテム、完了したアイテム、またはすべてのアイテムを表示できるようにしましょう。
+この Angular の最後の記事では、本番環境に対応したアプリをビルドする方法について説明し、学習の旅を続けるためその他のリソースを提供します。
 
 <table>
   <tbody>
@@ -25,75 +34,50 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filterin
     </tr>
     <tr>
       <th scope="row">目的:</th>
-      <td>アプリにフィルタリング機能を追加します。</td>
+      <td>Angular アプリをビルドする方法を学ぶ。</td>
     </tr>
   </tbody>
 </table>
 
-## フィルタリングコード
+## 完成したアプリケーションのビルド
 
-フィルタリングは、以前に `app.component.ts` に追加した `filter` プロパティに基づいて構成されています。
+アプリケーションの開発が完了したので、Angular CLI の `build` コマンドを実行できます。
+`todo` ディレクトリで `build` コマンドを実行すると、アプリケーションは `dist/` という名前のディレクトリにコンパイル結果が出力されます。
 
-```ts
-filter: 'all' | 'active' | 'done' = 'all';
+`todo` ディレクトリで、コマンド ラインで次のコマンドを実行します。
+
+```bash
+ng build -c production
 ```
 
-filter のデフォルト値は `all` ですが、 `active` または `done` にすることもできます。
+CLI はアプリケーションをコンパイルし、コンパイル結果を新しい `dist` ディレクトリに出力します。
+`ng build` の `--configuration production`/`-c production` フラグは、プロダクションに不要なものを取り除きます。
 
-## フィルター コントロールの追加
+## アプリケーションのデプロイ
 
-`app.component.html` で、次の HTML を **Add** ボタンの前、アイテムをリストするセクションの上に追加します。
-次のスニペットでは、HTML の既存のセクションがコメントになっているため、ボタンを配置する場所を正確に確認できます。
+アプリケーションをデプロイするには、 `dist/my-project-name` フォルダーを Web サーバーに追加します。 
+これらのファイルは静的であるため、次のようなファイルを提供できる任意の Web サーバーでホストできます。
 
-```html
-<!-- <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
- -->
+- Node.js
+- Java
+- .NET
 
-  <!-- Buttons that show all, still to do, or done items on click -->
-  <div class="btn-wrapper">
-    <button
-      class="btn btn-menu"
-      [class.active]="filter == 'all'"
-      (click)="filter = 'all'">
-      All
-    </button>
+[Firebase](https://firebase.google.com/docs/hosting), [Google Cloud](https://cloud.google.com/solutions/web-hosting), or [App Engine](https://cloud.google.com/appengine/docs/standard/python/getting-started/hosting-a-static-website) などのバックエンドを使用できます
 
-    <button
-      class="btn btn-menu"
-      [class.active]="filter == 'active'"
-      (click)="filter = 'active'">
-      To Do
-    </button>
+## その次
 
-    <button
-      class="btn btn-menu"
-      [class.active]="filter == 'done'"
-      (click)="filter = 'done'">
-      Done
-    </button>
-  </div>
+ここまで基本的なアプリケーションを作成しましたが、Angular の学びはまだ始まったばかりです。
+以下の Angular のドキュメントを調べることで、さらに学ぶことができます。
 
-  <!-- <h2>\{{items.length}} item(s)</h2>
-        <ul>... -->
-```
-
-ボタンをクリックすると `filter` 値が変更され、Angular がアクティブなボタンにスタイルを適用し、表示する `items` を決定します。
-
-- ユーザーが **All** ボタンをクリックすると、すべてのアイテムが表示されます。
-- ユーザーが **To do** ボタンをクリックすると、 `done` の値が `false` のアイテムが表示されます。
-- ユーザーが **Done** ボタンをクリックすると、 `done`  値が `true` のアイテムが表示されます。
-
-角括弧 `[]` を使用したクラス属性バインディングは、ボタンのテキストの色を制御します。
-クラスバインディング `[class.active]` は、 `filter` の値が式と一致する場合に `active` クラスを適用します。
-たとえば、ユーザーが **Done** ボタンをクリックして `filter` 値を `done` に設定すると、クラス バインディング式 `filter == 'done'` は `true` に評価されます。
-`filter` 値が `done` の場合、Angular は `active` クラスを **Done** ボタンに適用し、テキストの色を緑色にします。
-ユーザーが他のボタンのいずれかをクリックするとすぐに、 `filter` の値は `done` ではなくなるため、緑色のテキスト色は適用されなくなります。
+- [Tour of Heroes](https://angular.io/tutorial): サービスの使用、ナビゲーション、サーバーからのデータの取得など、Angular の機能に焦点を当てた詳細なチュートリアル。
+- Angular [Components](https://angular.io/guide/component-overview) ガイド: ライフサイクル、コンポーネントの相互作用、ビューのカプセル化などのトピックをカバーする一連の記事。
+- [Forms](https://angular.io/guide/forms-overview) ガイド: Angular でのリアクティブ フォームの作成、入力の検証、動的フォームの作成について説明する記事。
 
 ## まとめ
 
-簡単でしたね！ `app.component.ts` には既に `filter` コードがあるので、アイテムのフィルタリングをコントロールする為にテンプレートを編集するだけで済みました。 次の - そして最後の - 記事では、Angular アプリを本番環境で構築する方法を検討し、学習の旅を続けるための追加のリソースを提供します。
+以上です。 Angular を楽しんでいただければ幸いです。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 ## このモジュール
 
