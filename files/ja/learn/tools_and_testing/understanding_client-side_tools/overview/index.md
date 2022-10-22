@@ -87,11 +87,11 @@ Web 用のソフトウェアの作成は、年月を経てより洗練されて�
 
 このモジュールでは GitHub を使用します。 詳細については、[Git および GitHub](/ja/docs/Learn/Tools_and_testing/GitHub) を参照してください。 
 
-#### Code formatters
+#### コードフォーマッター 
 
-Code formatters are somewhat related to linters, except that rather than point out errors in your code, they usually tend to make sure your code is formatted correctly, according to your style rules, ideally automatically fixing errors that they find.
+コード フォーマッタは、コードのエラーを指摘するのではなく、通常、スタイル ルールに従ってコードが正しくフォーマットされていることを確認し、理想的には見つけたエラーを自動的に修正する傾向があることを除いて、リンターに多少関連しています。
 
-[Prettier](https://prettier.io/) is a very popular example of a code formatter, which we'll make use of later on in the module.
+[Prettier](https://prettier.io/) はコード フォーマッタの非常に一般的な例であり、モジュールの後半で使用します。 
 
 #### Bundlers/packagers
 
