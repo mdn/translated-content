@@ -2,6 +2,7 @@
 title: <bdi>
 slug: Web/HTML/Element/bdi
 ---
+
 ## Summary
 
 {{HTMLRef}}
@@ -62,5 +63,5 @@ This arabic word REDLOHECALP_CIBARA is automatically displayed right-to-left.
 
 ## 参见
 
-- 相关元素: {{HTMLElement("bdo")}}
-- 相关属性: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
+- 相关元素：{{HTMLElement("bdo")}}
+- 相关属性：{{cssxref("direction")}}, {{cssxref("unicode-bidi")}}

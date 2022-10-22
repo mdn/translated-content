@@ -2,6 +2,7 @@
 title: 'Express 教學 6: 使用表單'
 slug: Learn/Server-side/Express_Nodejs/forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
 
 在此教程中，我們會教你如何使用 Express ，並且結合 Pug 來實現 HTML 表單，並且如何從數據庫中創建、更新、和刪除文檔。

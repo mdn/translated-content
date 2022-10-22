@@ -1,7 +1,6 @@
 ---
 title: Polyfill
 slug: Glossary/Polyfill
-translation_of: Glossary/Polyfill
 ---
 polyfill은 기본적으로 지원하지 않는 이전 브라우저에서 최신 기능을 제공하는 데 필요한 코드 (일반적으로 웹의 JavaScript)입니다.
 

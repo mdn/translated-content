@@ -2,6 +2,7 @@
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 ---
+
 {{DefaultAPISidebar("XMLHttpRequest")}}
 
 藉由 `XMLHttpRequest`（XHR）物件的方式來存取伺服器端的資料，可以讓你直接經由指定的 URL 擷取資料卻不用刷新整個網頁。這樣一來當想要更新網頁中的部分資料時，不再需要藉由刷新整個頁面的方法而中斷使用者的操作。在{{Glossary("AJAX")}}應用中 `XMLHttpRequest` 被大量的使用。
@@ -109,7 +110,7 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 
 ## 瀏覽器相容性
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## 參見
 

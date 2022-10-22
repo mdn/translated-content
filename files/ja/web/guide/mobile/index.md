@@ -2,6 +2,7 @@
 title: モバイルウェブ開発
 slug: Web/Guide/Mobile
 ---
+
 このページでは、モバイル端末で適切に機能するウェブサイトを設計するために必要となる、主要な一部のテクニックの概要を説明します。 Mozilla の Firefox OS プロジェクトに関する情報を探している場合は、 [Firefox OS](/ja/docs/Mozilla/Firefox_OS) のページを参照してください。または、 [Android 版 Firefox](/ja/docs/Mozilla/Firefox_for_Android) に興味があるかもしれません。
 
 [モバイル端末向けの設計](#designing_for_mobile_devices)と[ブラウザー間の互換性](#cross-browser_development)の 2 つの節に整理しました。また、 Jason Grlicky によるウェブ開発者向けの[モバイルへの親和性](/ja/docs/Web/Guide/Mobile/Mobile-friendliness)のガイドも参照してください。

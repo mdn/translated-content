@@ -2,6 +2,7 @@
 title: MediaSource.duration
 slug: Web/API/MediaSource/duration
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} 接口的属性 **`duration`** 用来获取或者设置当前媒体展示的时长。

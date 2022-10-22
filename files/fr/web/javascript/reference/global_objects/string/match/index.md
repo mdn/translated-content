@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/match
 ---
+
 {{JSRef}}
 
 La méthode **`match()`** permet d'obtenir le tableau des correspondances entre la chaîne courante et une expression rationnelle.
@@ -102,21 +103,11 @@ str2.match(+65);        // Renvoie également ["65"]
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.10', 'String.prototype.match')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.match', 'String.prototype.match')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.match', 'String.prototype.match')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.match")}}
-
-## Notes spécifiques à Firefox/Gecko
-
-- `flags` était un second argument non standard présent uniquement sur Gecko : _str_.match(_regexp, flags_) et a été retiré avec Firefox 49.
-- À partir de Firefox 27, cette méthode a été ajustée afin d'être conforme à ECMAScript. Lorsque `match()` est appelée sur une expression rationnelle globale, la propriété {{jsxref("RegExp.lastIndex")}} de l'objet sera redéfini à `0` ({{bug(501739)}}).
+{{Compat}}
 
 ## Voir aussi
 

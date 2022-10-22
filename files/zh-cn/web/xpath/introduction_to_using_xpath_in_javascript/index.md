@@ -3,7 +3,8 @@ title: Introduction to using XPath in JavaScript
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
 ---
-该篇文档描述了如何在扩展和网站内部通过 JavaScript 调用 [XPath](/zh-CN/XPath) 接口。 Mozilla 实现了相当多的 [DOM 3 XPath](http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html)，意味着 Xpath 表达式已经可以在 HTML 和 XML 文档中使用。
+
+该篇文档描述了如何在扩展和网站内部通过 JavaScript 调用 [XPath](/zh-CN/XPath) 接口。Mozilla 实现了相当多的 [DOM 3 XPath](http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html)，意味着 Xpath 表达式已经可以在 HTML 和 XML 文档中使用。
 
 使用 XPath 的主要接口是 [document](/zh-CN/DOM/document) 对象的 [evaluate](/zh-CN/DOM/document.evaluate) 方法。
 
@@ -175,7 +176,7 @@ dump( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.text
 
 它可以是任何简单类型（`NUMBER_TYPE`，`STRING_TYPE`，`BOOLEAN_TYPE` ），**但**如果返回的结果类型是节点集，那么它将**只**是一个 `UNORDERED_NODE_ITERATOR_TYPE`。
 
-要在评估后确定类型，我们使用 `XPathResult` 对象的 `resultType` 属性。此属性的[常量](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#XPathResult_Defined_Constants)值在附录中定义。 None Yet =====Any_Type Example===== \<pre> \</pre>
+要在评估后确定类型，我们使用 `XPathResult` 对象的 `resultType` 属性。此属性的[常量](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#XPathResult_Defined_Constants)值在附录中定义。None Yet =====Any_Type Example===== \<pre> \</pre>
 
 ## 示例
 
@@ -183,7 +184,7 @@ dump( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.text
 
 以下代码旨在放置在要针对其评估 XPath 表达式的 HTML 文档中内嵌或外链的任何 JavaScript 片段中。
 
-要使用 XPath 提取 HTML 文档中的所有 `<h2>` 标题元素，`xpathExpression` 只是 `//h2`。其中，`//` 是递归下降运算符，在文档树中的任何位置将元素与 nodeName `h2` 相匹配。这个的完整代码是： link to introductory xpath doc
+要使用 XPath 提取 HTML 文档中的所有 `<h2>` 标题元素，`xpathExpression` 只是 `//h2`。其中，`//` 是递归下降运算符，在文档树中的任何位置将元素与 nodeName `h2` 相匹配。这个的完整代码是：link to introductory xpath doc
 
 ```js
 var headings = document.evaluate('//h2', document, null, XPathResult.ANY_TYPE, null );
@@ -285,7 +286,7 @@ document.evaluate( '//xhtml:td/mathml:math', document, nsResolver, XPathResult.A
 
 #### 为 XML 文档实现默认命名空间
 
-如前面[实现默认命名空间解析器](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#Implementing_a_Default_Namespace_Resolver)中所述，默认解析器不处理 XML 文档的默认命名空间。 例如使用本文档：
+如前面[实现默认命名空间解析器](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#Implementing_a_Default_Namespace_Resolver)中所述，默认解析器不处理 XML 文档的默认命名空间。例如使用本文档：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

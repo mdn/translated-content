@@ -7,6 +7,7 @@ tags:
 translation_of: Glossary/Browser
 original_slug: Glossaire/Navigateur
 ---
+
 Un _navigateur internet_ est un programme informatique qui reçoit et affiche les pages du {{Glossary("World Wide Web","Web")}}, et permet aux utilisateurs d'accéder à d'autres pages au travers d'{{Glossary("hyperlink","hyperliens")}}.
 
 ## Voir aussi

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/getPrototypeOf
 ---
+
 {{JSRef}}
 
 La méthode **`Object.getPrototypeOf()`** renvoie le prototype d'un objet donné (i.e. la valeur de la propriété `[[Prototype]]` interne).
@@ -52,19 +53,11 @@ Object.getPrototypeOf("toto");
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires        |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.2', 'Object.getPrototypeOf')}}                     | {{Spec2('ES5.1')}}     | Définition initiale |
-| {{SpecName('ES6', '#sec-object.getprototypeof', 'Object.getPrototypeOf')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ESDraft', '#sec-object.getprototypeof', 'Object.getPrototypeOf')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.getPrototypeOf")}}
-
-## Notes relatives à Opera
-
-Bien que les anciennes versions d'Opera ne supportent pas `Object.getPrototypeOf()`, Opera supporte la propriété non-standard {{jsxref("Object.proto", "__proto__")}} depuis Opera 10.50.
+{{Compat}}
 
 ## Voir aussi
 

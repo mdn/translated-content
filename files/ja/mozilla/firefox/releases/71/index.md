@@ -2,6 +2,7 @@
 title: Firefox 71 for Developers
 slug: Mozilla/Firefox/Releases/71
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 71 は、米国時間 2019 年 12 月 3 日 にリリースされました。このページでは、開発者に影響する Firefox 71 の変更点をまとめています。

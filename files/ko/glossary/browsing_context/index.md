@@ -1,10 +1,6 @@
 ---
 title: 브라우징 맥락
 slug: Glossary/Browsing_context
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Browsing_context
 original_slug: Glossary/브라우저-컨텍스트
 ---
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}

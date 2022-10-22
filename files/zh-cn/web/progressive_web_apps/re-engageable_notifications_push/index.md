@@ -2,6 +2,7 @@
 title: 通过通知推送让 PWA 可重用
 slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
+
 {{PreviousMenuNext("Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps/Loading", "Web/Progressive_web_apps")}}
 
 以本地缓存实现离线应用是一个强大的特性。允许用户在主屏幕上安装 Web 应用程序则显得更了不起。但除了单纯依赖用户手动打开应用之外，我们还可以走得更远，利用通知和消息推送提高用户参与度，并且随时提供新的内容。

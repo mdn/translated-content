@@ -10,6 +10,7 @@ tags:
   - contentScripts
 translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts
 ---
+
 {{AddonSidebar}}
 
 Utilisez cette API pour enregistrer des scripts de contenu. L'enregistrement d'un script de contenu demande au navigateur d'insérer les scripts de contenu donnés dans des pages correspondant aux modèles d'URL donnés.

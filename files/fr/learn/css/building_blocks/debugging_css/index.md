@@ -4,6 +4,7 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 translation_of: Learn/CSS/Building_blocks/Debugging_CSS
 original_slug: Apprendre/CSS/Building_blocks/Debugging_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 
 Parfois, quand vous écrirez du CSS, vous rencontrerez un problème où votre CSS semblera ne pas se comporter comme vous vous y attendrez. Peut-être que vous croirez qu'un certain sélecteur devrait être lié à un élément, mais rien ne se passe, ou une box aura une taille différente de ce que vous espérerez. Cet article vous donnera une ligne directrice pour débeuguer un problème CSS, et vous montrera comment les DevTools (outils de développeur) inclus dans tous les navigateurs modernes peuvent vous aider à comprendre ce qui se passe.

@@ -3,6 +3,7 @@ title: abort
 slug: Web/API/IDBTransaction/abort_event
 translation_of: Web/API/IDBTransaction/abort_event
 ---
+
 Le gestionnaire d'arrêt est exécuté lorsqu'une transaction a été interrompue.
 
 ## Informations générales
@@ -28,16 +29,6 @@ Le gestionnaire d'arrêt est exécuté lorsqu'une transaction a été interrompu
 | `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
-
-## Evénements liés
-
-- {{event("success")}}
-- {{event("error")}}
-- {{event("abort")}}
-- {{event("complete")}}
-- {{event("upgradeneeded")}}
-- {{event("blocked")}}
-- {{event("versionchange")}}
 
 ## Voir aussi
 

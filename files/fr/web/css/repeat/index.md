@@ -4,6 +4,7 @@ slug: Web/CSS/repeat
 translation_of: Web/CSS/repeat()
 original_slug: Web/CSS/repeat()
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`repeat()`** permet de répéter un fragment d'une liste de pistes. Autrement dit, lorsqu'on a une grille avec de nombreuses lignes/colonnes, cela permet de réutiliser un même motif sur la grille. On a alors des règles plus concises.
@@ -121,10 +122,8 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName("CSS Grid", "#funcdef-repeat", "repeat()")}} | {{Spec2("CSS Grid")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid-template-columns.repeat")}}
+{{Compat}}

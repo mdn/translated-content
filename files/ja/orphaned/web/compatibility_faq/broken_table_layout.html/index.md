@@ -3,6 +3,7 @@ title: テーブルのレイアウトが崩れている
 slug: orphaned/Web/Compatibility_FAQ/Broken_Table_Layout.html
 original_slug: Web/Compatibility_FAQ/Broken_Table_Layout.html
 ---
+
 ## 概要
 
 テーブルのセル幅に統一性がなく、テーブル全体のレイアウトが崩れます。

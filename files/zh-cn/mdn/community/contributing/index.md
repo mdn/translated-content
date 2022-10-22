@@ -2,6 +2,7 @@
 title: 为 MDN Web 文档作贡献
 slug: MDN/Community/Contributing
 ---
+
 {{MDNSidebar}}
 
 - [初识 MDN](/zh-CN/docs/MDN/Community/Contributing/Getting_started)

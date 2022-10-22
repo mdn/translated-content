@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: progress event'
 slug: Web/API/HTMLMediaElement/progress_event
 ---
+
 {{APIRef}}
 
 **`progress`** 事件在浏览器加载一个资源的时候周期性触发。

@@ -2,6 +2,7 @@
 title: window.name
 slug: Web/API/Window/name
 ---
+
 {{ApiRef}}
 
 ウィンドウ名を取得 / 設定します。

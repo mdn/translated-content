@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-size-adjust
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`text-size-adjust`** permet de contrôler l'algorithme d'amplification du texte sur certains appareils mobiles. Cette propriété n'est pas standard et doit donc être préfixée : `-moz-text-size-adjust`, `-webkit-text-size-adjust`, and `-ms-text-size-adjust`.
@@ -47,21 +48,21 @@ La propriété `text-size-adjust` est définie avec le mot-clé `none` ou le mot
 - `<percentage>`
   - : Une valeur exprimée en pourcentages (type de données {{cssxref("&lt;percentage&gt;")}}. Cette valeur est synonyme du mot-clé `auto` et ajoute comme information le taux d'amplification à utiliser sur la police avec l'algorithme.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName("CSS Text Size Adjust", "#adjustment-control", "text-size-adjust")}} | {{Spec2("CSS Text Size Adjust")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-size-adjust")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: Sensor APIs
 slug: Web/API/Sensor_APIs
 ---
+
 {{APIRef("Generic Sensor API")}}
 
 传感器 API（Sensor APIs）是一组统一设计的接口，它们在 web 平台中为各类传感器提供了一致的访问方式。

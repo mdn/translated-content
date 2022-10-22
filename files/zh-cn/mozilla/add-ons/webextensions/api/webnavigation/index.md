@@ -2,6 +2,7 @@
 title: webNavigation
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
 ---
+
 {{AddonSidebar}}
 
 Add event listeners for the various stages of a navigation. A navigation consists of a frame in the browser transitioning from one URL to another, usually (but not always) in response to a user action like clicking a link or entering a URL in the location bar.
@@ -71,7 +72,7 @@ To use this API you need to have the "webNavigation" [permission](/zh-CN/docs/Mo
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.webNavigation")}}
+{{Compat}}
 
 ### Edge incompatibilities
 

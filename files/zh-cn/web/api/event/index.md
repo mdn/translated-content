@@ -2,6 +2,7 @@
 title: Event
 slug: Web/API/Event
 ---
+
 {{APIRef("DOM")}}
 
 **`Event`** 接口表示在 DOM 中出现的事件。
@@ -154,7 +155,7 @@ slug: Web/API/Event
 
 ## 浏览器兼容性
 
-{{Compat("api.Event")}}
+{{Compat}}
 
 ## 参考
 

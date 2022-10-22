@@ -2,6 +2,7 @@
 title: HTMLImageElement.loading
 slug: Web/API/HTMLImageElement/loading
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} の **`loading`** プロパティは、文字列で、{{Glossary("user agent", "ユーザーエージェント")}}に現在のウィンドウの{{Glossary("visual viewport", "視覚ビューポート")}}の外にある画像の読み込みをどのように処理するかのヒントを提供するものです。

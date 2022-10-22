@@ -2,6 +2,7 @@
 title: CSS データ型
 slug: Web/CSS/CSS_Types
 ---
+
 {{CSSRef}}
 
 **CSS データ型**は、 CSS のプロパティや関数で使用される具体的な値 (キーワードや単位を含む) を定義しています。これは[コンポーネント値型](https://www.w3.org/TR/css3-values/#component-types)の特殊な種類です。

@@ -2,6 +2,7 @@
 title: Arguments 物件
 slug: Web/JavaScript/Reference/Functions/arguments
 ---
+
 {{jsSidebar("Functions")}}
 
 **`arguments`** 物件是一個對應傳入函式之引數的類陣列（`Array-like`）物件。
@@ -209,7 +210,7 @@ func(); // undefined
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.arguments")}}
+{{Compat}}
 
 ## 參見
 

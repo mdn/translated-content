@@ -2,6 +2,7 @@
 title: border-image-outset
 slug: Web/CSS/border-image-outset
 ---
+
 {{CSSRef}}
 
 **`border-image-outset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[境界画像](/ja/docs/Web/CSS/border-image)が境界ボックスからはみ出す幅を設定します。

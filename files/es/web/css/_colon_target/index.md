@@ -22,7 +22,9 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:target`** de [CSS](/es/do
 
 Por ejemplo, la siguiente URL tiene un fragmento (indicado por el signo #) que apunta a un elemento llamado `section2`:
 
-    http://www.example.com/index.html#section2
+```
+http://www.example.com/index.html#section2
+```
 
 El siguiente elemento sería seleccionado por un selector `:target` cuando la URL actual sea igual a la anterior:
 

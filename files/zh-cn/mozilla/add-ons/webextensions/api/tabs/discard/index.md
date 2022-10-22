@@ -2,6 +2,7 @@
 title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 ---
+
 {{AddonSidebar()}}
 
 丢弃一个或多个标签页。
@@ -35,7 +36,7 @@ If the ID of the active tab is passed in, it will not be discarded, but the prom
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.tabs.discard", 10)}}
+{{Compat}}
 
 ## 示例
 

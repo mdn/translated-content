@@ -9,6 +9,7 @@ tags:
   - TopicStub
 translation_of: Mozilla/Firefox/Releases/25
 ---
+
 {{FirefoxSidebar}}
 
 ## Changements pour les développeurs Web
@@ -27,7 +28,7 @@ translation_of: Mozilla/Firefox/Releases/25
 - La prise en charge d'une requête multimédia non standard de Mozilla uniquement pour déterminer la version du système d'exploitation a été ajoutée: [`-moz-os-version`](/fr/docs/Web/Guide/CSS/Media_queries#-moz-os-version) ({{bug("810399")}}). La propriété n'est actuellement implémentée que sur Windows.
 - La propriété CSS {{cssxref("-moz-osx-font-smoothing")}} a été ajoutée ({{bug("857142")}}).
 - Notre support expérimental pour {{cssxref("filter")}} prend désormais en charge la notation fonctionnelle `hue-rotate()` ({{bug(897392)}}). Il est toujours désactivé par défaut.
-- ` page-break-inside``: avoid ` travaille maintenant avec la hauteur d'un bloc ({{bug(883676)}}).
+- `page-break-inside`: `avoid` travaille maintenant avec la hauteur d'un bloc ({{bug(883676)}}).
 
 ### HTML
 

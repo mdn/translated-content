@@ -2,6 +2,7 @@
 title: mask-border
 slug: Web/CSS/mask-border
 ---
+
 {{cssref}}{{SeeCompatTable}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`mask-border`** 允许你创建一个紧贴元素边框边缘的 mask.

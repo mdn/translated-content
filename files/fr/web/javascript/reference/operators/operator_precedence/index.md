@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 original_slug: Web/JavaScript/Reference/Opérateurs/Précédence_des_opérateurs
 ---
+
 {{jsSidebar("Operators")}}
 
 La **précédence des opérateurs** détermine l'ordre dans lequel les opérateurs sont évalués. Les opérateurs avec la plus haute précédence sont évalués en premier.

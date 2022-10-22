@@ -2,15 +2,16 @@
 title: Unicode property escapes
 slug: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 **Unicode property escapes** [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions) 支持根据 Unicode 属性进行匹配，例如我们可以用它来匹配出表情、标点符号、字母 (甚至适用特定语言或文字) 等。同一符号可以拥有多种 Unicode 属性，属性则有 binary ("boolean-like") 和 non-binary 之分。
 
 {{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
 
-> **备注：** 使用 Unicode 属性转义依靠 [`\u` 标识](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)，`\u` 表示该字符串被视为一串 Unicode 代码点。参考 [`RegExp.prototype.nicode`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode).
+> **备注：** 使用 Unicode 属性转义依靠 [`\u` 标识](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)，`\u` 表示该字符串被视为一串 Unicode 代码点。参考 [`RegExp.prototype.unicode`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)。
 
-> **备注：** 某些 Unicode 属性比[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)(如 `\w` 只匹配拉丁字母 `a` 到 `z`) 包含更多的字符 ，但后者浏览器兼容性更好 (截至 2020 一月).
+> **备注：** 某些 Unicode 属性比[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)(如 `\w` 只匹配拉丁字母 `a` 到 `z`) 包含更多的字符，但后者浏览器兼容性更好 (截至 2020 一月).
 
 ## 句法
 
@@ -34,7 +35,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
 参考 [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt)
 
 - UnicodeBinary 属性名
-  - : [Binary 属性](https://tc39.es/ecma262/#table-binary-unicode-properties)名. E.g.: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property). [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacritic`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`White_space`](https://unicode.org/reports/tr44/#White_Space), 等。另见 [Unicode Data PropList.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt).
+  - : [Binary 属性](https://tc39.es/ecma262/#table-binary-unicode-properties)名。E.g.: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property). [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacritic`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`White_space`](https://unicode.org/reports/tr44/#White_Space), 等。另见 [Unicode Data PropList.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt).
 - Unicode 属性名
   - : [Non-binary](https://tc39.es/ecma262/#table-nonbinary-unicode-properties) 属性名：
 - Unicode 属性值

@@ -2,6 +2,7 @@
 title: <blockquote>
 slug: Web/HTML/Element/blockquote
 ---
+
 ## 摘要
 
 **HTML `<blockquote>` 元素**（_HTML 區塊引言元素_）定義一段文字屬於引用。通常，這元素會透過縮排來呈現（要知道如何改變，請參考[備註](#Notes)）。引言的 URL 來源可透過 **cite** 屬性賦予，而來源的文本形式可以使用 {{HTMLElement("cite")}} 元素。
@@ -38,7 +39,7 @@ slug: Web/HTML/Element/blockquote
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.blockquote")}}
+{{Compat}}
 
 ## 備註
 

@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/select
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<select>`** représente un contrôle qui fournit une liste d'options parmi lesquelles l'utilisateur pourra choisir.
@@ -44,7 +45,7 @@ Comme tous les autres éléments HTML, celui-ci inclut [les attributs universels
 - {{htmlattrdef("required")}}
   - : Un attribut booléen qui indique qu'une option dont la valeur est une chaîne de caractères non-vide doit être sélectionnée.
 - {{htmlattrdef("size")}}
-  - : Si le contrôle est affichée comme une liste déroulante, cet attribut indique le nombre de lignes qui doivent être visibles à l'écran en même temps. On notera que les navigateurs ne sont pas obligés de présenter un élément ` <select``> ` sous la forme d'une liste déroulante. La valeur par défaut de cet attribut est 0 (cf. notes de compatibilité ci-après).
+  - : Si le contrôle est affichée comme une liste déroulante, cet attribut indique le nombre de lignes qui doivent être visibles à l'écran en même temps. On notera que les navigateurs ne sont pas obligés de présenter un élément `<select>` sous la forme d'une liste déroulante. La valeur par défaut de cet attribut est 0 (cf. notes de compatibilité ci-après).
 
 ## Mise en forme avec CSS
 

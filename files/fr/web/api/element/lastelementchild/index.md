@@ -4,6 +4,7 @@ slug: Web/API/Element/lastElementChild
 translation_of: Web/API/Element/lastElementChild
 browser-compat: api.Element.lastElementChild
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Element.lastElementChild`** renvoie un objet [`Element`](/fr/docs/Web/API/Element) correspondant au dernier élément enfant de l'élément courant (celui sur lequel on a appelé la propriété), ou `null` s'il n'y a pas d'éléments enfants.

@@ -2,6 +2,7 @@
 title: Notification.onclose
 slug: Web/API/Notification/close_event
 ---
+
 {{APIRef("Web Notifications")}}
 
 ## Summary

@@ -2,6 +2,7 @@
 title: Document.doctype
 slug: Web/API/Document/doctype
 ---
+
 {{ApiRef("DOM")}}
 
 現在の文書に関連付けられた文書型宣言 (Document Type Declaration) (DTD) を返します。返されるオブジェクトは、 {{domxref("DocumentType")}} インターフェイスを持ちます。 `DocumentType` を生成するには {{domxref("DOMImplementation.createDocumentType()")}} を使用してください。

@@ -2,6 +2,7 @@
 title: window.content
 slug: Web/API/Window/content
 ---
+
 {{ ApiRef() }}
 
 ### 概述

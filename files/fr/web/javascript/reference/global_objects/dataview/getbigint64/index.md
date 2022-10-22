@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getBigInt64
 ---
+
 {{JSRef}}
 
 La méthode **`getBigInt64()`** permet de lire un entier signé sur 64 bits (type _long long_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.

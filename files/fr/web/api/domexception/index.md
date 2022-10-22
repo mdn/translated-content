@@ -8,6 +8,7 @@ tags:
   - exceptions
 translation_of: Web/API/DOMException
 ---
+
 {{ APIRef("DOM") }}
 
 L'interface **`DOMException`** représente un évènement anormal (appelé **exception**) qui appraît suite à l'appel d'une méthode ou à l'accès à une propriété d'une API web. C'est essentiellement lié à la façon dont les conditions d'erreur sont décrites dans les API web.

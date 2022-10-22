@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-right-width
 ---
+
 {{CSSRef}}
 
 La propriété **`border-right-width`** définit l'épaisseur de la bordure pour le côté droit d'une boîte.
@@ -45,9 +46,13 @@ border-right-width: unset;
 
     La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée `thin ≤ medium ≤ thick` et que ces valeurs soient constantes pour un même document.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -87,17 +92,11 @@ border-right-width: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                     | Commentaires                       |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-width', 'border-right-width')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification significative. |
-| {{SpecName('CSS2.1', 'box.html#border-width-properties', 'border-right-width')}} | {{Spec2('CSS2.1')}}                 | Pas de modification significative. |
-| {{SpecName('CSS1', '#border-right-width', 'border-right-width')}}                     | {{Spec2('CSS1')}}                 | Définition initiale.               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-right-width")}}
+{{Compat}}
 
 ## Voir aussi
 

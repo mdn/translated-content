@@ -2,6 +2,7 @@
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
 ---
+
 {{APIRef("HTML DOM")}}HTML 媒体元素接口在属性和方法中添加了 {{domxref("HTMLElement", "HTML 元素")}}来支持基础的媒体相关的能力，就像 audio 和 video 一样。{{domxref("HTMLVideoElement", "HTML 视频元素")}}和 {{domxref("HTMLAudioElement", "HTML 音频元素")}}元素都继承自此接口。{{InheritanceDiagram(600, 180)}}
 
 ## 特性
@@ -585,7 +586,7 @@ Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement")}}
+{{Compat}}
 
 ## See also
 

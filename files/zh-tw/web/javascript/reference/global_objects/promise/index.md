@@ -2,6 +2,7 @@
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** 物件代表一個即將完成、或失敗的非同步操作，以及它所產生的值。
@@ -202,7 +203,7 @@ if ("Promise" in window) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Promise")}}
+{{Compat}}
 
 ## 參見
 

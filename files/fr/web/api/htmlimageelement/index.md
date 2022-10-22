@@ -3,6 +3,7 @@ title: HTMLImageElement
 slug: Web/API/HTMLImageElement
 translation_of: Web/API/HTMLImageElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface  **`HTMLImageElement`** fournit des propriétés et des méthodes spéciales pour manipuler la mise en page et la présentation des éléments {{HTMLElement("img")}} .
@@ -65,7 +66,7 @@ _Hérite les propriétés de son parent, {{domxref("HTMLElement")}}._
 
 ## Erreurs
 
-Si une erreur apparaît pendant un essai de chargement ou de rendu de l'image, et si un gestionnaire d'évènements {{htmlattrxref("onerror")}} a été configuré pour gérer les évènements {{event("error")}} , ce gestionnaire est appelé. Cela peut se produire dans un certain nombre de situations, y compris :
+Si une erreur apparaît pendant un essai de chargement ou de rendu de l'image, et si un gestionnaire d'évènements {{htmlattrxref("onerror")}} a été configuré pour gérer les évènements [`error`](/fr/docs/Web/API/Element/error_event), ce gestionnaire est appelé. Cela peut se produire dans un certain nombre de situations, y compris :
 
 - L'attribut  {{htmlattrxref("src", "img")}} est vide ou `null`.
 - L'URL spécifiée de `src`  est la même que l'URL de la page actuelle de l'utilisateur.

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 original_slug: Web/API/API_IndexedDB/Using_IndexedDB
 ---
+
 IndexedDB est un moyen de stocker des données de manière persistante dans un navigateur. Cela vous laisse créer des applications web avec de riches possibilités de requêtes indépendamment de la disponibilité du réseau puisque vos applications peuvent fonctionner en ligne ou hors-ligne.
 
 ## À propos de ce document
@@ -345,7 +346,7 @@ Vous voyez comment ça fonctionne ? Comme il n'y a qu'un seul objet de stockage,
 
 Vous pouvez accélérer l’accès à vos données en limitant la portée et le mode de la transaction. Voici deux astuces :
 
-- Lors de la définition de la [scope](/fr/docs/IndexedDB/Using_IndexedDB$edit#scope) _(portée)_, spécifiez seulement l’objet de stockage dont vous avez besoin. De cette manière, vous pouvez avoir de multiples opérations simultanées sans qu’elles se chevauchent.
+- Lors de la définition de la [scope](/fr/docs/IndexedDB/Using_IndexedDB#scope) _(portée)_, spécifiez seulement l’objet de stockage dont vous avez besoin. De cette manière, vous pouvez avoir de multiples opérations simultanées sans qu’elles se chevauchent.
 - Spécifier une transaction en mode readwrite uniquement lorsque c’est nécessaire. Vous pouvez avoir de multiples opérations simultanées en lecture seule, mais vous ne pouvez avoir qu’une transaction "readwrite" _(lecture/écriture)_ sur un objet de stockage. Pour en savoir plus, voir la définition relative aux [transactions in the Basic Concepts article](/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction).
 
 ### Mettre à jour une entrée dans la base de données
@@ -592,11 +593,11 @@ Lorsque le navigateur s'arrête (parce que l'utilisateur a choisi l'option Quit 
 
 1. Chaque transaction sur chaque base de données affectée (ou toutes les bases de données ouvertes, dans le cas de l'arrêt du navigateur) est interrompue avec un `AbortError`. L'effet est le même que si {{domxref("IDBTransaction.abort()")}} est appelé sur chaque transaction.
 2. Une fois toutes les transactions terminées, la connexion à la base de données est fermée .
-3. Enfin, l'objet {{domxref("IDBDatabase")}} représentant la connexion à la base de données reçoit un évènement {{event("close")}} . Vous pouvez utiliser un gestionnaire d'évènements  {{domxref("IDBDatabase.onclose")}} pour écouter ces évènements, afin de savoir quand une base de données est fermée de façon inattendue .
+3. Enfin, l'objet {{domxref("IDBDatabase")}} représentant la connexion à la base de données reçoit un évènement [`close`](/fr/docs/Web/API/IDBDatabase/close_event). Vous pouvez utiliser un gestionnaire d'évènements  {{domxref("IDBDatabase.onclose")}} pour écouter ces évènements, afin de savoir quand une base de données est fermée de façon inattendue .
 
 Le comportement décrit ci-dessus est nouveau et n'est disponible que pour les versions de navigateur suivantes : Firefox 50, Google Chrome 31 (approximativement).
 
-Avant ces versions de navigateurs, les transactions étaient interrompues silencieusement et aucun événement {{event ("close")}} n'était déclenché, donc il n'y avait aucun moyen de détecter une fermeture de base de données inattendue.
+Avant ces versions de navigateurs, les transactions étaient interrompues silencieusement et aucun événement [`close`](/fr/docs/Web/API/IDBDatabase/close_event) n'était déclenché, donc il n'y avait aucun moyen de détecter une fermeture de base de données inattendue.
 
 Étant donné que l'utilisateur peut quitter le navigateur à tout moment, cela signifie que vous ne pouvez pas compter sur une transaction particulière à compléter, et sur les navigateurs plus anciens, vous n'êtes même pas informé quand elles ne sont pas terminées. Il y a plusieurs conséquences à ce comportement.
 

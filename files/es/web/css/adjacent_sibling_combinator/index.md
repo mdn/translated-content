@@ -13,9 +13,11 @@ original_slug: Web/CSS/Selectores_hermanos_adyacentes
 
 Se hace referencia a este selector como selector adyacente o selector del próximo hermano. Sólo seleccionará un elemento especificado que esté inmediatamente después de otro elemento especificado.
 
-## Sintaxis
+## Síntaxis
 
-    elemento_anterior + elemento_afectado { estilos }
+```
+elemento_anterior + elemento_afectado { estilos }
+```
 
 ## Ejemplo
 

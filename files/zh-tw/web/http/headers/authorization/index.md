@@ -2,6 +2,7 @@
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
 ---
+
 {{HTTPSidebar}}
 
 HTTP 請求中的 **`Authorization`** 是 user agent 用來向伺服器做身份認證（authentication）的憑證（credentials），

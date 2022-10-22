@@ -2,6 +2,7 @@
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
+
 {{JSRef}}
 
 **`Number.isFinite()`** 方法用来检测传入的参数是否是一个有穷数。

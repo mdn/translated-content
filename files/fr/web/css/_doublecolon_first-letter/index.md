@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::first-letter
 ---
+
 {{CSSRef}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::first-letter`** sélectionne la première lettre de la première ligne d'un bloc, si elle n'est pas précédée par un quelconque autre contenu (comme une image ou un tableau en ligne) sur sa ligne.
@@ -116,17 +117,11 @@ p::first-letter {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                                       | Commentaire                                                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#first-letter-pseudo', '::first-letter')}}             | {{Spec2('CSS4 Pseudo-Elements')}} | Généralisation des propriétés permises pour la mise en forme du texte et des popriétés de mise en page en-ligne, {{cssxref("opacity")}} et {{cssxref("box-shadow")}}. |
-| {{SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow avec ::first-letter')}} | {{Spec2('CSS3 Text Decoration')}} | Autorise l'usage de {{cssxref("text-shadow")}} avec `::first-letter`.                                                                                                    |
-| {{SpecName('CSS3 Selectors', '#first-letter', '::first-letter')}}                             | {{Spec2('CSS3 Selectors')}}         | Définition des cas limites comme les listes, ou les comportement spécifiques à certaines langues (comme le digraphe néerlandais `IJ`).                                             |
-| {{SpecName('CSS2.1', 'selector.html#first-letter', '::first-letter')}}                         | {{Spec2('CSS2.1')}}                     | Aucune modification.                                                                                                                                                               |
-| {{SpecName('CSS1', '#the-first-letter-pseudo-element', '::first-letter')}}                 | {{Spec2('CSS1')}}                     | La définition initiale utilisait la syntaxe à un caractère deux-points.                                                                                                            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.first-letter")}}
+{{Compat}}
 
 ## Voir aussi
 

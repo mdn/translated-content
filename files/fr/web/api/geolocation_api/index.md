@@ -3,6 +3,7 @@ title: API Geolocation (géolocalisation)
 slug: Web/API/Geolocation_API
 translation_of: Web/API/Geolocation_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 L'**API <i lang="en">Geolocation</i>** permet à une personne, si elle le veut, de fournir sa position géographique à une application web. Pour respecter la vie privée, la permission est demandée auprès de l'utilisatrice ou de l'utilisateur avant la récupération des informations de géolocalisation.

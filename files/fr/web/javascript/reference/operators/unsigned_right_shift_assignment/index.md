@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.unsigned_right_shift_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur de décalage à droite non signé et d'affectation (_`>>>=`_) décale la séquence de bits fournie par l'opérande gauche vers la droite, d'autant de bits qu'indiqués par l'opérande droit, puis affecte le résultat de l'opération à la variable indiquée par l'opérande gauche.

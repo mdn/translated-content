@@ -2,6 +2,7 @@
 title: align-content
 slug: Web/CSS/align-content
 ---
+
 {{CSSRef("CSS Flexible Boxes")}}
 
 [CSS](/zh-CN/docs/Web/CSS) 的 **`align-content`** 属性设置了浏览器如何沿着[弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)的纵轴和[网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)的主轴在内容项之间和周围分配空间。

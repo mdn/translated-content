@@ -3,6 +3,7 @@ title: IDBObjectStore.createIndex()
 slug: Web/API/IDBObjectStore/createIndex
 translation_of: Web/API/IDBObjectStore/createIndex
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La méthode **`createIndex()`** de l'interface {{domxref("IDBObjectStore")}} met en place sur le magasin d'objet {{domxref("IDBObjectStore","relié")}} un nouvel index et en renvoie l'{{domxref("IDBIndex","accès")}}.
@@ -95,7 +96,7 @@ L'{{domxref("IDBIndex","accès")}} au nouvel index.
 
 ## Exemple
 
-Dans l'exemple suivant on peut voir le gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded","<code>onupgradeneeded</code>")}} être utilisé pour mètre à jour la structure de la base de donnée quand un numéro de version supérieur est chargé.
+Dans l'exemple suivant on peut voir le gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded","onupgradeneeded")}} être utilisé pour mètre à jour la structure de la base de donnée quand un numéro de version supérieur est chargé.
 
 Des méthode **`createIndex()`** sont utilisées pour mètre en place différents index sur le magasin d'objet `toDoList`.
 

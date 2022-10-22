@@ -2,6 +2,7 @@
 title: HTMLAreaElement
 slug: Web/API/HTMLAreaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAreaElement`** 接口提供了一些属性和方法 (除了常见的对象{{domxref("HTMLElement")}} 接口提供的属性和方法通过继承也能获取到) 用来控制一个 area 元素的布局和展现。
@@ -13,9 +14,9 @@ _从它的父对象{{domxref("HTMLElement")}}继承的，还有从{{domxref("URL
 - {{domxref("HTMLAreaElement.accessKey")}}
   - : 值为一个 {{domxref("DOMString")}} 类型，包含了一个简单的字符代表键盘上的一个按键，相当于快捷键。
 - {{domxref("HTMLAreaElement.alt")}}
-  - : 值为一个{{domxref("DOMString")}} 类型，代表了 {{ htmlattrxref("alt", "area") }} HTML 属性,，包含一个 area 对象显示异常的情况下显示的备用文本字符串。
+  - : 值为一个{{domxref("DOMString")}} 类型，代表了 {{ htmlattrxref("alt", "area") }} HTML 属性，包含一个 area 对象显示异常的情况下显示的备用文本字符串。
 - {{domxref("HTMLAreaElement.coords")}}
-  - : 值为一个 {{domxref("DOMString")}} 类型，代表了 {{ htmlattrxref("coords", "area") }} HTML 属性, 包含了定义热区相关的坐标。
+  - : 值为一个 {{domxref("DOMString")}} 类型，代表了 {{ htmlattrxref("coords", "area") }} HTML 属性，包含了定义热区相关的坐标。
 - {{domxref("HTMLAreaElement.download")}} {{experimental_inline}}
   - : 值为一个 {{domxref("DOMString")}} 类型，表明此资源是将要被下载的资源而不是显示在浏览器页面中。值为下载保存文件的推荐文件名。如果名字在操作系统里不是一个合格的文件名格式，浏览器将会做相应的修改。
 - {{domxref("URLUtils.hash")}}
@@ -72,7 +73,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}} and implement thos
 
 ## Browser compatibility
 
-{{Compat("api.HTMLAreaElement")}}
+{{Compat}}
 
 ## See also
 

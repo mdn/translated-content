@@ -2,6 +2,7 @@
 title: Document.title
 slug: Web/API/Document/title
 ---
+
 {{APIRef("DOM")}}
 
 `document.title` 属性用于获取或设置文档的标题。如果存在，它的默认为 [`<title>`](/zh-CN/docs/Web/HTML/Element/title) 的值。

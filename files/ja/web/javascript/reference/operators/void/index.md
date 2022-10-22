@@ -2,6 +2,7 @@
 title: void 演算子
 slug: Web/JavaScript/Reference/Operators/void
 ---
+
 {{jsSidebar("Operators")}}
 
 **`void` 演算子**は与えられた式 (`expression`) を評価し、{{jsxref("undefined")}} を返します。
@@ -59,7 +60,7 @@ void function iife() {
 </a>
 ```
 
-> **Note:** `javascript:` 擬似プロトコルは控えめなイベントハンドラーなどの代替であり、積極的に使用するべきではないでしょう。
+> **メモ:** `javascript:` 擬似プロトコルは控えめなイベントハンドラーなどの代替であり、積極的に使用するべきではないでしょう。
 
 ### アロー関数からのリーク防止
 

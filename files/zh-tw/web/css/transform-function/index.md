@@ -2,6 +2,7 @@
 title: transform-function
 slug: Web/CSS/transform-function
 ---
+
 {{ CSSRef("CSS Transforms") }}The `<transform-function>` CSS data type denotes a function applied to an element's representation in order to modify it. Usually such transform may be expressed by matrices and the resulting images can be determined using matrix multiplication on each point.
 
 ## Coordinates for 2D graphics
@@ -625,7 +626,7 @@ This transformation is characterized by a vector whose coordinates define how mu
 
 When outside the `]-1, 1[` range, the scaling enlarges the element in the direction of the coordinate; when inside the range, it shrinks the element in that direction. When equal to `1` it does nothing and when negative it performs a _point reflection_ and the size modification.
 
-> **備註：** The ` scale``() ` function only applies the transformation in the Euclidian plane (in 2D). To scale in the space, the `scale3D()` function has to be used.
+> **備註：** The `scale()` function only applies the transformation in the Euclidian plane (in 2D). To scale in the space, the `scale3D()` function has to be used.
 
 #### 表達式
 

@@ -2,6 +2,7 @@
 title: Anatomy of an extension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
+
 {{AddonSidebar}}
 
 附加元件是一群檔案的集合，基於發布及安裝的目的而包裝成一個檔案。在這個章節，我們將快速地瀏覽這些可能會放在附加元件中的檔案。

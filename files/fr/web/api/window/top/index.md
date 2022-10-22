@@ -10,6 +10,7 @@ tags:
   - Window
 translation_of: Web/API/Window/top
 ---
+
 {{APIRef}}
 
 Renvoie une référence à la fenêtre la plus haute dans la hiérarchie des fenêtres

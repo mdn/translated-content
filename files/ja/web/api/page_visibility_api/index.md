@@ -3,11 +3,12 @@ title: Page Visibility API
 slug: Web/API/Page_Visibility_API
 original_slug: Web/Guide/User_experience/Using_the_Page_Visibility_API
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 タブを使って閲覧している場合、どのウェブページもバックグラウンドにあってユーザーから見えていない場合があります。 Page Visibility API では、現在ページが見えているかどうかを調べる機能とともに、文書が表示されたり非表示になったりした時を監視することができるイベントを提供します。
 
-> **Note:** **メモ:** The Page Visibility API は、文書が表示されていない時に不必要なタスクの実行を抑止することで、リソースを節約したり実行効率を上げたりするために特に有用です。
+> **メモ:** The Page Visibility API は、文書が表示されていない時に不必要なタスクの実行を抑止することで、リソースを節約したり実行効率を上げたりするために特に有用です。
 
 ユーザーがウィンドウを最小化したり他のタブに切り替えたりした時、 API は {{event("visibilitychange")}} イベントを送信してリスナーにページの状態が変化したことを知らせます。イベントを検出していくつかの操作を実行したり、様々な動作をしたりすることができます。例えば、ウェブアプリで動画を再生している場合、ユーザーがタブをバックグラウンドにした場合に動画を一時停止させ、ユーザーがこのタブに戻ったときに再生を再開させたりすることができます。ユーザーは動画の位置に迷うことがなく、動画の音声が新しく前景になったタブの音声を邪魔せず、ユーザーがその間に動画を見落とすことがなくなります。
 
@@ -24,7 +25,7 @@ Page Visibility API の使用例をいくつか考えてみましょう。
 
 以前、開発者はこれを検出するために不完全な代替手段を使用していました。例えば window で onblur/onfocus ハンドラーを登録することでページがアクティブではないときを知る助けになりますが、ページがユーザーから隠された状態であることは知らせてくれません。 Page Visibility API はこれを解決します。
 
-> **Note:** **メモ:** {{domxref("GlobalEventHandlers.onblur", "onblur")}} 及び {{domxref("GlobalEventHandlers.onfocus", "onfocus")}} はユーザーがウィンドウを切り替えたことを教えてくれますが、非表示にしたという意味になるとは限りません。ページが非表示になるのは、ユーザーがタブを切り替えたり、タブを含むブラウザーウィンドウを最小化したりした時だけです。
+> **メモ:** {{domxref("GlobalEventHandlers.onblur", "onblur")}} 及び {{domxref("GlobalEventHandlers.onfocus", "onfocus")}} はユーザーがウィンドウを切り替えたことを教えてくれますが、非表示にしたという意味になるとは限りません。ページが非表示になるのは、ユーザーがタブを切り替えたり、タブを含むブラウザーウィンドウを最小化したりした時だけです。
 
 ### Policies in place to aid background page performance
 
@@ -117,13 +118,13 @@ The Page Visibility API adds the following properties to the {{domxref("Document
 
       - : ページのコンテンツはプリレンダリングされており、ユーザーから見えていません (`document.hidden` では隠されているとみなされます)。文書は `prerender` の状態から始まるかもしれませんが、プリレンダリングは 1 つの文書は 1 回しか行われないので、他の状態からこの状態に移ることはありません。
 
-        > **Note:** **メモ:** すべてのブラウザーがプリレンダリングに対応しているわけではありません。
+        > **メモ:** すべてのブラウザーがプリレンダリングに対応しているわけではありません。
 
     - `unloaded`
 
       - : ページがメモリからアンロードされている途中です。
 
-        > **Note:** **メモ:** すべてのブラウザーが `unloaded` の値に対応しているわけではありません。
+        > **メモ:** すべてのブラウザーが `unloaded` の値に対応しているわけではありません。
 
 - {{domxref("Document.onvisibilitychange")}}
   - : {{event("visibilitychange")}} イベントが発生したときに呼び出されるコードを提供する {{domxref("EventListener")}} です。

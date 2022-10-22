@@ -2,6 +2,7 @@
 title: document.createExpression
 slug: Web/API/Document/createExpression
 ---
+
 {{ ApiRef() }}
 
 该方法将编译生成一个 [`XPathExpression`](/zh-CN/XPathExpression) ,可以用来多次的执行。

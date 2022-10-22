@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/formatToParts
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.DateTimeFormat.prototype.formatToParts()`** permet de mettre en forme des chaînes de caractères avec des informations temporelles selon la locale utilisée.
@@ -139,13 +140,11 @@ Une prothèse de cette fonctionnalité est disponible sur le dépôt décrivant 
 
 ## Spécifications
 
-| Spécification                                                                                                                                                            | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('ES Int Draft', '#sec-Intl.DateTimeFormat.prototype.formatToParts', 'Intl.DateTimeFormat.prototype.formatToParts')}} | {{Spec2('ES Int Draft')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.DateTimeFormat.formatToParts")}}
+{{Compat}}
 
 ## Voir aussi
 

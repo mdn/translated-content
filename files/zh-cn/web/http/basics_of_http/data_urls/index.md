@@ -3,6 +3,7 @@ title: Data URLs
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
 original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
+
 {{HTTPSidebar}}
 
 **Data URLs**，即前缀为 `data:` 协议的 URL，其允许内容创建者向文档中嵌入小文件。
@@ -52,7 +53,7 @@ YSBzbGlnaHRseSBsb25nZXIgdGVzdCBmb3IgdGV2ZXIK
 
 ### 在网页上使用 JavaScript
 
-Web APIs 已经有对 base64 进行编码解码的方法: [Base64 encoding and decoding](/zh-CN/docs/Web/JavaScript/Base64_encoding_and_decoding).
+Web APIs 已经有对 base64 进行编码解码的方法：[Base64 encoding and decoding](/zh-CN/docs/Web/JavaScript/Base64_encoding_and_decoding).
 
 ## 常见问题
 

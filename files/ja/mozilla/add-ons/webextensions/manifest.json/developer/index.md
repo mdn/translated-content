@@ -2,6 +2,7 @@
 title: developer
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/developer
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

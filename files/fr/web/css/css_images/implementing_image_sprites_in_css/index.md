@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
 original_slug: Web/CSS/CSS_Images/Sprites_CSS
 ---
+
 {{CSSRef}}
 
 Les _sprites_ sont utilisées dans de nombreuses applications web où de multiples images sont utilisées. Au lieu d'avoir une image par fichier, on économise de la bande passante et de la mémoire en les envoyant toute dans le même fichier, ainsi, le nombre de requêtes HTTP diminue. On utilise alors `background-position` pour choisir l'image qu'on souhaite utiliser.

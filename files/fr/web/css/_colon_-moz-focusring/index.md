@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:-moz-focusring
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 La pseudo-classe **`:-moz-focusring`** est similaire à la pseudo-classe {{cssxref(":focus")}} mais ne cible un élément que si celui-ci a le focus **et** qu'un indicateur doit être dessiné autour ou sur cet élément.

@@ -4,6 +4,7 @@ slug: WebAssembly/Exported_functions
 i10n:
   sourceCommit: 0bb1a8c4e18c5068319e888bbf18c3599adb8324
 ---
+
 {{WebAssemblySidebar}}
 
 エクスポートされた WebAssembly 関数は WebAssembly 関数が JavaScript でどのように表現されるのか、この記事では、もう少し詳しく説明します。

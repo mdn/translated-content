@@ -3,6 +3,7 @@ title: overflow
 slug: Web/CSS/overflow
 translation_of: Web/CSS/overflow
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`overflow`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui définit comment gérer le dépassement du contenu d'un élément dans son bloc. Elle définit les valeurs des propriétés {{cssxref("overflow-x")}} et {{cssxref("overflow-y")}}.
@@ -63,9 +64,13 @@ La propriété `overflow` peut être définie grâce à un ou deux des mots-clé
 - `-moz-hidden-unscrollable` {{non-standard_inline}}
   - : Principalement utilisé en interne et par les thèmes. Cela désactive le défilement pour les éléments XML racines `<html>`, `<body>` (avec les flèches du clavier et la roue de la souris).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -145,16 +150,11 @@ p.auto {
 
 ## Spécifications
 
-| Spécification                                                                        | État                                 | Commentaires                                                |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------- |
-| {{SpecName('CSS3 Overflow', '#propdef-overflow', 'overflow')}} | {{Spec2('CSS3 Overflow')}} | La syntaxe permet désormais d'utiliser une ou deux valeurs. |
-| {{SpecName('CSS2.1', 'visufx.html#overflow', 'overflow')}}         | {{Spec2('CSS2.1')}}             | Définition initiale.                                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.overflow")}}
+{{Compat}}
 
 ## Voir aussi
 

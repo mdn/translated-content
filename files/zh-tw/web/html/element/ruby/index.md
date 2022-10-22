@@ -2,6 +2,7 @@
 title: <ruby>
 slug: Web/HTML/Element/ruby
 ---
+
 {{HTMLRef}}
 
 **HTML `<ruby>` 元素**的意思是旁註標記。旁註標記用於標示東亞文字的發音。
@@ -44,7 +45,7 @@ slug: Web/HTML/Element/ruby
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.ruby")}}
+{{Compat}}
 
 ## 參閱
 

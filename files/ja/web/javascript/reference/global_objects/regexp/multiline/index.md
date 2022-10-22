@@ -2,6 +2,7 @@
 title: RegExp.prototype.multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 ---
+
 {{JSRef}}
 
 **`multiline`** プロパティは、正規表現で "`m`" フラグが使用されているかどうかを示します。`multiline` は正規表現インスタンスごとの読み取り専用プロパティです。

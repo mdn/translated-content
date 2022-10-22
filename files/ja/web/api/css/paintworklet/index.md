@@ -2,6 +2,7 @@
 title: CSS.paintWorklet (静的プロパティ)
 slug: Web/API/CSS/paintWorklet
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 **`paintWorklet`** は {{DOMxRef("CSS")}} インターフェイスの静的な読み取り専用プロパティで、{{DOMxRef("PaintWorklet")}} へのアクセスを提供します。 これは、CSS のプロパティが画像ファイルを期待する場所においてプログラムで画像を生成します。

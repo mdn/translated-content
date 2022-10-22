@@ -20,6 +20,5 @@ O **Valor inicial** de uma propriedade [CSS](/pt-BR/docs/Web/CSS) é o seu valor
 
 ## Veja Também
 
-- [Refercia CSS](/pt-BR/docs/Web/CSS/CSS_Reference "CSS Reference")
-- {{ CSS_key_concepts() }}
-- [`initial`](/pt-BR/docs/CSS/initial "en/CSS/initial")
+- [Refercia CSS](/pt-BR/docs/Web/CSS/CSS_Reference)
+- [`initial`](/pt-BR/docs/CSS/initial)

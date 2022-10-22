@@ -2,6 +2,7 @@
 title: Math.PI
 slug: Web/JavaScript/Reference/Global_Objects/Math/PI
 ---
+
 {{JSRef}}
 
 **`Math.PI`** プロパティは、円周と直径の比率、およそ 3.14159 を表します。

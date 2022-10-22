@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Malformed_URI
 original_slug: Web/JavaScript/Reference/Erreurs/Malformed_URI
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

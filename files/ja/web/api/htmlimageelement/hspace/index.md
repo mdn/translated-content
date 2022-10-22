@@ -2,6 +2,7 @@
 title: HTMLImageElement.hspace
 slug: Web/API/HTMLImageElement/hspace
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 **`hspace`** は {{domxref("HTMLImageElement")}} インターフェイスの*廃止された*プロパティで、ページをレイアウトする際に {{HTMLElement("img")}} 要素の左右に何ピクセル分の空きを残すかを指定します。
@@ -16,7 +17,7 @@ slug: Web/API/HTMLImageElement/hspace
 
 `hspace` に指定された値は {{cssxref("margin-left")}} および {{cssxref("margin-right")}} プロパティにマッピングされて、それらのマージンの幅をピクセル単位で指定します。
 
-> **Warning:** このプロパティは廃止されました。代わりに、 CSS の {{cssxref("margin")}} プロパティとその個別指定プロパティを使用して、 `<img>` の周囲に余白を設定してください。
+> **警告:** このプロパティは廃止されました。代わりに、 CSS の {{cssxref("margin")}} プロパティとその個別指定プロパティを使用して、 `<img>` の周囲に余白を設定してください。
 
 ## 仕様書
 

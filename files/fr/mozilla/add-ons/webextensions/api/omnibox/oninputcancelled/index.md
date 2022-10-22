@@ -12,6 +12,7 @@ tags:
   - onInputCancelled
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputCancelled
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque l'utilisateur a annulé son interaction avec votre poste (par exemple, en cliquant en dehors de la barre d'adresse).

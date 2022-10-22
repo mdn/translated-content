@@ -14,6 +14,7 @@ tags:
 translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 original_slug: Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest
 ---
+
 [`XMLHttpRequest`](/fr/docs/DOM/XMLHttpRequest) permet d'envoyer des requêtes HTTP de manière très simple.  Il suffit de créer une instance de l'objet, d'ouvrir une URL, et d'envoyer la requête.  Le [status HTTP](/fr/docs/HTTP/HTTP_response_codes) du résultat, tout comme le contenu de la réponse, sont disponibles dans l'objet de la requête quand la transaction est terminée. Cette page présente quelques-uns des cas d'utilisation communs et même un peu obscurs pour cet objet JavaScript puissant.
 
 ```js
@@ -31,7 +32,7 @@ oReq.send();
 
 Une demande faite via XMLHttpRequest peut récupérer les données dans l'une des deux façons, de manière asynchrone ou synchrone. Le type de demande est dictée par l'argument optionnel async (le troisième argument) qui est mis sur la méthode [open()](</en-US/docs/DOM/XMLHttpRequest#open()>) XMLHttpRequest (). Si cet argument est true ou non spécifié, l'objet XMLHttpRequest est traitée de manière asynchrone, sinon le processus est effectué de façon synchrone. Une discussion détaillée et des démonstrations de ces deux types de demandes peuvent être trouvés sur la page des [requêtes synchrones et asynchrones](/fr/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). En général, vous devriez rarement, voire jamais, utiliser requêtes synchrones.
 
-> **Note :** A partir de Gecko 30.0 {{ geckoRelease("30.0") }}, les requêtes synchrones sur le processus principal ont été dépréciées en raison de l'effet négatif sur l'expérience utilisateur.
+> **Note :** A partir de Gecko 30.0, les requêtes synchrones sur le processus principal ont été dépréciées en raison de l'effet négatif sur l'expérience utilisateur.
 
 ## Gérer les réponses
 

@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Examples
 original_slug: Mozilla/Add-ons/WebExtensions/Exemples
 ---
+
 {{AddonSidebar}}
 
 Pour illustrer la manière d'utiliser les API WebExtension, nous disposons d'un répertoire d'exemples d'extensions sur le site <https://github.com/mdn/webextensions-examples>. Cet article décrit comment exécuter ces exemples et énumère les exemples ainsi que les API WebExtension qu'ils illustrent.

@@ -2,6 +2,7 @@
 title: <hr>
 slug: Web/HTML/Element/hr
 ---
+
 {{HTMLRef}}
 
 **HTML** 的** `<hr>` 元素**代表在段落層級的焦點轉換（如故事中的場景轉換或某個小節裡的主題移轉）。在之前的 HTML 版本，它代表著一條水平標線。在視覺瀏覽器裡，它現在可能還是以水平標線的型式呈現；但它已經被重新定義為一個語義上的用詞，而不是呈現上的。
@@ -58,7 +59,7 @@ This is second paragraph of text. This is second paragraph of text. This is seco
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.hr")}}
+{{Compat}}
 
 ## 參照 （see also)
 

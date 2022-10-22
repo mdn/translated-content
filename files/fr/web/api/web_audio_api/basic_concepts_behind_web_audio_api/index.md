@@ -3,6 +3,7 @@ title: Les concepts de base de la Web Audio API
 slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 ---
+
 Cet article explique une partie de la théorie sur laquelle s'appuient les fonctionnalités de la Web Audio API. Il ne fera pas de vous un ingénieur du son, mais vous donnera les bases nécessaires pour comprendre pourquoi la Web Audio API fonctionne de cette manière, et vous permettre de mieux l'utiliser.
 
 ## Graphes audio

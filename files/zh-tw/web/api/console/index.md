@@ -2,6 +2,7 @@
 title: Console
 slug: Web/API/Console
 ---
+
 {{APIRef("Console API")}}
 
 The **`Console`** object provides access to the browser's debugging console (e.g. the [Web Console](/zh-TW/docs/Tools/Web_Console) in Firefox). The specifics of how it works varies from browser to browser, but there is a _de facto_ set of features that are typically provided.
@@ -172,7 +173,7 @@ The output looks like this:
 
 ### Timers
 
-In order to calculate the duration of a specific operation, Gecko 10 introduced the support of timers in the `console` object. To start a timer, call the ` console.time``() ` method, giving it a name as the only parameter. To stop the timer, and to get the elapsed time in milliseconds, just call the `console.timeEnd()` method, again passing the timer's name as the parameter. Up to 10,000 timers can run simultaneously on a given page.
+In order to calculate the duration of a specific operation, Gecko 10 introduced the support of timers in the `console` object. To start a timer, call the `console.time()` method, giving it a name as the only parameter. To stop the timer, and to get the elapsed time in milliseconds, just call the `console.timeEnd()` method, again passing the timer's name as the parameter. Up to 10,000 timers can run simultaneously on a given page.
 
 For example, given this code:
 

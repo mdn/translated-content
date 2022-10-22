@@ -2,6 +2,7 @@
 title: <filter-function>
 slug: Web/CSS/filter-function
 ---
+
 {{CSSRef}}
 
 **`<filter-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、入力された画像の表示方法を変更することができるグラフィカル効果を表します。これは {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティで使用します。

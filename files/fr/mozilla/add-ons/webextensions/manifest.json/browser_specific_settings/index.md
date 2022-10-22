@@ -8,6 +8,7 @@ tags:
   - browser_specific_settings
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">

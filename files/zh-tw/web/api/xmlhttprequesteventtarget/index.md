@@ -2,6 +2,7 @@
 title: XMLHttpRequestEventTarget
 slug: Web/API/XMLHttpRequestEventTarget
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 `XMLHttpRequestEventTarget` 介面描述了一個 {{ domxref("XMLHttpRequest") }} 物件實體當中，所有可註冊事件處理器的屬性。
@@ -31,7 +32,7 @@ slug: Web/API/XMLHttpRequestEventTarget
 
 ## 瀏覽器相容性
 
-{{Compat("api.XMLHttpRequestEventTarget")}}
+{{Compat}}
 
 ## 參見
 

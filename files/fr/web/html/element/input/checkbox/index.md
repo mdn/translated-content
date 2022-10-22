@@ -1,14 +1,8 @@
 ---
 title: <input type="checkbox">
-slug: Web/HTML/Element/Input/checkbox
-tags:
-  - Element
-  - HTML
-  - Input
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/input/checkbox
+slug: Web/HTML/Element/input/checkbox
 ---
+
 {{HTMLRef}}
 
 Les éléments {{htmlelement("input")}} de type **`checkbox`** sont affichés sous la forme de boîtes à cocher qui sont cochées lorsqu'elles sont activées. Elles permettent de sélectionner une ou plusieurs valeurs dans un formulaire.
@@ -280,7 +274,7 @@ otherCheckbox.onchange = function() {
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
-      <td>{{event("change")}} et {{event("input")}}</td>
+      <td><a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/input_event"><code>input</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>

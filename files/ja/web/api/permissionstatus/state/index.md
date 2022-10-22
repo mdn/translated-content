@@ -2,6 +2,7 @@
 title: PermissionStatus.state
 slug: Web/API/PermissionStatus/state
 ---
+
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 
 {{domxref("PermissionStatus")}} インターフェイスの **`state`** 読み取り専用プロパティは、要求されたパーミッションの状態を返します。 このプロパティは、`'granted'`（付与）、`'denied'`（拒否）、`'prompt'`（プロンプト）のいずれかを返します。

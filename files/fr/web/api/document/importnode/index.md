@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/importNode
 ---
+
 {{APIRef("DOM")}}
 
 La méthode {{domxref ("Document")}} `importNode()` crée une nouvelle copie du {{domxref ("Node")}} ou {{domxref ("DocumentFragment")}} spécifié à partir d'un autre document, afin qu'il puisse être inséré dans le document actuel. Il n'est pas encore inclus dans l'arbre des documents; Pour ce faire, vous devez appeler une méthode telle que {{domxref ("Node.appendChild", "appendChild ()")}} ou {{domxref ("Node.insertBefore", "insertBefore ()")}}.
@@ -27,7 +28,7 @@ var node = document.importNode(externalNode, deep);
 
 > **Note :** Dans la spécification DOM4, `deep` est répertorié en tant qu'argument facultatif. S'il est omis, la méthode agit comme si la valeur de `deep` était `true`, par défaut, elle utilisait le clonage profond comme comportement par défaut. Pour créer un clone superficiel, la profondeur doit être définie sur `false`.
 >
-> Ce comportement a été modifié dans la dernière spécification, et s'il est omis, la méthode agira comme si la valeur de `deep` était `false`. Bien que ce soit toujours facultatif, vous devriez toujours fournir l'argument `deep` à la fois pour la compatibilité en amont et en aval. Avec Gecko 28.0 {{geckoRelease (28)}}, la console a averti les développeurs de ne pas omettre l'argument. À partir de Gecko 29.0 {{geckoRelease (29)}}), un clone superficiel est défini par défaut au lieu d'un clone profond.
+> Ce comportement a été modifié dans la dernière spécification, et s'il est omis, la méthode agira comme si la valeur de `deep` était `false`. Bien que ce soit toujours facultatif, vous devriez toujours fournir l'argument `deep` à la fois pour la compatibilité en amont et en aval. Avec Gecko 28.0, la console a averti les développeurs de ne pas omettre l'argument. À partir de Gecko 29.0, un clone superficiel est défini par défaut au lieu d'un clone profond.
 
 ## Exemple
 

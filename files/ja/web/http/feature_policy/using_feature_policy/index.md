@@ -2,13 +2,14 @@
 title: 機能ポリシーの使用
 slug: Web/HTTP/Feature_Policy/Using_Feature_Policy
 ---
+
 {{HTTPSidebar}}
 
 [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)によって、最上位のページと埋め込んだフレームの両方で、どのオリジンでどの機能を使用することができるかを制御することができます。基本的にポリシーは、それぞれの機能について許可するオリジンのリストで記述します。各機能は機能ポリシーで制御され、機能は現在の文書か、許可されたオリジンのリストに一致するオリジンのフレームでのみ有効になります。
 
 ポリシーで制御されるそれぞれの機能について、ブラウザーは昨日を有効にするオリジンのリストを許可リストとして管理します。機能のポリシーを指定しない場合、既定の許可リストが使用されます。既定の許可リストは、機能ごとに決まっています。
 
-> **Note:** `Feature-Policy` ヘッダーは仕様書で `Permissions-Policy` に改名されたので、この記事もそのうち、変更を反映するために更新されます。
+> **メモ:** `Feature-Policy` ヘッダーは仕様書で `Permissions-Policy` に改名されたので、この記事もそのうち、変更を反映するために更新されます。
 
 ## ポリシーの記述
 
@@ -77,7 +78,7 @@ Feature Policy を使用する 2 つ目の方法は、iframe 内のコンテン�
 <iframe src="https://example.com..." allow="fullscreen"></iframe>
 ```
 
-`<iframe>` がデフォルトで許可している [allowlist](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy$edit#allowlist) の値は `'src'` です。したがって、以下のようにも書いても同じとなります。
+`<iframe>` がデフォルトで許可している [allowlist](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy#allowlist) の値は `'src'` です。したがって、以下のようにも書いても同じとなります。
 
 ```html
 <iframe src="https://example.com..." allow="fullscreen 'src'"></iframe>

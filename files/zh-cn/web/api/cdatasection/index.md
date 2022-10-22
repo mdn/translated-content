@@ -2,9 +2,10 @@
 title: CDATASection
 slug: Web/API/CDATASection
 ---
+
 {{APIRef("DOM")}}
 
-**`CDATASection`** 接口用于表示 CDATA 片段（CDATA section）。在 XML 中， CDATA 可以直接包含未经转义的文本。比如 `<` 和 `&`，只要位于 CDATA 片段中，它们就不需要被转义，保持原样就可以了。
+**`CDATASection`** 接口用于表示 CDATA 片段（CDATA section）。在 XML 中，CDATA 可以直接包含未经转义的文本。比如 `<` 和 `&`，只要位于 CDATA 片段中，它们就不需要被转义，保持原样就可以了。
 
 在 XML 中，一个 CDATA 片段格式如下：
 
@@ -18,7 +19,7 @@ slug: Web/API/CDATASection
 <foo>这是一个CDATA section: <![CDATA[  < > & ]]> 其中包含了一些没有转义的字符。 </foo>
 ```
 
-唯一的例外就是，在一个 CDATA 片段中不可以使用 CDATA 片段本身的闭合标签片段:
+唯一的例外就是，在一个 CDATA 片段中不可以使用 CDATA 片段本身的闭合标签片段：
 
 ```xml
 <![CDATA[  ]]> 会引发错误   ]]>
@@ -42,4 +43,4 @@ slug: Web/API/CDATASection
 
 ## 浏览器兼容性
 
-{{Compat("api.CDATASection")}}
+{{Compat}}

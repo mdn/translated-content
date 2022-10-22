@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/trunc
 ---
+
 {{JSRef}}
 
 La fonction **`Math.trunc()`** retourne la troncature entière d'un nombre en retirant sa partie décimale.
@@ -61,14 +62,11 @@ Math.trunc();        // NaN
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaire          |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-math.trunc', 'Math.trunc')}}     | {{Spec2('ES2015')}}     | Première définition. |
-| {{SpecName('ESDraft', '#sec-math.trunc', 'Math.trunc')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.trunc")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -3,6 +3,7 @@ title: 传统的布局方法
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 original_slug: Learn/CSS/CSS_layout/传统的布局方法
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
@@ -60,7 +61,7 @@ original_slug: Learn/CSS/CSS_layout/传统的布局方法
 </div>
 ```
 
-每一列都需要一个上一级元素来包含内容，这样我们可以一次性操作所有内容。在这个例子中我们选择了{{htmlelement("div")}}， 但是你可以选择其他更合适的，例如{{htmlelement("article")}}, {{htmlelement("section")}}, 和 {{htmlelement("aside")}}，或者是任何别的元素。
+每一列都需要一个上一级元素来包含内容，这样我们可以一次性操作所有内容。在这个例子中我们选择了{{htmlelement("div")}}，但是你可以选择其他更合适的，例如{{htmlelement("article")}}, {{htmlelement("section")}}, 和 {{htmlelement("aside")}}，或者是任何别的元素。
 
 现在我们来看 CSS。首先，应用以下的代码来对 HTML 进行基本设置：
 
@@ -72,7 +73,7 @@ body {
 }
 ```
 
-body 将会占据 90% 的视口宽度，直到达到 900 像素，在这种情况下，它将固定并保持在视口正中。 默认情况下，它的子项（the {{htmlelement("h1")}} 和两个 {{htmlelement("div")}}）将会达到正文宽度的 100%。如果我们希望两个{{htmlelement("div")}}，一个浮在窗口的一边，另一个浮动在另一边的话， 我们需要将它们的宽度设置为其父元素的 100% 或者更小，以便他们可以并排放置。将下面的代码加在 CSS 的底部：
+body 将会占据 90% 的视口宽度，直到达到 900 像素，在这种情况下，它将固定并保持在视口正中。默认情况下，它的子项（the {{htmlelement("h1")}} 和两个 {{htmlelement("div")}}）将会达到正文宽度的 100%。如果我们希望两个{{htmlelement("div")}}，一个浮在窗口的一边，另一个浮动在另一边的话，我们需要将它们的宽度设置为其父元素的 100% 或者更小，以便他们可以并排放置。将下面的代码加在 CSS 的底部：
 
 ```css
 div:nth-of-type(1) {
@@ -180,7 +181,7 @@ body {
 
 我们需要从 960px 的总宽减去这个间隔，然后剩下 720 像素给我们的列。如果用 720 除以 12，我们知道每列有 60 个像素宽。
 
-接下来我们给`.col`类写一个规则， 让它向左浮动，给它设置 20 像素的{{cssxref("margin-left")}}来实现一个间隔，再设置 60 像素的{{cssxref("width")}}。把下面的规则加到你的 CSS 底部：
+接下来我们给`.col`类写一个规则，让它向左浮动，给它设置 20 像素的{{cssxref("margin-left")}}来实现一个间隔，再设置 60 像素的{{cssxref("width")}}。把下面的规则加到你的 CSS 底部：
 
 ```css
 .col {
@@ -233,7 +234,7 @@ body {
 
 ### 创建液态网格
 
-这个网格表现的不错，但是它长度固定。 我们实际却想要一个弹性（流体）的网格，它可以随着浏览器的{{Glossary("viewport")}}大小的变化自动伸缩。为了达成这个目标，我们需要把相应的像素的长度变为百分比长度。
+这个网格表现的不错，但是它长度固定。我们实际却想要一个弹性（流体）的网格，它可以随着浏览器的{{Glossary("viewport")}}大小的变化自动伸缩。为了达成这个目标，我们需要把相应的像素的长度变为百分比长度。
 
 把固定宽度转为伸缩的基于百分比宽度的算式在下面：
 

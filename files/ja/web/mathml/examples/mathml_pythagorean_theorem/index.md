@@ -2,6 +2,7 @@
 title: ピタゴラスの定理の証明
 slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
 ---
+
 ピタゴラスの定理を証明します。
 
 **命題**: 直角三角形では、斜辺の 2 乗は他の 2 辺の 2 乗の和に等しい。

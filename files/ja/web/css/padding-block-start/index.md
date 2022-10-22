@@ -2,6 +2,7 @@
 title: padding-block-start
 slug: Web/CSS/padding-block-start
 ---
+
 {{CSSRef}}
 
 **`padding-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のブロック方向の論理的な先頭側のパディングを定義し、それが要素の書字方向やテキストの方向に応じて物理的なパディングに対応づけられます。

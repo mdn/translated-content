@@ -2,6 +2,7 @@
 title: Map.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 ---
+
 {{JSRef}}
 
 **`@@iterator`** プロパティの初期値は、 {{jsxref("Map.prototype.entries()", "entries")}} メソッドの初期値と同じ関数オブジェクトです。

@@ -2,6 +2,7 @@
 title: MessageEvent.MessageEvent()
 slug: Web/API/MessageEvent/MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`MessageEvent()`** 构造函数创建一个新的 {{domxref("MessageEvent")}} 对象实例。
@@ -40,7 +41,7 @@ var myMessage = new MessageEvent('worker', {
 
 ## 浏览器兼容性
 
-{{Compat("api.MessageEvent.MessageEvent")}}
+{{Compat}}
 
 ## 另见
 

@@ -2,6 +2,7 @@
 title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误信息
@@ -28,7 +29,7 @@ ReferenceError: "x" is not defined
 foo.substring(1); // ReferenceError: foo is not defined
 ```
 
-“foo” 变量没有在任何地方被声明。它需要是某种字符串，这样 {{jsxref("String.prototype.substring()")}} 方法才可以正常工作。
+“foo”变量没有在任何地方被声明。它需要是某种字符串，这样 {{jsxref("String.prototype.substring()")}} 方法才可以正常工作。
 
 ```js example-good
 var foo = 'bar';

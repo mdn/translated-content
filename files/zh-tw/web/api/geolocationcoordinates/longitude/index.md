@@ -2,6 +2,7 @@
 title: Coordinates.longitude
 slug: Web/API/GeolocationCoordinates/longitude
 ---
+
 {{APIRef("Geolocation API")}}
 
 **`Coordinates.longitude`** 是個唯讀十進位的複數用來代表裝置經度的位置。
@@ -18,7 +19,7 @@ lon = coordinates.longitude
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationCoordinates.longitude")}}
+{{Compat}}
 
 ## 請參考
 

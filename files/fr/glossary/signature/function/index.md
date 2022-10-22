@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/Signature/Function
 original_slug: Glossaire/Signature/Fonction
 ---
+
 Une **signature de fonction** (ou signature de _type_, ou signature de _méthode_) définit les entrées et sorties des {{Glossary("Function", "fonctions")}} et des {{Glossary("Method", "méthodes")}}.
 
 Une signature peut comporter :
@@ -30,7 +31,7 @@ MonObjet.prototype.maFonction(valeur)
 
 - La méthode est installée sur un {{Glossary("Object","objet")}} appelé `MonObjet`.
 - La méthode est installée sur le `prototype` de `MonObjet` (c'est par conséquent une {{Glossary("Method","méthode")}} d'instance) par opposition à une {{Glossary("Method","méthode")}} statique.
-- Le nom de la méthode est ` maFonction``. `
+- Le nom de la méthode est `maFonction`.
 - La méthode accepte un paramètre appelé `valeur` et n'est pas définie.
 
 ### Signatures en Java

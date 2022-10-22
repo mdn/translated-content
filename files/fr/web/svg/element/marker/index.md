@@ -6,6 +6,7 @@ tags:
   - SVG Element
 translation_of: Web/SVG/Element/marker
 ---
+
 {{SVGRef}}
 
 L'élément **`<marker>`** définit un élément graphique qui pourra être utilisé pour dessiner des pointes de flèches ou des polymarqueurs sur un élément {{SVGElement("path")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}} ou {{SVGElement("polygon")}}.

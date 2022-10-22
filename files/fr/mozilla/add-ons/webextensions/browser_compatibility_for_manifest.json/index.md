@@ -7,6 +7,7 @@ tags:
   - manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json
 ---
+
 {{AddonSidebar}}
 
 {{Compat("webextensions.manifest",2)}}

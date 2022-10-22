@@ -2,6 +2,7 @@
 title: 客户端存储
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -31,13 +32,13 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 ## 客户端存储？
 
-在其他的 MDN 学习中我们已经讨论过 静态网站（[static sites](/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview#Static_sites)） 和动态网站（ [dynamic sites](/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview#Dynamic_sites)）的区别。 大多数现代的 web 站点是动态的— 它们在服务端使用各种类型的数据库来存储数据 (服务端存储), 之后通过运行服务端（ [server-side](/zh-CN/docs/Learn/Server-side)）代码来重新获取需要的数据，把其数据插入到静态页面的模板中，并且生成出 HTML 渲染到用户浏览上。
+在其他的 MDN 学习中我们已经讨论过 静态网站（[static sites](/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview#Static_sites)）和动态网站（ [dynamic sites](/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview#Dynamic_sites)）的区别。大多数现代的 web 站点是动态的— 它们在服务端使用各种类型的数据库来存储数据 (服务端存储), 之后通过运行服务端（ [server-side](/zh-CN/docs/Learn/Server-side)）代码来重新获取需要的数据，把其数据插入到静态页面的模板中，并且生成出 HTML 渲染到用户浏览上。
 
 客户端存储以相同的原理工作，但是在使用上有一些不同。它是由 JavaScript APIs 组成的因此允许你在客户端存储数据 (比如在用户的机器上)，而且可以在需要的时候重新取得需要的数据。这有很多明显的用处，比如：
 
 - 个性化网站偏好（比如显示一个用户选择的窗口小部件，颜色主题，或者字体）。
-- 保存之前的站点行为 (比如从先前的 session 中获取购物车中的内容， 记住用户是否之前已经登陆过)。
-- 本地化保存数据和静态资源可以使一个站点更快（至少让资源变少）的下载， 甚至可以在网络失去链接的时候变得暂时可用。
+- 保存之前的站点行为 (比如从先前的 session 中获取购物车中的内容，记住用户是否之前已经登陆过)。
+- 本地化保存数据和静态资源可以使一个站点更快（至少让资源变少）的下载，甚至可以在网络失去链接的时候变得暂时可用。
 - 保存 web 已经生产的文档可以在离线状态下访问。
 
 通常客户端和服务端存储是结合在一起使用的。例如，你可以从数据库中下载一个由网络游戏或音乐播放器应用程序使用的音乐文件，将它们存储在客户端数据库中，并按需要播放它们。用户只需下载音乐文件一次——在随后的访问中，它们将从数据库中检索。
@@ -164,7 +165,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
     const personalGreeting = document.querySelector('.personal-greeting');
     ```
 
-4. 接下来，我们需要包含一个小小的事件监听器，以在按下提交按钮时阻止实际的提交表单动作自身，因为这不是我们想要的行为。在您之前的代码下添加此代码段： 在你之前的代码后添加这段代码：
+4. 接下来，我们需要包含一个小小的事件监听器，以在按下提交按钮时阻止实际的提交表单动作自身，因为这不是我们想要的行为。在您之前的代码下添加此代码段：在你之前的代码后添加这段代码：
 
     ```js
     // 当按钮按下时阻止表单提交
@@ -256,9 +257,9 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
 1、首先，将 [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/style.css), 和 [`index-start.js`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) 文件的本地副本放入本地计算机上的新目录中。
 
-2、浏览这些文件。 您将看到 HTML 非常简单：具有页眉和页脚的网站，以及包含显示注释的位置的主内容区域，以及用于在数据库中输入新注释的表单。 CSS 提供了一些简单的样式，使其更清晰。 JavaScript 文件包含五个声明的常量，其中包含对将显示注释的 {{htmlelement("ul")}} 元素的引用，标题和正文 {{htmlelement("input")}} 元素，{{htmlelement("form")}}本身，以及{{htmlelement("button")}}。
+2、浏览这些文件。您将看到 HTML 非常简单：具有页眉和页脚的网站，以及包含显示注释的位置的主内容区域，以及用于在数据库中输入新注释的表单。CSS 提供了一些简单的样式，使其更清晰。JavaScript 文件包含五个声明的常量，其中包含对将显示注释的 {{htmlelement("ul")}} 元素的引用，标题和正文 {{htmlelement("input")}} 元素，{{htmlelement("form")}}本身，以及{{htmlelement("button")}}。
 
-3、将您的 JavaScript 文件重命名为 `index.js` 。 您现在可以开始向其添加代码了。
+3、将您的 JavaScript 文件重命名为 `index.js` 。您现在可以开始向其添加代码了。
 
 ### 数据库初始设置
 
@@ -281,7 +282,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
     };
     ```
 
-    我们将把所有的后续代码写在这个 `window.onload` 事件处理函数内，这个函数将在 window 的{{event("load")}}事件被触发时调用，为了确保我们没有在应用完整加载前试图使用 IndexedDB 功能（如果我们不这么做，它会失败）。
+    我们将把所有的后续代码写在这个 `window.onload` 事件处理函数内，这个函数将在 window 的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件被触发时调用，为了确保我们没有在应用完整加载前试图使用 IndexedDB 功能（如果我们不这么做，它会失败）。
 
 3. 在`window.onload`处理程序内，添加以下内容：
 
@@ -319,7 +320,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
         如果系统返回：请求失败，[`request.onerror`](/zh-CN/docs/Web/API/IDBRequest/onerror)将会运行。这将允许你对这个问题做出响应。在我们的简单示例中，只是将消息打印到 JavaScript 控制台。
 
-        如果系统返回：请求成功，表明成功打开数据库，[`request.onsuccess`](/zh-CN/docs/Web/API/IDBRequest/onsuccess)将会运行。如果是这种情况，则表示已打开数据库的对象在[`request.result`](/zh-CN/docs/Web/API/IDBRequest/result)属性中变为可用，从而允许我们操作数据库。我们将它存储在`db`我们之前创建的变量中供以后使用。我们还运行一个名为`displayData()`的自定义函数，它把数据库中的数据显示在 [元素 ( 或 HTML 无序列表元素） 代表多项的无序列表，即无数值排序项的集合，且它们在列表中的顺序是没有意义的。通常情况下，无序列表项的头部可以是几种形式，如一个点，一个圆形或方形。头部的风格并不是在页面的 HTML 描述定义, 但在其相关的 CSS 可以用 list-style-type 属性。">`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)。我们现在运行它，以便在页面加载时显示数据库中已有的注释。您将在稍后看到此定义。
+        如果系统返回：请求成功，表明成功打开数据库，[`request.onsuccess`](/zh-CN/docs/Web/API/IDBRequest/onsuccess)将会运行。如果是这种情况，则表示已打开数据库的对象在[`request.result`](/zh-CN/docs/Web/API/IDBRequest/result)属性中变为可用，从而允许我们操作数据库。我们将它存储在`db`我们之前创建的变量中供以后使用。我们还运行一个名为`displayData()`的自定义函数，它把数据库中的数据显示在 [元素 ( 或 HTML 无序列表元素）代表多项的无序列表，即无数值排序项的集合，且它们在列表中的顺序是没有意义的。通常情况下，无序列表项的头部可以是几种形式，如一个点，一个圆形或方形。头部的风格并不是在页面的 HTML 描述定义，但在其相关的 CSS 可以用 list-style-type 属性。">`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)。我们现在运行它，以便在页面加载时显示数据库中已有的注释。您将在稍后看到此定义。
 
 4. 最后，对于本节，我们可能会添加最重要的事件处理程序来设置数据库：[`request.onupgradeneeded`](/zh-CN/docs/Web/API/IDBOpenDBRequest/onupgradeneeded)。如果尚未设置数据库，或者使用比现有存储数据库更大的版本号打开数据库（执行升级时），则运行此处理程序。在上一个处理程序下面添加以下代码：
 
@@ -624,7 +625,7 @@ function deleteItem(e) {
     };
     ```
 
-5. 最后但并非最不重要的是，我们`displayVideo()`创建了在 UI 中插入视频然后将它们附加到页面所需的 DOM 元素。最有趣的部分如下所示 - 要在`<video>`元素中实际显示我们的视频 blob ，我们需要使用该[`URL.createObjectURL()`](/zh-CN/docs/Web/API/URL/createObjectURL)方法创建对象 URL（指向存储在内存中的视频 blob 的内部 URL）。完成后，我们可以将对象 URL 设置为 [`<source>`](/zh-CN/docs/Web/HTML/Element/source) 元素`src`属性的值，并且它可以正常工作。
+5. 最后但并非最不重要的是，我们`displayVideo()`创建了在 UI 中插入视频然后将它们附加到页面所需的 DOM 元素。最有趣的部分如下所示 - 要在`<video>`元素中实际显示我们的视频 blob，我们需要使用该[`URL.createObjectURL()`](/zh-CN/docs/Web/API/URL/createObjectURL)方法创建对象 URL（指向存储在内存中的视频 blob 的内部 URL）。完成后，我们可以将对象 URL 设置为 [`<source>`](/zh-CN/docs/Web/HTML/Element/source) 元素`src`属性的值，并且它可以正常工作。
 
     ```js
     function displayVideo(mp4Blob, webmBlob, title) {
@@ -691,7 +692,7 @@ Cache API 是另一种客户端存储机制，略有不同 - 它旨在保存 HTT
 
 让我们看一下[sw.js](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js)文件（服务工作者）中的一个例子。您将看到安装侦听器已注册`self`。此`self`关键字是一种从服务工作文件内部引用服务工作者的全局范围的方法。
 
-在`install` 处理程序内部， 我们使用[`ExtendableEvent.waitUntil()`](/zh-CN/docs/Web/API/ExtendableEvent/waitUntil)事件对象上可用的方法来表示浏览器不应该完成服务工作者的安装，直到其中的 promise 成功完成。
+在`install` 处理程序内部，我们使用[`ExtendableEvent.waitUntil()`](/zh-CN/docs/Web/API/ExtendableEvent/waitUntil)事件对象上可用的方法来表示浏览器不应该完成服务工作者的安装，直到其中的 promise 成功完成。
 
 这是我们在运行中看到 Cache API 的地方。我们使用该[`CacheStorage.open()`](/zh-CN/docs/Web/API/CacheStorage/open)方法打开一个可以存储响应的新缓存对象（类似于 IndexedDB 对象存储）。此承诺通过[`Cache`](/zh-CN/docs/Web/API/Cache)表示`video-store`缓存的对象来实现。然后，我们使用该[`Cache.addAll()`](/zh-CN/docs/Web/API/Cache/addAll)方法获取一系列资产并将其响应添加到缓存中。
 
@@ -743,7 +744,7 @@ self.addEventListener('fetch', function(e) {
 
 - 尝试拔掉网络连接/关闭 Wifi。
 - 如果您使用的是 Firefox，请选择*文件>脱机工作*。
-- 转到 devtools，然后选择*Application> Service Workers*，如果您使用的是 Chrome ，请选中*Offline*选中。
+- 转到 devtools，然后选择*Application> Service Workers*，如果您使用的是 Chrome，请选中*Offline*选中。
 
 如果再次刷新示例页面，您仍应该看到它加载得很好。所有内容都是脱机存储的 - 缓存中的页面资源以及 IndexedDB 数据库中的视频。
 

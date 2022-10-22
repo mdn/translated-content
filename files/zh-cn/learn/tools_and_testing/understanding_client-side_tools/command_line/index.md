@@ -2,6 +2,7 @@
 title: Command line crash course
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
 在您的开发过程中，您无疑需要在终端上运行一些命令 (或者在“命令行”上，它们实际上是相同的)。本文介绍了终端、需要输入的基本命令、如何将命令链接在一起，以及如何添加自己的命令行接口 (CLI) 工具。
@@ -259,7 +260,7 @@ wc -l myfile.txt
 ls | wc -l
 ```
 
-`因为ls` 在自己的行上打印每个文件或目录，这有效地为我们提供了目录和文件计数。
+因为 `ls` 在自己的行上打印每个文件或目录，这有效地为我们提供了目录和文件计数。
 
 这是怎么回事？(unix) 命令行工具的一般原理是，它们将文本打印到终端 (也称为“打印到标准输出”或`STDOUT`). 很多命令也可以从流输入 (称为“标准输入”o) 中读取内容 `STDIN`).
 

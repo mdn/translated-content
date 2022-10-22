@@ -2,6 +2,7 @@
 title: <iframe>
 slug: Web/HTML/Element/iframe
 ---
+
 {{HTMLRef}}
 
 **HTML 内联框架元素 (`<iframe>`)** 表示嵌套的{{Glossary("browsing context")}}。它能够将另一个 HTML 页面嵌入到当前页面中。
@@ -27,7 +28,7 @@ slug: Web/HTML/Element/iframe
 
     > **备注：** 这是一个历史遗留属性，已经被重新定义为 `allow="payment"`.
 - {{htmlattrdef("csp")}} {{experimental_inline}}
-  - : 对嵌入的资源配置[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。 查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。
+  - : 对嵌入的资源配置[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。
 - {{htmlattrdef("height")}}
   - : 以 CSS 像素格式，或像素格式，或百分比格式指定 frame 的高度。默认值为`150`。
 - {{htmlattrdef("importance")}} {{experimental_inline}}
@@ -120,54 +121,28 @@ slug: Web/HTML/Element/iframe
 
 ## 定位和缩放
 
-作为一个[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)， 可以使用 {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 来定位、对齐、缩放 `<iframe>` 元素内的文档。
+作为一个[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)，可以使用 {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 来定位、对齐、缩放 `<iframe>` 元素内的文档。
 
 ## 示例
 
-### 一个简单的 `<iframe>`
+### 一个简单的 \<iframe>
 
-下面的例子中，我们创建了一个框架。当用户点击框架中的按钮时，浏览器会弹出一个提示框。
+此示例将位于 <https://example.org> 的页面嵌入到 iframe 中。
 
 #### HTML
 
 ```html
-<iframe src="https://mdn-samples.mozilla.org/snippets/html/iframe-simple-contents.html" title="iframe example 1" width="400" height="300">
-  <p>Your browser does not support iframes.</p>
+<iframe
+  src="https://example.org"
+  title="iframe Example 1"
+  width="400"
+  height="300">
 </iframe>
 ```
 
-#### Result
+#### 结果
 
 {{ EmbedLiveSample('一个简单的 iframe') }}
-
-### 在新标签页中打开 `<iframe>` 里面的链接
-
-下面的例子演示了在框架中展示谷歌地图。
-
-#### HTML
-
-```html
-<base target="_blank">
-<iframe id="Example2"
-    title="Example2"
-    width="400"
-    height="300"
-    frameborder="0"
-    scrolling="no"
-    marginheight="0"
-    marginwidth="0"
-    src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=buenos+aires&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,80.859375&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Buenos+Aires,+Argentina&amp;z=11&amp;ll=-34.603723,-58.381593&amp;output=embed">
-</iframe>
-
-<br>
-<small>
-  <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=es-419&amp;geocode=&amp;q=buenos+aires&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,80.859375&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Buenos+Aires,+Argentina&amp;z=11&amp;ll=-34.603723,-58.381593" style="color:#0000FF;text-align:left"> See bigger map </a>
-</small>
-```
-
-#### Result
-
-{{ EmbedLiveSample('在新标签页中打开 iframe 里面的链接') }}
 
 ## 无障碍环境
 

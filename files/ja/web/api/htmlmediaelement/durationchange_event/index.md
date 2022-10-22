@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: durationchange イベント'
 slug: Web/API/HTMLMediaElement/durationchange_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `durationchange` イベントは、`duration` 属性が更新されたときに発生します。

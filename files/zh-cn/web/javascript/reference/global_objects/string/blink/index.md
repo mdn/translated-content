@@ -2,6 +2,7 @@
 title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`blink()`** 方法创建使字符串闪烁的 {{HTMLElement("blink")}} HTML 元素。

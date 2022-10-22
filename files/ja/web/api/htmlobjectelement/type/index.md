@@ -2,6 +2,7 @@
 title: HTMLObjectElement.type
 slug: Web/API/HTMLObjectElement/type
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`type`** は {{domxref("HTMLObjectElement")}} インターフェイスのプロパティで、

@@ -4,6 +4,7 @@ slug: Web/CSS/gradient/repeating-radial-gradient
 translation_of: Web/CSS/gradient/repeating-radial-gradient
 browser-compat: css.types.image.gradient.repeating-radial-gradient
 ---
+
 {{CSSRef}}
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`repeating-radial-gradient()`**  fonctionne de façon similaire à [`radial-gradient`](/fr/docs/Web/CSS/gradient/radial-gradient) mais répète les couleurs de façon infinie dans toutes les deux directions avec des répétitions formant des bandes de dégradé (de façon analogue à [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient) qui permet de répéter un dégradé linéaire ([`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)).

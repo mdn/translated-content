@@ -2,6 +2,7 @@
 title: HTMLOutputElement
 slug: Web/API/HTMLOutputElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLOutputElement`** インターフェイスは、 ({{domxref("HTMLElement")}} から継承したものより詳細に) {{HTMLElement("output")}} 要素のレイアウトと表示を操作するためのプロパティやメソッドを提供します。

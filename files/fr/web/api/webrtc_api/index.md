@@ -14,6 +14,7 @@ tags:
   - diffusion
 translation_of: Web/API/WebRTC_API
 ---
+
 {{APIRef("WebRTC")}}
 
 **WebRTC** (Web Real-Time Communications) est une technologie qui permet aux applications et sites web de capturer et éventuellement de diffuser des médias audio et/ou vidéo, ainsi que d'échanger des données arbitraires entre les navigateurs sans passer par un intermédiaire.
@@ -47,7 +48,7 @@ Ces interfaces sont utilisées pour configurer, ouvrir et gérer les connexions 
 - {{domxref("RTCDataChannel")}}
   - : Représente un canal de données bidirectionnel entre deux homologues d'une connexion.
 - {{domxref("RTCDataChannelEvent")}}
-  - : Représente les événements qui se produisent lors de l'attachement d'un {{domxref("RTCDataChannel")}} à un {{domxref("RTCPeerConnection")}}. Le seul événement envoyé avec cette interface est {{event("datachannel")}}.
+  - : Représente les événements qui se produisent lors de l'attachement d'un {{domxref("RTCDataChannel")}} à un {{domxref("RTCPeerConnection")}}. Le seul événement envoyé avec cette interface est [`datachannel`](/fr/docs/Web/API/RTCPeerConnection/datachannel_event).
 - {{domxref("RTCSessionDescription")}}
   - : Représente les paramètres d'une session. Chaque `RTCSessionDescription` se compose d'une description {{domxref("RTCSessionDescription.type", "type")}} indiquant quelle partie du processus de négociation offre / réponse elle décrit et du descripteur {{Glossary("SDP")}} du session.
 - {{domxref("RTCSessionDescriptionCallback")}}
@@ -61,7 +62,7 @@ Ces interfaces sont utilisées pour configurer, ouvrir et gérer les connexions 
 - {{domxref("RTCIceServer")}}
   - : Définit comment se connecter à un seul serveur ICE (tel qu'un serveur STUN ou TURN).
 - {{domxref("RTCPeerConnectionIceEvent")}}
-  - : Représente les événements qui se produisent en relation avec les candidats ICE avec la cible, généralement un {{domxref("RTCPeerConnection")}}. Un seul événement est de ce type: {{event("icecandidate")}}.
+  - : Représente les événements qui se produisent en relation avec les candidats ICE avec la cible, généralement un {{domxref("RTCPeerConnection")}}. Un seul événement est de ce type: [`icecandidate`](/fr/docs/Web/API/RTCPeerConnection/icecandidate_event).
 - {{domxref("RTCRtpSender")}}
   - : Gère l'encodage et la transmission des données pour un {{domxref("MediaStreamTrack")}} sur un {{domxref("RTCPeerConnection")}}.
 - {{domxref("RTCRtpReceiver")}}
@@ -88,10 +89,6 @@ L'API WebRTC comprend un certain nombre d'interfaces pour gérer la sécurité e
   - : Représente l'identité de l'homologue distant de la connexion actuelle. Si aucun pair n'a encore été défini et vérifié, cette interface renvoie `null`. Une fois défini, il ne peut pas être modifié.
 - {{domxref("RTCIdentityProviderRegistrar")}}
   - : Enregistre un fournisseur d'identité (idP).
-- {{domxref("RTCIdentityEvent")}}
-  - : Représente une assertion d'identité générée par un fournisseur d'identité (idP). C'est généralement pour un {{domxref("RTCPeerConnection")}}. Le seul événement envoyé avec ce type est {{event("identityresult")}}.
-- {{domxref("RTCIdentityErrorEvent")}}
-  - : Représente une erreur associée au fournisseur d'identité (idP). C'est généralement pour un {{domxref("RTCPeerConnection")}}. Deux événements sont envoyés avec ce type: {{event("idpassertionerror")}} et {{event("idpvalidationerror")}}.
 - {{domxref("RTCCertificate")}}
   - : Représente un certificat qu'un {{domxref("RTCPeerConnection")}} utilise pour s'authentifier.
 

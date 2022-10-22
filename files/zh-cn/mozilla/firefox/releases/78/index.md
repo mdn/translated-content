@@ -2,6 +2,7 @@
 title: 对于开发人员的 Firefox 78
 slug: Mozilla/Firefox/Releases/78
 ---
+
 {{FirefoxSidebar}}
 
 本文提供了有关 Firefox 78 中将影响开发人员的更改的信息。Firefox 78 发布于[2020 年 6 月 30 日](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/).

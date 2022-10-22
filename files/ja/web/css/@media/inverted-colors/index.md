@@ -1,15 +1,8 @@
 ---
 title: inverted-colors
 slug: Web/CSS/@media/inverted-colors
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.inverted-colors
-translation_of: Web/CSS/@media/inverted-colors
 ---
+
 {{CSSRef}}
 
 **`inverted-colors`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}またはその下の OS が色を反転しているかどうかを調べるために使用することができます。

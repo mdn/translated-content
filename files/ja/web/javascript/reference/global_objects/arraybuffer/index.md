@@ -2,6 +2,7 @@
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
+
 {{JSRef}}
 
 **`ArrayBuffer`** オブジェクトは、一般的な固定長の生のバイナリーデータバッファーを表現するために使用します。

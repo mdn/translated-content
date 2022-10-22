@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
+
 {{jsSidebar}}
 
 Pourquoi une réintroduction ? Parce que JavaScript est connu pour être source d'incompréhensions. Bien que souvent raillé comme étant un simple jouet, derrière sa simplicité désarmante se cachent certaines fonctionnalités de langage très puissantes. JavaScript est maintenant utilisé par un nombre incroyable d'applications de haut rang, ce qui montre qu'une connaissance approfondie de cette technologie est une compétence importante pour toute développeuse ou développeur web ou mobile.
@@ -672,7 +673,7 @@ moyenne(2, 3, 4, 5); // 3.5
 
 Avec le reste des paramètres, dans l'exemple précédent, `args` contient tous les arguments passés à la fonction.
 
-Il est important de noter que, quel que soit l'endroit où est écrit l'opérateur du reste des paramètres au sein de la déclaration de fonction, il stockera tous les arguments écrits _après_ mais pas avant. Autrement dit, _function avg(**premiereValeur,** ...args)_ stockera la première valeur passée à la fonction dans la variable **firstValue** et les autres arguments iront dans **args**.
+Il est important de noter que, quel que soit l'endroit où est écrit l'opérateur du reste des paramètres au sein de la déclaration de fonction, il stockera tous les arguments écrits _après_ mais pas avant. Autrement dit, _function avg(**premiereValeur,** ...args)_ stockera la première valeur passée à la fonction dans la variable **premiereValeur** et les autres arguments iront dans **args**.
 
 C'est très pratique, mais on rencontre un nouveau problème. La fonction `moyenne()` reçoit une liste de valeurs séparées par des virgules, mais comment fait-on si on souhaite trouver la moyenne des valeurs d'un tableau ?
 

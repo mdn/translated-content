@@ -2,6 +2,7 @@
 title: 使用屏幕捕获 API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 在这篇文章中，我们将研究如何使用屏幕捕获 API 和它的{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}方法来捕获部分或全部屏幕进行流媒体传输，通过[WebRTC](/zh-CN/docs/Web/API/WebRTC_API)录制或分享。

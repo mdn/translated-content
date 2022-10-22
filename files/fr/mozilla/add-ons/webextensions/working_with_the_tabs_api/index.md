@@ -11,6 +11,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 original_slug: Mozilla/Add-ons/WebExtensions/Travailler_avec_l_API_Tabs
 ---
+
 {{AddonSidebar}}
 
 Les onglets permettent à un utilisateur d'ouvrir plusieurs pages Web dans la fenêtre de son navigateur, puis de basculer entre ces pages Web. Grâce à l'API Tabs, vous pouvez utiliser et manipuler ces onglets pour créer des utilitaires qui offrent aux utilisateurs de nouvelles façons de travailler avec des onglets ou de fournir les fonctionnalités de votre extension.

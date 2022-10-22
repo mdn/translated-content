@@ -2,6 +2,7 @@
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
 ---
+
 {{JSRef}}
 
 **`startsWith()`** メソッドは文字列が引数で指定された文字列で始まるかを判定して `true` か `false` を返します。

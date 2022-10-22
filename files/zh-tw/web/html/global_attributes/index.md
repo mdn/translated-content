@@ -2,6 +2,7 @@
 title: 全域屬性
 slug: Web/HTML/Global_attributes
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **全域屬性**（Global attributes）是所有 HTML 元素共同的屬性，可以在所有的元素中使用。但在部分的元素上，屬性可能是沒有效果的。
@@ -81,7 +82,7 @@ In addition to the basic HTML global attributes, the following global attributes
 
 ## 瀏覽器相容性
 
-{{Compat("html.global_attributes")}}
+{{Compat}}
 
 ## 參見
 

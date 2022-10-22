@@ -2,6 +2,7 @@
 title: Scaling
 slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}

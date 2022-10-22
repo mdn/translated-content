@@ -2,6 +2,7 @@
 title: Document.implementation
 slug: Web/API/Document/implementation
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.implementation`** プロパティは、現在の文書に関連付けられた {{domxref("DOMImplementation")}} オブジェクトを返します。

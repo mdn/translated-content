@@ -1,11 +1,6 @@
 ---
 title: World Wide Web
 slug: Glossary/World_Wide_Web
-tags:
-  - Infrastructure
-  - WWW
-  - World Wide Web
-translation_of: Glossary/World_Wide_Web
 ---
 흔히 **WWW**, **W3**, **Web으로** 불리는 *World Wide Web*은 {{Glossary("Internet")}}을 통해 접근 가능한 공용 웹페이지의 상호연결 시스템이다. 웹은 인터넷과 다르며, 인터넷을 기반으로 한 수많은 응용 프로그램 중 하나이다.
 
@@ -25,7 +20,7 @@ translation_of: Glossary/World_Wide_Web
 
 ### 더 배우고 싶다면
 
-- [Learn the Web](https://developer.mozilla.org/en-US/Learn)
+- [Learn the Web](/en-US/Learn)
 - [Web literacy map](https://learning.mozilla.org/web-literacy) (an inventory of skills needed in Web development)
 
 ### 일반적인 지식

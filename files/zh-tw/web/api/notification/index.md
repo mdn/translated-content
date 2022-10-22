@@ -2,6 +2,7 @@
 title: Notification
 slug: Web/API/notification
 ---
+
 {{APIRef("Web Notifications")}}
 
 [Notifications API](/zh-TW/docs/Web/API/Notifications_API) 的 `Notification` interface 是用來設置及顯示「桌面通知」給使用。
@@ -158,7 +159,7 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 ## 瀏覽器支援度
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## 延伸閱讀
 

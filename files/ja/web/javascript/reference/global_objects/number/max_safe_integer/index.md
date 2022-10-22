@@ -2,6 +2,7 @@
 title: Number.MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 ---
+
 {{JSRef}}
 
 **`Number.MAX_SAFE_INTEGER`** 定数は、JavaScript における安全な整数の最大値 (`2^53 - 1`) を表します。

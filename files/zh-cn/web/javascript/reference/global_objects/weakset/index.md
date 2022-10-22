@@ -2,6 +2,7 @@
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
+
 {{JSRef}}
 
 **`WeakSet`** 对象允许你将弱保持*对象*存储在一个集合中。

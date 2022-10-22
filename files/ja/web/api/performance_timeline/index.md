@@ -2,6 +2,7 @@
 title: パフォーマンスタイムライン
 slug: Web/API/Performance_Timeline
 ---
+
 {{DefaultAPISidebar("Performance Timeline API")}}
 
 **パフォーマンスタイムライン** API は、{{domxref("Performance")}} インターフェイスへの拡張を定義して、アプリケーション内のクライアントサイドの待ち時間の測定をサポートします。 拡張機能は、特定のフィルタ基準に基づいて{{domxref("PerformanceEntry","performance entry metrics", '', 'true')}} を取得するためのインターフェイスを提供します。この規格には、特定のパフォーマンスイベントがブラウザのパフォーマンスタイムラインに追加されたときに通知される _[performance observer](#performance_observers)_ コールバックをアプリケーションで定義できるインターフェイスも含まれます。
@@ -44,7 +45,7 @@ When the observer (callback) is invoked, the callback's parameters include a _{{
 
 Besides the {{domxref("PerformanceObserver","PerformanceObserver's")}} interface's {{domxref("PerformanceObserver.observe","observe()")}} method (which is used to register the {{domxref("PerformanceEntry.entryType","entry types")}} to _observe_), the {{domxref("PerformanceObserver")}} interface also has a {{domxref("PerformanceObserver.disconnect","disconnect()")}} method that stops an observer from receiving further events.
 
-> **Note:** Performance observers were added to the `Level 2` version of the standard and were not widely implemented.
+> **メモ:** Performance observers were added to the `Level 2` version of the standard and were not widely implemented.
 
 ## 実装状況
 

@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/SQL_Injection
 original_slug: Glossaire/Injection_SQL
 ---
+
 L'injection SQL tire parti des applications web qui ne parviennent pas à valider les entrées utilisateur. Les pirates peuvent transmettre des commandes SQL via l'application web de manière malveillante pour exécution par une base de données principale.
 
 L'injection SQL peut obtenir un accès non autorisé à une base de données ou récupérer des informations directement à partir de la base de données. De nombreuses violations de données sont dues à l'injection SQL.

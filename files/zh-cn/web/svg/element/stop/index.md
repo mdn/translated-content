@@ -2,6 +2,7 @@
 title: stop
 slug: Web/SVG/Element/stop
 ---
+
 {{SVGRef}}
 
 一个渐变上的颜色坡度，是用`stop`元素定义的。`stop`元素可以是{{SVGElement("linearGradient")}}元素或者{{SVGElement("radialGradient")}}元素的子元素。
@@ -58,7 +59,7 @@ slug: Web/SVG/Element/stop
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.stop")}}
+{{Compat}}
 
 ## 参见
 

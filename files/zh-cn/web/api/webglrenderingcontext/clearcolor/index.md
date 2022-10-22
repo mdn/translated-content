@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.clearColor()
 slug: Web/API/WebGLRenderingContext/clearColor
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.clearColor()`** 方法用于设置清空颜色缓冲时的颜色值。
@@ -48,7 +49,7 @@ gl.getParameter(gl.COLOR_CLEAR_VALUE);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.clearColor")}}
+{{Compat}}
 
 ## 相关内容
 

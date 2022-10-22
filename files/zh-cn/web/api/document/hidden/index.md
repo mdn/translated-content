@@ -2,6 +2,7 @@
 title: Document.hidden
 slug: Web/API/Document/hidden
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.hidden`** （只读属性）返回布尔值，表示页面是（true）否（false）隐藏。
@@ -27,4 +28,4 @@ document.addEventListener("visibilitychange", function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.hidden")}}
+{{Compat}}

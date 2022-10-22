@@ -12,9 +12,11 @@ La función `attr()` de [CSS](/es/docs/Web/CSS) se usa para recuperar el valor d
 
 La función `attr()` de [CSS](/es/docs/Web/CSS) se puede usar con cualquier propiedad de CSS. {{ experimental_inline() }}
 
-## Sintaxis
+## Síntaxis
 
-    Sintaxis formal: attr( attribute-name <type-or-unit>? [, <fallback> ]? )
+```
+Sintaxis formal: attr( attribute-name <type-or-unit>? [, <fallback> ]? )
+```
 
 ### Valores
 

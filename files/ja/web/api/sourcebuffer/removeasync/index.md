@@ -2,6 +2,7 @@
 title: SourceBuffer.removeAsync()
 slug: Web/API/SourceBuffer/removeAsync
 ---
+
 {{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`removeAsync()`** メソッドは、特定の時間範囲内で見つかった `SourceBuffer` のメディアセグメントから非同期的に削除するプロセスを開始します。 指定された時間範囲のバッファが削除されたときに満たされる {{jsxref("Promise")}} が返されます。

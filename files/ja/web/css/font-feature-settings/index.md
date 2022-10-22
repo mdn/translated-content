@@ -2,6 +2,7 @@
 title: font-feature-settings
 slug: Web/CSS/font-feature-settings
 ---
+
 {{CSSRef}}
 
 **`font-feature-settings`** は CSS のプロパティで、 OpenType フォントの拡張書体の特性を制御します。

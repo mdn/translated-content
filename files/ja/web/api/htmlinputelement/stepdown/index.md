@@ -2,6 +2,7 @@
 title: HTMLInputElement.stepDown()
 slug: Web/API/HTMLInputElement/stepDown
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLInputElement.stepDown([n])`** メソッドは、数値型の {{HTMLElement("input")}} 要素の値を

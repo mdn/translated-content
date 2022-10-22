@@ -2,6 +2,7 @@
 title: <aside>
 slug: Web/HTML/Element/aside
 ---
+
 **HTML `<aside>` 元素**表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分并且可以被单独的拆分出来而不会使整体受影响。其通常表现为侧边栏或者标注框（call-out boxes）。
 
 {{EmbedInteractiveExample("pages/tabbed/aside.html", "tabbed-standard")}}
@@ -41,7 +42,7 @@ slug: Web/HTML/Element/aside
 
 ## 使用说明
 
-- 不要使用 `<aside>` 元素去尾随括号内的文本 ，因为这种文本被认为是主要流内容的一部分。
+- 不要使用 `<aside>` 元素去尾随括号内的文本，因为这种文本被认为是主要流内容的一部分。
 
 ## 示例
 

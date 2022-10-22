@@ -20,7 +20,9 @@ La síntaxis para el rectánigulo es similar a la de la función [`rect()`](/es/
 
 ## Síntaxis
 
-    -moz-image-rect({{cssxref("&lt;uri&gt;")}}, top, right, bottom, left);
+```
+-moz-image-rect({{cssxref("&lt;uri&gt;")}}, top, right, bottom, left);
+```
 
 ### Valores
 

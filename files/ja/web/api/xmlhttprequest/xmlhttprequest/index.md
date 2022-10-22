@@ -2,6 +2,7 @@
 title: XMLHttpRequest()
 slug: Web/API/XMLHttpRequest/XMLHttpRequest
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **`XMLHttpRequest()`** コンストラクターは新しい {{domxref("XMLHttpRequest")}} を生成します。

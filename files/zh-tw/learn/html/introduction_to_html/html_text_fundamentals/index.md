@@ -2,6 +2,7 @@
 title: 基本 HTML 文字
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 
 HTML 的其中一件核心工作，就是給出文件的結構和含義（又稱{{glossary("semantics")}}），以便瀏覽器正確顯示。本文章旨在說明 {{glossary("HTML")}} 可透過增加標題、章節、強調、建立清單等，建立結構化的頁面。

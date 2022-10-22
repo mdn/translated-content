@@ -10,6 +10,7 @@ tags:
   - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/loadTime
 ---
+
 {{APIRef("Element Timing API")}}
 
 La propriété en lecture seule **`loadTime`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie toujours 0 pour le texte. Pour les images, elle renvoie le temps qui est le plus tardif entre le moment où la ressource image est chargée et le moment où elle est attachée à l'élément.

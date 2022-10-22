@@ -3,6 +3,7 @@ title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
 translation_of: Web/API/HTMLSelectElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 L'interface **`HTMLSelectElement`** représente un élément HTML {{HTMLElement("select")}}. Cet élément partage aussi toute les propriétés et méthodes des autres elements HTML via l'interface {{ domxref("HTMLElement") }}.

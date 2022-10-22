@@ -13,6 +13,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_
 original_slug: >-
   Mozilla/Add-ons/WebExtensions/inserer_en_toute_securite_du_contenu_externe_dans_une_page
 ---
+
 {{AddonSidebar}}
 
 Il y a des moments où vous pourriez vouloir ou devez inclure du contenu d'une source externe dans votre extension. Cependant, il existe un risque que des scripts malveillants soient intégrés à la source, soit par le développeur de la source, soit par une tierce partie malveillante.

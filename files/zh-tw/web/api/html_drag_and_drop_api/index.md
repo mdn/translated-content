@@ -2,6 +2,7 @@
 title: HTML 拖放 API
 slug: Web/API/HTML_Drag_and_Drop_API
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 HTML 拖放介面能讓網頁應用程式於 Firefox 及其他瀏覽器中使用拖放功能。舉例來說，使用者可以利用此功能以滑鼠選擇*可拖曳（draggable）*元素，拖曳至一個*可放置（droppable）*元素上，並放開滑鼠按鍵來放置此元素。在拖曳操作時，一個半透明的*可拖曳（draggable）*元素會跟隨著滑鼠游標。

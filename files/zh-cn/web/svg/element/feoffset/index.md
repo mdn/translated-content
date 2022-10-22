@@ -2,6 +2,7 @@
 title: feOffset
 slug: Web/SVG/Element/feOffset
 ---
+
 {{SVGRef}}
 
 该输入图像作为一个整体，在属性{{ SVGAttr("dx") }}和属性{{ SVGAttr("dy") }}的值指定了它的偏移量。
@@ -30,7 +31,7 @@ slug: Web/SVG/Element/feOffset
 
 ## DOM 接口
 
-该元素实现了`SVGFEOffsetElement接口。`
+该元素实现了 `SVGFEOffsetElement` 接口。
 
 ## 参见
 

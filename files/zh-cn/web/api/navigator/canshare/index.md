@@ -2,6 +2,7 @@
 title: Navigator.canShare
 slug: Web/API/Navigator/canShare
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}{{securecontext_header}}如果对 [`Navigator.share()`](/zh-CN/docs/Web/API/Navigator/share) 的调用成功，则 Web Share API 的 **`Navigator.canShare()`** 方法将返回 true。
 
 ## 语法
@@ -25,7 +26,7 @@ var canShare = navigator.canShare(data);
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator.canShare")}}
+{{Compat}}
 
 ## 相关连接
 

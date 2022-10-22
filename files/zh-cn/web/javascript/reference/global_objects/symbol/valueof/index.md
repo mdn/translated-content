@@ -2,6 +2,7 @@
 title: Symbol.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 ---
+
 {{JSRef("Global_Objects", "Symbol")}}
 
 ## 概述

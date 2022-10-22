@@ -2,6 +2,7 @@
 title: Logical AND assignment (&&=)
 slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical AND assignment (`x &&= y`) operator only assigns if `x` is {{Glossary("truthy")}}.

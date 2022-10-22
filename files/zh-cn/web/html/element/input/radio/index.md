@@ -2,6 +2,7 @@
 title: <input type="radio">
 slug: Web/HTML/Element/Input/radio
 ---
+
 {{HTMLRef}}
 
 {{htmlelement("input")}} 的 **`radio`** 类型元素默认渲染为小型圆圈图表，填充即为激活，类似于之前描述额复选框（checkbox）类型。单选按钮允许你选择单一的值来提交表单。
@@ -45,7 +46,7 @@ A {{domxref("DOMString")}} 表示单选按钮的值。它永远不会在客户�
 
 ### 定义一个单选按钮组[节](/zh-CN/docs/Web/HTML/Element/Input/radio#Defining_a_radio_group)
 
-一个单选按钮组由具有相同 {{htmlattrxref("name", "input")}}属性的单选按钮组成。 一旦单选按钮组被建立，选择那按钮组的任何单选按钮将会自动取消同组当前选择的任何按钮。
+一个单选按钮组由具有相同 {{htmlattrxref("name", "input")}}属性的单选按钮组成。一旦单选按钮组被建立，选择那按钮组的任何单选按钮将会自动取消同组当前选择的任何按钮。
 
 你可以在一个页面上创建任何你喜欢的单选按钮组，只要每一组都有一个独特的 `name`属性。
 
@@ -75,7 +76,7 @@ A {{domxref("DOMString")}} 表示单选按钮的值。它永远不会在客户�
 </form>
 ```
 
-你可以在这里看到三个单选按钮，每个按钮的 `name` 属性都设置为 `contact` 并且都含有在单选按钮组中唯一的 `value` 属性。 每一个单选按钮也有一个给{{HTMLElement("label")}} 元素的 {{htmlattrxref("for", "label")}}属性使用的{{domxref("Element.id", "id")}}，将 label 元素和点选按钮关联。
+你可以在这里看到三个单选按钮，每个按钮的 `name` 属性都设置为 `contact` 并且都含有在单选按钮组中唯一的 `value` 属性。每一个单选按钮也有一个给{{HTMLElement("label")}} 元素的 {{htmlattrxref("for", "label")}}属性使用的{{domxref("Element.id", "id")}}，将 label 元素和点选按钮关联。
 
 _译者注：你可以用 label 元素把 `input` 元素包裹起来，以减少 `id` 的使用。_
 

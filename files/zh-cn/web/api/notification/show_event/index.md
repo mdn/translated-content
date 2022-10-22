@@ -2,6 +2,7 @@
 title: Notification.onshow
 slug: Web/API/Notification/show_event
 ---
+
 {{APIRef("Web Notifications")}}
 
 ## Summary

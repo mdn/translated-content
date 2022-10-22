@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultReader
 slug: Web/API/ReadableStreamDefaultReader
 ---
+
 {{APIRef("Streams")}}
 
 [Streams API](/zh-CN/docs/Web/API/Streams_API) 的 **ReadableStreamDefaultReader** 的接口 表示一个可被用于读取来自网络提供的流数据 (例如 fetch 请求) 的默认读取器
@@ -67,4 +68,4 @@ fetch("https://www.example.org/").then((response) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.ReadableStreamDefaultReader")}}
+{{Compat}}

@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/slice
 ---
+
 {{JSRef}}
 
 La méthode **`slice()`** renvoie une copie superficielle (shallow copy) d'un fragment du tableau typé courant dans un nouveau tableau typé. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.slice()")}}_._ _TypedArray_ est utilisé par la suite de façon générique pour réprésenter l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
@@ -73,14 +74,11 @@ S'il faut également prendre en charge les moteurs JavaScript qui ne prennent pa
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.slice', '%TypedArray%.prototype.slice')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.slice', '%TypedArray%.prototype.slice')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.slice")}}
+{{Compat}}
 
 ## Voir aussi
 

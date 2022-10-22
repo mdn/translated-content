@@ -2,6 +2,7 @@
 title: Window.outerWidth
 slug: Web/API/Window/outerWidth
 ---
+
 {{APIRef}}
 
 **`Window.outerWidth`** は読み取り専用のプロパティで、ブラウザーウィンドウの外側の幅を返します。これはサイドバー (展開されている場合)、ウィンドウの操作部分、ウィンドウをリサイズする境界やハンドルを含む、ブラウザーウィンドウ全体の幅を表します。

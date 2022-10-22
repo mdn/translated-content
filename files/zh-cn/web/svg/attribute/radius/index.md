@@ -2,6 +2,7 @@
 title: radius
 slug: Web/SVG/Attribute/radius
 ---
+
 « [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 `radius`属性代表了一个给定{{SVGElement("feMorphology")}}滤镜上的操作。如果提供了两个[\<number>](/zh-CN/SVG/Content_type#Number)，则第一个数代表了 x-radius，第二个数代表了 y-radius。如果只提供了一个数字，则值同时用于 x 和 y。值是在{{SVGElement("filter")}} 元素的属性{{SVGAttr("primitiveUnits")}} 确定的坐标系统内。

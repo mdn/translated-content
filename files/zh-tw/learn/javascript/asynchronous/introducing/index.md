@@ -2,6 +2,7 @@
 title: 非同步的 JavaScript 介紹
 slug: Learn/JavaScript/Asynchronous/Introducing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}
 
 在本篇文章中我們會先簡短回顧在同步的 JavaScript 中所遭遇到的問題，並預先看看往後將會使用哪些非同步的 JavaScript 技巧來解決此問題。
@@ -156,7 +157,7 @@ fetch('products.json').then(function(response) {
 
 > **備註：** 你可以在 GitHub （[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js)，[線上範例](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/)）找到最終版本。
 
-在這裡我們看到 ` fetch``() ` 帶一個參數——你想要在網路上提取資源的網址——並回傳一個 [promise](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise) 。這一個 promise 用來表示一個完成或失敗的非同步操作的物件。它代表的是一種中間的狀態。本質上，它代表瀏覽器述說著：「我承諾我會盡快給予你一個答覆」，因此名稱就叫做「 promise 」。
+在這裡我們看到 `fetch()` 帶一個參數——你想要在網路上提取資源的網址——並回傳一個 [promise](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise) 。這一個 promise 用來表示一個完成或失敗的非同步操作的物件。它代表的是一種中間的狀態。本質上，它代表瀏覽器述說著：「我承諾我會盡快給予你一個答覆」，因此名稱就叫做「 promise 」。
 
 我們可以透過練習來習慣這個概念；在動作上它感覺有點像是 [薛丁格的貓](https://zh.wikipedia.org/wiki/薛丁格的貓)。任何可能的結果已經發生，所以 fetch 指令正在等待瀏覽器在未來的某個時間點完成操作後並回傳的結果。我們接著在 `fetch()` 的結束會鏈結三個程式區塊：
 

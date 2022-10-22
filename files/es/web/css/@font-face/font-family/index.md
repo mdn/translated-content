@@ -25,7 +25,9 @@ Comienza con la fuente que quieras, y acaba siempre con una familia de fuente ge
 
 ## Síntaxis
 
-    font-family: font|initial|inherit;
+```
+font-family: font|initial|inherit;
+```
 
 ### Valores
 
@@ -62,9 +64,11 @@ Fuente genérica cursiva, como por ejemplo Script.
 
 Como ejemplo , consideremos la familia de fuentes garamon, es su forma normal, obtendremos el siguiente resultado:
 
-    p {
-        font-family: "Times New Roman", Georgia, Serif;
-    }
+```css
+p {
+    font-family: "Times New Roman", Georgia, Serif;
+}
+```
 
 ## Especificaciones
 

@@ -2,6 +2,7 @@
 title: Proxy.revocable()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 ---
+
 {{JSRef}}
 
 **`Proxy.revocable()`** メソッドは、取り消し可能な {{jsxref("Proxy")}} オブジェクトを作成するために使用します。

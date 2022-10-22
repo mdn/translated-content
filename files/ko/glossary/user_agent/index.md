@@ -1,17 +1,6 @@
 ---
 title: 사용자 에이전트
 slug: Glossary/User_agent
-tags:
-  - Browser
-  - Glossary
-  - UA
-  - User-agent
-  - WebMechanics
-  - user agent
-  - userAgent
-  - 사용자 에이전트
-  - 유저 에이전트
-translation_of: Glossary/User_agent
 ---
 **사용자 에이전트**(user agent)는 사용자를 대표하는 컴퓨터 프로그램으로, {{Glossary("World Wide Web", "웹")}} 맥락에선 {{Glossary("Browser", "브라우저")}}를 의미합니다.
 

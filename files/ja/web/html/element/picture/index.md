@@ -2,6 +2,7 @@
 title: '<picture>: 画像要素'
 slug: Web/HTML/Element/picture
 ---
+
 {{HTMLRef}}
 
 **HTML の `<picture>` 要素**は、0 個以上の {{HTMLElement("source")}} 要素と一つの {{HTMLElement("img")}} 要素を含み、様々な画面や端末の条件に応じた画像を提供します。
@@ -79,7 +80,7 @@ DPI の高い (高解像度の) ディスプレイのために高解像度版の
 
 {{cssxref("object-position")}} プロパティを使用して、要素の枠内で画像の位置を調整したり、 {{cssxref("object-fit")}} プロパティを使用して、枠内に合わせるための画像の寸法を変更する方法を制御したりすることができます。
 
-> **Note:** これらのプロパティは子の `<img>` 要素に用い、 `<picture>` 要素には**用いない**でください。
+> **メモ:** これらのプロパティは子の `<img>` 要素に用い、 `<picture>` 要素には**用いない**でください。
 
 ## 例
 

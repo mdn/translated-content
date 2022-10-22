@@ -2,6 +2,7 @@
 title: レンダリングと WebXR フレームアニメーションコールバック
 slug: Web/API/WebXR_Device_API/Rendering
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 WebXR 環境をセットアップし、進行中の XR 環境セッションを表す {{domxref("XRSession")}} を作成したら、レンダリングのためにシーンのフレームを XR デバイスに提供する必要があります。 この記事では、{{domxref("XRSession")}} を使用して各フレームを表す {{domxref("XRFrame")}} オブジェクトを取得し、それを使用して、XR デバイスに配信するためのフレームバッファーを準備し、レンダリングループで XR シーンのフレームをデバイスに駆動するプロセスについて説明します。

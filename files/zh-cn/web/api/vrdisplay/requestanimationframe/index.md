@@ -2,6 +2,7 @@
 title: VRDisplay.requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`requestAnimationFrame()`** method of the {{domxref("VRDisplay")}} interface is a special implementation of {{domxref("Window.requestAnimationFrame")}} containing a callback function that will be called every time a new frame of the `VRDisplay` presentation is rendered:
@@ -38,7 +39,7 @@ TBD.
 
 ## Browser compatibility
 
-{{Compat("api.VRDisplay.requestAnimationFrame")}}
+{{Compat}}
 
 ## See also
 

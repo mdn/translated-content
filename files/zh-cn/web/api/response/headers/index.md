@@ -2,6 +2,7 @@
 title: Response.headers
 slug: Web/API/Response/headers
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} 接口的只读属性 **`headers`** 包含与响应关联的{{domxref("Headers")}}对象。
@@ -42,7 +43,7 @@ fetch(myRequest).then(function(response) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.headers")}}
+{{Compat}}
 
 ## See also
 

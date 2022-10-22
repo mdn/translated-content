@@ -2,6 +2,7 @@
 title: Storage.length
 slug: Web/API/Storage/length
 ---
+
 {{APIRef("Web Storage API")}}
 
 `length` 是 {{domxref("Storage")}} 接口的只读属性，返回一个整数，表示存储在 `Storage` 对象里的数据项（data items）数量。
@@ -38,7 +39,7 @@ function populateStorage() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Storage.length")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -2,6 +2,7 @@
 title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
+
 {{JSRef}}
 
 静的な **`Reflect.apply()`** メソッドは、指定された引数とともに対象となる関数を呼び出します。

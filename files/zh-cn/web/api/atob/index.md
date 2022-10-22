@@ -2,6 +2,7 @@
 title: atob()
 slug: Web/API/atob
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`atob()`** 对经过 base-64 编码的字符串进行解码。你可以使用 {{domxref("WindowBase64.btoa","window.btoa()")}} 方法来编码一个可能在传输过程中出现问题的数据，并且在接受数据之后，使用 atob() 方法再将数据解码。例如：你可以编码、传输和解码操作各种字符，比如 0-31 的 ASCII 码值。

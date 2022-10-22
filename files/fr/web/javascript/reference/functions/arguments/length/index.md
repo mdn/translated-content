@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/arguments/length
 original_slug: Web/JavaScript/Reference/Fonctions/arguments/length
 ---
+
 {{jsSideBar("Functions")}}
 
 La propriété **`arguments.length`** contient le nombre d'arguments passés à la fonction.
@@ -50,16 +51,11 @@ résultat = somme(103, 104, 105);  // renvoie 312
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires                                        |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée par JavaScript 1.1 |
-| {{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}                                         | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.functions.arguments.length")}}
+{{Compat}}
 
 ## Voir aussi
 

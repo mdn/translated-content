@@ -2,11 +2,12 @@
 title: CanvasRenderingContext2D.imageSmoothingEnabled
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 ---
+
 {{APIRef}}
 
-**`CanvasRenderingContext2D.imageSmoothingEnabled`** 是 Canvas 2D API 用来设置图片是否平滑的属性，true 表示图片平滑（默认值），false 表示图片不平滑。当我们获取 `imageSmoothingEnabled` 属性值时， 它会返回最新设置的值。
+**`CanvasRenderingContext2D.imageSmoothingEnabled`** 是 Canvas 2D API 用来设置图片是否平滑的属性，true 表示图片平滑（默认值），false 表示图片不平滑。当我们获取 `imageSmoothingEnabled` 属性值时，它会返回最新设置的值。
 
-以缩放画布为例，这个属性对像素为主的游戏很有用。默认的改变大小的算法会造成图片模糊并且破坏图片原有的像素。如果那样的话，设置属性值为 false。 参见 CSS {{cssxref("image-rendering")}} 属性。
+以缩放画布为例，这个属性对像素为主的游戏很有用。默认的改变大小的算法会造成图片模糊并且破坏图片原有的像素。如果那样的话，设置属性值为 false。参见 CSS {{cssxref("image-rendering")}} 属性。
 
 > **备注：** 您可以使用{{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}}属性来调整平滑质量。
 
@@ -101,7 +102,7 @@ img.onload = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.imageSmoothingEnabled")}}
+{{Compat}}
 
 ## 参见
 

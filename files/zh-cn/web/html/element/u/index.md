@@ -2,11 +2,12 @@
 title: <u>
 slug: Web/HTML/Element/u
 ---
+
 {{HTMLRef}}
 
 **HTML `<u>` 元素（表意不清标注元素）**表示一个需要标注为非文本化（non-textual）的内联文本域。默认情况下渲染为一个实线下划线，可以用 CSS 替换。
 
-> **警告：** 此元素以前在旧版本的 HTML 中称为 “下划线” 元素，但有时仍会以这种方式被滥用。要为文本加下划线，您应该应用包含 CSS {{cssxref("text-decoration")}}属性设置为 `underline` 的样式。
+> **警告：** 此元素以前在旧版本的 HTML 中称为“下划线”元素，但有时仍会以这种方式被滥用。要为文本加下划线，您应该应用包含 CSS {{cssxref("text-decoration")}}属性设置为 `underline` 的样式。
 
 {{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
 
@@ -85,7 +86,7 @@ slug: Web/HTML/Element/u
 spelled word.</p>
 ```
 
-在 HTML 中，我们看到 `<u>` 使用了一个类 `spelling`，用于表示 “wrongly” 一词的拼写错误。
+在 HTML 中，我们看到 `<u>` 使用了一个类 `spelling`，用于表示“wrongly”一词的拼写错误。
 
 #### CSS
 

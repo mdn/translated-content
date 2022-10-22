@@ -6,7 +6,7 @@ translation_of: Web/HTML/Element/iframe
 O **elemento** **HTML** **\<iframe>** (ou _elemento HTML_ _inline frame_) representa um contexto de navegação aninhado, efetivamente incorporando outra página HTML para a página atual. Em HTML 4.01, um documento pode conter uma cabeça e um corpo ou uma cabeça e um conjunto de quadros, mas não tanto um corpo e um conjunto de quadros. No entanto, um \<iframe> pode ser usado dentro de um corpo de documento normal. Cada contexto de navegação tem sua própria história de sessão e o documento ativo. O contexto de navegação que contém o conteúdo incorporado é chamado o pai de contexto de navegação. O contexto de navegação de nível superior (que não tem um pai) normalmente é a janela do navegador.
 
 - _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), embedded content, interactive content, palpable content.
-- \_Permitted content_Special, see prose
+- _Permitted content_ Special, see prose
 - _Tag omission_ {{no_tag_omission}}
 - _Permitted parent elements_ Any element that accepts embedded content.
 - _DOM interface_ {{domxref("HTMLIFrameElement")}}

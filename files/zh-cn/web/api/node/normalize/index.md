@@ -2,6 +2,7 @@
 title: Node.normalize()
 slug: Web/API/Node/normalize
 ---
+
 {{APIRef("DOM")}}
 
 `Node.normalize()` 方法将当前节点和它的后代节点”规范化“（normalized）。在一个"规范化"后的 DOM 树中，不存在一个空的文本节点，或者两个相邻的文本节点。
@@ -42,7 +43,7 @@ wrapper.normalize();
 
 ## Browser compatibility
 
-{{Compat("api.Node.normalize")}}
+{{Compat}}
 
 ## See also
 

@@ -15,7 +15,7 @@ translation_of: Web/CSS/animation-delay
 
 ## Resumen
 
-La propiedad [CSS](/en/CSS "CSS") `animation-delay` especifica el tiempo de retardo que debe transcurrir antes de comenzar la animación. Esto permite que la secuencia de animación no comience nada más ser aplicada a un elemento.
+La propiedad [CSS](/en/CSS) `animation-delay` especifica el tiempo de retardo que debe transcurrir antes de comenzar la animación. Esto permite que la secuencia de animación no comience nada más ser aplicada a un elemento.
 
 El valor 0, que es el valor por defecto, indica que la animación debería comenzar inmediatamente. Usando otro valor, definimos el retardo entre el momento en que el elemento recibe la animación y el comienzo de la secuencia de la misma.
 
@@ -29,10 +29,12 @@ A menudo es conveniente usar la propiedad abreviada {{ cssxref("animation") }} p
 
 ## Sintaxis
 
-    Gramática formal: <time> [, <time>]*
+```
+Gramática formal: <time> [, <time>]*
 
-    animation-delay: 3s
-    animation-delay: 2s, 4ms
+animation-delay: 3s
+animation-delay: 2s, 4ms
+```
 
 ### Valores
 
@@ -41,7 +43,7 @@ A menudo es conveniente usar la propiedad abreviada {{ cssxref("animation") }} p
 
 ## Ejemplos
 
-Visitar [animaciones CSS](/es/CSS/Usando_animaciones_CSS "en/CSS/CSS_animations") para ver algunos ejemplos.
+Visitar [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejemplos.
 
 ## Especificaciones
 
@@ -55,5 +57,5 @@ Visitar [animaciones CSS](/es/CSS/Usando_animaciones_CSS "en/CSS/CSS_animations"
 
 ## Consulte también
 
-- [Usando animaciones CSS](/es/docs/CSS/Using_CSS_animations "en/CSS/CSS_animations")
+- [Usando animaciones CSS](/es/docs/CSS/Using_CSS_animations)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

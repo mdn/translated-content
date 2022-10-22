@@ -10,6 +10,7 @@ tags:
   - Noeud
 translation_of: Web/API/Element/getAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 ## Résumé

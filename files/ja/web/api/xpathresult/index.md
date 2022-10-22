@@ -2,6 +2,7 @@
 title: XPathResult
 slug: Web/API/XPathResult
 ---
+
 {{APIRef}}
 
 ## Properties

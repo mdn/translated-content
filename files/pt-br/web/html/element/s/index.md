@@ -13,16 +13,16 @@ O **elemento HTML `<s>`** renderiza um texto tachado ou uma linha cortando o tex
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >Conteúdo fraseado</a
         >
         ou
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >conteúdo de fluxo</a
         >.
       </td>
@@ -30,7 +30,7 @@ O **elemento HTML `<s>`** renderiza um texto tachado ou uma linha cortando o tex
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >Conteúdo freaseado</a
         >.
       </td>
@@ -43,7 +43,7 @@ O **elemento HTML `<s>`** renderiza um texto tachado ou uma linha cortando o tex
       <th scope="row">Pais permitidos</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >conteúdo fraseado</a
         >.
       </td>

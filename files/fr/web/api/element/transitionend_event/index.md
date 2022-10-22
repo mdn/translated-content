@@ -4,6 +4,7 @@ slug: Web/API/Element/transitionend_event
 translation_of: Web/API/Document/transitionend_event
 original_slug: Web/API/Document/transitionend_event
 ---
+
 {{APIRef}}
 
 L’évènement **`transitionend`** est émis quand une [transition CSS](/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS) a terminé. Dans le cas où une transition est supprimée avant d’avoir terminé, comme lorsqu’une {{cssxref("transition-property")}} est supprimée ou lorsque {{cssxref("display")}} reçoit la valeur `none`, l’évènement n’est pas généré.

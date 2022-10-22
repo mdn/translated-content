@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/let
 original_slug: Web/JavaScript/Reference/Instructions/let
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`let`** permet de déclarer une variable dont la portée est celle du bloc courant, éventuellement en initialisant sa valeur.
@@ -357,14 +358,11 @@ console.log(i); // i n'est pas défini
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                                                       |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------- |
-| {{SpecName('ES2015', '#sec-let-and-const-declarations', 'Let and Const Declarations')}} | {{Spec2('ES2015')}}     | Définition initiale. Cette définition n'inclue pas les expressions et blocs `let`. |
-| {{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Let and Const Declarations')}} | {{Spec2('ESDraft')}} |                                                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.let")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/Endianness
 original_slug: Glossaire/Endianness
 ---
+
 "Endian" et "endianness" (ou "ordre des octets") désigne la manière dont les ordinateurs organisent les octets pour constituer des nombres.
 
 Chaque emplacement de stockage en mémoire dispose d'un index ou adresse. Un octet pouvant stocker une valeur de 8 bits (i.e. compris entre `0x00` et `0xff`), il faut en réserver davantage pour enregistrer des nombres plus grands. L'_ordre_ le plus utilisé pour composer des nombres sur plusieurs octets est de loin le **little-endian** qui est utilisé sur tous les processeurs Intel. Little-endian signifie que le stockage des octets se fait du moins important au plus important (où l'octet le moins important prend la première adresse ou la plus basse), ce qui est comparable à la façon habituelle en Europe d'écrire les dates (e.g., 31 décembre 2050).

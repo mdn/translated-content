@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/menubar
 ---
+
 {{ APIRef() }}
 
 La propriété **`Window.menubar`** renvoie l'objet `menubar`, dont la visibilité peut être vérifiée.

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/defineProperty
 ---
+
 {{JSRef}}
 
 La méthode statique **`Object.defineProperty()`** permet de définir une nouvelle propriété ou de modifier une propriété existante, directement sur un objet. La méthode renvoie l'objet modifié.
@@ -343,66 +344,11 @@ arc.getArchive(); // [{val: 11}, {val: 13}]
 
 ## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">É tat</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('ES5.1', '#sec-15.2.3.6', 'Object.defineProperty')}}
-      </td>
-      <td>{{Spec2('ES5.1')}}</td>
-      <td>Définition initiale. Implémentée avec JavaScript 1.8.5.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}}
-      </td>
-      <td>{{Spec2('ES6')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        <p>
-          {{SpecName('ESDraft', '#sec-object.defineproperty', 'Object.defineProperty')}}
-        </p>
-      </td>
-      <td>{{Spec2('ESDraft')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.defineProperty")}}
-
-## Notes de compatibilité
-
-### Redéfinir la propriété `length` d'un tableau (`Array`)
-
-Il est possible de redéfinir la propriété {{jsxref("Array.length", "length")}} utilisée pour les tableaux, avec les restrictions vues. (La propriété `length` est initialement non-configurable, non-enumérable et accessible en écriture (`writable` vaut `true`)). Ainsi, sur un tableau, si rien n'a été fait, on peut modifier la valeur de la propriété `length` ou la rendre non accessible en écriture. Il n'est pas permis de changer son caractère énumérable ou configurable. Cependant, tous les navigateurs n'autorisent pas cette redéfinition.
-
-Les versions de Firefox 4 à 22 renverront une exception {{jsxref("TypeError")}} pour chaque tentative (licite ou non) de modification de la propriété `length` d'un tableau.
-
-Pour les versions de Chrome qui implémentent `Object.defineProperty()`, elles ignorent, dans certaines circonstances, une redéfinition de la propriété utilisant une valeur différente de la valeur courante de `length`. Sous certaines circonstances, le changement de l'accès en écriture n'aura aucun effet (et ne renverra aucune exception). Les méthodes relatives comme  {{jsxref("Array.prototype.push")}} ne respectent pas le non accès en écriture.
-
-Pour les versions de Safari qui implémentent `Object.defineProperty()` elles ignorent la redéfinition d'une valeur différente de la valeur courante. Toute tentative de modifier l'accès en écriture échouera silencieusement (aucune modification effective, aucune exception renvoyée).
-
-Seules les versions Internet Explorer 9 et supérieures et Firefox 23 et supérieures semblent supporter complètement la redéfinition de la propriété `length` pour les tableaux. À l'heure actuelle, il n'est pas conseillé de s'attendre à ce qu'une telle redéfinition fonctionne ou ne fonctionne pas. Même dans le cas où on peut supposer que cela fonctionne de façon cohérente : [ce n'est pas vraiment une bonne idée de le faire](https://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/) (en anglais).
-
-### Notes spécifiques relatives à Internet Explorer 8
-
-Internet Explorer 8 a implémenté une méthode `Object.defineProperty()` [uniquement utilisable sur les objets DOM](https://msdn.microsoft.com/en-us/library/dd229916%28VS.85%29.aspx). Quelques éléments sont à noter :
-
-- L'utilisation de `Object.defineProperty()` sur les objets natifs renvoie une erreur.
-- Les attributs de propriétés doivent être définis avec certaines valeurs. `true` (pour `Configurable`), `true` (pour `enumerable`), `true` (pour `writable`) pour les descripteurs de données et `true` pour `configurable`, `false` pour `enumerable` pour les descripteurs d'accesseur. Fournir d'autres valeurs résultera en une erreur (à confirmer).
-- Pour modifier une propriété, il faut d'abord la supprimer. Si ça n'a pas été fait, elle reste telle quelle.
+{{Compat}}
 
 ## Voir aussi
 

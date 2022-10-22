@@ -1,33 +1,34 @@
 ---
 title: HTMLFormElement.enctype
 slug: Web/API/HTMLFormElement/enctype
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
-## 概要
 
-`enctype` は form 要素のコンテンツタイプの取得 / 設定に用います。
+{{APIRef("HTML DOM")}}
 
-## 構文
+**`HTMLFormElement.enctype`** プロパティは、サーバーにフォームを送信するために使用されるコンテンツの [MIME タイプ](https://en.wikipedia.org/wiki/Mime_type)を指定します。使用可能な値は以下の通りです。
 
-```
-string = form.enctype // 取得
+- `application/x-www-form-urlencoded`: 初期値（既定値）です。
+- `multipart/form-data`: {{HTMLElement("input")}} 要素にファイルデータをアップロードできるようにする型。
+- `text/plain`: 形式があいまいで、人間が読み取り可能なコンテンツであり、コンピューターで確実に解釈できるとは限りません。
 
-form.enctype = string // 設定
-```
+この値は {{htmlattrxref("formenctype", "button")}} 属性を {{HTMLElement("button")}} または {{HTMLElement("input")}} 要素に指定することで上書きすることができます。
+
+## 値
+
+文字列です。
 
 ## 例
 
 ```js
-var firstForm = document.getElementsByTagName("form")[0]; // 文書中の最初の form 要素を取得
-
-firstForm.enctype = "application/x-www-form-urlencoded"; // 設定
-alert( firstForm.enctype ); // 確認
+form.enctype = 'application/x-www-form-urlencoded';
 ```
-
-## 注記
-
-エンコーディングタイプは一般的に "application/x-www-form-urlencoded" となります。
 
 ## 仕様書
 
-- [HTML 5, Section 4.10.19.6, Form submission](http://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
-- [DOM Level 2 HTML: enctype](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-84227810)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

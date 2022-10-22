@@ -2,6 +2,7 @@
 title: 物件建構實作
 slug: Learn/JavaScript/Objects/Object_building_practice
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
 我們解說完必要的 JavaScript 物件理論以及語法細節，想先幫你把根紮好。接著就透過實作範例，讓你實際建立自己有趣又多彩的 JavaScript 物件。

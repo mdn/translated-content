@@ -2,6 +2,7 @@
 title: 块格式化上下文
 slug: Web/Guide/CSS/Block_formatting_context
 ---
+
 {{ CSSRef }}
 
 **块格式化上下文**（Block Formatting Context，BFC）是 Web 页面的可视 CSS 渲染的一部分，是块级盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。
@@ -156,7 +157,7 @@ section {
 
 ### 外边距重叠
 
-创建新的 BFC 避免两个相邻的 div 之间 [外边距重叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) 。
+创建新的 BFC 避免两个相邻元素之间的[外边距重叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) 。
 
 #### HTML
 

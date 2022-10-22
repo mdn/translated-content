@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/Set
 browser-compat: javascript.builtins.Set.Set
 ---
+
 {{JSRef}}
 
 Le **constructeur `Set()`** permet de créer des objets `Set` qui sont des ensembles de valeurs uniques de n'importe quel type ([des valeurs primitives](/fr/docs/Glossary/Primitive) ou des objets).

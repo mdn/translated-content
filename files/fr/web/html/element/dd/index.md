@@ -15,6 +15,7 @@ tags:
 translation_of: Web/HTML/Element/dd
 browser-compat: html.elements.dd
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<dd>`** fournit la description, la définition ou la valeur du terme précédent ([`<dt>`](/fr/docs/Web/HTML/Element/dt)) dans une liste de description ([`<dl>`](/fr/docs/Web/HTML/Element/dl)).

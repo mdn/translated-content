@@ -3,6 +3,7 @@ title: 202 Accepted
 slug: Web/HTTP/Status/202
 translation_of: Web/HTTP/Status/202
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse HTTP **`202 Accepted`** indique que la requête a été reçue mais que le traitement côté serveur n'est pas terminé (il peut même ne pas avoir commencé). Il est possible que le serveur n'effectue pas le traitement demandé par la requête, car celle-ci pourrait être refusée au moment effectif du traitement.

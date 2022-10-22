@@ -2,6 +2,7 @@
 title: column-rule-style
 slug: Web/CSS/column-rule-style
 ---
+
 {{ CSSRef("CSS Multi-columns") }}
 
 ## Summary
@@ -48,4 +49,4 @@ column-rule-style: inherit;
 
 ## Browser compatibility
 
-{{Compat("css.properties.column-rule-style")}}
+{{Compat}}

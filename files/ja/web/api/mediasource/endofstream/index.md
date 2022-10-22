@@ -2,6 +2,7 @@
 title: MediaSource.endOfStream()
 slug: Web/API/MediaSource/endOfStream
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} インターフェイスの **`endOfStream()`** メソッドは、ストリームの終わりを通知します。

@@ -2,6 +2,7 @@
 title: Angular 入门
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 是时候将目光转向谷歌的 Angular 框架了，这是一种你可能经常遇到的选项。在这篇文章中我们关注 Angular 能提供什么、安装必备的组件、建立一个示例应用，并关注 Angular 的基本架构。
@@ -28,7 +29,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_
 Angular 是一个开发平台，基于 [TypeScript](https://www.typescriptlang.org/)。作为一个平台，Angular 包含了：
 
 - 基于组件的框架，可用于构建可扩展的 Web 应用程序
-- 集成良好的库（library），涵盖各种功能，包括路由、表单管理、客户端-服务器通信等
+- 集成良好的库（library），涵盖各种功能，包括路由、表单管理、客户端——服务器通信等
 - 开发人员工具，可帮助您开发、构建、测试和更新代码
 
 当你用 Angular 搭建一个应用，你正在利用一个可以从单开发人员项目扩展到企业级应用程序的平台。Angular 被设计用来使版本迭代尽可能简单。因此，你可以毫不费力地利用最新成果（developments）。最为重要的是，Angular 的生态系统由多达 170 万的开发人员、库（library）作者和内容创作者构成的多元化群体组成。
@@ -98,7 +99,7 @@ Angular 是一个开发平台，基于 [TypeScript](https://www.typescriptlang.o
 npm install -g @angular/cli
 ```
 
-Angular 命令行界面命令均以 `ng` 开头, 其后是你希望命令行界面执行的操作。在桌面目录中，使用以下 `ng new` 命令创建一个名为 `todo` 的应用程序：
+Angular 命令行界面命令均以 `ng` 开头，其后是你希望命令行界面执行的操作。在桌面目录中，使用以下 `ng new` 命令创建一个名为 `todo` 的应用程序：
 
 ```bash
 ng new todo --routing=false --style=css

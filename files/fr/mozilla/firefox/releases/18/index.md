@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/18
 original_slug: Mozilla/Firefox/Versions/18
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 18, basé sur Gecko 18.0, est sorti le 8 janvier 2013. Cette page résume les principaux changements dans Firefox 18 qui sont utiles aux développeurs.

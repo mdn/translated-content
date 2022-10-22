@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/lookupSetter
 ---
+
 {{JSRef}}{{deprecated_header}}
 
 La méthode **`__lookupSetter__`** renvoie la fonction définie comme mutateur pour une propriété donnée.
@@ -58,30 +59,11 @@ Object.getOwnPropertyDescriptor(obj, "toto").set;
 
 ## Spécifications
 
-<table class="spectable standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">État</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('ESDraft', '#sec-object.prototype.__lookupSetter__', 'Object.prototype.__lookupSetter__()')}}
-      </td>
-      <td>{{Spec2('ESDraft')}}</td>
-      <td>
-        Incluse dans l'annexe normative pour les fonctionnalités historiques
-        liées aux navigateurs web (la spécification codifie ce qui est déjà
-        présent dans les différentes implémentations).
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.lookupSetter")}}
+{{Compat}}
 
 ## Voir aussi
 

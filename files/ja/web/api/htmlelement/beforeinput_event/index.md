@@ -2,6 +2,7 @@
 title: 'HTMLElement: beforeinput イベント'
 slug: Web/API/HTMLElement/beforeinput_event
 ---
+
 {{APIRef}}
 
 DOM の **`beforeinput`** イベントは、{{HTMLElement("input")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}} 要素の値が変更されようとしているときに発生します。 このイベントは、{{domxref("HTMLElement.contentEditable", "contenteditable")}} が有効になっている要素、および {{domxref("Document.designMode", "designMode")}} がオンになっている要素にも適用されます。

@@ -2,6 +2,7 @@
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
 ---
+
 {{jsSidebar("Statements")}}
 
 **`throw` 文**は、ユーザー定義の例外を発生させます。現在の関数の実行は停止し (`throw` の後の文は実行されません)、コールスタック内の最初の [`catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックに制御を移します。呼び出し元の関数に `catch` ブロックが存在しない場合は、プログラムが終了します。

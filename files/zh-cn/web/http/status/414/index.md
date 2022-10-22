@@ -2,6 +2,7 @@
 title: 414 URI Too Long
 slug: Web/HTTP/Status/414
 ---
+
 {{HTTPSidebar}}
 
 响应码 **`414 URI Too Long`** 表示客户端所请求的 URI 超过了服务器允许的范围。

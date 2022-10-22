@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/TreeWalker/parentNode
 ---
+
 {{ APIRef("DOM") }}
 
 La méthode **`TreeWalker.parentNode()`** déplace le {{domxref("Node")}} courant vers le premier noeud ancêtre _visible_ dans l'ordre du document et renvoie le noeud trouvé. Si aucun noeud n'existe ou s'il est au-dessus du _noeud racine_ du `TreeWalker`, elle renvoie `null` et le noeud actuel reste inchangé.

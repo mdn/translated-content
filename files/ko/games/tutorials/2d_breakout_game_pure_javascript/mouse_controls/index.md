@@ -1,11 +1,6 @@
 ---
 title: 마우스로 패들 조종하기
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-tags:
-  - Canvas
-  - Games
-  - JavaScript
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Mouse_controls
 ---
 {{GamesSidebar}}

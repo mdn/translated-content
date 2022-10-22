@@ -2,6 +2,7 @@
 title: ':where()'
 slug: Web/CSS/:where
 ---
+
 {{CSSRef}}
 
 **`:where()`** [CSS 伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数接受[选择器列表](/zh-CN/docs/Web/CSS/Selector_list)作为它的参数，将会选择所有能被该选择器列表中任何一条规则选中的元素。

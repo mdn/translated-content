@@ -2,6 +2,7 @@
 title: 处理常见的 JavaScript 问题
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 现在我们看看如何跟踪一些常见的浏览器 JavaScript 问题并且如何修复它们。这个包括如何使用浏览器开发工具跟踪和修复问题、使用 Polyfill 或第三方库解决问题、如果让一些现代 JavaScript 的特性也能在旧的浏览器下面工作等。
@@ -297,14 +298,14 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
 2. Next, save copies of the [Fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js) and the [es6-promises polyfill](https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.js) in the same directory as the HTML.
 3. Apply the polyfill scripts to the page using the following code — place these above the existing {{htmlelement("script")}} element so they will be available on the page already when we start trying to use Fetch:
 
-    ```js
+    ```html
     <script src="es6-promise.js"></script>
     <script src="fetch.js"></script>
     ```
 
 4. Inside the original {{htmlelement("script")}}, add the following code:
 
-5. ```js
+    ```js
     var myImage = document.querySelector('.my-image');
 
     fetch('flowers.jpg').then(function(response) {
@@ -315,7 +316,7 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
     });
     ```
 
-6. Now if you load it in a browser that doesn't support Fetch (Safari and IE are obvious candidates), you should still see the flower image appear — cool!
+5. Now if you load it in a browser that doesn't support Fetch (Safari and IE are obvious candidates), you should still see the flower image appear — cool!
     ![](fetch-image.jpg)
 
 > **备注：** You can find our finished version at [fetch-polyfill-finished.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (see also the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).

@@ -3,6 +3,7 @@ title: Element.append()
 slug: Web/API/Element/append
 original_slug: Web/API/ParentNode/append
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.append()`** メソッドは、一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトを `Element` のの最後の子の後に挿入します。 {{domxref("DOMString")}} オブジェクトは等価な {{domxref("Text")}} ノードとして挿入されます。

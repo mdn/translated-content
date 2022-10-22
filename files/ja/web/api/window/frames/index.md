@@ -2,6 +2,7 @@
 title: Window.frames
 slug: Web/API/Window/frames
 ---
+
 {{APIRef("DOM")}}
 
 ウィンドウ自体を、現在のウィンドウの直接のサブフレームを列挙した配列風オブジェクトとして返します。

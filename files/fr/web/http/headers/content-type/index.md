@@ -7,6 +7,7 @@ tags:
   - en-tête
 translation_of: Web/HTTP/Headers/Content-Type
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête **`Content-Type`** sert à indiquer le type MIME de la ressource.

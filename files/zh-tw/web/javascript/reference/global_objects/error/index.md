@@ -2,6 +2,7 @@
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
 ---
+
 {{JSRef}}
 
 **`Error`** 建構函式能用來建立一個 error 物件。當執行期間發生錯誤時，`Error` 物件實體會被拋出。`Error` 物件也可作為自訂例外的基礎物件，請參考下方的標準內建錯誤類型。

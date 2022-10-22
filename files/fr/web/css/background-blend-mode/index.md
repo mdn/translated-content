@@ -4,6 +4,7 @@ slug: Web/CSS/background-blend-mode
 browser-compat: css.properties.background-blend-mode
 translation_of: Web/CSS/background-blend-mode
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`background-blend-mode`** définit la façon dont les images d'arrière-plan doivent être fusionnées entre elles et avec la couleur d'arrière-plan.

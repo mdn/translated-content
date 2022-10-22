@@ -2,6 +2,7 @@
 title: animateTransform
 slug: Web/SVG/Element/animateTransform
 ---
+
 {{SVGRef}}
 
 `animateTransform` 要素は、 ターゲット要素に対して変換属性をアニメーション化し、これにより変形、スケーリング、回転およびまたはゆがみのアニメーションを制御することができます。

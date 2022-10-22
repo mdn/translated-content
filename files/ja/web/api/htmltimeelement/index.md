@@ -2,6 +2,7 @@
 title: HTMLTimeElement
 slug: Web/API/HTMLTimeElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLTimeElement`** インターフェイスは、 {{HTMLElement("time")}} 要素を操作するための特別なプロパティを提供します (通常の {{domxref("HTMLElement")}} インターフェイスに加え、継承によっても利用できます。) 。

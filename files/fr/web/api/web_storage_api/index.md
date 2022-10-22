@@ -10,6 +10,7 @@ tags:
   - sessionStorage
 translation_of: Web/API/Web_Storage_API
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 L'API **Web Storage** fournit des mécanismes par lesquels les navigateurs peuvent stocker des paires clé / valeur, d'une manière beaucoup plus intuitive que l'utilisation de cookies.
@@ -40,7 +41,7 @@ Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionS
 
 ## Exemples
 
-Pour illustrer une utilisation typique du stockage Web, nous avons créé un exemple simple, appelé de manière imaginative [Web Storage Demo](https://github.com/mdn/dom-examples/tree/master/web-storage). La [landing page](https://mdn.github.io/dom-examples/web-storage/) fournit des commandes permettant de personnaliser la couleur, la police et l'image décorative. Lorsque vous choisissez différentes options, la page est instantanément mise à jour. De plus, vos choix sont stockés dans `localStorage`. Ainsi, lorsque vous quittez la page puis la rechargez plus tard, vos choix sont mémorisés. En outre, nous avons fourni une [event output page](https://mdn.github.io/dom-examples/web-storage/event.html) — Si vous chargez cette page dans un autre onglet, puis modifiez vos choix dans la page d'arrivée, vous verrez les informations de stockage mises à jour générées lors du déclenchement de {{event("StorageEvent")}}.
+Pour illustrer une utilisation typique du stockage Web, nous avons créé un exemple simple, appelé de manière imaginative [Web Storage Demo](https://github.com/mdn/dom-examples/tree/master/web-storage). La [landing page](https://mdn.github.io/dom-examples/web-storage/) fournit des commandes permettant de personnaliser la couleur, la police et l'image décorative. Lorsque vous choisissez différentes options, la page est instantanément mise à jour. De plus, vos choix sont stockés dans `localStorage`. Ainsi, lorsque vous quittez la page puis la rechargez plus tard, vos choix sont mémorisés. En outre, nous avons fourni une [event output page](https://mdn.github.io/dom-examples/web-storage/event.html) — Si vous chargez cette page dans un autre onglet, puis modifiez vos choix dans la page d'arrivée, vous verrez les informations de stockage mises à jour générées lors du déclenchement de [`StorageEvent`](/fr/docs/Web/API/StorageEvent).
 
 ## Spécifications
 

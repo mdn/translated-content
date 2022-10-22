@@ -36,7 +36,7 @@ Você pode estilizar links visitados, porém existem limites de quais estilos vo
 - {{ cssxref("outline-color") }}
 - As partes de cor dos atributos {{SVGAttr("fill")}} e {{SVGAttr("stroke")}}
 
-Em adição, mesmo para os estilos acima, você não poderá alterar a transparência entre links visitados e não visitados, ou de outra maneira você seria capaz de usar [`rgba()`](</en-US/docs/Web/CSS/color_value#rgba()>), [`hsla()`](</en-US/docs/Web/CSS/color_value#hsla()>), ou a palavra chave [`transparent`](/en-US/docs/Web/CSS/color_value#transparent).
+Em adição, mesmo para os estilos acima, você não poderá alterar a transparência entre links visitados e não visitados, ou de outra maneira você seria capaz de usar [`rgba()`](</pt-BR/docs/Web/CSS/color_value#rgba()>), [`hsla()`](</pt-BR/docs/Web/CSS/color_value#hsla()>), ou a palavra chave [`transparent`](/pt-BR/docs/Web/CSS/color_value#transparent).
 
 Aqui está um exemplo de como estilizar com as restrições acima mencionadas:
 
@@ -67,4 +67,4 @@ No geral, essas restrições estas restrições não deveriam afetar desenvolved
 
 - [privacy-related changes coming to CSS :visited](http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) em Mozilla Hacks (em inglês)
 - [Plugging the CSS History Leak](http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/) em the Mozilla Security Blog (em inglês)
-- [Preventing attacks on a user's history through CSS :visited selectors ](http://dbaron.org/mozilla/visited-privacy)(em inglês)
+- [Preventing attacks on a user's history through CSS :visited selectors](http://dbaron.org/mozilla/visited-privacy) (em inglês)

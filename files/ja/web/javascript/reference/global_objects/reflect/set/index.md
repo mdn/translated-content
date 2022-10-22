@@ -2,6 +2,7 @@
 title: Reflect.set()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 ---
+
 {{JSRef}}
 
 静的な **`Reflect.set()`** メソッドは、オブジェクトにプロパティを設定するかのように動作します。

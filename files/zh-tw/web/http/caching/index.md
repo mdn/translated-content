@@ -2,6 +2,7 @@
 title: HTTP caching
 slug: Web/HTTP/Caching
 ---
+
 {{HTTPSidebar}}
 
 藉由重複使用先前取過的資源，網站與網頁應用程式能夠顯著地提升效能。caching 可以減少網路傳輸量以降低一個資源可展示的延遲時間。善用 HTTP caching 可以讓網站可以回應更多請求。

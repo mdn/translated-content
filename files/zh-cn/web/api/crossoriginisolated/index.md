@@ -2,6 +2,7 @@
 title: crossOriginIsolated
 slug: Web/API/crossOriginIsolated
 ---
+
 {{APIRef()}}{{SeeCompatTable}}
 
 **`crossOriginIsolated`** 是 `WindowOrWorkerGlobalScope` 的一个只读属性，返回一个布尔值，该值指示是否可以通过 {{domxref("Window.postMessage()")}} 调用发送 {{jsxref("SharedArrayBuffer")}}。

@@ -2,6 +2,7 @@
 title: class
 slug: Web/JavaScript/Reference/Statements/class
 ---
+
 {{jsSidebar("Statements")}}
 
 **クラス宣言**は、プロトタイプベースの継承を使って、指定された名前の新しいクラスを作成します。

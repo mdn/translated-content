@@ -2,6 +2,7 @@
 title: class
 slug: Web/JavaScript/Reference/Statements/class
 ---
+
 {{jsSidebar("Statements")}}
 
 **class 声明**创建一个基于原型继承的具有给定名称的新类。

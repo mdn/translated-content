@@ -3,6 +3,7 @@ title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototypeOf
 ---
+
 {{JSRef}}
 
 **`handler.setPrototypeOf()`** 方法主要用来拦截 {{jsxref("Object.setPrototypeOf()")}}.
@@ -18,7 +19,7 @@ var p = new Proxy(target, {
 
 ### 参数
 
-以下参数传递给 `setPrototypeOf` 方法.
+以下参数传递给 `setPrototypeOf` 方法。
 
 - `target`
   - : 被拦截目标对象。

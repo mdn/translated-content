@@ -1,10 +1,6 @@
 ---
 title: 엔티티 헤더
 slug: Glossary/Entity_header
-tags:
-  - WebMechanics
-  - 용어
-translation_of: Glossary/Entity_header
 ---
 엔티티 헤더는 메시지 바디의 컨텐츠를 나타내는 {{glossary("header", "HTTP 헤더")}}입니다. 엔티티 헤더는 HTTP 요청 및 응답 모두에서 사용됩니다. {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Encoding")}}과 같은 헤더는 엔티티 헤더입니다.
 

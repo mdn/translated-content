@@ -12,6 +12,7 @@ tags:
   - pkcs11
 translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule
 ---
+
 {{AddonSidebar()}}
 
 Installe le module PKCS # 11 nommé, le rendant disponible pour Firefox

@@ -2,6 +2,7 @@
 title: 繼承
 slug: Web/CSS/inheritance
 ---
+
 ## 摘要
 
 每個 [CSS property definition](/zh-TW/docs/CSS/CSS_Reference) 都寫道是否這個屬性預設有繼承: ("Inherited: Yes") 或是 預設沒有繼承: ("Inherited: no"). 這個設定將會在沒有位屬性標註值時發生.

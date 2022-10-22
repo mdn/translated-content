@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.lineJoin
 slug: Web/API/CanvasRenderingContext2D/lineJoin
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.lineJoin`** 是 Canvas 2D API 用来设置 2 个长度不为 0 的相连部分（线段，圆弧，曲线）如何连接在一起的属性（长度为 0 的变形部分，其指定的末端和控制点在同一位置，会被忽略）。
@@ -25,7 +26,7 @@ ctx.lineJoin = "miter";
 - `round`
   - : 通过填充一个额外的，圆心在相连部分末端的扇形，绘制拐角的形状。圆角的半径是线段的宽度。
 - `bevel`
-  - : 在相连部分的末端填充一个额外的以三角形为底的区域， 每个部分都有各自独立的矩形拐角。
+  - : 在相连部分的末端填充一个额外的以三角形为底的区域，每个部分都有各自独立的矩形拐角。
 - `miter`
   - : 通过延伸相连部分的外边缘，使其相交于一点，形成一个额外的菱形区域。这个设置可以通过 {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}} 属性看到效果。
 
@@ -135,7 +136,7 @@ for (var i = 0; i < lineJoin.length; i++) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.lineJoin")}}
+{{Compat}}
 
 ## 参见
 

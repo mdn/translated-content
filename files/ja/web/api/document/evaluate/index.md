@@ -2,6 +2,7 @@
 title: Document.evaluate()
 slug: Web/API/Document/evaluate
 ---
+
 {{ ApiRef("DOM") }}
 
 [XPath](/ja/docs/XPath) 式やその他与えられたパラメータに基づいて [`XPathResult`](/ja/docs/XPathResult) を返します。

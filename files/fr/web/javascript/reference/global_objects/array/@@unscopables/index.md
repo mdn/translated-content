@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/@@unscopables
 ---
+
 {{JSRef}}
 
 La propriété symbol **`@@unscopable`** contient les noms des propriétés qui ne faisait pas partie du standard ECMAScript avant ES2015 (ES6). Ces propriétés sont exclues lors de liaisons effectuée via l'instruction [`with`](/fr/docs/Web/JavaScript/Reference/Instructions/with).
@@ -46,14 +47,11 @@ Object.keys(Array.prototype[Symbol.unscopables]);
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.@@unscopables")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -4,9 +4,10 @@ slug: Web/API/WorkerGlobalScope/offline_event
 translation_of: Web/API/WorkerGlobalScope/onoffline
 original_slug: Web/API/WorkerGlobalScope/onoffline
 ---
+
 {{APIRef("Web Workers API")}}
 
-La propriété **`onoffline`** de l'interface {{domxref("WorkerGlobalScope")}} représente un {{event("Event_handlers", "event handler")}} à appeler lorsque l'événement {{event("offline")}} survient et se propage à travers le {{domxref("Worker")}}.
+La propriété **`onoffline`** de l'interface {{domxref("WorkerGlobalScope")}} représente un gestionnaire d'évènement à appeler lorsque l'événement `offline` survient et se propage à travers le {{domxref("Worker")}}.
 
 ## Syntaxe
 

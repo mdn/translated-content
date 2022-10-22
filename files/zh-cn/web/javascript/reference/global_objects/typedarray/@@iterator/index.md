@@ -2,6 +2,7 @@
 title: TypedArray.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
 ---
+
 {{JSRef}}
 
 @@iterator 的初始值是和 {{jsxref("TypedArray.prototype.values()", "values")}} 属性的初始值相同的对象。

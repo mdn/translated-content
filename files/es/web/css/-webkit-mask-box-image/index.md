@@ -24,7 +24,9 @@ translation_of: Web/CSS/-webkit-mask-box-image
 
 ## Síntaxis
 
-    -webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
+```
+-webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
+```
 
 Where:
 

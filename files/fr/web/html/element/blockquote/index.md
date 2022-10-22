@@ -15,6 +15,7 @@ tags:
 translation_of: Web/HTML/Element/blockquote
 browser-compat: html.elements.blockquote
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<blockquote>`** (qui signifie _bloc de citation_) indique que le texte contenu dans l'élément est une citation longue. Le texte est généralement affiché avec une indentation (voir [les notes](#usage_notes) ci-après). Une URL indiquant la source de la citation peut être donnée grâce à l'attribut **`cite`** tandis qu'un texte représentant la source peut être donné via l'élément [`<cite>`](/fr/docs/Web/HTML/Element/cite).

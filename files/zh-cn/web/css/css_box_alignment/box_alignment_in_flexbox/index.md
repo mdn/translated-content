@@ -2,6 +2,7 @@
 title: Box alignment in Flexbox
 slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 ---
+
 {{CSSRef}}
 
 [Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment) 规范详细说明了对齐 (alignment) 在各种布局方法中的工作原理; 在此页面中，我们将探讨盒子对齐（box aligment）在 Flexbox 环境中的工作原理。由于此页面旨在详细说明特定于 Flexbox 和框对齐的内容，因此应与[Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment) 页面一起阅读，该页面详细说明了不同布局方法的框对齐的常见方法。

@@ -2,6 +2,7 @@
 title: FileReader.readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
 ---
+
 {{APIRef("File API")}}
 
 `readAsBinaryString` メソッドは、 指定された {{domxref("Blob")}} ないし {{domxref("File")}} オブジェクトを読み込むために使用します。 読込処理が終了すると {{domxref("FileReader.readyState","readyState")}} は `DONE` に変わり、{{domxref("XMLHttpRequest/loadend_event", "loadend")}} イベントが生じます。それと同時に {{domxref("FileReader.result","result")}} プロパティには生のバイナリデータを文字列で解釈したものが格納されます。

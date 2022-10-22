@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/strong
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<strong>`** indique que le texte a une importance particulière ou un certain sérieux voire un caractère urgent. Cela se traduit généralement par un affichage en gras.

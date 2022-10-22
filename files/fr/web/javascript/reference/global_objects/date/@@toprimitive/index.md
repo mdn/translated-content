@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/@@toPrimitive
 ---
+
 {{JSRef}}
 
 La méthode **`[@@toPrimitive]()`** permet de convertir un objet `Date` en une valeur primitive.
@@ -36,14 +37,11 @@ Le moteur JavaScript appelle la méthode `[@@toPrimitive]()` afin de convertir u
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-date.prototype-@@toprimitive', 'Date.prototype.@@toPrimitive')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-date.prototype-@@toprimitive', 'Date.prototype.@@toPrimitive')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.@@toPrimitive")}}
+{{Compat}}
 
 ## Voir aussi
 

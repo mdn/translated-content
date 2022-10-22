@@ -2,6 +2,7 @@
 title: 一个 2D WebGL 动画的基础示例
 slug: Web/API/WebGL_API/Basic_2D_animation_example
 ---
+
 {{WebGLSidebar}}
 
 在这个 WebGL 示例中，我们创建一个画布，并在其中使用 WebGL 渲染旋转正方形。我们用来表示场景的坐标系与画布的坐标系相同。也就是说，（0, 0）这个坐标在左上角，右下角是坐标在（600, 460）。
@@ -32,7 +33,7 @@ slug: Web/API/WebGL_API/Basic_2D_animation_example
 
 主程序与我们共享属性 aVertexPosition，它是顶点在其使用的任何坐标系中的位置。我们需要转换这些值，以便位置的两个组件都在-1.0 到 1.0 的范围内。通过乘以基于上下文宽高比的缩放因子，可以很容易地完成此操作。我们很快就会看到这个计算。
 
-我们也可以通过一次变换来旋转这个图形。 The rotated position of the vertex is computed by applying the rotation vector, found in the uniform `uRotationVector`, that's been computed by the JavaScript code.
+我们也可以通过一次变换来旋转这个图形。The rotated position of the vertex is computed by applying the rotation vector, found in the uniform `uRotationVector`, that's been computed by the JavaScript code.
 
 Then the final position is computed by multiplying the rotated position by the scaling vector provided by the JavaScript code in `uScalingFactor`. The values of `z` and `w` are fixed at 0.0 and 1.0, respectively, since we're drawing in 2D.
 

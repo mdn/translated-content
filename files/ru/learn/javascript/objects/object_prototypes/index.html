@@ -22,7 +22,7 @@ original_slug: Learn/JavaScript/Объекты/Object_prototypes
 
 
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Необходимые знания:</th>
@@ -59,9 +59,9 @@ original_slug: Learn/JavaScript/Объекты/Object_prototypes
 
 <p>В этом примере мы определили конструктору функцию, например:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">Person</span><span class="punctuation token">(</span>first<span class="punctuation token">,</span> last<span class="punctuation token">,</span> age<span class="punctuation token">,</span> gender<span class="punctuation token">,</span> interests<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function Person(first, last, age, gender, interests) {
 
-  <span class="comment token">// Определения методов и свойств</span>
+  // Определения методов и свойств
  </code><code> this.name = {
     'first': first,
     'last' : last
@@ -69,7 +69,7 @@ original_slug: Learn/JavaScript/Объекты/Object_prototypes
   this.age = age;
   this.gender = gender;
   //...см. </code><a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B">Введение в объекты</a> для полного определения<code class="language-js">
-<span class="punctuation token">}</span></code></pre>
+}</code></pre>
 
 <p>Затем мы создаём экземпляр объекта следующим образом:</p>
 
@@ -152,7 +152,7 @@ original_slug: Learn/JavaScript/Объекты/Object_prototypes
  </li>
 </ol>
 
-<p>Это вернёт объект <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">person1</span></font>.</p>
+<p>Это вернёт объект person1.</p>
 
 <h2 id="Свойство_constructor">Свойство constructor</h2>
 

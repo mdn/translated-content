@@ -28,10 +28,12 @@ Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Atributos_
 
 ### Ejemplos
 
-     <p>
-         <em>El dinero</em> es importante pero <strong>la salud</strong> lo es más.
-     </p>
+```html
+<p>
+  <em>El dinero</em> es importante pero <strong>la salud</strong> lo es más.
+</p>
+```
 
 ### Comentarios
 
-[em](es/HTML/Elemento/em) tiene un hermano mayor: [strong](es/HTML/Elemento/strong). [em](es/HTML/Elemento/em) sirve para dar énfasis y [strong](es/HTML/Elemento/strong) para dar mucho énfasis
+[em](/es/HTML/Elemento/em) tiene un hermano mayor: [strong](/es/HTML/Elemento/strong). [em](/es/HTML/Elemento/em) sirve para dar énfasis y [strong](/es/HTML/Elemento/strong) para dar mucho énfasis

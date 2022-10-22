@@ -2,6 +2,7 @@
 title: Map.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/Map/get
 ---
+
 {{JSRef}}
 
 **`get()`** メソッドは、指定された要素を `Map` オブジェクトから返します。指定されたキーに関連付けられた値がオブジェクトである場合は、そのオブジェクトの参照を受け取ることになり、そのオブジェクトに対して変更を行った場合は、 `Map` オブジェクトの中にあるものに変更が行われます。

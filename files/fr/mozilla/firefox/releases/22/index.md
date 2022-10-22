@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/22
 translation_of: Mozilla/Firefox/Releases/22
 original_slug: Mozilla/Firefox/Versions/22
 ---
+
 {{FirefoxSidebar}}
 
 Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui ont besoin d'être documentés](http://beta.elchi3.de/doctracker/#list=fx&version=22.0) et lancez-vous !

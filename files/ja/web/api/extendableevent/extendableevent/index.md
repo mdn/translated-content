@@ -2,6 +2,7 @@
 title: ExtendableEvent()
 slug: Web/API/ExtendableEvent/ExtendableEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`ExtendableEvent()`** コンストラクターは、新しい {{domxref("ExtendableEvent")}} オブジェクトを作成します。

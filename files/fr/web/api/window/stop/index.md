@@ -11,6 +11,7 @@ tags:
   - stop
 translation_of: Web/API/Window/stop
 ---
+
 {{APIRef}}
 
 **`window.stop()`** arrête le chargment des ressources supplémentaires dans le contexte de navigation actuel, ce qui équivaut au bouton d'arrêt dans le navigateur.

@@ -3,6 +3,7 @@ title: 'HTML: 为无障碍提供一个良好的基础'
 slug: Learn/Accessibility/HTML
 original_slug: learn/Accessibility/HTML:为无障碍提供一个良好的基础
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 在网页开发的过程中，用正确的 HTML 标签来表达正确的意图，可以提升网页的无障碍。这篇文章将会详细介绍如何最大化地提升网页的无障碍。
@@ -130,7 +131,7 @@ This is the second subsection of my content. I think is more interesting than th
 你使用的语言也会影响无障碍。一般来说，你应该使用不太复杂的清晰语言，不要使用不必要的行话或俚语。这不仅有利于有认知或其他残疾的人；它有利于那些没有用母语写作的读者，年轻人...事实上是每个人！除此之外，你应该尽量避免使用没有被屏幕阅读器清楚读出的语言和字符。例如：
 
 - 如果可以避免的话，不要用破折号。写 5 到 7，来替代 5-7。
-- 展开缩写 — 写 January，来替代 Jan 。
+- 展开缩写 — 写 January，来替代 Jan。
 - 展开首字母缩略词，至少一次或两次。例如写明“超文本标记语言”（Hypertext Markup Language），而不是直接用缩写 HTML。
 
 ### 页面布局
@@ -314,7 +315,7 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 <div data-message="This is from the third button">And me!</div>
 ```
 
-但是不建议使用这样的代码 - 你会立即失去本机键盘的无障碍。但如果你使用了`{{htmlelement("button")}}` 元素，你将可以通过键盘控制。 此外你也将不会获得任何的按钮默认拥有的 CSS 样式。
+但是不建议使用这样的代码 - 你会立即失去本机键盘的无障碍。但如果你使用了`{{htmlelement("button")}}` 元素，你将可以通过键盘控制。此外你也将不会获得任何的按钮默认拥有的 CSS 样式。
 
 #### 重新建立键盘的无障碍
 
@@ -326,7 +327,7 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 <div data-message="This is from the third button" tabindex="0">And me!</div>
 ```
 
-基本上，`{{htmlattrxref("tabindex")}}` 属性主要用于允许 tabbable 元素具有自定义 Tab 键顺序（以正数顺序指定），而不是仅按其默认源顺序进行标记。这几乎总是一个糟糕的主意，因为它可能会造成重大混乱。例如，如果布局以与源代码非常不同的视觉顺序显示事物，而且你想让事情更符合逻辑。 这里 `tabindex` 有另外两个选项：
+基本上，`{{htmlattrxref("tabindex")}}` 属性主要用于允许 tabbable 元素具有自定义 Tab 键顺序（以正数顺序指定），而不是仅按其默认源顺序进行标记。这几乎总是一个糟糕的主意，因为它可能会造成重大混乱。例如，如果布局以与源代码非常不同的视觉顺序显示事物，而且你想让事情更符合逻辑。这里 `tabindex` 有另外两个选项：
 
 - `tabindex="0"` — 如上所述，该值允许 通常不可放置的元素（tabbable elements）变为可放置的。这是 tabindex 最有用的的地方。
 - `tabindex="-1"` — 这允许 通常不可放置的元素（tabbable elements）以编程的方式接收焦点，例如，通过 JavaScript，或作为链接的目标。
@@ -468,7 +469,7 @@ Fill in your name: <input type="text" id="name" name="name">
 
 > **备注：** 请阅读 [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) 和 [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) 以获得更多关于图片实施和最佳做法的信息。
 
-如果您确实想要提供额外的上下文信息，则应该将其放在图像周围的文本中，或放置在“标题” `title` 属性中，如上所示。在这种情况下，大多数屏幕阅读器会读出替代文本，标题属性和文件名。 此外，鼠标滑过时，浏览器会将 `title` 的内容作为工具提示的形式显示出来。
+如果您确实想要提供额外的上下文信息，则应该将其放在图像周围的文本中，或放置在“标题” `title` 属性中，如上所示。在这种情况下，大多数屏幕阅读器会读出替代文本，标题属性和文件名。此外，鼠标滑过时，浏览器会将 `title` 的内容作为工具提示的形式显示出来。
 
 ![](title-attribute.png)
 
@@ -514,7 +515,7 @@ HTML5 包含两个新元素 - `{{htmlelement("figure")}}` 和`{{htmlelement("fig
 </h3>
 ```
 
-可能有时候图像被包含在页面的设计中，但其主要目的是用于视觉装饰。在上面的代码示例中，您会注意到图像的“alt”属性为空 - 这是为了让屏幕阅读器识别图像，但不试图描述图像（阅读器只是说“图像” 等类似的语句）。
+可能有时候图像被包含在页面的设计中，但其主要目的是用于视觉装饰。在上面的代码示例中，您会注意到图像的“alt”属性为空 - 这是为了让屏幕阅读器识别图像，但不试图描述图像（阅读器只是说“图像”等类似的语句）。
 
 使用空白“alt”而不包含它的原因是因为如果没有提供“alt”，许多屏幕阅读器会公布整个图像 URL。在上面的示例中，图像充当与其关联的标题的视觉装饰。在这种情况下，以及在图像只是装饰并且没有内容值的情况下，您应该在图像上放置一个空白的“alt”。另一种选择是使用 aria role 属性 `role =“presentation”` - 这也会阻止屏幕阅读器读出替代文本。
 

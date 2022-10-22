@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/unscopables
 ---
+
 {{JSRef}}
 
 Le symbole connu **`Symbol.unscopables`** est utilisé afin de définir les noms des propriétés propres et héritées qui sont exclues de l'objet lors de l'utilisation de [`with`](/fr/docs/Web/JavaScript/Reference/Instructions/with) sur l'objet en question.
@@ -61,14 +62,11 @@ with(obj) {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.unscopables', 'Symbol.unscopables')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.unscopables', 'Symbol.unscopables')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.unscopables")}}
+{{Compat}}
 
 ## Voir aussi
 

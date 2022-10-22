@@ -2,6 +2,7 @@
 title: WritableStreamDefaultWriter()
 slug: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
 ---
+
 {{APIRef("Streams")}}
 
 **`WritableStreamDefaultWriter()`** 构造函数创建一个新的 {{domxref("WritableStreamDefaultWriter")}} 对象实例。

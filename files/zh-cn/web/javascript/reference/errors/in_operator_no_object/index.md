@@ -2,6 +2,7 @@
 title: 'TypeError: invalid ''in'' operand "x"'
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示

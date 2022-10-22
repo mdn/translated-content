@@ -3,6 +3,7 @@ title: 'WebSocket : évènement message'
 slug: Web/API/WebSocket/message_event
 browser-compat: api.WebSocket.message_event
 ---
+
 {{APIRef}}
 
 L'évènement `message` est déclenché lorsque des données sont reçues via une `WebSocket`.

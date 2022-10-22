@@ -2,6 +2,7 @@
 title: Logical OR (||)
 slug: Web/JavaScript/Reference/Operators/Logical_OR
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical OR (`||`) operator (logical disjunction) for a set of operands is true if and only if one or more of its operands is true. It is typically used with {{jsxref("Boolean")}} (logical) values. When it is, it returns a Boolean value. However, the `||` operator actually returns the value of one of the specified operands, so if this operator is used with non-Boolean values, it will return a non-Boolean value.

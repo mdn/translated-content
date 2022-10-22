@@ -2,6 +2,7 @@
 title: Node.isSupported
 slug: Web/API/Node/isSupported
 ---
+
 {{ ApiRef() }} {{deprecated_header}}
 
 ## 概述

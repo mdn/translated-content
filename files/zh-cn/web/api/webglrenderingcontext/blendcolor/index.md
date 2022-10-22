@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.blendColor()
 slug: Web/API/WebGLRenderingContext/blendColor
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.blendColor()`** 方法用于设置源和目标混合因子。
@@ -48,7 +49,7 @@ gl.getParameter(gl.BLEND_COLOR);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.blendColor")}}
+{{Compat}}
 
 ## 另见
 

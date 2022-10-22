@@ -2,13 +2,14 @@
 title: 通过 Service workers 让 PWA 离线工作
 slug: Web/Progressive_web_apps/Offline_Service_workers
 ---
+
 {{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
 
-我们已经看到了 js13kPWA 的结构，并且看到了 shell 启动和运行的基本方式，那么现在让我们把目光转向如何使用 Service Worker 实现离线功能。 在本文，我们将看到它在 [js13kPWA example](https://mdn.github.io/pwa-examples/js13kpwa/) 中是如何使用的（[另请参阅源代码](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)）。 我们将研究如何添加脱机功能。
+我们已经看到了 js13kPWA 的结构，并且看到了 shell 启动和运行的基本方式，那么现在让我们把目光转向如何使用 Service Worker 实现离线功能。在本文，我们将看到它在 [js13kPWA example](https://mdn.github.io/pwa-examples/js13kpwa/) 中是如何使用的（[另请参阅源代码](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)）。我们将研究如何添加脱机功能。
 
 ## Service Worker 解释
 
-Service Worker 是浏览器和网络之间的虚拟代理。 它们终于解决了前端开发人员多年来一直在努力解决的一些问题，其中最值得关注的是，解决了如何正确缓存网站资源并使其在离线时可用的问题。
+Service Worker 是浏览器和网络之间的虚拟代理。它们终于解决了前端开发人员多年来一直在努力解决的一些问题，其中最值得关注的是，解决了如何正确缓存网站资源并使其在离线时可用的问题。
 
 Service Worker 运行在一个与页面 JavaScript 主线程独立的线程上，并且无权访问 DOM 结构。这引入了一种与传统 Web 编程不同的方式：它的 API 是非阻塞的，并且可以在不同的上下文之间发送和接收信息。您可分配给 Service Worker 一些任务，并通过基于 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的方法在任务完成时收到结果。
 

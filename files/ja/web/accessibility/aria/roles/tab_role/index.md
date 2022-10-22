@@ -2,6 +2,7 @@
 title: 'ARIA: tab ロール'
 slug: Web/Accessibility/ARIA/Roles/Tab_Role
 ---
+
 ARIA のタブ (`tab`) ロールは、タブリスト (`tablist`) 内のインタラクティブな要素を示し、アクティブ化されると、関連するタブパネル ([`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role)) を表示します。
 
 ```html
@@ -36,7 +37,7 @@ ARIA のタブ (`tab`) ロールは、タブリスト (`tablist`) 内のイン�
 
 ### 必要な JavaScript 機能
 
-> **Note:** JavaScript を使用せずにタブのような機能を構築する方法はありますが、コンテンツを含むアクセス可能なタブに上記で必要とされるのと同じ機能のセットを提供する HTML と CSS のみの代替の組み合わせはありません。
+> **メモ:** JavaScript を使用せずにタブのような機能を構築する方法はありますが、コンテンツを含むアクセス可能なタブに上記で必要とされるのと同じ機能のセットを提供する HTML と CSS のみの代替の組み合わせはありません。
 
 ## 例
 

@@ -2,6 +2,7 @@
 title: Intl.PluralRules.select()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
 ---
+
 {{JSRef}}
 
 **`Intl.PluralRules.prototype.select()`** メソッドは、ロケールを考慮した書式設定に使用する複数形ルールを示す文字列を返します。

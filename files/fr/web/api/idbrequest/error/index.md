@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBRequest/error
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`error`** de l'interface {{domxref("IDBRequest")}} renvoie l'erreur associée lorsque la requête est un échec.

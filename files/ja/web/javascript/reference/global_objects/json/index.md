@@ -2,6 +2,7 @@
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
 ---
+
 {{JSRef}}
 
 **`JSON`** オブジェクトは、 [JavaScript Object

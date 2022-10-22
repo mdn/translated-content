@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/FederatedCredential/provider
 ---
+
 {{SeeCompatTable}}{{APIRef("")}}
 
 La propriété **`provider`**, rattachée à l'interface {{domxref("FederatedCredential")}}, fournit une chaîne de caractères {{domxref("USVString")}} qui décrit un fournisseur d'identité fédéré.

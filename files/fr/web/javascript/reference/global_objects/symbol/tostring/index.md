@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaîne de caractères représentant l'objet `Symbol`.
@@ -53,14 +54,11 @@ Symbol.for("toto").toString() // "Symbol(toto)"
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires        |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-symbol.prototype.tostring', 'Symbol.prototype.toString')}}     | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-symbol.prototype.tostring', 'Symbol.prototype.toString')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

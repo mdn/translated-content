@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
 original_slug: Web/JavaScript/Reference/Objets_globaux/SharedArrayBuffer/byteLength
 ---
+
 {{JSRef}}
 
 La propriété d'accesseur **`byteLength`** représente la longueur d'un {{jsxref("SharedArrayBuffer")}} exprimée en octets.
@@ -36,13 +37,11 @@ sab.byteLength; // 1024
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                       | Commentaires                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-sharedarraybuffer.prototype.bytelength', 'SharedArrayBuffer.prototype.byteLength')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.SharedArrayBuffer.byteLength")}}
+{{Compat}}
 
 ## Voir aussi
 

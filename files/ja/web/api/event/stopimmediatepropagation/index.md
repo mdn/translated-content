@@ -2,6 +2,7 @@
 title: Event.stopImmediatePropagation()
 slug: Web/API/Event/stopImmediatePropagation
 ---
+
 {{APIRef("DOM")}}
 
 **`stopImmediatePropagation()`** は {{domxref("Event")}} インターフェイスのメソッドで、呼び出されている同じイベントの他のリスナーを抑止します。

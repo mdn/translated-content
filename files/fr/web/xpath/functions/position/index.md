@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/position
 original_slug: Web/XPath/Fonctions/position
 ---
+
 {{ XsltRef() }}
 
 La fonction `position` retourne un nombre égal à la position du contexte dans le contexte d'évaluation d'expression.

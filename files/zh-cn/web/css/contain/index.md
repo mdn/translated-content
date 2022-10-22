@@ -2,6 +2,7 @@
 title: contain
 slug: Web/CSS/contain
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS)** `contain`** 属性允许开发者声明当前元素和它的内容尽可能的*独立*于 DOM 树的其他部分。这使得浏览器在重新计算布局、样式、绘图、大小或这四项的组合时，只影响到有限的 DOM 区域，而不是整个页面，可以有效改善性能。
@@ -180,7 +181,7 @@ This also means that the first image no longer floats down to the second article
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.contain")}}
+{{Compat}}
 
 ## 参见
 

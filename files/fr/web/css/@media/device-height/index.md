@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/device-height
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`device-height`** est une caractéristique média (cf. {{cssxref("@media")}}) dépréciée dont la valeur correspond à la hauteur de la surface de rendu pour l'appareil d'affichage.
@@ -26,11 +27,8 @@ Ce fragment HTML applique une feuille de style spécifique pour les appareils do
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires                                                            |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------- |
-| {{SpecName('CSS4 Media Queries', '#device-height', 'device-height')}} | {{Spec2('CSS4 Media Queries')}} | Dépréciation dans la spécification de niveau 4 pour les requêtes média. |
-| {{SpecName('CSS3 Media Queries', '#device-height', 'device-height')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale.                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.device-height")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: CSS 彈性盒子排版
 slug: Web/CSS/CSS_Flexible_Box_Layout
 ---
+
 {{CSSRef}}
 
 **CSS 彈性盒子排版**（CSS Flexible Box Layout）是 [CSS](/zh-TW/docs/Web/CSS) 的模組。它為了最佳化 CSS 盒子模型的使用者介面設計而來、並把項目都配置在一個維度之內。在彈性盒子排版中，彈性容器的子項目們可以伸展到任何方向、並讓他們的尺寸更加「彈性」、或者持續增大，以填補未使用的空間，抑或縮小，以避免父元素溢出。子項目橫向或縱向對齊都很容易操作。

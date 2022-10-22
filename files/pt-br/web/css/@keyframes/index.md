@@ -123,9 +123,9 @@ See [Using CSS animations](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animatio
 
 ## Notes
 
-1.  `@keyframes` unsupported in scoped stylesheets in Firefox ({{bug(830056)}}).
+1. `@keyframes` unsupported in scoped stylesheets in Firefox ({{bug(830056)}}).
 
 ## See also
 
-- [Using CSS animations](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- [Using CSS animations](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}

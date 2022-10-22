@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
+
 {{AddonSidebar}}
 
 Un script de contenu (_content script_ en anglais) est une partie de votre extension qui s’exécute dans le contexte d’une page web donnée (par opposition aux scripts d’arrière-plan qui font partie de l'extension, ou aux scripts qui font partie du site Web lui-même, tels que ceux chargés en utilisant l'élément {{HTMLElement("script")}}).
@@ -279,7 +280,7 @@ De chaque côté (contenu d'une part, arrière-plan d'autre part), les scripts p
 
 Pour créer la connexion&nbsp;:
 
-- L'un des côtés se tient à l'écoute des connexions avec [](/fr/Add-ons/WebExtensions/API/runtime/onConnect)[`runtime.onConnect`](/fr/Add-ons/WebExtensions/API/runtime/onConnect).
+- L'un des côtés se tient à l'écoute des connexions avec [`runtime.onConnect`](/fr/Add-ons/WebExtensions/API/runtime/onConnect).
 - L'autre côté appelle [`tabs.connect()`](/fr/Add-ons/WebExtensions/API/tabs/connect) (pour se connecter à un script de contenu) ou [`runtime.connect()`](/fr/Add-ons/WebExtensions/API/runtime/connect) (pour se connecter à un script d'arrière plan). Ces deux méthodes renvoient un objet [`runtime.Port`](/fr/Add-ons/WebExtensions/API/runtime/Port).
 - Le gestionnaire d'évènement [`runtime.onConnect`](/fr/Add-ons/WebExtensions/API/runtime/onConnect) reçoit alors en argument un objet [`runtime.Port`](/fr/Add-ons/WebExtensions/API/runtime/Port) qui lui est propre.
 

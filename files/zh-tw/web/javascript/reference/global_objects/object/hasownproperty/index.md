@@ -2,6 +2,7 @@
 title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
+
 {{JSRef}}
 
 **`hasOwnProperty()`** 回傳物件是否有該屬性的布林值。

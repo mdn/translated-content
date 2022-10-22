@@ -2,6 +2,7 @@
 title: 貢獻 MDN
 slug: MDN/Contribute
 ---
+
 {{MDNSidebar}}
 
 歡迎！當你在看這個頁面時，就已經邁向成為 MDN 貢獻者的第一步！

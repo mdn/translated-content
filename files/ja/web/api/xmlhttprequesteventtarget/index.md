@@ -2,6 +2,7 @@
 title: XMLHttpRequestEventTarget
 slug: Web/API/XMLHttpRequestEventTarget
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 `XMLHttpRequestEventTarget` は、{{ domxref("XMLHttpRequest")}} のイベントを処理するオブジェクトに実装できるイベントハンドラーを記述するインターフェイスです。

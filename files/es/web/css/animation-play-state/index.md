@@ -5,11 +5,9 @@ translation_of: Web/CSS/animation-play-state
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-##
-
 ## Resumen
 
-La propiedad [CSS](/es/docs/CSS "CSS") **`animation-play-state`** determina si una animación está en ejecución o en pausa. Puede ser consultada para determinar si la animación se está ejecutando. Además, su valor se puede establecer para pausar y reanudar una animación.
+La propiedad [CSS](/es/docs/CSS) **`animation-play-state`** determina si una animación está en ejecución o en pausa. Puede ser consultada para determinar si la animación se está ejecutando. Además, su valor se puede establecer para pausar y reanudar una animación.
 
 Reanudando una animación pausada, ésta empezará en el punto en el que fue pausada, en vez de empezar desde el principio.
 
@@ -40,11 +38,11 @@ animation-play-state: unset;
 
 ### Syntax formal
 
-    {{csssyntax}}
+{{csssyntax}}
 
 ## Ejemplos
 
-Visita [animaciones CSS](https://developer.mozilla.org/es/CSS/Usando_animaciones_CSS "en/CSS/CSS_animations") para ver algunos ejemplos.
+Visita [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejemplos.
 
 ## Especificaciones
 
@@ -56,9 +54,7 @@ Visita [animaciones CSS](https://developer.mozilla.org/es/CSS/Usando_animaciones
 
 {{Compat("css.properties.animation-play-state")}}
 
-##
-
 ## Consulte también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS developer guide about CSS animations")
+- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

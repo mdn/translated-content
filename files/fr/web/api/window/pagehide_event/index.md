@@ -4,6 +4,7 @@ slug: Web/API/Window/pagehide_event
 translation_of: Web/API/Window/pagehide_event
 original_slug: Web/Events/pagehide
 ---
+
 L’évènement `pagehide` est émis lorsqu’une entrée dans un historique de session est sur le point d’être quittée.
 
 ## Informations générales

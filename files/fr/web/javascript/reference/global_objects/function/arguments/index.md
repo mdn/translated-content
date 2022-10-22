@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/arguments
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/arguments
 ---
+
 {{JSRef}} {{Deprecated_header}}
 
 La propriété **`function.arguments`** fait référence à un objet dont la structure est semblable à celle d'un tableau dont les éléments correspondent aux arguments passés à une fonction. En lieu et place, il faut désormais utiliser {{jsxref("Fonctions/arguments", "arguments")}}. Cette propriété est interdite en mode stricte à cause de [l'optimisation de la queue des appels (_tail call optimization_)](https://www.ecma-international.org/ecma-262/6.0/#sec-addrestrictedfunctionproperties).
@@ -49,16 +50,11 @@ console.log("fonction terminée : " + g.arguments);
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaires                                                                                                                                                         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. Dépréciée pour être remplacée par {{jsxref("Fonctions/arguments", "arguments")}} décrit par ES3. |
-| {{SpecName('ES5.1', '#sec-10.6', 'arguments object')}}                     | {{Spec2('ES5.1')}}     | Objet {{jsxref("Fonctions/arguments", "arguments")}}                                                                                                   |
-| {{SpecName('ES6', '#sec-arguments-object', 'arguments object')}}         | {{Spec2('ES6')}}         | Objet {{jsxref("Fonctions/arguments", "arguments")}}                                                                                                   |
-| {{SpecName('ESDraft', '#sec-arguments-object', 'arguments object')}} | {{Spec2('ESDraft')}} | Objet {{jsxref("Fonctions/arguments", "arguments")}}                                                                                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.arguments")}}
+{{Compat}}
 
 ## Voir aussi
 

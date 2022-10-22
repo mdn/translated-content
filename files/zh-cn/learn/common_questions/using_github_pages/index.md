@@ -2,6 +2,7 @@
 title: 应该如何使用 Github Pages?
 slug: Learn/Common_questions/Using_Github_pages
 ---
+
 [GitHub](https://github.com/)是一个“公共编码”网站。它允许您上传代码存储库并存储在 [Git](http://git-scm.com/) 版本控制系统上。然后，您可以在代码项目上进行协作，默认情况下系统是开源的，这意味着世界上任何人都可以找到您的 GitHub 代码，使用它，从中学习，并改进它。同样的，对于其他人的代码您也可以这么做！本文提供了一个基本的指南，即使用 Github 的 gh-pages 功能发布内容。
 
 ## 发布内容
@@ -50,7 +51,7 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
 
 ### 为您的代码创建一个仓库
 
-1. 接下来，您需要为您的文件创建一个新的仓库。单击 GitHub 主页右上角的加号（+），然后选择“ _New Repository_”。
+1. 接下来，您需要为您的文件创建一个新的仓库。单击 GitHub 主页右上角的加号（+），然后选择“_New Repository_”。
 2. 在此页面的“_Repository name_”框中，为您的代码库起一个名字，例如：_my-repository_。
 3. 还要填写一个描述来说明您的存储库将包含哪些内容。你的屏幕应该是这样的
     ![](create-new-repo.png)

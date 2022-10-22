@@ -4,6 +4,7 @@ slug: WebAssembly/Loading_and_running
 i10n:
   sourceCommit: 1ef12f2e0815d0d285d6027219c987a3e4e228a3
 ---
+
 {{WebAssemblySidebar}}
 
 JavaScript で WebAssembly を使用するには、まずコンパイル/インスタンス化の前にモジュールをメモリーにプルする必要があります。この記事では、WebAssembly バイトコードをフェッチするために使用できるさまざまなメカニズムのリファレンスと、それをコンパイル/インスタンス化して実行する方法について説明します。
@@ -54,9 +55,9 @@ fetch('module.wasm').then((response) =>
 }
 ```
 
-> **Note:** 通常はインスタンスのみを気にしますが、キャッシュする場合や、[`postMessage()`](/ja/docs/Web/API/MessagePort/postMessage) を使用して別のワーカーやウィンドウと共有する場合や、インスタンスをさらに作成したい場合に備えて、モジュールを用意すると便利です。
+> **メモ:** 通常はインスタンスのみを気にしますが、キャッシュする場合や、[`postMessage()`](/ja/docs/Web/API/MessagePort/postMessage) を使用して別のワーカーやウィンドウと共有する場合や、インスタンスをさらに作成したい場合に備えて、モジュールを用意すると便利です。
 
-> **Note:** 2 番目のオーバーロード形式は {{jsxref("WebAssembly.Module")}} オブジェクトを引数としてとり、結果としてインスタンスオブジェクトを直接含む Promise を返します。[2 番目のオーバーロードの例](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#second_overload_example)を参照してください。
+> **メモ:** 2 番目のオーバーロード形式は {{jsxref("WebAssembly.Module")}} オブジェクトを引数としてとり、結果としてインスタンスオブジェクトを直接含む Promise を返します。[2 番目のオーバーロードの例](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#second_overload_example)を参照してください。
 
 ### WebAssembly コードを実行する
 
@@ -77,7 +78,7 @@ WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 })
 ```
 
-> **Note:** WebAssembly モジュールからのエクスポートの仕組みの詳細については [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API) と [WebAssembly テキストフォーマットを理解する](/ja/docs/WebAssembly/Understanding_the_text_format) を参照してください。
+> **メモ:** WebAssembly モジュールからのエクスポートの仕組みの詳細については [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API) と [WebAssembly テキストフォーマットを理解する](/ja/docs/WebAssembly/Understanding_the_text_format) を参照してください。
 
 ## XMLHttpRequest を使用する
 
@@ -104,4 +105,4 @@ request.onload = () => {
 };
 ```
 
-> **Note:** 動作例は [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html) を参照してください。
+> **メモ:** 動作例は [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html) を参照してください。

@@ -7,6 +7,7 @@ tags:
 translation_of: Web/MathML/Attribute/Values
 original_slug: Web/MathML/Attribute/Valeurs
 ---
+
 ## Longueurs
 
 Plusieurs éléments de présentation MathML possèdent des attributs qui acceptent des valeurs pour mesurer des tailles ou des espacements. MathML accepte différentes unités et constantes pour spécifier les longueurs.
@@ -67,8 +68,7 @@ Plusieurs éléments de présentation MathML possèdent des attributs qui accept
   <thead>
     <tr>
       <th colspan="2">
-        Les <em>contstantes</em> négatives ont été introduites avec Gecko 7.0
-        {{ geckoRelease("7.0") }} ({{ bug(650530) }})
+        Les <em>contstantes</em> négatives ont été introduites avec Gecko 7.0 ({{ bug(650530) }})
       </th>
     </tr>
   </thead>
@@ -104,4 +104,4 @@ Plusieurs éléments de présentation MathML possèdent des attributs qui accept
   </tbody>
 </table>
 
-Note : [L'association avec des espaces de noms a été dépréciée](http://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) dans MathML3 et a été retirée dans Gecko 15.0 {{ geckoRelease("15.0") }} ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=673759)).
+Note : [L'association avec des espaces de noms a été dépréciée](http://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) dans MathML3 et a été retirée dans Gecko 15.0 ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=673759)).

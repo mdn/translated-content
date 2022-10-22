@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/HTML_basics
 original_slug: Apprendre/Commencer_avec_le_web/Les_bases_HTML
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Gérer_les_fichiers", "Apprendre/Commencer_avec_le_web/Les_bases_CSS", "Apprendre/Commencer_avec_le_web")}}
 

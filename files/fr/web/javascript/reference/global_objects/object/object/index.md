@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/Object
 browser-compat: javascript.builtins.Object.Object
 ---
+
 {{JSRef}}
 
 Le **constructeur `Object`** crée une enveloppe objet pour la valeur passée en argument.

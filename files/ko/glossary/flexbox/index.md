@@ -1,12 +1,6 @@
 ---
 title: 플렉스박스
 slug: Glossary/Flexbox
-tags:
-  - CSS
-  - Glossary
-  - Intro
-  - flexbox
-translation_of: Glossary/Flexbox
 ---
 **플렉스박스**(Flexbox)는 요소를 단일 차원(행 또는 열)에 배치하는 레이아웃 모델인 [CSS Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1/)을 부를 때 흔히 사용하는 이름입니다.
 

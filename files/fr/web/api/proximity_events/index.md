@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/Proximity_Events
 original_slug: WebAPI/Proximity
 ---
+
 {{ SeeCompatTable }}
 
 ## Résumé
@@ -18,7 +19,7 @@ Les événements de proximité permettent, simplement, de savoir lorsqu'un utili
 
 Lorsque le capteur de l'appareil détecte un changement entre l'appareil et l'objet, il informe le navigateur de ce changement en lui envoyant une notification. Lorsque le navigateur reçoit une notification comme celle-ci, il déclenche un événement {{domxref("DeviceProximityEvent")}} à chaque fois qu'il y a un changement et un événement  {{domxref("UserProximityEvent")}} dans le cas où un changement plus brutal se produit.
 
-Cet événement peut être capturé en utilisant un objet au niveau `window` en utilisant la méthode {{domxref("EventTarget.addEventListener","addEventListener")}} (en utilisant les noms d'événements {{event("deviceproximity")}} ou {{event("userproximity")}}) ou en attachant un gestionnaire d'événement à la propriété {{domxref("window.ondeviceproximity")}} ou à la propriété {{domxref("window.onuserproximity")}}.
+Cet événement peut être capturé en utilisant un objet au niveau `window` en utilisant la méthode {{domxref("EventTarget.addEventListener","addEventListener")}} (en utilisant les noms d'événements [`DeviceProximityEvent`](/fr/docs/Web/API/DeviceProximityEvent) ou [`UserProximityEvent`](/fr/docs/Web/API/UserProximityEvent)) ou en attachant un gestionnaire d'événement à la propriété {{domxref("window.ondeviceproximity")}} ou à la propriété {{domxref("window.onuserproximity")}}.
 
 Une fois qu'il a été capturé, l'événement donne accès à différentes informations :
 
@@ -55,7 +56,5 @@ window.addEventListener('userproximity', function(event) {
 
 ## Voir aussi
 
-- {{domxref("DeviceProximityEvent")}}
-- {{domxref("UserProximityEvent")}}
-- {{event("deviceproximity")}}
-- {{event("userproximity")}}
+- [`DeviceProximityEvent`](/fr/docs/Web/API/DeviceProximityEvent)
+- [`UserProximityEvent`](/fr/docs/Web/API/UserProximityEvent)

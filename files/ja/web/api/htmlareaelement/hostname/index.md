@@ -3,6 +3,7 @@ title: HTMLAreaElement.hostname
 slug: Web/API/HTMLAreaElement/hostname
 original_slug: Web/API/HTMLHyperlinkElementUtils/hostname
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAreaElement.hostname`** プロパティは、URL のドメインを含む文字列です。

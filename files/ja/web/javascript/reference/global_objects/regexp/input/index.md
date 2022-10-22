@@ -2,6 +2,7 @@
 title: RegExp.input ($_)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 標準外の **`input`** プロパティは正規表現の一致している文字列を含む静的プロパティです。 `RegExp.$_` はこのプロパティのエイリアスです。

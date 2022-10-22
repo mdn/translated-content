@@ -2,6 +2,7 @@
 title: Spread syntax (...)
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
+
 {{jsSidebar("Operators")}}
 
 **展開運算子**(`...`) 允許可迭代的陣列或字串展開成０到多個參數(如果是 function 的話)或是０到多個元素(如果是 array 或字組的話)，或如果是物件的話則展開成０到多個 key-value pair。
@@ -243,7 +244,7 @@ When using spread syntax for function calls, be aware of the possibility of exce
 
 ## Browser compatibility
 
-{{Compat("javascript.operators.spread")}}
+{{Compat}}
 
 ## See also
 

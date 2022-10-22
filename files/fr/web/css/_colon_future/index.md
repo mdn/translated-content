@@ -4,6 +4,7 @@ slug: Web/CSS/:future
 translation_of: Web/CSS/:future
 browser-compat: css.selectors.future
 ---
+
 {{CSSRef}}
 
 Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:future`** est une pseudo-classe agissant dans la dimension temporelle qui cible n'importe quel élément apparaissant entièrement après un élément correspondant à {{cssxref(":current")}}. Ce sélecteur peut par exemple servir dans le cas d'une vidéo ayant des sous-titres affichés à l'aide du format [WebVTT](/fr/docs/Web/API/WebVTT_API).

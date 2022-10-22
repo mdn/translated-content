@@ -2,6 +2,7 @@
 title: proxy
 slug: Mozilla/Add-ons/WebExtensions/API/proxy
 ---
+
 {{AddonSidebar}}
 
 > **警告：** 不推荐使用 {{WebExtAPIRef("proxy.register()")}} 或者 {{WebExtAPIRef("proxy.unregister()")}} 方法使用 [Proxy Auto-Configuration (PAC) file](/zh-CN/Add-ons/WebExtensions/API/proxy/register#PAC_file_specification). 这个 API 将会在 Firefox 68 中废弃并且在 Firefox 71 中删除。
@@ -12,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/proxy
 
 除了这个 api，扩展也能够使用**[`browserSettings.proxyConfig`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/proxyConfig)**属性来重新编辑你全局的`proxy`设置
 
-Chrome 浏览器提供了一个叫做`'proxy'的`api 扩展，它的功能跟这个 api 类似，在 chrome 的 api 中也可以用来实现一个`拦截策略。`然而，Chrome 的 API 的设计跟这个 API 设计完全不同。因为这个 API 跟谷歌的`proxy`的 API 完全不同， 这个 API 只能通过'browser'命名空间访问
+Chrome 浏览器提供了一个叫做`'proxy'的`api 扩展，它的功能跟这个 api 类似，在 chrome 的 api 中也可以用来实现一个拦截策略。然而，Chrome 的 API 的设计跟这个 API 设计完全不同。因为这个 API 跟谷歌的`proxy`的 API 完全不同，这个 API 只能通过'browser'命名空间访问
 
 如果你想用这个 API 你需要得到'`proxy`'的[permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).并且，如果你想拦截一个请求，你同样也需要当前拦截请求的 url 的 [host permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
@@ -46,4 +47,4 @@ Chrome 浏览器提供了一个叫做`'proxy'的`api 扩展，它的功能跟这
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.proxy")}}
+{{Compat}}

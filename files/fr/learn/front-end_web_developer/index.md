@@ -4,6 +4,7 @@ slug: Learn/Front-end_web_developer
 translation_of: Learn/Front-end_web_developer
 original_slug: Apprendre/Front-end_web_developer
 ---
+
 {{learnsidebar}}
 
 Bienvenue dans notre parcours d'apprentissage pour les développeurs Web front-end!

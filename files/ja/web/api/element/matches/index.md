@@ -2,6 +2,7 @@
 title: Element.matches()
 slug: Web/API/Element/matches
 ---
+
 {{APIRef("DOM")}}
 
 **`matches()`** メソッドは、その要素 ({{domxref("Element")}}) が指定された `selectorString` によって選択されるかをチェックします。言い換えれば、要素「が」セレクターであることをチェックします。

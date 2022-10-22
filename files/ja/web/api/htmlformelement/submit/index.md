@@ -1,33 +1,49 @@
 ---
-title: HTMLFormElement.submit
+title: HTMLFormElement.submit()
 slug: Web/API/HTMLFormElement/submit
+l10n:
+  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
-{{ApiRef}}
 
-## 概要
+{{APIRef("HTML DOM")}}
 
-`submit` はフォームを送信します。
+**`HTMLFormElement.submit()`** メソッドは、このフォーム ({{HtmlElement("form")}}) を送信します。
+
+このメソッドは、フォームの送信 {{HtmlElement("button") }} をアクティブにするのと似ていますが、同じではありません。ただ、このメソッドを直接呼び出す場合は、
+
+- {{domxref("HTMLFormElement/submit_event", "submit")}} イベントは発生しません。特に、フォームの `onsubmit` イベントハンドラーは実行されません。
+- [制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)は行われません。
+
+{{domxref("HTMLFormElement.requestSubmit()")}} メソッドはフォームの送信ボタン ({{HtmlElement("button")}}) を使用にするのと同じで、これらの相違点はありません。
+
+フォームコントロール（送信ボタンなど）に `name` または `id` が `submit` のものがある場合、このメソッドはフォームの送信メソッドをマスクします。
+
+{{HtmlElement("input")}} で type="submit" の属性を持つものは **`HTMLFormElement.submit()`** ではフォームと一緒に送信されませんが、本来の HTML フォームの送信で行う場合は送信されます。
 
 ## 構文
 
+```js-nolint
+submit()
 ```
-HTMLFormElement.submit();
-```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
 ```js
-document.forms["myform"].submit()
+document.forms["myform"].submit();
 ```
-
-## 注記
-
-このメソッドはフォームの送信ボタンをクリックするのと同じ動作をします。
-
-Gecko ベースのアプリケーションからこのメソッドを呼び出すときに、フォームの `onsubmit` イベントハンドラ (例 : `onsubmit="return false;"`) はトリガされません。一般的に、ユーザエージェントによる呼び出しは保証されていません (※参照 : <http://lists.w3.org/Archives/Public/www-dom/2012JanMar/0011.html>)
-
-もしフォームコントロール (送信ボタン等) の `name` 属性か `id` 属性の属性値に "`submit`" が設定されていた場合、フォームの `submit` メソッドはマスキングされてしまいます。
 
 ## 仕様書
 
-- [DOM Level 2 HTML: submit](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-76767676)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

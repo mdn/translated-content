@@ -2,6 +2,7 @@
 title: Bitwise XOR (^)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
 ---
+
 {{jsSidebar("Operators")}}
 
 The bitwise XOR operator (`^`) returns a `1` in each bit position for which the corresponding bits of either but not both operands are `1`s.
@@ -40,6 +41,7 @@ The truth table for the XOR operation is:
 .    9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
+
 14 ^ 9 (base 10) = 00000000000000000000000000000111 (base 2) = 7 (base 10)
 ```
 

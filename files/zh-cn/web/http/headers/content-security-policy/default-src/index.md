@@ -2,6 +2,7 @@
 title: 'CSP: default-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
+
 {{HTTPSidebar}}
 
 在 HTTP 协议中，{{HTTPHeader("Content-Security-Policy")}} (CSP) 首部字段中的 **`default-src`** 指令可以为其他 CSP 拉取指令（{{Glossary("fetch directive", "fetch directives")}}）提供备选项。对于以下列出的指令，假如不存在的话，那么用户代理会查找并应用 default-src 指令的值。
@@ -43,18 +44,18 @@ Content-Security-Policy: default-src <source> <source>;
 - \<scheme-source>
   - : 协议名如'http:' 或者 'https:'。**必须带有冒号，不要有单引号**。同时你还可以指定数据协议（data schema）（不推荐使用）。
 
-    - `data:` 允许 [`data:` URIs](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) 作为内容的源*。这是不安全的。攻击者可以注入任意 data: URI 。不要轻易使用这种形式的源，尤其是脚本，绝对不要使用。
+    - `data:` 允许 [`data:` URIs](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) 作为内容的源*。这是不安全的。攻击者可以注入任意 data: URI。不要轻易使用这种形式的源，尤其是脚本，绝对不要使用。
     - `mediastream:` 允许 [`mediastream:` URIs](/zh-CN/docs/Web/API/MediaStream_API) 作为内容的源。
     - `blob:` 允许 [`blob:` URIs](/zh-CN/docs/Web/API/Blob) 作为内容的源。
     - `filesystem:` 允许 [`filesystem:` URIs](/zh-CN/docs/Web/API/FileSystem) 作为内容的源。
 - `'self'`
-  - : 指向与要保护的文件所在的源，包括相同的 URL scheme 与端口号。必须有单引号。一些浏览器会特意排除 blob 与 filesystem 。需要设定这两种内容类型的站点可以在 Data 属性中进行设定。
+  - : 指向与要保护的文件所在的源，包括相同的 URL scheme 与端口号。必须有单引号。一些浏览器会特意排除 blob 与 filesystem。需要设定这两种内容类型的站点可以在 Data 属性中进行设定。
 - `'unsafe-inline'`
   - : 允许使用内联资源，例如内联 {{HTMLElement("script")}} 元素（javascript: URL）、内联事件处理器以及内联 {{HTMLElement("style")}} 元素。必须有单引号。
 - `'unsafe-eval'`
   - : 允许使用 eval() 以及相似的函数来从字符串创建代码。必须有单引号。
 - `'none'`
-  - : 不允许任何内容。 必须有单引号。
+  - : 不允许任何内容。必须有单引号。
 - 'nonce-\<base64 值>'
   - : 特定使用一次性加密内联脚本的白名单。服务器必须在每一次传输政策时生成唯一的一次性值。否则将存在绕过资源政策的可能。请参见[不安全的内联脚本](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script)查看示例。
 - \<hash-source>

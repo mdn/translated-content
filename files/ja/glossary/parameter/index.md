@@ -2,6 +2,7 @@
 title: Parameter (パラメーター)
 slug: Glossary/Parameter
 ---
+
 パラメーターは{{Glossary("function", "関数")}}に渡される名前付きの変数です。パラメーター変数は関数に{{Glossary("argument","引数")}}をインポートするのに使われます。
 
 *パラメーター*と*引数*の違いに注意してください:

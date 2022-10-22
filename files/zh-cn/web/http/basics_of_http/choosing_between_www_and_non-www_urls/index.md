@@ -2,6 +2,7 @@
 title: 选择 www 或非 www URL 作为域名
 slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 ---
+
 {{HTTPSidebar}}
 
 网站所有者经常会问的一个问题是选择非 www 的还是 www 的网址。本文提供了选择建议。
@@ -25,7 +26,7 @@ slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 
 ### 使用 HTTP 301 重定向
 
-在这种情况下，你需要配置服务器接收的 HTTP 请求（ 常见为 www 和非 www 网址相同）以及适当的 HTTP 响应 {{HTTPStatus(301)}} 去响应所有非规范的域名请求。这会将尝试使访问非规范网址的浏览器重定向到其规范的等效网址。举例来说，如果您选择使用非 www 网址为规范类型，你的所有 www 网址都应该被重定向到对应的非 www 网址上。
+在这种情况下，你需要配置服务器接收的 HTTP 请求（常见为 www 和非 www 网址相同）以及适当的 HTTP 响应 {{HTTPStatus(301)}} 去响应所有非规范的域名请求。这会将尝试使访问非规范网址的浏览器重定向到其规范的等效网址。举例来说，如果您选择使用非 www 网址为规范类型，你的所有 www 网址都应该被重定向到对应的非 www 网址上。
 
 例如：
 
@@ -51,7 +52,7 @@ slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 
 ## 根据情况决定
 
-可以认为这是一个非常主观 [bikeshedding](http://bikeshed.com/) 问题。 如果你想更深入的阅读，请参阅 [WWW vs non-WWW for your Canonical Domain URL – Which is Best and Why?](http://www.hyperarts.com/blog/www-vs-non-www-for-your-canonical-domain-url-which-is-best-and-why/) ，它可能提出进一步的见解。
+可以认为这是一个非常主观 [bikeshedding](http://bikeshed.com/) 问题。如果你想更深入的阅读，请参阅 [WWW vs non-WWW for your Canonical Domain URL – Which is Best and Why?](http://www.hyperarts.com/blog/www-vs-non-www-for-your-canonical-domain-url-which-is-best-and-why/) ，它可能提出进一步的见解。
 
 ## 相关链接
 

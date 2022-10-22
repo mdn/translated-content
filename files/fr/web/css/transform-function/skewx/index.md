@@ -5,6 +5,7 @@ translation_of: Web/CSS/transform-function/skewX()
 original_slug: Web/CSS/transform-function/skewX()
 browser-compat: css.types.transform-function.skewX
 ---
+
 {{CSSRef}}
 
 La fonction **`skewX()`** permet d'opérer une distorsion horizontale en étirant chaque point de l'élément d'un certain angle dans la direction horizontale. Pour cela, on augmente l'abscisse d'un élément d'une valeur proportionnelle à l'angle donné et à la distance de l'origine. Plus le point est éloigné de l'origine et loin de l'axe, plus le décalage obtenu sera important.

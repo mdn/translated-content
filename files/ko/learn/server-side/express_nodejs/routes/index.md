@@ -70,7 +70,7 @@ The code below provides a concrete example of how we can create a route module a
 
 First we create routes for a wiki in a module named **wiki.js**. The code first imports the Express application object, uses it to get a `Router` object and then adds a couple of routes to it using the `get()` method. Last of all the module exports the `Router` object.
 
-첫번재 우리는 wiki.js 를 이름을 가진 모듈에서 위키를 위한 라우트를 만든다. 첫번째 코드에서 Express 어플리케이션 객체가 중요하고, 이 객체를 라우트 오브젝트를 얻기 위해서 사용하고, get()메서드를 사용하여 라우트는 2개를 추가한다. 모듈에서 마지막에는 라우트 객체를 Export한다.
+첫 번째 우리는 wiki.js 를 이름을 가진 모듈에서 위키를 위한 라우트를 만든다. 첫번째 코드에서 Express 어플리케이션 객체가 중요하고, 이 객체를 라우트 오브젝트를 얻기 위해서 사용하고, get()메서드를 사용하여 라우트는 2개를 추가한다. 모듈에서 마지막에는 라우트 객체를 Export한다.
 
 ```js
 // wiki.js - Wiki route module
@@ -125,7 +125,7 @@ The callback function here calls [`send()`](https://expressjs.com/en/4x/api.html
 
 The example routes above use the `Router.get()` method to respond to HTTP GET requests with a certain path.
 
-The `Router` also provides route methods for all the other HTTP verbs, that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, ​​​​​​ `mkactivity()`, `checkout()`, `merge()`, ` m-``search() `, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
+The `Router` also provides route methods for all the other HTTP verbs, that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, ​​​​​​ `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
 
 For example, the code below behaves just like the previous `/about` route, but only responds to HTTP POST requests.
 

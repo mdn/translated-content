@@ -15,6 +15,7 @@ translation_of: >-
 original_slug: >-
   Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat/resolvedOptions
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de format et de locale pour les valeurs temporelles relatives, calculées pendant l'initialisation de l'objet {{jsxref("RelativeTimeFormat")}}.

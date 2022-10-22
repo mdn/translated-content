@@ -2,6 +2,7 @@
 title: points
 slug: Web/SVG/Attribute/points
 ---
+
 {{SVGRef}}
 
 **`points`** 属性は、点のリストを定義します。各点は、ユーザー座標系における X 座標と Y 座標を表す数値の組で定義されます。属性に奇数の座標が含まれている場合、最後の座標は無視されます。
@@ -35,7 +36,7 @@ html,body,svg { height:100% }
 
 {{SVGElement('polyline')}}の場合、 `points` で定義された点リストはそれぞれが描きたい線の頂点を表します。各点は、ユーザー座標系の X 座標と Y 座標として定義されます。
 
-> **Note:** polyline は最初の点と最後の点が接続されない開いた図形となります。
+> **メモ:** polyline は最初の点と最後の点が接続されない開いた図形となります。
 
 <table class="properties">
   <tbody>
@@ -74,7 +75,7 @@ html,body,svg { height:100% }
 
 {{SVGElement('polygon')}}の場合、`points` で定義された点リストはそれぞれが描きたい図形の頂点を表します。各点は、ユーザー座標系の X 座標と Y 座標として定義されます。
 
-> **Note:** polygon は最初の点と最後の点が接続された閉じた図形となります。
+> **メモ:** polygon は最初の点と最後の点が接続された閉じた図形となります。
 
 <table class="properties">
   <tbody>

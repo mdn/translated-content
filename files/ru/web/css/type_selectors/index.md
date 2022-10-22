@@ -11,7 +11,9 @@ CSS селекторы по типу выбирают элементы по им
 
 ## Синтаксис
 
-    element { style properties }
+```
+element { style properties }
+```
 
 ## Пример
 

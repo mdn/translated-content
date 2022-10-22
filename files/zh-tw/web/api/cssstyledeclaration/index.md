@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
 ---
+
 {{ APIRef("CSSOM") }}
 
 ## 概要

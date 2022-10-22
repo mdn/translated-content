@@ -2,6 +2,7 @@
 title: HTMLImageElement.src
 slug: Web/API/HTMLImageElement/src
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} の **`src`** プロパティは、 HTML の {{htmlattrxref("src", "img")}} 属性を反映し、 {{HTMLElement("img")}} 要素に表示する画像を指定します。

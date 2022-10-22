@@ -10,13 +10,13 @@ translation_of: Web/CSS/align-content
 
 ## Resumen
 
-La propiedad [CSS](/es/docs/CSS "CSS") `align-content` ajusta las líneas dentro de un contenedor flex cuando hay espacio extra en el eje transversal.
+La propiedad [CSS](/es/docs/CSS) `align-content` ajusta las líneas dentro de un contenedor flex cuando hay espacio extra en el eje transversal.
 
 Esta propiedad no tiene efecto en cajas flexibles de una sola línea.
 
 {{cssinfo}}
 
-Vea [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS "CSS/Using_CSS_flexible_boxes") para más propiedades e información.
+Vea [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS) para más propiedades e información.
 
 ## Sintaxis
 
@@ -195,4 +195,4 @@ Su resultado es:
 
 ## Véase también
 
-- [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS "CSS/Using_CSS_flexible_boxes")
+- [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS)

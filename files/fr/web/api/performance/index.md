@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Performance
 ---
+
 {{APIRef("High Resolution Time")}}
 
 L'interface **`Performance`** donne accès à des informations liées aux performances pour la page actuelle. Elle fait partie de l'API « High Resolution Time », mais est complétée par les APIs [Performance Timeline](/fr/docs/Web/API/Performance_Timeline), [Navigation Timing](/fr/docs/Web/API/Navigation_timing_API), [User Timing](/fr/docs/Web/API/User_Timing_API), et [Resource Timing](/fr/docs/Web/API/Resource_Timing_API).

@@ -2,6 +2,7 @@
 title: i18n
 slug: Mozilla/Add-ons/WebExtensions/API/i18n
 ---
+
 {{AddonSidebar}}
 
 拡張機能を国際化する関数です。これらの API は、拡張機能に同梱したロケールファイルからローカライズ文字列を取得したり、ブラウザーの現在の言語や、その [Accept-Language ヘッダー](/ja/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header) を調べるために使用します。
@@ -35,7 +36,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 
 {{WebExtExamples("h2")}}
 
-> **Note:** この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/extensions/i18n) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
+> **メモ:** この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/extensions/i18n) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

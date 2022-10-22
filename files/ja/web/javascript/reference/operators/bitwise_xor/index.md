@@ -2,6 +2,7 @@
 title: ビット排他的論理和 (^)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
 ---
+
 {{jsSidebar("Operators")}}
 
 ビット排他的論理和演算子 (`^`) は、両方のオペランドの対応するビットの一方だけが `1` である位置のビットで `1` を返します。

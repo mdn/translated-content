@@ -2,6 +2,7 @@
 title: CSS 関数記法
 slug: Web/CSS/CSS_Functions
 ---
+
 {{CSSRef}}
 
 **CSS 関数記法**は [CSS 値](/ja/docs/Web/CSS/CSS_Values_and_Units)の一種で、より複雑なデータ型を表現したり、特別なデータ処理や計算を呼び出したりすることができます。

@@ -9,6 +9,7 @@ tags:
   - URL
 translation_of: Web/API/URL/hash
 ---
+
 {{ APIRef("URL API") }}
 
 La propriété **`hash`** de l'interface {{domxref("URL")}} retourne un {{domxref("USVString")}} contenant le caractère `'#'` suivi par l'identificateur de fragment de URL.

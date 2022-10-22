@@ -3,6 +3,7 @@ title: 417 Expectation Failed
 slug: Web/HTTP/Status/417
 translation_of: Web/HTTP/Status/417
 ---
+
 {{HTTPSidebar}}
 
 Le code de réponse d'erreur HTTP **`417 Expectation Failed`** indique que les attentes indiquées par l'en-tête [`Expect`](/fr/docs/Web/HTTP/Headers/Expect) n'ont pu être satisfaites.

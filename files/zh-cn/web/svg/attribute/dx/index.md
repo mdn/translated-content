@@ -2,9 +2,10 @@
 title: dx
 slug: Web/SVG/Attribute/dx
 ---
+
 « [SVG 属性参考汇总](/zh-CN/SVG/Attribute)
 
-`dx 属性表示一个元素或其内容在 x 轴方向上的偏移，偏移量取决于设置该属性的元素。`
+`dx` 属性表示一个元素或其内容在 `x` 轴方向上的偏移，偏移量取决于设置该属性的元素。
 
 对于{{SVGElement("feOffset")}}元素，它的值代表所有输入的图像的偏移量之和。这个总和被表达在由{{SVGElement("filter")}}元素的{{SVGAttr("primitiveUnits")}}属性定义的坐标系中。
 

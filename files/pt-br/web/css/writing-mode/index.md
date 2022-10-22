@@ -38,12 +38,9 @@ A propriedade especifica o _comportamento de fluxo do bloco,_ que é a maneira e
   - : Conteúdo é disposto verticalmente de cima para baixo, horizontalmente da direita para a esquerda. A proxima linha vertical é posicionada à esquerda da linha anterior.
 - `vertical-lr`
   - : Conteúdo é disposto verticalmente de cima para baixo, horizontalmente da esquerda para a direita. A proxima linha vertical é posicionada à direita da linha anterior.
-- `sideways-rl`{{experimental_inline}}
+- `sideways-rl` {{experimental_inline}}
   - : Conteúdo é disposto verticalmente de cima para baixo e todos os glifos, até mesmo os que estão em uma escrita vertical, são colocados lado a lado para a direita.
-
-<!---->
-
-- `sideways-lr`{{experimental_inline}}
+- `sideways-lr` {{experimental_inline}}
   - : Conteúdo é disposto verticalmente de cima para baixo e todos os glifos, até mesmo os que estão em uma escrita vertical, são colocados lado a lado para a esquerda.
 - `lr` {{deprecated_inline}}
   - : Descontinuado exceto para docmentos SVG1. Para CSS, use `horizontal-tb`.
@@ -182,7 +179,7 @@ Essa é uma imagem mostrando o que o resultado deve parecer, no caso do suporte 
 
 ## See also
 
-- SVG [`writing-mode`](/en-US/docs/Web/SVG/Attribute/writing-mode) attribute
+- SVG [`writing-mode`](/pt-BR/docs/Web/SVG/Attribute/writing-mode) attribute
 - {{Cssxref("direction")}}
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}

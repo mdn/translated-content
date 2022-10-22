@@ -2,6 +2,7 @@
 title: font-style
 slug: Web/CSS/font-style
 ---
+
 {{CSSRef}}
 
 **`font-style`** CSS 属性允许你选择 {{cssxref("font-family")}} 字体下的 `italic` 或 `oblique` 样式。
@@ -184,6 +185,6 @@ Large sections of text set with a `font-style` value of `italic` may be difficul
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-style")}}
+{{Compat}}
 
 \[1] 在 Firefox 44 之前，Gecko 并不对 `oblique` 和 `italic` 字形做出区分。在那之后，如果有可用的字形，它将使用正确的字形。

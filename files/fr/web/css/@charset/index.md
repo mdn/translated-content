@@ -7,6 +7,7 @@ tags:
   - Règle @
 translation_of: Web/CSS/@charset
 ---
+
 {{CSSRef}}
 
 La [règle @](/fr/docs/Web/CSS/R%C3%A8gles_@)  **`@charset`** définit l'encodage des caractères utilisés dans la feuille de style. Cette règle doit être le premier élément de la feuille de style (aucun caractère ne doit être écrit avant). Cette règle ne fait pas partie des [instructions imbriquées](/fr/Apprendre/CSS/Les_bases/La_syntaxe#Les_instructions_CSS) et ne peut donc pas être utilisée [à l'intérieur des groupes conditionnels](/fr/docs/Web/CSS/Règles_@#R.C3.A8gles_conditionnelles_de_groupe). Si plusieurs règles `@charset` sont définies, seule la première sera utilisée. Cette règle ne pourra pas être utilisée au sein d'un attribut `style` d'un élément HTML ou avec l'élément {{HTMLElement("style")}} car c'est l'encodage du document HTML qui est alors pris en compte.
@@ -58,10 +59,8 @@ où
 
 ## Spécifications
 
-| Spécification                                                            | État                     | Commentaires         |
-| ------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('CSS2.1', 'syndata.html#x57', '@charset')}} | {{Spec2('CSS2.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.charset")}}
+{{Compat}}

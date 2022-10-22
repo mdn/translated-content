@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/fontcolor
 ---
+
 {{JSRef}}{{deprecated_header}}
 
 La méthode **`fontcolor()`** permet de créer un élément {{HTMLElement("font")}} qui permet d'afficher la chaine de caractères dans une fonte utilisant la couleur donnée.
@@ -58,14 +59,11 @@ document.getElementById('IDdeVotreElement').style.color = 'red'
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.fontcolor', 'String.prototype.fontcolor')}}     | {{Spec2('ES6')}}         | Définition initiale. Implémentée dans JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web. |
-| {{SpecName('ESDraft', '#sec-string.prototype.fontcolor', 'String.prototype.fontcolor')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web.                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.fontcolor")}}
+{{Compat}}
 
 ## Voir aussi
 

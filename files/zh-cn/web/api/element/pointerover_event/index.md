@@ -2,6 +2,7 @@
 title: 全局事件处理器.onpointerover
 slug: Web/API/Element/pointerover_event
 ---
+
 {{ApiRef("HTML DOM")}}
 
 A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("pointerover")}} event.
@@ -45,7 +46,7 @@ function init() {
 
 ## 浏览器兼容性
 
-{{Compat("api.GlobalEventHandlers.onpointerover")}}
+{{Compat}}
 
 ## 参见
 

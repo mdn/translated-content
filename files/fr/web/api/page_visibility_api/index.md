@@ -3,6 +3,7 @@ title: Page Visibility API
 slug: Web/API/Page_Visibility_API
 translation_of: Web/API/Page_Visibility_API
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 **L’API _Page Visibility_** («&nbsp;visibilité de la page&nbsp;») permet de savoir quand une page web est visible ou a le focus.
@@ -125,7 +126,7 @@ if (typeof document.addEventListener === "undefined" || typeof document.hidden =
     ```
 
 - {{domxref("document.onvisibilitychange")}}
-  - : Un {{event("Event_handlers", "event handler")}} représentant le code à appeler quand l’évènement [`visibilitychange`](/fr/docs/Web/API/Document/visibilitychange_event) est émis.
+  - : Un gestionnaire d'évènement représentant le code à appeler quand l’évènement [`visibilitychange`](/fr/docs/Web/API/Document/visibilitychange_event) est émis.
 
 ## Spécifications
 

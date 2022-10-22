@@ -6,6 +6,7 @@ tags:
   - interface utilisateur
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 ---
+
 {{AddonSidebar}}
 
 Une fenêtre contextuelle est une boîte de dialogue associée à un [bouton de la barre d'outils](/fr/Add-ons/WebExtensions/Browser_action) ou à un [bouton de la barre d'adresse](/fr/Add-ons/WebExtensions/Page_actions). Cette page décrit les popups en général, leur spécification, leur débogage, leur redimensionnement et leur conception, ainsi que des exemples d'utilisation..

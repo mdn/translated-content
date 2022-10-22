@@ -2,6 +2,7 @@
 title: Window.screenY
 slug: Web/API/Window/screenY
 ---
+
 {{APIRef}}
 
 ## 概述

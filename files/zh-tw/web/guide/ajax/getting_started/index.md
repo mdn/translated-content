@@ -2,6 +2,7 @@
 title: 入門篇
 slug: Web/Guide/AJAX/Getting_Started
 ---
+
 這篇文章說明 AJAX 相關技術的基礎，並提供兩個簡單的實際操作範例供您入門。
 
 ### AJAX 是什麼？

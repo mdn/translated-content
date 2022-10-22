@@ -2,6 +2,7 @@
 title: WeakSet() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
 ---
+
 {{JSRef}}
 
 **`WeakSet`** コンストラクターで、 `WeakSet` オブジェクトを生成し、これに弱い参照で*オブジェクト*をコレクションで保持することができます。

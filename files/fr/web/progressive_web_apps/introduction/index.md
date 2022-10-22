@@ -9,6 +9,7 @@ tags:
   - web manifest
 translation_of: Web/Progressive_web_apps/Introduction
 ---
+
 {{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
 
 Cet article fournit une introduction aux Progressive Web Apps (PWA), présentant ce qui les caractérise, et les avantages qu'elles apportent par rapport à de simples applications web.

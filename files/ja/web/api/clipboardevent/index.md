@@ -2,6 +2,7 @@
 title: ClipboardEvent
 slug: Web/API/ClipboardEvent
 ---
+
 {{APIRef("Clipboard API")}}
 
 **`ClipboardEvent`** インターフェイスは、 クリップボードの変更に関連する情報を提供するイベントを表します。すなわち、{{domxref("Element/cut_event", "cut")}}、{{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}} イベントです。

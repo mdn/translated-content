@@ -7,6 +7,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/foreignObject
 ---
+
 {{SVGRef}}
 
 L'élément **`<foreignObject>`** permet d'inclure des éléments d'un espace de noms XML différent à l'intérieur du [SVG](/fr/docs/Web/SVG). Dans le contexte d'un navigateur, il s'agit généralement d'inclure du XHTML/HTML.

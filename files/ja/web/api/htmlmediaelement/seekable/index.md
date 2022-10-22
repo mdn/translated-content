@@ -2,6 +2,7 @@
 title: HTMLMediaElement.seekable
 slug: Web/API/HTMLMediaElement/seekable
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`seekable`** は {{domxref("HTMLMediaElement")}} オブジェクトの読み取り専用プロパティで、新しい静的な[正規化された `TimeRanges` オブジェクト](/ja/docs/Web/API/TimeRanges#normalized_timeranges_objects)を返します。これは `seekable` プロパティがアクセスされた時点でユーザーエージェントがシーク可能なメディアリソースがあれば、その範囲を表します。

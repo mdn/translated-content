@@ -2,6 +2,7 @@
 title: 类选择器
 slug: Web/CSS/Class_selectors
 ---
+
 {{ CSSRef() }}
 
 ## 概述
@@ -47,6 +48,6 @@ Here's another.
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.class")}}
+{{Compat}}
 
 ## See also

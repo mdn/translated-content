@@ -2,6 +2,7 @@
 title: HTMLMediaElement.loop
 slug: Web/API/HTMLMediaElement/loop
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.loop`** プロパティは、 HTML の {{htmlattrxref("loop", "video")}} 属性を反映し、メディア要素が最後に到達したときに最初からやり直すかどうかを制御します。

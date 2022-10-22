@@ -2,6 +2,7 @@
 title: Clients.openWindow()
 slug: Web/API/Clients/openWindow
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Clients")}} インターフェイスの **`openWindow()`** メソッドは、新しい最上位の閲覧コンテキストを作成し、所与の URL をロードします。 呼び出し元のスクリプトにポップアップを表示するパーミッションがない場合、`openWindow()` は `InvalidAccessError` をスローします。

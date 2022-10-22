@@ -2,6 +2,7 @@
 title: CSSGroupingRule.cssRules
 slug: Web/API/CSSGroupingRule/cssRules
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`cssRules`** は {{domxref("CSSGroupingRule")}} インターフェイスのプロパティで、 {{domxref("CSSRuleList")}} 型で {{domxref("CSSRule")}} オブジェクトのコレクションを返します。

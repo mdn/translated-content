@@ -14,7 +14,7 @@ original_slug: Web/CSS/:any
 
 ## Resumen
 
-La [pseudo-clase](/es/docs/CSS/Pseudo-classes "CSS/Pseudo-classes") `:any()` permite construir rápidamente conjuntos de selectores similares estableciendo grupos desde los que cualquier elemento incluido coincidirá. Es una alternativa a tener que repetir el selector completo por uno de los elementos que va a variar.
+La [pseudo-clase](/es/docs/CSS/Pseudo-classes) `:any()` permite construir rápidamente conjuntos de selectores similares estableciendo grupos desde los que cualquier elemento incluido coincidirá. Es una alternativa a tener que repetir el selector completo por uno de los elementos que va a variar.
 
 > **Nota:** Esta pseudo-clase está en progreso de ser estandarizada en [_Selectores CSS Nivel 4_](http://dev.w3.org/csswg/selectors4/#matches) bajo el nombre `:matches()`. Es probable que la sintaxis y el nombre de `:-vendor-any()` sean cambiados para reflejar el estándar en el futuro próximo.
 
@@ -72,7 +72,7 @@ Sin embargo, no se debe usar lo siguiente: (Véase [la sección de rendimiento](
 
 ## Notas
 
-Esto es particularmente útil al tratar con [secciones y encabezados](/es/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document") de HTML5. Puesto que {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, y {{HTMLElement("nav")}} pueden ser anidados, puede ser complicado aplicar estilos sin usar `:any()`.
+Esto es particularmente útil al tratar con [secciones y encabezados](/es/docs/Sections_and_Outlines_of_an_HTML5_document) de HTML5. Puesto que {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, y {{HTMLElement("nav")}} pueden ser anidados, puede ser complicado aplicar estilos sin usar `:any()`.
 
 Por ejemplo, sin `:any()`, estilizar todos los {{HTMLElement("h1")}} a diferentes niveles de profundidad podría ser muy complicado:
 

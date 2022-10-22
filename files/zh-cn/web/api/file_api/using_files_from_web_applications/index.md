@@ -2,6 +2,7 @@
 title: 在 web 应用程序中使用文件
 slug: Web/API/File_API/Using_files_from_web_applications
 ---
+
 {{APIRef("File API")}}
 
 通过使用在 HTML5 中加入到 DOM 的 File API，使在 web 内容中让用户选择本地文件然后读取这些文件的内容成为可能。用户可以通过 HTML 中的 {{HTMLElement("input/file", '&lt;input type="file"&gt;')}} 元素或者是通过拖拽来选择本地文件。

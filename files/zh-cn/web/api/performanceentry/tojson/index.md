@@ -2,6 +2,7 @@
 title: PerformanceEntry.toJSON()
 slug: Web/API/PerformanceEntry/toJSON
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`toJSON()`** 方法是一个串行器 ( _serializer_ ); 它返回{{domxref("PerformanceEntry","performance entry")}}对象的一个 JSON 表示形式。
@@ -77,4 +78,4 @@ function check_PerformanceEntry(obj) {
 
 ## Browser compatibility
 
-{{Compat("api.PerformanceEntry.toJSON")}}
+{{Compat}}

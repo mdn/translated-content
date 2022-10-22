@@ -2,6 +2,7 @@
 title: HTMLElement.enterKeyHint
 slug: Web/API/HTMLElement/enterKeyHint
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`enterKeyHint`** プロパティは、仮想キーボードの Enter キーに表示するアクションラベル（またはアイコン）を定義する列挙型のプロパティです。これは HTML の [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes/enterkeyhint) グローバル属性を反映し、以下の値を [`DOMString`](/ja/docs/Web/API/DOMString) としてのみ受け入れることができる、列挙されたプロパティです。

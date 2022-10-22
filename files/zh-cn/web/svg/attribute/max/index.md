@@ -2,6 +2,7 @@
 title: max
 slug: Web/SVG/Attribute/max
 ---
+
 {{SVGRef}}
 
 The **`max`** attribute specifies the maximum value of the active animation duration.

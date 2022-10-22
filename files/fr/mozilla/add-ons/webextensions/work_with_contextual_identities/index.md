@@ -12,6 +12,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
 original_slug: Mozilla/Add-ons/WebExtensions/travailler_avec_des_identites_contextuelles
 ---
+
 {{AddonSidebar}}
 
 Beaucoup de gens ont besoin ou veulent interagir avec le web en utilisant plusieurs personnages. Ils peuvent avoir des comptes pour le travail sur le Web et le courrier électronique personnel. Ils peuvent se déconnecter de leurs comptes de médias sociaux avant d'accéder aux achats en ligne, afin de s'assurer que les scripts de suivi sur les sites d'achat ne peuvent pas prendre en charge leur activité de médias sociaux. Pour répondre à ces exigences, les utilisateurs finissent souvent par utiliser une fenêtre de navigateur standard et privée ou deux navigateurs différents.

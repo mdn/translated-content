@@ -2,6 +2,7 @@
 title: document.links
 slug: Web/API/Document/links
 ---
+
 {{ApiRef}}
 
 ## 概要

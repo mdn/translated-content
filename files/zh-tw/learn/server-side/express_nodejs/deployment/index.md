@@ -2,6 +2,7 @@
 title: 'Express 教學 7: 佈署到生產環境'
 slug: Learn/Server-side/Express_Nodejs/deployment
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 現在你已經創建（並測試）了一個不錯的 本地圖書館 網站了，你打算把它發佈到一個公共網絡服務器，這樣圖書館管理員和網路上的其他成員就可以訪問它了。這篇文章總結了你可以怎樣找到一台主機部署你的網站，以及你需要為網站準備好佈署到生產環境該做什麼。
@@ -279,11 +280,11 @@ Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/
 1. 將 Express 應用程序，複製到此文件夾中（不包括 **/node_modules**，其中包含您應根據需要，從 NPM 獲取的依賴項文件）。
 2. 打開命令提示符/終端，並使用 `add` 命令，將所有文件添加到 git。
 
-3. ```bash
+    ```bash
     git add -A
     ```
 
-4. 使用 status 命令，檢查要添加的所有文件是否正確（您希望包含源文件，而不是二進製文件，臨時文件等）。它應該看起來有點像下面的列表。
+3. 使用 status 命令，檢查要添加的所有文件是否正確（您希望包含源文件，而不是二進製文件，臨時文件等）。它應該看起來有點像下面的列表。
 
     ```plain
     > git status
@@ -295,15 +296,15 @@ Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/
             new file:   ...
     ```
 
-5. 如果您滿意，請將文件提交到本地儲存庫：
+4. 如果您滿意，請將文件提交到本地儲存庫：
 
     ```bash
     git commit -m "First version of application moved into github"
     ```
 
-6. 然後使用以下內容，將本地儲存庫同步到 Github 網站：
+5. 然後使用以下內容，將本地儲存庫同步到 Github 網站：
 
-    ```plain
+    ```bash
     git push origin master
     ```
 

@@ -2,6 +2,7 @@
 title: VREyeParameters
 slug: Web/API/VREyeParameters
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 [WebVR API](/ja/docs/Web/API/WebVR_API) の **`VREyeParameters`** インターフェイスは，指定した眼のためにシーンを正しくレンダリングするためのすべての情報（視界(field of view)の情報を含む）を表現します．

@@ -2,6 +2,7 @@
 title: altGlyphDef
 slug: Web/SVG/Element/altGlyphDef
 ---
+
 {{SVGRef}}
 
 `altGlyphDef`元素定义了一个表达字形的替代物。

@@ -2,6 +2,7 @@
 title: 你的第二個 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
+
 {{AddonSidebar}}
 
 假如你已經讀過了 [你的第一個 WebExtension](/zh-TW/Add-ons/WebExtensions/Your_first_WebExtension)，你也已經知道該如何寫一個 extension（外掛），在這篇文章中我們將會教你寫一個稍微複雜一點的 extension，來 demo 一些 API 的使用。

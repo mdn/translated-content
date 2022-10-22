@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakSet
 browser-compat: javascript.builtins.WeakSet
 ---
+
 {{JSRef}}
 
 Un objet **`WeakSet`** permet de créer un ensemble dont les _objets_ sont contenus avec des références faibles.

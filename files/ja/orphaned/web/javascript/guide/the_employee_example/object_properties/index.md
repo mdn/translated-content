@@ -3,6 +3,7 @@ title: Object Properties
 slug: orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties
 original_slug: Web/JavaScript/Guide/The_Employee_Example/Object_Properties
 ---
+
 ### オブジェクトのプロパティ
 
 このセクションでは、プロトタイプチェーンにおいてオブジェクトが他のオブジェクトからどのようにプロパティを継承するのか、また、実行時にプロパティを追加すると何が起きるのかについて論じます。

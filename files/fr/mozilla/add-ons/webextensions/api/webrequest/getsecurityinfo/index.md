@@ -12,6 +12,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
 ---
+
 {{AddonSidebar()}}
 
 Utilisez cette fonction pour obtenir des informations détaillées sur la connexion [TLS](/fr/docs/Glossaire/TLS) associée à une demande particulière..

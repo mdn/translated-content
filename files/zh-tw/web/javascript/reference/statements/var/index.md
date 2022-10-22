@@ -2,6 +2,7 @@
 title: var
 slug: Web/JavaScript/Reference/Statements/var
 ---
+
 {{jsSidebar("Statements")}}
 
 宣告一個變數, 同時可以非強制性地賦予一初始值。

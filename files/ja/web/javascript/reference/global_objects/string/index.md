@@ -2,6 +2,7 @@
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 ---
+
 {{JSRef}}
 
 **`String`** オブジェクトは文字の並びを表したり操作したりするために使用されます。
@@ -250,7 +251,7 @@ otherwise my code is unreadable."
 
 ## HTML ラッパーメソッド
 
-> **Note:** **非推奨です。これらのメソッドは避けてください。**
+> **メモ:** **非推奨です。これらのメソッドは避けてください。**
 >
 > 以下のメソッドは、それぞれ、特定の HTML タグでラップされた文字列のコピーを返します。
 

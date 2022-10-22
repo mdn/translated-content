@@ -2,6 +2,7 @@
 title: Element.clientHeight
 slug: Web/API/Element/clientHeight
 ---
+
 {{APIRef("DOM")}}
 
 只读属性 **`Element.clientHeight`** 对于没有定义 CSS 或者内联布局盒子的元素为 0；否则，它是元素内部的高度（以像素为单位），包含内边距，但不包括边框、外边距和水平滚动条（如果存在）。

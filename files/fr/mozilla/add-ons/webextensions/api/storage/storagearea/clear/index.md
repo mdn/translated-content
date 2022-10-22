@@ -14,6 +14,7 @@ tags:
   - remove
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/clear
 ---
+
 {{AddonSidebar()}}
 
 Supprime tous les éléments de la zone de stockage.

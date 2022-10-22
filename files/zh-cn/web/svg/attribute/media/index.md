@@ -2,6 +2,7 @@
 title: media
 slug: Web/SVG/Attribute/media
 ---
+
 {{SVGRef}}
 
 **`media`** 属性指定只有符合{{Glossary("media query")}}的样式表才会被应用。

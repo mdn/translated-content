@@ -2,6 +2,7 @@
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
+
 {{JSRef}}
 
 **Proxy** 对象用于创建一个对象的代理，从而实现基本操作的拦截和自定义（如属性查找、赋值、枚举、函数调用等）。
@@ -134,10 +135,10 @@ console.log(person.age);
 // 100
 
 person.age = 'young';
-// 抛出异常: Uncaught TypeError: The age is not an integer
+// 抛出异常：Uncaught TypeError: The age is not an integer
 
 person.age = 300;
-// 抛出异常: Uncaught RangeError: The age seems invalid
+// 抛出异常：Uncaught RangeError: The age seems invalid
 ```
 
 ### 扩展构造函数
@@ -276,7 +277,7 @@ let products = new Proxy([
   { name: 'Thunderbird', type: 'mailer' }
 ], {
   get: function(obj, prop) {
-    // 默认行为是返回属性值， prop ?通常是一个整数
+    // 默认行为是返回属性值，prop ?通常是一个整数
     if (prop in obj) {
       return obj[prop];
     }

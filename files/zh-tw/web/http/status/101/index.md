@@ -2,6 +2,7 @@
 title: 101 Switching Protocols
 slug: Web/HTTP/Status/101
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`101 Switching Protocols`** 回應碼表示伺服器正在切換到用戶端在請求標頭{{HTTPHeader("Upgrade")}} 中所要求的通訊協定。

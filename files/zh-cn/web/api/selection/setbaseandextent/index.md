@@ -2,6 +2,7 @@
 title: Selection.setBaseAndExtent()
 slug: Web/API/Selection/setBaseAndExtent
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 **`setBaseAndExtent()`** 方法是 {{domxref("Selection")}} 接口用来选中并设置在两个特定的 DOM 节点中文本选中的范围，并且选中的任何内容都位于两个节点之间。
@@ -103,7 +104,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.setBaseAndExtent")}}
+{{Compat}}
 
 ## 相关链接
 

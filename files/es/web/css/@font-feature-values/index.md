@@ -12,7 +12,7 @@ translation_of: Web/CSS/@font-feature-values
 
 ## Resumen
 
-La [regla-at](/es/docs/Web/CSS/At-rule "At-rule") [CSS](/es/docs/Web/CSS "CSS") **`@font-feature-values`** permite a los autores usar un nombre común de {{cssxref("font-variant-alternates")}} para características activadas de distintas formas en OpenType. Permite simplificar el código CSS cuando se usan distintas fuentes.
+La [regla-at](/es/docs/Web/CSS/At-rule) [CSS](/es/docs/Web/CSS) **`@font-feature-values`** permite a los autores usar un nombre común de {{cssxref("font-variant-alternates")}} para características activadas de distintas formas en OpenType. Permite simplificar el código CSS cuando se usan distintas fuentes.
 
 ```css
 @font-feature-values Font One { /* Cómo activar nice-style en Font One */
@@ -32,7 +32,7 @@ La [regla-at](/es/docs/Web/CSS/At-rule "At-rule") [CSS](/es/docs/Web/CSS "CSS") 
 .nice-look { font-variant-alternates: styleset(nice-style); } /* Independiente de la fuente */
 ```
 
-La regla-at `@font-feature-values` debe ser usada en la parte superior de la hoja de estilos, pero también dentro de [Grupos de reglas condicionales](/es/docs/Web/CSS/At-rule#Grupos_de_Reglas_Condicionales "CSS/At-rule#Conditional_Group_Rules").
+La regla-at `@font-feature-values` debe ser usada en la parte superior de la hoja de estilos, pero también dentro de [Grupos de reglas condicionales](/es/docs/Web/CSS/At-rule#Grupos_de_Reglas_Condicionales).
 
 ## Sintaxis
 

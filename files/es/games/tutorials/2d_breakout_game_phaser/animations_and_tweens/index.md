@@ -14,7 +14,6 @@ tags:
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens
 ---
 {{GamesSidebar}}
-{{IncludeSubnav("/en-US/docs/Games")}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
 

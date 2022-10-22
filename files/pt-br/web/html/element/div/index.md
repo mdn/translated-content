@@ -9,8 +9,8 @@ O **elemento de divisão** **[HTML](/pt-BR/docs/Web/HTML) `<div>` **é um contai
 
 - _[Categoria de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#Flow_content), palpable content.
 - _Conteúdo permitido_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#Flow_content).
-- \_Omissão de tag_Nenhuma, as tags de abertura e fechamento são obrigatórias. {{no_tag_omission}}
-- \_Elementos pais permitidos_Qualquer elemento que aceite conteúdo de fluxo.
+- _Omissão de tag_ Nenhuma, as tags de abertura e fechamento são obrigatórias. {{no_tag_omission}}
+- _Elementos pais permitidos_ Qualquer elemento que aceite conteúdo de fluxo.
 - _Interface DOM_ {{domxref("HTMLDivElement")}}
 
 ## Atributos

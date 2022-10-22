@@ -2,6 +2,7 @@
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
+
 {{JSRef}}
 
 **`Promise.race(iterable)`** 方法回傳一個 promise 物件，此 promise 物件會於 iterable 引數中任一個 promise 轉為 resolve 或 rejected 時立即轉變成 resolve 或 rejected，並且接收其成功值或失敗訊息。
@@ -145,7 +146,7 @@ Promise.race([p5, p6]).then(function(value) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Promise.race")}}
+{{Compat}}
 
 ## 參見
 

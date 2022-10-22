@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
 translation_of: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
 browser-compat: javascript.builtins.RangeError.RangeError
 ---
+
 {{JSRef}}
 
 Le constructeur **`RangeError()`** permet de créer une erreur lorsqu'une valeur n'appartient pas à l'intervalle ou à l'ensemble des valeurs autorisées.

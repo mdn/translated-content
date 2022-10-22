@@ -2,6 +2,7 @@
 title: BatteryManager（电源管理）
 slug: Web/API/BatteryManager
 ---
+
 {{APIRef}}
 
 [电池状态 API](/zh-CN/docs/Web/API/Battery_Status_API) 中的 `BatteryManager` 接口提供了系统电池电量的一些信息。{{domxref("navigator.getBattery()")}} 方法返回一个 promise 对象，该 promise 在完成状态时将返回一个 `BatteryManager` 接口。

@@ -2,6 +2,7 @@
 title: Event.explicitOriginalTarget
 slug: Web/API/Event/explicitOriginalTarget
 ---
+
 {{APIRef("DOM")}}{{Non-standard_Header}}
 
 **`explicitOriginalTarget`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、このイベントの無名ではない元のターゲットを返します。

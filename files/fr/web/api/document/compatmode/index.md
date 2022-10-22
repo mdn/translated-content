@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/compatMode
 ---
+
 {{ ApiRef("DOM") }}
 
 Indique si le document est affiché en mode dégradé ([Quirks mode](/fr/docs/Mode_quirks_de_Mozilla)) ou dans le respect des standards.

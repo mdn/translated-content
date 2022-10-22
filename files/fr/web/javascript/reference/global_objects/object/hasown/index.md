@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 browser-compat: javascript.builtins.Object.hasOwn
 ---
+
 {{JSRef}}{{SeeCompatTable}}
 
 La méthode statique **`Object.hasOwn()`** renvoie `true` si l'objet indiqué possède la propriété indiquée comme propriété _propre_. Si la propriété est héritée ou qu'elle n'existe pas, la méthode renverra `false`.

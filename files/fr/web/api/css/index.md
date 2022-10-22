@@ -3,6 +3,7 @@ title: CSS
 slug: Web/API/CSS
 translation_of: Web/API/CSS
 ---
+
 {{APIRef("CSSOM")}}
 
 L'interface CSS possède les méthodes utiles au CSS. Aucun objet de cette interface ne sont implémentés : il ne contient que des méthodes statiques et est donc une interface abstraite.

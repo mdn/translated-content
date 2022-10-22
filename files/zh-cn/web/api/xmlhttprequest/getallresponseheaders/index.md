@@ -2,9 +2,10 @@
 title: XMLHttpRequest.getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
-**XMLHttpRequest.getAllResponseHeaders()** 方法返回所有的响应头，以 {{Glossary('CRLF')}} 分割的字符串，或者 `null` 如果没有收到任何响应。 **注意：** 对于复合请求（ multipart requests ），这个方法返回当前请求的头部，而不是最初的请求的头部。
+**XMLHttpRequest.getAllResponseHeaders()** 方法返回所有的响应头，以 {{Glossary('CRLF')}} 分割的字符串，或者 `null` 如果没有收到任何响应。 **注意：** 对于复合请求（multipart requests），这个方法返回当前请求的头部，而不是最初的请求的头部。
 
 ```plain
 DOMString getAllResponseHeaders();

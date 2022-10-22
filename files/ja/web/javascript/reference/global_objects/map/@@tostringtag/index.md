@@ -2,6 +2,7 @@
 title: Map.prototype[@@toStringTag]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag
 ---
+
 {{JSRef}}
 
 **`Map[@@toStringTag]`** プロパティは、 "Map" の初期値を持ちます。

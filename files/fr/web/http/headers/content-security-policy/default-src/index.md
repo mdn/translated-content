@@ -14,6 +14,7 @@ tags:
   - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default-src`** sert de valeur par défaut pour les autres directives CSP {{Glossary("fetch directive", "fetch directives")}}.
@@ -128,14 +129,11 @@ Content-Security-Policy: connect-src 'self';
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaire                                                                    |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------ |
-| {{specName("CSP 3.0", "#directive-default-src", "default-src")}} | {{Spec2('CSP 3.0')}} | Ajout de `frame-src`, `manifest-src` et `worker-src` comme valeurs par défaut. |
-| {{specName("CSP 1.1", "#directive-default-src", "default-src")}} | {{Spec2('CSP 1.1')}} | Définition initiale.                                                           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.default-src")}}
+{{Compat}}
 
 ## Voir aussi
 

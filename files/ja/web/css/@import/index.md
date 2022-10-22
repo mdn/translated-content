@@ -1,15 +1,8 @@
 ---
 title: '@import'
 slug: Web/CSS/@import
-tags:
-  - アットルール
-  - CSS
-  - CSS カスケードと継承
-  - CSS 条件付きルール
-  - リファレンス
-browser-compat: css.at-rules.import
-translation_of: Web/CSS/@import
 ---
+
 {{CSSRef}}
 
 **`@import`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、他のスタイルシートから {{CSSxRef("@charset")}} を除いたスタイルルールをインポートするために使用します。

@@ -2,6 +2,7 @@
 title: Node.parentNode
 slug: Web/API/Node/parentNode
 ---
+
 {{ ApiRef() }}
 
 ## 概述
@@ -37,7 +38,7 @@ if (node.parentNode) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Node.parentNode")}}
+{{Compat}}
 
 ## 规范
 

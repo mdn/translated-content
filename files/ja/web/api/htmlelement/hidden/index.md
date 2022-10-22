@@ -2,6 +2,7 @@
 title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
 ---
+
 {{ APIRef("HTML DOM") }}
 
 {{domxref("HTMLElement")}} の **`hidden`** プロパティは論理値で、この要素が非表示の場合は `true` で、それ以外の場合は `false` です。 これは、CSS プロパティの {{cssxref("display")}} を使用して要素の可視性を制御することとはまったく異なります。
@@ -20,7 +21,7 @@ slug: Web/API/HTMLElement/hidden
 - タブ付きダイアログボックスでのパネルの非表示
 - あるプレゼンテーションでコンテンツを非表示にし、他のプレゼンテーションでは表示されるようにする
 
-> **Note:** `hidden` でない要素は、`hidden` 要素にリンクしてはいけません。
+> **メモ:** `hidden` でない要素は、`hidden` 要素にリンクしてはいけません。
 
 ## 値
 

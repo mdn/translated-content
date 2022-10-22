@@ -2,6 +2,7 @@
 title: Node.textContent
 slug: Web/API/Node/textContent
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.textContent`** 屬性表示了節點或其後代的文字內容。

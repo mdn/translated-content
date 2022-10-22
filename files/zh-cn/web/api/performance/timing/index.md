@@ -2,6 +2,7 @@
 title: Performance.timing
 slug: Web/API/Performance/timing
 ---
+
 {{APIRef("Navigation Timing")}}{{deprecated_header}}
 
 > **警告：** 该属性在 [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete) 中已经被废弃，请使用 {{domxref("PerformanceNavigationTiming")}} 替代。

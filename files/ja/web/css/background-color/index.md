@@ -2,6 +2,7 @@
 title: background-color
 slug: Web/CSS/background-color
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`background-color`** プロパティは、要素の背景色を設定します。

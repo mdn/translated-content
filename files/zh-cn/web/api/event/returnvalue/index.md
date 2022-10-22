@@ -2,6 +2,7 @@
 title: Event.returnValue
 slug: Web/API/Event/returnValue
 ---
+
 {{APIRef("DOM Events")}}
 
 **`Event.returnValue`** 属性表示该事件的默认操作是否已被阻止。默认情况下，它被设置为 `true`，即允许进行默认操作。将该属性设置为 `false` 即可阻止默认操作。
@@ -34,4 +35,4 @@ New projects should generally avoid using `returnValue`, although they may if th
 
 ## 浏览器兼容性
 
-{{Compat("api.Event.returnValue")}}
+{{Compat}}

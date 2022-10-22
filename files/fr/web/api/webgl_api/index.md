@@ -12,6 +12,7 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API
 ---
+
 {{WebGLSidebar}}
 
 **WebGL** (la bibliothèque de graphismes web) est une API JavaScript pour l'affichage de graphismes 2D et 3D dans n'importe quel navigateur web compatible sans utilisation de modules complémentaires. WebGL réalise cela en introduisant une API qui se conforme de façon très proche à OpenGL ES 2.0 et qui peut être utilisée dans les éléments [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) de HTML5.
@@ -76,9 +77,9 @@ L'élément {{HTMLElement("canvas")}} est aussi utilisé par [Canvas 2D](/fr-FR/
 
 ### Evènements
 
-- {{Event("webglcontextlost")}}
-- {{Event("webglcontextrestored")}}
-- {{Event("webglcontextcreationerror")}}
+- [`webglcontextlost`](/fr/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
+- [`webglcontextrestored`](/fr/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
+- [`webglcontextcreationerror`](/fr/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
 
 ### Constantes et types
 

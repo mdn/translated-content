@@ -2,6 +2,7 @@
 title: FinalizationRegistry.prototype.register()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
 ---
+
 {{JSRef}}
 
 `register()` メソッドはオブジェクトを {{jsxref("FinalizationRegistry")}} インスタンスへ登録し、オブジェクトがガベージコレクションで回収された場合、レジストリのコールバックが呼び出されるようになります。

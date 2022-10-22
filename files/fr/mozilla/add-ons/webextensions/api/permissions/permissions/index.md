@@ -10,6 +10,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/Permissions
 ---
+
 {{AddonSidebar()}}
 
 Un objet `Permissions` représente une collection de permissions.

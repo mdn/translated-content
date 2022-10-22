@@ -2,6 +2,7 @@
 title: URL API
 slug: Web/API/URL_API
 ---
+
 {{DefaultAPISidebar("URL API")}}
 
 URL API は URL 標準のコンポーネントであり、有効な {{Glossary("URL", "Uniform Resource Locator")}} の構成要素と URL にアクセスして操作する API を定義します。 URL 標準は、ドメイン、ホスト、IP アドレスなどの概念も定義し、Web フォームのコンテンツをキー/値のペアのセットとして送信するために使用される従来の `application/x-www-form-urlencoded` {{Glossary("MIME type","MIME タイプ")}}を標準的な方法で記述しようとします。

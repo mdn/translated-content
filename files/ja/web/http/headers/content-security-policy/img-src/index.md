@@ -2,6 +2,7 @@
 title: 'CSP: img-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/img-src
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} における **`img-src`** ディレクティブは、画像やファビコンの有効なソースを指定します。

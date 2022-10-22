@@ -10,6 +10,7 @@ tags:
   - options_ui
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table" style="height: 166px; width: 852px">

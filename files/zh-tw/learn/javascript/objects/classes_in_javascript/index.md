@@ -3,6 +3,7 @@ title: JavaScript 中的「繼承」
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 original_slug: Learn/JavaScript/Objects/Inheritance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 在解釋過大部分的 OOJS 細節之後，本文將說明該如何建立「子」物件類別 (建構子)，並從其「母」類別繼承功能。此外，也將建議開發者應於何時、於何處使用 OOJS。
@@ -180,7 +181,7 @@ teacher1.greeting();
 
 你可能也想看看某些新的 {{glossary("ECMAScript")}} 功能，可更簡潔的在 JavaScript 中繼承 (參閱 [Classes](/zh-TW/docs/Web/JavaScript/Reference/Classes))。但由於這些功能尚未廣泛支援其他瀏覽器，這裡先略過不提。本系列文章中提到的其他程式碼，均可回溯支援到 IE9 或更早版本。當然還是有辦法支援更舊的版本。
 
-一般方法就是使用 JavaScript 函式庫，且最常見的就是簡單集結可用的功能，更快、更輕鬆的完成繼承。例如 [CoffeeScript](http://coffeescript.org/#classes) 即提供了 ` class``、extends ` 等等。
+一般方法就是使用 JavaScript 函式庫，且最常見的就是簡單集結可用的功能，更快、更輕鬆的完成繼承。例如 [CoffeeScript](http://coffeescript.org/#classes) 即提供了 `class`、`extends` 等等。
 
 ## 進階習題
 

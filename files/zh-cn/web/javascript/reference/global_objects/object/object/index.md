@@ -2,6 +2,7 @@
 title: Object() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
 ---
+
 {{JSRef}}
 
 **`Object` 构造函数将给定的值包装为一个新对象。**

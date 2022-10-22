@@ -2,6 +2,7 @@
 title: display
 slug: Web/SVG/Attribute/display
 ---
+
 {{SVGRef}}
 
 The **`display`** attribute lets you control the rendering of graphical or container elements.

@@ -1,13 +1,8 @@
 ---
 title: JavaScript ガイド
 slug: Web/JavaScript/Guide
-tags:
-  - Guide
-  - JavaScript
-  - l10n:priority
-  - ガイド
-translation_of: Web/JavaScript/Guide
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 この JavaScript ガイドでは、[JavaScript](/ja/docs/Web/JavaScript) の使い方を紹介し、この言語の概要を説明します。JavaScript の機能についてもっと知りたい場合は、[JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference) を参照してください。

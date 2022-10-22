@@ -2,6 +2,7 @@
 title: 视频和音频 API
 slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
 
 HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("video")}}和{{htmlelement("audio")}} — 这些元素通过自带的 API 来控制视频或音频的播放，定位进度等。本文将向你展示如何执行一些常见的任务，如创建自定义播放控件。
@@ -96,7 +97,7 @@ HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("vid
 - 控件 HTML 大概是最有趣的：
 
   - 我们有四个 {{htmlelement("button")}} — play/pause, stop, rewind, and fast forward.
-  - 每个`<button>` 都有一个`class名` , 一个`data-icon` 属性来决定在每个按钮上显示什么图标 (在下一节讲述它是如何工作的), 和一个`aria-label` 属性为每一个按钮提供容易理解的描述，即使我们没有在 tags 内提供可读的标签。当用户关注这些元素时含有`aria-label` 属性的内容也会被讲述人读出来。
+  - 每个`<button>` 都有一个 `class` 名, 一个`data-icon` 属性来决定在每个按钮上显示什么图标 (在下一节讲述它是如何工作的), 和一个`aria-label` 属性为每一个按钮提供容易理解的描述，即使我们没有在 tags 内提供可读的标签。当用户关注这些元素时含有`aria-label` 属性的内容也会被讲述人读出来。
   - 有一个设定的计时器 {{htmlelement("div")}}用来报告已经播放的时长。为了好玩，我们提供了两种报告机制 — 一个 {{htmlelement("span")}} 包含了流逝时间的分钟和秒，和一个额外的`<div>` 用来创建一个水平的随着时间增加而增长的进度条。要想了解完成版本看上去是咋样的，[点击查看完成版本](https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/).
 
 #### 探索 CSS

@@ -2,6 +2,7 @@
 title: IDBObjectStore.indexNames
 slug: Web/API/IDBObjectStore/indexNames
 ---
+
 {{ APIRef("IndexedDB") }}
 
 {{domxref("IDBObjectStore")}} 的只读属性 **`indexNames`** 返回此对象存储中对象的 [indexes](/zh-CN/IndexedDB#gloss_index) 名称（name）列表。
@@ -74,7 +75,7 @@ function addData() {
 
 ## 浏览器兼容性
 
-{{Compat("api.IDBObjectStore.indexNames")}}
+{{Compat}}
 
 ## 查看其它内容
 

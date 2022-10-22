@@ -1,12 +1,6 @@
 ---
 title: 요소
 slug: Glossary/Element
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-  - 엘리먼트
-translation_of: Glossary/Element
 ---
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 

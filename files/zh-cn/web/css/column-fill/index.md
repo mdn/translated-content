@@ -2,6 +2,7 @@
 title: column-fill
 slug: Web/CSS/column-fill
 ---
+
 {{CSSRef("CSS Multi-columns")}}
 
 ## Summary
@@ -50,4 +51,4 @@ column-fill: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.column-fill")}}
+{{Compat}}

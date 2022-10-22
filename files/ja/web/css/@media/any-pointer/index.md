@@ -1,19 +1,13 @@
 ---
 title: any-pointer
 slug: Web/CSS/@media/any-pointer
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - メディア特性
-  - リファレンス
-translation_of: Web/CSS/@media/any-pointer
 ---
+
 {{CSSRef}}
 
 **`any-pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが (マウスなどの) *何らかの*ポインティングデバイスを持っているか、もしそうならば、どれだけの正確性を持っているかを調べます。
 
-> **Note:** *第一の*ポインティングデバイスの正確性を調べたい場合は、代わりに [`pointer`](/ja/docs/Web/CSS/@media/pointer) を使用してください。
+> **メモ:** *第一の*ポインティングデバイスの正確性を調べたい場合は、代わりに [`pointer`](/ja/docs/Web/CSS/@media/pointer) を使用してください。
 
 ## 構文
 
@@ -26,7 +20,7 @@ translation_of: Web/CSS/@media/any-pointer
 - `fine`
   - : 正確性が高いポインティングデバイスが、少なくとも一つ含まれています。
 
-> **Note:** 異なる性質を持つ複数の機器が利用できる場合は、複数の値に一致することがありますが、 `none` はポインティングデバイスがない場合のみ一致します。
+> **メモ:** 異なる性質を持つ複数の機器が利用できる場合は、複数の値に一致することがありますが、 `none` はポインティングデバイスがない場合のみ一致します。
 
 ## 例
 

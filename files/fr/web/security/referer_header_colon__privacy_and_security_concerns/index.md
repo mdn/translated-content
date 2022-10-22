@@ -9,6 +9,7 @@ tags:
   - referrer
 translation_of: Web/Security/Referer_header:_privacy_and_security_concerns
 ---
+
 L'[entête HTTP Referer](/fr/docs/Web/HTTP/Headers/Referer) présente des risques de confidentialité et de sécurité[.](/fr/docs/Web/HTTP/Headers/Referer) Cet article les décrit et donne des conseils pour les minimiser.
 
 ## Le problème...

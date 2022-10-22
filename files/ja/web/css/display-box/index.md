@@ -2,6 +2,7 @@
 title: <display-box>
 slug: Web/CSS/display-box
 ---
+
 {{CSSRef}}
 
 これらのキーワードは、要素が表示ボックスを作るかどうかを定義します。

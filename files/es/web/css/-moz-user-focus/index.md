@@ -11,13 +11,11 @@ translation_of: Web/CSS/-moz-user-focus
 
 ## Resumen
 
-La propiedad [CSS ](/es/docs/Web/CSS)`-moz-user-focus`se usa para indicar si el elemento puedo obtener el foco.
+La propiedad [CSS](/es/docs/Web/CSS) `-moz-user-focus`se usa para indicar si el elemento puedo obtener el foco.
 
 Al poner el valor de esta propiedad a `ignore`, deshabilitas el hecho de que el elemento pueda obtener el foco lo que significa que el usuario no podrá activar el elemento. Se saltará el elemento es un secuncia de tabuladores.
 
 {{cssinfo}}
-
-> **Nota:** Esta propiedad no funciona con los elementos XUL {{XULElem("textbox")}} , porque el `textbox` en sí mismo nunca tomará el foco. En su lugar , XBL crea un elemento HTML {{HTMLElement("input")}} anónimo dentro del `textbox`, y es ese elemento el que recibe el foco. Se puede evitar que el `textbox` obtenga el foco de teclado estableciendo su índice de tabulación a `-1`, y que obtenga el foco del ratón evitando la acción por defecto para los eventos `mousedown`.
 
 ## Síntaxis
 

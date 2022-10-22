@@ -12,6 +12,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/domain
 ---
+
 {{ApiRef}}
 
 Retourne/définit la partie domaine de l'origine du document courant, telle qu'utilisée par la [politique d'origine identique](/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript).

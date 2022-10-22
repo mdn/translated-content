@@ -10,6 +10,7 @@ tags:
   - wasm
 translation_of: WebAssembly/C_to_wasm
 ---
+
 {{WebAssemblySidebar}}
 
 Quand vous avez écrit un module de code dans un langage comme le C/C++, vous pouvez ensuite le compiler en WebAssembly en utilisant un outil comme [Emscripten](/fr/docs/Mozilla/Projects/Emscripten). Regardons comment cela fonctionne.

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Redeclared_parameter
 original_slug: Web/JavaScript/Reference/Erreurs/Redeclared_parameter
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
@@ -52,7 +53,7 @@ function f(arg) {
 
 ## Notes de compatibilité
 
-- Avant Firefox 49 {{geckoRelease(49)}}, cela provoquait une exception {{jsxref("TypeError")}} ({{bug(1275240)}}).
+- Avant Firefox 49, cela provoquait une exception {{jsxref("TypeError")}} ({{bug(1275240)}}).
 
 ## Voir aussi
 

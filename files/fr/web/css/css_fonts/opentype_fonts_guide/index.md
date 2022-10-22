@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/CSS_Fonts/OpenType_fonts_guide
 original_slug: Web/CSS/CSS_Fonts/Guide_caractéristiques_police_OpenType
 ---
+
 {{CSSRef}}
 
 Les caractéristiques de police ou variantes font référence à différents glyphes ou styles de caractère contenus dans une police OpenType. Cela inclut notamment les ligatures (des caractères spéciaux qui permettent de combiner des caractères entre eux comme œ qui est la ligature entre o et e), le crénage (_kerning_ en anglais) qui définit l'espacement entre certaines lettres, les fractions et styles numériques, etc. Toutes ces caractéristiques sont des caractéristiques OpenType Features et peuvent être utilisées sur le Web grâce à certaines propriétés spécifiques qui permettent un contrôle de bas niveau comme {{cssxref("font-feature-settings")}}. Dans cet article, nous verrons tout ce qu'il faut savoir pour manipuler les caractéristiques OpenType avec CSS.

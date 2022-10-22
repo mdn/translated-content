@@ -2,6 +2,7 @@
 title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
 ---
+
 {{JSRef}}
 
 **`trimStart()`** メソッドは、文字列の先頭のホワイトスペースを削除します。 `trimLeft()` はこのメソッドのエイリアスです。

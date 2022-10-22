@@ -8,6 +8,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/textContent
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Node.textContent`**  représente le contenu textuel d'un nœud et de ses descendants.

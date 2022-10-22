@@ -12,6 +12,7 @@ tags:
   - contextalIdentities
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity
 ---
+
 {{AddonSidebar()}}
 
 Le type **`contextualIdentities.ContextualIdentity`** décrit une identité contextuelle unique.

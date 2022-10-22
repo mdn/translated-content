@@ -10,6 +10,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Element/classList
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Element.classList`** retourne une collection directe  {{domxref("DOMTokenList")}} des attributs de classe de l'élément.

@@ -2,6 +2,7 @@
 title: Node.isDefaultNamespace
 slug: Web/API/Node/isDefaultNamespace
 ---
+
 {{ ApiRef() }}
 
 ### 概述

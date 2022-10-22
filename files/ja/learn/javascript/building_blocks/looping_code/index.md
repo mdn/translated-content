@@ -2,6 +2,7 @@
 title: ループコード
 slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 プログラミング言語は、繰り返し実行するタスクを素早く終わらせるのがとても得意です。基本的な計算処理から、同じような作業がたくさんあるのならどんな状況でもこなします。今度は JavaScript でそういった目的を果たすために使用するループ構造を見てみましょう。
@@ -216,7 +217,7 @@ para.textContent = info;
 
 {{ EmbedLiveSample('Hidden_code_2', '100%', 60, "", "", "hide-codepen-jsfiddle") }}
 
-> **Note:** [このコードは GitHub でも](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html)見られます ([動くデモも](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)ありますよ)。
+> **メモ:** [このコードは GitHub でも](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html)見られます ([動くデモも](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)ありますよ)。
 
 これは配列のすべての要素に対して、繰り返し何かを実行するループの使用例です。JavaScript ではとてもよく見られるパターンです。
 
@@ -230,9 +231,9 @@ para.textContent = info;
 
 4. `i` が `cats.length` の値 (ここでは 5) と等しくなったときにループは終了し、ブラウザーはループの後に続くコードを実行します。
 
-> **Note:** 条件を `i <= cats.length` ではなく、`i < cats.length` としているのは、コンピューターが数値を 1 からではなく、0 から数えるためです。コードでも `i` を `0` から始め、`i = 4` (配列内の要素の最後のインデックス) となるまで加算していきます。配列内の要素が 5 つなので `cats.length` は 5 となりますが、`i = 5` とすると、(配列に 5 のインデックスの要素がないので) `undefined` となってしまいます。なので、`cats.length` と同じ値まで (`i <=`) ではなく、`i` の最大値を 1 減らして `cats.length` より小さくなる (`i <`) まで加算しています。
+> **メモ:** 条件を `i <= cats.length` ではなく、`i < cats.length` としているのは、コンピューターが数値を 1 からではなく、0 から数えるためです。コードでも `i` を `0` から始め、`i = 4` (配列内の要素の最後のインデックス) となるまで加算していきます。配列内の要素が 5 つなので `cats.length` は 5 となりますが、`i = 5` とすると、(配列に 5 のインデックスの要素がないので) `undefined` となってしまいます。なので、`cats.length` と同じ値まで (`i <=`) ではなく、`i` の最大値を 1 減らして `cats.length` より小さくなる (`i <`) まで加算しています。
 
-> **Note:** 条件の指定でよくある間違いは「以下」(`<=`) ではなく、「等しい」(`===`) を使ってしまうことです。もし、`i = 5` となるまでループを実行したければ、終了条件は `i <= cats.length` と指定しなければなりません。`i === cats.length` と指定した場合、ループは 1 度も実行されずに終了してしまいます。なぜなら、ループの最初では `i` が `5` ではないため、そこで終わってしまうからです。
+> **メモ:** 条件の指定でよくある間違いは「以下」(`<=`) ではなく、「等しい」(`===`) を使ってしまうことです。もし、`i = 5` となるまでループを実行したければ、終了条件は `i <= cats.length` と指定しなければなりません。`i === cats.length` と指定した場合、ループは 1 度も実行されずに終了してしまいます。なぜなら、ループの最初では `i` が `5` ではないため、そこで終わってしまうからです。
 
 残る小さな問題は、出力された文が完全ではないことです。
 
@@ -250,9 +251,9 @@ for (let i = 0; i < cats.length; i++) {
 }
 ```
 
-> **Note:** [このコードは GitHub でも](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html)見られます ([動いているデモも](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)あります)。
+> **メモ:** [このコードは GitHub でも](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html)見られます ([動いているデモも](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)あります)。
 
-> **Warning:** **重要**: for ループ (他のループも同様) では、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が true では無くなるポイントに達するようにする必要があります。もしそうで無い場合、ループは永遠に回り続け、ブラウザーが強制的に停止するか、クラッシュしてしまうでしょう。これは**無限ループ**といいます。
+> **警告:** for ループ (他のループも同様) では、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が true では無くなるポイントに達するようにする必要があります。もしそうで無い場合、ループは永遠に回り続け、ブラウザーが強制的に停止するか、クラッシュしてしまうでしょう。これは**無限ループ**といいます。
 
 ## break でループを終了する
 
@@ -352,7 +353,7 @@ btn.addEventListener('click', function() {
 
 5. `(contacts.length-1)` 回目の繰り返しの後に、もし連絡先の名前が入力された検索語に一致しなければ、段落に「連絡先が見つかりません。」という文字列を表示し、条件が true では無くなるまでループを継続します。
 
-> **Note:** [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) で見ることができます ([動いているデモ](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)もあります)。
+> **メモ:** [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) で見ることができます ([動いているデモ](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)もあります)。
 
 ## continue で繰り返しをスキップする
 
@@ -426,7 +427,7 @@ for (let i = 1; i <= num; i++) {
 3. もし、平方根と切り捨てた数値が等しくないのなら (`!==`)、平方根は整数ではないことを示しています。整数以外には興味がありませんので、`continue` 文を用いて、その数値をどこにも保持することなく、次のループの繰り返しまでスキップします。
 4. もし、その平方根が整数値であるならば、if ブロックは飛ばされるので、`continue` 文は実行されません。代わりに、現在の `i` の値を段落の内容の後ろにスペースと一緒に結合します。
 
-> **Note:** [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) でも見ることができます ([動いているデモ](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)もあります)。
+> **メモ:** [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) でも見ることができます ([動いているデモ](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)もあります)。
 
 ## while と do ... while
 
@@ -463,7 +464,7 @@ while (i < cats.length) {
 }
 ```
 
-> **Note:** これは期待どおりに動作します。[GitHub でライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)を見ることもできます）。
+> **メモ:** これは期待どおりに動作します。[GitHub でライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)を見ることもできます）。
 
 [do ... while](/ja/docs/Web/JavaScript/Reference/Statements/do...while) ループは非常によく似ていますが、while 構造にはバリエーションがあります。
 
@@ -496,9 +497,9 @@ do {
 } while (i < cats.length);
 ```
 
-> **Note:** 再度、これは期待どおりに動作します。[GitHub でライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)を見ることもできます）。
+> **メモ:** 再度、これは期待どおりに動作します。[GitHub でライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)を見ることもできます）。
 
-> **Warning:** **重要**: while と do ... while では、すべてのループと同様に、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が false となるようにする必要があります。そうしなければループは永遠に進み、ブラウザーはそれ強制的に停止させるか、クラッシュします。これは**無限ループ**と呼ばれます。
+> **警告:** while と do ... while では、すべてのループと同様に、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が false となるようにする必要があります。そうしなければループは永遠に進み、ブラウザーはそれ強制的に停止させるか、クラッシュします。これは**無限ループ**と呼ばれます。
 
 ## アクティブラーニング: カウントダウンを開始します!
 
@@ -519,7 +520,7 @@ do {
 
 - イテレーターを含めることを忘れないでください！ですが、この例では各反復の後にカウント(アップではなく)ダウンするため、`i++` は要らないでしょう — 減少方向にどうやって反復しますか？
 
-> **Note:** あなたがループ(例えば (while(i>=0))からタイピングを始めると、ブラウザーが固まってしまうかもしれません。終了条件をまだ入力していないからです。注意して下さい。この問題に対処するにはコメントの中にコードを書き始めて、完了してからコメントを削除することです。
+> **メモ:** あなたがループ(例えば (while(i>=0))からタイピングを始めると、ブラウザーが固まってしまうかもしれません。終了条件をまだ入力していないからです。注意して下さい。この問題に対処するにはコメントの中にコードを書き始めて、完了してからコメントを削除することです。
 
 間違えた場合は、「リセット」ボタンを使用してこの例をいつでもリセットできます。あなたが本当に立ち往生したら、"ソリューションを表示"を押して解決策を見てください。
 
@@ -842,7 +843,7 @@ do {
 
 少なくとも最初は `for` から始めることをお勧めします。すべてを覚えておくことが簡単だからです。初期化処理、条件、最後の式をすべて括弧内にきちんと入れなければならないので、それらがどこにあるかや見落としていないことの確認が簡単です。
 
-> **Note:** 高度な/特殊な状況やこの記事の範囲を超えて有用な、他のループタイプ/機能もあります。ループ学習をさらに進めたい場合は、高度な[ループと反復処理ガイド](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration)をお読みください。
+> **メモ:** 高度な/特殊な状況やこの記事の範囲を超えて有用な、他のループタイプ/機能もあります。ループ学習をさらに進めたい場合は、高度な[ループと反復処理ガイド](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration)をお読みください。
 
 ## スキルをテストしよう!
 

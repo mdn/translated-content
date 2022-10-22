@@ -2,6 +2,7 @@
 title: MediaStream()
 slug: Web/API/MediaStream/MediaStream
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 构造函数**`MediaStream()`** 返回新建的 {{domxref("MediaStream")}} 实例，该实例作为媒体流的内容的集合载体，其可能包含多个媒体数据轨，每个数据轨则由一个 {{domxref("MediaStreamTrack")}} 对象表示。如果给出相应参数，在指定的数据轨则被添加到新的流中。否则，该流中不包含任何数据轨。
@@ -31,7 +32,7 @@ newStream = new MediaStream(tracks[]);
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStream.MediaStream")}}
+{{Compat}}
 
 ## 参见
 

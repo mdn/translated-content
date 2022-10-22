@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/mark
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<mark>`** représente un texte marqué ou surligné à cause de sa pertinence dans le contexte. Il peut par exemple être utilisé afin d'indiquer les correspondances d'un mot-clé recherché au sein d'un document.

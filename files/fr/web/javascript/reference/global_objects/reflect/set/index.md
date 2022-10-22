@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/set
 original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/set
 ---
+
 {{JSRef}}
 
 La méthode statique **`Reflect.set()`** permet de définir ou de modifier une propriété sur un objet.
@@ -74,14 +75,11 @@ Reflect.getOwnPropertyDescriptor(obj, "undefined");
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-reflect.set', 'Reflect.set')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.set', 'Reflect.set')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Reflect.set")}}
+{{Compat}}
 
 ## Voir aussi
 

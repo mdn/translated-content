@@ -2,6 +2,7 @@
 title: Firefox 61 技術變動摘要
 slug: Mozilla/Firefox/Releases/61
 ---
+
 {{FirefoxSidebar}}
 
 此文章提供 Firefox 61 中與開發者較為相關之變動資訊。Firefox 61 預定於 [2018 年 6 月 26 日正式發表](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates)。

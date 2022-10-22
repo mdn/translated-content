@@ -2,6 +2,7 @@
 title: ':default'
 slug: Web/CSS/:default
 ---
+
 {{CSSRef}}
 
 **`:default`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、関連する要素のグループ内で既定となっているフォーム上の要素を選択します。
@@ -14,7 +15,9 @@ slug: Web/CSS/:default
 
 ## 構文
 
-{{csssyntax}}
+```
+:default
+```
 
 ## 例
 

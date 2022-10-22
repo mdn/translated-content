@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/Comments
 ---
+
 {{CSSRef}}
 
 Les commentaires sont utilisés afin d'ajouter des notes explicatives ou pour empêcher le navigateur d'interpréter certaines parties de la feuille de style. Les commentaires n'ont donc aucun impact sur la disposition d'un document.

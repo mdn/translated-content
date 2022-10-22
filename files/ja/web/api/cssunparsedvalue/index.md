@@ -2,6 +2,7 @@
 title: CSSUnparsedValue
 slug: Web/API/CSSUnparsedValue
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 {{domxref('CSS Typed Object Model API','','',' ')}} の **`CSSUnparsedValue`** インターフェイスは、カスタムプロパティを参照するプロパティ値を表します。これは、文字列の断片と変数の参照のリストから成ります。

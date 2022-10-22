@@ -2,6 +2,7 @@
 title: DataTransferItem.type
 slug: Web/API/DataTransferItem/type
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 只读属性**`DataTransferItem.type`** 返回代表拖动数据项的 {{domxref("DataTransferItem")}} 对象的类型（格式）。 `type` 是一个 Unicode 字符串，通常由 MIME 给出，不过不需要 MIME 类型。
@@ -58,7 +59,7 @@ function drop_handler(ev) {
 
 ## 浏览器兼容性
 
-{{Compat("api.DataTransferItem.type")}}
+{{Compat}}
 
 ## 另见
 

@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration.length
 slug: Web/API/CSSStyleDeclaration/length
 ---
+
 {{ APIRef("CSSOM") }}
 
 这是一个只读的属性，它返回一个指定元素声明过的样式个数

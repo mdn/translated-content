@@ -2,13 +2,14 @@
 title: PublicKeyCredential.rawId
 slug: Web/API/PublicKeyCredential/rawId
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`rawId`** は {{domxref("PublicKeyCredential")}} インターフェイスの読み取り専用プロパティで、証明書の識別子が入った {{jsxref("ArrayBuffer")}} オブジェクトです。
 
 {{domxref("PublicKeyCredential.id")}} プロパティはこの識別子が [base64url エンコード](/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)されたものです。
 
-> **Note:** **メモ:** このプロパティは最上位のコンテキストでしか使えない可能性があり、例えば {{HTMLElement("iframe")}} の中では利用できません。
+> **メモ:** このプロパティは最上位のコンテキストでしか使えない可能性があり、例えば {{HTMLElement("iframe")}} の中では利用できません。
 
 ## 構文
 

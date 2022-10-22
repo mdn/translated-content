@@ -10,6 +10,7 @@ tags:
   - django
 translation_of: Learn/Server-side/Django/Tutorial_local_library_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
 
 Le premier article de cette série didactique explique ce que vous apprendrez et donne un aperçu du site Web "Bibliothèque locale", un exemple, qui va être utiliser et évoluer dans les articles suivants.

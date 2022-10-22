@@ -2,6 +2,7 @@
 title: Notification.onerror
 slug: Web/API/Notification/error_event
 ---
+
 {{APIRef("Web Notifications")}}
 
 ## Summary

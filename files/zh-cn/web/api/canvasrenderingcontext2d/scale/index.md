@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.scale()
 slug: Web/API/CanvasRenderingContext2D/scale
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.scale()`** 是 Canvas 2D API 根据 x 水平方向和 y 垂直方向，为 canvas 单位添加缩放变换的方法。
@@ -96,7 +97,7 @@ ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.scale")}}
+{{Compat}}
 
 ## 参见
 

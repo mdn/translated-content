@@ -2,6 +2,7 @@
 title: Window.screenX
 slug: Web/API/Window/screenX
 ---
+
 {{APIRef}}
 
 ## 概述

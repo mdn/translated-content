@@ -10,6 +10,7 @@ tags:
   - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/toJSON
 ---
+
 {{APIRef("Element Timing API")}}
 
 La méthode **`toJSON()`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) est un sérialiseur standard. Elle renvoie une représentation JSON des propriétés de l'objet.

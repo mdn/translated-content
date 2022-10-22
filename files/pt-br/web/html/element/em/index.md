@@ -10,22 +10,22 @@ tags:
   - font-style
 translation_of: Web/HTML/Element/em
 ---
-O **elemento** **HTML** **`<em>`\*\*** \*\*marca o texto que tem ênfase. O elemento \<em> pode ser aninhado, com cada nível de aninhamento indicando um grau maior de ênfase.
+O **elemento** **HTML** **`<em>`** marca o texto que tem ênfase. O elemento \<em> pode ser aninhado, com cada nível de aninhamento indicando um grau maior de ênfase.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >Conteúdo fluído</a
         >,
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >conteúdo de frase</a
         >, conteúdo palpável
       </td>
@@ -34,7 +34,7 @@ O **elemento** **HTML** **`<em>`\*\*** \*\*marca o texto que tem ênfase. O elem
       <th scope="row">Conteúdo permitido</th>
       <td>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >Conteúdo de frase</a
         >.
       </td>
@@ -48,7 +48,7 @@ O **elemento** **HTML** **`<em>`\*\*** \*\*marca o texto que tem ênfase. O elem
       <td>
         Qualquer elemento que aceita
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >conteúdo de frase</a
         >.
       </td>

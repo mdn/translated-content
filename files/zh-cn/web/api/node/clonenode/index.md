@@ -2,6 +2,7 @@
 title: Node.cloneNode
 slug: Web/API/Node/cloneNode
 ---
+
 {{ApiRef("DOM")}}
 
 **`Node.cloneNode()`** 方法返回调用该方法的节点的一个副本。
@@ -38,7 +39,7 @@ var p_prime = p.cloneNode(true);
 
 如果`deep`参数设为`false`,则不克隆它的任何子节点。该节点所包含的所有文本也不会被克隆，因为文本本身也是一个或多个的{{domxref("Text")}}节点。
 
-如果`deep`参数设为`true`,则会复制整棵 DOM 子树 (包括那些可能存在的{{domxref("Text")}}子节点).对于空结点 (例如{{HTMLElement("img")}}和{{HTMLElement("input")}}元素),`则 deep`参数无论设为`true`还是设为`false,`都没有关系，但是仍然需要为它指定一个值。
+如果 `deep` 参数设为 `true`,则会复制整棵 DOM 子树 (包括那些可能存在的{{domxref("Text")}}子节点).对于空结点 (例如{{HTMLElement("img")}}和{{HTMLElement("input")}}元素), 则 `deep` 参数无论设为 `true` 还是设为 `false`, 都没有关系，但是仍然需要为它指定一个值。
 
 > **警告：** 为了防止一个文档中出现两个 ID 重复的元素，使用`cloneNode()` 方法克隆的节点在需要时应该指定另外一个与原 ID 值不同的 ID
 

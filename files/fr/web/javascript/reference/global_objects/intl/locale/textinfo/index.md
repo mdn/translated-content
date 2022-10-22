@@ -3,6 +3,7 @@ title: Intl.Locale.prototype.textInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/textInfo
 browser-compat: javascript.builtins.Intl.Locale.textInfo
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.textInfo`** est un accesseur qui renvoie le sens d'écriture horizontal&nbsp;: `ltr` (pour gauche à droite) ou `rtl` (pour droite à gauche) pour la locale portée par l'instance de `Locale`.

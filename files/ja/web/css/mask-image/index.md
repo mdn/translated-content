@@ -2,6 +2,7 @@
 title: mask-image
 slug: Web/CSS/mask-image
 ---
+
 {{CSSRef}}
 
 **`mask-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のマスクレイヤーとして使用される画像を設定します。

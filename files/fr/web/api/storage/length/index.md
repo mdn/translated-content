@@ -9,6 +9,7 @@ tags:
   - Web Stockage
 translation_of: Web/API/Storage/length
 ---
+
 {{APIRef("Web Storage API")}}
 
 La propriété en lecture seule de l'interface {{domxref("Storage")}} retourne un entier représentant le nombre d'items stockés dans l'objet `Storage`.

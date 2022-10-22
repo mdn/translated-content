@@ -2,9 +2,10 @@
 title: Configuring servers for Ogg media
 slug: Web/HTTP/Configuring_servers_for_Ogg_media
 ---
+
 {{HTTPSidebar}}
 
-HTML {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 标签无需用户安装任何插件或软件即可播放媒体文件。本指南包括了一些服务器配置修改，这些修改对于 web 服务器提供 Ogg 媒体文件是必要的。 这些信息在遇到服务器未配置为可识别的其他媒体类型文件时也可能提供帮助。
+HTML {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 标签无需用户安装任何插件或软件即可播放媒体文件。本指南包括了一些服务器配置修改，这些修改对于 web 服务器提供 Ogg 媒体文件是必要的。这些信息在遇到服务器未配置为可识别的其他媒体类型文件时也可能提供帮助。
 
 ## 为媒体提供正确的 MIME 类型
 

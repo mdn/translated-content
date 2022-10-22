@@ -1,13 +1,6 @@
 ---
 title: 웹어셈블리
 slug: WebAssembly
-tags:
-  - Landing
-  - NeedsTranslation
-  - TopicStub
-  - WebAssembly
-  - wasm
-translation_of: WebAssembly
 ---
 {{WebAssemblySidebar}}
 
@@ -58,7 +51,7 @@ WebAssembly는 JavaScript와 함께 보완되고 실행되도록 설계되었습
 - {{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}
   - : `WebAssembly.Memory` 객체는 사이즈 조절 가능한 {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}}로, `Instance`가 접근하는 메모리를 로우(raw) 바이트들로 들고있습니다.
 - {{jsxref("Global_objects/WebAssembly/Table", "WebAssembly.Table()")}}
-  - : ` WebAssembly.``Table ` 객체는 `Instance`에 의해 접근되는 불투명한 값(함수 레퍼런스 등)들의 사이즈 조절 가능한, 형식지정된 배열입니다.
+  - : `WebAssembly.Table` 객체는 `Instance` 에 의해 접근되는 불투명한 값(함수 레퍼런스 등)들의 사이즈 조절 가능한, 형식지정된 배열입니다.
 - {{jsxref("WebAssembly.CompileError()")}}
   - : 새 웹어셈블리 `CompileError` 객체를 생성합니다.
 - {{jsxref("WebAssembly.LinkError()")}}

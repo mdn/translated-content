@@ -2,6 +2,7 @@
 title: Document.alinkColor
 slug: Web/API/Document/alinkColor
 ---
+
 {{APIRef("DOM")}} {{ Deprecated_header() }}
 
 返回或设置文档体内的活动链接的颜色。mousedown 和 mouseup 事件之间的时间在一个链接是有效的。
@@ -11,7 +12,7 @@ slug: Web/API/Document/alinkColor
 ```plain
 color = document.alinkColor
 document.alinkColor  = color
-color 可以是一个 “颜色名称”（例如，“blue”，“darkblue”，等）或者是一个 “十六进制的颜色值”（例如，#0000ff）
+color 可以是一个“颜色名称”（例如，“blue”，“darkblue”，等）或者是一个“十六进制的颜色值”（例如，#0000ff）
 ```
 
 ## 注意

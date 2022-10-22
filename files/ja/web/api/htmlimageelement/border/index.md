@@ -2,6 +2,7 @@
 title: HTMLImageElement.border
 slug: Web/API/HTMLImageElement/border
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 廃止された {{domxref("HTMLImageElement")}} の **`border`** プロパティは、 画像を囲む境界線の太さをピクセル数で指定します。既定値である 0 は、境界線を描画しないことを示します。

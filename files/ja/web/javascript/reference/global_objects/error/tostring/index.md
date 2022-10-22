@@ -2,6 +2,7 @@
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは、指定した {{jsxref("Error")}} オブジェクトを表す文字列を返します。

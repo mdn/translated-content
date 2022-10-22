@@ -2,6 +2,7 @@
 title: HTMLLegendElement
 slug: Web/API/HTMLLegendElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLLegendElement`** は、{{HTMLElement("legend")}} 要素のプロパティにアクセスできるようにするインターフェイスです。 {{domxref("HTMLElement")}} インターフェイスからプロパティとメソッドを継承します。

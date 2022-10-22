@@ -2,6 +2,7 @@
 title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 ---
+
 {{JSRef}}
 
 **`Math.exp()`** 関数は `ex` (`x` は引数、 `e` は{{jsxref("Math.E", "オイラー数 (ネイピア定数とも)", "", 1)}}、自然対数の底) を返します。

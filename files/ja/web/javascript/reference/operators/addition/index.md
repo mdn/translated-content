@@ -2,6 +2,7 @@
 title: 加算 (+)
 slug: Web/JavaScript/Reference/Operators/Addition
 ---
+
 {{jsSidebar("Operators")}}
 
 加算演算子 (`+`) は、数値オペランドの合計または文字列の連結を生成します。

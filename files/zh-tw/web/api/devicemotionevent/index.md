@@ -2,6 +2,7 @@
 title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
 ---
+
 {{apiref("Device Orientation Events")}}{{SeeCompatTable}}
 
 ## 概要
@@ -35,7 +36,7 @@ window.addEventListener('devicemotion', function(event) {
 
 ## 瀏覽器相容性
 
-{{Compat("api.DeviceMotionEvent")}}
+{{Compat}}
 
 ## 參見
 

@@ -10,6 +10,7 @@ tags:
   - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/naturalHeight
 ---
+
 {{APIRef("Element Timing API")}}
 
 La propriété en lecture seule **`naturalHeight`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie la hauteur intrinsèque de l'élément image.

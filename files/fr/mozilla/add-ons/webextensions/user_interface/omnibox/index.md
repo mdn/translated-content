@@ -6,6 +6,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
 ---
+
 {{AddonSidebar()}}
 
 En utilisant l'API {{WebExtAPIRef("omnibox")}}, WebExtensions peut personnaliser les suggestions proposées dans la liste déroulante de la barre d'adresse du navigateur lorsque l'utilisateur entre un mot-clé.

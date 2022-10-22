@@ -2,6 +2,7 @@
 title: VTTCue
 slug: Web/API/VTTCue
 ---
+
 {{APIRef("WebVTT")}}
 WebVTT（メディアプレゼンテーションに関するテキストトラック）を処理するための API の一部である `VTTCue` インターフェイスは、特定の {{HTMLElement("track")}} 要素に関連付けられたテキストトラックを記述および制御します。
 

@@ -2,6 +2,7 @@
 title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat`** オブジェクトは、言語に応じた日付と時刻の書式化を可能にします。

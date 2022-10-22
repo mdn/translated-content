@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Using_promises
 original_slug: Web/JavaScript/Guide/Utiliser_les_promesses
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Le_modèle_objet_JavaScript_en_détails", "Web/JavaScript/Guide/iterateurs_et_generateurs")}}
 
 Une promesse est un objet ({{jsxref("Promise")}}) qui représente la complétion ou l'échec d'une opération asynchrone. La plupart du temps, on « consomme » des promesses et c'est donc ce que nous verrons dans la première partie de ce guide pour ensuite expliquer comment les créer.
@@ -312,7 +313,7 @@ Promise.resolve().then(() => console.log(2));
 console.log(1); // 1, 2
 ```
 
-En fait, la fonction passée à ` then``() ` est placée dans une file de micro-tâches qui sont exécutées lorsque cette file est vidée à la fin de la boucle d'évènements JavaScript :
+En fait, la fonction passée à `then()` est placée dans une file de micro-tâches qui sont exécutées lorsque cette file est vidée à la fin de la boucle d'évènements JavaScript :
 
 ```js
 var wait = ms => new Promise(resolve => setTimeout(resolve, ms));

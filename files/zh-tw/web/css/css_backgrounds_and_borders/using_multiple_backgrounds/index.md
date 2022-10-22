@@ -3,6 +3,7 @@ title: 使用 CSS 多重背景
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 original_slug: Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds
 ---
+
 {{CSSRef}}
 
 藉由 [CSS3](/zh-TW/CSS/CSS3) 我們可以對元素使用 **多重背景**。每個設定的背景被一個個分層，第一個背景在最上面，最後一個背景是在最下面一層。 記得只有最後一個背景可以設定 background color。

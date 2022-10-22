@@ -2,6 +2,7 @@
 title: GlobalEventHandlers.onlostpointercapture
 slug: Web/API/Element/lostpointercapture_event
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`onlostpointercapture`** {{event("Event_handlers", "event handler")}} property of the {{domxref("GlobalEventHandlers")}} interface returns the event handler (function) for the {{event("lostpointercapture")}} event type.
@@ -38,7 +39,7 @@ function init() {
 
 **浏览器兼容性**
 
-{{Compat("api.GlobalEventHandlers.onlostpointercapture")}}
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: Date.prototype.getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`getTimezoneOffset()`** 方法返回协调世界时（UTC）相对于当前时区的时间差值，单位为分钟。

@@ -2,6 +2,7 @@
 title: 函數回傳值
 slug: Learn/JavaScript/Building_blocks/Return_values
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 我們將在本課程中討論最後一個基本概念，即關閉函數 - 回傳值。 有些函數在完成後沒有回傳重要值，但其他函數會，並且了解它們的值是什麼，如何在代碼中使用它們以及如何使自己的自定義函數返回有用值非常重要。 我們將在下面介紹所有這些內容。

@@ -2,6 +2,7 @@
 title: 在网页中添加矢量图形
 slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 矢量图形在很多情况下非常有用 — 它们拥有较小的文件尺寸，却高度可缩放，所以它们不会在镜头拉近或者放大图像时像素化。在这篇文章中，我们将为您呈现如何在网页中添加矢量图形。
@@ -92,7 +93,7 @@ SVG 除了迄今为止所描述的以外还有其他优点：
 
 ### 快捷方式：{{htmlelement("img")}}
 
-要通过 {{htmlelement("img")}}元素嵌入 SVG，你只需要按照预期的方式在 src 属性中引用它。你将需要一个`height`或`width`属性（或者如果您的 SVG 没有固有的宽高比）。如果您还没使用过\<img>元素，请阅读[HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)教程 。
+要通过 {{htmlelement("img")}}元素嵌入 SVG，你只需要按照预期的方式在 src 属性中引用它。你将需要一个`height`或`width`属性（或者如果您的 SVG 没有固有的宽高比）。如果您还没使用过\<img>元素，请阅读[HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)教程。
 
 ```html
 <img

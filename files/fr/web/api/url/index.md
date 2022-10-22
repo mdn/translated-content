@@ -5,6 +5,7 @@ page-type: web-api-interface
 translation_of: Web/API/URL
 browser-compat: api.URL
 ---
+
 {{ApiRef("URL API")}}
 
 L'interface **`URL`** est utilisée afin d'analyser, de décomposer, de construire, de normaliser ou d'encoder des  [URL](/fr/docs/Glossary/URL). Elle fonctionne en exposant des propriétés qui permettent de lire et de modifier les différentes composantes d'une URL.

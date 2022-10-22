@@ -6,6 +6,7 @@ slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 translation_of: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 original_slug: Web/Progressive_web_apps/Relancer_Via_Notifications_Push
 ---
+
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
 
 Avoir la possibilité de mettre en cache le contenu d'une application pour travailler en mode déconnecté est une formidable fonctionnalité. Donner la possibilité à l'utilisateur d'installer l'application web sur son écran d'accueil est encore mieux. Mais plutôt que de s'en remettre seulement aux actions de l'utilisateur, nous pouvons faire plus, en utilisant des messages poussés et des notifications pour le relancer automatiquement et fournir des nouveaux contenus à chaque fois qu'ils sont disponibles.
@@ -80,7 +81,7 @@ Une fois que l'utilisateur est enrôlé, il peut recevoir des notifications pous
 
 Du côté serveur, le processus tout entier doit être chiffré avec des clefs publique et privée par raison de sécurité — permettre à tout le monde d'envoyer des messages poussés non sécurisés en utilisant votre application serait une terrible idée. Voir la [page de test de chffirement des données web poussées](https://jrconlin.github.io/WebPushDataTestPage/) pour avoir des informations détaillées concernant la sécurisation du serveur. Le serveur enregistre toutes les informations reçues quand un utilisateur s'enregistre si bien que les messages peuvent être envoyés plus tard quand c'est nécessaire.
 
-Pour recevoir des messages poussés, nous pouvons écouter l'événement {{event("push")}} dans le fichier du Service Worker:
+Pour recevoir des messages poussés, nous pouvons écouter l'événement [`push`](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event) dans le fichier du Service Worker:
 
 ```js
 self.addEventListener('push', function(e) { /* ... */ });
@@ -260,7 +261,7 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-Tout ce qu'il est est d'ajouter une écoute sur l'évènement {{event("push")}}, créer la variable de charge utile constituée du texte récupéré depuis les données (ou de créer une chaîne de caractères à utiliser si les données sont vides) puis d'attendre jusqu'à ce que la notfication soit montrée à l'utilisateur.
+Tout ce qu'il est est d'ajouter une écoute sur l'évènement [`push`](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event), créer la variable de charge utile constituée du texte récupéré depuis les données (ou de créer une chaîne de caractères à utiliser si les données sont vides) puis d'attendre jusqu'à ce que la notfication soit montrée à l'utilisateur.
 
 N'hésitez pas à explorer le reste des exemples du [Service Worker Cookbook](https://serviceworke.rs/) si vous voulez savoir comment ils sont gérés — le [code source complet est disponible sur on GitHub](https://github.com/mozilla/serviceworker-cookbook/). Il y a une vaste collection d'exemples fonctionnels démontrant l'usage général ainsi que le push web, les stratégies de mise en cache, la question des performances, le fonctionnement en mode déconnecté et plus encore.
 

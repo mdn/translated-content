@@ -2,6 +2,7 @@
 title: Firefox 10 技術文件
 slug: Mozilla/Firefox/Releases/10
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 10 shipped on January 31, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.

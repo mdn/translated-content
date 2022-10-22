@@ -2,6 +2,7 @@
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement`** interface adds to {{domxref("HTMLElement")}} the properties and methods needed to support basic media-related capabilities that are common to audio and video. The {{domxref("HTMLVideoElement")}} and {{domxref("HTMLAudioElement")}} elements both inherit this interface.
@@ -162,7 +163,7 @@ These methods are obsolete and should not be used, even if a browser still suppo
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement")}}
+{{Compat}}
 
 ## See also
 

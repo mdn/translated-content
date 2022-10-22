@@ -4,6 +4,7 @@ slug: Web/API/FormData/get
 translation_of: Web/API/FormData/get
 browser-compat: api.FormData.get
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La méthode **`get()`** de l'interface [`FormData`](/fr/docs/Web/API/FormData) renvoie la première valeur associée à une clé donnée dans un objet `FormData`. Si vous souhaitez manipuler plusieurs valeurs et les récupérer intégralement, utilisez plutôt la méthode [`getAll()`](/fr/docs/Web/API/FormData/getAll).

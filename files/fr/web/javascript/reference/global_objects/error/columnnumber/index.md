@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
 original_slug: Web/JavaScript/Reference/Objets_globaux/Error/columnNumber
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 La propriété **`columnNumber`** contient le numéro de la colonne, dans la ligne du fichier qui a déclenché l'erreur.

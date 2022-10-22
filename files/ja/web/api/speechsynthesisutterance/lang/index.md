@@ -2,6 +2,7 @@
 title: SpeechSynthesisUtterance.lang
 slug: Web/API/SpeechSynthesisUtterance/lang
 ---
+
 {{APIRef("Web Speech API")}} {{SeeCompatTable}}
 {{domxref("SpeechSynthesisUtterance")}}インターフェースの**lang**プロパティは、発話の言語を取得、設定します。
 

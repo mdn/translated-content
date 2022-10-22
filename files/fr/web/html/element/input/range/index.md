@@ -4,6 +4,7 @@ slug: Web/HTML/Element/input/range
 browser-compat: html.elements.input.input-range
 translation_of: Web/HTML/Element/input/range
 ---
+
 {{HTMLRef("Input_types")}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`range`** permettent à l'utilisatrice ou l'utilisateur d'indiquer une valeur numérique comprise entre deux bornes. La valeur précise n'est pas considérée comme importante. Ces éléments sont généralement représentés avec un curseur sur une ligne ou comme un bouton de potentiel et non pas comme un champ de saisie (à la façon de [`number`](/fr/docs/Web/HTML/Element/input/number) par exemple).

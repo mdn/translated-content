@@ -2,6 +2,7 @@
 title: forced-color-adjust
 slug: Web/CSS/forced-color-adjust
 ---
+
 {{CSSRef}}
 
 **`forced-color-adjust`** は CSS のプロパティで、特定の要素を強制カラーモードから除外することができます。これにより、これらの値の制御が CSS に戻されます。

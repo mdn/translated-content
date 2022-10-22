@@ -2,6 +2,7 @@
 title: Event.cancelBubble
 slug: Web/API/Event/cancelBubble
 ---
+
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
 **`cancelBubble`** は {{domxref("Event")}} インターフェイスのプロパティで、非推奨です。代わりに替わりに {{domxref("Event.stopPropagation()")}} を使用してください。

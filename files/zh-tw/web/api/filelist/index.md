@@ -2,6 +2,7 @@
 title: FileList
 slug: Web/API/FileList
 ---
+
 {{APIRef("File API")}}
 
 `FileList` 型別物件通常來自 HTML {{HTMLElement("input")}} 元素 {{domxref("Document_Object_Model", "DOM")}} 物件的 `files` 屬性（{{Glossary("property/JavaScript", "property")}}）。你可以操作 `FileList` 物件來存取使用者透過 `<input type="file">` 元素所選取的檔案，或由拖放操作所產生的檔案（請參考 {{domxref("DataTransfer")}} 物件的更多使用細節）。

@@ -2,6 +2,7 @@
 title: The HTML DOM API
 slug: Web/API/HTML_DOM_API
 ---
+
 {{DefaultAPISidebar("HTML DOM")}}
 
 The **HTML DOM API** is made up of the interfaces that define the functionality of each of the {{Glossary("element", "elements")}} in {{Glossary("HTML")}}, as well as any supporting types and interfaces they rely upon.
@@ -345,7 +346,7 @@ The HTML for the form looks like this:
 
 ## Browser compatibility
 
-{{Compat("api.HTMLElement")}}
+{{Compat}}
 
 ## See also
 

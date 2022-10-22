@@ -11,7 +11,7 @@ translation_of: Web/CSS/:hover
 ---
 {{ CSSRef }}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-classes") **`:hover`** de [CSS](/es/docs/Web/CSS) coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no necesariamente lo activa. Generalmente se activa cuando el usuario se desplaza sobre un elemento con el cursor (puntero del mouse).
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:hover`** de [CSS](/es/docs/Web/CSS) coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no necesariamente lo activa. Generalmente se activa cuando el usuario se desplaza sobre un elemento con el cursor (puntero del mouse).
 
 ```css
 /* Selecciona cualquier elemento <a> cuando está "mantenido (hovered)" */

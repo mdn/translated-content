@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/s
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<s>`** permet d'afficher du texte qui est barré car il n'est plus pertinent ou car il est obsolète. `<s>` ne doit pas être employé pour indiquer des éditions dans un document (on utilisera alors {{HTMLElement("del")}} et {{HTMLElement("ins")}}).

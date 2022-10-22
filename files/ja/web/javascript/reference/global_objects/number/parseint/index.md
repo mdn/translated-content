@@ -2,6 +2,7 @@
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ---
+
 {{JSRef}}
 
 **`Number.parseInt()`** は、文字列の引数を解釈し、指定された基数の整数値を返します。

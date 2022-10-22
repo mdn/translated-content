@@ -2,6 +2,7 @@
 title: DataView.prototype.setBigInt64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64
 ---
+
 {{JSRef}}
 
 **`setBigInt64()`**方法在距{{jsxref("DataView")}} 的起始位置的指定字节偏移处存储一个带符号的 64 位整数（long long 类型）值。

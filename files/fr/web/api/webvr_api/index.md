@@ -3,6 +3,7 @@ title: WebVR API
 slug: Web/API/WebVR_API
 translation_of: Web/API/WebVR_API
 ---
+
 {{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}
 
 WebVR fournit un support pour les dispositifs de réalité virtuelle - par exemple pour les casques de réalité virtuelle comme l'Oculus Rift - aux applications Web, permettant aux développeurs de traduire les informations de position et de mouvement de l'appareil en mouvements autour d'une scène 3D. Cela a de nombreuses applications très intéressantes, des visites de produits virtuels aux applications de formation interactive en passant par des jeux en première personne dans un environnement immersif.
@@ -43,11 +44,11 @@ La méthode {{domxref("HMDVRDevice.getEyeParameters()")}} retourne un objet {{do
 - {{domxref("Navigator.getVRDisplays()")}}
   - : Retourne un tableau contenant tous les périphériques (objet {{domxref("VRDisplay")}}) disponibles qui sont connectés à l'ordinateur.
 - {{domxref("Window.onvrdisplayconnected")}}
-  - : Représente un gestionaire d'événements qui s'exécute lorsqu'un appareil RV compatible a été connecté à l'ordinateur (quand l'événement {{event("vrdisplayconnected")}} est déclenché).
+  - : Représente un gestionaire d'événements qui s'exécute lorsqu'un appareil RV compatible a été connecté à l'ordinateur (quand l'événement [`vrdisplayconnected`](/fr/docs/Web/API/Window/vrdisplayconnect_event) est déclenché).
 - {{domxref("Window.onvrdisplaydisconnected")}}
-  - : Représente un gestionaire d'événements qui s'exécute lorsqu'un appareil RV compatible a été déconnecté de l'ordinateur (quand l'événement {{event("vrdisplaydisconnected")}} est déclenché).
+  - : Représente un gestionaire d'événements qui s'exécute lorsqu'un appareil RV compatible a été déconnecté de l'ordinateur (quand l'événement [`vrdisplayconnected`](/fr/docs/Web/API/Window/vrdisplaydisconnect_event) est déclenché).
 - {{domxref("Window.onvrdisplaypresentchange")}}
-  - : Représente un gestionaire d'événements qui s'exécute lorsque l'état de présentation d'un appareil change — i.e. un changement de l'état "présente" à "ne présente pas", ou vice versa (quand l'événement {{event("onvrdisplaypresentchange")}} est déclenché).
+  - : Représente un gestionaire d'événements qui s'exécute lorsque l'état de présentation d'un appareil change — i.e. un changement de l'état "présente" à "ne présente pas", ou vice versa (quand l'événement [`vrdisplaypresentchange`](/fr/docs/Web/API/Window/vrdisplaypresentchange_event) est déclenché).
 
 ## Examples
 

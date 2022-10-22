@@ -2,6 +2,7 @@
 title: HTML 表格高级特性和无障碍
 slug: Learn/HTML/Tables/Advanced
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
 这个模块的第二篇文章中，我们来看一下 HTML 表格更高级的功能，比如像 表格的标题/摘要，以及将你表格中的各行分组成头部、正文、页脚部分，提高视力受损用户的无障碍。
@@ -355,7 +356,7 @@ slug: Learn/HTML/Tables/Advanced
 
 屏幕阅读设备会识别这种结构化的标记，并一次读出整列或整行，比如：
 
-`scope` 还有两个可选的值： `colgroup` 和 `rowgroup`。这些用于位于多个列或行的顶部的标题。如果你回顾这部分文章开始部分的 "Items Sold August 2016" 表格。你会看到 "Clothes" 单元格在"Trousers", "Skirts", 和 "Dresses" 单元格的上面。这几个单元格都应该被标记为 (`<th>`)，但是 "Clothes" 是一个位于顶部且定义了其他三个子标题的标题。 因此 "Clothes" 应该有一个 `scope="colgroup"`属性，而另外三个子标题应该有 `scope="col"`属性。
+`scope` 还有两个可选的值： `colgroup` 和 `rowgroup`。这些用于位于多个列或行的顶部的标题。如果你回顾这部分文章开始部分的 "Items Sold August 2016" 表格。你会看到 "Clothes" 单元格在"Trousers", "Skirts", 和 "Dresses" 单元格的上面。这几个单元格都应该被标记为 (`<th>`)，但是 "Clothes" 是一个位于顶部且定义了其他三个子标题的标题。因此 "Clothes" 应该有一个 `scope="colgroup"`属性，而另外三个子标题应该有 `scope="col"`属性。
 
 ### id 和标题属性
 

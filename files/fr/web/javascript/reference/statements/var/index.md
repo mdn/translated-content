@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/var
 original_slug: Web/JavaScript/Reference/Instructions/var
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`var`** (pour variable) permet de déclarer une variable et éventuellement d'initialiser sa valeur.
@@ -190,16 +191,11 @@ console.log(typeof y); // "undefined" car y est local à la fonction a
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires                                         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0 |
-| {{SpecName('ES5.1', '#sec-12.2', 'instruction var')}}                         | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES6', '#sec-variable-statement', 'instruction de variable')}} | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-variable-statement', 'variable statement')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.var")}}
+{{Compat}}
 
 ## Voir aussi
 

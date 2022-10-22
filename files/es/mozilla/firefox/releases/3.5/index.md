@@ -51,7 +51,7 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
 
 - [The `-moz-nativehyperlinktext` color value](/es/docs/CSS/color#Mozilla_Specific_Colors)
   - : Este nuevo valor del color representa el predefinido por el sistema del usuario para los hipervínculos.
-- Las nuevas propiedades [`-moz-window-shadow`](/es/docs/CSS/-moz-window-shadow) y [`-moz-system-metric(mac-graphite-theme)`](</es/docs/CSS/:-moz-system-metric(mac-graphite-theme)> "CSS/:-moz-system-metric(mac-graphite-theme)")
+- Las nuevas propiedades `-moz-window-shadow` y `-moz-system-metric(mac-graphite-theme)`
   - : Estas nuevas propiedades de CSS fueron añadidas para facilitar la creación de temas.
 - Nuevos valores para [`-moz-appearance`](/es/docs/CSS/-moz-appearance)
   - : Los valores `-moz-win-glass` y `-moz-mac-unified-toolbar` se agregaron a `-moz-appearance`.

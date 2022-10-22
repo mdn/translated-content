@@ -2,6 +2,7 @@
 title: Request.url
 slug: Web/API/Request/url
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 The **`url`** read-only property of the {{domxref("Request")}} interface contains the URL of the request.
@@ -31,7 +32,7 @@ var myURL = myRequest.url; // "http://mdn.github.io/fetch-examples/fetch-request
 
 ## 浏览器兼容性
 
-{{Compat("api.Request.url")}}
+{{Compat}}
 
 ## See also
 

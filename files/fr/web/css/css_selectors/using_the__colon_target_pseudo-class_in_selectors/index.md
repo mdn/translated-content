@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 original_slug: Web/CSS/Sélecteurs_CSS/Utiliser_la_pseudo-classe_:target_dans_un_selecteur
 ---
+
 {{CSSRef}}
 
 Afin d'aider à identifier la destination d'un lien qui mène vers une portion spécifique du document, les [sélecteurs CSS3](https://www.w3.org/TR/css3-selectors/#target-pseudo) ont introduit [la pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) {{cssxref(":target")}}.
