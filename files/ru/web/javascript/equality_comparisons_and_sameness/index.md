@@ -169,70 +169,122 @@ console.log(obj === undefined); // false
 
 ```js
 // Добавление неизменяемого свойства NEGATIVE_ZERO (отрицательный ноль) в конструктор Number.
-Object.defineProperty(Number, "NEGATIVE_ZERO",
-                      { value: -0, writable: false, configurable: false, enumerable: false });
+Object.defineProperty(Number, "NEGATIVE_ZERO", {
+  value: -0,
+  writable: false,
+  configurable: false,
+  enumerable: false,
+});
 
-function attemptMutation(v)
-{
+function attemptMutation(v) {
   Object.defineProperty(Number, "NEGATIVE_ZERO", { value: v });
 }
 ```
 
-При попытке изменения неизменяемого свойства, вызов `Object.defineProperty выбросит` исключение, однако, если новое свойство равняется старому, изменений не произойдёт и исключение не будет выброшено. Если `v` содержит `-0`, изменений не произойдёт, а значит, код отработает без выброса исключений. Однако, если же `v` содержит `+0`, `Number.NEGATIVE_ZERO` утратит свою неизменяемую величину. Именно для сравнения нового и текущего неизменяемых свойств используется сравнение одинаковых величин, представленное методом [`Object.is`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is").
+При попытке изменения неизменяемого свойства, вызов `Object.defineProperty` выбросит исключение, однако, если новое свойство равняется старому, изменений не произойдёт и исключение не будет выброшено. Если `v` содержит `-0`, изменений не произойдёт, а значит, код отработает без выброса исключений. Однако, если же `v` содержит `+0`, `Number.NEGATIVE_ZERO` утратит свою неизменяемую величину.
+
+Именно для сравнения нового и текущего неизменяемых свойств используется сравнение одинаковых величин, представленное методом {{jsxref("Object.is")}}.
+
+## Same-value-zero equality
+
+Similar to same-value equality, but +0 and -0 are considered equal.
+
+Same-value-zero equality is not exposed as a JavaScript API, but can be implemented with custom code:
+
+```js
+function sameValueZero(x, y) {
+  if (typeof x === "number" && typeof y === "number") {
+    // x and y are equal (may be -0 and 0) or they are both NaN
+    return x === y || (x !== x && y !== y);
+  }
+  return x === y;
+}
+```
+
+Same-value-zero only differs from strict equality by treating `NaN` as equivalent, and only differs from same-value equality by treating `-0` as equivalent to `0`. This makes it usually have the most sensible behavior during searching, especially when working with `NaN`. It's used by [`Array.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), [`TypedArray.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes), as well as [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) methods for comparing key equality.
 
 ## Спецификации для равенства, строгого равенства и равенства одинаковых величин
 
 В стандарте ES5, сравнение выполняемое оператором [==](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) описывается в секции [11.9.3, The Abstract Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3). Описание оператора [===](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) находится в секции [11.9.6, The Strict Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6). В секции [9.12, The SameValue Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-9.12) ES5 описывает операцию сравнение одинаковых величин для внутреннего движка JS. Строгое равенство и равенство одинаковых величин, практически одинаковы, за исключением обработки [числовых типов](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number). ES6 предлагает использовать алгоритм сравнения одинаковых величин через вызов [`Object.is`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is").
 
-## `Как понимать все эти способы сравнения?`
+### Как понимать все эти способы сравнения?
 
 До выхода редакции ES6 считалось, что оператор строгого равенства просто "улучшенная" версия оператора нестрогого равенства. Например, некоторые считали, что == просто улучшенная версия === потому, что первый оператор делает всё то же, что и второй, плюс приведение типов своих операндов. То есть 6 == "6". (Или же наоборот: оператор нестрогого равенства базовый, а оператор строгого равенства просто его улучшенная версия, ведь он добавляет ещё одно условие - требует, чтобы оба операнда были одного и того же типа. Какой вариант ближе вам, зависит только от вашей точки зрения на вещи.)
 
 Но эти точки зрения уже нельзя применить к новому методу сравнения [Object.is](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/is) из новой редакции ES6. Нельзя сказать, что [Object.is](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/is) более или менее строг относительно существующих способов сравнения, или что это нечто среднее между ними. Ниже в таблице показаны основные различия операторов сравнения. [Object.is](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/is) интересен тем, что различает -0 и +0, а также умеет сравнивать два не числа [NaN](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN).
 
-| `x`                 | `y`                 | `==`    | `===`   | `Object.is` |
-| ------------------- | ------------------- | ------- | ------- | ----------- |
-| `undefined`         | `undefined`         | `true`  | `true`  | `true`      |
-| `null`              | `null`              | `true`  | `true`  | `true`      |
-| `true`              | `true`              | `true`  | `true`  | `true`      |
-| `false`             | `false`             | `true`  | `true`  | `true`      |
-| `"foo"`             | `"foo"`             | `true`  | `true`  | `true`      |
-| `{ foo: "bar" }`    | `x`                 | `true`  | `true`  | `true`      |
-| `0`                 | `0`                 | `true`  | `true`  | `true`      |
-| `+0`                | `-0`                | `true`  | `true`  | `false`     |
-| `0`                 | `false`             | `true`  | `false` | `false`     |
-| `""`                | `false`             | `true`  | `false` | `false`     |
-| `""`                | `0`                 | `true`  | `false` | `false`     |
-| `"0"`               | `0`                 | `true`  | `false` | `false`     |
-| `"17"`              | `17`                | `true`  | `false` | `false`     |
-| `[1,2]`             | `"1,2"`             | `true`  | `false` | `false`     |
-| `new String("foo")` | `"foo"`             | `true`  | `false` | `false`     |
-| `null`              | `undefined`         | `true`  | `false` | `false`     |
-| `null`              | `false`             | `false` | `false` | `false`     |
-| `undefined`         | `false`             | `false` | `false` | `false`     |
-| `{ foo: "bar" }`    | `{ foo: "bar" }`    | `false` | `false` | `false`     |
-| `new String("foo")` | `new String("foo")` | `false` | `false` | `false`     |
-| `0`                 | `null`              | `false` | `false` | `false`     |
-| `0`                 | `NaN`               | `false` | `false` | `false`     |
-| `"foo"`             | `NaN`               | `false` | `false` | `false`     |
-| `NaN`               | `NaN`               | `false` | `false` | `true`      |
+| x                   | y                   | `==`       | `===`      | `Object.is` | `SameValueZero` |
+| ------------------- | ------------------- | ---------- | ---------- | ----------- | --------------- |
+| `undefined`         | `undefined`         | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `null`              | `null`              | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `true`              | `true`              | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `false`             | `false`             | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `'foo'`             | `'foo'`             | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `0`                 | `0`                 | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `+0`                | `-0`                | `✅ true`  | `✅ true`  | `❌ false`  | `✅ true`       |
+| `+0`                | `0`                 | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `-0`                | `0`                 | `✅ true`  | `✅ true`  | `❌ false`  | `✅ true`       |
+| `0n`                | `-0n`               | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `0`                 | `false`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `""`                | `false`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `""`                | `0`                 | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `'0'`               | `0`                 | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `'17'`              | `17`                | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `[1, 2]`            | `'1,2'`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `new String('foo')` | `'foo'`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `null`              | `undefined`         | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `null`              | `false`             | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `undefined`         | `false`             | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `{ foo: 'bar' }`    | `{ foo: 'bar' }`    | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `new String('foo')` | `new String('foo')` | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `0`                 | `null`              | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `0`                 | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `'foo'`             | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `NaN`               | `NaN`               | `❌ false` | `❌ false` | `✅ true`   | `✅ true`       |
 
-## `Когда же использовать Object.is ?`
+### When to use Object.is() versus triple equals
 
-`Особенность обработки Object.is нулей будет полезна в метапрограммировании, когда необходимо присвоить противоположное значение свойству через дескриптор Object.defineProperty. Если ваши задачи этого не требуют, то лучше воздержаться от использования Object.is, отдав предпочтение ===. Даже если в коде необходимо сравнивать два NaN, обычно проще всего использовать существующий метод isNaN, чтобы последующие вычисления не влияли на сравнение нулей с разными знаками.
+In general, the only time {{jsxref("Object.is")}}'s special behavior towards zeros is likely to be of interest is in the pursuit of certain meta-programming schemes, especially regarding property descriptors, when it is desirable for your work to mirror some of the characteristics of {{jsxref("Object.defineProperty")}}. If your use case does not require this, it is suggested to avoid {{jsxref("Object.is")}} and use [`===`](/en-US/docs/Web/JavaScript/Reference/Operators) instead. Even if your requirements involve having comparisons between two {{jsxref("NaN")}} values evaluate to `true`, generally it is easier to special-case the {{jsxref("NaN")}} checks (using the {{jsxref("isNaN")}} method available from previous versions of ECMAScript) than it is to work out how surrounding computations might affect the sign of any zeros you encounter in your comparison.
 
-Вот примеры операторов и методов, которые могут сделать различия между -0 и +0 более явными, что непременно отразиться в вашем коде:
+Here's a non-exhaustive list of built-in methods and operators that might cause a distinction between `-0` and `+0` to manifest itself in your code:
 
-- (унарный минус)
+- [`-` (unary negation)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 
-Очевидно, что применение унарного минуса к нулю даст -0. Но, иногда, это происходит совершенно незаметно. К примеру:
+  - : Consider the following example:
 
-let stoppingForce = obj.mass \* -obj.velocity
+    ```js
+    const stoppingForce = obj.mass * -obj.velocity;
+    ```
 
-Если значением obj.velocity будет 0, то результатом выражения будет -0, что в итоге отразится в переменной stoppingForce.
+    If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propagates out into `stoppingForce`.
 
-Math.atan2Math.ceilMath.powMath.roundЕсть вероятность, что данные методы могут возвратить -0, даже если его не передавали явно одним из параметров. Например, если методом Math.pow возвести -Infinity в любую отрицательную степень. Ознакомьтесь с подробным описанием данных методов.Math.floorMath.maxMath.minMath.sinMath.sqrtMath.tanВ некоторых случаях можно получить результат, равный -0, если вышеперечисленным методам одним из параметров передать -0. Например, Math.min(-0, +0) вернёт -0. Ознакомьтесь с подробным описанием данных методов.~<<>>Каждый из этих операторов использует внутренний алгоритм ToInt32. В нём нет места для отрицательного нуля, потому значение -0 не переживёт подобной операции. То есть и Object.is(~~(-0), -0), и Object.is(-0 << 2 >> 2, -0) возвратят false.
+- {{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}
+  - : In some cases, it's possible for a `-0` to be introduced into an expression as a return value of these methods even when no `-0` exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to `-0`. Refer to the documentation for the individual methods.
+- {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
+  - : It's possible to get a `-0` return value out of these methods in some cases where a `-0` exists as one of the parameters. E.g., `Math.min(-0, +0)` evaluates to `-0`. Refer to the documentation for the individual methods.
+- [`~`](/en-US/docs/Web/JavaScript/Reference/Operators), [`<<`](/en-US/docs/Web/JavaScript/Reference/Operators), [`>>`](/en-US/docs/Web/JavaScript/Reference/Operators)
+  - : Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, `-0` will not survive a round trip after an inverse operation. E.g., both `Object.is(~~(-0), -0)` and `Object.is(-0 << 2 >> 2, -0)` evaluate to `false`.
 
-Из вышеперечисленного ясно, что использование Object.is иногда может быть проблемным. Естественно, если вам необходимо чётко различать -0 и +0, то этот метод именно то, что нужно.
+Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between `-0` and `+0`, it does exactly what's desired.
 
-Смотрите такжеТаблица сравнений Javascript`
+### Caveat: Object.is() and NaN
+
+The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct floating point representations of `NaN` which don't behave identically in all contexts. For example:
+
+```js
+const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
+const b2f = (x) => new Float64Array(x.buffer)[0];
+// Get a byte representation of NaN
+const n = f2b(NaN);
+// Change the first bit, which is the sign bit and doesn't matter for NaN
+n[0] = 1;
+const nan2 = b2f(n);
+console.log(nan2); // NaN
+console.log(Object.is(nan2, NaN)); // true
+console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
+console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
+```
+
+## See also
+
+- [JS Comparison Table](https://dorey.github.io/JavaScript-Equality-Table/)
