@@ -131,15 +131,15 @@ Web アプリのライフサイクルのこの段階では、通常、"将来の
 - テストを作成するためのフレームワークには、 [Jest](https://jestjs.io/) 、 [Mocha](https://mochajs.org/) 、および [Jasmine](https://jasmine.github.io/) が含まれます。
 - 自動化されたテスト実行および通知システムには、 [Travis CI](https://travis-ci.org/) 、 [Jenkins](https://www.jenkins.io/) 、 [Circle CI](https://circleci.com/) 、 [その他様々なツール](https://en.wikipedia.org/wiki/List_of_build_automation_software#Continuous_integration) があります 。 
 
-#### Deployment tools
+#### デプロイツール
 
-Deployment systems allow you to get your website published, are available for both static and dynamic sites, and commonly tend to work alongside testing systems. For example, a typical toolchain will wait for you to push changes to a remote repo, run some tests to see if the changes are OK, and then if the tests pass, automatically deploy your app to a production site.
+デプロイシステムを使用すると、Web サイトを公開することができ、静的サイトと動的サイトの両方で使用でき、一般にテスト システムと一緒に動作する傾向があります。 たとえば、一般的なツールチェーンは、変更がリモート リポジトリにプッシュされるまで待機し、いくつかのテストを実行して変更が問題ないかどうかを確認し、テストに合格すると、アプリを運用サイトに自動的にデプロイします。
 
-[Netlify](https://www.netlify.com/) is one of the most popular deployment tools right now, but others include [Vercel](https://vercel.com/) and [GitHub Pages](https://pages.github.com/).
+[Netlify](https://www.netlify.com/) は現在最も人気のあるデプロイ ツールの 1 つですが、 [Vercel](https://vercel.com/) や [GitHub Pages](https://pages.github.com/) などもあります。
 
-#### Others
+#### その他
 
-There are a number of other tool types available to use in the post-development stage, including [Code Climate](https://codeclimate.com/) for gathering code quality metrics, the [webhint browser extension](https://webhint.io/docs/user-guide/extensions/extension-browser/) for performing runtime analysis of cross-browser compatibility and other checks, [GitHub bots](https://probot.github.io/) for providing more powerful GitHub functionality, [Updown](https://updown.io/) for providing app uptime monitoring, and so many more!
+開発後の段階で使用できるツールの種類は他にも多数あります。たとえば、コード品質メトリクスを収集するための [Code Climate](https://codeclimate.com/)、クロスブラウザーの互換性やその他のチェックのランタイム分析を実行するための [webhint ブラウザー拡張機能](https://webhint.io/docs/user-guide/extensions/extension-browser/)、より強力な機能を提供するための [GitHub ボット](https://probot.github.io/)などがあります。 GitHub の機能、アプリの稼働時間の監視を提供する [Updown](https://updown.io/) など、他にもたくさんあります！
 
 ### Some thoughts about tooling types
 
