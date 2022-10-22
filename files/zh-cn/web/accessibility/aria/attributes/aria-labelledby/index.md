@@ -7,7 +7,7 @@ slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 
 [`aria-labelledby`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby)属性用来表明某些元素的 id 是某一对象的标签。它被用来确定控件或控件组与它们标签之间的联系。使用诸如屏幕阅读器等辅助技术的用户通常使用 tabbing 在页面的不同区域间进行导航。如果一个输入元素、控件或控件组没有被分配一个 label 标签，那么屏幕阅读器就无法对其进行阅读。
 
-`aria-labelledby 属性与`[aria-describedby](/zh-CN/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute)属性非常相似：用一个标签描述某一对象的本质，可能会提供一些用户需要了解的额外信息。
+`aria-labelledby` 属性与[aria-describedby](/zh-CN/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute)属性非常相似：用一个标签描述某一对象的本质，可能会提供一些用户需要了解的额外信息。
 
 `aria-labelledby` 属性并不仅仅用于表单元素，也可以用来分配静态文本给控件、元素组、面板组以及包含标题和定义等内容的区域等。下方的示例将会展示如何针对这些情况运用这一属性的更多信息。
 
