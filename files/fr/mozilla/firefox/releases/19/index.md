@@ -18,7 +18,7 @@ Vous voulez aider à documenter Firefox 19 ? Regardez la [liste des bugs qui ont
 
 ### JavaScript
 
-- La méthode `size()`des objets [`Map`](/fr/docs/JavaScript/Reference/Global_Objects/Map) et [`Set`](/fr/docs/JavaScript/Reference/Global_Objects/Set) devient la propriété `size` ({{bug("807001")}})
+- La méthode `size()` des objets [`Map`](/fr/docs/JavaScript/Reference/Global_Objects/Map) et [`Set`](/fr/docs/JavaScript/Reference/Global_Objects/Set) devient la propriété `size` ({{bug("807001")}})
 - Les objets [`Map`](/fr/docs/JavaScript/Reference/Global_Objects/Map) et [`Set`](/fr/docs/JavaScript/Reference/Global_Objects/Set) ont maintenant une méthode `clear()`. ({{bug("805003")}})
 
 ### CSS
