@@ -1,5 +1,5 @@
 ---
-title: Client-side tooling overview
+title: クライアントサイドツールの概要
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 tags:
   - Beginner
@@ -177,7 +177,7 @@ That rounds off our gentle introduction to the topic of client-side web tooling,
 
 ## In this module
 
-- [Client-side tooling overview](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
+- [クライアントサイドツールの概要](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
 - [Command line crash course](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
 - [Package management basics](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
 - [Introducing a complete toolchain](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
