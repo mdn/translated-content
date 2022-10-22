@@ -14,8 +14,8 @@ translation_of: Web/JavaScript/Reference/Operators/Addition
 
 ## Синтаксис
 
-```
-Оператор: x + y
+```js
+x + y
 ```
 
 ## Примеры
