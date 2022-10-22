@@ -50,13 +50,11 @@ Vous pouvez [voir cette démonstration en _live_](https://fullscreen-requestfull
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('Fullscreen', '#::backdrop-pseudo-element', '::backdrop')}} | {{Spec2('Fullscreen')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.backdrop")}}
+{{Compat}}
 
 ## Voir aussi
 

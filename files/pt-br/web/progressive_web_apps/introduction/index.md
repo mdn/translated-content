@@ -30,14 +30,14 @@ Além disso, existem ferramentas para medir a integridade de uma aplicação Web
 
 Existem alguns princípios que uma aplicação Web deve tentar seguir para serem identificadas como uma PWA. Deveria ser:
 
-- [Detectável](/en-US/Apps/Progressive/Advantages#Discoverable), o seu conteúdo deve poder ser encontrado por mecanismos de busca na Web.
-- [Instalável](/en-US/Apps/Progressive/Advantages#Installable), deve poder ser acessada a partir da tela inicial do dispositivo.
+- [Detectável](/pt-BR/Apps/Progressive/Advantages#Discoverable), o seu conteúdo deve poder ser encontrado por mecanismos de busca na Web.
+- [Instalável](/pt-BR/Apps/Progressive/Advantages#Installable), deve poder ser acessada a partir da tela inicial do dispositivo.
 - [Linkavel](/Apps/Progressive/Advantages#Linkable), você deve poder compartilhar simplesmente enviando a sua URL.
-- [Independente de rede](/en-US/Apps/Progressive/Advantages#Network_independent), deve funcionar offline e ou com uma conexão fraca.
-- [Progressiva](/en-US/Apps/Progressive/Advantages#Progressive), deve funcionar em um nível básico e navegadores antigos e em um nível completo nos mais modernos.
-- [Re-engajável](/en-US/Apps/Progressive/Advantages#Re-engageable), deve ser possível enviar notificações.
-- [Responsiva](/en-US/Apps/Progressive/Advantages#Responsive), deve ser utilizável em qualquer dispositivo com uma tela e em navegadores — telefones móveis, tablets, laptops, TVs, geladeiras, etc.
-- [Segura](/en-US/Apps/Progressive/Advantages#Safe), a conexão deve ser segura contra terceiros que tentarem acessar dados confidenciais.
+- [Independente de rede](/pt-BR/Apps/Progressive/Advantages#Network_independent), deve funcionar offline e ou com uma conexão fraca.
+- [Progressiva](/pt-BR/Apps/Progressive/Advantages#Progressive), deve funcionar em um nível básico e navegadores antigos e em um nível completo nos mais modernos.
+- [Re-engajável](/pt-BR/Apps/Progressive/Advantages#Re-engageable), deve ser possível enviar notificações.
+- [Responsiva](/pt-BR/Apps/Progressive/Advantages#Responsive), deve ser utilizável em qualquer dispositivo com uma tela e em navegadores — telefones móveis, tablets, laptops, TVs, geladeiras, etc.
+- [Segura](/pt-BR/Apps/Progressive/Advantages#Safe), a conexão deve ser segura contra terceiros que tentarem acessar dados confidenciais.
 
 ### Is it worth doing all that?
 
@@ -84,4 +84,4 @@ Now, let's move to the second part of this series, where we’ll be looking at t
 
 {{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Apps/Progressive/")}}
+{{QuickLinksWithSubpages("/pt-BR/docs/Web/Apps/Progressive/")}}

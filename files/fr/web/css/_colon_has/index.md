@@ -51,10 +51,8 @@ h1:has(+ p)
 
 ## Spécifications
 
-| Spécification                                                            | État                                 | Commentaires        |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName("CSS4 Selectors", "#relational", ":has()")}} | {{Spec2("CSS4 Selectors")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.has")}}
+{{Compat}}

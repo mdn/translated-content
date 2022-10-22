@@ -66,7 +66,7 @@ original_slug: Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper
 
 ## 评估
 
-如果这个评估是一系列课程的一部分，你应该可以让你的老师或导师为你批改。 如果你是自学，可以很容易地在 [discussion thread for this exercise](https://discourse.mozilla.org/t/creating-fancy-letterheaded-paper-assessment/24684/1) 或[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn) IRC 频道回复得到批改指南。请先自己试着做——作弊学不到任何东西！
+如果这个评估是一系列课程的一部分，你应该可以让你的老师或导师为你批改。如果你是自学，可以很容易地在 [discussion thread for this exercise](https://discourse.mozilla.org/t/creating-fancy-letterheaded-paper-assessment/24684/1) 或[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn) IRC 频道回复得到批改指南。请先自己试着做——作弊学不到任何东西！
 
 {{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Learn/CSS/Styling_boxes")}}
 

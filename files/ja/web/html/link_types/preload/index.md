@@ -2,6 +2,7 @@
 title: 'リンク種別: preload'
 slug: Web/HTML/Link_types/preload
 ---
+
 {{HTMLSidebar}}
 
 `preload` の値を {{htmlelement("link")}} 要素の {{htmlattrxref("rel", "link")}} 属性に設定すると、 HTML の {{htmlelement("head")}} の中で読み込みリクエストを宣言し、ページのライフサイクルの早期の、ブラウザーの主なレンダリング機構が起動する前に読み込みを始めたい、すぐに必要なリソースを指定することができます。これにより、そのリソースがより早く利用でき、ページのレンダリングがブロックされにくくなり、性能が向上します。
@@ -70,9 +71,9 @@ slug: Web/HTML/Link_types/preload
 - `worker`: JavaScript ウェブワーカーまたは共有ワーカー。
 - `video`: 通常は {{htmlelement("video")}} で使用される動画ファイル。
 
-> **Note:** `video` preloading is included in the Preload spec, but is not currently implemented by browsers.
+> **メモ:** `video` preloading is included in the Preload spec, but is not currently implemented by browsers.
 
-> **Note:** 使用されると予想されるこれらの値やウェブ機能について、もっと詳細は Preload の仕様書にあります。 — [link element extensions](https://w3c.github.io/preload/#link-element-extensions) を参照してください。また、フェッチの仕様書で管理されている `as` 属性の値の完全な一覧は、 [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) を参照してください。
+> **メモ:** 使用されると予想されるこれらの値やウェブ機能について、もっと詳細は Preload の仕様書にあります。 — [link element extensions](https://w3c.github.io/preload/#link-element-extensions) を参照してください。また、フェッチの仕様書で管理されている `as` 属性の値の完全な一覧は、 [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) を参照してください。
 
 ## MIME タイプを含める
 

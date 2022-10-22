@@ -65,8 +65,7 @@ A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja a
             <code>null</code>.
           </li>
           <li>
-            <font face="Open Sans, arial, sans-serif">Se </font
-            ><code>target</code> não puder ser extendido, o método
+            Se <code>target</code> não puder ser extendido, o método
             <code>Object.getPrototypeOf(proxy)</code> deve retornar o mesmo
             valor que <code>Object.getPrototypeOf(target)</code>.
           </li>
@@ -220,6 +219,7 @@ A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja a
         {{jsxref("Global_Objects/Proxy/handler/get", "handler.get()")}}
       </td>
       <td>
+        <!-- markdownlint-disable MD011 -->1
         Property access: <code>proxy[foo]</code>and <code>proxy.bar</code
         ><br />Inherited property access: <code>Object.create(proxy)[foo]</code
         ><br />{{jsxref("Reflect.get()")}}
@@ -375,9 +375,9 @@ typeof proxy            // "object", typeof não desencadeia nenhuma trap
 
 ## Reflexão
 
-{{jsxref("Reflect")}} é um objeto embutido que contém métodos que permitem a criação de operações interceptáveis em JavaScript. Os métodos são iguais àqueles de {{jsxref("Global_Objects/Proxy/handler","proxy handlers","","true")}}. `Reflect `não é um objeto do tipo function.
+{{jsxref("Reflect")}} é um objeto embutido que contém métodos que permitem a criação de operações interceptáveis em JavaScript. Os métodos são iguais àqueles de {{jsxref("Global_Objects/Proxy/handler","proxy handlers","","true")}}. `Reflect` não é um objeto do tipo function.
 
-`Reflect `auxilia no encaminhamento de operações padrão do handler para o target.
+`Reflect` auxilia no encaminhamento de operações padrão do handler para o target.
 
 {{jsxref("Reflect.has()")}}, por exemplo, tem o mesmo efeito prático que o operador in, com a facilidade de ser utilizado como uma função:
 
@@ -385,7 +385,7 @@ typeof proxy            // "object", typeof não desencadeia nenhuma trap
 Reflect.has(Object, "assign"); // true
 ```
 
-### Uma função `apply `melhorada
+### Uma função `apply` melhorada
 
 Em ES5, você normalmente utiliza o método {{jsxref("Function.prototype.apply()")}} para invocar uma função com um dado valor para `this` e `arguments` fornecido como um array (ou um [objeto parecido com um array](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
 

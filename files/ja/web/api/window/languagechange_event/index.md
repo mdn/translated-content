@@ -2,6 +2,7 @@
 title: 'Window: languagechange イベント'
 slug: Web/API/Window/languagechange_event
 ---
+
 {{APIRef}}
 
 **`languagechange`** イベントはグローバルスコープオブジェクトで、ユーザーの推奨言語が変更されたときに発生します。

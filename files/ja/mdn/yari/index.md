@@ -2,6 +2,7 @@
 title: 'Yari: MDN のレンダリングプラットフォーム'
 slug: MDN/Yari
 ---
+
 {{MDNSidebar}}
 
 Yari は MDN Web Docs をレンダリングするコードです。 [JAMStack](https://jamstack.org/) アプローチを採用しており、 GitHub リポジトリーにフラットなソースファイルとして格納されている MDN のコンテンツ (前付けやマクロ呼び出しを含む) を、静的な HTML ファイルにレンダリングし、それらを可能な限り迅速かつ効率的に提供しています。

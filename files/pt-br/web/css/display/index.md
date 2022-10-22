@@ -11,9 +11,9 @@ translation_of: Web/CSS/display
 
 ## Resumo
 
-A propriedade CSS `display `especifica o tipo de caixa de renderização usada por um elemento. No HTML, os valores padrões da propriedade `display `são feitas a partir do comportamento descrito nas especificações HTML ou da folha de estilo padrão do navegador/usuário. O valor padrão em XML é inline.
+A propriedade CSS `display` especifica o tipo de caixa de renderização usada por um elemento. No HTML, os valores padrões da propriedade `display` são feitas a partir do comportamento descrito nas especificações HTML ou da folha de estilo padrão do navegador/usuário. O valor padrão em XML é inline.
 
-Além dos muitos tipos diferentes de exibição de caixa, o valor `none `permite desativar a exibição de um elemento; quando você usa `none`, todos os elementos descendentes também tem a sua exibição desativada. O documento é renderizado como se o elemento não existisse na árvore do documento.
+Além dos muitos tipos diferentes de exibição de caixa, o valor `none` permite desativar a exibição de um elemento; quando você usa `none`, todos os elementos descendentes também tem a sua exibição desativada. O documento é renderizado como se o elemento não existisse na árvore do documento.
 
 {{cssinfo}}
 
@@ -171,7 +171,7 @@ _**display-value**_
     </tr>
     <tr>
       <td colspan="1" rowspan="2">
-        Valores do modelo Flexbox (<a href="/en-US/docs/CSS/CSS3" title="CSS3"
+        Valores do modelo Flexbox (<a href="/pt-BR/docs/CSS/CSS3"
           >CSS3</a
         >)
       </td>
@@ -191,8 +191,7 @@ _**display-value**_
     <tr>
       <td colspan="1" rowspan="2">
         Valores do modelo de caixa de grade (<a
-          href="/en-US/docs/CSS/CSS3"
-          title="CSS3"
+          href="/pt-BR/docs/CSS/CSS3"
           >CSS3</a
         >) {{experimental_inline}}
       </td>
@@ -256,8 +255,8 @@ p.secret  { display: none }
 | {{SpecName('CSS3 Box', '#display', 'display')}}                     | {{Spec2('CSS3 Box')}}     | Adicionado o `run-in` valor.                                       |
 | {{SpecName('CSS3 Grid', '#grid-declaration0', 'display')}}         | {{Spec2('CSS3 Grid')}}     | Adicionado os valores do modelo da caixa de grade.                 |
 | {{SpecName('CSS3 Flexbox', '#flex-containers', 'display')}}     | {{Spec2('CSS3 Flexbox')}} | Adicionado os valores do modelo de caixa flexível.                 |
-| {{SpecName('CSS2.1', 'visuren.html#display-prop', 'display')}} | {{Spec2('CSS2.1')}}         | Foram adicionados os valores do modelo de tabela e `inline-block.` |
-| {{SpecName('CSS1', '#display', 'display')}}                             | {{Spec2('CSS1')}}         | Valores básicos:`none`, `block`, `inline`, e `list-item`.          |
+| {{SpecName('CSS2.1', 'visuren.html#display-prop', 'display')}} | {{Spec2('CSS2.1')}}         | Foram adicionados os valores do modelo de tabela e `inline-block`. |
+| {{SpecName('CSS1', '#display', 'display')}}                             | {{Spec2('CSS1')}}         | Valores básicos: `none`, `block`, `inline`, e `list-item`.          |
 
 ## Navegadores compatíveis
 

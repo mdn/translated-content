@@ -55,5 +55,5 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 ## 参见
 
 - HTTP [内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)
-- 表示内容协商结果的消息头: {{HTTPHeader("Content-Type")}}
-- 其他相似消息头: {{HTTPHeader("TE")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Charset")}}、{{HTTPHeader("Accept-Language")}}
+- 表示内容协商结果的消息头：{{HTTPHeader("Content-Type")}}
+- 其他相似消息头：{{HTTPHeader("TE")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Charset")}}、{{HTTPHeader("Accept-Language")}}

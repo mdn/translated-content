@@ -21,7 +21,7 @@ Sempre que um objeto precisa ser iterado (como no início de um loop `for..of`),
 
 O protocolo **iterador** define uma maneira padrão de produzir uma sequência de valores (finito ou infinito).
 
-Um objeto é um iterador quando implementa um método **`next()`\*\*** \*\*com a semântica adiante:
+Um objeto é um iterador quando implementa um método **`next()`** com a semântica adiante:
 
 <table class="standard-table">
   <tbody>
@@ -139,7 +139,7 @@ someString + '';                             // "hi"
 
 ### Iteráveis Built-in
 
-{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} and {{jsxref("Set")}} são todos iteráveis internos, porque cada um dos seus objetos protótipos implementa um método ` @@``iterator `.
+{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} and {{jsxref("Set")}} são todos iteráveis internos, porque cada um dos seus objetos protótipos implementa um método `@@iterator`.
 
 ### Iteráveis definidos pelo usuário
 
@@ -176,7 +176,7 @@ Veja também {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promi
 
 ### Sintaxe que espera iteráveis
 
-Some statements and expressions expect iterables, for example the [`for-of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops, [spread operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator), [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*), and [destructuring assignment](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+Some statements and expressions expect iterables, for example the [`for-of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) loops, [spread operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator), [`yield*`](/pt-BR/docs/Web/JavaScript/Reference/Operators/yield*), and [destructuring assignment](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
 
 ```
 for(let value of ['a', 'b', 'c']){

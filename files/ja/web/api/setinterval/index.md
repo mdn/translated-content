@@ -3,6 +3,7 @@ title: setInterval()
 slug: Web/API/setInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`setInterval()`** メソッドは {{domxref("Window")}} および {{domxref("Worker")}} メソッドで提供され、一定の遅延間隔を置いて関数やコードスニペットを繰り返し呼び出します。
@@ -39,7 +40,7 @@ setInterval(func, delay, arg0, arg1, /* ... ,*/ argN)
 
 `setInterval()` と {{domxref("setTimeout()")}} は同じ ID プールを共有しており、 `clearInterval()` と {{domxref("clearTimeout", "clearTimeout()")}} は技術的に入れ替えて使用できることを意識すると役に立つでしょう。ただし明快さのために、コードを整備するときは混乱を避けるため、常に一致させるようにするべきです。
 
-> **Note:** 引数 `delay` は、符号付き 32 ビット整数に変換されます。 IDL における符号付き整数の定義によって、`delay` は事実上 2147483647ms に制限されます。
+> **メモ:** 引数 `delay` は、符号付き 32 ビット整数に変換されます。 IDL における符号付き整数の定義によって、`delay` は事実上 2147483647ms に制限されます。
 
 ## 例
 

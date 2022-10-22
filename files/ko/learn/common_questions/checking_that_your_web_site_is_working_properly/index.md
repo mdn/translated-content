@@ -57,7 +57,7 @@ There's the problem, that "404" at the bottom. "404" means "resource not found",
 
 Servers respond with a status message whenever they receive a request. Here are the most common statuses:
 
-- **<span id="cke_bm_110S" class="hidden"></span>200: OK**
+- **200: OK**
   - : The resource you asked for was delivered.
 - **301: Moved permanently**
   - : The resource has moved to a new location. You won't see this much in your browser, but it's good to know about "301" since search engines use this information a lot to update their indexes.

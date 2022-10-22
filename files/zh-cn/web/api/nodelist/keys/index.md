@@ -47,7 +47,7 @@ for(var key of list.keys()) {
 
 ## 浏览器兼容
 
-{{Compat("api.NodeList.keys")}}
+{{Compat}}
 
 ## 相关链接
 

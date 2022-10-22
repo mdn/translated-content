@@ -2,6 +2,7 @@
 title: VRStageParameters.sittingToStandingTransform
 slug: Web/API/VRStageParameters/sittingToStandingTransform
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 {{domxref("VRStageParameters")}} インターフェイスの **`sittingToStandingTransform`** 読取専用プロパティは，{{domxref("VRDisplay.getPose()")}}/{{domxref("VRDisplay.getImmediatePose()")}} i で取得した「立った状態の位置」から「座った状態の位置」へと変換する行列を持っています．

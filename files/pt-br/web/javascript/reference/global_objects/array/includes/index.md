@@ -14,7 +14,9 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Array/contains
 
 ## Sumário
 
-O método includes`()` determina se um array contém um determinado elemento, retornando `true` ou `false` apropriadamente.
+O método `includes()` determina se um array contém um determinado elemento, retornando `true` ou `false` apropriadamente.
+
+{{EmbedInteractiveExample("pages/js/array-includes.html")}}
 
 **Sintaxe**
 
@@ -27,7 +29,7 @@ array.includes(searchElement[, fromIndex])
 - `searchElement`
   - : O elemento a buscar
 - `fromIndex`
-  - : Opcional. A posição no array de onde a busca pelo `searchElement `se iniciará. Por padrão, 0.
+  - : Opcional. A posição no array de onde a busca pelo `searchElement` se iniciará. Por padrão, 0.
 
 ## Exemplos
 

@@ -2,6 +2,7 @@
 title: TextTrack
 slug: Web/API/TextTrack
 ---
+
 {{APIRef("WebVTT")}}
 
 `TextTrack` インターフェイスは — WebVTT (メディア表示上のテキストトラック) を扱う API の一部ですが — 特定の {{HTMLElement("track")}} 要素に関連付けられたテキストトラックを記述および制御します。

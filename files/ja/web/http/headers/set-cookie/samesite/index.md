@@ -2,6 +2,7 @@
 title: SameSite cookies
 slug: Web/HTTP/Headers/Set-Cookie/SameSite
 ---
+
 {{HTTPSidebar}}
 
 {{HTTPHeader("Set-Cookie")}} HTTP レスポンスヘッダーの **`SameSite`** 属性を使用すると、Cookie をファーストパーティまたは同じサイトのコンテキストに制限するかどうかを宣言できます。

@@ -2,6 +2,7 @@
 title: 409 Conflict
 slug: Web/HTTP/Status/409
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`409 Conflict`** はリクエストが現在のサーバーの状態と競合したことを示すステータスコード。

@@ -3,7 +3,10 @@ title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
 translation_of: Web/JavaScript/Reference/Statements/do...while
 ---
-{{jsSidebar("Statements")}}A declaração **` do...while``  `**cria um laço que executa uma declaração até que o teste da condição for falsa (false). A condição é avaliada depois que o bloco de código é executado, resultando que uma declaração seja executada pelo menos uma vez.
+
+{{jsSidebar("Statements")}}
+
+A declaração **`do...while`** cria um laço que executa uma declaração até que o teste da condição for falsa (false). A condição é avaliada depois que o bloco de código é executado, resultando que uma declaração seja executada pelo menos uma vez.
 
 ## Sintaxe
 
@@ -15,11 +18,8 @@ while (condition);
 
 - `declarações`
   - : A declaração é executada pelo menos uma vez e re-executada cada vez que a condição (`condition`) for avaliada como verdadeira (true). Para executar múltiplas declarações dentro do laço, use um {{jsxref("declaração/block", "block")}} declaração (`{ ... }`) ao grupo dessas declarações.
-
-<!---->
-
 - `condição`
-  - : Uma expressão é validade depois de cada passagem pelo laço. Se a condição `(condition) `é avaliada como verdadeira (true) o bloco de código é executado novamente. Quando a condição `(condition) `é avaliada como falsa (false), o controle passa para a instrução seguinte ao laço **do...while**.
+  - : Uma expressão é validade depois de cada passagem pelo laço. Se a condição `(condition)` é avaliada como verdadeira (true) o bloco de código é executado novamente. Quando a condição `(condition)` é avaliada como falsa (false), o controle passa para a instrução seguinte ao laço **do...while**.
 
 ## Exemplos
 

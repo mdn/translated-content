@@ -2,6 +2,7 @@
 title: CSS 文字セット
 slug: Web/CSS/CSS_Charsets
 ---
+
 {{CSSRef}}
 
 **CSS 文字セット** (CSS Charsets) は CSS のモジュールの一つで、スタイルシート内で使用される文字セットを指定します。

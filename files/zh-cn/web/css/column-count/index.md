@@ -25,7 +25,7 @@ column-count: unset;
 - `auto`
   - : 用来表示列的数量由其他 CSS 属性指定，例如 {{cssxref("column-width")}}.
 - `<number>`
-  - : 是个严格的正数 {{cssxref("&lt;integer&gt;")}} ，用来描述元素内容被划分的理想列数。假如 {{cssxref("column-width")}}也被设置为非零值，此参数仅表示所允许的最大列数.
+  - : 是个严格的正数 {{cssxref("&lt;integer&gt;")}} ，用来描述元素内容被划分的理想列数。假如 {{cssxref("column-width")}}也被设置为非零值，此参数仅表示所允许的最大列数。
 
 ## 例子
 

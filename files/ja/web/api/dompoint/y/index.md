@@ -2,6 +2,7 @@
 title: DOMPoint.y
 slug: Web/API/DOMPoint/y
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint`** インターフェイスの **`y`** プロパティは、空間内の点の垂直座標 _y_ を保持します。

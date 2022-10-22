@@ -7,7 +7,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 
 ## Sumário
 
-O método concat() retorna um novo array contendo todos os arrays ou valores passados como parâmetro
+O método concat() retorna um novo array contendo todos os arrays ou valores passados como parâmetro.
+
+{{EmbedInteractiveExample("pages/js/array-concat.html","shorter")}}
 
 ## Sintaxe
 
@@ -27,9 +29,6 @@ arr.concat(valor1, valor2, ..., valorN)
 **concat** não altera a si mesmo ou a qualquer um dos argumentos passados, apenas providencia um novo array contendo uma cópia de si mesmo e dos argumentos passados. Os elementos copiados são:
 
 - Referência aos objetos (e não o objeto): concat copia a referência aos objetos para o novo array. Tanto o original quanto a cópia apontam para o mesmo objeto. Ou seja, se o objeto foi modificado, tais mudanças serão visíveis no objeto original e no array.
-
-<!---->
-
 - Strings e numbers (diferente dos objetos {{jsxref("Global_Objects/String", "String")}} e {{jsxref("Global_Objects/Number", "Number")}}): `concat` copia os valores de strings e numbers para o novo array. Qualquer alteração no novo array não refletirá no original, e vice versa.
 
 ## Exemplos
@@ -61,7 +60,7 @@ var nums = num1.concat(num2, num3);
 
 ### Exemplo: Concatenando valores ao array
 
-O código a seguir une três valores ao array
+O código a seguir une três valores ao array:
 
 ```js
 var alpha = ['a', 'b', 'c'];

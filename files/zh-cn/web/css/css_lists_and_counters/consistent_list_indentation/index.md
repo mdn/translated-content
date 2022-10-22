@@ -22,7 +22,7 @@ original_slug: Web/Guide/CSS/Consistent_list_indentation
 
 ![Figure 3](/@api/deki/files/621/=Consistent-list-indentation-figure3.gif)
 
-这里，蓝色的虚线边框表示 \<ul> 元素内容区域的边缘。因为我们没有给 \<ul> 元素添加内边距， 所以它的内容的包裹层紧贴在三个列表项外。
+这里，蓝色的虚线边框表示 \<ul> 元素内容区域的边缘。因为我们没有给 \<ul> 元素添加内边距，所以它的内容的包裹层紧贴在三个列表项外。
 
 现在我们来添加列表项目标记，由于这是一个无序列表，我们添加传统的实心圆“着重标记”，如下图图 4 所示。
 

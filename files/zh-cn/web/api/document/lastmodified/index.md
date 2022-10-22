@@ -19,7 +19,7 @@ var string = document.lastModified;
 
 ```plain
 dump(document.lastModified);
-// 返回: Tuesday, July 10, 2001 10:19:42
+// 返回：Tuesday, July 10, 2001 10:19:42
 ```
 
 ### 备注

@@ -2,6 +2,7 @@
 title: performance.toJSON()
 slug: Web/API/Performance/toJSON
 ---
+
 {{APIRef("High Resolution Timing")}}
 
 **`toJSON()`** は {{domxref("Performance")}} インターフェイスのメソッドで、標準のシリアライザーです。パフォーマンスオブジェクトのプロパティの JSON 表現を返します。

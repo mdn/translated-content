@@ -2,6 +2,7 @@
 title: 'CSP: script-src-elem'
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src-elem
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`script-src-elem`** ディレクティブは、 JavaScript の {{HTMLElement("script")}} 要素の有効なソースを指定しますが、 `onclick` のようなインラインスクリプトのイベントハンドラーは指定しません。

@@ -17,6 +17,7 @@ tags:
   - paso a paso
 translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
 _¿Cómo se verá tu sitio web?_, analiza el trabajo de planificación y diseño que debes realizar para tu sitio web antes de escribir el código, incluyendo: "¿qué información ofrece mi sitio web?", "¿qué tipos de letra y colores quiero?" y "¿qué hace mi sitio?".
@@ -53,7 +54,7 @@ Aún debes tener los párrafos y el título de antes. Mantenlos cerca.
 
 ### Color del tema
 
-Para elegir un color, ve al [Selector de color](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Colors/Color_picker_tool) y busca un color que te guste . Al hacer clic en un color, verás un extraño código de seis caracteres como `#660066`. Eso se llama _código hex_ (abreviatura de hexadecimal) y representa tu color. Copia el código en un lugar seguro por ahora.
+Para elegir un color, ve al [Selector de color](/es/docs/Web/CSS/CSS_Colors/Color_picker_tool) y busca un color que te guste . Al hacer clic en un color, verás un extraño código de seis caracteres como `#660066`. Eso se llama _código hex_ (abreviatura de hexadecimal) y representa tu color. Copia el código en un lugar seguro por ahora.
 
 ![Color del tema](https://mdn.mozillademos.org/files/8975/Screenshot%20from%202014-11-03%2017:40:49.png)
 
@@ -76,7 +77,7 @@ Para elegir un tipo de letra:
 
 1. Ve a [Google Fonts](http://www.google.com/fonts) y desplázate hacia abajo en la lista hasta que encuentres una que te guste. También puedes utilizar los controles de la derecha para filtrar aún más los resultados.
 2. Haz clic en el icono "más" (Agregar a) junto al tipo de letra que desees.
-3. Haz clic en el botón _"*Familia seleccionada"_ en el panel en la parte inferior de la página ("\*" depende de cuántos tipos de letra hayas seleccionado).
+3. Haz clic en el botón _"\*Familia seleccionada"_ en el panel en la parte inferior de la página ("\*" depende de cuántos tipos de letra hayas seleccionado).
 4. En el cuadro emergente, puedes ver y copiar las líneas de código que Google te brinda en tu editor de texto para guardarlas para más adelante.
 
 ![Archivos de tipo de letra](https://mdn.mozillademos.org/files/13871/font1.png)
@@ -87,11 +88,11 @@ Para elegir un tipo de letra:
 
 ## En este módulo
 
-- {{web.link("/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico", "Instalación de software básico")}}
-- {{web.link("/es/docs/Learn/Getting_started_with_the_web/Cual_sera_la_apariencia_de_tu_sitio_web", "Cuál será la apariencia de tu sitio web")}}
-- {{web.link("/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files", "Manejo de archivos")}}
-- {{web.link("/es/docs/Learn/Getting_started_with_the_web/HTML_basics", "Conceptos básicos de HTML")}}
-- {{web.link("/es/docs/Learn/Getting_started_with_the_web/CSS_basics", "Conceptos básicos de CSS")}}
-- {{web.link("/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics", "Conceptos básicos de JavaScript")}}
-- {{web.link("/es/docs/Learn/Getting_started_with_the_web/Publishing_your_website", "Publicar tu sitio web")}}
-- {{web.link("/es/docs/Learn/Getting_started_with_the_web/Cómo_funciona_la_Web", "Cómo funciona la Web")}}
+- [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico)
+- [Cuál será la apariencia de tu sitio web](/es/docs/Learn/Getting_started_with_the_web/Cual_sera_la_apariencia_de_tu_sitio_web)
+- [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
+- [Conceptos básicos de HTML](/es/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [Conceptos básicos de CSS](/es/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [Conceptos básicos de JavaScript](/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [Publicar tu sitio web](/es/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [Cómo funciona la Web](/es/docs/Learn/Getting_started_with_the_web/Cómo_funciona_la_Web)

@@ -2,6 +2,7 @@
 title: Node.isConnected
 slug: Web/API/Node/isConnected
 ---
+
 {{APIRef("DOM")}}
 
 **`isConnected`** は {{domxref("Node")}} インターフェイスの読み出し専用のプロパティで、ノードがコンテキストオブジェクト、例えば、通常の DOM の場合は {{domxref("Document")}} オブジェクト、シャドウ DOM の場合は {{domxref("ShadowRoot")}} に（直接的または間接的に）接続されているかどうかを示す論理値を返します。

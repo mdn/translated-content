@@ -2,6 +2,7 @@
 title: Firefox 56 for developers
 slug: Mozilla/Firefox/Releases/56
 ---
+
 Firefox 56 は、米国時間 2017 年 9 月 28 日にリリースされました。このページでは、開発者に影響する Firefox 56 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧

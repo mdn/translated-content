@@ -2,6 +2,7 @@
 title: <menu>
 slug: Web/HTML/Element/menu
 ---
+
 {{HTMLRef}}{{SeeCompatTable}}
 
 **HTML の `<menu>` 要素**は、ユーザーが実行またはアクティブ化できるコマンドのグループを表します。これは画面の上部に現れるリストメニューと、ボタンを押したときにその下部付近に現れるような[コンテキストメニュー](/ja/docs/Web/HTML/Element/menu#context_menu)の両方を含みます。
@@ -155,9 +156,9 @@ div {
 
 ### メニューボタン
 
-> **Warning:** メニューボタンを実装しているブラウザーはまだ知られていません。 `<menu>` 要素の {{HTMLAttrxRef("type", "menu")}} 属性は廃止されました。
+> **警告:** メニューボタンを実装しているブラウザーはまだ知られていません。 `<menu>` 要素の {{HTMLAttrxRef("type", "menu")}} 属性は廃止されました。
 
-> **Warning:** {{HTMLElement("menuitem")}} 要素は廃止されました。
+> **警告:** {{HTMLElement("menuitem")}} 要素は廃止されました。
 
 #### HTML
 
@@ -181,7 +182,7 @@ div {
 
 ### ツールバー
 
-> **Warning:** ツールバーメニューを実装しているブラウザーはまだ知られていません。
+> **警告:** ツールバーメニューを実装しているブラウザーはまだ知られていません。
 
 #### HTML
 

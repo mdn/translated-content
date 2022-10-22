@@ -17,8 +17,6 @@ Al poner el valor de esta propiedad a `ignore`, deshabilitas el hecho de que el 
 
 {{cssinfo}}
 
-> **Nota:** Esta propiedad no funciona con los elementos XUL {{XULElem("textbox")}} , porque el `textbox` en sí mismo nunca tomará el foco. En su lugar , XBL crea un elemento HTML {{HTMLElement("input")}} anónimo dentro del `textbox`, y es ese elemento el que recibe el foco. Se puede evitar que el `textbox` obtenga el foco de teclado estableciendo su índice de tabulación a `-1`, y que obtenga el foco del ratón evitando la acción por defecto para los eventos `mousedown`.
-
 ## Síntaxis
 
 ```css

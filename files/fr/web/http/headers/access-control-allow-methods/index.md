@@ -45,21 +45,11 @@ Access-Control-Allow-Methods: POST, GET, OPTIONS
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                   | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#http-access-control-allow-methods', 'Access-Control-Allow-Methods')}} | {{Spec2("Fetch")}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("http.headers.Access-Control-Allow-Methods")}}
-
-## Notes de compatibilité
-
-- La valeur joker (\*) mentionnée dans la dernière version de la spécification n'est pas encore implémentée dans tous les navigateurs :
-
-  - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
-  - Firefox: {{bug(1309358)}}
-  - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
+{{Compat}}
 
 ## Voir aussi
 

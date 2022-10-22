@@ -9,7 +9,7 @@ slug: Web/SVG/Attribute/visibility
 
 > **备注：** 如果 {{ SVGElement("tspan") }}元素、{{ SVGElement("tref") }}元素或{{ SVGElement("altGlyph") }}元素上的`visibility`属性设置为`hidden`，则文本变得不可见，但是依然占用文本布局计算的空间。
 
-根据属性{{ SVGAttr("pointer-events") }}的值，图形元素如果属性`visibility 值设置为 hidden，依然能够响应事件。`
+根据属性{{ SVGAttr("pointer-events") }}的值，图形元素如果属性`visibility` 值设置为 `hidden`，依然能够响应事件。
 
 作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。请阅读{{ cssxref("visibility","CSS visibility") }}以了解更多信息。
 

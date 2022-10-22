@@ -23,7 +23,7 @@ flex-shrink: unset
 
 ## 语法
 
-`flex-shrink` 属性只能是一个 `<number>。`
+`flex-shrink` 属性只能是一个 `<number>`。
 
 ### 取值
 

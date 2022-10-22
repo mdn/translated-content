@@ -22,7 +22,7 @@ regexObj.exec(string)
 
 ### Valor retornado
 
-Se a combinação acontecer, o método `exec() `o método retorna um array e atualiza as propriedades do objeto da expressão regular. Esse array retornado possui o texto combinado como primeiro item e depois um item para cada captura contendo o respectivo texto.
+Se a combinação acontecer, o método `exec()` o método retorna um array e atualiza as propriedades do objeto da expressão regular. Esse array retornado possui o texto combinado como primeiro item e depois um item para cada captura contendo o respectivo texto.
 
 Se falhar, o retorno do método `exec()` será {{jsxref("null")}}.
 

@@ -87,13 +87,11 @@ On aura ainsi une taille minimale de `1rem` et la taille du texte qui se met à 
 
 ## Spécifications
 
-| Spécification                                                            | État                             | Commentaires |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('CSS4 Values', '#calc-notation', 'min()')}} | {{Spec2('CSS4 Values')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.min")}}
+{{Compat}}
 
 ## Voir aussi
 

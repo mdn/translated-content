@@ -2,6 +2,7 @@
 title: alarms.onAlarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
 ---
+
 {{AddonSidebar()}}
 
 アドオンによってアラームが動作した際に発火します。
@@ -42,4 +43,4 @@ browser.alarms.onAlarm.hasListener(listener)
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。
+> **メモ:** この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。

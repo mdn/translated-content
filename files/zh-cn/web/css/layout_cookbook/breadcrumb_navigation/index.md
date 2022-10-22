@@ -25,7 +25,7 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 ## 无障碍访问问题
 
-我使用了 `aria-label` 和 `aria-current` 属性来帮助用户理解这个导航的结构，以及当前页面在结构中的位置。 详情请参见相关链接。
+我使用了 `aria-label` 和 `aria-current` 属性来帮助用户理解这个导航的结构，以及当前页面在结构中的位置。详情请参见相关链接。
 
 ## 浏览器兼容性
 

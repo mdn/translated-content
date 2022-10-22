@@ -17,7 +17,7 @@ hyphens: initial;
 hyphens: unset;
 ```
 
-Regras de hifenização são específicas para cada idioma. Em HTML, o idioma é determinado pelo atributo `lang,` e os navegadores irão utilizar hífen apenas caso este atributo esteja presente e se houver um dicionário de hifenização disponível. Em XML, deve ser usado o atributo `xml:lang.`
+Regras de hifenização são específicas para cada idioma. Em HTML, o idioma é determinado pelo atributo `lang`, e os navegadores irão utilizar hífen apenas caso este atributo esteja presente e se houver um dicionário de hifenização disponível. Em XML, deve ser usado o atributo `xml:lang.`
 
 > **Note:** **Nota:** As regras que definem como a hifenização é realizada não são explicitamente definidas pela especificação, então a hifenização exata pode variar de navegador para navegador.
 

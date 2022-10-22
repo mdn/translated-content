@@ -96,5 +96,5 @@ window.addEventListener('focus', play);
 
 ## 参见
 
-- 相关联事件: {{domxref("Window/focus_event", "focus")}}
+- 相关联事件：{{domxref("Window/focus_event", "focus")}}
 - Element 目标上的这个事件:{{domxref("Element/blur_event", "blur")}} 事件

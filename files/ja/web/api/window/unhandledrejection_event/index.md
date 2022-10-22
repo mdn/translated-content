@@ -2,6 +2,7 @@
 title: 'Window: unhandledrejection イベント'
 slug: Web/API/Window/unhandledrejection_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`unhandledrejection`** イベントは、 JavaScript の拒否ハンドラーを持たない {{jsxref("Promise")}} が拒否されたときにスクリプトのグローバルスコープに送られます。 通常、これは {{domxref("window")}} ですが、 {{domxref("Worker")}} であることもあります。 これはデバッグや、予期しない場面でのエラーハンドリングのエラーの代替手段を提供するために利用することができます。

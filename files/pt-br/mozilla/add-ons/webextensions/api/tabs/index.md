@@ -26,9 +26,9 @@ You can use most of this API without any special permission. However:
 
   - In Firefox, this also means you need `"tabs"` to {{WebExtAPIRef("tabs.query()")}} by URL.
 
-- To use {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}}, you must have the [host permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) for the tab
+- To use {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}}, you must have the [host permission](/pt-BR/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) for the tab
 
-Alternatively, you can get these permissions temporarily, only for the currently active tab and only in response to an explicit user action, by asking for the [`"activeTab"` permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
+Alternatively, you can get these permissions temporarily, only for the currently active tab and only in response to an explicit user action, by asking for the [`"activeTab"` permission](/pt-BR/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
 
 Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a single tab only within a browser session. If the browser is restarted, then it can and will reuse tab `id`s. To associate information with a tab across browser restarts, use {{WebExtAPIRef("sessions.setTabValue()")}}.
 
@@ -39,7 +39,7 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 - {{WebExtAPIRef("tabs.MutedInfo")}}
   - : This object contains a boolean indicating whether the tab is muted, and the reason for the last state change.
 - {{WebExtAPIRef("tabs.PageSettings")}}
-  - : Used to control how a tab is rendered as a PDF by the [`tabs.saveAsPDF()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF "Saves the current page as a PDF. This will open a dialog, supplied by the underlying operating system, asking the user where they want to save the PDF.") method.
+  - : Used to control how a tab is rendered as a PDF by the [`tabs.saveAsPDF()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF) method.
 - {{WebExtAPIRef("tabs.Tab")}}
   - : This type contains information about a tab.
 - {{WebExtAPIRef("tabs.TabStatus")}}
@@ -81,9 +81,9 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 - {{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}
   - : Gets details about all tabs in the specified window.
 - {{WebExtAPIRef("tabs.getCurrent()")}}
-  - : Gets information about the tab that this script is running in, as a [`tabs.Tab`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab "This type contains information about a tab.") object.
+  - : Gets information about the tab that this script is running in, as a [`tabs.Tab`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab) object.
 - {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
-  - : Gets the tab that is selected in the specified window. **Deprecated: use [`tabs.query({active: true})`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query "Gets all tabs that have the specified properties, or all tabs if no properties are specified.") instead.**
+  - : Gets the tab that is selected in the specified window. **Deprecated: use [`tabs.query({active: true})`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) instead.**
 - {{WebExtAPIRef("tabs.getZoom()")}}
   - : Gets the current zoom factor of the specified tab.
 - {{WebExtAPIRef("tabs.getZoomSettings()")}}
@@ -168,19 +168,20 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 
 > **Nota:** **Acknowledgements**This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
 //
-// * Redistributions of source code must retain the above copyright
+//    * Redistributions of source code must retain the above copyright
 // notice, this list of conditions and the following disclaimer.
-// * Redistributions in binary form must reproduce the above
+//    * Redistributions in binary form must reproduce the above
 // copyright notice, this list of conditions and the following disclaimer
 // in the documentation and/or other materials provided with the
 // distribution.
-// * Neither the name of Google Inc. nor the names of its
+//    * Neither the name of Google Inc. nor the names of its
 // contributors may be used to endorse or promote products derived from
 // this software without specific prior written permission.
 //
@@ -194,4 +195,5 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</div>
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->

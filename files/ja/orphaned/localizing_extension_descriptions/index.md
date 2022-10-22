@@ -3,6 +3,7 @@ title: Localizing extension descriptions
 slug: orphaned/Localizing_extension_descriptions
 original_slug: Localizing_extension_descriptions
 ---
+
 ### Gecko 1.9 におけるローカライズ
 
 Gecko 1.9 には、アドオンの説明や他のメタデータのローカライズに関して、新しく、より強力な方法が盛り込まれています。各言語の説明はすべて、`em:localized` プロパティを使って [install.rdf](/ja/Install_Manifests) ファイルに書かれます。`em:localized` それぞれが、情報が使われるべきロケールを示す `em:locale` プロパティを少なくとも 1 つと、そのロケールの様々な文字列を持ちます。以下の例はこのデモです (ほとんどの一般的なマニフェストプロパティは簡潔にするため削除してあります)。

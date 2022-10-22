@@ -2,6 +2,7 @@
 title: RTCDataChannelEvent
 slug: Web/API/RTCDataChannelEvent
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCDataChannelEvent`** インタフェースは{{domxref("RTCPeerConnection")}}へ{{domxref("RTCDataChannel")}}をアタッチしている時に発生するイベントを表現します。イベントタイプは、{{event("datachannel")}}です。

@@ -12,7 +12,7 @@ original_slug: Mozilla/Firefox/Releases/3/Zoom_de_página_inteira
 
 {{ Gecko_minversion_header("1.9") }}
 
-Zoom de página inteira (ou apenas fullzoom) é um novo recurso do [Firefox 3](/en/Firefox_3_for_developers "en/Firefox_3_for_developers").
+Zoom de página inteira (ou apenas fullzoom) é um novo recurso do [Firefox 3](/en/Firefox_3_for_developers).
 
 ### Exemplo (XUL:browser)
 
@@ -28,7 +28,7 @@ ZoomManager.setZoomForBrowser(gBrowser.selectedBrowser, ZoomManager.MIN);
 
 Nota: Isso provavelmente está desatualizado.
 
-Você pode usar o recurso fullZoom para um [XUL:iframe](/en/XUL/iframe "en/XUL/iframe") também. No entanto, como um iframe não tem uma propriedade markupDocumentViewer, precisamos obtê-la primeiro:
+Você pode usar o recurso fullZoom para um [XUL:iframe](/en/XUL/iframe) também. No entanto, como um iframe não tem uma propriedade markupDocumentViewer, precisamos obtê-la primeiro:
 
 ```
 var zoom = 1.5;
@@ -41,6 +41,6 @@ docViewer.fullZoom = zoom;
 ### References
 
 - Extensão de zoom de página por Ted Mielczarek [fullpagezoom.xpi](http://ted.mielczarek.org/code/mozilla/fullpagezoom.xpi) para os últimos Firefox 3.0 nightlies
-- [Glazoom extension](https://addons.mozilla.org/en-US/firefox/addon/6489) por Daniel Glazman para Firefox 3.0
+- [Glazoom extension](https://addons.mozilla.org/pt-BR/firefox/addon/6489) por Daniel Glazman para Firefox 3.0
 - O [bugzilla bug](https://bugzilla.mozilla.org/show_bug.cgi?id=4821) sobre fullZoom.
 - `nsIMarkupDocumentViewer` documentação da interface.

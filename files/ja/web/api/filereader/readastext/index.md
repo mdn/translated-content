@@ -7,7 +7,7 @@ slug: Web/API/FileReader/readAsText
 
 **`readAsText()`** メソッドは、指定された {{domxref("Blob")}} または {{domxref("File")}} の内容を読み取るために使用します。読み取り操作が完了すると、 {{domxref("FileReader.readyState","readyState")}} が `DONE` に変わり、 {{event("loadend")}} イベントが発生し、 {{domxref("FileReader.result","result")}} プロパティにはファイルの内容が文字列として格納されます。
 
-> **Note:** **より新しい API が利用できます** > {{domxref("Blob.text()")}} メソッドは、ファイルをテキストとして読み取るための新しい Promise ベースの API です。
+> **メモ:** **より新しい API が利用できます** > {{domxref("Blob.text()")}} メソッドは、ファイルをテキストとして読み取るための新しい Promise ベースの API です。
 
 ## 構文
 

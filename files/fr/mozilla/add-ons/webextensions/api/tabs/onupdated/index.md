@@ -50,7 +50,7 @@ Les événements ont trois fonctions :
     - `tabId`
       - : `integer`. ID de l'onglet qui a été mis à jour.
     - `changeInfo`
-      - : [`object`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated$edit#changeInfo). ontient les propriétés des propriétés de l'onglet qui ont été modifiées. Voir [`changeInfo`](/fr/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo) ci-dessous.
+      - : [`object`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo). ontient les propriétés des propriétés de l'onglet qui ont été modifiées. Voir [`changeInfo`](/fr/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo) ci-dessous.
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. Le nouvel état de l'onglet.
 
@@ -234,7 +234,8 @@ browser.tabs.onUpdated.addListener(
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -261,6 +262,6 @@ browser.tabs.onUpdated.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->
 
 {{AddonSidebar}}

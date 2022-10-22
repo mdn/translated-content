@@ -3,11 +3,12 @@ title: RTCIdentityEvent
 slug: orphaned/Web/API/RTCIdentityEvent
 original_slug: Web/API/RTCIdentityEvent
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCIdentityEvent`** インタフェースは、通常 {{domxref("RTCPeerConnection")}}に関連付けられたアイデンティティー・プロバイダ(IdP) を示すイベントを表現します。これは ID アサーションによって生成されたものです。イベントタイプは{{event("identityresult")}}です。
 
-> **Note:** Firefox implements this interface under the following name: `RTCPeerConnectionIdentityEvent.` It is likely that it will correct this name when it will unprefix {{domxref("RTCPeerConnection")}}, once spec and implementation will have been stabilized.
+> **メモ:** Firefox implements this interface under the following name: `RTCPeerConnectionIdentityEvent.` It is likely that it will correct this name when it will unprefix {{domxref("RTCPeerConnection")}}, once spec and implementation will have been stabilized.
 
 ## プロパティ
 

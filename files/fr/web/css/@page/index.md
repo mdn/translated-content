@@ -66,15 +66,11 @@ Pour d'autres exemples, voir les pages qui concernent les pseudo-classes liées 
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                             | Commentaires                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS Logical Properties', '#logical-page', ':recto and :verso')}} | {{Spec2('CSS Logical Properties')}} | Ajout des sélecteurs de page `:recto` et `:verso`.                                                                                    |
-| {{SpecName('CSS3 Paged Media', '#at-page-rule', '@page')}}                         | {{Spec2('CSS3 Paged Media')}}         | Aucun changement depuis  {{SpecName('CSS2.1')}}, bien que plus de règles @ puissent être utilisées au sein d'une règle `@page`. |
-| {{SpecName('CSS2.1', 'page.html#page-selectors', '@page')}}                     | {{Spec2('CSS2.1')}}                         | Définition initiale.                                                                                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.page")}}
+{{Compat}}
 
 ## Voir aussi
 

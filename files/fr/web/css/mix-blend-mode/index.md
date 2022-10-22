@@ -42,9 +42,13 @@ mix-blend-mode: unset;
 - `<blend-mode>`
   - : Indique comment la fusion des modes doit intervenir (cf. {{cssxref("&lt;blend-mode&gt;")}}).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -632,15 +636,11 @@ circle {
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('Compositing', '#mix-blend-mode', 'mix-blend-mode')}} | {{Spec2('Compositing')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.mix-blend-mode")}}
+{{Compat}}
 
 ## Voir aussi
 

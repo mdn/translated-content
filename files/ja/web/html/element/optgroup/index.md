@@ -46,7 +46,7 @@ slug: Web/HTML/Element/optgroup
   </tbody>
 </table>
 
-> **Note:** optgroup 要素を入れ子にすることはできません。
+> **メモ:** optgroup 要素を入れ子にすることはできません。
 
 ## 属性
 

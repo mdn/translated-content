@@ -50,7 +50,7 @@ grid-row-end: unset;
 
     Si aucune zone ne correspond, la valeur est traitée comme la combinaison de l'entier 1 et de `<custom-ident>` (cf. définition suivante).
 
-    ` <custom-ident``> ` ne peut pas prendre la valeur `span`.
+    `<custom-ident>` ne peut pas prendre la valeur `span`.
 
 - `<integer> && <custom-ident>?`
 
@@ -66,9 +66,13 @@ grid-row-end: unset;
 
     Si \<integer> est absent, la valeur par défaut sera 1. Les entiers négatifs ou nuls ne sont pas autorisés.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -132,15 +136,11 @@ grid-row-end: unset;
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires        |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-row-end", "grid-row-end")}} | {{Spec2("CSS3 Grid")}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid-row-end")}}
+{{Compat}}
 
 ## Voir aussi
 

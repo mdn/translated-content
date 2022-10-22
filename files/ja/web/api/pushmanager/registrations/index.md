@@ -2,6 +2,7 @@
 title: PushManager.registrations()
 slug: Web/API/PushManager/registrations
 ---
+
 {{deprecated_header}}{{ApiRef("Push API")}}
 
 **`registrations`** メソッドは、プッシュ通知の端点登録の存在に関してシステムに問い合わせするために使用します。

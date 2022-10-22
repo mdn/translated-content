@@ -12,17 +12,17 @@ IndexedDB é uma forma de armazenar dados no navegador do usuário. Com ele voc�
 
 Esse tutorial utiliza a API assíncrona do IndexedDB. Se você não está familiarizado com IndexedDB, você pode ler [Conceitos básicos sobre IndexedDB](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB).
 
-Para a documentação de referência, veja o artigo sobre [API IndexedDB](/pt-BR/docs/IndexedDB "https://developer.mozilla.org/en/IndexedDB"), pois nele contém os tipos de objetos utilizados no IndexedDB, como também métodos da API, tanto síncrona como assíncrona.
+Para a documentação de referência, veja o artigo sobre [API IndexedDB](/pt-BR/docs/IndexedDB), pois nele contém os tipos de objetos utilizados no IndexedDB, como também métodos da API, tanto síncrona como assíncrona.
 
 ## Padrão básico
 
 O IndexedDB encoraja o uso do seguinte padrão:
 
-1.  Abrir um banco de dados.
-2.  Criar um ObjectStore ao atualizar o banco.
-3.  Iniciar uma transação e e faz um request para fazer alguma operação no banco, como adicionar ou obter dados.
-4.  Esperar a operação ser completada ouvindo algum evento DOM.
-5.  Fazer algo com o resultado da query (que pode ser obtida pelo objeto request).
+1. Abrir um banco de dados.
+2. Criar um ObjectStore ao atualizar o banco.
+3. Iniciar uma transação e e faz um request para fazer alguma operação no banco, como adicionar ou obter dados.
+4. Esperar a operação ser completada ouvindo algum evento DOM.
+5. Fazer algo com o resultado da query (que pode ser obtida pelo objeto request).
 
 OK, então, agora com esses conceitos em mente, nós podemos fazer coisas mais concretas.
 
@@ -65,7 +65,7 @@ Abrir um banco é como qualquer outra operação — Você tem que "requerer (re
 
 A requisição de abertura não abre o banco ou inicia a transação. A chamada da função `open()` retorna um objeto [`IDBOpenDBRequest`](/pt-BR/docs/IndexedDB/IDBOpenDBRequest) com o resultado (success) ou um erro que você terá que tratar. Muitas outras funções assíncronas no IndexedDB fazem a mesma coisa - retornam um objeto [`IDBRequest`](/pt-BR/docs/IndexedDB/IDBRequest) com o resultado ou erro. O resultado para a função open é uma instância de `IDBDatabase.`
 
-O segundo parâmetro para o método open é a versão do banco. A versão do banco determina seu schema — os registros no banco e sua estrutura. Se o banco não existe ainda, ele é criado pela operação `open`, então o evento` onupgradeneeded `é chamado e você cria o schema do banco nesse evento. Se o banco existe mas você está fornecendo um novo número de versão, o evento `onupgradeneeded `é chamado imediatamente, permitindo você tratar a atualização do schema. Para mais informações sobre isso veja [Updating the version of the database](#Updating_the_version_of_the_database).
+O segundo parâmetro para o método open é a versão do banco. A versão do banco determina seu schema — os registros no banco e sua estrutura. Se o banco não existe ainda, ele é criado pela operação `open`, então o evento `onupgradeneeded` é chamado e você cria o schema do banco nesse evento. Se o banco existe mas você está fornecendo um novo número de versão, o evento `onupgradeneeded` é chamado imediatamente, permitindo você tratar a atualização do schema. Para mais informações sobre isso veja [Updating the version of the database](#Updating_the_version_of_the_database).
 
 > **Aviso:** O número de versão é um `unsigned long long`, o que significa que ele pode ver um inteiro muito grande. Isso também significa que você não pode usar float, pois ele será convertido em um inteiro pequeno e a transação pode não acontecer, ou o evento `upgradeneeded` pode não ser chamado. Então se você usar 2.4 como versão:
 >
@@ -88,7 +88,7 @@ request.onsuccess = function(event) {
 
 Qual das duas funções, `onsuccess()` ou `onerror()`, será chamada? Se tudo correr bem, o evento de sucesso (que é um evento DOM event com propriedade `type` setada `"success"`) é chamado com `request` como seu `target`. Uma vez chamado, a função `onsuccess()` no `request` é chamada com o evento de sucesso em seu contexto. Por outro lado, se acontecer algum problema, um evento de erro (que é um evento DOM com a propriedade `type` setada para `"error"`) é chamado no `request`. Então a função `onerror()` com o evento erro em seu contexto.
 
-A API IndexedDB é feita para minimizar a necessidade de manipular erros, então você não fará muitos eventos de erro (ao menos, se você usar a API!) No caso de abrir um banco, portanto, existe algumas condições comuns para eventos de erro. O problema mais comum é o usuário não dar permissão para criar o banco. Um dos principais objetivos do IndexedDB é permitir muitos dados serem armazenados para uso offline. (Para aprender mais sobre o quanto cada navegador pode armazenar, veja [Storage limits](/en/IndexedDB#Storage_limits "https://developer.mozilla.org/en/IndexedDB#Storage_limits")).
+A API IndexedDB é feita para minimizar a necessidade de manipular erros, então você não fará muitos eventos de erro (ao menos, se você usar a API!) No caso de abrir um banco, portanto, existe algumas condições comuns para eventos de erro. O problema mais comum é o usuário não dar permissão para criar o banco. Um dos principais objetivos do IndexedDB é permitir muitos dados serem armazenados para uso offline. (Para aprender mais sobre o quanto cada navegador pode armazenar, veja [Storage limits](/en/IndexedDB#Storage_limits)).
 
 Obviamente, navegadores não querem armazenar dados que poluem seu computador, então o navegador mostra uma mensagem ao usuário na primeira vez que um aplicativo tenta abrir o IndexedDB. O usuário pode escolher permitir ou negar acesso. O IndexedDB também é desabilitado no modo privado dos navegadores (ctrl+shift+N no Chrome e ctrl+shift+P no Firefox). Isso acontece porque o intuito do modo privado é não deixar rastros na navegação.
 
@@ -138,7 +138,7 @@ Blink/Webkit suporta a versão atual da especificação, nas versões do Chrome 
 
 ### Estruturando o banco
 
-Agora a estrutura do banco. IndexedDB usa "armazens de objetos" em vez de tabelas, e um único banco de dados pode conter qualquer número de "armazem de objetos". Sempre que um valor é armazenado num objectStore, ele é associado a uma chave. Existe várias maneiras diferentes de uma chave ser mostrada, dependendo do que o objectStore usa, um [key path](/en/IndexedDB#gloss_key_path "https://developer.mozilla.org/en/IndexedDB#gloss_key_path") ou [key generator](/en/IndexedDB#gloss_key_generator "en/IndexedDB#gloss key generator").
+Agora a estrutura do banco. IndexedDB usa "armazens de objetos" em vez de tabelas, e um único banco de dados pode conter qualquer número de "armazem de objetos". Sempre que um valor é armazenado num objectStore, ele é associado a uma chave. Existe várias maneiras diferentes de uma chave ser mostrada, dependendo do que o objectStore usa, um [key path](/en/IndexedDB#gloss_key_path) ou [key generator](/en/IndexedDB#gloss_key_generator).
 
 A tabela abaixo mostra as direfentes chaves suportadas:
 
@@ -206,11 +206,11 @@ Armazens de objetos são criados com uma única chamada de `createObjectStore()`
 
 Nós também criamos um índice chamado "nome" ligado à propriedade `nome`. Assim como o `createObjectStore()`, o `createIndex()` tem um parâmetro opcional `options` que cuida do tipo de índice que você quer criar. Adicionando objetos que não tem a propriedade `nome` terá sucesso, porém esses objetos não aparecerão no índice "nome".
 
-Nós podemos obter os objetos de clientes armazenados usando os `ssn` da objectStore diretamente, ou usando os nomes usados no índice. Para aprender como isso é feito, veja a seção [usando um índice](#Using_an_index "Using IndexedDB#Using an index").
+Nós podemos obter os objetos de clientes armazenados usando os `ssn` da objectStore diretamente, ou usando os nomes usados no índice. Para aprender como isso é feito, veja a seção [usando um índice](#Using_an_index).
 
 ### Usando um key generator
 
-Setando uma flag `autoIncrement `ao criar o objectStore habilitará o key generator. Por padrão ele não é setado.
+Setando uma flag `autoIncrement` ao criar o objectStore habilitará o key generator. Por padrão ele não é setado.
 
 Com o key generator, a chave será gerada automaticamente quando você adicionar algum valor no objectStore. O atual número do key generator é sempre setado 1 quando a primeira key generator do objectStore é criada. Basicamente a próxima chave recebe o incremento de 1. O número atual da key generator nunca decresce, a não ser se alguma operação do banco for revertida, como numa transação abortada, por exemplo. No entanto, deletar um registro ou limpar todos os registros nunca afeta o key generator dos objectStores.
 
@@ -243,9 +243,9 @@ Para mais detalhes veja ["W3C Key Generators"](http://www.w3.org/TR/IndexedDB/#k
 
 Antes de fazer qualquer coisa em um novo banco, você precisa iniciar uma transação. Transações estão no objeto database, e você tem que especificar qual objectStore você quer na transaction. Uma vez que você está dentro da transação, você pode acessar os objectStores com seus dados e fazer os requests. Depois, você precisa decidir se você vai fazer mudanças no banco ou se você simplesmente quer ler esses dados. Transações tem três modos disponíveis: `readonly`, `readwrite`, and `versionchange`.
 
-Para mudar o "schema" ou estrutura do banco — o que envolve criar ou deletar objectStores ou índices — a transação deve ser em modo `versionchange`. Esta transação é aberta chamando o método {{domxref("IDBFactory.open")}} especificando a `version.` (Em navegadores com WebKit que não tem a ultima especificação implementada, o método {{domxref("IDBFactory.open")}} tem apenas um parâmetro, o `nome` do banco; então você deve chamar {{domxref("IDBVersionChangeRequest.setVersion")}} para estabelecer uma transação `versionchange`.)
+Para mudar o "schema" ou estrutura do banco — o que envolve criar ou deletar objectStores ou índices — a transação deve ser em modo `versionchange`. Esta transação é aberta chamando o método {{domxref("IDBFactory.open")}} especificando a `version`. (Em navegadores com WebKit que não tem a ultima especificação implementada, o método {{domxref("IDBFactory.open")}} tem apenas um parâmetro, o `nome` do banco; então você deve chamar {{domxref("IDBVersionChangeRequest.setVersion")}} para estabelecer uma transação `versionchange`.)
 
-Para ler os registros de um objectStore existente, a transação pode ser tanto` readonly` quanto `readwrite`. Para fazer mudanças em um objectStore existente, a transação deve ser em modo `readwrite`. Você abre essas transações usando {{domxref("IDBDatabase.transaction")}}. O método aceita dois parâmetros: o `storeNames` (o escopo, definido como um array de objectStores que você quer acessar) e o `modo` (`readonly` or `readwrite`) da transação. O método retorna o objeto detransação contendo o método {{domxref("IDBIndex.objectStore")}}, que você pode usar para acessar seu objectStore. Por padrão, quando nenhum modo é especificado, a transação é aberta no modo `readonly`.
+Para ler os registros de um objectStore existente, a transação pode ser tanto `readonly` quanto `readwrite`. Para fazer mudanças em um objectStore existente, a transação deve ser em modo `readwrite`. Você abre essas transações usando {{domxref("IDBDatabase.transaction")}}. O método aceita dois parâmetros: o `storeNames` (o escopo, definido como um array de objectStores que você quer acessar) e o `modo` (`readonly` or `readwrite`) da transação. O método retorna o objeto detransação contendo o método {{domxref("IDBIndex.objectStore")}}, que você pode usar para acessar seu objectStore. Por padrão, quando nenhum modo é especificado, a transação é aberta no modo `readonly`.
 
 Você pode deixar o acesso aos dados mais rápido usando o escopo correto e o modo correto de transação. Aqui vai algumas dicas:
 
@@ -265,7 +265,7 @@ var transaction = db.transaction(["clientes"], "readwrite");
 
 A função `transaction()` tem dois argumentos (opcionais) e retorna um objeto de transação. O primeiro argumento é uma lista de objectStores que serão trabalhados na transação. Você pode passar um array vazio se você quer uma transação com todos os objectStores, mas não faça isso pois a especificação diz que um array vazio pode gerar um erro InvalidAccessError. Se você não especificar nada no segundo parâmetro, você tem uma transação read-only. Se você quer escrever no banco, use `"readwrite"`.
 
-Agora que você tem uma transação, você precisa entender seu tempo de uso. Transações são amarradas a um evento. Se você faz uma transação fora de um evento, ela ficará inativa. A única maneira de manter uma transação ativa é fazer um request nela. Quando o request acabar você terá a oportunidade de extender a transação durante o callback. Se você tentar extender uma transação dentro de um evento, então ela tornará inativa. Se existir requests pendentes, a transação continua ativa. O tempo de vida de uma transação é realmente simples mas deve ser usada em um curto espaço de tempo. Outros exemplos poderão ajudá-lo. Se você começar a ver` TRANSACTION_INACTIVE_ERR` error então você está fazendo algo errado.
+Agora que você tem uma transação, você precisa entender seu tempo de uso. Transações são amarradas a um evento. Se você faz uma transação fora de um evento, ela ficará inativa. A única maneira de manter uma transação ativa é fazer um request nela. Quando o request acabar você terá a oportunidade de extender a transação durante o callback. Se você tentar extender uma transação dentro de um evento, então ela tornará inativa. Se existir requests pendentes, a transação continua ativa. O tempo de vida de uma transação é realmente simples mas deve ser usada em um curto espaço de tempo. Outros exemplos poderão ajudá-lo. Se você começar a ver `TRANSACTION_INACTIVE_ERR` error então você está fazendo algo errado.
 
 Transações podem receber eventos DOM de três tipos diferentes: `error`, `abort`, e `complete`. Nós falamos sobre o `error`, ou seja, a transação recebe um error sempre que o request gerar erro. Um ponto mais sutil é que o comportamento padrão de um erro é abortar a transação na qual ele estava. A menos que você manipule o erro chamando `preventDefault()` e fazendo algo depois, a transaçaõ inteira será desfeita. Este design força você a pensar sobre manipulação de erros, mas você pode sempre adicionar um manipulador de todos os erros se a manipulação separada estiver complicada. Se você não tratar o erro ou chamar `abort()` na transação, então a transação é desfeita (roll back) e o evento `abort` é chamado. Por outro lado, depois de todo request completado, você tem um evento `complete`. Se você fazer várias operações no banco, então seguir as operações de transações pode ser um caminho a seguir.
 
@@ -330,7 +330,7 @@ db.transaction("clientes").objectStore("clientes").get("444-44-4444").onsuccess 
 };
 ```
 
-Viu como funciona? Desde que exista um objectStore, você pode evitar passar uma lista de objectStores que precisa na transação e passar apenas o nome como string. Você também pode ler do banco, apenas, então não precisará de uma transação `"readwrite".` Chamando `transaction()` com nenhum modo especificado, você terá uma transação `"readonly"`. Outra consideração é que você não necessita salvar o request em uma variável. Desde que o evento DOM tenha o target que você precisará para obter a propriedade `result`.
+Viu como funciona? Desde que exista um objectStore, você pode evitar passar uma lista de objectStores que precisa na transação e passar apenas o nome como string. Você também pode ler do banco, apenas, então não precisará de uma transação `"readwrite"`. Chamando `transaction()` com nenhum modo especificado, você terá uma transação `"readonly"`. Outra consideração é que você não necessita salvar o request em uma variável. Desde que o evento DOM tenha o target que você precisará para obter a propriedade `result`.
 
 > **Nota:** Você pode deixar o acesso aos dados mais rápido limitando o escopo e o modo de transação. Veja algumas dicas:
 >
@@ -1265,11 +1265,11 @@ Uma leitura adicional para você encontrar mais informações.
 
 ### Refências
 
-- [IndexedDB API Reference](/en/IndexedDB "https://developer.mozilla.org/en/IndexedDB")
+- [IndexedDB API Reference](/en/IndexedDB)
 - [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/pt-BR/docs/IndexedDB/Using_IndexedDB_in_chrome)
 - [Using JavaScript generators in Firefox](/pt-BR/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)
-- IndexedDB [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1 "https://mxr.mozilla.org/mozilla-central/find?text=&string=dom/indexedDB/.*\\.idl®exp=1") in the Firefox source code
+- IndexedDB [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1) in the Firefox source code
 
 ### Guias e tutoriais
 

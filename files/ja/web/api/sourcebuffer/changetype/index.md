@@ -2,6 +2,7 @@
 title: SourceBuffer.changeType()
 slug: Web/API/SourceBuffer/changeType
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`changeType()`** メソッドは、今後 {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} を呼び出すときに新しいメディアデータが準拠することを期待する MIME タイプを設定します。 これにより、コーデックまたはコンテナタイプを途中で変更できます。

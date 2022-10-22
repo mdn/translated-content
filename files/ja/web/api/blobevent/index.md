@@ -2,6 +2,7 @@
 title: BlobEvent
 slug: Web/API/BlobEvent
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`BlobEvent`** インターフェイスは、{{domxref("Blob")}} に関連付けられたイベントを表します。 これらの blob は、一般的にメディアコンテンツと関連付けられますが、必ずしもそうとは限りません。

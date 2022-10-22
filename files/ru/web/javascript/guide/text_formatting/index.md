@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 
 Начиная со стандарта ES6 (ES-2015) для простых и сложных строк можно использовать обратные косые кавычки, а также, вставлять значения:
 
-```
+```js
 const name = "Alex";
 const str =
   `Привет, ${name},

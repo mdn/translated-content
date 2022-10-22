@@ -5,7 +5,7 @@ slug: Web/HTML/Element/Input/button
 
 {{HTMLRef}}
 
-**`元素<input type="button">`** 是 **`<input>`** 元素的特殊版本，被用来创建一个没有默认值的可点击按钮。 它已经在 HTML5 被 **[\<button>](/zh-CN/docs/Web/HTML/Element/button)元素取代**
+**`元素<input type="button">`** 是 **`<input>`** 元素的特殊版本，被用来创建一个没有默认值的可点击按钮。它已经在 HTML5 被 **[\<button>](/zh-CN/docs/Web/HTML/Element/button)元素取代**
 
 浏览器生成一个控件没有默认值的可点击按钮。该按钮上可有任何标签。该控件在不同的浏览器上，可能有不同的样式。
 

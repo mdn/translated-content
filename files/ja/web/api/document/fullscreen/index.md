@@ -2,13 +2,14 @@
 title: Document.fullscreen
 slug: Web/API/Document/fullscreen
 ---
+
 {{APIRef("Fullscreen API")}}{{Deprecated_Header}}
 
 廃止された {{domxref("Document")}} インターフェイスの **`fullscreen`** プロパティは読み取り専用で、文書が現在全画面モードで表示されているかどうかを報告します。
 
 このプロパティは読み取り専用ですが、変更されても (strict モードでも) 例外を投げません。セッターは何もしないので、無視されます。
 
-> **Note:** このプロパティは非推奨であり、文書が全画面モードになっているかどうかは、 {{DOMxRef("Document.fullscreenElement")}} が `null` ではないことで確認することができます。
+> **メモ:** このプロパティは非推奨であり、文書が全画面モードになっているかどうかは、 {{DOMxRef("Document.fullscreenElement")}} が `null` ではないことで確認することができます。
 
 ## 構文
 

@@ -777,7 +777,8 @@
 /pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/pt-BR/docs/Web/API/Canvas_API/Tutorial/Using_images
 /pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Utilizacao_basica	/pt-BR/docs/Web/API/Canvas_API/Tutorial/Basic_usage
 /pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo	/pt-BR/docs/Web/Guide/HTML/Content_categories
-/pt-BR/docs/Web/Guide/HTML/Content_Editable	/pt-BR/docs/Web/Guide/HTML/Editable_content
+/pt-BR/docs/Web/Guide/HTML/Content_Editable	/pt-BR/docs/conflicting/Web/HTML/Global_attributes/contenteditable
+/pt-BR/docs/Web/Guide/HTML/Editable_content	/pt-BR/docs/conflicting/Web/HTML/Global_attributes/contenteditable
 /pt-BR/docs/Web/Guide/HTML/Forms	/pt-BR/docs/Learn/Forms
 /pt-BR/docs/Web/Guide/HTML/Forms/Form_validation	/pt-BR/docs/Learn/Forms/Form_validation
 /pt-BR/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets	/pt-BR/docs/Learn/Forms/How_to_build_custom_form_controls

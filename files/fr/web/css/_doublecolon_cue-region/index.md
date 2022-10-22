@@ -49,13 +49,11 @@ Les propriétés sont appliquées à l'intégralité des indications textuelles 
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                     | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName("WebVTT", "#the-cue-region-pseudo-element", "the <code>::cue-region</code> pseudo-element")}} | {{Spec2("WebVTT")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.cue-region")}}
+{{Compat}}
 
 ## Voir aussi
 

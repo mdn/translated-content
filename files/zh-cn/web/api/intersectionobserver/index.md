@@ -19,7 +19,7 @@ slug: Web/API/IntersectionObserver
 - {{domxref("IntersectionObserver.root")}} {{readonlyinline}}
   - : 所监听对象的具体祖先元素 ({{domxref("element")}})。如果未传入值或值为`null`，则默认使用顶级文档的视窗。
 - {{domxref("IntersectionObserver.rootMargin")}} {{readonlyinline}}
-  - : 计算交叉时添加到**根 (root)**边界盒{{Glossary('bounding box')}}的矩形偏移量， 可以有效的缩小或扩大根的判定范围从而满足计算需要。此属性返回的值可能与调用构造函数时指定的值不同，因此可能需要更改该值，以匹配内部要求。所有的偏移量均可用**像素 (pixel)**(`px`) 或**百分比 (percentage)**(`%`) 来表达，默认值为"0px 0px 0px 0px"。
+  - : 计算交叉时添加到**根 (root)**边界盒{{Glossary('bounding box')}}的矩形偏移量，可以有效的缩小或扩大根的判定范围从而满足计算需要。此属性返回的值可能与调用构造函数时指定的值不同，因此可能需要更改该值，以匹配内部要求。所有的偏移量均可用**像素 (pixel)**(`px`) 或**百分比 (percentage)**(`%`) 来表达，默认值为"0px 0px 0px 0px"。
 - {{domxref("IntersectionObserver.thresholds")}} {{readonlyinline}}
   - : 一个包含阈值的列表，按升序排列，列表中的每个阈值都是监听对象的交叉区域与边界区域的比率。当监听对象的任何阈值被越过时，都会生成一个通知 (Notification)。如果构造器未传入值，则默认值为 0。
 

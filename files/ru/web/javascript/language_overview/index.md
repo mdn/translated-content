@@ -443,7 +443,7 @@ obj["for"] = "Simon";
 
 ## Массивы
 
-Массивы в JavaScript всего лишь частный случай объектов. Работают они практически одинаково (если именем свойства является число, то доступ к нему можно получить только через вызов в скобках \[]), только у массивов есть одно удивительное свойство '`length`' (длина). Оно возвращает число, равное самому большому индексу массива + 1.
+Массивы в JavaScript всего лишь частный случай объектов. Работают они практически одинаково (если именем свойства является число, то доступ к нему можно получить только через вызов в скобках \[]), только у массивов есть одно удивительное свойство `length` (длина). Оно возвращает число, равное самому большому индексу массива + 1.
 
 Создать массив можно по старинке:
 
@@ -597,7 +597,7 @@ avg(2, 3, 4, 5); // 3.5
 
 > **Примечание:** В вышенаписанном коде переменная **args** содержит все значения, которые были переданы в функцию.
 >
-> Важно отметить, что где бы ни был размещён _rest parameter operator_ в объявлении функции, он будет содержать все аргументы _после_ его объявления, не раньше. например: _function_ _avg(_**firstValue,** _...args)_\*\* **будет хранить первое переданное значение в переменной **firstValue** и оставшиеся в **args\*\*. Это ещё одно полезное свойство языка, однако оно ведёт нас к новой проблеме. `avg()` функция принимает список аргументов, разделённый запятыми. Но что если вы хотите найти среднее значение в массиве? Вы можете переписать функцию следующим образом:
+> Важно отметить, что где бы ни был размещён _rest parameter operator_ в объявлении функции, он будет содержать все аргументы _после_ его объявления, не раньше. например: _function avg(**firstValue,** ...args)_ будет хранить первое переданное значение в переменной **firstValue** и оставшиеся в **args**. Это ещё одно полезное свойство языка, однако оно ведёт нас к новой проблеме. `avg()` функция принимает список аргументов, разделённый запятыми. Но что если вы хотите найти среднее значение в массиве? Вы можете переписать функцию следующим образом:
 
 ```js
 function avgArray(arr) {
@@ -686,29 +686,26 @@ var charsInBody = (function counter(elm) {
 
 В классическом Объектно-Ориентированном Программировании (ООП) объекты — это коллекции данных и методов, которые этими данными оперируют. JavaScript - это язык, основанный на прототипах, и в его определении нет понятия классов, таких, как в языках C++ или Java. (Иногда это может запутать программистов, знакомых с языками, в которых есть классы.) Вместо классов JavaScript использует функции. Давайте представим объект с личными данными, содержащий поля с именем и фамилией. Есть два типа отображения имён: "Имя Фамилия" или "Фамилия, Имя". С помощью объектов и функций можно сделать следующее:
 
-> **Предупреждение:** ```js
-> function makePerson(first, last) {
-> return {
-> first: first,
-> last: last
-> }
-> }
->
-> function personFullName(person) {
-> return person.first + ' ' + person.last;
-> }
->
-> function personFullNameReversed(person) {
-> return person.last + ', ' + person.first
-> }
->
-> s = makePerson("Simon", "Willison");
-> personFullName(s); // Simon Willison
-> personFullNameReversed(s); // Willison, Simon
->
-> ```
->
-> ```
+```js
+function makePerson(first, last) {
+    return {
+        first: first,
+        last: last
+    }
+}
+
+function personFullName(person) {
+    return person.first + ' ' + person.last;
+}
+
+function personFullNameReversed(person) {
+    return person.last + ', ' + person.first
+}
+
+s = makePerson("Simon", "Willison");
+personFullName(s); // Simon Willison
+personFullNameReversed(s); // Willison, Simon
+```
 
 Работает, но сам код никуда не годится. С таким подходом у вас будут десятки функций, засоряющих глобальный объект. Это можно исправить, прикрепив функцию к объекту. Это просто, ведь все функции и есть объекты:
 
@@ -730,7 +727,7 @@ s.fullName(); // Simon Willison
 s.fullNameReversed(); // Willison, Simon
 ```
 
-А вот кое-что новенькое: ключевое слово '[`this`](/ru/docs/Web/JavaScript/Reference/Operators/this "en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator")'. Когда '`this`' используется внутри функции, оно ссылается на текущий объект. Значение ключевого слова зависит от способа вызова функции. Если вызвать функцию с обращением к объекту через [точку или квадратные скобки](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors "en/Core_JavaScript_1.5_Reference/Operators/Member_Operators"), то '`this`' получится равным данному объекту. В ином случае '`this`' будет ссылаться на глобальный объект. Это часто приводит к ошибкам. Например:
+А вот кое-что новенькое: ключевое слово [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this "en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator"). Когда `this` используется внутри функции, оно ссылается на текущий объект. Значение ключевого слова зависит от способа вызова функции. Если вызвать функцию с обращением к объекту через [точку или квадратные скобки](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors "en/Core_JavaScript_1.5_Reference/Operators/Member_Operators"), то `this` получится равным данному объекту. В ином случае `this` будет ссылаться на глобальный объект. Это часто приводит к ошибкам. Например:
 
 ```js
 s = makePerson("Simon", "Willison")
@@ -738,9 +735,9 @@ var fullName = s.fullName;
 fullName(); // undefined undefined
 ```
 
-При вызове `fullName()`, '`this`' получает ссылку на глобальный объект. А так как в глобальном объекте не определены переменные `first` и `last`, то имеем два `undefined`.
+При вызове `fullName()`, `this` получает ссылку на глобальный объект. А так как в глобальном объекте не определены переменные `first` и `last`, то имеем два `undefined`.
 
-Используя особенность ключевого слова '`this`', можно улучшить код функции `makePerson`:
+Используя особенность ключевого слова `this`, можно улучшить код функции `makePerson`:
 
 ```js
 function Person(first, last) {
@@ -756,7 +753,7 @@ function Person(first, last) {
 var s = new Person("Simon", "Willison");
 ```
 
-В примере мы использовали новое ключевое слово: '[`new`](/ru/docs/Web/JavaScript/Reference/Operators/new "en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/new_Operator")'. Оно тесно связано с '[this](/ru/docs/Web/JavaScript/Reference/Operators/this)'. Данное ключевое слово создаёт новый пустой объект, а потом вызывает указанную функцию, а `this` получает ссылку на этот новый объект. Функции, которые предназначены для вызова с '`new`' называются конструкторами. Существует соглашение, согласно которому все функции-конструкторы записываются с заглавной буквы.
+В примере мы использовали новое ключевое слово: [`new`](/ru/docs/Web/JavaScript/Reference/Operators/new "en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/new_Operator"). Оно тесно связано с [this](/ru/docs/Web/JavaScript/Reference/Operators/this). Данное ключевое слово создаёт новый пустой объект, а потом вызывает указанную функцию, а `this` получает ссылку на этот новый объект. Функции, которые предназначены для вызова с `new` называются конструкторами. Существует соглашение, согласно которому все функции-конструкторы записываются с заглавной буквы.
 
 Мы доработали наш код в предыдущем примере, но всё равно остался один неприятный момент с самостоятельным вызовом `fullName()`.
 
@@ -843,7 +840,7 @@ Person.prototype.toString = function() {
 s.toString(); // "<Person: Simon Willison>"
 ```
 
-Помните, мы вызывали `avg.apply()` с первым аргументом равным null? Теперь мы можем сделать так: первым аргументом, переданным методу `apply()` будет объект, который примет значение '`this`'. Вот к примеру упрощённая реализация '`new`':
+Помните, мы вызывали `avg.apply()` с первым аргументом равным null? Теперь мы можем сделать так: первым аргументом, переданным методу `apply()` будет объект, который примет значение `this`. Вот к примеру упрощённая реализация `new`:
 
 ```js
 function trivialNew(constructor, ...args) {
@@ -867,7 +864,7 @@ var bill = trivialNew(Person, 'William', 'Orange');
 var bill = new Person('William', 'Orange');
 ```
 
-В JavaScript метод [`apply()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) имеет похожий метод [`call()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call "en/Core_JavaScript_1.5_Reference/Global_Objects/Function/call"), который тоже позволяет устанавливать '`this`', но принимает список, а не массив аргументов.
+В JavaScript метод [`apply()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) имеет похожий метод [`call()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call "en/Core_JavaScript_1.5_Reference/Global_Objects/Function/call"), который тоже позволяет устанавливать `this`, но принимает список, а не массив аргументов.
 
 ```js
 function lastNameCaps() {

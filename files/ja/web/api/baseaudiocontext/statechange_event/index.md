@@ -3,6 +3,7 @@ title: 'BaseAudioContext: statechange イベント'
 slug: Web/API/BaseAudioContext/statechange_event
 original_slug: Web/API/BaseAudioContext/onstatechange
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `statechange` イベントは、 {{DOMxRef("BaseAudioContext")}} オブジェクトに対して {{domxref("BaseAudioContext.state", "state")}} メンバーが変化したときに発生します。

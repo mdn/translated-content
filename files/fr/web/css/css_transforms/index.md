@@ -39,6 +39,4 @@ Le module **_CSS Transforms_** (ou module des transformations CSS) est un module
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires         |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Transforms')}} | {{Spec2('CSS3 Transforms')}} | Définition initiale. |
+{{Specifications}}

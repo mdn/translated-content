@@ -90,13 +90,11 @@ Résultat
 
 ## Spécifications
 
-| Spécification                                                                                | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Counter Styles", "#counter-style-range", "range")}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.counter-style.range")}}
+{{Compat}}
 
 ## Voir aussi
 

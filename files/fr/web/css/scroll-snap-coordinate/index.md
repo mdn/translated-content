@@ -40,9 +40,13 @@ scroll-snap-coordinate: unset;
 - `<position>`
   - : Définit le décalage du point d'accrochage par rapport à la boîte de bordure le l'élément. Pour chaque paire, la première valeur indique l'abscisse et la seconde, l'ordonnée. Pour plus d'informations sur les valeurs possibles, voir {{cssxref("&lt;position&gt;")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -134,12 +138,8 @@ scroll-snap-coordinate: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                                           | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-coordinate", "scroll-snap-coordinate")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-snap-coordinate")}}
+{{Compat}}

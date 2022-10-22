@@ -2,6 +2,7 @@
 title: prefer_related_applications
 slug: Web/Manifest/prefer_related_applications
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

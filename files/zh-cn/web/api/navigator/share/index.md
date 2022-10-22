@@ -41,7 +41,7 @@ navigator.share({
 
 #### **分享文件**
 
-分享文件之前，先使用 `navigator.canShare()` 判断这个文件能否被分享，Then include an array of files in the call to `navigator.share():`
+分享文件之前，先使用 `navigator.canShare()` 判断这个文件能否被分享，Then include an array of files in the call to `navigator.share()`:
 
 Notice: That the sample handles feature detection by testing for `navigator.canShare()` rather than for `navigator.share()`. The data object passed to `canShare()` only supports the `files` property. Image, video, audio, and text files can be shared.
 

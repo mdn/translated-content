@@ -12,13 +12,13 @@ Provavelmente a maior limitação é que uma vez que uma forma é desenhada, ela
 
 Estes são os passos que você precisa para desenhar um frame:
 
-1.  **Limpe o canvas**
+1. **Limpe o canvas**
     A menos que a forma que você vai desenhar preencha o canvas completo(por exemplo, uma imagem de fundo), você precisa limpar todas as formas que foram desenhadas anteriormente. O caminho mais fácil para fazer isso é usando o método clearRect().
-2.  **Salve o estado da tela**
+2. **Salve o estado da tela**
     Se você estiver mudando alguma configuração(como estilos, transformações, etc.) que afete o estado do canvas e você quer garantir que o estado original seja usado sempre que um quadro é desenhado, você precisa salvar esse estado original.
-3.  **Desenhe formas animadas**
+3. **Desenhe formas animadas**
     A etapa em que você faz a renderização real do quadro.
-4.  **Restaure o estado do canvas**
+4. **Restaure o estado do canvas**
     Se você salvou o estado, restaure-o antes de desenhar um novo quadro.
 
 ## Controlando uma animação

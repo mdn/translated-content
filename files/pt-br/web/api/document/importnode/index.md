@@ -37,7 +37,7 @@ document.getElementById("container").appendChild(newNode);
 
 O nó original não é removido do documento de origem. O nó importado é um clone do original.
 
-Nodes from external documents should be cloned using [`document.importNode()`](/pt-BR/docs/Web/API/Document/importNode "Cria uma cópia de um nó a partir de um documento externo para ser inserido no document atual.") (or adopted using [`document.adoptNode()`](/pt-BR/docs/Web/API/Document/adoptNode "A documentação sobre isto ainda não foi escrita; por favor considere contribuir!")) before they can be inserted into the current document. For more on the [`Node.ownerDocument`](/pt-BR/docs/Web/API/Node/ownerDocument "A documentação sobre isto ainda não foi escrita; por favor considere contribuir!") issues, see the [W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc).
+Nodes from external documents should be cloned using [`document.importNode()`](/pt-BR/docs/Web/API/Document/importNode) (or adopted using [`document.adoptNode()`](/pt-BR/docs/Web/API/Document/adoptNode)) before they can be inserted into the current document. For more on the [`Node.ownerDocument`](/pt-BR/docs/Web/API/Node/ownerDocument) issues, see the [W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc).
 
 Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for improved future compatibility.
 

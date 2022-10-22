@@ -2,6 +2,7 @@
 title: BarcodeDetector
 slug: Web/API/BarcodeDetector
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 **`BarcodeDetector`** は{{domxref('Barcode Detection API', 'バーコード検出 API', '', 1)}} のインターフェイスで、画像内から線形および二次元バーコードを検出できるようにします。

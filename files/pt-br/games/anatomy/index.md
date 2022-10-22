@@ -5,8 +5,6 @@ translation_of: Games/Anatomy
 ---
 {{GamesSidebar}}
 
-{{IncludeSubnav("/pt-BR/docs/Games")}}
-
 Este artigo analisa a anatomia e o fluxo de trabalho do vídeo game médio de um ponto de vista técnico, em termos de como o loop principal deve ser executado. Isso ajuda os iniciantes da arena do desenvolvimento de jogos modernos a entender o que é necessário ao construir um jogo e como os padrões da web como o JavaScript se prestam como ferramentas. Os programadores de jogos experientes que são novos no desenvolvimento da web também podem se beneficiar.
 
 ## Apresentar, aceitar, interpretar, calcular, repetir
@@ -27,7 +25,7 @@ JavaScript Moderno — como descrito nas próximas seções — felizmente, faci
 
 JavaScript trabalaha melhor com eventos e chamadas de funções. Navegadores modernos esforçam-se para chamar métodos à medida que são necessários e ociosos (ou fazem suas outras tarefas) nos intervalos. É uma excelente ideia ligar seu código aos momentos apropriados a eles. Pense se a sua função realmente precisa ser chamada em um estrito intervalo de tempo, a cada frame, ou somente após algo acontecer. Ser mais específico com o navegador sobre quando a sua função precisa ser chamada permite que o navegador otimize essa chamada. Também, isso facilitará o seu trabalho.
 
-Alguns códigos precisam ser rodados frame por frame, então por quê ligar essas funções a qualquer coisa que não seja a atualização de tela do navegador? Na web, `{{ domxref("window.requestAnimationFrame()") }} será a base da maioria dos mais bem programados loops principais do tipo frame por frame.` Uma chamada de função deve ser passada dentro da função anterior quando a mesma for chamada. Esta chamdada de função será executada em um tempo adequado antes da próxima atualização de tela. Eis um exemplo de um loop principal simples:
+Alguns códigos precisam ser rodados frame por frame, então por quê ligar essas funções a qualquer coisa que não seja a atualização de tela do navegador? Na web, {{ domxref("window.requestAnimationFrame()") }} será a base da maioria dos mais bem programados loops principais do tipo frame por frame. Uma chamada de função deve ser passada dentro da função anterior quando a mesma for chamada. Esta chamdada de função será executada em um tempo adequado antes da próxima atualização de tela. Eis um exemplo de um loop principal simples:
 
 ```
 window.main = function () {
@@ -113,17 +111,17 @@ Finalmente, no JavaScript, o browser está rodando o seu loop principal e o seu 
 
 Versões modernas do Firefox e Google Chrome (e provavelmente outros) tentam conectar os callbacks do `requestAnimationFramea` a sua thread principal no primeiro intervalo de tempo de um frame. A thread principal portanto tenta fazer o seguinte:
 
-1.  Começar uma nova frame (enquanto a anterior é tratada pela exibição).
-2.  Go through the list of `requestAnimationFrame` callbacks and invoke them.
-3.  Perform garbage collection and other per-frame tasks when the above callbacks stop controlling the main thread.
-4.  Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](http://www.techopedia.com/definition/92/vertical-sync-vsync)) and repeat.
+1. Começar uma nova frame (enquanto a anterior é tratada pela exibição).
+2. Go through the list of `requestAnimationFrame` callbacks and invoke them.
+3. Perform garbage collection and other per-frame tasks when the above callbacks stop controlling the main thread.
+4. Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](http://www.techopedia.com/definition/92/vertical-sync-vsync)) and repeat.
 
 Modern versions of Firefox and Google Chrome (and probably others) _attempt_ to connect `requestAnimationFrame` callbacks to their main thread at the very beginning of a frame's timeslice. The browser's main thread thus _tries_ to look like the following:
 
-1.  Start a new frame (while the previous frame is handled by the display).
-2.  Go through the list of `requestAnimationFrame` callbacks and invoke them.
-3.  Perform garbage collection and other per-frame tasks when the above callbacks stop controlling the main thread.
-4.  Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](http://www.techopedia.com/definition/92/vertical-sync-vsync)) and repeat.
+1. Start a new frame (while the previous frame is handled by the display).
+2. Go through the list of `requestAnimationFrame` callbacks and invoke them.
+3. Perform garbage collection and other per-frame tasks when the above callbacks stop controlling the main thread.
+4. Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image ([VSync](http://www.techopedia.com/definition/92/vertical-sync-vsync)) and repeat.
 
 You can think about developing realtime applications as having a budget of time to do work. All of the above steps must take place every 16-and-a-half milliseconds to keep up with a 60 Hz display. Browsers invoke your code as early as possible to give it maximum computation time. Your main thread will often start workloads that are not even on the main thread (such as rasterization or shaders in WebGL). Long calculations can be performed on a Web Worker or a GPU at the same time as the browser uses its main thread to manage garbage collection, its other tasks, or handle asynchronous events.
 

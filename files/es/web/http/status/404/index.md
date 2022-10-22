@@ -33,7 +33,7 @@ Muchos sitios web personalizan la apariencia de la pagina 404 para que sea de ut
 ErrorDocument 404 /no-encontrado.html
 ```
 
-Para una pagina 404 de ejemplo, mire la pagina [MDN 404](https://developer.mozilla.org/es/404).
+Para una pagina 404 de ejemplo, mire la pagina [MDN 404](/es/404).
 
 > **Nota:** Diseños personalizados son buenos, si se usan de manera moderada. Siente libre de hacer tus paginas 404 humoristicas y humanas, pero no confundas a tus usuarios.
 

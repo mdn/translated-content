@@ -2,6 +2,7 @@
 title: IDBDatabase.close
 slug: Web/API/IDBDatabase/close
 ---
+
 {{ APIRef("IDBDatabase") }}
 
 {{domxref("IDBDatabase")}}インターフェイスの`close()は、`ただちに戻り、別スレッドで接続を閉じます。

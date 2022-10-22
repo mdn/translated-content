@@ -2,6 +2,7 @@
 title: color-gamut
 slug: Web/CSS/@media/color-gamut
 ---
+
 {{CSSRef}}
 
 **`color-gamut`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}および出力機器が対応している色のおよその範囲を調べるために使用することができます。

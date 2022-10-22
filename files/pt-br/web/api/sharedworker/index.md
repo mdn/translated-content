@@ -34,8 +34,6 @@ _Inherits properties from its parent, {{domxref("EventTarget")}}, and implements
 - {{domxref("SharedWorker.port")}} {{readonlyInline}}
   - : Returns a {{domxref("MessagePort")}} object used to communicate and control the shared worker.
 
-<!---->
-
 ## Methods
 
 _Inherits methods from its parent, {{domxref("EventTarget")}}, and implements methods from {{domxref("AbstractWorker")}}._

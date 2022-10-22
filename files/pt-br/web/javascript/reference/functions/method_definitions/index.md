@@ -58,7 +58,7 @@ var obj = {
 Os [generator methods](/pt-BR/docs/Web/JavaScript/Reference/Statements/function*) também podem ser definidos utilizando a sintaxe reduzida.
 
 - Observe que o asterisco (\*) na sintaxe reduzida deve estar antes do nome da propriedade generator. Assim, `* g(){}` funcionará, porém `g *(){}` não.
-- Se o método não for generator, sua definição não pode conter a palavra-chave `yield`. Dessa forma, [generator functions legadas ](/pt-BR/docs/Web/JavaScript/Reference/Statements/Generator_function_legada)também não funcionarão, lançando um {{jsxref("SyntaxError")}}. Sempre utilize `yield` em conjunto com o asterisco (\*)
+- Se o método não for generator, sua definição não pode conter a palavra-chave `yield`. Dessa forma, [generator functions legadas](/pt-BR/docs/Web/JavaScript/Reference/Statements/Generator_function_legada) também não funcionarão, lançando um {{jsxref("SyntaxError")}}. Sempre utilize `yield` em conjunto com o asterisco (\*)
 
 ```js
 // Utilizando a propriedade com nome (pre-ES6)
@@ -184,6 +184,6 @@ console.log(bar.foo2()); // 2
 
 ## Veja também
 
-- [`get`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/get)
-- [`set`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/set)
+- [`get`](/pt-BR/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](/pt-BR/docs/Web/JavaScript/Reference/Functions/set)
 - [Gramática léxica](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar)

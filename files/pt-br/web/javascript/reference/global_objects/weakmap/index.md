@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 O objeto WeakMap é uma coleção de pares key/value na qual as chaves são fracamente referenciadas.
 As chaves **devem** ser objetos, e os valores podem ser de tipos arbitrários.
 
-Você pode descobrir mais sobre `WeakMap`s na seção {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Keyed_collections", "WeakMap object")}}.
+Você pode descobrir mais sobre `WeakMap`s na seção {{SectionOnPage("/pt-BR/docs/Web/JavaScript/Guide/Keyed_collections", "WeakMap object")}}.
 
 ## Sintaxe
 
@@ -25,7 +25,7 @@ new WeakMap([iterable])
 
 ## Descrição
 
-### Por quê \_Weak_Map?
+### Por quê WeakMap?
 
 Um programador JavaScript experiente vai notar que esta API pode ser implementada em JavaScript com dois arrays (um para chaves, um para valores) compartilhado pelos 4 métodos da API. Tal implementação teria duas principais incoveniências. A primeira é uma busca O(n) (n sendo o número de chaves no map). A segunda é o problema de memory leak. Com maps escritos manualmente, o array de chaves guardaria referências para objetos chave, prevenindo-os de serem coletados pelo Garbage Collector. Nos WeakMaps nativos, referências aos objetos chave são segurados de modo "fraco", o que significa que eles não previnem a coleção pelo GC no caso de não haver nenhuma outra referência ao objeto.
 

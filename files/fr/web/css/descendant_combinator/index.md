@@ -71,16 +71,11 @@ li li {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                 | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS4 Selectors", "#descendant-combinators", "descendant combinator")}}     | {{Spec2("CSS4 Selectors")}} |                      |
-| {{SpecName('CSS3 Selectors', '#descendant-combinators', 'descendant combinator')}}     | {{Spec2('CSS3 Selectors')}} |                      |
-| {{SpecName('CSS2.1', 'selector.html#descendant-selectors', 'descendant selectors')}} | {{Spec2('CSS2.1')}}             |                      |
-| {{SpecName('CSS1', '#contextual-selectors', 'contextual selectors')}}                     | {{Spec2('CSS1')}}             | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.descendant")}}
+{{Compat}}
 
 ## Voir aussi
 

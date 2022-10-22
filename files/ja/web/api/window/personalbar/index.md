@@ -2,6 +2,7 @@
 title: window.personalbar
 slug: Web/API/Window/personalbar
 ---
+
 {{ApiRef}}
 
 ## 概要

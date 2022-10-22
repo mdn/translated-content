@@ -15,7 +15,7 @@ original_slug: Learn/JavaScript/Building_blocks/События
 
 <p class="summary">События — это действия или случаи, возникающие в программируемой вами системе, о которых система сообщает вам для того, чтобы вы могли с ними взаимодействовать. Например, если пользователь нажимает кнопку на веб-странице, вы можете ответить на это действие, отобразив информационное окно. В этой статье мы обсудим некоторые важные концепции, связанные с событиями, и посмотрим, как они работают в браузерах. Эта статья не является исчерпывающим источником по этой теме — здесь только то, что вам нужно знать на этом этапе.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Предпосылки:</th>
@@ -48,7 +48,7 @@ original_slug: Learn/JavaScript/Building_blocks/События
 
 <p>Подробнее о событиях можно посмотреть в <a href="/ru/docs/Web/Events">Справочнике по событиям</a>.</p>
 
-<p><span>Каждое доступное событие имеет </span><strong>обработчик событий<strong> </strong></strong>—<span> блок кода (обычно это функция JavaScript, вводимая вами в качестве разработчика), который будет запускаться при срабатывании события. Когда такой блок кода определён на запуск в ответ на возникновение события, мы говорим, что мы </span><strong>регистрируем обработчик событий</strong><span>. Обратите внимание, что обработчики событий иногда называют </span><strong>слушателями событий (от англ. event listeners).</strong><span> Они в значительной степени взаимозаменяемы для наших целей, хотя, строго говоря, они работают вместе. Слушатель отслеживает событие, а обработчик </span>— <span>это код, который запускается в ответ на событие.</span></p>
+<p>Каждое доступное событие имеет <strong>обработчик событий<strong> </strong></strong>— блок кода (обычно это функция JavaScript, вводимая вами в качестве разработчика), который будет запускаться при срабатывании события. Когда такой блок кода определён на запуск в ответ на возникновение события, мы говорим, что мы <strong>регистрируем обработчик событий</strong>. Обратите внимание, что обработчики событий иногда называют <strong>слушателями событий (от англ. event listeners).</strong> Они в значительной степени взаимозаменяемы для наших целей, хотя, строго говоря, они работают вместе. Слушатель отслеживает событие, а обработчик — это код, который запускается в ответ на событие.</p>
 
 <div class="note">
 <p><strong>Примечание:</strong> Важно отметить, что веб-события не являются частью основного языка JavaScript. Они определены как часть JavaScript-API, встроенных в браузер.</p>
@@ -170,7 +170,7 @@ for (var i = 0; i &lt; buttons.length; i++) {
   buttons[i].onclick = bgChange;
 }</pre>
 
-<p class="brush: js">Обратите внимание, что для перебора всех элементов, которые содержит объект <code><a href="/en-US/docs/Web/API/NodeList">NodeList</a></code>, можно воспользоваться встроенным методом <code><a href="/en-US/docs/Web/API/NodeList/forEach">forEach()</a></code>:</p>
+<p>Обратите внимание, что для перебора всех элементов, которые содержит объект <code><a href="/en-US/docs/Web/API/NodeList">NodeList</a></code>, можно воспользоваться встроенным методом <code><a href="/en-US/docs/Web/API/NodeList/forEach">forEach()</a></code>:</p>
 
 <pre class="brush: js">buttons.forEach(function(button) {
   button.onclick = bgChange;
@@ -487,12 +487,12 @@ form.onsubmit = function(e) {
         transform: translate(-50%,-50%);
         ...
       }
-<font color="#6f42c1" face="SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace">.hidden {
+.hidden {
    left: -50%;
   }
 .showing {
    left: 50%;
-  }</font></pre>
+  }</pre>
 
 <pre class="brush: js">var btn = document.querySelector('button');
 btn.onclick = function() {
@@ -599,9 +599,3 @@ video.onclick = function() {
  <li><a href="/ru/docs/Learn/JavaScript/Building_blocks/События">Введение в события</a></li>
  <li><a href="/ru/docs/Learn/JavaScript/Building_blocks/Image_gallery">Создание галереи</a></li>
 </ul>
-
-<div class="s3gt_translate_tooltip_mini_box" id="s3gt_translate_tooltip_mini" style="background: initial !important; border: initial !important; border-radius: initial !important; border-collapse: initial !important; direction: ltr !important; font-weight: initial !important; height: initial !important; letter-spacing: initial !important; max-width: initial !important; min-height: initial !important; margin: auto !important; outline: initial !important; padding: initial !important; position: absolute; text-align: initial !important; text-shadow: initial !important; width: initial !important; display: initial !important; color: inherit !important; font-size: 13px !important; font-family: X-LocaleSpecific, sans-serif, Tahoma, Helvetica !important; line-height: 13px !important; vertical-align: top !important; white-space: inherit !important; left: 416px; top: 2989px; opacity: 0.35;">
-<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_sound" style="width: 12px; height: 12px; border-radius: 4px;" title="Прослушать"></div>
-
-<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_copy" style="width: 12px; height: 12px; border-radius: 4px;" title="Скопировать текст в буфер обмена"></div>
-</div>

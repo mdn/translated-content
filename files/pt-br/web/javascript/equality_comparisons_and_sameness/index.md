@@ -21,7 +21,7 @@ JavaScript fornece três diferentes operações de comparação de valores:
 
 A escolha de qual operação usar depende da ordem de comparação que você está procurando executar.
 
-Em resumo, dois iguais irá realizar uma conversão de tipo ao comparar duas coisas; três iguais irá fazer a mesma comparação, sem conversão de tipo (simplesmente retornando false se os tipos forem diferentes); e `Object.is` irá se comportar da mesma forma que três iguais, mas com tratamento especial para `NaN `e `-0` e `+0` de modo que os dois últimos não são referidos como sendo o mesmo, enquanto `Object.is(NaN, NaN)` será `true`. (Comparando `NaN` com `NaN` ordinariamente - ou seja, usando tanto iguais duplo ou iguais triplo - avalia como `false`, porque IEEE 754 diz isso.) Note que a distinção entre todos eles têm a ver com seu manuseio dos primitivos; nenhum deles compara se os parâmetros são conceitualmente semelhante em estrutura. Para qualquer objetos não-primitivo x e y que têm a mesma estrutura, mas são objetos distintos entre si, todas as formas acima será avaliada como falsa.
+Em resumo, dois iguais irá realizar uma conversão de tipo ao comparar duas coisas; três iguais irá fazer a mesma comparação, sem conversão de tipo (simplesmente retornando false se os tipos forem diferentes); e `Object.is` irá se comportar da mesma forma que três iguais, mas com tratamento especial para `NaN` e `-0` e `+0` de modo que os dois últimos não são referidos como sendo o mesmo, enquanto `Object.is(NaN, NaN)` será `true`. (Comparando `NaN` com `NaN` ordinariamente - ou seja, usando tanto iguais duplo ou iguais triplo - avalia como `false`, porque IEEE 754 diz isso.) Note que a distinção entre todos eles têm a ver com seu manuseio dos primitivos; nenhum deles compara se os parâmetros são conceitualmente semelhante em estrutura. Para qualquer objetos não-primitivo x e y que têm a mesma estrutura, mas são objetos distintos entre si, todas as formas acima será avaliada como falsa.
 
 ## Igualdade estrita usando `===`
 
@@ -136,7 +136,7 @@ A comparação de igualdade é realizado da seguinte forma para os operandos dos
   </tbody>
 </table>
 
-Na tabela acima, `ToNumber(A)` tenta converter seu argumento para um número antes de comparação. Seu comportamento é equivalente a `+A` (o operador + unário). `ToPrimitive(A)` tenta converter seu argumento de objeto para um valor primitivo, tentando invocar sequências diferentes de `A.toString` e` A.valueOf` métodos em `A`.
+Na tabela acima, `ToNumber(A)` tenta converter seu argumento para um número antes de comparação. Seu comportamento é equivalente a `+A` (o operador + unário). `ToPrimitive(A)` tenta converter seu argumento de objeto para um valor primitivo, tentando invocar sequências diferentes de `A.toString` e `A.valueOf` métodos em `A`.
 
 Tradicionalmente, e de acordo com ECMAScript, todos os objetos são amplamente desiguais a `undefined` e `null`. Mas a maioria dos navegadores permitem uma classe muito limitada de objetos (especificamente, o objeto `document.all` para qualquer página), em alguns contextos, para agir como se eles _emulassem_ o valor `undefined`. Igualdade ampla é um desses contexto. Portanto, o método `IsFalsy(A)` é avaliada como verdadeira se, e somente se, A for um objeto que _emula_ `undefined`. Em todos os outros casos, um objeto não é amplamente igual a `undefined` ou `null`.
 
@@ -178,13 +178,13 @@ function attemptMutation(v)
 }
 ```
 
-`Object.defineProperty `irá disparar uma exceção ao tentar alterar uma propriedade imutável que realmente iria alterá-lo, mas ele não faz nada se nenhuma mudança real for solicitada. Se `v` for `-0`, nenhuma mudança foi solicitada, e nenhum erro será disparado. Mas se `v` for `+0`, `Number.NEGATIVE_ZERO` não teria mais o seu valor imutável. Internamente, quando uma propriedade imutável é redefinida, o valor recém-especificado é comparado com o valor atual usando a igualdade de mesmo valor.
+`Object.defineProperty` irá disparar uma exceção ao tentar alterar uma propriedade imutável que realmente iria alterá-lo, mas ele não faz nada se nenhuma mudança real for solicitada. Se `v` for `-0`, nenhuma mudança foi solicitada, e nenhum erro será disparado. Mas se `v` for `+0`, `Number.NEGATIVE_ZERO` não teria mais o seu valor imutável. Internamente, quando uma propriedade imutável é redefinida, o valor recém-especificado é comparado com o valor atual usando a igualdade de mesmo valor.
 
 Igualdade de mesmo valor é fornecida pelo método `Object.is.`
 
 ## Igualdade abstrata, igualdade estrita, e de mesmo valor na especificação
 
-No ES5, a comparação efetuada por` == `é descrita em [Seção 11.9.3, O Algoritmo da Igualdade Abstrata](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3). A comparação `=== `está em [11.9.6, O Algoritmo de Igualdade Estrita](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6). (Veja estes. Eles são breve e legível. Dica: leia o algoritmo de igualdade estrita primeiro.) ES5 também descreve, em [Seção 9.12, o Algoritmo de Mesmo Valor](http://ecma-international.org/ecma-262/5.1/#sec-9.12) para uso internamente pelo motor de JS. É em grande parte o mesmo que o Algoritmo de Igualdade Estrita, exceto que 11.9.6.4 e 9.12.4 diferem em manipulação do [`Number`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number). ES6 simplesmente se propõe a expor este algoritmo através de [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
+No ES5, a comparação efetuada por `==` é descrita em [Seção 11.9.3, O Algoritmo da Igualdade Abstrata](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3). A comparação `===` está em [11.9.6, O Algoritmo de Igualdade Estrita](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6). (Veja estes. Eles são breve e legível. Dica: leia o algoritmo de igualdade estrita primeiro.) ES5 também descreve, em [Seção 9.12, o Algoritmo de Mesmo Valor](http://ecma-international.org/ecma-262/5.1/#sec-9.12) para uso internamente pelo motor de JS. É em grande parte o mesmo que o Algoritmo de Igualdade Estrita, exceto que 11.9.6.4 e 9.12.4 diferem em manipulação do [`Number`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number). ES6 simplesmente se propõe a expor este algoritmo através de [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
 
 Podemos ver que com iguais duplos e triplos, com exceção de fazer uma verificação de tipo inicial 11.9.6.1, o Algoritmo de Igualdade Estrita é um subconjunto do Algoritmo Igualdade Abstrata, porque 11.9.6.2-7 correspondem a 11.9.3.1.a -f.
 
@@ -221,13 +221,13 @@ No entanto, esta forma de pensar sobre os operadores de igualdade embutida não 
 | `"foo"`             | `NaN`               | `false` | `false` | `false`   |
 | `NaN`               | `NaN`               | `false` | `false` | `true`    |
 
-## Quando usar [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is "/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is") ao invés de três iguais
+## Quando usar `Object.is` ao invés de três iguais
 
-Além da forma como trata [`NaN`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NaN "/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NaN"), geralmente, a única vez que o comportamento especial do [Object.is](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is) em direção a zeros é provável que seja interessante é na busca de determinados regimes de meta-programação, especialmente em relação a descritores de propriedade quando é desejável para o seu trabalho para espelhar algumas das características de [Object.defineProperty](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Se o seu caso de uso não exige isso, sugere-se a evitar [Object.is](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is) e usar [===](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) em vez disso. Mesmo se suas exigências envolvem comparações entre dois valores [NaN](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NaN) avaliarem para true, geralmente é mais fácil para caso especial o [NaN](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NaN) checar (usando o [isNaN](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/isNaN "/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN") método disponível a partir de versões anteriores do ECMAScript) do que descobrir como cálculos circundantes podem afetar o sinal de todos os zeros que você encontra em sua comparação.
+Além da forma como trata [`NaN`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NaN), geralmente, a única vez que o comportamento especial do [Object.is](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is) em direção a zeros é provável que seja interessante é na busca de determinados regimes de meta-programação, especialmente em relação a descritores de propriedade quando é desejável para o seu trabalho para espelhar algumas das características de [Object.defineProperty](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Se o seu caso de uso não exige isso, sugere-se a evitar [Object.is](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is) e usar [===](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) em vez disso. Mesmo se suas exigências envolvem comparações entre dois valores [NaN](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NaN) avaliarem para true, geralmente é mais fácil para caso especial o [NaN](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NaN) checar (usando o [isNaN](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/isNaN) método disponível a partir de versões anteriores do ECMAScript) do que descobrir como cálculos circundantes podem afetar o sinal de todos os zeros que você encontra em sua comparação.
 
 Aqui está uma lista exaustiva de métodos e operadores integrados que pode causar uma distinção entre -0 e +0 a manifestar-se em seu código:
 
-- [`- (negação unário)`](/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29 "/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators")
+- [`- (negação unário)`](/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29)
 
   - : É óbvio que negando 0 produz -0. Mas a abstração de uma expressão pode causar -0 a fluência em quanto você não percebe isso. Por exemplo, considere:
 
@@ -237,27 +237,27 @@ Aqui está uma lista exaustiva de métodos e operadores integrados que pode caus
 
     If obj.velocity is 0 (ou calcula para 0), um -0 é introduzido naquele lugar e propaga-se em stoppingForce.
 
-- [`Math.atan2`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2 "/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2")
+- [`Math.atan2`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2)
 
-  [`Math.ceil`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil "/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil")
+  [`Math.ceil`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil)
 
-  [`Math.pow`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow "/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow")
+  [`Math.pow`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow)
 
-  [`Math.round`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round "/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round")
+  [`Math.round`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round)
 
   - : É possível que um -0 para ser introduzido em uma expressão como um valor de retorno desses métodos, em alguns casos, mesmo quando nenhum -0 exista como um dos parâmetros. Por exemplo, usando [Math.pow](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow) para levantar -[Infinity](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity) a potência de qualquer número, expoente ímpar negativo avaliada como -0. Consulte a documentação para os métodos individuais.
 
-- [`Math.floor`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor "/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor")
+- [`Math.floor`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
 
-  [`Math.max`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max "/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max")
+  [`Math.max`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max)
 
-  [`Math.min`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/min "/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/min")
+  [`Math.min`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/min)
 
-  [`Math.sin`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sin "/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sin")
+  [`Math.sin`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sin)
 
-  [`Math.sqrt`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt "/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt")
+  [`Math.sqrt`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt)
 
-  [`Math.tan`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/tan "/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/tan")
+  [`Math.tan`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/tan)
 
   - : É possível obter um -0 valor de retorno para fora destes métodos em alguns casos em que um -0 existe como um dos parâmetros. Por exemplo, `Math.min(-0, +0)` resulte em -0. Consulte a documentação para os métodos individuais.
 
@@ -269,7 +269,7 @@ Aqui está uma lista exaustiva de métodos e operadores integrados que pode caus
 
   - : Cada um destes operadores usa o algoritmo ToInt32 internamente. Uma vez que existe apenas uma representação para 0 no tipo integer de 32 bits interno, -0 não vai sobreviver a uma ida e volta após uma operação inversa. Por exemplo, tanto `Object.is(~~(-0), -0)` e `Object.is(-0 << 2 >> 2, -0)` avaliar como `false`.
 
-Baseando-se em [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is "/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is") quando a sinalização de zeros não é levado em conta podem ser perigosos. Claro que, quando a intenção é fazer a distinção entre `-0` e `+0`, isso faz exatamente o que é desejado.
+Baseando-se em [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is) quando a sinalização de zeros não é levado em conta podem ser perigosos. Claro que, quando a intenção é fazer a distinção entre `-0` e `+0`, isso faz exatamente o que é desejado.
 
 ## Veja também
 

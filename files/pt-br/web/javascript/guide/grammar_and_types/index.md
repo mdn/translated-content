@@ -60,7 +60,7 @@ Um identificador JavaScript deve começar com uma letra, underline (`_`), ou cif
 
 Você pode usar a ISO 8859-1 ou caracteres Unicode tal como os identificadores å e ü. Você pode também usar as [sequências de escape Unicode](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) como caracteres e identificadores.
 
-Alguns exemplos de nomes legais são `Numeros_visitas`, `temp99`, e` _nome`.
+Alguns exemplos de nomes legais são `Numeros_visitas`, `temp99`, e `_nome`.
 
 ### Declarando variáveis
 
@@ -304,7 +304,7 @@ O exemplo a seguir cria um array `coffees` com três elementos e um comprimento 
 var coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
-> **Nota:** **Nota :** Um array literal é um tipo de inicializador de objetos. Veja [Usando inicializadores de Objetos](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers "en-US/docs/JavaScript/Guide/Working with Objects#Using Object Initializers").
+> **Nota:** **Nota :** Um array literal é um tipo de inicializador de objetos. Veja [Usando inicializadores de Objetos](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers).
 
 Se um array é criado usando um literal no topo do script, JavaScript interpreta o array cada vez que avalia a expressão que contêm o array literal. Além disso, um literal usado em uma função é criado cada vez que a função é chamada.
 
@@ -398,7 +398,7 @@ Por exemplo:
 
 Um objeto literal é uma lista de zero ou mais pares de nomes de propriedades e valores associados de um objeto, colocado entre chaves (`{}`). Você não deve usar um objeto literal no início de uma declaração. Isso levará a um erro ou não se comportará conforme o esperado, porque o `{` será interpretado como início de um bloco.
 
-Segue um exemplo de um objeto literal. O primeiro elemento do objeto `carro `define uma propriedade, `meuCarro`, e atribui para ele uma nova string, "Punto"; o segundo elemento, a propriedade `getCarro`, é imediatamente atribuído o resultado de chamar uma função (`tipoCarro("Fiat")`); o terceiro elemento, a propriedade `especial`, usa uma variável existente (`vendas)`.
+Segue um exemplo de um objeto literal. O primeiro elemento do objeto `carro` define uma propriedade, `meuCarro`, e atribui para ele uma nova string, "Punto"; o segundo elemento, a propriedade `getCarro`, é imediatamente atribuído o resultado de chamar uma função (`tipoCarro("Fiat")`); o terceiro elemento, a propriedade `especial`, usa uma variável existente (`vendas)`.
 
 ```js
 var vendas = "Toyota";
@@ -451,8 +451,6 @@ console.log(foo[2]);   // two
 console.log(foo["a"]); // alpha
 console.log(foo["2"]); // two
 ```
-
-###
 
 ### Expressão Regex Literal
 
@@ -529,7 +527,7 @@ O resultado disso seria:
 Ele lê "The Cremation of Sam McGee" de R.W. Service.
 ```
 
-Para incluir uma barra invertida dentro de uma string, você deve escapar o caractere de barra invertida. Por exemplo, para atribuir o caminho do arquivo `c:\temp `para uma string, utilize o seguinte:
+Para incluir uma barra invertida dentro de uma string, você deve escapar o caractere de barra invertida. Por exemplo, para atribuir o caminho do arquivo `c:\temp` para uma string, utilize o seguinte:
 
 ```js
 var home = "c:\\temp";

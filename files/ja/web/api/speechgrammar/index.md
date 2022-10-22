@@ -2,6 +2,7 @@
 title: SpeechGrammar
 slug: Web/API/SpeechGrammar
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 [Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`SpeechGrammar`** インターフェイスは、認識サービスに認識させたい単語のセットまたは単語パターンを表します。

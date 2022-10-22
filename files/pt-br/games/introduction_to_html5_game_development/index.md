@@ -12,17 +12,17 @@ tags:
 translation_of: Games/Introduction_to_HTML5_Game_Development_(summary)
 original_slug: Games/Introduction_to_HTML5_Game_Gevelopment_(summary)
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+{{GamesSidebar}}
 
 ## Vantagens
 
-1.  Os Jogos criados com HTML5 funcionam em Smartphones, tablets, PCs e smart TVs.
-2.  Anuncie e promova seu jogo na Web, bem como em outros meios de comunicação.
-3.  Pagamentos. Carregue o que quiser e use o serviço de processamento de pagamento que desejar.
-4.  Atualize seu jogo sempre que quiser.
-5.  Colete suas próprias análises.
-6.  Conecte-se com seus clientes mais de perto.
-7.  Usuários podem jogar sempre que quiserem e quando quiserem.
+1. Os Jogos criados com HTML5 funcionam em Smartphones, tablets, PCs e smart TVs.
+2. Anuncie e promova seu jogo na Web, bem como em outros meios de comunicação.
+3. Pagamentos. Carregue o que quiser e use o serviço de processamento de pagamento que desejar.
+4. Atualize seu jogo sempre que quiser.
+5. Colete suas próprias análises.
+6. Conecte-se com seus clientes mais de perto.
+7. Usuários podem jogar sempre que quiserem e quando quiserem.
 
 ## Tecnologias da Web
 

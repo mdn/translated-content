@@ -22,7 +22,7 @@ A interface **`MediaStream`** **r**epresenta uma stream de conteúdo de mídia. 
 - {{domxref("MediaStreamTrack.muted")}} {{readonlyInline}}
   - : Returns a Boolean value with a value of `true` if the track is muted, `false` otherwise.
 - {{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}
-  - : Returns a Boolean value with a value of `true` if the track is readonly (such a video file source or a camera that settings can't be modified),`false` otherwise.
+  - : Returns a Boolean value with a value of `true` if the track is readonly (such a video file source or a camera that settings can't be modified), `false` otherwise.
 - {{domxref("MediaStreamTrack.readyState")}} {{readonlyInline}}
 
   - : Returns an enumerated value giving the status of the track.It takes one of the following values:

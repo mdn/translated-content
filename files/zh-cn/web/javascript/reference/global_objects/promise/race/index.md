@@ -26,7 +26,7 @@ Promise.race(iterable);
 
 ## 描述
 
-`race` 函数返回一个 `Promise`，它将与第一个传递的 promise 相同的完成方式被完成。它可以是完成（ resolves），也可以是失败（rejects），这要取决于第一个完成的方式是两个中的哪个。
+`race` 函数返回一个 `Promise`，它将与第一个传递的 promise 相同的完成方式被完成。它可以是完成（resolves），也可以是失败（rejects），这要取决于第一个完成的方式是两个中的哪个。
 
 如果传的迭代是空的，则返回的 promise 将永远等待。
 

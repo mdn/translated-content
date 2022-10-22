@@ -30,16 +30,6 @@ Le gestionnaire d'arrêt est exécuté lorsqu'une transaction a été interrompu
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
 
-## Evénements liés
-
-- {{event("success")}}
-- {{event("error")}}
-- {{event("abort")}}
-- {{event("complete")}}
-- {{event("upgradeneeded")}}
-- {{event("blocked")}}
-- {{event("versionchange")}}
-
 ## Voir aussi
 
 - [Utilisation d'IndexedDB](/fr/docs/IndexedDB/Using_IndexedDB)

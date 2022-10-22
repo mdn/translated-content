@@ -8,11 +8,11 @@ original_slug: Web/CSS/url()
 
 ## 概述
 
-[CSS](/zh-CN/CSS) 数据类型 `<url> 指向一个资源。它没有独有的表达形式，只能通过 url() 函数定义。`
+[CSS](/zh-CN/CSS) 数据类型 `<url>` 指向一个资源。它没有独有的表达形式，只能通过 `url()` 函数定义。
 
 > **备注：** **URI 和 URL?**
 >
-> [URI](https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E6%A0%87%E5%BF%97%E7%AC%A6)（统一资源标识符） 与 [URL](https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%AC%A6)（统一资源定位符） 不同。URL 描述资源的位置，而 URI 描述资源的 id。URI 可以是一个资源的 URL（地址）、或 [URN](https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%90%8D%E7%A7%B0)（统一资源名称）。
+> [URI](https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E6%A0%87%E5%BF%97%E7%AC%A6)（统一资源标识符）与 [URL](https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%AC%A6)（统一资源定位符）不同。URL 描述资源的位置，而 URI 描述资源的 id。URI 可以是一个资源的 URL（地址）、或 [URN](https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%90%8D%E7%A7%B0)（统一资源名称）。
 >
 > 在 CSS Level 1 中，`url()` 函数被引入并用于描述 URL，即地址（虽然没有明确定义，但指一个 CSS 数据类型 `<url>`）
 >

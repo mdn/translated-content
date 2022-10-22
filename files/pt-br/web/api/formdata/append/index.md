@@ -5,7 +5,7 @@ translation_of: Web/API/FormData/append
 ---
 {{APIRef("XMLHttpRequest")}}
 
-O método **`append()`** da Interface {{domxref("FormData")}} adiciona um novo valor dentro de uma chave existente dentro do objeto `FormData `ou adiciona a chave caso ainda não exista.
+O método **`append()`** da Interface {{domxref("FormData")}} adiciona um novo valor dentro de uma chave existente dentro do objeto `FormData` ou adiciona a chave caso ainda não exista.
 
 A diferença entre {{domxref("FormData.set")}} e `append()` é que se uma chave específica já exista, {{domxref("FormData.set")}} irá substituir o valor existente com um novo valor, já o `append()` irá adicionar um novo valor no fim do conjunto de valores.
 
@@ -26,7 +26,7 @@ formData.append(name, value, filename);
   - : O nome do campo cujos dados estão contidas em value.
 - `value`
   - : O valor deste campo . Nas duas versões este é a {{domxref("USVString")}}, ou caso não seja , este é convertido em string. Na versão de tres parametros este pode ser {{domxref("Blob")}}, {{domxref("File")}}, ou {{domxref("USVString")}}, de novo, caso nenhum deses forem especificados este valor é convertido em uma string.
-- `filename `{{optional_inline}}
+- `filename` {{optional_inline}}
   - : O filename reporta para o servidor (a {{domxref("USVString")}}), quando a {{domxref("Blob")}} ou {{domxref("File")}} é passado como o segundo parametro. O default filename para {{domxref("Blob")}} o objecto é "blob".
 
 > **Nota:** Se espisificares {{domxref("Blob")}} como a data append para o objecto `FormData` , o filename a ser reportado para o servidor no "Content-Disposition" header usado para mudar de browser em browser.
@@ -63,6 +63,6 @@ formData.append('userpic', myFileInput.files[0], 'chris.jpg');
 ## Veja Tambem
 
 - {{domxref("XMLHTTPRequest")}}
-- [Usando XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [UsandoFormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- [Usando XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [UsandoFormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

@@ -34,10 +34,10 @@ updateConnectionStatus();
 
 ## Compatibilidade com navegadores
 
-{{Page('/en-US/docs/Web/API/window.navigator.connection','Browser compatibility')}}
+{{Page('/pt-BR/docs/Web/API/window.navigator.connection','Browser compatibility')}}
 
 ## Veja também
 
 - {{ spec("http://dvcs.w3.org/hg/dap/raw-file/tip/network-api/Overview.html", "Network Information API Specification", "ED") }}
-- [Online and offline events](/en/Online_and_offline_events "en/Online_and_offline_events")
+- [Online and offline events](/en/Online_and_offline_events)
 - {{domxref("window.navigator.connection")}}

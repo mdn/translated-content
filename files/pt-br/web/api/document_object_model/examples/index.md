@@ -157,8 +157,6 @@ P
 #LUMPY
 ```
 
-##
-
 ## Exemplo 5: Propagação de Eventos
 
 Este exemplo demonstra como eventos disparar e são tratados no DOM de uma forma muito simples. Quando o corpo deste documento HTML é carregado, um ouvinte de evento é registrado com a linha superior da tabela. O ouvinte de eventos processa o evento executando a função stopEvent, que altera o valor na célula inferior da tabela.
@@ -373,7 +371,7 @@ for (var i = 0; i < 2; i++) {
 
 - A propriedade {{domxref ("element.innerHTML", "innerHTML")}} de uma tabela nunca deve ser usada para modificar uma tabela, embora você possa usá-la para escrever uma tabela inteira ou o conteúdo de uma célula.
 - Se os métodos DOM Core {{domxref ("document.createElement")}} e {{domxref ("Node.appendChild")}} são usados para criar linhas e células, o IE requer que eles sejam anexados a um elemento tbody, enquanto outros Os navegadores permitirão acrescentar a um elemento da tabela (as linhas serão adicionadas ao último elemento tbody).
-- Há uma série de outros métodos convenientes pertencentes à[ tabela de interface](/pt-BR/docs/) que podem ser usados para criar e modificar tabelas.
+- Há uma série de outros métodos convenientes pertencentes à [tabela de interface](/pt-BR/docs/) que podem ser usados para criar e modificar tabelas.
 
 ## Subnav
 

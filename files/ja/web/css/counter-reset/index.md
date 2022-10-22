@@ -2,6 +2,7 @@
 title: counter-reset
 slug: Web/CSS/counter-reset
 ---
+
 {{CSSRef}}
 
 **`counter-reset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)を指定された値で初期化します。

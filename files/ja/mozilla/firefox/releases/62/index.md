@@ -2,6 +2,7 @@
 title: Firefox 62 for developers
 slug: Mozilla/Firefox/Releases/62
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 62 は、米国時間 2018 年 9 月 5 日 にリリースされました。このページでは、開発者に影響する Firefox 62 の変更点をまとめています。

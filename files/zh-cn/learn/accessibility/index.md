@@ -16,7 +16,7 @@ slug: Learn/Accessibility
 - [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
   - : 这篇文章开头很好地阐述了到底什么是'无障碍' — 这包括我们要考虑哪一群人以及为什么要考虑这些人，不同用户使用什么工具与网页交互，以及我们在网页开发流中如何构建可用性部分。
 - [HTML: 确保无障碍的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)
-  - : 只要确保恰当的 HTML 元素被用于适当的目的， 大量的网页内容即可具有可用性，这篇文章详细地讲述了 HTML 的用法，以确保网页有最大的无障碍。
+  - : 只要确保恰当的 HTML 元素被用于适当的目的，大量的网页内容即可具有可用性，这篇文章详细地讲述了 HTML 的用法，以确保网页有最大的无障碍。
 - [CSS 与 JavaScript 可用性最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
   - : CSS 与 JavaScript, 当正确使用的时候，也能够使得网页具有很好的无障碍，但是如果错误地使用他们将极大地破坏无障碍。这篇文章罗列了一些应该被考虑的 CSS 和 JavaScript 的最佳实践，确保再复杂的内容都可以有尽可能好的无障碍。
 - [无障碍网页应用基础](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
@@ -29,7 +29,7 @@ slug: Learn/Accessibility
 ## 评估
 
 - [无障碍诊断](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)
-  - : 针对这篇模块，对于您的理解程度， 我们提供了评估方法，我们向您展示了一个简单的网站，其中包含许多您需要诊断和修复的无障碍问题。
+  - : 针对这篇模块，对于您的理解程度，我们提供了评估方法，我们向您展示了一个简单的网站，其中包含许多您需要诊断和修复的无障碍问题。
 
 ## 另见
 

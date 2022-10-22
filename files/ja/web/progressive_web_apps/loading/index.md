@@ -2,6 +2,7 @@
 title: プログレッシブ読み込み
 slug: Web/Progressive_web_apps/Loading
 ---
+
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 前回の記事では、[js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) の例をプログレッシブウェブアプリケーションにするのに役立つ API について説明しました — [サービスワーカー](/ja/docs/Web/Progressive_web_apps/Offline_Service_workers)、[ウェブマニフェスト](/ja/docs/Web/Progressive_web_apps/Installable_PWAs)、[通知、およびプッシュ](/ja/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push)です。 この記事では、リソースを徐々に読み込せて、アプリのパフォーマンスをさらに向上させます。

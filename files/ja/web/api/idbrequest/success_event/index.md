@@ -2,6 +2,7 @@
 title: 'IDBRequest: success event'
 slug: Web/API/IDBRequest/success_event
 ---
+
 {{ APIRef("IndexedDB") }}
 
 `success`イベントは`IDBRequest`が成功すると着火します。

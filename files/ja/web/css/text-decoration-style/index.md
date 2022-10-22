@@ -2,6 +2,7 @@
 title: text-decoration-style
 slug: Web/CSS/text-decoration-style
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`text-decoration-style`** プロパティは、 {{ cssxref("text-decoration-line") }} で指定された線の種類を設定します。線の種類はすべての線に適用され `text-decoration-line` で定義された線ごとに異なる種類を定義する方法はありません。

@@ -35,8 +35,6 @@ console.dir(object);
 
 {{Compat("api.console.dir")}}
 
-##
-
 ## Ver também
 
 - [Documentação Opera Dragonfly: Console](http://www.opera.com/dragonfly/documentation/console/)

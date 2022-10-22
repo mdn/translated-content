@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Classes/Private_class_fields
 translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 original_slug: Web/JavaScript/Referencia/Classes/Private_class_fields
 ---
-Las propiedades de la clase son públicas de forma predeterminada y se pueden examinar o modificar fuera de la clase. Sin embargo, existe [una propuesta experimental](https://translate.googleusercontent.com/translate_c?depth=1&pto=aue&rurl=translate.google.com&sl=en&sp=nmt4&tl=es&u=https://github.com/tc39/proposal-class-fields&usg=ALkJrhgmG5nvuZjYd2YQRSuRJHti_gdXeQ) para permitir la definición de campos de clase privados utilizando un `#`prefijo hash .
+Las propiedades de la clase son públicas de forma predeterminada y se pueden examinar o modificar fuera de la clase. Sin embargo, existe [una propuesta experimental](https://github.com/tc39/proposal-class-fields) para permitir la definición de campos de clase privados utilizando un `#`prefijo hash .
 
 ## Syntax
 

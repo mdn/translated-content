@@ -2,6 +2,7 @@
 title: 'ServiceWorkerGlobalScope: message event'
 slug: Web/API/ServiceWorkerGlobalScope/message_event
 ---
+
 {{APIRef}}
 
 {{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`message`** イベントは、着信メッセージを受信したときに発生します。 制御されたページは、{{domxref("ServiceWorker.postMessage()")}} メソッドを使用して、サービスワーカーにメッセージを送信できます。

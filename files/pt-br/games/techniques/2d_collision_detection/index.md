@@ -5,8 +5,6 @@ translation_of: Games/Techniques/2D_collision_detection
 ---
 {{GamesSidebar}}
 
-{{IncludeSubnav("/en-US/docs/Games")}}
-
 Algoritmos para detectar colisões em jogos 2D dependem do tipo de formas que podem colidir (por exemplo, retângulo para retângulo, retângulo para círculo, círculo para círculo). Geralmente, você terá uma forma genérica simples que abrange a entidade conhecida como "hitbox", portanto, mesmo que a colisão não seja perfeita, ela terá boa aparência e terá bom desempenho em várias entidades. Este artigo fornece uma revisão das técnicas mais comuns usadas para fornecer detecção de colisão em jogos 2D.
 
 ## Caixa delimitadora alinhada por eixo
@@ -161,11 +159,11 @@ Este é um algoritmo de colisão que pode detectar uma colisão entre quaisquer 
 
 A implementação do SAT está fora do escopo desta página, portanto, veja os tutoriais recomendados abaixo:
 
-1.  [Separating Axis Theorem (SAT) explanation](http://www.sevenson.com.au/actionscript/sat/)
-2.  [Collision detection and response](http://www.metanetsoftware.com/technique/tutorialA.html)
-3.  [Collision detection Using the Separating Axis Theorem](http://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)
-4.  [SAT (Separating Axis Theorem)](http://www.codezealot.org/archives/55)
-5.  [Separation of Axis Theorem (SAT) for Collision DDetection](http://rocketmandevelopment.com/blog/separation-of-axis-theorem-for-collision-detection/)
+1. [Separating Axis Theorem (SAT) explanation](http://www.sevenson.com.au/actionscript/sat/)
+2. [Collision detection and response](http://www.metanetsoftware.com/technique/tutorialA.html)
+3. [Collision detection Using the Separating Axis Theorem](http://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)
+4. [SAT (Separating Axis Theorem)](http://www.codezealot.org/archives/55)
+5. [Separation of Axis Theorem (SAT) for Collision DDetection](http://rocketmandevelopment.com/blog/separation-of-axis-theorem-for-collision-detection/)
 
 ## Performance de Colisão
 

@@ -8,7 +8,7 @@ translation_of: Web/CSS/background-clip
 ---
 {{CSSRef}}
 
-A propriedade CSS**` background-clip`** especifica se o fundo de um elemento, seja cor ou imagem, se extende debaixo de sua área de borda, preenchimento ou conteúdo.
+A propriedade CSS **`background-clip`** especifica se o fundo de um elemento, seja cor ou imagem, se extende debaixo de sua área de borda, preenchimento ou conteúdo.
 
 {{EmbedInteractiveExample("pages/css/background-clip.html")}}
 

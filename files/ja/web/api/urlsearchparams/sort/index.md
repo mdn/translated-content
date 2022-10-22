@@ -2,6 +2,7 @@
 title: URLSearchParams.sort()
 slug: Web/API/URLSearchParams/sort
 ---
+
 {{APIRef("URL API")}}
 
 **`URLSearchParams.sort()`** メソッドは、このオブジェクトに含まれるすべてのキー/値のペアをその場でソートし、`undefined` を返します。 ソート順は、キーの Unicode コードポイントに従っています。 このメソッドは、安定したソートアルゴリズムを使用します（つまり、等しいキーを持つキー/値のペア間の相対的な順序が保持されます）。

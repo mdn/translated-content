@@ -31,7 +31,7 @@ flex-grow: initial;
 flex-grow: unset;
 ```
 
-Свойство `flex-grow` указывается одним числом — значением типа [`<number>`](https://developer.mozilla.org/ru/docs/Web/CSS/flex-grow$edit#%3Cnumber%3E).
+Свойство `flex-grow` указывается одним числом — значением типа [`<number>`](/ru/docs/Web/CSS/flex-grow#number).
 
 ### Значения
 

@@ -2,6 +2,7 @@
 title: StylePropertyMapReadOnly.size
 slug: Web/API/StylePropertyMapReadOnly/size
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 **`size`** は {{domxref("StylePropertyMapReadOnly")}} インターフェイスの読み取り専用プロパティで、 `StylePropertyMapReadOnly` オブジェクトの大きさを符号なし長整数で返します。

@@ -3,6 +3,7 @@ title: ServiceWorkerGlobalScope.onpushsubscriptionchange
 slug: orphaned/Web/API/ServiceWorkerGlobalScope/onpushsubscriptionchange
 original_slug: Web/API/ServiceWorkerGlobalScope/onpushsubscriptionchange
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`ServiceWorkerGlobalScope.onpushsubscriptionchange`** イベントは、アプリケーションのコントロールの外側で発生したプッシュサブスクリプションの変更を示すために発火されます。例えば、ブラウザーがプッシュサブスクリプションをリフレッシュしたときなどです。

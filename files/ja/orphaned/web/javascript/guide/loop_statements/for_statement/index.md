@@ -3,6 +3,7 @@ title: for 文
 slug: orphaned/Web/JavaScript/Guide/Loop_Statements/for_Statement
 original_slug: Web/JavaScript/Guide/Loop_Statements/for_Statement
 ---
+
 ### for 文
 
 `for` ループは指定した条件が false に評価されるまで繰り返します。JavaScript の for ループは Java や C の for ループに似ています。`for` 文は次のように使用します。

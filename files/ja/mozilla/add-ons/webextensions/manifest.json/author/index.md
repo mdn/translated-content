@@ -2,6 +2,7 @@
 title: author
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/author
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

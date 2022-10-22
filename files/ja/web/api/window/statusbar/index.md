@@ -2,6 +2,7 @@
 title: Window.statusbar
 slug: Web/API/Window/statusbar
 ---
+
 {{APIRef}}
 
 **`Window.statusbar`** プロパティはステータスバーオブジェクトを返します。これにより、ウィンドウ内で表示/非表示を切り替えることができます。

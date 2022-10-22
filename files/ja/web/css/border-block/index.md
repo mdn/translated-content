@@ -2,6 +2,7 @@
 title: border-block
 slug: Web/CSS/border-block
 ---
+
 {{CSSRef}}
 
 The **`border-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、論理的なブロック方向のそれぞれの境界プロパティをスタイルシートの 1 ヶ所で設定する[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。

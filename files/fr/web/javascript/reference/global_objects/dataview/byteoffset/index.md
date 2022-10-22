@@ -43,14 +43,11 @@ dataview2.byteOffset; // 3 (décalage défini lors de la construction de la vue)
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                       | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-dataview.prototype.byteoffset', 'DataView.prototype.byteOffset')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-dataview.prototype.byteoffset', 'DataView.prototype.byteOffset')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.byteOffset")}}
+{{Compat}}
 
 ## Voir aussi
 
