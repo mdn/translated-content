@@ -141,13 +141,13 @@ Web アプリのライフサイクルのこの段階では、通常、"将来の
 
 開発後の段階で使用できるツールの種類は他にも多数あります。たとえば、コード品質メトリクスを収集するための [Code Climate](https://codeclimate.com/)、クロスブラウザーの互換性やその他のチェックのランタイム分析を実行するための [webhint ブラウザー拡張機能](https://webhint.io/docs/user-guide/extensions/extension-browser/)、より強力な機能を提供するための [GitHub ボット](https://probot.github.io/)などがあります。 GitHub の機能、アプリの稼働時間の監視を提供する [Updown](https://updown.io/) など、他にもたくさんあります！
 
-### Some thoughts about tooling types
+### ツールの種類に関するいくつかの考え
 
-There's certainly an order in which the different tooling types apply in the development lifecycle, but rest assured that you don't _have_ to have all of these in place to release a website. In fact, you don't need any of these. However, including some of these tools in your process will improve your own development experience and likely improve the overall quality of your code.
+開発ライフサイクルでさまざまなツール タイプが適用される順序は確かにありますが、Web サイトをリリースするためにこれらすべてを用意する必要はありませんのでご安心ください。 実際、これらは必要ありません。 ただし、これらのツールの一部をプロセスに含めることで、独自の開発エクスペリエンスが向上し、コードの全体的な品質が向上する可能性があります。
 
-It often takes some time for new developer tools to settle down in their complexity. One of the best known tools, Webpack, has a reputation for being overly complicated to work with, but in the latest major release there was a huge push to simplify common usage so the configuration required is reduced down to an absolute minimum.
+新しい開発者ツールがその複雑さに慣れるまでには時間がかかることがよくあります。 最もよく知られているツールの 1 つである Webpack は、操作が非常に複雑であるという評判がありますが、最新のメジャー リリースでは、一般的な使用法を簡素化することが大きく推進されたため、必要な構成は最小限に抑えられています。 
 
-There's definitely no silver bullet that will guarantee success with tools, but as your experience increases you'll find workflows that work _for you_ or for your team and their projects. Once all the kinks in the process are flattened out, your tool chain should be something you can forget about and it _should_ just work.
+ツールの成功を保証する特効薬は絶対にありませんが、経験を積むにつれて、 適した 自分やチームとそのプロジェクトに ワークフローを見つけることができます。 プロセスのねじれがすべて平らになれば、ツール チェーンは忘れることができるものになり、機能する _はず_ です。 
 
 ## How to choose and get help with a particular tool
 
