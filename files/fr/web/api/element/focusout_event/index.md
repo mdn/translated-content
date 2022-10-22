@@ -41,4 +41,3 @@ L'évènement `focusout` est déclenché lorsqu'un élément du DOM est sur le p
 - [`focus`](/fr/docs/Web/API/Element/focus_event)
 - [`blur`](/fr/docs/Web/API/Element/blur_event)
 - [`focusin`](/fr/docs/Web/API/Element/focusin_event)
-

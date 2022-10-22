@@ -51,7 +51,6 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<samp>`** est un élément qui permet d
   </tbody>
 </table>
 
-
 ## Attributs
 
 Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
