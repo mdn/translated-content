@@ -93,13 +93,13 @@ Web 用のソフトウェアの作成は、年月を経てより洗練されて�
 
 [Prettier](https://prettier.io/) はコード フォーマッタの非常に一般的な例であり、モジュールの後半で使用します。 
 
-#### Bundlers/packagers
+#### バンドラー/パッケージャー
 
-These are tools that get your code ready for production, for example by "tree-shaking" to make sure only the parts of your code libraries that you are actually using are put into your final production code, or "minifying" to remove all the whitespace in your production code, making it as small as possible before it is uploaded to a server.
+これらは、実際に使用しているコード ライブラリの部分のみを最終的な製品コードに入れるための ”ツリー シェーキング” や、すべてのコードを削除するための "縮小" など、コードを製品用に準備するためのツールです。サーバーにアップロードする前に、本番コードの空白をできるだけ小さくします。
 
-[Parcel](https://parceljs.org/) is a particularly clever tool that fits into this category — it can do the above tasks, but also helps to package assets like HTML, CSS, and image files into convenient bundles that you can then go on to deploy, and also adds dependencies for you automatically whenever you try to use them. It can even handle some code transformation duties for you.
+[Parcel](https://parceljs.org/) は、このカテゴリに適合する特に賢いツールです。上記のタスクを実行できますが、HTML、CSS、画像ファイルなどのアセットを便利なバンドルにパッケージ化してデプロイできるようにし、依存関係を追加するのにも役立ちます。それらを使用しようとするたびに自動的に。 一部のコード変換作業も処理できます。
 
-[Webpack](https://webpack.js.org/) is another very popular packaging tool that does similar things.
+[Webpack](https://webpack.js.org/) は、同様のことを行う別の非常に人気のあるパッケージング ツールです。 
 
 ### Transformation
 
