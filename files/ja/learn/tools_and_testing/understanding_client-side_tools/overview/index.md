@@ -124,12 +124,12 @@ Web アプリのライフサイクルのこの段階では、通常、"将来の
 
 開発プロセスのこの段階は、アクティブな対話を最小限にしたい段階です。そのため、構成が完了すると、ほとんど自動的に実行され、何か問題が発生した場合にのみポップアップして通知します。
 
-#### Testing tools
+#### テストツール
 
-These generally take the form of a tool that will automatically run tests against your code to make sure it is correct before you go any further (for example, when you attempt to push changes to a GitHub repo). This can include linting, but also more sophisticated procedures like unit tests, where you run part of your code, making sure they behave as they should.
+これらは通常、コードに対してテストを自動的に実行して、先に進む前にコードが正しいことを確認するツールの形をとります (たとえば、変更を GitHub リポジトリにプッシュしようとする場合)。 これには、リンティングだけでなく、コードの一部を実行して正常に動作することを確認する単体テストなどのより高度な手順も含まれます。
 
-- Frameworks for writing tests include [Jest](https://jestjs.io/), [Mocha](https://mochajs.org/), and [Jasmine](https://jasmine.github.io/).
-- Automated test running and notification systems include [Travis CI](https://travis-ci.org/), [Jenkins](https://www.jenkins.io/), [Circle CI](https://circleci.com/), and [others](https://en.wikipedia.org/wiki/List_of_build_automation_software#Continuous_integration).
+- テストを作成するためのフレームワークには、 [Jest](https://jestjs.io/) 、 [Mocha](https://mochajs.org/) 、および [Jasmine](https://jasmine.github.io/) が含まれます。
+- 自動化されたテスト実行および通知システムには、 [Travis CI](https://travis-ci.org/) 、 [Jenkins](https://www.jenkins.io/) 、 [Circle CI](https://circleci.com/) 、 [その他様々なツール](https://en.wikipedia.org/wiki/List_of_build_automation_software#Continuous_integration) があります 。 
 
 #### Deployment tools
 
