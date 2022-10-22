@@ -3,6 +3,7 @@ title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
 translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
+
 {{jsSidebar("Statements")}}
 
 Объявление **`async function`** определяет _асинхронную функцию_, которая возвращает объект {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}.

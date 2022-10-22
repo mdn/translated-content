@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Template_literals
 original_slug: Web/JavaScript/Reference/template_strings
 ---
+
 {{JsSidebar("More")}}
 
 Шаблонными литералами называются строковые литералы, допускающие использование выражений внутри. С ними вы можете использовать многострочные литералы и строковую интерполяцию. В спецификациях до ES2015 они назывались "шаблонными строками".
