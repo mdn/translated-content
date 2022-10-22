@@ -1229,7 +1229,7 @@ Tous les systèmes ne prennent pas en charges toutes les couleurs système. Cet 
 - \-moz-ButtonHoverFace
   - : La couleur d'arrière-plan d'un bouton survolé par le pointeur (qui serait `ThreeDFace` ou `ButtonFace` lorsque le pointeur n'est pas sur le bouton). Devrait être utilisée avec `-moz-ButtonHoverText` comme couleur de premier-plan.
 - \-moz-ButtonHoverText
-  - : La couleur du texte d'un bouton survolé par le pointeur (qui serait ButtonText lorsque le pointeur n'est pas sur le bouton). Devrait être utilisée avec`-moz-ButtonHoverFace` comme couleur d'arrière-plan.
+  - : La couleur du texte d'un bouton survolé par le pointeur (qui serait ButtonText lorsque le pointeur n'est pas sur le bouton). Devrait être utilisée avec `-moz-ButtonHoverFace` comme couleur d'arrière-plan.
 - \-moz-CellHighlight
   - : La couleur d'arrière-plan pour un élément sélectionné dans un widget arborescent. Devrait être utilisée avec `-moz-CellHighlightText` comme couleur de premier-plan. Voir aussi `-moz-html-CellHighlight`.
 - \-moz-CellHighlightText
@@ -1246,7 +1246,7 @@ Tous les systèmes ne prennent pas en charges toutes les couleurs système. Cet 
 
   \-moz-EvenTreeRow
 
-  - : La couleur d'arrière-plan pour les lignes numérotées paires d'un arbre. Devrait être utilisée avec`-moz-FieldText` comme couleur de premier-plan. Pour les versions de Gecko avant 1.9, on utilisera `-moz-Field`. Voir aussi `-moz-OddTreeRow`.
+  - : La couleur d'arrière-plan pour les lignes numérotées paires d'un arbre. Devrait être utilisée avec `-moz-FieldText` comme couleur de premier-plan. Pour les versions de Gecko avant 1.9, on utilisera `-moz-Field`. Voir aussi `-moz-OddTreeRow`.
 
 - \-moz-Field
   - : La couleur d'arrière-plan pour les champs texte. Devrait être utilisée avec `-moz-FieldText` comme couleur de premier-plan.
@@ -1271,7 +1271,7 @@ Tous les systèmes ne prennent pas en charges toutes les couleurs système. Cet 
 - \-moz-nativehyperlinktext
   - : La couleur par défaut de la plate-forme pour les hyperliens.
 - \-moz-OddTreeRow
-  - : La couleur d'arrière-plan pour les lignes numérotées impaires d'un arbre. Devrait être utilisée avec`-moz-FieldText` comme couleur de premier-plan. Pour les versions de Gecko avant 1.9, on utilisera `-moz-Field`. Voir aussi `-moz-EvenTreeRow`.
+  - : La couleur d'arrière-plan pour les lignes numérotées impaires d'un arbre. Devrait être utilisée avec `-moz-FieldText` comme couleur de premier-plan. Pour les versions de Gecko avant 1.9, on utilisera `-moz-Field`. Voir aussi `-moz-EvenTreeRow`.
 - \-moz-win-accentcolor
   - : Utilisée pour accéder à la couleur d'accentuation de Windows 10 pour les menus, la barre de tâches, les barres de titre.
 - \-moz-win-accentcolortext

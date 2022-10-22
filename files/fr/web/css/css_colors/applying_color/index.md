@@ -96,7 +96,7 @@ Pour des informations plus détaillées sur chaque type de valeur, vous pouvez c
 
 ### Mots-clés
 
-Un ensemble standard de noms de couleurs a été défini et il est possible d'utiliser l'un de ces mots-clés plutôt qu'une représentation numérique s'il existe un mot-clé pour la valeur qu'on souhaite utiliser. Les mots-clés désignant les couleurs regroupent les couleurs primaires et secondaires (tels que`red` pour rouge, `blue` pour bleu, `orange`), les tons de gris (allant de `black` pour noir à `white` pour blanc et incluant des niveaux tels que `darkgray` (gris foncé) et `lightgrey` (gris clair)). D'autres couleurs sont également disponibles avec un mot-clé comme `lightseagreen`, `cornflowerblue` ou `rebeccapurple`.
+Un ensemble standard de noms de couleurs a été défini et il est possible d'utiliser l'un de ces mots-clés plutôt qu'une représentation numérique s'il existe un mot-clé pour la valeur qu'on souhaite utiliser. Les mots-clés désignant les couleurs regroupent les couleurs primaires et secondaires (tels que `red` pour rouge, `blue` pour bleu, `orange`), les tons de gris (allant de `black` pour noir à `white` pour blanc et incluant des niveaux tels que `darkgray` (gris foncé) et `lightgrey` (gris clair)). D'autres couleurs sont également disponibles avec un mot-clé comme `lightseagreen`, `cornflowerblue` ou `rebeccapurple`.
 
 Vous pouvez consulter [cette liste](/fr/docs/Web/CSS/color_value#color_keywords) pour connaître l'ensemble des mots-clés disponibles.
 

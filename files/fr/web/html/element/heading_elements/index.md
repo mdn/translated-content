@@ -109,7 +109,7 @@ Les niveaux de titres peuvent être imbriqués afin de créer des sous-sections 
 
     4. `h2` Morphologie externe
 
-        1. `h3`Tête
+        1. `h3` Tête
 
             1. `h4` Mandibules
 

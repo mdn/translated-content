@@ -91,7 +91,7 @@ Lors de l'utilisation de la directive "must-revalidate", le cache doit vérifier
 Cache-Control: must-revalidate
 ```
 
-### L'en-tête`Pragma`
+### L'en-tête `Pragma`
 
 {{HTTPHeader ("Pragma")}} est un en-tête HTTP / 1.0. Il n'est pas spécifié pour les réponses HTTP et ne constitue donc pas un remplacement fiable pour l'en-tête général HTTP / 1.1 Cache-Control, bien qu'il se comporte de la même manière que Cache-Control: no-cache, si le champ d'en-tête Cache-Control est omis dans une requête. Utilisez Pragma uniquement pour une compatibilité ascendante avec les clients HTTP / 1.0.
 
