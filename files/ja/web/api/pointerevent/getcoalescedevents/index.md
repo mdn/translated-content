@@ -26,6 +26,7 @@ getCoalescedEvents()
 {{domxref('PointerEvent')}} インスタンスのシーケンス。
 
 ## 仕様
+
 {{Specifications}}
 
 ## ブラウザーの互換性
