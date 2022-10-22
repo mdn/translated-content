@@ -33,7 +33,7 @@ tags:
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">目的:</th>
       <td>Angular アプリをビルドする方法を学ぶ。</td>
     </tr>
   </tbody>
