@@ -9,7 +9,7 @@ translation_of: Web/API/CanvasRenderingContext2D/textBaseline
 ---
 {{APIRef}}
 
-**`CanvasRenderingContext2D`\*\***`.textBaseline`\*\* - свойство Canvas 2D API, указывающее на текущую базовую линию при рисовании текста.
+**`CanvasRenderingContext2D.textBaseline`** - свойство Canvas 2D API, указывающее на текущую базовую линию при рисовании текста.
 
 ## Синтаксис
 

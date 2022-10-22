@@ -19,11 +19,11 @@ translation_of: Web/Accessibility
 
 ## Документация
 
-- [Веб-разработка](/ru/docs/Accessibility/Web_Development "Accessibility Web Development")
+- [Веб-разработка](/ru/docs/Accessibility/Web_Development)
   - : Набор статей для привлечения внимания к проблемам веб-разработки в мире специальных возможностей.
 - [ARIA](/ru/docs/Accessibility/ARIA)
   - : Набор статей о том, как сделать HTML-файлы доступнее с помощью ARIA.
-- [Разработка вспомогательных технологий (технических средств реабилитации, ТСР)](/ru/docs/Accessibility/AT_Development "AT Development")
+- [Разработка вспомогательных технологий (технических средств реабилитации, ТСР)](/ru/docs/Accessibility/AT_Development)
   - : Набор статей для разработчиков ТСР.
 - [Mobile accessibility checklist](/ru/docs/Web/Accessibility/Mobile_accessibility_checklist)
   - : Этот документ предоставляет краткий список требований к разработке специальных возможностей для мобильных приложений.

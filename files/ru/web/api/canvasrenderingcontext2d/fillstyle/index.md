@@ -9,7 +9,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
 {{APIRef}}
 
-Свойство **`CanvasRenderingContext2D`\*\***`.fillStyle`\*\*, предоставляемое [Canvas 2D API](/ru/docs/Web/API/Canvas_API), задаёт цвет или стиль, используемый при заливке фигур. По умолчанию установлено значение `#000` (чёрный цвет).
+Свойство **`CanvasRenderingContext2D.fillStyle`**, предоставляемое [Canvas 2D API](/ru/docs/Web/API/Canvas_API), задаёт цвет или стиль, используемый при заливке фигур. По умолчанию установлено значение `#000` (чёрный цвет).
 
 > **Примечание:** Смотрите также главу [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) в [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
 
