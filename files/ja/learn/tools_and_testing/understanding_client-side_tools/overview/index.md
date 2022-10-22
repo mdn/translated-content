@@ -67,15 +67,15 @@ Web 用のソフトウェアの作成は、年月を経てより洗練されて�
 
 開発者が使用している非常に一般的なセーフティネットツールの種類は次のとおりです。
 
-#### Linters
+#### リンター
 
-**Linters** are tools that check through your code and tell you about any errors that are present, what error types they are, and what code lines they are present on. Often linters can be configured to not only report errors, but also report any violations of a specified style guide that your team might be using (for example code that is using the wrong number of spaces for indentation, or using [template literals](/ja/docs/Web/JavaScript/Reference/Template_literals) rather than regular string literals).
+**リンター**は、コードをチェックして、存在するエラー、エラーの種類、エラーが存在するコード行を通知するツールです。 多くの場合、リンターはエラーを報告するだけでなく、チームが使用している可能性のある特定のスタイル ガイドの違反も報告するように構成できます (たとえば、インデントに間違った数のスペースを使用しているコード、または通常の文字列リテラルではなく[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)を使用しているコード）。
 
-[ESLint](https://eslint.org/) is the industry standard JavaScript linter — a highly configurable tool for catching potential syntax errors and encouraging "best practices" throughout your code. Some companies and projects have also [shared their ESLint configs](https://www.npmjs.com/search?q=keywords:eslintconfig).
+[ESLint](https://eslint.org/) は、業界標準の JavaScript リンターです。これは、潜在的な構文エラーを検出し、コード全体で "ベスト プラクティス" を奨励する高度に構成可能なツールです。 一部の企業やプロジェクトも [ESLint 構成を共有](https://www.npmjs.com/search?q=keywords:eslintconfig) しています。
 
-You can also find linting tools for other languages, such as [csslint](http://csslint.net/).
+[csslint](http://csslint.net/) など、他の言語用の lint ツールもあります。
 
-Also well-worth looking at is [webhint](https://webhint.io/), a configurable, open-source linter for the web that surfaces best practices including approaches to accessibility, performance, cross-browser compatibility via [MDN's browser compatibility data](https://github.com/mdn/browser-compat-data), security, testing for PWAs, and more. It is available as a [Node.js command-line tool](https://webhint.io/docs/user-guide/) and a [VS Code extension](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint).
+[webhint](https://webhint.io/) も一見の価値があります。これは、アクセシビリティ、パフォーマンス、[MDN のブラウザー互換性データ](https://github.com/mdn/browser-compat-data)を介したクロスブラウザー互換、セキュリティ、PWA のテストなどのアプローチを含むベスト プラクティスを明らかにする、構成可能なオープンソースの Web リンターです。 これは、[Node.js コマンドラインツール](https://webhint.io/docs/user-guide/)および [VS Code 拡張機能](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint)として利用できます。
 
 #### Source code control
 
