@@ -57,15 +57,15 @@ Web 用のソフトウェアの作成は、年月を経てより洗練されて�
 
 これらをそれぞれ詳しく見ていきましょう。
 
-### Safety net
+### セーフティネット
 
-These are tools that make the code you write a little better.
+これらは、作成するコードを少し改善するためのツールです。
 
-This part of the tooling should be specific to your own development environment, though it's not uncommon for companies to have some kind of policy or pre-baked configuration available to install so that all their developers are all using the same processes.
+ツールのこの部分は、独自の開発環境に固有のものにする必要がありますが、すべての開発者がすべて同じプロセスを使用できるように、企業が何らかのポリシーまたは事前に作成された構成をインストールできるようにすることは珍しくありません。
 
-This includes anything that makes your development process easier with respect to generating stable and reliable code. Safety net tooling should also help you either prevent mistakes or correct mistakes automatically without having to build your code from scratch each time.
+これには、安定した信頼性の高いコードの生成に関して、開発プロセスを容易にするものすべてが含まれます。 セーフティネットツールは、コードを毎回ゼロから作成することなく、間違いを防止したり、間違いを自動的に修正したりするのにも役立ちます。
 
-A few very common safety net tool types you will find being used by developers are as follows.
+開発者が使用している非常に一般的なセーフティネットツールの種類は次のとおりです。
 
 #### Linters
 
