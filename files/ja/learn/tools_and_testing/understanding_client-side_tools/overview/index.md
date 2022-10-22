@@ -149,25 +149,25 @@ Web アプリのライフサイクルのこの段階では、通常、"将来の
 
 ツールの成功を保証する特効薬は絶対にありませんが、経験を積むにつれて、 適した 自分やチームとそのプロジェクトに ワークフローを見つけることができます。 プロセスのねじれがすべて平らになれば、ツール チェーンは忘れることができるものになり、機能する _はず_ です。 
 
-## How to choose and get help with a particular tool
+## 特定のツールを選択してヘルプを表示する方法 
 
-Most tools tend to get written and released in isolation, so although there's almost certainly help available it's never in the same place or format. It can therefore be hard to find help with using a tool, or even to choose what tool to use. The knowledge about which are the best tools to use is a bit tribal, meaning that if you aren't already in the web community, it is hard to find out exactly which ones to go for! This is one reason we wrote this series of articles, to hopefully provide that first step that is hard to find otherwise.
+ほとんどのツールは、単独で作成およびリリースされる傾向があるため、ほぼ確実に利用可能なヘルプがありますが、同じ場所または形式になることはありません。 そのため、ツールの使用に関するヘルプを見つけることや、使用するツールを選択することさえ難しい場合があります。 どのツールを使用するのが最適かについての知識は少し部分的です。つまり、まだ Web コミュニティに参加していない場合、どのツールを使用すればよいかを正確に判断するのは困難です。 これが、このシリーズの記事を書いた理由の 1 つであり、他の方法では見つけるのが難しい最初のステップを提供することを願っています。
 
-You'll probably need a combination of the following things:
+おそらく、次のものの組み合わせが必要になるでしょう。
 
-- Experienced teachers, mentors, fellow students, or colleagues that have some experience, have solved such problems before, and can give advice.
-- A useful specific place to search. General web searches for front-end developer tools are generally useless unless you already know the name of the tool you are searching for.
+- 経験豊富な教師、メンター、仲間の学生、または経験があり、以前にそのような問題を解決した経験があり、アドバイスを提供できる同僚。
+- 検索するのに便利で最適な場所。 フロントエンド開発者ツールの一般的な Web 検索は、検索しているツールの名前がわかっている場合を除き、通常は役に立ちません。
 
-  - If you are using the npm package manager to manage your dependencies for example, it is a good idea to go to the [npm homepage](https://www.npmjs.com/) and search for the type of tool you are looking for, for example try searching for "date" if you want a date formatting utility, or "formatter" if you are searching for a general code formatter. Pay attention to the popularity, quality, and maintenance scores, and how recently the package was last updated. Also click through to the tool pages to find out how many monthly downloads a package has, and whether it has good documentation that you can use to figure out whether it does what you need it to do. Based on these criteria, the [date-fns library](https://www.npmjs.com/package/date-fns) looks like a good date formatting tool to use. You'll see this tool in action and learn more about package managers in general in Chapter 3 of this module.
-  - If you are looking for a plugin to integrate tool functionality into your code editor, look at the code editor's plugins/extensions page — see [Atom packages](https://atom.io/packages) and [VSCode extensions](https://marketplace.visualstudio.com/VSCode), for example. Have a look at the featured extensions on the front page, and again, try searching for the kind of extension you want (or the tool name, for example search for "ESLint" on the VSCode extensions page). When you get results, have a look at information such as how many stars or downloads the extension has, as an indicator of its quality.
+  - たとえば、npm パッケージ マネージャーを使用して依存関係を管理している場合は、 [npm ホームページ](https://www.npmjs.com/) にアクセスして、探しているツールの種類を検索することをお勧めします。日付フォーマット ユーティリティ、または一般的なコード フォーマッタを検索している場合は「フォーマッタ」。 人気度、品質、メンテナンス スコア、およびパッケージが最後に更新されたのはいつ頃かを確認してください。 また、クリックしてツール ページにアクセスし、パッケージの月間ダウンロード数や、必要な機能を備えているかどうかを判断するために使用できる適切なドキュメントがあるかどうかを確認してください。 これらの基準に基づくと、 [date-fns ライブラリ](https://www.npmjs.com/package/date-fns) は、使用するのに適した日付フォーマット ツールのように見えます。 このモジュールの第 3 章では、このツールの動作を確認し、パッケージ マネージャー全般について詳しく学習します。
+  - ツール機能をコード エディターに統合するためのプラグインを探している場合は、コード エディターのプラグイン/拡張機能のページを参照してください。たとえば、[Atom パッケージ](https://atom.io/packages)と [VSCode 拡張機能](https://marketplace.visualstudio.com/VSCode)を参照してください。 フロント ページで注目の拡張機能を確認し、必要な種類の拡張機能 (またはツール名、たとえば VSCode 拡張機能ページで "ESLint" を検索) を検索してみてください。 結果が得られたら、拡張機能の品質の指標として、星の数やダウンロード数などの情報を確認します。
 
-- Development-related forums to ask questions on about what tools to use, for example [MDN Learn Discourse](https://discourse.mozilla.org/c/mdn/learn/250), or [Stack Overflow](https://stackoverflow.com/).
+- [MDN Learn Discourse](https://discourse.mozilla.org/c/mdn/learn/250) や [Stack Overflow](https://stackoverflow.com/) など、使用するツールについて質問するための開発関連のフォーラム。
 
-When you've chosen a tool to use, the first port of call should be the tool project homepage. This could be a full blown website or it might be a single readme document in a code repository. The [date-fns docs](https://date-fns.org/docs/Getting-Started) for example are pretty good, complete, and easy to follow. Some documentation however can be rather technical and academic and not a good fit for your learning needs.
+使用するツールを選択したら、最初に立ち寄るのはツール プロジェクトのホームページです。 これは本格的な Web サイトである場合もあれば、コード リポジトリ内の単一の readme ドキュメントである場合もあります。 たとえば、[date-fns のドキュメント](https://date-fns.org/docs/Getting-Started)は非常に優れており、完全で、簡単に理解できます。 ただし、一部のドキュメントは技術的でアカデミックなものであり、学習ニーズに適していない場合があります。
 
-Instead, you might want to find some dedicated tutorials on getting started with particular types of tools. A great starting place is to search web sites like [CSS Tricks](https://css-tricks.com/), [Dev](https://dev.to/), [freeCodeCamp](https://www.freecodecamp.org/), and [Smashing Magazine](https://www.smashingmagazine.com/), as they're tailored to the web development industry.
+代わりに、特定の種類のツールを使い始めるための専用のチュートリアルを見つけたいと思うかもしれません。 [CSS Tricks](https://css-tricks.com/)、[Dev](https://dev.to/)、[freeCodeCamp](https://www.freecodecamp.org/)、[Smashing Magazine](https://www.smashingmagazine.com/) などの Web サイトは、Web 開発業界向けに作成されているため、最初に検索することをお勧めします。
 
-Again, you'll probably go through several different tools as you search for the right ones for you, trying them out to see if they make sense, are well-supported, and do what you want them to do. This is fine — it is all good for learning, and the road will get smoother as you get more experience.
+繰り返しますが、おそらくいくつかの異なるツールを試して、適切なツールを探し、それらが理にかなっているか、十分にサポートされているか、目的の機能を実行しているかどうかを確認します. これは問題ありません。すべて学習に適しています。経験を積むにつれて、道はスムーズになります。
 
 ## Summary
 
