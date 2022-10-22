@@ -416,10 +416,10 @@ Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpReq
           >
           Por favor Utilize
           <a
-            href="/en-US/docs/Server-sent_events"
+            href="/pt-BR/docs/Server-sent_events"
             >Server-Sent Events</a
           >,
-          <a href="/en-US/docs/WebSockets"
+          <a href="/pt-BR/docs/WebSockets"
             >Web Sockets</a
           >
           ou <code>responseText</code> de eventos de progresso em seu lugar.
@@ -626,7 +626,7 @@ Desde sendAsBinary() é um recurso experimental, aqui está uma polyfill para na
 |*|
 |*|  :: XMLHttpRequest.prototype.sendAsBinary() Polifyll ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
+|*|  https://developer.mozilla.org/pt-BR/docs/DOM/XMLHttpRequest#sendAsBinary()
 |*|
 \*/
 

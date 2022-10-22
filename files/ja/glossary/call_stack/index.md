@@ -63,7 +63,7 @@ greeting();
 
 ### 一般知識
 
-- ウィキペディアの{{Interwiki("wikipedia", "コールスタック")}}
+- ウィキペディアの[コールスタック](https://ja.wikipedia.org/wiki/コールスタック)
 
 <!---->
 

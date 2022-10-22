@@ -171,7 +171,7 @@ _**display-value**_
     </tr>
     <tr>
       <td colspan="1" rowspan="2">
-        Valores do modelo Flexbox (<a href="/en-US/docs/CSS/CSS3"
+        Valores do modelo Flexbox (<a href="/pt-BR/docs/CSS/CSS3"
           >CSS3</a
         >)
       </td>
@@ -191,7 +191,7 @@ _**display-value**_
     <tr>
       <td colspan="1" rowspan="2">
         Valores do modelo de caixa de grade (<a
-          href="/en-US/docs/CSS/CSS3"
+          href="/pt-BR/docs/CSS/CSS3"
           >CSS3</a
         >) {{experimental_inline}}
       </td>

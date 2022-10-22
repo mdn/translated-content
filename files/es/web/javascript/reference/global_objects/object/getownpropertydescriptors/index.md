@@ -16,7 +16,7 @@ El método **`Object.getOwnPropertyDescriptors()`** regresa todos los descriptor
 
 ## Sintáxis
 
-```
+```js
 Object.getOwnPropertyDescriptors(obj)
 ```
 

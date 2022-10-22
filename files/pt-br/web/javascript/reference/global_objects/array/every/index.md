@@ -10,7 +10,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
 {{JSRef}}
 
-O método `every() testa se todos os elementos do array passam pelo teste implementado pela função fornecida.`
+O método `every()` testa se todos os elementos do array passam pelo teste implementado pela função fornecida. Este método retorna um valor booleano.
+
+{{EmbedInteractiveExample("pages/js/array-every.html")}}
 
 ## Sintaxe
 

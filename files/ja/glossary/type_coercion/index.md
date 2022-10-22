@@ -30,4 +30,4 @@ sum = Number(value1) + value2;
 
 2. Wikipedia の記事
 
-    1. {{Interwiki("wikipedia", "型変換")}}
+    1. [型変換](https://ja.wikipedia.org/wiki/型変換)

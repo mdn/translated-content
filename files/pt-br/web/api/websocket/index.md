@@ -145,4 +145,4 @@ void send(
 
 ## `Veja também`
 
-- [`Escrevendo aplicativos clientes do WebSocket`](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [`Escrevendo aplicativos clientes do WebSocket`](/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)

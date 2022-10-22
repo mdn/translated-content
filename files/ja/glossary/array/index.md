@@ -19,7 +19,7 @@ var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
 ### 一般知識
 
-- ウィキペディア上の「{{Interwiki("wikipedia", "配列")}}」の記事
+- ウィキペディア上の「[配列](https://ja.wikipedia.org/wiki/配列)」の記事
 
 ### 技術リファレンス
 

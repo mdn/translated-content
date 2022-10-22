@@ -9,6 +9,6 @@ slug: Glossary/Quaternion
 
 ## 関連情報
 
-- {{interwiki("wikipedia", "en:Quaternions and spatial rotation")}} (Wikipedia)
-- {{interwiki("wikipedia", "四元数")}} (ウィキペディア)
+- [Quaternions and spatial rotation](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation) (Wikipedia, 英語)
+- [四元数](https://ja.wikipedia.org/wiki/四元数) (ウィキペディア)
 - {{domxref("XRRigidTransform.orientation")}} (WebXR Device API リファレンス)

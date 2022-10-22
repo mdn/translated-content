@@ -26,5 +26,5 @@ _World Wide Web_ は、一般に **WWW**, **W3**, もしくは **ウェブ** と
 
 ### 基礎知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "World Wide Web")}}
+- Wikipedia 上の [World Wide Web](https://ja.wikipedia.org/wiki/World_Wide_Web)
 - [W3C のウェブサイト](http://w3.org)

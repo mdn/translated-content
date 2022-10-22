@@ -165,17 +165,17 @@ The key to really understanding how flex item sizing works is in understanding t
 
 ### What sets the base size of the item?
 
-1.  Is `flex-basis` set to `auto`, and does the item have a width set? If so, the size will be based on that width.
-2.  Is `flex-basis` set to `auto` or `content` (in a supporting browser)? If so, the size is based on the item size.
-3.  Is `flex-basis` a length unit, but not zero? If so this is the size of the item.
-4.  Is `flex-basis` set to `0`? if so then the item size is not taken into consideration for the space-sharing calculation.
+1. Is `flex-basis` set to `auto`, and does the item have a width set? If so, the size will be based on that width.
+2. Is `flex-basis` set to `auto` or `content` (in a supporting browser)? If so, the size is based on the item size.
+3. Is `flex-basis` a length unit, but not zero? If so this is the size of the item.
+4. Is `flex-basis` set to `0`? if so then the item size is not taken into consideration for the space-sharing calculation.
 
 ### Do we have available space?
 
 Items can’t grow with no positive free space, and they won’t shrink unless there is negative free space.
 
-1.  If we took all of the items and added up their widths (or heights if working in a column), is that total **less** than the total width (or height) of the container? If so, then you have positive free space and `flex-grow` comes into play.
-2.  If we took all of the items and added up their widths (or heights if working in a column), is that total **more** than the total width (or height) of the container? If so, you have negative free space and `flex-shrink` comes into play.
+1. If we took all of the items and added up their widths (or heights if working in a column), is that total **less** than the total width (or height) of the container? If so, then you have positive free space and `flex-grow` comes into play.
+2. If we took all of the items and added up their widths (or heights if working in a column), is that total **more** than the total width (or height) of the container? If so, you have negative free space and `flex-shrink` comes into play.
 
 ### Other ways to distribute space
 

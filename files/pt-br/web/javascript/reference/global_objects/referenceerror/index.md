@@ -39,11 +39,11 @@ O `ReferenceError` não contém métodos próprios, porém, ele herda alguns mé
 
 ### Propriedades
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties')}}
 
 ### Métodos
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods')}}
 
 ## Exemplos
 

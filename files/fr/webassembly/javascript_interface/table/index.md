@@ -60,7 +60,7 @@ Toutes les instances `Table` héritent des propriétés [du prototype du constru
 - {{jsxref("WebAssembly/Table/get","Table.prototype.get()")}}
   - : Une fonction d'accès qui permet d'obtenir l'élément du tableau situé à une position donnée.
 - {{jsxref("WebAssembly/Table/grow","Table.prototype.grow()")}}
-  - : Cette méthode permet d'augmenter la taille du tableau ` Tabl``e ` d'un incrément donné.
+  - : Cette méthode permet d'augmenter la taille du tableau `Table` d'un incrément donné.
 - {{jsxref("WebAssembly/Table/set","Table.prototype.set()")}}
   - : Cette méthode permet de modifier un élément du tableau situé à une position donnée.
 

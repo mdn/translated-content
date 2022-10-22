@@ -35,11 +35,11 @@ html,body,svg { height:100% }
 
 ### 간단한 `rect` 사용하기
 
-» [rect-1.svg](https://developer.mozilla.org/files/3247/rect-1.svg)
+» [rect-1.svg](/files/3247/rect-1.svg)
 
 ### 라운드 코너와 rect 사용하기
 
-» [rect-2.svg](https://developer.mozilla.org/files/3248/rect-2.svg)
+» [rect-2.svg](/files/3248/rect-2.svg)
 
 ## 속성
 

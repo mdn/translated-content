@@ -22,7 +22,7 @@ var intervalID = scope.setInterval(code, delay);
 - `code`
   - : Uma sintaxe opcional permite você incuir uma string ao invés de uma função, no qual é compilado e executada a cada `delay` em milisegundos. Esta sintaxe _não é recomendada_ pelos mesmos motivos que envolvem riscos de segurança de {{jsxref("eval", "eval()")}}.
 - `delay`
-  - : O tempo, em milisegundos (milésimos de segundo), o temporizador deve atrasar entre cada execução de uma especifica função ou código. Se esse parâmetro for menos que 10, um valor de 10 é usado. Note que o atraso pode vir a ser mais longo; veja {{SectionOnPage("/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout", "Reasons for delays longer than specified")}} para exemplos.
+  - : O tempo, em milisegundos (milésimos de segundo), o temporizador deve atrasar entre cada execução de uma especifica função ou código. Se esse parâmetro for menos que 10, um valor de 10 é usado. Note que o atraso pode vir a ser mais longo; veja {{SectionOnPage("/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout", "Reasons for delays longer than specified")}} para exemplos.
 - `param1, ..., paramN` {{optional_inline}}
   - : Parâmetros adicionais que são passados através da função especificada pela _func_ quando o temporizador expirar.
 
@@ -92,7 +92,7 @@ O seguinte exemplo chama a função `flashtext()` uma vez por segundo até o bot
 
 ### Exemplo 3: Simulação de máquina de escrever
 
-O seguinte exemplo simula uma máquina de escrever primeiro limpando e digitando lentamente o conteúdo para [`NodeList`](/en-US/docs/DOM/NodeList) que corresponde a um grupo especificado de seletores.
+O seguinte exemplo simula uma máquina de escrever primeiro limpando e digitando lentamente o conteúdo para [`NodeList`](/pt-BR/docs/DOM/NodeList) que corresponde a um grupo especificado de seletores.
 
 ```html
 <!DOCTYPE html>
@@ -265,7 +265,7 @@ Como já foi discutido, Internet Explorer 9 e versões anteriores não suportam 
 |*|  IE-specific polyfill that enables the passage of arbitrary arguments to the
 |*|  callback functions of javascript timers (HTML5 standard syntax).
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/window.setInterval
+|*|  https://developer.mozilla.org/pt-BR/docs/Web/API/window.setInterval
 |*|  https://developer.mozilla.org/User:fusionchess
 |*|
 |*|  Syntax:
@@ -317,11 +317,11 @@ Iniciado no Gecko 5.0 {{geckoRelease("5.0")}}, intervalos são fixados para disp
 
 ## O problema do "[`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)"
 
-Quando você passa um método para `setInterval()` ou qualquer outra função, ela é chamada com o valor do [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) errado. Este problema é explicado em detalhes em [JavaScript reference](/pt-BR/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method).
+Quando você passa um método para `setInterval()` ou qualquer outra função, ela é chamada com o valor do [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) errado. Este problema é explicado em detalhes em [JavaScript reference](/pt-BR/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method).
 
 ### Explicação
 
-O código executado pelo `setInterval()` roda em um contexto de execução separado da função que foi chamada. Como uma consequência, o [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) da função chamada, é setado como o objeto `window` (ou `global`), esse não é o mesmo valor do `this` para a função chamada em setTimeout. veja o seguinte exemplo (que usa `setTimeout()` ao invés de `setInterval()` - o problema segue para ambos os temporizadores)
+O código executado pelo `setInterval()` roda em um contexto de execução separado da função que foi chamada. Como uma consequência, o [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) da função chamada, é setado como o objeto `window` (ou `global`), esse não é o mesmo valor do `this` para a função chamada em setTimeout. veja o seguinte exemplo (que usa `setTimeout()` ao invés de `setInterval()` - o problema segue para ambos os temporizadores)
 
 ```js
 myArray = ['zero', 'one', 'two'];
@@ -346,7 +346,7 @@ Como você pode ver, não há maneiras de passar o objeto `this` para a função
 
 ### Uma possível solução
 
-Um possível caminho para resolver o problema do `this`, é sobreescrever as duas funções globais nativas `setTimeout()` ou `setInterval()` com duas _non-native_ que permitem sua invocação através do método [`Function.prototype.call`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/call). O seguinte exemplo mostra a possível substituição.
+Um possível caminho para resolver o problema do `this`, é sobreescrever as duas funções globais nativas `setTimeout()` ou `setInterval()` com duas _non-native_ que permitem sua invocação através do método [`Function.prototype.call`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/call). O seguinte exemplo mostra a possível substituição.
 
 ```js
 // Enable the passage of the 'this' object through the JavaScript timers
@@ -386,13 +386,13 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
 
 Outra, mais complexa, solução para o problema do `this` é [the following framework](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval$edit#A_little_framework).
 
-> **Nota:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
+> **Nota:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
 
 ## MiniDaemon - A framework for managing timers
 
 In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) object to the callback function (see [The "this" problem](#The_.22this.22_problem) for details). The following code is also [available on GitHub](https://github.com/madmurphy/minidaemon.js).
 
-> **Nota:** For a more complex but still modular version of it (`Daemon`) see [JavaScript Daemons Management](/en-US/Add-ons/Code_snippets/Timers/Daemons). This more complex version is nothing but a big and scalable collection of methods for the `Daemon` constructor. However, the `Daemon` constructor itself is nothing but a clone of `MiniDaemon` with an added support for _init_ and _onstart_ functions declarable during the instantiation of the `daemon`. **So the `MiniDaemon` framework remains the recommended way for simple animations**, because `Daemon` without its collection of methods is essentially a clone of it.
+> **Nota:** For a more complex but still modular version of it (`Daemon`) see [JavaScript Daemons Management](/pt-BR/Add-ons/Code_snippets/Timers/Daemons). This more complex version is nothing but a big and scalable collection of methods for the `Daemon` constructor. However, the `Daemon` constructor itself is nothing but a clone of `MiniDaemon` with an added support for _init_ and _onstart_ functions declarable during the instantiation of the `daemon`. **So the `MiniDaemon` framework remains the recommended way for simple animations**, because `Daemon` without its collection of methods is essentially a clone of it.
 
 ### minidaemon.js
 
@@ -403,7 +403,7 @@ In pages requiring many timers, it can often be difficult to keep track of all o
 |*|
 |*|  Revision #2 - September 26, 2014
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/window.setInterval
+|*|  https://developer.mozilla.org/pt-BR/docs/Web/API/window.setInterval
 |*|  https://developer.mozilla.org/User:fusionchess
 |*|  https://github.com/madmurphy/minidaemon.js
 |*|
@@ -603,9 +603,9 @@ In the above snippet, a named function `loop()` is declared and is immediately e
 
 ## See also
 
-- [JavaScript timers](/en-US/Add-ons/Code_snippets/Timers)
+- [JavaScript timers](/pt-BR/Add-ons/Code_snippets/Timers)
 - {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}
 - {{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}
 - {{domxref("WindowOrWorkerGlobalScope.clearInterval")}}
 - {{domxref("window.requestAnimationFrame")}}
-- [_Daemons_ management](/en-US/Add-ons/Code_snippets/Timers/Daemons)
+- [_Daemons_ management](/pt-BR/Add-ons/Code_snippets/Timers/Daemons)

@@ -1,12 +1,6 @@
 ---
 title: <input type="reset">
-slug: Web/HTML/Element/Input/reset
-tags:
-  - Element
-  - HTML
-  - Input
-  - Reference
-translation_of: Web/HTML/Element/input/reset
+slug: Web/HTML/Element/input/reset
 ---
 
 {{HTMLRef}}
@@ -118,7 +112,7 @@ Aucune fonctionnalité de vérification native côté client n'est implémentée
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
-      <td>{{event("click")}}</td>
+      <td><a href="/fr/docs/Web/API/Element/click_event"><code>click</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>

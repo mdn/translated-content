@@ -30,8 +30,6 @@ translation_of: Web/HTML/Element/input/range
 - Значение не может быть больше чем {{htmlattrxref("max", "input")}}. По умолчанию: 100.
 - Значение должно кратно {{htmlattrxref("step", "input")}}. По умолчанию: 1.
 
-###
-
 Атрибут {{htmlattrxref("value", "input")}} содержит {{domxref("DOMString")}}, который содержит строковое представление выбранного числа. Значение никогда не является пустой строкой (`""`). Значение, по умолчанию, находится посередине, между указанными минимальным и максимальным значениями — если максимум оказывается меньше минимума, то значение по умолчанию приравнивается к значению атрибута `min`. Алгоритм определения значения по умолчанию:
 
 ```js
@@ -47,14 +45,14 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 | Attribute       | Description                                                                         |
 | --------------- | ----------------------------------------------------------------------------------- |
-| [`list`](#list) | id элемента <datalist>, который содержит предопределённые значение (не обязательно) |
+| [`list`](#list) | id элемента `<datalist>`, который содержит предопределённые значение (не обязательно) |
 | [`max`](#max)   | Максимальное допустимое значение                                                    |
 | [`min`](#min)   | Минимальное допустимое значение                                                     |
 | [`step`](#step) | Шаговый, используемый для пользовательского интерфейса и для проверки               |
 
 {{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}
 
-Смотрите [управление диапазоном с помощью решётки](/ru/docs/Web/HTML/Element/Input/range$edit#A_range_control_with_hash_marks) ниже, для примера того, как параметры диапазона обозначаются в поддерживаемых браузерах.
+Смотрите [управление диапазоном с помощью решётки](/ru/docs/Web/HTML/Element/Input/range#A_range_control_with_hash_marks) ниже, для примера того, как параметры диапазона обозначаются в поддерживаемых браузерах.
 
 ### {{htmlattrdef("max")}}
 
@@ -347,9 +345,11 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 Берём только те инпуты что имеют тип range:
 
-    input[type="range"] {
-      -webkit-appearance: slider-vertical;
-    }
+```css
+input[type="range"] {
+  -webkit-appearance: slider-vertical;
+}
+```
 
 {{EmbedLiveSample("appearance_property", 200, 200)}}
 

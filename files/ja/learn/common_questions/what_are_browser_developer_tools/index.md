@@ -166,35 +166,35 @@ JavaScript コンソールは、期待通りに使用されていない JavaScri
 
 以下のコードをひとつずつコンソールに入力して（Enterキーを押して）、何が起こるか試してみてください。
 
-1. ```js
-    alert('hello!');
-    ```
+```js
+alert('hello!');
+```
 
-2. ```js
-    document.querySelector('html').style.backgroundColor = 'purple';
-    ```
+```js
+document.querySelector('html').style.backgroundColor = 'purple';
+```
 
-3. ```js
-    const myWordmark = document.createElement('img');
-    myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-    document.querySelector('h1').appendChild(myWordmark);
-    ```
+```js
+const myWordmark = document.createElement('img');
+myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
+document.querySelector('h1').appendChild(myWordmark);
+```
 
 では、次のような誤ったバージョンのコードを入力してみて、何が返されるかを見てみましょう。
 
-1. ```js
-    alert('hello!);
-    ```
+```js example-bad
+alert('hello!);
+```
 
-2. ```js
-    document.cheeseSelector('html').style.backgroundColor = 'purple';
-    ```
+```js example-bad
+document.cheeseSelector('html').style.backgroundColor = 'purple';
+```
 
-3. ```js
-    const myWordmark = document.createElement('img');
-    myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-    document.querySelector('h1').appendChild(myWordmark);
-    ```
+```js example-bad
+const myWordmark = document.createElement('img');
+myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
+document.querySelector('h1').appendChild(myWordmark);
+```
 
 ブラウザーが返すエラーの種類を見ることができるようになります。多くの場合、これらのエラーはかなり不可解ですが、これらの問題を解決するのはかなり簡単なはずです。
 

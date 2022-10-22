@@ -54,7 +54,7 @@ Invocar o construtor `AsyncFunction` como uma função (sem usar o operador `new
 
 ### Propriedades
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Propriedades')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Propriedades')}}
 
 ## `AsyncFunction` instances
 

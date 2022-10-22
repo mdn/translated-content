@@ -200,4 +200,4 @@ prompt(window,
 - `nsIDOMGeoPositionOptions`
 - `nsIDOMNavigatorGeolocation`
 - [Geolocation API on w3.org](http://dev.w3.org/geo/api/spec-source.html)
-- [Demos about the Geolocation API](/en-US/demos/tag/tech:geolocation)
+- [Demos about the Geolocation API](/pt-BR/demos/tag/tech:geolocation)

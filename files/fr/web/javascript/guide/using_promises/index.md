@@ -313,7 +313,7 @@ Promise.resolve().then(() => console.log(2));
 console.log(1); // 1, 2
 ```
 
-En fait, la fonction passée à ` then``() ` est placée dans une file de micro-tâches qui sont exécutées lorsque cette file est vidée à la fin de la boucle d'évènements JavaScript :
+En fait, la fonction passée à `then()` est placée dans une file de micro-tâches qui sont exécutées lorsque cette file est vidée à la fin de la boucle d'évènements JavaScript :
 
 ```js
 var wait = ms => new Promise(resolve => setTimeout(resolve, ms));

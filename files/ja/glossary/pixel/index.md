@@ -11,4 +11,4 @@ slug: Glossary/Pixel
 
 ### 技術文書
 
-- Wikipedia 上の {{Interwiki("wikipedia", "ピクセル")}}
+- Wikipedia 上の [ピクセル](https://ja.wikipedia.org/wiki/ピクセル)

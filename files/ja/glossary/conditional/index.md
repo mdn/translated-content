@@ -11,7 +11,7 @@ slug: Glossary/Conditional
 
 ### 一般知識
 
-- {{interwiki("wikipedia", "Exception_handling#Condition_systems", "Condition")}} (Wikipedia)
+- [Condition](https://en.wikipedia.org/wiki/Exception_handling#Condition_systems) (Wikipedia)
 - [制御フロー](/ja/docs/Glossary/Control_flow) (MDN)
 
 ### 学習教材

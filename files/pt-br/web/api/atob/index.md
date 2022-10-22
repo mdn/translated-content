@@ -40,9 +40,9 @@ var dadoDecodificado = window.atob(dadoCodificado); // decodifica a string
 
 {{Compat("api.WindowOrWorkerGlobalScope.atob")}}
 
-\[1] `atob()` também está disponível para os componentes do XPCOM implementado em JavaScript, porém o objeto [`window`](/en-US/docs/Web/API/Window) não é global nos componentes.
+\[1] `atob()` também está disponível para os componentes do XPCOM implementado em JavaScript, porém o objeto [`window`](/pt-BR/docs/Web/API/Window) não é global nos componentes.
 
-\[2] A partir do [Firefox 27](/en-US/Firefox/Releases/27/Site_Compatibility), `atob()` ignora todos os caracteres de espaço no argumento para seguir as últimas especificações do HTML5. ({{bug(711180)}})
+\[2] A partir do [Firefox 27](/pt-BR/Firefox/Releases/27/Site_Compatibility), `atob()` ignora todos os caracteres de espaço no argumento para seguir as últimas especificações do HTML5. ({{bug(711180)}})
 
 ## Veja também
 

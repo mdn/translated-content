@@ -72,7 +72,7 @@ class PopUpInfo extends HTMLElement {
 }
 ```
 
-前述のコードスニペットはクラスのコンストラクター ([`constructor()`](/ja/docs/Web/JavaScript/Reference/Classes/constructor)) の定義を含んでいます。ここでは常に [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を最初に呼び出し、正しいプロタイプチェーンが確立されるようにします。
+前述のコードスニペットはクラスのコンストラクター ([`constructor()`](/ja/docs/Web/JavaScript/Reference/Classes/constructor)) の定義を含んでいます。ここでは常に [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を最初に呼び出し、正しいプロトタイプチェーンが確立されるようにします。
 
 コンストラクターの内部では、その要素のインスタンスが生成されたときに持つすべての機能を定義します。この場合、カスタム要素にシャドウルートを添付し、いくつかの DOM 操作を使用して要素の内部シャドウ DOM 構造を作成します。それをシャドウルートに添付します。そして最後に、いくつかの CSS をシャドウルートに添付してスタイル付けを行います。
 

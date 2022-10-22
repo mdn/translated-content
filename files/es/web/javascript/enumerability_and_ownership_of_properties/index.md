@@ -35,7 +35,7 @@ Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable i
         | No disponible sin código adicional | No disponible sin código adicional | {{jsxref("Operators/in", "in")}} |
 
         **Solo en cadena prototipo**
-        
+
         No disponible sin código adicional
 
     - Recuperación
@@ -47,11 +47,11 @@ Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable i
         | {{jsxref("Global_Objects/Object/keys", "Object.keys")}}{{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}, {{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} — filtrado para excluir enumerables usando {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} |
 
         **Propia del Objeto y su cadena prototipo**
-        
+
         No disponible sin código adicional
-        
+
         **Solo en cadena prototipo**
-        
+
         No disponible sin código adicional
 
     - Iterable
@@ -69,7 +69,7 @@ Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable i
         | {{jsxref("Statements/for...in", "for..in")}}(no incluye símbolos) | No disponible sin código adicional | No disponible sin código adicional |
 
         **Solo en cadena prototipo**
-        
+
         No disponible sin código adicional
 
 ## Obtención de propiedades por enumerabilidad/posesión

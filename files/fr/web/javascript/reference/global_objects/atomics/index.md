@@ -47,7 +47,7 @@ Lorsque la mémoire est partagée, plusieurs _threads_ peuvent lire et écrire s
 
 ### Attente et notification (`wait` et `notify`)
 
-Le méthodes `wait`() et `notify()` sont basées sur les _futex_ Linux (selon le vocabulaire employé sur Linux où ça signifie « _fast user-space mutex_ » ou encore « mutex rapide pour l'espace utilisateur ») fournissent des outils pour attendre jusqu'à ce qu'une condition donnée soit vérifiée. Généralement ces méthodes sont utilisées pour bloquer des opérations.
+Le méthodes `wait()` et `notify()` sont basées sur les _futex_ Linux (selon le vocabulaire employé sur Linux où ça signifie « _fast user-space mutex_ » ou encore « mutex rapide pour l'espace utilisateur ») fournissent des outils pour attendre jusqu'à ce qu'une condition donnée soit vérifiée. Généralement ces méthodes sont utilisées pour bloquer des opérations.
 
 - {{jsxref("Atomics.wait()")}}
   - : Cette méthode vérifie qu'une position donnée du tableau contient bien une valeur donnée puis dort ou expire. Elle renvoie une des chaînes suivantes `"ok"`, `"not-equal"`, `"timed-out"`. Si l'agent appelant ne permet pas d'attente, cela lèvera une exception `Error` (la plupart des navigateurs ne permettront pas que `futexWait()` soit utilisé sur le _thread_ principal du navigateur).
