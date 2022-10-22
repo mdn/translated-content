@@ -53,7 +53,7 @@ Web 用のソフトウェアの作成は、年月を経てより洗練されて�
 
 - **セーフティネット** — コード開発時に役立つツール。
 - **変換** — 何らかの方法でコードを変換するツール。 中間言語をブラウザーが理解できる JavaScript に変換します。
-- **開発後** — テストツールやデプロイツールなど、コードを記述した後に役立つツール。
+- **開発後評価** — テストツールやデプロイツールなど、コードを記述した後に役立つツール。
 
 これらをそれぞれ詳しく見ていきましょう。
 
@@ -101,28 +101,28 @@ Web 用のソフトウェアの作成は、年月を経てより洗練されて�
 
 [Webpack](https://webpack.js.org/) は、同様のことを行う別の非常に人気のあるパッケージング ツールです。 
 
-### Transformation
+### 変換
 
-This stage of your web app lifecycle typically allows you to code in either "future code" (such as the latest CSS or JavaScript features that might not have native support in browsers yet) or code using another language entirely, such as [TypeScript](https://www.typescriptlang.org/). Transformation tools will then generate browser-compatible code for you, to be used in production.
+Web アプリのライフサイクルのこの段階では、通常、"将来のコード" (ブラウザーでネイティブ サポートされていない可能性のある最新の CSS や JavaScript 機能など) でコーディングするか、 [TypeScript](https://www.typescriptlang.org/) などの別の言語を完全に使用してコーディングすることができます。 変換ツールは、ブラウザと互換性のあるコードを生成して、本番環境で使用できるようにします。 
 
-Generally web development is thought of as three languages: [HTML](/ja/docs/Learn/HTML), [CSS](/ja/docs/Learn/CSS), and [JavaScript](/ja/docs/Learn/JavaScript), and there are transformation tools for all of these languages. Transformation offers two main benefits (amongst others):
+一般に Web 開発は、[HTML](/ja/docs/Learn/HTML)、[CSS](/ja/docs/Learn/CSS)、[JavaScript](/ja/docs/Learn/JavaScript) の 3 つの言語と考えられており、これらすべての言語に変換ツールがあります。 変換には、(とりわけ) 2 つの主な利点があります。
 
-1. The ability to write code using the latest language features and have that transformed into code that works on everyday devices. For example, you might want to write JavaScript using cutting-edge new language features, but still have your final production code work on older browsers that don't support those features. Good examples here include:
+1. 最新の言語機能を使用してコードを記述し、日常のデバイスで動作するコードに変換する能力。 たとえば、最先端の新しい言語機能を使用して JavaScript を記述したい場合がありますが、それらの機能をサポートしていない古いブラウザーでも最終的な製品コードを動作させることができます。 ここでの良い例は次のとおりです。
 
-   - [Babel](https://babeljs.io/): A JavaScript compiler that allows developers to write their code using cutting-edge JavaScript, which Babel then takes and converts into old-fashioned JavaScript that more browsers can understand. Developers can also write and publish [plugins for Babel](https://babeljs.io/docs/en/plugins).
-   - [PostCSS](https://postcss.org/): Does the same kind of thing as Babel, but for cutting-edge CSS features. If there isn't an equivalent way to do something using older CSS features, PostCSS will install a JavaScript polyfill to emulate the CSS effect you want.
+   - [Babel](https://babeljs.io/): 開発者が最先端の JavaScript を使用してコードを記述できるようにする JavaScript コンパイラー。Babel はそれを受け取り、より多くのブラウザーが理解できる旧式の JavaScript に変換します。 開発者は、[Babel のプラグイン](https://babeljs.io/docs/en/plugins)を作成して公開することもできます。
+   - [PostCSS](https://postcss.org/): Babel と同じようなことを行いますが、最先端の CSS 機能を対象としています。 古い CSS 機能を使用して何かを行う同等の方法がない場合、PostCSS は JavaScript ポリフィルをインストールして、必要な CSS 効果をエミュレートします。 
 
-2. The option to write your code in an entirely different language and have it transformed into a web-compatible language. For example:
+2. コードをまったく別の言語で記述し、それを Web 互換言語に変換するオプション。 例えば：
 
-   - [Sass/SCSS](https://sass-lang.com/): This CSS extension allows you to use variables, nested rules, mixins, functions, and many other features, some of which are available in native CSS (such as variables), and some of which aren't.
-   - [TypeScript](https://www.typescriptlang.org/): TypeScript is a superset of JavaScript that offers a bunch of additional features. The TypeScript compiler converts TypeScript code to JavaScript when building for production.
-   - Frameworks such as [React](https://reactjs.org/), [Ember](https://emberjs.com/), and [Vue](https://vuejs.org/): Frameworks provide a lot of functionality for free and allow you to use it via custom syntax built on top of vanilla JavaScript. In the background, the framework's JavaScript code works hard to interpret this custom syntax and render it as a final web app.
+   - [Sass/SCSS](https://sass-lang.com/): この CSS 拡張機能を使用すると、変数、ネストされたルール、ミックスイン、関数、およびその他の多くの機能を使用できます。その一部はネイティブ CSS (変数など) で使用でき、一部は使用できません。
+   - [TypeScript](https://www.typescriptlang.org/): TypeScript は、多数の追加機能を提供する JavaScript のスーパーセットです。 TypeScript コンパイラは、本番用にビルドするときに TypeScript コードを JavaScript に変換します。 
+   - [React](https://reactjs.org/)、 [Ember](https://emberjs.com/)、 [Vue](https://vuejs.org/)、 [Svelte](https://svelte.jp/) 及び [Angular](https://angular.io/)などのフレームワーク: フレームワークは多くの機能を無料で提供し、バニラ JavaScript の上に構築されたカスタム構文を介して使用できます。 バックグラウンドでは、フレームワークの JavaScript コードがこのカスタム構文を解釈し、最終的な Web アプリとしてレンダリングするために懸命に働いています。 
 
-### Post development
+### 開発後評価
 
-Post-development tooling ensures that your software makes it to the web and continues to run. This includes the deployment processes, testing frameworks, auditing tools, and more.
+開発後評価ツールにより、ソフトウェアが Web に公開され、実行され続けることが保証されます。 これには、展開プロセス、テスト フレームワーク、監査ツールなどが含まれます。
 
-This stage of the development process is one that you want the least amount of active interaction with so that once it is configured, it runs mostly automatically, only popping up to say hello if something has gone wrong.
+開発プロセスのこの段階は、アクティブな対話を最小限にしたい段階です。そのため、構成が完了すると、ほとんど自動的に実行され、何か問題が発生した場合にのみポップアップして通知します。
 
 #### Testing tools
 
