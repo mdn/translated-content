@@ -138,7 +138,7 @@ Les frameworks web fournissent souvent des systèmes de templates. Ceux-ci vous 
 
 Les frameworks web fournissent souvent un mécanisme facilitant la génération d'autres formats à partir de données stockées, notamment {{glossary ("JSON")}} et {{glossary ("XML")}}.
 
-Par exemple, le système de templates Django vous permet de spécifier des variables en utilisant une syntaxe "double-handlebars" (par exemple,`\{{ variable_name }}`), qui sera remplacée par les valeurs transmises à partir de la fonction d'affichage lors du rendu d'une page. Le système de templates prend également en charge les expressions (avec la syntaxe : `{% expression %}`), qui permettent aux templates d'effectuer des opérations simples, telles que l'itération des valeurs de liste transmises au modèle.
+Par exemple, le système de templates Django vous permet de spécifier des variables en utilisant une syntaxe "double-handlebars" (par exemple, `\{{ variable_name }}`), qui sera remplacée par les valeurs transmises à partir de la fonction d'affichage lors du rendu d'une page. Le système de templates prend également en charge les expressions (avec la syntaxe : `{% expression %}`), qui permettent aux templates d'effectuer des opérations simples, telles que l'itération des valeurs de liste transmises au modèle.
 
 > **Note :** Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
 
