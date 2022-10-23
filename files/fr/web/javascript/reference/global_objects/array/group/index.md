@@ -28,7 +28,7 @@ group(fnRappel, thisArg)
 // Fonction de rappel en incise
 group(function(element) { /* … */ })
 group(function(element, index) { /* … */ })
-group(function(element, index, array){ /* … */ })
+group(function(element, index, array) { /* … */ })
 group(function(element, index, array) { /* … */ }, thisArg)
 ```
 
@@ -74,7 +74,7 @@ La méthode `group()` exécute la fonction `fnRappel` une fois pour chaque indic
 
 Si un paramètre `thisArg` est fourni à la méthode `group()`, il sera utilisé comme valeur pour [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) à chaque appel de `fnRappel`. Si ce paramètre n'est pas fourni, c'est [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) qui sera utilisé.
 
-LA méthode `group()` est [une méthode de copie](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_copie_et_de_modification). Elle ne modifie pas le tableau courant (`this`) mais renvoie un objet dont les propriétés sont des tableaux qui contiennent les mêmes éléments que ceux du tableau d'origine. On notera donc que l'objet renvoyé référence les _mêmes_ éléments que ceux du tableau original et pas des [copies profondes](/fr/docs/Glossary/Deep_copy). Modifier la structure interne de ces éléments se reflètera sur le tableau original et sur l'objet renvoyé.
+La méthode `group()` est [une méthode de copie](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_copie_et_de_modification). Elle ne modifie pas le tableau courant (`this`) mais renvoie un objet dont les propriétés sont des tableaux qui contiennent les mêmes éléments que ceux du tableau d'origine. On notera donc que l'objet renvoyé référence les _mêmes_ éléments que ceux du tableau original et pas des [copies profondes](/fr/docs/Glossary/Deep_copy). Modifier la structure interne de ces éléments se reflètera sur le tableau original et sur l'objet renvoyé.
 
 La méthode `group()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_génériques). Elle s'attend uniquement à ce que la valeur `this` ait une propriété `length` et des propriétés dont les clés sont des entiers.
 

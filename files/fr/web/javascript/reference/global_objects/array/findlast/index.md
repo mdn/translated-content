@@ -34,7 +34,7 @@ findLast(fnRappel, thisArg)
 // Fonction de rappel en incise
 findLast(function(element) { /* … */ })
 findLast(function(element, index) { /* … */ })
-findLast(function(element, index, array){ /* … */ })
+findLast(function(element, index, array) { /* … */ })
 findLast(function(element, index, array) { /* … */ }, thisArg)
 ```
 
@@ -215,4 +215,4 @@ console.log(
 - [`Array.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) qui teste si une valeur existe dans le tableau
 - [`Array.prototype.filter()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) qui crée un nouveau tableau ne contenant que les éléments correspondant à un critère
 - [`Array.prototype.every()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/every) qui teste si tous les éléments du tableau correspondent à un critère
-- [`Array.prototype.some()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/some) qui teste si au moins élément correspond à un critère
+- [`Array.prototype.some()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/some) qui teste si au moins un élément correspond à un critère

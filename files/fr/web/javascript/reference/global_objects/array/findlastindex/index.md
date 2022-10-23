@@ -28,7 +28,7 @@ findLastIndex(fnRappel, thisArg)
 // Fonction de rappel en incise
 findLastIndex(function(element) { /* … */ })
 findLastIndex(function(element, index) { /* … */ })
-findLastIndex(function(element, index, array){ /* … */ })
+findLastIndex(function(element, index, array) { /* … */ })
 findLastIndex(function(element, index, array) { /* … */ }, thisArg)
 ```
 

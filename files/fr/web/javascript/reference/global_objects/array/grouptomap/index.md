@@ -28,7 +28,7 @@ groupToMap(fnRappel, thisArg)
 // Fonction de rappel en incise
 groupToMap(function(element) { /* … */ })
 groupToMap(function(element, index) { /* … */ })
-groupToMap(function(element, index, array){ /* … */ })
+groupToMap(function(element, index, array) { /* … */ })
 groupToMap(function(element, index, array) { /* … */ }, thisArg)
 ```
 
@@ -74,7 +74,7 @@ La méthode `group()` exécute la fonction `fnRappel` une fois pour chaque indic
 
 Si un paramètre `thisArg` est fourni à la méthode `groupToMap()`, il sera utilisé comme valeur pour [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) à chaque appel de `fnRappel`. Si ce paramètre n'est pas fourni, c'est [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) qui sera utilisé.
 
-LA méthode `groupToMap()` est [une méthode de copie](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_copie_et_de_modification). Elle ne modifie pas le tableau courant (`this`) mais renvoie un objet `Map` dont les valeurs des clés contiennent les mêmes éléments que ceux du tableau d'origine. On notera donc que la `Map` renvoyée référence les _mêmes_ éléments que ceux du tableau original et pas des [copies profondes](/fr/docs/Glossary/Deep_copy). Modifier la structure interne de ces éléments se reflètera sur le tableau original et sur la `Map` renvoyée.
+La méthode `groupToMap()` est [une méthode de copie](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_copie_et_de_modification). Elle ne modifie pas le tableau courant (`this`) mais renvoie un objet `Map` dont les valeurs des clés contiennent les mêmes éléments que ceux du tableau d'origine. On notera donc que la `Map` renvoyée référence les _mêmes_ éléments que ceux du tableau original et pas des [copies profondes](/fr/docs/Glossary/Deep_copy). Modifier la structure interne de ces éléments se reflètera sur le tableau original et sur la `Map` renvoyée.
 
 La méthode `groupToMap()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_génériques). Elle s'attend uniquement à ce que la valeur `this` ait une propriété `length` et des propriétés dont les clés sont des entiers.
 
@@ -111,7 +111,7 @@ const inventaire = [
 ```
 
 Dans le code qui suit, on utilise `groupToMap()` avec une fonction fléchée qui renvoie les clés nommées `restock` ou `suffisant`, selon que l'élément a une propriété `quantite < 6`.
-L'objet `resultat` est une `Map` et il faut donc appeler la méthode `get()` avec la clé correspondante pour avoir le tableau du groupe the key to obtain the array.
+L'objet `resultat` est une `Map` et il faut donc appeler la méthode `get()` avec la clé correspondante pour avoir le tableau du groupe.
 
 ```js
 const restock = { restock: true };
