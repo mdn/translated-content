@@ -31265,10 +31265,6 @@
       "Koyamak"
     ]
   },
-  "conflicting/Web/API/Pointer_events": {
-    "modified": "2019-03-18T20:45:32.564Z",
-    "contributors": ["mfuji09", "YuichiNukiyama"]
-  },
   "conflicting/Web/API/StorageManager/estimate": {
     "modified": "2020-10-15T22:20:05.823Z",
     "contributors": ["Uemmra3", "Wind1808"]
