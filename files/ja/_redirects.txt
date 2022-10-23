@@ -3551,7 +3551,7 @@
 /ja/docs/Web/API/ServiceWorkerRegistration/onupdatefound	/ja/docs/Web/API/ServiceWorkerRegistration/updatefound_event
 /ja/docs/Web/API/ServiceWorker_API	/ja/docs/Web/API/Service_Worker_API
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
-/ja/docs/Web/API/ShadowRoot/onslotchange	/ja/docs/conflicting/Web/API/HTMLSlotElement/slotchange_event
+/ja/docs/Web/API/ShadowRoot/onslotchange	/ja/docs/Web/API/HTMLSlotElement/slotchange_event
 /ja/docs/Web/API/Slotable	/ja/docs/Web/API/Element
 /ja/docs/Web/API/SourceBuffer/trackDefaults	/ja/docs/orphaned/Web/API/SourceBuffer/trackDefaults
 /ja/docs/Web/API/SourceBufferList/SourceBuffer	/ja/docs/orphaned/Web/API/SourceBufferList/SourceBuffer
