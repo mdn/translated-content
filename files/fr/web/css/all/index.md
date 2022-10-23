@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`all`** permet de réinitialiser toutes les propriétés d'un élément, à l'exception de [`unicode-bidi`](/fr/docs/Web/CSS/unicode-bidi), [`direction`](/fr/docs/Web/CSS/direction), et des [propriétés personnalisées](/fr/docs/Web/CSS/Using_CSS_custom_properties), avec leurs valeurs initiales, héritées ou qui proviennent d'une autre couche de la cascade voir d'une autre feuille de style.
+La [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`all`** permet de réinitialiser toutes les propriétés d'un élément, à l'exception de [`unicode-bidi`](/fr/docs/Web/CSS/unicode-bidi), [`direction`](/fr/docs/Web/CSS/direction), et des [propriétés personnalisées](/fr/docs/Web/CSS/Using_CSS_custom_properties), avec leurs valeurs initiales, héritées ou qui proviennent d'une autre couche de la cascade voire d'une autre feuille de style.
 
 {{EmbedInteractiveExample("pages/css/all.html")}}
 
