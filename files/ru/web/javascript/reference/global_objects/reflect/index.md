@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 - {{jsxref("Reflect.getPrototypeOf()")}}
   - : Аналогично {{jsxref("Object.getPrototypeOf()")}}.
 - {{jsxref("Reflect.has()")}}
-  - : Оператор [`in` ](/ru/docs/Web/JavaScript/Reference/Operators/in)как функция. Возвращает значение {{jsxref("Boolean")}} в зависимости от факта наличия собственного или наследованного свойства.
+  - : Оператор [`in`](/ru/docs/Web/JavaScript/Reference/Operators/in) как функция. Возвращает значение {{jsxref("Boolean")}} в зависимости от факта наличия собственного или наследованного свойства.
 - {{jsxref("Reflect.isExtensible()")}}
   - : Аналогично {{jsxref("Object.isExtensible()")}}.
 - {{jsxref("Reflect.ownKeys()")}}

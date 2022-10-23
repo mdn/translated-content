@@ -217,7 +217,7 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 ### Spread с большим количеством значений
 
-При использовании spread оператора в вызовах функций необходимо быть внимательным к возможному переполнению в ядре JavaScript. Существует ограничение по максимально возможному количеству аргументов функции. См. [`apply()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply "The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).") для уточнения.
+При использовании spread оператора в вызовах функций необходимо быть внимательным к возможному переполнению в ядре JavaScript. Существует ограничение по максимально возможному количеству аргументов функции. См. [`apply()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) для уточнения.
 
 ## Rest синтаксис (параметры)
 
