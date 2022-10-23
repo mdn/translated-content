@@ -433,7 +433,7 @@ div video {
 }
 ```
 
-当“button”元素按钮被单击时，将显示视频，它是通过将改变`<div>的`class 属性值从`hidden`变为`showing`(这个例子的 CSS 包含两个`class`，它们分别控制这个`<div>`盒子在屏幕上显示还是隐藏。)：
+当“button”元素按钮被单击时，将显示视频，它是通过将改变 `<div>` 的 class 属性值从 `hidden` 变为 `showing`(这个例子的 CSS 包含两个 `class`，它们分别控制这个 `<div>` 盒子在屏幕上显示还是隐藏。)：
 
 ```js
 const btn = document.querySelector('button');
