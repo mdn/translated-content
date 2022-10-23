@@ -23,7 +23,7 @@ Dans l'espace en trois dimensions, c'est la seule façon de réaliser des effets
 
 Pour illustrer la spatialisation en trois dimensions, nous avons créé une version modifiée de la démo radiocassette initiée dans le guide [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API). Voir [la démo de spatialisation en 3D](https://mdn.github.io/webaudio-examples/spatialization/) (et [le code source correspondant](https://github.com/mdn/webaudio-examples/tree/master/spatialization)).
 
-![Une interface utilisateur simple avec un radiocassette tourné et incliné, avec des contrôle pour le déplacer dans l'espace et le faire tourner.](web-audio-spatialization.png)
+![Une interface utilisateur simple avec un radiocassette tourné et incliné, avec des contrôles pour le déplacer dans l'espace et le faire tourner.](web-audio-spatialization.png)
 
 Le radiocassette est placé dans un espace (défini par les bords de la zone d'affichage du navigateur), et dans cette démonstration, on peut le déplacer et le faire pivoter avec les contrôles fournis.
 
@@ -33,7 +33,7 @@ Lorsqu'on déplace le radiocassette, le son produit change de façon corresponda
 
 ## Créer un auditeur
 
-Commençons&nbsp;! L'interface [`BaseAudioContext`](/fr/docs/Web/API/BaseAudioContext) (qui est étendue par [`AudioContext`](/fr/docs/Web/API/AudioContext)) possède une propriété [`listener`](/fr/docs/Web/API/BaseAudioContext/listener) qui renvoie un objet [`AudioListener`](/fr/docs/Web/API/AudioListener). Cette propriété représente un auditeur pour la scène audio, il s'agit généralement de modéliser la personne qui utilise l'application. On peut définir l'emplacement et la direction de l'auditeur dans l'espace. Cet auditeur reste alors statique et `pannerNode` peut calculer le son reçu par l'auditeur selon leurs positions respectives.
+Commençons&nbsp;! L'interface [`BaseAudioContext`](/fr/docs/Web/API/BaseAudioContext) (qui est étendue par [`AudioContext`](/fr/docs/Web/API/AudioContext)) possède une propriété [`listener`](/fr/docs/Web/API/BaseAudioContext/listener) qui renvoie un objet [`AudioListener`](/fr/docs/Web/API/AudioListener). Cette propriété représente un auditeur pour la scène audio, il s'agit généralement de modéliser la personne qui utilise l'application. On peut définir l'emplacement et la direction de l'auditeur dans l'espace. Cet auditeur reste alors statique et `PannerNode` peut calculer le son reçu par l'auditeur selon leurs positions respectives.
 
 Créons un contexte, un auditeur puis définissons la position de l'auditeur pour simuler une personne qui regarderait cette pièce virtuelle&nbsp;:
 
@@ -70,10 +70,10 @@ Créons notre objet [`PannerNode`](/fr/docs/Web/API/PannerNode). Celui-ci possè
 
 Pour commencer, on peut définir [`panningModel`](/fr/docs/Web/API/PannerNode/panningModel) qui est l'algorithme de spatialisation utilisé pour positionner l'audio dans l'espace en 3D, il peut valoir&nbsp;:
 
-- : `equalpower`
-  - La valeur par défaut et générique pour déterminer la gestion du panoramique.
+- `equalpower`
+  - : La valeur par défaut et générique pour déterminer la gestion du panoramique.
 - `HRTF`
-  - L'acronyme pour <i lang="en">Head-related transfer function</i>, qu'on pourrait traduire par «&nbsp;fonction de transfert relative à la tête&nbsp;», et qui tient compte de la tête humaine lorsqu'il s'agit de déterminer l'emplacement du son.
+  - : L'acronyme pour <i lang="en">Head-related transfer function</i>, qu'on pourrait traduire par «&nbsp;fonction de transfert relative à la tête&nbsp;», et qui tient compte de la tête humaine lorsqu'il s'agit de déterminer l'emplacement du son.
 
 Utilisons ce modèle `HRTF`&nbsp;!
 
@@ -119,7 +119,7 @@ On a ensuite le facteur de coupure (<i lang="en">roll-off factor</i>) ([`rolloff
 const rollOff = 10;
 ```
 
-Maitenant, nous allons définir la position et l'orientation du radiocassette. Cela ressemble fort à ce que nous avons déjà fait pour l'auditeur. Il s'agit également des paramètres qui vont être modifiés lorsqu'on utilise les contrôles de l'interface.
+Maintenant, nous allons définir la position et l'orientation du radiocassette. Cela ressemble fort à ce que nous avons déjà fait pour l'auditeur. Il s'agit également des paramètres qui vont être modifiés lorsqu'on utilise les contrôles de l'interface.
 
 ```js
 const positionX = posX;
@@ -406,7 +406,7 @@ function moveBoombox(direction, prevMove) {
 }
 ```
 
-## Câbler les contrôles up our controls
+## Câbler les contrôles
 
 Associer ces actions aux boutons des contrôles est plus simple, on écoute pour un évènement de la souris sur les contrôles et on exécute cette fonction, puis on arrête son exécution lorsque le bouton de la souris est relâché&nbsp;:
 
@@ -415,25 +415,25 @@ Associer ces actions aux boutons des contrôles est plus simple, on écoute pour
 // on change les valeurs de position
 moveControls.forEach((el) => {
 
-    let moving;
-    el.addEventListener('mousedown', () => {
-        const direction = this.dataset.control;
-        if (moving && moving.frameId) {
-            cancelAnimationFrame(moving.frameId);
-        }
-        moving = moveBoombox(direction);
-    }, false);
+  let moving;
+  el.addEventListener('mousedown', () => {
+    const direction = this.dataset.control;
+    if (moving && moving.frameId) {
+      cancelAnimationFrame(moving.frameId);
+    }
+    moving = moveBoombox(direction);
+  }, false);
 
-    window.addEventListener('mouseup', () => {
-        if (moving && moving.frameId) {
-            cancelAnimationFrame(moving.frameId);
-        }
-    }, false)
+  window.addEventListener('mouseup', () => {
+    if (moving && moving.frameId) {
+      cancelAnimationFrame(moving.frameId);
+    }
+  }, false)
 
 })
 ```
 
-## Connecter notre grpahe
+## Connecter notre graphe
 
 Notre document HTML contient un élément `<audio>` qui doit être manipulé par le nœud panoramique.
 
