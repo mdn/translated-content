@@ -5,13 +5,47 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 {{JSRef}}
 
-JavaScript 的 **`Array`** 对象是用于构造数组的全局对象，数组是类似于列表的高阶对象。
+与其他编程语言中的数组一样，**`Array`** 对象支持[在单个变量名下存储多个元素](/zh-CN/docs/Learn/JavaScript/First_steps/arrays)，并具有[执行常见数组操作](#示例)的成员。
 
 ## 描述
 
-数组是一种类列表对象，它的原型中提供了遍历和修改元素的相关操作。JavaScript 数组的长度和元素类型都是非固定的。因为数组的长度可随时改变，并且其数据在内存中也可以不连续，所以 JavaScript 数组不一定是密集型的，这取决于它的使用方式。一般来说，数组的这些特性会给使用带来方便，但如果这些特性不适用于你的特定使用场景的话，可以考虑使用类型数组 {{jsxref("TypedArray")}}。
+在 JavaScript 中，数组不是[基本类型](/zh-CN/docs/Glossary/Primitive)，而是具有以下核心特征的 `Array` 对象：
 
-只能用整数作为数组元素的索引，而不能用字符串。后者称为 [关联数组](https://en.wikipedia.org/wiki/Associative_array)。使用非整数并通过 [方括号](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#对象和属性) 或 [点号](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 来访问或设置数组元素时，所操作的并不是数组列表中的元素，而是数组对象的 [属性集合](/zh-CN/docs/Web/JavaScript/Data_structures#属性) 上的变量。数组对象的属性和数组元素列表是分开存储的，并且数组的遍历和修改操作也不能作用于这些命名属性。
+- **JavaScript 数组是可调整大小的**，**并且可以包含不同的[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)**。（当不需要这些特征时，可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)）
+
+- **JavaScript 数组不是关联数组**，因此，[不能使用任意字符串作为索引访问数组元素](#备注)，但必须使用非负整数（或它们各自的字符串形式）作为索引访问。
+
+- **JavaScript 数组的[索引从 0 开始](https://zh.wikipedia.org/zh-cn/從零開始的編號)**：数组的第一个元素在索引 `0` 处，第二个在索引 `1` 处，以此类推，最后一个元素是数组的 {{jsxref("Array/length", "length")}} 属性减去 `1` 的值。
+
+- **JavaScript [数组复制操作](#复制数组)创建[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)**。（*所有* JavaScript 对象的标准内置复制操作都会创建浅拷贝，而不是[深拷贝](/zh-CN/docs/Glossary/Deep_copy)）。
+
+## 构造函数
+
+- {{jsxref("Array/Array", "Array()")}}
+  - : 创建一个新的 `Array` 对象。
+
+## 静态属性
+
+- {{jsxref("Array/@@species", "get Array[@@species]")}}
+  - : 返回 `Array` 构造函数。
+
+## 静态方法
+
+- {{jsxref("Array.from()")}}
+  - : 从数组类对象或可迭代对象创建一个新的 `Array` 实例。
+- {{jsxref("Array.isArray()")}}
+  - : 如果参数是数组则返回 `true` ，否则返回 `false` 。
+- {{jsxref("Array.of()")}}
+  - : 创建一个新的 `Array` 实例，具有可变数量的参数，而不管参数的数量或类型。
+
+## 实例属性
+
+- {{jsxref("Array.prototype.length")}}
+  - : 反映数组中元素的数量。
+- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+  - : 包含 ES2015 版本之前 ECMAScript 标准中没有包含的属性名，在使用 [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 绑定语句时会被忽略。
+
+## 示例
 
 ### 常见操作
 
