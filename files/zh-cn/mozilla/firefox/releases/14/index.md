@@ -46,7 +46,7 @@ _No change._
 
 ### HTTP
 
-- Gecko 开始支持新的[HTTP](/zh-CN/HTTP) [`308`永久重定向](/zh-CN/HTTP/HTTP_response_codes#308) 状态码。由于 Gecko 并不区分永久重定向和零食重定向，所以该状态码的表现行为和[`307 临时重定向`](/zh-CN/HTTP/HTTP_response_codes#307)状态码是一样的，和 302 以及 301 状态码的区别是，它们禁止用户代理改变重定之后的 HTTP 方法 (`POST` 还是 `POST`, `GET` 还是 `GET`).
+- Gecko 开始支持新的[HTTP](/zh-CN/HTTP) [`308 永久重定向`](/zh-CN/HTTP/HTTP_response_codes#308) 状态码。由于 Gecko 并不区分永久重定向和临时重定向，所以该状态码的表现行为和[`307 临时重定向`](/zh-CN/HTTP/HTTP_response_codes#307)状态码是一样的，和 302 以及 301 状态码的区别是，它们禁止用户代理改变重定之后的 HTTP 方法 (`POST` 还是 `POST`, `GET` 还是 `GET`).
 
 ## Changes for Mozilla and add-on developers
 
