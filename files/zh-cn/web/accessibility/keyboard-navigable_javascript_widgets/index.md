@@ -166,7 +166,7 @@ _范例 2: 一个使用 tabindex 控制键盘 access 的菜单控件_
 
 #### 方法 2: aria-activedescendant
 
-这个办法包含绑定一个单独的事件句柄到容器窗口组件上，运用 `aria-activedescendent` 属性来追踪一个 "虚拟" 焦点。（关于 ARIA 更多的信息，查看 [overview of accessible web applications and widgets](../../../../An_Overview_of_Accessible_Web_Applications_and_Widgets).）
+这个办法包含绑定一个单独的事件句柄到容器窗口组件上，运用 `aria-activedescendent` 属性来追踪一个 "虚拟" 焦点。（关于 ARIA 更多的信息，查看[可访问的 Web 应用程序和组件概述](/zh-CN/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)。）
 
 `aria-activedescendant` 属性用来标识拥有虚拟焦点的后代元素的 ID。在窗口容器的事件句柄里面在键盘和鼠标事件响应更新 aria-activedescendant 值并且确保当前 The event handler on the container must respond to key and mouse events by updating the value of `aria-activedescendant` and ensuring that the current item is styled appropriately (for example, with a border or background color).
 
