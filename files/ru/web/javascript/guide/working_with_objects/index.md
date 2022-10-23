@@ -36,7 +36,7 @@ myCar.year = 1969;
 myCar.color; // undefined
 ```
 
-Свойства объектов JavaScript также могут быть доступны или заданы с использованием скобочной записи (более подробно см. [property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors)). Объекты иногда называются _ассоциативными массивами_, поскольку каждое свойство связано со строковым значением, которое можно использовать для доступа к нему. Так, например, вы можете получить доступ к свойствам объекта `myCar `следующим образом:
+Свойства объектов JavaScript также могут быть доступны или заданы с использованием скобочной записи (более подробно см. [property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors)). Объекты иногда называются _ассоциативными массивами_, поскольку каждое свойство связано со строковым значением, которое можно использовать для доступа к нему. Так, например, вы можете получить доступ к свойствам объекта `myCar` следующим образом:
 
 ```js
 myCar["make"] = "Ford";
@@ -74,7 +74,7 @@ propertyName = "model";
 myCar[propertyName] = "Mustang";
 ```
 
-Вы можете пользоваться квадратными скобками в конструкции [for...in](/ru/docs/JavaScript/Guide/Statements#for...in_Statement "ru/docs/JavaScript/Guide/Statements#for...in Statement") чтобы выполнить итерацию всех свойств объекта, для которых она разрешена. Чтобы показать как это работает, следующая функция показывает все свойства объекта, когда вы передаёте в неё сам объект и его имя как аргументы функции:
+Вы можете пользоваться квадратными скобками в конструкции [for...in](/ru/docs/JavaScript/Guide/Statements#for...in_Statement) чтобы выполнить итерацию всех свойств объекта, для которых она разрешена. Чтобы показать как это работает, следующая функция показывает все свойства объекта, когда вы передаёте в неё сам объект и его имя как аргументы функции:
 
 ```js
 function showProps(obj, objName) {
@@ -98,27 +98,27 @@ myCar.year = 1969
 
 ## Перечисление всех свойств объекта
 
-Начиная с [ECMAScript 5](/ru/docs/JavaScript/ECMAScript_5_support_in_Mozilla "ru/docs/JavaScript/ECMAScript 5 support in Mozilla"), есть три способа перечислить все свойства объекта (получить их список):
+Начиная с [ECMAScript 5](/ru/docs/JavaScript/ECMAScript_5_support_in_Mozilla), есть три способа перечислить все свойства объекта (получить их список):
 
 - циклы [for...in](/ru/docs/JavaScript/Reference/Statements/for...in)
   Этот метод перебирает все перечисляемые свойства объекта и его цепочку прототипов
-- [Object.keys(o)](/ru/docs/JavaScript/Reference/Global_Objects/Object/keys "ru/docs/JavaScript/Reference/Global Objects/Object/keys")
+- [Object.keys(o)](/ru/docs/JavaScript/Reference/Global_Objects/Object/keys)
   Этот метод возвращает массив со всеми собственными (те, что в цепочке прототипов, не войдут в массив) именами перечисляемых свойств объекта `o`.
-- [Object.getOwnPropertyNames(o)](/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames "ru/docs/JavaScript/Reference/Global Objects/Object/getOwnPropertyNames")
+- [Object.getOwnPropertyNames(o)](/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
   Этот метод возвращает массив содержащий все имена своих свойств (перечисляемых и неперечисляемых) объекта `o`.
 
 До ECMAScript 5 не было встроенного способа перечислить все свойства объекта. Однако это можно сделать с помощью следующей функции:
 
 ```js
 function listAllProperties(o){
-	var objectToInspect;
-	var result = [];
+  var objectToInspect;
+  var result = [];
 
-	for(objectToInspect = o; objectToInspect !== null; objectToInspect = Object.getPrototypeOf(objectToInspect)){
-		result = result.concat(Object.getOwnPropertyNames(objectToInspect));
-	}
+  for(objectToInspect = o; objectToInspect !== null; objectToInspect = Object.getPrototypeOf(objectToInspect)){
+    result = result.concat(Object.getOwnPropertyNames(objectToInspect));
+  }
 
-	return result;
+  return result;
 }
 ```
 
@@ -170,8 +170,8 @@ var myHonda = {
 
 Другой способ создать объект в два шага описан ниже:
 
-1.  Определите тип объекта, написав функцию-конструктор. Название такой функции, как правило, начинается с заглавной буквы.
-2.  Создайте экземпляр объекта с помощью ключевого слова `new`.
+1. Определите тип объекта, написав функцию-конструктор. Название такой функции, как правило, начинается с заглавной буквы.
+2. Создайте экземпляр объекта с помощью ключевого слова `new`.
 
 Чтобы определить тип объекта создайте функцию, которая определяет тип объекта, его имя, свойства и методы. Например предположим, что вы хотите создать тип объекта для описания машин. Вы хотите, чтобы объект этого типа назывался `car`, и вы хотите, чтобы у него были свойства make, model, и year. Чтобы сделать это, напишите следующую функцию:
 
@@ -191,7 +191,7 @@ function Car(make, model, year) {
 var mycar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
-Эта инструкция создаёт объект типа Car со ссылкой `mycar` и присваивает определённые значения его свойствам. Значением `mycar.make `станет строка "Eagle", `mycar.year` — это целое число 1993, и так далее.
+Эта инструкция создаёт объект типа Car со ссылкой `mycar` и присваивает определённые значения его свойствам. Значением `mycar.make` станет строка "Eagle", `mycar.year` — это целое число 1993, и так далее.
 
 Вы можете создать столько объектов `car,` сколько нужно, просто вызывая `new`. Например:
 
@@ -282,18 +282,18 @@ fish.displayType(); // Выведет:Fishes
 
 Это ограничение налагается когда вы создаёте объект и его свойства с помощью функции конструктора (как мы это делали ранее с типом _Car_ ) и когда вы определяете индивидуальные свойства явно (например, `myCar.color = "red"`). Если вы изначально определили свойство объекта через индекс, например `myCar[5] = "25 mpg"`, то впоследствии сослаться на это свойство можно только так `myCar[5]`.
 
-Исключение из правил — объекты, отображаемые из HTML, например массив` forms`. Вы всегда можете сослаться на объекты в этих массивах или используя их индекс (который основывается на порядке появления в HTML документе), или по их именам (если таковые были определены). Например, если второй html-тег `<FORM>` в документе имеет значение атрибута `NAME` равное "myForm", вы можете сослаться на эту форму вот так: `document.forms[1]` или `document.forms["myForm"]` или `document.myForm`.
+Исключение из правил — объекты, отображаемые из HTML, например массив `forms`. Вы всегда можете сослаться на объекты в этих массивах или используя их индекс (который основывается на порядке появления в HTML документе), или по их именам (если таковые были определены). Например, если второй html-тег `<FORM>` в документе имеет значение атрибута `NAME` равное "myForm", вы можете сослаться на эту форму вот так: `document.forms[1]` или `document.forms["myForm"]` или `document.myForm`.
 
 ## Определение свойств для типа объекта
 
-Вы можете добавить свойство к ранее определённому типу объекта воспользовавшись специальным свойством `prototype`. Через `prototype` создаётся свойство, единое для всех объектов данного типа, а не одного экземпляра этого типа объекта. Следующий код демонстрирует это, добавляя свойство `color` ко всем объектам типа `car`, а затем присваивая значение свойству `color` объекта` car1`.
+Вы можете добавить свойство к ранее определённому типу объекта воспользовавшись специальным свойством `prototype`. Через `prototype` создаётся свойство, единое для всех объектов данного типа, а не одного экземпляра этого типа объекта. Следующий код демонстрирует это, добавляя свойство `color` ко всем объектам типа `car`, а затем присваивая значение свойству `color` объекта `car1`.
 
 ```js
 Car.prototype.color = null;
 car1.color = "black";
 ```
 
-Смотрите [`свойство prototype`](/ru/docs/JavaScript/Reference/Global_Objects/Function/prototype "ru/docs/JavaScript/Reference/Global Objects/Function/prototype") объекта `Function` в [Справочнике JavaScript ](/ru/docs/JavaScript/Reference "ru/docs/JavaScript/Reference")для получения деталей.
+Смотрите [`свойство prototype`](/ru/docs/JavaScript/Reference/Global_Objects/Function/prototype) объекта `Function` в [Справочнике JavaScript]](/ru/docs/JavaScript/Reference) ля получения деталей.
 
 ## Определение методов
 
@@ -374,7 +374,7 @@ function validate(obj, lowval, hival) {
 
 В общем случае, `this` ссылается на объект, вызвавший метод.
 
-Через `this` можно обратиться и к родительской форме элемента, воспользовавшись свойством `form`. В следующем примере форма `myForm` содержит элемент ввода `Text `и кнопку `button1`. Когда пользователь нажимает кнопку, значению объекта `Text` назначается имя формы. Обработчик событий кнопки `onclick` пользуется `this.form` чтобы сослаться на текущую форму, `myForm`.
+Через `this` можно обратиться и к родительской форме элемента, воспользовавшись свойством `form`. В следующем примере форма `myForm` содержит элемент ввода `Text` и кнопку `button1`. Когда пользователь нажимает кнопку, значению объекта `Text` назначается имя формы. Обработчик событий кнопки `onclick` пользуется `this.form` чтобы сослаться на текущую форму, `myForm`.
 
 ```html
 <form name="myForm">
@@ -387,7 +387,7 @@ function validate(obj, lowval, hival) {
 
 ## Определение геттеров и сеттеров
 
-_[Геттер ](/ru/docs/Web/JavaScript/Reference/Functions/get)(от англ. get - получить)_ —\_ _это метод, который получает значение определённого свойства. _[Сеттер ](/ru/docs/Web/JavaScript/Reference/Functions/set)(от англ. set* — *присвоить)\_ — это метод, который присваивает значение определённому свойству объекта. Вы можете определить геттеры и сеттеры для любых из встроенных или определённых вами объектов, которые поддерживают добавление новых свойств. Синтаксис определения геттеров и сеттеров использует литеральный синтаксис объектов.
+_[Геттер](/ru/docs/Web/JavaScript/Reference/Functions/get)(от англ. get - получить)_ — это метод, который получает значение определённого свойства. _[Сеттер](/ru/docs/Web/JavaScript/Reference/Functions/set) (от англ. set* — *присвоить) — это метод, который присваивает значение определённому свойству объекта. Вы можете определить геттеры и сеттеры для любых из встроенных или определённых вами объектов, которые поддерживают добавление новых свойств. Синтаксис определения геттеров и сеттеров использует литеральный синтаксис объектов.
 
 Ниже проиллюстрировано, как могут работать геттеры и сеттеры в объекте определённом пользователем:
 
@@ -414,8 +414,8 @@ console.log(o.a); // 25
 - `o.b` — геттер, который возвращает `o.a` плюс 1
 - `o.c` — сеттер, который присваивает значение `o.a` половине значения которое передано в `o.c`
 
-Следует особо отметить, что имена функций, указанные в литеральной форме "\[gs]et _propertyName_() { }" не будут в действительности являться именами геттера и сеттера. Чтобы задать в качестве геттера и сеттера функции с явно определёнными именами, используйте метод [`Object.defineProperty`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty "en-US/docs/Core JavaScript 1.5 Reference/Global
-Objects/Object/defineProperty") (или его устаревший аналог [`Object.prototype.__defineGetter__`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineGetter "en-US/docs/Core JavaScript 1.5 Reference/Global
+Следует особо отметить, что имена функций, указанные в литеральной форме "\[gs]et _propertyName_() { }" не будут в действительности являться именами геттера и сеттера. Чтобы задать в качестве геттера и сеттера функции с явно определёнными именами, используйте метод [`Object.defineProperty`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty "en-US/docs/Core JavaScript 1.5 Reference/Global
+Objects/Object/defineProperty") (или его устаревший аналог [`Object.prototype.__defineGetter__`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineGetter "en-US/docs/Core JavaScript 1.5 Reference/Global
 Objects/Object/defineGetter")).
 
 В коде ниже показано, как с помощью геттера и сеттера можно расширить прототип объекта {{jsxref("Date")}} и добавить ему свойство `year,` которое будет работать у всех экземпляров класса `Date`. Этот код использует существующие методы класса `Date` - `getFullYear` и `setFullYear` для работы геттера и сеттера.

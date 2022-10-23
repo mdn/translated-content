@@ -226,6 +226,7 @@ console.log(p.a, p.b); // 1, 42
         {{jsxref("Global_Objects/Proxy/handler/get", "handler.get()")}}
       </td>
       <td>
+        <!-- markdownlint-disable MD011 -->
         Property access: <code>proxy[foo]</code>and <code>proxy.bar</code
         ><br />Inherited property access: <code>Object.create(proxy)[foo]</code
         ><br />{{jsxref("Reflect.get()")}}
@@ -301,8 +302,7 @@ console.log(p.a, p.b); // 1, 42
       </td>
       <td>
         <code
-          ><font face="Open Sans, Arial, sans-serif">Метод </font
-          >enumerate</code
+          >Метод enumerate</code
         >
         должен возвращать объект.
       </td>
