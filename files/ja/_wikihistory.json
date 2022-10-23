@@ -31431,10 +31431,6 @@
     "modified": "2019-03-23T23:42:58.294Z",
     "contributors": ["teoli", "electrolysis"]
   },
-  "orphaned/Migrate_apps_from_Internet_Explorer_to_Mozilla": {
-    "modified": "2019-03-24T00:00:44.710Z",
-    "contributors": ["SphinxKnight", "ethertank", "maripo"]
-  },
   "orphaned/New_in_JavaScript_1.8": {
     "modified": "2019-03-24T00:06:00.366Z",
     "contributors": ["ethertank", "Potappo"]
@@ -31744,17 +31740,6 @@
       "Shimono"
     ]
   },
-  "orphaned/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla": {
-    "modified": "2019-03-18T20:54:57.038Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "silverskyvicto",
-      "chrisdavidmills",
-      "Potappo",
-      "maripo"
-    ]
-  },
   "orphaned/Web/Guide/HTML/HTML5": {
     "modified": "2019-08-02T11:47:39.233Z",
     "contributors": [
@@ -31907,17 +31892,6 @@
       "happysadman",
       "electrolysis",
       "Mgjbot"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Using_the_arguments_object": {
-    "modified": "2019-03-24T00:01:07.773Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "Potappo",
-      "electrolysis",
-      "Mgjbot",
-      "Taken"
     ]
   },
   "orphaned/Web/JavaScript/Guide/Variables": {
