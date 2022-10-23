@@ -608,7 +608,7 @@
 /ja/docs/Core_JavaScript_1.5_Guide/The_Employee_Example/Object_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties
 /ja/docs/Core_JavaScript_1.5_Guide/The_Employee_Example/Object_Properties/Adding_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Adding_Properties
 /ja/docs/Core_JavaScript_1.5_Guide/The_Employee_Example/Object_Properties/Inheriting_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Inheriting_Properties
-/ja/docs/Core_JavaScript_1.5_Guide/Using_the_arguments_object	/ja/docs/orphaned/Web/JavaScript/Guide/Using_the_arguments_object
+/ja/docs/Core_JavaScript_1.5_Guide/Using_the_arguments_object	/ja/docs/Web/JavaScript/Guide/Functions
 /ja/docs/Core_JavaScript_1.5_Guide/Working_with_Closures	/ja/docs/Web/JavaScript/Closures
 /ja/docs/Core_JavaScript_1.5_Guide/Working_with_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects
 /ja/docs/Core_JavaScript_1.5_Guide/Writing_a_Regular_Expression_Pattern	/ja/docs/orphaned/Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern
@@ -653,7 +653,7 @@
 /ja/docs/Core_JavaScript_1.5_Guide:The_Employee_Example:Object_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties
 /ja/docs/Core_JavaScript_1.5_Guide:The_Employee_Example:Object_Properties:Adding_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Adding_Properties
 /ja/docs/Core_JavaScript_1.5_Guide:The_Employee_Example:Object_Properties:Inheriting_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Inheriting_Properties
-/ja/docs/Core_JavaScript_1.5_Guide:Using_the_arguments_object	/ja/docs/orphaned/Web/JavaScript/Guide/Using_the_arguments_object
+/ja/docs/Core_JavaScript_1.5_Guide:Using_the_arguments_object	/ja/docs/Web/JavaScript/Guide/Functions
 /ja/docs/Core_JavaScript_1.5_Guide:Working_with_Closures	/ja/docs/Web/JavaScript/Closures
 /ja/docs/Core_JavaScript_1.5_Guide:Working_with_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects
 /ja/docs/Core_JavaScript_1.5_Guide:Writing_a_Regular_Expression_Pattern	/ja/docs/orphaned/Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern
@@ -2173,8 +2173,8 @@
 /ja/docs/JavaScript/Guide/The_Employee_Example/Object_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties
 /ja/docs/JavaScript/Guide/The_Employee_Example/Object_Properties/Adding_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Adding_Properties
 /ja/docs/JavaScript/Guide/The_Employee_Example/Object_Properties/Inheriting_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Inheriting_Properties
-/ja/docs/JavaScript/Guide/Using_the_arguments_object	/ja/docs/orphaned/Web/JavaScript/Guide/Using_the_arguments_object
-/ja/docs/JavaScript/Guide/Using_the_arguments_object-redirect-1	/ja/docs/orphaned/Web/JavaScript/Guide/Using_the_arguments_object
+/ja/docs/JavaScript/Guide/Using_the_arguments_object	/ja/docs/Web/JavaScript/Guide/Functions
+/ja/docs/JavaScript/Guide/Using_the_arguments_object-redirect-1	/ja/docs/Web/JavaScript/Guide/Functions
 /ja/docs/JavaScript/Guide/Values,_variables,_and_literals	/ja/docs/Web/JavaScript/Guide/Grammar_and_types
 /ja/docs/JavaScript/Guide/Working_with_Closures	/ja/docs/Web/JavaScript/Closures
 /ja/docs/JavaScript/Guide/Working_with_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects
@@ -2801,7 +2801,6 @@
 /ja/docs/MathML/Element/math	/ja/docs/Web/MathML/Element/math
 /ja/docs/Media_formats_supported_by_the_audio_and_video_elements	/ja/docs/Web/Media/Formats
 /ja/docs/Microsummary_XML_grammar_reference	/ja/docs/orphaned/Microsummary_XML_grammar_reference
-/ja/docs/Migrate_apps_from_Internet_Explorer_to_Mozilla	/ja/docs/orphaned/Migrate_apps_from_Internet_Explorer_to_Mozilla
 /ja/docs/Mozilla's_Quirks_Mode	/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
@@ -2843,7 +2842,6 @@
 /ja/docs/Plugins/Guide/Constants	/ja/docs/Glossary/Plugin
 /ja/docs/Property_compatibility_table_for_form_widgets	/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls
 /ja/docs/Quirks_Mode_and_Standards_Mode	/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
-/ja/docs/Rich-Text_Editing_in_Mozilla	/ja/docs/orphaned/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
 /ja/docs/SVG	/ja/docs/Web/SVG
 /ja/docs/SVG/Element	/ja/docs/Web/SVG/Element
 /ja/docs/SVG/Element-redirect-1	/ja/docs/Web/SVG/Element
@@ -4326,7 +4324,6 @@
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Transformations	/ja/docs/Web/API/Canvas_API/Tutorial/Transformations
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/ja/docs/Web/API/Canvas_API/Tutorial/Using_images
 /ja/docs/Web/Guide/HTML/Editable_content	/ja/docs/conflicting/Web/HTML/Global_attributes/contenteditable
-/ja/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla	/ja/docs/orphaned/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
 /ja/docs/Web/Guide/HTML/Event_attributes	/ja/docs/Learn/JavaScript/Building_blocks/Events
 /ja/docs/Web/Guide/HTML/Forms	/ja/docs/Learn/Forms
 /ja/docs/Web/Guide/HTML/Forms/Data_form_validation	/ja/docs/Learn/Forms/Form_validation
@@ -4359,7 +4356,6 @@
 /ja/docs/Web/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/HTML/Canvas/Tutorial	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/HTML/Content_Editable	/ja/docs/conflicting/Web/HTML/Global_attributes/contenteditable
-/ja/docs/Web/HTML/Content_Editable/Rich-Text_Editing_in_Mozilla	/ja/docs/orphaned/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
 /ja/docs/Web/HTML/Content_categories	/ja/docs/Web/Guide/HTML/Content_categories
 /ja/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/ja/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /ja/docs/Web/HTML/Element/Input1	/ja/docs/Web/HTML/Element/input
@@ -4551,7 +4547,7 @@
 /ja/docs/Web/JavaScript/Guide/The_Employee_Example/Object_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties
 /ja/docs/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Adding_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Adding_Properties
 /ja/docs/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Inheriting_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Inheriting_Properties
-/ja/docs/Web/JavaScript/Guide/Using_the_arguments_object	/ja/docs/orphaned/Web/JavaScript/Guide/Using_the_arguments_object
+/ja/docs/Web/JavaScript/Guide/Using_the_arguments_object	/ja/docs/Web/JavaScript/Guide/Functions
 /ja/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/ja/docs/Web/JavaScript/Guide/Grammar_and_types
 /ja/docs/Web/JavaScript/Guide/Variables	/ja/docs/Web/JavaScript/Guide/Grammar_and_types#declarations
 /ja/docs/Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern	/ja/docs/orphaned/Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern
