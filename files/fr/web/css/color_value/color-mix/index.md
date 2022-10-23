@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La notationfonctionnele **`color-mix()`** prend deux couleurs (deux valeurs de type [`<color>`](/fr/docs/Web/CSS/color_value)) et renvoie le résultat de leur mélange selon des proportions données, dans un espace de couleur donné.
+La notation fonctionnelle **`color-mix()`** prend deux couleurs (deux valeurs de type [`<color>`](/fr/docs/Web/CSS/color_value)) et renvoie le résultat de leur mélange selon des proportions données, dans un espace de couleur donné.
 
 ## Syntaxe
 

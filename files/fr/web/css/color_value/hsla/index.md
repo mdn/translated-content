@@ -18,7 +18,7 @@ La notation fonctionnelle **`hsla()`** exprime une couleur donnée selon ses com
 ```css
 hsla(100, 100%, 50%, 1) /* #5f0 */
 hsla(235, 100%, 50%, .5) /* #0015ff avec 50% d'opacité */
-hsla(235 100% 50% / 1) /* CSS Color 4 space-separated values */
+hsla(235 100% 50% / 1) /* valeurs séparées par des espaces (CSS Color 4) */
 ```
 
 ### Valeurs
@@ -27,7 +27,7 @@ hsla(235 100% 50% / 1) /* CSS Color 4 space-separated values */
 
   - : `H` (teinte, <i lang="en">hue</i> en anglais) est un angle (type [`<angle>`](/fr/docs/Web/CSS/angle)) sur le cercle des couleurs. Lorsqu'il est écrit sans unité, il est interprété comme étant exprimé en degré. Par définition, on a `red=0deg=360deg`, et les autres couleurs distribuées sur le cercle avec `green=120deg`, `blue=240deg`, etc. Sa valeur étant un `<angle>`, elle boucle sur elle-même et on a donc `-120deg=240deg`, `480deg=120deg`, `-1turn=1turn`, etc.
 
-    `S` (saturation) et `L` (lightness) sont des pourcentages (type [`<percentage>`](/fr/docs/Web/CSS/percentage)). Une **saturation** à `100%` indique une couleur complètement saturée, tandis qu'une saturation à `0%` fournira un niveau de gris (une couleur complètement désaturée). Une **luminosité** à `100%` fournira du blanc, tandis qu'une luminosité à `0%` fournira du noir.
+    `S` (saturation) et `L` (luminosité, <i lang="en">lightness</i> en anglais) sont des pourcentages (type [`<percentage>`](/fr/docs/Web/CSS/percentage)). Une **saturation** à `100%` indique une couleur complètement saturée, tandis qu'une saturation à `0%` fournira un niveau de gris (une couleur complètement désaturée). Une **luminosité** à `100%` fournira du blanc, tandis qu'une luminosité à `0%` fournira du noir.
 
     `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).
 

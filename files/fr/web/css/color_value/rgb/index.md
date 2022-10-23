@@ -19,7 +19,7 @@ La notation fonctionnelle **`rgb()`** exprime une couleur selon ses composantes 
 
 ```css
 rgb(255, 255, 255) /* blanc */
-rgb(255, 255, 255,.5) /* blanc avec 50% d'opacité */
+rgb(255, 255, 255, .5) /* blanc avec 50% d'opacité */
 rgb(255 255 255) /* forme CSS Color 4 avec une séparation par des espaces des valeurs */
 rgb(255 255 255 / .5) /* blanc avec 50% d'opacité, en utilisant la séparation par des espaces */
 ```

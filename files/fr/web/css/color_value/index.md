@@ -98,7 +98,7 @@ Les couleurs du modèle HWB sont exprimées à l'aide de la notation fonctionnel
 
 ### Couleurs système
 
-En _mode de couleurs forcé_ (détectable avec la caractéristique média [`forced-colors](/fr/docs/Web/CSS/@media/forced-colors)), la plupart des couleurs sont restreintes à la palette définie par l'utilisatrice/l'utilisateur et le navigateur. Les couleurs système sont exposées avec les mots-clés suivants, qui peuvent être utilisés afin de s'assurer que le reste de la page s'intègre bien avec la palette restreinte. Ces valeurs peuvent être utilisées dans d'autres contextes, mais ne sont pas prises en charge par l'ensemble des navigateurs.
+En _mode de couleurs forcé_ (détectable avec la caractéristique média [`forced-colors`](/fr/docs/Web/CSS/@media/forced-colors)), la plupart des couleurs sont restreintes à la palette définie par l'utilisatrice/l'utilisateur et le navigateur. Les couleurs système sont exposées avec les mots-clés suivants, qui peuvent être utilisés afin de s'assurer que le reste de la page s'intègre bien avec la palette restreinte. Ces valeurs peuvent être utilisées dans d'autres contextes, mais ne sont pas prises en charge par l'ensemble des navigateurs.
 
 Les mots-clés de cette liste sont définis dans le module de spécification <i lang="en">CSS Color</i> de niveau 4&nbsp;: `ActiveText`, `ButtonBorder`, `ButtonFace`, `ButtonText`, `Canvas`, `CanvasText`, `Field`, `FieldText`, `GrayText`, `Highlight`, `HighlightText`, `LinkText`, `Mark`, `MarkText`, `VisitedText`.
 

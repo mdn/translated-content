@@ -18,7 +18,7 @@ color-contrast(#008080 vs olive, var(--myColor), #d2691e)
 
 ### Valeurs
 
--`color-contrast( <couleur> vs <couleur>#{2,} )`
+- `color-contrast( <couleur> vs <couleur>#{2,} )`
 
   - : `<couleur>` est une valeur de type [`<color>`](/fr/docs/Web/CSS/color_value).
 
