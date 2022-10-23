@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 {{JSRef}}
 
-与其他编程语言中的数组一样，**`Array`** 对象支持[在单个变量名下存储多个项的集合](/zh-CN/docs/Learn/JavaScript/First_steps/arrays)，并具有[执行常见数组操作](#示例)的成员。
+与其他编程语言中的数组一样，**`Array`** 对象支持[在单个变量名下存储多个元素](/zh-CN/docs/Learn/JavaScript/First_steps/arrays)，并具有[执行常见数组操作](#示例)的成员。
 
 ## 描述
 
@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 - **JavaScript 数组不是关联数组**，因此，[不能使用任意字符串作为索引访问数组元素](#备注)，但必须使用非负整数（或它们各自的字符串形式）作为索引访问。
 
-- **JavaScript 数组是[从0开始的索引](https://www.wikiwand.com/zh-cn/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B%E7%9A%84%E7%B7%A8%E8%99%9F)**：数组的第一个元素在索引 `0` 处，第二个在索引 `1` 处，以此类推，最后一个元素是数组的 {{jsxref("Array/length", "length")}} 属性减去 `1` 的值。
+- **JavaScript 数组的[索引从 0 开始](https://zh.wikipedia.org/zh-cn/從零開始的編號)**：数组的第一个元素在索引 `0` 处，第二个在索引 `1` 处，以此类推，最后一个元素是数组的 {{jsxref("Array/length", "length")}} 属性减去 `1` 的值。
 
 - **JavaScript [数组复制操作](#复制数组)创建[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)**。（*所有* JavaScript 对象的标准内置复制操作都会创建浅拷贝，而不是[深拷贝](/zh-CN/docs/Glossary/Deep_copy)）。
 
