@@ -310,7 +310,7 @@ module.exports = app;
 
 上文的 **www** 入口文件中 `require()` 的 `app` 就是这里导出的。
 
-我们来详细了解一下 **app.js** 文件。首先，它使用 `require()` 导入了一些实用 node 库，其中包括之前用 NPM 下载的 `express`，`http-errors`，`morgan` 和 _`cookie-parser`，还有一个_ *`path` *库，它是用于解析文件和目录的核心 node 库。
+我们来详细了解一下 **app.js** 文件。首先，它使用 `require()` 导入了一些实用 node 库，其中包括之前用 NPM 下载的 _`express`_，_`http-errors`_，_`morgan`_ 和 _`cookie-parser`_，还有一个 *`path`* 库，它是用于解析文件和目录的核心 node 库。
 
 ```js
 var express = require('express');
