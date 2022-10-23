@@ -48,7 +48,7 @@ slug: Web/API/Notification
 - {{domxref("Notification.lang")}} {{ReadOnlyInline}}
   - : 在构造函数的 `options` 参数中指定的通知的语言。
 - {{domxref("Notification.tag")}} {{ReadOnlyInline}}
-  - : 在构造函数的 `options` 参数中指定的通知的 ID（如果有的化）。
+  - : 在构造函数的 `options` 参数中指定的通知的 ID（如果有的话）。
 - {{domxref("Notification.icon")}} {{ReadOnlyInline}}
   - : 在构造函数的 `options` 参数中用作指定通知图标的图像 URL。
 - {{domxref("Notification.image")}} {{ReadOnlyInline}} {{Experimental_Inline}}
