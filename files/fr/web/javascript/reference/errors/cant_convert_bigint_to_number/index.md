@@ -23,7 +23,7 @@ TypeError: BigInt does not support >>> operator (Safari)
 
 [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
 
-## Quel est le problème ?
+## Quel est le problème&nbsp;?
 
 Les deux opérandes d'un opérateur arithmétique doivent tous les deux être des grands entiers ou tous les deux être des nombres. Si une opération porte sur un mélange des deux, on ne sait pas si le résultat devrait être un grand entier ou un nombre, car les deux cas causeraient une perte de précision.
 

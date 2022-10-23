@@ -21,7 +21,7 @@ RangeError: 0 is an invalid divisor value. (Safari)
 
 [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError).
 
-## Quel est le problème ?
+## Quel est le problème&nbsp;?
 
 Le diviseur utilisé pour une [division](/fr/docs/Web/JavaScript/Reference/Operators/Division) ou [le calcul d'un reste](/fr/docs/Web/JavaScript/Reference/Operators/Remainder) est `0n`. Pour les valeurs de type [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number), la division arithmétique par 0 produit l'infini ([`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity)), mais il n'existe pas de telle valeur infinie avec les grands entiers et une erreur est donc déclenchée. Vérifiez si le diviseur vaut `0n` avant d'effectuer la division.
 

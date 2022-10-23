@@ -20,7 +20,7 @@ RangeError: Not an integer (Safari)
 
 [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError).
 
-## Quel est le problème ?
+## Quel est le problème&nbsp;?
 
 Lorsqu'on utilise la fonction [`BigInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) afin de convertir un nombre en un grand entier, le nombre doit être une valeur entière (telle que [`Number.isInteger()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger) renvoie `true`).
 

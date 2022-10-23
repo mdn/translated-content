@@ -21,7 +21,7 @@ TypeError: Invalid argument type in ToBigInt operation (Safari)
 
 [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
 
-## Quel est le problème ?
+## Quel est le problème&nbsp;?
 
 Lorsqu'on utilise la fonction [`BigInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) afin de convertir une valeur en grand entier, la valeur doit d'abord être convertie en une valeur primitive. Une fois cette conversion effectuée, si la valeur n'est pas un grand entier, une chaîne de caractères, un nombre ou un booléen, une erreur est levée.
 

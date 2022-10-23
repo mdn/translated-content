@@ -21,7 +21,7 @@ SyntaxError: Unexpected token '??'. Coalescing and logical operators used togeth
 
 [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
 
-## Quel est le problème ?
+## Quel est le problème&nbsp;?
 
 [La précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) ressemble à ceci&nbsp;:
 
@@ -75,6 +75,6 @@ function getId(user, fallback) {
 
 ## Voir aussi
 
-- [Discussion originale à propos de la précédence de l'opérateur de coalescence des nuls](https://github.com/tc39/proposal-nullish-coalescing/issues/15)
+- [Discussion originale à propos de la précédence de l'opérateur de coalescence des nuls (en anglais)](https://github.com/tc39/proposal-nullish-coalescing/issues/15)
 - [L'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 - [La précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)

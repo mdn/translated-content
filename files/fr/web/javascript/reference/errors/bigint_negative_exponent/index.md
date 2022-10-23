@@ -21,7 +21,7 @@ RangeError: Negative exponent is not allowed (Safari)
 
 [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError).
 
-## Quel est le problème ?
+## Quel est le problème&nbsp;?
 
 L'exposant utilisé pour une opération [d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation) doit être positif. Un exposant négatif conduirait à prendre un inverse de la base, le résultat sera alors compris entre `-1` et `1` pour presque tous les cas, ce qui finirait arrondi en `0n`. Pour éviter de tels problèmes, les exposants négatifs ne sont pas autorisés. Vérifiez le signe de l'exposant avant de réaliser l'exponentiation.
 
