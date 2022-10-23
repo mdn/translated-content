@@ -52,7 +52,7 @@ slug: Web/API/Notification
 - {{domxref("Notification.icon")}} {{ReadOnlyInline}}
   - : 在构造函数的 `options` 参数中用作指定通知图标的图像 URL。
 - {{domxref("Notification.image")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 在构造函数的 `options` 参数中用作指定通知的一部分显示的图像 URL。
+  - : 作为通知的一部分显示的图像 URL，在构造函数的选项参数中指定。
 - {{domxref("Notification.renotify")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 指定在新通知取代旧通知后，是否应该通知用户。
 - {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}} {{Experimental_Inline}}
