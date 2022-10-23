@@ -63,9 +63,9 @@ La propriété `float` est définie à l'aide d'un mot-clé, parmi la liste des 
 - `none`
   - : Un mot-clé indiquant que l'élément ne doit pas flotter.
 - `inline-start`
-  - : Un mot-clé indiquant que l'élément doit flotter du côté du début du bloc qui le contient. Pour les scripts LTR (les langues qui s'écrivent de la gauche vers la droite), c'est le bord gauche ; pour les scripts RTL, c'est le bord droit.
+  - : Un mot-clé indiquant que l'élément doit flotter du côté du début du bloc qui le contient. Pour les scripts LTR (les langues qui s'écrivent de la gauche vers la droite), c'est le bord gauche&nbsp;; pour les scripts RTL, c'est le bord droit.
 - `inline-end`
-  - : Un mot-clé indiquant que l'élément doit flotter du côté de la fin du bloc qui le contient. Pour les scripts LTR (les langues qui s'écrivent de la gauche vers la droite), c'est le bord droit ; pour les scripts RTL, c'est le bord gauche.
+  - : Un mot-clé indiquant que l'élément doit flotter du côté de la fin du bloc qui le contient. Pour les scripts LTR (les langues qui s'écrivent de la gauche vers la droite), c'est le bord droit&nbsp;; pour les scripts RTL, c'est le bord gauche.
 
 ## Définition formelle
 
@@ -77,7 +77,7 @@ La propriété `float` est définie à l'aide d'un mot-clé, parmi la liste des 
 
 ## Exemples
 
-## Le positionnement des éléments flottants
+### Le positionnement des éléments flottants
 
 Comme évoqué ci-avant, lorsqu'un élément flotte, il est retiré du flux normal du document (même s'il continue de faire partie du flux général) et il est décalé vers la droite ou vers la gauche jusqu'à ce qu'il touche le bord de son conteneur _ou un autre élément flottant_.
 
