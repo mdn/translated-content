@@ -318,7 +318,7 @@ npm install
 npm run serve
 ```
 
-这将启动一个 Web 服务器。访问 [http://localhost:8080](http://localhost:8080)，您应该会在屏幕上看到一个内容为 `Hello, WebAssembly!` 的警告框。我们已经成功地从 JavaScript 调用了 Rust，并从 Rust 调用了 JavaScript。
+这将启动一个 Web 服务器。访问 `http://localhost:8080`，你应该会在屏幕上看到一个内容为 `Hello, WebAssembly!` 的警告框。我们已经成功地从 JavaScript 调用了 Rust，并从 Rust 调用了 JavaScript。
 
 ## 结论
 
