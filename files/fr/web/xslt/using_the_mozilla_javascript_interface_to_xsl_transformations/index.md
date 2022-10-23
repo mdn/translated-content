@@ -53,12 +53,12 @@ const newDocument = processor.transformToDocument(domToBeTransformed);
 
 L'objet résultant dépend de [la méthode de sortie](https://www.w3.org/TR/2021/REC-xslt20-20210330/#element-output) de la feuille de style&nbsp;:
 
-- : `"html"`
-  - [`HTMLDocument`](/fr/docs/Web/API/HTMLDocument)
-- : `"xml"`
-  - [`XMLDocument`](/fr/docs/Web/API/XMLDocument)
-- : `"text"`
-  - [`XMLDocument`](/fr/docs/Web/API/XMLDocument) avec un seul élément racine, `<transformiix:result>`, dont l'enfant est le texte.
+- `"html"`
+  - : [`HTMLDocument`](/fr/docs/Web/API/HTMLDocument)
+- `"xml"`
+  - : [`XMLDocument`](/fr/docs/Web/API/XMLDocument)
+- `"text"`
+  - : [`XMLDocument`](/fr/docs/Web/API/XMLDocument) avec un seul élément racine, `<transformiix:result>`, dont l'enfant est le texte.
 
 ### `transformToFragment()`
 
