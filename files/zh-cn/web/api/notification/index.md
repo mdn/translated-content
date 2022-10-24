@@ -5,7 +5,7 @@ slug: Web/API/Notification
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-[Notifications API](/zh-CN/docs/Web/API/Notifications_API) 的接口 `Notification` 用于向用户配置和显示桌面通知。
+[Notifications API](/zh-CN/docs/Web/API/Notifications_API) 的接口 `Notification` 用于配置以向用户显示桌面通知。
 
 这些通知的外观和功能因平台而异，但通常它们会提供一种异步向用户提供信息的方式。
 
