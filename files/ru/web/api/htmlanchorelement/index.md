@@ -12,7 +12,7 @@ translation_of: Web/API/HTMLAnchorElement
 
 ## Свойства
 
-_Наследует свойства от его родителя,\_\_{{domxref("HTMLElement")}}, и реализует те из {{domxref("URLUtils")}}._
+_Наследует свойства от его родителя, {{domxref("HTMLElement")}}, и реализует те из {{domxref("URLUtils")}}._
 
 - {{domxref("HTMLAnchorElement.accessKey")}}
   - : Это {{domxref("DOMString")}} отображает собой единичный символ, который переключает фокус ввода на гиперссылку.
@@ -71,7 +71,7 @@ _Наследует свойства от его родителя,\_\_{{domxref(
 
 ## Методы
 
-_Наследует методы от его родителя, {{domxref("HTMLElement")}},_ _и реализует те из {{domxref("URLUtils")}}\_\_._
+_Наследует методы от его родителя, {{domxref("HTMLElement")}},_ _и реализует те из {{domxref("URLUtils")}}._
 
 - {{domxref("HTMLElement.blur()")}}
   - : Удаляет фокус клавиатуры из текущего элемента.

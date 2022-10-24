@@ -172,13 +172,13 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 
 `"placeholders"` 这个成员定义了所有的占位符，以及它们所检索的来源。`"url"` 这个占位符指定了其内容取自 $1，它就是 `getMessage()` 第二个参数里的第一个值。由于占位符就叫做 `"url"`，我们就在实际的消息字符串中用 `$URL$` 调用它（`"name"` 用 `$NAME$` 调用也是一样的，以此类推）。对于多个占位符，你可以将其置于数组内，并作为第二个参数传递到 {{WebExtAPIRef("i18n.getMessage()")}} —`[a, b, c]`可替换为`$1`, `$2`, and `$3，以此类推，并置于` `messages.json` 内。
 
-接下来我们看一个例子：在 `en/messages.json 文件中`原始的 `notificationContent` 消息字符串如下：in the `en/messages.json` file is
+接下来我们看一个例子：在 `en/messages.json` 文件中原始的 `notificationContent` 消息字符串如下：in the `en/messages.json` file is
 
 ```
 您点击了 $URL$。
 ```
 
-我们可以看到链接点击后会打开 `https://developer.mozilla.org。`在 {{WebExtAPIRef("i18n.getMessage()")}} 调用后，第二个参数的内容就变成了 messages.json 里的 `$1`，并替换定义在 `"url" 占位符里的` `$URL$` 这个占位符。所以最后的消息字符串就变成了：
+我们可以看到链接点击后会打开 `https://developer.mozilla.org`。在 {{WebExtAPIRef("i18n.getMessage()")}} 调用后，第二个参数的内容就变成了 messages.json 里的 `$1`，并替换定义在 `"url"` 占位符里的 `$URL$` 这个占位符。所以最后的消息字符串就变成了：
 
 ```
 您点击了 https://developer.mozilla.org。
@@ -213,7 +213,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 }
 ```
 
-在本例中我们只是硬编码了占位符的内容，而不是从 `$1 这样的变量值中获取它。有时候你会遇到消息文件非常复杂，或者如果你想将文件里的不同值分离开来以便字符串可读性更好，`这种情况下它会很有用，这些值可通过编程来访问。
+在本例中我们只是硬编码了占位符的内容，而不是从 `$1` 这样的变量值中获取它。有时候你会遇到消息文件非常复杂，或者如果你想将文件里的不同值分离开来以便字符串可读性更好，这种情况下它会很有用，这些值可通过编程来访问。
 
 此外，你可使用这样的替代方式指定不想被翻译的一部分字符串，例如人名或公司名。
 
@@ -223,7 +223,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 
 1. 如果有精确匹配当前语言区域的 `messages.json` 文件，并且它包含该字符串，则返回它。
 2. 否则，如果当前语言区域有合格区域（例如 `en_US`）并且有一个无区域限定的 `messages.json` 文件（例如 `en`）且包含该字符串，则返回它。
-3. 否则，如果 `manifest.json 里包含` `default_locale` 所对应的 `messages.json` 文件且包含该字符串，则返回它。
+3. 否则，如果 `manifest.json` 里包含 `default_locale` 所对应的 `messages.json` 文件且包含该字符串，则返回它。
 4. 否则，返回一个空字符串。
 
 参见下列示例：

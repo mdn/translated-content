@@ -245,7 +245,7 @@ Voici une liste (non exhaustive) d'opérateurs et de méthodes natives qui peuve
 
 - [`-` (négation unaire)](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Négation_unaire)
 
-  - : Si on prend l'opposé de `0`, on aura, bien entendu,`-0`. Cependant, avec les expressions, cela peut faire que la valeur `-0` se glisse dans les variables sans qu'on s'en rende compte. Par exemple :
+  - : Si on prend l'opposé de `0`, on aura, bien entendu, `-0`. Cependant, avec les expressions, cela peut faire que la valeur `-0` se glisse dans les variables sans qu'on s'en rende compte. Par exemple :
 
     ```js
         let forceArrêt = obj.masse * -obj.vitesse

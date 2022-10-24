@@ -23,7 +23,7 @@ void gl.activeTexture(texture);
 ### Paramètres
 
 - `texture`
-  - : L'unité de texture à rendre active. La valueur est une `gl.TEXTUREI` où *I* est dans la plage de 0 à`gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1`.
+  - : L'unité de texture à rendre active. La valueur est une `gl.TEXTUREI` où *I* est dans la plage de 0 à `gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1`.
 
 ### Valeur retournée
 
@@ -31,7 +31,7 @@ Aucune.
 
 ### Exceptions
 
-Si *texture* n'est pas l'une des `gl.TEXTUREI`, où *I* est dans la plage de 0 à`gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1`, une erreur `gl.INVALID_ENUM` est déclenchée.
+Si *texture* n'est pas l'une des `gl.TEXTUREI`, où *I* est dans la plage de 0 à `gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1`, une erreur `gl.INVALID_ENUM` est déclenchée.
 
 ## Exemples
 

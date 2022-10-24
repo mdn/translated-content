@@ -49,4 +49,3 @@ L'événement **`canplaythrough`** est déclenché lorsque le user agent peut jo
 - [`suspend`](/fr/docs/Web/API/HTMLMediaElement/suspend_event)
 - [`emptied`](/fr/docs/Web/API/HTMLMediaElement/emptied_event)
 - [`stalled`](/fr/docs/Web/API/HTMLMediaElement/stalled_event)
-

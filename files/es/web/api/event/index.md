@@ -46,7 +46,7 @@ Estos y los varios [manejos de eventos](/es/DOM/element#Manejo_de_los_eventos) d
 
 Puede también pasar la referencia del objeto del evento como un parámetro predefinido, llamado `event`, a la función que maneja el evento. Esto es muy parecido a la forma en que trabaja `this`, pero para objetos de eventos, más bien que las referencias del objeto del elemento.
 
-```
+```html
 <html>
 <head>
 <title>Ejemplo de parámetro de objeto de evento</title>
@@ -72,7 +72,7 @@ haga clic en cualquier lugar de esta página.</p>
 
 El parámetro predefinido del objeto `event` permite pasar tantos parámetros de gestión de evento como sea necesario:
 
-```
+```html
 <html>
 <head>
 <title>Ejemplo de objeto con varios parámetros</title>

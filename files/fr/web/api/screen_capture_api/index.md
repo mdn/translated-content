@@ -63,7 +63,7 @@ L'API Screen Capture ajoute des propriétés au dictionnaire suivant définit pa
 - {{domxref("MediaTrackSettings.cursor")}}
   - : Une chaîne de caractères indiquant si la surface d'affichage en cours de capture comprend ou non le curseur de la souris et, dans l'affirmative, si elle est visible uniquement lorsque la souris est en mouvement ou si elle est toujours visible. La valeur peut être `always`, `motion`, ou `never`.
 - {{domxref("MediaTrackSettings.displaySurface")}}
-  - : Une chaîne indiquant le type de surface d'affichage en cours de capture. La valeur peut être`application`, `browser`, `monitor`, ou `window`.
+  - : Une chaîne indiquant le type de surface d'affichage en cours de capture. La valeur peut être `application`, `browser`, `monitor`, ou `window`.
 - {{domxref("MediaTrackSettings.logicalSurface")}}
   - : Valeur booléenne valant `true` si la vidéo en cours de capture ne correspond pas directement à une seule zone d'affichage à l'écran.
 
