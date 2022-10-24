@@ -14,13 +14,13 @@ Este artículo es un resumen de algunos métodos DOM nivel 1 poderosos y fundame
 
 ## Ejemplo: Crear una tabla HTML dinámicamente (`Ejemplo1.html`)
 
-### Contenido HTML
+Contenido HTML
 
 ```html
 <input type="button" value="Genera una tabla" onclick="genera_tabla()">
 ```
 
-### JavaScript Content
+JavaScript Content
 
 ```js
 function genera_tabla() {
@@ -128,7 +128,7 @@ En el árbol del elemento \<table> de la Figura 1, el elemento \<table> tiene so
 
 `getElementsByTagName(tagNameValue)` es un método disponible en cualquier elemento DOM o el elemento raíz del documento. Cuando se le llama, devolverá una matriz con todos los descendientes de elementos que coincidan con el nombre de la etiqueta. El primer elemento de la lista se encuentra en la posición \[0] de la matriz.
 
-### HTML Content
+HTML Content
 
 ```html
 <body>
@@ -138,7 +138,7 @@ En el árbol del elemento \<table> de la Figura 1, el elemento \<table> tiene so
 </body>
 ```
 
-### JavaScript Content
+JavaScript Content
 
 ```js
 function set_background() {

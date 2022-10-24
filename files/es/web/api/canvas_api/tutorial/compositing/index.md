@@ -48,7 +48,7 @@ Por edfecto el elemento {{HTMLElement("canvas")}} tiene un trazado de recorte qu
 
 En este ejemplo, utilizamos un trazado de recorte de forma circular para restringir el dibujo de un conjunto de estrellas aleatorias dentro de una región particular del lienzo.
 
-```
+```js
 function dibuja() {
   var ctx = document.getElementById('lienzo').getContext('2d');
   ctx.fillRect(0, 0, 150, 150);

@@ -84,12 +84,16 @@ Este ejemplo:
 
 se representa en el navegador así:
 
+#### Ejemplo
+
 ```html hidden
 <h1>   ¡Hola
     <span> mundo!</span>   </h1>
 ```
 
 {{EmbedLiveSample('Hidden_example')}}
+
+#### Elemento `h1`
 
 El elemento `<h1>` contiene solo elementos en línea. De hecho contiene:
 
@@ -155,6 +159,8 @@ Tenemos 3 nodos de texto que contienen solo espacios en blanco, uno antes del pr
 
 Esto se renderiza así:
 
+#### Ejemplo
+
 ```html hidden
 <body>
   <div>  ¡Hola  </div>
@@ -164,6 +170,8 @@ Esto se renderiza así:
 ```
 
 {{EmbedLiveSample('Hidden_example_2')}}
+
+#### Breve resumen
 
 Podemos resumir cómo se maneja el espacio en blanco aquí de la siguiente manera (puede haber algunas pequeñas diferencias en el comportamiento exacto entre los navegadores, pero básicamente, esto funciona):
 
@@ -235,6 +243,8 @@ Considera este ejemplo (nuevamente, los espacios en blanco en el HTML están mar
 
 Esto se traduce de la siguiente manera:
 
+#### Ejemplo
+
 ```css hidden
 .people-list { list-style-type: none; margin: 0; padding: 0; }
 .people-list li { display: inline-block; width: 2em; height: 2em; background: #f06; border: 1px solid; }
@@ -265,6 +275,8 @@ El _Inspector HTML de Firefox DevTools_ resaltará los nodos de texto y también
 ![Espacio en blanco en Devtools](https://mdn.mozillademos.org/files/17085/whitespace-devtools.png)
 
 Hay algunas formas de solucionar este problema:
+
+#### Usando flexbox
 
 Utiliza [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox) para crear la lista horizontal de elementos en lugar de probar una solución de `inline-block`. Esto se encarga de todo por ti y definitivamente es la solución preferida:
 

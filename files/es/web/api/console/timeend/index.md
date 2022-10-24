@@ -19,7 +19,7 @@ console.timeEnd(etiqueta);
 
 ### Parámetros
 
-- etiqueta
+- `etiqueta`
   - : El nombre del temporizador a detener. Al detenerse, el tiempo transcurrido será mostrado automáticamente en la [Consola del Navegador](/es/docs/Tools/Web_Console).
 
 ## Especificaciones

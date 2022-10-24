@@ -84,7 +84,7 @@ Fill styling es utilizado para estilizar los colores del relleno y los bordes de
 - {{domxref("CanvasRenderingContext2D.fillStyle")}}
   - : Utilizado para dar color al relleno de las formas. Color por defecto `#000` (negro).
 - {{domxref("CanvasRenderingContext2D.strokeStyle")}}
-  - : Utilizado para dar color al borde de las formas. Color por defecto `#000` (negro)..
+  - : Utilizado para dar color al borde de las formas. Color por defecto `#000` (negro).
 
 ## Degradados y patrones
 

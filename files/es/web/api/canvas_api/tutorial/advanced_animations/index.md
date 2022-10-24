@@ -166,11 +166,6 @@ ball.draw();
 
 Para convertir la moción en más auténtica, puedes jugar con la velocidad, así por ejemplo:
 
-```js
-ball.vy *= .99;
-ball.vy += .25;
-```
-
 Esto reduce el vector vertical de velocidad para cada fotograma para que la bola termina rebotando en el suelo.
 
 ```html hidden
@@ -229,16 +224,16 @@ canvas.addEventListener('mouseout', function(e) {
 ball.draw();
 ```
 
+```js
+ball.vy *= .99;
+ball.vy += .25;
+```
+
 {{EmbedLiveSample("Second_demo", "610", "310")}}
 
 ## Efecto de rezagar
 
 Hasta este punto hemos limpiado los fotogramas anteriores con el método {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}}. Si reemplazas este método con un semi-transparente {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}}, puedes facilmente crear un efecto de rezagar.
-
-```js
-ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
-ctx.fillRect(0, 0, canvas.width, canvas.height);
-```
 
 ```html hidden
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
@@ -295,6 +290,11 @@ canvas.addEventListener('mouseout', function(e) {
 });
 
 ball.draw();
+```
+
+```js
+ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 
 {{EmbedLiveSample("Third_demo", "610", "310")}}

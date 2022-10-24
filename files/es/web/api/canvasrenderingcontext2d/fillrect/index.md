@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillRect
 ---
 {{APIRef}}
 
-El método **`CanvasRenderingContext2D`\*\***`.fillRect()`\*\* de la API Canvas 2D dibuja un rectángulo relleno en la posición ( x, y ). El tamaño del rectángulo se determina por width (anchura) y height (altura). El estilo de relleno se determina por el atributo `fillStyle`.
+El método **`CanvasRenderingContext2D.fillRect()`** de la API Canvas 2D dibuja un rectángulo relleno en la posición ( x, y ). El tamaño del rectángulo se determina por width (anchura) y height (altura). El estilo de relleno se determina por el atributo `fillStyle`.
 
 ## Sintaxis
 

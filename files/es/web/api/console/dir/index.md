@@ -22,7 +22,7 @@ console.dir(objeto);
 ## Parámetros
 
 - `objeto`
-  - : `Un objeto JavaScript cuyas propiedades deben ser mostradas como resultado.`
+  - : Un objeto JavaScript cuyas propiedades deben ser mostradas como resultado.
 
 ## Especificaciones
 

@@ -12,7 +12,7 @@ tags:
   - Web Audio API
 translation_of: Web/API/BaseAudioContext
 ---
-{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}
 
 The `BaseAudioContext` interface acts as a base definition for online and offline audio-processing graphs, as represented by {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} resepectively. You wouldn't use `BaseAudioContext` directly — you'd use its features via one of these two inheriting interfaces.
 
