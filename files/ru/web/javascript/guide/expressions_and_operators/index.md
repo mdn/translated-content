@@ -415,7 +415,7 @@ typeof String;   // возвращает "function"
 
 #### `Оператор void`
 
-[Оператор` ``void`](/ru/docs/Web/JavaScript/Reference/Operators/void) используется любым из следующих способов:
+[Оператор `void`](/ru/docs/Web/JavaScript/Reference/Operators/void) используется любым из следующих способов:
 
 ```
 void (expression)
