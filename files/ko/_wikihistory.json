@@ -10228,10 +10228,6 @@
       "magnoliaa"
     ]
   },
-  "Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode": {
-    "modified": "2020-03-12T19:48:28.686Z",
-    "contributors": ["SeonHyungJo"]
-  },
   "Web/JavaScript/Reference/Template_literals": {
     "modified": "2020-10-15T21:47:14.004Z",
     "contributors": [
@@ -11411,6 +11407,10 @@
   "conflicting/Web/JavaScript/Reference/Statements/switch": {
     "modified": "2020-10-15T22:07:33.273Z",
     "contributors": ["alattalatta", "SSJ-unclear"]
+  },
+  "conflicting/Web/JavaScript/Reference/Strict_mode": {
+    "modified": "2020-03-12T19:48:28.686Z",
+    "contributors": ["SeonHyungJo"]
   },
   "conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript": {
     "modified": "2019-01-16T14:19:09.939Z",
