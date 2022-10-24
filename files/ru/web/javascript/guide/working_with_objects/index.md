@@ -293,7 +293,7 @@ Car.prototype.color = null;
 car1.color = "black";
 ```
 
-Смотрите [`свойство prototype`](/ru/docs/JavaScript/Reference/Global_Objects/Function/prototype) объекта `Function` в [Справочнике JavaScript]](/ru/docs/JavaScript/Reference) ля получения деталей.
+Смотрите [свойство `prototype`](/ru/docs/JavaScript/Reference/Global_Objects/Function/prototype) объекта `Function` в [Справочнике JavaScript](/ru/docs/JavaScript/Reference) для получения деталей.
 
 ## Определение методов
 
