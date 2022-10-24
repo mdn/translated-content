@@ -23,7 +23,7 @@ Cette propriété est une propriété raccourcie pour les propriétés CSS suiva
 ## Syntaxe
 
 ```css
-/* Valeur pour both scroll-timeline-name et scroll-timeline-axis */
+/* Valeur pour scroll-timeline-name et scroll-timeline-axis */
 scroll-timeline: nom_specifique_pour_chronologie block;
 scroll-timeline: nom_specifique_pour_chronologie inline;
 scroll-timeline: nom_specifique_pour_chronologie vertical;
