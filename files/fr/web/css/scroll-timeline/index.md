@@ -1,115 +1,112 @@
 ---
 title: '@scroll-timeline'
 slug: Web/CSS/scroll-timeline
-translation_of: Web/CSS/@scroll-timeline
-original_slug: Web/CSS/@scroll-timeline
-browser-compat: css.at-rules.scroll-timeline
+l10n:
+  sourceCommit: 3db79652f43f0d5b4bd3bc0f233ed7670d91cbdf
 ---
-{{CSSRef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) CSS **`@scroll-timeline`** définit une chronologie [`AnimationTimeline`](/fr/docs/Web/API/AnimationTimeline) dont les valeurs temporelles sont déterminées par le défilement dans un conteneur de défilement plutôt que par des minutes ou des secondes. Une fois définie, une chronologie de défilement (<i lang="en">scroll timeline</i> en anglais) est associée à une [animation CSS](/fr/docs/Web/CSS/CSS_Animations) grâce à la propriété `animation-timeline`.
+{{CSSRef}}{{SeeCompatTable}}
+
+La [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-timeline`** définit un nom qui peut être utilisé pour identifier l'élément source d'une chronologie de défilement, ainsi que l'axe de défilement qui fournit la chronologie.
+
+Le nom ainsi déclaré peut être utilisé dans une déclaration [`animation-timeline`](/fr/docs/Web/CSS/animation-timeline) afin d'indiquer l'élément (et donc la barre de défilement) utilisé pour contrôler l'avancement de l'animation. On notera que si l'élément n'affiche pas de barre de défilement dans l'axe indiqué, aucune chronologie ne sera créée.
+
+La propriété `scroll-timeline` est équivalente à l'utilisation des propriétés [`scroll-timeline-name`](/fr/docs/Web/CSS/scroll-timeline-name) et [`scroll-timeline-axis`](/fr/docs/Web/CSS/scroll-timeline-axis) dans une seule déclaration.
+
+## Propriétés détaillées correspondantes
+
+Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
+
+- [`scroll-timeline-name`](/fr/docs/Web/CSS/scroll-timeline-name)
+- [`scroll-timeline-axis`](/fr/docs/Web/CSS/scroll-timeline-axis)
 
 ## Syntaxe
 
 ```css
-@scroll-timeline moveTimeline {
-  source: auto;
-  orientation: vertical;
-  scroll-offsets: 0px, 500px;
-}
+/* Valeur pour both scroll-timeline-name et scroll-timeline-axis */
+scroll-timeline: nom_specifique_pour_chronologie block;
+scroll-timeline: nom_specifique_pour_chronologie inline;
+scroll-timeline: nom_specifique_pour_chronologie vertical;
+scroll-timeline: nom_specifique_pour_chronologie horizontal;
+
+/* Mot-clé none pour scroll-timeline-name et valeur pour scroll-timeline-axis */
+scroll-timeline: none block;
+scroll-timeline: none inline;
+scroll-timeline: none vertical;
+scroll-timeline: none horizontal;
+
+/* scroll-timeline-name ou scroll-timeline-axis */
+scroll-timeline: none;
+scroll-timeline: nom_specifique_pour_chronologie;
+scroll-timeline: block;
+scroll-timeline: inline;
+scroll-timeline: vertical;
+scroll-timeline: horizontal;
 ```
 
 ### Valeurs
 
-- [`custom-ident`](/fr/docs/Web/CSS/custom-ident)
-  - : Un nom identifiant la chronologie de défilement. Ce nom est utilisé lorsqu'on référence la chronologie avec la propriété [`animation-timeline`](/fr/docs/Web/CSS/animation-timeline).
+Une valeur `<scroll-timeline-name>` suivie d'une valeur `<scroll-timeline-axis>` peut être appliquée à l'élément conteneur dans n'importe quel ordre. Au moins une des deux valeurs doit être fournie.
 
-- `source`
-  - : L'élément défilable dont la position du défilement agit sur la chronologie. Ce peut être&nbsp;:
-    - `auto`
-      - : Il s'agit alors du document associé à l'objet global [`Window`](/fr/docs/Web/API/Window) actuel.
-    - `selector("id-selector")`
-      - : Le conteneur de défilement est identifié à l'aide d'un identifiant d'élément.
-    - `none`
-      - : Aucun conteneur de défilement n'est indiqué.
+Les valeurs autorisées pour `<scroll-timeline-name>` sont&nbsp;:
 
-- `orientation`
-  - : L'orientation de la chronologie de défilement&nbsp;:
-    - `auto`
-      - : Vaut `vertical` par défaut.
-    - `block`
-      - : Utilise la position du défilement le long de l'axe de bloc, conformément au mode d'écriture et à la directionnalité.
-    - `inline`
-      - : Utilise la position du défilement le long de l'axe en ligne, conformément au mode d'écriture et à la directionnalité.
-    - `horizontal`
-      - : Utilise la position horizontale du défilement, quels que soient le mode d'écriture et la directionnalité.
-    - `vertical`
-      - : Utilise la position verticale du défilement, quels que soient le mode d'écriture et la directionnalité.
+- `none`
+  - : La chronologie n'a pas de nom associé.
+- `<custom-ident>`
+  - : Un identifiant personnalisé qui peut être utilisé pour faire référence à la chronologie de défilement dans une déclaration [`animation-timeline`](/fr/docs/Web/CSS/animation-timeline). Les valeurs possibles sont décrites sur la page du type [`<custom-ident>`](/fr/docs/Web/CSS/custom-ident).
 
-- `scroll-offsets`
-  - : Les décalages apportés à la chronologie de défilement&nbsp;:
-    - `none`
-      - : Aucun décalage n'est indiqué.
-    - `<length-percentage>`
-      - : Une liste de valeurs [`<length-percentage>`](/fr/docs/Web/CSS/length-percentage), séparées par des virgules.
-    - `<element-offset>`
-      - : C'est la position d'un élément qui détermine le décalage appliqué.
+La valeur `<scroll-timeline-axis>` indique la barre de défilement de l'axe donné, pour l'élément identifié par `<scroll-timeline-name>`, qui fournit la chronologie de défilement. Les valeurs autorisées sont&nbsp;:
 
-## Description
+- `block`
+  - : La valeur par défaut. C'est la barre de défilement sur l'axe de bloc qui contrôle la chronologie. L'axe de bloc correspond à la direction orthogonale au flux du texte sur une ligne. Pour les modes d'écritures horizontaux (comme le français ou l'anglais), cette valeur se comporte comme `vertical`, et pour les modes d'écritures verticaux, cette valeur se comporte comme `horizontal`.
+- `inline`
+  - : C'est la barre de défilement sur l'axe en ligne qui contrôle la chronologie. L'axe en ligne correspond à la direction parallèle au flux du texte sur une ligne. Pour les modes d'écritures horizontaux, cette valeur se comporte comme `horizontal`, et pour les modes d'écritures verticaux, cette valeur se comporte comme `vertical`.
+- `vertical`
+  - : C'est la barre de défilement sur l'axe vertical qui contrôle la chronologie.
+- `horizontal`
+  - : C'est la barre de défilement sur l'axe horizontal qui contrôle la chronologie.
 
-Pour utiliser une chronologie de défilement, on crée une règle `@scroll-timeline` qu'on utilise ensuite avec la propriété [`animation-timeline`](/fr/docs/Web/CSS/animation-timeline) dans laquelle on fait correspondre la chronologie de l'animation avec celle indiquée par le défilement.
+## Définition formelle
 
-Chaque règle `@scroll-timeline` contient des propriétés pour déterminer la source, l'orientation et les décalages de la chronologie de défilement.
-
-### Décalages de défilement
-
-La propriété `scroll-offset` détermine l'emplacement, par rapport au défilement, auquel l'animation devrait se produit. Elle peut être définie de trois façons&nbsp;:
-
-1. En utilisant le mot-clé CSS `none`, qui indique qu'aucun décalage n'est appliqué.
-
-2. En utilisant une liste de valeurs [`<length-percentage>`](/fr/docs/Web/CSS/length-percentage) séparées par des virgules. Chaque valeur trouve une correspondance par rapport à [`animation-duration`](/fr/docs/Web/CSS/animation-duration). Ainsi, si `animation-duration` vaut `2s` et que le décalage est défini avec `0px, 30px, 100px`, on aurait alors le décalage équivalent à 1s appliqué au moment du défilement à 30px. Généralement, pour avoir une animation progressive, on utilise seulement deux valeurs, comme `0px, 100px`.
-
-3. En utilisant un décalage fourni par un élément. Cela signifie qu'il est possible d'indiquer des éléments de la page, dont les emplacements déterminent la chronologie de défilement et lequel des bords de ces éléments à utiliser. Pour indiquer des éléments, on utilise la fonction `selector()`, à laquelle on passe un identifiant d'élément. Le bord considéré est déterminé par le mot-clé `start` ou `end`. Une valeur de seuil optionnelle entre 0 et 1 peut être utilisée afin de représenter le pourcentage de l'élément qu'on s'attend à être visible dans `source`.
-
-```css
-@scroll-timeline element-move {
-  source: auto;
-  orientation: vertical;
-  scroll-offsets: selector(#myElement) start 0, selector(#myElement) end 0;
-}
-```
+{{cssinfo}}
 
 ## Syntaxe formelle
 
-```
-@scroll-timeline <timeline-name> { <declaration-list> }
-```
+{{csssyntax}}
 
 ## Exemples
 
-### Exemple simple
+Dans cet exemple, on définit une chronologie de défilement intitulée `squareTimeline` grâce à la propriété `scroll-timeline-name` sur l'élément avec l'identifiant `container`. Celle-ci est ensuite appliquée à l'animation de l'élément `#square` en utilisant `animation-timeline: squareTimeline`.
 
-Cet exemple montre un carré, qui tourne lorsqu'on fait défiler son conteneur verticalement. On crée un élément (`#container`) avec une hauteur fixe, permettant de le faire défiler. Il s'agit ici de l'élément utilisé pour `source`.
+### HTML
 
-Dans ce conteneur, on crée un autre élément (`#square`), qui est mis en forme afin de ressembler à un carré. On applique sur cet élément une animation de rotation avec la règle [`@keyframes`](/fr/docs/Web/CSS/@keyframes) et la propriété `animation-name`.
-
-On crée une règle `@scroll-timeline` intitulée `squareTimeline`, en définissant `source` comme le conteneur, `orientation` avec la valeur `vertical` et `scroll-offset` qui démarre à `0px` et termine à `300px` (soit la hauteur du conteneur). On applique cette chronologie au carré en utilisant la propriété `scroll-timeline`.
-
-#### HTML
+Voici le fragment HTML utilisé pour l'exemple.
 
 ```html
 <div id="container">
   <div id="square"></div>
+  <div id="stretcher"></div>
 </div>
 ```
 
-#### CSS
+### CSS
+
+Quant au CSS, on définit le conteneur comme source d'une chronologie de défilement intitulée `squareTimeline` à l'aide de la propriété `scroll-timeline`. On définit également que la barre de défilement pour la chronologie est la barre verticale (avec `vertical`) (c'est le comportement qui aurait été utilisé par défaut).
+
+La hauteur du conteneur est fixée à `300px` et on force la création d'une barre de défilement verticale en cas de défilement (nous allons utiliser l'élément avec l'identifiant `stretcher` pour forcer ce dépassement).
 
 ```css
 #container {
   height: 300px;
+  overflow-y: scroll;
+  scroll-timeline: squareTimeline vertical;
+  position: relative;
 }
+```
 
+Le CSS qui suit définit un carré qui tourne dans des directions alternées, selon la chronologie fournie par la propriété `animation-timeline`, qui est fixée avec la valeur `squareTimeline` déclarée ci-avant.
+
+```css
 #square {
   background-color: deeppink;
   width: 100px;
@@ -119,12 +116,9 @@ On crée une règle `@scroll-timeline` intitulée `squareTimeline`, en définiss
   animation-duration: 3s;
   animation-direction: alternate;
   animation-timeline: squareTimeline;
-}
 
-@scroll-timeline squareTimeline {
-  source: selector("#container");
-  orientation: "vertical";
-  scroll-offsets: 0px, 300px;
+  position: absolute;
+  bottom: 0;
 }
 
 @keyframes rotateAnimation {
@@ -137,9 +131,19 @@ On crée une règle `@scroll-timeline` intitulée `squareTimeline`, en définiss
 }
 ```
 
-#### Résultat
+Enfin, on définit la hauteur de l'élément d'identifiant `stretcher` afin de forcer le dépassement dans le conteneur et pour créer les barres de défilement. Sans cet élément, il n'y aurait pas de barre de défilement et pas de chronologie de défilement à associer avec l'animation.
 
-{{EmbedLiveSample("")}}
+```css
+#stretcher {
+  height: 600px;
+}
+```
+
+### Résultat
+
+Faites défiler la barre verticale afin d'observer l'animation.
+
+{{EmbedLiveSample("", "100%", "320px")}}
 
 ## Spécifications
 
@@ -151,5 +155,4 @@ On crée une règle `@scroll-timeline` intitulée `squareTimeline`, en définiss
 
 ## Voir aussi
 
-- [Les animations CSS](/fr/docs/Web/CSS/CSS_Animations)
-- [Cas pratiques pour les animations relatives au défilement en CSS avec `@scroll-timeline` (en anglais)](https://css-tricks.com/practical-use-cases-for-scroll-linked-animations-in-css-with-scroll-timelines/)
+- [`animation-timeline`](/fr/docs/Web/CSS/animation-timeline)
