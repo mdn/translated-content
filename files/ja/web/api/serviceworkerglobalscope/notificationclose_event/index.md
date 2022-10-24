@@ -1,39 +1,59 @@
 ---
-title: onnotificationclose
-slug: orphaned/Web/API/ServiceWorkerGlobalScope/onnotificationclose
+title: 'ServiceWorkerGlobalScope: notificationclose イベント'
+slug: Web/API/ServiceWorkerGlobalScope/notificationclose_event
 original_slug: Web/API/ServiceWorkerGlobalScope/onnotificationclose
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
 {{APIRef("Service Workers API")}}
 
-**`ServiceWorkerGlobalScope.onnotificationclose`** プロパティは、{{domxref("ServiceWorkerGlobalScope")}} オブジェクトで {{Event("notificationclose")}} イベントが発行されるとき、つまり、{{domxref("ServiceWorkerRegistration.showNotification()")}} によって生成された表示されている通知をユーザーが閉じるたびに呼び出されるイベントハンドラーです。
+**`notificationclose`** イベントは、 {{domxref("ServiceWorkerRegistration.showNotification()")}} によって生成された表示中の通知をユーザーが閉じたときに発生します。
 
-メインスレッドや {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用した service worker ではない worker で生成された通知は、`Notification` オブジェクト自身の {{Event("close")}} イベントを受け取ります。
+メインスレッドや、サービスワーカー以外のワーカーが {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して生成した通知では、`Notification` オブジェクト自身が {{domxref("Notification/close_event", "close")}} イベントを受け取ります。
 
-> **メモ:** {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して {{domxref("ServiceWorkerGlobalScope")}} 内で通知を生成しようとすると、エラーがスローされます。
+> **メモ:** {{domxref("ServiceWorkerGlobalScope")}} 内で {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して通知を生成しようとすると、エラーが発行されます。
+
+このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('notificationclose', (event) => { });
+
+onnotificationclose = (event) => { };
 ```
-ServiceWorkerGlobalScope.onnotificationclose = function(NotificationEvent) { ... };
-ServiceWorkerGlobalScope.addEventListener('notificationclose', function(NotificationEvent) { ... });
-```
+
+## イベント型
+
+{{domxref("NotificationEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("NotificationEvent")}}
+
+## イベントプロパティ
+
+_親である {{domxref("Event")}} からプロパティを継承しています_。
+
+- {{domxref("NotificationEvent.notification")}} {{ReadOnlyInline}}
+  - : クリックされイベントが発行された通知を表す {{domxref("Notification")}} オブジェクトを返します。
+- {{domxref("NotificationEvent.action")}} {{ReadOnlyInline}}
+  - : ユーザーがクリックした通知ボタンの文字列 ID を返します。この値は、ユーザーがアクションボタン以外のどこかで通知をクリックした場合、またはその通知にボタンがなかった場合、空文字列を返します。
 
 ## 例
 
 ```js
-// service worker 内。
-self.onnotificationclose = function(event) {
+// サービスワーカーの内部で
+self.onnotificationclose = (event) => {
   console.log('On notification close: ', event.notification.tag);
 };
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                                             | ステータス                               | コメント                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Web Notifications','#dom-serviceworkerglobalscope-onnotificationclose','onnotificationclick')}} | {{Spec2('Web Notifications')}} | 初期定義。このプロパティは {{domxref('ServiceWorkerGlobalScope')}} の一部ですが、{{domxref('Notifications_API')}} イベントで定義されています。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ServiceWorkerGlobalScope.onnotificationclose")}}
+{{Compat}}
