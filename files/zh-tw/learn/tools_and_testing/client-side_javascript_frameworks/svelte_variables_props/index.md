@@ -25,12 +25,12 @@ Now that we have our markup and styles ready, we can start developing the requir
       <td>
         <p>
           At minimum, it is recommended that you are familiar with the core
-          <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and
+          <a href="/zh-TW/docs/Learn/HTML">HTML</a>,
+          <a href="/zh-TW/docs/Learn/CSS">CSS</a>, and
+          <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a> languages, and
           have knowledge of the
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a
           >.
         </p>
@@ -247,7 +247,7 @@ Let's add some functionality to toggle the task status. Svelte has the `on:event
 
    A very common mistake with handlers in Svelte is to pass the result of executing a function as a handler, instead of passing the function. For example, if you specify `on:click={removeTodo(todo)}`, it will execute `removeTodo(todo)` and the result will be passed as a handler, which is not what we had in mind.
 
-   In this case you have to specify `on:click={() => removeTodo(todo)}` as the handler. If `removeTodo()` received no params, you could use `on:event={removeTodo}`, but not `on:event={removeTodo()}`. This is not some special Svelte syntax — here we are just using regular JavaScript [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+   In this case you have to specify `on:click={() => removeTodo(todo)}` as the handler. If `removeTodo()` received no params, you could use `on:event={removeTodo}`, but not `on:event={removeTodo()}`. This is not some special Svelte syntax — here we are just using regular JavaScript [arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 Again, this is good progress — at this point, we can now delete tasks. When a to-do item's _Delete_ button is pressed, the relevant to-do is removed from the `todos` array, and the UI updates to no longer show it. In addition, we can now check the checkboxes, and the completed status of the relevant to-dos will now update in the `todos` array.
 
@@ -268,7 +268,7 @@ We could recalculate them after toggling and removing to-dos, but there's an eas
 
 We can tell Svelte that we want our `totalTodos` and `completedTodos` variables to be reactive by prefixing them with `$:`. Svelte will generate the code to automatically update them whenever data they depend on is changed.
 
-> **Note:** Svelte uses the `$:` [JavaScript label statement syntax](/en-US/docs/Web/JavaScript/Reference/Statements/label) to mark reactive statements. Just like the `export` keyword being used to declare props, this may look a little alien. This is another example in which Svelte takes advantage of valid JavaScript syntax and gives it a new purpose — in this case to mean "re-run this code whenever any of the referenced values change". Once you get used to it, there's no going back.
+> **Note:** Svelte uses the `$:` [JavaScript label statement syntax](/zh-TW/docs/Web/JavaScript/Reference/Statements/label) to mark reactive statements. Just like the `export` keyword being used to declare props, this may look a little alien. This is another example in which Svelte takes advantage of valid JavaScript syntax and gives it a new purpose — in this case to mean "re-run this code whenever any of the referenced values change". Once you get used to it, there's no going back.
 
 Update your `totalTodos` and `completedTodos` variable definitions inside `src/components/Todos.svelte` to look like so:
 
@@ -346,9 +346,9 @@ Now on to the next major task for this article — let's add some functionality 
 
 7. If you try adding new to-dos at this point, the new to-dos are added to the to-dos array, but our UI is not updated. Remember that in Svelte [reactivity is triggered with assignments](https://svelte.dev/docs#2_Assignments_are_reactive). That means that the `addTodo()` function is executed, the element is added to the `todos` array, but Svelte won't detect that the push method modified the array, so it won't refresh the tasks `<ul>`.
 
-   Just adding `todos = todos` to the end of the `addTodo()` function would solve the problem, but it seems strange to have to include that at the end of the function. Instead, we'll take out the `push()` method and use [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to achieve the same result: we'll assign a value to the `todos` array equal to the `todos` array plus the new object.
+   Just adding `todos = todos` to the end of the `addTodo()` function would solve the problem, but it seems strange to have to include that at the end of the function. Instead, we'll take out the `push()` method and use [spread syntax](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to achieve the same result: we'll assign a value to the `todos` array equal to the `todos` array plus the new object.
 
-   > **Note:** `Array` has several mutable operations: [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push), [`pop()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop), [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice), [`shift()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift), [`unshift()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift), [`reverse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse), and [`sort()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort). Using them often causes side effects and bugs that are hard to track. By using the spread syntax instead of `push()` we avoid mutating the array, which is considered a good practice.
+   > **Note:** `Array` has several mutable operations: [`push()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/push), [`pop()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/pop), [`splice()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/splice), [`shift()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/shift), [`unshift()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift), [`reverse()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse), and [`sort()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/sort). Using them often causes side effects and bugs that are hard to track. By using the spread syntax instead of `push()` we avoid mutating the array, which is considered a good practice.
 
    Update your `addTodo()` function like so:
 
@@ -501,55 +501,55 @@ In the next article we will add further functionality, which will allow users to
 
 ## In this module
 
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- [Introduction to client-side frameworks](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
 
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+  - [Getting started with React](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
 
 - Ember
 
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+  - [Getting started with Ember](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
 
 - Vue
 
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+  - [Getting started with Vue](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
 
 - Svelte
 
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+  - [Getting started with Svelte](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
 
 - Angular
 
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+  - [Getting started with Angular](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
