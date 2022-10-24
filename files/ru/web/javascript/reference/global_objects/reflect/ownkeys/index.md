@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 ---
 {{JSRef}}
 
-Статический метод **`Reflect`\*\***`.ownKeys()`\*\* возвращает массив имён, а также `Symbols` собственных полей объекта `target` .
+Статический метод **`Reflect.ownKeys()`** возвращает массив имён, а также `Symbols` собственных полей объекта `target` .
 
 {{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}
 

@@ -9,7 +9,7 @@ tags:
   - Reference
   - Оператор
   - Оператор присваивания
-  - "Особенность\_языка"
+  - "Особенность_языка"
   - справочник
 translation_of: Web/JavaScript/Reference/Operators/Assignment
 original_slug: Web/JavaScript/Reference/Operators/Присваивание
