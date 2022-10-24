@@ -1,7 +1,8 @@
 ---
 title: Transitioning to strict mode(엄격모드로 전환)
-slug: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+slug: conflicting/Web/JavaScript/Reference/Strict_mode
 translation_of: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+original_slug: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 ---
 {{jsSidebar("More")}}ECMAScript 5에서 [strict mode](/en-US/docs/JavaScript/Strict_mode)이 도입이 되었다. 이제는 모든 주요 브라우저에서 사용이 가능하다(IE10 포함) 웹 브라우저가 엄격한 코드를 해석하도록 만들어준다. (소스 코드의 맨 위에 `'use strict'`를 추가하는 것만으로), 기존 코드 기반을 엄격 모드로 전환하는 것은 좀 더 많은 작업을 한다.이 글은 개발자의 안내서에 초점이 맞춰져있다.
 
