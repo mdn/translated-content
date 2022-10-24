@@ -280,7 +280,7 @@ La particularité du jeu est qu'il utilise l'API gyroscopique sur les mobiles. G
 window.addEventListener("deviceorientation", this.handleOrientation, true);
 ```
 
-L'ajout d'un évènement "listener" à l'évenement `"deviceorientation"` et la modification de la fonction `handleOrientation`ressembleront à ceci :
+L'ajout d'un évènement "listener" à l'évenement `"deviceorientation"` et la modification de la fonction `handleOrientation` ressembleront à ceci :
 
 ```js
 handleOrientation: function(e) {
@@ -308,7 +308,7 @@ this.hole.anchor.set(0.5);
 this.hole.body.setSize(2, 2);
 ```
 
-La seule différence est que '`hole.body`' est mis à `immovable`_(fixe)_, il ne bougera donc pas quand la balle le touchera et la collision sera alors calculée ( ce point sera approfondit plus loin dans cet article ).
+La seule différence est que '`hole.body`' est mis à `immovable` _(fixe)_, il ne bougera donc pas quand la balle le touchera et la collision sera alors calculée ( ce point sera approfondit plus loin dans cet article ).
 
 ### Création du mur du labyrinthe
 

@@ -285,7 +285,7 @@ Définit la couleur du thème par défaut pour une application. Cela affecte par
 
 ## Splash screens
 
-Dans Chrome 47 et supérieur, un écran de lancement (_splashscreen_) est affiché pour une appplication lancée depuis l'écran d'accueil. Cet écran est généré automatiquement en utilisant les propriétés du manifeste de l'application web, particulièrement: `name`, `background_color`, et l'icône du tableau \`icons\`qui est la plus proche de 128dp pour l'appareil.
+Dans Chrome 47 et supérieur, un écran de lancement (_splashscreen_) est affiché pour une appplication lancée depuis l'écran d'accueil. Cet écran est généré automatiquement en utilisant les propriétés du manifeste de l'application web, particulièrement: `name`, `background_color`, et l'icône du tableau `icons` qui est la plus proche de 128dp pour l'appareil.
 
 ## Mime type
 
