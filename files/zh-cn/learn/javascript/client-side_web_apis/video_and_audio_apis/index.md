@@ -272,7 +272,7 @@ button:before {
 
     {{event("click")}} 事件很明显——我们想要在点击停止按钮的时候停止视频通过运行我们的 `stopMedia()` 函数。然而我们也希望停止视频当视频播放完成时——由{{event("ended")}} 事件标记，所以我们也会设置一个监听器在此事件触发时运行函数。
 
-2. 接下来，让我们定义 `stopMedia()`—— 在 `playPauseMedia() 后面`添加以下函数：
+2. 接下来，让我们定义 `stopMedia()`—— 在 `playPauseMedia()` 后面添加以下函数：
 
     ```plain
     function stopMedia() {

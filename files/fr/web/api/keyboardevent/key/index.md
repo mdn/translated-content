@@ -22,7 +22,7 @@ Voir une liste complète des [valeurs de touches](/fr/docs/Web/API/KeyboardEvent
 
 - Si la valeur a une représentation d’impression, ce sera une chaîne de caractères Unicode non vide
 - Si la valeur est une touche de contrôle, une des [valeurs de touches pré-définies](#Key_values).
-- Si l’`KeyboardEvent` est causé par l’appui sur une touche morte, la valeur de la touche sera "`Dead`".
+- Si le `KeyboardEvent` est causé par l’appui sur une touche morte, la valeur de la touche sera "`Dead`".
 - Certaines touches de clavier spécialisées (telles que les touches étendues de contrôle des médias sur les claviers multimédias) ne génèrent pas de codes de touches sous Windows ; à la place, ils déclenchent les événements `WM_APPCOMMAND`. Ces événements sont connectés aux événements de clavier DOM et sont répertoriés parmi les «codes de touche virtuelle» pour Windows, même s'ils ne sont pas réellement des codes de touche.
 - Si la valeur ne peut être identifiée, '`Unidentified`' sera retourné.
 

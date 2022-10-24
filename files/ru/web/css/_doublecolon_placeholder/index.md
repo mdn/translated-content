@@ -125,6 +125,6 @@ Placeholder не является заменой элемента {{htmlelement(
 
 ## Смотрите также
 
-- Псевдокласс {{cssxref(":placeholder-shown")}}, который позволяет применять стили к элементу с \_**активным** \_placeholder.
+- Псевдокласс {{cssxref(":placeholder-shown")}}, который позволяет применять стили к элементу с **активным** placeholder.
 - Связанные HTML-элементы: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
 - [HTML-формы](/ru/docs/Learn/HTML/Forms)

@@ -1,5 +1,5 @@
 ---
-title: Loading and running WebAssembly code
+title: Charger et exécuter du code WebAssembly
 slug: WebAssembly/Loading_and_running
 translation_of: WebAssembly/Loading_and_running
 ---

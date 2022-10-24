@@ -1,70 +1,70 @@
 ---
 title: Headers.append()
 slug: Web/API/Headers/append
+l10n:
+  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
 
-{{APIRef("Fetch")}}{{ SeeCompatTable() }}
+{{APIRef("Fetch")}}
 
-{{domxref("Headers")}} インターフェースの **`append()`** メソッドは、`Headers` オブジェクト内の既存のヘッダに新しい値を追加します。または、既存のヘッダがない場合には、ヘッダを追加します。
+**`append()`** は {{domxref("Headers")}} インターフェイスのメソッドで、 `Headers` オブジェクト内の既存のヘッダーに新しい値を追加します。または、既存のヘッダーがない場合には、ヘッダーを追加します。
 
-{{domxref("Headers.set")}} と `append()` の違いは、特定のヘッダが既に存在して、複数の値を受け入れる場合、{{domxref("Headers.set")}} は既存の値を新しい値で上書きますが、`append()` は値の最後に新しい値を追加します。
+{{domxref("Headers.set", "set()")}} と `append()` の違いは、指定されたヘッダーがすでに存在し、複数の値を受け入れる場合、`set()` は既存の値を新しい値で上書きするのに対し、`append()` は新しい値を値の集合の最後に追加するという点です。
 
-セキュリティ上の理由から、いくつかのヘッダはユーザーエージェントでのみ制御できます。それらのヘッダは、{{Glossary("Forbidden_header_name", "forbidden header names", 1)}} と {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}} を含みます。
+セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{Glossary("Forbidden_header_name", "禁止ヘッダー名", 1)}}と{{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名", 1)}}があります。
 
 ## 構文
 
-```js
-myHeaders.append(name,value);
+```js-nolint
+append(name, value)
 ```
 
-### パラメータ
+### 引数
 
-- _name_
-  - : `Headers` オブジェクトに追加する HTTP ヘッダ名。
-- _value_
-  - : HTTP ヘッダに追加する値。
+- `name`
+  - : `Headers` オブジェクトに追加する HTTP ヘッダー名。
+- `value`
+  - : HTTP ヘッダーに追加する値。
 
-### 戻り値
+### 返値
 
-Void。
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
-空の `Headers` オブジェクトの生成はシンプルです：
+空の `Headers` オブジェクトの生成はシンプルです。
 
 ```js
-var myHeaders = new Headers(); // 現在は空
+const myHeaders = new Headers(); // 現在は空
 ```
 
-`append()` を使用してヘッダを追加できます：
+`append()` を使用してヘッダーを追加することができます。
 
-```
+```js
 myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.get('Content-Type'); // 'image/jpeg' を返します。
 ```
 
-特定のヘッダが既に存在する場合、`append()` はその値を指定した値に変更します。特定のヘッダが既に存在して複数の値を受け入れる場合、`append()` は値の末尾に新しい値を追加します：
+指定されたヘッダーがすでに存在する場合、`append()` はその値を指定された値に変更します。指定したヘッダーが既に存在し、複数の値を受け入れられる場合、`append()` は新しい値を値の集合の最後に追加します。
 
 ```js
 myHeaders.append('Accept-Encoding', 'deflate');
 myHeaders.append('Accept-Encoding', 'gzip');
-myHeaders.getAll('Accept-Encoding'); // [ "deflate", "gzip" ] を返します。
+myHeaders.get('Accept-Encoding'); // 'deflate, gzip' を返します。
 ```
 
-古い値を新しい値で上書きするには、{{domxref("Headers.set")}} を使います。
+古い値を新しい値で上書きするには、 {{domxref("Headers.set")}} を使います。
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                     | ステータス               | コメント |
-| ------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('Fetch','#dom-headers-append','append()')}} | {{Spec2('Fetch')}} |          |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
-{{Compat("api.Headers.append")}}
+{{Compat}}
 
 ## 関連項目
 
-- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
 - [HTTP](/ja/docs/Web/HTTP)
