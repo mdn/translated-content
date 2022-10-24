@@ -126,7 +126,7 @@ urlpatterns = [
 ]
 ```
 
-L'objet `urlpatterns` est une liste de fonctions `path()` et/ou `re_path()`(les listes en Python sont définies en utilisant des crochets), où des éléments sont séparés par des virgules et peuvent avoir une [virgule de traîne optionnelle](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples). Par exemple : `[item1, item2, item3,]`).
+L'objet `urlpatterns` est une liste de fonctions `path()` et/ou `re_path()` (les listes en Python sont définies en utilisant des crochets), où des éléments sont séparés par des virgules et peuvent avoir une [virgule de traîne optionnelle](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples). Par exemple : `[item1, item2, item3,]`).
 
 Le premier argument de chaque méthode est une route (pattern) qui sera reconnu.
 La méthode `path()` utilise des chevrons pour définir les parties de l'URL qui seront capturées et passées dans les fonctions vues comme arguments nommés. La fonction `re_path()` utilise une approche de correspondance de pattern flexible, connue sous le nom d'expression régulière. Nous parlerons de ces dernières dans un prochain article !

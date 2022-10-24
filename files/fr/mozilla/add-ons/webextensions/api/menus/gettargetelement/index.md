@@ -32,7 +32,7 @@ let elem = browser.menus.getTargetElement(targetElementId);
 ### Paramètres
 
 - `targetElementId`
-  - : La propriété de l'objet `{{WebExtAPIRef("menus.OnClickData")}}` passé au gestionnaire `{{WebExtAPIRef("menus.onClicked")}}`ou à l'événement `{{WebExtAPIRef("menus.onShown")}}`.
+  - : La propriété de l'objet `{{WebExtAPIRef("menus.OnClickData")}}` passé au gestionnaire `{{WebExtAPIRef("menus.onClicked")}}` ou à l'événement `{{WebExtAPIRef("menus.onShown")}}`.
 
 ### Valeur retournée
 
