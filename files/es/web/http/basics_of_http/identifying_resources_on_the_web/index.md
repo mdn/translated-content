@@ -108,4 +108,4 @@ urn:isbn:9780141036144
 ## Ver también
 
 - [Qué es una URL?](/es/docs/Learn/Common_questions/What_is_a_URL)
-- [Lista de esquemas URI IANA](http://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+- [Lista de esquemas URI IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
