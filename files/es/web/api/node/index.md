@@ -35,7 +35,7 @@ _herendan propiedades de sus padres {{domxref("EventTarget")}}_.\[1]
   - : Returns a {{domxref("DOMString")}} representing the local part of the qualified name of an element. In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML. {{ gecko_minversion_inline("1.9.2") }}
     Though recent specifications require `localName` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
 - {{domxref("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}
-  - : The namespace URI of this node, or `null` if it is no namespace. In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml "Linkification: http://www.w3.org/1999/xhtml") namespace in both HTML and XML trees. {{ gecko_minversion_inline("1.9.2") }}
+  - : The namespace URI of this node, or `null` if it is no namespace. In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) namespace in both HTML and XML trees. {{ gecko_minversion_inline("1.9.2") }}
     Though recent specifications require `namespaceURI` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
 - {{domxref("Node.nextSibling")}} {{readonlyInline}}
   - : Returns a {{domxref("Node")}} representing the next node in the tree, or `null` if there isn't such node.
@@ -107,7 +107,7 @@ _Inherits methods from its parents {{domxref("EventTarget")}}_.\[1]
 - {{domxref("Node.isSameNode()")}} {{obsolete_inline}}
   - : Empty
 - {{domxref("Node.isSupported()")}} {{obsolete_inline}}
-  - : Returns a [`Boolean`](/es/docs/Web/API/Boolean "The Boolean object is an object wrapper for a boolean value.") flag containing the result of a test whether the DOM implementation implements a specific feature and this feature is supported by the specific node.
+  - : Returns a [`Boolean`](/es/docs/Web/API/Boolean) flag containing the result of a test whether the DOM implementation implements a specific feature and this feature is supported by the specific node.
 - {{domxref("Node.lookupPrefix()")}}
   - : Empty
 - {{domxref("Node.lookupNamespaceURI()")}}
@@ -146,14 +146,14 @@ DOMComb(parentNode, callbackFunction);
 
 #### Description
 
-Recursively cycle all child nodes of `parentNode` and `parentNode` itself and execute the `callbackFunction` upon them as [`this`](/es/docs/JavaScript/Reference/Operators/this "en-US/docs/JavaScript/Reference/Operators/this") objects.
+Recursively cycle all child nodes of `parentNode` and `parentNode` itself and execute the `callbackFunction` upon them as [`this`](/es/docs/JavaScript/Reference/Operators/this) objects.
 
 #### Parameters
 
 - `parentNode`
   - : The parent node (`Node Object`).
 - `callbackFunction`
-  - : The callback function ([`Function`](/es/docs/JavaScript/Reference/Global_Objects/Function "en-US/docs/JavaScript/Reference/Global_Objects/Function")).
+  - : The callback function ([`Function`](/es/docs/JavaScript/Reference/Global_Objects/Function)).
 
 #### Sample usage
 

@@ -34,7 +34,7 @@ Un objeto {{domxref("IDBRequest")}} en el que los eventos subsecuentes relaciona
 Este método puede generar un {{domxref("DOMException")}} con un {{domxref("DOMError")}} de uno de los siguiente tipos:
 
 - `ReadOnlyError`
-  - : La transacción asociada con esta operación está en un [modo](/es/docs/Web/API/IDBTransaction#mode_constants "/en-US/docs/IndexedDB/IDBTransaction#mode_constants") de sólo lectura.
+  - : La transacción asociada con esta operación está en un [modo](/es/docs/Web/API/IDBTransaction#mode_constants) de sólo lectura.
 - `TransactionInactiveError`
   - : Esta transacción de [`IDBObjectStore`](/es/docs/Web/API/IDBObjectStore)'s está inactiva.
 - `DataError`

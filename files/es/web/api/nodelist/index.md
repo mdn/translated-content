@@ -58,9 +58,9 @@ for (var i = 0; i < myNodeList.length; i++) {
 }
 ```
 
-No se sienta tentado a [`for...in`](/en-US/docs/JavaScript/Reference/Statements/for...in "JavaScript/ Reference/Statements/for...in") or [`for each...in`](/en-US/docs/JavaScript/Reference/Statements/for_each...in "JavaScript/ Reference/Statements/for each...in") para enumerar los elementos en la lista, ya que eso también enumerará la longitud y las propiedades del elemento de `NodeList` y causará errores si su secuencia de comandos asume que solo tiene que tratar con objetos {{domxref ("element")}}. Además, `for..in` no garantiza visitar las propiedades en ningún orden en particular.
+No se sienta tentado a [`for...in`](/en-US/docs/JavaScript/Reference/Statements/for...in) or [`for each...in`](/en-US/docs/JavaScript/Reference/Statements/for_each...in) para enumerar los elementos en la lista, ya que eso también enumerará la longitud y las propiedades del elemento de `NodeList` y causará errores si su secuencia de comandos asume que solo tiene que tratar con objetos {{domxref ("element")}}. Además, `for..in` no garantiza visitar las propiedades en ningún orden en particular.
 
-Los bucles [`for...of`](/en-US/docs/JavaScript/Reference/Statements/for...of "/en-US/docs/JavaScript/Reference/Statements/for...of") harán un bucle sobre los objetos `NodeList` correctamente:
+Los bucles [`for...of`](/en-US/docs/JavaScript/Reference/Statements/for...of) harán un bucle sobre los objetos `NodeList` correctamente:
 
 ```js
 var list = document.querySelectorAll( 'input[type=checkbox]' );

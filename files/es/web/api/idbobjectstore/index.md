@@ -7,7 +7,7 @@ translation_of: Web/API/IDBObjectStore
 ---
 {{APIRef("IndexedDB")}}
 
-The `IDBObjectStore` interface of the [IndexedDB API](/en/IndexedDB "en/IndexedDB") represents an [object store](/en/IndexedDB#gloss_object_store "en/IndexedDB#gloss object store") in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.
+The `IDBObjectStore` interface of the [IndexedDB API](/en/IndexedDB) represents an [object store](/en/IndexedDB#gloss_object_store) in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.
 
 ## Methods
 
@@ -33,9 +33,9 @@ The `IDBObjectStore` interface of the [IndexedDB API](/en/IndexedDB "en/IndexedD
 ## Properties
 
 - {{domxref("IDBObjectStore.indexNames")}} {{readonlyInline}}
-  - : A list of the names of [indexes](/en/IndexedDB#gloss_index "en/IndexedDB#gloss index") on objects in this object store.
+  - : A list of the names of [indexes](/en/IndexedDB#gloss_index) on objects in this object store.
 - {{domxref("IDBObjectStore.keyPath")}} {{readonlyInline}}
-  - : The [key path](/en/IndexedDB#gloss_key_path "en/IndexedDB#gloss key path") of this object store. If this attribute is null, the application must provide a key for each modification operation.
+  - : The [key path](/en/IndexedDB#gloss_key_path) of this object store. If this attribute is null, the application must provide a key for each modification operation.
 - {{domxref("IDBObjectStore.name")}} {{readonlyInline}}
   - : The name of this object store.
 - {{domxref("IDBObjectStore.transaction")}} {{readonlyInline}}
