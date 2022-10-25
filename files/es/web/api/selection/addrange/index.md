@@ -36,5 +36,3 @@ range)
   s.addRange(range);
  }
 ```
-
-{{ languages( { "en": "en/DOM/Selection/addRange", "it": "it/DOM/Selection/addRange", "pl": "pl/DOM/Selection/addRange" } ) }}

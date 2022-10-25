@@ -38,5 +38,3 @@ alert(window.getSelection().toString())  // Lo que está siendo efectivamente ll
 ### Ver también
 
 - [Object.toString](es/Core_JavaScript_1.5_Reference/Objects/Object/toString)
-
-{{ languages( { "en": "en/DOM/Selection/toString", "fr": "fr/DOM/Selection/toString", "it": "it/DOM/Selection/toString", "pl": "pl/DOM/Selection/toString" } ) }}

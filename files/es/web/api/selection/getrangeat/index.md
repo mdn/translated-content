@@ -41,5 +41,3 @@ for(var i = 0; i < sel.rangeCount; i++) {
  * un objeto rango representando uno de los
  * rangos en la selección */
 ```
-
-{{ languages( { "en": "en/DOM/Selection/getRangeAt", "pl": "pl/DOM/Selection/getRangeAt" } ) }}

@@ -37,5 +37,3 @@ aPartlyContained)
  /* Checar si algo dentro del elemento cuerpo (etiquetas body) está seleccionado */
  alert(window.getSelection().containsNode(document.body, true));
 ```
-
-{{ languages( { "en": "en/DOM/Selection/containsNode", "it": "it/DOM/Selection/containsNode", "pl": "pl/DOM/Selection/containsNode" } ) }}

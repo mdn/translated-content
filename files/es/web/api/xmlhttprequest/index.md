@@ -335,5 +335,3 @@ void setRequestHeader(
 - [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
 - ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
 - [The XMLHttpRequest Object: W3C Working Draft](http://www.w3.org/TR/XMLHttpRequest/)
-
-{{ languages( { "es": "es/XMLHttpRequest", "fr": "fr/XMLHttpRequest", "it": "it/XMLHttpRequest", "ja": "ja/XMLHttpRequest", "ko": "ko/XMLHttpRequest", "pl": "pl/XMLHttpRequest", "zh-cn": "cn/XMLHttpRequest" } ) }}

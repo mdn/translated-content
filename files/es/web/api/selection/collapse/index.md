@@ -38,5 +38,3 @@ offset);
 var body = document.getElementsByTagName("body")[0];
 window.getSelection().collapse(body,0);
 ```
-
-{{ languages( { "en": "en/DOM/Selection/collapse", "it": "it/DOM/Selection/collapse", "pl": "pl/DOM/Selection/collapse" } ) }}

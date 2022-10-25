@@ -20,5 +20,3 @@ sel.anchorOffset
 ### Notas
 
 Este número está basado en cero. Si la selección empieza con el primer carácter en [anchorNode](es/DOM/Selection/anchorNode), el número devuelto será 0.
-
-{{ languages( { "en": "en/DOM/Selection/anchorOffset", "it": "it/DOM/Selection/anchorOffset", "pl": "pl/DOM/Selection/anchorOffset" } ) }}

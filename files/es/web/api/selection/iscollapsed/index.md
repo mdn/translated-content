@@ -20,5 +20,3 @@ sel.isCollapsed
 ### Notas
 
 Incluso hasta una selección colapsada/plegada puede tener un rangeCount mayor que 0. `sel.getRangeAt(0)` puede retornar un rango que también esté colapsado/plegado.
-
-{{ languages( { "en": "en/DOM/Selection/isCollapsed", "it": "it/DOM/Selection/isCollapsed", "pl": "pl/DOM/Selection/isCollapsed" } ) }}

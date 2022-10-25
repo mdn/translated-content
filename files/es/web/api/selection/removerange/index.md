@@ -35,5 +35,3 @@ if(s.rangeCount > 1) {
  }
 }
 ```
-
-{{ languages( { "en": "en/DOM/Selection/removeRange", "it": "it/DOM/Selection/removeRange", "pl": "pl/DOM/Selection/removeRange" } ) }}

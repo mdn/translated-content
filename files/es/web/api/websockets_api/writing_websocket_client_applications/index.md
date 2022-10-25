@@ -193,5 +193,3 @@ Puede ser de gran ayuda revisar el atributo `bufferedAmount` del socket para ver
 ## Consideraciones de Seguridad
 
 Los WebSockets no deben ser usados en entornos de contenido mixto; eso es, no debes abrir una conexión de WebSocket _no segura_ desde una página cargada usando _HTTPS_ o viceversa. De hecho, muchos navegadores solo admiten conexiones WebSocket seguras, y ya no soportan su uso en contextos no seguros.
-
-{{ languages ( {"zh-tw": "zh\_tw/WebSockets/Writing\_WebSocket\_client\_applications"} ) }}

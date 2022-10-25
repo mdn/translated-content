@@ -20,5 +20,3 @@ sel.collapseToStart()
 ### Parámetros
 
 Ninguno.
-
-{{ languages( { "en": "en/DOM/Selection/collapseToStart", "it": "it/DOM/Selection/collapseToStart", "pl": "pl/DOM/Selection/collapseToStart" } ) }}

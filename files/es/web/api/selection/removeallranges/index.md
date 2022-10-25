@@ -20,5 +20,3 @@ sel.removeAllRanges();
 ### Parámetros
 
 Ninguno.
-
-{{ languages( { "en": "en/DOM/Selection/removeAllRanges", "it": "it/DOM/Selection/removeAllRanges", "pl": "pl/DOM/Selection/removeAllRanges" } ) }}

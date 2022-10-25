@@ -46,5 +46,3 @@ Para el HTML, **ownerNode** correspondería a un elemento [LINK](/es/LINK) o [ST
 ### Especificación
 
 DOM Level 2 Styles - STYLESHEET
-
-{{ languages( { "pl": "pl/DOM/stylesheet.ownerNode" } ) }}

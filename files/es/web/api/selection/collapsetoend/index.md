@@ -20,5 +20,3 @@ sel.collapseToEnd()
 ### Parámetros
 
 Ninguno.
-
-{{ languages( { "en": "en/DOM/Selection/collapseToEnd", "it": "it/DOM/Selection/collapseToEnd", "pl": "pl/DOM/Selection/collapseToEnd" } ) }}
