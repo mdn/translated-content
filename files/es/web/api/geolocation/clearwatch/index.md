@@ -72,7 +72,7 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## Véase también
 
-- [Usando la API de Geolocalización](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [Usando la API de Geolocalización](/es/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("Geolocation")}}
 - {{domxref("Geolocation.watchPosition()")}}
 - {{domxref("Geolocation.getCurrentPosition()")}}
