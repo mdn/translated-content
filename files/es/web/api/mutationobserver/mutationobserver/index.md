@@ -3,33 +3,34 @@ title: MutationObserver.MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
 translation_of: Web/API/MutationObserver/MutationObserver
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p><span class="seoSummary">El constructor DOM <code><strong>MutationObserver()</strong></code> — parte del interface {{domxref("MutationObserver")}} — </span>crea y devuelve un nuevo objeto <strong>observer </strong>que llamará a la función especificada (callback), cuando tengan lugar cambios sobre el DOM. Estos observadores no se inician inmediatamente; en primer lugar debemos llamar al método {{domxref("MutationObserver.observe", "observe()")}} para establecer qué parte del DOM observar y que tipo de cambios comunicar.</p>
+El constructor DOM **`MutationObserver()`** — parte del interface {{domxref("MutationObserver")}} — crea y devuelve un nuevo objeto **observer** que llamará a la función especificada (callback), cuando tengan lugar cambios sobre el DOM. Estos observadores no se inician inmediatamente; en primer lugar debemos llamar al método {{domxref("MutationObserver.observe", "observe()")}} para establecer qué parte del DOM observar y que tipo de cambios comunicar.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <em>observer</em> = new MutationObserver(<em>callback</em>);</pre>
+```
+var observer = new MutationObserver(callback);
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>La función que será llamada con cada cambio en el DOM, determinado por el nodo, subárbol y opciones. Esta función toma dos parámetros de entrada: un array de objetos {{domxref("MutationRecord")}}, con los cambios producidos, y el <code>MutationObserver</code> que llamó a la función. Para mas detalles vea <a href="#example">example</a></dd>
-</dl>
+- `callback`
+  - : La función que será llamada con cada cambio en el DOM, determinado por el nodo, subárbol y opciones. Esta función toma dos parámetros de entrada: un array de objetos {{domxref("MutationRecord")}}, con los cambios producidos, y el `MutationObserver` que llamó a la función. Para mas detalles vea [example](#example)
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>Un nuevo objeto {{domxref("MutationObserver")}}, configurado para llamar a una determinada función cuando se producca un cambio en el DOM.</p>
+Un nuevo objeto {{domxref("MutationObserver")}}, configurado para llamar a una determinada función cuando se producca un cambio en el DOM.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>Este ejemplo crea un nuevo <code>MutationObserver</code> configurado para <em>observar </em>a un nodo y a sus hijos (subárbol), cuando se añadan o eliminen elementos al mismo; tambien observa cualquier cambio en los atributos de los elementos del árbol.</p>
+Este ejemplo crea un nuevo `MutationObserver` configurado para _observar_ a un nodo y a sus hijos (subárbol), cuando se añadan o eliminen elementos al mismo; tambien observa cualquier cambio en los atributos de los elementos del árbol.
 
-<h3 id="La_función_callback">La función callback</h3>
+### La función callback
 
-<pre class="brush: js">function callback(mutationList, observer) {
-  mutationList.forEach((mutation) =&gt; {
+```js
+function callback(mutationList, observer) {
+  mutationList.forEach((mutation) => {
     switch(mutation.type) {
       case 'childList':
         /* Uno o mas hijos han sido añadidos y/o eliminados del árbol;
@@ -43,17 +44,18 @@ translation_of: Web/API/MutationObserver/MutationObserver
     }
   });
 }
-</pre>
+```
 
-<p>La función <code>callback()</code> es llamada cuando el <strong>observer </strong>detecta cambios que coinciden con la configuración de consulta especificada cuando llamamos a {{domxref("MutationObserver.observe", "observe()")}} para que inicie la observación.</p>
+La función `callback()` es llamada cuando el **observer** detecta cambios que coinciden con la configuración de consulta especificada cuando llamamos a {{domxref("MutationObserver.observe", "observe()")}} para que inicie la observación.
 
-<p>El tipo de cambio que se produjo (tanto en la lista de hijos como en los atributos) es detectado observando la propiedad {{domxref("MutationRecord.type", "mutation.type")}}</p>
+El tipo de cambio que se produjo (tanto en la lista de hijos como en los atributos) es detectado observando la propiedad {{domxref("MutationRecord.type", "mutation.type")}}
 
-<h3 id="Crear_e_iniciar_un_observer">Crear e iniciar un  "observer"</h3>
+### Crear e iniciar un "observer"
 
-<p>Este código establece el proceso de observación</p>
+Este código establece el proceso de observación
 
-<pre class="brush: js">var targetNode = document.querySelector("#someElement");
+```js
+var targetNode = document.querySelector("#someElement");
 var observerOptions = {
   childList: true,
   attributes: true,
@@ -61,37 +63,21 @@ var observerOptions = {
 }
 
 var observer = new MutationObserver(callback);
-observer.observe(targetNode, observerOptions);</pre>
+observer.observe(targetNode, observerOptions);
+```
 
-<p>El subárbol deseado se localiza buscando un elemento cuyo ID es "someElement". Un conjunto de opciones para el "observer" es establecido en el registro <code>observerOptions</code>. En él, especificamos los valores <code>true </code>tanto para <code>childList</code> como <code>attributes</code>, para obtener la información deseada.</p>
+El subárbol deseado se localiza buscando un elemento cuyo ID es "someElement". Un conjunto de opciones para el "observer" es establecido en el registro `observerOptions`. En él, especificamos los valores `true `tanto para `childList` como `attributes`, para obtener la información deseada.
 
-<p>Posteriormente instanciamos el objeto observer, especificando la función <code>callback()</code>, e iniciamos la observación de los nodos del DOM llamando al método <code>observe()</code>, pasandole el nodo y las opciones.</p>
+Posteriormente instanciamos el objeto observer, especificando la función `callback()`, e iniciamos la observación de los nodos del DOM llamando al método `observe()`, pasandole el nodo y las opciones.
 
-<p>Desde este momento y hasta que se llame al método {{domxref("MutationObserver.disconnect", "disconnect()")}}, la funcion <code>callback()</code> será llamada cada vez que un elemento sea añadido o eliminado del árbol del DOM, cuya raiz es  <code>targetNode</code>, o uno de sus atributos sea cambiado.</p>
+Desde este momento y hasta que se llame al método {{domxref("MutationObserver.disconnect", "disconnect()")}}, la funcion `callback()` será llamada cada vez que un elemento sea añadido o eliminado del árbol del DOM, cuya raiz es `targetNode`, o uno de sus atributos sea cambiado.
 
-<p> </p>
+## Especificaciones
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+| Especificación                                                                                                           | Estado                           | Comentario |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('DOM WHATWG', '#dom-mutationobserver-mutationobserver', 'MutationObserver()')}} | {{ Spec2('DOM WHATWG') }} |            |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-mutationobserver-mutationobserver', 'MutationObserver()')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidad
 
-<h2 id="Compatibilidad">Compatibilidad</h2>
-
-
-
-<p>{{Compat("api.MutationObserver.MutationObserver")}}</p>
+{{Compat("api.MutationObserver.MutationObserver")}}

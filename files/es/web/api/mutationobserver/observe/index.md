@@ -3,92 +3,66 @@ title: MutationObserver.observe()
 slug: Web/API/MutationObserver/observe
 translation_of: Web/API/MutationObserver/observe
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p><span class="seoSummary">El método {{domxref("MutationObserver")}} <code><strong>observe()</strong></code><strong> </strong>configura la funcion <code>MutationObserver</code> para que inicie la recepción de cambios en el DOM que coincidan con las opciones dadas.</span></p>
+El método {{domxref("MutationObserver")}} **`observe()`\*\*** \*\*configura la funcion `MutationObserver` para que inicie la recepción de cambios en el DOM que coincidan con las opciones dadas.
 
-<p>Según la configuración, el <em>observador </em>verá un solo {{domxref("Node")}} del árbol del DOM, o ese nodo y alguno o todos los nodos descendientes.</p>
+Según la configuración, el _observador_ verá un solo {{domxref("Node")}} del árbol del DOM, o ese nodo y alguno o todos los nodos descendientes.
 
-<p>Para detener al <code>MutationObserver</code> (de modo que la funcion no sea llamada), llame al método {{domxref("MutationObserver.disconnect()")}}.</p>
+Para detener al `MutationObserver` (de modo que la funcion no sea llamada), llame al método {{domxref("MutationObserver.disconnect()")}}.
 
-<ul>
-</ul>
+## Sintaxis
 
-<h2 id="Sintaxis">Sintaxis</h2>
+```
+mutationObserver.observe(target[, options])
+```
 
-<pre class="syntaxbox"><em>mutationObserver</em>.observe(<em>target</em>[, <em>options</em>])
-</pre>
+### Parámetros
 
-<h3 id="Parámetros">Parámetros</h3>
+- `target`
+  - : Un {{domxref("Node")}} del DOM (que puede ser un {{domxref("Element")}}) perteneciente al árbol DOM, o la raiz de un subárbol de nodos, donde observar cambios.
+- `options` {{optional_inline}}
+  - : Un objeto {{domxref("MutationObserverInit")}} opcional, que decribe qué cambios en el DOM deben ser enviados a la función `callback `del observador.
 
-<dl>
- <dt><code>target</code></dt>
- <dd> Un {{domxref("Node")}} del DOM (que puede ser un {{domxref("Element")}}) perteneciente al  árbol DOM, o la raiz de un subárbol de nodos, donde observar cambios.</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>Un objeto {{domxref("MutationObserverInit")}} opcional, que decribe qué cambios en el DOM deben ser enviados a la función <code>callback </code>del observador.</dd>
-</dl>
+### Valor devuelto
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+`undefined`.
 
-<p><code>undefined</code>.</p>
+### Excepciones
 
-<h3 id="Excepciones">Excepciones</h3>
+- `TypeError`
 
-<dl>
- <dt><code>TypeError</code></dt>
- <dd>llamado en cualquiera de las siguientes circunstancias
- <ul>
-  <li>Las opciones han sido configuradas de tal modo que no existe nada que monitorizar (por ejemplo, si {{domxref("MutationObserverInit.childList")}}, {{domxref("MutationObserverInit.attributes")}}, y {{domxref("MutationObserverInit.characterData")}} son <strong>false</strong>)</li>
-  <li>La opcion <code>attributes</code> es  <code>false</code> (indicando que los cambios en los atributos no son monitorizados) y <code>attributeOldValue</code> es <code>true</code> y/o <code>attributeFilter</code> está presente.</li>
-  <li>Las opciones {{domxref("MutaitonObserverInit.characterDataOldValue", "characterDataOldValue")}} son <code>true </code>pero {{domxref("MutationObserverInit.characterData")}} es <code>false</code> (indicando que los cambios en los caracteres no se guardan).</li>
- </ul>
- </dd>
-</dl>
+  - : llamado en cualquiera de las siguientes circunstancias
 
-<h2 id="Notas_de_uso">Notas de uso</h2>
+    - Las opciones han sido configuradas de tal modo que no existe nada que monitorizar (por ejemplo, si {{domxref("MutationObserverInit.childList")}}, {{domxref("MutationObserverInit.attributes")}}, y {{domxref("MutationObserverInit.characterData")}} son **false**)
+    - La opcion `attributes` es `false` (indicando que los cambios en los atributos no son monitorizados) y `attributeOldValue` es `true` y/o `attributeFilter` está presente.
+    - Las opciones {{domxref("MutaitonObserverInit.characterDataOldValue", "characterDataOldValue")}} son `true `pero {{domxref("MutationObserverInit.characterData")}} es `false` (indicando que los cambios en los caracteres no se guardan).
 
-<h3 id="Reutilizar_MutationObservers">Reutilizar MutationObservers</h3>
+## Notas de uso
 
-<p>Puede llamar varias veces al método <code>observe()</code> del mismo objeto <code>MutationObserver</code>  para ver los cambios en diferentes partes del árbol del DOM y/o diferentes tipos de cambios. Sin embargo ha de tener en cuenta:</p>
+### Reutilizar MutationObservers
 
-<ul>
- <li>Si llama a <code>observe()</code> en un nodo que ya estaba siendo observado por el mísmo <code>MutationObserver</code>, todos los observadores serán automáticamente eliminados de todos los elementos observados antes de que el nuevo observador sea activado.</li>
- <li>Si el mismo <code>MutationObserver</code> no estaba siendo usado sobre ese nodo, entonces los observadores existentes se quedarán solos y se agregará el nuevo.</li>
-</ul>
+Puede llamar varias veces al método `observe()` del mismo objeto `MutationObserver` para ver los cambios en diferentes partes del árbol del DOM y/o diferentes tipos de cambios. Sin embargo ha de tener en cuenta:
 
-<h3 id="La_observación_sigue_a_los_nodos_cuando_se_desconecta">La observación sigue a los nodos cuando se desconecta</h3>
+- Si llama a `observe()` en un nodo que ya estaba siendo observado por el mísmo `MutationObserver`, todos los observadores serán automáticamente eliminados de todos los elementos observados antes de que el nuevo observador sea activado.
+- Si el mismo `MutationObserver` no estaba siendo usado sobre ese nodo, entonces los observadores existentes se quedarán solos y se agregará el nuevo.
 
-<p>Los observadores de cambios tienen como objetivo permitirle ver un conjunto de nodos a lo largo del tiempo, incluso si la conexion entre estos nodos desaparece. Si esta observando un subárbol de nodos, y una parte del subárbol es desconectado y llevado a otra parte del DOM, continuará viendo ese mismo segmento de nodos, recibiendo las mismas llamadas a la función que antes de ser desconectado.</p>
+### La observación sigue a los nodos cuando se desconecta
 
-<p>En otras palabras, hasta que se le haya notificado que los nodos se están separando de su subárbol monitoreado, recibirá notificaciones de los cambios en ese subárbol y sus nodos. Esto evita que pierda los cambios producidos despues de que la conexion se corte y antes de que tenga la oportunidad de especificar un nuevo monitoreo sobre los cambios en el nodo o subárbol movido.</p>
+Los observadores de cambios tienen como objetivo permitirle ver un conjunto de nodos a lo largo del tiempo, incluso si la conexion entre estos nodos desaparece. Si esta observando un subárbol de nodos, y una parte del subárbol es desconectado y llevado a otra parte del DOM, continuará viendo ese mismo segmento de nodos, recibiendo las mismas llamadas a la función que antes de ser desconectado.
 
-<p>De manera que en teoria si mantiene la pista de los objetos {{domxref("MutationRecord")}} que describen los cambios, podrá "deshacer" los mismos, devolviendo el DOM a su estado inicial.</p>
+En otras palabras, hasta que se le haya notificado que los nodos se están separando de su subárbol monitoreado, recibirá notificaciones de los cambios en ese subárbol y sus nodos. Esto evita que pierda los cambios producidos despues de que la conexion se corte y antes de que tenga la oportunidad de especificar un nuevo monitoreo sobre los cambios en el nodo o subárbol movido.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+De manera que en teoria si mantiene la pista de los objetos {{domxref("MutationRecord")}} que describen los cambios, podrá "deshacer" los mismos, devolviendo el DOM a su estado inicial.
 
-<p> </p>
+## Ejemplo
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-mutationobserver-observe', 'MutationObserver.observe()')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('DOM WHATWG', '#dom-mutationobserver-observe', 'MutationObserver.observe()')}} | {{ Spec2('DOM WHATWG') }} |         |
 
-<h2 id="Compatibilidad">Compatibilidad</h2>
+## Compatibilidad
 
-
-
-<p>{{Compat("api.MutationObserver.observe")}}</p>
+{{Compat("api.MutationObserver.observe")}}

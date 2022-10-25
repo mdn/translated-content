@@ -14,65 +14,61 @@ tags:
   - TopicStub
 translation_of: Web/API/IDBCursor
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<p>La interfaz <strong><code>IDBCursor</code></strong> de la <a href="/en-US/docs/IndexedDB">IndexedDB API</a> representa un <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor">cursor</a> para atravesar o iterar varios registros de una base de datos.</p>
+La interfaz **`IDBCursor`** de la [IndexedDB API](/es/docs/IndexedDB) representa un [cursor](/es/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor) para atravesar o iterar varios registros de una base de datos.
 
-<p>El cursor tiene una fuente que indica el índice o el almacén de objetos sobre el que se está iterando. Tiene una posición dentro del rango y se mueve en una dirección que aumenta o disminuye en el orden de las Keys de registro. El cursor permite a una aplicación procesar asincrónicamente todos los registros del rango del cursor.</p>
+El cursor tiene una fuente que indica el índice o el almacén de objetos sobre el que se está iterando. Tiene una posición dentro del rango y se mueve en una dirección que aumenta o disminuye en el orden de las Keys de registro. El cursor permite a una aplicación procesar asincrónicamente todos los registros del rango del cursor.
 
-<p>Puede tener un número ilimitado de cursores al mismo tiempo. Siempre se obtiene el mismo objeto <code>IDBCursor</code> que representa un cursor determinado. Las operaciones se realizan en el índice subyacente o en el almacén de objetos.</p>
+Puede tener un número ilimitado de cursores al mismo tiempo. Siempre se obtiene el mismo objeto `IDBCursor` que representa un cursor determinado. Las operaciones se realizan en el índice subyacente o en el almacén de objetos.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("IDBCursor.advance()")}}</dt>
- <dd>Establece el número de veces que un cursor debe mover su posición hacia adelante.</dd>
- <dt>{{domxref("IDBCursor.continue()")}}</dt>
- <dd>Avanza el cursor a la siguiente posición a lo largo de su dirección, hasta el elemento cuya <code>key</code> coincide con el parámetro clave opcional.</dd>
-</dl>
+- {{domxref("IDBCursor.advance()")}}
+  - : Establece el número de veces que un cursor debe mover su posición hacia adelante.
+- {{domxref("IDBCursor.continue()")}}
+  - : Avanza el cursor a la siguiente posición a lo largo de su dirección, hasta el elemento cuya `key` coincide con el parámetro clave opcional.
 
-<dl>
- <dt>{{domxref("IDBCursor.delete()")}}</dt>
- <dd>Devuelve un objeto {{domxref("IDBRequest")}} y, en un hilo separado, elimina el registro en la posición del cursor, sin cambiar la posición del cursor. Esto se puede utilizar para borrar registros específicos.<br><br>
- {{domxref("IDBCursor.update()")}}<br><br>
- Devuelve un objeto {{domxref("IDBRequest")}} y, en un hilo separado, actualiza el valor en la posición actual del cursor en el almacén de objetos. Esto se puede utilizar para actualizar registros específicos.</dd>
-</dl>
+<!---->
 
-<h2 id="Propiedades">Propiedades</h2>
+- {{domxref("IDBCursor.delete()")}}
 
-<dl>
- <dt>{{domxref("IDBCursor.source")}} {{readonlyInline}}</dt>
- <dd>Devuelve {{domxref("IDBObjectStore")}} o {{domxref("IDBIndex")}}} que el cursor está iterando. Esta función nunca devuelve nulo o lanza una excepción, incluso si el cursor está siendo iterado, ha iterado más allá de su final, o su transacción no está activa.</dd>
- <dt>{{domxref("IDBCursor.direction")}} {{readonlyInline}}</dt>
- <dd>Devuelve la dirección de desplazamiento del cursor. Ver <a href="#const_next">Constants</a> para valores posibles.</dd>
- <dt>{{domxref("IDBCursor.key")}} {{readonlyInline}}</dt>
- <dd>Devuelve la <code>key</code> del registro en la posición del cursor. Si el cursor está fuera de su rango, se fija en <code>undefined</code>. La <code>key</code> del cursor puede ser de cualquier tipo de datos.</dd>
- <dt>{{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}</dt>
- <dd>Devuelve la <code>key</code> primaria efectiva actual del cursor. Si el cursor está siendo iterado o ha iterado fuera de su rango, se fija en <code>undefined</code>. La <code>key</code> principal del cursor puede ser cualquier tipo de datos.</dd>
-</dl>
+  - : Devuelve un objeto {{domxref("IDBRequest")}} y, en un hilo separado, elimina el registro en la posición del cursor, sin cambiar la posición del cursor. Esto se puede utilizar para borrar registros específicos.
 
-<h2 id="Constants" name="Constants">Constants</h2>
+    {{domxref("IDBCursor.update()")}}
 
-<div>{{ deprecated_header(13) }}</div>
+    Devuelve un objeto {{domxref("IDBRequest")}} y, en un hilo separado, actualiza el valor en la posición actual del cursor en el almacén de objetos. Esto se puede utilizar para actualizar registros específicos.
 
-<div class="warning">
-<p>These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(891944) }})</p>
-</div>
+## Propiedades
 
-<ul>
- <li><code>NEXT </code>: <code>"next"</code> : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).</li>
- <li><code>NEXTUNIQUE</code> : <code>"nextunique"</code> : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the lower bound of the key range and moves upwards.</li>
- <li><code>PREV </code>: <code>"prev"</code> : The cursor shows all records, including duplicates. It starts at the upper bound of the key range and moves downwards (monotonically decreasing in the order of keys).</li>
- <li><code>PREVUNIQUE </code>: <code>"prevunique"</code> : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the upper bound of the key range and moves downwards.</li>
-</ul>
+- {{domxref("IDBCursor.source")}} {{readonlyInline}}
+  - : Devuelve {{domxref("IDBObjectStore")}} o {{domxref("IDBIndex")}}} que el cursor está iterando. Esta función nunca devuelve nulo o lanza una excepción, incluso si el cursor está siendo iterado, ha iterado más allá de su final, o su transacción no está activa.
+- {{domxref("IDBCursor.direction")}} {{readonlyInline}}
+  - : Devuelve la dirección de desplazamiento del cursor. Ver [Constants](#const_next) para valores posibles.
+- {{domxref("IDBCursor.key")}} {{readonlyInline}}
+  - : Devuelve la `key` del registro en la posición del cursor. Si el cursor está fuera de su rango, se fija en `undefined`. La `key` del cursor puede ser de cualquier tipo de datos.
+- {{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}
+  - : Devuelve la `key` primaria efectiva actual del cursor. Si el cursor está siendo iterado o ha iterado fuera de su rango, se fija en `undefined`. La `key` principal del cursor puede ser cualquier tipo de datos.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Constants
 
-<p>En este simple fragmento creamos una transacción, recuperamos un almacén de objetos y usamos un cursor para iterar todos los registros del almacén de objetos. El cursor no nos obliga a seleccionar los datos en base a una <code>key</code>; podemos simplemente cogerlos todos. También tenga en cuenta que en cada iteración del bucle, puede tomar datos del registro actual bajo el objeto del cursor utilizando <code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code>. Para un ejemplo completo de funcionamiento, vea nuestro <span style="line-height: 1.5;"><a href="https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/">IDBCursor example</a></span><span style="line-height: 1.5;"> (</span><a href="https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+{{ deprecated_header(13) }}
 
-<pre class="brush: js"><span style="line-height: 1.5;">function displayData() {</span>
+> **Advertencia:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(891944) }})
+
+- `NEXT `: `"next"` : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).
+- `NEXTUNIQUE` : `"nextunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the lower bound of the key range and moves upwards.
+- `PREV `: `"prev"` : The cursor shows all records, including duplicates. It starts at the upper bound of the key range and moves downwards (monotonically decreasing in the order of keys).
+- `PREVUNIQUE `: `"prevunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the upper bound of the key range and moves downwards.
+
+## Ejemplo
+
+En este simple fragmento creamos una transacción, recuperamos un almacén de objetos y usamos un cursor para iterar todos los registros del almacén de objetos. El cursor no nos obliga a seleccionar los datos en base a una `key`; podemos simplemente cogerlos todos. También tenga en cuenta que en cada iteración del bucle, puede tomar datos del registro actual bajo el objeto del cursor utilizando `cursor.value.foo`. Para un ejemplo completo de funcionamiento, vea nuestro [IDBCursor example](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/) ([view example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/).)
+
+```js
+function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
   var objectStore = transaction.objectStore('rushAlbumList');
 
@@ -88,37 +84,25 @@ translation_of: Web/API/IDBCursor
       console.log('Entries all displayed.');
     }
   };
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idl-def-IDBCursor', 'cursor')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                | Status                       | Comment |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------- |
+| {{SpecName('IndexedDB', '#idl-def-IDBCursor', 'cursor')}} | {{Spec2('IndexedDB')}} |         |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.IDBCursor")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/es/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

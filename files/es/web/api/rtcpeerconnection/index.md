@@ -3,291 +3,116 @@ title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
 translation_of: Web/API/RTCPeerConnection
 ---
-<p>{{APIRef('WebRTC')}}</p>
+{{APIRef('WebRTC')}}
 
-<p><span class="seoSummary">La interfaz <strong><code>RTCPeerConnection</code></strong> representa una conexión WebRTC entre un computador local y un par remoto (otro computador). Esta interfaz provee métodos para: conectar un equipo remoto (remote peer), mantener y monitorear esa coneexión y cerrar la conexión una vez que no se necesite más.</span></p>
+La interfaz **`RTCPeerConnection`** representa una conexión WebRTC entre un computador local y un par remoto (otro computador). Esta interfaz provee métodos para: conectar un equipo remoto (remote peer), mantener y monitorear esa coneexión y cerrar la conexión una vez que no se necesite más.
 
-<div class="note">
-<p><code>RTCPeerConnection</code> y {{domxref("RTCSessionDescription")}} aún están prefijados en algunos navegadores. Se <strong>recomienda encarecidamente </strong>usar una librería de ajuste (shim) como la excelente y ampliamente soportada <a href="https://github.com/webrtc/adapter/">Adapter.js</a>, para asegurar la compatibilidad más amplia posible de su sitio o aplicación web. <span id="result_box" lang="es"><span>Vale la pena señalar que </span></span><a href="https://github.com/webrtc/adapter/">Adapter.js</a><span lang="es"><span> va más allá del manejo de prefijos, esta librería implementa ajustes (shims) para asegurar la compatibilidad entre las distintas implementaciones de WebRTC de los distintos navegadores.</span></span></p>
-</div>
+> **Nota:** `RTCPeerConnection` y {{domxref("RTCSessionDescription")}} aún están prefijados en algunos navegadores. Se **recomienda encarecidamente** usar una librería de ajuste (shim) como la excelente y ampliamente soportada [Adapter.js](https://github.com/webrtc/adapter/), para asegurar la compatibilidad más amplia posible de su sitio o aplicación web. Vale la pena señalar que [Adapter.js](https://github.com/webrtc/adapter/) va más allá del manejo de prefijos, esta librería implementa ajustes (shims) para asegurar la compatibilidad entre las distintas implementaciones de WebRTC de los distintos navegadores.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h3 id="Método_obsoleto">Método obsoleto</h3>
+### Método obsoleto
 
-<p>El siguiente método fue declarado obsoleto ya hace un tiempo, admás, nunca fue implementado en los navegadores más importantes.</p>
+El siguiente método fue declarado obsoleto ya hace un tiempo, admás, nunca fue implementado en los navegadores más importantes.
 
-<dl>
- <dt>{{domxref("RTCPeerConnection.createDTMFSender()")}} {{obsolete_inline}}</dt>
- <dd>Crea un nuevo {{domxref("RTCDTMFSender")}}, que se asocia a un {{domxref("MediaStreamTrack")}} específico, that will be able to send {{Glossary("DTMF")}} phone signaling over the connection.</dd>
-</dl>
+- {{domxref("RTCPeerConnection.createDTMFSender()")}} {{obsolete_inline}}
+  - : Crea un nuevo {{domxref("RTCDTMFSender")}}, que se asocia a un {{domxref("MediaStreamTrack")}} específico, that will be able to send {{Glossary("DTMF")}} phone signaling over the connection.
 
-<h2 id="Constantes">Constantes</h2>
+## Constantes
 
-<h3 id="RTCBundlePolicy_enum">RTCBundlePolicy enum</h3>
+### RTCBundlePolicy enum
 
-<p>The <code>RTCBundlePolicy</code> enum defines string constants which are used to request a specific policy for gathering ICE candidates if the remote peer isn't compatible with the <a href="https://webrtcstandards.info/sdp-bundle/">SDP BUNDLE standard</a> for bundling multiple media streams on a single transport link.</p>
+The `RTCBundlePolicy` enum defines string constants which are used to request a specific policy for gathering ICE candidates if the remote peer isn't compatible with the [SDP BUNDLE standard](https://webrtcstandards.info/sdp-bundle/) for bundling multiple media streams on a single transport link.
 
-<div class="note">
-<p>In technical terms, a BUNDLE lets all media flow between two peers flow across a single <strong>5-tuple</strong>; that is, from the same IP and port on one peer to the same IP and port on the other peer, using the same transport protocol.</p>
-</div>
+> **Nota:** In technical terms, a BUNDLE lets all media flow between two peers flow across a single **5-tuple**; that is, from the same IP and port on one peer to the same IP and port on the other peer, using the same transport protocol.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"balanced"</code></td>
-   <td>On BUNDLE-aware connections, the ICE agent should gather candidates for all of the media types in use (audio, video, and data). Otherwise, the ICE agent should only negotiate one audio and video track on separate transports.</td>
-  </tr>
-  <tr>
-   <td><code>"max-compat"</code></td>
-   <td>The ICE agent should gather candidates for each track, using separate transports to negotiate all media tracks for connections which aren't BUNDLE-compatible.</td>
-  </tr>
-  <tr>
-   <td><code>"max-bundle"</code></td>
-   <td>The ICE agent should gather candidates for just one track. If the connection isn't BUNDLE-compatible, then the ICE agent should negotiate just one media track.</td>
-  </tr>
- </tbody>
-</table>
+| Constant       | Description                                                                                                                                                                                                                      |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"balanced"`   | On BUNDLE-aware connections, the ICE agent should gather candidates for all of the media types in use (audio, video, and data). Otherwise, the ICE agent should only negotiate one audio and video track on separate transports. |
+| `"max-compat"` | The ICE agent should gather candidates for each track, using separate transports to negotiate all media tracks for connections which aren't BUNDLE-compatible.                                                                   |
+| `"max-bundle"` | The ICE agent should gather candidates for just one track. If the connection isn't BUNDLE-compatible, then the ICE agent should negotiate just one media track.                                                                  |
 
-<h3 id="RTCIceConnectionState_enum">RTCIceConnectionState enum</h3>
+### RTCIceConnectionState enum
 
-<p>The <code>RTCIceConnectionState</code> enum defines the string constants used to describe the current state of the ICE agent and its connection to the ICE server (that is, the {{Glossary("STUN")}} or {{Glossary("TURN")}} server).</p>
+The `RTCIceConnectionState` enum defines the string constants used to describe the current state of the ICE agent and its connection to the ICE server (that is, the {{Glossary("STUN")}} or {{Glossary("TURN")}} server).
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"new"</code></td>
-   <td>The ICE agent is gathering addresses or is waiting to be given remote candidates through calls to {{domxref("RTCPeerConnection.addIceCandidate()")}} (or both).</td>
-  </tr>
-  <tr>
-   <td><code>"checking"</code></td>
-   <td>The ICE agent has been given one or more remote candidates and is checking pairs of local and remote candidates against one another to try to find a compatible match, but has not yet found a pair which will allow the peer connection to be made. It's possible that gathering of candidates is also still underway.</td>
-  </tr>
-  <tr>
-   <td><code>"connected"</code></td>
-   <td>A usable pairing of local and remote candidates has been found for all components of the connection, and the connection has been established. It's possible that gathering is still underway, and it's also possible that the ICE agent is still checking candidates against one another looking for a better connection to use.</td>
-  </tr>
-  <tr>
-   <td><code>"completed"</code></td>
-   <td>The ICE agent has finished gathering candidates, has checked all pairs against one another, and has found a connection for all components.</td>
-  </tr>
-  <tr>
-   <td><code>"failed"</code></td>
-   <td>The ICE candidate has checked all candidates pairs against one another and has failed to find compatible matches for all components of the connection. It is, however, possible that the ICE agent did find compatible connections for some components.</td>
-  </tr>
-  <tr>
-   <td><code>"disconnected"</code></td>
-   <td>Checks to ensure that components are still connected failed for at least one component of the {{domxref("RTCPeerConnection")}}. This is a less stringent test than <code>"failed"</code> and may trigger intermittently and resolve just as spontaneously on less reliable networks, or during temporary disconnections. When the problem resolves, the connection may return to the <code>"connected"</code> state.</td>
-  </tr>
-  <tr>
-   <td><code>"closed"</code></td>
-   <td>The ICE agent for this {{domxref("RTCPeerConnection")}} has shut down and is no longer handling requests.</td>
-  </tr>
- </tbody>
-</table>
+| Constant         | Description                                                                                                                                                                                                                                                                                                                                                                                                |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"new"`          | The ICE agent is gathering addresses or is waiting to be given remote candidates through calls to {{domxref("RTCPeerConnection.addIceCandidate()")}} (or both).                                                                                                                                                                                                                          |
+| `"checking"`     | The ICE agent has been given one or more remote candidates and is checking pairs of local and remote candidates against one another to try to find a compatible match, but has not yet found a pair which will allow the peer connection to be made. It's possible that gathering of candidates is also still underway.                                                                                    |
+| `"connected"`    | A usable pairing of local and remote candidates has been found for all components of the connection, and the connection has been established. It's possible that gathering is still underway, and it's also possible that the ICE agent is still checking candidates against one another looking for a better connection to use.                                                                           |
+| `"completed"`    | The ICE agent has finished gathering candidates, has checked all pairs against one another, and has found a connection for all components.                                                                                                                                                                                                                                                                 |
+| `"failed"`       | The ICE candidate has checked all candidates pairs against one another and has failed to find compatible matches for all components of the connection. It is, however, possible that the ICE agent did find compatible connections for some components.                                                                                                                                                    |
+| `"disconnected"` | Checks to ensure that components are still connected failed for at least one component of the {{domxref("RTCPeerConnection")}}. This is a less stringent test than `"failed"` and may trigger intermittently and resolve just as spontaneously on less reliable networks, or during temporary disconnections. When the problem resolves, the connection may return to the `"connected"` state. |
+| `"closed"`       | The ICE agent for this {{domxref("RTCPeerConnection")}} has shut down and is no longer handling requests.                                                                                                                                                                                                                                                                                      |
 
-<h3 id="RTCIceGatheringState_enum">RTCIceGatheringState enum</h3>
+### RTCIceGatheringState enum
 
-<p>The <code>RTCIceGatheringState</code> enum defines string constants which reflect the current status of ICE gathering, as returned using the {{domxref("RTCPeerConnection.iceGatheringState")}} property. You can detect when this value changes by watching for an event of type {{event("icegatheringstatechange")}}.</p>
+The `RTCIceGatheringState` enum defines string constants which reflect the current status of ICE gathering, as returned using the {{domxref("RTCPeerConnection.iceGatheringState")}} property. You can detect when this value changes by watching for an event of type {{event("icegatheringstatechange")}}.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"new"</code></td>
-   <td>The peer connection was just created and hasn't done any networking yet.</td>
-  </tr>
-  <tr>
-   <td><code>"gathering"</code></td>
-   <td>The ICE agent is in the process of gathering candidates for the connection.</td>
-  </tr>
-  <tr>
-   <td><code>"complete"</code></td>
-   <td>The ICE agent has finished gathering candidates. If something happens that requires collecting new candidates, such as a new interface being added or the addition of a new ICE server, the state will revert to "gathering" to gather those candidates.</td>
-  </tr>
- </tbody>
-</table>
+| Constant      | Description                                                                                                                                                                                                                                              |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"new"`       | The peer connection was just created and hasn't done any networking yet.                                                                                                                                                                                 |
+| `"gathering"` | The ICE agent is in the process of gathering candidates for the connection.                                                                                                                                                                              |
+| `"complete"`  | The ICE agent has finished gathering candidates. If something happens that requires collecting new candidates, such as a new interface being added or the addition of a new ICE server, the state will revert to "gathering" to gather those candidates. |
 
-<h3 id="RTCIceTransportPolicy_enum">RTCIceTransportPolicy enum</h3>
+### RTCIceTransportPolicy enum
 
-<p>The <code>RTCIceTransportPolicy</code> enum defines string constants which can be used to limit the transport policies of the ICE candidates to be considered during the connection process.</p>
+The `RTCIceTransportPolicy` enum defines string constants which can be used to limit the transport policies of the ICE candidates to be considered during the connection process.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"all"</code></td>
-   <td>All ICE candidates will be considered.</td>
-  </tr>
-  <tr>
-   <td><code>"public" </code>{{obsolete_inline}}</td>
-   <td>Only ICE candidates with public IP addresses will be considered. <em>Removed from the specification's May 13, 2016 working draft.</em></td>
-  </tr>
-  <tr>
-   <td><code>"relay"</code></td>
-   <td>Only ICE candidates whose IP addresses are being relayed, such as those being passed through a TURN server, will be considered.</td>
-  </tr>
- </tbody>
-</table>
+| Constant                            | Description                                                                                                                     |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `"all"`                             | All ICE candidates will be considered.                                                                                          |
+| `"public" `{{obsolete_inline}} | Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._ |
+| `"relay"`                           | Only ICE candidates whose IP addresses are being relayed, such as those being passed through a TURN server, will be considered. |
 
-<h3 id="RTCPeerConnectionState_enum">RTCPeerConnectionState enum</h3>
+### RTCPeerConnectionState enum
 
-<p>The <code>RTCPeerConnectionState</code> enum defines string constants which describe states in which the <code>RTCPeerConnection</code> may be. These values are returned by the {{domxref("RTCPeerConnection.connectionState", "connectionState")}} property. This state essentially represents the aggregate state of all ICE transports (which are of type {{domxref("RTCIceTransport")}} or {{domxref("RTCDtlsTransport")}}) being used by the connection.</p>
+The `RTCPeerConnectionState` enum defines string constants which describe states in which the `RTCPeerConnection` may be. These values are returned by the {{domxref("RTCPeerConnection.connectionState", "connectionState")}} property. This state essentially represents the aggregate state of all ICE transports (which are of type {{domxref("RTCIceTransport")}} or {{domxref("RTCDtlsTransport")}}) being used by the connection.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"new"</code></td>
-   <td>At least one of the connection's ICE transports ({{domxref("RTCIceTransport")}}s or {{domxref("RTCDtlsTransport")}}s) are in the <code>"new"</code> state, and none of them are in one of the following states: <code>"connecting"</code>, <code>"checking"</code>, <code>"failed"</code>, or <code>"disconnected"</code>, <em>or</em> all of the connection's transports are in the <code>"closed"</code> state.</td>
-  </tr>
-  <tr>
-   <td><code>"connecting"</code></td>
-   <td>One or more of the ICE transports are currently in the process of establishing a connection; that is, their <code>RTCIceConnectionState</code> is either <code>"checking"</code> or <code>"connected"</code>, and no transports are in the <code>"failed"</code> state. <strong>&lt;&lt;&lt; Make this a link once I know where that will be documented</strong></td>
-  </tr>
-  <tr>
-   <td><code>"connected"</code></td>
-   <td>Every ICE transport used by the connection is either in use (state <code>"connected"</code> or <code>"completed"</code>) or is closed (state <code>"closed"</code>); in addition, at least one transport is either <code>"connected"</code> or <code>"completed"</code>.</td>
-  </tr>
-  <tr>
-   <td><code>"disconnected"</code></td>
-   <td>At least one of the ICE transports for the connection is in the <code>"disconnected"</code> state and none of the other transports are in the state <code>"failed"</code>, <code>"connecting"</code>, or <code>"checking"</code>.</td>
-  </tr>
-  <tr>
-   <td><code>"failed"</code></td>
-   <td>One or more of the ICE transports on the connection is in the <code>"failed"</code> state.</td>
-  </tr>
-  <tr>
-   <td><code>"closed"</code></td>
-   <td>
-    <p>The <code>RTCPeerConnection</code> is closed.</p>
+| Constant         | Description                                                                                                                                                                                                                                                                                                                                                 |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"new"`          | At least one of the connection's ICE transports ({{domxref("RTCIceTransport")}}s or {{domxref("RTCDtlsTransport")}}s) are in the `"new"` state, and none of them are in one of the following states: `"connecting"`, `"checking"`, `"failed"`, or `"disconnected"`, _or_ all of the connection's transports are in the `"closed"` state. |
+| `"connecting"`   | One or more of the ICE transports are currently in the process of establishing a connection; that is, their `RTCIceConnectionState` is either `"checking"` or `"connected"`, and no transports are in the `"failed"` state. **<<< Make this a link once I know where that will be documented**                                                              |
+| `"connected"`    | Every ICE transport used by the connection is either in use (state `"connected"` or `"completed"`) or is closed (state `"closed"`); in addition, at least one transport is either `"connected"` or `"completed"`.                                                                                                                                           |
+| `"disconnected"` | At least one of the ICE transports for the connection is in the `"disconnected"` state and none of the other transports are in the state `"failed"`, `"connecting"`, or `"checking"`.                                                                                                                                                                       |
+| `"failed"`       | One or more of the ICE transports on the connection is in the `"failed"` state.                                                                                                                                                                                                                                                                             |
+| `"closed"`       | The `RTCPeerConnection` is closed.This value was in the [`RTCSignalingState` enum](#RTCSignalingState_enum) (and therefore found by reading the value of the {{domxref("RTCPeerConnection.signalingState", "signalingState")}}) property until the May 13, 2016 draft of the specification.                                          |
 
-    <p>This value was in the <a href="#RTCSignalingState_enum"><code>RTCSignalingState</code> enum</a> (and therefore found by reading the value of the {{domxref("RTCPeerConnection.signalingState", "signalingState")}}) property until the May 13, 2016 draft of the specification.</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+### RTCRtcpMuxPolicy enum
 
-<h3 id="RTCRtcpMuxPolicy_enum">RTCRtcpMuxPolicy enum</h3>
+The `RTCRtcpMuxPolicy` enum defines string constants which specify what ICE candidates are gathered to support non-multiplexed RTCP. **<<\<add a link to info about multiplexed RTCP.**
 
-<p>The <code>RTCRtcpMuxPolicy</code> enum defines string constants which specify what ICE candidates are gathered to support non-multiplexed RTCP. <strong>&lt;&lt;&lt;add a link to info about multiplexed RTCP.</strong></p>
+| Constant      | Description                                                                                                                                                                                                                                                                                           |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"negotiate"` | Instructs the ICE agent to gather both {{Glossary("RTP")}} and {{Glossary("RTCP")}} candidates. If the remote peer can multiplex RTCP, then RTCP candidates are multiplexed atop the corresponding RTP candidates. Otherwise, both the RTP and RTCP candidates are returned, separately. |
+| `"require"`   | Tells the ICE agent to gather ICE candidates for only RTP, and to multiplex RTCP atop them. If the remote peer doesn't support RTCP multiplexing, then session negotiation fails.                                                                                                                     |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"negotiate"</code></td>
-   <td>Instructs the ICE agent to gather both {{Glossary("RTP")}} and {{Glossary("RTCP")}} candidates. If the remote peer can multiplex RTCP, then RTCP candidates are multiplexed atop the corresponding RTP candidates. Otherwise, both the RTP and RTCP candidates are returned, separately.</td>
-  </tr>
-  <tr>
-   <td><code>"require"</code></td>
-   <td>Tells the ICE agent to gather ICE candidates for only RTP, and to multiplex RTCP atop them. If the remote peer doesn't support RTCP multiplexing, then session negotiation fails.</td>
-  </tr>
- </tbody>
-</table>
+### RTCSignalingState enum
 
-<h3 id="RTCSignalingState_enum">RTCSignalingState enum</h3>
+The `RTCSignalingState` enum specifies the possible values of {{domxref("RTCPeerConnection.signalingState")}}, which indicates where in the process of signaling the exchange of offer and answer the connection currently is.
 
-<p>The <code>RTCSignalingState</code> enum specifies the possible values of {{domxref("RTCPeerConnection.signalingState")}}, which indicates where in the process of signaling the exchange of offer and answer the connection currently is.</p>
+| Constant                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"stable"`                          | There is no ongoing exchange of offer and answer underway. This may mean that the {{domxref("RTCPeerConnection")}} object is new, in which case both the {{domxref("RTCPeerConnection.localDescription", "localDescription")}} and {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} are `null`; it may also mean that negotiation is complete and a connection has been established. |
+| `"have-local-offer"`                | The local peer has called {{domxref("RTCPeerConnection.setLocalDescription()")}}, passing in SDP representing an offer (usually created by calling {{domxref("RTCPeerConnection.createOffer()")}}), and the offer has been applied successfully.                                                                                                                                                                                        |
+| `"have-remote-offer"`               | The remote peer has created an offer and used the signaling server to deliver it to the local peer, which has set the offer as the remote description by calling {{domxref("RTCPeerConnection.setRemoteDescription()")}}.                                                                                                                                                                                                                              |
+| `"have-local-pranswer"`             | The offer sent by the remote peer has been applied and an answer has been created (usually by calling {{domxref("RTCPeerConnection.createAnswer()")}}) and applied by calling {{domxref("RTCPeerConnection.setLocalDescription()")}}. This provisional answer describes the supported media formats and so forth, but may not have a complete set of ICE candidates included. Further candidates will be delivered separately later. |
+| `"have-remote-pranswer"`            | A provisional answer has been received and successfully applied in response to an offer previously sent and established by calling `setLocalDescription()`.                                                                                                                                                                                                                                                                                                             |
+| `"closed"` {{obsolete_inline}} | The connection is closed.This value moved into the [`RTCPeerConnectionState` enum](#RTCPeerConnectionState_enum) in the May 13, 2016 draft of the specification, as it reflects the state of the `RTCPeerConnection`, not the signaling connection. You now detect a closed connection by checking for {{domxref("RTCPeerConnection.connectionState", "connectionState")}} to be `"closed"` instead.                                               |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"stable"</code></td>
-   <td>There is no ongoing exchange of offer and answer underway. This may mean that the {{domxref("RTCPeerConnection")}} object is new, in which case both the {{domxref("RTCPeerConnection.localDescription", "localDescription")}} and {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} are <code>null</code>; it may also mean that negotiation is complete and a connection has been established.</td>
-  </tr>
-  <tr>
-   <td><code>"have-local-offer"</code></td>
-   <td>The local peer has called {{domxref("RTCPeerConnection.setLocalDescription()")}}, passing in SDP representing an offer (usually created by calling {{domxref("RTCPeerConnection.createOffer()")}}), and the offer has been applied successfully.</td>
-  </tr>
-  <tr>
-   <td><code>"have-remote-offer"</code></td>
-   <td>The remote peer has created an offer and used the signaling server to deliver it to the local peer, which has set the offer as the remote description by calling {{domxref("RTCPeerConnection.setRemoteDescription()")}}.</td>
-  </tr>
-  <tr>
-   <td><code>"have-local-pranswer"</code></td>
-   <td>The offer sent by the remote peer has been applied and an answer has been created (usually by calling {{domxref("RTCPeerConnection.createAnswer()")}}) and applied by calling {{domxref("RTCPeerConnection.setLocalDescription()")}}. This provisional answer describes the supported media formats and so forth, but may not have a complete set of ICE candidates included. Further candidates will be delivered separately later.</td>
-  </tr>
-  <tr>
-   <td><code>"have-remote-pranswer"</code></td>
-   <td>A provisional answer has been received and successfully applied in response to an offer previously sent and established by calling <code>setLocalDescription()</code>.</td>
-  </tr>
-  <tr>
-   <td><code>"closed"</code> {{obsolete_inline}}</td>
-   <td>
-    <p>The connection is closed.</p>
+## Specifications
 
-    <div class="">
-    <p>This value moved into the <a href="#RTCPeerConnectionState_enum"><code>RTCPeerConnectionState</code> enum</a> in the May 13, 2016 draft of the specification, as it reflects the state of the <code>RTCPeerConnection</code>, not the signaling connection. You now detect a closed connection by checking for {{domxref("RTCPeerConnection.connectionState", "connectionState")}} to be <code>"closed"</code> instead.</p>
-    </div>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                           | Comment             |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('WebRTC 1.0', '#interface-definition', 'RTCPeerConnection')}} | {{Spec2('WebRTC 1.0')}} | Initial definition. |
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0', '#interface-definition', 'RTCPeerConnection')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.RTCPeerConnection")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js">https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js</a></li>
- <li><a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple">http://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple</a></li>
- <li><a href="https://github.com/chrisjohndigital/TutorRoom">TutorRoom</a>: Node.js HTML5 video capture, peer-to-peer video and filesharing application (<a href="https://github.com/chrisjohndigital/TutorRoom">source on GitHub</a>)</li>
-</ul>
+- <https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js>
+- <http://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple>
+- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): Node.js HTML5 video capture, peer-to-peer video and filesharing application ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))

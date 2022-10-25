@@ -6,103 +6,93 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/API/Range
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<h3 id="Introducci.C3.B3n" name="Introducci.C3.B3n">Introducción</h3>
+### Introducción
 
-<p>El objeto <code>Range</code> representa un fragmento de un documento que puede contener nodos y partes de nodos de texto en un documento dado.</p>
+El objeto `Range` representa un fragmento de un documento que puede contener nodos y partes de nodos de texto en un documento dado.
 
-<p>Un rango puede ser creado usando el método <code><a href="es/DOM/document.createRange">createRange</a></code> del objeto <code><a href="es/DOM/document">document</a></code>. Los objetos rango pueden ser recuperados usando el método <code><a href="es/DOM/Selection/getRangeAt">getRangeAt</a></code> del objeto <code><a href="es/DOM/selection">Selection</a></code>.</p>
+Un rango puede ser creado usando el método [`createRange`](es/DOM/document.createRange) del objeto [`document`](es/DOM/document). Los objetos rango pueden ser recuperados usando el método [`getRangeAt`](es/DOM/Selection/getRangeAt) del objeto [`Selection`](es/DOM/selection).
 
-<h3 id="Propiedades" name="Propiedades">Propiedades</h3>
+### Propiedades
 
-<dl>
- <dt><a href="es/DOM/range.collapsed">collapsed</a></dt>
- <dd>Devuelve un valor booleano indicando si los puntos de inicio y fin están en la misma posición.</dd>
- <dt><a href="es/DOM/range.commonAncestorContainer">commonAncestorContainer</a></dt>
- <dd>Devuelve el nodo más profundo que contiene los nodos <strong>startContainer</strong> y <strong>endContainer</strong>.</dd>
- <dt><a href="es/DOM/range.endContainer">endContainer</a></dt>
- <dd>Devuelve el nodo dentro del cual termina el rango.</dd>
- <dt><a href="es/DOM/range.endOffset">endOffset</a></dt>
- <dd>Devuelve un número representando donde termina el <code>Range</code> en el <code>endContainer</code>.</dd>
- <dt><a href="es/DOM/range.startContainer">startContainer</a></dt>
- <dd>Devuelve el nodo dentro del cual comienza el rango.</dd>
- <dt><a href="es/DOM/range.startOffset">startOffset</a></dt>
- <dd>Devuelve un número representando donde empieza el <code>Range</code> en el <code>endContainer</code>.</dd>
-</dl>
+- [collapsed](es/DOM/range.collapsed)
+  - : Devuelve un valor booleano indicando si los puntos de inicio y fin están en la misma posición.
+- [commonAncestorContainer](es/DOM/range.commonAncestorContainer)
+  - : Devuelve el nodo más profundo que contiene los nodos **startContainer** y **endContainer**.
+- [endContainer](es/DOM/range.endContainer)
+  - : Devuelve el nodo dentro del cual termina el rango.
+- [endOffset](es/DOM/range.endOffset)
+  - : Devuelve un número representando donde termina el `Range` en el `endContainer`.
+- [startContainer](es/DOM/range.startContainer)
+  - : Devuelve el nodo dentro del cual comienza el rango.
+- [startOffset](es/DOM/range.startOffset)
+  - : Devuelve un número representando donde empieza el `Range` en el `endContainer`.
 
-<h3 id="M.C3.A9todos" name="M.C3.A9todos">Métodos</h3>
+### Métodos
 
-<h4 id="M.C3.A9todos_de_ubicaci.C3.B3n" name="M.C3.A9todos_de_ubicaci.C3.B3n">Métodos de ubicación</h4>
+#### Métodos de ubicación
 
-<p>Estos métodos definen el punto de inicio y fin de un rango.</p>
+Estos métodos definen el punto de inicio y fin de un rango.
 
-<dl>
- <dt><a href="es/DOM/range.setStart">setStart</a></dt>
- <dd>Define la posición inicial de un rango.</dd>
- <dt><a href="es/DOM/range.setEnd">setEnd</a></dt>
- <dd>Define la posición final de un rango.</dd>
- <dt><a href="es/DOM/range.setStartBefore">setStartBefore</a></dt>
- <dd>Define la posición inicial de un rango relativa a otro nodo.</dd>
- <dt><a href="es/DOM/range.setStartAfter">setStartAfter</a></dt>
- <dd>Define la posición inicial de un rango relativa a otro nodo.</dd>
- <dt><a href="es/DOM/range.setEndBefore">setEndBefore</a></dt>
- <dd>Define la posición final de un rango relativa a otro nodo.</dd>
- <dt><a href="es/DOM/range.setEndAfter">setEndAfter</a></dt>
- <dd>Define la posición final de un rango relativa a otro nodo.</dd>
- <dt><a href="es/DOM/range.selectNode">selectNode</a></dt>
- <dd>Define el rango a contener el nodo y sus contenidos.</dd>
- <dt><a href="es/DOM/range.selectNodeContents">selectNodeContents</a></dt>
- <dd>Define el rango a contener los contenidos de un nodo.</dd>
- <dt><a href="es/DOM/range.collapse">collapse</a></dt>
- <dd>Pliega el Rango a uno de sus puntos límite.</dd>
-</dl>
+- [setStart](es/DOM/range.setStart)
+  - : Define la posición inicial de un rango.
+- [setEnd](es/DOM/range.setEnd)
+  - : Define la posición final de un rango.
+- [setStartBefore](es/DOM/range.setStartBefore)
+  - : Define la posición inicial de un rango relativa a otro nodo.
+- [setStartAfter](es/DOM/range.setStartAfter)
+  - : Define la posición inicial de un rango relativa a otro nodo.
+- [setEndBefore](es/DOM/range.setEndBefore)
+  - : Define la posición final de un rango relativa a otro nodo.
+- [setEndAfter](es/DOM/range.setEndAfter)
+  - : Define la posición final de un rango relativa a otro nodo.
+- [selectNode](es/DOM/range.selectNode)
+  - : Define el rango a contener el nodo y sus contenidos.
+- [selectNodeContents](es/DOM/range.selectNodeContents)
+  - : Define el rango a contener los contenidos de un nodo.
+- [collapse](es/DOM/range.collapse)
+  - : Pliega el Rango a uno de sus puntos límite.
 
-<h4 id="Editando_m.C3.A9todos" name="Editando_m.C3.A9todos">Editando métodos</h4>
+#### Editando métodos
 
-<p>Estos métodos recuperan nodos de un rango y modifican los contenidos de un rango.</p>
+Estos métodos recuperan nodos de un rango y modifican los contenidos de un rango.
 
-<dl>
- <dt><a href="es/DOM/range.cloneContents">cloneContents</a></dt>
- <dd>Devuelve un fragmento de documento copiando los nodos de un rango.</dd>
- <dt><a href="es/DOM/range.deleteContents">deleteContents</a></dt>
- <dd>Elimina del documento los contenidos de un rango.</dd>
- <dt><a href="es/DOM/range.extractContents">extractContents</a></dt>
- <dd>Mueve los contenidos de un rango del árbol de documento a un fragmento del documento.</dd>
- <dt><a href="es/DOM/range.insertNode">insertNode</a></dt>
- <dd>Inserta un nodo al comienzo de un rango.</dd>
- <dt><a href="es/DOM/range.surroundContents">surroundContents</a></dt>
- <dd>Mueve el contenido de un rango a un nodo nuevo.</dd>
-</dl>
+- [cloneContents](es/DOM/range.cloneContents)
+  - : Devuelve un fragmento de documento copiando los nodos de un rango.
+- [deleteContents](es/DOM/range.deleteContents)
+  - : Elimina del documento los contenidos de un rango.
+- [extractContents](es/DOM/range.extractContents)
+  - : Mueve los contenidos de un rango del árbol de documento a un fragmento del documento.
+- [insertNode](es/DOM/range.insertNode)
+  - : Inserta un nodo al comienzo de un rango.
+- [surroundContents](es/DOM/range.surroundContents)
+  - : Mueve el contenido de un rango a un nodo nuevo.
 
-<h4 id="Otros_m.C3.A9todos" name="Otros_m.C3.A9todos">Otros métodos</h4>
+#### Otros métodos
 
-<dl>
- <dt><a href="es/DOM/range.compareBoundaryPoints">compareBoundaryPoints</a></dt>
- <dd>Compara los puntos límite de dos rangos.</dd>
- <dt><a href="es/DOM/range.cloneRange">cloneRange</a></dt>
- <dd>Devuelve un objeto rango con puntos límites idénticos al rango clonado.</dd>
- <dt><a href="es/DOM/range.detach">detach</a></dt>
- <dd>Libera el Rango desde el uso para mejorar el rendimiento.</dd>
- <dt><a href="es/DOM/range.toString">toString</a></dt>
- <dd>Devuelve el texto del rango.</dd>
-</dl>
+- [compareBoundaryPoints](es/DOM/range.compareBoundaryPoints)
+  - : Compara los puntos límite de dos rangos.
+- [cloneRange](es/DOM/range.cloneRange)
+  - : Devuelve un objeto rango con puntos límites idénticos al rango clonado.
+- [detach](es/DOM/range.detach)
+  - : Libera el Rango desde el uso para mejorar el rendimiento.
+- [toString](es/DOM/range.toString)
+  - : Devuelve el texto del rango.
 
-<h4 id="M.C3.A9todos_de_Gecko" name="M.C3.A9todos_de_Gecko">Métodos de Gecko</h4>
+#### Métodos de Gecko
 
-<p>Esta sección describe métodos de <code>Range</code> que son particulares a Mozilla y no son parte de las especificaciones DOM W3C.</p>
+Esta sección describe métodos de `Range` que son particulares a Mozilla y no son parte de las especificaciones DOM W3C.
 
-<dl>
- <dt><a href="es/DOM/range.compareNode">compareNode</a> {{obsolete_inline}}</dt>
- <dd>Devuelve una constante representando si el nodo está antes, después, dentro o alrededor del rango.</dd>
- <dt><a href="es/DOM/range.comparePoint">comparePoint</a></dt>
- <dd>Devuelve -1, 0, or 1 indicando si el punto ocurre antes, dentro o después del rango.</dd>
- <dt><a href="es/DOM/range.createContextualFragment">createContextualFragment</a></dt>
- <dd>Devuelve un fragmenteo de documento creado de un texto de código.</dd>
- <dt><a href="es/DOM/range.intersectsNode">intersectsNode</a> {{obsolete_inline}}</dt>
- <dd>Devuelve un valor boleano verdadero si el nodo dado intersecta el rango.</dd>
- <dt><a href="es/DOM/range.isPointInRange">isPointInRange</a></dt>
- <dd>Devuelve un valor boleano verdadero indicando si el punto dado está en el rango.</dd>
-</dl>
+- [compareNode](es/DOM/range.compareNode) {{obsolete_inline}}
+  - : Devuelve una constante representando si el nodo está antes, después, dentro o alrededor del rango.
+- [comparePoint](es/DOM/range.comparePoint)
+  - : Devuelve -1, 0, or 1 indicando si el punto ocurre antes, dentro o después del rango.
+- [createContextualFragment](es/DOM/range.createContextualFragment)
+  - : Devuelve un fragmenteo de documento creado de un texto de código.
+- [intersectsNode](es/DOM/range.intersectsNode) {{obsolete_inline}}
+  - : Devuelve un valor boleano verdadero si el nodo dado intersecta el rango.
+- [isPointInRange](es/DOM/range.isPointInRange)
+  - : Devuelve un valor boleano verdadero indicando si el punto dado está en el rango.
 
-<p>{{ languages( { "en": "en/DOM/range", "fr": "fr/DOM/range", "ja": "ja/DOM/range", "pl": "pl/DOM/range" } ) }}</p>
+{{ languages( { "en": "en/DOM/range", "fr": "fr/DOM/range", "ja": "ja/DOM/range", "pl": "pl/DOM/range" } ) }}

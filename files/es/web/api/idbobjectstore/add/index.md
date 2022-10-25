@@ -11,38 +11,56 @@ tags:
   - Referencia
 translation_of: Web/API/IDBObjectStore/add
 ---
-<p>{{ APIRef("IDBObjectStore") }}</p>
-<div>
- <p>El metodo <code>add()</code> de la interfaz {{domxref("IDBObjectStore")}} retorna un objeto {{domxref("IDBRequest")}}, y, un hilo separado, crea un <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">clone estructurado</a> del valor, y almacena el valor clonado en el almacén de objetos. Esto es para agregar nevos registros a un almacén de objetos.</p>
- <p>Para determinar si la operación de agregar fue completada satisfactoriamente, escucha el evento <code>complete</code> de la transaccion en adicion al evento <code>success</code> de la peticion <code>IDBojectStore.add</code>, porque la transaccion y todavía puede fallar después de lanzar el evento success. En otras palabras, el eventos success sólo es lanzado cuando la transacción ha sido puesta en cola satisfactoriamente.</p>
- <p>El método agregar es un método de <em>sólo inserción</em>. Si un registro ya existe en el almacén de objetos con el argumento <code>key</code> como su clave, entonces un error <code>ConstrainError</code> es lanzado en el objeto petición devuelto. Para actualizar registros existentes, debes usar el método {{domxref("IDBObjectStore.put")}} en su lugar.</p>
-</div>
-<h2 id="Sintaxis">Sintaxis</h2>
-<pre class="brush: js">var request = objectStore.add(myItem, optionalKey);</pre>
-<h3 id="Retorno">Retorno</h3>
-<p>Un objeto <span style="line-height: 1.5;">{{domxref("IDBRequest")}} en el que los eventos subsecuentes relacionados a esta operación son lanzados.</span></p>
-<h3 id="Excepciones">Excepciones</h3>
-<p>Este método puede generar un <span style="line-height: 1.5;">{{domxref("DOMException")}}</span> con un <span style="line-height: 1.5;">{{domxref("DOMError")}}</span> de uno de los siguiente tipos:</p>
+{{ APIRef("IDBObjectStore") }}
 
-<dl>
-  <dt><code>ReadOnlyError</code></dt><dd>La transacción asociada con esta operación está en un <a href="/en-US/docs/Web/API/IDBTransaction#mode_constants" title="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">modo</a> de sólo lectura.</dd><dt><code>TransactionInactiveError</code></dt><dd>Esta transacción de <a href="/es/docs/Web/API/IDBObjectStore"><code>IDBObjectStore</code></a>'s está inactiva.</dd><dt><code><span style="line-height: normal;">DataError</span></code></dt><dd>
-  <p>Cualquiera de los siguientes condiciones aplica:</p>
-  <ul>
-   <li>El almacén de objetos usa llaves en línea o tiene un generador de llaves, y una argumento llave fue proporcionado.</li>
-   <li>El almacén de objetos usa llaves fuera de línea y no tiene un generador de llaves, y un argumento llave fue proporcionado.</li>
-   <li>El almacén de objetos usa llaves en línea pero no un generador de llaves, y la ruta de la llave del almacén de objetos no da una llave válida.</li>
-   <li>El argumento llave fue proporcionado pero no contiene una llave válida.</li>
-  </ul>
- </dd><dt><code>InvalidStateError</code></dt><dd>El <a href="/es/docs/Web/API/IDBObjectStore"><code>IDBObjectStore</code></a> ha sido borrado o removido.</dd><dt><code>DataCloneError</code></dt><dd>Los datos siendo almacenados no pueden ser clonados por el algoritmo de clonado estructurado interno.</dd>
-</dl>
+El metodo `add()` de la interfaz {{domxref("IDBObjectStore")}} retorna un objeto {{domxref("IDBRequest")}}, y, un hilo separado, crea un [clone estructurado](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) del valor, y almacena el valor clonado en el almacén de objetos. Esto es para agregar nevos registros a un almacén de objetos.
 
-<h2 id="Ejemplo">Ejemplo</h2>
-<p>En el siguiente código, abrimos una transacción read/write en nuestra base de datos y agregado algunos datos al almacén de datos usando <code>add()</code>. También ten en cuenta que las funciones adjuntas a los manejadores de eventos de la transacción para informar en la salida de la apertura de transacciones en el evento de éxito o falla. Para un ejemplo completo funcionando, mira nuestra aplicación <a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> (</span><a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">ver ejemplo</a><span style="line-height: 1.5;">)</span>.</p>
-<pre class="brush: js" style="font-size: 14px;">// Abrimos nuestra base de datos
-<span style="line-height: 1.5;">var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+Para determinar si la operación de agregar fue completada satisfactoriamente, escucha el evento `complete` de la transaccion en adicion al evento `success` de la peticion `IDBojectStore.add`, porque la transaccion y todavía puede fallar después de lanzar el evento success. En otras palabras, el eventos success sólo es lanzado cuando la transacción ha sido puesta en cola satisfactoriamente.
 
-</span><span style="line-height: 1.5;">DBOpenRequest.onsuccess = function(event) {</span>
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+El método agregar es un método de _sólo inserción_. Si un registro ya existe en el almacén de objetos con el argumento `key` como su clave, entonces un error `ConstrainError` es lanzado en el objeto petición devuelto. Para actualizar registros existentes, debes usar el método {{domxref("IDBObjectStore.put")}} en su lugar.
+
+## Sintaxis
+
+```js
+var request = objectStore.add(myItem, optionalKey);
+```
+
+### Retorno
+
+Un objeto {{domxref("IDBRequest")}} en el que los eventos subsecuentes relacionados a esta operación son lanzados.
+
+### Excepciones
+
+Este método puede generar un {{domxref("DOMException")}} con un {{domxref("DOMError")}} de uno de los siguiente tipos:
+
+- `ReadOnlyError`
+  - : La transacción asociada con esta operación está en un [modo](/es/docs/Web/API/IDBTransaction#mode_constants "/en-US/docs/IndexedDB/IDBTransaction#mode_constants") de sólo lectura.
+- `TransactionInactiveError`
+  - : Esta transacción de [`IDBObjectStore`](/es/docs/Web/API/IDBObjectStore)'s está inactiva.
+- `DataError`
+
+  - : Cualquiera de los siguientes condiciones aplica:
+
+    - El almacén de objetos usa llaves en línea o tiene un generador de llaves, y una argumento llave fue proporcionado.
+    - El almacén de objetos usa llaves fuera de línea y no tiene un generador de llaves, y un argumento llave fue proporcionado.
+    - El almacén de objetos usa llaves en línea pero no un generador de llaves, y la ruta de la llave del almacén de objetos no da una llave válida.
+    - El argumento llave fue proporcionado pero no contiene una llave válida.
+
+- `InvalidStateError`
+  - : El [`IDBObjectStore`](/es/docs/Web/API/IDBObjectStore) ha sido borrado o removido.
+- `DataCloneError`
+  - : Los datos siendo almacenados no pueden ser clonados por el algoritmo de clonado estructurado interno.
+
+## Ejemplo
+
+En el siguiente código, abrimos una transacción read/write en nuestra base de datos y agregado algunos datos al almacén de datos usando `add()`. También ten en cuenta que las funciones adjuntas a los manejadores de eventos de la transacción para informar en la salida de la apertura de transacciones en el evento de éxito o falla. Para un ejemplo completo funcionando, mira nuestra aplicación [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([ver ejemplo](http://mdn.github.io/to-do-notifications/)).
+
+```js
+// Abrimos nuestra base de datos
+var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+
+DBOpenRequest.onsuccess = function(event) {
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // Almacenar el resultado de la apertura de la base de datos en la variable db. Esta es usada mucho después
   db = DBOpenRequest.result;
@@ -60,12 +78,12 @@ function addData() {
 
   // Informa sobre el éxito de la inicio de la transacción
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction completed: database modification finished.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
   };
 
 
   transaction.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Transaction not opened due to error. Duplicate items not allowed.&lt;/li&gt;';
+  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
   };
 
   // Crea una almacén de objetos en la transacción
@@ -76,46 +94,34 @@ function addData() {
 
   objectStoreRequest.onsuccess = function(event) {
     //Informa sobre el éxito de nuestro nuevo elemento en la base de datos
-    note.innerHTML += '&lt;li&gt;New item added to database.&lt;/li&gt;';
+    note.innerHTML += '<li>New item added to database.</li>';
   };
-};</pre>
-<h2 id="Parámetros">Parámetros</h2>
-<dl>
- <dt>
-  value</dt>
- <dd>
-  El valor para ser almacenado.</dd>
- <dt>
-  key</dt>
- <dd>
-  La llave a usar para identificar el registro. Si no es especificada, el resultado es nulo.</dd>
-</dl>
-<h2 id="Especificación"><span style="font-size: 2.14285714285714rem;">Especificación</span></h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBObjectStore-add-IDBRequest-any-value-any-key', 'add()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de navegadores</h2>
-<div>
+};
+```
+
+## Parámetros
+
+- value
+  - : El valor para ser almacenado.
+- key
+  - : La llave a usar para identificar el registro. Si no es especificada, el resultado es nulo.
+
+## Especificación
+
+| Especificación                                                                                                           | Estado                       | Comentario |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-add-IDBRequest-any-value-any-key', 'add()')}} | {{Spec2('IndexedDB')}} |            |
+
+## Compatibilidad de navegadores
+
 {{Compat("api.IDBObjectStore.add")}}
 
-<h2 id="Ver_también">Ver también</h2>
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Usando IndexedDB</a></li>
- <li>Iniciando transacciones: {{domxref("IDBDatabase")}}</li>
- <li>Usando transacciones: {{domxref("IDBTransaction")}}</li>
- <li>Estableciendo un rango de llaves: {{domxref("IDBKeyRange")}}</li>
- <li>Obteniendo y haciendo cambios a tus datos: {{domxref("IDBObjectStore")}}</li>
- <li>Usando cursores: {{domxref("IDBCursor")}}</li>
- <li>Ejemplo de referencia: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">ver ejemplo</a>.)</li>
-</ul>
+## Ver también
+
+- [Usando IndexedDB](/es/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Iniciando transacciones: {{domxref("IDBDatabase")}}
+- Usando transacciones: {{domxref("IDBTransaction")}}
+- Estableciendo un rango de llaves: {{domxref("IDBKeyRange")}}
+- Obteniendo y haciendo cambios a tus datos: {{domxref("IDBObjectStore")}}
+- Usando cursores: {{domxref("IDBCursor")}}
+- Ejemplo de referencia: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([ver ejemplo](http://mdn.github.io/to-do-notifications/).)

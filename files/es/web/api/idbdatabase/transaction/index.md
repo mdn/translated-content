@@ -9,67 +9,45 @@ tags:
   - transacción
 translation_of: Web/API/IDBDatabase/transaction
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-<p>El método <strong><code>transaction()</code></strong> <em><strong><code>[transacción]</code></strong></em> de la interfaz {{domxref("IDBDatabase")}} retorna inmediatamente un objeto de transacción<span style="line-height: 1.5;"> ({{domxref("IDBTransaction")}}) que contiene el método {{domxref("IDBTransaction.objectStore")}}, el cual puedes usar para acceder a tu almacén de objetos.</span></p>
+El método **`transaction()`** _**`[transacción]`**_ de la interfaz {{domxref("IDBDatabase")}} retorna inmediatamente un objeto de transacción ({{domxref("IDBTransaction")}}) que contiene el método {{domxref("IDBTransaction.objectStore")}}, el cual puedes usar para acceder a tu almacén de objetos.
 
-<p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Sintáxis">Sintáxis</h2>
+## Sintáxis
 
-<pre class="brush: js">var transaccion = db.transaction(["toDoList"], "readwrite");</pre>
+```js
+var transaccion = db.transaction(["toDoList"], "readwrite");
+```
 
-<h3 id="Retorna">Retorna</h3>
+### Retorna
 
-<p>Un objeto {{domxref("IDBTransaction")}}.</p>
+Un objeto {{domxref("IDBTransaction")}}.
 
-<h3 id="Excepciones">Excepciones</h3>
+### Excepciones
 
-<p>Éste método puede invocar una excepción {{domxref("DOMException")}} de alguno de los siguientes tipos:</p>
+Éste método puede invocar una excepción {{domxref("DOMException")}} de alguno de los siguientes tipos:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Excepción</th>
-   <th scope="col">Descripción</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="/en-US/docs/">InvalidStateError</a></code></td>
-   <td>
-    <p>El método <code>close()</code> ha sido llamado previamente en esta instancia de {{domxref("IDBDatabase")}}.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>NotFoundError</code></td>
-   <td>Un almacén de objetos especificado en el parámetro <code>storeNames</code> ha sido borrado o removido.</td>
-  </tr>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td>El valor para el parámetro <code>mode</code> es inválido.</td>
-  </tr>
-  <tr>
-   <td><code>InvalidAccessError</code></td>
-   <td>La función fue llamada con una lista vacía de nombres de almacenes.<br>
-     </td>
-  </tr>
- </tbody>
-</table>
+| Excepción                           | Descripción                                                                                                |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| [`InvalidStateError`](/en-US/docs/) | El método `close()` ha sido llamado previamente en esta instancia de {{domxref("IDBDatabase")}}. |
+| `NotFoundError`                     | Un almacén de objetos especificado en el parámetro `storeNames` ha sido borrado o removido.                |
+| `TypeError`                         | El valor para el parámetro `mode` es inválido.                                                             |
+| `InvalidAccessError`                | La función fue llamada con una lista vacía de nombres de almacenes.                                        |
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>En este ejemplo abrimos la conexión a una base de datos, luego usamos <code>transaction()</code> para abrir una transacción en dicha base de datos. Para un ejemplo completo, vea nuestra aplicación <a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a> <span style="line-height: 1.5;">(</span><a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">ver ejemplo en vivo</a><span style="line-height: 1.5;">).</span></p>
+En este ejemplo abrimos la conexión a una base de datos, luego usamos `transaction()` para abrir una transacción en dicha base de datos. Para un ejemplo completo, vea nuestra aplicación [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([ver ejemplo en vivo](http://mdn.github.io/to-do-notifications/)).
 
-<pre class="brush: js">var db;
+```js
+var db;
 
 // Abrimos nuestra base de datos:
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Base de datos inicializada.&lt;/li&gt;';
+  note.innerHTML += '<li>Base de datos inicializada.</li>';
 
   // almacenar el resultado de la apertura de la base de datos en la variable db. Esto es bastante usado más abajo:
   db = DBOpenRequest.result;
@@ -84,70 +62,68 @@ var transaction = db.transaction(["toDoList"], "readwrite");
 
 // reportar cuando haya éxito al abrir la transacción
 transaction.oncomplete = function(event) {
-  note.innerHTML += '&lt;li&gt;Transacción completa: modificación a la base de datos finalizada.&lt;/li&gt;';
+  note.innerHTML += '<li>Transacción completa: modificación a la base de datos finalizada.</li>';
 };
 
 transaction.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Transacción no abierta debido a un error. No se permite duplicar ítems.&lt;/li&gt;';
+  note.innerHTML += '<li>Transacción no abierta debido a un error. No se permite duplicar ítems.</li>';
 };
 
 // después deberías continuar y hacerle algo a esta base de datos a través del almacén de objetos:
 var objectStore = transaction.objectStore("toDoList");
-// etc.</pre>
+// etc.
+```
 
-<h2 id="Parámetros">Parámetros</h2>
+## Parámetros
 
-<dl>
- <dt>storeNames</dt>
- <dd>Son los nombres de los almacenes de objetos e índices que están en el ámbito de la nueva transacción, declarados como un arreglo de cadenas de texto. Especifíca solamente aquellos a los que necesitas acceso.<br>
-   Si necesitas acceder a un solo almacén, puedes especificar su nombre como una cadena. Por tanto las siguientes líneas son equivalentes:<br><br>
- <pre><code class="brush:js;">var transaction = db.transaction(['my-store-name']);
-var transaction = db.transaction('my-store-name');</code></pre><br><br>
- Si necesitas acceder a todos los almacenes de objetos en la base de datos, puedes usar la propiedad {{domxref("IDBDatabase.objectStoreNames")}}:
- <pre><code class="brush:js;">var transaction = db.transaction(db.objectStoreNames);</code></pre><br><br>
- Pasar un arreglo vació como parámetro  arrojará una excepción.</dd>
- <dt>mode</dt>
- <dd><em>Opcional</em>. Los tipos de acceso que pueden desempeñarse en la transacción. Las transacciones son abiertas en uno de tres modos: <code>readonly <em>[sólo lectura], </em>readwrite <em>[lectura/escritura],</em></code> y <code>readwriteflush <em>[descarga de lectura/escritura]</em></code> (no-estándar, sólo para Firefox). El modo <code>versionchange <em>[cambio de versión] </em></code>no puede ser especificado aquí. Si no provees un parámetro, el modo predeterminado será <code>readonly <em>[sólo lectura]</em></code>. Para evitar ralentizar las cosas, no abras una transacción <code>readwrite <em>[lectura/escritura]</em></code> a menos que realmente necesites escribir en la base de datos.<br><br>
- Si necesitas abrir un almacén de objetos en modo <code>readwrite</code> para cambiar los datos, usa lo siguiente:
- <pre class="brush:js;">var transaction = db.transaction('my-store-name', "readwrite");</pre>
+- storeNames
 
- <p>Desde Firefox 40, las transacciones de IndexedDB tienen garantías de durabilidad relajadas para aumentar el rendimiento (ver {{Bug("1112702")}}), lo cual es el mismo comportamiento de otros navegadores que soportan IndexedDB. Es decir, anteriormente en una transacción <code>readwrite</code> el evento {{domxref("IDBTransaction.oncomplete")}} era invocado sólo cuando se garantizaba que todos los datos habían sido vaciados al disco duro. En Firefox 40+ el evento <code>complete</code> es accionado después de indicársele al Sistema Operativo que escriba los datos al disco pero esta confirmación podría suceder poco antes de que los datos hayan sido verdaderamente escritos en él. Si bien dicho evento puede entonces ser entregado un poco antes de tiempo, de cualquier modo, existe una pequeña probabilidad de que la entera transacción se pierda si el SO se bloquea o si ha ocurrido una pérdida de energía antes de que los datos efectivamente se descarguen al disco duro. Como esas catastróficas circunstancias son más bien raras, la mayoría de los consumidores no deberían preocuparse demasiado.</p>
+  - : Son los nombres de los almacenes de objetos e índices que están en el ámbito de la nueva transacción, declarados como un arreglo de cadenas de texto. Especifíca solamente aquellos a los que necesitas acceso.
+    Si necesitas acceder a un solo almacén, puedes especificar su nombre como una cadena. Por tanto las siguientes líneas son equivalentes:
 
- <div class="note">
- <p><strong>Nota</strong>: En Firefox, si deseas asegurar la durabilidad por alguna razón (por ejemplo, que estés almacenando datos críticos que no puedan ser recalculados después) puedes forzar una transacción a descargar al disco antes de invocar el evento <code>complete</code> creando una transacción que use un modo experimental <code>readwriteflush</code>  (no-estándar) (ver {{domxref("IDBDatabase.transaction")}}). Esto actualmente es experimental, y puede usarse únicamente si la configuración <code>dom.indexedDB.experimental</code> es igual a <code>true</code> en <code>about:config</code>.</p>
- </div>
- </dd>
-</dl>
+    ```
+    var transaction = db.transaction(['my-store-name']);
+    var transaction = db.transaction('my-store-name');
+    ```
 
-<h2 id="Especificación"><span style="font-size: 2.14285714285714rem;">Especificación</span></h2>
+    Si necesitas acceder a todos los almacenes de objetos en la base de datos, puedes usar la propiedad {{domxref("IDBDatabase.objectStoreNames")}}:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBDatabase-transaction-IDBTransaction-DOMString-sequence-DOMString--storeNames-IDBTransactionMode-mode', 'transaction()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+    ```
+    var transaction = db.transaction(db.objectStoreNames);
+    ```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con Navegadores</h2>
+    Pasar un arreglo vació como parámetro arrojará una excepción.
+
+- mode
+
+  - : _Opcional_. Los tipos de acceso que pueden desempeñarse en la transacción. Las transacciones son abiertas en uno de tres modos: `readonly [sólo lectura], readwrite [lectura/escritura],` y `readwriteflush [descarga de lectura/escritura]` (no-estándar, sólo para Firefox). El modo `versionchange [cambio de versión] `no puede ser especificado aquí. Si no provees un parámetro, el modo predeterminado será `readonly [sólo lectura]`. Para evitar ralentizar las cosas, no abras una transacción `readwrite [lectura/escritura]` a menos que realmente necesites escribir en la base de datos.
+
+    Si necesitas abrir un almacén de objetos en modo `readwrite` para cambiar los datos, usa lo siguiente:
+
+    ```js
+    var transaction = db.transaction('my-store-name', "readwrite");
+    ```
+
+    Desde Firefox 40, las transacciones de IndexedDB tienen garantías de durabilidad relajadas para aumentar el rendimiento (ver {{Bug("1112702")}}), lo cual es el mismo comportamiento de otros navegadores que soportan IndexedDB. Es decir, anteriormente en una transacción `readwrite` el evento {{domxref("IDBTransaction.oncomplete")}} era invocado sólo cuando se garantizaba que todos los datos habían sido vaciados al disco duro. En Firefox 40+ el evento `complete` es accionado después de indicársele al Sistema Operativo que escriba los datos al disco pero esta confirmación podría suceder poco antes de que los datos hayan sido verdaderamente escritos en él. Si bien dicho evento puede entonces ser entregado un poco antes de tiempo, de cualquier modo, existe una pequeña probabilidad de que la entera transacción se pierda si el SO se bloquea o si ha ocurrido una pérdida de energía antes de que los datos efectivamente se descarguen al disco duro. Como esas catastróficas circunstancias son más bien raras, la mayoría de los consumidores no deberían preocuparse demasiado.
+
+    > **Nota:** En Firefox, si deseas asegurar la durabilidad por alguna razón (por ejemplo, que estés almacenando datos críticos que no puedan ser recalculados después) puedes forzar una transacción a descargar al disco antes de invocar el evento `complete` creando una transacción que use un modo experimental `readwriteflush` (no-estándar) (ver {{domxref("IDBDatabase.transaction")}}). Esto actualmente es experimental, y puede usarse únicamente si la configuración `dom.indexedDB.experimental` es igual a `true` en `about:config`.
+
+## Especificación
+
+| Especificación                                                                                                                                                                                                   | Estado                       | Comentario |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
+| {{SpecName('IndexedDB', '#widl-IDBDatabase-transaction-IDBTransaction-DOMString-sequence-DOMString--storeNames-IDBTransactionMode-mode', 'transaction()')}} | {{Spec2('IndexedDB')}} |            |
+
+## Compatibilidad con Navegadores
 
 {{Compat("api.IDBDatabase.transaction")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Usando IndexedDB</a></li>
- <li>Iniciando transacciones: {{domxref("IDBDatabase")}}</li>
- <li>Usando transacciones: {{domxref("IDBTransaction")}}</li>
- <li>Configurar un rango de llaves: {{domxref("IDBKeyRange")}}</li>
- <li>Recuperando y haciendo cambios a tus datos: {{domxref("IDBObjectStore")}}</li>
- <li>Usando cursores: {{domxref("IDBCursor")}}</li>
- <li>Ejemplo de referencia: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">ver ejemplo en vivo</a>).</li>
-</ul>
+- [Usando IndexedDB](/es/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Iniciando transacciones: {{domxref("IDBDatabase")}}
+- Usando transacciones: {{domxref("IDBTransaction")}}
+- Configurar un rango de llaves: {{domxref("IDBKeyRange")}}
+- Recuperando y haciendo cambios a tus datos: {{domxref("IDBObjectStore")}}
+- Usando cursores: {{domxref("IDBCursor")}}
+- Ejemplo de referencia: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([ver ejemplo en vivo](http://mdn.github.io/to-do-notifications/)).

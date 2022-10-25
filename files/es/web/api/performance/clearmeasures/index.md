@@ -8,34 +8,34 @@ tags:
   - metodo
 translation_of: Web/API/Performance/clearMeasures
 ---
-<div>{{APIRef("User Timing API")}}</div>
+{{APIRef("User Timing API")}}
 
-<p>El método <strong><code>clearMeasures()</code></strong> elimina <em>la medida llamada </em>del búfer de rendimiento de entrada, si el método es llamado sin argumentos, todos los {{domxref("PerformanceEntry","performance entries")}} con un {{domxref("PerformanceEntry.entryType","entry type")}} de "<code>measure</code>" serán eliminados del búfer de rendimiento de entrada.</p>
+El método **`clearMeasures()`** elimina _la medida llamada_ del búfer de rendimiento de entrada, si el método es llamado sin argumentos, todos los {{domxref("PerformanceEntry","performance entries")}} con un {{domxref("PerformanceEntry.entryType","entry type")}} de "`measure`" serán eliminados del búfer de rendimiento de entrada.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><em>performance</em>.clearMeasures();
-<em>performance</em>.clearMeasures(name);
-</pre>
+```
+performance.clearMeasures();
+performance.clearMeasures(name);
+```
 
-<h3 id="Argumentos">Argumentos</h3>
+### Argumentos
 
-<dl>
- <dt>nombre {{optional_inline}}</dt>
- <dd>Un {{domxref("DOMString")}} representando el nombre de la marca de tiempo. Si el argumento se omite, todos los {{domxref("PerformanceEntry","performance entries")}} con un {{domxref("PerformanceEntry.entryType","entry type")}} de "<code>measure</code>" serán eliminados.</dd>
-</dl>
+- nombre {{optional_inline}}
+  - : Un {{domxref("DOMString")}} representando el nombre de la marca de tiempo. Si el argumento se omite, todos los {{domxref("PerformanceEntry","performance entries")}} con un {{domxref("PerformanceEntry.entryType","entry type")}} de "`measure`" serán eliminados.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
 Ninguno
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>En el siguiente ejemplo se muestran los dos usos del método <code>clearMeasures()</code> .</p>
+En el siguiente ejemplo se muestran los dos usos del método `clearMeasures()` .
 
-<pre class="brush: js">// Create a small helper to show how many PerformanceMeasure entries there are.
+```js
+// Create a small helper to show how many PerformanceMeasure entries there are.
 function logMeasureCount() {
   console.log(
     "Found this many entries: " + performance.getEntriesByType("measure").length
@@ -60,34 +60,15 @@ logMeasureCount() // "Found this many entries: 3"
 // Delete all of the PerformanceMeasure entries.
 performance.clearMeasures();
 logMeasureCount() // "Found this many entries: 0"
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('User Timing Level 2', '#dom-performance-clearmeasures', 'clearMeasures()')}}</td>
-   <td>{{Spec2('User Timing Level 2')}}</td>
-   <td>Se clarifica <code>clearMeasures()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('User Timing', '#dom-performance-clearmeasures', 'clearMeasures()')}}</td>
-   <td>{{Spec2('User Timing')}}</td>
-   <td>Definición básica.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                       | Estado                                       | Comentario                      |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------- |
+| {{SpecName('User Timing Level 2', '#dom-performance-clearmeasures', 'clearMeasures()')}} | {{Spec2('User Timing Level 2')}} | Se clarifica `clearMeasures()`. |
+| {{SpecName('User Timing', '#dom-performance-clearmeasures', 'clearMeasures()')}}         | {{Spec2('User Timing')}}             | Definición básica.              |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
-<div>
-
-
-<p>{{Compat("api.Performance.clearMeasures")}}</p>
-</div>
+{{Compat("api.Performance.clearMeasures")}}

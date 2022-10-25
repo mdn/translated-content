@@ -12,45 +12,46 @@ tags:
   - metodo
 translation_of: Web/API/IDBCursor/continue
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<p><strong><code>El siguiente()</code></strong> método de la  {{domxref("IDBCursor")}} interfaz, avanza el cursor hacia la siguiente posición a lo largo de su dirección, para el elemento cuya tecla marque la opción de una tecla parámetro. si ninguna tecla es especificada, el cursor avanzará hacia la siguiente posición, bazado en su dirección actual.</p>
+**`El siguiente()`** método de la {{domxref("IDBCursor")}} interfaz, avanza el cursor hacia la siguiente posición a lo largo de su dirección, para el elemento cuya tecla marque la opción de una tecla parámetro. si ninguna tecla es especificada, el cursor avanzará hacia la siguiente posición, bazado en su dirección actual.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: js">cursor.continue(<em>optionalKey</em>);</pre>
+```js
+cursor.continue(optionalKey);
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><em>Tecla opcional</em></dt>
- <dd>La tecla para posisionar al cursor en.</dd>
-</dl>
+- _Tecla opcional_
+  - : La tecla para posisionar al cursor en.
 
-<h3 id="Excepciones"><span style="line-height: 1.5;">Excepciones</span></h3>
+### Excepciones
 
-<p>Este método puede plantear un{{domxref("DOMException")}} con una {{domxref("DOMError")}} de uno de los siguientes tipos:</p>
+Este método puede plantear un{{domxref("DOMException")}} con una {{domxref("DOMError")}} de uno de los siguientes tipos:
 
-<dl>
-  <dt><code>TransactionInactiveError</code></dt><dd>Esta transacción en el Cursor IDB está inactiva.</dd><dt><code>DataError</code></dt><dd>
-  <p>El parámetro de una tecla podría tener una de las siguientes condiciones:</p>
+- `TransactionInactiveError`
+  - : Esta transacción en el Cursor IDB está inactiva.
+- `DataError`
 
-  <ul>
-   <li>La tecla no es una tecla valida.</li>
-   <li>La tecla está más atrás o en el mismo sitio que la posición del cursor y además la dirección del cursor es la siguiente o la única siguiente.</li>
-   <li>La tecla está más adelante o en el mismo sitio que la posición del cursor y además la dirección del cursor es previa o la única previa.</li>
-  </ul>
- </dd><dt><code>InvalidStateError</code></dt><dd>El cursor está siendo reiterado o se ha reiterado mas allá de su final.<br>
-   </dd>
-</dl>
+  - : El parámetro de una tecla podría tener una de las siguientes condiciones:
 
-<h2 id="Ejemplo">Ejemplo</h2>
+    - La tecla no es una tecla valida.
+    - La tecla está más atrás o en el mismo sitio que la posición del cursor y además la dirección del cursor es la siguiente o la única siguiente.
+    - La tecla está más adelante o en el mismo sitio que la posición del cursor y además la dirección del cursor es previa o la única previa.
 
-<p>En este simple fragmento nosotros creamos una transacción, recuperar un objeto del almacen, despues usamos un cursor para interactuar a traves de todos los registros en almacen de objetos. El cursor no requiere que nosotros seleccionemos los datos basados en una tecla; podemos tomarlo todo. También es importante resaltar que en cada interacción de la cadena, puedes tomar datos desde el registro actual debajo del objeto del cursor usando<code> </code><code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code><span style="line-height: 1.5;">. Para dar un ejemplo completo, puedes mirar nuestra <a href="https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/">IDBCursor example</a></span><span style="line-height: 1.5;"> (</span><a href="https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+- `InvalidStateError`
+  - : El cursor está siendo reiterado o se ha reiterado mas allá de su final.
 
-<pre style="font-size: 14px;"><span style="line-height: 1.5;">function displayData() {</span>
+## Ejemplo
+
+En este simple fragmento nosotros creamos una transacción, recuperar un objeto del almacen, despues usamos un cursor para interactuar a traves de todos los registros en almacen de objetos. El cursor no requiere que nosotros seleccionemos los datos basados en una tecla; podemos tomarlo todo. También es importante resaltar que en cada interacción de la cadena, puedes tomar datos desde el registro actual debajo del objeto del cursor usando` ``cursor.value.foo`. Para dar un ejemplo completo, puedes mirar nuestra [IDBCursor example](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/) ([view example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/).)
+
+```
+function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
   var objectStore = transaction.objectStore('rushAlbumList');
 
@@ -66,39 +67,25 @@ translation_of: Web/API/IDBCursor/continue
       console.log('Entries all displayed.');
     }
   };
-};</pre>
+};
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBCursor-continue-void-any-key', 'continue()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Estado                       | Comentarios |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
+| {{SpecName('IndexedDB', '#widl-IDBCursor-continue-void-any-key', 'continue()')}} | {{Spec2('IndexedDB')}} |             |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
 {{Compat("api.IDBCursor.continue")}}
 
-<h2 id="Te_puede_interesar">Te puede interesar</h2>
+## Te puede interesar
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
-
-<p> </p>
+- [Using IndexedDB](/es/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

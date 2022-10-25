@@ -10,44 +10,44 @@ tags:
   - Web
 translation_of: Web/API/NodeList/forEach
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>El método<strong><code>forEach()</code></strong> de la interfase{{domxref("NodeList")}} llama a la función callback proporcionada como parámetro una vez para cadapar de valores en la lista, en el orden en que se insertaron.</p>
+El método**`forEach()`** de la interfase{{domxref("NodeList")}} llama a la función callback proporcionada como parámetro una vez para cadapar de valores en la lista, en el orden en que se insertaron.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>nodeList.</em>forEach<em>(callback[, thisArg]);</em>
-</pre>
+```
+nodeList.forEach(callback[, thisArg]);
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Función a ser ejecutada paracada elemento, tomando eventualmente 3 argumentos:
- <dl>
-  <dt><em><code>currentValue</code></em></dt>
-  <dd>El valor que esta siendo procesado en la lista de nodos.</dd>
-  <dt><code><em>currentIndex</em></code></dt>
-  <dd>El índice del elemento que esta siendo procesado en la lista de nodos.</dd>
-  <dt><em><code>listObj</code></em></dt>
-  <dd>El objeto NodeList al que se está aplicando el método<code>forEach()</code>.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code><code> {{Optional_inline}}</code></dt>
- <dd>Valor a ser usado como {{jsxref("this")}} al ejecutar<code>callback</code>.</dd>
-</dl>
+- `callback`
 
-<h3 id="Valor_Retornado">Valor Retornado</h3>
+  - : Función a ser ejecutada paracada elemento, tomando eventualmente 3 argumentos:
 
-<p>{{jsxref('undefined')}}.</p>
+    - _`currentValue`_
+      - : El valor que esta siendo procesado en la lista de nodos.
+    - `currentIndex`
+      - : El índice del elemento que esta siendo procesado en la lista de nodos.
+    - _`listObj`_
+      - : El objeto NodeList al que se está aplicando el método`forEach()`.
 
-<h2 id="Excepciones">Excepciones</h2>
+- ` thisArg`` {{Optional_inline}} `
+  - : Valor a ser usado como {{jsxref("this")}} al ejecutar`callback`.
 
-<p><em>Ninguna</em>.</p>
+### Valor Retornado
 
-<h2 id="Ejemplo">Ejemplo</h2>
+{{jsxref('undefined')}}.
 
-<pre class="">var nodo = document.createElement("div");
+## Excepciones
+
+_Ninguna_.
+
+## Ejemplo
+
+```
+var nodo = document.createElement("div");
 var infante1 = document.createElement("p");
 var infante2 = document.createTextNode("hey");
 var infante3 = document.createElement("span");
@@ -63,70 +63,56 @@ list.forEach(
     console.log(currentValue + ', ' + currentIndex + ', ' + this);
   },
   'miEsteArg'
-);</pre>
+);
+```
 
-<p>resulta en:</p>
+resulta en:
 
-<pre>[object HTMLParagraphElement], 0, miEsteArg
+```
+[object HTMLParagraphElement], 0, miEsteArg
 [object Text], 1, miEsteArg
-[object HTMLSpanElement], 2, miEsteArg</pre>
+[object HTMLSpanElement], 2, miEsteArg
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Este {{Glossary("Polyfill","polyfill")}} le da compatibilidad a todos los navegadores que soportan <a href="https://caniuse.com/#search=es5">ES5</a>:</p>
+Este {{Glossary("Polyfill","polyfill")}} le da compatibilidad a todos los navegadores que soportan [ES5](https://caniuse.com/#search=es5):
 
-<pre class="brush: js">if (window.NodeList &amp;&amp; !NodeList.prototype.forEach) {
+```js
+if (window.NodeList && !NodeList.prototype.forEach) {
    NodeList.prototype.forEach = function (callback, thisArg) {
         thisArg = thisArg || window;
-       for (var i = 0; i &lt; this.length; i++) {
+       for (var i = 0; i < this.length; i++) {
            callback.call(thisArg, this[i], i, this);
        }
     };
-}</pre>
+}
+```
 
-<p>ó</p>
+ó
 
-<pre class="brush: js">if (window.NodeList &amp;&amp; !NodeList.prototype.forEach) {
+```js
+if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = Array.prototype.forEach;
-}</pre>
+}
+```
 
-<p>El comportamiento ateriror esta implementado en muchos navegadores. NodeList.prototype.forEach (Chrome, Firefox for example).</p>
+El comportamiento ateriror esta implementado en muchos navegadores. NodeList.prototype.forEach (Chrome, Firefox for example).
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>Especificación</p>
+Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"></th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td>Define<code>NodeList</code> como<code>&lt;Nodo&gt;iterable</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("WebIDL", "#es-forEach", "forEach")}}</td>
-   <td>{{Spec2("WebIDL")}}</td>
-   <td>Define<code>forEach</code>en declaraciones<code>iterables</code></td>
-  </tr>
- </tbody>
-</table>
+|                                                                                  | Status                           | Comentarios                                |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------ |
+| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}} | {{ Spec2('DOM WHATWG') }} | Define`NodeList` como`<Nodo>iterable`      |
+| {{SpecName("WebIDL", "#es-forEach", "forEach")}}                 | {{Spec2("WebIDL")}}         | Define`forEach`en declaraciones`iterables` |
 
-<h2 id="Compatibilidad_en_Navegadores">Compatibilidad en Navegadores</h2>
+## Compatibilidad en Navegadores
 
+{{Compat("api.NodeList.forEach")}}
 
+## Ver también
 
-<p>{{Compat("api.NodeList.forEach")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{domxref("Node")}}</li>
- <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Node")}}
+- {{domxref("NodeList")}}

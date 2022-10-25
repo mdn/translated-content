@@ -4,62 +4,49 @@ slug: Web/API/indexedDB
 translation_of: Web/API/WindowOrWorkerGlobalScope/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<p>La propiedad <strong><code>indexedDB</code></strong> del mixin {{domxref("WindowOrWorkerGlobalScope")}} proporciona un mecanismo para que las aplicaciones puedan acceder asíncronamente a las capacidades de las bases de datos indexadas.</p>
+La propiedad **`indexedDB`** del mixin {{domxref("WindowOrWorkerGlobalScope")}} proporciona un mecanismo para que las aplicaciones puedan acceder asíncronamente a las capacidades de las bases de datos indexadas.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: js">var DBOpenRequest = self.indexedDB.open('toDoList');</pre>
+```js
+var DBOpenRequest = self.indexedDB.open('toDoList');
+```
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Un objeto {{domxref("IDBFactory")}}.</p>
+Un objeto {{domxref("IDBFactory")}}.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="">var db;
+```
+var db;
 function openDB() {
  var DBOpenRequest = window.indexedDB.open('toDoList');
  DBOpenRequest.onsuccess = function(e) {
    db = DBOpenRequest.result;
  }
-}</pre>
+}
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}}</td>
-   <td>{{Spec2('IndexedDB 2')}}</td>
-   <td>Definido en un <code>WindowOrWorkerGlobalScope</code> parcial en la última especificación.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBEnvironment-indexedDB', 'indexedDB')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                   | Estado                           | Comentario                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------- |
+| {{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}} | {{Spec2('IndexedDB 2')}} | Definido en un `WindowOrWorkerGlobalScope` parcial en la última especificación. |
+| {{SpecName('IndexedDB', '#widl-IDBEnvironment-indexedDB', 'indexedDB')}}                 | {{Spec2('IndexedDB')}}     | Definición inicial.                                                             |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de Navegadores</h2>
+## Compatibilidad de Navegadores
 
 {{Compat("api.indexedDB")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Utilización de IndexedDB</a></li>
- <li>Iniciando transacciones: {{domxref("IDBDatabase")}}</li>
- <li>Usando transacciones: {{domxref("IDBTransaction")}}</li>
- <li>Estableciendo un rango de claves: {{domxref("IDBKeyRange")}}</li>
- <li>Recuperación y edición de tus datos: {{domxref("IDBObjectStore")}}</li>
- <li>Utilización de cursores: {{domxref("IDBCursor")}}</li>
- <li>Ejemplo de referencia: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">ver ejemplo <em>live</em></a>.)</li>
-</ul>
+- [Utilización de IndexedDB](/es/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Iniciando transacciones: {{domxref("IDBDatabase")}}
+- Usando transacciones: {{domxref("IDBTransaction")}}
+- Estableciendo un rango de claves: {{domxref("IDBKeyRange")}}
+- Recuperación y edición de tus datos: {{domxref("IDBObjectStore")}}
+- Utilización de cursores: {{domxref("IDBCursor")}}
+- Ejemplo de referencia: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([ver ejemplo _live_](http://mdn.github.io/to-do-notifications/).)

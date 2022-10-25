@@ -3,93 +3,74 @@ title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
 translation_of: Web/API/MediaStreamTrack
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<h2 id="Sumario">Sumario</h2>
+## Sumario
 
-<p>La interfaz <strong><code>MediaStream</code></strong><strong> </strong> representa un flujo de contenido de los medios. Un flujo consiste en gran cantidad de  <em>tracks</em>, como pistas de audio o video.</p>
+La interfaz **`MediaStream`\*\*** \*\*representa un flujo de contenido de los medios. Un flujo consiste en gran cantidad de _tracks_, como pistas de audio o video.
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<dl>
- <dt>{{domxref("MediaStreamTrack.enabled")}}</dt>
- <dd>Es un valor Booleano con un valor de  <code>true</code> <span class="short_text" id="result_box" lang="es"><span class="hps">si la pista</span> <span class="hps">está habilitada</span></span>, que se permite para renderizar el fujo fuente del medio; <span class="short_text" id="result_box" lang="es"><span class="hps">o </span></span><code>false</code><span class="short_text" lang="es"> <span class="hps">si está desactivado, ue no </span></span><span id="result_box" lang="es"><span class="hps">está rederizando el flujo de la fuente de medios que el silencio y la oscuridad.</span></span> <span id="result_box" lang="es"><span class="hps">Si la pista</span> <span class="hps">se ha desconectado</span><span>,</span> <span class="hps">este valor puede ser</span> <span class="hps">cambiado</span><span>, pero no tiene</span> <span class="hps">más</span> <span class="hps">efecto</span><span>.</span></span></dd>
- <dt>{{domxref("MediaStreamTrack.id")}} {{readonlyInline}}</dt>
- <dd>Retorna un {{domxref("DOMString")}}<span class="short_text" id="result_box" lang="es"><span class="hps"> que contiene</span> <span class="hps">un identificador único</span></span> (GUID) para la pista; que es generado por le navegador.</dd>
- <dt>{{domxref("MediaStreamTrack.kind")}} {{readonlyInline}}</dt>
- <dd>Retorna un {{domxref("DOMString")}} se establece en <code>"audio"</code> si la pista es un audio y para <code>"video"</code>, si es una pista de video. Este no cambia si la pista se disociada de su fuente.</dd>
- <dt>{{domxref("MediaStreamTrack.label")}} {{readonlyInline}}</dt>
- <dd>Retorna un {{domxref("DOMString")}} que contiene una etiqueta agente-asignado por el usuario que identifica la fuente de la pista, como en  <code>"internal microphone"</code>.  <span id="result_box" lang="es"><span class="hps">La cadena puede</span> <span class="hps">dejarse vacío</span> <span class="hps">y</span> <span class="hps">está vacía</span><span>, siempre y cuando</span> <span class="hps">ninguna fuente</span> <span class="hps">haya sido conectada.</span></span> Cuando la pista está disociada de la fuente, la etiqueta no cambia.</dd>
- <dt>{{domxref("MediaStreamTrack.muted")}} {{readonlyInline}}</dt>
- <dd>Retorna un valor booleano con un valor de <code>true</code> si la pista esta silenciada, de lo contrario <code>false</code>.</dd>
- <dt>{{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}</dt>
- <dd>Retona un valor Booleano con un valor de <code>true</code>  si la pista es de solo lectura ( una fuente de archivo de vídeo o una cámara que los ajustes no puedan ser modificados),<code> </code>de lo contrario<code> false</code>.</dd>
- <dt>{{domxref("MediaStreamTrack.readyState")}} {{readonlyInline}}</dt>
- <dd>Retorna un valor enumerado dando el estado de la pista. Este toma uno de los siguientes valores:
- <ul>
-  <li><code>"live"</code> el cual indica  que una entrada es conectada y hace de esta el mejor esfuerzo en proveer datos en tiempo real. En este caso, la salida de datos puede ser cambiada a on u off usando el atributo <code>MediaStreamTrack.enabled</code>.</li>
-  <li><code>"ended"</code> este indica que la entrada no esta obteniendo algun dato mas y negará proporcionar nuevos datos.</li>
- </ul>
- </dd>
- <dt>{{domxref("MediaStreamTrack.remote")}} {{readonlyInline}}</dt>
- <dd>retorna un booleano con un valor de verdadero si la pista es originada por  {{domxref("RTCPeerConnection")}}, falso a cualquier otro.</dd>
-</dl>
+- {{domxref("MediaStreamTrack.enabled")}}
+  - : Es un valor Booleano con un valor de `true` si la pista está habilitada, que se permite para renderizar el fujo fuente del medio; o `false` si está desactivado, ue no está rederizando el flujo de la fuente de medios que el silencio y la oscuridad. Si la pista se ha desconectado, este valor puede ser cambiado, pero no tiene más efecto.
+- {{domxref("MediaStreamTrack.id")}} {{readonlyInline}}
+  - : Retorna un {{domxref("DOMString")}} que contiene un identificador único (GUID) para la pista; que es generado por le navegador.
+- {{domxref("MediaStreamTrack.kind")}} {{readonlyInline}}
+  - : Retorna un {{domxref("DOMString")}} se establece en `"audio"` si la pista es un audio y para `"video"`, si es una pista de video. Este no cambia si la pista se disociada de su fuente.
+- {{domxref("MediaStreamTrack.label")}} {{readonlyInline}}
+  - : Retorna un {{domxref("DOMString")}} que contiene una etiqueta agente-asignado por el usuario que identifica la fuente de la pista, como en `"internal microphone"`. La cadena puede dejarse vacío y está vacía, siempre y cuando ninguna fuente haya sido conectada. Cuando la pista está disociada de la fuente, la etiqueta no cambia.
+- {{domxref("MediaStreamTrack.muted")}} {{readonlyInline}}
+  - : Retorna un valor booleano con un valor de `true` si la pista esta silenciada, de lo contrario `false`.
+- {{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}
+  - : Retona un valor Booleano con un valor de `true` si la pista es de solo lectura ( una fuente de archivo de vídeo o una cámara que los ajustes no puedan ser modificados),` `de lo contrario` false`.
+- {{domxref("MediaStreamTrack.readyState")}} {{readonlyInline}}
 
-<h3 id="Disparador_de_eventos">Disparador de eventos</h3>
+  - : Retorna un valor enumerado dando el estado de la pista. Este toma uno de los siguientes valores:
 
-<dl>
- <dt>{{domxref("MediaStreamTrack.onstarted")}}</dt>
- <dd>Es un contenedor {{event("Event_handlers", "event handler")}} de la acción a realizar cuando el evento {{event("started")}} es disparado sobre el objeto,  que es cuando un objeto {{domxref("MediaStreamTrack")}} es añadido.</dd>
- <dt>{{domxref("MediaStreamTrack.onmute")}}</dt>
- <dd>Es un contenedor {{event("Event_handlers", "event handler")}} de la acción ha realizar cuando un evento {{event("mute")}} es disparado sobre el objeto, que es cuando la transmición es terminada.</dd>
- <dt>{{domxref("MediaStreamTrack.onunmute")}}</dt>
- <dd>Es un contenedor {{event("Event_handlers", "event handler")}} de la acción ha realizar cuando un evento  {{event("unmute")}} es disparado sobre el objeto, que es cuando un objeto  {{domxref("MediaStreamTrack")}} es removido por este.</dd>
- <dt>{{domxref("MediaStreamTrack.onoverconstrained")}}</dt>
- <dd>Es un contenedor {{event("Event_handlers", "event handler")}} de la acción ha realizar cuando un objeto {{event("overconstrained")}} es disparado sobre el objeto, que es cuando un objeto  {{domxref("MediaStreamTrack")}}  es removido por este.</dd>
- <dt>{{domxref("MediaStreamTrack.oneended")}}</dt>
- <dd>Es un contenedor {{event("Event_handlers", "event handler")}} de la acción ha realizar cuando un evento {{event("ended_(MediaStream)", "ended")}} es disparado sobre el objeto, que es cuando un objeto  {{domxref("MediaStreamTrack")}} es removido por este.</dd>
-</dl>
+    - `"live"` el cual indica que una entrada es conectada y hace de esta el mejor esfuerzo en proveer datos en tiempo real. En este caso, la salida de datos puede ser cambiada a on u off usando el atributo `MediaStreamTrack.enabled`.
+    - `"ended"` este indica que la entrada no esta obteniendo algun dato mas y negará proporcionar nuevos datos.
 
-<h2 id="Métodos">Métodos</h2>
+- {{domxref("MediaStreamTrack.remote")}} {{readonlyInline}}
+  - : retorna un booleano con un valor de verdadero si la pista es originada por {{domxref("RTCPeerConnection")}}, falso a cualquier otro.
 
-<dl>
- <dt>{{domxref("MediaStreamTrack.getConstraints()")}}</dt>
- <dd>Empty</dd>
- <dt>{{domxref("MediaStreamTrack.applyConstraints()")}}</dt>
- <dd>Empty</dd>
- <dt>{{domxref("MediaStreamTrack.getSettings()")}}</dt>
- <dd>Empty</dd>
- <dt>{{domxref("MediaStreamTrack.getCapabilities()")}}</dt>
- <dd>Empty</dd>
- <dt>{{domxref("MediaStreamTrack.clone()")}}</dt>
- <dd>Empty</dd>
- <dt>{{domxref("MediaStreamTrack.stop()")}}</dt>
- <dd>Detiene la reproducción del origen asociado a la pista, pero el origen y la pista son desasociados. El estado de la pista es un conjunto de <code>ended</code>.</dd>
-</dl>
+### Disparador de eventos
 
-<h2 id="Especificaciones">Especificaciones</h2>
+- {{domxref("MediaStreamTrack.onstarted")}}
+  - : Es un contenedor {{event("Event_handlers", "event handler")}} de la acción a realizar cuando el evento {{event("started")}} es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es añadido.
+- {{domxref("MediaStreamTrack.onmute")}}
+  - : Es un contenedor {{event("Event_handlers", "event handler")}} de la acción ha realizar cuando un evento {{event("mute")}} es disparado sobre el objeto, que es cuando la transmición es terminada.
+- {{domxref("MediaStreamTrack.onunmute")}}
+  - : Es un contenedor {{event("Event_handlers", "event handler")}} de la acción ha realizar cuando un evento {{event("unmute")}} es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es removido por este.
+- {{domxref("MediaStreamTrack.onoverconstrained")}}
+  - : Es un contenedor {{event("Event_handlers", "event handler")}} de la acción ha realizar cuando un objeto {{event("overconstrained")}} es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es removido por este.
+- {{domxref("MediaStreamTrack.oneended")}}
+  - : Es un contenedor {{event("Event_handlers", "event handler")}} de la acción ha realizar cuando un evento {{event("ended_(MediaStream)", "ended")}} es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es removido por este.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#mediastreamtrack', 'MediaStreamTrack')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+## Métodos
 
-<h2 id="Compatibilidad_de_los_navegadores">Compatibilidad de los navegadores</h2>
+- {{domxref("MediaStreamTrack.getConstraints()")}}
+  - : Empty
+- {{domxref("MediaStreamTrack.applyConstraints()")}}
+  - : Empty
+- {{domxref("MediaStreamTrack.getSettings()")}}
+  - : Empty
+- {{domxref("MediaStreamTrack.getCapabilities()")}}
+  - : Empty
+- {{domxref("MediaStreamTrack.clone()")}}
+  - : Empty
+- {{domxref("MediaStreamTrack.stop()")}}
+  - : Detiene la reproducción del origen asociado a la pista, pero el origen y la pista son desasociados. El estado de la pista es un conjunto de `ended`.
+
+## Especificaciones
+
+| Specification                                                                                | Status                               | Comment            |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('Media Capture', '#mediastreamtrack', 'MediaStreamTrack')}} | {{Spec2('Media Capture')}} | Initial definition |
+
+## Compatibilidad de los navegadores
 
 {{Compat("api.MediaStreamTrack")}}
 
-<h2 id="Ver_támbien">Ver támbien</h2>
+## Ver támbien
 
-<ul>
- <li><a href="/en-US/docs/WebRTC/MediaStream_API" title="/en-US/docs/WebRTC/MediaStream_API">Using the MediaStream API</a></li>
-</ul>
+- [Using the MediaStream API](/es/docs/WebRTC/MediaStream_API)

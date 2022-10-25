@@ -10,54 +10,52 @@ tags:
 translation_of: Web/API/Node/insertBefore
 original_slug: Web/API/Node/insertarAntes
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>El método <strong><code>Node.insertBefore()</code></strong> inserta un nodo antes del nodo de referencia como hijo de un nodo padre indicado. Si el nodo hijo es una referencia a un nodo ya existente en el documento, <code>insertBefore()</code> lo mueve de la posición actual a la nueva posición (no hay necesidad de eliminar el nodo de su nodo padre antes de agregarlo al algún nodo nuevo).</p>
+El método **`Node.insertBefore()`** inserta un nodo antes del nodo de referencia como hijo de un nodo padre indicado. Si el nodo hijo es una referencia a un nodo ya existente en el documento, `insertBefore()` lo mueve de la posición actual a la nueva posición (no hay necesidad de eliminar el nodo de su nodo padre antes de agregarlo al algún nodo nuevo).
 
-<p>Esto significa que el nodo no puede estar en dos puntos del documento al simultáneamente. Por lo que si el nodo ya tiene un padre, primero se elimina el nodo, y luego se inserta en la nueva posición. {{domxref("Node.cloneNode()")}} puede utilizarse para hacer una copia de un nodo antes de insertarlo en un nuevo padre. Ten en cuenta que las copias hechas con <code>cloneNode()</code> no se mantendrán sincronizadas automáticamente.</p>
+Esto significa que el nodo no puede estar en dos puntos del documento al simultáneamente. Por lo que si el nodo ya tiene un padre, primero se elimina el nodo, y luego se inserta en la nueva posición. {{domxref("Node.cloneNode()")}} puede utilizarse para hacer una copia de un nodo antes de insertarlo en un nuevo padre. Ten en cuenta que las copias hechas con `cloneNode()` no se mantendrán sincronizadas automáticamente.
 
-<p>Si el nodo de referencia es <code>null</code>, el nodo indicado se añadirá al final de la lista de hijos del nodo padre especificado.</p>
+Si el nodo de referencia es `null`, el nodo indicado se añadirá al final de la lista de hijos del nodo padre especificado.
 
-<p>Si el hijo proporcionado es un {{domxref("DocumentFragment")}}, el contenido completo del <code>DocumentFragment</code> se moverá a la lista de hijos del nodo padre indicado.</p>
+Si el hijo proporcionado es un {{domxref("DocumentFragment")}}, el contenido completo del `DocumentFragment` se moverá a la lista de hijos del nodo padre indicado.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <em>insertedNode</em> = <em>parentNode</em>.insertBefore(<em>newNode</em>, <em>referenceNode</em>);
-</pre>
+```
+var insertedNode = parentNode.insertBefore(newNode, referenceNode);
+```
 
-<ul>
- <li><code>insertedNode</code> El nodo que esta siendo insertado, es decir, <code>newNode</code></li>
- <li><code>parentNode</code> El padre del nodo recién insertado.</li>
- <li><code>newNode</code> El nodo a insertar.</li>
- <li><code>referenceNode</code> El nodo antes del cual se inserta <code>newNode</code>.</li>
-</ul>
+- `insertedNode` El nodo que esta siendo insertado, es decir, `newNode`
+- `parentNode` El padre del nodo recién insertado.
+- `newNode` El nodo a insertar.
+- `referenceNode` El nodo antes del cual se inserta `newNode`.
 
-<p>Si <code>referenceNode</code> es <code>null</code>, el <code>newNode</code> se insertará al final de la lista de nodos hijos.</p>
+Si `referenceNode` es `null`, el `newNode` se insertará al final de la lista de nodos hijos.
 
-<div class="note">
-<p><code>referenceNode</code> <strong>no</strong> es un parámetro opcional -- debes pasar explícitamente un <code>Node</code> o <code>null</code>. No proporcionándolo o pasando valores no válidos podría provocar un <a href="https://code.google.com/p/chromium/issues/detail?id=419780">comportamiento</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=119489">distinto</a> en diferentes versiones de navegadores.</p>
+> **Nota:** `referenceNode` **no** es un parámetro opcional -- debes pasar explícitamente un `Node` o `null`. No proporcionándolo o pasando valores no válidos podría provocar un [comportamiento](https://code.google.com/p/chromium/issues/detail?id=419780) [distinto](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) en diferentes versiones de navegadores.
+
+### Valor devuelto
+
+El valor devuelto es el hijo añadido excepto cuando `newNode` es un {{domxref("DocumentFragment")}}, en cuyo caso se devuelve un {{domxref("DocumentFragment")}}.
+
+## Ejemplo
+
+### Ejemplo 1
+
+```html
+<div id="parentElement">
+   <span id="childElement">foo bar</span>
 </div>
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
-
-<p>El valor devuelto es el hijo añadido excepto cuando <code>newNode</code> es un {{domxref("DocumentFragment")}}, en cuyo caso se devuelve un {{domxref("DocumentFragment")}}.</p>
-
-<h2 id="Ejemplo">Ejemplo</h2>
-
-<h3 id="Ejemplo_1">Ejemplo 1</h3>
-
-<pre class="brush: html">&lt;div id="parentElement"&gt;
-   &lt;span id="childElement"&gt;foo bar&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
+<script>
 // Crear el nodo a insertar
 var newNode = document.createElement("span");
 
 // Obtener una referencia al nodo padre
 var parentDiv = document.getElementById("childElement").parentNode;
 
-// Comienzo del test [ 1 ] : Existe un childElement --&gt; Todo funciona correctamente
+// Comienzo del test [ 1 ] : Existe un childElement --> Todo funciona correctamente
 var sp2 = document.getElementById("childElement");
 parentDiv.insertBefore(newNode, sp2);
 // Fin del test [ 1 ]
@@ -71,17 +69,18 @@ parentDiv.insertBefore(newNode, sp2); // Implicit dynamic cast to type Node
 var sp2 = "undefined"; // No existe un nodo con id "childElement"
 parentDiv.insertBefore(newNode, sp2); // Genera "Type Error: Invalid Argument"
 // Fin del test [ 3 ]
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="Ejemplo_2">Ejemplo 2</h3>
+### Ejemplo 2
 
-<pre class="brush:html">&lt;div id="parentElement"&gt;
-  &lt;span id="childElement"&gt;foo bar&lt;/span&gt;
-&lt;/div&gt;
+```html
+<div id="parentElement">
+  <span id="childElement">foo bar</span>
+</div>
 
-&lt;script&gt;
-// Crea un nuevo, elemento &lt;span&gt;
+<script>
+// Crea un nuevo, elemento <span>
 var sp1 = document.createElement("span");
 
 // Obtener una referencia al elemento, antes de donde queremos insertar el elemento
@@ -91,22 +90,25 @@ var parentDiv = sp2.parentNode;
 
 // Inserta un nuevo elemento en el DOM antes de sp2
 parentDiv.insertBefore(sp1, sp2);
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p>No existe el método <code>insertAfter()</code>.  Puede ser emulado mediante la combinación del método con {{domxref("Node.nextSibling()")}}.</p>
+No existe el método `insertAfter()`. Puede ser emulado mediante la combinación del método con {{domxref("Node.nextSibling()")}}.
 
-<p>En el ejemplo anterior, <code>sp1</code> podría insertarse después de <code>sp2</code> usando:</p>
+En el ejemplo anterior, `sp1` podría insertarse después de `sp2` usando:
 
-<pre class="brush: js"><code>parentDiv.insertBefore(sp1, sp2.nextSibling);</code></pre>
+```js
+parentDiv.insertBefore(sp1, sp2.nextSibling);
+```
 
-<p>Si <code>sp2</code> no tiene ningún hermano depués de él, entonces debe ser el último hijo — <code>sp2.nextSibling</code> devuelve <code>null</code>, y <code>sp1</code> se inserta al final de la lista de nodos hijos (inmediatamente después de <code>sp2</code>).</p>
+Si `sp2` no tiene ningún hermano depués de él, entonces debe ser el último hijo — `sp2.nextSibling` devuelve `null`, y `sp1` se inserta al final de la lista de nodos hijos (inmediatamente después de `sp2`).
 
-<h3 id="Ejemplo_3">Ejemplo 3</h3>
+### Ejemplo 3
 
-<p>Inserta un elemento antes del primer elemento hijo, utilizando la propiedad <a href="/en-US/docs/DOM/Node.firstChild" title="Node.firstChild">firstChild</a>.</p>
+Inserta un elemento antes del primer elemento hijo, utilizando la propiedad [firstChild](/es/docs/DOM/Node.firstChild "Node.firstChild").
 
-<pre class="brush:js">// Obtener una referencia al elemento en el que se quiere insertar un nuevo nodo
+```js
+// Obtener una referencia al elemento en el que se quiere insertar un nuevo nodo
 var parentElement = document.getElementById('parentElement');
 // Obtener una referencia al primer hijo
 var theFirstChild = parentElement.firstChild;
@@ -116,58 +118,29 @@ var newElement = document.createElement("div");
 
 // Insertar el nuevo elemento antes que el primer hijo
 parentElement.insertBefore(newElement, theFirstChild);
-</pre>
+```
 
-<p>Cuando el elemento no tiene ub primer hijo, entonces <code style="font-style: normal; line-height: 1.5;">firstChild</code><span style="line-height: 1.5;"> es </span><code style="font-style: normal; line-height: 1.5;">null</code><span style="line-height: 1.5;">. Aun así, el elemento se añade al padre después del último hijo. Puesto que el elemento padre no tenía primer hijo, tampoco tiene último hijo. Por tanto, el nuevo elemento es el único elemento después de ser insertado.</span></p>
+Cuando el elemento no tiene ub primer hijo, entonces `firstChild` es `null`. Aun así, el elemento se añade al padre después del último hijo. Puesto que el elemento padre no tenía primer hijo, tampoco tiene último hijo. Por tanto, el nuevo elemento es el único elemento después de ser insertado.
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
-<p>{{Compat("api.Node.insertBefore")}}</p>
+{{Compat("api.Node.insertBefore")}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-node-insertbefore','Node.insertBefore')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Corrige errores en el algoritmo de inserción</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4','#dom-node-insertbefore','Node.insertBefore')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td>Describe el algoritmo con mayor detalle</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','core.html#ID-952280727','Node.insertBefore')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Sin cambios notables</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core','core.html#ID-952280727','Node.insertBefore')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Sin cambios notables</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1','level-one-core.html#method-insertBefore','Node.insertBefore')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Introducido</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado                           | Comentario                                   |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------- |
+| {{SpecName('DOM WHATWG','#dom-node-insertbefore','Node.insertBefore')}}             | {{Spec2('DOM WHATWG')}} | Corrige errores en el algoritmo de inserción |
+| {{SpecName('DOM4','#dom-node-insertbefore','Node.insertBefore')}}                     | {{Spec2('DOM4')}}         | Describe el algoritmo con mayor detalle      |
+| {{SpecName('DOM3 Core','core.html#ID-952280727','Node.insertBefore')}}                 | {{Spec2('DOM3 Core')}}     | Sin cambios notables                         |
+| {{SpecName('DOM2 Core','core.html#ID-952280727','Node.insertBefore')}}                 | {{Spec2('DOM2 Core')}}     | Sin cambios notables                         |
+| {{SpecName('DOM1','level-one-core.html#method-insertBefore','Node.insertBefore')}} | {{Spec2('DOM1')}}         | Introducido                                  |
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{domxref("Node.removeChild()")}}</li>
- <li>{{domxref("Node.replaceChild()")}}</li>
- <li>{{domxref("Node.appendChild()")}}</li>
- <li>{{domxref("Node.hasChildNodes()")}}</li>
- <li>{{domxref("Element.insertAdjacentElement()")}}</li>
- <li>{{domxref("ParentNode.prepend()")}}</li>
-</ul>
+- {{domxref("Node.removeChild()")}}
+- {{domxref("Node.replaceChild()")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Node.hasChildNodes()")}}
+- {{domxref("Element.insertAdjacentElement()")}}
+- {{domxref("ParentNode.prepend()")}}

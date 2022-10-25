@@ -3,54 +3,50 @@ title: Node.textContent
 slug: Web/API/Node/textContent
 translation_of: Web/API/Node/textContent
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La propiedad <strong><code>textContent</code></strong> de la interfaz {{domxref("Node")}} representa el contenido de texto de un nodo y sus dencendientes.</p>
+La propiedad **`textContent`** de la interfaz {{domxref("Node")}} representa el contenido de texto de un nodo y sus dencendientes.
 
-<div class="blockIndicator note">
-<p><strong>Nota:</strong> <code>textContent</code> y {{domxref("HTMLElement.innerText")}} son confundidos con facilidad, pero <a href="#Diferencias_con_innerText">ambos son diferentes en varias formas importantes</a>.</p>
-</div>
+> **Nota:** `textContent` y {{domxref("HTMLElement.innerText")}} son confundidos con facilidad, pero [ambos son diferentes en varias formas importantes](#Diferencias_con_innerText).
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <em>text</em> = <em>Node</em>.textContent;
-<em>Node</em>.textContent = <em>string</em>;
-</pre>
+```
+var text = Node.textContent;
+Node.textContent = string;
+```
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>Una cadena de texto o <code>null</code></p>
+Una cadena de texto o `null`
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Al obtener esta propiedad:</p>
+Al obtener esta propiedad:
 
-<ul>
- <li>Si el nodo es un <a href="/es/docs/Web/API/Document">documento</a>, un <a href="/es/docs/Glossary/Doctype">DOCTYPE</a>, o una <a href="/en-US/docs/Web/API/Notation">notation</a>, <code>textContent</code> devuelve <code>null</code>. (Para obtener todo el texto y los datos de <a href="/en-US/docs/Web/API/CDATASection">CDATA data</a> del documento completo, uno podría usar <code><a href="/en-US/docs/DOM/document.documentElement">document.documentElement</a>.textContent</code>.)</li>
- <li>Si el nodo es una <a href="/en-US/docs/Web/API/CDATASection">sección CDATA</a>, un comentario, una <a href="/en-US/docs/Web/API/ProcessingInstruction">instrucción de procesamiento</a>, o un <a href="/es/docs/Web/API/Document/createTextNode">nodo de texto</a>,  <code>textContent</code> devuelve el texto dentro del nodo, por ejemplo, el {{domxref("Node.nodeValue")}}.</li>
- <li>Para otros tipos de nodos, <code>textContent</code> retorna la concatenación del atributo <code>textContent</code> de todos los nodos hijos, excluyendo los nodos comentario y los nodos de instrucciones. Esto es una cadena vacía si el nodo no tiene hijos.</li>
-</ul>
+- Si el nodo es un [documento](/es/docs/Web/API/Document), un [DOCTYPE](/es/docs/Glossary/Doctype), o una [notation](/es/docs/Web/API/Notation), `textContent` devuelve `null`. (Para obtener todo el texto y los datos de [CDATA data](/es/docs/Web/API/CDATASection) del documento completo, uno podría usar `document.documentElement.textContent`.)
+- Si el nodo es una [sección CDATA](/es/docs/Web/API/CDATASection), un comentario, una [instrucción de procesamiento](/es/docs/Web/API/ProcessingInstruction), o un [nodo de texto](/es/docs/Web/API/Document/createTextNode), `textContent` devuelve el texto dentro del nodo, por ejemplo, el {{domxref("Node.nodeValue")}}.
+- Para otros tipos de nodos, `textContent` retorna la concatenación del atributo `textContent` de todos los nodos hijos, excluyendo los nodos comentario y los nodos de instrucciones. Esto es una cadena vacía si el nodo no tiene hijos.
 
-<p>Estableciendo <code>textContent</code> en un nodo elimina todos sus hijos y los reemplaza con un solo nodo de texto con el valor dado.</p>
+Estableciendo `textContent` en un nodo elimina todos sus hijos y los reemplaza con un solo nodo de texto con el valor dado.
 
-<h3 id="Diferencias_con_innerText">Diferencias con innerText</h3>
+### Diferencias con innerText
 
-<p>Internet Explorer introdujo <code>elemento.innerText</code>. La intención es muy parecida, con un par de diferencias:</p>
+Internet Explorer introdujo `elemento.innerText`. La intención es muy parecida, con un par de diferencias:
 
-<ul>
- <li>Note que mientras <code>textContent</code> lee el contenido de todos los elementos, incluyendo los elementos {{HTMLElement("script")}} y {{HTMLElement("style")}}, <code>innerText</code>, no.</li>
- <li><code>innerText</code> también tiene en cuenta el estilo y no retornará el texto de elementos escondidos, mientras que <code>textContent</code> sí lo hará.</li>
- <li>Como <code>innerText</code> tiene en cuenta el estilo CSS, escribirlo disparará un reflow, mientras que <code>textContent</code> no lo hará.</li>
-</ul>
+- Note que mientras `textContent` lee el contenido de todos los elementos, incluyendo los elementos {{HTMLElement("script")}} y {{HTMLElement("style")}}, `innerText`, no.
+- `innerText` también tiene en cuenta el estilo y no retornará el texto de elementos escondidos, mientras que `textContent` sí lo hará.
+- Como `innerText` tiene en cuenta el estilo CSS, escribirlo disparará un reflow, mientras que `textContent` no lo hará.
 
-<h3 id="Diferencias_con_innerHTML">Diferencias con innerHTML</h3>
+### Diferencias con innerHTML
 
-<p><code>innerHTML</code> retorna el HTML como su nombre indica. Con bastante frecuencia, para leer o escribir texto en un elemento, la gente usa <code>innerHTML</code>. <code>textContent</code> debería usarse en su lugar. Ya que el texto no es procesado es más probable que tenga mejor rendimiento. Además, esto evita un vector de ataques XSS.</p>
+`innerHTML` retorna el HTML como su nombre indica. Con bastante frecuencia, para leer o escribir texto en un elemento, la gente usa `innerHTML`. `textContent` debería usarse en su lugar. Ya que el texto no es procesado es más probable que tenga mejor rendimiento. Además, esto evita un vector de ataques XSS.
 
-<h2 id="Example" name="Example">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: js">// Dado el siguiente fragmento HTML:
-//   &lt;div id="divA"&gt;Esto &lt;span&gt;es&lt;/span&gt;un texto&lt;/div&gt;
+```js
+// Dado el siguiente fragmento HTML:
+//   <div id="divA">Esto <span>es</span>un texto</div>
 
 // Lee el contenido textual:
 var text = document.getElementById("divA").textContent;
@@ -59,40 +55,17 @@ var text = document.getElementById("divA").textContent;
 // Escribe el contenido textual:
 document.getElementById("divA").textContent = "Esto es un nuevo texto";
 // El HTML "divA" ahora contiene una nueva cadena:
-//   &lt;div id="divA"&gt;Esto es un nuevo texto&lt;/div&gt;
-</pre>
+//   <div id="divA">Esto es un nuevo texto</div>
+```
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
+{{Compat("api.Node.textContent")}}
 
+## Especificación
 
-<p>{{Compat("api.Node.textContent")}}</p>
-
-<h2 id="Specification" name="Specification">Especificación</h2>
-
-<table class="">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-node-textcontent','Node.textContent')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Sin cambios desde DOM 4</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4','#dom-node-textcontent','Node.textContent')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','core.html#Node3-textContent','Node.textContent')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Introducido</td>
-  </tr>
- </tbody>
-</table>
-
-<p> </p>
+| Especificación                                                                                       | Estado                           | Comentario              |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
+| {{SpecName('DOM WHATWG','#dom-node-textcontent','Node.textContent')}}         | {{Spec2('DOM WHATWG')}} | Sin cambios desde DOM 4 |
+| {{SpecName('DOM4','#dom-node-textcontent','Node.textContent')}}                 | {{Spec2('DOM4')}}         |                         |
+| {{SpecName('DOM3 Core','core.html#Node3-textContent','Node.textContent')}} | {{Spec2('DOM3 Core')}}     | Introducido             |

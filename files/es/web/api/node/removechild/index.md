@@ -3,92 +3,96 @@ title: Node.removeChild()
 slug: Web/API/Node/removeChild
 translation_of: Web/API/Node/removeChild
 ---
-<div>
-<div><font><font><font><font><font><font><font><font><font><font>{{APIRef ( "DOM")}}</font></font></font></font></font></font></font></font></font></font></div>
+{{APIRef ( "DOM")}}
 
-<p class="">El método <strong><code>Node.removeChild() </code></strong>elimina un nodo hijo del DOM y puede devolver el nodo eliminado.</p>
+El método **`Node.removeChild() `**elimina un nodo hijo del DOM y puede devolver el nodo eliminado.
 
-<h2 class="" id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<div>
-<pre class="syntaxbox"><em>var antiguoHijo </em>= <em>elemento</em>.removeChild(child);
-<strong>O</strong>
-<em>elemento</em>.removeChild(<code>child</code>);</pre>
-</div>
-</div>
+```
+var antiguoHijo = elemento.removeChild(child);
+O
+elemento.removeChild(child);
+```
 
-<ul>
- <li><code>child</code> <code> </code>es el nodo hijo a eliminar del DOM.</li>
- <li><code>elemento </code>es el nodo padre de <code>hijo</code>.(ver nota mas abajo)</li>
- <li><code>antiguoHijo</code> tiene una referencia al hijo eliminado. <code>antiguoHijo === </code> <code>child</code>.</li>
-</ul>
+- `child` ``es el nodo hijo a eliminar del DOM.
+- `elemento `es el nodo padre de `hijo`.(ver nota mas abajo)
+- `antiguoHijo` tiene una referencia al hijo eliminado. ` antiguoHijo === ``child `.
 
-<p>El hijo(child) eliminado aún existe en memoria pero ya no es parte del DOM. Con la primera forma de sintaxis mostrada, se puede reutilizar el nodo eliminado más tarde en el código, por medio de la referencia al objeto <code>antiguoHijo</code>. Sin embargo, en la segunda forma, la referencia a <code>antiguoHijo</code> se pierde, y suponiendo que el código no mantenga una referencia a ese objeto en alguna otra parte, inmediatamente será inutilizable e irrecuperable y será <a href="es/docs/Web/JavaScript/Gestion_de_Memoria">eliminada automáticamente </a>de memoria después de poco tiempo.</p>
+El hijo(child) eliminado aún existe en memoria pero ya no es parte del DOM. Con la primera forma de sintaxis mostrada, se puede reutilizar el nodo eliminado más tarde en el código, por medio de la referencia al objeto `antiguoHijo`. Sin embargo, en la segunda forma, la referencia a `antiguoHijo` se pierde, y suponiendo que el código no mantenga una referencia a ese objeto en alguna otra parte, inmediatamente será inutilizable e irrecuperable y será [eliminada automáticamente ](es/docs/Web/JavaScript/Gestion_de_Memoria)de memoria después de poco tiempo.
 
-<p>Si hijo(<code>child)</code> no es en realidad hijo del nodo <code>elemento</code>, el método lanza una excepción. Esto también sucederá si <code>child </code>es en realidad hijo de <code>elemento </code>al momento de llamar al método, pero fue eliminado por un controlador(manejador) de eventos(event handler) invocado en el curso de tratar de eliminar el elemento. (e.g. blur).</p>
+Si hijo(`child)` no es en realidad hijo del nodo `elemento`, el método lanza una excepción. Esto también sucederá si `child `es en realidad hijo de `elemento `al momento de llamar al método, pero fue eliminado por un controlador(manejador) de eventos(event handler) invocado en el curso de tratar de eliminar el elemento. (e.g. blur).
 
-<p>Por lo tanto el método removeChild(child) lanza una excepción de 2 casos diferentes: </p>
+Por lo tanto el método removeChild(child) lanza una excepción de 2 casos diferentes:
 
-<p style="margin-left: 36.0pt; text-indent: -18.0pt;"><span style="">1.<span style='font: 7.0pt "Times New Roman";'>      </span></span>Si child es un hijo del elemento y por lo tanto existe en el DOM, pero se retiró el método lanza la siguiente excepción:</p>
+1\. Si child es un hijo del elemento y por lo tanto existe en el DOM, pero se retiró el método lanza la siguiente excepción:
 
-<p style="margin-left: 36.0pt;"><code><span lang="EN-US" style='font-family: "Cambria Math","serif"; font-size: 10.0pt;'>​​</span></code><code><span lang="EN-US" style="font-size: 10.0pt;">Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node</span></code><span lang="EN-US" style=""><font><font>.</font></font></span></p>
+` ​​``Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node `.
 
-<p style="margin-left: 36.0pt; text-indent: -18.0pt;"><span style="">2.<span style='font: 7.0pt "Times New Roman";'>      </span></span>Si <code><span style="font-size: 10.0pt;">child</span></code> no existe en el DOM de la página, el método emite la siguiente excepción:<br>
- <br>
- <code><span style="font-size: 10.0pt;">Uncaught TypeError: Failed to execute 'removeChild' on 'Node': parameter 1 is not of type 'Node'.</span></code></p>
+2\. Si `child` no existe en el DOM de la página, el método emite la siguiente excepción:
 
-<h2 id="Ejemplos">Ejemplos</h2>
+`Uncaught TypeError: Failed to execute 'removeChild' on 'Node': parameter 1 is not of type 'Node'.`
 
-<pre class="brush: html">&lt;!--Ejemplo 1 HTML--&gt;
-&lt;div id="top" align="center"&gt; &lt;/div&gt;</pre>
+## Ejemplos
 
-<pre class="brush: js">&lt;!--Javascript--&gt;
+```html
+<!--Ejemplo 1 HTML-->
+<div id="top" align="center"> </div>
+```
+
+```js
+<!--Javascript-->
 // El método lanza la excepción correspondiente al (caso 2)
 var top = document.getElementById("top");
 var nested = document.getElementById("nested");
-var garbage = top.removeChild(nested);</pre>
+var garbage = top.removeChild(nested);
+```
 
-<pre class="brush: html"><font><font><font><font><font><font><font><font>&lt;!--Ejemplo 2 </font></font></font></font></font><font><font><font><font><font>HTML--&gt;
-</font></font></font></font><font><font><font><font><font><font>&lt;div id="top"</font></font></font></font></font></font></font></font></font></font><font><font><font><font><font><font><font><font><font><font>&gt;</font></font></font></font><font><font>
-   &lt;div id="anidados"&gt;&lt;/div&gt; </font></font></font></font></font></font></font></font><font><font><font><font><font><font><font><font>
-&lt;/div&gt;</font></font></font></font></font></font></font></font></pre>
+```html
+<!--Ejemplo 2 HTML-->
+<div id="top">
+   <div id="anidados"></div>
+</div>
+```
 
-<pre class="brush: js"><font><font>&lt;!--Javascript--&gt;</font></font>
-// Eliminando un elemento específico cuando se conoce su nodo padre<font><font>
-var d = document.getElementById("top");</font></font><font><font>
-var d_nested = document.getElementById("anidados");</font></font><font><font>
-var throwawayNode = d.removeChild(d_nested);</font></font></pre>
+```js
+<!--Javascript-->
+// Eliminando un elemento específico cuando se conoce su nodo padre
+var d = document.getElementById("top");
+var d_nested = document.getElementById("anidados");
+var throwawayNode = d.removeChild(d_nested);
+```
 
-<pre class="brush:js"><font><font>&lt;!--Javascript--&gt;</font></font>
-// Eliminando un elemento específico utilizando la propiedad parentNode, que siempre hace referencia al nodo padre de un nodo <strong>(nodoHijo.parentNode.)</strong>.
-<font><font>nodo var = document.getElementById("anidados");</font></font><font><font>
-if (node.parentNode) {</font></font><font><font>
-  node.parentNode.removeChild(nodo);</font></font>
-}</pre>
+```js
+<!--Javascript-->
+// Eliminando un elemento específico utilizando la propiedad parentNode, que siempre hace referencia al nodo padre de un nodo (nodoHijo.parentNode.).
+nodo var = document.getElementById("anidados");
+if (node.parentNode) {
+  node.parentNode.removeChild(nodo);
+}
+```
 
-<pre class="brush:js"><font><font>&lt;!--Javascript--&gt;</font></font>
-// Eliminando todos los hijos de un elemento<font><font>
-elemento var = document.getElementById("top");</font></font><font><font>
-while (element.firstChild) {</font></font><font><font>
-  element.removeChild(element.firstChild);</font></font><font><font>
-}</font></font></pre>
+```js
+<!--Javascript-->
+// Eliminando todos los hijos de un elemento
+elemento var = document.getElementById("top");
+while (element.firstChild) {
+  element.removeChild(element.firstChild);
+}
+```
 
-<h2 id="Notas"><strong><font><font>Notas:</font></font></strong></h2>
+## Notas:
 
-<p><code><strong>removeChild()</strong></code> se debe invocar sobre el nodo padre del nodo que se va a eliminar.</p>
+**`removeChild()`** se debe invocar sobre el nodo padre del nodo que se va a eliminar.
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<ul>
- <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild"><font><font>DOM Nivel 1 Core: removeChild</font></font></a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066"><font><font>DOM Nivel 2 Core: removeChild</font></font></a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066"><font><font>DOM Nivel 3 Core: removeChild</font></font></a></li>
-</ul>
+- [DOM Nivel 1 Core: removeChild](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild)
+- [DOM Nivel 2 Core: removeChild](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066)
+- [DOM Nivel 3 Core: removeChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
 
-<h2 id="See_also" name="See_also">Vea también</h2>
+## Vea también
 
-<ul>
- <li><font><font><font><font><font><font><font><font><font><font>{{Domxref ( "Node.replaceChild")}}</font></font></font></font></font></font></font></font></font></font></li>
- <li><font><font><font><font><font><font><font><font><font><font>{{Domxref ( "Node.parentNode")}}</font></font></font></font></font></font></font></font></font></font></li>
- <li><font><font><font><font><font><font><font><font><font><font>{{Domxref ( "ChildNode.remove")}}</font></font></font></font></font></font></font></font></font></font></li>
-</ul>
+- {{Domxref ( "Node.replaceChild")}}
+- {{Domxref ( "Node.parentNode")}}
+- {{Domxref ( "ChildNode.remove")}}

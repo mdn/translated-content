@@ -10,119 +10,100 @@ tags:
   - Respuesta
 translation_of: Web/API/Response
 ---
-<div>{{APIRef("Fetch API")}}</div>
+{{APIRef("Fetch API")}}
 
-<p>La interfaz <strong><code>Response</code></strong> de la <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> representa la respuesta a una petición.</p>
+La interfaz **`Response`** de la [Fetch API](/es/docs/Web/API/Fetch_API) representa la respuesta a una petición.
 
-<p>Tú puedes crear un nuevo objeto <code>Response</code> usando el  constructor{{domxref("Response.Response()")}}, pero es más probable encontrar un objeto Response siendo devuelto como resultado de la operación de otra API, por ejemplo un service worker {{domxref("Fetchevent.respondWith")}}, o un simple {{domxref("GlobalFetch.fetch()")}}.</p>
+Tú puedes crear un nuevo objeto `Response` usando el constructor{{domxref("Response.Response()")}}, pero es más probable encontrar un objeto Response siendo devuelto como resultado de la operación de otra API, por ejemplo un service worker {{domxref("Fetchevent.respondWith")}}, o un simple {{domxref("GlobalFetch.fetch()")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("Response.Response","Response()")}}</dt>
- <dd>Crea un nuevo objeto <code>Response</code>.</dd>
-</dl>
+- {{domxref("Response.Response","Response()")}}
+  - : Crea un nuevo objeto `Response`.
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<dl>
- <dt>{{domxref("Response.headers")}} {{readonlyinline}}</dt>
- <dd>Contiene el objeto {{domxref("Headers")}} asociado con la respuesta.</dd>
- <dt>{{domxref("Response.ok")}} {{readonlyinline}}</dt>
- <dd>Contiene un estado indicando si la respuesta fue exitosa (estado en el rango  200-299) o no.</dd>
- <dt>{{domxref("Response.redirected")}} {{ReadOnlyInline}}</dt>
- <dd>Indica si la respuesta es o no el resultado de una redirección; eso es, su lista de URL tiene más de una entrada.</dd>
- <dt>{{domxref("Response.status")}} {{readonlyinline}}</dt>
- <dd>Contiene el código de estado de la respuesta (e.g., <code>200</code> si fue exitosa).</dd>
- <dt>{{domxref("Response.statusText")}} {{readonlyinline}}</dt>
- <dd>Contiene el mensaje de estado correspondiente al código de estado (e.g., <code>OK</code> para el Código <code>200</code>).</dd>
- <dt>{{domxref("Response.type")}} {{readonlyinline}}</dt>
- <dd>Contiene el tipo de respuesta (e.g., <code>basic</code>, <code>cors</code>).</dd>
- <dt>{{domxref("Response.url")}} {{readonlyinline}}</dt>
- <dd>Contiene la URL de respuesta.</dd>
- <dt>{{domxref("Response.useFinalURL")}}</dt>
- <dd>Contiene un valor booleano indicando si ésta es la URL final de respuesta.</dd>
-</dl>
+- {{domxref("Response.headers")}} {{readonlyinline}}
+  - : Contiene el objeto {{domxref("Headers")}} asociado con la respuesta.
+- {{domxref("Response.ok")}} {{readonlyinline}}
+  - : Contiene un estado indicando si la respuesta fue exitosa (estado en el rango 200-299) o no.
+- {{domxref("Response.redirected")}} {{ReadOnlyInline}}
+  - : Indica si la respuesta es o no el resultado de una redirección; eso es, su lista de URL tiene más de una entrada.
+- {{domxref("Response.status")}} {{readonlyinline}}
+  - : Contiene el código de estado de la respuesta (e.g., `200` si fue exitosa).
+- {{domxref("Response.statusText")}} {{readonlyinline}}
+  - : Contiene el mensaje de estado correspondiente al código de estado (e.g., `OK` para el Código `200`).
+- {{domxref("Response.type")}} {{readonlyinline}}
+  - : Contiene el tipo de respuesta (e.g., `basic`, `cors`).
+- {{domxref("Response.url")}} {{readonlyinline}}
+  - : Contiene la URL de respuesta.
+- {{domxref("Response.useFinalURL")}}
+  - : Contiene un valor booleano indicando si ésta es la URL final de respuesta.
 
-<p><code>Response</code> implementa {{domxref("Body")}}, de modo que además contiene las propiedades que se detallan a continuación:</p>
+`Response` implementa {{domxref("Body")}}, de modo que además contiene las propiedades que se detallan a continuación:
 
-<dl>
- <dt>{{domxref("Body.body")}} {{readonlyInline}}</dt>
- <dd>Un simple método get que expone un {{domxref("ReadableStream")}} de los contenidos del body.</dd>
- <dt>{{domxref("Body.bodyUsed")}} {{readonlyInline}}</dt>
- <dd>Almacena un {{domxref("Boolean")}}  en el cuál declara si el body ya fue enviado como respuesta anteriormente.</dd>
-</dl>
+- {{domxref("Body.body")}} {{readonlyInline}}
+  - : Un simple método get que expone un {{domxref("ReadableStream")}} de los contenidos del body.
+- {{domxref("Body.bodyUsed")}} {{readonlyInline}}
+  - : Almacena un {{domxref("Boolean")}} en el cuál declara si el body ya fue enviado como respuesta anteriormente.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("Response.clone()")}}</dt>
- <dd>Clona un Objeto Respuesta.</dd>
- <dt>{{domxref("Response.error()")}}</dt>
- <dd>Devuelve un nuevo objeto Respuesta asociado a un error de red.</dd>
- <dt>{{domxref("Response.redirect()")}}</dt>
- <dd>Crea una nueva respuesta con un URL distinto.
- <code>Response</code> iimplementa {{domxref("Body")}}, de modo que además contiene los métodos que se detallan a continuación:</dd>
-</dl>
+- {{domxref("Response.clone()")}}
+  - : Clona un Objeto Respuesta.
+- {{domxref("Response.error()")}}
+  - : Devuelve un nuevo objeto Respuesta asociado a un error de red.
+- {{domxref("Response.redirect()")}}
+  - : Crea una nueva respuesta con un URL distinto.
+    `Response` iimplementa {{domxref("Body")}}, de modo que además contiene los métodos que se detallan a continuación:
 
-<dl>
- <dt>{{domxref("Body.arrayBuffer()")}}</dt>
- <dd>Toma un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un {{domxref("ArrayBuffer")}}.</dd>
- <dt>{{domxref("Body.blob()")}}</dt>
- <dd>Toma un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un {{domxref("Blob")}}.</dd>
- <dt>{{domxref("Body.formData()")}}</dt>
- <dd>Toma un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un objeto {{domxref("FormData")}}.</dd>
- <dt>{{domxref("Body.json()")}}</dt>
- <dd>Recibe un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve como {{jsxref("JSON")}} el texto del Body enviado.</dd>
- <dt>{{domxref("Body.text()")}}</dt>
- <dd>Recibe un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un {{domxref("USVString")}} (texto).</dd>
-</dl>
+<!---->
 
-<h2 id="Examples">Examples</h2>
+- {{domxref("Body.arrayBuffer()")}}
+  - : Toma un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un {{domxref("ArrayBuffer")}}.
+- {{domxref("Body.blob()")}}
+  - : Toma un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un {{domxref("Blob")}}.
+- {{domxref("Body.formData()")}}
+  - : Toma un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un objeto {{domxref("FormData")}}.
+- {{domxref("Body.json()")}}
+  - : Recibe un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve como {{jsxref("JSON")}} el texto del Body enviado.
+- {{domxref("Body.text()")}}
+  - : Recibe un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un {{domxref("USVString")}} (texto).
 
-<p>En nuestro <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/basic-fetch">ejemplo básico de ferch</a> (<a href="http://mdn.github.io/fetch-examples/basic-fetch/">ejecutar el ejemplo</a>) usamos una llamada <code>fetch()</code> para descargar una imagen y mostrarla en una etiqueta {{htmlelement("img")}} . La llamda a <code>fetch()</code> call devuelve una promesa, la cual resuelve a un objeto<code>Response</code> asociado a la operación fetch.</p>
+## Examples
 
-<p>Observa como ya que lo que estamos solicitando es una imagen, necesitamos ejecutar {{domxref("Body.blob")}} ({{domxref("Response")}} implements body) para darle a la respuesta su tipo MIME correcto.</p>
+En nuestro [ejemplo básico de ferch](https://github.com/mdn/fetch-examples/tree/gh-pages/basic-fetch) ([ejecutar el ejemplo](http://mdn.github.io/fetch-examples/basic-fetch/)) usamos una llamada `fetch()` para descargar una imagen y mostrarla en una etiqueta {{htmlelement("img")}} . La llamda a `fetch()` call devuelve una promesa, la cual resuelve a un objeto`Response` asociado a la operación fetch.
 
-<pre class="brush: js notranslate">var myImage = document.querySelector('.my-image');
+Observa como ya que lo que estamos solicitando es una imagen, necesitamos ejecutar {{domxref("Body.blob")}} ({{domxref("Response")}} implements body) para darle a la respuesta su tipo MIME correcto.
+
+```js
+var myImage = document.querySelector('.my-image');
 fetch('flowers.jpg').then(function(response) {
   return response.blob();
 }).then(function(blob) {
   var objectURL = URL.createObjectURL(blob);
   myImage.src = objectURL;
-});</pre>
+});
+```
 
-<p>También puedes usar el constructor {{domxref("Response.Response()")}} para crear tus objetos <code>Response</code> personalizados:</p>
+También puedes usar el constructor {{domxref("Response.Response()")}} para crear tus objetos `Response` personalizados:
 
-<pre class="brush: js notranslate">var myResponse = new Response();</pre>
+```js
+var myResponse = new Response();
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#response-class','Response')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Status                   | Comment            |
+| -------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('Fetch','#response-class','Response')}} | {{Spec2('Fetch')}} | Definición inicial |
 
-<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
+## Compatibilidad entre navegadores
 
+{{Compat("api.Response")}}
 
+## Ver también
 
-<p>{{Compat("api.Response")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/es/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/es/docs/Web/HTTP)
