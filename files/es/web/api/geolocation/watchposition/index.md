@@ -3,6 +3,8 @@ title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
 page-type: web-api-instance-method
 browser-compat: api.Geolocation.watchPosition
+l10n:
+  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
 
 {{securecontext_header}}{{ APIref("Geolocation API") }}
