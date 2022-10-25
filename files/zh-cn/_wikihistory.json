@@ -32178,18 +32178,6 @@
       "endlesswind"
     ]
   },
-  "Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode": {
-    "modified": "2020-03-12T19:38:14.564Z",
-    "contributors": [
-      "vincentdd",
-      "weimengxi",
-      "gavinjs",
-      "zjjott",
-      "ziyunfei",
-      "yenshen",
-      "teoli"
-    ]
-  },
   "Web/JavaScript/Reference/Template_literals": {
     "modified": "2020-10-15T21:37:03.468Z",
     "contributors": [
@@ -33824,6 +33812,18 @@
       "kingysu",
       "skyfore",
       "xgqfrms-GitHub"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Strict_mode": {
+    "modified": "2020-03-12T19:38:14.564Z",
+    "contributors": [
+      "vincentdd",
+      "weimengxi",
+      "gavinjs",
+      "zjjott",
+      "ziyunfei",
+      "yenshen",
+      "teoli"
     ]
   }
 }

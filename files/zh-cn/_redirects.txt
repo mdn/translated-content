@@ -1014,7 +1014,7 @@
 /zh-CN/docs/JavaScript/Reference/rest_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters
 /zh-CN/docs/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
 /zh-CN/docs/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
-/zh-CN/docs/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/zh-CN/docs/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/JavaScript/Typed_arrays	/zh-CN/docs/Web/JavaScript/Typed_arrays
 /zh-CN/docs/JavaScript/内存管理	/zh-CN/docs/Web/JavaScript/Memory_Management
 /zh-CN/docs/JavaScript_1.5_核心参考	/zh-CN/docs/Web/JavaScript
@@ -2475,6 +2475,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/Web/JavaScript/Reference/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /zh-CN/docs/Web/JavaScript/Reference/Statements/import.meta	/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta
+/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/Web/JavaScript/Reference/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
 /zh-CN/docs/Web/JavaScript/Reference/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 /zh-CN/docs/Web/JavaScript/Reference/String/TrimLeft	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
@@ -2501,7 +2502,7 @@
 /zh-CN/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
 /zh-CN/docs/Web/JavaScript/Shells	/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/Web/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
-/zh-CN/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/zh-CN/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /zh-CN/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /zh-CN/docs/Web/JavaScript/重新认识js	/zh-CN/docs/Web/JavaScript/Language_Overview
