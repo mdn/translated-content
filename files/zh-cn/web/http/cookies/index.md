@@ -34,7 +34,7 @@ Set-Cookie: <cookie-name>=<cookie-value>
 
 这指示服务器发送标头告知客户端存储一对 cookie：
 
-```plain
+```http
 HTTP/1.0 200 OK
 Content-type: text/html
 Set-Cookie: yummy_cookie=choco
