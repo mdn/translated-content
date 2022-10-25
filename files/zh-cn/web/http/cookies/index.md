@@ -110,7 +110,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
 - `/docs/Web/`
 - `/docs/Web/HTTP`
 
-但是这些请求路径不会：
+但是这些请求路径不会匹配以下地址：
 
 - `/`
 - `/docsets`
