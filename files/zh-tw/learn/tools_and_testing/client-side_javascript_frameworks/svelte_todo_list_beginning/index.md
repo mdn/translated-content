@@ -17,7 +17,7 @@ slug: >-
       <th scope="row">預備知識：</th>
       <td>
         <p>
-          學習它，推薦你至少需熟悉基本的
+          推薦你至少需熟悉基本的
           <a href="/zh-TW/docs/Learn/HTML">HTML</a>、
           <a href="/zh-TW/docs/Learn/CSS">CSS</a> 與
           <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>
@@ -26,13 +26,15 @@ slug: >-
             >終端機/命令列環境</a
           >基本知識。
         </p>
-        <p>你將會需要 node 和 npm 來安裝此編譯器來建置你的應用程式。</p>
+        <p>
+          你將會需要一個安裝了 node 和 npm 的終端機來編譯和建置你的應用程式。
+        </p>
       </td>
     </tr>
     <tr>
       <th scope="row">學習目標：</th>
       <td>
-        為了學習如何建立一個 Svelte 元件，於另一個元件內渲染它，透過 props 傳遞資料並保存它的狀態。
+        學習如何建立一個 Svelte 元件並於另一個元件內渲染它，透過屬性（props）傳遞資料並保存它的狀態。
       </td>
     </tr>
   </tbody>
@@ -42,7 +44,7 @@ slug: >-
 
 ### Git
 
-複製 github 儲存庫（假如你還沒完成）如下：
+複製 Github 儲存庫（假如你還沒完成）如下：
 
 ```bash
 git clone https://github.com/opensas/mdn-svelte-tutorial.git
@@ -77,12 +79,12 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 使用這個使用者介面，我們的使用者將能夠做到以下事情：
 
 - 瀏覽他們的任務。
-- 註記那些任務視為已完成或待辦理，而不是刪除它們。
-- 刪除那些任務。
-- 新增那些新任務。
+- 註記任務為已完成或待辦理，而不是刪除它們。
+- 刪除任務。
+- 新增任務。
 - 藉由狀態來過濾那些任務：全部、現行或已完成任務。
-- 編輯那些任務。
-- 註記全部任務視為現行或已完成狀態。
+- 編輯任務。
+- 註記全部任務為現行或已完成狀態。
 - 刪除全部已完成任務。
 
 ## 建立我們第一個元件
@@ -91,7 +93,7 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 
 1. 建立新資料夾—— `src/components`。
 
-    > **備註：** 你可以把元件們放在 `src` 資料夾當中的任何地方，但放在 `components` 資料夾是比較常見的做法，也讓你可以更容易地找到元件們。
+    > **備註：** 你可以把元件們放在 `src` 資料夾當中的任何地方，但放在 `components` 資料夾是比較常見的做法，也讓你可以更容易地找到它們。
 
 2. 建立 `src/components/Todos.svelte` 檔案並包含以下內容：
 
@@ -115,7 +117,7 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
     <Todos />
     ```
 
-5. 在開發模式中，當定義屬性沒有存在於元件時，Svelte 將會在瀏覽器主控台警示問題；以此例來看，當我們於 `src/main.js` 實例化 `App` 元件時，由於我們已經明確定義出 `name` 屬性，但並無實際在 `App` 中使用到。所以主控台現在應該會給你一個警示訊息，如「\<App> was created with unknown prop 'name'」。而為了排除這個問題，從 `src/main.js` 中移除 `name` 屬性；看起來應該要像是如下這樣：
+5. 在開發模式中，當定義屬性沒有存在於元件時，Svelte 將會在瀏覽器主控台發出警告；以此例來看，當我們於 `src/main.js` 實例化 `App` 元件時，由於我們已經明確定義出 `name` 屬性，但並無實際在 `App` 中使用到。所以主控台現在應該會給你一個警告訊息，如「\<App> was created with unknown prop 'name'」。而為了排除這個問題，從 `src/main.js` 中移除 `name` 屬性；看起來應該要像是如下這樣：
 
     ```js
     import App from './App.svelte'
@@ -304,9 +306,9 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 
 ## Svelte 無障礙性支援
 
-Svelte 特別重視無障礙性。目的是鼓勵開發人員盡可能預設地寫出無障礙程式碼。作為編譯器，Svelte 能靜態地分析我們的 HTML 範本，而當元件被編譯後，就能提出一些無障礙警示。
+Svelte 特別重視無障礙性。目的是鼓勵開發人員盡可能預設地寫出無障礙程式碼。作為編譯器，Svelte 能靜態地分析我們的 HTML 範本，而當元件被編譯後，就能提出一些無障礙警告。
 
-無障礙性（縮寫為 a11y）一直以來不容易寫正確，但 Svelte 將會協助並警示你，假如你寫出了不容易閱讀的標記語言。
+無障礙性（縮寫為 a11y）一直以來不容易寫正確，但 Svelte 將會協助並警告你，假如你寫出了不容易閱讀的標記語言。
 
 舉例來說，假如我們新增 `<img>` 元素至我們的 `todos.svelte` 元件，但沒有對應的 `alt` 屬性時：
 
@@ -316,7 +318,7 @@ Svelte 特別重視無障礙性。目的是鼓勵開發人員盡可能預設地�
 <img height="32" width="88" src="https://www.w3.org/WAI/wcag2A">
 ```
 
-編譯器將會報出下列警示：
+編譯器將會報出下列警告：
 
 ```bash
 (!) Plugin svelte: A11y: <img> element should have an alt attribute
@@ -330,20 +332,20 @@ created public/build/bundle.js in 220ms
 [2020-07-15 04:07:43] waiting for changes...
 ```
 
-此外，在我們呼叫編譯器之前，編輯器也會顯示這個警示：
+此外，在我們呼叫編譯器之前，編輯器也會顯示這個警告：
 
 ![A code editor window showing an image tag, with a popup error message saying that the element should have an alt attribute](04-svelte-accessibility-support.png)
 
-你可以使用以 `svelte-ignore` 開頭的[註解](https://svelte.dev/docs#Comments)，來告訴 Svelte 去忽略下一個標記語言區塊的警示，像是如下：
+你可以使用以 `svelte-ignore` 開頭的[註解](https://svelte.dev/docs#Comments)，來告訴 Svelte 去忽略下一個標記語言區塊的警告，像是如下：
 
 ```html
 <!-- svelte-ignore a11y-missing-attribute -->
 <img height="32" width="88" src="https://www.w3.org/WAI/wcag2A">
 ```
 
-> **備註：** 透過 VSCode 你可以點擊 *Quick fix...* 連結或按 <kbd>Ctrl</kbd> + <kbd>.</kbd>來自動地加上這個忽略註解。
+> **備註：** 透過 VSCode 你可以點擊 *Quick fix...* 連結或按 <kbd>Ctrl</kbd> + <kbd>.</kbd> 來自動地加上這個忽略註解。
 
-假如你想要全域地關閉這個警示，可以在你的 `rollup.config.js` 檔案中調整 `Svelte` 外掛組態並補上這個 `onwarn` 處理器即可，像是如下：
+假如你想要全域地關閉這個警告，可以在你的 `rollup.config.js` 檔案中調整 `Svelte` 外掛組態並補上這個 `onwarn` 處理器即可，像是如下：
 
 ```js
 plugins: [
@@ -368,11 +370,11 @@ plugins: [
 ]
 ```
 
-在設計上，這些警示被實現於編譯器本身，而不是你可以選擇性加入專案的外掛。理念是建立在預設會檢核你的標記語言有無 a11y 問題並讓你可以選擇排除特定警示。
+在設計上，這些警告被實現於編譯器本身，而不是你可以選擇性加入專案的外掛。理念是建立在預設會檢核你的標記語言有無 a11y 問題並讓你可以選擇排除特定警告。
 
-> **備註：** 假如你有足夠充分的理由，則可以先停用這些警示，例如當你在快速建構原型時。成為一個優秀的網路公民並讓你的頁面盡可能廣泛地被用戶閱讀是很重要的。
+> **備註：** 假如你有足夠充分的理由，則可以先停用這些警告，例如當你在快速建構原型時。成為一個優秀的網路公民並讓你的頁面盡可能廣泛地被用戶閱讀是很重要的。
 
-Svelte 透過 [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules) 來檢核無障礙性規則，它是提供在 JSX 元素上許多無障礙性規則靜態檢核的一個 eslint 外掛。Svelte 企圖將它們全部實現於編譯器中，而大部分都已經移植至 Svelte 中。你可以在 GitHub 中看到[尚未實現的無障礙檢核](https://github.com/sveltejs/svelte/issues/820)。點選規則的連結可以查閱它們各自的涵義。
+Svelte 透過 [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules) 來檢核無障礙性規則，它是提供在 JSX 元素上許多無障礙性規則靜態檢核的一個 ESLint 外掛。Svelte 企圖將它們全部實現於編譯器中，而大部分都已經移植至 Svelte 中。你可以在 GitHub 中看到[尚未實現的無障礙檢核](https://github.com/sveltejs/svelte/issues/820)。點選規則的連結可以查閱它們各自的涵義。
 
 ## 為標記語言加上樣式
 
