@@ -31,7 +31,7 @@ Cookie 将在所有上下文中发送，即允许跨站发送。
 
 如果没有设置 `Secure` 属性，控制台中可能会出现以下警告：
 
-> Some cookies are misusing the "sameSite " attribute, so it won't work as expected.
+> Some cookies are misusing the "sameSite" attribute, so it won't work as expected.
 > Cookie "_myCookie_" rejected because it has the "sameSite=none" attribute but is missing the "secure" attribute.
 
 出现此警告是因为需要 `SameSite=None` 但未标记 `Secure` 的任何 cookie 都将被拒绝。
