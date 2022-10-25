@@ -1,8 +1,6 @@
 ---
 title: PointerEvent.getCoalescedEvents()
 slug: Web/API/PointerEvent/getCoalescedEvents
-page-type: web-api-instance-method
-browser-compat: api.PointerEvent.getCoalescedEvents
 l10n:
   sourceCommit: 1732201134d732af9bfd49ee9e10f7e2086cc783
 ---
