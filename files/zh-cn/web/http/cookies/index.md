@@ -219,7 +219,7 @@ Cookie 与特定域和方案（例如，`http` 或 `https`）相关联，如果�
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [SameSite cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
+- [SameSite cookies](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
 - [使用 Storage Inspector 检查 cookie](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 - [Cookie 规范：RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265)
 - [HTTP cookie on Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie)
