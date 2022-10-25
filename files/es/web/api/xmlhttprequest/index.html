@@ -24,97 +24,68 @@ translation_of: Web/API/XMLHttpRequest
 <h2 id="Resumen_del_método">Resumen del método</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>void <a class="internal" href="/en/XMLHttpRequest#abort()" title="/En/XMLHttpRequest#abort()">abort</a>();</code></td>
-  </tr>
-  <tr>
-   <td><code>string <a class="internal" href="/en/XMLHttpRequest#getAllResponseHeaders()" title="/en/XMLHttpRequest#getAllResponseHeaders()">getAllResponseHeaders</a>();</code></td>
-  </tr>
-  <tr>
-   <td><code>ACString <a class="internal" href="/en/XMLHttpRequest#getResponseHeader()" title="/en/XMLHttpRequest#getResponseHeader()">getResponseHeader</a>(in AUTF8String header);</code></td>
-  </tr>
-  <tr>
-   <td><code>[noscript] void <a class="internal" href="/en/XMLHttpRequest#init()" title="/en/XMLHttpRequest#init()">init</a>(in nsIPrincipal principal, in nsIScriptContext scriptContext, in nsPIDOMWindow ownerWindow);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a class="internal" href="/en/XMLHttpRequest#open()" title="/en/XMLHttpRequest#open()">open</a>(in AUTF8String method, in AUTF8String url);</code></td>
-  </tr>
-  <tr>
-   <td><code>[noscript] void <a class="internal" href="/en/XMLHttpRequest#openRequest()" title="/en/XMLHttpRequest#openRequest()">openRequest</a>(in AUTF8String method, in AUTF8String url, in boolean async, in AString user, in AString password);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a class="internal" href="/en/XMLHttpRequest#overrideMimeType()" title="/en/XMLHttpRequest#overrideMimeType()">overrideMimeType</a>(in AUTF8String mimetype);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a class="internal" href="/en/XMLHttpRequest#send()" title="/en/XMLHttpRequest#send()">send</a>([optional] in nsIVariant body);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a class="internal" href="/en/XMLHttpRequest#sendAsBinary()" title="/en/XMLHttpRequest#sendAsBinary()">sendAsBinary</a>(in DOMString body);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a class="internal" href="/en/XMLHttpRequest#setRequestHeader()" title="/en/XMLHttpRequest#setRequestHeader()">setRequestHeader</a>(in AUTF8String header, in AUTF8String value);</code></td>
-  </tr>
- </tbody>
-</table>
+    <tbody>
+     <tr>
+      <td><code>void <a class="internal" href="/en/XMLHttpRequest#abort()" title="/En/XMLHttpRequest#abort()">abort</a>();</code></td>
+     </tr>
+     <tr>
+      <td><code>string <a class="internal" href="/en/XMLHttpRequest#getAllResponseHeaders()" title="/en/XMLHttpRequest#getAllResponseHeaders()">getAllResponseHeaders</a>();</code></td>
+     </tr>
+     <tr>
+      <td><code>ACString <a class="internal" href="/en/XMLHttpRequest#getResponseHeader()" title="/en/XMLHttpRequest#getResponseHeader()">getResponseHeader</a>(in AUTF8String header);</code></td>
+     </tr>
+     <tr>
+      <td><code>[noscript] void <a class="internal" href="/en/XMLHttpRequest#init()" title="/en/XMLHttpRequest#init()">init</a>(in nsIPrincipal principal, in nsIScriptContext scriptContext, in nsPIDOMWindow ownerWindow);</code></td>
+     </tr>
+     <tr>
+      <td><code>void <a class="internal" href="/en/XMLHttpRequest#open()" title="/en/XMLHttpRequest#open()">open</a>(in AUTF8String method, in AUTF8String url);</code></td>
+     </tr>
+     <tr>
+      <td><code>[noscript] void <a class="internal" href="/en/XMLHttpRequest#openRequest()" title="/en/XMLHttpRequest#openRequest()">openRequest</a>(in AUTF8String method, in AUTF8String url, in boolean async, in AString user, in AString password);</code></td>
+     </tr>
+     <tr>
+      <td><code>void <a class="internal" href="/en/XMLHttpRequest#overrideMimeType()" title="/en/XMLHttpRequest#overrideMimeType()">overrideMimeType</a>(in AUTF8String mimetype);</code></td>
+     </tr>
+     <tr>
+      <td><code>void <a class="internal" href="/en/XMLHttpRequest#send()" title="/en/XMLHttpRequest#send()">send</a>([optional] in nsIVariant body);</code></td>
+     </tr>
+     <tr>
+      <td><code>void <a class="internal" href="/en/XMLHttpRequest#sendAsBinary()" title="/en/XMLHttpRequest#sendAsBinary()">sendAsBinary</a>(in DOMString body);</code></td>
+     </tr>
+     <tr>
+      <td><code>void <a class="internal" href="/en/XMLHttpRequest#setRequestHeader()" title="/en/XMLHttpRequest#setRequestHeader()">setRequestHeader</a>(in AUTF8String header, in AUTF8String value);</code></td>
+     </tr>
+    </tbody>
+   </table>
 
 <h2 id="Propiedades">Propiedades</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Atributo</td>
-   <td class="header">Tipo</td>
-   <td class="header">Descripción</td>
-  </tr>
-  <tr>
-   <td><code>channel</code></td>
-   <td><code>nsIChannel</code></td>
-   <td>El canal es usado por el objeto cuando se produce el pedido. Esto da <code>null</code> si el canal aún no fue creado. En el caso de un pedido de múltiples partes, este es el canal inicial, no las diferentes partes del pedido múltiple. <strong>Es necesario tener privilegios elevados para acceder; sólo lectura.</strong> {{ Non-standard_inline() }}</td>
-  </tr>
-  <tr>
-   <td><code>mozBackgroundRequest</code></td>
-   <td><code>booleano</code></td>
-   <td>
-    <p>Indica si el objeto representa o no un pedido de un servicio de fondo. Si es <code>true</code>, no se asocia una carga de grupo con el pedido, y los diálogos de seguridad no se muestran al usuario. <strong>Es necesario tener privilegios elevados para acceder. </strong>{{ Non-standard_inline() }}</p>
+<dl><dt>Atributo: Tipo</dt><dd>Descripción</dd><dt><code>channel</code>: <code>nsIChannel</code></dt><dd>El canal es usado por el objeto cuando se produce el pedido. Esto da <code>null</code> si el canal aún no fue creado. En el caso de un pedido de múltiples partes, este es el canal inicial, no las diferentes partes del pedido múltiple. <strong>Es necesario tener privilegios elevados para acceder; sólo lectura.</strong> <abbr class="" title="Non-standard. Check cross-browser support before using.">
+    <span class="">Non-standard</span>
+</abbr></dd><dt><code>mozBackgroundRequest</code>: <code>booleano</code></dt><dd>
+    <p>Indica si el objeto representa o no un pedido de un servicio de fondo. Si es <code>true</code>, no se asocia una carga de grupo con el pedido, y los diálogos de seguridad no se muestran al usuario. <strong>Es necesario tener privilegios elevados para acceder. </strong><abbr class="" title="Non-standard. Check cross-browser support before using.">
+    <span class="">Non-standard</span>
+</abbr></p>
 
     <p>En los casos en que un diálogo de seguridad debe ser mostrado (como en una autentficación o la notificación de un certificado no válido), el pedido simplemente falla.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>mozResponseArrayBuffer</code>  {{ non-standard_inline() }}</td>
-   <td><a href="/en/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a></td>
-   <td>La respuesta al pedido en la forma de un arreglo de JavaScript. Esto es NULL si el pedido no fue exitoso o si todavía no ha sido enviado. <strong>Sólo lectura.</strong></td>
-  </tr>
-  <tr>
-   <td><code>multipart</code></td>
-   <td><code>booleano</code></td>
-   <td>
+   </dd><dt><code>mozResponseArrayBuffer</code>  <abbr class="" title="Non-standard. Check cross-browser support before using.">
+    <span class="">Non-standard</span>
+</abbr>: <a href="/en-US/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a></dt><dd>La respuesta al pedido en la forma de un arreglo de JavaScript. Esto es NULL si el pedido no fue exitoso o si todavía no ha sido enviado. <strong>Sólo lectura.</strong></dd><dt><code>multipart</code>: <code>booleano</code></dt><dd>
     <p>Indica cuando se espera que la respuesta sea o no una serie de mútiples documentos XML. Si se define como <code>true</code>, el tipo de contenido de la respuesta inicial debe ser <code>multipart/x-mixed-replace</code> u ocurrirá un error. Todos los pedidos deben ser asincrónicos.</p>
 
     <p>Esto permite el uso del push del servidor; para cada documento XML que se escribe para este pedido, se crea un nuevo XMLDOMdocument y se llama al manejador <code>onload</code> entre cada documento.</p>
 
-    <div class="note"><strong>Nota:</strong> Cuando esto se elige, el manejador <code>onload</code> y otros manejadores de eventos no son reiniciados después de que el primer XMLdocument es cargado, y el manejador <code>onload</code> es llamado después de que cada parte de la respuesta es recibida.</div>
-   </td>
-  </tr>
-  <tr id="onreadystatechange">
-   <td>
-    <p><code>onreadystatechange</code></p>
-   </td>
-   <td><code>nsIDOMEventListener</code></td>
-   <td>
+    <div class="note notecard" id="sect2"><strong>Nota:</strong> Cuando esto se elige, el manejador <code>onload</code> y otros manejadores de eventos no son reiniciados después de que el primer XMLdocument es cargado, y el manejador <code>onload</code> es llamado después de que cada parte de la respuesta es recibida.</div>
+   </dd><dt>
+    <code>onreadystatechange</code>
+   : <code>nsIDOMEventListener</code></dt><dd>
     <p>Una función del objeto JavaScript que se llama cuando el atributo <code>readyState</code> cambia. El callback se llama desde la interfaz del usuario.</p>
 
-    <div class="warning"><strong>Aviso: </strong>Esto no debe ser usado desde código nativo. Tampoco debes usarlo con pedidos sincrónicos.</div>
-   </td>
-  </tr>
-  <tr id="readyState">
-   <td><code>readyState</code></td>
-   <td><code>long</code></td>
-   <td>
+    <div class="" id="sect3"><strong>Aviso: </strong>Esto no debe ser usado desde código nativo. Tampoco debes usarlo con pedidos sincrónicos.</div>
+   </dd><dt><code>readyState</code>: <code>long</code></dt><dd>
     <p>El estado del pedido:</p>
 
-    <table class="standard-table">
+    <div class=""><table class="standard-table">
      <tbody>
       <tr>
        <td class="header">Valor</td>
@@ -147,51 +118,18 @@ translation_of: Web/API/XMLHttpRequest
        <td>La operación está terminada.</td>
       </tr>
      </tbody>
-    </table>
-   </td>
-  </tr>
-  <tr id="responseText">
-   <td><code>responseText</code></td>
-   <td><code>AString</code></td>
-   <td>La respuesta al pedido como texto, o <code>null</code> si el pedido no fue exitoso o todavía no se envió. <strong>Sólo lectura.</strong></td>
-  </tr>
-  <tr id="responseXML">
-   <td><code>responseXML</code></td>
-   <td><code>nsIDOMDocument</code></td>
-   <td>
-    <p>La respuesta al pedido como un objeto DOM<code><a class="internal" href="/en/DOM/document" title="En/DOM/Document">Document</a></code>, o <code>null</code> si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera <code>text/xml</code>. <strong>Sólo lectura.</strong></p>
+    </table></div>
+   </dd><dt>Valor: Estado</dt><dd>Descripción</dd><dt><code>0</code>: <code>UNINITIALIZED</code></dt><dd>todavía no se llamó a <code>open()</code>.</dd><dt><code>1</code>: <code>LOADING</code></dt><dd>todavía no se llamó a <code>send()</code>.</dd><dt><code>2</code>: <code>LOADED</code></dt><dd><code>send()</code> ya fue invocado, y los encabezados y el estado están disponibles.</dd><dt><code>3</code>: <code>INTERACTIVE</code></dt><dd>Descargando; <code>responseText</code> contiene información parcial.</dd><dt><code>4</code>: <code>COMPLETED</code></dt><dd>La operación está terminada.</dd><dt><code>responseText</code>: <code>AString</code></dt><dd>La respuesta al pedido como texto, o <code>null</code> si el pedido no fue exitoso o todavía no se envió. <strong>Sólo lectura.</strong></dd><dt><code>responseXML</code>: <code>nsIDOMDocument</code></dt><dd>
+    <p>La respuesta al pedido como un objeto DOM<code><a class="internal" href="/en-US/DOM/document" title="En/DOM/Document">Document</a></code>, o <code>null</code> si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera <code>text/xml</code>. <strong>Sólo lectura.</strong></p>
 
-    <div class="note"><strong>Nota:</strong> Si el servidor no aplica el encabezado de tipo de contenido <code>text/xml</code>, puedes usar <code>overrideMimeType()</code> para forzar a <code>XMLHttpRequest</code> a analizarlo como XML igualmente.</div>
-   </td>
-  </tr>
-  <tr id="status">
-   <td><code>status</code></td>
-   <td><code>unsigned long</code></td>
-   <td>El estado de la respuesta al pedido. Éste es el código HTTPresult (por ejemplo, <code>status</code> es 200 por un pedido exitoso). <strong>Sólo lectura.</strong></td>
-  </tr>
-  <tr>
-   <td><code>statusText</code></td>
-   <td><code>AUTF8String</code></td>
-   <td>La cadena de respuesta que devuelve el HTTPserver. A diferencia de <code>status</code>, este incluye el texto completo del mensaje de respuesta ("<code>200 OK</code>", por ejemplo). <strong>Sólo lectura.</strong></td>
-  </tr>
-  <tr>
-   <td><code>upload</code></td>
-   <td><code>nsIXMLHttpRequestUpload</code></td>
-   <td>El proceso de subida puede ser rastreado al agregar un registro de evento a <code>upload</code>.</td>
-  </tr>
-  <tr>
-   <td><code>withCredentials</code></td>
-   <td><code>booleano</code></td>
-   <td>
+    <div class="note notecard" id="sect4"><strong>Nota:</strong> Si el servidor no aplica el encabezado de tipo de contenido <code>text/xml</code>, puedes usar <code>overrideMimeType()</code> para forzar a <code>XMLHttpRequest</code> a analizarlo como XML igualmente.</div>
+   </dd><dt><code>status</code>: <code>unsigned long</code></dt><dd>El estado de la respuesta al pedido. Éste es el código HTTPresult (por ejemplo, <code>status</code> es 200 por un pedido exitoso). <strong>Sólo lectura.</strong></dd><dt><code>statusText</code>: <code>AUTF8String</code></dt><dd>La cadena de respuesta que devuelve el HTTPserver. A diferencia de <code>status</code>, este incluye el texto completo del mensaje de respuesta ("<code>200 OK</code>", por ejemplo). <strong>Sólo lectura.</strong></dd><dt><code>upload</code>: <code>nsIXMLHttpRequestUpload</code></dt><dd>El proceso de subida puede ser rastreado al agregar un registro de evento a <code>upload</code>.</dd><dt><code>withCredentials</code>: <code>booleano</code></dt><dd>
     <p>Indica cuando el pedido de Access-Control entre sitios debe o no ser realizado usando credenciales como cookies o encabezados de autorización.</p>
 
-    <div class="note"><strong>Nota:</strong> Esto nunca afecta los pedidos en para el propio sitio.</div>
+    <div class="note notecard" id="sect5"><strong>Nota:</strong> Esto nunca afecta los pedidos en para el propio sitio.</div>
 
     <p>El valor predeterminado es <code>false</code>.</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+   </dd></dl>
 
 <h2 id="Métodos">Métodos</h2>
 
