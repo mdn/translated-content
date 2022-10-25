@@ -111,5 +111,3 @@ scrolling.</span>
 ### Specificación
 
 No es parte del estándar público.
-
-{{ languages( { "pl": "pl/DOM/event.pageX", "en": "en/DOM/event.pageX" } ) }}

@@ -94,5 +94,3 @@ Esta sección describe métodos de `Range` que son particulares a Mozilla y no s
   - : Devuelve un valor boleano verdadero si el nodo dado intersecta el rango.
 - [isPointInRange](es/DOM/range.isPointInRange)
   - : Devuelve un valor boleano verdadero indicando si el punto dado está en el rango.
-
-{{ languages( { "en": "en/DOM/range", "fr": "fr/DOM/range", "ja": "ja/DOM/range", "pl": "pl/DOM/range" } ) }}
