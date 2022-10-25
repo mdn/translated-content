@@ -6,7 +6,9 @@ original_slug: Web/HTML/Element/figura
 ---
 ## Resumo
 
-O **Elemento HTML `<figure>` **representa o conteúdo independente, frequentemente com uma legenda ({{HTMLElement("figcaption")}}), e é normalmente referido como uma única unidade. Enquanto ela está relacionada com o fluxo principal, sua posição é independente do fluxo principal.Normalmente, isso é uma imagem, uma ilustração, um diagrama, um trecho de código ou uma esquema que é referenciado no texto principal, mas que pode ser movido para outra página ou para um apêndice, sem afetar o fluxo principal.
+O Elemento HTML **`<figure>`** representa o conteúdo independente, frequentemente com uma legenda ({{HTMLElement("figcaption")}}), e é normalmente referido como uma única unidade. Enquanto ele está relacionado com o fluxo principal, sua posição é independente do fluxo principal. Normalmente é uma imagem, uma ilustração, um diagrama, um trecho de código ou um esquema que é referenciado no texto principal, mas que pode ser movido para outra página ou para um apêndice, sem afetar o fluxo principal.
+  
+{{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
 
 > **Note:** _Notas de uso:_
 >
@@ -25,48 +27,74 @@ Este elemento só inclui os [atributos globais](/pt-BR/docs/HTML/Global_attribut
 
 ## Exemplos
 
-### Exemplo 1
+### Imagens
 
 ```html
-<!-- Apenas uma imagem-->
+<!-- Apenas uma imagem -->
 <figure>
-  <img src="https://developer.mozilla.org/static/img/favicon144.png" alt="Uma imagem impressionante">
+  <img src="favicon-192x192.png" alt="The beautiful MDN logo." />
 </figure>
-<p></p>
+
 <!-- Imagem com legenda -->
 <figure>
-  <img src="https://developer.mozilla.org/static/img/favicon144.png" alt="Uma imagem impressionante">
-  <figcaption>Legenda para a imagem impressionante</figcaption>
+  <img src="favicon-192x192.png" alt="The beautiful MDN logo." />
+  <figcaption>MDN Logo</figcaption>
 </figure>
-<p></p>
 ```
 
-### Example 2
+{{EmbedLiveSample("Images", "100%", 375)}}
 
+### Code snippets
+  
 ```html
-    <figure>
-      <figcaption>Obtenha os detalhes do browser usando navigator</figcaption>
+  <figure>
+      <figcaption>Obtenha os detalhes do browser usando <code>navigator</code>.</figcaption>
         <pre>
-          function NavigatorExample(){
-          var txt;
-          txt = "Browser CodeName: " + navigator.appCodeName;
-          txt+= "Browser Name: " + navigator.appName;
-          txt+= "Browser Version: " + navigator.appVersion ;
-          txt+= "Cookies Enabled: " + navigator.cookieEnabled;
-          txt+= "Platform: " + navigator.platform;
-          txt+= "User-agent header: " + navigator.userAgent;
-          }
+          function NavigatorExample() {
+            var txt;
+            txt = "Browser CodeName: " + navigator.appCodeName + "; ";
+            txt+= "Browser Name: " + navigator.appName + "; ";
+            txt+= "Browser Version: " + navigator.appVersion  + "; ";
+            txt+= "Cookies Enabled: " + navigator.cookieEnabled  + "; ";
+            txt+= "Platform: " + navigator.platform  + "; ";
+            txt+= "User-agent header: " + navigator.userAgent  + "; ";
+            console.log("NavigatorExample", txt);
+             }
         </pre>
+  </figure>
 ```
 
-### Exemplo 3
+{{EmbedLiveSample("Code_snippets", "100%", 250)}}
+
+### Citações
+  
+```html
+  <figure>
+    <figcaption><b>Edsger Dijkstra:</b></figcaption>
+      <blockquote>
+        Se o debugging é o processo de remoção de bugs de software, então programação deve ser o processo de colocá-los
+      </blockquote>
+  </figure>
+```
+
+{{EmbedLiveSample("Quotations")}}
+  
+
+### Poemas
 
 ```html
 <figure>
-      <figcaption><cite>Edsger Dijkstra :-</cite></figcaption>
-      <p>"Se o debugging é o processo de remoção de bugs de software, <br /> então programação deve ser o processo de colocá-los"<br /></p>
-    </figure>
+  <p style="white-space:pre">
+    Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the
+    green, Or, like a nymph, with long dishevelled hair, Dance on the sands, and
+    yet no footing seen: Love is a spirit all compact of fire, Not gross to
+    sink, but light, and will aspire.
+  </p>
+  <figcaption><cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
+</figure>
 ```
+
+{{EmbedLiveSample("Poems", "100%", 250)}}
 
 ## Especificações
 
