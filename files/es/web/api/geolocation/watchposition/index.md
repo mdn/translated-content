@@ -34,8 +34,6 @@ watchPosition(success, error, options)
 Un valor numérico ID que identifica a la función que se encuentra monitoreando la ubicación.
 Este ID puede ser pasado al método {{domxref("Geolocation.clearWatch()")}} para detener el monitoreo de la ubicación.
 
-
-
 ## Ejemplos
 
 ```js

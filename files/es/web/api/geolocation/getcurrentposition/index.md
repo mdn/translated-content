@@ -11,8 +11,6 @@ l10n:
 
 El método **`Geolocation.getCurrentPosition()`** es usado para obtener la ubicación actual del dispositivo.
 
-
-
 ## Sintaxis
 
 ```js-nolint
