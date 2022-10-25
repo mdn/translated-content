@@ -29,7 +29,9 @@ Podemos dividir las funciones implementadas por esta API en dos grupos: funcione
 
 Estas son las funciones que puedes utilizar para implementar características de seguridad como la privacidad y la autenticación en un sistema. El API de `SubtleCrypto` proporciona las siguientes funciones criptográficas:
 
-\* {{DOMxRef("SubtleCrypto.sign","sign()")}} y {{DOMxRef("SubtleCrypto.verify","verify()")}}: crea y verifica las firmas digitales. \* {{DOMxRef("SubtleCrypto.encrypt","encrypt()")}} y {{DOMxRef("SubtleCrypto.decrypt","decrypt()")}}: encripta y desencripta datos. \* {{DOMxRef("SubtleCrypto.digest","digest()")}}: crea un digest de longitud fija y resistente a colisiones de algunos datos.
+- {{DOMxRef("SubtleCrypto.sign","sign()")}} y {{DOMxRef("SubtleCrypto.verify","verify()")}}: crea y verifica las firmas digitales.
+- {{DOMxRef("SubtleCrypto.encrypt","encrypt()")}} y {{DOMxRef("SubtleCrypto.decrypt","decrypt()")}}: encripta y desencripta datos.
+- {{DOMxRef("SubtleCrypto.digest","digest()")}}: crea un digest de longitud fija y resistente a colisiones de algunos datos.
 
 ### Funciones de gestión clave
 

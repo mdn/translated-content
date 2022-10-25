@@ -14,8 +14,7 @@ Añade un objeto de rango a la selección.
 ### Sintaxis
 
 ```
-sel.addRange(
-range)
+sel.addRange(range)
 ```
 
 ### Parámetros

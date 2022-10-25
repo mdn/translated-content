@@ -21,7 +21,7 @@ url = new URL(url, [base])
 
 - `url`
   - : Un {{domxref("USVString")}} que representa una URL absoluta o relativa. Si _url_ es una URL relativa, se requiere _base_, y se usará como URL base. Si url es una URL absoluta, se ignorará una _base_ determinada.
-- `base`\_ \_{{optional_inline}}
+- `base` {optional_inline}}
   - : Un {{domxref("USVString")}} representa la URL base a usar en caso de que la URL sea una URL relativa. Si no se especifica, el valor predeterminado es `''`.
 
 > **Nota:** Aún puede usar un objeto {{domxref("URL")}} existente para la base, que se enchufa al atributo {{domxref("DOMString.href","href")}} del objeto.

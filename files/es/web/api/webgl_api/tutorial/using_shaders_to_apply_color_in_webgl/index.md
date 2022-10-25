@@ -78,7 +78,7 @@ Es un cambio simple; cada fragmento simplemente recibe el color interpolado basa
 
 ## Dibujando usando los colores
 
-Como siguiente, es necesario agregar código hacia la rutina `initShaders() esto para inicializar el atributo de color para el shader program:`
+Como siguiente, es necesario agregar código hacia la rutina `initShaders()` esto para inicializar el atributo de color para el shader program:
 
 ```js
   vertexColorAttribute = gl.getAttribLocation(shaderProgram, "aVertexColor");

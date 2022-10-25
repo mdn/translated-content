@@ -18,7 +18,7 @@ WebSocket WebSocket(
 ```
 
 - `url`
-  - : `La URL a la cual se conecta, debe ser la URL con la cual el servidor WebSocket debe responder.`
+  - : La URL a la cual se conecta, debe ser la URL con la cual el servidor WebSocket debe responder.
 - `protocols` {{optional_inline}}
   - : Permite cualquier caso, desde un simple protocolo o un arreglo de cadenas de texto. Estas cadenas de texto son usadas para indicar subprotocolos, en los cuales un único servidor puede implementar múltiples subprotocolos para el WebSocket (por ejemplo, tu podrías esperar que un servido gestione diferentes tipos de interacciones dependiendo de un tipo específico de protocolo). Si no especificas un subprotocolo, se asume una cadena de texto vacía.
 
@@ -120,7 +120,7 @@ void send(
 - `SYNTAX_ERR`
   - : La data tiene caracteres no válidos que no se pueden decodificar.
 
-> **Nota:**La implementación del método `send()`en el motor de renderizado Gecko puede cambiar de la especificación en {{Gecko("6.0")}}; Gecko devuelve un `boolean`indicando si la conexión esta todavía abierta (y, por extensión, que los datos son encolados o trasmitidos satisfactoriamente). Esto ha sido corregido en {{Gecko("8.0")}}.
+> **Nota:** La implementación del método `send()`en el motor de renderizado Gecko puede cambiar de la especificación en {{Gecko("6.0")}}; Gecko devuelve un `boolean` indicando si la conexión esta todavía abierta (y, por extensión, que los datos son encolados o trasmitidos satisfactoriamente). Esto ha sido corregido en {{Gecko("8.0")}}.
 >
 > A partir de {{Gecko("11.0")}}, implementa {{jsxref("ArrayBuffer")}} pero no tipos de datos {{domxref("Blob")}}.
 

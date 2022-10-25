@@ -15,8 +15,8 @@ Indica si tal nodo es parte de la selección.
 
 ```
 sel.containsNode(
-aNode,
-aPartlyContained)
+  aNode,
+  aPartlyContained)
 ```
 
 ### Parámetros

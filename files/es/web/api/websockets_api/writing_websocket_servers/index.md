@@ -22,7 +22,7 @@ Un servidor WebSocket es explicado a un muy bajo nivel aquí. Los servidores Web
 
 Antes que nada, el servidor debe escuchar las conexiones entrantes usando un socket TCP estandar. Dependiendo de tu plataforma, esto puede ser manejado por tí. Por ejemplo asumamos que tu servidor esta escuchando la dirección example.com en el puerto 8000, y tu socket en el servidor responde a la petición GET con /chat.
 
-> **Advertencia:**El servidor puede escuchar cualquier puerto que elijas, pero si elijes un puerto diferente al 80 o 443 podría haber problemas con los firewalls y proxies. Suele suceder con el puerto 443 tambien pero para eso se necesita un conexión segura (TLS/SSL). También se debe aclarar que la mayoría de los navegadores (como Firefox 8 o superiores) no permiten conexiones a servidores WebSocket sin seguridad que se realicen desde páginas web con seguridad (HTTPS).
+> **Advertencia:** El servidor puede escuchar cualquier puerto que elijas, pero si elijes un puerto diferente al 80 o 443 podría haber problemas con los firewalls y proxies. Suele suceder con el puerto 443 tambien pero para eso se necesita un conexión segura (TLS/SSL). También se debe aclarar que la mayoría de los navegadores (como Firefox 8 o superiores) no permiten conexiones a servidores WebSocket sin seguridad que se realicen desde páginas web con seguridad (HTTPS).
 
 El Handshake es el puente desde HTTP a WS. En el Handshake se negocian los detalles de la conexión y cualquier de las partes pueden abandonar el proceso antes de completar dicha conexión si los términos no son favorables. El servidor debe ser cuidadoso al analizar lo que el cliente pide, de lo contrario podrían introducirse problemas de seguridad.
 

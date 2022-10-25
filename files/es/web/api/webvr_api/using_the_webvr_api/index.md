@@ -16,7 +16,7 @@ translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 
 La API WebVR es una fantástica adición al kit de herramientas del desarrollador web, permitiendo que las escenas de WebGL sean presentadas en pantallas de realidad virtual como el Oculus Rift y HTC Vive. Pero, ¿cómo empezar a desarrollar aplicaciones VR para la Web? Este artículo le guiará a través de los fundamentos.
 
-> **Nota:** **Nota:** La versión más estable de la API de WebVR (1.1) se ha implementado recientemente en Firefox 55 (Windows en versión de lanzamiento y Mac OS X sólo en Nightly) y también está disponible en Chrome cuando se usa con hardware de Google Daydream. También hay una evolución posterior de la especificación 2.0, pero esto está en una etapa temprana ahora mismo. Puede encontrar información sobre el estado más reciente de las especificaciones en [WebVR Spec Version List](https://w3c.github.io/webvr/).
+> **Nota:** La versión más estable de la API de WebVR (1.1) se ha implementado recientemente en Firefox 55 (Windows en versión de lanzamiento y Mac OS X sólo en Nightly) y también está disponible en Chrome cuando se usa con hardware de Google Daydream. También hay una evolución posterior de la especificación 2.0, pero esto está en una etapa temprana ahora mismo. Puede encontrar información sobre el estado más reciente de las especificaciones en [WebVR Spec Version List](https://w3c.github.io/webvr/).
 
 ## Empezando
 

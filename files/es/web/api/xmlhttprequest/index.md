@@ -38,17 +38,15 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
 
 ## Propiedades
 
-- Atributo: Tipo
-  - : Descripción
 - `channel`: `nsIChannel`
-  - : El canal es usado por el objeto cuando se produce el pedido. Esto da `null` si el canal aún no fue creado. En el caso de un pedido de múltiples partes, este es el canal inicial, no las diferentes partes del pedido múltiple. **Es necesario tener privilegios elevados para acceder; sólo lectura.** Non-standard
+  - : El canal es usado por el objeto cuando se produce el pedido. Esto da `null` si el canal aún no fue creado. En el caso de un pedido de múltiples partes, este es el canal inicial, no las diferentes partes del pedido múltiple. **Es necesario tener privilegios elevados para acceder; sólo lectura.** {{ Non-standard_inline() }}
 - `mozBackgroundRequest`: `booleano`
 
-  - : Indica si el objeto representa o no un pedido de un servicio de fondo. Si es `true`, no se asocia una carga de grupo con el pedido, y los diálogos de seguridad no se muestran al usuario. **Es necesario tener privilegios elevados para acceder.** Non-standard
+  - : Indica si el objeto representa o no un pedido de un servicio de fondo. Si es `true`, no se asocia una carga de grupo con el pedido, y los diálogos de seguridad no se muestran al usuario. **Es necesario tener privilegios elevados para acceder.** {{ Non-standard_inline() }}
 
     En los casos en que un diálogo de seguridad debe ser mostrado (como en una autentficación o la notificación de un certificado no válido), el pedido simplemente falla.
 
-- `mozResponseArrayBuffer` Non-standard
+- `mozResponseArrayBuffer` {{ Non-standard_inline() }}
   : [`ArrayBuffer`](/en-US/JavaScript_typed_arrays/ArrayBuffer)
   - : La respuesta al pedido en la forma de un arreglo de JavaScript. Esto es NULL si el pedido no fue exitoso o si todavía no ha sido enviado. **Sólo lectura.**
 - `multipart`: `booleano`
@@ -64,7 +62,7 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
 
   - : Una función del objeto JavaScript que se llama cuando el atributo `readyState` cambia. El callback se llama desde la interfaz del usuario.
 
-    **Aviso:** Esto no debe ser usado desde código nativo. Tampoco debes usarlo con pedidos sincrónicos.
+    > **Advertencia:** Esto no debe ser usado desde código nativo. Tampoco debes usarlo con pedidos sincrónicos.
 
 - `readyState`: `long`
 
@@ -78,18 +76,6 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
     | `3`   | `INTERACTIVE`   | Descargando; `responseText` contiene información parcial.                  |
     | `4`   | `COMPLETED`     | La operación está terminada.                                               |
 
-- Valor: Estado
-  - : Descripción
-- `0`: `UNINITIALIZED`
-  - : todavía no se llamó a `open()`.
-- `1`: `LOADING`
-  - : todavía no se llamó a `send()`.
-- `2`: `LOADED`
-  - : `send()` ya fue invocado, y los encabezados y el estado están disponibles.
-- `3`: `INTERACTIVE`
-  - : Descargando; `responseText` contiene información parcial.
-- `4`: `COMPLETED`
-  - : La operación está terminada.
 - `responseText`: `AString`
   - : La respuesta al pedido como texto, o `null` si el pedido no fue exitoso o todavía no se envió. **Sólo lectura.**
 - `responseXML`: `nsIDOMDocument`

@@ -109,7 +109,7 @@ En el futuro, los service workers podrán hacer una cantidad de cosas útiles pa
 - {{domxref("ServiceWorkerGlobalScope") }}
   - : Representa el contexto global de ejecución de un service worker.
 - {{domxref("ServiceWorkerMessageEvent")}} {{deprecated_inline}}
-  - : Representa un mensaje envaido a un{{domxref("ServiceWorkerGlobalScope")}}. **Observese que este interfaz está considerado obsoleto en navegadores modernos. Los mensajes de service worker no podrán utilizar el interfaz {{domxref("MessageEvent")}}, por consistencia con otras características de mensajería web.**
+  - : Representa un mensaje envaido a un{{domxref("ServiceWorkerGlobalScope")}}. Observese que este interfaz está considerado obsoleto en navegadores modernos. Los mensajes de service worker no podrán utilizar el interfaz {{domxref("MessageEvent")}}, por consistencia con otras características de mensajería web.
 - {{domxref("ServiceWorkerRegistration") }}
   - : Representa un registro service worker.
 - {{domxref("SyncEvent")}} {{non-standard_inline}}

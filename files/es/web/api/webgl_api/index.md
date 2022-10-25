@@ -9,7 +9,7 @@ translation_of: Web/API/WebGL_API
 
 WebGL trae gráficos en 3D para la Web mediante la introducción de una API que cumple estrictamente la OpenGL ES 2.0 que se puede utilizar en elementos [`canvas`](/en/HTML/Canvas) HTML5. La compatibilidad para WebGL viene en [Firefox 4](/es/Firefox_4_para_desarrolladores) y se puede probar en las [betas de Firefox 4](http://firefox.com/beta) o en [trunk builds.](http://nightly.mozilla.org/) .
 
-> **Nota:** **Nota:** La especificación para WebGL se encuentra todavía en fase de borrador y sujeta a cambios.
+> **Nota:** La especificación para WebGL se encuentra todavía en fase de borrador y sujeta a cambios.
 
 ## Temas sobre desarrollo
 

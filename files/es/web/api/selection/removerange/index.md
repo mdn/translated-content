@@ -15,7 +15,7 @@ Quita un rango de la selección.
 
 ```
 sel.removeRange(
-range)
+  range)
 ```
 
 ### Parámetros

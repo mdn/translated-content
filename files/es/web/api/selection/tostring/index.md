@@ -14,8 +14,7 @@ Devuelve una cadena de caracteres (texto), la cual es representada por el objeto
 ### Sintaxis
 
 ```
-string =
-sel.toString()
+string = sel.toString()
 ```
 
 - `string` es la representación del texto de selección.

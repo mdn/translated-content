@@ -207,7 +207,7 @@ El almacenamiento web también provee un par de métodos simples para remover da
 
 Todos los navegadores tienen distintos niveles de capacidad tanto para localStorage como para sessionStorage. Aquí está una [análisis detallado de todas las capacidades de almacenamiento de diferentes navegadores](http://dev-test.nemikor.com/web-storage/support-test/).
 
-> **Nota:**Desde iOS 5.1, Safari Mobile almacena los datos de localStorage en la carpeta de caché, la cual está sujeta a limpiezas ocasionales, a petición del sistema operativo, típicamente cuando el espacio es reducido.
+> **Nota:** Desde iOS 5.1, Safari Mobile almacena los datos de localStorage en la carpeta de caché, la cual está sujeta a limpiezas ocasionales, a petición del sistema operativo, típicamente cuando el espacio es reducido.
 
 ## Ver también
 

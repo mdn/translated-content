@@ -44,7 +44,7 @@ Puede ser útil advertir que `setTimeout()` y {{domxref("WindowOrWorkerGlobalSco
 
 El siguiente ejemplo establece dos botenes simples en una página web y los engancha a las rutinas `setTimeout()` y `clearTimeout()`. Presionando el primer botón establecerá un temporizador que llama un diálogo de alerta después de dos segundos y guarda el id del temporizador para usarlo con `clearTimeout()`. Opcionalmente puede cancelar este temporizador presionando el segundo botón.
 
-### Contenido HTML
+HTML
 
 ```html
 <p>Ejemplo funcional</p>
@@ -53,7 +53,7 @@ El siguiente ejemplo establece dos botenes simples en una página web y los enga
 <button onclick="clearAlert();">Cancela la alerta antes de que ocurra</button>
 ```
 
-### Contenido JavaScript
+JavaScript
 
 ```js
 var timeoutID;

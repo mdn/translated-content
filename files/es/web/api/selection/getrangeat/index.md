@@ -14,9 +14,7 @@ Devuelve un objeto de rango representando uno de los rangos seleccionados.
 ### Sintaxis
 
 ```
-range =
-sel.getRangeAt(
-index)
+range = sel.getRangeAt(index)
 ```
 
 ### Parámetros

@@ -19,8 +19,8 @@ La **API de almacenamiento web** proporciona los mecanismos mediante los cuales 
 
 Los dos mecanismos en el almacenamiento web son los siguientes:
 
-- **`sessionStorage` **mantiene un área de almacenamiento separada para cada origen que está disponible mientras dure la sesión de la página (mientras el navegador esté abierto, incluyendo recargas de página y restablecimientos).
-- **`localStorage` **hace lo mismo, pero persiste incluso cuando el navegador se cierre y se reabra.
+- **`sessionStorage`** mantiene un área de almacenamiento separada para cada origen que está disponible mientras dure la sesión de la página (mientras el navegador esté abierto, incluyendo recargas de página y restablecimientos).
+- **`localStorage`** hace lo mismo, pero persiste incluso cuando el navegador se cierre y se reabra.
 
 Estos mecanismos están disponibles mediante las propiedades [`Window.sessionStorage`](/es/docs/Web/API/Window/sessionStorage) y [`Window.localStorage`](/es/docs/Web/API/Window/localStorage) (dicho con más precisión, en navegadores con soporte, el objeto `Window` implementa los objetos `WindowLocalStorage` y `WindowSessionStorage`, en los cuales se basan las propiedades `localStorage` y `sessionStorage`). Al invocar uno de éstos, se creará una instancia del objeto [`Storage`](/es/docs/Web/API/Storage), a través del cual los datos pueden ser creados, recuperados y eliminados. sessionStorage y localStorage utilizan un objeto de almacenamiento diferente según su origen — funcionan y son controlados por separado.
 
@@ -61,7 +61,7 @@ También creamos una[página de salida del evento](http://mdn.github.io/web-stor
 
 Todos los navegadores tienen distintos niveles de capacidad tanto para localStorage como para sessionStorage. Aquí está una [análisis detallado de todas las capacidades de almacenamiento de diferentes navegadores](http://dev-test.nemikor.com/web-storage/support-test/).
 
-> **Nota:**Desde iOS 5.1, Safari Mobile almacena los datos de localStorage en la carpeta de caché, la cual está sujeta a limpiezas ocasionales, a petición del sistema operativo, típicamente cuando el espacio es reducido.
+> **Nota:** Desde iOS 5.1, Safari Mobile almacena los datos de localStorage en la carpeta de caché, la cual está sujeta a limpiezas ocasionales, a petición del sistema operativo, típicamente cuando el espacio es reducido.
 
 ## Navegación privada / Modo incógnito
 

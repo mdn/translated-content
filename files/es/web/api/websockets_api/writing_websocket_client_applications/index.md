@@ -13,7 +13,7 @@ WebSockets es una tecnología basada en el protocolo ws, este hace posible estab
 
 La API de WebSocket esta disponible para el código JavaScript cuyo alcance DOM sea un objeto {{ domxref("Window") }} o cualquier objeto implementando {{ domxref("WorkerUtils") }}; si es así, puedes usarlos desde los Web Workers.
 
-> **Nota:**La API de WebSockets (y el protocolo subyacente) continúan en activo desarrollo, y existen muchos problemas de compatibilidad entre los navegadores en este momento (e inclusive entre los diferentes lanzamientos del mismo navegador).
+> **Nota:** La API de WebSockets (y el protocolo subyacente) continúan en activo desarrollo, y existen muchos problemas de compatibilidad entre los navegadores en este momento (e inclusive entre los diferentes lanzamientos del mismo navegador).
 
 ## Creando un Objeto WebSocket
 

@@ -5,7 +5,7 @@ translation_of: Web/API/ServiceWorkerContainer/register
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-El método **`register()`**de la interfaz {{domxref("ServiceWorkerContainer")}} crea o actualiza un {{domxref("ServiceWorkerRegistration")}} para un `scriptURL`. dado
+El método **`register()`** de la interfaz {{domxref("ServiceWorkerContainer")}} crea o actualiza un {{domxref("ServiceWorkerRegistration")}} para un `scriptURL`. dado
 
 Si tiene éxito, el registro de un "service worker" relaciona la URL del script proporcionada con un ámbito, que posteriormente se utiliza para la coincidencia de navegación. Puede llamar a este método incondicionalmente desde la página controlada. Es decir, no necesita verificar primero si hay un registro activo.
 
