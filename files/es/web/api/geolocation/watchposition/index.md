@@ -74,11 +74,11 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
 {{Compat}}
 
-## Ver también
+## Véase también
 
 - [Usando la API de Geolocalización](/es/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - La interfaz pertenece a {{domxref("Geolocation")}}, y puede ser accedida mediante {{domxref("Navigator.geolocation")}}.
