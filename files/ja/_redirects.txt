@@ -3546,7 +3546,7 @@
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onmessage	/ja/docs/Web/API/ServiceWorkerGlobalScope/message_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onnotificationclick	/ja/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onnotificationclose	/ja/docs/Web/API/ServiceWorkerGlobalScope/notificationclose_event
-/ja/docs/Web/API/ServiceWorkerGlobalScope/onpush	/ja/docsWeb/API/ServiceWorkerGlobalScope/push_event
+/ja/docs/Web/API/ServiceWorkerGlobalScope/onpush	/ja/docs/Web/API/ServiceWorkerGlobalScope/push_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onpushsubscriptionchange	/ja/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event
 /ja/docs/Web/API/ServiceWorkerRegistration/onupdatefound	/ja/docs/Web/API/ServiceWorkerRegistration/updatefound_event
 /ja/docs/Web/API/ServiceWorker_API	/ja/docs/Web/API/Service_Worker_API
