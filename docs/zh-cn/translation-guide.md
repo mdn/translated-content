@@ -142,23 +142,23 @@ Reference to [Live sample macros](/en-US/docs/MDN/Structures/Live_samples#live_s
 示例如下：
 
 - 正确：学习 Web 开发
-- 错误：学习 Web 开发
+- 错误：学习Web开发
 - 正确：学习 JavaScript、HTML、CSS 等
-- 错误：学习 JavaScript、HTML、CSS 等
+- 错误：学习 JavaScript、 HTML、 CSS 等
 - 正确：应用程序接口（API）
-- 错误：应用程序接口（API）
+- 错误：应用程序接口（ API ）
 
 对于链接文字和非链接文字部分，同样适用此规则：
 
 - 正确：`它指向一个[示例](#示例)`
 - 错误：`它指向一个 [示例](#示例)`
 - 正确：`指向 [MDN 开发者文档](https://developer.mozilla.org/)的链接`
-- 错误：`指向[MDN 开发者文档](https://developer.mozilla.org/)的链接`
+- 错误：`指向[MDN开发者文档](https://developer.mozilla.org/)的链接`
 
 请注意，数字与中文之间也请保留空格：
 
 - 正确：需 10 个小时完成
-- 错误：需 10 个小时完成
+- 错误：需10个小时完成
 
 ### 排版
 
