@@ -7,21 +7,21 @@ body:
       value: |
         ### Antes de comenzar
 
-        **¿Quieres cambiar esta página por ti mismo?** ¡Este contenido es de código abierto!
-        ↩ Regresar y usar el enlace __Editar en GitHub__ en la página.
+        **¿Quiere cambiar esta página por usted mismo?** ¡Este contenido es de código abierto!
+        ↩ Regrese y use el enlace _Editar en GitHub_ en la página.
 
         **¿El problema es acerca de la tabla de compatibilidad con los navegadores?**
-        ↩ Regresar y usar el enlace _Reportar problemas con los datos de compatibilidad en GitHub_ en la página.
+        ↩ Regrese y use el enlace _Reportar problemas con los datos de compatibilidad en GitHub_ en la página.
 
-        **¿Necesitas ayuda con un navegador?**
-        🙋 Para obtener ayuda con [Firefox](https://support.mozilla.org/en-US/kb/file-bug-report-or-feature-request-mozilla), [Chrome](https://support.google.com/chrome/answer/95315?hl=en-GB&ref_topic=7439544), [Safari](https://www.apple.com/feedback/safari.html), o algún otro navegador, visita la página de soporte del navegador.
+        **¿Necesitas ayuda con su navegador?**
+        🙋 Para obtener ayuda con [Firefox](https://support.mozilla.org/en-US/kb/file-bug-report-or-feature-request-mozilla), [Chrome](https://support.google.com/chrome/answer/95315?hl=en-GB&ref_topic=7439544), [Safari](https://www.apple.com/feedback/safari.html), o algún otro navegador, visite la página de soporte del navegador.
 
         ---
   - type: input
     id: mdn-url
     attributes:
       label: MDN URL
-      description: Se establece automáticamente. Evite modificarla.
+      description: Se establece automáticamente. No la modifique.
     validations:
       required: true
   - type: input
@@ -31,7 +31,7 @@ body:
   - type: textarea
     id: problem
     attributes:
-      label: ¿Qué información es incorrecta, inutil o incompleta?
+      label: ¿Qué información es incorrecta, inútil o incompleta?
     validations:
       required: true
   - type: textarea
@@ -59,4 +59,4 @@ body:
     id: metadata
     attributes:
       label: MDN metadata
-      description: Se establece automáticamente. Evite modificarla.
+      description: Se establece automáticamente. No la modifique.
