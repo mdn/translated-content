@@ -26,7 +26,7 @@ clearWatch(id)
 
 ### Valor devuelto
 
-Nada ({{jsxref("undefined")}}).
+Ninguno ({{jsxref("undefined")}}).
 
 ## Ejemplos
 
