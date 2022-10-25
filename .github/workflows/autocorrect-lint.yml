@@ -42,6 +42,6 @@ jobs:
 
       - name: AutoCorrect changed content
         if: ${{ env.GIT_DIFF_FILTERED }}
-        uses: huacnlee/autocorrect-action@v1.11.0
+        uses: huacnlee/autocorrect-action@v2.3.2
         with:
           args: ${{ env.GIT_DIFF_FILTERED }} --lint
