@@ -38,7 +38,7 @@ getCurrentPosition(success, error, options)
 
 ### Valor devuelto
 
-Nada ({{jsxref("undefined")}}).
+Ninguno ({{jsxref("undefined")}}).
 
 ## Ejemplos
 
