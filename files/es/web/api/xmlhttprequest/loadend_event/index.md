@@ -46,4 +46,4 @@ El evento `loadend` es emitido cuando el progreso de la carga de un recurso se h
 
 ## Ver También
 
-- [Monitoreando progreso](/es/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress "/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest")
+- [Monitoreando progreso](/es/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)

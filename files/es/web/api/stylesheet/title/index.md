@@ -11,7 +11,7 @@ translation_of: Web/API/StyleSheet/title
 
 ### Notas
 
-El título es a menudo especificado en el [ownerNode](/es/DOM/stylesheet.ownerNode "es/DOM/stylesheet.ownerNode").
+El título es a menudo especificado en el [ownerNode](/es/DOM/stylesheet.ownerNode).
 
 ### Especificación
 

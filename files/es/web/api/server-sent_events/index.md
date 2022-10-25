@@ -8,13 +8,13 @@ tags:
 translation_of: Web/API/Server-sent_events
 original_slug: Server-sent_events
 ---
-Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as _[Events](/es/docs/DOM/event "DOM/Event") + data_ inside the web page.
+Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as _[Events](/es/docs/DOM/event) + data_ inside the web page.
 
 ## Documentation
 
-- [Using server-sent events](/es/docs/Server-sent_events/Using_server-sent_events "Server-sent events/Using server-sent events")
+- [Using server-sent events](/es/docs/Server-sent_events/Using_server-sent_events)
   - : A tutorial guide to writing both server and client side part of a server-sent events app.
-- [EventSource reference](/es/docs/Server-sent_events/EventSource "Server-sent events/EventSource")
+- [EventSource reference](/es/docs/Server-sent_events/EventSource)
   - : A reference to the client-side EventSource API.
 
 ## Tools
@@ -25,7 +25,7 @@ Traditionally, a web page has to send a request to the server to receive new dat
 
 ## Related Topics
 
-- [AJAX](/es/docs/AJAX "AJAX"), [JavaScript](/es/docs/JavaScript "JavaScript"), [WebSockets](/es/docs/WebSockets "WebSockets")
+- [AJAX](/es/docs/AJAX), [JavaScript](/es/docs/JavaScript), [WebSockets](/es/docs/WebSockets)
 
 ## See also
 

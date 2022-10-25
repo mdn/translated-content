@@ -41,7 +41,7 @@ Thunder
 
 ### Notas
 
-Para el HTML, **ownerNode** correspondería a un elemento [LINK](/es/LINK "es/LINK") o [STYLE](/Es/DOM/Element.style "es/DOM/element.style"). Para XML, serían las instrucciones del proceso de enlace. Para las hojas de estilo que están incluidas en otras hojas de estilo, este valor es NULL.
+Para el HTML, **ownerNode** correspondería a un elemento [LINK](/es/LINK) o [STYLE](/Es/DOM/Element.style). Para XML, serían las instrucciones del proceso de enlace. Para las hojas de estilo que están incluidas en otras hojas de estilo, este valor es NULL.
 
 ### Especificación
 

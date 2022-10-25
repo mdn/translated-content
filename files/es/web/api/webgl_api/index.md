@@ -7,27 +7,27 @@ translation_of: Web/API/WebGL_API
 ---
 {{WebGLSidebar}}
 
-WebGL trae gráficos en 3D para la Web mediante la introducción de una API que cumple estrictamente la OpenGL ES 2.0 que se puede utilizar en elementos [`canvas`](/en/HTML/Canvas "En/html/canvas") HTML5. La compatibilidad para WebGL viene en [Firefox 4](/es/Firefox_4_para_desarrolladores "es/Firefox 4 para desarrolladores") y se puede probar en las [betas de Firefox 4](http://firefox.com/beta) o en [trunk builds.](http://nightly.mozilla.org/) .
+WebGL trae gráficos en 3D para la Web mediante la introducción de una API que cumple estrictamente la OpenGL ES 2.0 que se puede utilizar en elementos [`canvas`](/en/HTML/Canvas) HTML5. La compatibilidad para WebGL viene en [Firefox 4](/es/Firefox_4_para_desarrolladores) y se puede probar en las [betas de Firefox 4](http://firefox.com/beta) o en [trunk builds.](http://nightly.mozilla.org/) .
 
 > **Nota:** **Nota:** La especificación para WebGL se encuentra todavía en fase de borrador y sujeta a cambios.
 
 ## Temas sobre desarrollo
 
-- [Primeros pasos con WebGL](/en/WebGL/Getting_started_with_WebGL "en/WebGL/Getting started with WebGL")
+- [Primeros pasos con WebGL](/en/WebGL/Getting_started_with_WebGL)
   - : Cómo crear un contexto WebGL.
-- [Adición de contenido 2D a un contexto WebGL](/en/WebGL/Adding_2D_content_to_a_WebGL_context "en/WebGL/Adding 2D content to a WebGL context")
+- [Adición de contenido 2D a un contexto WebGL](/en/WebGL/Adding_2D_content_to_a_WebGL_context)
   - : Cómo representar formas planas sencillas utilizando WebGL.
-- [Uso de sombreadores para aplicar color en WebGL](/en/WebGL/Using_shaders_to_apply_color_in_WebGL "en/WebGL/Using shaders to apply color in WebGL")
+- [Uso de sombreadores para aplicar color en WebGL](/en/WebGL/Using_shaders_to_apply_color_in_WebGL)
   - : Muestra cómo agregar color a las formas mediante sombreadores.
-- [Animación de objetos con WebGL](/en/WebGL/Animating_objects_with_WebGL "en/WebGL/Animating objects with WebGL")
+- [Animación de objetos con WebGL](/en/WebGL/Animating_objects_with_WebGL)
   - : Muestra cómo rotar y trasladar los objetos para crear animaciones sencillas.
-- [Creación de objetos 3D utilizando WebGL](/en/WebGL/Creating_3D_objects_using_WebGL "en/WebGL/Creating 3D objects using WebGL")
+- [Creación de objetos 3D utilizando WebGL](/en/WebGL/Creating_3D_objects_using_WebGL)
   - : Muestra cómo crear y animar un objeto 3D (en este caso, un cubo).
-- [Uso de texturas en WebGL](/en/WebGL/Using_textures_in_WebGL "en/WebGL/Using textures in WebGL")
+- [Uso de texturas en WebGL](/en/WebGL/Using_textures_in_WebGL)
   - : Muestra cómo asignar texturas a las caras de un objeto.
-- [Iluminación en WebGL](/en/WebGL/Lighting_in_WebGL "en/WebGL/Lighting in WebGL")
+- [Iluminación en WebGL](/en/WebGL/Lighting_in_WebGL)
   - : Cómo simular efectos de iluminación en tu contexto WebGL.
-- [Animación de texturas en WebGL](/en/WebGL/Animating_textures_in_WebGL "en/WebGL/Animating textures in WebGL")
+- [Animación de texturas en WebGL](/en/WebGL/Animating_textures_in_WebGL)
   - : Se muestra cómo animar texturas, en este caso, mediante la asignación de un vídeo Ogg a las caras de un cubo que gira.
 
 ## Recursos

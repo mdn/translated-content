@@ -8,9 +8,9 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/XMLHttpRequest
 ---
-`XMLHttpRequest` es un objeto [JavaScript](/en/JavaScript "En/JavaScript") que fue diseñado por Microsoft y adoptado por Mozilla, Apple y Google. Actualmente es un [estándar de la W3C](http://www.w3.org/TR/XMLHttpRequest/). Proporciona una forma fácil de obtener información de una URL sin tener que recargar la página completa. Una página web puede actualizar sólo una parte de la página sin interrumpir lo que el usuario está haciendo. `XMLHttpRequest` es ampliamente usado en la programación AJAX.
+`XMLHttpRequest` es un objeto [JavaScript](/en/JavaScript) que fue diseñado por Microsoft y adoptado por Mozilla, Apple y Google. Actualmente es un [estándar de la W3C](http://www.w3.org/TR/XMLHttpRequest/). Proporciona una forma fácil de obtener información de una URL sin tener que recargar la página completa. Una página web puede actualizar sólo una parte de la página sin interrumpir lo que el usuario está haciendo. `XMLHttpRequest` es ampliamente usado en la programación AJAX.
 
-A pesar de su nombre, `XMLHttpRequest` puede ser usado para recibir cualquier tipo de dato, no solo XML, y admite otros formatos además de [HTTP](/en/HTTP "en/HTTP") (incluyendo `file` y `ftp`).
+A pesar de su nombre, `XMLHttpRequest` puede ser usado para recibir cualquier tipo de dato, no solo XML, y admite otros formatos además de [HTTP](/en/HTTP) (incluyendo `file` y `ftp`).
 
 Para crear una instancia de `XMLHttpRequest`, debes hacer lo siguiente:
 
@@ -18,9 +18,9 @@ Para crear una instancia de `XMLHttpRequest`, debes hacer lo siguiente:
 var req = new XMLHttpRequest();
 ```
 
-Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHttpRequest](/Es/XMLHttpRequest/Using_XMLHttpRequest "En/Using XMLHttpRequest").
+Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHttpRequest](/Es/XMLHttpRequest/Using_XMLHttpRequest).
 
-> **Nota:** De forma predeterminada, Firefox 3 limita la cantidad de conexiones de `XMLHttpRequest` por servidor a 6 (las versiones previas limitan a 2 conexiones por servidor). Algunos sitios web interactivos pueden mantener una conexión `XMLHttpRequest` abierta, así que abrir múltiples sesiones a esos sitios puede derivar en congelamientos del navegador de una forma que la ventana no se actualiza y los controles no responden. Este valor puede ser cambiado al editar la preferencia `network.http.max-persistent-connections-per-server` en [`about:config`](/about:config "Linkification: about:config").
+> **Nota:** De forma predeterminada, Firefox 3 limita la cantidad de conexiones de `XMLHttpRequest` por servidor a 6 (las versiones previas limitan a 2 conexiones por servidor). Algunos sitios web interactivos pueden mantener una conexión `XMLHttpRequest` abierta, así que abrir múltiples sesiones a esos sitios puede derivar en congelamientos del navegador de una forma que la ventana no se actualiza y los controles no responden. Este valor puede ser cambiado al editar la preferencia `network.http.max-persistent-connections-per-server` en [`about:config`](/about:config).
 
 ## Resumen del método
 
@@ -49,7 +49,7 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
     En los casos en que un diálogo de seguridad debe ser mostrado (como en una autentficación o la notificación de un certificado no válido), el pedido simplemente falla.
 
 - `mozResponseArrayBuffer` Non-standard
-  : [`ArrayBuffer`](/en-US/JavaScript_typed_arrays/ArrayBuffer "en/JavaScript typed arrays/ArrayBuffer")
+  : [`ArrayBuffer`](/en-US/JavaScript_typed_arrays/ArrayBuffer)
   - : La respuesta al pedido en la forma de un arreglo de JavaScript. Esto es NULL si el pedido no fue exitoso o si todavía no ha sido enviado. **Sólo lectura.**
 - `multipart`: `booleano`
 
@@ -94,7 +94,7 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
   - : La respuesta al pedido como texto, o `null` si el pedido no fue exitoso o todavía no se envió. **Sólo lectura.**
 - `responseXML`: `nsIDOMDocument`
 
-  - : La respuesta al pedido como un objeto DOM[`Document`](/en-US/DOM/document "En/DOM/Document"), o `null` si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera `text/xml`. **Sólo lectura.**
+  - : La respuesta al pedido como un objeto DOM[`Document`](/en-US/DOM/document), o `null` si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera `text/xml`. **Sólo lectura.**
 
     > **Nota:** Si el servidor no aplica el encabezado de tipo de contenido `text/xml`, puedes usar `overrideMimeType()` para forzar a `XMLHttpRequest` a analizarlo como XML igualmente.
 
@@ -278,7 +278,7 @@ void send(
 ###### Parameters
 
 - `body`
-  - : This may be an `nsIDocument`, `nsIInputStream`, or a string (an `nsISupportsString` if called from native code) that is used to populate the body of a POST request. Starting with Gecko 1.9.2, you may also specify an DOM{{ domxref("File") }} , and starting with Gecko 2.0 {{ geckoRelease("2.0") }} you may also specify a [`FormData`](/en/XMLHttpRequest/FormData "en/XMLHttpRequest/FormData") object.
+  - : This may be an `nsIDocument`, `nsIInputStream`, or a string (an `nsISupportsString` if called from native code) that is used to populate the body of a POST request. Starting with Gecko 1.9.2, you may also specify an DOM{{ domxref("File") }} , and starting with Gecko 2.0 {{ geckoRelease("2.0") }} you may also specify a [`FormData`](/en/XMLHttpRequest/FormData) object.
 
 ###### Notes
 
@@ -327,9 +327,9 @@ void setRequestHeader(
 
 ## See also
 
-- [Using XMLHttpRequest](/En/XMLHttpRequest/Using_XMLHttpRequest "En/Using XMLHttpRequest")
-- [`FormData`](/en/XMLHttpRequest/FormData "en/XMLHttpRequest/FormData")
-- [MDC AJAX introduction](/en/AJAX/Getting_Started "en/AJAX/Getting_Started")
+- [Using XMLHttpRequest](/En/XMLHttpRequest/Using_XMLHttpRequest)
+- [`FormData`](/en/XMLHttpRequest/FormData)
+- [MDC AJAX introduction](/en/AJAX/Getting_Started)
 - [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
 - [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
 - [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
