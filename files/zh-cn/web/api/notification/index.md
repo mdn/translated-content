@@ -83,13 +83,13 @@ slug: Web/API/Notification
 ## 事件
 
 - {{domxref("Notification.click_event", "click")}}
-  - : 当用户点击通知时调用。
+  - : 当用户点击通知时触发。
 - {{domxref("Notification.close_event", "close")}}
-  - : 当用户关闭通知时调用。
+  - : 当用户关闭通知时触发。
 - {{domxref("Notification.error_event", "error")}}
-  - : 当通知发生错误时调用。
+  - : 当通知发生错误时触发。
 - {{domxref("Notification.show_event", "show")}}
-  - : 当通知显示时调用。
+  - : 当通知显示时触发。
 
 ## 示例
 
@@ -129,7 +129,7 @@ function notifyMe() {
 
 在这里，我们不再展示一个在线实例，因为 Chrome 和 Firefox 不再允许从跨域的 {{htmlelement("iframe")}} 请求通知权限，其他浏览器会陆续跟进。要查看实际示例，请查看我们的[待办事项示例](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（参见[在线运行的应用程序](https://mdn.github.io/dom-examples/to-do-notifications/)）。
 
-> **备注：** 在上面的示例中，我们生成了响应用户手势的的通知（点击按钮）。这是最好的实践——你不应该向用户发送它们不同意的通知——而且未来浏览器将明确的禁止未响应用户手势发出的通知。例如， Firefox 已经从版本 72 开始就这么做了。
+> **备注：** 在上面的示例中，我们生成了响应用户手势的的通知（点击按钮）。这是最佳实践——你不应该向用户发送它们不同意的通知——而且未来浏览器将明确的禁止未响应用户手势发出的通知。例如， Firefox 已经从版本 72 开始就这么做了。
 
 ## 规范
 
