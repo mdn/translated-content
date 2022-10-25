@@ -52,7 +52,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 - {{jsxref("Array.prototype.concat()")}}
   - : 返回一个新数组，该数组是调用数组与其他数组或值连接形成。
 - {{jsxref("Array.prototype.copyWithin()")}}
-  - : 复制数组内的数组元素序列。
+  - : 在数组内复制数组元素序列。
 - {{jsxref("Array.prototype.entries()")}}
   - : 返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)对象，其中包含数组中每个索引的键/值对。
 - {{jsxref("Array.prototype.every()")}}
