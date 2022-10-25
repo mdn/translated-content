@@ -211,7 +211,7 @@ Cookie 与特定域和方案（例如，`http` 或 `https`）相关联，如果�
 
 在浏览器中存储数据的另一种方法是 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)。[window.sessionStorage](/zh-CN/docs/Web/API/Window/sessionStorage) 和[window.localStorage](/zh-CN/docs/Web/API/Window/localStorage) 属性与持续时间中的会话和永久 cookie 相对应，但是存储限制比 cookie 大，并且永远不会发送到服务器。可以使用 [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 或基于它构建的库来存储更多结构化的数据。
 
-有一些技术旨在在 cookie 被删除后重新创建它们。这些被称为“僵尸”cookie。这些技术违反了用户的隐私和用户控制原则，可能违反数据隐私法规，并可能时使用它们的网站承担法律责任。
+有一些技术旨在在 cookie 被删除后重新创建它们。这些被称为“僵尸”cookie。这些技术违反了用户的隐私和用户控制原则，可能违反数据隐私法规，并可能使使用它们的网站承担法律责任。
 
 ## 参见
 
