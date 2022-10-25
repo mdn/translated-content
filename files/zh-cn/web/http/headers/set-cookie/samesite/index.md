@@ -52,7 +52,7 @@ Set-Cookie: flavor=choco; SameSite=None; Secure
 
 最新版本的现代浏览器为 cookies 的 `SameSite` 提供了更安全的默认值，因此控制台中可能会显示以下消息：
 
-> Some cookies are misusing the "sameSite " attribute, so it won't work as expected.
+> Some cookies are misusing the "sameSite" attribute, so it won't work as expected.
 > Cookie "_myCookie_" has "sameSite" policy set to "lax" because it is missing a "sameSite" attribute, and "sameSite=lax" is the default value for this attribute.
 
 出现警告是因为未显式指定 cookie 的 `SameSite` 属性：
