@@ -1,8 +1,8 @@
 ---
-title: "@scroll-timeline"
-slug: Web/CSS/@scroll-timeline
+title: '@scroll-timeline'
+slug: Web/CSS/scroll-timeline
+original_slug: Web/CSS/@scroll-timeline
 ---
-
 {{CSSRef}}
 
 **`@scroll-timeline`** は CSS の[アットルール](/ja/docs/Web/CSS/At-rule)で、分や秒ではなく、スクロールコンテナー内のスクロールの進行状況によって時間値を決定する [`AnimationTimeline`](/ja/docs/Web/API/AnimationTimeline) を定義するものです。アニメーションタイムラインは [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations) と `animation-timeline` プロパティによってと関連付けられます。
