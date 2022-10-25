@@ -102,7 +102,7 @@ Un lienzo experimentara escalado cuando es renderizado en una resolución difere
 
 ## También podría interesarte
 
-- [Una introducción a WebGL - ](https://dev.opera.com/articles/introduction-to-webgl-part-1/)Escrito por Luz Caballero, publicado en dev.opera.com. Este articulo cita que es WebGL, explica como funciona WebGL (incluyendo el concepto del proceso de renderizado), e introduce algunas librerias WebGL
+- [Una introducción a WebGL -](https://dev.opera.com/articles/introduction-to-webgl-part-1/)Escrito por Luz Caballero, publicado en dev.opera.com. Este articulo cita que es WebGL, explica como funciona WebGL (incluyendo el concepto del proceso de renderizado), e introduce algunas librerias WebGL
 - [Una introducción al OpenGL moderno](http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) - Una serie de articulos escritos por Joe Groff. Joe da una limpia introducción sobre OpenGL desde su historia al importante concepto del proceso de graficos y provee algunos ejemplos sobre como OpenGL trabaja. Si no tienes ninguna idea sobre OpenGL, este es un buen lugar para comenzar.
 
 {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}

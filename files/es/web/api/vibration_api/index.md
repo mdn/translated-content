@@ -57,22 +57,22 @@ var intervaloDeVibrado;
 
 // Iniciar la vibración
 function iniciarVibrado(duracion) {
-	navigator.vibrate(duracion);
+ navigator.vibrate(duracion);
 }
 
 // Detiene la vibración
 function detenerVibrado() {
-	// Limpiar el intervalo y detener las vibraciones existentes
-	if(intervaloDeVibrado) clearInterval(intervaloDeVibrado);
-	navigator.vibrate(0);
+ // Limpiar el intervalo y detener las vibraciones existentes
+ if(intervaloDeVibrado) clearInterval(intervaloDeVibrado);
+ navigator.vibrate(0);
 }
 
 // Iniciar las vibraciones con una determinado tiempo e intervalo
 // Asumir que el valor recibido es un entero
 function iniciarVibradoPersistente(duracion, intervalo) {
-	intervaloDeVibrado = setInterval(function() {
-		iniciarVibrado(duracion);
-	}, intervalo);
+ intervaloDeVibrado = setInterval(function() {
+  iniciarVibrado(duracion);
+ }, intervalo);
 }
 ```
 

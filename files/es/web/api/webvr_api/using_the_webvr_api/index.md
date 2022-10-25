@@ -40,7 +40,7 @@ Para ilustrar cómo funciona la API de WebVR, estudiaremos nuestro ejemplo raw-w
 
 ![](https://mdn.mozillademos.org/files/15121/Capture1.png)
 
-> **Nota:** **Nota:** Puedes encontrar el [código fuente de nuestra demo](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) en GitHub, y [verlo en vivo ](https://mdn.github.io/webvr-tests/raw-webgl-example/)también.
+> **Nota:** **Nota:** Puedes encontrar el [código fuente de nuestra demo](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) en GitHub, y [verlo en vivo](https://mdn.github.io/webvr-tests/raw-webgl-example/)también.
 
 > **Nota:** **Nota:** Si WebVR no funciona en su navegador, es posible que deba asegurarse de que se está ejecutando a través de su tarjeta gráfica. Por ejemplo, para las tarjetas NVIDIA, si el panel de control de NVIDIA se ha configurado correctamente, habrá una opción de menú contextual disponible - haga clic con el botón derecho del ratón en Firefox y seleccione _Ejecutar con procesador gráfico_ > _Procesador NVIDIA de alto rendimiento._
 
@@ -51,7 +51,7 @@ Nuestra demo también cuenta con:
 - Un botón para iniciar (y detener) la presentación de nuestra escena en la pantalla VR.
 - Un botón para mostrar (y ocultar) los datos de pose VR, es decir, la posición y orientación del auricular, actualizados en tiempo real.
 
-Cuando miras a través del código fuente de[ nuestro archivo JavaScript principal de demostraciones](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) , puede encontrar fácilmente las partes específicas de WebVR buscando la cadena "WebVR" en comentarios anteriores.
+Cuando miras a través del código fuente de[nuestro archivo JavaScript principal de demostraciones](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) , puede encontrar fácilmente las partes específicas de WebVR buscando la cadena "WebVR" en comentarios anteriores.
 
 > **Nota:** **Nota:** Para obtener más información sobre JavaScript básico y WebGL, consulte nuestro [material de aprendizaje JavaScrip](/es/docs/Learn/JavaScript) , y nuestro [WebGL Tutorial](/es/docs/Web/API/WebGL_API/Tutorial).
 
@@ -61,10 +61,10 @@ En este punto, veamos cómo funcionan las partes WebVR del código.
 
 Una típica (simple) aplicación WebVR funciona de esta manera:
 
-1.  {{domxref("Navigator.getVRDisplays()")}} se utiliza para obtener una referencia a la visualización VR.
-2.  {{domxref("VRDisplay.requestPresent()")}} se utiliza para iniciar la presentación en la pantalla VR.
-3.  WebVR's dedicado {{domxref("VRDisplay.requestAnimationFrame()")}} se utiliza para ejecutar el bucle de representación de la aplicación a la velocidad de actualización correcta para la pantalla.
-4.  Dentro del bucle de procesamiento, se capturan los datos necesarios para mostrar el marco actual ({{domxref("VRDisplay.getFrameData()")}}), dibuja la escena visualizada dos veces - una vez para la vista en cada ojo - luego envia la vista renderizada a la pantalla para mostrar al usuario a través de ({{domxref("VRDisplay.submitFrame()")}}).
+1. {{domxref("Navigator.getVRDisplays()")}} se utiliza para obtener una referencia a la visualización VR.
+2. {{domxref("VRDisplay.requestPresent()")}} se utiliza para iniciar la presentación en la pantalla VR.
+3. WebVR's dedicado {{domxref("VRDisplay.requestAnimationFrame()")}} se utiliza para ejecutar el bucle de representación de la aplicación a la velocidad de actualización correcta para la pantalla.
+4. Dentro del bucle de procesamiento, se capturan los datos necesarios para mostrar el marco actual ({{domxref("VRDisplay.getFrameData()")}}), dibuja la escena visualizada dos veces - una vez para la vista en cada ojo - luego envia la vista renderizada a la pantalla para mostrar al usuario a través de ({{domxref("VRDisplay.submitFrame()")}}).
 
 En las secciones siguientes veremos en detalle nuestra demostración raw-webgl y veremos dónde se utilizan exactamente las características anteriores.
 
