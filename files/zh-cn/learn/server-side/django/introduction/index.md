@@ -135,7 +135,8 @@ urlpatterns = [
 ```python
 ## filename: views.py (Django view functions)
 
-from django.http import HttpResponse
+
+import HttpResponse
 
 def index(request):
     # Get an HttpRequest - the request parameter
@@ -147,8 +148,11 @@ def index(request):
 > **备注：** 一点点 Python:
 >
 > - [Python 模块](https://docs.python.org/3/tutorial/modules.html) 是函数的“库”，存储在单独的文件中，我们可能想在我们的代码中使用它们。在这里我们只从 django.http 模块导入了 HttpResponse 对象，使我们可以在视图中使用它：
->   from django.http import HttpResponse.
+> 
+>   `from django.http import HttpResponse`
+>   
 >   还有其他方法可以从模块导入一些或所有对象。
+>   
 > - 如上所示，使用`def`关键字声明函数，在函数名称后面的括号中列出命名参数；整行以冒号结尾。注意下一行是否都进行了**缩进**。缩进很重要，因为它指定代码行在该特定块内 (强制缩进是 Python 的一个关键特征，也是 Python 代码很容易阅读的一个原因)。
 
 视图通常存储在一个名为 **views.py** 的文件中。
