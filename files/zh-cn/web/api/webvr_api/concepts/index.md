@@ -254,7 +254,7 @@ The Oculus Rift headset has a letency of 20 ms or less, but woth mobile device-b
 
 ### Framerate ( Frames per second / FPS ) 帧率**【K】**
 
-Based on the Wikipedia definition, framerate is the frequency at which an imaging device produces unique consecutive images, called frames. A rate of 60fps is an acceptable rate for a smooth user experience, but depending on the performance of the machine the app is running on, or the complexity of the content you want to show, it can drastically lower. Less than 30fps is generally considered juddery, and annoying to the user.,
+Based on the Wikipedia definition, framerate is the frequency at which an imaging device produces unique consecutive images, called frames. A rate of 60fps is an acceptable rate for a smooth user experience, but depending on the performance of the machine the app is running on, or the complexity of the content you want to show, it can drastically lower. Less than 30fps is generally considered juddery, and annoying to the user.
 
 **根据维基百科的定义，帧率指的是一个设备产生单一连贯的图像的速率，叫做框架。60FPS 的帧率足够提供给使用者一个平稳的体验，但是更加要取决于 APP 运行的设备的表现，或者是你想要体验的 VR 内容，也有可能大大的降低。假如帧率小于了 30FPS，通常会发生严重的颤抖，并且使使用者产生厌恶感。**
 
