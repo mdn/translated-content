@@ -39,7 +39,7 @@ minmax(auto, 300px)
 
 每个参数分别是`<length>`、`<percentage>`、`<flex>`的一种，或者是`max-content`、`min-content`、或`auto`之一。
 
-如果 _最大值_ < _最小值_，则*最大值*被忽略并且`minmax(最小值,最大值)`被看成*最小值*。{{cssxref("flex_value","&lt;flex&gt;")}} 值作为最大值时设置网格轨道的弹性系数；作为最小值时无效。
+如果 _最大值_ < _最小值_，则*最大值*被忽略并且`minmax(最小值，最大值)`被看成*最小值*。{{cssxref("flex_value","&lt;flex&gt;")}} 值作为最大值时设置网格轨道的弹性系数；作为最小值时无效。
 
 ### 取值
 

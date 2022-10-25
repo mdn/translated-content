@@ -28,7 +28,7 @@ Using a value of `scroll` contains the content in its box and add scrollbars to 
 
 {{EmbedGHLiveSample("css-examples/flow/overflow/scroll.html", '100%', 700)}}
 
-Using a value of `auto` will display the content with no scrollbars if the content fits inside the box. If it doesn’t fit then scrollbars will be added. Comparing the next example with the example for `overflow: scroll` you should see `overflow scroll` has horizontal and vertical scrollbars when it only needs vertical scrolling. The `auto` example below only adds the scrollbar in the direct we need to scroll.
+Using a value of `auto` will display the content with no scrollbars if the content fits inside the box. If it doesn't fit then scrollbars will be added. Comparing the next example with the example for `overflow: scroll` you should see `overflow scroll` has horizontal and vertical scrollbars when it only needs vertical scrolling. The `auto` example below only adds the scrollbar in the direct we need to scroll.
 如果内容适合方框，则使用值 auto 将显示不带滚动条的内容。如果它不适合，则会添加滚动条。将下一个示例与溢出示例进行比较：当溢出滚动只需要垂直滚动时，您应该看到它有水平滚动条和垂直滚动条。下面的自动示例只在我们需要滚动的直接位置添加滚动条。
 
 {{EmbedGHLiveSample("css-examples/flow/overflow/auto.html", '100%', 700)}}

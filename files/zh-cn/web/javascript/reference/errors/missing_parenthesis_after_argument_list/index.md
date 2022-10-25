@@ -28,7 +28,7 @@ console.log("PI: " Math.PI);
 // SyntaxError: missing ) after argument list
 ```
 
-你可以正确的调用 `log` 函数通过加上”+“操作符。
+你可以正确的调用 `log` 函数通过加上” + “操作符。
 
 ```js example-good
 console.log("PI: " + Math.PI);

@@ -88,7 +88,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 {{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}
 
-`range` 输入的默认步进值为 1，除非步进基数不是整数，否则仅允许输入整数；否则，默认值为 1。例如，如果将 `min` 设置为-10 并将 `value` 设置为 1.5，则 1 的 `step` 将只允许正方向上的值为 1.5、2.5、3.5，...，以及-0.5，-1.5，-2.5 等。 ..朝负面方向发展。请参阅[HTML `step` 属性](/zh-CN/docs/Web/HTML/Attributes/step)。
+`range` 输入的默认步进值为 1，除非步进基数不是整数，否则仅允许输入整数；否则，默认值为 1。例如，如果将 `min` 设置为 -10 并将 `value` 设置为 1.5，则 1 的 `step` 将只允许正方向上的值为 1.5、2.5、3.5，...，以及 -0.5，-1.5，-2.5 等。 ..朝负面方向发展。请参阅[HTML `step` 属性](/zh-CN/docs/Web/HTML/Attributes/step)。
 
 ### 非标准属性
 
@@ -118,7 +118,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 默认情况下，最小值为 0，最大值为 100。如果这不是您想要的值，则可以通过更改 {{htmlattrxref("min", "input")}} 和/或 {{htmlattrxref("max", "input")}} 属性。这些可以是任何浮点值。
 
-例如，要要求用户输入介于-10 和 10 之间的值，可以使用：
+例如，要要求用户输入介于 -10 和 10 之间的值，可以使用：
 
 ```html
 <input type="range" min="-10" max="10">
