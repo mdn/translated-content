@@ -85,7 +85,7 @@ slug: Web/API/Notification
 - {{domxref("Notification.click_event", "click")}}
   - : 当用户点击通知时调用。
 - {{domxref("Notification.close_event", "close")}}
-  - : 当用于关闭通知时调用。
+  - : 当用户关闭通知时调用。
 - {{domxref("Notification.error_event", "error")}}
   - : 当通知发生错误时调用。
 - {{domxref("Notification.show_event", "show")}}
