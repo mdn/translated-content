@@ -46,8 +46,6 @@ range.setStart(startNode,startOffset);
 
 {{Compat("api.Range.setStart")}}
 
-##
-
 ## Ver también
 
 - [The DOM interfaces index](/es/docs/DOM/DOM_Reference)

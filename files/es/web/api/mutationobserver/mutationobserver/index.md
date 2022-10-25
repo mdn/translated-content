@@ -66,7 +66,7 @@ var observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
 ```
 
-El subárbol deseado se localiza buscando un elemento cuyo ID es "someElement". Un conjunto de opciones para el "observer" es establecido en el registro `observerOptions`. En él, especificamos los valores `true `tanto para `childList` como `attributes`, para obtener la información deseada.
+El subárbol deseado se localiza buscando un elemento cuyo ID es "someElement". Un conjunto de opciones para el "observer" es establecido en el registro `observerOptions`. En él, especificamos los valores `true`tanto para `childList` como `attributes`, para obtener la información deseada.
 
 Posteriormente instanciamos el objeto observer, especificando la función `callback()`, e iniciamos la observación de los nodos del DOM llamando al método `observe()`, pasandole el nodo y las opciones.
 

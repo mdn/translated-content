@@ -78,7 +78,7 @@ Escucha a estos eventos que están usando `addEventListener()` o por asignación
 | {{SpecName('Resource Timing', '#extensions-performance-interface', 'Performance extensions')}}                                         | {{Spec2('Resource Timing')}}                     | Se definen los métdos `clearResourceTimings()` y `setResourceTimingBufferSize()` y la propiedad `onresourcetimingbufferfull` . |
 | {{SpecName('User Timing Level 2', '#extensions-performance-interface', 'Performance extensions')}}                                 | {{Spec2('User Timing Level 2')}}             | Se clarifican los métodos `mark()`, `clearMark()`, `measure()` y `clearMeasure()`.                                             |
 | {{SpecName('User Timing', '#extensions-performance-interface', 'Performance extensions')}}                                             | {{Spec2('User Timing')}}                         | Se definen los métodos `mark()`, `clearMark()`, `measure()` y `clearMeasure()`.                                                |
-| {{SpecName('<span style="line-height: 1.5;">Frame Timing', '#extensions-performance-interface','Performance extensions')}} | {{Spec2('User Timing')}}                         | Se definen los métodos `clearFrameTimings()`, `setFrameTimingBufferSize()`, y `onframetimingbufferfull`.                       |
+| {{SpecName('Frame Timing', '#extensions-performance-interface','Performance extensions')}} | {{Spec2('User Timing')}}                         | Se definen los métodos `clearFrameTimings()`, `setFrameTimingBufferSize()`, y `onframetimingbufferfull`.                       |
 
 ## Compatibilidad de navegadores
 

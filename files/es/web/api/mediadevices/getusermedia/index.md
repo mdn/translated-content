@@ -62,7 +62,7 @@ navigator.mediaDevices.getUserMedia(myConstraints).then(function(mediaStream) {
 
     Si no existe una cámara con una resolución mínima para trabajar, entonces la promesa devuelta será rechazada con NotFoundError, y no se le pedirá al usuario.
 
-    La razón de esto es debido a que las propiedades `min`, `max`, y `exact `son inherentemente obligatorias, mientras que los valores planos y una propiedad llamada _ideal_ no lo son. He aquí un ejemplo más completo:
+    La razón de esto es debido a que las propiedades `min`, `max`, y `exact`son inherentemente obligatorias, mientras que los valores planos y una propiedad llamada _ideal_ no lo son. He aquí un ejemplo más completo:
 
     ```js
     {
@@ -74,7 +74,7 @@ navigator.mediaDevices.getUserMedia(myConstraints).then(function(mediaStream) {
     }
     ```
 
-    Un valor perteneciente a la propiedad `ideal, `cuando es usada, tiene gravedad, lo que significa que el navegador tratará de encontrar la configuración (una cámara, si tienes más de una), con la distancia de aptitud más pequeña ([fitness distance](http://w3c.github.io/mediacapture-main/#methods-5)) de los valores ideales dados.
+    Un valor perteneciente a la propiedad `ideal,`cuando es usada, tiene gravedad, lo que significa que el navegador tratará de encontrar la configuración (una cámara, si tienes más de una), con la distancia de aptitud más pequeña ([fitness distance](http://w3c.github.io/mediacapture-main/#methods-5)) de los valores ideales dados.
 
     Los valores planos son inherentemente ideales, lo que significa que de los ejemplos mostrados anteriormente, podrían haberse escrito de la siguiente manera:
 
@@ -135,7 +135,7 @@ p.catch(function(err) { console.log(err.name); }); // always check for errors at
 
 ### Ancho y alto
 
-He aquí un ejemplo del uso de `mediaDevices.getUserMedia(), `incluyendo un polyfill para hacer frente a los navegadores más antiguos.
+He aquí un ejemplo del uso de `mediaDevices.getUserMedia(),`incluyendo un polyfill para hacer frente a los navegadores más antiguos.
 
 ```js
 var promisifiedOldGUM = function(constraints, successCallback, errorCallback) {
