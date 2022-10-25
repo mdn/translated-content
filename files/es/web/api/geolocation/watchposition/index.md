@@ -80,7 +80,7 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## Ver también
 
-- [Usando la API de Geolocalización](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [Usando la API de Geolocalización](/es/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - La interfaz pertenece a {{domxref("Geolocation")}}, y puede ser accedida mediante {{domxref("Navigator.geolocation")}}.
 - La operación contraria: {{domxref("Geolocation.clearWatch()")}}
 - Un método similar: {{domxref("Geolocation.getCurrentPosition()")}}
