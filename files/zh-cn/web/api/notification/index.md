@@ -89,7 +89,7 @@ slug: Web/API/Notification
 - {{domxref("Notification.error_event", "error")}}
   - : 当通知发生错误时调用。
 - {{domxref("Notification.show_event", "show")}}
-  - : 当显示通知时调用。
+  - : 当通知显示时调用。
 
 ## 示例
 
