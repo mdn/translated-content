@@ -7,7 +7,7 @@ slug: >-
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-此篇文章我們將提供摘要來說明 [Svelte 框架](https://svelte.dev/)。我們將會看到 Svelte 如何運作及它本身和其餘框架和工具之間的區別。接著我們將學習如何設置我們的開發環境並建立一個範例應用程式，了解其專案結構及如何在本地運行，最後可以將其建置於正式環境。
+此篇文章我們將摘要說明 [Svelte 框架](https://svelte.dev/)。我們將會看到 Svelte 如何運作，以及它與其它框架和工具的不同之處。接著我們將學習如何設置我們的開發環境並建立一個範例應用程式，了解其專案結構及如何在本地運行，最後可以將其建置於正式環境。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -15,7 +15,7 @@ slug: >-
       <th scope="row">預備知識：</th>
       <td>
         <p>
-          學習它，推薦你至少需熟悉基本的
+          推薦你至少需熟悉基本的
           <a href="/zh-TW/docs/Learn/HTML">HTML</a>、
           <a href="/zh-TW/docs/Learn/CSS">CSS</a> 與
           <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>
@@ -25,14 +25,14 @@ slug: >-
           >基本知識。
         </p>
         <p>
-          Svelte 為一個編譯器，從我們的來源去產生出最小且高度優化的 JavaScript 程式碼；你將會需要 node 和 npm 來安裝此編譯器來建置你的應用程式。
+          Svelte 為一個編譯器，從我們的來源去產生出最小且高度優化的 JavaScript 程式碼；你將會需要一個安裝了 node 和 npm 的終端機來編譯和建置你的應用程式。
         </p>
       </td>
     </tr>
     <tr>
       <th scope="row">學習目標：</th>
       <td>
-        設置 Svelte 本地開發環境，建立初始應用程式，瞭解 Svelte 基本運作方式。
+        設置 Svelte 本地開發環境，建立初始應用程式並瞭解 Svelte 基本運作方式。
       </td>
     </tr>
   </tbody>
@@ -42,7 +42,7 @@ slug: >-
 
 於此模組中介紹的其它框架相比，Svelte 提供了一種不同的方式來建構網站應用程式。當應用程式運行時，像 React 和 Vue 等框架會在使用者的瀏覽器直接做它們想要做的事情，而 Svelte 則是將做的這些事移到編譯階段處理，因此那些做的事情只會發生在你建置應用程式的時候，進而能產生高度優化的原生 JavaScript 程式碼。
 
-這種方式產生的結果並不是只有將應用程式的 Bundles 最小化和取得最佳效能，對於現代的生態環境而擁有較少技術經驗的人，可以更容易取得開發者經驗。
+這種方式產生的結果並不是只有將應用程式的包裹最小化及取得最佳效能，對於現代的生態環境而擁有較少技術經驗的人，可以更容易取得開發者經驗。
 
 Svelte 更貼近傳統的網站開發模型（HTML、CSS、JS），它只有對 HTML 和 JavaScript 加上一些擴充，與其它框架相比，可以說只需要一點點概念和工具就能學習。
 
@@ -58,7 +58,7 @@ Svelte 可以被用來開發一小塊介面或整個應用程式。你也可以�
 
 不過 Svelte 特別適合處理下列幾種情況：
 
-- 讓網站應用程式更適用於低功耗裝置：使用 Svelte 建構應用程式將擁有較小的 Bundle 大小，特別對於網路連線緩慢和有限處理能力的裝置是理想的。較少的程式碼意謂著較少的容量可供下載、解析、執行並保存於記憶體中。
+- 讓網站應用程式更適用於低功耗裝置：使用 Svelte 建構應用程式將擁有較小的包裹大小，特別對於網路連線緩慢和有限處理能力的裝置是理想的。較少的程式碼意謂著較少的容量可供下載、解析、執行並保存於記憶體中。
 - 可應付需頻繁互動的頁面或複雜的視覺化需求：比如你建構一個資料視覺化應用程式，你可能會需要顯示大量的 DOM 元素，從該框架就能獲得較好的性能增益，因為它不會有運行途中的消耗，將可以確保使用者的互動更快速與即時。
 - 具備基本的網站開發知識即可：Svelte 學習曲線不高。網站開發人員具備基本的 HTML、CSS、JavaScript 知識就能在短時間簡單地抓住 Svelte 要點並開始建構網站應用程式。
 
@@ -66,9 +66,9 @@ Svelte 可以被用來開發一小塊介面或整個應用程式。你也可以�
 
 ## Svelte 如何工作？
 
-做為一個編譯器，Svelte 能擴展 HTML、CSS、JavaScript，產生最佳的 JavaScript 程式碼而不會有任何運行途中的消耗。為了達成這件事，Svelte 透過下列方法來擴展其原生網站技術：
+作為一個編譯器，Svelte 能擴展 HTML、CSS、JavaScript，產生最佳的 JavaScript 程式碼而不會有任何運行途中的消耗。為了達成這件事，Svelte 透過下列方法來擴展其原生網站技術：
 
-- 藉由對 HTML 擴展允許標記 JavaScript 表達式和提供一些指令來使用條件和迴圈，做法和 Handlebars 相似。
+- 藉由對 HTML 擴展允許標記 JavaScript 表達式和提供一些指令來使用條件和迴圈，做法和 handlebars 相似。
 - 藉由對 CSS 擴展加上範圍機制，允許每個元件去定義它們自己的樣式，不會因為其它元件的樣式改變而被影響。
 - 藉由對 JavaScript 擴展重新詮釋語言的一些特定指令來達到真實的反應性和減輕元件狀態管理。
 
@@ -76,7 +76,7 @@ Svelte 可以被用來開發一小塊介面或整個應用程式。你也可以�
 
 ## Svelte 第一步
 
-做為一個編譯器，你不能只是把 `<script src="svelte.js">` 標籤加入到你的頁面並載入它到你的應用程式。你將必須設置你的開發環境，為的是能讓編譯器可以做它要做的事情。
+既然 Svelte 是一個編譯器，你不能只是把 `<script src="svelte.js">` 標籤加入到你的頁面並載入它到你的應用程式。你將必須設置你的開發環境，為的是能讓編譯器可以做它要做的事情。
 
 ### 需求
 
@@ -88,7 +88,7 @@ Svelte 可以被用來開發一小塊介面或整個應用程式。你也可以�
 
 - 可以至 nodejs.org 了解[「什麼是 npm？」](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/)
 - 可以至 npm 部落格了解[「介紹 npx」](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
-- 可以至 svelte 部落格了解[「以最簡單的方式來開始 Svelte」](https://svelte.dev/blog/the-easiest-way-to-get-started)
+- 可以至 Svelte 部落格了解[「以最簡單的方式來開始 Svelte」](https://svelte.dev/blog/the-easiest-way-to-get-started)
 
 ### 建構你第一個 Svelte 應用程式
 
@@ -105,7 +105,7 @@ npm run dev
 
 > **備註：** 不用太驚訝 degit 做了這麼多事情——它其實就只是讓你可以從 git 儲存庫下載和解壓縮最新版本的內容。使用它比起使用 `git clone` 更快能達到我們的目的，因為它並不會下載整個儲存庫的歷史以及不會複製一份放在本機端。
 
-之後執行 `npm run dev`，Svelte 將會編譯和建構你的應用程式。它將會跑在本機 `localhost:5000` 位址。當你對來源檔案做了異動，Svelte 將會偵測到檔案更新並自動地重新編譯和刷新你的應用程式。你的瀏覽器將會顯示如下圖：
+之後執行 `npm run dev`，Svelte 將會編譯和建構你的應用程式。它將會跑在本機 `localhost:8080` 位址。當你對來源檔案做了異動，Svelte 將會偵測到檔案更新並自動地重新編譯和刷新你的應用程式。你的瀏覽器將會顯示如下圖：
 
 ![A simple start page that says hello world, and gives a link to the official svelte tutorials](01-svelte-starter-app.png)
 
@@ -149,13 +149,13 @@ moz-todo-svelte
 - `src`：這個目錄主要放你應用程式的來源程式碼——你寫的程式碼基本都會放在這。
 
   - `App.svelte`：在你的應用程式中它是最高層級的元件。不過它現在只會渲染出「Hello World!」的訊息給你看。
-  - `main.js`：我們應用程式的進入點。它會實例化 `App` 元件並將其綁定至我們 html 頁面的 body 上。
+  - `main.js`：我們應用程式的進入點。它會實例化 `App` 元件並將其綁定至我們 HTML 頁面的 body 上。
 
 - `public`：這個目錄包含所有我們會釋出於正式環境的檔案。
 
   - `favicon.png`：這個是你應用程式的 favicon。現在應該會是 Svelte 的標誌。
-  - `index.html`：這個是你應用程式的主要頁面。最初為一個空的 HTML5 頁面，接著會載入由 Svelte 產生的 css 檔案和 js bundles。
-  - `global.css`：這個檔案包含沒有範圍限制的樣式。這是一個正規的 css 檔案，將會套用至整個應用程式。
+  - `index.html`：這個是你應用程式的主要頁面。最初為一個空的 HTML5 頁面，接著會載入由 Svelte 產生的 CSS 檔案和 js 包裹。
+  - `global.css`：這個檔案包含沒有範圍限制的樣式。這是一個正規的 CSS 檔案，將會套用至整個應用程式。
   - `build`：這個資料夾會包含那些被產生的 CSS 和 JavaScript 來源程式碼。
 
     - `bundle.css`：所有定義於你個別元件中的樣式，都會被 Svelte 產生至這個 CSS 檔案中。
@@ -179,7 +179,7 @@ moz-todo-svelte
 <!-- 標記（零或多個HTML元素）放這 -->
 ```
 
-> **備註：** 更多元件格式的資訊，可以至 [svelte 文件](https://svelte.dev/docs#Component_format)閱讀。
+> **備註：** 更多元件格式的資訊，可以至 [Svelte 文件](https://svelte.dev/docs#Component_format)閱讀。
 
 接著我們來看入門範本中的 `src/App.svelte` 檔案，你應該會看到以下內容：
 
@@ -273,7 +273,7 @@ Svelte 也支援一些標籤，像是 `{#if...}`，`{#each...}` 和 `{#await...}
 
 在 Svelte 中，CSS 在元件 `<style>` 區塊中且被侷限於該元件範圍之內。這是透過對所選的元素加上一個類別來實現，而這個類別則會是基於元件樣式的雜湊值。
 
-你可以觀察到這個現象，藉由在瀏覽器開一個新標籤至 `localhost:5000` 位址，對 *HELLO WORLD!* 標籤右鍵／<kbd>Ctrl</kbd> 點選並選擇*檢查*：
+你可以觀察到這個現象，藉由在瀏覽器開一個新標籤至 `localhost:8080` 位址，對 *HELLO WORLD!* 標籤右鍵／<kbd>Ctrl</kbd> 點選並選擇*檢查*：
 
 ![Svelte starter app with devtools open, showing classes for scoped styles](02-svelte-component-scoped-styles.png)
 
@@ -290,7 +290,7 @@ Svelte 也支援一些標籤，像是 `{#if...}`，`{#each...}` 和 `{#await...}
 <h1>Hello {name} from MDN!</h1>
 ```
 
-只要儲存檔案之後，跑在 `localhost:5000` 位址的應用程式將會自動地被更新。
+只要儲存檔案之後，跑在 `localhost:8080` 位址的應用程式將會自動地被更新。
 
 ### 初見 Svelte 反應性
 
@@ -381,7 +381,7 @@ Svelte 編譯器處理每一個元件的 `<style>` 區塊並編譯它們至 `pub
 
 `bundle.js` 的壓縮版本容量大概 3KB 多一點，其中包含「Svelte 執行環境」（約 300 行 JavaScript 程式碼）和被編譯後的 `App.svelte` 元件。你可以看到，`bundle.js` 是唯一一個被 `index.html` 參考的 JavaScript 檔案。沒有其它函式庫被載入至網頁中。
 
-比起其它框架編譯後的 bundles 要小的多。考慮到程式碼 bundles 這件事，不僅僅是你需下載檔案的大小。包含那些需要被解析、執行並保存於記憶體中的可執行程式碼。所以確實有蠻大的不同，特別是低功耗裝置或 CPU 密集型應用程式。
+比起其它框架編譯後的包裹要小的多。考慮到程式碼包裹這件事，不僅僅是你需下載檔案的大小。包含那些需要被解析、執行並保存於記憶體中的可執行程式碼。所以確實有蠻大的不同，特別是低功耗裝置或 CPU 密集型應用程式。
 
 ## 跟著這個教學系列
 
@@ -389,7 +389,7 @@ Svelte 編譯器處理每一個元件的 `<style>` 區塊並編譯它們至 `pub
 
 你可以只閱讀內容來充分了解 Svelte 的一些功能，但如果你跟著我們一起撰寫應用程式，將可以從本教學系列獲得最大收益。為了讓你可以更簡單跟著每一篇文章做，我們提供了一個 GitHub 儲存庫並以資料夾分隔出每一個教學系列開頭需要的應用程式來源程式碼。
 
-Svelte 也提供了一個線上 repl，它是在網站上用於即時撰寫 Svelte 應用程式的一個遊樂場，而不用安裝任何東西在你的機器上。我們在每一篇文章都有提供 repl，所以你可以立即撰寫程式碼。接著談一談如何使用這些工具。
+Svelte 也提供了一個線上 REPL，它是在網站上用於即時撰寫 Svelte 應用程式的一個遊樂場，而不用安裝任何東西在你的機器上。我們在每一篇文章都有提供 REPL，所以你可以立即撰寫程式碼。接著談一談如何使用這些工具。
 
 ### 使用 Git
 
@@ -452,7 +452,7 @@ Svelte 的 REPL 功能卻不只如此。它是一個線上工具，允許你建�
 
 ### Git
 
-複製 github 儲存庫（假如你還沒完成）如下：
+複製 Github 儲存庫（假如你還沒完成）如下：
 
 ```bash
 git clone https://github.com/opensas/mdn-svelte-tutorial.git
