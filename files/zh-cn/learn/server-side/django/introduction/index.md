@@ -135,8 +135,7 @@ urlpatterns = [
 ```python
 ## filename: views.py (Django view functions)
 
-
-import HttpResponse
+from django.http import HttpResponse
 
 def index(request):
     # Get an HttpRequest - the request parameter
