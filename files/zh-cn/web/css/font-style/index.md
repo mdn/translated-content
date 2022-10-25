@@ -11,7 +11,6 @@ slug: Web/CSS/font-style
 
 **Italic** 字体一般是现实生活中的草书，相比无样式的字体，通常会占用较少的水平空间，而 **oblique** 字体一般只是常规字形的倾斜版本。如果当前字体没有对应的斜体，那么斜体（italic）和倾斜体（oblique）都会通过人工倾斜常规字体的字形来模拟（使用 {{cssxref("font-synthesis")}} 对此进行控制）。
 
-
 ## 语法
 
 ```css
