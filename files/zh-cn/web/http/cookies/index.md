@@ -67,7 +67,7 @@ Cookie 的生命周期可以通过两种方式定义：
 
 例如：
 
-```plain
+```http
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 ```
 
