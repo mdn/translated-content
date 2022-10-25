@@ -42,7 +42,7 @@ La rutina `initTextures()` comienza por crear el GL texture cubeTexture llamando
 
 Para realmente crear la textura, especificamos que la nueva textura es la textura actual en la que queremos operar vinculándola a gl.TEXTURE_2D. Despues de esto, la imagen cargada es pasada a {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} para escribir la informacion de la imagen en la textura.
 
-**Nota: El alto y hancho de las texturas deben, en la mayoría de las circunstancias, ser una potencia de dos píxeles (es decir, 1, 2, 4, 8, 16, etc.) en cada dimensión. Para la excepción, vea la sección: ["Texturas no potencia de dos"](/es/docs/Web/WebGL/Using_textures_in_WebGL#Non_power-of-two_textures), a continuación.**
+> **Nota:** El alto y hancho de las texturas deben, en la mayoría de las circunstancias, ser una potencia de dos píxeles (es decir, 1, 2, 4, 8, 16, etc.) en cada dimensión. Para la excepción, vea la sección: ["Texturas no potencia de dos"](/es/docs/Web/WebGL/Using_textures_in_WebGL#Non_power-of-two_textures), a continuación.
 
 Las siguientes dos líneas setean el filtrado para la textura; Esto controla cómo se filtra la imagen mientras se escala. En este caso estamos usando linear filtering cuando escala la imagen, y mipmap cuando se hace mas pequeña. Entonces el mipmap es generado llamando {{domxref("WebGLRenderingContext.generateMipMap()", "generateMipMap()")}}, Y terminamos diciéndole a WebGL que hemos terminado de manipular la textura vinculando null a gl.TEXTURE_2D.
 
