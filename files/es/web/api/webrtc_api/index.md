@@ -6,121 +6,86 @@ tags:
   - WebRTC
 translation_of: Web/API/WebRTC_API
 ---
-<p>{{WebRTCSidebar}}</p>
+{{WebRTCSidebar}}
 
-<p><span class="seoSummary"><strong>WebRTC</strong> (<em>Web real-time communications</em> o comunicaciones web en tiempo real) es una tecnología que permite a aplicaciones y sitios web capturar y opcionalmente retransmitir audio/vídeo, así como intercambiar datos arbitrarios entre navegadores sin necesidad de un intermediario.</span> El conjunto de estándares que comprende WebRTC hace posible compartir datos y realizar teleconferencias de igual-a-igual (<em>peer-to-peer</em>), sin requerir que el usuario instale complementos (<em>plug-ins</em>) o cualquier otro software de terceros.</p>
+**WebRTC** (_Web real-time communications_ o comunicaciones web en tiempo real) es una tecnología que permite a aplicaciones y sitios web capturar y opcionalmente retransmitir audio/vídeo, así como intercambiar datos arbitrarios entre navegadores sin necesidad de un intermediario. El conjunto de estándares que comprende WebRTC hace posible compartir datos y realizar teleconferencias de igual-a-igual (_peer-to-peer_), sin requerir que el usuario instale complementos (_plug-ins_) o cualquier otro software de terceros.
 
-<p>WebRTC consta de varias API y protocolos interrelacionados que trabajan juntos para lograr esto. La documentación que encontrará aquí le ayudará a entender los fundamentos de WebRTC, cómo configurarlo y usar tanto datos como conexiones de medios, etc.</p>
+WebRTC consta de varias API y protocolos interrelacionados que trabajan juntos para lograr esto. La documentación que encontrará aquí le ayudará a entender los fundamentos de WebRTC, cómo configurarlo y usar tanto datos como conexiones de medios, etc.
 
-<h2 id="Referencia">Referencia</h2>
+## Referencia
 
-<div class="index">
-<ul>
- <li>{{domxref("RTCPeerConnection")}}</li>
- <li>{{domxref("RTCSessionDescription")}}</li>
- <li>{{domxref("RTCIceCandidate")}}</li>
- <li>{{domxref("RTCPeerConnectionIceEvent")}}</li>
- <li>{{domxref("MessageEvent")}}</li>
- <li>{{domxref("MediaStream")}}</li>
- <li>{{domxref("RTCStatsReport")}}</li>
- <li>{{domxref("RTCIdentityEvent")}}</li>
- <li>{{domxref("RTCIdentityErrorEvent")}}</li>
- <li>{{domxref("MediaStreamEvent")}}</li>
- <li>{{domxref("MediaStreamTrack")}}</li>
- <li>{{domxref("MediaDevices")}}</li>
-</ul>
-</div>
+- {{domxref("RTCPeerConnection")}}
+- {{domxref("RTCSessionDescription")}}
+- {{domxref("RTCIceCandidate")}}
+- {{domxref("RTCPeerConnectionIceEvent")}}
+- {{domxref("MessageEvent")}}
+- {{domxref("MediaStream")}}
+- {{domxref("RTCStatsReport")}}
+- {{domxref("RTCIdentityEvent")}}
+- {{domxref("RTCIdentityErrorEvent")}}
+- {{domxref("MediaStreamEvent")}}
+- {{domxref("MediaStreamTrack")}}
+- {{domxref("MediaDevices")}}
 
-<h2 id="Guías">Guías</h2>
+## Guías
 
-<dl>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Architecture">Visión general de la arquitectura de WebRTC</a></dt>
- <dd>Debajo de las API que los desarrolladores usan para crear y usar conexiones WebRTC se encuentran varios protocolos de red y estándares de conectividad. Esta breve descripción cubre estos estándares.</dd>
- <dt><a href="/en-US/docs/Web/API/WebRTC_API/WebRTC_basics">Lo esencial de WebRTC</a></dt>
- <dd>Este artículo le muestra la creación de una aplicación RTC a través del navegador. Al final, debe tener un canal de datos punto a punto y un canal de medios en funcionamiento.</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">Protocolos de WebRTC</a></dt>
- <dd>Este artículo presenta los protocolos sobre los cuales se construye la API WebRTC.</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Connectivity">Conectividad de WebRTC</a></dt>
- <dd>Este artículo describe cómo los diversos protocolos relacionados con WebRTC interactúan entre sí para crear una conexión y transferir datos y / o medios entre pares.</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Overview">Nociones sobre la API WebRTC</a></dt>
- <dd>WebRTC consta de varias API y protocolos interrelacionados que trabajan juntos para admitir el intercambio de datos y medios entre dos o más pares. Este artículo proporciona una breve descripción de cada una de estas API y para qué sirve.</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Duración de una sesión de WebRTC</a></dt>
- <dd>WebRTC le permite construir una comunicación punto a punto de datos arbitrarios, audio o video, o cualquier combinación de los mismos, en una aplicación de navegador. En este artículo, veremos la duración de una sesión de WebRTC, desde establecer la conexión hasta cerrarla cuando ya no sea necesaria.</dd>
-</dl>
+- [Visión general de la arquitectura de WebRTC](/es/docs/Web/API/WebRTC_API/Architecture)
+  - : Debajo de las API que los desarrolladores usan para crear y usar conexiones WebRTC se encuentran varios protocolos de red y estándares de conectividad. Esta breve descripción cubre estos estándares.
+- [Lo esencial de WebRTC](/es/docs/Web/API/WebRTC_API/WebRTC_basics)
+  - : Este artículo le muestra la creación de una aplicación RTC a través del navegador. Al final, debe tener un canal de datos punto a punto y un canal de medios en funcionamiento.
+- [Protocolos de WebRTC](/es/docs/Web/API/WebRTC_API/Protocols)
+  - : Este artículo presenta los protocolos sobre los cuales se construye la API WebRTC.
+- [Conectividad de WebRTC](/es/docs/Web/API/WebRTC_API/Connectivity)
+  - : Este artículo describe cómo los diversos protocolos relacionados con WebRTC interactúan entre sí para crear una conexión y transferir datos y / o medios entre pares.
+- [Nociones sobre la API WebRTC](/es/docs/Web/API/WebRTC_API/Overview)
+  - : WebRTC consta de varias API y protocolos interrelacionados que trabajan juntos para admitir el intercambio de datos y medios entre dos o más pares. Este artículo proporciona una breve descripción de cada una de estas API y para qué sirve.
+- [Duración de una sesión de WebRTC](/es/docs/Web/API/WebRTC_API/Session_lifetime)
+  - : WebRTC le permite construir una comunicación punto a punto de datos arbitrarios, audio o video, o cualquier combinación de los mismos, en una aplicación de navegador. En este artículo, veremos la duración de una sesión de WebRTC, desde establecer la conexión hasta cerrarla cuando ya no sea necesaria.
 
-<h2 id="Tutoriales">Tutoriales</h2>
+## Tutoriales
 
-<dl>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/adapter.js">Improving compatibility using WebRTC adapter.js</a></dt>
- <dd>The WebRTC organization <a href="https://github.com/webrtc/adapter/">provides on GitHub the WebRTC adapter</a> to work around compatibility issues in different browsers' WebRTC implementations. The adapter is a JavaScript shim which lets your code to be written to the specification so that it will "just work" in all browsers with WebRTC support.</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">Taking still photos with WebRTC</a></dt>
- <dd>This article shows how to use WebRTC to access the camera on a computer or mobile phone with WebRTC support and take a photo with it.</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel sample</a></dt>
- <dd>The {{domxref("RTCDataChannel")}} interface is a feature which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket_API">WebSocket API</a>, so that the same programming model can be used for each.</dd>
-</dl>
+- [Improving compatibility using WebRTC adapter.js](/es/docs/Web/API/WebRTC_API/adapter.js)
+  - : The WebRTC organization [provides on GitHub the WebRTC adapter](https://github.com/webrtc/adapter/) to work around compatibility issues in different browsers' WebRTC implementations. The adapter is a JavaScript shim which lets your code to be written to the specification so that it will "just work" in all browsers with WebRTC support.
+- [Taking still photos with WebRTC](/es/docs/Web/API/WebRTC_API/Taking_still_photos)
+  - : This article shows how to use WebRTC to access the camera on a computer or mobile phone with WebRTC support and take a photo with it.
+- [A simple RTCDataChannel sample](/es/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
+  - : The {{domxref("RTCDataChannel")}} interface is a feature which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the [WebSocket API](/es/docs/Web/API/WebSocket_API), so that the same programming model can be used for each.
 
-<h2 class="" id="Related_Topics" name="Related_Topics">Recursos</h2>
+## Recursos
 
-<h3 id="Protocolos">Protocolos</h3>
+### Protocolos
 
-<h4 id="WebRTC-proper_protocols">WebRTC-proper protocols</h4>
+#### WebRTC-proper protocols
 
-<ul>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/"><cite>Application Layer Protocol Negotiation for Web Real-Time Communications</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/"><cite>WebRTC Audio Codec and Processing Requirements</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/"><cite>RTCWeb Data Channels</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/"><cite>RTCWeb Data Channel Protocol</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/"><cite>Web Real-Time Communication (WebRTC): Media Transport and Use of RTP</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/"><cite>WebRTC Security Architecture</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/"><cite>Transports for RTCWEB</cite></a></li>
-</ul>
+- [Application Layer Protocol Negotiation for Web Real-Time Communications](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/)
+- [WebRTC Audio Codec and Processing Requirements](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/)
+- [RTCWeb Data Channels](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/)
+- [RTCWeb Data Channel Protocol](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/)
+- [Web Real-Time Communication (WebRTC): Media Transport and Use of RTP](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/)
+- [WebRTC Security Architecture](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/)
+- [Transports for RTCWEB](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/)
 
-<h4 id="Related_supporting_protocols">Related supporting protocols</h4>
+#### Related supporting protocols
 
-<ul>
- <li><a href="https://tools.ietf.org/html/rfc5245">Interactive Connectivity Establishment (ICE): A Protocol for Network Address Translator (NAT) Traversal for Offer/Answer Protocol</a></li>
- <li><a href="https://tools.ietf.org/html/rfc5389"><cite>Session Traversal Utilities for NAT (STUN)</cite></a></li>
- <li><a href="https://tools.ietf.org/html/rfc7064"><cite>URI Scheme for the Session Traversal Utilities for NAT (STUN) Protocol</cite></a></li>
- <li><a href="https://tools.ietf.org/html/rfc7065"><cite>Traversal Using Relays around NAT (TURN) Uniform Resource Identifiers</cite></a></li>
- <li><a href="https://tools.ietf.org/html/rfc3264"><cite>An Offer/Answer Model with Session Description Protocol (SDP)</cite></a></li>
- <li><a href="https://datatracker.ietf.org/doc/draft-ietf-tram-turn-third-party-authz/"><cite>Session Traversal Utilities for NAT (STUN) Extension for Third Party Authorization</cite></a></li>
-</ul>
+- [Interactive Connectivity Establishment (ICE): A Protocol for Network Address Translator (NAT) Traversal for Offer/Answer Protocol](https://tools.ietf.org/html/rfc5245)
+- [Session Traversal Utilities for NAT (STUN)](https://tools.ietf.org/html/rfc5389)
+- [URI Scheme for the Session Traversal Utilities for NAT (STUN) Protocol](https://tools.ietf.org/html/rfc7064)
+- [Traversal Using Relays around NAT (TURN) Uniform Resource Identifiers](https://tools.ietf.org/html/rfc7065)
+- [An Offer/Answer Model with Session Description Protocol (SDP)](https://tools.ietf.org/html/rfc3264)
+- [Session Traversal Utilities for NAT (STUN) Extension for Third Party Authorization](https://datatracker.ietf.org/doc/draft-ietf-tram-turn-third-party-authz/)
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>The initial definition of the API of WebRTC.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>The initial definition of the object conveying the stream of media content.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture DOM Elements')}}</td>
-   <td>{{Spec2('Media Capture DOM Elements')}}</td>
-   <td>The initial definition on how to obtain stream of content from DOM Elements</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                            | Status                                               | Comment                                                                     |
+| -------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------- |
+| {{SpecName('WebRTC 1.0')}}                     | {{Spec2('WebRTC 1.0')}}                     | The initial definition of the API of WebRTC.                                |
+| {{SpecName('Media Capture')}}                 | {{Spec2('Media Capture')}}                 | The initial definition of the object conveying the stream of media content. |
+| {{SpecName('Media Capture DOM Elements')}} | {{Spec2('Media Capture DOM Elements')}} | The initial definition on how to obtain stream of content from DOM Elements |
 
-<p class="">In additions to these specifications defining the API needed to use WebRTC, there are several protocols, listed under <a href="#Protocols">resources</a>.</p>
+In additions to these specifications defining the API needed to use WebRTC, there are several protocols, listed under [resources](#Protocols).
 
-<h2 class="" id="Related_Topics" name="Related_Topics">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="https://hacks.mozilla.org/2015/06/firefox-multistream-and-renegotiation-for-jitsi-videobridge/">Firefox multistream and renegotiation for Jitsi Videobridge</a></li>
- <li><a href="https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/">Peering Through the WebRTC Fog with SocketPeer</a></li>
- <li><a href="https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/">Inside the Party Bus: Building a Web App with Multiple Live Video Streams + Interactive Graphics</a></li>
-</ul>
+- [Firefox multistream and renegotiation for Jitsi Videobridge](https://hacks.mozilla.org/2015/06/firefox-multistream-and-renegotiation-for-jitsi-videobridge/)
+- [Peering Through the WebRTC Fog with SocketPeer](https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/)
+- [Inside the Party Bus: Building a Web App with Multiple Live Video Streams + Interactive Graphics](https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/)

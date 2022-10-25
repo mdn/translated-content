@@ -6,68 +6,60 @@ tags:
 translation_of: Web/API/UIEvent
 browser-compat: api.UIEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>UIEvent</code></strong> interface represents simple user interface events.</p>
+The **`UIEvent`** interface represents simple user interface events.
 
-<p><code>UIEvent</code> derives from {{domxref("Event")}}. Though the {{domxref("UIEvent.initUIEvent()")}} method is kept for backward compatibility, creating of a <code>UIEvent</code> object should be done using the {{domxref("UIEvent.UIEvent", "UIEvent()")}} constructor.</p>
+`UIEvent` derives from {{domxref("Event")}}. Though the {{domxref("UIEvent.initUIEvent()")}} method is kept for backward compatibility, creating of a `UIEvent` object should be done using the {{domxref("UIEvent.UIEvent", "UIEvent()")}} constructor.
 
-<p>Several interfaces are direct or indirect descendants of this one: {{domxref("MouseEvent")}}, {{domxref("FocusEvent")}}, {{domxref("KeyboardEvent")}}, {{domxref("WheelEvent")}}, {{domxref("InputEvent")}}, and {{domxref("CompositionEvent")}}.</p>
+Several interfaces are direct or indirect descendants of this one: {{domxref("MouseEvent")}}, {{domxref("FocusEvent")}}, {{domxref("KeyboardEvent")}}, {{domxref("WheelEvent")}}, {{domxref("InputEvent")}}, and {{domxref("CompositionEvent")}}.
 
-<h2 id="Constructors">Constructors</h2>
+## Constructors
 
-<dl>
- <dt>{{domxref("UIEvent.UIEvent()", "UIEvent()")}}</dt>
- <dd>Creates a <code>UIEvent</code> object.</dd>
-</dl>
+- {{domxref("UIEvent.UIEvent()", "UIEvent()")}}
+  - : Creates a `UIEvent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties of its parent, {{domxref("Event")}}.</em></p>
+_This interface also inherits properties of its parent, {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("UIEvent.cancelBubble")}} {{Deprecated_inline}}{{Non-standard_inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} indicating whether the bubbling of the event has been canceled or not.</dd>
-</dl>
+- {{domxref("UIEvent.cancelBubble")}} {{Deprecated_inline}}{{Non-standard_inline}}
+  - : Is a {{jsxref("Boolean")}} indicating whether the bubbling of the event has been canceled or not.
 
-<dl>
- <dt>{{domxref("UIEvent.detail")}}{{readonlyinline}}</dt>
- <dd>Returns a <code>long</code> that gives some detail about the event, depending on the type of event.</dd>
- <dt>{{domxref("UIEvent.isChar")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating whether the event produced a key character or not.</dd>
- <dt>{{domxref("UIEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns the horizontal coordinate of the event relative to the current layer.</dd>
- <dt>{{domxref("UIEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns the vertical coordinate of the event relative to the current layer.</dd>
- <dt>{{domxref("UIEvent.pageX")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns the horizontal coordinate of the event relative to the whole document.</dd>
- <dt>{{domxref("UIEvent.pageY")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns the vertical coordinate of the event relative to the whole document.</dd>
- <dt>{{domxref("UIEvent.view")}}{{readonlyinline}}</dt>
- <dd>Returns a {{domxref("WindowProxy")}} that contains the view that generated the event.</dd>
- <dt>{{domxref("UIEvent.which")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns the numeric <code>keyCode</code> of the key pressed, or the character code (<code>charCode</code>) for an alphanumeric key pressed.</dd>
-</dl>
+<!---->
 
-<h2 id="Methods">Methods</h2>
+- {{domxref("UIEvent.detail")}}{{readonlyinline}}
+  - : Returns a `long` that gives some detail about the event, depending on the type of event.
+- {{domxref("UIEvent.isChar")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns a {{jsxref("Boolean")}} indicating whether the event produced a key character or not.
+- {{domxref("UIEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the horizontal coordinate of the event relative to the current layer.
+- {{domxref("UIEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the vertical coordinate of the event relative to the current layer.
+- {{domxref("UIEvent.pageX")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the horizontal coordinate of the event relative to the whole document.
+- {{domxref("UIEvent.pageY")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the vertical coordinate of the event relative to the whole document.
+- {{domxref("UIEvent.view")}}{{readonlyinline}}
+  - : Returns a {{domxref("WindowProxy")}} that contains the view that generated the event.
+- {{domxref("UIEvent.which")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the numeric `keyCode` of the key pressed, or the character code (`charCode`) for an alphanumeric key pressed.
 
-<p><em>This interface also inherits methods of its parent, {{domxref("Event")}}.</em></p>
+## Methods
 
-<dl>
- <dt>{{domxref("UIEvent.initUIEvent()")}} {{deprecated_inline}}</dt>
- <dd>Initializes a <code>UIEvent</code> object. If the event has already being dispatched, this method does nothing.</dd>
-</dl>
+_This interface also inherits methods of its parent, {{domxref("Event")}}._
 
-<h2 id="Specifications">Specifications</h2>
+- {{domxref("UIEvent.initUIEvent()")}} {{deprecated_inline}}
+  - : Initializes a `UIEvent` object. If the event has already being dispatched, this method does nothing.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.UIEvent")}}
 
-<h2 class="editable" id="See_also"><span>See also</span></h2>
+## See also
 
-<ul>
- <li>{{ domxref("Event") }}</li>
-</ul>
+- {{ domxref("Event") }}

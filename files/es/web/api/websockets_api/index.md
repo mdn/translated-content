@@ -3,46 +3,36 @@ title: WebSockets
 slug: Web/API/WebSockets_API
 translation_of: Web/API/WebSockets_API
 ---
-<p>{{DefaultAPISidebar("Websockets API")}}</p>
+{{DefaultAPISidebar("Websockets API")}}
 
-<p><strong>WebSockets </strong>es una tecnología avanzada que hace posible abrir una sesión de comunicación interactiva entre el navegador del usuario y un servidor. Con esta API, puede enviar mensajes a un servidor y  recibir  respuestas controladas por eventos sin tener que consultar al servidor para una respuesta.</p>
+**WebSockets** es una tecnología avanzada que hace posible abrir una sesión de comunicación interactiva entre el navegador del usuario y un servidor. Con esta API, puede enviar mensajes a un servidor y recibir respuestas controladas por eventos sin tener que consultar al servidor para una respuesta.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/WebSocket" title="en/WebSockets/WebSockets reference/WebSocket"><code>WebSocket</code></a></dt>
- <dd>El interfaz principal para conectar a un servidor Websocket y así enviar y recibir datos a través de la conexión.</dd>
- <dt><code><a href="/en-US/docs/Web/API/CloseEvent" title="en/WebSockets/WebSockets reference/CloseEvent">CloseEvent</a></code></dt>
- <dd>El evento enviado por el objeto WebSocket cuando se cierra la conexión.</dd>
- <dt><a href="/en-US/docs/Web/API/MessageEvent" title="en/WebSockets/WebSockets reference/MessageEvent"><code>MessageEvent</code></a></dt>
- <dd>El evento enviado por el objeto WebSocket cuando se recibe un mensaje enviado desde el servidor.</dd>
-</dl>
+- [`WebSocket`](/es/docs/Web/API/WebSocket "en/WebSockets/WebSockets reference/WebSocket")
+  - : El interfaz principal para conectar a un servidor Websocket y así enviar y recibir datos a través de la conexión.
+- [`CloseEvent`](/en-US/docs/Web/API/CloseEvent "en/WebSockets/WebSockets reference/CloseEvent")
+  - : El evento enviado por el objeto WebSocket cuando se cierra la conexión.
+- [`MessageEvent`](/es/docs/Web/API/MessageEvent "en/WebSockets/WebSockets reference/MessageEvent")
+  - : El evento enviado por el objeto WebSocket cuando se recibe un mensaje enviado desde el servidor.
 
-<div class="section">
-<h2 class="" id="Tools" name="Tools">Herramientas</h2>
+## Herramientas
 
-<ul>
- <li><a class="external" href="http://socket.io">Socket.IO</a>: Una poderosa API WebSocket multi-plataforma para <a class="external" href="http://nodejs.org">Node.js</a>.</li>
- <li><a class="link-https" href="https://github.com/Worlize/WebSocket-Node">WebSocket-Node</a>: Un servidor WebSocket API implementado para <a class="external" href="http://nodejs.org">Node.js</a>.</li>
- <li><a href="http://www.totaljs.com">Total.js</a>: Framework para aplicaciones web para <a href="http://www.nodejs.org">Node.js</a> (Ejemplo: <a href="https://github.com/totaljs/examples/tree/master/websocket">WebSocket chat</a>)</li>
- <li><a href="https://www.npmjs.com/package/faye-websocket">Faye</a>: Un servidor y cliente <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSocket</a> (conexión bidireccional) y <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/">EventSource</a> (conexión unidireccional) para <a class="external" href="http://nodejs.org">Node.js</a>.</li>
-</ul>
+- [Socket.IO](http://socket.io): Una poderosa API WebSocket multi-plataforma para [Node.js](http://nodejs.org).
+- [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): Un servidor WebSocket API implementado para [Node.js](http://nodejs.org).
+- [Total.js](http://www.totaljs.com): Framework para aplicaciones web para [Node.js](http://www.nodejs.org) (Ejemplo: [WebSocket chat](https://github.com/totaljs/examples/tree/master/websocket))
+- [Faye](https://www.npmjs.com/package/faye-websocket): Un servidor y cliente [WebSocket](/es/docs/Web/API/WebSockets_API) (conexión bidireccional) y [EventSource](/es/docs/Web/API/EventSource/) (conexión unidireccional) para [Node.js](http://nodejs.org).
 
-<h2 class="" id="Related_Topics" name="Related_Topics">Temas RELACIONADOS</h2>
+## Temas RELACIONADOS
 
-<ul>
- <li><a href="/en-US/docs/AJAX" title="AJAX">AJAX</a>, <a href="/en-US/docs/JavaScript" title="JavaScript">JavaScript</a></li>
-</ul>
-</div>
+- [AJAX](/es/docs/AJAX "AJAX"), [JavaScript](/es/docs/JavaScript "JavaScript")
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a class="external" href="http://tools.ietf.org/html/rfc6455">RFC 6455 - The WebSocket Protocol</a></li>
- <li><a class="external" href="http://www.w3.org/TR/websockets/">WebSocket API Specification</a></li>
- <li><a href="/en-US/docs/Server-sent_events" title="Server-sent_events">Server-Sent Events</a></li>
-</ul>
+- [RFC 6455 - The WebSocket Protocol](http://tools.ietf.org/html/rfc6455)
+- [WebSocket API Specification](http://www.w3.org/TR/websockets/)
+- [Server-Sent Events](/es/docs/Server-sent_events "Server-sent_events")
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("api.WebSocket")}}

@@ -3,45 +3,35 @@ title: WheelEvent.deltaY
 slug: Web/API/WheelEvent/deltaY
 translation_of: Web/API/WheelEvent/deltaY
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>La propiedad de solo lectura <code><strong>WheelEvent.deltaY</strong></code> es un <code>double</code> que representa la cantidad de deslizamiento vertical en la unidad {{domxref("WheelEvent.deltaMode")}} .</p>
+La propiedad de solo lectura **`WheelEvent.deltaY`** es un `double` que representa la cantidad de deslizamiento vertical en la unidad {{domxref("WheelEvent.deltaMode")}} .
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <code><em>dY</em> = <em>event</em>.deltaY;</code></pre>
+```
+var dY = event.deltaY;
+```
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: js">var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaY": 4, "deltaMode": 0});
+```js
+var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaY": 4, "deltaMode": 0});
 
 console.log(syntheticEvent.deltaY);
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-WheelEvent-deltaY','WheelEvent.deltaY')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estado                           | Comentario          |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('DOM3 Events','#widl-WheelEvent-deltaY','WheelEvent.deltaY')}} | {{Spec2('DOM3 Events')}} | Initial definition. |
 
-<h2 id="Compatibilidad_de_los_navegadores">Compatibilidad de los navegadores</h2>
+## Compatibilidad de los navegadores
 
 {{Compat("api.WheelEvent.deltaY")}}
 
-<h2 class="" id="Ver_más">Ver más</h2>
+## Ver más
 
-<ul>
- <li>{{ event("wheel") }}</li>
- <li>{{domxref("WheelEvent")}}</li>
-</ul>
+- {{ event("wheel") }}
+- {{domxref("WheelEvent")}}

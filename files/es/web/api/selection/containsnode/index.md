@@ -5,45 +5,37 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/containsNode
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+### Resumen
 
-<p>Indica si tal nodo es parte de la selección.</p>
+Indica si tal nodo es parte de la selección.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval"><i>sel</i>.containsNode(
-<i>aNode</i>,
-<i>aPartlyContained</i>)
-</pre>
+```
+sel.containsNode(
+aNode,
+aPartlyContained)
+```
 
-<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt>
- <i><code>aNode</code></i>
- </dt>
- <dd>El nodo que está siendo vigilado por si es parte de la selección.</dd>
- <dt>
- <i><code>aPartlyContained</code></i>
- </dt>
- <dd>Cuando da un valor
- <i>verdadero</i>
- , <code>containsNode</code> devuelve verdadero cuanbdo una parte del nodo es parte de la selección.
- Cuando da un valor
- <i>falso</i>
- , <code>containsNode</code> solo devuelve verdadeor cuando el nodo completo es parte de la selección.</dd>
-</dl>
+- _`aNode`_
+  - : El nodo que está siendo vigilado por si es parte de la selección.
+- _`aPartlyContained`_
+  - : Cuando da un valor
+    _verdadero_
+    , `containsNode` devuelve verdadero cuanbdo una parte del nodo es parte de la selección.
+    Cuando da un valor
+    _falso_
+    , `containsNode` solo devuelve verdadeor cuando el nodo completo es parte de la selección.
 
-<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
+### Ejemplos
 
-<pre class="eval"> /* Checar si algo dentro del elemento cuerpo (etiquetas body) está seleccionado */
+```
+ /* Checar si algo dentro del elemento cuerpo (etiquetas body) está seleccionado */
  alert(window.getSelection().containsNode(document.body, true));
-</pre>
+```
 
-<p> </p>
-
-<div class="noinclude"> </div>
-
-<p>{{ languages( { "en": "en/DOM/Selection/containsNode", "it": "it/DOM/Selection/containsNode", "pl": "pl/DOM/Selection/containsNode" } ) }}</p>
+{{ languages( { "en": "en/DOM/Selection/containsNode", "it": "it/DOM/Selection/containsNode", "pl": "pl/DOM/Selection/containsNode" } ) }}

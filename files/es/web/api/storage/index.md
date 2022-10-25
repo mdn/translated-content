@@ -11,42 +11,39 @@ tags:
   - data
 translation_of: Web/API/Storage
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>La interfaz <code>Storage</code> de la API de almacenamiento web provee acceso al almacenamiento de la sesión o al almacenamiento local para un dominio en particular, permitiéndote por ejemplo añadir, modificar o eliminar elementos de dato almacenados.</p>
+La interfaz `Storage` de la API de almacenamiento web provee acceso al almacenamiento de la sesión o al almacenamiento local para un dominio en particular, permitiéndote por ejemplo añadir, modificar o eliminar elementos de dato almacenados.
 
-<p>Si deseas manipular el almacenamiento de sesión para un dominio, debes llamar al método {{domxref("Window.sessionStorage")}}; Si deseas manipular el almacenamiento local para un dominio, debes llamar a {{domxref("Window.localStorage")}}.</p>
+Si deseas manipular el almacenamiento de sesión para un dominio, debes llamar al método {{domxref("Window.sessionStorage")}}; Si deseas manipular el almacenamiento local para un dominio, debes llamar a {{domxref("Window.localStorage")}}.
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<dl>
- <dt>{{domxref("Storage.length")}} {{readonlyInline}}</dt>
- <dd>Retorna un entero que representa el número de elementos almacenados en el objeto<code> Storage</code>.</dd>
-</dl>
+- {{domxref("Storage.length")}} {{readonlyInline}}
+  - : Retorna un entero que representa el número de elementos almacenados en el objeto` Storage`.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<dl>
- <dt>{{domxref("Storage.key()")}}</dt>
- <dd>Cuando se le pasa un número n, éste método retorna el nombre de la enésima clave en el almacenamiento.</dd>
-</dl>
+- {{domxref("Storage.key()")}}
+  - : Cuando se le pasa un número n, éste método retorna el nombre de la enésima clave en el almacenamiento.
 
-<dl>
- <dt>{{domxref("Storage.getItem()")}}</dt>
- <dd>Cuando se le pasa un nombre de clave, retorna el valor de esa clave.</dd>
- <dt>{{domxref("Storage.setItem()")}}</dt>
- <dd>Cuando se le pasa un nombre de clave y un valor, añade dicha clave al almacenamiento, o la actualiza el valor de la clave si ya existe.</dd>
- <dt>{{domxref("Storage.removeItem()")}}</dt>
- <dd>Cuando se le pasa el nombre de una clave, eliminará dicha clave del almacenamiento.</dd>
- <dt>{{domxref("Storage.clear()")}}</dt>
- <dd>Cuando es invocado vacía todas las claves del almacenamiento.</dd>
-</dl>
+<!---->
 
-<h2 id="Ejemplos">Ejemplos</h2>
+- {{domxref("Storage.getItem()")}}
+  - : Cuando se le pasa un nombre de clave, retorna el valor de esa clave.
+- {{domxref("Storage.setItem()")}}
+  - : Cuando se le pasa un nombre de clave y un valor, añade dicha clave al almacenamiento, o la actualiza el valor de la clave si ya existe.
+- {{domxref("Storage.removeItem()")}}
+  - : Cuando se le pasa el nombre de una clave, eliminará dicha clave del almacenamiento.
+- {{domxref("Storage.clear()")}}
+  - : Cuando es invocado vacía todas las claves del almacenamiento.
 
-<p>Aquí tenemos un objeto <code>Storage</code> al llamar a <code>localStorage</code>. Primero probamos si el almacenamiento local contiene elementos de dato usando <code>!localStorage.getItem('bgcolor')</code>. Si lo hace, ejecutamos una función llamada <code>setStyles()</code> que obtiene los elementos usando {{domxref("localStorage.getItem()")}} y utiliza dichos valores para actualizar los estilos de la página. Si no, ejecutamos otra función, <code>populateStorage()</code>, que utiliza {{domxref("localStorage.setItem()")}} para definir los valores de los elementos, luego ejecuta <code>setStyles()</code>.</p>
+## Ejemplos
 
-<pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
+Aquí tenemos un objeto `Storage` al llamar a `localStorage`. Primero probamos si el almacenamiento local contiene elementos de dato usando `!localStorage.getItem('bgcolor')`. Si lo hace, ejecutamos una función llamada `setStyles()` que obtiene los elementos usando {{domxref("localStorage.getItem()")}} y utiliza dichos valores para actualizar los estilos de la página. Si no, ejecutamos otra función, `populateStorage()`, que utiliza {{domxref("localStorage.setItem()")}} para definir los valores de los elementos, luego ejecuta `setStyles()`.
+
+```js
+if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
@@ -72,33 +69,21 @@ function setStyles() {
   htmlElem.style.backgroundColor = '#' + currentColor;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Para ver la ejecución de esto como un ejemplo funcional completo, mira nuestra <a href="https://github.com/mdn/web-storage-demo">Demo de almacenamiento web</a>.</p>
-</div>
+> **Nota:** Para ver la ejecución de esto como un ejemplo funcional completo, mira nuestra [Demo de almacenamiento web](https://github.com/mdn/web-storage-demo).
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Storage', '#the-storage-interface', 'Storage')}}</td>
-   <td>{{Spec2('Web Storage')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estado                           | Comentario |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('Web Storage', '#the-storage-interface', 'Storage')}} | {{Spec2('Web Storage')}} |            |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("api.Storage")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Usar la API de almacenamiento Web</a></p>
+[Usar la API de almacenamiento Web](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

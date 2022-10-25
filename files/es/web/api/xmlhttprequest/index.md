@@ -8,359 +8,332 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/XMLHttpRequest
 ---
-<p><code>XMLHttpRequest</code> es un objeto <a class="internal" href="/en/JavaScript" title="En/JavaScript">JavaScript</a> que fue diseñado por Microsoft y adoptado por Mozilla, Apple y Google. Actualmente es un <a class="external" href="http://www.w3.org/TR/XMLHttpRequest/">estándar de la W3C</a>. Proporciona una forma fácil de obtener información de una URL sin tener que recargar la página completa. Una página web puede actualizar sólo una parte de la página sin interrumpir lo que el usuario está haciendo. <code style="font-size: 14px;">XMLHttpRequest</code> es ampliamente usado en la programación AJAX.</p>
+`XMLHttpRequest` es un objeto [JavaScript](/en/JavaScript "En/JavaScript") que fue diseñado por Microsoft y adoptado por Mozilla, Apple y Google. Actualmente es un [estándar de la W3C](http://www.w3.org/TR/XMLHttpRequest/). Proporciona una forma fácil de obtener información de una URL sin tener que recargar la página completa. Una página web puede actualizar sólo una parte de la página sin interrumpir lo que el usuario está haciendo. `XMLHttpRequest` es ampliamente usado en la programación AJAX.
 
-<p><span style="line-height: 1.5;">A pesar de su nombre, </span><code style="font-size: 14px;">XMLHttpRequest</code><span style="line-height: 1.5;"> puede ser usado para recibir cualquier tipo de dato, no solo XML, y admite otros formatos además de </span><a href="/en/HTTP" style="line-height: 1.5;" title="en/HTTP">HTTP</a><span style="line-height: 1.5;"> (incluyendo </span><code style="font-size: 14px;">file</code><span style="line-height: 1.5;"> y </span><code style="font-size: 14px;">ftp</code><span style="line-height: 1.5;">).</span></p>
+A pesar de su nombre, `XMLHttpRequest` puede ser usado para recibir cualquier tipo de dato, no solo XML, y admite otros formatos además de [HTTP](/en/HTTP "en/HTTP") (incluyendo `file` y `ftp`).
 
-<p>Para crear una instancia de <code>XMLHttpRequest</code>, debes hacer lo siguiente:</p>
+Para crear una instancia de `XMLHttpRequest`, debes hacer lo siguiente:
 
-<pre>var req = new XMLHttpRequest();
-</pre>
+```
+var req = new XMLHttpRequest();
+```
 
-<p>Para obtener más información de cómo usar <code>XMLHttpRequest</code>, mira <a class="internal" href="/Es/XMLHttpRequest/Using_XMLHttpRequest" title="En/Using XMLHttpRequest">Usar XMLHttpRequest</a>.</p>
+Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHttpRequest](/Es/XMLHttpRequest/Using_XMLHttpRequest "En/Using XMLHttpRequest").
 
-<div class="note"><strong>Nota:</strong> De forma predeterminada, Firefox 3 limita la cantidad de conexiones de <code>XMLHttpRequest</code> por servidor a 6 (las versiones previas limitan a 2 conexiones por servidor). Algunos sitios web interactivos pueden mantener una conexión <code>XMLHttpRequest</code> abierta, así que abrir múltiples sesiones a esos sitios puede derivar en congelamientos del navegador de una forma que la ventana no se actualiza y los controles no responden. Este valor puede ser cambiado al editar la preferencia <code>network.http.max-persistent-connections-per-server</code> en <code><a class="linkification-ext" href="/about:config" title="Linkification: about:config">about:config</a></code>.</div>
+> **Nota:** De forma predeterminada, Firefox 3 limita la cantidad de conexiones de `XMLHttpRequest` por servidor a 6 (las versiones previas limitan a 2 conexiones por servidor). Algunos sitios web interactivos pueden mantener una conexión `XMLHttpRequest` abierta, así que abrir múltiples sesiones a esos sitios puede derivar en congelamientos del navegador de una forma que la ventana no se actualiza y los controles no responden. Este valor puede ser cambiado al editar la preferencia `network.http.max-persistent-connections-per-server` en [`about:config`](/about:config "Linkification: about:config").
 
-<h2 id="Resumen_del_método">Resumen del método</h2>
+## Resumen del método
 
-<table class="standard-table">
-    <tbody>
-     <tr>
-      <td><code>void <a class="internal" href="/en/XMLHttpRequest#abort()" title="/En/XMLHttpRequest#abort()">abort</a>();</code></td>
-     </tr>
-     <tr>
-      <td><code>string <a class="internal" href="/en/XMLHttpRequest#getAllResponseHeaders()" title="/en/XMLHttpRequest#getAllResponseHeaders()">getAllResponseHeaders</a>();</code></td>
-     </tr>
-     <tr>
-      <td><code>ACString <a class="internal" href="/en/XMLHttpRequest#getResponseHeader()" title="/en/XMLHttpRequest#getResponseHeader()">getResponseHeader</a>(in AUTF8String header);</code></td>
-     </tr>
-     <tr>
-      <td><code>[noscript] void <a class="internal" href="/en/XMLHttpRequest#init()" title="/en/XMLHttpRequest#init()">init</a>(in nsIPrincipal principal, in nsIScriptContext scriptContext, in nsPIDOMWindow ownerWindow);</code></td>
-     </tr>
-     <tr>
-      <td><code>void <a class="internal" href="/en/XMLHttpRequest#open()" title="/en/XMLHttpRequest#open()">open</a>(in AUTF8String method, in AUTF8String url);</code></td>
-     </tr>
-     <tr>
-      <td><code>[noscript] void <a class="internal" href="/en/XMLHttpRequest#openRequest()" title="/en/XMLHttpRequest#openRequest()">openRequest</a>(in AUTF8String method, in AUTF8String url, in boolean async, in AString user, in AString password);</code></td>
-     </tr>
-     <tr>
-      <td><code>void <a class="internal" href="/en/XMLHttpRequest#overrideMimeType()" title="/en/XMLHttpRequest#overrideMimeType()">overrideMimeType</a>(in AUTF8String mimetype);</code></td>
-     </tr>
-     <tr>
-      <td><code>void <a class="internal" href="/en/XMLHttpRequest#send()" title="/en/XMLHttpRequest#send()">send</a>([optional] in nsIVariant body);</code></td>
-     </tr>
-     <tr>
-      <td><code>void <a class="internal" href="/en/XMLHttpRequest#sendAsBinary()" title="/en/XMLHttpRequest#sendAsBinary()">sendAsBinary</a>(in DOMString body);</code></td>
-     </tr>
-     <tr>
-      <td><code>void <a class="internal" href="/en/XMLHttpRequest#setRequestHeader()" title="/en/XMLHttpRequest#setRequestHeader()">setRequestHeader</a>(in AUTF8String header, in AUTF8String value);</code></td>
-     </tr>
-    </tbody>
-   </table>
+| `void abort();`                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------- |
+| `string getAllResponseHeaders();`                                                                                                 |
+| `ACString getResponseHeader(in AUTF8String header);`                                                                              |
+| `[noscript] void init(in nsIPrincipal principal, in nsIScriptContext scriptContext, in nsPIDOMWindow ownerWindow);`               |
+| `void open(in AUTF8String method, in AUTF8String url);`                                                                           |
+| `[noscript] void openRequest(in AUTF8String method, in AUTF8String url, in boolean async, in AString user, in AString password);` |
+| `void overrideMimeType(in AUTF8String mimetype);`                                                                                 |
+| `void send([optional] in nsIVariant body);`                                                                                       |
+| `void sendAsBinary(in DOMString body);`                                                                                           |
+| `void setRequestHeader(in AUTF8String header, in AUTF8String value);`                                                             |
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<dl><dt>Atributo: Tipo</dt><dd>Descripción</dd><dt><code>channel</code>: <code>nsIChannel</code></dt><dd>El canal es usado por el objeto cuando se produce el pedido. Esto da <code>null</code> si el canal aún no fue creado. En el caso de un pedido de múltiples partes, este es el canal inicial, no las diferentes partes del pedido múltiple. <strong>Es necesario tener privilegios elevados para acceder; sólo lectura.</strong> <abbr class="" title="Non-standard. Check cross-browser support before using.">
-    <span class="">Non-standard</span>
-</abbr></dd><dt><code>mozBackgroundRequest</code>: <code>booleano</code></dt><dd>
-    <p>Indica si el objeto representa o no un pedido de un servicio de fondo. Si es <code>true</code>, no se asocia una carga de grupo con el pedido, y los diálogos de seguridad no se muestran al usuario. <strong>Es necesario tener privilegios elevados para acceder. </strong><abbr class="" title="Non-standard. Check cross-browser support before using.">
-    <span class="">Non-standard</span>
-</abbr></p>
+- Atributo: Tipo
+  - : Descripción
+- `channel`: `nsIChannel`
+  - : El canal es usado por el objeto cuando se produce el pedido. Esto da `null` si el canal aún no fue creado. En el caso de un pedido de múltiples partes, este es el canal inicial, no las diferentes partes del pedido múltiple. **Es necesario tener privilegios elevados para acceder; sólo lectura.** Non-standard
+- `mozBackgroundRequest`: `booleano`
 
-    <p>En los casos en que un diálogo de seguridad debe ser mostrado (como en una autentficación o la notificación de un certificado no válido), el pedido simplemente falla.</p>
-   </dd><dt><code>mozResponseArrayBuffer</code>  <abbr class="" title="Non-standard. Check cross-browser support before using.">
-    <span class="">Non-standard</span>
-</abbr>: <a href="/en-US/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a></dt><dd>La respuesta al pedido en la forma de un arreglo de JavaScript. Esto es NULL si el pedido no fue exitoso o si todavía no ha sido enviado. <strong>Sólo lectura.</strong></dd><dt><code>multipart</code>: <code>booleano</code></dt><dd>
-    <p>Indica cuando se espera que la respuesta sea o no una serie de mútiples documentos XML. Si se define como <code>true</code>, el tipo de contenido de la respuesta inicial debe ser <code>multipart/x-mixed-replace</code> u ocurrirá un error. Todos los pedidos deben ser asincrónicos.</p>
+  - : Indica si el objeto representa o no un pedido de un servicio de fondo. Si es `true`, no se asocia una carga de grupo con el pedido, y los diálogos de seguridad no se muestran al usuario. **Es necesario tener privilegios elevados para acceder.** Non-standard
 
-    <p>Esto permite el uso del push del servidor; para cada documento XML que se escribe para este pedido, se crea un nuevo XMLDOMdocument y se llama al manejador <code>onload</code> entre cada documento.</p>
+    En los casos en que un diálogo de seguridad debe ser mostrado (como en una autentficación o la notificación de un certificado no válido), el pedido simplemente falla.
 
-    <div class="note notecard" id="sect2"><strong>Nota:</strong> Cuando esto se elige, el manejador <code>onload</code> y otros manejadores de eventos no son reiniciados después de que el primer XMLdocument es cargado, y el manejador <code>onload</code> es llamado después de que cada parte de la respuesta es recibida.</div>
-   </dd><dt>
-    <code>onreadystatechange</code>
-   : <code>nsIDOMEventListener</code></dt><dd>
-    <p>Una función del objeto JavaScript que se llama cuando el atributo <code>readyState</code> cambia. El callback se llama desde la interfaz del usuario.</p>
+- `mozResponseArrayBuffer` Non-standard
+  : [`ArrayBuffer`](/en-US/JavaScript_typed_arrays/ArrayBuffer "en/JavaScript typed arrays/ArrayBuffer")
+  - : La respuesta al pedido en la forma de un arreglo de JavaScript. Esto es NULL si el pedido no fue exitoso o si todavía no ha sido enviado. **Sólo lectura.**
+- `multipart`: `booleano`
 
-    <div class="" id="sect3"><strong>Aviso: </strong>Esto no debe ser usado desde código nativo. Tampoco debes usarlo con pedidos sincrónicos.</div>
-   </dd><dt><code>readyState</code>: <code>long</code></dt><dd>
-    <p>El estado del pedido:</p>
+  - : Indica cuando se espera que la respuesta sea o no una serie de mútiples documentos XML. Si se define como `true`, el tipo de contenido de la respuesta inicial debe ser `multipart/x-mixed-replace` u ocurrirá un error. Todos los pedidos deben ser asincrónicos.
 
-    <div class=""><table class="standard-table">
-     <tbody>
-      <tr>
-       <td class="header">Valor</td>
-       <td class="header">Estado</td>
-       <td class="header">Descripción</td>
-      </tr>
-      <tr>
-       <td><code>0</code></td>
-       <td><code>UNINITIALIZED</code></td>
-       <td>todavía no se llamó a <code>open()</code>.</td>
-      </tr>
-      <tr>
-       <td><code>1</code></td>
-       <td><code>LOADING</code></td>
-       <td>todavía no se llamó a <code>send()</code>.</td>
-      </tr>
-      <tr>
-       <td><code>2</code></td>
-       <td><code>LOADED</code></td>
-       <td><code>send()</code> ya fue invocado, y los encabezados y el estado están disponibles.</td>
-      </tr>
-      <tr>
-       <td><code>3</code></td>
-       <td><code>INTERACTIVE</code></td>
-       <td>Descargando; <code>responseText</code> contiene información parcial.</td>
-      </tr>
-      <tr>
-       <td><code>4</code></td>
-       <td><code>COMPLETED</code></td>
-       <td>La operación está terminada.</td>
-      </tr>
-     </tbody>
-    </table></div>
-   </dd><dt>Valor: Estado</dt><dd>Descripción</dd><dt><code>0</code>: <code>UNINITIALIZED</code></dt><dd>todavía no se llamó a <code>open()</code>.</dd><dt><code>1</code>: <code>LOADING</code></dt><dd>todavía no se llamó a <code>send()</code>.</dd><dt><code>2</code>: <code>LOADED</code></dt><dd><code>send()</code> ya fue invocado, y los encabezados y el estado están disponibles.</dd><dt><code>3</code>: <code>INTERACTIVE</code></dt><dd>Descargando; <code>responseText</code> contiene información parcial.</dd><dt><code>4</code>: <code>COMPLETED</code></dt><dd>La operación está terminada.</dd><dt><code>responseText</code>: <code>AString</code></dt><dd>La respuesta al pedido como texto, o <code>null</code> si el pedido no fue exitoso o todavía no se envió. <strong>Sólo lectura.</strong></dd><dt><code>responseXML</code>: <code>nsIDOMDocument</code></dt><dd>
-    <p>La respuesta al pedido como un objeto DOM<code><a class="internal" href="/en-US/DOM/document" title="En/DOM/Document">Document</a></code>, o <code>null</code> si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera <code>text/xml</code>. <strong>Sólo lectura.</strong></p>
+    Esto permite el uso del push del servidor; para cada documento XML que se escribe para este pedido, se crea un nuevo XMLDOMdocument y se llama al manejador `onload` entre cada documento.
 
-    <div class="note notecard" id="sect4"><strong>Nota:</strong> Si el servidor no aplica el encabezado de tipo de contenido <code>text/xml</code>, puedes usar <code>overrideMimeType()</code> para forzar a <code>XMLHttpRequest</code> a analizarlo como XML igualmente.</div>
-   </dd><dt><code>status</code>: <code>unsigned long</code></dt><dd>El estado de la respuesta al pedido. Éste es el código HTTPresult (por ejemplo, <code>status</code> es 200 por un pedido exitoso). <strong>Sólo lectura.</strong></dd><dt><code>statusText</code>: <code>AUTF8String</code></dt><dd>La cadena de respuesta que devuelve el HTTPserver. A diferencia de <code>status</code>, este incluye el texto completo del mensaje de respuesta ("<code>200 OK</code>", por ejemplo). <strong>Sólo lectura.</strong></dd><dt><code>upload</code>: <code>nsIXMLHttpRequestUpload</code></dt><dd>El proceso de subida puede ser rastreado al agregar un registro de evento a <code>upload</code>.</dd><dt><code>withCredentials</code>: <code>booleano</code></dt><dd>
-    <p>Indica cuando el pedido de Access-Control entre sitios debe o no ser realizado usando credenciales como cookies o encabezados de autorización.</p>
+    > **Nota:** Cuando esto se elige, el manejador `onload` y otros manejadores de eventos no son reiniciados después de que el primer XMLdocument es cargado, y el manejador `onload` es llamado después de que cada parte de la respuesta es recibida.
 
-    <div class="note notecard" id="sect5"><strong>Nota:</strong> Esto nunca afecta los pedidos en para el propio sitio.</div>
+- `onreadystatechange`
+  : `nsIDOMEventListener`
 
-    <p>El valor predeterminado es <code>false</code>.</p>
-   </dd></dl>
+  - : Una función del objeto JavaScript que se llama cuando el atributo `readyState` cambia. El callback se llama desde la interfaz del usuario.
 
-<h2 id="Métodos">Métodos</h2>
+    **Aviso:** Esto no debe ser usado desde código nativo. Tampoco debes usarlo con pedidos sincrónicos.
 
-<h3 id="abort()">abort()</h3>
+- `readyState`: `long`
 
-<p>Aborta el pedido si éste ya fue enviado.</p>
+  - : El estado del pedido:
 
-<pre>void abort();
-</pre>
+    | Valor | Estado          | Descripción                                                                |
+    | ----- | --------------- | -------------------------------------------------------------------------- |
+    | `0`   | `UNINITIALIZED` | todavía no se llamó a `open()`.                                            |
+    | `1`   | `LOADING`       | todavía no se llamó a `send()`.                                            |
+    | `2`   | `LOADED`        | `send()` ya fue invocado, y los encabezados y el estado están disponibles. |
+    | `3`   | `INTERACTIVE`   | Descargando; `responseText` contiene información parcial.                  |
+    | `4`   | `COMPLETED`     | La operación está terminada.                                               |
 
-<h6 id="Parámetros">Parámetros</h6>
+- Valor: Estado
+  - : Descripción
+- `0`: `UNINITIALIZED`
+  - : todavía no se llamó a `open()`.
+- `1`: `LOADING`
+  - : todavía no se llamó a `send()`.
+- `2`: `LOADED`
+  - : `send()` ya fue invocado, y los encabezados y el estado están disponibles.
+- `3`: `INTERACTIVE`
+  - : Descargando; `responseText` contiene información parcial.
+- `4`: `COMPLETED`
+  - : La operación está terminada.
+- `responseText`: `AString`
+  - : La respuesta al pedido como texto, o `null` si el pedido no fue exitoso o todavía no se envió. **Sólo lectura.**
+- `responseXML`: `nsIDOMDocument`
 
-<p>Ninguno.</p>
+  - : La respuesta al pedido como un objeto DOM[`Document`](/en-US/DOM/document "En/DOM/Document"), o `null` si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera `text/xml`. **Sólo lectura.**
 
-<h3 id="getAllResponseHeaders()">getAllResponseHeaders()</h3>
+    > **Nota:** Si el servidor no aplica el encabezado de tipo de contenido `text/xml`, puedes usar `overrideMimeType()` para forzar a `XMLHttpRequest` a analizarlo como XML igualmente.
 
-<p>Devuelve todos los encabezados de respuesta como una cadena.</p>
+- `status`: `unsigned long`
+  - : El estado de la respuesta al pedido. Éste es el código HTTPresult (por ejemplo, `status` es 200 por un pedido exitoso). **Sólo lectura.**
+- `statusText`: `AUTF8String`
+  - : La cadena de respuesta que devuelve el HTTPserver. A diferencia de `status`, este incluye el texto completo del mensaje de respuesta ("`200 OK`", por ejemplo). **Sólo lectura.**
+- `upload`: `nsIXMLHttpRequestUpload`
+  - : El proceso de subida puede ser rastreado al agregar un registro de evento a `upload`.
+- `withCredentials`: `booleano`
 
-<div class="note"><strong>Nota:</strong> Para pedidos multi partes, esto devuelve los encabezados de la parte <em>actual</em> del pedido, no del canal original.</div>
+  - : Indica cuando el pedido de Access-Control entre sitios debe o no ser realizado usando credenciales como cookies o encabezados de autorización.
 
-<pre>string getAllResponseHeaders();
-</pre>
+    > **Nota:** Esto nunca afecta los pedidos en para el propio sitio.
 
-<h6 id="Parámetros_2">Parámetros</h6>
+    El valor predeterminado es `false`.
 
-<p>Ninguno.</p>
+## Métodos
 
-<h6 id="Valor_devuelto">Valor devuelto</h6>
+### abort()
 
-<p>El texto de todos los encabezados de respuesta, o <code>null</code> si no se ha recibido ninguna respuesta.</p>
+Aborta el pedido si éste ya fue enviado.
 
-<h3 id="getResponseHeader()">getResponseHeader()</h3>
+```
+void abort();
+```
 
-<p>Devuelve el texto de un encabezado específico.</p>
+###### Parámetros
 
-<pre>ACString getResponseHeader(
+Ninguno.
+
+### getAllResponseHeaders()
+
+Devuelve todos los encabezados de respuesta como una cadena.
+
+> **Nota:** Para pedidos multi partes, esto devuelve los encabezados de la parte _actual_ del pedido, no del canal original.
+
+```
+string getAllResponseHeaders();
+```
+
+###### Parámetros
+
+Ninguno.
+
+###### Valor devuelto
+
+El texto de todos los encabezados de respuesta, o `null` si no se ha recibido ninguna respuesta.
+
+### getResponseHeader()
+
+Devuelve el texto de un encabezado específico.
+
+```
+ACString getResponseHeader(
  in AUTF8String header
 );
-</pre>
+```
 
-<h6 id="Parámetros_3">Parámetros</h6>
+###### Parámetros
 
-<dl>
- <dt><code>header</code></dt>
- <dd>El nombre del encabezado buscado.</dd>
-</dl>
+- `header`
+  - : El nombre del encabezado buscado.
 
-<h6 id="Valor_devuelto_2">Valor devuelto</h6>
+###### Valor devuelto
 
-<p>Una cadena que contiene el texto de un encabezado específico, o <code>null</code> tanto si la respuesta no se ha recibido o el encabezado no existe en la respuesta.</p>
+Una cadena que contiene el texto de un encabezado específico, o `null` tanto si la respuesta no se ha recibido o el encabezado no existe en la respuesta.
 
-<h3 id="init()">init()</h3>
+### init()
 
-<p>Inicializa el objeto para que sea usado desde código C++.</p>
+Inicializa el objeto para que sea usado desde código C++.
 
-<div class="warning"><strong>Aviso:</strong> Este método <em>no</em> debe ser llamado desde JavaScript.</div>
+> **Advertencia:** **Aviso:** Este método _no_ debe ser llamado desde JavaScript.
 
-<pre>[noscript] void init(
+```
+[noscript] void init(
  in nsIPrincipal principal,
  in nsIScriptContext scriptContext,
  in nsPIDOMWindow ownerWindow
 );
-</pre>
+```
 
-<h6 id="Parámetros_4">Parámetros</h6>
+###### Parámetros
 
-<dl>
- <dt><code>principal</code></dt>
- <dd>El principal para usar en el pedido; no debe ser <code>null</code>.</dd>
- <dt><code>scriptContext</code></dt>
- <dd>El contexto del programa que usará en el pedido; no debe ser <code>null</code>.</dd>
- <dt><code>ownerWindow</code></dt>
- <dd>La ventana asociada con el pedido; puede ser <code>null</code>.</dd>
-</dl>
+- `principal`
+  - : El principal para usar en el pedido; no debe ser `null`.
+- `scriptContext`
+  - : El contexto del programa que usará en el pedido; no debe ser `null`.
+- `ownerWindow`
+  - : La ventana asociada con el pedido; puede ser `null`.
 
-<h3 id="open()">open()</h3>
+### open()
 
-<p>Inicializa el pedido. Este método es para ser usado desde código JavaScript, para inicializar un pedido desde código nativo, debes usar <a class="internal" href="/en/XMLHttpRequest#openRequest()" title="/en/XMLHttpRequest#openRequest()"><code>openRequest()</code></a>.</p>
+Inicializa el pedido. Este método es para ser usado desde código JavaScript, para inicializar un pedido desde código nativo, debes usar [`openRequest()`](</en/XMLHttpRequest#openRequest()>).
 
-<div class="note"><strong>Nota:</strong> Llamar a este método en un pedido activo (uno para el cual <code>open()</code> o <code>openRequest()</code> ya han sido llamados) es equivalente a usar <code>abort()</code>.</div>
+> **Nota:** Llamar a este método en un pedido activo (uno para el cual `open()` o `openRequest()` ya han sido llamados) es equivalente a usar `abort()`.
 
-<pre>void open(
+```
+void open(
  in AUTF8String method,
  in AUTF8String url,
  [optional] in boolean async,
  [optional] in AString user,
  [optional] in AString password
 );
-</pre>
+```
 
-<h6 id="Parámetros_5">Parámetros</h6>
+###### Parámetros
 
-<dl>
- <dt><code>method</code></dt>
- <dd>El método HTTP a usar: tanto "POST" o "GET". Se ignora para urls que no son de HTTP.</dd>
- <dt><code>url</code></dt>
- <dd>La URL a la que se envía el pedido.</dd>
- <dt><code>async</code></dt>
- <dd><span id="result_box" lang="es"><span>Un parámetro booleano opcional, predeterminado es <code>true</code>, que indica si se debe o no realizar la operación de forma asíncrona.</span> <span>Si este valor es <code>false</code>, el método <code>send()</code> no se devuelve hasta que se reciba la respuesta completa.</span> <span>Si es <code>true</code>, la notificación de una transacción completada se proporciona mediante los oyentes de eventos.</span> <span>Esto debe ser <code>true</code> si el atributo <code>multipart</code> es verdadero o se lanzará una excepción.</span></span></dd>
- <dt><code>user</code></dt>
- <dd><span id="result_box" lang="es"><span>El nombre de usuario es opcional solo es usado con fines de autenticación,</span> <span>de forma predeterminada es una cadena vacía.</span></span></dd>
- <dt><code>password</code></dt>
- <dd><span id="result_box" lang="es"><span>La contraseña es opcional solo es usado con fines de autenticación,</span> <span>de forma predeterminada es una cadena vacía.</span></span></dd>
-</dl>
+- `method`
+  - : El método HTTP a usar: tanto "POST" o "GET". Se ignora para urls que no son de HTTP.
+- `url`
+  - : La URL a la que se envía el pedido.
+- `async`
+  - : Un parámetro booleano opcional, predeterminado es `true`, que indica si se debe o no realizar la operación de forma asíncrona. Si este valor es `false`, el método `send()` no se devuelve hasta que se reciba la respuesta completa. Si es `true`, la notificación de una transacción completada se proporciona mediante los oyentes de eventos. Esto debe ser `true` si el atributo `multipart` es verdadero o se lanzará una excepción.
+- `user`
+  - : El nombre de usuario es opcional solo es usado con fines de autenticación, de forma predeterminada es una cadena vacía.
+- `password`
+  - : La contraseña es opcional solo es usado con fines de autenticación, de forma predeterminada es una cadena vacía.
 
-<h3 id="openRequest()">openRequest()</h3>
+### openRequest()
 
-<p>Inicia la peticion, este metodo est</p>
+Inicia la peticion, este metodo est
 
-<p><span id="result_box" lang="es"><span>Inicializa la peticion.</span> <span>Este método se utiliza desde el código nativo,</span> <span>para inicializar una solicitud desde el código JavaScript, utilice <code>open ()</code> en su lugar.</span></span></p>
+Inicializa la peticion. Este método se utiliza desde el código nativo, para inicializar una solicitud desde el código JavaScript, utilice `open ()` en su lugar.
 
-<div class="note"><strong>Nota:</strong> Calling this method an already active request (one for which <code>open()</code>or <code>openRequest()</code>has already been called) is the equivalent of calling <code>abort()</code>.</div>
+> **Nota:** Calling this method an already active request (one for which `open()`or `openRequest()`has already been called) is the equivalent of calling `abort()`.
 
-<pre>void open(
+```
+void open(
  in AUTF8String method,
  in AUTF8String url,
  in boolean async,
  in AString user,
  in AString password
 );
-</pre>
+```
 
-<h6 id="Parameters">Parameters</h6>
+###### Parameters
 
-<dl>
- <dt><code>method</code></dt>
- <dd>The HTTPmethod to use; either "POST"or "GET". Ignored for non-HTTPURLs.</dd>
- <dt><code>url</code></dt>
- <dd>The URLto which to send the request.</dd>
- <dt><code>async</code></dt>
- <dd>An optional boolean parameter, defaulting to <code>true</code>, indicating whether or not to perform the operation asynchronously. If this value is <code>false</code>, the <code>send()</code>method does not return until the response is received. If <code>true</code>, notification of a completed transaction is provided using event listeners. This <em>must</em> be true if the <code>multipart</code> attribute is <code>true</code>, or an exception will be thrown.</dd>
- <dt><code>user</code></dt>
- <dd>The optional user name to use for authentication purposes; by default, this is an empty string.</dd>
- <dt><code>password</code></dt>
- <dd>The optional password to use for authentication purposes; by default, this is an empty string.</dd>
-</dl>
+- `method`
+  - : The HTTPmethod to use; either "POST"or "GET". Ignored for non-HTTPURLs.
+- `url`
+  - : The URLto which to send the request.
+- `async`
+  - : An optional boolean parameter, defaulting to `true`, indicating whether or not to perform the operation asynchronously. If this value is `false`, the `send()`method does not return until the response is received. If `true`, notification of a completed transaction is provided using event listeners. This _must_ be true if the `multipart` attribute is `true`, or an exception will be thrown.
+- `user`
+  - : The optional user name to use for authentication purposes; by default, this is an empty string.
+- `password`
+  - : The optional password to use for authentication purposes; by default, this is an empty string.
 
-<h3 id="overrideMimeType()">overrideMimeType()</h3>
+### overrideMimeType()
 
-<p>Overrides the MIMEtype returned by the server.</p>
+Overrides the MIMEtype returned by the server.
 
-<div class="note"><strong>Note:</strong> This method must be called before <code>send()</code>.</div>
+> **Nota:** This method must be called before `send()`.
 
-<pre>void overrideMimeType(
+```
+void overrideMimeType(
  in AUTF8String mimetype
 );
-</pre>
+```
 
-<h6 id="Parameters_2">Parameters</h6>
+###### Parameters
 
-<dl>
- <dt><code>mimetype</code></dt>
- <dd>The type that should be used instead of the one returned by the server, if any.</dd>
-</dl>
+- `mimetype`
+  - : The type that should be used instead of the one returned by the server, if any.
 
-<h3 id="send()">send()</h3>
+### send()
 
-<p>Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent. If the request is synchronous, this method doesn't return until the response has arrived.</p>
+Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent. If the request is synchronous, this method doesn't return until the response has arrived.
 
-<div class="note"><strong>Note:</strong> Any event listeners you wish to set must be set before calling <code>send()</code>.</div>
+> **Nota:** Any event listeners you wish to set must be set before calling `send()`.
 
-<pre>void send(
+```
+void send(
  [optional] in nsIVariant body
 );
-</pre>
+```
 
-<h6 id="Parameters_3">Parameters</h6>
+###### Parameters
 
-<dl>
- <dt><code>body</code></dt>
- <dd>This may be an <code>nsIDocument</code>, <code>nsIInputStream</code>, or a string (an <code>nsISupportsString</code> if called from native code) that is used to populate the body of a POST request. Starting with Gecko 1.9.2, you may also specify an DOM{{ domxref("File") }} , and starting with Gecko 2.0 {{ geckoRelease("2.0") }} you may also specify a <a href="/en/XMLHttpRequest/FormData" title="en/XMLHttpRequest/FormData"><code>FormData</code></a> object.</dd>
-</dl>
+- `body`
+  - : This may be an `nsIDocument`, `nsIInputStream`, or a string (an `nsISupportsString` if called from native code) that is used to populate the body of a POST request. Starting with Gecko 1.9.2, you may also specify an DOM{{ domxref("File") }} , and starting with Gecko 2.0 {{ geckoRelease("2.0") }} you may also specify a [`FormData`](/en/XMLHttpRequest/FormData "en/XMLHttpRequest/FormData") object.
 
-<h6 id="Notes">Notes</h6>
+###### Notes
 
-<p>If the body is an <code>nsIDOMDocument</code>, it is serialized before being sent.</p>
+If the body is an `nsIDOMDocument`, it is serialized before being sent.
 
-<p>If it's an <code>nsIInputStream</code>, it must be compatible with <code>nsIUploadChannel</code>'s <code>setUploadStream()</code>method. In that case, a Content-Length header is added to the request, with its value obtained using <code>nsIInputStream</code>'s <code>available()</code>method. Any headers included at the top of the stream are treated as part of the message body. The stream's MIMEtype should be specified by setting the Content-Type header using the <a class="internal" href="/en/XMLHttpRequest#setRequestHeader()" title="/en/XMLHttpRequest#setRequestHeader()"><code>setRequestHeader()</code></a>method prior to calling <code>send()</code>.</p>
+If it's an `nsIInputStream`, it must be compatible with `nsIUploadChannel`'s `setUploadStream()`method. In that case, a Content-Length header is added to the request, with its value obtained using `nsIInputStream`'s `available()`method. Any headers included at the top of the stream are treated as part of the message body. The stream's MIMEtype should be specified by setting the Content-Type header using the [`setRequestHeader()`](</en/XMLHttpRequest#setRequestHeader()>)method prior to calling `send()`.
 
-<h3 id="sendAsBinary()">sendAsBinary()</h3>
+### sendAsBinary()
 
-<p>A variant of the <code>send()</code>method that sends binary data.</p>
+A variant of the `send()`method that sends binary data.
 
-<pre>void sendAsBinary(
+```
+void sendAsBinary(
  in DOMString body
 );
-</pre>
+```
 
-<h6 id="Parameters_4">Parameters</h6>
+###### Parameters
 
-<dl>
- <dt><code>body</code></dt>
- <dd>The request body as a DOMstring. This data is converted to a string of single-byte characters by truncation (removing the high-order byte of each character).</dd>
-</dl>
+- `body`
+  - : The request body as a DOMstring. This data is converted to a string of single-byte characters by truncation (removing the high-order byte of each character).
 
-<h3 id="setRequestHeader()">setRequestHeader()</h3>
+### setRequestHeader()
 
-<p>Sets the value of an HTTPrequest header.</p>
+Sets the value of an HTTPrequest header.
 
-<div class="note"><strong>Note:</strong> You must call <a class="internal" href="/en/XMLHttpRequest#open()" title="/en/XMLHttpRequest#open()"><code>open()</code></a>before using this method.</div>
+> **Nota:** You must call [`open()`](</en/XMLHttpRequest#open()>)before using this method.
 
-<pre>void setRequestHeader(
+```
+void setRequestHeader(
  in AUTF8String header,
  in AUTF8String value
 );
-</pre>
+```
 
-<h6 id="Parameters_5">Parameters</h6>
+###### Parameters
 
-<dl>
- <dt><code>header</code></dt>
- <dd>The name of the header whose value is to be set.</dd>
- <dt><code>value</code></dt>
- <dd>The value to set as the body of the header.</dd>
-</dl>
+- `header`
+  - : The name of the header whose value is to be set.
+- `value`
+  - : The value to set as the body of the header.
 
-<h2 id="Implementation_notes">Implementation notes</h2>
+## Implementation notes
 
-<p><code>XMLHttpRequest</code> is implemented in Gecko using the <code>nsIJSXMLHttpRequest</code> and <code>nsIXMLHttpRequest</code> interfaces.</p>
+`XMLHttpRequest` is implemented in Gecko using the `nsIJSXMLHttpRequest` and `nsIXMLHttpRequest` interfaces.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a class="internal" href="/En/XMLHttpRequest/Using_XMLHttpRequest" title="En/Using XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en/XMLHttpRequest/FormData" title="en/XMLHttpRequest/FormData"><code>FormData</code></a></li>
- <li><a href="/en/AJAX/Getting_Started" title="en/AJAX/Getting_Started">MDC AJAX introduction</a></li>
- <li><a class="external" href="http://www.peej.co.uk/articles/rich-user-experience.html">XMLHttpRequest - REST and the Rich User Experience</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp">Microsoft documentation</a></li>
- <li><a class="external" href="http://developer.apple.com/internet/webcontent/xmlhttpreq.html">Apple developers' reference</a></li>
- <li><a class="external" href="http://jibbering.com/2002/4/httprequest.html">"Using the XMLHttpRequest Object" (jibbering.com)</a></li>
- <li><a class="external" href="http://www.w3.org/TR/XMLHttpRequest/">The XMLHttpRequest Object: W3C Working Draft</a></li>
-</ul>
+- [Using XMLHttpRequest](/En/XMLHttpRequest/Using_XMLHttpRequest "En/Using XMLHttpRequest")
+- [`FormData`](/en/XMLHttpRequest/FormData "en/XMLHttpRequest/FormData")
+- [MDC AJAX introduction](/en/AJAX/Getting_Started "en/AJAX/Getting_Started")
+- [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
+- [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
+- [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
+- ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
+- [The XMLHttpRequest Object: W3C Working Draft](http://www.w3.org/TR/XMLHttpRequest/)
 
-<p>{{ languages( { "es": "es/XMLHttpRequest", "fr": "fr/XMLHttpRequest", "it": "it/XMLHttpRequest", "ja": "ja/XMLHttpRequest", "ko": "ko/XMLHttpRequest", "pl": "pl/XMLHttpRequest", "zh-cn": "cn/XMLHttpRequest" } ) }}</p>
+{{ languages( { "es": "es/XMLHttpRequest", "fr": "fr/XMLHttpRequest", "it": "it/XMLHttpRequest", "ja": "ja/XMLHttpRequest", "ko": "ko/XMLHttpRequest", "pl": "pl/XMLHttpRequest", "zh-cn": "cn/XMLHttpRequest" } ) }}

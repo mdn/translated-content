@@ -9,17 +9,18 @@ tags:
 translation_of: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Objetos_3D_utilizando_WebGL
 ---
-<p>{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}</p>
+{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
-<p>Vamos a llevar nuestro cuadrado hacia la tercera dimensión agregando cinco caras más para crear el cubo. Para hacer esto de manera eficiente, vamos a cambiar el dibujado por medio de vertices utilizando el método {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}}<code> </code>por el uso de un arreglo de vértices como tabla, esto por medio del llamado hacia   {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.</p>
+Vamos a llevar nuestro cuadrado hacia la tercera dimensión agregando cinco caras más para crear el cubo. Para hacer esto de manera eficiente, vamos a cambiar el dibujado por medio de vertices utilizando el método {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}}` `por el uso de un arreglo de vértices como tabla, esto por medio del llamado hacia {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.
 
-<p>Considerar: cada cara cuatro vértices para su definición, pero cada vértice es compartido por 3 caras. Realizando una lista con los 24 vértices es como nosotros haremos un menor intercambio de datos, después haremos referencia hacia cada vértic por medio se su índice en la lista en lugar de pasar el juego entero de coordenadas. Si te preguntas por qué necesitamos 24 vértices, y no solo 8, es porque cada esquina pertenece a tres caras de diferente color, y un solo vértice necesita tener un solo color específico, por lo tanto crearemos 3 copias de cada vértice en tres colores diferentes, uno por cada cara.</p>
+Considerar: cada cara cuatro vértices para su definición, pero cada vértice es compartido por 3 caras. Realizando una lista con los 24 vértices es como nosotros haremos un menor intercambio de datos, después haremos referencia hacia cada vértic por medio se su índice en la lista en lugar de pasar el juego entero de coordenadas. Si te preguntas por qué necesitamos 24 vértices, y no solo 8, es porque cada esquina pertenece a tres caras de diferente color, y un solo vértice necesita tener un solo color específico, por lo tanto crearemos 3 copias de cada vértice en tres colores diferentes, uno por cada cara.
 
-<h2 id="Definir_la_posición_de_los_vértices_del_cubo">Definir la posición de los vértices del cubo</h2>
+## Definir la posición de los vértices del cubo
 
-<p>Primero, construiremos el buffer para la posición de los vértices actualizando el código en <code>initBuffers()</code>. Esto es muy parecido a lo como si fuera para el cuadraro, pero más lardo debido a que ahora son 24 vértices (4 por lado):</p>
+Primero, construiremos el buffer para la posición de los vértices actualizando el código en `initBuffers()`. Esto es muy parecido a lo como si fuera para el cuadraro, pero más lardo debido a que ahora son 24 vértices (4 por lado):
 
-<pre class="brush: js">var vertices = [
+```js
+var vertices = [
   // Cara delantera
   -1.0, -1.0,  1.0,
    1.0, -1.0,  1.0,
@@ -56,13 +57,14 @@ original_slug: Web/API/WebGL_API/Tutorial/Objetos_3D_utilizando_WebGL
   -1.0,  1.0,  1.0,
   -1.0,  1.0, -1.0
 ];
-</pre>
+```
 
-<h2 id="Definir_los_colores_de_los_vértices">Definir los colores de los vértices</h2>
+## Definir los colores de los vértices
 
-<p>Necesitamos construir un arreglo de colores por cada uno de los 24 vertices. Este código comienza por definir un color para cada cara, después utiliza un ciclo para ensamblar el arreglo de colores por cada uno de los vértices.</p>
+Necesitamos construir un arreglo de colores por cada uno de los 24 vertices. Este código comienza por definir un color para cada cara, después utiliza un ciclo para ensamblar el arreglo de colores por cada uno de los vértices.
 
-<pre class="brush: js">var colors = [
+```js
+var colors = [
   [1.0,  1.0,  1.0,  1.0],    // Cara delantera: blanco
   [1.0,  0.0,  0.0,  1.0],    // Cara trasera: rojo
   [0.0,  1.0,  0.0,  1.0],    // Cara superior: verde
@@ -73,10 +75,10 @@ original_slug: Web/API/WebGL_API/Tutorial/Objetos_3D_utilizando_WebGL
 
 var generatedColors = [];
 
-for (j=0; j&lt;6; j++) {
+for (j=0; j<6; j++) {
   var c = colors[j];
 
-  for (var i=0; i&lt;4; i++) {
+  for (var i=0; i<4; i++) {
     generatedColors = generatedColors.concat(c);
   }
 }
@@ -84,13 +86,14 @@ for (j=0; j&lt;6; j++) {
 var cubeVerticesColorBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesColorBuffer);
 gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(generatedColors), gl.STATIC_DRAW);
-</pre>
+```
 
-<h2 id="Definir_el_elemento_arreglo">Definir el elemento arreglo</h2>
+## Definir el elemento arreglo
 
-<p>Una ves que el vértice es generado, nosotros necesitamos contruir el elemento arreglo.</p>
+Una ves que el vértice es generado, nosotros necesitamos contruir el elemento arreglo.
 
-<pre class="brush: js">var cubeVerticesIndexBuffer = gl.createBuffer();
+```js
+var cubeVerticesIndexBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVerticesIndexBuffer);
 
 // Este arrelgo define cada cara como 2 triángulos utilizando
@@ -110,25 +113,26 @@ var cubeVertexIndices = [
 
 gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,
     new Uint16Array(cubeVertexIndices), gl.STATIC_DRAW);
-</pre>
+```
 
-<p>El arreglo <code>cubeVertexIndices</code> define cada cara como un par de triángulos, especificando cada vértice del triángulo como un índice dentro del arreglo de vértices en el cubo. Así el cubo es descrito como una colección de 12 triángulos. </p>
+El arreglo `cubeVertexIndices` define cada cara como un par de triángulos, especificando cada vértice del triángulo como un índice dentro del arreglo de vértices en el cubo. Así el cubo es descrito como una colección de 12 triángulos.
 
-<h2 id="Dibujando_el_cubo">Dibujando el cubo</h2>
+## Dibujando el cubo
 
-<p>Para continuar necesitaremos agregar el código a nuestra función <code>drawScene()</code> esto para poder dibujar utilizando el buffer índice del cubo, agregaremos un nuevo llamado a  {{domxref("WebGLRenderingContext.bindBuffer()", "gl.bindBuffer()")}}  y {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}como se muestra a continuación:</p>
+Para continuar necesitaremos agregar el código a nuestra función `drawScene()` esto para poder dibujar utilizando el buffer índice del cubo, agregaremos un nuevo llamado a {{domxref("WebGLRenderingContext.bindBuffer()", "gl.bindBuffer()")}} y {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}como se muestra a continuación:
 
-<pre class="brush: js">gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVerticesIndexBuffer);
+```js
+gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVerticesIndexBuffer);
 setMatrixUniforms();
 gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
-</pre>
+```
 
-<p>Desde que cada cara de nuestro cubo está compuesto de dos triángulos, tenemos 6 vértices en el cubo, se podría pensar que algunos de ellos son duplicados. Sin embargo, desde que nuestro arreglo índice se encuentra compuesto de enteros simples, esto no es una cantidad excesiva de intercambio de datos para pasar por cada cuadro de la animación.</p>
+Desde que cada cara de nuestro cubo está compuesto de dos triángulos, tenemos 6 vértices en el cubo, se podría pensar que algunos de ellos son duplicados. Sin embargo, desde que nuestro arreglo índice se encuentra compuesto de enteros simples, esto no es una cantidad excesiva de intercambio de datos para pasar por cada cuadro de la animación.
 
-<p>En este punto ahora tenemos un cubo animado rebotando y rotando, cuenta con seis caras coloreadas vívidamente.</p>
+En este punto ahora tenemos un cubo animado rebotando y rotando, cuenta con seis caras coloreadas vívidamente.
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample5/index.html', 670, 510) }}</p>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample5/index.html', 670, 510) }}
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample5">Ver el Código completo</a> | <a href="http://mdn.github.io/webgl-examples/tutorial/sample5/">Abrir esta demostración en una página nueva</a></p>
+[Ver el Código completo](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample5) | [Abrir esta demostración en una página nueva](http://mdn.github.io/webgl-examples/tutorial/sample5/)
 
-<p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}</p>
+{{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

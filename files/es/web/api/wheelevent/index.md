@@ -10,98 +10,59 @@ tags:
   - eventos
 translation_of: Web/API/WheelEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>El interface <strong><code>WheelEvent</code></strong> retrata los eventos que ocurren cuando el usuario mueve la rueda del ratón o de un dispositivo similar.</p>
+El interface **`WheelEvent`** retrata los eventos que ocurren cuando el usuario mueve la rueda del ratón o de un dispositivo similar.
 
-<div class="note">
-<p><strong>Esta es la forma estándar de usar el evento wheel.</strong></p>
+> **Nota:** **Esta es la forma estándar de usar el evento wheel.**
+>
+> Antiguas versiones de navegadores implementaron dos formas no-estándar y no-compatibles-entre-navegadores, los interfaces {{ domxref("MouseWheelEvent") }} y {{domxref("MouseScrollEvent")}}. Utilice este interfaz y evite los dos últimos.
 
-<p>Antiguas versiones de navegadores implementaron dos formas no-estándar y no-compatibles-entre-navegadores, los interfaces {{ domxref("MouseWheelEvent") }} y {{domxref("MouseScrollEvent")}}. Utilice este interfaz y evite los dos últimos.</p>
-</div>
+{{InheritanceDiagram}}
 
-<p>{{InheritanceDiagram}}</p>
+## Constructor
 
-<h2 id="Constructor">Constructor</h2>
+- {{domxref("WheelEvent.WheelEvent", "WheelEvent()")}}
+  - : Crea el objeto `WheelEvent`.
 
-<dl>
- <dt>{{domxref("WheelEvent.WheelEvent", "WheelEvent()")}}</dt>
- <dd>Crea el objeto <code>WheelEvent</code>.</dd>
-</dl>
+## Propiedades
 
-<h2 id="Propiedades">Propiedades</h2>
+_Este interfaz hereda propiedades de estos padres_, {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} y {{domxref("Event")}}.\_\_
 
-<p><em>Este interfaz hereda propiedades de estos padres<em>, {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} y {{domxref("Event")}}.</em></em></p>
+- {{domxref("WheelEvent.deltaX")}} {{readonlyinline}}
+  - : Devuelve un doble (número de doble precisión) que representa la cantidad de desplazamiento horizontal.
+- {{domxref("WheelEvent.deltaY")}} {{readonlyinline}}
+  - : Devuelve un doble que representa la cantidad de desplazamiento vertical.
+- {{domxref("WheelEvent.deltaZ")}} {{readonlyinline}}
+  - : Devuelve un doble que representa la cantidad de desplazamiento del eje-z.
+- {{domxref("WheelEvent.deltaMode")}} {{readonlyinline}}
 
-<dl id="raw_prop">
- <dt>{{domxref("WheelEvent.deltaX")}} {{readonlyinline}}</dt>
- <dd>Devuelve un doble (número de doble precisión) que representa la cantidad de desplazamiento horizontal.</dd>
- <dt>{{domxref("WheelEvent.deltaY")}} {{readonlyinline}}</dt>
- <dd>Devuelve un doble que representa la cantidad de desplazamiento vertical.</dd>
- <dt>{{domxref("WheelEvent.deltaZ")}} {{readonlyinline}}</dt>
- <dd>Devuelve un doble que representa la cantidad de desplazamiento del eje-z.</dd>
- <dt>{{domxref("WheelEvent.deltaMode")}} {{readonlyinline}}</dt>
- <dd>Devuelve un entero largo sin signo que representa la unidad manejada por los valores de cantidad de desplazamiento delta. Los valores permitidos son:
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td class="header">Constant</td>
-    <td class="header">Value</td>
-    <td class="header">Description</td>
-   </tr>
-   <tr>
-    <td><code>DOM_DELTA_PIXEL</code></td>
-    <td><code>0x00</code></td>
-    <td>Los valores delta están especificados en pixeles.</td>
-   </tr>
-   <tr>
-    <td><code>DOM_DELTA_LINE</code></td>
-    <td><code>0x01</code></td>
-    <td>Los valores delta están especificados en líneas.</td>
-   </tr>
-   <tr>
-    <td><code>DOM_DELTA_PAGE</code></td>
-    <td><code>0x02</code></td>
-    <td>Los valores delta están especificados en páginas.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+  - : Devuelve un entero largo sin signo que representa la unidad manejada por los valores de cantidad de desplazamiento delta. Los valores permitidos son:
 
-<h2 id="Métodos">Métodos</h2>
+    | Constant          | Value  | Description                                       |
+    | ----------------- | ------ | ------------------------------------------------- |
+    | `DOM_DELTA_PIXEL` | `0x00` | Los valores delta están especificados en pixeles. |
+    | `DOM_DELTA_LINE`  | `0x01` | Los valores delta están especificados en líneas.  |
+    | `DOM_DELTA_PAGE`  | `0x02` | Los valores delta están especificados en páginas. |
 
-<p><em>Este interfaz no define ningún método, pero hereda métodos de estos padres, {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} y {{domxref("Event")}}.</em></p>
+## Métodos
 
-<h2 id="Especificaciones">Especificaciones</h2>
+_Este interfaz no define ningún método, pero hereda métodos de estos padres, {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} y {{domxref("Event")}}._
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#interface-WheelEvent','WheelEvent')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+## Especificaciones
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+| Especificación                                                                       | Estatus                          | Comentario          |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('DOM3 Events','#interface-WheelEvent','WheelEvent')}} | {{Spec2('DOM3 Events')}} | Definición inicial. |
+
+## Compatibilidad en navegadores
 
 {{Compat("api.WheelEvent")}}
 
-<h2 class="" id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{ event("wheel") }}</li>
- <li>Interfaces reemplazados por este:
-  <ul>
-   <li>Objeto del evento de la rueda del ratón legado de la plataforma Gecko: {{ domxref("MouseScrollEvent") }}</li>
-   <li>Navegadores no-gecko, objeto del evento de la rueda del ratón legado: {{ domxref("MouseWheelEvent") }}</li>
-  </ul>
- </li>
-</ul>
+- {{ event("wheel") }}
+- Interfaces reemplazados por este:
+
+  - Objeto del evento de la rueda del ratón legado de la plataforma Gecko: {{ domxref("MouseScrollEvent") }}
+  - Navegadores no-gecko, objeto del evento de la rueda del ratón legado: {{ domxref("MouseWheelEvent") }}
