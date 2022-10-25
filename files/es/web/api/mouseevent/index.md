@@ -24,11 +24,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 - {{domxref("MouseEvent.altKey")}} {{readonlyinline}}
 
-  - : Returns `true` if the&#x20;
-
-    <kbd>alt</kbd>
-
-    &#x20;key was down when the mouse event was fired.
+  - : Returns `true` if the <kbd>alt</kbd> key was down when the mouse event was fired.
 
 - {{domxref("MouseEvent.button")}} {{readonlyinline}}
   - : The button number that was pressed when the mouse event was fired.
@@ -40,19 +36,11 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : The Y coordinate of the mouse pointer in local (DOM content) coordinates.
 - {{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}
 
-  - : Returns `true` if the&#x20;
-
-    <kbd>control</kbd>
-
-    &#x20;key was down when the mouse event was fired.
+  - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
 
 - {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
 
-  - : Returns `true` if the&#x20;
-
-    <kbd>meta</kbd>
-
-    &#x20;key was down when the mouse event was fired.
+  - : Returns `true` if the <kbd>meta</kbd> key was down when the mouse event was fired.
 
 - {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
   - : The X coordinate of the mouse pointer relative to the position of the last {{event("mousemove")}} event.
@@ -68,11 +56,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : The Y coordinate of the mouse pointer in global (screen) coordinates.
 - {{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}
 
-  - : Returns `true` if the&#x20;
-
-    <kbd>shift</kbd>
-
-    &#x20;key was down when the mouse event was fired.
+  - : Returns `true` if the <kbd>shift</kbd> key was down when the mouse event was fired.
 
 - {{domxref("MouseEvent.which")}} {{non-standard_inline}} {{readonlyinline}}
   - : The button being pressed when the mouse event was fired.

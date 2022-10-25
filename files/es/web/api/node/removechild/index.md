@@ -5,7 +5,7 @@ translation_of: Web/API/Node/removeChild
 ---
 {{APIRef ( "DOM")}}
 
-El método **`Node.removeChild()`**elimina un nodo hijo del DOM y puede devolver el nodo eliminado.
+El método **`Node.removeChild()`** elimina un nodo hijo del DOM y puede devolver el nodo eliminado.
 
 ## Sintaxis
 
@@ -15,9 +15,9 @@ O
 elemento.removeChild(child);
 ```
 
-- `child` ``es el nodo hijo a eliminar del DOM.
-- `elemento`es el nodo padre de `hijo`.(ver nota mas abajo)
-- `antiguoHijo` tiene una referencia al hijo eliminado. ` antiguoHijo === ``child `.
+- `child` es el nodo hijo a eliminar del DOM.
+- `elemento` es el nodo padre de `hijo`.(ver nota mas abajo)
+- `antiguoHijo` tiene una referencia al hijo eliminado. `antiguoHijo === child`.
 
 El hijo(child) eliminado aún existe en memoria pero ya no es parte del DOM. Con la primera forma de sintaxis mostrada, se puede reutilizar el nodo eliminado más tarde en el código, por medio de la referencia al objeto `antiguoHijo`. Sin embargo, en la segunda forma, la referencia a `antiguoHijo` se pierde, y suponiendo que el código no mantenga una referencia a ese objeto en alguna otra parte, inmediatamente será inutilizable e irrecuperable y será [eliminada automáticamente](es/docs/Web/JavaScript/Gestion_de_Memoria)de memoria después de poco tiempo.
 
@@ -27,7 +27,7 @@ Por lo tanto el método removeChild(child) lanza una excepción de 2 casos difer
 
 1\. Si child es un hijo del elemento y por lo tanto existe en el DOM, pero se retiró el método lanza la siguiente excepción:
 
-` ​​``Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node `.
+`Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node`.
 
 2\. Si `child` no existe en el DOM de la página, el método emite la siguiente excepción:
 

@@ -15,7 +15,7 @@ translation_of: Web/API/Performance/timing
 
 > **Advertencia:** Esta propiedad está deprecada en [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Por favor usa {{domxref("Performance.timeOrigin")}} en vez esta..
 
-La propiedad de solo lecutra **`Performance`\*\***`.timing`\*\* de legado devulve un objeto {{domxref("PerformanceTiming")}} que contienen información relacionada con el rendimiento en relación a la latencia.
+La propiedad de solo lecutra **`Performance.timing`** de legado devulve un objeto {{domxref("PerformanceTiming")}} que contienen información relacionada con el rendimiento en relación a la latencia.
 
 Esta propiedad no está disponible en workers.
 

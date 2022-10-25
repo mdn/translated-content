@@ -14,7 +14,7 @@ Devuelve el nombre del nodo actual, en forma de cadena.
 ### Sintaxis
 
 ```
-varstr =node.nodeName;
+var str = node.nodeName;
 ```
 
 `str` es una variable de cadena en la que se almacena el nombre del elemento actual.

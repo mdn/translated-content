@@ -16,7 +16,7 @@ translation_of: Web/API/Performance/navigation
 
 > **Advertencia:** Esta propiedad está deprecada en [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete).
 
-La propiedad de solo lectura **`Performance`\*\***`.navigation`\*\* del legado devuelve un objeto {{domxref("PerformanceNavigation")}} representado el tipo de navegación que ocurre en el contexto de navegación dado, tales como el número de redirecciones necesarias para traer el recurso.
+La propiedad de solo lectura **`Performance.navigation`** del legado devuelve un objeto {{domxref("PerformanceNavigation")}} representado el tipo de navegación que ocurre en el contexto de navegación dado, tales como el número de redirecciones necesarias para traer el recurso.
 
 Esta propiedad no está disponible en workers.
 

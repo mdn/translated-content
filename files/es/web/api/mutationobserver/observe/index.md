@@ -5,7 +5,7 @@ translation_of: Web/API/MutationObserver/observe
 ---
 {{APIRef("DOM WHATWG")}}
 
-El método {{domxref("MutationObserver")}} **`observe()`\*\*** \*\*configura la funcion `MutationObserver` para que inicie la recepción de cambios en el DOM que coincidan con las opciones dadas.
+El método {{domxref("MutationObserver")}} **`observe()`** configura la funcion `MutationObserver` para que inicie la recepción de cambios en el DOM que coincidan con las opciones dadas.
 
 Según la configuración, el _observador_ verá un solo {{domxref("Node")}} del árbol del DOM, o ese nodo y alguno o todos los nodos descendientes.
 

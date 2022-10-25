@@ -12,7 +12,7 @@ translation_of: Web/API/NodeList/forEach
 ---
 {{APIRef("DOM")}}
 
-El método**`forEach()`** de la interfase{{domxref("NodeList")}} llama a la función callback proporcionada como parámetro una vez para cadapar de valores en la lista, en el orden en que se insertaron.
+El método **`forEach()`** de la interfase{{domxref("NodeList")}} llama a la función callback proporcionada como parámetro una vez para cadapar de valores en la lista, en el orden en que se insertaron.
 
 ## Syntax
 
@@ -33,7 +33,7 @@ nodeList.forEach(callback[, thisArg]);
     - _`listObj`_
       - : El objeto NodeList al que se está aplicando el método`forEach()`.
 
-- ` thisArg`` {{Optional_inline}} `
+- `thisArg` {{Optional_inline}}
   - : Valor a ser usado como {{jsxref("this")}} al ejecutar`callback`.
 
 ### Valor Retornado

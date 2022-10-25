@@ -23,7 +23,7 @@ range.setStart(startNode, startOffset);
 
 - _startNode_
   - : El {{ domxref("Node") }} donde {{ domxref("Range") }} debe empezar.
-- _startOffset_``
+- _startOffset_
   - : Un entero mayor o igual a cero representando el offset o desplazamiento de caracteres para el inicio del {{ domxref("Range") }} desde el comienzo de `startNode`.
 
 ## Ejemplo

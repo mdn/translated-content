@@ -33,7 +33,7 @@ _La interfaz `Performance` no hereda ninguna propiedad._
 
 ## Métodos
 
-**La interfaz `Performance` no hereda ningún método**.
+La interfaz `Performance` no hereda ningún método.
 
 - {{domxref("Performance.clearMarks()")}}
   - : Elimina la marca dada del búfer de entrada de rendimiento del navegador.

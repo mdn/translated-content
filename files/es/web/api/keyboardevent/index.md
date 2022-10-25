@@ -22,23 +22,7 @@ _Esta interfaz también hereda métodos de sus padres, {{domxref("UIEvent")}} an
 
 - {{domxref("KeyboardEvent.getModifierState()")}}
 
-  - : Devuelve un {{jsxref("Boolean")}} indicando si una tecla modificadora, como&#x20;
-
-    <kbd>Alt</kbd>
-
-    ,&#x20;
-
-    <kbd>Shift</kbd>
-
-    ,&#x20;
-
-    <kbd>Ctrl</kbd>
-
-    , o&#x20;
-
-    <kbd>Meta</kbd>
-
-    , fue pulsada cuando el evento fue creado.
+  - : Devuelve un {{jsxref("Boolean")}} indicando si una tecla modificadora, como <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, <kbd>Meta</kbd>, fue pulsada cuando el evento fue creado.
 
 - {{domxref("KeyboardEvent.initKeyEvent()")}}{{deprecated_inline}}
   - : Inicializa un objeto `KeyboardEvent`. Este método solo ha sido implementado por Gecko (otros usados {{domxref("KeyboardEvent.initKeyboardEvent()")}}) y nunca más será usado. El modo estándar moderno es usar el constructor {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
@@ -51,19 +35,7 @@ _Esta interfaz también hereda propiedades de sus padres {{domxref("UIEvent")}} 
 
 - {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
 
-  - : Devuelve un {{jsxref("Boolean")}} que será `true` si la tecla&#x20;
-
-    <kbd>Alt</kbd>
-
-    &#x20;(&#x20;
-
-    <kbd>Option</kbd>
-
-    &#x20;or&#x20;
-
-    <kbd>⌥</kbd>
-
-    &#x20;on OS X) fue activada cuando el evento fue generado.
+  - : Devuelve un {{jsxref("Boolean")}} que será `true` si la tecla <kbd>Alt</kbd> (<kbd>Option</kbd> or  <kbd>⌥</kbd> on OS X) fue activada cuando el evento fue generado.
 
 - {{domxref("KeyboardEvent.char")}} {{Non-standard_inline()}}{{Deprecated_inline}}{{Readonlyinline}}
 
@@ -83,11 +55,7 @@ _Esta interfaz también hereda propiedades de sus padres {{domxref("UIEvent")}} 
   - : Returns a {{domxref("DOMString")}} with the code value of the key represented by the event.
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
 
-  - : Returns a {{jsxref("Boolean")}} that is `true` if the&#x20;
-
-    <kbd>Ctrl</kbd>
-
-    &#x20;key was active when the key event was generated.
+  - : Returns a {{jsxref("Boolean")}} that is `true` if the <kbd>Ctrl</kbd> key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
   - : Returns a {{jsxref("Boolean")}} that is `true` if the event is fired between after `compositionstart` and before `compositionend`.
@@ -109,25 +77,13 @@ _Esta interfaz también hereda propiedades de sus padres {{domxref("UIEvent")}} 
   - : Returns an `unsigned long` representing the location of the key on the keyboard or other input device.
 - {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
 
-  - : Returns a {{jsxref("Boolean")}} that is `true` if the&#x20;
-
-    <kbd>Meta</kbd>
-
-    &#x20;(or&#x20;
-
-    <kbd>Command</kbd>
-
-    &#x20;on OS X) key was active when the key event was generated.
+  - : Returns a {{jsxref("Boolean")}} that is `true` if the <kbd>Meta</kbd> (or <kbd>Command</kbd> on OS X) key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
   - : Returns a {{jsxref("Boolean")}} that is `true` if the key is being held down such that it is automatically repeating.
 - {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
 
-  - : Returns a {{jsxref("Boolean")}} that is `true` if the&#x20;
-
-    <kbd>Shift</kbd>
-
-    &#x20;key was active when the key event was generated.
+  - : Returns a {{jsxref("Boolean")}} that is `true` if the <kbd>Shift</kbd> key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.which")}} {{deprecated_inline}}{{Readonlyinline}}
 

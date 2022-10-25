@@ -7,7 +7,7 @@ translation_of: Web/API/MediaStreamTrack
 
 ## Sumario
 
-La interfaz **`MediaStream`\*\*** \*\*representa un flujo de contenido de los medios. Un flujo consiste en gran cantidad de _tracks_, como pistas de audio o video.
+La interfaz **`MediaStream`** representa un flujo de contenido de los medios. Un flujo consiste en gran cantidad de _tracks_, como pistas de audio o video.
 
 ## Propiedades
 
