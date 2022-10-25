@@ -30,7 +30,7 @@ getCurrentPosition(success, error, options)
 - `options` {{optional_inline}}
   - : Un objeto opcional que puede incluir las siguientes propiedades:
     - `maximumAge`
-      - : Un valor positivo de tipo `long` que indica el tiempo máximo en milisegundos que una posible ubicación almacenada en caché puede ser devuelta. Si se establece en 0, eso significa que el dispositivo no podrá usar la ubicación almacenada en caché y debe intentar recuperar la ubicación real y actual. Si se establece como [`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity) el dispositivo deberá regresar la ubicación almacenada en caché independientemente de su antigüedad. Predeterminado: 0.
+      - : Un valor positivo de tipo `long` que indica el tiempo máximo en milisegundos que una posible ubicación almacenada en caché puede ser devuelta. Si se establece en 0, eso significa que el dispositivo no podrá usar la ubicación almacenada en caché y debe intentar recuperar la ubicación real y actual. Si se establece como [`Infinity`](/es/docs/Web/JavaScript/Reference/Global_Objects/Infinity) el dispositivo deberá regresar la ubicación almacenada en caché independientemente de su antigüedad. Predeterminado: 0.
     - `timeout`
       - : Un valor positivo de tipo `long` que representa el tiempo máximo en milisegundos en que el dispositivo tiene permitido recuperar la ubicación. El valor predeterminado es [`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity), esto significa que `getCurrentPosition()` no será ejecutada hasta que la ubicación se encuentre disponible.
     - `enableHighAccuracy`
