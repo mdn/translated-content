@@ -33,37 +33,18 @@ translation_of: Web/API/IDBCursor/continue
 
 <p>Este método puede plantear un{{domxref("DOMException")}} con una {{domxref("DOMError")}} de uno de los siguientes tipos:</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Excepción</th>
-   <th scope="col">Descripción</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TransactionInactiveError</code></td>
-   <td>Esta transacción en el Cursor IDB está inactiva.</td>
-  </tr>
-  <tr>
-   <td><code>DataError</code></td>
-   <td>
-    <p>El parámetro de una tecla podría tener una de las siguientes condiciones:</p>
+<dl>
+  <dt><code>TransactionInactiveError</code></dt><dd>Esta transacción en el Cursor IDB está inactiva.</dd><dt><code>DataError</code></dt><dd>
+  <p>El parámetro de una tecla podría tener una de las siguientes condiciones:</p>
 
-    <ul>
-     <li>La tecla no es una tecla valida.</li>
-     <li>La tecla está más atrás o en el mismo sitio que la posición del cursor y además la dirección del cursor es la siguiente o la única siguiente.</li>
-     <li>La tecla está más adelante o en el mismo sitio que la posición del cursor y además la dirección del cursor es previa o la única previa.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>El cursor está siendo reiterado o se ha reiterado mas allá de su final.<br>
-     </td>
-  </tr>
- </tbody>
-</table>
+  <ul>
+   <li>La tecla no es una tecla valida.</li>
+   <li>La tecla está más atrás o en el mismo sitio que la posición del cursor y además la dirección del cursor es la siguiente o la única siguiente.</li>
+   <li>La tecla está más adelante o en el mismo sitio que la posición del cursor y además la dirección del cursor es previa o la única previa.</li>
+  </ul>
+ </dd><dt><code>InvalidStateError</code></dt><dd>El cursor está siendo reiterado o se ha reiterado mas allá de su final.<br>
+   </dd>
+</dl>
 
 <h2 id="Ejemplo">Ejemplo</h2>
 

@@ -100,18 +100,15 @@ var objectStore = transaction.objectStore("toDoList");
 <dl>
  <dt>storeNames</dt>
  <dd>Son los nombres de los almacenes de objetos e índices que están en el ámbito de la nueva transacción, declarados como un arreglo de cadenas de texto. Especifíca solamente aquellos a los que necesitas acceso.<br>
- Si necesitas acceder a un solo almacén, puedes especificar su nombre como una cadena. Por tanto las siguientes líneas son equivalentes:</dd>
- <dd>
+   Si necesitas acceder a un solo almacén, puedes especificar su nombre como una cadena. Por tanto las siguientes líneas son equivalentes:<br><br>
  <pre><code class="brush:js;">var transaction = db.transaction(['my-store-name']);
-var transaction = db.transaction('my-store-name');</code></pre>
- </dd>
- <dd>Si necesitas acceder a todos los almacenes de objetos en la base de datos, puedes usar la propiedad {{domxref("IDBDatabase.objectStoreNames")}}:
- <pre><code class="brush:js;">var transaction = db.transaction(db.objectStoreNames);</code></pre>
- </dd>
- <dd>Pasar un arreglo vació como parámetro  arrojará una excepción.</dd>
+var transaction = db.transaction('my-store-name');</code></pre><br><br>
+ Si necesitas acceder a todos los almacenes de objetos en la base de datos, puedes usar la propiedad {{domxref("IDBDatabase.objectStoreNames")}}:
+ <pre><code class="brush:js;">var transaction = db.transaction(db.objectStoreNames);</code></pre><br><br>
+ Pasar un arreglo vació como parámetro  arrojará una excepción.</dd>
  <dt>mode</dt>
- <dd><em>Opcional</em>. Los tipos de acceso que pueden desempeñarse en la transacción. Las transacciones son abiertas en uno de tres modos: <code>readonly <em>[sólo lectura], </em>readwrite <em>[lectura/escritura],</em></code> y <code>readwriteflush <em>[descarga de lectura/escritura]</em></code> (no-estándar, sólo para Firefox). El modo <code>versionchange <em>[cambio de versión] </em></code>no puede ser especificado aquí. Si no provees un parámetro, el modo predeterminado será <code>readonly <em>[sólo lectura]</em></code>. Para evitar ralentizar las cosas, no abras una transacción <code>readwrite <em>[lectura/escritura]</em></code> a menos que realmente necesites escribir en la base de datos.</dd>
- <dd>Si necesitas abrir un almacén de objetos en modo <code>readwrite</code> para cambiar los datos, usa lo siguiente:
+ <dd><em>Opcional</em>. Los tipos de acceso que pueden desempeñarse en la transacción. Las transacciones son abiertas en uno de tres modos: <code>readonly <em>[sólo lectura], </em>readwrite <em>[lectura/escritura],</em></code> y <code>readwriteflush <em>[descarga de lectura/escritura]</em></code> (no-estándar, sólo para Firefox). El modo <code>versionchange <em>[cambio de versión] </em></code>no puede ser especificado aquí. Si no provees un parámetro, el modo predeterminado será <code>readonly <em>[sólo lectura]</em></code>. Para evitar ralentizar las cosas, no abras una transacción <code>readwrite <em>[lectura/escritura]</em></code> a menos que realmente necesites escribir en la base de datos.<br><br>
+ Si necesitas abrir un almacén de objetos en modo <code>readwrite</code> para cambiar los datos, usa lo siguiente:
  <pre class="brush:js;">var transaction = db.transaction('my-store-name', "readwrite");</pre>
 
  <p>Desde Firefox 40, las transacciones de IndexedDB tienen garantías de durabilidad relajadas para aumentar el rendimiento (ver {{Bug("1112702")}}), lo cual es el mismo comportamiento de otros navegadores que soportan IndexedDB. Es decir, anteriormente en una transacción <code>readwrite</code> el evento {{domxref("IDBTransaction.oncomplete")}} era invocado sólo cuando se garantizaba que todos los datos habían sido vaciados al disco duro. En Firefox 40+ el evento <code>complete</code> es accionado después de indicársele al Sistema Operativo que escriba los datos al disco pero esta confirmación podría suceder poco antes de que los datos hayan sido verdaderamente escritos en él. Si bien dicho evento puede entonces ser entregado un poco antes de tiempo, de cualquier modo, existe una pequeña probabilidad de que la entera transacción se pierda si el SO se bloquea o si ha ocurrido una pérdida de energía antes de que los datos efectivamente se descarguen al disco duro. Como esas catastróficas circunstancias son más bien raras, la mayoría de los consumidores no deberían preocuparse demasiado.</p>

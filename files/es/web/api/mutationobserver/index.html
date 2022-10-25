@@ -141,99 +141,48 @@ translation_of: Web/API/MutationObserver
 
 <p><code>MutationRecord</code> es el objeto que será pasado a la funcion "callback" del observador. Tiene las siguientes propiedades:</p>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Propiedad</td>
-   <td class="header">Tipo</td>
-   <td class="header">Descripción</td>
-  </tr>
-  <tr>
-   <td><code>type</code></td>
-   <td><code>String</code></td>
-   <td>
-    <p>Devuelve:</p>
+<dl>
+  <dt><code>type</code>: <code>String</code></dt><dd>
+  <p>Devuelve:</p>
 
-    <ul>
-     <li><code>attributes </code>si el cambio fué en un atributo</li>
-     <li><code>characterData</code> si se produjo en un nodo.</li>
-     <li><code>childList</code> si se produjo en los nodos del árbol.</li>
-    </ul>
+  <ul>
+   <li><code>attributes </code>si el cambio fué en un atributo</li>
+   <li><code>characterData</code> si se produjo en un nodo.</li>
+   <li><code>childList</code> si se produjo en los nodos del árbol.</li>
+  </ul>
 
-    <dl>
-    </dl>
-   </td>
-  </tr>
-  <tr>
-   <td><code>target</code></td>
-   <td><code>{{domxref("Node")}}</code></td>
-   <td>
-    <p>Devuelve el<strong> nodo</strong> afectado por el cambio, dependiendo del <code>type</code>:</p>
+  <dl>
+  </dl>
+ </dd><dt><code>target</code>: <a href="/es/docs/Web/API/Node"><code>Node</code></a></dt><dd>
+  <p>Devuelve el<strong> nodo</strong> afectado por el cambio, dependiendo del <code>type</code>:</p>
 
-    <ul>
-     <li>Para <code>attributes</code>, el elemento cuyos atributos han cambiado.</li>
-     <li>Para <code>characterData</code>, el nodo <code>CharacterData</code>.</li>
-     <li>Para <code>childList</code>, El nodo padre cuyos hijos han cambiado.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td><code>addedNodes</code></td>
-   <td><code>{{domxref("NodeList")}}</code></td>
-   <td>
-    <p>Devuelve los nodos añadidos. Si no tiene nodos añadidos devuelve un <span style="font-family: courier new,andale mono,monospace;">NodeList</span> vacio.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>removedNodes</code></td>
-   <td><code>{{domxref("NodeList")}}</code></td>
-   <td>
-    <p>Devuelve los nodos eliminados. Si no tiene nodos eliminados devuelve un <span style="font-family: courier new,andale mono,monospace;">NodeList</span> vacio.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>previousSibling</code></td>
-   <td><code>{{domxref("Node")}}</code></td>
-   <td>
-    <p>Devuelve el nodo hermano <strong>anterior</strong> añadido o eliminado, o el valor <code>null</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>nextSibling</code></td>
-   <td><code>{{domxref("Node")}}</code></td>
-   <td>
-    <p>Devuelve el <strong>siguiente</strong> nodo hermano añadido o eliminado, o el valor <code>null</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>attributeName</code></td>
-   <td><code>String</code></td>
-   <td>
-    <p>Devuelve el nombre local del atributo cambiado, o el valor <code>null</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>attributeNamespace</code></td>
-   <td><code>String</code></td>
-   <td>
-    <p>Devuelve espacio de nombres (namespace) del atributo cambiado, o el valor <code>null</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>oldValue</code></td>
-   <td><code>String</code></td>
-   <td>
-    <p>El valor devuelto depende del <code>type</code>:</p>
+  <ul>
+   <li>Para <code>attributes</code>, el elemento cuyos atributos han cambiado.</li>
+   <li>Para <code>characterData</code>, el nodo <code>CharacterData</code>.</li>
+   <li>Para <code>childList</code>, El nodo padre cuyos hijos han cambiado.</li>
+  </ul>
+ </dd><dt><code>addedNodes</code>: <a href="/es/docs/Web/API/NodeList"><code>NodeList</code></a></dt><dd>
+  <p>Devuelve los nodos añadidos. Si no tiene nodos añadidos devuelve un <span style="font-family: courier new,andale mono,monospace;">NodeList</span> vacio.</p>
+ </dd><dt><code>removedNodes</code>: <a href="/es/docs/Web/API/NodeList"><code>NodeList</code></a></dt><dd>
+  <p>Devuelve los nodos eliminados. Si no tiene nodos eliminados devuelve un <span style="font-family: courier new,andale mono,monospace;">NodeList</span> vacio.</p>
+ </dd><dt><code>previousSibling</code>: <a href="/es/docs/Web/API/Node"><code>Node</code></a></dt><dd>
+  <p>Devuelve el nodo hermano <strong>anterior</strong> añadido o eliminado, o el valor <code>null</code>.</p>
+ </dd><dt><code>nextSibling</code>: <a href="/es/docs/Web/API/Node"><code>Node</code></a></dt><dd>
+  <p>Devuelve el <strong>siguiente</strong> nodo hermano añadido o eliminado, o el valor <code>null</code>.</p>
+ </dd><dt><code>attributeName</code>: <code>String</code></dt><dd>
+  <p>Devuelve el nombre local del atributo cambiado, o el valor <code>null</code>.</p>
+ </dd><dt><code>attributeNamespace</code>: <code>String</code></dt><dd>
+  <p>Devuelve espacio de nombres (namespace) del atributo cambiado, o el valor <code>null</code>.</p>
+ </dd><dt><code>oldValue</code>: <code>String</code></dt><dd>
+  <p>El valor devuelto depende del <code>type</code>:</p>
 
-    <ul>
-     <li>Para <code>attributes</code>,el valor anterior del atributo.</li>
-     <li>Para <code>characterData</code>,los datos antes del cambio</li>
-     <li>Para <code>childList</code>,devuelve <code>null</code>.</li>
-    </ul>
-   </td>
-  </tr>
- </tbody>
-</table>
+  <ul>
+   <li>Para <code>attributes</code>,el valor anterior del atributo.</li>
+   <li>Para <code>characterData</code>,los datos antes del cambio</li>
+   <li>Para <code>childList</code>,devuelve <code>null</code>.</li>
+  </ul>
+ </dd>
+</dl>
 
 <h2 id="Example_usage" name="Example_usage">Ejemplo de uso</h2>
 

@@ -43,136 +43,38 @@ original_slug: Web/API/Media_Streams_API
 <h2 id="Pista_de_MediaStream">Pista de MediaStream</h2>
 <p>Una <em>MediaStreamTrack </em>puede ser de dos tipos, de audio o video, y representa el origen del medio, como una cámara.</p>
 <h3 id="Atributos">Atributos</h3>
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Atributo</th>
-      <th scope="col">Tipo</th>
-      <th scope="col">Descripción</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>enabled</td>
-      <td>Boolean </td>
-      <td>True si la pista sigue asociada a su fuente.</td>
-    </tr>
-    <tr>
-      <td>id</td>
-      <td>DOMString, read-only</td>
-      <td>Un <em>globally unique identifier </em>(GUID) que describe la pista de medios.</td>
-    </tr>
-    <tr>
-      <td>kind</td>
-      <td>DOMString, read-only</td>
-      <td>El <strong>audio</strong> o <strong>video</strong> para la pista de origen.</td>
-    </tr>
-    <tr>
-      <td>label</td>
-      <td>DOMString, read-only</td>
-      <td>Una cadena de tipo usuario-asignada que identifica la pista de origen, como en "internal microphone." </td>
-    </tr>
-    <tr>
-      <td>onended</td>
-      <td>EventHandler</td>
-      <td>Maneja el evento finalizado cuando se lo activa en el objeto MediaStreamTrack.</td>
-    </tr>
-    <tr>
-      <td>onmute </td>
-      <td>EventHandler</td>
-      <td>Maneja el evento mudo del objeto MediaStreamTrack. </td>
-    </tr>
-    <tr>
-      <td>onoverconstrained</td>
-      <td>EventHandler</td>
-      <td>Maneja el evento superrestricto cuando se lo activa en el objeto MediaStreamTrack.</td>
-    </tr>
-    <tr>
-      <td>onstarted</td>
-      <td>EventHandler</td>
-      <td>Maneja el evento iniciado cuando se lo activa en el objeto MediaStreamTrack.</td>
-    </tr>
-    <tr>
-      <td>onunmute </td>
-      <td>EventHandler</td>
-      <td>Manjea el evento sin enmudecer cuando se lo activa en el objeto MediaStreamTrack.</td>
-    </tr>
-    <tr>
-      <td>readyState</td>
-      <td>unsigned short, read-only</td>
-      <td>
-        <p>Valores para la pista lista:</p>
-        <ul>
-          <li>live - la pista está activa; la salida se puede activar <em>on</em> y <em>off</em> con el atributo habilitado.</li>
-          <li>muted - el origen del medio subyacente de la pista no puede proveer temporalmente datos en tiempo real.</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>sourceId</td>
-      <td>DOMString, read-only</td>
-      <td>La identidad de este origen que es único para esta aplicación y persistente. Se recomienda una GUID pero no es obligatoria.</td>
-    </tr>
-    <tr>
-      <td>sourceType</td>
-      <td>SourceTypeEnum, read-only</td>
-      <td>Contiene el tipo de información del origen, si es que existe.</td>
-    </tr>
-  </tbody>
-</table>
+
+<dl>
+  <dt><code>enabled</code>: Boolean </dt><dd>True si la pista sigue asociada a su fuente.</dd><dt><code>id</code>: DOMString, read-only</dt><dd>Un <em>globally unique identifier </em>(GUID) que describe la pista de medios.</dd><dt><code>kind</code>: DOMString, read-only</dt><dd>El <strong>audio</strong> o <strong>video</strong> para la pista de origen.</dd><dt><code>label</code>: DOMString, read-only</dt><dd>Una cadena de tipo usuario-asignada que identifica la pista de origen, como en "internal microphone." </dd><dt><code>onended</code>: EventHandler</dt><dd>Maneja el evento finalizado cuando se lo activa en el objeto MediaStreamTrack.</dd><dt><code>onmute </code>: EventHandler</dt><dd>Maneja el evento mudo del objeto MediaStreamTrack. </dd><dt><code>onoverconstrained</code>: EventHandler</dt><dd>Maneja el evento superrestricto cuando se lo activa en el objeto MediaStreamTrack.</dd><dt><code>onstarted</code>: EventHandler</dt><dd>Maneja el evento iniciado cuando se lo activa en el objeto MediaStreamTrack.</dd><dt><code>onunmute </code>: EventHandler</dt><dd>Manjea el evento sin enmudecer cuando se lo activa en el objeto MediaStreamTrack.</dd><dt><code>readyState</code>: unsigned short, read-only</dt><dd>
+  <p>Valores para la pista lista:</p>
+  <ul>
+    <li>live - la pista está activa; la salida se puede activar <em>on</em> y <em>off</em> con el atributo habilitado.</li>
+    <li>muted - el origen del medio subyacente de la pista no puede proveer temporalmente datos en tiempo real.</li>
+  </ul>
+</dd><dt><code>sourceId</code>: DOMString, read-only</dt><dd>La identidad de este origen que es único para esta aplicación y persistente. Se recomienda una GUID pero no es obligatoria.</dd><dt><code>sourceType</code>: SourceTypeEnum, read-only</dt><dd>Contiene el tipo de información del origen, si es que existe.</dd>
+</dl>
+
 <h3 id="Eventos">Eventos</h3>
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Evento</th>
-      <th scope="col">Interfaz</th>
-      <th scope="col">Descripción </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>started</td>
-      <td>Event</td>
-      <td>El objeto MediaStreamTrack no es más "new" en el readyState.</td>
-    </tr>
-    <tr>
-      <td>muted</td>
-      <td>Event</td>
-      <td>El origen del objeto MediaStreamTrack no puede proveer datos temporalmente.</td>
-    </tr>
-    <tr>
-      <td>unmuted </td>
-      <td>Event</td>
-      <td>El origen del objeto MediaStreamTrack a recomenzado a proveer datos</td>
-    </tr>
-    <tr>
-      <td>overconstrained</td>
-      <td>Event</td>
-      <td>El origen del objeto MediaStreamTrack no puede ser confugurado para que encaje en las restricciones impuestas por la pista. Esto podría ocurrir con la altura en el caso de un video, entre otras posibilidades.</td>
-    </tr>
-    <tr>
-      <td>ended</td>
-      <td>Event</td>
-      <td>
-        <p>El origen del objeto MediaStreamTrack no proveerá datos; puede ocurrir por lo siguiente:</p>
-        <ul>
-          <li>el usuario a deshabilitado los permisos de la aplicación</li>
-          <li>el dispositivo de origen está desconectado</li>
-          <li>el <em>peer</em> remoto no transmite datos</li>
-          <li>se llamó el método stop()</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+<dl>
+  <dt><code>started</code>: Event</dt><dd>El objeto MediaStreamTrack no es más "new" en el readyState.</dd><dt><code>muted</code>: Event</dt><dd>El origen del objeto MediaStreamTrack no puede proveer datos temporalmente.</dd><dt><code>unmuted </code>: Event</dt><dd>El origen del objeto MediaStreamTrack a recomenzado a proveer datos</dd><dt><code>overconstrained</code>: Event</dt><dd>El origen del objeto MediaStreamTrack no puede ser confugurado para que encaje en las restricciones impuestas por la pista. Esto podría ocurrir con la altura en el caso de un video, entre otras posibilidades.</dd><dt><code>ended</code>: Event</dt><dd>
+  <p>El origen del objeto MediaStreamTrack no proveerá datos; puede ocurrir por lo siguiente:</p>
+  <ul>
+    <li>el usuario a deshabilitado los permisos de la aplicación</li>
+    <li>el dispositivo de origen está desconectado</li>
+    <li>el <em>peer</em> remoto no transmite datos</li>
+    <li>se llamó el método stop()</li>
+  </ul>
+</dd>
+</dl>
+
 <h3 id="appendConstraint()">appendConstraint()</h3>
 <p>Agrega la restricción al final de la lista. Esto sólo es un método para añadir restricciones optativas.</p>
 <dl>
   <dt>
     Parámetros</dt>
   <dd>
-    constraintName <strong>DOMString</strong>, required.</dd>
-  <dd>
+    constraintName <strong>DOMString</strong>, required.<br><br>
     constraintValue <strong>Primitive (DOMString, float, etc.) </strong>or<strong> MinMaxConstraint</strong>, required.</dd>
   <dt>
     Devuelve</dt>
@@ -211,7 +113,7 @@ original_slug: Web/API/Media_Streams_API
   <dd>
     <strong>MediaTrackConstraints</strong> or <strong>null</strong></dd>
   <dt>
-    <span id="cke_bm_186C" class="hidden"> </span>Excepciones</dt>
+    <span id="cke_bm_186C" class=""> </span>Excepciones</dt>
   <dd>
     None.</dd>
 </dl>
@@ -226,8 +128,7 @@ original_slug: Web/API/Media_Streams_API
   <dt>
     Parámetros</dt>
   <dd>
-    constraintName <strong>DOMString</strong>, required.</dd>
-  <dd>
+    constraintName <strong>DOMString</strong>, required.<br><br>
     mandatory <strong>boolean</strong>, optional, default false.</dd>
   <dt>
     Devuelve</dt>
@@ -321,7 +222,7 @@ original_slug: Web/API/Media_Streams_API
   <dd>
     INVALID_STATE_ERR if the stream is finished (all tracks have ended).</dd>
 </dl>
-<h3 id="item()">item()<span id="cke_bm_369C" class="hidden"> </span></h3>
+<h3 id="item()">item()<span id="cke_bm_369C" class=""> </span></h3>
 <p>Devuelve la MediaStreamTrack al valor de índice (index) especificado.</p>
 <dl>
   <dt>

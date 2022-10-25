@@ -35,9 +35,9 @@ translation_of: Web/API/IDBCursor
 
 <dl>
  <dt>{{domxref("IDBCursor.delete()")}}</dt>
- <dd>Devuelve un objeto {{domxref("IDBRequest")}} y, en un hilo separado, elimina el registro en la posición del cursor, sin cambiar la posición del cursor. Esto se puede utilizar para borrar registros específicos.</dd>
- <dd>{{domxref("IDBCursor.update()")}}</dd>
- <dd>Devuelve un objeto {{domxref("IDBRequest")}} y, en un hilo separado, actualiza el valor en la posición actual del cursor en el almacén de objetos. Esto se puede utilizar para actualizar registros específicos.</dd>
+ <dd>Devuelve un objeto {{domxref("IDBRequest")}} y, en un hilo separado, elimina el registro en la posición del cursor, sin cambiar la posición del cursor. Esto se puede utilizar para borrar registros específicos.<br><br>
+ {{domxref("IDBCursor.update()")}}<br><br>
+ Devuelve un objeto {{domxref("IDBRequest")}} y, en un hilo separado, actualiza el valor en la posición actual del cursor en el almacén de objetos. Esto se puede utilizar para actualizar registros específicos.</dd>
 </dl>
 
 <h2 id="Propiedades">Propiedades</h2>
@@ -46,11 +46,10 @@ translation_of: Web/API/IDBCursor
  <dt>{{domxref("IDBCursor.source")}} {{readonlyInline}}</dt>
  <dd>Devuelve {{domxref("IDBObjectStore")}} o {{domxref("IDBIndex")}}} que el cursor está iterando. Esta función nunca devuelve nulo o lanza una excepción, incluso si el cursor está siendo iterado, ha iterado más allá de su final, o su transacción no está activa.</dd>
  <dt>{{domxref("IDBCursor.direction")}} {{readonlyInline}}</dt>
- <dd></dd>
  <dd>Devuelve la dirección de desplazamiento del cursor. Ver <a href="#const_next">Constants</a> para valores posibles.</dd>
- <dd>{{domxref("IDBCursor.key")}} {{readonlyInline}}</dd>
+ <dt>{{domxref("IDBCursor.key")}} {{readonlyInline}}</dt>
  <dd>Devuelve la <code>key</code> del registro en la posición del cursor. Si el cursor está fuera de su rango, se fija en <code>undefined</code>. La <code>key</code> del cursor puede ser de cualquier tipo de datos.</dd>
- <dd>{{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}</dd>
+ <dt>{{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}</dt>
  <dd>Devuelve la <code>key</code> primaria efectiva actual del cursor. Si el cursor está siendo iterado o ha iterado fuera de su rango, se fija en <code>undefined</code>. La <code>key</code> principal del cursor puede ser cualquier tipo de datos.</dd>
 </dl>
 

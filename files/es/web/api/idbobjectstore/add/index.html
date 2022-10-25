@@ -23,44 +23,19 @@ translation_of: Web/API/IDBObjectStore/add
 <p>Un objeto <span style="line-height: 1.5;">{{domxref("IDBRequest")}} en el que los eventos subsecuentes relacionados a esta operación son lanzados.</span></p>
 <h3 id="Excepciones">Excepciones</h3>
 <p>Este método puede generar un <span style="line-height: 1.5;">{{domxref("DOMException")}}</span> con un <span style="line-height: 1.5;">{{domxref("DOMError")}}</span> de uno de los siguiente tipos:</p>
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Excepción</th>
-   <th scope="col">Descripción</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>ReadOnlyError</code></td>
-   <td>La transacción asociada con esta operación está en un <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants" title="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">modo</a> de sólo lectura.</td>
-  </tr>
-  <tr>
-   <td><code>TransactionInactiveError</code></td>
-   <td>Esta transacción de {{domxref("IDBObjectStore")}}'s está inactiva.</td>
-  </tr>
-  <tr>
-   <td><code><span style="line-height: normal;">DataError</span></code></td>
-   <td>
-    <p>Cualquiera de los siguientes condiciones aplica:</p>
-    <ul>
-     <li>El almacén de objetos usa llaves en línea o tiene un generador de llaves, y una argumento llave fue proporcionado.</li>
-     <li>El almacén de objetos usa llaves fuera de línea y no tiene un generador de llaves, y un argumento llave fue proporcionado.</li>
-     <li>El almacén de objetos usa llaves en línea pero no un generador de llaves, y la ruta de la llave del almacén de objetos no da una llave válida.</li>
-     <li>El argumento llave fue proporcionado pero no contiene una llave válida.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>El {{domxref("IDBObjectStore")}} ha sido borrado o removido.</td>
-  </tr>
-  <tr>
-   <td><code>DataCloneError</code></td>
-   <td>Los datos siendo almacenados no pueden ser clonados por el algoritmo de clonado estructurado interno.</td>
-  </tr>
- </tbody>
-</table>
+
+<dl>
+  <dt><code>ReadOnlyError</code></dt><dd>La transacción asociada con esta operación está en un <a href="/en-US/docs/Web/API/IDBTransaction#mode_constants" title="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">modo</a> de sólo lectura.</dd><dt><code>TransactionInactiveError</code></dt><dd>Esta transacción de <a href="/es/docs/Web/API/IDBObjectStore"><code>IDBObjectStore</code></a>'s está inactiva.</dd><dt><code><span style="line-height: normal;">DataError</span></code></dt><dd>
+  <p>Cualquiera de los siguientes condiciones aplica:</p>
+  <ul>
+   <li>El almacén de objetos usa llaves en línea o tiene un generador de llaves, y una argumento llave fue proporcionado.</li>
+   <li>El almacén de objetos usa llaves fuera de línea y no tiene un generador de llaves, y un argumento llave fue proporcionado.</li>
+   <li>El almacén de objetos usa llaves en línea pero no un generador de llaves, y la ruta de la llave del almacén de objetos no da una llave válida.</li>
+   <li>El argumento llave fue proporcionado pero no contiene una llave válida.</li>
+  </ul>
+ </dd><dt><code>InvalidStateError</code></dt><dd>El <a href="/es/docs/Web/API/IDBObjectStore"><code>IDBObjectStore</code></a> ha sido borrado o removido.</dd><dt><code>DataCloneError</code></dt><dd>Los datos siendo almacenados no pueden ser clonados por el algoritmo de clonado estructurado interno.</dd>
+</dl>
+
 <h2 id="Ejemplo">Ejemplo</h2>
 <p>En el siguiente código, abrimos una transacción read/write en nuestra base de datos y agregado algunos datos al almacén de datos usando <code>add()</code>. También ten en cuenta que las funciones adjuntas a los manejadores de eventos de la transacción para informar en la salida de la apertura de transacciones en el evento de éxito o falla. Para un ejemplo completo funcionando, mira nuestra aplicación <a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> (</span><a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">ver ejemplo</a><span style="line-height: 1.5;">)</span>.</p>
 <pre class="brush: js" style="font-size: 14px;">// Abrimos nuestra base de datos
