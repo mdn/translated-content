@@ -194,7 +194,7 @@ x = y; // x ahora contiene el mismo valor de y... 4
 
 Pero hay algunos tipos más complejos, que proporcionan atajos útiles para mantener tu código más ordenado y más eficiente. Los más comunes se enumeran a continuación.:
 
-| Operador | Nombre                    | Propósito                                                                                               | \_Ejemplo         | \_\_Atajo_de\_\_     |
+| Operador | Nombre                    | Propósito                                                                                               | Ejemplo         | Atajo de     |
 | -------- | ------------------------- | ------------------------------------------------------------------------------------------------------- | ----------------- | -------------------- |
 | `+=`     | Adición asignación        | Suma el valor de la derecha al valor de la variable de la izquierda y returna el nuevo valor            | `x = 3; x += 4;`  | `x = 3; x = x + 4;`  |
 | `-=`     | Resta asignación          | Resta el valor de la derecha, del valor de la variable de la izquierda y retorna el nuevo valor.        | `x = 6; x -= 3;`  | `x = 6; x = x - 3;`  |
