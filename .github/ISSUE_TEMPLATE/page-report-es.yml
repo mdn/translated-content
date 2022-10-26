@@ -59,4 +59,4 @@ body:
     id: metadata
     attributes:
       label: MDN metadata
-      description: Se establece automáticamente. No la modifique.
+      description: Se establece automáticamente. No modificar.
