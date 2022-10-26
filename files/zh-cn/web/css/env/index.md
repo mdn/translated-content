@@ -60,7 +60,7 @@ env(safe-area-inset-left, 1.4rem);
 ```html
 <p>
   If the <code>env()</code> function is supported in your browser,
-  this paragraph’s text will have 50px of padding between it and
+  this paragraph's text will have 50px of padding between it and
   the left border — but not the top, right and bottom.
   This is because the accompanying CSS is the equivalent of
   <code>padding: 0 0 0 50px</code>, because, unlike other CSS

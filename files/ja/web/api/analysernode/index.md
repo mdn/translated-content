@@ -44,7 +44,7 @@ slug: Web/API/AnalyserNode
 
 ## Properties
 
-_以下は、\_\_{{domxref("AudioNode")}}からプロパティを継承する_.
+_以下は、{{domxref("AudioNode")}}からプロパティを継承する_.
 
 - {{domxref("AnalyserNode.fftSize")}}
   - : 符号なしの long 型の値で FFT（[高速フーリエ変換](http://en.wikipedia.org/wiki/Fast_Fourier_transform)）において周波数領域を決定するために使われているサイズを表している。

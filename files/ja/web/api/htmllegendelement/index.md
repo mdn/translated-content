@@ -1,41 +1,38 @@
 ---
 title: HTMLLegendElement
 slug: Web/API/HTMLLegendElement
+l10n:
+  sourceCommit: 066257cb0d23e29e269703450e4b1216a65e3b26
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLLegendElement`** は、{{HTMLElement("legend")}} 要素のプロパティにアクセスできるようにするインターフェイスです。 {{domxref("HTMLElement")}} インターフェイスからプロパティとメソッドを継承します。
+**`HTMLLegendElement`** は、{{HTMLElement("legend")}} 要素のプロパティにアクセスできるようにするインターフェイスです。 {{domxref("HTMLElement")}} インターフェイスからプロパティとメソッドを継承しています。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## プロパティ
 
-_親の {{domxref("HTMLElement")}} からプロパティを継承します。_
+_親の {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
-| 名前                             | 説明                                                                                                                                                                                      | 型                                       |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| `form` {{readonlyInline}}  | この凡例（legend）が属するフォーム。 凡例に親として `fieldset` 要素がある場合、この属性は親の `fieldset` 要素の **`form`** 属性と同じ値を返します。 それ以外の場合は、`null` を返します。 | {{domxref("HTMLFormElement")}} |
-| `accessKey`                      | 要素へのアクセスを与える 1 文字のアクセスキー。                                                                                                                                           | {{domxref("DOMString")}}         |
-| `align` {{obsolete_inline}} | フォームのセットに対する相対的な配置。                                                                                                                                                    | {{domxref("DOMString")}}         |
+- {{domxref("HTMLLegendElement.form")}} {{ReadOnlyInline}}
+  - : この凡例 (legend) が所属するフォームフォームを表す {{domxref("HTMLFormElement")}} です。この凡例の親が fieldset 要素であれば、この属性は親 fieldset 要素の **form** 属性と同じ値を返します。それ以外の場合は、null を返します。
+- {{domxref("HTMLLegendElement.accessKey")}}
+  - : 文字列で、この要素にアクセスするための単一の文字のアクセスキーを表します。
+- {{domxref("HTMLLegendElement.align")}} {{deprecated_inline}}
+  - : 文字列で、フォームのセットに対する相対的な配置を表します。
 
 ## メソッド
 
-_固有のメソッドはありません。 親の {{domxref("HTMLElement")}} からメソッドを継承します。_
+_固有のメソッドはありません。 親の {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
 ## 仕様書
 
-| 仕様                                                                                                     | 状態                             | コメント                                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#htmllegendelement", "HTMLLegendElement")}}             | {{Spec2('HTML WHATWG')}} |                                                                                                                       |
-| {{SpecName('HTML5.1', "forms.html#the-legend-element", "HTMLLegendElement")}} | {{Spec2('HTML5.1')}}     |                                                                                                                       |
-| {{SpecName('HTML5 W3C', "forms.html#the-legend-element", "HTMLLegendElement")}} | {{Spec2('HTML5 W3C')}}     | `accessKey` プロパティが {{domxref("HTMLElement")}} で定義されました。 `align` プロパティが廃止されました。 |
-| {{SpecName('DOM2 HTML', 'html.html#ID-21482039', 'HTMLLegendElement')}}         | {{Spec2('DOM2 HTML')}}     | {{SpecName("DOM1")}} からの変更はありません。                                                                 |
-| {{SpecName('DOM1', 'level-one-html.html#ID-21482039', 'HTMLLegendElement')}}     | {{Spec2('DOM1')}}         | 初期定義                                                                                                              |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLLegendElement")}}
+{{Compat}}
 
 ## 関連情報
 

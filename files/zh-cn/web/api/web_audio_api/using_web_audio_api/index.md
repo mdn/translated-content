@@ -202,7 +202,7 @@ const panner = new StereoPannerNode(audioContext, pannerOptions);
 
 > **备注：** 目前生成节点的构造函数不是每个浏览器都支持的。旧工厂函数支持更为广泛。
 
-这里我们的范围从-1（最左边）和 1（最右边）。再次让我们使用范围类型的 input 来改变这个参数：
+这里我们的范围从 -1（最左边）和 1（最右边）。再次让我们使用范围类型的 input 来改变这个参数：
 
 ```js
 <input type="range" id="panner" min="-1" max="1" value="0" step="0.01">

@@ -69,7 +69,7 @@ var p = new Proxy(target, handler);
 
 - Простой и строгий оператор равенства (`==`, `===`) не перехватывается. `p1 === p2` равны, только если `p1` и `p2` ссылаются на один и тот же прокси.
 - Текущая реализация `Object.getPrototypeOf(proxy)` всегда возвращает `Object.getPrototypeOf(target)`, потому что в ES2015 перехватчик getPrototypeOf пока не реализован.
-- `typeof proxy` всегда возвращает `typeof target`. В частности, `proxy` может быть использован как функция только если `target `является функцией.
+- `typeof proxy` всегда возвращает `typeof target`. В частности, `proxy` может быть использован как функция только если `target` является функцией.
 - `Array.isArray(proxy)` всегда возвращает `Array.isArray(target)`.
 - `Object.prototype.toString.call(proxy)` всегда возвращает `Object.prototype.toString.call(target)`, потому что в ES2015 перехватчик Symbol.toStringTag пока не реализован.
 

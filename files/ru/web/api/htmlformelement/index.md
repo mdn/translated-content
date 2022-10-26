@@ -43,7 +43,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Methods
 
-_Inherits methods from its parent, {{domxref("HTMLElement")}}\_\_._
+_Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLFormElement.checkValidity()")}}
   - : Returns a {{jsxref("Boolean")}} that is `true` if the element's child controls are subject to constraint validation and satify those contraints, or `false` if some controls do not satisfy their constraints. Fires an event named {{event("invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to `false`.

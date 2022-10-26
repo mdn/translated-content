@@ -42,10 +42,10 @@ myFun("один", "два", "три", "четыре", "пять", "шесть");
 
 ### Отличия остаточных параметров от объекта `arguments`
 
-Существует три основных отличия остаточных параметров от объекта [`arguments`](/ru/docs/Web/JavaScript/Reference/Functions/arguments "arguments"):
+Существует три основных отличия остаточных параметров от объекта [`arguments`](/ru/docs/Web/JavaScript/Reference/Functions/arguments):
 
 - остаточные параметры включают только те, которым не задано отдельное имя, в то время как объект `arguments` содержит все аргументы, передаваемые в функцию;
-- объект `arguments` не является массивом, в то время как остаточные параметры являются экземпляром [`Array`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array "Array") и методы [`sort`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort "Array sort method"), [`map`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map "Array map method"), [`forEach`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach "Array forEach method") или [`pop`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop "Array pop method") могут непосредственно у них использоваться;
+- объект `arguments` не является массивом, в то время как остаточные параметры являются экземпляром [`Array`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array) и методы [`sort`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), [`map`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`forEach`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) или [`pop`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) могут непосредственно у них использоваться;
 - объект `arguments` имеет дополнительную функциональность, специфичную только для него (например, свойство `callee`).
 
 ### Из аргументов в массив
@@ -197,9 +197,9 @@ console.log(sortArguments(5, 3, 7, 1)); // 1, 3, 5, 7
 
 ## Смотрите также
 
-- [Объект arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments "arguments")
-- [Array](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array "Array")
-- [Функции](/ru/docs/Web/JavaScript/Reference/Functions "Functions and function scope")
-- [Оператор распространения](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator "spread operator")
+- [Объект arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments)
+- [Array](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [Функции](/ru/docs/Web/JavaScript/Reference/Functions)
+- [Оператор распространения](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 - [Оригинальное предложение на ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
 - [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
