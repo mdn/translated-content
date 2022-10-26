@@ -11,7 +11,7 @@ translation_of: Web/Performance/Performance_budgets
 
 Эти цели можно разбить на категории:
 
-- Временные (например, [Время до интерактивности,](/ru/docs/Glossary/Time_to_interactive) [Первая отрисовка контента](/ru/docs/Glossary/First_contentful_paint)).
+- Временные (например, [Время до интерактивности](/ru/docs/Glossary/Time_to_interactive), [Первая отрисовка контента](/ru/docs/Glossary/First_contentful_paint)).
 - Количественный (например, размер загруженных JS файлов, количество изображений).
 - Определённые правилами (например. индекс [Pagespeed](https://developers.google.com/speed/pagespeed/insights/), баллы Lighthouse).
 
