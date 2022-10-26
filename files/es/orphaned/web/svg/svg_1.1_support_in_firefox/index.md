@@ -490,5 +490,3 @@ Firefox 2 ha arreglado algunos fallos en su implementación para SVG. Esta secci
 [foreignObject](http://www.w3.org/TR/SVG11/extend.html#ForeignObjectElement)
 
 - Implementado, aunque no integrado.
-
-{{ languages( { "fr": "fr/SVG\_dans\_Firefox\_1.5", "ja": "ja/SVG\_in\_Firefox\_1.5", "pl": "pl/SVG\_w\_Firefoksie" } ) }}
