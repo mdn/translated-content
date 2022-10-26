@@ -63,7 +63,7 @@ Las palabras clave son abreviaciones por convención que coinciden con los sigui
 
 ## Ejemplos
 
-Ver [Uso de CSS transforms](/En/CSS/Using_CSS_transforms "en/CSS/Using CSS transforms") para más ejemplos.
+Ver [Uso de CSS transforms](/En/CSS/Using_CSS_transforms) para más ejemplos.
 
 ### Ejemplos en vivo:
 

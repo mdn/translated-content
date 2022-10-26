@@ -420,7 +420,7 @@ Employee.prototype.specialty = "none";
 
 Ahora el valor de la propiedad `specialty `del objeto` j``ane` si es "none".
 
-Otra forma de llamar al constructor es mediante el uso de los métodos [`call()`](/es/docs/JavaScript/Reference/Global_Objects/Function/call "en-US/docs/JavaScript/Reference/Global Objects/Function/call") / [`apply()`](/es/docs/JavaScript/Reference/Global_Objects/Function/apply "en-US/docs/JavaScript/Reference/Global Objects/Function/apply"):
+Otra forma de llamar al constructor es mediante el uso de los métodos [`call()`](/es/docs/JavaScript/Reference/Global_Objects/Function/call) / [`apply()`](/es/docs/JavaScript/Reference/Global_Objects/Function/apply):
 
 #### JavaScript
 

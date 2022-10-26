@@ -45,7 +45,7 @@ CSS permite esto asociando condiciones con bloques de declaraciones. Cada declar
 
 ![css syntax - ruleset.png](/@api/deki/files/6167/=css_syntax_-_ruleset.png)
 
-Debido a que un elemento de la página puede ser seleccionado por varios selectores, y, por lo tanto, por varias reglas que pueden contener la misma propiedad más de una vez, con diferentes valores, el estandar CSS define cuál regla tiene precedencia por sobre las otras y debe ser aplicada: esto se conoce como el algoritmo [cascada](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance "Cascading and inheritance").
+Debido a que un elemento de la página puede ser seleccionado por varios selectores, y, por lo tanto, por varias reglas que pueden contener la misma propiedad más de una vez, con diferentes valores, el estandar CSS define cuál regla tiene precedencia por sobre las otras y debe ser aplicada: esto se conoce como el algoritmo [cascada](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 
 > **Nota:** Es importante resaltar que si un set de reglas formado por un grupo de selectores es un atajo que reemplaza varios sets de reglas con un solo selector cada una, esto no aplica a la validez del set de reglas en sí.
 >
@@ -62,7 +62,7 @@ Una **declaración** es un bloque que empieza con un caracter (no espacio) y ter
 Existen dos tipos de declaraciones:
 
 - **Sets de reglas** (o _reglas_) que, como lo visto, asocian una colección de declaraciones CSS a una condición descrita como selector.
-- **Reglas At** que inician con un símbolo '`@`' (`U+0040 COMMERCIAL AT`), seguido de un identificador y luego el resto de la declaración que finaliza con un punto y coma (;) por fuera de un bloque o al inicio del próximo bloque. Cada tipo de [reglas at](/es/docs/Web/CSS/At-rule "At-rule"), definidas por un identificador, tienen su propia sintaxis interna, y semántica por supuesto. Se utilizan para establecer información de meta datos (como {{ cssxref("@charset") }} o {{ cssxref("@import") }}), información condicional (como {{ cssxref("@media") }} o {{ cssxref("@document") }}), o información descrciptiva (como {{ cssxref("@font-face") }}).
+- **Reglas At** que inician con un símbolo '`@`' (`U+0040 COMMERCIAL AT`), seguido de un identificador y luego el resto de la declaración que finaliza con un punto y coma (;) por fuera de un bloque o al inicio del próximo bloque. Cada tipo de [reglas at](/es/docs/Web/CSS/At-rule), definidas por un identificador, tienen su propia sintaxis interna, y semántica por supuesto. Se utilizan para establecer información de meta datos (como {{ cssxref("@charset") }} o {{ cssxref("@import") }}), información condicional (como {{ cssxref("@media") }} o {{ cssxref("@document") }}), o información descrciptiva (como {{ cssxref("@font-face") }}).
 
 Toda declaración que no es un set de reglas ni una regla at es considerada inválida e ignorada.
 

@@ -32,9 +32,9 @@ After the release of CSS 2 (Level 1), new features have been added to CSS. Some 
 
 - [CSS Counters](/es/docs/CSS/Counters)
   - : Counting items and pages is an easy task in CSS. Learn to use {{cssxref("counter-reset")}}, {{cssxref("counter-increment")}}, {{cssxref("counters", "counters()")}}, and {{cssxref("counter", "counter()")}}.
-- [CSS Animations](/es/docs/CSS/Tutorials/Using_CSS_animations "https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations")
+- [CSS Animations](/es/docs/CSS/Tutorials/Using_CSS_animations)
   - : CSS3 Animations allow you to define configurations of style, as [keyframes](/es/docs/CSS/@keyframes), and to transition between them defining an animation.
-- [CSS Transitions](/es/docs/CSS/Tutorials/Using_CSS_transitions "/en-US/docs/CSS/Using_CSS_transitions")
+- [CSS Transitions](/es/docs/CSS/Tutorials/Using_CSS_transitions)
   - : CSS3 Transitions allow you to define an animation between several styles and to control the way this transition happens.
 - [CSS Transforms](/es/docs/CSS/Tutorials/Using_CSS_transforms)
   - : Transforms allow you to change the position of elements by modifying their coordinate space: it allows for translating, rotating, and deforming them in the 2D or 3D spaces.

@@ -147,7 +147,7 @@ Al buscar ejemplos existentes que actualizar, hay tres tipos principales de actu
 
 MDN tiene montontes de ejemplos viejos que aun no usan el sistema de ejemplos ejecutables. Nuestra meta es actualizar la mayoría o todos para que sean ejemplos ejecutables.Esto aumentará la consistencia y la usabilidad. Es casi seguro que te encontrarás muchos de estos mientras usas MDN en el día a día; sin embargo, ¿cómo puedes encontrarlos si los buscas específicamente para actualizarlos? Desafortunadamente, no hay un modo fácil de hacer eso. Pero hay algunos consejos que te ayudarán a rastrearlos:
 
-- Empieza por darle un vistazo a esto [lista de páginas etiquetadas con "NeedsLiveSample"](/es/docs/tag/NeedsLiveSample "/en-US/docs/tag/NeedsLiveSamples"). Estas son las páginas que los usuarios han marcadado como que necesitan actualizarse. Deberías agregar esta etiqueta tu mismo, si ves una página que necesita ser actualizada para usar ejemplos ejecutables pero no tienes tiempo de arreglarla enseguida.
+- Empieza por darle un vistazo a esto [lista de páginas etiquetadas con "NeedsLiveSample"](/es/docs/tag/NeedsLiveSample). Estas son las páginas que los usuarios han marcadado como que necesitan actualizarse. Deberías agregar esta etiqueta tu mismo, si ves una página que necesita ser actualizada para usar ejemplos ejecutables pero no tienes tiempo de arreglarla enseguida.
 - Navega por ligas de documentación que es probable que incluyan ejemplos, como [JavaScript Guide](/es/docs/Web/JavaScript/Guide), [HTML documentation](/es/docs/Web/HTML), y [CSS reference](/es/docs/Web/CSS/Reference).
 - Busca término como "[example](/en-US/search?q=example)" o "[sample](/en-US/search?q=sample)" y revisar los resultados para páginas que actualizar.
 
