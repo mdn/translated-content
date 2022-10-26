@@ -15,7 +15,7 @@ slug: Glossary/Transferable_objects
 
 ## 在线程之间传输对象
 
-以下代码演示了当消息从主线程发送到 {{domxref("Web Workers API", "web worker 线程","","true")}}时，传输是如何工作的。{{jsxref("Uint8Array")}} 在工作区转移时，在 worker 中复制。传输后，任何尝试从主线程读或者写 `uInt8Array` 都将抛出错误，但是你仍然可以检查 `byteLength` 以确定它现在是 0.
+以下代码演示了当消息从主线程发送到 {{domxref("Web Workers API", "web worker 线程","","true")}}时，传输是如何工作的。{{jsxref("Uint8Array")}} 的缓冲区被转移时，在 worker 中复制。传输后，任何尝试从主线程读或者写 `uInt8Array` 都将抛出错误，但是你仍然可以检查 `byteLength` 以确定它现在是 0.
 
 ```js
 // Create an 8MB "file" and fill it. 8MB = 1024 * 1024 * 8 B
