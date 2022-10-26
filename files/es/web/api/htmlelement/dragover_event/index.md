@@ -9,7 +9,7 @@ browser-compat: api.HTMLElement.dragover_event
 
 {{APIRef}}
 
-El evento `dragover` se activa cuando un elemento o texto se arrastra a un objetivo válido (cada pocos cientos de milisegundos).
+El evento `dragover` se activa cuando un elemento o texto se arrastra sobre un objetivo de caída válido (cada cientos de milisegundos).
 
 El evento se activa en la caída al objetivo.
 
@@ -23,30 +23,12 @@ addEventListener('dragover', (event) => {});
 ondragover = (event) => { };
 ```
 
-## Propiedades
+## Propiedades del Evento
 
-| Property | Type | Description |
-| --- | --- | --- |
-| `target` {{readonlyInline}} | [`EventTarget`](/en-US/docs/Web/API/EventTarget "EventTarget is an interface implemented by objects that can receive events and may have listeners for them.") | El elemento que se encontraba bajo el elemento que está siendo arrastrado. |
-| `type` {{readonlyInline}} | [`DOMString`](/en-US/docs/Web/API/DOMString "DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.") | El tipo de evento. |
-| `bubbles` {{readonlyInline}} | [`Boolean`](/en-US/docs/Web/API/Boolean "The Boolean object is an object wrapper for a boolean value.") | Si el evento se propaga normalmente o no. |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/en-US/docs/Web/API/Boolean "The Boolean object is an object wrapper for a boolean value.") | Si el evento es cancelable o no. |
-| `view` {{readonlyInline}} | [`WindowProxy`](/en-US/docs/Web/API/WindowProxy "The documentation about this has not yet been written; please consider contributing!") | [`document.defaultView`](/en-US/docs/Web/API/Document/defaultView "In browsers, document.defaultView returns the window object associated with a document, or null if none is available.") (`window` del documento) |
-| `detail` {{readonlyInline}} | `long` (`float`) | 0.  |
-| `dataTransfer` | DataTransfer | Los datos que subyacen a la operación de drag-and-drop , conocidas como [drag data store](/en-US/docs/Web/API/DataTransfer). Modo protegido. |
-| `currentTarget` {{readonlyInline}} | EventTarget | El nodo que tiene adjunto el detector de eventos. |
-| `relatedTarget` {{readonlyInline}} | EventTarget | Para los eventos de `mouseover`, `mouseout`, `mouseenter` y `mouseleave`:El objetivo del evento complementario (el objetivo `mouseleave` en el caso del evento `mouseenter`). `null` sino. |
-| `screenX` {{readonlyInline}} | long | La coordinada X del puntro del ratón en coordenadas globales (de pantalla). |
-| `screenY` {{readonlyInline}} | long | La coordinada Y del puntero del ratón en coordenadas globales (en pantalla). |
-| `clientX` {{readonlyInline}} | long | La coordinada X del puntro del ratón en coordenadas locales (DOM content). |
-| `clientY` {{readonlyInline}} | long | La coordinada Y del puntro del ratón en coordenadas locales (DOM content). |
-| `button` {{readonlyInline}} | unsigned short | El número de botón que se preionó cuando el ecento fue ectivado: Botón izquierdo=0, botón del medio=1(en caso de que esté presente), botón derecho=2. Para ratones configurados para zurdos donde laas acciones están configuradas al contrario los valores se leerán de derecha a izquierda. |
-| `buttons` {{readonlyInline}} | unsigned short | Los botones presionados cuando el evento de ratón se activa: botón izquierdo=1,botón derecho=2, botón medio (rueda)=4, 4º botón (tipo "hacia atrás del navegador"=8, 5º botón ("tipo hacia delante en el navegador"=16. Si dos o más botones se presionan, devolverá la suma lógica de los valores. Ej: si se presionan los botones izquierdo y derecho, devolverá 3 (=1\|2). [M](/en-US/docs/Web/API/MouseEvent)ás información. |
-| `mozPressure` {{readonlyInline}} | float | La cantidad de presión aplicada en dispositivos táctiles cuando se genera el evento; Este valor tiene un rango entre 0.0 (mínima presión) y 1.0 (máxima presión) |
-| `ctrlKey` {{readonlyInline}} | boolean | `true` si la tecla control estaba pulsada cuando el evento se lanzó `false` en cualquier otro caso. |
-| `shiftKey` {{readonlyInline}} | boolean | `true` si la tecla shift estaba pulsada cuando el evento de lanzó. `false` en otro caso. |
-| `altKey` {{readonlyInline}} | boolean | `true` si la tecla alt estaba pulsada cuando el evento se lanzó. `false` si no. |
-| `metaKey` {{readonlyInline}} | boolean | `true` si la tecla meta estaba presionada cuando el evento se disparó. `false` si no. |
+_En adición a las propiedades listadas, a continuación las propiedades de la interfaz principal, {{domxref("Event")}}, están disponibles._
+
+- {{domxref("DragEvent/dataTransfer", "DragEvent.dataTransfer")}} {{ReadOnlyInline}}
+  - : Los datos que se transfieren durante una interacción de arrastrar y soltar.
 
 ## Tipo de Evento
 
@@ -65,15 +47,15 @@ _En adición a las propiedades listadas, a continuación las propiedades de la i
 
 ### Un ejemplo mínimo de arrastrar y soltar
 
-En este ejemplo, tenemos un elemento arrastrable dentro de un contenedor. Intenta agarrar el elemento, arrastrarlo sobre el otro contenedor y luego soltarlo.
+En este ejemplo, tenemos un elemento arrastrable dentro de un contenedor. Intenta agarrar el elemento, arrastralo sobre el otro contenedor y luego suéltalo.
 
 Aquí utilizamos tres manejadores de eventos:
 
-- En el manejador de eventos dragstart, obtenemos una referencia al elemento que el usuario arrastró
-- En el manejador del evento dragover para el contenedor de destino, llamamos a event.preventDefault(), que lo habilita para recibir eventos de drop.
-- En el manejador de eventos drop para la zona de caída, manejamos el movimiento del elemento arrastrable desde el contenedor original a la zona de caída.
+- En el manejador de eventos `dragstart`, obtenemos una referencia al elemento que el usuario arrastró
+- En el manejador del evento `dragover` para el contenedor de destino, llamamos a `event.preventDefault()`, que lo habilita para recibir eventos de drop.
+- En el manejador de eventos `drop` para la zona de caída, manejamos el movimiento del elemento arrastrable desde el contenedor original a la zona de caída.
 
-For a more complete example of [drag](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event) and drop, see the page for the drag event.
+Para un ejemplo más completo de drag y drop, ver la página del evento [`drag`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event).
 
 ### HTML
 
@@ -193,24 +175,25 @@ document.addEventListener(
 
 ## Especificaciones
 
-| Specification | Status | Comment |
-| --- | --- | --- |
-| {{SpecName("HTML WHATWG", "interaction.html#dndevents", "dragover")}} | {{Spec2("HTML WHATWG")}} |     |
-| {{SpecName("HTML5.1", "editing.html#dndevents", "dragover")}} | {{Spec2("HTML5.1")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Document.dragover_event")}}
+{{Compat}}
 
 ## Véase también
 
 - Otros eventos de arrastre:
 
-    - {{event("drag")}}
-    - {{event("dragstart")}}
-    - {{event("dragend")}}
-    - {{event("dragover")}}
-    - {{event("dragenter")}}
-    - {{event("dragleave")}}
-    - {{event("dragexit")}}
-    - {{event("drop")}}
+  - {{domxref("HTMLElement/drag_event", "drag")}}
+  - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
+  - {{domxref("HTMLElement/dragend_event", "dragend")}}
+  - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
+  - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+  - {{domxref("HTMLElement/drop_event", "drop")}}
+
+- Este evento en otros objetivos:
+
+  - {{domxref("Window")}}: {{domxref("Window/dragover_event", "dragover")}} event
+  - {{domxref("Document")}}: {{domxref("Document/dragover_event", "dragover")}} event
+  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragover_event", "dragover")}} event
