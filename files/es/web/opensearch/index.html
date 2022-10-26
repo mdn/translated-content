@@ -62,50 +62,31 @@ original_slug: Creacion_de_plugins_OpenSearch_para_Firefox
  <dt>
   <strong>Url</strong></dt>
  <dd>
-  Describe la(s) URL(s) a emplear para la búsqueda. El atributo <code>method</code> indica si se debe emplear una petición <code>GET</code> o <code>POST</code> para obtener los resultados.</dd>
-</dl>
-<dl>
- <dd>
+  Describe la(s) URL(s) a emplear para la búsqueda. El atributo <code>method</code> indica si se debe emplear una petición <code>GET</code> o <code>POST</code> para obtener los resultados.
   <div class="note">
    <strong>Nota:</strong> Internet Explorer 7 no admite peticiones <code>POST</code>.</div>
- </dd>
-</dl>
-<dl>
- <dd>
-  Firefox admite dos tipos de URL en el campo <code>type</code>:</dd>
-</dl>
-<ul>
+   Firefox admite dos tipos de URL en el campo <code>type</code>:
+   <ul>
  <li><code>type="text/html"</code> se usa al especificar la URL a donde se va a enviar la petición de búsqueda.</li>
  <li><code>type="application/x-suggestions+json"</code> se usa al especificar la URL de donde se van a obtener las sugerencias de búsqueda.</li>
 </ul>
-<dl>
- <dd>
-  El atributo <code>template</code> indica la forma en que se construirá la URL para la consulta. Dentro de este atributo se pueden introducir plantillas que se expanden de forma dinámica; la más habitual es <code>{searchTerms}</code>, la cual se expande a los términos de búsqueda introducidos por el usuario en la barra de búsquedas. En <a class="external" href="http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_3#OpenSearch_1.1_parameters">OpenSearch 1.1 parameters</a> se describen los otros tipos admitidos.</dd>
-</dl>
-<dl>
- <dd>
+
+El atributo <code>template</code> indica la forma en que se construirá la URL para la consulta. Dentro de este atributo se pueden introducir plantillas que se expanden de forma dinámica; la más habitual es <code>{searchTerms}</code>, la cual se expande a los términos de búsqueda introducidos por el usuario en la barra de búsquedas. En <a class="external" href="http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_3#OpenSearch_1.1_parameters">OpenSearch 1.1 parameters</a> se describen los otros tipos admitidos.<br><br>
   Para consultas que devuelven sugerencias de búsqueda, la URL descrita en <code>template</code> se usa para obtener una lista de sugerencias en el formato JSON (JavaScript Object Notation). Para saber más sobre como incorporar sugerencias de búsqueda en el lado del servidor, ver <a href="es/Permitir_sugerencias_en_los_plugins_de_b%c3%basqueda">Permitir sugerencias en los plugins de búsqueda</a>.</dd>
 </dl>
-<p><img alt="Image:SearchSuggestionSample.png"></p>
 <dl>
  <dt>
   <strong>Param</strong></dt>
  <dd>
-  Los parámetros que es necesario suministrar junto con la consulta, en la forma de pares clave/valor. En los valores es posible emplear las plantillas dinámicas presentadas anteriormente; por ejemplo, se puede usar <code>{searchTerms}</code> para insertar los términos de búsqueda que el usuario introdujo en la barra de búsquedas.</dd>
-</dl>
-<dl>
- <dd>
+  Los parámetros que es necesario suministrar junto con la consulta, en la forma de pares clave/valor. En los valores es posible emplear las plantillas dinámicas presentadas anteriormente; por ejemplo, se puede usar <code>{searchTerms}</code> para insertar los términos de búsqueda que el usuario introdujo en la barra de búsquedas.
   <div class="note">
    <strong>Nota:</strong> Internet Explorer 7 no admite este elemento.</div>
  </dd>
-</dl>
-<dl>
  <dt>
   <strong>SearchForm</strong></dt>
  <dd>
-  La URL donde se encuentra la página de búsquedas del sitio al que hace referencia el complemento que estamos desarrollando. Esto permite al usuario acceder directamente al sitio web en cuestión.</dd>
- <dd>
-  <div class="note">
+   La URL donde se encuentra la página de búsquedas del sitio al que hace referencia el complemento que estamos desarrollando. Esto permite al usuario acceder directamente al sitio web en cuestión.<br><br>
+   <div class="note">
    <strong>Nota:</strong> Dado que este elemento es específico de Firefox y no forma parte de la especificación OpenSearch, en el ejemplo anterior, usamos el prefijo "<code>moz:</code>" en el espacio de nombres XML para asegurarnos que otros agentes de usuario que no admiten este elemento puedan ignoralo de forma segura.</div>
  </dd>
 </dl>

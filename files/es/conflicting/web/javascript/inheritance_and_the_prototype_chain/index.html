@@ -60,51 +60,51 @@ original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 <p>La siguiente tabla muestra  un pequeño resumen de algunas de estas diferencias. El resto de este capítulo describe los detalles del uso de los constructores JavaScript y los prototipos para crear una jerarquía de objetos, y compara esta forma de herencia no basada en clases con la basada en clases que utiliza Java.</p>
 
 <table class="fullwidth-table">
- <caption>Tabla 8.1 Comparación de los sistemas de objetos basados en clases  (Java) y basados en prototipos (JavaScript)</caption>
- <thead>
-  <tr>
-   <th scope="col"><strong>Categoría</strong></th>
-   <th scope="col"><strong>Basado en clases (Java)</strong></th>
-   <th scope="col"><strong>Basado en prototipos (JavaScript)</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><strong>Clase vs. Instancia</strong></td>
-   <td>La clase y su instancia son entidades distintas.</td>
-   <td>Todos los objetos pueden heredar de otro objeto.</td>
-  </tr>
-  <tr>
-   <td><strong>Definición</strong></td>
-   <td>Define una clase con una definición <em>class</em>; se instancia una clase con métodos constructores.</td>
-   <td>Define y crea un conjunto de objetos con funciones constructoras.</td>
-  </tr>
-  <tr>
-   <td><strong>Creación de objeto</strong></td>
-   <td>Se crea un objeto con el operador <code>new</code>.</td>
-   <td>Se crea un objeto con el operador <code>new</code>.</td>
-  </tr>
-  <tr>
-   <td><strong>Construcción de jerarquía de objetos</strong></td>
-   <td>Se construye una jerarquía de objetos utilizando definiciones de clases para definir subclases de clases existentes.</td>
-   <td>
-    <p>Se construye una jerarquía de objetos mediante la asignación de un objeto como el prototipo asociado a una función constructora.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Herencia</strong></td>
-   <td>Se heredan propiedades siguiendo la cadena de clases.</td>
-   <td>Se heredan propiedades siguiendo la cadena de prototipos.</td>
-  </tr>
-  <tr>
-   <td><strong>Extensión de propiedades</strong></td>
-   <td>La definición de una clase especifica <em>todas</em> las propiedades de todas las instancias de esa clase. No se puede añadir propiedades dinámicamente en tiempo de ejecución.</td>
-   <td>
-    <p>El conjunto <em>inicial</em> de propiedades lo determina la función constructor o el prototipo. Se pueden añadir y quitar propiedades dinámicamente a objetos específicos o a un conjunto de objetos.</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+   <caption>Tabla 8.1 Comparación de los sistemas de objetos basados en clases  (Java) y basados en prototipos (JavaScript)</caption>
+   <thead>
+    <tr>
+     <th scope="col"><strong>Categoría</strong></th>
+     <th scope="col"><strong>Basado en clases (Java)</strong></th>
+     <th scope="col"><strong>Basado en prototipos (JavaScript)</strong></th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td><strong>Clase vs. Instancia</strong></td>
+     <td>La clase y su instancia son entidades distintas.</td>
+     <td>Todos los objetos pueden heredar de otro objeto.</td>
+    </tr>
+    <tr>
+     <td><strong>Definición</strong></td>
+     <td>Define una clase con una definición <em>class</em>; se instancia una clase con métodos constructores.</td>
+     <td>Define y crea un conjunto de objetos con funciones constructoras.</td>
+    </tr>
+    <tr>
+     <td><strong>Creación de objeto</strong></td>
+     <td>Se crea un objeto con el operador <code>new</code>.</td>
+     <td>Se crea un objeto con el operador <code>new</code>.</td>
+    </tr>
+    <tr>
+     <td><strong>Construcción de jerarquía de objetos</strong></td>
+     <td>Se construye una jerarquía de objetos utilizando definiciones de clases para definir subclases de clases existentes.</td>
+     <td>
+      <p>Se construye una jerarquía de objetos mediante la asignación de un objeto como el prototipo asociado a una función constructora.</p>
+     </td>
+    </tr>
+    <tr>
+     <td><strong>Herencia</strong></td>
+     <td>Se heredan propiedades siguiendo la cadena de clases.</td>
+     <td>Se heredan propiedades siguiendo la cadena de prototipos.</td>
+    </tr>
+    <tr>
+     <td><strong>Extensión de propiedades</strong></td>
+     <td>La definición de una clase especifica <em>todas</em> las propiedades de todas las instancias de esa clase. No se puede añadir propiedades dinámicamente en tiempo de ejecución.</td>
+     <td>
+      <p>El conjunto <em>inicial</em> de propiedades lo determina la función constructor o el prototipo. Se pueden añadir y quitar propiedades dinámicamente a objetos específicos o a un conjunto de objetos.</p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
 
 <h2 id="El_ejemplo_employee">El ejemplo employee</h2>
 
@@ -168,25 +168,14 @@ original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 
 <p>Las siguientes definiciones de <code>Employee</code> en Java y en Javascript son similares, la única diferencia es que en Java necesitas especificar el tipo para cada propiedad, no así en Javascript (esto es debido a que Java es un <a href="https://es.wikipedia.org/wiki/Tipado_fuerte">lenguaje fuertemente tipado</a>, mientras que Javascript es un lenguaje débilmente tipado). </p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">JavaScript</th>
-   <th scope="col">Java</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <pre class="brush: js notranslate">
+
+  <h4>JavaScript</h4><pre class="brush: js notranslate">
 function Employee () {
   this.name = "";
   this.dept = "general";
 }
 </pre>
-   </td>
-   <td>
-    <pre class="brush: java notranslate">
+   <h4>Java</h4><pre class="brush: java notranslate">
 public class Employee {
    public String name;
    public String dept;
@@ -196,24 +185,11 @@ public class Employee {
    }
 
 </pre>
-   </td>
-  </tr>
- </tbody>
-</table>
 
 <p>Las definiciones de <code>Manager</code> y <code>WorkerBee</code> ilustran la diferencia a la hora de especificar el siguiente objeto en la jerarquía de herencia. En JavaScript se añade una instancia prototípica como el valor de la propiedad <code>prototype</code> de la función constructora, así sobre escribe <code>prototype.constructor</code> con la función constructora. Puede hacerse en cualquier momento una vez definido el constructor. En Java se especifica la superclase en la definición de la clase. No se puede cambiar la superclase fuera de la definición de la clase.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">JavaScript</th>
-   <th scope="col">Java</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <pre class="brush: js notranslate">
+
+  <h4>JavaScript</h4><pre class="brush: js notranslate">
 function Manager () {
   this.reports = [];
 }
@@ -224,9 +200,7 @@ function WorkerBee () {
 }
 WorkerBee.prototype = new Employee;
 </pre>
-   </td>
-   <td>
-    <pre class="brush: java notranslate">
+   <h4>Java</h4><pre class="brush: java notranslate">
 public class Manager extends Employee {
    public Employee[] reports;
    public Manager () {
@@ -241,24 +215,11 @@ public class WorkerBee extends Employee {
    }
 
 </pre>
-   </td>
-  </tr>
- </tbody>
-</table>
 
 <p>Las definiciones de <code>Engineer</code> y <code>SalesPerson</code> crean objetos que descienden de <code>WorkerBee</code> y por tanto de <code>Employee</code>. Un objeto de éste tipo tiene todas las propiedades de los objetos por encima de él en la cadena. Además, estas definiciones reemplazan los valores heredados de la propiedad <code>dept</code> con nuevos valores específicos para estos objetos.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">JavaScript</th>
-   <th scope="col">Java</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <pre class="brush: js notranslate">
+
+  <h4>JavaScript</h4><pre class="brush: js notranslate">
 function SalesPerson () {
    this.dept = "sales";
    this.quota = 100;
@@ -271,9 +232,7 @@ function Engineer () {
 }
 Engineer.prototype = new WorkerBee;
 </pre>
-   </td>
-   <td>
-    <pre class="brush: java notranslate">
+   <h4>Java</h4><pre class="brush: java notranslate">
 public class SalesPerson extends WorkerBee {
    public double quota;
    public SalesPerson () {
@@ -290,10 +249,6 @@ public class Engineer extends WorkerBee {
    }
 }
 </pre>
-   </td>
-  </tr>
- </tbody>
-</table>
 
 <p>Usando estas definiciones puedes crear instancias de estos objetos, que adquieren valores por defecto para sus propiedades. La figura 8.3 revela el uso de estas definiciones JavaScript para crear nuevos objetos y muestra los valores de las propiedades de estos nuevos objetos.</p>
 
@@ -369,25 +324,14 @@ mark.projects = ["navigator"];</pre>
 
 <p>La siguiente tabla muestra las definiciones Java y JavaScript para estos objetos.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">JavaScript</th>
-   <th scope="col">Java</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <pre class="brush: js notranslate">
+
+  <h4>JavaScript</h4><pre class="brush: js notranslate">
 function Employee (name, dept) {
   this.name = name || "";
   this.dept = dept || "general";
 }
 </pre>
-   </td>
-   <td>
-    <pre class="brush: java notranslate">
+   <h4>Java</h4><pre class="brush: java notranslate">
 public class Employee {
    public String name;
    public String dept;
@@ -405,17 +349,13 @@ public class Employee {
 </pre>
    </td>
   </tr>
-  <tr>
-   <td>
-    <pre class="brush: js notranslate">
+  <h4>JavaScript</h4><pre class="brush: js notranslate">
 function WorkerBee (projs) {
   this.projects = projs || [];
 }
 WorkerBee.prototype = new Employee;
 </pre>
-   </td>
-   <td>
-    <pre class="brush: java notranslate">
+   <h4>Java</h4><pre class="brush: java notranslate">
 public class WorkerBee extends Employee {
    public String[] projects;
    public WorkerBee () {
@@ -429,9 +369,7 @@ public class WorkerBee extends Employee {
 </pre>
    </td>
   </tr>
-  <tr>
-   <td>
-    <pre class="brush: js notranslate">
+  <h4>JavaScript</h4><pre class="brush: js notranslate">
 
 function Engineer (mach) {
    this.dept = "engineering";
@@ -439,9 +377,7 @@ function Engineer (mach) {
 }
 Engineer.prototype = new WorkerBee;
 </pre>
-   </td>
-   <td>
-    <pre class="brush: java notranslate">
+   <h4>Java</h4><pre class="brush: java notranslate">
 public class Engineer extends WorkerBee {
    public String machine;
    public Engineer () {
@@ -454,10 +390,6 @@ public class Engineer extends WorkerBee {
    }
 }
 </pre>
-   </td>
-  </tr>
- </tbody>
-</table>
 
 <p>Estas definiciones JavaScript realizan un uso idiomático especial para asignar valores por defecto:</p>
 
@@ -548,28 +480,20 @@ Employee.prototype.specialty = "none";
 <p>Otra forma de llamar al constructor es mediante el uso de los métodos <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/call" title="en-US/docs/JavaScript/Reference/Global Objects/Function/call"><code>call()</code></a> / <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/apply" title="en-US/docs/JavaScript/Reference/Global Objects/Function/apply"><code>apply()</code></a>:</p>
 
 <table>
- <tbody>
-  <tr>
-   <td>
-    <pre class="brush: js notranslate">
+
+  <h4>JavaScript</h4><pre class="brush: js notranslate">
 function Engineer (name, projs, mach) {
   this.base = WorkerBee;
   this.base(name, "engineering", projs);
   this.machine = mach || "";
 }
 </pre>
-   </td>
-   <td>
-    <pre class="brush: js notranslate">
+   <h4>Java</h4><pre class="brush: js notranslate">
 function Engineer (name, projs, mach) {
   WorkerBee.call(this, name, "engineering", projs);
   this.machine = mach || "";
 }
 </pre>
-   </td>
-  </tr>
- </tbody>
-</table>
 
 <p>Usar el método Javascript <code>call()</code> da como resultado una implementación más limpia ya que <code>base</code> ya no es necesaria. Mediante <code>call()</code> se llama a la función constructor <code>WorkerBee</code> como un método, pasándole explícitamente <code>this</code>. El efecto es el mismo que el producido al llamar al constructor a través de la propiedad  <code>base</code>: en la llamada a <code>WorkerBee,</code> <code>this </code>está ligado al objeto que se está creando en <code>Engineer.</code></p>
 
@@ -647,7 +571,7 @@ Employee.prototype.name = "Unknown";
 
 <p>La búsqueda de propiedades en la cadena de prototipos comienza en las propiedades locales del objeto y si no se encuentran localmente, se busca a través de la propiedad  <code>__proto__</code> del objeto. La búsqueda continúa recursivamente, conociéndose como "búsqueda en la cadena de prototipos".</p>
 
-<p>La propiedad especial <code>__proto__</code> de un objeto recibe su valor en el momento en el que es creado; se le asigna el valor de la propiedad <code>prototype</code> de la función <em>constructor</em> usada para crear el objeto. Así, la expresión <code>new Foo()</code> crea un objeto con <code>__proto__ == <code class="moz-txt-verticalline">Foo.prototype</code></code>. Por tanto, los cambios que se realicen en las propiedades de <code class="moz-txt-verticalline">Foo.prototype</code> alteraran la búsqueda de propiedades de todos los objetos que se crearon mediante<code> new Foo()</code>.</p>
+<p>La propiedad especial <code>__proto__</code> de un objeto recibe su valor en el momento en el que es creado; se le asigna el valor de la propiedad <code>prototype</code> de la función <em>constructor</em> usada para crear el objeto. Así, la expresión <code>new Foo()</code> crea un objeto con <code>__proto__ == <code class="">Foo.prototype</code></code>. Por tanto, los cambios que se realicen en las propiedades de <code class="">Foo.prototype</code> alteraran la búsqueda de propiedades de todos los objetos que se crearon mediante<code> new Foo()</code>.</p>
 
 <p>Todo objeto tiene una propiedad <code>__proto__</code> (salvo <code>Object</code>); toda función tiene una propiedad <code>prototype</code>. Es así como los objetos pueden relacionarse mediante 'herencia de prototipos' con otros objetos. Puedes comprobar la herencia comparando el valor de la propiedad <code>__proto__</code> con el valor de <code>prototype</code> de una función <em>constructor</em>. JavaScript proporciona un atajo: el operador <code>instanceof</code> que compara un objeto con una función <em>constructor</em> y devuelve true si el objeto hereda del prototipo de la función. Por ejemplo,</p>
 
