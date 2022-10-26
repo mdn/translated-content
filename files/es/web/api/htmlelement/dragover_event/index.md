@@ -50,36 +50,13 @@ Aquí utilizamos tres manejadores de eventos:
 
 Para un ejemplo más completo de drag y drop, ver la página del evento [`drag`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event).
 
-### HTML
+#### HTML
 
 ```html
 <div class="dropzone">
   <div id="draggable" draggable="true">Este div es arrastrable</div>
 </div>
 <div class="dropzone" id="droptarget"></div>
-```
-
-### CSS
-
-```css
-body {
-  /* Impedir que el usuario seleccione texto en el ejemplo */
-  user-select: none;
-}
-#draggable {
-  text-align: center;
-  background: white;
-}
-.dropzone {
-  width: 200px;
-  height: 20px;
-  background: blueviolet;
-  margin: 10px;
-  padding: 10px;
-}
-```
-
-### JavaScript
 
 ```js
 let dragged = null;
