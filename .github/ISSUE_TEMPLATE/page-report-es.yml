@@ -21,7 +21,7 @@ body:
     id: mdn-url
     attributes:
       label: MDN URL
-      description: Se establece automáticamente. No la modifique.
+      description: Se establece automáticamente. No modificar.
     validations:
       required: true
   - type: input
