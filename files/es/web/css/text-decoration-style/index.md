@@ -45,7 +45,7 @@ text-decoration-style: unset;
     | `dotted`                                      | Dibuja una línea punteada    |                                                                                          |
     | `dashed`                                      | Dibuja una línea discontinua |                                                                                          |
     | `wavy`                                        | Dibuja una línea ondulada    |                                                                                          |
-    | `-moz-none`{{ non-standard_inline }}`` | No dibuja una línea          | **No usarse:** usar {{ cssxref("text-decoration-line") }}`: none` en su lugar |
+    | `-moz-none`{{ non-standard_inline }} | No dibuja una línea          | **No usarse:** usar {{ cssxref("text-decoration-line") }}`: none` en su lugar |
 
 - `inherit`
   - : Es una palabra clave que indica que se reutilice el valor calculado del elemento padre.

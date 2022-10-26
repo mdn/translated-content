@@ -7,6 +7,8 @@ translation_of: Web/CSS/white-space
 
 La propiedad **`white-space`** de CSS, determina cómo se maneja el espacio en blanco dentro de un elemento. Para hacer que las palabras se dividan _en sí mismas_, usa {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}}, o {{cssxref("hyphens")}} en su lugar.
 
+#### Ejemplo
+
 ```css
 /* Valores con palabras clave */
 white-space: normal;

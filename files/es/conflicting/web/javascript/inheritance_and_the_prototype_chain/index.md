@@ -183,7 +183,7 @@ public class Engineer extends WorkerBee {
 
 Usando estas definiciones puedes crear instancias de estos objetos, que adquieren valores por defecto para sus propiedades. La figura 8.3 revela el uso de estas definiciones JavaScript para crear nuevos objetos y muestra los valores de las propiedades de estos nuevos objetos.
 
-> **Nota:** El termino **instancia** tiene un significado técnico específico en lenguajes basados en clases, donde una instancia es un ejemplar individual de una clase y es fundamentalmente diferente a la clase. En JavaScript, "instancia" no tiene este mismo significado ya que JavaScript no hace diferencia entre clases e instancias. Sin embargo, al hablar de JavaScript, "instancia" puede ser usado informalmente para indicar que un objeto ha sido creado usando una función constructora particular. En este ejemplo, puedes decir que `jane` es una instancia de `Engineer`. De la misma manera, aunque los términos **parent*, \_child*, \_ancestor**, y **descendant** no tienen un significado formal en JavaScript; puedes usarlos informalmente para referirte a objetos que están por encima o por debajo de la cadena de prototipos.
+> **Nota:** El termino **instancia** tiene un significado técnico específico en lenguajes basados en clases, donde una instancia es un ejemplar individual de una clase y es fundamentalmente diferente a la clase. En JavaScript, "instancia" no tiene este mismo significado ya que JavaScript no hace diferencia entre clases e instancias. Sin embargo, al hablar de JavaScript, "instancia" puede ser usado informalmente para indicar que un objeto ha sido creado usando una función constructora particular. En este ejemplo, puedes decir que `jane` es una instancia de `Engineer`. De la misma manera, aunque los términos _parent_, _child_, _ancestor_, y _descendant_ no tienen un significado formal en JavaScript; puedes usarlos informalmente para referirte a objetos que están por encima o por debajo de la cadena de prototipos.
 
 ### Creando objetos con definiciones simples
 
@@ -418,7 +418,7 @@ var jane = new Engineer("Doe, Jane", ["navigator", "javascript"], "belau");
 Employee.prototype.specialty = "none";
 ```
 
-Ahora el valor de la propiedad `specialty `del objeto` j``ane` si es "none".
+Ahora el valor de la propiedad `specialty `del objeto` jane` si es "none".
 
 Otra forma de llamar al constructor es mediante el uso de los métodos [`call()`](/es/docs/JavaScript/Reference/Global_Objects/Function/call) / [`apply()`](/es/docs/JavaScript/Reference/Global_Objects/Function/apply):
 
@@ -441,7 +441,7 @@ function Engineer (name, projs, mach) {
 }
 ```
 
-Usar el método Javascript `call()` da como resultado una implementación más limpia ya que `base` ya no es necesaria. Mediante `call()` se llama a la función constructor `WorkerBee` como un método, pasándole explícitamente `this`. El efecto es el mismo que el producido al llamar al constructor a través de la propiedad `base`: en la llamada a `WorkerBee,` `this `está ligado al objeto que se está creando en `Engineer.`
+Usar el método Javascript `call()` da como resultado una implementación más limpia ya que `base` ya no es necesaria. Mediante `call()` se llama a la función constructor `WorkerBee` como un método, pasándole explícitamente `this`. El efecto es el mismo que el producido al llamar al constructor a través de la propiedad `base`: en la llamada a `WorkerBee`, `this `está ligado al objeto que se está creando en `Engineer.`
 
 ## Herencia de propiedades revisada
 

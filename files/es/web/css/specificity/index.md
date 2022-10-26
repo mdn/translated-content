@@ -26,7 +26,7 @@ La siguiente lista de tipos de selectores incrementa en función de la especific
 2. [Selectores de clase](/es/docs/Web/CSS/Class_selectors) (p.e., `.example`), selectores de atributos (p.e., `[type="radio"]`) y pseudo-clases (p.e., `:hover`).
 3. [Selectores de ID](/es/docs/Web/CSS/ID_selectors) (p.e., `#example`).
 
-El selector universal ({{CSSxRef("Universal_selectors", "*")}}), los combinadores ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, ['``'](/es/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) y la pseudo-clase de negación ({{CSSxRef(":not", ":not()")}}) no tienen efecto sobre la especificidad. (Sin embargo, los selectores declarados _dentro de_ `:not()` si lo tienen.)
+El selector universal ({{CSSxRef("Universal_selectors", "*")}}), los combinadores ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [`␣`](/es/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) y la pseudo-clase de negación ({{CSSxRef(":not", ":not()")}}) no tienen efecto sobre la especificidad. (Sin embargo, los selectores declarados _dentro de_ `:not()` si lo tienen.)
 
 Para más información, visita ["Especificidad" en "Cascada y herencia"](/es/docs/Learn/CSS/Building_blocks/Cascada_y_herencia#Especificidad), también puedes visitar: [https://specifishity.com](https://specifishity.com/)
 
@@ -34,7 +34,7 @@ Los estilos _inline_ añadidos a un elemento (p.e., `style="font-weight:bold"`) 
 
 ### La excepción !important
 
-Cuando se emplea `important` en una declaración de estilo, esta declaración sobrescribe a cualquier otra. Aunque técnicamente `!important` no tiene nada que ver con especificidad, interactúa directamente con esta. Sin embargo, el uso de `!important` es una **mala práctica** y debería evitarse porque hace que el código sea más difícil de depurar al romper la [cascada (artículo en inglés)](/es/docs/Web/CSS/Cascade)**\_ \_**natural de las hojas de estilo. Cuando dos declaraciones en conflicto con el `!important` son aplicadas al mismo elemento, se aplicará la declaración con mayor especificidad.
+Cuando se emplea `important` en una declaración de estilo, esta declaración sobrescribe a cualquier otra. Aunque técnicamente `!important` no tiene nada que ver con especificidad, interactúa directamente con esta. Sin embargo, el uso de `!important` es una **mala práctica** y debería evitarse porque hace que el código sea más difícil de depurar al romper la [cascada (artículo en inglés)](/es/docs/Web/CSS/Cascade) natural de las hojas de estilo. Cuando dos declaraciones en conflicto con el `!important` son aplicadas al mismo elemento, se aplicará la declaración con mayor especificidad.
 
 **Algunas reglas de oro:**
 
@@ -152,9 +152,7 @@ cuando se usa con el siguiente HTML:
 
 Debería aparecer en pantalla como:
 
-Esto está en el outer div
-
-Este texto está en el inner div
+{{EmbedLiveSample}}
 
 ### Especificidad basada en la forma
 
@@ -179,7 +177,7 @@ cuando se usan con este marcador:
 
 Se acabarán viendo así:
 
-Soy un texto de ejemplo
+{{EmbedLiveSample}}
 
 Debido a que coincide con el mismo elemento, pero el selector ID tiene una mayor especificidad.
 

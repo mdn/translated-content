@@ -54,13 +54,13 @@ text-decoration-line: unset;
 
 ## Ejemplo
 
-### Contenido HTML
+HTML
 
 ```html
 <p>¡Aquí hay texto con subrayado inferior rojo ondulado!</p>
 ```
 
-### Contenido CSS
+CSS
 
 ```css
 p {

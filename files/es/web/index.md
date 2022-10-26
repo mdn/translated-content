@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web
 ---
-> ## La Web abierta presenta increíbles oportunidades para los desarrolladores. Para aprovechar al máximo estas tecnologías, debes saber cómo utilizarlas. A continuación, encontrarás enlaces a nuestra documentación de tecnología web.
+
+La Web abierta presenta increíbles oportunidades para los desarrolladores. Para aprovechar al máximo estas tecnologías, debes saber cómo utilizarlas. A continuación, encontrarás enlaces a nuestra documentación de tecnología web.
 
 ## Documentación para desarrolladores web
 

@@ -141,7 +141,7 @@ Al buscar ejemplos existentes que actualizar, hay tres tipos principales de actu
 - Corregir bugs en un ejemplo ejecutable existente.
 - Mejorar un ejemplo ejecutable existente, o actualizar un ejemplo basándose en cambios tecnológicos.
 
-> **Nota:** **Nota\*\***:\*\* Si encuentras artículos que necesitan ser actualizados para usar el sistema de ejemplos ejecutables, por favor agrega a la página la etiqueta "NeedsLiveSample".
+> **Nota:** Si encuentras artículos que necesitan ser actualizados para usar el sistema de ejemplos ejecutables, por favor agrega a la página la etiqueta "NeedsLiveSample".
 
 ### Encontrando ejemplos que necesitan convertirse a ejemplos ejecutables
 

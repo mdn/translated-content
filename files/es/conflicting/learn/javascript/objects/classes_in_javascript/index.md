@@ -64,7 +64,7 @@ En este caso nosotros no queremos personas genericas — queremos docentes y est
 
 Esto es realmente útil, los profesores y los estudiantes comparten muchas características comunes como el nombre, el género y la edad, por lo que es conveniente tener que definir esas características solo una vez. También puedes definir la misma característica por separado en diferentes clases, ya que cada definición de esa característica estará en un espacio de nombres diferente. Por ejemplo, el saludo de un estudiante puede tener la forma "Yo, soy \[Nombre]" (por ejemplo, Yo, soy Sam), mientras que un profesor puede usar algo más formal, como "Hola, mi nombre es \[Prefix] \[lastName], y enseño \[Asunto] ". (Por ejemplo, Hola, mi nombre es Sr. Griffiths, y yo enseño Química).
 
-> **Nota:**la palabra elegante para la capacidad de múltiples tipos de objetos de implementar la misma funcionalidad es **polimorfismo.** Por si acaso te preguntabas.
+> **Nota:** la palabra elegante para la capacidad de múltiples tipos de objetos de implementar la misma funcionalidad es **polimorfismo.** Por si acaso te preguntabas.
 
 Ahora puedes crear instancias de objetos de las clases "hijo". Por ejemplo:
 
@@ -78,7 +78,7 @@ Algunas personas sostienen que JavaScript no es un verdadero lenguaje orientado 
 
 Cuando se crea una nueva instancia del objeto a partir de una función constructora, su funcionalidad central (tal como se define en su prototipo, que exploraremos en el [artículo Prototipos](/es/docs/Learn/JavaScript/Objects/Object_prototypes) de objetos) no se copia en el nuevo objeto como lenguajes OO "clásicos", sino que la funcionalidad está vinculada a través de una cadena de referencia llamada cadena prototipo. Así que esto no es una verdadera instanciación, estrictamente hablando, JavaScript usa un mecanismo diferente para compartir funcionalidad entre objetos.
 
-> **Nota:**no ser "POO clásica" no es necesariamente algo malo; Como se mencionó anteriormente, la POO puede ser muy compleja muy rápidamente, y JavaScript tiene algunas agradables formas de aprovechar las características de la OO sin tener que profundizar demasiado en ello.
+> **Nota:** no ser "POO clásica" no es necesariamente algo malo; Como se mencionó anteriormente, la POO puede ser muy compleja muy rápidamente, y JavaScript tiene algunas agradables formas de aprovechar las características de la OO sin tener que profundizar demasiado en ello.
 
 Exploremos la creación de clases a través de constructores y la creación de instancias de objetos a partir de ellas en JavaScript. En primer lugar, nos gustaría que hicieras una nueva copia local del archivo `oojs.html` que vimos en nuestro primer artículo de Objetos.
 

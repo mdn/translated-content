@@ -65,6 +65,8 @@ text-shadow: unset;
 
 ## Ejemplos
 
+### Sombra roja
+
 ```css
 .red-text-shadow {
    text-shadow: red 0 -2px;
@@ -79,6 +81,8 @@ text-shadow: unset;
 ```
 
 {{EmbedLiveSample('Example1', '689px', '90px')}}
+
+### Sombra azul
 
 ```css
 .white-with-blue-shadow {
@@ -96,6 +100,8 @@ text-shadow: unset;
 ```
 
 {{EmbedLiveSample('Example2', '689px', '180px')}}
+
+### Sombra dorada
 
 ```css
 .gold-on-gold {

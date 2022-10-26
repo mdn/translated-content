@@ -90,9 +90,9 @@ span {
 strong { float: right; }
 ```
 
-Esto muestra ninguna transformación de texto.
+Esto muestra ninguna transformación de texto.
 
-{{ EmbedLiveSample('none', '100%', '100px') }}
+{{ EmbedLiveSample('', '100%', '100px') }}
 
 ### `capitalize` (General)
 

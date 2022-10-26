@@ -124,7 +124,7 @@ original_slug: Web/HTML/Element/basefont
 
 Código:
 
-```
+```html
 <p>
  Texto normal y ...
  <basefont size="5" color="#0000ff">
@@ -132,7 +132,9 @@ Código:
 </p>
 ```
 
-Resultado: \<div style='border: solid silver 1px;'> \<p> Texto normal y ... \<basefont size="5" color="#0000ff"> Texto distinto. \</p> \</div>
+Resultado: 
+
+{{EmbedLiveSample}}
 
 ### Estilo predeterminado
 

@@ -10,7 +10,7 @@ translation_of: Web/CSS/transition-property
 ---
 {{CSSRef("CSS Transitions")}}
 
-La propiedad CSS **`transition-property` **se usa para definir los nombres de las propiedades CSS en las que el efecto de la transición debe aplicarse.
+La propiedad CSS **`transition-property`** se usa para definir los nombres de las propiedades CSS en las que el efecto de la transición debe aplicarse.
 
 ```css
 /* Keyword values */

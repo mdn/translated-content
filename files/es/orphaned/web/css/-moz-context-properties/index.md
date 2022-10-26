@@ -8,7 +8,7 @@ original_slug: Web/CSS/-moz-context-properties
 
 > **Nota:** Este recurso esta disponible desde Firefox 55, pero solamente es compatible con imagenes SVG cargadas via `chrome://` o `resource://` URLs. Para experimentar con la caracteristica SVG en la web, es necesario poner `svg.context-properties.content.enabled` en `true`.
 
-Si mencionas una imagen SVG en una pagina web({{htmlelement("img")}} como elemento o como fondo de pagina), la imagen SVG puede coordinarse con el elemento incrustado(su contexto) para que la imagen adopte las propiedades puestas en el elemento incrustado. Para hacer esto, el elemento incrustado necesita listar las propiedades que deben estar disponibles para la imagen listadolas como valores de la propiedad**`-moz-context-properties`**, y la imagen necesita optar a usar esas propiedades utilizando valores tales como el valor de `context-fill`.
+Si mencionas una imagen SVG en una pagina web({{htmlelement("img")}} como elemento o como fondo de pagina), la imagen SVG puede coordinarse con el elemento incrustado(su contexto) para que la imagen adopte las propiedades puestas en el elemento incrustado. Para hacer esto, el elemento incrustado necesita listar las propiedades que deben estar disponibles para la imagen listadolas como valores de la propiedad **`-moz-context-properties`**, y la imagen necesita optar a usar esas propiedades utilizando valores tales como el valor de `context-fill`.
 
 {{cssinfo}}
 
