@@ -22,7 +22,7 @@ Cookie 曾一度用于客户端数据的存储，因当时并没有其它合适�
 
 ## 创建 Cookie
 
-服务器收到 HTTP 请求后，服务器可以在响应头里面添加一个或多个 {{HTTPHeader("Set-Cookie")}} 选项。浏览器收到响应后通常会保存下 Cookie，并将其放在 HTTP {{HTTPHeader("Cookie")}} 标头内，向同一服务器发出请求时一起发送。你可以指定一个过期日期或者时间段之后，不能发送 cookie。你也可以对指定的域和路径设置额外的限制，以限制 cookie 发送的位置。关于下面提到的头部属性的详细信息，请参考 {{HTTPHeader("Set-Cookie")}} 文章。
+服务器收到 HTTP 请求后，服务器可以在响应标头里面添加一个或多个 {{HTTPHeader("Set-Cookie")}} 选项。浏览器收到响应后通常会保存下 Cookie，并将其放在 HTTP {{HTTPHeader("Cookie")}} 标头内，向同一服务器发出请求时一起发送。你可以指定一个过期日期或者时间段之后，不能发送 cookie。你也可以对指定的域和路径设置额外的限制，以限制 cookie 发送的位置。关于下面提到的头部属性的详细信息，请参考 {{HTTPHeader("Set-Cookie")}} 文章。
 
 ### `Set-Cookie` 和 `Cookie` 标头
 
