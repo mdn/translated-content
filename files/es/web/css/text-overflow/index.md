@@ -26,7 +26,7 @@ Cada valor se especificará como una de las siguientes opciones:
 
 - Una palabra clave: [`clip`](#clip), [`ellipsis`](#ellipsis), [`fade`](#fade)
 - La función [`fade()`](<#fade( \<length\> | \<percentage\> )>), que recibe {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} para controlar la distancia de desvanecimiento
-- Un [`<string>`](#<string>).
+- Un [`<string>`](#string).
 
 ### Values
 
@@ -127,7 +127,7 @@ p {
             overflow: visible;
           "
         >
-          <span style="">1234567890</span>
+          1234567890
         </div>
       </td>
       <td style="font-family: monospace">0987654321</td>
@@ -140,7 +140,7 @@ p {
             overflow: visible;
           "
         >
-          <span style="">1234567890</span>
+          1234567890
         </div>
       </td>
     </tr>
@@ -184,7 +184,7 @@ p {
             text-overflow: clip;
           "
         >
-          <span style="">1234567890</span>
+          1234567890
         </div>
       </td>
     </tr>
@@ -194,7 +194,7 @@ p {
       <td style="direction: ltr"><div style="">123456</div></td>
       <td style="font-family: monospace">54321</td>
       <td style="direction: rtl">
-        <div style=""><span style="">1234567890</span></div>
+        <div style="">1234567890</div>
       </td>
     </tr>
     <tr>
@@ -210,7 +210,7 @@ p {
             text-overflow: ellipsis;
           "
         >
-          <span style="">1234567890</span>
+          1234567890
         </div>
       </td>
       <td style="font-family: monospace">…4321</td>
@@ -224,7 +224,7 @@ p {
             text-overflow: ellipsis;
           "
         >
-          <span style="">1234567890</span>
+          1234567890
         </div>
       </td>
     </tr>
@@ -232,11 +232,11 @@ p {
       <td><code>text-overflow: '.'</code></td>
       <td style="font-family: monospace">1234.</td>
       <td style="direction: ltr">
-        <div style=""><span style="">1234567890</span></div>
+        <div style="">1234567890</div>
       </td>
       <td style="font-family: monospace">.4321</td>
       <td style="direction: rtl">
-        <div style=""><span style="">1234567890</span></div>
+        <div style="">1234567890</div>
       </td>
     </tr>
     <tr>
@@ -252,7 +252,7 @@ p {
             text-overflow: clip clip;
           "
         >
-          <span style="">1234567890</span>
+          1234567890
         </div>
       </td>
       <td style="font-family: monospace">654321</td>
@@ -266,7 +266,7 @@ p {
             text-overflow: clip clip;
           "
         >
-          <span style="">1234567890</span>
+          1234567890
         </div>
       </td>
     </tr>
@@ -283,7 +283,7 @@ p {
             text-overflow: clip ellipsis;
           "
         >
-          <span style="">1234567890</span>
+          1234567890
         </div>
       </td>
       <td style="font-family: monospace">6543…</td>
@@ -297,7 +297,7 @@ p {
             text-overflow: clip ellipsis;
           "
         >
-          <span style="">1234567890</span>
+          1234567890
         </div>
       </td>
     </tr>
@@ -305,11 +305,11 @@ p {
       <td><code>text-overflow: clip '.'</code></td>
       <td style="font-family: monospace">1234.</td>
       <td style="direction: ltr">
-        <div style=""><span style="">1234567890</span></div>
+        <div style="">1234567890</div>
       </td>
       <td style="font-family: monospace">6543.</td>
       <td style="direction: rtl">
-        <div style=""><span style="">1234567890</span></div>
+        <div style="">1234567890</div>
       </td>
     </tr>
     <tr>
@@ -325,7 +325,7 @@ p {
             text-overflow: ellipsis clip;
           "
         >
-          <span style="">1234567890</span>
+          1234567890
         </div>
       </td>
       <td style="font-family: monospace">…4321</td>
@@ -339,7 +339,7 @@ p {
             text-overflow: ellipsis clip;
           "
         >
-          <span style="">1234567890</span>
+          1234567890
         </div>
       </td>
     </tr>
@@ -356,7 +356,7 @@ p {
             text-overflow: ellipsis ellipsis;
           "
         >
-          <span style="">1234567890</span>
+          1234567890
         </div>
       </td>
       <td style="font-family: monospace">…43…</td>
@@ -370,7 +370,7 @@ p {
             text-overflow: ellipsis ellipsis;
           "
         >
-          <span style="">1234567890</span>
+          1234567890
         </div>
       </td>
     </tr>
@@ -378,44 +378,44 @@ p {
       <td><code>text-overflow: ellipsis '.'</code></td>
       <td style="font-family: monospace">…34.</td>
       <td style="direction: ltr">
-        <div style=""><span style="">1234567890</span></div>
+        <div style="">1234567890</div>
       </td>
       <td style="font-family: monospace">…43.</td>
       <td style="direction: rtl">
-        <div style=""><span style="">1234567890</span></div>
+        <div style="">1234567890</div>
       </td>
     </tr>
     <tr>
       <td><code>text-overflow: ',' clip</code></td>
       <td style="font-family: monospace">,3456</td>
       <td style="direction: ltr">
-        <div style=""><span style="">1234567890</span></div>
+        <div style="">1234567890</div>
       </td>
       <td style="font-family: monospace">,4321</td>
       <td style="direction: rtl">
-        <div style=""><span style="">1234567890</span></div>
+        <div style="">1234567890</div>
       </td>
     </tr>
     <tr>
       <td><code>text-overflow: ',' ellipsis</code></td>
       <td style="font-family: monospace">,34…</td>
       <td style="direction: ltr">
-        <div style=""><span style="">1234567890</span></div>
+        <div style="">1234567890</div>
       </td>
       <td style="font-family: monospace">,43…</td>
       <td style="direction: rtl">
-        <div style=""><span style="">1234567890</span></div>
+        <div style="">1234567890</div>
       </td>
     </tr>
     <tr>
       <td><code>text-overflow: ',' '.'</code></td>
       <td style="font-family: monospace">,34.</td>
       <td style="direction: ltr">
-        <div style=""><span style="">1234567890</span></div>
+        <div style="">1234567890</div>
       </td>
       <td style="font-family: monospace">,53.</td>
       <td style="direction: rtl">
-        <div style=""><span style="">1234567890</span></div>
+        <div style="">1234567890</div>
       </td>
     </tr>
   </tbody>

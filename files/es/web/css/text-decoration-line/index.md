@@ -45,7 +45,7 @@ text-decoration-line: unset;
   - : Cada línea del texto lleva una línea atravesando por en medio del mismo.
 - `blink {{deprecated_inline}}`
   - : El texto parpadea (se alterna entre visible e invisible). Según los ajustes del agente usuario, el texto puede simplemente no parpadear. Este valor está en **desuso**, en favor de las [Animaciones](/es/docs/Web/CSS/animation).
-- `-moz-anchor-decoration `{{non-standard_inline}}
+- `-moz-anchor-decoration`{{non-standard_inline}}
   - : El texto es decorado con el estilo de un ancla; no adecuado para contenido web.
 
 ### Sintaxis formal

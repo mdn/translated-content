@@ -110,7 +110,7 @@ Específica una matriz de transformación 2D compuesta por seis valores a especi
 
 - [Ejemplo de transformación general de SVG](/es/docs/Web/SVG/Attribute/transform#General_Transformation)
 - [Ejemplos de transformación lineal de matrices](http://en.wikipedia.org/wiki/Linear_transformation#Examples_of_linear_transformation_matrices) Wikipedia
-- [Transformación de coordenadas de matrices ](http://www.mathamazement.com/Lessons/Pre-Calculus/08_Matrices-and-Determinants/coordinate-transformation-matrices.html)mathamazement.com
+- [Transformación de coordenadas de matrices](http://www.mathamazement.com/Lessons/Pre-Calculus/08_Matrices-and-Determinants/coordinate-transformation-matrices.html)mathamazement.com
 - [Filtro matriz de Microsoft](<http://msdn.microsoft.com/en-us/library/ms533014(VS.85,loband).aspx>) MSDN
 
 ### rotate
@@ -207,7 +207,7 @@ transform:  translate(tx[, ty]);     /* ej. translate(50px, 100px) */
 
 Especifica una tanslación 2D dada por el vector **\[tx, ty]**. Si **`ty` **no es específicada, se asumirá que su valor es cero.
 
-`Cada `[`translation-value`](/es/docs/translation-value) puede ser un valor de [`longuitud`](/en-US/docs/CSS/length "/en-US/docs/CSS/length") o un valor de [`porcentaje`](/en-US/docs/CSS/percentage "/en-US/docs/CSS/percentage").
+`Cada`[`translation-value`](/es/docs/translation-value) puede ser un valor de [`longuitud`](/en-US/docs/CSS/length "/en-US/docs/CSS/length") o un valor de [`porcentaje`](/en-US/docs/CSS/percentage "/en-US/docs/CSS/percentage").
 
 ### translateX
 
@@ -238,6 +238,6 @@ Translada un elemento a lo largo del eje Y.
 
 ## Véase También
 
-- [Uso de transformaciones ](/es/docs/CSS/Using_CSS_transforms)[CSS](/es/docs/CSS/Using_CSS_transforms)
+- [Uso de transformaciones](/es/docs/CSS/Using_CSS_transforms)[CSS](/es/docs/CSS/Using_CSS_transforms)
 - Tipos de datos [\<translation-value>](/es/docs/translation-value)
-- [Complemento de transformación 2D para jQuery ](http://plugins.jquery.com/project/jquery-transform)en navegador-cruzado.
+- [Complemento de transformación 2D para jQuery](http://plugins.jquery.com/project/jquery-transform)en navegador-cruzado.

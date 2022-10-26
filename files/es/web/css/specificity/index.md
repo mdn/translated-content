@@ -22,11 +22,11 @@ La especificidad es un peso (importancia o valor) que se le asigna a una declara
 
 La siguiente lista de tipos de selectores incrementa en función de la especificidad:
 
-1.  [Selectores de tipo](/es/docs/Web/CSS/Type_selectors) (p.e., `h1`) y pseudo-elementos (p.e., `::before`).
-2.  [Selectores de clase](/es/docs/Web/CSS/Class_selectors) (p.e., `.example`), selectores de atributos (p.e., `[type="radio"]`) y pseudo-clases (p.e., `:hover`).
-3.  [Selectores de ID](/es/docs/Web/CSS/ID_selectors) (p.e., `#example`).
+1. [Selectores de tipo](/es/docs/Web/CSS/Type_selectors) (p.e., `h1`) y pseudo-elementos (p.e., `::before`).
+2. [Selectores de clase](/es/docs/Web/CSS/Class_selectors) (p.e., `.example`), selectores de atributos (p.e., `[type="radio"]`) y pseudo-clases (p.e., `:hover`).
+3. [Selectores de ID](/es/docs/Web/CSS/ID_selectors) (p.e., `#example`).
 
-El selector universal ({{CSSxRef("Universal_selectors", "*")}}), los combinadores ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, ['` `'](/es/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) y la pseudo-clase de negación ({{CSSxRef(":not", ":not()")}}) no tienen efecto sobre la especificidad. (Sin embargo, los selectores declarados _dentro de_ `:not()` si lo tienen.)
+El selector universal ({{CSSxRef("Universal_selectors", "*")}}), los combinadores ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, ['``'](/es/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) y la pseudo-clase de negación ({{CSSxRef(":not", ":not()")}}) no tienen efecto sobre la especificidad. (Sin embargo, los selectores declarados _dentro de_ `:not()` si lo tienen.)
 
 Para más información, visita ["Especificidad" en "Cascada y herencia"](/es/docs/Learn/CSS/Building_blocks/Cascada_y_herencia#Especificidad), también puedes visitar: [https://specifishity.com](https://specifishity.com/)
 
@@ -45,8 +45,8 @@ Cuando se emplea `important` en una declaración de estilo, esta declaración so
 
 **En lugar de usar `!important`, considera:**
 
-1.  Hacer un mejor uso de las propiedades en cascada de CSS.
-2.  Usar reglas más específicas. Indicando uno o más elementos antes del elemento que estás seleccionando, la regla se vuelve más específica y gana mayor prioridad:
+1. Hacer un mejor uso de las propiedades en cascada de CSS.
+2. Usar reglas más específicas. Indicando uno o más elementos antes del elemento que estás seleccionando, la regla se vuelve más específica y gana mayor prioridad:
 
     ```html
     <div id="test">
@@ -60,7 +60,7 @@ Cuando se emplea `important` en una declaración de estilo, esta declaración so
     span { color: red; }
     ```
 
-3.  Como un caso especial sin sentido para (2), duplicar selectores simples para aumentar la especificidad cuando no tiene nada más que especificar
+3. Como un caso especial sin sentido para (2), duplicar selectores simples para aumentar la especificidad cuando no tiene nada más que especificar
 
     ```
     #myId#myId span { color: yellow; }
@@ -71,8 +71,8 @@ Cuando se emplea `important` en una declaración de estilo, esta declaración so
 
 ##### A) Sobrescribiendo los estilos en linea
 
-1.  Tienes un archivo CSS que establece aspectos visuales de tu sitio de manera global.
-2.  Tú (u otros) usan estilos inline en los propios elementos. Esto es considerado como una muy mala práctica.
+1. Tienes un archivo CSS que establece aspectos visuales de tu sitio de manera global.
+2. Tú (u otros) usan estilos inline en los propios elementos. Esto es considerado como una muy mala práctica.
 
 En este caso, puedes establecer ciertos estilos en tu archivo CSS global como importantes, superando así los estilos en línea configurados directamente en los elementos.
 
@@ -208,9 +208,9 @@ Con el siguiente HTML:
 
 Se mostrará como:
 
-# ¡Aquí va un título!
+{{EmbedLiveSample}}
 
-Porque las dos declaraciones tienen un resultado de tipo de selector igual, pero el selector `html h1 `se ha declarado después.
+Porque las dos declaraciones tienen un resultado de tipo de selector igual, pero el selector `html h1`se ha declarado después.
 
 ### Declaración directa vs estilos heredados
 
@@ -237,7 +237,7 @@ Con el siguiente HTML:
 
 Se verá así:
 
-# ¡Aquí va un título!
+{{EmbedLiveSample}}
 
 Porque el selector `h1` selecciona el objetivo de manera específica, pero el color verde simplemente es heredad de su padre.
 
