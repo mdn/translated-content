@@ -11,24 +11,17 @@ browser-compat: api.HTMLElement.dragover_event
 
 El evento `dragover` se activa cuando un elemento o texto se arrastra sobre un objetivo de caída válido (cada cientos de milisegundos).
 
-El evento se activa en la caída al objetivo.
+El evento se activa en el objetivo de caída
 
 ## Sintaxis
 
-Usar el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}} , o establecer una propiedad de controlador de eventos.
+Usar el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}} , o establecer una propiedad de manejador de eventos.
 
 ```js
 addEventListener('dragover', (event) => {});
 
 ondragover = (event) => { };
 ```
-
-## Propiedades del Evento
-
-_En adición a las propiedades listadas, a continuación las propiedades de la interfaz principal, {{domxref("Event")}}, están disponibles._
-
-- {{domxref("DragEvent/dataTransfer", "DragEvent.dataTransfer")}} {{ReadOnlyInline}}
-  - : Los datos que se transfieren durante una interacción de arrastrar y soltar.
 
 ## Tipo de Evento
 
@@ -60,35 +53,28 @@ Para un ejemplo más completo de drag y drop, ver la página del evento [`drag`]
 ### HTML
 
 ```html
-    <div class="dropzone">
-      <div
-        id="draggable"
-        draggable="true"
-        ondragstart="event.dataTransfer.setData('text/plain',null)"
-      >
-        Este div es arrastrable
-      </div>
-    </div>
-    <div class="dropzone"></div>
-    <div class="dropzone"></div>
-    <div class="dropzone"></div>
+<div class="dropzone">
+  <div id="draggable" draggable="true">Este div es arrastrable</div>
+</div>
+<div class="dropzone" id="droptarget"></div>
 ```
 
 ### CSS
 
 ```css
+body {
+  /* Impedir que el usuario seleccione texto en el ejemplo */
+  user-select: none;
+}
 #draggable {
-  width: 200px;
-  height: 20px;
   text-align: center;
   background: white;
 }
-
 .dropzone {
-  width: 220px;
-  height: 40px;
+  width: 200px;
+  height: 20px;
   background: blueviolet;
-  margin-bottom: 10px;
+  margin: 10px;
   padding: 10px;
 }
 ```
@@ -96,77 +82,26 @@ Para un ejemplo más completo de drag y drop, ver la página del evento [`drag`]
 ### JavaScript
 
 ```js
-var dragged;
-
-/* eventos disparados en el objetivo de arrastre */
-document.addEventListener('drag', function (event) {}, false);
-
-document.addEventListener(
-  'dragstart',
-  function (event) {
-    // almacenar una ref. en el elemento arrastrado
-    dragged = event.target;
-    // hacerlo medio transparente
-    event.target.style.opacity = 0.5;
-  },
-  false
-);
-
-document.addEventListener(
-  'dragend',
-  function (event) {
-    // restablecer la transparencia
-    event.target.style.opacity = '';
-  },
-  false
-);
-
-/* eventos disparados en el objetivo de caida */
-document.addEventListener(
-  'dragover',
-  function (event) {
-    // impedir por defecto que se permita la caída
-    event.preventDefault();
-  },
-  false
-);
-
-document.addEventListener(
-  'dragenter',
-  function (event) {
-    // resaltar el posible objetivo de caída cuando el elemento arrastrable entra en él
-    if (event.target.className == 'dropzone') {
-      event.target.style.background = 'purple';
-    }
-  },
-  false
-);
-
-document.addEventListener(
-  'dragleave',
-  function (event) {
-    // restablecer el fondo del posible objetivo de caída cuando el elemento arrastrable lo abandona
-    if (event.target.className == 'dropzone') {
-      event.target.style.background = '';
-    }
-  },
-  false
-);
-
-document.addEventListener(
-  'drop',
-  function (event) {
-    // evitar la acción por defecto (abrir como enlace para algunos elementos)
-    event.preventDefault();
-    // mover el elemento arrastrado al objetivo de caída seleccionado
-    if (event.target.className == 'dropzone') {
-      event.target.style.background = '';
-      dragged.parentNode.removeChild(dragged);
-      event.target.appendChild(dragged);
-    }
-  },
-  false
-);
+let dragged = null;
+const source = document.getElementById("draggable");
+source.addEventListener("dragstart", (event) => {
+  // almacenar una ref. en el elemento arrastrado
+  dragged = event.target;
+});
+const target = document.getElementById("droptarget");
+target.addEventListener("dragover", (event) => {
+  // impedir el valor predeterminado para permitir soltar
+  event.preventDefault();
+});
+target.addEventListener("drop", (event) => {
+  // impedir la acción predeterminada (abrir como enlace para algunos elementos)
+  event.preventDefault();
+  // mover el elemento arrastrado al destino de colocación seleccionado
+  if (event.target.className === "dropzone") {
+    dragged.parentNode.removeChild(dragged);
+    event.target.appendChild(dragged);
+  }
+});
 ```
 
 #### Resultado
