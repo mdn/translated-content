@@ -366,116 +366,9 @@ const myArray = myRe.exec('cdbBdbsbz')
   </tbody>
 </table>
 
-## 构造器
-
-- {{jsxref("Array/Array", "Array()")}}
-  - : 创建一个新的 `Array` 对象
-
-## 静态属性
-
-- {{jsxref("Array/@@species", "get Array[@@species]")}}
-  - : 返回 Array 的构造函数
-
-## 静态方法
-
-- {{jsxref("Array.from()")}}
-  - : 从类数组对象或者可迭代对象中创建一个新的数组实例
-- {{jsxref("Array.isArray()")}}
-  - : 用来判断某个变量是否是一个数组对象
-- {{jsxref("Array.of()")}}
-  - : 根据一组参数来创建新的数组实例，支持任意的参数数量和类型
-
-## 实例属性
-
-- {{jsxref("Array.prototype.length")}}
-  - : 数组中的元素个数
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
-  - : 包含了所有 ES2015 (ES6) 中新定义的、且并未被更早的 ECMAScript 标准收纳的属性名。这些属性被排除在由 [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 语句绑定的环境中
-
-## 实例方法
-
-- {{jsxref("Array.prototype.at()")}}{{Experimental_Inline}}
-  - : Returns the array item at the given index. Accepts negative integers, which count back from the last item.
-- {{jsxref("Array.prototype.concat()")}}
-  - : 用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组
-- {{jsxref("Array.prototype.copyWithin()")}}
-  - : 浅复制数组的一部分到同一数组中的另一个位置，并返回它，不会改变原数组的长度
-- {{jsxref("Array.prototype.entries()")}}
-  - : 返回一个新的 `Array Iterator` 对象，该对象包含数组中每个索引的键/值对
-- {{jsxref("Array.prototype.every()")}}
-  - : 测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值
-- {{jsxref("Array.prototype.fill()")}}
-  - : 用一个固定值填充一个数组中从起始索引到终止索引内的全部元素
-- {{jsxref("Array.prototype.filter()")}}
-  - : 创建一个新数组，其包含通过所提供函数实现的测试的所有元素
-- {{jsxref("Array.prototype.find()")}}
-  - : 返回数组中满足提供的测试函数的第一个元素的值。否则返回 `undefined`
-- {{jsxref("Array.prototype.findIndex()")}}
-  - : 返回数组中满足提供的测试函数的第一个元素的**索引**。若没有找到对应元素则返回 `-1`
-- {{jsxref("Array.prototype.flat()")}}
-  - : 按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回
-- {{jsxref("Array.prototype.flatMap()")}}
-  - : 使用映射函数映射每个元素，然后将结果压缩成一个新数组
-- {{jsxref("Array.prototype.forEach()")}}
-  - : 对数组的每个元素执行一次给定的函数
-- {{jsxref("Array.prototype.includes()")}}
-  - : 判断一个数组是否包含一个指定的值，如果包含则返回 `true`，否则返回 `false`
-- {{jsxref("Array.prototype.indexOf()")}}
-  - : 返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回 `-1`
-- {{jsxref("Array.prototype.join()")}}
-  - : 将一个数组的所有元素连接成一个字符串并返回这个字符串
-- {{jsxref("Array.prototype.keys()")}}
-  - : 返回一个包含数组中每个索引键的 `Array Iterator` 对象
-- {{jsxref("Array.prototype.lastIndexOf()")}}
-  - : 返回指定元素在数组中的最后一个的索引，如果不存在则返回 `-1`
-- {{jsxref("Array.prototype.map()")}}
-  - : 返回一个新数组，其结果是该数组中的每个元素是调用一次提供的函数后的返回值
-- {{jsxref("Array.prototype.pop()")}}
-  - : 从数组中删除最后一个元素，并返回该元素的值
-- {{jsxref("Array.prototype.push()")}}
-  - : 将一个或多个元素添加到数组的末尾，并返回该数组的新长度
-- {{jsxref("Array.prototype.reduce()")}}
-  - : 对数组中的每个元素执行一个由您提供的 reducer 函数（升序执行），将其结果汇总为单个返回值
-- {{jsxref("Array.prototype.reduceRight()")}}
-  - : 接受一个函数作为累加器（accumulator）和数组的每个值（从右到左）将其减少为单个值
-- {{jsxref("Array.prototype.reverse()")}}
-  - : 将数组中元素的位置颠倒，并返回该数组。该方法会改变原数组
-- {{jsxref("Array.prototype.shift()")}}
-  - : 从数组中删除第一个元素，并返回该元素的值
-- {{jsxref("Array.prototype.slice()")}}
-  - : 提取源数组的一部分并返回一个新数组
-- {{jsxref("Array.prototype.some()")}}
-  - : 测试数组中是不是至少有一个元素通过了被提供的函数测试
-- {{jsxref("Array.prototype.sort()")}}
-  - : 对数组元素进行原地排序并返回此数组
-- {{jsxref("Array.prototype.splice()")}}
-  - : 通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容
-- {{jsxref("Array.prototype.toLocaleString()")}}
-  - : 返回一个字符串表示数组中的元素。数组中的元素将使用各自的 {{jsxref("Object.prototype.toLocaleString()")}} 方法转成字符串
-- {{jsxref("Array.prototype.toString()")}}
-  - : 返回一个字符串表示指定的数组及其元素。数组中的元素将使用各自的 {{jsxref("Object.prototype.toString()")}} 方法转成字符串
-- {{jsxref("Array.prototype.unshift()")}}
-  - : 将一个或多个元素添加到数组的头部，并返回该数组的新长度
-- {{jsxref("Array.prototype.values()")}}
-  - : 返回一个新的 `Array Iterator 对象`，该对象包含数组每个索引的值
-- {{jsxref("Array.prototype.@@iterator()", "Array.prototype[@@iterator]()")}}
-  - : 返回一个新的 `Array Iterator 对象`，该对象包含数组每个索引的值
-
-## 示例
+## 其它示例
 
 ### 创建数组
-
-下面这个例子创建了一个长度为 `0` 的数组 `msgArray`，然后给 `msgArray[0]` 和 `msgArray[99]` 赋值，从而导致数组长度变为了 `100`。
-
-```js
-let msgArray = []
-msgArray[0] = 'Hello'
-msgArray[99] = 'world'
-
-if (msgArray.length === 100) {
-  console.log('The length is 100.')
-}
-```
 
 ### 创建二维数组
 
@@ -559,7 +452,7 @@ console.table(values)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - JavaScript 指南：
 
