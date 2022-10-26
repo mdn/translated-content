@@ -10,231 +10,239 @@ tags:
 translation_of: Web/CSS/Specificity
 original_slug: Web/CSS/Especificidad
 ---
-<p>La <strong>especificidad</strong><span> es la manera mediante la cual los navegadores deciden qué valores de una propiedad CSS son más relevantes para un elemento y, por lo tanto, serán aplicados. La especificidad está basada en las reglas de coincidencia que están compuestas por diferentes tipos de </span><a href="https://developer.mozilla.org/es/CSS/CSS_Reference#Selectors">selectores CSS</a><span>.</span></p>
+La **especificidad** es la manera mediante la cual los navegadores deciden qué valores de una propiedad CSS son más relevantes para un elemento y, por lo tanto, serán aplicados. La especificidad está basada en las reglas de coincidencia que están compuestas por diferentes tipos de [selectores CSS](https://developer.mozilla.org/es/CSS/CSS_Reference#Selectors).
 
-<h2 id="¿Cómo_se_calcula">¿Cómo se calcula?</h2>
+## ¿Cómo se calcula?
 
-<p>La especificidad es un peso (importancia o valor) que se le asigna a una declaración CSS dada, determinada por el número correspondiente de cada <a href="https://developer.mozilla.org/es/docs/Web/CSS/Especificidad#Tipos_de_selectores">tipo de selector</a>. Cuando varias declaraciones tienen igual especificidad, se aplicará al elemento la última declaración encontrada en el CSS. La especificidad solo se aplica cuando el mismo elemento es objetivo de múltiples declaraciones. Según las reglas de CSS, en caso de que un elemento sea objeto de una <a href="https://developer.mozilla.org/es/docs/Web/CSS/Especificidad#Elementos_objetivos_de_una_declaración_directa_vs_estilos_heredados">declaración directa</a>, esta siempre tendrá preferencia sobre las reglas heredadas de su ancestro.</p>
+La especificidad es un peso (importancia o valor) que se le asigna a una declaración CSS dada, determinada por el número correspondiente de cada [tipo de selector](/es/docs/Web/CSS/Especificidad#Tipos_de_selectores). Cuando varias declaraciones tienen igual especificidad, se aplicará al elemento la última declaración encontrada en el CSS. La especificidad solo se aplica cuando el mismo elemento es objetivo de múltiples declaraciones. Según las reglas de CSS, en caso de que un elemento sea objeto de una [declaración directa](/es/docs/Web/CSS/Especificidad#Elementos_objetivos_de_una_declaración_directa_vs_estilos_heredados), esta siempre tendrá preferencia sobre las reglas heredadas de su ancestro.
 
-<div class="note">
-<p><strong>Nota:</strong> La <u>proximidad de elementos</u> en el árbol del documento no tiene efecto en la especificidad.</p>
-</div>
+> **Nota:** La **proximidad de elementos** en el árbol del documento no tiene efecto en la especificidad.
 
-<h3 id="Tipos_de_selectores">Tipos de selectores</h3>
+### Tipos de selectores
 
-<p>La siguiente lista de tipos de selectores incrementa en función de la especificidad:</p>
+La siguiente lista de tipos de selectores incrementa en función de la especificidad:
 
-<ol>
- <li><a href="/es/docs/Web/CSS/Type_selectors">Selectores de tipo</a> (p.e., <code>h1</code>) y pseudo-elementos (p.e., <code>::before</code>).</li>
- <li><a href="/es/docs/Web/CSS/Class_selectors">Selectores de clase</a> (p.e., <code>.example</code>), selectores de atributos (p.e., <code>[type="radio"]</code>) y pseudo-clases (p.e., <code>:hover</code>).</li>
- <li><a href="/es/docs/Web/CSS/ID_selectors">Selectores de ID</a> (p.e., <code>#example</code>).</li>
-</ol>
+1.  [Selectores de tipo](/es/docs/Web/CSS/Type_selectors) (p.e., `h1`) y pseudo-elementos (p.e., `::before`).
+2.  [Selectores de clase](/es/docs/Web/CSS/Class_selectors) (p.e., `.example`), selectores de atributos (p.e., `[type="radio"]`) y pseudo-clases (p.e., `:hover`).
+3.  [Selectores de ID](/es/docs/Web/CSS/ID_selectors) (p.e., `#example`).
 
-<p>El selector universal ({{CSSxRef("Universal_selectors", "*")}}), los combinadores ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, <a href="/en-US/docs/Web/CSS/Descendant_combinator">'<code> </code>'</a>, {{CSSxRef("Column_combinator", "||")}}) y la pseudo-clase de negación ({{CSSxRef(":not", ":not()")}}) no tienen efecto sobre la especificidad. (Sin embargo, los selectores declarados <em>dentro de </em><code>:not()</code> si lo tienen.)</p>
+El selector universal ({{CSSxRef("Universal_selectors", "*")}}), los combinadores ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, ['` `'](/es/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) y la pseudo-clase de negación ({{CSSxRef(":not", ":not()")}}) no tienen efecto sobre la especificidad. (Sin embargo, los selectores declarados _dentro de_ `:not()` si lo tienen.)
 
-<p>Para más información, visita <a href="/es/docs/Learn/CSS/Building_blocks/Cascada_y_herencia#Especificidad">"Especificidad" en "Cascada y herencia"</a>, también puedes visitar: <a href="https://specifishity.com/">https://specifishity.com</a></p>
+Para más información, visita ["Especificidad" en "Cascada y herencia"](/es/docs/Learn/CSS/Building_blocks/Cascada_y_herencia#Especificidad), también puedes visitar: [https://specifishity.com](https://specifishity.com/)
 
-<p>Los estilos <em>inline</em> añadidos a un elemento (p.e., <code>style="font-weight:bold"</code>) siempre sobrescriben a cualquier estilo escrito en hojas de estilo externas, por lo que se puede decir que tienen la mayor especificidad.</p>
+Los estilos _inline_ añadidos a un elemento (p.e., `style="font-weight:bold"`) siempre sobrescriben a cualquier estilo escrito en hojas de estilo externas, por lo que se puede decir que tienen la mayor especificidad.
 
-<h3 id="La_excepción_!important">La excepción !important</h3>
+### La excepción !important
 
-<p>Cuando se emplea <code>important</code> en una declaración de estilo, esta declaración sobrescribe a cualquier otra. Aunque técnicamente <code><font face="Courier New">!important</font></code>  no tiene nada que ver con especificidad, interactúa directamente con esta. Sin embargo, el uso de <code><font face="Courier New">!important</font></code> es una <strong>mala práctica</strong> y debería evitarse porque hace que el código sea más difícil de depurar al romper la <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade">cascada (artículo en inglés)</a><strong><em> </em></strong>natural de las hojas de estilo. Cuando dos declaraciones en conflicto con el <code><font face="Courier New">!important</font></code> son aplicadas al mismo elemento, se aplicará la declaración con mayor especificidad. </p>
+Cuando se emplea `important` en una declaración de estilo, esta declaración sobrescribe a cualquier otra. Aunque técnicamente `!important` no tiene nada que ver con especificidad, interactúa directamente con esta. Sin embargo, el uso de `!important` es una **mala práctica** y debería evitarse porque hace que el código sea más difícil de depurar al romper la [cascada (artículo en inglés)](/es/docs/Web/CSS/Cascade)**\_ \_**natural de las hojas de estilo. Cuando dos declaraciones en conflicto con el `!important` son aplicadas al mismo elemento, se aplicará la declaración con mayor especificidad.
 
-<p><strong>Algunas reglas de oro:</strong></p>
+**Algunas reglas de oro:**
 
-<ul>
- <li>Busca <strong>siempre</strong> una manera de emplear la especificidad antes de considerar el uso de <code><font face="Courier New">!important</font></code><font face="Courier New">.</font></li>
- <li>Usa <code><font face="Courier New">!important</font></code> <strong>solo </strong>en declaraciones específicas de CSS que sobrescriban CSS externo (de librerías externas como Bootstrap o normalize.css).</li>
- <li><strong>Nunca</strong> uses <code>!important</code> cuando estés intentando escribir un plugin/mashup.</li>
- <li><strong>Nunca</strong> uses <code>!important</code> en todo el código CSS.</li>
-</ul>
+- Busca **siempre** una manera de emplear la especificidad antes de considerar el uso de `!important`.
+- Usa `!important` **solo** en declaraciones específicas de CSS que sobrescriban CSS externo (de librerías externas como Bootstrap o normalize.css).
+- **Nunca** uses `!important` cuando estés intentando escribir un plugin/mashup.
+- **Nunca** uses `!important` en todo el código CSS.
 
-<p><strong>En lugar de usar <code>!important</code>, considera:</strong></p>
+**En lugar de usar `!important`, considera:**
 
-<ol>
- <li>Hacer un mejor uso de las propiedades en cascada de CSS.</li>
- <li>
-  <p>Usar reglas más específicas. Indicando uno o más elementos antes del elemento que estás seleccionando, la regla se vuelve más específica y gana mayor prioridad:</p>
+1.  Hacer un mejor uso de las propiedades en cascada de CSS.
+2.  Usar reglas más específicas. Indicando uno o más elementos antes del elemento que estás seleccionando, la regla se vuelve más específica y gana mayor prioridad:
 
-  <pre class="brush: html notranslate">&lt;div id="test"&gt;
-  &lt;span&gt;Text&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+    ```html
+    <div id="test">
+      <span>Text</span>
+    </div>
+    ```
 
-  <pre class="brush: css notranslate">div#test span { color: green; }
-div span { color: blue; }
-span { color: red; }</pre>
- </li>
- <li>Como un caso especial sin sentido para (2), duplicar selectores simples para aumentar la especificidad cuando no tiene nada más que especificar
-  <pre class="notranslate">#myId#myId span { color: yellow; }
-.myClass.myClass span { color: orange; }</pre>
- </li>
-</ol>
+    ```css
+    div#test span { color: green; }
+    div span { color: blue; }
+    span { color: red; }
+    ```
 
-<h4 id="Cómo_se_debería_usar_!important"><strong>Cómo se debería usar !important:</strong></h4>
+3.  Como un caso especial sin sentido para (2), duplicar selectores simples para aumentar la especificidad cuando no tiene nada más que especificar
 
-<h5 id="A_Sobrescribiendo_los_estilos_en_linea">A) Sobrescribiendo los estilos en linea</h5>
+    ```
+    #myId#myId span { color: yellow; }
+    .myClass.myClass span { color: orange; }
+    ```
 
-<ol>
- <li>Tienes un archivo CSS que establece aspectos visuales de tu sitio de manera global.</li>
- <li>Tú (u otros) usan estilos inline en los propios elementos. Esto es considerado como una muy mala práctica. </li>
-</ol>
+#### Cómo se debería usar !important:
 
-<p><span>En este caso, puedes establecer ciertos estilos en tu archivo CSS global como importantes, superando así los estilos en línea configurados directamente en los elementos. </span></p>
+##### A) Sobrescribiendo los estilos en linea
 
-<p>Ejemplo del mundo real: Algunos <strong>plugins jQuery</strong> muy mal escritos que usan estilos inline.</p>
+1.  Tienes un archivo CSS que establece aspectos visuales de tu sitio de manera global.
+2.  Tú (u otros) usan estilos inline en los propios elementos. Esto es considerado como una muy mala práctica.
 
-<p>B) Otro escenario:</p>
+En este caso, puedes establecer ciertos estilos en tu archivo CSS global como importantes, superando así los estilos en línea configurados directamente en los elementos.
 
-<pre class="default prettyprint prettyprinted notranslate"><code><span class="com">#someElement p {</span><span class="pln">
-    color</span><span class="pun">:</span><span class="pln"> blue</span><span class="pun">;</span><span class="pln">
-</span><span class="pun">}</span><span class="pln">
+Ejemplo del mundo real: Algunos **plugins jQuery** muy mal escritos que usan estilos inline.
 
-p</span><span class="pun">.</span><span class="pln">awesome </span><span class="pun">{</span><span class="pln">
-    color</span><span class="pun">:</span><span class="pln"> red</span><span class="pun">;</span><span class="pln">
-</span><span class="pun">}</span></code></pre>
+B) Otro escenario:
 
-<p>¿Cómo haces que los párrafos <code>awesome</code> se vuelvan siempre rojos, incluso los que se encuentren dentro de <code>#someElement</code>? Sin <code>!important</code>, la primera regla tendrá más especificidad y ganará a la segunda.</p>
+```
+#someElement p {
+    color: blue;
+}
 
-<h4 id="Cómo_sobrescribir_!important"><strong>Cómo sobrescribir !important</strong></h4>
+p.awesome {
+    color: red;
+}
+```
 
-<p>A) Simplemente añade otra regla CSS con <code>!important</code> y, o bien da al selector una especificidad mayor (añadiendo una etiqueta, id o clase al selector), o añadiendo una regla CSS con el mismo selector en un punto posterior al ya existente. Esto funciona porque en caso de empate en especificidad, la última regla prevalece.</p>
+¿Cómo haces que los párrafos `awesome` se vuelvan siempre rojos, incluso los que se encuentren dentro de `#someElement`? Sin `!important`, la primera regla tendrá más especificidad y ganará a la segunda.
 
-<p>Algunos ejemplos con una gran especificidad:</p>
+#### Cómo sobrescribir !important
 
-<pre class="default prettyprint prettyprinted notranslate"><code><span class="pln">table td    </span><span class="pun">{</span><span class="pln">height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50px</span><span class="pln"> </span><span class="pun">!</span><span class="pln">important</span><span class="pun">;}</span><span class="pln">
-</span><span class="pun">.</span><span class="pln">myTable td </span><span class="pun">{</span><span class="pln">height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50px</span><span class="pln"> </span><span class="pun">!</span><span class="pln">important</span><span class="pun">;}</span><span class="pln">
-</span><span class="com">#myTable td {height: 50px !important;}</span></code></pre>
+A) Simplemente añade otra regla CSS con `!important` y, o bien da al selector una especificidad mayor (añadiendo una etiqueta, id o clase al selector), o añadiendo una regla CSS con el mismo selector en un punto posterior al ya existente. Esto funciona porque en caso de empate en especificidad, la última regla prevalece.
 
-<p>B) O añade el mismo selector después de uno existente:</p>
+Algunos ejemplos con una gran especificidad:
 
-<pre class="default prettyprint prettyprinted notranslate"><code><span class="pln">td </span><span class="pun">{</span><span class="pln">height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50px</span><span class="pln"> </span><span class="pun">!</span><span class="pln">important</span><span class="pun">;}</span></code></pre>
+```
+table td    {height: 50px !important;}
+.myTable td {height: 50px !important;}
+#myTable td {height: 50px !important;}
+```
 
-<p>C) O reescribe la regla original para evitar el uso de <code>!important</code>.</p>
+B) O añade el mismo selector después de uno existente:
 
-<p><strong>Para más información, visita (en inglés): </strong></p>
+```
+td {height: 50px !important;}
+```
 
-<p><a href="http://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css">http://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css</a></p>
+C) O reescribe la regla original para evitar el uso de `!important`.
 
-<p><a href="http://stackoverflow.com/questions/9245353/what-does-important-in-css-mean">http://stackoverflow.com/questions/9245353/what-does-important-in-css-mean</a></p>
+**Para más información, visita (en inglés):**
 
-<p><a href="http://stackoverflow.com/questions/5701149/when-to-use-important-property-in-css">http://stackoverflow.com/questions/5701149/when-to-use-important-property-in-css</a></p>
+<http://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css>
 
-<p><a href="http://stackoverflow.com/questions/11178673/how-to-override-important">http://stackoverflow.com/questions/11178673/how-to-override-important</a></p>
+<http://stackoverflow.com/questions/9245353/what-does-important-in-css-mean>
 
-<p><a href="http://stackoverflow.com/questions/2042497/when-to-use-important-to-save-the-day-when-working-with-css">http://stackoverflow.com/questions/2042497/when-to-use-important-to-save-the-day-when-working-with-css</a></p>
+<http://stackoverflow.com/questions/5701149/when-to-use-important-property-in-css>
 
-<h3 id="La_excepción_not">La excepción <code>:not</code></h3>
+<http://stackoverflow.com/questions/11178673/how-to-override-important>
 
-<p>La pseudo-clase negación :<code>not</code> <em>no</em> es considerada una pseudo-clase para el cálculo de la especificidad. Pero los selectores colocados dentre de ella, si cuentan como selectores normales a la hora de determinar el valor de los <a href="https://developer.mozilla.org/es/docs/Web/CSS/Especificidad#Tipos_de_selectores">tipos de selectores</a>. </p>
+<http://stackoverflow.com/questions/2042497/when-to-use-important-to-save-the-day-when-working-with-css>
 
-<p>Aquí tienes un pedazo de CSS:</p>
+### La excepción `:not`
 
-<pre class="brush: css notranslate">div.outer p {
+La pseudo-clase negación :`not` _no_ es considerada una pseudo-clase para el cálculo de la especificidad. Pero los selectores colocados dentre de ella, si cuentan como selectores normales a la hora de determinar el valor de los [tipos de selectores](/es/docs/Web/CSS/Especificidad#Tipos_de_selectores).
+
+Aquí tienes un pedazo de CSS:
+
+```css
+div.outer p {
   color:orange;
 }
 div:not(.outer) p {
   color: lime;
 }
-</pre>
+```
 
-<p>cuando se usa con el siguiente HTML:</p>
+cuando se usa con el siguiente HTML:
 
-<pre class="brush: html notranslate">&lt;div class="outer"&gt;
-  &lt;p&gt;Esto está en el outer div.&lt;/p&gt;
-  &lt;div class="inner"&gt;
-    &lt;p&gt;Este texto está en el inner div.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="outer">
+  <p>Esto está en el outer div.</p>
+  <div class="inner">
+    <p>Este texto está en el inner div.</p>
+  </div>
+</div>
+```
 
-<p>Debería aparecer en pantalla como:</p>
+Debería aparecer en pantalla como:
 
-<p><span style="color: orange;">Esto está en el outer div<br>
- <br>
- <span><span style="color: lime;">Este texto está en el inner div</span></span></span></p>
+Esto está en el outer div
 
-<h3 id="Especificidad_basada_en_la_forma">Especificidad basada en la forma</h3>
+Este texto está en el inner div
 
-<p>La especificidad está basada en la forma de un selector. En el siguiente caso, el selector <code>*[id="foo"]</code> cuenta como un atributo selector para la determinación de la especificidad de un selector, incluso cuando se selecciona un ID.</p>
+### Especificidad basada en la forma
 
-<p>Las siguientes declaraciones de estilo:</p>
+La especificidad está basada en la forma de un selector. En el siguiente caso, el selector `*[id="foo"]` cuenta como un atributo selector para la determinación de la especificidad de un selector, incluso cuando se selecciona un ID.
 
-<pre class="brush: css notranslate">*#foo {
+Las siguientes declaraciones de estilo:
+
+```css
+*#foo {
   color: green;
 }
 *[id="foo"] {
   color: purple;
 }
-</pre>
+```
 
-<p>cuando se usan con este marcador:</p>
+cuando se usan con este marcador:
 
-<pre class="brush: html notranslate">&lt;p id="foo"&gt;Soy un texto de ejemplo.&lt;/p&gt;
-</pre>
+```html
+<p id="foo">Soy un texto de ejemplo.</p>
+```
 
-<p>Se acabarán viendo así:</p>
+Se acabarán viendo así:
 
-<p style="color: green;">Soy un texto de ejemplo</p>
+Soy un texto de ejemplo
 
-<p>Debido a que coincide con el mismo elemento, pero el selector ID tiene una mayor especificidad.</p>
+Debido a que coincide con el mismo elemento, pero el selector ID tiene una mayor especificidad.
 
-<h3 id="Ignorancia_de_proximidad_en_el_árbol"><a id="tree-proximity-ignorance" name="tree-proximity-ignorance">Ignora</a>ncia de proximidad en el árbol</h3>
+### Ignorancia de proximidad en el árbol
 
-<p>La proximidad de un elemento con otros a los que se hace referencia en un selector determinado, no tiene impacto en la especificidad. La siguiente declaración de estilo:</p>
+La proximidad de un elemento con otros a los que se hace referencia en un selector determinado, no tiene impacto en la especificidad. La siguiente declaración de estilo:
 
-<pre class="brush: css notranslate">body h1 {
+```css
+body h1 {
   color: green;
 }
 html h1 {
   color: purple;
 }
-</pre>
+```
 
-<p>Con el siguiente HTML:</p>
+Con el siguiente HTML:
 
-<pre class="brush: html notranslate">&lt;html&gt;
-&lt;body&gt;
-  &lt;h1&gt;¡Aquí va un título!&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<html>
+<body>
+  <h1>¡Aquí va un título!</h1>
+</body>
+</html>
+```
 
-<p>Se mostrará como:</p>
+Se mostrará como:
 
-<h1 id="¡Aquí_va_un_título!" style="color: purple;">¡Aquí va un título!</h1>
+# ¡Aquí va un título!
 
-<p>Porque las dos declaraciones tienen un resultado de tipo de selector igual, pero el selector <code>html h1 </code>se ha declarado después.</p>
+Porque las dos declaraciones tienen un resultado de tipo de selector igual, pero el selector `html h1 `se ha declarado después.
 
-<h3 id="Declaración_directa_vs_estilos_heredados"><a id="directly-targeted-elements" name="directly-targeted-elements">Declaración directa vs estilos heredados</a></h3>
+### Declaración directa vs estilos heredados
 
-<p>Los estilos para elementos objetivo de una declaración directa siempre tienen preferencia sobre los estilos heredados, sin importar la especificidad de la regla heredada.</p>
+Los estilos para elementos objetivo de una declaración directa siempre tienen preferencia sobre los estilos heredados, sin importar la especificidad de la regla heredada.
 
-<pre class="brush: css notranslate" style="font-size: 14px;">#parent {
+```css
+#parent {
   color: green;
 }
 h1 {
   color: purple;
-}</pre>
+}
+```
 
-<p>Con el siguiente HTML:</p>
+Con el siguiente HTML:
 
-<pre class="brush: html notranslate" style="font-size: 14px;">&lt;html&gt;
-&lt;body id="parent"&gt;
-  &lt;h1&gt;¡Aquí va un título!&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+```html
+<html>
+<body id="parent">
+  <h1>¡Aquí va un título!</h1>
+</body>
+</html>
+```
 
-<p>Se verá así:</p>
+Se verá así:
 
-<h1 id="¡Aquí_va_un_título!_2" style="color: purple;">¡Aquí va un título!</h1>
+# ¡Aquí va un título!
 
-<p>Porque el selector <code>h1</code> selecciona el objetivo de manera específica, pero el color verde simplemente es heredad de su padre.</p>
+Porque el selector `h1` selecciona el objetivo de manera específica, pero el color verde simplemente es heredad de su padre.
 
-<h2 id="Consulta_también_en_inglés">Consulta también (en inglés)</h2>
+## Consulta también (en inglés)
 
-<ul>
- <li>Specificity Calculator: An interactive website to test and understand your own CSS rules - <a href="https://specificity.keegan.st/">https://specificity.keegan.st/</a></li>
- <li>CSS3 Selectors Specificity - <a class="external" href="http://www.w3.org/TR/selectors/#specificity" rel="freelink">http://www.w3.org/TR/selectors/#specificity</a></li>
- <li>{{ CSS_key_concepts() }}</li>
-</ul>
+- Specificity Calculator: An interactive website to test and understand your own CSS rules - <https://specificity.keegan.st/>
+- CSS3 Selectors Specificity - <http://www.w3.org/TR/selectors/#specificity>
+- {{ CSS_key_concepts() }}

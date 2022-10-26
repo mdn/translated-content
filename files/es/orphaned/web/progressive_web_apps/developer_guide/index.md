@@ -17,62 +17,48 @@ tags:
 translation_of: Web/Progressive_web_apps/Developer_guide
 original_slug: Web/Progressive_web_apps/Developer_guide
 ---
-<p><span class="seoSummary">In the articles listed here, you'll find guides about every aspect of development specific to the creation of progressive web applications (PWAs).</span> For all other documentation about web development, which generally pertains to PWAs as well, see our primary <a href="/en-US/docs/Web">web development documentation</a>.</p>
+In the articles listed here, you'll find guides about every aspect of development specific to the creation of progressive web applications (PWAs). For all other documentation about web development, which generally pertains to PWAs as well, see our primary [web development documentation](/es/docs/Web).
 
-<p><strong>---&gt;&gt;&gt; Titles below are just for the list; give articles good SEO names and feel free to tweak those and this as needed... &lt;&lt;&lt;---</strong></p>
+**--->>> Titles below are just for the list; give articles good SEO names and feel free to tweak those and this as needed... <<<---**
 
-<div class="row topicpage-table">
-<div class="section">
-<h2 class="" id="Web_app_basics">Web app basics</h2>
+## Web app basics
 
-<dl>
- <dt>Introduction and getting started with PWA development</dt>
- <dd>some description</dd>
- <dt><a href="/en-US/docs/Web/Progressive_web_apps/Developer_guide/Installing">Installing and uninstalling web apps</a></dt>
- <dd>An introductory guide to how a web app can be installed on the user's device...</dd>
- <dt>Using service workers to run offline</dt>
- <dd>description</dd>
- <dt>Alerting the user using notifications</dt>
- <dd>description</dd>
- <dt>Creating a web app from an existing site</dt>
- <dd>description</dd>
-</dl>
+- Introduction and getting started with PWA development
+  - : some description
+- [Installing and uninstalling web apps](/es/docs/Web/Progressive_web_apps/Developer_guide/Installing)
+  - : An introductory guide to how a web app can be installed on the user's device...
+- Using service workers to run offline
+  - : description
+- Alerting the user using notifications
+  - : description
+- Creating a web app from an existing site
+  - : description
 
-<h2 id="Advanced_topics">Advanced topics</h2>
+## Advanced topics
 
-<dl>
- <dt>Pushing data from the server to your web application</dt>
- <dd>some description</dd>
- <dt>Resource management</dt>
- <dd>description</dd>
- <dt>Integration with the host device</dt>
- <dd>description</dd>
- <dt>Security and privacy</dt>
- <dd>description</dd>
- <dt>Gaming topics for web app developers</dt>
- <dd>description</dd>
-</dl>
-</div>
+- Pushing data from the server to your web application
+  - : some description
+- Resource management
+  - : description
+- Integration with the host device
+  - : description
+- Security and privacy
+  - : description
+- Gaming topics for web app developers
+  - : description
 
-<div class="section">
-<h2 class="" id="Polishing_web_apps">Polishing web apps</h2>
+## Polishing web apps
 
-<dl>
- <dt>Web API equivalents for common native APIs</dt>
- <dd>some description</dd>
- <dt>Platform-specific tips and issues</dt>
- <dd>description</dd>
- <dt>Web application performance guide</dt>
- <dd>description</dd>
- <dt>Ensuring a good user experience</dt>
- <dd>description</dd>
-</dl>
+- Web API equivalents for common native APIs
+  - : some description
+- Platform-specific tips and issues
+  - : description
+- Web application performance guide
+  - : description
+- Ensuring a good user experience
+  - : description
 
-<h2 class="" id="Related_topics">Related topics</h2>
+## Related topics
 
-<dl>
- <dt>some topic</dt>
- <dd>some description</dd>
-</dl>
-</div>
-</div>
+- some topic
+  - : some description

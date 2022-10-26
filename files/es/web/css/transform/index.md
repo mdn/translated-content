@@ -10,17 +10,18 @@ tags:
   - Transformación
 translation_of: Web/CSS/transform
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propiedad CSS <code>transform</code> te permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.</p>
-<div>{{EmbedInteractiveExample("pages/css/transform.html")}}</div>
-<p>Si la propiedad tiene un valor diferente a none, se creará un <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">contexto de pila</a>. En ese caso, el objeto actuará como un bloque de contención para los elementos con "position: fixed" que contenga.</p>
+La propiedad CSS `transform` te permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.
 
+{{EmbedInteractiveExample("pages/css/transform.html")}}
 
+Si la propiedad tiene un valor diferente a none, se creará un [contexto de pila](/es/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context). En ese caso, el objeto actuará como un bloque de contención para los elementos con "position: fixed" que contenga.
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
-<pre class="brush: css notranslate">/* Keyword values */
+```css
+/* Keyword values */
 transform: none;
 
 /* Function values */
@@ -52,185 +53,191 @@ transform: translateX(10px) rotate(10deg) translateY(5px);
 /* Global values */
 transform: inherit;
 transform: initial;
-transform: unset;</pre>
+transform: unset;
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;transform-function&gt;</code></dt>
- <dd>Una o más de las <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">funciones de transformación CSS</a> que se aplicarán, ver más abajo.</dd>
- <dt><code>none</code></dt>
- <dd>Especifica que ninguna transformación podrá ser aplicada.</dd>
+- `<transform-function>`
+  - : Una o más de las [funciones de transformación CSS](/es/docs/Web/CSS/transform-function) que se aplicarán, ver más abajo.
+- `none`
+  - : Especifica que ninguna transformación podrá ser aplicada.
 
-</dl>
-<p>{{cssinfo}}</p>
- <h3 id="Síntasix_formal">Síntasix formal</h3>
+{{cssinfo}}
 
- {{csssyntax}}
+### Síntasix formal
 
-<h2 id="Ejemplos">Ejemplos</h2>
+{{csssyntax}}
 
-<p>Consulte <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transforms">Uso de las transformaciones CSS.</a></p>
+## Ejemplos
 
-<h2 id="Funciones_CSS_transform">Funciones CSS transform</h2>
+Consulte [Uso de las transformaciones CSS.](/es/docs/Web/Guide/CSS/Using_CSS_transforms)
 
-<p>La propiedad CSS <code>transform</code> permite manipular el sistema de coordenadas de un elemento usando las <strong>funciones de transformación</strong>. Estas funciones son descritas a continuación:</p>
+## Funciones CSS transform
 
-<h3 id="matrix">matrix</h3>
+La propiedad CSS `transform` permite manipular el sistema de coordenadas de un elemento usando las **funciones de transformación**. Estas funciones son descritas a continuación:
 
-<pre class="notranslate">transform:  matrix(a, c, b, d, tx, ty)
-</pre>
+### matrix
 
-<p>Específica una matriz de transformación 2D compuesta por seis valores a especificar. Esto es el equivalente a la aplicación de una transformación lineal de una matriz <math><semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>y</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX"> \begin{pmatrix} a &amp; b &amp; \mathrm{tx} \\ c &amp; d &amp; \mathrm{ty} \\ 0 &amp; 0 &amp; 1 \end{pmatrix}          </annotation></semantics></math>de un  mapa coordenadas de un nuevo sistema de coordenadas en un sistema de coordenadas anterior por las siguientes igualdades de la matriz:  <math><semantics><mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>y</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>b</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mi>c</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>y</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><annotation encoding="TeX"> \begin{pmatrix} x_{\mathrm{prevCoordSys}} \\ y_{\mathrm{prevCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a &amp; b &amp; \mathrm{tx} \\ c &amp; d &amp; \mathrm{ty} \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \begin{pmatrix} x_{\mathrm{newCoordSys}} \\ y_{\mathrm{newCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a x_{\mathrm{newCoordSys}} + b y_{\mathrm{newCoordSys}} + \mathrm{tx} \\ c x_{\mathrm{newCoordSys}} + d y_{\mathrm{newCoordSys}} + \mathrm{ty} \\ 1 \end{pmatrix} </annotation></semantics></math></p>
+```
+transform:  matrix(a, c, b, d, tx, ty)
+```
 
-<div class="note"><strong>Nota:</strong> Viejas versiones de Gecko (Firefox) aceptan un {{cssxref("&lt;length&gt;")}} valor para <strong>tx</strong> y <strong>ty</strong>. Actualmente Gecko, junto con Webkit (Safari, Chrome) y Opera, soportan valor sin unidades {{cssxref("&lt;number&gt;")}} para <strong>tx</strong> y <strong>ty</strong>.</div>
+Específica una matriz de transformación 2D compuesta por seis valores a especificar. Esto es el equivalente a la aplicación de una transformación lineal de una matriz <math><semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>y</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX"> \begin{pmatrix} a &#x26; b &#x26; \mathrm{tx} \\ c &#x26; d &#x26; \mathrm{ty} \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix} </annotation></semantics></math>de un mapa coordenadas de un nuevo sistema de coordenadas en un sistema de coordenadas anterior por las siguientes igualdades de la matriz: <math><semantics><mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>y</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>b</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mi>c</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mstyle mathvariant="normal"><mrow><mi>t</mi><mi>y</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><annotation encoding="TeX"> \begin{pmatrix} x*{\mathrm{prevCoordSys}} \\ y*{\mathrm{prevCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a &#x26; b &#x26; \mathrm{tx} \\ c &#x26; d &#x26; \mathrm{ty} \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix} \begin{pmatrix} x*{\mathrm{newCoordSys}} \\ y*{\mathrm{newCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a x*{\mathrm{newCoordSys}} + b y*{\mathrm{newCoordSys}} + \mathrm{tx} \\ c x*{\mathrm{newCoordSys}} + d y*{\mathrm{newCoordSys}} + \mathrm{ty} \\ 1 \end{pmatrix}</annotation></semantics></math>
 
-<h2 id="Ejemplos_realizados">Ejemplos realizados</h2>
+> **Nota:** Viejas versiones de Gecko (Firefox) aceptan un {{cssxref("&lt;length&gt;")}} valor para **tx** y **ty**. Actualmente Gecko, junto con Webkit (Safari, Chrome) y Opera, soportan valor sin unidades {{cssxref("&lt;number&gt;")}} para **tx** y **ty**.
 
-<pre class="notranslate"> background: gold;  width: 30em;
+## Ejemplos realizados
+
+```
+ background: gold;  width: 30em;
 
  -webkit-transform: matrix(1, -0.2, 0, 1, 0, 0);
       -o-transform: matrix(1, -0.2, 0, 1, 0, 0);
          transform: matrix(1, -0.2, 0, 1, 0, 0);
-</pre>
+```
 
-<pre class="notranslate"> background: wheat;
+```
+ background: wheat;
  max-width: intrinsic;
 
  -webkit-transform: matrix(1, 0, 0.6, 1,  250, 0);
       -o-transform: matrix(1, 0, 0.6, 1,  250, 0);
          transform: matrix(1, 0, 0.6, 1,  250, 0);
-</pre>
+```
 
-<h4 id="Información_adicional">Información adicional</h4>
+#### Información adicional
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute/transform#General_Transformation">Ejemplo de transformación general de SVG</a></li>
- <li><a class="external" href="http://en.wikipedia.org/wiki/Linear_transformation#Examples_of_linear_transformation_matrices">Ejemplos de transformación lineal de matrices</a> Wikipedia</li>
- <li><a class="external" href="http://www.mathamazement.com/Lessons/Pre-Calculus/08_Matrices-and-Determinants/coordinate-transformation-matrices.html">Transformación de coordenadas de matrices </a>mathamazement.com</li>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/library/ms533014(VS.85,loband).aspx">Filtro matriz de Microsoft</a> MSDN</li>
-</ul>
+- [Ejemplo de transformación general de SVG](/es/docs/Web/SVG/Attribute/transform#General_Transformation)
+- [Ejemplos de transformación lineal de matrices](http://en.wikipedia.org/wiki/Linear_transformation#Examples_of_linear_transformation_matrices) Wikipedia
+- [Transformación de coordenadas de matrices ](http://www.mathamazement.com/Lessons/Pre-Calculus/08_Matrices-and-Determinants/coordinate-transformation-matrices.html)mathamazement.com
+- [Filtro matriz de Microsoft](<http://msdn.microsoft.com/en-us/library/ms533014(VS.85,loband).aspx>) MSDN
 
-<h3 id="rotate">rotate</h3>
+### rotate
 
-<pre class="eval notranslate" dir="rtl">transform:  rotate(deg);     /* ej. rotate(90deg) */</pre>
+```
+transform:  rotate(deg);     /* ej. rotate(90deg) */
+```
 
-<p>Define una operación de rotación 2D de un elemento, específicando la cantidad de grados (deg) que este rotará en sentido de las<em> </em>macecillas del reloj (según lo especificado por la propiedad <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin">transform-origen</a>). La operación corresponde a la matriz <strong>[cos(angle) sin(angle) -sin(angle) cos(angle) 0 0]</strong>.</p>
+Define una operación de rotación 2D de un elemento, específicando la cantidad de grados (deg) que este rotará en sentido de las\_ \_macecillas del reloj (según lo especificado por la propiedad [transform-origen](/es/docs/Web/CSS/transform-origin)). La operación corresponde a la matriz **\[cos(angle) sin(angle) -sin(angle) cos(angle) 0 0]**.
 
-<h3 id="rotateX">rotateX</h3>
+### rotateX
 
-<pre class="eval notranslate">transform:  rotateX(deg);    /* ej. rotateX(90deg) */       </pre>
+```
+transform:  rotateX(deg);    /* ej. rotateX(90deg) */
+```
 
-<p>Define una operación de rotación 3D de un elemento en el eje X.</p>
+Define una operación de rotación 3D de un elemento en el eje X.
 
-<h3 id="rotateY">rotateY</h3>
+### rotateY
 
-<pre class="eval notranslate">transform:  rotateY(deg);    /* ej. rotateY(90deg) */       </pre>
+```
+transform:  rotateY(deg);    /* ej. rotateY(90deg) */
+```
 
-<p>Define una operación de rotación 3D de un elemento en el eje Y.</p>
+Define una operación de rotación 3D de un elemento en el eje Y.
 
-<h3 id="rotateZ">rotateZ</h3>
+### rotateZ
 
-<pre class="eval notranslate">transform:  rotateZ(deg);    /* ej. rotateZ(90deg) */       </pre>
+```
+transform:  rotateZ(deg);    /* ej. rotateZ(90deg) */
+```
 
-<p>Define una operación de rotación 3D de un elemento en el eje Z.</p>
+Define una operación de rotación 3D de un elemento en el eje Z.
 
-<h3 id="scale">scale</h3>
+### scale
 
-<pre class="eval notranslate">transform:  scale(sx[, sy]);    /* ej. scale(2.5, 4)*/</pre>
+```
+transform:  scale(sx[, sy]);    /* ej. scale(2.5, 4)*/
+```
 
-<p>Especifica una operación de escalado 2D descrita por <strong>[sx, sy]</strong>.</p>
+Especifica una operación de escalado 2D descrita por **\[sx, sy]**.
 
-<div class="note">
-<p>Nota: Si <strong>sy </strong>no es especificado, se asumirá que tanto <strong>sx </strong>como <strong>sy </strong>tendrán el mismo valor</p>
-</div>
+> **Nota:** Nota: Si **sy** no es especificado, se asumirá que tanto **sx** como **sy** tendrán el mismo valor
 
-<h3 id="scaleX">scaleX</h3>
+### scaleX
 
-<pre class="eval notranslate">transform:  scaleX(sx);     /* ej. scale(2.5)*/       </pre>
+```
+transform:  scaleX(sx);     /* ej. scale(2.5)*/
+```
 
-<p>Especifica una operación de escalado 2D usando el vector <strong>[sx, 1]</strong>.</p>
+Especifica una operación de escalado 2D usando el vector **\[sx, 1]**.
 
-<h3 id="scaleY">scaleY</h3>
+### scaleY
 
-<pre class="eval notranslate">transform:  scaleY(sy);    /* ej. scale(4)*/              </pre>
+```
+transform:  scaleY(sy);    /* ej. scale(4)*/
+```
 
-<p>Especifica una operación de escalado 2D usando el vector <strong>[1, sy]</strong>.</p>
+Especifica una operación de escalado 2D usando el vector **\[1, sy]**.
 
-<h3 id="skew">skew</h3>
+### skew
 
-<pre class="eval notranslate">transform:  skew(ax[, ay]);     /* ej. skew(90deg,180deg)*/    </pre>
+```
+transform:  skew(ax[, ay]);     /* ej. skew(90deg,180deg)*/
+```
 
-<p>Sesga el elemento a lo largo del eje X y Y por los ángulos especificados. Si no se proporciona <strong>ay</strong>, no se llevará a cabo el sesgo del eje Y.</p>
+Sesga el elemento a lo largo del eje X y Y por los ángulos especificados. Si no se proporciona **ay**, no se llevará a cabo el sesgo del eje Y.
 
-<div class="note">
-<p>La función skew() fue presentada en los primeros borradores. Esta ha sido removida pero sigue presente en algunas implementaciones. No debe usarse.</p>
+> **Nota:** La función skew() fue presentada en los primeros borradores. Esta ha sido removida pero sigue presente en algunas implementaciones. No debe usarse.
+>
+> Para lograr el mismo efecto, utilice la función skewX(). Si tu estas usando skew () con un parámetro o matriz (1, tan (ay), tan (ax), 1, 0, 0). Ten en cuenta que tan() no es una función CSS y así que tu mismo tienes que precalcular tus valores.
 
-<p>Para lograr el mismo efecto, utilice la función skewX(). Si tu estas usando skew () con un parámetro o matriz (1, tan (ay), tan (ax), 1, 0, 0). Ten en cuenta que tan() no es una función CSS y así que tu mismo tienes que precalcular tus valores.</p>
-</div>
+### skewX
 
-<h3 id="skewX">skewX</h3>
+```
+transform:  skewX(deg);     /* ej. skew(90deg)*/
+```
 
-<pre class="eval notranslate">transform:  skewX(deg);     /* ej. skew(90deg)*/        </pre>
+Sesga un elemento a lo largo del eje X por el ángulo dado.
 
-<p>Sesga un elemento a lo largo del eje X por el ángulo dado.</p>
+### skewY
 
-<h3 id="skewY">skewY</h3>
+```
+transform:  skewY(deg);     /* ej. skew(180deg)*/
+```
 
-<pre class="eval notranslate">transform:  skewY(deg);     /* ej. skew(180deg)*/           </pre>
+Sesga un elemento a lo largo del eje Y por el ángulo dado.
 
-<p>Sesga un elemento a lo largo del eje Y por el ángulo dado.</p>
+### translate
 
-<h3 id="translate">translate</h3>
+```
+transform:  translate(tx[, ty]);     /* ej. translate(50px, 100px) */
+```
 
-<pre class="eval notranslate">transform:  translate(tx[, ty]);     /* ej. translate(50px, 100px) */ </pre>
+Especifica una tanslación 2D dada por el vector **\[tx, ty]**. Si **`ty` **no es específicada, se asumirá que su valor es cero.
 
-<p>Especifica una tanslación 2D dada por el vector <strong>[tx, ty]</strong>. Si <strong><code>ty</code> </strong>no es específicada, se asumirá que su valor es cero.</p>
+`Cada `[`translation-value`](/es/docs/translation-value) puede ser un valor de [`longuitud`](/en-US/docs/CSS/length "/en-US/docs/CSS/length") o un valor de [`porcentaje`](/en-US/docs/CSS/percentage "/en-US/docs/CSS/percentage").
 
-<p><code>Cada </code><a href="/en-US/docs/translation-value" title="/en-US/docs/translation-value"><code>translation-value</code></a> puede ser un valor de <code><a href="/en-US/docs/CSS/length" title="/en-US/docs/CSS/length">longuitud</a></code> o un valor de  <code><a href="/en-US/docs/CSS/percentage" title="/en-US/docs/CSS/percentage">porcentaje</a></code>.</p>
+### translateX
 
-<h3 id="translateX">translateX</h3>
+```
+transform:  translateX(tx);     /* ej. translateX(50px) */
+```
 
-<pre class="eval notranslate">transform:  translateX(tx);     /* ej. translateX(50px) */  </pre>
+Translada un elemento a lo largo del eje X.
 
-<p>Translada un elemento a lo largo del eje X.</p>
+### translateY
 
-<h3 id="translateY">translateY</h3>
+```
+transform:  translateY(ty);     /* ej. translateY(100px) */
+```
 
-<pre class="eval notranslate">transform:  translateY(ty);     /* ej. translateY(100px) */    </pre>
+Translada un elemento a lo largo del eje Y.
 
-<p>Translada un elemento a lo largo del eje Y.</p>
+## Especificaciones
 
-<h2 id="Especificaciones">Especificaciones</h2>
+| Specification                                                                                | Status                                   | Comment                      |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------- |
+| {{SpecName('CSS Transforms 2', '#transform-functions', 'transform')}} | {{Spec2('CSS Transforms 2')}} | Adds 3D transform functions. |
+| {{SpecName('CSS3 Transforms', '#transform-property', 'transform')}}     | {{Spec2('CSS3 Transforms')}}     | Initial definition.          |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Transforms 2', '#transform-functions', 'transform')}}</td>
-   <td>{{Spec2('CSS Transforms 2')}}</td>
-   <td>Adds 3D transform functions.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transforms', '#transform-property', 'transform')}}</td>
-   <td>{{Spec2('CSS3 Transforms')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidad con navegadores
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
-<p>{{Compat("css.properties.transform")}}</p>
-<h2 id="Véase_También">Véase También</h2>
+{{Compat("css.properties.transform")}}
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transforms" title="/en-US/docs/CSS/Using_CSS_transforms">Uso de transformaciones </a><a href="/en-US/docs/CSS/Using_CSS_transforms" title="/en-US/docs/CSS/Using_CSS_transforms">CSS</a></li>
- <li>Tipos de datos  <a href="/en-US/docs/translation-value" title="/en-US/docs/translation-value">&lt;translation-value&gt;</a></li>
- <li> <a class="external" href="http://plugins.jquery.com/project/jquery-transform">Complemento de transformación 2D para jQuery </a>en navegador-cruzado.</li>
-</ul>
+## Véase También
+
+- [Uso de transformaciones ](/es/docs/CSS/Using_CSS_transforms)[CSS](/es/docs/CSS/Using_CSS_transforms)
+- Tipos de datos [\<translation-value>](/es/docs/translation-value)
+- [Complemento de transformación 2D para jQuery ](http://plugins.jquery.com/project/jquery-transform)en navegador-cruzado.

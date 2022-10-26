@@ -3,11 +3,12 @@ title: user-select
 slug: Web/CSS/user-select
 translation_of: Web/CSS/user-select
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propiedad <a href="/en-US/docs/Web/CSS">CSS </a><code><strong>user-select</strong></code> controla si el usuario puede seleccionar el texto. Esto no tiene ningún efecto en el contenido cargado bajo {{Glossary("Chrome", "chrome")}}, excepto en cuadros de texto.</p>
+La propiedad [CSS ](/es/docs/Web/CSS)**`user-select`** controla si el usuario puede seleccionar el texto. Esto no tiene ningún efecto en el contenido cargado bajo {{Glossary("Chrome", "chrome")}}, excepto en cuadros de texto.
 
-<pre class="brush:css">/* Valores de palabras clave */
+```css
+/* Valores de palabras clave */
 user-select: none;
 user-select: auto;
 user-select: text;
@@ -29,60 +30,58 @@ user-select: unset;
 -webkit-user-select: text;
 -webkit-user-select: all; /* No funciona el Safari; solo usa
                              "none" or "text", o si no hará
-                             permitir escribir en el contenedor &lt;html&gt; */
+                             permitir escribir en el contenedor <html> */
 
 /* Valores Microsoft-specific */
 -ms-user-select: none;
 -ms-user-select: text;
 -ms-user-select: element;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntaxis">Syntaxis</h2>
+## Syntaxis
 
-<dl>
- <dt><code>none</code></dt>
- <dd>El texto y sus sub elementos no son seleccionables. Tenga en cuenta que el objeto {{domxref("Selection")}} puede contener estos elementos.</dd>
- <dt><code>auto</code></dt>
- <dd>El valor calculado auto se determina de la siguiente manera: En los pseudo elementos <code>::before</code> y <code>::after</code>, el valor calculado es <code>none</code>
- <ul>
-  <li>Si el elemento es un elemento editable, el valor calculado es <code>contain</code></li>
-  <li>De lo contrario, si el valor calculador de <code>user-select</code> en la matriz de este elemento es <code>all</code>, el valor calculado es <code>all</code></li>
-  <li>De lo contrario, si el valor calulado de <code>user-select</code>  en la matriz de este elemento es  <code>none</code>, el valor calculado es <code>none</code></li>
-  <li>De lo contrario, el valor calculado es <code>text</code></li>
- </ul>
- </dd>
- <dt><code>text</code></dt>
- <dd>El texto puede ser seleccionado por el usuario.</dd>
- <dt><code>all</code></dt>
- <dd>En el editor HTML, si  se realiza doble-click o click-contextual en el subelemento, se seleccionará el antecesor más alto de el valor.</dd>
- <dt><code>contain</code></dt>
- <dd>Permite que la selección comience dentro del elemento; sin embargo, la selección estará contenida por los límites de ese elemento.</dd>
- <dt><code>element</code>{{non-standard_inline}} (IE-specific alias)</dt>
- <dd>Igual que <code>contain</code>. Solo lo soportado en Internet Explorer.</dd>
-</dl>
+- `none`
+  - : El texto y sus sub elementos no son seleccionables. Tenga en cuenta que el objeto {{domxref("Selection")}} puede contener estos elementos.
+- `auto`
 
-<div class="note">
-<p id="Formal_syntax"><strong>Nota:</strong> CSS UI 4 <a href="https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05">renombra user-select: a contain</a>.</p>
-</div>
+  - : El valor calculado auto se determina de la siguiente manera: En los pseudo elementos `::before` y `::after`, el valor calculado es `none`
 
-<h3 id="Formal_syntax_2">Formal syntax</h3>
+    - Si el elemento es un elemento editable, el valor calculado es `contain`
+    - De lo contrario, si el valor calculador de `user-select` en la matriz de este elemento es `all`, el valor calculado es `all`
+    - De lo contrario, si el valor calulado de `user-select` en la matriz de este elemento es `none`, el valor calculado es `none`
+    - De lo contrario, el valor calculado es `text`
+
+- `text`
+  - : El texto puede ser seleccionado por el usuario.
+- `all`
+  - : En el editor HTML, si se realiza doble-click o click-contextual en el subelemento, se seleccionará el antecesor más alto de el valor.
+- `contain`
+  - : Permite que la selección comience dentro del elemento; sin embargo, la selección estará contenida por los límites de ese elemento.
+- `element`{{non-standard_inline}} (IE-specific alias)
+  - : Igual que `contain`. Solo lo soportado en Internet Explorer.
+
+> **Nota:** CSS UI 4 [renombra user-select: a contain](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
+
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Debería poder seleccionar este texto.&lt;/p&gt;
-&lt;p class="unselectable"&gt;No puedes seleccionar este texto&lt;/p&gt;
-&lt;p class="all"&gt;Al hacer clic una vez se seleccionará todo este texto.&lt;/p&gt;
-</pre>
+```html
+<p>Debería poder seleccionar este texto.</p>
+<p class="unselectable">No puedes seleccionar este texto</p>
+<p class="all">Al hacer clic una vez se seleccionará todo este texto.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.unselectable {
+```css
+.unselectable {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -95,44 +94,27 @@ user-select: unset;
   -ms-user-select: all;
   user-select: all;
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 UI', '#propdef-user-select', 'user-select')}}</td>
-   <td>{{Spec2('CSS4 UI')}}</td>
-   <td>Initial definition. Also defines <code>-webkit-user-select</code> as a deprecated alias of <code>user-select</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estado                       | Comentario                                                                                     |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 UI', '#propdef-user-select', 'user-select')}} | {{Spec2('CSS4 UI')}} | Initial definition. Also defines `-webkit-user-select` as a deprecated alias of `user-select`. |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<div>
-<div class="">La tabla de compatibilidad de esta página se genera a partir de datos estructurados. Si desea contribuir con los datos, visite<br>
-<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> y envíenos una solicitud.</div>
+La tabla de compatibilidad de esta página se genera a partir de datos estructurados. Si desea contribuir con los datos, visite
+<https://github.com/mdn/browser-compat-data> y envíenos una solicitud.
 
-<p>{{Compat("css.properties.user-select")}}</p>
-</div>
+{{Compat("css.properties.user-select")}}
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li>{{Cssxref("::selection")}}</li>
- <li>The JavaScript {{domxref("Selection")}} object.</li>
- <li><a href="http://www.w3.org/TR/css-ui-4/#propdef-user-select">user-select</a> in <a href="http://www.w3.org/TR/css-ui-4/">CSS Basic User Interface Module Level 4</a>.</li>
-</ul>
+- {{Cssxref("::selection")}}
+- The JavaScript {{domxref("Selection")}} object.
+- [user-select](http://www.w3.org/TR/css-ui-4/#propdef-user-select) in [CSS Basic User Interface Module Level 4](http://www.w3.org/TR/css-ui-4/).

@@ -9,11 +9,12 @@ tags:
   - Referencia
 translation_of: Web/CSS/text-orientation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propiedad  <a href="/en-US/docs/Web/CSS">CSS  </a><strong><code>text-orientation</code></strong> define la orientación del texto en una línea de escritura. Ésta propiedad sólo tiene efecto en modo vertical, ésto es, cuando {{cssxref("writing-mode")}} no está establecido cómo <code>horizontal-tb</code>. Ésta propiedad CSS es util para controlar la forma en que se muestran los lenguajes que utilizan escritura vertical, y tambien para construir encabezados verticales para tablas.</p>
+La propiedad [CSS ](/es/docs/Web/CSS)**`text-orientation`** define la orientación del texto en una línea de escritura. Ésta propiedad sólo tiene efecto en modo vertical, ésto es, cuando {{cssxref("writing-mode")}} no está establecido cómo `horizontal-tb`. Ésta propiedad CSS es util para controlar la forma en que se muestran los lenguajes que utilizan escritura vertical, y tambien para construir encabezados verticales para tablas.
 
-<pre class="brush:css no-line-numbers">/* Palabras clave valor */
+```css
+/* Palabras clave valor */
 text-orientation: mixed;
 text-orientation: upright;
 text-orientation: sideways-right;
@@ -24,81 +25,62 @@ text-orientation: use-glyph-orientation;
 text-orientation: inherit;
 text-orientation: initial;
 text-orientation: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<p>La propiedad <code>text-orientation</code> puede tener cómo valor una de las palabras clave listadas a continuación.</p>
+La propiedad `text-orientation` puede tener cómo valor una de las palabras clave listadas a continuación.
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>mixed</code></dt>
- <dd>Rota los caracteres de escritura horizontal 90° en sentido de las manecillas del reloj. Establece los caracteres de escritura vertical de forma natural. Este es el valor por defecto.</dd>
- <dt><code>upright</code></dt>
- <dd>Establece los caracteres de escritura horizontal de forma natural (pero se presentan de arriba hacia abajo), de igual manera establece de forma natural los glifos para escritura vertical. Note que ésta palabra clave causa que todos los caracteres sean considerados de forma izquierda-a-derecha: el valor utilizado para {{cssxref("direction")}} es forzado a ser <code>ltr</code>.</dd>
- <dt><code>sideways</code></dt>
- <dd>Causa que los caracteres sean presentados de la forma en que se presentarían de manera horizontal, pero con la línea de escritura rotada 90° en sentido de las manecillas del reloj.</dd>
- <dt><code>sideways-right</code></dt>
- <dd>Un alias para <code>sideways</code> que se mantiene para propositos de compatibilidad.</dd>
- <dt><code>use-glyph-orientation</code></dt>
- <dd>En elementos SVG, ésta palabra clave produce que sea utilizado el valor de las propiedades SVG desaprobadas <code>glyph-orientation-vertical</code> y <code>glyph-orientation-horizontal</code>.</dd>
-</dl>
+- `mixed`
+  - : Rota los caracteres de escritura horizontal 90° en sentido de las manecillas del reloj. Establece los caracteres de escritura vertical de forma natural. Este es el valor por defecto.
+- `upright`
+  - : Establece los caracteres de escritura horizontal de forma natural (pero se presentan de arriba hacia abajo), de igual manera establece de forma natural los glifos para escritura vertical. Note que ésta palabra clave causa que todos los caracteres sean considerados de forma izquierda-a-derecha: el valor utilizado para {{cssxref("direction")}} es forzado a ser `ltr`.
+- `sideways`
+  - : Causa que los caracteres sean presentados de la forma en que se presentarían de manera horizontal, pero con la línea de escritura rotada 90° en sentido de las manecillas del reloj.
+- `sideways-right`
+  - : Un alias para `sideways` que se mantiene para propositos de compatibilidad.
+- `use-glyph-orientation`
+  - : En elementos SVG, ésta palabra clave produce que sea utilizado el valor de las propiedades SVG desaprobadas `glyph-orientation-vertical` y `glyph-orientation-horizontal`.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolet semper quisquam.&lt;/p&gt;</pre>
+```html
+<p>Lorem ipsum dolet semper quisquam.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   writing-mode: vertical-rl;
   text-orientation: upright;
-}</pre>
+}
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Writing Modes', '#text-orientation', 'text-orientation')}}</td>
-   <td>{{Spec2('CSS3 Writing Modes')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                       | Estado                                   | Comentario          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{SpecName('CSS3 Writing Modes', '#text-orientation', 'text-orientation')}} | {{Spec2('CSS3 Writing Modes')}} | Definición inicial. |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<p> </p>
+{{Compat("css.properties.text-orientation")}}
 
+## Vea tambien
 
-
-<p>{{Compat("css.properties.text-orientation")}}</p>
-
-<p> </p>
-
-<h2 id="Vea_tambien">Vea tambien</h2>
-
-<ul>
- <li>Las otras propiedades CSS relacionadas con escritura vertical: {{cssxref("writing-mode")}}, {{cssxref("text-combine-upright")}}, y {{cssxref("unicode-bidi")}}.</li>
-</ul>
+- Las otras propiedades CSS relacionadas con escritura vertical: {{cssxref("writing-mode")}}, {{cssxref("text-combine-upright")}}, y {{cssxref("unicode-bidi")}}.

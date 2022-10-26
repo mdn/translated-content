@@ -6,19 +6,20 @@ tags:
   - Texto CSS
 translation_of: Web/CSS/text-decoration-line
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propiedad <a href="/es/docs/CSS">CSS</a> <strong><code>text-decoration-line</code></strong> establece el tipo de decoración de línea que se agregará a un elemento.</p>
+La propiedad [CSS](/es/docs/CSS) **`text-decoration-line`** establece el tipo de decoración de línea que se agregará a un elemento.
 
-<div>{{EmbedInteractiveExample("pages/css/text-decoration-line.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-decoration-line.html")}}
 
-<p>When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.</p>
+When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
 
-<p>La decoración <em>underline</em> posiciona el subrayado debajo del texto, la decoración <em>overline</em> posiciona el subrayado encima del texto, y la decoración <em>line-through</em> posiciona la línea en medio del texto.</p>
+La decoración _underline_ posiciona el subrayado debajo del texto, la decoración _overline_ posiciona el subrayado encima del texto, y la decoración _line-through_ posiciona la línea en medio del texto.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush:css">/* Valores de clave */
+```css
+/* Valores de clave */
 text-decoration-line: none;
 text-decoration-line: underline;
 text-decoration-line: overline;
@@ -30,71 +31,57 @@ text-decoration-line: overline underline line-through;   /* Múltiples líneas d
 text-decoration-line: inherit;
 text-decoration-line: initial;
 text-decoration-line: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
-<dt><code>none</code></dt>
+- `none`
+  - : No agrega decoración al texto.
+- `underline`
+  - : Cada línea del texto lleva subrayado inferior.
+- `overline`
+  - : Cada línea del texto lleva subrayado superior.
+- `line-through`
+  - : Cada línea del texto lleva una línea atravesando por en medio del mismo.
+- `blink {{deprecated_inline}}`
+  - : El texto parpadea (se alterna entre visible e invisible). Según los ajustes del agente usuario, el texto puede simplemente no parpadear. Este valor está en **desuso**, en favor de las [Animaciones](/es/docs/Web/CSS/animation).
+- `-moz-anchor-decoration `{{non-standard_inline}}
+  - : El texto es decorado con el estilo de un ancla; no adecuado para contenido web.
 
- <dd>No agrega decoración al texto.</dd>
- <dt><code>underline</code></dt>
- <dd>Cada línea del texto lleva subrayado inferior.</dd>
- <dt><code>overline</code></dt>
- <dd>Cada línea del texto lleva subrayado superior.</dd>
- <dt><code>line-through</code></dt>
- <dd>Cada línea del texto lleva una línea atravesando por en medio del mismo.</dd>
- <dt><code>blink {{deprecated_inline}}</code></dt>
- <dd>El texto parpadea (se alterna entre visible e invisible). Según los ajustes del agente usuario, el texto puede simplemente no parpadear. Este valor está en <strong>desuso</strong>, en favor de las <a href="/es/docs/Web/CSS/animation">Animaciones</a>.</dd>
- <dt><code>-moz-anchor-decoration </code>{{non-standard_inline}}</dt>
- <dd>El texto es decorado con el estilo de un ancla; no adecuado para contenido web.</dd>
-</dl>
-
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;p&gt;¡Aquí hay texto con subrayado inferior rojo ondulado!&lt;/p&gt;</pre>
+```html
+<p>¡Aquí hay texto con subrayado inferior rojo ondulado!</p>
+```
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+### Contenido CSS
 
-<pre class="brush: css">p {
+```css
+p {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: red;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('example', 300, 50)}}</p>
+{{EmbedLiveSample('example', 300, 50)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration', '#text-decoration-line', 'text-decoration-line')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td>Definición inicial. La propiedad {{cssxref("text-decoration")}} no era una forma reducida anteriormente.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                   | Estado                                       | Comentarios                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('CSS3 Text Decoration', '#text-decoration-line', 'text-decoration-line')}} | {{Spec2('CSS3 Text Decoration')}} | Definición inicial. La propiedad {{cssxref("text-decoration")}} no era una forma reducida anteriormente. |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
-<p>{{Compat("css.properties.text-decoration-line")}}</p>
+{{Compat("css.properties.text-decoration-line")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.</li>
-</ul>
+- When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.

@@ -9,47 +9,34 @@ tags:
   - Texto
 translation_of: Web/CSS/text-transform
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad CSS <strong><code>text-transform</code></strong> especifica el cambio entre mayúsculas y minúsculas del texto de un elemento. Puede ser usada para que un texto aparezca completamente en mayúsculas, en minúsculas, o con la primera letra de cada palabra en mayúscula.</p>
+La propiedad CSS **`text-transform`** especifica el cambio entre mayúsculas y minúsculas del texto de un elemento. Puede ser usada para que un texto aparezca completamente en mayúsculas, en minúsculas, o con la primera letra de cada palabra en mayúscula.
 
-<p>La propiedad <code>text-transform</code> toma en cuenta las reglas específicas del idioma, como:</p>
+La propiedad `text-transform` toma en cuenta las reglas específicas del idioma, como:
 
-<ul>
- <li>
-  <p>en lenguas turcas, como turco (<code>tr</code>), azerí (<code>az</code>), tártaro de Crimea (<code>crh</code>), tártaro de Volga (<code>tt</code>), y baskir (<code>ba</code>), hay dos tipos de i, con y sin punto, y dos pares de mayúscula/minúscula: <code>i</code>/<code>İ</code> e <code>ı</code>/<code>I</code>.</p>
- </li>
- <li>
-  <p>En alemán (<code>de</code>), la <code>ß</code> se vuelve <code>SS</code> en mayúsculas.</p>
- </li>
- <li>
-  <p>En holandés (<code>nl</code>), el dígrafo <code>ij</code> se vuelve <code>IJ</code>, aún con <code>text-transform: capitalize</code>, que solamente convierte la primera letra de una palabra en mayúsculas.</p>
- </li>
- <li>
-  <p>En griego (<code>el</code>), las vocales pierden su acento cuando la palabra completa está en mayúsculas (<code>ά</code>/<code>Α</code>), excepto por la eta disyuntiva (<code>ή</code>/<code>Ή</code>). Además, los diptongos con acento en la primera vocal cambian el acento por diéresis en la segunda vocal (<code>άι</code>/<code>ΑΪ</code>).</p>
- </li>
- <li>
-  <p>En griego (<code>el</code>), el caracter sigma en minúscula tiene dos formas: <code>σ</code> y <code>ς</code>. <code>ς</code> es usada solamente cuando la sigma termina la palabra. Cuando se aplica <code>text-transform: lowercase</code> a una sigma mayúscula (<code>Σ</code>), el navegador necesita elegir la minúscula correcta de acuerdo con el contexto.</p>
- </li>
-</ul>
+- en lenguas turcas, como turco (`tr`), azerí (`az`), tártaro de Crimea (`crh`), tártaro de Volga (`tt`), y baskir (`ba`), hay dos tipos de i, con y sin punto, y dos pares de mayúscula/minúscula: `i`/`İ` e `ı`/`I`.
+- En alemán (`de`), la `ß` se vuelve `SS` en mayúsculas.
+- En holandés (`nl`), el dígrafo `ij` se vuelve `IJ`, aún con `text-transform: capitalize`, que solamente convierte la primera letra de una palabra en mayúsculas.
+- En griego (`el`), las vocales pierden su acento cuando la palabra completa está en mayúsculas (`ά`/`Α`), excepto por la eta disyuntiva (`ή`/`Ή`). Además, los diptongos con acento en la primera vocal cambian el acento por diéresis en la segunda vocal (`άι`/`ΑΪ`).
+- En griego (`el`), el caracter sigma en minúscula tiene dos formas: `σ` y `ς`. `ς` es usada solamente cuando la sigma termina la palabra. Cuando se aplica `text-transform: lowercase` a una sigma mayúscula (`Σ`), el navegador necesita elegir la minúscula correcta de acuerdo con el contexto.
 
-<p>Por otro lado, algunas reglas de mapeo específicas no son tomada en cuenta por ningun navegador, como:</p>
+Por otro lado, algunas reglas de mapeo específicas no son tomada en cuenta por ningun navegador, como:
 
-<ul>
- <li>en gaélico (<code>ga</code>), una letra prefijo se mantiene en minúsculas cuando la inicial base es convertida a mayúscula, así, en este ejemplo, el símbolo <code>h-</code> no debería cambiar a mayúscula: <code>text-transform: uppercase</code> cambiará <code>Meud na h-aplacaid</code> a <code>MEUD NA H-APLACAID</code>, lo cual viola las reglas ortográficas, cuando debería ser <code>MEUD NA h-APLACAID.</code></li>
-</ul>
+- en gaélico (`ga`), una letra prefijo se mantiene en minúsculas cuando la inicial base es convertida a mayúscula, así, en este ejemplo, el símbolo `h-` no debería cambiar a mayúscula: `text-transform: uppercase` cambiará `Meud na h-aplacaid` a `MEUD NA H-APLACAID`, lo cual viola las reglas ortográficas, cuando debería ser `MEUD NA h-APLACAID.`
 
-<p>El idioma es definido por el atributo HTML <code>lang</code> o el atributo <code>xml:lang</code>.</p>
+El idioma es definido por el atributo HTML `lang` o el atributo `xml:lang`.
 
-<p>El soporte para estos casos específicos varía de un navegador a otro, véase la <a href="#Compatibilidad_de_navegadores">tabla de compatibilidad de navegadores</a>.</p>
+El soporte para estos casos específicos varía de un navegador a otro, véase la [tabla de compatibilidad de navegadores](#Compatibilidad_de_navegadores).
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintáxis">Sintáxis</h2>
+## Sintáxis
 
-<pre class="brush: css">/* Valores clave */
+```css
+/* Valores clave */
 text-transform: capitalize;
 text-transform: uppercase;
 text-transform: lowercase;
@@ -60,264 +47,271 @@ text-transform: full-width;
 text-transform: inherit;
 text-transform: initial;
 text-transform: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>capitalize</code></dt>
- <dd>
- <p>Es una palabra clave que fuerza a que la primera <em>letra</em> de cada palabra sea convertida a mayúscula. EL resto de caracteres no es modificado; eso significa que mantienen su tamaño original, como haya sido escrito en el texto del elemento. Una letra es cualquier caracter Unicode que sea parte de la categoría general de Letras o Números {{experimental_inline}}: esto excluye cualquier signo de puntuación o símbolos al principio de la palabra.</p>
+- `capitalize`
 
- <div class="note">Los autores no deben esperar que <code class="">capitalize</code> siga las convenciones de título específicas del lenguaje (como lo es en inglés el excluir artículos).</div>
- </dd>
- <dt><code>uppercase</code></dt>
- <dd>Es una palabra clave que fuerza a todos los caracteres a ser convertidos a mayúsculas.</dd>
- <dt><code>lowercase</code></dt>
- <dd>Es una palabra clave que fuerza a todos los caracteres a ser convertidos a minúsculas.</dd>
- <dt><code>none</code></dt>
- <dd>Es una palabra clave que previene que sea cambiado el tamaño de los caracteres.</dd>
- <dt><code>full-width</code> {{experimental_inline}}</dt>
- <dd>Es una palabra clave que fuerza que la escritura de un caracter, principalmente ideogramas y del alfabeto latín, abarque el espacio dentro de un cuadro, permitiendo que queden alineados al alfabeto asiático del este (como el chino o japonés).</dd>
+  - : Es una palabra clave que fuerza a que la primera _letra_ de cada palabra sea convertida a mayúscula. EL resto de caracteres no es modificado; eso significa que mantienen su tamaño original, como haya sido escrito en el texto del elemento. Una letra es cualquier caracter Unicode que sea parte de la categoría general de Letras o Números {{experimental_inline}}: esto excluye cualquier signo de puntuación o símbolos al principio de la palabra.
 
-</dl>
+    > **Nota:** Los autores no deben esperar que `capitalize` siga las convenciones de título específicas del lenguaje (como lo es en inglés el excluir artículos).
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+- `uppercase`
+  - : Es una palabra clave que fuerza a todos los caracteres a ser convertidos a mayúsculas.
+- `lowercase`
+  - : Es una palabra clave que fuerza a todos los caracteres a ser convertidos a minúsculas.
+- `none`
+  - : Es una palabra clave que previene que sea cambiado el tamaño de los caracteres.
+- `full-width` {{experimental_inline}}
+  - : Es una palabra clave que fuerza que la escritura de un caracter, principalmente ideogramas y del alfabeto latín, abarque el espacio dentro de un cuadro, permitiendo que queden alineados al alfabeto asiático del este (como el chino o japonés).
+
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="none" name="none"><code>none</code></h3>
+### `none`
 
-<pre class="brush: html">&lt;p&gt;Initial String
-  &lt;strong&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...&lt;/strong&gt;
-&lt;/p&gt;</code>
-&lt;p&gt;text-transform: none
-  &lt;strong&gt;&lt;span&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</code>&lt;/span&gt;&lt;/strong&gt;
-&lt;/p&gt;
-</pre>
+```html
+<p>Initial String
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+</p>
+<p>text-transform: none
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+</p>
+```
 
-<pre class="brush: css">span {
+```css
+span {
   text-transform: none;
 }
-strong { float: right; }</pre>
+strong { float: right; }
+```
 
-<p>Esto muestra ninguna transformación de texto.</p>
+Esto muestra ninguna transformación de texto.
 
-<p>{{ EmbedLiveSample('none', '100%', '100px') }}</p>
+{{ EmbedLiveSample('none', '100%', '100px') }}
 
-<h3 id="capitalize_(General)" name="capitalize_(General)"><code>capitalize</code> (General)</h3>
+### `capitalize` (General)
 
-<pre class="brush: html">&lt;p&gt;Initial String
-  &lt;strong&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...&lt;/strong&gt;
-&lt;/p&gt;</code>
-&lt;p&gt;text-transform: capitalize
-<code>  &lt;strong&gt;</code>&lt;span&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</code>&lt;/span&gt;<code>&lt;/strong&gt;</code>
-&lt;/p&gt;</pre>
+```html
+<p>Initial String
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+</p>
+<p>text-transform: capitalize
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+</p>
+```
 
-<pre class="brush: css">span {
+```css
+span {
   text-transform: capitalize;
 }
-strong { float: right; }</pre>
+strong { float: right; }
+```
 
-<p>Esto muestra un texto con la primera letra de cada palabra en mayúsculas.</p>
+Esto muestra un texto con la primera letra de cada palabra en mayúsculas.
 
-<p>{{ EmbedLiveSample('capitalize_(General)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('capitalize_(General)', '100%', '100px') }}
 
-<h3 id="capitalize_(Punctuation)" name="capitalize_(Punctuation)"><code>capitalize</code> (Puntuación)</h3>
+### `capitalize` (Puntuación)
 
-<pre class="brush: html">&lt;p&gt;Initial String
-  &lt;strong&gt;<code>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</code><code>&lt;/strong&gt;
-&lt;/p&gt;</code>
-&lt;p&gt;text-transform: capitalize
-  <code>&lt;strong&gt;</code>&lt;span&gt;<code>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</code>&lt;/span&gt;<code>&lt;/strong&gt;</code>
-&lt;/p&gt;</pre>
+```html
+<p>Initial String
+  <strong>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</strong>
+</p>
+<p>text-transform: capitalize
+  <strong><span>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</span></strong>
+</p>
+```
 
-<pre class="brush: css">span {
+```css
+span {
   text-transform: capitalize;
 }
-strong { float: right; }</pre>
+strong { float: right; }
+```
 
-<p>Esto muestra cómo la puntuación inicial de una palabra es ignorada. La palabra clave busca la primera letra, que es el primer caracter Unicode que forma parte de la categoría general de Letras o Números.</p>
+Esto muestra cómo la puntuación inicial de una palabra es ignorada. La palabra clave busca la primera letra, que es el primer caracter Unicode que forma parte de la categoría general de Letras o Números.
 
-<p>{{ EmbedLiveSample('capitalize_(Punctuation)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('capitalize_(Punctuation)', '100%', '100px') }}
 
-<h3 id="capitalize_(Symbols)" name="capitalize_(Symbols)"><code>capitalize</code> (Símbolos)</h3>
+### `capitalize` (Símbolos)
 
-<pre class="brush: html">&lt;p&gt;Initial String
-  &lt;strong&gt;<code>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</code><code>&lt;/strong&gt;
-&lt;/p&gt;</code>
-&lt;p&gt;text-transform: capitalize
-  <code>&lt;strong&gt;</code>&lt;span&gt;<code>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</code>&lt;/span&gt;<code>&lt;/strong&gt;</code>
-&lt;/p&gt;</pre>
+```html
+<p>Initial String
+  <strong>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</strong>
+</p>
+<p>text-transform: capitalize
+  <strong><span>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</span></strong>
+</p>
+```
 
-<pre class="brush: css">span {
+```css
+span {
   text-transform: capitalize;
 }
-strong { float: right; }</pre>
+strong { float: right; }
+```
 
-<p>Esto muestra cómo los símbolos iniciales son ignorados. La palabra clave busca la primera letra, que es primera caracter Unicode que forma parte de la categoría general de Letras o Números.</p>
+Esto muestra cómo los símbolos iniciales son ignorados. La palabra clave busca la primera letra, que es primera caracter Unicode que forma parte de la categoría general de Letras o Números.
 
-<p>{{ EmbedLiveSample('capitalize_(Symbols)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('capitalize_(Symbols)', '100%', '100px') }}
 
-<h3 id="capitalize_(Dutch_ij_digraph)" name="capitalize_(Dutch_ij_digraph)"><code>capitalize</code> (Dígrafo <em>ij</em> holandés)</h3>
+### `capitalize` (Dígrafo _ij_ holandés)
 
-<pre class="brush: html">&lt;p&gt;Initial String
-  &lt;strong lang="nl"&gt;<code>The Dutch word: "<span lang="nl">ijsland</span>" starts with a digraph.</code><code>&lt;/strong&gt;
-&lt;/p&gt;</code>
-&lt;p&gt;text-transform: capitalize
-  <code>&lt;strong&gt;</code>&lt;span lang="nl"&gt;<code>The Dutch word: "<span lang="nl">ijsland</span>" starts with a digraph.</code>&lt;/span&gt;<code>&lt;/strong&gt;</code>
-&lt;/p&gt;</pre>
+```html
+<p>Initial String
+  <strong lang="nl">The Dutch word: "ijsland" starts with a digraph.</strong>
+</p>
+<p>text-transform: capitalize
+  <strong><span lang="nl">The Dutch word: "ijsland" starts with a digraph.</span></strong>
+</p>
+```
 
-<pre class="brush: css">span {
+```css
+span {
   text-transform: capitalize;
 }
-strong { float: right; }</pre>
+strong { float: right; }
+```
 
-<p>Esto muestra cómo el dígrafo holandés <em>ij</em> debe ser manejado como una sola letra.</p>
+Esto muestra cómo el dígrafo holandés _ij_ debe ser manejado como una sola letra.
 
-<p>{{ EmbedLiveSample('capitalize_(Dutch_ij_digraph)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('capitalize_(Dutch_ij_digraph)', '100%', '100px') }}
 
-<h3 id="uppercase_(General)" name="uppercase_(General)"><code>uppercase</code> (General)</h3>
+### `uppercase` (General)
 
-<pre class="brush: html">&lt;p&gt;Initial String
-  &lt;strong&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</code><code>&lt;/strong&gt;
-&lt;/p&gt;</code>
-&lt;p&gt;text-transform: uppercase
-  <code>&lt;strong&gt;</code>&lt;span&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</code>&lt;/span&gt;<code>&lt;/strong&gt;</code>
-&lt;/p&gt;</pre>
+```html
+<p>Initial String
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+</p>
+<p>text-transform: uppercase
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+</p>
+```
 
-<pre class="brush: css">span {
+```css
+span {
   text-transform: uppercase;
 }
-strong { float: right; }</pre>
+strong { float: right; }
+```
 
-<p>Esto muestra la transformación de texto a mayúsculas.</p>
+Esto muestra la transformación de texto a mayúsculas.
 
-<p>{{ EmbedLiveSample('uppercase_(General)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('uppercase_(General)', '100%', '100px') }}
 
-<h3 id="uppercase_(Greek_Vowels)" name="uppercase_(Greek_Vowels)"><code>uppercase</code> (Vocales griegas)</h3>
+### `uppercase` (Vocales griegas)
 
-<pre class="brush: html">&lt;p&gt;Initial String
-  &lt;strong&gt;<code>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</code><code>&lt;/strong&gt;
-&lt;/p&gt;</code>
-&lt;p&gt;text-transform: uppercase
-  <code>&lt;strong&gt;</code>&lt;span&gt;<code>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</code>&lt;/span&gt;<code>&lt;/strong&gt;</code>
-&lt;/p&gt;</pre>
+```html
+<p>Initial String
+  <strong>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</strong>
+</p>
+<p>text-transform: uppercase
+  <strong><span>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</span></strong>
+</p>
+```
 
-<pre class="brush: css">span {
+```css
+span {
   text-transform: uppercase;
 }
-strong { float: right; }</pre>
+strong { float: right; }
+```
 
-<p>Esto muestra cómo las vocales griegas, excepto la disyuntiva <em>eta</em> no deben tener acento, y el acento de la primera vocal en un par de vocales se convierte a diéresis en la segunda vocal.</p>
+Esto muestra cómo las vocales griegas, excepto la disyuntiva _eta_ no deben tener acento, y el acento de la primera vocal en un par de vocales se convierte a diéresis en la segunda vocal.
 
-<p>{{ EmbedLiveSample('uppercase_(Greek_Vowels)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('uppercase_(Greek_Vowels)', '100%', '100px') }}
 
-<h3 id="lowercase_(General)" name="lowercase_(General)"><code>lowercase</code> (General)</h3>
+### `lowercase` (General)
 
-<pre class="brush: html">&lt;p&gt;Initial String
-  &lt;strong&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</code><code>&lt;/strong&gt;
-&lt;/p&gt;</code>
-&lt;p&gt;text-transform: lowercase
-  <code>&lt;strong&gt;</code>&lt;span&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</code>&lt;/span&gt;<code>&lt;/strong&gt;</code>
-&lt;/p&gt;</pre>
+```html
+<p>Initial String
+  <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
+</p>
+<p>text-transform: lowercase
+  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+</p>
+```
 
-<pre class="brush: css">span {
+```css
+span {
   text-transform: lowercase;
 }
-strong { float: right; }</pre>
+strong { float: right; }
+```
 
-<p>Esto muestra la transformación de texto a minúsculas.</p>
+Esto muestra la transformación de texto a minúsculas.
 
-<p>{{ EmbedLiveSample('lowercase_(General)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('lowercase_(General)', '100%', '100px') }}
 
-<h3 id="lowercase_(Greek_Σ)" name="lowercase_(Greek_Σ)"><code>lowercase</code> (Σ griega)</h3>
+### `lowercase` (Σ griega)
 
-<pre class="brush: html">&lt;p&gt;Initial String
-  &lt;strong&gt;<code>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</code><code>&lt;/strong&gt;
-&lt;/p&gt;</code>
-&lt;p&gt;text-transform: lowercase
-  <code>&lt;strong&gt;</code>&lt;span&gt;<code>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</code>&lt;/span&gt;<code>&lt;/strong&gt;</code>
-&lt;/p&gt;</pre>
+```html
+<p>Initial String
+  <strong>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</strong>
+</p>
+<p>text-transform: lowercase
+  <strong><span>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</span></strong>
+</p>
+```
 
-<pre class="brush: css">span {
+```css
+span {
   text-transform: lowercase;
 }
-strong { float: right; }</pre>
+strong { float: right; }
+```
 
-<p>Esto muestra cómo el caracter griego sigma (<code>Σ</code>) es trsnformado a sigma minúscula regular (<code>σ</code>) o a la variante de final de palabra (<code>ς</code>), conforme al contexto.</p>
+Esto muestra cómo el caracter griego sigma (`Σ`) es trsnformado a sigma minúscula regular (`σ`) o a la variante de final de palabra (`ς`), conforme al contexto.
 
-<p>{{ EmbedLiveSample('lowercase_(Greek_Σ)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('lowercase_(Greek_Σ)', '100%', '100px') }}
 
-<h3 id="full-width_(General)" name="full-width_(General)"><code>full-width</code> (General)</h3>
+### `full-width` (General)
 
-<pre class="brush: html">&lt;p&gt;Initial String
-  &lt;strong&gt;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&amp;()*+,-./:;&lt;=&gt;?@{|}~<code>&lt;/strong&gt;
-&lt;/p&gt;</code>
-&lt;p&gt;text-transform: full-width
-  <code>&lt;strong&gt;</code>&lt;span&gt;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&amp;()*+,-./:;&lt;=&gt;?@{|}~&lt;/span&gt;<code>&lt;/strong&gt;</code>
-&lt;/p&gt;</pre>
+```html
+<p>Initial String
+  <strong>0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</strong>
+</p>
+<p>text-transform: full-width
+  <strong><span>0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</span></strong>
+</p>
+```
 
-<pre class="brush: css">span {
+```css
+span {
   text-transform: full-width;
 }
-strong { width: 100%; float: right; }</pre>
+strong { width: 100%; float: right; }
+```
 
-<p>Algunos caracteres existen en dos formas, de anchura normal y de anchura completa, con diferentes puntos de código en Unicode. La versión de anchura completa es usada para facilitar la mezcla con caracteres ideográficos asiáticos.</p>
+Algunos caracteres existen en dos formas, de anchura normal y de anchura completa, con diferentes puntos de código en Unicode. La versión de anchura completa es usada para facilitar la mezcla con caracteres ideográficos asiáticos.
 
-<p>{{ EmbedLiveSample('full-width_(General)', '100%', '175px') }}</p>
+{{ EmbedLiveSample('full-width_(General)', '100%', '175px') }}
 
-<h2 id="Sobre_Accesibilidad">Sobre Accesibilidad</h2>
+## Sobre Accesibilidad
 
-<p>Usuarios con discapacidades cognitivas como dislexia pueden encontrar dificultad al leer textos largos cuando se aplica la propiedad <code>text-transform</code> con el valor de <code>uppercase</code>.</p>
+Usuarios con discapacidades cognitivas como dislexia pueden encontrar dificultad al leer textos largos cuando se aplica la propiedad `text-transform` con el valor de `uppercase`.
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html" rel="noopener">Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Text', '#text-transform', 'text-transform')}}</td>
-   <td>{{Spec2('CSS4 Text')}}</td>
-   <td>De {{SpecName('CSS3 Text', '#text-transform', 'text-transform')}}, se añade la palabra clave <code>full-size-kana</code> y permite que la palabra clave <code>full-width</code> sea usada junto con otro valor.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#text-transform', 'text-transform')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>De {{SpecName('CSS2.1', 'text.html#caps-prop', 'text-transform')}}, se extienden las letras a cualquier caracter unicode en la categoría general de Números o Letras. Modifica el comportamiento de <code>capitalize</code> para aplicarse a la primera letra de la palabra, ignorando símbolos iniciales. Añade la palabra clave <code>full-width</code> para facilitar la mezcla entre caracteres ideográficos y caracteres alfabéticos.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'text.html#caps-prop', 'text-transform')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>De {{SpecName('CSS1', '#text-transform', 'text-transform')}}, extiende las letras a alfabetos no latinos bicamerales</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#text-transform', 'text-transform')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estado                       | Comentarios                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 Text', '#text-transform', 'text-transform')}} | {{Spec2('CSS4 Text')}} | De {{SpecName('CSS3 Text', '#text-transform', 'text-transform')}}, se añade la palabra clave `full-size-kana` y permite que la palabra clave `full-width` sea usada junto con otro valor.                                                                                                                                                                                                                           |
+| {{SpecName('CSS3 Text', '#text-transform', 'text-transform')}} | {{Spec2('CSS3 Text')}} | De {{SpecName('CSS2.1', 'text.html#caps-prop', 'text-transform')}}, se extienden las letras a cualquier caracter unicode en la categoría general de Números o Letras. Modifica el comportamiento de `capitalize` para aplicarse a la primera letra de la palabra, ignorando símbolos iniciales. Añade la palabra clave `full-width` para facilitar la mezcla entre caracteres ideográficos y caracteres alfabéticos. |
+| {{SpecName('CSS2.1', 'text.html#caps-prop', 'text-transform')}} | {{Spec2('CSS2.1')}}     | De {{SpecName('CSS1', '#text-transform', 'text-transform')}}, extiende las letras a alfabetos no latinos bicamerales                                                                                                                                                                                                                                                                                                   |
+| {{SpecName('CSS1', '#text-transform', 'text-transform')}}         | {{Spec2('CSS1')}}     | Definición inicial                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("css.properties.text-transform")}}
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li>{{cssxref("font-variant")}}</li>
-</ul>
+- {{cssxref("font-variant")}}
