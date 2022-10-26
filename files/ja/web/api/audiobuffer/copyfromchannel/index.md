@@ -2,6 +2,7 @@
 title: AudioBuffer.copyFromChannel()
 slug: Web/API/AudioBuffer/copyFromChannel
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`copyFromChannel()`** は {{domxref("AudioBuffer")}} インターフェイスのメソッドで、 `AudioBuffer` の指定されたチャンネルから音声サンプルデータを指定された {{jsxref("Float32Array")}} へコピーします。

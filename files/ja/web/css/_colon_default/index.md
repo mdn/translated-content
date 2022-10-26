@@ -15,7 +15,9 @@ slug: Web/CSS/:default
 
 ## 構文
 
-{{csssyntax}}
+```
+:default
+```
 
 ## 例
 

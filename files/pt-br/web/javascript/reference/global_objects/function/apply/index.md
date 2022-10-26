@@ -28,7 +28,7 @@ fun.apply(thisArg, [argsArray])
 
 ## Descrição
 
-Você pode atribuir um objeto `this`\_ _diferente quando chamar uma função existente. `this`_ _refere-se ao objeto atual, o objeto da chamada. Com `apply`_,\_ você pode escrever um método apenas uma vez e então herdá-lo em outro objeto, sem ter que reescrever o método para o novo objeto.
+Você pode atribuir um objeto _`this`_ diferente quando chamar uma função existente. _`this`_ refere-se ao objeto atual, o objeto da chamada. Com _`apply`_, você pode escrever um método apenas uma vez e então herdá-lo em outro objeto, sem ter que reescrever o método para o novo objeto.
 
 `apply` é muito parecido com {{jsxref("Function.call", "call()")}}, exceto pelo tipo de argumentos que ele suporta. Você pode usar um array de argumentos em vez de conjunto de parâmetros nomeados. Com `apply`, você pode usar um array literal, por exemplo, `fun.apply(this, ['comer', 'bananas'])`, ou um objeto {{jsxref("Array")}}, por exemplo `fun.apply(this, new Array('comer', 'bananas')).`
 
@@ -36,7 +36,7 @@ Você pode também usar {{jsxref("Functions/arguments", "arguments")}} para o pa
 
 Desde a 5a versão do ECMAScript você pode utilizar qualquer tipo de objeto que é parecido com um array (array-like), então na prática isso significa que ele vai ter uma propriedade `length` e propriedades inteiras no intervalor (`0... length`). Como um exemplo, você pode agora usar um {{domxref("NodeList")}} ou um objeto personalizado como `{ 'length': 2, '0': 'comer', '1': 'bananas' }`.
 
-{{note("Muitos navegadores, incluindo o Chrome 14 e o Internet Explorer 9, ainda não aceitam objetos parecidos com array e irão lançar uma exceção.")}}.
+> **Nota:** Muitos navegadores, incluindo o Chrome 14 e o Internet Explorer 9, ainda não aceitam objetos parecidos com array e irão lançar uma exceção.
 
 ## Exemplos
 

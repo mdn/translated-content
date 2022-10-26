@@ -2,6 +2,7 @@
 title: CustomElementRegistry.get()
 slug: Web/API/CustomElementRegistry/get
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 **`get()`** は {{domxref("CustomElementRegistry")}} インターフェイスのメソッドで、以前定義したカスタム要素のコンストラクターを返します。

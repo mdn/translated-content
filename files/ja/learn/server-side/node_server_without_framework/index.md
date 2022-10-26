@@ -2,6 +2,7 @@
 title: フレームワークなしの Node.js サーバ
 slug: Learn/Server-side/Node_server_without_framework
 ---
+
 {{LearnSidebar}}
 
 この記事では、フレームワークを使用せずに、Node.js だけで構築された単純な静的ファイルサーバを紹介します。

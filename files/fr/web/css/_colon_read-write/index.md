@@ -59,15 +59,11 @@ p[contenteditable="true"] { color: blue; }
 
 ## Spécifications
 
-| Spécification                                                                            | État                                 | Commentaires                                                                  |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-read-write', ':read-write')}} | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                                          |
-| {{SpecName('HTML5 W3C', '#selector-read-write', ':read-write')}}     | {{Spec2('HTML5 W3C')}}         | Définition de la sémantique relative à HTML et aux contraintes de validation. |
-| {{SpecName('CSS4 Selectors', '#rw-pseudos', ':read-write')}}         | {{Spec2('CSS4 Selectors')}} | Définition de la pseudo-classe mais pas de la sémantique associée.            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.read-write")}}
+{{Compat}}
 
 ## Voir aussi
 

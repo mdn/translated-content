@@ -43,9 +43,13 @@ La valeur de cette propriété est définie grâce à l'un des mots-clés défin
 - `super`
   - : Ce mot-clé permet d'utiliser les glyphes utilisés en exposant.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -73,12 +77,8 @@ La valeur de cette propriété est définie grâce à l'un des mots-clés défin
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#propdef-font-variant-position', 'font-variant-position')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-variant-position")}}
+{{Compat}}

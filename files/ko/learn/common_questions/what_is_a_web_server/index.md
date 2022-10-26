@@ -65,7 +65,7 @@ slug: Learn/Common_questions/What_is_a_web_server
 - 항상 같은 IP주소를 가지고 있습니다(모든 {{Glossary("ISP", "ISPs")}}가 홈 라인에 대해 고정된 IP주소를 제공하는 것은 아닙니다.)
 - 제 3자에 의해 유지보수 됩니다
 
-이러한 이유들로, 좋은 호스팅 제공자를 찾는 것은 당신의 웹 사이트를 구축하는 것의 핵심 부분입니다. 다양한 서비스 회사들의 조건을 살펴보고 당신의 필요와 예산을 충족하는 하나를 선택하세요 (서비스는 무료부터 매달 수 백만원까지 있습니다.) 더 많은 자세한 사항은 [여기서](https://developer.mozilla.org/en-US/Learn/How_much_does_it_cost#Hosting) 찾을 수 있습니다.
+이러한 이유들로, 좋은 호스팅 제공자를 찾는 것은 당신의 웹 사이트를 구축하는 것의 핵심 부분입니다. 다양한 서비스 회사들의 조건을 살펴보고 당신의 필요와 예산을 충족하는 하나를 선택하세요 (서비스는 무료부터 매달 수 백만원까지 있습니다.) 더 많은 자세한 사항은 [여기서](/en-US/Learn/How_much_does_it_cost#Hosting) 찾을 수 있습니다.
 
 당신이 웹 호스팅 솔루션을 설정했다면, 그저 당신의 [웹 서버에 파일들을 업로드 하시면 됩니다.](/ko/docs/Learn/Upload_files_to_a_web_server)
 
@@ -86,7 +86,7 @@ HTTP는 어떻게 클라이언트와 서버가 통신을 하는지 명확한 규
 - HTTP를 통해 파일을 요청할때, 클라이언트는 반드시 {{Glossary("URL")}} 파일들을 제공해야 합니다.
 - 웹 서버는 반드시 최소한의 에러 메시지를 포함하여 모든 HTTP 요청에 응답해야합니다.
 
-[![The MDN 404 page as an example of such error page](https://mdn.mozillademos.org/files/8661/mdn-404.jpg)](https://developer.mozilla.org/en-US/404)웹 서버에서, HTTP 서버는 들어오는 요청들에 대해 응답하고, 처리해야 합니다.
+[![The MDN 404 page as an example of such error page](https://mdn.mozillademos.org/files/8661/mdn-404.jpg)](/en-US/404)웹 서버에서, HTTP 서버는 들어오는 요청들에 대해 응답하고, 처리해야 합니다.
 
 1. 요청을 받으면, HTTP 서버는 먼저 요청받은 URL이 존재하는 파일과 매칭이 되는지를 확인합니다.
 2. 만약 매칭된다면, 웹 서버는 그 파일 내용을 브라우저에게 되돌려줍니다. 만약 그렇지 않다면, 애플리케이션 서버는 필요한 파일을 구축합니다.

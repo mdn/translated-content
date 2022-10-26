@@ -221,14 +221,11 @@ Lorsqu'on utilise `return toto;`, la valeur `toto` sera immédiatement renvoyée
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES8', '#sec-async-function-definitions', 'async function')}}     | {{Spec2('ES8')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.async_function")}}
+{{Compat}}
 
 ## Voir aussi
 

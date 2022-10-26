@@ -80,4 +80,4 @@ function updateTrackCount(event) {
 
 ## Browser compatibility
 
-{{Compat("api.VideoTrackList")}}
+{{Compat}}

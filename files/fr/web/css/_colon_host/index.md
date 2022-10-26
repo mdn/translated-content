@@ -58,13 +58,11 @@ La règle `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` permet de c
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('CSS Scope', '#host-selector', ':host')}} | {{Spec2('CSS Scope')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.host")}}
+{{Compat}}
 
 ## Voir aussi
 

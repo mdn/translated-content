@@ -99,15 +99,11 @@ var response = await maFonctionPromesse().catch(
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("ESDraft", "#sec-async-function-definitions", "async functions")}} | {{Spec2("ESDraft")}} |                      |
-| {{SpecName("ES2018", "#sec-async-function-definitions", "async functions")}}     | {{Spec2('ES2018')}}     |                      |
-| {{SpecName("ES2017", "#sec-async-function-definitions", "async functions")}}     | {{Spec2('ES2017')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.await")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -18,11 +18,11 @@ Acessiblidade no desenvolvimento Web significa permitir que o máximo possível 
 
 ## Documentação
 
-- [Desenvolvimento Web](/pt-BR/docs/Accessibility/Web_Development "Accessibility Web Development")
+- [Desenvolvimento Web](/pt-BR/docs/Accessibility/Web_Development)
   - : Uma coleção de artigos destinados a mostrar as principais questões de desenvolvimento web no mundo da acessibilidade.
 - [ARIA](/pt-BR/docs/Accessibility/ARIA)
   - : Uma coleção de artigos para aprender como usar ARIA e tornar seus documentos HTML mais acessíveis.
-- [Desenvolvimento de tecnologias assistivas (TA)](/pt-BR/docs/Accessibility/AT_Development "AT Development")
+- [Desenvolvimento de tecnologias assistivas (TA)](/pt-BR/docs/Accessibility/AT_Development)
   - : Uma coleção de artigos direcionados a desenvolvedores de tecnologias assistivas.
 - [Acessibilidade em dispositivos móveis](/pt-BR/docs/Web/Accessibility/Mobile_accessibility_checklist)
   - : Esse documento fornece uma breve lista das necessidades da acessibilidade para desenvolvedores de aplicativos móveis.

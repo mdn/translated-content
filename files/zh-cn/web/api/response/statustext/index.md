@@ -43,7 +43,7 @@ fetch(myRequest).then(function(response) {
 
 ## Browser compatibility
 
-{{Compat("api.Response.statusText")}}
+{{Compat}}
 
 ## See also
 

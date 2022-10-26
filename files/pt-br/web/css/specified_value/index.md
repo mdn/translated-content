@@ -25,4 +25,3 @@ O **valor especificado** de uma propriedade CSS está definido em uma de três m
 ## Veja também
 
 - [CSS Reference](/pt-BR/docs/Web/CSS/Reference)
-- {{CSS_key_concepts}}

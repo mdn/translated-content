@@ -69,14 +69,11 @@ p em:last-of-type {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires                                                        |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#last-of-type-pseudo', ':last-of-type')}} | {{Spec2('CSS4 Selectors')}} | L'élément ciblé ne doit pas nécessairement avoir un élément parent. |
-| {{SpecName('CSS3 Selectors', '#last-of-type-pseudo', ':last-of-type')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.last-of-type")}}
+{{Compat}}
 
 ## Voir aussi
 

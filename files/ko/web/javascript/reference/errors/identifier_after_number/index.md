@@ -54,5 +54,5 @@ var foo = life1;
 
 ## 같이 보기
 
-- [문법](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [변수](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#%EB%B3%80%EC%88%98)([JavaScript Guide](/en-US/docs/Web/JavaScript/Guide))
+- [문법](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [변수](/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#%EB%B3%80%EC%88%98)([JavaScript Guide](/en-US/docs/Web/JavaScript/Guide))

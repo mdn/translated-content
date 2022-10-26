@@ -30,7 +30,7 @@ var alpha = ['a', 'b', 'c'],
 
 var alphaNumeric = alpha.concat(numeric);
 
-console.log(alphaNumeric); // 结果: ['a', 'b', 'c', 1, 2, 3]
+console.log(alphaNumeric); // 结果：['a', 'b', 'c', 1, 2, 3]
 ```
 
 设置`Symbol.isConcatSpreadable`为`false`：
@@ -42,7 +42,7 @@ var alpha = ['a', 'b', 'c'],
 numeric[Symbol.isConcatSpreadable] = false;
 var alphaNumeric = alpha.concat(numeric);
 
-console.log(alphaNumeric); // 结果: ['a', 'b', 'c', [1, 2, 3] ]
+console.log(alphaNumeric); // 结果：['a', 'b', 'c', [1, 2, 3] ]
 ```
 
 ### Array-like 对象

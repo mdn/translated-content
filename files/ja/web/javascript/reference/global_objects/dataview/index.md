@@ -59,7 +59,7 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 ## コンストラクター
 
-- [`DataView()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/DataView)
+- [`DataView()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/DataView/DataView)
   - : 新しい `DataView` オブジェクトを作成します。
 
 ## インスタンスプロパティ

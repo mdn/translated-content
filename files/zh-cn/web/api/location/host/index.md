@@ -36,4 +36,4 @@ anchor.host == "developer.mozilla.org:4097"
 
 ## Browser compatibility
 
-{{Compat("api.Location.host")}}
+{{Compat}}

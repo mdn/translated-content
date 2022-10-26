@@ -101,7 +101,7 @@ Neste exemplo, o "filho" terá 150 pixels de largura ou a largura do "pai", o qu
 
 #### Resultado
 
-{{EmbedLiveSample("<code>Setting_max_width_in_pixels</code>", 350, 100)}}
+{{EmbedLiveSample("Definindo_a_largura_máxima_em_pixels", 350, 100)}}
 
 O valor de `fit-content` pode ser usado para atribuir o comprimento de um elemento no tamanho intrínseco necessário pelo seu conteúdo:
 
@@ -140,7 +140,7 @@ Garantir que os elementos atribuidos com `max-width` não estejam cortados e/ou 
 
 | Especificação                                                                                | Status                                   | Comentário                                                                                                                                                                                                                        |
 | -------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Sizing', '#width-height-keywords', 'max-width') }} | {{ Spec2('CSS3 Sizing') }}     | Adiciona o `max-content`, `min-content`, `fit-content`, e `fill-available` keywords.\_ _(Ambos CSS3 Box e CSS3 Writing Modes são rascunhos usados para definir essas keywords, mas foram substituídas por essa especificação._)\_ |
+| {{ SpecName('CSS3 Sizing', '#width-height-keywords', 'max-width') }} | {{ Spec2('CSS3 Sizing') }}     | Adiciona o `max-content`, `min-content`, `fit-content`, e `fill-available` keywords. _(Ambos CSS3 Box e CSS3 Writing Modes são rascunhos usados para definir essas keywords, mas foram substituídas por essa especificação._) |
 | {{ SpecName('CSS3 Transitions', '#animatable-css', 'max-width') }}     | {{ Spec2('CSS3 Transitions') }} | Define `max-width` como animável.                                                                                                                                                                                                 |
 | {{ SpecName('CSS2.1', 'visudet.html#min-max-widths', 'max-width') }} | {{ Spec2('CSS2.1') }}             | Definição inicial.                                                                                                                                                                                                                |
 

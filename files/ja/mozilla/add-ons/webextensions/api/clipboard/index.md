@@ -24,4 +24,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/clipboard
 
 {{Compat("webextensions.api.clipboard", 1, 1)}} {{WebExtExamples("h2")}}
 
-> **Note:** この API は Chromium の [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API に基づきます。
+> **メモ:** この API は Chromium の [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API に基づきます。

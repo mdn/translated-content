@@ -11,7 +11,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
 
 ## 種類
 
-> **Note:** 以下の表の中で、*項目*は単一の文字だけでなく、[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)、[Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)、[グループと範囲](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)を示すこともあります。
+> **メモ:** 以下の表の中で、*項目*は単一の文字だけでなく、[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)、[Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)、[グループと範囲](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)を示すこともあります。
 
 <table class="standard-table">
   <thead>

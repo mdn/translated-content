@@ -379,7 +379,7 @@ car2.displayCar();
 
 ## Usar `this` para referencias a objetos
 
-JavaScript tiene una palabra clave especial, `this`, que puedes usar dentro de un método para referirte al objeto actual. Por ejemplo, supongamos que tienes 2 objetos,`Manager` e `Intern`. Cada objeto tiene su propio `name`,`age` y `job`. En la función `sayHi()`, observa que hay `this.name`. Cuando se agregan a los 2 objetos, se pueden llamar y devuelve el `'Hola, mi nombre es'` y luego agrega el valor `name` de ese objeto específico. Como se muestra abajo.
+JavaScript tiene una palabra clave especial, `this`, que puedes usar dentro de un método para referirte al objeto actual. Por ejemplo, supongamos que tienes 2 objetos, `Manager` e `Intern`. Cada objeto tiene su propio `name`, `age` y `job`. En la función `sayHi()`, observa que hay `this.name`. Cuando se agregan a los 2 objetos, se pueden llamar y devuelve el `'Hola, mi nombre es'` y luego agrega el valor `name` de ese objeto específico. Como se muestra abajo.
 
 ```js
 const Manager = {

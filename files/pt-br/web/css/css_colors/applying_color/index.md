@@ -29,7 +29,7 @@ Sempre que um elemento é renderizado, essas propriedades são usadas para deter
 - {{cssxref("background-color")}}
   - : A cor do plano de fundo do texto.
 - {{cssxref("text-shadow")}}
-  - : Configura um efeito de sombra aplicado ao texto. Entre as opções para os aspectos da sombra, está a cor base da sombra (que será então desfocada e mesclada com o plano de fundo, com base nos outros parâmetros). Veja {{SectionOnPage("/en-US/docs/Learn/CSS/Styling_text/Fundamentals", "Sombras projetadas em texto")}} para descobrir mais.
+  - : Configura um efeito de sombra aplicado ao texto. Entre as opções para os aspectos da sombra, está a cor base da sombra (que será então desfocada e mesclada com o plano de fundo, com base nos outros parâmetros). Veja {{SectionOnPage("/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals", "Sombras projetadas em texto")}} para descobrir mais.
 - {{cssxref("text-decoration-color")}}
   - : Por padrão, decorações de texto (como sublinhados, tachados, etc) usam a propriedade `color` para definir suas cores. No entanto, você pode sobrepor esse comportamento e usar uma cor diferente para elas com a propriedade `text-decoration-color`.
 - {{cssxref("text-emphasis-color")}}
@@ -52,7 +52,7 @@ Todo elemento é uma caixa com algum tipo de conteúdo, e tem um plano de fundo 
 
 ### Bordas
 
-Qualquer elemento pode ter uma [borda](/pt-BR/docs/Learn/CSS/Styling_boxes/Borders) desenhada em torno dele. Uma borda básica de elemento é uma linha desenhada em torno dos cantos do conteúdo do elemento. Veja {{SectionOnPage("/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}} para aprender sobre a relação entre elementos e suas bordas, e o artigo [Estilizando bordas usando CSS](/pt-BR/docs/Learn/CSS/Styling_boxes/Borders) para descobrir mais sobre como aplicar estilo em bordas.
+Qualquer elemento pode ter uma [borda](/pt-BR/docs/Learn/CSS/Styling_boxes/Borders) desenhada em torno dele. Uma borda básica de elemento é uma linha desenhada em torno dos cantos do conteúdo do elemento. Veja {{SectionOnPage("/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}} para aprender sobre a relação entre elementos e suas bordas, e o artigo [Estilizando bordas usando CSS](/pt-BR/docs/Learn/CSS/Styling_boxes/Borders) para descobrir mais sobre como aplicar estilo em bordas.
 
 Você pode usar a propriedade abreviada de {{cssxref("border")}}, que permite configurar tudo sobre a borda de uma só vez (incluindo características que não são a cor, como sua largura, estilo (sólido, tracejado, etc), e assim por diante).
 
@@ -86,7 +86,7 @@ Para uma discussão mais detalhada sobre cada tipo de valor de cor, veja a refer
 
 Um conjunto de nomes padrão de cores foi definido, permitindo que você use essas palavras-chave em vez de representações numéricas de cores, se você preferir isso e houver uma palavra-chave que represente a exata cor que você quer usar. Palavras-chave de cores incluem as cores primárias e secundárias padrão (como `red`, `blue`, ou `orange`), tons de cinza (de `black` a `white`, incluindo cores como `darkgray` e `lightgrey`), e uma variedade de outras cores mescladas como `lightseagreen`, `cornflowerblue`, e `rebeccapurple`.
 
-Veja {{SectionOnPage("/en-US/docs/Web/CSS/color_value", "Palavras-chave de cor", "code")}} para uma lista de todas as palavras-chave de cores disponíveis.
+Veja {{SectionOnPage("/pt-BR/docs/Web/CSS/color_value", "Palavras-chave de cor", "code")}} para uma lista de todas as palavras-chave de cores disponíveis.
 
 ### Valores RGB
 
@@ -348,7 +348,7 @@ O CSS simplesmente estabelece um tamanho para a caixa e alguns estilos básicos 
 
 #### JavaScript
 
-O script aqui faz a tarefa de atualizar a cor inicial da borda para refletir o valor do seletor de cor. Então, dois event handlers são adicionados para lidar com o input do elemento [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color).
+O script aqui faz a tarefa de atualizar a cor inicial da borda para refletir o valor do seletor de cor. Então, dois event handlers são adicionados para lidar com o input do elemento [`<input type="color">`](/pt-BR/docs/Web/HTML/Element/input/color).
 
 ```js
 let colorPicker = document.getElementById("colorPicker");

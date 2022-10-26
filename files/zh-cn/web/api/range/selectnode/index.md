@@ -33,7 +33,7 @@ range.selectNode(referenceNode);
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.selectNode")}}
+{{Compat}}
 
 ## 参见
 

@@ -27,6 +27,4 @@ La fragmentation se produit lorsqu'une boîte en ligne se retrouve sur plusieurs
 
 ## Spécifications
 
-| Spécification                                | État                                     | Commentaires         |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fragmentation')}} | {{Spec2('CSS3 Fragmentation')}} | Définition initiale. |
+{{Specifications}}

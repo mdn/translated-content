@@ -30,7 +30,7 @@ Reflect.getOwnPropertyDescriptor(target, propertyKey)
 
 ## 描述
 
-`Reflect.getOwnPropertyDescriptor`方法返回一个属性描述符，如果给定的属性存在于对象中，否则返回 {{jsxref("undefined")}} 。 与 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的唯一不同在于如何处理非对象目标。
+`Reflect.getOwnPropertyDescriptor`方法返回一个属性描述符，如果给定的属性存在于对象中，否则返回 {{jsxref("undefined")}} 。与 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的唯一不同在于如何处理非对象目标。
 
 ## 示例
 

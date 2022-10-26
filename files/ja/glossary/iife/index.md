@@ -2,6 +2,7 @@
 title: IIFE (即時実行関数式)
 slug: Glossary/IIFE
 ---
+
 **IIFE** (Immediately Invoked Function Expression; 即時実行関数式) は定義されるとすぐに実行される {{glossary("JavaScript")}} の {{glossary("function", "関数")}} です。
 
 ```js
@@ -44,7 +45,7 @@ result; // "Barry"
 
 2. Wikipedia の記事
 
-    1. {{interwiki("wikipedia", "en:Immediately-invoked function expression", "IIFE")}} (英語)
+    1. [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (英語)
 
 3. [用語集](/ja/docs/Glossary)
 

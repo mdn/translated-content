@@ -21,14 +21,11 @@ Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp.@@search",
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.search', 'Symbol.search')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.search', 'Symbol.search')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.search")}}
+{{Compat}}
 
 ## Voir aussi
 

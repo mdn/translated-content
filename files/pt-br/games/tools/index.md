@@ -8,7 +8,7 @@ tags:
   - Jogos
 translation_of: Games/Tools
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+{{GamesSidebar}}
 
 Nesta página você pode encontrar links para a nossa ferramenta de desenvolvimento de jogos, artigos, os quais eventualmente abrangem frameworks, compiladores, e ferramentas de debug.
 

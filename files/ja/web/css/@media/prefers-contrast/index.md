@@ -63,4 +63,4 @@ slug: Web/CSS/@media/prefers-contrast
 - Microsoft [-ms-high-contrast](https://msdn.microsoft.com/library/Hh771830) メディア特性
 - CSS の [forced-colors](/ja/docs/Web/CSS/@media/forced-colors) メディアクエリー
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
+{{QuickLinksWithSubpages("/ja/docs/Web/CSS/@media/")}}

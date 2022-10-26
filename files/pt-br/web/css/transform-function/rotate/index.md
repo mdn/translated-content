@@ -14,7 +14,7 @@ O eixo de rotação passa por uma origem, definido pela propriedade CSS {{ cssxr
 
 ## Sintaxe
 
-A quantidade de rotação criada por `rotate()` é especificado por um {{cssxref("&lt;angle&gt;")}}. Se positivo, o movimento será no sentido horário; Se negativo, ela será no sentido anti-horário. Uma rotação de 180° é chamada de \_point reflection (\_reflexão do ponto).
+A quantidade de rotação criada por `rotate()` é especificado por um {{cssxref("&lt;angle&gt;")}}. Se positivo, o movimento será no sentido horário; Se negativo, ela será no sentido anti-horário. Uma rotação de 180° é chamada de _point reflection_ (reflexão do ponto).
 
 ```
 rotate(a)
@@ -122,10 +122,10 @@ div {
 
 ## Compatibilidade do navegador
 
-Por favor, veja o tipo de dados [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
+Por favor, veja o tipo de dados [`<transform-function>`](/pt-BR/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
 
 ## Veja também
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)
+- [`rotate3d()`](/pt-BR/docs/Web/CSS/transform-function/rotate3d)

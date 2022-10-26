@@ -15,7 +15,7 @@ slug: Web/HTML/Element/Input/time
 
 ### Chrome 和 Opera
 
-在 Chrome 或 Opera 中，`time` 选择控件很简单，根据操作系统区域设置，插槽以 12 或 24 小时格式输入小时和分钟，上下箭头用于递增和递减当前选定的组件。在某些版本中，会提供一个 “x” 按钮来清除控件的值。
+在 Chrome 或 Opera 中，`time` 选择控件很简单，根据操作系统区域设置，插槽以 12 或 24 小时格式输入小时和分钟，上下箭头用于递增和递减当前选定的组件。在某些版本中，会提供一个“x”按钮来清除控件的值。
 
 ![12 小时制输入格式](chrome_time.png) 12 小时制
 
@@ -23,7 +23,7 @@ slug: Web/HTML/Element/Input/time
 
 ### Firefox
 
-Firefox 的 `time` 选择控件和 Chrome 非常相似，只是它没有上下箭头。它还基于系统区域设置使用 12 或 24 小时格式输入时间，也提供 “X” 按钮以清除控件的值。
+Firefox 的 `time` 选择控件和 Chrome 非常相似，只是它没有上下箭头。它还基于系统区域设置使用 12 或 24 小时格式输入时间，也提供“X”按钮以清除控件的值。
 
 ![Firefox 的 12 小时制输入格式](firefox-time.png) 12 小时制
 
@@ -58,7 +58,7 @@ Edge 的 `time` 选择控件有点复杂，打开一个小时和分钟的滚动�
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
-	<td>
+  <td>
       <code>value</code>、<code>valueAsDate</code>、<code>valueAsNumber</code> 和 <code>list</code>
     </td>
   </tr>
@@ -224,7 +224,7 @@ _目前，尚不清楚当与 `time` 输入一起使用时，`any` 的值对 `ste
 ```html
 <form>
   <label for="appt-time">
-    选择约定的时间（开放时间为 12：00 到 18：00）：
+    选择约定的时间（开放时间为 12:00 到 18:00）：
   </label>
   <input id="appt-time" type="time" name="appt-time" min="12:00" max="18:00" />
   <span class="validity"></span>
@@ -265,7 +265,7 @@ input:valid + span::after {
 运行的结果可以说明：
 
 - 只有 12:00 和 18:00 之间的时间才会被视为有效，超出这个范围的时间将被表示为无效。
-- 根据你使用的浏览器，你可能会发现指定范围之外的时间甚至无法在时间选择器中选择（例如Edge）。
+- 根据你使用的浏览器，你可能会发现指定范围之外的时间甚至无法在时间选择器中选择（例如 Edge）。
 
 #### 使最小值和最大值跨越午夜
 
@@ -295,7 +295,7 @@ if (input.validity.valid && input.type === 'time') {
 <form>
   <div>
     <label for="appt-time">
-      选择约定的时间（开放时间为 12：00 到 18：00）：
+      选择约定的时间（开放时间为 12:00 到 18:00）：
     </label>
     <input
       id="appt-time"
@@ -340,7 +340,7 @@ if (input.validity.valid && input.type === 'time') {
 <form>
   <div>
     <label for="appt-time">
-      选择约定的时间（开放时间为 12：00 到 18：00）：
+      选择约定的时间（开放时间为 12:00 到 18:00）：
     </label>
     <input
       id="appt-time"
@@ -405,7 +405,7 @@ HTML 看起来像这样：
 <form>
   <div class="nativeTimePicker">
     <label for="appt-time">
-      选择约定的时间（开放时间为 12：00 到 18：00）：
+      选择约定的时间（开放时间为 12:00 到 18:00）：
     </label>
     <input
       id="appt-time"
@@ -417,7 +417,7 @@ HTML 看起来像这样：
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">
-    选择约定的时间（开放时间为 12：00 到 18：00）：
+    选择约定的时间（开放时间为 12:00 到 18:00）：
   </p>
   <div class="fallbackTimePicker">
     <div>

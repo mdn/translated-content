@@ -89,7 +89,7 @@ text-decoration-thickness: unset;
 
 {{Specifications}}
 
-> **Note:** このプロパティは `text-decoration-width` と呼ばれていましたが、 2019 年に `text-decoration-thickness` に更新されました。
+> **メモ:** このプロパティは `text-decoration-width` と呼ばれていましたが、 2019 年に `text-decoration-thickness` に更新されました。
 
 ## ブラウザーの互換性
 

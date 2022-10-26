@@ -2,11 +2,12 @@
 title: Navigator.getBattery()
 slug: Web/API/Navigator/getBattery
 ---
+
 {{ ApiRef("Battery API") }}{{deprecated_header}}
 
 **`getBattery()`** メソッドは、システムのバッテリーに関する情報を提供します。これは {{domxref("BatteryManager")}} オブジェクトで解決されるバッテリーの promise を返し、バッテリーの状態を監視するために処理できるいくつかの新しいイベントを提供します。これは [Battery Status API](/ja/docs/WebAPI/Battery_Status) を実装しています。詳細、API の使用ガイド、サンプルコードについては、そのドキュメントを参照してください。
 
-> **Note:** **メモ:** ブラウザーによっては、この機能へのアクセスは {{HTTPHeader("Feature-Policy")}} の {{HTTPHeader("Feature-Policy/battery","battery")}} ディレクティブで制御されます。
+> **メモ:** ブラウザーによっては、この機能へのアクセスは {{HTTPHeader("Feature-Policy")}} の {{HTTPHeader("Feature-Policy/battery","battery")}} ディレクティブで制御されます。
 
 ## 構文
 

@@ -78,13 +78,11 @@ De cette manière, vous convertirez toujours les requêtes non sécurisées sur 
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------- |
-| {{specName("Upgrade Insecure Requests", "#delivery", "upgrade-insecure-requests")}} | {{Spec2('Upgrade Insecure Requests')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.upgrade-insecure-requests")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -27,9 +27,6 @@ Se você quiser manipular o armazenamento de sessão para um domínio, você cha
 
 - {{domxref("Storage.key()")}}
   - : Quando passado um número n, este método retornará o nome da n-ésima chave no armazenamento..
-
-<!---->
-
 - {{domxref("Storage.getItem()")}}
   - : Quando passado um nome de chave, retornará o valor dessa chave.
 - {{domxref("Storage.setItem()")}}

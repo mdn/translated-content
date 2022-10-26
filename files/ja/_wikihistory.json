@@ -626,10 +626,6 @@
     "modified": "2020-11-12T07:51:58.821Z",
     "contributors": ["mfuji09", "Uemmra3"]
   },
-  "Glossary/Empty_element": {
-    "modified": "2019-03-23T22:19:52.035Z",
-    "contributors": ["Uemmra3", "dskmori", "unarist"]
-  },
   "Glossary/Encapsulation": {
     "modified": "2019-03-18T21:35:31.431Z",
     "contributors": ["ysgk"]
@@ -1854,6 +1850,10 @@
   "Glossary/VoIP": {
     "modified": "2019-07-09T12:07:12.750Z",
     "contributors": ["Uemmra3", "dskmori", "fuekuma"]
+  },
+  "Glossary/Void_element": {
+    "modified": "2019-03-23T22:19:52.035Z",
+    "contributors": ["Uemmra3", "dskmori", "unarist"]
   },
   "Glossary/W3C": {
     "modified": "2020-10-05T12:33:13.700Z",
@@ -20804,10 +20804,6 @@
       "Potappo"
     ]
   },
-  "Web/Guide/HTML/Editable_content": {
-    "modified": "2019-05-13T11:13:31.486Z",
-    "contributors": ["mfuji09", "yyss", "ethertank"]
-  },
   "Web/Guide/HTML/XHTML": {
     "modified": "2020-05-04T01:56:10.076Z",
     "contributors": ["mfuji09"]
@@ -29344,17 +29340,6 @@
       "nonki777"
     ]
   },
-  "Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode": {
-    "modified": "2020-04-10T09:42:32.564Z",
-    "contributors": [
-      "mfuji09",
-      "Uemmra3",
-      "nabetaro",
-      "SCENEE",
-      "ambi",
-      "shide55"
-    ]
-  },
   "Web/JavaScript/Reference/Template_literals": {
     "modified": "2020-10-15T21:33:08.783Z",
     "contributors": [
@@ -31333,6 +31318,10 @@
     "modified": "2020-11-30T10:28:22.488Z",
     "contributors": ["chrisdavidmills", "mfuji09", "inkusu"]
   },
+  "conflicting/Web/HTML/Global_attributes/contenteditable": {
+    "modified": "2019-05-13T11:13:31.486Z",
+    "contributors": ["mfuji09", "yyss", "ethertank"]
+  },
   "conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking": {
     "modified": "2020-08-12T12:42:41.854Z",
     "contributors": ["mfuji09", "tamura4278"]
@@ -31390,6 +31379,17 @@
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
+  },
+  "conflicting/Web/JavaScript/Reference/Strict_mode": {
+    "modified": "2020-04-10T09:42:32.564Z",
+    "contributors": [
+      "mfuji09",
+      "Uemmra3",
+      "nabetaro",
+      "SCENEE",
+      "ambi",
+      "shide55"
+    ]
   },
   "conflicting/Web/SVG/Element/animate": {
     "modified": "2020-10-15T21:27:02.463Z",
@@ -31473,10 +31473,6 @@
       "Shoot",
       "Norah"
     ]
-  },
-  "orphaned/Web/API/Document/tooltipNode": {
-    "modified": "2020-10-15T21:21:36.814Z",
-    "contributors": ["mfuji09", "fscholz", "AshfaqHossain", "ethertank"]
   },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2020-09-27T12:30:54.835Z",
@@ -31964,10 +31960,6 @@
     "modified": "2020-03-12T19:44:08.901Z",
     "contributors": ["YuichiNukiyama"]
   },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype": {
-    "modified": "2019-03-23T22:21:22.661Z",
-    "contributors": ["YuichiNukiyama"]
-  },
   "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
     "modified": "2020-10-17T14:59:10.566Z",
     "contributors": ["mpcjazz", "mfuji09", "YuichiNukiyama"]
@@ -31992,10 +31984,6 @@
     "modified": "2020-03-15T03:29:26.429Z",
     "contributors": ["mfuji09", "takubokudori", "Uemmra3"]
   },
-  "orphaned/Web/Specification_list": {
-    "modified": "2019-03-23T22:36:04.299Z",
-    "contributors": ["lv7777"]
-  },
   "orphaned/Web/Web_Components/Status_in_Firefox": {
     "modified": "2019-03-23T22:35:08.421Z",
     "contributors": ["ueokande", "dskmori"]
@@ -32003,10 +31991,6 @@
   "orphaned/Working_with_windows_in_chrome_code": {
     "modified": "2019-01-16T17:12:27.632Z",
     "contributors": ["fscholz", "ethertank"]
-  },
-  "orphaned/reftest_opportunities_files": {
-    "modified": "2019-01-16T16:06:58.745Z",
-    "contributors": ["Taken", "Mgjbot"]
   },
   "web/Accessibility/ARIA/Attributes/aria-activedescendant": {
     "modified": "2019-03-18T20:45:37.166Z",

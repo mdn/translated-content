@@ -33,7 +33,7 @@ TBD.
 
 ## Browser compatibility
 
-{{Compat("api.VRPose.timestamp")}}
+{{Compat}}
 
 ## See also
 

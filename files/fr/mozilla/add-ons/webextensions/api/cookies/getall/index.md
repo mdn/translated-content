@@ -45,7 +45,7 @@ var getting = browser.cookies.getAll(
     - `secure`{{optional_inline}}
       - : Un `booléen` — filtre les cookies par leur propriété `sécurisée`, vous permettant de filtrer les cookies sécurisés contre les cookies non sécurisés.
     - `session`{{optional_inline}}
-      - : Un `booléen`— filtre les cookies en fonction de leur propriété de `session`, ce qui vous permet de filtrer les cookies de session par rapport aux cookies persistants.
+      - : Un `booléen` — filtre les cookies en fonction de leur propriété de `session`, ce qui vous permet de filtrer les cookies de session par rapport aux cookies persistants.
     - `storeId`{{optional_inline}}
       - : Une `chaîne` représentant le magasin de cookies pour récupérer les cookies. S'il est omi, le cookie store du contexte d'exécution actuel sera utilisé.
     - `url`{{optional_inline}}
@@ -84,7 +84,8 @@ gettingAll.then(logCookies);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,4 +112,4 @@ gettingAll.then(logCookies);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

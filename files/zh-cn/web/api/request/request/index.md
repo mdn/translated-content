@@ -41,8 +41,8 @@ var myRequest = new Request(input[, init]);
 
 ## Errors
 
-| **Type**  | **Description**                                                                                                                                             |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**  | **Description**                                                                                                                                              |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | TypeError | 自 [Firefox 43](/zh-CN/docs/Mozilla/Firefox/Releases/43)后，若 URL 有 credentials，`Request()` 会抛出 TypeError , 例如 `http://user:password\@example.com`。 |
 
 ## Example
@@ -113,7 +113,7 @@ var myRequest = new Request('flowers.jpg', myInit);
 
 ## 浏览器兼容性
 
-{{Compat("api.Request.Request")}}
+{{Compat}}
 
 ## 参见
 

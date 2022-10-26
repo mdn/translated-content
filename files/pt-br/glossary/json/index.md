@@ -10,7 +10,7 @@ JSON e capaz de representar números, booleanos, textos, vazios, e listas (sequ�
 
 ## Documentação
 
-- [Objetos JSON](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/JSON)
+- [Objetos JSON](/en/JavaScript/Reference/Global_Objects/JSON)
   - : Os objetos JSON contém métodos para converter valores para Notação de objetos javascript (JSON) e para converter JSON para valores.
 - [Usando o JSON nativo](/en/Using_native_JSON)
   - : Este artigo cobre o ECMAScript 5 compilando a linguagem nativa JSON somado em Gecko 1.9.1.

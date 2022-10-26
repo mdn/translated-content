@@ -47,9 +47,13 @@ Lorsqu'on utilise cette propriété raccourcie avec deux valeurs, la première e
 - `none`
   - : Il n'y a pas d'effet associé sur les zones de défilement environnantes et on empêche le comportement normal de se produire sur l'élément lorsqu'on dépasse de la zone de défilement.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -78,17 +82,11 @@ body {
 
 ## Spécifications
 
-Jusqu'à ce que le CSSWG publie son propre brouillon, la spécification est consutable sur [le dépôt GitHub du WICG](https://wicg.github.io/overscroll-behavior/).
-
-| Spécification                                                                                                                | État                                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------ |
-| {{SpecName('CSS Overscroll Behavior', '#propdef-overscroll-behavior', 'overscroll-behavior')}} | {{Spec2('CSS Overscroll Behavior')}} |              |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.overscroll-behavior")}}
+{{Compat}}
 
 ## Voir aussi
 

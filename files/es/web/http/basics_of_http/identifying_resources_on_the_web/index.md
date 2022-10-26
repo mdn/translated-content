@@ -22,9 +22,9 @@ https://developer.mozilla.org/en-US/docs/Learn/
 https://developer.mozilla.org/en-US/search?q=URL
 ```
 
-Cualquiera de estas URLs se pueden escribir en la barra de direcciones de su navegador para decirle que cargue la pagina asociada (recurso).
+Cualquiera de estas URLs se pueden escribir en la barra de direcciones de su navegador para decirle que cargue la página asociada (recurso).
 
-Una URL esta compuesta de diferentes partes, algunas obligatorias y otras son opcionales. Un ejemplo más complejo podría tener este aspecto:
+Una URL está compuesta de diferentes partes, algunas obligatorias y otras son opcionales. Un ejemplo más complejo podría tener este aspecto:
 
 ```
 http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
@@ -77,7 +77,7 @@ Las dos URNs corresponden a
 ### Ruta de Acceso
 
 - ![Path to the file](https://mdn.mozillademos.org/files/8019/mdn-url-path@x2.png)
-  - : `/path/to/myfile.html` es la ruta de acceso al recurso en el servidor Web. En los primeros dias de la Web, una ruta como esta presentaba la ubicación fisica del archivo en el servidor Web. Hoy en día, es sobre todo una abstracción manejada por los servidores Web sin ningún tipo de realidad fisica.
+  - : `/path/to/myfile.html` es la ruta de acceso al recurso en el servidor Web. En los primeros días de la Web, una ruta como esta presentaba la ubicación física del archivo en el servidor Web. Hoy en día, es sobre todo una abstracción manejada por los servidores Web sin ningún tipo de realidad física.
 
 ### Consulta
 
@@ -87,7 +87,7 @@ Las dos URNs corresponden a
 ### Fragmento
 
 - ![Anchor](https://mdn.mozillademos.org/files/8023/mdn-url-anchor@x2.png)
-  - : `#SomewhereInTheDocument` es una referencia a otra parte del propio recurso. Esto representa una especie de "marcador" dentro del recurso, otorgandole al navegador las instrucciones para mostrar el contenido que se encuentra en esa referencia señalada. En un documento HTML, por ejemplo, el navegador se desplazará hasta el punto donde se define el fragmento; en un video o documento de audio, el navegador intentará ir a la vez que el ancla se presenta. Vale la pena señalar que la parte despues de la #, también conocido como indentificador de fragmento, nunca se envia al servidor con la solicitud.
+  - : `#SomewhereInTheDocument` es una referencia a otra parte del propio recurso. Esto representa una especie de "marcador" dentro del recurso, otorgandole al navegador las instrucciones para mostrar el contenido que se encuentra en esa referencia señalada. En un documento HTML, por ejemplo, el navegador se desplazará hasta el punto donde se define el fragmento; en un video o documento de audio, el navegador intentará ir a la vez que el ancla se presenta. Vale la pena señalar que la parte después de la #, también conocido como indentificador de fragmento, nunca se envía al servidor con la solicitud.
 
 ## Ejemplos
 
@@ -108,4 +108,4 @@ urn:isbn:9780141036144
 ## Ver también
 
 - [Qué es una URL?](/es/docs/Learn/Common_questions/What_is_a_URL)
-- [Lista de esquemas URI IANA](http://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+- [Lista de esquemas URI IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

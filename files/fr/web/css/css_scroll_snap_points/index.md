@@ -28,6 +28,4 @@ translation_of: Web/CSS/CSS_Scroll_Snap_Points
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-points-y", "scroll-snap-points-y")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
+{{Specifications}}

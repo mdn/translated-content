@@ -16,7 +16,9 @@ slug: Web/CSS/:placeholder-shown
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:placeholder-shown
+```
 
 ## 例
 

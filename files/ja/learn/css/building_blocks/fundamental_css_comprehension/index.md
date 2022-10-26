@@ -3,6 +3,7 @@ title: 基本的な CSS の理解
 slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
 
 このモジュールで多くをカバーしてきました、最後まで来て気分が良いでしょう！ 次に進む前の最後のステップは、モジュールの評価を試みることです。これには、最終的なデザイン (名刺/ゲーマーカード/ソーシャルメディアプロファイル) を作成するために完了しなければならないいくつかの関連演習が含まれます。
@@ -18,7 +19,7 @@ original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 - [練習用の HTML ファイル](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/index.html)とそれに[関連付けられた画像ファイル](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/chris.jpg)を探して、ローカルコンピュータの新しいディレクトリーに保存します。自身の画像ファイルを使い、自身の名前を記入したいのなら、それも大歓迎です — ちょうど画像が正方形であることを確認してください。
 - [CSS リソースのテキストファイル](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/style-resources.txt)を入手してください。これには、評価の一部に答えるために検討して組み合わせる必要がある一連の未加工のセレクタとルールセットが含まれています。
 
-> **Note:** 代わりとして、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価することもできます。HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力し、この URL を使用して `<img>` 要素を画像ファイルに向けることができます。使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
+> **メモ:** 代わりとして、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価することもできます。HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力し、この URL を使用して `<img>` 要素を画像ファイルに向けることができます。使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
 
 ## プロジェクト概要
 
@@ -52,7 +53,7 @@ CSS リソースファイルで提供されているセレクタとルールセ�
 - フッターの内側の `<p>` を 15 px の有効フォントサイズ (ただし `em`s で表示) とフッターのコンテンツボックスの中央に配置するための適切な行の高さを指定するルールセットを作成します。やる前にコンテンツボックスの高さは 30 px でなければならないことを思い出してください — これで行の高さを計算するのに必要なすべての数が揃います。
 - 最後のちょっとしたタッチとして、`<article>` の内側の段落に適切なパディング値を指定して、その左端が `<h2>` とフッターの段落に揃うようにし、読みやすくなるように色をかなり明るい色に設定します。
 
-> **Note:** 2 番目のルールセットは `<html>` 要素に `font-size: 10px;` を設定することに注意してください。これは `<html>` のすべての子孫について、em はデフォルトの 16 px ではなく 10 px になることを意味します (これはもちろん、階層内で問題の子孫と `<html>` の間に別の `font-size` が設定されている先祖がいない場合に限ります。これは必要な値に影響を与える可能性がありますが、この単純な例では問題にはなりません)。
+> **メモ:** 2 番目のルールセットは `<html>` 要素に `font-size: 10px;` を設定することに注意してください。これは `<html>` のすべての子孫について、em はデフォルトの 16 px ではなく 10 px になることを意味します (これはもちろん、階層内で問題の子孫と `<html>` の間に別の `font-size` が設定されている先祖がいない場合に限ります。これは必要な値に影響を与える可能性がありますが、この単純な例では問題にはなりません)。
 
 その他の考慮事項
 

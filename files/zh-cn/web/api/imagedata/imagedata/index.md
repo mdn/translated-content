@@ -5,7 +5,7 @@ slug: Web/API/ImageData/ImageData
 
 {{APIRef("Canvas API")}}
 
-**`ImageData()`** 构造函数返回一个新的实例化的 `ImageData` 对象， 此对象由给定的类型化数组和指定的宽度与高度组成。
+**`ImageData()`** 构造函数返回一个新的实例化的 `ImageData` 对象，此对象由给定的类型化数组和指定的宽度与高度组成。
 
 这个构造器是创建像这种对象首选的方式。
 

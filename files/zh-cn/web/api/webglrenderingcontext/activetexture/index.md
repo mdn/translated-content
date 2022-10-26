@@ -34,7 +34,7 @@ void gl.activeTexture(texture);
 gl.activeTexture(gl.TEXTURE1);
 ```
 
-纹理单元的数量视实现而定， 你可以通过访问常量 `MAX_COMBINED_TEXTURE_IMAGE_UNITS` 来获取这个值。按照规范来说，最少是 8 个。
+纹理单元的数量视实现而定，你可以通过访问常量 `MAX_COMBINED_TEXTURE_IMAGE_UNITS` 来获取这个值。按照规范来说，最少是 8 个。
 
 ```js
 gl.getParameter(gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS);

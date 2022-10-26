@@ -39,7 +39,7 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Notification.icon")}}
+{{Compat}}
 
 ## 参见
 

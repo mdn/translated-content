@@ -120,17 +120,8 @@ Les propriétés et valeurs logiques utilisent les termes abstraits _bloc_ (_blo
 
 ## Spécifications
 
-| Spécification                                        | État                                             | Commentaires         |
-| ---------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilité générale
-
-De façon générale :
-
-- Firefox prend en charge les propriétés logiques lorsqu'il existe une correspondance directe avec les propriétés physiques.
-- Idem pour Chrome à partir de la version 69.
-- Edge ne prend actuellement (décembre 2018) pas en charge ces propriétés.
-- Firefox 66 introduit la prise en charge de deux valeurs raccourcies qui sont également derrière un _flag_ pour Chrome.
+## Compatibilité des navigateurs
 
 Pour des informations précises sur chaque propriété, se référer au tableau de compatibilité des pages des propriétés.

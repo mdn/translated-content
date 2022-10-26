@@ -4,6 +4,7 @@ slug: Glossary/Grid_Tracks
 l10n:
   sourceCommit: d2a9f2e26a8139d4bb270d7dc3cddd8b848719fe
 ---
+
 **グリッドトラック**とは、2 本の{{glossary("grid lines", "グリッド線")}}の間の空間のことです。*明示的なグリッド*では、 {{cssxref("grid-template-columns")}} と {{cssxref("grid-template-rows")}} プロパティ、または一括指定の {{cssxref("grid")}} または {{cssxref("grid-template")}} プロパティを使用して定義します。明示的グリッドで作成したトラックの外側にグリッドアイテムを配置することで、*暗黙的グリッド*にもトラックが生成されます。
 
 次の画像は、グリッドにおける最初の行トラックを表しています。

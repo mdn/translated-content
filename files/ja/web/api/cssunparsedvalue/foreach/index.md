@@ -2,6 +2,7 @@
 title: CSSUnparsedValue.forEach()
 slug: Web/API/CSSUnparsedValue/forEach
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 **`CSSUnparsedValue.forEach()`** メソッドは、指定された関数を、 {{domxref('CSSUnparsedValue')}} オブジェクトのそれぞれの要素に対して実行します。

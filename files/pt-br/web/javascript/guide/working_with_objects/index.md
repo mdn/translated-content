@@ -255,7 +255,7 @@ adiciona uma propriedade `cor` ao `carro1`, e dá a ele o valor `"preto."` No en
 
 ### Usando o método Object.create
 
-Objetos podem também ser criados usando-se o método [`Object.create()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create). Esse método pode ser muito útil, pois permite que você escolha o objeto protótipo para o objeto que você quer criar, sem a necessidade de se definir uma função construtora.
+Objetos podem também ser criados usando-se o método [`Object.create()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/create). Esse método pode ser muito útil, pois permite que você escolha o objeto protótipo para o objeto que você quer criar, sem a necessidade de se definir uma função construtora.
 
 ```js
 // Encapsulamento das propriedades e métodos de Animal
@@ -333,7 +333,7 @@ function mostreCarro() {
 
 onde `pretty_print` é uma função que mostra uma linha horizontal e uma string. Observe o uso de `this` para referenciar o objeto ao qual o método pertence.
 
-Você pode fazer desta função um método de `carro,` adicionando seu estado à definição do objeto.
+Você pode fazer desta função um método de `carro`, adicionando seu estado à definição do objeto.
 
 ```js
 this.mostreCarro = mostreCarro;
@@ -418,11 +418,11 @@ As propriedades do objeto `o` são:
 - `o.b` — um getter que retorna `o.a` + 1
 - `o.c` — um setter que define o valor de `o.a` pela metade do valor definindo para `o.c`
 
-Observe que nomes de função de getters e setters definidos em um objeto literal usando "\[gs]et _property_()" (ao contrário de `__define[GS]etter__` ) não são os próprios nomes dos getters, embora a sintaxe `[gs]et propertyName(){ }` possa induzir ao erro e você pensar de outra forma. Para nomear uma função getter ou setter usando a sintaxe "\[gs]et _property_()", define explicitamente um função nomeada programaticamente usando [`Object.defineProperty`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty "en-US/docs/Core JavaScript 1.5 Reference/Global
-Objects/Object/defineProperty") (ou o legado fallback [`Object.prototype.__defineGetter__`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineGetter "en-US/docs/Core JavaScript 1.5 Reference/Global
+Observe que nomes de função de getters e setters definidos em um objeto literal usando "\[gs]et _property_()" (ao contrário de `__define[GS]etter__` ) não são os próprios nomes dos getters, embora a sintaxe `[gs]et propertyName(){ }` possa induzir ao erro e você pensar de outra forma. Para nomear uma função getter ou setter usando a sintaxe "\[gs]et _property_()", define explicitamente um função nomeada programaticamente usando [`Object.defineProperty`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/defineProperty "en-US/docs/Core JavaScript 1.5 Reference/Global
+Objects/Object/defineProperty") (ou o legado fallback [`Object.prototype.__defineGetter__`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/defineGetter "en-US/docs/Core JavaScript 1.5 Reference/Global
 Objects/Object/defineGetter")).
 
-O código a seguir ilustra como getters e setters podem extender o protótipo [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) para adicionar a propriedade `ano` para todas as instâncias de classes `Date` pré-definidas. Ele usa os métodos `getFullYear` e `setFullYear` existentes da classe `Date` para suportar o getter e setter da propriedade `ano`.
+O código a seguir ilustra como getters e setters podem extender o protótipo [`Date`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date) para adicionar a propriedade `ano` para todas as instâncias de classes `Date` pré-definidas. Ele usa os métodos `getFullYear` e `setFullYear` existentes da classe `Date` para suportar o getter e setter da propriedade `ano`.
 
 Estes estados definem um getter e setter para a propriedade `ano`:
 

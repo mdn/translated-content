@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.redirectEnd
 slug: Web/API/PerformanceResourceTiming/redirectEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`redirectEnd`** 読み取り専用プロパティは、最後のリダイレクトのレスポンスの最後のバイトを受信した直後に {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。

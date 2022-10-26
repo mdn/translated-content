@@ -2,6 +2,7 @@
 title: MediaRecorder.start()
 slug: Web/API/MediaRecorder/start
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 MediaStream Recording API の一部である {{domxref("MediaRecorder")}} のメソッド **`start()`** は、1 つ以上の {{domxref("Blob")}} オブジェクトへのメディアの記録を開始します。 メディアの全期間を単一の `Blob` に（または {{domxref("MediaRecorder.requestData", "requestData()")}} を呼び出すまで）記録することも、一度に記録するミリ秒数を指定することもできます。 その後、その量のメディアが記録されるたびに、記録されたメディアに対応できるようにイベントが配信され、その間に、メディアの次のスライスを記録するための新しい `Blob` が作成されます。
@@ -10,7 +11,7 @@ MediaStream Recording API の一部である {{domxref("MediaRecorder")}} のメ
 
 ソースストリームが終了すると、`state` は `"inactive"` に設定され、データ収集は停止します。 最後の {{event("dataavailable")}} イベントが `MediaRecorder` に送られ、その後に {{event("stop")}} イベントが続きます。
 
-> **Note:** ブラウザーが記録を開始または記録を続行できない場合は、{{domxref("DOMError")}} イベントを発生*させよう*とし、続いて収集した Blob を含む {{domxref("MediaRecorder.dataavailable")}} イベントと {{domxref("MediaRecorder.stop")}} イベントを発生*させよう*とします。
+> **メモ:** ブラウザーが記録を開始または記録を続行できない場合は、{{domxref("DOMError")}} イベントを発生*させよう*とし、続いて収集した Blob を含む {{domxref("MediaRecorder.dataavailable")}} イベントと {{domxref("MediaRecorder.stop")}} イベントを発生*させよう*とします。
 
 ## 構文
 

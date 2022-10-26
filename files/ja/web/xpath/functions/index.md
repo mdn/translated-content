@@ -42,6 +42,6 @@ slug: Web/XPath/Functions
 - [system-property()](/ja/docs/XPath/Functions/system-property) _XSLT 固有_
 - [translate()](/ja/docs/XPath/Functions/translate)
 - [true()](/ja/docs/XPath/Functions/true)
-- [unparsed-entity-url()](/ja/docs/XPath/Functions/unparsed-entity-url) _XSLT 固有\_\_(未対応)_
+- [unparsed-entity-url()](/ja/docs/XPath/Functions/unparsed-entity-url) _XSLT 固有 (未対応)_
 
 {{QuickLinksWithSubpages("/ja/docs/Web/XPath")}}

@@ -5,13 +5,124 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 {{JSRef}}
 
-JavaScript 的 **`Array`** 对象是用于构造数组的全局对象，数组是类似于列表的高阶对象。
+与其他编程语言中的数组一样，**`Array`** 对象支持[在单个变量名下存储多个元素](/zh-CN/docs/Learn/JavaScript/First_steps/arrays)，并具有[执行常见数组操作](#示例)的成员。
 
 ## 描述
 
-数组是一种类列表对象，它的原型中提供了遍历和修改元素的相关操作。JavaScript 数组的长度和元素类型都是非固定的。因为数组的长度可随时改变，并且其数据在内存中也可以不连续，所以 JavaScript 数组不一定是密集型的，这取决于它的使用方式。一般来说，数组的这些特性会给使用带来方便，但如果这些特性不适用于你的特定使用场景的话，可以考虑使用类型数组 {{jsxref("TypedArray")}}。
+在 JavaScript 中，数组不是[基本类型](/zh-CN/docs/Glossary/Primitive)，而是具有以下核心特征的 `Array` 对象：
 
-只能用整数作为数组元素的索引，而不能用字符串。后者称为 [关联数组](https://en.wikipedia.org/wiki/Associative_array)。使用非整数并通过 [方括号](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#对象和属性) 或 [点号](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 来访问或设置数组元素时，所操作的并不是数组列表中的元素，而是数组对象的 [属性集合](/zh-CN/docs/Web/JavaScript/Data_structures#属性) 上的变量。数组对象的属性和数组元素列表是分开存储的，并且数组的遍历和修改操作也不能作用于这些命名属性。
+- **JavaScript 数组是可调整大小的**，**并且可以包含不同的[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)**。（当不需要这些特征时，可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)）
+
+- **JavaScript 数组不是关联数组**，因此，[不能使用任意字符串作为索引访问数组元素](#备注)，但必须使用非负整数（或它们各自的字符串形式）作为索引访问。
+
+- **JavaScript 数组的[索引从 0 开始](https://zh.wikipedia.org/zh-cn/從零開始的編號)**：数组的第一个元素在索引 `0` 处，第二个在索引 `1` 处，以此类推，最后一个元素是数组的 {{jsxref("Array/length", "length")}} 属性减去 `1` 的值。
+
+- **JavaScript [数组复制操作](#复制数组)创建[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)**。（*所有* JavaScript 对象的标准内置复制操作都会创建浅拷贝，而不是[深拷贝](/zh-CN/docs/Glossary/Deep_copy)）。
+
+## 构造函数
+
+- {{jsxref("Array/Array", "Array()")}}
+  - : 创建一个新的 `Array` 对象。
+
+## 静态属性
+
+- {{jsxref("Array/@@species", "get Array[@@species]")}}
+  - : 返回 `Array` 构造函数。
+
+## 静态方法
+
+- {{jsxref("Array.from()")}}
+  - : 从数组类对象或可迭代对象创建一个新的 `Array` 实例。
+- {{jsxref("Array.isArray()")}}
+  - : 如果参数是数组则返回 `true` ，否则返回 `false` 。
+- {{jsxref("Array.of()")}}
+  - : 创建一个新的 `Array` 实例，具有可变数量的参数，而不管参数的数量或类型。
+
+## 实例属性
+
+- {{jsxref("Array.prototype.length")}}
+  - : 反映数组中元素的数量。
+- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+  - : 包含 ES2015 版本之前 ECMAScript 标准中没有包含的属性名，在使用 [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 绑定语句时会被忽略。
+
+## 实例方法
+
+- {{jsxref("Array.prototype.at()")}}
+  - : 返回给定索引处的数组元素。接受从最后一项往回计算的负整数。
+- {{jsxref("Array.prototype.concat()")}}
+  - : 返回一个新数组，该数组由被调用的数组与其它数组或值连接形成。
+- {{jsxref("Array.prototype.copyWithin()")}}
+  - : 在数组内复制数组元素序列。
+- {{jsxref("Array.prototype.entries()")}}
+  - : 返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)对象，其中包含数组中每个索引的键/值对。
+- {{jsxref("Array.prototype.every()")}}
+  - : 如果调用数组中的每个元素都满足测试函数，则返回 `true`。
+- {{jsxref("Array.prototype.fill()")}}
+  - : 用静态值填充数组中从开始索引到结束索引的所有元素。
+- {{jsxref("Array.prototype.filter()")}}
+  - : 返回一个新数组，其中包含调用所提供的筛选函数返回为 `true` 的所有数组元素。
+- {{jsxref("Array.prototype.find()")}}
+  - : 返回数组中满足提供的测试函数的第一个元素的值，如果没有找到合适的元素，则返回 `undefined`。
+- {{jsxref("Array.prototype.findIndex()")}}
+  - : 返回数组中满足提供的测试函数的第一个元素的索引，如果没有找到合适的元素，则返回 `-1`。
+- {{jsxref("Array.prototype.findLast()")}}
+  - : 返回数组中满足提供的测试函数的最后一个元素的值，如果没有找到合适的元素，则返回 `undefined`。
+- {{jsxref("Array.prototype.findLastIndex()")}}
+  - : 返回数组中满足所提供测试函数的最后一个元素的索引，如果没有找到合适的元素，则返回 `-1`。
+- {{jsxref("Array.prototype.flat()")}}
+  - : 返回一个新数组，所有子数组元素递归地连接到其中，直到指定的深度。
+- {{jsxref("Array.prototype.flatMap()")}}
+  - : 对调用数组的每个元素调用给定的回调函数，然后将结果平展一层，返回一个新数组。
+- {{jsxref("Array.prototype.forEach()")}}
+  - : 对调用数组中的每个元素调用函数。
+- {{jsxref("Array.prototype.group()")}} {{Experimental_Inline}}
+  - : 根据测试函数返回的字符串，将数组的元素分组到一个对象中。
+- {{jsxref("Array.prototype.groupToMap()")}} {{Experimental_Inline}}
+  - : 根据测试函数返回的值，将数组的元素分组到 {{jsxref("Map")}} 中。
+- {{jsxref("Array.prototype.includes()")}}
+  - : 确定调用数组是否包含一个值，根据情况返回 `true` 或 `false`。
+- {{jsxref("Array.prototype.indexOf()")}}
+  - : 返回在调用数组中可以找到给定元素的第一个（最小）索引。
+- {{jsxref("Array.prototype.join()")}}
+  - : 将数组的所有元素连接为字符串。
+- {{jsxref("Array.prototype.keys()")}}
+  - : 返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)，其中包含调用数组中每个索引的键。
+- {{jsxref("Array.prototype.lastIndexOf()")}}
+  - : 返回在调用数组中可以找到给定元素的最后一个（最大）索引，如果找不到则返回 `-1`。
+- {{jsxref("Array.prototype.map()")}}
+  - : 返回一个新数组，其中包含对调用数组中的每个元素调用函数的结果。
+- {{jsxref("Array.prototype.pop()")}}
+  - : 从数组中移除最后一个元素并返回该元素。
+- {{jsxref("Array.prototype.push()")}}
+  - : 在数组末尾添加一个或多个元素，并返回数组新的 `length`。
+- {{jsxref("Array.prototype.reduce()")}}
+  - : 对数组的每个元素（从左到右）执行用户提供的 “reducer” 回调函数，将其简化为单个值。
+- {{jsxref("Array.prototype.reduceRight()")}}
+  - : 对数组的每个元素（从右到左）执行用户提供的 “reducer” 回调函数，将其简化为单个值。
+- {{jsxref("Array.prototype.reverse()")}}
+  - : 反转数组中元素的顺序。（前面变成后面，后面变成前面。）
+- {{jsxref("Array.prototype.shift()")}}
+  - : 从数组中移除第一个元素并返回该元素。
+- {{jsxref("Array.prototype.slice()")}}
+  - : 提取调用数组的一部分并返回一个新数组。
+- {{jsxref("Array.prototype.some()")}}
+  - : 如果调用数组中至少有一个元素满足提供的测试函数，则返回 `true`。
+- {{jsxref("Array.prototype.sort()")}}
+  - : 对数组的元素进行排序并返回该数组。
+- {{jsxref("Array.prototype.splice()")}}
+  - : 从数组中添加和/或删除元素。
+- {{jsxref("Array.prototype.toLocaleString()")}}
+  - : 返回一个表示调用数组及其元素的本地化字符串。重写 {{jsxref("Object.prototype.toLocaleString()")}} 方法。
+- {{jsxref("Array.prototype.toString()")}}
+  - : 返回一个表示调用数组及其元素的字符串。重写 {{jsxref("Object.prototype.toString()")}} 方法。
+- {{jsxref("Array.prototype.unshift()")}}
+  - : 在数组的前面添加一个或多个元素，并返回数组新的 `length`。
+- {{jsxref("Array.prototype.values()")}}
+  - : 返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)对象，该对象包含数组中每个索引的值。
+- [`Array.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+  - : 默认情况下，该方法为 [`values()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/values) 方法的别名。
+
+## 示例
 
 ### 常见操作
 
@@ -255,116 +366,9 @@ const myArray = myRe.exec('cdbBdbsbz')
   </tbody>
 </table>
 
-## 构造器
-
-- {{jsxref("Array/Array", "Array()")}}
-  - : 创建一个新的 `Array` 对象
-
-## 静态属性
-
-- {{jsxref("Array/@@species", "get Array[@@species]")}}
-  - : 返回 Array 的构造函数
-
-## 静态方法
-
-- {{jsxref("Array.from()")}}
-  - : 从类数组对象或者可迭代对象中创建一个新的数组实例
-- {{jsxref("Array.isArray()")}}
-  - : 用来判断某个变量是否是一个数组对象
-- {{jsxref("Array.of()")}}
-  - : 根据一组参数来创建新的数组实例，支持任意的参数数量和类型
-
-## 实例属性
-
-- {{jsxref("Array.prototype.length")}}
-  - : 数组中的元素个数
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
-  - : 包含了所有 ES2015 (ES6) 中新定义的、且并未被更早的 ECMAScript 标准收纳的属性名。这些属性被排除在由 [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 语句绑定的环境中
-
-## 实例方法
-
-- {{jsxref("Array.prototype.at()")}}{{Experimental_Inline}}
-  - : Returns the array item at the given index. Accepts negative integers, which count back from the last item.
-- {{jsxref("Array.prototype.concat()")}}
-  - : 用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组
-- {{jsxref("Array.prototype.copyWithin()")}}
-  - : 浅复制数组的一部分到同一数组中的另一个位置，并返回它，不会改变原数组的长度
-- {{jsxref("Array.prototype.entries()")}}
-  - : 返回一个新的 `Array Iterator` 对象，该对象包含数组中每个索引的键/值对
-- {{jsxref("Array.prototype.every()")}}
-  - : 测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值
-- {{jsxref("Array.prototype.fill()")}}
-  - : 用一个固定值填充一个数组中从起始索引到终止索引内的全部元素
-- {{jsxref("Array.prototype.filter()")}}
-  - : 创建一个新数组，其包含通过所提供函数实现的测试的所有元素
-- {{jsxref("Array.prototype.find()")}}
-  - : 返回数组中满足提供的测试函数的第一个元素的值。否则返回 `undefined`
-- {{jsxref("Array.prototype.findIndex()")}}
-  - : 返回数组中满足提供的测试函数的第一个元素的**索引**。若没有找到对应元素则返回 `-1`
-- {{jsxref("Array.prototype.flat()")}}
-  - : 按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回
-- {{jsxref("Array.prototype.flatMap()")}}
-  - : 使用映射函数映射每个元素，然后将结果压缩成一个新数组
-- {{jsxref("Array.prototype.forEach()")}}
-  - : 对数组的每个元素执行一次给定的函数
-- {{jsxref("Array.prototype.includes()")}}
-  - : 判断一个数组是否包含一个指定的值，如果包含则返回 `true`，否则返回 `false`
-- {{jsxref("Array.prototype.indexOf()")}}
-  - : 返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回 `-1`
-- {{jsxref("Array.prototype.join()")}}
-  - : 将一个数组的所有元素连接成一个字符串并返回这个字符串
-- {{jsxref("Array.prototype.keys()")}}
-  - : 返回一个包含数组中每个索引键的 `Array Iterator` 对象
-- {{jsxref("Array.prototype.lastIndexOf()")}}
-  - : 返回指定元素在数组中的最后一个的索引，如果不存在则返回 `-1`
-- {{jsxref("Array.prototype.map()")}}
-  - : 返回一个新数组，其结果是该数组中的每个元素是调用一次提供的函数后的返回值
-- {{jsxref("Array.prototype.pop()")}}
-  - : 从数组中删除最后一个元素，并返回该元素的值
-- {{jsxref("Array.prototype.push()")}}
-  - : 将一个或多个元素添加到数组的末尾，并返回该数组的新长度
-- {{jsxref("Array.prototype.reduce()")}}
-  - : 对数组中的每个元素执行一个由您提供的 reducer 函数（升序执行），将其结果汇总为单个返回值
-- {{jsxref("Array.prototype.reduceRight()")}}
-  - : 接受一个函数作为累加器（accumulator）和数组的每个值（从右到左）将其减少为单个值
-- {{jsxref("Array.prototype.reverse()")}}
-  - : 将数组中元素的位置颠倒，并返回该数组。该方法会改变原数组
-- {{jsxref("Array.prototype.shift()")}}
-  - : 从数组中删除第一个元素，并返回该元素的值
-- {{jsxref("Array.prototype.slice()")}}
-  - : 提取源数组的一部分并返回一个新数组
-- {{jsxref("Array.prototype.some()")}}
-  - : 测试数组中是不是至少有一个元素通过了被提供的函数测试
-- {{jsxref("Array.prototype.sort()")}}
-  - : 对数组元素进行原地排序并返回此数组
-- {{jsxref("Array.prototype.splice()")}}
-  - : 通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容
-- {{jsxref("Array.prototype.toLocaleString()")}}
-  - : 返回一个字符串表示数组中的元素。数组中的元素将使用各自的 {{jsxref("Object.prototype.toLocaleString()")}} 方法转成字符串
-- {{jsxref("Array.prototype.toString()")}}
-  - : 返回一个字符串表示指定的数组及其元素。数组中的元素将使用各自的 {{jsxref("Object.prototype.toString()")}} 方法转成字符串
-- {{jsxref("Array.prototype.unshift()")}}
-  - : 将一个或多个元素添加到数组的头部，并返回该数组的新长度
-- {{jsxref("Array.prototype.values()")}}
-  - : 返回一个新的 `Array Iterator 对象`，该对象包含数组每个索引的值
-- {{jsxref("Array.prototype.@@iterator()", "Array.prototype[@@iterator]()")}}
-  - : 返回一个新的 `Array Iterator 对象`，该对象包含数组每个索引的值
-
-## 示例
+## 其它示例
 
 ### 创建数组
-
-下面这个例子创建了一个长度为 `0` 的数组 `msgArray`，然后给 `msgArray[0]` 和 `msgArray[99]` 赋值，从而导致数组长度变为了 `100`。
-
-```js
-let msgArray = []
-msgArray[0] = 'Hello'
-msgArray[99] = 'world'
-
-if (msgArray.length === 100) {
-  console.log('The length is 100.')
-}
-```
 
 ### 创建二维数组
 
@@ -448,7 +452,7 @@ console.table(values)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - JavaScript 指南：
 

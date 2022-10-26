@@ -2,6 +2,7 @@
 title: MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API
 ---
+
 {{DefaultAPISidebar("MediaStream Recording")}}
 
 **MediaStream Recording API** は、単に _Media Recording API_ または _MediaRecorder API_ と呼ばれることもありますが、[Media Capture and Streams API](/ja/docs/Web/API/Media_Streams_API) および [WebRTC API](/ja/docs/Web/API/WebRTC_API) と密接に関係しています。 MediaStream Recording API を使用すると、{{domxref("MediaStream")}} オブジェクトまたは {{domxref("HTMLMediaElement")}} オブジェクトによって生成されたデータを分析、処理、またはディスクへの保存のためにキャプチャすることができます。 また、驚くほど簡単に作業できます。
@@ -22,7 +23,7 @@ MediaStream Recording API は、{{domxref("MediaRecorder")}} という 1 つの�
 6. ソースメディアの再生が停止すると、録画は自動的に停止します。
 7. {{domxref("MediaRecorder.stop()")}} を呼び出すことで、いつでも録画を停止できます。
 
-> **Note:** 記録されたメディアのスライスを含む個々の {{domxref("Blob")}} は、必ずしも個別に再生できるわけではありません。 再生する前にメディアを組み立て直す必要があります。
+> **メモ:** 記録されたメディアのスライスを含む個々の {{domxref("Blob")}} は、必ずしも個別に再生できるわけではありません。 再生する前にメディアを組み立て直す必要があります。
 
 記録中に問題が発生した場合は、{{event("error")}} イベントが `MediaRecorder` に送られます。 {{domxref("MediaRecorder.onerror", "onerror")}} イベントハンドラを設定することで `error` イベントを監視できます。
 

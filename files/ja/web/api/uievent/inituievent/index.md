@@ -9,7 +9,7 @@ slug: Web/API/UIEvent/initUIEvent
 
 この方法で初期化されるイベントは {{ domxref("Document.createEvent()") }} で作成されている必要があります。このメソッドでイベントを設定するには、 {{ domxref("EventTarget.dispatchEvent()") }} を使用してイベントを発行する前に行う必要があります。発行された後は、何もしません。
 
-> **Warning:** このメソッドは非推奨なので、もう使用しないでください。
+> **警告:** このメソッドは非推奨なので、もう使用しないでください。
 >
 > 代わりに、 {{domxref("UIEvent.UIEvent", "UIEvent()")}} などの具体的なイベントのコンストラクターを使用してください。[イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページで、これらの使用方法について詳しく説明しています。
 

@@ -64,7 +64,7 @@ fetch('./tortoise.png')
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.body")}}
+{{Compat}}
 
 ## 相关链接
 

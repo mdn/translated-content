@@ -2,6 +2,7 @@
 title: KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent()`** コンストラクターは、新しい {{domxref("KeyboardEvent")}} オブジェクトを生成します。

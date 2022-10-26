@@ -23,7 +23,7 @@ La constante **`Number.MIN_SAFE_INTEGER`** représente le plus petit entier repr
 
 La constante `MIN_SAFE_INTEGER` vaut `-9007199254740991`. Cette valeur provient du fait qu'en JavaScript, les nombres sont représentés [en format à double précision](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) selon la norme [IEEE 754](http://fr.wikipedia.org/wiki/IEEE_754) et on ne peut représenter correctement que les nombres compris entre `-(2^53-1)` et `2^53 -1`. Voir {{jsxref("Number.isSafeInteger()")}} pour plus d'informations.
 
-`MIN_SAFE_INTEGER` étant une méthode statique de {{jsxref("Number")}}, il faut utiliser `Number.MIN_SAFE_INTEGER()`et non pas la méthode d'un objet `Number` qui aurait été instancié.
+`MIN_SAFE_INTEGER` étant une méthode statique de {{jsxref("Number")}}, il faut utiliser `Number.MIN_SAFE_INTEGER()` et non pas la méthode d'un objet `Number` qui aurait été instancié.
 
 ## Exemples
 
@@ -34,14 +34,11 @@ Number.MIN_SAFE_INTEGER // -9007199254740991
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.MIN_SAFE_INTEGER")}}
+{{Compat}}
 
 ## Voir aussi
 

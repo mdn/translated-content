@@ -32,8 +32,8 @@ slug: Web/JavaScript/Reference/Functions/set
 使用 set 语法时请注意：
 
 - 它的标识符可以是数字或字符串；
-- 它必须有一个明确的参数 （详见 [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)）；
-- 在对象字面量中，不能为一个已有真实值的变量使用 set ，也不能为一个属性设置多个 set。
+- 它必须有一个明确的参数（详见 [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)）；
+- 在对象字面量中，不能为一个已有真实值的变量使用 set，也不能为一个属性设置多个 set。
   ( `{ set x(v) { }, set x(v) { } }` 和 `{ x: ..., set x(v) { } }` 是不允许的 )
 
 ## 示例

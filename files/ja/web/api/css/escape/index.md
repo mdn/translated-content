@@ -2,6 +2,7 @@
 title: CSS.escape()
 slug: Web/API/CSS/escape
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 **`CSS.escape()`** は静的メソッドで、 CSS セレクターの一部として使用するために引数として渡されるエスケープした文字列が入った {{DOMxRef("CSSOMString")}} を返します。

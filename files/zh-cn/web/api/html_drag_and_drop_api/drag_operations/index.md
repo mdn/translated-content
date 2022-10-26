@@ -33,7 +33,7 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 `{{htmlattrxref("draggable")}}` 属性可在任意元素上设置，包括图像和链接。然而，对于后两者，该属性的默认值是 `true`，所以你只会在禁用这二者的拖拽时使用到 `{{htmlattrxref("draggable")}}` 属性，将其设置为 `false`。
 
-> **备注：** 当一个元素被设置成可拖拽时， 元素中的文本和其他子元素不能再以正常的方式（通过鼠标点击和拖拽）被选中。用户必须按住 <kbd>alt</kbd> 键，再用鼠标选择文本，或者使用键盘选择。
+> **备注：** 当一个元素被设置成可拖拽时，元素中的文本和其他子元素不能再以正常的方式（通过鼠标点击和拖拽）被选中。用户必须按住 <kbd>alt</kbd> 键，再用鼠标选择文本，或者使用键盘选择。
 
 ## 开始拖拽操作
 
@@ -55,7 +55,7 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 所有 {{domxref("DragEvent","拖拽事件")}} 都有一个名为 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 的属性，它持有拖拽数据（`dataTransfer` 是一个 {{domxref("DataTransfer")}} 对象）。
 
-当拖拽发生时，数据必须与被拖拽的项目相关联。例如，当在文本框中拖拽选定的文本时，与拖拽数据项相关联的数据就是文本本身。类似地，当在 Web 页面上拖拽链接时，拖拽数据项就是链接的 URL 。
+当拖拽发生时，数据必须与被拖拽的项目相关联。例如，当在文本框中拖拽选定的文本时，与拖拽数据项相关联的数据就是文本本身。类似地，当在 Web 页面上拖拽链接时，拖拽数据项就是链接的 URL。
 
 {{domxref("DataTransfer","拖拽数据")}} 包含两个信息，数据的类型（或格式）和数据值。格式是一个类型字符串（例如文本数据的格式是 [`text/plain`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#text)），值是一个文本字符串。拖拽开始时，你提供数据类型和数据值。在拖拽过程中，在 `{{event("dragenter")}}` 和 `{{event("dragover")}}` 事件监听程序中，你使用拖拽数据的类型来检查是否允许放置（drop）。例如，接受链接的放置目标将检查链接类型 [`text/uri-list`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#link)。在放置事件中，监听程序将取回拖拽数据，并将其插入到放置位置。
 
@@ -69,7 +69,7 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 event.dataTransfer.setData("text/plain", "Text to drag");
 ```
 
-在这个例子中，数据值是 “Text to drag”，数据类型是 [`text/plain`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#text) 格式。
+在这个例子中，数据值是“Text to drag”，数据类型是 [`text/plain`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#text) 格式。
 
 你可以提供多种格式的数据。要做到这一点，可以用不同的格式多次调用 {{domxref("DataTransfer.setData","setData()")}} 方法。你应该传入尽量具体的格式。
 
@@ -164,7 +164,7 @@ event.dataTransfer.effectAllowed = "copy";
 
 在 `{{event("dragenter")}}` 和 `{{event("dragover")}}` 事件中，{{domxref("DataTransfer.dropEffect","dropEffect")}} 属性被初始化为用户请求的效果。用户可以通过按下修饰键来修改为所需的效果。尽管使用什么修饰键取决于不同的平台，但典型情况下，<kbd>Shift</kbd> 和 <kbd>Ctrl</kbd> 键用于在复制、移动和链接之间切换。鼠标指针会改变样式以指示需要的操作；例如，对于"复制"操作，光标可能会在旁边出现加号。
 
-你可以在 `{{event("dragenter")}}` 或 `{{event("dragover")}}` 事件期间修改 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性，例如将某个放置目标设置为只支持某些操作。你可以修改 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性来覆盖用户指定的效果，并强制修改为一个特定的放置操作。 注意，这个效果必须是 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 属性中的一个。否则，它将被设置为允许的替代值。
+你可以在 `{{event("dragenter")}}` 或 `{{event("dragover")}}` 事件期间修改 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性，例如将某个放置目标设置为只支持某些操作。你可以修改 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性来覆盖用户指定的效果，并强制修改为一个特定的放置操作。注意，这个效果必须是 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 属性中的一个。否则，它将被设置为允许的替代值。
 
 ```js
 event.dataTransfer.dropEffect = "copy";
@@ -187,7 +187,7 @@ event.dataTransfer.dropEffect = "copy";
 <div ondragover="event.preventDefault()">
 ```
 
-在 `{{event("dragenter")}}` 和 `{{event("dragover")}}` 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法将表明在该位置允许放置 。但是，你通常希望只在某些情况下调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法（如只当拖拽的是链接时）。
+在 `{{event("dragenter")}}` 和 `{{event("dragover")}}` 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法将表明在该位置允许放置。但是，你通常希望只在某些情况下调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法（如只当拖拽的是链接时）。
 
 要做到这一点，调用一个函数以检查条件，并且只在满足条件时取消事件。如果条件未满足，则不取消事件，此时用户释放鼠标按钮不会执行放置。
 

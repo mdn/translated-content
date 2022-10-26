@@ -230,10 +230,6 @@
     "modified": "2020-01-19T04:19:54.447Z",
     "contributors": ["alattalatta", "enfroze"]
   },
-  "Glossary/Empty_element": {
-    "modified": "2020-02-02T11:31:39.458Z",
-    "contributors": ["alattalatta", "ShinJeKim"]
-  },
   "Glossary/Endianness": {
     "modified": "2020-02-19T12:52:13.934Z",
     "contributors": ["alattalatta"]
@@ -622,6 +618,10 @@
   "Glossary/Viewport": {
     "modified": "2020-08-10T06:18:22.173Z",
     "contributors": ["alattalatta", "SeonHyungJo"]
+  },
+  "Glossary/Void_element": {
+    "modified": "2020-02-02T11:31:39.458Z",
+    "contributors": ["alattalatta", "ShinJeKim"]
   },
   "Glossary/WHATWG": {
     "modified": "2020-01-12T06:40:17.162Z",
@@ -6167,10 +6167,6 @@
       "azunyan3"
     ]
   },
-  "Web/Guide/HTML/Editable_content": {
-    "modified": "2019-03-23T22:40:12.545Z",
-    "contributors": ["gblue1223"]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-05-30T06:59:50.297Z",
     "contributors": ["SDSkyKlouD", "Seia-Soto", "xfq"]
@@ -10232,10 +10228,6 @@
       "magnoliaa"
     ]
   },
-  "Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode": {
-    "modified": "2020-03-12T19:48:28.686Z",
-    "contributors": ["SeonHyungJo"]
-  },
   "Web/JavaScript/Reference/Template_literals": {
     "modified": "2020-10-15T21:47:14.004Z",
     "contributors": [
@@ -11211,6 +11203,10 @@
     "modified": "2020-01-19T02:45:39.384Z",
     "contributors": ["alattalatta"]
   },
+  "conflicting/Web/HTML/Global_attributes/contenteditable": {
+    "modified": "2019-03-23T22:40:12.545Z",
+    "contributors": ["gblue1223"]
+  },
   "conflicting/Web/HTTP": {
     "modified": "2020-02-05T12:28:02.372Z",
     "contributors": ["alattalatta"]
@@ -11411,6 +11407,10 @@
   "conflicting/Web/JavaScript/Reference/Statements/switch": {
     "modified": "2020-10-15T22:07:33.273Z",
     "contributors": ["alattalatta", "SSJ-unclear"]
+  },
+  "conflicting/Web/JavaScript/Reference/Strict_mode": {
+    "modified": "2020-03-12T19:48:28.686Z",
+    "contributors": ["SeonHyungJo"]
   },
   "conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript": {
     "modified": "2019-01-16T14:19:09.939Z",

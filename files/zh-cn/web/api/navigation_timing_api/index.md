@@ -65,7 +65,7 @@ function onLoad() {
 
 `window.performance.navigation` 对象存储了两个属性，它们表示触发页面加载的原因。这些原因可能是页面重定向、前进后退按钮或者普通的 `URL` 加载。
 
-window\.performance.navigation.type：
+window\.performance.navigation.type:
 
 | Constant            | Value | Description                                                                                                                      |
 | ------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -99,4 +99,4 @@ var connectTime = perfData.responseEnd - perfData.requestStart;
 
 ## 浏览器兼容性
 
-{{Compat("api.PerformanceTiming")}}
+{{Compat}}

@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 
 {{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}
 
-> **Note:** `isPrototypeOf()` は、{{jsxref("Operators/instanceof", "instanceof")}} 演算子とは異なります。"`object instanceof AFunction`" 式では、`object` のプロトタイプチェーンは `AFunction` 自身ではなく、`AFunction.prototype` に対して判定されます。
+> **メモ:** `isPrototypeOf()` は、{{jsxref("Operators/instanceof", "instanceof")}} 演算子とは異なります。"`object instanceof AFunction`" 式では、`object` のプロトタイプチェーンは `AFunction` 自身ではなく、`AFunction.prototype` に対して判定されます。
 
 ## 構文
 

@@ -11,7 +11,9 @@ slug: Web/CSS/:-moz-submit-invalid
 
 ## 構文
 
-{{csssyntax}}
+```
+:-moz-submit-invalid
+```
 
 ## 仕様書
 

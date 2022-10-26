@@ -58,24 +58,24 @@ slug: Web/HTML/Element/th
     > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。
     >
     > - `left`, `center`, `right` 或 `justify` 这些对齐效果，应该使用 CSS 的{{cssxref("text-align")}} 来实现。
-    > - `char` 的对齐效果使用 CSS 的 {{cssxref("text-align")}} 实现， {{htmlattrxref("char", "th")}}亦同. {{unimplemented_inline}} in CSS3.
+    > - `char` 的对齐效果使用 CSS 的 {{cssxref("text-align")}} 实现， {{htmlattrxref("char", "th")}}亦同。{{unimplemented_inline}} in CSS3.
 
 - {{htmlattrdef("axis")}} {{Deprecated_Inline}}
   - : 这个属性包含了一个空间分隔的字符串的列表。每个字符串是一组单元格的 ID，而该表头适用于这个 ID。
 
     > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。应该使用 {{htmlattrxref("scope", "th")}} 属性代替。
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
-  - : 这个属性定义了每列中每单元格的背景色。它由带有 ‘#’ 前缀的 6 位数的十六进制码组成，并在[sRGB](https://www.w3.org/Graphics/Color/sRGB)中被定义。这个属性可能会用到十六个预定义的颜色字符串儿之一。
+  - : 这个属性定义了每列中每单元格的背景色。它由带有‘#’前缀的 6 位数的十六进制码组成，并在[sRGB](https://www.w3.org/Graphics/Color/sRGB)中被定义。这个属性可能会用到十六个预定义的颜色字符串儿之一。
 
-    > **备注：** 不要使用这个属性，它不是标准属性且仅在某些版本的 Microsoft Internet Explorer 支持: {{HTMLElement("th")}} 元素应当用[CSS](/zh-CN/docs/CSS)来样式化。为了创造出同样的效果只需要使用[CSS](/zh-CN/docs/CSS)中的{{cssxref("background-color")}}属性就可以啦。
+    > **备注：** 不要使用这个属性，它不是标准属性且仅在某些版本的 Microsoft Internet Explorer 支持：{{HTMLElement("th")}} 元素应当用[CSS](/zh-CN/docs/CSS)来样式化。为了创造出同样的效果只需要使用[CSS](/zh-CN/docs/CSS)中的{{cssxref("background-color")}}属性就可以啦。
 
 - {{htmlattrdef("char")}} {{Deprecated_inline}}
-  - : 列中的内容与`<th>` 元素中的字母对齐。通常其值包含一个 (.) 来排列数字或者货币值。 如果 {{htmlattrxref("align", "th")}}没有被设置为`char`，这个属性就会被忽略。
+  - : 列中的内容与`<th>` 元素中的字母对齐。通常其值包含一个 (.) 来排列数字或者货币值。如果 {{htmlattrxref("align", "th")}}没有被设置为`char`，这个属性就会被忽略。
 
-    > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。为了达到同样的效果， 你可以指定该字母为{{cssxref("text-align")}} 属性中的第一个值，或通过 CSS3 中的{{unimplemented_inline}}。
+    > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。为了达到同样的效果，你可以指定该字母为{{cssxref("text-align")}} 属性中的第一个值，或通过 CSS3 中的{{unimplemented_inline}}。
 
 - {{htmlattrdef("charoff")}} {{Deprecated_inline}}
-  - : 这个属性用来将列数据移到 **char** 属性指定字母的右边。 其值指定了移动的长度。
+  - : 这个属性用来将列数据移到 **char** 属性指定字母的右边。其值指定了移动的长度。
 
     > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。
 
@@ -90,7 +90,7 @@ slug: Web/HTML/Element/th
 
     - `row`: 表头关联一行中所有的单元格。
     - `col`: 表头关联一列中所有的单元格。
-    - `rowgroup`:表头属于一个行组并与其中所有单元格相关联。这些单元格可以被放在表头的左侧或右侧，取决于 {{HTMLElement("table")}} 元素中 [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir) 属性的值 。
+    - `rowgroup`:表头属于一个行组并与其中所有单元格相关联。这些单元格可以被放在表头的左侧或右侧，取决于 {{HTMLElement("table")}} 元素中 [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir) 属性的值。
     - `colgroup`: 表头属于一个列组并与其中所有单元格相关联。
     - `auto`
 - {{htmlattrdef("valign")}} {{Deprecated_inline}}

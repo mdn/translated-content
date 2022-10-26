@@ -3,6 +3,7 @@ title: WindowOrWorkerGlobalScope.atob()
 slug: Web/API/atob
 original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`WindowOrWorkerGlobalScope.atob()`** 関数は、 {{glossary("Base64")}} エンコーディングでエンコードされたデータの文字列をデコードします。 {{domxref("WindowOrWorkerGlobalScope.btoa","btoa()")}} メソッドを使用して、通信に問題が発生する可能性のあるデータをエンコードして送信し、送信した後に `atob()` メソッドを使用して再度デコードすることができます。例えば、ASCII の 0 から 31 までのコードような制御文字をエンコードして送信し、デコードすることができます。

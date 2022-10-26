@@ -57,15 +57,11 @@ console.log(Intl.Collator.supportedLocalesOf(locales, options).join(", "));
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('ES Int 1.0', '#sec-10.2.2', 'Intl.Collator.supportedLocalesOf')}}                                     | {{Spec2('ES Int 1.0')}} | Définition initiale. |
-| {{SpecName('ES Int 2.0', '#sec-10.2.2', 'Intl.Collator.supportedLocalesOf')}}                                     | {{Spec2('ES Int 2.0')}} |                      |
-| {{SpecName('ES Int Draft', '#sec-Intl.Collator.supportedLocalesOf', 'Intl.Collator.supportedLocalesOf')}} | {{Spec2('ES Int Draft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Collator.supportedLocalesOf")}}
+{{Compat}}
 
 ## Voir aussi
 

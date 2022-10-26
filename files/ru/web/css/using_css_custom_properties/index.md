@@ -180,17 +180,19 @@ element {
 
 Первый аргумент функции это имя [пользовательского свойства](https://www.w3.org/TR/css-variables/#custom-property). Второй аргумент функции, если имеется, это возвращаемое значение, который используется в качестве замещающего значения, когда [пользовательское свойство](https://www.w3.org/TR/css-variables/#custom-property) является не действительным. Например:
 
-    .two {
-      color: var(--my-var, red); /* red если --my-var не определена */
-    }
+```css
+.two {
+  color: var(--my-var, red); /* red если --my-var не определена */
+}
 
-    .three {
-      background-color: var(--my-var, var(--my-background, pink)); /* pink если --my-var и --my-background не определены */
-    }
+.three {
+  background-color: var(--my-var, var(--my-background, pink)); /* pink если --my-var и --my-background не определены */
+}
 
-    .three {
-      background-color: var(--my-var, --my-background, pink); /* "--my-background, pink" будет воспринят как значение в случае, если --my-var не определена */
-    }
+.three {
+  background-color: var(--my-var, --my-background, pink); /* "--my-background, pink" будет воспринят как значение в случае, если --my-var не определена */
+}
+```
 
 > **Примечание:** В замещаемых значениях можно использовать запятые по аналогии с [пользовательскими свойствами](https://www.w3.org/TR/css-variables/#custom-property). Например, var(--foo, red, blue) определить red, blue как замещающее значение (от первой запятой и до конца определения функции)
 

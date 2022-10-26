@@ -10,7 +10,7 @@ original_slug: Web/CSS/transform-function/translateY()
 
 ![](translatey.png)
 
-> **Note:** `translateY(ty)` は `translate(0, ty)` または `translate3d(0, ty, 0)` と等価です。
+> **メモ:** `translateY(ty)` は `translate(0, ty)` または `translate3d(0, ty, 0)` と等価です。
 
 ## 構文
 

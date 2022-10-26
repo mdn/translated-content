@@ -3,6 +3,7 @@ title: color-adjust
 slug: conflicting/Web/CSS/print-color-adjust
 original_slug: Web/CSS/color-adjust
 ---
+
 {{CSSRef}}
 
 **`color-adjust`** は CSS のプロパティで、{{Glossary("user agent", "ユーザーエージェント")}}が出力端末への要素の表示方法を最適化するために何をするかをウェブ作者が制御することができるものです。既定では、ブラウザーは出力端末の種類と機能を考慮して、要素の外観を必要に応じて慎重に調整することが許可されています。

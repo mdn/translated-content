@@ -67,7 +67,7 @@ if ("geolocation" in navigator) {
 
 Здесь мы берём ссылку на второй элемент `<link>` и создаём элемент `<div>` как часть нашего теста. В нашем условном выражении мы проверяем, что свойства {{cssxref ("flex")}} и {{cssxref ("flex-flow")}} существуют в браузере. Обратите внимание, что представления JavaScript этих свойств, которые хранятся внутри объекта {{domxref ("HTMLElement.style")}}, используют нижний горбатый регистр, а не дефисы, для разделения слов.
 
-> **Примечание:**Если у вас возникли проблемы с выполнением этого, вы можете сравнить его с нашим кодом [css-feature-detect-finished.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html) (см. Также [живую версию](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html)).
+> **Примечание:** Если у вас возникли проблемы с выполнением этого, вы можете сравнить его с нашим кодом [css-feature-detect-finished.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html) (см. Также [живую версию](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html)).
 
 Когда вы сохраните все и опробуете свой пример, вы должны увидеть макет flexbox, применённый к странице, если браузер поддерживает современный flexbox, и макет float, если нет.
 

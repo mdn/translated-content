@@ -5,7 +5,7 @@ slug: Web/API/HTMLImageElement/decode
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLImageElement")}} 接口的 **`decode()`** 方法返回一个当图片解码后可安全用于附加到 DOM 上时 resolves 的 {{jsxref("Promise")}} 对象。 这可用于在将图片附加到一个 DOM 中的元素（或作为一个新元素加入 DOM 中）之前启动加载，所以在将图像添加到 DOM 时可以立即渲染图像。这反过来，防止了将图像加入 DOM 后图像的加载造成下一帧渲染的延迟。
+{{domxref("HTMLImageElement")}} 接口的 **`decode()`** 方法返回一个当图片解码后可安全用于附加到 DOM 上时 resolves 的 {{jsxref("Promise")}} 对象。这可用于在将图片附加到一个 DOM 中的元素（或作为一个新元素加入 DOM 中）之前启动加载，所以在将图像添加到 DOM 时可以立即渲染图像。这反过来，防止了将图像加入 DOM 后图像的加载造成下一帧渲染的延迟。
 
 ## 语法
 
