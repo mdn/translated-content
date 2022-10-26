@@ -171,7 +171,7 @@ document.addEventListener(
 
 #### Resultado
 
-{{EmbedLiveSample('Arrastrar un elemento por cada contenedor')}}
+{{EmbedLiveSample('Un ejemplo mínimo de arrastrar y soltar')}}
 
 ## Especificaciones
 
