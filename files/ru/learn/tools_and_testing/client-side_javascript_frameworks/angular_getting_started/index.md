@@ -15,7 +15,9 @@ translation_of: >-
 original_slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Пришло время взглянуть на фреймворк от Google — Angular, еще один популярный вариант, с которым вы часто будете сталкиваться. В этой статье мы рассмотрим, что Angular может предложить, установим необходимые компоненты, запустим пример приложения, и разберём базовую архитектуру Angular.
 

@@ -16,7 +16,9 @@ translation_of: >-
 original_slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Сейчас мы готовы приступить к созданию приложения списка дел с использованием Angular. Готовое приложение будет отображать список дел, позволять редактировать, удалять и добавлять элементы. В этой статье вы познакомитесь со структурой приложения и поработаете над базовым отображением списка дел.
 
