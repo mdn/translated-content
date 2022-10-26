@@ -142,5 +142,3 @@ Adicionalmente, el servicio de complementos de búsqueda suministra un mecanismo
 - [Ready2Search](http://ready.to/search/en/) - Crea complementos OpenSearch. [Búsquedas personalizadas a través de Ready2Search](http://ready.to/search/make/en_make_plugin.htm)
 
 Interwiki link
-
-{{ languages( { "ca": "ca/Creaci\u00f3\_de\_connectors\_OpenSearch\_per\_al\_Firefox", "en": "en/Creating\_OpenSearch\_plugins\_for\_Firefox", "fr": "fr/Cr\u00e9ation\_de\_plugins\_OpenSearch\_pour\_Firefox", "ja": "ja/Creating\_OpenSearch\_plugins\_for\_Firefox", "pl": "pl/Tworzenie\_wtyczek\_OpenSearch\_dla\_Firefoksa", "pt": "pt/Criando\_plugins\_OpenSearch\_para\_o\_Firefox" } ) }}
