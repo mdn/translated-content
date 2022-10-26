@@ -4014,6 +4014,7 @@
 /ja/docs/Web/CSS/@media/scan	/ja/docs/orphaned/Web/CSS/@media/scan
 /ja/docs/Web/CSS/@page/bleed	/ja/docs/orphaned/Web/CSS/@page/bleed
 /ja/docs/Web/CSS/@page/marks	/ja/docs/orphaned/Web/CSS/@page/marks
+/ja/docs/Web/CSS/@scroll-timeline	/ja/docs/Web/CSS/scroll-timeline
 /ja/docs/Web/CSS/@viewport/height	/ja/docs/Web/CSS/@viewport
 /ja/docs/Web/CSS/@viewport/max-height	/ja/docs/Web/CSS/@viewport
 /ja/docs/Web/CSS/@viewport/max-zoom	/ja/docs/Web/CSS/@viewport
@@ -4792,12 +4793,13 @@
 /ja/docs/Web/JavaScript/Reference/Statements/default	/ja/docs/Web/JavaScript/Reference/Statements/switch
 /ja/docs/Web/JavaScript/Reference/Statements/import.meta	/ja/docs/Web/JavaScript/Reference/Operators/import.meta
 /ja/docs/Web/JavaScript/Reference/Statements/yield	/ja/docs/Web/JavaScript/Reference/Operators/yield
+/ja/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/ja/docs/conflicting/Web/JavaScript/Reference/Strict_mode
 /ja/docs/Web/JavaScript/Reference/arrow_functions	/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /ja/docs/Web/JavaScript/Reference/template_strings	/ja/docs/Web/JavaScript/Reference/Template_literals
 /ja/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
 /ja/docs/Web/JavaScript/Shells	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ja/docs/Web/JavaScript/Strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode
-/ja/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/ja/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/ja/docs/conflicting/Web/JavaScript/Reference/Strict_mode
 /ja/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /ja/docs/Web/JavaScript/Tutorials	/ja/docs/Web/JavaScript
 /ja/docs/Web/JavaScript/Typed_arrays/ArrayBuffer	/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer

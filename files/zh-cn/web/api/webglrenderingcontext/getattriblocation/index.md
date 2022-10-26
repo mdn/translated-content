@@ -22,7 +22,7 @@ GLint gl.getAttribLocation(program, name);
 
 ### 返回值
 
-表明属性位置的下标 {{domxref("GLint")}} 数字，如果找不到该属性则返回-1。
+表明属性位置的下标 {{domxref("GLint")}} 数字，如果找不到该属性则返回 -1。
 
 ## 示例
 
