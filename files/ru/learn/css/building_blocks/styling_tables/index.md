@@ -72,9 +72,9 @@ translation_of: Learn/CSS/Building_blocks/Styling_tables
 
 В этой части обучения мы будем работать над тем чтобы стилизовать наш пример таблицы.
 
-1.  В начале необходимо сделать копию [sample markup](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html), загрузить оба изображения ([noise](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) и [leopardskin](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg)), и вставить эти файлы в отдельную папку на вашем компьютере.
-2.  Следующее, это создать новый файл `style.css` и сохранить его в той же папке вместе с другими файлами.
-3.  Подключить CSS в HTML для этого разместить следующую строку в HTML внутри {{htmlelement("head")}}:
+1. В начале необходимо сделать копию [sample markup](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html), загрузить оба изображения ([noise](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) и [leopardskin](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg)), и вставить эти файлы в отдельную папку на вашем компьютере.
+2. Следующее, это создать новый файл `style.css` и сохранить его в той же папке вместе с другими файлами.
+3. Подключить CSS в HTML для этого разместить следующую строку в HTML внутри {{htmlelement("head")}}:
 
     ```html
     <link href="style.css" rel="stylesheet" type="text/css">

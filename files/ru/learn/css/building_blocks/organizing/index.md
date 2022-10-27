@@ -7,7 +7,7 @@ translation_of: Learn/CSS/Building_blocks/Organizing
 
 As you start to work on larger stylesheets and big projects you will discover that maintaining a huge CSS file can be challenging. In this article we will take a brief look at some best practices for writing your CSS to make it easily maintainable, and some of the solutions you will find in use by others to help improve maintainability.
 
-| Prerequisites: | Basic computer literacy, [basic software installed](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
+| Prerequisites: | Basic computer literacy, [basic software installed](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Objective:     | To learn some tips and best practices for organizing stylesheets, and find out about some of the naming conventions and tools in common usage to help with CSS organization and team working.                                                                                                                                                                                                                                                                            |
 
@@ -341,21 +341,21 @@ You should also now have the skills to explore the rest of the [MDN CSS](/ru/doc
 
 ## In this module
 
-1.  [Cascade and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [The box model](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Backgrounds and borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Handling different text directions](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [The box model](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Backgrounds and borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Handling different text directions](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Overflowing content](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Values and units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Sizing items in CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, media, and form elements](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Styling tables](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Debugging CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizing your CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)

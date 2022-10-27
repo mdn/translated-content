@@ -7,7 +7,7 @@ translation_of: Learn/CSS/Building_blocks/Debugging_CSS
 
 Порой, при написании CSS, вы будете сталкиваться с проблемой, при которой будет казаться, что CSS не делает того, чего вы ожидаете от него. Возможно, вы считаете, что определённый селектор должен соответствовать элементу, но ничего не происходит, или поле имеет размер, отличный от ожидаемого. Эта статья поможет вам с тем, как отладить CSS проблемы и покажет вам как DevTools (инструменты разработчика), включённые во все современные браузеры, могут помочь разобраться с тем, что происходит.
 
-| Необходимые знания: | Basic computer literacy, [basic software installed](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
+| Необходимые знания: | Basic computer literacy, [basic software installed](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Задачи:             | Изучить основы того, что такое DevTools и как выполнять простую инспекцию и редактирование CSS.                                                                                                                                                                                                                                                                                                                                                                          |
 
@@ -145,10 +145,10 @@ DevTools может помочь при решении проблем CSS, ит�
 
 Создание сокращённого контрольного примера:
 
-1.  Если ваша разметка генерируется динамически — например через CMS — сделайте статичную версию вывода, которая показывает проблему. Сайты обмена кодами как [CodePen](https://codepen.io/) являются полезными для размещения сокращённых контрольных примеров, так как они доступны онлайн, и вы легко можете поделиться с коллегами. Вы можете начать просматривать страницу во View Source и скопировать HTML в CodePen, затем взять релевантный CSS и JavaScript и включить их тоже. После этого вы можете проверить очевидна ли проблема.
-2.  Если удаление JavaScript не устраняет проблему, то не включайте JavaScript. Если же удаление JavaScript _устраняет_ проблему, тогда удалите столько JavaScript, сколько сможете, оставляя всё что вызывает проблему.
-3.  Удалите весь HTML который не влияет на проблему. Удалите компоненты или даже главные элементы макета. Опять же постарайтесь добиться наименьшего количества кода, который все ещё показывает проблему.
-4.  Удалите весь CSS который не влияет на проблему.
+1. Если ваша разметка генерируется динамически — например через CMS — сделайте статичную версию вывода, которая показывает проблему. Сайты обмена кодами как [CodePen](https://codepen.io/) являются полезными для размещения сокращённых контрольных примеров, так как они доступны онлайн, и вы легко можете поделиться с коллегами. Вы можете начать просматривать страницу во View Source и скопировать HTML в CodePen, затем взять релевантный CSS и JavaScript и включить их тоже. После этого вы можете проверить очевидна ли проблема.
+2. Если удаление JavaScript не устраняет проблему, то не включайте JavaScript. Если же удаление JavaScript _устраняет_ проблему, тогда удалите столько JavaScript, сколько сможете, оставляя всё что вызывает проблему.
+3. Удалите весь HTML который не влияет на проблему. Удалите компоненты или даже главные элементы макета. Опять же постарайтесь добиться наименьшего количества кода, который все ещё показывает проблему.
+4. Удалите весь CSS который не влияет на проблему.
 
 В процессе вы можете обнаружить что причиняет проблему или, хотя бы, сможете включать или выключать её путём удаления чего-то конкретного. Стоит добавлять какие-то комментарии к вашему коду по ходу изучения вещей. Если вам надо попросить помощи, то они покажут человеку, помогающему вам что вы уже пытались сделать. Это может дать вам достаточно информации для поиска возможных проблем и обходных путей.
 
@@ -162,21 +162,21 @@ As you become more experienced with CSS, you will find that you get faster at fi
 
 ## In this module
 
-1.  [Cascade and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [The box model](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Backgrounds and borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Handling different text directions](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [The box model](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Backgrounds and borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Handling different text directions](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Overflowing content](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Values and units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Sizing items in CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, media, and form elements](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Styling tables](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Debugging CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizing your CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)
