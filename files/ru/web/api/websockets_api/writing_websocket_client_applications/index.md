@@ -58,7 +58,7 @@ WebSocket WebSocket(
 var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
 ```
 
-После выполнения функции, `exampleSocket`.`readyState` будет иметь значение `CONNECTING`. `readyState` изменится на `OPEN` как только соединение станет готовым к передаче данных.
+После выполнения функции, {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} будет иметь значение `CONNECTING`. `readyState` изменится на `OPEN` как только соединение станет готовым к передаче данных.
 
 Если нужно открыть соединение, поддерживающее несколько протоколов, можно передать массив протоколов:
 
