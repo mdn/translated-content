@@ -22,7 +22,7 @@ La interfaz **`MediaStream`** representa un flujo de contenido de los medios. Un
 - {{domxref("MediaStreamTrack.muted")}} {{readonlyInline}}
   - : Retorna un valor booleano con un valor de `true` si la pista esta silenciada, de lo contrario `false`.
 - {{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}
-  - : Retona un valor Booleano con un valor de `true` si la pista es de solo lectura ( una fuente de archivo de vídeo o una cámara que los ajustes no puedan ser modificados),``de lo contrario`false`.
+  - : Retona un valor Booleano con un valor de `true` si la pista es de solo lectura ( una fuente de archivo de vídeo o una cámara que los ajustes no puedan ser modificados), de lo contrario `false`.
 - {{domxref("MediaStreamTrack.readyState")}} {{readonlyInline}}
 
   - : Retorna un valor enumerado dando el estado de la pista. Este toma uno de los siguientes valores:

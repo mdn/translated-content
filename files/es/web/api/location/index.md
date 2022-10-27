@@ -42,7 +42,7 @@ _La interface `Location`_ _no hereda ninguna propiedad, pero las implementa desd
 
 ## Metodos
 
-_La interface `Location`_ _no hereda ningun metodo_, pero los implementa desde {{domxref("URLUtils")}}\_\_
+_La interface `Location` no hereda ningun metodo, pero los implementa desde {{domxref("URLUtils")}}_.
 
 - {{domxref("Location.assign()")}}
   - : Carga el recurso en la URL proporcionada en el parámetro.
