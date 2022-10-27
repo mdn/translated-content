@@ -34,7 +34,7 @@ The following text is shared between this article, DOM:window\.prompt and DOM:wi
 
 Los usuarios de [Mozilla Chrome](/en-US/Chrome) users (e.g. Firefox extensions) deberían usar métodos de `nsIPromptService` en vez de cajas de diálogo.
 
-A partir de la versión {{CompatChrome(46.0)}} de Chrome este método es bloqueado dentro de un {{htmlelement("iframe")}} a no ser que el atributo sandbox tenga el valor `allow-modal`.
+A partir de la versión 46.0 de Chrome este método es bloqueado dentro de un {{htmlelement("iframe")}} a no ser que el atributo sandbox tenga el valor `allow-modal`.
 
 {{gecko_minversion_inline("23.0")}} El argumento es opcional y no requerido por la especificación.
 
