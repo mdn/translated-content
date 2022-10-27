@@ -46,9 +46,9 @@ Ce sont quelques-uns des éléments sémantiques ([source](http://www.w3schools.
 - {{htmlelement("summary")}}
 - {{htmlelement("time")}}
 
-## **Pour approfondir**
+## Pour approfondir
 
-### **Culture générale**
+### Culture générale
 
 - [Référence des éléments HTML](/fr/docs/Web/HTML/Element#Inline_text_semantics) sur MDN
 - [Problèmes résolus par HTML5](/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Probl%C3%A8mes_r%C3%A9solus_par_HTML5) sur MDN
