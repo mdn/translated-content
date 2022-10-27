@@ -104,5 +104,3 @@ Su proveedor de alojamiento web puede proporcionar una interfaz fácil para los 
 - [TinyVid](http://tinyvid.tv/):ejemplos de uso de ogg en HTML 5.
 - [El elemento `video`](http://www.whatwg.org/specs/web-apps/current-work/#video) (especificación de HTML 5)
 - [Configuración de servidores para medios Ogg](/en/Configuring_servers_for_Ogg_media)
-
-{{ languages( { "fr": "fr/HTML/Element/video","en": "en/HTML/Element/video" } ) }}
