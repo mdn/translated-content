@@ -106,18 +106,18 @@ Properties that apply only to text/number-containing or elements
     "off": the user must explicity enter a value
 
 - `maxLength`
-  - : _`long`:_ **Returns / Sets** the element's {{ htmlattrxref("maxlength", "input") }} attribute, containing the \***\*maximum **l**ength of characters\*\*** (in Unicode code points) that the value can have. (If you set this to a negative number, an exception will be thrown.)
+  - : _`long`:_ **Returns / Sets** the element's {{ htmlattrxref("maxlength", "input") }} attribute, containing the **maximum length of characters** (in Unicode code points) that the value can have. (If you set this to a negative number, an exception will be thrown.)
 - `size`
-  - : _`unsigned long`:_ **Returns / Sets** the element's {{ htmlattrxref("size", "input") }} attribute, containing \***\*size of the control\*\***. This value is in pixels unless the value of {{htmlattrxref("type","input")}} is `text` or `password`, in which case, it is an integer number of characters. Applies only when {{htmlattrxref("type","input")}} is set to `text`, `search`, `tel`, `url`, `email`, or `password`; otherwise it is ignored.
+  - : _`unsigned long`:_ **Returns / Sets** the element's {{ htmlattrxref("size", "input") }} attribute, containing **size of the control**. This value is in pixels unless the value of {{htmlattrxref("type","input")}} is `text` or `password`, in which case, it is an integer number of characters. Applies only when {{htmlattrxref("type","input")}} is set to `text`, `search`, `tel`, `url`, `email`, or `password`; otherwise it is ignored.
 - `pattern`
-  - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("pattern", "input") }} attribute, containing a \***\*regular expression\*\*** that the control's value is checked against. Use the {{htmlattrxref("title","input")}} attribute to describe the pattern to help the user. This attribute applies when the value of the {{htmlattrxref("type","input")}} attribute is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored.
+  - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("pattern", "input") }} attribute, containing a **regular expression** that the control's value is checked against. Use the {{htmlattrxref("title","input")}} attribute to describe the pattern to help the user. This attribute applies when the value of the {{htmlattrxref("type","input")}} attribute is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored.
 - `placeholder`
   - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("placeholder", "input") }} attribute, containing a hint to the user of what can be entered in the control. The placeholder text must not contain carriage returns or line-feeds. This attribute applies when the value of the {{htmlattrxref("type","input")}} attribute is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored.
 - `readOnly`
 
   - : _`boolean`:_ **Returns / Sets** the element's {{ htmlattrxref("readonly", "input") }} attribute, indicating that the user cannot modify the value of the control.
 
-    {HTMLVersionInline(5)}}This is ignored if the value of the {{htmlattrxref("type","input")}} attribute is `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, or a button type.
+    {{HTMLVersionInline(5)}} This is ignored if the value of the {{htmlattrxref("type","input")}} attribute is `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, or a button type.
 
 - `min`
   - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("min", "input") }} attribute, containing the minimum (numeric or date-time) value for this item, which must not be greater than its maximum ({{htmlattrxref("max","input")}} attribute) value.

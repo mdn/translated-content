@@ -28,7 +28,7 @@ _La interfaz `Coordinates` no hereda ninguna propiedad_.
 
 ## Métodos
 
-**La interfaz `Coordinates` no implementa ni edita ningún método*.***
+La interfaz `Coordinates` no implementa ni edita ningún método.
 
 ## Especificaciones
 

@@ -26,7 +26,7 @@ _La interfaz `Position` no hereda ninguna propiedad._
 
 ## Métodos
 
-**La interfaz `Position` no implementa ni hereda ningún método*.***
+La interfaz `Position` no implementa ni hereda ningún método.
 
 ## Especificaciones
 

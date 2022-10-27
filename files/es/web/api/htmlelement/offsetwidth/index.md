@@ -13,7 +13,7 @@ La propiedad de solo lectura **`HTMLElement.offsetWidth`** devuelve el ancho del
 var offsetWidth =element.offsetWidth;
 ```
 
-**`offsetWidth` **es una propiedad de solo lectura.
+**`offsetWidth`** es una propiedad de solo lectura.
 
 > **Nota:** Esta propiedad redondeará el valor a un entero. Si necesitas un valor fraccional usa: {{ domxref("element.getBoundingClientRect()") }}.
 
