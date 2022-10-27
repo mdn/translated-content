@@ -77,6 +77,6 @@ Mira el artículo _[Using files from web applications](/es/docs/Using_files_from
 
 ## See also
 
-- [Usando archivos desde aplicaciónes web](/en/Using_files_from_web_applications "en/Using files from web applications")
+- [Usando archivos desde aplicaciónes web](/en/Using_files_from_web_applications)
 - {{ domxref("File") }}
 - {{ domxref("Blob") }}

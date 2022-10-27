@@ -9,7 +9,7 @@ translation_of: Web/API/HTMLImageElement/Image
 
 Acepta dos parametros opcionales: Image(\[unsigned long _**width**_, unsigned long _**height**_])
 
-Devuelve un [HTMLImageElement](/es/docs/Web/API/HTMLImageElement "en/DOM/HTMLImageElement") instanciado justo como `document.createElement('img')` would.
+Devuelve un [HTMLImageElement](/es/docs/Web/API/HTMLImageElement) instanciado justo como `document.createElement('img')` would.
 
 Ejemplo:
 

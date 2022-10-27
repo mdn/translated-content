@@ -11,7 +11,7 @@ Se ha presentado un error al utilizar la interfaz {{ domxref("FileReader") }}.
 
 > **Nota:** Esta interfaz es obsoleta de acuerdo a la última especificación. Use la nueva DOM4 {{ domxref("DOMError") }} en su lugar.
 
-La [File System API](/en/DOM/File_API/File_System_API "en/DOM/File_API/File_System_APIB"), a `FileError Representa un error que puede surgir al acceder al sistema de archivos utilizando la API asíncrona. Se extiende la interfaz FileERror descrita en la escritura del archivo y añadiendo así códigos de error nuevos.`
+La [File System API](/en/DOM/File_API/File_System_API), a `FileError Representa un error que puede surgir al acceder al sistema de archivos utilizando la API asíncrona. Se extiende la interfaz FileERror descrita en la escritura del archivo y añadiendo así códigos de error nuevos.`
 
 FileError Objects son pasados una vez se haya lanzado un error. Los objetos tiene un código que muestra el tipo de error que haya ocurrido.
 
@@ -78,7 +78,7 @@ Hasta el momento se ha traducido hasta este punto, las tablas que verás a conti
 
 ## See also
 
-- [Basic Concepts About the File System API](/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API "en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API")
+- [Basic Concepts About the File System API](/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)
 - {{ domxref("FileReader") }}
 - {{ domxref("File") }}
 - {{ domxref("Blob") }}

@@ -118,5 +118,5 @@ function removeDragData(ev) {
 ## See also
 
 - [HTML Drag and Drop API](/es/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](/Web/Guide/HTML/Drag_operations "Drag Operations")
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd "Drag and Drop Standard")
+- [Drag Operations](/Web/Guide/HTML/Drag_operations)
+- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

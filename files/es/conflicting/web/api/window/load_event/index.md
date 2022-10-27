@@ -51,7 +51,7 @@ window.onload = function() {
 
 El evento `load` dispara el evento al final del proceso de carga del documento. En este punto, todos los objetos del documento son DOM, y todas las imágenes y sub-frames han terminado de cargarse.
 
-Existen también los [Eventos DOM Específicos](/en/Gecko-Specific_DOM_Events "en/Gecko-Specific_DOM_Events") como `DOMContentLoaded` y `DOMFrameContentLoaded` (los cuales pueden ser manejados usando {{ domxref("element.addEventListener()") }}) y son ejecutados despues de que el DOM de la página ha sido construido, pero no esperear a que otros recursos terminen de cargar.
+Existen también los [Eventos DOM Específicos](/en/Gecko-Specific_DOM_Events) como `DOMContentLoaded` y `DOMFrameContentLoaded` (los cuales pueden ser manejados usando {{ domxref("element.addEventListener()") }}) y son ejecutados despues de que el DOM de la página ha sido construido, pero no esperear a que otros recursos terminen de cargar.
 
 ### Especificación
 
@@ -59,4 +59,4 @@ Este evento tipo handler se encuentra especificado en [HTML](http://www.whatwg.o
 
 ### Ver También
 
-- Evento `DOMContentLoaded` en [Escuchando los Evento:Eventos DOM Simples](/En/Listening_to_events#Simple_DOM.c2.a0events "En/Listening to events#Simple DOM.c2.a0events")
+- Evento `DOMContentLoaded` en [Escuchando los Evento:Eventos DOM Simples](/En/Listening_to_events#Simple_DOM.c2.a0events)

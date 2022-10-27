@@ -46,5 +46,5 @@ El ejemplo de la imagen de superior muestra una barra de desplazamiento y un `of
 - {{domxref("Element.clientHeight")}}
 - {{domxref("Element.scrollHeight")}}
 - {{domxref("HTMLElement.offsetWidth")}}
-- [Determinando las dimensiones de los elementos](/es/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements "en/Determining_the_dimensions_of_elements")
+- [Determinando las dimensiones de los elementos](/es/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
 - [MSDN Midiendo las dimensiones y ubicación de los elementos](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)

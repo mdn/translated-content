@@ -14,18 +14,18 @@ translation_of: Web/API/Gamepad_API
 
 ## Interfaces
 
-- [`Gamepad`](/es/docs/Web/API/Gamepad "The Gamepad interface of the Gamepad API defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.")
+- [`Gamepad`](/es/docs/Web/API/Gamepad)
   - : Representa un gamepad/control conectado a la computadora.
-- [`GamepadButton`](/es/docs/Web/API/GamepadButton "The GamepadButton interface defines an individual button of a gamepad or other controller, allowing access to the current state of different types of buttons available on the control device.")
+- [`GamepadButton`](/es/docs/Web/API/GamepadButton)
   - : Representa un botón en uno de los gamepads conectados.
-- [`GamepadEvent`](/es/docs/Web/API/GamepadEvent "The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the system, which is what the gamepad events Window.gamepadconnected and Window.gamepaddisconnected are fired in response to.")
+- [`GamepadEvent`](/es/docs/Web/API/GamepadEvent)
   - : El evento objeto representa eventos que son enviados a los gamepads.
 
 ### Extensiones experimentales de los gamepads
 
-- [`GamepadHapticActuator`](/es/docs/Web/API/GamepadHapticActuator "The GamepadHapticActuator interface of the Gamepad API represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.")
+- [`GamepadHapticActuator`](/es/docs/Web/API/GamepadHapticActuator)
   - : Representa el hardware en el control designado para proveer retroalimentación háptica al usuario (si está disponible), más comunmente hardware de vibración.
-- [`GamepadPose`](/es/docs/Web/API/GamepadPose "The GamepadPose interface of the Gamepad API represents the pose of a WebVR controller at a given timestamp (which includes orientation, position, velocity, and acceleration information.)")
+- [`GamepadPose`](/es/docs/Web/API/GamepadPose)
   - : Representa la posición de un control (ej. posición y orientación el espacio 3D) en el caso de un controllador [WebVR](/es/docs/Web/API/WebVR_API). Éste no es usado por el nuevo estándar [WebXR](/es/docs/Web/API/WebXR_Device_API).
 
 Ver también las [extensiones para la interfaz del navegador](/es/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad), para caracteristicas que le permitan acceder a la información mencionada.

@@ -136,7 +136,7 @@ var currentState = history.state;
 
 ## Ejemplos
 
-Para un ejemplo completo de un sitio AJAX, ver: [Ejemplo de navegación AJAX](/es/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Example "/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Example").
+Para un ejemplo completo de un sitio AJAX, ver: [Ejemplo de navegación AJAX](/es/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Example).
 
 ## Especificaciones
 

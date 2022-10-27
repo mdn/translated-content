@@ -29,7 +29,7 @@ element.focus(focusOption); // Object parameter
 
     - `preventScroll` {{optional_inline}}
 
-      - : Es un valor [`Boolean`](/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean "The Boolean object is an object wrapper for a boolean value."):
+      - : Es un valor [`Boolean`](/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean):
 
         - Si es `false`, el método hará scroll hasta que el elemento esté visible en la ventana del navegador
         - Si es `true`, el método NO hará scroll hasta que el elemento esté visible en la ventana del navegador.
