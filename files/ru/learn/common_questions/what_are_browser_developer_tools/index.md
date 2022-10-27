@@ -38,7 +38,7 @@ original_slug: Learn/Discover_browser_developer_tools
 
 - _**Панель Меню.**_
 
-  - **Firefox.** Открыть меню ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) _➤ ![](https://mdn.mozillademos.org/files/9639/Screenshot%20from%202014-11-26%2014:24:56.png)\_\_➤ Инструменты разработки, или_ _Инструменты ➤_ _Веб-разработка ➤ Инструменты разработки_
+  - **Firefox.** Открыть меню ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) _➤ ![](https://mdn.mozillademos.org/files/9639/Screenshot%20from%202014-11-26%2014:24:56.png) _➤ Инструменты разработки, или_ _Инструменты ➤_ _Веб-разработка ➤ Инструменты разработки_
   - **Chrome.** _Дополнительные инструменты ➤ Инструменты разработчика_
   - **Safari.** _Разработка ➤ Показать Web Inspector ._ Если вы не видите меню "Разработка", зайдите в _Safari ➤ Настройки ➤ Дополнительно,_ и проверьте стоит ли галочка _напротив "Показать меню разработки"_.
   - **Opera**. _Меню_ _➤_ _Разработка ➤ Инструменты разработчика._ Если вы не видите меню "Разработка", включите его отображение, перейдя в Меню _➤_ Другие инструменты _➤_ Показать меню разработчика.
@@ -110,13 +110,15 @@ original_slug: Learn/Discover_browser_developer_tools
 
 Чтобы понять, что происходит, попробуйте ввести фрагменты кода в консоль один за другим (и затем нажмите Enter):
 
-1.  ```js
+1. ```js
     alert('hello!');
     ```
-2.  ```js
+
+2. ```js
     document.querySelector('html').style.backgroundColor = 'purple';
     ```
-3.  ```js
+
+3. ```js
     var myImage = document.createElement('img');
     myImage.setAttribute('src','https://farm4.staticflickr.com/3455/3372925208_e1f2aae4e3_b.jpg');
     document.querySelector('h1').appendChild(myImage);
@@ -124,13 +126,15 @@ original_slug: Learn/Discover_browser_developer_tools
 
 Теперь попробуйте ввести следующую, неправильную версию кода и посмотрите, что из этого получится.
 
-1.  ```js
+1. ```js
     alert('hello!);
     ```
-2.  ```js
+
+2. ```js
     document.cheeseSelector('html').style.backgroundColor = 'purple';
     ```
-3.  ```js
+
+3. ```js
     var myImage = document.createElement('img');
     myBanana.setAttribute('src','https://farm4.staticflickr.com/3455/3372925208_e1f2aae4e3_b.jpg');
     document.querySelector('h1').appendChild(myImage);
