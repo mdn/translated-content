@@ -31,7 +31,7 @@ console.log(uInt8Array.byteLength); // 0
 
 ### 在进行克隆操作时转移
 
-以下代码展示了 {{domxref("structuredClone()")}} 操作，其中底层缓冲区从原始对象复制到 clone。
+以下代码展示了 {{domxref("structuredClone()")}} 操作，将底层缓冲区从原始对象复制到克隆对象（`clone`）。
 
 ```js
 const original = new Uint8Array(1024);
