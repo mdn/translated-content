@@ -104,7 +104,7 @@ Pero no con:
 - `bold` porque ambos componentes deben aparecer en el valor
 - `bold 1em bold` porque ambos componentes deben aparecer solo una vez
 
-> **Nota:** yuxtaposición tiene precedencia sobre el doble ampersand, esto quiere decir que `bold thin && <length>` es equivalente a `[ bold thin ] && <length>`. Que describe a `bold thin <length>` ó `<length> bold thin` pero no a `bold <length> thin `.
+> **Nota:** yuxtaposición tiene precedencia sobre el doble ampersand, esto quiere decir que `bold thin && <length>` es equivalente a `[ bold thin ] && <length>`. Que describe a `bold thin <length>` ó `<length> bold thin` pero no a `bold <length> thin`.
 
 ### Barra doble
 

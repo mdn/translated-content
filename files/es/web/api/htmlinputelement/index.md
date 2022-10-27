@@ -24,7 +24,7 @@ La interface **`HTMLInputElement`** proporciona propiedades y métodos especiale
 
 Propiedades relacionadas al formulario padre
 
-- `form `{{readonlyInline}}
+- `form`{{readonlyInline}}
   - : _`{{domxref("HTMLFormElement")}} object:`_ Retorna una referencia al elemento {{HtmlElement("form")}} padre
 - `formAction`
   - : _`string`:_ **Retorna / Establece** los atributos de los elementos {{ htmlattrxref("formaction", "input") }}, conteniendo la URI de un programa que procesa la información enviada por el elemento. Esto invalida al atributo {{ htmlattrxref("action", "form") }} del formulario padre.
@@ -59,13 +59,13 @@ Propiedades que aplican a cualquier tipo de elemento input que no se encuentre e
   - : `{{domxref("ValidityState")}} object:` Returns the validity state that this element is in.
 - `validationMessage` {{readonlyInline}}
   - : `string:` **Returns** a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation ({{htmlattrxref("willValidate","input")}} is false), or it satisfies its constraints.
-- `willValidate `{{readonlyInline}}
+- `willValidate`{{readonlyInline}}
   - : _`{{jsxref("Boolean")}}:`_ **Indicates** whether the element is a candidate for constraint validation. It is false if any conditions bar it from constraint validation.
 
 Propiedades que aplican solo a los elementos de tipo `checkbox` o `radio`
 
 - `checked`
-  - : `boolean: `**Returns / Sets** the current state of the element when {{htmlattrxref("type","input")}} is `checkbox` or `radio`.
+  - : `boolean:`**Returns / Sets** the current state of the element when {{htmlattrxref("type","input")}} is `checkbox` or `radio`.
 - `defaultChecked`
   - : _`boolean:`_ **Returns / Sets** the default state of a radio button or checkbox as originally specified in HTML that created this object.
 - `indeterminate`
