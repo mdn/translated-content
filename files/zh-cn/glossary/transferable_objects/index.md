@@ -1,5 +1,5 @@
 ---
-title: Transferable objects
+title: 可转移对象
 slug: Glossary/Transferable_objects
 ---
 
