@@ -103,10 +103,7 @@ Other key terms used in this section.
 
 ## Specifications
 
-| Specification                                                                | Status                               | Comment                                                                                                                             |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML Editing', '#selection', 'Selection')}}     | {{Spec2('HTML Editing')}}     | Initial (older) definition                                                                                                          |
-| {{SpecName('Selection API', '#definition', 'Selection')}} | {{Spec2('Selection API')}} | The Selection API specification is based on the HTML Editing APIs specification and focuses on the Selection-related functionality. |
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -121,7 +118,5 @@ Other key terms used in this section.
 ## Gecko notes
 
 - Gecko/Firefox provide additional features, available to chrome (internal and add-on) code only. These are defined in `nsISelectionPrivate`.
-- Mozilla source code: {{source("dom/webidl/Selection.webidl")}}
+- Mozilla source code: [`dom/webidl/Selection.webidl`](https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Selection.webidl)
 - {{obsolete_inline("gecko29")}} {{domxref("Selection.selectionLanguageChange()")}} used to be exposed to the web content until Firefox 29
-
-<!---->

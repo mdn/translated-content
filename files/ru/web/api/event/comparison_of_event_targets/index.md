@@ -83,13 +83,12 @@ translation_of: Web/API/Event/Comparison_of_Event_Targets
     <tr>
       <td>
         <a
-          href="/en/DOM/event.explicitOriginalTarget"
-          title="en/DOM/event.explicitOriginalTarget"
+          href="/ru/docs/Web/API/Event/explicitOriginalTarget"
           >event.explicitOriginalTarget</a
         >
       </td>
       <td>
-        {{ Source("/dom/public/idl/events/nsIDOMNSEvent.idl", "nsIDOMNSEvent.idl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} Если по какой-либо причине событие
@@ -107,13 +106,12 @@ translation_of: Web/API/Event/Comparison_of_Event_Targets
     <tr>
       <td>
         <a
-          href="/en/DOM/event.originalTarget"
-          title="en/DOM/event.originalTarget"
+          href="/ru/docs/Web/API/Event/originalTarget"
           >event.originalTarget</a
         >
       </td>
       <td>
-        {{ Source("/dom/public/idl/events/nsIDOMNSEvent.idl", "nsIDOMNSEvent.idl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} Первоначальная цель события перед
