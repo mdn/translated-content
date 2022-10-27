@@ -26,7 +26,7 @@ slug: Web/Security
 - [如何修复含有混合内容的网站](/zh-CN/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
   - : 如果你的网站传送了 HTTPS 页面，所有使用 HTTP 传送的[活跃混合内容](/zh-CN/docs/Web/Security/Mixed_content#mixed_active_content)默认会被阻止。因而，你的网站可能会对客户不可用（例如 iframe 或插件不加载）。[被动的混合内容](/zh-CN/docs/Web/Security/Mixed_content#mixed_passivedisplay_content)默认是显示状态，但用户也可以通过首选设置来阻止这种类型的内容。这个页面解释了作为 web 开发人员需要注意的事情。
 - [安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)
-  - : 一个**安全的上下文**是一个 `Window`或 `Worker`，对于它来说，有理由相信内容已经安全地通过HTTPS/TLS交付，并且与**不**安全的上下文进行通信的可能性有限。许多 Web API 和功能只能在安全上下文中访问。安全上下文的主要目标是防止[中间人攻击者]((https://zh.wikipedia.org/wiki/中间人攻击)访问强大的 API，从而进一步损害攻击受害者。
+  - : 一个**安全的上下文**是一个 `Window` 或 `Worker`，对于它来说，有理由相信内容已经安全地通过 HTTPS/TLS 交付，并且与**不**安全的上下文进行通信的可能性有限。许多 Web API 和功能只能在安全上下文中访问。安全上下文的主要目标是防止[中间人攻击者](https://zh.wikipedia.org/wiki/中间人攻击)访问强大的 API，从而进一步损害攻击受害者。
 - [限制在安全上下文中的功能](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
   - : 该参考列出了仅在安全上下文中可用的 web 平台功能。
 - [弱签名算法](/zh-CN/docs/Web/Security/Weak_Signature_Algorithm)
