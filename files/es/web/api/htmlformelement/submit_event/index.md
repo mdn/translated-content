@@ -4,25 +4,25 @@ slug: Web/API/HTMLFormElement/submit_event
 translation_of: Web/API/GlobalEventHandlers/onsubmit
 original_slug: Web/API/GlobalEventHandlers/onsubmit
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>Manejador de eventos del evento submit para el objeto window.</p>
+Manejador de eventos del evento submit para el objeto window.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="eval">window.onsubmit = <em>funcRef</em>;
-</pre>
+```
+window.onsubmit = funcRef;
+```
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<ul>
- <li><code>funcRef</code> es una referencia a una función.</li>
-</ul>
+- `funcRef` es una referencia a una función.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="eval">&lt;html&gt;
-&lt;script&gt;
+```
+<html>
+<script>
 function reg() {
   window.captureEvents(Event.SUBMIT);
   window.onsubmit = hit;
@@ -31,40 +31,29 @@ function reg() {
 function hit() {
   console.log('hit');
 }
-&lt;/script&gt;
+</script>
 
-&lt;body onload="reg();"&gt;
-&lt;form&gt;
-  &lt;input type="submit" value="submit" /&gt;
-&lt;/form&gt;
-&lt;div id="d"&gt; &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="reg();">
+<form>
+  <input type="submit" value="submit" />
+</form>
+<div id="d"> </div>
+</body>
+</html>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>El evento submit se genera cuando el usuario hace click en el boton submit en un formulario (<code>&lt;input type="submit"/&gt;</code>).</p>
+El evento submit se genera cuando el usuario hace click en el boton submit en un formulario (`<input type="submit"/>`).
 
-<p>El evento submit no se genera cuando el usuario llama a la función <code>form.submit()</code> directamente.</p>
+El evento submit no se genera cuando el usuario llama a la función `form.submit()` directamente.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onsubmit','onsubmit')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onsubmit','onsubmit')}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
 {{Compat("api.GlobalEventHandlers.onsubmit")}}

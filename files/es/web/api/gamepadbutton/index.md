@@ -8,30 +8,27 @@ tags:
   - juegos
 translation_of: Web/API/GamepadButton
 ---
-<div>{{APIRef("Gamepad API")}}</div>
+{{APIRef("Gamepad API")}}
 
-<p>La interfaz <strong><code>GamepadButton</code></strong> define un botón individual de un gamepad u otro control, dando acceso al estado actual de diferentes tipos de botones disponibles en el dispositivo de control.</p>
+La interfaz **`GamepadButton`** define un botón individual de un gamepad u otro control, dando acceso al estado actual de diferentes tipos de botones disponibles en el dispositivo de control.
 
-<p>Un objeto <code>GamepadButton</code> se devuelve al solicitar cualquier valor del array devuelto por la propiedad <code>buttons</code> de la interfaz {{domxref("Gamepad")}}.</p>
+Un objeto `GamepadButton` se devuelve al solicitar cualquier valor del array devuelto por la propiedad `buttons` de la interfaz {{domxref("Gamepad")}}.
 
-<div class="note">
-<p><strong>Nota</strong>: Este es el caso en Firefox Gecko 28 en adelante; Chrome y versiones anteriores de Firefox continúan devolviendo un array de valores dobles cuando se accede a esta propiedad.</p>
-</div>
+> **Nota:** Este es el caso en Firefox Gecko 28 en adelante; Chrome y versiones anteriores de Firefox continúan devolviendo un array de valores dobles cuando se accede a esta propiedad.
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<dl>
- <dt>{{domxref("GamepadButton.value")}} {{readonlyInline}}</dt>
- <dd>Un valor doble usado para representar el estado actual de botones análogos, así como los gatillos de muchos gamepads modernos. Los valores se normalizan al rango 0.0 —1.0, donde 0.0 representa un botón que no está presionado, y 1.0 representa un botón que está completamente presionado.</dd>
- <dt>{{domxref("GamepadButton.pressed")}} {{readonlyInline}}</dt>
- <dd>Un valor {{domxref("Boolean")}} que indica el estado el botón, ya sea que actualmente se encuentre presionado (<code>true</code>) o sin presionar (<code>false</code>).</dd>
-</dl>
+- {{domxref("GamepadButton.value")}} {{readonlyInline}}
+  - : Un valor doble usado para representar el estado actual de botones análogos, así como los gatillos de muchos gamepads modernos. Los valores se normalizan al rango 0.0 —1.0, donde 0.0 representa un botón que no está presionado, y 1.0 representa un botón que está completamente presionado.
+- {{domxref("GamepadButton.pressed")}} {{readonlyInline}}
+  - : Un valor {{domxref("Boolean")}} que indica el estado el botón, ya sea que actualmente se encuentre presionado (`true`) o sin presionar (`false`).
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>El siguiente código se toma de mi demostración del botón del API de Gamepad (puedes <a href="http://chrisdavidmills.github.io/gamepad-buttons/">ver el demo en vivo</a>, y <a href="https://github.com/chrisdavidmills/gamepad-buttons/tree/master">encontrar el código fuente</a> en Github.) Nota que el código — en Chrome {{domxref("Navigator.getGamepads")}} necesita un prefijo <code>webkit</code> y los valores del botón serán guardados como un array de valores dobles, mientras qe en Firefox {{domxref("Navigator.getGamepads")}} no se necesita un prefijo, y los valores de los botones se guardan como un array de objetos {{domxref("GamepadButton")}}; estas son las propiedades {{domxref("GamepadButton.value")}} o {{domxref("GamepadButton.pressed")}} a las que necesitamos acceder, dependiendo de qué tipo de botones haya. En este simple ejemplo yo solo he permitido estos.</p>
+El siguiente código se toma de mi demostración del botón del API de Gamepad (puedes [ver el demo en vivo](http://chrisdavidmills.github.io/gamepad-buttons/), y [encontrar el código fuente](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) en Github.) Nota que el código — en Chrome {{domxref("Navigator.getGamepads")}} necesita un prefijo `webkit` y los valores del botón serán guardados como un array de valores dobles, mientras qe en Firefox {{domxref("Navigator.getGamepads")}} no se necesita un prefijo, y los valores de los botones se guardan como un array de objetos {{domxref("GamepadButton")}}; estas son las propiedades {{domxref("GamepadButton.value")}} o {{domxref("GamepadButton.pressed")}} a las que necesitamos acceder, dependiendo de qué tipo de botones haya. En este simple ejemplo yo solo he permitido estos.
 
-<pre class="brush: js notranslate">function gameLoop() {
+```js
+function gameLoop() {
   if(navigator.webkitGetGamepads) {
     var gp = navigator.webkitGetGamepads()[0];
 
@@ -47,13 +44,13 @@ translation_of: Web/API/GamepadButton
   } else {
     var gp = navigator.getGamepads()[0];
 
-    if(gp.buttons[0].value &gt; 0 || gp.buttons[0].pressed == true) {
+    if(gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
       b--;
-    } else if(gp.buttons[1].value &gt; 0 || gp.buttons[1].pressed == true) {
+    } else if(gp.buttons[1].value > 0 || gp.buttons[1].pressed == true) {
       a++;
-    } else if(gp.buttons[2].value &gt; 0 || gp.buttons[2].pressed == true) {
+    } else if(gp.buttons[2].value > 0 || gp.buttons[2].pressed == true) {
       b++;
-    } else if(gp.buttons[3].value &gt; 0 || gp.buttons[3].pressed == true) {
+    } else if(gp.buttons[3].value > 0 || gp.buttons[3].pressed == true) {
       a--;
     }
   }
@@ -62,29 +59,19 @@ translation_of: Web/API/GamepadButton
   ball.style.top = b*2 + "px";
 
   var start = rAF(gameLoop);
-};</pre>
+};
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Gamepad", "#gamepadbutton-interface", "GamepadButton")}}</td>
-   <td>{{Spec2("Gamepad")}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                       | Comment            |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("Gamepad", "#gamepadbutton-interface", "GamepadButton")}} | {{Spec2("Gamepad")}} | Definición inicial |
 
-<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
+## Compatibilidad de Navegadores
 
-<p>{{Compat("api.GamepadButton")}}</p>
+{{Compat("api.GamepadButton")}}
 
-<h2 id="Recomendado">Recomendado</h2>
+## Recomendado
 
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">Usando la API de Gamepad</a></p>
+[Usando la API de Gamepad](/es/docs/Web/Guide/API/Gamepad)

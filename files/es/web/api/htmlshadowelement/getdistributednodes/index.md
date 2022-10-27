@@ -5,43 +5,33 @@ tags:
   - Necesita traducción
 translation_of: Web/API/HTMLShadowElement/getDistributedNodes
 ---
-<div>{{APIRef("Web Components")}}</div>
+{{APIRef("Web Components")}}
 
-<p>The <code><strong>HTMLShadowElement.getDistributedNodes()</strong></code> method returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}} associated with this <code>&lt;shadow&gt;</code> element.</p>
+The **`HTMLShadowElement.getDistributedNodes()`** method returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}} associated with this `<shadow>` element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>var <var>nodeList</var> = <var>object</var>.getDistributedNodes()
-</pre>
+```
+var nodeList = object.getDistributedNodes()
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Get the distributed nodes
-var nodes = myShadowObject.getDistributedNodes();</pre>
+```js
+// Get the distributed nodes
+var nodes = myShadowObject.getDistributedNodes();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shadow DOM', '#the-shadow-element', 'shadow')}}</td>
-   <td>{{Spec2('Shadow DOM')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                           | Comment            |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('Shadow DOM', '#the-shadow-element', 'shadow')}} | {{Spec2('Shadow DOM')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.HTMLShadowElement.getDistributedNodes")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTMLShadowElement">HTMLShadowElement</a></li>
-</ul>
+- [HTMLShadowElement](/es/docs/Web/API/HTMLShadowElement)

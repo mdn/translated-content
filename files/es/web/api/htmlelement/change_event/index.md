@@ -10,61 +10,66 @@ tags:
   - Web
 translation_of: Web/API/HTMLElement/change_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>El evento <code>change</code> se dispara para elementos {{HTMLElement("input")}}, {{HTMLElement("select")}}, y {{HTMLElement("textarea")}} cuando una alteración al valor de un elemento es confirmada por el usuario. A diferencia del evento {{event("input")}}, el evento <code>change</code> no es disparado necesariamente por cada alteración al valor <code>value</code> del elemento</p>
+El evento `change` se dispara para elementos {{HTMLElement("input")}}, {{HTMLElement("select")}}, y {{HTMLElement("textarea")}} cuando una alteración al valor de un elemento es confirmada por el usuario. A diferencia del evento {{event("input")}}, el evento `change` no es disparado necesariamente por cada alteración al valor `value` del elemento
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Burbujas</th>
-   <td>Sí</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interfaz</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Propiedad del manejador del evento</th>
-   <td><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onchange">onchange</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Burbujas</th>
+      <td>Sí</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interfaz</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Propiedad del manejador del evento</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/GlobalEventHandlers/onchange"
+            >onchange</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Dependiendo del tipo de elemento siendo cambiado y la forma en que el usuario interactua con el elemento, el evento <code>change</code> dispara en un momento diferente:</p>
+Dependiendo del tipo de elemento siendo cambiado y la forma en que el usuario interactua con el elemento, el evento `change` dispara en un momento diferente:
 
-<ul>
- <li>Cuando el elemento es <code>:checked</code> (ya sea dando click o usuando el teclado) para elementos <code>&lt;input type="radio"&gt;</code> y <code>&lt;input type="checkbox"&gt;</code>;</li>
- <li>Cuando el usuario confirma el cambio explícitimante (por ejemplo, al seleccionar un valor de un menú desplegable {{HTMLElement("select")}} con un clic del ratón, al seleccionar una fecha de un selector de fecha de un elemento <code>&lt;input type="date"&gt;</code>, al seleccionar un archivo en un selector de archivo por un elemento <code>&lt;input type="file"&gt;</code>, etc.);</li>
- <li>Cuando un elemento pierde el foco después de que su valor haya sido cambiado, pero no confirmado (es decir, despues de editar el valor de un elemento {{HTMLElement("textarea")}} o <code>&lt;input type="text"&gt;</code>).</li>
-</ul>
+- Cuando el elemento es `:checked` (ya sea dando click o usuando el teclado) para elementos `<input type="radio">` y `<input type="checkbox">`;
+- Cuando el usuario confirma el cambio explícitimante (por ejemplo, al seleccionar un valor de un menú desplegable {{HTMLElement("select")}} con un clic del ratón, al seleccionar una fecha de un selector de fecha de un elemento `<input type="date">`, al seleccionar un archivo en un selector de archivo por un elemento `<input type="file">`, etc.);
+- Cuando un elemento pierde el foco después de que su valor haya sido cambiado, pero no confirmado (es decir, despues de editar el valor de un elemento {{HTMLElement("textarea")}} o `<input type="text">`).
 
-<p>La especificaciones HTML listan <a href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">los tipos de <code>&lt;input&gt;</code> que deberían disparar el evento <code>change</code></a>.</p>
+La especificaciones HTML listan [los tipos de `<input>` que deberían disparar el evento `change`](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Ejemplos_Live_Elemento_select">Ejemplos Live: Elemento select</h3>
+### Ejemplos Live: Elemento select
 
-<div class="">
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;label&gt;Elija un sabor de nieve:
-    &lt;select class="nieve" name="nieve"&gt;
-        &lt;option value=""&gt;Seleccione Uno …&lt;/option&gt;
-        &lt;option value="chocolate"&gt;Chocolate&lt;/option&gt;
-        &lt;option value="sardina"&gt;Sardina&lt;/option&gt;
-        &lt;option value="vainilla"&gt;Vainilla&lt;/option&gt;
-    &lt;/select&gt;
-&lt;/label&gt;
+```html
+<label>Elija un sabor de nieve:
+    <select class="nieve" name="nieve">
+        <option value="">Seleccione Uno …</option>
+        <option value="chocolate">Chocolate</option>
+        <option value="sardina">Sardina</option>
+        <option value="vainilla">Vainilla</option>
+    </select>
+</label>
 
-&lt;div class="resultado"&gt;&lt;/div&gt;</pre>
+<div class="resultado"></div>
+```
 
-<div class="hidden">
-<pre class="brush: css">body {
+```css hidden
+body {
   display: grid;
   grid-template-areas: "select  result";
 }
@@ -76,68 +81,59 @@ select {
 .resultado {
   grid-area: result;
 }
+```
 
-</pre>
-</div>
+#### JS
 
-<h4 id="JS">JS</h4>
+```js
+const selectElement = document.querySelector('.nieve');
 
-<pre class="brush: js">const selectElement = document.querySelector('.nieve');
-
-selectElement.addEventListener('change', (event) =&gt; {
+selectElement.addEventListener('change', (event) => {
     const resultado = document.querySelector('.resultado');
     resultado.textContent = `Te gusta el sabor ${event.target.value}`;
 });
-</pre>
-</div>
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{ EmbedLiveSample('select-example', '100%', '75px') }}</p>
+{{ EmbedLiveSample('select-example', '100%', '75px') }}
 
-<h3 id="Elemento_de_entrada_de_texto">Elemento de entrada de texto</h3>
+### Elemento de entrada de texto
 
-<p>Para algunos elementos, incluyendo <code>&lt;input type="text"&gt;</code>, el evento <code>change</code> no se lanza hasta que el campo pierde el foco. Prueba a introducir algo en el campo anterior, y luego pulsa en algún otro lugar para lanzar el evento.</p>
+Para algunos elementos, incluyendo `<input type="text">`, el evento `change` no se lanza hasta que el campo pierde el foco. Prueba a introducir algo en el campo anterior, y luego pulsa en algún otro lugar para lanzar el evento.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">placeholder</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Enter some text<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>name<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>log<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span></code></pre>
+```html
+<input placeholder="Enter some text" name="name"/>
+<p id="log"></p>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> input <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'input'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> log <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'log'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+```js
+const input = document.querySelector('input');
+const log = document.getElementById('log');
 
-input<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'change'</span><span class="punctuation token">,</span> updateValue<span class="punctuation token">)</span><span class="punctuation token">;</span>
+input.addEventListener('change', updateValue);
 
-<span class="keyword token">function</span> <span class="function token">updateValue</span><span class="punctuation token">(</span><span class="parameter token">e</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  log<span class="punctuation token">.</span>textContent <span class="operator token">=</span> e<span class="punctuation token">.</span>target<span class="punctuation token">.</span>value<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+function updateValue(e) {
+  log.textContent = e.target.value;
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Text_input_element', '100%', '75px') }}</p>
+{{ EmbedLiveSample('Text_input_element', '100%', '75px') }}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "indices.html#event-change", "change")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                           | Estado                           |
+| ---------------------------------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('HTML WHATWG', "indices.html#event-change", "change")}} | {{Spec2('HTML WHATWG')}} |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
+{{Compat("api.HTMLElement.change_event")}}
 
-
-<p>{{Compat("api.HTMLElement.change_event")}}</p>
-
-<p>Diferentes navegadores no siempre concuerdan cuando un evento <code>change</code> debería ser disparado para ciertos tipo de interacciones. Por ejemplo, navegación por teclado en en elementos {{HTMLElement("select")}} nunca disparan el evento <code>change</code> en Gecko hasta que el usuario presiona Enter o cambia el foco fuera del <code>&lt;select&gt;</code> (ver {{bug("126379")}}). A partir de Firefox 63 (Quantum), sin embargo, este comportamiento es consistente entre los mayores navegadores.</p>
+Diferentes navegadores no siempre concuerdan cuando un evento `change` debería ser disparado para ciertos tipo de interacciones. Por ejemplo, navegación por teclado en en elementos {{HTMLElement("select")}} nunca disparan el evento `change` en Gecko hasta que el usuario presiona Enter o cambia el foco fuera del `<select>` (ver {{bug("126379")}}). A partir de Firefox 63 (Quantum), sin embargo, este comportamiento es consistente entre los mayores navegadores.

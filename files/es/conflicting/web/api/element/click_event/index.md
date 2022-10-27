@@ -4,33 +4,31 @@ slug: conflicting/Web/API/Element/click_event
 translation_of: Web/API/GlobalEventHandlers/onclick
 original_slug: Web/API/GlobalEventHandlers/onclick
 ---
-<div>
-<div>{{ ApiRef("HTML DOM") }}</div>
-</div>
+{{ ApiRef("HTML DOM") }}
 
+La propiedad **onclick** devuelve el manejador del evento `click` del elemento actual.
 
+> **Nota:** Cuando uses el evento `click` para ejecutar algo, considera agregar la misma acción al evento `keydown`, para permitirle el uso a personas que no usan mouse o pantalla táctil.
 
-<p>La propiedad <strong>onclick</strong> devuelve el manejador del evento <code>click</code> del elemento actual.</p>
+## Sintaxis
 
-<div class="note"><strong>Note:</strong> Cuando uses el evento <code>click</code> para ejecutar algo, considera agregar la misma acción al evento <code>keydown</code>, para permitirle el uso a personas que no usan mouse o pantalla táctil.</div>
+```
+element.onclick = functionRef;
+```
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+Donde _functionRef_ es una función - muchas veces el nombre de la función está declarado ya en otro sitio o como una _expresión de la función_ .Ver "[JavaScript Guide:Functions](/es/docs/JavaScript/Guide/Functions)" para más detalles.
 
-<pre><var>element</var>.onclick = <var>functionRef</var>;
-</pre>
+el único argumento pasado a la función manejador de evento especificamente {{domxref("MouseEvent")}} object. Dentro del manejador, `this` será el elemento sobre él el evento ha sido invocado.
 
-<p>Donde <em>functionRef</em> es una función - muchas veces el nombre de la función está declarado ya en otro sitio o como una <em>expresión de la función</em> .Ver "<a href="/en-US/docs/JavaScript/Guide/Functions">JavaScript Guide:Functions</a>" para más detalles.</p>
+## Ejemplo
 
-<p>el único argumento pasado a la función  manejador de evento especificamente {{domxref("MouseEvent")}} object. Dentro del manejador, <code>this</code> será el elemento sobre él  el evento ha sido invocado.</p>
-
-<h2 id="Example" name="Example">Ejemplo</h2>
-
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;title&gt;onclick event example&lt;/title&gt;
-    &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>onclick event example</title>
+    <script>
       function initElement() {
         var p = document.getElementById("foo");
         // NOTE: showAlert(); or showAlert(param); will NOT work here.
@@ -41,48 +39,38 @@ original_slug: Web/API/GlobalEventHandlers/onclick
       function showAlert(event) {
         alert("onclick Event detected!");
       }
-    &lt;/script&gt;
-    &lt;style&gt;
+    </script>
+    <style>
       #foo {
         border: solid blue 2px;
       }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body onload="initElement();"&gt;
-    &lt;span id="foo"&gt;My Event Element&lt;/span&gt;
-    &lt;p&gt;click on the above element.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </style>
+  </head>
+  <body onload="initElement();">
+    <span id="foo">My Event Element</span>
+    <p>click on the above element.</p>
+  </body>
+</html>
+```
 
-<p>O se puede usar una función anoníma, como esa:</p>
+O se puede usar una función anoníma, como esa:
 
-<pre class="brush:js">p.onclick = function(event) { alert("moot!"); };
-</pre>
+```js
+p.onclick = function(event) { alert("moot!"); };
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>El evento <code>click</code> se genera cuando el usuario hace clic en un elemento. El evento clic ocurrirá después de los eventos <code>mousedown</code> y <code>mouseup</code>.</p>
+El evento `click` se genera cuando el usuario hace clic en un elemento. El evento clic ocurrirá después de los eventos `mousedown` y `mouseup`.
 
-<p>Solo se puede asignar un controlador <code>click</code> a un objeto a la vez con esta propiedad. Puede que prefiera utilizar el método {{domxref ("EventTarget.addEventListener()")}} en su lugar, ya que es más flexible y forma parte de la especificación DOM Events.</p>
+Solo se puede asignar un controlador `click` a un objeto a la vez con esta propiedad. Puede que prefiera utilizar el método {{domxref ("EventTarget.addEventListener()")}} en su lugar, ya que es más flexible y forma parte de la especificación DOM Events.
 
-<h2 id="Specification" name="Specification">Especificación</h2>
+## Especificación
 
-<table class="">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onclick','onclick')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estatus                          | Comentario |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onclick','onclick')}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
+## Compatibilidad de Navegadores
 
 {{Compat("api.GlobalEventHandlers.onclick")}}

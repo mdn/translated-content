@@ -4,35 +4,29 @@ slug: Web/API/HTMLInputElement/select_event
 translation_of: Web/API/GlobalEventHandlers/onselect
 original_slug: Web/API/GlobalEventHandlers/onselect
 ---
-<div>
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}Un manejador de evento para el evento select en la ventana.
 
-<div>Un manejador de evento para el evento select en la ventana.</div>
-</div>
+## Sintaxis
 
-<p> </p>
+```
+window.onselect = funcRef;
+```
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+- `funcRef` es una función
 
-<pre>window.onselect = <em>funcRef</em>;
-</pre>
+## Ejemplo
 
-<ul>
- <li><code>funcRef</code> es una función</li>
-</ul>
+```html
+<html>
+<head>
 
-<h2 id="Example" name="Example">Ejemplo</h2>
+<title>onselect test</title>
 
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
-
-&lt;title&gt;onselect test&lt;/title&gt;
-
-&lt;style type="text/css"&gt;
+<style type="text/css">
 .text1 { border: 2px solid red; }
-&lt;/style&gt;
+</style>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 window.onselect = selectText;
 
@@ -40,36 +34,25 @@ function selectText()
 {
  alert("¡detectado evento select!");
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-&lt;textarea class="text1" cols="30" rows="3"&gt;
+<body>
+<textarea class="text1" cols="30" rows="3">
 Resalte algo de este texto
 con el puntero del ratón
 para disparar el evento onselect.
-&lt;/textarea&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</textarea>
+</body>
+</html>
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>El evento select sólo se genera cuando es seleccionado texto dentro de un control de entrada (INPUT) de tipo text o textarea. El evento es disparado <em>después</em> de que el texto haya sido seleccionado.</p>
+El evento select sólo se genera cuando es seleccionado texto dentro de un control de entrada (INPUT) de tipo text o textarea. El evento es disparado _después_ de que el texto haya sido seleccionado.
 
-<h2 id="Specification" name="Specification">Especificación</h2>
+## Especificación
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">Especifiación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Observaciones</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onselect','onselect')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especifiación                                                                                    | Estado                           | Observaciones |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onselect','onselect')}} | {{Spec2('HTML WHATWG')}} |               |

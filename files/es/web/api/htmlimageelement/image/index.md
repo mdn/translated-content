@@ -3,44 +3,28 @@ title: Image()
 slug: Web/API/HTMLImageElement/Image
 translation_of: Web/API/HTMLImageElement/Image
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<h3 id="Constructor_del_elemento_de_Imagen">Constructor del elemento de Imagen</h3>
+### Constructor del elemento de Imagen
 
-<p><span style="line-height: 1.572;">Acepta dos parametros opcionales: </span><span style="font-family: courier new,andale mono,monospace; line-height: normal;">Image([unsigned long <em><strong>width</strong></em>, unsigned long <em><strong>height</strong></em>]</span><span style="font-family: courier new,andale mono,monospace; line-height: normal;">)</span></p>
+Acepta dos parametros opcionales: Image(\[unsigned long _**width**_, unsigned long _**height**_])
 
-<p>Devuelve un  <a href="/en-US/docs/Web/API/HTMLImageElement" style="line-height: 1.572;" title="en/DOM/HTMLImageElement">HTMLImageElement</a><span style="line-height: 1.572;"> instanciado  justo como</span><span style="line-height: 1.572;"> </span><code style="font-size: 14px;">document.createElement('img')</code><span style="line-height: 1.572;"> would.</span></p>
+Devuelve un [HTMLImageElement](/es/docs/Web/API/HTMLImageElement "en/DOM/HTMLImageElement") instanciado justo como `document.createElement('img')` would.
 
-<p><span style="line-height: 1.572;">Ejemplo:</span></p>
+Ejemplo:
 
-<pre class="brush: js">var myImage = new Image(100, 200);
+```js
+var myImage = new Image(100, 200);
 myImage.src = 'picture.jpg';
-console.log(myImage);</pre>
+console.log(myImage);
+```
 
-<div>Resultado:</div>
+Resultado:
 
-<pre class="brush: html">&lt;img width="100" height="200" src="picture.jpg"&gt;
-</pre>
+```html
+<img width="100" height="200" src="picture.jpg">
+```
 
-<div>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td><a class="external external-icon" href="http://www.w3.org/TR/html5/embedded-content-0.html#dom-image" hreflang="en" lang="en">HTML5<br>
-    <small>La definición del constructor de imagen, en esta especificación.</small></a></td>
-   <td><span class="">Recommendación</span></td>
-   <td>Un constructor (con 2 parametros opcionales) han sido agregados.<br>
-    Las siguientes propiedades ahora son obsoletas: <code>name</code>, <code>border</code>, <code>align</code>, <code>hspace</code>, <code>vspace</code>, and <code>longdesc</code>.<br>
-    The following properties are now <code>unsigned long</code>, instead of <code>long</code>: <code>height</code>, and <code>width</code>.<br>
-    Las siguientes propiedadeas ahora han sido agrgados: <code>crossorigin</code>,</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div> </div>
+| Specification                                                                                                                          | Status         | Comment                                                                                                                                                                                                                                                                                                                                         |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [HTML5 La definición del constructor de imagen, en esta especificación.](http://www.w3.org/TR/html5/embedded-content-0.html#dom-image) | Recommendación | Un constructor (con 2 parametros opcionales) han sido agregados. Las siguientes propiedades ahora son obsoletas: `name`, `border`, `align`, `hspace`, `vspace`, and `longdesc`. The following properties are now `unsigned long`, instead of `long`: `height`, and `width`. Las siguientes propiedadeas ahora han sido agrgados: `crossorigin`, |

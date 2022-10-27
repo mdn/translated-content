@@ -4,35 +4,26 @@ slug: conflicting/Web/API/Element/keydown_event
 translation_of: Web/API/GlobalEventHandlers/onkeydown
 original_slug: Web/API/GlobalEventHandlers/onkeydown
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>La propiedad <code><strong>onkeydown</strong></code> devuelve un manejador para el evento <code>onKeyDown</code> del elemento actual.</p>
+La propiedad **`onkeydown`** devuelve un manejador para el evento `onKeyDown` del elemento actual.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre>element.onkeydown = <var>event handling code</var></pre>
+```
+element.onkeydown = event handling code
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>El evento <code>keydown</code> se lanza cuando el usuario presiona una tecla.</p>
+El evento `keydown` se lanza cuando el usuario presiona una tecla.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onkeydown','onkeydown')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                           | Comment |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onkeydown','onkeydown')}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("api.GlobalEventHandlers.onkeydown")}}

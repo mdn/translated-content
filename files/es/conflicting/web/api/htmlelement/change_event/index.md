@@ -4,43 +4,31 @@ slug: conflicting/Web/API/HTMLElement/change_event
 translation_of: Web/API/GlobalEventHandlers/onchange
 original_slug: Web/API/GlobalEventHandlers/onchange
 ---
-<div>
-<div>{{ ApiRef("HTML DOM") }}</div>
-</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>La propiedad <code>onchange</code> establece y devuelve el <a href="/docs/Web/Guide/Events/Event_handlers" title="/en-US/docs/Web/Guide/DOM/Events/Event_handlers">event handler</a> para el evento {{event("change")}}.</p>
+La propiedad `onchange` establece y devuelve el [event handler](/docs/Web/Guide/Events/Event_handlers "/en-US/docs/Web/Guide/DOM/Events/Event_handlers") para el evento {{event("change")}}.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre><em><var>element</var></em>.onchange = <em>handlerFunction</em>;
-var <em>handlerFunction</em> = <em><var>element</var></em>.onchange;
-</pre>
+```
+element.onchange = handlerFunction;
+var handlerFunction = element.onchange;
+```
 
-<p><code><em>handlerFunction</em></code> debería ser <em>null</em> o una  <a href="/en-US/docs/Web/JavaScript/Reference/Functions" title="/en-US/docs/JavaScript/Reference/Functions_and_function_scope">Función de javascript</a> espeficiando el manejador para el evento.</p>
+`handlerFunction` debería ser _null_ o una [Función de javascript](/es/docs/Web/JavaScript/Reference/Functions "/en-US/docs/JavaScript/Reference/Functions_and_function_scope") espeficiando el manejador para el evento.
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>Mir el la págna <a href="/en-US/docs/Web/Guide/Events/Event_handlers" title="/en-US/docs/Web/Guide/DOM/Events/Event_handlers">Manejadores de eventos DOM</a> para más información sobre cómo trabajar con los manejadore <code>on</code>.</p>
+Mir el la págna [Manejadores de eventos DOM](/es/docs/Web/Guide/Events/Event_handlers "/en-US/docs/Web/Guide/DOM/Events/Event_handlers") para más información sobre cómo trabajar con los manejadore `on`.
 
-<p>Mira la documentación para el evento {{event("change")}}.</p>
+Mira la documentación para el evento {{event("change")}}.
 
-<h2 id="Specification" name="Specification">Especificaciones</h2>
+## Especificaciones
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onchange','onchange')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estatus                          | Comentario |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onchange','onchange')}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("api.GlobalEventHandlers.onchange")}}

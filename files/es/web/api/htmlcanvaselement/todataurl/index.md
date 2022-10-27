@@ -10,74 +10,73 @@ tags:
   - metodo
 translation_of: Web/API/HTMLCanvasElement/toDataURL
 ---
-<div>
-<div>
-<div>{{APIRef("Canvas API")}}</div>
-</div>
-</div>
+{{APIRef("Canvas API")}}
 
-<p>El método <strong><code>HTMLCanvasElement.toDataURL()</code></strong> devuelve un <a href="/en-US/docs/Web/HTTP/data_URIs">data URI</a> el cual contiene una representación de la imagen en el formato especificado por el parámetro <code>type</code> (por defecto es <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>). La imagen obtenida tendrá una resolución de 96 dpi.</p>
+El método **`HTMLCanvasElement.toDataURL()`** devuelve un [data URI](/es/docs/Web/HTTP/data_URIs) el cual contiene una representación de la imagen en el formato especificado por el parámetro `type` (por defecto es [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). La imagen obtenida tendrá una resolución de 96 dpi.
 
-<ul>
- <li>Si la altura o anchura del canvas es <code>0</code>, devuelve un string con <code>"data:,"</code></li>
- <li>Si el tipo solicitado no es <code>image/png</code> pero el valor devuelto empieza por <code>data:image/png</code>, entonces el formato especificado no esta soportado.</li>
- <li>Chrome también soporta el tipo <code>image/webp</code>.</li>
-</ul>
+- Si la altura o anchura del canvas es `0`, devuelve un string con `"data:,"`
+- Si el tipo solicitado no es `image/png` pero el valor devuelto empieza por `data:image/png`, entonces el formato especificado no esta soportado.
+- Chrome también soporta el tipo `image/webp`.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre><var><em>canvas</em>.toDataURL(<em>tipo</em>, <em>opcionesCodificación</em>);</var>
-</pre>
+```
+canvas.toDataURL(tipo, opcionesCodificación);
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>tipo</code>{{optional_inline}}</dt>
- <dd>Un {{domxref("DOMString")}} indicando el formato de la imagen. El tipo por defecto es <code>image/png</code>.</dd>
- <dt><code>opcionesCodificación</code>{{optional_inline}}</dt>
- <dd>Un {{jsxref("Number")}} entre <code>0</code> y <code>1</code> indicando la calidad de la imagen si el tipo solicitado es <code>image/jpeg</code> o <code>image/webp</code>.<br>
- Si este argumento es cualquier otra cosa, se usa el valor por defecto de la imagen. El valor por defecto es <code>0.92</code>. Otros argumentos se ignoran.</dd>
-</dl>
+- `tipo`{{optional_inline}}
+  - : Un {{domxref("DOMString")}} indicando el formato de la imagen. El tipo por defecto es `image/png`.
+- `opcionesCodificación`{{optional_inline}}
+  - : Un {{jsxref("Number")}} entre `0` y `1` indicando la calidad de la imagen si el tipo solicitado es `image/jpeg` o `image/webp`.
+    Si este argumento es cualquier otra cosa, se usa el valor por defecto de la imagen. El valor por defecto es `0.92`. Otros argumentos se ignoran.
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>Un {{domxref("DOMString")}} que contiene el valor <a href="/en-US/docs/Web/HTTP/data_URIs">data URI</a>.</p>
+Un {{domxref("DOMString")}} que contiene el valor [data URI](/es/docs/Web/HTTP/data_URIs).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Dado un elemento {{HTMLElement("canvas")}}:</p>
+Dado un elemento {{HTMLElement("canvas")}}:
 
-<pre class="brush: html">&lt;canvas id="canvas" width="5" height="5"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="5" height="5"></canvas>
+```
 
-<p>Puedes obtener el data-URL del canvas con las siguientes líneas:</p>
+Puedes obtener el data-URL del canvas con las siguientes líneas:
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var dataURL = canvas.toDataURL();
 console.log(dataURL);
 // "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNby
 // blAAAADElEQVQImWNgoBMAAABpAAFEI8ARAAAAAElFTkSuQmCC"
-</pre>
+```
 
-<h3 id="Establecer_la_calidad_de_imagen_con_jpegs">Establecer la calidad de imagen con jpegs</h3>
+### Establecer la calidad de imagen con jpegs
 
-<pre class="brush: js">var fullQuality = canvas.toDataURL('image/jpeg', 1.0);
+```js
+var fullQuality = canvas.toDataURL('image/jpeg', 1.0);
 // "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...9oADAMBAAIRAxEAPwD/AD/6AP/Z"
 var mediumQuality = canvas.toDataURL('image/jpeg', 0.5);
 var lowQuality = canvas.toDataURL('image/jpeg', 0.1);
-</pre>
+```
 
-<h3 id="Example:_Dynamically_change_images" name="Example:_Dynamically_change_images">Ejemplo: Cambiar imágenes dinámicamente</h3>
+### Ejemplo: Cambiar imágenes dinámicamente
 
-<p>Se puede usar esta técnica junto con los eventos del mouse para cambiar las imágenes de manera dinámica (escala de grises versus color en este ejemplo):</p>
+Se puede usar esta técnica junto con los eventos del mouse para cambiar las imágenes de manera dinámica (escala de grises versus color en este ejemplo):
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;img class="grayscale" src="myPicture.png" alt="Description of my picture" /&gt;</pre>
+```html
+<img class="grayscale" src="myPicture.png" alt="Description of my picture" />
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="">window.addEventListener('load', quitarColor);
+```
+window.addEventListener('load', quitarColor);
 
 function verImgEnColor() {
   this.style.display = 'none';
@@ -94,7 +93,7 @@ function quitarColor() {
       nImgsLen = aImages.length,
       oCanvas = document.createElement('canvas'),
       oCtx = oCanvas.getContext('2d');
-  for (var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId &lt; nImgsLen; nImgId++) {
+  for (var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId < nImgsLen; nImgId++) {
     var oColorImg = aImages[nImgId];
     nWidth = oColorImg.offsetWidth;
     nHeight = oColorImg.offsetHeight;
@@ -104,7 +103,7 @@ function quitarColor() {
     oImgData = oCtx.getImageData(0, 0, nWidth, nHeight);
     aPix = oImgData.data;
     nPixLen = aPix.length;
-    for (nPixel = 0; nPixel &lt; nPixLen; nPixel += 4) {
+    for (nPixel = 0; nPixel < nPixLen; nPixel += 4) {
       aPix[nPixel + 2] = aPix[nPixel + 1] = aPix[nPixel] = (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
     }
     oCtx.putImageData(oImgData, 0, 0);
@@ -116,44 +115,22 @@ function quitarColor() {
     oColorImg.style.display = "none";
     oColorImg.parentNode.insertBefore(oGrayImg, oColorImg);
   }
-}</pre>
+}
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Sin cambios desde el último snapshot, {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "scripting-1.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot del {{SpecName('HTML WHATWG')}} con la definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                   | Estado                           | Comentarios                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}} | {{Spec2('HTML WHATWG')}} | Sin cambios desde el último snapshot, {{SpecName('HTML5 W3C')}}       |
+| {{SpecName('HTML5.1', "scripting-1.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}} | {{Spec2('HTML5.1')}}     |                                                                              |
+| {{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}} | {{Spec2('HTML5 W3C')}}     | Snapshot del {{SpecName('HTML WHATWG')}} con la definición inicial. |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
+{{Compat("api.HTMLCanvasElement.toDataURL")}}
 
+## Ver también
 
-<p>{{Compat("api.HTMLCanvasElement.toDataURL")}}</p>
-
-<h2 id="See_Also" name="See_Also">Ver también</h2>
-
-<ul>
- <li>La interfaz que lo define, {{domxref("HTMLCanvasElement")}}.</li>
- <li><a href="/en-US/docs/Web/HTTP/data_URIs">Data URIs</a> en la referencía <a href="/en-US/docs/Web/HTTP">HTTP</a>.</li>
-</ul>
+- La interfaz que lo define, {{domxref("HTMLCanvasElement")}}.
+- [Data URIs](/es/docs/Web/HTTP/data_URIs) en la referencía [HTTP](/es/docs/Web/HTTP).

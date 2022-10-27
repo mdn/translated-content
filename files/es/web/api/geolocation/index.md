@@ -3,62 +3,42 @@ title: Geolocalización
 slug: Web/API/Geolocation
 translation_of: Web/API/Geolocation
 ---
-<div>{{APIRef("Geolocation API")}}</div>
+{{APIRef("Geolocation API")}}
 
-<p><span id="result_box" lang="es"><span class="hps">La interfaz</span> <strong><span class="hps">Geolocalización</span></strong> <span class="hps">representa</span> <span class="hps">un objeto</span> <span class="hps">capaz de</span> <span class="hps">obtener</span> <span class="hps">mediante programación</span> <span class="hps">la posición</span> <span class="hps">del dispositivo</span><span>.</span> <span class="hps">Se</span> <span class="hps">da</span> <span class="hps">acceso Web</span> de <span class="hps">la ubicación</span> <span class="hps">del dispositivo</span><span>.</span> <span class="hps">Esto</span> <span class="hps">permite a un sitio</span> <span class="hps">Web</span> <span class="hps">o aplicación</span> <span class="hps">ofrecer</span> <span class="hps">resultados personalizados</span> <span class="hps">basados ​​en</span> <span class="hps">la ubicación del usuario</span><span>.</span></span></p>
+La interfaz **Geolocalización** representa un objeto capaz de obtener mediante programación la posición del dispositivo. Se da acceso Web de la ubicación del dispositivo. Esto permite a un sitio Web o aplicación ofrecer resultados personalizados basados ​​en la ubicación del usuario.
 
-<p><span id="result_box" lang="es"><span class="hps">Se obtiene un</span> <span class="hps">objeto con</span> <span class="hps">esta interfaz</span> <span class="hps">mediante la propiedad </span></span>{{domxref("NavigatorGeolocation.geolocation")}} <span lang="es"><span class="hps">implementado</span> <span class="hps">por el objeto</span> <span class="hps">{{domxref("Navigator")}}.</span></span></p>
+Se obtiene un objeto con esta interfaz mediante la propiedad {{domxref("NavigatorGeolocation.geolocation")}} implementado por el objeto {{domxref("Navigator")}}.
 
-<div class="note">
-<p><strong>Nota:</strong> <span id="result_box" lang="es"><span class="hps">Por razones de seguridad</span><span>,</span> <span class="hps">cuando una página</span> <span class="hps">web</span> <span class="hps">intenta obtener acceso a</span> <span class="hps">la información de ubicación</span><span>,</span> <span class="hps">se notifica al usuario</span> <span class="hps">y le pide </span><span class="hps">conceder el permiso</span><span>.</span> <span class="hps">Tenga en cuenta que</span> <span class="hps">cada navegador</span> <span class="hps">tiene sus</span> <span class="hps">propias políticas y</span> <span class="hps">métodos para solicitar</span> <span class="hps">este permiso.</span></span></p>
-</div>
+> **Nota:** Por razones de seguridad, cuando una página web intenta obtener acceso a la información de ubicación, se notifica al usuario y le pide conceder el permiso. Tenga en cuenta que cada navegador tiene sus propias políticas y métodos para solicitar este permiso.
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<p><span id="result_box" lang="es"><span class="hps">La</span> <span class="hps">interfaz de</span> <span class="hps">Geolocalización</span> no implementa<span> ni</span> <span class="hps">hereda</span> <span class="hps">propiedades</span><span>.</span></span></p>
+La interfaz de Geolocalización no implementa ni hereda propiedades.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em><span id="result_box" lang="es"><span class="hps">La interfaz</span> <code><span class="hps">Geolocation</span></code> <span class="hps">no hereda</span> <span class="hps">ningún método.</span></span></em></p>
+_La interfaz `Geolocation` no hereda ningún método._
 
-<dl>
- <dt><a href="/es/docs/Web/API/Geolocation.getCurrentPosition">Geolocation.getCurrentPosition()</a></dt>
- <dd><span id="result_box" lang="es"><span class="hps">Determina</span> <span class="hps">la ubicación actual del</span> <span class="hps">dispositivo y</span> <span class="hps">devuelve</span> <span class="hps">un objeto</span> <span class="hps">de posición({{domxref("Position")}}) con</span> <span class="hps">los datos.</span></span></dd>
-</dl>
-<a href="/es/docs/Web/API/Geolocation.watchPosition">Geolocation.watchPosition()</a>
+- [Geolocation.getCurrentPosition()](/es/docs/Web/API/Geolocation.getCurrentPosition)
+  - : Determina la ubicación actual del dispositivo y devuelve un objeto de posición({{domxref("Position")}}) con los datos.
 
-<p><span id="result_box" lang="es"><span class="hps">Devuelve un</span> <span class="hps">valor de largo(<code>long</code>)</span> <span class="hps">que representa la función</span> <span class="hps">de devolución de llamada</span> <span class="hps">de reciente creación</span> <span class="hps">que se invoca</span> <span class="hps">cada vez que cambia</span> <span class="hps">la ubicación del dispositivo</span><span>.</span></span></p>
+[Geolocation.watchPosition()](/es/docs/Web/API/Geolocation.watchPosition)
 
-<dl>
- <dt><a href="/es/docs/Web/API/Geolocation.clearWatch">Geolocation.clearWatch()</a></dt>
- <dd><span id="result_box" lang="es"><span class="hps">Elimina el controlador</span> <span class="hps">especial</span> <span class="hps">instalado</span> <span class="hps">previamente utilizando</span></span> <a href="/es/docs/Web/API/Geolocation.watchPosition"><code>watchPosition()</code></a>.</dd>
-</dl>
+Devuelve un valor de largo(`long`) que representa la función de devolución de llamada de reciente creación que se invoca cada vez que cambia la ubicación del dispositivo.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+- [Geolocation.clearWatch()](/es/docs/Web/API/Geolocation.clearWatch)
+  - : Elimina el controlador especial instalado previamente utilizando [`watchPosition()`](/es/docs/Web/API/Geolocation.watchPosition).
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>Especificación inicial</td>
-  </tr>
- </tbody>
-</table>
+## Especificaciones
 
-<h2 id="Compatibilidad_en_navegador">Compatibilidad en navegador</h2>
+| Especificación                       | Estado                           | Comentario             |
+| ------------------------------------ | -------------------------------- | ---------------------- |
+| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Especificación inicial |
+
+## Compatibilidad en navegador
 
 {{Compat("api.Geolocation")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/es/docs/Usar_la_Geolocalizaci%C3%B3n">Usar la geolocalización</a></li>
-</ul>
+- [Usar la geolocalización](/es/docs/Usar_la_Geolocalizaci%C3%B3n)

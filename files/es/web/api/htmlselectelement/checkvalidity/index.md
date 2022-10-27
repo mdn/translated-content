@@ -10,42 +10,27 @@ tags:
   - metodo
 translation_of: Web/API/HTMLSelectElement/checkValidity
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>El método <code><strong>HTMLSelectElement.checkValidity()</strong></code> comprueba si el elemento tiene restricciones y si las cumple. Si el elemento no cumple sus restricciones, el navegador lanza un evento cancelable {{event("invalid")}} al momento y luego devuelve <code>false</code>.</p>
+El método **`HTMLSelectElement.checkValidity()`** comprueba si el elemento tiene restricciones y si las cumple. Si el elemento no cumple sus restricciones, el navegador lanza un evento cancelable {{event("invalid")}} al momento y luego devuelve `false`.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class=""><code class="language-html">var <em>result</em> = <em>selectElt</em>.checkValidity();</code></pre>
+```html
+var result = selectElt.checkValidity();
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-cva-checkvalidity', 'HTMLSelectElement.checkValidity()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Sin cambios desde el último snapshot, {{SpecName('HTML5 W3C')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#dom-cva-checkvalidity', 'HTMLSelectElement.checkValidity()')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Definición inicial, snapshot de {{SpecName('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                       | Estado                           | Comentario                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#dom-cva-checkvalidity', 'HTMLSelectElement.checkValidity()')}}             | {{Spec2('HTML WHATWG')}} | Sin cambios desde el último snapshot, {{SpecName('HTML5 W3C')}}. |
+| {{SpecName('HTML5 W3C', 'forms.html#dom-cva-checkvalidity', 'HTMLSelectElement.checkValidity()')}} | {{Spec2('HTML5 W3C')}}     | Definición inicial, snapshot de {{SpecName('HTML WHATWG')}}    |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
-<p>{{Compat("api.HTMLSelectElement.checkValidity")}}</p>
+{{Compat("api.HTMLSelectElement.checkValidity")}}
 
-<h2 id="Ver también" name="Ver también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/es/docs/HTML/HTML5/Validacion_de_restricciones">Validación de restricciones.</a></li>
-</ul>
+- [Validación de restricciones.](/es/docs/HTML/HTML5/Validacion_de_restricciones)

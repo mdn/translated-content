@@ -6,46 +6,57 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onload
 original_slug: Web/API/GlobalEventHandlers/onload
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="Summary" name="Summary">Sumario</h3>
-<p>Un evento tipo handler para el evento <code>load</code> event de el {{ domxref("window") }}.</p>
-<h3 id="Syntax" name="Syntax">Syntax</h3>
-<pre class="eval">window.onload = <em>funcRef</em>;
-</pre>
-<ul>
- <li><code>funcRef</code> es la función tipo handler function a ser llamada cuando el evento <code>load</code>  de window se dispara.</li>
-</ul>
-<h3 id="Example" name="Example">Ejemplos</h3>
-<pre class="brush: js">window.onload = function() {
+{{ ApiRef() }}
+
+### Sumario
+
+Un evento tipo handler para el evento `load` event de el {{ domxref("window") }}.
+
+### Syntax
+
+```
+window.onload = funcRef;
+```
+
+- `funcRef` es la función tipo handler function a ser llamada cuando el evento `load` de window se dispara.
+
+### Ejemplos
+
+```js
+window.onload = function() {
   init();
   doSomethingElse();
 };
-</pre>
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Ejemplo Onload&lt;/title&gt;
-    &lt;script&gt;
+```
+
+```html
+<!doctype html>
+<html>
+  <head>
+    <title>Ejemplo Onload</title>
+    <script>
       function load() {
         alert("evento load detectado!");
       }
       window.onload = load;
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;El Evento load se dispara cuando el documento ha terminado de cargarse!&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<h3 id="Notes" name="Notes">Notas</h3>
-<p>El evento <code>load</code> dispara el evento al final del proceso de carga del documento. En este punto, todos los objetos del documento son DOM,  y todas las imágenes y sub-frames han terminado de cargarse.</p>
-<p>Existen también los  <a href="/en/Gecko-Specific_DOM_Events" title="en/Gecko-Specific_DOM_Events">Eventos DOM Específicos</a> como <code>DOMContentLoaded</code> y <code>DOMFrameContentLoaded</code> (los cuales pueden ser manejados usando {{ domxref("element.addEventListener()") }}) y son ejecutados despues de que el DOM de la página ha sido construido, pero no esperear a que otros recursos terminen de cargar.</p>
-<h3 id="Specification" name="Specification">Especificación</h3>
-<p>Este evento tipo handler se encuentra especificado en <a class="external" href="http://www.whatwg.org/html/#handler-window-onload">HTML</a>.</p>
-<h3 id="Ver_También">Ver También</h3>
-<ul>
- <li>
-  <div>
-   Evento <code>DOMContentLoaded</code> en <a href="/En/Listening_to_events#Simple_DOM.c2.a0events" title="En/Listening to events#Simple DOM.c2.a0events">Escuchando los Evento:Eventos DOM Simples</a></div>
- </li>
-</ul>
+    </script>
+  </head>
+  <body>
+    <p>El Evento load se dispara cuando el documento ha terminado de cargarse!</p>
+  </body>
+</html>
+```
+
+### Notas
+
+El evento `load` dispara el evento al final del proceso de carga del documento. En este punto, todos los objetos del documento son DOM, y todas las imágenes y sub-frames han terminado de cargarse.
+
+Existen también los [Eventos DOM Específicos](/en/Gecko-Specific_DOM_Events "en/Gecko-Specific_DOM_Events") como `DOMContentLoaded` y `DOMFrameContentLoaded` (los cuales pueden ser manejados usando {{ domxref("element.addEventListener()") }}) y son ejecutados despues de que el DOM de la página ha sido construido, pero no esperear a que otros recursos terminen de cargar.
+
+### Especificación
+
+Este evento tipo handler se encuentra especificado en [HTML](http://www.whatwg.org/html/#handler-window-onload).
+
+### Ver También
+
+- Evento `DOMContentLoaded` en [Escuchando los Evento:Eventos DOM Simples](/En/Listening_to_events#Simple_DOM.c2.a0events "En/Listening to events#Simple DOM.c2.a0events")

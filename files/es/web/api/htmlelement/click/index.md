@@ -7,80 +7,28 @@ tags:
   - metodo
 translation_of: Web/API/HTMLElement/click
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p>El método <code><strong>HTMLElement.click()</strong></code> simula el click de un ratón físico en un elemento HTML.</p>
+El método **`HTMLElement.click()`** simula el click de un ratón físico en un elemento HTML.
 
-<p>Cuando <code>click()</code> se usa en un elemento que soporte este método (como un elemento {{HTMLElement("input")}}), el elemento lanza el evento asociado al click. Luego, este evento iniciará otros eventos asociados al clicado en elementos más altos en la jerarquía del documento html (o de la cadena de eventos).</p>
+Cuando `click()` se usa en un elemento que soporte este método (como un elemento {{HTMLElement("input")}}), el elemento lanza el evento asociado al click. Luego, este evento iniciará otros eventos asociados al clicado en elementos más altos en la jerarquía del documento html (o de la cadena de eventos).
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre><em>elemento</em>.click()</pre>
+```
+elemento.click()
+```
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-2651361')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                   | Estado                       | Comentario          |
+| ---------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('DOM2 HTML', 'html.html#ID-2651361')}} | {{Spec2('DOM2 HTML')}} | Definición inicial. |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
-<p>{{Compat("api.HTMLElement.click")}}</p>
+{{Compat("api.HTMLElement.click")}}
 
+### Traducción en Español:
 
-<h3 id="Traducción_en_Español">Traducción en Español:</h3>
-
-
-
-<article class="">
-<div class=""><a href="https://developer.mozilla.org/es/docs/MDN/Community">¿Necesitas ayuda?</a> • <a href="https://developer.mozilla.org/es/docs/MDN/Contribute/Editor">Guía editorial</a> • <a href="https://developer.mozilla.org/es/docs/MDN/Contribute/Content/Style_guide">Guía de estilo</a></div>
-
-<div class="" id="editor-wrapper">
-<div class="">
-<div class=""> </div>
-
-<div class=""><span id="draft-action">Borrador autoguardado: 26/5/2018 21:51:54</span></div>
-</div>
-
-<div class="">
-<div class="">
-<div class=""> </div>
-
-<div style="height: 173px;">
-<div style="border: 1px solid rgb(182, 182, 182); width: 617px; position: fixed; top: 0px;"> </div>
-</div>
-</div>
-</div>
-</div>
-</article>
-
-<article class="">
-<div class="" id="editor-wrapper">
-<div class="">
-<div class="">
-<div class="" dir="ltr" id="cke_id_content" lang="es">
-<div>
-<div id="cke_1_contents" style="height: 947px;"> </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</article>
-
-<p> </p>
+[¿Necesitas ayuda?](/es/docs/MDN/Community) • [Guía editorial](/es/docs/MDN/Contribute/Editor) • [Guía de estilo](/es/docs/MDN/Contribute/Content/Style_guide)Borrador autoguardado: 26/5/2018 21:51:54

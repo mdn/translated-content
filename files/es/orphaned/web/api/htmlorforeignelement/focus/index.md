@@ -10,155 +10,123 @@ tags:
 translation_of: Web/API/HTMLOrForeignElement/focus
 original_slug: Web/API/HTMLOrForeignElement/focus
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>El método <code><strong>HTMLElement.focus()</strong></code> fija el foco del cursor en el elemento indicado, si éste puede ser enfocado.</p>
+El método **`HTMLElement.focus()`** fija el foco del cursor en el elemento indicado, si éste puede ser enfocado.
 
-<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre>element.focus();
-element.focus(focusOption); // Object parameter</pre>
+```
+element.focus();
+element.focus(focusOption); // Object parameter
+```
 
-<h3 id="Parámetros" name="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>focusOptions</code> {{optional_inline}} {{experimental_inline}}</dt>
- <dd>Es un objeto con la siguiente propiedad:
- <dl>
-  <dt><code>preventScroll</code> {{optional_inline}}</dt>
-  <dd>Es un valor <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a>:
-  <ul>
-   <li>Si es <code>false</code>, el método hará scroll hasta que el elemento esté visible en la ventana del navegador</li>
-   <li>Si es <code>true</code>,  el método NO hará scroll hasta que el elemento esté visible en la ventana del navegador.</li>
-  </ul>
-  </dd>
- </dl>
- </dd>
-</dl>
+- `focusOptions` {{optional_inline}} {{experimental_inline}}
 
-<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
+  - : Es un objeto con la siguiente propiedad:
 
-<h3 id="Enfocar_un_campo_de_texto" name="Enfocar_un_campo_de_texto">Enfocar un campo de texto</h3>
+    - `preventScroll` {{optional_inline}}
 
-<h4 id="JavaScript">JavaScript</h4>
+      - : Es un valor [`Boolean`](/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean "The Boolean object is an object wrapper for a boolean value."):
 
-<pre class="brush: js">focusMethod = function getFocus() {
+        - Si es `false`, el método hará scroll hasta que el elemento esté visible en la ventana del navegador
+        - Si es `true`, el método NO hará scroll hasta que el elemento esté visible en la ventana del navegador.
+
+## Ejemplos
+
+### Enfocar un campo de texto
+
+#### JavaScript
+
+```js
+focusMethod = function getFocus() {
   document.getElementById("myTextField").focus();
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input type="text" id="myTextField" value="Campo de texto."&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;button type="button" onclick="focusMethod()"&gt;¡Púlsame para enfocar el campo de texto!&lt;/button&gt;
-</pre>
+```html
+<input type="text" id="myTextField" value="Campo de texto.">
+<p></p>
+<button type="button" onclick="focusMethod()">¡Púlsame para enfocar el campo de texto!</button>
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{ EmbedLiveSample('Focus_on_a_text_field') }}</p>
+{{ EmbedLiveSample('Focus_on_a_text_field') }}
 
-<h3 id="Enfocar_un_botón" name="Enfocar_un_botón">Enfocar un botón</h3>
+### Enfocar un botón
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">focusMethod = function getFocus() {
+```js
+focusMethod = function getFocus() {
   document.getElementById("myButton").focus();
 }
-</pre>
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;button type="button" id="myButton"&gt;Púlsame!&lt;/button&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;button type="button" onclick="focusMethod()"&gt;¡Púlsame para enfocar el botón!&lt;/button&gt;
-</pre>
+```html
+<button type="button" id="myButton">Púlsame!</button>
+<p></p>
+<button type="button" onclick="focusMethod()">¡Púlsame para enfocar el botón!</button>
+```
 
-<h4 id="Resultado_2">Resultado</h4>
+#### Resultado
 
-<p>{{ EmbedLiveSample('Focus_on_a_button') }}</p>
+{{ EmbedLiveSample('Focus_on_a_button') }}
 
+### Enfocar con focusOption
 
+#### JavaScript
 
-<h3 id="Enfocar_con_focusOption" name="Enfocar_con_focusOption">Enfocar con focusOption</h3>
-
-<h4 id="JavaScript_3">JavaScript</h4>
-
-<pre class="brush: js">focusScrollMethod = function getFocus() {
+```js
+focusScrollMethod = function getFocus() {
   document.getElementById("myButton").focus({preventScroll:false});
 }
 focusNoScrollMethod = function getFocusWithoutScrolling() {
   document.getElementById("myButton").focus({preventScroll:true});
 }
+```
 
-</pre>
+#### HTML
 
-<h4 id="HTML_3">HTML</h4>
+```html
+<button type="button" onclick="focusScrollMethod()">¡Púlsame para enfocar el botón!</button>
+<button type="button" onclick="focusNoScrollMethod()">¡Púlsame para enfocar el botón sin hacer scroll!</button>
 
-<pre class="brush: html">&lt;button type="button" onclick="focusScrollMethod()"&gt;¡Púlsame para enfocar el botón!&lt;/button&gt;
-&lt;button type="button" onclick="focusNoScrollMethod()"&gt;¡Púlsame para enfocar el botón sin hacer scroll!&lt;/button&gt;
+<div id="container" style="height: 1000px; width: 1000px;">
+<button type="button" id="myButton" style="margin-top: 500px;">¡Púlsame!</button>
+</div>
+```
 
-&lt;div id="container" style="height: 1000px; width: 1000px;"&gt;
-&lt;button type="button" id="myButton" style="margin-top: 500px;"&gt;¡Púlsame!&lt;/button&gt;
-&lt;/div&gt;
+#### Resultado
 
-</pre>
+{{ EmbedLiveSample('Focus_prevent_scroll') }}
 
-<h4 id="Resultado_3">Resultado</h4>
+## Especificación
 
-<p>{{ EmbedLiveSample('Focus_prevent_scroll') }}</p>
+| Especificación                                                                           | Estado                           | Comentarios |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', 'editing.html#dom-focus', 'focus')}}     | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML5.1', 'editing.html#focus()-0', 'focus')}}             | {{Spec2('HTML5.1')}}     |             |
+| {{SpecName('HTML5 W3C', 'editing.html#dom-focus', 'focus')}}         | {{Spec2('HTML5 W3C')}}     |             |
+| {{SpecName('DOM2 HTML', 'html.html#ID-32130014', 'focus')}}         | {{Spec2('DOM2 HTML')}}     |             |
+| {{SpecName('DOM1', 'level-one-html.html#method-focus', 'focus')}} | {{Spec2('DOM1')}}         |             |
 
-<h2 id="Especificación" name="Especificación">Especificación</h2>
+## Notas
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'editing.html#dom-focus', 'focus')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#focus()-0', 'focus')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'editing.html#dom-focus', 'focus')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-32130014', 'focus')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#method-focus', 'focus')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+Si se llama a `HTMLElement.focus()` desde un gestor de eventos "mousedown" (ratón presionado), se debe también llamar al método `event.preventDefault()` para evitar que el foco abandone `HTMLElement`**.**
 
-<h2 id="Notas">Notas</h2>
+## Compatibilidad en navegadores
 
-<p>Si se llama a <code>HTMLElement.focus()</code> desde un gestor de eventos "mousedown" (ratón presionado), se debe también llamar al método <code>event.preventDefault()</code> para evitar que el foco abandone <code>HTMLElement</code><strong>.</strong></p>
+{{Compat("api.HTMLElement.focus")}}
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Ver también
 
-
-
-<p>{{Compat("api.HTMLElement.focus")}}</p>
-
-<h2 id="Ver_también" name="Ver_también">Ver también</h2>
-
-<ul>
- <li>Método DOM {{domxref("HTMLElement.blur()")}} para quitar el foco sobre un elemento.</li>
- <li>{{ domxref("document.activeElement") }} para saber cuál es el elemento enfocado actualmente.</li>
-</ul>
+- Método DOM {{domxref("HTMLElement.blur()")}} para quitar el foco sobre un elemento.
+- {{ domxref("document.activeElement") }} para saber cuál es el elemento enfocado actualmente.

@@ -4,42 +4,33 @@ slug: conflicting/Web/API/Element/keyup_event
 translation_of: Web/API/GlobalEventHandlers/onkeyup
 original_slug: Web/API/GlobalEventHandlers/onkeyup
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>La propiedad <strong>onkeyup</strong> devuelve un manejador para el evento onKeyUp del elemento actual.</p>
+La propiedad **onkeyup** devuelve un manejador para el evento onKeyUp del elemento actual.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre>element.onkeyup = <em>event handling code</em>
-</pre>
+```
+element.onkeyup = event handling code
+```
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: js"> &lt;input type="text" onKeyUp="keyWasPressed(event)"&gt;
- &lt;script&gt;function keyWasPressed(evt){ console.log(evt.keyCode) }&lt;/script&gt;
-</pre>
+```js
+ <input type="text" onKeyUp="keyWasPressed(event)">
+ <script>function keyWasPressed(evt){ console.log(evt.keyCode) }</script>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>El evento keyup se lanza cuando el usuario suelta la tecla que ha sido presionada.</p>
+El evento keyup se lanza cuando el usuario suelta la tecla que ha sido presionada.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onkeyup','onkeyup')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onkeyup','onkeyup')}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("api.GlobalEventHandlers.onkeyup")}}

@@ -11,74 +11,64 @@ tags:
   - Web
 translation_of: Web/API/File/webkitRelativePath
 ---
-<p>{{APIRef("File API")}}{{non-standard_header}}</p>
+{{APIRef("File API")}}{{non-standard_header}}
 
-<p>La propiedad <code><strong>File.webkitRelativePath</strong></code> de solo lectura contiene un {{domxref("USVString")}} el cual especifica la ruta relativa del archivo al directorio seleccionado por el usuario en un elemento {{HTMLElement("input")}} con su {{htmlattrxref("webkitdirectory", "input")}} atributo definido.</p>
+La propiedad **`File.webkitRelativePath`** de solo lectura contiene un {{domxref("USVString")}} el cual especifica la ruta relativa del archivo al directorio seleccionado por el usuario en un elemento {{HTMLElement("input")}} con su {{htmlattrxref("webkitdirectory", "input")}} atributo definido.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: js"><em>var rulaRelativa = File</em>.webkitRelativePath</pre>
+```js
+var rulaRelativa = File.webkitRelativePath
+```
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Un {{domxref("USVString")}} conteniendo la ruta del archivo relativa al directorio padre seleccionado por el usuario.</p>
+Un {{domxref("USVString")}} conteniendo la ruta del archivo relativa al directorio padre seleccionado por el usuario.
 
-<h2 id="Example" name="Example">Ejemplo</h2>
+## Ejemplo
 
-<p>En este ejemplo,un seleccionador de directorios es mostrado al usuario para permitirle seleccionar uno o mas directorios. Cuando el evento {{event("change")}} ocurre, una lista de todos los archivos contenidos dentro de la gerarquia de directorio seleccionado es generado y mostrado.</p>
+En este ejemplo,un seleccionador de directorios es mostrado al usuario para permitirle seleccionar uno o mas directorios. Cuando el evento {{event("change")}} ocurre, una lista de todos los archivos contenidos dentro de la gerarquia de directorio seleccionado es generado y mostrado.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input type="file" id="filepicker" name="fileList" webkitdirectory multiple /&gt;
-&lt;ul id="listing"&gt;&lt;/ul&gt;</pre>
+```html
+<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
+<ul id="listing"></ul>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.getElementById("filepicker").addEventListener("change", function(event) {
+```js
+document.getElementById("filepicker").addEventListener("change", function(event) {
   let output = document.getElementById("listing");
   let files = event.target.files;
 
-  for (let i=0; i&lt;files.length; i++) {
+  for (let i=0; i<files.length; i++) {
     let item = document.createElement("li");
     item.innerHTML = files[i].webkitRelativePath;
     output.appendChild(item);
   };
 }, false);
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificacion</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('File System API', '#dom-file-webkitrelativepath', 'webkitRelativePath') }}</td>
-   <td>{{ Spec2('File System API') }}</td>
-   <td>Especificacion inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificacion                                                                                                       | Estado                                   | Comentario              |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------- |
+| {{ SpecName('File System API', '#dom-file-webkitrelativepath', 'webkitRelativePath') }} | {{ Spec2('File System API') }} | Especificacion inicial. |
 
-<p>Esta API no tiene especificacion W3C o WHATWG.</p>
+Esta API no tiene especificacion W3C o WHATWG.
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("api.File.webkitRelativePath")}}
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li><a href="/es/docs/Web/API/File_and_Directory_Entries_API">Entidades "Archivo" y "Directorio" en la API</a></li>
- <li>{{domxref("HTMLInputElement.webkitEntries")}}</li>
- <li>{{domxref("HTMLInputElement.webkitdirectory")}}</li>
-</ul>
+- [Entidades "Archivo" y "Directorio" en la API](/es/docs/Web/API/File_and_Directory_Entries_API)
+- {{domxref("HTMLInputElement.webkitEntries")}}
+- {{domxref("HTMLInputElement.webkitdirectory")}}

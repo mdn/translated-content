@@ -7,45 +7,32 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onclose
 original_slug: Web/API/GlobalEventHandlers/onclose
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>Un gestor de eventos para los eventos de cerrar enviados a la ventana. (No disponible con Firefox 2 o Safari)</p>
+Un gestor de eventos para los eventos de cerrar enviados a la ventana. (No disponible con Firefox 2 o Safari)
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre>window.onclose = funcRef;
-</pre>
+```
+window.onclose = funcRef;
+```
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<ul>
- <li><code>funcRef</code> es una referencia a una función.</li>
-</ul>
+- `funcRef` es una referencia a una función.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: js">window.onclose = resetThatServerThing;
-</pre>
+```js
+window.onclose = resetThatServerThing;
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onclose','onclose')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estado                           | Comentario |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onclose','onclose')}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Compatibilidad_con_Navegadores">Compatibilidad con Navegadores</h2>
+## Compatibilidad con Navegadores
 
-<div>
-<p>{{Compat("api.GlobalEventHandlers.onclose")}}</p>
-</div>
+{{Compat("api.GlobalEventHandlers.onclose")}}
