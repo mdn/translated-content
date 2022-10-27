@@ -32,7 +32,7 @@ slug: Web/HTML/Element/script
 - {{htmlattrdef("crossorigin")}}
   - : 針對沒有通過標準 [CORS](/zh-TW/docs/HTTP_access_control) 的一般 `script` 元素，會把最少的資訊傳給 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}。若要允許另一個域名站點的靜態內容，列出錯誤訊息，請使用此屬性。請參見 [CORS settings attributes](/zh-TW/docs/Web/HTML/CORS_settings_attributes) 以以取得對其有效參數的，更具描述性的解釋。
 - {{htmlattrdef("defer")}}
-  - : 設置此 Boolean attribute 是為了指示瀏覽器，script 應在 document 解析後，但在 firing {{event("DOMContentLoaded")}} 之前被執行。具有 `defer` 屬性的 scripts 將阻止觸發`DOMContentLoaded` 事件，直到 scripts load 完成並且 finished evaluating。<
+  - : 設置此 Boolean attribute 是為了指示瀏覽器，script 應在 document 解析後，但在 firing [`DOMContentLoaded`](/zh-TW/docs/Web/API/Window/DOMContentLoaded_event) 之前被執行。具有 `defer` 屬性的 scripts 將阻止觸發`DOMContentLoaded` 事件，直到 scripts load 完成並且 finished evaluating。<
 
     > **警告：** 如果沒有 `src` 屬性的話，就不能用這個屬性（例如行內腳本）：在這種情況下，它將失去作用。The `defer` attribute has no effect on [module scripts](/zh-TW/docs/Web/JavaScript/Guide/Modules)— they defer by default.
 
@@ -68,7 +68,7 @@ slug: Web/HTML/Element/script
 
 Scripts without `async` or `defer` attributes, as well as inline scripts, are fetched and executed immediately, before the browser continues to parse the page.
 
-The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`); a video type (`video/*`); an audio (`audio/*`) type; or `text/csv`. If the script is blocked, an {{event("error")}} is sent to the element, if not a {{event("load")}} event is sent.
+The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`); a video type (`video/*`); an audio (`audio/*`) type; or `text/csv`. If the script is blocked, an [`error`](/zh-TW/docs/Web/API/Element/error_event) is sent to the element, if not a [`load`](/zh-TW/docs/Web/API/Window/load_event) event is sent.
 
 ## 示例
 
