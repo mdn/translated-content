@@ -19,16 +19,16 @@ slug: Web/Security
   - : **HTTPS**（**_超文本传输协议安全_**）是 {{Glossary("HTTP")}} 协议的加密版本，它使用 {{Glossary("SSL")}} 或 {{Glossary("TLS")}} 协议来对客户端和服务器之间的所有通信进行加密。所建立的安全连接使得客户端可以确认所连接的服务器，并且可以交换敏感数据。
 - [HTTP Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security)
   - : `Strict-Transport-Security:` [HTTP](/zh-CN/docs/Web/HTTP) 标头可以让网站指定其只能通过 HTTPS 访问。
-- [透明证书](/zh-CN/docs/Web/Security/Certificate_Transparency)
-  - : **透明证书**是一个开放的框架，旨在防止和监测证书的误发。新颁发的证书被记录到公开运行的、通常是独立的 CT 日志中，这些日志保持着一个仅有附录的、有密码学保证的 TLS 证书的记录。
+- [证书透明度](/zh-CN/docs/Web/Security/Certificate_Transparency)
+  - : **证书透明度**是一个开放的框架，旨在防止和监测证书的误发。新颁发的证书被记录到公开运行的、通常是独立的 CT 日志中，这些日志保持着一个仅有附录的、有密码学保证的 TLS 证书的记录。
 - [混合内容](/zh-CN/docs/Web/Security/Mixed_content)
   - : 如果一个 HTTPS 页面包含明文 HTTP 获取的内容，那么该页面就被称为**混合内容**页面。像这样的页面只能保证部分内容加密，未加密的部分仍然可以被嗅探器和中间人攻击者感知。
 - [如何修复含有混合内容的网站](/zh-CN/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
   - : 如果你的网站传送了 HTTPS 页面，所有使用 HTTP 传送的[活跃混合内容](/zh-CN/docs/Web/Security/Mixed_content#mixed_active_content)默认会被阻止。因而，你的网站可能会对客户不可用（例如 iframe 或插件不加载）。[被动的混合内容](/zh-CN/docs/Web/Security/Mixed_content#mixed_passivedisplay_content)默认是显示状态，但用户也可以通过首选设置来阻止这种类型的内容。这个页面解释了作为 web 开发人员需要注意的事情。
 - [安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)
   - : 一个**安全的上下文**是一个 `Window` 或 `Worker`，对于它来说，有理由相信内容已经安全地通过 HTTPS/TLS 交付，并且与**不**安全的上下文进行通信的可能性有限。许多 Web API 和功能只能在安全上下文中访问。安全上下文的主要目标是防止[中间人攻击者](https://zh.wikipedia.org/wiki/中间人攻击)访问强大的 API，从而进一步损害攻击受害者。
-- [限制在安全上下文中的功能](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
-  - : 该参考列出了仅在安全上下文中可用的 web 平台功能。
+- [限制在安全上下文中的特性](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+  - : 该参考列出了仅在安全上下文中可用的 web 平台特性。
 - [弱签名算法](/zh-CN/docs/Web/Security/Weak_Signature_Algorithm)
   - : 用于{{Glossary("digital certificate","数字证书")}}{{Glossary("Signature/Security", "签名")}}的摘要算法是保证证书安全性的关键因素。这篇文章提供了一些有关已知的弱签名算法信息，在使用的时候可以避免它们。
 - 301 和 302 响应码跳转
@@ -44,7 +44,7 @@ slug: Web/Security
 ## 信息泄露
 
 - [Referer 标头策略：隐私和安全性考虑](/zh-CN/docs/Web/Security/Referer_header:_privacy_and_security_concerns)
-  - : 有一些与[Referer HTTP 标头](/zh-CN/docs/Web/HTTP/Headers/Referer)相关的隐私和安全风险。这篇文章描述了它们，并提供避免这些风险的建议。
+  - : 有一些与 [Referer HTTP 标头](/zh-CN/docs/Web/HTTP/Headers/Referer)相关的隐私和安全风险。这篇文章描述了它们，并提供避免这些风险的建议。
 - Robots.txt
   - : 待补充
 - Site maps
@@ -53,7 +53,7 @@ slug: Web/Security
 ## 完整性
 
 - [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)
-  - : **同源策略**限制了一个 {{Glossary("origin","源")}} 中加载的文档或脚本与其他源中的资源交互的方式。这是一种用来隔离潜在恶意文档的关键安全机制。
+  - : **同源策略**限制了一个{{Glossary("origin","源")}}中加载的文档或脚本与其他源中的资源交互的方式。这是一种用来隔离潜在恶意文档的关键安全机制。
 - [子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)
   - : **子资源完整性**（SRI）是一种安全功能，允许浏览器验证所获取的文件（比如，从一个{{Glossary("CDN","内容分发网络")}}中）没有遭受恶意修改。它的工作原理是允许你提供一个加密哈希值，目标文件必须匹配这个值。
 - [HTTP Access-Control-Allow-Origin](/zh-CN/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
