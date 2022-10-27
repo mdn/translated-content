@@ -38,8 +38,7 @@ translation_of: Web/API/File
  <dt>{{DOMxRef("File.name")}}{{ReadOnlyInline}}</dt>
  <dd>Retorna el nombre del archivo referenciada por el objeto <code>File</code>.</dd>
  <dt>{{DOMxRef("File.webkitRelativePath")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
- <dd>Retorna la ruta relativa de la URL del {{DOMxRef("File")}}.</dd>
- <dd>
+ <dd>Retorna la ruta relativa de la URL del {{DOMxRef("File")}}.<br><br>
  <p><code>File</code> implementa {{DOMxRef("Blob")}}, así que también cuenta con las siguientes propiedades:</p>
  </dd>
  <dt>{{DOMxRef("File.size")}}{{ReadOnlyInline}}</dt>
@@ -94,7 +93,7 @@ translation_of: Web/API/File
  <li>En Gecko, puedes hacer uso de esta API desde código chrome. Vea <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code" title="Using the DOM File API in chrome code">Utilizando la API DOM File en código chrome (Using the DOM File API in chrome code)</a> para más detalles.</li>
  <li>Empezando desde Gecko 6.0 {{geckoRelease("6.0")}}, código privilegiado (como las extensiones por ejemplo) puede pasar un objeto <code>nsIFile</code> al constructor  DOM <code>File</code> para especificar el archivo a referenciar.</li>
  <li>Empezando desde Gecko 8.0 {{geckoRelease("8.0")}}, usted puede usar <code>new File</code> para la creación de objetos <code>File</code> a partir de código de componentes XPCOM en lugar de tener que instanciar el objeto <code>nsIDOMFile</code> directamente. El constructor toma, en contraste a Blob, un segundo argumento como nombre de archivo. El nombre de archivo puede ser cualquier String.
-  <pre class="syntaxbox">File File(
+  <pre>File File(
   Array parts,
   String filename,
   BlobPropertyBag properties

@@ -46,7 +46,7 @@ original_slug: Web/API/BlobBuilder
 
 <p>Anexa el contenido del objeto javascript especificado al {{domxref("Blob")}} que esta siendo construido. Si el valor especificado no es  un  {{domxref("Blob")}}, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>, o <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>, el valor es convertido a String antes de ser anexado al  blob.</p>
 
-<pre class="syntaxbox">void append(
+<pre>void append(
   in ArrayBuffer data
 );
 
@@ -74,7 +74,7 @@ void append(
 
 <p>Regresa el objeto  {{domxref("Blob")}} que ha sido construido usando los datos pasados atraves del método <a href="#append">append</a>.</p>
 
-<pre class="syntaxbox">Blob getBlob(
+<pre>Blob getBlob(
   in DOMString contentType {{optional_inline}}
 );
 </pre>
@@ -94,7 +94,7 @@ void append(
 
 <p>Retorna un objeto {{domxref("File")}}.</p>
 
-<pre class="syntaxbox">File getFile(
+<pre>File getFile(
   in DOMString name,
   [optional] in DOMString contentType
 );

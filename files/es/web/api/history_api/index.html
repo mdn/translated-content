@@ -51,7 +51,7 @@ original_slug: DOM/Manipulando_el_historial_del_navegador
 window.history.go(0);
 window.history.go();</code></pre>
 
-<p>Puedes obtener el número de páginas en la pila del historial consultando el valor de la propiedad <span class="long_text" id="result_box" lang="es"><span title=""><code>length</code>:</span></span></p>
+<p>Puedes obtener el número de páginas en la pila del historial consultando el valor de la propiedad <span id="result_box" lang="es"><span title=""><code>length</code>:</span></span></p>
 
 <pre>var numeroDeEntradas = window.history.length;
 </pre>
@@ -94,11 +94,11 @@ history.pushState(stateObj, "page 2", "bar.html");
   <p><strong>título</strong> — Firefox actualmente ignora este parámetro, aunque podría usarse en el futuro. Pasar una cadena de caracteres vacia aquí podría asegurar estar a salvo de futuros cambios en este método. Alternativamente podrías pasar un título corto del estado hacia el cual te estás moviendo.</p>
  </li>
  <li>
-  <p><strong>URL</strong> — La URL de la nueva entrada al  historial está dada por este parámetro. Recuerda que el browser no intentará cargar esta URL después de llamar a <code>pushState()</code>,  <span class="long_text" id="result_box" lang="es"><span title="">pero podría intentar cargar la URL más tarde, por ejemplo, después de que el usuario reinicie su navegador</span></span>. La nueva URL no necesita ser absoluta; si es relativa, es resuelta relativamente a la actual URL.  La nueva URL debe ser del mismo origen que la actual URL. Si no es así, <code>pushState()</code> arrojará una excepción. Este parámetro es opcional; <span class="long_text" id="result_box" lang="es"><span title="">si no se especifica, se tomará la URL actual del documento.</span></span></p>
+  <p><strong>URL</strong> — La URL de la nueva entrada al  historial está dada por este parámetro. Recuerda que el browser no intentará cargar esta URL después de llamar a <code>pushState()</code>,  <span id="result_box" lang="es"><span title="">pero podría intentar cargar la URL más tarde, por ejemplo, después de que el usuario reinicie su navegador</span></span>. La nueva URL no necesita ser absoluta; si es relativa, es resuelta relativamente a la actual URL.  La nueva URL debe ser del mismo origen que la actual URL. Si no es así, <code>pushState()</code> arrojará una excepción. Este parámetro es opcional; <span id="result_box" lang="es"><span title="">si no se especifica, se tomará la URL actual del documento.</span></span></p>
  </li>
 </ul>
 
-<p>En un sentido, llamar <code>pushState()</code> es similar a asignar <code>window.location = "#foo"</code>, <span class="long_text" id="result_box" lang="es"><span title="">en tanto que también se va a crear y activar otra entrada al historial asociada con el documento actual</span></span>. Pero <code>pushState()</code> tiene las siguientes ventajas:</p>
+<p>En un sentido, llamar <code>pushState()</code> es similar a asignar <code>window.location = "#foo"</code>, <span id="result_box" lang="es"><span title="">en tanto que también se va a crear y activar otra entrada al historial asociada con el documento actual</span></span>. Pero <code>pushState()</code> tiene las siguientes ventajas:</p>
 
 <ul>
  <li>La nueva URL puede ser cualquier URL en el mismo origen de la actual URL. En contraste, asignar <code>window.location</code> te mantiene en el mismo {{ domxref("document") }} solamente si modificas unicamente el hash.</li>
