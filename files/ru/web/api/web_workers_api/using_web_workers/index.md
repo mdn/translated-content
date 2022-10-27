@@ -613,9 +613,9 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 </html>
 ```
 
-Встраиваемый worker теперь внесён в новое custom свойство `document.worker`Также стоит отметить, что вы также можете преобразовать функцию в BLOB-объект, а затем сгенерировать URL объекта из этого BLOB-объекта. Например:
+Встраиваемый worker теперь внесён в новое custom свойство `document.worker` Также стоит отметить, что вы также можете преобразовать функцию в BLOB-объект, а затем сгенерировать URL объекта из этого BLOB-объекта. Например:
 
-```
+```js
 function fn2workerURL(fn) {
   var blob = new Blob(['('+fn.toString()+')()'], {type: 'application/javascript'})
   return URL.createObjectURL(blob)
