@@ -29,7 +29,7 @@ console.log(uInt8Array.byteLength); // 0
 
 > **备注：** 像 {{jsxref("Int32Array")}} 和 {{jsxref("Uint8Array")}} 等[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)是{{Glossary("serializable object","可序列化的")}}，但是不能转移。然而，它们的底层缓冲区是一个 {{jsxref("ArrayBuffer")}}，它是一个可转移对象。我们可以在数据参数中发送 `uInt8Array.buffer`，但是不能在传输数组中发送 `uInt8Array`。
 
-### 在克隆操作期间的转移
+### 在进行克隆操作时转移
 
 以下代码展示了 {{domxref("structuredClone()")}} 操作，其中底层缓冲区从原始对象复制到 clone。
 
