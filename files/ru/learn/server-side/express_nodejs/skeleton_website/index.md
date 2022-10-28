@@ -64,7 +64,7 @@ express
 
 ### Какой движок представлений следует использовать?
 
-*Express-generator\_\_ *даёт возможность сконфигурировать несколько популярных движков, включая [EJS](https://www.npmjs.com/package/ejs), [Hbs](http://github.com/donpark/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), и [Vash](https://www.npmjs.com/package/vash), но по умолчанию выбран Jade. Экспресс сразу после установки может поддерживать большое количество и других шаблонизаторов.
+`Express-generator` даёт возможность сконфигурировать несколько популярных движков, включая [EJS](https://www.npmjs.com/package/ejs), [Hbs](http://github.com/donpark/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), и [Vash](https://www.npmjs.com/package/vash), но по умолчанию выбран Jade. Экспресс сразу после установки может поддерживать большое количество и других шаблонизаторов.
 
 > **Примечание:** При желании использовать шаблонизатор, который не поддерживается генератором, просмотрите документацию [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) и документацию для нужного шаблонизатора.
 
@@ -471,7 +471,7 @@ block content
 
 ## Мини-тест
 
-Создайте новый путь в **/routes/users.js**, чтобы выводить текст **"**_You're so cool"_ или* **"**Ну, вы крутой!\_\_"* по URL\_ _`/users/cool/`_._ Проверьте его, запустив сервер и посетив в браузере _<http://localhost:3000/users/cool/>.\_
+Создайте новый путь в **/routes/users.js**, чтобы выводить текст **"**_You're so cool"_ или* **"**Ну, вы крутой!**"* по URL _`/users/cool/`_. _Проверьте его, запустив сервер и посетив в браузере `http://localhost:3000/users/cool/`._
 
 ## Итоги
 

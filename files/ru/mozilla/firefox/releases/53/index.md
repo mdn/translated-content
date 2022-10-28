@@ -23,7 +23,7 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 - В `mask-*`свойствах обыкновенного письма (см [CSS маски](/ru/docs/Web/CSS/CSS_Masks) ) все поддерживается и доступны по умолчанию (см {{bug (1251161)}}).
 - Добавлено {{cssxref("caret-color")}} Свойство ({{bug (1063162)}}).
 - Реализована {{cssxref("place-items")}} / {{cssxref("place-self")}} / {{cssxref("place-content")}} Shorthands ({{bug (1319958)}} ).
-- Добавлено `flow-root`значение {{cssxref ( "display")}} свойства ({{bug(1322191)}}).
+- Добавлено `flow-root` значение {{cssxref ( "display")}} свойства ({{bug(1322191)}}).
 - {{cssxref("tab-size", "-moz-tab-size")}} теперь принимает {{cssxref("&lt;length&gt;")}} значения ({{bug (943918)}}), а теперь анимируемый ({{bug (1308110)}}).
 - {{cssxref("mask-mode")}}: яркости не работает на градиентных масок ({{bug (1346265)}}).
 - \[CSS-сетка] FR Единица в {{cssxref("grid-template-rows")}} не заполняя окно просмотра ({{bug(1346699)}}).
@@ -32,10 +32,10 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 #### Другие изменения
 
 - Включить маски longhands по элементам SVG ({{bug(1319667)}}).
-- \[CSS-сетка] Исправлено: `align-self`/ `justify-self:stretch`/ `normal`не работает на `<table>`элементах сетки ({{bug (1316051)}}).
-- Установленный: `clip-path: circle()`с большой ссылкой окно и процент радиус не оказывают правильно ({{bug (1324713)}}.
-- При применении {{cssxref ("text-transform")}} значения из `uppercase`древнегреческого текста, акцент на дизъюнктивной ETA (rj) больше не удаляется (см {{bug(1322989)}}).
-- Наличие `contents`значения {{cssxref ("display")}} контролировали через `layout.css.display-contents.enabled`настройку. В Firefox 53 эта настройка была удалена полностью, так что значение всегда будет доступен и больше не могут быть отключены ({{bug (1295788)}}).
+- \[CSS-сетка] Исправлено: `align-self`/ `justify-self:stretch`/ `normal` не работает на `<table>` элементах сетки ({{bug (1316051)}}).
+- Установленный: `clip-path: circle()` с большой ссылкой окно и процент радиус не оказывают правильно ({{bug (1324713)}}.
+- При применении {{cssxref ("text-transform")}} значения из `uppercase` древнегреческого текста, акцент на дизъюнктивной ETA (rj) больше не удаляется (см {{bug(1322989)}}).
+- Наличие `contents` значения {{cssxref ("display")}} контролировали через `layout.css.display-contents.enabled` настройку. В Firefox 53 эта настройка была удалена полностью, так что значение всегда будет доступен и больше не могут быть отключены ({{bug (1295788)}}).
 
 ### JavaScript
 
@@ -43,11 +43,11 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 - ECMAScript 2015 семантика для закрытия итераторы были реализованы. Это влияет на [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)цикл, например ({{bug(1147371)}}).
 - [Шаблон Буквальное предложение Revision](https://tc39.github.io/proposal-template-literal-revision/) , что [снимает ограничения избежать последовательностей на помеченных литералах шаблона](/ru/docs/Web/JavaScript/Reference/Template_literals#Tagged_template_literals_and_escape_sequences) было реализовано ({{bug(1317375)}}).
 - Нестандартные [Струнные дженерики](/ru/docs/Web/JavaScript/Reference/Global_Objects/String#String_generic_methods) теперь представьте предупреждение устаревания в консоли. Не используйте их больше, они будут удалены в будущем! ({{bug (1319926)}}).
-- Статическое `length`свойство {{jsxref ( "TypedArray")}} объектов было изменено с 3 до 0 в соответствии с ES2016 ({{bug (1317306)}}).
+- Статическое `length` свойство {{jsxref ( "TypedArray")}} объектов было изменено с 3 до 0 в соответствии с ES2016 ({{bug (1317306)}}).
 - {{jsxref ( "SharedArrayBuffer")}} теперь может быть использован в {{jsxref ( "DataView")}} объекты ({{bug (1246597)}}).
 - В более ранних версиях спецификации, {{jsxref ( "SharedArrayBuffer")}} объектов необходимо явно переданы в ходе [структурированного клонирования](/ru/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) . В новой спецификации они не являются [переводными объекты](/ru/docs/Web/API/Transferable) больше , и , следовательно , не должны быть в списке передачи. Новое поведение используется для представления консоли предупреждения только, но теперь будет выдавать ошибку ({{bug(1302037)}}).
 - {{jsxref ( "ArrayBuffer")}} длина теперь ограничена {{jsxref ( "Number.MAX_SAFE_INTEGER")}} (> = 2 \*\* 53) ({{bug (1255128)}}).
-- {{jsxref ( "Error.prototype")}} и другие нативный объект ошибки прототипы , как {{jsxref ( "RangeError.prototype")}} и т.д. теперь обычные объекты вместо соответствующих объектов Error. (В частности, `Object.prototype.toString.call(Error.prototype)`теперь `"[object Object]"`вместо `"[object Error]"`.) ({{bug (1213341)}}).
+- {{jsxref ( "Error.prototype")}} и другие нативный объект ошибки прототипы , как {{jsxref ( "RangeError.prototype")}} и т.д. теперь обычные объекты вместо соответствующих объектов Error. (В частности, `Object.prototype.toString.call(Error.prototype)` теперь `"[object Object]"`вместо `"[object Error]"`.) ({{bug (1213341)}}).
 
 ### Мероприятия
 
@@ -59,10 +59,10 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 ### DOM
 
-- {{Domxref ( "HTMLHyperLinkElementUtils.pathname", "путь")}} и {{domxref ( "HTMLHyperLinkElementUtils.search", "поиск")}} {{domxref ( "HTMLHyperLinkElementUtils")}} свойства ранее возвращено неправильные части в URL. Например, для URL из `http://z.com/x?a=true&b=false`, `pathname`будет возвращаться « `/x?a=true&b=false"`и `search`вернётся„“, а не» `/x`«и» `?a=true&b=false"`соответственно. Теперь это было исправлено ({{bug (1310483)}}).
+- {{Domxref ( "HTMLHyperLinkElementUtils.pathname", "путь")}} и {{domxref ( "HTMLHyperLinkElementUtils.search", "поиск")}} {{domxref ( "HTMLHyperLinkElementUtils")}} свойства ранее возвращено неправильные части в URL. Например, для URL из `http://z.com/x?a=true&b=false`, `pathname` будет возвращаться « `/x?a=true&b=false"` и `search` вернётся„“, а не» `/x` «и» `?a=true&b=false"` соответственно. Теперь это было исправлено ({{bug (1310483)}}).
 - {{Domxref ( "URLSearchParams.URLSearchParams", "URLSearchParams ()")}} Конструктор теперь принимает на {{domxref ( "USVString")}} или последовательность {{domxref ( "USVString")}} ев в качестве инициализации объект ({{bug( "1330678")}}).
 - {{Domxref ( "Selection.setBaseAndExtent ()")}} метод [API выбора](/ru/docs/Web/API/Selection_API) теперь реализован (см {{bug (1321623)}}).
-- ["Fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) дополнение `file`типа {{HTMLElement ( "вход")}} `values`была реализована в Gecko, давая его соотношение с другими браузерами (см {{bug (1274596)}}).
+- ["Fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) дополнение `file` типа {{HTMLElement ( "вход")}} `values` была реализована в Gecko, давая его соотношение с другими браузерами (см {{bug (1274596)}}).
 - {{Domxref ( "Node.getRootNode ()")}} была реализована, заменяя устаревшее {{domxref ( "Node.rootNode")}} Свойство ({{bug(1269155)}}).
 - Собственные свойства {{domxref ( "Plugin")}} и {{domxref ( "PluginArray")}} объектов больше не перечислимы ({{bug ( "1270366")}}).
 - Названные свойства {{domxref ( "MimeTypeArray")}} объекты больше не перечислимы ({{bug ( "1270364")}}).
@@ -102,12 +102,12 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 ### HTTP / Networking
 
-- Gecko теперь имеет прив доступный в , `about:config`чтобы позволить пользователям устанавливать их по умолчанию {{HTTPHeader ( "Referrer-политики")}} - ({{bug ( "1304623")}}). Возможные значения: `network.http.referer.userControlPolicy`
+- Gecko теперь имеет прив доступный в , `about:config` чтобы позволить пользователям устанавливать их по умолчанию {{HTTPHeader ( "Referrer-политики")}} - ({{bug ( "1304623")}}). Возможные значения: `network.http.referer.userControlPolicy`
 
   - 0 - `no-referrer`
   - 1 - `same-origin`
   - 2 - `strict-origin-when-cross-origin`
-  - 3 - `no-referrer-when-downgrade`(по умолчанию)
+  - 3 - `no-referrer-when-downgrade` (по умолчанию)
 
 - Поддержка следующего протокола переговоров (NPN) была удалена в пользу [протокола прикладного уровня переговоров](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation) (ALPN) - см {{bug ( "1248198")}}.
 - {{HTTPHeader ( "Large-Allocation")}} заголовок HTTP теперь доступен по умолчанию, и больше не скрывается за привилегированную ({{bug(1331083)}}).
@@ -120,12 +120,12 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 ### HTML / XML
 
-- `dom.details_element.enabled`Прив - которая контролируется включение / отключение {{HTMLElement ( "детали")}} и {{HTMLElement ( "Резюме")}} опорный элемент в Firefox - теперь был удалён из `about:config`. Эти элементы (которые впервые были включены по умолчанию в Firefox 49) больше не могут быть отключены. См {{bug (1271549)}}.
+- `dom.details_element.enabled` Прив - которая контролируется включение / отключение {{HTMLElement ( "детали")}} и {{HTMLElement ( "Резюме")}} опорный элемент в Firefox - теперь был удалён из `about:config`. Эти элементы (которые впервые были включены по умолчанию в Firefox 49) больше не могут быть отключены. См {{bug (1271549)}}.
 
 ### CSS
 
 - Удалены {{property_prefix ( "- Мос")}} приставкой вариант {{cssxref ( ": реж", ": каталог ()")}} псевдокласс ({{bug (1270406)}}).
-- `-moz`Приставкой версия {{cssxref ( "текст-ALIGN-последний")}} был удалён ({{bug (1276808)}}).
+- `-moz` Приставкой версия {{cssxref ( "текст-ALIGN-последний")}} был удалён ({{bug (1276808)}}).
 - Удалены {{property_prefix ( "- Мос")}} приставкой вариант {{cssxref ( "известково ()")}} Метод ({{bug (1331296)}}).
 
 ### JavaScript

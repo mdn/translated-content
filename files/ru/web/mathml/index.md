@@ -41,7 +41,7 @@ translation_of: Web/MathML
 - [TeXZilla](https://github.com/fred-wang/TeXZilla) - Javascript конвертер LaTeX в MathML ([живая демонстрация](http://fred-wang.github.io/TeXZilla/), [web-приложение Firefox OS](http://r-gaia-cs.github.io/TeXZilla-webapp/), [дополнение к Firefox](https://addons.mozilla.org/en-US/firefox/addon/texzilla/), [использование в Web странице, программа на JS, и.т.п.](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla))
 - [LaTeXML](http://dlmf.nist.gov/LaTeXML/) - Конвертация документов LaTeX в HTML+MathML Web-страницы
 - [Web Equation](http://webdemo.visionobjects.com/home.html#equation) - Вставка рукописных формул в MathML или LaTeX
-- [MathJax](http://www.mathjax.org/) - Кросс-платформенное средство отображения математического контента на JavaScript. Для ускорения MathJax c использованием нативного MathML, испытайте [это дополнение для Mozilla](https://addons.mozilla.org/en-US/firefox/addon/mathjax-native-mathml/), это [расширение для Safari ](http://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz)или этот [скрипт для GreaseMonkey](https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/).
+- [MathJax](http://www.mathjax.org/) - Кросс-платформенное средство отображения математического контента на JavaScript. Для ускорения MathJax c использованием нативного MathML, испытайте [это дополнение для Mozilla](https://addons.mozilla.org/en-US/firefox/addon/mathjax-native-mathml/), это [расширение для Safari](http://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz) или этот [скрипт для GreaseMonkey](https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/).
 
 ## Похожие темы
 

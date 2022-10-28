@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 Функции - обработчику передаётся объект `details` который содержит информацию о запросе. Она содержит ID запроса, который обеспечен для включения надстройки, которая позволяет соотносить события, ассоциируемые с одним запросом. Это уникально в пределах сессии и контекста надстройки. Информация остаётся одинаковой везде на протяжении запроса, даже при перенаправлениях и обменах аутентификации.
 
-Для использования webRequest API для определённого хоста, расширение должно иметь "webRequest" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) и [host permission ](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)для этого хоста. Для использования возможности "блокирования" расширение должно также иметь "webRequestBlocking" API разрешение.
+Для использования webRequest API для определённого хоста, расширение должно иметь "webRequest" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) и [host permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) для этого хоста. Для использования возможности "блокирования" расширение должно также иметь "webRequestBlocking" API разрешение.
 
 Для перехвата ресурсов, загруженных страницей (таких как картинки, скрипты или таблицы стилей), расширение должно иметь разрешение хоста для ресурса также как и для главной страницы, запрашивающей ресурс. К примеру, если страница на "https\://developer.mozilla.org" загружает картинку из "https\://mdn.mozillademos.org", тогда расширение должно иметь разрешения обоих хостов чтобы перехватить запрос картинки.
 
@@ -62,7 +62,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 Для того, чтобы модифицировать тело HTTP ответа на запрос, вызовите {{WebExtAPIRef("webRequest.filterResponseData")}}, и передайте ID запроса. Это возвратит объект {{WebExtAPIRef("webRequest.StreamFilter")}} который вы сможете использовать чтобы исследовать и изменять данные когда они получены браузером.
 
-Чтобы сделать это, у вас должно быть "webRequestBlocking" API разрешение, а также "webRequest" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) и [host permission ](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)от соответствующего хоста.
+Чтобы сделать это, у вас должно быть "webRequestBlocking" API разрешение, а также "webRequest" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) и [host permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) от соответствующего хоста.
 
 ## Types
 
@@ -86,7 +86,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 ## Properties
 
 - {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}
-  - : The maximum number of times that [`handlerBehaviorChanged()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged "Suppose an add-on's job is to block web requests against a pattern, and the following scenario happens:") can be called in a 10 minute period.
+  - : The maximum number of times that [`handlerBehaviorChanged()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged) can be called in a 10 minute period.
 
 ## Functions
 

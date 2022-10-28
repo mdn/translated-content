@@ -183,7 +183,7 @@ _Без изменений._
 #### Темы
 
 - Цвет текста по умолчанию для значков {{WebExtAPIRef("browserAction")}} теперь автоматически становится чёрным или белым, чтобы достичь максимального контраста с фоном ({{bug(1474110)}}).
-- Свойства `accentcolor` и `textcolor` ключа [`theme`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) теперь необязательны ({{bug(1413144)}}).
+- Свойства `accentcolor` и `textcolor` ключа [`theme`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) теперь необязательны ({{bug(1413144)}}).
 - {{WebExtAPIRef("browserAction.getBadgeTextColor()")}} и {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} позволяют получать и настраивать цвет текста значков {{WebExtAPIRef("browserAction")}} ({{bug(1424620)}}).
 - Объект `colors` ключа `theme` теперь поддерживает свойства `ntp_text` (для указания цвета текста в новой вкладке) и `ntp_background` (для указания цвета фона) ({{bug(1347204)}}).
 - Темы получили возможность настраивать цвет боковых панелей, например, боковой панели закладок ({{bug(1418602)}}). Соответствующие свойства:
