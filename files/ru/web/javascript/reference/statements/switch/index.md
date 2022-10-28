@@ -169,13 +169,13 @@ switch (foo) {
 
 | Значение                                                              | Лог                               |
 | --------------------------------------------------------------------- | --------------------------------- |
-| \`foo\` is \`NaN\` or not \`1\`, \`2\`, \`3\`, \`4\`, \`5\`, or \`0\` | Please pick a number from 0 to 5! |
-| \`0\`                                                                 | Output: So What Is Your Name?     |
-| \`1\`                                                                 | Output: What Is Your Name?        |
-| \`2\`                                                                 | Output: Your Name?                |
-| \`3\`                                                                 | Output: Name?                     |
-| \`4\`                                                                 | Output: ?                         |
-| \`5\`                                                                 | Output: !                         |
+| `foo` is `NaN` or not `1`, `2`, `3`, `4`, `5`, or `0` | Please pick a number from 0 to 5! |
+| `0`                                                                 | Output: So What Is Your Name?     |
+| `1`                                                                 | Output: What Is Your Name?        |
+| `2`                                                                 | Output: Your Name?                |
+| `3`                                                                 | Output: Name?                     |
+| `4`                                                                 | Output: ?                         |
+| `5`                                                                 | Output: !                         |
 
 ## Спецификации
 
