@@ -8,7 +8,8 @@ tags:
 translation_of: Web/SVG/Element
 original_slug: Web/SVG/Элемент
 ---
-« [SVG](/ru/docs/Web/SVG "SVG") / [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "SVG/Attribute") »
+
+« [SVG](/ru/docs/Web/SVG) / [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute) »
 
 ## SVG элементы
 

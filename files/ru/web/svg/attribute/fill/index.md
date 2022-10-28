@@ -7,7 +7,7 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/fill
 ---
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Атрибут `fill` имеет два значения в зависимости от используемого контекста.
 
@@ -34,7 +34,7 @@ translation_of: Web/SVG/Attribute/fill
 
 | Категория            | Атрибут представления                                                                                |
 | -------------------- | ---------------------------------------------------------------------------------------------------- |
-| Значение             | [\<paint>](/en/SVG/Content_type#Paint "en/SVG/Content_type#Paint"), `context-fill`, `context-stroke` |
+| Значение             | [\<paint>](/en/SVG/Content_type#Paint), `context-fill`, `context-stroke` |
 | Анимация             | Да                                                                                                   |
 | Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillProperty)                         |
 
@@ -60,6 +60,6 @@ translation_of: Web/SVG/Attribute/fill
 
 Следующие элементы могут использовать атрибут `fill`
 
-- [Animation elements](/en/SVG/Element#Animation_elements "en/SVG/Element#Animation") »
-- [Shape elements](/en/SVG/Element#Shape "en/SVG/Element#Shape") »
-- [Text content elements](/en/SVG/Element#TextContent "en/SVG/Element#TextContent") »
+- [Animation elements](/en/SVG/Element#Animation_elements)
+- [Shape elements](/en/SVG/Element#Shape)
+- [Text content elements](/en/SVG/Element#TextContent)

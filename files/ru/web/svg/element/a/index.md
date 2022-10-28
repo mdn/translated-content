@@ -109,7 +109,7 @@ svg|a:hover, svg|a:active {
 
 ## Интерфейс DOM
 
-Этот элемент реализует интерфейс [`SVGAElement`](/ru/docs/DOM/SVGAElement "DOM/SVGAElement").
+Этот элемент реализует интерфейс [`SVGAElement`](/ru/docs/DOM/SVGAElement).
 
 ## Примечания к использованию
 
