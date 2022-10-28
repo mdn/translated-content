@@ -160,7 +160,7 @@ Esto muestra cómo los símbolos iniciales son ignorados. La palabra clave busca
 
 {{ EmbedLiveSample('capitalize_(Symbols)', '100%', '100px') }}
 
-### `capitalize` (Dígrafo _ij_ holandés)
+### `capitalize` (Dígrafo ij holandés)
 
 ```html
 <p>Initial String

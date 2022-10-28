@@ -9,7 +9,7 @@ translation_of: Web/CSS/background-color
 ---
 ### Resumen
 
-`Background-color` es un propiedad de CSS que define el color de fondo de un elemento, puede ser el valor de un color o la palabra "`transparent`e".
+`Background-color` es un propiedad de CSS que define el color de fondo de un elemento, puede ser el valor de un color o la palabra "`transparent` e".
 
 - {{ Cssxref("initial", "Valor inicial") }}: transparente
 - Se aplica a: todos los elementos
@@ -32,7 +32,7 @@ background-color: color | transparent | inherit
 <!---->
 
 - transparent
-  - : El valor por defecto del color de fondo (`background-color`) es `transparent`e tomando así el color del elemento que está justo debajo de él en el apilamiento.
+  - : El valor por defecto del color de fondo (`background-color`) es `transparent` e tomando así el color del elemento que está justo debajo de él en el apilamiento.
 
 ## Ejemplos
 

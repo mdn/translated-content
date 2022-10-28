@@ -130,7 +130,7 @@ div {
 
 {{EmbedLiveSample("Scaling_the_X_and_Y_dimensions_together", "200", "200")}}
 
-### Escalando dimensiones _X_ e _Y_ por separado y trasladando el origen
+### Escalando dimensiones X e Y por separado y trasladando el origen
 
 #### HTML
 

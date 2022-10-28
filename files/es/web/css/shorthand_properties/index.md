@@ -83,7 +83,7 @@ background: #000 url(images/bg.gif) no-repeat left top;
 
 Consulte {{cssxref("background")}} para obtener información más detallada, incluidas las propiedades de CSS3.
 
-## Propiedades de tipografía (_Font_)
+## Propiedades de tipografía (Font)
 
 Las siguientes declaraciones...
 

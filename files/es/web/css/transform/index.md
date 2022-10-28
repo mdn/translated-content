@@ -119,7 +119,7 @@ Específica una matriz de transformación 2D compuesta por seis valores a especi
 transform:  rotate(deg);     /* ej. rotate(90deg) */
 ```
 
-Define una operación de rotación 2D de un elemento, específicando la cantidad de grados (deg) que este rotará en sentido de las\_ \_macecillas del reloj (según lo especificado por la propiedad [transform-origen](/es/docs/Web/CSS/transform-origin)). La operación corresponde a la matriz **\[cos(angle) sin(angle) -sin(angle) cos(angle) 0 0]**.
+Define una operación de rotación 2D de un elemento, específicando la cantidad de grados (deg) que este rotará en sentido de las macecillas del reloj (según lo especificado por la propiedad [transform-origen](/es/docs/Web/CSS/transform-origin)). La operación corresponde a la matriz **\[cos(angle) sin(angle) -sin(angle) cos(angle) 0 0]**.
 
 ### rotateX
 
@@ -207,7 +207,7 @@ transform:  translate(tx[, ty]);     /* ej. translate(50px, 100px) */
 
 Especifica una tanslación 2D dada por el vector **\[tx, ty]**. Si **`ty` **no es específicada, se asumirá que su valor es cero.
 
-`Cada`[`translation-value`](/es/docs/translation-value) puede ser un valor de [`longuitud`](/en-US/docs/CSS/length) o un valor de [`porcentaje`](/en-US/docs/CSS/percentage).
+Cada [`translation-value`](/es/docs/translation-value) puede ser un valor de [`longuitud`](/en-US/docs/CSS/length) o un valor de [`porcentaje`](/en-US/docs/CSS/percentage).
 
 ### translateX
 
