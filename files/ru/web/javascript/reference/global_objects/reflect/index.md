@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 
 ## Методы
 
-Объект `Reflect` обеспечивает работу статических функций, называющиеся так же, как [методы proxy handler](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler) а. Некоторые из этих методов - те же, что и соответствующие им методы класса {{jsxref("Object")}}.
+Объект `Reflect` обеспечивает работу статических функций, называющиеся так же, как [методы proxy handler](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler). Некоторые из этих методов - те же, что и соответствующие им методы класса {{jsxref("Object")}}.
 
 - {{jsxref("Reflect.apply()")}}
   - : Вызывает целевую функцию с аргументами, переданными в параметре `args`. Смотрите также {{jsxref("Function.prototype.apply()")}}.
