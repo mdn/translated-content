@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
 
 {{jsSidebar("Operators")}}
 
-逻辑空赋值运算符（`x ??= y`）仅在 `x` 是 {{Glossary("nullish")}}（`null` 或 `undefined`）时对其赋值。
+逻辑空赋值运算符（`x ??= y`）仅在 `x` 是{{Glossary("nullish", "空值")}}（`null` 或 `undefined`）时对其赋值。
 
 {{EmbedInteractiveExample("pages/js/expressions-logical-nullish-assignment.html")}}
 
@@ -63,6 +63,6 @@ config({}); // { duration: 100, speed: 25 }
 ## 参见
 
 - [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
-- {{Glossary("Nullish")}}
-- {{Glossary("Truthy")}}
-- {{Glossary("Falsy")}}
+- {{Glossary("Nullish", "空值")}}
+- {{Glossary("Truthy", "真值")}}
+- {{Glossary("Falsy", "假值")}}
