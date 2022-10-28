@@ -116,7 +116,7 @@ También puede añadir un {{ domxref("File") }} o un {{ domxref("Blob") }} direc
 data.append("myfile", myBlob, "filename.txt");
 ```
 
-Cuando se usa el método `append` es posible usar, de manera opcional, un tercer parámetro para pasarle un nombre de fichero dentro de la cabecera `Content-Disposition`que será enviada al servidor. Cuando no se especifica (o el parámetro no es soportado), el nombre "blob" es el que será utilizado.
+Cuando se usa el método `append` es posible usar, de manera opcional, un tercer parámetro para pasarle un nombre de fichero dentro de la cabecera `Content-Disposition` que será enviada al servidor. Cuando no se especifica (o el parámetro no es soportado), el nombre "blob" es el que será utilizado.
 
 Además, puede usar FormData con jQuery si asigna las opciones correctas:
 
@@ -132,7 +132,7 @@ $.ajax({
 });
 ```
 
-## Envío de formularios y carga de archivos vía AJAX _sin_ objetos `FormData`
+## Envío de formularios y carga de archivos vía AJAX sin objetos `FormData`
 
 Si quiere saber cómo serializar y enviar vía [AJAX](/es/docs/AJAX) un formulario _sin_ utilizar objetos FormData, por favor leer [este párrafo](/es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files) .
 

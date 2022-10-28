@@ -49,7 +49,7 @@ También creamos una[página de salida del evento](http://mdn.github.io/web-stor
 | ------------------------------------ | -------------------------------- | ---------- |
 | {{SpecName('Web Storage')}} | {{Spec2('Web Storage')}} |            |
 
-## **Compatibilidad** de navegadores
+## Compatibilidad de navegadores
 
 ### `Window.localStorage`
 

@@ -75,7 +75,7 @@ Returns an Array of [`MutationRecord`s](#MutationRecord).
 
 `MutationObserverInit` es un objeto para el que se pueden especificar las siguientes propiedades:
 
-> **Nota:** NOTA: Como mínimo las propiedades `childList`, `attributes`, o `characterData`deben ser `true`. En caso contrario, se producirá un error "An invalid or illegal string was specified"
+> **Nota:** NOTA: Como mínimo las propiedades `childList`, `attributes`, o `characterData` deben ser `true`. En caso contrario, se producirá un error "An invalid or illegal string was specified"
 
 | Propiedad               | Descripción                                                                                                                            |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |

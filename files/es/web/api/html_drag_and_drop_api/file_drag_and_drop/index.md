@@ -18,7 +18,7 @@ Los pasos principales para configurar Drag-and-drop son: 1) definir una "zona dr
 
 > **Nota:** Nota: {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} define 2 diferentes APIs para soportar drag and drop de archivos. Una API es la interfaz {{domxref("DataTransfer")}} y la segunda API son las interfaces {{domxref("DataTransferItem")}} y {{domxref("DataTransferItemList")}}. Este ejemplo ilustra el uso de ambas APIs (y no usa ninguna interfaz específica de Gecko).
 
-## Define la zona "drop" \[drop _zone_]
+## Define la zona "drop" \[drop zone]
 
 Es necesario configurar un evento {{event("drop")}} en el objeto sobre el cual se soltará el objeto arrastrado. Este evento llamará una función global {{domxref("GlobalEventHandlers.ondrop","ondrop")}} que recibe los datos del objeto arrastrado. El siguiente código muestra cómo se hace con un elemento {{HTMLelement("div")}}:
 
