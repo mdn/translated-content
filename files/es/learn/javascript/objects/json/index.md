@@ -129,7 +129,7 @@ Anteriormente se mencionó que el texto JSON básicamente se parece a un objeto 
 ]
 ```
 
-Éste es un JSON perfectamente válido. Para acceder a esta version convertida se debe comenzar con un índice de arreglo, por ejemplo`[0]["powers"][0]`.
+Éste es un JSON perfectamente válido. Para acceder a esta version convertida se debe comenzar con un índice de arreglo, por ejemplo `[0]["powers"][0]`.
 
 ### Otras notas
 
@@ -178,7 +178,7 @@ Para obtener el JSON se utilizará un API llamado {{domxref("XMLHttpRequest")}} 
     const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
     ```
 
-2. Para crear una solicitud, se necesita crear una nueva instancia de objeto de solicitud desde el constructor`XMLHttpRequest`, utilizando la palabra clave `new`. Agregue lo siguiente a continuación de la última línea:
+2. Para crear una solicitud, se necesita crear una nueva instancia de objeto de solicitud desde el constructor `XMLHttpRequest`, utilizando la palabra clave `new`. Agregue lo siguiente a continuación de la última línea:
 
     ```js
     const request = new XMLHttpRequest();
@@ -212,7 +212,7 @@ Para obtener el JSON se utilizará un API llamado {{domxref("XMLHttpRequest")}} 
     }
     ```
 
-En este punto se está almacenando la respuesta a la solicitud (disponible en la propiedad [`response`](/en-US/docs/Web/API/XMLHttpRequest/response)) en una variable llamada `superHeroes`; esta variable ahora contendrá el objeto JavaScript basado en el JSON. Luego se pasa el objeto como argumento a dos funciones — la primera llenará el <`header>` con los datos correctos, mientras la segunda creará una tarjeta de información para cada héroe en el equipo y la insertará en `<section>`.
+En este punto se está almacenando la respuesta a la solicitud (disponible en la propiedad [`response`](/en-US/docs/Web/API/XMLHttpRequest/response)) en una variable llamada `superHeroes`; esta variable ahora contendrá el objeto JavaScript basado en el JSON. Luego se pasa el objeto como argumento a dos funciones — la primera llenará el `<header>` con los datos correctos, mientras la segunda creará una tarjeta de información para cada héroe en el equipo y la insertará en `<section>`.
 
 Se ha contenido el código en un manejador de eventos que se activa cuando se dispara el evento de carga (ver [`onload`](/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload)) — esto es porque el evento de carga se dispara cuando la respuesta ha sido retornada de forma exitosa; de esta manera se garantiza que `request.response` estará disponible cuando se intente hacer algo con ella.
 
@@ -277,7 +277,7 @@ Para empezar, se almacena la propiedad `members` del objeto JavaScript en una nu
 
 A continuación, se utiliza un ciclo [for](/es/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop) para recorrer cada objeto en el arreglo. Para cada uno:
 
-1. Se crean varios elementos nuevos: un`<article>`, un `<h2>`, tres `<p>`s, y una `<ul>`.
+1. Se crean varios elementos nuevos: un `<article>`, un `<h2>`, tres `<p>`s, y una `<ul>`.
 2. Se asigna al `<h2>` para que muestre el `name` del héroe.
 3. Se completan los tres párrafos con su `secretIdentity`, `age`, y una línea que diga "Superpowers:" para introducir la información de la lista.
 4. Se almacena la propiedad `powers` en otra variable nueva llamada `superPowers` — que contiene un arreglo que lista los superpoderes del héroe actual.

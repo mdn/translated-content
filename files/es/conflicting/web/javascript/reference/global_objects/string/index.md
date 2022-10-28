@@ -16,7 +16,7 @@ original_slug: Web/API/DOMString
 
 **`DOMString`** es un String UTF-16. Dado que JavaScript ya usa estos strings, se mapea `DOMString` directamente a {{jsxref("String")}}.
 
-Pasarle [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) a un método o parámetro que acepte un`DOMString` suele convertirse a texto como `"null"`.
+Pasarle [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) a un método o parámetro que acepte un `DOMString` suele convertirse a texto como `"null"`.
 
 ## Especificaciones
 

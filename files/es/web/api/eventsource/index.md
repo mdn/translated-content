@@ -65,7 +65,7 @@ evtSource.onmessage = function(e) {
 | ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
 | {{SpecName('HTML WHATWG', "comms.html#the-eventsource-interface", "EventSource")}} | {{Spec2('HTML WHATWG')}} |            |
 
-## Compatibilidad de navegadores[Edit](/es/docs/Web/API/Blob$edit#Browser_compatibility)
+## Compatibilidad de navegadores
 
 {{Compat("api.EventSource")}}
 

@@ -22,7 +22,7 @@ Este tipo representa un atributo de un elemento DOM como un objeto. En muchos m√
 - {{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}
   - : A {{domxref("DOMString")}} representing the namespace prefix of the attribute, or `null` if no prefix is specified.
 - {{domxref("Attr.specified", "specified")}} {{readOnlyInline}}
-  - : This property always returns `true`. Originally, it returned `true`if the attribute was explicitly specified in the source code or by a script, and `false` if its value came from the default one defined in the document's DTD.
+  - : This property always returns `true`. Originally, it returned `true` if the attribute was explicitly specified in the source code or by a script, and `false` if its value came from the default one defined in the document's DTD.
 - {{domxref("Attr.value", "value")}}
   - : El valor del atributo.
 
