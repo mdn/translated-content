@@ -53,11 +53,11 @@ translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 
 Чтобы подключить SFTP клиент к удалённому серверу, выполните следующие действия:
 
-1.  Выберите _File > Site Manager..._ в главном меню.
-2.  В окне _Site Manager_, нажмите кнопку _New Site_, затем введите название сайта как **demozilla** в предоставленном месте.
-3.  Укажите SFTP-сервер вашего хоста в предоставленном поле: Host.
-4.  В раскрывающемся списке _Logon Type:_ выберите _Normal_, затем введите предоставленные имя пользователя и пароль в соответствующие поля.
-5.  Введите правильный порт и другую информацию.
+1. Выберите _File > Site Manager..._ в главном меню.
+2. В окне _Site Manager_, нажмите кнопку _New Site_, затем введите название сайта как **demozilla** в предоставленном месте.
+3. Укажите SFTP-сервер вашего хоста в предоставленном поле: Host.
+4. В раскрывающемся списке _Logon Type:_ выберите _Normal_, затем введите предоставленные имя пользователя и пароль в соответствующие поля.
+5. Введите правильный порт и другую информацию.
 
 Ваше окно должно выглядеть как показано ниже:
 
@@ -129,7 +129,7 @@ Again, you would have to get the connection credentials from your hosting provid
 
 GitHub allows you to publish websites via [GitHub pages](https://pages.github.com/) (gh-pages).
 
-We've covered the basics of using this in the [Publishing your website](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Publishing_your_website) article from our [Getting started with the Web](/en-US/Learn/Getting_started_with_the_web) guide, so we aren't going to repeat it all here.
+We've covered the basics of using this in the [Publishing your website](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website) article from our [Getting started with the Web](/en-US/Learn/Getting_started_with_the_web) guide, so we aren't going to repeat it all here.
 
 However, it is worth knowing that you can also host a website on GitHub, but use a custom domain with it. See [Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/) for a detailed guide.
 

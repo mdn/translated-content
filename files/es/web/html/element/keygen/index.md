@@ -89,5 +89,3 @@ He aquí un ejemplo de envío de formularios, como sería entregado a un program
 | Firefox (Gecko)   | 1.0 (1.0)        |
 | Opera             | 3.0              |
 | Safari (WebKit)   | 1.2 (125)        |
-
-{{ languages ({"fr": "fr/HTML/Element/Keygen","en": "en/HTML/Element/Keygen"}) }}

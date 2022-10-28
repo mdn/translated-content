@@ -33,9 +33,9 @@ translation_of: Learn/HTML/Tables/Advanced
 
 Давайте попробуем это, вернёмся к примеру который мы ранее встретили в прошлой статье.
 
-1.  Откройте расписание занятий школьного учителя по языку в конце статьи [HTML таблицы основы](/ru/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col), или сделайте копию нашего [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) файла.
-2.  Добавьте подходящий заголовок к таблице.
-3.  Сохраните свой код и откройте его в браузере, чтобы посмотреть как это выглядит.
+1. Откройте расписание занятий школьного учителя по языку в конце статьи [HTML таблицы основы](/ru/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col), или сделайте копию нашего [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) файла.
+2. Добавьте подходящий заголовок к таблице.
+3. Сохраните свой код и откройте его в браузере, чтобы посмотреть как это выглядит.
 
 > **Примечание:** Этот пример можно найти на GitHub по ссылке [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([живой пример](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
 
@@ -57,12 +57,12 @@ translation_of: Learn/HTML/Tables/Advanced
 
 Давайте используем эти новые элементы.
 
-1.  В первую очередь, сделайте копию [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) и [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) в новой папке.
-2.  Попробуйте открыть это в браузере — вы увидите, что все выглядит классно, но могло бы быть лучше. Строка "SUM" которая содержит потраченные суммы кажется находится не в том месте и некоторые детали отсутствуют в коде.
-3.  Поместите очевидную строку заголовка внутрь `<thead>` элемента, строку "SUM" внутрь `<tfoot>` элемента и оставшийся контент внутрь `<tbody>` элемента.
-4.  Сохраните, перезагрузите и вы увидите, что добавление элемента `<tfoot>` привело к тому, что строка "SUM" опустилась к нижней части таблицы.
-5.  Далее, добавьте атрибут {{htmlattrxref("colspan","td")}}, чтобы ячейка "SUM" занимала первые четыре столбца, таким образом числовое значение "Cost" появится в последнем столбце.
-6.  Давайте добавим несколько простых дополнительных стилей к таблице, чтобы дать вам представление насколько эти элементы полезны при использовании CSS. Внутри в `<head>` вашего HTML документа вы увидите пустой элемент {{htmlelement("style")}}. Внутри этого элемента добавьте следующие строки CSS кода:
+1. В первую очередь, сделайте копию [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) и [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) в новой папке.
+2. Попробуйте открыть это в браузере — вы увидите, что все выглядит классно, но могло бы быть лучше. Строка "SUM" которая содержит потраченные суммы кажется находится не в том месте и некоторые детали отсутствуют в коде.
+3. Поместите очевидную строку заголовка внутрь `<thead>` элемента, строку "SUM" внутрь `<tfoot>` элемента и оставшийся контент внутрь `<tbody>` элемента.
+4. Сохраните, перезагрузите и вы увидите, что добавление элемента `<tfoot>` привело к тому, что строка "SUM" опустилась к нижней части таблицы.
+5. Далее, добавьте атрибут {{htmlattrxref("colspan","td")}}, чтобы ячейка "SUM" занимала первые четыре столбца, таким образом числовое значение "Cost" появится в последнем столбце.
+6. Давайте добавим несколько простых дополнительных стилей к таблице, чтобы дать вам представление насколько эти элементы полезны при использовании CSS. Внутри в `<head>` вашего HTML документа вы увидите пустой элемент {{htmlelement("style")}}. Внутри этого элемента добавьте следующие строки CSS кода:
 
     ```css
     tbody {
@@ -75,7 +75,7 @@ translation_of: Learn/HTML/Tables/Advanced
     }
     ```
 
-7.  Сохраните, обновите и вы увидите результат. Если `<tbody>` и `<tfoot>` элементы не были установлены, то вам придётся писать много сложных селекторов/правил для применения одного и того же стиля.
+7. Сохраните, обновите и вы увидите результат. Если `<tbody>` и `<tfoot>` элементы не были установлены, то вам придётся писать много сложных селекторов/правил для применения одного и того же стиля.
 
 > **Примечание:** Мы не ожидаем что сейчас вы полностью поймёте CSS. Вы узнаете больше когда пройдёте наши CSS курсы (например, [Вступление в CSS](/ru/docs/Learn/CSS/Introduction_to_CSS) это хорошее место для начала; у нас также есть статья конкретно о [стилизации таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)).
 
@@ -342,8 +342,8 @@ translation_of: Learn/HTML/Tables/Advanced
 
 Альтернатива атрибута `scope` это использование атрибутов {{htmlattrxref("id")}} и {{htmlattrxref("headers", "td")}} задавая ассоциации между заголовками и ячейками. Этот способ выглядит следующим образом:
 
-1.  Вы устанавливаете уникальный `id` для каждого`<th>` элемента.
-2.  Вы устанавливаете атрибут `headers` для каждого `<td>` элемента. Каждый `headers` атрибут должен содержать список всех `id` , разделённый пробелами, ко всем `<th>` элементам которые действуют как заголовок для этой ячейки.
+1. Вы устанавливаете уникальный `id` для каждого `<th>` элемента.
+2. Вы устанавливаете атрибут `headers` для каждого `<td>` элемента. Каждый `headers` атрибут должен содержать список всех `id`, разделённый пробелами, ко всем `<th>` элементам которые действуют как заголовок для этой ячейки.
 
 Это обеспечивает явное определение позиции для каждой ячейки вашей HTML таблицы, определяет заголовки столбцов и строк таблицы. Для того чтобы это работало реально хорошо таблице нужно определить и заголовки столбцов, и заголовки строк.
 
@@ -377,9 +377,9 @@ translation_of: Learn/HTML/Tables/Advanced
 
 ### Упражнение: играем со scope и headers
 
-1.  Для заключительного упражнения мы, вначале создадим копию [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) и [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) в новой папке.
-2.  Теперь попробуем добавить соответствующий атрибут `scope`, который наиболее соответствует этой таблице.
-3.  И наконец попробуем сделать другую копию изначальных файлов, на этот раз делая таблицу более доступной используя атрибуты `id` и `headers`.
+1. Для заключительного упражнения мы, вначале создадим копию [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) и [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) в новой папке.
+2. Теперь попробуем добавить соответствующий атрибут `scope`, который наиболее соответствует этой таблице.
+3. И наконец попробуем сделать другую копию изначальных файлов, на этот раз делая таблицу более доступной используя атрибуты `id` и `headers`.
 
 > **Примечание:** вы можете проверить как работает последние примеры здесь [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([also see this live](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) и [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([see this live too](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 

@@ -5,7 +5,7 @@ translation_of: Web/API/Document/importNode
 ---
 {{APIRef("DOM")}}
 
-Метод **`importNode()`**объекта {{domxref("Document")}} создаёт копию {{domxref("Node")}} или {{domxref("DocumentFragment")}} из другого документа, для последующей вставки в текущий документ.
+Метод **`importNode()`** объекта {{domxref("Document")}} создаёт копию {{domxref("Node")}} или {{domxref("DocumentFragment")}} из другого документа, для последующей вставки в текущий документ.
 
 Импортированный узел пока ещё не включён в дерево документов. Чтобы добавить его, вам необходимо вызвать один из методов вставки, например, {{domxref("Node.appendChild", "appendChild()")}} или {{domxref("Node.insertBefore", "insertBefore()")}} с узлом, который _находится_ в дереве документов.
 

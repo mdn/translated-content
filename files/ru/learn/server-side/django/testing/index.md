@@ -49,7 +49,7 @@ translation_of: Learn/Server-side/Django/Testing
 
 Тестирование сайта это сложная задача, потому что она состоит их нескольких логических слоёв – от HTTP-запроса и запроса к моделям, до валидации формы и их обработки, а кроме того, рендеринга шаблонов страниц.
 
-Django предоставляет фреймворк для создания тестов, построенного на основе иерархии классов, которые, в свою очередь, зависят от стандартной библиотеки Python [`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest "(in Python v3.5)"). Несмотря на название, данный фреймворк подходит и для юнит-, и для интеграционного тестирования. Фреймворк Django добавляет методы API и инструменты, которые помогают тестировать как веб так и, специфическое для Django, поведение. Это позволяет вам имитировать URL-запросы, добавление тестовых данных, а также проводить проверку выходных данных ваших приложений. Кроме того, Django предоставляет API ([LiveServerTestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#liveservertestcase)) и инструменты [для применения различных фреймворков тестирования](https://docs.djangoproject.com/en/1.10/topics/testing/advanced/#other-testing-frameworks), например вы можете подключить популярный фреймворк [Selenium](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) для имитации поведения пользователя в реальном браузере.
+Django предоставляет фреймворк для создания тестов, построенного на основе иерархии классов, которые, в свою очередь, зависят от стандартной библиотеки Python [`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest). Несмотря на название, данный фреймворк подходит и для юнит-, и для интеграционного тестирования. Фреймворк Django добавляет методы API и инструменты, которые помогают тестировать как веб так и, специфическое для Django, поведение. Это позволяет вам имитировать URL-запросы, добавление тестовых данных, а также проводить проверку выходных данных ваших приложений. Кроме того, Django предоставляет API ([LiveServerTestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#liveservertestcase)) и инструменты [для применения различных фреймворков тестирования](https://docs.djangoproject.com/en/1.10/topics/testing/advanced/#other-testing-frameworks), например вы можете подключить популярный фреймворк [Selenium](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) для имитации поведения пользователя в реальном браузере.
 
 Для написания теста вы должны наследоваться от любого из классов тестирования Django (или _юниттеста_) ([SimpleTestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#simpletestcase), [TransactionTestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#transactiontestcase), [TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase), [LiveServerTestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#liveservertestcase)), а затем реализовать отдельные методы проверки кода (тесты это функции-"утверждения", которые проверяют, что результатом выражения являются значения `True` или `False`, или что два значения равны и так далее). Когда вы запускаете тест, фреймворк выполняет соответствующие тестовые методы в вашем классе-наследнике. Методы тестирования запускаются независимо друг от друга, начиная с метода настроек и/или завершаясь методом разрушения (tear-down), определённом в классе, как показано ниже.
 
@@ -71,7 +71,7 @@ class YourTestClass(TestCase):
         self.assertTrue(False)
 ```
 
-Самый подходящий базовый класс для большинства тестов это [django.test.TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase). Этот класс создаёт чистую базу данных перед запуском своих методов, а также запускает каждую функцию тестирования в его собственной транзакции. У данного класса также имеется тестовый [Клиент](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#django.test.Client "django.test.Client"), который вы можете использовать для имитации взаимодействия пользователя с кодом на уровне отображения. В следующих разделах мы сконцентрируемся на юнит-тестах, которые будут созданы на основе класса [TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase).
+Самый подходящий базовый класс для большинства тестов это [django.test.TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase). Этот класс создаёт чистую базу данных перед запуском своих методов, а также запускает каждую функцию тестирования в его собственной транзакции. У данного класса также имеется тестовый [Клиент](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#django.test.Client), который вы можете использовать для имитации взаимодействия пользователя с кодом на уровне отображения. В следующих разделах мы сконцентрируемся на юнит-тестах, которые будут созданы на основе класса [TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase).
 
 > **Примечание:** Класс [django.test.TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase) очень удобен, но он может приводить к замедленной работе в некоторых случаях (не для каждого теста необходимо настраивать базу данных, или имитировать взаимодействие с отображением). Когда вы познакомитесь с работой данного класса, то сможете заменить некоторые из ваших тестов на более простые классы тестирования.
 
@@ -107,7 +107,7 @@ class Author(models.Model):
 
 Перед тем как мы перейдём к тому "что тестировать", давайте кратко взглянем на моменты _где_ и _как_ определяются тесты.
 
-Django использует юнит-тестовый модуль - [встроенный "обнаружитель" тестов](https://docs.python.org/3/library/unittest.html#unittest-test-discovery "(in Python v3.5)"), который находит тесты в текущей рабочей директории, в любом файле с шаблонным именем **test\*.py**. Предоставляя соответствующие имена файлов, вы можете работать с любой структурой которая вас устраивает. Мы рекомендуем создать пакет для вашего тестирующего кода и, следовательно, отделить файлы моделей, отображений, форм и любые другие, от кода который будет использоваться для тестов. Например:
+Django использует юнит-тестовый модуль - [встроенный "обнаружитель" тестов](https://docs.python.org/3/library/unittest.html#unittest-test-discovery), который находит тесты в текущей рабочей директории, в любом файле с шаблонным именем **test\*.py**. Предоставляя соответствующие имена файлов, вы можете работать с любой структурой которая вас устраивает. Мы рекомендуем создать пакет для вашего тестирующего кода и, следовательно, отделить файлы моделей, отображений, форм и любые другие, от кода который будет использоваться для тестов. Например:
 
 ```
 catalog/
@@ -233,7 +233,7 @@ python3 manage.py test --verbosity 2
 
 ### Запуск определённых тестов
 
-Если вы хотите запустить подмножество тестов, тогда вам надо указать полный путь к вашему пакету, модулю/подмодулю, классу наследнику`TestCase`, или методу:
+Если вы хотите запустить подмножество тестов, тогда вам надо указать полный путь к вашему пакету, модулю/подмодулю, классу наследнику `TestCase`, или методу:
 
 ```bash
 python3 manage.py test catalog.tests   # Run the specified module
@@ -888,6 +888,6 @@ class AuthorCreate(PermissionRequiredMixin, CreateView):
 - [Продвинутое тестирование](https://docs.djangoproject.com/en/1.10/topics/testing/advanced/) (Django docs)
 - [Путеводитель по тестированию в Django](http://toastdriven.com/blog/2011/apr/10/guide-to-testing-in-django/) (Toast Driven Blog, 2011)
 - [Мастерская: Разработка через тесты с Django (TDD)](http://test-driven-django-development.readthedocs.io/en/latest/index.html) (San Diego Python, 2014)
-- [Тестирование в Django (Часть 1) - Лучшие практики и Примеры ](https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/)(RealPython, 2013)
+- [Тестирование в Django (Часть 1) - Лучшие практики и Примеры](https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/) (RealPython, 2013)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}

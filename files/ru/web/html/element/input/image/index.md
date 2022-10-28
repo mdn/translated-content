@@ -23,7 +23,7 @@ translation_of: Web/HTML/Element/input/image
   - : If the input element is an image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:
     - `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
     - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the {{htmlattrxref("type","input")}} attribute set to `file`.
-    - `text/plain`If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the element's form owner.
+    - `text/plain` If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the element's form owner.
 - {{htmlattrdef("formmethod")}} {{HTMLVersionInline("5")}}
   - : In image input element, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values are:
     - `post`: The data from the form is included in the body of the form and is sent to the server.

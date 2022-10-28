@@ -30,7 +30,7 @@ Mozilla soporta una amplia variedad de emocionantes tecnologías web abiertas, y
 - [Canvas3D & Flickr](http://www.xs4all.nl/~peterned/3d/)
 - [Playing with Canvas](http://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html)
 - [Using the Canvas Html element5](http://langexplr.blogspot.com/2008/11/using-canvas-html-element.html)
-- [RayCaster](/samples/raycaster/RayCaster.html "https://developer.mozilla.org/editor/fckeditor/core/editor/samples/raycaster/RayCaster.html")
+- [RayCaster](/samples/raycaster/RayCaster.html)
 - [MSX Emulator](http://jsmsxdemo.googlepages.com/jsmsx.html)
 - [processing.js](http://processingjs.org/exhibition/)
 - [Missile fleet](http://glimr.rubyforge.org/cake/missile_fleet.html)
@@ -39,7 +39,7 @@ Mozilla soporta una amplia variedad de emocionantes tecnologías web abiertas, y
 - [Canvas ash2](http://glimr.rubyforge.org/cake/demos/canvas_ash2.html)
 - [Canvas ash8](http://glimr.rubyforge.org/cake/demos/canvas_ash8.html)
 - [3D on 2D Canvas](http://gyu.que.jp/jscloth/)
-- [miniPaint - Image editor ](http://viliusle.github.io/miniPaint/)([código fuente](https://github.com/viliusle/miniPaint))
+- [miniPaint - Image editor](http://viliusle.github.io/miniPaint/)([código fuente](https://github.com/viliusle/miniPaint))
 
 ### SVG
 
@@ -81,8 +81,8 @@ Mozilla soporta una amplia variedad de emocionantes tecnologías web abiertas, y
 
 ## CSS
 
-- [CSS floating logo " mozilla " developed by Rober Villar , from Software RVG. ](http://s.codepen.io/SoftwareRVG/debug/OXkOWj)(modo depurado)
-- [CSS floating logo " mozilla " developed by Rober Villar , from Software RVG. ](http://codepen.io/SoftwareRVG/pen/OXkOWj/)(codigo fuente)
+- [CSS floating logo " mozilla " developed by Rober Villar , from Software RVG.](http://s.codepen.io/SoftwareRVG/debug/OXkOWj)(modo depurado)
+- [CSS floating logo " mozilla " developed by Rober Villar , from Software RVG.](http://codepen.io/SoftwareRVG/pen/OXkOWj/)(codigo fuente)
 - [Responsive Contact Form](http://webdeveloperbareilly.in/blog/html5/responsive-contact-form-bootstrap.php)
 - [Paperfold](http://felixniklas.com/paperfold/)
 - [CSS Blockout](http://ondras.github.io/blockout/)
@@ -104,7 +104,7 @@ Mozilla soporta una amplia variedad de emocionantes tecnologías web abiertas, y
 
 ## HTML
 
-- [Zen Photon Garden ](http://zenphoton.com)([código fuente](https://github.com/scanlime/zenphoton))
+- [Zen Photon Garden](http://zenphoton.com)([código fuente](https://github.com/scanlime/zenphoton))
 - [HTMl Meta Tags For SMO](http://webdeveloperbareilly.in/blog/smo/html-meta-tags-for-social-media-optimization.html)
 
 ## Web APIs

@@ -267,8 +267,8 @@ body h1 + p .special {
 
 ## В этом модуле
 
-1.  [Что такое CSS?](/ru/docs/Learn/CSS/First_steps/%D0%A7%D1%82%D0%BE_%D1%82%D0%B0%D0%BA%D0%BE%D0%B5_CSS)
-2.  [Начало работы с CSS](/ru/docs/Learn/CSS/First_steps/Getting_started)
-3.  [Как структурирован CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [Как работает CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Используя ваши новые знания](/ru/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [Что такое CSS?](/ru/docs/Learn/CSS/First_steps/%D0%A7%D1%82%D0%BE_%D1%82%D0%B0%D0%BA%D0%BE%D0%B5_CSS)
+2. [Начало работы с CSS](/ru/docs/Learn/CSS/First_steps/Getting_started)
+3. [Как структурирован CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [Как работает CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Используя ваши новые знания](/ru/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
