@@ -1,7 +1,6 @@
 ---
 title: 源（Origin）
 slug: Glossary/Origin
-original_slug: Glossary/源
 ---
 
 Web 内容的**源**由用于访问它的 {{Glossary("URL")}} 的*方案*（协议）、*主机名*（域名）和*端口*定义。只有当协议、主机和端口都匹配时，两个对象才具有相同的源。
