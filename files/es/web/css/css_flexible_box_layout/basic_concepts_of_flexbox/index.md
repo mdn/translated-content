@@ -196,7 +196,7 @@ La propiedad {{cssxref("justify-content")}} es usada para alinear los ítems en 
 
 También podemos usar `space-between` para tomar todo el espacio sobrante después de que los ítems hayan sido colocados, y distribuir de forma pareja los ítems para que haya un espacio equitativo entre cada ítem. O bien, usamos el valor `space-around` para crear un espacio equitativo a la derecha e izquierda de cada ítem.
 
-Pruebe con los siguientes valores de`justify-content` en el ejemplo en vivo:
+Pruebe con los siguientes valores de `justify-content` en el ejemplo en vivo:
 
 - `space-evenly`
 - `flex-start`

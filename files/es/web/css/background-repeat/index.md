@@ -152,7 +152,7 @@ div {
 
 ### Resultado
 
-En este ejemplo,cada elemento de la listcoincide con un valor diferente de`background-repeat`.
+En este ejemplo,cada elemento de la listcoincide con un valor diferente de `background-repeat`.
 
 {{EmbedLiveSample('Examples', 240, 560)}}
 

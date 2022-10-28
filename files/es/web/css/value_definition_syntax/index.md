@@ -125,7 +125,7 @@ Pero no con:
 - `blue yellow` porque un componente debe aparecer al menos una vez.
 - `bold` porque no es una palabra clave permitida como valor de ninguna de las entidades.
 
-> **Nota:** el doble ampersand tiene precedencia sobre la barra doble, que significa que `bold || thin && <length>` es equivalente a `bold || [ thin && <length> ]`. Describe a `bold`, `thin`, `<length>`, `bold thin`, `<length> bold`, o `thin <length> bold` pero no `bold <length> bold thin` porque bold, si no es omitido debe colocarse antes o después de el componente`thin && <length>`
+> **Nota:** el doble ampersand tiene precedencia sobre la barra doble, que significa que `bold || thin && <length>` es equivalente a `bold || [ thin && <length> ]`. Describe a `bold`, `thin`, `<length>`, `bold thin`, `<length> bold`, o `thin <length> bold` pero no `bold <length> bold thin` porque bold, si no es omitido debe colocarse antes o después de el componente `thin && <length>`
 
 ### Barra simple
 
