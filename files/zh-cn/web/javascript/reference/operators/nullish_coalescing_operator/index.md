@@ -127,6 +127,7 @@ console.log(foo.someBarProp?.toUpperCase()); // undefined
 
 ## 参见
 
-- [可选链运算符（?.）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [逻辑空赋值运算符（`??=`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)
+- [可选链运算符（`?.`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [逻辑或运算符（`||`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR)
 - [函数中的默认参数值](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)
