@@ -7,7 +7,7 @@ El evento canplay es lanzado cuando el elemento [\<video>](/es/docs/Web/HTML/Ele
 
 Lo que puede evitar que el evento `canplay`se dispare puede ser por alguna de estás razones:
 
-- El ruta del `audio` o `video`están mal especificadas.
+- El ruta del `audio` o `video` están mal especificadas.
 - El navegador no soporta la etiqueta.``
 
 ```html
@@ -32,7 +32,7 @@ Lo que puede evitar que el evento `canplay`se dispare puede ser por alguna de es
 </html>
 ```
 
-Intente especificar mal la ruta del `src`y comprobrará que el evento no funciona.
+Intente especificar mal la ruta del `src` y comprobrará que el evento no funciona.
 
 ## General info
 

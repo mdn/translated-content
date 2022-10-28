@@ -75,18 +75,18 @@ Hacer uso de `history.pushState()` cambia el referer que es utilizado en la cabe
 
 ### Ejemplo
 
-Supongamos que http\://mozilla.org/foo.html ejecuta el siguiente JavaScript:
+Supongamos que `http://mozilla.org/foo.html` ejecuta el siguiente JavaScript:
 
 ```
 var stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-Esto causará que la barra de URL muestre http\://mozilla.org/bar.html, pero no provocará que el navegador carge bar.html ni tampoco que verifique si bar.html existe.
+Esto causará que la barra de URL muestre `http://mozilla.org/bar.html`, pero no provocará que el navegador carge bar.html ni tampoco que verifique si bar.html existe.
 
-Supongamos ahora que el usuario navega hacia http\://google.com, y despúes hace clic en Atrás. En este punto, la barra de URL mostrará http\://mozilla.org/bar.html, y la página tendrá un evento `popstate` cuyo _state object_ contiene una copia de `stateObj`. La página en si se verá como `foo.html`, aunque la página podria modificar su contenido durante el evento `popstate` event.
+Supongamos ahora que el usuario navega hacia `http://google.com`, y despúes hace clic en Atrás. En este punto, la barra de URL mostrará `http://mozilla.org/bar.html`, y la página tendrá un evento `popstate` cuyo _state object_ contiene una copia de `stateObj`. La página en si se verá como `foo.html`, aunque la página podria modificar su contenido durante el evento `popstate` event.
 
-Si hacemos clic en "atrás" nuevamente, la URL cambiará a http\://mozilla.org/foo.html, y el documento generará otro evento `popstate` event, esta vez con un state object nulo. Aquí también, ir atrás no cambia el contenido del documento con respecto al paso anterior, aunque el documento permite actualizar su contenido manualmente después de recibir el evento `popstate`.
+Si hacemos clic en "atrás" nuevamente, la URL cambiará a `http://mozilla.org/foo.html`, y el documento generará otro evento `popstate` event, esta vez con un state object nulo. Aquí también, ir atrás no cambia el contenido del documento con respecto al paso anterior, aunque el documento permite actualizar su contenido manualmente después de recibir el evento `popstate`.
 
 ### El método pushState()
 
@@ -102,7 +102,7 @@ Si hacemos clic en "atrás" nuevamente, la URL cambiará a http\://mozilla.org/f
 En un sentido, llamar `pushState()` es similar a asignar `window.location = "#foo"`, en tanto que también se va a crear y activar otra entrada al historial asociada con el documento actual. Pero `pushState()` tiene las siguientes ventajas:
 
 - La nueva URL puede ser cualquier URL en el mismo origen de la actual URL. En contraste, asignar `window.location` te mantiene en el mismo {{ domxref("document") }} solamente si modificas unicamente el hash.
-- No hay por qué cambiar la URL si no se desea. Por el contrario, asignar ` window.location = "#foo"; solamente crea una nueva entrada en el historial si el hash actual no es ``#foo `.
+- No hay por qué cambiar la URL si no se desea. Por el contrario, asignar `window.location = "#foo";` solamente crea una nueva entrada en el historial si el hash actual no es `#foo`.
 - Puedes asociar datos arbitrarios con tu nuevo historial de entrada. Con el enfoque hash-based, tu necesitas codificar todos datos relevantes dentro de una cadena de caracteres corta.
 - Si `title` es utilizado por los navegadores, estos datos pueden utilizarse (independientemente de, por ejemplo, el hash).
 
