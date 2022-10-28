@@ -6,7 +6,7 @@ original_slug: Web/API/Media_Streams_API
 ---
 {{SeeCompatTable}}
 
-La **API de proceso [**\[i\]**](#edn1) _MediaStream_**, a veces llamada*Media Stream API* o _Stream API_, es parte de la norma [WebRTC](/es/docs/WebRTC) y describe un flujo de datos de audio o video, los métodos para trabajar con ellos, las limitaciones asociadas con este tipo de datos, las respuestas de error y éxito al usar los datos asincrónicamente y los eventos que se disparan durante el proceso.
+La **API de proceso **_MediaStream_**, a veces llamada *Media Stream API* o _Stream API_, es parte de la norma [WebRTC](/es/docs/WebRTC) y describe un flujo de datos de audio o video, los métodos para trabajar con ellos, las limitaciones asociadas con este tipo de datos, las respuestas de error y éxito al usar los datos asincrónicamente y los eventos que se disparan durante el proceso.
 
 ## Conceptos Básicos
 
