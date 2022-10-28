@@ -381,7 +381,7 @@ Ahora que has añadido la configuración URL y creado todas estas plantillas, ¡
 Puedes probar las nuevas páginas de autenticación intentando iniciar sesión y entonces cerrar sesión con tu cuenta de super administrador usando estas URLs:
 
 - `http://127.0.0.1:8000/accounts/login/`
-- <http://127.0.0.1:8000/accounts/logout/>`
+- `http://127.0.0.1:8000/accounts/logout/`
 
 Serás capaz de probar la funcionalidad de reinicio de contraseña desde el enlace de la página de inicio de sesión. **¡Ten cuidado con el hecho de que Django solamente enviará correos de reinicio a las direcciones (usuarios) que ya están almacenadas en la base de datos!**
 

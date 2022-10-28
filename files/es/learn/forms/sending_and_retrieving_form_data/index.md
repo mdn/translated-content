@@ -182,7 +182,7 @@ Sea cual sea el método HTTP que elija, el servidor recibe una cadena que será 
 
 #### Ejemplo: PHP Raw
 
-[PHP](http://php.net/) ofrece algunos objetos globales para acceder a los datos. Suponiendo que usted ha utilizado el método `POST`, el siguiente ejemplo sólo toma los datos y lo muestra al usuario. Por supuesto, lo que se hace con los datos depende de usted. Es posible visualizarlos, almacenarlos en una base de datos, enviarlos por correo electrónico, o procesarlos de alguna otra manera.
+[PHP](https://php.net/) ofrece algunos objetos globales para acceder a los datos. Suponiendo que usted ha utilizado el método `POST`, el siguiente ejemplo sólo toma los datos y lo muestra al usuario. Por supuesto, lo que se hace con los datos depende de usted. Es posible visualizarlos, almacenarlos en una base de datos, enviarlos por correo electrónico, o procesarlos de alguna otra manera.
 
 ```php
 <?php
@@ -223,7 +223,7 @@ if __name__ == "__main__":
 
 Las dos plantillas de referencia en el código anterior son los siguientes:
 
-- [form.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html) : La misma forma que hemos visto anteriormente en la [El método POST](#el_método_post) sección, pero con el `action` conjunto a `\{{ url_for('hello') }}`. (Esta es una [Jinja2](http://jinja.pocoo.org/docs/2.9/) plantilla, que es básicamente HTML, pero puede contener llamadas al código Python que ejecuta el servidor web que figura entre corchetes. `url_for('hello')` Básicamente está diciendo "redirigir a `/hello` cuando se envía el formulario").
+- [form.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html) : La misma forma que hemos visto anteriormente en la [El método POST](#el_método_post) sección, pero con el `action` conjunto a `\{{ url_for('hello') }}`. (Esta es una [Jinja2](https://jinja.pocoo.org/docs/2.9/) plantilla, que es básicamente HTML, pero puede contener llamadas al código Python que ejecuta el servidor web que figura entre corchetes. `url_for('hello')` Básicamente está diciendo "redirigir a `/hello` cuando se envía el formulario").
 - [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html) :Esta plantilla solo contiene una línea que representa los dos bits de datos que se le pasan cuando se procesa. Esto se hace a través de la función `hello()` que se ha visto anteriormente, y que se ejecuta cuando la URL`/hello` es accedida.
 
 > **Nota:** Una vez más, este código no funcionará si sólo intenta cargarlo en un navegador directamente. Python funciona un poco diferente a PHP - Para ejecutar este código local que necesita para [instalar Python / PIP](/es/docs/Learn/Server-side/Django/development_environment#Installing_Python_3) , a continuación, instalar el frasco utilizando `pip3 install flask`. En este punto, usted debe ser capaz de ejecutar el ejemplo utilizando `python3 python-example.py`, a continuación, deberá navegar a `localhost:5000` en su barra de direcciones.
@@ -254,7 +254,7 @@ Este atributo le permite especificar el valor de la cabecera `Content-Type` HTTP
 Si desea enviar archivos, es necesario tomar tres pasos adicionales:
 
 - Ajuste el {{htmlattrxref ( "método", "form")}} atributo `POST` porque el contenido del archivo no se puede poner dentro de los parámetros de URL.
-- Establecer el valor de {{htmlattrxref ( "enctype", "form")}} que `multipart/form-data` debido a que los datos se dividen en múltiples partes, una para cada archivo más uno para los datos de texto incluidos en el cuerpo del formulario (si también se introduce el texto en la formulario).
+- Establecer el valor de {{htmlattrxref("enctype", "form")}} que `multipart/form-data` debido a que los datos se dividen en múltiples partes, una para cada archivo más uno para los datos de texto incluidos en el cuerpo del formulario (si también se introduce el texto en la formulario).
 - Incluir uno o más widgets [selector de archivos](/es/docs/Learn/HTML/Forms/The_native_form_widgets#File_picker) para permitir a los usuarios seleccionar el archivo (s) que será subido.
 
 Por ejemplo:
