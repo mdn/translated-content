@@ -143,7 +143,7 @@ El header `Expires` especifica la vida útil de la memoria caché usando una fec
 Expires: Tue, 28 Feb 2022 22:22:22 GMT
 ```
 
-Sin embargo, el formato de hora es difícil de analizar, de ahí a que se encontraran varios bugs en la implementación, y es posible inducir problemas cambiando intencionalmente el reloj del sistema. Por lo tanto, `max-age`, para especificar un tiempo transcurrido, se adoptó para `Cache-Control`en HTTP/1.1.
+Sin embargo, el formato de hora es difícil de analizar, de ahí a que se encontraran varios bugs en la implementación, y es posible inducir problemas cambiando intencionalmente el reloj del sistema. Por lo tanto, `max-age`, para especificar un tiempo transcurrido, se adoptó para `Cache-Control` en HTTP/1.1.
 
 Si tanto `Expires` como `Cache-Control: max-age` están disponibles, `max-age` se define como preferido. Por lo tanto, no es necesario proporcionar `Expires` ahora que HTTP/1.1 se usa ampliamente.
 

@@ -20,7 +20,7 @@ El elemento HTML example element \<xmp> dibuja texto entre las etiquetas de inic
 >
 > - Ha sido declarado obsoleto desde HTML3.2 y no fue implementado en una manera consistente . Fue completamente removido del lenguaje en HTML5 .
 > - Usar el elemento {{HTMLElement("pre")}} , o si es semánticamente adecuado , el elemento {{HTMLElement("code")}} en su lugar . Notar que necesitarás escapar los caracteres '<' como '\&lt' para asegurarse que no se interprete como marcado .
-> - Una letra monoespaciada también puede ser obtenida en algún elemento , aplicando el estilo [CSS](/es/docs/Web/CSS) adecuado usando `monospace`como el valor genérico de la fuente para la propiedad {{cssxref("font-family")}}
+> - Una letra monoespaciada también puede ser obtenida en algún elemento , aplicando el estilo [CSS](/es/docs/Web/CSS) adecuado usando `monospace` como el valor genérico de la fuente para la propiedad {{cssxref("font-family")}}
 
 ## Atributos
 
