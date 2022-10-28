@@ -72,7 +72,7 @@ If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-После чего сервер сравнит клиентский `ETag` (отправленный с помощью `If-None-Match`) с `ETag` для текущей версии ресурса и, если их значения совпадают (т.е. ресурсы не были изменены), сервер вернёт статус {{HTTPStatus("304")}}` Not Modified`, без тела ответа. Такой ответ сервера сообщает клиенту, что закешированная версия ресурса актуальна и готова к использованию.
+После чего сервер сравнит клиентский `ETag` (отправленный с помощью `If-None-Match`) с `ETag` для текущей версии ресурса и, если их значения совпадают (т.е. ресурсы не были изменены), сервер вернёт статус {{HTTPStatus("304")}} `Not Modified`, без тела ответа. Такой ответ сервера сообщает клиенту, что закешированная версия ресурса актуальна и готова к использованию.
 
 ## Спецификации
 
@@ -88,6 +88,6 @@ If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("304")}}` Not Modified`
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("304")}} `Not Modified`
+- {{HTTPStatus("412")}} `Precondition Failed`
 - [W3C Note: Editing the Web – Detecting the Lost Update Problem Using Unreserved Checkout](https://www.w3.org/1999/04/Editing/)

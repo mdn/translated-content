@@ -71,7 +71,7 @@ If the resource has not changed, the server sends back a {{HTTPStatus("304")}} `
 
 ![With a stale cache, the conditional request is sent. The server can determine if the resource changed, and, as in this case, decide not to send it again as it is the same.](https://mdn.mozillademos.org/files/13731/HTTPCache2.png)
 
-If the resource has changed, the server just sends back a {{HTTPStatus("200")}}` OK` response, with the new version of the resource, like if the request wasn't conditional and the client use this new resource (and caches it).
+If the resource has changed, the server just sends back a {{HTTPStatus("200")}} `OK` response, with the new version of the resource, like if the request wasn't conditional and the client use this new resource (and caches it).
 
 ![In the case where the resource was changed, it is sent back as if the request wasn't conditional.](https://mdn.mozillademos.org/files/13733/HTTPCache3.png)
 
