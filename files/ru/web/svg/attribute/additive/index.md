@@ -6,7 +6,8 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/additive
 ---
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
+
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Этот атрибут определяет, является ли анимация аддитивной.
 

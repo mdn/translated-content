@@ -6,7 +6,8 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/overflow
 ---
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
+
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Атрибут `overflow` имеет те же значения, что определены для {{ cssxref("overflow","CSS-свойства overflow") }}. Но имеют место также следующие дополнительные моменты:
 
