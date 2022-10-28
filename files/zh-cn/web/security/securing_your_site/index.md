@@ -9,7 +9,7 @@ slug: Web/Security/Securing_your_site
 
 ## 用户信息安全
 
-- [如何关闭表单的自动完成功能](/zh-CN/docs/Web/Security/How_to_Turn_Off_Form_Autocompletion)
+- [如何关闭表单的自动完成功能](/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion)
   - : 在 Gecko 中表单字段支持自动完成功能；因此它们的值可以被记住，并且在下一次用户访问你的网站时自动被填充。对于某些特定类型的数据，你可能希望禁止这个功能。
 - [隐私和 :visited 选择器](/zh-CN/docs/Web/CSS/Privacy_and_the_:visited_selector)
   - : 这篇文章讨论对于 `getComputedStyle()` 方法的改动，消除恶意站点获取用户浏览历史的能力。
