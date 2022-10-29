@@ -83,10 +83,10 @@ _Нет изменений._
 
 Важные моменты:
 
-- [Add-on Debugger](https://developer.mozilla.org/en-US/Add-ons/Add-on_Debugger)
-- Добавлена возможность преобразования [между высокоуровневыми объектами BrowserWindow и окнами DOM](https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/windows#Converting_to_DOM_windows) и [между высокоуровневыми объектами Tab и вкладками XUL](https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs#Converting_to_XUL_tabs).
+- [Add-on Debugger](/en-US/Add-ons/Add-on_Debugger)
+- Добавлена возможность преобразования [между высокоуровневыми объектами BrowserWindow и окнами DOM](/en-US/Add-ons/SDK/High-Level_APIs/windows#Converting_to_DOM_windows) и [между высокоуровневыми объектами Tab и вкладками XUL](/en-US/Add-ons/SDK/High-Level_APIs/tabs#Converting_to_XUL_tabs).
 - Обновлена тема по умолчанию, используемая для панелей в Mac OS X.
-- Добавлены опции панели [contentStyle и contentStyleFile](https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/panel#Styling_panel_content).
+- Добавлены опции панели [contentStyle и contentStyleFile](/en-US/Add-ons/SDK/High-Level_APIs/panel#Styling_panel_content).
 
 [GitHub-коммиты, выполненные с Firefox 30 по Firefox 31](https://github.com/mozilla/addon-sdk/compare/firefox30...firefox31). Это не включает никакие uplifts, сделанные после того, как этот релиз вступил в фазу Aurora.
 
