@@ -18,6 +18,8 @@ basé sur une promesse ({{jsxref("Promise")}}), écrite de façon simple, et év
   
 Les fonctions asynchrones peuvent également être définies comme des {{jsxref("Opérateurs/async_function", "expressions","",1)}}.
 
+{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
+
 ## Syntaxe
 
 ```js
