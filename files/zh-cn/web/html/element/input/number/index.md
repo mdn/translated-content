@@ -5,7 +5,7 @@ slug: Web/HTML/Element/Input/number
 
 {{HTMLRef("Input_types")}}
 
-**`"number"`** 类型的 {{HTMLElement("input")}} 元素用于让用户输入一个数字，其包括内置验证以拒绝非数字输入。
+**`number`** 类型的 {{HTMLElement("input")}} 元素用于让用户输入一个数字，其包括内置验证以拒绝非数字输入。
 
 浏览器可能会选择提供步进箭头，让用户可以使用鼠标增加和减少输入的值，或者只需用指尖敲击即可。
 
@@ -17,7 +17,7 @@ slug: Web/HTML/Element/Input/number
  <tbody>
   <tr>
    <td><strong><a href="#值">值</a></strong></td>
-   <td>表示一个数字的 {{jsxref("Number")}} ，或为空</td>
+   <td>表示一个数字的 {{jsxref("Number")}}，或为空</td>
   </tr>
   <tr>
    <td><strong>事件</strong></td>
@@ -68,7 +68,7 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 ### `min`
 
-允许值范围内的最小值。如果元素的 {{htmlattrxref("value", "input")}} 小于此值，则该元素将无法通过 [约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果为 `min` 指定的值不是有效数字，则输入没有最小值。
+允许值范围内的最小值。如果元素的 {{htmlattrxref("value", "input")}} 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果为 `min` 指定的值不是有效数字，则输入没有最小值。
 
 该值必须小于或等于 `max` 属性的值。
 
@@ -76,9 +76,9 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 `placeholder` 属性是一个字符串，可向用户提供有关该字段中需要什么样的信息的简短提示。它应该是说明预期的数据类型的单词或短语，而不是说明性消息。文本中*不得*包含回车符或换行符。
 
-如果控件的内容具有方向（({{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向显示占位符，则可以使用 Unicode 双向算法来格式化字符，从而覆盖原有占位符的方向；请参见[如何针对 bidi 文字使用 Unicode 控制符](https://www.w3.org/International/questions/qa-bidi-unicode-controls)获取更多信息。
+如果控件的内容具有方向（{{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向显示占位符，则可以使用 Unicode 双向算法来格式化字符，从而覆盖原有占位符的方向；请参见[如何针对双向文本使用 Unicode 控制符](https://www.w3.org/International/questions/qa-bidi-unicode-controls)获取更多信息。
 
-> **Note:** 请尽可能避免使用 `placeholder` 属性，它在语义上没有其他解释表单的方式有用，并且可能会导致额外的问题。参见 {{SectiononPage("/zh-CN/docs/Web/HTML/Element/input", "标签与占位符")}}以获取更多信息。
+> **备注：** 请尽可能避免使用 `placeholder` 属性，它在语义上没有其他解释表单的方式有用，并且可能会导致额外的问题。参见 {{SectiononPage("/zh-CN/docs/Web/HTML/Element/input", "标签与占位符")}}以获取更多信息。
 
 ### `readonly`
 
@@ -92,7 +92,7 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#max) 之外）。
 
-> **Note:** 当用户输入的数据不符合步进配置时，{{Glossary("user agent","用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
+> **备注：** 当用户输入的数据不符合步进配置时，{{Glossary("user agent","用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
 
 `number` 输入的默认步进值为 `1`，且只允许数字输入——*除非*步进值不是数字。
 
