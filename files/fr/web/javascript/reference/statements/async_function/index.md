@@ -16,7 +16,7 @@ original_slug: Web/JavaScript/Reference/Instructions/async_function
 Une fonction async est une fonction précédée par le mot `async`, et qui peut contenir le mot `await`. `async` et `await` permettent un comportement asynchrone,
 basé sur une promesse ({{jsxref("Promise")}}), écrite de façon simple, et évitant de configurer explicitement les chaines de promesse.  
   
-Les fonctions asynchrones peuvent également être définies comme des {{jsxref("Opérateurs/async_function", "expressions","",1)}}.
+Les fonctions asynchrones peuvent également être définies comme des [expressions](/fr/docs/Web/JavaScript/Reference/Operators/async_function).
 
 {{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
 
