@@ -14,7 +14,6 @@ O método **`isPrototypeOf()`** checa se um objeto existe em na cadeia de protó
 
 {{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}
 
-
 ## Sintaxe
 
 ```
