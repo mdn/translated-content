@@ -191,7 +191,7 @@ t3Closure('foo', {nombre: 'MDN', edad: 30}); //"Me llamo MDN. Tengo casi 30 año
 t3Closure({nombre: 'MDN', edad: 30}); //"Me llamo MDN. Tengo casi 30 años."
 ```
 
-### Cadenas en crudo (_raw_)
+### Cadenas en crudo (raw)
 
 La propiedad especial `raw`, disponible en el primer argumento de la función de etiqueta, permite acceso a las cadenas de caracteres tal como fueron ingresadas, sin procesar [secuencias de escape](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Literales_String).
 

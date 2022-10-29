@@ -165,7 +165,7 @@ slug: Web/HTML/Element/iframe
 
 - {{htmlattrdef("mozbrowser")}} {{non-standard_inline}}
 
-  - :&#x20;
+  - : &#x20;
 
     > **メモ:** これを Firefox のウェブ拡張機能に公開するには {{bug(1318532)}} を参照してください。
 

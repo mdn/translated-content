@@ -5,7 +5,7 @@ slug: Web/HTML/Element/table
 
 {{HTMLRef}}
 
-**HTML**的 **`table` **元素表示表格数据 — 即通过二维数据表表示的信息。
+[HTML](/zh-CN/docs/Web/HTML) **`table`** 元素表示表格数据——即通过二维数据表表示的信息。
 
 {{EmbedInteractiveExample("pages/tabbed/table.html","tabbed-standard")}}
 

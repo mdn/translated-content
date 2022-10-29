@@ -25,7 +25,7 @@ CSP hace posible que los administradores de servidores reduzcan o eliminen las p
 
 Como medida extrema de protección, los sitios que nunca requieran ejecutar scripts, pueden optar por rechazar globalmente la ejecución de scripts.
 
-### Mitigando los ataques de análisis de paquetes _(packet sniffing attacks)_
+### Mitigando los ataques de análisis de paquetes (packet sniffing attacks)
 
 Además de restringir los dominios desde los cuales se puede cargar el contenido, el servidor puede especificar qué protocolos se pueden usar; por ejemplo (e idealmente, desde un punto de vista de seguridad), un servidor puede especificar que todo el contenido debe cargarse utilizando HTTPS. Una estrategia completa de seguridad en la transmisión de datos incluye no solo aplicar HTTPS para la transferencia de datos, sino también marcar todas las cookies con el indicador de seguridad y proporcionar redirecciones automáticas desde las páginas HTTP a sus homólogas HTTPS. Los sitios también pueden usar la cabecera HTTP {{HTTPHeader ("Strict-Transport-Security")}} para garantizar que los navegadores se conecten a ellos solo a través de un canal cifrado.
 

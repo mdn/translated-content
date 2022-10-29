@@ -43,7 +43,7 @@ Nosotros creamos un solucionador de namespace usando el método `createNSResolve
 var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 ```
 
-O alternativamente, usar el método `createNSResolver` de un objeto`XPathEvaluator`.
+O alternativamente, usar el método `createNSResolver` de un objeto `XPathEvaluator`.
 
 ```
 var xpEvaluator = new XPathEvaluator();
@@ -113,7 +113,7 @@ Cuando el tipo de resultado especificado en el `resultType` es uno de los siguie
 
 El objeto `XPathResult` regresado es un conjunto de nodos de los nodos coincidentes los cuales se comportarán como un iterador, perimitiendo el acceso individual a los nodos mediante el uso de método `iterateNext()` del `XPathResult` .
 
-Una vez que hemos iterado sobre todos los nodos individuales coincidentes,`iterateNext()` regresará `null`.
+Una vez que hemos iterado sobre todos los nodos individuales coincidentes, `iterateNext()` regresará `null`.
 
 Es importante señalar que si el documento se ha transformado (el arbol del documento se ha modificado) entre iteraciones
 

@@ -328,7 +328,7 @@ Grid tiene una solución para esto con la función {{cssxref("minmax", "minmax()
 
 {{ EmbedLiveSample('Tamaño_de_vía_y_minmax', '240', '470') }}
 
-## Líneas de la cuadrícula[Edit](/es/docs/Web/CSS/CSS_Grid_Layout/Conceptos_B%C3%A1sicos_del_Posicionamiento_con_Rejillas$edit#Líneas_de_Rejilla)
+## Líneas de la cuadrícula
 
 Debe tenerse en cuenta que cuando definimos una cuadrícula definimos las vías de la cuadrícula, no las líneas. Grid luego nos da las líneas numeradas a utilizar al posicionar elementos. En nuestra cuadrícula de tres columnas y dos filas, tenemos cuatro líneas de columna.
 

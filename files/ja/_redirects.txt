@@ -1467,7 +1467,6 @@
 /ja/docs/DOM/window.frameElement	/ja/docs/Web/API/Window/frameElement
 /ja/docs/DOM/window.frames	/ja/docs/Web/API/Window/frames
 /ja/docs/DOM/window.fullScreen	/ja/docs/Web/API/Window/fullScreen
-/ja/docs/DOM/window.getAttention	/ja/docs/orphaned/Web/API/Window/getAttention
 /ja/docs/DOM/window.getComputedStyle	/ja/docs/Web/API/Window/getComputedStyle
 /ja/docs/DOM/window.getSelection	/ja/docs/Web/API/Window/getSelection
 /ja/docs/DOM/window.history	/ja/docs/Web/API/Window/history
@@ -1519,7 +1518,6 @@
 /ja/docs/DOM/window.pageYOffset	/ja/docs/Web/API/Window/scrollY
 /ja/docs/DOM/window.parent	/ja/docs/Web/API/Window/parent
 /ja/docs/DOM/window.personalbar	/ja/docs/Web/API/Window/personalbar
-/ja/docs/DOM/window.pkcs11	/ja/docs/orphaned/Web/API/Window/pkcs11
 /ja/docs/DOM/window.postMessage	/ja/docs/Web/API/Window/postMessage
 /ja/docs/DOM/window.print	/ja/docs/Web/API/Window/print
 /ja/docs/DOM/window.print-redirect-1	/ja/docs/Web/API/Window/print
@@ -1690,7 +1688,6 @@
 /ja/docs/DOM:window.frameElement	/ja/docs/Web/API/Window/frameElement
 /ja/docs/DOM:window.frames	/ja/docs/Web/API/Window/frames
 /ja/docs/DOM:window.fullScreen	/ja/docs/Web/API/Window/fullScreen
-/ja/docs/DOM:window.getAttention	/ja/docs/orphaned/Web/API/Window/getAttention
 /ja/docs/DOM:window.getComputedStyle	/ja/docs/Web/API/Window/getComputedStyle
 /ja/docs/DOM:window.getSelection	/ja/docs/Web/API/Window/getSelection
 /ja/docs/DOM:window.history	/ja/docs/Web/API/Window/history
@@ -1733,7 +1730,6 @@
 /ja/docs/DOM:window.pageYOffset	/ja/docs/Web/API/Window/scrollY
 /ja/docs/DOM:window.parent	/ja/docs/Web/API/Window/parent
 /ja/docs/DOM:window.personalbar	/ja/docs/Web/API/Window/personalbar
-/ja/docs/DOM:window.pkcs11	/ja/docs/orphaned/Web/API/Window/pkcs11
 /ja/docs/DOM:window.postMessage	/ja/docs/Web/API/Window/postMessage
 /ja/docs/DOM:window.print	/ja/docs/Web/API/Window/print
 /ja/docs/DOM:window.prompt	/ja/docs/Web/API/Window/prompt
@@ -3216,15 +3212,15 @@
 /ja/docs/Web/API/Document/onoffline	/ja/docs/Web/API/Window/offline_event
 /ja/docs/Web/API/Document/ononline	/ja/docs/Web/API/Window/online_event
 /ja/docs/Web/API/Document/onselectionchange	/ja/docs/Web/API/HTMLInputElement/selectionchange_event
-/ja/docs/Web/API/Document/pointercancel_event	/ja/docs/conflicting/Web/API/Element/pointercancel_event
-/ja/docs/Web/API/Document/pointerdown_event	/ja/docs/conflicting/Web/API/Element/pointerdown_event
-/ja/docs/Web/API/Document/pointerenter_event	/ja/docs/conflicting/Web/API/Element/pointerenter_event
-/ja/docs/Web/API/Document/pointerleave_event	/ja/docs/conflicting/Web/API/Element/pointerleave_event
+/ja/docs/Web/API/Document/pointercancel_event	/ja/docs/Web/API/Element/pointercancel_event
+/ja/docs/Web/API/Document/pointerdown_event	/ja/docs/Web/API/Element/pointerdown_event
+/ja/docs/Web/API/Document/pointerenter_event	/ja/docs/Web/API/Element/pointerenter_event
+/ja/docs/Web/API/Document/pointerleave_event	/ja/docs/Web/API/Element/pointerleave_event
 /ja/docs/Web/API/Document/pointerlockerror_event	/ja/docs/orphaned/Web/API/Element/pointerlockerror_event
-/ja/docs/Web/API/Document/pointermove_event	/ja/docs/conflicting/Web/API/Element/pointermove_event
-/ja/docs/Web/API/Document/pointerout_event	/ja/docs/conflicting/Web/API/Element/pointerout_event
-/ja/docs/Web/API/Document/pointerover_event	/ja/docs/conflicting/Web/API/Element/pointerover_event
-/ja/docs/Web/API/Document/pointerup_event	/ja/docs/conflicting/Web/API/Element/pointerup_event
+/ja/docs/Web/API/Document/pointermove_event	/ja/docs/Web/API/Element/pointermove_event
+/ja/docs/Web/API/Document/pointerout_event	/ja/docs/Web/API/Element/pointerout_event
+/ja/docs/Web/API/Document/pointerover_event	/ja/docs/Web/API/Element/pointerover_event
+/ja/docs/Web/API/Document/pointerup_event	/ja/docs/Web/API/Element/pointerup_event
 /ja/docs/Web/API/Document/selectstart_event	/ja/docs/Web/API/Node/selectstart_event
 /ja/docs/Web/API/Document/touchcancel_event	/ja/docs/conflicting/Web/API/Element/touchcancel_event
 /ja/docs/Web/API/Document/touchend_event	/ja/docs/conflicting/Web/API/Element/touchend_event
@@ -3632,11 +3628,8 @@
 /ja/docs/Web/API/Window/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
 /ja/docs/Web/API/Window/arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
 /ja/docs/Web/API/Window/crypto	/ja/docs/Web/API/crypto_property
-/ja/docs/Web/API/Window/dialogArguments	/ja/docs/orphaned/Web/API/Window/dialogArguments
 /ja/docs/Web/API/Window/dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
-/ja/docs/Web/API/Window/getAttention	/ja/docs/orphaned/Web/API/Window/getAttention
-/ja/docs/Web/API/Window/isSecureContext	/ja/docs/orphaned/Web/API/Window/isSecureContext
 /ja/docs/Web/API/Window/mozPaintCount	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/onafterprint	/ja/docs/Web/API/Window/afterprint_event
 /ja/docs/Web/API/Window/onappinstalled	/ja/docs/Web/API/Window/appinstalled_event
@@ -3644,7 +3637,6 @@
 /ja/docs/Web/API/Window/onchange	/ja/docs/Web/API/HTMLElement/change_event
 /ja/docs/Web/API/Window/onclick	/ja/docs/Web/API/Element/click_event
 /ja/docs/Web/API/Window/ondevicemotion	/ja/docs/Web/API/Window/devicemotion_event
-/ja/docs/Web/API/Window/ondeviceproximity	/ja/docs/orphaned/Web/API/Window/ondeviceproximity
 /ja/docs/Web/API/Window/onfocus	/ja/docs/Web/API/Window/focus_event
 /ja/docs/Web/API/Window/ongamepadconnected	/ja/docs/Web/API/Window/gamepadconnected_event
 /ja/docs/Web/API/Window/ongamepaddisconnected	/ja/docs/Web/API/Window/gamepaddisconnected_event
@@ -3656,7 +3648,6 @@
 /ja/docs/Web/API/Window/onreset	/ja/docs/Web/API/HTMLFormElement/reset_event
 /ja/docs/Web/API/Window/onresize	/ja/docs/Web/API/Window/resize_event
 /ja/docs/Web/API/Window/performance	/ja/docs/Web/API/performance_property
-/ja/docs/Web/API/Window/pkcs11	/ja/docs/orphaned/Web/API/Window/pkcs11
 /ja/docs/Web/API/Window/restore	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/Window/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/Window/setTimeout	/ja/docs/Web/API/setTimeout
@@ -3836,7 +3827,6 @@
 /ja/docs/Web/API/window.content	/ja/docs/Web/API/Window/content
 /ja/docs/Web/API/window.crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/Web/API/window.defaultStatus	/ja/docs/Web/API/Window/defaultStatus
-/ja/docs/Web/API/window.dialogArguments	/ja/docs/orphaned/Web/API/Window/dialogArguments
 /ja/docs/Web/API/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/Web/API/window.dump	/ja/docs/Web/API/Window/dump
 /ja/docs/Web/API/window.escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -3846,7 +3836,6 @@
 /ja/docs/Web/API/window.frameElement	/ja/docs/Web/API/Window/frameElement
 /ja/docs/Web/API/window.frames	/ja/docs/Web/API/Window/frames
 /ja/docs/Web/API/window.fullScreen	/ja/docs/Web/API/Window/fullScreen
-/ja/docs/Web/API/window.getAttention	/ja/docs/orphaned/Web/API/Window/getAttention
 /ja/docs/Web/API/window.getComputedStyle	/ja/docs/Web/API/Window/getComputedStyle
 /ja/docs/Web/API/window.getSelection	/ja/docs/Web/API/Window/getSelection
 /ja/docs/Web/API/window.history	/ja/docs/Web/API/Window/history
@@ -3898,7 +3887,6 @@
 /ja/docs/Web/API/window.outerWidth	/ja/docs/Web/API/Window/outerWidth
 /ja/docs/Web/API/window.parent	/ja/docs/Web/API/Window/parent
 /ja/docs/Web/API/window.personalbar	/ja/docs/Web/API/Window/personalbar
-/ja/docs/Web/API/window.pkcs11	/ja/docs/orphaned/Web/API/Window/pkcs11
 /ja/docs/Web/API/window.prompt	/ja/docs/Web/API/Window/prompt
 /ja/docs/Web/API/window.releaseEvents	/ja/docs/Web/API/Window/releaseEvents
 /ja/docs/Web/API/window.requestAnimationFrame	/ja/docs/Web/API/Window/requestAnimationFrame
@@ -4014,6 +4002,7 @@
 /ja/docs/Web/CSS/@media/scan	/ja/docs/orphaned/Web/CSS/@media/scan
 /ja/docs/Web/CSS/@page/bleed	/ja/docs/orphaned/Web/CSS/@page/bleed
 /ja/docs/Web/CSS/@page/marks	/ja/docs/orphaned/Web/CSS/@page/marks
+/ja/docs/Web/CSS/@scroll-timeline	/ja/docs/Web/CSS/scroll-timeline
 /ja/docs/Web/CSS/@viewport/height	/ja/docs/Web/CSS/@viewport
 /ja/docs/Web/CSS/@viewport/max-height	/ja/docs/Web/CSS/@viewport
 /ja/docs/Web/CSS/@viewport/max-zoom	/ja/docs/Web/CSS/@viewport
@@ -4792,12 +4781,13 @@
 /ja/docs/Web/JavaScript/Reference/Statements/default	/ja/docs/Web/JavaScript/Reference/Statements/switch
 /ja/docs/Web/JavaScript/Reference/Statements/import.meta	/ja/docs/Web/JavaScript/Reference/Operators/import.meta
 /ja/docs/Web/JavaScript/Reference/Statements/yield	/ja/docs/Web/JavaScript/Reference/Operators/yield
+/ja/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/ja/docs/conflicting/Web/JavaScript/Reference/Strict_mode
 /ja/docs/Web/JavaScript/Reference/arrow_functions	/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /ja/docs/Web/JavaScript/Reference/template_strings	/ja/docs/Web/JavaScript/Reference/Template_literals
 /ja/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
 /ja/docs/Web/JavaScript/Shells	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ja/docs/Web/JavaScript/Strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode
-/ja/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/ja/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/ja/docs/conflicting/Web/JavaScript/Reference/Strict_mode
 /ja/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /ja/docs/Web/JavaScript/Tutorials	/ja/docs/Web/JavaScript
 /ja/docs/Web/JavaScript/Typed_arrays/ArrayBuffer	/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer

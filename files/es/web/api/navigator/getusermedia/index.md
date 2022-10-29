@@ -65,7 +65,7 @@ Si el valor o el miembro no es especificado en el objeto, el valor del miembro p
 
 ### successCallback
 
-La función getUserMedia llamará a la función especificada en el `successCallback`con el objeto [LocalMediaStream](/es/docs/WebRTC/MediaStream_API#LocalMediaStream) que contenga la secuencia multimedia. Puedes asignar el objeto al elemento apropiado y trabajar con él, como se muestra en el siguiente ejemplo:
+La función getUserMedia llamará a la función especificada en el `successCallback` con el objeto [LocalMediaStream](/es/docs/WebRTC/MediaStream_API#LocalMediaStream) que contenga la secuencia multimedia. Puedes asignar el objeto al elemento apropiado y trabajar con él, como se muestra en el siguiente ejemplo:
 
 ```
 function(localMediaStream) {

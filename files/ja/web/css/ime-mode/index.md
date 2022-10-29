@@ -1,11 +1,13 @@
 ---
 title: ime-mode
 slug: Web/CSS/ime-mode
+l10n:
+  sourceCommit: fb2af1f15456199685a9f4fbaf8c9d003a2bf91f
 ---
 
 {{CSSRef}} {{deprecated_header}}
 
-**`ime-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストフィールドで Input Method Editor (以下 IME) をコントロールします。このプロパティは廃止されました。
+**`ime-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストフィールドのインプットメソッドエディター (IME) を制御します。このプロパティは廃止されました。
 
 ```css
 /* Keyword values */
@@ -19,12 +21,13 @@ ime-mode: disabled;
 ime-mode: inherit;
 ime-mode: initial;
 ime-mode: revert;
+ime-mode: revert-layer;
 ime-mode: unset;
 ```
 
-`ime-mode`は、一部のブラウザーで無秩序に実装されたプロパティです。これは、Microsoft が独自の拡張機能として Internet Explorer 5 で導入したものです。{{spec("https://msdn.microsoft.com/library/ms530767(VS.85).aspx","-ms-ime-mode Attribute | imeMode Property")}}
+`ime-mode` は、一部のブラウザーで無秩序に実装されたプロパティです。これは、Microsoft が独自の拡張機能として Internet Explorer 5 で導入したものです。
 
-> **メモ:** 一般に、公開されたウェブサイトが IME モードを変更することは適切ではありません。このプロパティは、私的ななウェブアプリケーションでのみ使用すべきです。また、以前に古いコードで設定されていた場合は、プロパティを元に戻すべきです。
+> **メモ:** 一般に、公開されたウェブサイトが IME モードを変更することは適切ではありません。このプロパティは、私的なウェブアプリケーションでのみ使用すべきです。また、以前に古いコードで設定されていた場合は、プロパティを元に戻すべきです。
 
 ## 構文
 
@@ -35,7 +38,7 @@ ime-mode: unset;
 - `auto`
   - : 現在の IME の状態を変更しません。これが既定値です。
 - `normal`
-  - : IME の状態を通常の状態に変更します。この値はユーザースタイルシートでウェブページが指定した値を上書きするために用意されました。_この値は Internet Explorer は対応していません_。
+  - : IME の状態を通常の状態に変更します。この値はユーザースタイルシートでウェブページが指定した値を上書きするために用意されました。_この値は Internet Explorer が対応していません_。
 - `active`
   - : コンテンツがフォーカスを得た時に IME が自動的にオンになります。ユーザーがオフにしない限りテキスト入力には IME が使用されます。_Linux では対応していません。_
 - `inactive`
@@ -45,10 +48,10 @@ ime-mode: unset;
 
 ## 解説
 
-Internet Explorer とは異なり、Firefox の `ime-mode` は `<input type="password">` にも適用できます。しかし、これはユーザーの使い勝手にはマイナスの影響を与えます。パスワードフィールドでは IME は有効に*されるべきではありません*。ユーザーは以下の CSS をユーザースタイルシートに挿入することで、推奨された設定に従わないサイトの動作を修正することができます。
+Internet Explorer とは異なり、Firefox の `ime-mode` は `<input type="password">` にも適用できます。しかし、これはユーザーの使い勝手にはマイナスの影響を与えます。パスワードフィールドでは IME は有効に*すべきではありません*。ユーザーは以下の CSS をユーザースタイルシートに挿入することで、推奨された設定に従わないサイトの動作を修正することができます。
 
 ```css
-input[type=password] {
+input[type="password"] {
   ime-mode: auto !important;
 }
 ```
@@ -61,7 +64,10 @@ Gecko 1.9 (Firefox 3) の Mac 版では、disabled に設定されたフィー�
 
 ## 形式文法
 
-{{csssyntax}}
+```plain
+ime-mode =
+  auto | normal | active | inactive | disabled
+```
 
 ## 例
 
@@ -70,7 +76,11 @@ Gecko 1.9 (Firefox 3) の Mac 版では、disabled に設定されたフィー�
 この例は、フィールドの IME の対応を無効にします。これは、 拡張文字セットに対応していないデータベースにデータを入力するフィールドで一般的に行われていました。
 
 ```html
-<input type="text" name="name" value="initial value" style="ime-mode: disabled">
+<input
+  type="text"
+  name="name"
+  value="initial value"
+  style="ime-mode: disabled" />
 ```
 
 > **メモ:** IME を無効にしたからといって、拡張文字がフォームを通過しないとは限りません。IME を無効にしても、ユーザーは拡張文字をフォームのフィールドに貼り付けることができます。

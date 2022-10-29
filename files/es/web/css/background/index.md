@@ -40,15 +40,15 @@ La sintaxis de cada capa es la siguiente:
 
 - Cada capa puede incluir cero o una ocurrencia de cualquiera de los siguientes valores
 
-  - [`<attachment>`](/es/docs/Web/CSS/background$edit#%3Cattachment%3E)
-  - [`<bg-image>`](/es/docs/Web/CSS/background$edit#%3Cbg-image%3E)
-  - [`<position>`](/es/docs/Web/CSS/background$edit#%3Cposition%3E)
-  - [`<bg-size>`](/es/docs/Web/CSS/background$edit#%3Cbg-size%3E)
-  - [`<repeat-style>`](/es/docs/Web/CSS/background$edit#%3Crepeat-style%3E)
+  - [`<attachment>`](#attachment)
+  - [`<bg-image>`](#bg-image)
+  - [`<position>`](#position)
+  - [`<bg-size>`](#bg-size)
+  - [`<repeat-style>`](#repeat-style)
 
-- El valor [`<bg-size>`](/es/docs/Web/CSS/background$edit#%3Cbg-size%3E) sólo puede ser incluido inmediatamente después de la [\<position>](/es/docs/Web/CSS/background$edit#%3Cposition%3E), separado con el carácter '/', así: "`center/80%`".
-- El valor [\<box>](/es/docs/Web/CSS/background$edit#%3Cbox%3E) puede ser incluido cero, una o dos veces. Si se incluye una vez, establece ambos {{cssxref("background-origin")}} y {{cssxref("background-clip")}}. Si se incluye dos veces, la primera ocurrencia establece {{cssxref("background-origin")}}, y el segundo conjunto {{cssxref("background-clip")}}.
-- El valor [`<background-color>`](/es/docs/Web/CSS/background$edit#%3Cbackground-color%3E) sólo puede ser incluido en la última capa especificada.
+- El valor [`<bg-size>`](#bg-size) sólo puede ser incluido inmediatamente después de la [\<position>](#position), separado con el carácter '/', así: "`center/80%`".
+- El valor [\<box>](#box) puede ser incluido cero, una o dos veces. Si se incluye una vez, establece ambos {{cssxref("background-origin")}} y {{cssxref("background-clip")}}. Si se incluye dos veces, la primera ocurrencia establece {{cssxref("background-origin")}}, y el segundo conjunto {{cssxref("background-clip")}}.
+- El valor [`<background-color>`](#background-color) sólo puede ser incluido en la última capa especificada.
 
 ## Valores
 

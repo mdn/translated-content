@@ -205,7 +205,7 @@ mediaElem.load();
 
 ### Detecting track addition and removal (requires JavaScript)
 
-You can monitor the track lists within a media element to detect when tracks are added to or removed from the element's media. For example, you can watch for the {{event("addtrack")}} event being fired on the associated {{domxref("AudioTrackList")}} object (retrieved via {{domxref("HTMLMediaElement.audioTracks")}}) to be informed when audio tracks are added to the media:
+You can monitor the track lists within a media element to detect when tracks are added to or removed from the element's media. For example, you can watch for the [`addtrack`](/zh-TW/docs/Web/API/RTCPeerConnection/addTrack) event being fired on the associated {{domxref("AudioTrackList")}} object (retrieved via {{domxref("HTMLMediaElement.audioTracks")}}) to be informed when audio tracks are added to the media:
 
 ```js
 const mediaElem = document.querySelector("video");

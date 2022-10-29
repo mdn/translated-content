@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 
 ## Сводка
 
-Свойство **`Number.`MIN_VALUE** представляет минимальное положительное числовое значение, представимое в JavaScript.
+Свойство **`Number.MIN_VALUE`** представляет минимальное положительное числовое значение, представимое в JavaScript.
 
 {{js_property_attributes(0, 0, 0)}}
 

@@ -191,7 +191,7 @@ class Team(models.Model):
 
 Le modèle Django fournit une API de requête simplifiée qui nous permet de faire des recherches dans une base de données. Cette API peut inclure plusieurs champs à la fois en supportant plusieurs critères (e.g. exactement, insensible à la casse, supérieur à, etc.), et peut supporter des déclarations complexes (par exemple, vous pouvez spécifier une recherche sur les équipes U11 ayant un nom d'équipe commençant par "Fr" ou se terminant par "al").
 
-L'extrait de code ci-dessous montre une fonction vue (gestionnaire de ressources) affichant toutes nos équipes U09. La ligne en gras montre comment on peut utiliser l'API de requête pour filtrer tous les enregistrements où le champ `team_level` comprend strictement le texte 'U09' (notez comment ce critère est passé dans la fonction `filter()` comme argument, où le nom du champ et le type de correspondance sont séparés par un double underscore : **team_level\_\_exact**).
+L'extrait de code ci-dessous montre une fonction vue (gestionnaire de ressources) affichant toutes nos équipes U09. La ligne en gras montre comment on peut utiliser l'API de requête pour filtrer tous les enregistrements où le champ `team_level` comprend strictement le texte 'U09' (notez comment ce critère est passé dans la fonction `filter()` comme argument, où le nom du champ et le type de correspondance sont séparés par un double underscore : **`team_level__exact`**).
 
 ```python
 ## nom du fichier : views.py
