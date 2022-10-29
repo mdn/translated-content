@@ -62,13 +62,13 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 ### `max`
 
-允许值范围内的最大值。如果输入到元素中的 {{htmlattrxref("value", "input")}} 超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)。如果 `max` 属性的值不是数字，则元素没有最大值。
+允许值范围内的最大值。如果输入到元素中的 {{htmlattrxref("value", "input")}} 超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是数字，则元素没有最大值。
 
 此值必须大于或等于 `min` 属性的值。
 
 ### `min`
 
-允许值范围内的最小值。如果元素的 {{htmlattrxref("value", "input")}} 小于此值，则该元素将无法通过 [约束验证](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)。如果为 `min` 指定的值不是有效数字，则输入没有最小值。
+允许值范围内的最小值。如果元素的 {{htmlattrxref("value", "input")}} 小于此值，则该元素将无法通过 [约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果为 `min` 指定的值不是有效数字，则输入没有最小值。
 
 该值必须小于或等于 `max` 属性的值。
 
@@ -410,7 +410,7 @@ switchBtn.addEventListener('click', () => {
 
 ## 无障碍
 
-`<input type="number">` 元素的隐含 [role](/zh-CN/docs/Web/Accessibility/ARIA/Roles) 是 [`spinbutton`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/spinbutton_role) 。如果 spinbutton 对你的表单控件来说不是一个重要的功能，那就*不要*使用 `type="number"`；此时，请使用带有 [`pattern`](/zh-CN/docs/Web/HTML/attributes/pattern) 属性的 [`inputmode="numeric"`](/zh-CN/docs/Web/HTML/Global_attributes/inputmode)，将字符限制在数字和相关字符。如果坚持使用 `<input type="number">`，用户在试图做其他事情时，有可能意外地增加一个数字。此外，如果用户试图输入不是数字的东西，也没有明确的反馈说明他们做错了什么。
+`<input type="number">` 元素的隐含 [role](/zh-CN/docs/Web/Accessibility/ARIA/Roles) 是 [`spinbutton`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/spinbutton_role) 。如果 spinbutton 对你的表单控件来说不是一个重要的功能，那就*不要*使用 `type="number"`；此时，请使用带有 [`pattern`](/zh-CN/docs/Web/HTML/Attributes/pattern) 属性的 [`inputmode="numeric"`](/zh-CN/docs/Web/HTML/Global_attributes/inputmode)，将字符限制在数字和相关字符。如果坚持使用 `<input type="number">`，用户在试图做其他事情时，有可能意外地增加一个数字。此外，如果用户试图输入不是数字的东西，也没有明确的反馈说明他们做错了什么。
 
 也可以考虑使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) 属性，帮助用户更快完成表单，减少出错的机会。例如，要在一个邮编字段上启用自动填写功能，请设置 `autocomplete="postal-code"`。
 
@@ -424,7 +424,7 @@ switchBtn.addEventListener('click', () => {
 
 ## 参见
 
-- [HTML 表单指南](/zh-CN/docs/Learn/HTML/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel)
 - [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
