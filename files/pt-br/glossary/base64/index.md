@@ -25,7 +25,7 @@ Em JavaScript existem duas funções respectivamente para decodificar e codifica
 - [`btoa()`](/pt-BR/docs/Web/API/btoa): cria uma string ASCII codificada em Base64 a partir de uma "string" de dados binários ("btoa" deve ser lido como "binário para ASCII").
 - [`atob()`](/pt-BR/docs/Web/API/atob): decodifica uma string codificada em Base64 ("atob" deve ser lida como "ASCII para binário").
 
-O algoritmo usado por `atob()` e   `btoa()`é especificado na [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648), seção 4.
+O algoritmo usado por `atob()` e `btoa()` é especificado na [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648), seção 4.
 
 Observe que `btoa()` espera receber dados binários e lançará uma exceção se a string fornecida contiver quaisquer caracteres cuja representação UTF-16 ocupe mais de um byte. Para obter mais detalhes, consulte a documentação de [`btoa()`](/pt-BR/docs/Web/API/btoa).
  
@@ -33,7 +33,7 @@ Observe que `btoa()` espera receber dados binários e lançará uma exceção se
 
 Cada dígito Base64 representa exatamente 6 bits de dados. Assim, três bytes de 8 bits da string de entrada/arquivo binário (3×8 bits = 24 bits) podem ser representados por quatro dígitos Base64 de 6 bits (4×6 = 24 bits).
 
-Isso significa que a versão Base64 de uma string ou arquivo terá pelo menos 133% do tamanho de sua fonte (um aumento de ~33%). O aumento pode ser maior se os dados codificados forem pequenos. Por exemplo, a cadeia "a"com length === 1fica codificado para "YQ=="com length === 4— um aumento de 300%. 
+Isso significa que a versão Base64 de uma string ou arquivo terá pelo menos 133% do tamanho de sua fonte (um aumento de ~33%). O aumento pode ser maior se os dados codificados forem pequenos. Por exemplo, a cadeia "a" com length === 1 fica codificado para "YQ==" com length === 4— um aumento de 300%. 
 
 ## O "Unicode Problem"
 
@@ -338,11 +338,11 @@ const myBuffer = base64DecToArr(
 alert(myBuffer.byteLength);
 ```
 
-> **Note**: A função `base64DecToArr(sBase64[, nBlocksSize])` retorna
+> **Note:** A função `base64DecToArr(sBase64[, nBlocksSize])` retorna
 > um [uint8Array](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) de bytes.
 > Se o seu objetivo é construir um buffer de dados brutos de 16 bits / 32 bits / 64 bits,
 > use o argumento `nBlocksSize`,
->  que é o número de bytes dos quais a propriedade `uint8Array.buffer.bytesLength` deve resultar em múltiplos
+> que é o número de bytes dos quais a propriedade `uint8Array.buffer.bytesLength` deve resultar em múltiplos
 > (`1` ou omitido para ASCII, strings binárias
 > (ou seja, uma string na qual cada caractere na string é tratado como um byte de dados binários)
 > ou strings codificadas em UTF-8, `2` para strings UTF-16, `4` para strings UTF-32).
