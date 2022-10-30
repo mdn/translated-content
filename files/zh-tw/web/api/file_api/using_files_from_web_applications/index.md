@@ -101,7 +101,7 @@ for (var i = 0; i < files.length; i++) {
 
 ## 使用 click() 方法隱藏檔案輸入元素
 
-從 Gecko 2.0開始，為了顯示個人化開啟檔案的 UI 和使用者選擇的檔案可以隱藏 {{ HTMLElement("input") }} 元素和顯示個人化的設計。可以藉由設置 CSS 「display:none」 和對 {{ HTMLElement("input") }} 元素呼叫 `click()` 方法。
+從 Gecko 2.0 開始，為了顯示個人化開啟檔案的 UI 和使用者選擇的檔案可以隱藏 {{ HTMLElement("input") }} 元素和顯示個人化的設計。可以藉由設置 CSS 「display:none」 和對 {{ HTMLElement("input") }} 元素呼叫 `click()` 方法。
 
 HTML 如下：
 
