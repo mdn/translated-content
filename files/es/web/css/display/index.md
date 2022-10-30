@@ -172,7 +172,7 @@ En la actualidad, es mejor especificar `display` utilizando una sola palabra cla
 
 ### `display: none;`
 
-Al utilizar un valor de `none`en la propiedad `display`el elemento se elimina del [árbol de accesibilidad](/es/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs). El efecto de esto será que este elemento y sus hijos no serán anunciados a los lectores de pantalla utilizados por no videntes.
+Al utilizar un valor de `none` en la propiedad `display` el elemento se elimina del [árbol de accesibilidad](/es/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs). El efecto de esto será que este elemento y sus hijos no serán anunciados a los lectores de pantalla utilizados por no videntes.
 
 Si deseas ocultar el elemento solo de forma visible, pero que los lectores de accesibilidad lo sigan anunciando, puedes utilizar [un método alternativo con una combinación de propiedades de CSS](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link).
 

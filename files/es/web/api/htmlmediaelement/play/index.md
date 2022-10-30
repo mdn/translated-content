@@ -27,7 +27,7 @@ Es una promesa({{jsxref("Promise")}}) que se resuelve cuando se inicia la reprod
 
 El **controlador de rechazo** de la promesas se llama con un nombre de excepción pasado como su único parámetro de entrada (a diferencia de una excepción tradicional que se lanza). Los posibles errores incluyen:
 
-- `NotAllowedError`( _Error no permitido_)
+- `NotAllowedError` ( _Error no permitido_)
   - : El agente de usuario(navegador) o el sistema operativo no permiten la reproducción de medios en el contexto o situación actual. Esto puede suceder, por ejemplo, si el navegador requiere que el usuarion inicie explícitamente la reproducción de medios haciendo clic en el botón "reproducir".
 - NotSupportedError( _Error no admitido_)
   - : La fuente de medios (que puede especificarse como {{domxref("MediaStream")}}, {{domxref("MediaSource")}}, {{domxref("Blob")}}, o {{domxref("File")}}) no representa un formato de medios compatible.

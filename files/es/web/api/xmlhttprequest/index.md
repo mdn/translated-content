@@ -207,7 +207,7 @@ Inicia la peticion, este metodo est
 
 Inicializa la peticion. Este método se utiliza desde el código nativo, para inicializar una solicitud desde el código JavaScript, utilice `open ()` en su lugar.
 
-> **Nota:** Calling this method an already active request (one for which `open()`or `openRequest()`has already been called) is the equivalent of calling `abort()`.
+> **Nota:** Calling this method an already active request (one for which `open()` or `openRequest()` has already been called) is the equivalent of calling `abort()`.
 
 ```
 void open(
@@ -226,7 +226,7 @@ void open(
 - `url`
   - : The URLto which to send the request.
 - `async`
-  - : An optional boolean parameter, defaulting to `true`, indicating whether or not to perform the operation asynchronously. If this value is `false`, the `send()`method does not return until the response is received. If `true`, notification of a completed transaction is provided using event listeners. This _must_ be true if the `multipart` attribute is `true`, or an exception will be thrown.
+  - : An optional boolean parameter, defaulting to `true`, indicating whether or not to perform the operation asynchronously. If this value is `false`, the `send()` method does not return until the response is received. If `true`, notification of a completed transaction is provided using event listeners. This _must_ be true if the `multipart` attribute is `true`, or an exception will be thrown.
 - `user`
   - : The optional user name to use for authentication purposes; by default, this is an empty string.
 - `password`
@@ -270,11 +270,11 @@ void send(
 
 If the body is an `nsIDOMDocument`, it is serialized before being sent.
 
-If it's an `nsIInputStream`, it must be compatible with `nsIUploadChannel`'s `setUploadStream()`method. In that case, a Content-Length header is added to the request, with its value obtained using `nsIInputStream`'s `available()`method. Any headers included at the top of the stream are treated as part of the message body. The stream's MIMEtype should be specified by setting the Content-Type header using the [`setRequestHeader()`](</en/XMLHttpRequest#setRequestHeader()>)method prior to calling `send()`.
+If it's an `nsIInputStream`, it must be compatible with `nsIUploadChannel`'s `setUploadStream()` method. In that case, a Content-Length header is added to the request, with its value obtained using `nsIInputStream`'s `available()` method. Any headers included at the top of the stream are treated as part of the message body. The stream's MIMEtype should be specified by setting the Content-Type header using the [`setRequestHeader()`](</en/XMLHttpRequest#setRequestHeader()>)method prior to calling `send()`.
 
 ### sendAsBinary()
 
-A variant of the `send()`method that sends binary data.
+A variant of the `send()` method that sends binary data.
 
 ```
 void sendAsBinary(

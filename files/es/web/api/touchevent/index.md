@@ -12,7 +12,7 @@ Los toques pueden ser representados por el objeto {{ domxref("Touch") }}, cada t
 Constructor
 
 - {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}}
-  - : Crea un objeto Touch`Event`.
+  - : Crea un objeto `TouchEvent`.
 
 ## Propiedades
 

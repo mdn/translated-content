@@ -52,7 +52,7 @@ Firefox не поддерживает:
 
 Firefox не поддерживает:
 
-- "http\://127.0.0.1" or "http\://localhost" as script sources: they must be served over HTTPS.
+- `http://127.0.0.1` or `http://localhost` as script sources: they must be served over HTTPS.
 
 #### options_ui
 
@@ -236,7 +236,7 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
 
 - Firefox does not support:
 
-  - the `focused `option in `create()`
+  - the `focused` option in `create()`
 
 - In Firefox `onFocusChanged` will trigger multiple times for a given focus change.
 

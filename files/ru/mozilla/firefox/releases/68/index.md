@@ -52,7 +52,7 @@ translation_of: Mozilla/Firefox/Releases/68
 
 #### Сетевой монитор
 
-- В списке[ запросов](/ru/docs/Tools/Network_Monitor/request_list#Filtering_requests) Сетевой монитора теперь можно блокировать определённые URL ({{bug(1151368)}}).
+- В списке [запросов](/ru/docs/Tools/Network_Monitor/request_list#Filtering_requests) Сетевой монитора теперь можно блокировать определённые URL ({{bug(1151368)}}).
 - Теперь вы можете повторно отправить запрос без редактирования метода, URL, параметров и заголовков, используя команду [Переотправить](/ru/docs/Tools/Network_Monitor/request_list#Context_menu) в контекстном меню ({{bug(1422014)}}).
 - Контекстное меню Сетевого монитора, вкладка [Заголовки](/ru/docs/Tools/Network_Monitor/request_details#Headers), теперь позволяет вам скопировать всю или же некоторую информацию о заголовках в формате JSON ({{bug(1442249)}}).
 

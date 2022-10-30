@@ -566,7 +566,7 @@ W—Z
 
   resource://gre/res/ua.css
 
-## Reglas arroba (_At-rules_)
+## Reglas arroba (At-rules)
 
 - {{Cssxref("@-moz-document")}}
 

@@ -18,7 +18,7 @@ Esto hace posible observar un documento para detectar cuando sus consultas de me
 
 ## Propiedades
 
-La nueva versión de la interfaz de _`MediaQueryList` \_hereda las propiedades de su interfaz principal, _{{domxref("EventTarget")}}.\_
+La nueva versión de la interfaz de `MediaQueryList` hereda las propiedades de su interfaz principal, {{domxref("EventTarget")}}.
 
 - {{domxref("MediaQueryList.matches")}} {{readonlyInline}}
   - : Un {{domxref("Boolean")}} que devuelve `true` si el

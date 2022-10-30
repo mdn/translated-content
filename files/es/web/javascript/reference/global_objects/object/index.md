@@ -113,7 +113,7 @@ No hay ningún método en un Objeto que sirva para borrar sus propiedades (como 
 
 ### Usando `Object` dados los tipos `undefined` y `null`
 
-Los siguientes ejemplos almacenan un objeto vacío `Object`en `o`:
+Los siguientes ejemplos almacenan un objeto vacío `Object` en `o`:
 
 ```js
 let o = new Object();
@@ -147,7 +147,7 @@ Cuando altere el comportamiento de los métodos existentes en `Object.prototype`
 
 Cuando una función es llamada, los argumentos de la llamada son retenidos por la "variable" pseudo-arreglo [arguments](/es/docs/Web/JavaScript/Reference/Functions/arguments). Por ejemplo en la llamada `myFn(a, b, c)`, los argumentos dentro del cuerpo de `myFn` contendrán tres elementos pseudo-arreglo correspondientes a `(a, b, c)`.
 
-Cuando modificamos prototipos con hooks, pase `this`y sus argumentos (el estado durante el llamado) al actual comportamiento llamando a `apply()`en la función. Esta patrón puede ser usado por cualquier prototipo, como `Node.prototype`, `Function.prototype`, etc.
+Cuando modificamos prototipos con hooks, pase `this` y sus argumentos (el estado durante el llamado) al actual comportamiento llamando a `apply()` en la función. Esta patrón puede ser usado por cualquier prototipo, como `Node.prototype`, `Function.prototype`, etc.
 
 ```js
 var current = Object.prototype.valueOf;

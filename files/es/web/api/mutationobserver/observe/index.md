@@ -22,7 +22,7 @@ mutationObserver.observe(target[, options])
 - `target`
   - : Un {{domxref("Node")}} del DOM (que puede ser un {{domxref("Element")}}) perteneciente al árbol DOM, o la raiz de un subárbol de nodos, donde observar cambios.
 - `options` {{optional_inline}}
-  - : Un objeto {{domxref("MutationObserverInit")}} opcional, que decribe qué cambios en el DOM deben ser enviados a la función `callback`del observador.
+  - : Un objeto {{domxref("MutationObserverInit")}} opcional, que decribe qué cambios en el DOM deben ser enviados a la función `callback` del observador.
 
 ### Valor devuelto
 
@@ -36,7 +36,7 @@ mutationObserver.observe(target[, options])
 
     - Las opciones han sido configuradas de tal modo que no existe nada que monitorizar (por ejemplo, si {{domxref("MutationObserverInit.childList")}}, {{domxref("MutationObserverInit.attributes")}}, y {{domxref("MutationObserverInit.characterData")}} son **false**)
     - La opcion `attributes` es `false` (indicando que los cambios en los atributos no son monitorizados) y `attributeOldValue` es `true` y/o `attributeFilter` está presente.
-    - Las opciones {{domxref("MutaitonObserverInit.characterDataOldValue", "characterDataOldValue")}} son `true`pero {{domxref("MutationObserverInit.characterData")}} es `false` (indicando que los cambios en los caracteres no se guardan).
+    - Las opciones {{domxref("MutaitonObserverInit.characterDataOldValue", "characterDataOldValue")}} son `true` pero {{domxref("MutationObserverInit.characterData")}} es `false` (indicando que los cambios en los caracteres no se guardan).
 
 ## Notas de uso
 

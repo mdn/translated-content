@@ -27,15 +27,15 @@ Seleccionar solo un fichero usando la API File es sencillo:
 
 Cuando el usuario elige el fichero, la función `handleFiles()` es llamada con un objeto [`FileList`](/en/DOM/FileList)el cual a su vez contiene un objeto [`File`](/en/DOM/File) que representa el fichero elegido por el usuario.
 
-Si se prefiere permitir al usuario elegir varios ficheros, entonces se pone el atributo `multiple`en el elemento `input:`
+Si se prefiere permitir al usuario elegir varios ficheros, entonces se pone el atributo `multiple` en el elemento `input:`
 
 ```
 <input type="file" id="input" multiple="true" onchange="handleFiles(this.files)">
 ```
 
-En este caso, la lista de ficheros pasada a la función `handleFiles()`contiene un objeto [`File`](/en/DOM/File)por cada fichero seleccionado por el usuario.
+En este caso, la lista de ficheros pasada a la función `handleFiles()` contiene un objeto [`File`](/en/DOM/File) por cada fichero seleccionado por el usuario.
 
-Comenzando en Gecko 2.0 {{ geckoRelease("2.0") }}, se puede ocultar el realmente feo {{ HTMLElement("input") }} y representar tu propio interfaz para abrir el picker de ficheros y pintar que fichero o ficheros ha seleccionado el usuario. Esto se puede hacer añadiendo al elemento input la característica "display:none" en su css, o estilo y llamando al método `click()`del elemento {{ HTMLElement("input") }}.
+Comenzando en Gecko 2.0 {{ geckoRelease("2.0") }}, se puede ocultar el realmente feo {{ HTMLElement("input") }} y representar tu propio interfaz para abrir el picker de ficheros y pintar que fichero o ficheros ha seleccionado el usuario. Esto se puede hacer añadiendo al elemento input la característica "display:none" en su css, o estilo y llamando al método `click()` del elemento {{ HTMLElement("input") }}.
 
 Como aparece en este HTML:
 
@@ -75,7 +75,7 @@ function handleFiles() {
 }
 ```
 
-Nota: en este caso, la función `handleFiles()`mira la lista de ficheros con la finalidad de aceptar un parametro, mientras los eventos listeners sean añadidos de esta manera no pueden aceptar un parametro del input.
+Nota: en este caso, la función `handleFiles()` mira la lista de ficheros con la finalidad de aceptar un parametro, mientras los eventos listeners sean añadidos de esta manera no pueden aceptar un parametro del input.
 
 Gecko 2.0 {{ geckoRelease("2.0") }} introduce soporte para los métodos de DOM {{ domxref("window.createBlobURL()") }} y {{ domxref("window.revokeBlobURL()") }}. El cual te permite crear un simple string con la URL que referenciar cualquier dato que pueda referenciar usando un objeto [`File`](/en/DOM/File) DOM, esto incluye los ficheros locales del usuario del dispositivo.
 
@@ -194,7 +194,7 @@ function handleFiles(files) {
 
 Aquí nuestro bucle recorre los archivos seleccionados por el usuario y mira el atributo `type` de cada archivo para ver si es una imagen (haciendo que una expresión regular coincida con la cadena de texto "image.\*"). Para cada archivo que sea una imagen, creamos un nuevo elemento `img`. Se puede usar CSS para establecer bordes bonitos, sombras, y especificar el tamaño de la imagen, el de manera que ni siquiera necesita hacerse aquí.
 
-Cada imagen tiene la clase CSS "obj" añadida, para hacerla mas fácil buscarla en el árbol del DOM. Además añadimos un atributo`file` a cada imagen especificando el [`Fichero`](/en/DOM/File) para la imagen; esto nos permitira traer el hecho de subir las imágenes más tarde. Finalmente, usamos {{ domxref("Node.appendChild()") }} para añadir la nueva miniatura en el área de la previsualización de nuestro documento.
+Cada imagen tiene la clase CSS "obj" añadida, para hacerla mas fácil buscarla en el árbol del DOM. Además añadimos un atributo `file` a cada imagen especificando el [`Fichero`](/en/DOM/File) para la imagen; esto nos permitira traer el hecho de subir las imágenes más tarde. Finalmente, usamos {{ domxref("Node.appendChild()") }} para añadir la nueva miniatura en el área de la previsualización de nuestro documento.
 
 A continuación establecemos el [`FileReader`](/en/DOM/FileReader) para controlar la carga de la imagen de forma asíncrona y enlazarla con el elemento `img`. Después de crear el nuevo objeto `FileReader`, configuramos su función `onload`, luego llamamos a `readAsDataURL()` para comenzar la operación de lectura en segundo plano. Cuando el contenido completo de la imagen ha sido cargado, se convierte a `data:` URL, el cuál es pasado al callback `onload`. Nuestra implementación de esta rutina simplemente establece el atributo `src` del elemento `img` cargado, cuyo resultado es la imagen apareciendo en la miniatura en la pantalla del usuario.
 
@@ -277,7 +277,7 @@ function sendFiles() {
 }
 ```
 
-La segunda línea crea un array, llamado`imgs`, de todos los elementos en el documento con la clase CSS "obj". En nuestro caso, estos serán todas las miniaturas de las imágenes. Una vez que tenemos esa lista, of all the elements in the document with the CSS class "obj". In our case, these will be all the image thumbnails. Once we have that list, es trivial pasar por la lista, creando una nueva instancia de `FileUpload` por cada una. Subiendo el correspondiente archivo por cada uno de ellos.
+La segunda línea crea un array, llamado `imgs`, de todos los elementos en el documento con la clase CSS "obj". En nuestro caso, estos serán todas las miniaturas de las imágenes. Una vez que tenemos esa lista, of all the elements in the document with the CSS class "obj". In our case, these will be all the image thumbnails. Once we have that list, es trivial pasar por la lista, creando una nueva instancia de `FileUpload` por cada una. Subiendo el correspondiente archivo por cada uno de ellos.
 
 ### Manipulando el proceso de carga de un archivo
 

@@ -150,7 +150,7 @@ Propiedades aun no categorizadas
 - {{domxref("HTMLInputElement.labels")}} {{readonlyInline}}
   - : `{{domxref("NodeList")}} array:` **Returns** a list of {{ HTMLElement("label") }} elements that are labels for this element.
 - `step`
-  - : `string:` **Returns / Sets** the element's {{ htmlattrxref("step", "input") }} attribute, which works with\*\* \*\*{{htmlattrxref("min","input")}} and {{htmlattrxref("max","input")}} to limit the increments at which a numeric or date-time value can be set. It can be the string `any` or a positive floating point number. If this is not set to `any`, the control accepts only values at multiples of the step value greater than the minimum.
+  - : `string:` **Returns / Sets** the element's {{ htmlattrxref("step", "input") }} attribute, which works with {{htmlattrxref("min","input")}} and {{htmlattrxref("max","input")}} to limit the increments at which a numeric or date-time value can be set. It can be the string `any` or a positive floating point number. If this is not set to `any`, the control accepts only values at multiples of the step value greater than the minimum.
 - `valueAsDate`
   - : `{{jsxref("Date")}} object:` Returns / Sets the value of the element, interpreted as a date, or `null` if conversion is not possible.
 - `valueAsNumber`
@@ -177,9 +177,9 @@ Propiedades aun no categorizadas
   - : Focus on the input element; keystrokes will subsequently go to this element.
 - `blur()`
   - : Removes focus from input; keystrokes will subsequently go nowhere.
-- [`select()`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select)
+- [`select()`](/en-US/docs/Web/API/HTMLInputElement/select)
   - : Selects the input text in the element, and focuses it so the user can subsequently replace the whole entry.
-- [`click()`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/click)
+- [`click()`](/en-US/docs/Web/API/HTMLInputElement/click)
   - : Simulates a click on the element.
 - [`setSelectionRange()`](/en-US/docs/Web/API/HTMLInputElement/setSelectionRange)
   - : Selects a range of text in the element (but does not focus it). The optional selectionDirection parameter may be "forward" or "backward" to establish the direction in which selection was set, or "none" if the direction is unknown or not relevant. The default is "none". Specifying a selectionDirection parameter sets the value of the selectionDirection property.

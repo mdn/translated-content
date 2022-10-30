@@ -70,7 +70,7 @@ function onVisited(historyItem) {
 browser.history.onVisited.addListener(onVisited);
 ```
 
-Для использования API истории браузера нужно добавить разрешение "`history`" с помощью элемента [permissions](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) в файле [`manifest.json`](https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
+Для использования API истории браузера нужно добавить разрешение "`history`" с помощью элемента [permissions](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) в файле [`manifest.json`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 ## Дизайн веб-страницы
 
