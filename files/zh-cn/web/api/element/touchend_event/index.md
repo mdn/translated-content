@@ -49,7 +49,7 @@ original_slug: Web/API/Document/touchend_event
 
 ## Related Events
 
-- {{event("touchstart")}}
-- {{event("touchend")}}
-- {{event("touchmove")}}
-- {{event("touchcancel")}}
+- [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event)
+- [`touchend`](/zh-CN/docs/Web/API/Element/touchend_event)
+- [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event)
+- [`touchcancel`](/zh-CN/docs/Web/API/Element/touchcancel_event)

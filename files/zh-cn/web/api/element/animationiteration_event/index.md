@@ -5,7 +5,7 @@ slug: Web/API/Element/animationiteration_event
 
 {{APIRef("CSS3 Animations")}}
 
-{{event("animationiteration")}}事件的处理器 . 当 [CSS Animation](/zh-CN/docs/Web/CSS/CSS_Animations) 运动到最后一帧时触发。An iteration ends when a single pass through the sequence of animation instructions is completed by executing the last animation step.
+[`animationiteration`](/zh-CN/docs/Web/API/Element/animationiteration_event)事件的处理器 . 当 [CSS Animation](/zh-CN/docs/Web/CSS/CSS_Animations) 运动到最后一帧时触发。An iteration ends when a single pass through the sequence of animation instructions is completed by executing the last animation step.
 
 ## 语法
 
@@ -17,7 +17,7 @@ target.onanimationiteration = {{jsxref("Function")}}
 
 ### Value
 
-A {{jsxref("Function")}} to be called when an {{event("animationiteration")}} event occurs indicating that a CSS animation has reached the end of an iteration while running on the _`target`_, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: an {{domxref("AnimationEvent")}} object describing the event which occurred.
+A {{jsxref("Function")}} to be called when an [`animationiteration`](/zh-CN/docs/Web/API/Element/animationiteration_event) event occurs indicating that a CSS animation has reached the end of an iteration while running on the _`target`_, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: an {{domxref("AnimationEvent")}} object describing the event which occurred.
 
 ## 实例
 
@@ -155,5 +155,5 @@ Each time the box reaches the opposing corner, it stops, with the button reflect
 
 ## 参见
 
-- The {{event("animationiteration")}} event this event handler is triggered by.
+- The [`animationiteration`](/zh-CN/docs/Web/API/Element/animationiteration_event) event this event handler is triggered by.
 - {{domxref("AnimationEvent")}}
