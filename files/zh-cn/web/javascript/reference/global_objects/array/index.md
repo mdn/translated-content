@@ -124,251 +124,357 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 ## 示例
 
-### 常见操作
+本节提供一些 JavaScript 中常见的数组操作示例。
 
-**创建数组**
+> **备注：** 如果你还不熟悉数组的基础知识，可以考虑先读一下 [JavaScript 第一步：数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)，它解释了[数组是什么](zh-CN/docs/Learn/JavaScript/First_steps/Arrays#数组是什么？)，还包括其他常见的数组操作示例。
+
+### 创建数组
+
+下面的例子展示了三种创建新数组的方法：首先使用[数组字面量](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#数组字面量)，然后使用 [`Array()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/array/array) 构造函数，最后使用 [`String.prototype.split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 从字符串构建数组。
 
 ```js
-let fruits = ['Apple', 'Banana']
+// 'fruits' array created using array literal notation.
+const fruits = ['Apple', 'Banana'];
+console.log(fruits.length);
+// 2
 
-console.log(fruits.length)
+// 'fruits2' array created using the Array() constructor.
+const fruits2 = new Array('Apple', 'Banana');
+console.log(fruits2.length);
+// 2
+
+// 'fruits3' array created using String.prototype.split().
+const fruits3 = 'Apple, Banana'.split(', ');
+console.log(fruits3.length);
 // 2
 ```
 
-**通过索引访问数组元素**
+### 从数组中创建一个字符串
+
+下面的例子使用 [`join()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 方法从 `fruits` 数组中创建一个字符串。
 
 ```js
-let first = fruits[0]
-// Apple
-
-let last = fruits[fruits.length - 1]
-// Banana
+const fruits = ['Apple', 'Banana'];
+const fruitsString = fruits.join(', ');
+console.log(fruitsString);
+// "Apple, Banana"
 ```
 
-**遍历数组**
+### 通过索引访问数组元素
+
+下面的例子展示了如何通过指定它们在数组中的位置的索引号来访问 `fruits` 数组中的元素。
 
 ```js
-fruits.forEach(function(item, index, array) {
-  console.log(item, index)
-})
-// Apple 0
-// Banana 1
+const fruits = ['Apple', 'Banana'];
+
+// The index of an array's first element is always 0.
+fruits[0]; // Apple
+
+// The index of an array's second element is always 1.
+fruits[1]; // Banana
+
+// The index of an array's last element is always one
+// less than the length of the array.
+fruits[fruits.length - 1]; // Banana
+
+// Using a index number larger than the array's length
+// returns 'undefined'.
+fruits[99]; // undefined
 ```
 
-**添加元素到数组的末尾**
+### 在数组中查找元素的索引
+
+下面的例子使用 [`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) 方法查找字符串 `"Banana"` 在 `fruits` 数组中的位置（索引）。
 
 ```js
-let newLength = fruits.push('Orange')
-// ["Apple", "Banana", "Orange"]
-```
-
-**删除数组末尾的元素**
-
-```js
-let last = fruits.pop() // remove Orange (from the end)
-// ["Apple", "Banana"]
-```
-
-**删除数组头部元素**
-
-```js
-let first = fruits.shift() // remove Apple from the front
-// ["Banana"]
-```
-
-**添加元素到数组的头部**
-
-```js
-let newLength = fruits.unshift('Strawberry') // add to the front
-// ["Strawberry", "Banana"]
-```
-
-**找出某个元素在数组中的索引**
-
-```js
-fruits.push('Mango')
-// ["Strawberry", "Banana", "Mango"]
-
-let pos = fruits.indexOf('Banana')
+const fruits = ['Apple', 'Banana'];
+console.log(fruits.indexOf('Banana'));
 // 1
 ```
 
-**通过索引删除某个元素**
+### 检查数组是否包含某个元素
+
+下面的例子展示了两种检查 `fruits` 数组是否包含 `"Banana"` 和 `"Cherry"` 的方法：首先使用 [`includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) 方法，然后使用 [`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) 方法来测试索引值不是 `-1`。
 
 ```js
-let removedItem = fruits.splice(pos, 1) // this is how to remove an item
+const fruits = ['Apple', 'Banana'];
 
+fruits.includes('Banana'); // true
+fruits.includes('Cherry'); // false
+
+// 如果 indexOf() 不返回 -1，则数组包含给定的元素。
+fruits.indexOf('Banana') !== -1; // true
+fruits.indexOf('Cherry') !== -1; // false
+```
+
+### 将元素添加到数组中
+
+下面的例子使用 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push) 方法向 `fruits` 数组追加一个新字符串。
+
+```js
+const fruits = ['Apple', 'Banana'];
+const newLength = fruits.push('Orange');
+console.log(fruits);
+// ["Apple", "Banana", "Orange"]
+console.log(newLength);
+// 3
+```
+
+### 移除数组中的最后一个元素
+
+下面的例子使用 [`pop()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) 方法从 `fruits` 数组中移除最后一个元素。
+
+```js
+const fruits = ['Apple', 'Banana', 'Orange'];
+const removedItem = fruits.pop();
+console.log(fruits);
+// ["Apple", "Banana"]
+console.log(removedItem);
+// Orange
+```
+
+> **备注：** `pop()` 只能用于从数组中移除最后一个元素。若要从数组末尾移除多个元素，请参见下一个示例。
+
+### 从数组末尾移除多个元素
+
+下面的例子使用 [`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法从 `fruits` 数组中移除最后 3 个元素。
+
+```js
+const fruits = ['Apple', 'Banana', 'Strawberry', 'Mango', 'Cherry'];
+const start = -3;
+const removedItems = fruits.splice(start);
+console.log(fruits);
+// ["Apple", "Banana"]
+console.log(removedItems);
+// ["Strawberry", "Mango", "Cherry"]
+```
+
+### 将数组截断为前 N 个元素
+
+下面的例子使用 [`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法将 `fruits` 数组截断到只剩下前 2 个元素。
+
+```js
+const fruits = ['Apple', 'Banana', 'Strawberry', 'Mango', 'Cherry'];
+const start = 2;
+const removedItems = fruits.splice(start);
+console.log(fruits);
+// ["Apple", "Banana"]
+console.log(removedItems);
+// ["Strawberry", "Mango", "Cherry"]
+```
+
+### 移除数组中的第一个元素
+
+下面的例子使用 [`shift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) 方法从 `fruits` 数组中移除第一个元素。
+
+```js
+const fruits = ['Apple', 'Banana'];
+const removedItem = fruits.shift();
+console.log(fruits);
+// ["Banana"]
+console.log(removedItem);
+// Apple
+```
+
+> **注释：** `shift()` 只能用于从数组中移除第一个元素。若要从数组的开头移除多个元素，请参见下一个示例。
+
+## 从数组开头移除多个元素
+
+下面的例子使用 [`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法从 `fruits` 数组中移除前 3 个元素。
+
+```js
+const fruits = ['Apple', 'Strawberry', 'Cherry', 'Banana', 'Mango'];
+const start = 0;
+const deleteCount = 3;
+const removedItems = fruits.splice(start, deleteCount);
+console.log(fruits);
+// ["Banana", "Mango"]
+console.log(removedItems);
+// ["Apple", "Strawberry", "Cherry"]
+```
+
+### 向数组开头添加一个新的元素
+
+下面的例子使用 [`unshift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) 方法在索引 `0` 处向 `fruits` 数组中添加一个新元素——使其成为数组中新的第一元素。
+
+```js
+const fruits = ['Banana', 'Mango'];
+const newLength = fruits.unshift('Strawberry');
+console.log(fruits);
+// ["Strawberry", "Banana", "Mango"]
+console.log(newLength);
+// 3
+```
+
+### 按索引移除单个元素
+
+下面的例子使用 [`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法从 `fruits` 数组中删除字符串 `"Banana"`——通过指定 `"Banana"` 的索引位置。
+
+```js
+const fruits = ['Strawberry', 'Banana', 'Mango'];
+const start = fruits.indexOf('Banana');
+const deleteCount = 1;
+const removedItems = fruits.splice(start, deleteCount);
+console.log(fruits);
+// ["Strawberry", "Mango"]
+console.log(removedItems);
+// ["Banana"]
+```
+
+### 按索引移除多个元素
+
+下面的例子使用 [`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法从 `fruits` 数组中删除字符串 `"Banana"` 和 `"Strawberry"`——通过指定 `"Banana"` 的索引位置，以及要移除的元素总数。
+
+```js
+const fruits = ['Apple', 'Banana', 'Strawberry', 'Mango'];
+const start = 1;
+const deleteCount = 2;
+const removedItems = fruits.splice(start, deleteCount);
+console.log(fruits);
+// ["Apple", "Mango"]
+console.log(removedItems);
+// ["Banana", "Strawberry"]
+```
+
+### 替换数组中的多个元素
+
+下面的例子使用 [`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法将 `fruits` 数组中的最后两个元素替换为新元素。
+
+```js
+const fruits = ['Apple', 'Banana', 'Strawberry'];
+const start = -2;
+const deleteCount = 2;
+const removedItems = fruits.splice(start, deleteCount, 'Mango', 'Cherry');
+console.log(fruits);
+// ["Apple", "Mango", "Cherry"]
+console.log(removedItems);
+// ["Banana", "Strawberry"]
+```
+
+### 遍历数组
+
+下面的例子使用 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环遍历 `fruits` 数组，将每一个元素打印到控制台。
+
+```js
+const fruits = ['Apple', 'Mango', 'Cherry'];
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+// Apple
+// Mango
+// Cherry
+```
+
+但 `for...of` 只是遍历任意数组的众多方法之一；更多方法，参见[循环与迭代](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration)，并查看 [`every()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/every)、[`filter()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)、[`flatMap()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)、[`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)、[`reduce()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) 和 [`reduceRight()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) 方法——并参见下一个示例，该示例使用 [`forEach()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 方法。
+
+### 对数组中的每个元素调用函数
+
+下面的例子使用 [`forEach()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 方法在 `fruits` 数组中的每个元素上调用一个函数；该函数将每个元素以及元素的索引号打印到控制台。
+
+```js
+const fruits = ['Apple', 'Mango', 'Cherry'];
+fruits.forEach((item, index, array) => {
+  console.log(item, index);
+});
+// Apple 0
+// Mango 1
+// Cherry 2
+```
+
+### 合并多个数组
+
+下面的例子使用 [`concat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) 方法将 `fruits` 数组与 `moreFruits` 数组合并，生成一个新的 `combinedFruits` 数组。注意，`fruits` 和 `moreFruits` 保持不变。
+
+```js
+const fruits = ['Apple', 'Banana', 'Strawberry'];
+const moreFruits = ['Mango', 'Cherry'];
+const combinedFruits = fruits.concat(moreFruits);
+console.log(combinedFruits);
+// ["Apple", "Banana", "Strawberry", "Mango", "Cherry"]
+
+// The 'fruits' array remains unchanged.
+console.log(fruits);
+// ["Apple", "Banana", "Strawberry"]
+
+// The 'moreFruits' array also remains unchanged.
+console.log(moreFruits);
+// ["Mango", "Cherry"]
+```
+
+### 复制数组
+
+下面的例子展示了从现有的 `fruits` 数组创建新数组的三种方法：首先使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)，然后使用 [`from()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from) 方法，然后使用 [`slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) 方法。
+
+```js
+const fruits = ['Strawberry', 'Mango'];
+
+// Create a copy using spread syntax.
+const fruitsCopy = [...fruits];
+// ["Strawberry", "Mango"]
+
+// Create a copy using the from() method.
+const fruitsCopy2 = Array.from(fruits);
+// ["Strawberry", "Mango"]
+
+// Create a copy using the slice() method.
+const fruitsCopy3 = fruits.slice();
 // ["Strawberry", "Mango"]
 ```
 
-**从一个索引位置删除多个元素**
+所有内置的数组复制操作（[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、[`Array.from()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)、[`Array.prototype.slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) 和 [`Array.prototype.concat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)）都会创建[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)。如果你想要一个数组的[深拷贝](/zh-CN/docs/Glossary/Deep_copy)，你可以使用 {{jsxref("JSON.stringify()")}} 将数组转换成一个 JSON 字符串，然后使用 {{jsxref("JSON.parse()")}} 将字符串转换回一个完全独立于原数组的新数组。
 
 ```js
-let vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot']
-console.log(vegetables)
-// ["Cabbage", "Turnip", "Radish", "Carrot"]
-
-let pos = 1
-let n = 2
-
-let removedItems = vegetables.splice(pos, n)
-// this is how to remove items, n defines the number of items to be removed,
-// starting at the index position specified by pos and progressing toward the end of array.
-
-console.log(vegetables)
-// ["Cabbage", "Carrot"] (the original array is changed)
-
-console.log(removedItems)
-// ["Turnip", "Radish"]
+const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 ```
 
-**复制一个数组**
+你还可以使用 [`structuredClone()`](/zh-CN/docs/Web/API/structuredClone) 方法创建深拷贝，该方法的优点是允许源代码中的 {{Glossary("transferable objects", "可转移对象")}} 被 *转移* 到新的副本，而不仅仅是克隆。
+
+最后，重要的是要理解，将现有数组赋值给新变量并不会创建数组或其元素的副本。相反，新变量只是对原数组的引用或别名；也就是说，原来的数组名和新的变量名只是同一个对象的两个名称（因此总是被计算为[严格相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#严格相等)）。因此，如果你对原数组的值或新变量的值做了任何改变，另一个也会改变：
 
 ```js
-let shallowCopy = fruits.slice() // this is how to make a copy
-// ["Strawberry", "Mango"]
+const fruits = ['Strawberry', 'Mango'];
+const fruitsAlias = fruits;
+// 'fruits' and 'fruitsAlias' are the same object, strictly equivalent.
+fruits === fruitsAlias // true
+// Any changes to the 'fruits' array change 'fruitsAlias' too.
+fruits.unshift('Apple', 'Banana');
+console.log(fruits);
+// ['Apple', 'Banana', 'Strawberry', 'Mango']
+console.log(fruitsAlias);
+// ['Apple', 'Banana', 'Strawberry', 'Mango']
 ```
 
-### 访问数组元素
+### 对数组的元素进行分组
 
-JavaScript 数组的索引是从 0 开始的，第一个元素的索引为 0，最后一个元素的索引等于该数组的 {{jsxref("Array.length", "长度")}} 减 1。
+{{jsxref("Array.prototype.group()")}} 方法可用于对数组的元素进行分组，使用测试函数返回指示当前元素组的字符串。
 
-如果指定的索引是一个无效值，JavaScript 数组并不会报错，而是会返回 `undefined`。
+这里我们有一个简单的库存数组，它包含具有 `name` 和 `type` 的 `food` 对象。
 
 ```js
-let arr = ['this is the first element', 'this is the second element', 'this is the last element']
-console.log(arr[0])              // logs 'this is the first element'
-console.log(arr[1])              // logs 'this is the second element'
-console.log(arr[arr.length - 1]) // logs 'this is the last element'
+const inventory = [
+  { name: 'asparagus', type: 'vegetables' },
+  { name: 'bananas', type: 'fruit' },
+  { name: 'goat', type: 'meat' },
+  { name: 'cherries', type: 'fruit' },
+  { name: 'fish', type: 'meat' },
+];
 ```
 
-虽然数组元素可以看做是数组对象的属性，就像 `toString` 一样，但是下面的写法是错误的，运行时会抛出 `SyntaxError` 异常，而原因则是使用了非法的属性名：
+要使用 `group()`，你需要提供一个回调函数，该回调函数与当前元素、可选的当前索引和数组一起调用，并返回指示元素组的字符串。
+
+下面的例子使用一个箭头函数返回每个数组元素的 `type`（此处使用[函数参数的对象解构语法](zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#从作为函数实参的对象中提取数据)从传递的对象中提取 `type` 元素)。结果是一个对象，其属性以回调返回的唯一字符串命名。为每个属性分配一个数组，其中包含数组中的元素。
 
 ```js
-console.log(arr.0) // a syntax error
+const result = inventory.group(({ type }) => type);
+console.log(result.vegetables);
+// expected output: Array [Object { name: "asparagus", type: "vegetables" }]
 ```
 
-并不是 JavaScript 数组有什么特殊之处，而是因为在 JavaScript 中，以数字开头的属性不能用点号引用，必须用方括号。
+注意，返回的对象引用*相同*元素作为原数组（而不是 {{glossary("deep copy"，"深拷贝")}}）。改变这些元素的内部结构将反映在原始数组和返回对象中。
 
-比如，如果一个对象有一个名为 `3d` 的属性，那么只能用方括号来引用它。下面是具体的例子：
-
-```js
-let years = [1950, 1960, 1970, 1980, 1990, 2000, 2010]
-console.log(years.0)   // a syntax error
-console.log(years[0])  // works properly
-```
-
-```js
-renderer.3d.setTexture(model, 'character.png')     // a syntax error
-renderer['3d'].setTexture(model, 'character.png')  // works properly
-```
-
-注意在 `3d` 那个例子中，引号是必须的。你也可以将数组的索引用引号引起来，比如 `years[2]` 可以写成 `years['2']`。
-
-`years[2]` 中的 2 会被 JavaScript 解释器通过调用 `toString` 隐式转换成字符串。正因为这样，`'2'` 和 `'02'` 在 `years` 中所引用的可能是不同位置上的元素。而下面这个例子也可能会打印 `true`：
-
-```js
-console.log(years['2'] != years['02'])
-```
-
-### 数组长度与数字下标之间的关系
-
-JavaScript 数组的 {{jsxref("Array.length", "length")}} 属性和其数字下标之间有着紧密的联系。
-
-数组内置的几个方法（例如 {{jsxref("Array.join", "join")}}、{{jsxref("Array.slice", "slice")}}、{{jsxref("Array.indexOf", "indexOf")}} 等）都会考虑 {{jsxref("Array.length", "length")}} 的值。
-
-另外还有一些方法（例如 {{jsxref("Array.push", "push")}}、{{jsxref("Array.splice", "splice")}} 等）还会改变 {{jsxref("Array.length", "length")}} 的值。
-
-```js
-const fruits = []
-fruits.push('banana', 'apple', 'peach')
-
-console.log(fruits.length) // 3
-```
-
-使用一个合法的下标为数组元素赋值，并且该下标超出了当前数组的大小的时候，解释器会同时修改 {{jsxref("Array.length", "length")}} 的值：
-
-```js
-fruits[5] = 'mango'
-console.log(fruits[5])            // 'mango'
-console.log(Object.keys(fruits))  // ['0', '1', '2', '5']
-console.log(fruits.length)        // 6
-```
-
-也可以显式地给 {{jsxref("Array.length", "length")}} 赋一个更大的值：
-
-```js
-fruits.length = 10
-console.log(fruits)              // ['banana', 'apple', 'peach', empty x 2, 'mango', empty x 4]
-console.log(Object.keys(fruits)) // ['0', '1', '2', '5']
-console.log(fruits.length)       // 10
-console.log(fruits[8])           // undefined
-```
-
-而为 {{jsxref("Array.length", "length")}} 赋一个更小的值则会删掉一部分元素：
-
-```js
-fruits.length = 2
-console.log(Object.keys(fruits)) // ['0', '1']
-console.log(fruits.length)       // 2
-```
-
-这一节的内容在 {{jsxref("Array.length")}} 中有更详细的介绍。
-
-### 正则匹配结果所返回的数组
-
-使用正则表达式匹配字符串可以得到一个数组。这个数组中包含本次匹配的相关信息和匹配结果。{{jsxref("RegExp.exec")}}、{{jsxref("String.match")}}、{{jsxref("String.replace")}} 都会返回这样的数组。
-
-看下面的例子和例子下面的表格：
-
-```js
-// Match one d followed by one or more b's followed by one d
-// Remember matched b's and the following d
-// Ignore case
-
-const myRe = /d(b+)(d)/i
-const myArray = myRe.exec('cdbBdbsbz')
-```
-
-该正则匹配返回的数组包含以下属性和元素：
-
-<table class="fullwidth-table standard-table">
-  <thead>
-    <tr>
-      <th scope="col">属性/元素</td>
-      <th scope="col">说明</td>
-      <th scope="col">示例</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>input</code><br />{{ReadOnlyInline}}</td>
-      <td>正则表达式所匹配的原始字符串</td>
-      <td><code>"cdbBdbsbz"</code></td>
-    </tr>
-    <tr>
-      <td><code>index</code><br />{{ReadOnlyInline}}</td>
-      <td>匹配到的子串在原始字符串中的索引</td>
-      <td><code>1</code></td>
-    </tr>
-    <tr>
-      <td><code>[0]</code><br />{{ReadOnlyInline}}</td>
-      <td>最后匹配到的子串</td>
-      <td><code>"dbBd"</code></td>
-    </tr>
-    <tr>
-      <td><code>[1], ...[n]</code><br />{{ReadOnlyInline}}</td>
-      <td>正则表达式中所指定的分组所匹配到的子串，其数量由正则中的分组数量决定，无最大上限</td>
-      <td>
-        <code>[1]: "bB"<br />[2]: "d"</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+如果不能使用字符串作为键，例如，如果要分组的信息与可能更改的对象相关联，那么可以使用 {{jsxref("Array.prototype.groupToMap()")}}。这与 `group` 非常相似，只是它将数组的元素分组到 {{jsxref("Map")}} 中，可以使用任意值（{{Glossary("object", "对象")}}或{{Glossary("primitive", "基本类型")}}）作为键。
 
 ## 其它示例
-
-### 创建数组
 
 ### 创建二维数组
 
