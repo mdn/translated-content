@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 ---
 {{JSRef}}
 
-Метод **`join()`** объединяет все элементы массива в строку. Метод работает по тому же алгоритму, что и {{jsxref("Array.prototype.join()")}}_._ _TypedArray_ это один из типизированных массивов: [типы массивов](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
+Метод **`join()`** объединяет все элементы массива в строку. Метод работает по тому же алгоритму, что и {{jsxref("Array.prototype.join()")}}. _TypedArray_ это один из типизированных массивов: [типы массивов](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
 
 ## Синтаксис
 

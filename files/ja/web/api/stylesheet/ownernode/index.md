@@ -1,43 +1,44 @@
 ---
 title: StyleSheet.ownerNode
 slug: Web/API/StyleSheet/ownerNode
+l10n:
+  sourceCommit: 84fc68f1674c9b2d1708fb38dc2824e228f9bb3f
 ---
 
 {{APIRef("CSSOM")}}
 
-## 概要
+**`ownerNode`** は {{domxref("StyleSheet")}} インターフェイスのプロパティで、このスタイルシートと文書内の関連付けを行うノードを返します。
 
-**ownerNode** は、このスタイルシートを document と関連付けているノードを返します。
+これは通常、 HTML の [`<link>`](/ja/docs/Web/HTML/Element/link) または [`<style>`](/ja/docs/Web/HTML/Element/style) 要素ですが、 `<?xml-stylesheet ?>` の場合は[処理命令ノード](/ja/docs/Web/API/ProcessingInstruction)を返すこともあります。
 
-## 構文
+## 値
 
-```
-objRef = stylesheet.ownerNode
-```
+{{domxref("Node")}} オブジェクトです。
 
 ## 例
 
-```
-<html>
- <head>
-  <link rel="StyleSheet" href="example.css" type="text/css" />
-  <script>
-   function stilo() {
-    alert(document.styleSheets[0].ownerNode);
-   }
-  </script>
- </head>
- <body>
-   <button onclick="stilo()">ss</button>
- </body>
+```html
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="example.css" />
+  </head>
+  <body>
+    <button onclick="alert(document.styleSheets[0].ownerNode)">
+      Show example.css's ownerNode
+    </button>
+  </body>
 </html>
-// displays "object HTMLLinkElement"
+// Displays "object HTMLLinkElement"
 ```
 
-## 補記
+## メモ
 
-HTML の場合、**ownerNode** は、相当する {{HTMLElement("link")}} 要素または {{HTMLElement("style")}} 要素になるでしょう。XML の場合、リンク処理命令になるでしょう。他のスタイルシートに含まれるスタイルシートの場合、この属性の値は `NULL` になります。
+[`@import`](/ja/docs/Web/CSS/@import) などを使用して、他のスタイルシートをインクルードするスタイルシートでは、このプロパティの値は `null` になります。
 
 ## 仕様書
 
-DOM Level 2 Styles - STYLESHEET
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

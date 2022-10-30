@@ -39,7 +39,7 @@ border-bottom-style: <border-style> | inherit
 - solid
   - : línea única, recta y sólida.
 - double
-  - : dos líneas rectas que se suman a la cantidad de píxeles definidos como ancho de borde`border-width`.
+  - : dos líneas rectas que se suman a la cantidad de píxeles definidos como ancho de borde `border-width`.
 - groove
   - : efecto de hundido.
 - ridge

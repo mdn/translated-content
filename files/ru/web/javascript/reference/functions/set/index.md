@@ -37,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Functions/set
 - Он не должен объявляться в литерале объекта, с другим набором или вводом данных для того же самого свойства.
   ( `{ set x(v) { }, set x(v) { } }` и `{ x: ..., set x(v) { } }` запрещены)
 
-Сеттер может быть удалён оператором [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete "en-US/docs/JavaScript/Reference/Operators/Special/delete").
+Сеттер может быть удалён оператором [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete).
 
 ## Примеры
 
@@ -58,7 +58,7 @@ var o = {
 
 ### Удаление сеттера оператором `delete`
 
-Если вы хотите удалить сеттер, вы можете просто его [`удалить`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete):
+Если вы хотите удалить сеттер, вы можете просто его [`удалить`](/en-US/docs/Web/JavaScript/Reference/Operators/delete):
 
 ```js
 delete o.current;

@@ -36,9 +36,9 @@ La pseudoclase `:dir()` requiere un parámetro, que representa la direccionalida
 - `rtl`
   - : Orientar elementos de derecha a izquierda.
 
-- ### Sintaxis formal
+### Sintaxis formal
 
-  - : {{csssyntax}}
+{{csssyntax}}
 
 ## Ejemplo
 

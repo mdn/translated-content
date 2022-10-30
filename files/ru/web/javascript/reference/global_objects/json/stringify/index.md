@@ -83,8 +83,8 @@ JSON.stringify({ a: 2 }, null, ' ');
 JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
 // вернёт строку:
 // '{
-// 	"uno": 1,
-// 	"dos": 2
+//   "uno": 1,
+//   "dos": 2
 // }'
 ```
 

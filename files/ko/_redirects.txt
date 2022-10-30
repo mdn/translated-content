@@ -753,6 +753,7 @@
 /ko/docs/Web/JavaScript/Reference/Operators/연산자_우선순위	/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 /ko/docs/Web/JavaScript/Reference/Properties_Index	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
+/ko/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/ko/docs/conflicting/Web/JavaScript/Reference/Strict_mode
 /ko/docs/Web/JavaScript/Shells	/ko/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ko/docs/Web/JavaScript/Tutorials	/ko/docs/Web/JavaScript
 /ko/docs/Web/JavaScript/쉘	/ko/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d

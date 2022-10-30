@@ -26,11 +26,11 @@ _Наследует свойства о его родителя, {{domxref("HTML
 
 ## Методы
 
-_Не имеет специфичных методов; наследует методы от его родителя, {{domxref("HTMLElement")}} и от {{domxref("WindowEventHandlers")}}\_\_._
+_Не имеет специфичных методов; наследует методы от его родителя, {{domxref("HTMLElement")}} и от {{domxref("WindowEventHandlers")}}._
 
 ## Обработчики событий
 
-_Не имеет специфичных обработчиков событий; наследует обработчики событий от его родителя, {{domxref("HTMLElement")}} и от {{domxref("WindowEventHandlers")}}\_\_._
+_Не имеет специфичных обработчиков событий; наследует обработчики событий от его родителя, {{domxref("HTMLElement")}} и от {{domxref("WindowEventHandlers")}}._
 
 - {{domxref("WindowEventHandlers.onafterprint")}}
   - : Это {{event("Event_handlers", "event handler")}} представляющий собой код который будет вызван когда {{event("afterprint")}} событие будет вызвано.

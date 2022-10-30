@@ -139,7 +139,7 @@ someString + ""                              // "hi"
 
 ## Встроенная итерируемость
 
-{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} и {{jsxref("Set")}} итерируемы, так как их прототипы содержат ` @@``iterator ` метод, а {{jsxref("Object")}} нет, так как прототип {{jsxref("Object")}} не содержит метода ` @@``iterator `
+{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} и {{jsxref("Set")}} итерируемы, так как их прототипы содержат `@@iterator` метод, а {{jsxref("Object")}} нет, так как прототип {{jsxref("Object")}} не содержит метода `@@iterator`
 
 ## Итерируемость определённая пользователем
 

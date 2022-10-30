@@ -60,7 +60,7 @@ if (condition) {
 }
 ```
 
-Здесь `condition` может быть любым выражением, вычисляемым как истинное (true) или ложное (false). Чтобы получить более подробную информацию о значениях `true `и `false`, прочитайте [Boolean](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description). Если условие оценивается как` true`, то выполняется `statement_1`, в противном случае -` statement_2`. Блоки `statement_1 `и` statement_2` могут быть любыми блоками, включая также вложенные инструкции `if`.
+Здесь `condition` может быть любым выражением, вычисляемым как истинное (true) или ложное (false). Чтобы получить более подробную информацию о значениях `true` и `false`, прочитайте [Boolean](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description). Если условие оценивается как `true`, то выполняется `statement_1`, в противном случае - `statement_2`. Блоки `statement_1` и `statement_2` могут быть любыми блоками, включая также вложенные инструкции `if`.
 
 Также вы можете объединить несколько инструкций, пользуясь `else if` для получения последовательности проверок условий:
 
@@ -150,7 +150,7 @@ switch (expression) {
 
 Если оператор `break` отсутствует, то после выполнения кода, который соответствует выбранной ветви, начнётся выполнение кода, который следует за ней.
 
-В следующем примере если `fruittype` имеет значение `"Bananas"`, то будет выведено сообщение` "Bananas are $0.48 a pound."` и оператор `break` прекратит выполнение `switch`. Если бы оператор `break` отсутствовал, то был бы также выполнен код, соответствующий ветви `"Cherries"`, т.е. выведено сообщение `"Cherries are $3.00 a pound."`.
+В следующем примере если `fruittype` имеет значение `"Bananas"`, то будет выведено сообщение `"Bananas are $0.48 a pound."` и оператор `break` прекратит выполнение `switch`. Если бы оператор `break` отсутствовал, то был бы также выполнен код, соответствующий ветви `"Cherries"`, т.е. выведено сообщение `"Cherries are $3.00 a pound."`.
 
 ```js
 switch (fruittype) {
@@ -377,7 +377,7 @@ try {
 
 ### Загрузка изображения при помощи XHR
 
-Простой пример использования объектов `Promise` и [`XMLHttpRequest`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) для загрузки изображения доступен в репозитории MDN [promise-test](https://github.com/mdn/js-examples/tree/master/promises-test) на GitHub. Вы также можете [посмотреть его в действии](https://mdn.github.io/js-examples/promises-test/). Каждый шаг прокомментирован, что позволяет вам разобраться в архитектуре `Promise` и XHR. Здесь приводится версия без комментариев:
+Простой пример использования объектов `Promise` и [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) для загрузки изображения доступен в репозитории MDN [promise-test](https://github.com/mdn/js-examples/tree/master/promises-test) на GitHub. Вы также можете [посмотреть его в действии](https://mdn.github.io/js-examples/promises-test/). Каждый шаг прокомментирован, что позволяет вам разобраться в архитектуре `Promise` и XHR. Здесь приводится версия без комментариев:
 
 ```js
 function imgLoad(url) {

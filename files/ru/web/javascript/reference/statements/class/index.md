@@ -46,7 +46,9 @@ class Square extends Polygon {
 }
 ```
 
-> **Предупреждение:** ### Попытка объявить класс дваждыПереопределение класса с помощью class declaration вызовет ошибку типа.`js class Foo {}; class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared `Та же ошибка будет вызвана, если класс был определён перед использованием class declaration.```js
+> **Предупреждение:** ### Попытка объявить класс дваждыПереопределение класса с помощью class declaration вызовет ошибку типа. `js class Foo {}; class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared` Та же ошибка будет вызвана, если класс был определён перед использованием class declaration.
+>
+> ```js
 > var Foo = class {};
 > class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
 >

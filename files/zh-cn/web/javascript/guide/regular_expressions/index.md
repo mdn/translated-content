@@ -638,7 +638,7 @@ function escapeRegExp(string) {
 | {{jsxref("RegExp.test", "test")}}             | 一个在字符串中测试是否匹配的 RegExp 方法，它返回 true 或 false。                                       |
 | {{jsxref("String.match", "match")}}         | 一个在字符串中执行查找匹配的 String 方法，它返回一个数组，在未匹配到时会返回 null。                    |
 | {{jsxref("String.matchAll", "matchAll")}} | 一个在字符串中执行查找所有匹配的 String 方法，它返回一个迭代器（iterator）。                           |
-| {{jsxref("String.search", "search")}}         | 一个在字符串中测试匹配的 String 方法，它返回匹配到的位置索引，或者在失败时返回-1。                     |
+| {{jsxref("String.search", "search")}}         | 一个在字符串中测试匹配的 String 方法，它返回匹配到的位置索引，或者在失败时返回 -1。                     |
 | {{jsxref("String.replace", "replace")}}     | 一个在字符串中执行查找匹配的 String 方法，并且使用替换字符串替换掉匹配到的子字符串。                   |
 | {{jsxref("String.split", "split")}}         | 一个使用正则表达式或者一个固定字符串分隔一个字符串，并将分隔后的子字符串存储到数组中的 `String` 方法。 |
 

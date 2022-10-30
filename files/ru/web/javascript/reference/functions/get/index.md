@@ -37,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Functions/get
 - Он должен иметь ровно 0 параметров (смотрите [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) для доп. информации);
 - Он не должен появляться в объектном литерале вместе с другим get или через ввод данных для того же свойства (`{ get x() { }, get x() { } }` и `{ x: ..., get x() { } }` запрещены).
 
-Геттер можно удалить при помощи оператора [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete "en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/delete_Operator").
+Геттер можно удалить при помощи оператора [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
 
 ## Примеры
 
