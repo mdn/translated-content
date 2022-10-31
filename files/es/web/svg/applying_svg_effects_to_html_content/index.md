@@ -13,8 +13,6 @@ original_slug: Applying_SVG_effects_to_HTML_content
 ---
 Aplicación de efectos de SVG para el contenido HTML.
 
-{{ gecko_minversion_header("1.9.1") }}
-
 Firefox 3.5 introduce soporte para usar SVG como un componente de estilos CSS para aplicar efectos de SVG para el contenido HTML.
 
 Puede especificar SVG en los estilos, ya sea dentro del mismo documento, o dentro de una hoja de estilos externa.
