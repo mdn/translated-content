@@ -3,11 +3,13 @@ title: 结构化克隆算法
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 ---
 
-**结构化克隆算法**用于复制复杂 JavaScript 对象的算法。通过来自 [Workers](/zh-CN/docs/Web/API/Worker)的 `postMessage()` 或使用 [IndexedDB](/zh-CN/docs/Glossary/IndexedDB) 存储对象时在内部使用。它通过递归输入对象来构建克隆，同时保持先前访问过的引用的映射，以避免无限遍历循环。
+{{DefaultAPISidebar("Web Workers API")}}
+
+**结构化克隆算法**用于复制复杂 JavaScript 对象的算法。通过来自 [Worker](/zh-CN/docs/Web/API/Worker) 的 `postMessage()` 或使用 [IndexedDB](/zh-CN/docs/Glossary/IndexedDB) 存储对象时在内部使用。它通过递归输入对象来构建克隆，同时保持先前访问过的引用的映射，以避免无限遍历循环。
 
 ## 结构化克隆所不能做到的
 
-- [`Function`](/zh-CN/JavaScript/Reference/Global_Objects/Function) 对象是不能被结构化克隆算法复制的；如果你尝试这样子去做，这会导致抛出 `DATA_CLONE_ERR` 的异常。
+- [`Function`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function) 对象是不能被结构化克隆算法复制的；如果你尝试这样子去做，这会导致抛出 `DATA_CLONE_ERR` 的异常。
 - 企图去克隆 DOM 节点同样会抛出 `DATA_CLONE_ERR` 异常。
 - 对象的某些特定参数也不会被保留
 
