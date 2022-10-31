@@ -205,7 +205,7 @@ dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 ```
 
-在这个例子中，我们将 ID 为`dropbox`的元素变为了我们的 drop 区域。这是通过给元素添加{{event('dragenter')}}, {{event('dragover')}}, 和{{event('drop')}} 事件监听器实现的。
+在这个例子中，我们将 ID 为`dropbox`的元素变为了我们的 drop 区域。这是通过给元素添加[`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event), [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event), 和[`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event) 事件监听器实现的。
 
 我们其实并不需要对`dragenter` and `dragover` 事件进行处理，所以这些函数都很简单。他们只需要包括禁止事件传播和阻止默认事件：
 

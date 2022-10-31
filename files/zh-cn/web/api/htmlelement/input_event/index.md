@@ -30,7 +30,7 @@ slug: Web/API/HTMLElement/input_event
 
 **`input`** 事件也适用于启用了 {{domxref("HTMLElement.contentEditable", "contenteditable")}} 的元素，以及开启了 {{domxref("Document.designMode", "designMode")}} 的任意元素。在`contenteditable` 和 `designMode` 的情况下，事件的 target 为当前正在编辑的宿主。如果这些属性应用于多个元素上，当前正在编辑的宿主为最近的父节点不可编辑的祖先元素。
 
-对于 `type=checkbox` 或 `type=radio` 的 `input` 元素，每当用户切换控件（通过触摸、鼠标或键盘）时（[HTML5 规范](https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2)），`input` 事件都应该触发。然而，历史事实并非如此。请检查兼容性，或使用 {{event("change")}} 事件代替这些类型的元素。
+对于 `type=checkbox` 或 `type=radio` 的 `input` 元素，每当用户切换控件（通过触摸、鼠标或键盘）时（[HTML5 规范](https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2)），`input` 事件都应该触发。然而，历史事实并非如此。请检查兼容性，或使用 [`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 事件代替这些类型的元素。
 
 > **备注：** 每当元素的 `value` 改变，`input` 事件都会被触发。这与 {{domxref("HTMLInputElement.change_event", "change")}} 事件不同。change 事件仅当 value 被提交时触发，如按回车键，从一个 options 列表中选择一个值等。
 
@@ -89,10 +89,10 @@ function updateValue(e) {
 
 ## 参见
 
-- {{event("keydown")}}
-- {{event("keyup")}}
-- {{event("keypress")}}
-- {{event("input")}}
+- [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event)
+- [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event)
+- [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event)
+- [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)
 - {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}
 - {{domxref("HTMLElement/change_event", "change")}}
 - {{domxref("HTMLInputElement/invalid_event", "invalid")}}
