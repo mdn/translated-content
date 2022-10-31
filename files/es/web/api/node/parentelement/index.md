@@ -36,9 +36,9 @@ En algunos navegadores, la propiedad `elementoPadre` es solo definida en nodos q
 
 {{Compat("api.Node.parentElement")}}
 
-## Especificación
+## Especificaciones
 
-- {{spec("http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#parent-element", "DOM Level 4: Node.parentElement", "WD")}}
+{{Specifications}}
 
 ## Ver también
 
