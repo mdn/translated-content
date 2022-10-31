@@ -31,13 +31,13 @@ console.log(`temp 的值为：${temp}`)
 
 ## 返回值
 
-None ({{jsxref("undefined")}})。
+无（{{jsxref("undefined")}}）。
 
 ## 输出对象
 
-不要使用`console.log(obj)`，而是使用`console.log(JSON.parse(JSON.stringify(obj)))`。
+不要使用 `console.log(obj)`，而应该使用 `console.log(JSON.parse(JSON.stringify(obj)))`。
 
-这样可以确保你所看到的`obj`的值是当前输出的值。否则，许多浏览器会提供一个随着值的变化而不断更新的实时视图。这可能不是你想要的。
+这样可以确保你所看到的 `obj` 的值是当前输出的值。否则，大多数浏览器会提供一个随着值的变化而不断更新的实时视图。这可能不是你想要的。
 
 ## 规范
 
@@ -47,7 +47,7 @@ None ({{jsxref("undefined")}})。
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [MSDN: Using the F12 Tools Console to View Errors and Status](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
 - [NodeJS: Console API](https://nodejs.org/docs/latest/api/console.html#console_console_log_data)
