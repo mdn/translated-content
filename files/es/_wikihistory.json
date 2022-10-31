@@ -14943,10 +14943,6 @@
     "modified": "2020-03-12T19:44:40.392Z",
     "contributors": ["davidenriq11", "mamptecnocrata"]
   },
-  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
-    "modified": "2020-10-15T22:13:14.699Z",
-    "contributors": ["xochilpili"]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2019-03-23T22:08:25.338Z",
     "contributors": ["teoli", "pedro-otero"]
