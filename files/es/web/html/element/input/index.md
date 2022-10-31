@@ -1,16 +1,9 @@
 ---
 title: input
 slug: Web/HTML/Element/input
-tags:
-  - Elemento
-  - Etiqueta HTML input
-  - Formularios(2)
-  - HTML
-  - Referencia
-  - Web
-  - formularios html(2)
 translation_of: Web/HTML/Element/input
 original_slug: Web/HTML/Elemento/input
+browser-compat: html.elements.input
 ---
 ## Resumen
 
@@ -114,7 +107,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
     - `video/*`, que representa archivos de vídeo {{HTMLVersionInline("5")}}
     - `image/*`, que representa archivos de imagen {{HTMLVersionInline("5")}}
 
-- {{htmlattrdef("accesskey")}} sólo {{HTMLVersionInline(4)}}, {{obsoleteGeneric("inline", "HTML5")}}
+- {{htmlattrdef("accesskey")}} sólo {{HTMLVersionInline(4)}}
   - : Un caracter que el usuario puede presionar para establecer el cursor en el control. Este atributo es global en HTML5.
 - {{htmlattrdef("mozactionhint")}} {{non-standard_inline}}
   - : Especifica una "pista de acción" usada para determinar cómo etiquetar la tecla "enter" en dispositivos móviles con teclados virtuales. Los valores soportados son `go`, `done`, `next`, `search`, y `send`. Esto queda automáticamente mapeado al texto apropiado y no son sensibles al uso de mayúsculas.
@@ -309,7 +302,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
   - : Trabaja con los atributos **min** y **max**, para limitar el incremento de valores numéricos o de fecha-hora. Puede ser el valor `any` o un número positivo de punto flotante. Si no se establece este atributo como `any`, el control acepta solamente valores múltiplos del valor del atributo, mayores al mínimo.
 - {{htmlattrdef("tabindex")}} específico para el elemento en {{HTMLVersionInline(4)}}, global en {{HTMLVersionInline("5")}}
   - : La posición del elemento en el orden de navegación por la tecla Tab dentro del documento.
-- {{htmlattrdef("usemap")}} solo para {{HTMLVersionInline(4)}}, {{obsoleteGeneric("inline", "HTML5")}}
+- {{htmlattrdef("usemap")}} solo para {{HTMLVersionInline(4)}}
   - : El nombre de un elemento {{HTMLElement("map")}} usado como mapa de imagen.
 - {{htmlattrdef("value")}}
   - : El valor inicial del control. Este atributo es opcional, excepto cuando el atributo **type** es `radio` o `checkbox`.
@@ -401,16 +394,11 @@ Firefox usa la siguiente heurística para determinar la región con la cual vali
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estatus                                  | Comentarios                 |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-input-element', '&lt;input&gt;')}}             | {{Spec2('HTML WHATWG')}}         |                             |
-| {{SpecName('HTML Media Capture', '#the-capture-attribute','&lt;input capture&gt;')}} | {{Spec2('HTML Media Capture')}} | Añade el elemento `capture` |
-| {{SpecName('HTML5 W3C', 'forms.html#the-input-element', '&lt;input&gt;')}}             | {{Spec2('HTML5 W3C')}}             |                             |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.4', '&lt;form&gt;')}}                     | {{Spec2('HTML4.01')}}             |                             |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.input")}}
+{{Compat}}
 
 ## Véase también
 
