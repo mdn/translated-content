@@ -278,7 +278,7 @@ console.log(removedItem);
 
 > **注释：** `shift()` 只能用于从数组中移除第一个元素。若要从数组的开头移除多个元素，请参见下一个示例。
 
-## 从数组开头移除多个元素
+### 从数组开头移除多个元素
 
 下面的例子使用 [`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法从 `fruits` 数组中移除前 3 个元素。
 
@@ -470,7 +470,7 @@ console.log(result.vegetables);
 // expected output: Array [Object { name: "asparagus", type: "vegetables" }]
 ```
 
-注意，返回的对象引用*相同*元素作为原数组（而不是 {{glossary("deep copy"，"深拷贝")}}）。改变这些元素的内部结构将反映在原始数组和返回对象中。
+注意，返回的对象引用*相同*元素作为原数组（而不是 {{glossary("deep copy", "深拷贝")}}）。改变这些元素的内部结构将反映在原始数组和返回对象中。
 
 如果不能使用字符串作为键，例如，如果要分组的信息与可能更改的对象相关联，那么可以使用 {{jsxref("Array.prototype.groupToMap()")}}。这与 `group` 非常相似，只是它将数组的元素分组到 {{jsxref("Map")}} 中，可以使用任意值（{{Glossary("object", "对象")}}或{{Glossary("primitive", "基本类型")}}）作为键。
 
