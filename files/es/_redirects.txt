@@ -2218,7 +2218,7 @@
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 /es/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
-/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/es/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_a91664716c4f7753074ac042780999e0
+/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly	/es/docs/conflicting/WebAssembly/JavaScript_interface
 /es/docs/Web/JavaScript/Reference/Global_Objects/null	/es/docs/Web/JavaScript/Reference/Operators/null
 /es/docs/Web/JavaScript/Reference/Statements/import.meta	/es/docs/Web/JavaScript/Reference/Operators/import.meta
@@ -2830,6 +2830,7 @@
 /es/docs/Zoom_a_página_completa	/es/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
 /es/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries	/es/docs/Web/CSS/Media_Queries/Using_media_queries
 /es/docs/conflicting/web/javascript/reference/deprecated_and_obsolete_features	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
+/es/docs/conflicting/web/javascript/reference/deprecated_and_obsolete_features_a91664716c4f7753074ac042780999e0	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/controladores_protocolos_web	/es/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /es/docs/en	/en-US/
 /es/docs/firefox_Web_Developer_(externo)	https://addons.mozilla.org/firefox/60/
