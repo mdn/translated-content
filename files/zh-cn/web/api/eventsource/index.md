@@ -21,7 +21,7 @@ slug: Web/API/EventSource
 _此接口从其父接口 {{domxref("EventTarget")}} 继承属性。_
 
 - {{domxref("EventSource.onerror")}}
-  - : 是一个 {{event("Event_handlers", "event handler")}}，当发生错误时被调用，并且在此对象上派发 {{event("error")}} 事件。
+  - : 是一个 {{event("Event_handlers", "event handler")}}，当发生错误时被调用，并且在此对象上派发 [`error`](/zh-CN/docs/Web/API/Element/error_event) 事件。
 - {{domxref("EventSource.onmessage")}}
   - : 是一个 {{event("Event_handlers", "event handler")}}，当收到一个 {{event("message")}} 事件，即消息来自源头时被调用。
 - {{domxref("EventSource.onopen")}}
