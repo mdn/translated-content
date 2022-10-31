@@ -82,4 +82,4 @@ Hasta el momento se ha traducido hasta este punto, las tablas que verás a conti
 - {{ domxref("FileReader") }}
 - {{ domxref("File") }}
 - {{ domxref("Blob") }}
-- {{ spec("http://www.w3.org/TR/file-system-api/#errors-and-exceptions", "Specification: FileAPI Errors and exceptions", "WD") }}
+- [Specification: FileAPI Errors and exceptions](https://www.w3.org/TR/file-system-api/#errors-and-exceptions)
