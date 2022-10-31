@@ -7,7 +7,7 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 
 ## 结构化克隆所不能做到的
 
-- [`Error`](/zh-CN/JavaScript/Reference/Global_Objects/Error) 以及 [`Function`](/zh-CN/JavaScript/Reference/Global_Objects/Function) 对象是不能被结构化克隆算法复制的；如果你尝试这样子去做，这会导致抛出 `DATA_CLONE_ERR` 的异常。
+- [`Function`](/zh-CN/JavaScript/Reference/Global_Objects/Function) 对象是不能被结构化克隆算法复制的；如果你尝试这样子去做，这会导致抛出 `DATA_CLONE_ERR` 的异常。
 - 企图去克隆 DOM 节点同样会抛出 `DATA_CLONE_ERR` 异常。
 - 对象的某些特定参数也不会被保留
 
@@ -23,6 +23,7 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 | [Boolean](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean) 对象 |                                                                                                 |
 | String 对象                                                                 |                                                                                                 |
 | [Date](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date)            |                                                                                                 |
+| [Error](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error) 类型      | （仅限部分 [Error 类型](#Error 类型)）。                                                          |
 | [RegExp](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)        | `lastIndex` 字段不会被保留。                                                                    |
 | {{ domxref("Blob") }}                                                |                                                                                                 |
 | {{ domxref("File") }}                                                |                                                                                                 |
@@ -34,6 +35,14 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 | [Object](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)        | 仅包括普通对象（如对象字面量）                                                                  |
 | [Map](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map)              |                                                                                                 |
 | [Set](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)              |                                                                                                 |
+
+## Error 类型
+
+仅支持以下 Error 类型 [Error](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error)、[EvalError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/EvalError)、[RangeError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RangeError)、[ReferenceError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)、[SyntaxError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)、[TypeError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError)、[URIError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/URIError)。
+
+其中 `name` 和 `message` 字段肯定会被结构化，其他有意义的字段可能会结构化，如 `stack`、`cause` 等（取决于不同浏览器的实现）。
+
+[AggregateError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AggregateError) 将会在 [whatwg/html#5749](https://github.com/whatwg/html/pull/5749) 标准中被支持（部分浏览器已支持了）。
 
 ## 相关链接
 
