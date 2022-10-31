@@ -1,13 +1,9 @@
 ---
-title: img
+title: "<img>: El elemento incrustado de imagen"
 slug: Web/HTML/Element/img
-tags:
-  - Contenido
-  - Elemento
-  - HTML
-  - Incrustado
 translation_of: Web/HTML/Element/img
 original_slug: Web/HTML/Elemento/img
+browser-compat: html.elements.img
 ---
 El elemento de imagen HTML **`<img>`** representa una imagen en el documento.
 
@@ -65,14 +61,14 @@ El elemento de imagen HTML **`<img>`** representa una imagen en el documento.
 
 Este elemento incluye atributos globales.
 
-- {{htmlattrdef("align")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}} Use the {{cssxref('vertical-align')}} CSS property
+- {{htmlattrdef("align")}} {{deprecated_inline}}
   - : Alineamiento de la texto respecto al contexto que la rodea.
 - {{htmlattrdef("alt")}}
   - : Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un [formato no soportado](/es/docs/Web/HTML/Elemento/img#Supported_image_formats) o si la imagen aún no se ha descargado.
-  
+
     > **Nota:** Omitir este atributo indica que la imagen es una parte clave del contenido, y no tiene equivalencia textual. Establecer este atributo como cadena vacía indica que la imagen no es una parte clave del contenido; los navegadores no gráficos pueden omitirlo.
 
-- {{htmlattrdef("border")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
+- {{htmlattrdef("border")}} {{deprecated_inline}}
 
   - : Anchura del borde alrededor de la imagen.
 
@@ -88,7 +84,7 @@ Este elemento incluye atributos globales.
     Cuando no existe, el recurso es buscado sin petición CORS (i.e., `sin enviar el Origen:` HTTP header) , previniendo el uso no pintado del elemento {{HTMLElement('canvas')}}. Si es inválido, se maneja como si se hubiese usado **anonymous**. Ver [atributos de configuración CORS](/es/docs/HTML/CORS_settings_attributes) para más información.
 - {{htmlattrdef("height")}}
   - : La altura de la imagen en píxeles CSS {{HTMLVersionInline(5)}} o píxeles o como porcentaje en {{HTMLVersionInline(4)}}.
-- {{htmlattrdef("hspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
+- {{htmlattrdef("hspace")}} {{deprecated_inline}}
   - : El número de píxeles de espaciado a la izquierda y la derecha de la imagen.
 - {{htmlattrdef("ismap")}}
 
@@ -98,7 +94,7 @@ Este elemento incluye atributos globales.
 
 - {{htmlattrdef("longdesc")}}
   - : La URL como descripción de una imagen mostrada, complementa al texto de {{htmlattrdef("alt", "img")}}.
-- {{htmlattrdef("name")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
+- {{htmlattrdef("name")}} {{deprecated_inline}}
   - : El nombre para el elemento. Soportado en {{HTMLVersionInline(4)}} solo para compatibilidad con versiones anteriores. En su lugar, usa el atributo **`id`**.
 - {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
 
@@ -145,7 +141,7 @@ Este elemento incluye atributos globales.
 
     > **Nota:** No puedes usar este atributo si el elemento `<img>` es descendiente de un elemento {{htmlelement("a")}} o {{HTMLElement("button")}}.
 
-- {{htmlattrdef("vspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
+- {{htmlattrdef("vspace")}} {{deprecated_inline}}
   - : El número de píxeles de espacio blanco insertado sobre y bajo la imagen.
 
 ## Formatos de imagen soportada
@@ -209,17 +205,12 @@ El atributo`src` es ignorado en agentes de usuario que soportan `srcset` cuando 
 
 ## Especificaciones
 
-| Especificación                                                                                                                           | Estado                               | Comentario                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}} | {{Spec2('Referrer Policy')}} | Añadida la política del atributo `referrer` |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-img-element', '&lt;img&gt;')}}                         | {{Spec2('HTML WHATWG')}}     |                                             |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-img-element', '&lt;img&gt;')}}                         | {{Spec2('HTML5 W3C')}}         |                                             |
-| {{SpecName('HTML4.01', 'struct/objects.html#h-13.2', '&lt;img&gt;')}}                                             | {{Spec2('HTML4.01')}}         |                                             |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("html.elements.img")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - {{HTMLElement("picture")}}, {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements
