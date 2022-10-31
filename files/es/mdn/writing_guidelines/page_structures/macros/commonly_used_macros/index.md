@@ -164,8 +164,6 @@ Estas plantillas tienen la misma semántica que sus contrapartes en línea descr
 - {{TemplateLink("SeeCompatTable")}} se debe usar en páginas que documentan [características experimentales](/es/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental). Ejemplo: `\{{SeeCompatTable}}` {{SeeCompatTable}}
 - {{TemplateLink("Deprecated_Header")}}: `\{{Deprecated_Header}}` {{Deprecated_Header}}
 - {{TemplateLink("Deprecated_Header")}} con parámetro: `\{{Deprecated_Header("gecko5")}}` {{Deprecated_Header("gecko5")}} No utilices el parámetro en ninguna área de diagnóstico del navegador (HTML, APIs, JS, CSS, …).
-- {{TemplateLink("Obsolete_Header")}}: `\{{Obsolete_Header}}` {{Obsolete_Header}}
-- {{TemplateLink("Obsolete_Header")}} con parámetro: `\{{Obsolete_Header("gecko30")}}` {{Obsolete_Header("gecko30")}} No utilice el parámetro en ninguna área de diagnóstico del navegador (HTML, APIs, JS, CSS, …).
 - {{TemplateLink("secureContext_header")}}: `\{{SecureContext_Header}}` {{SecureContext_Header}}
 
 ### Indica que una función está disponible en `workers` web
