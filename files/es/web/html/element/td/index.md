@@ -6,6 +6,8 @@ original_slug: Web/HTML/Elemento/td
 browser-compat: html.elements.td
 ---
 
+{{HTMLRef}}
+
 ## Resumen
 
 El elemento [HTML](/es/docs/Web/HTML) _Celda de tabla_ (**`<td>`**) define la celda de una tabla que contiene datos. Esta participa en el _modelo de tablas_.

@@ -107,7 +107,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
     - `video/*`, que representa archivos de vídeo {{HTMLVersionInline("5")}}
     - `image/*`, que representa archivos de imagen {{HTMLVersionInline("5")}}
 
-- {{htmlattrdef("accesskey")}} sólo {{HTMLVersionInline(4)}}
+- {{htmlattrdef("accesskey")}} sólo {{HTMLVersionInline(4)}} {{deprecated_inline}}
   - : Un caracter que el usuario puede presionar para establecer el cursor en el control. Este atributo es global en HTML5.
 - {{htmlattrdef("mozactionhint")}} {{non-standard_inline}}
   - : Especifica una "pista de acción" usada para determinar cómo etiquetar la tecla "enter" en dispositivos móviles con teclados virtuales. Los valores soportados son `go`, `done`, `next`, `search`, y `send`. Esto queda automáticamente mapeado al texto apropiado y no son sensibles al uso de mayúsculas.
