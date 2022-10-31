@@ -67,4 +67,4 @@ Aunque un poco de SVG puede dar mucho recorrido a la hora de mejorar contenidos 
 - [Mapa de población de los Estados Unidos de América](http://www.carto.net/papers/svg/us_population/index.html)
 - [Caja 3D box](http://www.treebuilder.de/default.asp?file=441875.xml) y [Cajas 3D](http://www.treebuilder.de/default.asp?file=206524.xml)
 - [jVectorMap](http://jvectormap.com/) (mapas interactivos para visualización de datos)
-- [JointJS](http://jointjs.com) (JavaScript libreria de creación de diagramas con JavaScript)
+- [JointJS](https://jointjs.com) (Librería JavaScript para la creación de diagramas)
