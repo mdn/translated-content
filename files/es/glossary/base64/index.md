@@ -73,7 +73,7 @@ Como las [`DOMString`](/en-US/docs/Web/API/DOMString)s son cadenas codificadas e
 
 Aquí están los dos posibles métodos:
 
-### Solución #1 – escapar la cadena antes de codificarla
+### Solución 1 – escapar la cadena antes de codificarla
 
 ```js
 function utf8_to_b64( str ) {
@@ -102,7 +102,7 @@ function b64EncodeUnicode(str) {
  b64EncodeUnicode('✓ à la mode'); // "4pyTIMOgIGxhIG1vZGU="
 ```
 
-### Solución #2 – reescribir `atob()` y `btoa()` usando `TypedArray`s y UTF-8
+### Solución 2 – reescribir `atob()` y `btoa()` usando `TypedArray`s y UTF-8
 
 > **Nota:** El siguiente código también es útil para obtener un [ArrayBuffer](/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer) a partir de una cadena _Base64_ y/o viceversa ([véase abajo](#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)). **Para una librería completa de arrays tipados, vea [este artículo](/en-US/docs/Web/JavaScript/Typed_arrays/StringView)**.
 
@@ -301,7 +301,7 @@ var sMyOutput = UTF8ArrToStr(aMyUTF8Output);
 alert(sMyOutput);
 ```
 
-#### Apéndice: Decodificar una cadena _Base64_ en [Uint8Array](/en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array) o [ArrayBuffer](/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer)
+#### Apéndice: Decodificar una cadena Base64 en Uint8Array o ArrayBuffer
 
 Estas funciones nos permiten crear también [uint8Arrays](/en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array) o [arrayBuffers](/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer) a partir de cadenas codificadas en base 64:
 

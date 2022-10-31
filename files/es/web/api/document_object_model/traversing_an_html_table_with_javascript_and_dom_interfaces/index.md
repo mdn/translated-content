@@ -157,11 +157,11 @@ function set_background() {
 
 {{ EmbedLiveSample('Setting_background_of_a_paragraph') }}
 
-En este ejemplo, establecemos la variable `myP` en el objeto DOM para el segundo elemento`p` dentro del body:
+En este ejemplo, establecemos la variable `myP` en el objeto DOM para el segundo elemento `p` dentro del body:
 
 1. Primero, obtendremos una lista de todos los elementos body mediante
 
-    ```
+    ```js
     myBody = document.getElementsByTagName("body")[0]
     ```
 
