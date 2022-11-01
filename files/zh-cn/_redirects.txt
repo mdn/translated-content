@@ -1971,7 +1971,7 @@
 /zh-CN/docs/Web/CSS/:blank空白伪类	/zh-CN/docs/Web/CSS/:blank
 /zh-CN/docs/Web/CSS/:host()	/zh-CN/docs/Web/CSS/:host_function
 /zh-CN/docs/Web/CSS/:matches	/zh-CN/docs/Web/CSS/:is
-/zh-CN/docs/Web/CSS/@viewport	/zh-CN/docs/conflicting/Web/CSS
+/zh-CN/docs/Web/CSS/@viewport	/zh-CN/docs/Web/CSS
 /zh-CN/docs/Web/CSS/Adjacent_sibling_selectors	/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator
 /zh-CN/docs/Web/CSS/All_About_The_Containing_Block	/zh-CN/docs/Web/CSS/Containing_block
 /zh-CN/docs/Web/CSS/Block_formatting_context	/zh-CN/docs/Web/Guide/CSS/Block_formatting_context
