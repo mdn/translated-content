@@ -3,8 +3,11 @@ title: <td>
 slug: Web/HTML/Element/td
 translation_of: Web/HTML/Element/td
 original_slug: Web/HTML/Elemento/td
+browser-compat: html.elements.td
 ---
-  
+
+{{HTMLRef}}
+
 ## Resumen
 
 El elemento [HTML](/es/docs/Web/HTML) _Celda de tabla_ (**`<td>`**) define la celda de una tabla que contiene datos. Esta participa en el _modelo de tablas_.
@@ -22,13 +25,13 @@ El elemento [HTML](/es/docs/Web/HTML) _Celda de tabla_ (**`<td>`**) define la ce
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
-- {{htmlattrdef("abbr")}} {{obsoleteGeneric('inline','HTML5')}}
+- {{htmlattrdef("abbr")}} {{deprecated_inline}}
 
   - : Este atributo contiene un pequeña descripción abreviada del contenido de la celda. Algunos agentes de usuario, como los lectores de voz, pueden presentar esta descripción antes que el propio contenido.
 
     > **Nota:** No usar este atributo ya que esta obsoleto en la ultima version del estandar. Como alternativa, puedes poner una descripción abreviada dentro de la celda y colocar el contenido largo en el atributo **title**.
 
-- {{htmlattrdef("align")}} {{Deprecated_inline}} in {{HTMLVersionInline(4.01)}}, {{obsolete_inline}} in {{HTMLVersionInline(5)}}
+- {{htmlattrdef("align")}} {{deprecated_inline}}
 
   - : Este atributo especifíca la posición horizontal del contenido de la celda, los valores de la misma pueden ser:
 
@@ -117,12 +120,10 @@ Este elemento implementa el interfaz {{domxref("HTMLTableDataCellElement")}}.
 
 Por favor, ver la página {{HTMLElement("table")}} para ejemplos de `<td>`.
 
+## Especificaciones
+
+{{Specifications}}
+
 ## Compatibilidad con navegadores
 
-{{Compat("html.elements.td")}}
-
-## Ver también
-
-- Otros Elementos HTML relacionados con tablas: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}.
-
-{{HTMLRef}}
+{{Compat}}

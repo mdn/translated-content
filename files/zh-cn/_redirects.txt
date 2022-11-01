@@ -1971,6 +1971,7 @@
 /zh-CN/docs/Web/CSS/:blank空白伪类	/zh-CN/docs/Web/CSS/:blank
 /zh-CN/docs/Web/CSS/:host()	/zh-CN/docs/Web/CSS/:host_function
 /zh-CN/docs/Web/CSS/:matches	/zh-CN/docs/Web/CSS/:is
+/zh-CN/docs/Web/CSS/@viewport	/zh-CN/docs/Web/CSS
 /zh-CN/docs/Web/CSS/Adjacent_sibling_selectors	/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator
 /zh-CN/docs/Web/CSS/All_About_The_Containing_Block	/zh-CN/docs/Web/CSS/Containing_block
 /zh-CN/docs/Web/CSS/Block_formatting_context	/zh-CN/docs/Web/Guide/CSS/Block_formatting_context
@@ -2457,6 +2458,8 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/uneval	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 /zh-CN/docs/Web/JavaScript/Reference/Methods_Index	/zh-CN/docs/Web/JavaScript/Reference
+/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment	/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
+/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator	/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 /zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /zh-CN/docs/Web/JavaScript/Reference/Operators/async允许声明一个函数为一个包含异步操作的函数	/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function
 /zh-CN/docs/Web/JavaScript/Reference/Operators/取余	/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder

@@ -9,7 +9,7 @@ The `mousewheel` event is fired asynchronously when a mouse wheel or similar dev
 
 > **备注：** **Do not use this wheel event.**
 >
-> This interface is non-standard and deprecated. It was used in non-Gecko browsers only. Instead use the standard _{{event("wheel")}} event._
+> This interface is non-standard and deprecated. It was used in non-Gecko browsers only. Instead use the standard _[`wheel`](/zh-CN/docs/Web/API/Element/wheel_event) event._
 
 - _Interface_: {{ domxref('MouseWheelEvent') }}
 - _Synchronicity_: asynchronous

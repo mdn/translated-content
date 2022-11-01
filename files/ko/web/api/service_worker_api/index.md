@@ -132,7 +132,7 @@ translation_of: Web/API/Service_Worker_API
 
 ## 같이 보기
 
-- [ServiceWorker 쿡북](https://serviceworke.rs)
+- [ServiceWorker 쿡북](https://github.com/mdn/serviceworker-cookbook)
 - [서비스 워커 사용하기](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [서비스 워커 기초 코드 예제](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)

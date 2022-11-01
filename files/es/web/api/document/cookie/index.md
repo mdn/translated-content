@@ -53,7 +53,7 @@ En el código anterior, _`nuevacookie`_ es una cadena de la forma _`clave=valor`
 
 ## Ejemplos
 
-### Ejemplo # 1: Uso sencillo
+### Ejemplo 1: Uso sencillo
 
 ```js
 document.cookie = "nombre=oeschger";
@@ -70,7 +70,7 @@ function alertCookie() {
 
 {{EmbedLiveSample('Example_1_Simple_usage', 200, 36)}}
 
-### Ejemplo #2: Obtener una cookie de ejemplo llamada _test2_
+### Ejemplo 2: Obtener una cookie de ejemplo llamada test2
 
 ```js
 document.cookie = "test1=Hola";
@@ -89,7 +89,7 @@ function alertCookieValue() {
 
 {{EmbedLiveSample('Example_2_Get_a_sample_cookie_named_test2', 200, 36)}}
 
-### Ejemplo #3: Hacer algo una sola vez
+### Ejemplo 3: Hacer algo una sola vez
 
 De manera a usar el siguiente código, favor remplace todas las veces la palabra `hacerAlgoUnaSolaVez` (el nombre de la cookie) con un nombre personalizado.
 

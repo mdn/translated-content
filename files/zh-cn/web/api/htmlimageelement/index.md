@@ -86,7 +86,7 @@ _从它的父元素 {{domxref("HTMLElement")}} 继承的方法。_
 - The specified image's metadata is corrupted in such a way that it's impossible to retrieve its dimensions, and no dimensions were specified in the `<img>` element's attributes.
 - The specified image is in a format not supported by the {{Glossary("user agent")}}.
 
-If an error occurs while trying to load or render the image, and an {{htmlattrxref("onerror")}} event handler has been configured to handle the {{event("error")}} event, that event handler will get called. This can happen in a number of situations, including:
+If an error occurs while trying to load or render the image, and an {{htmlattrxref("onerror")}} event handler has been configured to handle the [`error`](/zh-CN/docs/Web/API/Element/error_event) event, that event handler will get called. This can happen in a number of situations, including:
 
 ## 例子
 

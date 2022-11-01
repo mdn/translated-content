@@ -31,7 +31,7 @@ Ya que se supone que este artículo es solo una introducción ligera a JavaScrip
 
 Debajo se presentan algunos aspectos del núcleo del lenguaje y también jugarás con unas pocas características de la API del navegador. ¡Diviértete!
 
-## Ejemplo «_¡Hola Mundo!_»
+## Ejemplo «¡Hola Mundo!»
 
 La sección de arriba suena realmente emocionante, y debería serlo. JavaScript es una de las tecnologías web más emocionantes, y cuando comiences a ser bueno en su uso, tus sitios web entrarán en una nueva dimensión de energía y creatividad.
 

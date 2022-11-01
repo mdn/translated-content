@@ -32,9 +32,9 @@ Podrá producirse una excepción si el patrón de vibración especificado es dem
 
 {{Compat("api.Navigator.vibrate")}}
 
-## Especificación
+## Especificaciones
 
-- {{spec("http://www.w3.org/TR/vibration/", "Vibration API Specification", "WD")}}
+{{Specifications}}
 
 ## Véase también
 

@@ -61,7 +61,7 @@ text-size-adjust: unset;
 
 \[1] There is a bug in older WebKit-based desktop browsers. If `-webkit-text-size-adjust` is explicitly set to `none`, older Webkit-based desktop browsers, instead of ignoring the property, will prevent the user from zooming in or out of the web page. See [Bug 56543](https://bugs.webkit.org/show_bug.cgi?id=56543) (affected Safari≤5 & Chrome≤26), [Bug 163359](https://code.google.com/p/chromium/issues/detail?id=163359), and [Bug 84186](https://bugs.webkit.org/show_bug.cgi?id=84186).
 
-\[2] In addition to the `-moz-` prefixed support, Gecko 44.0 {{geckoRelease("44.0")}} added support for a `-webkit-` prefixed version of the property for web compatibility reasons behind the `layout.css.prefixes.webkit` flag, defaulting to `false`. Since Gecko 49.0 {{geckoRelease("49.0")}} the preference defaults to `true`.
+\[2] In addition to the `-moz-` prefixed support, Gecko 44.0 added support for a `-webkit-` prefixed version of the property for web compatibility reasons behind the `layout.css.prefixes.webkit` flag, defaulting to `false`. Since Gecko 49.0 the preference defaults to `true`.
 
 \[3] If the viewport is set using {{HTMLElement("meta")}} element, the value of the CSS `text-size-adjust` property is ignored. See [detailed implementation hints on MSDN](<https://msdn.microsoft.com/library/windows/apps/ff462082(v=vs.105).aspx#BKMK_AdjustingTextSizewithCustomCSS>).
 

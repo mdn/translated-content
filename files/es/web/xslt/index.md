@@ -1,11 +1,9 @@
 ---
 title: XSLT
 slug: Web/XSLT
-tags:
-  - Todas_las_Categorías
-  - XSLT
 translation_of: Web/XSLT
 ---
+
 **[Tutorial XSLT (en)](http://www.w3schools.com/xsl/)**
 Este tutorial enseña como usar XSLT para transformar documentos XML en otros formatos.
 
@@ -36,8 +34,9 @@ Actualmente, XSLT es muy usado en la edición web, generando páginas HTML o XHT
 #### Comunidad
 
 - Los foros de Mozilla en inglés:
-
-{{ DiscussionList("dev-tech-xslt", "mozilla.dev.tech.xslt") }}
+- [como lista de correo](https://lists.mozilla.org/listinfo/dev-tech-xslt)
+- [como grupo de noticias](https://groups.google.com/group/mozilla.dev.tech.xslt)
+- [como RSS](https://groups.google.com/group/mozilla.dev.tech.xslt/feeds)
 
 #### Herramientas
 
@@ -45,7 +44,3 @@ Actualmente, XSLT es muy usado en la edición web, generando páginas HTML o XHT
   - : [XML](/es/XML), [XPath](/es/XPath), [XSL](/es/XSL).
 
 > **Nota:** Esta descripción de XSLT ha sido obtenida del [Artículo sobre XSLT en la Wikipedia (es)](http://es.wikipedia.org/wiki/XSLT).
-
-Categorías
-
-Interwiki Language Links

@@ -64,7 +64,7 @@ Vous pouvez consulter la liste sur [pwa.rocks](https://pwa.rocks/) pour plus d'e
 
 Vous pouvez même générer des PWA en ligne à l'aide du site web [PWABuilder](https://www.pwabuilder.com/).
 
-Pour les informations spécifiques aux _service workers_ et aux notifications _push_, consultez le [Service Worker Cookbook](https://serviceworke.rs/), une collection d'exemples utilisant des _service workers_.
+Pour les informations spécifiques aux _service workers_ et aux notifications _push_, consultez le [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/), une collection d'exemples utilisant des _service workers_.
 
 Ça vaut le coup d'essayer l'approche PWA, afin que vous puissiez constater par vous-même si ça convient à votre application.
 

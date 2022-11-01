@@ -345,9 +345,9 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("Window.ondeviceproximity")}}
   - : An event handler property for device proximity event
 - {{domxref("Window.ongamepadconnected")}}
-  - : Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).
+  - : Represents an event handler that will run when a gamepad is connected (when the [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) event fires).
 - {{domxref("Window.ongamepaddisconnected")}}
-  - : Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
+  - : Represents an event handler that will run when a gamepad is disconnected (when the [`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event) event fires).
 - {{domxref("Window.onpaint")}}
   - : An event handler property for paint events on the window.
 - {{domxref("Window.onrejectionhandled")}} {{experimental_inline}}
@@ -374,9 +374,9 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress
 - {{domxref("WindowEventHandlers.onafterprint")}}
-  - : Called when the print dialog box is closed. See {{event("afterprint")}} event.
+  - : Called when the print dialog box is closed. See [`afterprint`](/zh-CN/docs/Web/API/Window/afterprint_event) event.
 - {{domxref("WindowEventHandlers.onbeforeprint")}}
-  - : Called when the print dialog box is opened. See {{event("beforeprint")}} event.
+  - : Called when the print dialog box is opened. See [`beforeprint`](/zh-CN/docs/Web/API/Window/beforeprint_event) event.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
   - : An event handler property for before-unload events on the window.
 - {{domxref("GlobalEventHandlers.onblur")}}
@@ -392,21 +392,21 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
   - : Called when the RIGHT mouse button is pressed
 - {{domxref("GlobalEventHandlers.onerror")}}
-  - : Called when a resource fails to load OR when an error occurs at runtime. See {{event("error")}} event.
+  - : Called when a resource fails to load OR when an error occurs at runtime. See [`error`](/zh-CN/docs/Web/API/Element/error_event) event.
 - {{domxref("GlobalEventHandlers.onfocus")}}
-  - : Called after the window receives or regains focus. See {{event("focus")}} events.
+  - : Called after the window receives or regains focus. See [`focus`](/zh-CN/docs/Web/API/Element/focus_event) events.
 - {{domxref("WindowEventHandlers.onhashchange")}}
-  - : An event handler property for {{event('hashchange')}} events on the window; called when the part of the URL after the hash mark ("#") changes.
+  - : An event handler property for [`hashchange`](/zh-CN/docs/Web/API/Window/hashchange_event) events on the window; called when the part of the URL after the hash mark ("#") changes.
 - {{domxref("GlobalEventHandlers.oninput")}}
   - : Called when the value of an \<input> element changes
 - {{domxref("GlobalEventHandlers.onkeydown")}}
-  - : Called when you begin pressing ANY key. See {{event("keydown")}} event.
+  - : Called when you begin pressing ANY key. See [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) event.
 - {{domxref("GlobalEventHandlers.onkeypress")}}
-  - : Called when a key (except Shift, Fn, and CapsLock) is in pressed position. See {{event("keypress")}} event.
+  - : Called when a key (except Shift, Fn, and CapsLock) is in pressed position. See [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) event.
 - {{domxref("GlobalEventHandlers.onkeyup")}}
-  - : Called when you finish releasing ANY key. See {{event("keyup")}} event.
+  - : Called when you finish releasing ANY key. See [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) event.
 - {{domxref("WindowEventHandlers.onlanguagechange")}}
-  - : An event handler property for {{event("languagechange")}} events on the window.
+  - : An event handler property for [`languagechange`](/zh-CN/docs/Web/API/Window/languagechange_event) events on the window.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
 - {{domxref("WindowEventHandlers.onmessage")}}
@@ -422,13 +422,13 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onmouseup")}}
   - : Called when ANY mouse button is released
 - {{domxref("WindowEventHandlers.onoffline")}}
-  - : Called when network connection is lost. See {{event("offline")}} event.
+  - : Called when network connection is lost. See [`offline`](/zh-CN/docs/Web/API/Window/offline_event) event.
 - {{domxref("WindowEventHandlers.ononline")}}
-  - : Called when network connection is established. See {{event("online")}} event.
+  - : Called when network connection is established. See [`online`](/zh-CN/docs/Web/API/Window/online_event) event.
 - {{domxref("WindowEventHandlers.onpagehide")}}
-  - : Called when the user navigates away from the page, before the onunload event. See {{event("pagehide")}} event.
+  - : Called when the user navigates away from the page, before the onunload event. See [`pagehide`](/zh-CN/docs/Web/API/Window/pagehide_event) event.
 - {{domxref("WindowEventHandlers.onpageshow")}}
-  - : Called after all resources and the DOM are fully loaded. See {{event("pageshow")}} event.
+  - : Called after all resources and the DOM are fully loaded. See [`pageshow`](/zh-CN/docs/Web/API/Window/pageshow_event) event.
 - {{domxref("WindowEventHandlers.onpopstate")}}
   - : Called when a back button is pressed.
 - {{domxref("GlobalEventHandlers.onreset")}}
@@ -444,7 +444,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onselectionchange")}}
   - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("selectionchange")}} event is raised.
 - {{domxref("WindowEventHandlers.onstorage")}}
-  - : Called when there is a change in session storage or local storage. See {{event("storage")}} event
+  - : Called when there is a change in session storage or local storage. See [`storage`](/zh-CN/docs/Web/API/Window/storage_event) event
 - {{domxref("GlobalEventHandlers.onsubmit")}}
   - : Called when a form is submitted
 - {{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}

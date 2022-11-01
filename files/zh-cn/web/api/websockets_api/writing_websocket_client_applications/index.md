@@ -165,7 +165,7 @@ exampleSocket.onmessage = function(event) {
 
 通过 WebSocket 连接收到的文本是 UTF-8 格式的。
 
-在 Gecko 9.0 {{ geckoRelease("9.0") }} 之前，一部分有效的 UTF-8 文本中的非字符将导致连接被中断。现在 Gecko 已经允许这些值。
+在 Gecko 9.0 之前，一部分有效的 UTF-8 文本中的非字符将导致连接被中断。现在 Gecko 已经允许这些值。
 
 ## 关闭连接
 

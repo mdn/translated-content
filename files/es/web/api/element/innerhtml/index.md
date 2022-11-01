@@ -46,7 +46,7 @@ La propiedad `innerHTML` de muchos tipos de elementos—incluyendo {{ HTMLElemen
 
 ### Devolver la sintaxis HTML de un elemento
 
-Devolver el valor de `innerHTML`hace que el agente de usuario serialice el fragmento HTML compuesto por los descendientes del elemento. La cadena resultante es devuelta.
+Devolver el valor de `innerHTML` hace que el agente de usuario serialice el fragmento HTML compuesto por los descendientes del elemento. La cadena resultante es devuelta.
 
 ```
 const content = element.innerHTML;

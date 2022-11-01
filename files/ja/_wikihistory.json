@@ -12592,6 +12592,10 @@
     "modified": "2019-03-23T22:21:03.744Z",
     "contributors": ["YuichiNukiyama"]
   },
+  "Web/API/ServiceWorkerGlobalScope/fetch_event": {
+    "modified": "2020-10-15T22:29:58.912Z",
+    "contributors": ["Wind1808"]
+  },
   "Web/API/ServiceWorkerGlobalScope/install_event": {
     "modified": "2020-10-15T22:30:06.224Z",
     "contributors": ["Wind1808"]
@@ -12603,6 +12607,10 @@
   "Web/API/ServiceWorkerGlobalScope/notificationclick_event": {
     "modified": "2020-10-15T22:28:08.254Z",
     "contributors": ["mfuji09"]
+  },
+  "Web/API/ServiceWorkerGlobalScope/notificationclose_event": {
+    "modified": "2020-10-15T21:52:44.773Z",
+    "contributors": ["dskmori", "YuichiNukiyama"]
   },
   "Web/API/ServiceWorkerGlobalScope/push_event": {
     "modified": "2020-10-15T21:45:02.089Z",
@@ -31222,10 +31230,6 @@
       "Koyamak"
     ]
   },
-  "conflicting/Web/API/Pointer_events": {
-    "modified": "2019-03-18T20:45:32.564Z",
-    "contributors": ["mfuji09", "YuichiNukiyama"]
-  },
   "conflicting/Web/API/StorageManager/estimate": {
     "modified": "2020-10-15T22:20:05.823Z",
     "contributors": ["Uemmra3", "Wind1808"]
@@ -31348,17 +31352,6 @@
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
   },
-  "conflicting/Web/JavaScript/Reference/Strict_mode": {
-    "modified": "2020-04-10T09:42:32.564Z",
-    "contributors": [
-      "mfuji09",
-      "Uemmra3",
-      "nabetaro",
-      "SCENEE",
-      "ambi",
-      "shide55"
-    ]
-  },
   "conflicting/Web/SVG/Element/animate": {
     "modified": "2020-10-15T21:27:02.463Z",
     "contributors": ["takenspc", "wbamberg", "Sebastianz", "teoli", "manzyun"]
@@ -31398,10 +31391,6 @@
   "orphaned/Microsummary_XML_grammar_reference": {
     "modified": "2019-03-23T23:42:58.294Z",
     "contributors": ["teoli", "electrolysis"]
-  },
-  "orphaned/Migrate_apps_from_Internet_Explorer_to_Mozilla": {
-    "modified": "2019-03-24T00:00:44.710Z",
-    "contributors": ["SphinxKnight", "ethertank", "maripo"]
   },
   "orphaned/New_in_JavaScript_1.8": {
     "modified": "2019-03-24T00:06:00.366Z",
@@ -31520,34 +31509,6 @@
   "orphaned/Web/API/SVGTransformable": {
     "modified": "2020-10-15T22:33:03.508Z",
     "contributors": ["eltociear"]
-  },
-  "orphaned/Web/API/ServiceWorkerGlobalScope/onactivate": {
-    "modified": "2019-03-23T22:20:44.625Z",
-    "contributors": ["YuichiNukiyama"]
-  },
-  "orphaned/Web/API/ServiceWorkerGlobalScope/onfetch": {
-    "modified": "2020-10-15T22:29:58.912Z",
-    "contributors": ["Wind1808"]
-  },
-  "orphaned/Web/API/ServiceWorkerGlobalScope/oninstall": {
-    "modified": "2019-03-23T22:19:50.199Z",
-    "contributors": ["YuichiNukiyama"]
-  },
-  "orphaned/Web/API/ServiceWorkerGlobalScope/onnotificationclick": {
-    "modified": "2019-03-23T22:20:34.361Z",
-    "contributors": ["YuichiNukiyama"]
-  },
-  "orphaned/Web/API/ServiceWorkerGlobalScope/onnotificationclose": {
-    "modified": "2020-10-15T21:52:44.773Z",
-    "contributors": ["dskmori", "YuichiNukiyama"]
-  },
-  "orphaned/Web/API/ServiceWorkerGlobalScope/onpush": {
-    "modified": "2020-10-15T21:51:32.630Z",
-    "contributors": ["Potappo", "YuichiNukiyama"]
-  },
-  "orphaned/Web/API/ServiceWorkerGlobalScope/onpushsubscriptionchange": {
-    "modified": "2020-10-15T21:45:38.144Z",
-    "contributors": ["Potappo", "YuichiNukiyama"]
   },
   "orphaned/Web/API/SourceBuffer/trackDefaults": {
     "modified": "2020-10-15T22:25:05.781Z",
@@ -31690,17 +31651,6 @@
       "Mgjbot",
       "Okome",
       "Shimono"
-    ]
-  },
-  "orphaned/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla": {
-    "modified": "2019-03-18T20:54:57.038Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "silverskyvicto",
-      "chrisdavidmills",
-      "Potappo",
-      "maripo"
     ]
   },
   "orphaned/Web/Guide/HTML/HTML5": {
@@ -31855,17 +31805,6 @@
       "happysadman",
       "electrolysis",
       "Mgjbot"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Using_the_arguments_object": {
-    "modified": "2019-03-24T00:01:07.773Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "Potappo",
-      "electrolysis",
-      "Mgjbot",
-      "Taken"
     ]
   },
   "orphaned/Web/JavaScript/Guide/Variables": {

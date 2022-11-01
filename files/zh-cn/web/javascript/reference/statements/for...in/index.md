@@ -83,7 +83,7 @@ for (var prop in obj) {
 
 ## 兼容性：初始化函数表达式
 
-在 SpiderMonkey 40 {{geckoRelease(40)}} 版本之前，可以在使用一个初始化表达式（`i=0`）在一个`for...in`循环中：
+在 SpiderMonkey 40 版本之前，可以在使用一个初始化表达式（`i=0`）在一个`for...in`循环中：
 
 ```js example-bad
 var obj = {a: 1, b: 2, c: 3};
