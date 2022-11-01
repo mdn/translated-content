@@ -8,24 +8,24 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`BackgroundFetchManager`** interface of the {{domxref('Background Fetch API','','',' ')}} is a map where the keys are background fetch IDs and the values are {{domxref("BackgroundFetchRegistration")}} objects.
+{{domxref('Background Fetch API','','',' ')}} の **`BackgroundFetchManager`** インターフェイスは、バックグラウンドフェッチ ID をキー、 {{domxref("BackgroundFetchRegistration")}} オブジェクトを値とするマップです。
 
 ## プロパティ
 
-None.
+なし。
 
 ## メソッド
 
 - {{domxref('BackgroundFetchManager.fetch','fetch()' )}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object for a supplied array of URLs and {{domxref("Request")}} objects.
+  - : 引数に与えられた配列( URL や {{domxref("Request")}} オブジェクトで構成される) に対して、{{domxref("BackgroundFetchRegistration")}} オブジェクトで解決される {{jsxref("Promise")}} を返します。
 - {{domxref('BackgroundFetchManager.get','get()')}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that resolves with the {{domxref("BackgroundFetchRegistration")}} associated with the provided `id` or {{jsxref("undefined")}} if the `id` is not found.
+  - : 引数に与えられた `id` に紐づく {{domxref("BackgroundFetchRegistration")}} で解決される {{jsxref("Promise")}} を返します。 `id` が見つからない場合は {{jsxref("undefined")}} を返します。
 - {{domxref('BackgroundFetchManager.getIds','getIds()')}} {{Experimental_Inline}}
-  - : Returns the IDs of all registered background fetches.
+  - : 登録済みのすべてのバックグラウンドフェッチの ID を返します。
 
 ## 例
 
-The example below shows how to get an instance of {{domxref("BackgroundFetchManager")}} from a {{domxref("ServiceWorkerRegistration")}} object and calls `fetch()` to download a video in the background.
+下記の例は、 {{domxref("ServiceWorkerRegistration")}} オブジェクトから {{domxref("BackgroundFetchManager")}} のインスタンスを取得し、バックグラウンドで動画をダウンロードするために `fetch()` メソッドを呼び出しています。
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
