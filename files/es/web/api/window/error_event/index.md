@@ -54,7 +54,7 @@ window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
 
 El evento de error es lanzado cuando ocurre un error en el script.
 
-Cuando se use el marcado html en línea (\<body onerror="alert('an error occurred')>...), los argumentos son anónimos. Pueden ser referenciados usando desde `arguments{{ mediawiki.external(0) }}` hasta `arguments{{ mediawiki.external(2) }}`.
+Cuando se use el marcado html en línea (\<body onerror="alert('an error occurred')>...), los argumentos son anónimos. Pueden ser referenciados usando desde `arguments[0]` hasta `arguments[2]`.
 
 No hay llamante `Components.stack.caller` que recuperar. (Vea [**bug 355430**](https://bugzilla.mozilla.org/show_bug.cgi?id=355430).)
 

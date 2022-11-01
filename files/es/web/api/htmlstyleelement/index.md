@@ -23,7 +23,7 @@ Vea las siguientes páginas para información sobre alguno de los objetos utiliz
 
 El objeto básico `style`, presenta los estilos definidos para el DOM en su especificación de nivel 2. Los estilos se definen mediante `las interfaces StyleSheet` y `CSSStyleSheet`. Estas interfaces contienen miembros tales como `insertRule`, `selectorText`, y `parentStyleSheet` que permiten acceder y manipular las reglas de estilo individuales de que se compone una hoja de estilos CSS.
 
-Para obtener los objetos `style` de un `document`, podemos usar la propiedad `document.styleSheets` y llegar a los distintos objetos por su índice (por ejemplo: `document.styleSheets{{ mediawiki.external(0) }}` es la primer stylesheet definida en el documento, etc.). Aunque hay varias formas y sintaxis para expresar una stylsheet para un documento, Netscape implementa exclusivamente, CSS, de manera que el objeto `style` obtenido por este método, es a la vez StyleSheet y CSSStyleSheet.
+Para obtener los objetos `style` de un `document`, podemos usar la propiedad `document.styleSheets` y llegar a los distintos objetos por su índice (por ejemplo: `document.styleSheets[0]` es la primer stylesheet definida en el documento, etc.). Aunque hay varias formas y sintaxis para expresar una stylsheet para un documento, Netscape implementa exclusivamente, CSS, de manera que el objeto `style` obtenido por este método, es a la vez StyleSheet y CSSStyleSheet.
 
 ```
 var ss = document.styleSheets[1];
