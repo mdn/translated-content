@@ -82,8 +82,7 @@ En HTML, los siguientes tipos de enlaces indican la relación entre dos document
       <td><em>None.</em></td>
      </tr>
      <tr>
-      <td><code>help</code><br>
-       {{HTMLVersionInline("5")}}</td>
+      <td><code>help</code></td>
       <td>
        <ul>
         <li>If the element is {{HTMLElement("a")}} or {{HTMLElement("area")}}, it indicates that the hyperlink leads to a resource giving further help about the parent of the element, and its descendants.</li>
