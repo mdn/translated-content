@@ -13,24 +13,24 @@ browser-compat: api.BackgroundFetchRegistration.uploadTotal
 ---
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`uploadTotal`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the total number of bytes to be sent to the server.
+Доступное только для чтения свойство **`uploadTotal`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает общее число байтов для отправки на сервер.
 
-## Value
+## Значение
 
-A {{jsxref("number")}}.
+{{jsxref("number")}}.
 
-## Examples
+## Примеры
 
-Logging {{domxref("BackgroundFetchRegistration.uploadTotal")}} to the console returns the uploadTotal.
+Вывод {{domxref("BackgroundFetchRegistration.uploadTotal")}} в консоль возвращает uploadTotal.
 
 ```js
 console.log(bgFetch.uploadTotal);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

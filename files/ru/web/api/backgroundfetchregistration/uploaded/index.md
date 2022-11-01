@@ -13,26 +13,26 @@ browser-compat: api.BackgroundFetchRegistration.uploaded
 ---
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`uploaded`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the size in bytes successfully sent, initially `0`.
+Доступное только для чтения свойство **`uploaded`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает количество успешно переданных байт, изначально `0`.
 
-If the value of this property changes, the [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) event is fired at the associated {{domxref("BackgroundFetchRegistration")}} object.
+Если значение этого свойства изменилось, то в связанном объекте {{domxref("BackgroundFetchRegistration")}} происходит событие [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event).
 
-## Value
+## Значение
 
-A {{jsxref("number")}}.
+{{jsxref("number")}}.
 
-## Examples
+## Примеры
 
-Logging this property to the console returns the number of bytes uploaded.
+Вывод этого свойства в консоль возвращает число загруженных байт.
 
 ```js
 console.log(bgFetch.uploaded);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

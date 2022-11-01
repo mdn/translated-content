@@ -12,31 +12,32 @@ browser-compat: api.BackgroundFetchRegistration.progress_event
 ---
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`progress`** event of the {{domxref("BackgroundFetchRegistration")}} interface thrown when the associated background fetch progresses.
+Событие **`progress`** интерфейса {{domxref("BackgroundFetchRegistration")}} происходит когда выполняется связанные фоновый запрос.
 
-Practically, this event is fired when any of the following properties will return a new value:
+
+Практически это событие происходит, когда любое из следующих свойств возвращает новое значение:
 
 - {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}},
 - {{domxref("BackgroundFetchRegistration.downloaded", "downloaded")}},
-- {{domxref("BackgroundFetchRegistration.result", "result")}}, or
+- {{domxref("BackgroundFetchRegistration.result", "result")}}, или
 - {{domxref("BackgroundFetchRegistration.failureReason", "failureReason")}}.
 
-## Syntax
+## Синтаксис
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set the `onprogress` event property on the relevant {{domxref("BackgroundFetchRegistration")}} object.
+Используйте имя события в таких методах как {{domxref("EventTarget.addEventListener", "addEventListener()")}}, или установите свойство события `onprogress` в соответствующем объекте {{domxref("BackgroundFetchRegistration")}}.
 
 ```js
 addEventListener('progress', (event) => { })
 onprogress = (event) => { }
 ```
 
-## Event type
+## Тип события
 
-A generic {{domxref("Event")}} with no added properties.
+Общий {{domxref("Event")}} без дополнительных параметров.
 
-## Example
+## Пример
 
-The following example demonstrates how to log the progress of a download. The code first checks that a `downloadTotal` was provided when the background fetch was registered. This is then used to calculate the percentage, based on the `downloaded` property.
+Следующий пример демонстрирует как вывести ход загрузки в консоль. Сначала код проверяет был ли предоставлен `downloadTotal`, когда фоновый запрос был зарегистрирован. The code first checks that a `downloadTotal` was provided when the background fetch was registered. Затем это значение используется для расчета процента на основе свойства `downloaded`.
 
 ```js
 bgFetch.addEventListener('progress', () => {
@@ -46,10 +47,10 @@ bgFetch.addEventListener('progress', () => {
 });
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

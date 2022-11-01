@@ -13,62 +13,60 @@ browser-compat: api.BackgroundFetchRegistration.matchAll
 ---
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`matchAll()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns an array of matching {{domxref("BackgroundFetchRecord")}} objects.
+Метод **`matchAll()`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает массив всех совпавших объектов {{domxref("BackgroundFetchRecord")}}.
 
-## Syntax
+## Синтаксис
 
 ```js
 matchAll(request)
 matchAll(request,options)
 ```
 
-### Parameters
+### Параметры
 
 - `request`
-  - : The {{domxref("Request")}} for which you are attempting to find records.
-    This can be a {{domxref("Request")}} object or a URL.
+  - : {{domxref("Request")}} для которого вы пытаетесь найти записи.
+    Может быть объектом {{domxref("Request")}} или URL.
 - `options` {{optional_inline}}
 
-  - : An object that sets options for the `match` operation. The available
-    options are:
+  - : Объект, который устанавливает параметры для операции `match`. Доступные параметры:
 
     - `ignoreSearch`
-      - : A boolean value that specifies whether to
-        ignore the query string in the URL. For example, if set to
-        `true` the `?value=bar` part of
-        `http://foo.com/?value=bar` would be ignored when performing a match.
-        It defaults to `false`.
+      - : Булево значение, которое определяет нужно ли игнорировать строку поиска в URL.
+        Например, если параметр установлен как `true`, то подстрока `?value=bar`, которая является частью 
+        `http://foo.com/?value=bar`, будет игнорироваться при выполении сопоставления.
+        Значение по умолчанию - `false`.
     - `ignoreMethod`
-      - : A boolean value. When `true`,
-        prevents matching operations from validating the {{domxref("Request")}} `http` method.
-        If `false` (the default) only `GET` and `HEAD` are allowed.
+      - : Булево значение. Если оно установлено как `true`, то 
+        операциям сопоставления запрещается проверять метод `http` объекта {{domxref("Request")}}.
+        Если `false` (значение по умолчанию) только `GET` и `HEAD` разрешены.
     - `ignoreVary`
-      - : A boolean value. When `true` indicates that the [`VARY`](/en-US/docs/Web/HTTP/Headers/Vary)
-        header should be ignored.
-        It defaults to `false`.
+      - : Булево значение. Когда `true` сигнализирует, что заголовок [`VARY`](/en-US/docs/Web/HTTP/Headers/Vary)
+        должен быть проигнорирован.
+        Значение по умолчанию - `false`.
 
-### Return value
+### Возвращаемое значение
 
-A {{jsxref("Promise")}} that resolves with an array of all matching {{domxref("BackgroundFetchRecord")}} objects.
+{{jsxref("Promise")}} результатом обработки которого будет массив всех совпавших объектов {{domxref("BackgroundFetchRecord")}}.
 
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if the {{domxref("BackgroundFetchRegistration.recordsAvailable","recordsAvailable")}} flag is `false`, indicating that there is no fetch in progress.
+  - : Возвращается, если флаг {{domxref("BackgroundFetchRegistration.recordsAvailable","recordsAvailable")}} установлен как `false`, указывает на то, что запрос не выполняется.
 
-## Examples
+## Примеры
 
-Use `matchAll()` with no parameters to return all of the records in a background fetch.
+Используйте `matchAll()` без параметров, чтобы вернуть все записи в фоновом запросе.
 
 ```js
 const records = await bgFetch.matchAll();
-console.log(records); // an array of BackgroundFetchRecord objects
+console.log(records); // массив объектов BackgroundFetchRecord
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

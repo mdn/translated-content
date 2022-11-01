@@ -13,33 +13,33 @@ browser-compat: api.BackgroundFetchRegistration.result
 ---
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`result`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string indicating whether the background fetch was successful or failed.
+Доступное только для чтения свойство **`result`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает строку, которая указывает на то, был фоновый запрос успешным ли неудачным.
 
-If the value of this property changes, the [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) event is fired at the associated {{domxref("BackgroundFetchRegistration")}} object.
+Если значение этого свойства поменялось, то в связанном объекте {{domxref("BackgroundFetchRegistration")}} наступает событие [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event).
 
-## Value
+## Значение
 
-One of the following strings:
+Одна из следующих строк:
 
 - `""`
-  - : The fetch is active so there is no result.
+  - : Запрос активен, так что пока нет результата.
 - `"success"`
-  - : The background fetch was successful.
+  - : Запрос был успешен.
 - `"failure"`
-  - : The background fetch failed. This only appears when there is no ability for the browser to retry.
+  - : Фоновый запрос завешился неудачей. Это происходит только тогда, когда браузер не может повторить попытку.
 
-## Examples
+## Примеры
 
-Logging this property to the console returns a string indicating the status, or an empty string if the fetch is still active.
+Вывод этого свойства в консоль возвращает строку, указывающую на статус, либо пустую строку, если запрос всё ещё активен.
 
 ```js
 console.log(bgFetch.result);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

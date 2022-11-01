@@ -13,24 +13,24 @@ browser-compat: api.BackgroundFetchRegistration.recordsAvailable
 ---
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`recordsAvailable`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns `true` if there are requests and responses to be accessed. If this returns false then {{domxref("BackgroundFetchRegistration.match()","match()")}} and {{domxref("BackgroundFetchRegistration.matchAll()","matchAll()")}} can't be used.
+Доступное только для чтения свойство **`recordsAvailable`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает `true` если есть запросы и ответы, к которым необходимо получить доступ. Если же возвращает `false`, то {{domxref("BackgroundFetchRegistration.match()","match()")}} и {{domxref("BackgroundFetchRegistration.matchAll()","matchAll()")}} не могут быть использованы.
 
-## Value
+## Значение
 
-A {{jsxref("boolean")}}.
+{{jsxref("boolean")}}.
 
-## Examples
+## Примеры
 
-Logging this property to the console returns `true` or `false` to indicate if there are records.
+Вывод этого свойства в консоль возвращает `true` или `false` чтобы указать, есть ли записи.
 
 ```js
 console.log(bgFetch.recordsAvailable);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

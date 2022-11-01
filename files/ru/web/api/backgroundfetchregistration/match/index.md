@@ -30,46 +30,44 @@ match(request, options);
     Может быть объектом {{domxref("Request")}} или URL.
 - `options` {{optional_inline}}
 
-  - : An object that sets options for the `match` operation. The available
-    options are:
+  - : Объект, который устанавливает параметры для операции `match`. Доступные параметры:
 
     - `ignoreSearch`
-      - : A boolean value that specifies whether to
-        ignore the query string in the URL. For example, if set to
-        `true` the `?value=bar` part of
-        `http://foo.com/?value=bar` would be ignored when performing a match.
-        It defaults to `false`.
+      - : Булево значение, которое определяет нужно ли игнорировать строку поиска в URL.
+        Например, если параметр установлен как `true`, то подстрока `?value=bar`, которая является частью 
+        `http://foo.com/?value=bar`, будет игнорироваться при выполении сопоставления.
+        Значение по умолчанию - `false`.
     - `ignoreMethod`
-      - : A boolean value. When `true`,
-        prevents matching operations from validating the {{domxref("Request")}} `http` method.
-        If `false` (the default) only `GET` and `HEAD` are allowed.
+      - : Булево значение. Если оно установлено как `true`, то 
+        операциям сопоставления запрещается проверять метод `http` объекта {{domxref("Request")}}.
+        Если `false` (значение по умолчанию) только `GET` и `HEAD` разрешены.
     - `ignoreVary`
-      - : A boolean value. When `true` indicates that the [`VARY`](/en-US/docs/Web/HTTP/Headers/Vary)
-        header should be ignored.
-        It defaults to `false`.
+      - : Булево значение. Когда `true` сигнализирует, что заголовок [`VARY`](/en-US/docs/Web/HTTP/Headers/Vary)
+        должен быть проигнорирован.
+        Значение по умолчанию - `false`.
 
 ### Возвращаемое значение
 
-A {{jsxref("Promise")}} that resolves with the first {{domxref("BackgroundFetchRecord")}} that matches
-the request or {{jsxref("undefined")}} if no match is found.
+{{jsxref("Promise")}} результатом обработки которого будет первый {{domxref("BackgroundFetchRecord")}}, который соответствует запросу
+или {{jsxref("undefined")}}, если соответствий не найдено.
 
-> **Note:** `BackgroundFetchRegistration.match()` is basically identical to
-> {{domxref("BackgroundFetchRegistration.matchAll()")}}, except that rather than resolving with an array of
-> all matching records, it resolves with the first matching record only.
+> **Note:** `BackgroundFetchRegistration.match()` в основном идентичен
+> {{domxref("BackgroundFetchRegistration.matchAll()")}}, за исключением того, что вместо возвращения массива
+> всех совпадений, он возвращает только первое совпадение.
 
 ### Исключения
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if you call `match()` when there are no fetches in progress. This state will be reflected by {{domxref("BackgroundFetchRegistration.recordsAvailable")}} being set to `false`.
+  - : Возвращается при вызове `match()` в тот момент, когда нет запросов в процессе выполнения. Это состояние будет отражено установкой флага {{domxref("BackgroundFetchRegistration.recordsAvailable")}} как `false`.
 
 ## Примеры
 
-In this example we look for a record with the URL "/ep-5.mp3". If a {{domxref("BackgroundFetchRecord")}} is found then we can return some information about it.
+В этом примере мы ищем запись с URL "/ep-5.mp3". Если {{domxref("BackgroundFetchRecord")}} найдена, то мы можем вернуть некоторую информацию ней.
 
 ```js
 bgFetch.match('/ep-5.mp3').then(async (record) => {
   if (!record) {
-    console.log('No record found');
+    console.log('Запись не найдена');
     return;
   }
 

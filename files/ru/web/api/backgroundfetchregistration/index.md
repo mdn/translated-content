@@ -99,7 +99,7 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 });
 ```
 
-Логирование {{domxref("BackgroundFetchRegistration.id","id")}} в консоль возвращает `"my-fetch"`.
+Вывод {{domxref("BackgroundFetchRegistration.id","id")}} в консоль возвращает `"my-fetch"`.
 
 ```js
 console.log(bgFetch.id); // "my-fetch"
