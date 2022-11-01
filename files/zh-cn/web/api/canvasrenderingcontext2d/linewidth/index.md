@@ -69,7 +69,7 @@ ctx.stroke();
 
 ### Gecko-specific 注解
 
-- 从 Gecko 2.0 {{geckoRelease("2.0")}}版本开始，设置`lineWidth` 为负数不再抛出异常，所有非正数值都会被忽略。
+- 从 Gecko 2.0 版本开始，设置`lineWidth` 为负数不再抛出异常，所有非正数值都会被忽略。
 
 ## 参见
 

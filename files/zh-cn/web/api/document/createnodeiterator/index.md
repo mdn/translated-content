@@ -40,7 +40,7 @@ const nodeIterator = document.createNodeIterator(root[, whatToShow[, filter]]);
 - `filter` {{ optional_inline() }}
   - : 是实现 {{ domxref("NodeFilter") }} 接口的对象; 其 `acceptNode()` 方法会对从根节点开始到子树中的每个节点都调用一次，哪些节点需要进入迭代节点列表等待调用则取决于 whatToShow 参数（也可以使用一个简单的回调函数代替`acceptNode()`）。该方法需要返回下列常量之一： `NodeFilter.FILTER_ACCEPT` ，`NodeFilter.FILTER_REJECT` 或 `NodeFilter.FILTER_SKIP`（见[NodeFilter](/zh-CN/docs/Web/API/NodeFilter)），参见[示例](#示例)。
 
-> **备注：** 在 Gecko12.0{{ geckoRelease("12.0") }}以前，这个方法接收第四个可选的参数（`entityReferenceExpansion`），这不是 DOM4 规范中的一部分，因此被移除了。这个参数表示实体引用节点的子代对于迭代器是否可见。因为浏览器不会创建这样的节点，这个参数没有任何作用。
+> **备注：** 在 Gecko 12.0 以前，这个方法接收第四个可选的参数（`entityReferenceExpansion`），这不是 DOM4 规范中的一部分，因此被移除了。这个参数表示实体引用节点的子代对于迭代器是否可见。因为浏览器不会创建这样的节点，这个参数没有任何作用。
 
 ## 示例
 
