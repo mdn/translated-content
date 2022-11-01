@@ -15625,10 +15625,6 @@
     "modified": "2019-03-23T23:58:09.934Z",
     "contributors": ["SphinxKnight", "fscholz", "khalid32", "teoli", "HenryGR"]
   },
-  "orphaned/Web/API/FileError": {
-    "modified": "2019-03-23T22:51:12.244Z",
-    "contributors": ["Jarvanux"]
-  },
   "orphaned/Web/API/GlobalEventHandlers": {
     "modified": "2020-10-15T21:33:09.443Z",
     "contributors": ["Nachec", "fscholz"]
