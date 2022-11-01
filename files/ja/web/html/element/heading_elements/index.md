@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 8507170b71a6612358bdf2d9ec47b4e9b825bd78
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<h1>`–`<h6>` 要素**は、セクションの見出しを 6 段階で表します。`<h1>` が最上位で、`<h6>` が最下位です。
 
