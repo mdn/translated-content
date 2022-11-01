@@ -2,15 +2,8 @@
 title: BackgroundFetchManager
 slug: Web/API/BackgroundFetchManager
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - BackgroundFetchManager
-  - Experimental
-  - Service Workers
-  - Fetch
-browser-compat: api.BackgroundFetchManager
+l10n:
+  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
