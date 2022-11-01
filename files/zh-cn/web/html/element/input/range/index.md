@@ -20,7 +20,7 @@ original_slug: Web/HTML/Element/Input/范围
   </tr>
   <tr>
    <td><strong>事件</strong></td>
-   <td>{{event("change")}} and {{event("input")}}</td>
+   <td>[`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) and [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)</td>
   </tr>
   <tr>
    <td><strong>支持的常用属性</strong></td>
