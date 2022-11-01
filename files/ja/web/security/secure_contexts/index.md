@@ -1,9 +1,11 @@
 ---
 title: 安全なコンテキスト
 slug: Web/Security/Secure_Contexts
+l10n:
+  sourceCommit: e1f571eced916f60ca387ecb562271f6235beb5c
 ---
 
-**セキュアコンテキスト**とは、認証と機密性の一定の最低基準を満たしている `Window` や `Worker` のことです。多くの Web API や機能は安全なコンテキストでのみアクセス可能です。セキュアコンテキストの主な目的は、[中間者攻撃](https://ja.wikipedia.org/wiki/中間者攻撃) が攻撃の犠牲者をさらに危険にさらす可能性のある強力な API にアクセスすることを防ぐことです。
+**安全なコンテキスト**（セキュアコンテキスト）とは、認証と機密性の一定の最低基準を満たしている `Window` や `Worker` のことです。多くの Web API や機能は安全なコンテキストでのみアクセス可能です。安全なコンテキストの主な目的は、[中間者攻撃](https://ja.wikipedia.org/wiki/中間者攻撃) が攻撃の犠牲者をさらに危険にさらす可能性のある強力な API にアクセスすることを防ぐことです。
 
 ## 機能をアクセス制限すべき理由
 
@@ -15,7 +17,7 @@ Web の API には強力なものもあり、攻撃者に対して以下のよ�
 
 ## コンテキストが安全とみなされるのはいつですか？
 
-コンテキストは、[Secure Contexts](https://w3c.github.io/webappsec-secure-contexts/) 仕様で定義されている認証および機密性の一定の最低基準を満たしている場合に、セキュアなコンテキストとみなされます。特定の文書がセキュアコンテキストである[トップレベルのブラウジングコンテキスト](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context) (基本的には、セキュアコンテキストであるウィンドウやタブを含むコンテキスト) の[アクティブな文書](https://html.spec.whatwg.org/multipage/browsers.html#active-document)である場合、その文書はセキュアコンテキストにあるとみなされます。
+コンテキストは、[Secure Contexts](https://w3c.github.io/webappsec-secure-contexts/) 仕様で定義されている認証および機密性の一定の最低基準を満たしている場合に、安全ななコンテキストとみなされます。特定の文書が安全なコンテキストである[トップレベルのブラウジングコンテキスト](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context) (基本的には、安全なコンテキストであるウィンドウやタブを含むコンテキスト) の[アクティブな文書](https://html.spec.whatwg.org/multipage/browsers.html#active-document)である場合、その文書は安全なコンテキストにあるとみなされます。
 
 例えば、{{HTMLElement("iframe")}} 内で TLS 上で配信された文書であっても、TLS 上で配信されなかった祖先がある場合には、そのコンテキストは安全であるとは見なされ**ません**。
 
