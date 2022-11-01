@@ -1,8 +1,10 @@
 ---
 title: Nullish coalescing operator
-slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
+slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 translation_of: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
+original_slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 ---
+
 {{JSSidebar("Operators")}}
 
 **널 병합 연산자 (`??`)** 는 왼쪽 피연산자가 [null](/ko/docs/Web/JavaScript/Reference/Global_Objects/null) 또는 [undefined](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined)일 때 오른쪽 피연산자를 반환하고, 그렇지 않으면 왼쪽 피연산자를 반환하는 논리 연산자이다.
