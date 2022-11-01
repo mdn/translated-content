@@ -1,6 +1,6 @@
 ---
 title: '@viewport'
-slug: Web/CSS/@viewport
+slug: conflicting/Web/CSS
 tags:
   - Adaptation
   - At-rule
@@ -11,7 +11,9 @@ tags:
   - Reference
   - TopicStub
 translation_of: Web/CSS/@viewport
+original_slug: Web/CSS/@viewport
 ---
+
 {{SeeCompatTable}}{{CSSRef}}
 
 The** `@viewport`** [CSS](/en/CSS) [at-rule](/en/CSS/At-rule) lets you configure the {{glossary("viewport")}} through which the document is viewed. It's primarily used for mobile devices, but is also used by desktop browsers that support features like "snap to edge" (such as Microsoft Edge).
