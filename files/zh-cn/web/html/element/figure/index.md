@@ -43,7 +43,7 @@ slug: Web/HTML/Element/figure
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
        <td>
-         无子 <a href="/zh-CN/docs/Web/HTML/Element/figcaption">figcaption</a> 元素: <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a>，否则没有允许的角色
+         无子 <a href="/zh-CN/docs/Web/HTML/Element/figcaption">figcaption</a> 元素：<a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a>，否则没有允许的角色
       </td>
   </tr>
   <tr>
