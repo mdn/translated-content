@@ -14641,10 +14641,6 @@
     "modified": "2019-08-28T11:37:06.287Z",
     "contributors": ["J-Lobo", "Noreen", "gama"]
   },
-  "conflicting/Web/API/Element/clientHeight": {
-    "modified": "2019-03-23T22:09:21.631Z",
-    "contributors": ["HarleySG"]
-  },
   "conflicting/Web/API/Element/keydown_event": {
     "modified": "2019-03-18T21:31:44.954Z",
     "contributors": ["ANDRUS74"]
