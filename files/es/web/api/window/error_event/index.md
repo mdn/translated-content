@@ -23,8 +23,8 @@ window.onerror = funcRef;
   - Mensaje de error (string)
   - Url en la que el error fue lanzado (string)
   - Número de línea en la que el error fue lanzado (number)
-  - Dentro de la línea en la que el error ocurrió, número de columna correspondiente (number) {{gecko_minversion_inline("31.0")}}
-  - [Error Object](/es/docs/Web/JavaScript/Reference/Global_Objects/Error) (object) {{gecko_minversion_inline("31.0")}}
+  - Dentro de la línea en la que el error ocurrió, número de columna correspondiente (number)
+  - [Error Object](/es/docs/Web/JavaScript/Reference/Global_Objects/Error) (object)
 
 ## Ejemplos
 
