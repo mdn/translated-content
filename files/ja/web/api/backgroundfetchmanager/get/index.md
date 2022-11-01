@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`get()`** method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with the {{domxref("BackgroundFetchRegistration")}} associated with the provided `id` or {{jsxref("undefined")}} if the `id` is not found.
+{{domxref("BackgroundFetchManager")}} インターフェイスの **`get()`** メソッドは、引数に与えられた `id` に紐づく {{domxref("BackgroundFetchRegistration")}} で解決される {{jsxref("Promise")}} を返します。 `id` が見つからない場合は {{jsxref("undefined")}} を返します。
 
 ## 構文
 
@@ -19,15 +19,15 @@ get(id)
 ### 引数
 
 - `id`
-  - : the ID of a {{domxref("backgroundFetchRegistration")}} defined by calling {{domxref("BackgroundFetchRegistration.fetch","fetch()")}}.
+  - : {{domxref("BackgroundFetchRegistration.fetch","fetch()")}} を呼び出すことで定義された {{domxref("backgroundFetchRegistration")}} の ID 。
 
 ### 返値
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} or {{jsxref("undefined")}}.
+{{domxref("BackgroundFetchRegistration")}} で解決される {{jsxref("Promise")}} または {{jsxref("undefined")}} 。
 
 ## 例
 
-The following examples shows how to use `get()` to retrieve a {{domxref("BackgroundFetchRegistration")}}. With an active {{domxref('ServiceWorker', 'service worker')}}, use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} to access the `BackgroundFetchManager` object and call its `get()` method.
+下記の例では、 `get()` を呼び出して {{domxref("BackgroundFetchRegistration")}} を取得する方法を紹介しています。アクティブな {{domxref('ServiceWorker', 'service worker')}} の {{domxref('ServiceWorkerRegistration.backgroundFetch')}} を参照して `BackgroundFetchManager` オブジェクトにアクセスし、その `get()` メソッドを呼び出しています。
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
