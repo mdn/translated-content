@@ -34,7 +34,7 @@ Web の API には強力なものもあり、攻撃者に対して以下のよ�
 
 ## 機能の判別
 
-グローバルスコープで利用できる {{domxref("WindowOrWorkerGlobalScope.isSecureContext", "isSecureContext")}} の真偽値を用いることで、そのページ自身が安全なコンテキストの中にいるかどうか確かめることができます。
+グローバルスコープで利用できる {{domxref("isSecureContext")}} の真偽値を用いることで、そのページ自身が安全なコンテキストの中にいるかどうか確かめることができます。
 
 ```js
 if (window.isSecureContext) {
