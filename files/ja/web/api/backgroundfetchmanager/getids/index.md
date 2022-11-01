@@ -10,25 +10,25 @@ l10n:
 
 The **`getIds()`** method of the {{domxref("BackgroundFetchManager")}} interface returns the IDs of all registered background fetches.
 
-## Syntax
+## 構文
 
 ```js-nolint
 getIds()
 ```
 
-### Parameters
+### 引数
 
 None.
 
-### Return value
+### 返値
 
 A {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of {{jsxref('String', 'strings')}}.
 
-### Exceptions
+### 例外
 
 None.
 
-## Examples
+## 例
 
 The following examples shows how to retrieve the IDs of all registered background fetches. With an active {{domxref('ServiceWorker', 'service worker')}}, use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} property to access the `BackgroundFetchManager` object and call its `get()` method.
 
@@ -38,10 +38,10 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 });
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
