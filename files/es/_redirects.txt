@@ -1621,7 +1621,7 @@
 /es/docs/Web/API/Fetch_API/Conceptos_basicos	/es/docs/Web/API/Fetch_API/Basic_concepts
 /es/docs/Web/API/Fetch_API/Utilizando_Fetch	/es/docs/Web/API/Fetch_API/Using_Fetch
 /es/docs/Web/API/File/Using_files_from_web_applications	/es/docs/Web/API/File_API/Using_files_from_web_applications
-/es/docs/Web/API/File/fileName	/es/docs/conflicting/Web/API/File/name
+/es/docs/Web/API/File/fileName	/es/docs/web/api/file/name
 /es/docs/Web/API/FileError	/es/docs/orphaned/Web/API/FileError
 /es/docs/Web/API/FileReader/onload	/es/docs/Web/API/FileReader/load_event
 /es/docs/Web/API/Geolocalización	/es/docs/Web/API/Geolocation
@@ -2831,6 +2831,7 @@
 /es/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries	/es/docs/Web/CSS/Media_Queries/Using_media_queries
 /es/docs/conflicting/web/api/blob	/es/docs/web/api/blob
 /es/docs/conflicting/web/api/element/clientheight	/es/docs/web/api/element/clientheight
+/es/docs/conflicting/web/api/file/name	/es/docs/web/api/file/name
 /es/docs/conflicting/web/javascript/reference/deprecated_and_obsolete_features	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/conflicting/web/javascript/reference/deprecated_and_obsolete_features_a91664716c4f7753074ac042780999e0	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/controladores_protocolos_web	/es/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
