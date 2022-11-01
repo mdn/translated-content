@@ -1602,7 +1602,7 @@
 /es/docs/Web/API/Document/crearAtributo	/es/docs/Web/API/Document/createAttribute
 /es/docs/Web/API/Document/documentURIObject	/es/docs/orphaned/Web/API/Document/documentURIObject
 /es/docs/Web/API/Document/dragover_event	/es/docs/Web/API/HTMLElement/dragover_event
-/es/docs/Web/API/Document/height	/es/docs/conflicting/Web/API/Element/clientHeight
+/es/docs/Web/API/Document/height	/es/docs/web/api/element/clientheight
 /es/docs/Web/API/Document/keydown_event	/es/docs/Web/API/Element/keydown_event
 /es/docs/Web/API/Document/keyup_event	/es/docs/Web/API/Element/keyup_event
 /es/docs/Web/API/Document/selectstart_event	/es/docs/Web/API/Node/selectstart_event
@@ -2830,6 +2830,7 @@
 /es/docs/Zoom_a_página_completa	/es/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
 /es/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries	/es/docs/Web/CSS/Media_Queries/Using_media_queries
 /es/docs/conflicting/web/api/blob	/es/docs/web/api/blob
+/es/docs/conflicting/web/api/element/clientheight	/es/docs/web/api/element/clientheight
 /es/docs/conflicting/web/javascript/reference/deprecated_and_obsolete_features	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/conflicting/web/javascript/reference/deprecated_and_obsolete_features_a91664716c4f7753074ac042780999e0	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/controladores_protocolos_web	/es/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
