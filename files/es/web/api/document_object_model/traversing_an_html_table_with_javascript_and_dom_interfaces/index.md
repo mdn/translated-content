@@ -165,7 +165,7 @@ En este ejemplo, establecemos la variable `myP` en el objeto DOM para el segundo
     myBody = document.getElementsByTagName("body")[0]
     ```
 
-    Como en cualquier documento HTML sólo hay un elemento body válido, esta lista tendrá sólo un elemento, que recuperamos seleccionando el primer elemento de esa lista usando `{{mediawiki.external(0)}}`.
+    Como en cualquier documento HTML sólo hay un elemento body válido, esta lista tendrá sólo un elemento, que recuperamos seleccionando el primer elemento de esa lista usando `[0]`.
 
 2. Luego, obtenemos todos los elementos p que son descendientes del body mediante
 
@@ -200,7 +200,7 @@ This means that you have created a node of the type TEXT_NODE (a piece of text) 
 
 ### Inserting Elements with appendChild(..)
 
-So, by calling myP.appendChild({{mediawiki.external('node_element')}}), you are making the element a new child of the second \<p> element.
+So, by calling myP.appendChild([node_element]), you are making the element a new child of the second \<p> element.
 
 ```
 myP.appendChild(myTextNode);
@@ -308,7 +308,7 @@ The basic steps to create the table in sample1.html are:
 
 ### Getting a text node from the table
 
-This example introduces two new DOM attributes. First it uses the `childNodes` attribute to get the list of child nodes of mycel. The `childNodes` list includes all child nodes, regardless of what their name or type is. Like getElementsByTagName(), it returns a list of nodes. The differences are that (a) getElementsByTagName() only returns elements of the specified tag name; and (b) getElementsByTagName() returns descendants at any level, not just immediate children. Once you have the returned list, use `{{mediawiki.external('x')}}` method to retrieve the desired child item. This example stores in myceltext the text node of the second cell in the second row of the table. Then, to display the results in this example, it creates a new text node whose content is the data of myceltext and appends it as a child of the \<body> element.
+This example introduces two new DOM attributes. First it uses the `childNodes` attribute to get the list of child nodes of mycel. The `childNodes` list includes all child nodes, regardless of what their name or type is. Like getElementsByTagName(), it returns a list of nodes. The differences are that (a) getElementsByTagName() only returns elements of the specified tag name; and (b) getElementsByTagName() returns descendants at any level, not just immediate children. Once you have the returned list, use `[x]` method to retrieve the desired child item. This example stores in myceltext the text node of the second cell in the second row of the table. Then, to display the results in this example, it creates a new text node whose content is the data of myceltext and appends it as a child of the \<body> element.
 
 > **Nota:** If your object is a text node, you can use the data attribute and retrieve the text content of the node.
 

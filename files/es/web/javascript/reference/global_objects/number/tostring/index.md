@@ -18,7 +18,7 @@ Devuelve una cadena que representa al objeto _Number_ especificado
 
 ## Sintaxis
 
-`number .toString( {{ mediawiki.external('<em>base</em> ') }} )`
+`number .toString( [base ] )`
 
 ### Parámetro
 
