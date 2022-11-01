@@ -19,7 +19,7 @@ On browsers that don't support inputs of type `url`, a `url` input falls back to
   </tr>
   <tr>
    <td><strong>Events</strong></td>
-   <td>{{event("change")}} and {{event("input")}}</td>
+   <td>[`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) and [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)</td>
   </tr>
   <tr>
    <td><strong>Supported Common Attributes</strong></td>

@@ -20,7 +20,7 @@ input:disabled {
 
 ## 示例
 
-这个例子显示基本的购物表单。通过使用 [JavaScript](/zh-CN/docs/Web/JavaScript) {{event("change")}} 事件让用户启用/禁用付款字段。
+这个例子显示基本的购物表单。通过使用 [JavaScript](/zh-CN/docs/Web/JavaScript) [`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 事件让用户启用/禁用付款字段。
 
 ### HTML
 
