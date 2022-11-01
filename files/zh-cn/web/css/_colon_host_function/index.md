@@ -17,13 +17,13 @@ original_slug: Web/CSS/:host()
  }
 ```
 
-## 句法
+## 语法
 
 ```
 :host( <compound-selector> )
 ```
 
-## 例子
+## 示例
 
 以下片段取自我们的[宿主选择器示例](https://github.com/mdn/web-components-examples/tree/master/host-selectors)（[也可以观看在线演示](https://mdn.github.io/web-components-examples/host-selectors/)）。
 
