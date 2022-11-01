@@ -46,8 +46,6 @@ slug: Web/HTML/Element/Heading_Elements
 
 見出し要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-> **メモ:** `align` 属性は廃止されたので、使用しないでください。
-
 ## 使用上の注意
 
 - 見出し情報は、ユーザーエージェントが自動的に文書の目次を作成するために使用することがあります。
