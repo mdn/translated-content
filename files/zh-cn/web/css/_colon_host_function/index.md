@@ -19,7 +19,9 @@ original_slug: Web/CSS/:host()
 
 ## 句法
 
-{{csssyntax}}
+```
+:host( <compound-selector> )
+```
 
 ## 例子
 
