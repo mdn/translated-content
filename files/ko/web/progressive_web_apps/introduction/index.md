@@ -62,7 +62,7 @@ PWA 라우트를 시도하고 네이티브 앱 보다 더 향상된 웹 사이�
 
 심지어 [PWABuilder](https://www.pwabuilder.com/) 웹사이트를 사용해 PWA를 온라인에서 생성할수도 있습니다.
 
-Service worker와 푸시에 관련된 정보는 최신 사이트에서 service worker를 사용하는 예제를 모아둔 [Service Worker Cookbook](https://serviceworke.rs/)을 확인하시기 바랍니다.
+Service worker와 푸시에 관련된 정보는 최신 사이트에서 service worker를 사용하는 예제를 모아둔 [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)을 확인하시기 바랍니다.
 
 PWA 접근은 시도해볼만한 가치가 있으며, 여러분의 앱에서 동작하는지 스스로 확인해보시기 바랍니다.
 

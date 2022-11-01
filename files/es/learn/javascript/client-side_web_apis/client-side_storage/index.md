@@ -739,7 +739,7 @@ self.addEventListener("fetch", function (e) {
 });
 ```
 
-Y eso es todo para nuestro sencillo servicio _worker_. Hay muchas más cosas que puedes hacer con ellos; para obtener más detalles, consulta el [libro de recetas para el servicio _worker_](https://serviceworke.rs/). Y gracias a Paul Kinlan por su artículo [Agregar un servicio _worker_ y sin conexión a tu aplicación web](https://developers.google.com/web/fundamentals/codelabs/offline/), que inspiró este sencillo ejemplo.
+Y eso es todo para nuestro sencillo servicio _worker_. Hay muchas más cosas que puedes hacer con ellos; para obtener más detalles, consulta el [libro de recetas para el servicio _worker_](https://github.com/mdn/serviceworker-cookbook/). Y gracias a Paul Kinlan por su artículo [Agregar un servicio _worker_ y sin conexión a tu aplicación web](https://developers.google.com/web/fundamentals/codelabs/offline/), que inspiró este sencillo ejemplo.
 
 #### Probando el ejemplo sin conexión
 
