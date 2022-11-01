@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`getIds()`** method of the {{domxref("BackgroundFetchManager")}} interface returns the IDs of all registered background fetches.
+{{domxref("BackgroundFetchManager")}} インターフェイスの **`getIds()`** メソッドは、登録済みのすべてのバックグラウンドフェッチの ID を返します。
 
 ## 構文
 
@@ -18,15 +18,15 @@ getIds()
 
 ### 引数
 
-None.
+なし。
 
 ### 返値
 
-A {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of {{jsxref('String', 'strings')}}.
+{{jsxref('String', 'strings')}} の {{jsxref('Array')}} で解決される {{jsxref("Promise")}} を返します。
 
 ### 例外
 
-None.
+なし。
 
 ## 例
 
