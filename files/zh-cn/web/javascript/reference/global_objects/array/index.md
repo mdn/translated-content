@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 {{JSRef}}
 
-与其他编程语言中的数组一样，**`Array`** 对象支持[在单个变量名下存储多个元素](/zh-CN/docs/Learn/JavaScript/First_steps/arrays)，并具有[执行常见数组操作](#示例)的成员。
+与其他编程语言中的数组一样，**`Array`** 对象支持[在单个变量名下存储多个元素](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)，并具有[执行常见数组操作](#示例)的成员。
 
 ## 描述
 
@@ -130,7 +130,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 ### 创建数组
 
-下面的例子展示了三种创建新数组的方法：首先使用[数组字面量](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#数组字面量)，然后使用 [`Array()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/array/array) 构造函数，最后使用 [`String.prototype.split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 从字符串构建数组。
+下面的例子展示了三种创建新数组的方法：首先使用[数组字面量](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#数组字面量)，然后使用 [`Array()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) 构造函数，最后使用 [`String.prototype.split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 从字符串构建数组。
 
 ```js
 // 'fruits' array created using array literal notation.
@@ -276,7 +276,7 @@ console.log(removedItem);
 // Apple
 ```
 
-> **注释：** `shift()` 只能用于从数组中移除第一个元素。若要从数组的开头移除多个元素，请参见下一个示例。
+> **备注：** `shift()` 只能用于从数组中移除第一个元素。若要从数组的开头移除多个元素，请参见下一个示例。
 
 ### 从数组开头移除多个元素
 
@@ -427,7 +427,7 @@ const fruitsCopy3 = fruits.slice();
 const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 ```
 
-你还可以使用 [`structuredClone()`](/zh-CN/docs/Web/API/structuredClone) 方法创建深拷贝，该方法的优点是允许源代码中的 {{Glossary("transferable objects", "可转移对象")}} 被 *转移* 到新的副本，而不仅仅是克隆。
+你还可以使用 [`structuredClone()`](/zh-CN/docs/Web/API/structuredClone) 方法创建深拷贝，该方法的优点是允许源代码中的{{Glossary("transferable objects", "可转移对象")}}被*转移*到新的副本，而不仅仅是克隆。
 
 最后，重要的是要理解，将现有数组赋值给新变量并不会创建数组或其元素的副本。相反，新变量只是对原数组的引用或别名；也就是说，原来的数组名和新的变量名只是同一个对象的两个名称（因此总是被计算为[严格相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#严格相等)）。因此，如果你对原数组的值或新变量的值做了任何改变，另一个也会改变：
 
@@ -470,7 +470,7 @@ console.log(result.vegetables);
 // expected output: Array [Object { name: "asparagus", type: "vegetables" }]
 ```
 
-注意，返回的对象引用*相同*元素作为原数组（而不是 {{glossary("deep copy", "深拷贝")}}）。改变这些元素的内部结构将反映在原始数组和返回对象中。
+注意，返回的对象引用*相同*元素作为原数组（而不是{{glossary("deep copy", "深拷贝")}}）。改变这些元素的内部结构将反映在原始数组和返回对象中。
 
 如果不能使用字符串作为键，例如，如果要分组的信息与可能更改的对象相关联，那么可以使用 {{jsxref("Array.prototype.groupToMap()")}}。这与 `group` 非常相似，只是它将数组的元素分组到 {{jsxref("Map")}} 中，可以使用任意值（{{Glossary("object", "对象")}}或{{Glossary("primitive", "基本类型")}}）作为键。
 
@@ -478,7 +478,7 @@ console.log(result.vegetables);
 
 ### 创建二维数组
 
-下面的例子创建了一个代表国际象棋棋盘的二维数组，然后将 `[6][4]` 上的 `p` (Pawn 兵) 拷贝到 `[4][4]`，而原本的 `[6][4]` 位置则被设置为空格。
+下面的例子创建了一个代表国际象棋棋盘的二维数组，然后将 `[6][4]` 上的 `'p'` 拷贝到 `[4][4]`，而原本的 `[6][4]` 位置则被设置为空格。
 
 ```js
 let board = [
@@ -565,5 +565,5 @@ console.table(values)
   - [对象属性索引](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#对象属性索引)
   - [索引集合类：数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#数组对象array_object)
 
-- [Typed Arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - [RangeError: invalid array length](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
