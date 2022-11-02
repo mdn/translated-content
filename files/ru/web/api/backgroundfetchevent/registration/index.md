@@ -13,15 +13,15 @@ browser-compat: api.BackgroundFetchEvent.registration
 ---
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`registration`** read-only property of the {{domxref("BackgroundFetchEvent")}} interface returns a {{domxref("BackgroundFetchRegistration")}} object.
+Доступное только для чтения свойство **`registration`** интерфейса {{domxref("BackgroundFetchEvent")}} возвращает объект {{domxref("BackgroundFetchRegistration")}}.
 
-## Value
+## Значение
 
-A {{domxref("BackgroundFetchRegistration")}}.
+{{domxref("BackgroundFetchRegistration")}}.
 
-## Examples
+## Примеры
 
-In this example, if the user clicks on the user interface displaying the download progress, this fires the `onbackgroundfetchclick` event. The current {{domxref("BackgroundFetchRegistration")}} is returned by calling `event.registration`.
+В этом примере, если пользователь кликнет по элементу, отображающем ход загрузки, то это действие вызовет событие `onbackgroundfetchclick`. Текущий {{domxref("BackgroundFetchRegistration")}} возвращается вызовом `event.registration`.
 
 ```js
 addEventListener('backgroundfetchclick', (event) => {
@@ -29,10 +29,10 @@ addEventListener('backgroundfetchclick', (event) => {
 });
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

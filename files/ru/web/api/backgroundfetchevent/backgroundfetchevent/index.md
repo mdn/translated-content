@@ -12,32 +12,32 @@ browser-compat: api.BackgroundFetchEvent.BackgroundFetchEvent
 ---
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`BackgroundFetchEvent()`** constructor creates a new {{domxref("BackgroundFetchEvent")}} object. This constructor is not typically used as the browser creates these objects itself and provides them to background fetch event callbacks.
+Конструктор **`BackgroundFetchEvent()`** создаёт новый объект {{domxref("BackgroundFetchEvent")}}. Этот конструктор обычно не используется, так как браузер создаёт такие объекты самостоятельно и, затем, передаёт их для колбэков событий фоновых запросов.
 
-## Syntax
+## Синтаксис
 
 ```js
 new BackgroundFetchEvent(type, options)
 ```
 
-### Parameters
+### Параметры
 
 - `type`
-  - : A string with the name of the event.
-    It is case-sensitive and browsers set it to `backgroundfetchabort` or `backgroundfetchclick`.
+  - : Строка с именем события.
+    Он чувствителен к регистру, и браузеры устанавливают его как `backgroundfetchabort` или `backgroundfetchclick`.
 - `options`
-  - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, has the following properties:
+  - : Объект, который, _в дополнение к свойствам, определённым в {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, имеет следующие свойства:
     - `registration`
-      - : A {{domxref("BackgroundFetchRegistration")}} object.
+      - : Объект {{domxref("BackgroundFetchRegistration")}}.
 
-### Return value
+### Возвращаемое значение
 
-A new {{domxref("BackgroundFetchEvent")}} object.
+Новый объект {{domxref("BackgroundFetchEvent")}}.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
