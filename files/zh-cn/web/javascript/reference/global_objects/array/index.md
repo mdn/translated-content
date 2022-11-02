@@ -581,7 +581,7 @@ console.log(execResult); // [ "dbBd", "bB", "d" ]
 console.log(arr.0); // a syntax error
 ```
 
-JavaScript 语法要求使用[方括号](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#对象和属性)而不是[点符号](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)来访问以数字开头的属性。也可以引用数组下标（例如，`years['2']` 而不是 `years[2]`），尽管通常没有必要。
+JavaScript 语法要求使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#对象和属性)而不是[点号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)来访问以数字开头的属性。也可以用引号包裹数组下标（例如，`years['2']` 而不是 `years[2]`），尽管通常没有必要。
 
 JavaScript 引擎通过隐式的 `toString`，将 `years[2]` 中的 `2` 强制转换为字符串。因此，`'2'` 和 `'02'` 将指向 `years` 对象上的两个不同的槽位，下面的例子可能是 `true`：
 
@@ -636,7 +636,7 @@ console.log(fruits.length);       // 2
 
 ### 数组方法和空槽
 
-[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) 中的空槽在数组方法之间的行为不一致。通常，旧方法会跳过空槽，而新方法将它们视为 `undefined`。
+[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)中的空槽在数组方法之间的行为不一致。通常，旧方法会跳过空槽，而新方法将它们视为 `undefined`。
 
 在遍历多个元素的方法中，下面的方法在访问索引之前执行 [`in`](/zh-CN/docs/Web/JavaScript/Reference/Operators/in) 检查，并且不将空槽与 `undefined` 合并：
 
@@ -681,7 +681,7 @@ console.log(fruits.length);       // 2
 有些方法不改变调用该方法的现有数组，而是返回一个新数组。它们首先访问 [`this.constructor[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) 来确定用于新数组的构造函数。然后用元素填充新构造的数组。复制总是触发[*浅拷贝*](/zh-CN/docs/Glossary/Shallow_copy)——该方法从不复制初始创建数组以外的任何内容。原数组的元素按如下方式复制到新数组中：
 
 - 对象：对象引用被复制到新数组中。原数组和新数组都引用同一个对象。也就是说，如果一个被引用的对象被修改，新数组和原数组都可以看到更改。
-- 基本类型，如字符串，数字和布尔值（不是 {{jsxref("Global_Objects/String", "String")}}、{{jsxref("Global_Objects/Number", "Number")}} 和 {{jsxref("Global_Objects/Boolean", "Boolean")}}对象）：它们的值被复制到新数组中。
+- 基本类型，如字符串，数字和布尔值（不是 {{jsxref("Global_Objects/String", "String")}}、{{jsxref("Global_Objects/Number", "Number")}} 和 {{jsxref("Global_Objects/Boolean", "Boolean")}} 对象）：它们的值被复制到新数组中。
 
 其他方法会改变调用该方法的数组，在这种情况下，它们的返回值根据方法的不同而不同：有时是对相同数组的引用，有时是新数组的长度。
 
@@ -711,7 +711,7 @@ console.log(fruits.length);       // 2
 
 ### 通用数组方法
 
-数组方法总是泛型的——它们不访问数组对象的任何内部数据。它们只通过 `length` 属性和索引访问数组元素。这意味着它们也可以在类数组对象上调用。
+数组方法总是通用的——它们不访问数组对象的任何内部数据。它们只通过 `length` 属性和索引访问数组元素。这意味着它们也可以在类数组对象上调用。
 
 ```js
 const arrayLike = {
