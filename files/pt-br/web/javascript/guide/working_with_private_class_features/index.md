@@ -1,12 +1,6 @@
 ---
 title: Trabalhando com recursos de classe privada.
 slug: Web/JavaScript/Guide/Working_With_Private_Class_Features
-translation_of: Web/JavaScript/Guide/Working_With_Private_Class_Features
-tags:
-  - Document
-  - Guide
-  - JavaScript
-browser-compat: javascript.classes
 ---
 
 {{jsSidebar("JavaScript Guide")}}
