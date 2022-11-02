@@ -597,7 +597,7 @@ JavaScript 数组的 {{jsxref("Array/length", "length")}} 属性和数值属性�
 
 一些内置数组方法（例如 {{jsxref("Array/join", "join()")}}、{{jsxref("Array/slice", "slice()")}}、{{jsxref("Array/indexOf", "indexOf()")}} 等）在被调用时会考虑到数组的 {{jsxref("Array/length", "length")}} 属性的值。
 
-其他方法（例如，{{jsxref("Array/push", "push()")}}、{{jsxref("Array/splice", "splice()")}} 等）也会导致更新数组的 {{jsxref("Array/length"， "length")}} 属性。
+其他方法（例如，{{jsxref("Array/push", "push()")}}、{{jsxref("Array/splice", "splice()")}} 等）也会导致更新数组的 {{jsxref("Array/length", "length")}} 属性。
 
 ```js
 const fruits = [];
@@ -632,7 +632,7 @@ console.log(Object.keys(fruits)); // ['0', '1']
 console.log(fruits.length);       // 2
 ```
 
-这将在 {{jsxref("Array/length")} }页中进一步解释。
+这将在 {{jsxref("Array/length")}} 页中进一步解释。
 
 ### 数组方法和空槽
 
