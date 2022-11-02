@@ -14,7 +14,7 @@ C'est d'autant plus important pour les intranets et autres sites non-publics; s'
 
 ## JavaScript
 
-### Préfixez tous les accès à des variables globales dans les attributs `onfoo` par “`window.`”
+### Préfixez tous les accès à des variables globales dans les attributs `onfoo` par "`window`".
 
 Quand un attribut de gestion d'évenement (`onclick`, `onmouseover`, etc) est utilisé sur un élément HTML, toutes les résolutions de variable dans l'attribut sont d'abord résolues sur l'élément lui-même, puis sur le formulaire contenant l'élément (si c'est un élément de formulaire), puis sur `document`, puis finalement sur `window` (là où se trouvent les variables globales que vous avez définies).Par exemple, si vous avez le balisage suivant :
 

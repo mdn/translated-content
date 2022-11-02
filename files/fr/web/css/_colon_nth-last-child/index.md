@@ -46,7 +46,7 @@ La pseudo-classe `nth-last-child` prend un seul argument qui représente le moti
 
 ### Exemples
 
-- `tr:`nth-last-child`(-n+4)`
+- `tr:nth-last-child(-n+4)`
   - : Permettra de cibler les quatre dernières lignes d'un tableau.
 - `span:nth-last-child(even)` ou `span:nth-last-child(2n)`
   - : Permettra de cibler tous les éléments {{HTMLElement("span")}} pairs en partant de la fin.
