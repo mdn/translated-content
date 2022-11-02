@@ -363,7 +363,7 @@ document.onkeydown = function(e) {
 };
 ```
 
-Aqui nós adicionamos um "ouvinte" (listener) ao objeto de documento (`document`) para detectar quando um botão foi pressionado no teclado. Verificamos qual botão foi pressionado por meio da propriedade [`keyCode`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode) do objeto de evento; se for o código que corresponde a Enter/Return, executamos a função armazenada no manipulador `onclick` do botão usando `document.activeElement.click()`. [`activeElement`](https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement) nos dá o elemento que está atualmente focado na página.
+Aqui nós adicionamos um "ouvinte" (listener) ao objeto de documento (`document`) para detectar quando um botão foi pressionado no teclado. Verificamos qual botão foi pressionado por meio da propriedade [`keyCode`](/en-US/docs/Web/API/KeyboardEvent/keyCode) do objeto de evento; se for o código que corresponde a Enter/Return, executamos a função armazenada no manipulador `onclick` do botão usando `document.activeElement.click()`. [`activeElement`](/en-US/docs/Web/API/Document/activeElement) nos dá o elemento que está atualmente focado na página.
 
 Isso acrescenta um monte de problemas extras para construir a funcionalidade de volta. E não deveríamos ter outros problemas com isso. **É sempre melhor apenas usar o elemento certo.**
 

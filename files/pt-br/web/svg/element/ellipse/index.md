@@ -21,7 +21,7 @@ As elipses são incapazes de especificar a orientação exatada dela mesma (se, 
 
 ## Exemplo
 
-» [ellipse.svg](https://developer.mozilla.org/files/3253/ellipse.svg)
+» [ellipse.svg](/files/3253/ellipse.svg)
 
 ## Atributos
 

@@ -20,15 +20,15 @@ O elemento `line` é uma forma básica do SVG, utilizada para criar uma linha co
 
 ## Exemplo
 
-» [line.svg](https://developer.mozilla.org/files/3254/line.svg)
+» [line.svg](/files/3254/line.svg)
 
 Você também pode aplicar transformações para obter o mesmo resultado. Começando com uma linha normal,
 
-» [line1.svg](https://developer.mozilla.org/files/3345/line1.svg)
+» [line1.svg](/files/3345/line1.svg)
 
 adicionar as opções de transformação para mudar a direção da linha:
 
-» [line2.svg](https://developer.mozilla.org/files/3346/line2.svg)
+» [line2.svg](/files/3346/line2.svg)
 
 ## Atributos
 
