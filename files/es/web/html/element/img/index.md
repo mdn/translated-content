@@ -151,11 +151,11 @@ El estándar de HTML no ofrece una lista de formatos de imagen soportados, de mo
 - [JPEG](http://en.wikipedia.org/wiki/JPEG)
 - [GIF](http://en.wikipedia.org/wiki/Graphics_Interchange_Format), including animated GIFs
 - [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics)
-- [APNG](/es/docs/Animated_PNG_graphics) {{gecko_minversion_inline("1.9.2")}}
-- [SVG](/es/docs/SVG) {{gecko_minversion_inline("2.0")}}
+- [APNG](/es/docs/Animated_PNG_graphics)
+- [SVG](/es/docs/SVG)
 - [BMP](http://en.wikipedia.org/wiki/BMP_file_format)
 - [BMP ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
-- [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29) {{gecko_minversion_inline("9.0")}}
+- [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
 
 > **Nota:**
 > Soporte para formato [XBM](http://en.wikipedia.org/wiki/X_BitMap) fue eliminado en Gecko 1.9.2.

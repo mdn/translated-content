@@ -36,7 +36,7 @@ Los usuarios de [Mozilla Chrome](/en-US/Chrome) users (e.g. Firefox extensions) 
 
 A partir de la versión 46.0 de Chrome este método es bloqueado dentro de un {{htmlelement("iframe")}} a no ser que el atributo sandbox tenga el valor `allow-modal`.
 
-{{gecko_minversion_inline("23.0")}} El argumento es opcional y no requerido por la especificación.
+El argumento es opcional y no requerido por la especificación.
 
 ## Especificación
 
