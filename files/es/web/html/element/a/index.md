@@ -68,7 +68,7 @@ El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de interne
 
 Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("download")}} 
+- {{htmlattrdef("download")}}
 
   - : Este atributo, indica descargar a los navegadores una URL en lugar de navegar hacia ella, por lo que el usuario será dirigido para salvarla como un archivo local. Si el atributo tiene un valor, éste se utilizará como nombre de archivo por defecto en el mensaje Guardar que se abre cuando el usuario hace clic en el enlace (sin embargo, el usuario puede cambiar el nombre antes de guardar el archivo). No hay restricciones sobre los valores permitidos, aunque: / y: \ se convertirán en guiones bajos (_underscores_), lo que evitará sugerencias de ruta específicas. Se debe tener en cuenta que la mayoría de los sistemas de archivos tienen limitaciones con respecto a los símbolos de puntuación admitidos en los nombres de archivo, por lo que los navegadores ajustarán los nombres de los archivos en consecuencia.
 
