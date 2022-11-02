@@ -208,12 +208,13 @@ scalar1.add(scalar1)
 scalar1.add({}) // throws informative exception
 ```
 
-## Compatibilidade de navegadores 
-
-{{Compat}}
 
 ## Veja também
 
 - [Recursos de Classe  privada](/pt-BR/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
 - [FAQ sobre sintaxe de Classes privadas](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md)
 - [A semântica de todos os elementos de Class JS](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+
+## Compatibilidade de navegadores 
+
+{{Compat}}
