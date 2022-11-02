@@ -7,7 +7,7 @@ l10n:
 
 {{WebGLSidebar}}
 
-**WebGL** (<i lang="en">Web Graphics Library</i>, qu'on pourrait traduire en «&nbsp;bibliothèque de graphismes pour le Web&nbsp;») est une API JavaScript permettant le rendu de graphismes en 2D ou 3D avec de hautes performances, sans avoir à utiliser de plugin.WebGL introduit une API qui est conforme de près à OpenGL ES 2.0 et qui peut être utilisée sur les éléments HTML [`<canvas>`](/fr/docs/Web/HTML/Element/canvas). Cette conformité permet à l'API de tirer parti de l'accélération matérielle graphique fournie par l'appareil.
+**WebGL** (<i lang="en">Web Graphics Library</i>, qu'on pourrait traduire en «&nbsp;bibliothèque de graphismes pour le Web&nbsp;») est une API JavaScript permettant le rendu de graphismes en 2D ou 3D avec de hautes performances, sans avoir à utiliser de plugin. WebGL introduit une API qui est conforme de près à OpenGL ES 2.0 et qui peut être utilisée sur les éléments HTML [`<canvas>`](/fr/docs/Web/HTML/Element/canvas). Cette conformité permet à l'API de tirer parti de l'accélération matérielle graphique fournie par l'appareil.
 
 WebGL est pris en charge par [Firefox](/fr/docs/Mozilla/Firefox) 4+, [Google Chrome](https://www.google.com/chrome/) 9+, [Opera](https://www.opera.com/) 12+, [Safari](https://www.apple.com/safari/) 5.1+, et [Microsoft Edge](https://www.microsoft.com/fr-FR/edge) build 10240+. Il est également nécessaire que le matériel de l'appareil utilisé prenne en charge ces fonctionnalités.
 
