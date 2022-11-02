@@ -20,7 +20,7 @@ slug: Web/HTML/Element/figure
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td>        
+   <td>
      {{HTMLElement("figcaption")}} 元素，且紧随着<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容">流式内容</a>；或紧随流式内容的 {{HTMLElement("figcaption")}} 元素；或流式内容。
     </td>
   </tr>

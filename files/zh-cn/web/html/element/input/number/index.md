@@ -364,6 +364,7 @@ input:valid + span::after {
   padding-left: 5px;
 }
 ```
+
 最后是一些 JavaScript 代码：
 
 ```js
