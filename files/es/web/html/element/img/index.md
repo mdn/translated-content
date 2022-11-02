@@ -72,7 +72,7 @@ Este elemento incluye atributos globales.
 
   - : Anchura del borde alrededor de la imagen.
 
-- {{htmlattrdef("crossorigin")}} 
+- {{htmlattrdef("crossorigin")}}
 
   - : Este atributo enumerado indica si la búsqueda de la imagen debe ser por CORS o no. [Imagen hablidata CORS](/es/docs/Web/HTML/Imagen_con_CORS_habilitado) puede ser usada en el elemento {{HTMLElement("canvas")}} sin ser pintada. Los valores permitidos son:
 

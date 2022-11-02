@@ -18,7 +18,7 @@ El **Elemento HTML `<label>`** representa una etiqueta para un elemento en una i
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("accesskey")}} 
+- {{htmlattrdef("accesskey")}}
   - : Una tecla de atajo para acceder a este elemento desde el teclado.
 - {{htmlattrdef("for")}}
 
@@ -26,7 +26,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
     > **Nota:** Un elemento label puede contener ambos; El atributo for y el elemento de control anidado, siempre y cuando el atributo for apunte al mismo elemento.
 
-- {{htmlattrdef("form")}} 
+- {{htmlattrdef("form")}}
   - : El formulario con el cual el label está asociado (su formulario dueño). El valor de este atributo debe ser un ID del elemento {{HTMLElement("form")}} en el mismo documento. Si este atributo no es especificado, este elemento `<label>` deberia ser descendiente de un elemento {{HTMLElement("form")}}. Este atributo permite ubicar el elemento label en cualquier lugar dentro del documento y no solo como descendiente de su respectivo formulario.
 
 ## Ejemplos

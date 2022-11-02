@@ -65,7 +65,7 @@ Además de los atributos listados abajo, este elemento puede tener cualquier [gl
   - : Este atributo Booleano indica que el campo de la contraseña no está disponible. Además, deshabilita los valores que no son enviados por el campo.
 - {{htmlattrdef("defaultvalue")}}
   - : Define un valor predeterminado en el campo de la contraseña.
-- {{htmlattrdef("inputmode")}} 
+- {{htmlattrdef("inputmode")}}
 
   - : Le da proporciona información al buscador sobre que teclado mostrar. Los valores posibles son:
 

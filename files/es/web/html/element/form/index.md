@@ -36,7 +36,7 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
 
 - {{ htmlattrdef("action") }}
   - : La URI de un programa que procesa la información enviada por medio del formulario. Este valor puede ser sobreescrito por un atributo {{ htmlattrxref("formaction", "button") }} en un {{ HTMLElement("button") }} o en el elemento{{ HTMLElement("input") }}.
-- {{ htmlattrdef("autocomplete") }} 
+- {{ htmlattrdef("autocomplete") }}
 
   - : Indica cuales de los controles en este formulario puede tener sus valores automáticamente completados por el navegador. Esta configuración puede ser sobreescrita por un atributo `autocomplete` en un elemento que pertenezca al formulario:
 
@@ -67,7 +67,7 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
 
 - {{ htmlattrdef("name") }}
   - : El nombre del formulario. En HTML4 ha quedado en desuso (debe usarse un id en su lugar). Debe ser único entre los formularios en un documento y no una cadena vacia en HTML5.
-- {{ htmlattrdef("novalidate") }} 
+- {{ htmlattrdef("novalidate") }}
   - : Este atributo booleano indica que el formulario no es validado cuando es enviado. Si el atributo no existe {{ htmlattrxref("formnovalidate", "button") }} en un {{ HTMLElement("button") }} o en un elemento {{ HTMLElement("input") }} que pertenece al formulario.
 - {{ htmlattrdef("target") }}
 

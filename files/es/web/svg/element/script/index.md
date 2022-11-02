@@ -79,7 +79,7 @@ Los scripts sin atributo `async` o `defer`, así como las secuencias de comandos
 
 Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
-- {{htmlattrdef("async")}} 
+- {{htmlattrdef("async")}}
 
   - : Establece este atributo booleano para indicar al navegador, si es posible, ejecutar el código asincrónicamente. Esto no afecta a los scripts escritos dentro de la etiqueta (es decir a aquellos que no tienen el atributo **src**).
 
