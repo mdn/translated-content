@@ -1,17 +1,6 @@
 ---
 title: Base64
 slug: Glossary/Base64
-translation_of: Glossary/Base64
-tags:
-  - Avançado
-  - Base64
-  - JavaScript
-  - Arrays tipados
-  - URI
-  - URL
-  - Unicode Problema
-  - atob()
-  - btoa()
 ---
 
 **Base64** é um grupo de esquemas de [codificação binários](https://en.wikipedia.org/wiki/Binary-to-text_encoding) para texto semelhantes que representam dados binários em um formato de string ASCII, traduzindo-os em uma representação radix-64. O termo _Base64_ se origina de uma codificação de [transferência de conteúdo MIME](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding).
