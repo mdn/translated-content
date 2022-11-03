@@ -1,6 +1,6 @@
 ---
-title: Glossário
-slug: 
+title: "Glossário do MDN Web Docs: Definições de termos relacionados à Web "
+slug: Glossário
 translation_of: Glossary
 original_slug: Glossario
 ---
