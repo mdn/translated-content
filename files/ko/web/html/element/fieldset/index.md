@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/fieldset
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<fieldset>` 요소**는 웹 양식의 여러 컨트롤과 레이블({{htmlelement("label")}})을 묶을 때 사용합니다.
 

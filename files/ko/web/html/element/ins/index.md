@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/ins
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<ins>` 요소**는 문서에 추가된 텍스트의 범위를 나타냅니다. {{htmlelement("del")}} 요소를 사용하면 삭제된 텍스트의 범위를 나타낼 수 있습니다.
 

@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/html
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<html>` 요소**는 HTML 문서의 루트(최상단 요소)를 나타내며, "루트 요소"라고도 부릅니다. 모든 다른 요소는 `<html>` 요소의 후손이어야 합니다.
 

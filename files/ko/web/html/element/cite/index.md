@@ -11,7 +11,7 @@ tags:
   - 출처
 translation_of: Web/HTML/Element/cite
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<cite>` 요소**는 저작물의 출처를 표기할 때 사용하며, 제목을 반드시 포함해야 합니다. 적절한 맥락 아래에서는 출처를 축약해서 표기할 수 있습니다.
 

@@ -49,4 +49,4 @@ translation_of: Web/HTML/Element/frame
 - {{HTMLElement("frameset")}}
 - {{HTMLElement("iframe")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}
