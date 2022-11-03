@@ -74,7 +74,7 @@ Hay varias macros para vincular páginas en áreas de referencia específicas de
 Hay plantillas para casi todas las grandes colecciones de páginas. Por lo general, enlazan a la página principal de `reference/guide/tutorial` (esto, a menudo es necesario porque nuestras rutas de navegación a veces no lo pueden hacer) y colocan el artículo en la categoría apropiada.
 
 - [`CSSRef`](https://github.com/mdn/yari/tree/main/kumascript/macros/CSSRef.ejs) genera la barra lateral para las páginas de referencia CSS.
-- [`HTMLRef`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLRef.ejs) genera la barra lateral para las páginas de referencia HTML.
+- [`HTMLSidebar`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLSidebar.ejs) genera la barra lateral para las páginas de referencia HTML.
 - [`APIRef`](https://github.com/mdn/yari/tree/main/kumascript/macros/APIRef.ejs) genera la barra lateral para las páginas de referencia de la API web.
 
 ## Formato de propósito general

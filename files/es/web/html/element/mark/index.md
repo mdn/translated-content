@@ -10,7 +10,7 @@ tags:
 translation_of: Web/HTML/Element/mark
 original_slug: Web/HTML/Elemento/mark
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 El **Elemento HTML Mark `<mark>`** representa un texto **marcado** o **resaltado** como referencia o anotación, debido a su relevancia o importancia en un contexto particular.
 

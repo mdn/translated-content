@@ -120,4 +120,4 @@ Un _textarea_ tiene dimensiones intrínsecas, como una imagen agrandada.
 
 Otros elementos relacionados con formularios: {{ HTMLElement("form") }}, {{ HTMLElement("button") }}, {{ HTMLElement("datalist") }}, {{ HTMLElement("legend") }}, {{ HTMLElement("label") }}, {{ HTMLElement("select") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("input") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("output") }}, {{ HTMLElement("progress") }} and {{ HTMLElement("meter") }}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

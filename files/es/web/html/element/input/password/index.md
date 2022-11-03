@@ -8,7 +8,7 @@ tags:
 translation_of: Web/HTML/Element/input/password
 original_slug: Web/HTML/Elemento/input/password
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Los elementos `<input>` de tipo **`"password"`** proporcionan una forma para que el usuario ingrese una contraseña de forma segura. El elemento se presenta como un control de editor de texto, sin formato, de una línea, en el que el texto está oculto para que no pueda leerse, generalmente reemplazando cada carácter con un símbolo como el asterisco ("\*") o un punto ("•"). Este carácter variará dependiendo del {{Glossary("user agent")}} y del {{Glossary("OS")}}.
 
