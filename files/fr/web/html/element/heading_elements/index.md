@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/Heading_Elements
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Les éléments **`<h1>`** à **`<h6>`** représentent six niveaux de titres dans un document, `<h1>` est le plus important et `<h6>` est le moins important. Un élément de titre décrit brièvement le sujet de la section qu'il introduit.
 
