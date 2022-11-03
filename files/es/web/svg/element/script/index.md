@@ -139,4 +139,4 @@ Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Glob
 - {{domxref("document.currentScript")}}
 - [Ryan Grove's \<script> and \<link> node event compatibility chart](http://pieisgood.org/test/script-link-events/)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

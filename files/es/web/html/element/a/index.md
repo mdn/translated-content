@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/a
 original_slug: Web/HTML/Elemento/a
 browser-compat: html.elements.a
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de internet, archivos o ubicaciones dentro de la misma página, direcciones de correo, o cualquier otra URL.
 
