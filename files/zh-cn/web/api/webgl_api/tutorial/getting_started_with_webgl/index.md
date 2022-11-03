@@ -57,7 +57,7 @@ function main() {
 
 {{EmbedGHLiveSample('webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 
-[看源码](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample1) | [看 DEMO](http://mdn.github.io/webgl-examples/tutorial/sample1/)
+[看源码](https://github.com/mdn/webgl-examples/tree/main/webgl-examples/tutorial/sample1) | [看 DEMO](https://mdn.github.io/webgl-examples/webgl-examples/tutorial/sample1/)
 
 ## 参见
 
