@@ -115,9 +115,9 @@ let theText = myTextInput.value;
 
 ## 非标准属性
 
-以下非标准属性在某些浏览器上也可用。通常应避免使用它们。
+以下非标准属性在某些浏览器上也可用。一般来说，除非万不得已，否则你应该避免使用它们。
 
-### autocorrect
+### `autocorrect`
 
 Safari 扩展，`autocorrect` 属性是一个字符串，它指示在用户编辑此字段时是否激活自动更正。允许的值为：
 
@@ -126,7 +126,7 @@ Safari 扩展，`autocorrect` 属性是一个字符串，它指示在用户编�
 - `off`
   - : 禁用自动更正和文本替换。
 
-### mozactionhint
+### `mozactionhint`
 
 Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <kbd>Enter</kbd> 或 <kbd>Return</kbd> 键将采取何种操作。
 
