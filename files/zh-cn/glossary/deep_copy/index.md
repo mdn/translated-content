@@ -7,7 +7,7 @@ slug: Glossary/Deep_copy
 
 对象的**深拷贝**是指其属性与生成副本的源对象的属性不共享相同的引用（指向相同的底层值)的副本。因此，当你更改源或副本时，可以确保不会导致其他对象也发生更改；也就是说，你不会无意中对源或副本造成意料之外的更改。这种行为与[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)的行为形成对比，在浅拷贝中，对源或副本的更改可能也会导致其他对象的更改（因为两个对象共享相同的引用）。
 
-在 JavaScript 中，标准的内置对象复制操作（[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、[`Array.prototype.concat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)、[`Array.prototype.slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)、[`Array.from()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)、[`Object.assign()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 和 [`Object.create()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create))）不创建深拷贝（相反，它们创建浅拷贝)。
+在 JavaScript 中，标准的内置对象复制操作（[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、[`Array.prototype.concat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)、[`Array.prototype.slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)、[`Array.from()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)、[`Object.assign()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 和 [`Object.create()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create)）不创建深拷贝（相反，它们创建浅拷贝)。
 
 如果一个 JavaScript 对象可以被[序列化](/zh-CN/docs/Glossary/Serialization)，则存在一种创建深拷贝的方式：使用 {{jsxref("JSON.stringify()")}} 将该对象转换为 JSON 字符串，然后使用 {{jsxref("JSON.parse()")}} 将该字符串转换回（全新的）JavaScript 对象：
 
