@@ -3,7 +3,7 @@ title: <slot>
 slug: Web/HTML/Element/slot
 translation_of: Web/HTML/Element/slot
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 HTML-элемент `<slot>` является частью набора технологии [Web Components](/ru/docs/Web/Web_Components), является заполнителем внутри веб компонента, который можно заполнить собственной разметкой, которая позволяет создавать отдельные деревья DOM и представлять их вместе.
 
