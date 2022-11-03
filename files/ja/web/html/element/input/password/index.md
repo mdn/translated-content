@@ -3,7 +3,7 @@ title: <input type="password">
 slug: Web/HTML/Element/input/password
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar("Input_types")}}
 
 `<input>` 要素の **`password`** 型は、パスワードを安全に入力する方法を提供します。
 この要素はプレーンテキストの 1 行編集コントロールとして表示され、そのテキストは読み取られることがないように、1 つ 1 つの文字がアスタリスク ("\*") やドット ("•") のような記号に置き換えられ、隠されます。

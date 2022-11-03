@@ -3,7 +3,7 @@ title: <input type="range">
 slug: Web/HTML/Element/input/range
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar("Input_types")}}
 
 {{HTMLElement("input")}} 要素の **`range`** 型は、ユーザーに特定の値より小さくなく、別な特定の値より大きくない数値を指定させるために使用します。しかし、厳密な値が重要であるとはされません。これは通常、 {{HTMLElement('input/number', 'number')}} 入力型のようなテキスト入力ボックスではなく、スライダーやダイアルコントロールを用いて表現されます。
 

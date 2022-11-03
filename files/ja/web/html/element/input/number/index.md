@@ -3,7 +3,7 @@ title: <input type="number">
 slug: Web/HTML/Element/input/number
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar("Input_types")}}
 
 {{HTMLElement("input")}} 要素の **`number`** 型は、ユーザーに数値を入力させるために使用されます。数値以外の入力を除外するための値検証機能を内蔵しています。
 

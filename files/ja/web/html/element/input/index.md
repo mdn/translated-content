@@ -4,7 +4,7 @@ slug: Web/HTML/Element/input
 l10n:
   sourceCommit: 24e69ffb152389ad535eec8fed5f3c19c4bc27c4
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<input>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーからデータを受け取るための、ウェブベースのフォーム用の操作可能なコントロールを作成するために使用します。端末と{{Glossary("user agent", "ユーザーエージェント")}}によりますが、広範に渡る種類のデータ入力やコントロールウィジェットが利用できます。 `<input>` 要素は入力型と属性の組み合わせの数が非常に多いため、 HTML の中で最も強力かつ最も複雑な要素の一つです。
 

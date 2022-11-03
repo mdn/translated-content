@@ -3,7 +3,7 @@ title: '<ol>: 順序付きリスト要素'
 slug: Web/HTML/Element/ol
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<ol>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序付きリストを表します。ふつうは番号付きのリストとして表示されます。
 

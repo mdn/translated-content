@@ -3,7 +3,7 @@ title: <frameset>
 slug: Web/HTML/Element/frameset
 ---
 
-{{HTMLRef}}{{Deprecated_header}}
+{{HTMLSidebar}}{{Deprecated_header}}
 
 **HTML の `<frameset>` 要素**は、 {{HTMLElement("frame")}} 要素を包含するために使用する HTML 要素です。
 

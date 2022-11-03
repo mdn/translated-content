@@ -3,7 +3,7 @@ title: '<h1>–<h6>: HTML の見出し要素'
 slug: Web/HTML/Element/Heading_Elements
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<h1>`–`<h6>` 要素**は、セクションの見出しを 6 段階で表します。`<h1>` が最上位で、`<h6>` が最下位です。
 
