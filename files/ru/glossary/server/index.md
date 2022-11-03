@@ -18,5 +18,5 @@ For example:
 
 ### General knowledge
 
-- [Introduction to servers](https://developer.mozilla.org/en-US/Learn/What_is_a_web_server)
+- [Introduction to servers](/en-US/Learn/What_is_a_web_server)
 - {{Interwiki("wikipedia", "Server (computing)")}} on Wikipedia

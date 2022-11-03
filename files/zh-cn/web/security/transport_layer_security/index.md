@@ -11,7 +11,7 @@ original_slug: Web/Security/传输层安全协议
 ### 参见
 
 - [Mozilla SSL 配置生成器](https://ssl-config.mozilla.org)和 [Cipherlist.eu](https://cipherlist.eu/) 帮助你为服务器生成配置文件以保护你的站点。
-- Mozilla 运营安全（OpSec）团队维护了一个带有[引用的 TLS 配置](https://wiki.mozilla.org/Security/Server_Side_TLS)的 wiki 页面.
+- Mozilla 运营安全（OpSec）团队维护了一个带有[引用的 TLS 配置](https://wiki.mozilla.org/Security/Server_Side_TLS)的 wiki 页面。
 - [Mozilla Observatory](https://observatory.mozilla.org/)、[SSL Labs](https://www.ssllabs.com/ssltest/) 以及 [Cipherscan](https://github.com/mozilla/cipherscan) 可以帮助你测试站点以了解其 TLS 配置的安全性。
 - [安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)
 - [Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP 标头

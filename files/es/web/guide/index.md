@@ -29,13 +29,13 @@ Este artículo proporciona información para ayudarte a hacer uso de tecnología
 - [Localización y codificación de Caracteres](/es/docs/Localizations_and_character_encodings)
   - : Los navegadores procesan el texto internamente como Unicode. No obstante, una forma de representar los caracteres a nivel de bytes (codificación) se usa para transferir texto a través de la red a un navegador web. En [recomendaciones de la especificación HTML](http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset) se aconseja el uso de la codificación UTF-8 (que puede representar todo Unicode) e independientemente de la codificación usada se requiere que el contenido web declare que codificación utiliza.
 - [Desarrollo Web Móvil](/es/docs/Web/Guide/Mobile)
-  - : Esta página proporciona una visión general de algunas de las principales técnicas necesarias para el diseño de sitios web que funcionen en dispositivos móviles. Si estás buscando información sobre el proyecto Firefox OS de Mozilla, mira la web [Firefox OS](https://developer.mozilla.org/en/Mozilla/Firefox_OS). O puede que te interesen los detalles de [Firefox para Android.](https://developer.mozilla.org/en/Mozilla/Firefox_for_Android)
+  - : Esta página proporciona una visión general de algunas de las principales técnicas necesarias para el diseño de sitios web que funcionen en dispositivos móviles. Si estás buscando información sobre el proyecto Firefox OS de Mozilla, mira la web [Firefox OS](/en/Mozilla/Firefox_OS). O puede que te interesen los detalles de [Firefox para Android.](/en/Mozilla/Firefox_for_Android)
 
 <!---->
 
 <!---->
 
-- [Progressive Web Apps (PWA)](https://developer.mozilla.org/en-US/Apps/Progressive#Core_PWA_guides)
+- [Progressive Web Apps (PWA)](/en-US/Apps/Progressive#Core_PWA_guides)
   - : Las aplicaciones web progresivas usan APIs Web modernas junto con mejoras progresivas estratégicas para crear aplicaciones multi-plataforma. Estas aplicaciones funcionan donde sea y proporcionan muchas características que brindan la misma experiencia de usuario que una aplicación nativa. Este conjunto de documentos y guías te indican sobre todo lo que debes saber de las PWAs.
 - [Optimización y Rendimiento](/es/docs/Web/Guide/Performance)
   - : Cuando creamos modernas Web apps y páginas web, es importante hacer que tu contenido rinda bien. Eso es, hacer que funcione de forma rápida y eficiente. Esto permite trabajar de forma más efectiva tanto a los usuarios de potentes equipos de sobremesa como a los que utilizan dispositivos portátiles con menos potencia.
@@ -46,7 +46,7 @@ Este artículo proporciona información para ayudarte a hacer uso de tecnología
 - [El Web Open Font Format (WOFF)](/es/docs/Web/Guide/WOFF)
   - : **WOFF** ( **Web Open Font Format**) es un formato de tipografías para páginas web desarrollado por Mozilla en conjunto con Type Supply, LettError y otras organizaciones.
 - [Utilizar FormData Objects](/es/docs/Web/Guide/Using_FormData_Objects)
-  - : [`FormData`](https://developer.mozilla.org/en/DOM/XMLHttpRequest/FormData) te permite compilar un conjunto de pares clave/valor para enviarlos utilizando XMLHttpRequest. En un principio se pensó como manera de enviar información de formularios, pero puede utilizarse independientemente de los formularios para transmitir datos. La información trasmitida está en el mismo formato que se utiliza mediante el método `submit()` de los formularios para enviarla si el tipo de codificación del formulario fuese "multipart/form-data".
+  - : [`FormData`](/en/DOM/XMLHttpRequest/FormData) te permite compilar un conjunto de pares clave/valor para enviarlos utilizando XMLHttpRequest. En un principio se pensó como manera de enviar información de formularios, pero puede utilizarse independientemente de los formularios para transmitir datos. La información trasmitida está en el mismo formato que se utiliza mediante el método `submit()` de los formularios para enviarla si el tipo de codificación del formulario fuese "multipart/form-data".
 - [Glosario](/es/docs/Glossary)
   - : Define gran cantidad de términos técnicos relativos a las páginas Web e Internet.
 

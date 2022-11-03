@@ -46,7 +46,7 @@ En plus des attributs qui sont partagés par l'ensemble des éléments {{HTMLEle
 
 ### {{htmlattrdef("checked")}}
 
-Un attribut booléen qui indique si la case est cochée. Cet attribut n'indique pas si la case est actuellement cochée : si l'état a été modifié, l'attribut dans le document ne reflètera pas cette modification (seul l'attribut IDL `checked`de l'objet {{domxref("HTMLInputElement")}} est mis à jour).
+Un attribut booléen qui indique si la case est cochée. Cet attribut n'indique pas si la case est actuellement cochée : si l'état a été modifié, l'attribut dans le document ne reflètera pas cette modification (seul l'attribut IDL `checked` de l'objet {{domxref("HTMLInputElement")}} est mis à jour).
 
 > **Note :** À la différence des autres champs, les valeurs des cases à cocher ne sont envoyées au serveur que lorsqu'elles sont cochées. Lorsque c'est le cas, c'est la valeur de l'attribut `value` qui est envoyé.
 
@@ -274,7 +274,7 @@ otherCheckbox.onchange = function() {
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
-      <td>{{event("change")}} et {{event("input")}}</td>
+      <td><a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/input_event"><code>input</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>

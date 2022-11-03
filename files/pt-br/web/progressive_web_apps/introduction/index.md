@@ -57,7 +57,7 @@ You can check the list at [pwa.rocks](https://pwa.rocks/) for more examples. Par
 
 You can even generate PWAs online using the [PWABuilder](https://www.pwabuilder.com/) website.
 
-For service worker- and push- specific information, be sure to check The [Service Worker Cookbook](https://serviceworke.rs/), a collection of recipes using service workers in modern sites.
+For service worker- and push- specific information, be sure to check The [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/), a collection of recipes using service workers in modern sites.
 
 It's well worth trying out a PWA approach, so you can see for yourself if it works for your app.
 

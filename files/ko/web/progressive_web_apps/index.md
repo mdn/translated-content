@@ -44,7 +44,7 @@ PWA는 발견 가능, 설치 가능, 연결 가능해야 하고, 네트워크에
 - [sw-precache](https://github.com/GoogleChrome/sw-precache) — 특정 리소스를 프리캐싱(미리 캐싱;precache)하는 service worker 코드를 생성하는 노드 모듈.
 - [workbox](https://github.com/GoogleChrome/workbox) — 더 나은 캐싱 전략과 쉬운 프리캐싱을 제공하는 sw-precache의 정신적 지주.
 - [upup](https://www.talater.com/upup/) — 사이트가 사용자들을 위해 항상 존재하도록 해주는 작은 스크립트.
-- [The service worker cookbook](https://serviceworke.rs/) — 오프라인 앱 및 그 이상의 다양한 앱 구현 방법을 보여주는 훌륭한 service worker/push 가이드 시리즈.
+- [The service worker cookbook](https://github.com/mdn/serviceworker-cookbook/) — 오프라인 앱 및 그 이상의 다양한 앱 구현 방법을 보여주는 훌륭한 service worker/push 가이드 시리즈.
 
 ## 함께 보기
 

@@ -60,7 +60,7 @@ PWA の実装方法については、 [PWA 開発者ガイド](/ja/docs/Web/Prog
 - [sw-precache](https://github.com/GoogleChrome/sw-precache) — 特定のリソースを事前にキャッシュする Service Worker のコードを生成する node のモジュール。
 - [workbox](https://github.com/GoogleChrome/workbox) — 気持ち的には、より進んだキャッシングの手法と簡単なプリキャッシュを有する sw-precache の後継者。
 - [upup](https://www.talater.com/upup/) — あなたのサイトが常にあなたのユーザーのために存在するようにする小さなスクリプト。
-- [The service worker cookbook](https://serviceworke.rs/) — 一連の素晴らしい Service Worker/プッシュレシピ、オフラインアプリケーションの実装方法を紹介しているが、より多くの機能を持っている。
+- [The service worker cookbook](https://github.com/mdn/serviceworker-cookbook/) — 一連の素晴らしい Service Worker/プッシュレシピ、オフラインアプリケーションの実装方法を紹介しているが、より多くの機能を持っている。
 - [PWA VS Code extension](https://marketplace.visualstudio.com/items?itemName=mayeedwin.vscode-pwa) - VS Code 環境でプログレッシブウェブアプリを構築するために必要な、すべての重要なコードスニペットのコレクションです。
 
 <!---->

@@ -48,16 +48,16 @@ Dentro dessa pasta crie um novo arquivo chamado "manifest.json" e coloque o segu
 }
 ```
 
-- As primeiras tres chaves: [`manifest_version`](/en-US/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/en-US/Add-ons/WebExtensions/manifest.json/name), e [`version`](/en-US/Add-ons/WebExtensions/manifest.json/version), são obrigatórias e contém os metadados básicos sobre a extensão.
-- [`description`](/en-US/Add-ons/WebExtensions/manifest.json/description) é opcional contudo é recomendada pois aparece no gerenciador de complementos.
-- [`icons`](/en-US/Add-ons/WebExtensions/manifest.json/icons) é opcional porém recomendada pois define os ícones que aparecem no gerenciador de complementos.
+- As primeiras tres chaves: [`manifest_version`](/pt-BR/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/pt-BR/Add-ons/WebExtensions/manifest.json/name), e [`version`](/pt-BR/Add-ons/WebExtensions/manifest.json/version), são obrigatórias e contém os metadados básicos sobre a extensão.
+- [`description`](/pt-BR/Add-ons/WebExtensions/manifest.json/description) é opcional contudo é recomendada pois aparece no gerenciador de complementos.
+- [`icons`](/pt-BR/Add-ons/WebExtensions/manifest.json/icons) é opcional porém recomendada pois define os ícones que aparecem no gerenciador de complementos.
 
-A chave mais interessante aqui é [`content_scripts`](/en-US/Add-ons/WebExtensions/manifest.json/content_scripts), que diz ao Firefox para carregar um script em páginas da Web cujo URL corresponde a um padrão específico. Nesse caso, pedimos ao Firefox para carregar um script chamado "borderify.js" em todas as páginas HTTP ou HTTPS oriundas de "mozilla.org" ou em qualquer um de seus subdomínios.
+A chave mais interessante aqui é [`content_scripts`](/pt-BR/Add-ons/WebExtensions/manifest.json/content_scripts), que diz ao Firefox para carregar um script em páginas da Web cujo URL corresponde a um padrão específico. Nesse caso, pedimos ao Firefox para carregar um script chamado "borderify.js" em todas as páginas HTTP ou HTTPS oriundas de "mozilla.org" ou em qualquer um de seus subdomínios.
 
-- [Saiba mais sobre scripts de conteúdo.](/en-US/Add-ons/WebExtensions/Content_scripts)
-- [Saiba mais sobre padrões de correspondência](/en-US/Add-ons/WebExtensions/Match_patterns).
+- [Saiba mais sobre scripts de conteúdo.](/pt-BR/Add-ons/WebExtensions/Content_scripts)
+- [Saiba mais sobre padrões de correspondência](/pt-BR/Add-ons/WebExtensions/Match_patterns).
 
-> **Aviso:** [Em algumas situações, você precisa especificar uma ID para sua extensão](/en-US/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID). Se você precisar especificar um ID de extensão, inclua a chave [`applications`](/en-US/Add-ons/WebExtensions/manifest.json/applications) no `manifest.json` e configure sua propriedade `id`:
+> **Aviso:** [Em algumas situações, você precisa especificar uma ID para sua extensão](/pt-BR/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID). Se você precisar especificar um ID de extensão, inclua a chave [`applications`](/pt-BR/Add-ons/WebExtensions/manifest.json/applications) no `manifest.json` e configure sua propriedade `id`:
 >
 > ```json
 > "applications": {
@@ -84,7 +84,7 @@ Se você escolher criar seu próprio ícone, deve ser 48x48 pixels formato .PNG 
 
 Como alternativa, você pode criar um ícone em formato SVG e ele será dimensionado corretamente.
 
-- [Saiba mais sobre como especificar ícones.](/en-US/Add-ons/WebExtensions/manifest.json/icons)
+- [Saiba mais sobre como especificar ícones.](/pt-BR/Add-ons/WebExtensions/manifest.json/icons)
 
 ### borderify.js
 
@@ -96,7 +96,7 @@ document.body.style.border = "5px solid red";
 
 Este script será carregado nas páginas que correspondem ao padrão especificado na chave `content_scripts` do manifest.json. O script tem acesso direto ao documento, igual aos scripts carregados pela própria página.
 
-- [Saiba mais sobre scripts de conteúdo.](/en-US/Add-ons/WebExtensions/Content_scripts)
+- [Saiba mais sobre scripts de conteúdo.](/pt-BR/Add-ons/WebExtensions/Content_scripts)
 
 ## Testando
 
@@ -132,7 +132,7 @@ Experimente um pouco. Edite o script de conteúdo para alterar a cor da borda ou
 
 {{EmbedYouTube("NuajE60jfGY")}}
 
-- [Saiba mais sobre o carregamento de extensões](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
+- [Saiba mais sobre o carregamento de extensões](/pt-BR/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
 
 ## Empacotando e publicando
 
@@ -143,5 +143,5 @@ Para que outras pessoas usem seu complemento, você precisa compactá-lo e envi�
 Agora você tem uma idéia do processo de desenvolvimento de um WebExtension para o Firefox, que tal:
 
 - [Anatomia de uma Extensão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [Criar uma Extensão mais complexa](/en-US/Add-ons/WebExtensions/Your_second_WebExtension)
-- [Saber mais sobre JavaScript APIs disponíveis para Extensões.](/en-US/Add-ons/WebExtensions/API)
+- [Criar uma Extensão mais complexa](/pt-BR/Add-ons/WebExtensions/Your_second_WebExtension)
+- [Saber mais sobre JavaScript APIs disponíveis para Extensões.](/pt-BR/Add-ons/WebExtensions/API)

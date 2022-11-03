@@ -7,7 +7,7 @@ Este tipo representa um atributo de elemento DOM como um objeto. Na maioria dos 
 
 {{InheritanceDiagram}}
 
-> **Aviso:** Começando no Gecko 7.0 {{geckoRelease("7.0")}}, os que serão removidos mostram mensagens de aviso no console. Você deve revisar seu código de acordo. Veja [métodos e propriedades descontinuadas](/pt-BR/docs/Web/API/Attr$edit#Deprecated_properties_and_methods) para uma lista completa.
+> **Aviso:** Começando no Gecko 7.0 {{geckoRelease("7.0")}}, os que serão removidos mostram mensagens de aviso no console. Você deve revisar seu código de acordo. Veja [métodos e propriedades descontinuadas](#propriedades_e_métodos_descontinuados) para uma lista completa.
 
 ## Propriedades
 

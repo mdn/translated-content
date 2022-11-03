@@ -206,7 +206,7 @@ original_slug: Web/HTML/Elemento/blockquote
 
 ### Ejemplos de uso
 
-#### Un **blockquote** estricto
+#### Un blockquote estricto
 
 ```
 <blockquote cite='http://html.conclase.net/w3c/html401...def-BLOCKQUOTE'>

@@ -55,13 +55,13 @@ El elemento **HTML `<th>`** define una celda como encabezado de un grupo de celd
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("abbr")}} {{obsolete_inline}} in {{HTMLVersionInline("5")}}
+- {{htmlattrdef("abbr")}} {{obsolete_inline}} in HTML5
 
   - : Este atributo contiene una breve descripción del contenido de las celdas. Algunos agentes de usuario (e.g., a speech reader) pueden presentar esta descripción antes que el propio contenido.
 
     > **Nota:** **Nota de uso:** No uses este atributo, ya que se ha vuelto obsoleto en el último estandar. Alternativamente, puedes poner la descripción abreviada dentro de la celda y colocarla el largo contenido en el atributo de **title**.
 
-- {{htmlattrdef("align")}} {{Deprecated_inline}} in {{HTMLVersionInline("4")}}, {{obsolete_inline}} in {{HTMLVersionInline("5")}}
+- {{htmlattrdef("align")}} {{Deprecated_inline}} in HTML4, {{obsolete_inline}} in HTML5
 
   - : Este atributo enumerado especifica cómo se tratará el alineado horizontal de la celda. Los valores posibles son:
 
@@ -75,10 +75,10 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
     > **Nota:** No usar este atributo, ya que está obsoleto en el último estándar.
     >
-    > - Para lograr el mismo efecto que con los valores `left`, `center`, `right`o `justify`, aplicar la propiedad CSS {{cssxref("text-align")}} al elemento.
+    > - Para lograr el mismo efecto que con los valores `left`, `center`, `right` o `justify`, aplicar la propiedad CSS {{cssxref("text-align")}} al elemento.
     > - Para lograr el mismo efecto que con el valor `char`, dar a la propiedad {{cssxref("text-align")}} el mismo valor que usarías para {{htmlattrxref("char", "th")}}. {{unimplemented_inline}} in CSS3.
 
-- {{htmlattrdef("axis")}} {{obsolete_inline}} in {{HTMLVersionInline("5")}}
+- {{htmlattrdef("axis")}} {{obsolete_inline}} in HTML5
 
   - : Este atributo contiene una lista de cadenas separadas por espacios. Cada cadena es el `id` de un grupo de celdas a las que se les aplica esta cabecera.
 
@@ -102,7 +102,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 <!---->
 
-- {{htmlattrdef("char")}} {{Deprecated_inline}} in {{HTMLVersionInline("4")}}, {{obsolete_inline}} in {{HTMLVersionInline("5")}}
+- {{htmlattrdef("char")}} {{Deprecated_inline}} in HTML4, {{obsolete_inline}} in HTML5
 
   - : El contenido de la celda se alinea con un caracter en el elemento `<th>`. Los valores típicos incluyen un punto (.) para alinear números o valores monetarios. Si no se establece {{htmlattrxref("align", "th")}} como char, el atributo es ignorado.
 
@@ -110,7 +110,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 <!---->
 
-- {{htmlattrdef("charoff")}} {{Deprecated_inline}} in {{HTMLVersionInline("4")}}, {{obsolete_inline}} in {{HTMLVersionInline("5")}}
+- {{htmlattrdef("charoff")}} {{Deprecated_inline}} in HTML4, {{obsolete_inline}} in HTML5
 
   - : This attribute is used to shift column data to the right of the character specified by the **char** attribute. Its value specifies the length of this shift.
 
@@ -134,7 +134,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     - `colgroup`: The header belongs to a colgroup and relates to all of its cells.
     - `auto`
 
-- {{htmlattrdef("valign")}} {{Deprecated_inline}} in {{HTMLVersionInline("4")}}, {{obsolete_inline}} in {{HTMLVersionInline("5")}}
+- {{htmlattrdef("valign")}} {{Deprecated_inline}} in HTML4, {{obsolete_inline}} in HTML5
 
   - : This attribute specifies how a text is vertically aligned inside a cell. Possible values for this attribute are:
 
@@ -145,7 +145,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
     > **Nota:** **Usage Note:** Do not use this attribute as it is no longer supported by the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.
 
-- {{htmlattrdef("width")}} {{Deprecated_inline}} in {{HTMLVersionInline(4.01)}}
+- {{htmlattrdef("width")}} {{Deprecated_inline}} in HTML4.01
 
   - : This attribute is used to define a recommended cell width. Additional space can be added with the [cellspacing](/es/docs/Web/API/HTMLTableElement/cellSpacing) and [cellpadding](/es/docs/Web/API/HTMLTableElement/cellPadding) properties and the width of the {{HTMLElement("col")}} element can also create extra width. But, if a column's width is too narrow to show a particular cell properly, it will be widened when displayed.
 

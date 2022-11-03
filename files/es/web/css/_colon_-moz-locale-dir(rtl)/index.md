@@ -11,7 +11,8 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/:-moz-locale-dir(rtl)
 ---
-{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9.2")}}
+
+{{Non-standard_header}}{{CSSRef}}
 
 ## Resumen
 

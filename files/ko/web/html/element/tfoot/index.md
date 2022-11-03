@@ -70,10 +70,13 @@ browser-compat: html.elements.tfoot
 </table>
 
 ## 특성
+
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
 ### 더 이상 사용하지 않는 특성
+
 다음 특성은 더 이상 사용되지 않으므로 사용해서는 안 됩니다. 이 특성들은 기존 코드를 업데이트할 때 참조하는 용도와, 역사적인 흥미를 위해서만 작성되어 있습니다.
+
 - {{htmlattrdef("align")}} {{deprecated_inline}}
 - : 아래에 나열된 속성들은 각 셀 컨텐츠의 수평 정렬 방법을 지정합니다. 가능한 값:
 - `left`, 컨텐츠를 셀의 왼쪽으로 정렬합니다.
@@ -105,16 +108,20 @@ browser-compat: html.elements.tfoot
 > **주의:** 이 속성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오. 대신 CSS의 {{cssxref("vertical-align")}} 속성을 적용하세요.
 
 ## 예제
-``에 대한 예제는 {{HTMLElement("table")}}을 참고해 주세요.
+
+에 대한 예제는 {{HTMLElement("table")}}을 참고해 주세요.
 
 ## 명세
+
 {{Specifications}}
 
 ## 브라우저 호환성
+
 {{Compat}}
 
 ## 같이 보기
+
 - 테이블과 관련된 다른 HTML 요소들: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}.
-- `` 요소에 스타일을 지정할 때 특히 유용할 CSS 속성과 가상 클래스들:
-- 각 열의 셀들을 정렬할 때 사용하는 {{cssxref(":nth-child")}} 가상 클래스.
-- '.'같은 동일한 문자에 모든 셀 내용을 정렬할 때 사용하는 {{cssxref("text-align")}} 속성.
+- `tfoot` 요소에 스타일을 지정할 때 특히 유용할 CSS 속성과 가상 클래스들:
+  - 각 열의 셀들을 정렬할 때 사용하는 {{cssxref(":nth-child")}} 가상 클래스.
+  - '.'같은 동일한 문자에 모든 셀 내용을 정렬할 때 사용하는 {{cssxref("text-align")}} 속성.

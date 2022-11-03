@@ -116,12 +116,12 @@ Este elemento puede tener cualquiera de los [atributos globales](/es/docs/HTML/G
 
     Firefox, al contrario que otros navegadores, [mantiene por defecto el estado de desactivación dinámico](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un {{HTMLElement("button")}} a lo largo de las cargas de la página. Use el atributo {{htmlattrxref("autocomplete","button")}} para controlar esta característica.
 
-- {{htmlattrdef("autofocus")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("autofocus")}}
   - : Este atributo booleano le permite especificar que el botón deba tener el foco cuando la página se cargue, a no ser que el usuario lo anule, por ejemplo, escribiendo en otro cuadro de texto. Únicamente un elemento asociado con los formularios en un documento puede tener este atributo especificado.
 - {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
   - : El uso de este atributo en un {{HTMLElement("button")}} es algo fuera de lo común, y específico de Firefox. Firefox, por defecto y al contrario de otros navegadores, [mantiene por defecto el estado de desactivación dinámico](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un {{HTMLElement("button")}} a lo largo de las cargas de la página. Establecer el valor de este atributo a `off` (`autocomplete="off"`) desactiva esta característica.
-- {{htmlattrdef("form")}} {{HTMLVersionInline(5)}}
-  - : El elemento del formulario con el que el botón está asociado (es _dueño del formulario_). El valor del atributo debe ser el atributo **id** de un elemento {{HTMLElement("form")}} en el mismo documento. Si este atributo no está especificado, el elemento `<button>`debe ser hijo de un elemento "formulario". Este atributo le permite colocar elementos `<button>` en cualquier lugar de un documento, y no únicamento como hijos del elemento {{HTMLElement("form")}}.
+- {{htmlattrdef("form")}}
+  - : El elemento del formulario con el que el botón está asociado (es _dueño del formulario_). El valor del atributo debe ser el atributo **id** de un elemento {{HTMLElement("form")}} en el mismo documento. Si este atributo no está especificado, el elemento `<button>` debe ser hijo de un elemento "formulario". Este atributo le permite colocar elementos `<button>` en cualquier lugar de un documento, y no únicamento como hijos del elemento {{HTMLElement("form")}}.
 - {{htmlattrdef("formenctype")}}
 
   - : Debido a que el elemento de input es un botón de envío, el atributo **`formenctype`** especifica el tipo de contenido que se usa para enviar el formulario al servidor. Los valores posibles son:
@@ -132,7 +132,7 @@ Este elemento puede tener cualquiera de los [atributos globales](/es/docs/HTML/G
 
     Si este atributo se especifica, ignora el atributo {{htmlattrxref("enctype","form")}} del formulario dueño del botón.
 
-- {{htmlattrdef("formaction")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("formaction")}}
   - : La URI de la aplicación que procesa la información enviada por le botón. Si se especifica se anula el atributo {{htmlattrxref("action","form")}} del formulario dueño del botón.
 - {{htmlattrdef("formmethod")}}
 

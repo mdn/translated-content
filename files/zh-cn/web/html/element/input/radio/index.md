@@ -23,7 +23,7 @@ slug: Web/HTML/Element/Input/radio
   </tr>
   <tr>
    <td><strong>Events</strong></td>
-   <td>{{event("change")}} and {{event("input")}}</td>
+   <td>[`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) and [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)</td>
   </tr>
   <tr>
    <td><strong>Supported common attributes</strong></td>
@@ -118,7 +118,7 @@ Let's add a little bit of code to our example so we can examine the data generat
 </pre>
 ```
 
-Then we add some [JavaScript](/zh-CN/docs/Web/JavaScript) to set up an event listener on the {{event("submit")}} event, which is sent when the user clicks the "Submit" button:
+Then we add some [JavaScript](/zh-CN/docs/Web/JavaScript) to set up an event listener on the [`submit`](/zh-CN/docs/Web/API/HTMLFormElement/submit_event) event, which is sent when the user clicks the "Submit" button:
 
 ```js
 var form = document.querySelector("form");

@@ -148,29 +148,29 @@ _**`window.document`** 物件的部分屬性繼承自 HTML 文件的 {{domxref("
 ### 事件處理器
 
 - {{domxref("Document.onafterscriptexecute")}} {{non-standard_inline}}
-  - : Represents the event handling code for the {{event("afterscriptexecute")}} event.
+  - : Represents the event handling code for the [`afterscriptexecute`](/zh-TW/docs/Web/API/Element/afterscriptexecute_event) event.
 - {{domxref("Document.onbeforescriptexecute")}} {{non-standard_inline}}
-  - : Represents the event handling code for the {{event("beforescriptexecute")}} event.
+  - : Represents the event handling code for the [`beforescriptexecute`](/zh-TW/docs/Web/API/Element/beforescriptexecute_event) event.
 - {{domxref("Document.oncopy")}} {{non-standard_inline}}
-  - : Represents the event handling code for the {{event("copy")}} event.
+  - : Represents the event handling code for the [`copy`](/zh-TW/docs/Web/API/Element/copy_event) event.
 - {{domxref("Document.oncut")}} {{non-standard_inline}}
-  - : Represents the event handling code for the {{event("cut")}} event.
+  - : Represents the event handling code for the [`cut`](/zh-TW/docs/Web/API/Element/cut_event) event.
 - {{domxref("Document.onfullscreenchange")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("fullscreenchange")}} event is raised.
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) event is raised.
 - {{domxref("Document.onfullscreenerror")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("fullscreenerror")}} event is raised.
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the [`fullscreenerror`](/zh-TW/docs/Web/API/Document/fullscreenerror_event) event is raised.
 - {{domxref("Document.onpaste")}} {{non-standard_inline}}
-  - : Represents the event handling code for the {{event("paste")}} event.
+  - : Represents the event handling code for the [`paste`](/zh-TW/docs/Web/API/Element/paste_event) event.
 - {{domxref("Document.onpointerlockchange")}} {{experimental_inline}}
-  - : Represents the event handling code for the {{event("pointerlockchange")}} event.
+  - : Represents the event handling code for the [`pointerlockchange`](/zh-TW/docs/Web/API/Document/pointerlockchange_event) event.
 - {{domxref("Document.onpointerlockerror")}} {{experimental_inline}}
-  - : Represetnts the event handling code for the {{event("pointerlockerror")}} event.
+  - : Represetnts the event handling code for the [`pointerlockerror`](/zh-TW/docs/Web/API/Document/pointerlockerror_event) event.
 - {{domxref("Document.onreadystatechange")}}
-  - : Represents the event handling code for the {{event("readystatechange")}} event.
+  - : Represents the event handling code for the [`readystatechange`](/zh-TW/docs/Web/API/Document/readystatechange_event) event.
 - {{domxref("Document.onselectionchange")}} {{experimental_inline}}
   - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("selectionchange")}} event is raised.
 - {{domxref("Document.onwheel")}} {{non-standard_inline}}
-  - : Represents the event handling code for the {{event("wheel")}} event.
+  - : Represents the event handling code for the [`wheel`](/zh-TW/docs/Web/API/Element/wheel_event) event.
 
 _此介面繼承了 {{domxref("GlobalEventHandlers")}} 的事件處理器：_
 
@@ -324,13 +324,13 @@ Mozilla defines a set of non-standard properties made only for XUL content:
 Mozilla also define some non-standard methods:
 
 - {{domxref("document.execCommandShowHelp")}} {{Deprecated_Inline}}
-  - : This method never did anything and always threw an exception, so it was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
+  - : This method never did anything and always threw an exception, so it was removed in Gecko 14.0.
 - {{domxref("document.getBoxObjectFor")}} {{Deprecated_Inline}}
   - : Use the {{domxref("Element.getBoundingClientRect()")}} method instead.
 - {{domxref("document.loadOverlay")}}
   - : Loads a [XUL overlay](/zh-TW/docs/XUL_Overlays) dynamically. This only works in XUL documents.
 - {{domxref("document.queryCommandText")}} {{Deprecated_Inline}}
-  - : This method never did anything but throw an exception, and was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
+  - : This method never did anything but throw an exception, and was removed in Gecko 14.0.
 
 ### Internet Explorer notes
 

@@ -21,10 +21,10 @@ original_slug: Web/HTML/Optimizing_Your_Pages_for_Speculative_Parsing
 
 ## Как избежать перестройки дерева страницы
 
-Рискованное построение дерева терпит неудачу в случае, когда функция `document.write() `изменяет состояния построителя дерева так, что то рискованное состояние после тега `</script> `более не остаётся прежним после того, как весь контент, добавленный через `document.write(),` будет распарсен. Только несколько необычных применений `document.write()` вызывают эту проблему. Вот, чего необходимо избегать:
+Рискованное построение дерева терпит неудачу в случае, когда функция `document.write()` изменяет состояния построителя дерева так, что то рискованное состояние после тега `</script>` более не остаётся прежним после того, как весь контент, добавленный через `document.write(),` будет распарсен. Только несколько необычных применений `document.write()` вызывают эту проблему. Вот, чего необходимо избегать:
 
 - Не пишите незаконченные древа. Вместо `<script>document.write("<div>");</script>` лучше написать `<script>document.write("<div></div>");</script>`.
 - Не пишите незаконченные теги. Не стоит писать `<script>document.write("<div></div");</script>`.
 - Не заканчивайте строку возрастной кареткой (`\r`). Вместо `<script>document.write("Hello World!\r");</script>` лучше написать `<script>document.write("Hello World!\n");</script>`.
 - Заметьте, что написание законченных тегов может повлиять на другие теги так, что они станут незаконченными. В том числе, `<script>document.write("<div></div>");</script>` внутри `<head>` будет интерпретировано как `<script>document.write("</head><body><div></div>");</script>`, что повлияет на `<head>` так, что он станет незаконченным.
-- Не форматируйте часть таблицы. Вместо `<table><script>document.write("<tr><td>Hello World!</td></tr>");</script></table>` лучше написать ` <script>document.write("``<table>``<tr><td>Hello World!</td></tr>``</table>``");</script> `.
+- Не форматируйте часть таблицы. Вместо `<table><script>document.write("<tr><td>Hello World!</td></tr>");</script></table>` лучше написать `<script>document.write("<table><tr><td>Hello World!</td></tr></table>");</script>`.

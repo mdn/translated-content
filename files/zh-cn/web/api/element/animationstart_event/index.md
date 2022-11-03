@@ -37,9 +37,9 @@ slug: Web/API/Element/animationstart_event
 
 ## 相关事件
 
-- {{Event("animationstart")}}
-- {{Event("animationend")}}
-- {{Event("animationiteration")}}
+- [`animationstart`](/zh-CN/docs/Web/API/Element/animationstart_event)
+- [`animationend`](/zh-CN/docs/Web/API/Element/animationend_event)
+- [`animationiteration`](/zh-CN/docs/Web/API/Element/animationiteration_event)
 
 ## 另请参阅
 

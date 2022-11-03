@@ -27,17 +27,17 @@ El elemento select (`<select>`) de HTML representa un control que muestra un men
 
 Este elemento incluye [global attributes](/es/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("autofocus")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("autofocus")}}
   - : Este atributo permite especificar un formulario de control que debería tener enfoque de entrada cuando se carga la página, a no ser que el usuario lo sobreescriba, por ejemplo, escribiendo un control diferente. Solo un elemento formulario puede tener el elemento de enfoque de entrada por documento, por lo cual es un atributo booleano.
 - {{htmlattrdef("disabled")}}
   - : El atributo booleano especifica que el usuario no puede interactuar con el control. Si este atributo no está especificado, el control hereda los ajustes del campo que lo contiene, por ejemplo del fielset; si no hay elemento contenido con el atributo disabled, entonces el control se considera enable (activado).
-- {{htmlattrdef("form")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("form")}}
   - : El elemento formulario al cual el select está asociado (su propietario del formulario). Si este atributo está especificado, su valor deberá ser el ID de un formulario en el mismo documento. Esto te permite situar elementos en cualquier parte del documento, no solo de manera descendiente con respecto a su elemento formulario.
 - {{htmlattrdef("multiple")}}
   - : Este elemento booleano indica que se pueden seleccionar múltiples opciones de la lista. Si no está especificado, solo se podrá seleccionar una opción cada vez.
 - {{htmlattrdef("name")}}
   - : El nombre del elemento de control.
-- {{htmlattrdef("required")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("required")}}
   - : Es un elemento boooleano que indica si la opcion puede quedar sin seleccionar o si es requerida.
 - {{htmlattrdef("size")}}
   - : Si el control se presenta como una lista con scroll en caja, este atributo representa el numero de filas que la list tendrá visible la primera vez. Los navegadores no están requeridos a presentar un elemento select como una lista con escroll en caja. El valor por defecto es cero.

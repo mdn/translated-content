@@ -57,15 +57,15 @@ Los elementos `<input>` de tipo **`"password"`** proporcionan una forma para que
 
 Además de los atributos listados abajo, este elemento puede tener cualquier [global attributes](/es/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("autocomplete")}}{{HTMLVersionInline("5")}}
+- {{htmlattrdef("autocomplete")}}
   - : Establece el valor del atributo de autocompletado en el campo de una contraseña. En caso de ser cierto, automaticamente se rellena con el valor previamente almacenado.
-- {{htmlattrdef("autofocus")}}{{HTMLVersionInline("5")}}
+- {{htmlattrdef("autofocus")}}
   - : Este atributo Booleano te permite especificar que la página ponga el foco en un campo a menos que el usuario lo revoque, por ejemplo, escribir en un campo diferente. Solo un elemento en el documento puede tener el atributo Booleano **autofocus**.
 - {{htmlattrdef("disabled")}}
   - : Este atributo Booleano indica que el campo de la contraseña no está disponible. Además, deshabilita los valores que no son enviados por el campo.
 - {{htmlattrdef("defaultvalue")}}
   - : Define un valor predeterminado en el campo de la contraseña.
-- {{htmlattrdef("inputmode")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("inputmode")}}
 
   - : Le da proporciona información al buscador sobre que teclado mostrar. Los valores posibles son:
 
@@ -83,13 +83,13 @@ Además de los atributos listados abajo, este elemento puede tener cualquier [gl
   - : Establece el valor del atributo minlength en el campo de una contraseña.
 - {{htmlattrdef("name")}}
   - : Nombre del campo, usado para datos enviados desde formulario.
-- {{htmlattrdef("pattern")}}{{HTMLVersionInline("5")}}
+- {{htmlattrdef("pattern")}}
   - : Establece el valor del atributo pattern del campo de una contraseña.
-- {{htmlattrdef("placeholder")}}{{HTMLVersionInline("5")}}
+- {{htmlattrdef("placeholder")}}
   - : Establece el valor del atributo placeholder del campo de una contraseña.
 - {{htmlattrdef("readonly")}}
   - : Este atributo Booleano indica que el usuario no puede modificar el valor del campo de una contraseña.
-- {{htmlattrdef("required")}}{{HTMLVersionInline("5")}}
+- {{htmlattrdef("required")}}
   - : Este atributo Booleano especifica que el usuario debe rellenar con un valor antes de enviar un formulario.
 - {{htmlattrdef("size")}}
   - : Establece el valor del atributo size del campo de una contraseña.

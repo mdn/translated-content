@@ -12,7 +12,7 @@ Um padrão é utilizado para preenchimento ou traçado de um objeto utilizando u
 
 ## Exemplo
 
-» [pattern.svg](https://developer.mozilla.org/files/3268/pattern.svg)
+» [pattern.svg](/files/3268/pattern.svg)
 
 ## Atributos
 

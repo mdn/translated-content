@@ -8,6 +8,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 
 O método **splice()** altera o conteúdo de uma lista, adicionando novos elementos enquanto remove elementos antigos.
 
+{{EmbedInteractiveExample("pages/js/array-splice.html")}}
+
 ## Sintaxe
 
 ```

@@ -33,7 +33,7 @@ p.then(function(value) {
 Retorna un `Promise` el cual es determinado por las funciones input:
 
 - Si `alCumplir` o `enRechazo` arroja un error, o retorna un [`Promise`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise) rechazado, `then` retorna un `Promise` rechazado.
-- Si `alCumplir` o `enRechazo` retorna un `Promise` que resuelve, o retorna cualquier otro valor, `then` retorna un `Promise`resuelto.
+- Si `alCumplir` o `enRechazo` retorna un `Promise` que resuelve, o retorna cualquier otro valor, `then` retorna un `Promise` resuelto.
 
 <!-- -->
 
@@ -259,7 +259,7 @@ p3.then(funcion(v) {
 
 ### `window.setImmediate` estilo polyfill basado en promesas
 
-Usar un método {{jsxref("Function.prototype.bind()")}}`Reflect.apply` ({{jsxref("Reflect.apply()")}}) para crear un (non-cancellable) setImmediate-style function.
+Usar un método {{jsxref("Function.prototype.bind()")}} `Reflect.apply` ({{jsxref("Reflect.apply()")}}) para crear un (non-cancellable) setImmediate-style function.
 
 ```js
 const nextTick = (() => {

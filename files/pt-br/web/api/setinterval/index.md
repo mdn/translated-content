@@ -383,7 +383,7 @@ setTimeout.call(myArray, myArray.myMethod, 2000); // prints "zero,one,two" after
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 seconds
 ```
 
-Outra, mais complexa, solução para o problema do `this` é [the following framework](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval$edit#A_little_framework).
+Outra, mais complexa, solução para o problema do `this` é [the following framework](#a_little_framework).
 
 > **Nota:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
 

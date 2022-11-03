@@ -12,7 +12,7 @@ O elemento `polygon` define uma forma fechada que consiste em um conjunto de seg
 
 ## Exemplo
 
-» [polygon.svg](https://developer.mozilla.org/files/3259/polygon.svg)
+» [polygon.svg](/files/3259/polygon.svg)
 
 ## Atributos
 

@@ -118,7 +118,7 @@ Você pode classificar a tabela por uma coluna específica clicando no rótulo d
 console.table(data [, columns]);
 ```
 
-### Parâmentros
+### Parâmetros
 
 - `data`
   - : Os dados a serem exibidos. Deve ser um array ou um objeto.
