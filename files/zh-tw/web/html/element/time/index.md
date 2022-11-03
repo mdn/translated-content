@@ -61,4 +61,4 @@ slug: Web/HTML/Element/time
 
 - The {{HTMLElement("data")}} element, allowing to signal other kind of values.
 
-{{HTMLRef}}
+{{HTMLSidebar}}
