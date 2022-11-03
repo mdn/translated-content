@@ -14661,10 +14661,6 @@
     "modified": "2019-03-23T22:49:37.176Z",
     "contributors": ["gdlm91", "japho"]
   },
-  "conflicting/Web/API/File/name": {
-    "modified": "2020-02-09T09:40:59.258Z",
-    "contributors": ["blanchart", "IsraelFloresDGA", "BrodaNoel"]
-  },
   "conflicting/Web/API/Geolocation": {
     "modified": "2019-03-23T23:01:31.642Z",
     "contributors": ["fscholz"]
