@@ -62,4 +62,4 @@ body {
 
 - CSS: {{ Cssxref('white-space') }}, {{ Cssxref('word-break') }}
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

@@ -63,4 +63,4 @@ Apesar de obsoleto, o elemento é aceito em todos os navegadores do mercado.
 - {{Cssxref("text-align")}}
 - {{Cssxref("display")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

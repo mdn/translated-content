@@ -46,4 +46,4 @@ Este elemento não é padrão e não faz parte de nenhuma especificação. Se vo
 - {{htmlelement("marquee")}}, outro elemento não-padrão semelhante.
 - [CSS animations](/pt-BR/docs/Web/Guide/CSS/Using_CSS_animations) são o caminho correto para obter este efeito.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

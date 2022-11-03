@@ -179,4 +179,4 @@ A saída HTML acima será:
   - a propriedade [line-height](/en/CSS/line-height), válida para simular o atributo ultrapassado {{ htmlattrxref("compact", "ul") }},
   - a propriedade [margin](/en/CSS/margin), proveitosa para controlar a indentação da lista.
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

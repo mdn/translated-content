@@ -69,4 +69,4 @@ Para alterar a aparencia da linha ou as lacunas entre ela e os parágrafos, util
 
 - [Elemento HTML parágrafo](/pt-BR/docs/HTML/Element/p)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

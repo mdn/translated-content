@@ -70,4 +70,4 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - Outros elementos usados para incorporar conteúdo de vários tipos, incluem: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, and {{HTMLElement("video")}}.
 - Posicionamento e dimensionamento de conteúdos incorporados dentro da janela de exibição: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

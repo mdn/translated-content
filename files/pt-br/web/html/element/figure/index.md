@@ -83,4 +83,4 @@ Este elemento só inclui os [atributos globais](/pt-BR/docs/HTML/Global_attribut
 
 - O {{HTMLElement("figcaption")}} elemento.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

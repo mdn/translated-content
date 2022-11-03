@@ -75,4 +75,4 @@ This element implements the {{domxref('HTMLElement')}} interface.
 - HTML: {{htmlelement("small")}}, {{htmlelement("font")}}, {{htmlelement("style")}}
 - HTML 4.01 Specification: [Font Styles](http://www.w3.org/TR/html4/present/graphics.html#h-15.2)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -41,4 +41,4 @@ var {
 
 A simple equation: _x_ = _y_ + 2
 
-{{HTMLRef}}
+{{HTMLSidebar}}

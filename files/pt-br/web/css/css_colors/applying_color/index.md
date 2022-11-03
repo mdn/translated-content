@@ -4,7 +4,7 @@ slug: Web/CSS/CSS_Colors/Applying_color
 translation_of: Web/HTML/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 O uso de cores é uma forma fundamental da expressão humana. Crianças experimentam com cores antes mesmo de ter a destreza manual para desenhar. Talvez por isso, a cor é uma das primeiras coisas com a qual as pessoas querem experimentar quando estão aprendendo a desenvolver websites. Com [CSS](/pt-BR/docs/Web/CSS), há muitas maneiras de acrescentar cor nos seus [elementos HTML](/pt-BR/docs/Web/HTML/Element) para criar exatamente o visual que você quiser. Esse artigo é um preparativo introduzindo cada uma das formas que a cor CSS pode ser usada no HTML.
 

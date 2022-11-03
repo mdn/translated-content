@@ -54,4 +54,4 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - HTML 2.0 and 3.2 define only the `href` attribute
 - XHTML requires a trailing slash: `<base />`
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -117,4 +117,4 @@ Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes).
 - [HTML forms guide](/pt-BR/docs/Web/Guide/HTML/Forms)
 - Other elements that are used for creating forms: {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}},{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -93,4 +93,4 @@ Netscape 1 de nível não entendem o **alvo** atributo que se refere aos quadros
 
 HTML 3.2 define apenas **alt** , **coords** , **href** , **nohref** e shape .
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -207,4 +207,4 @@ O valor do atributo `title` é geralmente mostrado ao usuário como uma dica, qu
 
 - {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements
 
-{{HTMLRef}}
+{{HTMLSidebar}}

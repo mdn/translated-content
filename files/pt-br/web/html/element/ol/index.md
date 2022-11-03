@@ -157,4 +157,4 @@ A saída HTML acima será:
   - a propriedade {{cssxref("line-height")}}, proficiente para simular o atributo obsoleto {{htmlattrxref("compact", "ol")}},
   - a propriedade {{cssxref("margin")}}, aplicável para controlar a indentação da lista.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

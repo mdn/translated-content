@@ -48,4 +48,4 @@ Como todos os outros elementos HTML, este elemento suporta os [global attributes
   - A propriedade {{Cssxref('line-height')}}, útil para simular o atributo obsoleto {{htmlattrxref("compact", "dir")}}.
   - A propriedade {{cssxref('margin')}}, útil para controlar o recuo da lista.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -48,4 +48,4 @@ The following example displays product names but also associates each name with 
 
 - The HTML {{HTMLElement("time")}} element.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

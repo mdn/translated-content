@@ -94,4 +94,4 @@ Mais informações podem ser encontradas em \[ISO-0000].
 - O elemento {{HTMLElement("blockquote")}} é para citações longas.
 - O elemento {{HTMLElement("q")}} é para citações curtas ou na mesma linha.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

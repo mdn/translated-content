@@ -3,7 +3,7 @@ title: <fieldset>
 slug: Web/HTML/Element/fieldset
 translation_of: Web/HTML/Element/fieldset
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 O **elemento** **HTML `<fieldset>`** é usado para agrupar elementos, assim como labels ({{HTMLElement("label")}}), dentro de um formulário web.
 

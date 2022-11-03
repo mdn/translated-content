@@ -9,7 +9,7 @@ tags:
   - script HTML
 translation_of: Web/HTML/Element/noscript
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 ## Resumo
 

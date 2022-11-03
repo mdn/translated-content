@@ -6,7 +6,7 @@ tags:
   - head
 translation_of: Web/HTML/Element/head
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 O elemento **HTML `<head>` providencia informações gerais** (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de estilos.
 

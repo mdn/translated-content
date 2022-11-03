@@ -58,4 +58,4 @@ Esse elemento somente inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_
 - {{HTMLElement("rt")}}
 - {{HTMLElement("rp")}}
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

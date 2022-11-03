@@ -64,4 +64,4 @@ Desde que o elemento `<html>` seja o primeiro em documento outro que comenta, es
 - Elemento de alto nível MathML: {{MathMLElement("math")}}
 - Elemento de alto nível SVG: {{SVGElement("svg")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -37,4 +37,4 @@ Para exemplo veja [definição de lista](/pt-BR/docs/HTML/Element/dl#Examples).
 
 - {{HTMLElement("dd")}}, {{HTMLElement("dl")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

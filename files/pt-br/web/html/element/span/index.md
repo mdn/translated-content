@@ -57,4 +57,4 @@ Some text
 
 - Elemento HTML {{HTMLElement("div")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

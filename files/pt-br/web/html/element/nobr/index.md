@@ -23,4 +23,4 @@ translation_of: Web/HTML/Element/nobr
 - {{Cssxref("white-space")}}
 - {{Cssxref("overflow")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}
