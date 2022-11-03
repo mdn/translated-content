@@ -114,4 +114,4 @@ To request script-inserted external scripts be executed in the insertion order i
 - {{domxref("document.currentScript")}}
 - [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pie.gd/test/script-link-events/)
 
-{{HTMLRef}}
+{{HTMLSidebar}}
