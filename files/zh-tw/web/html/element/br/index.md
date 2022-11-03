@@ -71,5 +71,3 @@ USA
 - {{HTMLElement("address")}} 元素
 - {{HTMLElement("p")}} 元素
 - {{HTMLElement("wbr")}} 元素
-
-{{HTMLSidebar}}
