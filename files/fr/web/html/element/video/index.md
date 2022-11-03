@@ -12,7 +12,7 @@ tags:
 translation_of: Web/HTML/Element/video
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<video>`** intègre un contenu vidéo dans un document.
 

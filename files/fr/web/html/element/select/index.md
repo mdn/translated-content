@@ -10,7 +10,7 @@ tags:
 translation_of: Web/HTML/Element/select
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<select>`** représente un contrôle qui fournit une liste d'options parmi lesquelles l'utilisateur pourra choisir.
 

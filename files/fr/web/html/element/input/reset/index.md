@@ -3,7 +3,7 @@ title: <input type="reset">
 slug: Web/HTML/Element/input/reset
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Les éléments {{HTMLElement("input")}} de type **`"reset"`** sont affichés sous la forme de boutons permettant de réinitialiser l'ensemble des champs du formulaire avec leurs valeurs initiales.
 
