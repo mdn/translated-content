@@ -82,7 +82,7 @@ let theText = myTextInput.value;
 
 `placeholder` 属性是一个字符串，可向用户提供有关该字段中需要什么样的信息的简短提示。它应该是一个单词或短语来说明预期的数据类型，而不是说明性消息。文本中*不得*包含回车符或换行符。
 
-如果控件的内容具有某一个方向（{{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向性来显示占位符，则可以使用 Unicode 双向算法格式化字符来在占位符中覆盖方向性；请参见[如何在双方向文本中使用 Unicode 控制字符](https://www.w3.org/International/questions/qa-bidi-unicode-controls)以获取更多信息。
+如果控件的内容具有方向（{{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向显示占位符，则可以使用 Unicode 双向算法来格式化字符，从而覆盖原有占位符的方向；请参见[如何针对双向文本使用 Unicode 控制符](https://www.w3.org/International/questions/qa-bidi-unicode-controls)获取更多信息。
 
 > **备注：** 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 {{SectionOnPage("/zh-CN/docs/Web/HTML/Element/input", "标签与占位符")}} 以获取更多信息。
 
@@ -390,7 +390,7 @@ input:valid + span::after {
 
 ## 示例
 
-可以在[你的第一个 HTML 表单](/zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form) 和 [如何结构化 HTML 表单](/zh-CN/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form) 文章中看到一些好的示例。
+可以在[你的第一个 HTML 表单](/zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form) 和[如何结构化 HTML 表单](/zh-CN/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)文章中看到一些好的示例。
 
 ## 规范
 
