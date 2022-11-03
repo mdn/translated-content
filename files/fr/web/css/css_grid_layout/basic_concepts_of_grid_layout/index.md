@@ -176,7 +176,7 @@ Les pistes peuvent être définies à l'aide de n'importe quelle unité de mesur
 
 {{ EmbedLiveSample("L’unité_fr", '220', '140') }}
 
-#### Tailles différentes
+### Tailles différentes
 
 L'exemple suivant crée une grille avec une colonne de `2fr`, et deux colonnes de `1fr`. L'espace disponible est divisé en quatre. Les deux premières fractions sont allouées à la première colonne, et chacune des colonnes suivante dispose d'une fraction.
 
@@ -217,7 +217,7 @@ L'exemple suivant crée une grille avec une colonne de `2fr`, et deux colonnes d
 
 {{ EmbedLiveSample('Tailles_différentes', '220', '140') }}
 
-#### Mélanger des tailles flexibles et absolues
+### Mélanger des tailles flexibles et absolues
 
 Dans ce dernier exemple nous utilisons à la fois des dimensions absolues et des relatives pour les pistes. La première piste faisant 500px, cette valeur est soustraite de l'espace disponible. L'espace restant est divisé en trois et alloué proportionnellement aux deux colonnes spécifiées avec l'unité relative `fr`.
 
