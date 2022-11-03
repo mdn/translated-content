@@ -7,7 +7,7 @@ translation_of: Web/HTTP/Headers/Content-Type
 
 **`Content-Type`** es la propiedad de cabecera (header) usada para indicar el {{Glossary("MIME type","media type")}} del recurso.
 
-`Content-Type` dice al cliente que tipo de contenido será retornado. Los navegadores rastrearán MIME en algunos casos y no seguirán necesariamente el valor de este encabezado; para evitar este comportamiento, el encabezado {{HTTPHeader("X-Content-Type-Options")}} se puede establecer en `nosniff`.
+`Content-Type` dice al cliente que tipo de contenido será retornado. Los navegadores rastrearán `MIME` en algunos casos y no seguirán necesariamente el valor de este encabezado; para evitar este comportamiento, el encabezado {{HTTPHeader("X-Content-Type-Options")}} se puede establecer en `nosniff`.
 
 En solicitudes (tales como {{HTTPMethod("POST")}} o {{HTTPMethod("PUT")}}), el cliente indica al servidor que tipo de dato es enviado actualmente.
 
