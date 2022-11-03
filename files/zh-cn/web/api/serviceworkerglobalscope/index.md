@@ -35,7 +35,7 @@ slug: Web/API/ServiceWorkerGlobalScope
 - {{domxref("ServiceWorkerGlobalScope.oninstall")}}
   - : An event handler fired whenever an {{Event("install")}} event occurs — when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.
 - {{domxref("ServiceWorkerGlobalScope.onmessage")}}
-  - : An event handler fired whenever a {{Event("message")}} event occurs — when incoming messages are received. Controlled pages can use the {{domxref("MessagePort.postMessage()")}} method to send messages to service workers. The service worker can optionally send a response back via the {{domxref("MessagePort")}} exposed in [`event.data.port`](https://html.spec.whatwg.org/multipage/comms.html#messageport), corresponding to the controlled page.
+  - : An event handler fired whenever a [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) event occurs — when incoming messages are received. Controlled pages can use the {{domxref("MessagePort.postMessage()")}} method to send messages to service workers. The service worker can optionally send a response back via the {{domxref("MessagePort")}} exposed in [`event.data.port`](https://html.spec.whatwg.org/multipage/comms.html#messageport), corresponding to the controlled page.
 - {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}}
   - : An event handler fired whenever a {{Event("notificationclick")}} event occurs — when a user clicks on a displayed notification.
 - {{domxref("ServiceWorkerGlobalScope.onnotificationclose")}}
