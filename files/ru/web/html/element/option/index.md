@@ -6,7 +6,7 @@ tags:
   - селект
 translation_of: Web/HTML/Element/option
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML-элемент `<option>`** используется для определения пункта списка контейнера {{HTMLElement("select")}}, элемента {{HTMLElement("optgroup")}}, или элемента {{HTMLElement("datalist")}}. Элемент `<option>` может представлять раздел меню всплывающих окон и других перечней или списков HTML документа.
 

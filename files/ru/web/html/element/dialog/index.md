@@ -146,4 +146,4 @@ translation_of: Web/HTML/Element/dialog
 - Событие {{event("cancel")}}
 - [HTML forms guide](/ru/docs/Web/Guide/HTML/Forms).
 
-{{HTMLRef}}
+{{HTMLSidebar}}
