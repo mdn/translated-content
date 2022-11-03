@@ -13,4 +13,4 @@ Tags XML são muito semelhantes a tags HTML, mas XML é muito mais flexível por
 
 ## Saiba mais
 
-- [Introdução a XML](/pt-BR/docs/XML_Introduction)
+- [Introdução ao XML](/pt-BR/docs/XML_Introduction)

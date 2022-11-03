@@ -16,3 +16,10 @@ Este glossário é um trabalho em constante atualização. Você pode ajudar a m
 **[Adicione um novo termo ao glossário](/pt-BR/docs/new?parent=4391)**
 
 Se você quer saber mais sobre como contribuir com este glossário, confira a [página de status de documentação do glossário](/pt-BR/docs/MDN/Doc_status/Glossary).
+
+
+<section id="Quick_links">
+ <ol>
+  <li><strong><a href="/pt-BR/docs/Glossary">MDN Web Docs Glossário</a></strong>{{ListSubpagesForSidebar("/pt-br/docs/Glossary", 1)}}</li>
+ </ol>
+</section>

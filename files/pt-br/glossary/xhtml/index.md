@@ -19,13 +19,13 @@ HTTP/1.1 200 OK
 Content-Type: text/html
 
 <!DOCTYPE html>
-<html lang=en>
+<html lang=pt-BR>
   <head>
     <meta charset=utf-8>
     <title>HTML</title>
   </head>
   <body>
-    <p>Eu sou um documento HTML
+    <p>Eu sou um documento HTML</p>
   </body>
 </html>
 ```
