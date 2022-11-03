@@ -5,7 +5,6 @@ translation_of: Web/HTML/Element/input/number
 browser-compat: html.elements.input.type_number
 ---
 
-
 {{HTMLSidebar}}
 
 Los elementos {{HTMLElement("input")}} del tipo **`number`** son usados para permitir al usuario ingresar un número. Éstos incluyen validación incorporada para rechazar entradas no numéricas.
