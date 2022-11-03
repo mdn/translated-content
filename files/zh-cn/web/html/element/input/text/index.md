@@ -3,7 +3,7 @@ title: <input type="text">
 slug: Web/HTML/Element/Input/text
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 `{{HTMLElement("input")}}` 元素的**`text`** 类型创建基础的单行文本框。
 

@@ -34,4 +34,4 @@ _HTML Font 元素_（`<font>`）定义了该内容的字体大小、顏色与表
 
 Gecko 15.0 还移除了 `<font>` 元素对 `font-weight` 与 `point-size` 属性的支持：这些非标准属性只受 Gecko 引擎支持。
 
-{{HTMLRef}}
+{{HTMLSidebar}}
