@@ -40,7 +40,7 @@ myWorker.postMessage(""); // start the worker.
 
 La Línea 1 en este ejemplo crea un nuevo worker (_worker thread)_. La Línea 3 configura un manejador de eventos (_listener_) para encargarse de los eventos `message` del worker. Este manejador de eventos se llamará cuando el worker llame a su propia función {{domxref("Worker.postMessage()")}}. Finalmente, la Linea 7 inicia el worker _(worker thread)_.
 
-> **Nota:** : La URI pasada como parámetro del constructor de `Worker` debe obedecer la política [same-origin policy](/en/Same_origin_policy_for_JavaScript) . Actualmente hay desacuerdo entre los desarolladores de navegadores sobre qué URIs son del mismo origen; Gecko 10.0 {{ geckoRelease("10.0") }} y posteriores sí permiten data URIs e Internet Explorer 10 no permite Blob URIs como un script válido para los workers.
+> **Nota:** : La URI pasada como parámetro del constructor de `Worker` debe obedecer la política [same-origin policy](/en/Same_origin_policy_for_JavaScript) . Actualmente hay desacuerdo entre los desarolladores de navegadores sobre qué URIs son del mismo origen; Gecko 10.0 (Firefox 10.0 / Thunderbird 10.0 / SeaMonkey 2.7) y posteriores sí permiten data URIs e Internet Explorer 10 no permite Blob URIs como un script válido para los workers.
 
 ## Pasando datos
 
