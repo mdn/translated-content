@@ -13,7 +13,7 @@ tags:
 translation_of: Web/HTML/Element/marquee
 original_slug: Web/HTML/Elemento/marquee
 ---
-{{HTMLSidebar}}{{obsolete_header}}
+{{HTMLSidebar}}{{Deprecated_Header}}
 
 ## Resumen
 
