@@ -18,7 +18,7 @@ translation_of: Web/SVG/Element/radialGradient
 
 ## Exemplo
 
-» [radialGradient.svg](https://developer.mozilla.org/files/3266/radialGradient.svg)
+» [radialGradient.svg](/files/3266/radialGradient.svg)
 
 ## Atributos
 

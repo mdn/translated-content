@@ -324,13 +324,13 @@ Mozilla defines a set of non-standard properties made only for XUL content:
 Mozilla also define some non-standard methods:
 
 - {{domxref("document.execCommandShowHelp")}} {{Deprecated_Inline}}
-  - : This method never did anything and always threw an exception, so it was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
+  - : This method never did anything and always threw an exception, so it was removed in Gecko 14.0.
 - {{domxref("document.getBoxObjectFor")}} {{Deprecated_Inline}}
   - : Use the {{domxref("Element.getBoundingClientRect()")}} method instead.
 - {{domxref("document.loadOverlay")}}
   - : Loads a [XUL overlay](/zh-TW/docs/XUL_Overlays) dynamically. This only works in XUL documents.
 - {{domxref("document.queryCommandText")}} {{Deprecated_Inline}}
-  - : This method never did anything but throw an exception, and was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
+  - : This method never did anything but throw an exception, and was removed in Gecko 14.0.
 
 ### Internet Explorer notes
 

@@ -103,6 +103,6 @@ Un Objeto {{domxref("File")}}.
 
 ## Vea también
 
-- {{spec("http://dev.w3.org/2009/dap/file-system/file-writer.html#idl-def-BlobBuilder", "File API Specification: BlobBuilder", "ED")}}
+- [File API Specification: BlobBuilder](https://dev.w3.org/2009/dap/file-system/file-writer.html#idl-def-BlobBuilder)
 - {{domxref("Blob")}}
 - {{domxref("File")}}

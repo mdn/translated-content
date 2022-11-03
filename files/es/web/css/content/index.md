@@ -17,7 +17,7 @@ La propiedad `content` se usa junto con los pseudo-elementos `:before` y `:after
 
 En **CSS3**
 
-- Value: {{ mediawiki.external(' &lt;uri&gt; \',\' ') }}\</uri>\* {{ mediawiki.external(' normal | none | inhibit | &lt;content-list&gt; ') }}\</content-list>
+- Value: [ &lt;uri&gt; \',\' ]\</uri>\* [ normal | none | inhibit | &lt;content-list&gt; ]\</content-list>
 - Valor inicial: normal
 - Se aplica a: todos los elementos y a `::before, ::after, ::alternate, ::marker, ::line-marker, áreas de margin y @footnote`.
 - {{ Cssxref("inheritance", "Valor heredado") }}: no

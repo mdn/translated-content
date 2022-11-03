@@ -46,9 +46,9 @@ translation_of: Mozilla/Firefox/Releases/43
 
 #### Изменения связанные с объектом `arguments`
 
-- Более полное соответствие спецификации ES2015, [стрелочные функции ](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions)больше не содержат свой собственный встроенный объект` arguments`. Объект `arguments` теперь прикреплён лексически (наследуется от внешней функции). В большинстве случаев, [остаточные параметры ](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters)лучшая альтернатива` (...args) => args[i]`, смотри {{bug(889158)}}.
-- Объект [arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments) теперь разрешается использовать вместе с [остаточными параметрами ](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters)({{bug(1133298)}}).
-- Теперь, объект map [`arguments`](/ru/docs/Web/JavaScript/Reference/Functions/arguments) в нестрогих функциях доступен только если функция не содержит другие [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), или [параметры по умолчанию или ](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters)[destructured parameters](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ({{bug(1175394)}}).
+- Более полное соответствие спецификации ES2015, [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions) больше не содержат свой собственный встроенный объект `arguments`. Объект `arguments` теперь прикреплён лексически (наследуется от внешней функции). В большинстве случаев, [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters) лучшая альтернатива `(...args) => args[i]`, смотри {{bug(889158)}}.
+- Объект [arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments) теперь разрешается использовать вместе с [остаточными параметрами](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters) ({{bug(1133298)}}).
+- Теперь, объект map [`arguments`](/ru/docs/Web/JavaScript/Reference/Functions/arguments) в нестрогих функциях доступен только если функция не содержит другие [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), или [параметры по умолчанию или](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters)[destructured parameters](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ({{bug(1175394)}}).
 
 ### Interfaces/APIs/DOM
 
@@ -75,10 +75,10 @@ _Без изменений._
 - Заголовок `User-Agent` более не в списке {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} и теперь может быть установлен в объект [Fetch](/ru/docs/Web/API/Fetch_API) {{domxref("Headers")}}, через XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ({{bug(1188932)}}).
 - Конструктор {{domxref("MediaRecorder.MediaRecorder()")}} теперь принимает дополнительно необязательный параметр типа словарь (dictionary), который позволяет вам устанавливать произвольный битрейт для записываемого аудио/видео ({{bug("1161276")}}).
 - Реализован интерфейс {{domxref("PerformanceObserver")}}, из [Performance Timeline API](/ru/docs/Web/API/Performance_Timeline_API) ({{bug(1165796)}}).
-- Добавлены дополнительно два интерфейса в [Frame Timing API, ](</ru/docs/Web/API/Frame Timing API>){{domxref("PerformanceRenderTiming")}} и {{domxref("PerformanceCompositeTiming")}} ({{bug(1191178)}}).
+- Добавлены дополнительно два интерфейса в [Frame Timing API](/ru/docs/Web/API/Frame_Timing_API), {{domxref("PerformanceRenderTiming")}} и {{domxref("PerformanceCompositeTiming")}} ({{bug(1191178)}}).
 - Реализована современная версия [Screen Orientation API](/ru/docs/Web/API/Screen_Orientation_API): доступны беспрефиксные интерфейсы {{domxref("Screen.orientation")}} и {{domxref("ScreenOrientation")}} ({{bug("1131470")}}). Не стандартные {{domxref("Screen.mozOrientation")}}, {{domxref("Screen.onmozorientationchange")}}, {{domxref("Screen.mozLockOrientation()")}}, и {{domxref("Screen.mozUnlockOrientation()")}} будут удалены в будущем.
 - В Линукс, как и в Windows, {{domxref("Event.timeStamp")}} теперь возвращает {domxref("DOMHighResTimeStamp")}} ({{bug(1026803)}}).
-- Экспериментальная поддержка {{domxref("Selection")}} событий {{event("selectionchange")}} и {{event("selectstart")}}, а также добавлены {{domxref("Document.onselectionchange")}} и {{domxref("GlobalEventHandlers.onselectstart")}} свойства для обработчиков событий ({{bug(571294)}}). Событие` selectionchange` теперь возникает на {{domxref("Document")}} если связано с объектом `Selection`, или в особом случае {{domxref("HTMLInputElement")}} или {{domxref("HTMLTextAreaElement")}} ({{bug(1196479)}}). Это свойство контролируется с помощью настройки `dom.select_events.enabled`, которое по умолчанию имеет значение `false`, за исключением Firefox Nightly.
+- Экспериментальная поддержка {{domxref("Selection")}} событий {{event("selectionchange")}} и {{event("selectstart")}}, а также добавлены {{domxref("Document.onselectionchange")}} и {{domxref("GlobalEventHandlers.onselectstart")}} свойства для обработчиков событий ({{bug(571294)}}). Событие `selectionchange` теперь возникает на {{domxref("Document")}} если связано с объектом `Selection`, или в особом случае {{domxref("HTMLInputElement")}} или {{domxref("HTMLTextAreaElement")}} ({{bug(1196479)}}). Это свойство контролируется с помощью настройки `dom.select_events.enabled`, которое по умолчанию имеет значение `false`, за исключением Firefox Nightly.
 - Поддержка {{domxref("MouseEvent.offsetX")}} и {{domxref("MouseEvent.offsetY")}} доступна по умолчанию в Android версии Firefox и Firefox OS ({{bug(1204841)}}).
 - Удалён метод {{domxref("HTMLCanvasElement.mozFetchAsStream()")}} ({{bug(1206030)}}).
 - Конструктор {{domxref("Request.Request", "Request()")}} а также {{domxref("Window.fetch", "fetch()")}} теперь выбросит исключение {{jsxref("TypeError")}} если будет использовано в URL которое содержит параметры с именами username и password ({{bug(1195820)}}).
@@ -105,7 +105,7 @@ _Без изменений._
 
 ## Безопасность
 
-- Доступ к Web Storage (i.e. `localStorage` и `sessionStorage`) из других IFrame-мов запрещён если у пользователя [заблокированы куки из сторонних сервисов (других веб-сайтов) ](https://support.mozilla.org/en-US/kb/disable-third-party-cookies)({{bug("536509")}}).
+- Доступ к Web Storage (i.e. `localStorage` и `sessionStorage`) из других IFrame-мов запрещён если у пользователя [заблокированы куки из сторонних сервисов (других веб-сайтов)](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) ({{bug("536509")}}).
 - Белый список удалён из Nightly и Aurora/Dev Edition браузеров ({{bug(1201023)}}). Также запланировано удаление из Beta и Release версий в следующей версии (Firefox 44).
 - Реализована целостность ресурсов для {{htmlelement("script")}} и {{htmlelement("link")}} которые ведут к файлам стилей ({{bug("992096")}}).
 

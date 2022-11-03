@@ -152,7 +152,7 @@ Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo 
 
 A descrição também é usada nas páginas de resultados do mecanismo de pesquisa. Vamos passar por um exercício para explorar isso
 
-1. Vá para a [página inicial da Mozilla Developer Network.](https://developer.mozilla.org/en-US/)
+1. Vá para a [página inicial da Mozilla Developer Network.](/en-US/)
 2. Veja a fonte da página (botão direito do mouse/
 
     <kbd>Ctrl</kbd>

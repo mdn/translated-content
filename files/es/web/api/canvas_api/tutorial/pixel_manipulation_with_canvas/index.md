@@ -23,7 +23,7 @@ El objeto {{domxref("ImageData")}} representa los datos pixelados subyacentes de
 
 La propiedad `data` devuelve un {{jsxref("Uint8ClampedArray")}}, al que se puede acceder para ver los datos originales del pixel; cada pixel está representado por cuatro valores (rojo, verde, azul, y alfa, en ese orden; esto es, formato "RGBA"). Cada componente de color se representa con un valor entero entre 0 y 255. Dentro del array, cada componente ocupa un índice consecutivo, comenzando con 0 desde el punto superior izquierdo, continuando de izquierda a derecha y de arriba hacia abajo, a través del array.
 
-El {{jsxref("Uint8ClampedArray")}} contiene `alto` × `ancho` × 4 bytes de datos, con valores de índice en el rango entre 0 y (`alto`×`ancho`×4)-1.
+El {{jsxref("Uint8ClampedArray")}} contiene `alto` × `ancho` × 4 bytes de datos, con valores de índice en el rango entre 0 y (`alto` × `ancho` × 4)-1.
 
 Por ejemplo, para leer el valor del componente azul del pixel en la columna 200, fila 50 de una imagen, deberías hacer lo siguiente:
 
@@ -101,7 +101,7 @@ To obtain an `ImageData` object containing a copy of the pixel data for a canvas
 var myImageData = ctx.getImageData(left, top, width, height);
 ```
 
-This method returns an `ImageData` object representing the pixel data for the area of the canvas whose corners are represented by the points (`left`,`top`), (`left+width`, `top`), (`left`, `top+height`), and (`left+width`, `top+height`). The coordinates are specified in canvas coordinate space units.
+This method returns an `ImageData` object representing the pixel data for the area of the canvas whose corners are represented by the points (`left`, `top`), (`left+width`, `top`), (`left`, `top+height`), and (`left+width`, `top+height`). The coordinates are specified in canvas coordinate space units.
 
 > **Nota:** Any pixels outside the canvas are returned as transparent black in the resulting `ImageData` object.
 

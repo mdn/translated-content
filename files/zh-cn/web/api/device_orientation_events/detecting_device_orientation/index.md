@@ -14,7 +14,7 @@ original_slug: Web/Events/Detecting_device_orientation
 
 ## 处理方向（orientation）事件
 
-要接收设备方向变化信息，只需要监听{{ event("deviceorientation") }}事件：
+要接收设备方向变化信息，只需要监听[`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)事件：
 
 > **备注：** [gyronorm.js](https://github.com/dorukeker/gyronorm.js) is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.
 
@@ -57,7 +57,7 @@ function handleOrientation(orientData) {
 
 ### 例子
 
-这个例子会成功运行在支持检测自己方向的设备中的支持{{event("deviceorientation")}} 事件的浏览器中。
+这个例子会成功运行在支持检测自己方向的设备中的支持[`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event) 事件的浏览器中。
 
 让我们想象一下有一个球在花园中：
 
@@ -129,7 +129,7 @@ window.addEventListener('deviceorientation', handleOrientation);
 
 输出结果：
 
-在{{LiveSampleLink("Orientation_example", "这里")}}以新窗口打开此示例；因为有些浏览器中的 {{event("deviceorientation")}} 事件不支持跨域。
+在{{LiveSampleLink("Orientation_example", "这里")}}以新窗口打开此示例；因为有些浏览器中的 [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event) 事件不支持跨域。
 
 {{EmbedLiveSample('Orientation_example', '230', '260')}}
 
@@ -137,7 +137,7 @@ window.addEventListener('deviceorientation', handleOrientation);
 
 ## 处理移动（motion）事件
 
-移动事件的处理跟方向事件是一样的，除了他们有自己的事件名：{{ event("devicemotion") }}
+移动事件的处理跟方向事件是一样的，除了他们有自己的事件名：[`devicemotion`](/zh-CN/docs/Web/API/Window/devicemotion_event)
 
 ```js
 window.addEventListener("devicemotion", handleMotion, true);

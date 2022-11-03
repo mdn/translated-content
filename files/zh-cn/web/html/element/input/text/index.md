@@ -17,7 +17,7 @@ slug: Web/HTML/Element/Input/text
   </tr>
   <tr>
    <td><strong>事件</strong></td>
-   <td>{{event("change")}} 和 {{event("input")}}</td>
+   <td>[`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 和 [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)</td>
   </tr>
   <tr>
    <td><strong>支持的公共属性</strong></td>

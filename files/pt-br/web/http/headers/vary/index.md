@@ -70,4 +70,4 @@ Vary: User-Agent
 
 - [Entendendo o cabeçalho Vary (Understanding The Vary Header) - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
 - [Melhores práticas quando utilizando o cabeçalho Vary (Best Practices for Using the Vary Header) – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
-- [Negociação de conteúdo](https://developer.mozilla.org/docs/Web/HTTP/Content_negotiation)
+- [Negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation)

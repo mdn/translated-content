@@ -54,7 +54,7 @@ RTCDataChannel 接口代表在两者之间建立了一个双向数据通道的�
 - {{domxref("RTCDataChannel.onclose")}}
   - : 当接收到{{event("close")}}事件时候的事件处理器。当底层链路被关闭的时候会触发该事件。
 - {{domxref("RTCDataChannel.onerror")}}
-  - : 当接收到{{event("error")}} 事件时候的事件处理器。当遇到错误的时候会触发该事件。
+  - : 当接收到[`error`](/zh-CN/docs/Web/API/Element/error_event) 事件时候的事件处理器。当遇到错误的时候会触发该事件。
 
 ## 方法
 

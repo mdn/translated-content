@@ -39,7 +39,7 @@ A menudo, el almacenamiento de lado del cliente y de lado del servidor se utiliz
 
 > **Nota:** Existen límites en la cantidad de datos que puedes almacenar utilizando las APIs de almacenamiento de lado del cliente (posiblemente tanto por API individual como acumulativamente); el límite exacto varía según el navegador y posiblemente según la configuración del usuario. Consulta [límites de almacenamiento del navegador y criterios de desalojo](/es/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) para obtener más información.
 
-### Vieja escuela: _cookies_
+### Vieja escuela: cookies
 
 El concepto de almacenamiento de lado del cliente existe desde hace mucho tiempo. Desde los primeros días de la web, los sitios han utilizado _[cookies](/es/docs/Web/HTTP/Cookies)_ para almacenar información y personalizar la experiencia del usuario en los sitios web. Son la forma más antigua de almacenamiento de lado del cliente que se usa comúnmente en la web.
 
@@ -663,13 +663,13 @@ La API de caché es otro mecanismo de almacenamiento del lado del cliente, con u
 
 > **Nota:** El servicio _workers_ y la memoria caché ahora son compatibles con la mayoría de los navegadores modernos. Al momento de escribir este artículo, Safari todavía estaba ocupado implementándolo, pero debería estar allí pronto.
 
-### Un ejemplo del servicio _worker_
+### Un ejemplo del servicio worker
 
 Veamos un ejemplo para darte una idea de cómo se vería esto. Hemos creado otra versión del ejemplo del almacén de videos que vimos en la sección anterior; este funciona de manera idéntica, excepto que también guarda HTML, CSS y JavaScript en la API de caché a través de un servicio _worker_, lo que permite que el ejemplo se ejecute sin conexión.
 
 Ve [almacén de videos IndexedDB con servicio worker funcionando en vivo](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/) y también [ve el código fuente](https://github.com/mdn/learning-area/tree/master/javascript/apis/client-side-storage/cache-sw/video-store-offline).
 
-#### Registrar el servicio _worker_
+#### Registrar el servicio worker
 
 Lo primero que hay que tener en cuenta es que hay un fragmento adicional de código colocado en el archivo JavaScript principal (consulta [index.js](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js)). Primero hacemos una prueba de detección de características para ver si el miembro `serviceWorker` está disponible en el objeto {{domxref("Navigator")}}. Si esto devuelve `true`, entonces sabemos que al menos se respaldan los conceptos básicos del servicio _workers_. Aquí adentro usamos el método {{domxref("ServiceWorkerContainer.register )")}} para registrar un servicio _worker_ contenido en el archivo `sw.js` contra el origen en el que reside, para que pueda controlar páginas en el mismo directorio que él, o subdirectorios. Cuando se cumple su promesa, el trabajador del servicio se considera registrado.
 
@@ -689,7 +689,7 @@ if ("serviceWorker" in navigator) {
 
 > **Nota:** La ruta proporcionada al archivo `sw.js` es relativa al origen del sitio, no al archivo JavaScript que contiene el código. El servicio _worker_ está en `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. El origen es `https://mdn.github.io` y, por lo tanto, la ruta dada debe ser `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. Si quisieras alojar este ejemplo en tu propio servidor, tendrías que cambiarlo consecuentemente. Esto es bastante confuso, pero tiene que funcionar de esta manera por razones de seguridad.
 
-#### Instalación del servicio _worker_
+#### Instalación del servicio worker
 
 La próxima vez que se accede a cualquier página bajo el control del servicio _worker_ (por ejemplo, cuando se vuelve a cargar el ejemplo), el servicio _worker_ se instala en esa página, lo cual significa que comenzará a controlarla. Cuando esto ocurre, se dispara un evento `install` contra el servicio _worker_; puedes escribir código dentro del propio servicio _worker_ que responderá a la instalación.
 
@@ -739,7 +739,7 @@ self.addEventListener("fetch", function (e) {
 });
 ```
 
-Y eso es todo para nuestro sencillo servicio _worker_. Hay muchas más cosas que puedes hacer con ellos; para obtener más detalles, consulta el [libro de recetas para el servicio _worker_](https://serviceworke.rs/). Y gracias a Paul Kinlan por su artículo [Agregar un servicio _worker_ y sin conexión a tu aplicación web](https://developers.google.com/web/fundamentals/codelabs/offline/), que inspiró este sencillo ejemplo.
+Y eso es todo para nuestro sencillo servicio _worker_. Hay muchas más cosas que puedes hacer con ellos; para obtener más detalles, consulta el [libro de recetas para el servicio _worker_](https://github.com/mdn/serviceworker-cookbook/). Y gracias a Paul Kinlan por su artículo [Agregar un servicio _worker_ y sin conexión a tu aplicación web](https://developers.google.com/web/fundamentals/codelabs/offline/), que inspiró este sencillo ejemplo.
 
 #### Probando el ejemplo sin conexión
 

@@ -9,15 +9,15 @@ A popup is a dialog that's associated with a [toolbar button](/en-US/Add-ons/Web
 
 ![](https://mdn.mozillademos.org/files/14039/popup-shadow.png)
 
-When the user clicks the button, the popup is shown. When the user clicks anywhere outside the popup, the popup is closed. The popup can be closed programmatically by calling [`window.close()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/close) from a script running in the popup. However, you can't open the popup programmatically from an extension's JavaScript: it can only be opened in response to a user action.
+When the user clicks the button, the popup is shown. When the user clicks anywhere outside the popup, the popup is closed. The popup can be closed programmatically by calling [`window.close()`](/en-US/docs/Web/API/Window/close) from a script running in the popup. However, you can't open the popup programmatically from an extension's JavaScript: it can only be opened in response to a user action.
 
 You can define a keyboard shortcut that opens the popup using the `"_execute_browser_action"` and `"_execute_page_action"` shortcuts. See the documentation for the manifest.json key [`commands`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) .
 
 ## Specifying a popup
 
-The popup is specified as an HTML file, which can include CSS and JavaScript files, as a normal web page does. Unlike a normal page, though, the JavaScript can use all the [WebExtension APIs](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API) that the extension has [permissions](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for.
+The popup is specified as an HTML file, which can include CSS and JavaScript files, as a normal web page does. Unlike a normal page, though, the JavaScript can use all the [WebExtension APIs](/en-US/Add-ons/WebExtensions/API) that the extension has [permissions](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for.
 
-The HTML file is included in the extension and specified as part of the [`browser_action`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) or [page_action](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) key by `"default_popup"` in the manifest.json:
+The HTML file is included in the extension and specified as part of the [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) or [page_action](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) key by `"default_popup"` in the manifest.json:
 
 ```json
   "browser_action": {
@@ -27,13 +27,13 @@ The HTML file is included in the extension and specified as part of the [`browse
   }
 ```
 
-You can ask the browser to include a stylesheet in your popup that will make it look consistent with the browser's UI. To do this, include `"browser_style": true` in the [`browser_action`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) or [page_action](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) key.
+You can ask the browser to include a stylesheet in your popup that will make it look consistent with the browser's UI. To do this, include `"browser_style": true` in the [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) or [page_action](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) key.
 
-Popups have a Content Security Policy that restricts the sources from which they can load resources, and disallows some unsafe practices such as the use of [`eval()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). See [Content Security Policy](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) for more details on this.
+Popups have a Content Security Policy that restricts the sources from which they can load resources, and disallows some unsafe practices such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). See [Content Security Policy](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) for more details on this.
 
 ## Debugging popups
 
-You can debug a popup's markup and JavaScript using the Add-on Debugger, but you'll need to turn on the Disable popup auto hide feature to prevent popups from hiding when you click outside them.[ Read about debugging popups](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Debugging#Debugging_popups).
+You can debug a popup's markup and JavaScript using the Add-on Debugger, but you'll need to turn on the Disable popup auto hide feature to prevent popups from hiding when you click outside them. [Read about debugging popups](/en-US/Add-ons/WebExtensions/Debugging#Debugging_popups).
 
 ## Popup resizing
 

@@ -18,7 +18,7 @@ O elemento `polyline` é uma forma básica do SVG, utilizado para criar uma sér
 
 ## Exemplo
 
-» [polyline.svg](https://developer.mozilla.org/files/3260/polyline.svg)
+» [polyline.svg](/files/3260/polyline.svg)
 
 ## Atributos
 

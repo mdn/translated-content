@@ -17,7 +17,9 @@ La propiedad `font-variant` selecciona entre los aspectos `normal` y `small-caps
 
 ## Sintaxis
 
-`font-variant:` {{ mediawiki.external('<code>normal</code> | <code>small-caps</code>') }} ;
+```
+font-variant: [normal | small-caps] ;
+```
 
 ### Valores
 

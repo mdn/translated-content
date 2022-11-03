@@ -532,7 +532,7 @@ The Fibonacci example shown previously demonstrates that workers can in fact [sp
 
 ## See also
 
-- {{ spec("http://dev.w3.org/html5/workers/", "File API Specification: Web Workers", "ED") }}
+- [File API Specification: Web Workers](https://dev.w3.org/html5/workers/)
 - [`Worker`](/en/DOM/Worker) interface
 - [`SharedWorker`](/en/DOM/SharedWorker) interface
 - [Functions available to workers](/en/DOM/Worker/Functions_available_to_workers)

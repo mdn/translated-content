@@ -1,16 +1,9 @@
 ---
-title: <a>
+title: '<a>: El elemento ancla'
 slug: Web/HTML/Element/a
-tags:
-  - Contenido
-  - Ejemplo
-  - Elemento
-  - HTML
-  - Principiante
-  - Referencia
-  - Web
 translation_of: Web/HTML/Element/a
 original_slug: Web/HTML/Elemento/a
+browser-compat: html.elements.a
 ---
 {{HTMLRef}}
 
@@ -75,7 +68,7 @@ El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de interne
 
 Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("download")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("download")}}
 
   - : Este atributo, indica descargar a los navegadores una URL en lugar de navegar hacia ella, por lo que el usuario será dirigido para salvarla como un archivo local. Si el atributo tiene un valor, éste se utilizará como nombre de archivo por defecto en el mensaje Guardar que se abre cuando el usuario hace clic en el enlace (sin embargo, el usuario puede cambiar el nombre antes de guardar el archivo). No hay restricciones sobre los valores permitidos, aunque: / y: \ se convertirán en guiones bajos (_underscores_), lo que evitará sugerencias de ruta específicas. Se debe tener en cuenta que la mayoría de los sistemas de archivos tienen limitaciones con respecto a los símbolos de puntuación admitidos en los nombres de archivo, por lo que los navegadores ajustarán los nombres de los archivos en consecuencia.
 
@@ -124,23 +117,23 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
 ### Atributos obsoletos
 
-- {{htmlattrdef("charset")}} {{obsoleteGeneric("inline","HTML5")}}
+- {{HTMLAttrDef("charset")}} {{Deprecated_Inline}}
 
   - : Este atributo define la [codificación de caracteres (character encoding)](/es/docs/Glossary/character_encoding) de la URL enlazada. El valor debe de ser una lista delimitada por espacio y/o coma de caracteres definidos en [RFC 2045](https://tools.ietf.org/html/rfc2045). El valor por defecto es `ISO-8859-1`.
 
     > **Nota:** **Nota de uso:** Este atributo es obsoleto en HTML5 y **no debe ser utilizado por autores**. Para lograr su efecto, se debe utilzar el encabezado HTTP [`Content-Type:`](/es/docs/Web/HTTP/Headers/Content-Type) en la URL enlazada.
 
-- {{htmlattrdef("coords")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}
+- {{HTMLAttrDef("coords")}} {{Deprecated_Inline}}
   - : Para utilizar con el siguiente atributo `shape`, este atributo utiliza una lista de números separada por comas para definir las coordenadas del enlace en la página.
-- {{htmlattrdef("name")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}
+- {{HTMLAttrDef("name")}} {{Deprecated_Inline}}
 
   - : Este atributo era requerido para anclas (_anchors_) que definían una posible ubicación dentro de la página. En HTML 4.01, `id` y `name` podían ser utilizados simultáneamente en un elemento `<a>` simpre y cuando tuvieran valores idénticos.
 
     > **Nota:** **Nota de uso:** Este atributo es obsoleto en HTML5, se utiliza el [atributo global `id`](/es/docs/HTML/Global_attributes#attr-id) en su lugar.
 
-- {{htmlattrdef("rev")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}
+- {{HTMLAttrDef("rev")}} {{Deprecated_Inline}}
   - : Este atributo especifica un enlace inverso, la relación inversa del atributo **rel**. Fue desechado por ser muy confuso.
-- {{htmlattrdef("shape")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}
+- {{HTMLAttrDef("shape")}} {{Deprecated_Inline}}
 
   - : Este atributo era utilizado para definir una región de enlaces para crear un mapa de imagen. El valore es `circle`, `default`, `polygon`, y `rect`. El formato del atributo `coords` depende del valor de la forma geométrica. Para `circle`, el valor es `x,y,r` donde `x` y `y` son las coordenadas en pixel para el centro del círculo y `r` es el valor del radio en pixeles. Para `rect`, el atributo `coords` debe ser `x,y,w,h`. Los valores `x y y` definen la esquina superior izquierda del rectángulo, mientras que `w` y `h` definen el ancho y el alto respectivamente. Un valor del `polygon` para `shape` requiere los valores `x1,y1,x2,y2,...` para `coords`. Cada uno de los pares `x,y` definen un punto en el polígono, con puntos sucesivos que son unidos por líneas rectas y el útlimo punto se une al primer punto. El valor `default` para `shape` Requiere que el área encerrada, típicamente una imágen, sea utilizada.
 
@@ -262,17 +255,12 @@ Cuando se clicea sobre un {{HTMLElement("a")}} las consecuencias varían de acue
 
 ## Especificaciones
 
-| Especificación                                                                                                                           | Estatus                              | Comentario                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------- |
-| {{SpecName("Referrer Policy", "#referrer-policy-delivery-referrer-attribute", "referrer attribute")}} | {{Spec2("Referrer Policy")}} | Added the `referrerpolicy` attribute. |
-| {{SpecName("HTML WHATWG", "textlevel-semantics.html#the-a-element", "&lt;a&gt;")}}                             | {{Spec2("HTML WHATWG")}}     |                                       |
-| {{SpecName("HTML5 W3C", "textlevel-semantics.html#the-a-element", "&lt;a&gt;")}}                             | {{Spec2("HTML5 W3C")}}         |                                       |
-| {{SpecName("HTML4.01", "struct/links.html#h-12.2", "&lt;a&gt;")}}                                                 | {{Spec2("HTML4.01")}}         |                                       |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.a")}}
+{{Compat}}
 
-## Consultar también
+## Véase también
 
 - Otros elementos comunicando a nivel semántico de texto [(text-level semantics)](/es/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.

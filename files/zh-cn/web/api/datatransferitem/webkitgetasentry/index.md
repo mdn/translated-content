@@ -163,4 +163,4 @@ dropzone.addEventListener("drop", function(event) {
 - [文件系统 API 简介](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("DataTransferItem")}}
 - {{domxref("FileSystemEntry")}}，{{domxref("FileSystemFileEntry")}}和{{domxref("FileSystemDirectoryEntry")}}
-- 活动：{{event("dragover")}}和{{event("drop")}}
+- 活动：[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)和[`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)
