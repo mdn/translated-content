@@ -1,7 +1,6 @@
 ---
 title: Boolean.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ---
 {{JSRef}}
 

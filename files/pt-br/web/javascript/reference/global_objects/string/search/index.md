@@ -1,15 +1,6 @@
 ---
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
-tags:
-  - Expressões Regulares
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - search()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 ---
 {{JSRef}}
 

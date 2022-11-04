@@ -1,12 +1,6 @@
 ---
 title: Document.write()
 slug: Web/API/Document/write
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-translation_of: Web/API/Document/write
 ---
 {{ApiRef("DOM")}}
 

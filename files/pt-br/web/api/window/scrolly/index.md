@@ -1,7 +1,6 @@
 ---
 title: Window.scrollY
 slug: Web/API/Window/scrollY
-translation_of: Web/API/Window/scrollY
 ---
 {{APIRef}}
 

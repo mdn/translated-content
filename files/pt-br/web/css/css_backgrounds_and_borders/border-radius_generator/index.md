@@ -1,10 +1,6 @@
 ---
 title: Gerador de Border-radius
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
-tags:
-  - CSS
-  - Ferramentas
-translation_of: Web/CSS/CSS_Background_and_Borders/Border-radius_generator
 original_slug: Web/CSS/CSS_Background_and_Borders/Border-radius_generator
 ---
 Esta ferramenta pode ser utilizada para gerar o efeito {{cssxref("border-radius")}} em CSS3.

@@ -1,10 +1,6 @@
 ---
 title: O projeto MDN
 slug: MDN
-tags:
-  - MDN Meta
-  - Página de destino
-translation_of: MDN
 ---
 {{MDNSidebar}}
 

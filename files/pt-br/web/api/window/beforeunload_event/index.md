@@ -1,7 +1,6 @@
 ---
 title: beforeunload
 slug: Web/API/Window/beforeunload_event
-translation_of: Web/API/Window/beforeunload_event
 original_slug: Web/Events/beforeunload
 ---
 O evento **`beforeunload`** é disparado quando o _window_, o _document_ e seus recursos estão prestes a ser descarregados.

@@ -1,16 +1,6 @@
 ---
 title: '@layer'
 slug: Web/CSS/@layer
-tags:
-  - '@layer'
-  - At-rule
-  - CSS
-  - Referência
-  - Web
-  - camada
-  - cascata
-
-browser-compat: css.at-rules.layer
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

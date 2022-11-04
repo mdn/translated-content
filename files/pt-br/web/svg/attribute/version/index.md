@@ -1,7 +1,6 @@
 ---
 title: version
 slug: Web/SVG/Attribute/version
-translation_of: Web/SVG/Attribute/version
 ---
 {{SVGRef}}{{deprecated_header("SVG 2")}}
 

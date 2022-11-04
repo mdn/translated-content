@@ -1,14 +1,6 @@
 ---
 title: Event reference
 slug: Web/Events
-tags:
-  - Mozilla
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - TopicStub
-  - Web
-translation_of: Web/Events
 ---
 Eventos Dom (Dom Events) são utilizados para notificar o código de novidades durante a navegação do usuário. Cada evento é representado por um objeto que é baseado na interface {{domxref("Event")}}, e pode ter campos customizados adicionados e/ou funções usadas para obter informações adicionais sobre o que aconteceu. Eventos podem representar desde interações básicas do usuário (cliques, rolagem da página...) até notificações automáticas de novidades no DOM.
 

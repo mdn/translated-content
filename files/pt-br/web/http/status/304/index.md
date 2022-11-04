@@ -1,12 +1,6 @@
 ---
 title: 304 Not Modified
 slug: Web/HTTP/Status/304
-tags:
-  - HTTP
-  - Redirecionamento
-  - Referencia
-  - Status code
-translation_of: Web/HTTP/Status/304
 ---
 {{HTTPSidebar}}
 

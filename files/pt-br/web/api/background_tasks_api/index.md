@@ -1,7 +1,6 @@
 ---
 title: Background Tasks API
 slug: Web/API/Background_Tasks_API
-translation_of: Web/API/Background_Tasks_API
 ---
 {{DefaultAPISidebar("Tarefas em segundo plano")}}
 

@@ -1,23 +1,6 @@
 ---
 title: Utilizando a função "alerta"
 slug: Web/Accessibility/ARIA/Roles/alert_role
-tags:
-  - ARIA
-  - Accessibility
-  - Acessibilidade
-  - Alertas
-  - Avançado
-  - CSS
-  - Caixas de aviso
-  - Configuração role
-  - Guía
-  - HTML+ARIA
-  - NeedsContent
-  - PrecisaDeConteúdo
-  - WAI-ARIA
-  - wcag1.2.1
-  - wcag3.3.1
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 ---
 ### Descrição

@@ -1,10 +1,6 @@
 ---
-title: "Warning: String.x é depreciado; use String.prototype.x em vez disso"
+title: 'Warning: String.x é depreciado; use String.prototype.x em vez disso'
 slug: Web/JavaScript/Reference/Errors/Deprecated_String_generics
-tags:
-  - Error
-  - JavaScript
-  - Warning
 ---
 
 {{jsSidebar("Errors")}}

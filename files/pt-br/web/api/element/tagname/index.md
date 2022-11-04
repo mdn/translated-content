@@ -1,14 +1,6 @@
 ---
 title: Element.tagName
 slug: Web/API/Element/tagName
-tags:
-  - API
-  - DOM
-  - Gecko
-  - PrecisaCompatibilidadeBrowser
-  - Propriedade
-  - Referência DOM
-translation_of: Web/API/Element/tagName
 ---
 {{ApiRef("DOM")}}
 

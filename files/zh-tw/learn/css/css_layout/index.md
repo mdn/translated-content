@@ -15,7 +15,7 @@ slug: Learn/CSS/CSS_layout
 2. 熟悉 CSS 基本原理，如 [CSS 簡介](/zh-TW/docs/Learn/CSS/Introduction_to_CSS)中所述。
 3. 了解如何 [樣式框](/zh-TW/docs/Learn/CSS/Styling_boxes)。
 
-> **備註：** 如果你正在使用的電腦/平板/其他設備讓你無法建立自己的文件，你可以透過線上工具如 [JSBin](http://jsbin.com/) 或 [Thimble](https://thimble.mozilla.org/) 編輯並嘗試（大部分的）範例程式碼。
+> **備註：** 如果你正在使用的電腦/平板/其他設備讓你無法建立自己的文件，你可以透過線上工具如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 編輯並嘗試（大部分的）範例程式碼。
 
 ## 指導
 

@@ -1,12 +1,6 @@
 ---
 title: Cross-Origin Resource Sharing (CORS)
 slug: Web/HTTP/CORS
-tags:
-  - AJAX
-  - CORS
-  - HTTP
-  - XMLHttpRequest
-translation_of: Web/HTTP/CORS
 original_slug: Web/HTTP/Controle_Acesso_CORS
 ---
 {{HTTPSidebar}}

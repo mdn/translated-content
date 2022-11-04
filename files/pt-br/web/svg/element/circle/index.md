@@ -1,14 +1,6 @@
 ---
 title: circle
 slug: Web/SVG/Element/circle
-tags:
-  - Circulo
-  - Elemento
-  - Forma
-  - Referencia
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/circle
 ---
 {{SVGRef}}
 

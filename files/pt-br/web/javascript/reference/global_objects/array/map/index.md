@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
 {{JSRef("Global_Objects", "Array")}}
 

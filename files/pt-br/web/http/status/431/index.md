@@ -1,16 +1,6 @@
 ---
 title: 431 Request Header Fields Too Large
 slug: Web/HTTP/Status/431
-tags:
-  - Client error
-  - Código de Status de HTTP
-  - Código de status
-  - Erro do cliente
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
-translation_of: Web/HTTP/Status/431
 ---
 {{HTTPSidebar}}
 

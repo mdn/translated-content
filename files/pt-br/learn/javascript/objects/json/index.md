@@ -1,11 +1,6 @@
 ---
 title: Trabalhando com JSON
 slug: Learn/JavaScript/Objects/JSON
-tags:
-  - JSON
-  - JavaScript
-  - assíncrono
-translation_of: Learn/JavaScript/Objects/JSON
 original_slug: Aprender/JavaScript/Objetos/JSON
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

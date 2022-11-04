@@ -1,13 +1,6 @@
 ---
 title: If-Match
 slug: Web/HTTP/Headers/If-Match
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-  - Requisições Condicionais
-translation_of: Web/HTTP/Headers/If-Match
 ---
 {{HTTPSidebar}}
 

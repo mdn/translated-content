@@ -1,11 +1,6 @@
 ---
 title: Códigos de status de respostas HTTP
 slug: Web/HTTP/Status
-tags:
-  - Códigos de status
-  - HTTP
-  - Web
-translation_of: Web/HTTP/Status
 ---
 {{HTTPSidebar}}
 

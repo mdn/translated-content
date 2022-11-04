@@ -1,14 +1,6 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-tags:
-  - Expressão Regular
-  - JavaScript
-  - Prototype
-  - Referencia
-  - RegExp
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
 {{JSRef}}O método **test()** executa uma busca por uma correspondência entre uma expressão regular e uma string. Retorna `true` ou `false`.
 

@@ -1,14 +1,6 @@
 ---
 title: Estruturando a web com HTML
 slug: Learn/HTML
-tags:
-  - Aprender
-  - Guía
-  - HTML
-  - Iniciante
-  - Introdução
-  - Tópico
-translation_of: Learn/HTML
 original_slug: Aprender/HTML
 ---
 {{LearnSidebar}}

@@ -1,14 +1,6 @@
 ---
 title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Prototype
-  - metodo
-  - set
-  - set.add
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
 {{JSRef}}
 

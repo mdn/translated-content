@@ -1,7 +1,6 @@
 ---
 title: <img>
 slug: Web/HTML/Element/img
-translation_of: Web/HTML/Element/img
 ---
 ## Resumo
 
@@ -207,4 +206,4 @@ O valor do atributo `title` é geralmente mostrado ao usuário como uma dica, qu
 
 - {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -1,14 +1,6 @@
 ---
 title: use
 slug: Web/SVG/Element/use
-tags:
-  - Elemento
-  - Gráficos(2)
-  - Referencia
-  - Referência(2)
-  - SVG
-  - graficos
-translation_of: Web/SVG/Element/use
 ---
 {{SVGRef}}
 

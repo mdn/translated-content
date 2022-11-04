@@ -1,6 +1,7 @@
 ---
 title: '@viewport'
-slug: Web/CSS/@viewport
+slug: conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
+original_slug: Web/CSS/@viewport
 ---
 
 {{CSSRef}}{{deprecated_header}}

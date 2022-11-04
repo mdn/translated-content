@@ -1,12 +1,6 @@
 ---
 title: Gramática léxica
 slug: Web/JavaScript/Reference/Lexical_grammar
-tags:
-  - Gramática léxica
-  - JavaScript
-  - Literais
-  - Palavras-chave
-translation_of: Web/JavaScript/Reference/Lexical_grammar
 ---
 {{JsSidebar("More")}}
 

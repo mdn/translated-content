@@ -1,19 +1,6 @@
 ---
 title: <address>
 slug: Web/HTML/Element/address
-tags:
-  - Autor
-  - Contato
-  - Elemento
-  - Email
-  - Endereço
-  - Endereço de Email
-  - HTML
-  - Informação de Contato
-  - Referencia
-  - Seções HTML
-  - Web
-translation_of: Web/HTML/Element/address
 ---
 ## Resumo
 

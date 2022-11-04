@@ -1,11 +1,6 @@
 ---
 title: Complementos
 slug: Mozilla/Add-ons
-tags:
-  - Add-ons
-  - Precisa de Tradução
-  - TopicStub
-translation_of: Mozilla/Add-ons
 ---
 {{AddonSidebar}}Modifique e amplie os aplicativos da Mozilla
 

@@ -220,7 +220,7 @@ if (!Array.prototype.indexOf) {
 
 ## Notas de compatibilidad
 
-- Comenzando con Firefox 47 {{geckoRelease(47)}}, este método ya no devolverá `-0`. Por ejemplo, `[0] .indexOf (0, -0)` siempre devolverá `+0` ({{bug(1242043)}}).
+- Comenzando con Firefox 47 (Firefox 47 / Thunderbird 47 / SeaMonkey 2.44), este método ya no devolverá `-0`. Por ejemplo, `[0] .indexOf (0, -0)` siempre devolverá `+0` ({{bug(1242043)}}).
 
 ## Ver también
 

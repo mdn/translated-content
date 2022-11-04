@@ -1,14 +1,6 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
-tags:
-  - Cabeçalho Geral
-  - Cabeçalho de Resposta
-  - HTTP
-  - Reference
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Content-Disposition
 ---
 {{HTTPSidebar}}Em uma resposta HTTP normal, o cabeçalho de resposta **`Content-Disposition`** indica se o conteúdo é esperado a ser exibido _inline_ no navegador, isso significa, como uma página Web ou parte de uma, ou como um anexo, que é baixado e salvo localmente.
 

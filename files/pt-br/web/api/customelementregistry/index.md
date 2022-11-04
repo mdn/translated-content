@@ -1,7 +1,6 @@
 ---
 title: CustomElementRegistry
 slug: Web/API/CustomElementRegistry
-translation_of: Web/API/CustomElementRegistry
 ---
 {{DefaultAPISidebar("Web Components")}}
 

@@ -39,7 +39,7 @@ Los errores de parseo son reportados también a la [Consola de errores](/es/docs
 
 ## Parseando un documento SVG o HTML
 
-El `DOMParser` puede ser usado para parsear un documento SVG {{geckoRelease("10.0")}} o un documento HTML{{geckoRelease("12.0")}}. Hay 3 resultados diferentes posibles, dependiendo del tipo MIME dado. Si el tipo del MIME es `text/xml`, el objeto resultante será un `XMLDocument`, si el tipo MIME es `image/svg+xml` será un `SVGDocument,` y si el tipo MIME es `text/html` será un `HTMLDocument`.
+El `DOMParser` puede ser usado para parsear un documento SVG (Firefox 10.0 / Thunderbird 10.0 / SeaMonkey 2.7) o un documento HTML (Firefox 12.0 / Thunderbird 12.0 / SeaMonkey 2.9). Hay 3 resultados diferentes posibles, dependiendo del tipo MIME dado. Si el tipo del MIME es `text/xml`, el objeto resultante será un `XMLDocument`, si el tipo MIME es `image/svg+xml` será un `SVGDocument,` y si el tipo MIME es `text/html` será un `HTMLDocument`.
 
 ```js
 var parser = new DOMParser();

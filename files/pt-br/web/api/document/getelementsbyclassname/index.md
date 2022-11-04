@@ -1,15 +1,6 @@
 ---
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
-tags:
-  - API
-  - DOM
-  - Gecko
-  - HTML5
-  - Métodos de Elementos DOM
-  - Referencia
-  - metodo
-translation_of: Web/API/Document/getElementsByClassName
 ---
 {{APIRef("DOM")}}
 

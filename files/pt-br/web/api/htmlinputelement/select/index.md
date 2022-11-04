@@ -1,15 +1,6 @@
 ---
 title: HTMLInputElement.select()
 slug: Web/API/HTMLInputElement/select
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Referencia
-  - Selecionar
-  - Select
-  - metodo
-translation_of: Web/API/HTMLInputElement/select
 ---
 {{ APIRef("HTML DOM") }}
 

@@ -1,9 +1,8 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/Input/range
-translation_of: Web/HTML/Element/input/range
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elementos do tipo **`"range"`** deixam o usuário especificar um valor numérico que não deve ser inferior a um determinado valor, e não mais do que um valor máximo especificado. O valor preciso, no entanto, não é considerado importante. Este geralmente é representado por um controle deslizante ou o mesmo tipo de controle de "number" input. Como este tipo de elemento é impreciso, não deve ser usado a menos que o valor exato do controle não seja importante.
 

@@ -1,7 +1,6 @@
 ---
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
-translation_of: Web/JavaScript/Reference/Global_Objects/eval
 ---
 {{jsSidebar("Objects")}}
 

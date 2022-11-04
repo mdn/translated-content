@@ -1,14 +1,6 @@
 ---
 title: Save-Data
 slug: Web/HTTP/Headers/Save-Data
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-  - Save-Data
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Save-Data
 ---
 {{HTTPSidebar}}
 

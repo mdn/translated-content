@@ -1,13 +1,6 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
-tags:
-  - CSS
-  - Layout
-  - Referencia
-  - Tipo de dado CSS
-  - Web
-translation_of: Web/CSS/color_value
 ---
 {{CSSRef}}
 

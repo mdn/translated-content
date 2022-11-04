@@ -1,18 +1,6 @@
 ---
 title: Feature-Policy
 slug: Web/HTTP/Headers/Feature-Policy
-tags:
-  - Autorização
-  - Experimental
-  - Feature-Policy
-  - HTTP
-  - Permissões
-  - Política de Funcionalidade
-  - Referencia
-  - Segurança
-  - Web
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Feature-Policy
 ---
 {{HTTPSidebar}}
 

@@ -264,7 +264,7 @@ void send(
 ###### Parameters
 
 - `body`
-  - : This may be an `nsIDocument`, `nsIInputStream`, or a string (an `nsISupportsString` if called from native code) that is used to populate the body of a POST request. Starting with Gecko 1.9.2, you may also specify an DOM{{ domxref("File") }} , and starting with Gecko 2.0 {{ geckoRelease("2.0") }} you may also specify a [`FormData`](/en/XMLHttpRequest/FormData) object.
+  - : This may be an `nsIDocument`, `nsIInputStream`, or a string (an `nsISupportsString` if called from native code) that is used to populate the body of a POST request. Starting with Gecko 1.9.2, you may also specify an DOM{{ domxref("File") }} , and starting with Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) you may also specify a [`FormData`](/en/XMLHttpRequest/FormData) object.
 
 ###### Notes
 

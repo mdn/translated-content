@@ -1,17 +1,6 @@
 ---
 title: Sensor
 slug: Web/API/Sensor
-tags:
-  - API
-  - Generic Sensor API
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - TopicStub
-translation_of: Web/API/Sensor
 ---
 {{APIRef("Generic Sensor API")}}
 

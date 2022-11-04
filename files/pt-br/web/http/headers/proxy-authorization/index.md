@@ -1,13 +1,6 @@
 ---
 title: Proxy-Authorization
 slug: Web/HTTP/Headers/Proxy-Authorization
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Proxy-Authorization
 ---
 {{HTTPSidebar}}
 

@@ -1,14 +1,6 @@
 ---
 title: Math.SQRT2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Propriedade
-  - Reference
-  - Referência(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 ---
 {{JSRef}}
 

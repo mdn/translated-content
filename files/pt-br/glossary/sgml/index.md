@@ -1,7 +1,6 @@
 ---
 title: SGML
 slug: Glossary/SGML
-translation_of: Glossary/SGML
 original_slug: Glossario/SGML
 ---
 O _Standard Generalized Markup Language_ (**SGML**) é uma {{Glossary("ISO")}} especificação que veio para definir as declarações/sintaxe Linguagens de Marcação.

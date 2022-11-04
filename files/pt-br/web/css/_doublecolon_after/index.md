@@ -1,7 +1,6 @@
 ---
 title: '::after (:after)'
 slug: Web/CSS/::after
-translation_of: Web/CSS/::after
 ---
 {{CSSRef}}
 

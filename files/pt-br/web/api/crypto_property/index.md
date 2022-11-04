@@ -1,15 +1,6 @@
 ---
 title: Window.crypto
 slug: Web/API/crypto_property
-tags:
-  - API
-  - HTML DOM
-  - Janela
-  - NeedsCompatTable
-  - Propriedade
-  - Referencia
-  - Window
-translation_of: Web/API/Window/crypto
 original_slug: Web/API/Window/crypto
 ---
 {{APIRef}}

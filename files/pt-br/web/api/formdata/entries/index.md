@@ -1,14 +1,6 @@
 ---
 title: FormData.entries()
 slug: Web/API/FormData/entries
-tags:
-  - API
-  - FormData
-  - Iterador
-  - Referencia
-  - XMLHttpRequest API
-  - metodo
-translation_of: Web/API/FormData/entries
 ---
 {{APIRef("XMLHttpRequest")}}
 

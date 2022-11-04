@@ -1,19 +1,6 @@
 ---
 title: Com será o seu site?
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
-tags:
-  - Aprender
-  - Ativos
-  - Composição
-  - Conteúdo
-  - Descontinuado
-  - Design
-  - Fontes
-  - Iniciante
-  - Passo a passo
-  - Simples
-  - l10:prioridade
-translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 original_slug: Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}

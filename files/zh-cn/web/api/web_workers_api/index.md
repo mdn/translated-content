@@ -13,7 +13,7 @@ slug: Web/API/Web_Workers_API
 
 你可以在 worker 线程中运行任意的代码，但注意存在一些例外：你不能直接在 worker 线程中操纵 DOM 元素；或使用{{domxref("window")}} 对象中的某些方法和属性。大部分 window 对象的方法和属性是可以使用的，包括 [WebSockets](/zh-CN/docs/WebSockets)，以及诸如 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 和 FireFox OS 中独有的 [Data Store API](/zh-CN/docs/Web/API/Data_Store_API) 这一类数据存储机制。更多信息请参见： [Functions and classes available to workers](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers) 。
 
-主线程和 worker 线程相互之间使用 `postMessage()` 方法来发送信息，并且通过 `onmessage` 这个 event handler 来接收信息（传递的信息包含在 {{event("Message")}} 这个事件的`data`属性内) 。数据的交互方式为传递副本，而不是直接共享数据。
+主线程和 worker 线程相互之间使用 `postMessage()` 方法来发送信息，并且通过 `onmessage` 这个 event handler 来接收信息（传递的信息包含在 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 这个事件的`data`属性内) 。数据的交互方式为传递副本，而不是直接共享数据。
 
 worker 可以另外生成新的 worker，这些 worker 与它们父页面的宿主相同。此外，worker 可以通过 [`XMLHttpRequest`](/zh-CN/DOM/XMLHttpRequest) 来访问网络，只不过 `XMLHttpRequest` 的 `responseXML` 和 `channel` 这两个属性的值将总是 `null` 。
 

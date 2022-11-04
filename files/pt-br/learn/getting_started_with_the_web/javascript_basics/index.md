@@ -1,14 +1,6 @@
 ---
 title: JavaScript básico
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
-tags:
-  - Aprender
-  - Codificação de Script
-  - Iniciante
-  - JavaScript
-  - Web
-  - l10:prioridade
-translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 original_slug: Aprender/Getting_started_with_the_web/JavaScript_basico
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_fwith_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
