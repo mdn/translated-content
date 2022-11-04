@@ -1,11 +1,6 @@
 ---
 title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
-tags:
-  - CSS
-  - JavaScript
-  - querySelector
-translation_of: Web/API/Document/querySelectorAll
 ---
 {{ ApiRef("DOM") }}
 

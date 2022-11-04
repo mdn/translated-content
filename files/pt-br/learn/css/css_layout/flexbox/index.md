@@ -1,20 +1,6 @@
 ---
 title: Flexbox
 slug: Learn/CSS/CSS_layout/Flexbox
-tags:
-  - Aprender
-  - Artigo
-  - CSS
-  - Caixas Flexíveis
-  - Flex
-  - Guía
-  - Iniciante
-  - Layout
-  - flexbox
-  - grid css
-  - laioutes css
-  - ordenação
-translation_of: Learn/CSS/CSS_layout/Flexbox
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 

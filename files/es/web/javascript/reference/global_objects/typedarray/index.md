@@ -20,7 +20,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
 
 ## Descripción
 
-ECMAScript 2015 define un constructor `TypedArray` que sirve como `[[Prototype]]` de todos los constructores `TypedArray`. Este constructor no está expuesto directamente: no existe una propiedad global `%TypedArray%` o `TypedArray`. Solo es accesible directamente a través de `Object.getPrototypeOf(Int8Array)` y similares. Todos los constructores de `TypedArray` heredan propiedades comunes de la función constructora `%TypedArray%`. Además, todos los prototipos de arreglos con tipo (` TypedArray.``prototype `) tienen `%TypedArray%.prototype` como su `[[Prototype]]`.
+ECMAScript 2015 define un constructor `TypedArray` que sirve como `[[Prototype]]` de todos los constructores `TypedArray`. Este constructor no está expuesto directamente: no existe una propiedad global `%TypedArray%` o `TypedArray`. Solo es accesible directamente a través de `Object.getPrototypeOf(Int8Array)` y similares. Todos los constructores de `TypedArray` heredan propiedades comunes de la función constructora `%TypedArray%`. Además, todos los prototipos de arreglos con tipo (`TypedArray.prototype`) tienen `%TypedArray%.prototype` como su `[[Prototype]]`.
 
 El constructor `%TypedArray%` por sí solo no es particularmente útil. Llamarlo o usarlo en una expresión `new` arrojará un {{jsxref("TypeError")}}, excepto cuando se usa durante la creación de objetos en motores JS que admiten subclases. Actualmente no existen tales motores, por lo que `%TypedArray%` solo es útil para rellenar funciones o propiedades en todos los constructores `TypedArray`.
 

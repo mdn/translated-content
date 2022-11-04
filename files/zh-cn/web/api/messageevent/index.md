@@ -17,7 +17,7 @@ slug: Web/API/MessageEvent
 - [Broadcast channels](/zh-CN/docs/Web/API/Broadcast_Channel_API) (参见 {{domxref("Broadcastchannel.postMessage()")}}) 和 {{domxref("BroadcastChannel.onmessage")}}).
 - WebRTC data channels (参见 {{domxref("RTCDataChannel.onmessage")}}).
 
-通过这个事件触发的动作被定义为一个函数，该函数作为相关{{event("message")}}事件 (例如使用前文所列的`onmessage` 处理器) 的事件处理器。
+通过这个事件触发的动作被定义为一个函数，该函数作为相关[`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event)事件 (例如使用前文所列的`onmessage` 处理器) 的事件处理器。
 
 {{AvailableInWorkers}}
 

@@ -1,12 +1,6 @@
 ---
 title: GlobalEventHandlers.onblur
 slug: Web/API/Window/blur_event
-tags:
-  - API
-  - HTML DOM
-  - Propriedade
-  - Referencia
-translation_of: Web/API/GlobalEventHandlers/onblur
 original_slug: Web/API/GlobalEventHandlers/onblur
 ---
 {{ApiRef("HTML DOM")}}

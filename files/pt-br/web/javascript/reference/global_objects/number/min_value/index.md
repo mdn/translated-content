@@ -1,14 +1,6 @@
 ---
 title: Number.MIN_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
-tags:
-  - JavaScript
-  - Number
-  - Número
-  - Property
-  - Propriedade
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 ---
 {{JSRef}}
 

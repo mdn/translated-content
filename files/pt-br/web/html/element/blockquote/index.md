@@ -1,16 +1,6 @@
 ---
 title: <blockquote>
 slug: Web/HTML/Element/blockquote
-tags:
-  - Elemento
-  - HTML
-  - MDN
-  - Referencia
-  - Web
-  - blogger
-  - português brasil
-  - tag
-translation_of: Web/HTML/Element/blockquote
 ---
 ## Sumário
 
@@ -66,4 +56,4 @@ O código HTML acima vai resultar em:
 - O elemento {{HTMLElement("q")}} para citações em linha.
 - O elemento {{HTMLElement("q")}} para citações de origem.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

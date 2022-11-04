@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
-translation_of: Web/API/HTMLElement/offsetWidth
 ---
 {{ APIRef("HTML DOM") }}
 

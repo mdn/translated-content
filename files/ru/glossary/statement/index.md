@@ -19,4 +19,3 @@ original_slug: Глоссарий/Выражение
 ### Техническая справка
 
 - [JavaScript инструкции и объявления](/ru/docs/Web/JavaScript/Reference/Statements)
-

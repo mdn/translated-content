@@ -421,7 +421,7 @@ alert(sMyOutput); // "Base 64 — Mozilla Developer Network"
 
 ### Solution #3 – JavaScript's UTF-16 => binary string => base64
 
-The following is the fastest and most compact possible approach. The output is exactly the same produced by [Solution #1](#Solution_1_–_JavaScript's_UTF-16_>_base64) (UTF-16 encoded strings), but instead of rewriting {{domxref("WindowBase64.atob","atob()")}} and {{domxref("WindowBase64.btoa","btoa()")}} it uses the native ones. This is made possible by the fact that instead of using typed arrays as encoding/decoding inputs this solution uses [binary strings](/zh-CN/docs/Web/API/DOMString/Binary) as an intermediate format. It is a “dirty” workaround in comparison to [Solution #1](#Solution_1_–_JavaScript's_UTF-16_>_base64) ([binary strings](/zh-CN/docs/Web/API/DOMString/Binary) are a grey area), however it works pretty well and requires only a few lines of code.
+The following is the fastest and most compact possible approach. The output is exactly the same produced by [Solution #1](#Solution_1_–_JavaScript's_UTF-16_>_base64) (UTF-16 encoded strings), but instead of rewriting {{domxref("WindowBase64.atob","atob()")}} and {{domxref("WindowBase64.btoa","btoa()")}} it uses the native ones. This is made possible by the fact that instead of using typed arrays as encoding/decoding inputs this solution uses [binary strings](/zh-CN/docs/Web/API/DOMString/Binary) as an intermediate format. It is a "dirty" workaround in comparison to [Solution #1](#Solution_1_–_JavaScript's_UTF-16_>_base64) ([binary strings](/zh-CN/docs/Web/API/DOMString/Binary) are a grey area), however it works pretty well and requires only a few lines of code.
 
 ```js
 "use strict";

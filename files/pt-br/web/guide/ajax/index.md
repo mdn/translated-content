@@ -1,7 +1,6 @@
 ---
 title: AJAX
 slug: Web/Guide/AJAX
-translation_of: Web/Guide/AJAX
 ---
 **[Primeiros passos](/pt-BR/docs/AJAX/Getting_Started)** Uma introdução ao AJAX.
 

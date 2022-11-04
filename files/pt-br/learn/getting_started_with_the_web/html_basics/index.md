@@ -1,14 +1,6 @@
 ---
 title: HTML básico
 slug: Learn/Getting_started_with_the_web/HTML_basics
-tags:
-  - Aprender
-  - Codificação de Scripts
-  - HTML
-  - Iniciante
-  - Web
-  - l10:prioridade
-translation_of: Learn/Getting_started_with_the_web/HTML_basics
 original_slug: Aprender/Getting_started_with_the_web/HTML_basico
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}

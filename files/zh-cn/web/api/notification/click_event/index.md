@@ -5,7 +5,7 @@ slug: Web/API/Notification/click_event
 
 {{APIRef("Web Notifications")}}
 
-{{domxref("Notification")}} 接口的 onclick 属性指定一个事件侦听器来接收 {{event("click")}} 事件。
+{{domxref("Notification")}} 接口的 onclick 属性指定一个事件侦听器来接收 [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件。
 
 当用户点击一个显示的{{domxref("Notification")}}时，会发生这些事件。
 

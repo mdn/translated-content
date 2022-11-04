@@ -1,7 +1,6 @@
 ---
 title: <div>
 slug: Web/HTML/Element/div
-translation_of: Web/HTML/Element/div
 ---
 ## Resumo
 
@@ -48,4 +47,4 @@ Qualquer tipo de conteúdo aqui. Como \<p>, \<table>. Você dá o nome!
 - Semantic sectioning elements: {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}
 - {{HTMLElement("span")}} element for styling of phrasing content
 
-{{HTMLRef}}
+{{HTMLSidebar}}

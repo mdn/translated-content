@@ -1,7 +1,6 @@
 ---
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
 {{JSRef}}
 

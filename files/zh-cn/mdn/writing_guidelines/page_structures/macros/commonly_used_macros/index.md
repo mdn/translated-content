@@ -149,7 +149,7 @@ original_slug: MDN/Structures/Macros/Commonly-used_macros
 一些有海量子条目的主题，比如技术参考、指南、教程等，通常需要一个单独的主页面提供导航。对于这些主题中的页面，顶部的面包屑导航就显得比较简陋，下面这些模板，可以在页面的左侧，生成对应主题的侧边导航栏。
 
 - [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs) 生成 CSS 参考页面的侧边栏。
-- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs) 生成 HTML 参考页面的侧边栏。
+- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs) 生成 HTML 参考页面的侧边栏。
 - [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) 生成 Web API 参考页面的侧边栏。
 
 ## 通用的文章格式化工具

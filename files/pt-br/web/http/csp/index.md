@@ -1,10 +1,6 @@
 ---
 title: Utilizando Políticas de Segurança de Conteúdo
 slug: Web/HTTP/CSP
-tags:
-  - Política de Segurança de Conteúdo
-  - Segurança
-translation_of: Web/HTTP/CSP
 ---
 {{ gecko_minversion_header("2.0") }}
 

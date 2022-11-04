@@ -1,11 +1,6 @@
 ---
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
-tags:
-  - Código de status
-  - HTTP
-  - Sucesso
-translation_of: Web/HTTP/Status/206
 ---
 {{HTTPSidebar}}
 

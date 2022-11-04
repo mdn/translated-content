@@ -1,7 +1,6 @@
 ---
 title: align-content
 slug: Web/CSS/align-content
-translation_of: Web/CSS/align-content
 ---
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`align-content`** define a distribuição entre e ao redor dos items do conteúdo do eixo transversal de uma [flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout) ou do eixo de bloco de uma [grid](/pt-BR/docs/Web/CSS/CSS_Grid_Layout).
 

@@ -1,15 +1,6 @@
 ---
 title: Usando ARIA para rótulos com campos incorporados - Multipart labels
 slug: Web/Accessibility/ARIA/forms/Multipart_labels
-tags:
-  - ARIA
-  - Accessibility
-  - Acessibilidade
-  - Formulários+ARIA
-  - Guía
-  - Intermediário
-  - PrecisaDeConteúdo
-translation_of: Web/Accessibility/ARIA/forms/Multipart_labels
 ---
 ## O problema
 

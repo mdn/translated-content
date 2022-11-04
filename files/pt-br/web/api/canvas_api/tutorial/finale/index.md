@@ -1,7 +1,6 @@
 ---
 title: Conclusão
 slug: Web/API/Canvas_API/Tutorial/Finale
-translation_of: Web/API/Canvas_API/Tutorial/Finale
 original_slug: Web/Guide/HTML/Canvas_tutorial/Conclusão
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

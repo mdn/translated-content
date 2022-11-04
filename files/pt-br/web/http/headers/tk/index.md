@@ -1,14 +1,6 @@
 ---
 title: Tk
 slug: Web/HTTP/Headers/Tk
-tags:
-  - DNT
-  - HTTP
-  - Rastreamento
-  - Referencia
-  - Resposta
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Tk
 ---
 {{HTTPSidebar}}
 

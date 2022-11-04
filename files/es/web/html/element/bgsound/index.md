@@ -50,4 +50,4 @@ Puedes escribir bgsound con una etiqueta de cierre automático \<bgsound /> . Ah
 
 - {{htmlelement("audio")}}, el cual es el elemento estándar para incrustar audio en un documento.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

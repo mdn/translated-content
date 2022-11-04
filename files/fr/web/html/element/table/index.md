@@ -10,7 +10,7 @@ tags:
 translation_of: Web/HTML/Element/table
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<table>`** permet de représenter un tableau de données, c'est-à-dire des informations exprimées sur un tableau en deux dimensions.
 

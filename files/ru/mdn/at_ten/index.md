@@ -24,6 +24,6 @@ original_slug: MDN_at_ten
 
 ## Содержание
 
-1.  [10-летие MDN](/ru/docs/MDN_at_ten/)
-2.  [История MDN](/ru/docs/MDN_at_ten/History_of_MDN)
-3.  [Участие в MDN](/ru/docs/MDN_at_ten/Contributing_to_MDN)
+1. [10-летие MDN](/ru/docs/MDN_at_ten/)
+2. [История MDN](/ru/docs/MDN_at_ten/History_of_MDN)
+3. [Участие в MDN](/ru/docs/MDN_at_ten/Contributing_to_MDN)

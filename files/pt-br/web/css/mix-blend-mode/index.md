@@ -1,10 +1,6 @@
 ---
 title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
-tags:
-  - CSS
-  - Propriedade CSS
-translation_of: Web/CSS/mix-blend-mode
 ---
 {{CSSRef}}
 

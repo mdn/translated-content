@@ -1,7 +1,6 @@
 ---
 title: Object.isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 ---
 {{JSRef}}
 

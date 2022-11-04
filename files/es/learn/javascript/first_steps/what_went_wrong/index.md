@@ -100,7 +100,7 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 
     > **Nota:** [`console.log()`](/es/docs/Web/API/Console/log) es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de `lowOrHi` en la consola tan pronto como intentemos configurarlo en la línea 48.
 
-7. Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](https://mdn.mozillademos.org/files/13494/console-log-output.png)Efectivamente, el valor de `lowOrHi`es `null` en este punto, así que definitivamente hay un problema con la línea 48.
+7. Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](https://mdn.mozillademos.org/files/13494/console-log-output.png)Efectivamente, el valor de `lowOrHi` es `null` en este punto, así que definitivamente hay un problema con la línea 48.
 8. Pensemos en cuál podría ser el problema. La línea 48 está utilizando un método [`document.querySelector()`](/es/docs/Web/API/Document/querySelector) para obtener una referencia a un elemento seleccionándolo con un selector CSS. Buscando más adelante en nuestro archivo, podemos encontrar el párrafo en cuestión:
 
     ```js
@@ -132,17 +132,17 @@ Obviamente hay un problema en la lógica del juego en alguna parte — el juego 
 
     Y la que genera el número aleatorio antes de cada juego subsiguiente está alrededor de la línea 113:
 
-2. ```js
+    ```js
     randomNumber = Math.floor(Math.random()) + 1;
     ```
 
-3. Para comprobar si estas líneas son realmente el problema, volvamos a echar mano de nuestra amiga `console.log()` — inserta la siguiente línea directamente debajo de cada una de las dos líneas anteriores:
+2. Para comprobar si estas líneas son realmente el problema, volvamos a echar mano de nuestra amiga `console.log()` — inserta la siguiente línea directamente debajo de cada una de las dos líneas anteriores:
 
     ```js
     console.log(randomNumber);
     ```
 
-4. Guarda y refresca, luego juega un par de veces — verás que `randomNumber` es igual a 1 en cada punto en el que se registra en la consola.
+3. Guarda y refresca, luego juega un par de veces — verás que `randomNumber` es igual a 1 en cada punto en el que se registra en la consola.
 
 ### Desentrañando la lógica
 

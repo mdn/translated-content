@@ -1,14 +1,6 @@
 ---
 title: String.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - toString()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toString
 ---
 {{JSRef}}
 

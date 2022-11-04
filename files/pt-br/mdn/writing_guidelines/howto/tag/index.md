@@ -1,19 +1,6 @@
 ---
 title: Como adicionar etiquetas às páginas corretamente
 slug: MDN/Writing_guidelines/Howto/Tag
-tags:
-  - Contribua
-  - Etiquetas
-  - Filtro
-  - Glossário
-  - Guia(2)
-  - Howto
-  - Iniciante
-  - Introdução
-  - MDN Meta
-  - Tags
-  - Tutorial
-translation_of: MDN/Contribute/Howto/Tag
 original_slug: MDN/Contribute/Howto/Tag
 ---
 {{MDNSidebar}}

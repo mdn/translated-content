@@ -79,7 +79,7 @@ var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
 var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
 ```
 
-Chaque position `brickX` est déterminée par `brickWidth` + `brickPadding`, multiplié par le nombre de colonnes, `c`, plus `brickOffsetLeft`; la logique pour `brickY` est identique excepté qu'on utilise pour les ligne les valeurs `r`,`brickHeight` et `brickOffsetTop`. Maintenant chaque brique peut être dessinée à la bonne place - en lignes et colonnes, avec un espacement entre les briques, avec un espace par rapport à la gauche et au haut du contour du canvas.
+Chaque position `brickX` est déterminée par `brickWidth` + `brickPadding`, multiplié par le nombre de colonnes, `c`, plus `brickOffsetLeft`; la logique pour `brickY` est identique excepté qu'on utilise pour les ligne les valeurs `r`, `brickHeight` et `brickOffsetTop`. Maintenant chaque brique peut être dessinée à la bonne place - en lignes et colonnes, avec un espacement entre les briques, avec un espace par rapport à la gauche et au haut du contour du canvas.
 
 La version finale de la fonction `drawBricks()`, après avoir assigné les valeurs `brickX` et `brickY` comme coordonnées, plutot que `(0,0)` à chaque fois, va ressembler à ceci — ajouter la fonction ci-dessous après `drawPaddle()`&nbsp;:
 

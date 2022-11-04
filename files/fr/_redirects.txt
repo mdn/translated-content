@@ -1844,7 +1844,6 @@
 /fr/docs/HTML/Element/Optgroup	/fr/docs/Web/HTML/Element/Optgroup
 /fr/docs/HTML/Element/Option	/fr/docs/Web/HTML/Element/Option
 /fr/docs/HTML/Element/Output	/fr/docs/Web/HTML/Element/Output
-/fr/docs/HTML/Element/Output_{{HTMLVersionInline(5)}}_{{fx_minversion_inline(4)}}	/fr/docs/Web/HTML/Element/Output
 /fr/docs/HTML/Element/Progress	/fr/docs/Web/HTML/Element/Progress
 /fr/docs/HTML/Element/Select	/fr/docs/Web/HTML/Element/Select
 /fr/docs/HTML/Element/Source	/fr/docs/Web/HTML/Element/Source
@@ -4165,6 +4164,7 @@
 /fr/docs/Web/CSS/:matches	/fr/docs/Web/CSS/:is
 /fr/docs/Web/CSS/:visited_et_la_vie_privée	/fr/docs/Web/CSS/Privacy_and_the_:visited_selector
 /fr/docs/Web/CSS/@font-face/font-variant	/fr/docs/Web/CSS/@font-face
+/fr/docs/Web/CSS/@scroll-timeline	/fr/docs/Web/CSS/scroll-timeline
 /fr/docs/Web/CSS/@styleset	/fr/docs/Web/CSS/@font-feature-values
 /fr/docs/Web/CSS/@viewport/height	/fr/docs/Web/CSS/@viewport
 /fr/docs/Web/CSS/@viewport/max-height	/fr/docs/Web/CSS/@viewport
@@ -4699,7 +4699,6 @@
 /fr/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /fr/docs/Web/HTML/Element/Input/datetime	/fr/docs/Web/HTML/Element/input/datetime-local
 /fr/docs/Web/HTML/Element/Input/mois	/fr/docs/Web/HTML/Element/Input/month
-/fr/docs/Web/HTML/Element/Output_{{HTMLVersionInline(5)}}_{{fx_minversion_inline(4)}}	/fr/docs/Web/HTML/Element/Output
 /fr/docs/Web/HTML/Element/Video/canplay_event	/fr/docs/Web/API/HTMLMediaElement/canplay_event
 /fr/docs/Web/HTML/Element/Video/emptied_event	/fr/docs/Web/API/HTMLMediaElement/emptied_event
 /fr/docs/Web/HTML/Element/Video/ended_event	/fr/docs/Web/API/HTMLMediaElement/ended_event
@@ -4907,7 +4906,7 @@
 /fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode	/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées	/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /fr/docs/Web/JavaScript/Reference/Fonctions/Strict_mode	/fr/docs/Web/JavaScript/Reference/Strict_mode
-/fr/docs/Web/JavaScript/Reference/Fonctions/Strict_mode/Passer_au_mode_strict	/fr/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/fr/docs/Web/JavaScript/Reference/Fonctions/Strict_mode/Passer_au_mode_strict	/fr/docs/Web/JavaScript/Reference/Strict_mode
 /fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments	/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /fr/docs/Web/JavaScript/Reference/Fonctions/arguments	/fr/docs/Web/JavaScript/Reference/Functions/arguments
 /fr/docs/Web/JavaScript/Reference/Fonctions/arguments/@@iterator	/fr/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator
@@ -4919,7 +4918,7 @@
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions	/fr/docs/Web/JavaScript/Reference/Functions
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/Définition_de_méthode	/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/Strict_mode	/fr/docs/Web/JavaScript/Reference/Strict_mode
-/fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/Strict_mode/Passer_au_mode_strict	/fr/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/Strict_mode/Passer_au_mode_strict	/fr/docs/Web/JavaScript/Reference/Strict_mode
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/arguments	/fr/docs/Web/JavaScript/Reference/Functions/arguments
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/arguments/callee	/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/arguments/length	/fr/docs/Web/JavaScript/Reference/Functions/arguments/length
@@ -5770,7 +5769,8 @@
 /fr/docs/Web/JavaScript/Reference/Opérateurs/yield*	/fr/docs/Web/JavaScript/Reference/Operators/yield*
 /fr/docs/Web/JavaScript/Reference/Reserved_Words	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /fr/docs/Web/JavaScript/Reference/Statements/import.meta	/fr/docs/Web/JavaScript/Reference/Operators/import.meta
-/fr/docs/Web/JavaScript/Reference/Strict_mode/Passer_au_mode_strict	/fr/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/fr/docs/Web/JavaScript/Reference/Strict_mode/Passer_au_mode_strict	/fr/docs/Web/JavaScript/Reference/Strict_mode
+/fr/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/fr/docs/Web/JavaScript/Reference/Strict_mode
 /fr/docs/Web/JavaScript/Reference/Valeurs_par_défaut_des_arguments	/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /fr/docs/Web/JavaScript/Reference/Virgules_finales	/fr/docs/Web/JavaScript/Reference/Trailing_commas
 /fr/docs/Web/JavaScript/Reference/fonctions_fléchées	/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions
@@ -6434,6 +6434,7 @@
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module	/fr/docs/WebAssembly/JavaScript_interface/Module
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table	/fr/docs/WebAssembly/JavaScript_interface/Table
 /fr/docs/conflicting/Web/JavaScript/Reference/Statements/switch	/fr/docs/Web/JavaScript/Reference/Statements/switch
+/fr/docs/conflicting/Web/JavaScript/Reference/Strict_mode	/fr/docs/Web/JavaScript/Reference/Strict_mode
 /fr/docs/conflicting/Web/MathML	/fr/docs/Web/MathML
 /fr/docs/conflicting/Web/Progressive_web_apps	/fr/docs/Web/Progressive_web_apps
 /fr/docs/conflicting/Web/Progressive_web_apps_0d5c38b9aa908cbb52e4c39037b4f28b	/fr/docs/Web/Progressive_web_apps

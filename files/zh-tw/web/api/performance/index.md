@@ -27,7 +27,7 @@ _The `Performance` interface doesn't inherit any properties._
 ### Event handlers
 
 - {{domxref("Performance.onresourcetimingbufferfull")}}
-  - : An {{domxref("EventTarget")}} which is a callback that will be called when the {{event("resourcetimingbufferfull")}} event is fired.
+  - : An {{domxref("EventTarget")}} which is a callback that will be called when the `resourcetimingbufferfull` event is fired.
 
 ## Methods
 

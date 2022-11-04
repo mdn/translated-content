@@ -1,13 +1,6 @@
 ---
 title: Connection
 slug: Web/HTTP/Headers/Connection
-tags:
-  - Cabeçalhos
-  - HTTP
-  - Reference
-  - Referencia
-  - Web
-translation_of: Web/HTTP/Headers/Connection
 original_slug: Web/HTTP/Headers/Conexão
 ---
 {{HTTPSidebar}}

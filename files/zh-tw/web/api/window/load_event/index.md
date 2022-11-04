@@ -48,8 +48,8 @@ original_slug: Web/Events/load
 
 ## 相關事件
 
-- {{event("DOMContentLoaded")}}
-- {{event("readystatechange")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/zh-TW/docs/Web/API/Window/DOMContentLoaded_event)
+- [`readystatechange`](/zh-TW/docs/Web/API/Document/readystatechange_event)
+- [`load`](/zh-TW/docs/Web/API/Window/load_event)
+- [`beforeunload`](/zh-TW/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/zh-TW/docs/Web/API/Window/unload_event)

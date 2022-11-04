@@ -43,7 +43,7 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-有关 CSS 选择器语法的初学者介绍，请参阅 [CSS 选择器教程](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)。注意，规则定义中的任何 [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)错误都将使整个规则无效，无效的规则将被浏览器忽略。注意 CSS 定义完全是[基于（ASCII）文本](https://www.w3.org/TR/css-syntax-3/#intro)的，而 DOM-CSS / CSSOM（规则管理系统） 是[基于对象](https://www.w3.org/TR/cssom/#introduction)的。
+有关 CSS 选择器语法的初学者介绍，请参阅 [CSS 选择器教程](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)。注意，规则定义中的任何 [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)错误都将使整个规则无效，无效的规则将被浏览器忽略。注意 CSS 定义完全是[基于（ASCII）文本](https://www.w3.org/TR/css-syntax-3/#intro)的，而 DOM-CSS / CSSOM（规则管理系统）是[基于对象](https://www.w3.org/TR/cssom/#introduction)的。
 
 ### @规则语法
 
@@ -96,8 +96,8 @@ div.menu-bar li:hover > ul {
 - [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) `::`
   - : 代表不包含在 HTML 中的实体。
 
-> **标注：** 
-> 
+> **标注：**
+>
 > 参见[标准 4 定义的选择器列表](https://www.w3.org/TR/selectors/#overview)。
 
 ## 概念

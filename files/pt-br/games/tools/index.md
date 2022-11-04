@@ -1,12 +1,6 @@
 ---
 title: Ferramentas para o desenvolvimento de jogos
 slug: Games/Tools
-tags:
-  - Gecko
-  - Guia(2)
-  - JavaScript
-  - Jogos
-translation_of: Games/Tools
 ---
 {{GamesSidebar}}
 

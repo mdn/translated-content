@@ -1,7 +1,6 @@
 ---
 title: <link>
 slug: Web/HTML/Element/link
-translation_of: Web/HTML/Element/link
 ---
 ## Resumo
 
@@ -150,4 +149,4 @@ function sheetError() {
 
 - [Ryan Grove's \<script> and \<link> node event compatibility chart](http://pieisgood.org/test/script-link-events/)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

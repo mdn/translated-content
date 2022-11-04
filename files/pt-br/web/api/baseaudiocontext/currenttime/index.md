@@ -1,14 +1,6 @@
 ---
 title: AudioContext.currentTime
 slug: Web/API/BaseAudioContext/currentTime
-tags:
-  - API
-  - AudioContext
-  - Propriedade
-  - Referencia
-  - Web Audio API
-  - currentTime
-translation_of: Web/API/BaseAudioContext/currentTime
 original_slug: Web/API/AudioContext/currentTime
 ---
 {{ APIRef("Web Audio API") }}

@@ -1,14 +1,6 @@
 ---
 title: Content-Security-Policy-Report-Only
 slug: Web/HTTP/Headers/Content-Security-Policy-Report-Only
-tags:
-  - CSP
-  - HTTP
-  - HTTPS
-  - Referencia
-  - Segurança
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 ---
 {{HTTPSidebar}}
 

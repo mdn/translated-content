@@ -1,7 +1,6 @@
 ---
 title: 200 OK
 slug: Web/HTTP/Status/200
-translation_of: Web/HTTP/Status/200
 ---
 {{HTTPSidebar}}
 

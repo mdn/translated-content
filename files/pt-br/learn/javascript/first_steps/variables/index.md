@@ -1,7 +1,6 @@
 ---
 title: Armazenando as informações que você precisa — Variáveis
 slug: Learn/JavaScript/First_steps/Variables
-translation_of: Learn/JavaScript/First_steps/Variables
 original_slug: Learn/JavaScript/First_steps/Variáveis
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}

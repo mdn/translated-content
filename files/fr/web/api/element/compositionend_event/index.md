@@ -115,5 +115,5 @@ inputElement.addEventListener('compositionend', handleEvent);
 
 ## Evénements liés
 
-- {{Event("compositionstart")}}
-- {{Event("compositionupdate")}}
+- [`compositionstart`](/fr/docs/Web/API/Element/compositionstart_event)
+- [`compositionupdate`](/fr/docs/Web/API/Element/compositionupdate_event)

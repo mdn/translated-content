@@ -202,7 +202,7 @@ MDN のこの JavaScript の章は、JavaScript 言語についての情報倉�
 ### 左辺式
 
 - {{JSxRef("Operators/Property_accessors", "プロパティアクセサー", "", 1)}}
-- {{JSxRef("Operators/Optional_chaining", "<code>?.</code> (オプショナルチェイニング)", "", 1)}}
+- [`?.` (オプショナルチェイニング)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - {{JSxRef("Operators/new", "new")}}
 - {{JSxRef("Operators/new%2Etarget", "new.target")}}
 - {{JSxRef("Statements/import%2Emeta", "import.meta")}}

@@ -60,8 +60,8 @@ El evento `hashchange` enviado, tiene los siguientes campos:
 
 | Campo                                                 | Tipo        | Descripción                                           |
 | ----------------------------------------------------- | ----------- | ----------------------------------------------------- |
-| `newURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | La URL nueva hacia la cual la ventana está navegando. |
-| `oldURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | La URL anterior desde la cual la ventana navegó.      |
+| `newURL` | `DOMString` | La URL nueva hacia la cual la ventana está navegando. |
+| `oldURL` | `DOMString` | La URL anterior desde la cual la ventana navegó.      |
 
 ## Especificaciones
 

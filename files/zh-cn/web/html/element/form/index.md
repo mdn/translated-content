@@ -3,7 +3,7 @@ title: form
 slug: Web/HTML/Element/form
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<form>` 元素**表示文档中的一个区域，此区域包含交互控件，用于向 Web 服务器提交信息。
 

@@ -1,11 +1,6 @@
 ---
 title: 508 Loop Detected
 slug: Web/HTTP/Status/508
-tags:
-  - Código de status
-  - Erro de servidor
-  - HTTP
-translation_of: Web/HTTP/Status/508
 ---
 {{HTTPSidebar}}
 

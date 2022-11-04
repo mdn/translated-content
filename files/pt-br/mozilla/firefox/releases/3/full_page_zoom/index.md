@@ -1,11 +1,6 @@
 ---
 title: Zoom de página inteira
 slug: Mozilla/Firefox/Releases/3/Full_page_zoom
-tags:
-  - Extensões
-  - Firefox 3
-  - XUL
-translation_of: Mozilla/Firefox/Releases/3/Full_page_zoom
 original_slug: Mozilla/Firefox/Releases/3/Zoom_de_página_inteira
 ---
 {{FirefoxSidebar}}
@@ -41,6 +36,6 @@ docViewer.fullZoom = zoom;
 ### References
 
 - Extensão de zoom de página por Ted Mielczarek [fullpagezoom.xpi](http://ted.mielczarek.org/code/mozilla/fullpagezoom.xpi) para os últimos Firefox 3.0 nightlies
-- [Glazoom extension](https://addons.mozilla.org/en-US/firefox/addon/6489) por Daniel Glazman para Firefox 3.0
+- [Glazoom extension](https://addons.mozilla.org/pt-BR/firefox/addon/6489) por Daniel Glazman para Firefox 3.0
 - O [bugzilla bug](https://bugzilla.mozilla.org/show_bug.cgi?id=4821) sobre fullZoom.
 - `nsIMarkupDocumentViewer` documentação da interface.

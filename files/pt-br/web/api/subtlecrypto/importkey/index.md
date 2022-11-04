@@ -1,14 +1,6 @@
 ---
 title: SubtleCrypto.importKey()
 slug: Web/API/SubtleCrypto/importKey
-tags:
-  - API
-  - Criptografía
-  - Referencia
-  - SubtleCrypto
-  - Web Crypto API
-  - metodo
-translation_of: Web/API/SubtleCrypto/importKey
 ---
 {{APIRef("Web Crypto API")}}
 
