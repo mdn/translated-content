@@ -21,14 +21,14 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 | ------------------------------- | -------------------------------------------------- | -------- | ----------------------------------------------------------- | --------------------- | ------------------------------- |
 | {{jsxref("Int8Array")}}         | -128 到 127                                        | 1        | 8 位有符号整型（二进制补码）                                | `byte`                | `int8_t`                        |
 | {{jsxref("Uint8Array")}}        | 0 到 255                                           | 1        | 8 位无符号整型                                              | `octet`               | `uint8_t`                       |
-| {{jsxref("Uint8ClampedArray")}} | 0 到 255                                           | 1        | 8 位无符号整形（一定在 0 到 255 之间）                      | `octet`               | `uint8_t`                       |
-| {{jsxref("Int16Array")}}        | -32768 到 32767                                    | 2        | 16 位有符号整（二进制补码）形                               | `short`               | `int16_t`                       |
+| {{jsxref("Uint8ClampedArray")}} | 0 到 255                                           | 1        | 8 位无符号整型（一定在 0 到 255 之间）                      | `octet`               | `uint8_t`                       |
+| {{jsxref("Int16Array")}}        | -32768 到 32767                                    | 2        | 16 位有符号整型（二进制补码）                               | `short`               | `int16_t`                       |
 | {{jsxref("Uint16Array")}}       | 0 到 65535                                         | 2        | 16 位无符号整型                                             | `unsigned short`      | `uint16_t`                      |
-| {{jsxref("Int32Array")}}        | -2147483648 到 2147483647                          | 4        | 32 位有符号整（二进制补码）型                               | `long`                | `int32_t`                       |
+| {{jsxref("Int32Array")}}        | -2147483648 到 2147483647                          | 4        | 32 位有符号整型（二进制补码）                               | `long`                | `int32_t`                       |
 | {{jsxref("Uint32Array")}}       | 0 到 4294967295                                    | 4        | 32 位无符号整型                                             | `unsigned long`       | `uint32_t`                      |
 | {{jsxref("Float32Array")}}      | `-3.4E38` 到 `3.4E38` 并且 `1.2E-38` 是最小的正数  | 4        | 32 位 IEEE 浮点数（7 位有效数字，例如 `1.234567`）          | `unrestricted float`  | `float`                         |
 | {{jsxref("Float64Array")}}      | `-1.8E308` 到 `1.8E308` 并且 `5E-324` 是最小的正数 | 8        | 64 位 IEEE 浮点数（16 位有效数字，例如 `1.23456789012345`） | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> 到 2<sup>63</sup> - 1              | 8        | 64 位有符号整（二进制补码）型                               | `bigint`              | `int64_t (signed long long)`    |
+| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> 到 2<sup>63</sup> - 1              | 8        | 64 位有符号整型（二进制补码）                               | `bigint`              | `int64_t (signed long long)`    |
 | {{jsxref("BigUint64Array")}}    | 0 到 2<sup>64</sup> - 1                            | 8        | 64 位无符号整型                                             | `bigint`              | `uint64_t (unsigned long long)` |
 
 ## 构造函数
