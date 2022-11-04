@@ -410,7 +410,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
 - {{domxref("WindowEventHandlers.onmessage")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("message")}} event is raised.
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) event is raised.
 - {{domxref("GlobalEventHandlers.onmousedown")}}
   - : Called when ANY mouse button is pressed.
 - {{domxref("GlobalEventHandlers.onmousemove")}}

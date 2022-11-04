@@ -29,8 +29,6 @@ slug: Web/API/DragEvent
   - : 当拖动操作结束时（释放鼠标按钮或按下退出键），会触发此事件。
 - [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)
   - : 当拖动的元素或选择文本输入有效的放置目标时，会触发此事件。
-- {{event('dragexit')}}
-  - : 当元素不再是拖动操作的选择目标时触发此事件。
 - [`dragleave`](/zh-CN/docs/Web/API/HTMLElement/dragleave_event)
   - : 当拖动的元素或文本选择离开有效的放置目标时，会触发此事件。
 - [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)
@@ -49,8 +47,6 @@ slug: Web/API/DragEvent
 - {{domxref('GlobalEventHandlers.ondragenter')}}
   - : [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
 - {{domxref('GlobalEventHandlers.ondragexit')}}
-  - : {{event('dragexit')}} 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
-- {{domxref('GlobalEventHandlers.ondragleave')}}
   - : [`dragleave`](/zh-CN/docs/Web/API/HTMLElement/dragleave_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
 - {{domxref('GlobalEventHandlers.ondragover')}}
   - : [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。

@@ -44,9 +44,9 @@ No specific event handlers; inherits event handlers from its parent, {{domxref("
 - {{domxref("window.languagechange_event", "HTMLBodyElement.onlanguagechange")}} {{experimental_inline}}
   - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the [`languagechange`](/zh-CN/docs/Web/API/Window/languagechange_event) event is raised.
 - {{domxref("window.message_event", "HTMLBodyElement.onmessage")}}
-  - : Is an {{event("Event_handlers", "event handler")}} called whenever an object receives a {{event("message")}} event.
+  - : Is an {{event("Event_handlers", "event handler")}} called whenever an object receives a [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) event.
 - {{domxref("window.messageerror_event", "HTMLBodyElement.onmessageerror")}}
-  - : Is an {{event("Event_handlers", "event handler")}} called whenever an object receives a {{event("messageerror")}} event.
+  - : Is an {{event("Event_handlers", "event handler")}} called whenever an object receives a [`messageerror`](/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event) event.
 - {{domxref("window.offline_event", "HTMLBodyElement.onoffline")}}
   - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the [`offline`](/zh-CN/docs/Web/API/Window/offline_event) event is raised.
 - {{domxref("window.online_event", "HTMLBodyElement.ononline")}}
