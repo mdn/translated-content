@@ -1,17 +1,6 @@
 ---
 title: Iniciando com HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-tags:
-  - Codificação de Scripts
-  - Comentário
-  - Elemento
-  - Guía
-  - HTML
-  - Iniciante
-  - atributo
-  - espaço em branco
-  - referência de entidade
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 original_slug: Aprender/HTML/Introducao_ao_HTML/Getting_started
 ---
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}

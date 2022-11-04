@@ -1,13 +1,6 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - JavaScript
-  - Laço de repetição
-  - Loop
-  - Statement
-  - for...in
-translation_of: Web/JavaScript/Reference/Statements/for...in
 ---
 {{jsSidebar("Statements")}}
 

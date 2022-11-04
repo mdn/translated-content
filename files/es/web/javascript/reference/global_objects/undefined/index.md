@@ -24,7 +24,7 @@ undefined
 
 `undefined` es una propiedad del _objeto global_, es decir, una variable de alcance global. El valor inicial de `undefined` es el valor primitivo `{{Glossary("Undefined", "undefined")}}`.this needs clarification, but that would require explaining primitive values
 
-En navegadores modernos (JavaScript 1.8.5 / Firefox 4+), `undefined`es una propiedad _no-configurable_, _no-grabable_ según la especificación ECMAScript 5. Aún cuando este no sea el caso, evite sobreescribirlo.
+En navegadores modernos (JavaScript 1.8.5 / Firefox 4+), `undefined` es una propiedad _no-configurable_, _no-grabable_ según la especificación ECMAScript 5. Aún cuando este no sea el caso, evite sobreescribirlo.
 
 Una variable a la que no se le ha asignado valor, o no se ha declarado en absoluto (no se declara, no existe) son de tipo `undefined`. Un método o sentencia también devuelve `undefined` si la variable que se está evaluando no tiene asignado un valor. Una función devuelve `undefined` si no se ha {{jsxref("Sentencias/return", "devuelto")}} un valor.
 

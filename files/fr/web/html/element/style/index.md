@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/style
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<style>`** contient des informations de mise en forme pour un document ou une partie d'un document. Par défaut, les instructions de mise en forme écrites dans cet élément sont écrites en [CSS](/fr/docs/Web/CSS).
 

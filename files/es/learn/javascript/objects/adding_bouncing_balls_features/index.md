@@ -46,7 +46,7 @@ Primero de todo, cambia la constructora existente de `Ball()` para que se convie
 2. También debe definir una nueva propiedad `exists`, que se utiliza para realizar un seguimiento de si existen las bolas en el programa (no se han comido por el círculo maligno). Debe ser un boolean (`true`/`false`).
 3. El constructor `Ball()` debe heredar las propiedades `x`, `y`, `velX`, `velY`, y `exists` del constructor `Shape()`.
 4. También debe definir propiedades `color` y `size`, como el constructor original `Ball()` hacía.
-5. Recuerda configurar el `prototype`del constructor `Ball()` correctamente.
+5. Recuerda configurar el `prototype` del constructor `Ball()` correctamente.
 
 Los métodos de la pelota `draw()`, `update()`, y `collisionDetect()` deben ser capaces de permanecer exactamente igual que antes.
 
@@ -75,7 +75,7 @@ Otra vez, recuerda definir tus propiedades heredadas como parámetros en el cons
 
 #### `draw()`
 
-Este método tiene el mismo propósito que el método `draw()`de `Ball()`: Se encarga de dibujar la instancia del objeto en el lienzo. Funcionarán de una forma muy similar, así que puedes empezar copiando la definición de `Ball.prototype.draw`. Luego deberías hacer los siguientes cambios.:
+Este método tiene el mismo propósito que el método `draw()` de `Ball()`: Se encarga de dibujar la instancia del objeto en el lienzo. Funcionarán de una forma muy similar, así que puedes empezar copiando la definición de `Ball.prototype.draw`. Luego deberías hacer los siguientes cambios.:
 
 - Queremos que el círculo del mal no se complete, sino que simplemente tenga una línea exterior (trazo). Puedes lograr esto actualizando [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) y [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) a [`strokeStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) y [`stroke()`](/en-US/docs/Web/API/CanvasRenderingContext2D/stroke).
 - También queremos que el trazo sea un poco más grueso, para que puedas ver el círculo malvado con mayor facilidad. Podemos lograr esto configurando un valor para [`lineWidth`](/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth) en algún lugar después de la llamada [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) (3 hará).
@@ -113,7 +113,7 @@ Por tanto cuando se presiona una tecla, el evento del objeto [keyCode](/es/docs/
 
 #### `collisionDetect()`
 
-Este método actuará de una forma muy similar al método `collisionDetect()`de `Ball()`, así que puede usar una copia de eso como una base para el nuevo método. Pero hay algunas diferencias:
+Este método actuará de una forma muy similar al método `collisionDetect()` de `Ball()`, así que puede usar una copia de eso como una base para el nuevo método. Pero hay algunas diferencias:
 
 - En el exterior de la declaración `if`, ya no es necesario comprobar si la bola actual en la iteración es la misma que la bola que está haciendo la comprobación, porque ya no es una bola, ¡es el círculo del mal! En su lugar, debe hacer una prueba para ver si existe la bola que se está verificando (¿con qué propiedad podría hacerlo?). Si no existe, ya ha sido devorado por el círculo maligno, por lo que no es necesario volver a comprobarlo.
 - En el interior de la declaración `if`, ya no desea que los objetos cambien de color cuando se detecta una colisión; en cambio, desea que no existan más bolas que colisionen con el círculo maligno (una vez más, ¿cómo cree que haría eso?).
@@ -123,8 +123,8 @@ Este método actuará de una forma muy similar al método `collisionDetect()`de 
 Ahora que hemos definido el círculo maligno, debemos hacerlo aparecer en nuestra escena. Para hacerlo, necesitas hacer alguno cambios a la función `loop()`.
 
 - Primero de todo, crea una nueva instancia del círculo maligno (especifica los parámetros necesarios ), entonces llama al método `setControls()` . Solo necesita hacer estas dos cosas una vez, no en cada iteración del bucle.
-- En el punto en el que intera por todas las pelotas y llama a las funciones `draw()`, `update()`, y`collisionDetect()` para cada una, hazlo para que estas funciones solo sean llamadas si la bola actual existe.
-- Llama a los métodos de la instancia de la pelota maligna `draw()`, `checkBounds()`, y`collisionDetect()` en cada iteración del bucle.
+- En el punto en el que intera por todas las pelotas y llama a las funciones `draw()`, `update()`, y `collisionDetect()` para cada una, hazlo para que estas funciones solo sean llamadas si la bola actual existe.
+- Llama a los métodos de la instancia de la pelota maligna `draw()`, `checkBounds()`, y `collisionDetect()` en cada iteración del bucle.
 
 ### Implementando el contador de puntuación.
 

@@ -1,7 +1,6 @@
 ---
 title: Using server-sent events
 slug: Web/API/Server-sent_events/Using_server-sent_events
-translation_of: Web/API/Server-sent_events/Using_server-sent_events
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 

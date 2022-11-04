@@ -1,13 +1,6 @@
 ---
 title: Location.assign()
 slug: Web/API/Location/assign
-tags:
-  - API
-  - HTML-DOM
-  - Location
-  - Referencia
-  - metodo
-translation_of: Web/API/Location/assign
 ---
 {{ APIRef("HTML DOM") }}
 

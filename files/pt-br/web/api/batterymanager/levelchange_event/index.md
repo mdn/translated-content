@@ -1,13 +1,6 @@
 ---
 title: BatteryManager.onlevelchange
 slug: Web/API/BatteryManager/levelchange_event
-tags:
-  - API
-  - Battery API
-  - Event Handler
-  - Propriedade
-  - Referencia
-translation_of: Web/API/BatteryManager/onlevelchange
 original_slug: Web/API/BatteryManager/onlevelchange
 ---
 {{APIRef("Battery API")}}

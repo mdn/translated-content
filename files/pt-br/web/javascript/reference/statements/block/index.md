@@ -1,12 +1,6 @@
 ---
 title: block
 slug: Web/JavaScript/Reference/Statements/block
-tags:
-  - Declaração
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/block
 ---
 {{jsSidebar("Statements")}}
 

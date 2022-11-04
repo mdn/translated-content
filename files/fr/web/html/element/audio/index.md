@@ -19,7 +19,7 @@ translation_of: Web/HTML/Element/audio
 browser-compat: html.elements.audio
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<audio>`** est utilisé afin d'intégrer un contenu sonore dans un document. Il peut contenir une ou plusieurs sources audio représentées avec l'attribut `src` ou l'élément [`<source>`](/fr/docs/Web/HTML/Element/Source) : le navigateur choisira celle qui convient le mieux. Il peut également être la destination de médias diffusés en continu, en utilisant un [`MediaStream`](/fr/docs/Web/API/MediaStream).
 

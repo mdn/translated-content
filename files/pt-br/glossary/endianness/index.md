@@ -1,11 +1,6 @@
 ---
 title: Endianness
 slug: Glossary/Endianness
-tags:
-  - Coding
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Endianness
 original_slug: Glossario/Endianness
 ---
 "Endian" and "endianness" (ou "ordem-de-bytes") descrevem como os computadores organizam os bytes que compõem os números.

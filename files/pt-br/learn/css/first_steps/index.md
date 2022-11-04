@@ -1,17 +1,6 @@
 ---
 title: Primeiros passos com CSS
 slug: Learn/CSS/First_steps
-tags:
-  - Beginner
-  - CSS
-  - Iniciante
-  - Landing
-  - Learn
-  - Module
-  - Primeiros passos
-  - aprenda
-  - first steps
-translation_of: Learn/CSS/First_steps
 ---
 {{LearnSidebar}}
 

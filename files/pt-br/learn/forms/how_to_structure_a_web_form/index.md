@@ -1,17 +1,6 @@
 ---
 title: Como estruturar um formulário HTML
 slug: Learn/Forms/How_to_structure_a_web_form
-tags:
-  - Beginner
-  - CodingScripting
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Learn
-  - Structure
-  - Web
-translation_of: Learn/Forms/How_to_structure_a_web_form
 original_slug: Web/Guide/HTML/Forms/How_to_structure_an_HTML_form
 ---
 {{LearnSidebar}}

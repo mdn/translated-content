@@ -1,12 +1,6 @@
 ---
 title: BatteryManager.level
 slug: Web/API/BatteryManager/level
-tags:
-  - API
-  - Battery API
-  - Propriedade
-  - Referencia
-translation_of: Web/API/BatteryManager/level
 ---
 {{APIRef("Battery API")}}
 

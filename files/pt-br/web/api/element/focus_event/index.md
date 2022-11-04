@@ -1,7 +1,6 @@
 ---
 title: focus
 slug: Web/API/Element/focus_event
-translation_of: Web/API/Element/focus_event
 original_slug: Web/Events/focus
 ---
 O evento `focus` é acionado assim que um elemento recebe um foco. O grande diferencial entre este evento e o evento [`focusin`](/pt-BR/docs/Mozilla_event_reference/focusin), é que esse segundo "borbulha".

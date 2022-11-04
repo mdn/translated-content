@@ -19,9 +19,9 @@ slug: Web/API/KeyboardEvent/key
 
 `KeyboardEvent` 事件以一个预设的次序触发，理解这一点对于理解特定 `KeyboardEvent` 的 `key` 属性值大有帮助。对于一个给定的按键操作，`KeyboardEvent` 将假定 {{domxref("Event.preventDefault")}} 未调用并按下面次序触发：
 
-1. 首先触发 {{event("keydown")}} 事件。如果按键长按且生成一个字符，则事件将以一个与平台实现方式相关的时间间隔持续发出，同时将只读属性 {{domxref("KeyboardEvent.repeat")}} 设定为 `true`。
-2. 如果按键生成的字符即将插入某个 {{HTMLElement("input")}}、{{HTMLElement("textarea")}} 或其它某个 {{domxref("HTMLElement.contentEditable")}} 设为 true 的元素，则依次触发 {{event("beforeinput")}}、{{event("input")}}事件。注意某些实现中若支持 {{event("keypress")}} 事件则可能将其触发。当按键长按时重复触发。
-3. 当按键松开时触发 {{event("keyup")}} 事件。操作结束。
+1. 首先触发 [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) 事件。如果按键长按且生成一个字符，则事件将以一个与平台实现方式相关的时间间隔持续发出，同时将只读属性 {{domxref("KeyboardEvent.repeat")}} 设定为 `true`。
+2. 如果按键生成的字符即将插入某个 {{HTMLElement("input")}}、{{HTMLElement("textarea")}} 或其它某个 {{domxref("HTMLElement.contentEditable")}} 设为 true 的元素，则依次触发 {{event("beforeinput")}}、[`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)事件。注意某些实现中若支持 [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) 事件则可能将其触发。当按键长按时重复触发。
+3. 当按键松开时触发 [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) 事件。操作结束。
 
 在次序 1、3 中，`KeyboardEvent.key` 属性按照事先定义的规则设定为恰当的值。
 
@@ -200,27 +200,27 @@ btnClearConsole.addEventListener('click', (e) => {
 
 ### 用例 1
 
-当按下 shift 键时，首先触发 {{event("keydown")}} 事件，然后将 `key` 属性的值设为 `"Shift"` 字符串。如果继续长按 shift 键，由于不会生成字符按键值，{{event("keydown")}} 事件不会继续重复触发。
+当按下 shift 键时，首先触发 [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) 事件，然后将 `key` 属性的值设为 `"Shift"` 字符串。如果继续长按 shift 键，由于不会生成字符按键值，[`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) 事件不会继续重复触发。
 
-当按下 `key 2` 时，另一个 {{event("keydown")}} 事件将会为这个新的按键动作触发，若使用的是美式键盘，它的 `key` 属性将被设为 `"@"` 字符，若为英式键盘，则会设为 `"""` 字符。这是因为 `key` 属性 `"shift"` 处于激活状态。由于生成了一个字符的按键值，{{event("beforeinput")}} 和 {{event("input")}} 事件随后触发。
+当按下 `key 2` 时，另一个 [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) 事件将会为这个新的按键动作触发，若使用的是美式键盘，它的 `key` 属性将被设为 `"@"` 字符，若为英式键盘，则会设为 `"""` 字符。这是因为 `key` 属性 `"shift"` 处于激活状态。由于生成了一个字符的按键值，{{event("beforeinput")}} 和 [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event) 事件随后触发。
 
-松开 `key 2` 时，{{event("keyup")}} 事件将触发，`key` 属性将会为不同键盘布局设定合适的字符值，比如 `"@"`、`"""`。
+松开 `key 2` 时，[`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) 事件将触发，`key` 属性将会为不同键盘布局设定合适的字符值，比如 `"@"`、`"""`。
 
-最后在松开 shift 键时，另一个 {{event("keyup")}} 事件触发，`key` 值将保持 `"Shift"` 不变。
+最后在松开 shift 键时，另一个 [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) 事件触发，`key` 值将保持 `"Shift"` 不变。
 
 ### 用例 2
 
-当按下 shift 键时，首先触发 {{event("keydown")}} 事件，然后将 `key` 属性的值设为 `"Shift"` 字符串。如果继续长按 shift 键，由于不会生成字符按键值，{{event("keydown")}} 事件不会继续重复触发。
+当按下 shift 键时，首先触发 [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) 事件，然后将 `key` 属性的值设为 `"Shift"` 字符串。如果继续长按 shift 键，由于不会生成字符按键值，[`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) 事件不会继续重复触发。
 
-当按下 `key 2` 时，另一个 {{event("keydown")}} 事件将会为这个新的按键动作触发，若使用的是美式键盘，它的 `key` 属性将被设为 `"@"` 字符，若为英式键盘，则会设为 `"""` 字符。这是因上档键处于激活状态。由于生成了一个字符的按键值，{{event("beforeinput")}} 和 {{event("input")}} 事件随后触发。如果继续长按 `2` 键，则 {{event("keydown")}} 事件将持续重复触发，同时将 {{domxref("KeyboardEvent.repeat")}} 属性设置为 `true`。{{event("beforeinput")}} 和 {{event("input")}} 事件也将持续重复触发。
+当按下 `key 2` 时，另一个 [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) 事件将会为这个新的按键动作触发，若使用的是美式键盘，它的 `key` 属性将被设为 `"@"` 字符，若为英式键盘，则会设为 `"""` 字符。这是因上档键处于激活状态。由于生成了一个字符的按键值，{{event("beforeinput")}} 和 [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event) 事件随后触发。如果继续长按 `2` 键，则 [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) 事件将持续重复触发，同时将 {{domxref("KeyboardEvent.repeat")}} 属性设置为 `true`。{{event("beforeinput")}} 和 [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event) 事件也将持续重复触发。
 
-当松开 shift 键时，{{event("keyup")}} 事件随之触发，且 `key` 属性保留为 `"Shift"`。此时请注意为 `key 2` 长按触发的重复 `keydown` 事件的 `key` 值会变成 `"2"`，因为上档键不再处于激活状态。{{event("beforeinput")}} 与 {{event("input")}} 事件的 {{domxref("InputEvent.data")}} 属性同理。
+当松开 shift 键时，[`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) 事件随之触发，且 `key` 属性保留为 `"Shift"`。此时请注意为 `key 2` 长按触发的重复 `keydown` 事件的 `key` 值会变成 `"2"`，因为上档键不再处于激活状态。{{event("beforeinput")}} 与 [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event) 事件的 {{domxref("InputEvent.data")}} 属性同理。
 
-最终 `key 2` 松开，{{event("keyup")}} 事件触发，但两种键盘布局的 `key` 属性均为 `"2"`。就是因为没有激活上档键。
+最终 `key 2` 松开，[`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) 事件触发，但两种键盘布局的 `key` 属性均为 `"2"`。就是因为没有激活上档键。
 
 ## 示例
 
-这个示例使用 {{domxref("EventTarget.addEventListener()")}} 监听 {{event("keydown")}} 事件。当我们事件触发时，将检测按键的值是否为代码所关注，如果是，就进行某项操作。（可能是给飞船转向，或者是调整电子表格中选中单元格的位置。）
+这个示例使用 {{domxref("EventTarget.addEventListener()")}} 监听 [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) 事件。当我们事件触发时，将检测按键的值是否为代码所关注，如果是，就进行某项操作。（可能是给飞船转向，或者是调整电子表格中选中单元格的位置。）
 
 ```js
 window.addEventListener("keydown", function (event) {

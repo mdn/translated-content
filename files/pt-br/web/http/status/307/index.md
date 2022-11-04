@@ -1,7 +1,6 @@
 ---
 title: 307 Redirecionamento temporário
 slug: Web/HTTP/Status/307
-translation_of: Web/HTTP/Status/307
 ---
 {{HTTPSidebar}}
 

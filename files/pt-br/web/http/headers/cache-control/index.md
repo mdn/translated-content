@@ -1,10 +1,6 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
-tags:
-  - Cabaçalho genérico
-  - Cabeçalhos HTTP
-translation_of: Web/HTTP/Headers/Cache-Control
 ---
 {{HTTPSidebar}}
 

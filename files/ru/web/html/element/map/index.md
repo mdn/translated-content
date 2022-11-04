@@ -5,7 +5,7 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/map
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML-элемент `<map>` **используется с элементами {{HTMLElement("area")}} для определения карты изображения (интерактивной области ссылок).
 

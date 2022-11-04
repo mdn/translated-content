@@ -1,13 +1,6 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-tags:
-  - Experimental
-  - JavaScript
-  - Objeto
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
 {{JSRef}} {{SeeCompatTable}}
 

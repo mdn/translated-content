@@ -1,11 +1,6 @@
 ---
 title: Introdução a objetos em Javascript
 slug: Learn/JavaScript/Objects
-tags:
-  - Iniciante
-  - JavaScript
-  - Objetos
-translation_of: Learn/JavaScript/Objects
 original_slug: Aprender/JavaScript/Objetos
 ---
 {{LearnSidebar}}

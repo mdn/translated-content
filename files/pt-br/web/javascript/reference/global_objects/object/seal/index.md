@@ -1,9 +1,6 @@
 ---
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
-tags:
-  - objeto selar selado
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
 ---
 {{JSRef}}
 

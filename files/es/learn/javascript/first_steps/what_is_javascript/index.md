@@ -356,7 +356,7 @@ Para resumir:
 
 - `async` y `defer` indican al navegador que descargue los `script`s en un hilo separado, mientras que el resto de la página (el DOM, etc.) se descarga, por lo que los `script`s no bloquean la carga de la página.
 - Si tus `script`s se deben ejecutar inmediatamente y no tienen ninguna dependencia, utiliza `async`.
-- Si tus `script`s necesitan esperar a ser procesados y dependen de otros `script`s y/o del DOM en su lugar, cárgalos usando `defer`y coloca tus elementos `<script>` correspondientes en el orden que desees que el navegador los ejecute.
+- Si tus `script`s necesitan esperar a ser procesados y dependen de otros `script`s y/o del DOM en su lugar, cárgalos usando `defer` y coloca tus elementos `<script>` correspondientes en el orden que desees que el navegador los ejecute.
 
 ## Comentarios
 

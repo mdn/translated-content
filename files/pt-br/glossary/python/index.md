@@ -1,13 +1,6 @@
 ---
 title: Python
 slug: Glossary/Python
-tags:
-  - Codificação de Scripts
-  - Glossário
-  - Linguagem
-  - Programação
-  - Python
-translation_of: Glossary/Python
 original_slug: Glossario/Python
 ---
 **Python** é uma linguagem de programação de alto nível e de uso geral. Ele usa uma abordagem multi-paradigma, o que significa que ele suporta procedural, orientação a objetos, e algumas construções de programação funcional.

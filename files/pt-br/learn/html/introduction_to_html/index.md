@@ -1,17 +1,6 @@
 ---
 title: Introdução ao HTML
 slug: Learn/HTML/Introduction_to_HTML
-tags:
-  - Codificação de Script
-  - Estrutura
-  - HTML
-  - Introdução ao HTML
-  - Links
-  - Página de destino
-  - Texto
-  - cabeçalho
-  - semántica
-translation_of: Learn/HTML/Introduction_to_HTML
 original_slug: Aprender/HTML/Introducao_ao_HTML
 ---
 {{LearnSidebar}}

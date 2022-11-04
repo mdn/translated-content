@@ -76,11 +76,11 @@ original_slug: Web/API/Document/dragover_event
 
 ## 相关
 
-- {{event("drag")}}
-- {{event("dragstart")}}
-- {{event("dragend")}}
-- {{event("dragover")}}
-- {{event("dragenter")}}
-- {{event("dragleave")}}
+- [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event)
+- [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event)
+- [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event)
+- [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)
+- [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)
+- [`dragleave`](/zh-CN/docs/Web/API/HTMLElement/dragleave_event)
 - {{event("dragexit")}}
-- {{event("drop")}}
+- [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)

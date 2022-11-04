@@ -1,12 +1,6 @@
 ---
 title: O que é um servidor web (web server)?
 slug: Learn/Common_questions/What_is_a_web_server
-tags:
-  - HTTP
-  - Infraestrutura
-  - Iniciante
-  - servidor web
-translation_of: Learn/Common_questions/What_is_a_web_server
 original_slug: Learn/Common_questions/o_que_e_um_web_server
 ---
 Neste artigo vamos revisar o que são web servers, como eles funcionam, e por que eles são importantes.
@@ -76,7 +70,7 @@ Técnicamente, você pode servir todos esses arquivos em seu próprio computador
 - tem o mesmo endereço IP sempre (nem todos {{Glossary("ISP", "ISPs")}} fornecem um endereço IP fixo para linhas domésticas)
 - é mantido por um provedor de terceiros
 
-Por todas essas razões, encontrar um bom provedor de servidores é a chave para criar seu próprio _website_. Pesquise pelos vários serviços oferecidos e escolha aquele que melhor se alinha às suas necessidades e ao bolso (os serviçoes variam em uma faixa desde zero até milhares de dólares por mês). Você pode encontrar mais detalhes [nesse artigo](https://developer.mozilla.org/en-US/Learn/How_much_does_it_cost#Hosting).
+Por todas essas razões, encontrar um bom provedor de servidores é a chave para criar seu próprio _website_. Pesquise pelos vários serviços oferecidos e escolha aquele que melhor se alinha às suas necessidades e ao bolso (os serviçoes variam em uma faixa desde zero até milhares de dólares por mês). Você pode encontrar mais detalhes [nesse artigo](/en-US/Learn/How_much_does_it_cost#Hosting).
 
 Uma vez que você escolheu uma solução de servidores web, você só precisa [fazer o _upload_ dos seus arquivos para o servidor _web_](/pt-BR/docs/Learn/Upload_files_to_a_web_server).
 
@@ -97,7 +91,7 @@ O HTTP fornece regras claras sobre como um cliente e um servidor se comunicam. A
 - Quando fizer a requisição de um arquivo via HTTP, os clientes devem fornecer a {{Glossary("URL")}} do arquivo.
 - O servidor web _deve responder_ todas as requisições HTTP, mesmo que seja com uma mensagem de erro.
 
-[![The MDN 404 page as an example of such error page](https://mdn.mozillademos.org/files/8661/mdn-404.jpg)](https://developer.mozilla.org/en-US/404)Em um servidor web, o servidor HTTP é responsável por processar e responder as requisições recebidas.
+[![The MDN 404 page as an example of such error page](https://mdn.mozillademos.org/files/8661/mdn-404.jpg)](/en-US/404)Em um servidor web, o servidor HTTP é responsável por processar e responder as requisições recebidas.
 
 1. Ao receber uma requisição, um servidor HTTP primeiramente confirma se a URL requisitada corresponde ao arquivo existente.
 2. Se confirmar, o servidor web envia o conteúdo do arquivo de volta ao navegador. Senão, o servidor de aplicações cria o arquivo necessário.

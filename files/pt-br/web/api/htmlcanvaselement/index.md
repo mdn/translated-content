@@ -1,15 +1,6 @@
 ---
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
-tags:
-  - API
-  - Canvas
-  - HTML DOM
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/HTMLCanvasElement
 ---
 {{APIRef("Canvas API")}}
 

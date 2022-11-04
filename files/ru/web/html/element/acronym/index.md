@@ -53,4 +53,4 @@ translation_of: Web/HTML/Element/acronym
 
 - {{HTMLElement("abbr")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

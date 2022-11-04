@@ -3,7 +3,7 @@ title: <noscript>
 slug: Web/HTML/Element/noscript
 translation_of: Web/HTML/Element/noscript
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 ## Резюме
 

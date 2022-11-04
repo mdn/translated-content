@@ -1,10 +1,6 @@
 ---
 title: Funções assíncronas
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Função
-  - assíncrono
-translation_of: Web/JavaScript/Reference/Statements/async_function
 original_slug: Web/JavaScript/Reference/Statements/funcoes_assincronas
 ---
 {{jsSidebar("Statements")}}

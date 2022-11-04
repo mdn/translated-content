@@ -17,7 +17,7 @@ target.onanimationend = 事件处理函数
 
 ### 值
 
-当*`target`*(HTML 元素，document 或者 window) 的 CSS 动画已经开始，{{event("animationend")}}事件会触发同时`事件处理函数`会被调用。`事件处理函数`会接收到唯一的参数：{{domxref("AnimationEvent")}} 描述发生的事件。
+当*`target`*(HTML 元素，document 或者 window) 的 CSS 动画已经开始，[`animationend`](/zh-CN/docs/Web/API/Element/animationend_event)事件会触发同时`事件处理函数`会被调用。`事件处理函数`会接收到唯一的参数：{{domxref("AnimationEvent")}} 描述发生的事件。
 
 ## 例子
 
@@ -33,6 +33,6 @@ target.onanimationend = 事件处理函数
 
 ## 参考
 
-- The {{event("animationend")}} event this event handler is triggered by
+- The [`animationend`](/zh-CN/docs/Web/API/Element/animationend_event) event this event handler is triggered by
 - {{domxref("AnimationEvent")}}
-- The {{event("animationstart")}} event
+- The [`animationstart`](/zh-CN/docs/Web/API/Element/animationstart_event) event

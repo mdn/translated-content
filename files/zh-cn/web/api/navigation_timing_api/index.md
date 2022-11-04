@@ -9,7 +9,7 @@ slug: Web/API/Navigation_timing_API
 
 ## Concepts and usage
 
-你可以使用 Navigation Timing API 在客户端收集性能数据，并用 {{domxref("XMLHttpRequest")}} 或其它技术传送到服务端。同时，该 API 使你可以衡量之前难以获取的数据，如卸载前一个页面的时间，在域名解析上的时间，在执行 {{event("load")}} 事件处理器上花费的总时间等。
+你可以使用 Navigation Timing API 在客户端收集性能数据，并用 {{domxref("XMLHttpRequest")}} 或其它技术传送到服务端。同时，该 API 使你可以衡量之前难以获取的数据，如卸载前一个页面的时间，在域名解析上的时间，在执行 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件处理器上花费的总时间等。
 
 ## Interfaces
 
@@ -65,7 +65,7 @@ function onLoad() {
 
 `window.performance.navigation` 对象存储了两个属性，它们表示触发页面加载的原因。这些原因可能是页面重定向、前进后退按钮或者普通的 `URL` 加载。
 
-window\.performance.navigation.type：
+window\.performance.navigation.type:
 
 | Constant            | Value | Description                                                                                                                      |
 | ------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------- |

@@ -1,9 +1,6 @@
 ---
 title: 'Kuma: MDN''s wiki platform'
 slug: MDN/Yari
-tags:
-  - projeto kuma
-translation_of: MDN/Kuma
 original_slug: MDN/Kuma
 ---
 {{MDNSidebar}}

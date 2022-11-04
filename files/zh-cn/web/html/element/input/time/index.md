@@ -3,7 +3,7 @@ title: <input type="time">
 slug: Web/HTML/Element/Input/time
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar("Input_types")}}
 
 类型为 **`time`** 的 {{htmlelement("input")}} 元素，旨在让用户轻松输入时间（小时和分钟，以及可选的秒）。
 
@@ -224,7 +224,7 @@ _目前，尚不清楚当与 `time` 输入一起使用时，`any` 的值对 `ste
 ```html
 <form>
   <label for="appt-time">
-    选择约定的时间（开放时间为 12：00 到 18：00）：
+    选择约定的时间（开放时间为 12:00 到 18:00）：
   </label>
   <input id="appt-time" type="time" name="appt-time" min="12:00" max="18:00" />
   <span class="validity"></span>
@@ -265,7 +265,7 @@ input:valid + span::after {
 运行的结果可以说明：
 
 - 只有 12:00 和 18:00 之间的时间才会被视为有效，超出这个范围的时间将被表示为无效。
-- 根据你使用的浏览器，你可能会发现指定范围之外的时间甚至无法在时间选择器中选择（例如Edge）。
+- 根据你使用的浏览器，你可能会发现指定范围之外的时间甚至无法在时间选择器中选择（例如 Edge）。
 
 #### 使最小值和最大值跨越午夜
 
@@ -295,7 +295,7 @@ if (input.validity.valid && input.type === 'time') {
 <form>
   <div>
     <label for="appt-time">
-      选择约定的时间（开放时间为 12：00 到 18：00）：
+      选择约定的时间（开放时间为 12:00 到 18:00）：
     </label>
     <input
       id="appt-time"
@@ -340,7 +340,7 @@ if (input.validity.valid && input.type === 'time') {
 <form>
   <div>
     <label for="appt-time">
-      选择约定的时间（开放时间为 12：00 到 18：00）：
+      选择约定的时间（开放时间为 12:00 到 18:00）：
     </label>
     <input
       id="appt-time"
@@ -405,7 +405,7 @@ HTML 看起来像这样：
 <form>
   <div class="nativeTimePicker">
     <label for="appt-time">
-      选择约定的时间（开放时间为 12：00 到 18：00）：
+      选择约定的时间（开放时间为 12:00 到 18:00）：
     </label>
     <input
       id="appt-time"
@@ -417,7 +417,7 @@ HTML 看起来像这样：
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">
-    选择约定的时间（开放时间为 12：00 到 18：00）：
+    选择约定的时间（开放时间为 12:00 到 18:00）：
   </p>
   <div class="fallbackTimePicker">
     <div>

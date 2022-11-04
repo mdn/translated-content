@@ -556,6 +556,7 @@
 /ko/docs/Web/API/window.screen.orientation	/ko/docs/Web/API/Screen/orientation
 /ko/docs/Web/API/window.screen.unlockOrientation	/ko/docs/Web/API/Screen/unlockOrientation
 /ko/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/ko/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
+/ko/docs/Web/CSS/@viewport	/ko/docs/conflicting/Web/CSS
 /ko/docs/Web/CSS/All_About_The_Containing_Block	/ko/docs/Web/CSS/Containing_block
 /ko/docs/Web/CSS/CSS_Background_and_Borders	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders
 /ko/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
@@ -564,6 +565,7 @@
 /ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ko/docs/Web/CSS/cursor
 /ko/docs/Web/CSS/CSS_Color	/ko/docs/Web/CSS/CSS_Colors
+/ko/docs/Web/CSS/CSS_Device_Adaptation	/ko/docs/conflicting/Web/CSS_7fc1a1afe4642afd225ebf1b3d6227a7
 /ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox의_기본_개념	/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /ko/docs/Web/CSS/CSS_Flexible_Box_Layout/가변상자의_대표적인_사용례	/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 /ko/docs/Web/CSS/CSS_Flow_Layout/대열과_탈대열	/ko/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
@@ -748,11 +750,13 @@
 /ko/docs/Web/JavaScript/Reference/Methods_Index	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/Objects	/ko/docs/Web/JavaScript/Reference/Global_Objects
 /ko/docs/Web/JavaScript/Reference/Objects/Function	/ko/docs/Web/JavaScript/Reference/Global_Objects/Function
+/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator	/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 /ko/docs/Web/JavaScript/Reference/Operators/Special_Operators	/ko/docs/Web/JavaScript/Reference/Operators
 /ko/docs/Web/JavaScript/Reference/Operators/Spread_operator	/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /ko/docs/Web/JavaScript/Reference/Operators/연산자_우선순위	/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 /ko/docs/Web/JavaScript/Reference/Properties_Index	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
+/ko/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/ko/docs/conflicting/Web/JavaScript/Reference/Strict_mode
 /ko/docs/Web/JavaScript/Shells	/ko/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ko/docs/Web/JavaScript/Tutorials	/ko/docs/Web/JavaScript
 /ko/docs/Web/JavaScript/쉘	/ko/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d

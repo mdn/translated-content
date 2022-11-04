@@ -1,13 +1,6 @@
 ---
 title: 'HTML: Linguagem de Marcação de Hipertexto'
 slug: Web/HTML
-tags:
-  - HTML
-  - HTML 5
-  - Página de destino
-  - Web
-  - l10n:prioridade
-translation_of: Web/HTML
 ---
 {{HTMLSidebar}}
 

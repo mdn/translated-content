@@ -1,15 +1,6 @@
 ---
 title: Clear-Site-Data
 slug: Web/HTTP/Headers/Clear-Site-Data
-tags:
-  - Armazenamento
-  - Cabeçalho HTTP
-  - Cache
-  - Cookies
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Clear-Site-Data
 ---
 {{HTTPSidebar}}
 

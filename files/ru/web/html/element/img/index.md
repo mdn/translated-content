@@ -15,7 +15,7 @@ tags:
   - мультимедиа
 translation_of: Web/HTML/Element/img
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML-элемент `<img>`** встраивает изображение в документ. Это [замещаемый элемент](/ru/docs/Web/CSS/Замещаемый_элемент).
 

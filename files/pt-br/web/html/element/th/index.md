@@ -1,9 +1,8 @@
 ---
 title: <th>
 slug: Web/HTML/Element/th
-translation_of: Web/HTML/Element/th
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 O **elemento** **HTML `<th>` **define uma célula cabeçalho do grupo de células de sua tabela. A exatidão natural deste grupo é definida pelos atributos {{htmlattrxref("scope", "th")}} e {{htmlattrxref("headers", "th")}}.
 

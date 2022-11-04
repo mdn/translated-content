@@ -35,7 +35,7 @@ margin-bottom: initial;
 margin-bottom: unset;
 ```
 
-La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<length>`) ou un pourcentage (` <percentage``> `). Cette valeur peut être nulle, positive ou négative.
+La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<length>`) ou un pourcentage (`<percentage>`). Cette valeur peut être nulle, positive ou négative.
 
 ### Valeurs
 

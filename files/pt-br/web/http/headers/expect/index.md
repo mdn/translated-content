@@ -1,12 +1,6 @@
 ---
 title: Expect
 slug: Web/HTTP/Headers/Expect
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Headers/Expect
 ---
 {{HTTPSidebar}}
 

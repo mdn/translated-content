@@ -157,7 +157,7 @@ section {
 
 ### 外边距重叠
 
-创建新的 BFC 避免两个相邻的 div 之间 [外边距重叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) 。
+创建新的 BFC 避免两个相邻元素之间的[外边距重叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) 。
 
 #### HTML
 

@@ -99,7 +99,7 @@ In the following live example I have a flex container with three child elements.
 
 By adding `display: contents` to the wrapper around the nested elements, you can see that that item has disappeared from the layout, allowing the two sub-children to be laid out as if they were direct children of the flex container. You can try removing the `display: contents` line to see it return.
 
-Note that this only removes the box from the layout; the sub-children don’t become direct children in any other way. You can see that as I have used a direct child selector to add the background and borders to the flex items, this has not been applied to our nested children. They have been laid out as flex items, but as they are not direct children they do not get the other styling.
+Note that this only removes the box from the layout; the sub-children don't become direct children in any other way. You can see that as I have used a direct child selector to add the background and borders to the flex items, this has not been applied to our nested children. They have been laid out as flex items, but as they are not direct children they do not get the other styling.
 
 > **警告：** Use of `display: contents` will also remove the element from the accessibility tree – screen readers will not see what's inside, just the same as if you used `display: none`. Use of `contents` should only be for presentational, not content, elements.
 

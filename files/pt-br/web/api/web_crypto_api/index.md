@@ -1,14 +1,6 @@
 ---
 title: Web Crypto API
 slug: Web/API/Web_Crypto_API
-tags:
-  - API
-  - API de criptografia Web
-  - Overview
-  - Referencia
-  - Visão Geral
-  - Web Crypto API
-translation_of: Web/API/Web_Crypto_API
 ---
 {{DefaultAPISidebar("Web Crypto API")}}{{SeeCompatTable}}
 

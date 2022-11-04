@@ -1,10 +1,6 @@
 ---
 title: Guia JavaScript
 slug: Web/JavaScript/Guide
-tags:
-  - Guia Javascript
-  - JavaScript
-translation_of: Web/JavaScript/Guide
 ---
 {{jsSidebar("JavaScript Guide")}}
 

@@ -13,7 +13,7 @@ tags:
 translation_of: Web/HTML/Element/input/color
 original_slug: Web/HTML/Elemento/input/color
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Los elementos {{HTMLElement("input")}} del tipo «**`color`**» proporciona un elemento de interfaz de usuario que permite a los usuarios especificar un color, bien mediante una interfaz visual de selección, bien a través de un cuadro de texto donde ingresar un valor hexadecimal en el formato «`#rrggbb`». Solo se permiten colores simples (sin canal alfa). Los valores son compatibles con CSS.
 

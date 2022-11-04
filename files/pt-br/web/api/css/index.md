@@ -1,11 +1,6 @@
 ---
 title: CSS
 slug: Web/API/CSS
-tags:
-  - Apps
-  - CSSOM
-  - Referencia
-translation_of: Web/API/CSS
 ---
 {{APIRef("CSSOM")}}
 

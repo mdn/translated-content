@@ -1,18 +1,20 @@
 ---
 title: StyleSheet.title
 slug: Web/API/StyleSheet/title
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{ApiRef}}
+{{APIRef("CSSOM")}}
 
-## 概要
+**`title`** は {{domxref("StyleSheet")}} インターフェイスのプロパティで、現在のスタイルシートのアドバイザリータイトルを返します。
 
-`title` は、現在のスタイルシートのタイトルを返します。
-
-## 注記
-
-タイトルは、多くの場合 {{domxref("StyleSheet/OwnerNode", "ownerNode")}} で指定されています。
+タイトルは、よく {{domxref("StyleSheet/OwnerNode", "ownerNode")}} で指定されています。
 
 ## 仕様書
 
-- [title](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-title)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

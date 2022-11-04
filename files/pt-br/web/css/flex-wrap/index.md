@@ -1,12 +1,6 @@
 ---
 title: flex-wrap
 slug: Web/CSS/flex-wrap
-tags:
-  - CSS
-  - CSS Flex Box
-  - Propriedades CSS
-  - Referencia
-translation_of: Web/CSS/flex-wrap
 ---
 {{ CSSRef}}
 

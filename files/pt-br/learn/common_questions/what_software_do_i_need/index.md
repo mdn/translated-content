@@ -1,9 +1,6 @@
 ---
 title: Que software eu preciso para construir um site?
 slug: Learn/Common_questions/What_software_do_I_need
-tags:
-  - Iniciante
-translation_of: Learn/Common_questions/What_software_do_I_need
 original_slug: Learn/Common_questions/Que_software_eu_preciso
 ---
 Neste artigo nós destacamos quais _softwares_ você precisa para editar, fazer _upload_ ou visualizar um _site_.

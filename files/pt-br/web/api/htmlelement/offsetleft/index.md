@@ -1,12 +1,6 @@
 ---
 title: HTMLElement.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
-tags:
-  - API
-  - ApenasLeitura
-  - Propriedade
-  - Referência(2)
-translation_of: Web/API/HTMLElement/offsetLeft
 ---
 {{ APIRef("HTML DOM") }}
 

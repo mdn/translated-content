@@ -1,15 +1,6 @@
 ---
 title: Accept
 slug: Web/HTTP/Headers/Accept
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Referencia
-  - Request header
-translation_of: Web/HTTP/Headers/Accept
 ---
 {{HTTPSidebar}}
 

@@ -1,11 +1,6 @@
 ---
 title: RTCDataChannel
 slug: Web/API/RTCDataChannel
-tags:
-  - Compatibilidade
-  - Navegadores
-  - Referencia
-translation_of: Web/API/RTCDataChannel
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 

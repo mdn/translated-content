@@ -1,17 +1,6 @@
 ---
 title: GlobalEventHandlers.onlostpointercapture
 slug: Web/API/Element/lostpointercapture_event
-tags:
-  - API
-  - DOM
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML
-  - Propriedade
-  - Referencia
-  - events
-  - onlostpointercapture
-translation_of: Web/API/GlobalEventHandlers/onlostpointercapture
 original_slug: Web/API/GlobalEventHandlers/onlostpointercapture
 ---
 {{ApiRef("HTML DOM")}}

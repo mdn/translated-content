@@ -1,11 +1,6 @@
 ---
 title: Location
 slug: Web/HTTP/Headers/Location
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de Resposta
-  - HTTP
-translation_of: Web/HTTP/Headers/Location
 original_slug: Web/HTTP/Headers/Localização
 ---
 {{HTTPSidebar}}

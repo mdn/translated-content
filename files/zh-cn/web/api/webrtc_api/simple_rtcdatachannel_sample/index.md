@@ -52,7 +52,7 @@ WebRTC API 大量使用了{{jsxref("Promise")}}. 这样会让建立链接的过�
 
 ### 启动
 
-当脚本开始运行时，我们对 load 事件挂接 {{event("load")}} 事件侦听，因此一旦页面完全加载， `startup()` 函数将被调用。
+当脚本开始运行时，我们对 load 事件挂接 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件侦听，因此一旦页面完全加载， `startup()` 函数将被调用。
 
 ```js
 function startup() {
@@ -222,7 +222,7 @@ local 节点和 remote 节点采用同样的方法处理表示通道连接状态
 
 ### 发送消息
 
-当用户按下 "Send" 按钮，触发我们已建立的该按钮的 {{event("click")}} 事件处理逻辑，在处理逻辑中调用 sendMessage() 方法。该方法也足够简单：
+当用户按下 "Send" 按钮，触发我们已建立的该按钮的 [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件处理逻辑，在处理逻辑中调用 sendMessage() 方法。该方法也足够简单：
 
 ```js
   function sendMessage() {

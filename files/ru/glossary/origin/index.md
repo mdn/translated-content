@@ -23,4 +23,4 @@ original_slug: Глоссарий/origin
 
 ## Больше информации
 
-Смотрите [Same-origin policy](/ru/docs/Web/JavaScript/Same_origin_policy_for_JavaScript "/en-US/docs/Web/JavaScript/Same_origin_policy_for_JavaScript").
+Смотрите [Same-origin policy](/ru/docs/Web/JavaScript/Same_origin_policy_for_JavaScript).

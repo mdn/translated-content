@@ -1,13 +1,6 @@
 ---
 title: Seleção
 slug: Web/API/Selection
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Referencia
-  - Seleção
-translation_of: Web/API/Selection
 original_slug: Web/API/Seleção
 ---
 {{ ApiRef("DOM") }}{{SeeCompatTable}}

@@ -1,11 +1,6 @@
 ---
 title: Valor Especifícado
 slug: Web/CSS/specified_value
-tags:
-  - CSS
-  - Iniciante
-  - Web
-translation_of: Web/CSS/specified_value
 original_slug: Web/CSS/valor_espeficifco
 ---
 {{CSSRef}}

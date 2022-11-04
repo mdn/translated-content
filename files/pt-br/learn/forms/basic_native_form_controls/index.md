@@ -1,16 +1,6 @@
 ---
 title: Os widgets nativos
 slug: Learn/Forms/Basic_native_form_controls
-tags:
-  - Aprender
-  - Contrôles
-  - Exemplos
-  - Guía
-  - HTML
-  - Iniciantes
-  - Intermediário
-  - Web
-translation_of: Learn/Forms/Basic_native_form_controls
 original_slug: Web/Guide/HTML/Forms/Os_widgets_nativos
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/How_to_structure_an_HTML_form", "Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}

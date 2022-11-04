@@ -67,7 +67,7 @@ function test() {
 
 `eval()` es generalmente también más lenta que otras alternativas desde que se invoca en el intérprte de JS, mientras que otros muchos constructores son optimizados por los motores JS modernos.
 
-Existen alternativas más seguras (y rápidas) que `eval()`para casos de uso común.
+Existen alternativas más seguras (y rápidas) que `eval()` para casos de uso común.
 
 ### Accediendo a propiedades de los miembros
 
