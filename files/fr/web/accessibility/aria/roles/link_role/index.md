@@ -26,7 +26,7 @@ Lorsque le rôle `link` est ajouté à un élément, ou qu’un élément possé
 
 Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence&nbsp;:
 
-- Les lecteurs d'écran devraient annoncer le texte du lien ou son label lorsque l'élément avec le rôle `link`reçoit le focus, en plus du fait ce que c'est un lien. Les liens ARIA devraient être intégré dans la fonction « lister les liens » (_List Links_) des lecteurs d'écran de la même façon que les liens ordinaires, et les actions dans cette liste de dialogue, tels que « Activer le lien » ou « Déplacer le lien », devraient se comporter de la meme façon qu'avec des liens ordinaires.
+- Les lecteurs d'écran devraient annoncer le texte du lien ou son label lorsque l'élément avec le rôle `link` reçoit le focus, en plus du fait ce que c'est un lien. Les liens ARIA devraient être intégré dans la fonction « lister les liens » (_List Links_) des lecteurs d'écran de la même façon que les liens ordinaires, et les actions dans cette liste de dialogue, tels que « Activer le lien » ou « Déplacer le lien », devraient se comporter de la meme façon qu'avec des liens ordinaires.
 - Les loupes d’écran devraient agrandir le lien.
 
 > **Note :** il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.

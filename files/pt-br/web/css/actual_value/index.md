@@ -1,7 +1,6 @@
 ---
 title: Valor atual
 slug: Web/CSS/actual_value
-translation_of: Web/CSS/actual_value
 original_slug: Web/CSS/Valor_atual
 ---
 {{CSSRef}}

@@ -96,7 +96,7 @@ L'{{domxref("IDBIndex","accès")}} au nouvel index.
 
 ## Exemple
 
-Dans l'exemple suivant on peut voir le gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded","<code>onupgradeneeded</code>")}} être utilisé pour mètre à jour la structure de la base de donnée quand un numéro de version supérieur est chargé.
+Dans l'exemple suivant on peut voir le gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded","onupgradeneeded")}} être utilisé pour mètre à jour la structure de la base de donnée quand un numéro de version supérieur est chargé.
 
 Des méthode **`createIndex()`** sont utilisées pour mètre en place différents index sur le magasin d'objet `toDoList`.
 

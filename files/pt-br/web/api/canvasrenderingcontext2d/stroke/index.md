@@ -1,13 +1,6 @@
 ---
 title: CanvasRenderingContext2D.stroke()
 slug: Web/API/CanvasRenderingContext2D/stroke
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Referencia
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/stroke
 ---
 {{APIRef}}
 

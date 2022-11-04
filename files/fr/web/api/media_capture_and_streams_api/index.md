@@ -52,13 +52,12 @@ Les premières versions de la spécification pour Media Capture and Streams API 
 
 ## Évènements
 
-- {{event("addtrack")}}
-- {{event("ended")}}
-- {{event("muted")}}
-- {{event("overconstrained")}}
-- {{event("removetrack")}}
-- {{event("started")}}
-- {{event("unmuted")}}
+- [`addtrack`](/fr/docs/Web/API/MediaStream/addtrack_event)
+- [`ended`](/fr/docs/Web/API/MediaStreamTrack/ended_event)
+- [`mute`](/fr/docs/Web/API/MediaStreamTrack/mute_event)
+- [`overconstrained`](/fr/docs/Web/API/MediaStreamTrack.overconstrained_event)
+- [`removetrack`](/fr/docs/Web/API/MediaStream/removetrack_event)
+- [`unmute`](/fr/docs/Web/API/MediaStreamTrack/unmute_event)
 
 ## Guides et tutorials
 

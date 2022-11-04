@@ -1,7 +1,6 @@
 ---
 title: 'Tutorial Django Parte 8: Autenticação de usuário e permissões'
 slug: Learn/Server-side/Django/Authentication
-translation_of: Learn/Server-side/Django/Authentication
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 

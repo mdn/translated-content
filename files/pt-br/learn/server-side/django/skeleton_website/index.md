@@ -1,13 +1,6 @@
 ---
 title: 'Django Tutorial Parte 2: Criando o "esqueleto" de um site'
 slug: Learn/Server-side/Django/skeleton_website
-tags:
-  - Artigo
-  - Guía
-  - Iniciante
-  - Python
-  - locallibrary
-translation_of: Learn/Server-side/Django/skeleton_website
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 

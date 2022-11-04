@@ -10,7 +10,7 @@ La **`x-ms-acceleratorkey`** propiedad proporciona una forma de declarar que una
 
 Esta propiedad propietaria es específica de Internet Explorer y Microsoft Edge.
 
-La `x-ms-acceleratorkey`propiedad le permite exponer una notificación en el árbol de accesibilidad a los lectores de pantalla y otras tecnologías de asistencia de que existe una clave de aceleración. Este atributo no proporciona el comportamiento de la clave del acelerador. Debe proporcionar controladores de eventos de teclado, como por ejemplo `onkeypress`, `onkeydown`o `onkeyup`, para procesar las teclas de aceleración en el documento.
+La `x-ms-acceleratorkey` propiedad le permite exponer una notificación en el árbol de accesibilidad a los lectores de pantalla y otras tecnologías de asistencia de que existe una clave de aceleración. Este atributo no proporciona el comportamiento de la clave del acelerador. Debe proporcionar controladores de eventos de teclado, como por ejemplo `onkeypress`, `onkeydown` o `onkeyup`, para procesar las teclas de aceleración en el documento.
 
 ## Sintaxis
 

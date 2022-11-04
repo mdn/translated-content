@@ -11,7 +11,7 @@ translation_of: Web/CSS/align-items
 
 {{cssinfo}}
 
-Подробнее и больше информации читайте в [Использование гибких блоков CSS](https://developer.mozilla.org/en/CSS/Using_CSS_flexible_boxes).
+Подробнее и больше информации читайте в [Использование гибких блоков CSS](/en/CSS/Using_CSS_flexible_boxes).
 
 ## Синтаксис
 

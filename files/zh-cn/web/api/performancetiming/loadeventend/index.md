@@ -7,7 +7,7 @@ slug: Web/API/PerformanceTiming/loadEventEnd
 
 ## 概要
 
-**`PerformanceTiming.loadEventEnd`** 是一个返回代表一个时刻的 `unsigned long long` 型只读属性，为 {{event("load")}} 事件处理程序被终止，加载事件已经完成之时的 Unix 毫秒时间戳。如果这个事件没有被触发，或者没能完成，则该值将会返回 `0`。
+**`PerformanceTiming.loadEventEnd`** 是一个返回代表一个时刻的 `unsigned long long` 型只读属性，为 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件处理程序被终止，加载事件已经完成之时的 Unix 毫秒时间戳。如果这个事件没有被触发，或者没能完成，则该值将会返回 `0`。
 
 ## 语法
 

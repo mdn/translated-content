@@ -1,12 +1,6 @@
 ---
 title: WindowBase64.atob()
 slug: Web/API/atob
-tags:
-  - API
-  - Referencia
-  - WindowBase64
-  - metodo
-translation_of: Web/API/WindowOrWorkerGlobalScope/atob
 original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
 {{APIRef("HTML DOM")}}

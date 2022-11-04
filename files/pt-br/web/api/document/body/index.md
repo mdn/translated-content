@@ -1,7 +1,6 @@
 ---
 title: Document.body
 slug: Web/API/Document/body
-translation_of: Web/API/Document/body
 ---
 {{APIRef("DOM")}}
 

@@ -1,7 +1,6 @@
 ---
 title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
-translation_of: Web/HTTP/Status/504
 ---
 {{HTTPSidebar}}
 

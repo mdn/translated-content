@@ -1,11 +1,6 @@
 ---
 title: lang
 slug: Web/HTML/Global_attributes/lang
-tags:
-  - Atributos globais
-  - Referencia
-  - lang
-translation_of: Web/HTML/Global_attributes/lang
 ---
 {{HTMLSidebar("Global_attributes")}}
 

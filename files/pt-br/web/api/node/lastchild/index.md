@@ -1,12 +1,6 @@
 ---
 title: Node.lastChild
 slug: Web/API/Node/lastChild
-tags:
-  - API
-  - DOM
-  - Elements
-  - lastChild
-translation_of: Web/API/Node/lastChild
 ---
 {{APIRef("DOM")}}
 

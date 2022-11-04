@@ -1,13 +1,6 @@
 ---
 title: Document.registerElement()
 slug: Web/API/Document/registerElement
-tags:
-  - DOM
-  - Document.registerElement()
-  - ELEMENTO DOM
-  - Web Components
-  - registerElement
-translation_of: Web/API/Document/registerElement
 original_slug: Web/API/Document/ElementoRegistrado
 ---
 {{APIRef("DOM")}}

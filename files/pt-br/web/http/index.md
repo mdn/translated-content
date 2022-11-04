@@ -1,12 +1,6 @@
 ---
 title: HTTP
 slug: Web/HTTP
-tags:
-  - Aula de HTTP
-  - HTTP
-  - Tutorial de HTTP
-  - Web
-translation_of: Web/HTTP
 ---
 {{ HTTPSidebar }}
 

@@ -1,12 +1,6 @@
 ---
 title: Valor Computado
 slug: Web/CSS/computed_value
-tags:
-  - CSS
-  - Guía
-  - Iniciante
-  - Web
-translation_of: Web/CSS/computed_value
 original_slug: Web/CSS/valor_computado
 ---
 {{cssref}}

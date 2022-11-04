@@ -1,7 +1,6 @@
 ---
 title: ':active'
 slug: Web/CSS/:active
-translation_of: Web/CSS/:active
 ---
 {{CSSRef}}A pseudo-classe css \<strong> :active \</strong>
 

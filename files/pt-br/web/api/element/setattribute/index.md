@@ -1,13 +1,6 @@
 ---
 title: Element.setAttribute()
 slug: Web/API/Element/setAttribute
-tags:
-  - Elemento
-  - IPA
-  - MOD
-  - Referencia
-  - metodo
-translation_of: Web/API/Element/setAttribute
 ---
 {{APIRef("DOM")}}
 

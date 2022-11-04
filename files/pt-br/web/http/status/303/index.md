@@ -1,12 +1,6 @@
 ---
 title: 303 See Other
 slug: Web/HTTP/Status/303
-tags:
-  - Código de Status HTTP
-  - HTTP
-  - Redirecionamento
-  - Referencia
-translation_of: Web/HTTP/Status/303
 ---
 {{HTTPSidebar}}
 

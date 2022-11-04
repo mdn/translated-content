@@ -1,13 +1,6 @@
 ---
 title: CanvasRenderingContext2D.fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Propriedade
-  - Referencia
-translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
 {{APIRef}}
 

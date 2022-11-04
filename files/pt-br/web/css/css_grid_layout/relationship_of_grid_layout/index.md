@@ -1,7 +1,6 @@
 ---
 title: Relationship of grid layout to other layout methods
 slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
-translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
 O CSS Grid Layout foi projetado para funcionar junto com outras partes do CSS, como parte de um sistema completo para fazer o layout. Neste guia, explicarei como uma grade se encaixa com outras técnicas que você já pode estar usando.
 

@@ -1,14 +1,6 @@
 ---
 title: Negociação de conteúdo
 slug: Web/HTTP/Content_negotiation
-tags:
-  - Content Negotiation Reference
-  - HTTP
-  - NeedsTranslation
-  - Negociação de conteúdo
-  - Referência em Negociação de Conteúdo
-  - TopicStub
-translation_of: Web/HTTP/Content_negotiation
 ---
 {{HTTPSidebar}}No [HTTP](/pt-BR/docs/Glossary/HTTP), **_negociação de conteúdo_** é o mecanismo que é usado para servir diferentesrepresentações de um recurso no mesmo URI, de forma que o agente do usuáriopossa especificar qual é a melhor representação adequada ao usuário(por exemplo, qual idioma de um documento, qual formato de imagem ouqual codificação de conteúdo)
 

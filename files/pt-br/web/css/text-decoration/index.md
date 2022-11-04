@@ -1,13 +1,6 @@
 ---
 title: text-decoration
 slug: Web/CSS/text-decoration
-tags:
-  - CSS
-  - PrecisaDeCompatibilidade
-  - Propriedade CSS
-  - Referencia
-  - Texto CSS
-translation_of: Web/CSS/text-decoration
 ---
 {{CSSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: Cookie
 slug: Web/HTTP/Headers/Cookie
-tags:
-  - Cabeçalho de requisição
-  - Cookies
-  - HTTP
-  - Referencia
-  - cabeçalho
-  - requisição
-translation_of: Web/HTTP/Headers/Cookie
 ---
 {{HTTPSidebar}}
 

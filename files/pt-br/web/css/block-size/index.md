@@ -1,12 +1,6 @@
 ---
 title: block-size
 slug: Web/CSS/block-size
-tags:
-  - Propriedade CSS
-  - Propriedade Lógica CSS
-  - Referencia
-  - block-size
-translation_of: Web/CSS/block-size
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

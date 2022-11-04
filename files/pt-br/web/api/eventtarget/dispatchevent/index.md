@@ -1,13 +1,6 @@
 ---
 title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Method
-  - events
-translation_of: Web/API/EventTarget/dispatchEvent
 ---
 {{APIRef("DOM Events")}}
 

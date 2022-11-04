@@ -1,17 +1,6 @@
 ---
 title: browsingData.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - remove
-browser-compat: webextensions.api.browsingData.remove
-translation-of: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 ---
 {{AddonSidebar()}}
 
@@ -41,7 +30,7 @@ let removing = browser.browsingData.remove(
 
 ### Valor retornado
 
-Uma [`Promessa`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) que será realizada sem argumentos quando a remoção terminar. Se ocorrer algum erro, a promessa será rejeitada com uma mensagem de erro.
+Uma [`Promessa`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) que será realizada sem argumentos quando a remoção terminar. Se ocorrer algum erro, a promessa será rejeitada com uma mensagem de erro.
 
 ## Exemplos
 

@@ -1,13 +1,6 @@
 ---
 title: Range
 slug: Web/HTTP/Headers/Range
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-  - Requisições de Intervalo
-translation_of: Web/HTTP/Headers/Range
 ---
 {{HTTPSidebar}}
 

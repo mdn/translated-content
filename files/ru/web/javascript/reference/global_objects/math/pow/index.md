@@ -1,0 +1,55 @@
+---
+title: Math.pow()
+slug: Web/JavaScript/Reference/Global_Objects/Math/pow
+tags:
+  - JavaScript
+  - Math
+  - Method
+  - Reference
+translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
+---
+{{JSRef("Global_Objects", "Math")}}
+
+## Сводка
+
+Метод **`Math.pow()`** возвращает `основание`, возведённое в степень `показатель`, то есть, значение выражения `основаниепоказатель`.
+
+## Синтаксис
+
+```
+Math.pow(base, exponent)
+```
+
+### Параметры
+
+- `base`
+  - : Основание степени.
+- `exponent`
+  - : Показатель степени, в которую возводится основание `base`.
+
+## Описание
+
+Поскольку метод `pow()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.pow()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
+
+## Примеры
+
+### Пример: использование метода `Math.pow()`
+
+```js
+Math.pow(7, 2); // 49
+```
+
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Math.cbrt()")}} {{experimental_inline}}
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.sqrt()")}}

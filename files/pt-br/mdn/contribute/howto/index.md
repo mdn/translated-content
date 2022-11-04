@@ -1,7 +1,6 @@
 ---
 title: Guia de contribuição
 slug: MDN/Contribute/Howto
-translation_of: MDN/Contribute/Howto
 original_slug: MDN/Contribute/guia
 ---
 {{MDNSidebar}}

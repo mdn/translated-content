@@ -1,12 +1,6 @@
 ---
 title: Web App Manifest
 slug: Web/Manifest
-tags:
-  - App
-  - Manifest
-  - Reference
-  - Web
-translation_of: Web/Manifest
 ---
 O manifesto do aplicativo web fornece informações sobre uma aplicação (como nome, autor, icone, e descrição) em um arquivo de texto. O propósito do manifesto é instalar aplicações web na tela inicial de um aparelho, propiciando aos usuários um acesso mais rápido e uma experiência enriquecida.
 

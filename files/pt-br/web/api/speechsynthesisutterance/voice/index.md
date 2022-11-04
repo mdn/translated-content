@@ -1,14 +1,6 @@
 ---
 title: SpeechSynthesisUtterance.voice
 slug: Web/API/SpeechSynthesisUtterance/voice
-tags:
-  - API
-  - Experimental
-  - Fala
-  - SpeechSynthesisUtterance
-  - Voz
-  - Web Speech API
-translation_of: Web/API/SpeechSynthesisUtterance/voice
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 

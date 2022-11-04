@@ -114,7 +114,7 @@ Firefox 50 は、米国時間 2016 年 11 月 15 日にリリースされまし�
 ### Audio/Video
 
 - `AlignSetting` 列挙型 ({{domxref("VTTCue.align")}} で使用可能な値を表す) が以前、誤って `"center"` ではなく `"middle"` を含んでいました。この問題を修正しました ({{bug(1276130)}})。
-- 非標準かつ実験的な {{domxref("HTMLMediaElement.seekToNextFrame()")}} メソッドが、メディア内の次のフレームを同期的ではなく非同期的にシークするようになりました。また、シークが完了すると fullfill になる {{jsxref("Promise")}} を返します。
+- 非標準かつ実験的な {{domxref("HTMLMediaElement.seekToNextFrame()")}} メソッドが、メディア内の次のフレームを同期的ではなく非同期的にシークするようになりました。また、シークが完了すると fulfill になる {{jsxref("Promise")}} を返します。
 - {{domxref("HTMLTrackElement")}} の実装を、ドキュメント内にない場合でも {{HTMLElement("track")}} 要素がリソースを読み込めるように修正しました ({{bug(871747)}})。
 
 ### Battery API

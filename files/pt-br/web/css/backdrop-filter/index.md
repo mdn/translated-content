@@ -1,13 +1,6 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
-tags:
-  - Filtros
-  - efeitos
-  - iOS
-  - plano de fundo
-translation_of: Web/CSS/backdrop-filter
-browser-compat: css.properties.backdrop-filter
 ---
 {{CSSRef}}
 

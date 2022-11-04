@@ -1,18 +1,6 @@
 ---
 title: '<dir>:  O elemento obsoleto Directory'
 slug: Web/HTML/Element/dir
-tags:
-  - Agrupando conteúdo HTML
-  - Directory
-  - Elemento
-  - HTML
-  - Listas HTML
-  - Obsoleto
-  - Referencia
-  - Web
-  - dir
-  - listas
-translation_of: Web/HTML/Element/dir
 ---
 {{Obsolete_header()}}
 
@@ -48,4 +36,4 @@ Como todos os outros elementos HTML, este elemento suporta os [global attributes
   - A propriedade {{Cssxref('line-height')}}, útil para simular o atributo obsoleto {{htmlattrxref("compact", "dir")}}.
   - A propriedade {{cssxref('margin')}}, útil para controlar o recuo da lista.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -1,15 +1,6 @@
 ---
 title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
-tags:
-  - API
-  - Arco
-  - Canvas
-  - CanvasRenderingContext2D
-  - Circulo
-  - Method
-  - Reference
-translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
 {{APIRef}}
 

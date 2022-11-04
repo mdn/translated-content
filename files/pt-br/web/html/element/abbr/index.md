@@ -1,20 +1,6 @@
 ---
 title: <abbr>
 slug: Web/HTML/Element/abbr
-tags:
-  - Elemento
-  - HTML
-  - Internet
-  - Rede
-  - Referencia
-  - Semántica HTML a nivel de texto
-  - Web
-  - abbr
-  - abreviação
-  - acrônimo
-  - definições
-  - semántica
-translation_of: Web/HTML/Element/abbr
 ---
 ## Sumário
 
@@ -78,4 +64,4 @@ Obama é presidente dos EUA
 
 - Outros elementos que possuem [semântica à nível de texto](/pt-BR/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

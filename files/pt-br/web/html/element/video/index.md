@@ -1,7 +1,6 @@
 ---
 title: video
 slug: Web/HTML/Element/Video
-translation_of: Web/HTML/Element/video
 ---
 ## Sumário
 

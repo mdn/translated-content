@@ -1,7 +1,6 @@
 ---
 title: datalist
 slug: Web/HTML/Element/datalist
-translation_of: Web/HTML/Element/datalist
 ---
 ## Sumário
 

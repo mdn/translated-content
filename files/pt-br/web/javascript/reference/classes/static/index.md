@@ -1,13 +1,6 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
-tags:
-  - Classes
-  - ECMAScript 2015
-  - Experimental
-  - JavaScript
-  - Static
-translation_of: Web/JavaScript/Reference/Classes/static
 ---
 {{jsSidebar("Classes")}}
 

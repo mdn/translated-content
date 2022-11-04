@@ -1,7 +1,6 @@
 ---
 title: Upgrade-Insecure-Requests
 slug: Web/HTTP/Headers/Upgrade-Insecure-Requests
-translation_of: Web/HTTP/Headers/Upgrade-Insecure-Requests
 ---
 {{HTTPSidebar}}
 

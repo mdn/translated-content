@@ -1,12 +1,6 @@
 ---
 title: Date
 slug: Web/HTTP/Headers/Date
-tags:
-  - Cabeçalho Geral
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Date
 ---
 {{HTTPSidebar}}
 

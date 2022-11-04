@@ -1,9 +1,6 @@
 ---
 title: keyup
 slug: Web/API/Element/keyup_event
-tags:
-  - Evento de teclado
-translation_of: Web/API/Document/keyup_event
 original_slug: Web/API/Document/keyup_event
 ---
 O evento keyup é acionado quando uma tecla é liberada.

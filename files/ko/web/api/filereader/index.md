@@ -79,7 +79,7 @@ See [Using files from web applications](/ko/docs/Using_files_from_web_applicatio
 
 ## 같이 보기
 
-- [Using files from web applications](/en/Using_files_from_web_applications 'en/Using files from web applications')
+- [Using files from web applications](/en/Using_files_from_web_applications)
 - {{ domxref("File") }}
 - {{ domxref("Blob") }}
 - [nsIDOMFileReader \[en-US\]](/ko/docs/nsIDOMFileReader) - For addons/privelaged scope

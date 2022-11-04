@@ -1,8 +1,6 @@
 ---
 title: JavaScript e CSS
 slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-translation_of_original: Web/Guide/CSS/Getting_started/JavaScript
 original_slug: Web/CSS/Getting_Started/JavaScript
 ---
 Esta é a primeira sessão da Parte II do [Tutorial de CSS](/en/CSS/Getting_Started). A parte II contém alguns exemplos que mostram o escopo do CSS usado com outras tecnologias web e Mozilla.

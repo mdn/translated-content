@@ -1,7 +1,6 @@
 ---
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
-translation_of: Web/HTTP/Headers/Content-Location
 ---
 {{HTTPSidebar}}
 
@@ -77,7 +76,7 @@ Content-Location: /meu-primeiro-post-no-blog
 
 ### Indicando a URL do resultado de uma transação
 
-Digamos que você tem um [`<form>`](/en-US/docs/Web/HTML/Element/form) para enviar dinheiro para outro usuário do de um site.
+Digamos que você tem um [`<form>`](/pt-BR/docs/Web/HTML/Element/form) para enviar dinheiro para outro usuário do de um site.
 
 ```html
 <form action="/mandar-pagamento" method="post">

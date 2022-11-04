@@ -1,13 +1,6 @@
 ---
 title: Origin
 slug: Web/HTTP/Headers/Origin
-tags:
-  - Cabeçalho de requisição
-  - HTTP
-  - Origem
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Origin
 ---
 {{HTTPSidebar}}
 

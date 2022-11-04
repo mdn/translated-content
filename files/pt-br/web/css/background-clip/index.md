@@ -1,10 +1,6 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
-tags:
-  - CSS clip
-  - cor de fundo
-translation_of: Web/CSS/background-clip
 ---
 {{CSSRef}}
 

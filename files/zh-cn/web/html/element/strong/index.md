@@ -77,4 +77,4 @@ When doing x it is imperative to do y before proceeding.
 - [HTML bold element](/zh-CN/docs/Web/HTML/Element/b)
 - [HTML em element](/zh-CN/docs/Web/HTML/Element/em)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

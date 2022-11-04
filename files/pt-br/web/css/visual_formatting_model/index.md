@@ -1,11 +1,6 @@
 ---
 title: Modelo de formatação visual
 slug: Web/CSS/Visual_formatting_model
-tags:
-  - CSS
-  - CSS conceitos basicos
-  - Intermediário
-translation_of: Web/CSS/Visual_formatting_model
 original_slug: Web/CSS/Modelo_Visual
 ---
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Symbol.species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
 ---
 {{JSRef}}
 

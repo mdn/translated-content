@@ -1,16 +1,6 @@
 ---
 title: Path2D
 slug: Web/API/Path2D
-tags:
-  - Canvas
-  - Compatibilidade
-  - Interface
-  - JavaScript
-  - Métodos
-  - Pacote 2D
-  - Path2D
-  - Referencia
-translation_of: Web/API/Path2D
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 

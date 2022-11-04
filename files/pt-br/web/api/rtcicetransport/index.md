@@ -1,17 +1,6 @@
 ---
 title: RTCIceTransport
 slug: Web/API/RTCIceTransport
-tags:
-  - API
-  - Audio
-  - Interface
-  - RTCIceTransport
-  - Referencia
-  - Video
-  - WebRTC
-  - WebRTC API
-  - rtc
-translation_of: Web/API/RTCIceTransport
 ---
 {{APIRef("WebRTC")}}
 

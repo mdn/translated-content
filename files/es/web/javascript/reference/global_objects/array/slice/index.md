@@ -23,7 +23,7 @@ arr.slice([inicio [, fin]])
 - `inicio`
   - : Índice donde empieza la extracción. El primer elemento corresponde con el índice 0.
 
-    Si el índice especificado es negativo, indica un desplazamiento desde el final del array.`slice(-2)`extrae los dos últimos elementos del array
+    Si el índice especificado es negativo, indica un desplazamiento desde el final del array.`slice(-2)` extrae los dos últimos elementos del array
 
     Si `inicio` es omitido el valor por defecto es `0`.
 

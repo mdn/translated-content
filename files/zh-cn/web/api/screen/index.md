@@ -41,7 +41,7 @@ slug: Web/API/Screen
 ### Events handler
 
 - {{domxref("Screen.onorientationchange")}}
-  - : 对{{event("orientationchange")}} 事件的时间处理器。
+  - : 对[`orientationchange`](/zh-CN/docs/Web/API/Window/orientationchange_event) 事件的时间处理器。
 
 ## 方法
 

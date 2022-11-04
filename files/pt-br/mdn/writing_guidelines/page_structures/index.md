@@ -1,7 +1,6 @@
 ---
 title: Tabelas de compatibilidade
 slug: MDN/Writing_guidelines/Page_structures
-translation_of: MDN/Structures/Compatibility_tables
 original_slug: MDN/Structures/Compatibility_tables
 ---
 {{MDNSidebar}}

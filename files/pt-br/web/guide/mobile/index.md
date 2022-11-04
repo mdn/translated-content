@@ -1,7 +1,6 @@
 ---
 title: Mobile Web Development
 slug: Web/Guide/Mobile
-translation_of: Web/Guide/Mobile
 ---
 Esta página fornece uma visão geral de algumas das principais técnicas necessárias para desenvolver websites que trabalham bem em dispositivos moveis. Se você esta vendo esta informação no projeto Firefox OS da Mozilla, veja a página [Firefox OS](/en/Mozilla/Firefox_OS). Ou você pode estar interessado em detalhes sobre [Firefox para Android](/en/Mozilla/Firefox_for_Android).
 

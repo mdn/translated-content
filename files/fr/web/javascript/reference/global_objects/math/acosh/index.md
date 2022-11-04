@@ -36,7 +36,7 @@ L'arc cosinus hyperbolique du nombre en argument. Si le nombre est inférieur à
 
 ## Description
 
-`acos`h étant une méthode statique de `Math`, il faut l'utiliser avec `Math.acosh()`, plutôt qu'en faisant appel à une méthode d'un autre objet créé (`Math` n'est pas un constructeur).
+`acosh` étant une méthode statique de `Math`, il faut l'utiliser avec `Math.acosh()`, plutôt qu'en faisant appel à une méthode d'un autre objet créé (`Math` n'est pas un constructeur).
 
 ## Exemple
 

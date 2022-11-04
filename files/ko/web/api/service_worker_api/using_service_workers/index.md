@@ -41,11 +41,11 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 6. 다음은 활성(activation) 이벤트입니다. 서비스 워커가 설치되면, 활성 이벤트를 받게 됩니다. `onactivate` 는 이전 버전의 서비스 워커 스크립트에서 사용된 리소스들을 삭제하는 용도로서 주로 사용됩니다.
 7. 이제 서비스 워커가 페이지들을 제어하게 될 것이지만, 오직 `register()` 가 성공적으로 수행된 후에 페이지들이 열리게 될 것입니다. 즉, 문서는 서비스 워커와 함께, 또는 없이도 라이프를 시작하고 유지합니다. 따라서 문서는 실제로 서비스 워커에 제어되기 위해서 재시작 되어야 할 것입니다.
 
-![](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers/sw-lifecycle.png)
+![](sw-lifecycle.png)
 
 The below graphic shows a summary of the available service worker events:
 
-![install, activate, message, fetch, sync, push](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers/sw-events.png)
+![install, activate, message, fetch, sync, push](sw-events.png)
 
 ### Promises
 
@@ -434,7 +434,7 @@ Firefox has also started to implement some useful tools related to service worke
 
 ## See also
 
-- [The Service Worker Cookbook](https://serviceworke.rs/)
+- [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - Download the [Service Workers 101 cheatsheet](https://mdn.mozillademos.org/files/12638/sw101.png).
 - [Promises](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)

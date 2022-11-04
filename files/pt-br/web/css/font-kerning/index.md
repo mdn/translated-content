@@ -1,7 +1,6 @@
 ---
 title: font-kerning
 slug: Web/CSS/font-kerning
-translation_of: Web/CSS/font-kerning
 ---
 {{CSSRef}}
 

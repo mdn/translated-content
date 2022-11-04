@@ -25,7 +25,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
-          cache: 'yarn'
+          cache: "yarn"
           cache-dependency-path: mdn/content/yarn.lock
 
       - name: Install all yarn packages

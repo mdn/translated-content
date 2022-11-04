@@ -3,7 +3,7 @@ title: 标准元数据名称
 slug: Web/HTML/Element/meta/name
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The {{htmlelement("meta")}} 元素可用于提供 名称 - 值 对形式的文档元数据，{{htmlattrxref("name", "meta")}} 属性为元数据条目提供名称，而 {{htmlattrxref("content", "meta")}} 属性提供值。
 
@@ -85,10 +85,6 @@ CSS 设备适配规范（CSS Device Adaptation specification）定义了以下�
 
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
-
-##### 参见
-
-  [`@viewport`](/zh-CN/docs/Web/CSS/@viewport) CSS @ 规则。
 
 ### 其他元数据名称
 

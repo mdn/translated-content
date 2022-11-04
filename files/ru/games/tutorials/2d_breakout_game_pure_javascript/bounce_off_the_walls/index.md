@@ -29,7 +29,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_
 var ballRadius = 10;
 ```
 
-Теперь обновите строку, которая рисует шарик, внутри функции `drawBall() `:
+Теперь обновите строку, которая рисует шарик, внутри функции `drawBall()`:
 
 ```js
 ctx.arc(x, y, ballRadius, 0, Math.PI*2);

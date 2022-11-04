@@ -1,14 +1,6 @@
 ---
 title: element
 slug: Web/CSS/element
-tags:
-  - Background
-  - CSS
-  - CSS4-images
-  - Função CSS
-  - Layout
-  - Web
-translation_of: Web/CSS/element()
 original_slug: Web/CSS/element()
 ---
 {{CSSRef}}{{SeeCompatTable}}

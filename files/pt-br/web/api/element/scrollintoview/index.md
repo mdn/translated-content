@@ -1,18 +1,6 @@
 ---
 title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
-tags:
-  - API
-  - CSSOM Views
-  - DOM
-  - Elemento
-  - Experimental
-  - Referencia
-  - Rolagem
-  - View
-  - metodo
-  - scrollIntoView
-translation_of: Web/API/Element/scrollIntoView
 ---
 {{ APIRef("DOM")}}{{SeeCompatTable}}
 

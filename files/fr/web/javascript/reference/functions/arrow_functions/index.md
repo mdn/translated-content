@@ -126,7 +126,7 @@ function Personne () {
 
 Autrement, on aurait pu utiliser une [fonction de liaison](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/bind) afin que la bonne valeur `this` soit passée à la fonction `grandir`.
 
-Les fonctions fléchées ne créent pas de nouveau contexte, elles utilisent la valeur `this` de leur contexte. Aussi, si le mot-clé `this` est utilisé dans le corps de la fonction, le moteur recherchera la référence à cette valeur dans une portée parente. Le code qui suit fonctionne ainsi de la façon attendue car le `this` utilisé dans `setInterval` est le `this`de la portée de `Personne` :
+Les fonctions fléchées ne créent pas de nouveau contexte, elles utilisent la valeur `this` de leur contexte. Aussi, si le mot-clé `this` est utilisé dans le corps de la fonction, le moteur recherchera la référence à cette valeur dans une portée parente. Le code qui suit fonctionne ainsi de la façon attendue car le `this` utilisé dans `setInterval` est le `this` de la portée de `Personne` :
 
 ```js
 function Personne () {

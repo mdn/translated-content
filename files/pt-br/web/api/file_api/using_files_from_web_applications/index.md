@@ -1,7 +1,6 @@
 ---
 title: Using files from web applications
 slug: Web/API/File_API/Using_files_from_web_applications
-translation_of: Web/API/File/Using_files_from_web_applications
 original_slug: Web/API/File/Using_files_from_web_applications
 ---
 Usando a File API adicionada ao DOM em HTML5, agora é possível para conteúdo web solicitar ao usuário para selecionar arquivos locais, e então ler o conteúdo desses arquivos. Essa seleção pode ser feita usando um elemento HTML {{HTMLElement("input") }} ou por arrastar e soltar.

@@ -1,7 +1,6 @@
 ---
 title: <section>
 slug: Web/HTML/Element/section
-translation_of: Web/HTML/Element/section
 ---
 O **elemento HTML `<section>`** representa uma seção genérica contida em um documento HTML, geralmente com um título, quando não existir um elemento semântico mais específico para representá-lo.
 

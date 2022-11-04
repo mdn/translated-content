@@ -1,19 +1,6 @@
 ---
 title: '<title>: O titulo do documento.'
 slug: Web/HTML/Element/title
-tags:
-  - Element
-  - HTML
-  - Nome da Aba
-  - Nome da Janela
-  - Nome da Página
-  - Reference
-  - Título da Aba
-  - Título da Janela
-  - Título da Página
-  - Web
-  - título
-translation_of: Web/HTML/Element/title
 ---
 O **elemento HTML** `<title>` (_Elemento HTML Título_) define o título do documento, mostrado na barra de título de um navegador ou na aba da página. Pode conter somente texto e quaisquer marcações contidas no texto não são interpretadas.
 

@@ -1,15 +1,6 @@
 ---
 title: Referer
 slug: Web/HTTP/Headers/Referer
-tags:
-  - HTTP
-  - Reference
-  - Referencia
-  - Referenciado
-  - cabeçalho
-  - header
-  - referer
-translation_of: Web/HTTP/Headers/Referer
 ---
 {{HTTPSidebar}}
 
@@ -51,7 +42,7 @@ Referer: <url>
 ## Exemplos
 
 ```
-Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Referer: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
 ```
 
 ## Especificações

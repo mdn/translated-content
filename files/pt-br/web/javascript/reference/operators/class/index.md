@@ -1,16 +1,6 @@
 ---
 title: class expression
 slug: Web/JavaScript/Reference/Operators/class
-tags:
-  - Classes
-  - ECMAScript 2015
-  - Expression
-  - Expressão
-  - Operador
-  - Operator
-  - Reference
-  - Referencia
-translation_of: Web/JavaScript/Reference/Operators/class
 ---
 {{jsSidebar("Operators")}}
 

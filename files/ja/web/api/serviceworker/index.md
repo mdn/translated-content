@@ -76,7 +76,7 @@ if ('serviceWorker' in navigator) {
 
 ## 関連
 
-- [ServiceWorker Cookbook](https://serviceworke.rs)
+- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Service Workers を使用する](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)

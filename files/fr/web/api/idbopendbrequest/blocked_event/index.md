@@ -52,16 +52,6 @@ req1.onsuccess = function( event ) {
 };
 ```
 
-## Evénements liés
-
-- {{event("success")}}
-- {{event("error")}}
-- {{event("abort")}}
-- {{event("complete")}}
-- {{event("upgradeneeded")}}
-- {{event("blocked")}}
-- {{event("versionchange")}}
-
 ## Voir aussi
 
 - [Utilisation d'IndexedDB](/fr/docs/IndexedDB/Using_IndexedDB)

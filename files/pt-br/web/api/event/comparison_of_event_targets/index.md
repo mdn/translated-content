@@ -1,11 +1,6 @@
 ---
 title: Comparativo entre Event Targets
 slug: Web/API/Event/Comparison_of_Event_Targets
-tags:
-  - DOM
-  - Event
-  - event target
-translation_of: Web/API/Event/Comparison_of_Event_Targets
 original_slug: Web/API/Event/Comparativo_entre_Event_Targets
 ---
 {{ ApiRef() }}

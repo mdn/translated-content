@@ -10,7 +10,7 @@ tags:
   - details
 translation_of: Web/HTML/Element/details
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 HTML-элемент** `<details>`** используется для раскрытия скрытой (дополнительной) информации.
 

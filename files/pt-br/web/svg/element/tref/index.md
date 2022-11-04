@@ -1,12 +1,6 @@
 ---
 title: tref
 slug: Web/SVG/Element/tref
-tags:
-  - Conteúdo Textual
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/tref
 ---
 {{SVGRef}}
 

@@ -69,7 +69,7 @@ first.onchange = function() {
 
 ### 跨域行为的错误事件
 
-浏览器的早期版本中，加载跨域的执行者脚本导致 `SecurityError`事件。根据规范的变更，而新版本的浏览器只有{{event("error")}}事件发生
+浏览器的早期版本中，加载跨域的执行者脚本导致 `SecurityError`事件。根据规范的变更，而新版本的浏览器只有[`error`](/zh-CN/docs/Web/API/Element/error_event)事件发生
 
 ## 相关链接
 

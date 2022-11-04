@@ -1,15 +1,6 @@
 ---
 title: Arrastar e soltar
 slug: Web/API/HTML_Drag_and_Drop_API
-tags:
-  - Avançado
-  - Guia(2)
-  - HTML5
-  - Visão Geral
-  - XUL
-  - arrastar e soltar
-  - eventos
-translation_of: Web/API/HTML_Drag_and_Drop_API
 original_slug: DragDrop/Drag_and_Drop
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
