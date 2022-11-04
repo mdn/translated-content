@@ -9,11 +9,11 @@ slug: Glossary/Shallow_copy
 
 对于浅拷贝，有选择地更改对象中现有元素的共享属性的值与给现有元素赋一个全新的值是不同的，理解这一点很重要。
 
-例如，如果在一个数组对象名为 `copy` 的浅拷贝中，`copy[0]` 元素的值是 `{"list":["butter"，"flour"]}`，并且执行 `copy[0].List = ["oil"，"flour"]`，那么源对象中的相应元素也将发生变化——因为你有选择地更改了源对象和浅拷贝共享的对象的属性。
+例如，如果在一个数组对象名为 `copy` 的浅拷贝中，`copy[0]` 元素的值是 `{"list":["butter"，"flour"]}`，然后执行 `copy[0].List = ["oil"，"flour"]`，那么源对象中的相应元素也将发生变化——因为你有选择地更改了源对象和浅拷贝共享的对象的属性。
 
 然而，如果你做的是 `copy[0] = {"list":["oil"，"flour"]}`，那么源对象中的对应元素将**不会改变**——因为在这种情况下，你不仅仅是有选择地改变了浅拷贝与源对象共享的现有数组元素的属性；相反，你实际上是在浅拷贝中分配了一个全新的值给 `copy[0]` 数组元素。
 
-在 JavaScript 中，所有标准的内置对象复制操作是（[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、[`Array.prototype.concat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)、[`Array.prototype.slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)、[`Array.from()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)、[`Object.assign()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 和 [`Object.create()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create)）创建浅拷贝而不是深拷贝。
+在 JavaScript 中，所有标准的内置对象复制操作（[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、[`Array.prototype.concat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)、[`Array.prototype.slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)、[`Array.from()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)、[`Object.assign()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 和 [`Object.create()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create)）创建的是浅拷贝而不是深拷贝。
 
 ## 示例
 
