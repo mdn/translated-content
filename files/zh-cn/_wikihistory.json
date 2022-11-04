@@ -25917,10 +25917,6 @@
     "modified": "2020-03-30T11:15:40.777Z",
     "contributors": ["RainSlide", "teoli", "ziyunfei"]
   },
-  "Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol": {
-    "modified": "2020-03-12T19:44:37.222Z",
-    "contributors": ["wwj402", "jwhitlock", "lsvih"]
-  },
   "Web/JavaScript/Reference/Errors": {
     "modified": "2020-03-12T19:43:37.546Z",
     "contributors": ["Ende93", "Jack-Q", "sabertazimi"]
