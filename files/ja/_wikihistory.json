@@ -31296,14 +31296,6 @@
       "electrolysis"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
-    "modified": "2019-03-23T22:54:31.407Z",
-    "contributors": ["teoli", "YuichiNukiyama", "shide55"]
-  },
-  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_df783faa96fb2729e58461fd21615e98": {
-    "modified": "2020-03-12T19:41:30.751Z",
-    "contributors": ["yyss", "shide55"]
-  },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
