@@ -14,6 +14,8 @@ the h1 and applies the style to h1 */
 h1:has(+ p) { margin-bottom: 0; }
 ```
 
+`:has()` 伪类的[优先级](/zh-CN/docs/Web/CSS/Specificity)计算方法与 {{CSSxRef(":is", ":is()")}} 和 {{CSSxRef(":not", ":not()")}} 相同：以其参数中具体的选择器进行计算。
+
 ## 语法
 
 ```
@@ -28,7 +30,7 @@ h1:has(+ p) { margin-bottom: 0; }
 
 ## 示例
 
-### 与兄弟组合符一起
+### 与兄弟组合器一起使用
 
 以下示例中的 `:has()` 样式声明会调整 `H1` 标题后面的间距，如果它们后面紧跟着 `H2` 标题。
 
@@ -84,13 +86,13 @@ h1:has(+ h2) {
 
 #### 结果
 
-{{EmbedLiveSample('With_the_sibling_combinator', 600, 150)}}
+{{EmbedLiveSample('与兄弟组合器一起使用', 600, 150)}}
 
-This example shows two similar texts side-by-side for comparison – the left one with an `H1` heading followed by a paragraph and the right one with an `H1` heading followed by an `H2` heading and then a paragraph. In the example on the right, `:has()` helps to select the `H1` element that is immediately followed by an `H2` element (indicated by the adjacent sibling combinator[`+`](/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator)) and the CSS rule reduces the spacing after such an `H1` element. Without the `:has()` pseudo-class, you cannot use CSS selectors to select a preceding sibling of a different type or a parent element.
+该示例并排显示了两个相似的文本，以进行比较：左侧的带有 `H1` 标题，并紧跟一个段落，而右侧的带有 `H1` 标题，并紧跟一个 `H2` 标题和一个段落。该示例的右侧，`:has()` 可以帮助选择 `H1` 元素后紧跟的 `H2` 元素（由兄弟选择器 [`+`](/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator) 指示），并通过 CSS 规则来减少此类 `H1` 元素后的间距。若没有 `:has()` 伪类，你就无法使用 CSS 选择器来选择具有不同类型的前一个兄弟元素或父元素。
 
-### 与 :is() 伪类一起
+### 与 :is() 伪类一起使用
 
-这个例子建立在前一个例子之上，展示了如何用 `:has()` 选择多个元素。
+这个示例建立在前一个示例之上，展示了如何用 `:has()` 选择多个元素。
 
 #### HTML
 
@@ -151,9 +153,9 @@ h1, h2, h3 {
 
 #### 结果
 
-{{EmbedLiveSample('With_the_:is()_pseudo-class', 600, 170)}}
+{{EmbedLiveSample('与 :is() 伪类一起使用', 600, 170)}}
 
-Here, the first [`:is()`](/zh-CN/docs/Web/CSS/:is) pseudo-class is used to select any of the heading elements in the list. The second `:is()` pseudo-class is used to pass a list of adjacent sibling selectors as an argument to `:has()`. The `:has()` pseudo-class helps to select any `H1`, `H2`, or `H3` element that is immediately followed by (indicated by [`+`](/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator)) an `H2`, `H3`, or `H4` element and the CSS rule reduces the spacing after such `H1`, `H2`, or `H3` elements.
+这里，第一个 [`:is()`](/zh-CN/docs/Web/CSS/:is) 伪类用于选择列表中的任何标题元素。第二个 `:is()` 伪类用于将相邻的兄弟选择器的列表作为参数传递给 `:has()`。`:has()` 伪类用于选择任何一个紧跟 `H2`、`H3` 或 `H4` 的 `H1`、`H2`、`H3` 元素（使用 [`+`](/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator) 指示），并使用 CSS 规则来减少此类 `H1`、`H2` 或 `H3` 元素后的间距。
 
 这个选择器也可以写作：
 
