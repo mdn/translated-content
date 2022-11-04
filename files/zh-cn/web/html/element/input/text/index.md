@@ -5,7 +5,7 @@ slug: Web/HTML/Element/Input/text
 
 {{HTMLSidebar}}
 
-**`text`** 类型的 {{HTMLElement("input")}} 元素创建了基础的单行文本域。
+**`text`** 类型的 {{HTMLElement("input")}} 元素创建了基础的单行文本字段。
 
 {{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
 
@@ -13,7 +13,7 @@ slug: Web/HTML/Element/Input/text
  <tbody>
   <tr>
    <td><strong><a href="#值">值</a></strong></td>
-   <td>代表包含在文本域中的文字</td>
+   <td>代表包含在文本字段中的文字</td>
   </tr>
   <tr>
    <td><strong>事件</strong></td>
@@ -33,7 +33,7 @@ slug: Web/HTML/Element/Input/text
     </tr>
   <tr>
    <td><strong>方法</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}、{{domxref("HTMLInputElement.setRangeText", "setRangeText()")}} 和  {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.</td>
+   <td>{{domxref("HTMLInputElement.select", "select()")}}、{{domxref("HTMLInputElement.setRangeText", "setRangeText()")}} 和 {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}。</td>
   </tr>
  </tbody>
 </table>
@@ -48,27 +48,27 @@ let theText = myTextInput.value;
 
 如果当前文本输入没有约束验证（查看[验证](#验证)小节获取更多详细信息），`value` 值可能是空字符串（`""`）。
 
-## 其他属性
+## 其它属性
 
 除了所有 {{HTMLElement("input")}} 元素上共有的可操作的属性外，文本输入框还支持以下属性：
 
-### list
+### `list`
 
 列表属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 {{htmlattrxref("type", "input")}} 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
-### maxlength
+### `maxlength`
 
 用户可以输入到 `text` 输入框中的最大字符数（以 UTF-16 码点为单位）。必须为大于等于 0 的整数。如果未指定 `maxlength` 或指定了无效的值，则 `text` 输入框将没有最大值。这个值也必须大于等于 `minlength` 的值。
 
 如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
 
-### minlength
+### `minlength`
 
 用户可以输入到 `text` 输入框中的最小字符数（以 UTF-16 码点为单位）。该值必须是小于等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效的值，则 `text` 输入将没有最小值。
 
 如果输入到字段中的文本的长度小于 `minlength` UTF-16 代码单元的长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
 
-### pattern
+### `pattern`
 
 如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
@@ -78,7 +78,7 @@ let theText = myTextInput.value;
 
 请参照[指定模式](#指定模式)更多内容和例子。
 
-### placeholder
+### `placeholder`
 
 `placeholder` 属性是一个字符串，可向用户提供有关该字段中需要什么样的信息的简短提示。它应该是一个单词或短语来说明预期的数据类型，而不是说明性消息。文本中*不得*包含回车符或换行符。
 
@@ -86,19 +86,19 @@ let theText = myTextInput.value;
 
 > **备注：** 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 {{SectionOnPage("/zh-CN/docs/Web/HTML/Element/input", "标签与占位符")}} 以获取更多信息。
 
-### readonly
+### `readonly`
 
 一个布尔属性，如果存在，则表示该字段不能由用户编辑。但是，仍可以通过 JavaScript 代码直接设置 {{domxref("HTMLInputElement")}} 的 `value` 属性来更改。
 
 > **备注：** 因为只读字段不能有值，所以 `required` 对指定了 `readonly` 属性的输入没有任何影响。
 
-### size
+### `size`
 
 `size` 属性是一个数字值，指示输入字段应有多少个字符宽。该值必须是一个大于零的数字，默认值是 20。由于字符宽度各不相同，这可能是也可能不是精确的，不应依赖于此；结果输入可能比指定的字符数更窄或更宽，这取决于字符和字体（{{cssxref("font")}}使用中的设置）。
 
 这并*不*限制用户可以在该字段中输入多少个字符，仅能指定一次可以看到多少个。要设置输入数据长度的上限，请使用 [`maxlength`](#maxlength) 属性。
 
-### spellcheck
+### `spellcheck`
 
 `spellcheck` 是一个全局属性，用于指示是否启用元素的拼写检查。它可以用于任何可编辑的内容，但是这里我们考虑在 {{HTMLElement("input")}} 元素上使用 `spellcheck` 的细节。 `spellcheck` 的允许值为：
 
@@ -134,7 +134,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 ## 使用文本输入框
 
-`<input>` 元素的 `text` 类型创建基本的单行输入。你应该在希望用户输入单行值的任何地方使用它们，并且没有更具体的输入类型可用于收集该值（例如，如果是[日期或时间](/zh-CN/docs/Web/HTML/Element/input/datetime-local)、[URL 网址](/zh-CN/docs/Web/HTML/Element/input/url)、[电子邮件](/zh-CN/docs/Web/HTML/Element/input/email) 或[查找词汇](/zh-CN/docs/Web/HTML/Element/input/search)，你将拥有更好的选择）。
+`<input>` 元素的 `text` 类型创建基本的单行输入。你应该在希望用户输入单行值的任何地方使用它们，并且没有更具体的输入类型可用于收集该值（例如，如果是[日期或时间](/zh-CN/docs/Web/HTML/Element/input/datetime-local)、[URL](/zh-CN/docs/Web/HTML/Element/input/url)、[电子邮件](/zh-CN/docs/Web/HTML/Element/input/email)或[查找词汇](/zh-CN/docs/Web/HTML/Element/input/search)，你将拥有更好的选择）。
 
 ### 基础示例
 
@@ -390,7 +390,7 @@ input:valid + span::after {
 
 ## 示例
 
-可以在[你的第一个 HTML 表单](/zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form) 和[如何结构化 HTML 表单](/zh-CN/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)文章中看到一些好的示例。
+可以在[你的第一个 HTML 表单](/zh-CN/docs/Learn/Forms/Your_first_form)和[如何结构化 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)文章中看到一些好的示例。
 
 ## 规范
 
@@ -402,7 +402,7 @@ input:valid + span::after {
 
 ## 参阅
 
-- [HTML 表单](/zh-CN/docs/Learn/HTML/Forms)
+- [HTML 表单](/zh-CN/docs/Learn/Forms)
 - {{HTMLElement("input")}} 元素和其基于的接口 {{domxref("HTMLInputElement")}}
 - [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}：多行文本输入元素
