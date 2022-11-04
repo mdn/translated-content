@@ -73,7 +73,7 @@ Liens:
 
 ### JavaScript
 
-- La "[temporal dead zone](/fr/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)" pour les déclarations [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) a été implementée.  En conformité avec les sémantiques `let`ES6, les situations suivantes renvoyent des erreurs. Voir aussi cet [annoncement de newsgroup](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) et [bug 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090).
+- La "[temporal dead zone](/fr/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)" pour les déclarations [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) a été implementée.  En conformité avec les sémantiques `let` ES6, les situations suivantes renvoyent des erreurs. Voir aussi cet [annoncement de newsgroup](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) et [bug 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090).
 
   - Redéclarer des variables existantes ou arguments utilisant `let` sans la même portée dans le corps de fonctions est maintenant une erreur de syntaxe.
   - Utiliser une variable déclarée en utilisant `let` dans le corps de fonctions avant la déclaration de cette variable est maintenant une erreur d'exécution.

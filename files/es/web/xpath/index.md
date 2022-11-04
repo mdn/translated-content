@@ -53,5 +53,3 @@ XPath usa una notación de caminos (como en los URLs) para navegar por la estruc
   - : [XSLT](/es/XSLT)
     , [XML](/es/XML)
     , [DOM](/es/DOM)
-
-{{ languages( { "cs": "cs/XPath", "en": "en/XPath", "fr": "fr/XPath", "ja": "ja/XPath", "ko": "ko/XPath", "pl": "pl/XPath", "zh-cn": "cn/XPath" } ) }}

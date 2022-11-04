@@ -6,7 +6,7 @@ tags:
   - прогресс
 translation_of: Web/HTML/Element/meter
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML-элемент `<meter>` **представляет собой скалярное значение в пределах известного диапазона или дробного значения.
 

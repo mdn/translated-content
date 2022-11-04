@@ -38,7 +38,7 @@ A diferença entre `PUT` e {{HTTPMethod("POST")}} é que `PUT` é idempotente: c
     <tr>
       <th scope="row">
         Permitido em
-        <a href="/en-US/docs/Web/Guide/HTML/Forms">formulários HTML</a>
+        <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulários HTML</a>
       </th>
       <td>Não</td>
     </tr>

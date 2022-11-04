@@ -62,4 +62,4 @@ This text is superscripted
 - {{ HTMLElement("sub") }} HTML 元素会产生下标。要注意，你不能同时使用它们，你需要 [MathML](/zh-CN/docs/MathML) 来同时产生化学符号旁边的下标和上标，代表它的序号和核子数。
 - [`<msub>`](/zh-CN/docs/MathML/Element/msub), [`<msup>`](/zh-CN/docs/MathML/Element/msup), 和 [`<msubsup>`](/zh-CN/docs/MathML/Element/msubsup) MathML 元素。
 
-{{HTMLRef}}
+{{HTMLSidebar}}

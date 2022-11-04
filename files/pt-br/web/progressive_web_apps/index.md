@@ -48,7 +48,7 @@ The following guides show you what need to do to implement a PWA, by examining a
 - [sw-precache](https://github.com/GoogleChrome/sw-precache) — a node module to generate service worker code that will precache specific resources.
 - [workbox](https://github.com/GoogleChrome/workbox) — spiritual successor to sw-precache with more advanced caching strategies and easy precaching.
 - [upup](https://www.talater.com/upup/) — a tiny script that makes sure your site is always there for your users.
-- [The service worker cookbook](https://serviceworke.rs/) — A series of excellent service worker/push recipes, showing how to implement an offline app, but also much more.
+- [The service worker cookbook](https://github.com/mdn/serviceworker-cookbook/) — A series of excellent service worker/push recipes, showing how to implement an offline app, but also much more.
 
 ## See also
 

@@ -13,7 +13,7 @@ slug: Learn/JavaScript/Objects
 
 你也應該已經初步了解過 JavaScript 基本概念，再進一步閱讀 JavaScript 物件。所以另請先看過〈[JavaScript 的第一步](/zh-TW/docs/Learn/JavaScript/First_steps)〉與〈[JavaScript 基礎要件](/zh-TW/docs/Learn/JavaScript/Building_blocks)〉。
 
-> **備註：** 如果你在使用的桌機＼平板＼其他裝置，無法讓你建立自己的檔案，則可透過如 [JSBin](http://jsbin.com/) 或 [Thimble](https://thimble.mozilla.org/) 的線上編碼程式，來體驗 (大多數的) 範例程式碼。
+> **備註：** 如果你在使用的桌機＼平板＼其他裝置，無法讓你建立自己的檔案，則可透過如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 的線上編碼程式，來體驗（大多數的）範例程式碼。
 
 ## 指南
 

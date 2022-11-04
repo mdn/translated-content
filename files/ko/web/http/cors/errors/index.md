@@ -32,8 +32,8 @@ origin 정책([same-origin policy](/ko/docs/Web/Security/Same-origin_policy))을
 
 CORS 설정 이슈를 근본적으로 이해하려면 어떤 요청이 문제이고 왜 문제인지를 파악할 필요가 있습니다. 다음 단계들을 따라하면 도움이 될 것입니다.
 
-1.  웹사이트나 웹앱으로 이동하여 [Developer Tools](/ko/docs/Tools)을 여세요.
-2.  실패한 요청을 재현하고 나서 CORS 위반 에러 메시지가 떴다면 [console](/ko/docs/Tools/Web_Console)을 확인하세요. 메시지는 다음과 같을 겁니다:
+1. 웹사이트나 웹앱으로 이동하여 [Developer Tools](/ko/docs/Tools)을 여세요.
+2. 실패한 요청을 재현하고 나서 CORS 위반 에러 메시지가 떴다면 [console](/ko/docs/Tools/Web_Console)을 확인하세요. 메시지는 다음과 같을 겁니다:
 
 ![Firefox console showing CORS error](https://mdn.mozillademos.org/files/16050/cors-error2.png)
 

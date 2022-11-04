@@ -12,11 +12,11 @@ translation_of: Web/HTTP/Overview
 
 **HTTP는 HTML 문서와 같은 리소스들을 가져올 수 있도록 해주는** {{glossary("protocol", "프로토콜")}}입니다. HTTP는 웹에서 이루어지는 모든 데이터 교환의 기초이며, 클라이언트-서버 프로토콜이기도 합니다. 클라이언트-서버 프로토콜이란 (보통 웹브라우저인) 수신자 측에 의해 요청이 초기화되는 프로토콜을 의미합니다. 하나의 완전한 문서는 텍스트, 레이아웃 설명, 이미지, 비디오, 스크립트 등 불러온(fetched) 하위 문서들로 재구성됩니다.
 
-![A Web document is the composition of different resources](https://user-images.githubusercontent.com/13804810/191727034-a0fbcc05-d1b7-45ef-978d-230389f5c23e.png)
+![A Web document is the composition of different resources](fetching_a_page.png)
 
 클라이언트와 서버들은 (데이터 스트림과 대조적으로) 개별적인 메시지 교환에 의해 통신합니다. 보통 브라우저인 클라이언트에 의해 전송되는 메시지를 *요청(requests)이*라고 부르며, 그에 대해 서버에서 응답으로 전송되는 메시지를 응답(*responses)이*라고 부릅니다.
 
-![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http-layers.png)1990년대 초에 설계된 HTTP는 거듭하여 진화해온 확장 가능한 프로토콜입니다. HTTP는 애플리케이션 계층의 프로토콜로, 신뢰 가능한 전송 프로토콜이라면 이론상으로는 무엇이든 사용할 수 있으나 {{glossary("TCP")}} 혹은 암호화된 TCP 연결인 {{glossary("TLS")}}를 통해 전송됩니다. HTTP의 확장성 덕분에, 오늘날 하이퍼텍스트 문서 뿐만 아니라 이미지와 비디오 혹은 HTML 폼 결과와 같은 내용을 서버로 포스트(POST)하기 위해서도 사용됩니다. HTTP는 또한 필요할 때마다 웹 페이지를 갱신하기 위해 문서의 일부를 가져오는데 사용될 수도 있습니다.
+![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](http-layers.png)1990년대 초에 설계된 HTTP는 거듭하여 진화해온 확장 가능한 프로토콜입니다. HTTP는 애플리케이션 계층의 프로토콜로, 신뢰 가능한 전송 프로토콜이라면 이론상으로는 무엇이든 사용할 수 있으나 {{glossary("TCP")}} 혹은 암호화된 TCP 연결인 {{glossary("TLS")}}를 통해 전송됩니다. HTTP의 확장성 덕분에, 오늘날 하이퍼텍스트 문서 뿐만 아니라 이미지와 비디오 혹은 HTML 폼 결과와 같은 내용을 서버로 포스트(POST)하기 위해서도 사용됩니다. HTTP는 또한 필요할 때마다 웹 페이지를 갱신하기 위해 문서의 일부를 가져오는데 사용될 수도 있습니다.
 
 ## HTTP 기반 시스템의 구성요소
 
@@ -100,8 +100,8 @@ HTTP의 확장 가능한 특성은 수년 간에 걸쳐 웹의 점점 더 많은
 
 클라이언트가 서버와 통신하고자 할 때, 최종 서버가 됐든 중간 프록시가 됐든, 다음 단계의 과정을 수행합니다:
 
-1.  TCP 연결을 엽니다:TCP 연결은 요청을 보내거나(혹은 여러개의 요청) 응답을 받는데 사용됩니다. 클라이언트는 새 연결을 열거나, 기존 연결을 재사용하거나, 서버에 대한 여러 TCP 연결을 열 수 있습니다.
-2.  HTTP 메시지를 전송합니다: HTTP 메시지(HTTP/2 이전의)는 인간이 읽을 수 있습니다. HTTP/2에서는 이런 간단한 메시지가 프레임 속으로 캡슐화되어, 직접 읽는게 불가능하지만 원칙은 동일합니다.
+1. TCP 연결을 엽니다:TCP 연결은 요청을 보내거나(혹은 여러개의 요청) 응답을 받는데 사용됩니다. 클라이언트는 새 연결을 열거나, 기존 연결을 재사용하거나, 서버에 대한 여러 TCP 연결을 열 수 있습니다.
+2. HTTP 메시지를 전송합니다: HTTP 메시지(HTTP/2 이전의)는 인간이 읽을 수 있습니다. HTTP/2에서는 이런 간단한 메시지가 프레임 속으로 캡슐화되어, 직접 읽는게 불가능하지만 원칙은 동일합니다.
 
     ```html
     GET / HTTP/1.1
@@ -109,7 +109,7 @@ HTTP의 확장 가능한 특성은 수년 간에 걸쳐 웹의 점점 더 많은
     Accept-Language: fr
     ```
 
-3.  서버에 의해 전송된 응답을 읽어들입니다:
+3. 서버에 의해 전송된 응답을 읽어들입니다:
 
     ```html
     HTTP/1.1 200 OK
@@ -124,7 +124,7 @@ HTTP의 확장 가능한 특성은 수년 간에 걸쳐 웹의 점점 더 많은
     <!DOCTYPE html... (here comes the 29769 bytes of the requested web page)
     ```
 
-4.  연결을 닫거나 다른 요청들을 위해 재사용합니다.
+4. 연결을 닫거나 다른 요청들을 위해 재사용합니다.
 
 HTTP 파이프라이닝이 활성화되면, 첫번째 응답을 완전히 수신할 때까지 기다리지 않고 여러 요청을 보낼 수 있습니다. HTTP 파이프라이닝은 오래된 소프트웨어와 최신 버전이 공존하고 있는, 기존의 네트워크 상에서 구현하기 어렵다는게 입증되었으며, 프레임안에서 보다 활발한 다중 요청을 보내는 HTTP/2로 교체되고 있습니다.
 

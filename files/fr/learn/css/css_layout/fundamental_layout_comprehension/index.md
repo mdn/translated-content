@@ -38,7 +38,7 @@ Vous avez reçu du HTML brut, du CSS de base et des images - vous devez maintena
 
 Vous pouvez télécharger le code HTML, CSS et un ensemble de six images [ici](https://github.com/mdn/learning-area/tree/master/css/css-layout/fundamental-layout-comprehension) .
 
-Enregistrez le document HTML et la feuille de style dans un répertoire de votre ordinateur, puis ajoutez les images dans un dossier nommé `images`. Ouvrir le `index.html`fichier dans un navigateur devrait vous donner une page avec un style de base mais pas de mise en page, ce qui devrait ressembler à l'image ci-dessous.
+Enregistrez le document HTML et la feuille de style dans un répertoire de votre ordinateur, puis ajoutez les images dans un dossier nommé `images`. Ouvrir le `index.html` fichier dans un navigateur devrait vous donner une page avec un style de base mais pas de mise en page, ce qui devrait ressembler à l'image ci-dessous.
 
 Ce point de départ contient tout le contenu de votre mise en page, tel qu’il est affiché par le navigateur dans un flux normal.
 

@@ -116,5 +116,4 @@ margin: 10px 5px 10px 5px;
 ## Veja também
 
 - [CSS Reference](/pt-BR/docs/CSS/CSS_Reference)
-- {{css_key_concepts}}
 - Propriedades shorthand : {{cssxref("background")}}, {{cssxref("font")}}, {{cssxref("margin")}}, {{cssxref("border")}}, {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}}, {{cssxref("border-width")}}, {{cssxref("border-color")}}, {{cssxref("border-style")}}, {{cssxref("transition")}}, {{cssxref("animation")}}, {{cssxref("transform")}}, {{cssxref("padding")}}, {{cssxref("list-style")}}, {{cssxref("border-radius")}}.

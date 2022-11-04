@@ -3,7 +3,7 @@ title: <label>
 slug: Web/HTML/Element/label
 translation_of: Web/HTML/Element/label
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML-элемент `<label>` **представляет собой подпись к элементу пользовательского интерфейса.
 

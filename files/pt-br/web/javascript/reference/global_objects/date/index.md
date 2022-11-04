@@ -21,7 +21,7 @@ new Date(dataString);
 new Date(ano, mês, dia, hora, minuto, segundo, milissegundo);
 ```
 
-{{ note('Note que objetos JavaScript <code>Date</code> só podem ser instanciados chamando JavaScript <code>Date</code> como um construtor: chamá-lo como uma função regular (ou seja, sem o operador <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/new">new</a>) irá retornar uma string ao invés de um objeto <code>Date</code>; ao contrário de outros tipos de objetos JavaScript, objetos JavaScript <code>Date</code> não têm sintaxe literal.') }}
+> **Nota:** Note que objetos JavaScript `Date` só podem ser instanciados chamando JavaScript `Date` como um construtor: chamá-lo como uma função regular (ou seja, sem o operador [new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)) irá retornar uma string ao invés de um objeto `Date`; ao contrário de outros tipos de objetos JavaScript, objetos JavaScript `Date` não têm sintaxe literal.
 
 ### Parâmetros para o constructor Date
 
@@ -30,42 +30,26 @@ Nota: Quando Date for chamado como um construtor com mais de um argumento, se os
 - _`value`_
   - : Um valor inteiro representando o número de milisegundos desde 1 de Janeiro de 1970 00:00:00 UTC (Era Unix ou Marco Zero).
 
-<!---->
-
 - _`dataString`_
   - : Um valor do tipo String que representa uma data. A string deverá estar uma formato reconhecido pelo método {{jsxref("Date.parse()")}} ([IETF-compliant RFC 2822 timestamps](http://tools.ietf.org/html/rfc2822#page-14) e também uma [versão da ISO8601](http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)).
-
-<!---->
 
 - _`year`_
   - : Um valor inteiro que representa o ano. Valores de 0 a 99 correspondem aos anos de 1900 a 1999. Veja o [exemplo abaixo](<#Two digit years>).
 
-<!---->
-
 - _`month`_
   - : Um valor inteiro que representa o mês, começando com 0 para Janeiro até 11 para Dezembro.
-
-<!---->
 
 - _`day`_
   - : Um valor inteiro que representa o dia do mês.
 
-<!---->
-
 - _`hour`_
   - : Um valor inteiro que representa a hora do dia.
-
-<!---->
 
 - _`minute`_
   - : Um valor inteiro que representa o segmento de um minuto de tempo.
 
-<!---->
-
 - _`second`_
   - : Um valor inteiro que representa o segmento de segundo do tempo.
-
-<!---->
 
 - _`millisecond`_
   - : Um valor inteiro que representa o segmento de milisegundo do tempo.

@@ -16,17 +16,17 @@ _`format-number( )`_
 
 ```
 <xsl:decimal-format
-	name=NAME
-	decimal-separator=CHARACTER
-	grouping-separator=CHARACTER
-	infinity=STRING
-	minus-sign=CHARACTER
-	NaN=STRING
-	percent=CHARACTER
-	per-mille=CHARATER
-	zero-digit=CHARACTER
-	digit=CHARACTER
-	pattern-separator=CHARACTER />
+  name=NAME
+  decimal-separator=CHARACTER
+  grouping-separator=CHARACTER
+  infinity=STRING
+  minus-sign=CHARACTER
+  NaN=STRING
+  percent=CHARACTER
+  per-mille=CHARATER
+  zero-digit=CHARACTER
+  digit=CHARACTER
+  pattern-separator=CHARACTER />
 ```
 
 ### 필수 속성

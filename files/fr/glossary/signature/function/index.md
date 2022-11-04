@@ -31,7 +31,7 @@ MonObjet.prototype.maFonction(valeur)
 
 - La méthode est installée sur un {{Glossary("Object","objet")}} appelé `MonObjet`.
 - La méthode est installée sur le `prototype` de `MonObjet` (c'est par conséquent une {{Glossary("Method","méthode")}} d'instance) par opposition à une {{Glossary("Method","méthode")}} statique.
-- Le nom de la méthode est ` maFonction``. `
+- Le nom de la méthode est `maFonction`.
 - La méthode accepte un paramètre appelé `valeur` et n'est pas définie.
 
 ### Signatures en Java

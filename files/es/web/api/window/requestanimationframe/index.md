@@ -57,7 +57,7 @@ window.requestAnimationFrame(step);
 
 ## Especificaciones
 
-{{ spec("http://www.w3.org/TR/animation-timing/#requestAnimationFrame", "Timing control for script-based animations: requestAnimationFrame", "WD") }}
+{{Specifications}}
 
 ## Véase también
 

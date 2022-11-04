@@ -69,7 +69,7 @@ p {
 
 {{ EmbedLiveSample('Simple_indent','100%','100%') }}
 
-## Пример со значением <`percentage>`
+## Пример со значением \<percentage>
 
 ### HTML
 

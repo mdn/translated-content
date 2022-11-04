@@ -29,9 +29,9 @@ A {{jsxref("Function")}} to be called when a {{event("transitioncancel")}} event
 
 ## Example
 
-在本例中，我们使用{{event("transitionrun")}}和{{event("transitionend")}}事件来检测转换何时开始和结束，从而导致在转换期间发生文本更新。这也可以用来触发动画或其他效果，以允许连锁反应。
+在本例中，我们使用{{event("transitionrun")}}和[`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event)事件来检测转换何时开始和结束，从而导致在转换期间发生文本更新。这也可以用来触发动画或其他效果，以允许连锁反应。
 
-除此之外，我们也使用 {{event("click")}} 事件使盒子消失 (`display: none;`), 显示如何触发 {{event("transitioncancel")}} 事件。
+除此之外，我们也使用 [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件使盒子消失 (`display: none;`), 显示如何触发 {{event("transitioncancel")}} 事件。
 
 ### HTML content
 

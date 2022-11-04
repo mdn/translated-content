@@ -3,7 +3,7 @@ title: '<video>: 视频嵌入元素'
 slug: Web/HTML/Element/video
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<video>` 元素** 用于在 HTML 或者 XHTML 文档中嵌入媒体播放器，用于支持文档内的视频播放。你也可以将 `<video>` 标签用于音频内容，但是 {{HTMLElement("audio")}} 元素可能在用户体验上更合适。
 
@@ -170,5 +170,3 @@ AddType video/webm .webm
 - [使用 HTML5 audio 和 video](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [使用 canvas 操作 video](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Ogg 格式媒体文件的服务器配置](/zh-CN/docs/Web/HTTP/Configuring_servers_for_Ogg_media)
-
-{{HTMLRef}}

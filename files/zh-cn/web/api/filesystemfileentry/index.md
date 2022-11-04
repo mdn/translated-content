@@ -29,7 +29,7 @@ slug: Web/API/FileSystemFileEntry
 
 ### 示例
 
-下面的代码创建了一个空文件，叫做 "`log.txt"` （如果不存在的话），并使用文本 "Meow" 来填充。在成功的回调中，设置了事件处理器，来处理 {{event("error")}} `error` 和 {{event("writeend")}} 事件。通过创建 blob，向其追加文本，以及将 blob 传递给 {{domxref("FileWriter.write()")}}，文本数据写入了文件。
+下面的代码创建了一个空文件，叫做 "`log.txt"` （如果不存在的话），并使用文本 "Meow" 来填充。在成功的回调中，设置了事件处理器，来处理 [`error`](/zh-CN/docs/Web/API/Element/error_event) `error` 和 {{event("writeend")}} 事件。通过创建 blob，向其追加文本，以及将 blob 传递给 {{domxref("FileWriter.write()")}}，文本数据写入了文件。
 
 ```js
 function onInitFs(fs) {

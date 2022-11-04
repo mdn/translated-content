@@ -166,7 +166,7 @@ Pour commencer, une promesse peut être dans l'un de ces trois états&nbsp;:
 
 - **En cours** (<i lang="en">pending</i> en anglais)
   - : La promesse a été créée et la fonction asynchrone associée n'a pas encore terminé son exécution, on ne sait pas si elle a réussi ou non. Il s'agit dans notre exemple de l'état de la promesse quand elle est renvoyée par l'appel à `fetch()`, et que la requête HTTP est toujours en cours.
-- **Tenue** (ou réussie ou <i lang="en">fullfilled</i> en anglais)
+- **Tenue** (ou réussie ou <i lang="en">fulfilled</i> en anglais)
   - : La fonction asynchrone a réussi. Lorsque la promesse est tenue, le gestionnaire passé à sa méthode `then()` est appelé.
 - **Rompue** (ou échouée ou <i lang="en">rejected</i> en anglais)
   - : La fonction asynchrone a échoué. Lorsqu'une promesse est rompue, c'est le gestionnaire passé à sa méthode `catch()` qui est appelé.

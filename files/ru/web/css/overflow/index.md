@@ -101,7 +101,7 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 ### Internet Explorer Примечания
 
-Internet Explorer 4 - 6 увеличивает элемент с `overflow:visible` (значение по умолчанию), чтобы заполнить содержимое в нём.`height/width` действуют подобно `min-height/min-width`.
+Internet Explorer 4 - 6 увеличивает элемент с `overflow:visible` (значение по умолчанию), чтобы заполнить содержимое в нём. `height/width` действуют подобно `min-height/min-width`.
 
 ## Смотрите также
 

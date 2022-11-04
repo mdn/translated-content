@@ -29,7 +29,7 @@ Este [estándar de intercambio de origen cruzado](http://www.w3.org/TR/cors/) es
 - Invocaciones de las APIs [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) o [Fetch](/es/docs/Web/API/Fetch_API) en una manera de sitio cruzado, como se discutió arriba.
 - Fuentes Web (para usos de fuente en dominios cruzados `@font-face` dentro de CSS), [para que los servidores puedan mostrar fuentes TrueType que sólo puedan ser cargadas por sitios cruzados y usadas por sitios web que lo tengan permitido.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - Texturas WebGL.
-- Imágenes dibujadas en patrones usando [`drawImage`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage).
+- Imágenes dibujadas en patrones usando [`drawImage`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage).
 - Hojas de estilo (para acceso [CSSOM](/es/docs/Web/CSS/CSSOM_View)).
 - Scripts (para excepciones inmutadas).
 
@@ -57,7 +57,7 @@ Una solicitud de sitio cruzado es aquella que cumple las siguientes condiciones:
   - HEAD
   - POST.
 
-- Aparte de las cabeceras establecidas automáticamente por el agente usuario (ej. `Connection, User-Agent,`etc.), las únicas cabeceras que están permitidas para establecer manualmente son:
+- Aparte de las cabeceras establecidas automáticamente por el agente usuario (ej. `Connection`, `User-Agent`, etc.), las únicas cabeceras que están permitidas para establecer manualmente son:
 
   - `Accept`
   - `Accept-Language`
@@ -126,10 +126,10 @@ Note que ahora, ningún otro dominio aparte de `http://foo.example` (identificad
 
 A diferencia de las solicitudes simples (discutidas arriba), las solicitudes "verificadas" envían primero una solicitud HTTP por el método `OPTIONS` al recurso en el otro dominio, para determinar si es seguro enviar la verdadera solicitud. Las solicitudes de sitios cruzados son verificadas así ya que pueden tener implicaciones en la información de usuario. En particular, una solicitud es verificada sí:
 
-- Usa métodos **distintos** a `GET, HEAD` `o POST`. También, si `POST` es utilizado para enviar solicitudes de información con Content-Type **distinto** a`application/x-www-form-urlencoded`, `multipart/form-data`, o `text/plain`, ej. si la solicitud `POST` envía una carga XML al servidor utilizando `application/xml` or `text/xml`, entonces la solicitud **es** verificada.
+- Usa métodos **distintos** a `GET, HEAD` `o POST`. También, si `POST` es utilizado para enviar solicitudes de información con Content-Type **distinto** a `application/x-www-form-urlencoded`, `multipart/form-data`, o `text/plain`, ej. si la solicitud `POST` envía una carga XML al servidor utilizando `application/xml` or `text/xml`, entonces la solicitud **es** verificada.
 - Se establecen encabezados personalizados (ej. la solicitud usa un encabezado como `X-PINGOTHER`)
 
-> **Nota:** Empezando en {{Gecko("2.0")}}, las codificaciones de datos `text/plain`, `application/x-www-form-urlencoded`, y `multipart/form-data` pueden ser enviadas en sitios cruzados sin verificación. Anteriormente, solo`text/plain` podía ser enviado sin verificación.
+> **Nota:** Empezando en {{Gecko("2.0")}}, las codificaciones de datos `text/plain`, `application/x-www-form-urlencoded`, y `multipart/form-data` pueden ser enviadas en sitios cruzados sin verificación. Anteriormente, solo `text/plain` podía ser enviado sin verificación.
 
 Un ejemplo de este tipo de invocación puede ser:
 
@@ -295,7 +295,9 @@ Content-Type: text/plain
 [text/plain payload]
 ```
 
-Pese a que la línea 11 contiene la Cookie destinada para el contenido en `http://bar.other`, si bar.other no responde con `Access-Control-Allow-Credentials: true` (línea 19) la respuesta será ignorada y no puesta a disposición para el contenido web. **Nota Importante:** cuando se responde a una solicitud con credeciales, el servidor **debe\*\*** \*_especificar un dominio, y no puede usar comodines. El ejemplo de arriba fallará si la cabecera fuera un comodín como: `Access-Control-Allow-Origin: _`. Dado que `Access-Control-Allow-Origin`menciona explícitamente`http://foo.example`, el contenido de credenciales competente es devuelto al contenido web invocador. Observe que, en la línea 22, se establece una cookie adicional.
+Pese a que la línea 11 contiene la Cookie destinada para el contenido en `http://bar.other`, si bar.other no responde con `Access-Control-Allow-Credentials: true` (línea 19) la respuesta será ignorada y no puesta a disposición para el contenido web.
+
+> **Nota:** cuando se responde a una solicitud con credeciales, el servidor **debe** especificar un dominio, y no puede usar comodines. El ejemplo de arriba fallará si la cabecera fuera un comodín como: `Access-Control-Allow-Origin:`. Dado que `Access-Control-Allow-Origin` menciona explícitamente `http://foo.example`, el contenido de credenciales competente es devuelto al contenido web invocador. Observe que, en la línea 22, se establece una cookie adicional.
 
 Todos estos ejemplos pueden [verse funcionando aquí](http://arunranga.com/examples/access-control/). La siguiente sección se refiere a las verdaderas cabeceras HTTP.
 
@@ -329,7 +331,7 @@ Esta cabecera permite una _whitelist_ de cabeceras del servidor que los explorad
 Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 ```
 
-Esto permite a las cabeceras `X-My-Custom-Header` y`X-Another-Custom-Header` ser expuestos al explorador.
+Esto permite a las cabeceras `X-My-Custom-Header` y `X-Another-Custom-Header` ser expuestos al explorador.
 
 ### Access-Control-Max-Age
 

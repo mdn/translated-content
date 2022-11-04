@@ -57,7 +57,7 @@ General categories 对 Unicode 字符进行分类，子类别用于精确定义�
 
 ```js
 // finding all the letters of a text
-let story = "It’s the Cheshire Cat: now I shall have somebody to talk to.";
+let story = "It's the Cheshire Cat: now I shall have somebody to talk to.";
 
 // Most explicit form
 story.match(/\p{General_Category=Letter}/gu);

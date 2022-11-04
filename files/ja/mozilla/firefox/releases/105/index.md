@@ -2,7 +2,7 @@
 title: Firefox 105 for developers
 slug: Mozilla/Firefox/Releases/105
 l10n:
-  sourceCommit: 87b4c5a0303ff0829a5abb3494a399df18155ef9
+  sourceCommit: f5437ee235fabc5188f6ac45b27e54ce1e22615c
 ---
 
 {{FirefoxSidebar}}
@@ -50,6 +50,7 @@ l10n:
 ## アドオン開発者向けの変更点一覧
 
 - {{WebExtAPIRef("scripting")}} を使用して、永続的なスクリプトを定義する機能を追加しました。{{WebExtAPIRef("scripting.RegisteredContentScript")}} の `persistAcrossSessions` プロパティを使用して、永続的なスクリプトを識別します ({{bug("1751436")}})。
+- デフォルトで、拡張機能のリソースがほかの拡張機能から読み込まれないようになりました。ほかの拡張機能がリソースを読み込むことを可能にするには、拡張機能の [`web_accessible_resources`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) マニフェストキーに列挙しなければなりません ({{bug("1711168")}})。
 
 ## 過去のバージョン
 

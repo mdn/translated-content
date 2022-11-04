@@ -69,7 +69,7 @@ Une nouvelle notification est créée au hasard toutes les 30 secondes jusqu'à 
 
 Pousser (push) est plus compliqué que de faire des notifications — nous avons besoin de nous abonner à un serveur qui enverra ensuite les données en retour à l'application. Le Service Worker de l'application recevra les données du serveur qui les a poussées et pourra ensuite les afficher en utilisant le système de notifications ou un autre mécanisme si on le souhaite.
 
-La technologie en est toujours à ses tous débuts — certains exemples fonctionnels utilisent la plateforme Cloud de messagerie de Google, mais elles sont en cours de réécriture pour prendre en charge [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (Voluntary Application Identification) qui offre une couche de sécurité supplémentaire pour votre application. Vous pouvez étudier les [exemples du Cookbook des Service Workers](https://serviceworke.rs/push-payload.html), essayer de mettre en place un serveur d'émission de messages utilisant [Firebase](https://firebase.google.com/) ou construire votre propre serveur (en utilisant Node.js par exemple).
+La technologie en est toujours à ses tous débuts — certains exemples fonctionnels utilisent la plateforme Cloud de messagerie de Google, mais elles sont en cours de réécriture pour prendre en charge [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (Voluntary Application Identification) qui offre une couche de sécurité supplémentaire pour votre application. Vous pouvez étudier les [exemples du Cookbook des Service Workers](https://github.com/mdn/serviceworker-cookbook/push-payload.html), essayer de mettre en place un serveur d'émission de messages utilisant [Firebase](https://firebase.google.com/) ou construire votre propre serveur (en utilisant Node.js par exemple).
 
 Comme mentionné précédemment, pour être capable de recevoir des messages poussés, vous devez avoir un service worker dont les fondamentaux ont déjà été expliqué dans l'article  [Permettre aux PWAs de fonctionner en mode déconnecté grâce aux Service workers](/fr/docs/Web/Apps/Progressive/Offline_Service_workers). A l'intérieur du service worker, un mécanisme de souscription à un service d'émission est créé.
 
@@ -81,7 +81,7 @@ Une fois que l'utilisateur est enrôlé, il peut recevoir des notifications pous
 
 Du côté serveur, le processus tout entier doit être chiffré avec des clefs publique et privée par raison de sécurité — permettre à tout le monde d'envoyer des messages poussés non sécurisés en utilisant votre application serait une terrible idée. Voir la [page de test de chffirement des données web poussées](https://jrconlin.github.io/WebPushDataTestPage/) pour avoir des informations détaillées concernant la sécurisation du serveur. Le serveur enregistre toutes les informations reçues quand un utilisateur s'enregistre si bien que les messages peuvent être envoyés plus tard quand c'est nécessaire.
 
-Pour recevoir des messages poussés, nous pouvons écouter l'événement {{event("push")}} dans le fichier du Service Worker:
+Pour recevoir des messages poussés, nous pouvons écouter l'événement [`push`](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event) dans le fichier du Service Worker:
 
 ```js
 self.addEventListener('push', function(e) { /* ... */ });
@@ -91,7 +91,7 @@ Les données peuvent être récupérées puis affichées immédiatement à l'uti
 
 ### Exemple de Push
 
-Push requiert que la partie serveur fonctionne, donc nous ne pouvons pas l'inclure dans l'exemple js13kPWA hébergé dans les pages GitHub puisqu'elles ne permettent de servir que des fichiers statiques. C'est entièrement expliqué dans le [Service Worker Cookbook](https://serviceworke.rs/) — voir la [démonstration de charge utile poussée](https://serviceworke.rs/push-payload.html).
+Push requiert que la partie serveur fonctionne, donc nous ne pouvons pas l'inclure dans l'exemple js13kPWA hébergé dans les pages GitHub puisqu'elles ne permettent de servir que des fichiers statiques. C'est entièrement expliqué dans le [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/) — voir la [démonstration de charge utile poussée](https://github.com/mdn/serviceworker-cookbook/push-payload.html).
 
 Cette démonstration comporte trois fichiers:
 
@@ -206,7 +206,7 @@ if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
 }
 
 webPush.setVapidDetails(
-  'https://serviceworke.rs/',
+  'https://github.com/mdn/serviceworker-cookbook/',
   process.env.VAPID_PUBLIC_KEY,
   process.env.VAPID_PRIVATE_KEY
 );
@@ -261,9 +261,9 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-Tout ce qu'il est est d'ajouter une écoute sur l'évènement {{event("push")}}, créer la variable de charge utile constituée du texte récupéré depuis les données (ou de créer une chaîne de caractères à utiliser si les données sont vides) puis d'attendre jusqu'à ce que la notfication soit montrée à l'utilisateur.
+Tout ce qu'il est est d'ajouter une écoute sur l'évènement [`push`](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event), créer la variable de charge utile constituée du texte récupéré depuis les données (ou de créer une chaîne de caractères à utiliser si les données sont vides) puis d'attendre jusqu'à ce que la notfication soit montrée à l'utilisateur.
 
-N'hésitez pas à explorer le reste des exemples du [Service Worker Cookbook](https://serviceworke.rs/) si vous voulez savoir comment ils sont gérés — le [code source complet est disponible sur on GitHub](https://github.com/mozilla/serviceworker-cookbook/). Il y a une vaste collection d'exemples fonctionnels démontrant l'usage général ainsi que le push web, les stratégies de mise en cache, la question des performances, le fonctionnement en mode déconnecté et plus encore.
+N'hésitez pas à explorer le reste des exemples du [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/) si vous voulez savoir comment ils sont gérés — le [code source complet est disponible sur on GitHub](https://github.com/mozilla/serviceworker-cookbook/). Il y a une vaste collection d'exemples fonctionnels démontrant l'usage général ainsi que le push web, les stratégies de mise en cache, la question des performances, le fonctionnement en mode déconnecté et plus encore.
 
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
 

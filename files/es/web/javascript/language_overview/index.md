@@ -160,7 +160,7 @@ Para encontrar la longitud de una cadena (en unidades de código), accede a su p
 'hello'.length; // 5
 ```
 
-¡Aquí está nuestra primer pincelada con objetos JavaScript! ¿Mencionamos que también puedes usar cadenas como {{jsxref("Object", "objectos", "", 1)}}? También tienen {{jsxref("String", "métodos", "#Métodos", 1)}} que te permiten manipular la cadena y acceder a información sobre la cadena:
+¡Aquí está nuestra primer pincelada con objetos JavaScript! ¿Mencionamos que también puedes usar cadenas como {{jsxref("Object", "objetos", "", 1)}}? También tienen {{jsxref("String", "métodos", "#Métodos", 1)}} que te permiten manipular la cadena y acceder a información sobre la cadena:
 
 ```js
 'hello'.charAt(0); // "h"
@@ -322,7 +322,7 @@ for (var i = 0; i < 5; i++) {
 }
 ```
 
-JavaScript también contiene otros dos bucles `for` destacados: [`for`...`of`](/es/docs/Web/JavaScript/Reference/Statements/for...of)
+JavaScript también contiene otros dos bucles `for` destacados: [`for...of`](/es/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```js
 for (let value of array) {
@@ -330,7 +330,7 @@ for (let value of array) {
 }
 ```
 
-y [`for`...`in`](/es/docs/Web/JavaScript/Reference/Statements/for...in):
+y [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in):
 
 ```js
 for (let property in object) {
@@ -534,7 +534,7 @@ for (var i = 0; i < a.length; i++) {
 }
 ```
 
-ES2015 introdujo el bucle más conciso [`for`...`of`](/es/docs/Web/JavaScript/Reference/Statements/for...of) para objetos iterables como arreglos:
+ES2015 introdujo el bucle más conciso [`for...of`](/es/docs/Web/JavaScript/Reference/Statements/for...of) para objetos iterables como arreglos:
 
 ```js
 for (const currentValue of a) {
@@ -542,7 +542,7 @@ for (const currentValue of a) {
 }
 ```
 
-También puedes iterar sobre un arreglo utilizando el bucle [`for`...`in`](/es/docs/Web/JavaScript/Reference/Statements/for...in), sin embargo, este no itera sobre los elementos del arreglo, sino los índices del arreglo. Además, si alguien agrega nuevas propiedades a `Array.prototype`, también serán iteradas por dicho bucle. Por lo tanto, este tipo de bucle no se recomienda para arreglos.
+También puedes iterar sobre un arreglo utilizando el bucle [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in), sin embargo, este no itera sobre los elementos del arreglo, sino los índices del arreglo. Además, si alguien agrega nuevas propiedades a `Array.prototype`, también serán iteradas por dicho bucle. Por lo tanto, este tipo de bucle no se recomienda para arreglos.
 
 Otra forma de iterar sobre un arreglo que se agregó con ECMAScript 5 es {{jsxref("Objetos_Globales/Array/forEach", "arr.forEach()")}}:
 
@@ -646,7 +646,7 @@ avg(2, 3, 4, 5); // 3.5
 
 > **Nota:** En el código anterior, la variable **args** contiene todos los valores que se pasaron a la función.
 >
-> Es importante tener en cuenta que dondequiera que se coloque el operador de parámetro `rest` en una declaración de función, almacenará todos los argumentos _después_ de su declaración, pero no antes. _es decir, function_ _avg(_**firstValue,** _...args)_ almacenará el primer valor pasado a la función en la variable **firstValue** y los argumentos restantes en **args**. Esa es otra característica útil del lenguaje, pero nos lleva a un nuevo problema. La función `avg()`toma una lista de argumentos separados por comas, pero ¿qué sucede si deseas encontrar el promedio de un arreglo? Simplemente, podrías reescribir la función de la siguiente manera:
+> Es importante tener en cuenta que dondequiera que se coloque el operador de parámetro `rest` en una declaración de función, almacenará todos los argumentos _después_ de su declaración, pero no antes. _es decir, function_ _avg(_**firstValue,** _...args)_ almacenará el primer valor pasado a la función en la variable **firstValue** y los argumentos restantes en **args**. Esa es otra característica útil del lenguaje, pero nos lleva a un nuevo problema. La función `avg()` toma una lista de argumentos separados por comas, pero ¿qué sucede si deseas encontrar el promedio de un arreglo? Simplemente, podrías reescribir la función de la siguiente manera:
 
 ```js
 function avgArray(arr) {

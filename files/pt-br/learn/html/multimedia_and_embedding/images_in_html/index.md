@@ -51,7 +51,7 @@ No início a Web era somente texto, e era tedioso. Felizmente, não demorou muit
 
 Para colocar uma única imagem em uma página da web, usamos o elemento {{htmlelement("img")}}. Isso é um elemento vazio (quer dizer que não possui conteúdo de texto ou tag de fechamento) que requer no mínimo um atributo para ser útil — `src` (às vezes pronunciado como seu título completo, _source_). O atributo src contém um caminho apontando para a imagem que você deseja incorporar na página, que pode ser uma URL relativa ou absoluta, da mesma maneira que o valores de atributo `href` no elemento {{htmlelement("a")}}.
 
-> **Nota:** Antes de continuar, você deveria ler [Um guia rápido sobre URLs e caminhos](https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths) para refrescar sua memória sobre URL relativo e absoluto.
+> **Nota:** Antes de continuar, você deveria ler [Um guia rápido sobre URLs e caminhos](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths) para refrescar sua memória sobre URL relativo e absoluto.
 
 Por exemplo, se sua imagem for chamada `dinossauro.jpg`, e está no mesmo diretório de sua página HTML, você poderia inserir a imagem assim:
 

@@ -18,7 +18,7 @@ Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable i
 
 - Funcionalidad
 
-  - :&#x20;
+  - : &#x20;
 
     - Detección
 
