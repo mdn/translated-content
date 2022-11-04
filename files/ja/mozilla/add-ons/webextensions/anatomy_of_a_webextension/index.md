@@ -54,7 +54,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 - **manifest.json**
 
-  - :&#x20;
+  - : &#x20;
 
     ```json
     // manifest.json
@@ -66,7 +66,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 - **background-page.html**
 
-  - :&#x20;
+  - : &#x20;
 
     ```html
     <!DOCTYPE html>

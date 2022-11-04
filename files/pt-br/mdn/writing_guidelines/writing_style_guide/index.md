@@ -1,7 +1,6 @@
 ---
 title: Guia de estilo de escrita
 slug: MDN/Writing_guidelines/Writing_style_guide
-translation_of: MDN/Guidelines/Writing_style_guide
 original_slug: MDN/Guidelines/Writing_style_guide
 ---
 {{MDNSidebar}}

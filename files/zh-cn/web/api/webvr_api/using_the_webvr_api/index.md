@@ -99,8 +99,8 @@ var body = document.querySelector('body');
 body.appendChild(myCanvas);
 ```
 
-Next, we create a new [image](/zh-CN/docs/Web/API/HTMLImageElement) and use a {{event("load")}} event to check that the image is loaded before running `draw()`, the [main loop](/zh-CN/docs/Games/Anatomy#Building_a_main_loop_in_JavaScript) for our app:
-然后，我们在主渲染循环控制中，先创建一个图片对象，并且在 draw() 方法运行前，监听 {{event("load")}} 事件回调，以检查图片是否已经被正常装载成功。
+Next, we create a new [image](/zh-CN/docs/Web/API/HTMLImageElement) and use a [`load`](/zh-CN/docs/Web/API/Window/load_event) event to check that the image is loaded before running `draw()`, the [main loop](/zh-CN/docs/Games/Anatomy#Building_a_main_loop_in_JavaScript) for our app:
+然后，我们在主渲染循环控制中，先创建一个图片对象，并且在 draw() 方法运行前，监听 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件回调，以检查图片是否已经被正常装载成功。
 
 ```js
 var image = new Image();

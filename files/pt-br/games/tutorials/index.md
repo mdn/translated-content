@@ -1,15 +1,6 @@
 ---
 title: Tutorials
 slug: Games/Tutorials
-tags:
-  - Canvas
-  - Games
-  - JavaScript
-  - NeedsTranslation
-  - TopicStub
-  - Web
-  - Workflows
-translation_of: Games/Tutorials
 ---
 {{GamesSidebar}}
 

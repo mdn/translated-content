@@ -1,16 +1,6 @@
 ---
 title: CSS Box Model
 slug: Web/CSS/CSS_Box_Model
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Reference
-  - Modelo de Caixa CSS
-  - NeedsTranslation
-  - Overview
-  - Referencia CSS
-  - TopicStub
-translation_of: Web/CSS/CSS_Box_Model
 ---
 {{CSSRef}}
 

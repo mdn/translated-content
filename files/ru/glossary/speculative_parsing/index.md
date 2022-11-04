@@ -27,4 +27,4 @@ original_slug: Web/HTML/Optimizing_Your_Pages_for_Speculative_Parsing
 - Не пишите незаконченные теги. Не стоит писать `<script>document.write("<div></div");</script>`.
 - Не заканчивайте строку возрастной кареткой (`\r`). Вместо `<script>document.write("Hello World!\r");</script>` лучше написать `<script>document.write("Hello World!\n");</script>`.
 - Заметьте, что написание законченных тегов может повлиять на другие теги так, что они станут незаконченными. В том числе, `<script>document.write("<div></div>");</script>` внутри `<head>` будет интерпретировано как `<script>document.write("</head><body><div></div>");</script>`, что повлияет на `<head>` так, что он станет незаконченным.
-- Не форматируйте часть таблицы. Вместо `<table><script>document.write("<tr><td>Hello World!</td></tr>");</script></table>` лучше написать ` <script>document.write("``<table>``<tr><td>Hello World!</td></tr>``</table>``");</script> `.
+- Не форматируйте часть таблицы. Вместо `<table><script>document.write("<tr><td>Hello World!</td></tr>");</script></table>` лучше написать `<script>document.write("<table><tr><td>Hello World!</td></tr></table>");</script>`.

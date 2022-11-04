@@ -1,17 +1,6 @@
 ---
 title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de Resposta
-  - HTTP
-  - HTTP Header
-  - Range Requests
-  - Reference
-  - Referencia
-  - Requisições de tamanho
-  - Response Header
-translation_of: Web/HTTP/Headers/Accept-Ranges
 ---
 {{HTTPSidebar}}
 

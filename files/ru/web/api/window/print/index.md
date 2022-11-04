@@ -27,6 +27,6 @@ window.print()
 
 ## Смотрите также
 
-- [Printing](/en/Printing "en/Printing")
+- [Printing](/en/Printing)
 - {{ domxref("window.onbeforeprint") }}
 - {{ domxref("window.onafterprint") }}

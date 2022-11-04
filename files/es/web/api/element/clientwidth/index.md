@@ -15,7 +15,7 @@ La propiedad `Element.clientWidth` es cero para elementos sin CSS o cajas de dis
 var intElemClientWidth = element.clientWidth;
 ```
 
-_intElemClientWidth_ será un entero que corresponde con el **clientWidth** del \_element_o en pixels. **clientWidth** es de sólo-lectura.
+_intElemClientWidth_ será un entero que corresponde con el **clientWidth** del elemento en pixels. **clientWidth** es de sólo-lectura.
 
 ## Ejemplo
 

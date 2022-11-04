@@ -1,11 +1,6 @@
 ---
 title: opacity()
 slug: Web/CSS/filter-function/opacity
-tags:
-  - Efeitos de Filtro
-  - Função CSS
-  - Referencia
-translation_of: Web/CSS/filter-function/opacity()
 original_slug: Web/CSS/filter-function/opacity()
 ---
 {{cssref}}

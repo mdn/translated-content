@@ -41,8 +41,6 @@ alert(elm.className); //"class1 class2 class3"
 
 {{Compat}}
 
-##
-
 ## Спецификация
 
 - [DOM Level 2 HTML: className](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95362176)

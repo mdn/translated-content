@@ -27,7 +27,7 @@ original_slug: Web/API/Document/keyup_event
 
 ## Related Events
 
-- {{event("keydown")}}
-- {{event("keyup")}}
-- {{event("keypress")}}
-- {{event("input")}}
+- [`keydown`](/zh-TW/docs/Web/API/Element/keydown_event)
+- [`keyup`](/zh-TW/docs/Web/API/Element/keyup_event)
+- [`keypress`](/zh-TW/docs/Web/API/Element/keypress_event)
+- [`input`](/zh-TW/docs/Web/API/HTMLElement/input_event)

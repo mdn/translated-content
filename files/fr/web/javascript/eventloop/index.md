@@ -59,7 +59,7 @@ while (queue.attendreMessage()){
 }
 ```
 
-`queue.attendreMessage` est un fonction synchrone qui attend un message même s'il n'y en a aucun à traiter.
+`queue.attendreMessage` est une fonction synchrone qui attend un message même s'il n'y en a aucun à traiter.
 
 ### Traiter de A à Z (_run-to-completion_)
 
@@ -97,7 +97,7 @@ while(true) {
 
 Un délai à zéro ne signifie pas que le callback sera déclenché après zéro milliseconde. Appeler [`setTimeout`](/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) avec un délai de `0` (zéro) milliseconde n'éxécute pas le callback après l'interval donné.
 
-L'exécution dépend du nombre de taches en attente dans la queue. Dans l'exemple ci-dessous, le message `'ceci est juste un message'` sera affiché dans la console avant que le message dans le callback soit traité, parce que le délai est le temps *minimum* requis par l'environnement d'exécution (runtime) pour traiter la demande (pas un temps _garanti_).
+L'exécution dépend du nombre de tâches en attente dans la queue. Dans l'exemple ci-dessous, le message `'ceci est juste un message'` sera affiché dans la console avant que le message dans le callback soit traité, parce que le délai est le temps *minimum* requis par l'environnement d'exécution (runtime) pour traiter la demande (pas un temps _garanti_).
 
 Fondamentalement, `setTimeout` doit attendre la fin de tout le code pour les messages en file d'attente, même si vous avez spécifié une limite de temps particulière pour votre setTimeout.
 

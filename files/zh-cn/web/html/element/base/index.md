@@ -3,7 +3,7 @@ title: <base>：文档根 URL 元素
 slug: Web/HTML/Element/base
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML \<base> 元素** 指定用于一个文档中包含的所有相对 URL 的根 URL。一份中只能有一个 \<base> 元素。
 

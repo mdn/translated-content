@@ -1,7 +1,6 @@
 ---
 title: click
 slug: Web/API/Element/click_event
-translation_of: Web/API/Element/click_event
 ---
 O evento `click` event é disparado quando o botão de um dispositivo apontador (normalmente o botão de um mouse) é pressionado e solto logo em seguida em um mesmo elemento.
 

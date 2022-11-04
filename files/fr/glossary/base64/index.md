@@ -53,7 +53,7 @@ Les deux méthodes, `atob()` et `btoa()`, fonctionnent sur des chaînes de carac
 
 ## Outils
 
-- [Réécrire `atob()`et `btoa()` en utilisant des `TypedArray`s et l'UTF-8](<#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8>)
+- [Réécrire `atob()` et `btoa()` en utilisant des `TypedArray`s et l'UTF-8](<#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8>)
 - [`StringView` – une représentation des chaînes de caractères semblable à celle du langage C, basée sur les tableaux typés.](/fr/docs/Web/JavaScript/Typed_arrays/StringView)
 
 ## Sujets connexes

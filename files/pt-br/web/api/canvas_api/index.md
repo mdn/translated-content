@@ -1,11 +1,6 @@
 ---
 title: Canvas
 slug: Web/API/Canvas_API
-tags:
-  - API
-  - Canvas
-  - Referência(2)
-translation_of: Web/API/Canvas_API
 original_slug: Web/HTML/Canvas
 ---
 {{CanvasSidebar}}

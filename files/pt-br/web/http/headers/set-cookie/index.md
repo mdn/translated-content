@@ -1,7 +1,6 @@
 ---
 title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
-translation_of: Web/HTTP/Headers/Set-Cookie
 ---
 {{HTTPSidebar}}
 
@@ -110,7 +109,7 @@ Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk; Path=/; Expires=Wed, 
 
 ### Prefixo do cookie
 
-Nomes de cookies com os prefixos "\_\_Secure-" e "\_\_Host-" podem ser utilizados apenas de eles forem atribuídos com a diretiva "secure" de uma origem segura (HTTPS). Além disso, cookies com o prefixo "\_\_Host-" devem ter um caminho (path) de "/" (o host inteiro) e não devem ter um atributo de dominio. Para clientes que não implementam prefixos de cookie, você não pode contar com essas garantias adicionais e os cookies serão sempre aceitos.
+Nomes de cookies com os prefixos `__Secure-` e `__Host-` podem ser utilizados apenas de eles forem atribuídos com a diretiva `secure` de uma origem segura (HTTPS). Além disso, cookies com o prefixo `__Host-` devem ter um caminho (path) de `/` (o host inteiro) e não devem ter um atributo de dominio. Para clientes que não implementam prefixos de cookie, você não pode contar com essas garantias adicionais e os cookies serão sempre aceitos.
 
 ```
 // Ambos aceitos quando de uma origem segura (HTTPS)

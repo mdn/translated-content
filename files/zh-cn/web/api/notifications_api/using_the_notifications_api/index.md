@@ -84,13 +84,13 @@ window.addEventListener('load', function () {
 
 一旦通知被创建出来，它会立即被显示出来。为了跟踪通知当前的状态，在 {{domxref("Notification")}} 实例层面上会有 4 个事件被触发：
 
-- {{event("show")}}
+- [`show`](/zh-CN/docs/Web/API/Element/show_event)
   - : 当通知被显示给用户时触发。
-- {{event("click")}}
+- [`click`](/zh-CN/docs/Web/API/Element/click_event)
   - : 当用户点击通知时触发。
 - {{event("close")}}
   - : 当通知被关闭时触发。
-- {{event("error")}}
+- [`error`](/zh-CN/docs/Web/API/Element/error_event)
   - : 当通知发生错误的时候触发。这通常是因为通知由于某些原因而无法显示。
 
 这些事件可以通过事件处理跟踪 {{domxref("Notification.onshow","onshow")}}、{{domxref("Notification.onclick","onclick")}}、{{domxref("Notification.onclose","onclose")}} 和 {{domxref("Notification.onerror","onerror")}}。因为 {{domxref("Notification")}} 同样继承自 {{domxref("EventTarget")}}，因此可以对它调用 {{domxref("EventTarget.addEventListener","addEventListener()")}} 方法。

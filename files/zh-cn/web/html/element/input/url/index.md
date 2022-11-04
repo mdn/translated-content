@@ -3,7 +3,7 @@ title: <input type="url">
 slug: Web/HTML/Element/Input/url
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 元素有一个 **`url`** 来让用户输入 URL{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}
 
@@ -19,7 +19,7 @@ On browsers that don't support inputs of type `url`, a `url` input falls back to
   </tr>
   <tr>
    <td><strong>Events</strong></td>
-   <td>{{event("change")}} and {{event("input")}}</td>
+   <td>[`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) and [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)</td>
   </tr>
   <tr>
    <td><strong>Supported Common Attributes</strong></td>

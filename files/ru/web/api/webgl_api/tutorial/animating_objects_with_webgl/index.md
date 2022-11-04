@@ -41,9 +41,9 @@ mvRotate(squareRotation, [1, 0, 1]);
 ```js
   var currentTime = (new Date).getTime();
   if (lastSquareUpdateTime) {
-  	var delta = currentTime - lastSquareUpdateTime;
+    var delta = currentTime - lastSquareUpdateTime;
 
-  	squareRotation += (30 * delta) / 1000.0;
+    squareRotation += (30 * delta) / 1000.0;
   }
 
   lastSquareUpdateTime = currentTime;
@@ -93,7 +93,7 @@ mvTranslate([squareXOffset, squareYOffset, squareZOffset]);
 
 Это заставит наш квадрат двигаться по экрану, приближаясь и удаляясь от наблюдателя и при этом ещё и вращаться. Это похоже на работу заставки
 
-Если ваш браузер поддерживает работу с WebGL, [проследуйте по этой ссылке, чтобы посмотреть на этот пример](/samples/webgl/sample4/index.html "https://developer.mozilla.org/samples/webgl/sample4/index.html") в действии.
+Если ваш браузер поддерживает работу с WebGL, [проследуйте по этой ссылке, чтобы посмотреть на этот пример](/samples/webgl/sample4/index.html) в действии.
 
 ## Больше операций с матрицами
 

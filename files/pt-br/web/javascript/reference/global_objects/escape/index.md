@@ -1,7 +1,6 @@
 ---
 title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
-translation_of: Web/JavaScript/Reference/Global_Objects/escape
 ---
 {{jsSidebar("Objects")}}A função obsoleta `escape() retorna uma nova string com` certos caracteres substituídos por sua sequência hexadecial. Use {{jsxref("encodeURI")}} ou {{jsxref("encodeURIComponent")}} em seu lugar.
 

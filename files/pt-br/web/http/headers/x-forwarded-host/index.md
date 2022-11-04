@@ -1,14 +1,6 @@
 ---
 title: X-Forwarded-Host
 slug: Web/HTTP/Headers/X-Forwarded-Host
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Não padronizado
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/X-Forwarded-Host
 ---
 {{HTTPSidebar}}
 

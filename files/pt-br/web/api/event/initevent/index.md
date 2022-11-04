@@ -1,14 +1,6 @@
 ---
 title: Event.initEvent()
 slug: Web/API/Event/initEvent
-tags:
-  - API
-  - DOM
-  - Descontinuado
-  - Evento
-  - Referencia
-  - metodo
-translation_of: Web/API/Event/initEvent
 ---
 {{ ApiRef("DOM") }}{{deprecated_header}}
 

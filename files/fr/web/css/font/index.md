@@ -87,7 +87,7 @@ Si `font` est définie comme une propriété raccourcie :
   - : Voir la propriété {{cssxref("line-height")}}.
 - `<'font-family'>`
   - : Voir la propriété {{cssxref("font-family")}}.
-- Polices système :`caption` `icon` `menu` `message-box` `small-caption` `status-bar`
+- Polices système : `caption` `icon` `menu` `message-box` `small-caption` `status-bar`
 
   - : Un mot-clé peut être utilisé pour indiquer une police système spécifique :
 

@@ -27,7 +27,7 @@ XMLHttpRequest изначально был разработан Microsoft и п�
 var myRequest = new XMLHttpRequest();
 ```
 
-более детальное описание создание объекта, можно увидеть в разделе [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "En/Using XMLHttpRequest").
+более детальное описание создание объекта, можно увидеть в разделе [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest).
 
 ## Список методов объекта
 
@@ -38,7 +38,7 @@ var myRequest = new XMLHttpRequest();
 | `DOMString? getResponseHeader(DOMString header);`                                                                                                                                                  |
 | `void open(DOMString method, DOMString url, optional boolean async, optional DOMString? user, optional DOMString? password);`                                                                      |
 | `void overrideMimeType(DOMString mime);`                                                                                                                                                           |
-| `void send();` ~~`void send(ArrayBuffer data);`~~ `void send(ArrayBufferView data);` `void send(Blob data);` `void send(Document data);` `void send(DOMString? data);` `void send(FormData data);` |
+| `void send();` `void send(ArrayBufferView data);` `void send(Blob data);` `void send(Document data);` `void send(DOMString? data);` `void send(FormData data);` |
 | `void setRequestHeader(DOMString header, DOMString value);`                                                                                                                                        |
 | Нестандартные методы                                                                                                                                                                               |
 | `[noscript] void init(in nsIPrincipal principal, in nsIScriptContext scriptContext, in nsPIDOMWindow ownerWindow);`                                                                                |
@@ -490,7 +490,7 @@ var myRequest = new XMLHttpRequest();
 
 Конструктор создаёт объект XMLHttpRequest. Он должен быть вызван перед обращением к любому методу класса.
 
-Gecko/Firefox 16 добавляет нестандартные параметры в конструктор, для лучшего взаимодействия с режимом инкогнито, (смотри [Bug 692677](https://bugzilla.mozilla.org/show_bug.cgi?id=692677 "692677 – Relax same-origin XHR restrictions for privileged applications")). Установка флага `mozAnon` в значение `true` создаёт сущность [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest "see AnonXMLHttpRequest in the XMLHttpRequest specification") описанную в XMLHttpRequest спецификации, но не реализованную не в одном из браузеров (информация сентября 2012).
+Gecko/Firefox 16 добавляет нестандартные параметры в конструктор, для лучшего взаимодействия с режимом инкогнито, (смотри [Bug 692677](https://bugzilla.mozilla.org/show_bug.cgi?id=692677)). Установка флага `mozAnon` в значение `true` создаёт сущность [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) описанную в XMLHttpRequest спецификации, но не реализованную не в одном из браузеров (информация сентября 2012).
 
 ```
 XMLHttpRequest (
@@ -505,9 +505,9 @@ XMLHttpRequest (
   - : Вы можете использовать два флага:
 
     - `mozAnon`
-      - : Boolean: Использование этого флага уберёт из запроса заголовки origin, и [user credentials](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials "Defintion of “User credentials” in the XMLHttpRequest specification."). Кроме этого, куки не будут отправлены в запросе, если только они не будут добавлены к запросу специально, через метод setRequestHeader.
+      - : Boolean: Использование этого флага уберёт из запроса заголовки origin, и [user credentials](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials). Кроме этого, куки не будут отправлены в запросе, если только они не будут добавлены к запросу специально, через метод setRequestHeader.
     - `mozSystem`
-      - : Boolean: Если выставить этот флаг в значение `true` то это позволит делать cross-доменные запросы без необходимости получения специальных заголовков со стороны сервера (CORS). Для использования этого флага необходимо использовать дополнительный флаг* `mozAnon: true`, поскольку для отправки запроса на другой домен, нельзя использовать куки и креды пользователя. Этот флаг [работает только с привилегированными (одобренными) приложениями](https://bugzilla.mozilla.org/show_bug.cgi?id=692677#c68 "Bug 692677 comment 68"); он не сработает с произвольно загруженными страницами.*
+      - : Boolean: Если выставить этот флаг в значение `true` то это позволит делать cross-доменные запросы без необходимости получения специальных заголовков со стороны сервера (CORS). Для использования этого флага необходимо использовать дополнительный флаг* `mozAnon: true`, поскольку для отправки запроса на другой домен, нельзя использовать куки и креды пользователя. Этот флаг [работает только с привилегированными (одобренными) приложениями](https://bugzilla.mozilla.org/show_bug.cgi?id=692677#c68); он не сработает с произвольно загруженными страницами.*
 
 ## Методы
 
@@ -557,7 +557,7 @@ void open(
   - : URL адрес, на который будет отправлено сообщение.
 - `async`
 
-  - : Необязательный boolean параметр, по умолчанию равный `true. Определяет, будет ли запрос отправлен асинхронно. Если значение равно` `false`, метод `send() вернёт ответ в общем потоке работы приложения (иначе говоря, приложение зависнет на некоторое время), в противном случае, ответ может быть получен только при помощи определённых `обработчиков событий. В случае, если используется отправка `multipart` запроса, то этот атрибут **должен** быть `true`, или будет выброшено исключение.
+  - : Необязательный boolean параметр, по умолчанию равный `true`. Определяет, будет ли запрос отправлен асинхронно. Если значение равно `false`, метод `send()` вернёт ответ в общем потоке работы приложения (иначе говоря, приложение зависнет на некоторое время), в противном случае, ответ может быть получен только при помощи определённых обработчиков событий. В случае, если используется отправка `multipart` запроса, то этот атрибут **должен** быть `true`, или будет выброшено исключение.
 
     > **Примечание:** Начиная с Gecko 30.0 {{ geckoRelease("30.0") }}, синхронные запросы объявлены как deprecated, в силу того что все пользователи недовольны тем, что приложение "зависает".
 
@@ -598,9 +598,9 @@ void send(FormData data);
 
 ###### Примечания
 
-Если тип _data_ - `Document`, то он будет сериализован перед отправкой. Firefox до версии 3 всегда отправляет такой запрос в кодировке UTF-8; [Firefox 3](/en/Firefox_3 "en/Firefox_3") отправляет данные в той кодировке, которая указаны в `body.xmlEncoding`, или UTF-8 если такой информации нет.
+Если тип _data_ - `Document`, то он будет сериализован перед отправкой. Firefox до версии 3 всегда отправляет такой запрос в кодировке UTF-8; [Firefox 3](/en/Firefox_3) отправляет данные в той кодировке, которая указаны в `body.xmlEncoding`, или UTF-8 если такой информации нет.
 
-If it's an `nsIInputStream`, it must be compatible with `nsIUploadChannel`'s `setUploadStream()`method. In that case, a Content-Length header is added to the request, with its value obtained using `nsIInputStream`'s `available()`method. Any headers included at the top of the stream are treated as part of the message body. The stream's MIMEtype should be specified by setting the Content-Type header using the [`setRequestHeader()`](<#setRequestHeader()> "/en/XMLHttpRequest#setRequestHeader()") method prior to calling `send()`.
+If it's an `nsIInputStream`, it must be compatible with `nsIUploadChannel`'s `setUploadStream()` method. In that case, a Content-Length header is added to the request, with its value obtained using `nsIInputStream`'s `available()` method. Any headers included at the top of the stream are treated as part of the message body. The stream's MIMEtype should be specified by setting the Content-Type header using the [`setRequestHeader()`](<#setRequestHeader()> "/en/XMLHttpRequest#setRequestHeader()") method prior to calling `send()`.
 
 The best way to send binary content (like in files upload) is using an [ArrayBufferView](/ru/docs/JavaScript/Typed_arrays/ArrayBufferView) or [Blobs](/ru/docs/DOM/Blob) in conjuncton with the `send()` method. However, if you want to send a [stringifiable](/ru/docs/JavaScript/Reference/Global_Objects/JSON/stringify) raw data, use the [`sendAsBinary()`](</ru/docs/DOM/XMLHttpRequest#sendAsBinary()>) method instead, or the [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView) Non native typed arrays superclass.
 
@@ -663,7 +663,7 @@ void sendAsBinary(
 );
 ```
 
-Данный метод используется в сочетании с методом `readAsBinaryString,` который присутствует в [`FileReader`](/ru/docs/DOM/FileReader) API, и позволяет [прочитать и **загрузить** файл любого типа](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files "/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files") и превратить необработанные данные в [JSON-строку](/ru/docs/JavaScript/Reference/Global_Objects/JSON/stringify).
+Данный метод используется в сочетании с методом `readAsBinaryString,` который присутствует в [`FileReader`](/ru/docs/DOM/FileReader) API, и позволяет [прочитать и **загрузить** файл любого типа](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files) и превратить необработанные данные в [JSON-строку](/ru/docs/JavaScript/Reference/Global_Objects/JSON/stringify).
 
 ##### Параметры
 
@@ -709,9 +709,9 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 
 `onreadystatechange` as a property of the `XMLHttpRequest` instance is supported in all browsers.
 
-Since then, a number of additional event handlers were implemented in various browsers (`onload`, `onerror`, `onprogress`, etc.). These are supported in Firefox. In particular, see `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest "En/XMLHttpRequest/Using_XMLHttpRequest").
+Since then, a number of additional event handlers were implemented in various browsers (`onload`, `onerror`, `onprogress`, etc.). These are supported in Firefox. In particular, see `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest).
 
-More recent browsers, including Firefox, also support listening to the `XMLHttpRequest` events via standard [`addEventListener`](/en/DOM/element.addEventListener "element.addEventListener") APIs in addition to setting `on*` properties to a handler function.
+More recent browsers, including Firefox, also support listening to the `XMLHttpRequest` events via standard [`addEventListener`](/en/DOM/element.addEventListener) APIs in addition to setting `on*` properties to a handler function.
 
 ## Permissions
 
@@ -731,10 +731,10 @@ When using System XHR via the `mozSystem` property, for example for Firefox OS a
 
 - MDN articles about XMLHttpRequest:
 
-  - [AJAX - Getting Started](/en/AJAX/Getting_Started "en/AJAX/Getting_Started")
-  - [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest "En/Using XMLHttpRequest")
-  - [HTML in XMLHttpRequest](/en/HTML_in_XMLHttpRequest "en/HTML_in_XMLHttpRequest")
-  - [`FormData`](/en/DOM/XMLHttpRequest/FormData "en/XMLHttpRequest/FormData")
+  - [AJAX - Getting Started](/en/AJAX/Getting_Started)
+  - [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+  - [HTML in XMLHttpRequest](/en/HTML_in_XMLHttpRequest)
+  - [`FormData`](/en/DOM/XMLHttpRequest/FormData)
 
 - XMLHttpRequest references from W3C and browser vendors:
 

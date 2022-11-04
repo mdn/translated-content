@@ -1,18 +1,6 @@
 ---
 title: Feature-Policy
 slug: Web/HTTP/Headers/Feature-Policy
-tags:
-  - Autorização
-  - Experimental
-  - Feature-Policy
-  - HTTP
-  - Permissões
-  - Política de Funcionalidade
-  - Referencia
-  - Segurança
-  - Web
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Feature-Policy
 ---
 {{HTTPSidebar}}
 
@@ -65,7 +53,7 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/encrypted-media', 'encrypted-media')}}
   - : Controla se o documento atual é permitido de usar a API [Extensões de Mídias Encriptadas (_Encrypted Media Extensions_)](/pt-BR/docs/Web/API/Encrypted_Media_Extensions_API) (EME). Quando esta política é desabilitada, a {{domxref("Promise")}} retornada pelo {{domxref("Navigator.requestMediaKeySystemAccess()")}} irá rejeitar com um {{domxref("DOMException")}}.
 - {{httpheader('Feature-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}}
-  - : Controla se as tarefas devem ser executadas em enquadramentos enquanto não são renderizados (e.g. se um enquadramento é [`hidden`](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/hidden) ou `display: none`).
+  - : Controla se as tarefas devem ser executadas em enquadramentos enquanto não são renderizados (e.g. se um enquadramento é [`hidden`](/pt-BR/docs/Web/HTML/Global_attributes/hidden) ou `display: none`).
 - {{httpheader('Feature-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}}
   - : Controla se as tarefas devem ser executadas em enquadramentos enquanto eles estão fora da janela de visualização visível.
 - {{httpheader('Feature-Policy/fullscreen','fullscreen')}}

@@ -38,9 +38,9 @@ translation_of: Web/API/Server-sent_events
 
 ### Related Topics
 
-- [AJAX](/ru/docs/AJAX "AJAX")
-- [JavaScript](/ru/docs/JavaScript "JavaScript")
-- [WebSockets](/ru/docs/WebSockets "WebSockets")
+- [AJAX](/ru/docs/AJAX)
+- [JavaScript](/ru/docs/JavaScript)
+- [WebSockets](/ru/docs/WebSockets)
 
 ### Other resources
 

@@ -66,4 +66,4 @@ slug: Web/HTML/Element/rp
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
 
-{{ HTMLRef }}
+{{HTMLSidebar}}

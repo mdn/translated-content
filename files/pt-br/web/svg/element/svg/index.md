@@ -1,13 +1,6 @@
 ---
 title: svg
 slug: Web/SVG/Element/svg
-tags:
-  - Elemento
-  - Fragmento
-  - Referencia
-  - SVG
-  - SVG Container
-translation_of: Web/SVG/Element/svg
 ---
 {{SVGRef}}
 

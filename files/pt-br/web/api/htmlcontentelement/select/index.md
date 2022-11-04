@@ -1,12 +1,6 @@
 ---
 title: HTMLContentElement.select
 slug: Web/API/HTMLContentElement/select
-tags:
-  - API
-  - HTMLContentElement
-  - HTMLContentElement.select
-  - Select
-translation_of: Web/API/HTMLContentElement/select
 original_slug: Web/API/HTMLContentElement/Seletor
 ---
 {{ APIRef("Web Components") }}

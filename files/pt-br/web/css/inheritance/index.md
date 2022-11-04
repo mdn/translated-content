@@ -1,12 +1,6 @@
 ---
 title: Herança
 slug: Web/CSS/inheritance
-tags:
-  - CSS
-  - Guide
-  - Guía
-  - Web
-translation_of: Web/CSS/inheritance
 ---
 ## Resumo
 

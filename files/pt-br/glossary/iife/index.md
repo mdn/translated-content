@@ -1,11 +1,6 @@
 ---
 title: IIFE
 slug: Glossary/IIFE
-tags:
-  - DesignPattern
-  - Glossário
-  - JavaScript
-translation_of: Glossary/IIFE
 original_slug: Glossario/IIFE
 ---
 **IIFE** (Immediately Invoked Function Expression) é uma função em {{glossary("JavaScript")}} que é executada assim que definida.

@@ -9,7 +9,7 @@ tags:
   - legend
 translation_of: Web/HTML/Element/legend
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML-элемент `<legend>`** представляет собой заголовок содержания родительского элемента {{HTMLElement("fieldset")}}.
 

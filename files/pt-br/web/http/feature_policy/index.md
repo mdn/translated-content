@@ -1,21 +1,6 @@
 ---
 title: Feature Policy
 slug: Web/HTTP/Feature_Policy
-tags:
-  - Feature Policy
-  - Feature-Policy
-  - HTTP
-  - Introduction
-  - NeedsTranslation
-  - Overview
-  - Reference
-  - Security
-  - TopicStub
-  - access
-  - delegation
-  - header
-  - permission
-translation_of: Web/HTTP/Feature_Policy
 ---
 {{HTTPSidebar}}
 

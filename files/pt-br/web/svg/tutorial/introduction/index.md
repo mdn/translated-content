@@ -1,7 +1,6 @@
 ---
 title: Introdução
 slug: Web/SVG/Tutorial/Introduction
-translation_of: Web/SVG/Tutorial/Introduction
 ---
 {{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
 

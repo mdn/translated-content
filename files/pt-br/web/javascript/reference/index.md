@@ -1,10 +1,6 @@
 ---
 title: Referência JavaScript
 slug: Web/JavaScript/Reference
-tags:
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference
 ---
 ## [Sobre essa Referência](/pt-BR/docs/JavaScript/Reference/About)
 

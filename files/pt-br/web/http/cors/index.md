@@ -1,12 +1,6 @@
 ---
 title: Cross-Origin Resource Sharing (CORS)
 slug: Web/HTTP/CORS
-tags:
-  - AJAX
-  - CORS
-  - HTTP
-  - XMLHttpRequest
-translation_of: Web/HTTP/CORS
 original_slug: Web/HTTP/Controle_Acesso_CORS
 ---
 {{HTTPSidebar}}
@@ -307,11 +301,11 @@ The CORS protocol originally required that behavior but [was subsequently change
 So until all browsers catch up with the spec, you may be able to work around this limitation by doing one or both of the following:
 
 - change the server-side behavior to avoid the preflight and/or to avoid the redirect—if you have control over the server the request is being made to
-- change the request such that it is a [simple request](/pt-BR/docs/Web/HTTP/Controle_Acesso_CORS$edit#Simple_requests) that doesn’t cause a preflight
+- change the request such that it is a [simple request]#simple_requests) that doesn’t cause a preflight
 
 But if it’s not possible to make those changes, then another way that may be possible is to this:
 
-1. Make a [simple request](/pt-BR/docs/Web/HTTP/Controle_Acesso_CORS$edit#Simple_requests) (using {{domxref("Response.url")}} for the Fetch API, or {{domxref("XMLHttpRequest.responseURL")}}) to determine what URL the real preflighted request would end up at.
+1. Make a [simple request](#simple_requests) (using {{domxref("Response.url")}} for the Fetch API, or {{domxref("XMLHttpRequest.responseURL")}}) to determine what URL the real preflighted request would end up at.
 2. Make another request (the “real” request) using the URL you obtained from `Response.url` or `XMLHttpRequest.responseURL` in the first step.
 
 However, if the request is one that triggers a preflight due to the presence of the `Authorization` header in the request, you won’t be able to work around the limitation using the steps above. And you won’t be able to work around it at all unless you have control over the server the request is being made to.

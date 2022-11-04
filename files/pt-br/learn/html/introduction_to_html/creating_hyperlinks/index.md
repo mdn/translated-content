@@ -1,18 +1,6 @@
 ---
 title: Criando hyperlinks
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - Guía
-  - HTML
-  - HTTP
-  - Iniciante
-  - Link
-  - URL
-  - absoluto
-  - href
-  - hyperlinks
-  - relativo
-translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 original_slug: Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks
 ---
 {{LearnSidebar}}

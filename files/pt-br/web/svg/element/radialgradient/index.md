@@ -1,12 +1,6 @@
 ---
 title: radialGradient
 slug: Web/SVG/Element/radialGradient
-tags:
-  - Elemento
-  - Gradiente SVG
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/radialGradient
 ---
 {{SVGRef}}
 
@@ -18,7 +12,7 @@ translation_of: Web/SVG/Element/radialGradient
 
 ## Exemplo
 
-» [radialGradient.svg](https://developer.mozilla.org/files/3266/radialGradient.svg)
+» [radialGradient.svg](/files/3266/radialGradient.svg)
 
 ## Atributos
 

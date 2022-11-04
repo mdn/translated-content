@@ -1,13 +1,6 @@
 ---
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
-tags:
-  - CSS
-  - CSS PROPRIEDADE SCROLL
-  - CSS SCROLL
-  - PROPRIEDADES DO CSS
-  - REFERENCIA DE SCROLL
-translation_of: Web/CSS/scroll-behavior
 ---
 {{ CSSRef }}
 

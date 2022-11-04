@@ -35,9 +35,9 @@ slug: Web/API/Gamepad_API
 #### Window 事件
 
 - {{domxref("Window.ongamepadconnected")}}
-  - : 表示当控制器连接时（当{{event('gamepadconnected')}} 事件触发时）运行的处理程序。
+  - : 表示当控制器连接时（当[`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 事件触发时）运行的处理程序。
 - {{domxref("Window.ongamepaddisconnected")}}
-  - : 表示当控制器断开连接时（当{{event('gamepaddisconnected')}} 事件触发时）运行的处理程序。
+  - : 表示当控制器断开连接时（当[`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event) 事件触发时）运行的处理程序。
 
 ## 教程与指南
 

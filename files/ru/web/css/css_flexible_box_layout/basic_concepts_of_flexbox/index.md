@@ -83,7 +83,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 Если изменить значение свойства `flex-direction` на `column`, главная ось изменится, и наши элементы будут отображаются в столбец. При установке параметра `column-reverse`, начало и конец столбца поменяются местами.
 
-В приведённом ниже примере значение свойства `flex-direction` установлено как `row-reverse`. Попробуйте другие значения — `row`, `column` и`column-reverse`, чтобы посмотреть как изменятся элементы контейнера.
+В приведённом ниже примере значение свойства `flex-direction` установлено как `row-reverse`. Попробуйте другие значения — `row`, `column` и `column-reverse`, чтобы посмотреть как изменятся элементы контейнера.
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/flex-direction.html", '100%', 350)}}
 

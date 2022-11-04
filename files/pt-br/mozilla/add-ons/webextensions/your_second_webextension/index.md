@@ -1,11 +1,6 @@
 ---
 title: Passo-a-Passo
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-tags:
-  - Extensões Web
-  - extensões firefox
-  - passo-a-passo
-translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Passo-a-Passo
 ---
 Neste artigo iremos criar uma Extensão para Firefox do início ao fim.
@@ -88,7 +83,7 @@ Agora crie um novo arquivo chamado "manifest.json", e insira o seguinte conteúd
 ```
 
 - As primeiras três chaves : **`manifest_version`**, **`name`**, e **`version`**, são obrigatórias e contém metadados básicos para a extensão.
-- **`permissions`** lista as permisões que a extensão precisa. Nós iremos apenas perguntar se pediremos permissão para modificar todas as páginas HTTP e HTTPS : veja a documentação para as chaves de [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). Nós prefirimos por usar a permissão `activeTab` aqui , mas atualmente não é suportada pela Firefox.
+- **`permissions`** lista as permisões que a extensão precisa. Nós iremos apenas perguntar se pediremos permissão para modificar todas as páginas HTTP e HTTPS : veja a documentação para as chaves de [`permissions`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). Nós prefirimos por usar a permissão `activeTab` aqui , mas atualmente não é suportada pela Firefox.
 - **`browser_action`** especifica o botão da barra de ferramentas. Iremos fornecer três informações aqui:
 
   - **`default_icon`** é obrigatório, e aponta para o icone do botão

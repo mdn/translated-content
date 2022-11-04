@@ -1,12 +1,6 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
-tags:
-  - JavaScript
-  - Promises
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ---
 {{JSRef}}
 

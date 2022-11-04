@@ -1,14 +1,6 @@
 ---
 title: initial
 slug: Web/CSS/initial
-tags:
-  - Estado inicial
-  - Herança
-  - Iniciante
-  - Referencia
-  - User-agent
-  - estado padrão
-translation_of: Web/CSS/initial
 ---
 {{CSSRef}}
 

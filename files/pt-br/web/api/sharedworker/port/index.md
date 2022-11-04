@@ -1,7 +1,6 @@
 ---
 title: SharedWorker.port
 slug: Web/API/SharedWorker/port
-translation_of: Web/API/SharedWorker/port
 ---
 {{APIRef("Web Workers API")}}
 

@@ -1,14 +1,6 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-tags:
-  - Custom Error
-  - Erro
-  - Error
-  - JavaScript
-  - Reference
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Error
 ---
 {{JSRef}}
 

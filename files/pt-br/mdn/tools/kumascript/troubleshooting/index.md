@@ -1,13 +1,6 @@
 ---
 title: Solucionando problemas de erros de KumaScript
 slug: MDN/Tools/KumaScript/Troubleshooting
-tags:
-  - Erros
-  - Ferramentas
-  - Guía
-  - KumaScript
-  - MDN Meta
-translation_of: MDN/Tools/KumaScript/Troubleshooting
 original_slug: MDN/Tools/KumaScript/Solucionando_problemas_de_erros_de_KumaScript
 ---
 {{MDNSidebar}}

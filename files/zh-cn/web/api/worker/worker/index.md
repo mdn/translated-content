@@ -9,7 +9,7 @@ slug: Web/API/Worker/Worker
 
 如果 此 URL 有一个无效的语句，或者违反同源策略，一个 `SECURITY_ERR` 类型的{{domxref("DOMException")}}被抛出。
 
-> **备注：** 浏览器厂商对于 data URI 是否同源存在分歧。尽管 Gecko 10.0 {{ geckoRelease("10.0") }} 和之后的版本接受 data URIs，但在所有其他浏览器中并非如此。
+> **备注：** 浏览器厂商对于 data URI 是否同源存在分歧。尽管 Gecko 10.0 和之后的版本接受 data URIs，但在所有其他浏览器中并非如此。
 
 ## 语法
 

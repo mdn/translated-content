@@ -1,10 +1,6 @@
 ---
 title: Usando geolocation
 slug: Web/API/Geolocation_API
-tags:
-  - Geolocation API
-  - Guia(2)
-translation_of: Web/API/Geolocation_API
 original_slug: Using_geolocation
 ---
 A **API geolocation** permite que o usuário forneça sua localização a aplicativos web se ele desejar. Por questões de privacidade, o usuário é perguntado se permite fornecer informações de localização.

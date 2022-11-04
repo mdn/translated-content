@@ -1,15 +1,6 @@
 ---
 title: PushManager
 slug: Web/API/PushManager
-tags:
-  - API
-  - API de armazenamento
-  - Experimental
-  - Interface
-  - Referencia
-  - Service Workers
-  - Subir dados
-translation_of: Web/API/PushManager
 ---
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 

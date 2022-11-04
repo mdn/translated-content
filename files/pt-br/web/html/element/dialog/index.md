@@ -1,15 +1,6 @@
 ---
 title: '<dialog>: O elemento Dialog'
 slug: Web/HTML/Element/dialog
-tags:
-  - Diálogo
-  - Elemento
-  - Elemento Interativos HTML
-  - Experimental
-  - HTML
-  - Referências
-  - Web
-translation_of: Web/HTML/Element/dialog
 ---
 O **elemento HTML `<dialog>`** representa uma caixa de diálogo ou outro componente interativo, tal como um inspetor ou janela.
 
@@ -159,4 +150,4 @@ Inclua este polyfill para suportar browsers antigos.
 - O {{event("cancel")}} evento
 - Guia de formulários HTML.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

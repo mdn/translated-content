@@ -18,7 +18,7 @@ var result = element.matches(selectorString)
 ```
 
 - `Результат выполнения - true или false.`
-- **`selectorString`** - строка, содержащая любой css-селектор, к примеру:_ **"div"**_,_ **"\*"**_,_ **"#id"**_ и прочие.
+- **`selectorString`** - строка, содержащая любой css-селектор, к примеру: **"div"**, **"\*"**, **"#id"** и прочие.
 
 ## Пример
 
@@ -63,8 +63,6 @@ var result = element.matches(selectorString)
     }) : (e.matches = e.matchesSelector = matches);
 })(Element.prototype);
 ```
-
-##
 
 ## Спецификация
 

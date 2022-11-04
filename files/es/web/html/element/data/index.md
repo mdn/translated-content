@@ -55,4 +55,4 @@ El siguiente ejemplo muestra nombres de productos pero también asocia a cada un
 
 - The HTML {{HTMLElement("time")}} element.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

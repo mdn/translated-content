@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/picture
 original_slug: Web/HTML/Elemento/picture
 ---
-{{HTMLRef}}{{SeeCompatTable}}
+{{HTMLSidebar}}{{SeeCompatTable}}
 
 El **elemento HTML `<picture>`** es un contenedor usado para especificar múltiples elementos {{HTMLElement("source")}} y un elemento {{HTMLElement("img")}} contenido en él para proveer versiones de una imagen para diferentes escenarios de dispositivos. Si no hay coincidencias con los elementos `<source>`, el archivo especificado en los atributos {{htmlattrxref("src", "img")}} del elemento `<img>` es utilizado. La imagen seleccionada es entonces presentada en el espacio ocupado por el elemento `<img>`.
 

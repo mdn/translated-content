@@ -13,7 +13,7 @@ translation_of: Web/API/Worker/Worker
 ---
 {{APIRef("Web Workers API")}}
 
-Конструктор **`Worker()`** создаёт объект {{domxref ("Worker")}}, который выполняет скрипт по указанному URL-адресу. Этот скрипт должен подчиняться политике одного источника ([same-origin policy](/en/Same_origin_policy_for_JavaScript "Same origin policy for JavaScript")).
+Конструктор **`Worker()`** создаёт объект {{domxref ("Worker")}}, который выполняет скрипт по указанному URL-адресу. Этот скрипт должен подчиняться политике одного источника ([same-origin policy](/en/Same_origin_policy_for_JavaScript)).
 
 Если URL имеет недопустимый синтаксис или нарушена политика одного источника, то будет вызвано {{domxref("DOMException")}} типа `SECURITY_ERR`.
 
@@ -40,8 +40,8 @@ var myWorker = new Worker(aURL, options);
 ### Исключения
 
 - A `SecurityError` is raised if the document is not allowed to start workers.
-- A `NetworkError` is raised if the MIME type of one of the script is `text/csv`, `image/*`, `video/*`, or `audio/*`. It should always be `text/javacript.`
-- A `SyntaxError` is raised if _aUR\_\_L_ cannot be parsed.
+- A `NetworkError` is raised if the MIME type of one of the script is `text/csv`, `image/*`, `video/*`, or `audio/*`. It should always be `text/javascript.`
+- A `SyntaxError` is raised if a _URL_ cannot be parsed.
 
 ## Пример
 

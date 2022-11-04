@@ -39,7 +39,7 @@ _Наследует методы родительского класса, {{domx
 var myWorker = new SharedWorker("worker.js");
 ```
 
-далее скрипты получают доступ к воркеру через объект {{domxref("MessagePort")}}, находящийся в свойстве {{domxref("SharedWorker.port")}}. Если устанавливается обработчик события onmessage, port самостоятельно начинает работу, вызывая собственный метод `start(), `если же принимать события с помощью обработчика события "message" через addEventListener, необходимо вызвать метод `start()` самостоятельно:
+далее скрипты получают доступ к воркеру через объект {{domxref("MessagePort")}}, находящийся в свойстве {{domxref("SharedWorker.port")}}. Если устанавливается обработчик события onmessage, port самостоятельно начинает работу, вызывая собственный метод `start()`, если же принимать события с помощью обработчика события "message" через addEventListener, необходимо вызвать метод `start()` самостоятельно:
 
 ```js
 myWorker.port.start();
@@ -82,11 +82,9 @@ onconnect = function(e) {
 
 ### Пример с несколькими страницами
 
-####
-
-```
 test.js
 
+```js
 let connected = false;
 self.addEventListener("connect", e => {
   e.source.addEventListener("message", ev => {
@@ -101,12 +99,13 @@ self.addEventListener("connect", e => {
   }, false);
   e.source.start();
 }, false);
-
+```
 
 На странице 1 получаем сообщение 'worker init' в консоли.
 
 index1.html
-...
+
+```html
 <script>
     let worker = new SharedWorker('test.js');
     worker.port.addEventListener("message", e => {
@@ -115,12 +114,13 @@ index1.html
     worker.port.start();
     worker.port.postMessage("start");
 </script>
-...
+```
 
 На странице 2 в консоль выводится 'worker already inited', так как страница 1 уже запустила наш воркер;
 
 index2.html
-...
+
+```html
 <script>
     let worker = new SharedWorker('test.js');
     worker.port.addEventListener("message", e => {
@@ -129,10 +129,7 @@ index2.html
     worker.port.start();
     worker.port.postMessage("start");
 </script>
-...
 ```
-
-##
 
 ## Спецификации
 

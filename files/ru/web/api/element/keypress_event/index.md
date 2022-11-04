@@ -11,7 +11,7 @@ original_slug: Web/API/Document/keypress_event
 - Спецификация
   - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keypress) {{deprecated_inline()}}
 - Интерфейс
-  - : [KeyboardEvent](/ru/docs/DOM/KeyboardEvent "http://en-US/docs/DOM/KeyboardEvent")
+  - : [KeyboardEvent](/ru/docs/DOM/KeyboardEvent)
 - Bubbles
   - : Yes
 - Cancelable
@@ -229,7 +229,7 @@ original_slug: Web/API/Document/keypress_event
 
 ## Примечания
 
-Chrome не запускает событие `keypress` для известных сочетаний клавиш ([reference](https://bugs.chromium.org/p/chromium/issues/detail?id=13891#c50)). Какие сочетания клавиш известны, зависит от системы пользователя. Используйте событие`keydown` для реализации сочетаний клавиш.
+Chrome не запускает событие `keypress` для известных сочетаний клавиш ([reference](https://bugs.chromium.org/p/chromium/issues/detail?id=13891#c50)). Какие сочетания клавиш известны, зависит от системы пользователя. Используйте событие `keydown` для реализации сочетаний клавиш.
 
 ## Связанные события
 

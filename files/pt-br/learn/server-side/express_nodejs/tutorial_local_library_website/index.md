@@ -1,15 +1,6 @@
 ---
 title: 'Express: Tutorial para criar o site de uma Biblioteca Local'
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
-tags:
-  - Express
-  - Iniciante
-  - Introdução
-  - Node
-  - desenvolvimento-web
-  - nodejs
-  - server-side
-translation_of: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
 

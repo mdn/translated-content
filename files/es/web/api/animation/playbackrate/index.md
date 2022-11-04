@@ -73,7 +73,7 @@ setInterval( function() {
 }, 3000);
 ```
 
-Pero hacer click o hacer tapping(pasar el puntero) sobre ellos hace que aceleren multiplicando su `playbackRate`(velocidad de reproducción):
+Pero hacer click o hacer tapping(pasar el puntero) sobre ellos hace que aceleren multiplicando su `playbackRate` (velocidad de reproducción):
 
 ```js
 var goFaster = function() {

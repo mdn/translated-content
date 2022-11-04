@@ -66,7 +66,5 @@ console.log(foo.firstElementChild.textContent);
 
 ## 参见
 
-## [Ed](/zh-CN/docs/Web/API/Element/lastElementChild$edit#参见)
-
 - 纯接口 {{domxref("Element")}} 和 {{domxref("ChildNode")}}。
 - 实现了此纯接口的对象类型：{{domxref("Document")}}、{{domxref("Element")}}，和 {{domxref("DocumentFragment")}}。

@@ -1,15 +1,6 @@
 ---
 title: Introdução ao Django
 slug: Learn/Server-side/Django/Introduction
-tags:
-  - Aprender
-  - Codificação
-  - Iniciante
-  - Introdução
-  - Programação do lado do servidor
-  - Python
-  - django
-translation_of: Learn/Server-side/Django/Introduction
 original_slug: Learn/Server-side/Django/Introdução
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}

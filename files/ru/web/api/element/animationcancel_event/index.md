@@ -141,7 +141,7 @@ function handleCancelEvent(event) {
 };
 ```
 
-Теперь добавим переключение {{cssxref("display")}} между ` "``flex" ` и ` "``none" ` и установим обработчик события щелчка {{event("click")}} на кнопке "Hide/Show":
+Теперь добавим переключение {{cssxref("display")}} между `"flex"` и `"none"` и установим обработчик события щелчка {{event("click")}} на кнопке "Hide/Show":
 
 ```js
 document.getElementById('toggleBox').addEventListener('click', function() {

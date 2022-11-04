@@ -1,13 +1,6 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-tags:
-  - HTTP
-  - Método HTTP
-  - Referencia
-  - Rest
-  - patch
-translation_of: Web/HTTP/Methods/PATCH
 ---
 {{HTTPSidebar}}
 
@@ -46,7 +39,7 @@ Outra indicação (implícita) da permissão de PATCH é a presença do cabeçal
     <tr>
       <th scope="row">
         Permitido em
-        <a href="/en-US/docs/Web/Guide/HTML/Forms">formulários HTML</a>
+        <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulários HTML</a>
       </th>
       <td>Não</td>
     </tr>

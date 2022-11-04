@@ -1,7 +1,6 @@
 ---
 title: ':read-write'
 slug: Web/CSS/:read-write
-translation_of: Web/CSS/:read-write
 ---
 {{CSSRef}}
 

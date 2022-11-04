@@ -38,7 +38,7 @@ _Элемент HTML form_ (`<form>`) представляет (собой) ра
   - : Когда значение атрибута method равно `post`, атрибут - [MIME тип](http://en.wikipedia.org/wiki/Mime_type) содержимого, которое используется, чтобы передать форму на сервер. Возможные значения:
     - `application/x-www-form-urlencoded`: Значение по умолчанию, если атрибут не задан.
     - `multipart/form-data`: Используйте это значение, если пользуетесь элементом {{HTMLElement("input")}} атрибутом `type` установленным в "file".
-    - `text/plain (HTML5)`Это значение может быть переписано атрибутом {{htmlattrxref("formenctype", "button")}} на элементе {{HTMLElement("button")}} или {{HTMLElement("input")}}.
+    - `text/plain (HTML5)` Это значение может быть переписано атрибутом {{htmlattrxref("formenctype", "button")}} на элементе {{HTMLElement("button")}} или {{HTMLElement("input")}}.
 - {{htmlattrdef("method")}}
   - : [HTTP](/ru/docs/HTTP) метод, который браузер использует, для отправки формы. Возможные значения:
     - `post`: Соответствует HTTP [POST методу](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) ; данные из формы включаются в тело формы и посылаются на сервер.
@@ -92,4 +92,4 @@ _Элемент HTML form_ (`<form>`) представляет (собой) ра
 
 - Другие элементы, которые используются для создания форм: {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}},{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

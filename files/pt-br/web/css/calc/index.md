@@ -1,15 +1,6 @@
 ---
 title: calc()
 slug: Web/CSS/calc
-tags:
-  - CSS
-  - Calculate
-  - Função
-  - Função CSS
-  - Layout
-  - Web
-  - calc
-translation_of: Web/CSS/calc()
 original_slug: Web/CSS/calc()
 ---
 {{CSSRef}}

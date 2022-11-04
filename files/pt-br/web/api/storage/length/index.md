@@ -1,15 +1,6 @@
 ---
 title: Storage.length
 slug: Web/API/Storage/length
-tags:
-  - API
-  - Armazenamento
-  - Armazenamento web
-  - Propriedade
-  - Referencia
-  - Somente Leitura
-  - Web Storage
-translation_of: Web/API/Storage/length
 ---
 {{APIRef("Web Storage API")}}
 

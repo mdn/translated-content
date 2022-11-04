@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
-tags:
-  - Array
-  - JavaScript
-  - Métodos
-  - Prototipo
-  - Referencia
-  - reduce()
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ---
 {{JSRef}}
 
@@ -28,7 +20,7 @@ O valor de retorno da sua função **reducer** é atribuída ao acumulador. O ac
 ## Sintaxe
 
 ```js
-array.reduce(callback( acumulador, valorAtual[, index[, array]] )[, valorInicial]))
+array.reduce(callback( acumulador, valorAtual[, index[, array]] )[, valorInicial])
 ```
 
 ### Parâmetros

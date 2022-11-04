@@ -116,7 +116,7 @@ draw();
 
 Центр поворота - всегда начало координат. Для изменения координат центра мы должны сместить холст, используя метод `translate()`.
 
-### Пример использования`rotate`
+### Пример использования `rotate`
 
 В этом примере мы сначала используем `rotate()` для поворота прямоугольника относительно начала координат, а затем, используя `translate()` совместно с `rotate()` поворачиваем прямоугольник относительно его центра.
 
@@ -216,7 +216,7 @@ draw();
 
   - : Накладывает матрицу преобразования, заданную параметрами, на текущую матрицу. Матрица преобразования задаётся следующим образом: <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
 
-    If any of the arguments are [`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity") the transformation matrix must be marked as infinite instead of the method throwing an exception.
+    If any of the arguments are [`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity) the transformation matrix must be marked as infinite instead of the method throwing an exception.
 
 Параметры функции:
 
@@ -233,7 +233,7 @@ draw();
 - `f (dy)`
   - : Vertical moving.
 - {{domxref("CanvasRenderingContext2D.setTransform", "setTransform(a, b, c, d, e, f)")}}
-  - : Сбрасывает текущую матрицу преобразования, а затем вызывает`transform()` в соответствии с аргументами.
+  - : Сбрасывает текущую матрицу преобразования, а затем вызывает `transform()` в соответствии с аргументами.
 - {{domxref("CanvasRenderingContext2D.resetTransform", "resetTransform()")}}
   - : Сбрасывает текущую матрицу преобразования к значению по умолчанию. Аналогично вызову `ctx.setTransform(1, 0, 0, 1, 0, 0);`
 

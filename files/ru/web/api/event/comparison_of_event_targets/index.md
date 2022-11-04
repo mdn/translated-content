@@ -206,7 +206,7 @@ TODO: Only available in a Mozilla-based browser? TODO: Only suitable for extensi
 
 Свойство `relatedTarget` для события `mouseover` содержит узел, над которым ранее была указана мышь. Для события `mouseout` он удерживает узел, к которому движется мышь.
 
-| Тип события | [event.target](/en/DOM/event.target "en/DOM/event.target") | [event.relatedTarget](/en/DOM/event.relatedTarget "en/DOM/event.relatedTarget") |
+| Тип события | [event.target](/en/DOM/event.target) | [event.relatedTarget](/en/DOM/event.relatedTarget) |
 | ----------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | `mouseover` | EventTarget, в который входим указателем                   | EventTarget, из которого выходим указателем                                     |
 | `mouseout`  | EventTarget, из которого выходим указателем                | EventTarget, в который входим указателем                                        |

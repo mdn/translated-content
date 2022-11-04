@@ -8,7 +8,7 @@ original_slug: Web/API/Fetch_API/Conceptos_basicos
 
 La [API Fetch](/es/docs/Web/API/Fetch_API) proporciona una interfaz para obtener recursos (incluso a traves de la red). Parecera familiar a quien sea que haya usado {{domxref("XMLHttpRequest")}}, pero proporciona un conjunto de características más potentes y flexibles. Este artículo explica algunos de los conceptos básicos de la API Fetch.
 
-> **Nota:** Este artículo será añadido en un futuro. Si encuenta un concepto de Fetch que siente necesita una mejor explicación, hagalo saber a alguien en el [foro de discusión de ](https://discourse.mozilla-community.org/c/mdn)[MDN](https://discourse.mozilla-community.org/c/mdn), o [Mozilla IRC](https://wiki.mozilla.org/IRC) (#mdn room.)
+> **Nota:** Este artículo será añadido en un futuro. Si encuenta un concepto de Fetch que siente necesita una mejor explicación, hagalo saber a alguien en el [foro de discusión de MDN](https://discourse.mozilla-community.org/c/mdn), o [Mozilla IRC](https://wiki.mozilla.org/IRC) (#mdn room.)
 
 ## En pocas palabras
 
@@ -67,4 +67,4 @@ Un guarda (guard) de encabezado afecta los métodos {{domxref("Headers.set","set
 
 - guard es `request` y el nombre del encabezado no es un {{Glossary("forbidden header name")}} .
 - guard es `request-no-cors` y el encabezado _nombre/valor_ es un {{Glossary("simple header")}} .
-- guard es `response` y el \_nombre \_del encabezado no es {{Glossary("forbidden response header name")}}.
+- guard es `response` y el nombre del encabezado no es {{Glossary("forbidden response header name")}}.

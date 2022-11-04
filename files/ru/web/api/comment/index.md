@@ -37,4 +37,4 @@ _У этого интерфейса нет конкретных методов, 
 
 ## Смотрите также
 
-- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model "/en-US/docs/DOM/DOM_Reference")
+- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model)

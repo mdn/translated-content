@@ -1,7 +1,6 @@
 ---
 title: Ordering Flex Items
 slug: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 ---
 {{CSSRef}}
 

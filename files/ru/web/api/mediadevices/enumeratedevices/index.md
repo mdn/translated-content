@@ -85,7 +85,7 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 
 ## Смотрите также
 
-- [navigator.mediaDevices.getUserMedia](/ru/docs/Web/API/MediaDevices/getUserMedia "mediaDevices.getUserMedia")
-- [WebRTC](/ru/docs/WebRTC "WebRTC") - the introductory page to the API
-- [MediaStream API](/ru/docs/WebRTC/MediaStream_API "WebRTC/MediaStream_API") - the API for the media stream objects
-- [Taking webcam photos](/ru/docs/WebRTC/taking_webcam_photos "WebRTC/taking_webcam_photos") - a tutorial on using `getUserMedia() for taking photos rather than video.`
+- [navigator.mediaDevices.getUserMedia](/ru/docs/Web/API/MediaDevices/getUserMedia)
+- [WebRTC](/ru/docs/WebRTC) - the introductory page to the API
+- [MediaStream API](/ru/docs/WebRTC/MediaStream_API) - the API for the media stream objects
+- [Taking webcam photos](/ru/docs/WebRTC/taking_webcam_photos) - a tutorial on using `getUserMedia() for taking photos rather than video.`

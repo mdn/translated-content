@@ -1,14 +1,6 @@
 ---
 title: O que está no cabeçalho? Metadados em HTML
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
-tags:
-  - Guía
-  - HTML
-  - Iniciante
-  - head
-  - lang
-  - metadados
-translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 original_slug: Aprender/HTML/Introducao_ao_HTML/The_head_metadata_in_HTML
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
@@ -152,7 +144,7 @@ Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo 
 
 A descrição também é usada nas páginas de resultados do mecanismo de pesquisa. Vamos passar por um exercício para explorar isso
 
-1. Vá para a [página inicial da Mozilla Developer Network.](https://developer.mozilla.org/en-US/)
+1. Vá para a [página inicial da Mozilla Developer Network.](/en-US/)
 2. Veja a fonte da página (botão direito do mouse/
 
     <kbd>Ctrl</kbd>

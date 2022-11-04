@@ -1,7 +1,6 @@
 ---
 title: Sec-Fetch-Site
 slug: Web/HTTP/Headers/Sec-Fetch-Site
-translation_of: Web/HTTP/Headers/Sec-Fetch-Site
 ---
 {{HTTPSidebar}}
 

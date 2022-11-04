@@ -1,10 +1,6 @@
 ---
 title: ':only-child'
 slug: Web/CSS/:only-child
-tags:
-  - Pseudo-classe
-  - Referencia
-translation_of: Web/CSS/:only-child
 ---
 {{CSSRef}}
 

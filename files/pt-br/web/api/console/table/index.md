@@ -1,7 +1,6 @@
 ---
 title: Console.table()
 slug: Web/API/Console/table
-translation_of: Web/API/Console/table
 ---
 {{APIRef("Console API")}}
 
@@ -119,7 +118,7 @@ Você pode classificar a tabela por uma coluna específica clicando no rótulo d
 console.table(data [, columns]);
 ```
 
-### Parâmentros
+### Parâmetros
 
 - `data`
   - : Os dados a serem exibidos. Deve ser um array ou um objeto.

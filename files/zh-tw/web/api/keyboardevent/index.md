@@ -127,7 +127,7 @@ KeyboardEvent 有 `keydown` 、 `keypress` 、 `keyup` 三種事件。對大多�
 
 #### Gecko 5.0 以前的自動迴圈
 
-Gecko 5.0 {{geckoRelease('5.0')}} 以前，在不同平台上，鍵盤的處理與現在相比較不統一。
+Gecko 5.0 以前，在不同平台上，鍵盤的處理與現在相比較不統一。
 
 - Windows
   - : 自動迴圈的結果與 Gecko 4.0 或更新的版本類似
