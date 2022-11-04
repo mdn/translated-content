@@ -1,10 +1,6 @@
 ---
 title: Referência JavaScript
 slug: Web/JavaScript/Reference
-tags:
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference
 ---
 ## [Sobre essa Referência](/pt-BR/docs/JavaScript/Reference/About)
 
@@ -16,7 +12,7 @@ translation_of: Web/JavaScript/Reference
 
 ## [Funções e escopo de função](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope)
 
-- [`argumentos`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments)
+- [`argumentos`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments)
 - [Modo Strict](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
 
 ## [Declarações](/pt-BR/docs/JavaScript/Reference/Statements)

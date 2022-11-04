@@ -7,7 +7,7 @@ slug: Web/API/OffscreenCanvas/getContext
 
 The **`OffscreenCanvas.getContext()`** method returns a drawing context for an offscreen canvas, or {{jsxref("null")}} if the context identifier is not supported.
 
-> **Note:** This API is currently implemented for [WebGL1](/ja/docs/Web/API/WebGLRenderingContext) and [WebGL2](/ja/docs/Web/API/WebGL2RenderingContext) contexts only. See {{bug(801176)}} for [Canvas 2D API](/ja/docs/Web/API/Canvas_API) support from workers.
+> **メモ:** This API is currently implemented for [WebGL1](/ja/docs/Web/API/WebGLRenderingContext) and [WebGL2](/ja/docs/Web/API/WebGL2RenderingContext) contexts only. See {{bug(801176)}} for [Canvas 2D API](/ja/docs/Web/API/Canvas_API) support from workers.
 
 **構文**
 
@@ -65,7 +65,7 @@ A {{domxref("RenderingContext")}} which is either a
 
 If the `contextType` doesn't match a possible drawing context, `null` is returned.
 
-## **例**
+## 例
 
 ```js
 var offscreen = new OffscreenCanvas(256, 256);
@@ -75,13 +75,13 @@ gl; // WebGLRenderingContext
 gl.canvas; // OffscreenCanvas
 ```
 
-## **仕様書**
+## 仕様書
 
 | Specification                                                                                                                | Status                           | Comment |
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
 | {{SpecName('HTML WHATWG', "#dom-offscreencanvas-getcontext", "OffscreenCanvas.getContext()")}} | {{Spec2('HTML WHATWG')}} |         |
 
-## **ブラウザの互換性**
+## ブラウザの互換性
 
 {{Compat("api.OffscreenCanvas.getContext")}}
 

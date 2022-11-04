@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
-translation_of: Web/API/RTCPeerConnection
 ---
 {{APIRef('WebRTC')}}
 
@@ -23,9 +22,6 @@ Monitore esses eventos utilizando {{domxref("EventTarget.addEventListener", "add
 - {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
   - : Enviado ao objeto RTCPeerConnection quando o status de conectividade geral do RTCPeerConnection é alterado.
     Também disponível através da propriedade do manipulador de eventos {{domxref ("RTCPeerConnection.onconnectionstatechange", "onconnectionstatechange")}}.
-
-<!---->
-
 - {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}
   - : Sent to the `RTCPeerConnection` object when the remote peer adds an {{domxref("RTCDataChannel")}} to the connection.
     Also available through the {{domxref("RTCPeerConnection.ondatachannel", "ondatachannel")}} event handler property.

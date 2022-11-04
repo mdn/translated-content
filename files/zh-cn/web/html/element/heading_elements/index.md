@@ -199,4 +199,4 @@ In this example, screen reading technology would announce that there are two {{H
 - {{HTMLElement("div")}}
 - {{HTMLElement("section")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

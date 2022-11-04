@@ -1,14 +1,6 @@
 ---
 title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
-tags:
-  - Função
-  - JavaScript
-  - Método(2)
-  - Referência(2)
-  - expoente
-  - potência
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
 {{JSRef}}
 

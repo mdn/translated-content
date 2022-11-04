@@ -1,12 +1,6 @@
 ---
 title: mask
 slug: Web/SVG/Element/mask
-tags:
-  - Container SVG
-  - Elemento
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/mask
 ---
 {{SVGRef}}
 
@@ -18,15 +12,15 @@ No SVG, você pode especificar que quaisquer outros objetos gráficos ou element
 
 ## Exemplo
 
-» [mask.svg](https://developer.mozilla.org/files/3269/mask.svg)
+» [mask.svg](/files/3269/mask.svg)
 
 ## Atributos
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing) »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -42,7 +36,7 @@ No SVG, você pode especificar que quaisquer outros objetos gráficos ou element
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGMaskElement`](/pt-BR/DOM/SVGMaskElement "en/DOM/SVGMaskElement").
+Este elemento implementa a interface do [`SVGMaskElement`](/pt-BR/DOM/SVGMaskElement).
 
 ## Veja também
 

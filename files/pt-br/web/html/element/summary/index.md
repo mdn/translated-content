@@ -1,12 +1,6 @@
 ---
 title: summary
 slug: Web/HTML/Element/summary
-tags:
-  - Element
-  - HTML
-  - Summary
-  - Web
-translation_of: Web/HTML/Element/summary
 ---
 ## Sumário
 
@@ -41,5 +35,3 @@ Veja a página {{ HTMLElement("details") }} para ver exemplos com `<summary>`.
 ## Veja também
 
 - {{ HTMLElement("details") }}
-
-{{ languages({ "en": "en/HTML/Element/summary", "ja": "ja/HTML/Element/summary" }) }}

@@ -1,13 +1,6 @@
 ---
 title: Location.assign()
 slug: Web/API/Location/assign
-tags:
-  - API
-  - HTML-DOM
-  - Location
-  - Referencia
-  - metodo
-translation_of: Web/API/Location/assign
 ---
 {{ APIRef("HTML DOM") }}
 
@@ -32,7 +25,7 @@ location.assign(url);
 
 ```js
 // Navega para a página do artigo Location.reload
-document.location.assign('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+document.location.assign('https://developer.mozilla.org/pt-BR/docs/Web/API/Location.reload');
 ```
 
 ## Especificações

@@ -1,7 +1,6 @@
 ---
 title: 'SyntaxError: missing variable name'
 slug: Web/JavaScript/Reference/Errors/No_variable_name
-translation_of: Web/JavaScript/Reference/Errors/No_variable_name
 ---
 {{jsSidebar("Errors")}}
 
@@ -85,5 +84,5 @@ var arr = [1,2,3,4,5];
 ## Veja também
 
 - Bons nomes de variáveis
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)
+- [`var`](/pt-BR/docs/Web/JavaScript/Reference/Statements/var)
 - Declarações de variáveis ​​no Guia JavaScript

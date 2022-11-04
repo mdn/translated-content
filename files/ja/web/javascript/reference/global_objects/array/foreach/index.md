@@ -67,13 +67,13 @@ forEach(function(element, index, array) { /* … */ }, thisArg)
 
 `forEach()` によって処理される配列要素の範囲は、`callbackFn` が最初に呼び出される前に設定されます。訪問済みの添字、または範囲を外れた添字に割り当てられている要素については `callbackFn` が実行されません。既存の配列要素が変更または削除された場合、`callbackFn` に渡される値は `forEach()` がそれらを参照した時点での値になります。削除された配列要素を参照することはありません。既に参照された配列要素が反復処理の間に（例えば {{jsxref("Array.prototype.shift()", "shift()")}} を使用して）削除された場合、後の要素は飛ばされます。([下記の例を参照してください](#反復処理中の配列の変更)。)
 
-> **Warning:** 前項で説明したような同時進行の変更は、理解しにくいコードになることが多いので、（特殊な場合を除き）一般に避けるべきです。
+> **警告:** 前項で説明したような同時進行の変更は、理解しにくいコードになることが多いので、（特殊な場合を除き）一般に避けるべきです。
 
 `forEach()` は配列の各要素に対して `callbackFn` 関数を一度ずつ実行します。{{jsxref("Array.prototype.map()", "map()")}} や {{jsxref("Array.prototype.reduce()", "reduce()")}} と異なり、返値は常に {{jsxref("undefined")}} であり、チェーンできません。チェーンの最後に副作用を生じさせるのが典型的な使用法です。
 
 `forEach()` は呼び出された配列を変化させません。(ただし `callbackFn` が変化させる可能性があります)
 
-> **Note:** 例外を発生する以外の方法で、`forEach()` ループを止めることはできません。ループ中に中断する必要がある場合、`forEach()` メソッドは適切な方法ではありません。
+> **メモ:** 例外を発生する以外の方法で、`forEach()` ループを止めることはできません。ループ中に中断する必要がある場合、`forEach()` メソッドは適切な方法ではありません。
 >
 > 早期終了を行うには下記のような手段が適しています。
 >
@@ -87,7 +87,7 @@ forEach(function(element, index, array) { /* … */ }, thisArg)
 >
 > 他の Array のメソッドである {{jsxref("Array.prototype.every()", "every()")}}, {{jsxref("Array.prototype.some()", "some()")}}, {{jsxref("Array.prototype.find()", "find()")}}, {{jsxref("Array.prototype.findIndex()", "findIndex()")}} は、配列の要素を検査する際、truthy の値を返すことで以降の繰り返しが必要であるかどうかを決めます。
 
-> **Note:** forEach は同期関数を期待します。
+> **メモ:** forEach は同期関数を期待します。
 >
 > `forEach` はプロミスを待ちません。`forEach` のコールバックとしてプロミス (または非同期関数) を使用する場合は、その意味合いを理解しておくようにしてください。
 >
@@ -148,7 +148,7 @@ items.forEach((item) => {
 
 ### 配列の内容の出力
 
-> **Note:** 配列の内容をコンソールに表示するために、配列の整形済みのバージョンを表示する {{domxref("Console/table", "console.table()")}} を使用することができます。
+> **メモ:** 配列の内容をコンソールに表示するために、配列の整形済みのバージョンを表示する {{domxref("Console/table", "console.table()")}} を使用することができます。
 >
 >以下の例では同じことを `forEach()` を使用して行う他の方法を説明しています。
 
@@ -195,7 +195,7 @@ console.log(obj.sum); // 16
 
 `thisArg` 引数 (`this`) が `forEach()` に提供されているため、`callbackFn` の呼び出しのたびにこれが渡されます。コールバックはこれを `this` の値として使用します。
 
-> **Note:** コールバック関数の受け渡しに[アロー関数式](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用した場合、`thisArg` 引数は、アロー関数が文法的に {{jsxref("Operators/this", "this")}} の値に結び付けられているため省略可能です。
+> **メモ:** コールバック関数の受け渡しに[アロー関数式](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用した場合、`thisArg` 引数は、アロー関数が文法的に {{jsxref("Operators/this", "this")}} の値に結び付けられているため省略可能です。
 
 ### オブジェクトをコピーする関数
 

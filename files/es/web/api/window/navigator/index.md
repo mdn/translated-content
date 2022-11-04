@@ -26,7 +26,7 @@ navigatorObject = window.navigator
 
 ## Ejemplos
 
-### Ejemplo #1: Detectar un navegador y retornar un string
+### Ejemplon 1: Detectar un navegador y retornar un string
 
 ```js
 var sBrowser, sUsrAg = navigator.userAgent;
@@ -46,7 +46,7 @@ if(sUsrAg.indexOf("Chrome") > -1) {
 alert("Usted está utilizando: " + sBrowser);
 ```
 
-### Ejemplo #2: Detectar un navegador y retornar un índice
+### Ejemplo 2: Detectar un navegador y retornar un índice
 
 ```js
 function obtenerIdNavegador() {

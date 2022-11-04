@@ -1,13 +1,6 @@
 ---
 title: Media queries
 slug: Web/CSS/Media_Queries
-tags:
-  - CSS
-  - Design Responsivo
-  - Media Queries
-  - Referencia
-  - media query
-translation_of: Web/CSS/Media_Queries
 ---
 {{CSSRef}}
 

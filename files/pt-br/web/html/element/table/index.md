@@ -1,11 +1,6 @@
 ---
 title: <table>
 slug: Web/HTML/Element/table
-tags:
-  - Elemento
-  - Referencia
-  - tabelas
-translation_of: Web/HTML/Element/table
 ---
 ## Resumo
 
@@ -20,15 +15,13 @@ O elemento HTML _Table_ (`<table>`) representa dados em duas dimensões ou mais.
     <tr>
       <td>
         <a
-          href="/en-US/docs/HTML/Content_categories"
-          title="HTML/Content categories"
+          href="/pt-BR/docs/HTML/Content_categories"
           >Categoria de conteúdo</a
         >
       </td>
       <td>
         <a
-          href="/en-US/docs/HTML/Content_categories#Flow_content"
-          title="HTML/Content categories#Flow content"
+          href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Fluxo de conteúdo</a
         >
       </td>
@@ -192,7 +185,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## DOM interface
 
-This element implements the [`HTMLTableElement`](/en-US/docs/DOM/HTMLTableElement) interface.
+This element implements the [`HTMLTableElement`](/pt-BR/docs/DOM/HTMLTableElement) interface.
 
 ## Examples
 
@@ -333,4 +326,4 @@ border: 1px solid black;
   - {{cssxref("margin")}} and {{cssxref("padding")}} to style the individual cell content;
   - {{cssxref("text-align")}} and {{cssxref("vertical-align")}} to define alignment of text and cell content.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

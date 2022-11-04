@@ -1,7 +1,6 @@
 ---
 title: Requisições síncronas e assíncronas
 slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
-translation_of: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 original_slug: Web/API/XMLHttpRequest/Requisicoes_sincronas_e_assincronas
 ---
 `XMLHttpRequest` suporta comunicações síncronas e assíncronas. No geral, entretando, requisições assíncronas devem prevalecer sobre requisições síncronas por questões de performance.
@@ -239,4 +238,4 @@ function logData() {
 - [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest)
 - [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [AJAX](/pt-BR/docs/AJAX)
-- [`navigator.sendBeacon`](/en-US/docs/Web/API/Navigator/sendBeacon)
+- [`navigator.sendBeacon`](/pt-BR/docs/Web/API/Navigator/sendBeacon)

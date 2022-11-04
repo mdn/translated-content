@@ -69,6 +69,7 @@ yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크]
 문서의 상단에 있는 메타데이터는 `title`, `slug`, `original_slug` 그리고 `l10n.*`만 번역해줍니다. (참고: [#7412](https://github.com/mdn/translated-content/issues/7412))
 
 영어 원문
+
 ```markdown
 ---
 title: Proxy
@@ -87,6 +88,7 @@ The `Proxy` object enables you to create a proxy for another ...
 ```
 
 번역본
+
 ```markdown
 ---
 title: Proxy

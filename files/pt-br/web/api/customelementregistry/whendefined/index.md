@@ -1,15 +1,6 @@
 ---
 title: CustomElementRegistry.whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
-tags:
-  - API
-  - CustomElementRegistry
-  - Method
-  - Reference
-  - Web Components
-  - custom elements
-  - whenDefined
-browser-compat: api.CustomElementRegistry.whenDefined
 ---
 {{APIRef("CustomElementRegistry")}}
 

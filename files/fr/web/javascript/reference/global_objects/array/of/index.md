@@ -74,14 +74,11 @@ if (!Array.of) {
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.of', 'Array.of')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.of', 'Array.of')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.of")}}
+{{Compat}}
 
 ## Voir aussi
 

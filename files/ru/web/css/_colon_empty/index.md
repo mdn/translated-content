@@ -18,7 +18,9 @@ translation_of: Web/CSS/:empty
 
 ## Синтаксис
 
-    <element>:empty { /* стили */ }
+```
+<element>:empty { /* стили */ }
+```
 
 ## Примеры
 

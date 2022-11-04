@@ -1,11 +1,6 @@
 ---
 title: Número
 slug: Web/JavaScript/Reference/Global_Objects/Number
-tags:
-  - JavaScript
-  - Número
-  - Referência(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Number
 ---
 {{JSRef("Global_Objects", "Number")}}
 
@@ -79,7 +74,7 @@ Toda instância `Number` herdam de {{jsxref("Number.prototype")}}. O objeto 'pro
 
 ### Métodos
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', 'Methods')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', 'Methods')}}
 
 ## Exemplos
 

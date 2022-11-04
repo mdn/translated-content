@@ -1,7 +1,6 @@
 ---
 title: ImageCapture
 slug: Web/API/ImageCapture
-translation_of: Web/API/ImageCapture
 ---
 {{APIRef("MediaStream Image")}}
 

@@ -1,11 +1,6 @@
 ---
 title: filter
 slug: Web/SVG/Element/filter
-tags:
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/filter
 ---
 {{SVGRef}}
 
@@ -21,9 +16,9 @@ O elemento `filter` fornece um recipiente para operações de um filtro atômico
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
-- [Atributos XLink](/pt-BR/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos XLink](/pt-BR/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -41,7 +36,7 @@ O elemento `filter` fornece um recipiente para operações de um filtro atômico
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGFilterElement`](/pt-BR/DOM/SVGFilterElement "en/DOM/SVGFilterElement").
+Este elemento implementa a interface do [`SVGFilterElement`](/pt-BR/DOM/SVGFilterElement).
 
 ## Compatibilidade com navegadores
 
@@ -65,4 +60,4 @@ Este elemento implementa a interface do [`SVGFilterElement`](/pt-BR/DOM/SVGFilte
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [Tutorial SVG: Efeitos de filtros](/pt-BR/SVG/Tutorial/Filter_effects "en/SVG/Tutorial/Filter_effects")
+- [Tutorial SVG: Efeitos de filtros](/pt-BR/SVG/Tutorial/Filter_effects)

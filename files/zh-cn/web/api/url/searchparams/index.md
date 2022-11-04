@@ -35,4 +35,4 @@ let age = parseInt(params.get('age')); // is the number 18
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.searchParams")}}
+{{Compat}}

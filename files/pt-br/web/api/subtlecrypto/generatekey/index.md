@@ -1,13 +1,6 @@
 ---
 title: SubtleCrypto.generateKey()
 slug: Web/API/SubtleCrypto/GenerateKey
-tags:
-  - API
-  - Referencia
-  - SubtleCrypto
-  - Web Crypto API
-  - metodo
-translation_of: Web/API/SubtleCrypto/generateKey
 ---
 {{APIRef("Web Crypto API")}}
 

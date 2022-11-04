@@ -1,9 +1,6 @@
 ---
 title: Storage.setItem()
 slug: Web/API/Storage/setItem
-tags:
-  - Referencia
-translation_of: Web/API/Storage/setItem
 ---
 {{APIRef("Web Storage API")}}
 

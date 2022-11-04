@@ -1,11 +1,6 @@
 ---
 title: Error.prototype.message
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-browser-compat: javascript.builtins.Error.message
 ---
 
 {{JSRef}}

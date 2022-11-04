@@ -1,128 +1,140 @@
 ---
-title: 索引集合类 (Indexed collections)
+title: 索引集合类（Indexed collections）
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
-这个章节主要介绍了以索引进行排序的数据集合。包括数组以及类似于数组的数据结构，如 **{{jsxref("Array")}}** 、**{{jsxref("TypedArray")}}** 。
+本章介绍按索引值排序的数据集合。包括数组和类数组结构，如 {{jsxref("Array")}} 对象和 {{jsxref("TypedArray")}} 对象。
 
-## 数组对象 (Array object)
+*数组*是由名称和索引引用的值构成的有序列表。
 
-数组 (array) 是一个有序的数据集合，我们可以通过数组名称 (name) 和索引 (index) 进行访问。例如，我们定义了一个数组 emp，数组中的每个元素包含了一个雇员的名字以及其作为索引的员工号。那么 emp\[1] 将会代表 1 号员工，emp\[2] 将会代表 2 号员工，以此类推。
+例如，考虑一个名为 `emp` 的数组，它包含按数字雇员编号索引的雇员姓名。所以 `emp[0]` 是第 0 位员工，`emp[1]` 是第 1 位员工，以此类推。
 
-JavaScript 中没有明确的数组数据类型。但是，我们可以通过使用内置 Array 对象和它的方法对数组进行操作。Array 对象有很多操作数组的方法，比如合并、反转、排序等。数组对象有一个决定数组长度和使用正则表达式操作其他属性的属性。
+JavaScript 中没有明确的数组数据类型。但是，你可以使用预定义的 `Array` 对象及其方法来处理应用程序中的数组。`Array` 对象具有以各种方式操作数组的方法，例如连接、反转和排序。它有一个用于确定数组长度的属性和用于正则表达式的其他属性。
 
-### 创建数组 (creating an array)
+## 创建数组
 
-以下语句创建等效的数组：
+以下语句创建了等效的数组：
 
 ```js
-var arr = new Array(element0, element1, ..., elementN);
-var arr = Array(element0, element1, ..., elementN);
-var arr = [element0, element1, ..., elementN];
-
-// 译者注：var arr=[4] 和 var arr=new Array(4) 是不等效的，
-// 后者 4 指数组长度，所以使用字面值 (literal) 的方式应该不仅仅是便捷，同时也不易踩坑
+const arr1 = new Array(element0, element1, /* … ,*/ elementN);
+const arr2 = Array(element0, element1, /* … ,*/ elementN);
+const arr3 = [element0, element1, /* … ,*/ elementN];
 ```
 
-`element0, element1, ..., elementN` 是数组元素的值的列表。当这些值被指定后，数组将被初始化，他们将被作为数组元素。数组的 length 属性也会被设为参数的个数。
+`element0, element1, …, elementN` 是数组元素的值列表。当指定这些值时，数组将用它们作为数组的元素初始化。数组的 `length` 属性被设置为参数的数量。
 
-括号语法被称为 "数组字面值" 或 "数组初始化器", 它比其他创建数组的方式更便捷，所以通常是首选。详细内容参见 [Array literals](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals) 。
+括号语法称为“数组字面量”或“数组初始化式”。它比其他形式的数组创建更短，因此通常是首选。详见[数组字面量](zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#数组字面量_array_literals)。
 
 为了创建一个长度不为 0，但是又没有任何元素的数组，可选以下任何一种方式：
 
 ```js
-var arr = new Array(arrayLength);
-var arr = Array(arrayLength);
+// This...
+const arr1 = new Array(arrayLength);
 
-// 这样有同样的效果
-var arr = [];
-arr.length = arrayLength;
+// ...results in the same array as this
+const arr2 = Array(arrayLength);
+
+// This has exactly the same effect
+const arr3 = [];
+arr3.length = arrayLength;
 ```
 
-> **备注：** 以上代码，数组长度（arrayLength）必须为一个数字（Number）。否则，将会创建一个只有单个（所输入的）元素的数组。调用 `arr.length` 会返回数组长度，但是数组实际上包含了空的（`undefined`）元素。因此在数组上使用 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环，将不会返回任何的值。
+> **备注：** 以上代码，数组长度（`arrayLength`）必须为一个数字（`Number`）。否则，将会创建一个只有单个元素（提供的值）的数组。调用 `arr.length` 会返回数组长度，但数组不包含任何元素。{{jsxref("Statements/for...in","for...in")}} 循环在数组上找不到任何属性。
 
-除了如上所示创建新定义的变量，数组 (array) 也可以作为一个属性 (property) 分配给一个新的或者已存在的对象 (object)：
+除了上面所示的新定义的变量外，数组还可以被赋值为新对象或现有对象的属性：
 
 ```js
-var obj = {};
-// ...
-obj.prop = [element0, element1, ..., elementN];
+const obj = {};
+// …
+obj.prop = [element0, element1, /* … ,*/ elementN];
 
 // OR
-var obj = {prop: [element0, element1, ...., elementN]}
+const obj = { prop: [element0, element1, /* … ,*/ elementN] };
 ```
 
-如果你希望用单个元素初始化一个数组，而这个元素恰好又是数字 (`Number`)，那么你必须使用括号语法。当单个的数字 (`Number`) 传递给 Array() 构造函数时，将会被解释为数组长度，并非单个元素。
+如果你希望用单个元素初始化一个数组，而这个元素恰好又是数字（`Number`），那么你必须使用括号语法。当单个的数字（`Number`）传递给 `Array()` 构造函数时，将会被解释为 `arrayLength`，并非单个元素。
 
 ```js
-var arr = [42];      // 创建一个只有唯一元素的数组：
-                     // the number 42.
-var arr = Array(42); // 创建一个没有元素的数组，
-                     // 但是数组的长度被设置成 42.
+// 创建一个只有唯一元素的数组：the number 42.
+const arr = [42];
+
+// 创建一个没有元素的数组，但是数组的长度被设置成 42.
+const arr = Array(42);
 
 // 上面的代码与下面的代码等价
-var arr = [];
+const arr = [];
 arr.length = 42;
 ```
 
-如果 N 不是一个整数，调用`Array(N)`将会报`RangeError`错误，以下方法说明了这种行为：
+如果 `N` 不是一个整数，调用 `Array(N)` 将会报 `RangeError` 错误，下面的例子说明了这种行为：
 
 ```js
-var arr = Array(9.3);  // RangeError: Invalid array length
+const arr = Array(9.3); // RangeError: Invalid array length
 ```
 
 如果你需要创建任意类型的单元素数组，安全的方式是使用字面值。或者在向数组添加单个元素之前先创建一个空的数组。
 
-### 填充数组 (populating an array)
-
-你可以通过给元素赋值来填充数组，例如：
+你也可以使用 {{jsxref("Array.of")}} 静态方法来创建包含单个元素的数组。
 
 ```js
-var emp = [];
-emp[0] = "Casey Jones";
-emp[1] = "Phil Lesh";
-emp[2] = "August West";
+const wisenArray = Array.of(9.3); // wisenArray contains only one element 9.3
 ```
 
-> **备注：** 如果你在以上代码中给数组操作符的是一个非整形数值，那么将作为一个代表数组的对象的属性 (property) 创建，而非作为数组的元素。
+## 引用数组元素
+
+因为元素也是属性，你可以使用[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)来访问。假设你定义了以下数组：
 
 ```js
-var arr = [];
-arr[3.4] = "Oranges";
-console.log(arr.length);                // 0
-console.log(arr.hasOwnProperty(3.4));   // true
+const myArray = ['Wind', 'Rain', 'Fire'];
 ```
+
+你可以将数组的第一个元素引用为 `myArray[0]`，将数组的第二个元素引用为 `myArray[1]`，等等...元素的索引从零开始。
+
+> **备注：** 你也可以使用[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)来访问数组的其他属性，比如对象。
+>
+> ```js
+> const arr = ['one', 'two', 'three'];
+> arr[2]          // three
+> arr['length']   // 3
+> ```
+
+## 填充数组
+
+你可以通过给数组元素赋值来填充数组，例如：
+
+```js
+const emp = [];
+emp[0] = 'Casey Jones';
+emp[1] = 'Phil Lesh';
+emp[2] = 'August West';
+```
+
+> **备注：** 如果你在以上代码中给数组操作符的是一个非整形数值，那么将作为一个表示数组的对象的属性 (property) 创建，而不是数组的元素。
+>
+> ```js
+> const arr = [];
+> arr[3.4] = 'Oranges';
+> console.log(arr.length); // 0
+> console.log(Object.hasOwn(arr, 3.4)); // true
+> ```
 
 你也可以在创建数组的时候去填充它：
 
 ```js
-var myArray = new Array("Hello", myVar, 3.14159);
-var myArray = ["Mango", "Apple", "Orange"]
-```
-
-### 引用数组元素 (referring to array elements)
-
-您通过可以使用元素的序号来引用数组的元素。例如，假设你定义了如下数组：
-
-```js
-var myArray = ["Wind", "Rain", "Fire"];
-```
-
-你可以用 `myArray[0]`引用第一个元素，`myArray[1]`引用第二个元素。元素的索引是从`0`开始的。
-
-> **备注：** 数组操作符（方括号 \[ ]）也可以用来访问数组的属性 (在 JavaScript 中，数组也是对象)。例如：
-
-```js
-var arr = ["one", "two", "three"];
-arr[2];  // three
-arr["length"];  // 3
+const myArray = new Array('Hello', myVar, 3.14159);
+// OR
+const myArray = ['Mango', 'Apple', 'Orange'];
 ```
 
 ### 理解 length
 
-在实施层面，JavaScript 实际上是将元素作为标准的对象属性来存储，把数组索引作为属性名。长度属性是特殊的，它总是返回最后一个元素的索引值加 1(下例中，Dusty 的索引是 30，所以 cats.length 返回 30 + 1)。记住，JavaScript 数组索引是基于 0 的：他们从 0 开始，而不是 1。这意味着数组长度属性将比最大的索引值大 1:
+在实施层面，JavaScript 实际上是将元素作为标准的对象属性来存储，把数组索引作为属性名。
+
+`length` 属性是特殊的，如果存在最后一个元素，则其值总是大于其索引的正整数（在下面的例子中，`'Dusty'` 的索引是 `30`，所以 `cats.length` 返回 `30 + 1`）。
+
+记住，JavaScript 数组索引是基于 0 的：他们从 `0` 开始，而不是 `1`。这意味着 `length` 属性将比最大的索引值大 1：
 
 ```js
 var cats = [];
@@ -130,76 +142,86 @@ cats[30] = ['Dusty'];
 console.log(cats.length); // 31
 ```
 
-你也可以分配`length`属性。写一个小于数组元素数量的值会缩短数组，写 0 会彻底清空数组：
+你也可以给 `length` 属性赋值。
+
+写一个小于数组元素数量的值将截断数组，写 `0` 会彻底清空数组：
 
 ```js
-var cats = ['Dusty', 'Misty', 'Twiggy'];
+const cats = ['Dusty', 'Misty', 'Twiggy'];
 console.log(cats.length); // 3
 
 cats.length = 2;
-console.log(cats); // logs "Dusty,Misty" - Twiggy has been removed
+console.log(cats); // logs "Dusty, Misty" - Twiggy has been removed
 
 cats.length = 0;
-console.log(cats); // logs nothing; the cats array is empty
+console.log(cats); // logs []; the cats array is empty
 
 cats.length = 3;
-console.log(cats); // [undefined, undefined, undefined]
+console.log(cats); // logs [ <3 empty items> ]
 ```
 
-### 遍历数组 (interating over array)
+### 遍历数组
 
-遍历数组元素并以某种方式处理每个元素是一个常见的操作。以下是最简单的方式：
+一种常见的操作是遍历数组的值，以某种方式处理每个值。最简单的方法如下：
 
 ```js
-var colors = ['red', 'green', 'blue'];
-for (var i = 0; i < colors.length; i++) {
+const colors = ['red', 'green', 'blue'];
+for (let i = 0; i < colors.length; i++) {
   console.log(colors[i]);
 }
 ```
 
-如果你确定数组中没有一个元素的求值是 false —— 如果你的数组只包含[DOM](/zh-CN/docs/DOM)节点，如下，你可以选择一个更高效的土法子：
+如果你确定数组中没有一个元素的求值是 `false` —— 如果你的数组只包含 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 节点，如下，你可以选择一个更高效的土法子：
 
 ```js
-var divs = document.getElementsByTagName('div');
-for (var i = 0, div; div = divs[i]; i++) {
+const divs = document.getElementsByTagName('div');
+for (let i = 0, div; div = divs[i]; i++) {
   /* Process div in some way */
 }
 ```
 
-这样避免了检测数组长度的开销，额外的好处是确保了 div 变量当前在每次循环中都被重新赋值为当前项。
+这避免了检查数组长度的开销，并确保 `div` 变量在每次循环时都被重新赋值给当前项，从而增加了便利性。
 
-{{jsxref("Array.forEach", "forEach()")}} 方法提供了遍历数组元素的其他方法：
+[`forEach()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 方法提供了遍历数组元素的其他方法：
 
 ```js
-var colors = ['red', 'green', 'blue'];
-colors.forEach(function(color) {
-  console.log(color);
+const colors = ['red', 'green', 'blue'];
+colors.forEach((color) => console.log(color));
+// red
+// green
+// blue
+```
+
+传递给 `forEach` 的函数对数组中的每个元素执行一次，数组元素作为参数传递给该函数。未赋值的值不会在 `forEach` 循环迭代。
+
+注意，在数组定义时省略的元素不会在 `forEach` 遍历时被列出，但是手动赋值为 `undefined` 的元素是会被列出的：
+
+```js
+const sparseArray = ['first', 'second', , 'fourth'];
+
+sparseArray.forEach((element) => {
+  console.log(element);
 });
+// first
+// second
+// fourth
+
+if (sparseArray[2] === undefined) {
+  console.log('sparseArray[2] is undefined');  // true
+}
+
+const nonsparseArray = ['first', 'second', undefined, 'fourth'];
+
+nonsparseArray.forEach((element) => {
+  console.log(element);
+});
+// first
+// second
+// undefined
+// fourth
 ```
 
-被传递给 forEach 的函数会在数组的每个元素像上执行一次，元素作为参数传递给该函数。未赋值的值不会在 forEach 循环迭代。
-
-注意，在数组定义时省略的元素不会在 forEach 遍历时被列出，但是手动赋值为 undefined 的元素是会被列出的：
-
-```js
-var array = ['first', 'second', , 'fourth'];
-
-// returns ['first', 'second', 'fourth'];
-array.forEach(function(element) {
-  console.log(element);
-})
-
-if(array[2] === undefined) { console.log('array[2] is undefined'); } // true
-
-var array = ['first', 'second', undefined, 'fourth'];
-
-// returns ['first', 'second', undefined, 'fourth'];
-array.forEach(function(element) {
-  console.log(element);
-})
-```
-
-一旦 JavaScript 元素被保存为标准的对象属性，通过[`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环来迭代数组将变得不明智，因为正常元素和所有可枚举的属性都会被列出。
+由于 JavaScript 元素被保存为标准对象属性，因此不建议使用 {{jsxref("Statements/for...in","for...in")}} 循环遍历 JavaScript 数组，因为普通元素和所有可枚举属性都将被列出。
 
 ### 数组的方法 (array methods)
 

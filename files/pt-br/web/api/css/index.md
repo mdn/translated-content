@@ -1,11 +1,6 @@
 ---
 title: CSS
 slug: Web/API/CSS
-tags:
-  - Apps
-  - CSSOM
-  - Referencia
-translation_of: Web/API/CSS
 ---
 {{APIRef("CSSOM")}}
 
@@ -25,9 +20,6 @@ _Nenhuma método estático herdado_.
 
 - {{domxref("CSS.supports()")}}
   - : Retorna um {{domxref("Boolean")}} indicando se o par _property-value_, ou a condição dada do parâmetro é suportada.
-
-<!---->
-
 - {{domxref("CSS.escape()")}} {{experimental_inline}}
   - : Pode ser usado para escapar um string mais usado como parte de um seletor CSS.
 

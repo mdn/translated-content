@@ -64,6 +64,7 @@ La comunidad de español sugiere utilizar las siguientes convenciones al traduci
 | Event listener                  | Detector de eventos            |
 | Event handler                   | Manejador de eventos           |
 | See also                        | Véase también                  |
+| Specifications                  | Especificaciones               |
 | Browser compatibility           | Compatibilidad con navegadores |
 | HTML Content o HTML             | HTML                           |
 | JavaScript Content o JavaScript | JavaScript                     |
@@ -71,7 +72,13 @@ La comunidad de español sugiere utilizar las siguientes convenciones al traduci
 
 </details>
 
-Actualmente trabajando en: <https://github.com/mdn/translated-content/issues/6562>
+## Formateo
+
+| Expresión | Como escribirlo |
+| --------- | --------------- |
+| 2<sup>5</sup> | 2^5         |
+
+Actualmente trabajando en: <https://github.com/mdn/translated-content/issues/8635>
 
 ## Charla con nosotros
 

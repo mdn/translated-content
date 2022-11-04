@@ -1,7 +1,6 @@
 ---
 title: IndexedDB
 slug: Web/API/IndexedDB_API
-translation_of: Web/API/IndexedDB_API
 ---
 IndexedDB é uma API para armazenamento client-side de quantidades significantes de informações e buscas com alta performance por índices. Enquanto [DOM Storage](/pt-BR/docs/DOM/Storage) é útil para armazenamento de pequenas quantidade de dados, IndexedDB é a solução para grande porção de dados estruturados.
 
@@ -40,16 +39,12 @@ As interfaces da API assíncrona do IndexedDB são:
 - {{domxref("IDBTransaction")}}
   - : Representa uma transação. Você cria a transação no banco de dados, especifíca o escopo (tal como qual objectStore você deseja acessar), e determina que tipo de acesso (apenas leitura ou também escrita) daquilo que você deseja.
 
-<!---->
-
 Uma versão anterior da especificação também define estas interfaces agora removidas. Elas ainda estão documentadas caso você precise atualizar códigos escritos anteriormente:
 
 - {{domxref("IDBVersionChangeRequest")}}
   - : Representa uma requisição para alterar a versão do banco de dados. O modo de alterar a versão do banco de dados mudou então (chamando IDBFactory.open sem também chamar IDBDatabase.setVersion) e a interface IDBOpenDBRequest agora tem a funcionalidade do removido IDBVersionChangeRequest.
 - {{domxref("IDBDatabaseException")}} {{ obsolete_inline() }}
   - : Representa condições de erro que podem ser encontradas enquanto performando operações no banco de dados.
-
-<!---->
 
 > **Nota:** há também a [versão síncrona da API](/pt-BR/docs/IndexedDB/Syncronous_API). A versão síncrona não tem implementação em qualquer navegador. É feita para ser utilizada com [WebWorkers](/pt-BR/docs/DOM/Using_web_workers).
 

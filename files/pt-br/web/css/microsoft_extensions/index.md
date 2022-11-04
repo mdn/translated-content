@@ -1,7 +1,6 @@
 ---
 title: Extensões CSS da Microsoft
 slug: Web/CSS/Microsoft_Extensions
-translation_of: Web/CSS/Microsoft_Extensions
 ---
 {{CSSRef}}
 

@@ -267,7 +267,7 @@ De esa manera podemos verificar qué tecla es presionada en determinado _frame_ 
 
 #### Implementando la API de Orientación del Dispositivo
 
-Probablemente la parte más interesante del juego es que utiliza la API de Orientación para Dispositivos móviles. Gracias a esto puedes jugar el juego inclinando el dispositivo en la dirección que quieres que la pelota ruede. Aquí está el código de la función `create()`\* \*responsable por esto:
+Probablemente la parte más interesante del juego es que utiliza la API de Orientación para Dispositivos móviles. Gracias a esto puedes jugar el juego inclinando el dispositivo en la dirección que quieres que la pelota ruede. Aquí está el código de la función `create()` responsable por esto:
 
 ```js
 window.addEventListener("deviceorientation", this.handleOrientation, true);
@@ -303,7 +303,7 @@ this.hole.body.setSize(2, 2);
 
 La diferencia está en que el cuerpo del agujero se configura como inamovible por lo que no se moverá cuando acertamos con la pelota y tendrá calculada la detección de colisión (esto se tratará más adelante en este artículo).
 
-#### **Construyendo el laberinto de bloques**
+#### Construyendo el laberinto de bloques
 
 Para hacer más difícil el juego, y más interesante, añadiremos algunos obstaculos entre la pelota y la sálida. Podríamos usar un editor de niveles pero por motivo de este tutorial, vamos a crear algo nosotros mismos.
 
@@ -356,7 +356,7 @@ showLevel: function(level) {
 
 Gracias a eso el juego da al jugador un reto: ahora tiene que rodar la pelota a través del área de juego y guiarla por el laberinto construido por bloques. Es solo un ejemplo de cargar los niveles, y solo hay 5 puramente para mostrar la idea, pero podés trabajar en expandirlo por tu cuenta.
 
-#### **Detección de colisión**
+#### Detección de colisión
 
 Hasta este punto tenemos la pelota, que puede ser controlada por el jugador, el agujero que se tiene que alcanzar y los obstáculos que bloquean el camino. Sin embargo, hay un problema: nuestro juego todavía no tiene ninguna detección de colisiones, así que no sucede nada cuando la pelota golpea los bloques, sólo los atraviesa. Vamos a arreglarlo! La buena noticia es que el _framework_ se ocupará de calcular la detección de colisones, nosotros sólo debemos especificar los objetos con los que colisionará en la función `update()`:
 

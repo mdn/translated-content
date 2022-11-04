@@ -1,7 +1,6 @@
 ---
 title: Document
 slug: Web/API/Document
-translation_of: Web/API/Document
 ---
 {{ ApiRef("DOM") }}
 
@@ -80,7 +79,7 @@ No futuro, todas essas interfaces irão ser divididas na interface `Document`.
 
 The `Document` interface is extended with the {{domxref("ParentNode")}} interface:
 
-{{page("/en-US/docs/Web/API/ParentNode","Properties")}}
+{{page("/pt-BR/docs/Web/API/ParentNode","Properties")}}
 
 ### Extension for HTML documents
 
@@ -229,7 +228,7 @@ The `Document` interface is extended with the {{domxref("ParentNode")}} interfac
 The `Document` interface is extended with the {{domxref("XPathEvaluator")}} interface:
 
 - {{domxref("Document.createExpression","Document.createExpression(String expression, XPathNSResolver resolver)")}}
-  - : Compiles an [`XPathExpression`](/en-US/docs/XPathExpression) which can then be used for (repeated) evaluations.
+  - : Compiles an [`XPathExpression`](/pt-BR/docs/XPathExpression) which can then be used for (repeated) evaluations.
 - {{domxref("Document.createNSResolver","Document.createNSResolver(Node resolver)")}}
   - : Creates an {{domxref("XPathNSResolver")}} object.
 - {{domxref("Document.evaluate","Document.evaluate(String expression, Node contextNode, XPathNSResolver resolver, Number type, Object result)")}}

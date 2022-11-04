@@ -123,20 +123,11 @@ Promise.any([café, thé]).then(valeur => {
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td><strong>Spécification</strong></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Promise.any')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.any")}}
+{{Compat}}
 
 ## Voir aussi
 

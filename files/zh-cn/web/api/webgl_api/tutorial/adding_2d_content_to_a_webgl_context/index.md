@@ -21,11 +21,11 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 #### 顶点着色器
 
-每次渲染一个形状时，顶点着色器会在形状中的每个顶点运行。它的工作是将输入顶点从原始坐标系转换到 WebGL 使用的缩放空间 (**clipspace**) 坐标系，其中每个轴的坐标范围从-1.0 到 1.0，并且不考虑纵横比，实际尺寸或任何其他因素。
+每次渲染一个形状时，顶点着色器会在形状中的每个顶点运行。它的工作是将输入顶点从原始坐标系转换到 WebGL 使用的缩放空间 (**clipspace**) 坐标系，其中每个轴的坐标范围从 -1.0 到 1.0，并且不考虑纵横比，实际尺寸或任何其他因素。
 
 顶点着色器需要对顶点坐标进行必要的转换，在每个顶点基础上进行其他调整或计算，然后通过将其保存在由 GLSL 提供的特殊变量（我们称为 gl_Position）中来返回变换后的顶点
 
-顶点着色器根据需要，也可以完成其他工作。例如，决定哪个包含 [texel](<https://zh.wikipedia.org/wiki/texel_(graphics)>) 面部纹理的坐标，可以应用于顶点；通过法线来确定应用到顶点的光照因子等。然后将这些信息存储在[变量（varyings)](/zh-CN/docs/XUL_%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85)或[属性 (attributes)](/zh-CN/docs/Web/API/WebGL_API/Data#Attributes)属性中，以便与片段着色器共享
+顶点着色器根据需要，也可以完成其他工作。例如，决定哪个包含 [texel](<https://zh.wikipedia.org/wiki/texel_(graphics)>) 面部纹理的坐标，可以应用于顶点；通过法线来确定应用到顶点的光照因子等。然后将这些信息存储在[变量（varyings)](/zh-CN/docs/Web/API/WebGL_API/Data#varyings)或[属性 (attributes)](/zh-CN/docs/Web/API/WebGL_API/Data#Attributes)属性中，以便与片段着色器共享
 
 以下的顶点着色器接收一个我们定义的属性（aVertexPosition）的顶点位置值。之后这个值与两个 4x4 的矩阵（uProjectionMatrix 和 uModelMatrix）相乘; 乘积赋值给 gl_Position。有关投影和其他矩阵的更多信息，[在这里您可能可以找到有帮助的文章](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html).。
 
@@ -150,18 +150,31 @@ const programInfo = {
 
 ```js
 function initBuffers(gl) {
+
+  // Create a buffer for the square's positions.
+
   const positionBuffer = gl.createBuffer();
+
+  // Select the positionBuffer as the one to apply buffer
+  // operations to from here out.
+
   gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
 
-  var vertices = [
-    1.0,  1.0,  0.0,
-    -1.0, 1.0,  0.0,
-    1.0,  -1.0, 0.0,
-    -1.0, -1.0, 0.0
+  // Now create an array of positions for the square.
+
+  const positions = [
+     1.0,  1.0,
+    -1.0,  1.0,
+     1.0, -1.0,
+    -1.0, -1.0,
   ];
 
+  // Now pass the list of positions into WebGL to build the
+  // shape. We do this by creating a Float32Array from the
+  // JavaScript array, then use it to fill the current buffer.
+
   gl.bufferData(gl.ARRAY_BUFFER,
-                new Float32Array(vertices),
+                new Float32Array(positions),
                 gl.STATIC_DRAW);
 
   return {
@@ -271,9 +284,9 @@ function drawScene(gl, programInfo, buffers) {
 
 接着加载特定位置，并把正方形放在距离摄像机 6 个单位的的位置。然后，我们绑定正方形的顶点缓冲到上下文，并配置好，再通过调用 {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} 方法来画出对象。
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-如果你的浏览器支持 WebGL 的话，[可以点击这里看看 DEMO](/samples/webgl/sample2)。完整的源代码从[这里](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2)获得
+如果你的浏览器支持 WebGL 的话，[可以点击这里看看 DEMO](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)。完整的源代码从[这里](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2)获得
 
 ## 矩阵通用计算
 

@@ -1,16 +1,6 @@
 ---
 title: Seletores de ID
 slug: Web/CSS/ID_selectors
-tags:
-  - Beginner
-  - CSS
-  - CSS Reference
-  - Iniciante
-  - Referencia
-  - Referencia CSS
-  - Selectors
-  - Seletores
-translation_of: Web/CSS/ID_selectors
 ---
 {{CSSRef("Selectors")}}
 

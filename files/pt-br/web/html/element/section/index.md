@@ -1,7 +1,6 @@
 ---
 title: <section>
 slug: Web/HTML/Element/section
-translation_of: Web/HTML/Element/section
 ---
 O **elemento HTML `<section>`** representa uma seção genérica contida em um documento HTML, geralmente com um título, quando não existir um elemento semântico mais específico para representá-lo.
 
@@ -11,16 +10,16 @@ Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >Conteúdo de fluxo</a
         >
         ,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Sectioning_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Sectioning_content"
           >conteúdo de seção</a
         >, conteúdo palpável.
       </td>
@@ -28,7 +27,7 @@ Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement 
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >Conteúdo de fluxo</a
         >.
       </td>
@@ -41,7 +40,7 @@ Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement 
       <th scope="row">Tags-pai permitidas</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >conteúdo de fluxo</a
         >. Note que um elemento {{HTMLElement("section")}} não deve
         ser um descendente de um elemento {{HTMLElement("address")}}.

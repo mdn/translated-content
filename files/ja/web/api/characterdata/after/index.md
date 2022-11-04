@@ -44,7 +44,7 @@ h1TextNode.data;
 // "CharacterData.after()"
 ```
 
-> **Note:** 現在のノードにテキストを追加したい場合は、 [`appendData()`](/ja/docs/Web/API/CharacterData/appendData) メソッドを使用すると現在のノードにデータを追加することができます。
+> **メモ:** 現在のノードにテキストを追加したい場合は、 [`appendData()`](/ja/docs/Web/API/CharacterData/appendData) メソッドを使用すると現在のノードにデータを追加することができます。
 
 ## 仕様書
 

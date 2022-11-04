@@ -1,7 +1,6 @@
 ---
 title: Usando XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 original_slug: Web/API/XMLHttpRequest/Usando_XMLHttpRequest
 ---
 [`XMLHttpRequest`](/pt-BR/docs/DOM/XMLHttpRequest) torna o envio de requisições HTTP muito fácil. Basta criar uma instância do objeto, abrir uma url e enviar uma requisição. O [status](/pt-BR/docs/HTTP/HTTP_response_codes) [HTTP](/pt-BR/docs/HTTP/HTTP_response_codes)do resultado assim como o seu conteúdo estarão disponíveis quando a transação for completada. Esta página descreve alguns casos comuns de uso desse poderoso objeto JavaScript.
@@ -240,7 +239,7 @@ All these things are done automatically by the web browser whenever you submit a
 |*|
 |*|  :: XMLHttpRequest.prototype.sendAsBinary() Polifyll ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
+|*|  https://developer.mozilla.org/pt-BR/docs/DOM/XMLHttpRequest#sendAsBinary()
 \*/
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
@@ -259,7 +258,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 |*|
 |*|  :: AJAX Form Submit Framework ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
+|*|  https://developer.mozilla.org/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
 |*|
 |*|  This framework is released under the GNU Public License, version 3 or later.
 |*|  http://www.gnu.org/licenses/gpl-3.0-standalone.html

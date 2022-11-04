@@ -84,7 +84,7 @@ HTTP 为客户和服务器间的如何沟通提供清晰的规则。我们会在
 - 当通过 HTTP 请求一个文件时，客户必须提供这个文件的{{Glossary("URL")}}。
 - 网络服务器*必须应答*每一个 HTTP 请求，至少也要回复一个错误信息。
 
-[![The MDN 404 page as an example of such error page](mdn-404.jpg)](/zh-CN/docs/Web/HTTP/Status/404)在一个网络服务器上，HTTP 服务器负责处理和应答传入的请求。
+[![The MDN 404 page as an example of such error page](mdn-404.jpg)](/zh-CN/docs/Web/HTTP/Status/404) 在一个网络服务器上，HTTP 服务器负责处理和应答传入的请求。
 
 1. 当收到一个请求时，HTTP 服务器首先要检查所请求的 URL 是否与一个存在的文件相匹配。
 2. 如果是，网络服务器会传送文件内容回到浏览器。如果不是，一个应用服务器会建立必要的文件。

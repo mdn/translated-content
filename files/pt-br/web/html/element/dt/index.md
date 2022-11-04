@@ -1,7 +1,6 @@
 ---
 title: <dt>
 slug: Web/HTML/Element/dt
-translation_of: Web/HTML/Element/dt
 ---
 ## Sumário
 
@@ -37,4 +36,4 @@ Para exemplo veja [definição de lista](/pt-BR/docs/HTML/Element/dl#Examples).
 
 - {{HTMLElement("dd")}}, {{HTMLElement("dl")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

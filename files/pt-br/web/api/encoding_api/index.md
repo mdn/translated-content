@@ -1,7 +1,6 @@
 ---
 title: Encoding API
 slug: Web/API/Encoding_API
-translation_of: Web/API/Encoding_API
 ---
 {{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}
 
@@ -19,7 +18,7 @@ A API provém de quatro interfaces: {{domxref("TextDecoder")}}, {{domxref("TextE
 ## Tutoriais & ferramentas
 
 - O [shim](http://code.google.com/p/stringencoding/) permite usar essa interface em navegadores que não a suportam.
-- [`StringView`](/en-US/Add-ons/Code_snippets/StringView) – Um C-like reperesentação de strings baseados em arrays tipados
+- [`StringView`](/pt-BR/Add-ons/Code_snippets/StringView) – Um C-like reperesentação de strings baseados em arrays tipados
 
 | Specification                    | Status                       | Comment            |
 | -------------------------------- | ---------------------------- | ------------------ |

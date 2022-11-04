@@ -1,16 +1,6 @@
 ---
 title: SharedWorker
 slug: Web/API/SharedWorker
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - SharedWorker
-  - TopicStub
-  - Web Workers
-  - Workers
-translation_of: Web/API/SharedWorker
 ---
 {{APIRef("Web Workers API")}}
 
@@ -33,8 +23,6 @@ _Inherits properties from its parent, {{domxref("EventTarget")}}, and implements
   - : Is an {{domxref("EventListener")}} that is called whenever an {{domxref("ErrorEvent")}} of type `error` bubbles through the worker.
 - {{domxref("SharedWorker.port")}} {{readonlyInline}}
   - : Returns a {{domxref("MessagePort")}} object used to communicate and control the shared worker.
-
-<!---->
 
 ## Methods
 

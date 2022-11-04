@@ -1,7 +1,6 @@
 ---
 title: Window
 slug: Web/API/Window
-translation_of: Web/API/Window
 ---
 {{APIRef}}
 
@@ -21,7 +20,7 @@ Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de el
   - : Um objeto {{domxref("OfflineResourceList")}} fornece acesso aos recursos offline para o window.
 - {{domxref("Window.closed")}} {{Non-standard_inline}}{{readOnlyInline}}
   - : Esta propriedade indica quando a window atual está fechada ou não.
-- [`Window.Components`](/en-US/docs/Components_object) {{Non-standard_inline}}
+- [`Window.Components`](/pt-BR/docs/Components_object) {{Non-standard_inline}}
   - : O ponto de entrada para muitas características XPCOM. Algumas propriedades, por exemplo, classes, estão apenas disponíveis para código suficientemente privilegiado. Código de Web não deve usar essa propriedade.
 - {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Retorna uma referência para o objeto console fornecendo acesso ao console debugging do navegador.

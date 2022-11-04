@@ -3,7 +3,7 @@ title: <hr>
 slug: Web/HTML/Element/hr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<hr>`  元素**表示段落级元素之间的主题转换（例如，一个故事中的场景的改变，或一个章节的主题的改变）。
 

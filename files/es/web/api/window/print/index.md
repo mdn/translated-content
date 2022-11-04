@@ -23,28 +23,22 @@ Abre el _Diálogo de Impresión_ para imprimir el documento actual.
 
 ## Sintaxis
 
-```js-nolint
-print()
+```js
+window.print()
 ```
 
-### Parámetros
+## Notas
 
-Ninguno.
+Empezando con Chrome 46.0 este método esta bloqueado dentro de un {{htmlelement("iframe")}} a menos que el atributo del contenedor tenga el valor `allow-modal`.
 
-### Valor devuelto
+## Especificación
 
-Ninguno ({{jsxref("undefined")}}).
+| Especificación                                                                       | Estatus                                      | Comentario          |
+| ------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------- |
+| {{SpecName('HTML5 Web application', '#dom-print', 'print()')}} | {{Spec2('HTML5 Web application')}} | Initial definition. |
 
-## Especificaciones
+## Ver también
 
-{{Specifications}}
-
-## Compatibilidad con navegadores
-
-{{Compat}}
-
-## Véase también
-
-- [Printing](/en-US/docs/Web/Guide/Printing)
-- {{ domxref("window.beforeprint_event", "beforeprint") }} event
-- {{ domxref("window.afterprint_event", "afterprint") }} event
+- [Impresión](/en/Printing)
+- {{ domxref("window.onbeforeprint") }}
+- {{ domxref("window.onafterprint") }}

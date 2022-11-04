@@ -1,12 +1,6 @@
 ---
 title: touchstart
 slug: Web/API/Element/touchstart_event
-tags:
-  - Event
-  - Evento Toque
-  - Toque
-  - TouchEvent
-translation_of: Web/API/Element/touchstart_event
 ---
 `O evento touchstart` é acionado quando o ponteiro de toque*(dedo ou caneta)* é aplicado sobre à superfície de toque da tela*(toque sobre a tela no elemento alvo)*.
 
@@ -45,7 +39,7 @@ translation_of: Web/API/Element/touchstart_event
 
 ## Exemplos
 
-Os códigos de exemplos para este evento estão disponíveis nesta página dedicada: [Touch events](/en-US/DOM/Touch_events).
+Os códigos de exemplos para este evento estão disponíveis nesta página dedicada: [Touch events](/pt-BR/DOM/Touch_events).
 
 ## Compatibilidade com navegadores
 

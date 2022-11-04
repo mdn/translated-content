@@ -1,15 +1,6 @@
 ---
 title: DOMImplementation
 slug: Web/API/DOMImplementation
-tags:
-  - API
-  - DOM
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - TopicStub
-translation_of: Web/API/DOMImplementation
 ---
 {{ ApiRef("DOM") }}
 

@@ -1,10 +1,6 @@
 ---
 title: Operadores
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Operators
 ---
 {{jsSidebar("Operadores")}}
 

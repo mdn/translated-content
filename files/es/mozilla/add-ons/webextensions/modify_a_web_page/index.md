@@ -53,7 +53,7 @@ header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
 
-Ahora, [instala la extensión](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) y visita <https://developer.mozilla.org/>:
+Ahora, [instala la extensión](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) y visita <https://developer.mozilla.org/>:
 
 {{EmbedYouTube("lxf2Tkg6U1M")}}
 
@@ -117,7 +117,7 @@ modify-page/
     page-eater.js
 ```
 
-Ahora [recarga la extensión](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), abre la página (cualquier página en esta ocasión), activa el menu de contexto y selecciona "Eat this page" (Comer esta página):
+Ahora [recarga la extensión](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), abre la página (cualquier página en esta ocasión), activa el menu de contexto y selecciona "Eat this page" (Comer esta página):
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 
@@ -206,13 +206,13 @@ browser.runtime.sendMessage({
 - [`tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage)
 - [`runtime.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
 - [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
-- Ejemplos con`content_scripts`:
+- Ejemplos con `content_scripts`:
 
   - [borderify](https://github.com/mdn/webextensions-examples/tree/master/borderify)
   - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
   - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging)
 
-- Ejemplos con`tabs.executeScript()`:
+- Ejemplos con `tabs.executeScript()`:
 
   - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
   - [context-menu-demo](https://github.com/mdn/webextensions-examples/tree/master/context-menu-demo)

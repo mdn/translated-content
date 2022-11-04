@@ -1,10 +1,6 @@
 ---
 title: Funções assíncronas
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Função
-  - assíncrono
-translation_of: Web/JavaScript/Reference/Statements/async_function
 original_slug: Web/JavaScript/Reference/Statements/funcoes_assincronas
 ---
 {{jsSidebar("Statements")}}
@@ -23,14 +19,8 @@ async function nome([param[, param[, ... param]]]) {
 
 - `nome`
   - : O nome da função.
-
-<!---->
-
 - `param`
   - : O nome de um parâmetro a ser passado para a função.
-
-<!---->
-
 - `instruções`
   - : As instruções que compõem o corpo da função.
 

@@ -46,30 +46,25 @@ El ejemplo anterior muestra el siguiente cuadro de diálogo (en Chrome en OS X):
 
 Un diálogo prompt contiene un cuadro de texto de una línea, un botón Cancel (Cancelar) un botón OK (Aceptar), y devuelve el texto (posiblemente vacío) que el usuario introdujo en el cuadro de texto.
 
-Nótese que el resultado es una cadena de texto. Esto significa que a veces se deberá hacer una conversión al valor introducido por el usuario. Por ejemplo, si la respuesta debe ser un valor numérico, se debe hacer la conversión del valor a tipo Number.
+The following text is shared between this article, DOM:window\.confirm and DOM:window\.alertLos cuadros de diálogo son ventanas modales; previenen que el usuario acceda al resto de la interfaz del programa hasta que el cuadro de diálogo es cerrado. Por esta razón, no se debe abusar de cualquier función que crea un cuadro de diálogo (o ventana modal).
 
-```js
-const aNumber = Number(window.prompt("Type a number", ""));
-```
+Nótese que el resultado es una cadena de texto. Esto significa que a veces se deberá hacer una conversión al valor introducido por el usuario. Por ejemplo, si la respuesta debe ser un valor numérico, se debe hacer la conversión del valor a tipo Number. `var aNumber = Number(window\.prompt("Type a number", ""))`;
 
-Dialog boxes are modal windows; they
-prevent the user from accessing the rest of the program's interface until the dialog box
-is closed. For this reason, you should not overuse any function that creates a dialog
-box (or modal window).
+Usuarios de [Mozilla Chrome](/en-US/Chrome) (p.ej. extensiones de Firefox) deben usar preferentemente métodos de `nsIPromptService`.
 
-Alternatively {{HTMLElement("dialog")}} element can be used to take user inputs.
+A partir de Chrome 46.0 este método está bloqueado para los elementos {{htmlelement("iframe")}}, , a menos que su atributo [sandbox](/es/docs/Web/HTML/Elemento/iframe#attr-sandbox) tenga el valor `allow-modal`.
 
-## Especificaciones
+En Safari, si el usuario presiona el botón Cancel, la función devuelve una cadena vacía. Por lo tanto, no se puede diferenciar si canceló o si mandó una cadena de texto vacía como valor del cuadro de texto.
 
-{{Specifications}}
+Esta función no tiene efecto en la versión Modern UI/Metro de Internet Explorer para Windows 8. No se muestra un diálogo al usuario, y siempre devuelve `undefined`. No está claro si esto es un bug o un comportamiento previsto. Las versiones de escritorio de IE sí implementan esta función
 
-## Compatibilidad con navegadores
+## Especificación
 
-{{Compat}}
+| Especificación                                                                       | Estado                                       | Comentarios        |
+| ------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
+| {{SpecName('HTML5 Web application', '#dom-prompt', 'prompt()')}} | {{Spec2('HTML5 Web application')}} | Definición inicial |
 
 ## Véase también
 
-- {{HTMLElement("dialog")}} element
 - {{domxref("window.alert", "alert")}}
 - {{domxref("window.confirm", "confirm")}}
-

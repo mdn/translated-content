@@ -1,7 +1,6 @@
 ---
 title: Usando Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
-translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
 {{ServiceWorkerSidebar}}
 
@@ -83,7 +82,7 @@ Agora para um exemplo real — e se quiséssemos carregar imagens dinamicamente,
 
 Ao invés disso, podemos contruir nossa própria promessa para lidar com casos deste tipo. (Veja o exemplo [Promises test](https://github.com/mdn/js-examples/tree/master/promises-test) para o código fonte, ou [veja rodando live](https://mdn.github.io/promises-test/).)
 
-{{note("Uma implementação real de service worker usaria caching e onfetch ao invés da depreciada XMLHttpRequest API. Estes features não são usados aqui para que você foque em entender Promises.")}}
+> **Nota:** Uma implementação real de service worker usaria caching e onfetch ao invés da depreciada XMLHttpRequest API. Estes features não são usados aqui para que você foque em entender Promises.
 
 ```js
 function imgLoad(url) {
@@ -437,7 +436,7 @@ Firefox has also started to implement some useful tools related to service worke
 
 ## See also
 
-- [The Service Worker Cookbook](https://serviceworke.rs/)
+- [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - Download the [Service Workers 101 cheatsheet](https://mdn.mozillademos.org/files/12638/sw101.png).
 - [Promises](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise)

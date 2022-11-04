@@ -1,10 +1,6 @@
 ---
 title: 'SyntaxError: flag de expressão regular inválida "x"'
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
-tags:
-  - Error
-  - JavaScript
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}
@@ -29,7 +25,7 @@ SyntaxError: Invalid regular expression: invalid flags (Safari)
 
 A expressão regular contém flags inválidas, ou foram utilizadas flags válidas mais de uma vez na expressão.
 
-As flags válidas (permitidas) são listadas em [Expressões regulares > Pesquisa avançada com flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags), e reproduzidas abaixo:
+As flags válidas (permitidas) são listadas em [Expressões regulares > Pesquisa avançada com flags](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags), e reproduzidas abaixo:
 
 | Flag | Descrição                                                                                                                             |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -95,5 +91,5 @@ const obj = {
 
 ## Veja também
 
-- [Expressões Regulares](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions)
 - [XRegEx flags](https://xregexp.com/flags/) – biblioteca de expressões regulares que fornece quatro novas bandeiras (`n`, `s`, `x`, `A`)

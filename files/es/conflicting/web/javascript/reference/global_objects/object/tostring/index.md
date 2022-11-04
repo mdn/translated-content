@@ -103,7 +103,7 @@ function Dog(name, breed, color, sex) {
 theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
 ```
 
-Llamando al método `toSource() de` `theDog` muestra el código JavaScript que define al objeto:
+Llamando al método `toSource()` de `theDog` muestra el código JavaScript que define al objeto:
 
 ```js
 theDog.toSource();

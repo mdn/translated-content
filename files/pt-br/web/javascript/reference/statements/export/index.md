@@ -1,7 +1,6 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
-translation_of: Web/JavaScript/Reference/Statements/export
 ---
 {{jsSidebar("Statements")}}
 
@@ -47,7 +46,7 @@ export { default } from …;
 ```
 
 - `nameN`
-  - : Identificador para ser exportado (assim ele pode ser importado via [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) em outro script).
+  - : Identificador para ser exportado (assim ele pode ser importado via [`import`](/pt-BR/docs/Web/JavaScript/Reference/Statements/import) em outro script).
 
 ## Descrição
 

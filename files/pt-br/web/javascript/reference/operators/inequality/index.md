@@ -1,13 +1,11 @@
 ---
 title: Desigualdade (!=)
 slug: Web/JavaScript/Reference/Operators/Inequality
-browser-compat: javascript.operators.inequality
-translation_of: Web/JavaScript/Reference/Innequality
 ---
 
 {{jsSidebar("Operators")}}
 
-O operador de desigualdade (`!=`) verifica se seus dois operandos não são igual, retornando um resultado booleano. Ao contrário do operador de [desigualdade estrito](/pt-BR/docs/Web/JavaScript/Reference/Operators/Strict_inequality), ele tenta converter os tipos e comparar operandos de tipos diferentes. 
+O operador de desigualdade (`!=`) verifica se seus dois operandos não são igual, retornando um resultado booleano. Ao contrário do operador de [desigualdade estrito](/pt-BR/docs/Web/JavaScript/Reference/Operators/Strict_inequality), ele tenta converter os tipos e comparar operandos de tipos diferentes.
 
 {{EmbedInteractiveExample("pages/js/expressions-inequality.html")}}
 
@@ -19,7 +17,7 @@ x != y
 
 ## Descrição
 
-O operador de desigualdade verifica se seus operandos não são iguais. É a negação do operador de [igualdade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Equality), de modo que as duas linhas a seguir sempre darão o mesmo resultado: 
+O operador de desigualdade verifica se seus operandos não são iguais. É a negação do operador de [igualdade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Equality), de modo que as duas linhas a seguir sempre darão o mesmo resultado:
 
 ```js
 x != y;
@@ -33,7 +31,7 @@ Para obter detalhes do algoritmo de comparação, consulte a página do [operado
 3 != "3"; // false
 ```
 
-Para evitar isso e exigir que diferentes tipos sejam considerados diferentes, use o operador de [desigualdade estrita](/pt-BR/docs/Web/JavaScript/Reference/Operators/Strict_inequality)  em vez disso: 
+Para evitar isso e exigir que diferentes tipos sejam considerados diferentes, use o operador de [desigualdade estrita](/pt-BR/docs/Web/JavaScript/Reference/Operators/Strict_inequality)  em vez disso:
 
 ```js
 3 !== "3"; // true
@@ -41,7 +39,7 @@ Para evitar isso e exigir que diferentes tipos sejam considerados diferentes, us
 
 ## Exemplos
 
-### Comparação sem conversão de tipo 
+### Comparação sem conversão de tipo
 
 ```js
 1 != 2; // true
@@ -51,7 +49,7 @@ Para evitar isso e exigir que diferentes tipos sejam considerados diferentes, us
 "hello" != "hello"; // false
 ```
 
-### Comparação com conversão de tipo 
+### Comparação com conversão de tipo
 
 ```js
 "1" != 1; // false

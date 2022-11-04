@@ -1,16 +1,6 @@
 ---
 title: 'Canvas: Contexto de Renderização em "2D"'
 slug: Web/API/CanvasRenderingContext2D
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Games
-  - Graphics
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/CanvasRenderingContext2D
 ---
 {{APIRef}}A interface **Canvas Renderização de Contexto de duas Dimensões (** **CanvasRenderingContext2D**) é usada para desenhar retangulos, textos, imagens e outros objetos na tag ou elemento canvas. Fornece o contexto de renderização em 2D para a superfície de desenho do elemento {{ HTMLElement("canvas") }}.
 
@@ -272,8 +262,6 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
   - : Intended for HD backing stores, but removed from canvas specifications.
 - {{non-standard_inline}} `CanvasRenderingContext2D.webkitPutImageDataHD`
   - : Intended for HD backing stores, but removed from canvas specifications.
-
-<!---->
 
 ### Gecko only
 

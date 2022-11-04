@@ -1,13 +1,6 @@
 ---
 title: svg
 slug: Web/SVG/Element/svg
-tags:
-  - Elemento
-  - Fragmento
-  - Referencia
-  - SVG
-  - SVG Container
-translation_of: Web/SVG/Element/svg
 ---
 {{SVGRef}}
 
@@ -65,7 +58,7 @@ html,body,svg { height:100% }
   - : The displayed y coordinate of the svg container. No effect on outermost `svg` elements.
     _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
 
-> **Nota:** Starting with SVG2, `x`, `y`, `width`, and `height` are \_Geometry Propertie_s, meaning these attributes can also be used as CSS properties.
+> **Nota:** Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning these attributes can also be used as CSS properties.
 
 ### Global attributes
 

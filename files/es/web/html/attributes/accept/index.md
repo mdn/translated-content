@@ -55,7 +55,7 @@ Cuando se configura en un tipo de entrada de archivo, el selector de archivos na
 
 {{EmbedLiveSample('ejemplo_sencillo', '100%', 200)}}
 
-Ten en cuenta que el último ejemplo te permite seleccionar varias imágenes. Consulta el atributo [`multiple`](multiple) para obtener más información.
+Ten en cuenta que el último ejemplo te permite seleccionar varias imágenes. Consulta el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple) para obtener más información.
 
 ## Especificadores de tipo de archivo únicos
 
@@ -73,7 +73,7 @@ El atributo `accept` toma como valor una cadena que contiene uno o más de estos
 <input type="file" accept="image/*,.pdf">
 ```
 
-## Usar *input*s de archivo
+## Usar inputs de archivo
 
 ### Un ejemplo básico
 
@@ -103,7 +103,7 @@ Esto produce la siguiente salida:
 
 Independientemente del dispositivo o sistema operativo del usuario, el `<input>` de archivo proporciona un botón que abre un cuadro de diálogo selector de archivos que permite al usuario elegir un archivo.
 
-La inclusión del atributo [`multiple`](multiple), como se muestra arriba, especifica que se pueden elegir varios archivos a la vez. El usuario puede elegir varios archivos del selector de archivos de cualquier manera que la plataforma elegida lo permita (por ejemplo, manteniendo presionada la tecla <kbd>Mayús</kbd> o <kbd>Control</kbd> y luego haciendo clic). Si solo deseas que el usuario elija un único archivo por `<input>`, omite el atributo `multiple`.
+La inclusión del atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple), como se muestra arriba, especifica que se pueden elegir varios archivos a la vez. El usuario puede elegir varios archivos del selector de archivos de cualquier manera que la plataforma elegida lo permita (por ejemplo, manteniendo presionada la tecla <kbd>Mayús</kbd> o <kbd>Control</kbd> y luego haciendo clic). Si solo deseas que el usuario elija un único archivo por `<input>`, omite el atributo `multiple`.
 
 ### Limitar los tipos de archivo aceptados
 
@@ -152,5 +152,5 @@ div {
 
 ## Ve también
 
-- {{web.link("/es/docs/Using_files_from_web_applications", "Uso de archivos de aplicaciones web")}}
-- {{web.link("/es/docs/Web/API/File", "API de File")}}
+- [Uso de archivos de aplicaciones web](/es/docs/Using_files_from_web_applications)
+- [API de File](/es/docs/Web/API/File)

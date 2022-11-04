@@ -1,11 +1,6 @@
 ---
 title: altGlyphDef
 slug: Web/SVG/Element/altGlyphDef
-tags:
-  - Conteúdo Textual
-  - Elemento
-  - SVG
-translation_of: Web/SVG/Element/altGlyphDef
 ---
 {{SVGRef}}
 
@@ -21,7 +16,7 @@ O elemento `altGlyphDef` define a substituição representativa para os símbolo
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core "Atributos principais") »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
 
 ### Atributos específicos
 
@@ -29,7 +24,7 @@ _Nenhum_
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGAltGlyphDefElement`](/pt-BR/DOM/SVGAltGlyphDefElement "SVGAltGlyphDefElement").
+Este elemento implementa a interface do [`SVGAltGlyphDefElement`](/pt-BR/DOM/SVGAltGlyphDefElement).
 
 ## Veja também
 

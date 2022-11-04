@@ -1,12 +1,6 @@
 ---
 title: Valor Computado
 slug: Web/CSS/computed_value
-tags:
-  - CSS
-  - Guía
-  - Iniciante
-  - Web
-translation_of: Web/CSS/computed_value
 original_slug: Web/CSS/valor_computado
 ---
 {{cssref}}
@@ -37,4 +31,3 @@ The {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API returns
 ## Veja também
 
 - [CSS Reference](/pt-BR/docs/Web/CSS/Reference)
-- {{CSS_key_concepts}}

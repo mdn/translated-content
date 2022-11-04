@@ -1,11 +1,6 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-tags:
-  - Funções
-  - JavaScript
-  - Métodos
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
 {{JSRef}}
 
@@ -36,7 +31,7 @@ Você pode também usar {{jsxref("Functions/arguments", "arguments")}} para o pa
 
 Desde a 5a versão do ECMAScript você pode utilizar qualquer tipo de objeto que é parecido com um array (array-like), então na prática isso significa que ele vai ter uma propriedade `length` e propriedades inteiras no intervalor (`0... length`). Como um exemplo, você pode agora usar um {{domxref("NodeList")}} ou um objeto personalizado como `{ 'length': 2, '0': 'comer', '1': 'bananas' }`.
 
-{{note("Muitos navegadores, incluindo o Chrome 14 e o Internet Explorer 9, ainda não aceitam objetos parecidos com array e irão lançar uma exceção.")}}.
+> **Nota:** Muitos navegadores, incluindo o Chrome 14 e o Internet Explorer 9, ainda não aceitam objetos parecidos com array e irão lançar uma exceção.
 
 ## Exemplos
 

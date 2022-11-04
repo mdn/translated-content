@@ -80,4 +80,4 @@ form { min-height: 0; }
 ## Смотрите также
 
 - {{ Cssxref("height") }}, {{ Cssxref("max-height") }}
-- [Блочная модель](/ru/docs/CSS/box_model "en/CSS/box_model"), {{ Cssxref("box-sizing") }}
+- [Блочная модель](/ru/docs/CSS/box_model), {{ Cssxref("box-sizing") }}

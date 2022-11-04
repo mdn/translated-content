@@ -1,7 +1,6 @@
 ---
 title: Node
 slug: Web/API/Node
-translation_of: Web/API/Node
 ---
 {{Apiref("DOM")}}
 
@@ -159,7 +158,7 @@ Percorre todos os nós filhos de `parentNode` recursivamente e o próprio `paren
 #### Parâmetros
 
 - `parentNode`
-  - : O nó pai ([`Object`](/en-US/docs/JavaScript/Reference/Global_Objects/Object)`do tipo Node`).
+  - : O nó pai ([`Object`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object)`do tipo Node`).
 - `callbackFunction`
   - : A função de callback ([`Function`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function)).
 

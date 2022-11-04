@@ -1,12 +1,6 @@
 ---
 title: Valor Resolvido
 slug: Web/CSS/resolved_value
-tags:
-  - CSS
-  - Guía
-  - Iniciante
-  - Web
-translation_of: Web/CSS/resolved_value
 original_slug: Web/CSS/Valor_resolvido
 ---
 {{cssref}}
@@ -22,5 +16,4 @@ The **resolved value** of a CSS property is the value returned by {{domxref("Win
 ## Veja também
 
 - [CSS Reference](/pt-BR/docs/Web/CSS/Reference)
-- {{CSS_key_concepts}}
 - {{domxref("window.getComputedStyle")}}

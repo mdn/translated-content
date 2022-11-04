@@ -1,15 +1,6 @@
 ---
 title: Element
 slug: Web/API/Element
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Element
-  - Interface
-  - Reference
-  - Web API
-translation_of: Web/API/Element
 ---
 {{ APIRef("DOM") }}
 
@@ -149,9 +140,6 @@ _Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{
   - : Assíncronamente pede o navegador para fazer o elemento tela cheia.
 - {{ domxref("Element.requestPointerLock()")}} {{experimental_inline}}
   - : Permite assíncronamente pedir pelo apontador para ser bloqueado em um dado elemento.
-
-<!---->
-
 - {{ domxref("Element.scrollIntoView()") }} {{experimental_inline}}
   - : Rola a página até que o elemento apareça na visão.
 - {{ domxref("Element.setAttribute()") }}

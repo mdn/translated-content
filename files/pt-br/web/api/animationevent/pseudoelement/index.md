@@ -1,14 +1,6 @@
 ---
 title: AnimationEvent.pseudoElement
 slug: Web/API/AnimationEvent/pseudoElement
-tags:
-  - AnimationEvent
-  - Animação Web
-  - Apps
-  - CSSOM
-  - Propriedade
-  - Referencia
-translation_of: Web/API/AnimationEvent/pseudoElement
 ---
 {{SeeCompatTable}}{{ apiref("Web Animations API") }}
 

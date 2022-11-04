@@ -1,15 +1,6 @@
 ---
 title: XMLHttpRequest.abort()
 slug: Web/API/XMLHttpRequest/abort
-tags:
-  - AJAX
-  - API
-  - HTTP
-  - HttpRequest
-  - Referencia
-  - XMLHttpRequest
-  - cancelando
-translation_of: Web/API/XMLHttpRequest/abort
 ---
 {{APIRef('XMLHttpRequest')}}
 

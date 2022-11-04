@@ -18,7 +18,9 @@ div:focus-within {
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:focus-within
+```
 
 <h2 id="Examples">例</h2>
 

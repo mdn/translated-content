@@ -1,13 +1,6 @@
 ---
 title: 'HTML: Linguagem de Marcação de Hipertexto'
 slug: Web/HTML
-tags:
-  - HTML
-  - HTML 5
-  - Página de destino
-  - Web
-  - l10n:prioridade
-translation_of: Web/HTML
 ---
 {{HTMLSidebar}}
 
@@ -51,11 +44,11 @@ Nossa [Área de Aprendizado de HTML](/pt-BR/docs/Aprender/HTML) apresenta vário
 ## Tópicos avançados
 
 - [Habilitando Imagem CORS](/pt-BR/docs/Web/HTML/CORS_enabled_image)
-  - : O atributo [`crossorigin`](/en-US/docs/Web/HTML/Element/img#attr-crossorigin), em combinação com um cabeçalho [CORS](/pt-BR/docs/Glossary/CORS) adequado, permite definir imagens pelo elemento {{HTMLElement("img")}} para ser carregado de outras fontes em um elemento {{HTMLElement("canvas")}} como se estivessem sendo carregados da fonte atual.
+  - : O atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Element/img#attr-crossorigin), em combinação com um cabeçalho [CORS](/pt-BR/docs/Glossary/CORS) adequado, permite definir imagens pelo elemento {{HTMLElement("img")}} para ser carregado de outras fontes em um elemento {{HTMLElement("canvas")}} como se estivessem sendo carregados da fonte atual.
 - [Configuração de atributos CORS](/pt-BR/docs/Web/HTML/CORS_settings_attributes)
   - : Alguns elementos em HTML que suportam [CORS](/pt-BR/docs/HTTP/Access_control_CORS), como por exemplo o {{HTMLElement("img")}} ou {{HTMLElement("video")}}, têm o atributo `crossorigin` (a propriedade `crossOrigin`), que permite configurar as requisições CORS para os dados recebidos pelo elemento.
 - [Gerenciamento de foco em HTML](/pt-BR/docs/Web/HTML/Focus_management_in_HTML)
-  - : O atributo DOM [`activeElement`](/en-US/docs/Web/API/Document/activeElement) e o método DOM [`hasFocus()`](/en-US/docs/Web/API/Document/hasFocus) lhe ajudam a melhorar a interação entre o usuário e os elementos da página.
+  - : O atributo DOM [`activeElement`](/pt-BR/docs/Web/API/Document/activeElement) e o método DOM [`hasFocus()`](/pt-BR/docs/Web/API/Document/hasFocus) lhe ajudam a melhorar a interação entre o usuário e os elementos da página.
 - [Tipos de conexões](/pt-BR/docs/Web/HTML/Link_types)
   - : Em HTML, vários tipos de links podem ser utilizados para realizar conexões entre documentos, como por exemplo [`<a>`](/pt-BR/docs/Web/HTML/Element/a), [`<area>`](/pt-BR/docs/Web/HTML/Element/area) e [`<link>`](/pt-BR/docs/Web/HTML/Element/link).
 - [Formatos de arquivos suportados pelos elementos de áudio e vídeo em HTML](/pt-BR/docs/Web/HTML/Supported_media_formats)
@@ -78,7 +71,7 @@ Nossa [Área de Aprendizado de HTML](/pt-BR/docs/Aprender/HTML) apresenta vário
 - [Elementos em linha](/pt-BR/docs/Web/HTML/Inline_elements) e [Elementos em nível de bloco](/pt-BR/docs/Web/HTML/Block-level_elements)
   - : Elementos HTML são normalmente elementos _inline_ (em linha) ou _block-level_ (em nível de bloco). Um elemento em linha ocupa somente o espaço limitado pelas tags que o definem. Um elemento em nível de bloco ocupa o espaço inteiro do elemento pai (container), portanto criando um bloco.
 - [Tipos de Links](/pt-BR/docs/Web/HTML/Link_types)
-  - : No HTML, vários tipos de links podem ser utilizados para estabelecer e definir o relacionamento entre dois documentos. Os tipos de elementos de link que podem ser incluídos são [`<a>`](/pt-BR/docs/Web/HTML/Element/a), [`<area>`](/pt-BR/docs/Web/HTML/Element/area) e [`<link>`](/en-US/docs/Web/HTML/Element/link).
+  - : No HTML, vários tipos de links podem ser utilizados para estabelecer e definir o relacionamento entre dois documentos. Os tipos de elementos de link que podem ser incluídos são [`<a>`](/pt-BR/docs/Web/HTML/Element/a), [`<area>`](/pt-BR/docs/Web/HTML/Element/area) e [`<link>`](/pt-BR/docs/Web/HTML/Element/link).
 - [Formatos de mídia suportados pelos elementos vídeo e áudio do HTML](/pt-BR/docs/Web/HTML/Supported_media_formats)
   - : Os elementos [`<audio>`](/pt-BR/docs/Web/HTML/Element/audio) e [`<video>`](/pt-BR/docs/Web/HTML/Element/video) permitem que você reproduza mídias de áudio e vídeo. Estes elementos fornecem uma alternativa nativa para o navegador reproduzir recursos similares aos encontrados no Adobe Flash e outros plug-ins.
 - [Tipos de conteúdo HTML](/pt-BR/docs/Web/HTML/Kinds_of_HTML_content)

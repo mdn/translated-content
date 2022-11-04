@@ -1,7 +1,6 @@
 ---
 title: DocumentFragment
 slug: Web/API/DocumentFragment
-translation_of: Web/API/DocumentFragment
 ---
 {{ ApiRef("DOM") }}
 
@@ -43,9 +42,6 @@ _This interface inherits the methods of its parent, {{domxref("Node")}}_, and im
   - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified selectors.
 - {{domxref("DocumentFragment.querySelectorAll()")}}
   - : Returns a {{domxref("NodeList")}} of all the {{domxref("Element")}} nodes within the `DocumentFragment` that match the specified selectors.
-
-<!---->
-
 - {{domxref("DocumentFragment.getElementById()")}}
   - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified ID.
 

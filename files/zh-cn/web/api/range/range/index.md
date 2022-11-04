@@ -57,7 +57,7 @@ selection.addRange(range);
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.Range")}}
+{{Compat}}
 
 ## 扩展
 

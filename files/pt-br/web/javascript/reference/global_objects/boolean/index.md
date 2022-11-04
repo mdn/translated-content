@@ -1,11 +1,6 @@
 ---
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
-tags:
-  - Boolean
-  - Constructor
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
 {{JSRef}}
 
@@ -81,11 +76,11 @@ Todas instâncias `Boolean` herdam de {{jsxref("Boolean.prototype")}}. Assim com
 
 ### Propriedades
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Properties')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Properties')}}
 
 ### Métodos
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Methods')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Methods')}}
 
 ## Exemplos
 

@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 ---
 {{JSRef}} {{SeeCompatTable}}
 
@@ -39,7 +38,7 @@ Uma nova array com cada elemento sendo o resultado da função callback e achata
 
 ## Descrição
 
-Veja {{jsxref("Array.prototype.map()")}} para uma detalhada descrição da função callback. O método `flatMap` é idêntico ao [`map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido por um chamado a [`flatten`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten) de profundidade 1.
+Veja {{jsxref("Array.prototype.map()")}} para uma detalhada descrição da função callback. O método `flatMap` é idêntico ao [`map`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido por um chamado a [`flatten`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten) de profundidade 1.
 
 ## Exemplos
 

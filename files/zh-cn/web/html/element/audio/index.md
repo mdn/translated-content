@@ -3,7 +3,7 @@ title: <audio>
 slug: Web/HTML/Element/audio
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<audio>` **元素用于在文档中嵌入音频内容。 `<audio>` 元素可以包含一个或多个音频资源，这些音频资源可以使用 `src` 属性或者{{HTMLElement("source")}} 元素来进行描述：浏览器将会选择最合适的一个来使用。也可以使用 {{domxref("MediaStream")}} 将这个元素用于流式媒体。
 
@@ -60,10 +60,10 @@ slug: Web/HTML/Element/audio
 
 | 事件名称                                                                                     | 触发时机                                                                                                                           |
 | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| {{Event("audioprocess")}}                                                             | 一个 {{DOMxRef("ScriptProcessorNode")}} 的输入缓冲区已经准备开始处理。                                                   |
+| [`audioprocess`](/zh-CN/docs/Web/API/ScriptProcessorNode/audioprocess_event)                                                             | 一个 {{DOMxRef("ScriptProcessorNode")}} 的输入缓冲区已经准备开始处理。                                                   |
 | {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}                 | 浏览器已经可以播放媒体，但是预测已加载的数据不足以在不暂停的情况下顺利将其播放到结尾（即预测会在播放时暂停以获取更多的缓冲区内容） |
 | {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} | 浏览器预测已经可以在不暂停的前提下将媒体播放到结束。                                                                               |
-| {{Event("complete")}}                                                                 | 一个 {{DOMxRef("OfflineAudioContext")}} 的渲染已经中止。                                                                 |
+| [`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event)                                                                 | 一个 {{DOMxRef("OfflineAudioContext")}} 的渲染已经中止。                                                                 |
 | {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} | `duration` 属性发生了变化。                                                                                                        |
 | {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}                 | 媒体置空。举个例子，当一个媒体已经加载（或部分加载）的情况下话调用 `load()` 方法，这个事件就将被触发。                             |
 | {{domxref("HTMLMediaElement.ended_event", 'ended')}}                         | 播放到媒体的结束位置，播放停止。                                                                                                   |

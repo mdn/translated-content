@@ -44,7 +44,7 @@ let arr = []
 arr.length = arrayLength
 ```
 
-> **Note:** 上記のコードでは、 `arrayLength` は `Number` (数値) である必要があります。さもないと、 (指定した値の) 単一の要素を持つ配列が生成されます。 `arr.length` を呼び出すと `arrayLength` が返されますが、実際には配列は空要素 (undefined) で構成されます。この配列で {{jsxref("Statements/for...in","for...in")}} ループを実行しても、配列の要素は返されません。
+> **メモ:** 上記のコードでは、 `arrayLength` は `Number` (数値) である必要があります。さもないと、 (指定した値の) 単一の要素を持つ配列が生成されます。 `arr.length` を呼び出すと `arrayLength` が返されますが、実際には配列は空要素 (undefined) で構成されます。この配列で {{jsxref("Statements/for...in","for...in")}} ループを実行しても、配列の要素は返されません。
 
 上記のように新規に定義した変数に割り当てるだけでなく、新規または既存のオブジェクトのプロパティに配列を割り当てることができます。
 
@@ -95,7 +95,7 @@ let myArray = ['Wind', 'Rain', 'Fire']
 
 要素のインデックスは 0 から始まるので、配列の 1 番目の要素を `myArray[0]`、2 番目の要素を `myArray[1]` と呼ぶことができます。
 
-> **Note:** [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使用して、オブジェクトのように配列の他のプロパティにアクセスすることもできます。
+> **メモ:** [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使用して、オブジェクトのように配列の他のプロパティにアクセスすることもできます。
 >
 > ```js
 > let arr = ['one', 'two', 'three']
@@ -114,7 +114,7 @@ emp[1] = 'Phil Lesh'
 emp[2] = 'August West'
 ```
 
-> **Note:** 上記のコードで配列演算子 (角括弧) 内に非整数値を指定すると、配列要素ではなく配列を表すオブジェクトのプロパティとして作成されます。
+> **メモ:** 上記のコードで配列演算子 (角括弧) 内に非整数値を指定すると、配列要素ではなく配列を表すオブジェクトのプロパティとして作成されます。
 >
 > ```js
 > let arr = []

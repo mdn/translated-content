@@ -1,11 +1,6 @@
 ---
 title: Declaração
 slug: Glossary/Statement
-tags:
-  - Glossário
-  - Iniciante
-  - declarações
-translation_of: Glossary/Statement
 original_slug: Glossario/Declaração
 ---
 Em uma linguagem de programação, uma **declaração** é uma linha de código que dá comando para execução de uma tarefa. Cada programa é composto por uma sequência de declarações.
@@ -19,5 +14,3 @@ Em uma linguagem de programação, uma **declaração** é uma linha de código 
 ### Referencia técnica
 
 - [JavaScript declarações](/pt-BR/docs/Web/JavaScript/Reference/Statements)
-
-<!---->

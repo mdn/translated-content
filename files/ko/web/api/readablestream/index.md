@@ -26,7 +26,7 @@ translation_of: Web/API/ReadableStream
 - {{domxref("ReadableStream.pipeThrough()")}}
   - : Provides a chainable way of piping the current stream through a transform stream or any other writable/readable pair.
 - {{domxref("ReadableStream.pipeTo()")}}
-  - : 인자로 넘기는 {{domxref("WritableStream")}}과 현재의 ReadableStream을 연결하고 프로미스를 리턴합니다. 이 프로미스는 파이핑 프로세스가 성공적으로 완료될때 fullfil되며 애러가 발생했을때 reject됩니다.
+  - : 인자로 넘기는 {{domxref("WritableStream")}}과 현재의 ReadableStream을 연결하고 프로미스를 리턴합니다. 이 프로미스는 파이핑 프로세스가 성공적으로 완료될때 fulfil되며 애러가 발생했을때 reject됩니다.
 - {{domxref("ReadableStream.tee()")}}
   - : The `tee` method <a href="https://streams.spec.whatwg.org/#tee-a-readable-stream" id="ref-for-tee-a-readable-stream②">tees</a> this readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances. Each of those streams receives the same incoming data.
 

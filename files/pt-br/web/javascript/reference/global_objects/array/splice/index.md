@@ -1,18 +1,14 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
-tags:
-  - Array
-  - JavaScript
-  - Lista
-  - splice
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 ---
 {{JSRef("Global_Objects", "Array")}}
 
 ## Resumo
 
 O método **splice()** altera o conteúdo de uma lista, adicionando novos elementos enquanto remove elementos antigos.
+
+{{EmbedInteractiveExample("pages/js/array-splice.html")}}
 
 ## Sintaxe
 

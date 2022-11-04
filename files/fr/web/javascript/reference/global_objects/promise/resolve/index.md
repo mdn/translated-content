@@ -124,14 +124,11 @@ p3.then(function(v) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires                                    |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.reject', 'Promise.reject')}}     | {{Spec2('ES2015')}}     | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.resolve', 'Promise.resolve')}} | {{Spec2('ESDraft')}} |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.resolve")}}
+{{Compat}}
 
 ## Voir aussi
 

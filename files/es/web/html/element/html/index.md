@@ -15,7 +15,7 @@ tags:
 translation_of: Web/HTML/Element/html
 original_slug: Web/HTML/Elemento/html
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 El **elemento HTML `<html>`** (o _elemento HTML raiz_) representa la raiz de un documento HTML. El resto de elementos descienden de este elemento.
 

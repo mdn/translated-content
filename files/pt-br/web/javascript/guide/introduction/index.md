@@ -1,12 +1,6 @@
 ---
 title: Introdução
 slug: Web/JavaScript/Guide/Introduction
-tags:
-  - Guia(2)
-  - Introdução
-  - JavaScript
-  - básico
-translation_of: Web/JavaScript/Guide/Introduction
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
@@ -24,11 +18,11 @@ Este guia assume que você tem os seguintes conhecimentos básicos:
 
 A documentação de JavaScript na MDN inclui o seguinte:
 
-- [Aprendendo sobre a internet](/en-US/Learn) fornece informações aos iniciantes e introduz os conceitos básicos de programação e da internet.
+- [Aprendendo sobre a internet](/pt-BR/Learn) fornece informações aos iniciantes e introduz os conceitos básicos de programação e da internet.
 - [Guia JavaScript](/pt-BR/docs/Web/JavaScript/Guide) (este guia) dá uma visão geral sobre a linguagem de programação JavaScript e seus objetos.
 - [Referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference) provê um material de referência detalhado da linguagem JavaScript.
 
-Se você é novo com JavaScript, comece com os artigos na [área de aprendizado](/en-US/Learn) e com o [Guia JavaScript](/pt-BR/docs/Web/JavaScript/Guide). Quando você já possuir uma compreensão dos princípios básicos, você pode usar a [Referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference) para ter mais detalhes sobre objetos e declarações.
+Se você é novo com JavaScript, comece com os artigos na [área de aprendizado](/pt-BR/Learn) e com o [Guia JavaScript](/pt-BR/docs/Web/JavaScript/Guide). Quando você já possuir uma compreensão dos princípios básicos, você pode usar a [Referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference) para ter mais detalhes sobre objetos e declarações.
 
 ## O que é JavaScript?
 

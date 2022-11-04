@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 ---
 {{JSRef}}
 

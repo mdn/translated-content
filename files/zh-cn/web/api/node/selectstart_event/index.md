@@ -8,11 +8,11 @@ original_slug: Web/API/Document/selectstart_event
 
 如果事件被取消，选择将不被触发。
 
-| Bubbles        | Yes                              |
-| -------------- | -------------------------------- |
-| Cancelable     | Yes                              |
+| Bubbles        | Yes                     |
+| -------------- | ----------------------- |
+| Cancelable     | Yes                     |
 | Target objects | {{domxref("Document")}} |
-| Interface      | {{domxref("Event")}}     |
+| Interface      | {{domxref("Event")}}    |
 
 ## 例子
 
@@ -34,7 +34,7 @@ document.addEventListener("selectstart", function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.selectstart_event")}}
+{{Compat}}
 
 ## 参见
 

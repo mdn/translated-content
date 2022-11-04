@@ -1,9 +1,8 @@
 ---
 title: '<tfoot>: Elemento para o rodapé da tabela'
 slug: Web/HTML/Element/tfoot
-translation_of: Web/HTML/Element/tfoot
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 O **`<tfoot>` **é um **elemento HTML** que define um conjunto de linhas as quais farão parte do rodapé de uma tabela HTML
 
@@ -13,7 +12,7 @@ O **`<tfoot>` **é um **elemento HTML** que define um conjunto de linhas as quai
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>

@@ -1,13 +1,6 @@
 ---
 title: File
 slug: Web/API/File
-tags:
-  - API
-  - Arquivos
-  - DOM
-  - Files
-  - Referencia
-translation_of: Web/API/File
 ---
 {{gecko_minversion_header("1.9")}}{{APIRef("File API")}}
 
@@ -36,7 +29,7 @@ A referência ao arquivo pode ser salva quando o formulário é submetido enquan
 
 A interface `File` herda as propriedades da interface {{domxref("Blob")}}.
 
-{{page("/en-US/docs/Web/API/Blob","Properties")}}
+{{page("/pt-BR/docs/Web/API/Blob","Properties")}}
 
 ## Métodos
 

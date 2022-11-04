@@ -1,7 +1,6 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-translation_of: Web/HTML/Element/label
 ---
 ## Resumo
 
@@ -63,4 +62,4 @@ A tecla de atalho para acessar este elemento a partir do teclado.
 
 - Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

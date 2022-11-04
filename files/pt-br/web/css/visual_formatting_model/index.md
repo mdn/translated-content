@@ -1,11 +1,6 @@
 ---
 title: Modelo de formatação visual
 slug: Web/CSS/Visual_formatting_model
-tags:
-  - CSS
-  - CSS conceitos basicos
-  - Intermediário
-translation_of: Web/CSS/Visual_formatting_model
 original_slug: Web/CSS/Modelo_Visual
 ---
 {{CSSRef}}
@@ -213,4 +208,3 @@ With a _fixed positioned element_, the containing block is the viewport. The pos
 ## Veja Também
 
 - [CSS Reference](/pt-BR/docs/Web/CSS/CSS_Reference)
-- {{css_key_concepts}}

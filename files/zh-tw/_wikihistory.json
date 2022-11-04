@@ -310,10 +310,6 @@
     "modified": "2019-08-12T15:14:24.188Z",
     "contributors": ["ayugioh2003"]
   },
-  "Glossary/Empty_element": {
-    "modified": "2019-03-18T21:41:26.001Z",
-    "contributors": ["Rocker"]
-  },
   "Glossary/Engine": {
     "modified": "2019-03-18T21:41:31.602Z",
     "contributors": ["Rocker"]
@@ -581,6 +577,10 @@
   "Glossary/Viewport": {
     "modified": "2019-10-05T05:58:15.650Z",
     "contributors": ["ayugioh2003"]
+  },
+  "Glossary/Void_element": {
+    "modified": "2019-03-18T21:41:26.001Z",
+    "contributors": ["Rocker"]
   },
   "Glossary/W3C": {
     "modified": "2019-03-23T22:28:08.358Z",
@@ -3022,10 +3022,6 @@
     "modified": "2019-03-23T22:21:21.278Z",
     "contributors": ["MashKao", "yvonne6344"]
   },
-  "Web/CSS/@viewport": {
-    "modified": "2019-03-18T21:16:53.558Z",
-    "contributors": ["cvrebert"]
-  },
   "Web/CSS/CSS_Animations": {
     "modified": "2019-03-23T22:43:48.571Z",
     "contributors": ["teoli"]
@@ -3585,18 +3581,6 @@
       "TAlulu",
       "irvinfly",
       "stingyong"
-    ]
-  },
-  "Web/HTML/Using_the_application_cache": {
-    "modified": "2019-03-24T00:10:44.785Z",
-    "contributors": [
-      "SphinxKnight",
-      "jackblackevo",
-      "teoli",
-      "Kennyluck",
-      "Mgjbot",
-      "Cooldll694",
-      "BobChao"
     ]
   },
   "Web/HTTP": {
@@ -5128,6 +5112,10 @@
   "conflicting/Web/Accessibility/ARIA": {
     "modified": "2019-03-23T22:50:58.911Z",
     "contributors": ["PatrickTaiwan", "Shiyou", "alk03073135"]
+  },
+  "conflicting/Web/CSS": {
+    "modified": "2019-03-18T21:16:53.558Z",
+    "contributors": ["cvrebert"]
   },
   "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:45:29.748Z",

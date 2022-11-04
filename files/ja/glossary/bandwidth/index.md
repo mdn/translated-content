@@ -8,4 +8,4 @@ slug: Glossary/Bandwidth
 ## より詳しく知る
 
 - Wikipedia 上の Bandwidth（英語）
-- Wikipedia 上の {{Interwiki("wikipedia", "帯域幅")}}
+- Wikipedia 上の [帯域幅](https://ja.wikipedia.org/wiki/帯域幅)

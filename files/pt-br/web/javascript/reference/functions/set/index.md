@@ -1,7 +1,6 @@
 ---
 title: setter
 slug: Web/JavaScript/Reference/Functions/set
-translation_of: Web/JavaScript/Reference/Functions/set
 ---
 {{jsSidebar("Functions")}}
 
@@ -18,9 +17,6 @@ A sintaxe **`set`** liga a propriedade da função para ser chamada quando exist
 
 - `prop`
   - : Nome da propriedade ligada a função.
-
-<!---->
-
 - `val`
   - : `Um apelido para variável que será atribuidada a prop.`
 - expression
@@ -58,7 +54,7 @@ Observe que _current_ não está definido e qualquer tentativa de acesso irá re
 
 ### Removendo um setter com o operador `delete`
 
-Se você deseja remover o _setter_, poderá usar somente o [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete):
+Se você deseja remover o _setter_, poderá usar somente o [`delete`](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete):
 
 ```js
 delete o.current;

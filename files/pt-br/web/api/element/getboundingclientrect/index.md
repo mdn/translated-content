@@ -1,12 +1,6 @@
 ---
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
-tags:
-  - API
-  - CSSOM View
-  - Método(2)
-  - Referência(2)
-translation_of: Web/API/Element/getBoundingClientRect
 ---
 {{APIRef("DOM")}}
 
@@ -30,7 +24,7 @@ Border-boxes vazias são completamente ignoradas. Se todos os border-boxes do el
 
 A quantidade de scrolling que foi feita na área do viewport (ou qualquer outra área de qualquer outro elemento _scrollable_) é tomada com medida ao computar o delimitador do retângulo. Isso significa que as propriedades `top` e `left` mudam seus valores tão logo a posiçāo do scroll for alterada (assim seus valores sāo relativos ao viewport e não são absolutos). Se esse não for o comportamento esperado basta adicionar a posição atual do scroll para as propriedades `top` e `left` (via `window.scrollX` e `window.scrollY`) para pegar os valores constantes independentemente da posiçāo atual do scroll.
 
-Scripts que requerem uma alta compatibilidade cross-browser podem usar `window.pageXOffset` e `window.pageYOffset` ao invés de `window.scrollX` e `window.scrollY.` Scripts sem acesso ao `window.pageXOffset`, `window.pageYOffset`, `window.scrollX` e `window.scrollY` podem usar:
+Scripts que requerem uma alta compatibilidade cross-browser podem usar `window.pageXOffset` e `window.pageYOffset` ao invés de `window.scrollX` e `window.scrollY`. Scripts sem acesso ao `window.pageXOffset`, `window.pageYOffset`, `window.scrollX` e `window.scrollY` podem usar:
 
 ```js
 // Para o scrollX

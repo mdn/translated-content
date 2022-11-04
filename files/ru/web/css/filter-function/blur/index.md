@@ -12,7 +12,9 @@ original_slug: Web/CSS/filter-function/blur()
 
 ## Синтаксис
 
-    blur(radius)
+```
+blur(radius)
+```
 
 ### Параметры
 

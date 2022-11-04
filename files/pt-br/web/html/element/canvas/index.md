@@ -1,7 +1,6 @@
 ---
 title: canvas
 slug: Web/HTML/Element/canvas
-translation_of: Web/HTML/Element/canvas
 ---
 ## Sumário
 
@@ -26,7 +25,7 @@ Como qualquer outro elemento HTML, este também tem [global attributes](/en/HTML
 - {{ htmlattrdef("height") }}
   - : A altura do espaço em pixels CSS. O padrão é 150.
 
-{{ Note("The displayed size of the canvas can be changed using a stylesheet. The image is scaled during rendering to fit the styled size.") }}
+> **Nota:** The displayed size of the canvas can be changed using a stylesheet. The image is scaled during rendering to fit the styled size.
 
 ## Interface DOM
 
@@ -49,4 +48,4 @@ Como qualquer outro elemento HTML, este também tem [global attributes](/en/HTML
 - [MDN canvas portal](/en/HTML/Canvas)
 - Um [canvas tutorial](/en/Canvas_tutorial)
 - [Canvas cheat sheet](http://blog.nihilogic.dk/2009/02/html5-canvas-cheat-sheet.html)
-- [Canvas-related demos](/en-US/demos/tag/tech:canvas)
+- [Canvas-related demos](/pt-BR/demos/tag/tech:canvas)

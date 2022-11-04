@@ -1,7 +1,6 @@
 ---
 title: Element.animate()
 slug: Web/API/Element/animate
-translation_of: Web/API/Element/animate
 ---
 {{APIRef('Web Animations')}} {{SeeCompatTable}}
 
@@ -25,7 +24,7 @@ var animation = element.animate(keyframes, options);
 
       - : Um propriedade única á animate(): uma `DOMString` com a qual a animação é referenciada.
 
-        {{Page("/en-US/docs/Web/API/Web_Animations_API/Animation_timing_properties", "Properties")}}
+        {{Page("/pt-BR/docs/Web/API/Web_Animations_API/Animation_timing_properties", "Properties")}}
 
 #### Opções Futuras
 

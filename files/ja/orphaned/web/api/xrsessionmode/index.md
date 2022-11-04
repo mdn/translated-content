@@ -14,7 +14,7 @@ original_slug: Web/API/XRSessionMode
 
   - : セッションの出力には、没入型デバイスへの排他的アクセスが許可されますが、レンダリングされたコンテンツは実世界の環境とブレンドされます。 セッションの {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} は、コンテンツをブレンドするために使用する方法を示します。
 
-    > **Warning:** 重要: `immersive-ar` モードは、WebXR 拡張現実モジュールによって定義されていますが、まだ安定しておらず、テストと実験以外には使用しないでください。
+    > **警告:** `immersive-ar` モードは、WebXR 拡張現実モジュールによって定義されていますが、まだ安定しておらず、テストと実験以外には使用しないでください。
 
 - `immersive-vr`
   - : レンダリングされたセッションが VR モードの没入型 XR デバイスを使用して表示されることを示します。 これは、周囲の環境にオーバーレイしたり、統合したりすることを意図したものではありません。 {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} は、可能であれば `opaque` であると予想されますが、ハードウェアが必要とする場合は `additiv` になる可能性があります。

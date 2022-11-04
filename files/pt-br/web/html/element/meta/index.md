@@ -1,9 +1,8 @@
 ---
 title: <meta>
 slug: Web/HTML/Element/meta
-translation_of: Web/HTML/Element/meta
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 O elemento **HTML `<meta>` **define qualquer informação de metadados que não podem ser definidos por outros elementos **HTML.** ({{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} ou {{HTMLElement("title")}}).
 
@@ -11,17 +10,17 @@ O elemento **HTML `<meta>` **define qualquer informação de metadados que não 
   <tbody>
     <tr>
       <th>
-        <a href="/en-US/docs/Web/HTML/Content_categories">Categoria</a> de
+        <a href="/pt-BR/docs/Web/HTML/Content_categories">Categoria</a> de
         conteúdo
       </th>
       <td>
         Conteúdo de metadado. Se o
         {{htmlattrxref("itemprop", "meta")}} atributo estiver
         presente:
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >flow content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -67,8 +66,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 - {{htmlattrdef("charset")}}
 
-  - :&#x20;
-    Este atributo define a codificação de caracteres usada na página. Pode ser substituído localmente usando o atributo _lang_ em qualquer elemento. Esse atributo é literalmente uma amarra e deve ser um dos _MIME names_ preferidos para uma codificação de caracteres como definido pela IANA ([defined by the IANA](https://www.iana.org/assignments/character-sets)). Embora o padrão não solicite uma codificação específica, ele dá algumas sugestões:
+  - : Este atributo define a codificação de caracteres usada na página. Pode ser substituído localmente usando o atributo _lang_ em qualquer elemento. Esse atributo é literalmente uma amarra e deve ser um dos _MIME names_ preferidos para uma codificação de caracteres como definido pela IANA ([defined by the IANA](https://www.iana.org/assignments/character-sets)). Embora o padrão não solicite uma codificação específica, ele dá algumas sugestões:
 
     - Autores são encorajados a usar UTF-8.
     - Autores não devem usar codificações incompatíveis com ASCII (

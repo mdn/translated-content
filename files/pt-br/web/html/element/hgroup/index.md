@@ -1,11 +1,10 @@
 ---
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
-translation_of: Web/HTML/Element/hgroup
 ---
-{{HTMLRef}}{{seeCompatTable}}
+{{HTMLSidebar}}{{seeCompatTable}}
 
-O **elemento HTML `<hgroup>` **destina-se a agrupar cabeçalhos de diferentes níveis para uma seção do documento. Ele agrupa (é um container para) um conjunto de elementos [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements).
+O **elemento HTML `<hgroup>` **destina-se a agrupar cabeçalhos de diferentes níveis para uma seção do documento. Ele agrupa (é um container para) um conjunto de elementos [`<h1>–<h6>`](/pt-BR/docs/Web/HTML/Element/Heading_Elements).
 
 <table class="properties">
   <tbody>
@@ -13,8 +12,7 @@ O **elemento HTML `<hgroup>` **destina-se a agrupar cabeçalhos de diferentes n�
       <th scope="row">Categorias de conteudo</th>
       <td>
         <a
-          href="/en-US/docs/HTML/Content_categories#Flow_content"
-          title="HTML/Content categories#Flow content"
+          href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Flow content</a
         >, heading content, palpable content.
       </td>
@@ -36,8 +34,7 @@ O **elemento HTML `<hgroup>` **destina-se a agrupar cabeçalhos de diferentes n�
       <td>
         Any element that accepts
         <a
-          href="/en-US/docs/HTML/Content_categories#Flow_content"
-          title="HTML/Content categories#Flow content"
+          href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >flow content</a
         >.
       </td>

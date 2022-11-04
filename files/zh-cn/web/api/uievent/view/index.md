@@ -21,4 +21,4 @@ var view = event.view;
 
 ## 浏览器的兼容性
 
-{{Compat("api.UIEvent.view")}}
+{{Compat}}

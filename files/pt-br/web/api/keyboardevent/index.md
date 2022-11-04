@@ -1,13 +1,6 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
-tags:
-  - API
-  - DOM
-  - Evento
-  - Inteface
-  - Referencia
-translation_of: Web/API/KeyboardEvent
 ---
 {{APIRef("DOM Events")}}
 
@@ -26,19 +19,19 @@ _Essa interface também herda métodos dos seus pais, {{domxref("UIEvent")}} e {
 
 - {{domxref("KeyboardEvent.getModifierState()")}}
 
-  - : Retorna um {{jsxref("Boolean")}} indicando se uma tecla, como&#x20;
+  - : Retorna um {{jsxref("Boolean")}} indicando se uma tecla, como
 
     <kbd>Alt</kbd>
 
-    ,&#x20;
+    ,
 
     <kbd>Shift</kbd>
 
-    ,&#x20;
+    ,
 
     <kbd>Ctrl</kbd>
 
-    , ou&#x20;
+    , ou
 
     <kbd>Meta</kbd>
 
@@ -55,19 +48,19 @@ _Essa interface também herda métodos dos seus pais, {{domxref("UIEvent")}} e {
 
 - {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
 
-  - : Retorna um {{jsxref("Boolean")}} que é `true` se a tecla&#x20;
+  - : Retorna um {{jsxref("Boolean")}} que é `true` se a tecla
 
     <kbd>Alt</kbd>
 
-    &#x20;(&#x20;
+    (
 
     <kbd>Option</kbd>
 
-    &#x20;ou&#x20;
+    ou
 
     <kbd>⌥</kbd>
 
-    &#x20;no OS X) estava ativa quando o evento foi acionado.
+    no OS X) estava ativa quando o evento foi acionado.
 
 - {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}
 
@@ -87,11 +80,11 @@ _Essa interface também herda métodos dos seus pais, {{domxref("UIEvent")}} e {
   - : Returns a {{domxref("DOMString")}} with the code value of the key represented by the event.
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
 
-  - : Returns a {{jsxref("Boolean")}} that is `true` if the&#x20;
+  - : Returns a {{jsxref("Boolean")}} that is `true` if the
 
     <kbd>Ctrl</kbd>
 
-    &#x20;key was active when the key event was generated.
+    key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
   - : Returns a {{jsxref("Boolean")}} that is `true` if the event is fired between after `compositionstart` and before `compositionend`.
@@ -113,25 +106,25 @@ _Essa interface também herda métodos dos seus pais, {{domxref("UIEvent")}} e {
   - : Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device.
 - {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
 
-  - : Returns a {{jsxref("Boolean")}} that is `true` if the&#x20;
+  - : Returns a {{jsxref("Boolean")}} that is `true` if the
 
     <kbd>Meta</kbd>
 
-    &#x20;(or&#x20;
+    (or
 
     <kbd>Command</kbd>
 
-    &#x20;on OS X) key was active when the key event was generated.
+    on OS X) key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
   - : Returns a {{jsxref("Boolean")}} that is `true` if the key is being held down such that it is automatically repeating.
 - {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
 
-  - : Returns a {{jsxref("Boolean")}} that is `true` if the&#x20;
+  - : Returns a {{jsxref("Boolean")}} that is `true` if the
 
     <kbd>Shift</kbd>
 
-    &#x20;key was active when the key event was generated.
+    key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.which")}} {{deprecated_inline}}{{Readonlyinline}}
 

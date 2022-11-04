@@ -1,7 +1,6 @@
 ---
 title: version
 slug: Web/SVG/Attribute/version
-translation_of: Web/SVG/Attribute/version
 ---
 {{SVGRef}}{{deprecated_header("SVG 2")}}
 
@@ -23,7 +22,7 @@ While it is specified to accept any number, the only two valid choices are curre
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Number"
+          ><a href="/pt-BR/docs/Web/SVG/Content_type#Number"
             >&#x3C;number></a
           ></code
         >

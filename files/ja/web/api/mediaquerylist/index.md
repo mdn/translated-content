@@ -59,7 +59,7 @@ function screenTest(e) {
 mql.addEventListener('change', screenTest);
 ```
 
-> **Note:** この例は GitHub にあります ([ソースコード](https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html)を参照、および[ライブで実行](https://mdn.github.io/dom-examples/mediaquerylist/index.html))。
+> **メモ:** この例は GitHub にあります ([ソースコード](https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html)を参照、および[ライブで実行](https://mdn.github.io/dom-examples/mediaquerylist/index.html))。
 
 他の例は個別のプロパティやメソッドのページにあります。
 

@@ -1,7 +1,6 @@
 ---
 title: <pre>
 slug: Web/HTML/Element/pre
-translation_of: Web/HTML/Element/pre
 ---
 ## Resumo
 
@@ -62,4 +61,4 @@ body {
 
 - CSS: {{ Cssxref('white-space') }}, {{ Cssxref('word-break') }}
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

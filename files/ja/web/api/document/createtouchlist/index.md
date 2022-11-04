@@ -5,7 +5,7 @@ slug: Web/API/Document/createTouchList
 
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
-> **Note:** {{Gecko("25.0")}} 以前では、このメソッドは {{DOMxRef("DocumentTouch")}} ミックスインで定義されていました。
+> **メモ:** {{Gecko("25.0")}} 以前では、このメソッドは {{DOMxRef("DocumentTouch")}} ミックスインで定義されていました。
 
 **`Document.createTouchList()`** メソッドは、新しい {{DOMxRef("TouchList")}} オブジェクトを生成して返します。
 

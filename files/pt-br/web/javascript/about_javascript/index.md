@@ -1,13 +1,6 @@
 ---
 title: Sobre JavaScript
 slug: Web/JavaScript/About_JavaScript
-tags:
-  - Beginner
-  - Iniciante
-  - Introduction
-  - Introdução
-  - JavaScript
-translation_of: Web/JavaScript/About_JavaScript
 ---
 {{JsSidebar}}
 
@@ -46,9 +39,6 @@ Outra aplicação comum para JavaScript é usa-lo como uma linguagem de scriptin
 
 - [SpiderMonkey](/pt-BR/docs/Mozilla/Projects/SpiderMonkey)
   - : Informações pertinentes à implementação de JavaScript em C/C++ criada pela Mozilla (SpiderMonkey), incluindo como integra-la em aplicativos.
-
-<!---->
-
 - [Rhino](/pt-BR/docs/Mozilla/Projects/Rhino)
   - : Informações pertinentes à implementação de JavaScript em Java (Rhino).
 - [Recursos da linguagem](/pt-BR/docs/Web/JavaScript/Language_Resources)

@@ -1,7 +1,6 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-translation_of: Web/JavaScript/Reference/Statements/try...catch
 ---
 {{jsSidebar("Statements")}}
 
@@ -27,24 +26,12 @@ try {
 
 - `try_statements`
   - : Declarações (statements) a serem executadas.
-
-<!---->
-
 - `catch_statements_1`, `catch_statements_2`
   - : Declarações que são executadas se uma exceção é lançada no bloco `try.`
-
-<!---->
-
 - `exception_var_1`, `exception_var_2`
   - : Um indentificador que leva um objeto exceção para uma cláusula `catch` associada.
-
-<!---->
-
 - `condition_1`
   - : Uma expressão condicional.
-
-<!---->
-
 - `finally_statements`
   - : Declarações que são executadas depois que a declaração `try` é completada. Essas declarações são executadas independetemente se uma exceção foi ou não lançada ou capturada.
 

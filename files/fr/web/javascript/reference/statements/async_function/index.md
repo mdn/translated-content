@@ -13,9 +13,9 @@ original_slug: Web/JavaScript/Reference/Instructions/async_function
 
 {{jsSidebar("Statements")}}
 
-La déclaration **`async function`** définit une fonction asynchrone qui renvoie un objet {{jsxref("Objets_globaux/AsyncFunction","AsyncFunction")}}. Une fonction asynchrone est une fonction qui s'exécute de façon asynchrone grâce à la boucle d'évènement en utilisant une promesse ({{jsxref("Promise")}}) comme valeur de retour.
-
-On peut également définir des fonctions asynchrones grâce au constructeur {{jsxref("AsyncFunction")}} et via une {{jsxref("Opérateurs/async_function", "expression de fonction asynchrone","",1)}}.
+Une fonction asynchrone est une fonction précédée par le mot-clé `async`, et qui peut contenir le mot-clé `await`. `async` et `await` permettent un comportement asynchrone, basé sur une promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)), écrite de façon simple, et évitant de configurer explicitement les chaînes de promesse.
+  
+Les fonctions asynchrones peuvent également être définies comme des [expressions](/fr/docs/Web/JavaScript/Reference/Operators/async_function).
 
 {{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
 
@@ -221,14 +221,11 @@ Lorsqu'on utilise `return toto;`, la valeur `toto` sera immédiatement renvoyée
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES8', '#sec-async-function-definitions', 'async function')}}     | {{Spec2('ES8')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.async_function")}}
+{{Compat}}
 
 ## Voir aussi
 

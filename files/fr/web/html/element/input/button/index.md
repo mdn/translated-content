@@ -1,18 +1,11 @@
 ---
 title: <input type ="button">
-slug: Web/HTML/Element/Input/button
-tags:
-  - Element
-  - HTML
-  - Input
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/input/button
+slug: Web/HTML/Element/input/button
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page via un gestionnaire d'évènement (la plupart du temps pour l'évènement {{event("click")}}).
+Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page via un gestionnaire d'évènement (la plupart du temps pour l'évènement [`click`](/fr/docs/Web/API/Element/click_event)).
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
@@ -72,7 +65,7 @@ function updateBtn() {
 }
 ```
 
-Dans ce script, on récupère une référence à l'objet {{domxref("HTMLInputElement")}} qui représente l'élément `<input>` du DOM et on stocke cette référence dans la variable `btn`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} pour ensuite lui rattacher une fonction qui sera utilisée lorsque l'évènement {{event("click")}} se produira sur le bouton.
+Dans ce script, on récupère une référence à l'objet {{domxref("HTMLInputElement")}} qui représente l'élément `<input>` du DOM et on stocke cette référence dans la variable `btn`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} pour ensuite lui rattacher une fonction qui sera utilisée lorsque l'évènement [`click`](/fr/docs/Web/API/Element/click_event) se produira sur le bouton.
 
 {{EmbedLiveSample("Un_bouton_simple", 650, 100)}}
 
@@ -178,7 +171,7 @@ function disableBtn() {
 
 ## Validation
 
-Les éléments ` <input`` type="button" ``> ` n'ont pas de contrainte de validation.
+Les éléments `<input type="button">` n'ont pas de contrainte de validation.
 
 ## Exemples
 
@@ -302,7 +295,7 @@ draw();
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
-      <td>{{event("click")}}</td>
+      <td><a href="/fr/docs/Web/API/Element/click_event"><code>click</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs pris en Supported common attributes</strong></td>

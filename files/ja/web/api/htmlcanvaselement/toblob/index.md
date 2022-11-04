@@ -88,7 +88,7 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
 
 ### OS.File（chrome/add-on コンテクストのみ）で toBlob をディスクに保存する
 
-> **Note:** このテクニックは画像をデスクトップに保存しますが、Web サイトには公開されていない OS API として Firefox chrome コンテクストか add-on コードでのみ役立ちます。
+> **メモ:** このテクニックは画像をデスクトップに保存しますが、Web サイトには公開されていない OS API として Firefox chrome コンテクストか add-on コードでのみ役立ちます。
 
 ```js
 var canvas = document.getElementById("canvas");

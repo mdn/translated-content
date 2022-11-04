@@ -475,6 +475,7 @@
 /es/docs/Glossary/DHTML	/es/docs/Glossary
 /es/docs/Glossary/Descifrado	/es/docs/Glossary/Decryption
 /es/docs/Glossary/Dynamic_programming_language	/es/docs/orphaned/Glossary/Dynamic_programming_language
+/es/docs/Glossary/Empty_element	/es/docs/Glossary/Void_element
 /es/docs/Glossary/Encriptación	/es/docs/Glossary/Encryption
 /es/docs/Glossary/Entidad	/es/docs/Glossary/Entity
 /es/docs/Glossary/Espacio_en_blanco	/es/docs/Glossary/Whitespace
@@ -964,8 +965,8 @@
 /es/docs/JavaScript/Reference/Operators/this	/es/docs/Web/JavaScript/Reference/Operators/this
 /es/docs/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference
 /es/docs/JavaScript/Referencia/Acerca_de	/es/docs/Web/JavaScript/Reference/About
-/es/docs/JavaScript/Referencia/Características_Desaprobadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
-/es/docs/JavaScript/Referencia/Características_Despreciadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/es/docs/JavaScript/Referencia/Características_Desaprobadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
+/es/docs/JavaScript/Referencia/Características_Despreciadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/JavaScript/Referencia/Funciones	/es/docs/Web/JavaScript/Reference/Functions
 /es/docs/JavaScript/Referencia/Funciones/String	/es/docs/Web/JavaScript/Reference/Global_Objects/String
 /es/docs/JavaScript/Referencia/Funciones/arguments	/es/docs/Web/JavaScript/Reference/Functions/arguments
@@ -1221,8 +1222,7 @@
 /es/docs/MDN/Contribute/Procesos	/es/docs/MDN/Contribute/Processes
 /es/docs/MDN/Contribute/Structures	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Contribute/Structures/Ejemplos_ejecutables	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
-/es/docs/MDN/Contribute/Structures/Macros	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7
-/es/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
+/es/docs/MDN/Contribute/Structures/Macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /es/docs/MDN/Contribute/Structures/Macros/Otras	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Contribute/Structures/Tablas_de_compatibilidad	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Enviar_feedback_sobre_MDN	/es/docs/MDN/Community
@@ -1239,7 +1239,7 @@
 /es/docs/MDN/Structures/Compatibility_tables	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Structures/Ejemplos_ejecutables	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
 /es/docs/MDN/Structures/Live_samples	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
-/es/docs/MDN/Structures/Macros	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7
+/es/docs/MDN/Structures/Macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /es/docs/MDN/Structures/Macros/Commonly-used_macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /es/docs/MDN/Structures/Macros/Other	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Structures/Macros/Otras	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
@@ -1275,8 +1275,8 @@
 /es/docs/Referencia_DOM_de_Gecko:Introducción	/es/docs/Web/API/Document_Object_Model/Introduction
 /es/docs/Referencia_de_JavaScript_1.5	/es/docs/Web/JavaScript/Reference
 /es/docs/Referencia_de_JavaScript_1.5/Acerca_de	/es/docs/Web/JavaScript/Reference/About
-/es/docs/Referencia_de_JavaScript_1.5/Características_Desaprobadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
-/es/docs/Referencia_de_JavaScript_1.5/Características_Despreciadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/es/docs/Referencia_de_JavaScript_1.5/Características_Desaprobadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
+/es/docs/Referencia_de_JavaScript_1.5/Características_Despreciadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Referencia_de_JavaScript_1.5/Funciones	/es/docs/Web/JavaScript/Reference/Functions
 /es/docs/Referencia_de_JavaScript_1.5/Funciones/String	/es/docs/Web/JavaScript/Reference/Global_Objects/String
 /es/docs/Referencia_de_JavaScript_1.5/Funciones/arguments	/es/docs/Web/JavaScript/Reference/Functions/arguments
@@ -1400,8 +1400,8 @@
 /es/docs/Referencia_de_JavaScript_1.5/Sentencias/var	/es/docs/Web/JavaScript/Reference/Statements/var
 /es/docs/Referencia_de_JavaScript_1.5/Sentencias/while	/es/docs/Web/JavaScript/Reference/Statements/while
 /es/docs/Referencia_de_JavaScript_1.5:Acerca_de	/es/docs/Web/JavaScript/Reference/About
-/es/docs/Referencia_de_JavaScript_1.5:Características_Desaprobadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
-/es/docs/Referencia_de_JavaScript_1.5:Características_Despreciadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/es/docs/Referencia_de_JavaScript_1.5:Características_Desaprobadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
+/es/docs/Referencia_de_JavaScript_1.5:Características_Despreciadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Referencia_de_JavaScript_1.5:Funciones	/es/docs/Web/JavaScript/Reference/Functions
 /es/docs/Referencia_de_JavaScript_1.5:Funciones:String	/es/docs/Web/JavaScript/Reference/Global_Objects/String
 /es/docs/Referencia_de_JavaScript_1.5:Funciones:arguments	/es/docs/Web/JavaScript/Reference/Functions/arguments
@@ -1585,7 +1585,7 @@
 /es/docs/Web/API/BatteryManager/onchargingchange	/es/docs/Web/API/BatteryManager/chargingchange_event
 /es/docs/Web/API/BatteryManager/onlevelchange	/es/docs/Web/API/BatteryManager/levelchange_event
 /es/docs/Web/API/Blob.Blob	/es/docs/Web/API/Blob/Blob
-/es/docs/Web/API/BlobBuilder	/es/docs/conflicting/Web/API/Blob
+/es/docs/Web/API/BlobBuilder	/es/docs/web/api/blob
 /es/docs/Web/API/CSSStyleSheet.insertRule	/es/docs/Web/API/CSSStyleSheet/insertRule
 /es/docs/Web/API/CanvasImageSource	/es/docs/conflicting/Web/API/CanvasRenderingContext2D
 /es/docs/Web/API/Canvas_API/A_basic_ray-caster	/es/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
@@ -1602,7 +1602,7 @@
 /es/docs/Web/API/Document/crearAtributo	/es/docs/Web/API/Document/createAttribute
 /es/docs/Web/API/Document/documentURIObject	/es/docs/orphaned/Web/API/Document/documentURIObject
 /es/docs/Web/API/Document/dragover_event	/es/docs/Web/API/HTMLElement/dragover_event
-/es/docs/Web/API/Document/height	/es/docs/conflicting/Web/API/Element/clientHeight
+/es/docs/Web/API/Document/height	/es/docs/web/api/element/clientheight
 /es/docs/Web/API/Document/keydown_event	/es/docs/Web/API/Element/keydown_event
 /es/docs/Web/API/Document/keyup_event	/es/docs/Web/API/Element/keyup_event
 /es/docs/Web/API/Document/selectstart_event	/es/docs/Web/API/Node/selectstart_event
@@ -1621,8 +1621,7 @@
 /es/docs/Web/API/Fetch_API/Conceptos_basicos	/es/docs/Web/API/Fetch_API/Basic_concepts
 /es/docs/Web/API/Fetch_API/Utilizando_Fetch	/es/docs/Web/API/Fetch_API/Using_Fetch
 /es/docs/Web/API/File/Using_files_from_web_applications	/es/docs/Web/API/File_API/Using_files_from_web_applications
-/es/docs/Web/API/File/fileName	/es/docs/conflicting/Web/API/File/name
-/es/docs/Web/API/FileError	/es/docs/orphaned/Web/API/FileError
+/es/docs/Web/API/File/fileName	/es/docs/web/api/file/name
 /es/docs/Web/API/FileReader/onload	/es/docs/Web/API/FileReader/load_event
 /es/docs/Web/API/Geolocalización	/es/docs/Web/API/Geolocation
 /es/docs/Web/API/Geolocation.clearWatch	/es/docs/Web/API/Geolocation/clearWatch
@@ -1888,6 +1887,7 @@
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Dibujando_formas	/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas	/es/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/es/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
+/es/docs/Web/Guide/HTML/Editable_content	/es/docs/conflicting/Web/HTML/Global_attributes/contenteditable
 /es/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form	/es/docs/Learn/Forms/How_to_structure_a_web_form
 /es/docs/Web/Guide/HTML/Forms/My_first_HTML_form	/es/docs/Learn/Forms/Your_first_form
 /es/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data	/es/docs/Learn/Forms/Sending_and_retrieving_form_data
@@ -2217,14 +2217,14 @@
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 /es/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
-/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/es/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_a91664716c4f7753074ac042780999e0
+/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly	/es/docs/conflicting/WebAssembly/JavaScript_interface
 /es/docs/Web/JavaScript/Reference/Global_Objects/null	/es/docs/Web/JavaScript/Reference/Operators/null
 /es/docs/Web/JavaScript/Reference/Statements/import.meta	/es/docs/Web/JavaScript/Reference/Operators/import.meta
 /es/docs/Web/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference
 /es/docs/Web/JavaScript/Referencia/Acerca_de	/es/docs/Web/JavaScript/Reference/About
-/es/docs/Web/JavaScript/Referencia/Características_Desaprobadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
-/es/docs/Web/JavaScript/Referencia/Características_Despreciadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/es/docs/Web/JavaScript/Referencia/Características_Desaprobadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
+/es/docs/Web/JavaScript/Referencia/Características_Despreciadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Web/JavaScript/Referencia/Classes	/es/docs/Web/JavaScript/Reference/Classes
 /es/docs/Web/JavaScript/Referencia/Classes/Class_fields	/es/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /es/docs/Web/JavaScript/Referencia/Classes/Private_class_fields	/es/docs/Web/JavaScript/Reference/Classes/Private_class_fields
@@ -2545,7 +2545,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/URIError	/es/docs/Web/JavaScript/Reference/Global_Objects/URIError
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Uint8Array	/es/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/WeakMap	/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/WeakMap/clear	/es/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/WeakMap/clear	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/WeakMap/delete	/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/WeakMap/get	/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/get
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/WeakMap/has	/es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/has
@@ -2828,6 +2828,11 @@
 /es/docs/XSLT:with-param	/es/docs/Web/XSLT/Element/with-param
 /es/docs/Zoom_a_página_completa	/es/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
 /es/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries	/es/docs/Web/CSS/Media_Queries/Using_media_queries
+/es/docs/conflicting/web/api/blob	/es/docs/web/api/blob
+/es/docs/conflicting/web/api/element/clientheight	/es/docs/web/api/element/clientheight
+/es/docs/conflicting/web/api/file/name	/es/docs/web/api/file/name
+/es/docs/conflicting/web/javascript/reference/deprecated_and_obsolete_features	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
+/es/docs/conflicting/web/javascript/reference/deprecated_and_obsolete_features_a91664716c4f7753074ac042780999e0	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/controladores_protocolos_web	/es/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /es/docs/en	/en-US/
 /es/docs/firefox_Web_Developer_(externo)	https://addons.mozilla.org/firefox/60/

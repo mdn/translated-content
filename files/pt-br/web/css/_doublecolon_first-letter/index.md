@@ -1,13 +1,12 @@
 ---
 title: '::first-letter (:first-letter)'
 slug: Web/CSS/::first-letter
-translation_of: Web/CSS/::first-letter
 ---
 {{ CSSRef() }}
 
 ## Sumário
 
-O [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elements "pseudo-elemento") [CSS](/pt-BR/docs/Web/CSS "CSS") `::first-letter` seleciona a primeira letra da primeira linha de um bloco, desde que não seja precedida por outro conteúdo (como imagens ou tabelas embutidas/inline) na mesma linha.
+O [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elements) [CSS](/pt-BR/docs/Web/CSS) `::first-letter` seleciona a primeira letra da primeira linha de um bloco, desde que não seja precedida por outro conteúdo (como imagens ou tabelas embutidas/inline) na mesma linha.
 
 A primeira letra de um elemento não é necessariamente uma identificação trivial:
 

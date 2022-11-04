@@ -30,7 +30,7 @@ El valor de la expresion `yield*` es el valor retornado por el iterador en si mi
 
 ### Delegando a otro generator
 
-En el siguiente código, los valores declarados con yield en `g1()` son devueltos por las llamadas a `next() al igual que en` `g2()`.
+En el siguiente código, los valores declarados con yield en `g1()` son devueltos por las llamadas a `next()` al igual que en `g2()`.
 
 ```js
 function* g1() {
@@ -117,7 +117,7 @@ console.log(result);          // "foo"
 
 ## Notas específicas de Firefox
 
-- Iniciando con Gecko 33 {{geckoRelease(33)}}, el análisis del yield expression ha sido actualizado para cumplir con la última especificación ES6 ({{bug(981599)}}):
+- Iniciando con Gecko 33 (Firefox 33 / Thunderbird 33 / SeaMonkey 2.30), el análisis del yield expression ha sido actualizado para cumplir con la última especificación ES6 ({{bug(981599)}}):
 
   - Ahora está implementada la restricción de salto de línea. No está permitido el salto de línea entre "yield" y "\*". Código como el siguiente lanzará una {{jsxref("SyntaxError")}}:
 

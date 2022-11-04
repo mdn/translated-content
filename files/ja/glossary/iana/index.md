@@ -10,4 +10,4 @@ slug: Glossary/IANA
 ### 一般知識
 
 - [公式ウェブサイト](https://www.iana.org/)
-- Wikipedia 上の {{Interwiki("wikipedia", "Internet Assigned Numbers Authority","IANA")}}
+- Wikipedia 上の [IANA](https://ja.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority)

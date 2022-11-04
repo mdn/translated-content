@@ -1,12 +1,6 @@
 ---
 title: radialGradient
 slug: Web/SVG/Element/radialGradient
-tags:
-  - Elemento
-  - Gradiente SVG
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/radialGradient
 ---
 {{SVGRef}}
 
@@ -18,15 +12,15 @@ translation_of: Web/SVG/Element/radialGradient
 
 ## Exemplo
 
-» [radialGradient.svg](https://developer.mozilla.org/files/3266/radialGradient.svg)
+» [radialGradient.svg](/files/3266/radialGradient.svg)
 
 ## Atributos
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
-- [Atributos XLink](/pt-BR/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos XLink](/pt-BR/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -45,7 +39,7 @@ translation_of: Web/SVG/Element/radialGradient
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGRadialGradientElement`](/pt-BR/DOM/SVGRadialGradientElement "en/DOM/SVGRadialGradientElement").
+Este elemento implementa a interface do [`SVGRadialGradientElement`](/pt-BR/DOM/SVGRadialGradientElement).
 
 ## Compatibilidade com navegadores
 

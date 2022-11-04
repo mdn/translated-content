@@ -1,18 +1,6 @@
 ---
 title: XMLHttpRequest.send()
 slug: Web/API/XMLHttpRequest/send
-tags:
-  - AJAX
-  - API
-  - Método HTTP
-  - NeedsExample
-  - Referencia
-  - Requisição HTTP
-  - Requisição XHR
-  - XHR
-  - XMLHttpRequest
-  - send
-translation_of: Web/API/XMLHttpRequest/send
 ---
 {{APIRef('XMLHttpRequest')}}
 

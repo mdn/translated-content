@@ -1,9 +1,6 @@
 ---
 title: var
 slug: Web/JavaScript/Reference/Statements/var
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Statements/var
 ---
 {{jsSidebar("Statements")}}
 
@@ -19,9 +16,6 @@ var varname1 [= value1 [, varname2 [, varname3 ... [, varnameN]]]];
 
 - `varnameN`
   - : Nome da variável. Pode ser utilizado qualquer identificador legal.
-
-<!---->
-
 - `valueN`
   - : Valor inicial da variável. Pode ser qualquer expressão legal.
 

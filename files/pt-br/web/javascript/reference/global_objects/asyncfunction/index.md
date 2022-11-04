@@ -1,14 +1,6 @@
 ---
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-tags:
-  - Constructor
-  - Construtor
-  - Experimental
-  - JavaScript
-  - Reference
-  - Referência(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
 {{JSRef}}
 
@@ -54,7 +46,7 @@ Invocar o construtor `AsyncFunction` como uma função (sem usar o operador `new
 
 ### Propriedades
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Propriedades')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Propriedades')}}
 
 ## `AsyncFunction` instances
 

@@ -1,7 +1,6 @@
 ---
 title: Window.performance
 slug: Web/API/performance_property
-translation_of: Web/API/Window/performance
 original_slug: Web/API/Window/performance
 ---
 {{APIREf}}A API Web Performance permite páginas da web acessarem algumas funções para medir a performance de páginas e aplicações da web, incluindo a API Navigation Timing e dados de tempo de alta resolução.
@@ -10,9 +9,6 @@ original_slug: Web/API/Window/performance
 
 - {{domxref("Performance.mark()", "performance.mark()")}}
   - : Mapeia um {{domxref("DOMHighResTimeStamp")}} para o nome especificado representando a quantidade de milissegundos passados desde um momento de referência.
-
-<!---->
-
 - {{domxref("Performance.now()", "performance.now()")}}
   - : Retorna um {{domxref("DOMHighResTimeStamp")}} representando a quantidade de milissegundos passados desde um momento de referência.
 

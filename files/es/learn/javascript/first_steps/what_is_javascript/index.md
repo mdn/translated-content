@@ -107,7 +107,7 @@ Las **APIs del navegador** están integradas en tu navegador web y pueden expone
 - La {{domxref("Document_Object_Model", " API del DOM (<code>Document Object Model</code>)")}} te permite manipular HTML y CSS, crear, eliminar y cambiar el HTML, aplicar dinámicamente nuevos estilos a tu página, etc. Cada vez que ves aparecer una ventana emergente en una página, o se muestra algún nuevo contenido (como vimos anteriormente en nuestra sencilla demostración), por ejemplo, ese es el DOM en acción.
 - La {{domxref("Geolocalization", "API de Geolocalización")}} recupera información geográfica. Así es como [Google Maps](https://www.google.com/maps) puede encontrar tu ubicación y trazarla en un mapa.
 - Las APIs {{domxref("Canvas_API", "Canvas")}} y {{domxref("WebGL_API", "WebGL")}} te permiten crear gráficos animados en 2D y 3D. Las personas están haciendo cosas increíbles con estas tecnologías web — consulta [Experimentos de Chrome](https://www.chromeexperiments.com) y [webglsamples](https://webglsamples.org/).
-- [APIs de audio y video](https://developer.mozilla.org/es/Apps/Fundamentals/Audio_and_video_delivery) como {{domxref("HTMLMediaElement")}} y {{domxref("WebRTC API", "WebRTC")}} te permiten hacer cosas realmente interesantes con multimedia, como reproducir audio y video directamente en una página web, o tomar video de tu cámara web y mostrarlo en la computadora de otra persona (prueba nuestra sencilla [demostración instantánea](https://chrisdavidmills.github.io/snapshot/) para hacerte una idea).
+- [APIs de audio y video](/es/Apps/Fundamentals/Audio_and_video_delivery) como {{domxref("HTMLMediaElement")}} y {{domxref("WebRTC API", "WebRTC")}} te permiten hacer cosas realmente interesantes con multimedia, como reproducir audio y video directamente en una página web, o tomar video de tu cámara web y mostrarlo en la computadora de otra persona (prueba nuestra sencilla [demostración instantánea](https://chrisdavidmills.github.io/snapshot/) para hacerte una idea).
 
 > **Nota:** Muchas de las demostraciones anteriores no funcionarán en un navegador antiguo — al experimentar, es una buena idea utilizar un navegador moderno como Firefox, Chrome, Edge u Opera para ejecutar tu código. Deberás considerar las [pruebas en varios navegadores](/es/docs/Learn/Tools_and_testing/Cross_browser_testing) con más detalle cuando estés más cerca de entregar el código de producción (es decir, código real que usarán los clientes reales).
 
@@ -356,7 +356,7 @@ Para resumir:
 
 - `async` y `defer` indican al navegador que descargue los `script`s en un hilo separado, mientras que el resto de la página (el DOM, etc.) se descarga, por lo que los `script`s no bloquean la carga de la página.
 - Si tus `script`s se deben ejecutar inmediatamente y no tienen ninguna dependencia, utiliza `async`.
-- Si tus `script`s necesitan esperar a ser procesados y dependen de otros `script`s y/o del DOM en su lugar, cárgalos usando `defer`y coloca tus elementos `<script>` correspondientes en el orden que desees que el navegador los ejecute.
+- Si tus `script`s necesitan esperar a ser procesados y dependen de otros `script`s y/o del DOM en su lugar, cárgalos usando `defer` y coloca tus elementos `<script>` correspondientes en el orden que desees que el navegador los ejecute.
 
 ## Comentarios
 

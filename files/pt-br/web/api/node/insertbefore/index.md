@@ -1,7 +1,6 @@
 ---
 title: Node.insertBefore
 slug: Web/API/Node/insertBefore
-translation_of: Web/API/Node/insertBefore
 ---
 {{ApiRef("DOM")}}
 
@@ -53,7 +52,7 @@ divPai.insertBefore(sp1, sp2);
 </script>
 ```
 
-Não existe um método `insertAfter`. Mas ele pode ser emulado combinando o método `insertBefore` com [`nextSibling`](/en-US/docs/DOM/Node.nextSibling).
+Não existe um método `insertAfter`. Mas ele pode ser emulado combinando o método `insertBefore` com [`nextSibling`](/pt-BR/docs/DOM/Node.nextSibling).
 
 No exemplo anterior, `sp1` poderia ser inserido após `sp2` desta forma:
 

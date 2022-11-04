@@ -178,7 +178,7 @@ Modernizr.load({
 
 Modernizr チームは[すばらしいポリフィルのリスト](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills)を管理しています。必要なポリフィルを選びましょう。
 
-> **Note:** Modernizr は、控えめな JavaScript や グレイスフルでグラデーションのテクニックに取り組むことを支援するためのすばらしい機能を搭載しています。[Modernizr のドキュメント](https://modernizr.com/docs/)をご覧ください。
+> **メモ:** Modernizr は、控えめな JavaScript や グレイスフルでグラデーションのテクニックに取り組むことを支援するためのすばらしい機能を搭載しています。[Modernizr のドキュメント](https://modernizr.com/docs/)をご覧ください。
 
 ### パフォーマンスに注意を払う
 

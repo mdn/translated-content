@@ -77,14 +77,11 @@ console.log(p(1, 2, 3)); // "called: 1, 2, 3"
 
 ## Spécifications
 
-| Spécification                                                                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-call-thisargument-argumentslist', '[[Call]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-call-thisargument-argumentslist', '[[Call]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.apply")}}
+{{Compat}}
 
 ## Voir aussi
 

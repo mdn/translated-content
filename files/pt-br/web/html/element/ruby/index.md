@@ -1,13 +1,6 @@
 ---
 title: <ruby>
 slug: Web/HTML/Element/ruby
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Semântica HTML
-  - Web
-translation_of: Web/HTML/Element/ruby
 ---
 ## Resumo
 
@@ -58,4 +51,4 @@ Esse elemento somente inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_
 - {{HTMLElement("rt")}}
 - {{HTMLElement("rp")}}
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

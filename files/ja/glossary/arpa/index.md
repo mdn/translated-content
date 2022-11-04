@@ -10,4 +10,4 @@ slug: Glossary/ARPA
 ### 一般知識
 
 - [公式サイト](http://www.iana.org/domains/arpa)
-- Wikipedia 記事 {{Interwiki("wikipedia", ".arpa")}}
+- Wikipedia 記事 [.arpa](https://ja.wikipedia.org/wiki/.arpa)

@@ -1,13 +1,6 @@
 ---
 title: ellipse
 slug: Web/SVG/Element/ellipse
-tags:
-  - Elemento
-  - Forma
-  - Referencia
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/ellipse
 ---
 {{SVGRef}}
 
@@ -21,16 +14,16 @@ As elipses são incapazes de especificar a orientação exatada dela mesma (se, 
 
 ## Exemplo
 
-» [ellipse.svg](https://developer.mozilla.org/files/3253/ellipse.svg)
+» [ellipse.svg](/files/3253/ellipse.svg)
 
 ## Atributos
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing "en-US/SVG/Attribute#ConditionalProccessing") »
-- [Atributos principais](/pt-BR/SVG/Attribute#Core "en-US/SVG/Attribute#Core") »
-- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent "en-US/SVG/Attribute#GraphicalEvent") »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en-US/SVG/Attribute#Presentation") »
+- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing) »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent) »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -45,7 +38,7 @@ As elipses são incapazes de especificar a orientação exatada dela mesma (se, 
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGEllipseElement`](/pt-BR/DOM/SVGEllipseElement "en-US/DOM/SVGEllipseElement").
+Este elemento implementa a interface do [`SVGEllipseElement`](/pt-BR/DOM/SVGEllipseElement).
 
 ## Compatibilidade com navegadores
 

@@ -1,18 +1,8 @@
 ---
 title: <a>
 slug: Web/HTML/Element/a
-tags:
-  - Conteúdo
-  - Elemento
-  - HTML
-  - Internet
-  - Rede
-  - Referencia
-  - Semántica HTML a nivel de texto
-  - Web
-translation_of: Web/HTML/Element/a
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 O **elemento** **`<a>` **em **HTML** (ou elemento âncora), com o atributo [`href`](#href) cria-se um hiperligação nas páginas web, arquivos, endereços de emails, ligações na mesma página ou endereços na URL. O conteúdo dentro de cada `<a>` **precisará** indicar o destino do link.
 
@@ -46,7 +36,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
     - Pieces of media files with media fragments (Pedaços de arquivos de mídia com fragmentos da própria mídia)
     - Números de telefone com `tel:` URLs
     - Email addresses with(Endereço de email com) `mailto:` URLs
-    - Alguns navegadores talvez não aguentem certos arranjos em URL, para isso os websites fazem uso do [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
+    - Alguns navegadores talvez não aguentem certos arranjos em URL, para isso os websites fazem uso do [`registerProtocolHandler()`](/pt-BR/docs/Web/API/Navigator/registerProtocolHandler)
 
 - {{HTMLAttrDef("hreflang")}}
   - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/pt-BR/docs/Web/HTML/Global_attributes/lang).
@@ -102,16 +92,16 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/pt-BR/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Interactive_content"
           >interactive content</a
         >, palpable content.
       </td>
@@ -120,17 +110,17 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
       <th scope="row">Permitted content</th>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#Transparent_content_model"
+          href="/pt-BR/docs/Web/HTML/Content_categories#Transparent_content_model"
           >Transparent</a
         >, containing either
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >flow content</a
         >
         (excluding
-        <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Interactive_content"
           >interactive content</a
         >) or
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -143,10 +133,10 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >, or any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >flow content</a
         >, but not other <code>&#x3C;a></code> elements.
       </td>
@@ -212,7 +202,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 
 ```html
 <a href="//example.com">Scheme-relative URL</a>
-<a href="/en-US/docs/Web/HTML">Origin-relative URL</a>
+<a href="/pt-BR/docs/Web/HTML">Origin-relative URL</a>
 <a href="./p">Directory-relative URL</a>
 ```
 

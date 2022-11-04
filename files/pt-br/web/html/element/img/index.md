@@ -1,7 +1,6 @@
 ---
 title: <img>
 slug: Web/HTML/Element/img
-translation_of: Web/HTML/Element/img
 ---
 ## Resumo
 
@@ -33,7 +32,7 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
   - : The alignment of the image with respect to its surrounding context.
 - {{htmlattrdef("alt")}}
 
-  - : Este atributo define um texto alternativo que descreve a imagem. Os Usuários irão ver o texto se a URL da imagem estiver errado, a imagem não está em um dos [formatos suportados](/pt-BR/docs/Web/HTML/Element/img$edit#Supported_image_formats) ou até a imagem ser baixada .
+  - : Este atributo define um texto alternativo que descreve a imagem. Os Usuários irão ver o texto se a URL da imagem estiver errado, a imagem não está em um dos [formatos suportados](#supported_image_formats) ou até a imagem ser baixada .
 
     > **Note:** **Usage note:** Omitting this attribute indicates that the image _is_ a key part of the content, but no textual equivalent is available. Setting this attribute to the empty string indicates that this image is _not_ a key part of the content; non-visual browsers may omit it from rendering.
 
@@ -185,7 +184,7 @@ Quando o atributo `alt` não estiver presente em uma imagem, alguns programas le
 
 O atributo {{htmlattrxref("title")}} não é um substituto aceitável para o atributo `alt`. Além disso, evite duplicar o valor do atributo `alt` no atributo `title` para uma mesma imagem. Isso pode fazer com que alguns programas leitores de tela narrem duas vezes a descrição, o que pode criar uma experiência confusa para usuários.
 
-Evite usar o atributo `title` como uma forma suplementar de legenda para a descrição do `alt`. Caso a imagem precise de uma legenda, prefisa os elementos [`figure`](/en-US/docs/Web/HTML/Element/figure) e [`figcaption`](/en-US/docs/Web/HTML/Element/figcaption).
+Evite usar o atributo `title` como uma forma suplementar de legenda para a descrição do `alt`. Caso a imagem precise de uma legenda, prefisa os elementos [`figure`](/pt-BR/docs/Web/HTML/Element/figure) e [`figcaption`](/pt-BR/docs/Web/HTML/Element/figcaption).
 
 O valor do atributo `title` é geralmente mostrado ao usuário como uma dica, que aparece após o usuário parar o cursor sobre a imagem. Apesar de _poder_ _prover_ informações adicionais ao usuário, não se deve assumir todos os usuários vão vê-lo, pois o mesmo pode possuir apenas um teclado ou uma tela de toque (touchscreen). Se você considera a informação particularmente importante para o usuário, prefira o uso de elementos inline.
 
@@ -207,4 +206,4 @@ O valor do atributo `title` é geralmente mostrado ao usuário como uma dica, qu
 
 - {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Valor usado
 slug: Web/CSS/used_value
-translation_of: Web/CSS/used_value
 original_slug: Web/CSS/Valor_usado
 ---
 {{cssref}}
@@ -108,5 +107,4 @@ CSS 2.0 defined only [computed value](/pt-BR/docs/CSS/computed_value) as the las
 ## Veja também
 
 - [CSS Reference](/pt-BR/docs/CSS_Reference)
-- {{ CSS_key_concepts() }}
 - [window.getComputedStyle](/pt-BR/docs/DOM/window.getComputedStyle)

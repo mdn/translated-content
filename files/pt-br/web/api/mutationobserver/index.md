@@ -1,7 +1,6 @@
 ---
 title: MutationObserver
 slug: Web/API/MutationObserver
-translation_of: Web/API/MutationObserver
 ---
 {{APIRef("DOM")}}
 
@@ -53,7 +52,7 @@ void observe(
 
 ### `disconnect()`
 
-Pára o rebimento de notificações das mutações do DOM na instância `MutationObserver.` O callback do observador não será invocado até que método [`observe()`](<#observe()>) seja novamente utilizado.
+Pára o rebimento de notificações das mutações do DOM na instância `MutationObserver`. O callback do observador não será invocado até que método [`observe()`](<#observe()>) seja novamente utilizado.
 
 ```
 void disconnect();

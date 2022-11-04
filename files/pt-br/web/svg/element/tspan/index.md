@@ -1,13 +1,6 @@
 ---
 title: tspan
 slug: Web/SVG/Element/tspan
-tags:
-  - Conteúdo Textual
-  - Elemento
-  - Referencia
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/tspan
 ---
 {{SVGRef}}
 

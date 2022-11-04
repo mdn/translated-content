@@ -52,13 +52,11 @@ On voit ici que la valeur de `grow()` indique l'espace utilisé avant l'agrandis
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                 | Commentaires                                       |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblymemoryprototypegrow', 'grow()')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale pour WebAssembly. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.Memory.grow")}}
+{{Compat}}
 
 ## Voir aussi
 

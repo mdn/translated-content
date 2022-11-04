@@ -1,14 +1,6 @@
 ---
 title: <span>
 slug: Web/HTML/Element/span
-tags:
-  - Elemento
-  - HTML
-  - Internet
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/span
 ---
 ## Resumo
 
@@ -29,7 +21,7 @@ Esse elemento inclui apenas os [a](/pt-BR/docs/HTML/Global_attributes)[tributos 
 
 ## DOM interface
 
-Este elemento implementa a interface [`HTMLSpanElement`](/en-US/docs/HTMLSpanElement).
+Este elemento implementa a interface [`HTMLSpanElement`](/pt-BR/docs/HTMLSpanElement).
 
 ## Exemplos
 
@@ -57,4 +49,4 @@ Some text
 
 - Elemento HTML {{HTMLElement("div")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

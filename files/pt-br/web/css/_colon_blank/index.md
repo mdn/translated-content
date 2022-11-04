@@ -1,14 +1,6 @@
 ---
 title: ':blank'
 slug: Web/CSS/:blank
-tags:
-  - ':blank'
-  - CSS
-  - Experimental
-  - Necessita de Exemplos
-  - Pseudo-classe
-  - Seletores CSS
-translation_of: Web/CSS/:blank
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

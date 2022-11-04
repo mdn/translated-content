@@ -1,14 +1,6 @@
 ---
 title: dl
 slug: Web/HTML/Element/dl
-tags:
-  - Elemento
-  - HTML
-  - Internet
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/dl
 ---
 ## Resumo
 
@@ -107,4 +99,4 @@ Para mudar a indentação de um termo, use a propriedade [CSS](/en/CSS) [margin]
 - Elemento {{ HTMLElement("dt") }}
 - Elemento {{ HTMLElement("dd") }}
 
-{{HTMLRef}}{{languages({ "en": "en/HTML/Element/dl", "pl": "pl/HTML/Element/dl", "ja": "ja/HTML/Element/dl"})}}
+{{HTMLSidebar}}

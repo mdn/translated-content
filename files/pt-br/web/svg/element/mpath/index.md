@@ -1,15 +1,6 @@
 ---
 title: mpath
 slug: Web/SVG/Element/mpath
-tags:
-  - Animação
-  - Caminho
-  - Contorno
-  - Elemento
-  - Movimento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/mpath
 ---
 {{SVGRef}}
 
@@ -56,8 +47,8 @@ Resultado:
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Atributos XLink](/pt-BR/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos XLink](/pt-BR/SVG/Attribute#XLink) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### Atributos específicos
@@ -66,7 +57,7 @@ Resultado:
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGMPathElement`](/pt-BR/DOM/SVGMPathElement "en/DOM/SVGMPathElement").
+Este elemento implementa a interface do [`SVGMPathElement`](/pt-BR/DOM/SVGMPathElement).
 
 ## Relacionado
 

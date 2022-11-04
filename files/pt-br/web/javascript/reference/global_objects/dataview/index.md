@@ -1,12 +1,6 @@
 ---
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
-tags:
-  - Constructor
-  - DataView
-  - JavaScript
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 ---
 {{JSRef}}
 

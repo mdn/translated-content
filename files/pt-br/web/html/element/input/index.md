@@ -1,7 +1,6 @@
 ---
 title: <input>
 slug: Web/HTML/Element/Input
-translation_of: Web/HTML/Element/input
 ---
 O **elemento HTML `<input>`** é usado para criar controles interativos para formulários baseados na web para receber dados do usuário. A semântica de um `<input>` varia consideravelmente dependendo do valor de seu atributo `type`.
 
@@ -138,7 +137,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
   - : Se o elemento for um botão ou uma imagem de envio de formulário, este atributo é um nome ou palavra-chave indicando onde mostrar a resposta recebida após a submissão do formulário. Este é o nome de, ou palavra-chave para, um _contexto de navegação_ (por exemplo aba, janela ou frame inline). Se especificado, este atributo sobrescreve o atributo {{htmlattrxref("target", "form")}} do formulário dono do elemento. As seguintes palavras-chave têm significado especial:
 
-    - \_`self`: Carrega a resposta nom mesmo contexto de navegação que o atual. Este é o valor padrão se o atributo não for especificado.
+    - `_self`: Carrega a resposta nom mesmo contexto de navegação que o atual. Este é o valor padrão se o atributo não for especificado.
     - `_blank`: Carrega a resposta num novo contexto de navegação anônimo.
     - `_parent`: Carrega a resposta no contexto de navegação pai do atual. Se não houver pai, esta opção tem o mesmo comportamento de `_self`.
     - `_top`: Carrega a resposta no contexto de navegação raiz (isto é, o contexto de navegação que é ancestral do atual e não tem pai). Se não houver pai, esta opção tem o mesmo comportamento de `_self`.
@@ -284,4 +283,4 @@ Você pode usar o atributo {{htmlattrxref("mozactionhint", "input")}} para espec
 - Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
 - [Cross-browser HTML5 placeholder text](http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

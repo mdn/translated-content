@@ -1,15 +1,6 @@
 ---
 title: Desenhando formas com canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
-tags:
-  - Canvas
-  - Gráficos(2)
-  - HTML
-  - HTML Canvas
-  - HTML5
-  - Intermediário
-  - Tutorial
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/Guide/HTML/Canvas_tutorial/Drawing_shapes
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
@@ -76,14 +67,8 @@ Para criar uma camada usando caminhos (regiões ou _paths_) é necessário algun
 
 - {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}}
   - : Cria um novo path. Uma vez criado, futuros comandos de desenho são direcionados do path atual para a construção de um novo path no canvas.
-
-<!---->
-
 - [Métodos de Caminhos (Path)](/pt-BR/docs/Web/API/CanvasRenderingContext2D#Paths)
   - : Métodos para manipuliar diferentes paths para objetos.
-
-<!---->
-
 - {{domxref("CanvasRenderingContext2D.closePath", "closePath()")}}
   - : Finaliza o path para futuros comandos de desenho, fazendo com que voltem a ser direcionados ao contexto.
 - {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}

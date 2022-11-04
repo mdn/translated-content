@@ -1,35 +1,22 @@
 ---
 title: 'SVG: Gráficos Vetoriais Escaláveis'
 slug: Web/SVG
-tags:
-  - Design Responsivo
-  - Gráficos 2D
-  - Gráficos Escaláveis
-  - Gráficos Vetoriais
-  - Imagens
-  - Referencia
-  - SVG
-  - Web
-  - graficos
-  - l10n:prioridade
-  - Ícones
-translation_of: Web/SVG
 ---
 **[Iniciando](/pt-BR/docs/Web/SVG/Tutorial)** Este tutorial irá ajudá-lo a começar a trabalhar com SVG.
 
 {{SVGRef}}
 
-**Gráficos Vetoriais Escaláveis (SVG)** é uma linguagem de marcação [XML](/pt-BR/docs/XML "XML") para descrever gráficos vetoriais bidimensionais. Essencialmente, SVG é para gráficos o que o XHTML é para texto.
+**Gráficos Vetoriais Escaláveis (SVG)** é uma linguagem de marcação [XML](/pt-BR/docs/XML) para descrever gráficos vetoriais bidimensionais. Essencialmente, SVG é para gráficos o que o XHTML é para texto.
 
-SVG é similar em escopo à tecnologia Flash, propriedade da Adobe, mas se distingue por ser uma [recomendação da W3C](http://www.w3.org/Graphics/SVG/), ou seja, um padrão, e por ser baseado em XML e não em um formato binário fechado. O SVG foi criado para funcionar com outros padrões da [W3C](http://www.w3.org/), tais como [CSS](/pt-BR/docs/CSS "CSS"), [DOM](/pt-BR/docs/DOM "DOM") e [SMIL](http://www.w3.org/AudioVideo/).
+SVG é similar em escopo à tecnologia Flash, propriedade da Adobe, mas se distingue por ser uma [recomendação da W3C](http://www.w3.org/Graphics/SVG/), ou seja, um padrão, e por ser baseado em XML e não em um formato binário fechado. O SVG foi criado para funcionar com outros padrões da [W3C](http://www.w3.org/), tais como [CSS](/pt-BR/docs/CSS), [DOM](/pt-BR/docs/DOM) e [SMIL](http://www.w3.org/AudioVideo/).
 
 ## Documentação
 
-- [Referência de elementos SVG](/pt-BR/docs/SVG/Element "SVG/Element")
+- [Referência de elementos SVG](/pt-BR/docs/SVG/Element)
   - : Veja detalhes sobre cada elemento SVG.
-- [Referência de atributos SVG](/pt-BR/docs/SVG/Attribute "SVG/Attribute")
+- [Referência de atributos SVG](/pt-BR/docs/SVG/Attribute)
   - : Veja detalhes sobre cada atributo SVG.
-- [Referência da API de DOM do SVG](/pt-BR/docs/Gecko_DOM_Reference#SVG_interfaces "Gecko_DOM_Reference#SVG_interfaces")
+- [Referência da API de DOM do SVG](/pt-BR/docs/Gecko_DOM_Reference#SVG_interfaces)
   - : Veja detalhes sobre toda a API de DOM do SVG.
 - Melhorando o conteúdo HTML
   - : O SVG funciona juntamente com HTML, CSS e JavaScript. Use o SVG para melhorar uma página comum HTML ou uma aplicação web.
@@ -37,9 +24,9 @@ SVG é similar em escopo à tecnologia Flash, propriedade da Adobe, mas se disti
 
   - : Notas e informações sobre como o SVG é implementado na Mozilla.
 
-    - [Como o SVG e implementado no Firefox](/pt-BR/docs/SVG_in_Firefox "SVG_in_Firefox")
-    - [Tutorial sobre como usá-lo](/pt-BR/docs/SVG_in_Firefox "SVG_in_Firefox")
-    - [SVG em XHTML](/pt-BR/docs/SVG_In_HTML_Introduction "SVG_In_HTML_Introduction")
+    - [Como o SVG e implementado no Firefox](/pt-BR/docs/SVG_in_Firefox)
+    - [Tutorial sobre como usá-lo](/pt-BR/docs/SVG_in_Firefox)
+    - [SVG em XHTML](/pt-BR/docs/SVG_In_HTML_Introduction)
 
 ## Comunidade
 
@@ -49,19 +36,19 @@ SVG é similar em escopo à tecnologia Flash, propriedade da Adobe, mas se disti
 
 - [Suíte de Teste SVG](http://www.w3.org/Graphics/SVG/Test/)
 - [Validador SVG](http://jiggles.w3.org/svgvalidator/) (Descontinuado)
-- [Mais Ferramentas...](/pt-BR/docs/tag/SVG:Tools "tag/SVG:Tools")
-- Outros recursos: [XML](/pt-BR/docs/XML "XML"), [CSS](/pt-BR/docs/CSS "CSS"), [DOM](/pt-BR/docs/DOM "DOM"), [Canvas](/pt-BR/docs/HTML/Canvas "HTML/Canvas")
+- [Mais Ferramentas...](/pt-BR/docs/tag/SVG:Tools)
+- Outros recursos: [XML](/pt-BR/docs/XML), [CSS](/pt-BR/docs/CSS), [DOM](/pt-BR/docs/DOM), [Canvas](/pt-BR/docs/HTML/Canvas)
 
 ## Exemplos
 
 - Google [Maps](http://maps.google.com) (route overlay) & [Docs](http://docs.google.com) (spreadsheet charting)
 - [Menus bubble SVG](http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml)
 - [Orientações para autoria SVG](http://jwatt.org/svg/authoring/)
-- Uma visão geral do [Projeto SVG da Mozilla](/pt-BR/docs/Mozilla_SVG_Project "Mozilla_SVG_Project")
-- [Perguntas frequentes](/pt-BR/docs/SVG/FAQ "SVG/FAQ") sobre SVG e Mozilla
+- Uma visão geral do [Projeto SVG da Mozilla](/pt-BR/docs/Mozilla_SVG_Project)
+- [Perguntas frequentes](/pt-BR/docs/SVG/FAQ) sobre SVG e Mozilla
 - Slides e demos da palestra [SVG and Mozilla](http://jwatt.org/svg-open-US/docs/2009/slides.xhtml) no SVG Open 2009
-- [SVG como uma imagem](/pt-BR/docs/SVG/SVG_as_an_Image "SVG/SVG as an Image")
-- [Animação SVG com SMIL](/pt-BR/docs/SVG/SVG_animation_with_SMIL "SVG/SVG animation with SMIL")
+- [SVG como uma imagem](/pt-BR/docs/SVG/SVG_as_an_Image)
+- [Animação SVG com SMIL](/pt-BR/docs/SVG/SVG_animation_with_SMIL)
 - [Leão](http://croczilla.com/bits_and_pieces/svg/samples/lion/lion.svg), [Borboleta](http://croczilla.com/bits_and_pieces/svg/samples/butterfly/butterfly.svg) & [Tigre](http://croczilla.com/bits_and_pieces/svg/samples/tiger/tiger.svg)
 - [Galeria de arte SVG](http://plurib.us/1shot/2007/svg_gallery/)
 - Mais exemplos ([SVG Samples croczilla.com](http://croczilla.com/bits_and_pieces/svg/samples), [carto.net](http://www.carto.net/papers/svg/samples/))

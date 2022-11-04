@@ -5,7 +5,7 @@ slug: Web/API/Window/visualViewport
 
 {{SeeCompatTable}}{{APIRef("Visual Viewport")}}
 
-{{domxref("Window")}}インターフェイスの**`visualViewport`** は読み取り専用プロパティーです。 特定のウィンドウの視覚的ビューポートを表す{{domxref("VisualViewport")}}オブジェクトを返します。
+{{domxref("Window")}} インターフェイスの **`visualViewport`** は読み取り専用プロパティーです。 特定のウィンドウの視覚的ビューポートを表す {{domxref("VisualViewport")}} オブジェクトを返します。
 
 ## 構文
 

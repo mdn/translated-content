@@ -317,7 +317,7 @@ var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);
 
 ### Inactive tabs
 
-Starting in Gecko 5.0 {{geckoRelease("5.0")}}, intervals are clamped to fire no more often than once per second in inactive tabs.
+Starting in Gecko 5.0, intervals are clamped to fire no more often than once per second in inactive tabs.
 
 ## The "[`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this)" problem
 
@@ -475,7 +475,9 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 ### Syntax
 
-` var myDaemon = new MiniDaemon(thisObject, callback[``, rate``[, length]]); `
+```
+var myDaemon = new MiniDaemon(thisObject, callback[, rate[, length]]);
+```
 
 ### Description
 

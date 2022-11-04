@@ -1,7 +1,6 @@
 ---
 title: Especificidade
 slug: Web/CSS/Specificity
-translation_of: Web/CSS/Specificity
 ---
 ## O Conceito
 
@@ -120,4 +119,3 @@ Aqui está o título!
 ## Veja Também
 
 - Espcificação de Seletores CSS - <http://www.w3.org/TR/selectors/#specificity>
-- {{ CSS_key_concepts() }}

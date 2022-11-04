@@ -1,14 +1,6 @@
 ---
 title: AnimationEvent.animationName
 slug: Web/API/AnimationEvent/animationName
-tags:
-  - AnimationEvent
-  - Animação Web
-  - Apps
-  - CSSOM
-  - Propriedade
-  - Referencia
-translation_of: Web/API/AnimationEvent/animationName
 ---
 `{{SeeCompatTable}}{{ apiref("Web Animations API") }}`
 
@@ -24,7 +16,7 @@ name = AnimationEvent.animationName
 
 | Especificação                                                                                                                          | Estado                                     | Comentário            |
 | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | --------------------- |
-| `{{ SpecName('CSS3 Animations', '#AnimationEvent-animationName', 'AnimationEvent.animationName') }}` | `{{ Spec2('CSS3 Animations')}}` | `Initial definition.` |
+| `{{ SpecName('CSS3 Animations', '#AnimationEvent-animationName', 'AnimationEvent.animationName') }}` | `{{ Spec2('CSS3 Animations')}}` | `Initial definition`. |
 
 ## Compatibilidade com navegadores
 

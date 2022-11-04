@@ -1,9 +1,6 @@
 ---
 title: keyup
 slug: Web/API/Element/keyup_event
-tags:
-  - Evento de teclado
-translation_of: Web/API/Document/keyup_event
 original_slug: Web/API/Document/keyup_event
 ---
 O evento keyup é acionado quando uma tecla é liberada.
@@ -59,8 +56,7 @@ O evento keyup é acionado quando uma tecla é liberada.
       <td>WindowProxy</td>
       <td>
         <a
-          href="/en-US/docs/Web/API/Document/defaultView"
-          title="In browsers, document.defaultView returns the window object associated with a document, or null if none is available."
+          href="/pt-BR/docs/Web/API/Document/defaultView"
           ><code>document.defaultView</code></a
         >
         (<code>window</code> of the document)
@@ -87,7 +83,7 @@ O evento keyup é acionado quando uma tecla é liberada.
         character, this value is a non-empty Unicode string containing that
         character. If the key doesn't have a printable representation, this is
         an empty string. See
-        <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
+        <a href="/pt-BR/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
           >key names and char values</a
         >
         for the detail.
@@ -107,7 +103,7 @@ O evento keyup é acionado quando uma tecla é liberada.
         <code>char</code> attribute. Otherwise, it's one of the key value
         strings specified in <a href="#key_values">Key values</a>. If the key
         can't be identified, this is the string "Unidentified". See
-        <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
+        <a href="/pt-BR/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
           >key names and char values</a
         >
         for the detail. Read Only.
@@ -119,7 +115,7 @@ O evento keyup é acionado quando uma tecla é liberada.
       <td>
         The Unicode reference number of the key; this attribute is used only by
         the
-        <a href="/en-US/docs/Mozilla_event_reference/keypress"
+        <a href="/pt-BR/docs/Mozilla_event_reference/keypress"
           ><code>keypress</code></a
         >
         event. For keys whose <code>char</code> attribute contains multiple

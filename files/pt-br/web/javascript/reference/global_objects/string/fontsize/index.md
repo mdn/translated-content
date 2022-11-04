@@ -1,15 +1,6 @@
 ---
 title: String.prototype.fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
-tags:
-  - Descontinuado
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - fontsize()
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fontsize
 ---
 {{JSRef}} {{deprecated_header}}
 
@@ -50,7 +41,7 @@ console.log(worldString.big());       // <big>Olá, mundo</big>
 console.log(worldString.fontsize(7)); // <font size="7">Olá, mundo</fontsize>
 ```
 
-Com o objeto [`element.style`](/en-US/docs/Web/API/ElementCSSInlineStyle/style) você pode obter o atributo `style` do elemento e manipulá-lo de forma mais genérica, por exemplo:
+Com o objeto [`element.style`](/pt-BR/docs/Web/API/ElementCSSInlineStyle/style) você pode obter o atributo `style` do elemento e manipulá-lo de forma mais genérica, por exemplo:
 
 ```js
 document.getElementById('#oIdDoElemento').style.fontSize = '0.7em';

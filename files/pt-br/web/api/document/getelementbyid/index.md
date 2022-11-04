@@ -1,17 +1,6 @@
 ---
 title: document.getElementById()
 slug: Web/API/Document/getElementById
-tags:
-  - API
-  - DOM
-  - Document
-  - Elements
-  - Method
-  - Reference
-  - Web
-  - getElementById
-  - id
-translation_of: Web/API/Document/getElementById
 ---
 {{ ApiRef("DOM") }}
 
@@ -58,7 +47,7 @@ Os novatos devem notar que a caixa de 'Id' no nome deste método _deve_ estar co
 
 Se não existe um elemento com o id fornecido, esta função retorna `null`. Note que o parâmetro ID diferência maiúsculas e minúsculas. Assim document.getElementById("Main") retornará `null` ao invés do elemento `<div id="main">`, devido a "M" e "m" serem diferentes para o objetivo deste método.
 
-**Elementos que não estão no documento** não são procurados por `getElementById`. Quando criar um elemento e atribuir um ID ao mesmo, você deve inserir o elemento na árvore do documento com [`insertBefore`](/en-US/docs/DOM/Node.insertBefore) ou método similar antes que você possa acessá-lo com `getElementById`:
+**Elementos que não estão no documento** não são procurados por `getElementById`. Quando criar um elemento e atribuir um ID ao mesmo, você deve inserir o elemento na árvore do documento com [`insertBefore`](/pt-BR/docs/DOM/Node.insertBefore) ou método similar antes que você possa acessá-lo com `getElementById`:
 
 ```js
 var elemento = document.createElement("div");

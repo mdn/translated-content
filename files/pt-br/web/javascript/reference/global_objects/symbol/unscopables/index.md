@@ -1,17 +1,16 @@
 ---
 title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 ---
 {{JSRef}}
 
-O símbolo **`Symbol.unscopables`** é usado para específicar um valor objeto cujo os nomes de propriedade próprio e herdados são excluídos das associações do ambiente [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) o objeto associado.
+O símbolo **`Symbol.unscopables`** é usado para específicar um valor objeto cujo os nomes de propriedade próprio e herdados são excluídos das associações do ambiente [`with`](/pt-BR/docs/Web/JavaScript/Reference/Statements/with) o objeto associado.
 
 {{EmbedInteractiveExample("pages/js/symbol-unscopables.html")}}
 
 ## Descrição
 
-O `@@unscopables` símbolo (`Symbol.unscopables`) pode ser definido em qualquer objeto para impedir que os nomes da propriedade sejam expostos como variavéis lexicais [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) ligações de ambiente. Note que se usar o [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode), `with` as declarações não estão disponíveis e provavelmente não haverá necessidade desse símbolo.
+O `@@unscopables` símbolo (`Symbol.unscopables`) pode ser definido em qualquer objeto para impedir que os nomes da propriedade sejam expostos como variavéis lexicais [`with`](/pt-BR/docs/Web/JavaScript/Reference/Statements/with) ligações de ambiente. Note que se usar o [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode), `with` as declarações não estão disponíveis e provavelmente não haverá necessidade desse símbolo.
 
 Configurando a propriedade para `true` em um objeto `unscopables` tornará ele não _unscopable_ e portanto não irá apareer nas variavéis de escopo lexicais. Configurando uma propriedade para `false` o tornará `scopable` e portanto irá aparecer no escopo de variavéis lexicais.
 
@@ -69,4 +68,4 @@ with (obj) {
 ## Veja também
 
 - {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
-- [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement (not available in [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode))
+- [`with`](/pt-BR/docs/Web/JavaScript/Reference/Statements/with) statement (not available in [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode))

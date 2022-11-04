@@ -1,15 +1,6 @@
 ---
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/HTMLInputElement
 ---
 {{ APIRef("HTML DOM") }}
 
@@ -611,14 +602,14 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
       <td><code>void</code></td>
       <td>
         Sets the files selected on the input to the given array of
-        <code><a href="/en-US/docs/Web/API/File">File</a></code> objects. This
+        <code><a href="/pt-BR/docs/Web/API/File">File</a></code> objects. This
         is an alternative to <code>mozSetFileNameArray</code> which can be used
         in frame scripts: a chrome script can
-        <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code"
+        <a href="/pt-BR/docs/Extensions/Using_the_DOM_File_API_in_chrome_code"
           >open files as <code>File</code> objects</a
         >
         and send them via
-        <a href="/en-US/Firefox/Multiprocess_Firefox/The_message_manager"
+        <a href="/pt-BR/Firefox/Multiprocess_Firefox/The_message_manager"
           >message manager</a
         >.
       </td>
@@ -628,7 +619,6 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
         <code
           ><a
             href="/en/DOM/Input.mozGetFileNameArray"
-            title="en/DOM/Input.mozGetFileNameArray"
             >mozGetFileNameArray</a
           >(length, filenames)</code
         >{{non-standard_inline}}
@@ -641,7 +631,6 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
         <code
           ><a
             href="/en/DOM/Input.mozSetFileNameArray"
-            title="en/DOM/Input.mozSetFileNameArray"
             >mozSetFileNameArray</a
           >(filenames, length)</code
         >{{non-standard_inline}}
@@ -650,7 +639,7 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
       <td>
         Sets the filenames for the files selected on the input. Not for use in
         <a
-          href="/en-US/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts"
+          href="/pt-BR/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts"
           >frame scripts</a
         >, because it accesses the filesystem.
       </td>
@@ -658,7 +647,7 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
     <tr>
       <td>
         <code
-          ><a href="/en/DOM/Input.select" title="en/DOM/Input.select">select</a
+          ><a href="/en/DOM/Input.select">select</a
           >()</code
         >
       </td>
@@ -682,7 +671,6 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
         <code
           ><a
             href="/en/DOM/Input.setSelectionRange"
-            title="en/DOM/Input.setSelectionRange"
             >setSelectionRange</a
           >(selectionStart, selectionEnd, [optional] selectionDirection)</code
         >
@@ -780,7 +768,7 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('HTML WHATWG', "tthe-input-element.html#the-input-element", "HTMLInputElement")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("HTML5 W3C")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | {{SpecName('HTML5 W3C', "forms.html#the-input-element", "HTMLInputElement")}}                     | {{Spec2('HTML5 W3C')}}     | Technically, the `tabindex` and `accesskey` properties, as well as the `blur()`, `click()`, and `focus()` methods, are now defined on {{domxref("HTMLElement")}}. The following properties are now obsolete: `align` and `useMap`. The following properties have been added: `autocomplete`, `autofocus`, `dirName`, `files`, `formAction`, `formEncType`, `formMethod`, `formNoValidate`, `formTarget`, `height`, `indeterminate`, `labels`, `list`, `max`, `min`, `multiple`, `pattern`, `placeholder`, `required`, `selectionDirection`, `selectionEnd`, `selectionStart`, `step`, `validationMessage`, `validity`, `valueAsDate`, `valueAsNumber`, `width`, and `willValidate`. The following methods have been added: `checkValidity()`, `setCustomValidity()`, `setSelectionRange()`, `stepUp()`, and `stepDown()`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-6043025', 'HTMLInputElement')}}                                 | {{Spec2('DOM2 HTML')}}     | The `size` property is now an `unsigned` `long`. The `type` property must be entirely given in lowercase characters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| {{SpecName('DOM2 HTML', 'html.html#ID-6043025', 'HTMLInputElement')}}                                 | {{Spec2('DOM2 HTML')}}     | The `size` property is now an `unsigned long`. The `type` property must be entirely given in lowercase characters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | {{SpecName('DOM1', 'level-one-html.html#ID-6043025', 'HTMLInputElement')}}                         | {{Spec2('DOM1')}}         | Initial definition.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 ## Browser compatibility

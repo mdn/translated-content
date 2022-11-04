@@ -1,11 +1,6 @@
 ---
 title: animateTransform
 slug: Web/SVG/Element/animateTransform
-tags:
-  - Animação
-  - Elemento
-  - SVG
-translation_of: Web/SVG/Element/animateTransform
 ---
 {{SVGRef}}
 
@@ -43,14 +38,14 @@ O elemento `animateTransform` anima a transformação de um atributo em um eleme
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](</pt-BR/docs/Web/SVG/Attribute#Atributos de processamento condicional> "en-US/docs/Web/SVG/Attribute#Atributos de processamento condicional") »
-- [Atributos principais](</pt-BR/docs/Web/SVG/Attribute#Atributos principais> "en-US/docs/Web/SVG/Attribute#Atributos principais") »
-- [Atributos de eventos da animação](</pt-BR/docs/Web/SVG/Attribute#Atributos de eventos da animação> "en-US/docs/Web/SVG/Attribute#Atributos de eventos da animação") »
-- [Atributos XLink](</pt-BR/docs/Web/SVG/Attribute#Atributos XLink> "en-US/docs/Web/SVG/Attribute#Atributos XLink") »
-- [Atributos de destino do atributo da animação](</pt-BR/docs/Web/SVG/Attribute#Atributos de destino do atributo da animação> "en-US/docs/Web/SVG/Attribute#Atributos de destino do atributo da animação") »
-- [Atributos de cronometragem da animação](</pt-BR/docs/Web/SVG/Attribute#Atributos de cronometragem da animação> "en-US/docs/Web/SVG/Attribute#Atributos de cronometragem da animação") »
-- [Atributos de valor de animação](</pt-BR/docs/Web/SVG/Attribute#Atributos de valor de animação> "en-US/docs/Web/SVG/Attribute#Atributos de valor de animação") »
-- [Atributos de animação adicionais](</pt-BR/docs/Web/SVG/Attribute#Atributos de animação adicionais> "en-US/docs/Web/SVG/Attribute#Atributos de animação adicionais") »
+- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#Atributos_de_processamento_condicional) »
+- [Atributos principais](</pt-BR/docs/Web/SVG/Attribute#Atributos principais>) »
+- [Atributos de eventos da animação](/pt-BR/docs/Web/SVG/Attribute#Atributos_de_eventos_da_animação) »
+- [Atributos XLink](/pt-BR/docs/Web/SVG/Attribute#Atributos_XLink) »
+- [Atributos de destino do atributo da animação](/pt-BR/docs/Web/SVG/Attribute#Atributos_de_destino_do_atributo_da_animação) »
+- [Atributos de cronometragem da animação](/pt-BR/docs/Web/SVG/Attribute#Atributos_de_cronometragem_da_animação) »
+- [Atributos de valor de animação](/pt-BR/docs/Web/SVG/Attribute#Atributos_de_valor_de_animação) »
+- [Atributos de animação adicionais](/pt-BR/docs/Web/SVG/Attribute#Atributos_de_animação_adicionais) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### Atributos específicos
@@ -62,4 +57,4 @@ O elemento `animateTransform` anima a transformação de um atributo em um eleme
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGAnimateTransformElement`](/pt-BR/docs/DOM/SVGAnimateTransformElement "en/DOM/SVGAnimateTransformElement").
+Este elemento implementa a interface do [`SVGAnimateTransformElement`](/pt-BR/docs/DOM/SVGAnimateTransformElement).

@@ -23,7 +23,7 @@ _This interface also inherits properties from its parent interface, {{domxref("E
 - {{domxref("VideoTrackList.onaddtrack", "onaddtrack")}}
   - : An event handler to be called when the {{event("addtrack")}} event is fired, indicating that a new video track has been added to the media element.
 - {{domxref("VideoTrackList.onchange", "onchange")}}
-  - : An event handler to be called when the {{event("change")}} event occurs — that is, when the value of the {{domxref("VideoTrack.selected", "selected")}} property for a track has changed, due to the track being made active or inactive.
+  - : An event handler to be called when the [`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) event occurs — that is, when the value of the {{domxref("VideoTrack.selected", "selected")}} property for a track has changed, due to the track being made active or inactive.
 - {{domxref("VideoTrackList.onremovetrack", "onremovetrack")}}
   - : An event handler to call when the {{event("removetrack")}} event is sent, indicating that a video track has been removed from the media element.
 
@@ -80,4 +80,4 @@ function updateTrackCount(event) {
 
 ## Browser compatibility
 
-{{Compat("api.VideoTrackList")}}
+{{Compat}}

@@ -8,7 +8,7 @@ tags:
 translation_of: Web/HTML/Element/address
 original_slug: Web/HTML/Elemento/address
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 El **elemento HTML `<address>`** aporta información de contacto para su {{HTMLElement("article")}} más cercano o ancestro {{HTMLElement("body")}}; en el último caso lo aplica a todo el documento.
 

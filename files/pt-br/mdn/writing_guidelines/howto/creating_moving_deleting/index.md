@@ -1,15 +1,6 @@
 ---
 title: Criando e editando páginas
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
-tags:
-  - Colaborando
-  - Colaborar
-  - Contribuindo
-  - Criando
-  - Editando
-  - MDN
-  - nova pagina
-translation_of: MDN/Contribute/Howto/Create_and_edit_pages
 original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
 {{MDNSidebar}}
@@ -83,7 +74,7 @@ Para criar um link para uma "página inexistente":
 _Para criar uma nova página sem linkar de outra página_, informe o nome único de uma página na barra de endereços do seu navegador. Por exemplo, se você inserir:
 
 ```html
-https://developer.mozilla.org/en-US/docs/FooBar
+https://developer.mozilla.org/pt-BR/docs/FooBar
 ```
 
 O MDN cria uma nova página com o título "FooBar" e abre o editor para você inserir o conteúdo nessa página. Veja a sessão "[Editando uma página existente](<#Editando uma págia existente>)" nesse artigo para ver como usar o editor.

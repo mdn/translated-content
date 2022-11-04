@@ -5,7 +5,7 @@ slug: Web/API/Window/console
 
 {{ APIRef }}
 
-読み取り専用プロパティの**`Window.console`**は、ブラウザのコンソールへ情報を出力するメソッドを提供する{{domxref("Console")}}オブジェクトへの参照を返します。これらのメソッドで出力される情報はデバッグ目的のものであり、ユーザーへ情報を提示するために使われるべきではありません。
+読み取り専用プロパティの **`Window.console`** は、ブラウザのコンソールへ情報を出力するメソッドを提供する{{domxref("Console")}}オブジェクトへの参照を返します。これらのメソッドで出力される情報はデバッグ目的のものであり、ユーザーへ情報を提示するために使われるべきではありません。
 
 ## Syntax
 
@@ -37,4 +37,4 @@ console.dir(someObject);
 | ------------------------------------ | -------------------------------- | ------------------- |
 | {{SpecName('Console API')}} | {{Spec2('Console API')}} | Initial definition. |
 
-> **Note:** Currently there are many implementation differences among browsers, but work is being done to bring them together and make them more consistent with one another.
+> **メモ:** Currently there are many implementation differences among browsers, but work is being done to bring them together and make them more consistent with one another.

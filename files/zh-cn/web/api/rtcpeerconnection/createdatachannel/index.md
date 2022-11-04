@@ -65,7 +65,7 @@ A new {{domxref("RTCDataChannel")}} object with the specified `label`, configure
 
 ## Examples
 
-This example shows how to create a data channel and set up handlers for the {{event("open")}} and {{event("message")}} events to send and receive messages on it (For brievity, the example assumes onnegotiationneeded is set up).
+This example shows how to create a data channel and set up handlers for the {{event("open")}} and [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) events to send and receive messages on it (For brievity, the example assumes onnegotiationneeded is set up).
 
 ```js
 // Offerer side
@@ -118,7 +118,7 @@ For a more thorough example showing how the connection and channel are establish
 
 ## Browser compatibility
 
-{{Compat("api.RTCPeerConnection.createDataChannel")}}
+{{Compat}}
 
 ## See also
 

@@ -15,7 +15,7 @@ translation_of: Web/HTML/Element/acronym
 
 ## Атрибуты
 
-Этот элемент поддерживает _только_ [глобальные атрибуты](/ru/docs/HTML/global_attributes "HTML/global attributes").
+Этот элемент поддерживает _только_ [глобальные атрибуты](/ru/docs/HTML/global_attributes).
 
 ## Интерфейс DOM
 
@@ -53,4 +53,4 @@ translation_of: Web/HTML/Element/acronym
 
 - {{HTMLElement("abbr")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

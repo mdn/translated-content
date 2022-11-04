@@ -1,17 +1,8 @@
 ---
 title: path
 slug: Web/SVG/Element/path
-tags:
-  - Caminho
-  - Elemento
-  - Forma
-  - Path
-  - Referencia
-  - SVG
-  - graficos
-translation_of: Web/SVG/Element/path
 ---
-{{SVGRef}}**[Primeiros passos](/pt-BR/docs/SVG/Tutorial/Paths "SVG/Tutorial/Paths")**
+{{SVGRef}}**[Primeiros passos](/pt-BR/docs/SVG/Tutorial/Paths)**
 Este tutorial irá te ajudar a utilizar caminhos no SVG.
 
 ## Resumo
@@ -41,10 +32,10 @@ Resultado:
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#ConditionalProccessing "SVG/Attribute#ConditionalProccessing") »
-- [Atributos centraiss](/pt-BR/docs/SVG/Attribute#Core "SVG/Attribute#Core") »
-- [Atributos de evento gráfico](/pt-BR/docs/SVG/Attribute#GraphicalEvent "SVG/Attribute#GraphicalEvent") »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#Presentation "SVG/Attribute#Presentation") »
+- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#ConditionalProccessing) »
+- [Atributos centraiss](/pt-BR/docs/SVG/Attribute#Core) »
+- [Atributos de evento gráfico](/pt-BR/docs/SVG/Attribute#GraphicalEvent) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -57,7 +48,7 @@ Resultado:
 
 ## Interface DOM
 
-Este elemento implementa a interace do [`SVGPathElement`](/en-US/docs/DOM/SVGPathElement "DOM/SVGPathElement").
+Este elemento implementa a interace do [`SVGPathElement`](/pt-BR/docs/DOM/SVGPathElement).
 
 ## Compatibilidade dos navegadores
 
@@ -71,4 +62,4 @@ Este elemento implementa a interace do [`SVGPathElement`](/en-US/docs/DOM/SVGPat
 - {{ SVGElement("polygon") }}
 - {{ SVGElement("polyline") }}
 - {{ SVGElement("rect") }}
-- [O tutorial sobre SVG "Primeiros passos" na MDN: Path](/pt-BR/docs/SVG/Tutorial/Paths "SVG/Tutorial/Paths")
+- [O tutorial sobre SVG "Primeiros passos" na MDN: Path](/pt-BR/docs/SVG/Tutorial/Paths)

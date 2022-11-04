@@ -1,7 +1,6 @@
 ---
 title: Network Information API
 slug: Web/API/Network_Information_API
-translation_of: Web/API/Network_Information_API
 original_slug: WebAPI/Network_Information
 ---
 {{ SeeCompatTable() }}
@@ -34,7 +33,7 @@ updateConnectionStatus();
 
 ## Compatibilidade com navegadores
 
-{{Page('/en-US/docs/Web/API/window.navigator.connection','Browser compatibility')}}
+{{Page('/pt-BR/docs/Web/API/window.navigator.connection','Browser compatibility')}}
 
 ## Veja também
 

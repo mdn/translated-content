@@ -1,18 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope
 slug: Web/API/ServiceWorkerGlobalScope
-tags:
-  - API
-  - Draft
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorkerGlobalScope
-  - TopicStub
-  - Workers
-translation_of: Web/API/ServiceWorkerGlobalScope
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
@@ -39,28 +27,28 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 
 ## Events
 
-- [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event)
+- [`activate`](/pt-BR/docs/Web/API/ServiceWorkerGlobalScope/activate_event)
   - : Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
     Also available via the {{domxref("ServiceWorkerGlobalScope.onactivate")}} property.
 - `fetch`
   - : Occurs when a {{domxref("GlobalFetch.fetch", "fetch()")}} is called.
     Also available via the {{domxref("ServiceWorkerGlobalScope.onfetch")}} property.
-- [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event)
+- [`install`](/pt-BR/docs/Web/API/ServiceWorkerGlobalScope/install_event)
   - : Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.
     Also available via the {{domxref("ServiceWorkerGlobalScope.oninstall")}} property.
-- [`message`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/message_event)
+- [`message`](/pt-BR/docs/Web/API/ServiceWorkerGlobalScope/message_event)
   - : Occurs when incoming messages are received. Controlled pages can use the {{domxref("MessagePort.postMessage()")}} method to send messages to service workers. The service worker can optionally send a response back via the {{domxref("MessagePort")}} exposed in [`event.data.port`](https://html.spec.whatwg.org/multipage/comms.html#messageport), corresponding to the controlled page.
     Also available via the {{domxref("ServiceWorkerGlobalScope.onmessage")}} property.
-- [`notificationclick`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event)
+- [`notificationclick`](/pt-BR/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event)
   - : Occurs when a user clicks on a displayed notification.
     Also available via the {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} property.
 - `notificationclose`
   - : Occurs — when a user closes a displayed notification.
     Also available via the {{domxref("ServiceWorkerGlobalScope.onnotificationclose")}} property.
-- [`push`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/push_event)
+- [`push`](/pt-BR/docs/Web/API/ServiceWorkerGlobalScope/push_event)
   - : Occurs when a server push notification is received.
     Also available via the {{domxref("ServiceWorkerGlobalScope.onpush")}} property.
-- [`pushsubscriptionchange`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event)
+- [`pushsubscriptionchange`](/pt-BR/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event)
   - : Occurs when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time).
     Also available via the {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}} property.
 - `sync`

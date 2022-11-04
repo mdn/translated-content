@@ -53,7 +53,7 @@ Firefox aún no admite los siguientes permisos:
 - `nativeMessaging`
 - `unlimitedStorage`
 
-Obviamente, también no admite permisos para las [APIs que no son compatibles](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API#Chrome_incompatibilities).
+Obviamente, también no admite permisos para las [APIs que no son compatibles](/en-US/Add-ons/WebExtensions/API#Chrome_incompatibilities).
 
 ## APIs JavaScript
 
@@ -96,7 +96,7 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](h
 #### cookies
 
 - eventos onChanged pueden ser subtely diferentes
-- Creación de cookies de sesión `set`podría fallar
+- Creación de cookies de sesión `set` podría fallar
 - `getAllCookieStores` siempre devuelve un almacén predeterminado y sin pestañas
 - el acceso a las cookies desde pestañas privadas es imposible
 
@@ -130,7 +130,7 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](h
   - `getAll()`.
 
 - El único evento soportado es `onClosed`.
-- Firefox no proporciona `byUser`datos.
+- Firefox no proporciona `byUser` datos.
 
 #### Tiempo de ejecución
 
@@ -147,7 +147,7 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](h
 #### Almacenamiento
 
 - El único área de almacenamiento que soporta Firefox es `local`.
-- Firefox no soporta `getBytesInUse()`o `clear))`.
+- Firefox no soporta `getBytesInUse()` o `clear))`.
 
 #### tabs
 

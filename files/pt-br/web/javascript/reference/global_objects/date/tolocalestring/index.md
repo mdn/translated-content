@@ -1,15 +1,6 @@
 ---
 title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
-tags:
-  - Internacionalização
-  - JavaScript
-  - Prototype
-  - Referencia
-  - data
-  - i18n
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 ---
 {{JSRef}}
 
@@ -27,7 +18,7 @@ dateObj.toLocaleString([locales[, options]])
 
 Check the [Browser compatibility](#Browser_Compatibility) section to see which browsers support the `locales` and `options` arguments, and the [Example: Checking for support for `locales` and `options` arguments](#Example:_Checking_for_support_for_locales_and_options_arguments) for feature detection.
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat', 'Parameters')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat', 'Parameters')}}
 
 The default value for each date-time component property is {{jsxref("undefined")}}, but if the `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second` properties are all {{jsxref("undefined")}}, then `year`, `month`, `day`, `hour`, `minute`, and `second` are assumed to be `"numeric"`.
 

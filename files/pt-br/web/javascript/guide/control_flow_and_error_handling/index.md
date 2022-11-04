@@ -1,13 +1,6 @@
 ---
 title: Controle de Fluxo e Manipulação de Erro
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Guia(2)
-  - Iniciante
-  - JavaScript
-  - declarações
-  - declarações de controle
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 original_slug: Web/JavaScript/Guide/Declarações
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}

@@ -1375,7 +1375,7 @@
 /fr/docs/Glossaire/Détournement_de_session	/fr/docs/Glossary/Session_Hijacking
 /fr/docs/Glossaire/ECMA	/fr/docs/Glossary/ECMA
 /fr/docs/Glossaire/ECMAScript	/fr/docs/Glossary/ECMAScript
-/fr/docs/Glossaire/Element_vide	/fr/docs/Glossary/Empty_element
+/fr/docs/Glossaire/Element_vide	/fr/docs/Glossary/Void_element
 /fr/docs/Glossaire/En-tête	/fr/docs/Glossary/Head
 /fr/docs/Glossaire/En-tête_de_requête	/fr/docs/Glossary/Request_header
 /fr/docs/Glossaire/En-tête_de_réponse_simple	/fr/docs/Glossary/Simple_response_header
@@ -1731,6 +1731,7 @@
 /fr/docs/Glossary/Block/Block_(CSS)	/fr/docs/Glossary/Block/CSS
 /fr/docs/Glossary/Bézier_curve	/fr/docs/Glossary/Bezier_curve
 /fr/docs/Glossary/Client_hints	/fr/docs/Web/HTTP/Client_hints
+/fr/docs/Glossary/Empty_element	/fr/docs/Glossary/Void_element
 /fr/docs/Glossary/Index	/fr/docs/Glossary
 /fr/docs/Glossary/Modern_web_apps	/fr/docs/Glossary/Progressive_web_apps
 /fr/docs/Glossary/Node/réseau	/fr/docs/Glossary/Node/networking
@@ -1824,7 +1825,7 @@
 /fr/docs/HTML/Attributs	/fr/docs/Web/HTML/Attributes
 /fr/docs/HTML/Canvas	/fr/docs/Web/API/Canvas_API
 /fr/docs/HTML/Catégorie_de_contenu	/fr/docs/Web/Guide/HTML/Content_categories
-/fr/docs/HTML/Contenu_editable	/fr/docs/Web/Guide/HTML/Editable_content
+/fr/docs/HTML/Contenu_editable	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/HTML/Controler_la_verification_de_orthographe_dans_les_formulaires_HTML	/fr/docs/Web/HTML/Global_attributes/spellcheck
 /fr/docs/HTML/Element	/fr/docs/Web/HTML/Element
 /fr/docs/HTML/Element-redirection-1	/fr/docs/Web/HTML/Element
@@ -1843,7 +1844,6 @@
 /fr/docs/HTML/Element/Optgroup	/fr/docs/Web/HTML/Element/Optgroup
 /fr/docs/HTML/Element/Option	/fr/docs/Web/HTML/Element/Option
 /fr/docs/HTML/Element/Output	/fr/docs/Web/HTML/Element/Output
-/fr/docs/HTML/Element/Output_{{HTMLVersionInline(5)}}_{{fx_minversion_inline(4)}}	/fr/docs/Web/HTML/Element/Output
 /fr/docs/HTML/Element/Progress	/fr/docs/Web/HTML/Element/Progress
 /fr/docs/HTML/Element/Select	/fr/docs/Web/HTML/Element/Select
 /fr/docs/HTML/Element/Source	/fr/docs/Web/HTML/Element/Source
@@ -4163,6 +4163,8 @@
 /fr/docs/Web/CSS/:host()	/fr/docs/Web/CSS/:host_function
 /fr/docs/Web/CSS/:matches	/fr/docs/Web/CSS/:is
 /fr/docs/Web/CSS/:visited_et_la_vie_privée	/fr/docs/Web/CSS/Privacy_and_the_:visited_selector
+/fr/docs/Web/CSS/@font-face/font-variant	/fr/docs/Web/CSS/@font-face
+/fr/docs/Web/CSS/@scroll-timeline	/fr/docs/Web/CSS/scroll-timeline
 /fr/docs/Web/CSS/@styleset	/fr/docs/Web/CSS/@font-feature-values
 /fr/docs/Web/CSS/@viewport/height	/fr/docs/Web/CSS/@viewport
 /fr/docs/Web/CSS/@viewport/max-height	/fr/docs/Web/CSS/@viewport
@@ -4609,6 +4611,7 @@
 /fr/docs/Web/Guide/HTML	/fr/docs/Learn/HTML
 /fr/docs/Web/Guide/HTML/Astuces_de_création_de_pages_HTML_à_affichage_rapide	/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /fr/docs/Web/Guide/HTML/Catégories_de_contenu	/fr/docs/Web/Guide/HTML/Content_categories
+/fr/docs/Web/Guide/HTML/Editable_content	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/Web/Guide/HTML/Formulaires	/fr/docs/Learn/Forms
 /fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms	/fr/docs/Learn/Forms/Advanced_form_styling
 /fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML	/fr/docs/Learn/Forms/Styling_web_forms
@@ -4691,12 +4694,11 @@
 /fr/docs/Web/HTML/Attributs_universels/x-ms-format-detection	/fr/docs/Web/HTML/Global_attributes/x-ms-format-detection
 /fr/docs/Web/HTML/Canvas	/fr/docs/Web/API/Canvas_API
 /fr/docs/Web/HTML/Catégorie_de_contenu	/fr/docs/Web/Guide/HTML/Content_categories
-/fr/docs/Web/HTML/Contenu_editable	/fr/docs/Web/Guide/HTML/Editable_content
+/fr/docs/Web/HTML/Contenu_editable	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/Web/HTML/Controler_la_verification_de_orthographe_dans_les_formulaires_HTML	/fr/docs/Web/HTML/Global_attributes/spellcheck
 /fr/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /fr/docs/Web/HTML/Element/Input/datetime	/fr/docs/Web/HTML/Element/input/datetime-local
 /fr/docs/Web/HTML/Element/Input/mois	/fr/docs/Web/HTML/Element/Input/month
-/fr/docs/Web/HTML/Element/Output_{{HTMLVersionInline(5)}}_{{fx_minversion_inline(4)}}	/fr/docs/Web/HTML/Element/Output
 /fr/docs/Web/HTML/Element/Video/canplay_event	/fr/docs/Web/API/HTMLMediaElement/canplay_event
 /fr/docs/Web/HTML/Element/Video/emptied_event	/fr/docs/Web/API/HTMLMediaElement/emptied_event
 /fr/docs/Web/HTML/Element/Video/ended_event	/fr/docs/Web/API/HTMLMediaElement/ended_event
@@ -4904,7 +4906,7 @@
 /fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode	/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées	/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /fr/docs/Web/JavaScript/Reference/Fonctions/Strict_mode	/fr/docs/Web/JavaScript/Reference/Strict_mode
-/fr/docs/Web/JavaScript/Reference/Fonctions/Strict_mode/Passer_au_mode_strict	/fr/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/fr/docs/Web/JavaScript/Reference/Fonctions/Strict_mode/Passer_au_mode_strict	/fr/docs/Web/JavaScript/Reference/Strict_mode
 /fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments	/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /fr/docs/Web/JavaScript/Reference/Fonctions/arguments	/fr/docs/Web/JavaScript/Reference/Functions/arguments
 /fr/docs/Web/JavaScript/Reference/Fonctions/arguments/@@iterator	/fr/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator
@@ -4916,7 +4918,7 @@
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions	/fr/docs/Web/JavaScript/Reference/Functions
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/Définition_de_méthode	/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/Strict_mode	/fr/docs/Web/JavaScript/Reference/Strict_mode
-/fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/Strict_mode/Passer_au_mode_strict	/fr/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/Strict_mode/Passer_au_mode_strict	/fr/docs/Web/JavaScript/Reference/Strict_mode
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/arguments	/fr/docs/Web/JavaScript/Reference/Functions/arguments
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/arguments/callee	/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/arguments/length	/fr/docs/Web/JavaScript/Reference/Functions/arguments/length
@@ -5767,7 +5769,8 @@
 /fr/docs/Web/JavaScript/Reference/Opérateurs/yield*	/fr/docs/Web/JavaScript/Reference/Operators/yield*
 /fr/docs/Web/JavaScript/Reference/Reserved_Words	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /fr/docs/Web/JavaScript/Reference/Statements/import.meta	/fr/docs/Web/JavaScript/Reference/Operators/import.meta
-/fr/docs/Web/JavaScript/Reference/Strict_mode/Passer_au_mode_strict	/fr/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/fr/docs/Web/JavaScript/Reference/Strict_mode/Passer_au_mode_strict	/fr/docs/Web/JavaScript/Reference/Strict_mode
+/fr/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/fr/docs/Web/JavaScript/Reference/Strict_mode
 /fr/docs/Web/JavaScript/Reference/Valeurs_par_défaut_des_arguments	/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /fr/docs/Web/JavaScript/Reference/Virgules_finales	/fr/docs/Web/JavaScript/Reference/Trailing_commas
 /fr/docs/Web/JavaScript/Reference/fonctions_fléchées	/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions
@@ -6320,6 +6323,7 @@
 /fr/docs/conflicting/Web/CSS/::placeholder	/fr/docs/Web/CSS/::placeholder
 /fr/docs/conflicting/Web/CSS/:is	/fr/docs/Web/CSS/:is
 /fr/docs/conflicting/Web/CSS/:placeholder-shown	/fr/docs/Web/CSS/:placeholder-shown
+/fr/docs/conflicting/Web/CSS/@font-face	/fr/docs/Web/CSS/@font-face
 /fr/docs/conflicting/Web/CSS/@viewport	/fr/docs/Web/CSS/@viewport
 /fr/docs/conflicting/Web/CSS/@viewport_3ecbd2877baedebcfaffc13eaa7d61ce	/fr/docs/Web/CSS/@viewport
 /fr/docs/conflicting/Web/CSS/@viewport_516ab4b0283b5b2231fb657505e22440	/fr/docs/Web/CSS/@viewport
@@ -6366,6 +6370,7 @@
 /fr/docs/conflicting/Web/HTML/Element	/fr/docs/Web/HTML/Element
 /fr/docs/conflicting/Web/HTML/Element/input/datetime-local	/fr/docs/Web/HTML/Element/input/datetime-local
 /fr/docs/conflicting/Web/HTML/Global_attributes	/fr/docs/Web/HTML/Global_attributes
+/fr/docs/conflicting/Web/HTML/Global_attributes/contenteditable	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/conflicting/Web/HTTP	/fr/docs/Web/HTTP
 /fr/docs/conflicting/Web/HTTP/Basics_of_HTTP/MIME_types	/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types
 /fr/docs/conflicting/Web/HTTP/Headers/Content-Security-Policy	/fr/docs/Web/HTTP/Headers/Content-Security-Policy
@@ -6429,6 +6434,7 @@
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module	/fr/docs/WebAssembly/JavaScript_interface/Module
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table	/fr/docs/WebAssembly/JavaScript_interface/Table
 /fr/docs/conflicting/Web/JavaScript/Reference/Statements/switch	/fr/docs/Web/JavaScript/Reference/Statements/switch
+/fr/docs/conflicting/Web/JavaScript/Reference/Strict_mode	/fr/docs/Web/JavaScript/Reference/Strict_mode
 /fr/docs/conflicting/Web/MathML	/fr/docs/Web/MathML
 /fr/docs/conflicting/Web/Progressive_web_apps	/fr/docs/Web/Progressive_web_apps
 /fr/docs/conflicting/Web/Progressive_web_apps_0d5c38b9aa908cbb52e4c39037b4f28b	/fr/docs/Web/Progressive_web_apps

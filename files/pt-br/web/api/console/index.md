@@ -1,7 +1,6 @@
 ---
 title: Console
 slug: Web/API/Console
-translation_of: Web/API/Console
 ---
 {{APIRef("Console API")}}{{Non-standard_header}}
 
@@ -26,7 +25,7 @@ Esta página documenta os [Métodos](#métodos) disponíveis no objeto `console`
 - {{domxref("console.group()", "console.group(object[, object...])")}}
   - : Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior. Para voltar um nível, utilize `groupEnd()`. Consulte [Uso de grupos no console](#uso_de_grupos_no_console).
 - {{domxref("console.groupCollapsed()", "console.groupCollapsed(object[, object...])")}}
-  - : Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior; ao contrário de `group()`, o grupo em linha começa recolhido. Para revelar seu conteúdo, basta clicar no botão de revelação para expandí-lo. Para recuar um nível, utilize `groupEnd().` Consulte [Uso de grupos no console](#uso_de_grupos_no_console).
+  - : Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior; ao contrário de `group()`, o grupo em linha começa recolhido. Para revelar seu conteúdo, basta clicar no botão de revelação para expandí-lo. Para recuar um nível, utilize `groupEnd()`. Consulte [Uso de grupos no console](#uso_de_grupos_no_console).
 - {{domxref("console.groupEnd()")}}
   - : Sai do grupo em linha atual. Veja [Uso de grupos no console](#uso_de_grupos_no_console).
 - {{domxref("console.info()", "console.info(object[, object...])")}}
@@ -207,7 +206,7 @@ The output in the console looks something like this:
 - [Tools](/pt-BR/docs/Tools)
 - [Web Console](/pt-BR/docs/Tools/Web_Console) - how the Web Console in Firefox handles console API calls
 - [Remote debugging](/pt-BR/docs/Tools/Remote_Debugging) - how to see console output when the debugging target is a mobile device
-- [Debugging apps on Firefox OS](/en-US/Firefox_OS/Using_the_App_Manager) - using the App Manager to debug apps running on Firefox OS
+- [Debugging apps on Firefox OS](/pt-BR/Firefox_OS/Using_the_App_Manager) - using the App Manager to debug apps running on Firefox OS
 - [On-device console logging](/pt-BR/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging) - how to do logging on Firefox OS devices
 
 ### Other implementations

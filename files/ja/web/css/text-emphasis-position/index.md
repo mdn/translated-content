@@ -100,7 +100,7 @@ text-emphasis-position: unset;
   </tbody>
 </table>
 
-> **Note:** {{cssxref("text-emphasis")}} 一括指定プロパティを使用して、 `text-emphasis-position` を設定することはできず、また初期化されることもありません。
+> **メモ:** {{cssxref("text-emphasis")}} 一括指定プロパティを使用して、 `text-emphasis-position` を設定することはできず、また初期化されることもありません。
 
 ## 公式定義
 
