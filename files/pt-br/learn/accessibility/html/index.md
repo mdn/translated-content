@@ -1,19 +1,6 @@
 ---
 title: 'HTML: Boas práticas em acessibilidade'
 slug: Learn/Accessibility/HTML
-tags:
-  - Acessibilidade
-  - Artigo
-  - Código
-  - Iniciante
-  - aprendizado
-  - botões
-  - formulários
-  - leitor de telas
-  - semántica
-  - teclado
-  - tecnologia assistiva
-translation_of: Learn/Accessibility/HTML
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 

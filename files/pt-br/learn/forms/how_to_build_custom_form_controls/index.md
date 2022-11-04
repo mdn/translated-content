@@ -1,7 +1,6 @@
 ---
 title: How to build custom form widgets
 slug: Learn/Forms/How_to_build_custom_form_controls
-translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: Web/Guide/HTML/Forms/How_to_build_custom_form_widgets
 ---
 {{LearnSidebar}}

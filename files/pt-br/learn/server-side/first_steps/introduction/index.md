@@ -1,15 +1,6 @@
 ---
 title: Introdução ao lado servidor
 slug: Learn/Server-side/First_steps/Introduction
-tags:
-  - Desenvolvimento Web
-  - Iniciante
-  - Introdução
-  - Programação
-  - Programação do lado do servidor
-  - Servidor
-  - programação do lado do cliente
-translation_of: Learn/Server-side/First_steps/Introduction
 original_slug: Learn/Server-side/First_steps/Introdução
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}

@@ -1,16 +1,6 @@
 ---
 title: Elementos construtivos do Javascript
 slug: Learn/JavaScript/Building_blocks
-tags:
-  - Artigo
-  - Condicionais
-  - Exercício
-  - Funções
-  - Iniciante
-  - JavaScript
-  - Loops
-  - eventos
-translation_of: Learn/JavaScript/Building_blocks
 original_slug: Aprender/JavaScript/Elementos_construtivos
 ---
 {{LearnSidebar}}

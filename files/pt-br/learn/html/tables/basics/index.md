@@ -1,7 +1,6 @@
 ---
 title: HTML table basics
 slug: Learn/HTML/Tables/Basics
-translation_of: Learn/HTML/Tables/Basics
 original_slug: Aprender/HTML/Tables/Basics
 ---
 {{LearnSidebar}}{{NextMenu("Aprender/HTML/Tabelas/Avançado", "Aprender/HTML/Tabelas")}}

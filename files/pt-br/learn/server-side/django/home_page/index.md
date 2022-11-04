@@ -1,17 +1,6 @@
 ---
 title: 'Django Tutorial Parte 5: Criando nossa home page'
 slug: Learn/Server-side/Django/Home_page
-tags:
-  - Aprender
-  - Artigo
-  - Codificação
-  - Iniciante
-  - Tutorial
-  - django
-  - django templates
-  - django views
-  - lado servidor (server-side)
-translation_of: Learn/Server-side/Django/Home_page
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 

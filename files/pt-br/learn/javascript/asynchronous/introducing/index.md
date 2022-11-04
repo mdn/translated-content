@@ -1,7 +1,6 @@
 ---
 title: Introdução ao JavaScript Async
 slug: Learn/JavaScript/Asynchronous/Introducing
-translation_of: Learn/JavaScript/Asynchronous/Introducing
 original_slug: Learn/JavaScript/Asynchronous/Introdução
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}Neste artigo nós recapitulamos brevemente os problemas que são associados com o JavaScript síncrono, e dar uma primeira olhada em algumas das diferentes técnicas assíncronas que você vai encontrar, mostrando como elas podem nos ajudar a resolver tais problemas.
