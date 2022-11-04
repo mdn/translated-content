@@ -29,8 +29,6 @@ Although this interface has a constructor, it is not possible to create a useful
   - : 在『被選擇的物件』結束拖曳時觸發 (就是放開滑鼠鍵、或按下 Esc 鍵時)。
 - [`dragenter`](/zh-TW/docs/Web/API/HTMLElement/dragenter_event)
   - : 當『被選擇的物件』被拖曳到『可以當目標的物件』時, 在『進入』該目標物件上方的瞬間觸發。注意, 不是『被選擇的物件』觸發此事件, 而是『可以當目標的物件』。
-- {{event('dragexit')}}
-  - : This event is fired when an element is no longer the drag operation's immediate selection target.
 - [`dragleave`](/zh-TW/docs/Web/API/HTMLElement/dragleave_event)
   - : 當『被選擇的物件』被拖曳到『可以當目標的物件』時, 在『離開』該目標物件上方的瞬間觸發。注意, 不是『被選擇的物件』觸發此事件, 而是『可以當目標的物件』。
 - [`dragover`](/zh-TW/docs/Web/API/HTMLElement/dragover_event)
@@ -48,8 +46,6 @@ Although this interface has a constructor, it is not possible to create a useful
   - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`dragend`](/zh-TW/docs/Web/API/HTMLElement/dragend_event) event.
 - {{domxref('GlobalEventHandlers.ondragenter')}}
   - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`dragenter`](/zh-TW/docs/Web/API/HTMLElement/dragenter_event) event.
-- {{domxref('GlobalEventHandlers.ondragexit')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragexit')}} event.
 - {{domxref('GlobalEventHandlers.ondragleave')}}
   - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`dragleave`](/zh-TW/docs/Web/API/HTMLElement/dragleave_event) event.
 - {{domxref('GlobalEventHandlers.ondragover')}}
