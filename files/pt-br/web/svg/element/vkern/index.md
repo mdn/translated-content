@@ -1,12 +1,6 @@
 ---
 title: vkern
 slug: Web/SVG/Element/vkern
-tags:
-  - Elemento
-  - Fonte SVG
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/vkern
 ---
 {{SVGRef}}
 

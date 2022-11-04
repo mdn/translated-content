@@ -1,14 +1,6 @@
 ---
 title: XMLHttpRequest.onreadystatechange
 slug: Web/API/XMLHttpRequest/readystatechange_event
-tags:
-  - AJAX
-  - API
-  - Evento
-  - Manipulador de eventos
-  - XHR
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/onreadystatechange
 original_slug: Web/API/XMLHttpRequest/onreadystatechange
 ---
 {{APIRef}}

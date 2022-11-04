@@ -1,11 +1,6 @@
 ---
 title: 510 Not Extended
 slug: Web/HTTP/Status/510
-tags:
-  - Código de status
-  - Erro do servidor
-  - HTTP
-translation_of: Web/HTTP/Status/510
 ---
 {{HTTPSidebar}}
 

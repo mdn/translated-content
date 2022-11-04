@@ -1,11 +1,6 @@
 ---
 title: Envie sugestões sobre o MDN
 slug: MDN/Community
-tags:
-  - Documentação
-  - Guía
-  - MDN Meta
-translation_of: MDN/Contribute/Feedback
 original_slug: MDN/Contribute/Feedback
 ---
 {{MDNSidebar}}

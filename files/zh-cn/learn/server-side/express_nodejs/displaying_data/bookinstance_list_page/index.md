@@ -57,7 +57,7 @@ block content
     li There are no book copies in this library.
 ```
 
-这个視图与其他視图非常相似。它扩展了布局，替换内容區块，显示从控制器传入的标题`title`，并遍历`bookinstance_list` 中的所有书籍副本。对于每个副本，我们都会显示它的状态（用颜色编码），如果书本不可用，则显示其预期返回日期。這裡引入了一个新功能 — 我们可以在标签之后使用点符号表示法，來指定一個类別。因此，`span.text-success` 将被编译为 `<span class="text-success">` (也可以用 Pug 编写为 `span(class="text-success")`.
+这个視图与其他視图非常相似。它扩展了布局，替换内容區块，显示从控制器传入的标题 `title`，并遍历 `bookinstance_list` 中的所有书籍副本。对于每个副本，我们都会显示它的状态（用颜色编码），如果书本不可用，则显示其预期返回日期。這裡引入了一个新功能 — 我们可以在标签之后使用点符号表示法，來指定一個类別。因此，`span.text-success` 将被编译为 `<span class="text-success">`（也可以用 Pug 编写为 `span(class="text-success")`）.
 
 ## 它看起來像是？
 

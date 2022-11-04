@@ -1,14 +1,9 @@
 ---
 title: SVG
 slug: Web/SVG
-tags:
-  - Gráficos 2D
-  - Gráficos(2)
-  - SVG
-  - Todas_las_Categorías
-  - Web
 translation_of: Web/SVG
 ---
+
 **[Comenzando con SVG](/es/docs/SVG/Tutorial)**
 Este tutorial te ayudará a comenzar a usar SVG.
 
@@ -29,7 +24,10 @@ SVG es un estándar Web abierto basado en texto. Está expresamente diseñado pa
 
 ## Comunidad
 
-- Ver foros de Mozilla... {{DiscussionList("dev-tech-svg", "mozilla.dev.tech.svg")}}
+- Ver foros de Mozilla...
+  - [como lista de correo](https://lists.mozilla.org/listinfo/dev-tech-svg)
+  - [como grupo de noticias](https://groups.google.com/group/mozilla.dev.tech.svg)
+  - [como RSS](https://groups.google.com/group/mozilla.dev.tech.svg/feeds)
 
 ## Herramientas
 
@@ -69,10 +67,4 @@ Aunque un poco de SVG puede dar mucho recorrido a la hora de mejorar contenidos 
 - [Mapa de población de los Estados Unidos de América](http://www.carto.net/papers/svg/us_population/index.html)
 - [Caja 3D box](http://www.treebuilder.de/default.asp?file=441875.xml) y [Cajas 3D](http://www.treebuilder.de/default.asp?file=206524.xml)
 - [jVectorMap](http://jvectormap.com/) (mapas interactivos para visualización de datos)
-- [JointJS](http://jointjs.com) (JavaScript libreria de creación de diagramas con JavaScript)
-
-Categorías
-
-Interwiki Language Links
-
-{{ languages( { "en": "en/SVG", "fr": "fr/SVG", "it": "it/SVG", "ja": "ja/SVG", "pl": "pl/SVG", "pt": "pt/SVG" } ) }}
+- [JointJS](https://jointjs.com) (Librería JavaScript para la creación de diagramas)

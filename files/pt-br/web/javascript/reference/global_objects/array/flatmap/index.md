@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 ---
 {{JSRef}} {{SeeCompatTable}}
 

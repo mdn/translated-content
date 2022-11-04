@@ -75,7 +75,7 @@ const height = canvas.height = window.innerHeight;
 
 Ce script prend une référence à l'élément `<canvas>` et ensuite invoque la méthode [`getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext) sur lui, nous donnant ainsi un contexte sur lequel nous pouvons commencer à dessiner. La variable résultante  (`ctx`)  est l'objet qui représente directement la surface du Canvas où nous pouvons dessiner et qui nous permet de dessiner des formes 2D sur ce dernier.
 
-Après, nous configurons les variables `width` (largeur) et `height`(hauteur),  et la largeur et la hauteur de l'élément canvas (représentés par les propriétés `canvas.width` et `canvas.height` ) afin qu'elles soient identiques à la fenêtre du navigateur (la surface sur laquelle apparaît la page web— Ceci peut être tiré des propriétés {{domxref("Window.innerWidth")}} et {{domxref("Window.innerHeight")}}).
+Après, nous configurons les variables `width` (largeur) et `height` (hauteur),  et la largeur et la hauteur de l'élément canvas (représentés par les propriétés `canvas.width` et `canvas.height` ) afin qu'elles soient identiques à la fenêtre du navigateur (la surface sur laquelle apparaît la page web— Ceci peut être tiré des propriétés {{domxref("Window.innerWidth")}} et {{domxref("Window.innerHeight")}}).
 
 Vous verrez qu'ici nous enchaînons les assignations de valeurs des différentes variables ensemble à des fins de rapidité. Ceci est parfaitement autorisé.
 

@@ -1,12 +1,6 @@
 ---
 title: <b>
 slug: Web/HTML/Element/b
-tags:
-  - Elemento
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/b
 ---
 ## Resumo
 
@@ -62,4 +56,4 @@ Palavras-chave são exibidas com o estilo padrão do elemento \<b>, provavelment
 - Outros elementos de transporte [text-level semantics](/pt-BR/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("abbr")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
 - [Using \<b> and \<i> elements (W3C)](http://www.w3.org/International/questions/qa-b-and-i-tags)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

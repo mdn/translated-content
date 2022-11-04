@@ -1,13 +1,6 @@
 ---
 title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
-tags:
-  - AJAX
-  - Property
-  - Reference
-  - XML
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/readyState
 ---
 {{APIRef('XMLHttpRequest')}}
 

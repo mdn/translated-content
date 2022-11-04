@@ -1,16 +1,6 @@
 ---
 title: 400 Bad Request
 slug: Web/HTTP/Status/400
-tags:
-  - Client error
-  - Código HTTP
-  - Erro chamada de cliente
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Referencia
-  - Status code
-translation_of: Web/HTTP/Status/400
 ---
 {{HTTPSidebar}}
 

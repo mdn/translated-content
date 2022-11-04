@@ -1,13 +1,6 @@
 ---
 title: AJAX
 slug: Glossary/AJAX
-tags:
-  - AJAX
-  - Glossário
-  - Infraestrutura
-  - Intro
-  - Introdução
-translation_of: Glossary/AJAX
 original_slug: Glossario/AJAX
 ---
 AJAX (Asynchronous {{glossary("JavaScript")}} e {{glossary("XML")}}) é uma prática de programação da combinação de {{glossary("HTML")}}, {{glossary("CSS")}}, JavaScript, o {{glossary("DOM")}}, e o `XMLHttpRequest` {{glossary("object")}} para a construção de páginas web mais complexas.

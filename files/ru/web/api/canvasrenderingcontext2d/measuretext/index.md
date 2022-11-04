@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/measureText
 ---
 {{APIRef}}
 
-Метод **`CanvasRenderingContext2D`\*\***`.measureText(),`\*\* предоставляемый Canvas 2D API, возвращает объект {{domxref("TextMetrics")}}, содержащий информацию об измеренном тексте (например, ширину).
+Метод **`CanvasRenderingContext2D.measureText()`**, предоставляемый Canvas 2D API, возвращает объект {{domxref("TextMetrics")}}, содержащий информацию об измеренном тексте (например, ширину).
 
 ## Синтаксис
 

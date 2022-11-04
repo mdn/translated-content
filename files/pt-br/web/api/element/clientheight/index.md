@@ -1,7 +1,6 @@
 ---
 title: Document.height
 slug: Web/API/Element/clientHeight
-translation_of: Web/API/Document/height
 original_slug: Web/API/Document/height
 ---
 {{APIRef("DOM")}} {{Obsolete_header}}

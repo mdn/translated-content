@@ -1,7 +1,6 @@
 ---
 title: '<content>: The Shadow DOM Content Placeholder element (obsolete)'
 slug: Web/HTML/Element/content
-translation_of: Web/HTML/Element/content
 original_slug: Web/HTML/Element/conteúdo
 ---
 {{Deprecated_header}}
@@ -104,4 +103,4 @@ This element is no longer defined by any specifications.
 - [Web Components](/pt-BR/docs/Web/Web_Components)
 - {{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

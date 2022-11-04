@@ -3,7 +3,7 @@ title: <slot>
 slug: Web/HTML/Element/slot
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 > **备注：** 本翻译的一些术语参考了[Vuejs-中文](https://cn.vuejs.org/v2/guide/components-slots.html)页面。
 

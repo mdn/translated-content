@@ -1,21 +1,6 @@
 ---
 title: Ferramentas e teste
 slug: Learn/Tools_and_testing
-tags:
-  - Acessibilidade
-  - Aprendizagem
-  - Automação
-  - CSS
-  - Código
-  - Ferramentas
-  - HTML
-  - Iniciante
-  - JavaScript
-  - Navegadores
-  - Testes
-  - Testes do usuário
-  - Tópico
-translation_of: Learn/Tools_and_testing
 original_slug: Aprender/Ferramentas_e_teste
 ---
 {{LearnSidebar}}

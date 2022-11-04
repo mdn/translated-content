@@ -8,7 +8,9 @@ tags:
 translation_of: Web/CSS/box-flex
 original_slug: Web/CSS/-moz-box-flex
 ---
-{{CSSRef}}{{warning("Esta propiedad es para controlar parte del modelo de caja XUL. No coincide ni con el antiguo borrador del módulo CSS para el diseño de caja flexibles  '<code>box-flex</code>' (que se basa en esta propiedad) ni con el comportamiento de '<code>-webkit-box-flex</code>' (que se basa en esos borradores).")}}
+{{CSSRef}}
+
+> **Advertencia:** Esta propiedad es para controlar parte del modelo de caja XUL. No coincide ni con el antiguo borrador del módulo CSS para el diseño de caja flexibles  '`box-flex`' (que se basa en esta propiedad) ni con el comportamiento de '`-webkit-box-flex`' (que se basa en esos borradores).
 
 Ver [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) para más información acerca de qué usar en vez de esta propiedad.
 
@@ -91,13 +93,13 @@ Los elementos que tienen el mismo valor para flex crecen en la misma cantidad en
 
 Si el valor flex se ha establecido usando el atributo flex del elemento, entonces el estilo es ignorado.
 
-Para hacer que los elementos XUL dentro de una caja contenedora tengan el mismo tamaño, fijaremos el atributo `equalsize`de la caja contenedora a `always`. Este atributo no tiene correspondencia con ninguna propiedad CSS.
+Para hacer que los elementos XUL dentro de una caja contenedora tengan el mismo tamaño, fijaremos el atributo `equalsize` de la caja contenedora a `always`. Este atributo no tiene correspondencia con ninguna propiedad CSS.
 
 Un truco para hacer que todos los elementos dentro una caja contenedora tengan el mismo tamaño es darles un tamaño fijo,(por ejemplo `height: 0`), y el mismo valor box-flex mayor que cero a todos (por ejemplo `-moz-box-flex: 1`).
 
 ## Especificaciones
 
-Esta propiedad es una extensión no estándar. Había una [old draft of the CSS3 Flexbox specification](http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) que definía una propiedad`box-flex` , pero ese borrador nunca ha sido sustituido.
+Esta propiedad es una extensión no estándar. Había una [old draft of the CSS3 Flexbox specification](http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) que definía una propiedad `box-flex`, pero ese borrador nunca ha sido sustituido.
 
 ## Compatibilidad con los distintos navegadores
 

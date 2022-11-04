@@ -1,7 +1,6 @@
 ---
 title: Degradação graciosa
 slug: Glossary/Graceful_degradation
-translation_of: Glossary/Graceful_degradation
 original_slug: Glossario/degradação_graciosa
 ---
 **Degradação graciosa** é uma filosofia de design centrada na tentativa de criar um site/aplicativo moderno que funcione nos navegadores mais recentes, mas recorre a uma experiência que, embora não tão boa, ainda oferece conteúdo e funcionalidade essenciais para os navegadores antigos.

@@ -16,7 +16,7 @@ The **`InputEvent`** interface represents an event notifying of editable content
 
 ## Свойства
 
-\_This interface \_inherits properties from its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}.\_\_
+This interface inherits properties from its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 - {{domxref("InputEvent.data")}}{{readOnlyInline}}
   - : Returns a {{domxref("DOMString")}} with the inserted characters. This may be an empty string if the change doesn't insert text (such as when deleting characters, for example).
@@ -29,7 +29,7 @@ The **`InputEvent`** interface represents an event notifying of editable content
 
 ## Methods
 
-\_This interface \_inherits methods from its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}.\_\_
+This interface inherits methods from its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 - {{domxref('InputEvent.getTargetRanges()')}}
   - : Returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.

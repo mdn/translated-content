@@ -62,4 +62,3 @@ Al contrario que el atributo `dir` en HTML, la propiedad `direction` no es hered
 Categorías
 
 Interwiki Languages
-

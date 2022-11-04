@@ -14,7 +14,7 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/div
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **Элемент разделения контента HTML** (**`<div>`**) является универсальным контейнером для [потокового контента](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент). Он не влияет на контент или макет до тех пор, пока не будет стилизован с помощью {{glossary("CSS")}}.
 

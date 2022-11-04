@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/input/number
 browser-compat: html.elements.input.type_number
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 Los elementos {{HTMLElement("input")}} del tipo **`number`** son usados para permitir al usuario ingresar un número. Éstos incluyen validación incorporada para rechazar entradas no numéricas.
 
@@ -171,7 +171,7 @@ En esta versión actualizada, verás que los botones para subir y bajar escalón
 
 ### Permitir valores decimales
 
-Un problema con las entradas numéricas es que su tamaño de escalón por omisión es 1. Si tratas de ingresar un número con un decimal (tal como "1.0"), este será considerado como inválido. Si quieres ingresar un valor que requiere decimales, necesitarás reflejar esto en el valor `step`(como por ejemplo, `step="0.01"` permitirá hasta dos dígitos en la parte decimal). Aquí tienes un ejemplo simple:
+Un problema con las entradas numéricas es que su tamaño de escalón por omisión es 1. Si tratas de ingresar un número con un decimal (tal como "1.0"), este será considerado como inválido. Si quieres ingresar un valor que requiere decimales, necesitarás reflejar esto en el valor `step` (como por ejemplo, `step="0.01"` permitirá hasta dos dígitos en la parte decimal). Aquí tienes un ejemplo simple:
 
 ```html
 <input type="number" placeholder="1.0" step="0.01" min="0" max="10" />
@@ -179,7 +179,7 @@ Un problema con las entradas numéricas es que su tamaño de escalón por omisi�
 
 {{EmbedLiveSample("Allowing_decimal_values", 600, 40)}}
 
-Fíjate que este ejemplo permite cualquier valor entre `0.0`y `10.0`, con decimales de dos cifras. Por ejemplo, "9.52" es válido, pero "9.521" no.
+Fíjate que este ejemplo permite cualquier valor entre `0.0` y `10.0`, con decimales de dos cifras. Por ejemplo, "9.52" es válido, pero "9.521" no.
 
 ### Controlando el tamaño de la entrada
 

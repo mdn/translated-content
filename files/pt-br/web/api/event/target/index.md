@@ -1,10 +1,6 @@
 ---
 title: Event.target
 slug: Web/API/Event/target
-tags:
-  - PortuguêsBrasil
-  - pt-br
-translation_of: Web/API/Event/target
 ---
 {{ApiRef("DOM")}}
 

@@ -1,17 +1,6 @@
 ---
 title: Accept-Charset
 slug: Web/HTTP/Headers/Accept-Charset
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - Content Negotiation
-  - HTTP
-  - HTTP Header
-  - Negociação de conteúdo
-  - Reference
-  - Referencia
-  - Request header
-translation_of: Web/HTTP/Headers/Accept-Charset
 ---
 {{HTTPSidebar}}
 

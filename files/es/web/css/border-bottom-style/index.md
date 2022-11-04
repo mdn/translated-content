@@ -39,7 +39,7 @@ border-bottom-style: <border-style> | inherit
 - solid
   - : línea única, recta y sólida.
 - double
-  - : dos líneas rectas que se suman a la cantidad de píxeles definidos como ancho de borde`border-width`.
+  - : dos líneas rectas que se suman a la cantidad de píxeles definidos como ancho de borde `border-width`.
 - groove
   - : efecto de hundido.
 - ridge
@@ -86,5 +86,3 @@ A menos que un valor {{ Cssxref("border-style") }} sea definido, el borde no apa
 Categorías
 
 Interwiki Languages
-
-{{ languages( { "de": "de/CSS/border-bottom-style", "en": "en/CSS/border-bottom-style", "fr": "fr/CSS/border-bottom-style", "ja": "ja/CSS/border-bottom-style", "pl": "pl/CSS/border-bottom-style" } ) }}

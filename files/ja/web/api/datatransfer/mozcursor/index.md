@@ -7,7 +7,7 @@ slug: Web/API/DataTransfer/mozCursor
 
 {{ Non-standard_header() }}
 
-**`DataTransfer.mozCursor`**プロパティは、ドラッグカーソルの状態を返したり、設定したりします。これは主に、タブのドラッグ中にカーソルを制御するために使用されます。
+**`DataTransfer.mozCursor`** プロパティは、ドラッグカーソルの状態を返したり、設定したりします。これは主に、タブのドラッグ中にカーソルを制御するために使用されます。
 
 取り得る値は以下の通りです。
 

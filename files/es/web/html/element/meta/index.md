@@ -25,7 +25,7 @@ original_slug: Web/HTML/Elemento/meta
 
 ~~Por defecto~~: Debe indicarlo el autor.
 
-name = name {{ mediawiki.external('CS') }} Este atributo identifica un nombre de propiedad. Esta especificación no enumera los valores legales para este atributo. content = cdata {{ mediawiki.external('CS') }} Este atributo especifica el valor de una propiedad. Esta especificación no enumera los valores legales para este atributo. scheme = cdata {{ mediawiki.external('CS') }} Este atributo especifica un esquema que se usará para interpretar el valor de la propiedad (véase la sección sobre perfiles para más detalles). http-equiv = name {{ mediawiki.external('CI') }} Este atributo puede utilizarse en lugar del atributo name. Los servidores HTTP utilizan este atributo para obtener información sobre los encabezados del mensaje de respuesta HTTP.
+name = name [CS] Este atributo identifica un nombre de propiedad. Esta especificación no enumera los valores legales para este atributo. content = cdata [CS] Este atributo especifica el valor de una propiedad. Esta especificación no enumera los valores legales para este atributo. scheme = cdata [CS] Este atributo especifica un esquema que se usará para interpretar el valor de la propiedad (véase la sección sobre perfiles para más detalles). http-equiv = name [CI] Este atributo puede utilizarse en lugar del atributo name. Los servidores HTTP utilizan este atributo para obtener información sobre los encabezados del mensaje de respuesta HTTP.
 
 <table class="fullwidth-table standard-table">
   <tbody>

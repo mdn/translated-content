@@ -11,7 +11,7 @@ translation_of: Web/CSS/border-bottom-color
 
 ### Resumen
 
-La propiedad `border-bottom-color` define el color del borde inferior de un elemento, con la ayuda de un valor de color o con la palabra clave `transparent`e.
+La propiedad `border-bottom-color` define el color del borde inferior de un elemento, con la ayuda de un valor de color o con la palabra clave `transparent`.
 
 - {{ Cssxref("initial", "Valor inicial") }}: propiedad {{ Cssxref("color") }}
 - Se aplica a: todos los elementos
@@ -83,5 +83,3 @@ element {
 Categorías
 
 Interwiki Languages
-
-{{ languages( { "de": "de/CSS/border-bottom-color", "en": "en/CSS/border-bottom-color", "fr": "fr/CSS/border-bottom-color", "ja": "ja/CSS/border-bottom-color", "pl": "pl/CSS/border-bottom-color" } ) }}

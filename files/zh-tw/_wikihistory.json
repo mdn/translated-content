@@ -3022,10 +3022,6 @@
     "modified": "2019-03-23T22:21:21.278Z",
     "contributors": ["MashKao", "yvonne6344"]
   },
-  "Web/CSS/@viewport": {
-    "modified": "2019-03-18T21:16:53.558Z",
-    "contributors": ["cvrebert"]
-  },
   "Web/CSS/CSS_Animations": {
     "modified": "2019-03-23T22:43:48.571Z",
     "contributors": ["teoli"]
@@ -5116,6 +5112,10 @@
   "conflicting/Web/Accessibility/ARIA": {
     "modified": "2019-03-23T22:50:58.911Z",
     "contributors": ["PatrickTaiwan", "Shiyou", "alk03073135"]
+  },
+  "conflicting/Web/CSS": {
+    "modified": "2019-03-18T21:16:53.558Z",
+    "contributors": ["cvrebert"]
   },
   "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:45:29.748Z",

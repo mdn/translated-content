@@ -39,10 +39,10 @@ translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 ## Как узнать, какой режим используется?
 
-В Firefox необходимо в контекстном меню "Информация о странице" (_View Page Info)_ проверить\_ _"Тип визуализации" (\_Render Mode)_.
+В Firefox необходимо в контекстном меню "Информация о странице" (_View Page Info_) проверить "Тип визуализации" (_Render Mode_).
 
 В Internet Explorer через _F12_ проверить Тип документа (_Document Mode)_.
 
 ## В чем разница между режимами?
 
-См. [список странностей (list of quirks)](/ru/docs/Mozilla_Quirks_Mode_Behavior) и [частично стандартный режим](/ru/docs/Gecko's_"Almost_Standards"_Mode "Gecko%27s_%22Almost_Standards%22_Mode") для того, чтобы увидеть разницу между режимами.
+См. [список странностей (list of quirks)](/ru/docs/Mozilla_Quirks_Mode_Behavior) и [частично стандартный режим](/ru/docs/Gecko's_"Almost_Standards"_Mode) для того, чтобы увидеть разницу между режимами.

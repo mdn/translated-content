@@ -2,6 +2,7 @@
 title: Aplicando cores a elementos HTML usando CSS
 slug: Web/CSS/CSS_Colors/Applying_color
 ---
+{{HTMLSidebar}}
 
 {{CSSRef}}
 

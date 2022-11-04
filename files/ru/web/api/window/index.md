@@ -25,7 +25,7 @@ _Данный интерфейс наследует свойства из инт
   - : Точка доступа к богатой функциональности [XPCOM](/ru/docs/XPCOM). Некоторые свойства, т.к. [classes](/ru/docs/Components.classes), доступны только для достаточно привилегированного кода. **Web-код не должен использовать эти свойства.**
 - {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Возвращает ссылку на объект консоли, обеспечивающего доступ к консоли браузера.
-- {{domxref("Window.content")}} and Window.\_content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
+- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
   - : Возвращает ссылку на элемент содержимого в текущем окне. Устаревший вариант в нижним подчёркиванием более не доступен для Web-содержимого.
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Возвращает XUL контроллер объектов для текущего окна chrome.
@@ -139,7 +139,7 @@ _Данный интерфейс наследует свойства из инт
   - : Возвращает ссылку на самое первое окно в иерархии текущих окон. Только для чтения.
 - {{domxref("Window.window")}} {{ReadOnlyInline}}
   - : Возвращает ссылку на текущее окно.
-- `window[0]`,` window[1]`, etc.
+- `window[0]`, `window[1]`, etc.
   - : Возвращает ссылку на объект окна во фреймах. Смотри {{domxref("Window.frames")}}.
 
 ### Свойства, реализованные из других мест
@@ -267,9 +267,10 @@ _Этот интерфейс наследует методы от интерфе
   - : Останавливает загрузку страницы.
 - {{domxref("Window.updateCommands()")}}
   - : Обновляет состояние команд текущего окна chrome (UI).
-- ### Методы, реализованные из других мест
 
-  {{domxref("EventTarget.addEventListener()")}}
+### Методы, реализованные из других мест
+
+- {{domxref("EventTarget.addEventListener()")}}
 
   - : Регистрирует обработчики определённого типа событий в окне.
 

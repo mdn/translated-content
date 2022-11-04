@@ -197,7 +197,7 @@ dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 ```
 
-Dans cet exemple, l'élément portant l'ID `dropbox` devient notre zone de dépôt en y ajoutant les gestionnaires d'écoute des événements {{event('dragenter')}}, {{event('dragover')}}, et {{event('drop')}}.
+Dans cet exemple, l'élément portant l'ID `dropbox` devient notre zone de dépôt en y ajoutant les gestionnaires d'écoute des événements [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event), [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event), et [`drop`](/fr/docs/Web/API/HTMLElement/drop_event).
 
 Nous n'avons pas vraiment besoin dans notre cas de gérer les événements `dragenter` et `dragover`. Les deux fonctions associées restent donc assez simples, elle ne servent qu'à stopper la propagation de l'événement et empêcher le déclenchement de l'action par défaut&nbsp;:
 
@@ -257,7 +257,7 @@ function handleFiles(files) {
 
 La boucle qui manipule dans notre cas les fichiers sélectionnés par l'utilisateur examine l'attribut type de chaque fichier et contrôle qu'il s'agit bien d'une image (en utilisant une expression régulière pour vérifier la correspondance du type MIME avec la chaîne "`image/*`"). Nous créons un nouvel élément img pour chaque fichier image. Vous pouvez utiliser du CSS pour définir d'agréables bordures ou effets d'ombres ou encore pour préciser la taille de l'image \[de l'élément `img`, NDT], même si cela n'est pas nécessaire ici.
 
-La classe CSS ob`j` est ajoutée à chaque élément image afin de faciliter sa recherche dans l'arbre du DOM, ainsi qu'un attribut `file` spécifiant le {{ domxref("File") }} correspondant et qui nous permettra de récupérer les fichiers images lors du téléchargement effectif vers le serveur. Nous utilisons {{ domxref("Node.appendChild()") }} pour ajouter la nouvelle miniature à la zone de prévisualisation de notre document.
+La classe CSS `obj` est ajoutée à chaque élément image afin de faciliter sa recherche dans l'arbre du DOM, ainsi qu'un attribut `file` spécifiant le {{ domxref("File") }} correspondant et qui nous permettra de récupérer les fichiers images lors du téléchargement effectif vers le serveur. Nous utilisons {{ domxref("Node.appendChild()") }} pour ajouter la nouvelle miniature à la zone de prévisualisation de notre document.
 
 Nous définissons ensuite le {{ domxref("FileReader") }} qui gérera le chargement asynchrone de l'image et son lien à l'élément `img`. Après avoir créé le nouvel objet `FileReader`, nous définissons sa fonction `onload` pouis nous appelons `readAsDataURL()` pour démarrer l'opération de lecture en tâche de fond. Lorsque le chargement du fichier image est complètement terminé, son contenu est converti en `data`&nbsp;: c'est l'URL transmise à la fonction de rappel `onload`. Notre implémentation de cette procédure définit l'image chargée comme valeur de l'attribut `src` de l'élement `img`, faisant ainsi apparaître l'image dans la miniature à l'écran.
 

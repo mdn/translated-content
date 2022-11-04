@@ -1,15 +1,6 @@
 ---
 title: Web Animations API
 slug: Web/API/Web_Animations_API
-tags:
-  - API
-  - Animation
-  - Landing
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Web Animations
-translation_of: Web/API/Web_Animations_API
 ---
 {{DefaultAPISidebar("Web Animations")}}
 

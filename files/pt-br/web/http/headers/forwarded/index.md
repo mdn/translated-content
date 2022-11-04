@@ -1,13 +1,6 @@
 ---
 title: Forwarded
 slug: Web/HTTP/Headers/Forwarded
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Forwarded
 ---
 {{HTTPSidebar}}
 

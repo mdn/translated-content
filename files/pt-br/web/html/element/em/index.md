@@ -1,14 +1,6 @@
 ---
 title: '<em>: O elemento de ênfase'
 slug: Web/HTML/Element/em
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Semântica inline HTML
-  - Web
-  - font-style
-translation_of: Web/HTML/Element/em
 ---
 O **elemento** **HTML** **`<em>`** marca o texto que tem ênfase. O elemento \<em> pode ser aninhado, com cada nível de aninhamento indicando um grau maior de ênfase.
 
@@ -118,4 +110,4 @@ Um exemplo para `<i>` poderia ser: "A _Rainha Mary_ velejou na noite passada". A
 
 - {{HTMLElement("i")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

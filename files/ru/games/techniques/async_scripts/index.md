@@ -30,23 +30,23 @@ document.body.appendChild(script);
 
 ## Когда асинхронный не асинхронный?
 
-Две распространённые ситуации, в которых сценарий \* не \* асинхронен (как [определено спецификацией HTML](http://www.w3.org/TR/html5/scripting-1.html) ):
+Две распространённые ситуации, в которых сценарий не асинхронен (как [определено спецификацией HTML](http://www.w3.org/TR/html5/scripting-1.html) ):
 
-```
-<script async>code</script>
+```html
+<script async src="file.js"></script>
 ```
 
 а также
 
-```
-var script = document.createElement('script');
-script.innerHTML = "code";
+```js
+const script = document.createElement("script");
+script.src = "file.js";
 document.body.appendChild(script);
 ```
 
 Оба считаются «встроенными» скриптами, компилируются и запускаются сразу
 
-Что если ваш код находится в строке JS? Вместо использования `eval`или `innerHTML`, оба из которых запускают синхронную компиляцию, вы должны использовать BLOB-объект с URL объекта:
+Что если ваш код находится в строке JS? Вместо использования `eval` или `innerHTML`, оба из которых запускают синхронную компиляцию, вы должны использовать BLOB-объект с URL объекта:
 
 ```
 var blob = new Blob([codeString]);
@@ -57,4 +57,4 @@ script.src = url;
 document.body.appendChild(script);
 ```
 
-Настройка `src`вместо настройки `innerHTML` делает этот скрипт асинхронным.
+Настройка `src` вместо настройки `innerHTML` делает этот скрипт асинхронным.

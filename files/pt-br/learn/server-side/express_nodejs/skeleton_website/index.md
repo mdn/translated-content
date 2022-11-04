@@ -1,7 +1,6 @@
 ---
 title: 'Express Tutorial Parte 2: Criando a estrutura do website'
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
-translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
 {{LearnSidebar}}
 

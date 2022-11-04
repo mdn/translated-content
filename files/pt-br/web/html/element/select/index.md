@@ -1,7 +1,6 @@
 ---
 title: <select>
 slug: Web/HTML/Element/select
-translation_of: Web/HTML/Element/select
 ---
 ## Sumário
 
@@ -75,4 +74,4 @@ A seguir um exemplo de como simular uma lista de seleção com opções editáve
 
 - Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

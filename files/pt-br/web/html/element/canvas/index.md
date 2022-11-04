@@ -1,7 +1,6 @@
 ---
 title: canvas
 slug: Web/HTML/Element/canvas
-translation_of: Web/HTML/Element/canvas
 ---
 ## Sumário
 

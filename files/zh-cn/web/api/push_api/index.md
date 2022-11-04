@@ -50,7 +50,7 @@ Service worker 会在必要的时候启动并接收传入的推送消息，将�
 
 ## 示例
 
-Mozilla 的 [ServiceWorker Cookbook](https://serviceworke.rs/) 中包含了许多关于 Push 有用的示例。
+Mozilla 的 [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook/) 中包含了许多关于 Push 有用的示例。
 
 ## 规范
 

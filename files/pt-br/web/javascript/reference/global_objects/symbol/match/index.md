@@ -1,7 +1,6 @@
 ---
 title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 ---
 {{JSRef}}
 

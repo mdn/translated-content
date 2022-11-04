@@ -53,7 +53,7 @@ Si une boîte est définie en bloc, elle suivra alors les règles suivantes :
 
   , à la marge et à la bordure de la boîte — auront pour effet de repousser les autres éléments.
 
-À moins que l'on ne décide de changer le type de positionnement de la boîte en "en ligne", certains éléments tels que les titres (`<h1>`,`<h2>`, etc.) et les paragraphes (`<p>`) utilisent le mode "bloc" comme propriété de positionnement extérieur par défaut.
+À moins que l'on ne décide de changer le type de positionnement de la boîte en "en ligne", certains éléments tels que les titres (`<h1>`, `<h2>`, etc.) et les paragraphes (`<p>`) utilisent le mode "bloc" comme propriété de positionnement extérieur par défaut.
 
 Si une boîte est positionnée en ligne, alors :
 

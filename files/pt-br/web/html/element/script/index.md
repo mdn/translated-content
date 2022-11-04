@@ -1,7 +1,6 @@
 ---
 title: <script>
 slug: Web/HTML/Element/script
-translation_of: Web/HTML/Element/script
 ---
 O **elemento HTML `<script>`** é usado para incluir ou referenciar um script executável.
 
@@ -143,4 +142,4 @@ The script should be served with the `text/javascript` MIME type, but browsers a
 - {{domxref("document.currentScript")}}
 - [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pie.gd/test/script-link-events/)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

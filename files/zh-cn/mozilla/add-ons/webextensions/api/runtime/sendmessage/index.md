@@ -45,7 +45,7 @@ var sending = browser.runtime.sendMessage(
     2. null
     3. undefined
 
-  - 否则，将会被当做 `(extensionId, message)。`消息将会给发送给 `extensionId` 指定 ID 的扩展
+  - 否则，将会被当做 `(extensionId, message)`。消息将会给发送给 `extensionId` 指定 ID 的扩展
 
 - **有 3 个参数**：将会被当做 `(extensionId, message, options)`. 消息将会给发送给 `extensionId` 指定 ID 的扩展
 

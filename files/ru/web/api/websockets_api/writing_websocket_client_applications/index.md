@@ -46,9 +46,9 @@ WebSocket WebSocket(
 
 ### Ошибки подключения
 
-Если ошибка случается во время попытки подключения, то в объект [`WebSocket`](https://developer.mozilla.org/en/WebSockets/WebSockets_reference/WebSocket "WebSocket") сначала посылается простое событие с именем «error» (таким образом, задействуя обработчик `onerror`), потом - событие [`CloseEvent`](https://developer.mozilla.org/en/WebSockets/WebSockets_reference/CloseEvent "CloseEvent") (таким образом, задействуя обработчик `onclose`) чтобы обозначить причину закрытия соединения.
+Если ошибка случается во время попытки подключения, то в объект [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) сначала посылается простое событие с именем «error» (таким образом, задействуя обработчик `onerror`), потом - событие [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) (таким образом, задействуя обработчик `onclose`) чтобы обозначить причину закрытия соединения.
 
-Однако, начиная с версии Firefox 11, типичным является получение в консоль от платформы Mozilla расширенного сообщения об ошибке и кода завершения, как то определено в [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4 "RFC 6455 Section 7.4") посредством [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent "CloseEvent").
+Однако, начиная с версии Firefox 11, типичным является получение в консоль от платформы Mozilla расширенного сообщения об ошибке и кода завершения, как то определено в [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) посредством [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent).
 
 ### Примеры
 
@@ -58,7 +58,7 @@ WebSocket WebSocket(
 var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
 ```
 
-После выполнения функции, `exampleSocket`.`readyState` будет иметь значение `CONNECTING`. `readyState` изменится на `OPEN` как только соединение станет готовым к передаче данных.
+После выполнения функции, {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} будет иметь значение `CONNECTING`. `readyState` изменится на `OPEN` как только соединение станет готовым к передаче данных.
 
 Если нужно открыть соединение, поддерживающее несколько протоколов, можно передать массив протоколов:
 
@@ -78,7 +78,7 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protoco
 exampleSocket.send("Вот текст, который будет отправлен серверу.");
 ```
 
-Вы можете пересылать данные в виде строки, {{ domxref("Blob") }}, так и [`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer "en/JavaScript typed arrays/ArrayBuffer").
+Вы можете пересылать данные в виде строки, {{ domxref("Blob") }}, так и [`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer).
 
 > **Примечание:** **Замечание:** До версии 11, Firefox поддерживал отправку данных только в виде строки.
 
@@ -92,7 +92,7 @@ exampleSocket.onopen = function (event) {
 
 ### Использование JSON для передачи объектов
 
-Одна удобная вещь которую вы можете сделать, это использовать [JSON](/en/JSON "en/JSON") для пересылки сложных данных на сервер. Например, приложение-чат может взаимодействовать с сервером, используя протокол, реализованный с использованием пакетов данных, инкапсулированных в JSON:
+Одна удобная вещь которую вы можете сделать, это использовать [JSON](/en/JSON) для пересылки сложных данных на сервер. Например, приложение-чат может взаимодействовать с сервером, используя протокол, реализованный с использованием пакетов данных, инкапсулированных в JSON:
 
 ```js
 // Отправьте текст всем пользователям через сервер
@@ -171,7 +171,7 @@ exampleSocket.onmessage = function(event) {
 };
 ```
 
-Здесь мы используем [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse "en/JavaScript/Reference/Global Objects/JSON/parse") чтобы преобразовать JSON строку в объект, затем обработайте его.
+Здесь мы используем [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse) чтобы преобразовать JSON строку в объект, затем обработайте его.
 
 ### Формат текстовых данных
 

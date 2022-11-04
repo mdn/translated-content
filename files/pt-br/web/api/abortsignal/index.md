@@ -1,14 +1,6 @@
 ---
 title: AbortSignal
 slug: Web/API/AbortSignal
-tags:
-  - API
-  - AbortSignal
-  - DOM
-  - Experimental
-  - Interface
-  - Referencia
-translation_of: Web/API/AbortSignal
 ---
 {{APIRef("DOM")}}{{SeeCompatTable}}
 

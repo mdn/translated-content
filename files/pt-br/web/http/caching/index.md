@@ -1,15 +1,6 @@
 ---
 title: Cacheamento HTTP
 slug: Web/HTTP/Caching
-tags:
-  - Cache
-  - Cacheamento
-  - Guía
-  - HTTP
-  - Internet
-  - Rede
-  - Web
-translation_of: Web/HTTP/Caching
 original_slug: Web/HTTP/HTTP
 ---
 {{HTTPSidebar}}

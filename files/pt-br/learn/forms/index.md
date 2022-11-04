@@ -1,15 +1,6 @@
 ---
 title: Formulários da Web - Trabalhando com dados do usuário
 slug: Learn/Forms
-tags:
-  - Aprender
-  - Funcionalidades
-  - Guía
-  - HTML
-  - Iniciante
-  - Web
-  - formulários
-translation_of: Learn/Forms
 original_slug: Web/Guide/HTML/Forms
 ---
 {{LearnSidebar}}

@@ -1,11 +1,6 @@
 ---
 title: display
 slug: Web/CSS/display
-tags:
-  - CSS
-  - Posicionamento CSS
-  - Propriedades CSS
-translation_of: Web/CSS/display
 ---
 {{CSSRef}}
 

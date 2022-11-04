@@ -50,7 +50,7 @@ console.log(mySet);
 
 ## Firefox-specific notes
 
-- Prior to Firefox 33 {{geckoRelease("33")}}, `Set.prototype.add` returned `undefined` and was not chainable. This has been fixed ({{bug(1031632)}}). The behavior can be found in Chrome/v8 as well ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
+- Prior to Firefox 33 (Firefox 33 / Thunderbird 33 / SeaMonkey 2.30), `Set.prototype.add` returned `undefined` and was not chainable. This has been fixed ({{bug(1031632)}}). The behavior can be found in Chrome/v8 as well ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
 
 ## See also
 

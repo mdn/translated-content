@@ -1,17 +1,6 @@
 ---
 title: width
 slug: Web/CSS/width
-tags:
-  - CSS
-  - CSS Property
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - PrecisaDeCompatibilidadeDeNavegador
-  - PrecisadeCompatibilidadeMobile
-  - Propriedade CSS
-  - Reference
-  - Referencia
-translation_of: Web/CSS/width
 ---
 {{CSSRef}}
 

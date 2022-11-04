@@ -1,15 +1,6 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/@media/aspect-ratio
-tags:
-  - '@media'
-  - CSS
-  - Media Queries
-  - Taxa de aspecto
-  - Tradução
-  - características de mídia
-  - pt-br
-translation_of: Web/CSS/@media/aspect-ratio
 ---
 {{cssref}}
 

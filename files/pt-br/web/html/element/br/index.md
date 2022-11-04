@@ -1,7 +1,6 @@
 ---
 title: <br>
 slug: Web/HTML/Element/br
-translation_of: Web/HTML/Element/br
 ---
 ## Sumário
 
@@ -102,4 +101,4 @@ USA
 - O elemento {{HTMLElement("address")}}
 - O elemento {{HTMLElement("p")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

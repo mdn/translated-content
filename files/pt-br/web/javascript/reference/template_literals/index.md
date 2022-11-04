@@ -1,7 +1,6 @@
 ---
 title: Template strings
 slug: Web/JavaScript/Reference/Template_literals
-translation_of: Web/JavaScript/Reference/Template_literals
 original_slug: Web/JavaScript/Reference/template_strings
 ---
 {{JsSidebar("More")}}

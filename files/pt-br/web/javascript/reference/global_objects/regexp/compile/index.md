@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 ---
 {{JSRef}} {{deprecated_header}}
 

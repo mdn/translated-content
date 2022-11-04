@@ -1,16 +1,6 @@
 ---
 title: Desenvolvedor Web Front-end
 slug: Learn/Front-end_web_developer
-tags:
-  - Aprender
-  - CSS
-  - Ferramentas
-  - Front-end
-  - HTML
-  - Iniciantes
-  - JavaScript
-  - Padrões Web
-translation_of: Learn/Front-end_web_developer
 original_slug: Aprender/Front-end_web_developer
 ---
 {{learnsidebar}}

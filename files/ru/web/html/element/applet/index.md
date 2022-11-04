@@ -59,4 +59,4 @@ translation_of: Web/HTML/Element/applet
 
 The W3C specification does not encourage the use of `<applet>` and prefers the use of the {{HTMLElement("object")}} tag. Under the strict definition of HTML 4.01, this element is deprecated and entirely obsolete in HTML5.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

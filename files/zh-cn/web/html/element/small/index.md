@@ -3,7 +3,7 @@ title: <small>
 slug: Web/HTML/Element/small
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 HTML 中的\<small>元素將使文本的字体变小一号。(例如从大变成中等，从中等变成小，从小变成超小)。在 HTML5 中，除了它的样式含义，这个元素被重新定义为表示边注释和附属细则，包括版权和法律文本。
 

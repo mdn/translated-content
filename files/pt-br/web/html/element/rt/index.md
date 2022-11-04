@@ -1,7 +1,6 @@
 ---
 title: <rt>
 slug: Web/HTML/Element/rt
-translation_of: Web/HTML/Element/rt
 ---
 ## Summary
 
@@ -42,4 +41,4 @@ This element only includes the [global attributes](/pt-BR/docs/Web/HTML/Global_a
 - {{HTMLElement("ruby")}}
 - {{HTMLElement("rp")}}
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

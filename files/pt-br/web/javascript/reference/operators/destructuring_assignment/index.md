@@ -1,7 +1,6 @@
 ---
 title: Atribuição via desestruturação (destructuring assignment)
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 original_slug: Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao
 ---
 {{jsSidebar("Operators")}}

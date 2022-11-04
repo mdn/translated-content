@@ -6,7 +6,7 @@ original_slug: Web/API/XMLHttpRequest/onreadystatechange
 
 {{APIRef}}
 
-An [`EventHandler`](/docs/Web/API/EventHandler) that is called whenever the `readyState` attribute changes. The callback is called from the user interface thread. The **`XMLHttpRequest.onreadystatechange`** property contains the event handler to be called when the {{event("readystatechange")}} event is fired, that is every time the {{domxref("XMLHttpRequest.readyState", "readyState")}} property of the {{domxref("XMLHttpRequest")}} changes.
+An [`EventHandler`](/docs/Web/API/EventHandler) that is called whenever the `readyState` attribute changes. The callback is called from the user interface thread. The **`XMLHttpRequest.onreadystatechange`** property contains the event handler to be called when the [`readystatechange`](/zh-TW/docs/Web/API/Document/readystatechange_event) event is fired, that is every time the {{domxref("XMLHttpRequest.readyState", "readyState")}} property of the {{domxref("XMLHttpRequest")}} changes.
 
 > **警告：** This should not be used with synchronous requests and must not be used from native code.
 

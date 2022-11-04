@@ -37,7 +37,7 @@ document.cookie = newCookie;
 
     > **Примечание:** Prior to {{Gecko("6.0")}}, paths with quotes were treated as if the quotes were part of the string, instead of as if they were delimiters surrounding the actual path string. This has been fixed.
 
-    The path must be **absolute** (see [RFC 6265](https://tools.ietf.org/html/rfc6265)). For more information on how to use relative paths, see [this paragraph](/ru/docs/Web/API/Document/cookie$edit#Using_relative_URLs_in_the_path_parameter).
+    The path must be **absolute** (see [RFC 6265](https://tools.ietf.org/html/rfc6265)). For more information on how to use relative paths, see [this paragraph](/ru/docs/Web/API/Document/cookie#Using_relative_URLs_in_the_path_parameter).
 
   - `;domain=domain` (e.g., '`example.com`' or '`subdomain.example.com`'). If not specified, this defaults to the host portion of the current document location. Contrary to earlier specifications, leading dots in domain names are ignored, but browsers may decline to set the cookie containing such dots. If a domain is specified, subdomains are always included.
   - `;max-age=max-age-in-seconds` (e.g., `60*60*24*365` or 31536000 for a year)

@@ -1,12 +1,6 @@
 ---
 title: 'Location: search'
 slug: Web/API/Location/search
-tags:
-  - API
-  - Location
-  - Propriedade
-  - Search
-translation_of: Web/API/Location/search
 ---
 {{ApiRef("Location")}}
 

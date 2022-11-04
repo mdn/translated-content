@@ -1,7 +1,6 @@
 ---
 title: Site Móvel Amigável
 slug: Web/Guide/Mobile/Mobile-friendliness
-translation_of: Web/Guide/Mobile/Mobile-friendliness
 original_slug: Web_Development/Mobile/Mobile-friendliness
 ---
 ## O que é site móvel amigável?

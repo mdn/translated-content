@@ -1,23 +1,6 @@
 ---
 title: O que é JavaScript?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-tags:
-  - API
-  - Aprender
-  - Artigo
-  - Código Script
-  - Iniciante
-  - JavaScript
-  - Navegador
-  - Núcleo
-  - O que
-  - Script
-  - comentários
-  - externo
-  - inline
-  - l10n:prioridade
-  - terceiros
-translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 original_slug: Learn/JavaScript/First_steps/O_que_e_JavaScript
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}

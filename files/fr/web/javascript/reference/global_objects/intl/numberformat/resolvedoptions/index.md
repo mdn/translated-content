@@ -45,9 +45,9 @@ Cette méthode renvoie un objet composé des propriétés suivantes :
 
 Un seul des deux groupes suivants est inclus dans les propriétés :
 
-- `minimumIntegerDigits`,`minimumFractionDigits`, `maximumFractionDigits`
+- `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits`
   - : Les valeurs fournies pour ces propriétés via l'argument `options` ou bien les valeurs par défaut. Ces propriétés ne sont présentes que si `minimumSignificantDigits` ou `maximumSignificantDigits` n'ont pas été fournies à l'argument `options`.
-- `minimumSignificantDigits`,`maximumSignificantDigits`
+- `minimumSignificantDigits`, `maximumSignificantDigits`
   - : Les valeurs fournies pour ces propriétés via l'argument `options` ou bien les valeurs par défaut. Ces propriétés sont présentes si au moins une d'entre elles a été fournie via l'argument `options`.
 
 ## Exemples

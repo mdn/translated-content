@@ -1,11 +1,6 @@
 ---
 title: Identificador (Identifier)
 slug: Glossary/Identifier
-tags:
-  - Compatilhando
-  - Glossário
-  - Iniciante
-translation_of: Glossary/Identifier
 original_slug: Glossario/Identificador
 ---
 Uma sequência de caracteres no código, que identifica uma **{{glossary("variável")}}, {{glossary("função")}}, ou {{glossary("propriedade")}}**.

@@ -1,7 +1,6 @@
 ---
 title: Animation.playState
 slug: Web/API/Animation/playState
-translation_of: Web/API/Animation/playState
 ---
 {{APIRef("Web Animations")}}{{SeeCompatTable}}
 

@@ -1,11 +1,6 @@
 ---
 title: pattern
 slug: Web/SVG/Element/pattern
-tags:
-  - Elemento
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/pattern
 ---
 {{SVGRef}}
 
@@ -17,7 +12,7 @@ Um padrão é utilizado para preenchimento ou traçado de um objeto utilizando u
 
 ## Exemplo
 
-» [pattern.svg](https://developer.mozilla.org/files/3268/pattern.svg)
+» [pattern.svg](/files/3268/pattern.svg)
 
 ## Atributos
 

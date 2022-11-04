@@ -3,7 +3,7 @@ title: <input type="submit">
 slug: Web/HTML/Element/input/submit
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"submit"`** sont affichés comme des boutons permettant d'envoyer les données d'un formulaire. Cliquer sur un tel bouton déclenchera l'envoi des données du formulaire vers le serveur.
 
@@ -186,7 +186,7 @@ Voir les exemples ci-avant.
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
-      <td>{{event("click")}}</td>
+      <td><a href="/fr/docs/Web/API/Element/click_event"><code>click</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>

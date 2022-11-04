@@ -1,9 +1,6 @@
 ---
 title: var
 slug: Web/JavaScript/Reference/Statements/var
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Statements/var
 ---
 {{jsSidebar("Statements")}}
 

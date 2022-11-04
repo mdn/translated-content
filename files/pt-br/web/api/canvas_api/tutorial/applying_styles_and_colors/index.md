@@ -1,7 +1,6 @@
 ---
 title: Aplicando estilos e cores
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 original_slug: Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

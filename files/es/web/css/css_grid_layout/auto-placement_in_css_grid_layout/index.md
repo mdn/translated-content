@@ -96,7 +96,6 @@ Sin embargo, puede controlar el tamaño de estas filas con la propiedad `grid-au
 
 #### Usando `minmax()`
 
-
 Puede usar [`minmax()`](/es/docs/Web/CSS/minmax) en su valor para [`grid-auto-rows`](/es/docs/Web/CSS/grid-auto-rows) permite la creación de filas de un tamaño mínimo pero luego crecer para ajustarse al contenido si es más alto.
 
 ```css hidden

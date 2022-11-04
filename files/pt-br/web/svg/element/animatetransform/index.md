@@ -1,11 +1,6 @@
 ---
 title: animateTransform
 slug: Web/SVG/Element/animateTransform
-tags:
-  - Animação
-  - Elemento
-  - SVG
-translation_of: Web/SVG/Element/animateTransform
 ---
 {{SVGRef}}
 

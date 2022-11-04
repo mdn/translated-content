@@ -1,10 +1,6 @@
 ---
 title: Accept-Language
 slug: Web/HTTP/Headers/Accept-Language
-tags:
-  - Cabeçalho HTTP
-  - HTTP
-translation_of: Web/HTTP/Headers/Accept-Language
 ---
 {{HTTPSidebar}}
 

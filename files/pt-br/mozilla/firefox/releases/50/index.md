@@ -1,7 +1,6 @@
 ---
 title: Firefox 50 for developers
 slug: Mozilla/Firefox/Releases/50
-translation_of: Mozilla/Firefox/Releases/50
 ---
 {{FirefoxSidebar}}
 

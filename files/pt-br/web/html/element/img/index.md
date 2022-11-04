@@ -1,7 +1,6 @@
 ---
 title: <img>
 slug: Web/HTML/Element/img
-translation_of: Web/HTML/Element/img
 ---
 ## Resumo
 
@@ -33,7 +32,7 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
   - : The alignment of the image with respect to its surrounding context.
 - {{htmlattrdef("alt")}}
 
-  - : Este atributo define um texto alternativo que descreve a imagem. Os Usuários irão ver o texto se a URL da imagem estiver errado, a imagem não está em um dos [formatos suportados](/pt-BR/docs/Web/HTML/Element/img$edit#Supported_image_formats) ou até a imagem ser baixada .
+  - : Este atributo define um texto alternativo que descreve a imagem. Os Usuários irão ver o texto se a URL da imagem estiver errado, a imagem não está em um dos [formatos suportados](#supported_image_formats) ou até a imagem ser baixada .
 
     > **Note:** **Usage note:** Omitting this attribute indicates that the image _is_ a key part of the content, but no textual equivalent is available. Setting this attribute to the empty string indicates that this image is _not_ a key part of the content; non-visual browsers may omit it from rendering.
 
@@ -207,4 +206,4 @@ O valor do atributo `title` é geralmente mostrado ao usuário como uma dica, qu
 
 - {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements
 
-{{HTMLRef}}
+{{HTMLSidebar}}

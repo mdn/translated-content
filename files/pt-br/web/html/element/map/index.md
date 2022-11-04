@@ -1,7 +1,6 @@
 ---
 title: <map>
 slug: Web/HTML/Element/map
-translation_of: Web/HTML/Element/map
 ---
 ## Resumo
 
@@ -46,4 +45,4 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - {{HTMLElement ("a")}}
 - {{HTMLElement ("area")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

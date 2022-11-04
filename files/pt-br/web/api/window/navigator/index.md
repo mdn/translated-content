@@ -1,13 +1,6 @@
 ---
 title: Window.navigator
 slug: Web/API/Window/navigator
-tags:
-  - API
-  - Propriedade
-  - Referencia
-  - Somente-leitura
-  - Window
-translation_of: Web/API/Window/navigator
 ---
 {{APIRef}}
 

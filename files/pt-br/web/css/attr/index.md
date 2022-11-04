@@ -1,16 +1,6 @@
 ---
 title: attr
 slug: Web/CSS/attr
-tags:
-  - CSS
-  - Esquema
-  - Função CSS
-  - Internet
-  - Laioute
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/CSS/attr()
 original_slug: Web/CSS/attr()
 ---
 {{CSSRef}}
