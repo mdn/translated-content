@@ -1,6 +1,9 @@
 ---
 title: 古い反復子プロトコル
-slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol
+slug: >-
+  conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_df783faa96fb2729e58461fd21615e98
+original_slug: >-
+  Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol
 ---
 
 {{jsSidebar("More")}}

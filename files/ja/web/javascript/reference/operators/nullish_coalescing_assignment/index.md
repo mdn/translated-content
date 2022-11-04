@@ -1,6 +1,7 @@
 ---
 title: Null 合体代入 (??=)
-slug: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
+slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
+original_slug: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
 ---
 
 {{jsSidebar("Operators")}}

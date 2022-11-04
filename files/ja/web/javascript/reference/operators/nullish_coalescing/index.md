@@ -1,6 +1,7 @@
 ---
 title: Null 合体演算子 (??)
-slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
+slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
+original_slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 ---
 
 {{JSSidebar("Operators")}}

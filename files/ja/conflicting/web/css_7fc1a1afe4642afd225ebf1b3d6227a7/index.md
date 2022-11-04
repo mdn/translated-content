@@ -1,6 +1,7 @@
 ---
 title: CSS 端末適合
-slug: Web/CSS/CSS_Device_Adaptation
+slug: conflicting/Web/CSS_7fc1a1afe4642afd225ebf1b3d6227a7
+original_slug: Web/CSS/CSS_Device_Adaptation
 ---
 
 {{CSSRef}}
