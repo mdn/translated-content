@@ -1,12 +1,6 @@
 ---
 title: Drawing text
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-tags:
-  - Canvas
-  - Intermediário
-  - Tutorial
-  - graficos
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 original_slug: Web/Guide/HTML/Canvas_tutorial/Drawing_text
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}

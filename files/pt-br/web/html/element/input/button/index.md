@@ -1,19 +1,6 @@
 ---
 title: <input type="button">
 slug: Web/HTML/Element/Input/button
-tags:
-  - Documentação
-  - Element
-  - Elementos Input
-  - Formulários HTML
-  - HTML
-  - Input
-  - Referencia
-  - Tipos de Input
-  - botões
-  - button
-  - formulários
-translation_of: Web/HTML/Element/input/button
 ---
 {{HTMLSidebar}}
 

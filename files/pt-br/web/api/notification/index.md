@@ -1,11 +1,6 @@
 ---
 title: Notificações
 slug: Web/API/Notification
-tags:
-  - API
-  - Interface
-  - Notificações
-translation_of: Web/API/Notification
 original_slug: Web/API/notificacoes
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

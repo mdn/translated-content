@@ -1,7 +1,6 @@
 ---
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
-translation_of: Web/HTML/Element/hgroup
 ---
 {{HTMLSidebar}}{{seeCompatTable}}
 

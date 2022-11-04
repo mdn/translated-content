@@ -1,17 +1,6 @@
 ---
 title: 'Tutorial e exemplo: Teclado de Sintetizador Simples'
 slug: Web/API/Web_Audio_API/Simple_synth
-tags:
-  - Audio
-  - Exemplo
-  - Guía
-  - Media
-  - Oscilador
-  - Piano
-  - Sintetizador
-  - Tutorial
-  - Web Audio API
-translation_of: Web/API/Web_Audio_API/Simple_synth
 original_slug: Web/API/API_Web_Audio/Sintetizador_simples
 ---
 {{DefaultAPISidebar("Web Audio API")}}

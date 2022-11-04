@@ -1,15 +1,6 @@
 ---
 title: <li>
 slug: Web/HTML/Element/li
-tags:
-  - Elementos
-  - Guía
-  - HTML
-  - Indentação
-  - Referencia
-  - listagem <li>
-  - menu+HTML
-translation_of: Web/HTML/Element/li
 ---
 ## Resumo
 

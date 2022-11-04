@@ -1,15 +1,6 @@
 ---
 title: <html>
 slug: Web/HTML/Element/html
-tags:
-  - Elemento
-  - Elemento raiz HTML
-  - HTML
-  - Internet
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/html
 ---
 ## Sumário
 

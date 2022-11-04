@@ -1,16 +1,6 @@
 ---
 title: <blockquote>
 slug: Web/HTML/Element/blockquote
-tags:
-  - Elemento
-  - HTML
-  - MDN
-  - Referencia
-  - Web
-  - blogger
-  - português brasil
-  - tag
-translation_of: Web/HTML/Element/blockquote
 ---
 ## Sumário
 

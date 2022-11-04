@@ -1,14 +1,6 @@
 ---
 title: 103 Early Hints
 slug: Web/HTTP/Status/103
-tags:
-  - Código de status
-  - Draft
-  - HTTP
-  - Informacional
-  - Informational
-  - Status code
-translation_of: Web/HTTP/Status/103
 ---
 {{HTTPSidebar}}
 

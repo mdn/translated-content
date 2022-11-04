@@ -1,13 +1,6 @@
 ---
 title: class
 slug: Web/HTML/Global_attributes/class
-tags:
-  - Atributos globais
-  - Global attributes
-  - HTML
-  - Reference
-  - Referencia
-translation_of: Web/HTML/Global_attributes/class
 ---
 {{HTMLSidebar("Global_attributes")}}
 

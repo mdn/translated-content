@@ -1,12 +1,6 @@
 ---
 title: <nobr>
 slug: Web/HTML/Element/nobr
-tags:
-  - Elemento
-  - HTML
-  - Não-padrão
-  - Referencia
-translation_of: Web/HTML/Element/nobr
 ---
 {{non-standard_header}}
 

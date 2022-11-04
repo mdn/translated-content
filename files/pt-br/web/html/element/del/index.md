@@ -1,7 +1,6 @@
 ---
 title: <del>
 slug: Web/HTML/Element/del
-translation_of: Web/HTML/Element/del
 ---
 ## Sumário
 

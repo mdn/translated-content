@@ -1,12 +1,6 @@
 ---
 title: 511 Network Authentication Required
 slug: Web/HTTP/Status/511
-tags:
-  - Código de Estado HTTP
-  - Erro no servidor
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Status/511
 ---
 {{HTTPSidebar}}
 

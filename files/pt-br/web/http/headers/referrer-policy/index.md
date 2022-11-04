@@ -1,15 +1,6 @@
 ---
 title: Referrer-Policy
 slug: Web/HTTP/Headers/Referrer-Policy
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de Resposta
-  - HTTP
-  - Referencia
-  - Referrer-Policy
-  - Resposta
-  - privacidade
-translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
 {{HTTPSidebar}}
 

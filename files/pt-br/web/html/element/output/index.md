@@ -1,16 +1,6 @@
 ---
 title: Output
 slug: Web/HTML/Element/Output
-tags:
-  - Elemento
-  - Formulário HTML
-  - HTML
-  - HTML5
-  - Internet
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/output
 ---
 ## Sumário
 

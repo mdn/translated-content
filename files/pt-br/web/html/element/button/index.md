@@ -1,15 +1,6 @@
 ---
 title: <button>
 slug: Web/HTML/Element/button
-tags:
-  - Elemento
-  - Formulários HTML
-  - HTML
-  - Intermediário
-  - Referência(2)
-  - Web
-  - formulários
-translation_of: Web/HTML/Element/button
 ---
 ## Sumário
 

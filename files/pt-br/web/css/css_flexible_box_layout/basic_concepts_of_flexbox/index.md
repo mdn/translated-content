@@ -1,15 +1,6 @@
 ---
 title: Conceitos básicos de flexbox
 slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-tags:
-  - CSS
-  - Flex
-  - Tutorial
-  - conceitos
-  - conteiner
-  - eixos
-  - flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Conceitos_Basicos_do_Flexbox
 ---
 {{CSSRef}}

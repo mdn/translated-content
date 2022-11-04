@@ -1,14 +1,6 @@
 ---
 title: Navegação "Migalha de Pão"
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-tags:
-  - CSS
-  - Layout
-  - Migalha de pão
-  - Navegação
-  - cookbook
-  - flexbox
-translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 ---
 {{CSSRef}}
 

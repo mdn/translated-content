@@ -1,11 +1,6 @@
 ---
 title: Via
 slug: Web/HTTP/Headers/Via
-tags:
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Via
 ---
 {{HTTPSidebar}}
 

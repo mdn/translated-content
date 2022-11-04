@@ -1,11 +1,6 @@
 ---
 title: Redirecionamentos em HTTP
 slug: Web/HTTP/Redirections
-tags:
-  - Guía
-  - HTTP
-  - Redirecionamento
-translation_of: Web/HTTP/Redirections
 original_slug: Web/HTTP/Redirecionamento
 ---
 {{HTTPSidebar}}

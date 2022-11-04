@@ -1,13 +1,6 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-tags:
-  - HTTP
-  - Método HTTP
-  - Referencia
-  - Rest
-  - patch
-translation_of: Web/HTTP/Methods/PATCH
 ---
 {{HTTPSidebar}}
 

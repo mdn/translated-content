@@ -1,7 +1,6 @@
 ---
 title: 422 Unprocessable Entity
 slug: Web/HTTP/Status/422
-translation_of: Web/HTTP/Status/422
 ---
 {{HTTPSidebar}}
 

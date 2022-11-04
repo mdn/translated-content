@@ -1,12 +1,6 @@
 ---
 title: BatteryManager.dischargingTime
 slug: Web/API/BatteryManager/dischargingTime
-tags:
-  - API
-  - Battery API
-  - Propriedade
-  - Referencia
-translation_of: Web/API/BatteryManager/dischargingTime
 ---
 {{APIRef("Battery API")}}
 

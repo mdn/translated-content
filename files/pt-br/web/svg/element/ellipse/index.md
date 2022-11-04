@@ -1,13 +1,6 @@
 ---
 title: ellipse
 slug: Web/SVG/Element/ellipse
-tags:
-  - Elemento
-  - Forma
-  - Referencia
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/ellipse
 ---
 {{SVGRef}}
 

@@ -1,16 +1,6 @@
 ---
 title: <aside>
 slug: Web/HTML/Element/aside
-tags:
-  - Elemento
-  - HTML
-  - HTML5
-  - Internet
-  - Rede
-  - Referencia
-  - Seções HTML
-  - Web
-translation_of: Web/HTML/Element/aside
 ---
 ## Sumario
 

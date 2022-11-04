@@ -1,13 +1,6 @@
 ---
 title: <track>
 slug: Web/HTML/Element/track
-tags:
-  - Elemento
-  - HTML
-  - HTML5
-  - Web
-  - legenda
-translation_of: Web/HTML/Element/track
 ---
 {{HTMLSidebar}}
 

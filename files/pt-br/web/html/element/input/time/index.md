@@ -1,11 +1,6 @@
 ---
 title: <input type="time">
 slug: Web/HTML/Element/Input/time
-tags:
-  - Formulário
-  - Hora
-  - tipo
-translation_of: Web/HTML/Element/input/time
 ---
 {{HTMLSidebar}}
 

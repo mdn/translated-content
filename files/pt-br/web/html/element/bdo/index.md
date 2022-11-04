@@ -1,12 +1,6 @@
 ---
 title: <bdo>
 slug: Web/HTML/Element/bdo
-tags:
-  - HTML
-  - bdo
-  - ltr
-  - rtl
-translation_of: Web/HTML/Element/bdo
 ---
 {{HTMLSidebar}}
 

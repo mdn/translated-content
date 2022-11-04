@@ -1,7 +1,6 @@
 ---
 title: Using the WebVR API
 slug: Web/API/WebVR_API/Using_the_WebVR_API
-translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 ---
 {{APIRef("WebVR API")}}{{deprecated_header}}
 

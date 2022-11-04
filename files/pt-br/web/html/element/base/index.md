@@ -1,7 +1,6 @@
 ---
 title: <base>
 slug: Web/HTML/Element/base
-translation_of: Web/HTML/Element/base
 ---
 ## Resumo
 

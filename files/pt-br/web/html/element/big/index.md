@@ -1,7 +1,6 @@
 ---
 title: '<big>: Elemento para deixar o texto maio'
 slug: Web/HTML/Element/big
-translation_of: Web/HTML/Element/big
 ---
 {{obsolete_header}}
 

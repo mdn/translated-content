@@ -1,11 +1,6 @@
 ---
 title: <input type="password">
 slug: Web/HTML/Element/Input/password
-tags:
-  - Formulário
-  - campo
-  - senha
-translation_of: Web/HTML/Element/input/password
 ---
 {{HTMLSidebar}}
 

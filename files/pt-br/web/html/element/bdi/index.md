@@ -1,7 +1,6 @@
 ---
 title: <bdi>
 slug: Web/HTML/Element/bdi
-translation_of: Web/HTML/Element/bdi
 ---
 ## Resumo
 

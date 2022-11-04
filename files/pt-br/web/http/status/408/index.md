@@ -1,12 +1,6 @@
 ---
 title: 408 Request Timeout
 slug: Web/HTTP/Status/408
-tags:
-  - Erro Cliente
-  - HTTP
-  - Resposta Servidor
-  - Status code
-translation_of: Web/HTTP/Status/408
 ---
 {{HTTPSidebar}}
 

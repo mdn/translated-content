@@ -1,22 +1,6 @@
 ---
 title: Uma visão geral do HTTP
 slug: Web/HTTP/Overview
-tags:
-  - Arquitetura cliente-servidor
-  - Cliente
-  - Como a internet funciona
-  - HTML
-  - HTTP
-  - Mecânica da Internet
-  - Protocolos
-  - Rede
-  - Servidor
-  - TCP
-  - UDP
-  - Visão Geral
-  - cliente-servidor
-  - protocolos de rede
-translation_of: Web/HTTP/Overview
 ---
 {{HTTPSidebar}}
 

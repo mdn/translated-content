@@ -1,7 +1,6 @@
 ---
 title: <hr>
 slug: Web/HTML/Element/hr
-translation_of: Web/HTML/Element/hr
 ---
 ## Sumário
 

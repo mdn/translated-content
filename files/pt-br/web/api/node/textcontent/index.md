@@ -1,11 +1,6 @@
 ---
 title: Node.textContent
 slug: Web/API/Node/textContent
-tags:
-  - API
-  - DOM
-  - Property
-translation_of: Web/API/Node/textContent
 ---
 {{APIRef("DOM")}}
 

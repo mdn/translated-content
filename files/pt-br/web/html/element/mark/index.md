@@ -1,20 +1,6 @@
 ---
 title: <mark>
 slug: Web/HTML/Element/mark
-tags:
-  - Destaque
-  - Elemento HTML
-  - HTML
-  - HTML5
-  - HTML:Elemento
-  - Internet
-  - Marcação
-  - Rede
-  - Referencia
-  - Referência HTML
-  - Semántica HTML a nivel de texto
-  - Web
-translation_of: Web/HTML/Element/mark
 ---
 ## Sumário
 

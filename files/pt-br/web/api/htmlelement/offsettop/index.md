@@ -1,11 +1,6 @@
 ---
 title: HTMLElement.offsetTop
 slug: Web/API/HTMLElement/offsetTop
-tags:
-  - API
-  - ApenasLeitura
-  - Propriedade
-translation_of: Web/API/HTMLElement/offsetTop
 ---
 {{ APIRef("HTML DOM") }}
 

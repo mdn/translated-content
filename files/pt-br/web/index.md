@@ -1,10 +1,6 @@
 ---
 title: Tecnologia Web para desenvolvedores
 slug: Web
-tags:
-  - Landing
-  - Web
-translation_of: Web
 ---
 A Web aberta apresenta oportunidades incríveis para os desenvolvedores. Para tirar o máximo proveito dessas tecnologias, você precisa saber como usá-las. Abaixo, você encontrará links para nossa documentação de tecnologias Web.
 

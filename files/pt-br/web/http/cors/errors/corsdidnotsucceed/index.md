@@ -1,7 +1,6 @@
 ---
 title: 'Razão: A requisição CORS não foi bem sucedida'
 slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
-translation_of: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
 {{HTTPSidebar}}
 

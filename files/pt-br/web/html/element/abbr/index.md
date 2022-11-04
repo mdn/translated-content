@@ -1,20 +1,6 @@
 ---
 title: <abbr>
 slug: Web/HTML/Element/abbr
-tags:
-  - Elemento
-  - HTML
-  - Internet
-  - Rede
-  - Referencia
-  - Semántica HTML a nivel de texto
-  - Web
-  - abbr
-  - abreviação
-  - acrônimo
-  - definições
-  - semántica
-translation_of: Web/HTML/Element/abbr
 ---
 ## Sumário
 

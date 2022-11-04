@@ -1,13 +1,6 @@
 ---
 title: <blink>
 slug: Web/HTML/Element/blink
-tags:
-  - Elemento
-  - HTML
-  - Não-padrão
-  - Obsoleto
-  - Web
-translation_of: Web/HTML/Element/blink
 ---
 {{Deprecated_header}} {{Non-standard_header}}
 

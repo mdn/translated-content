@@ -1,13 +1,6 @@
 ---
 title: grayscale()
 slug: Web/CSS/filter-function/grayscale
-tags:
-  - CSS
-  - Efeito filtro
-  - Filtros
-  - Função CSS
-  - Referencia
-translation_of: Web/CSS/filter-function/grayscale()
 original_slug: Web/CSS/filter-function/grayscale()
 ---
 {{cssref}}

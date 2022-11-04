@@ -1,14 +1,6 @@
 ---
 title: <template>
 slug: Web/HTML/Element/template
-tags:
-  - Componentes
-  - Elemento
-  - HTML
-  - Referência(2)
-  - Web
-  - Web Componentes
-translation_of: Web/HTML/Element/template
 ---
 ## Sumário
 

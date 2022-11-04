@@ -1,14 +1,6 @@
 ---
 title: dl
 slug: Web/HTML/Element/dl
-tags:
-  - Elemento
-  - HTML
-  - Internet
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/dl
 ---
 ## Resumo
 

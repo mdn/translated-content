@@ -1,7 +1,6 @@
 ---
 title: <style>
 slug: Web/HTML/Element/style
-translation_of: Web/HTML/Element/style
 ---
 ## Resumo
 

@@ -1,11 +1,6 @@
 ---
 title: Comentário
 slug: Web/CSS/Comments
-tags:
-  - CSS
-  - CSS Reference
-  - Iniciante
-translation_of: Web/CSS/Comments
 original_slug: Web/CSS/Comentário
 ---
 ios{{CSSRef}}

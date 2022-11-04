@@ -1,7 +1,6 @@
 ---
 title: localStorage.getItem()
 slug: Web/API/Storage/getItem
-translation_of: Web/API/Storage/getItem
 ---
 {{APIRef("Web Storage API")}}
 

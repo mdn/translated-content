@@ -1,14 +1,6 @@
 ---
 title: Math.asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Método(2)
-  - Reference
-  - Referência(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/asin
 ---
 {{JSRef}}
 

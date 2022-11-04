@@ -1,7 +1,6 @@
 ---
 title: <cite>
 slug: Web/HTML/Element/cite
-translation_of: Web/HTML/Element/cite
 ---
 O **elemento** **HTML \<cite>** representa uma referência a um trabalho artístico. Deve incluir o título do trabalho ou uma URL de referência, que pode ser em uma forma abreviada de acordo com as convenções usadas para a adição dos metadados de citação.
 

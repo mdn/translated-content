@@ -1,7 +1,6 @@
 ---
 title: <dt>
 slug: Web/HTML/Element/dt
-translation_of: Web/HTML/Element/dt
 ---
 ## Sumário
 
