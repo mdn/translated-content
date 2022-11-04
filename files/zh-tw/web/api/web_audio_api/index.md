@@ -27,16 +27,16 @@ Web Audio API 亦可控制音訊的空間定位 (Spatialized) 作業：透過 so
 - {{domxref("AudioListener")}}
 - {{domxref("AudioNode")}}
 - {{domxref("AudioParam")}}
-- {{event("audioprocess")}} (event)
+- [`audioprocess`](/zh-TW/docs/Web/API/ScriptProcessorNode/audioprocess_event) (event)
 - {{domxref("AudioProcessingEvent")}}
 - {{domxref("BiquadFilterNode")}}
 - {{domxref("ChannelMergerNode")}}
 - {{domxref("ChannelSplitterNode")}}
-- {{event("complete")}} (event)
+- [`complete`](/zh-TW/docs/Web/API/OfflineAudioContext/complete_event) (event)
 - {{domxref("ConvolverNode")}}
 - {{domxref("DelayNode")}}
 - {{domxref("DynamicsCompressorNode")}}
-- {{event("ended_(Web_Audio)", "ended")}} (event)
+- [`ended`](/zh-TW/docs/Web/API/HTMLMediaElement/ended_event) (event)
 - {{domxref("GainNode")}}
 - {{domxref("MediaElementAudioSourceNode")}}
 - {{domxref("MediaStreamAudioDestinationNode")}}

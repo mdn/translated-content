@@ -1,12 +1,6 @@
 ---
 title: HEAD
 slug: Web/HTTP/Methods/HEAD
-tags:
-  - Método de solicitação
-  - Referencia
-  - requisição
-  - solicitação
-translation_of: Web/HTTP/Methods/HEAD
 ---
 {{HTTPSidebar}}
 

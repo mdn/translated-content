@@ -1,13 +1,6 @@
 ---
 title: HTMLDivElement
 slug: Web/API/HTMLDivElement
-tags:
-  - API
-  - HTMLDivElement
-  - Interface
-  - PrecisaNovoLayout
-  - Referência(2)
-translation_of: Web/API/HTMLDivElement
 ---
 {{ APIRef("HTML DOM") }}
 

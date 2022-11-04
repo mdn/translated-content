@@ -62,4 +62,4 @@ translation_of: Web/HTML/Element/time
 
 - The {{HTMLElement("data")}} элемент, позволяющий обозначать другие типы данных.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -49,9 +49,9 @@ window.cancelAnimationFrame(myReq);
 
 {{Compat("api.Window.cancelAnimationFrame")}}
 
-## Especificación
+## Especificaciones
 
-- {{spec("http://www.w3.org/TR/animation-timing/#cancelAnimationFrame", "Timing control for script-based animations: cancelAnimationFrame", "WD")}}
+{{Specifications}}
 
 ## Ver también
 

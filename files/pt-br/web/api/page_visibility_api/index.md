@@ -1,12 +1,6 @@
 ---
 title: Page Visibility API
 slug: Web/API/Page_Visibility_API
-tags:
-  - DOM
-  - Intermediário
-  - Tutoriais
-  - Visibilidade
-translation_of: Web/API/Page_Visibility_API
 ---
 {{DefaultAPISidebar("Page Visibility API")}}
 

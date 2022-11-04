@@ -1,12 +1,6 @@
 ---
 title: text-align
 slug: Web/CSS/text-align
-tags:
-  - CSS
-  - Propriedade CSS
-  - Referencia
-  - Texto CSS
-translation_of: Web/CSS/text-align
 ---
 {{CSSRef}}
 

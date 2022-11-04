@@ -1,10 +1,6 @@
 ---
 title: Whitespace no DOM
 slug: Web/API/Document_Object_Model/Whitespace
-tags:
-  - DOM
-  - Intermediário
-translation_of: Web/API/Document_Object_Model/Whitespace
 original_slug: DOM/Referencia_do_DOM/Whitespace_in_the_DOM
 ---
 ## O problema

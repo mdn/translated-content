@@ -1,7 +1,6 @@
 ---
 title: Math.cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
 ---
 {{JSRef}}
 

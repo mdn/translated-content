@@ -1,12 +1,6 @@
 ---
 title: Funções
 slug: Web/JavaScript/Guide/Functions
-tags:
-  - Funções JavaScript
-  - Guia(2)
-  - Iniciante
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Functions
 original_slug: Web/JavaScript/Guide/Funções
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}

@@ -1,7 +1,6 @@
 ---
 title: Width
 slug: Web/SVG/Attribute/width
-translation_of: Web/SVG/Attribute/width
 ---
 « [SVG Attribute reference home](/en/SVG/Attribute)
 

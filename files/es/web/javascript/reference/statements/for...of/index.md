@@ -113,7 +113,7 @@ for (let value of iterable) {
 // 3
 ```
 
-### Iterando un objeto [arguments](/es/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments)
+### Iterando un objeto arguments
 
 ```js
 (function() {
@@ -232,7 +232,7 @@ El bucle `for...in iterará sobre todas las propiedades de un objeto.` Más tecn
 
 La sintaxis de **`for...of`** es específica para las **colecciones**, y no para todos los objetos. Esta Iterará sobre cualquiera de los elementos de una colección que tengan la propiedad `[Symbol.iterator]`.
 
-El siguiente ejemplo muestra las diferencias entre un bucle **`for...of`** y un bucle **f`or...in`**.
+El siguiente ejemplo muestra las diferencias entre un bucle **`for...of`** y un bucle **`for...in`**.
 
 ```js
 let arr = [3, 5, 7];

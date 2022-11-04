@@ -1,11 +1,6 @@
 ---
 title: Elemento
 slug: Glossary/Element
-tags:
-  - Codificação de Scripts
-  - Glossário
-  - HTML
-translation_of: Glossary/Element
 original_slug: Glossario/Elemento
 ---
 Um elemento é parte de uma página web. Em XML e HTML, um elemento pode conter um item de dados, ou um bloco de texto, ou uma imagem, ou talvez nada. Um elemento típico inclui uma tag de abertura com alguns atributos, o conteúdo de texto incluído e uma tag de fechamento.

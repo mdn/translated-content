@@ -1,15 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope.clients
 slug: Web/API/ServiceWorkerGlobalScope/clients
-tags:
-  - API
-  - Clients
-  - Service Worker
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerGlobalScope
-  - ServiceWorkers
-translation_of: Web/API/ServiceWorkerGlobalScope/clients
 ---
 {{APIRef("Service Workers API")}}
 

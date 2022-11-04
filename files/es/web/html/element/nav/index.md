@@ -12,7 +12,7 @@ tags:
 translation_of: Web/HTML/Element/nav
 original_slug: Web/HTML/Elemento/nav
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 El **elemento** **HTML `<nav>`** representa una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos. Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices.
 

@@ -1,7 +1,6 @@
 ---
 title: MessagePort.postMessage()
 slug: Web/API/MessagePort/postMessage
-translation_of: Web/API/MessagePort/postMessage
 ---
 {{APIRef("HTML DOM")}}
 

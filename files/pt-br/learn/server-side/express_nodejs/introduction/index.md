@@ -1,16 +1,6 @@
 ---
 title: Introdução Express/Node
 slug: Learn/Server-side/Express_Nodejs/Introduction
-tags:
-  - Aprender
-  - Express
-  - Iniciante
-  - JavaScript
-  - Node
-  - Servidor
-  - Tutorial
-  - nodejs
-translation_of: Learn/Server-side/Express_Nodejs/Introduction
 original_slug: Learn/Server-side/Express_Nodejs/Introdução
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}

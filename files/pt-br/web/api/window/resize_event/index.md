@@ -1,7 +1,6 @@
 ---
 title: resize
 slug: Web/API/Window/resize_event
-translation_of: Web/API/Window/resize_event
 ---
 O evento **`resize`** é disparado quando o document view é redimensionado.
 

@@ -1,13 +1,6 @@
 ---
 title: If-None-Match
 slug: Web/HTTP/Headers/If-None-Match
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-  - Requisições Condicionais
-translation_of: Web/HTTP/Headers/If-None-Match
 ---
 {{HTTPSidebar}}
 

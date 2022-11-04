@@ -1,14 +1,6 @@
 ---
 title: 429 Too Many Requests
 slug: Web/HTTP/Status/429
-tags:
-  - Código de status
-  - Erro
-  - Erro de cliente
-  - HTTP
-  - Referência(2)
-  - Status HTTP
-translation_of: Web/HTTP/Status/429
 ---
 {{HTTPSidebar}}
 

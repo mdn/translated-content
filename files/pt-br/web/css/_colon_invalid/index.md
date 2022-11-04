@@ -1,12 +1,6 @@
 ---
 title: ':invalid'
 slug: Web/CSS/:invalid
-tags:
-  - CSS
-  - Formulário
-  - Pseudo-class
-  - Validações
-translation_of: Web/CSS/:invalid
 ---
 {{CSSRef}}
 

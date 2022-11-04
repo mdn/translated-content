@@ -13,7 +13,7 @@ translation_of: Web/API/GestureEvent
 
 {{Non-standard_header()}}
 
-L'interface propriétaire **`GestureEvent`** propre à WebKitdonne des informations sur les gestes multi-touches. Les événements utilisant cette interface incluent {{event("gesturestart")}}, {{event("gesturechange")}} et {{event("gestureend")}}.
+L'interface propriétaire **`GestureEvent`** propre à WebKitdonne des informations sur les gestes multi-touches. Les événements utilisant cette interface incluent [`gesturestart`](/fr/docs/Web/API/Element/gesturestart_event), [`gesturechange`](/fr/docs/Web/API/Element/gesturechange_event) et [`gestureend`](/fr/docs/Web/API/Element/gestureend_event).
 
 `GestureEvent` dérive de {{domxref("UIEvent")}} qui elle-même dérive de {{domxref("Event")}}.
 
@@ -40,9 +40,9 @@ _Cette interface hérite aussi des méthodes de ses parents {{domxref("UIEvent")
 
 ## Types d'événement gestuel
 
-- {{event("gesturestart")}}
-- {{event("gesturechange")}}
-- {{event("gestureend")}}
+- [`gesturestart`](/fr/docs/Web/API/Element/gesturestart_event)
+- [`gesturechange`](/fr/docs/Web/API/Element/gesturechange_event)
+- [`gestureend`](/fr/docs/Web/API/Element/gestureend_event)
 
 ## Spécifications
 
@@ -55,9 +55,9 @@ _Ne fait partie d'aucune spécification._ Apple a une [description dans la bibli
 ## Voir aussi
 
 - {{domxref("MSGestureEvent")}}
-- {{event("MSGestureStart")}}
-- {{event("MSGestureEnd")}}
-- {{event("MSGestureTap")}}
-- {{event("MSGestureHold")}}
-- {{event("MSGestureChange")}}
-- {{event("MSInertiaStart")}}
+-[`MSGestureStart`](/fr/docs/Web/API/Element/MSGestureStart_event)
+-[`MSGestureEnd`](/fr/docs/Web/API/Element/MSGestureEnd_event)
+-[`MSGestureTap`](/fr/docs/Web/API/Element/MSGestureTap_event)
+-[`MSGestureHold`](/fr/docs/Web/API/Element/MSGestureHold_event)
+-[`MSGestureChange`](/fr/docs/Web/API/Element/MSGestureChange_event)
+-[`MSInertiaStart`](/fr/docs/Web/API/Element/MSInertiaStart_event)

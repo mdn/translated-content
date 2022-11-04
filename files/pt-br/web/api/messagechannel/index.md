@@ -1,7 +1,6 @@
 ---
 title: MessageChannel
 slug: Web/API/MessageChannel
-translation_of: Web/API/MessageChannel
 ---
 {{APIRef("HTML DOM")}}
 

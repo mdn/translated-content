@@ -20,7 +20,7 @@ Un string representando el código fuente del arreglo.
 
 ## Descripción
 
-El método `toSource`r retorna los siguientes valores:
+El método `toSource` retorna los siguientes valores:
 
 - Para el objeto global {{jsxref("Array")}}, `toSource` devuelve el siguiente string indicando que el código fuente no está disponible:
 

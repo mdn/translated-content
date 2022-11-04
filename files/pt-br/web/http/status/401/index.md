@@ -1,12 +1,6 @@
 ---
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
-tags:
-  - Código de status
-  - Erro Cliente
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Status/401
 ---
 {{HTTPSidebar}}
 

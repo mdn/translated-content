@@ -1,18 +1,7 @@
 ---
 title: API Push
 slug: Web/API/Push_API
-tags:
-  - API
-  - Experimental
-  - Notificações
-  - Push
-  - Referencia
-  - Service Workers
-translation_of: Web/API/Push_API
 original_slug: Web/API/API_Push
-browser-compat:
-  - api.PushEvent
-  - api.PushMessageData
 ---
 {{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}
 

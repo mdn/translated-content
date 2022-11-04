@@ -1,7 +1,6 @@
 ---
 title: Notas de lançamento do Firefox para o desenvolvedor
 slug: Mozilla/Firefox/Releases
-translation_of: Mozilla/Firefox/Releases
 ---
 {{FirefoxSidebar}}
 

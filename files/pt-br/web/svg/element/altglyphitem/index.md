@@ -1,12 +1,6 @@
 ---
 title: altGlyphItem
 slug: Web/SVG/Element/altGlyphItem
-tags:
-  - Conteúdo Textual
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/altGlyphItem
 ---
 {{SVGRef}}
 

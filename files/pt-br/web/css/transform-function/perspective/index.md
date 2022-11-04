@@ -1,11 +1,6 @@
 ---
 title: perspective()
 slug: Web/CSS/transform-function/perspective
-tags:
-  - Função CSS
-  - Referencia
-  - Transformações CSS
-translation_of: Web/CSS/transform-function/perspective()
 original_slug: Web/CSS/transform-function/perspective()
 ---
 {{CSSRef}}
@@ -135,7 +130,7 @@ perspective(d)
 
 ## Compatibilidade com navegadores
 
-Veja o tipo de dado [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
+Veja o tipo de dado [`<transform-function>`](/pt-BR/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
 
 ## Ver também
 

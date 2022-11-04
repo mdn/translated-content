@@ -1,11 +1,6 @@
 ---
 title: animate
 slug: Web/SVG/Element/animate
-tags:
-  - Animação
-  - Elemento
-  - SVG
-translation_of: Web/SVG/Element/animate
 ---
 {{SVGRef}}
 

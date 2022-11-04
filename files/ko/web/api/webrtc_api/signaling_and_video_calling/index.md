@@ -5,7 +5,7 @@ translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 ---
 {{WebRTCSidebar}}
 
-> **참고:** s이 글은 편집 및 검토가 필요하다. [도움을 줄 수 있는 방법](https://developer.mozilla.org/docs/MDN/Contribute/Howto/Do_an_editorial_review)을 살펴보자.WebRTC는 아직까지 **실험적인 기술이다.**
+> **참고:** s이 글은 편집 및 검토가 필요하다. [도움을 줄 수 있는 방법](/docs/MDN/Contribute/Howto/Do_an_editorial_review)을 살펴보자.WebRTC는 아직까지 **실험적인 기술이다.**
 > 일부의 기술 스펙이 안정화가 되지 않았기 때문에 각 브라우져에서 사용가능한 [호환성 정보](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling#Browser_compatibility)를 확인해야한다. 또한, 기술의 문법과 패턴들은 스펙이 바뀌는 것처럼 브라우져의 버전이 높아진다면 변경될 수 있다.
 
 ## Summary

@@ -1,7 +1,6 @@
 ---
 title: Entendendo o formato textual do WebAssembly
 slug: WebAssembly/Understanding_the_text_format
-translation_of: WebAssembly/Understanding_the_text_format
 original_slug: WebAssembly/Entendendo_o_formato_textual_do_WebAssembly
 ---
 {{WebAssemblySidebar}}

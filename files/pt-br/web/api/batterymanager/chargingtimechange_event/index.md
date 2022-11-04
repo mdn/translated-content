@@ -1,13 +1,6 @@
 ---
 title: BatteryManager.onchargingtimechange
 slug: Web/API/BatteryManager/chargingtimechange_event
-tags:
-  - API
-  - Battery API
-  - Event Handler
-  - Propriedade
-  - Referencia
-translation_of: Web/API/BatteryManager/onchargingtimechange
 original_slug: Web/API/BatteryManager/onchargingtimechange
 ---
 {{APIRef("Battery API")}}

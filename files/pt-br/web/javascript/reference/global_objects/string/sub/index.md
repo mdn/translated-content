@@ -1,14 +1,6 @@
 ---
 title: String.prototype.sub()
 slug: Web/JavaScript/Reference/Global_Objects/String/sub
-tags:
-  - Descontinuado
-  - JavaScript
-  - Prototipo
-  - String
-  - metodo
-  - sub()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/sub
 ---
 {{JSRef}} {{deprecated_header}}
 

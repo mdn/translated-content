@@ -1,16 +1,6 @@
 ---
 title: Segurança em aplicação web
 slug: Learn/Server-side/First_steps/Website_security
-tags:
-  - Aprendizagem
-  - Guía
-  - Iniciante
-  - Introdução
-  - Programação do server
-  - Segurança
-  - Segurança em aplicações web
-  - Segurança web
-translation_of: Learn/Server-side/First_steps/Website_security
 original_slug: Learn/Server-side/First_steps/Seguranca_site
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}

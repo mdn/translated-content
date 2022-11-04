@@ -1,13 +1,6 @@
 ---
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
-tags:
-  - Cacheamento
-  - Depreciado
-  - HTTP
-  - cabeçalho
-  - requisição
-translation_of: Web/HTTP/Headers/Pragma
 ---
 {{HTTPSidebar}}
 

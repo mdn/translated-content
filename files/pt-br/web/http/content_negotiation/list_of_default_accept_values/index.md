@@ -1,16 +1,10 @@
 ---
 title: Lista de valores padrões de Accept
 slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
-tags:
-  - Accept
-  - HTTP
-  - Negociação de conteúdo
-  - Referencia
-translation_of: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 ---
 {{HTTPSidebar}}
 
-Este artigo documenta os valores padrão para o cabeçalho HTTP [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) para entradas e versões específicas do navegador.
+Este artigo documenta os valores padrão para o cabeçalho HTTP [`Accept`](/pt-BR/docs/Web/HTTP/Headers/Accept) para entradas e versões específicas do navegador.
 
 ## Valores padrão
 

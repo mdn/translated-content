@@ -1,9 +1,6 @@
 ---
 title: flex-flow
 slug: Web/CSS/flex-flow
-tags:
-  - flex-box
-translation_of: Web/CSS/flex-flow
 ---
 {{CSSRef}}
 

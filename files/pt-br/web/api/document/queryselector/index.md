@@ -1,7 +1,6 @@
 ---
 title: Document.querySelector()
 slug: Web/API/Document/querySelector
-translation_of: Web/API/Document/querySelector
 ---
 {{ ApiRef("DOM") }}
 

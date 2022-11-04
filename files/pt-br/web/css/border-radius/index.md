@@ -1,10 +1,6 @@
 ---
 title: border-radius
 slug: Web/CSS/border-radius
-tags:
-  - CSS
-  - border-radius
-translation_of: Web/CSS/border-radius
 ---
 {{CSSRef}}
 

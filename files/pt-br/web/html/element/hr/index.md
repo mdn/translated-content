@@ -1,7 +1,6 @@
 ---
 title: <hr>
 slug: Web/HTML/Element/hr
-translation_of: Web/HTML/Element/hr
 ---
 ## Sumário
 
@@ -69,4 +68,4 @@ Para alterar a aparencia da linha ou as lacunas entre ela e os parágrafos, util
 
 - [Elemento HTML parágrafo](/pt-BR/docs/HTML/Element/p)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

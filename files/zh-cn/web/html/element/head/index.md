@@ -46,4 +46,4 @@ slug: Web/HTML/Element/head
 
 - 可用于\<head>元素内的元素有：{{HTMLElement("title")}}, {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("style")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("noscript")}}, {{HTMLElement("command")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

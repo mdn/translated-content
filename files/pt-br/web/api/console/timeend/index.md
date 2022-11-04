@@ -1,10 +1,6 @@
 ---
 title: Console.timeEnd()
 slug: Web/API/Console/timeEnd
-tags:
-  - Desenvolvimento Web
-  - metodo
-translation_of: Web/API/Console/timeEnd
 ---
 {{APIRef("Console API")}}{{Non-standard_header}}
 

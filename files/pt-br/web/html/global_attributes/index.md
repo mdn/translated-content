@@ -1,19 +1,6 @@
 ---
 title: Atributos Globais
 slug: Web/HTML/Global_attributes
-tags:
-  - Attribute
-  - HTML
-  - Internet
-  - NeedsBrowserCompatibility
-  - NeedsTranslation
-  - PrecisaCompatibilidadeNavegadores
-  - Reference
-  - Referencia
-  - TopicStub
-  - Web
-  - atributo
-translation_of: Web/HTML/Global_attributes
 ---
 {{HTMLSidebar("Global_attributes")}}
 

@@ -16,7 +16,7 @@ translation_of: Web/HTML/Element/caption
 browser-compat: html.elements.caption
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément **`<caption>`** définit la légende (ou le titre) d'un tableau.
 

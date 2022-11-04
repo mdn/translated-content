@@ -45,7 +45,7 @@ var getting = browser.cookies.getAll(
     - `secure`{{optional_inline}}
       - : Un `booléen` — filtre les cookies par leur propriété `sécurisée`, vous permettant de filtrer les cookies sécurisés contre les cookies non sécurisés.
     - `session`{{optional_inline}}
-      - : Un `booléen`— filtre les cookies en fonction de leur propriété de `session`, ce qui vous permet de filtrer les cookies de session par rapport aux cookies persistants.
+      - : Un `booléen` — filtre les cookies en fonction de leur propriété de `session`, ce qui vous permet de filtrer les cookies de session par rapport aux cookies persistants.
     - `storeId`{{optional_inline}}
       - : Une `chaîne` représentant le magasin de cookies pour récupérer les cookies. S'il est omi, le cookie store du contexte d'exécution actuel sera utilisé.
     - `url`{{optional_inline}}

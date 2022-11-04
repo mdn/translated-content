@@ -1,7 +1,6 @@
 ---
 title: Element.addEventListener()
 slug: Web/API/EventTarget/addEventListener
-translation_of: Web/API/EventTarget/addEventListener
 original_slug: Web/API/Element/addEventListener
 ---
 {{apiref("DOM Events")}}

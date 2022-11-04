@@ -14,7 +14,7 @@ tags:
 translation_of: Web/HTML/Element/iframe
 original_slug: Web/HTML/Elemento/iframe
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 El **elemento HTML `<iframe>`** (de inline frame) representa un {{Glossary("contexto de navegación")}} anidado, el cual permite incrustrar otra página HTML en la página actual.
 
@@ -104,7 +104,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 - {{htmlattrdef("csp")}} {{experimental_inline}}
   - : Una [Politica de Seguridad del Contenido](/es/docs/Web/HTTP/CSP) aplicada para el recurso incrustado. Vea {{domxref("HTMLIFrameElement.csp")}} para detalles.
 - {{ htmlattrdef("height") }}
-  - : Indica la altura del frame {{ HTMLVersionInline(5) }}en píxeles CSS, o {{ HTMLVersionInline(4.01) }} en píxeles o como un porcentaje.
+  - : Indica la altura del frame en HTML5 en píxeles CSS, o en HTML4.01 en píxeles o como un porcentaje.
 - {{htmlattrdef("importance")}} {{experimental_inline}}
 
   - : La prioridad de descarga en el recurso para el atributo `src` del `<iframe>`. Valores permitidos:
@@ -164,7 +164,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 - {{ htmlattrdef("srcdoc") }}
   - : The content of the page that the embedded context is to contain.
 - {{ htmlattrdef("width") }}
-  - : Indicates the width of the frame {{ HTMLVersionInline(5) }} in CSS pixels, or {{ HTMLVersionInline(4.01) }} in pixels or as a percentage.
+  - : Indicates the width of the frame in HTML5 in CSS pixels, or in HTML4.01 in pixels or as a percentage.
 
 ### Atributos obsoletos
 
@@ -192,7 +192,7 @@ Estos atributos están obsoletos y es posible que ya no sean compatibles con tod
 
 - {{htmlattrdef("mozbrowser")}} {{non-standard_inline}}
 
-  - :&#x20;
+  - : &#x20;
 
     > **Nota:** See {{bug(1318532)}} for exposing this to WebExtensions in Firefox.
 
@@ -268,7 +268,7 @@ En este ejemplo, se muestra un mapa de Google en un marco.
 
 ## Notes
 
-Starting in Gecko 6.0 {{ geckoRelease("6.0") }}, rendering of inline frames correctly respects the borders of their containing element when they're rounded using {{ cssxref("border-radius") }}.
+Starting in Gecko 6.0 (Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3), rendering of inline frames correctly respects the borders of their containing element when they're rounded using {{ cssxref("border-radius") }}.
 
 ## Browser compatibility
 

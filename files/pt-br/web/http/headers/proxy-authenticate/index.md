@@ -1,13 +1,6 @@
 ---
 title: Proxy-Authenticate
 slug: Web/HTTP/Headers/Proxy-Authenticate
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de Resposta
-  - HTTP
-  - Proxy
-  - Referencia
-translation_of: Web/HTTP/Headers/Proxy-Authenticate
 ---
 {{HTTPSidebar}}
 

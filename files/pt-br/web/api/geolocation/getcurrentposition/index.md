@@ -1,7 +1,6 @@
 ---
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
-translation_of: Web/API/Geolocation/getCurrentPosition
 ---
 {{ APIRef("Geolocation API") }}
 

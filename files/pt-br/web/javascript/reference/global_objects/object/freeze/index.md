@@ -1,7 +1,6 @@
 ---
 title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 ---
 {{JSRef}}
 

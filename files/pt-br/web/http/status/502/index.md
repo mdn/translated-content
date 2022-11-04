@@ -1,13 +1,6 @@
 ---
 title: 502 Bad Gateway
 slug: Web/HTTP/Status/502
-tags:
-  - Código de status
-  - Erro do servidor
-  - HTTP
-  - Server error
-  - Status code
-translation_of: Web/HTTP/Status/502
 ---
 {{HTTPSidebar}}
 

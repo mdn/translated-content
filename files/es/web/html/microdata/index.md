@@ -18,7 +18,7 @@ El Grupo de Trabajo de HTML del W3C no pudo encontrar un editor que se encargase
 En un nivel elevado, los microdatos consisten de un grupo de conjuntos nombre-valor. Tales grupos se denominan elementos, y cada conjunto nombre-valor es una propiedad. Los elementos y las propiedades los representan elementos ordinarios.
 
 - Para crear un elemento, se utiliza el atributo **itemscope** (‘alcance de elemento’).
-- Para añadir una propiedad a un elemento, el atributo **itemprop** (‘propiedad de elemento’)\*\* \*\*se emplea en uno de los descendientes del elemento.
+- Para añadir una propiedad a un elemento, el atributo **itemprop** (‘propiedad de elemento’) se emplea en uno de los descendientes del elemento.
 
 ## Vocabularios
 

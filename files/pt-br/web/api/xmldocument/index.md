@@ -1,13 +1,6 @@
 ---
 title: DocumentoXML
 slug: Web/API/XMLDocument
-tags:
-  - API
-  - DOM
-  - DocumentoXML
-  - Experimental
-  - Interface
-translation_of: Web/API/XMLDocument
 ---
 {{APIRef("DOM")}}{{SeeCompatTable}}
 

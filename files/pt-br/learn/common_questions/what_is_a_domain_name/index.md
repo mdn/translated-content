@@ -1,7 +1,6 @@
 ---
 title: O que é um nome de domínio?
 slug: Learn/Common_questions/What_is_a_domain_name
-translation_of: Learn/Common_questions/What_is_a_domain_name
 ---
 Nesse artigo examinaremos nomes de domínios: o que são, como são estruturados, e como conseguir um.
 
@@ -56,7 +55,7 @@ Cada uma dessas partes fornece informações específicas sobre todo o domain na
 - {{Glossary("TLD")}} (Top-Level Domain).
   - : O TLD fornece as informações mais genéricas. TLDs informa aos usuários o propósito geral do serviço por trás do nome de domínio. Os TLDs mais genéricos (.com, .org, .net) não requer web services para atender a critérios rigorosos, mas alguns TLDs impõem políticas mais rigorosas. Por exemplo, TLDs locais tais como .us, .fr, or .sh podem exigir que o serviço seja fornecido em um determinado idioma ou hospedado em um determinado país.
 - Label (ou componente)
-  - : Os labels são os que seguem o TLD. Um label pode ser qualquer coisa, de uma letra a uma frase completa. O label localizado a direita antes do TLD pode também ser referido como um _Domínio de Nível Secundário_ (SLD). Um _nome de domínio_ pode ter muitos labels, não é obrigatório nem necessário ter 3 labels para formar um nome de domínio. Por exemplo, www\.inf.ed.ac.uk é um nome de domínio correto. Ao controlar a parte "superior" de um nome de domínio (p.e. [mozilla.org](https://mozilla.org)), pode-se criar outros nomes de domínios (às vezes chamados de "subdomínios") (p.e. [developer.mozilla.org](https://developer.mozilla.org)).
+  - : Os labels são os que seguem o TLD. Um label pode ser qualquer coisa, de uma letra a uma frase completa. O label localizado a direita antes do TLD pode também ser referido como um _Domínio de Nível Secundário_ (SLD). Um _nome de domínio_ pode ter muitos labels, não é obrigatório nem necessário ter 3 labels para formar um nome de domínio. Por exemplo, www\.inf.ed.ac.uk é um nome de domínio correto. Ao controlar a parte "superior" de um nome de domínio (p.e. [mozilla.org](https://mozilla.org)), pode-se criar outros nomes de domínios (às vezes chamados de "subdomínios") (p.e. [developer.mozilla.org](/)).
 
 ### Comprando um nome de domínio
 

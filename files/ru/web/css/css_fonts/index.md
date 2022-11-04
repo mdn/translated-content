@@ -68,7 +68,7 @@ p {
 ### At-rules
 
 - {{cssxref("@font-face")}}
-  - : \* {{cssxref("@font-face/font-family", "font-family")}}
+  - : {{cssxref("@font-face/font-family", "font-family")}}
     - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
     - {{cssxref("@font-face/font-style", "font-style")}}
     - {{cssxref("@font-face/font-variant", "font-variant")}}

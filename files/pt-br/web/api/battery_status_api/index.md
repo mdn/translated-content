@@ -1,16 +1,6 @@
 ---
 title: Battery Status API
 slug: Web/API/Battery_Status_API
-tags:
-  - API
-  - Apps
-  - Batería
-  - Firefox OS
-  - Guia(2)
-  - Guía
-  - Mobile
-  - Obsoleto
-translation_of: Web/API/Battery_Status_API
 original_slug: WebAPI/Battery_Status
 ---
 {{obsolete_header}}{{DefaultAPISidebar("Battery API")}}

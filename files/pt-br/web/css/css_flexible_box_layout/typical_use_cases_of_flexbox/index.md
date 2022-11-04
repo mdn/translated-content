@@ -1,7 +1,6 @@
 ---
 title: Casos típicos de uso do Flexbox
 slug: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 ---
 {{CSSRef}}
 

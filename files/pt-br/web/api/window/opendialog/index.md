@@ -1,7 +1,6 @@
 ---
 title: window.openDialog
 slug: Web/API/Window/openDialog
-translation_of: Web/API/Window/openDialog
 ---
 {{ ApiRef() }}
 

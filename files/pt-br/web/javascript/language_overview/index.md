@@ -1,7 +1,6 @@
 ---
 title: Uma reintrodução ao JavaScript (Tutorial de JS)
 slug: Web/JavaScript/Language_Overview
-translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 ## Introdução

@@ -10132,7 +10132,7 @@
     "modified": "2020-03-12T19:39:46.309Z",
     "contributors": ["SphinxKnight", "cirocosta"]
   },
-  "Web/JavaScript/Reference/Operators/Nullish_coalescing_operator": {
+  "Web/JavaScript/Reference/Operators/Nullish_coalescing": {
     "modified": "2020-10-15T22:27:35.360Z",
     "contributors": ["mateusvelleda", "yagoag", "marlonveiga-santos"]
   },

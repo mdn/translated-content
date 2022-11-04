@@ -6,7 +6,7 @@ tags:
   - слайдер
 translation_of: Web/HTML/Element/input/range
 ---
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar("Input_types")}}
 
 Элементы {{HTMLElement("input")}} с типом **`range`** позволяют пользователю определить числовое значение, которое должно быть в пределах указанного промежутка. Однако, точное значение должно быть не слишком важно. Обычно они представляет собой слайдер или контроллер, но не текстовое поле как {{HTMLElement('input/number', 'number')}}. Так как этот виджет неточен, его не следует использовать, в случае, если важно установить точное значение .
 
@@ -52,7 +52,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 {{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}
 
-Смотрите [управление диапазоном с помощью решётки](/ru/docs/Web/HTML/Element/Input/range$edit#A_range_control_with_hash_marks) ниже, для примера того, как параметры диапазона обозначаются в поддерживаемых браузерах.
+Смотрите [управление диапазоном с помощью решётки](/ru/docs/Web/HTML/Element/Input/range#A_range_control_with_hash_marks) ниже, для примера того, как параметры диапазона обозначаются в поддерживаемых браузерах.
 
 ### {{htmlattrdef("max")}}
 

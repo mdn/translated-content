@@ -73,14 +73,14 @@ translation_of: Web/HTML/Element/dd
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
   - : 값이 `yes`면 너비의 끝에서 정의 텍스트의 줄이 바뀌지 않습니다. 기본값은 `no`입니다.
 
 ## 예제
 
-예제를 보려면 [`<dl>` 예제](/ko/docs/HTML/Element/dl#예제 "HTML/Element/dl#examples")를 보세요.
+예제를 보려면 [`<dl>` 예제](/ko/docs/HTML/Element/dl#예제)를 보세요.
 
 ## 명세
 

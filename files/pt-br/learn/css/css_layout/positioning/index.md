@@ -1,7 +1,6 @@
 ---
 title: Positioning
 slug: Learn/CSS/CSS_layout/Positioning
-translation_of: Learn/CSS/CSS_layout/Positioning
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Aprenda/CSS/CSS_layout/Floats", "Aprenda/CSS/CSS_layout/Multiple-column_Layout", "Aprenda/CSS/CSS_layout")}}
 

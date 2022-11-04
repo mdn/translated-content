@@ -1,7 +1,6 @@
 ---
 title: Animation.cancel()
 slug: Web/API/Animation/cancel
-translation_of: Web/API/Animation/cancel
 ---
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 

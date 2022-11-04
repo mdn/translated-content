@@ -56,7 +56,7 @@ slug: Learn/Common_questions/What_is_a_domain_name
 
     TLD の直前にあるラベルは、**二次レベルドメイン** (SLD) とも呼ばれます。
 
-    ドメイン名は多数のラベル（またはコンポーネント）を持つことができますが、ドメイン名を構成するのにラベルを 3 つ持つことが必須でも必要でもありません。例えば、 www\.inf.ed.ac.uk は正しいドメイン名です。制御権のあるドメイン（例えば [mozilla.org](https://www.mozilla.org/en-US/)）には、 [developer.mozilla.org](https://developer.mozilla.org), [iot.mozilla.org](https://iot.mozilla.org/), [bugzilla.mozilla.org](https://bugzilla.mozilla.org) のように、互いに異なる内容で「サブドメイン」を作成することができます。
+    ドメイン名は多数のラベル（またはコンポーネント）を持つことができますが、ドメイン名を構成するのにラベルを 3 つ持つことが必須でも必要でもありません。例えば、 www\.inf.ed.ac.uk は正しいドメイン名です。制御権のあるドメイン（例えば [mozilla.org](https://www.mozilla.org/en-US/)）には、 [developer.mozilla.org](/), [iot.mozilla.org](https://iot.mozilla.org/), [bugzilla.mozilla.org](https://bugzilla.mozilla.org) のように、互いに異なる内容で「サブドメイン」を作成することができます。
 
 ### ドメイン名の購入
 

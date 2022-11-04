@@ -1,7 +1,6 @@
 ---
 title: <data>
 slug: Web/HTML/Element/data
-translation_of: Web/HTML/Element/data
 ---
 ## Summary
 
@@ -48,4 +47,4 @@ The following example displays product names but also associates each name with 
 
 - The HTML {{HTMLElement("time")}} element.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

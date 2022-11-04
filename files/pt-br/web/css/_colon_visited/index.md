@@ -1,12 +1,6 @@
 ---
 title: ':visited'
 slug: Web/CSS/:visited
-tags:
-  - CSS
-  - Layout
-  - Pseudo-classes
-  - Web
-translation_of: Web/CSS/:visited
 ---
 {{ CSSRef }}
 

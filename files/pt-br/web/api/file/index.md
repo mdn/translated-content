@@ -1,13 +1,6 @@
 ---
 title: File
 slug: Web/API/File
-tags:
-  - API
-  - Arquivos
-  - DOM
-  - Files
-  - Referencia
-translation_of: Web/API/File
 ---
 {{gecko_minversion_header("1.9")}}{{APIRef("File API")}}
 

@@ -1,11 +1,6 @@
 ---
 title: switch
 slug: Web/SVG/Element/switch
-tags:
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/switch
 ---
 {{SVGRef}}
 

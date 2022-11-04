@@ -13,7 +13,7 @@ Mozilla 提供了一些额外的非标准方法来支持多个元素的拖拽。
 
 ## 基于索引的添加和获取
 
-{{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} 方法可以让你在 {{event("dragstart")}} 事件里添加多个元素。该函数功能类似于 {{domxref("DataTransfer.setData","setData()")}}。
+{{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} 方法可以让你在 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件里添加多个元素。该函数功能类似于 {{domxref("DataTransfer.setData","setData()")}}。
 
 ```
 var dt = event.dataTransfer;
@@ -62,7 +62,7 @@ dt.mozClearDataAt("text/plain", 1);
 
 比较常见的使用多元素拖拽的场景，例如多个文件或者多个书签的拖拽中，记得给每个元素设置合适的数据项类型。尽管不是必须的，但你应该为所有元素设置一致的数据项类型，这可以确保目标元素接收到和预期一致的数据。
 
-你可以通过检查 {{domxref("DataTransfer.mozItemCount","mozItemCount")}} 属性来判断是否有多个元素被拖拽。该属性的值等于当前被拖拽的元素的个数。如果某个拖拽的目标元素只接受单个拖拽元素，它可以直接拒绝这次拖拽操作或者只接受其中的第一个元素。若需要拒绝这些元素，你可以不阻止 {{event("dragover")}} 事件，或者设置 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 属性为 `none`。最好将两者结合使用，因为有可能另一个监听函数已经阻止了事件。
+你可以通过检查 {{domxref("DataTransfer.mozItemCount","mozItemCount")}} 属性来判断是否有多个元素被拖拽。该属性的值等于当前被拖拽的元素的个数。如果某个拖拽的目标元素只接受单个拖拽元素，它可以直接拒绝这次拖拽操作或者只接受其中的第一个元素。若需要拒绝这些元素，你可以不阻止 [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件，或者设置 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 属性为 `none`。最好将两者结合使用，因为有可能另一个监听函数已经阻止了事件。
 
 若只接受拖拽的第一个元素，可以使用 {{domxref("DataTransfer.getData","getData()")}} 方法，就和处理单个元素一样。拖拽的目标只需支持单个元素的拖拽而无需任何额外的操作就可以适用于这个场景。
 
@@ -151,7 +151,7 @@ function output(text)
 </html>
 ```
 
-这个例子中通过调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法，阻止了 `{{event("dragenter")}}` 和 `{{event("dragover")}}` 事件。这使放置事件可以在该的元素上被触发。
+这个例子中通过调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法，阻止了 `[`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)` 和 `[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)` 事件。这使放置事件可以在该的元素上被触发。
 
 当放下一个元素时， `dodrop` 事件处理函数将会被调用。它会检查 {{domxref("DataTransfer.mozItemCount","mozItemCount")}} 属性来获取有多少元素被放下并且遍历他们。对于每个元素，都会通过调用 {{domxref("DataTransfer.mozTypesAt","mozTypesAt()")}} 方法来获得类型列表。数据类型列表也将被遍历以获取到所有和被拖拽元素相关的信息。
 

@@ -1,11 +1,6 @@
 ---
 title: Content-Length
 slug: Web/HTTP/Headers/Content-Length
-tags:
-  - Cabeçalhos
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Headers/Content-Length
 ---
 {{HTTPSidebar}}
 

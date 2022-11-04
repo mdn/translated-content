@@ -1,7 +1,6 @@
 ---
 title: Programação elegante com Promises
 slug: Learn/JavaScript/Asynchronous/Promises
-translation_of: Learn/JavaScript/Asynchronous/Promises
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}
 
@@ -293,7 +292,7 @@ Let's build another example to show this in action.
     });
     ```
 
-    When the promise is fulfilled, the `values` passed into the fullfillment handler would contain three `Response` objects, one for each of the `fetch()` operations that have completed.
+    When the promise is fulfilled, the `values` passed into the fulfillment handler would contain three `Response` objects, one for each of the `fetch()` operations that have completed.
 
     However, we don't want to do this. Our code doesn't care when the `fetch()` operations are done. Instead, what we want is the loaded data. That means we want to run the `Promise.all()` block when we get back usable blobs representing the images, and a usable text string. We can write a function that does this; add the following inside your `<script>` element:
 

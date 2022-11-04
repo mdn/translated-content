@@ -1,7 +1,6 @@
 ---
 title: 410 Gone
 slug: Web/HTTP/Status/410
-translation_of: Web/HTTP/Status/410
 ---
 {{HTTPSidebar}}
 

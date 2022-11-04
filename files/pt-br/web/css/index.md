@@ -1,14 +1,6 @@
 ---
 title: CSS
 slug: Web/CSS
-tags:
-  - CSS
-  - Design
-  - Estilos
-  - Landing
-  - Layout
-  - Referencia
-translation_of: Web/CSS
 ---
 {{CSSRef}}
 

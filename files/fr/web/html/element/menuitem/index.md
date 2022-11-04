@@ -10,7 +10,7 @@ tags:
 translation_of: Web/HTML/Element/menuitem
 ---
 
-{{HTMLRef}}{{Deprecated_Header("HTML5.2")}}
+{{HTMLSidebar}}{{Deprecated_Header("HTML5.2")}}
 
 L'élément HTML **`<menuitem>`** représente une commande qu'un utilisateur peut utiliser via un menu contextuel ou un menu rattaché à un bouton.
 

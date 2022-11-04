@@ -1,16 +1,6 @@
 ---
 title: Elementos HTML
 slug: Web/HTML/Element
-tags:
-  - Basic
-  - Element
-  - Elemento
-  - HTML
-  - Reference
-  - Referencia
-  - Web
-  - básico
-translation_of: Web/HTML/Element
 ---
 {{HTMLSidebar("Elements")}}
 

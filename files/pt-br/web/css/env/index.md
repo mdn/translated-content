@@ -1,16 +1,6 @@
 ---
 title: env()
 slug: Web/CSS/env
-tags:
-  - CSS
-  - CSS Function
-  - CSS Variables
-  - Draft
-  - Reference
-  - Variables
-  - env
-  - env()
-translation_of: Web/CSS/env()
 original_slug: Web/CSS/env()
 ---
 {{CSSRef}}

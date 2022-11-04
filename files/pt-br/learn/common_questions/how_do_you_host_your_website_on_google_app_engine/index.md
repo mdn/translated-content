@@ -1,7 +1,6 @@
 ---
 title: Como você hospeda seu site no Google App Engine?
 slug: Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
-translation_of: Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
 original_slug: Learn/Common_questions/Como_voce_hospeda_seu_site_Google_App_Engine
 ---
 

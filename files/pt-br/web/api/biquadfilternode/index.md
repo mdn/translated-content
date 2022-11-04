@@ -1,14 +1,6 @@
 ---
 title: BiquadFilterNode
 slug: Web/API/BiquadFilterNode
-tags:
-  - API
-  - BiquadFilterNode
-  - CompatibilidadeNavegadorCelular
-  - Interface
-  - Referencia
-  - Web Audio API
-translation_of: Web/API/BiquadFilterNode
 ---
 {{APIRef("Web Audio API")}}
 

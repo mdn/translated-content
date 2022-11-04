@@ -15,4 +15,4 @@ original_slug: Глоссарий/Pixel
 
 ### Технические ссылки
 
-- [Pixel ](https://en.wikipedia.org/wiki/Pixel)в Wikipedia
+- [Pixel](https://en.wikipedia.org/wiki/Pixel) в Wikipedia

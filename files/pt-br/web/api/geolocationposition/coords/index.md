@@ -1,7 +1,6 @@
 ---
 title: Position.coords
 slug: Web/API/GeolocationPosition/coords
-translation_of: Web/API/GeolocationPosition/coords
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
