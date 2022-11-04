@@ -131,4 +131,4 @@ table, th, td {
 
   - {{cssxref("text-align")}}, {{cssxref("caption-side")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

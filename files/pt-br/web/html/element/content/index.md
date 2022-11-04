@@ -104,4 +104,4 @@ This element is no longer defined by any specifications.
 - [Web Components](/pt-BR/docs/Web/Web_Components)
 - {{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

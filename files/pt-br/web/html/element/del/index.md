@@ -48,4 +48,4 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 
 - {{HTMLElement("ins")}} element for insertions into a text
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -15,7 +15,7 @@ tags:
   - formulários
 translation_of: Web/HTML/Element/input/button
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como um simples botão, que podem ser programados para controlar funcionalidades customizadas em qualquer lugar de uma página web quando for atribuído um evento (tipicamente para um evento {{event("click")}}).
 

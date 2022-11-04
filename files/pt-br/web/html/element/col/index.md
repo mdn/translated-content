@@ -3,7 +3,9 @@ title: <col>
 slug: Web/HTML/Element/col
 translation_of: Web/HTML/Element/col
 ---
-{{HTMLRef}}O elemento **HTML `<col>` **define uma tabela contendo colunas e sendo utilizada para definições semanticas em todas as colunas comuns. É normalmente encontrada dentro do elemento("colgroup")}} .Este elemento permite a estilização de colunas utilizando-se do CSS, porém apenas um numero pequeno de atributos que terão efeito dentro das colunas ([veja as especificações do CSS 2.1](https://www.w3.org/TR/CSS21/tables.html#columns) a partir dessa lista).
+{{HTMLSidebar}}
+
+O elemento **HTML `<col>` **define uma tabela contendo colunas e sendo utilizada para definições semanticas em todas as colunas comuns. É normalmente encontrada dentro do elemento("colgroup")}} .Este elemento permite a estilização de colunas utilizando-se do CSS, porém apenas um numero pequeno de atributos que terão efeito dentro das colunas ([veja as especificações do CSS 2.1](https://www.w3.org/TR/CSS21/tables.html#columns) a partir dessa lista).
 
 <table class="properties">
   <tbody>

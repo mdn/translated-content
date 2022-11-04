@@ -134,4 +134,4 @@ Scripts trying to access a frame's content are subject to the [same-origin polic
 
 {{Compat("html.elements.iframe", 3)}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

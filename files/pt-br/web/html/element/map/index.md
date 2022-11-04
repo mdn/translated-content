@@ -46,4 +46,4 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - {{HTMLElement ("a")}}
 - {{HTMLElement ("area")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -107,4 +107,4 @@ Para mudar a indentação de um termo, use a propriedade [CSS](/en/CSS) [margin]
 - Elemento {{ HTMLElement("dt") }}
 - Elemento {{ HTMLElement("dd") }}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -122,4 +122,4 @@ Ao fazer x é **imperativo** que se faça y antes de prosseguir.
 
 - [HTML bold element](/pt-BR/docs/HTML/Element/b)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

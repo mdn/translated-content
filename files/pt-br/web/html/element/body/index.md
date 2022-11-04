@@ -10,7 +10,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/body
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 O **elemento** `<body>` do **HTML** representa o conteúdo de um documento HTML. è permitido apenas um `<body>` por documento.
 

@@ -143,4 +143,4 @@ The script should be served with the `text/javascript` MIME type, but browsers a
 - {{domxref("document.currentScript")}}
 - [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pie.gd/test/script-link-events/)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

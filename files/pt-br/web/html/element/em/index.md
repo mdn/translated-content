@@ -118,4 +118,4 @@ Um exemplo para `<i>` poderia ser: "A _Rainha Mary_ velejou na noite passada". A
 
 - {{HTMLElement("i")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

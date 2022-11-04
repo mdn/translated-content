@@ -170,4 +170,4 @@ table td {
 
 - Web components: {{HTMLElement("content")}}, {{HTMLElement("shadow")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

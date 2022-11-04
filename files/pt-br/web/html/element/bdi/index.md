@@ -43,4 +43,4 @@ Como todos os outros elementos do HTML, este elemento tem os atributos globais, 
 - Related HTML element: {{HTMLElement("bdo")}}
 - Related HTML properties: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

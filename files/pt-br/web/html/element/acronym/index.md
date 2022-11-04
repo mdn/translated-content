@@ -53,4 +53,4 @@ Embo is purely for the convenira o propósito desta tag seja meramente a conveni
 
 - O elemento HTML {{HTMLElement("abbr")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

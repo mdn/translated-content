@@ -76,4 +76,4 @@ body {
 
 - O elemento {{HTMLElement("link")}} que permite usar folhas de estilo externas.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

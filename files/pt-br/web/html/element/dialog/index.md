@@ -159,4 +159,4 @@ Inclua este polyfill para suportar browsers antigos.
 - O {{event("cancel")}} evento
 - Guia de formulários HTML.
 
-{{HTMLRef}}
+{{HTMLSidebar}}
