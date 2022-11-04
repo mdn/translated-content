@@ -103,7 +103,7 @@ Neste exemplo, o "child" terá 150 pixels de largura ou a largura do "parent", o
 
 {{Specifications}}
 
-## Especificações
+## Compatibilidade com navegadores
 
 {{Compat}}
 
