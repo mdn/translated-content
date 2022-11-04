@@ -4560,7 +4560,7 @@
 /ja/docs/Web/JavaScript/Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ja/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
-/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/ja/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_df783faa96fb2729e58461fd21615e98
+/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/ja/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /ja/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 /ja/docs/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
@@ -4707,7 +4707,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint16Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint32Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint8Array
-/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/ja/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly	/ja/docs/WebAssembly/JavaScript_interface
