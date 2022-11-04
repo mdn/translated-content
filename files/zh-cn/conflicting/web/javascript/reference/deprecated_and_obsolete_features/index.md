@@ -1,6 +1,7 @@
 ---
 title: 原始迭代协议
-slug: >-
+slug: conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+original_slug: >-
   Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol
 ---
 
