@@ -494,6 +494,6 @@ Com este conjunto, o navegador não alterará a aparência do elemento e o desen
 
 ## Veja também
 
-- [Desenho de gráficos](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Gráficos na web](/pt-BR/docs/Web/Guide/Gráficos)
+- [Desenhando gráficos](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Gráficos na web](/pt-BR/docs/Web/Guide/Graphics)
 - [ferramenta seletora de cores do MDN](/pt-BR/docs/Web/CSS/CSS_Colors/Color_picker_tool)
