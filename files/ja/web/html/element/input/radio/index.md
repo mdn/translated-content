@@ -3,7 +3,7 @@ title: <input type="radio">
 slug: Web/HTML/Element/input/radio
 ---
 
-{{HTMLSidebar("Input_types")}}
+{{HTMLSidebar}}
 
 {{htmlelement("input")}} 要素の **`radio`** 型は、一般に**ラジオグループ**、すなわち関連するオプションの組み合わせを示すラジオボタンの集まりです。グループ内でラジオボタンは一つしか同時に選択することができません。ラジオボタンはふつう、小さな円で描かれ、選択されたら塗りつぶしや強調表示されます。
 

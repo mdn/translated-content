@@ -3,7 +3,7 @@ title: <input type="tel">
 slug: Web/HTML/Element/input/tel
 ---
 
-{{HTMLSidebar("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`tel`** 型は、ユーザーに電話番号を入力または編集させるために使用します。 [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email) や [`<input type="url">`](/ja/docs/Web/HTML/Element/input/url) とは異なり、送信前に値が特定の書式であると自動的には検証されません。電話番号の書式は世界中で様々だからです。
 

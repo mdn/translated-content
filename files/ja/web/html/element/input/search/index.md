@@ -3,7 +3,7 @@ title: <input type="search">
 slug: Web/HTML/Element/input/search
 ---
 
-{{HTMLSidebar("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`search`** 型は、ユーザーが検索クエリを入力するために設計されたテキスト入力欄です。 [`text`](/ja/docs/Web/HTML/Element/input/text) 入力欄と機能的には同じですが、{{Glossary("user agent", "ユーザーエージェント")}}は別なスタイルを適用するかもしれません。
 

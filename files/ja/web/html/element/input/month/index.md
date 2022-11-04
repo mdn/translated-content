@@ -3,7 +3,7 @@ title: <input type="month">
 slug: Web/HTML/Element/input/month
 ---
 
-{{HTMLSidebar("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`month`** 型は、ユーザーが年と月を入力できるようにする入力フィールドを作成し、年と月を簡単に入力できるようにします。
 値は "`YYYY-MM`" の形式の文字列で、 `YYYY` は 4 桁の年、 `MM` は月の番号です。
