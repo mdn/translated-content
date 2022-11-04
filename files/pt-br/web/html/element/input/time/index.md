@@ -7,7 +7,7 @@ tags:
   - tipo
 translation_of: Web/HTML/Element/input/time
 ---
-{{HTMLSidebar("Input_types")}}
+{{HTMLSidebar}}
 
 Elementos `<input>` do tipo **`time`** (hora) criam campos de inserção que permitem que o usuário digite horários facilmente (horas e minutos e, opcionalmente, segundos).
 
