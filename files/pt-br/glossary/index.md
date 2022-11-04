@@ -1,7 +1,6 @@
 ---
 title: "Glossário do MDN Web Docs: Definições de termos relacionados à Web "
 slug: Glossary
-translation_of: Glossary
 ---
 
 Tecnologias da Web contém longas listas de jargões e abreviações usadas em documentação e codificação. Este glossário fornece definições de palavras e abreviaturas que você precisa saber para entender e desenvolver para a web com sucesso.

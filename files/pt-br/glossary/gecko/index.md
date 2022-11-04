@@ -1,14 +1,6 @@
 ---
 title: Gecko
 slug: Glossary/Gecko
-tags:
-  - Firefox OS
-  - Gecko
-  - Glossary
-  - Infrastructure
-  - Intro
-  - Mozilla
-translation_of: Glossary/Gecko
 original_slug: Glossario/Gecko
 ---
 **Gecko** é um motor de layout desenvolvido pela Mozilla Project e utilizado em vários apps/dispositivos, incluindo {{glossary("Mozilla Firefox","Firefox")}} e {{glossary("Firefox OS")}}.

@@ -1,11 +1,6 @@
 ---
 title: marcação
 slug: Glossary/markup
-tags:
-  - Glossário
-  - Intro
-  - Marcação
-translation_of: Glossary/markup
 original_slug: Glossario/marcação
 ---
 Uma linguagem de marcação é aquela projetada para definir e apresentar textos.
