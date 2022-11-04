@@ -31242,14 +31242,6 @@
     "modified": "2020-11-30T10:28:22.488Z",
     "contributors": ["chrisdavidmills", "mfuji09", "inkusu"]
   },
-  "conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e": {
-    "modified": "2020-11-29T12:01:32.996Z",
-    "contributors": ["mfuji09", "ExE-Boss", "dskmori", "fscholz", "storywriter"]
-  },
-  "conflicting/Web/CSS_7fc1a1afe4642afd225ebf1b3d6227a7": {
-    "modified": "2020-10-15T22:06:16.617Z",
-    "contributors": ["mfuji09"]
-  },
   "conflicting/Web/HTML/Global_attributes/contenteditable": {
     "modified": "2019-05-13T11:13:31.486Z",
     "contributors": ["mfuji09", "yyss", "ethertank"]
