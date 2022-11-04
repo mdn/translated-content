@@ -17,7 +17,7 @@ Web 性能是客观的衡量标准，是用户对加载时间和运行时的直�
 
 ## 初学者教程
 
-MDN [Web 性能学习专区](/zh-CN/docs/Learn/Performance) 有着涵盖性能要素的最新教程。如果你是性能新手，请从这里开始：
+MDN [Web 性能学习专区](/zh-CN/docs/Learn/Performance)有着涵盖性能要素的最新教程。如果你是性能新手，请从这里开始：
 
 - [Web 性能：概述](/zh-CN/docs/Learn/Performance/web_performance_overview)
   - : Web 性能学习路径概述。在这里开始你的旅程。
@@ -43,7 +43,7 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn/Performance) 有着涵盖性能�
 - [Performance API](/zh-CN/docs/Web/API/Performance_API/Using_the_Performance_API)
   - : 该指南介绍了如何使用 [High-Resolution Time](https://w3c.github.io/hr-time/) 标准中定义的 [`Performance`](/zh-CN/docs/Web/API/Performance) 接口。
 - [Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
-  - : [资源加载和定时加载](/zh-CN/docs/Web/API/Resource_Timing_API) 这些资源，包括管理资源缓冲区和处理 CORS
+  - : [资源加载和定时](/zh-CN/docs/Web/API/Resource_Timing_API)加载这些资源，包括管理资源缓冲区和处理 CORS
 - [性能时间线](/zh-CN/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
   - : [Performance Timeline](/zh-CN/docs/Web/API/Performance_Timeline) 标准定义了对 [`Performance`](/zh-CN/docs/Web/API/Performance) 接口的扩展，以支持应用程序中的客户端延迟测量。这些接口一起可以用来帮助识别应用程序的性能瓶颈。
 - [User Timing API](/zh-CN/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
@@ -57,7 +57,7 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn/Performance) 有着涵盖性能�
 
 - [开发者工具中与性能相关的功能](/zh-CN/docs/Tools/Performance)
   - : 本节提供有关如何使用和理解开发人员工具中的性能特性的信息，包括 [Waterfall](/zh-CN/docs/Tools/Performance/Waterfall)、[Call Tree](/zh-CN/docs/Tools/Performance/Call_Tree) 和 [Flame Charts](/zh-CN/docs/Tools/Performance/Flame_Chart)。
-- [使用内置分析器进行分析](/zh-CN/docs/Performance/Profiling_with_the_Built-in_Profiler)
+- [使用内置分析器进行分析](https://profiler.firefox.com/docs/#/./guide-getting-started)
   - : 了解如何使用 Firefox 的内置分析器来分析应用程序性能。
 
 ## 各种术语
@@ -67,49 +67,49 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn/Performance) 有着涵盖性能�
 - {{glossary('Client hints', '客户端提示')}}
 - {{glossary('Code splitting', '代码拆分')}}
 - {{glossary('CSSOM')}}
-- {{glossary('Domain sharding')}}
-- {{glossary('Effective connection type')}}
-- {{glossary('First contentful paint')}}
-- {{glossary('First CPU idle')}}
-- {{glossary('First input delay')}}
-- {{glossary('First interactive')}}
-- {{glossary('First meaningful paint')}}
-- {{glossary('First paint')}}
+- {{glossary('Domain sharding', '域名分片')}}
+- {{glossary('Effective connection type', '有效连接类型')}}
+- {{glossary('First contentful paint', '首次内容绘制')}}
+- {{glossary('First CPU idle', '首次 CPU 空闲')}}
+- {{glossary('First input delay', '首次输入延迟')}}
+- {{glossary('First interactive', '首次交互')}}
+- {{glossary('First meaningful paint', '首次有效绘制')}}
+- {{glossary('First paint', '首次绘制')}}
 - {{glossary('HTTP')}}
 - {{glossary('HTTP_2', 'HTTP/2')}}
-- {{glossary('Jank')}}
-- {{glossary('Latency')}}
-- {{glossary('Lazy load')}}
-- {{glossary('Long task')}}
-- {{glossary('Lossless compression')}}
-- {{glossary('Lossy compression')}}
-- {{glossary('Main thread')}}
-- {{glossary('Minification')}}
-- {{glossary('Network throttling')}}
-- {{glossary('Packet')}}
-- {{glossary('Page load time')}}
-- {{glossary('Page prediction')}}
-- {{glossary('Parse')}}
-- {{glossary('Perceived performance')}}
+- {{glossary('Jank', '卡顿（Jank）')}}
+- {{glossary('Latency', '延迟')}}
+- {{glossary('Lazy load', '懒加载')}}
+- {{glossary('Long task', '长任务')}}
+- {{glossary('Lossless compression', '无损压缩')}}
+- {{glossary('Lossy compression', '有损压缩')}}
+- {{glossary('Main thread', '主线程')}}
+- {{glossary('Minification', '代码缩减')}}
+- {{glossary('Network throttling', '网络节流')}}
+- {{glossary('Packet', '包')}}
+- {{glossary('Page load time', '页面加载时间')}}
+- {{glossary('Page prediction', '页面预测')}}
+- {{glossary('Parse', '解析')}}
+- {{glossary('Perceived performance', '感知性能')}}
 - {{glossary('Prefetch')}}
 - {{glossary('Prerender')}}
 - {{glossary('QUIC')}}
 - {{glossary('RAIL')}}
-- {{glossary('Real User Monitoring')}}
+- {{glossary('Real User Monitoring', '真实用户监控')}}
 - {{glossary('Resource Timing')}}
-- {{glossary('Round Trip Time (RTT)')}}
+- {{glossary('Round Trip Time (RTT)', '来回通讯延迟（RTT）')}}
 - {{glossary('Server Timing')}}
 - {{glossary('Speculative parsing')}}
-- {{glossary('Speed index')}}
+- {{glossary('Speed index', '速度指标')}}
 - {{glossary('SSL')}}
-- {{glossary('Synthetic monitoring')}}
+- {{glossary('Synthetic monitoring', '综合监控')}}
 - {{glossary('TCP handshake', 'TCP 握手')}}
 - {{glossary('TCP slow start', 'TCP 慢开始')}}
 - {{glossary('Time to first byte', '第一字节时间')}}
 - {{glossary('Time to interactive', '可交互时间')}}
 - {{glossary('TLS')}}
 - {{glossary('TCP', '传输控制协议（TCP）')}}
-- {{glossary('Tree shaking')}}
+- {{glossary('Tree shaking', '摇树（Tree shaking）')}}
 - {{glossary('Web performance', 'Web 性能')}}
 
 ## 参见
