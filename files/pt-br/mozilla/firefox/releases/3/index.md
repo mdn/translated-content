@@ -1,11 +1,6 @@
 ---
 title: Firefox 3 for developers
 slug: Mozilla/Firefox/Releases/3
-tags:
-  - Firefox 3
-  - NeedsTranslation
-  - TopicStub
-translation_of: Mozilla/Firefox/Releases/3
 ---
 {{FirefoxSidebar}}
 

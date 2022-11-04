@@ -1,7 +1,6 @@
 ---
 title: Firefox 1.5 para desenvolvedores
 slug: Mozilla/Firefox/Releases/1.5
-translation_of: Mozilla/Firefox/Releases/1.5
 ---
 {{FirefoxSidebar}}
 

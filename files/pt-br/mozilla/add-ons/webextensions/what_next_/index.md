@@ -1,7 +1,6 @@
 ---
 title: O que vem a seguir ?
 slug: Mozilla/Add-ons/WebExtensions/What_next_
-translation_of: Mozilla/Add-ons/WebExtensions/What_next_
 original_slug: Mozilla/Add-ons/WebExtensions/O_que_vem_a_seguir_
 ---
 {{AddonSidebar}}
