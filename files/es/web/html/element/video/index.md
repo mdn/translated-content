@@ -25,7 +25,7 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
 
 - {{ htmlattrdef("autoplay") }}
   - : Un atributo booleano; si se especifica, el video comenzará a reproducirse automáticamente tan pronto como sea posible, sin detenerse para terminar de cargar los datos.
-- {{ htmlattrdef("autobuffer") }} {{ Non-standard_inline() }} {{ obsolete_inline() }}
+- {{ htmlattrdef("autobuffer") }} {{ Non-standard_inline() }} {{deprecated_inline}}
 
   - : Un atributo booleano; si se especifica, el video comenzará automáticamente a almacenarse en el búfer, incluso si no está listo para reproducirse de forma automática. Esto se debe utilizar para los casos en los que se considera probable que el video se reproduzca (por ejemplo, si el usuario accedió a esa página específica para reproducir el video, no si hay un video insertado junto con otros contenidos). El video se almacena en el búfer hasta que el caché de medios esté lleno.
 

@@ -86,7 +86,7 @@ Document directives govern the properties of a document or [worker](/es/docs/Web
   - : Restricts the set of plugins that can be embedded into a document by limiting the types of resources which can be loaded.
 - {{CSP("sandbox")}}
   - : Enables a sandbox for the requested resource similar to the {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} attribute.
-- {{CSP("disown-opener")}} {{obsolete_inline}}
+- {{CSP("disown-opener")}} {{deprecated_inline}}
   - : Ensures a resource will disown its opener when navigated to.
 
 ### {{Glossary("Navigation directive", "Navigation directives")}}
@@ -104,7 +104,7 @@ Navigation directives govern to which location a user can navigate to or submit 
 
 Reporting directives control the reporting process of CSP violations. See also the {{HTTPHeader("Content-Security-Policy-Report-Only")}} header.
 
-- {{CSP("report-uri")}} {{obsolete_inline}}
+- {{CSP("report-uri")}} {{deprecated_inline}}
 
   - : Instructs the user agent to report attempts to violate the Content Security Policy. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
 
@@ -123,7 +123,7 @@ Reporting directives control the reporting process of CSP violations. See also t
 
 - {{CSP("block-all-mixed-content")}}
   - : Prevents loading any assets using HTTP when the page is loaded using HTTPS.
-- {{CSP("referrer")}} {{obsolete_inline}}
+- {{CSP("referrer")}} {{deprecated_inline}}
   - : Used to specify information in the referer (sic) header for links away from a page. Use the {{HTTPHeader("Referrer-Policy")}} header instead.
 - {{CSP("require-sri-for")}}
   - : Requires the use of {{Glossary("SRI")}} for scripts or styles on the page.

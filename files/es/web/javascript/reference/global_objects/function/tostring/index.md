@@ -16,7 +16,7 @@ function.toString(indentation)
 
 ### Parámetros
 
-- `indentation` {{non-standard_inline}} {{obsolete_inline(17)}}
+- `indentation` {{non-standard_inline}} {{deprecated_inline(17)}}
   - : La cantidad de espacios a indentar en la representación de cadena del código fuente. Si `indentation` es menor o igual a `-1`, la mayoría de los espacios innecesarios son eliminados.
 
 ## Descripción

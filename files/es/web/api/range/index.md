@@ -84,13 +84,13 @@ Estos métodos recuperan nodos de un rango y modifican los contenidos de un rang
 
 Esta sección describe métodos de `Range` que son particulares a Mozilla y no son parte de las especificaciones DOM W3C.
 
-- [compareNode](es/DOM/range.compareNode) {{obsolete_inline}}
+- [compareNode](es/DOM/range.compareNode) {{deprecated_inline}}
   - : Devuelve una constante representando si el nodo está antes, después, dentro o alrededor del rango.
 - [comparePoint](es/DOM/range.comparePoint)
   - : Devuelve -1, 0, or 1 indicando si el punto ocurre antes, dentro o después del rango.
 - [createContextualFragment](es/DOM/range.createContextualFragment)
   - : Devuelve un fragmenteo de documento creado de un texto de código.
-- [intersectsNode](es/DOM/range.intersectsNode) {{obsolete_inline}}
+- [intersectsNode](es/DOM/range.intersectsNode) {{deprecated_inline}}
   - : Devuelve un valor boleano verdadero si el nodo dado intersecta el rango.
 - [isPointInRange](es/DOM/range.isPointInRange)
   - : Devuelve un valor boleano verdadero indicando si el punto dado está en el rango.

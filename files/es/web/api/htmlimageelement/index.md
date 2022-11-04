@@ -16,11 +16,11 @@ La interfaz **`HTMLImageElement`** provee de propiedas especiales y métodos (m�
 
 _Heredadas de su padre, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLImageElement.align")}} {{obsolete_inline}}
+- {{domxref("HTMLImageElement.align")}} {{deprecated_inline}}
   - : Es un {{domxref("DOMString")}} que indica el alineamiento de la imagen respecto al contexto que la rodea.
 - {{domxref("HTMLImageElement.alt")}}
   - : Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("alt", "img")}}, indicando texto de respaldo a la imagen.
-- {{domxref("HTMLImageElement.border")}} {{obsolete_inline}}
+- {{domxref("HTMLImageElement.border")}} {{deprecated_inline}}
   - : Es un {{domxref("DOMString")}} que indica el ancho del borde alrededor de la imagen. Este está desaprobado y debe usarse la propiedad CSS {{cssxref("border")}} en su lugar.
 - {{domxref("HTMLImageElement.complete")}} {{readonlyInline}}
   - : Devuelve un {{domxref("Boolean")}} que es `true` si el navegador ha terminado de buscar la imagen, sea o no exitoso. También devuelve `true` si la imagen no tiene valor {{domxref("HTMLImageElement.src", "src")}}.
@@ -30,15 +30,15 @@ _Heredadas de su padre, {{domxref("HTMLElement")}}._
   - : Devuelve un {{domxref("DOMString")}}
 - {{domxref("HTMLImageElement.height")}}
   - : Es un `unsigned long` que refleja el atributo HTML {{htmlattrxref("height", "img")}}, indica el alto de la imagen en píxeles CSS.
-- {{domxref("HTMLImageElement.hspace")}} {{obsolete_inline}}
+- {{domxref("HTMLImageElement.hspace")}} {{deprecated_inline}}
   - : Es un `long` que representa el espacio a izquierda y derecha de la imagen.
 - {{domxref("HTMLImageElement.isMap")}}
   - : Es un {{domxref("Boolean")}} que refleja el atributo HTML {{htmlattrxref("ismap", "img")}}, indica que la imagen es parte del mapa de imagen del lado del servidor.
-- {{domxref("HTMLImageElement.longDesc")}} {{obsolete_inline}}
+- {{domxref("HTMLImageElement.longDesc")}} {{deprecated_inline}}
   - : Es un {{domxref("DOMString")}} que representa la URI de una larga descripción de la imagen.
-- {{domxref("HTMLImageElement.lowSrc")}} {{obsolete_inline}}
+- {{domxref("HTMLImageElement.lowSrc")}} {{deprecated_inline}}
   - : Es un {{domxref("DOMString")}} que referencia una copia de la imagen en mala calidad (pero más rápida cargando)
-- {{domxref("HTMLImageElement.name")}} {{obsolete_inline}}
+- {{domxref("HTMLImageElement.name")}} {{deprecated_inline}}
   - : Es un {{domxref("DOMString")}}.
 - {{domxref("HTMLImageElement.naturalHeight")}} {{readonlyInline}}
   - : Devuelve un `unsigned long` que representa el alto intrínseco de la imagen en píxeles CSS, si está disponible, de otro modo, es 0.
@@ -54,7 +54,7 @@ _Heredadas de su padre, {{domxref("HTMLElement")}}._
   - : Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("srcset", "img")}}, contiene una ista de imágenes candidatas, separadas por una coma (`',', U+002C COMMA`). Una imagen candidata es una URL seguida por `'w'` con el ancho, o una `'x'` seguida de la densidad del píxel.
 - {{domxref("HTMLImageElement.useMap")}}
   - : Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("usemap", "img")}}, contiene una URL parcial del mapa del elemento.
-- {{domxref("HTMLImageElement.vspace")}} {{obsolete_inline}}
+- {{domxref("HTMLImageElement.vspace")}} {{deprecated_inline}}
   - : Es un `long` que representa el espacio sobre y bajo la imagen.
 - {{domxref("HTMLImageElement.width")}}
   - : Es un `unsigned long` que refleja el atributo HTML {{htmlattrxref("width", "img")}}, indica el ancho de la imagen en píxeles CSS.

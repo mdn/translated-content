@@ -54,7 +54,7 @@ Las siguientes propiedades son obsoletos. Where available, the appropriate repla
   - : Utilizar {{domxref("Attr.value")}} en su lugar.
 - `ownerDocument`
   - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
-- `ownerElement` {{deprecated_inline("7.0")}} {{obsolete_inline("29.0")}} {{readOnlyInline}}
+- `ownerElement` {{deprecated_inline("7.0")}} {{deprecated_inline("29.0")}} {{readOnlyInline}}
 
   - : Since you get an `Attr` object from an {{domxref("Element")}}, you should already know the associated element.
 
@@ -64,7 +64,7 @@ Las siguientes propiedades son obsoletos. Where available, the appropriate repla
   - : Estra propiedad ahora siempre devuelve `NULL`.
 - `previousSibling`
   - : Estra propiedad ahora siempre devuelve `NULL`.
-- `schemaTypeInfo` {{obsolete_inline}} {{readOnlyInline}}
+- `schemaTypeInfo` {{deprecated_inline}} {{readOnlyInline}}
   - : The type information associated with this attribute. While the type information contained in this attribute is guaranteed to be correct after loading the document or invoking {{domxref("Document.normalizeDocument")}}, this property may not be reliable if the node was moved.
 - `specified`
   - : Estra propiedad ahora siempre devuelve `true`.
@@ -85,7 +85,7 @@ Los siguientes metodos ahora son obsoletos.
   - : Use {{domxref("Element.getAttribute()")}} instead.
 - `getAttributeNodeNS()`
   - : Use {{domxref("Element.getAttributeNS()")}} instead.
-- `hasAttributes()`{{obsolete_inline("21.0")}}
+- `hasAttributes()`{{deprecated_inline("21.0")}}
   - : Estra propiedad ahora retorna false.
 - `hasChildNodes()`
   - : Estra propiedad ahora devuelve `false`.

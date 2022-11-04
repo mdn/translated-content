@@ -276,7 +276,7 @@ W—Z
 
 ### {{Cssxref("border-style")}} y {{Cssxref("outline-style")}}
 
-- `-moz-bg-inset | -moz-bg-outset | -moz-bg-solid`{{obsolete_inline}} abandonado en Gecko 1.9 (Firefox 3.0)
+- `-moz-bg-inset | -moz-bg-outset | -moz-bg-solid`{{deprecated_inline}} abandonado en Gecko 1.9 (Firefox 3.0)
 
 ### Palabras clave de {{cssxref("&lt;color&gt;")}}
 
@@ -317,11 +317,11 @@ W—Z
 ### {{Cssxref("display")}}
 
 - `-moz-box`
-- `-moz-inline-block` {{obsolete_inline}}
+- `-moz-inline-block` {{deprecated_inline}}
 - `-moz-inline-box`
 - `-moz-inline-grid`
 - `-moz-inline-stack`
-- `-moz-inline-table` {{obsolete_inline}}
+- `-moz-inline-table` {{deprecated_inline}}
 - `-moz-grid`
 - `-moz-grid-group`
 - `-moz-grid-line`
@@ -396,7 +396,7 @@ W—Z
 
 ### {{Cssxref("overflow")}}
 
-- {{Cssxref("-moz-scrollbars-none")}} {{obsolete_inline}}
+- {{Cssxref("-moz-scrollbars-none")}} {{deprecated_inline}}
 - {{Cssxref("-moz-scrollbars-horizontal")}} {{Deprecated_inline}}
 - {{Cssxref("-moz-scrollbars-vertical")}} {{Deprecated_inline}}
 - {{Cssxref("-moz-hidden-unscrollable")}}

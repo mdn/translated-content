@@ -29,7 +29,7 @@ El **elemento HTML `<link>`** especifica la relación entre el documento actual 
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
-- {{htmlattrdef("charset")}}{{obsolete_inline}}
+- {{htmlattrdef("charset")}}{{deprecated_inline}}
   - : Este atributo define la codificación de caracteres del recurso enlazado. El valor es un espacio y/o una lista de grupos de caracteres según se define en {{rfc(2045)}}, separados por coma. El valor predeterminado es `iso-8859-1`.
     > **Nota:** Este atributo es obsoleto y **no debe ser usado por autores**. Para conseguir su mismo efecto, se recomienda usar el encabezado HTTP Content-Type en el recurso enlazado.
 - {{htmlattrdef("crossorigin")}}
@@ -67,7 +67,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
     - `'unsafe-url'` significa que el referente incluirá el origen y ruta (sin el fragmento, contraseña o nombre de usuario). Este caso es inseguro porque permite filtrar orígenes y rutas desde recursos protegidos por TLS a orígenes inseguros.
 - {{htmlattrdef("rel")}}
   - : Este atributo indica la relación del documento enlazado con el actual. El atributo debe ser una lista de [tipos de enlaces](/es/docs/Web/HTML/Tipos_de_enlaces) separados por espacio. El uso más común para este atributo es especificar el enlace a una hoja de estilos externa: el atributo **rel** se establece con valor `stylesheet`, y el atributo **href** se establece con la URL de la hoja de estilos externa para dar formato a la página. WebTV también soporta el uso del valor `next` en **rel** para precargar la siguiente página en una serie de documentos.
-- {{htmlattrdef("rev")}}{{obsolete_inline}}
+- {{htmlattrdef("rev")}}{{deprecated_inline}}
   - : El valor de este atributo muestra la relación del documento actual al documento enlazado, como se define en el atributo {{htmlattrxref("href", "link")}}. En consecuencia, este atributo define la relación inversa, en comparación al valor del atributo **rel**. Los [tipos de enlace](/es/docs/Web/HTML/Tipos_de_enlaces) para este atributo son similares a los disponibles para {{htmlattrxref("rel", "link")}}.
     > **Nota:** Este atributo es obsoleto en HTML5. **No debe usarse**. Para lograr este efecto, use el atributo {{htmlattrxref("rel", "link")}} con el [tipo de enlace](/es/docs/Web/HTML/Tipos_de_enlaces) contrario, por ejemplo, made debe reemplazar a author. Además, este atributo no significa _revision_ y no debe ser usado con un número de versión, que es desafortunadamente el caso de muchos sitios.
 - {{htmlattrdef("sizes")}}

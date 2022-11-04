@@ -164,9 +164,9 @@ Propiedades aun no categorizadas
 
 <!---->
 
-- {{domxref("HTMLInputElement.align")}} {{obsolete_inline}}
+- {{domxref("HTMLInputElement.align")}} {{deprecated_inline}}
   - : `string:` **represents** the alignment of the element. _Use CSS instead._
-- {{domxref("HTMLInputElement.useMap")}} {{ obsolete_inline }}
+- {{domxref("HTMLInputElement.useMap")}} {{deprecated_inline}}
   - : `string:` **represents** a client-side image map.
 
 ## Métodos

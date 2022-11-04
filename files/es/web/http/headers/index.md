@@ -118,9 +118,9 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
   - : Contiene [HTTP cookies](/es/docs/Web/HTTP/Cookies) enviadas previamente por el servidor con la cabecera {{HTTPHeader("Set-Cookie")}} .
 - {{HTTPHeader("Set-Cookie")}}
   - : Envia cookies desde el servidor al usuario.
-- {{HTTPHeader("Cookie2")}} {{obsolete_inline}}
+- {{HTTPHeader("Cookie2")}} {{deprecated_inline}}
   - : Habitualmente contenía una cookie HTTP, enviada previamente por el servidor con la cabecera {{HTTPHeader("Set-Cookie2")}} , pero ha quedado obsoleta por la especificación. Utiliza en su lugar {{HTTPHeader("Cookie")}}.
-- {{HTTPHeader("Set-Cookie2")}} {{obsolete_inline}}
+- {{HTTPHeader("Set-Cookie2")}} {{deprecated_inline}}
   - : Se utilizaba para enviar cookies desde el servidor al usuario, but has been obsoleted by the specification. pero ha quedado obsoleta por la especificación. Utiliza en su lugar {{HTTPHeader("Set-Cookie")}} .
 
 ## CORS
