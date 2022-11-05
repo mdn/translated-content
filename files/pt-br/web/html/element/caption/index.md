@@ -1,12 +1,6 @@
 ---
 title: <caption>
 slug: Web/HTML/Element/caption
-tags:
-  - Elementos
-  - Tabela HTML
-  - Título de tabela
-  - título
-translation_of: Web/HTML/Element/caption
 ---
 ## Sumário
 
@@ -131,4 +125,4 @@ table, th, td {
 
   - {{cssxref("text-align")}}, {{cssxref("caption-side")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

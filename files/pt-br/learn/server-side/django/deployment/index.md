@@ -1,14 +1,6 @@
 ---
 title: 'Tutorial Django Parte 11: Hospedando Django para produção'
 slug: Learn/Server-side/Django/Deployment
-tags:
-  - Codificação de Scripts
-  - Deploy do django
-  - Fazendo deploy
-  - Iniciante
-  - django
-  - servidor web
-translation_of: Learn/Server-side/Django/Deployment
 original_slug: Learn/Server-side/Django/Hospedagem
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}

@@ -9,7 +9,7 @@ translation_of: Web/MathML/Element/math
 
 ## Атрибуты
 
-В дополнение к следующим атрибутам, тэг `<math>` воспринимает любые атрибуты из [`<mstyle>`](/ru/docs/Web/MathML/Element/mstyle "<Mstyle>") .
+В дополнение к следующим атрибутам, тэг `<math>` воспринимает любые атрибуты из [`<mstyle>`](/ru/docs/Web/MathML/Element/mstyle) .
 
 - class, id, style
   - : При условии использования вместе с [таблицами стилей](/ru/docs/CSS) .
@@ -39,7 +39,7 @@ translation_of: Web/MathML/Element/math
 
 ## Примеры
 
-![Теорема Пифагора](https://developer.mozilla.org/files/3157/math.jpg)
+![Теорема Пифагора](/files/3157/math.jpg)
 
 ### Обозначения HTML5
 
@@ -120,7 +120,7 @@ translation_of: Web/MathML/Element/math
 
 ### Особенности ядра Gecko
 
-В Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4) появилась поддержка всех MathML атрибутов для элементов верхнего уровня (т.е. такое же поведение как [`<mstyle>`](/ru/docs/Web/MathML/Element/mstyle "<Mstyle>") элемента). Тем не менее, `displaystyle` атрибут не отрабатывается. Его поддержка [была добавлена](https://bugzilla.mozilla.org/show_bug.cgi?id=669719) ​​в Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).
+В Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4) появилась поддержка всех MathML атрибутов для элементов верхнего уровня (т.е. такое же поведение как [`<mstyle>`](/ru/docs/Web/MathML/Element/mstyle) элемента). Тем не менее, `displaystyle` атрибут не отрабатывается. Его поддержка [была добавлена](https://bugzilla.mozilla.org/show_bug.cgi?id=669719) ​​в Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).
 
 Альтернативные текстовые описания (`alttext`) или ссылки на альтернативное изображение, (атрибуты `altimg` , `altimg-width` , `altimg-height` и `altimg-valign`) в настоящее время не реализованы в Gecko.
 
@@ -128,11 +128,11 @@ translation_of: Web/MathML/Element/math
 
 | Спецификация                                                                                                                             | Статус       | Комментарий            |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------------- |
-| [MathML 3.0](http://www.w3.org/TR/MathML3/chapter2.html "Определение «верхнего уровня математической элемент» в том, что спецификации.") | Рекомендация | Текущая спецификация   |
-| [MathML 2.0](http://www.w3.org/TR/MathML2/chapter7.html "Определение «верхнего уровня математической элемент» в том, что спецификации.") | Рекомендация | Начальная спецификация |
+| [MathML 3.0](http://www.w3.org/TR/MathML3/chapter2.html) | Рекомендация | Текущая спецификация   |
+| [MathML 2.0](http://www.w3.org/TR/MathML2/chapter7.html) | Рекомендация | Начальная спецификация |
 
 ## Смотрите также
 
-- HTML-элемент верхнего уровня: [`<html>`](/ru/docs/Web/HTML/Element/html "HTML <HTML> Элемент (или HTML корневой элемент) представляет собой корень из HTML или документа XHTML. Все остальные элементы должны быть потомками этого элемента.")
-- SVG элемент верхнего уровня: [`<svg>`](/ru/docs/Web/SVG/Element/svg "Элемент SVG могут быть использованы для гнезда автономный SVG фрагмент внутри текущего документа (в том числе в HTML документе) до тех пор, SVG не является корневым элементом. Это автономный фрагмент имеет свой собственный просмотра и свою собственную систему координат.")
+- HTML-элемент верхнего уровня: [`<html>`](/ru/docs/Web/HTML/Element/html)
+- SVG элемент верхнего уровня: [`<svg>`](/ru/docs/Web/SVG/Element/svg)
 - Тест-браузер MathML: Для [XHTML](https://www.eyeasme.com/Joe/MathML/MathML_browser_test) и [HTML5](https://eyeasme.com/Joe/MathML/HTML5_MathML_browser_test)

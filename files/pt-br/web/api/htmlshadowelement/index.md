@@ -1,13 +1,6 @@
 ---
 title: HTMLShadowElement
 slug: Web/API/HTMLShadowElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLShadowElement
-  - Web/Api
-  - shadow dom
-translation_of: Web/API/HTMLShadowElement
 ---
 {{obsolete_header}}
 

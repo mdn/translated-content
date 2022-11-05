@@ -1,18 +1,6 @@
 ---
 title: Using Feature Policy
 slug: Web/HTTP/Feature_Policy/Using_Feature_Policy
-tags:
-  - Acesso
-  - Delegação
-  - Feature Policy
-  - Feature-Policy
-  - HTTP
-  - Permissões
-  - Privilegios
-  - Referencia
-  - Segurança
-  - cabeçalho
-translation_of: Web/HTTP/Feature_Policy/Using_Feature_Policy
 ---
 {{HTTPSidebar}}
 

@@ -1,7 +1,6 @@
 ---
 title: <ins>
 slug: Web/HTML/Element/ins
-translation_of: Web/HTML/Element/ins
 ---
 ## Summary
 
@@ -44,4 +43,4 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 
 - {{HTMLElement("del")}} element for marking deletion into a document
 
-{{HTMLRef}}
+{{HTMLSidebar}}

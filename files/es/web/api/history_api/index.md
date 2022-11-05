@@ -67,8 +67,6 @@ var numeroDeEntradas = window.history.length;
 
 ## Añadiendo y modificando entradas del historial
 
-{{ gecko_minversion_header("2") }}
-
 HTML5 introduce los métodos `history.pushState()` y `history.replaceState()`, los cuales te permiten añadir y modificar entradas del historial, respectivamente. Estos métodos trabajan en conjunto con el evento {{ domxref("window.onpopstate") }}.
 
 Hacer uso de `history.pushState()` cambia el referer que es utilizado en la cabecera HTTP por los objetos [XMLHttpRequest](/es/docs/XMLHttpRequest) que hayan sido creados luego de cambiar el estado. El referer utilizará la URL del documento cuyo objeto window sea `this` al momento de la creación del objeto [XMLHttpRequest](/es/docs/XMLHttpRequest).

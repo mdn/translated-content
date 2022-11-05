@@ -156,9 +156,9 @@ _**`window.document`** 物件的部分屬性繼承自 HTML 文件的 {{domxref("
 - {{domxref("Document.oncut")}} {{non-standard_inline}}
   - : Represents the event handling code for the [`cut`](/zh-TW/docs/Web/API/Element/cut_event) event.
 - {{domxref("Document.onfullscreenchange")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) event is raised.
+  - : Is an event handler representing the code to be called when the [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) event is raised.
 - {{domxref("Document.onfullscreenerror")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the [`fullscreenerror`](/zh-TW/docs/Web/API/Document/fullscreenerror_event) event is raised.
+  - : Is an event handler representing the code to be called when the [`fullscreenerror`](/zh-TW/docs/Web/API/Document/fullscreenerror_event) event is raised.
 - {{domxref("Document.onpaste")}} {{non-standard_inline}}
   - : Represents the event handling code for the [`paste`](/zh-TW/docs/Web/API/Element/paste_event) event.
 - {{domxref("Document.onpointerlockchange")}} {{experimental_inline}}
@@ -168,7 +168,7 @@ _**`window.document`** 物件的部分屬性繼承自 HTML 文件的 {{domxref("
 - {{domxref("Document.onreadystatechange")}}
   - : Represents the event handling code for the [`readystatechange`](/zh-TW/docs/Web/API/Document/readystatechange_event) event.
 - {{domxref("Document.onselectionchange")}} {{experimental_inline}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("selectionchange")}} event is raised.
+  - : Is an event handler representing the code to be called when the [`selectionchange`](/zh-TW/docs/Web/API/Document/selectionchange_event) event is raised.
 - {{domxref("Document.onwheel")}} {{non-standard_inline}}
   - : Represents the event handling code for the [`wheel`](/zh-TW/docs/Web/API/Element/wheel_event) event.
 
@@ -324,13 +324,13 @@ Mozilla defines a set of non-standard properties made only for XUL content:
 Mozilla also define some non-standard methods:
 
 - {{domxref("document.execCommandShowHelp")}} {{Deprecated_Inline}}
-  - : This method never did anything and always threw an exception, so it was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
+  - : This method never did anything and always threw an exception, so it was removed in Gecko 14.0.
 - {{domxref("document.getBoxObjectFor")}} {{Deprecated_Inline}}
   - : Use the {{domxref("Element.getBoundingClientRect()")}} method instead.
 - {{domxref("document.loadOverlay")}}
   - : Loads a [XUL overlay](/zh-TW/docs/XUL_Overlays) dynamically. This only works in XUL documents.
 - {{domxref("document.queryCommandText")}} {{Deprecated_Inline}}
-  - : This method never did anything but throw an exception, and was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
+  - : This method never did anything but throw an exception, and was removed in Gecko 14.0.
 
 ### Internet Explorer notes
 

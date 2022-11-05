@@ -61,5 +61,5 @@ document.addEventListener('copy', function(e){
 - {{domxref("HTMLElement.oncopy")}}
 - Related events
 
-  - {{event("cut")}}
-  - {{event("paste")}}
+  - [`cut`](/zh-CN/docs/Web/API/Element/cut_event)
+  - [`paste`](/zh-CN/docs/Web/API/Element/paste_event)

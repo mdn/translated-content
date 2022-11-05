@@ -3,9 +3,11 @@ title: Intercept HTTP requests
 slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 translation_of: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 ---
+
 {{AddonSidebar}}
 
-- ## Для перехвата HTTP запросов используйте {{WebExtAPIRef("webRequest")}} API. Этот API позволит вам добавлять обработчики, на различных этапах создания HTTP запросов. В обработчиках вы можете:
+Для перехвата HTTP запросов используйте {{WebExtAPIRef("webRequest")}} API. Этот API позволит вам добавлять обработчики, на различных этапах создания HTTP запросов. В обработчиках вы можете:
+
 - получить доступ к заголовкам и телам запроса, к заголовкам ответа
 - отменять и перенаправлять запросы
 - изменять запрос и заголовки ответа
@@ -105,17 +107,18 @@ browser.webRequest.onBeforeRequest.addListener(
 
 Опять же, мы используем {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} обработчик событий для запуска функции непосредственно перед каждым запросом. Эта функция заменит целевой URL на `redirectUrl` указанный в функции.
 
-На этот раз мы не перехватываем каждый запрос: опция `{urls: [pattern], types: ["image"]}` указывает, что мы должны перехватывать запросы (1) для URL-адресов, находящихся в разделе «https\://mdn.mozillademos.org / "(2) для ресурсов изображения. Подробнее см. {{WebExtAPIRef ("webRequest.RequestFilter")}}.
+На этот раз мы не перехватываем каждый запрос: опция `{urls: [pattern], types: ["image"]}` указывает, что мы должны перехватывать запросы (1) для URL-адресов, находящихся в разделе "https\://developer.mozilla.org/" (2) для ресурсов изображения. Подробнее см. {{WebExtAPIRef ("webRequest.RequestFilter")}}.
 
 Также обратите внимание, что мы передаём опцию `"blocking"`: нам нужно передать это, когда мы хотим изменить запрос. Это заставляет функцию обработчика блокировать сетевой запрос, поэтому браузер ждёт, пока обработчик вернётся, прежде чем продолжить. Дополнительную информацию о `"blocking"` смотрите в документации {{WebExtAPIRef ("webRequest.onBeforeRequest")}}.
 
-Чтобы проверить это, откройте страницу в MDN, которая содержит много изображений (например, https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor), перезагрузите WebExtension и перезагрузите страницу MDN :
+Чтобы проверить это, откройте страницу в MDN, которая содержит много изображений (например, <https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor>), перезагрузите WebExtension и перезагрузите страницу MDN :
 
 {{EmbedYouTube("ix5RrXGr0wA")}}
 
 ## Modifying request headers
 
-Finally we'll use `webRequest` to modify request headers. In this example we'll modify the "User-Agent" header so the browser identifies itself as Opera 12.16, but only when visiting pages under http\://useragentstring.com/".
+Finally, use `webRequest` to modify request headers.
+In this example, you change the "User-Agent" header so the browser identifies itself as Opera 12.16, but only when visiting pages under "http\://useragentstring.com/".
 
 The "manifest.json" can stay the same as in the previous example.
 

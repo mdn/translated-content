@@ -1,7 +1,6 @@
 ---
 title: Firefox 49 para desenvolvedores
 slug: Mozilla/Firefox/Releases/49
-translation_of: Mozilla/Firefox/Releases/49
 ---
 {{FirefoxSidebar}}
 

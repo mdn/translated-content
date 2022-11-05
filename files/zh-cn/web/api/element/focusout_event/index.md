@@ -40,7 +40,7 @@ slug: Web/API/Element/focusout_event
 
 ## 相关事件
 
-- {{event("focus")}}
-- {{event("blur")}}
-- {{event("focusin")}}
-- {{event("focusout")}}
+- [`focus`](/zh-CN/docs/Web/API/Element/focus_event)
+- [`blur`](/zh-CN/docs/Web/API/Element/blur_event)
+- [`focusin`](/zh-CN/docs/Web/API/Element/focusin_event)
+- [`focusout`](/zh-CN/docs/Web/API/Element/focusout_event)

@@ -727,7 +727,7 @@ self.addEventListener('fetch', function(e) {
 });
 ```
 
-На этом все для нашего простого сервис-воркера. Используя подобный метод, вы можете сделать гораздо больше вещей — для получения доп. информации смотрите [рецепты использования сервис-воркеров](https://serviceworke.rs/). Спасибо Paul Kinlan за его статью [Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/), которая вдохновила на написание данного примера.
+На этом все для нашего простого сервис-воркера. Используя подобный метод, вы можете сделать гораздо больше вещей — для получения доп. информации смотрите [рецепты использования сервис-воркеров](https://github.com/mdn/serviceworker-cookbook/). Спасибо Paul Kinlan за его статью [Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/), которая вдохновила на написание данного примера.
 
 #### Тестируем наш пример офлайн
 

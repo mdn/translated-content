@@ -1,15 +1,6 @@
 ---
 title: Modelo de Concorrência e Event Loop
 slug: Web/JavaScript/EventLoop
-tags:
-  - Avançado
-  - Event Loop
-  - Event Management
-  - Event Queue
-  - Handling Events
-  - JavaScript
-  - events
-translation_of: Web/JavaScript/EventLoop
 ---
 
 {{JsSidebar("Advanced")}}

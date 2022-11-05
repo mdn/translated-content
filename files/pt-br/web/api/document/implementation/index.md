@@ -1,12 +1,6 @@
 ---
 title: Document.implementation
 slug: Web/API/Document/implementation
-tags:
-  - API
-  - DOM
-  - Propriedade
-  - Referencia
-translation_of: Web/API/Document/implementation
 ---
 {{ ApiRef("DOM") }}
 

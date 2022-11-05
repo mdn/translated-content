@@ -1,18 +1,7 @@
 ---
 title: Usando a API Web Storage
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
-tags:
-  - API
-  - Guía
-  - Storage
-  - Web Storage API
-  - localStorage
-  - sessionStorage
-translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 original_slug: Web/API/Web_Storage_API_pt_br/Using_the_Web_Storage_API
-browser-compat:
-  - api.Window.localStorage
-  - api.Window.sessionStorage
 ---
 {{DefaultAPISidebar("Web Storage API")}}
 

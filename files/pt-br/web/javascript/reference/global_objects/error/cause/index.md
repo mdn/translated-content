@@ -1,11 +1,6 @@
 ---
 title: Error.prototype.cause
 slug: Web/JavaScript/Reference/Global_Objects/Error/cause
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-browser-compat: javascript.builtins.Error.cause
 ---
 
 {{JSRef}}

@@ -1,15 +1,6 @@
 ---
 title: JavaScript
 slug: Glossary/JavaScript
-tags:
-  - ECMAScript6
-  - Glossario(2)
-  - Iniciante
-  - JS
-  - JavaSc
-  - JavaScript
-  - scripts
-translation_of: Glossary/JavaScript
 original_slug: Glossario/JavaScript
 ---
 ## Sumário

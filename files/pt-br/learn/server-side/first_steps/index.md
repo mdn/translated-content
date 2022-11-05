@@ -1,17 +1,6 @@
 ---
 title: Primeiros passos programando o site no servidor
 slug: Learn/Server-side/First_steps
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Landing
-  - Learn
-  - NeedsTranslation
-  - Server-side programming
-  - TopicStub
-translation_of: Learn/Server-side/First_steps
 ---
 {{LearnSidebar}}
 

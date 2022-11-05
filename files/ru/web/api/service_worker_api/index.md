@@ -131,7 +131,7 @@ Service worker'ы также предназначены для таких вещ
 
 ## Смотрите также:
 
-- Кулинарная книга [ServiceWorker](https://serviceworke.rs)
+- Кулинарная книга [ServiceWorker](https://github.com/mdn/serviceworker-cookbook)
 - Использование[Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - Основные примеры кода [Service workers](https://github.com/mdn/sw-test)
 - Готов ли [ServiceWorker?](https://jakearchibald.github.io/isserviceworkerready/)

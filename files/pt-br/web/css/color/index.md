@@ -1,13 +1,6 @@
 ---
 title: Propriedade color do CSS
 slug: Web/CSS/color
-tags:
-  - CSS
-  - HTML
-  - Layout
-  - Web
-  - color
-translation_of: Web/CSS/color
 ---
 {{CSSRef}}
 

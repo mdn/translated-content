@@ -3,7 +3,7 @@ title: <optgroup>
 slug: Web/HTML/Element/optgroup
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML 元素 `<optgroup>` **为{{HTMLElement("select")}} 元素中的选项创建分组。
 

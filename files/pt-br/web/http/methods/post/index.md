@@ -1,11 +1,6 @@
 ---
 title: POST
 slug: Web/HTTP/Methods/POST
-tags:
-  - HTTP
-  - Método de requisição
-  - Referencia
-translation_of: Web/HTTP/Methods/POST
 ---
 {{HTTPSidebar}}
 

@@ -26,7 +26,9 @@ console.log(a); // 1
 console.log(b); // 2
 
 ({a, b, ...rest} = {a:1, b:2, c:3, d:4});
-// ES2016 - ещё не реализовано Firefox 47a01
+console.log(a); // 1
+console.log(b); // 2
+console.log(rest); // { c:3, d:4 }
 ```
 
 ## Описание

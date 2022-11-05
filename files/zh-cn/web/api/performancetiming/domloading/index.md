@@ -7,7 +7,7 @@ slug: Web/API/PerformanceTiming/domLoading
 
 ## 概要
 
-**`PerformanceTiming.domLoading`** 是一个返回代表一个时刻的 `unsigned long long` 型只读属性，为解析器开始工作，即 {{domxref("Document.readyState")}} 改变为 `'loading'` 并且 {{event("readystatechange")}} 事件被触发之时的 Unix 毫秒时间戳。
+**`PerformanceTiming.domLoading`** 是一个返回代表一个时刻的 `unsigned long long` 型只读属性，为解析器开始工作，即 {{domxref("Document.readyState")}} 改变为 `'loading'` 并且 [`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event) 事件被触发之时的 Unix 毫秒时间戳。
 
 ## 语法
 

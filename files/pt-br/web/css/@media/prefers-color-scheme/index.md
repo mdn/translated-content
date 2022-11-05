@@ -1,13 +1,6 @@
 ---
 title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
-tags:
-  - '@media'
-  - CSS
-  - Reference
-  - Web
-  - prefers-color-scheme
-translation_of: Web/CSS/@media/prefers-color-scheme
 ---
 > **Note:** Se você definiu `privacy.resistFingerprinting` como **true**, [`prefers-color-scheme`](/pt-BR/docs/Web/CSS/@media/prefers-color-scheme) será substituída pela `light`.
 

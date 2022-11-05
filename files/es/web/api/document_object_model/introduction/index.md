@@ -101,7 +101,7 @@ La siguiente tabla describe brevemente estos tipos de datos.
     <td>Una "<code>nodeList</code>" es una serie de elementos, parecido a lo que devuelve el método <code>document.getElementsByTagName()</code>. Se accede a los items de la <code>nodeList</code> de cualquiera de las siguientes dos formas:
       <ul>
       <li>list.item (1)</li>
-      <li>lista {{mediawiki.external (1)}}</li>
+      <li>lista [1]</li>
       </ul>
       <p>Ambas maneras son equivalentes. En la primera, <strong>item()</strong> es el método del objeto <code>nodeList</code>. En la última se utiliza la típica sintaxis de acceso a listas para llegar al segundo ítem de la lista.</p>
     </td>
@@ -216,7 +216,7 @@ La creación de una página de prueba con una paleta de botones, campos de texto
 
 Figura 0.1 Muestra DOM página de prueba
 
-![](https://developer.mozilla.org/@api/deki/files/173/=DOM_Ref_Introduction_to_the_DOM.gif)
+![](/@api/deki/files/173/=DOM_Ref_Introduction_to_the_DOM.gif)
 
 En este ejemplo, los menúes desplegables actualizan dinámicamente los aspectos de la página web accesibles al DOM como el color de fondo (`bgColor`), de los hiper-enlaces (`aLink`), y el del texto (`text`). El hecho de diseñar páginas, testar las interfaces que se encuentren a lo largo de la lectura son una parte importante del aprendizaje para una utilización eficaz del DOM.
 

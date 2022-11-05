@@ -1,12 +1,6 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
-tags:
-  - Agente de Usuário
-  - Cabeçalho HTTP
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Headers/User-Agent
 ---
 {{HTTPSidebar}}
 

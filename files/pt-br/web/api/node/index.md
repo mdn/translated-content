@@ -1,7 +1,6 @@
 ---
 title: Node
 slug: Web/API/Node
-translation_of: Web/API/Node
 ---
 {{Apiref("DOM")}}
 

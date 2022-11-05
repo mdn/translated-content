@@ -16,7 +16,7 @@ tags:
 translation_of: Web/HTML/Element/input/range
 original_slug: Web/HTML/Elemento/input/range
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 El elemento {{HTMLElement("input")}} del tipo **`"range"`** permite que el usuario especifique un valor numérico comprendido entre un valor mínimo y máximo. El valor exacto, sin embargo, no se considera importante. Se repesenta típicamente como un "tirador" o un control deslizante en lugar de un campo de texto como otros tipos de {{HTMLElement("input")}}. Como este tipo de widget es bastante inmpreciso, no debe utilizarse normalmente a menos que el valor exacto del control no sea importante.
 

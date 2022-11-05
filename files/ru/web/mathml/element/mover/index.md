@@ -21,7 +21,7 @@ translation_of: Web/MathML/Element/mover
     Если установлено `false` (по умолчанию) over-script это _ограничение_ по базовому выражению.
 - align {{deprecated_inline}}
   - : Выравнивание над сценарием. Возможные значения: `left`, `center`, и `right`.
-    Этот атрибут устарел и будет удалён в будущем. Вместо этого используйте CSS [`text-align`](https://developer.mozilla.org/ru/docs/Web/CSS/text-align).
+    Этот атрибут устарел и будет удалён в будущем. Вместо этого используйте CSS [`text-align`](/ru/docs/Web/CSS/text-align).
 - class, id, style
   - : Предусмотрено для использования с [таблицами стилей](/ru/docs/Web/CSS).
 - `displaystyle`

@@ -1,12 +1,6 @@
 ---
 title: 'TypeError: setting getter-only property "x"'
 slug: Web/JavaScript/Reference/Errors/Getter_only
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - Strict Mode
-  - TypeError
 ---
 {{jsSidebar("Errors")}}
 

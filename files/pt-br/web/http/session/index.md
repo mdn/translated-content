@@ -1,9 +1,6 @@
 ---
 title: Uma típica sessão HTTP
 slug: Web/HTTP/Session
-tags:
-  - HTTP
-translation_of: Web/HTTP/Session
 ---
 {{HTTPSidebar}}
 

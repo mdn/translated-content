@@ -56,7 +56,7 @@ MutationObserver は、ノード間の直接接続が切断されても、時間
 
 ## 例
 
-この例では、{{domxref("MutationObserver")}} のインスタンス上で**`observe()`** メソッドを呼び出す方法を示します。一度設定したら、ターゲット要素と {{domxref("MutationObserverInit")}} オプションオブジェクトを渡します。
+この例では、{{domxref("MutationObserver")}} のインスタンス上で **`observe()`** メソッドを呼び出す方法を示します。一度設定したら、ターゲット要素と {{domxref("MutationObserverInit")}} オプションオブジェクトを渡します。
 
 ```js
 // identify an element to observe

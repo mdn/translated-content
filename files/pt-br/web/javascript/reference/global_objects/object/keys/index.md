@@ -1,7 +1,6 @@
 ---
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
 {{JSRef}}
 

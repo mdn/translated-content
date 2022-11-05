@@ -40,8 +40,7 @@ de estos dos tipos de peticiones en la página [peticiones síncronas
 y asíncronas](/es/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). No utilice solicitudes sincrónicas fuera de los Web
 Workers.
 
-> **Nota:** A partir de Gecko 30.0 {{ geckoRelease("30.0")
-  }}, las peticiones síncronas en el hilo principal han sido marcadas como obsoletas debido a
+> **Nota:** A partir de Gecko 30.0 (Firefox 30.0 / Thunderbird 30.0 / SeaMonkey 2.27), las peticiones síncronas en el hilo principal han sido marcadas como obsoletas debido a
 > los efectos negativos en la experiencia del usuario.
 
 > **Nota:** La función constructora
@@ -651,7 +650,7 @@ AJAXSubmit(myForm);
 > de cargar contenido binario, considere utilizar la API `FormData`.
 
 > **Nota:** El método no estándar `sendAsBinary`
-> se considera obsoleto a partir de Gecko 31 {{geckoRelease(31)}} y se eliminará pronto.
+> se considera obsoleto a partir de Gecko 31 (Firefox 31 / Thunderbird 31 / SeaMonkey 2.28) y se eliminará pronto.
 > En su lugar se puede utilizar el método estándar `send(Blob data)`.
 
 ### Uso de los objetos FormData

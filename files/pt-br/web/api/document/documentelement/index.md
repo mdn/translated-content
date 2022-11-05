@@ -1,11 +1,6 @@
 ---
 title: Document.documentElement
 slug: Web/API/Document/documentElement
-tags:
-  - Propriedade
-  - Referencia
-  - raiz
-translation_of: Web/API/Document/documentElement
 ---
 {{ ApiRef("DOM") }}
 

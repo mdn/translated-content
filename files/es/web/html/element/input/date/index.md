@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/input/date
 browser-compat: html.elements.input.input-date
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Los elementos {{HTMLElement("input")}} de **`type="date"`** crean un campo de entrada que le permite al usuario introducir una fecha, que puede ser tanto como una caja de texto para validar el campo como una interfaz especial que le permite escoger una fecha.
 

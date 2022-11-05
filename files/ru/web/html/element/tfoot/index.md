@@ -77,4 +77,4 @@ _HTML_ элемент подвала таблицы (`<tfoot>`) определя
   - the {{ cssxref(":nth-child") }} pseudo-class to set the alignment on the cells of the column;
   - the {{ cssxref("text-align") }} property to align all cells content on the same character, like '.'.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

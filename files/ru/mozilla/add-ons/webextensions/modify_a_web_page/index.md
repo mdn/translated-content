@@ -58,7 +58,7 @@ header.textContent = "Эта страница была съедена";
 document.body.appendChild(header);
 ```
 
-Теперь [установим расширение](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), и перейдём на страницу <https://developer.mozilla.org/>:
+Теперь [установим расширение](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), и перейдём на страницу <https://developer.mozilla.org/>:
 
 {{EmbedYouTube("lxf2Tkg6U1M")}}
 
@@ -122,7 +122,7 @@ modify-page/
     page-eater.js
 ```
 
-Теперь [перезагрузим расширение](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), откроем страницу (на этот раз любую) активируем контекстное меню и выберем "Съесть эту страницу":
+Теперь [перезагрузим расширение](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), откроем страницу (на этот раз любую) активируем контекстное меню и выберем "Съесть эту страницу":
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 

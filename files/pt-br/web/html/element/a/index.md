@@ -1,18 +1,8 @@
 ---
 title: <a>
 slug: Web/HTML/Element/a
-tags:
-  - Conteúdo
-  - Elemento
-  - HTML
-  - Internet
-  - Rede
-  - Referencia
-  - Semántica HTML a nivel de texto
-  - Web
-translation_of: Web/HTML/Element/a
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 O **elemento** **`<a>` **em **HTML** (ou elemento âncora), com o atributo [`href`](#href) cria-se um hiperligação nas páginas web, arquivos, endereços de emails, ligações na mesma página ou endereços na URL. O conteúdo dentro de cada `<a>` **precisará** indicar o destino do link.
 

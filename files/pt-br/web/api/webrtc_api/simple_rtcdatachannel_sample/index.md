@@ -1,7 +1,6 @@
 ---
 title: Uma simples amostra de RTCDataChannel
 slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
-translation_of: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 original_slug: Web/API/WebRTC_API/Simples_RTCDataChannel_amostra
 ---
 {{WebRTCSidebar}}

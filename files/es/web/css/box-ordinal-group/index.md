@@ -12,7 +12,8 @@ translation_of_original: Web/CSS/-moz-box-ordinal-group
 original_slug: Web/CSS/-moz-box-ordinal-group
 ---
 {{CSSRef}}
-{{warning("Esta propiedad pertenece al borrador original del diseño o esquema de la caja CSS flexible, y ha sido reemplazada en borradores posteriores.")}}
+
+> **Advertencia:** Esta propiedad pertenece al borrador original del diseño o esquema de la caja CSS flexible, y ha sido reemplazada en borradores posteriores.
 
 Ver [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) para más información sobre qué usar en sustitución de esta propiedad.
 

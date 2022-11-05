@@ -3,7 +3,7 @@ title: <input type="search">
 slug: Web/HTML/Element/Input/search
 translation_of: Web/HTML/Element/input/search
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} элементы с типом **`search`** это текстовые поля разработанные для ввода пользователем поисковых запросов. Функциональность идентична элементам с типом [`text`](/en-US/docs/Web/HTML/Element/input/text), но может отличаться стилизация за счёт {{Glossary("user agent")}}, а также наличием специального **не стандартизированного** события {{domxref("HTMLElement/search_event", "onsearch")}}.
 

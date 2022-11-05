@@ -34,7 +34,7 @@ slug: Web/CSS/:not
 - `:not(.foo)` 将匹配任何非 `.foo` 的元素，_包括 {{HTMLElement("html")}} 和 {{HTMLElement("body")}}_。
 - 这个选择器将匹配任意“不是一个 X”的元素。当与[后代选择器](/zh-CN/docs/Web/CSS/Descendant_combinator)一起使用，这可能令人惊讶，因为有多种路径可以选择一个目标元素。例如，`body :not(table) a` 仍将应用 {{HTMLElement("table")}} 中的链接，因为 {{HTMLElement("tr")}}、{{HTMLElement("tbody")}}、{{HTMLElement("th")}}、{{HTMLElement("td")}}、{{HTMLElement("caption")}} 等都可以匹配选择器 `:not(table)` 部分。
 - 你可以同时否定多个选择器。例如：`:not(.foo, .bar)` 等同于 `:not(.foo):not(.bar)`。
-- 如果传递给 `:not()` 伪类的选择器无效或者浏览器不支持，则整个规则都将是无效的。克服这种行为的有效方式是使用：[`:is`](/zh-CN/docs/Web/CSS/:is) 伪类，它可以接受有错的选择器列表。例如 `:not(.foo, :invalid-pseudo-class)` 将使整个规则无效，但是 `:is(:not(.foo), :not(:invalid-pseudo-class))` 将匹配任何不是 `.foo` 的元素。
+- 如果传递给 `:not()` 伪类的选择器无效或者浏览器不支持，则整个规则都将是无效的。克服这种行为的有效方式是使用：[`:is`](/zh-CN/docs/Web/CSS/:is) 伪类，它接受一个可容错选择器列表。例如 `:not(.foo, :invalid-pseudo-class)` 将使整个规则无效，但是 `:is(:not(.foo), :not(:invalid-pseudo-class))` 将匹配任何不是 `.foo` 的元素。
 
 ## 示例
 

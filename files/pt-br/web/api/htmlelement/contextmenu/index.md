@@ -1,16 +1,6 @@
 ---
 title: HTMLElement.contextMenu
 slug: Web/API/HTMLElement/contextMenu
-tags:
-  - API
-  - Depreciado
-  - Elemento
-  - HTML
-  - HTML DOM
-  - Propriedade
-  - Referencia
-  - UX
-translation_of: Web/API/HTMLElement/contextMenu
 ---
 {{APIRef("HTML DOM")}}{{deprecated_header()}}
 

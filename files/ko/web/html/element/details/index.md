@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/details
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<details>` 요소**는 "열림" 상태일 때만 내부 정보를 보여주는 정보 공개 위젯을 생성합니다. 요약이나 레이블은 {{htmlelement("summary")}} 요소를 통해 제공할 수 있습니다.
 

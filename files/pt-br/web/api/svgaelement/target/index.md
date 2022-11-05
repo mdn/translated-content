@@ -1,11 +1,6 @@
 ---
 title: SVGAElement.target
 slug: Web/API/SVGAElement/target
-tags:
-  - Imagem vetorial
-  - Vetores
-translation_of: Web/API/SVGAElement/target
-translation_of_original: Web/API/SVGAElement/SVGAlement.target
 original_slug: Web/API/SVGAElement/SVGAlement.target
 ---
 {{APIRef("SVGAElement")}}

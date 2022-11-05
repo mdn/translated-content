@@ -10,7 +10,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/canvas
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<canvas>` 요소**는 [캔버스 스크립팅 API](/ko/docs/Web/HTML/Canvas) 또는 [WebGL API](/ko/docs/Web/API/WebGL_API)와 함께 사용해 그래픽과 애니메이션을 그릴 수 있습니다.
 

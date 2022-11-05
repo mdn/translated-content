@@ -1,11 +1,6 @@
 ---
 title: RegExp.prototype.ignoreCase
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
-tags:
-  - JavaScript
-  - Referencia
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 ---
 {{JSRef}}O atributo **`ignoreCase`** indica se a flag "i" foi ou não utilizada com a expressão regular.`ignoreCase` é um atributo somente leitura de uma instância individual de expressãoregular.
 

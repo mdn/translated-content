@@ -1,7 +1,6 @@
 ---
 title: EventSource.onerror
 slug: Web/API/EventSource/error_event
-translation_of: Web/API/EventSource/onerror
 original_slug: Web/API/EventSource/onerror
 ---
 {{APIRef('WebSockets API')}}

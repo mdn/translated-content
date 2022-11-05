@@ -1,16 +1,6 @@
 ---
 title: Aprendendo desenvolvimento web
 slug: Learn
-tags:
-  - Aprender
-  - CSS
-  - HTML
-  - Index
-  - Iniciante
-  - Intro
-  - Novato
-  - Web
-translation_of: Learn
 original_slug: Aprender
 ---
 {{LearnSidebar}}

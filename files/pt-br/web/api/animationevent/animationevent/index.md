@@ -1,13 +1,6 @@
 ---
 title: AnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
-tags:
-  - AnimationEvent
-  - Apps
-  - CSSOM
-  - Experimental
-  - Referencia
-translation_of: Web/API/AnimationEvent/AnimationEvent
 ---
 {{APIRef("Web Animations API")}}{{SeeCompatTable}}
 

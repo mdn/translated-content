@@ -1,12 +1,6 @@
 ---
 title: GlobalEventHandlers.oncontextmenu
 slug: Web/API/Element/contextmenu_event
-tags:
-  - API
-  - HTML DOM
-  - Propriedade
-  - Referencia
-translation_of: Web/API/GlobalEventHandlers/oncontextmenu
 original_slug: Web/API/GlobalEventHandlers/oncontextmenu
 ---
 {{ ApiRef("HTML DOM") }}

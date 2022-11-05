@@ -1,7 +1,6 @@
 ---
 title: <input>
 slug: Web/HTML/Element/Input
-translation_of: Web/HTML/Element/input
 ---
 O **elemento HTML `<input>`** é usado para criar controles interativos para formulários baseados na web para receber dados do usuário. A semântica de um `<input>` varia consideravelmente dependendo do valor de seu atributo `type`.
 
@@ -284,4 +283,4 @@ Você pode usar o atributo {{htmlattrxref("mozactionhint", "input")}} para espec
 - Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
 - [Cross-browser HTML5 placeholder text](http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

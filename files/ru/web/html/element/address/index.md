@@ -9,7 +9,7 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/address
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML- тег `<address>` **задаёт контактные данные для ближайшего родительского {{HTMLElement("article")}} или {{HTMLElement("body")}} ; В последнем случае применяется ко всему документу, визуально выделяется курсивом.
 

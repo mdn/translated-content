@@ -1,13 +1,6 @@
 ---
 title: Primeiros Passos no MDN
 slug: MDN/Community/Contributing/Getting_started
-tags:
-  - Documentação
-  - Primeiros Passos
-  - Guia
-  - MDN
-  - Projeto MDN
-  - Novos Contribuidores
 original_slug: MDN/Contribute/Getting_started
 ---
 {{MDNSidebar}}

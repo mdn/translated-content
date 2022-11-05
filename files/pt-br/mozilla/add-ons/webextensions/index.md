@@ -1,11 +1,6 @@
 ---
 title: Extensões do navegador
 slug: Mozilla/Add-ons/WebExtensions
-tags:
-  - Extensões
-  - Passo a passo
-  - WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions
 ---
 Extensões são capazes de extender e modificar a capacidade de um navegador. As extensões para Firefox são criadas usando a API WebExtensions, um sistema comum a vários navegadores para desenvolvimento de extensões. Em grande parte, o sistema é compatível com a [API de extensões](https://developer.chrome.com/extensions) suportada pelo Google Chrome, Opera e [W3C Draft Community Group](https://browserext.github.io/browserext/).
 

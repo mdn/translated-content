@@ -1,13 +1,6 @@
 ---
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
-tags:
-  - API
-  - File API
-  - Files
-  - Image Preview
-  - Method
-translation_of: Web/API/FileReader/readAsDataURL
 ---
 {{APIRef("File API")}}
 

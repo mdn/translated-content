@@ -1,11 +1,6 @@
 ---
 title: background-blend-mode
 slug: Web/CSS/background-blend-mode
-tags:
-  - CSS
-  - Composição de CSS
-  - Propriedade CSS
-translation_of: Web/CSS/background-blend-mode
 ---
 {{CSSRef}}
 

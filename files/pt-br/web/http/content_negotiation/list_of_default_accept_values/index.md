@@ -1,12 +1,6 @@
 ---
 title: Lista de valores padrões de Accept
 slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
-tags:
-  - Accept
-  - HTTP
-  - Negociação de conteúdo
-  - Referencia
-translation_of: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 ---
 {{HTTPSidebar}}
 

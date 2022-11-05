@@ -22,7 +22,7 @@ translation_of: Web/MathML/Element/maction
     - `toggle`: Если кликнуть на подвыражении, рендеринг чередует отображение выбранных подвыражений. Поэтому с каждым кликом `выбираемое` значение меняется на следующее.
       Синтаксис: `<maction actiontype="toggle" selection="positive-integer" > expression1 expression2 expressionN </maction>`.
     - `tooltip`: Когда указатель перемещается над _выражением (expression)_, рядом с выражением отображается всплывающая подсказка с _сообщением (message)_.
-      Синтаксис:` <maction actiontype="tooltip"> expression message </maction>.`
+      Синтаксис: `<maction actiontype="tooltip"> expression message </maction>.`
 
 - class, id, style
   - : Предусматривается для использования с [таблицами стилей](/ru/docs/CSS).
@@ -37,7 +37,7 @@ translation_of: Web/MathML/Element/maction
 
 ## Примеры
 
-В следующем примере используется атрибут `actiontype со значением `"toggle" :
+В следующем примере используется атрибут `actiontype` со значением `"toggle"`:
 
 ```html
 <math>

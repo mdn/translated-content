@@ -1,16 +1,6 @@
 ---
 title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
-tags:
-  - Geometria
-  - JavaScript
-  - Matemática
-  - Math
-  - Trigonometría
-  - cos
-  - cosseno
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cos
 ---
 {{JSRef}}
 

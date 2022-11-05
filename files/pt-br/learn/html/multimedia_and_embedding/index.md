@@ -1,21 +1,6 @@
 ---
 title: Multimídia e Incorporação
 slug: Learn/HTML/Multimedia_and_embedding
-tags:
-  - Acesso
-  - Aprender
-  - Audio
-  - Avaliação
-  - Flash
-  - Gráficos Vetoriais
-  - Guia(2)
-  - HTML
-  - Imagens
-  - Iniciante
-  - SVG
-  - Vídeo(2)
-  - iframes
-translation_of: Learn/HTML/Multimedia_and_embedding
 original_slug: Aprender/HTML/Multimedia_and_embedding
 ---
 {{LearnSidebar}}

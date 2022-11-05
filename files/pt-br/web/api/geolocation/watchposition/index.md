@@ -1,7 +1,6 @@
 ---
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
-translation_of: Web/API/Geolocation/watchPosition
 ---
 {{ APIref("Geolocation API") }}
 

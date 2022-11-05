@@ -1,11 +1,6 @@
 ---
 title: Compressão em HTTP
 slug: Web/HTTP/Compression
-tags:
-  - Guía
-  - HTTP
-  - compressão
-translation_of: Web/HTTP/Compression
 original_slug: Web/HTTP/Compressão
 ---
 {{HTTPSidebar}}

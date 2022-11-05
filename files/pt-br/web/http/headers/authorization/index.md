@@ -1,15 +1,6 @@
 ---
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
-tags:
-  - Autenticação
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Reference
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Authorization
 ---
 {{HTTPSidebar}}
 

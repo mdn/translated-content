@@ -1,11 +1,6 @@
 ---
 title: sepia()
 slug: Web/CSS/filter-function/sepia
-tags:
-  - Efeitos de Filtro
-  - Função CSS
-  - Referencia
-translation_of: Web/CSS/filter-function/sepia()
 original_slug: Web/CSS/filter-function/sepia()
 ---
 {{cssref}}

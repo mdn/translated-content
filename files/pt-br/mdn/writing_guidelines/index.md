@@ -1,13 +1,6 @@
 ---
 title: Sobre o MDN
 slug: MDN/Writing_guidelines
-tags:
-  - Colaboração
-  - Comunidade
-  - Guia(2)
-  - Licenças
-  - MDN Meta
-translation_of: MDN/About
 original_slug: MDN/About
 ---
 {{MDNSidebar}}

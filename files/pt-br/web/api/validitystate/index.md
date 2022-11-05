@@ -1,14 +1,6 @@
 ---
 title: ValidityState
 slug: Web/API/ValidityState
-tags:
-  - API
-  - Forms
-  - HTML DOM
-  - HTML5
-  - Interface
-  - Validation
-translation_of: Web/API/ValidityState
 ---
 {{APIRef("HTML DOM")}} {{gecko_minversion_header("2.0")}}
 

@@ -1,10 +1,6 @@
 ---
 title: Técnicas para desenvolvimento de jogos
 slug: Games/Techniques
-tags:
-  - NeedsTranslation
-  - TopicStub
-translation_of: Games/Techniques
 ---
 {{GamesSidebar}}
 

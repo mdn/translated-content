@@ -32,9 +32,9 @@ _该接口从 {{domxref("WorkerGlobalScope")}} 接口以及它的父接口 {{dom
 _该接口从 {{domxref("WorkerGlobalScope")}} 接口以及它的父接口 {{domxref("EventTarget")}} 继承事件处理器，因此，此接口也实现了来自 {{domxref("WindowTimers")}}、{{domxref("WindowBase64")}} 的事件处理器。_
 
 - {{domxref("DedicatedWorkerGlobalScope.onmessage")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("message")}} event is raised. These events are of type {{domxref("MessageEvent")}} and will be called when the worker receives a message from the document that started it (i.e. from the {{domxref("Worker.postMessage")}} method.)
+  - : Is an event handler representing the code to be called when the [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) event is raised. These events are of type {{domxref("MessageEvent")}} and will be called when the worker receives a message from the document that started it (i.e. from the {{domxref("Worker.postMessage")}} method.)
 - {{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("messageerror")}} event is raised.
+  - : Is an event handler representing the code to be called when the [`messageerror`](/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event) event is raised.
 
 ## 方法
 

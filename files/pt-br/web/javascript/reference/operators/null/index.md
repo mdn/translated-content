@@ -1,7 +1,6 @@
 ---
 title: 'null'
 slug: Web/JavaScript/Reference/Operators/null
-translation_of: Web/JavaScript/Reference/Global_Objects/null
 original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
 {{jsSidebar("Objects")}}

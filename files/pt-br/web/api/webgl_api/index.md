@@ -1,12 +1,6 @@
 ---
 title: WebGL
 slug: Web/API/WebGL_API
-tags:
-  - WebGL
-translation_of: Web/API/WebGL_API
-browser-compat:
-  - api.WebGLRenderingContext
-  - api.WebGL2RenderingContext
 ---
 {{WebGLSidebar}}
 

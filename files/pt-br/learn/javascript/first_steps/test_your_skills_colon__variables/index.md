@@ -1,14 +1,6 @@
 ---
 title: 'Teste suas habilidades: variáveis'
 slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
-tags:
-  - Aprender
-  - Habilidades
-  - Iniciante
-  - JavaScript
-  - Teste suas habilidades
-  - Variáveis
-translation_of: Learn/JavaScript/First_steps/Test_your_skills:_variables
 original_slug: Learn/JavaScript/First_steps/Teste_suas_habilidades:_variaveis
 ---
 {{learnsidebar}}

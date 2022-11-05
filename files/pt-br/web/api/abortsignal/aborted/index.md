@@ -1,12 +1,6 @@
 ---
 title: AbortSignal.aborted
 slug: Web/API/AbortSignal/aborted
-tags:
-  - API
-  - AbortSignal
-  - Propriedade
-  - aborted
-translation_of: Web/API/AbortSignal/aborted
 ---
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
