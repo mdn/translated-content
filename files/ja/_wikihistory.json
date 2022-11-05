@@ -31300,10 +31300,6 @@
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
   },
-  "conflicting/Web/Progressive_web_apps": {
-    "modified": "2019-04-17T00:04:34.176Z",
-    "contributors": ["Uemmra3", "Wind1808"]
-  },
   "conflicting/Web/SVG/Element/animate": {
     "modified": "2020-10-15T21:27:02.463Z",
     "contributors": ["takenspc", "wbamberg", "Sebastianz", "teoli", "manzyun"]
