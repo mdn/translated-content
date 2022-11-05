@@ -1,11 +1,6 @@
 ---
 title: scale()
 slug: Web/CSS/transform-function/scale
-tags:
-  - Função CSS
-  - Referencia
-  - Transformações CSS
-translation_of: Web/CSS/transform-function/scale()
 original_slug: Web/CSS/transform-function/scale()
 ---
 {{CSSRef}}

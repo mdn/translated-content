@@ -1,14 +1,6 @@
 ---
 title: Math.LOG2E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Propriedade
-  - Reference
-  - Referência(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
 ---
 {{JSRef}}
 

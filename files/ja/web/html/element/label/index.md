@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d2758b52647c72eab555b05941c8bc613a1e65d2
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<label>` 要素**は、ユーザーインターフェイスの項目のキャプションを表します。
 

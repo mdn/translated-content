@@ -13,7 +13,7 @@ translation_of: Web/API/CSSStyleSheet
 
 The **`CSSStyleSheet`** interface represents a single [CSS](/ko/docs/Web/CSS) style sheet. It inherits properties and methods from its parent, {{domxref("StyleSheet")}}.
 
-A style sheet consists of _{{domxref("CSSRule", "rules", "", 1)}}_, such as _{{domxref("CSSStyleRule", "style rules", "", 1)}}\_\_ _("`h1,h2 { font-size: 16pt }"`), various _at-rules_ (`@import`, `@media`, ...), etc. This interface lets you inspect and modify the list of rules in the stylesheet.
+A style sheet consists of _{{domxref("CSSRule", "rules", "", 1)}}_, such as _{{domxref("CSSStyleRule", "style rules", "", 1)}}_ ("`h1,h2 { font-size: 16pt }"`), various _at-rules_ (`@import`, `@media`, ...), etc. This interface lets you inspect and modify the list of rules in the stylesheet.
 
 See the [Notes](#notes) section for the various ways a CSSStyleSheet object can be obtained.
 

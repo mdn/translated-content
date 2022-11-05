@@ -1,15 +1,6 @@
 ---
 title: <li>
 slug: Web/HTML/Element/li
-tags:
-  - Elementos
-  - Guía
-  - HTML
-  - Indentação
-  - Referencia
-  - listagem <li>
-  - menu+HTML
-translation_of: Web/HTML/Element/li
 ---
 ## Resumo
 
@@ -98,4 +89,4 @@ Para exemplos mais detalhados veja as páginas [\<ol>](/pt-BR/docs/Web/HTML/Elem
   - [contadores CSS](/Web/Guide/CSS/Counters) para controlar listas aninhadas complexas,
   - a propriedade {{cssxref("margin")}}, para controlar a indentação dos itens da lista.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -3,7 +3,7 @@ title: <col>
 slug: Web/HTML/Element/col
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<col>` 元素** 定义表格中的列，并用于定义所有公共单元格上的公共语义。它通常位于{{HTMLElement("colgroup")}}元素内。
 
@@ -90,4 +90,4 @@ slug: Web/HTML/Element/col
   - the {{cssxref(":nth-child")}} pseudo-class to set the alignment on the cells of the column;
   - the {{cssxref("text-align")}} property to align all cells content on the same character, like '.'.
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

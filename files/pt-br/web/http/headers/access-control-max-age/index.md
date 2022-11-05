@@ -1,15 +1,6 @@
 ---
 title: Access-Control-Max-Age
 slug: Web/HTTP/Headers/Access-Control-Max-Age
-tags:
-  - CORS
-  - Cabeçalho de Resposta
-  - Cache
-  - HTTP
-  - Reference
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Access-Control-Max-Age
 ---
 {{HTTPSidebar}}
 

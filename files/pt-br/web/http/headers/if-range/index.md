@@ -1,14 +1,6 @@
 ---
 title: If-Range
 slug: Web/HTTP/Headers/If-Range
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-  - Requisições Condicionais
-  - Requisições de Intervalo
-translation_of: Web/HTTP/Headers/If-Range
 ---
 {{HTTPSidebar}}
 

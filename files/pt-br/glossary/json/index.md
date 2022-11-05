@@ -1,7 +1,6 @@
 ---
 title: JSON
 slug: Glossary/JSON
-translation_of: Glossary/JSON
 original_slug: JSON
 ---
 **JSON** (Notação de Objetos JavaScript) e um formato de dados permutável. Ele assemelha - se próximo a um sub tipo da sintaxe do [JavaScript](/pt-BR/docs/Trash/MDN/JavaScript/About_JavaScript), mas ele não é um tipo de script. (Veja [JSON](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON) em [Referências JavaScript](/en/JavaScript/Reference) para todos os detalhes). Isto é útil quando escrevemos qualquer tipo de aplicação baseada em JavaScript, incluindo web sites e extensões de navegadores. Por exemplo, você pode armazenar informações no formato em JSON no formato de [cookies](/en/DOM/document.cookie), ou você pode armazenar as preferências de extensões em JSON como valor de texto nas preferências do navegador.

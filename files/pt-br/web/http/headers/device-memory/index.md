@@ -1,13 +1,6 @@
 ---
 title: Device-Memory
 slug: Web/HTTP/Headers/Device-Memory
-tags:
-  - Cabeçalho HTTP
-  - Client hints
-  - Device Memory API
-  - HTTP
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Device-Memory
 ---
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 

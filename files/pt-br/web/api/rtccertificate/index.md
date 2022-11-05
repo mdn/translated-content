@@ -1,14 +1,6 @@
 ---
 title: RTCCertificate
 slug: Web/API/RTCCertificate
-tags:
-  - API
-  - Comunicação em tempo-real
-  - Interface
-  - RTCCertificate
-  - Refenrência
-  - WebRTC
-translation_of: Web/API/RTCCertificate
 ---
 {{APIRef("WebRTC")}}
 

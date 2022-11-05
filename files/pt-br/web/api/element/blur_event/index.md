@@ -1,7 +1,6 @@
 ---
 title: blur (evento)
 slug: Web/API/Element/blur_event
-translation_of: Web/API/Element/blur_event
 original_slug: Web/Events/blur
 ---
 O evento `blur` é acionado quando um elemento perde foco. A diferença principal entre este evento e [`focusout`](/pt-BR/docs/Mozilla_event_reference/focusout) é que apenas o segundo 'borbulha'.

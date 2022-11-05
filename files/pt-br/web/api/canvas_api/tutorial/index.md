@@ -1,15 +1,6 @@
 ---
 title: Canvas tutorial
 slug: Web/API/Canvas_API/Tutorial
-tags:
-  - Canvas
-  - Graphics
-  - Guide
-  - HTML
-  - HTML5
-  - Intermediate
-  - Web
-translation_of: Web/API/Canvas_API/Tutorial
 original_slug: Web/Guide/HTML/Canvas_tutorial
 ---
 {{CanvasSidebar}} [![](https://mdn.mozillademos.org/files/257/Canvas_tut_examples.jpg)](/pt-BR/docs/Web/HTML/Canvas)

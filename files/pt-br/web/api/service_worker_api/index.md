@@ -1,7 +1,6 @@
 ---
 title: API do Service Worker
 slug: Web/API/Service_Worker_API
-translation_of: Web/API/Service_Worker_API
 ---
 {{ServiceWorkerSidebar}}
 

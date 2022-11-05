@@ -80,4 +80,4 @@ Ver {{HTMLElement("table")}} para ejemplos de `<tr>`.
   - El {{cssxref(":nth-child")}} pseudo-clase para establecer la alineación en las células de la columna;
   - El {{cssxref("text-align")}} propiedad para alinear todas las células contenidos en el mismo carácter, como '.'. <
 
-{{HTMLRef}}
+{{HTMLSidebar}}

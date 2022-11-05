@@ -10,7 +10,7 @@ tags:
 translation_of: Web/HTML/Element/xmp
 original_slug: Web/HTML/Elemento/xmp
 ---
-{{Obsolete_header}}
+{{Deprecated_Header}}
 
 ## Resumen
 
@@ -37,4 +37,4 @@ Este elemento implementa la interface {{domxref('HTMLElement')}} .
 - Los elementos {{HTMLElement("pre")}} y {{HTMLElement("code")}} que se usan en su lugar .
 - Los elementos {{HTMLElement("plaintext")}} y {{HTMLElement("listing")}} , similares a {{HTMLElement("xmp")}} pero también obsoletos .
 
-{{HTMLRef}}
+{{HTMLSidebar}}

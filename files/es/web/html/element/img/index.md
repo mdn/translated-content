@@ -72,7 +72,7 @@ Este elemento incluye atributos globales.
 
   - : Anchura del borde alrededor de la imagen.
 
-- {{htmlattrdef("crossorigin")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("crossorigin")}}
 
   - : Este atributo enumerado indica si la búsqueda de la imagen debe ser por CORS o no. [Imagen hablidata CORS](/es/docs/Web/HTML/Imagen_con_CORS_habilitado) puede ser usada en el elemento {{HTMLElement("canvas")}} sin ser pintada. Los valores permitidos son:
 
@@ -83,7 +83,7 @@ Este elemento incluye atributos globales.
 
     Cuando no existe, el recurso es buscado sin petición CORS (i.e., `sin enviar el Origen:` HTTP header) , previniendo el uso no pintado del elemento {{HTMLElement('canvas')}}. Si es inválido, se maneja como si se hubiese usado **anonymous**. Ver [atributos de configuración CORS](/es/docs/HTML/CORS_settings_attributes) para más información.
 - {{htmlattrdef("height")}}
-  - : La altura de la imagen en píxeles CSS {{HTMLVersionInline(5)}} o píxeles o como porcentaje en {{HTMLVersionInline(4)}}.
+  - : La altura de la imagen en píxeles CSS en HTML5 o píxeles o como porcentaje en HTML4.
 - {{htmlattrdef("hspace")}} {{deprecated_inline}}
   - : El número de píxeles de espaciado a la izquierda y la derecha de la imagen.
 - {{htmlattrdef("ismap")}}
@@ -95,7 +95,7 @@ Este elemento incluye atributos globales.
 - {{htmlattrdef("longdesc")}}
   - : La URL como descripción de una imagen mostrada, complementa al texto de {{htmlattrdef("alt", "img")}}.
 - {{htmlattrdef("name")}} {{deprecated_inline}}
-  - : El nombre para el elemento. Soportado en {{HTMLVersionInline(4)}} solo para compatibilidad con versiones anteriores. En su lugar, usa el atributo **`id`**.
+  - : El nombre para el elemento. Soportado en HTML4 solo para compatibilidad con versiones anteriores. En su lugar, usa el atributo **`id`**.
 - {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
 
   - : Una cadena indicando que referencia usar cuando buscas un recurso:
@@ -106,7 +106,7 @@ Este elemento incluye atributos globales.
     - "origin-when-cross-origin": navega hacia otro origen limitado por el esquema, el anfitrión y el puerto, mientras navegas en el mismo origen incluirá el camino del referente.
     - `"unsafe-url"`: el referente incluirá el origen y el camino (pero no el fragment, contraseña, o nombre de usuario). Este caso es arriegasdo porque puede haber una fuga del origen o el camino desde los recursos protegidos por TLS desde orígenes inseguros.
 
-- {{htmlattrdef("sizes")}}{{HTMLVersionInline(5)}}
+- {{htmlattrdef("sizes")}}
 
   - : Una lista de una o más cadenas separadas por comas indicando el tamaño de la fuente. Cada tamaño de la fuente consiste en:
 
@@ -117,7 +117,7 @@ Este elemento incluye atributos globales.
 
 - {{htmlattrdef("src")}}
   - : La URL de la imagen. Este atributo es obligatorio para el elemento \<img>. En navegadores que soportan `srcset`, `src` es tratado como imagen candidata con una densidad del píxel `1x` sino una imagen estará definida en `srcset` o `srcset` contiene ancho.
-- {{htmlattrdef("srcset")}}{{HTMLVersionInline(5)}}
+- {{htmlattrdef("srcset")}}
 
   - : Una lista de una o más cadenas separadas por comas indicando las posibles fuentes para usar. Cada cadena está compuesta por:
 
@@ -134,7 +134,7 @@ Este elemento incluye atributos globales.
     Los agentes de usuario son discretos al elegir cualquiera de las fuentes disponibles. Esto les proporciona un margen significativo para adaptar su selección basada en cosas como las preferencias del usuario o las condiciones de ancho de banda.
 
 - {{htmlattrdef("width")}}
-  - : El ancho de la imagen en píxeles CSS {{HTMLVersionInline(5)}}, o píxeles o porcentaje en {{HTMLVersionInline(4)}}.
+  - : El ancho de la imagen en píxeles CSS en HTML5, o píxeles o porcentaje en HTML4.
 - {{htmlattrdef("usemap")}}
 
   - : La URL parcial (empezando con '#') de un [mapa de imagea](/es/docs/HTML/Element/map) asociado a un elemento.
@@ -151,11 +151,11 @@ El estándar de HTML no ofrece una lista de formatos de imagen soportados, de mo
 - [JPEG](http://en.wikipedia.org/wiki/JPEG)
 - [GIF](http://en.wikipedia.org/wiki/Graphics_Interchange_Format), including animated GIFs
 - [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics)
-- [APNG](/es/docs/Animated_PNG_graphics) {{gecko_minversion_inline("1.9.2")}}
-- [SVG](/es/docs/SVG) {{gecko_minversion_inline("2.0")}}
+- [APNG](/es/docs/Animated_PNG_graphics)
+- [SVG](/es/docs/SVG)
 - [BMP](http://en.wikipedia.org/wiki/BMP_file_format)
 - [BMP ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
-- [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29) {{gecko_minversion_inline("9.0")}}
+- [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
 
 > **Nota:**
 > Soporte para formato [XBM](http://en.wikipedia.org/wiki/X_BitMap) fue eliminado en Gecko 1.9.2.

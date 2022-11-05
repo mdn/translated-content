@@ -1,15 +1,6 @@
 ---
 title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
-tags:
-  - Expressões Regulares
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - matchAll()
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 ---
 {{JSRef}}
 

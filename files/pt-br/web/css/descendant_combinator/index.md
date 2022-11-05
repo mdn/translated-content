@@ -1,11 +1,6 @@
 ---
 title: Descendant combinator
 slug: Web/CSS/Descendant_combinator
-tags:
-  - CSS
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Descendant_combinator
 ---
 {{CSSRef("Selectors")}}
 

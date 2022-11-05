@@ -1,7 +1,6 @@
 ---
 title: source
 slug: Web/HTML/Element/Source
-translation_of: Web/HTML/Element/source
 ---
 ## Sumário
 

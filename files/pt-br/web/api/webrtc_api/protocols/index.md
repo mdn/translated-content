@@ -1,22 +1,6 @@
 ---
 title: Introdução aos protocolos WebRTC
 slug: Web/API/WebRTC_API/Protocols
-tags:
-  - API
-  - Audio
-  - Guía
-  - ICE
-  - Iniciante
-  - Media
-  - NAT
-  - Projeto
-  - SDP
-  - STUN
-  - TURN
-  - Video
-  - WebRTC
-  - WebRTC API
-translation_of: Web/API/WebRTC_API/Protocols
 ---
 {{WebRTCSidebar}}
 

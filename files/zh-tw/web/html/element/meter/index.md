@@ -70,4 +70,4 @@ On Google Chrome, the resulting meter looks like this:
 
 - {{HTMLElement("progress")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

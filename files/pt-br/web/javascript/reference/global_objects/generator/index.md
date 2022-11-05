@@ -1,7 +1,6 @@
 ---
 title: Generator
 slug: Web/JavaScript/Reference/Global_Objects/Generator
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 ---
 {{JSRef}}
 

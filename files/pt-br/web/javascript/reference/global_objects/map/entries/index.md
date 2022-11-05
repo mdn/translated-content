@@ -1,14 +1,6 @@
 ---
 title: Map.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Map/entries
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-browser-compat: javascript.builtins.Map.entries
 ---
 {{JSRef}}
 

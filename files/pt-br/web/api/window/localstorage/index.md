@@ -1,14 +1,6 @@
 ---
 title: Window.localStorage
 slug: Web/API/Window/localStorage
-tags:
-  - API
-  - Armazenamento
-  - Propriedade
-  - Referencia
-  - WindowLocalStorage
-  - localStorage
-translation_of: Web/API/Window/localStorage
 original_slug: Web/API/Window/Window.localStorage
 ---
 {{APIRef()}}

@@ -1,11 +1,6 @@
 ---
 title: TE
 slug: Web/HTTP/Headers/TE
-tags:
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/TE
 ---
 {{HTTPSidebar}}
 

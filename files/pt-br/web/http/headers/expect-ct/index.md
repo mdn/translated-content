@@ -1,12 +1,6 @@
 ---
 title: Expect-CT
 slug: Web/HTTP/Headers/Expect-CT
-tags:
-  - Certificados
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Expect-CT
 ---
 {{HTTPSidebar}}
 

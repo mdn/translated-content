@@ -1,14 +1,6 @@
 ---
 title: Desenvolvimento de jogos
 slug: Games
-tags:
-  - Aplicativos
-  - Desenvolvimento de Jogos
-  - Gamedev
-  - Jogos Web
-  - Jogos em HTML5
-  - Jogos em JavaScript
-translation_of: Games
 ---
 {{GamesSidebar}}
 

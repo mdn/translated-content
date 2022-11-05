@@ -1,13 +1,6 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
-tags:
-  - Atributos
-  - Atributos globais
-  - HTML
-  - Referências
-  - itemprop
-translation_of: Web/HTML/Global_attributes/itemprop
 ---
 {{HTMLSidebar("Global_attributes")}}
 

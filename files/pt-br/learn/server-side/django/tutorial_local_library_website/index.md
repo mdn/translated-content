@@ -1,13 +1,6 @@
 ---
 title: 'Tutorial Django: Website da Biblioteca Local'
 slug: Learn/Server-side/Django/Tutorial_local_library_website
-tags:
-  - Artigo
-  - Guía
-  - Iniciante
-  - Tutorial
-  - django
-translation_of: Learn/Server-side/Django/Tutorial_local_library_website
 original_slug: Learn/Server-side/Django/Tutorial_website_biblioteca_local
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}

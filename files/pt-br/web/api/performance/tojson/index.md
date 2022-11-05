@@ -1,7 +1,6 @@
 ---
 title: Performance.toJSON()
 slug: Web/API/Performance/toJSON
-translation_of: Web/API/Performance/toJSON
 ---
 {{APIRef("High Resolution Timing")}}
 

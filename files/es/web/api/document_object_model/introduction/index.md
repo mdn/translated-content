@@ -101,7 +101,7 @@ La siguiente tabla describe brevemente estos tipos de datos.
     <td>Una "<code>nodeList</code>" es una serie de elementos, parecido a lo que devuelve el método <code>document.getElementsByTagName()</code>. Se accede a los items de la <code>nodeList</code> de cualquiera de las siguientes dos formas:
       <ul>
       <li>list.item (1)</li>
-      <li>lista {{mediawiki.external (1)}}</li>
+      <li>lista [1]</li>
       </ul>
       <p>Ambas maneras son equivalentes. En la primera, <strong>item()</strong> es el método del objeto <code>nodeList</code>. En la última se utiliza la típica sintaxis de acceso a listas para llegar al segundo ítem de la lista.</p>
     </td>

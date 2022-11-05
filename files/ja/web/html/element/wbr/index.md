@@ -3,7 +3,7 @@ title: <wbr>
 slug: Web/HTML/Element/wbr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<wbr>` 要素**は、改行可能位置 — テキスト内でブラウザーが任意で改行してよい位置を表しますが、この改行規則は必要のない場合は改行を行いません。
 

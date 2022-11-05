@@ -1,7 +1,6 @@
 ---
 title: <p> O elemento Parágrafo
 slug: Web/HTML/Element/p
-translation_of: Web/HTML/Element/p
 ---
 O **elemento HTML** **`<p>`** representa um parágrafo. Em mídias visuais, parágrafos são representados como blocos indentados de texto com a primeira letra avançada e separados por linhas em branco. Já em HTML, parágrafos são usados para agrupar conteúdos relacionados de qualquer tipo, como imagens e campos de um formulário.
 

@@ -1,10 +1,6 @@
 ---
 title: Instruções e declarações
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Statements
 ---
 {{jsSidebar("Instruções")}}
 

@@ -1,7 +1,6 @@
 ---
 title: Blob.slice()
 slug: Web/API/Blob/slice
-translation_of: Web/API/Blob/slice
 ---
 {{APIRef("File API")}}
 

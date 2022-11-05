@@ -1,7 +1,6 @@
 ---
 title: Console.assert()
 slug: Web/API/Console/assert
-translation_of: Web/API/console/assert
 ---
 {{APIRef("Console API")}}
 

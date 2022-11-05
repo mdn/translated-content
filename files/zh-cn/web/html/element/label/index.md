@@ -3,7 +3,7 @@ title: <label>
 slug: Web/HTML/Element/label
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<label>` 元素（标签）**表示用户界面中某个元素的说明。
 

@@ -1,11 +1,6 @@
 ---
 title: <table>
 slug: Web/HTML/Element/table
-tags:
-  - Elemento
-  - Referencia
-  - tabelas
-translation_of: Web/HTML/Element/table
 ---
 ## Resumo
 
@@ -331,4 +326,4 @@ border: 1px solid black;
   - {{cssxref("margin")}} and {{cssxref("padding")}} to style the individual cell content;
   - {{cssxref("text-align")}} and {{cssxref("vertical-align")}} to define alignment of text and cell content.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

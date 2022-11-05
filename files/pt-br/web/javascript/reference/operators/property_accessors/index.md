@@ -1,7 +1,6 @@
 ---
 title: Assessores de propriedade
 slug: Web/JavaScript/Reference/Operators/Property_Accessors
-translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 ---
 {{jsSidebar("Operators")}}
 

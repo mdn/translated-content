@@ -1,7 +1,6 @@
 ---
 title: Usando Fetch
 slug: Web/API/Fetch_API/Using_Fetch
-translation_of: Web/API/Fetch_API/Using_Fetch
 ---
 A [API Fetch](/pt-BR/docs/Web/API/Fetch_API) fornece uma interface JavaScript para acessar e manipular partes do pipeline HTTP, tais como os pedidos e respostas. Ela também fornece o método global {{domxref("GlobalFetch.fetch","fetch()")}} que fornece uma maneira fácil e lógica para buscar recursos de forma assíncrona através da rede.
 

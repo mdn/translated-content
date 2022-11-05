@@ -1,10 +1,6 @@
 ---
 title: Want-Digest
 slug: Web/HTTP/Headers/Want-Digest
-tags:
-  - Cabeçalho HTTP
-  - HTTP
-translation_of: Web/HTTP/Headers/Want-Digest
 ---
 {{HTTPSidebar}}
 

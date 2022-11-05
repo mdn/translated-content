@@ -13,7 +13,7 @@ translation_of: Web/HTML/Element/dialog
 browser-compat: html.elements.dialog
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<dialog>`** représente une boite de dialogue ou un composant interactif (par exemple un inspecteur ou une fenêtre).
 

@@ -1,12 +1,6 @@
 ---
 title: <nobr>
 slug: Web/HTML/Element/nobr
-tags:
-  - Elemento
-  - HTML
-  - Não-padrão
-  - Referencia
-translation_of: Web/HTML/Element/nobr
 ---
 {{non-standard_header}}
 
@@ -23,4 +17,4 @@ translation_of: Web/HTML/Element/nobr
 - {{Cssxref("white-space")}}
 - {{Cssxref("overflow")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

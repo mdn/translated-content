@@ -1,7 +1,6 @@
 ---
 title: <figure>
 slug: Web/HTML/Element/figure
-translation_of: Web/HTML/Element/figure
 original_slug: Web/HTML/Element/figura
 ---
 ## Resumo
@@ -83,4 +82,4 @@ Este elemento só inclui os [atributos globais](/pt-BR/docs/HTML/Global_attribut
 
 - O {{HTMLElement("figcaption")}} elemento.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

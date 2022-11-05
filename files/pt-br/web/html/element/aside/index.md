@@ -1,16 +1,6 @@
 ---
 title: <aside>
 slug: Web/HTML/Element/aside
-tags:
-  - Elemento
-  - HTML
-  - HTML5
-  - Internet
-  - Rede
-  - Referencia
-  - Seções HTML
-  - Web
-translation_of: Web/HTML/Element/aside
 ---
 ## Sumario
 
@@ -54,4 +44,4 @@ Este elemento inclui apenas os [atributos globais](/pt-BR/docs/HTML/Global_attri
 - Outros elementos de seçao relacionados: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
 - [Seçoes e outlines de um documento HTML5](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).
 
-{{HTMLRef}}
+{{HTMLSidebar}}

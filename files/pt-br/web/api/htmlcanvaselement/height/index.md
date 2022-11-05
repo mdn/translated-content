@@ -1,13 +1,6 @@
 ---
 title: HTMLCanvasElement.height
 slug: Web/API/HTMLCanvasElement/height
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - Propriedade
-  - altura
-translation_of: Web/API/HTMLCanvasElement/height
 ---
 {{APIRef("Canvas API")}}
 

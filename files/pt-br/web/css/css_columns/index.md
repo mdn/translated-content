@@ -1,13 +1,6 @@
 ---
 title: CSS Columns
 slug: Web/CSS/CSS_Columns
-tags:
-  - CSS
-  - CSS Reference
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-translation_of: Web/CSS/CSS_Columns
 ---
 {{CSSRef}}
 

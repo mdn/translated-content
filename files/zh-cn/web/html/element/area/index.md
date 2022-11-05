@@ -83,4 +83,4 @@ Netscape 1–level 浏览器不能解析**target** 链接到 frames 的属性。
 
 HTML 3.2 只定义了**alt**, **coords**, **href**, **nohref**, 和**shape**.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

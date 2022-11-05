@@ -1,14 +1,6 @@
 ---
 title: AudioContext
 slug: Web/API/AudioContext
-tags:
-  - API
-  - Audio
-  - Interface
-  - Referencia
-  - Som
-  - api de áudio
-translation_of: Web/API/AudioContext
 ---
 {{APIRef("Web Audio API")}}
 

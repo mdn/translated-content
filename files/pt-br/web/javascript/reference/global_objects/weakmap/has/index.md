@@ -1,7 +1,6 @@
 ---
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 ---
 {{JSRef}}
 

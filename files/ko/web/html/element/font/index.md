@@ -37,4 +37,4 @@ This element implements the {{domxref("HTMLFontElement")}} interface.
 
 {{Compat("html.elements.font")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

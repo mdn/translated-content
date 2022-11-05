@@ -1,11 +1,6 @@
 ---
 title: Navigator.battery
 slug: Web/API/Navigator/getBattery
-tags:
-  - API
-  - Battery API
-  - Propriedade
-translation_of: Web/API/Navigator/battery
 original_slug: Web/API/Navigator/battery
 ---
 {{ ApiRef("Battery API") }}

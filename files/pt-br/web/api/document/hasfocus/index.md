@@ -1,14 +1,6 @@
 ---
 title: Document.hasFocus()
 slug: Web/API/Document/hasFocus
-tags:
-  - API
-  - Compatibilidade
-  - DOM
-  - Focus
-  - Referencia
-  - metodo
-translation_of: Web/API/Document/hasFocus
 ---
 {{APIRef}}O método **`Document.hasFocus()`** retorna um valor {{jsxref("Boolean")}} que indica se o documento ou qualquer elemento dentro do documento está com o foco ativo. Este método pode ser usado para determinar se o elemento ativo em um documento tem foco.
 

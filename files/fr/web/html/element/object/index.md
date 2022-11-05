@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/object
 browser-compat: html.elements.object
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<object>`** représente une ressource externe qui peut être interprétée comme une image, un contexte de navigation imbriqué ou une ressource à traiter comme un _plugin_.
 

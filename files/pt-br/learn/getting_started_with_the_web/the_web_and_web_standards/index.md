@@ -1,7 +1,6 @@
 ---
 title: A web e seus padrões
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
-translation_of: Learn/Getting_started_with_the_web/The_web_and_web_standards
 original_slug: Aprender/Getting_started_with_the_web/A_web_e_seus_padrões
 ---
 {{learnsidebar}}

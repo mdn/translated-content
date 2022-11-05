@@ -1,11 +1,6 @@
 ---
 title: 302 Found
 slug: Web/HTTP/Status/302
-tags:
-  - Codigo de Estado
-  - HTTP
-  - Redirecionamento
-translation_of: Web/HTTP/Status/302
 ---
 {{HTTPSidebar}}
 

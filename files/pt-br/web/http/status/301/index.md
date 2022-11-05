@@ -1,14 +1,6 @@
 ---
 title: 301 Moved Permanently
 slug: Web/HTTP/Status/301
-tags:
-  - Código de status
-  - HTTP
-  - Redirecionamento
-  - Redirect
-  - Reference
-  - Status code
-translation_of: Web/HTTP/Status/301
 ---
 {{HTTPSidebar}}
 

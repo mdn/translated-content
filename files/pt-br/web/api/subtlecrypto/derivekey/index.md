@@ -1,15 +1,6 @@
 ---
 title: SubtleCrypto.deriveKey()
 slug: Web/API/SubtleCrypto/deriveKey
-tags:
-  - API
-  - Criptografía
-  - Crypto
-  - Referencia
-  - SubtleCrypto
-  - Web
-  - metodo
-translation_of: Web/API/SubtleCrypto/deriveKey
 ---
 {{APIRef("Web Crypto API")}}
 

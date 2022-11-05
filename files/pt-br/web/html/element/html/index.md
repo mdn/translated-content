@@ -1,15 +1,6 @@
 ---
 title: <html>
 slug: Web/HTML/Element/html
-tags:
-  - Elemento
-  - Elemento raiz HTML
-  - HTML
-  - Internet
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/html
 ---
 ## Sumário
 
@@ -64,4 +55,4 @@ Desde que o elemento `<html>` seja o primeiro em documento outro que comenta, es
 - Elemento de alto nível MathML: {{MathMLElement("math")}}
 - Elemento de alto nível SVG: {{SVGElement("svg")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

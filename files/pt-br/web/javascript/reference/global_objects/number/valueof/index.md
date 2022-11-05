@@ -1,7 +1,6 @@
 ---
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 ---
 {{JSRef}}
 

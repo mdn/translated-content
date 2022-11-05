@@ -44,4 +44,4 @@ slug: Web/HTML/Element/bgsound
 
 - The {{htmlelement("audio")}}, which is the standard element to embed audio in a document.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

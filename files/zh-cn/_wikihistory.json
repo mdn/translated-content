@@ -19877,7 +19877,7 @@
     "modified": "2020-11-16T09:08:21.720Z",
     "contributors": ["chrisdavidmills", "Pedestrian93"]
   },
-  "Web/CSS/fit-content": {
+  "Web/CSS/fit-content_function": {
     "modified": "2020-10-15T22:25:14.593Z",
     "contributors": ["xgqfrms"]
   },
@@ -25916,10 +25916,6 @@
   "Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
     "modified": "2020-03-30T11:15:40.777Z",
     "contributors": ["RainSlide", "teoli", "ziyunfei"]
-  },
-  "Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol": {
-    "modified": "2020-03-12T19:44:37.222Z",
-    "contributors": ["wwj402", "jwhitlock", "lsvih"]
   },
   "Web/JavaScript/Reference/Errors": {
     "modified": "2020-03-12T19:43:37.546Z",

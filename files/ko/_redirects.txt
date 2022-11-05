@@ -656,6 +656,7 @@
 /ko/docs/Web/Guide/HTML/폼/My_first_HTML_form	/ko/docs/Learn/Forms/Your_first_form
 /ko/docs/Web/Guide/HTML/폼/Sending_and_retrieving_form_data	/ko/docs/Learn/Forms/Sending_and_retrieving_form_data
 /ko/docs/Web/Guide/Index	/ko/docs/Web/Guide
+/ko/docs/Web/Guide/Mobile/Separate_sites	/ko/docs/conflicting/Web/Progressive_web_apps
 /ko/docs/Web/Guide/XML_파싱_및_직렬화	/ko/docs/Web/Guide/Parsing_and_serializing_XML
 /ko/docs/Web/Guide/그래픽	/ko/docs/Web/Guide/Graphics
 /ko/docs/Web/HTML/Applying_color	/ko/docs/Web/CSS/CSS_Colors/Applying_color
