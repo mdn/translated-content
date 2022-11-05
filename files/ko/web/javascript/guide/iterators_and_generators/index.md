@@ -66,7 +66,7 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
     console.log("Iterated over sequence of size: ", result.value);
 ```
 
-It is not possible to know reflectively whether a particular object is an iterator. If you need to do this, use [Iterables](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators$edit#Iterables).
+It is not possible to know reflectively whether a particular object is an iterator. If you need to do this, use [Iterables](#iterables).
 
 ## Generator functions
 

@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/meter
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<meter>` 요소**는 특정 범위 내에서의 스칼라 값, 또는 백분율 값을 나타냅니다.
 

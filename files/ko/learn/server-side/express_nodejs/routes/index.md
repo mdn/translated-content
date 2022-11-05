@@ -414,7 +414,7 @@ exports.book_update_post = function(req, res) {
 
 Next we create _routes_ for all the URLs [needed by the LocalLibrary website](#local_libary_routes), which will call the controller functions we defined in the previous section.
 
-The skeleton already has a **./routes** folder containing routes for the _index_ and _users_. Create another route file — **catalog.js** — inside this folder, as shown.
+The skeleton already has a **./routes** folder containing routes for the _index_ and _users_. Create another route file — `catalog.js` — inside this folder, as shown.
 
 ```
 /express-locallibrary-tutorial //the project root
@@ -424,7 +424,7 @@ The skeleton already has a **./routes** folder containing routes for the _index_
     catalog.js
 ```
 
-Open **/routes/\*\***catalog.js\*\* and copy in the code below:
+Open `/routes/catalog.js` and copy in the code below:
 
 ```js
 var express = require('express');

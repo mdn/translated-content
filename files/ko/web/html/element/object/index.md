@@ -8,7 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/object
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<object>` 요소**는 이미지나, 중첩된 브라우저 컨텍스트, 플러그인에 의해 다뤄질수 있는 리소스와 같은 외부 리소스를 나타냅니다.
 

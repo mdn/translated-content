@@ -175,7 +175,7 @@ translation_of: Web/HTML/Attributes/autocomplete
 - 충청남도 홍성군 홍북읍 충남대로 21
 - `address-level1`
 
-  - :&#x20;
+  - : &#x20;
 
     시/도: "서울특별시", "경기도", "충청남도"
 

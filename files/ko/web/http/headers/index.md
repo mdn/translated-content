@@ -73,7 +73,7 @@ HTTP 클라이언트 힌트는 작업중에 있습니다. 실제 문서는 [HTTP
   - : `DPR` 요청 헤더 필드는 레이아웃 뷰포트(Section 9.1.1 of [\[CSS2\]](https://httpwg.org/http-extensions/client-hints.html#CSS2))의 CSS px(Section 5.2 of [\[CSSVAL\]](https://httpwg.org/http-extensions/client-hints.html#CSSVAL))를 통한 물리적 픽셀 비율인 클라이언트의 현재 기기 픽셀 비율(DPR)을 나타내는 숫자입니다.
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
 
-  - :&#x20;
+  - : &#x20;
 
     <a class="internalDFN" href="https://wicg.github.io/netinfo/#dom-networkinformation-savedata"><code>SaveData</code></a>
 

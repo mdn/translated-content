@@ -9,7 +9,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/option
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<option>` 요소**는 {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}} 요소의 항목을 정의합니다. 그러므로, `<option>`을 사용해 팝업 메뉴 등 목록에서 하나의 항목을 나타낼 수 있습니다.
 
