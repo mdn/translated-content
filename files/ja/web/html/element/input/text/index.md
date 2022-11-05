@@ -3,7 +3,7 @@ title: <input type="text">
 slug: Web/HTML/Element/input/text
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`text`** 型は、基本的な単一行のテキスト入力欄を生成します。
 

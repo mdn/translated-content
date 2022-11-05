@@ -113,4 +113,4 @@ slug: Web/HTML/Element/Shadow
 - [Web Components](/ja/docs/Web/Web_Components)
 - {{HTMLElement("content")}}、{{HTMLElement("slot")}}、{{HTMLElement("template")}}、{{HTMLElement("element")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -3,7 +3,7 @@ title: '<html>: HTML 文書 / ルート要素'
 slug: Web/HTML/Element/html
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<html>`** は [HTML](/ja/docs/Web/HTML) 要素で、 HTML 文書においてルート (基点) となる要素 (最上位要素) であり、*ルート要素*とも呼ばれます。他のすべての要素は、この要素の子孫として配置しなければなりません。
 

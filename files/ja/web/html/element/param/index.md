@@ -3,7 +3,7 @@ title: '<param>: オブジェクト引数要素'
 slug: Web/HTML/Element/param
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<param>` 要素**は、{{HTMLElement("object")}} 要素の引数を定義します。
 

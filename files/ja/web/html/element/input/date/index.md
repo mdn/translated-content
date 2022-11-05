@@ -3,7 +3,7 @@ title: <input type="date">
 slug: Web/HTML/Element/input/date
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`type="date"`** は、ユーザーに日付を入力させる入力欄を、検証付きのテキストボックスまたは特殊な日付選択インターフェイスのどちらかで生成します。
 

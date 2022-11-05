@@ -3,7 +3,7 @@ title: '<details>: 詳細折りたたみ要素'
 slug: Web/HTML/Element/details
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<details>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウィジェットが「開いた」状態になった時のみ情報が表示される折りたたみウィジェットを作成します。</span>概要やラベルは {{HTMLElement("summary")}} 要素を使用して提供する必要があります。
 
