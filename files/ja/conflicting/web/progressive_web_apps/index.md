@@ -1,6 +1,7 @@
 ---
 title: モバイルとデスクトップで別々のサイト
-slug: Web/Guide/Mobile/Separate_sites
+slug: conflicting/Web/Progressive_web_apps
+original_slug: Web/Guide/Mobile/Separate_sites
 ---
 
 モバイルウェブ開発への「別々のサイト」アプローチは、モバイルウェブユーザーとデスクトップウェブユーザーのために異なるサイトを作成することを含みます。このアプローチにはプラス面とマイナス面があります。

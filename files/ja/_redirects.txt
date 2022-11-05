@@ -4349,6 +4349,7 @@
 /ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ja/docs/Web/Guide/Index	/ja/docs/Web/Guide
 /ja/docs/Web/Guide/Localizations_and_character_encodings	/ja/docs/orphaned/Web/Guide/Localizations_and_character_encodings
+/ja/docs/Web/Guide/Mobile/Separate_sites	/ja/docs/conflicting/Web/Progressive_web_apps
 /ja/docs/Web/Guide/Performance/Using_web_workers	/ja/docs/Web/API/Web_Workers_API/Using_web_workers
 /ja/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/ja/docs/Web/API/Page_Visibility_API
 /ja/docs/Web/Guide/Using_FormData_Objects	/ja/docs/Web/API/FormData/Using_FormData_Objects
