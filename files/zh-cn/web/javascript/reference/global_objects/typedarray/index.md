@@ -75,7 +75,7 @@ new TypedArray(buffer, byteOffset, length)
 - {{jsxref("TypeError")}}
   - : 抛出以下情况之一：
     - 传递 `typedArray`，但它是 [bigint](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 类型，而当前构造函数不是，反之亦然。
-    - 传递 `typedArray`，但它的缓冲区的视图是分离的，或者直接传递分离的 `buffer`。
+    - 传递 `typedArray`，但它的缓冲区被分离了，或者直接传递分离了视图的 `buffer`。
 - {{jsxref("RangeError")}}
   - : 抛出以下情况之一：
     - 新的类型化数组的长度太大。
