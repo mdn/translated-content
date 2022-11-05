@@ -31,7 +31,7 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
 
     > **Nota:** **Nota de implementación:** aunque forma parte de los primeros borradores de la especificación HTML 5, el atributo **autobuffer** se ha eliminado en versiones posteriores. Se ha quitado de Gecko 2.0 y otros navegadores, y en algunos nunca llegó a implementarse. La especificación define un nuevo atributo enumerado, **preload,** para sustituir el atributo **autobuffer,** con una sintaxis diferente. {{ bug (548523) }}
 
-- {{ htmlattrdef("buffered") }} 
+- {{ htmlattrdef("buffered") }}
   - : Un atributo que se puede leer para determinar qué intervalos de tiempo del multimedia se han almacenado en búfer. Este atributo contiene un objeto {{ domxref("TimeRanges") }} .
 - {{ htmlattrdef("controls") }}
   - : Si está presente este atributo, Gecko ofrecerá controles para permitir que el usuario controle la reproducción de video, incluyendo volumen, búsqueda y pausar/reanudar reproducción.
@@ -55,7 +55,7 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
     > - El atributo **autoplay** tiene prioridad sobre éste si se desea reproducir automáticamente un video, el navegador obviamente tendrá que descargarlo. La especificación permite establecer los atributos **autoplay** y **preload**.
     > - La especificación no fuerza al navegador a seguir el valor de este atributo; es tan sólo una sugerencia.
 
-- {{ htmlattrdef("poster") }} 
+- {{ htmlattrdef("poster") }}
   - : Una URL que indica un marco de póster para mostrar el resultado hasta que el usuario reproduzca o busque. Si este atributo no se especifica, no se muestra nada hasta que el primer cuadro está disponible, entonces se muestra el primer marco como el marco de póster.
 - {{ htmlattrdef("src") }}
   - : La URL del vídeo que se va a insertar. Es opcional; podrás optar, en su lugar, por el elemento {{ HTMLElement("source") }} dentro del bloque de vídeo para especificar el video que se va a incrustar.
