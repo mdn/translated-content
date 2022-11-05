@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/br
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<br>` 요소**는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성합니다. 주소나 시조 등 줄의 구분이 중요한 내용을 작성할 때 유용합니다.
 

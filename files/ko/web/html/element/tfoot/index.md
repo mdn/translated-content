@@ -10,7 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.tfoot
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 [HTML](/ko/docs/Web/HTML) 요소는 테이블의 열을 요약하는 행들의 집합입니다.
 {{EmbedInteractiveExample("pages/tabbed/tfoot.html","tabbed-taller")}}
