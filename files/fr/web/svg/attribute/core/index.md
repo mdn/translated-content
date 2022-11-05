@@ -28,10 +28,10 @@ Les _attributs SVG de base_ sont tous les attributs communs pouvant être spéci
 
 - {{SVGAttr('tabindex')}}
   - : L'attribut SVG tabindex permet de contrôler si un élément peut prendre le focus et définit l'ordre relatif des éléments pour la navigation via tabulation.
-    _Type de valeur_: [\<integer>](/docs/Web/SVG/Content_type#Integer); _Animation_: **Non**
+    _Type de valeur_: [\<integer>](/fr/docs/Web/SVG/Content_type#Integer); _Animation_: **Non**
 - {{SVGAttr('xml:base')}}
   - : Spécifie une IRI de base autre que celle du document.
-    _Type de valeur_: [\<IRI>](/docs/Web/SVG/Content_type#IRI); _Animation_: **Non**
+    _Type de valeur_: [\<IRI>](/fr/docs/Web/SVG/Content_type#IRI); _Animation_: **Non**
 - {{SVGAttr('xml:lang')}}
 
   - : C'est un attribut universel autorisé dans tous les documents XML pour définir le langage du texte présent dans l'élément. Son utilisation est presque identique à celle de l'attribut [lang](/fr/docs/Web/HTML/Attributs_universels/lang) en HTML, hormis que les documents XML 1.0 ne permettent pas l'utilisation d'une valeur d'attribut nulle (`xml:lang=""`) pour indiquer un langage inconnu. À la place, utiliser `xml:lang="und"`.

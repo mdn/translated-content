@@ -14,7 +14,7 @@ original_slug: Web/API/File/Using_files_from_web_applications
 
 Grâce à l'API File ajoutée au DOM avec HTML5, il est maintenant possible depuis une page web de proposer à l'utilisateur de sélectionner des fichiers locaux, puis d'en lire le contenu. Cette sélection est possible en utilisant un élément HTML {{ HTMLElement("input") }} ou par glisser-déposer.
 
-Vous pouvez utiliser si vous le souhaitez l'API DOM File depuis du code chrome d'extensions ou d'un autre navigateur&nbsp;; notez cependant qu'il existe des fonctionnalités additionnelles auxquelles il vous faudra être attentif. Reportez-vous à [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code) pour plus de détails.
+Vous pouvez utiliser si vous le souhaitez l'API DOM File depuis du code chrome d'extensions ou d'un autre navigateur&nbsp;; notez cependant qu'il existe des fonctionnalités additionnelles auxquelles il vous faudra être attentif. Reportez-vous à [Using the DOM File API in chrome code](/fr/Extensions/Using_the_DOM_File_API_in_chrome_code) pour plus de détails.
 
 ## Accéder au(x) fichier(s) sélectionné(s)
 
@@ -514,10 +514,9 @@ window.URL.revokeObjectURL(obj_url);
 
 ## Voir aussi
 
-- {{ domxref("File") }}
-- {{ domxref("FileList") }}
-- {{ domxref("FileReader") }}
-- [Utiliser XMLHttpRequest](/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
-- [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code)
-- {{ domxref("XMLHttpRequest") }}
-- [jQuery](http://www.jquery.com/) JavaScript library
+- {{DOMxRef("File")}}
+- {{DOMxRef("FileList")}}
+- {{DOMxRef("FileReader")}}
+- {{DOMxRef("URL")}}
+- {{DOMxRef("XMLHttpRequest")}}
+- [Using XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
