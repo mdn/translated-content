@@ -21,7 +21,7 @@ slug: Web/HTML/Element/slot
   </tr>
   <tr>
    <th scope="row">Events</th>
-   <td>{{event("slotchange")}}</td>
+   <td>{{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
