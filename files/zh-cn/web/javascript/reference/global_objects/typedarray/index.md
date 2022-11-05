@@ -66,7 +66,7 @@ new TypedArray(buffer, byteOffset, length)
 - `length` {{optional_inline}}
   - : 当使用非对象调用时，该参数将被视为指定类型化数组长度的数字。在内存中创建一个内部数组缓冲区，大小长度乘以 [`BYTES_PER_ELEMENT`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT) 字节，用 0 填充。省略所有参数，等同于使用 `0` 作为参数。
 - `buffer`、`byteOffset` {{optional_inline}}、`length` {{optional_inline}}
-  - : 当使用 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 或 [`SharedArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) 实例以及可选的 `byteOffset` 和 `length` 参数调用时，将创建一个新的类型化数组视图，用于指定缓冲区的视图。`byteOffset` 和 `length` 参数指定类型化数组视图将暴露的内存范围。如果忽略这两个，则是整个视图的所有 `buffer`；如果仅忽略 `length`，则从 `byteOffset` 开始的 `buffer` 剩余部分的视图。
+  - : 当使用 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 或 [`SharedArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) 实例以及可选的 `byteOffset` 和 `length` 参数调用时，将创建一个新的指定缓冲区的类型化数组视图。`byteOffset` 和 `length` 参数指定类型化数组视图将暴露的内存范围。如果忽略这两个参数，则是整个视图的所有 `buffer`；如果仅忽略 `length`，则是从 `byteOffset` 开始的 `buffer` 剩余部分的视图。
 
 ### 异常
 
