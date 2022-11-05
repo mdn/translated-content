@@ -105,4 +105,4 @@ If you display this in a web browser it should look like the following.
 - [Web Components](/ko/docs/Web/Web_Components)
 - {{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

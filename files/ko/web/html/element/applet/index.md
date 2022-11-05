@@ -59,4 +59,4 @@ HTML의 Applet 태그 (`<applet>`) 는 자바 애플릿을 보이게 하는 곳�
 
 The W3C specification does not encourage the use of `<applet>` and prefers the use of the {{HTMLElement("object")}} tag. Under the strict definition of HTML 4.01, this element is deprecated and entirely obsolete in HTML5.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

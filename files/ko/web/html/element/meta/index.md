@@ -10,7 +10,7 @@ tags:
   - metadata
 translation_of: Web/HTML/Element/meta
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<meta>` 요소**는 {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}}과 같은 다른 메타관련 요소로 나타낼 수 없는 {{glossary("Metadata", "메타데이터")}}를 나타냅니다.
 

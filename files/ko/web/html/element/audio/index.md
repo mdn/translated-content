@@ -14,7 +14,7 @@ tags:
   - 오디오
 translation_of: Web/HTML/Element/audio
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<audio>` 요소**는 문서에 소리 콘텐츠를 포함할 때 사용합니다. `src` 특성 또는 {{htmlelement("source")}} 요소를 사용해 한 개 이상의 오디오 소스를 지정할 수 있으며, 다수를 지정한 경우 가장 적절한 소스를 브라우저가 고릅니다. {{domxref("MediaStream")}}을 사용하면 미디어 스트림을 바라볼 수도 있습니다.
 

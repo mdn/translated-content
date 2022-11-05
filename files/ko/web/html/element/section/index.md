@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/section
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<section>` 요소**는 HTML 문서의 독립적인 구획을 나타내며, 더 적합한 의미를 가진 요소가 없을 때 사용합니다. 보통 `<section>`은 제목을 포함하지만, 항상 그런 것은 아닙니다.
 

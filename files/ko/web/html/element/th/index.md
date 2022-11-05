@@ -9,7 +9,7 @@ tags:
   - 표
 translation_of: Web/HTML/Element/th
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **HTML `<th>` element** defines a cell as header of a group of table cells. The exact nature of this group is defined by the {{htmlattrxref("scope", "th")}} and {{htmlattrxref("headers", "th")}} attributes.
 
