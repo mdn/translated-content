@@ -1,13 +1,15 @@
 ---
 title: 모바일과 데스크톱용 개별 사이트
-slug: Web/Guide/Mobile/Separate_sites
+slug: conflicting/Web/Progressive_web_apps
 tags:
   - 모바일
   - 모바일웹
   - 웹개발
   - 접근방식
 translation_of: Web/Guide/Mobile/Separate_sites
+original_slug: Web/Guide/Mobile/Separate_sites
 ---
+
 모바일 웹 개발에 관한 "개별 사이트" 접근 방식은 모바일과 데스크톱 웹 사용자를 위해 서로 다른 사이트를 제작한다는 의미입니다. 이러한 접근 방식에는 긍정적인 측면과 부정적인 측면이 있습니다.
 
 ## 장점
