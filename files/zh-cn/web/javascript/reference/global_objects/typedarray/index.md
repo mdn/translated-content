@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 
 `TypedArray` 构造函数（通常归类为 `%TypedArray%`，表示它的“内在性”，因为它与任何 JavaScript 程序暴露出的全局对象不对应）是所有 `TypedArray` 子类的通用父类。将 `%TypedArray%` 作为一个“抽象类”，其为所有类型化数组的子类提供了实用方法的通用接口。该构造函数没有直接暴露：没有全局的 `TypedArray` 属性。它只能通过`Object.getPrototypeOf(Int8Array)` 及类似方式访问。
 
-当创建 `TypedArray` 子类（例如 `Int8Array`）的实例时，在内存的内部会创建数组缓冲区，或者，如果将 `ArrayBuffer` 对象作为构造参数，则使用该 `ArrayBuffer`。缓冲区地址被保存为实例的内部属性并且所有的 `%TypedArray%.prototype` 方法都将给予数组缓冲区地址设置和获取值。
+当创建 `TypedArray` 子类（例如 `Int8Array`）的实例时，在内存的中会创建数组缓冲区，或者，如果将 `ArrayBuffer` 对象作为构造参数，则使用该 `ArrayBuffer`。缓冲区地址被保存为实例的内部属性并且所有的 `%TypedArray%.prototype` 方法都将基于数组缓冲区地址设置和获取值。
 
 ### TypedArray 对象
 
