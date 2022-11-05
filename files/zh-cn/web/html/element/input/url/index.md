@@ -21,7 +21,7 @@ slug: Web/HTML/Element/Input/url
   </tr>
   <tr>
    <td><strong>事件</strong></td>
-   <td>        
+   <td>
     {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}
    </td>
   </tr>
@@ -63,13 +63,13 @@ slug: Web/HTML/Element/Input/url
 
 ### maxlength
 
-用户可以输入到 `url` 输入框中的最大字符数（以 UTF-16 码点为单位）。必须为大于等于 0 的整数。如果未指定 `maxlength` 或指定了无效的值，则 `url` 输入框将没有最大值。这个值也必须大于等于 `minlength` 的值。
+用户可以输入到 `url` 输入框中的最大字符数（以 UTF-16 代码单元为单位）。必须为大于等于 0 的整数。如果未指定 `maxlength` 或指定了无效的值，则 `url` 输入框将没有最大值。这个值也必须大于等于 `minlength` 的值。
 
 如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
 
 ### minlength
 
-用户可以输入到 `url` 输入框中的最小字符数（以 UTF-16 码点为单位）。该值必须是小于等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效的值，则 `url` 输入将没有最小值。
+用户可以输入到 `url` 输入框中的最小字符数（以 UTF-16 代码单元为单位）。该值必须是小于等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效的值，则 `url` 输入将没有最小值。
 
 如果输入到字段中的文本的长度小于 `minlength` UTF-16 代码单元的长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
 
