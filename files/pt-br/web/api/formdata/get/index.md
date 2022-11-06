@@ -2,6 +2,7 @@
 title: FormData.get()
 slug: Web/API/FormData/get
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 O método get() da interface {{domxref("FormData")}} retorna o primeiro valor associado com a chave fornecida de um objeto do tipo FormData.

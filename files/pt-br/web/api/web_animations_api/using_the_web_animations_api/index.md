@@ -3,6 +3,7 @@ title: Usando a Web Animations API
 slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 original_slug: Web/API/Web_Animations_API/Usando_a_Web_Animations_API
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 A Web Animations API nos possibilita criar animações e controlar sua reprodução pelo JavaScript. Esse artigo vai te demonstrar esses conceitos com demonstrações e tutoriais com o temática de Alice no País das Maravilhas.

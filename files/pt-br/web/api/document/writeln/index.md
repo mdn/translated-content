@@ -2,6 +2,7 @@
 title: Document.writeln()
 slug: Web/API/Document/writeln
 ---
+
 {{ ApiRef("DOM") }}
 
 Grava uma seqüência de texto, seguido por um caractere de nova linha a um documento.

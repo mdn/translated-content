@@ -3,6 +3,7 @@ title: GlobalEventHandlers.onfocus
 slug: Web/API/Window/focus_event
 original_slug: Web/API/GlobalEventHandlers/onfocus
 ---
+
 {{ApiRef("HTML DOM")}}
 
 A propriedade **onfocus** retorna o código de manipulador de eventos _onFocus_ no elemento atual.

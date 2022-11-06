@@ -2,6 +2,7 @@
 title: Element.tagName
 slug: Web/API/Element/tagName
 ---
+
 {{ApiRef("DOM")}}
 
 Retorna o nome do elemento.

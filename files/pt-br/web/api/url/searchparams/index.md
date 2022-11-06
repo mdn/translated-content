@@ -2,6 +2,7 @@
 title: URL.searchParams
 slug: Web/API/URL/searchParams
 ---
+
 {{ApiRef("URL API")}}
 
 A propriedade **`searchParams`** da interface {{domxref("URL")}} retorna um objeto {{domxref("URLSearchParams")}} permitindo acesso ao {{httpmethod("GET")}} decodificando os argumentos que contém na URL.

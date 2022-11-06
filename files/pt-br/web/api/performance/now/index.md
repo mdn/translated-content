@@ -2,6 +2,7 @@
 title: performance.now()
 slug: Web/API/Performance/now
 ---
+
 {{APIRef("High Resolution Timing")}}
 
 O método **`performance.now()`** retorna {{domxref("DOMHighResTimeStamp")}}, medido em milisegundos, com precisão de cinco milésimos de milissegundo (5 microsegundos).

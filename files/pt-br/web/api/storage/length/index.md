@@ -2,6 +2,7 @@
 title: Storage.length
 slug: Web/API/Storage/length
 ---
+
 {{APIRef("Web Storage API")}}
 
 A propriedade length, que é somente leitura, da interface {{domxref("Storage")}} retorna um inteiro que representa o número de itens armazenados no objeto `Storage`.

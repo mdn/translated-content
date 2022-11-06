@@ -2,6 +2,7 @@
 title: Window.history
 slug: Web/API/Window/history
 ---
+
 {{ APIRef }}
 
 A propriedade só de leitura **Window\.history** retorna uma referência ao objeto History, que fornece uma interface para manipular o histórico de sessão do navegador (páginas visitadas na guia ou quadro em que a página atual é carregada).

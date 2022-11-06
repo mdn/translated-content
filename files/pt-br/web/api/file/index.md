@@ -2,6 +2,7 @@
 title: File
 slug: Web/API/File
 ---
+
 {{gecko_minversion_header("1.9")}}{{APIRef("File API")}}
 
 ## Sumário

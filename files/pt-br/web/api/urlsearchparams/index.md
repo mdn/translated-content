@@ -2,6 +2,7 @@
 title: URLSearchParams
 slug: Web/API/URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 A interface **`URLSearchParams`** define métodos utilitários para trabalhar com os parâmetros de uma URL.

@@ -2,6 +2,7 @@
 title: Location
 slug: Web/API/Location
 ---
+
 {{APIRef("HTML DOM")}}
 
 ## Resumo

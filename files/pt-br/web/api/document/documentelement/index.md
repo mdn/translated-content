@@ -2,6 +2,7 @@
 title: Document.documentElement
 slug: Web/API/Document/documentElement
 ---
+
 {{ ApiRef("DOM") }}
 
 O **document.documentElement** retorna o [`Elemento`](/pt-BR/docs/Web/API/Element) que é o elemento raiz do [`documento`](/pt-BR/docs/Web/API/Document) (por exemplo, o elemento `<html>` para documentos HTML).

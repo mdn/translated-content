@@ -2,6 +2,7 @@
 title: EventTarget
 slug: Web/API/EventTarget
 ---
+
 {{ ApiRef("DOM Events") }}
 
 ## Resumo

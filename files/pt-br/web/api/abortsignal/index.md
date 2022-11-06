@@ -2,6 +2,7 @@
 title: AbortSignal
 slug: Web/API/AbortSignal
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 A interface **`AbortSignal`** representa o sinal de um objeto que permite a você se comunicar com uma Requisição de DOM (como Fetch) e aborta-la se necessário via um objeto {{domxref("AbortController")}}

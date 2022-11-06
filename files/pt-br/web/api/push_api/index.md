@@ -3,6 +3,7 @@ title: API Push
 slug: Web/API/Push_API
 original_slug: Web/API/API_Push
 ---
+
 {{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}
 
 A **API Push** torna possível que aplicações web recebam mensagens enviadas a elas de um servidor, indepententemente de aplicação estar ou não em primeiro plano, ou até mesmo carregada, em um agente de usuário. Isso permite que desenvolvedores entreguem notificações e atualizações assíncronas a usuários que optarem por elas, resultando num melhor engajamento com conteúdo novo oportuno.

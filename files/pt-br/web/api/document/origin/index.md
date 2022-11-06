@@ -2,6 +2,7 @@
 title: Document.origin
 slug: Web/API/Document/origin
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 A propriedade read-only **`Document.origin`** retorna a origem do documento. Na maioria dos casos, essa propriedade é equivalente a `document.defaultView.location.origin`.
