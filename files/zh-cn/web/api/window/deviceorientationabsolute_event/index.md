@@ -7,9 +7,9 @@ slug: Web/API/Window/deviceorientationabsolute_event
 
 ## 摘要
 
-An event handler for the {{ event("deviceorientationabsolute") }} event containing information about an absolute device orientation change.
+An event handler for the `deviceorientationabsolute` event containing information about an absolute device orientation change.
 
-## Syntax
+## 语法
 
 ```plain
 window.ondeviceorientationabsolute = function(event) { ... };

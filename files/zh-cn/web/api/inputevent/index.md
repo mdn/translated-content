@@ -35,7 +35,7 @@ slug: Web/API/InputEvent
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{ event("beforeinput") }}
-- [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)
+- [`beforeinput` 事件](/zh-CN/docs/Web/API/HTMLElement/beforeinput_event)
+- [`input` 事件](/zh-CN/docs/Web/API/HTMLElement/input_event)

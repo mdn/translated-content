@@ -127,7 +127,7 @@ In order to manage the browser {{HTMLElement("iframe")}}'s content, many new eve
 - {{domxref("HTMLIFrameElement.sendTouchEvent()")}}
   - : Sends a {{domxref("TouchEvent")}} to the {{HTMLElement("iframe")}}'s content. Note that this method is available for touch enabled devices only.
 - {{domxref("HTMLIFrameElement.addNextPaintListener()")}}
-  - : Defines a handler to listen for the next {{event("MozAfterPaint")}} event in the browser {{HTMLElement("iframe")}}.
+  - : Defines a handler to listen for the next `MozAfterPaint` event in the browser {{HTMLElement("iframe")}}.
 - {{domxref("HTMLIFrameElement.removeNextPaintListener()")}}
   - : Removes a handler previously set with {{domxref("HTMLIFrameElement.addNextPaintListener","addNextPaintListener()")}}.
 
