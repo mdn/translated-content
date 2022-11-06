@@ -1,7 +1,6 @@
 ---
 title: BackgroundFetchEvent.registration
 slug: Web/API/BackgroundFetchEvent/registration
-page-type: web-api-instance-property
 l10n:
   sourceCommit: 02e1bfcad5fd0de845fb033d331c3c027afa2d6e
 ---

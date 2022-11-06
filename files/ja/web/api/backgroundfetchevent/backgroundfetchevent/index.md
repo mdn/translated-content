@@ -1,7 +1,6 @@
 ---
 title: BackgroundFetchEvent()
 slug: Web/API/BackgroundFetchEvent/BackgroundFetchEvent
-page-type: web-api-constructor
 l10n:
   sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
 ---
