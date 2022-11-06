@@ -2,6 +2,7 @@
 title: 'Express Tutorial Parte 2: Criando a estrutura do website'
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}

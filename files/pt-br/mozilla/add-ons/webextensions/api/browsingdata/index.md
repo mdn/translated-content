@@ -2,6 +2,7 @@
 title: browsingData
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData
 ---
+
 {{AddonSidebar}}
 
 Habilita extensões a limpar os dados que estão acumulados enquando o usuário navega.

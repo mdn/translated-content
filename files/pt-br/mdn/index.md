@@ -2,6 +2,7 @@
 title: O projeto MDN
 slug: MDN
 ---
+
 {{MDNSidebar}}
 
 O **MDN Web Docs** é uma wiki onde nós documentamos a Web aberta, as tecnologias Mozilla e outros tópicos de desenvolvedores. Qualquer pessoa é bem-vinda para adicionar e editar conteúdo. Você não precisa ser um programador ou saber muito sobre tecnologia; há muitas tarefas diferentes que precisam ser executadas, desde os simples (corrigir erros de leitura e erros de correção) até as mais complexas (escrever a documentação da API).

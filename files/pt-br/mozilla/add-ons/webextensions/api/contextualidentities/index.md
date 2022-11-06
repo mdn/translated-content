@@ -2,6 +2,7 @@
 title: contextualIdentities
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
 ---
+
 {{AddonSidebar}}
 
 Trabalhar com identidades contextuais: listar, criar, remover e atualizar identidades contextuais.

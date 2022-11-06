@@ -3,6 +3,7 @@ title: Argumento
 slug: Glossary/Argument
 original_slug: Glossario/Argument
 ---
+
 Um **argumento** é um {{glossary("valor")}} ({{Glossary("primitivo")}} ou um {{Glossary("objeto")}}) passado como um input (entrada) para uma {{Glossary("função")}}.
 
 ## Leia mais

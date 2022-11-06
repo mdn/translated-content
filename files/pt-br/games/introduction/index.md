@@ -2,6 +2,7 @@
 title: Introdução ao desenvolvimento de jogos para a Web
 slug: Games/Introduction
 ---
+
 {{GamesSidebar}}
 
 A web moderna rapidamente tem se tornado uma plataforma não só para criar jogos esplêndidos de alta qualidade, mas também para a distribuição desses mesmos jogos.

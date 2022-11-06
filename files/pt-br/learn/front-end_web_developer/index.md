@@ -3,6 +3,7 @@ title: Desenvolvedor Web Front-end
 slug: Learn/Front-end_web_developer
 original_slug: Aprender/Front-end_web_developer
 ---
+
 {{learnsidebar}}
 
 Boas vindas a nossa trilha de estudos para Desenvolvedor Web Front-end!

@@ -3,6 +3,7 @@ title: Sua primeira extensão
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/sua_primeira_WebExtension
 ---
+
 {{AddonSidebar}}
 
 Neste artigo vamos percorrer, do início ao fim, os passos necessários para a criação de uma extensão para o Firefox. A extensão apenas adicionará uma borda vermelha em todas as páginas carregadas em "mozilla.org" ou qualquer um de seus subdomínios.
