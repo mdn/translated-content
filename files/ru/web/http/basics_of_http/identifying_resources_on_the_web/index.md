@@ -18,6 +18,7 @@ tags:
 translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 original_slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web_RU
 ---
+
 {{HTTPSidebar}}
 
 "Объект" (или "цель") HTTP-запроса называется "ресурс", чья природа может быть разной: фото, документ, или что-либо ещё. Каждый ресурс идентифицируется с помощью унифицированного идентификатора ресурса ({{Glossary("URI")}}) используемого повсюду в HTTP для идентификации ресурсов.

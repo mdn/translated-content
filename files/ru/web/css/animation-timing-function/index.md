@@ -3,6 +3,7 @@ title: animation-timing-function
 slug: Web/CSS/animation-timing-function
 translation_of: Web/CSS/animation-timing-function
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/CSS) свойство **`animation-timing-function`** задаёт как происходит анимация в течении длительности каждого цикла.

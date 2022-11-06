@@ -3,6 +3,7 @@ title: 403 Forbidden
 slug: Web/HTTP/Status/403
 translation_of: Web/HTTP/Status/403
 ---
+
 {{HTTPSidebar}}
 
 Код ответа на статус ошибки "HTTP 403 Forbidden" указывает, что сервер понял запрос, но отказывается его авторизовать.

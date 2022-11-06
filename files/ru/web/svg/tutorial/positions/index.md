@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/Tutorial/Positions
 original_slug: Web/SVG/Tutorial/Позиции
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
 
 ## Сетка

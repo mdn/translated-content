@@ -3,6 +3,7 @@ title: transform-style
 slug: Web/CSS/transform-style
 translation_of: Web/CSS/transform-style
 ---
+
 {{CSSRef("CSS Transforms")}}{{SeeCompatTable}}
 
 Свойство `transform-style` [CSS](/ru/docs/Web/CSS) определяет положение дочернего элемента в 3D-пространстве или в той же плоскости, что и родительский элемент.

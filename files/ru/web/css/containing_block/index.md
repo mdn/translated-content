@@ -3,6 +3,7 @@ title: Разметка и содержащий блок
 slug: Web/CSS/Containing_block
 translation_of: Web/CSS/Containing_block
 ---
+
 {{cssref}}
 
 На размер и позицию элемента часто влияет его **содержащий блок** (containing block). Чаще всего содержащим блоком является content область ([content area](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)) ближайшего блочного ([block-level](/ru/docs/Web/HTML/Block-level_elements)) предка, но это не всегда так. В этой статье мы рассмотрим факторы, которые определяют содержащий блок элемента.

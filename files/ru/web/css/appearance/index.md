@@ -6,6 +6,7 @@ tags:
   - кастомные свойства
 translation_of: Web/CSS/appearance
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 CSS-свойство **`-moz-appearance`** используется в Gecko (Firefox) для отображения элемента, используя базовые стили платформы на основе темы операционной системы.

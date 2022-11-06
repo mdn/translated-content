@@ -3,6 +3,7 @@ title: '<td>: элемент ячейки таблицы данных'
 slug: Web/HTML/Element/td
 translation_of: Web/HTML/Element/td
 ---
+
 **HTML-элемент `<td>`** определяет ячейку таблицы которая содержит данные. Участвует в _табличной модели_.
 
 | [Категория контента](/ru/docs/Web/HTML/Content_categories) | None.                                                                                                                                                                                                                     |

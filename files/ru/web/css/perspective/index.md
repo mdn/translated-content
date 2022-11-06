@@ -3,6 +3,7 @@ title: perspective
 slug: Web/CSS/perspective
 translation_of: Web/CSS/perspective
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Описание
