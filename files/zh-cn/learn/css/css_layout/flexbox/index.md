@@ -267,7 +267,7 @@ button:last-child {
 
 弹性盒子也能创建一些颇为复杂的布局。设置一个元素为 flex 项，那么他同样成为一个 flex 容器，它的孩子 (直接子节点) 也表现为 flexible box。看一下 [complex-弹性盒子.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html)（[在线浏览](http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)）。
 
-[简单 Flexbox 示例，连续列出三个 flex 项的子元素。前两个宽度相同，第三个略宽。第三个弹性项也是一个弹性容器。它有一组两行的按钮，后跟文本。第一行按钮有 4 个按钮，排列成一排；按钮的宽度相同，占据了容器的全部宽度。第二行只有一个按钮，可以单独占据该行的整个宽度。这是复杂的布局，很少有 flex 项继续被视为弹性容器。](flexbox-example7.png)
+[简单 Flexbox 示例，连续列出三个 flex 项的子元素。前两个宽度相同，第三个略宽。第三个 flex 项也是一个弹性容器。它有一组两行的按钮，后跟文本。第一行按钮有 4 个按钮，排列成一排；按钮的宽度相同，占据了容器的全部宽度。第二行只有一个按钮，可以单独占据该行的整个宽度。这是复杂的布局，很少有 flex 项继续被视为弹性容器。](flexbox-example7.png)
 
 这个例子的 HTML 是相当简单的。我们用一个 {{htmlelement("section")}} 元素包含了三个 {{htmlelement("article")}}元素。第三个 {{htmlelement("article")}} 元素包含了三个 {{htmlelement("div")}}：
 
