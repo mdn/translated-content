@@ -6,6 +6,7 @@ tags:
   - WebMechanics
 translation_of: Glossary/ECMAScript
 ---
+
 **ECMAScript** es una especificación de lenguaje de scripting en la que se basa {{Glossary("JavaScript")}}. [Ecma International](http://www.ecma-international.org) está a cargo de estandarizar ECMAScript.
 
 ## Aprende más

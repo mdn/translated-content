@@ -7,6 +7,7 @@ tags:
 translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 original_slug: Learn/Herramientas_y_pruebas/Lado-del-cliente_JavaScript_frameworks
 ---
+
 {{LearnSidebar}}
 
 Los frameworks de JavaScript son una parte esencial del desarrollo web front-end moderno, los cuales proveen a los desarrolladores herramientas probadas y testeadas para la creación de aplicaciones web interactivas y escalables. Muchas empresas modernas utilizan frameworks como parte estándar de sus herramientas, por lo que muchos trabajos de desarrollo front-end en la actualidad requieren experiencia en frameworks.

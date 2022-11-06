@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onload
 original_slug: Web/API/GlobalEventHandlers/onload
 ---
+
 {{ ApiRef() }}
 
 ### Sumario

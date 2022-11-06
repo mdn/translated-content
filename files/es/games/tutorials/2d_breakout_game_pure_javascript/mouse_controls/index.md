@@ -4,6 +4,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando")}}

@@ -5,6 +5,7 @@ slug: >-
 translation_of: MDN/Structures/Live_samples
 original_slug: MDN/Structures/Live_samples
 ---
+
 {{MDNSidebar}}
 
 MDN puede convertir ejemplos de código de los artículos a ejemplos ejecutables que el lector puede ver en acción. Estos ejemplos ejecutables pueden contener HTML, CSS, y JavaScript en cualquier combinación. Ten en cuenta que los ejemplos "ejecutables" _no son interactivos_; sin embargo, aseguran que el output coincida exactamente con el código de ejemplo, porque es generado por este.

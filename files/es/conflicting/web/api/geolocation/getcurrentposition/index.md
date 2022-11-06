@@ -9,6 +9,7 @@ translation_of: Web/API/PositionOptions
 original_slug: Web/API/PositionOptions
 browser-compat: api.Geolocation.getCurrentPosition
 ---
+
 {{APIRef("Geolocation API")}}
 
 La interfaz **`PositionOptions`** describe las opciones disponibles cuando invocamos el "backend" de geolocalización. El navegador no crea este objeto directamente: es el script que invoca quien lo crea y usa como un parámetro de {{domxref("Geolocation.getCurrentPosition()")}} y {{domxref("Geolocation.watchPosition()")}}.
