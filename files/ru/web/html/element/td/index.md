@@ -4,7 +4,7 @@ slug: Web/HTML/Element/td
 translation_of: Web/HTML/Element/td
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML-элемент `<td>`** определяет ячейку таблицы которая содержит данные. Участвует в _табличной модели_.
 
