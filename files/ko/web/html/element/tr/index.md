@@ -3,6 +3,7 @@ title: <tr>
 slug: Web/HTML/Element/tr
 translation_of: Web/HTML/Element/tr
 ---
+
 ## 개요
 
 The _HTML Table Row Element_ (`<tr>`) defines a row of cells in a table. Those can be a mix of {{HTMLElement("td")}} and {{HTMLElement("th")}} elements.

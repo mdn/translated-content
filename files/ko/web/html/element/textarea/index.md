@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/textarea
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<textarea>` 요소**는 멀티라인 일반 텍스트 편집 컨트롤을 나타냅니다.

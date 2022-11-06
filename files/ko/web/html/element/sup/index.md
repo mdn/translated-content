@@ -12,6 +12,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/sup
 ---
+
 {{HTMLSidebar}}
 
 **HTML** **`<sup>`** 요소는 활자 배치를 위 첨자로 해야 하는 인라인 텍스트를 지정합니다. 위 첨자는 보통 더 작은 글씨 크기를 가지고, 기준선을 위로 올려 렌더링 합니다.

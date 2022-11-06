@@ -10,6 +10,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/select
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<select>` 요소**는 옵션 메뉴를 제공하는 컨트롤을 나타냅니다.

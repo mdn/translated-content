@@ -3,6 +3,7 @@ title: Cookie
 slug: Web/HTTP/Headers/Cookie
 translation_of: Web/HTTP/Headers/Cookie
 ---
+
 {{HTTPSidebar}}
 
 **`Cookie`** HTTP 요청 헤더는 {{HTTPHeader("Set-Cookie")}} 헤더와 함께 서버에 의해 이전에 전송되어 저장된 [HTTP cookies](/ko/docs/Web/HTTP/Cookies)를 포함합니다.

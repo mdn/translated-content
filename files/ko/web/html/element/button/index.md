@@ -10,6 +10,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/button
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<button>` 요소**는 클릭 가능한 버튼을 나타냅니다. 버튼은 [양식](/ko/docs/Learn/HTML/Forms) 내부는 물론 간단한 표준 버튼 기능이 필요한 곳이라면 문서 어디에나 배치할 수 있습니다. 기본값의 HTML 버튼은 {{glossary("user agent", "사용자 에이전트")}}의 호스트 플랫폼과 비슷한 디자인을 따라가지만, 외형은 [CSS](/ko/docs/Web/CSS)로 변경할 수 있습니다.

@@ -13,6 +13,7 @@ tags:
 translation_of: Web/HTML/Element/img
 browser-compat: html.elements.img
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<img>` 요소**는 문서에 이미지를 넣습니다.

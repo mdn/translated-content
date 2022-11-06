@@ -14,6 +14,7 @@ tags:
 translation_of: Web/Guide/Parsing_and_serializing_XML
 original_slug: Web/Guide/XML_파싱_및_직렬화
 ---
+
 웹 상에서 XML을 파싱하고 직렬화할 때 사용할 수 있는 객체는 다음과 같습니다.
 
 - **DOM 트리를 문자열로 직렬화**하는 [XMLSerializer](/en/XMLSerializer)

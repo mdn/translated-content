@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/decimal-format
 original_slug: Web/XSLT/decimal-format
 ---
+
 {{ XsltRef() }}
 
 `<xsl:decimal-format>` 요소는
