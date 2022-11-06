@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cos
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Сводка

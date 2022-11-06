@@ -8,6 +8,7 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/displayName
 ---
+
 {{JSRef("Global_Objects", "Function")}} {{Non-standard_header}}
 
 ## Сводка

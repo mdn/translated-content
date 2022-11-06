@@ -3,6 +3,7 @@ title: RegExp.prototype[@@split]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 ---
+
 {{JSRef}}
 
 **`[@@split]()`** метод делит объект {{jsxref("String")}} в массив строк, путём разбиения строки на подстроки.

@@ -7,6 +7,7 @@ tags:
   - Ошибки
 translation_of: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

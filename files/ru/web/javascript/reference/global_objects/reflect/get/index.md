@@ -8,6 +8,7 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/get
 ---
+
 {{JSRef}}
 
 Статический метод **`Reflect.get()`** работает также, словно если бы мы получали свойство объекта (`target[propertyKey]`) с помощью функции.

@@ -8,6 +8,7 @@ tags:
   - Побитовые операторы
 translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND
 ---
+
 {{jsSidebar("Operators")}}
 
 Побитовый оператор И (`&`) возвращает `1` в каждой битовой позиции, для которой соответствующие биты обоих операндов равны `1`.

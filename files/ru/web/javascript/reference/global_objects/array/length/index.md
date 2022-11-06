@@ -7,6 +7,7 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Сводка

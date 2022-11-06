@@ -5,6 +5,7 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference
 ---
+
 {{JsSidebar}}
 
 Эта часть раздела MDN по JavaScript служит хранилищем фактов о языке JavaScript. Более подробную информацию об этом справочнике можно получить [здесь](/ru/docs/Web/JavaScript/Reference/About).

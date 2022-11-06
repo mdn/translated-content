@@ -14,6 +14,7 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
+
 {{JSRef}}
 
 Метод **`some()`** проверяет, удовлетворяет ли какой-либо элемент массива условию, заданному в передаваемой функции.
