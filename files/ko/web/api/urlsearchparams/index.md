@@ -12,6 +12,7 @@ tags:
   - Polyfill
 translation_of: Web/API/URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 **`URLSearchParams`** 인터페이스는 URL의 쿼리 문자열을 대상으로 작업할 수 있는 유틸리티 메서드를 정의합니다.

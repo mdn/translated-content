@@ -3,6 +3,7 @@ title: ServiceWorkerGlobalScope.clients
 slug: Web/API/ServiceWorkerGlobalScope/clients
 translation_of: Web/API/ServiceWorkerGlobalScope/clients
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerGlobalScope")}} 인터페이스의 **`clients`** 읽기 전용 속성은 서비스 워커와 관련된 [`Clients`](/ko/docs/Web/API/Clients) 객체를 반환한다.

@@ -7,6 +7,7 @@ tags:
   - Gecko DOM Reference
 translation_of: Web/API/Element/attributes
 ---
+
 {{ ApiRef() }}
 
 ### 요약

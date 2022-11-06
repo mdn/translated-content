@@ -8,6 +8,7 @@ tags:
   - Range
 translation_of: Web/API/Range/selectNodeContents
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.selectNodeContents()`**는 {{domxref("Node")}}의 내용을 포함하는 {{domxref("Range")}}를 설정합니다.

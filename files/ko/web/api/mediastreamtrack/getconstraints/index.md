@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/MediaStreamTrack/getConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 {{domxref("MediaStreamTrack")}} 인터페이스의 **`getConstraints()`** 메서드는 현재 트랙에서 마지막으로 호출한 {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} 메서드로 설정한 제약을 포함한 객체를 반환합니다. 반환한 제약 값은 웹 사이트나 애플리케이션이 제약 속성에 지정한 특정 값 또는 값의 범위 조건을 나타냅니다.

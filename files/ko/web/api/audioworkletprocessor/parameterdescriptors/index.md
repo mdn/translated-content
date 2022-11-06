@@ -10,6 +10,7 @@ tags:
   - parameterDescriptors
 browser-compat: api.AudioWorkletProcessor.parameterDescriptors
 ---
+
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
 {{domxref("AudioWorkletProcessor")}}로부터 파생된 클래스의  **`parameterDescriptors`** 읽기 전용 속성은 _static getter_ 인데, 이는 {{domxref("AudioParamDescriptor")}} 기반 객체의 iterable을 반환합니다.

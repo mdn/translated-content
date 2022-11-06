@@ -14,6 +14,7 @@ tags:
 original_slug: Web/API/AudioWorkletNode/onprocessorerror
 browser-compat: api.AudioWorkletNode.onprocessorerror
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioWorkletNode") }} 인터페이스의 `onprocessorerror` 속성은 {{domxref("AudioWorkletNode.processorerror_event", "processorerror")}} 이벤트가 발생했을 때 호출될 이벤트 처리기 함수를 정의합니다. 이것은 노드 뒤의 근본적인 {{domxref("AudioWorkletProcessor")}}가 이것의 생성자, {{domxref("AudioWorkletProcessor.process",  "process")}} 메서드, 또는 유저에 의해 정의된 모든 클래스 메서드에서 예외를 발생시켰을 때 발생합니다.
