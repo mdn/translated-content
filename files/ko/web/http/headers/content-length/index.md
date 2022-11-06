@@ -3,6 +3,7 @@ title: Content-Length
 slug: Web/HTTP/Headers/Content-Length
 translation_of: Web/HTTP/Headers/Content-Length
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Length`** 개체 헤더는 수신자에게 보내지는, 바이트 단위를 가지는 개체 본문의 크기를 나타냅니다.

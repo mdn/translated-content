@@ -5,6 +5,7 @@ tags:
   - AJAX
 translation_of: Web/Guide/AJAX/Community
 ---
+
 AJAX와 관련된 유용한 mailing lists, newsgroups, 포럼, 다른 커뮤니티를 원한다면, 링크를 클릭하세요.
 
 ## Ajax Resources

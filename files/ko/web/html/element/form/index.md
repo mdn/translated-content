@@ -10,6 +10,7 @@ tags:
   - 양식
 translation_of: Web/HTML/Element/form
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<form>` 요소**는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획을 나타냅니다.

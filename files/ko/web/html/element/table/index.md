@@ -10,6 +10,7 @@ tags:
   - 표
 translation_of: Web/HTML/Element/table
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<table>` 요소**는 행과 열로 이루어진 표를 나타냅니다.

@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/ul
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<ul>` 요소**는 정렬되지 않은 목록을 나타냅니다. 보통 불릿으로 표현합니다.

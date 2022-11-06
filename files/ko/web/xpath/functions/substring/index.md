@@ -5,6 +5,7 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/substring
 ---
+
 {{ XsltRef() }}
 
 `substring` 함수는 인수로 준 문자열의 부분을 반환합니다.
