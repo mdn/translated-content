@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/HTMLDivElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La interfaz **`HTMLDivElement`** provee propiedades especiales (más allá de la interfaz regular {{domxref("HTMLElement")}} que también está disponible por herencia) para manipular elementos div.

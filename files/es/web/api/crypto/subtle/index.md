@@ -10,6 +10,7 @@ tags:
   - Web Crypto API
 translation_of: Web/API/Crypto/subtle
 ---
+
 {{APIRef("Web Crypto API")}}
 
 La propiedad de sólo lectura **`Crypto.subtle`** retorna un objeto {{domxref("SubtleCrypto")}} permitiendo realizar operaciones criptográficas.

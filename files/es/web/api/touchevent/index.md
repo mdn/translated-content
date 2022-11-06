@@ -3,6 +3,7 @@ title: TouchEvent
 slug: Web/API/TouchEvent
 translation_of: Web/API/TouchEvent
 ---
+
 {{ APIRef("Touch Events") }}
 
 La interfaz **`TouchEvent`** representa un evento enviado cuando cambia el estado de los contactos con una superficie sensible al tacto. Esta superficie puede ser una pantalla táctil o un trackpad, por ejemplo. El evento puede describir uno o mas puntos de contacto con la pantalla e incluye soporte para detectar el movimiento, adición y remoción de puntos de contacto, etc.

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/Document_Object_Model
 original_slug: Referencia_DOM_de_Gecko
 ---
+
 « [Referencia DOM de Gecko](es/Referencia_DOM_de_Gecko)
 
 Aquí está la tabla de contenido para la referencia [DOM](es/DOM) de [Gecko](es/Gecko).

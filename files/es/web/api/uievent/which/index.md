@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/KeyboardEvent/which
 original_slug: Web/API/KeyboardEvent/which
 ---
+
 {{ ApiRef() }}
 
 ### Resumen

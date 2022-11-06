@@ -3,6 +3,7 @@ title: Console.trace()
 slug: Web/API/Console/trace
 translation_of: Web/API/Console/trace
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 Outputs a stack trace to the [Web Console](/es/docs/Tools/Web_Console).

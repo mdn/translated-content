@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/API/HTMLElement/input_event
 ---
+
 {{APIRef}}
 
 El evento **`input`** se dispara cuando el valor (`value`) de un elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} ha sido cambiado.

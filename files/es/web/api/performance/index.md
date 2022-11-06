@@ -10,6 +10,7 @@ tags:
   - Tiempo de navegación
 translation_of: Web/API/Performance
 ---
+
 {{APIRef("High Resolution Time")}}
 
 La interfaz **`Performance`** representa información relacionada con el tiempo de rendimiento para la página dada.

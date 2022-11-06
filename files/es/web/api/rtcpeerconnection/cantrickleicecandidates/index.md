@@ -3,6 +3,7 @@ title: RTCPeerConnection.canTrickleIceCandidates
 slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
 translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 ---
+
 {{APIRef("WebRTC")}}
 
 La propiedad **{{domxref("RTCPeerConnection")}}** es de solo lectura **`canTrickleIceCandidates`** , devuelve un {{jsxref("Boolean")}} que indica si el par remoto puede aceptar o no [candidatos ICE](https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice).

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/HTMLOrForeignElement/focus
 original_slug: Web/API/HTMLOrForeignElement/focus
 ---
+
 {{ APIRef("HTML DOM") }}
 
 El método **`HTMLElement.focus()`** fija el foco del cursor en el elemento indicado, si éste puede ser enfocado.

@@ -8,6 +8,7 @@ tags:
   - extensiones
 translation_of: Mozilla/Add-ons
 ---
+
 {{AddonSidebar}}
 
 Los complementos permiten a los desarrolladores extender y modificar las funcionalidades de Firefox. Están escritos utilizando las tecnologías estándar Web - JavaScript, HTML y CSS - más algunas APIs dedicadas JavaScript. Entre otras cosas, un complemento puede:

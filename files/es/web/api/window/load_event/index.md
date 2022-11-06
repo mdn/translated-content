@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/Window/load_event
 original_slug: Web/Events/load
 ---
+
 {{ APIRef }}
 
 El evento `load` se dispara cuando un recurso y sus recursos dependientes han terminado de cargar.

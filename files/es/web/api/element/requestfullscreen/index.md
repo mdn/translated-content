@@ -5,6 +5,7 @@ tags:
   - Pantalla completa
 translation_of: Web/API/Element/requestFullScreen
 ---
+
 {{APIRef}}{{seeCompatTable}}
 
 Asynchronously requests that the element be made full-screen.

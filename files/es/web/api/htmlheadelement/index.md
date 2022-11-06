@@ -3,6 +3,7 @@ title: HTMLHeadElement
 slug: Web/API/HTMLHeadElement
 translation_of: Web/API/HTMLHeadElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 La interfaz **`HTMLHeadElement`** contiene la información descriptiva, o metadata, para un documento. Este objeto hereda las propiedades y métodos descritos en la interfaz {{domxref("HTMLElement")}}.

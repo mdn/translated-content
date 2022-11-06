@@ -13,6 +13,7 @@ tags:
   - Workers
 translation_of: Web/API/Worker
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`Worker`** interface of the [Web Workers API](/es/docs/Web/API/Web_Workers_API) represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the `Worker()` constructor and specifying a script to be run in the worker thread.

@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/API/File
 ---
+
 {{APIRef }}
 
 La interfaz **`File`** provee información acerca de los archivos y permite que el código JavaScript en una página web tenga acceso a su contenido.

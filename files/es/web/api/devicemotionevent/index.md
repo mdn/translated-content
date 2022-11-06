@@ -3,6 +3,7 @@ title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
 translation_of: Web/API/DeviceMotionEvent
 ---
+
 {{APIRef("Device Orientation Events")}}{{SeeCompatTable}}
 
 El evento `DeviceMotionEvent` proporciona a los desarrolladores información acerca de la velocidad de los cambios en la posición y orientación del dispositivo.

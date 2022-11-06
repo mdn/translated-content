@@ -3,6 +3,7 @@ title: HTMLElement.offsetTop
 slug: Web/API/HTMLElement/offsetTop
 translation_of: Web/API/HTMLElement/offsetTop
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La propiedad de sólo lectura **`HTMLElement.offsetTop`** retorna la distancia del elemento actual respecto al borde superior del nodo {{domxref("HTMLelement.offsetParent","offsetParent")}}.

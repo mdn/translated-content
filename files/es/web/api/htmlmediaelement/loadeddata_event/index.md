@@ -9,6 +9,7 @@ tags:
   - eventos
 translation_of: Web/API/HTMLMediaElement/loadeddata_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 El evento **`loadeddata`** se arroja cuando el cuadro en la posición de reproducción actual del medio ha terminado de cargarse; a menudo el primer marco

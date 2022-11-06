@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/Web_Storage_API
 original_slug: Web/API/API_de_almacenamiento_web
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 La **API de almacenamiento web** proporciona los mecanismos mediante los cuales el navegador puede almacenar información de tipo clave/valor, de una forma mucho más intuitiva que utilizando cookies.

@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/Node/lastChild
 ---
+
 {{APIRef("DOM")}}
 
 La propiedad de sólo lectura **`Node.lastChild`** devuelve el último hijo del nodo. Si su padre es un elemento, entonces el hijo es generalmente un nodo de element, nodo de texto o un nodo de comentario. Devuelve `null` si no hay elementos hijos.

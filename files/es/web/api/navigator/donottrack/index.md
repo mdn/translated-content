@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/Navigator/doNotTrack
 ---
+
 {{ApiRef("HTML DOM")}}{{SeeCompatTable}}
 
 Devuelve los ajustes de do-not-track del usuario. Esto es `"1"` si el usuario ha solicitado no ser rastreado por sitios web, contenidos, o anuncios.

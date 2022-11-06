@@ -8,6 +8,7 @@ tags:
   - Interfaz
 translation_of: Web/API/Element/mousedown_event
 ---
+
 {{ APIRef }}
 
 El evento `mousedown` se activa cuando el botón de un dispositivo apuntador (usualmente el botón de un ratón) es presionado en un elemento.

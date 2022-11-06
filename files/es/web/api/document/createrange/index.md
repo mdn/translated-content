@@ -7,6 +7,7 @@ tags:
   - crear rango
 translation_of: Web/API/Document/createRange
 ---
+
 {{ ApiRef() }}
 
 ### Resumen
