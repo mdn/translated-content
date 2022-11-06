@@ -5,6 +5,7 @@ translation_of: Web/HTML/Element/track
 original_slug: Web/HTML/Element/track
 browser-compat: html.elements.track
 ---
+
 {{HTMLSidebar}}
 
 El elemento [HTML](/es/docs/Web/HTML) **`<track>`** se utiliza como elemento hijo de los elementos multimedia, {{HTMLElement("audio")}} y {{HTMLElement("video")}}. Le permite especificar pistas de texto cronometradas (o datos basados en el tiempo), por ejemplo, para manejar subtítulos automáticamente. Las pistas están formateadas en [formato WebVTT](/es/docs/Web/API/WebVTT_API) (archivos `.vtt`): _Web Video Text Tracks_ (pistas de texto de video web).

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/HTML/Element/textarea
 original_slug: Web/HTML/Elemento/textarea
 ---
+
 ## Resumen
 
 El **elemento** **HTML `<textarea>`** representa un control para la edición mutilínea de texto sin formato.

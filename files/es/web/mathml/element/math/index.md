@@ -4,6 +4,7 @@ slug: Web/MathML/Element/math
 translation_of: Web/MathML/Element/math
 original_slug: Web/MathML/Elemento/math
 ---
+
 {{MathMLRef}}
 
 `<math>` es el elemento superior en MathML. Cada instancia válida de MathML debe estar rodeada de etiquetas `<math>`. Además, no debes anidar un segundo elemento `<math>` dentro de un primero, pero puedes tener un número arbitrario de otros elementos hijos en él.

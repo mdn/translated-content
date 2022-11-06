@@ -8,6 +8,7 @@ tags:
   - error 503
 translation_of: Web/HTTP/Status/503
 ---
+
 {{HTTPSidebar}}
 
 El envío de un código de error **`503 Servicio No Disponible`** como respuesta por un servidor que use el Protocolo de Transferencia de Hipertexto (HTTP) indica que el servidor no está listo para manejar la solicitud.

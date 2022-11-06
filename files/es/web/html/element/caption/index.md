@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/caption
 original_slug: Web/HTML/Elemento/caption
 ---
+
 ### Definición
 
 - Es el encargado de darle un título descriptivo a las tablas.

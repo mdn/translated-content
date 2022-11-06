@@ -4,6 +4,7 @@ slug: Web/HTML/Element/form
 translation_of: Web/HTML/Element/form
 original_slug: Web/HTML/Elemento/form
 ---
+
 ## Resumen
 
 El elemento HTML form (`<form>`) representa una sección de un documento que contiene controles interactivos que permiten a un usuario enviar información a un servidor web.
