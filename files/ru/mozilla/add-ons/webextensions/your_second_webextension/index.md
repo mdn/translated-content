@@ -8,6 +8,7 @@ tags:
   - WebExtension
 translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
+
 {{AddonSidebar}}
 
 Если вы уже прочитали статью [Ваш первый WebExtension](/ru/Add-ons/WebExtensions/Your_first_WebExtension), то уже представляете, как создавать WebExtension. В этой статье мы напишем более сложное дополнение, которое демонстрирует ещё несколько API.

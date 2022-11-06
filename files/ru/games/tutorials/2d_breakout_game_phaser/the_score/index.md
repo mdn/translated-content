@@ -4,6 +4,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/The_score
 original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Очки
 ---
+
 {{GamesSidebar}}{{IncludeSubnav("/ru/docs/")}}
 
 {{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Обработка_коллизий", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Победа")}}
