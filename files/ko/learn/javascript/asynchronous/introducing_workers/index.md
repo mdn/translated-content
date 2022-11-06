@@ -2,6 +2,7 @@
 title: Introducing workers
 slug: Learn/JavaScript/Asynchronous/Introducing_workers
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
 "비동기 JavaScript" 학습 과정의 마지막 글에서는 별도의 {{Glossary("Thread", "Thread")}} 실행 시 일부 작업을 실행할 수 있는 __workers__ 를 소개합니다.

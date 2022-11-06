@@ -2,6 +2,7 @@
 title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
 ---
+
 {{AddonSidebar()}}
 
 새 탭을 만든다.

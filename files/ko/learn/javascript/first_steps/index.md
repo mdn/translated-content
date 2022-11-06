@@ -2,6 +2,7 @@
 title: JavaScript 첫걸음
 slug: Learn/JavaScript/First_steps
 ---
+
 {{LearnSidebar}}
 
 우리의 첫번째 JavaScript 모듈에서는 JavaScript를 써보는 첫번째 현실적인 경험을 하기에 앞서, "JavaScript란 무엇인가", "그것은 어떻게 생겼는가", "그것은 무엇을 할 수 있는가"와 같은 핵심적인 질문에 답을 할 것입니다. 그 이후에 우리는 예컨대 변수, 문자열, 숫자, 배열과 같은 핵심적인 단위를 상세히 논의해볼 것입니다.
