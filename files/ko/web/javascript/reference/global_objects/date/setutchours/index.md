@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
 browser-compat: javascript.builtins.Date.setUTCHours
 ---
+
 {{JSRef}}
 
 setUTCHours () 메서드는 표준시에 따라 지정된 날짜의 시간을 설정하고 1970 년 1 월 1 일 00:00:00 UTC 이후 업데이트 된 {{jsxref ( "Date")}}에 의해 표시되는 시간 (밀리 초)을 반환합니다. 예.
