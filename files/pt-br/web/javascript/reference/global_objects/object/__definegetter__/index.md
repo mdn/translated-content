@@ -2,6 +2,7 @@
 title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ---
+
 {{JSRef}}
 
 > **Aviso:** Esta característica está descontinuada em favor de definindo getters usando a [sintaxe de inicialização de objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer)ou a API {{jsxref("Object.defineProperty()")}}. Enquanto esta característica é amplamente implementada, ela está somente descrita na [especificação ECMAScript](https://tc39.github.io/ecma262/#sec-additional-ecmascript-features-for-web-browsers) por causa do uso legado. Este método não deveria ser usado desde que exista existam melhores alternativas.

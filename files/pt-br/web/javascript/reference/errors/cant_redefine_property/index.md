@@ -2,6 +2,7 @@
 title: 'TypeError: can''t redefine non-configurable property "x"'
 slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
 ---
+
 {{jsSidebar("Errors")}}
 
 A exceção do Javascript "can't redefine non-configurable property" ocorre quando é

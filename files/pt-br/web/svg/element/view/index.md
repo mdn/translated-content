@@ -2,6 +2,7 @@
 title: view
 slug: Web/SVG/Element/view
 ---
+
 {{SVGRef}}
 
 Uma **`view`** é uma maneira definida de visualizar a imagem, como um nível de zoom ou uma visualização de detalhes.

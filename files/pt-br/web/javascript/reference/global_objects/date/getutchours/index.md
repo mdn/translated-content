@@ -2,6 +2,7 @@
 title: Date.prototype.getUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 ---
+
 {{JSRef}}O método **`getUTCHours()`** retorna o número de horas na data especificada de acordo com o horário universal (UTC).
 
 {{EmbedInteractiveExample("pages/js/date-getutchours.html")}}

@@ -2,6 +2,7 @@
 title: text
 slug: Web/SVG/Element/text
 ---
+
 {{SVGRef}}
 
 O elemento SVG **`<text>`** desenha um elemento gráfico que consiste em texto. É possível aplicar um gradiente, pattern, clipping path, máscara ou filtro ao `<text>`, como qualquer outro elemento gráfico SVG.

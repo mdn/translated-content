@@ -2,6 +2,7 @@
 title: glyph
 slug: Web/SVG/Element/glyph
 ---
+
 {{SVGRef}}
 
 O `glyph` determina um único glifo em uma fonte SVG.

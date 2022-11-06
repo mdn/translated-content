@@ -2,6 +2,7 @@
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Sumário

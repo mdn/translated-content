@@ -2,6 +2,7 @@
 title: Map.prototype[@@toStringTag]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag
 ---
+
 {{JSRef}}
 
 A propriedade **`Map[@@toStringTag]`** tem o valor inicial do `Map`.
