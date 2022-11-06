@@ -2,6 +2,7 @@
 title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
 ---
+
 {{ APIRef("HTML DOM") }}
 
 O método **`HTMLElement.click()`** simula o clique do mouse em um elemento.

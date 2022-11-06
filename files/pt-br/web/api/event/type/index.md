@@ -2,6 +2,7 @@
 title: Event.type
 slug: Web/API/Event/type
 ---
+
 {{APIRef("DOM")}}
 
 ## Sumário

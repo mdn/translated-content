@@ -2,6 +2,7 @@
 title: mousedown
 slug: Web/API/Element/mousedown_event
 ---
+
 {{APIRef}}
 
 O evento `mousedown` é ativado quando um botão de um dispositivo apontador é pressionado sobre um elemento.

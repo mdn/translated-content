@@ -2,6 +2,7 @@
 title: <abbr>
 slug: Web/HTML/Element/abbr
 ---
+
 ## Sumário
 
 O _Elemento_ _HTML `<abbr>` _(ou Elemento de Abreviação HTML) representa uma abreviação e opcionalmente fornece uma descrição completa para ela. Se presente, o atributo **`title`** deve conter a descrição completa e apenas ela.

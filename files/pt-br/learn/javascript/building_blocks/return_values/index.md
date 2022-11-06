@@ -3,6 +3,7 @@ title: Valores de retorno de função
 slug: Learn/JavaScript/Building_blocks/Return_values
 original_slug: Aprender/JavaScript/Elementos_construtivos/Return_values
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 Há um último conceito essencial para discutirmos neste curso, para fechar nossa visão das funções — valores de retorno. Algumas funções não retornam um valor significativo após a conclusão, mas outras o fazem, e é importante entender quais são seus valores, como utilizá-los em seu código e como fazer com que suas próprias funções personalizadas retornem valores úteis. Nós vamos cobrir tudo isso abaixo.

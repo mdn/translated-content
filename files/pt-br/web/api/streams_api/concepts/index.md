@@ -2,6 +2,7 @@
 title: Conceitos da API Stream
 slug: Web/API/Streams_API/Concepts
 ---
+
 {{apiref("Streams")}}
 
 A [Streams API](/pt-BR/docs/Web/API/Streams_API) adiciona conjunto muito útil de ferramentas à plataforma web, provendo objetos que permitem ao JavaScript acessar via programação dados de stream recebidos pela rede e processá-los conforme desejado pelo desenvolvedor. Alguns conceitos e terminologias associadas a streams podem ser novos pra você - este artigo explicará tudo o que você precisa saber.

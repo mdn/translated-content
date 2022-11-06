@@ -2,6 +2,7 @@
 title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
 ---
+
 {{APIRef}}
 
 ## Resumo

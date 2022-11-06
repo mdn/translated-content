@@ -3,6 +3,7 @@ title: WindowEventHandlers.onhashchange
 slug: Web/API/Window/hashchange_event
 original_slug: Web/API/WindowEventHandlers/onhashchange
 ---
+
 {{APIRef("HTML DOM")}}
 
 O evento **hashchange** é disparado quando a _hash_ da _window_ muda. (ver {{domxref("Window.location", "location.hash")}}).

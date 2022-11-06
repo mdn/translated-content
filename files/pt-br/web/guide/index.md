@@ -2,6 +2,7 @@
 title: Guia do desenvolvedor web
 slug: Web/Guide
 ---
+
 **Estes artigos fornecem informações para ajudá-lo a fazer uso de tecnologias e APIs específicas.**
 
 - [Guia do desenvolvedor HTML](/pt-BR/docs/Aprender/HTML)

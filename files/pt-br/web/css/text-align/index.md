@@ -2,6 +2,7 @@
 title: text-align
 slug: Web/CSS/text-align
 ---
+
 {{CSSRef}}
 
 ## Sumário

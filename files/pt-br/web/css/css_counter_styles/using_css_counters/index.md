@@ -3,6 +3,7 @@ title: Using CSS counters
 slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
+
 {{CSSRef}}
 
 Contadores CSS são em essência, as variáveis mantidas pelo CSS cujos valores podem ser incrementado por regras do CSS para controlar quantas vezes eles são usados.Isso permite ajustar a aparência do conteúdo com base na sua colocação no documento. contadores CSS são uma implementação de [Contadores automáticos e numeração](http://www.w3.org/TR/CSS21/generate.html#counters) em CSS 2.1.

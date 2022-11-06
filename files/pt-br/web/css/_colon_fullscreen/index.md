@@ -2,6 +2,7 @@
 title: ':fullscreen'
 slug: Web/CSS/:fullscreen
 ---
+
 {{CSSRef}}
 
 A pseudo-classe **`:fullscreen`** do CSS representa os elementos que estão atualmente no modo tela-cheia. Se vários elementos estiverem em tela-cheia, isto seleciona todos.

@@ -2,6 +2,7 @@
 title: Códigos de status de respostas HTTP
 slug: Web/HTTP/Status
 ---
+
 {{HTTPSidebar}}
 
 Os códigos de _status_ das respostas HTTP indicam se uma requisição HTTP foi corretamente concluída. As respostas são agrupadas em cinco classes:

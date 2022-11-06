@@ -2,6 +2,7 @@
 title: ':root'
 slug: Web/CSS/:root
 ---
+
 {{CSSRef}}
 
 A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS)  **`:root`** se equipara à raiz de uma árvore, que por sua vez representa o documento. Aplicado ao HTML, `:root` representa o elemento {{HTMLElement("html")}}  e é idêntico ao seletor `html`, exceto que sua [especificidade](/pt-BR/docs/Web/CSS/Specificity) é mais alta.

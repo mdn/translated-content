@@ -2,6 +2,7 @@
 title: CustomElementRegistry.whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 O **`whenDefined()`** é um método de {{domxref("CustomElementRegistry")}} e a interface retorna uma {{jsxref("Promise")}} que é resolvido quando o elemento nomeado é

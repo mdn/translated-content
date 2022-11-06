@@ -2,6 +2,7 @@
 title: JavaScript Assíncrono
 slug: Learn/JavaScript/Asynchronous
 ---
+
 {{LearnSidebar}}Neste módulo vamos entender {{Glossary("JavaScript")}} [Assíncrono](/pt-BR/docs/Glossario/Assincrono), porque isso é importante e como pode ser usado para lidar com operações potencialmente bloqueantes, como a busca de recursos em um servidor remoto.
 
 ## Pre requisitos

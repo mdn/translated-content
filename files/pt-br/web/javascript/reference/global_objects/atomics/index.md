@@ -2,6 +2,7 @@
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 O objeto **`Atomics`** fornece operações atômicas como metodos estáticos. Eles são usados com objetos {{jsxref("SharedArrayBuffer")}}.

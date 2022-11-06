@@ -2,6 +2,7 @@
 title: Element.outerHTML
 slug: Web/API/Element/outerHTML
 ---
+
 {{APIRef("DOM")}}
 
 ## Sumário

@@ -3,6 +3,7 @@ title: 'Tutorial Django: Website da Biblioteca Local'
 slug: Learn/Server-side/Django/Tutorial_local_library_website
 original_slug: Learn/Server-side/Django/Tutorial_website_biblioteca_local
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
 
 O primeiro artigo da nossa série de tutoriais práticos explica o que você irá aprender, e fornece uma visão do site de exemplo "biblioteca local" que estaremos trabalhando e evoluindo em artigos seguintes.

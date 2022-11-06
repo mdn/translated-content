@@ -2,6 +2,7 @@
 title: '<dialog>: O elemento Dialog'
 slug: Web/HTML/Element/dialog
 ---
+
 O **elemento HTML `<dialog>`** representa uma caixa de diálogo ou outro componente interativo, tal como um inspetor ou janela.
 
 <table class="properties">

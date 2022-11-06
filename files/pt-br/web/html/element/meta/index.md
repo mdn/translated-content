@@ -2,6 +2,7 @@
 title: <meta>
 slug: Web/HTML/Element/meta
 ---
+
 {{HTMLSidebar}}
 
 O elemento **HTML `<meta>` **define qualquer informação de metadados que não podem ser definidos por outros elementos **HTML.** ({{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} ou {{HTMLElement("title")}}).

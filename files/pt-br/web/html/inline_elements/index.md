@@ -3,6 +3,7 @@ title: Elementos inline
 slug: Web/HTML/Inline_elements
 original_slug: Web/HTML/Inline_elemente
 ---
+
 ### Sumário
 
 "Inline" é uma categorização dos elementos do HTML, em contraste com os ["elementos de bloco"](/pt-BR/docs/HTML/Block-level_elements). Os elementos inline podem ser exibidos em nível de bloco ou outros elementos inline. Eles ocupam somente a largura de seu conteúdo. A diferença entre elementos inline e bloco incluem:

@@ -2,6 +2,7 @@
 title: Document.querySelector()
 slug: Web/API/Document/querySelector
 ---
+
 {{ ApiRef("DOM") }}
 
 ## Sumário

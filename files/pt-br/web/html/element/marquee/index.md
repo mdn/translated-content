@@ -2,6 +2,7 @@
 title: <marquee>
 slug: Web/HTML/Element/marquee
 ---
+
 {{HTMLSidebar}}
 
 {{obsolete_header}}

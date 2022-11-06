@@ -2,6 +2,7 @@
 title: FileReader
 slug: Web/API/FileReader
 ---
+
 {{ APIRef("File API")}}
 
 ## Resumo

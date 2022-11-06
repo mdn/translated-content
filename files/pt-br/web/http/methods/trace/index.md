@@ -2,6 +2,7 @@
 title: TRACE
 slug: Web/HTTP/Methods/TRACE
 ---
+
 {{HTTPSidebar}}
 
 O **método** **HTTP `TRACE` **realiza um teste de loopback enviando uma mensagem por todo o caminho até o recurso alvo no qual foi destinado, provendo um mecanismo útil para debug.

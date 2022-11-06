@@ -3,6 +3,7 @@ title: HTMLContentElement.select
 slug: Web/API/HTMLContentElement/select
 original_slug: Web/API/HTMLContentElement/Seletor
 ---
+
 {{ APIRef("Web Components") }}
 
 A propriedade **`HTMLContentElement.select`** reflete o atributo selecionado. É um {{domxref("DOMString")}} contendo uma lista de spaço-separado de seletores CSS que seleciona o conteúdo para inserir em lugar do elemento \<content>.

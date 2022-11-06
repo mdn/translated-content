@@ -2,6 +2,7 @@
 title: Location.assign()
 slug: Web/API/Location/assign
 ---
+
 {{ APIRef("HTML DOM") }}
 
 O método **`Location.assign()`** faz com que o navegador carregue o documento na URL especificada e a exiba na janela atual.

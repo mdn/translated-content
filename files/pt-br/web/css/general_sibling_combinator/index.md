@@ -2,6 +2,7 @@
 title: General sibling selectors
 slug: Web/CSS/General_sibling_combinator
 ---
+
 {{CSSRef("Selectors")}}
 
 ## Resumo

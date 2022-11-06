@@ -2,6 +2,7 @@
 title: nav
 slug: Web/HTML/Element/nav
 ---
+
 ## Sumário
 
 O _Elemento_ _HTML_ _de Navegação_ (`<nav>`) representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página, ou seja, uma seção com links de navegação.

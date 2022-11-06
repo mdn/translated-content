@@ -2,6 +2,7 @@
 title: AbortSignal.aborted
 slug: Web/API/AbortSignal/aborted
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 A propriedade **`aborted`** é apenas para leitura e fornece um valor {{domxref("Boolean")}} indicando se as solicitações ao objeto sinal de comunicação DOM forão abortadas (`true`) ou não (`false`).

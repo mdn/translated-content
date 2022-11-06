@@ -2,6 +2,7 @@
 title: 408 Request Timeout
 slug: Web/HTTP/Status/408
 ---
+
 {{HTTPSidebar}}
 
 `A resposta 408 Request Timeout` significa que o servidor irá encerrar essa conexão em desuso. É enviado a uma conexão parada por alguns servidores, _mesmo sem nenhuma requisição feita anteriormente pelo cliente_.

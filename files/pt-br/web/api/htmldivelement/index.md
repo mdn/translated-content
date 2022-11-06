@@ -2,6 +2,7 @@
 title: HTMLDivElement
 slug: Web/API/HTMLDivElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 A interface `HTMLDivElement` fornece propriedades especiais ( além da interface normal {{domxref ("HTMLElement")}} que também está a sua disposição por herança ) para manipular elementos div.

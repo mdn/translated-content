@@ -2,6 +2,7 @@
 title: break-after
 slug: Web/CSS/break-after
 ---
+
 {{CSSRef}}
 
 A propriedade **`break-after`** do [CSS](/pt-BR/docs/Web/CSS) configura como uma quebra de página, coluna ou região deve se comportar após renderizar um elemento. Se nenhum elemento foi renderizado, a propriedade é ignorada.

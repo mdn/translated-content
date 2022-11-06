@@ -2,6 +2,7 @@
 title: Document.URL
 slug: Web/API/Document/URL
 ---
+
 {{APIRef("DOM")}}
 
 A propriedade **`URL`** (usada apenas para leitura) da Interface {{domxref("Document")}} retorna a URL atual do navegador como um texto (string).

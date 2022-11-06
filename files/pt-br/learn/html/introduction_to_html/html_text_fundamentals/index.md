@@ -3,6 +3,7 @@ title: Fundamentos do texto em HTML
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 original_slug: Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 
 Um dos principais objetivos do HTML é dar estrutura de texto e significado, também conhecido como {{glossary("semantics", "semântica")}}), para que um navegador possa exibi-lo corretamente. Este artigo explica a forma como {{glossary("HTML")}} pode ser usado para estruturar uma página de texto, adicionar títulos e parágrafos, enfatizar palavras, criar listas e muito mais.

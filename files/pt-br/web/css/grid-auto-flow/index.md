@@ -2,6 +2,7 @@
 title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
 ---
+
 A propriedade de CSS **`grid-auto-flow`** controla como o algoritmo de arrumação automática funciona, especificando exatamente como os itens fluirão no grid.
 
 ```css

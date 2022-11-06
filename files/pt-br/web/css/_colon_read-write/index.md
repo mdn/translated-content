@@ -2,6 +2,7 @@
 title: ':read-write'
 slug: Web/CSS/:read-write
 ---
+
 {{CSSRef}}
 
 A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:read-write`** representa um elemento (como o `input` ou `textarea`) que é editável pelo usuário.

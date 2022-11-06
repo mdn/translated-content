@@ -2,6 +2,7 @@
 title: Digest
 slug: Web/HTTP/Headers/Digest
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta HTTP **`Digest`** provém uma {{Glossary("digest")}} do recurso requisitado.

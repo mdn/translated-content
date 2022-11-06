@@ -2,6 +2,7 @@
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
 ---
+
 {{JSRef}}
 
 O método **includes()** determina se um conjunto de caracteres pode ser encontrado dentro de outra string, retornando `true` ou `false`.

@@ -3,6 +3,7 @@ title: Document.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
 ---
+
 {{APIRef("DOM")}}
 
 O método **`elementFromPoint()`** da interface {{domxref("Document")}} retorna o elemento de maior nível nas coordenadas especificadas.

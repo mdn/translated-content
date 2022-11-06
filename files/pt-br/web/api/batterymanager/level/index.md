@@ -2,6 +2,7 @@
 title: BatteryManager.level
 slug: Web/API/BatteryManager/level
 ---
+
 {{APIRef("Battery API")}}
 
 Indica o nível de carga atual da bateria como um valor entre `0.0` e `1.0`.

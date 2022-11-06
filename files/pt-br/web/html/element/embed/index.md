@@ -2,6 +2,7 @@
 title: <embed>
 slug: Web/HTML/Element/embed
 ---
+
 ## Sumário
 
 O **elemento HTML `<embed>` **incorpora conteúdo externo no ponto especificado no documento. Este conteúdo é fornecido por um aplicativo externo ou outra fonte de conteúdo interativo, como um plug-in de navegador.

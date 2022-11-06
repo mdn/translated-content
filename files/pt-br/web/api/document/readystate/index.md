@@ -2,6 +2,7 @@
 title: Document.readyState
 slug: Web/API/Document/readyState
 ---
+
 {{APIRef("DOM")}} {{ gecko_minversion_header("1.9.2") }}
 
 ## Sumário

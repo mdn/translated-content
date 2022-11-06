@@ -2,6 +2,7 @@
 title: Window.getSelection()
 slug: Web/API/Window/getSelection
 ---
+
 {{ ApiRef() }}
 
 ## Resumo

@@ -2,6 +2,7 @@
 title: break
 slug: Web/JavaScript/Reference/Statements/break
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Sumário

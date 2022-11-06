@@ -2,6 +2,7 @@
 title: <legend>
 slug: Web/HTML/Element/legend
 ---
+
 ## Resumo
 
 O **Elemento HTML \<legend> **(ou _Elemento_ _HTML Campo "Legend"_) representa um rótulo para o conteúdo do seu ancestral {{HTMLElement("fieldset")}}.

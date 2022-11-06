@@ -2,6 +2,7 @@
 title: Accept-CH
 slug: Web/HTTP/Headers/Accept-CH
 ---
+
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
 O cabeçalho **`Accept-CH`** é colocado pelo servidor para especificar quais cabeçalhos [Client Hints](/pt-BR/docs/Glossary/Client_hints) o cliente deve incluir nas requisições subsequentes.

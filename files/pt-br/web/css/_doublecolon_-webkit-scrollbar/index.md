@@ -2,6 +2,7 @@
 title: '::-webkit-scrollbar'
 slug: Web/CSS/::-webkit-scrollbar
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 O pseudo-elemento CSS `:-webkit-scrollbar` afeta o estilo de um elemento referente a barra de rolagem quando se tem por definido `overflow:scroll;`.

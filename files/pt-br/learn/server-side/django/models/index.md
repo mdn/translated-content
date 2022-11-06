@@ -2,6 +2,7 @@
 title: 'Tutorial Django Parte 3: Usando models'
 slug: Learn/Server-side/Django/Models
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
 Este artigo mostra como definir os modelos para o website [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website). Ele explica o que é um modelo, como ele é declarado e mostra algum dos principais tipos de campo. Ele também mostra brevemente algumas das principais formas pelas quais você pode acessar dados do modelo.
