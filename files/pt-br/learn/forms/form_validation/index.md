@@ -3,6 +3,7 @@ title: Form data validation
 slug: Learn/Forms/Form_validation
 original_slug: Web/Guide/HTML/Forms/Form_validation
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
 
 A validação de formulário nos ajuda a garantir que os usuários preencham os campos no formato correto, garantindo que os dados enviados funcionem com êxito em nossos aplicativos. Este artigo apresentará conceitos e exemplos básicos sobre validação de formulário. Para mais informações adicionais, consulte o [Guia de validação](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation).

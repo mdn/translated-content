@@ -3,6 +3,7 @@ title: Introdução ao Django
 slug: Learn/Server-side/Django/Introduction
 original_slug: Learn/Server-side/Django/Introdução
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 Neste primeiro artigo do Django, respondemos a pergunta "O que é o Django?" e daremos uma visão geral do que torna este framework web especial. Vamos descrever os principais recursos, incluindo algumas das funcionalidades avançadas que não teremos tempo para abordar detalhadamente neste módulo. Também mostraremos alguns dos principais blocos de construção de um aplicativo Django (embora neste momento você ainda não tenha um ambiente de desenvolvimento para testá-lo).

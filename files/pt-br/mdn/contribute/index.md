@@ -2,6 +2,7 @@
 title: Contribuindo para o MDN
 slug: MDN/Contribute
 ---
+
 {{MDNSidebar}}
 
 Bem-vindo! Ao visitar esta página, você deu o primeiro passo para se tornar um colaborador da MDN.

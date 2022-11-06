@@ -3,6 +3,7 @@ title: Imagens responsivas
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 original_slug: Aprender/HTML/Multimedia_and_embedding/Responsive_images
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
 
 Neste artigo nós iremos aprender sobre o conceito de imagens responsivas —imagens que funcionam em dispositivos com diferentes tamanhos de tela, resoluções e outras funcionalidades— e entrar em contato com quais ferramentas o HTML oferece para ajudar a implementá-las. Imagens responsivas são apenas uma parte do web design responsivo, um futuro [tópico de CSS](/pt-BR/docs/Learn/CSS) para você aprender.

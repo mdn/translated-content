@@ -3,6 +3,7 @@ title: Port
 slug: Glossary/Port
 original_slug: Glossario/Port
 ---
+
 Porta
 
 Para um computador se conectar à rede mundial de computadores com um endereço de IP(Protocolo de internet - Internet Protocol),

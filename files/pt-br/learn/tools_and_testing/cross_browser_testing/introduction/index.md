@@ -2,6 +2,7 @@
 title: Introduction to cross browser testing
 slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 This article starts the module off by providing an overview of the topic of (cross) browser testing, answering questions such as "what is cross browser testing?", "what are the most common types of problems you'll encounter?", and "what are the main approaches for testing, identifying, and fixing problems?"

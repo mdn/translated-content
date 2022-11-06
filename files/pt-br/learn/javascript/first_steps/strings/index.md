@@ -2,6 +2,7 @@
 title: Trabalhando com texto — strings em JavaScript
 slug: Learn/JavaScript/First_steps/Strings
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
 Agora vamos dar atenção às strings - isto é como é chamado em programação qualquer parte de texto. Neste artigo nós veremos tudo que você realmente deve saber sobre strings quando está aprendendo JavaScript. Como criar, fazer citações e como juntar strings.

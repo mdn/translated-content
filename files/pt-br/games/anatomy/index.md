@@ -2,6 +2,7 @@
 title: Anatomia de um vídeo game
 slug: Games/Anatomy
 ---
+
 {{GamesSidebar}}
 
 Este artigo analisa a anatomia e o fluxo de trabalho do vídeo game médio de um ponto de vista técnico, em termos de como o loop principal deve ser executado. Isso ajuda os iniciantes da arena do desenvolvimento de jogos modernos a entender o que é necessário ao construir um jogo e como os padrões da web como o JavaScript se prestam como ferramentas. Os programadores de jogos experientes que são novos no desenvolvimento da web também podem se beneficiar.

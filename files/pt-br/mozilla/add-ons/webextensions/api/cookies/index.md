@@ -2,6 +2,7 @@
 title: cookies
 slug: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
+
 {{AddonSidebar}}
 
 Habilita extensões a obter e atribuir cookies, e ser notificado quando eles mudam.

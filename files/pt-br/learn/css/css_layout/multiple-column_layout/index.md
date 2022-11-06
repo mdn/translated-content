@@ -3,6 +3,7 @@ title: Layout de varias colunas
 slug: Learn/CSS/CSS_layout/Multiple-column_Layout
 original_slug: Learn/CSS/CSS_layout/Layout_de_varias_colunas
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
 
 A especificação de layout de várias colunas fornece um método de disposição do conteúdo em colunas, como você pode ver em um jornal. Este artigo explica como usar esse recurso.

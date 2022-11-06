@@ -3,6 +3,7 @@ title: Adicionando recursos à nossa demonstração de bolas pulantes
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 original_slug: Aprender/JavaScript/Objetos/Adding_bouncing_balls_features
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
 Nesta avaliação, espera-se que você use a demonstração de bolas saltantes do artigo anterior como ponto de partida e adicione alguns recursos novos e interessantes a ela.

@@ -2,6 +2,7 @@
 title: Positioning
 slug: Learn/CSS/CSS_layout/Positioning
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Aprenda/CSS/CSS_layout/Floats", "Aprenda/CSS/CSS_layout/Multiple-column_Layout", "Aprenda/CSS/CSS_layout")}}
 
 Positioning allows you to take elements out of the normal document layout flow, and make them behave differently; for example sitting on top of one another, or always remaining in the same place inside the browser viewport. This article explains the different {{cssxref("position")}} values, and how to use them.
