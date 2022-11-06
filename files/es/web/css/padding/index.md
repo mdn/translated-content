@@ -5,6 +5,7 @@ tags:
   - Propiedades CSS
 translation_of: Web/CSS/padding
 ---
+
 {{CSSRef}}
 
 ## Resumen

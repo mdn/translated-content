@@ -5,6 +5,7 @@ tags:
   - Referencia_CSS
 translation_of: Web/CSS/position
 ---
+
 {{CSSRef}}
 
 La propiedad **`position`** de [CSS](/es/docs/CSS) especifica cómo un elemento es posicionado en el documento. Las propiedades {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, y {{Cssxref("left")}} determinan la ubicación final de los elementos posicionados.

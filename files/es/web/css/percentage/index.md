@@ -4,6 +4,7 @@ slug: Web/CSS/percentage
 translation_of: Web/CSS/percentage
 original_slug: Web/CSS/porcentaje
 ---
+
 {{CSSRef}}
 
 ## Sumario

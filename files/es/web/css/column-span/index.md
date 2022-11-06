@@ -7,6 +7,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/column-span
 ---
+
 {{CSSRef}}
 
 La propiedad **`column-span`** [CSS](/es/docs/Web/CSS) hace posible que un elemento se extienda sobre todas las columnas cuando su valor se establece a `all`.

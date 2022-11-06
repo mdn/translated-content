@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/CSS_Selectors
 original_slug: Web/CSS/Selectores_CSS
 ---
+
 {{CSSRef}}
 
 Los **selectores** definen sobre qué elementos se aplicará un conjunto de reglas CSS.

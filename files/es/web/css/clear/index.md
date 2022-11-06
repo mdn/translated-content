@@ -6,6 +6,7 @@ tags:
   - Reference
 translation_of: Web/CSS/clear
 ---
+
 {{CSSRef}}
 
 La propiedad [CSS](/es/docs/CSS) **`clear`** especifica si un elemento puede estar al lado de elementos [flotantes](/es/docs/CSS/float) que lo preceden o si debe ser movido (cleared) debajo de ellos. La propiedad `clear` aplica a ambos elementos flotantes y no flotantes.

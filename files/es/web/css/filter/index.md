@@ -10,6 +10,7 @@ tags:
   - SVG
 translation_of: Web/CSS/filter
 ---
+
 {{SeeCompatTable}}{{CSSRef}}
 
 ## Resumen

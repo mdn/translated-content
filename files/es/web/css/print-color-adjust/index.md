@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/-webkit-print-color-adjust
 original_slug: Web/CSS/-webkit-print-color-adjust
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

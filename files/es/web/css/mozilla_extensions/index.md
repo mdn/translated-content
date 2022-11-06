@@ -3,6 +3,7 @@ title: Extensiones CSS de Mozilla
 slug: Web/CSS/Mozilla_Extensions
 translation_of: Web/CSS/Mozilla_Extensions
 ---
+
 {{CSSRef}}
 
 Mozilla soporta ciertas extensiones de [CSS](/es/docs/CSS) con el prefijo`-moz-`.

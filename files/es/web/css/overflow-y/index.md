@@ -7,6 +7,7 @@ tags:
   - Propiedad CSS
 translation_of: Web/CSS/overflow-y
 ---
+
 {{CSSRef}}
 
 La propiedad [CSS](/es/docs/Web/CSS) **`overflow-y`** define qué se debe mostrar cuando el contenido se desborda de los extremos superior e inferior de un elemento en bloque.

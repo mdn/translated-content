@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-iteration-count
 ---
+
 {{ CSSRef() }}{{ SeeCompatTable() }}
 
 ## Resumen

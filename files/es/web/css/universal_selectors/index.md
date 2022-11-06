@@ -8,6 +8,7 @@ tags:
   - Selectores
 translation_of: Web/CSS/Universal_selectors
 ---
+
 {{CSSRef}}
 
 El **selector universal** CSS (`*`) coincide con elementos de cualquier tipo.

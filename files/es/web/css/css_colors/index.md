@@ -12,6 +12,7 @@ translation_of: Web/CSS/CSS_Color
 translation_of_original: Web/CSS/CSS_Colors
 original_slug: Web/CSS/CSS_Color
 ---
+
 {{CSSRef}}
 
 **Los colores CSS** son un módulo de CSS que trabaja con colores, tipos de colores y transparencias.
