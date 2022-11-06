@@ -2,6 +2,7 @@
 title: HEAD
 slug: Web/HTTP/Methods/HEAD
 ---
+
 {{HTTPSidebar}}
 
 O **método HTTP `HEAD`** solicita os cabeçalhos retornados de um recurso específico que foi requisitado por um método HTTP {{HTTPMethod("GET")}}. Tal solicitação pode ser feita antes de baixar um grande recurso para economizar largura de banda, por exemplo.

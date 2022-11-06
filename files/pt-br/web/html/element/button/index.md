@@ -2,6 +2,7 @@
 title: <button>
 slug: Web/HTML/Element/button
 ---
+
 ## Sumário
 
 O **Elemento HTML _`<button>`_** representa um botão clicável.

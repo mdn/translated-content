@@ -2,6 +2,7 @@
 title: <applet>
 slug: Web/HTML/Element/applet
 ---
+
 {{obsolete_header}}
 
 ## Resumo

@@ -2,6 +2,7 @@
 title: <div>
 slug: Web/HTML/Element/div
 ---
+
 ## Resumo
 
 O **elemento de divisão** **[HTML](/pt-BR/docs/Web/HTML) `<div>` **é um container genérico para conteúdo de fluxo, que de certa forma não representa nada. Ele pode ser utilizado para agrupar elementos para fins de estilos (usando **class** ou **id**), ou porque eles compartilham valores de atributos, como **lang**. Ele deve ser utilizado somente quando não tiver outro elemento de semântica (tal como {{HTMLElement("article")}} ou {{HTMLElement("nav")}}).

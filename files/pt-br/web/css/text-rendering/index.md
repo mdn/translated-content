@@ -2,6 +2,7 @@
 title: text-rendering
 slug: Web/CSS/text-rendering
 ---
+
 {{ CSSRef() }}
 
 ## Sumário

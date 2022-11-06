@@ -2,6 +2,7 @@
 title: <acronym>
 slug: Web/HTML/Element/acronym
 ---
+
 {{obsolete_header}}
 
 ## Resumo

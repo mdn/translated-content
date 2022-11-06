@@ -2,6 +2,7 @@
 title: <dt>
 slug: Web/HTML/Element/dt
 ---
+
 ## Sumário
 
 O elemento **HTML `<dt>`** (ou Elemento HTML de Definição de Termo) identifica um termo na lista de definição. Este elemento pode ocorrer somente em um elemento filho de {{HTMLElement("dl")}}. Geralmente seguido por um elemento {{HTMLElement("dd")}}; ou multiplos `<dt>` na mesma linha indicam vários termos sendo definidos pelo próximo element {{HTMLElement("dd")}}.

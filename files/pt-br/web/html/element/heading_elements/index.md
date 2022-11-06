@@ -2,6 +2,7 @@
 title: '<h1>–<h6>: Os elementos HTML de cabeçalho da seção'
 slug: Web/HTML/Element/Heading_Elements
 ---
+
 {{HTMLSidebar}}
 
 Os **elementos HTML** **`<h1>`–`<h6>`** representam seis níveis de título de seção. `<h1>` é o nível de seção mais alto e `<h6>` é o mais baixo.

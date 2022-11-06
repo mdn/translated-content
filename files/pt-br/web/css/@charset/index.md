@@ -2,6 +2,7 @@
 title: '@charset'
 slug: Web/CSS/@charset
 ---
+
 {{cssxref("&lt;string&gt;")}}{{ CSSRef() }}
 
 ## Resumo

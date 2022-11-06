@@ -2,6 +2,7 @@
 title: Output
 slug: Web/HTML/Element/Output
 ---
+
 ## Sumário
 
 O elemento de saída (\<output>) é um elemento no qual um site ou aplicativo pode injetar os resultados de um cálculo ou o resultado de uma ação do usuário.

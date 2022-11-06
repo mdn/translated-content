@@ -2,6 +2,7 @@
 title: 431 Request Header Fields Too Large
 slug: Web/HTTP/Status/431
 ---
+
 {{HTTPSidebar}}
 
 O código de stauts de resposta HTTP **`431 Request Header Fields Too Large`** indica que o servidor se recusou a processar a requisição por que os [cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers) da mesma são muito grandes. A requisição _pode_ ser resubmetida depois de o tamanho dos cabeçalhos serem reduzidos.

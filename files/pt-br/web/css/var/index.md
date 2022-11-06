@@ -3,6 +3,7 @@ title: var()
 slug: Web/CSS/var
 original_slug: Web/CSS/var()
 ---
+
 {{CSSRef}}
 
 A função [CSS](/pt-BR/docs/Web/CSS) **`var()`** pode ser usada para inserir o valor de uma [custom property](/pt-BR/docs/Web/CSS/--*) (propriedade personalizada) substituindo qualquer parte do valor de outra propriedade.

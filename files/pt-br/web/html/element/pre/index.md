@@ -2,6 +2,7 @@
 title: <pre>
 slug: Web/HTML/Element/pre
 ---
+
 ## Resumo
 
 _HTML texto preformatado_ (**\<pre>**) é a tag utilizada para representar texto pré-formatado. Um texto dentro desse elemento é tipicamente exibido em uma fonte não proporcional da mesma maneira em que o texto original foi disposto no arquivo. Espaços em branco são mantidos no texto da mesma forma em que este foi digitado.
