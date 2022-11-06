@@ -2,6 +2,7 @@
 title: Visão geral das tecnologias JavaScript
 slug: Web/JavaScript/JavaScript_technologies_overview
 ---
+
 ## Introdução
 
 Enquanto o [HTML](/pt-BR/docs/Web/HTML) é usado para armazenar o conteúdo e a formatação de uma página web e o [CSS](/pt-BR/docs/Web/CSS) define a formatação e a aparência, o [JavaScript](/pt-BR/docs/Web/JavaScript) é usado para adicionar interatividade a uma página web e criar aplicações web ricas.

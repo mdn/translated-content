@@ -3,6 +3,7 @@ title: Operador Vírgula
 slug: Web/JavaScript/Reference/Operators/Comma_Operator
 original_slug: Web/JavaScript/Reference/Operators/Operador_Virgula
 ---
+
 {{jsSidebar("Operators")}}
 
 ## Sumário

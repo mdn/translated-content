@@ -2,6 +2,7 @@
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 ---
+
 {{JSRef}}
 
 O método **`valueOf()`** retorna o valor primitivo contido no objeto {{jsxref("Number")}}.

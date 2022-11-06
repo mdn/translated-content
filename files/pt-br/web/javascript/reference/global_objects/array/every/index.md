@@ -2,6 +2,7 @@
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
+
 {{JSRef}}
 
 O método `every()` testa se todos os elementos do array passam pelo teste implementado pela função fornecida. Este método retorna um valor booleano.

@@ -2,6 +2,7 @@
 title: use
 slug: Web/SVG/Element/use
 ---
+
 {{SVGRef}}
 
 O elemento `use` cria instâncias dentro de um documento SVG e os duplica em outro local. O efeito é o mesmo se as instâncias forem profundamente clonadas em um DOM não exposto, e então coladas onde o elemento `use` está (muito parecido com [elementos de template](/pt-BR/docs/Web/HTML/Element/template) clonados no HTML5). Como as instâncias clonadas não são expostas, é preciso ter cuidado ao utilizar [CSS](/pt-BR/CSS) para estilizar o elemento `use` e seus descendentes ocultos. Não há garantia de que atributos CSS sejam herdados pelo DOM oculto e clonado, a menos que você os solicite explicitamente usando [herança CSS](/pt-BR/CSS/inheritance).

@@ -2,6 +2,7 @@
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Sumário

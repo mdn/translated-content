@@ -2,6 +2,7 @@
 title: decodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
 O método **`decodeURIComponent()`** decodifica um componente Identificador Uniforme de Recursos (URI) criado anteriormente por um {{jsxref("encodeURIComponent")}} ou por uma rotina semelhante.

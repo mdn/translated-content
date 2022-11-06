@@ -2,6 +2,7 @@
 title: Function.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 A propriedade **`function.arguments`** diz respeito a um objeto tipo array (array-like object) correspondente aos argumentos passados para uma função. Use somente a variável {{jsxref("Functions/arguments", "arguments")}} em vez disso.

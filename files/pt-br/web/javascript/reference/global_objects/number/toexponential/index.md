@@ -2,6 +2,7 @@
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 ---
+
 {{JSRef}}
 
 O método **`toExponential()`** retorna uma string representando o objeto {{jsxref("Global_Objects/Number", "Number")}} por meio de notação exponencial.

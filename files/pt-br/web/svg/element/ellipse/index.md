@@ -2,6 +2,7 @@
 title: ellipse
 slug: Web/SVG/Element/ellipse
 ---
+
 {{SVGRef}}
 
 O elemento `ellipse` é uma forma básica do SVG, utilizado para criar elipses baseado em uma coordenada central, tanto no raio x quanto no y.

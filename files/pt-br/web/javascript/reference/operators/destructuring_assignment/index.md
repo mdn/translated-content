@@ -3,6 +3,7 @@ title: Atribuição via desestruturação (destructuring assignment)
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 original_slug: Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao
 ---
+
 {{jsSidebar("Operators")}}
 
 A sintaxe de **atribuição via desestruturação (destructuring assignment)** é uma expressão JavaScript que possibilita extrair dados de arrays ou objetos em variáveis distintas.
