@@ -1,11 +1,6 @@
 ---
 title: 금지된 헤더 이름
 slug: Glossary/Forbidden_header_name
-tags:
-  - Fetch
-  - HTTP
-  - Headers
-  - forbidden
 ---
 
 **금지된 헤더 이름**은 프로그래밍 방식으로 수정할 수 없는 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)의 이름입니다. 특히, HTTP **요청** 헤더 이름이 이에 해당합니다.({{Glossary("Forbidden response header name")}}과 대조됩니다.)
