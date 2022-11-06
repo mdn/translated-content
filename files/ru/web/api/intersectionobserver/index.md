@@ -11,6 +11,7 @@ tags:
   - observers
 translation_of: Web/API/IntersectionObserver
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 Интерфейс **`IntersectionObserver`** в составе [Intersection Observer API](/ru/docs/Web/API/Intersection_Observer_API) предоставляет возможность асинхронного наблюдения за изменением пересечения целевого элемента с вышестоящим элементом или с верхоуровневым {{Glossary('viewport')}} документа. Вышестоящий элемент или viewport считается корнем.

@@ -3,6 +3,7 @@ title: Window.alert()
 slug: Web/API/Window/alert
 translation_of: Web/API/Window/alert
 ---
+
 {{ APIRef }}
 
 Метод **`Window.alert()`** показывает диалоговое окно с опциональным (необязательным) сообщением и кнопкой OK.

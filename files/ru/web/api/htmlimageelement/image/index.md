@@ -3,6 +3,7 @@ title: Image()
 slug: Web/API/HTMLImageElement/Image
 translation_of: Web/API/HTMLImageElement/Image
 ---
+
 {{ APIRef("HTML DOM") }}Конструктор **Image()** создаёт новый экземпляр HTMLImageElement. Эквивалентно document.createElement ('img').
 
 ### Конструктор элемента Image

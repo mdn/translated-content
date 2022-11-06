@@ -10,6 +10,7 @@ tags:
   - ServiceWorker
 translation_of: Web/API/CacheStorage/open
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 **`open()`** метод из {{domxref("CacheStorage")}} интерфейса возвращает {{jsxref("Promise")}} который резолвится в {{domxref("Cache")}} объект с соответствующим `cacheName (именем тега кеша)`.

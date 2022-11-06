@@ -3,6 +3,7 @@ title: Using textures in WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 ---
+
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 Сейчас наша программа рисует вращающийся объёмный куб - давайте натянем на него текстуру вместо заливки граней одним цветом.

@@ -3,6 +3,7 @@ title: MouseEvent.ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
 translation_of: Web/API/MouseEvent/ctrlKey
 ---
+
 {{APIRef("DOM Events")}}
 
 Свойство только для чтения **`MouseEvent.ctrlKey`** возвращает true, когда клавиша Ctrl была нажата, а если нет - false.
