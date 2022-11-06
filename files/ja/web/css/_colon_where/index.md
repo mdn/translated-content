@@ -79,7 +79,7 @@ CSS では、セレクターリストを使用する場合、いずれかのセ�
   </section>
 
   <aside class="where-styling">
-    <p>こちらが脇コンテンツです。これは<a href="https://developer.mozilla.org">also リンクを含んでいます</a>.
+    <p>こちらが脇コンテンツです。これは<a href="https://developer.mozilla.org">リンクを含んでいます</a>.
   </aside>
 
   <footer class="where-styling">
