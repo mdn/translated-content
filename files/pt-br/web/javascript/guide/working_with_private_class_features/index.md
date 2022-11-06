@@ -9,7 +9,7 @@ slug: Web/JavaScript/Guide/Working_With_Private_Class_Features
 
 Os recursos de classe privada fornecem campos e métodos verdadeiramente privados, com essa privacidade imposta pela linguagem em vez da convenção. Isso confere benefícios como evitar colisões de nomenclatura entre os recursos de classe e o restante da base de código e permitir que as classes exponham uma interface muito pequena para o restante do código.
 
-## Campos privados 
+## Campos privados
 
 Para entender como os campos privados funcionam, vamos primeiro considerar uma classe que tem apenas campos públicos, mas usa o construtor para encapsular dados – uma técnica um tanto comum, mesmo que seja um pouco complicada. A classe a seguir cria uma contagem básica que aceita um número inicial, permite que esse número seja aumentado ou diminuído e pode ser redefinido para o valor inicial original ou qualquer outro valor.
 
@@ -56,6 +56,7 @@ total.increase(5);           // #count now = 13
 console.log(total.current);  // expected output: 13
 total.reset();               // #count now = 7
 ```
+
 A "marca de hash" (`#`) é o que marca um campo como privado. Ele também evita que campos privados e nomes de propriedades entrem em conflito: nomes privados devem começar com `#`, enquanto nomes de propriedades nunca podem começar dessa maneira.
 
 Tendo declarado os campos privados, eles agem como vimos no exemplo público. A única maneira de alterar o valor de `#count` é por meio dos métodos disponíveis publicamente como `decrease()`, e como (neste exemplo) não há maneiras definidas de alterá-lo, o valor de `#init` é imutável. É definido quando um novo `PrivateCounter` é construído e nunca pode ser alterado depois disso.
@@ -68,6 +69,7 @@ console.log(score.#count);
   // output:
   // "Uncaught SyntaxError: Private field '#count' must be declared in an enclosing class"
 ```
+
 Se você deseja ler dados privados de fora de uma classe, você deve primeiro inventar um método ou outra função para retorná-los. Já havíamos feito isso com o getter `current()` que retorna o valor atual de `#count`, mas `#init` está bloqueado. A menos que adicionemos algo como um método `getInit()` à classe, não podemos nem ver o valor inicial de fora da classe, muito menos alterá-lo, e o interpretador lançará erros se tentarmos.
 
 Quais são as outras restrições em torno de campos privados? Por um lado, você não pode se referir a um campo privado que você não definiu anteriormente. Você pode estar acostumado a inventar novos campos em tempo real em JavaScript, mas isso não funciona com campos privados.
@@ -93,6 +95,7 @@ class BadIdeas {
   }
 }
 ```
+
 Há outra limitação: você não pode declarar campos ou métodos privados por meio de [literais de objeto](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#using_object_initializers). Você pode estar acostumado com algo assim:
 
 ```js
@@ -115,8 +118,8 @@ const planet = {
 // result:
 // "Uncaught SyntaxError: Unexpected identifier"
 ```
-Por outro lado, você _pode_  ter campos privados estáticos, para coisas que você quer que sejam privadas e firmes na construção.
 
+Por outro lado, você _pode_  ter campos privados estáticos, para coisas que você quer que sejam privadas e firmes na construção.
 
 ```js
 class colorMixer {
@@ -208,13 +211,12 @@ scalar1.add(scalar1)
 scalar1.add({}) // throws informative exception
 ```
 
-
 ## Veja também
 
 - [Recursos de Classe  privada](/pt-BR/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
 - [FAQ sobre sintaxe de Classes privadas](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md)
 - [A semântica de todos os elementos de Class JS](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
 
-## Compatibilidade de navegadores 
+## Compatibilidade de navegadores
 
 {{Compat}}

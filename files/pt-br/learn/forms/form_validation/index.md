@@ -42,7 +42,6 @@ Isso é chamado de validação de formulário - quando você insere dados, o apl
 
 Queremos tornar o preenchimento de formulários da web o mais fácil possível. Então, por que insistimos em validar nossos formulários? Existem três razões principais:
 
-
 - **Nos queremos que o dado correto e no formato correto** — nossa aplicação não irá trabalhar de forma correta se os dados dos nossos usuarios estivem armazenados em formato incorreto, ou quando esses dados são omitidos.
 - **Quemos proteger os dados dos nossos usuários** — Forçarnosos usuários a fornecer senhas seguras facilita na proteção das informações da conta do usuário.
 - **Queremos proteger nos mesmos** — Existem diversas maneiras de um usuário malicioso usar formulários desprotegidos para danificar nossa aplicação (veja [Website security](/pt-BR/docs/Learn/Server-side/First_steps/Website_security)).
