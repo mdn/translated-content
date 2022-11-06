@@ -1,6 +1,8 @@
 ---
 title: MessageEvent
 slug: Web/API/MessageEvent
+l10n:
+  sourceCommit: bbecba9e7d688493adbdc37fc70e02d87adfe371
 ---
 
 {{APIRef("HTML DOM")}}
@@ -26,22 +28,22 @@ slug: Web/API/MessageEvent
 - {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}
   - : 新しい `MessageEvent` を作成します。
 
-## プロパティ
+## インスタンスプロパティ
 
 _このインターフェースは親である {{domxref("Event")}} からプロパティを継承しています。_
 
-- {{domxref("MessageEvent.data")}} {{readonlyInline}}
-  - : メッセージ送信元によって送信されたデータ。
-- {{domxref("MessageEvent.origin")}} {{readonlyInline}}
-  - : メッセージ送信元の出所を表す {{domxref("USVString")}} 。
-- {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}
-  - : イベントの一意の ID を表す {{domxref("DOMString")}} 。
-- {{domxref("MessageEvent.source")}} {{readonlyInline}}
-  - : ({{domxref("WindowProxy")}}、 {{domxref("MessagePort")}}、{{domxref("ServiceWorker")}} の何れかのオブジェクトの場合がある)  `MessageEventSource` で、メッセージ送信元を表します。
-- {{domxref("MessageEvent.ports")}} {{readonlyInline}}
-  - : メッセージが送信される（例えば、チャンネルメッセージや共有ワーカーにメッセージを送信した場合）チャンネルと対応したポートを表す {{domxref("MessagePort")}} オブジェクトの配列です。
+- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
+  - : メッセージ送信元によって送信されたデータです。
+- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
+  - : 文字列で、メッセージ送信元のオリジンを表します。
+- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
+  - : 文字列で、このイベントの一意の ID を表します。
+- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
+  - : `MessageEventSource` （{{domxref("WindowProxy")}}、{{domxref("MessagePort")}}、{{domxref("ServiceWorker")}} の何れかのオブジェクト）で、メッセージの送信元を表します。
+- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
+  - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャンネルに関連するポートを表します（チャンネルメッセージングや、共有ワーカーにメッセージを送信する場合など、適切な場合）。
 
-## メソッド
+## インスタンスメソッド
 
 _このインターフェースは親である {{domxref("Event")}} からメソッドを継承してします。_
 
@@ -50,12 +52,12 @@ _このインターフェースは親である {{domxref("Event")}} からメソ
 
 ## 例>
 
-[基本的な共有ワーカーの例](https://github.com/mdn/simple-shared-worker)（[共有ワーカーを実行](https://mdn.github.io/simple-shared-worker/)）には 2 つの HTML ページがあり、それぞれのページが単純な計算をする JavaScript を実行しています。異なるスクリプトが計算を実行するために同一のワーカーファイルを使用しています。ページの異なるウィンドウ内で動作していても、どちらのスクリプトもワーカーファイルにアクセスできます。
+[基本的な共有ワーカーの例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker)（[共有ワーカーを実行](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)）には 2 つの HTML ページがあり、それぞれのページが単純な計算をする JavaScript を実行しています。異なるスクリプトが計算を実行するために同一のワーカーファイルを使用しています。ページの異なるウィンドウ内で動作していても、どちらのスクリプトもワーカーファイルにアクセスできます。
 
 次のコードスニペットは、 {{domxref("SharedWorker")}} オブジェクトの作成を {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクターを使用して行う様子を示しています。どちらのスクリプトもこれを含んでいます。
 
 ```js
-var myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker('worker.js');
 ```
 
 次にどちらのスクリプトも {{domxref("SharedWorker.port")}} プロパティで作成された {{domxref("MessagePort")}} オブジェクトを通してワーカーにアクセスします。 onmessage イベントが addEventListener で装着されると、 `start()` メソッドでポートが手動で開きます。
@@ -67,17 +69,17 @@ myWorker.port.start();
 ポートが開くと、どちらのスクリプトもワーカーにメッセージを送信し、送信されたメッセージを `port.postMessage()` と `port.onmessage` でそれぞれ処理します。
 
 ```js
-first.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
+first.onchange = () => {
+  myWorker.port.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 
-second.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
+second.onchange = () => {
+  myWorker.port.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 
-myWorker.port.onmessage = function(e) {
+myWorker.port.onmessage = (e) => {
   result1.textContent = e.data;
   console.log('Message received from worker');
 }
@@ -86,11 +88,11 @@ myWorker.port.onmessage = function(e) {
 ワーカーの内部では、 {{domxref("SharedWorkerGlobalScope.connect_event", "onconnect")}} ハンドラーを使用して上記の同一のポートに接続しています。そのワーカーと関連付けられたポートは、{{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} イベントの `ports` プロパティで接続可能です。その後、ポートを開くために {{domxref("MessagePort")}} の `start()` メソッドを、メインのスレッドから送信されたメッセージを処理するために `onmessage` ハンドラーを使用します。
 
 ```js
-onconnect = function(e) {
-  var port = e.ports[0];
+onconnect = (e) => {
+  const port = e.ports[0];
 
-  port.addEventListener('message', function(e) {
-    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  port.addEventListener('message', (e) => {
+    const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
   });
 
