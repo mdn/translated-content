@@ -2,6 +2,7 @@
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
 ---
+
 {{HTTPSidebar}}
 
 O código de resposta do status de sucesso **`206 Partial Content`** indica que a requisição teve sucesso e o corpo contém a sequência (em bytes) dos dados, como descrito no cabeçalho {{HTTPHeader("Range")}} da requisição.

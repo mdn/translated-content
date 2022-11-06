@@ -2,6 +2,7 @@
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho **`Content-Location`** indica uma localização alternativa para os dados retornados. O principal uso é para indicar o URL de um recurso transmitido como resultado de uma [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation).

@@ -2,6 +2,7 @@
 title: ':target'
 slug: Web/CSS/:target
 ---
+
 {{CSSRef}}
 
 A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:target`** representa um único elemento (o elemento alvo) com uma {{htmlattrxref("id")}} correspondente ao fragmento da URL.

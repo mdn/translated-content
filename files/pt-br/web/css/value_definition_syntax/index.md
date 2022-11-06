@@ -3,6 +3,7 @@ title: Sintexe do valor
 slug: Web/CSS/Value_definition_syntax
 original_slug: Web/CSS/Sintexe_valor
 ---
+
 {{CSSRef}}
 
 **CSS value definition syntax**, a formal grammar, is used for defining the set of valid values for a CSS property or function. In addition to this syntax, the set of valid values can be further restricted by semantic constraints (for example, for a number to be strictly positive).

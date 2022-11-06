@@ -2,6 +2,7 @@
 title: Propriedades personalizadas (--*)
 slug: Web/CSS/--*
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Nomes de propriedades com o prefixo `--`, como `--example-name`, representam _Propriedade personalizadas_ que contém um valor que pode ser reutilizado por todo o documento usando a função ({{cssxref("var")}}).

@@ -2,6 +2,7 @@
 title: Transfer-Encoding
 slug: Web/HTTP/Headers/Transfer-Encoding
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho **`Transfer-Encoding`** especifica a forma de codificação usada para transferir seguramente o corpo da mensagem ({{Glossary("Payload body","payload body")}}) para o usuário.

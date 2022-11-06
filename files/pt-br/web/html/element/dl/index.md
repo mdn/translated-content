@@ -2,6 +2,7 @@
 title: dl
 slug: Web/HTML/Element/dl
 ---
+
 ## Resumo
 
 O elemento HTML _Definition List_ (`<dl>`) engloba uma lista de pares de termos e descrições. Um uso comum para este elemento é para implementar um glossário ou exibir metadados(uma lista de pares chave e valor).

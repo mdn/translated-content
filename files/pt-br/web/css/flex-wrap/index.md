@@ -2,6 +2,7 @@
 title: flex-wrap
 slug: Web/CSS/flex-wrap
 ---
+
 {{ CSSRef}}
 
 A propriedade [CSS](/pt-BR/docs/CSS) **`flex-wrap`** define se os itens flexíveis são forçados a ficarem na mesma linha ou se podem ser quebradas em varias linhas. Se o argumento for valido, ele define a direção em que as linhas são empilhadas.

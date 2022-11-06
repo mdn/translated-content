@@ -2,6 +2,7 @@
 title: scrollbar-color
 slug: Web/CSS/scrollbar-color
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`scrollbar-color`** define as cores da barra de rolagem do navegador.

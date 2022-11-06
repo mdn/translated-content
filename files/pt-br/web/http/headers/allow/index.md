@@ -2,6 +2,7 @@
 title: Allow
 slug: Web/HTTP/Headers/Allow
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta **`Allow`** lista um conjunto de métodos suportados pelo recurso.

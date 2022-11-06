@@ -2,6 +2,7 @@
 title: aspect-ratio
 slug: Web/CSS/@media/aspect-ratio
 ---
+
 {{cssref}}
 
 A [característica de mídia](/pt-BR/docs/Web/Guide/CSS/CSS_Media_queries#Caracter%C3%ADsticas_de_m%C3%ADdia) [CSS](/pt-BR/docs/Web/CSS) **`aspect-ratio`** pode ser utilizada para testar a taxa de aspecto de sua {{glossary("viewport")}}.

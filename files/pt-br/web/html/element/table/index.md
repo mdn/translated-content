@@ -2,6 +2,7 @@
 title: <table>
 slug: Web/HTML/Element/table
 ---
+
 ## Resumo
 
 O elemento HTML _Table_ (`<table>`) representa dados em duas dimensões ou mais.

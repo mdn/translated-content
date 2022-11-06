@@ -2,6 +2,7 @@
 title: will-change
 slug: Web/CSS/will-change
 ---
+
 {{CSSRef}}
 
 ## Sumário

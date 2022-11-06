@@ -3,6 +3,7 @@ title: Location
 slug: Web/HTTP/Headers/Location
 original_slug: Web/HTTP/Headers/Localização
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta **`Location`** indica o URL para qual página deve-se ser redirecionada. Ele só tem significado quando é enviado junto a uma resposta de status `3xx` (redirecionamento) ou `201` (criado).
