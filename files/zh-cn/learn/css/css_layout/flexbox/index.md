@@ -12,10 +12,10 @@ slug: Learn/CSS/CSS_layout/Flexbox
     <tr>
       <th scope="row">前提：</th>
       <td>
-        HTML 基础 (学习
+        HTML 基础（学习
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 介绍</a
-        >)，和了解 CSS 如何工作的（学习
+        >），和了解 CSS 如何工作的（学习
         <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >CSS 介绍</a
         >）。
