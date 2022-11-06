@@ -2,6 +2,7 @@
 title: WebVR concepts
 slug: Web/API/WebVR_API/Concepts
 ---
+
 This article discusses some of the concepts and theory behind virtual reality (VR). If you are a newcomer to the area, it is worthwhile getting an understanding of these topics before you start diving into code.
 
 这篇文章探讨了一些关于虚拟现实（VR）的概念及其背后的理论基础。如果你是一个进入这个领域的新手，在你深入学习相关代码知识前，非常有必要对于以下的话题做一定的了解。**【K】**

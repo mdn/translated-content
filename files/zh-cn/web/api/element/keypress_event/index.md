@@ -2,6 +2,7 @@
 title: keypress
 slug: Web/API/Element/keypress_event
 ---
+
 The `keypress` event is fired when a key is pressed down and that key normally produces a character value (use [`input`](/zh-CN/Mozilla_event_reference/input) instead).
 
 ## General info
