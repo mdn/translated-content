@@ -1,7 +1,6 @@
 ---
 title: BackgroundFetchManager.fetch()
 slug: Web/API/BackgroundFetchManager/fetch
-page-type: web-api-instance-method
 l10n:
   sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
