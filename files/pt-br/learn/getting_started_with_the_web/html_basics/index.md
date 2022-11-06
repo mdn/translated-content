@@ -76,7 +76,7 @@ Ele contém dois atributos, mas não há tag `</img>` de fechamento, e não há 
 
 ### Anatomia de um documento HTML
 
-Isso resume o básico dos elementos HTML individuais, mas eles não são úteis por si só. Agora vamos ver como elementos individuais são combinados para formar uma página HTML inteira. Vamos visitar novamente os códigos que colocamos no exemplo de `index.html` (que vimos no artigo [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)):
+Isso resume o básico dos elementos HTML individuais, mas eles não são úteis por si só. Agora vamos ver como elementos individuais são combinados para formar uma página HTML inteira. Vamos visitar novamente os códigos que colocamos no exemplo de `index.html` (que vimos no artigo [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files)):
 
 ```html
 <!DOCTYPE html>
@@ -122,7 +122,7 @@ As palavras-chave para o texto alternativo são "texto descritivo". O texto alte
 
 Tente criar um texto alternativo melhor para sua imagem agora.
 
-> **Nota:** Saiba mais sobre acessibilidade em [módulo de aprendizagem sobre acessibilidade.](/pt-BR/docs/Web/Acessibilidade)
+> **Nota:** Saiba mais sobre acessibilidade em [módulo de aprendizagem sobre acessibilidade.](/pt-BR/docs/Web/Accessibility)
 
 ## Marcando o texto
 
@@ -141,7 +141,7 @@ Os elementos de cabeçalhos permitem especificar que certas partes do seu conte�
 
 Agora, tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.
 
-> **Nota:** Você verá que seu nível de cabeçalho 1 tem um estilo implícito. Não use elementos de cabeçalho para aumentar ou negritar o texto, pois eles são usados ​​para [acessibilidade](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML#Por_que_precisamos_de_estrutura) e [outros motivos, como SEO](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML#Por_que_precisamos_de_estrutura). Tente criar uma sequência significativa de títulos em suas páginas, sem pular os níveis.
+> **Nota:** Você verá que seu nível de cabeçalho 1 tem um estilo implícito. Não use elementos de cabeçalho para aumentar ou negritar o texto, pois eles são usados para [acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML#text_content) e [outros motivos, como SEO](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure). Tente criar uma sequência significativa de títulos em suas páginas, sem pular os níveis.
 
 Agora tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.
 
@@ -155,7 +155,7 @@ Como explicado acima, os elementos {{htmlelement ("p")}} são para conter parág
 <p>Este é um parágrafo simples</p>
 ```
 
-Adicione seu texto de exemplo (você o obteve em [_Como será o seu site?_](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)) Em um ou alguns parágrafos, colocados diretamente abaixo do seu elemento {{htmlelement ("img")}}.
+Adicione seu texto de exemplo (você o obteve em [_Como será o seu site?_](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)) Em um ou alguns parágrafos, colocados diretamente abaixo do seu elemento {{htmlelement ("img")}}.
 
 ### Listas
 
@@ -222,7 +222,7 @@ Adicione um link em sua página agora, se ainda não tiver feito isso.
 
 ## Conclusão
 
-Se você seguiu todas as instruções neste artigo, você deve terminar com uma página que pareça algo do tipo (você também pode [vê-la aqui](http://mdn.github.io/beginner-html-site/)):
+Se você seguiu todas as instruções neste artigo, você deve terminar com uma página que pareça algo do tipo (você também pode [vê-la aqui](https://mdn.github.io/beginner-html-site/)):
 
 ![Uma captura de tela da página da Web mostrando um logotipo do Firefox, um título dizendo que o mozilla é legal e dois parágrafos de texto de preenchimento](finished-test-page-small.png)
 
@@ -234,11 +234,11 @@ Aqui, nós só arranhamos na superfície do HTML. Para descobrir mais, vá a nos
 
 ## Neste módulo
 
-- [Instalando os programas básicos](/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos)
-- [Como será o seu site?](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)
-- [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)
-- [HTML básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico)
-- [CSS básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico)
-- [Javascript básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico)
-- [Publicando seu website](/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site)
-- [Como a web funciona](/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona)
+- [Instalando os programas básicos](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
+- [Como será o seu site?](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+- [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
+- [HTML básico](/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [CSS básico](/pt-BR/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [Javascript básico](/pt-BR/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [Publicando seu website](/pt-BR/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [Como a web funciona](/pt-BR/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
