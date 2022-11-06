@@ -12,13 +12,13 @@ slug: Learn/CSS/CSS_layout/Flexbox
     <tr>
       <th scope="row">前提：</th>
       <td>
-        HTML 基础 (study
+        HTML 基础 (学习
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >)，和了解 CSS 如何工作的 (study
+          >HTML 介绍</a
+        >)，和了解 CSS 如何工作的（学习
         <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
-          >Introduction to CSS</a
-        >.)
+          >CSS 介绍</a
+        >）。
       </td>
     </tr>
     <tr>
@@ -28,11 +28,11 @@ slug: Learn/CSS/CSS_layout/Flexbox
   </tbody>
 </table>
 
-## 为什么是 弹性盒子？
+## 为什么是弹性盒子？
 
 长久以来，CSS 布局中唯一可靠且跨浏览器兼容的创建工具只有 [floats](/zh-CN/docs/Learn/CSS/CSS_layout/Floats) 和 [positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)。这两个工具大部分情况下都很好使，但是在某些方面它们具有一定的局限性，让人难以完成任务。
 
-以下简单的布局需求是难以或不可能用这样的工具（ [floats](/zh-CN/docs/Learn/CSS/CSS_layout/Floats) 和 [positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)）方便且灵活的实现的：
+以下简单的布局需求是难以或不可能用这样的工具（[floats](/zh-CN/docs/Learn/CSS/CSS_layout/Floats) 和 [positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)）方便且灵活的实现的：
 
 - 在父内容里面垂直居中一个块内容。
 - 使容器的所有子项占用等量的可用宽度/高度，而不管有多少宽度/高度可用。
@@ -42,7 +42,7 @@ slug: Learn/CSS/CSS_layout/Flexbox
 
 ## 一个简单的例子
 
-在本文中，我们将通过一系列练习来帮助你了解 弹性盒子的工作原理。开始前，您应该拷贝 mozilla github 仓库的 [弹性盒子 0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) 到本地。在现代浏览器里打开它（比如 Firefox、Chrome），然后打开你的编辑器看一眼它的代码。你可以看它的[线上](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html)实例。
+在本文中，我们将通过一系列练习来帮助你了解 弹性盒子的工作原理。开始前，你应该拷贝 mozilla github 仓库的 [弹性盒子 0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) 到本地。在现代浏览器里打开它（比如 Firefox 或 Chrome），然后打开你的编辑器看一眼它的代码。你可以看它的[线上](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html)实例。
 
 你可以看到这个页面有一个含有顶级标题的 {{htmlelement("header")}} 元素，和一个包含三个 {{htmlelement("article")}} 的 {{htmlelement("section")}} 元素。我们将使用这些来创建一个非常的标准三列布局，如下所示：
 
@@ -77,13 +77,13 @@ section {
 - 设置了 `display: flex` 的父元素（在本例中是 {{htmlelement("section")}}）被称之为 **flex 容器（flex container）。**
 - 在 flex 容器中表现为柔性的盒子的元素被称之为 **flex 项**（**flex item**）（本例中是 {{htmlelement("article")}} 元素。
 
-了解这些术语以便你阅读后续章节。如果您对使用的任何术语感到困惑，您可以随时返回这里。
+了解这些术语以便你阅读后续章节。如果你对使用的任何术语感到困惑，你可以随时返回这里。
 
 ## 列还是行？
 
-弹性盒子提供了 {{cssxref("flex-direction")}} 这样一个属性，它可以指定主轴的方向（弹性盒子子类放置的地方）— 它默认值是 `row`，这使得它们在按你浏览器的默认语言方向排成一排（在英语/中文浏览器中是从左到右）。
+弹性盒子提供了 {{cssxref("flex-direction")}} 这样一个属性，它可以指定主轴的方向（弹性盒子子类放置的地方）——它默认值是 `row`，这使得它们在按你浏览器的默认语言方向排成一排（在英语/中文浏览器中是从左到右）。
 
-尝试将以下声明添加到 section 元素的 css 规则里：
+尝试将以下声明添加到 {{htmlelement("section")}} 元素的 css 规则里：
 
 ```css
 flex-direction: column;
@@ -115,11 +115,11 @@ flex: 200px;
 
 ![](flexbox-example4.png)现在我们有了多行 弹性盒子— 任何溢出的元素将被移到下一行。在 article 元素上设置的 flex: 200px 规则，意味着每个元素的宽度至少是 200px；我们将在后面更详细地讨论这个属性。你可能还注意到，最后一行上的最后几个项每个都变得更宽，以便把整个行填满。
 
-但是这里我们可以做得更多。首先，改变 {{cssxref("flex-direction")}} 属性值为 `row-reverse` — 你会看到仍然有多行布局，但是每一行元素排列的方向和原来是相反的了。
+但是这里我们可以做得更多。首先，改变 {{cssxref("flex-direction")}} 属性值为 `row-reverse`——你会看到仍然有多行布局，但是每一行元素排列的方向和原来是相反的了。
 
 ## flex-flow 缩写
 
-到这里，应当注意到存在着 {{cssxref("flex-direction")}} 和 {{cssxref("flex-wrap")}} — 的缩写 {{cssxref("flex-flow")}}。比如，你可以将
+到这里，应当注意到存在着 {{cssxref("flex-direction")}} 和 {{cssxref("flex-wrap")}}——的缩写 {{cssxref("flex-flow")}}。比如，你可以将
 
 ```css
 flex-direction: row;
@@ -154,9 +154,9 @@ article:nth-of-type(3) {
 }
 ```
 
-现在当你刷新，你会看到第三个 {{htmlelement("article")}} 元素占用了两倍的可用宽度和剩下的一样 — 现在总共有四个比例单位可用。前两个 flex 项各有一个，因此它们占用每个可用空间的 1/4。第三个有两个单位，所以它占用 2/4 或这说是 1/2 的可用空间。
+现在当你刷新，你会看到第三个 {{htmlelement("article")}} 元素占用了两倍的可用宽度和剩下的一样——现在总共有四个比例单位可用。前两个 flex 项各有一个，因此它们占用每个可用空间的 1/4。第三个有两个单位，所以它占用 2/4 或者说是 1/2 的可用空间。
 
-您还可以指定 flex 的最小值。尝试修改现有的 article 规则：
+你还可以指定 flex 的最小值。尝试修改现有的 article 规则：
 
 ```css
 article {
@@ -170,23 +170,23 @@ article:nth-of-type(3) {
 
 这表示“每个 flex 项将首先给出 200px 的可用空间，然后，剩余的可用空间将根据分配的比例共享“。尝试刷新，你会看到分配空间的差别。
 
-![](flexbox-example1.png)
+![简单的 flexbox 示例，Flex 容器中有三个 Flex 项目。所有弹性项目的最低宽度为 200 像素——使用“flex”设置。前两个弹性项目的 flex 值为 1，第三个项目的 flex 值为 2。这会将弹性容器中的剩余空间分成 4 个比例单位。前两个弹性盒子各分配一个单元，第三个弹性盒子分配两个单元，使第三个弹性盒子比宽度相同的其他两个更宽。](flexbox-example1.png)
 
 弹性盒子的真正价值可以体现在它的灵活性/响应性，如果你调整浏览器窗口的大小，或者增加一个 {{htmlelement("article")}} 元素，这时的布局仍旧是好的。
 
-## flex: 缩写与全写
+## flex：缩写与全写
 
 {{cssxref("flex")}} 是一个可以指定最多三个不同值的缩写属性：
 
 - 第一个就是上面所讨论过的无单位比例。可以单独指定全写 {{cssxref("flex-grow")}} 属性的值。
-- 第二个无单位比例 — {{cssxref("flex-shrink")}} — 一般用于溢出容器的 flex 项。这指定了从每个 flex 项中取出多少溢出量，以阻止它们溢出它们的容器。这是一个相当高级的弹性盒子功能，我们不会在本文中进一步说明。
+- 第二个无单位比例——{{cssxref("flex-shrink")}}——一般用于溢出容器的 flex 项。这指定了从每个 flex 项中取出多少溢出量，以阻止它们溢出它们的容器。这是一个相当高级的弹性盒子功能，我们不会在本文中进一步说明。
 - 第三个是上面讨论的最小值。可以单独指定全写 {{cssxref("flex-basis")}} 属性的值。
 
 我们建议不要使用全写属性，除非你真的需要（比如要去覆盖之前写的）。使用全写会多写很多的代码，它们也可能有点让人困惑。
 
 ## 水平和垂直对齐
 
-还可以使用 弹性盒子的功能让 flex 项沿主轴或交叉轴对齐。让我们一起看一下新例子 — [flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html)（[在线浏览](http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)）— 我们将会有一个整洁，灵活的按钮/工具栏。此时，你看到了一个水平菜单栏，其中一些按钮卡在左上角，就像下面这样：
+还可以使用 弹性盒子的功能让 flex 项沿主轴或交叉轴对齐。让我们一起看一下新例子——[flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html)（[在线浏览](http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)）——我们将会有一个整洁，灵活的按钮/工具栏。此时，你看到了一个水平菜单栏，其中一些按钮卡在左上角，就像下面这样：
 
 ![](flexbox-example5.png)
 
@@ -324,13 +324,13 @@ button {
 
 ## 跨浏览器兼容性
 
-大多数浏览器都支持 弹性盒子，诸如 Firefox, Chrome, Opera, Microsoft Edge 和 IE 11，较新版本的 Android/iOS 等等。但是你应该要意识到仍旧有被人使用的老浏览器不支持 弹性盒子（或者支持，但是只是支持非常非常老版本的 弹性盒子）。
+大多数浏览器都支持 弹性盒子，诸如 Firefox、Chrome、Opera、Microsoft Edge 和 IE 11，较新版本的 Android/iOS 等等。但是你应该要意识到仍旧有被人使用的老浏览器不支持 弹性盒子（或者支持，但是只是支持非常非常老版本的 弹性盒子）。
 
-虽然你只是在学习和实验，这不太要紧; 然而，如果您正在考虑在真实网站中使用弹性盒子，则需要进行测试，并确保在尽可能多的浏览器中您的用户体验仍然可以接受。
+虽然你只是在学习和实验，这不太要紧; 然而，如果你正在考虑在真实网站中使用弹性盒子，则需要进行测试，并确保在尽可能多的浏览器中你的用户体验仍然可以接受。
 
 弹性盒子相较其他一些 CSS 特性可能更为棘手。例如，如果浏览器缺少 CSS 阴影，则该网站可能仍然可用。但是假如不支持 弹性盒子功能就会完全打破布局，使其不可用。
 
-我们将在未来的模块中讨论克服棘手的跨浏览器支持问题的策略。
+我们在[跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)模块中讨论了克服跨浏览器支持问题的策略。
 
 ## 测试你的技能
 
@@ -338,6 +338,28 @@ button {
 
 ## 总结
 
-到这里，介绍弹性盒子的基础知识就结束了。我们希望你体会到乐趣，并且玩的开心，能随着你的学习与你一起向前。接下来，我们将看到 CSS 布局的另一个重要方面—网格系统。
+到这里，介绍弹性盒子的基础知识就结束了。我们希望你体会到乐趣，并且玩的开心，能随着你的学习与你一起向前。接下来，我们将看到 CSS 布局的另一个重要方面：[CSS 网格系统](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+
+## 参见
+
+- [CSS 弹性盒子技巧](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)——一篇以视觉吸引人的方式解释弹性盒子所有内容的文章
+- [弹性盒子青蛙游戏](https://flexboxfroggy.com/)——学习和更好地了解弹性盒子基础知识的教育游戏
+
+{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+
+## 模块
+
+- [介绍 CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
+- [常规流](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
+- [弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
+- [网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
+- [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
+- [定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
+- [多栏布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)
+- [初学者媒体查询的指导](/zh-CN/docs/Learn/CSS/CSS_layout/Media_queries)
+- [传统的布局方法](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
+- [支持旧的浏览器](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
+- [几本布局理解](/zh-CN/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
