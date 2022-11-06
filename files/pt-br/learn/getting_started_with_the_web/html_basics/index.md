@@ -224,7 +224,7 @@ Adicione um link em sua página agora, se ainda não tiver feito isso.
 
 Se você seguiu todas as instruções neste artigo, você deve terminar com uma página que pareça algo do tipo (você também pode [vê-la aqui](http://mdn.github.io/beginner-html-site/)):
 
-![A web page screenshot showing a firefox logo, a heading saying mozilla is cool, and two paragraphs of filler text](finished-test-page-small.png)
+![Uma captura de tela da página da Web mostrando um logotipo do Firefox, um título dizendo que o mozilla é legal e dois parágrafos de texto de preenchimento](finished-test-page-small.png)
 
 Se você ficar emperrado, pode sempre comparar seu trabalho com nosso [código de exemplo finalizado](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) no Github.
 
