@@ -2,6 +2,7 @@
 title: SpeechSynthesisUtterance.voice
 slug: Web/API/SpeechSynthesisUtterance/voice
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 A propriedade **`voice`** da interface {{domxref("SpeechSynthesisUtterance")}} retorna e configura a voz que será usada para a fala.

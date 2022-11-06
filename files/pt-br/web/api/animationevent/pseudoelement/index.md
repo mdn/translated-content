@@ -2,6 +2,7 @@
 title: AnimationEvent.pseudoElement
 slug: Web/API/AnimationEvent/pseudoElement
 ---
+
 {{SeeCompatTable}}{{ apiref("Web Animations API") }}
 
 ## Sumário

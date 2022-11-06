@@ -2,6 +2,7 @@
 title: Using server-sent events
 slug: Web/API/Server-sent_events/Using_server-sent_events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 É fácil desenvolver um aplicativo Web que usa [server-sent events](/pt-BR/docs/Web/API/Server-sent_events). Você precisará de um pouco de código no servidor para transmitir eventos para o front-end, mas o código do lado do cliente funciona quase de forma idêntica aos [websockets](/pt-BR/docs/Web/API/WebSockets_API) em questão de tratamento de eventos recebidos. Essa é uma conexão unidirecional, portanto você não pode enviar eventos de um cliente para um servidor.

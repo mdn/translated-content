@@ -2,6 +2,7 @@
 title: FormData.has()
 slug: Web/API/FormData/has
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 O método **`has()`** da interface {{domxref("FormData")}} retorna um booleano declarando se o objeto `FormData` contém uma certa chave.

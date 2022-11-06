@@ -2,6 +2,7 @@
 title: Document.createElement()
 slug: Web/API/Document/createElement
 ---
+
 {{APIRef("DOM")}}
 
 Em um documento [HTML](/pt-BR/docs/Web/HTML), o método **`Document.createElement()`** cria o elemento HTML especificado ou um {{domxref("HTMLUnknownElement")}} se o nome do elemento dado não for conhecido.

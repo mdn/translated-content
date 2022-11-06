@@ -2,6 +2,7 @@
 title: DocumentoXML
 slug: Web/API/XMLDocument
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 A interface **XMLDocument** representa um document XML. Ele herda de {{DOMxRef("Document")}} e não adiciona nenhum método específico ou propriedades para este: no entanto, alguns algoritmos tem comportamento diferente com os dois tipos de documentos.

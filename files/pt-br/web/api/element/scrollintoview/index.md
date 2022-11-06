@@ -2,6 +2,7 @@
 title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
 ---
+
 {{ APIRef("DOM")}}{{SeeCompatTable}}
 
 O método **`Element.scrollIntoView()`** move o elemento ao qual é aplicado para a área visível da janela do navegador.

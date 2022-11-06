@@ -2,6 +2,7 @@
 title: 'Location: search'
 slug: Web/API/Location/search
 ---
+
 {{ApiRef("Location")}}
 
 A propriedade **`search`** da interface {{domxref("Location")}} é um texto de busca, também chamado de _query string_ ou _querystring_; isso é, uma {{domxref("USVString")}} contendo um `'?'` seguido pelos parâmetros da URL.

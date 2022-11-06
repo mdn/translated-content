@@ -2,6 +2,7 @@
 title: Event.initEvent()
 slug: Web/API/Event/initEvent
 ---
+
 {{ ApiRef("DOM") }}{{deprecated_header}}
 
 O método **`Event.initEvent()`** é usado para inicializar o valor de um {{ domxref("event") }} criado usando {{ domxref("Document.createEvent()") }}.

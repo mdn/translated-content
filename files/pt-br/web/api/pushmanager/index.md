@@ -2,6 +2,7 @@
 title: PushManager
 slug: Web/API/PushManager
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
 A `PushManager`interface da [API Push](/pt-BR/docs/Web/API/Push_API) fornece uma maneira de receber notificações de servidores de terceiros, bem como solicitar URLs para notificações push.

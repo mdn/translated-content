@@ -2,6 +2,7 @@
 title: Option()
 slug: Web/API/HTMLOptionElement/Option
 ---
+
 {{APIRef("HTML DOM")}}
 
 O construtor **`Option()`** cria novos {{domxref("HTMLOptionElement")}}.

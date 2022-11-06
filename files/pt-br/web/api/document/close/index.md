@@ -2,6 +2,7 @@
 title: Document.close()
 slug: Web/API/Document/close
 ---
+
 {{APIRef("DOM")}}
 
 O metodo `document.close()` termina a gravação em um documento, aberto com [document.open()](/en/DOM/document.open).
