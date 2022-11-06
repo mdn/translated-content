@@ -1,17 +1,11 @@
 ---
 title: box-orient
 slug: Web/CSS/box-orient
-tags:
-  - CSS
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.box-orient
-translation_of: Web/CSS/box-orient
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
-> **Warning:** これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
+> **警告:** これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
 
 **`box-orient`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がその中身をレイアウトする方向が、水平か垂直かを指定します。
 
@@ -89,7 +83,7 @@ div.example {
 
 ### 結果
 
-{{ EmbedLiveSample('Setting_horizontal_box_orientation', 600, 50, '', 'Web/CSS/box-orient') }}
+{{ EmbedLiveSample('Setting horizontal box orientation', '', 100) }}
 
 ## 仕様書
 

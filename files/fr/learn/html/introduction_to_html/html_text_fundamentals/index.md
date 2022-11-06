@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 original_slug: Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 
 L'un des principaux buts de HTML est de structurer du texte et lui donner du sens (ce que l'on appelle la {{glossary("sémantique")}}) afin que le navigateur puisse l'afficher correctement. Cet article explique comment {{glossary("HTML")}} peut être utilisé pour structurer une page en ajoutant des titres et des paragraphes, en marquant des emphases, en créant des listes, et bien plus encore.
@@ -271,10 +272,12 @@ Intéressons-nous maintenant aux listes. Il y a des listes partout dans la vie �
 
 Les listes non-ordonnées sont utilisées pour représenter des listes d'éléments pour lesquelles l'ordre n'a pas d'importance. Prenons par exemple une liste de courses :
 
-    lait
-    œufs
-    pain
-    houmous
+```
+lait
+œufs
+pain
+houmous
+```
 
 Les listes non-ordonnées débutent par un élément {{htmlelement("ul")}} (**u**nordered **l**ist) qui enveloppe tous les éléments de la liste&nbsp;:
 
@@ -431,11 +434,13 @@ textarea.onkeyup = function(){
 
 Les listes ordonnées permettent de représenter des listes dans lesquelles l'ordre des éléments a de l'importance — prenons par exemple une série de directions à suivre:
 
-    Roulez jusqu'au bout de la route
-    Tournez à droite
-    Allez tout droit aux deux premiers ronds-points
-    Tournez à gauche au troisième rond-point
-    Roulez sur 300 mètres, l'école est sur votre droite
+```
+Roulez jusqu'au bout de la route
+Tournez à droite
+Allez tout droit aux deux premiers ronds-points
+Tournez à gauche au troisième rond-point
+Roulez sur 300 mètres, l'école est sur votre droite
+```
 
 Les balises suivent la même structure que pour les listes ordonnées, à cela près que la liste est contenue dans l'élément {{htmlelement("ol")}} (**o**rdered **l**ist), et non dans `<ul>`:
 

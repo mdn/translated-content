@@ -3,6 +3,7 @@ title: Range.surroundContents()
 slug: Web/API/Range/surroundContents
 translation_of: Web/API/Range/surroundContents
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`Range.surroundContents()`** déplace le contenu du {{ domxref("Range") }} dans un nouveau nœud, plaçant le nouveau nœud au début du `range` spécifié.
@@ -20,7 +21,9 @@ Cependant, une exception sera levée si le {{ domxref("Range") }} découpe un n�
 
 ## Syntaxe
 
-    range.surroundContents(newNode);
+```js
+range.surroundContents(newNode);
+```
 
 ### Paramètres
 
@@ -39,14 +42,11 @@ range.surroundContents(newNode);
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                                       | Commentaire             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ----------------------- |
-| {{SpecName('DOM WHATWG', '#dom-range-surroundcontents', 'Range.surroundContents()')}}                                             | {{Spec2('DOM WHATWG')}}             | Pas de changement.      |
-| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-surroundContents', 'Range.surroundContents()')}} | {{Spec2('DOM2 Traversal_Range')}} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Range.surroundContents")}}
+{{Compat}}
 
 ## Voir aussi
 

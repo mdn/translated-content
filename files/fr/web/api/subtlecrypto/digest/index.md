@@ -3,6 +3,7 @@ title: SubtleCrypto.digest()
 slug: Web/API/SubtleCrypto/digest
 translation_of: Web/API/SubtleCrypto/digest
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 La méthode **`digest()`** de l'interface {{domxref("SubtleCrypto")}} génère un {{Glossary("digest")}} de la donnée fournie. Un condensé est une petite valeur de taille fixe issue d'une donnée de taille variable. Les condensés cryptographiques doivent résister à la collision, ce qui signifie qu'il doit être très difficile d'obtenir le même condensé à partir de deux entrés différentes.
@@ -11,7 +12,9 @@ Il prend en argument un identifiant pour l'algorithme de condensé et les donné
 
 ## Syntaxe
 
-    const digest = crypto.subtle.digest(algorithm, data);
+```js
+const digest = crypto.subtle.digest(algorithm, data);
+```
 
 ### Paramètres
 
@@ -50,7 +53,7 @@ Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpub
 
 Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.4, et produit un résultat de 512 bits de long.
 
-> **Note :** Si vous cherchez à créer un condensé pour authentifié un message ([HMAC](/fr/docs/Glossary/HMAC)), vous aurez plutôt besoin de [SubtleCrypto.sign()](/en-US/docs/Web/API/SubtleCrypto/sign#HMAC).
+> **Note :** Si vous cherchez à créer un condensé pour authentifié un message ([HMAC](/fr/docs/Glossary/HMAC)), vous aurez plutôt besoin de [SubtleCrypto.sign()](/fr/docs/Web/API/SubtleCrypto/sign#HMAC).
 
 ## Exemples
 
@@ -93,15 +96,11 @@ console.log(digestHex);
 
 ## Spécifications
 
-| Spécifications                                                                                                           | Statue                               | Commentaire        |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-digest', 'SubtleCrypto.digest()')}} | {{Spec2('Web Crypto API')}} | Définition intiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SubtleCrypto.digest")}}
-
-> **Note :** Dans Chrome 60, une fonctionnalité a été ajoutée qui désactive **crypto.subtle** pour les connexions non TLS.
+{{Compat}}
 
 ## Voir aussi
 

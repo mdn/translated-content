@@ -8,13 +8,16 @@ tags:
   - Méthodes
 translation_of: Web/API/Document/createRange
 ---
+
 {{APIRef("DOM")}}
 
 Retourne un objet {{domxref("Range")}}.
 
 ## Syntaxe
 
-    range = document.createRange();
+```js
+range = document.createRange();
+```
 
 `range` devient un objet {{domxref("Range")}}.
 

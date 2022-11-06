@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
 original_slug: FAQ_sur_les_transformations_XSL_dans_Mozilla
 ---
+
 #### Pourquoi ma feuille de style ne s'applique pas&nbsp;?
 
 Vérifiez que le type MIME du document source et de la feuille de style est bien un type MIME XML, à savoir `text/xml` ou `application/xml`. L'espace de nommage XSLT est `http://www.w3.org/1999/XSL/Transform`. Utilisez l'instruction de traitement `<?xml-stylesheet ?>` plutôt que l'élément non standard `xml:stylesheet`. Le problème le plus courant est la gestion du type MIME. Pour savoir quel type MIME est envoyé par votre serveur, consultez les Informations sur la page, utilisez une extension telle que [LiveHTTPHeaders (en)](http://livehttpheaders.mozdev.org/) ou un gestionnaire de téléchargements comme wget. Mozilla ne chargera pas les feuilles de style XSLT depuis un domaine différent pour des raisons de sécurité.
@@ -22,19 +23,23 @@ Cette question est en fait très proche de la précédente. Pour faire court, no
 
 Tout comme pour le XHTML, `document.write` n'est pas supporté pendant les transformations XSLT. Malheureusement, les compilations actuelles ne retournent pas d'erreur, mais donnent simplement des résultats inattendus, comme des crashes ({{ Bug(202765) }}). Dans la plupart des cas il n'y a en fait aucune raison de l'utiliser. Si vous avez besoin d'employer du code ou une feuille de style spécifique à une plate-forme, utilisez ce qui suit&nbsp;:
 
-          <xsl:if test="system-property('xsl:vendor')='Transformiix'">
-            <!-- Balisage propre à Mozilla -->
-          </xsl:if>
-          <xsl:if test="system-property('xsl:vendor')='Microsoft'">
-            <!-- Balisage propre à IE -->
-          </xsl:if>
+```xml
+<xsl:if test="system-property('xsl:vendor')='Transformiix'">
+  <!-- Balisage propre à Mozilla -->
+</xsl:if>
+<xsl:if test="system-property('xsl:vendor')='Microsoft'">
+  <!-- Balisage propre à IE -->
+</xsl:if>
+```
 
 Vérifiez system-properties.xml pour les propriétés de votre système favori. MSXML possède une propriété supplémentaire&nbsp;:
 
-          <xsl:if xmlns:msxsl="urn:schemas-microsoft-com:xslt"
-                  test="system-property('msxsl:version')=3">
-            <!-- MSXML3 specific markup -->
-          </xsl:if>
+```xml
+<xsl:if xmlns:msxsl="urn:schemas-microsoft-com:xslt"
+        test="system-property('msxsl:version')=3">
+  <!-- MSXML3 specific markup -->
+</xsl:if>
+```
 
 #### Que dire de `media="print"`?
 

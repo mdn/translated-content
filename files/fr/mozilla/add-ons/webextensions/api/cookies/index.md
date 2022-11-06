@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
+
 {{AddonSidebar}}
 
 Permet aux extensions d'obtenir et de définir des cookies, et d'être averti quand ils changent.
@@ -57,9 +58,9 @@ Pour utiliser cette API, un module complémentaire doit spécifier la  [permissi
 
 Les cookies tiers sont des cookies qui sont définis par un site Web autre que celui sur lequel vous êtes actuellement. Par exemple :
 
-1.  Vous visitez [bbc.com](http://bbc.com). Il contient une annonce de [tracker.com](http://tracker.com) qui définit un cookie associé au domaine "[tracker.com](http://tracker.com)".
-2.  Vous visitez [cnn.com](http://cnn.com). Il contient également une annonce de  [tracker.com](http://tracker.com) qui définit un cookie associé au domaine "[tracker.com](http://tracker.com)".
-3.  Finalement, les deux cookies peuvent être envoyés à [tracker.com](http://tracker.com). qui peut alors comprendre que le même utilisateur a visité les deux sites.
+1. Vous visitez [bbc.com](http://bbc.com). Il contient une annonce de [tracker.com](http://tracker.com) qui définit un cookie associé au domaine "[tracker.com](http://tracker.com)".
+2. Vous visitez [cnn.com](http://cnn.com). Il contient également une annonce de  [tracker.com](http://tracker.com) qui définit un cookie associé au domaine "[tracker.com](http://tracker.com)".
+3. Finalement, les deux cookies peuvent être envoyés à [tracker.com](http://tracker.com). qui peut alors comprendre que le même utilisateur a visité les deux sites.
 
 Lorsque l'isolement de la première partie est activé, les cookies sont en outre qualifiés par le domaine de la page d'origine visitée par l'utilisateur (essentiellement, le domaine montré à l'utilisateur dans la barre d'URL, également appelé "première partie du domaine"). Cela signifie qu'un tracker ne peut pas corréler son cookie de [bbc.com](http://bbc.com) avec son cookie de [cnn.com](http://cnn.com), de sorte que le tracker ne peut pas suivre un seul utilisateur sur les deux sites.
 
@@ -69,7 +70,7 @@ Dans l'API `cookies`, le domaine de première partie est représenté à l'aide 
 
 Le {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}} et {{WebExtAPIRef("cookies.remove()")}} Les API acceptent toutes une option `firstPartyDomain`.
 
-Lorsque l'isolation de première partie est activée, vous devez fournir cette option ou les appels de l'API échoueront. Pour `get()`, `set()`, et `remove()`vous devez passer une valeur de chaîne de caractères.
+Lorsque l'isolation de première partie est activée, vous devez fournir cette option ou les appels de l'API échoueront. Pour `get()`, `set()`, et `remove()` vous devez passer une valeur de chaîne de caractères.
 
 Pour `getAll()`,  vous pouvez aussi passer `null` ici, et ceci obtiendra tous les cookies,
 qu'ils aient ou non une valeur non vide pour `firstPartyDomain.`
@@ -115,7 +116,8 @@ Lorsque l'isolation de la première partie est désactivée, le paramètre `firs
 >
 > Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/extensions/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -142,4 +144,4 @@ Lorsque l'isolation de la première partie est désactivée, le paramètre `firs
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

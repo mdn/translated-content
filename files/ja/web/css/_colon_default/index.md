@@ -1,19 +1,8 @@
 ---
 title: ':default'
 slug: Web/CSS/:default
-tags:
-  - ':default'
-  - CSS
-  - フォーム
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-  - default
-browser-compat: css.selectors.default
-translation_of: Web/CSS/:default
 ---
+
 {{CSSRef}}
 
 **`:default`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、関連する要素のグループ内で既定となっているフォーム上の要素を選択します。
@@ -26,7 +15,9 @@ translation_of: Web/CSS/:default
 
 ## 構文
 
-{{csssyntax}}
+```
+:default
+```
 
 ## 例
 

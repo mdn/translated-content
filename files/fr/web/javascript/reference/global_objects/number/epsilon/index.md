@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/EPSILON
 ---
+
 {{JSRef}}
 
 La propriété **`Number.EPSILON`** représente la différence entre le chiffre 1 (un) et la plus petite valeur supérieure à 1 qui peut être représentée par un nombre en JavaScript.
@@ -43,14 +44,11 @@ if (Number.EPSILON === undefined) {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-number.epsilon', 'Number.EPSILON')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-number.epsilon', 'Number.EPSILON')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.EPSILON")}}
+{{Compat}}
 
 ## Voir aussi
 

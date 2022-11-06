@@ -73,5 +73,5 @@ AND 연산에 대한 진리표는 다음과 같습니다:
 
 ## 같이 보기
 
-- [JS의 비트 연산 가이드](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [JS의 비트 연산 가이드](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#비트_연산자)
 - [비트 AND 할당연산자](/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)

@@ -3,6 +3,7 @@ title: Intl.Locale.prototype.timeZones
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/timeZones
 browser-compat: javascript.builtins.Intl.Locale.timeZones
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.timeZones`** est un accesseur qui renvoie un tableau des fuseaux horaires pris en charge pour la locale représentée par l'instance `Intl.Locale` courante.
@@ -12,7 +13,6 @@ La propriété **`Intl.Locale.prototype.timeZones`** est un accesseur qui renvoi
 Renvoie un tableau avec les fuseaux horaires pris en charge et associés à l'objet `Locale` courant. Les éléments du tableau sont représentés [au format IANA](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database).
 
 > **Note :** Si l'identifiant de langue Unicode ne contient pas le tiret indiquant la sous-balise de région, la valeur de retour sera `undefined`.
-
 
 ## Exemples
 

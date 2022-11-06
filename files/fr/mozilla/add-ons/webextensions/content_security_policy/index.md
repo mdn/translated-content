@@ -5,6 +5,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 ---
+
 {{AddonSidebar}}
 
 Les extensions développées avec les API WebExtension ont une politique de sécurité du contenu (CSP) qui leur est appliquée par défaut. Cela limite les sources à partir desquelles les extensions peuvent charger les ressources provenant d'élément {{HTMLElement("script")}} et {{HTMLElement("object")}} et interdit les pratiques potentiellement dangereuses comme l'utilisation de {{jsxref("Objets_globaux/eval","eval()")}}.
@@ -52,7 +53,9 @@ Comme les sites web, les extensions peuvent charger du contenu provenant de diff
 
 La politique de sécurité du contenu par défaut pour les extensions est la suivante :
 
-    "script-src 'self'; object-src 'self';"
+```
+"script-src 'self'; object-src 'self';"
+```
 
 Celle-ci sera appliquée à toute extension qui n'a pas explicitement défini sa propre politique via la clé [`content_security_policy`](/fr/Add-ons/WebExtensions/manifest.json/content_security_policy) du manifeste. Cela a les conséquences suivantes :
 

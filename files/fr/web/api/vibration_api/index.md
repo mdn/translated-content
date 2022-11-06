@@ -7,6 +7,7 @@ tags:
   - Vibration
 translation_of: Web/API/Vibration_API
 ---
+
 ## Description des vibrations
 
 La vibration est décrite comme une série de marche-arrêt des impulsions, qui peuvent être de durées différentes. La série peut être soit un entier décrivant le nombre de millisecondes à vibrer ou un tableau d'entiers décrivant une série de pauses et de vibrations. La vibration est contrôlée par une seule méthode: {{domxref("Navigator.vibrate()")}}.
@@ -25,8 +26,6 @@ Ces deux exemples illustrent tout deux la vibration de l'appareil pendant 200 mi
 ### Série de vibrations
 
 Un tableau de valeurs décrit des périodes de temps durant lesquelles le dispositif effectue des vibrations alternées (marche-arrêt répété). Chaque valeur dans le tableau est convertie en entier puis est interprétée alternativement comme le nombre de millisecondes pour lequel le dispositif devrait vibrer et le nombre de millisecondes dont il ne le devrait pas. Par exemple:
-
-
 
 ```js
 window.navigator.vibrate([200, 100, 200]);
@@ -75,13 +74,11 @@ Cette APi est dédiée pour les appareils mobiles. Il peut être indispensable p
 
 ## Spécifications
 
-| Spécification                            | Statut                               | Commentaire                                                        |
-| ---------------------------------------- | ------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('Vibration API')}} | {{Spec2('Vibration API')}} | Linked to spec is the latest editor's draft; W3C version is a REC. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## Voir aussi
 

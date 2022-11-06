@@ -9,15 +9,18 @@ tags:
   - toJSON()
 translation_of: Web/API/URL/toJSON
 ---
+
 {{APIRef("URL API")}}
 
 La méthode **`toJSON()`** de l'interface {{domxref("URL")}} retourne un {{domxref("USVString")}} contenant une version sérialisé de l'URL, même si dans la pratique, il semble avoir le même effet que {{domxref("URL.toString()")}}.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Syntaxe
 
-    json = url.toJSON();
+```js
+json = url.toJSON();
+```
 
 ### Paramètres
 
@@ -29,15 +32,15 @@ A {{domxref("USVString")}}.
 
 ## Exemples
 
-    const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
-    url.toJSON()
+```js
+const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+url.toJSON()
+```
 
 ## Spécifications
 
-| Spécification                                                        | Statut               | Commentaire          |
-| -------------------------------------------------------------------- | -------------------- | -------------------- |
-| {{SpecName('URL', '#dom-url-tojson', 'toJSON()')}} | {{Spec2('URL')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.URL.toJSON")}}
+{{Compat}}

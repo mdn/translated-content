@@ -66,11 +66,11 @@ Ejemplos para cada propiedad, constructor, tipo de evento y manejadores de event
 
 {{Specifications}}
 
-## Compatibilidad 
+## Compatibilidad
 
 {{Compat}}
 
-## Véase también 
+## Véase también
 
 - [Arrastrar y soltar](/es/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Operaciones de arrastre](/es/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)

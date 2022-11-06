@@ -8,11 +8,12 @@ tags:
 translation_of: Glossary/Flex_Item
 original_slug: Glossaire/Flex_Item
 ---
+
 Les enfants directs d'un {{glossary("Flex Container","conteneur flexible")}} (éléments définis avec `display: flex` ou `display: inline-flex`) deviennent des **éléments flexibles** (_flex items_).
 
 Des passages continus de texte à l'intérieur des conteneurs flexibles deviendront également des éléments flexibles.
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de la propriété
 

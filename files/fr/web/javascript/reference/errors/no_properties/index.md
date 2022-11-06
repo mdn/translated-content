@@ -9,13 +9,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/No_properties
 original_slug: Web/JavaScript/Reference/Erreurs/No_properties
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    TypeError: Unable to get property {x} of undefined or null reference (Edge)
-    TypeError: null has no properties (Firefox)
-    TypeError: undefined has no properties (Firefox)
+```
+TypeError: Unable to get property {x} of undefined or null reference (Edge)
+TypeError: null has no properties (Firefox)
+TypeError: undefined has no properties (Firefox)
+```
 
 ## Type d'erreur
 

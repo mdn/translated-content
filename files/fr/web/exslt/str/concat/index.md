@@ -6,13 +6,16 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/str/concat
 ---
+
 {{ XsltRef() }}
 
 `str:concat()` retourne une chaîne contenant toutes les valeurs de chaînes d'un ensemble de nœuds concaténées ensembles.
 
 ### Syntaxe
 
-    str:concat(ensembleNœud)
+```
+str:concat(ensembleNœud)
+```
 
 ### Arguments
 

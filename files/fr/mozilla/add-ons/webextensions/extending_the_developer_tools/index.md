@@ -11,6 +11,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 original_slug: Mozilla/Add-ons/WebExtensions/extension_des_outils_de_developpement
 ---
+
 {{AddonSidebar}}
 
 > **Note :** Cette page décrit les API de devtools telles qu'elles existent dans Firefox 55. Bien que les API soient basées sur les  [API devtools de chrome](https://developer.chrome.com/extensions/devtools), il existe encore de nombreuses fonctionnalités qui ne sont pas encore implémentées dans Firefox et ne sont donc pas documentées ici. Pour voir quelles fonctionnalités sont actuellement manquantes, voir les [Limitations des APIs devtools](/fr/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs).
@@ -84,7 +85,7 @@ la fonction [`devtools.inspectedWindow.eval()`](/fr/Add-ons/WebExtensions/API/de
 
 C'est un peu comme utiliser {{WebExtAPIRef("tabs.executeScript()")}}  pour injecter un script de contenu, mais avec une différence importante :
 
-- Contrairement aux scripts de contenu, les scripts chargés à partir de `devtools.inspectedWindow.eval()` **n'obtiennent pas** [une "vue nette du DOM" ](/fr/Add-ons/WebExtensions/Content_scripts#DOM_access): c'est-à-dire qu'ils peuvent voir des modifications apportées à la page par les scripts de page.
+- Contrairement aux scripts de contenu, les scripts chargés à partir de `devtools.inspectedWindow.eval()` **n'obtiennent pas** [une "vue nette du DOM"](/fr/Add-ons/WebExtensions/Content_scripts#DOM_access) : c'est-à-dire qu'ils peuvent voir des modifications apportées à la page par les scripts de page.
 
 > **Note :** Une vue propre du DOM est une fonction de sécurité destinée à empêcher les pages hostiles de tromper WebExtensions en redéfinissant le comportement des fonctions DOM natives. Cela signifie que vous devez être très prudent en utilisant eval () et utiliser un script de contenu normal si vous le pouvez.
 

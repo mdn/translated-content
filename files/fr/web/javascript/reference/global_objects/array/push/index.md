@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/push
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/push
 ---
+
 {{JSRef}}
 
 La méthode **`push()`** ajoute un ou plusieurs éléments à la fin d'un tableau et retourne la nouvelle taille du tableau.
@@ -18,11 +19,13 @@ La méthode **`push()`** ajoute un ou plusieurs éléments à la fin d'un tablea
 
 ## Syntaxe
 
-    arr.push(élément1, ..., élémentN)
+```js
+arr.push(élément1, ..., élémentN)
+```
 
 ### Paramètres
 
-- `élément1, ...,élémentN`
+- `élément1, ..., élémentN`
   - : Les éléments à ajouter à la fin du tableau.
 
 ### Valeur de retour
@@ -70,6 +73,19 @@ console.log(legumes); // ['navet', 'pomme de terre', 'céleri', 'radis']
 
 > **Note :** Attention à ne pas utiliser cette méthode lorsque les tableaux sont très grands car une fonction n'accepte qu'un nombre limité d'arguments. Voir {{jsxref("Function.apply","apply()")}} pour plus d'informations sur ces limites.
 
+L'exemple qui suit utilise [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) pour ajouter les éléments d'un second tableau à la fin du premier tableau.
+
+```js
+const legumes = ['navet', 'pomme de terre'];
+const autresLegumes = ['céleri', 'radis'];
+
+// On fusionne les deux tableaux
+// Équivalent à legumes.push('céleri', 'radis');
+legumes.push(...autresLegumes);
+
+console.log(legumes); // ['navet', 'pomme de terre', 'céleri', 'radis']
+```
+
 ### Utiliser un objet comme on utiliserait un tableau
 
 Comme nous l'avons vu auparavant, `push` est une méthode générique et nous pouvons donc utiliser `Array.prototype.push` sur les objets. On notera qu'il n'est pas nécessaire de stocker un ensemble d'objets. En fait, on enregistre l'ensemble dans l'objet et on utilise `call` sur `Array.prototype.push` :
@@ -95,16 +111,11 @@ console.log(obj.length);
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.7', 'Array.prototype.push')}}                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-array.prototype.push', 'Array.prototype.push')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.push', 'Array.prototype.push')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.push")}}
+{{Compat}}
 
 ## Voir aussi
 

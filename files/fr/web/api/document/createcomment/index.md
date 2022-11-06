@@ -8,13 +8,16 @@ tags:
   - Reference
 translation_of: Web/API/Document/createComment
 ---
+
 {{APIRef("DOM")}}
 
 `createComment()` crée et retourne un nouveau noeud de type commentaire.
 
 ## Syntaxe
 
-    CommentNode = document.createComment(data)
+```js
+CommentNode = document.createComment(data)
+```
 
 ### Paramètres
 

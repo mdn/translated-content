@@ -8,13 +8,16 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/nodeValue
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Node.nodeValue`** renvoie ou définit la valeur du nœud courant.
 
 ## Syntaxe
 
-    value = node.nodeValue;
+```js
+value = node.nodeValue;
+```
 
 `value` (_valeur_) est une chaîne contenant la valeur du nœud courant, s'il y en a une.
 

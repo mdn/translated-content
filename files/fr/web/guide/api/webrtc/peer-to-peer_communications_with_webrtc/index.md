@@ -4,6 +4,7 @@ slug: Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
 translation_of: Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
 original_slug: WebRTC/communication-de-pair-a-pair-avec-WebRTC
 ---
+
 {{SeeCompatTable}}
 
 Les APIs WebRTC sont conçues pour permettre aux applications JavaScript de créer des connexions en temps-réel, avec des canaux audio, vidéo et/ou de données, entre utilisateurs à travers leurs navigateurs ou avec des serveurs supportant le protocole WebRTC. Il autorise aussi `navigator.mozGetUserMedia()` à accéder au microphone et à la webcam (`getUserMedia()` est en cours de standardisation par le groupe Media Capture Task, avec les APIs Recording).
@@ -22,7 +23,4 @@ Un article de [Hacks](https://hacks.mozilla.org/category/webrtc/) décrit avec p
 
 ## Spécifications
 
-| Spécification                            | Statut                               | Commentaire                       |
-| ---------------------------------------- | ------------------------------------ | --------------------------------- |
-| {{SpecName("Media Capture")}} | {{Spec2("Media Capture")}} | Définition de `getUserMedia` API. |
-| {{SpecName("WebRTC 1.0")}}     | {{Spec2("WebRTC 1.0")}}     | Définition initiale.              |
+{{Specifications}}

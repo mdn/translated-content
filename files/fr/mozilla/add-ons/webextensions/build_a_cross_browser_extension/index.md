@@ -9,6 +9,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 original_slug: Mozilla/Add-ons/WebExtensions/construction_extension_cross_browser
 ---
+
 {{AddonSidebar()}}
 
 L'introduction de l'API WebExtension a créé un paysage plus homogène pour le développement des extensions des navigateurs. Cependant, parmi les navigateurs qui utilisent les API d'extensions (les principaux étant Chrome, Firefox, Opera et Edge), il existe des différences à la fois dans l'implémentation de l'API et dans la couverture des différentes fonctionnalités. Par ailleurs, Safari utilise ses propres extensions Safari Extensions JS.
@@ -86,9 +87,9 @@ Il existe d'autres options de _polyfill_ mais, au moment où nous écrivons ces 
 
 Les différences de fonctionnalités offertes par les différents navigateurs peuvent se répartir en trois catégories :
 
-1.  **L'absence de prise en charge d'une fonctionnalité à part entière.**
-2.  **Les variations de prise en charge pour certains aspects d'une fonctionnalité.** Au moment où nous écrivons ces lignes, Firefox ne prend pas en charge la méthode [`onButtonClicked`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked#browser_compatibility) mais est le seul navigateur qui prend en charge [`onShown`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown#browser_compatibility).
-3.  **Les fonctionnalités propriétaires spécifiques à chaque navigateur.** Au moment où nous écrivons ces lignes, les conteneurs sont une fonctionnalité spécifique à Firefox qui est donc le seul à prendre en charge la fonction [`contextualIdentities`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities#browser_compatibility).
+1. **L'absence de prise en charge d'une fonctionnalité à part entière.**
+2. **Les variations de prise en charge pour certains aspects d'une fonctionnalité.** Au moment où nous écrivons ces lignes, Firefox ne prend pas en charge la méthode [`onButtonClicked`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked#browser_compatibility) mais est le seul navigateur qui prend en charge [`onShown`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown#browser_compatibility).
+3. **Les fonctionnalités propriétaires spécifiques à chaque navigateur.** Au moment où nous écrivons ces lignes, les conteneurs sont une fonctionnalité spécifique à Firefox qui est donc le seul à prendre en charge la fonction [`contextualIdentities`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities#browser_compatibility).
 
 Vous pouvez trouver plus de détails sur la prise en charge de l'API pour les différents navigateurs sur [La prise en charge des API JavaScript WebExtension pour les différents navigateurs](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs). Les informations de compatibilité sont également disponibles sur chaque page de la [référence des API JavaScript WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/API).
 
@@ -112,9 +113,9 @@ if (typeof <function> === "function") {
 
 Les différences pour les clés du fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) se répartissent en trois catégories :
 
-1.  **Les attributs d'information sur l'extension.** Firefox et Opera incluent la clé [`developer`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#browser_compatibility) pour fournir des détails quant à la développeuse ou au développeur de l'application et la clé [`author`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#browser_compatibility).
-2.  **Les fonctionnalités rattachées à l'extension.** Edge ne prenait pas en charge la clé [`commands`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#browser_compatibility) qui permet de définir des raccourcis clavier pour une extension.
-3.  **Le caractère optionnel d'une clé.** Ainsi, la clé [`author`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#browser_compatibility) était obligatoire dans Edge mais optionnelle pour les autres navigateurs.
+1. **Les attributs d'information sur l'extension.** Firefox et Opera incluent la clé [`developer`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#browser_compatibility) pour fournir des détails quant à la développeuse ou au développeur de l'application et la clé [`author`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#browser_compatibility).
+2. **Les fonctionnalités rattachées à l'extension.** Edge ne prenait pas en charge la clé [`commands`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#browser_compatibility) qui permet de définir des raccourcis clavier pour une extension.
+3. **Le caractère optionnel d'une clé.** Ainsi, la clé [`author`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#browser_compatibility) était obligatoire dans Edge mais optionnelle pour les autres navigateurs.
 
 Les informations quant à la compatibilité de chaque clé de manifeste sont incluses dans les pages de référence correspondantes.
 

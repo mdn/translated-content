@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number
 ---
+
 {{JSRef}}
 
 L'objet **`Number`** est une enveloppe objet (_wrapper_) autour du [type primitif numérique](/fr/docs/Web/JavaScript/Structures_de_données#Le_type_nombre). Autrement dit, il est utilisé pour manipuler les nombres comme des objets. Pour créer un objet `Number`, on utilise le constructeur `Number()`.
@@ -16,11 +17,13 @@ Le type JavaScript `Number` utilise [une représentation binaire à précision d
 
 ## Syntaxe
 
-    new Number(valeur);
-    var a = new Number('123'); // a === 123 donnera false
-    var b = Number('123'); // b === 123 donnera true
-    a instanceof Number; // donnera true
-    b instanceof Number; // donnera false
+```js
+new Number(valeur);
+var a = new Number('123'); // a === 123 donnera false
+var b = Number('123'); // b === 123 donnera true
+a instanceof Number; // donnera true
+b instanceof Number; // donnera false
+```
 
 ### Paramètres
 
@@ -65,7 +68,7 @@ L'objet `Number` est principalement utilisé dans les cas de figure suivants :
   - : Cette méthode permet de déterminer si la valeur passée en argument est un entier.
 - {{jsxref("Number.isSafeInteger()")}}
   - : Cette méthode permet de déterminer si la valeur passée en argument peut correctement être représentée comme un entier en JavaScript (savoir si elle est comprise entre `-(2^53 - 1)` et `2^53 - 1`).
-- {{jsxref("Number.toInteger()")}} {{obsolete_inline}}
+- {{jsxref("Number.toInteger()")}} {{deprecated_inline}}
   - : Cette méthode est utilisée afin d'évaluer et de convertir la valeur passée en argument en entier (ou en l'{{jsxref("Infinity", "infini","",1)}}). Cette méthode a été supprimée.
 - {{jsxref("Number.parseFloat()", "Number.parseFloat(<var>string</var>)")}}
   - : Cette méthode correspond à la méthode {{jsxref("parseFloat", "parseFloat()")}} de l'objet global.
@@ -147,16 +150,11 @@ Number("-Infinity"); // -Infinity
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                                                                                                                                                                                                                                                                                                                                                                                      |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1.                                                                                                                                                                                                                                                                                                                                             |
-| {{SpecName('ES5.1', '#sec-15.7', 'Number')}}                 | {{Spec2('ES5.1')}}     |                                                                                                                                                                                                                                                                                                                                                                                                   |
-| {{SpecName('ES6', '#sec-number-objects', 'Number')}}         | {{Spec2('ES6')}}         | Ajout des méthodes et propriétés suivantes : ({{jsxref("Number.EPSILON", "EPSILON")}}, {{jsxref("Number.isFinite", "isFinite")}}, {{jsxref("Number.isInteger", "isInteger")}}, {{jsxref("Number.isNaN", "isNaN")}}, {{jsxref("Number.parseFloat", "parseFloat")}}, {{jsxref("Number.parseInt", "parseInt")}}) |
-| {{SpecName('ESDraft', '#sec-number-objects', 'Number')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                                                                                                                                                                                                                                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number")}}
+{{Compat}}
 
 ## Voir aussi
 

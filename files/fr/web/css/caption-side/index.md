@@ -1,15 +1,13 @@
 ---
 title: caption-side
 slug: Web/CSS/caption-side
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/caption-side
+browser-compat: css.properties.caption-side
 ---
+
 {{CSSRef}}
 
-La propriété **`caption-side`** permet de choisir l'emplacement de la légende d'un tableau (représentée par l'élément {{HTMLElement("caption")}} du tableau). Les valeurs sont relatives au mode d'écriture (cf. {{cssxref("writing-mode")}}) du tableau.
+La propriété **`caption-side`** permet de choisir l'emplacement de la légende d'un tableau (représentée par l'élément [`<caption>`](/fr/docs/Web/HTML/Element/caption) du tableau). Les valeurs sont relatives au mode d'écriture (cf. [`writing-mode`](/fr/docs/Web/CSS/writing-mode)) du tableau.
 
 {{EmbedInteractiveExample("pages/css/caption-side.html")}}
 
@@ -21,39 +19,42 @@ La propriété **`caption-side`** permet de choisir l'emplacement de la légende
 caption-side: top;
 caption-side: bottom;
 
-/* Valeurs non-standards */
-caption-side: left;
-caption-side: right;
-caption-side: top-outside;
-caption-side: bottom-outside;
-
+/* Valeurs logiques */
+caption-side: block-start;
+caption-side: block-end;
+caption-side: inline-start;
+caption-side: inline-end;
 
 /* Valeur globales */
 caption-side: inherit;
 caption-side: initial;
+caption-side: revert;
+caption-side: revert-layer;
 caption-side: unset;
 ```
+
+La propriété `caption-side` se paramètre à l'aide d'un des mots-clés suivants.
 
 ### Valeurs
 
 - `top`
   - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au-dessus du tableau.
 - `bottom`
-  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée en-dessous du tableau.
-- `left` {{non-standard_inline}}
-  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée à gauche du tableau.
-    {{Note("Cette valeur a été proposée pour CSS 2, mais fut retirée avec la spécification CSS 2.1. Elle est non-standard.")}}
-- `right` {{non-standard_inline}}
-  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée à droite du tableau.
-    {{Note("Cette valeur a été proposée pour CSS 2, mais fut retirée avec la spécification CSS 2.1. Elle est non-standard.")}}
-- `top-outside` {{non-standard_inline}}
-  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au-dessus du tableau sans que la largeur ou l'alignement horizontal soient liées à la disposition horizontale du tableau.
-    {{Note("La spécification CSS 2.1 note que la spécification CSS 2 a défini un autre comportement pour la valeur <code>top</code>, réintroduit avec cette valeur dans une future spécification.")}}
-- `bottom-outside` {{non-standard_inline}}
-  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée en-dessous du tableau sans que la largeur ou l'alignement horizontal soient liées à la disposition horizontale du tableau.
-    {{Note("La spécification CSS 2.1 note que la spécification CSS 2 a défini un autre comportement pour la valeur <code>bottom</code>, réintroduit avec cette valeur dans une future spécification.")}}
+  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée en dessous du tableau.
+- `block-start`
+  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au bord du tableau situé au début de l'axe de bloc.
+- `block-end`
+  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au bord du tableau situé à la fin de l'axe de bloc.
+- `inline-start`
+  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au bord du tableau situé au début de l'axe en ligne.
+- `inline-end`
+  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au bord du tableau situé à la fin de l'axe en ligne.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{cssinfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
@@ -62,16 +63,38 @@ caption-side: unset;
 ### CSS
 
 ```css
-caption {
+.top caption {
+  caption-side: top;
+}
+
+.bottom caption {
   caption-side: bottom;
+}
+
+table {
+  border: 1px solid red;
+}
+
+td {
+  border: 1px solid blue;
 }
 ```
 
 ### HTML
 
 ```html
-<table>
-  <caption>Une légende</caption>
+<table class="top">
+  <caption>Une légende au-dessus du tableau</caption>
+  <tr>
+    <td>Des données d'un tableau</td>
+    <td>Pfiou encore des données</td>
+  </tr>
+</table>
+
+<br>
+
+<table class="bottom">
+  <caption>Une légende en dessous du tableau</caption>
   <tr>
     <td>Des données d'un tableau</td>
     <td>Pfiou encore des données</td>
@@ -81,17 +104,12 @@ caption {
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","300","300")}}
+{{EmbedLiveSample("","auto","160")}}
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                             | Commentaires                                                                                         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS Logical Properties', '#caption-side', 'caption-side')}} | {{Spec2('CSS Logical Properties')}} | Les valeurs `top` et `bottom` sont désormais définies comme relatives à la valeur de `writing-mode`. |
-| {{SpecName('CSS2.1', 'tables.html#caption-position', 'caption-side')}}     | {{Spec2('CSS2.1')}}                         | Définition initiale.                                                                                 |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.caption-side")}}
+{{Compat}}

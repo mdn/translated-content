@@ -1,28 +1,15 @@
 ---
 title: XMLHttpRequest.getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
-tags:
-  - API
-  - ヘッダーの読み取り
-  - ヘッダーの取得
-  - HTTP
-  - HTTP ヘッダー
-  - メソッド
-  - リファレンス
-  - レスポンスヘッダー
-  - XHR
-  - XMLHttpRequest
-  - getAllResponseHeaders
-browser-compat: api.XMLHttpRequest.getAllResponseHeaders
-translation_of: Web/API/XMLHttpRequest/getAllResponseHeaders
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} の **`getAllResponseHeaders()`** メソッドは、すべてのレスポンスヘッダーを {{Glossary('CRLF')}} で区切った文字列として返し、レスポンスを受信していない場合は `null` を返します。
 
 ネットワークエラーが発生した場合は、空文字列が返されます。
 
-> **Note:** マルチパートリクエストでは、これはリクエストの元のチャンネルではなく、*現在の*部分を返します。
+> **メモ:** マルチパートリクエストでは、これはリクエストの元のチャンネルではなく、*現在の*部分を返します。
 
 ## 構文
 
@@ -56,7 +43,7 @@ x-xss-protection: 1; mode=block\r\n
 
 各行はキャリッジリターンとラインフィード文字 (`\r\n`) の両方で終わります。これらはそれぞれのヘッダーを区切る基本的なデリミターです。
 
-> **Note:** 最近のブラウザーでは、ヘッダー名は最新の仕様書にあるように、すべて小文字で返されます。
+> **メモ:** 最近のブラウザーでは、ヘッダー名は最新の仕様書にあるように、すべて小文字で返されます。
 
 ## 例
 

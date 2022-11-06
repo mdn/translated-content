@@ -1,24 +1,13 @@
 ---
 title: ServiceWorkerRegistration.showNotification()
 slug: Web/API/ServiceWorkerRegistration/showNotification
-tags:
-  - API
-  - 実験的
-  - メソッド
-  - NeedsExample
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - showNotification
-browser-compat: api.ServiceWorkerRegistration.showNotification
-translation_of: Web/API/ServiceWorkerRegistration/showNotification
 ---
+
 {{APIRef("Service Workers API")}}
 
 `showNotification()` は {{domxref("ServiceWorkerRegistration")}} インターフェイスのメソッドで、アクティブなサービスワーカー上で通知を作成します。
 
-> **Note:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
+> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
 ## 構文
 
@@ -51,9 +40,9 @@ serviceWorkerRegistration.showNotification(title, [options]);
     - `lang`: 通知内で使用される言語を指定します。 この文字列は、{{RFC(5646, "言語識別子のタグ (BCP 47 とも呼ばれる)")}}に基づく有効なものである必要があります。
     - `renotify`: `tag` 値を再利用するときにバイブレーションと可聴アラートを抑制するかどうかを示す論理値。 *オプション*の `renotify` が `true` で、*オプション*の `tag` が空の文字列の場合、TypeError が発生します。既定値は `false` です。
     - `requireInteraction`: 画面が十分に大きい端末では、ユーザーがクリックするか閉じるまで通知をアクティブにしておく必要があることを示します。 この値がないか `false` の場合、デスクトップ版の Chrome は約 20 秒後に通知を自動的に最小化します。既定値は `false` です。
-    - `silent`: 設定されている場合、音やバイブレーションは発生しないことを示します。*オプション*の `silent` が `true` で、*オプション*の `vibrate` が存在する場合、TypeError 例外が発生します。既定値値は `false` です。
+    - `silent`: 設定されている場合、音やバイブレーションは発生しないことを示します。*オプション*の `silent` が `true` で、*オプション*の `vibrate` が存在する場合、TypeError 例外が発生します。既定値値は `false` です。
     - `tag`: 必要に応じてスクリプトを使用して通知を検索、置換、または削除できるようにする所与の通知の ID です。
-    - `timestamp`: 通知が作成された時刻を表す {{domxref("DOMTimeStamp")}}。 通知が実際に行われた時刻を示すために使用できます。 例えば、これは過去に、端末がオフラインだったためにすぐに配信できなかったメッセージに通知が使用された場合や、これから始まる会議に向けて通知が使用された場合などです。
+    - `timestamp`: 通知が作成された時刻を表す {{domxref("DOMTimeStamp")}}。 通知が実際に行われた時刻を示すために使用できます。 例えば、これは過去に、端末がオフラインだったためにすぐに配信できなかったメッセージに通知が使用された場合や、これから始まる会議に向けて通知が使用された場合などです。
     - `vibrate`: 通知の表示で実行するバイブレーションパターン。 バイブレーションパターンは、メンバーが 1 つしかない配列にすることができます。 値はミリ秒単位の時間で、偶数のインデックス（0、2、4 など）は振動する時間を示し、奇数のインデックスは一時停止する時間を示します。例えば、 `[300、100、400]` は、 300 ミリ秒振動し、 100 ミリ秒休止してから、 400 ミリ秒振動します。
 
 ## 返値

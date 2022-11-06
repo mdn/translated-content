@@ -3,6 +3,7 @@ title: Text.splitText()
 slug: Web/API/Text/splitText
 translation_of: Web/API/Text/splitText
 ---
+
 {{apiref("DOM")}}
 
 La méthode **`Text.splitText()`** sépare le nœud {{domxref("Text")}} en deux nœuds au niveau de l’indice spécifié, et conserve les deux nœuds dans l’arbre en tant que voisins.
@@ -15,7 +16,9 @@ Une {{domxref("DOMException")}} avec la valeur `INDEX_SIZE_ERR` est levée si l�
 
 ## Syntaxe
 
-    noeudRemplacant = noeudTexte.splitText(indice)
+```js
+noeudRemplacant = noeudTexte.splitText(indice)
+```
 
 ## Exemple
 
@@ -46,16 +49,11 @@ Dans cet exemple, le nœud texte d’un {{HTMLElement("p")}} est séparé en deu
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaires                                               |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-text-splittext', 'Text.splitText')}}         | {{Spec2('DOM WHATWG')}} | Pas de changement depuis {{SpecName('DOM3 Core')}}. |
-| {{SpecName('DOM3 Core', 'core.html#ID-38853C1D', 'Text.splitText')}}     | {{Spec2('DOM3 Core')}}     | Pas de changement depuis {{SpecName('DOM2 Core')}}. |
-| {{SpecName('DOM2 Core', 'core.html#ID-38853C1D', 'Text.splitText')}}     | {{Spec2('DOM2 Core')}}     | Pas de changement depuis {{SpecName('DOM1')}}.     |
-| {{SpecName('DOM1', 'level-one-core.html#ID-38853C1D', 'Text.splitText')}} | {{Spec2('DOM1')}}         | Définition initiale.                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Text.splitText")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -5,6 +5,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
 ---
+
 {{AddonSidebar}}
 
 Travailler avec des identités contextuelles&nbsp;: lister, créer, supprimer et mettre à jour des identités contextuelles.

@@ -11,6 +11,7 @@ tags:
   - remove
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/remove
 ---
+
 {{AddonSidebar()}}
 
 Demander d'abandonner les permissions listées dans l'objet {{WebExtAPIRef("permissions.Permissions")}}.

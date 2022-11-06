@@ -1,21 +1,8 @@
 ---
 title: 'Window: popstate イベント'
 slug: Web/API/Window/popstate_event
-tags:
-  - API
-  - Event
-  - HTML DOM
-  - History
-  - 履歴 API
-  - Location
-  - Navigation
-  - リファレンス
-  - URL
-  - Window
-  - popstate
-browser-compat: api.Window.popstate_event
-translation_of: Web/API/Window/popstate_event
 ---
+
 {{APIRef}}
 
 **`popstate`** は {{domxref("Window")}} インターフェイスのイベントで、ユーザーがセッション履歴を操作している間にアクティブな履歴項目が変更されたときに発行されます。これは現在の履歴項目をユーザーが最後に訪れたページのものに変更するか、または {{domxref("history.pushState()")}} が履歴項目を履歴スタックに追加するために使用されていた場合、その履歴項目が代わりに使用されます。
@@ -53,7 +40,7 @@ translation_of: Web/API/Window/popstate_event
 
 ブラウザーは、ページ読み込み時に `popstate` イベントを異なる方法で処理する傾向があります。 Chrome （v34 以前）と Safari ではページ読み込み時に常に `popstate` イベントが発行されますが、 Firefox では発行されません。
 
-> **Note:** `popstate` イベントを処理する関数を書くときには、 `window.location` のようなプロパティはすでに状態の変化を反映していますが（それが現在の URL に影響する場合）、 `document` はまだ反映されていないかもしれないことを考慮に入れておくことが重要です。新しい文書の状態が完全に反映された瞬間を捉えることが目的であれば、遅延ゼロの {{domxref("setTimeout()")}} メソッド呼び出しを使用して、処理を行う内部の _callback_ 関数をブラウザーのイベントループの最後に効果的に配置する必要があります。例えば `window.onpopstate = () => setTimeout(doSomeThing, 0);` のようにします。
+> **メモ:** `popstate` イベントを処理する関数を書くときには、 `window.location` のようなプロパティはすでに状態の変化を反映していますが（それが現在の URL に影響する場合）、 `document` はまだ反映されていないかもしれないことを考慮に入れておくことが重要です。新しい文書の状態が完全に反映された瞬間を捉えることが目的であれば、遅延ゼロの {{domxref("setTimeout()")}} メソッド呼び出しを使用して、処理を行う内部の _callback_ 関数をブラウザーのイベントループの最後に効果的に配置する必要があります。例えば `window.onpopstate = () => setTimeout(doSomeThing, 0);` のようにします。
 
 ## popstate が送信される場面
 

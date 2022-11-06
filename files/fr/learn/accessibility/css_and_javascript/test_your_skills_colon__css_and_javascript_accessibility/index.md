@@ -11,6 +11,7 @@ tags:
   - Learn
   - test your skills
 ---
+
 {{LearnSidebar}}
 
 L'objectif de ce test de connaissances est d'évaluer si vous maîtrisez les [meilleures pratiques d'accessibilité en CSS et en JavaScript](/fr/docs/Learn/Accessibility/CSS_and_JavaScript).
@@ -35,10 +36,10 @@ Essayez de mettre à jour le code direct ci-dessous pour reproduire l'exemple fi
 
 Dans ce nouvel exercice, vous démarrez avec une petite portion de contenu : de simples titres et paragraphes. On constate des problèmes d'accessibilité avec les couleurs et la taille du texte. Nous vous demandons de :
 
-1.  Expliquez quels sont les problèmes et quelles sont les règles à suivre définissant les valeurs acceptables en termes de couleurs et de taille.
-2.  Choisir de nouvelles valeurs en termes de couleur et de taille de police pour corriger ce problème.
-3.  Mettre à jour le code CSS avec ces nouvelles valeurs pour résoudre le problème.
-4.  Tester le code pour s'assurer que le problème est désormais résolu. Décrivez quels outils ou méthodes vous avez utilisé pour choisir les nouvelles valeurs et tester le code.
+1. Expliquez quels sont les problèmes et quelles sont les règles à suivre définissant les valeurs acceptables en termes de couleurs et de taille.
+2. Choisir de nouvelles valeurs en termes de couleur et de taille de police pour corriger ce problème.
+3. Mettre à jour le code CSS avec ces nouvelles valeurs pour résoudre le problème.
+4. Tester le code pour s'assurer que le problème est désormais résolu. Décrivez quels outils ou méthodes vous avez utilisé pour choisir les nouvelles valeurs et tester le code.
 
 Essayez de mettre à jour le code en direct ci-dessous pour reproduire l'exemple fini :
 
@@ -60,8 +61,8 @@ Vous pouvez vous entraîner avec ces exemples dans les Éditeurs Interactifs ci-
 
 Si vous souhaitez obtenir une évaluation de votre travail, ou si vous bloquez et que vous souhaitez obtenir de l'aide :
 
-1.  Publiez votre travail dans un éditeur en ligne partageable, comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez soit écrire le code vous-même, soit utiliser les fichiers de départ via les liens présents dans les sections ci-dessus.
-2.  Écrivez un message pour demander une évaluation et/ou de l'aide dans la [catégorie Apprentissage (Learning) du forum de discussion de MDN](https://discourse.mozilla.org/c/mdn/learn). Votre message doit comprendre :
+1. Publiez votre travail dans un éditeur en ligne partageable, comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez soit écrire le code vous-même, soit utiliser les fichiers de départ via les liens présents dans les sections ci-dessus.
+2. Écrivez un message pour demander une évaluation et/ou de l'aide dans la [catégorie Apprentissage (Learning) du forum de discussion de MDN](https://discourse.mozilla.org/c/mdn/learn). Votre message doit comprendre :
 
     - Un titre explicite, par exemple « Évaluation souhaitée pour le test d'Accessibilité CSS 1 ».
     - Des détails sur ce que vous avez déjà tenté, et ce que vous aimeriez que nous fassions, c'est-à-dire si vous bloquez et que vous avez besoin d'aide, ou si vous souhaitez qu'on évalue votre travail.

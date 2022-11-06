@@ -1,15 +1,9 @@
 ---
 title: cursor プロパティでの URL 値の使用
 slug: conflicting/Web/CSS/cursor
-tags:
-  - CSS
-  - Gecko
-  - ガイド
-  - NeedsUpdate
-  - Reference
-translation_of: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 original_slug: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 ---
+
 {{CSSRef}}
 
 [Gecko](/ja/docs/Mozilla/Gecko) 1.8 は URL の値を CSS の{{CSSxRef("cursor")}} プロパティで、 Windows と Linux で対応しています。 Mac の対応は Gecko 2 ([Firefox 4](/ja/docs/Mozilla/Firefox/Releases/4)) で追加されました。これによって任意の画像を、 Gecko が対応している画像形式ならば何でも、マウスカーソルとして指定することができます。
@@ -60,7 +54,7 @@ Gecko 1.8 (Firefox 1.5) では、 cursor の値に対して CSS 3 の構文が�
 
 Gecko で使用できる、すべての画像形式が対応されています。つまり PNG, GIF, JPG, BMP, CUR などの画像形式が使用できるということです。 ANI には対応していません。アニメーション PNG や GIF は動くカーソルとしては使用できません。
 
-> **Note:** Gecko 2.0 以降は、 Gecko では SVG 形式のカーソルにも対応しています。しかし、 SVG 画像は (パーセント値ではない) 長さの値による幅と高さを SVG のルートノードに設定しなければなりません。 JavaScript、 CSS アニメーション、 SVG を内部にもつ宣言的な SMIL は無視されます。例えば、 SVG を使用してアニメーションカーソルを作成することはできません。
+> **メモ:** Gecko 2.0 以降は、 Gecko では SVG 形式のカーソルにも対応しています。しかし、 SVG 画像は (パーセント値ではない) 長さの値による幅と高さを SVG のルートノードに設定しなければなりません。 JavaScript、 CSS アニメーション、 SVG を内部にもつ宣言的な SMIL は無視されます。例えば、 SVG を使用してアニメーションカーソルを作成することはできません。
 
 Gecko (Firefox) ではカーソルの寸法が 128×128px に制限されています。それより大きいカーソル画像は無視されます。ただし、オペレーティングシステムやプラットフォームとの互換性を最大化するために、 32×32px の大きさに制限してください。
 

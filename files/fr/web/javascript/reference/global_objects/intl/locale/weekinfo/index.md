@@ -3,6 +3,7 @@ title: Intl.Locale.prototype.weekInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/weekInfo
 browser-compat: javascript.builtins.Intl.Locale.weekInfo
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.weekInfo`** est un accesseur qui renvoie un objet `weekInfo` contenant les propriétés `firstDay`, `weekend` et `minimalDays` pour la locale associée.
@@ -10,7 +11,6 @@ La propriété **`Intl.Locale.prototype.weekInfo`** est un accesseur qui renvoie
 ## Description
 
 Renvoie les informations associées à l'instance `Locale` pour les informations sur la semaine selon [les éléments de semaine UTS 35](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Patterns_Week_Elements).
-
 
 ## Exemples
 
@@ -42,5 +42,3 @@ console.log(msBN.weekInfo) // affiche {firstDay: 7, weekend: [5, 7], minimalDays
 ## Voir aussi
 
 - [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
-
-

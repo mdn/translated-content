@@ -1,16 +1,8 @@
 ---
 title: CSSKeyframesRule.appendRule()
 slug: Web/API/CSSKeyframesRule/appendRule
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframesRule
-  - CSS アニメーション
-  - メソッド
-  - リファレンス
-browser-compat: api.CSSKeyframesRule.appendRule
-translation_of: Web/API/CSSKeyframesRule/appendRule
 ---
+
 {{APIRef("CSSOM") }}
 
 **`appendRule()`** は {{domxref("CSSKeyframeRule")}} インターフェイスのメソッドで、 {{domxref("CSSKeyFrameRule")}} をルールの末尾に追加します。

@@ -8,6 +8,7 @@ tags:
   - SVG Conteneur
 translation_of: Web/SVG/Element/g
 ---
+
 {{SVGRef}}
 
 L'élément `g` est un conteneur utilisé pour grouper des objets.
@@ -57,11 +58,8 @@ Cet élément n'a que des attributs globaux
 
 ## Spécifications
 
-| Spécification                                                                | Statut                   | Commentaire        |
-| ---------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName("SVG2", "struct.html#GElement", "&lt;g&gt;")}} | {{Spec2("SVG2")}} |                    |
-| {{SpecName("SVG1.1", "struct.html#Groups", "&lt;g&gt;")}} | {{Spec2("SVG1.1")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.g")}}
+{{Compat}}

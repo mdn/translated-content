@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Methods/HEAD
 original_slug: Web/HTTP/Méthode/HEAD
 ---
+
 {{HTTPSidebar}}
 
 La **méthode HTTP `HEAD`** demande les en-têtes qui seraient retournés si la ressource spécifiée était demandée avec une méthode HTTP {{HTTPMethod("GET")}}. Une telle requête peut être envoyée avant de procéder au téléchargement d'une ressource volumineuse, par exemple pour économiser de la bande passante.
@@ -53,7 +54,9 @@ Si le résultat d'une requête `HEAD` montre qu'une ressource mise en cache apr�
 
 ## Syntaxe
 
-    HEAD /index.html
+```
+HEAD /index.html
+```
 
 ## Spécifications
 

@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
 {{jsSidebar("Functions")}}
 
-**나머지 매개변수** 구문을 사용하면 함수가 정해지지 않은 수의 매개변수를 배열로 받을 수 있습니다. JavaScript에서 [가변항 함수](https://en.wikipedia.org/wiki/Variadic_function)를 표현할 때 사용합니다.
+**나머지 매개변수** 구문을 사용하면 함수가 정해지지 않은 수의 매개변수를 배열로 받을 수 있습니다. JavaScript에서 [가변항 함수](https://en.wikipedia.org/wiki/Variadic_function)를 표현할 때 사용합니다.
 
 {{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}
 
@@ -210,7 +210,7 @@ console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
 
 ## 함께 보기
 
-- [전개 구문](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (같은 '`...`' 사용)
+- [전개 구문](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (같은 '`...`' 사용)
 - [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 - [`arguments` 객체](/ko/docs/Web/JavaScript/Reference/Functions/arguments)
 - {{jsxref("Array")}}

@@ -1,14 +1,8 @@
 ---
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
-tags:
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
-browser-compat: javascript.builtins.Object.constructor
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 ---
+
 {{JSRef}}
 
 **`constructor`** プロパティは、インスタンスオブジェクトを生成した {{jsxref("Object")}} のコンストラクター関数への参照を返します。なお、このプロパティの値は*関数そのものへの参照*であり、関数名を含んだ文字列ではありません。
@@ -17,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 
 ## 解説
 
-(`Object.create(null)` で生成されたオブジェクトを除いて) すべてのオブジェクトが `constructor` プロパティを持っています。明示的にコンストラクター関数を用いることなく生成されたオブジェクト (オブジェクトリテラルや配列リテラルなど) は、 `constructor` プロパティがそのオブジェクトの基礎オブジェクトのコンストラクター型を指します。
+(`Object.create(null)` で生成されたオブジェクトを除いて) すべてのオブジェクトが `constructor` プロパティを持っています。明示的にコンストラクター関数を用いることなく生成されたオブジェクト (オブジェクトリテラルや配列リテラルなど) は、 `constructor` プロパティがそのオブジェクトの基礎オブジェクトのコンストラクター型を指します。
 
 ```js
 let o = {}
@@ -65,7 +59,7 @@ theTree.constructor is function Tree(name) {
 
 ```js
 let val = null;
-val.constructor = 1; //TypeError: var is null
+val.constructor = 1; //TypeError: val is null
 
 val = 'abc';
 val.constructor = Number; //val.constructor === String
@@ -172,7 +166,6 @@ function Child(x, y) {
   }
 }
 
-Child = Object.assign(Child, ParentWithStatic)  // 静的メンバーを ParentWithStatic から Child へコピー
 Child.prototype = Object.create(ParentWithStatic.prototype)
 Child.prototype.constructor = Child
 
@@ -187,16 +180,16 @@ Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition
 };
 ```
 
-この例では、正常に動作するように親のコンストラクターを維持するか、静的プロパティを子のコンストラクタに再代入する必要があります。
+この例を正しく動作させるためには、コンストラクターとして `Parent` を保持するか、静的プロパティを `Child` のコンストラクターに再代入するかする必要があります。
 
 ```js
 ...
-Child = Object.assign(Child, ParentWithStatic) // Notice that we assign it before we create(...) a prototype below
-Child.prototype = Object.create(ParentWithStatic.prototype)
+Child = Object.assign(Child, ParentWithStatic); // Notice that we assign it before we create(...) a prototype below
+Child.prototype = Object.create(ParentWithStatic.prototype);
 ...
 ```
 
-または、親コンストラクターの識別子を子コンストラクター関数の別のプロパティに代入し、そのプロパティを介してアクセスします。
+または、 `Parent` のコンストラクター識別子を `Child` コンストラクター関数の別のプロパティに代入し、そのプロパティからアクセスします。
 
 ```js
 ...
@@ -207,7 +200,7 @@ Child.prototype = Object.create(ParentWithStatic.prototype)
 ...
 ```
 
-> **Note:** コンストラクターを手動で更新したり設定したりすると、異なる結果や混乱する結果を導くことがあります。これを防ぐためには、それぞれの場合に応じて `constructor` の役割を定義することが必要です。多くの場合、 `constructor` 使用されず、再割り当ての必要はありません。
+> **メモ:** コンストラクターを手動で更新したり設定したりすると、異なる結果や混乱する結果を導くことがあります。これを防ぐためには、それぞれの場合に応じて `constructor` の役割を定義することが必要です。多くの場合、 `constructor` 使用されず、再割り当ての必要はありません。
 
 ## 仕様書
 

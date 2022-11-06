@@ -5,6 +5,7 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLElement/offsetLeft
 ---
+
 {{ ApiRef() }}
 
 ### Résumé
@@ -15,7 +16,9 @@ de l'élément courant est décalé vers la gauche au sein du nœud [`offsetPare
 
 ### Syntaxe
 
-    left =element.offsetLeft;
+```js
+left =element.offsetLeft;
+```
 
 `left` est un entier représentant le décalage vers la gauche en pixels.
 
@@ -25,12 +28,14 @@ de l'élément courant est décalé vers la gauche au sein du nœud [`offsetPare
 
 ### Exemple
 
-    var colorTable = document.getElementById("t1");
-    var tOLeft = colorTable.offsetLeft;
+```js
+var colorTable = document.getElementById("t1");
+var tOLeft = colorTable.offsetLeft;
 
-    if (tOLeft > 5) {
-      // grand décalage à gauche&nbsp;: faire quelque chose ici
-    }
+if (tOLeft > 5) {
+  // grand décalage à gauche&nbsp;: faire quelque chose ici
+}
+```
 
 ### Exemple
 

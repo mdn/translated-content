@@ -10,6 +10,7 @@ tags:
   - Élément(2)
 translation_of: Web/SVG/Element/line
 ---
+
 {{SVGRef}}
 
 L'élément `line` est un élément de la catégorie des formes simples SVG, utilisé pour créer une ligne connectant deux points.
@@ -39,10 +40,10 @@ html,body,svg { height:100% }
 
 ### Attributs globaux
 
-- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel "en/SVG/Attribute#ConditionalProccessing")&nbsp;;
-- [Attributs centraux](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core")&nbsp;;
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Attributs_d'.C3.A9v.C3.A9nement_graphique "en/SVG/Attribute#GraphicalEvent")&nbsp;;
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_pr.C3.A9sentation "en/SVG/Attribute#Presentation")&nbsp;;
+- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel)&nbsp;;
+- [Attributs centraux](/fr/docs/Web/SVG/Attribute#Attributs_de_base)&nbsp;;
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Attributs_d'.C3.A9v.C3.A9nement_graphique)&nbsp;;
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_pr.C3.A9sentation)&nbsp;;
 - {{ SVGAttr("class") }}&nbsp;;
 - {{ SVGAttr("style") }}&nbsp;;
 - {{ SVGAttr("externalResourcesRequired") }}&nbsp;;
@@ -57,7 +58,7 @@ html,body,svg { height:100% }
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGLineElement`](/fr/DOM/SVGLineElement "en/DOM/SVGLineElement").
+Cet élément implémente l'interface [`SVGLineElement`](/fr/DOM/SVGLineElement).
 
 ## Compatibilité des navigateurs
 

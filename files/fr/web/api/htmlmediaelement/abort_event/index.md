@@ -10,6 +10,7 @@ tags:
   - abort
 translation_of: Web/API/HTMLMediaElement/abort_event
 ---
+
 {{APIRef}}
 
 L'événement **`abort`** se déclenche si l'élément écouté ne s'est pas chargé complétement. Il est désactivé si le résultat obtenu est une erreur.
@@ -56,14 +57,11 @@ video.appendChild(source);
 
 ## Spécifications
 
-| Specification                                                                                | Status                           |
-| -------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', "media.html#event-media-abort")}}             | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-abort")}} | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.HTMLMediaElement.abort_event")}}
+{{Compat}}
 
 ## Voir aussi
 

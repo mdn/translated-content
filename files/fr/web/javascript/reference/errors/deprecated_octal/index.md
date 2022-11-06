@@ -9,14 +9,17 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_octal
 original_slug: Web/JavaScript/Reference/Erreurs/Deprecated_octal
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: Octal numeric literals and escape characters not allowed in strict mode (Edge)
-    SyntaxError:
-    "0"-prefixed octal literals and octal escape sequences are deprecated;
-    for octal literals use the "0o" prefix instead
+```
+SyntaxError: Octal numeric literals and escape characters not allowed in strict mode (Edge)
+SyntaxError:
+"0"-prefixed octal literals and octal escape sequences are deprecated;
+for octal literals use the "0o" prefix instead
+```
 
 ## Type d'erreur
 

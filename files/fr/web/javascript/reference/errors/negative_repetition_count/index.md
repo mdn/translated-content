@@ -8,13 +8,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Negative_repetition_count
 original_slug: Web/JavaScript/Reference/Erreurs/Negative_repetition_count
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    RangeError: argument out of range (Edge)
-    RangeError: repeat count must be non-negative (Firefox)
-    RangeError: Invalid count value (Chrome)
+```
+RangeError: argument out of range (Edge)
+RangeError: repeat count must be non-negative (Firefox)
+RangeError: Invalid count value (Chrome)
+```
 
 ## Type d'erreur
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/CSSValue
 ---
+
 {{APIRef ("DOM")}}L'interface **CSSValue** représente la valeur calculée actuelle d'une propriété CSS.
 
 ## Propriétés
@@ -55,13 +56,11 @@ translation_of: Web/API/CSSValue
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM2 Style', 'css.html#CSS-CSSValue', 'CSSValue')}} | {{Spec2('DOM2 Style')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CSSValue")}}
+{{Compat}}
 
 ## Voir aussi
 

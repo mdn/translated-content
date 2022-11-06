@@ -10,6 +10,7 @@ tags:
   - débogage
 translation_of: Web/API/Console/table
 ---
+
 {{APIRef("Console API")}}
 
 Affiche des données tabulaires sous la forme d'un tableau.
@@ -122,7 +123,9 @@ Vous pouvez ordonner les colonnes en cliquant sur l'intitulé de la colonne.
 
 ## Syntaxe
 
-    console.table(data [, columns]);
+```js
+console.table(data [, columns]);
+```
 
 ### Paramètres
 
@@ -131,12 +134,10 @@ Vous pouvez ordonner les colonnes en cliquant sur l'intitulé de la colonne.
 - `columns`
   - : Un tableau contenant les noms des colonnes à inclure dans la sortie.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#table", "console.table()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.table")}}
+{{Compat}}

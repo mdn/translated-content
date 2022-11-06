@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-text-stroke-color
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-text-stroke-color`** permet de définir la couleur de la ligne utilisée pour le contour du text. Si cette propriété n'est pas définie, c'est la valeur de {{cssxref("color")}} qui sera utilisée.
@@ -72,14 +73,11 @@ colorPicker.addEventListener("change", function(evt) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                                                                                      | État                                        | Commentaires                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------- | ------------------------------------- |
-| {{SpecName('Compat', '#the-webkit-text-stroke-color', '-webkit-text-stroke-color')}}                                                                                                                                                   | {{Spec2('Compat')}}                    | Définition initiale dans un standard. |
-| [Référence CSS Safari -webkit-text-stroke-color dans ce document.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-stroke-color) | Documentation non-officielle, non-standard. | Documentation initiale.               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-text-stroke-color")}}
+{{Compat}}
 
 ## Voir aussi
 

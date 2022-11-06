@@ -8,13 +8,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Malformed_URI
 original_slug: Web/JavaScript/Reference/Erreurs/Malformed_URI
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    URIError: The URI to be encoded contains invalid character (Edge)
-    URIError: malformed URI sequence (Firefox)
-    URIError: URI malformed (Chrome)
+```
+URIError: The URI to be encoded contains invalid character (Edge)
+URIError: malformed URI sequence (Firefox)
+URIError: URI malformed (Chrome)
+```
 
 ## Type d'erreur
 

@@ -1,15 +1,8 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
-tags:
-  - CSS
-  - CSS Property
-  - CSS テキスト
-  - Reference
-  - SVG
-  - recipe:css-property
-browser-compat: css.properties.letter-spacing
 ---
+
 {{CSSRef}}
 
 **`letter-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの水平方向の字間のスペースに関する挙動を設定します。この値はテキストを描画する際に文字間の自然な空間に追加されます。 `letter-spacing` が正の値であった場合は、文字と文字の間が開き、 `letter-spacing` が負の値であった場合は、文字と文字が互いに近づきます。
@@ -22,7 +15,7 @@ browser-compat: css.properties.letter-spacing
 /* キーワード値 */
 letter-spacing: normal;
 
-/* &lt;length&gt; 値 */
+/* <length> 値 */
 letter-spacing: 0.3em;
 letter-spacing: 3px;
 letter-spacing: .3px;

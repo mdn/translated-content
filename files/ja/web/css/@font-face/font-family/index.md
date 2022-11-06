@@ -1,16 +1,8 @@
 ---
 title: font-family
 slug: Web/CSS/@font-face/font-family
-tags:
-  - '@font-face'
-  - アットルール記述子
-  - CSS
-  - CSS 記述子
-  - CSS フォント
-  - リファレンス
-browser-compat: css.at-rules.font-face.font-family
-translation_of: Web/CSS/@font-face/font-family
 ---
+
 {{CSSRef}}
 
 **`font-family`** は CSS の記述子で、 {{cssxref("@font-face")}} ルールで指定されたフォントのフォントファミリーを指定することができます。

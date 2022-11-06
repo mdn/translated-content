@@ -10,6 +10,7 @@ tags:
   - mouseenter
 translation_of: Web/API/Element/mouseenter_event
 ---
+
 {{APIRef}}
 
 L'évènement **`mouseenter`** est déclenché à partir d'un élément {{domxref("Element")}} lorsqu'un dispositif de pointage est déplacé et que son curseur entre sur l'élément.
@@ -122,14 +123,11 @@ function addListItem(text) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('UI Events', '#event-type-mouseenter', 'mouseenter')}} | {{Spec2('UI Events')}}     |
-| {{SpecName('DOM3 Events', '#event-type-mouseenter', 'mouseenter')}} | {{Spec2('DOM3 Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.mouseenter_event")}}
+{{Compat}}
 
 ## Voir aussi
 

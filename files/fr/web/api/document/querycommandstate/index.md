@@ -7,6 +7,7 @@ tags:
   - Document
 translation_of: Web/API/Document/queryCommandState
 ---
+
 {{ApiRef("DOM")}}
 
 ## Syntaxe
@@ -21,13 +22,11 @@ TBD
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML Editing','#execcommand()','execCommand')}} | {{Spec2('HTML Editing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.queryCommandState")}}
+{{Compat}}
 
 ## Voir aussi
 

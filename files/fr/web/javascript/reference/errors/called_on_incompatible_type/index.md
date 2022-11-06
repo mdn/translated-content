@@ -8,15 +8,18 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Called_on_incompatible_type
 original_slug: Web/JavaScript/Reference/Erreurs/Called_on_incompatible_type
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    TypeError: 'this' is not a Set object (Edge)
-    TypeError: Function.prototype.toString called on incompatible object (Firefox)
-    TypeError: Function.prototype.bind called on incompatible target (Firefox)
-    TypeError: Method Set.prototype.add called on incompatible receiver undefined (Chrome)
-    TypeError: Bind must be called on a function (Chrome)
+```
+TypeError: 'this' is not a Set object (Edge)
+TypeError: Function.prototype.toString called on incompatible object (Firefox)
+TypeError: Function.prototype.bind called on incompatible target (Firefox)
+TypeError: Method Set.prototype.add called on incompatible receiver undefined (Chrome)
+TypeError: Bind must be called on a function (Chrome)
+```
 
 ## Type d'erreur
 

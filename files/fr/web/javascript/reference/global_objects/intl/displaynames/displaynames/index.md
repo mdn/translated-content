@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
 ---
+
 {{JSRef}}
 
 Le constructeur **`Intl.DisplayNames()`** crée des objets qui permettent de fournir des traductions constantes des noms de langues, régions et systèmes d'écriture.
@@ -16,7 +17,9 @@ Le constructeur **`Intl.DisplayNames()`** crée des objets qui permettent de fou
 
 ## Syntaxe
 
-    new Intl.DisplayNames([langues[, options]])
+```js
+new Intl.DisplayNames([langues[, options]])
+```
 
 ### Paramètres
 
@@ -70,13 +73,11 @@ console.log((new Intl.DisplayNames()).of('US'));
 
 ## Spécifications
 
-| Spécification                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Intl.DisplayNames', '#sec-intl-displaynames-constructor', 'the Intl.DisplayNames constructor')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.DisplayNames.DisplayNames")}}
+{{Compat}}
 
 ## Voir aussi
 

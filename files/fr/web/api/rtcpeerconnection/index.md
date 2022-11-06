@@ -4,6 +4,7 @@ slug: Web/API/RTCPeerConnection
 translation_of: Web/API/RTCPeerConnection
 browser-compat: api.RTCPeerConnection
 ---
+
 {{APIRef('WebRTC')}}
 
 L'interface **`RTCPeerConnection`** représente une connexion WebRTC entre un ordinateur local et un pair distant. Elle fournit des méthodes pour se connecter à un pair distant, entretenir et surveiller la connexion et fermer la connexion dès qu'elle n'est plus nécessaire.
@@ -76,9 +77,9 @@ _Cette interface hérite des gestionnaires d'évènements de [`EventTarget`](/fr
 
 ### Propriétés obsolètes
 
-- [`onaddstream`](/fr/docs/Web/API/RTCPeerConnection/onaddstream) {{Obsolete_Inline}}
+- [`onaddstream`](/fr/docs/Web/API/RTCPeerConnection/onaddstream) {{deprecated_inline}}
   - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement obsolète {{DOMxRef("RTCPeerConnection/addstream_event", "addstream")}}.
-- [`onremovestream`](/fr/docs/Web/API/RTCPeerConnection/onremovestream) {{Obsolete_Inline}}
+- [`onremovestream`](/fr/docs/Web/API/RTCPeerConnection/onremovestream) {{deprecated_inline}}
   - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement obsolète {{DOMxRef("RTCPeerConnection/removestream_event", "removestream")}}.
 
 ## Méthodes
@@ -132,13 +133,13 @@ _Cette interface hérite également des méthodes de [`EventTarget`](/fr/docs/We
 
 ### Méthodes obsolètes
 
-- [`addStream()`](/fr/docs/Web/API/RTCPeerConnection/addStream) {{Obsolete_Inline}}
+- [`addStream()`](/fr/docs/Web/API/RTCPeerConnection/addStream) {{deprecated_inline}}
   - : Ajoute un objet [`MediaStream`](/fr/docs/Web/API/MediaStream) comme source audio ou vidéo locale. La méthode [`addTrack()`](/fr/docs/Web/API/RTCPeerConnection/addTrack) devrait être utilisée à la place pour chaque piste qu'on souhaite envoyer au pair distant.
-- [`createDTMFSender()`](/fr/docs/Web/API/RTCPeerConnection/createDTMFSender) {{Obsolete_Inline}}
+- [`createDTMFSender()`](/fr/docs/Web/API/RTCPeerConnection/createDTMFSender) {{deprecated_inline}}
   - : Crée un nouvel émetteur [`RTCDTMFSender`](/fr/docs/Web/API/RTCDTMFSender) associé à une piste [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack) spécifique et qui est capable d'envoyer des signaux téléphoniques [DTMF](/fr/docs/Glossary/DTMF) via la connexion.
-- [`getStreamById()`](/fr/docs/Web/API/RTCPeerConnection/getStreamById) {{Obsolete_Inline}}
+- [`getStreamById()`](/fr/docs/Web/API/RTCPeerConnection/getStreamById) {{deprecated_inline}}
   - : Renvoie l'objet [`MediaStream`](/fr/docs/Web/API/MediaStream) ayant l'identifiant indiqué qui est associé à l'extrémité locale ou distante de la connexion. Cette propriété a été remplacée par les méthodes [`getSenders()`](/fr/docs/Web/API/RTCPeerConnection/getSenders) et [`getReceivers()`](/fr/docs/Web/API/RTCPeerConnection/getReceivers).
-- [`removeStream()`](/fr/docs/Web/API/RTCPeerConnection/removeStream) {{Obsolete_Inline}}
+- [`removeStream()`](/fr/docs/Web/API/RTCPeerConnection/removeStream) {{deprecated_inline}}
   - : Supprime un flux [`MediaStream`](/fr/docs/Web/API/MediaStream) qui est une source audio ou vidéo locale. Cette méthode est obsolète, on doit privilégier [`removeTrack()`](/fr/docs/Web/API/RTCPeerConnection/removeTrack) à la place.
 
 ## Évènements
@@ -166,9 +167,9 @@ On pourra intercepter ces évènements grâce à [`addEventListener()`](/fr/docs
 
 ### Évènements obsolètes
 
-- [`addstream`](/fr/docs/Web/API/RTCPeerConnection/addstream_event) {{Obsolete_Inline}}
+- [`addstream`](/fr/docs/Web/API/RTCPeerConnection/addstream_event) {{deprecated_inline}}
   - : Envoyé lorsqu'un nouveau flux [`MediaStream`](/fr/docs/Web/API/MediaStream) a été ajouté à la connexion. Plutôt que d'écouter cet évènement obsolète, on privilégiera les évènements [`track`](/fr/docs/Web/API/RTCPeerConnection/track_event). Un tel évènement est envoyé pour chaque piste [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack) ajoutée à la connexion. Également disponible via la propriété [`onaddstream`](/fr/docs/Web/API/RTCPeerConnection/onaddstream).
-- [`removestream`](/fr/docs/Web/API/RTCPeerConnection/removestream_event) {{Obsolete_Inline}}
+- [`removestream`](/fr/docs/Web/API/RTCPeerConnection/removestream_event) {{deprecated_inline}}
   - : Envoyé lorsqu'un flux [`MediaStream`](/fr/docs/Web/API/MediaStream) est retiré de la connexion. Plutôt que d'écouter cet évènement obsolète, on privilégiera les évènements [`removetrack`](/fr/docs/Web/API/MediaStream/removetrack_event) pour chaque flux. Également disponible via la propriété [`onremovestream`](/fr/docs/Web/API/RTCPeerConnection/onremovestream).
 
 ## Spécifications

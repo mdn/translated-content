@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
 ---
+
 {{AddonSidebar()}}
 
 Ce type contient les données nécessaires pour :

@@ -8,11 +8,14 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 original_slug: Web/JavaScript/Reference/Erreurs/Missing_formal_parameter
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: missing formal parameter (Firefox)
+```
+SyntaxError: missing formal parameter (Firefox)
+```
 
 ## Type d'erreur
 

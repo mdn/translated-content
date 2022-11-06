@@ -43,8 +43,8 @@ myCar.year = 1969;
 ```js
 const myCar = {
   make: 'Ford',
-  model: 'Mustang',
-  year: 1969
+  model: 'Mustang',
+  year: 1969
 };
 ```
 
@@ -121,8 +121,8 @@ myCar.year = 1969
 
 객체 속성을 나열하거나 순회하는 방법에는 세 가지 내장된 방법이 있습니다.
 
-- [for...in](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 반복문. 이 방법은 객체와 객체의 프로토타입 체인에 존재하는 모든 열거 가능한 속성을 순회합니다.
-  이 방법은 객체와 객체의 프로토타입 체인 상의 열거 가능한 모든 프로퍼티를 순회한다.
+- [for...in](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 반복문. 이 방법은 객체와 객체의 프로토타입 체인에 존재하는 모든 열거 가능한 속성을 순회합니다.
+  이 방법은 객체와 객체의 프로토타입 체인 상의 열거 가능한 모든 프로퍼티를 순회한다.
 - {{jsxref("Object.keys", "Object.keys(o)")}}. 이 방법은 `o` 객체 자신만의(프로토타입 체인을 제외한) 열거 가능한 속성 이름("키")을 배열로 반환합니다.
 - {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(o)")}}. 이 방법은 `o` 객체 자신만의 모든(열거 불가능하더라도) 속성 이름("키")을 배열로 반환합니다.
 
@@ -130,15 +130,15 @@ myCar.year = 1969
 
 ```js
 function listAllProperties(o) {
-	let objectToInspect = o;
-	let result = [];
+  let objectToInspect = o;
+  let result = [];
 
   while(objectToInspect !== null) {
     result = result.concat(Object.getOwnPropertyNames(objectToInspect));
     objectToInspect = Object.getPrototypeOf(objectToInspect)
   }
 
-	return result;
+  return result;
 }
 ```
 
@@ -321,11 +321,11 @@ objectName.methodName = functionName;
 const myObj = {
   myMethod: function(params) {
     // 뭔가 하기...
-  }
+  }
 
-  // 이렇게도  동작해요
-  myOtherMethod(params) {
-    // 뭔가 다른거 하기...
+  // 이렇게도  동작해요
+  myOtherMethod(params) {
+    // 뭔가 다른거 하기...
   }
 };
 ```
@@ -376,18 +376,18 @@ car2.displayCar();
 
 ## `this`로 객체 참조하기
 
-JavaScript에는 [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)라는 특별한 키워드가 있습니다. `this`를 사용하면 메서드 내에서 현재 객체를 참조할 수 있습니다. 예를 들어 `Manager`and `Intern` 두 객체를 가정해보겠습니다. 각각의 객체는 자신만의 `name`, `age`, `job` 속성을 가집니다. 아래의 `sayHi()` 함수에서 `this.name`에 접근하는 것에 주목하세요. 이 함수를 각각의 객체에 할당한 후 호출하면 `'안녕하세요, 제 이름은'`, 자신의 `name`, 그리고 `'입니다.'`로 구성된 문자열을 출력하게 됩니다.
+JavaScript에는 [`this`](/ko/docs/Web/JavaScript/Reference/Operators/this)라는 특별한 키워드가 있습니다. `this`를 사용하면 메서드 내에서 현재 객체를 참조할 수 있습니다. 예를 들어 `Manager`and `Intern` 두 객체를 가정해보겠습니다. 각각의 객체는 자신만의 `name`, `age`, `job` 속성을 가집니다. 아래의 `sayHi()` 함수에서 `this.name`에 접근하는 것에 주목하세요. 이 함수를 각각의 객체에 할당한 후 호출하면 `'안녕하세요, 제 이름은'`, 자신의 `name`, 그리고 `'입니다.'`로 구성된 문자열을 출력하게 됩니다.
 
 ```js
 const Manager = {
-  name: "John",
-  age: 27,
-  job: "소프트웨어 엔지니어"
+  name: "John",
+  age: 27,
+  job: "소프트웨어 엔지니어"
 }
 const Intern = {
-  name: "Ben",
-  age: 21,
-  job: "소프트웨어 엔지니어 인턴"
+  name: "Ben",
+  age: 21,
+  job: "소프트웨어 엔지니어 인턴"
 }
 
 function sayHi() {
@@ -454,8 +454,8 @@ console.log(o.a); // 25
 const o = { a: 0 };
 
 Object.defineProperties(o, {
-    'b': { get: function() { return this.a + 1; } },
-    'c': { set: function(x) { this.a = x / 2; } }
+    'b': { get: function() { return this.a + 1; } },
+    'c': { set: function(x) { this.a = x / 2; } }
 });
 
 o.c = 10; // 설정자 실행, a 속성에 10 / 2 = 5 할당

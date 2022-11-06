@@ -10,9 +10,10 @@ tags:
   - dblclick
 translation_of: Web/API/Element/dblclick_event
 ---
+
 {{APIRef}}
 
-L'évènement **`dblclick`** se déclenche à partir d'un élément lorsqu'un bouton d'un dispositif de pointage est double-cliqué (c'est-à-dire qu'on clique deux fois sur le méme élément dans un temps très court).
+L'évènement **`dblclick`** se déclenche à partir d'un élément lorsqu'un bouton d'un dispositif de pointage est double-cliqué (c'est-à-dire qu'on clique deux fois sur le même élément dans un laps de temps très court).
 
 `dblclick` se déclenche après deux évènements {{domxref("Element/click_event", "click")}} (et, par extension, après deux paires d'évènements {{domxref("Element.mousedown_event", "mousedown")}} et {{domxref("Element.mouseup_event", "mouseup")}}).
 
@@ -86,14 +87,11 @@ aside {
 
 ## Spécifications
 
-| Spécification                                                                        | État                             |
-| ------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('UI Events', '#event-type-dblclick', 'dblclick')}}     | {{Spec2('UI Events')}}     |
-| {{SpecName('DOM3 Events', '#event-type-dblclick', 'dblclick')}} | {{Spec2('DOM3 Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.dblclick_event")}}
+{{Compat}}
 
 ## Voir aussi
 

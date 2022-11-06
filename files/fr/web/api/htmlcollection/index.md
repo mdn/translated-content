@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLCollection
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **HTMLCollection** est constituée d'une collection générique (à la manière d'un tableau similaire à [arguments](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments)) d'éléments (dans l'ordre du document) et offre des méthodes et des propriétés pour sélectionner ces éléments dans la liste.
@@ -57,11 +58,7 @@ Certains navigateurs se comportent différemment quand il y a plus d'un élémen
 
 ## Spécifications
 
-| Specification                                                                                    | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#htmlcollection', 'HTMLCollection')}}             | {{ Spec2('DOM WHATWG') }} |                      |
-| {{SpecName('DOM2 HTML', 'html.html#ID-75708506', 'HTMLCollection')}}     | {{ Spec2('DOM2 HTML') }} |                      |
-| {{SpecName('DOM1', 'level-one-html.html#ID-75708506', 'HTMLCollection')}} | {{ Spec2('DOM1') }}         | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

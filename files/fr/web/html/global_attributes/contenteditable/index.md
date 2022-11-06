@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/contenteditable
 original_slug: Web/HTML/Attributs_universels/contenteditable
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`contenteditable`** est un attribut à valeur contrainte qui indique si l'élément courant doit pouvoir être édité par l'utilisateur ou non. Lorsque c'est le cas, des éléments de l'interface du navigateur (ou de l'agent utilisateur) sont modifiés afin de permettre l'édition.
@@ -28,17 +29,11 @@ Il est possible de modifier la couleur du symbole d'insertion grâce à la propr
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                | État                             | Commentaires                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("HTML Editing", "contentEditable.html#contenteditable", "contenteditable")}}                                                         | {{Spec2("HTML Editing")}} | Ajout de `"events"`, `"caret"`, `"typing"`, `"plaintext-only"`.                                                 |
-| {{SpecName("HTML WHATWG", "editing.html#attr-contenteditable", "contenteditable")}}                                                             | {{Spec2("HTML WHATWG")}} | Aucune modification depuis la dernière dérivation, {{SpecName("HTML5.2")}}                             |
-| {{SpecName("HTML5.2", "editing.html#making-document-regions-editable-the-contenteditable-content-attribute", "contenteditable")}} | {{Spec2("HTML5.2")}}     | Dérivation de {{SpecName("HTML WHATWG")}}, aucune modification depuis {{SpecName("HTML5.1")}} |
-| {{SpecName("HTML5.1", "editing.html#making-document-regions-editable-the-contenteditable-content-attribute", "contenteditable")}} | {{Spec2("HTML5.1")}}     | Dérivation de {{SpecName("HTML WHATWG")}}, aucune modification depuis {{SpecName("HTML5 W3C")}} |
-| {{SpecName("HTML5 W3C", "editing.html#attr-contenteditable", "contenteditable")}}                                                                 | {{Spec2("HTML5 W3C")}}     | Dérivation de {{SpecName("HTML WHATWG")}}, définition initiale.                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.contenteditable")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,16 +1,8 @@
 ---
 title: レシピを投稿する
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
-tags:
-  - CSS
-  - 協力
-  - ガイド
-  - レイアウト
-  - テンプレート
-  - 料理帳
-  - レシピ
-translation_of: Web/CSS/Layout_cookbook/Contribute_a_recipe
 ---
+
 {{CSSRef}}
 
 レイアウト料理帳の例を提供したい場合、このページでは、例を公開するための手順について説明します。
@@ -23,17 +15,17 @@ translation_of: Web/CSS/Layout_cookbook/Contribute_a_recipe
 
 レシピは以下で構成されています。
 
-1.  ライブサンプル（live example）は、[CSS Examples GitHub リポジトリー](https://github.com/mdn/css-examples)に保存します。
-2.  その例のダウンロード可能なバージョンも、CSS Examples リポジトリーに保存します。
-3.  [CSS レイアウト料理帳](/ja/docs/Web/CSS/Layout_cookbook)内のページの詳細は次のとおりです。
+1. ライブサンプル（live example）は、[CSS Examples GitHub リポジトリー](https://github.com/mdn/css-examples)に保存します。
+2. その例のダウンロード可能なバージョンも、CSS Examples リポジトリーに保存します。
+3. [CSS レイアウト料理帳](/ja/docs/Web/CSS/Layout_cookbook)内のページの詳細は次のとおりです。
 
-    1.  要件 (Requirements)
-    2.  レシピ (Recipe)
-    3.  行った選択 (Choices made)
-    4.  有用な代替策または代替方法 (Useful fallbacks or alternative methods)
-    5.  アクセシビリティの考慮 (Accessibility concerns)
-    6.  ブラウザーの互換性 (Browser compatibility)
-    7.  関連資料 (Additional resources)
+    1. 要件 (Requirements)
+    2. レシピ (Recipe)
+    3. 行った選択 (Choices made)
+    4. 有用な代替策または代替方法 (Useful fallbacks or alternative methods)
+    5. アクセシビリティの考慮 (Accessibility concerns)
+    6. ブラウザーの互換性 (Browser compatibility)
+    7. 関連資料 (Additional resources)
 
 ### 1. パターンの作成
 
@@ -63,9 +55,9 @@ head の中の 2 番目のブロックからの `editable` クラスの CSS も�
 
 #### 役に立つヒント
 
-1.  `textarea` 内で CSS と HTML をインデントしないでください。代わりに行の先頭にぶつけてください。 レンダリングすると見栄えがよくなります。
-2.  必要な画像がある場合は、例と共にディレクトリーに入れます。または、すでにそこにあるものを使用することを歓迎します。
-3.  インラインスタイルで高さを変更して、`textarea` の高さを調整できます。
+1. `textarea` 内で CSS と HTML をインデントしないでください。代わりに行の先頭にぶつけてください。 レンダリングすると見栄えがよくなります。
+2. 必要な画像がある場合は、例と共にディレクトリーに入れます。または、すでにそこにあるものを使用することを歓迎します。
+3. インラインスタイルで高さを変更して、`textarea` の高さを調整できます。
 
 ### 3. ダウンロード版の作成
 

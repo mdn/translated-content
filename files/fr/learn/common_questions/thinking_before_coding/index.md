@@ -8,6 +8,7 @@ tags:
 translation_of: Learn/Common_questions/Thinking_before_coding
 original_slug: Apprendre/Commencez_votre_projet_web
 ---
+
 Cette article présente l'étape primordiale de n'importe quel projet définir ce qu'on souhaite accomplir avec.
 
 <table class="standard-table">
@@ -67,12 +68,12 @@ Supposons que vous êtes un musicien. Vous pourriez souhaiter
 
 Une fois que vous avez obtenu une telle liste, vous avez besoin d'établir des priorités. Ordonnez les objectifs du plus important au moins important
 
-1.  Permettre aux gens d'écouter votre musique
-2.  Parler de votre musique.
-3.  Rencontrer d'autres musiciens.
-4.  Vendre des goodies.
-5.  Enseigner la musique à travers des vidéos.
-6.  Publier des photos de vos chats.
+1. Permettre aux gens d'écouter votre musique
+2. Parler de votre musique.
+3. Rencontrer d'autres musiciens.
+4. Vendre des goodies.
+5. Enseigner la musique à travers des vidéos.
+6. Publier des photos de vos chats.
 
 Faire cet exercice simple, écrire les objectifs et les trier, va vous aider quand vous aurez des décisions à prendre (dois-je implémenter ces fonctionnalités ? faut-il que j'utilise ces services ? est-il nécessaire de créer ces designs ?).
 

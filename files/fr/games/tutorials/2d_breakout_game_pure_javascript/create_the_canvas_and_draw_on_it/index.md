@@ -15,6 +15,7 @@ translation_of: >-
 original_slug: >-
   Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
@@ -34,8 +35,8 @@ La structure de la page HTML est vraiment simple, car tout le jeu sera contenu d
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+      * { padding: 0; margin: 0; }
+      canvas { background: #eee; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -43,7 +44,7 @@ La structure de la page HTML est vraiment simple, car tout le jeu sera contenu d
 <canvas id="myCanvas" width="480" height="320"></canvas>
 
 <script>
-	// JavaScript code goes here
+  // JavaScript code goes here
 </script>
 
 </body>
@@ -87,10 +88,10 @@ ctx.closePath();
 
 Comme nous pouvons le voir, nous utilisons à nouveau les méthodes {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} et {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} . Entre elles, la partie la plus importante du code ci-dessus est la méthode {{domxref("CanvasRenderingContext2D.arc()","arc()")}} . Elle comporte six paramètres :
 
-- les coordonnées `x` et`y` du centre de l'arc
+- les coordonnées `x` et `y` du centre de l'arc
 - rayon de l'arc
 - l'angle de départ et l'angle de fin (pour finir de dessiner le cercle, en radiant)
-- direction du dessin (`false`_(faux)_ pour le sens des aiguilles d'une montre, la valeur par défaut, ou `true` (vrai) pour le sens inverse). Ce dernier paramètre est facultatif.
+- direction du dessin (`false` _(faux)_ pour le sens des aiguilles d'une montre, la valeur par défaut, ou `true` (vrai) pour le sens inverse). Ce dernier paramètre est facultatif.
 
 La propriété {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} semble différente par rapport à l'exemple précédent. C'est parce que, tout comme avec CSS, la couleur peut être spécifiée sous la forme d'une valeur hexadécimale, d'un mot-clé, de la fonction `rgba ()` _(RVBA)_ ou de toute autre méthode disponible pour les couleurs.
 

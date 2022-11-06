@@ -1,20 +1,9 @@
 ---
 title: repeating-radial-gradient()
 slug: Web/CSS/gradient/repeating-radial-gradient
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Gradients
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/gradient/repeating-radial-gradient()
 original_slug: Web/CSS/gradient/repeating-radial-gradient()
-browser-compat: css.types.image.gradient.repeating-radial-gradient
 ---
+
 {{CSSRef}}
 
 **`repeating-radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、原点から広がり反復するグラデーションから成る画像を生成します。 {{cssxref("gradient/radial-gradient()", "radial-gradient()")}} と似ており、同じ引数を取りますが、 {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}} と同様にすべての方向に色経由点を無限に繰り返してコンテナー全体を埋めます。関数の返値は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊型です。
@@ -59,7 +48,7 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
     | `farthest-side`   | `closest-side` と同様ですが、終端の形状がその中心から最も遠い辺 (または縦と横の辺) に接するように大きさが調整される点が異なります。               |
     | `farthest-corner` | グラデーションの終端の形状は、ボックスの中心から最も遠い頂点に接するように大きさが調整されます。                                                  |
 
-    > **Note:** この関数の初期の実装では、他のキーワード (`cover` および `contain`) をそれぞれ標準の `farthest-corner` および `closest-side` の別名として含めていました。実装によってはすでに古い形を外しているので、標準的なキーワードのみを使用してください。
+    > **メモ:** この関数の初期の実装では、他のキーワード (`cover` および `contain`) をそれぞれ標準の `farthest-corner` および `closest-side` の別名として含めていました。実装によってはすでに古い形を外しているので、標準的なキーワードのみを使用してください。
 
 - `<color-stop>`
   - : 色経由点の {{cssxref("&lt;color&gt;")}} 値と、それに続く省略可能な経由位置 (グラデーション軸沿いの {{cssxref("&lt;percentage&gt;")}} または {{cssxref("&lt;length&gt;")}}) です。 percentage が `0%`、または length が `0` の場合は、グラデーションの中心を表します。 `100%` は終端の形状と仮想グラデーション光の交点を表します。その間のパーセント値は仮想グラデーション光における直線的な位置です。
@@ -131,7 +120,7 @@ where <extent-keyword> = closest-corner | closest-side | farthest-corner | farth
 
 楕円のグラデーションは左上から 20% の位置が中心となり、中心と最も遠い角 (右下の角) の間で 10 回繰り返します。色経由点で複数の位置に対応しているブラウザーでは、赤と緑の縞模様の楕円が表示されます。この構文にまだ対応していないブラウザーでは、赤から黒、それから青から緑へと変化するグラデーションが表示されます。
 
-> **Note:** 他の例は [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)をご覧ください。
+> **メモ:** 他の例は [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)をご覧ください。
 
 ## 仕様書
 

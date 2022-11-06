@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/referrer
 ---
+
 {{APIRef}}
 
 ## Résumé
@@ -16,7 +17,9 @@ Renvoie l'[URI](http://www.w3.org/Addressing/#background) de la page de provenan
 
 ## Syntaxe
 
-    string = document.referrer;
+```js
+string = document.referrer;
+```
 
 ## Notes
 

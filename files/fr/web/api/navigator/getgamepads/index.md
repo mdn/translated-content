@@ -3,6 +3,7 @@ title: Navigator.getGamepads()
 slug: Web/API/Navigator/getGamepads
 translation_of: Web/API/Navigator/getGamepads
 ---
+
 {{ APIRef("Navigator") }}{{SeeCompatTable}}
 
 La méthode **`Navigator.getGamepads()`** renvoie un tableau d'objets {{ domxref("Gamepad") }}, un par contrôleur connecté à la machine.
@@ -11,7 +12,9 @@ Des éléments dans le tableau peuvent être `null` si un contrôleur est décon
 
 ## Syntaxe
 
-     var arrayGP = navigator.getGamepads();
+```js
+var arrayGP = navigator.getGamepads();
+```
 
 ## Exemple
 
@@ -26,13 +29,11 @@ window.addEventListener("gamepadconnected", function(e) {
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                       | Commentaire          |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('Gamepad', '', 'The Gamepad API specification')}} | {{Spec2('Gamepad')}} | Première définition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.getGamepads")}}
+{{Compat}}
 
 ## Voir aussi
 

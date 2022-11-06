@@ -10,7 +10,7 @@ translation_of: Web/API/Event/target
 ---
 {{ApiRef("DOM")}}
 
-{{domxref("Event")}} 인터페이스의 **`target`** 속성은 이벤트가 발생한 대상 객체를 가리킵니다. 버블링과 캡처링 단계에서는 {{domxref("Event.currentTarget")}}과 다를 수 있습니다.
+{{domxref("Event")}} 인터페이스의 **`target`** 속성은 이벤트가 발생한 대상 객체를 가리킵니다. 버블링과 캡처링 단계에서는 {{domxref("Event.currentTarget")}}과 다를 수 있습니다.
 
 ### 값
 
@@ -18,7 +18,7 @@ translation_of: Web/API/Event/target
 
 ## 예제
 
-`event.target` 속성을 사용하여 **이벤트 위임**을 구현할 수 있습니다.
+`event.target` 속성을 사용하여 **이벤트 위임**을 구현할 수 있습니다.
 
 ```js
 // 목록 생성

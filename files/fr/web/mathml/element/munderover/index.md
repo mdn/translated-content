@@ -7,6 +7,7 @@ tags:
   - Référence MathML
 translation_of: Web/MathML/Element/munderover
 ---
+
 {{MathMLRef()}}
 
 L'élément MathML `<munderover>` est utilisé pour attacher des accents et limites à la fois en-dessous et au-dessus d'une expression.
@@ -51,14 +52,11 @@ Exemple de rendu: ![integral-0-infinity](munderover.png)
 
 ## Spécifications
 
-| Specification                                                                                    | Status                       | Comment               |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.munderover', 'munderover') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.munderover', 'munderover') }} | {{ Spec2('MathML2') }} | Initial specification |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.munderover")}}
+{{Compat}}
 
 ## Voir aussi
 

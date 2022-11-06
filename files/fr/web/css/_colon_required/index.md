@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:required
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:required`** permet de cibler un élément {{HTMLElement("input")}} pour lequel l'attribut {{htmlattrxref("required", "input")}} est activé. Cela permet de mettre en forme les éléments obligatoires pour remplir correctement un formulaire.
@@ -58,8 +59,6 @@ input:required {
 
 {{EmbedLiveSample('Exemples','100%',150)}}
 
-
-
 ## Accessibilité
 
 Si un formulaire ({{HTMLElement("form")}}) contient des champs ({{htmlelement("input")}}) optionnels, les champs obligatoires doivent être indiqués avec l'attribut {{htmlattrxref("input","required")}}. Ainsi, les personnes utilisant des outils d'assistance (par exemple un lecteur d'écran) pourront savoir que ces champs ont besoin d'un contenu valide afin de pouvoir envoyer le formulaire.
@@ -69,20 +68,13 @@ Les champs obligatoires devraient également être indiqués visuellement et cet
 - [Explications des recommendation WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-
-
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires                                                                  |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-required', ':required')}}         | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                                          |
-| {{SpecName('HTML5 W3C', '#selector-required', ':required')}}             | {{Spec2('HTML5 W3C')}}         | Définition de la sémantique relative à HTML et aux contraintes de validation. |
-| {{SpecName('CSS4 Selectors', '#opt-pseudos', ':required')}}             | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                                          |
-| {{SpecName('CSS3 Basic UI', '#pseudo-required-value', ':required')}} | {{Spec2('CSS3 Basic UI')}} | Définition de la pseudo-classe mais pas de la sémantique associée.            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.required")}}
+{{Compat}}
 
 ## Voir aussi
 

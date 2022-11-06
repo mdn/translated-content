@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.WeakSet
 ---
 {{JSRef}}
 
-El objeto **`WeakSet`** te permite almacenar _objetos_ débiles en una colección.
+El objeto **`WeakSet`** te permite almacenar _objetos_ débiles en una colección.
 
 ## Descripción
 
@@ -113,4 +113,3 @@ _no son **el mismo objeto**_. Y así ambos se añaden al conjunto.
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
-

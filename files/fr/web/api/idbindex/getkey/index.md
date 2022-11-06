@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBIndex/getKey
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`getKey()`**, rattachée à l'interface {{domxref("IDBIndex")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, récupère la clé associée ou la clé primaire si l'argument passé à la fonction est un intervalle {{domxref("IDBKeyRange")}}.
@@ -73,7 +74,7 @@ Dans l'exemple qui suit, on ouvre une transaction et un magasin d'objets. Ensuit
 
 `myIndex.getKey('Bungle')` est ensuite utilisé afin d'obtenir la clé primaire de l'enregistrement pour lequel `lName` vaut `Bungle`. Le résultat de cette requête est imprimé dans la console lorsque la fonction de rappel (_callback_) de succès est déclenché.
 
-Enfin, on parcourt les enregistrements pour remplir un tableau HTML. Le dépôt [`indexeddb-examples`](https://github.com/mdn/IDBIndex-example) contient un exemple complet ([voir l'exemple en direct](https://mdn.github.io/indexeddb-examples/idbindex/)).
+Enfin, on parcourt les enregistrements pour remplir un tableau HTML. Le dépôt [`indexeddb-examples`](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples) contient un exemple complet ([voir l'exemple en direct](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
 
 ```js
 function displayDataByIndex() {
@@ -108,15 +109,13 @@ function displayDataByIndex() {
 };
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-getKey-IDBRequest-any-key', 'getKey()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.getKey")}}
+{{Compat}}
 
 ## Voir aussi
 

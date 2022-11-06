@@ -11,7 +11,8 @@ tags:
   - this
 translation_of: Learn/JavaScript/Objects/Basics
 ---
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects")}}
+
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 Dans ce premier article sur les objets JavaScript, nous verrons la syntaxe des objets JavaScript ainsi que quelques fonctionnalités JavaScript déjà aperçues dans les cours précédents, rappelant que beaucoup de fonctionnalités que vous utilisez sont en fait des objets.
 
@@ -311,4 +312,4 @@ Les objets permettent de conserver les informations de façon sûre, enfermées 
 
 Dans le prochain article, nous commencerons à voir la théorie de la programmation orientée objet (POO) et comment utiliser ces techniques en JavaScript.
 
-{{NextMenu("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects")}}
+{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}

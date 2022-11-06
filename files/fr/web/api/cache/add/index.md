@@ -13,6 +13,7 @@ tags:
   - ServiceWorker
 translation_of: Web/API/Cache/add
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La méthode **`add()`** de l'interface {{domxref("Cache")}} accepte une URL, la récupère, et ajoute l'objet réponse qui en résulte dans le cache. La méthode `add()` est équivalent au code suivant :
@@ -90,13 +91,11 @@ this.addEventListener('install', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-cache-add', 'Cache: add')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Cache.add")}}
+{{Compat}}
 
 ## Voir aussi
 

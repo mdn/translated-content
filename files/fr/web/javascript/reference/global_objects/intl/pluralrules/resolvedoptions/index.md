@@ -12,13 +12,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules/resolvedOptions
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.PluralRules.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent la locale et les options de formatage relatives aux règles de nombre calculées lors de l'initialisation de l'objet {{jsxref("PluralRules")}}.
 
 ## Syntaxe
 
-    pluralRule.resolvedOptions()
+```js
+pluralRule.resolvedOptions()
+```
 
 ### Valeur de retour
 

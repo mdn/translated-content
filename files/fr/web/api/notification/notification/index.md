@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/Notification/Notification
 browser-compat: api.Notification.Notification
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 Le constructeur **`Notification()`** crée une nouvelle instance d'objet [`Notification`](/fr/docs/Web/API/notification), qui représente une notification utilisateur.
@@ -76,6 +77,6 @@ Chrome pour Android lance une erreur `TypeError` lors de l'appel du constructeur
 La version 38.14352 et celles supérieure de MS Edge prend en charge l'`API Notification`. [Wikipédia - MS Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#Release_history)
 IE 11 et inférieur n'est pas pris en charge.
 
-## Voir également
+## Voir aussi
 
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

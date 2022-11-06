@@ -12,7 +12,8 @@ tags:
 translation_of: Web/HTML/Element/canvas
 browser-compat: html.elements.canvas
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 On utilise l'élément **HTML `<canvas>`** avec l'API [canvas](/fr/docs/Web/API/Canvas_API), ou l'API [WebGL](/fr/docs/Web/API/WebGL_API) pour dessiner des graphiques et des animations.
 

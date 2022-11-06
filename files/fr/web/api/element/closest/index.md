@@ -1,33 +1,32 @@
 ---
 title: Element.closest()
 slug: Web/API/Element/closest
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthodes
 translation_of: Web/API/Element/closest
+browser-compat: api.Element.closest
 ---
-{{APIRef('Shadow DOM')}}
 
-La méthode **`Element.closest()`** renvoie l'ancêtre le plus proche de l'élément courant (ou l'élément courant) qui correspond aux sélecteurs passés comme paramètres. S'il n'existe pas de tel ancêtre, la méthode renvoie `null`.
+{{APIRef('DOM')}}
+
+La méthode **`closest()`** traverse [l'élément](/fr/docs/Web/API/Element) courant et ses parents (en direction de la racine) jusqu'à trouver un nœud qui correspond aux sélecteurs exprimés par la chaîne de caractères passée en argument. Elle renverra l'élément ou l'ancêtre le plus proche qui correspond. Si aucun élément ne correspond, la méthode renvoie `null`.
 
 ## Syntaxe
 
-    var elt = element.closest(selecteurs);
+```js
+closest(selecteurs)
+```
 
 ### Paramètres
 
 - `selecteurs`
-  - : Une chaîne {{domxref("DOMString")}} qui contient une liste de sélecteurs tels que `"p:hover, .toto + q"`
+  - : Une chaîne de caractères contenant une liste de sélecteurs. Par exemple `p:hover, .toto + q`.
 
 ### Valeur de retour
 
-L'élément ({{domxref("Element")}}) qui est le plus proche ancêtre de l'élément courant et qui correspond aux sélecteurs décrits dans le paramètres ou {{jsxref("null")}} s'il n'y en a aucun.
+L'élément ([`Element`](/fr/docs/Web/API/Element)) qui est l'ancêtre le plus proche de l'élément courant et qui correspond aux sélecteurs. S'il n'y en a aucun, ce sera `null`.
 
 ### Exceptions
 
-- {{exception("SyntaxError")}} sera levée si `selecteurs` n'est pas une liste de sélecteurs valide.
+Une exception [`SyntaxError`](/fr/docs/Web/API/DOMException#syntaxerror) est levée si la chaîne de caractères `selecteurs` n'est pas une liste de sélecteurs valide.
 
 ## Exemples
 
@@ -35,9 +34,9 @@ L'élément ({{domxref("Element")}}) qui est le plus proche ancêtre de l'élém
 
 ```html
 <article>
-  <div id="div-01">Here is div-01
-    <div id="div-02">Here is div-02
-      <div id="div-03">Here is div-03</div>
+  <div id="div-01">Voici div-01
+    <div id="div-02">Voici div-02
+      <div id="div-03">Voici div-03</div>
     </div>
   </div>
 </article>
@@ -46,52 +45,53 @@ L'élément ({{domxref("Element")}}) qui est le plus proche ancêtre de l'élém
 ### JavaScript
 
 ```js
-var el = document.getElementById('div-03');
+const el = document.getElementById('div-03');
 
-var r1 = el.closest("#div-02");
-// Renvoie l'élément avec l'identifiant id=div-02
+const r1 = el.closest('#div-02');
+// Renvoie l'élément avec l'identifiant div-02
 
-var r2 = el.closest("div div");
-// Renvoie le plus proche ancêtre qui est un div
-// dans un div. Ici, c'est div-03 lui-même.
+const r2 = el.closest('div div');
+// Renvoie le plus proche ancêtre qui est un div dans un div
+// Ici, c'est div-03 lui-même
 
-var r3 = el.closest("article > div");
-// Renvoie le plus proche ancêtre qui est un div
-// et dont l'élément parent est article. Ici c'est
-// div-01.
+const r3 = el.closest('article > div');
+// Renvoie le plus proche ancêtre qui est un div et qui a un
+// article parent, il s'agit ici de div-01
 
-var r4 = el.closest(":not(div)");
-// Renvoie le plus proche ancêtre qui n'est pas un
-// div. Dans ce cas, c'est l'élément article.
+const r4 = el.closest(':not(div)');
+// Renvoie le plus proche ancêtre qui n'est pas un div,
+// c'est l'article englobant
 ```
 
-## Polyfill
+## Prothèse d'émulation (<i lang="en">polyfill</i>)
 
-Pour les navigateurs qui ne prennent pas en charge `Element.closest()` mais qui permettent d'utiliser `element.matches()` (ou un équivalent préfixé, à partir d'IE9+), on peut utiliser le polyfill suivant :
+Pour les navigateurs qui ne prennent pas en charge `Element.closest()`, mais qui implémentent `element.matches()` (ou un équivalent préfixé comme IE9+), il est possible d'implémenter une prothèse&nbsp;:
 
 ```js
-if (!Element.prototype.matches)
-    Element.prototype.matches = Element.prototype.msMatchesSelector ||
-                                Element.prototype.webkitMatchesSelector;
+if (!Element.prototype.matches) {
+  Element.prototype.matches =
+    Element.prototype.msMatchesSelector ||
+    Element.prototype.webkitMatchesSelector;
+}
 
-if (!Element.prototype.closest)
-    Element.prototype.closest = function(s) {
-        var el = this;
-        if (!document.documentElement.contains(el)) return null;
-        do {
-            if (el.matches(s)) return el;
-            el = el.parentElement || el.parentNode;
-        } while (el !== null && el.nodeType == 1);
-        return null;
-    };
+if (!Element.prototype.closest) {
+  Element.prototype.closest = function(s) {
+    var el = this;
+
+    do {
+      if (Element.prototype.matches.call(el, s)) return el;
+      el = el.parentElement || el.parentNode;
+    } while (el !== null && el.nodeType === 1);
+    return null;
+  };
+}
 ```
 
-Cependant, si vous avez besoin de supporter IE 8, vous pouvez utiliser la prothèse suivante qui marchera, mais beaucoup plus lentement. Elle ne supporte que les sélecteurs CSS 2.1 dans IE 8, et peut causer de gros pics de latence dans les sites web :
+Si la prise en charge d'IE8 est nécessaire, le fragment de code qui suit fera l'affaire (lentement mais sûrement). Toutefois, il ne prend en charge que les sélecteurs CSS 2.1 pour IE8 et entraînera une importante baisse de performance pour les sites web en production.
 
 ```js
 if (window.Element && !Element.prototype.closest) {
-  Element.prototype.closest =
-  function(s) {
+  Element.prototype.closest = function(s) {
     var matches = (this.document || this.ownerDocument).querySelectorAll(s),
         i,
         el = this;
@@ -106,20 +106,20 @@ if (window.Element && !Element.prototype.closest) {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-closest', 'Element.closest()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.closest")}}
+{{Compat}}
 
 ### Notes de compatibilité
 
-- Dans Edge `document.createElement(tagName).closest(tagName)` retournera `null` si l'élément n'est pas attaché au DOM au préalable.
+- Pour Edge 15-18, `document.createElement(tagName).closest(tagName)` renverra `null` si l'élément n'est pas d'abord connecté (directement ou indirectement) à l'objet de contexte, par exemple l'objet [`Document`](/fr/docs/Web/API/Document) dans le cas du DOM classique.
 
 ## Voir aussi
 
-- L'interface {{domxref("Element")}}
-- [La syntaxe pour les sélecteurs](/fr/Apprendre/CSS/Les_bases/Les_sélecteurs)
-- Autres méthodes utilisant des sélecteurs: {{domxref("element.querySelector()")}} et {{domxref("element.matches()")}}.
+- L'interface [`Element`](/fr/docs/Web/API/Element)
+- [La syntaxe des sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
+- Les autres méthodes qui utilisent des sélecteurs en argument&nbsp;:
+  - [`element.querySelector()`](/fr/docs/Web/API/Element/querySelector)
+  - [`element.matches()`](/fr/docs/Web/API/Element/matches)

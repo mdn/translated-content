@@ -9,9 +9,10 @@ tags:
   - Reference
 translation_of: Web/API/Element/setAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
-` setAttributeNode``() ` ajoute un nouveau nœud `Attr` à l'élément courant.
+`setAttributeNode()` ajoute un nouveau nœud `Attr` à l'élément courant.
 
 ## Syntaxe
 
@@ -24,14 +25,16 @@ var replacedAttr = element.setAttributeNode(attribute);
 
 ## Exemple
 
-    // <div id="one" align="left">one</div>
-    // <div id="two">two</div>
-    var d1 = document.getElementById("one");
-    var d2 = document.getElementById("two");
-    var a = d1.getAttributeNode("align");
-    d2.setAttributeNode(a);
-    alert(d2.attributes[1].value)
-    // retourne: `left'
+```js
+// <div id="one" align="left">one</div>
+// <div id="two">two</div>
+var d1 = document.getElementById("one");
+var d2 = document.getElementById("two");
+var a = d1.getAttributeNode("align");
+d2.setAttributeNode(a);
+alert(d2.attributes[1].value)
+// retourne: `left'
+```
 
 ## Notes
 

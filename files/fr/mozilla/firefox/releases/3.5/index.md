@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3.5
 original_slug: Mozilla/Firefox/Versions/3.5
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'une gestion améliorée d'une grande variété de standards du Web. Cet article en fournit une longue liste, avec des liens vers des articles décrivant les améliorations majeures.
@@ -158,8 +159,8 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 - Les filtres SVG fonctionnent à présent avec `foreignObject`.
 - La méthode `GetSVGDocument()` a été ajoutée aux éléments [`object`](/fr/HTML/Element/object) et [`iframe`](/fr/HTML/Element/iframe) pour assurer une meilleure compatibilité.
 - La définition implicite de propriétés dans des initialiseurs d'objets et de tableaux n'exécute plus les mutateurs en JavaScript. Consultez le billet [Object and array initializers should not invoke setters when evaluated](/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated) pour plus de détails.
-- La variable `gDownloadLastDir.path` a été renommée en `gDownloadLastDir.file` étant donné qu'elle fait référence à un objet {{ interface("nsIFile") }} et non à un chemin.
-- La variable `gDownloadLastDirPath` a été renommée en `gDownloadLastDirFile` étant donné qu'elle fait référence à un objet {{ interface("nsIFile") }} et non à un chemin.
+- La variable `gDownloadLastDir.path` a été renommée en `gDownloadLastDir.file` étant donné qu'elle fait référence à un objet `nsIFile` et non à un chemin.
+- La variable `gDownloadLastDirPath` a été renommée en `gDownloadLastDirFile` étant donné qu'elle fait référence à un objet `nsIFile` et non à un chemin.
 - À partir de Firefox 3.5, il devient impossible d'utiliser des liaisons `data:` dans les paquets chrome qui bénéficient de l'automatisation `XPCNativeWrapper`.
 
 ## Pour les développeurs XUL et développeurs d'applications
@@ -217,6 +218,6 @@ Si vous développez des extensions, vous devriez tout d'abord lire [Mise à jour
 - Rendu plus rapide des pages
   - : Le contenu web est affiché plus rapidement dans Firefox 3.5, grâce à des technologies telles que l'« analyse spéculative ». Vos utilisateurs n'ont pas besoin de savoir de quoi il s'agit, simplement que ça rend les choses plus rapides.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('3')}}

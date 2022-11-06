@@ -12,7 +12,8 @@ tags:
 translation_of: Web/HTML/Element/del
 browser-compat: html.elements.del
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<del>`** représente une portion de texte ayant été supprimée d'un document. Cet élément est souvent (mais pas nécessairement) affiché rayé. L'élément [`<ins>`](/fr/docs/Web/HTML/Element/ins) est quant à lui utilisé pour représenter des portions de texte ajoutées.
 
@@ -106,24 +107,26 @@ Comme pour tous les autres éléments, on peut utiliser [les attributs universel
 
 Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `del`. On peut le rendre annonçable via la propriété CSS [`content`](/fr/docs/Web/CSS/content) et grâce aux pseudo-éléments [`::before`](/fr/docs/Web/CSS/::before) et [`::after`](/fr/docs/Web/CSS/::after).
 
-    del::before,
-    del::after {
-      clip-path: inset(100%);
-      clip: rect(1px, 1px, 1px, 1px);
-      height: 1px;
-      overflow: hidden;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-    }
+```css
+del::before,
+del::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
-    del::before {
-      content: " [Début de la suppression]";
-    }
+del::before {
+  content: " [Début de la suppression]";
+}
 
-    del::after {
-      content: " [Fin de la suppression] ";
-    }
+del::after {
+  content: " [Fin de la suppression] ";
+}
+```
 
 Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été supprimé.
 

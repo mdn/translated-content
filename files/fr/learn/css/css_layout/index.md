@@ -20,6 +20,7 @@ tags:
 translation_of: Learn/CSS/CSS_layout
 original_slug: Apprendre/CSS/CSS_layout
 ---
+
 {{LearnSidebar}}
 
 À ce stade, les principes fondamentaux du CSS ont été vus : comment composer le texte et comment mettre en forme et manipuler les boîtes dans lesquelles se trouve votre contenu. Il est maintenant temps de regarder comment placer vos boîtes au bon endroit dans la vue et par rapport aux autres boîtes. Les prérequis nécessaires ont été examinés, nous pouvons maintenant nous plonger profondément dans la mise en page avec CSS, en regardant les différents paramètres d'affichage, les outils modernes tels que «&nbsp;flexbox&nbsp;», les grilles CSS et le positionnement, ainsi que quelques méthodes traditionnelles qu'il est encore bon de connaître.
@@ -36,9 +37,9 @@ original_slug: Apprendre/CSS/CSS_layout
 
 Avant de commencer ce module, vous devriez déjà :
 
-1.  Connaître les bases du HTML, telles qu'exposées dans le module [Introduction au HTML.](/fr/docs/Learn/HTML/Introduction_to_HTML)
-2.  Être à l'aise avec les fondamentaux du CSS, telles qu'exposés dans [Introduction à CSS](/fr/docs/Learn/CSS/First_steps).
-3.  Savoir [mettre en forme les boîtes.](/fr/docs/Learn/CSS/Building_blocks)
+1. Connaître les bases du HTML, telles qu'exposées dans le module [Introduction au HTML.](/fr/docs/Learn/HTML/Introduction_to_HTML)
+2. Être à l'aise avec les fondamentaux du CSS, telles qu'exposés dans [Introduction à CSS](/fr/docs/Learn/CSS/First_steps).
+3. Savoir [mettre en forme les boîtes.](/fr/docs/Learn/CSS/Building_blocks)
 
 > **Note :** Si vous travaillez sur un ordinateur, une tablette ou autre périphérique sur lequel vous ne pouvez pas créer vos propres fichiers, vous pourrez essayer (la plupart) les exemples de code dans des sites de développement en ligne tels que [JSBin](http://jsbin.com/) ou [Glitch](https://glitch.com/)
 

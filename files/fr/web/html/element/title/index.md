@@ -8,7 +8,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/title
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément **`<title>`** définit le titre du document (qui est affiché dans la barre de titre du navigateur ou dans l'onglet de la page). Cet élément ne peut contenir que du texte, les balises qu'il contiendrait seraient ignorées.
 
@@ -48,13 +49,17 @@ Les personnes utilisant des outils d'assistance peuvent utiliser le titre de la 
 
 #### Exemple
 
-    <title>Menu - Restaurant chinois Maison bleue - Commande en ligne</title>
+```html
+<title>Menu - Restaurant chinois Maison bleue - Commande en ligne</title>
+```
 
 Mettre à jour la valeur de `title` afin de refléter un changement d'état important (un problème de validation d'un formulaire par exemple) peut également s'avérer utile :
 
 #### Exemple
 
-    <title>2 erreurs sur votre commande - Restaurant chinois Maison bleue - Commande en ligne</title>
+```html
+<title>2 erreurs sur votre commande - Restaurant chinois Maison bleue - Commande en ligne</title>
+```
 
 - [Comprendre les règles WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [_Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
@@ -110,12 +115,8 @@ Mettre à jour la valeur de `title` afin de refléter un changement d'état impo
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-title-element', '&lt;title&gt;')}}         | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-title-element', '&lt;title&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.2', '&lt;title&gt;')}}                     | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.title")}}
+{{Compat}}

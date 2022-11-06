@@ -1,22 +1,13 @@
 ---
 title: HTMLElement.dataset
 slug: Web/API/HTMLElement/dataset
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - dataset
-browser-compat: api.HTMLElement.dataset
-translation_of: Web/API/HTMLElement/dataset
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`dataset`** は {{DOMxRef("HTMLElement")}} インターフェイスの読み取り専用プロパティで、要素に設定されたすべての[カスタムデータ属性](/ja/docs/Web/HTML/Global_attributes/data-*) (`data-*`) への読み取り/書き込みアクセスを提供します。これは文字列のマップである ({{domxref("DOMStringMap")}}) で、それぞれの `data-*` 属性の項目です。
 
-> **Note:** `dataset` プロパティ自体は読み取ることができますが、直接書き込むことはできません。代わりに、すべての書き込みは `dataset` 内の個々のプロパティに対して行う必要があり、それは data 属性を表します。
+> **メモ:** `dataset` プロパティ自体は読み取ることができますが、直接書き込むことはできません。代わりに、すべての書き込みは `dataset` 内の個々のプロパティに対して行う必要があり、それは data 属性を表します。
 
 また、 HTML の `data-*` 属性とそれに対応する DOM `dataset.プロパティ` は同じ名前にはなりませんが、次のように常に近いものになります。
 

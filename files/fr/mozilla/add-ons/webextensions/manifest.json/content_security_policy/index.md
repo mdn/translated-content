@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -54,7 +55,7 @@ Il existe des restrictions sur la politique que vous pouvez spécifier ici&nbsp;
 
 ### Examples valides
 
-Autoriser les scripts distants de "https\://example.com" : <sup>(<em>voir note</em> <a href="/fr/Add-ons/WebExtensions/manifest.json/content_security_policy$edit#exampleNote_1">1</a>)</sup>
+Autoriser les scripts distants de `https://example.com` : <sup>(_voir note_ [1](/fr/Add-ons/WebExtensions/manifest.json/content_security_policy#exampleNote_1)</sup>
 
 ```json
 "content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
@@ -66,7 +67,7 @@ Autoriser les scripts distants depuis n’importe quel sous-domaine de «&nbsp;j
 "content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"
 ```
 
-Autoriser [`eval()` et ses amis ](</fr/Add-ons/WebExtensions/Content_Security_Policy#eval()_et_amis>):
+Autoriser [`eval()` et ses amis](</fr/Add-ons/WebExtensions/Content_Security_Policy#eval()_et_amis>) :
 
 ```json
 "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"

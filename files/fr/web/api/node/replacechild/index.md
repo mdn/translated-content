@@ -10,13 +10,16 @@ tags:
   - Remplacement
 translation_of: Web/API/Node/replaceChild
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.replaceChild()`** remplace un nœud enfant du noeud spécifié par un autre nœud.
 
 ## Syntaxe
 
-    replacedNode = parentNode.replaceChild(newChild, oldChild);
+```js
+replacedNode = parentNode.replaceChild(newChild, oldChild);
+```
 
 - `newChild` est le nouveau nœud qui remplacera `oldChild`. S'il existe déjà dans le DOM, il sera d'abord enlevé.
 - `oldChild` est le nœud existant à remplacer.
@@ -58,13 +61,11 @@ parentDiv.replaceChild(sp1, sp2);
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName("DOM WHATWG", "#dom-node-replacechild", "Node: replaceChild")}} | {{Spec2("DOM WHATWG")}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.replaceChild")}}
+{{Compat}}
 
 ## Voir aussi
 

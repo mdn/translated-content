@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBKeyRange/only
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`only()`**, rattachée à l'interface {{domxref("IDBKeyRange")}}, permet de créer un nouvel intervalle de clé qui ne contient qu'une valeur.
@@ -60,17 +61,15 @@ function displayData() {
   };
 ```
 
-> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) ([ainsi que la démonstration associée](https://mdn.github.io/IDBKeyRange-example/)).
+> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) ([ainsi que la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBKeyRange-only-IDBKeyRange-any-value', 'only')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBKeyRange.only")}}
+{{Compat}}
 
 ## Voir aussi
 

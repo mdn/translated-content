@@ -8,6 +8,7 @@ tags:
   - Types
 translation_of: Web/API/DOMStringList
 ---
+
 {{ APIRef("DOM") }}
 
 Un type renvoyé par certaines API contenant une liste de [DOMString](/fr/docs/Web/API/DOMString) (_chaînes de caractères_).
@@ -26,6 +27,4 @@ Un type renvoyé par certaines API contenant une liste de [DOMString](/fr/docs/W
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire           |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
-| {{SpecName("HTML WHATWG", "common-dom-interfaces.html#the-domstringlist-interface", "DOMStringList")}} | {{Spec2("HTML WHATWG")}} | Définition initiale. |
+{{Specifications}}

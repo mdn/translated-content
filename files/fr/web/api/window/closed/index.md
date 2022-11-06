@@ -5,6 +5,7 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/Window/closed
 ---
+
 {{ ApiRef() }}
 
 ### Résumé
@@ -13,7 +14,9 @@ Cette propriété indique si la fenêtre référencée est fermée ou non.
 
 ### Syntaxe
 
-    isClosed = window.closed;
+```js
+isClosed = window.closed;
+```
 
 Cette propriété est en lecture seule.
 
@@ -33,28 +36,32 @@ Cette propriété est en lecture seule.
 
 L'exemple suivant montre comment un popup peut transmettre un choix de l'utilisateur à la fenêtre principale en y ouvrant une URL différente. Mais il faut d'abord vérifier que la fenêtre principale et encore ouverte.
 
-    if (!window.opener.closed) {
-      // La fenêtre principale est encore là,
-      // on peut donc y charger une autre page
-      window.opener.location.href = newURL;
-    }
+```js
+if (!window.opener.closed) {
+  // La fenêtre principale est encore là,
+  // on peut donc y charger une autre page
+  window.opener.location.href = newURL;
+}
+```
 
 #### Appel d'une fonction dans un popup ouvert précédemment
 
 Dans cette exemple, la fonction `refreshPopupWindow()` appelle une fonction dans le popup pour rafraichir son contenu. Cependant, si le popup n'a pas encore été ouvert ou si l'utilisateur l'a fermé, un nouveau popup est ouvert.
 
-    var popupWindow = null;
+```js
+var popupWindow = null;
 
-    function refreshPopupWindow() {
-      if (popupWindow &&&nbsp;!popupWindow.closed) {
-        // Le popup a déjà été ouvert et il l'est encore.
-        // On peut donc appeler sa fonction doRefresh().
-        popupWindow.doRefresh();
-      } else {
-        // Il est nécessaire d'ouvrir d'abord le popup.
-        popupWindow = window.open("popup.html");
-      }
-    }
+function refreshPopupWindow() {
+  if (popupWindow && !popupWindow.closed) {
+    // Le popup a déjà été ouvert et il l'est encore.
+    // On peut donc appeler sa fonction doRefresh().
+    popupWindow.doRefresh();
+  } else {
+    // Il est nécessaire d'ouvrir d'abord le popup.
+    popupWindow = window.open("popup.html");
+  }
+}
+```
 
 ### Spécification
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/max-width
 ---
+
 {{CSSRef}}
 
 La propriété **`max-width`** est utilisée pour définir la largeur maximale d'un élément donné. Elle empêche la valeur de la propriété {{cssxref("width")}} de devenir supérieure à la valeur spécifiée par `max-width` (autrement dit, `max-width` est une borne supérieur pour `width`).
@@ -54,9 +55,13 @@ max-width: unset;
 - `none`
   - : Il n'y a pas de maximum pour la largeur. C'est la valeur par défaut.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -100,17 +105,11 @@ Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-w
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                                                                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Sizing', '#width-height-keywords', 'max-width')}} | {{Spec2('CSS3 Sizing')}}         | Ajout des mots-clés `max-content`, `min-content`, `fit-content` et `fill-available`. Les deux brouillons de spécifications CSS3 Box et CSS3 Writing Modes définissaient ces mots-clés mais ont été remplacées par cette spécification. |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'max-width')}}     | {{Spec2('CSS3 Transitions')}} | `max-width` peut désormais être animée.                                                                                                                                                                                                |
-| {{SpecName('CSS2.1', 'visudet.html#min-max-widths', 'max-width')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                                                                                                                                                   |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.max-width")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -119,4 +118,4 @@ Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-w
 - {{cssxref("min-height")}}
 - {{cssxref("max-height")}}
 - {{cssxref("box-sizing")}}
-- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte "en/CSS/box_model")
+- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte)

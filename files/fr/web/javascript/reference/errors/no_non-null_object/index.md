@@ -8,14 +8,17 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/No_non-null_object
 original_slug: Web/JavaScript/Reference/Erreurs/No_non-null_object
 ---
+
 {{JSSidebar("Errors")}}
 
 ## Message
 
-    TypeError: Invalid descriptor for property {x} (Edge)
-    TypeError: "x" is not a non-null object (Firefox)
-    TypeError: Property description must be an object: "x" (Chrome)
-    TypeError: Invalid value used in weak set (Chrome)
+```
+TypeError: Invalid descriptor for property {x} (Edge)
+TypeError: "x" is not a non-null object (Firefox)
+TypeError: Property description must be an object: "x" (Chrome)
+TypeError: Invalid value used in weak set (Chrome)
+```
 
 ## Type d'erreur
 

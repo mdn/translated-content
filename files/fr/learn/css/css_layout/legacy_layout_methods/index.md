@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 original_slug: Apprendre/CSS/CSS_layout/Legacy_Layout_Methods
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
@@ -282,17 +283,23 @@ Cette trame est tout à fait correcte, mais elle a une largeur fixe. Nous souhai
 
 L'équation qui transforme une largeur fixe en pourcentage est la suivante :
 
-    cible / contexte = résultat
+```
+cible / contexte = résultat
+```
 
 Pour la largeur de la première colonne, la **largeur cible** est de 60 pixels et le **contexte** est l'enveloppe de 960 pixels. Avec la formule ci‑dessus nous calculons le pourcentage.
 
-    60 / 960 = 0.0625
+```
+60 / 960 = 0.0625
+```
 
 Décalant de deux le point décimal nous obtenons un pourcentage de 6.25%. Donc, dans la CSS, nous pouvons remplacer la largeur de colonne de 60 pixels par 6.25%.
 
 En faisant de même pour la largeur de la gouttière&nbsp;:
 
-    20 / 960 = 0.02083333333
+```
+20 / 960 = 0.02083333333
+```
 
 Donc, remplaçons par 2.08333333% la valeur 20 pixels de {{cssxref("margin-left")}} dans la règle `.col` et de {{cssxref("padding-right")}} dans la règle `.wrapper`.
 

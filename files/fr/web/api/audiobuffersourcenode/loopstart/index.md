@@ -3,6 +3,7 @@ title: AudioBufferSourceNode.loopStart
 slug: Web/API/AudioBufferSourceNode/loopStart
 translation_of: Web/API/AudioBufferSourceNode/loopStart
 ---
+
 {{ APIRef("Web Audio API") }}
 La propriété `loopStart` de l'interface {{ domxref("AudioBufferSourceNode") }} est un nombre flottant à double précision qui indique, en secondes, à quel moment de l'{{domxref("AudioBuffer")}} la lecture doit reprendre lors d'une boucle. Elle n'est prise en compte que lorque la propriété {{domxref("AudioBufferSourceNode.loop", "loop")}} est `true`.
 
@@ -68,15 +69,13 @@ loopendControl.oninput = function() {
 }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                    | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-loopStart', 'loopStart')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBufferSourceNode.loopStart")}}
+{{Compat}}
 
 ## Voir aussi
 

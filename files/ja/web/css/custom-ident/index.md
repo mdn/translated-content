@@ -1,15 +1,8 @@
 ---
 title: <custom-ident>
 slug: Web/CSS/custom-ident
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/custom-ident
 ---
+
 {{CSSRef}}
 
 **`<custom-ident>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、{{glossary("identifier", "識別子")}}として使われるユーザー定義の任意の文字列を意味します。これは大文字と小文字を区別し、曖昧さを避けるため、いくつかの値は様々なコンテキストで禁止されています。
@@ -47,7 +40,6 @@ translation_of: Web/CSS/custom-ident
 ## 例
 
 ### 有効な識別子
-
 
 ```plain example-good
 nono79            アルファベットと数字の組み合わせ

@@ -1,15 +1,8 @@
 ---
 title: Element.clientHeight
 slug: Web/API/Element/clientHeight
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - プロパティ
-  - リファレンス
-browser-compat: api.Element.clientHeight
-translation_of: Web/API/Element/clientHeight
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.clientHeight`** は読み取り専用のプロパティで、 CSS のない要素やインラインレイアウトボックスではゼロになります。それ以外では、要素の内側の寸法をピクセル単位で表します。パディングは含みますが、境界、マージン、（もしあれば）水平スクロールバーは含みません。
@@ -18,7 +11,7 @@ translation_of: Web/API/Element/clientHeight
 
 `clientHeight` がルート要素（`<html>` 要素）（または文書が後方互換モードである場合は `<body>`）に使用された場合、（スクロールバーを除いた）ビューポートの高さが返されます。[これは `clientHeight` の特例です](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientheight)。
 
-> **Note:** このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。
+> **メモ:** このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。
 
 ## 構文
 

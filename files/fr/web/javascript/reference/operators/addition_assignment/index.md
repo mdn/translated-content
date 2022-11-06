@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: javascript.operators.addition_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'addition et d'affectation (`+=`) calcule la somme ou la concaténation de ses deux opérandes puis affecte le résultat à la variable représentée par l'opérande gauche. C'est le type des opérandes qui détermine s'il y a somme ou concaténation.
 
 {{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
 
-## Syntax
+## Syntaxe
 
 ```js
 Opérateur : x += y

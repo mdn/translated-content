@@ -8,6 +8,7 @@ tags:
   - add-on
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/Theme
 ---
+
 {{AddonSidebar()}}
 
 Un objet thème représente la spécification d'un thème.

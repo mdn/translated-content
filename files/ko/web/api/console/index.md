@@ -20,14 +20,14 @@ translation_of: Web/API/Console
 console.log("링크를 열 수 없습니다")
 ```
 
-이 문서는 콘솔 객체에서 사용할 수 있는 {{anch("메서드")}}와 몇 가지 {{anch("예제")}}를 다룹니다.
+이 문서는 콘솔 객체에서 사용할 수 있는 [메서드](#메서드)와 몇 가지 [예제](#예제)를 다룹니다.
 
 {{AvailableInWorkers}}
 
 ## 메서드
 
 - {{domxref("console.assert()")}}
-  - : 첫 번째 매개변수가 `false`인 경우 메시지와 {{anch("스택 추적")}}을 출력합니다.
+  - : 첫 번째 매개변수가 `false`인 경우 메시지와 [스택 추적](#스택_추적)을 출력합니다.
 - {{domxref("console.clear()")}}
   - : 콘솔의 내용을 지웁니다.
 - {{domxref("console.count()")}}
@@ -61,13 +61,13 @@ console.log("링크를 열 수 없습니다")
 - {{domxref("console.table()")}}
   - : 표 형태의 데이터를 표에 그립니다.
 - {{domxref("console.time()")}}
-  - : 주어진 이름의 {{anch("타이머")}}를 실행합니다. 하나의 페이지에서는 최대 10,000개의 타이머를 동시에 실행할 수 있습니다.
+  - : 주어진 이름의 [타이머](#타이머)를 실행합니다. 하나의 페이지에서는 최대 10,000개의 타이머를 동시에 실행할 수 있습니다.
 - {{domxref("console.timeEnd()")}}
-  - : 지정한 {{anch("타이머")}}를 멈추고, 소요시간을 출력합니다.
+  - : 지정한 [타이머](#타이머)를 멈추고, 소요시간을 출력합니다.
 - {{domxref("console.timeStamp()")}} {{non-standard_inline}}
   - : 브라우저의 [타임라인](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool)이나 [워터폴](/ko/docs/Tools/Performance/Waterfall)에 마커를 추가합니다.
 - {{domxref("console.trace()")}}
-  - : {{anch("스택 추적")}}을 출력합니다.
+  - : [스택 추적](#스택_추적)을 출력합니다.
 - {{domxref("console.warn()")}}
   - : 경고 메시지를 출력합니다. 추가 매개변수와 함께 [문자열 치환](#문자열_치환_사용하기)을 사용할 수 있습니다.
 

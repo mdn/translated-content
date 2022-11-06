@@ -101,4 +101,3 @@ parseFloat("900719925474099267n");
 - {{jsxref("Number.parseInt()")}}
 - {{jsxref("Number.toFixed()")}}
 - {{jsxref("isNaN", "isNaN()")}}
-

@@ -9,13 +9,16 @@ tags:
   - Méthodes
 translation_of: Web/API/Document/getElementsByName
 ---
+
 {{ ApiRef("DOM") }}
 
 Renvoie une liste des éléments portant un {{domxref("element.name","name")}} donné dans le document (X)HTML.
 
 ## Syntaxe
 
-    elements = document.getElementsByName(name)
+```js
+elements = document.getElementsByName(name)
+```
 
 - `elements` est une collection de {{domxref("NodeList")}}
 - `name` est la valeur de l'attribut `name` des éléments.
@@ -49,13 +52,7 @@ La méthode **getElementsByName** fonctionne différemment dans différents navi
 
 ## Spécifications
 
-- [DOM Level 2 HTML : getElementsByName](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-71555259) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-71555259) (non normative)
-- [HTML5 : getElementsByName](http://www.whatwg.org/html/#dom-document-getelementsbyname)
-
-| Spécification                                                                                                                | Statut                               | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}} | {{ Spec2('HTML WHATWG') }} |                     |
-| {{SpecName("DOM2 HTML", "html.html#ID-71555259", "Document.getElementsByName()")}}                 | {{Spec2("DOM2 HTML")}}         | Définition initiale |
+{{Specifications}}
 
 ## Voir aussi
 

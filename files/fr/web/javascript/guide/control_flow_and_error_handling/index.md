@@ -15,6 +15,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 original_slug: Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript supporte nativement un ensemble d'instructions. Ces instructions permettent de définir les logiques des algorithmes, le flux des informations, etc. Ce chapitre fournit un aperçu sur le fonctionnement de ces différentes instructions JavaScript.
@@ -60,7 +61,7 @@ Ici, `{ x++; }` représente le bloc.
 >
 > Cella affichera 2 car l'instruction `var x` contenue dans le bloc fait partie de la même portée que l'instruction `var x` écrite avant le bloc. En C ou en Java, le code équivalent à cet exemple aurait produit 1.
 >
-> Cela a évolué avec ECMAScript 2015 (ES6). Les instructions `let`et `const` permettent de déclarer des variables dont la portée est celle du bloc courant. Voir les pages des références [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const).
+> Cela a évolué avec ECMAScript 2015 (ES6). Les instructions `let` et `const` permettent de déclarer des variables dont la portée est celle du bloc courant. Voir les pages des références [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const).
 
 ## Les instructions conditionnelles
 
@@ -415,8 +416,8 @@ Il est possible d'imbriquer une ou plusieurs instructions `try...catch`.
 
 Si un bloc `try` interne n'a _pas_ de bloc `catch` correspondant :
 
-1.  il _doit_ contenir un bloc `finally`, et
-2.  le bloc `try...catch` de l'instruction `catch` englobante est vérifié pour une correspondance.
+1. il _doit_ contenir un bloc `finally`, et
+2. le bloc `try...catch` de l'instruction `catch` englobante est vérifié pour une correspondance.
 
 Pour plus d'informations, voir [nested try-blocks](/fr/docs/Web/JavaScript/Référence/Statements/try...catch#nested_try-blocks) sur la page de référence [`try...catch`](/fr/docs/Web/JavaScript/Référence/Statements/try...catch).
 

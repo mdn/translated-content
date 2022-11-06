@@ -9,14 +9,15 @@ tags:
 translation_of: Glossary/Character
 original_slug: Glossaire/Character
 ---
+
 Un **caractère** peut être un symbole (lettre, chiffre, ponctuation) ou un caractère de contrôle (par exemple un retour chariot ou un trait d'union conditionnel). {{glossary("UTF-8")}} est le jeu de caractères le plus courant. Il comprend les graphèmes des langues les plus répandues.
 
-## Pour approfondir
+## Voir aussi
 
 ### Connaissances générales
 
-- {{interwiki("wikipedia", "Caractère_(informatique)","Caractère (informatique)")}} sur Wikipédia
-- {{interwiki("wikipedia", "Codage_des_caractères","Codage des caractères")}} sur Wikipédia
-- {{interwiki("wikipedia","American_Standard_Code_for_Information_Interchange", "ASCII")}} sur Wikipédia
-- {{interwiki("wikipedia", "UTF-8")}} sur Wikipédia
-- {{interwiki("wikipedia", "Unicode")}} sur Wikipédia
+- [Caractère (informatique)](https://fr.wikipedia.org/wiki/Caract%C3%A8re_(informatique)) sur Wikipédia
+- [Codage des caractères](https://fr.wikipedia.org/wiki/Codage_des_caract%C3%A8res) sur Wikipédia
+- [ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange) sur Wikipédia
+- [UTF-8](https://fr.wikipedia.org/wiki/UTF-8) sur Wikipédia
+- [Unicode](https://fr.wikipedia.org/wiki/Unicode) sur Wikipédia

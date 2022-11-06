@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/About_JavaScript
 original_slug: Web/JavaScript/A_propos
 ---
+
 {{jsSidebar}}
 
 ## Qu'est-ce que JavaScript ?
@@ -30,10 +31,10 @@ Plusieurs optimisations ont été apportées au moteur JavaScript au fur et à m
 
 En plus de ces implémentations, il existe d'autres moteurs JavaScript largement utilisés comme :
 
-- [V8](https://code.google.com/p/v8/ "https://code.google.com/p/v8/") de Google, qui est utilisé dans le navigateur Google Chrome et dans les versions récentes du navigateur Opéra.
-- [JavaScriptCore](https://www.webkit.org/projects/javascript/index.html "https://www.webkit.org/projects/javascript/index.html") (SquirrelFish/Nitro) utilisé dans certains navigateurs WebKit tels que Safari, d'Apple.
-- [Carakan](https://my.opera.com/ODIN/blog/carakan-faq "https://my.opera.com/ODIN/blog/carakan-faq") est utilisé dans les anciennes versions d'Opera.
-- Le moteur [Chakra](https://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29 "https://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29") est utilisé dans Internet Explorer (bien que le langage qu'il implémente soit formellement appelé « JScript » pour des raisons de droits des marques).
+- [V8](https://code.google.com/p/v8/) de Google, qui est utilisé dans le navigateur Google Chrome et dans les versions récentes du navigateur Opéra.
+- [JavaScriptCore](https://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro) utilisé dans certains navigateurs WebKit tels que Safari, d'Apple.
+- [Carakan](https://my.opera.com/ODIN/blog/carakan-faq) est utilisé dans les anciennes versions d'Opera.
+- Le moteur [Chakra](https://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) est utilisé dans Internet Explorer (bien que le langage qu'il implémente soit formellement appelé « JScript » pour des raisons de droits des marques).
 
 Chacun des moteurs JavaScript de Mozilla expose une API publique que les applications peuvent appeler pour utiliser JavaScript. L'environnement hôte le plus courant pour JavaScript est, de loin, un navigateur Web. Les navigateurs utilisent typiquement l'API publique pour créer des «&nbsp;objets hôtes&nbsp;», reflétant le [DOM](/fr/docs/DOM) en JavaScript.
 

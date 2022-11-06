@@ -1,21 +1,8 @@
 ---
 title: perspective-origin
 slug: Web/CSS/perspective-origin
-tags:
-  - 3D
-  - CSS
-  - CSS プロパティ
-  - CSS 座標変換
-  - グラフィック
-  - プロパティ
-  - Reference
-  - 座標変換
-  - perspective
-  - perspective-origin
-  - recipe:css-property
-browser-compat: css.properties.perspective-origin
-translation_of: Web/CSS/perspective-origin
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`perspective-origin`** プロパティは、閲覧者の視点の位置を決めます。これは {{cssxref("perspective")}} プロパティによって*消失点*として使われます。

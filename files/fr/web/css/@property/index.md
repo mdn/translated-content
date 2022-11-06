@@ -4,6 +4,7 @@ slug: Web/CSS/@property
 translation_of: Web/CSS/@property
 browser-compat: css.at-rules.property
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La règle {{cssxref("at-rule")}} [CSS](/fr/docs/Web/CSS) **`@property`** fait partie du panel d'API [CSS Houdini](/fr/docs/Web/Houdini), qui permet de définir explicitement leurs propriétés CSS personnalisées (voir {{cssxref('--*', 'CSS custom properties')}}). Cela permet la vérification des types de propriétés, de leur donner des valeurs par défaut et de déterminer si une propriété peut hériter ses valeurs ou non.
@@ -39,7 +40,7 @@ Les descripteurs inconnus ne sont pas valides et sont ignorés, mais n'invaliden
 
 Ajout d'une vérification de type à la {{cssxref('--*', 'propriété personnalisée')}} `--my-color` en tant que couleur et que valeur par défaut, sans lui permettre d'hériter de sa valeur&nbsp;:
 
-Utilisation de la règle [CSS](/en-US/docs/Web/CSS) [at-rule](/fr/docs/Web/CSS/At-rule) {{cssxref('@property')}}&nbsp;:
+Utilisation de la règle [CSS](/fr/docs/Web/CSS) [at-rule](/fr/docs/Web/CSS/At-rule) {{cssxref('@property')}}&nbsp;:
 
 ```css
 @property --my-color {
@@ -49,7 +50,7 @@ Utilisation de la règle [CSS](/en-US/docs/Web/CSS) [at-rule](/fr/docs/Web/CSS/A
 }
 ```
 
-Équivalent avec la fonction [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}&nbsp;:
+Équivalent avec la fonction [JavaScript](/fr/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}&nbsp;:
 
 ```js
 window.CSS.registerProperty({

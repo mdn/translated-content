@@ -3,18 +3,23 @@ title: HTMLFormElement.method
 slug: Web/API/HTMLFormElement/method
 translation_of: Web/API/HTMLFormElement/method
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété **`HTMLFormElement.method`** représente la méthode HTTP utilisée pour soumettre un formulaire.
 
 ## Syntaxe
 
-    string = form.method
-    form.method = string
+```js
+string = form.method
+form.method = string
+```
 
 ## Exemple
 
-    document.forms["myform"].method = "post";
+```js
+document.forms["myform"].method = "post";
+```
 
 ## Spécification
 

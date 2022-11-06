@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/sort
 ---
+
 {{JSRef}}
 
 La méthode **`sort()`** trie les éléments d'un tableau, dans ce même tableau, et renvoie le tableau. Par défaut, le tri s'effectue sur les éléments du tableau convertis en chaînes de caractères et triées selon les valeurs des unités de code UTF-16 des caractères.
@@ -20,8 +21,10 @@ La complexité en espace mémoire et en temps utilisée pour le tri ne peut pas 
 
 ## Syntaxe
 
-    arr.sort()
-    arr.sort(fonctionComparaison)
+```js
+arr.sort()
+arr.sort(fonctionComparaison)
+```
 
 ### Paramètres
 
@@ -36,7 +39,7 @@ Le tableau trié (le tri est effectué sur le tableau courant qui est modifié, 
 
 Si le paramètre `fonctionComparaison` n'est pas fourni, les éléments qui ne valent pas `undefined` sont triés en les convertissant en chaines de caractères et en comparant ces chaines selon l'ordre des points de code Unicode. Par exemple, "banane" sera trié avant "cerise", mais "Cerise" arrivera avant "banane" à cause de la majuscule (les majuscules arrivent avant dans la liste). Dans un tri numérique, 9 sera trié avant 80, mais comme ces nombres sont convertis en chaînes de caractères, "80" arrive avant "9" selon l'ordre des unités de code UTF-16. Les éléments valant `undefined` sont placés à la fin du tableau.
 
-> **Note :** En UTF-16, les caractères Unicode situés après `\uFFFF` sont encodés avec deux unités de code _surrogates_ sur l'intervalle `\uD800`-`\uDFFF`. Pour comparer les chaînes de caractères entre elles, ce sont les unités de code séparées qui sont prises en compte. Ainsi, le caractère formé par la paire _surrogate_ `\uD655 \uDE55` sera trié avant le caractère `\uFF3A`.
+> **Note :** En UTF-16, les caractères Unicode situés après `\uFFFF` sont encodés avec deux unités de code _surrogates_ sur l'intervalle `\uD800` - `\uDFFF`. Pour comparer les chaînes de caractères entre elles, ce sont les unités de code séparées qui sont prises en compte. Ainsi, le caractère formé par la paire _surrogate_ `\uD655 \uDE55` sera trié avant le caractère `\uFF3A`.
 
 Si le paramètre `fonctionComparaison` est fourni, les éléments du tableau (qui ne valent pas `undefined`) sont triés selon la valeur de retour de la fonction de comparaison. Si `a` et `b` sont deux éléments à comparer, alors&nbsp;:
 
@@ -134,13 +137,17 @@ writeArray(a);
 
 En JavaScript 1.1, cette fonction affichait&nbsp;:
 
-    araignée, null, null, null, null, zèbre
-    araignée, null, null, null, null, zèbre
+```
+araignée, null, null, null, null, zèbre
+araignée, null, null, null, null, zèbre
+```
 
 En JavaScript 1.2, elle affichera&nbsp;:
 
-    araignée, undefined, undefined, undefined, undefined, zèbre
-    araignée, zèbre, undefined, undefined, undefined, undefined
+```
+araignée, undefined, undefined, undefined, undefined, zèbre
+araignée, zèbre, undefined, undefined, undefined, undefined
+```
 
 ## Exemples
 
@@ -176,20 +183,22 @@ console.log("Triés avec compareNombres&nbsp;: " + mixedNumericArray.sort(compar
 
 Cet exemple produit la sortie suivante. Comme on peut le voir, lorsqu'on utilise la fonction de comparaison, les nombres sont triés correctement qu'ils soient des nombres ou des chaînes numériques.
 
-    Chaînes&nbsp;: Bosse,Bleue,Béluga
-    Triées&nbsp;: Bleue,Bosse,Béluga
+```
+Chaînes&nbsp;: Bosse,Bleue,Béluga
+Triées&nbsp;: Bleue,Bosse,Béluga
 
-    Nombres&nbsp;: 40,1,5,200
-    Triés sans fonction de comparaison&nbsp;: 1,200,40,5
-    Triés avec compareNombres&nbsp;: 1,5,40,200
+Nombres&nbsp;: 40,1,5,200
+Triés sans fonction de comparaison&nbsp;: 1,200,40,5
+Triés avec compareNombres&nbsp;: 1,5,40,200
 
-    Chaînes numériques&nbsp;: 80,9,700
-    Triées sans fonction de comparaison&nbsp;: 700,80,9
-    Triées avec compareNombres&nbsp;: 9,80,700
+Chaînes numériques&nbsp;: 80,9,700
+Triées sans fonction de comparaison&nbsp;: 700,80,9
+Triées avec compareNombres&nbsp;: 9,80,700
 
-    Nombres et chaînes numériques&nbsp;: 80,9,700,40,1,5,200
-    Triés sans fonction de comparaison&nbsp;: 1,200,40,5,700,80,9
-    Triés avec compareNombres&nbsp;: 1,5,9,40,80,200,700
+Nombres et chaînes numériques&nbsp;: 80,9,700,40,1,5,200
+Triés sans fonction de comparaison&nbsp;: 1,200,40,5,700,80,9
+Triés avec compareNombres&nbsp;: 1,5,9,40,80,200,700
+```
 
 ### Trier des caractères non-ASCII
 
@@ -239,16 +248,11 @@ var result = mapped.map(function(e){
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                                             | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.4.4.11', 'Array.prototype.sort')}}                 | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-array.prototype.sort', 'Array.prototype.sort')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-array.prototype.sort', 'Array.prototype.sort')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.sort")}}
+{{Compat}}
 
 ## Voir aussi
 

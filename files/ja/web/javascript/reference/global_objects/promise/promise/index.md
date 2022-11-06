@@ -1,15 +1,8 @@
 ---
 title: Promise() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
-tags:
-  - コンストラクター
-  - JavaScript
-  - Promise
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.Promise.Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** コンストラクターは、主にまだプロミスに対応していない関数をラップするために使用します。
@@ -57,13 +50,13 @@ new Promise(executor)
 
     以上のことを踏まえて、典型的な流れをまとめてみました。
 
-    1.  `executor` の中の操作は非同期であり、コールバックを提供します。
-    2.  コールバックは `executor` コードの中で定義されます。
-    3.  コールバックは `resolutionFunc` を呼び出して終了します。
-    4.  `resolutionFunc` の呼び出しには `value` 引数が含まれます。
-    5.  `value` は繋がっている `Promise` オブジェクトに送り返されます。
-    6.  `Promise` オブジェクトは（非同期に）関連付けられた `.then(handleResolved)` を呼び出します。
-    7.  `.then(handleResolved)` から受け取った `value` は、 `handleResolved` の呼び出しで入力引数として渡されます（[プロミスの連鎖](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises)を参照してください）。
+    1. `executor` の中の操作は非同期であり、コールバックを提供します。
+    2. コールバックは `executor` コードの中で定義されます。
+    3. コールバックは `resolutionFunc` を呼び出して終了します。
+    4. `resolutionFunc` の呼び出しには `value` 引数が含まれます。
+    5. `value` は繋がっている `Promise` オブジェクトに送り返されます。
+    6. `Promise` オブジェクトは（非同期に）関連付けられた `.then(handleResolved)` を呼び出します。
+    7. `.then(handleResolved)` から受け取った `value` は、 `handleResolved` の呼び出しで入力引数として渡されます（[プロミスの連鎖](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises)を参照してください）。
 
 ### 返値
 

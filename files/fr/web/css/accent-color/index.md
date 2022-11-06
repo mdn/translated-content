@@ -4,6 +4,7 @@ slug: Web/CSS/accent-color
 translation_of: Web/CSS/accent-color
 browser-compat: css.properties.accent-color
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`accent-color`** définit la couleur d'accentuation ({{Glossary("accent")}}) des éléments. Une accentuation est présente sur des éléments HTML tels que des {{HTMLElement("input")}} de type [`checkbox`](/fr/docs/Web/HTML/Element/input/checkbox) ou [`radio`](/fr/docs/Web/HTML/Element/input/radio).

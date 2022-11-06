@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBDatabase/version
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`version`**, rattachée à l'interface {{domxref("IDBDatabase")}}, est un entier sur 64 bits qui contient la version de la base de données à laquelle on est connecté. Lors de la création initiale d'une base de données, cet attribut a la chaîne vide.
@@ -17,7 +18,9 @@ La propriété **`version`**, rattachée à l'interface {{domxref("IDBDatabase")
 
 ## Syntaxe
 
-    db.version
+```js
+db.version
+```
 
 ### Valeur
 
@@ -47,13 +50,11 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-version', 'version')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBDatabase.version")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,18 +1,13 @@
 ---
 title: Node.previousSibling
 slug: Web/API/Node/previousSibling
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.previousSibling
-translation_of: Web/API/Node/previousSibling
 ---
+
 {{APIRef("DOM")}}
 
 **`previousSibling`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、指定されたノードの親ノードの {{domxref("Node.childNodes", "childNodes")}} リスト内で、直前にある ノードを返します。指定されたノードがリストの先頭にあった倍は `null` を返します。
 
-> **Note:** ブラウザーはソースのマークアップにあるホワイトスペースを表すために、文書にテキストノードを挿入します。
+> **メモ:** ブラウザーはソースのマークアップにあるホワイトスペースを表すために、文書にテキストノードを挿入します。
 > そのため、例えば [`Node.firstChild`](/ja/docs/Web/API/Node/firstChild) や `Node.previousSibling` を使用して得たノードが、取得しようとした実際のノードではなく、ホワイトスペースのテキストノードであることがあります。
 >
 > [DOM でのホワイトスペース](/ja/docs/Web/API/Document_Object_Model/Whitespace)の記事に、この動作に関する詳しい情報があります。

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 original_slug: Contrôles_DHTML_personnalisés_navigables_au_clavier
 ---
+
 ### Le problème&nbsp;: les pages DHTML actuelles ne sont pas accessibles au clavier
 
 Un nombre croissant d'applications Web utilise [JavaScript](fr/JavaScript) pour imiter des contrôles (
@@ -57,7 +58,9 @@ Ceci peut être utile à réaliser si un contrôle personnalisé devient actif o
 
 N'utilisez pas `createEvent()`, `initEvent()` et `dispatchEvent()` pour donner le focus à un élément, parce que les évènements DOM `focus` sont seulement considérés comme informels — générés par le système après que quelque chose ait reçu le focus, mais pas réellement pour donner le focus. Le retardateur est nécessaire, tant dans IE que dans Firefox 1.5, pour empêcher les scripts de faire des choses étranges et inattendues si l'utilisateur clique sur des boutons ou d'autres contrôles. Concrètement, le code pour donner le focus à un élément ressemblera à quelque chose comme ceci&nbsp;:
 
-    setTimeout("gFocusItem.focus();",0);  // gFocusItem doit être une variable globale
+```js
+setTimeout("gFocusItem.focus();",0);  // gFocusItem doit être une variable globale
+```
 
 #### Ne pas utiliser `:focus` ou des sélecteurs d'attribut pour styler le focus
 
@@ -65,7 +68,7 @@ Il ne sera pas possible d'utiliser `:focus` ou des sélecteurs d'attribut pour s
 
 #### Toujours dessiner le focus pour les éléments avec `tabindex="-1"` et qui reçoivent le focus par programmation
 
-IE ne dessinera pas automatiquement l'encadrement du focus pour les éléments qui reçoivent le focus de manière programmée. Choisissez entre changer la couleur de fond via quelque chose comme `this.style.backgroundColor = "gray";` ou ajoutez une bordure pointillée via `this.style.border = "1px dotted invert"`. Dans le cas d'une bordure pointillée, il sera nécessaire de s'assurer que ces éléments aient une bordure invisible de \<tt>1px\</tt> au départ, afin que l'élément ne change pas de taille lorsque le style de bordure est appliqué (les bordures prennent de la place et IE n'implémente pas les encadrements CSS).
+IE ne dessinera pas automatiquement l'encadrement du focus pour les éléments qui reçoivent le focus de manière programmée. Choisissez entre changer la couleur de fond via quelque chose comme `this.style.backgroundColor = "gray";` ou ajoutez une bordure pointillée via `this.style.border = "1px dotted invert"`. Dans le cas d'une bordure pointillée, il sera nécessaire de s'assurer que ces éléments aient une bordure invisible de `1px` au départ, afin que l'élément ne change pas de taille lorsque le style de bordure est appliqué (les bordures prennent de la place et IE n'implémente pas les encadrements CSS).
 
 #### Utilisation de `onkeydown` pour les évènements clavier, plutôt que `onkeypress`
 
@@ -75,7 +78,9 @@ IE ne déclenchera pas les évènements `keypress` pour les touches non alphanum
 
 Si une touche comme une flèche directionnelle est utilisée, empêchez le navigateur d'utiliser cette touche pour faire quelque chose d'autre (comme faire défiler la page) en utilisant un code similaire à ce qui suit&nbsp;:
 
-    <span tabindex="-1" onkeydown="return handleKeyDown();">
+```html
+<span tabindex="-1" onkeydown="return handleKeyDown();">
+```
 
 Si `handleKeyDown()` renvoie `false`, l'évènement sera consommé, empêchant le navigateur d'effectuer quelque action que ce soit, basée sur la touche pressée.
 

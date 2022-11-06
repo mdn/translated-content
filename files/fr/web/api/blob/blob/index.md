@@ -10,14 +10,17 @@ tags:
   - Reference
 translation_of: Web/API/Blob/Blob
 ---
+
 {{APIRef("File API")}}
 
 Le constructeur **`Blob()`** retourne un nouvel objet {{domxref("Blob")}}. Le contenu d'un blob consiste en une concaténation de valeurs données dans le tableau passé en paramètre.
 
 ## Syntaxe
 
-    var aBlob = new Blob( array)
-    var aBlob = new Blob( array, options );
+```js
+var aBlob = new Blob( array)
+var aBlob = new Blob( array, options );
+```
 
 ### Paramètres
 
@@ -47,13 +50,11 @@ var oMyBlob = new Blob(aFileParts, {type : 'text/html'});
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('File API', '#constructorBlob', 'Blob()')}} | {{Spec2('File API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Blob.Blob")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -3,6 +3,7 @@ title: AnalyserNode.maxDecibels
 slug: Web/API/AnalyserNode/maxDecibels
 translation_of: Web/API/AnalyserNode/maxDecibels
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La propriété **`maxDecibels`** de l'objet {{ domxref("AnalyserNode") }} est un nombre flottant à double précision représentant la puissance maximum de l'intervalle pour l'analyse des données FFT, pour une conversion vers des valeurs non signées ou des nombres flottants — en d'autres termes, elle spécifie la valeur maximum pour l'intervalle de résultats des méthodes `getFloatFrequencyData()` et `getByteFrequencyData()`.
@@ -69,13 +70,11 @@ dessiner();
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-maxDecibels', 'maxDecibels')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.maxDecibels")}}
+{{Compat}}
 
 ## Voir aussi
 

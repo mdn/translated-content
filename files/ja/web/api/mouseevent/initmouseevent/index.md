@@ -1,22 +1,13 @@
 ---
 title: MouseEvent.initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - 非推奨
-  - メソッド
-  - MouseEvent
-  - リファレンス
-browser-compat: api.MouseEvent.initMouseEvent
-translation_of: Web/API/MouseEvent/initMouseEvent
 ---
+
 {{APIRef("DOM Events")}}{{deprecated_header}}
 
 **`MouseEvent.initMouseEvent()`** メソッドは、いったん（通常は {{domxref("Document.createEvent()")}} メソッドで）生成されたマウスイベントの値を初期化します。
 
-> **Warning:** このメソッドは非推奨になったので、今後は使用しないでください。
+> **警告:** このメソッドは非推奨になったので、今後は使用しないでください。
 >
 > 代わりに {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} など、特定のイベントのコンストラクターを使用してください。
 > [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページに、使用方法についての詳しい情報があります。

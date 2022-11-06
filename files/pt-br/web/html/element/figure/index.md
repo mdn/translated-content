@@ -1,22 +1,11 @@
 ---
-title: '<figure>: O elemento de Figura com legenda opcional'
+title: '<figure>: O elemento Figure com Caption opcional'
 slug: Web/HTML/Element/figure
-translation_of: Web/HTML/Element/figure
-original_slug: Web/HTML/Element/figura
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Information
-  - Presentation
-  - Reference
-  - figure
-browser-compat: html.elements.figure
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-O elemento [HTML](/pt-BR/docs/Web/HTML) **`<figure>`** representa o conteúdo independente, frequentemente com uma legenda, definida pelo elemento {{HTMLElement("figcaption")}}. A figura, sua legenda, e seu conteúdo são normalmente referidos como uma única unidade.
+O elemento **`<figure>`** [HTML](/pt-BR/docs/Web/HTML) representa conteúdo autocontido, potencialmente com uma legenda opcional, que é especificada usando o {{HTMLElement("figcaption" )}} elemento. A figura, sua legenda e seu conteúdo são referenciados como uma única unidade.
 
 {{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
 
@@ -30,33 +19,33 @@ O elemento [HTML](/pt-BR/docs/Web/HTML) **`<figure>`** representa o conteúdo in
       </th>
       <td>
         <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Conteúdo de fluxo</a
+          >Conteudo de fluxo</a
         >,
-        <a href="/pt-BR/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
-          >raiz de seção</a
-        >, conteúdo palpável.
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#palpable_content"
+          >conteúdo palpável</a
+        >.
       </td>
     </tr>
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        Um elemento {{HTMLElement("figcaption")}}, seguido de
+        Um elemento {{HTMLElement("figcaption")}}, seguido por
         <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#flow_content"
           >conteúdo de fluxo</a
-        >; ou conteúdo de fluxo seguido de um elemento
-        {{HTMLElement("figcaption")}}; ou conteúdo de fluxo.
+        >; ou conteúdo de fluxo seguido por um
+        {{HTMLElement("figcaption")}} elemento; ou conteúdo de fluxo.
       </td>
     </tr>
     <tr>
-      <th scope="row">Omissão de Tag</th>
+      <th scope="row">Omissão de tag</th>
       <td>{{no_tag_omission}}</td>
     </tr>
     <tr>
-      <th scope="row">Elemento Pai permitido</th>
+      <th scope="row">Pais permitidos</th>
       <td>
         Qualquer elemento que aceite
         <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Conteúdo de fluxo.</a
+          >Contúdo de fluxo</a
         >.
       </td>
     </tr>
@@ -71,15 +60,15 @@ O elemento [HTML](/pt-BR/docs/Web/HTML) **`<figure>`** representa o conteúdo in
     <tr>
       <th scope="row">Funções ARIA permitidas</th>
       <td>
-        Sem nenhum
+        Com nenhum
         <a href="/pt-BR/docs/Web/HTML/Element/figcaption">figcaption </a
-        >definido:
-        <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a>,
-        caso contrário nenhuma função permitida
+        >descendente:
+        <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">qualquer</a>,
+        caso contrário, não há papéis permitidos
       </td>
     </tr>
     <tr>
-      <th scope="row">Interface DOM</th>
+      <th scope="row">interface DOM</th>
       <td>{{domxref("HTMLElement")}}</td>
     </tr>
   </tbody>
@@ -87,13 +76,12 @@ O elemento [HTML](/pt-BR/docs/Web/HTML) **`<figure>`** representa o conteúdo in
 
 ## Atributos
 
-Este elemento só inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-## Uso
+## Notas de uso
 
-- Normalmente uma `<figure>` é uma imagem, uma ilustração, um diagrama, um trecho de código ou um esquema que é referenciado no texto principal, mas que pode ser movido para outra parte do documento ou para um apêndice, sem afetar o fluxo principal.
-- Sendo uma [raiz de seção](/pt-BR/docs/Web/HTML/Element/Heading_Elements#sectioning_roots), o esquema do conteúdo do elemento `<figure>` é excluído do esquema principal do documento.
-- Uma legenda pode ser associada ao elemento `<figure>` ao inserir um {{HTMLElement("figcaption")}} dentro (como primeiro ou último filho). O primeiro elemento `<figcaption>` encontrado na figura é apresentado como a legenda da figura.
+- Normalmente uma `<figure>` é uma imagem, ilustração, diagrama, trecho de código, etc., que é referenciado no fluxo principal de um documento, mas que pode ser movido para outra parte do documento ou para um apêndice sem afetar o fluxo principal.
+- Uma legenda pode ser associada ao elemento `<figure>` inserindo um {{HTMLElement("figcaption")}} dentro dele (como o primeiro ou o último filho). O primeiro elemento `<figcaption>` encontrado na figura é apresentado como legenda da figura.
 
 ## Exemplos
 
@@ -102,37 +90,33 @@ Este elemento só inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attr
 ```html
 <!-- Apenas uma imagem -->
 <figure>
-  <img
-  src="favicon-192x192.png"
-  alt="O belo logo MDN.">
+  <img src="favicon-192x192.png" alt="O lindo logotipo do MDN." />
 </figure>
 
-<!-- Imagem com uma legenda -->
+<!-- Imagem com legenda -->
 <figure>
-  <img
-  src="favicon-192x192.png"
-  alt="O belo logo MDN.">
-  <figcaption>Logo MDN</figcaption>
+  <img src="favicon-192x192.png" alt="O lindo logotipo do MDN." />
+  <figcaption>Logotipo MDN</figcaption>
 </figure>
 ```
 
 {{EmbedLiveSample("Images", "100%", 375)}}
 
-### Trechos de código
+### Trechos de codigo
 
 ```html
 <figure>
-  <figcaption>Obtenha os detalhes do browser usando <code>navigator</code>.</figcaption>
+  <figcaption>Obtenha detalhes do navegador usando o <code>navigator</code>.</figcaption>
   <pre>
 function NavigatorExample() {
   var txt;
-  txt = "Browser CodeName: " + navigator.appCodeName + "; ";
-  txt+= "Browser Name: " + navigator.appName + "; ";
-  txt+= "Browser Version: " + navigator.appVersion  + "; ";
-  txt+= "Cookies Enabled: " + navigator.cookieEnabled  + "; ";
-  txt+= "Platform: " + navigator.platform  + "; ";
-  txt+= "User-agent header: " + navigator.userAgent  + "; ";
-  console.log("NavigatorExample", txt);
+  txt = "Nome do código do navegador: " + navigator.appCodeName + "; ";
+  txt+= "Nome do navegador: " + navigator.appName + "; ";
+  txt+= "Versão do navegador: " + navigator.appVersion + "; ";
+  txt+= "Cookies habilitados: " + navigator.cookieEnabled + "; ";
+  txt+= "Plataforma: " + navigator.platform + "; ";
+  txt+= "Cabeçalho do agente do usuário: " + navigator.userAgent + "; ";
+  console.log("Exemplo de Navegador", txt);
 }
   </pre>
 </figure>
@@ -144,9 +128,10 @@ function NavigatorExample() {
 
 ```html
 <figure>
-  <figcaption><cite>Edsger Dijkstra:</cite></figcaption>
-  <blockquote>Se o debugging é o processo de remoção de bugs de software,
-    então programação deve ser o processo de colocá-los.
+  <figcaption><b>Edsger Dijkstra:</b></figcaption>
+  <blockquote>
+    Se a depuração é o processo de remoção de bugs de software, então a programação deve
+    ser o processo de colocá-los.
   </blockquote>
 </figure>
 ```
@@ -158,24 +143,22 @@ function NavigatorExample() {
 ```html
 <figure>
   <p style="white-space:pre">
-Bid me discourse, I will enchant thine ear,
-  Or like a fairy trip upon the green,
-Or, like a nymph, with long dishevell'd hair,
-  Dance on the sands, and yet no footing seen:
-Love is a spirit all compact of fire,
-  Not gross to sink, but light, and will aspire.</p>
-  <figcaption><cite>Venus and Adonis</cite>,
-    by William Shakespeare</figcaption>
+    Ofereça-me um discurso, encantarei seu ouvido, Ou como uma viagem de fadas sobre o
+    verde, Ou, como uma ninfa, com longos cabelos desgrenhados, Dança na areia, e
+    mas nenhum fundamento visto: O amor é um espírito todo compacto de fogo, Não grosseiro para
+    afundar, mas leve, e vai aspirar.
+  </p>
+  <figcaption><cite>Vênus e Adônis</cite>, de William Shakespeare</figcaption>
 </figure>
 ```
 
-{{EmbedLiveSample("Poems", "100%", 250)}}
+{{EmbedLiveSample("Poemas", "100%", 250)}}
 
 ## Especificações
 
 {{Specifications}}
 
-## Compatibilidade de navegadores
+## Compatibilidade do navegador
 
 {{Compat}}
 

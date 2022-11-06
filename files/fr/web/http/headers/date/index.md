@@ -3,6 +3,7 @@ title: Date
 slug: Web/HTTP/Headers/Date
 translation_of: Web/HTTP/Headers/Date
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête général HTTP **`Date`** contient la date et l'heure d'origine du message.
@@ -22,7 +23,9 @@ L'en-tête général HTTP **`Date`** contient la date et l'heure d'origine du me
 
 ## Syntaxe
 
-    Date: <day-name>, <jour> <mois> <année> <heure>:<minute>:<seconde> GMT
+```
+Date: <day-name>, <jour> <mois> <année> <heure>:<minute>:<seconde> GMT
+```
 
 ## Directives
 
@@ -45,7 +48,9 @@ L'en-tête général HTTP **`Date`** contient la date et l'heure d'origine du me
 
 ## Exemples
 
-    Date: Wed, 21 Oct 2015 07:28:00 GMT
+```
+Date: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Spécifications
 
@@ -57,6 +62,6 @@ L'en-tête général HTTP **`Date`** contient la date et l'heure d'origine du me
 
 {{Compat("http.headers.Date")}}
 
-## See also
+## Voir aussi
 
 - {{HTTPHeader("Age")}}

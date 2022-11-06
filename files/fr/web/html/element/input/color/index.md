@@ -1,15 +1,9 @@
 ---
 title: <input type="color">
-slug: Web/HTML/Element/Input/color
-tags:
-  - Element
-  - HTML
-  - Input
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/input/color
+slug: Web/HTML/Element/input/color
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Les éléments {{HTMLElement("input")}} de type **`"color"`** permettent de sélectionner une couleur via une interface (un sélecteur de couleur) ou en saisissant le code hexadécimal de la couleur au format `"#rrggbb"`. Ce format de valeur peut être utilisé en CSS.
 
@@ -41,7 +35,7 @@ Si aucune valeur n'est indiquée, c'est `"#000000"` qui sera utilisée par défa
 
 ### Détecter le changement de couleur
 
-Comme pour les différents éléments {{HTMLElement("input")}}, deux évènements peuvent être utilisés afin de détecter une modification de la couleur : {{event("input")}} et {{event("change")}}. `input` est déclenché sur l'élément `<input>` à chaque fois que la couleur change. L'évènement `change` est déclenché lorsque l'utilisateur ferme le sélecteur de couleur. Dans tous les cas, il est possible de déterminer la nouvelle valeur de l'élément grâce à {{domxref("HTMLInputElement.value", "value")}}.
+Comme pour les différents éléments {{HTMLElement("input")}}, deux évènements peuvent être utilisés afin de détecter une modification de la couleur : [`input`](/fr/docs/Web/API/HTMLElement/input_event) et [`change`](/fr/docs/Web/API/HTMLElement/change_event). `input` est déclenché sur l'élément `<input>` à chaque fois que la couleur change. L'évènement `change` est déclenché lorsque l'utilisateur ferme le sélecteur de couleur. Dans tous les cas, il est possible de déterminer la nouvelle valeur de l'élément grâce à {{domxref("HTMLInputElement.value", "value")}}.
 
 ```js
 colorPicker.addEventListener("input", updateFirst, false);
@@ -68,7 +62,7 @@ La valeur d'un tel champ est considérée invalide si l'interface utilisateur ne
 
 ## Exemples
 
-Créons un exemple qui utilise un sélecteur de couleur et les évènements {{event("change")}} et {{event("input")}} afin de choisir une nouvelle couleur et de l'appliquer sur chaque élément {{HTMLElement("p")}} du document.
+Créons un exemple qui utilise un sélecteur de couleur et les évènements [`change`](/fr/docs/Web/API/HTMLElement/change_event) et [`input`](/fr/docs/Web/API/HTMLElement/input_event) afin de choisir une nouvelle couleur et de l'appliquer sur chaque élément {{HTMLElement("p")}} du document.
 
 ### HTML
 
@@ -89,7 +83,7 @@ Le fragment de code HTML utilisé est relativement simple. On utilise quelques p
 
 ### JavaScript
 
-Tout d'abord, on établit certains variables : une pour la couleur du sélecteur et une autre couleur pour la couleur par défaut. On ajoute un gestionnaire {{event("load")}} afin de lancer les actions de démarrage lorsque la page est chargée.
+Tout d'abord, on établit certains variables : une pour la couleur du sélecteur et une autre couleur pour la couleur par défaut. On ajoute un gestionnaire [`load`](/fr//docs/Web/API/Window/load_event) afin de lancer les actions de démarrage lorsque la page est chargée.
 
 ```js
 var colorWell
@@ -112,7 +106,7 @@ function startup() {
 }
 ```
 
-Dans cette fonction, on utilise la variable `colorWell` déclarée plus haut et on remplit sa valeur avec la valeur par défaut (la valeur de `defaultColor`). Ensuite, on indique les gestionnaires d'évènements : {{event("input")}} appellera `updateFirst()` et {{event("change")}} appellera `updateAll()` qui seront détaillés ensuite.
+Dans cette fonction, on utilise la variable `colorWell` déclarée plus haut et on remplit sa valeur avec la valeur par défaut (la valeur de `defaultColor`). Ensuite, on indique les gestionnaires d'évènements : [`input`](/fr/docs/Web/API/HTMLElement/input_event) appellera `updateFirst()` et [`change`](/fr/docs/Web/API/HTMLElement/change_event) appellera `updateAll()` qui seront détaillés ensuite.
 
 Enfin, on appelle {{domxref("HTMLInputElement.select", "select()")}} afin de sélectionner le texte du champ si le contrôle est un champ texte.
 
@@ -160,7 +154,7 @@ Cela permet de modifier la couleur de chaque bloc {{HTMLElement("p")}} du docume
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
-      <td>{{event("change")}} et {{event("input")}}.</td>
+      <td><a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/input_event"><code>input</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
@@ -184,12 +178,8 @@ Cela permet de modifier la couleur de chaque bloc {{HTMLElement("p")}} du docume
 
 ## Spécifications
 
-| Spécification                                                                | État                             | Commentaires         |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', '#color-state-(type=color)')}} | {{Spec2('HTML WHATWG')}} |                      |
-| {{SpecName('HTML5 W3C', 'forms.html#the-input-element')}} | {{Spec2('HTML5 W3C')}}     |                      |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.4')}}     | {{Spec2('HTML4.01')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.input.input-color")}}
+{{Compat}}

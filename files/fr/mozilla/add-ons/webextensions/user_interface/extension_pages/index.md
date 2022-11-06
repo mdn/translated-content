@@ -9,6 +9,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 original_slug: Mozilla/Add-ons/WebExtensions/user_interface/pages_web_incluses
 ---
+
 {{AddonSidebar()}}
 
 Vous pouvez inclure des pages HTML dans votre extension sous la forme de formulaires, d’aide ou tout autre contenu dont votre extension a besoin.
@@ -23,10 +24,12 @@ Pensez à la page d'arrière-plan comme une «&nbsp;page cachée d’extension&n
 
 Vous pouvez inclure des fichiers HTML - et les fichiers CSS ou JavaScript associés - dans votre extension. Les fichiers peuvent être inclus à la racine ou organisés dans des sous‐dossiers.
 
-    /my-extension
-        /manifest.json
-        /my-page.html
-        /my-page.js
+```
+/my-extension
+    /manifest.json
+    /my-page.html
+    /my-page.js
+```
 
 ## Affichage des pages d’extension
 

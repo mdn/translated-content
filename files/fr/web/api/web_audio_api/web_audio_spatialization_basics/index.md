@@ -1,269 +1,500 @@
 ---
-title: Web audio spatialization basics
+title: Fondamentaux pour la spatialisation avec Web Audio
 slug: Web/API/Web_Audio_API/Web_audio_spatialization_basics
-translation_of: Web/API/Web_Audio_API/Web_audio_spatialization_basics
+l10n:
+  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
 ---
-En plus de sa grande variété de fonctionnalités et d'options, la Web Audio API permet aussi d'émuler la différence dans l'écoute d'un son lorsqu'un auditeur se déplace par rapport à une source, par exemple un panoramique lorsqu'il se déplace de gauche à droite de la source. On parle alors de spatialisation. Cet article expose les notions de base pour implémenter ce type de système.
 
-Le cas d'utilisation le plus simple est la simulation des altérations d'un son de façon réaliste pour imaginer comment une source se comportera pour un personnage qui se déplace dans un environnement 3D.
+{{DefaultAPISidebar("Web Audio API")}}
 
-## Concepts de base
+En plus des nombreuses options de traitement du son, l'API Web Audio contient également des fonctions pour émuler la différence de perception lors du déplacement par rapport à une source sonore, par un exemple un défilement lorsqu'on se déplace autour d'une source sonore dans un jeu vidéo. C'est ce qu'on appelle **la spatialisation**, et cet article couvrira les bases pour implémenter un tel système.
 
-Créer une spatialisation audio comporte deux principaux aspects :
+## Les bases de la spatialisation
 
-1.  L'objet {{ domxref("AudioListener") }} représente la position dans l'espace 3D d'une personne qui écoute la source audio; on y accède avec la propriété {{ domxref("AudioContext.listener") }}. On peut paramétrer la position et l'orientation de l'auditeur, entre autres.
-2.  L'objet {{ domxref("PannerNode") }} représente la position dans l'espace 3D d'une source audio; on le crée avec la méthode {{ domxref("AudioContext.createPanner()") }}. On peut paramétrer un certain nombre d'options comme la position, l'orientation, la vitesse, et l'angle s'un cône qui indique dans quelle direction le son peut être entendu (s'il n'est pas omnidirectionnel).
+Avec l'API Web Audio, on peut créer des spatialisations complexes en trois dimensions à l'aide de [`PannerNode`](/fr/docs/Web/API/PannerNode). Cette interface est un outil utilisant des notions mathématiques pour manipuler l'audio dans l'espace. On peut l'utiliser pour créer des effets de choses faisant du son au-dessus, derrière ou se déplaçant devant nous.
 
-Dans cet article nous allons nous concentrer sur la position de l'auditeur et du panoramique, tous deux paramétrés à l'aide de la méthode `setPosition()`. Celle-ci accepte trois valeurs qui correspondent à X, Y, et Z dans un système de coordonnées cartésien.
+C'est un outil pratique pour WebXR et les jeux vidéo.
 
-> **Note :** Trouver les bonnes valeurs pour que le cas d'utilisation fonctionne bien et semble réaliste n'est pas toujours évident et peur prendre du temps, et il faut souvent continuer à modifier les valeurs par la suite. Nous discuterons ceci plus en détail en parcourant le code qui suit.
+Dans l'espace en trois dimensions, c'est la seule façon de réaliser des effets audio réalistes. Des bibliothèques tierces comme [three.js](https://threejs.org/) et [A-frame](https://aframe.io/) l'utilisent pour gérer le son. On notera quand même qu'il n'y a pas _forcément_ besoin de déplacer le son dans un espace en trois dimensions, on peut tout à fait utiliser cette interface pour gérer un son dans un espace en deux dimensions.
 
-Les autres options disponibles, que nous ne traiterons pas ici, sont :
+> **Note :** Il existe également [`StereoPannerNode`](/fr/docs/Web/API/StereoPannerNode) qui permet de gérer des effets simples de défilement à gauche ou à droite. Celle-ci est plus simple à utiliser, mais est moins flexible. Si vous souhaitez un simple effet de panoramique stéréo, voyez [l'exemple `StereoPannerNode`](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([le code source correspondant](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node)), qui devrait vous fournir ce dont vous avez besoin.
 
-- `setOrientation()`: disponible à la fois pour l'auditeur et le panoramique for both the listener and panner, cette méthode paramètre l'orientation. Elle prend six valeurs: les trois premières représentent un vecteur frontal dans l'espace 3D  (imaginez une personne et la direction dans laquelle pointe son nez) and les trois autre un vecteur de direction verticale dans l'espace 3D space (imaginez la même personne et la direction vers laquelle pointe le haut de sa tête)
-- `setVelocity()`: disponible uniquement pour le panoramique; permet de paramétrer la vitesse à laquelle une source audio se déplace, à l'aide d'un vecteur de vitesse dans l'espace 3D (valeurs X, Y, et Z). When set, the browser will apply a doppler shift effect.
-- `coneInnerAngle`, `coneOuterAngle`, and `coneOuterGain`: Available for the panner only, these allow you to set an angle inside/outside of which the volume will be reduced by the specified gain value. This is done to specify directional audio sources, but the default is 360/360/0, respectively, meaning that by default you get an omnidirectional sound source.
+## Démo avec le radiocassette en 3D
 
-## A simple demo: Room of metal
+Pour illustrer la spatialisation en trois dimensions, nous avons créé une version modifiée de la démo radiocassette initiée dans le guide [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API). Voir [la démo de spatialisation en 3D](https://mdn.github.io/webaudio-examples/spatialization/) (et [le code source correspondant](https://github.com/mdn/webaudio-examples/tree/master/spatialization)).
 
-In our demo, you can move left and right past a 2.5D stereo that can be made to play a groovy tune, and you can also move towards the stereo. As you move left and right, the tune will pan to emulate how the tune will sound as you change your position proportional to the sound source. When you zoom in and out, the sound will get louder and quieter to suit.
+![Une interface utilisateur simple avec un radiocassette tourné et incliné, avec des contrôles pour le déplacer dans l'espace et le faire tourner.](web-audio-spatialization.png)
 
-> **Note :** You can see this example [running live](https://mdn.github.io/webaudio-examples/panner-node/), and [view the source code](https://github.com/mdn/panner-node).
+Le radiocassette est placé dans un espace (défini par les bords de la zone d'affichage du navigateur), et dans cette démonstration, on peut le déplacer et le faire pivoter avec les contrôles fournis.
 
-Let's walk through the code and see how this was actually done.
+Lorsqu'on déplace le radiocassette, le son produit change de façon correspondante, se décalant de droite à gauche selon le déplacement ou s'atténuant si on l'éloigne dans le fond ou si on le pivote pour que les hauts-parleurs nous tournent le dos. Ces effets sont obtenus en jouant sur les différentes propriétés de l'objet `PannerNode` lors du mouvement, pour émuler cette spatialisation.
 
-### Defining basic variables
+> **Note :** Le résultat obtenu sera bien meilleur si vous utilisez un casque ou des écouteurs ou un système stéréo surround.
 
-First we define a new audio context, panner, listener, and source:
+## Créer un auditeur
+
+Commençons&nbsp;! L'interface [`BaseAudioContext`](/fr/docs/Web/API/BaseAudioContext) (qui est étendue par [`AudioContext`](/fr/docs/Web/API/AudioContext)) possède une propriété [`listener`](/fr/docs/Web/API/BaseAudioContext/listener) qui renvoie un objet [`AudioListener`](/fr/docs/Web/API/AudioListener). Cette propriété représente un auditeur pour la scène audio, il s'agit généralement de modéliser la personne qui utilise l'application. On peut définir l'emplacement et la direction de l'auditeur dans l'espace. Cet auditeur reste alors statique et `PannerNode` peut calculer le son reçu par l'auditeur selon leurs positions respectives.
+
+Créons un contexte, un auditeur puis définissons la position de l'auditeur pour simuler une personne qui regarderait cette pièce virtuelle&nbsp;:
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
+const listener = audioCtx.listener;
 
-var panner = audioCtx.createPanner();
-var listener = audioCtx.listener;
-var source;
+const posX = window.innerWidth/2;
+const posY = window.innerHeight/2;
+const posZ = 300;
+
+listener.positionX.value = posX;
+listener.positionY.value = posY;
+listener.positionZ.value = posZ-5;
 ```
 
-Next we grab the objects on the page we are using for our demo. First the `play` and `stop` buttons to control the audio, then the `boomBox`, which is just the graphic of the stereo that we are moving around. After that, we grab a reference to two paragraphs that are used to output the position of the `listener` and `panner`, for debugging purposes.
+On pourra déplacer l'auditeur de gauche à droite en utilisant `positionX`, ou de haut en bas avec `positionY`, ou d'avant en arrière grâce à `positionZ`. Ici, on place l'auditeur au milieu de la zone d'affichage et légèrement devant notre radiocassette. On peut aussi définir la direction selon laquelle l'auditeur est orienté. Les valeurs par défaut fonctionnent bien&nbsp;:
 
 ```js
-var play = document.querySelector('.play');
-var stop = document.querySelector('.stop');
-
-var boomBox = document.querySelector('.boom-box');
-
-var listenerData = document.querySelector('.listener-data');
-var pannerData = document.querySelector('.panner-data');
+listener.forwardX.value = 0;
+listener.forwardY.value = 0;
+listener.forwardZ.value = -1;
+listener.upX.value = 0;
+listener.upY.value = 1;
+listener.upZ.value = 0;
 ```
 
-### Working out listener and panner positions
+Les propriétés `forward*` représentent les coordonnées 3D de l'auditeur selon la direction dans laquelle il fait face, et les propriétés `up*` représentent les coordonnées 3D du haut de la tête de l'auditeur. En utilisant ces deux ensembles, on définit la direction de l'auditeur.
 
-Next comes a little bit of slightly fiddly maths. We want to make the `boomBox`, `listener`, and `panner` appear in the center of the screen initially, so we work out the width and height of the viewport, and divide both by two to get our X and Y values for those things. The `zPos` is only used on the panner, and is updated as the zoom controls are used (see later on); the initial value of 295 was decided on fairly arbitrarily — it sounded good. As long as you set the position of the panner appropriately in relation to the listener position, you will be ok.
+## Créer un nœud panoramique (<i lang="en">panner node</i>)
 
-Next for this section, we set a `leftBound` and `rightBound`, which is the furthest we want our stereo graph to travel left and right. For the layout, we are using [Flexbox](/en-US/docs/Web/Guide/CSS/Flexible_boxes) to initially place the `boomBox` right in the center of the viewport, after which we then use iterative transforms and {{domxref("window.requestAnimationFrame()")}} to apply the `boomBox` movement. Therefore the "0" position is in the center of the viewport so the rightmost position is that position plus half the viewport, but minus 50 (pixels) so the `boomBox` can't shoot all the way off the right of the screen, and the leftmost position is that position minus half the viewport, but plus 50 (pixels), so the `boomBox` can't shoot all the way off the left of the screen.
+Créons notre objet [`PannerNode`](/fr/docs/Web/API/PannerNode). Celui-ci possède plusieurs propriétés. Voyons de quoi il s'agit.
 
-The last part of this code is the `xIterator` — we set this to a 150th of the screen width, and then move the `boomBox` left and right by this amount when the left and right controls are pressed. We use this rather than a constant so that the app is a little more responsive.
+Pour commencer, on peut définir [`panningModel`](/fr/docs/Web/API/PannerNode/panningModel) qui est l'algorithme de spatialisation utilisé pour positionner l'audio dans l'espace en 3D, il peut valoir&nbsp;:
+
+- `equalpower`
+  - : La valeur par défaut et générique pour déterminer la gestion du panoramique.
+- `HRTF`
+  - : L'acronyme pour <i lang="en">Head-related transfer function</i>, qu'on pourrait traduire par «&nbsp;fonction de transfert relative à la tête&nbsp;», et qui tient compte de la tête humaine lorsqu'il s'agit de déterminer l'emplacement du son.
+
+Utilisons ce modèle `HRTF`&nbsp;!
 
 ```js
-var WIDTH = window.innerWidth;
-var HEIGHT = window.innerHeight;
-
-var xPos = WIDTH/2;
-var yPos = HEIGHT/2;
-var zPos = 295;
-
-leftBound = (-xPos) + 50;
-rightBound = xPos - 50;
-
-xIterator = WIDTH/150;
+const panningModel = 'HRTF';
 ```
 
-Next we set the position of the `listener` and output the coordinates to the `listenerData` paragraph. It is always going to be in the same place, in a good position relative to the panner.
+Les propriétés [`coneInnerAngle`](/fr/docs/Web/API/PannerNode/coneInnerAngle) et [`coneOuterAngle`](/fr/docs/Web/API/PannerNode/coneOuterAngle) définissent l'emplacement de l'origine du volume. Par défaut, les deux valent 360°.
+
+Les hauts-parleurs de notre radiocassette auront des cônes plus réduits, que nous allons définir. Le cône intérieur (`coneInnerAngle`) est l'emplacement où le gain (c'est-à-dire le volume) est toujours émulé au maximum et le cône extérieur (`coneOuterAngle`) est l'emplacement où le gain commence à s'atténuer.
+
+Le gain est réduit de la valeur de [`coneOuterGain`](/fr/docs/Web/API/PannerNode/coneOuterGain).
+
+Prenons quelques constantes pour stocker ces valeurs, que nous utiliserons ensuite en paramètres&nbsp;:
 
 ```js
-listener.setPosition(xPos,yPos,300);
-listenerData.innerHTML = 'Listener data: X ' + xPos + ' Y ' + yPos + ' Z ' + 300;
+const innerCone = 60;
+const outerCone = 90;
+const outerGain = 0.3;
 ```
 
-In the `positionPanner()` function, we set the position of the panner, and output the coordinates to the `pannerData` paragraph. This function is called with each animation frame as the `boomBox` is moved, so the panner position updates accordingly:
+Le prochain paramètre est [`distanceModel`](/fr/docs/Web/API/PannerNode/distanceModel), qui peut valoir `linear`, `inverse`, ou `exponential`. Il s'agit d'algorithmes différents utilisés pour réduire le volume de la source audio lorsqu'elle s'éloigne de l'auditeur. Ici, nous utiliserons `linear` qui a le mérite d'être simple&nbsp;:
 
 ```js
-function positionPanner() {
-  panner.setPosition(xPos,yPos,zPos);
-  pannerData.innerHTML = 'Panner data: X ' + xPos + ' Y ' + yPos + ' Z ' + zPos;
+const distanceModel = 'linear';
+```
+
+On peut ensuite définir une distance maximale ([`maxDistance`](/fr/docs/Web/API/PannerNode/maxDistance)) entre la source et l'auditeur. Passé cette distance, le volume ne sera plus réduit si la source s'éloigne encore. Cela peut être utile lorsqu'on veut émuler un effet de distance sans perdre pour autant tout le volume. La valeur par défaut est 10&nbsp;000 (une valeur relative sans unité). Nous gardons cette valeur telle quelle&nbsp;:
+
+```js
+const maxDistance = 10000;
+```
+
+Il y a également une distance de référence ([`refDistance`](/fr/docs/Web/API/PannerNode/refDistance)) utilisée par les modèles de distance, qui vaut `1` par défaut (valeur que nous allons utiliser ici)&nbsp;:
+
+```js
+const refDistance = 1;
+```
+
+On a ensuite le facteur de coupure (<i lang="en">roll-off factor</i>) ([`rolloffFactor`](/fr/docs/Web/API/PannerNode/rolloffFactor)) qui indique la rapidité à laquelle le volume est réduit lorsque la source s'éloigne de l'auditeur. La valeur par défaut est 1, prenons-en une plus grande pour exagérer les mouvements.
+
+```js
+const rollOff = 10;
+```
+
+Maintenant, nous allons définir la position et l'orientation du radiocassette. Cela ressemble fort à ce que nous avons déjà fait pour l'auditeur. Il s'agit également des paramètres qui vont être modifiés lorsqu'on utilise les contrôles de l'interface.
+
+```js
+const positionX = posX;
+const positionY = posY;
+const positionZ = posZ;
+
+const orientationX = 0.0;
+const orientationY = 0.0;
+const orientationZ = -1.0;
+```
+
+On notera la valeur négative pour l'orientation sur l'axe Z, cela permet d'orienter le radiocassette afin qu'il soit face à nous. Une valeur positive aurait tourné le radiocassette dos à nous.
+
+Utilisons le constructeur correspondant pour créer le nœud panoramique et lui passer tous les paramètres définis ci-avant&nbsp;:
+
+```js
+const panner = new PannerNode(audioCtx, {
+  panningModel,
+  distanceModel,
+  positionX,
+  positionY,
+  positionZ,
+  orientationX,
+  orientationY,
+  orientationZ,
+  refDistance,
+  maxDistance,
+  rolloffFactor: rollOff,
+  coneInnerAngle: innerCone,
+  coneOuterAngle: outerCone,
+  coneOuterGain: outerGain,
+})
+```
+
+## Déplacer le radiocassette
+
+Nous allons maintenant déplacer le radiocassette dans cette «&nbsp;pièce&nbsp;» avec quelques contrôles paramétrés pour ce faire. On peut le déplacer de gauche à droite, de haut en bas, d'avant en arrière. On peut également le tourner.
+
+Le son provient de l'avant des hauts-parleurs du radiocassette et lorsqu'on le tourne, on peut modifier la direction du son (par exemple, diffuser le son vers l'arrière si le radiocassette est tourné de 180° et nous tourne le dos).
+
+Nous devons paramétrer quelques éléments pour l'interface. Pour commencer, nous obtenons des références pour les éléments que nous voulons déplacer, pour les valeurs que nous changerons à l'aide de [transformations CSS](/fr/docs/Web/CSS/CSS_Transforms) pour que le mouvement apparaisse à l'écran. Enfin, nous appliquons des limites pour que le radiocassette ne puisse pas aller trop loin dans n'importe quelle direction&nbsp;:
+
+```js
+const moveControls = document.querySelector('#move-controls').querySelectorAll('button');
+const boombox = document.querySelector('.boombox-body');
+
+// Les valeurs pour les transformations CSS
+const transform = {
+  xAxis: 0,
+  yAxis: 0,
+  zAxis: 0.8,
+  rotateX: 0,
+  rotateY: 0
+}
+
+// Les limites au déplacement
+const topBound = -posY;
+const bottomBound = posY;
+const rightBound = posX;
+const leftBound = -posX;
+const innerBound = 0.1;
+const outerBound = 1.5;
+```
+
+Créons une fonction qui prend la direction vers laquelle nous voulons bouger comme paramètre et qui modifie la transformation CSS et qui met à jour de façon correspondante les valeurs de position et d'orientation pour les propriétés du nœud panoramique.
+
+Pour commencer, gérons les déplacements gauche, droite, haut, bas, qui sont plutôt simples. On déplace le radiocassette sur l'axe et on met à jour la position correspondante.
+
+```js
+function moveBoombox(direction) {
+  switch (direction) {
+    case 'left':
+      if (transform.xAxis > leftBound) {
+        transform.xAxis -= 5;
+        panner.positionX.value -= 0.1;
+      }
+      break;
+    case 'up':
+      if (transform.yAxis > topBound) {
+        transform.yAxis -= 5;
+        panner.positionY.value -= 0.3;
+      }
+      break;
+    case 'right':
+      if (transform.xAxis < rightBound) {
+        transform.xAxis += 5;
+        panner.positionX.value += 0.1;
+      }
+      break;
+    case 'down':
+      if (transform.yAxis < bottomBound) {
+        transform.yAxis += 5;
+        panner.positionY.value += 0.3;
+      }
+      break;
+  }
 }
 ```
 
-### Loading and playing our music
-
-Next we use XHR to load an audio track, and `decodeAudioData()` to decode it and stick it in a buffer. Then we put the buffer into an {{domxref("AudioBufferSourceNode") }}:
+Nous avons quelque chose de semblable pour le rapprochement et l'éloignement&nbsp;:
 
 ```js
-function getData() {
-  source = audioCtx.createBufferSource();
-  request = new XMLHttpRequest();
+case 'back':
+  if (transform.zAxis > innerBound) {
+    transform.zAxis -= 0.01;
+    panner.positionZ.value += 40;
+  }
+  break;
+case 'forward':
+  if (transform.zAxis < outerBound) {
+    transform.zAxis += 0.01;
+    panner.positionZ.value -= 40;
+  }
+  break;
+```
 
-  request.open('GET', 'viper.ogg', true);
+La gestion de la rotation demande plus d'effort, car il faut _déplacer le son_. Il faut non seulement mettre à jour les valeurs pour les deux axes (si on tourne un objet sur l'axe X, on doit mettre à jour les coordonnées Y et Z pour l'objet), mais aussi faire un peu de maths pour ça. La rotation suit un cercle et nous avons besoin d'utiliser [`Math.sin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/sin) et [`Math.cos()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/cos) pour nous aider à tracer ce cercle.
 
-  request.responseType = 'arraybuffer';
+Fixons une vitesse de rotation, que nous convertirons en radians pour les utiliser avec `Math.sin()` et `Math.cos()` lorsque nous aurons besoin de calculer les nouvelles coordonnées lors de la rotation du radiocassette&nbsp;:
 
+```js
+// Fixons les constantes de rotation
+const rotationRate = 60; // Un nombre plus grand entraînera une rotation plus lente
 
-  request.onload = function() {
-    var audioData = request.response;
+const q = Math.PI/rotationRate; // Incrément de la rotation en radians
+```
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
-        myBuffer = buffer;
-        source.buffer = myBuffer;
+On peut aussi utiliser ces valeurs pour déterminer la rotation en degrés, ce qui nous aidera pour les transformations CSS qu'il faudra créer (où nous aurons besoin des valeurs pour l'axe X et Y)&nbsp;:
 
-        source.connect(panner);
-        panner.connect(audioCtx.destination);
-        positionPanner();
-        source.loop = true;
-      },
+```js
+// On obtient la valeur en degrés pour le CSS
+const degreesX = (q * 180)/Math.PI;
+const degreesY = (q * 180)/Math.PI;
+```
 
-      function(e){"Error with decoding audio data" + e.err});
+Considérons la rotation vers la gauche par exemple. On doit changer l'orientation sur les axes X et Z du nœud panoramique lors d'une rotation vers la gauche sur l'axe Y&nbsp;:
 
+```js
+case 'rotate-left':
+  transform.rotateY -= degreesY;
+
+  // 'left' est une rotation sur l'axe Y avec un incrément angulaire négatif
+  z = panner.orientationZ.value*Math.cos(q) - panner.orientationX.value*Math.sin(q);
+  x = panner.orientationZ.value*Math.sin(q) + panner.orientationX.value*Math.cos(q);
+  y = panner.orientationY.value;
+
+  panner.orientationX.value = x;
+  panner.orientationY.value = y;
+  panner.orientationZ.value = z;
+  break;
+```
+
+Cela peut sembler déroutant&nbsp;: nous utilisons les fonctions sinus et cosinus pour nous aider à connaître les coordonnées après le déplacement circulaire pour la rotation du radiocassette.
+
+On peut faire de même pour les autres axes, il suffit de choisir les bonnes orientations et d'indiquer si l'incrément est positif ou négatif.
+
+```js
+case 'rotate-right':
+  transform.rotateY += degreesY;
+  // 'right' est une rotation sur l'axe Y avec un incrément angulaire positif
+  z = panner.orientationZ.value*Math.cos(-q) - panner.orientationX.value*Math.sin(-q);
+  x = panner.orientationZ.value*Math.sin(-q) + panner.orientationX.value*Math.cos(-q);
+  y = panner.orientationY.value;
+  panner.orientationX.value = x;
+  panner.orientationY.value = y;
+  panner.orientationZ.value = z;
+  break;
+case 'rotate-up':
+  transform.rotateX += degreesX;
+  // 'up' est une rotation sur l'axe X avec un incrément angulaire négatif
+  z = panner.orientationZ.value*Math.cos(-q) - panner.orientationY.value*Math.sin(-q);
+  y = panner.orientationZ.value*Math.sin(-q) + panner.orientationY.value*Math.cos(-q);
+  x = panner.orientationX.value;
+  panner.orientationX.value = x;
+  panner.orientationY.value = y;
+  panner.orientationZ.value = z;
+  break;
+case 'rotate-down':
+  transform.rotateX -= degreesX;
+  // 'down' est une rotation sur l'axe X avec un incrément angulaire positif
+  z = panner.orientationZ.value*Math.cos(q) - panner.orientationY.value*Math.sin(q);
+  y = panner.orientationZ.value*Math.sin(q) + panner.orientationY.value*Math.cos(q);
+  x = panner.orientationX.value;
+  panner.orientationX.value = x;
+  panner.orientationY.value = y;
+  panner.orientationZ.value = z;
+  break;
+```
+
+Et enfin, il nous faut mettre à jour le CSS et avoir une référence du dernier mouvement pour les évènements de la souris. Voici la version finale pour notre fonction `moveBoombox()`.
+
+```js
+function moveBoombox(direction, prevMove) {
+  switch (direction) {
+    case 'left':
+      if (transform.xAxis > leftBound) {
+        transform.xAxis -= 5;
+        panner.positionX.value -= 0.1;
+      }
+      break;
+    case 'up':
+      if (transform.yAxis > topBound) {
+        transform.yAxis -= 5;
+        panner.positionY.value -= 0.3;
+      }
+      break;
+    case 'right':
+      if (transform.xAxis < rightBound) {
+        transform.xAxis += 5;
+        panner.positionX.value += 0.1;
+      }
+      break;
+    case 'down':
+      if (transform.yAxis < bottomBound) {
+        transform.yAxis += 5;
+        panner.positionY.value += 0.3;
+      }
+      break;
+    case 'back':
+      if (transform.zAxis > innerBound) {
+        transform.zAxis -= 0.01;
+        panner.positionZ.value += 40;
+      }
+      break;
+    case 'forward':
+      if (transform.zAxis < outerBound) {
+        transform.zAxis += 0.01;
+        panner.positionZ.value -= 40;
+      }
+      break;
+    case 'rotate-left':
+      transform.rotateY -= degreesY;
+
+      // 'left' est une rotation sur l'axe Y avec un incrément angulaire négatif
+      z = panner.orientationZ.value*Math.cos(q) - panner.orientationX.value*Math.sin(q);
+      x = panner.orientationZ.value*Math.sin(q) + panner.orientationX.value*Math.cos(q);
+      y = panner.orientationY.value;
+
+      panner.orientationX.value = x;
+      panner.orientationY.value = y;
+      panner.orientationZ.value = z;
+      break;
+    case 'rotate-right':
+      transform.rotateY += degreesY;
+      // 'right' est une rotation sur l'axe Y avec un incrément angulaire positif
+      z = panner.orientationZ.value*Math.cos(-q) - panner.orientationX.value*Math.sin(-q);
+      x = panner.orientationZ.value*Math.sin(-q) + panner.orientationX.value*Math.cos(-q);
+      y = panner.orientationY.value;
+      panner.orientationX.value = x;
+      panner.orientationY.value = y;
+      panner.orientationZ.value = z;
+      break;
+    case 'rotate-up':
+      transform.rotateX += degreesX;
+      // 'up' est une rotation sur l'axe X avec un incrément angulaire négatif
+      z = panner.orientationZ.value*Math.cos(-q) - panner.orientationY.value*Math.sin(-q);
+      y = panner.orientationZ.value*Math.sin(-q) + panner.orientationY.value*Math.cos(-q);
+      x = panner.orientationX.value;
+      panner.orientationX.value = x;
+      panner.orientationY.value = y;
+      panner.orientationZ.value = z;
+      break;
+    case 'rotate-down':
+      transform.rotateX -= degreesX;
+      // 'down' est une rotation sur l'axe X avec un incrément angulaire positif
+      z = panner.orientationZ.value*Math.cos(q) - panner.orientationY.value*Math.sin(q);
+      y = panner.orientationZ.value*Math.sin(q) + panner.orientationY.value*Math.cos(q);
+      x = panner.orientationX.value;
+      panner.orientationX.value = x;
+      panner.orientationY.value = y;
+      panner.orientationZ.value = z;
+      break;
   }
 
-  request.send();
+  boombox.style.transform = `translateX(${transform.xAxis}px) ` +
+    `translateY(${transform.yAxis}px) ` +
+    `scale(${transform.zAxis}) ` +
+    `rotateY(${transform.rotateY}deg) ` +
+    `rotateX(${transform.rotateX}deg)`;
+
+  const move = prevMove || {};
+  move.frameId = requestAnimationFrame(() => moveBoombox(direction, move));
+  return move;
 }
 ```
 
-The next stage is to wire up the buttons to stop and play the audio. The pulse wrapper is an extra wrapper {{ htmlelement("div") }} wrapped around the `boomBox`. We apply the pulsating (`scaleY`) animation to this element when the play button is clicked, not the `boomBox` itself, because the `boomBox` already has animations applied to it throughout the course of the app's running.
+## Câbler les contrôles
+
+Associer ces actions aux boutons des contrôles est plus simple, on écoute pour un évènement de la souris sur les contrôles et on exécute cette fonction, puis on arrête son exécution lorsque le bouton de la souris est relâché&nbsp;:
 
 ```js
-var pulseWrapper = document.querySelector('.pulse-wrapper');
+// Pour chaque contrôle, on déplace le radiocassette et 
+// on change les valeurs de position
+moveControls.forEach((el) => {
 
-play.onclick = function() {
-  getData();
-  source.start(0);
-  play.setAttribute('disabled', 'disabled');
-  pulseWrapper.classList.add('pulsate');
-}
+  let moving;
+  el.addEventListener('mousedown', () => {
+    const direction = this.dataset.control;
+    if (moving && moving.frameId) {
+      cancelAnimationFrame(moving.frameId);
+    }
+    moving = moveBoombox(direction);
+  }, false);
 
-stop.onclick = function() {
-  source.stop(0);
-  play.removeAttribute('disabled');
-  pulseWrapper.classList.remove('pulsate');
-}
+  window.addEventListener('mouseup', () => {
+    if (moving && moving.frameId) {
+      cancelAnimationFrame(moving.frameId);
+    }
+  }, false)
+
+})
 ```
 
-### Moving the boom box and the panner
+## Connecter notre graphe
 
-The next section of code grabs references to the left, right, zoom in, and zoom out buttons, and defines initial X, Y, and scale amounts for the `boomBox` to be positioned by when the transforms first start to be applied.
+Notre document HTML contient un élément `<audio>` qui doit être manipulé par le nœud panoramique.
+
+```html
+<audio src="myCoolTrack.mp3"></audio>
+```
+
+Pour cela, il faut récupérer la source de l'élément et la relier à l'API Web Audio à l'aide de [`AudioContext.createMediaElementSource()`](/fr/docs/Web/API/AudioContext/createMediaElementSource).
 
 ```js
-var leftButton = document.querySelector('.left');
-var rightButton = document.querySelector('.right');
-var zoomInButton = document.querySelector('.zoom-in');
-var zoomOutButton = document.querySelector('.zoom-out');
+// Obtenir l'élément audio
+const audioElement = document.querySelector('audio');
 
-var boomX = 0;
-var boomY = 0;
-var boomZoom = 0.25;
+// Le passer au contexte audio
+const track = audioContext.createMediaElementSource(audioElement);
 ```
 
-Now we get to the four functions that control the left, right, zoom in, and zoom out functionality: `moveRight()`, `moveLeft()`, `zoomIn()`, and `zoomOut()`. Each is a little different, but works in a similar way:
-
-1.  The `boomX` or `boomZoom` variables are updated in order to change the `boomBox`'s position on the screen.
-2.  The `xPos` or `zPos` variables are updated in order to change the {{domxref("PannerNode") }}'s position in 3D space. The changes are quite small, but these are the values we found to work.
-3.  A check is done to see if the upper bounds of movement have been reached (a `boomX` equal or less than `leftBound` or greater than `rightBound`, or a `boomZoom` greater than 4 or equal or less than 0.25.) If so, the values are updated to force the `boomBox` to stay in certain constraints, and to force the `xPos` and `zPos` variables to also stay within certain constrants. These are, respectively, 5 greater or less than `WIDTH/2`, and a `zPos` between 295 and 299.9. These are the values we found produced a relatively realistic sounding panning and volume adjustment as the `boomBox` was moved around.
-4.  `boomBox` is transformed (translated and scaled) by the new values of `boomX`, `boomY`, and `boomZoom` to move it around the screen.
-5.  The `positionPanner()` function is run to update the position of the panner.
-6.  A {{domxref("window.requestAnimationFrame") }} instance is called to keep running the function for as long as the mouse button is pressed down.
-7.  The `requestAnimationFrame` ID is returned out of the function so that it can be cancelled when the mouse button is released.
+Il faut ensuite connecter notre graphe audio. On connecte l'entrée (la piste audio) au nœud de modification (le panoramique), qu'on connecte à notre sortie (ici les hauts-parleurs de l'appareil du navigateur).
 
 ```js
-function moveRight() {
-  boomX += -xIterator;
-  xPos += -0.066;
-
-  if(boomX <= leftBound) {
-    boomX = leftBound;
-    xPos = (WIDTH/2) - 5;
-  }
-
-  boomBox.style.webkitTransform = "translate(" + boomX + "px , " + boomY + "px) scale(" + boomZoom + ")";
-  boomBox.style.transform = "translate(" + boomX + "px , " + boomY + "px) scale(" + boomZoom + ")";
-  positionPanner();
-  rightLoop = requestAnimationFrame(moveRight);
-  return rightLoop;
-}
-
-function moveLeft() {
-  boomX += xIterator;
-  xPos += 0.066;
-
-  if(boomX > rightBound) {
-    boomX = rightBound;
-    xPos = (WIDTH/2) + 5;
-  }
-
-  positionPanner();
-  boomBox.style.webkitTransform = "translate(" + boomX + "px , " + boomY + "px) scale(" + boomZoom + ")";
-  boomBox.style.transform = "translate(" + boomX + "px , " + boomY + "px) scale(" + boomZoom + ")";
-  leftLoop = requestAnimationFrame(moveLeft);
-  return leftLoop;
-}
-
-function zoomIn() {
-  boomZoom += 0.05;
-  zPos += 0.066;
-
-  if(boomZoom > 4) {
-    boomZoom = 4;
-    zPos = 299.9;
-  }
-
-  positionPanner();
-  boomBox.style.webkitTransform = "translate(" + boomX + "px , " + boomY + "px) scale(" + boomZoom + ")";
-  boomBox.style.transform = "translate(" + boomX + "px , " + boomY + "px) scale(" + boomZoom + ")";
-  zoomInLoop = requestAnimationFrame(zoomIn);
-  return zoomInLoop;
-}
-
-function zoomOut() {
-  boomZoom += -0.05;
-  zPos += -0.066;
-
-  if(boomZoom <= 0.25) {
-    boomZoom = 0.25;
-    zPos = 295;
-  }
-
-  positionPanner();
-  boomBox.style.webkitTransform = "translate(" + boomX + "px , " + boomY + "px) scale(" + boomZoom + ")";
-  boomBox.style.transform = "translate(" + boomX + "px , " + boomY + "px) scale(" + boomZoom + ")";
-  zoomOutLoop = requestAnimationFrame(zoomOut);
-  return zoomOutLoop;
-}
+track.connect(panner).connect(audioCtx.destination);
 ```
 
-In the final block of code, we simply wire up event handlers to control the movement when the buttons are pressed. For each button, the relevant function is invoked `onmousedown`; then `onmouseup`, {{domxref("window.cancelAnimationFrame") }} is called along with the returned `requestAnimationFrame()` ID to stop the animation happening.
+Créons un bouton pour lire/suspendre l'audio sur lequel on pourra cliquer pour lancer/arrêter le son.
+
+```html
+<button data-playing="false" role="switch">Lecture/Pause</button>
+```
 
 ```js
-leftButton.onmousedown = moveLeft;
-leftButton.onmouseup = function () {
-  window.cancelAnimationFrame(leftLoop);
-}
+// On sélectionne le bouton de lecture
+const playButton = document.querySelector('button');
 
-rightButton.onmousedown = moveRight;
-rightButton.onmouseup = function () {
-  window.cancelAnimationFrame(rightLoop);
-}
+playButton.addEventListener('click', () => {
+  // On vérifie si le contexte est dans un état suspendu
+  // (règle pour la lecture automatique)
+  if (audioContext.state === 'suspended') {
+    audioContext.resume();
+  }
 
-zoomInButton.onmousedown = zoomIn;
-zoomInButton.onmouseup = function () {
-  window.cancelAnimationFrame(zoomInLoop);
-}
-
-zoomOutButton.onmousedown = zoomOut;
-zoomOutButton.onmouseup = function () {
-  window.cancelAnimationFrame(zoomOutLoop);
-}
+  // On lance la lecture ou on met en pause selon l'état
+  if (playButton.dataset.playing === 'false') {
+    audioElement.play();
+    playButton.dataset.playing = 'true';
+  } else if (playButton.dataset.playing === 'true') {
+    audioElement.pause();
+    playButton.dataset.playing = 'false';
+  }
+}, false);
 ```
 
-As you can see, the actual panner code is pretty simple — specify the positions, and the browser takes care of the rest. It is working out the surrounding code, and the values to use for positioning, which takes a bit more time.
+Pour une exploration plus avancée de la lecture et du contrôle audio, ainsi que des graphes audio, voyez le guide [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
 
-> **Note :** You are probably thinking "why didn't you move the listener and keep the panner still instead: surely that is a bit more obvious?" Well, perhaps, but we felt that since the panner has more methods and properties available to it, moving it would allow more control in the long term.
+## Résumé
+
+Nous espérons que cet article vous a permis de mieux comprendre le fonctionnement de la spatialisation avec l'API Web Audio et le rôle des propriétés de [`PannerNode`](/fr/docs/Web/API/PannerNode) (il y en a un certain nombre). La manipulation de ces valeurs peut s'avérer délicate selon le cas d'usage, c'est normal que de passer du temps à les paramétrer.
+
+> **Note :** Il existe quelques différences entre les navigateurs pour ce qui concerne la spatialisation audio. Le nœud panoramique manipule des opérations mathématiques avancées et il existe [plusieurs tests](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true) que vous pouvez consulter pour connaître l'état d'avancement sur ce type de nœud sur les différentes plateformes.
+
+À nouveau, vous pouvez [consulter la version finale de la démo ici](https://mdn.github.io/webaudio-examples/spatialization/), ainsi que [le code source de l'exemple final](https://github.com/mdn/webaudio-examples/tree/master/spatialization). Cette démonstration est [également disponible sur CodePen](https://codepen.io/Rumyra/pen/MqayoK?editors=0100).
+
+Si vous travaillez sur des jeux en 3D et/ou WebXR, mieux vaudra utiliser une bibliothèque 3D tierce pour créer de telles fonctionnalités, plutôt que de tenter de les implémenter à partir de 0.
+
+Nous avons montré dans cet article comment réaliser ces effets en partant de rien, mais vous gagnerez du temps à utiliser les outils existants.

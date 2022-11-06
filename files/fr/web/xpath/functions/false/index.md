@@ -6,13 +6,16 @@ tags:
 translation_of: Web/XPath/Functions/false
 original_slug: Web/XPath/Fonctions/false
 ---
+
 {{ XsltRef() }}
 
 La fonction `false` retourne le booléen `false`.
 
 ### Syntaxe
 
-    false()
+```
+false()
+```
 
 ### Retour
 
@@ -22,9 +25,11 @@ Booléen `false`.
 
 Cette fonction est utile dans les comparaisons&nbsp;:
 
-    <xsl:if test="boolean((1 > 2) = false())">
-     L'expression évaluée comme fausse
-    </xsl:if>
+```xml
+<xsl:if test="boolean((1 > 2) = false())">
+  L'expression évaluée comme fausse
+</xsl:if>
+```
 
 ### Définition
 

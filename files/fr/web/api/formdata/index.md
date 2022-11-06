@@ -4,6 +4,7 @@ slug: Web/API/FormData
 translation_of: Web/API/FormData
 browser-compat: api.FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 L'interface **`FormData`** permet de construire facilement un ensemble de paires clé/valeur représentant les champs du formulaire et leurs valeurs, qui peuvent ensuite être facilement envoyées en utilisant la méthode [`XMLHttpRequest.send()`](/fr/docs/Web/API/XMLHttpRequest/send) de l'objet `XMLHttpRequest`. Elle utilise le même format qu'utilise un formulaire si le type d'encodage est mis à `"multipart/form-data"`.

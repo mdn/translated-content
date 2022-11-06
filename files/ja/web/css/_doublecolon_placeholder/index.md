@@ -1,15 +1,8 @@
 ---
 title: '::placeholder'
 slug: Web/CSS/::placeholder
-tags:
-  - '::placeholder'
-  - CSS
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.placeholder
-translation_of: Web/CSS/::placeholder
 ---
+
 {{CSSRef}}
 
 **`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の{{htmlattrxref("placeholder","input","プレイスホルダー文字列",1)}}を表します。
@@ -23,7 +16,7 @@ translation_of: Web/CSS/::placeholder
 
 セレクターに `::placeholder` を使ったルールを使用できるのは、{{cssxref("::first-line")}} 擬似要素に適用できる CSS プロパティだけです。
 
-> **Note:** 多くのブラウザーでは、プレイスホルダー文字列の外見は既定で半透明または明るい灰色です。
+> **メモ:** 多くのブラウザーでは、プレイスホルダー文字列の外見は既定で半透明または明るい灰色です。
 
 ## 構文
 
@@ -47,7 +40,7 @@ translation_of: Web/CSS/::placeholder
 
 #### 使用性
 
-プレイスホルダー文字列のコントラストが十分に高いと、入力された値と誤解される可能性があります。プレイスホルダー文字列は人間が {{htmlelement("input")}} 要素の中にコンテンツを入力すると、消滅するものでもあります。どちらも、特に認知症の人にはフォームの入力を完了させのに困難を伴う可能性があります。
+プレイスホルダー文字列のコントラストが十分に高いと、入力された値と誤解される可能性があります。プレイスホルダー文字列は人間が {{htmlelement("input")}} 要素の中にコンテンツを入力すると、消滅するものでもあります。どちらも、特に認知症の人にはフォームの入力を完了させるのに困難を伴う可能性があります。
 
 プレイスホルダー情報を提供するには、他にも入力欄の外側で視覚的に近いところに表示し、 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) を使用して {{HTMLElement("input")}} とヒントをプログラム的に関連付ける方法もあります。
 

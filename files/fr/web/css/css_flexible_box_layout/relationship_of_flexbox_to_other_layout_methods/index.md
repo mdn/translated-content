@@ -12,6 +12,7 @@ translation_of: >-
   Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Liens_entre_flexbox_et_les_autres_dispositions
 ---
+
 {{CSSRef}}
 
 Dans cet article, nous verrons comment les boîtes flexibles interagissent avec les autres modules CSS. Nous verrons quelles sont les spécifications qui décrivent les boîtes flexibles et pourquoi les boîtes flexibles sont différentes des autres modules.
@@ -70,7 +71,7 @@ Dans le prochain exemple, on applique un flottement sur les éléments fils puis
 
 ## Les boîtes flexibles et la disposition en grille
 
-[La disposition en grille (_CSS Grid_)](/en-US/docs/Web/CSS/CSS_Grid_Layout) et les boîtes flexibles agissent de la même façon lorsqu'elles surchargent les autres méthodes de disposition. Les boîtes flexibles pourront être utilisées comme solution de repli si les grilles CSS ne sont pas prises en charge. En effet, les boîtes flexibles bénéficient d'une meilleure prise en charge pour les navigateurs moins récents. Cette approche fonctionne sans problème car, si un élément flexible devient un élément d'une grille, les propriétés `flex` qui auraient pu être affectées aux éléments enfants seront ignorées.
+[La disposition en grille (_CSS Grid_)](/fr/docs/Web/CSS/CSS_Grid_Layout) et les boîtes flexibles agissent de la même façon lorsqu'elles surchargent les autres méthodes de disposition. Les boîtes flexibles pourront être utilisées comme solution de repli si les grilles CSS ne sont pas prises en charge. En effet, les boîtes flexibles bénéficient d'une meilleure prise en charge pour les navigateurs moins récents. Cette approche fonctionne sans problème car, si un élément flexible devient un élément d'une grille, les propriétés `flex` qui auraient pu être affectées aux éléments enfants seront ignorées.
 
 Les propriétés du module d'alignement des boîtes peuvent être utilisées pour ces deux modes de dispositions.
 

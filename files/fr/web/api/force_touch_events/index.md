@@ -8,6 +8,7 @@ tags:
   - Mobile
 translation_of: Web/API/Force_Touch_events
 ---
+
 {{DefaultAPISidebar("Force Touch events")}}
 
 {{Non-standard_header()}}
@@ -16,18 +17,18 @@ translation_of: Web/API/Force_Touch_events
 
 ## Évènements
 
-- {{event("webkitmouseforcewillbegin")}} {{non-standard_inline}}
-  - : Cet évènement est lancé avant l'évènement {{event("mousedown")}}. Son utilisation principale est de permettre {{domxref("Event.preventDefault()")}}.
-- {{event("webkitmouseforcedown")}} {{non-standard_inline}}
-  - : Cet évènement est lancé après l'évènement {{event("mousedown")}} dès qu'une pression suffisante a été appliquée pour qu'il puisse être qualifié de "clic de force".
-- {{event("webkitmouseforceup")}} {{non-standard_inline}}
-  - : Cet évènement est lancé après l'évènement {{event("webkitmouseforcedown")}} dès que la pression a été suffisamment réduite pour terminer le "clic de force".
-- {{event("webkitmouseforcechanged")}} {{non-standard_inline}}
-  - : Cet évènement est lancé chaque fois que la quantité de pression change. Il se déclenche d'abord après l'événement {{event ("mousedown")}} et s'arrête avant l'événement {{event ("mouseup")}}.
+- [`webkitmouseforcewillbegin`](/fr/docs/Web/API/Element/webkitmouseforcewillbegin_event) {{non-standard_inline}}
+  - : Cet évènement est lancé avant l'évènement [`mousedown`](/fr/docs/Web/API/Element/mousedown_event). Son utilisation principale est de permettre {{domxref("Event.preventDefault()")}}.
+- [`webkitmouseforcedown`](/fr/docs/Web/API/Element/webkitmouseforcedown_event) {{non-standard_inline}}
+  - : Cet évènement est lancé après l'évènement [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) dès qu'une pression suffisante a été appliquée pour qu'il puisse être qualifié de "clic de force".
+- [`webkitmouseforceup`](/fr/docs/Web/API/Element/webkitmouseforceup_event) {{non-standard_inline}}
+  - : Cet évènement est lancé après l'évènement [`webkitmouseforcedown`](/fr/docs/Web/API/Element/webkitmouseforcedown_event) dès que la pression a été suffisamment réduite pour terminer le "clic de force".
+- [`webkitmouseforcechanged`](/fr/docs/Web/API/Element/webkitmouseforcechanged_event) {{non-standard_inline}}
+  - : Cet évènement est lancé chaque fois que la quantité de pression change. Il se déclenche d'abord après l'événement [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) et s'arrête avant l'événement [`mouseup`](/fr/docs/Web/API/Element/mouseup_event).
 
 ## Propriété des évènements
 
-La propriété suivante est connue pour être disponible sur les objets évènement {{event("webkitmouseforcewillbegin")}}, {{event("mousedown")}}, {{event("webkitmouseforcechanged")}}, {{event("webkitmouseforcedown")}}, {{event("webkitmouseforceup")}}, {{event("mousemove")}} et {{event("mouseup")}}:
+La propriété suivante est connue pour être disponible sur les objets évènement [`webkitmouseforcewillbegin`](/fr/docs/Web/API/Element/webkitmouseforcewillbegin_event), [`mousedown`](/fr/docs/Web/API/Element/mousedown_event), [`webkitmouseforcechanged`](/fr/docs/Web/API/Element/webkitmouseforcechanged_event), [`webkitmouseforcedown`](/fr/docs/Web/API/Element/webkitmouseforcedown_event), [`webkitmouseforceup`](/fr/docs/Web/API/Element/webkitmouseforceup_event), [`mousemove`](/fr/docs/Web/API/Element/mousemove_event) et [`mouseup`](/fr/docs/Web/API/Element/mouseup_event):
 
 - {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}
   - : La quantité de pression actuellement appliquée sur le trackpad / écran tactile.

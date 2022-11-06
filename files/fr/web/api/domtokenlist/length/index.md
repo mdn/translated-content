@@ -3,13 +3,16 @@ title: DOMTokenList.length
 slug: Web/API/DOMTokenList/length
 translation_of: Web/API/DOMTokenList/length
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`length`** (_longueur_) de l'interface {{domxref("DOMTokenList")}} est un `integer` (_entier_) représentant le nombre d'objets stockés dans la liste.
 
 ## Syntaxe
 
-    tokenList.length;
+```js
+tokenList.length;
+```
 
 ### Value
 
@@ -41,10 +44,8 @@ La sortie ressemble à ceci :
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#dom-domtokenlist-length','length')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.length")}}
+{{Compat}}

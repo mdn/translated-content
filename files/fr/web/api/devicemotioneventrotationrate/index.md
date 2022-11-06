@@ -12,6 +12,7 @@ translation_of: Web/API/DeviceMotionEventRotationRate
 translation_of_original: Web/API/DeviceRotationRate
 original_slug: Web/API/DeviceRotationRate
 ---
+
 {{ ApiRef("Device Orientation Events") }} {{SeeCompatTable}}
 
 Un objet `DeviceRotationRate` fournit une information sur la vitesse avec laquelle un appareil est en rotation autour des 3 axes.
@@ -27,10 +28,8 @@ Un objet `DeviceRotationRate` fournit une information sur la vitesse avec laquel
 
 ## Spécifications
 
-| Spécification                                | Statut                                   | Commentaire          |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEventRotationRate")}}
+{{Compat}}

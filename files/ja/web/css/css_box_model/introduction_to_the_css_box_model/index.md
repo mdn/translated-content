@@ -1,13 +1,8 @@
 ---
 title: CSS 基本ボックスモデル入門
 slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - ガイド
-  - リファレンス
-translation_of: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 ---
+
 {{CSSRef}}
 
 ブラウザーのレンダリングエンジンは文書をレイアウトする際に、それぞれの要素を標準的な **CSS 基本ボックスモデル**に基づいた長方形のボックスとして表現します。 CSS はこれらのボックスの寸法、位置、プロパティ（色、背景、境界の幅など）を決定します。
@@ -50,12 +45,24 @@ translation_of: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 
 ## 仕様書
 
-| 仕様書                                            | 状態                  | 備考                                             |
-| ------------------------------------------------- | --------------------- | ------------------------------------------------ |
-| {{SpecName('CSS3 Box', '#intro')}}                | {{Spec2('CSS3 Box')}} |                                                  |
-| {{ SpecName("CSS2.1","box.html#box-dimensions")}} | {{ Spec2('CSS2.1') }} | 言葉遣いをより正確にしたが、有意な変更点はなし。 |
-| {{ SpecName("CSS1","#formatting-model")}}         | {{ Spec2('CSS1') }}   | 初回定義                                         |
+{{Specifications}}
 
 ## 関連情報
 
-- {{css_key_concepts}}
+- CSS の主要概念:
+  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
+  - [アットルール](/ja/docs/Web/CSS/At-rule)
+  - [コメント](/ja/docs/Web/CSS/Comments)
+  - [詳細度](/ja/docs/Web/CSS/Specificity)
+  - [継承](/ja/docs/Web/CSS/inheritance)
+  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 値
+    - [初期値](/ja/docs/Web/CSS/initial_value)
+    - [計算値](/ja/docs/Web/CSS/computed_value)
+    - [使用値](/ja/docs/Web/CSS/used_value)
+    - [実効値](/ja/docs/Web/CSS/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/Replaced_element)

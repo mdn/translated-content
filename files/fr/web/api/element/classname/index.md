@@ -9,14 +9,17 @@ tags:
   - Propriétés
 translation_of: Web/API/Element/className
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **className** de l'interface {{domxref("Element")}} récupère et définit la valeur de l'[attribut `class`](/fr/docs/Web/HTML/Attributs_universels/class) de l'élément spécifié.
 
 ## Syntaxe
 
-    var cName = elementNodeReference.className;
-    elementNodeReference.className = cName;
+```js
+var cName = elementNodeReference.className;
+elementNodeReference.className = cName;
+```
 
 - `cName` est une String (chaîne de caractères) représentant la classe (ou les classes séparées par des espaces) de l'élément courant.
 
@@ -44,15 +47,11 @@ elm.setAttribute('class', elm.getAttribute('class'))
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("DOM WHATWG", "#dom-element-classname", "element.className")}} | {{Spec2("DOM WHATWG")}} |                      |
-| {{SpecName("DOM4", "#dom-element-classname", "element.className")}}         | {{Spec2("DOM4")}}         |                      |
-| {{SpecName("DOM2 HTML", "html.html#ID-95362176", "element.className")}} | {{Spec2("DOM2 HTML")}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.className")}}
+{{Compat}}
 
 ## Voir aussi
 

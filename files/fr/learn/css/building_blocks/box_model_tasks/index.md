@@ -6,6 +6,7 @@ tags:
   - CSS
 translation_of: Learn/CSS/Building_blocks/Box_Model_Tasks
 ---
+
 {{LearnSidebar}}
 
 L'objectif de cet exercice est de vous aider à vérifier votre compréhension du modèle de boîte CSS.
@@ -63,8 +64,8 @@ Vous pouvez essayer ces exemples dans les éditeurs interactifs présents sur ce
 
 Si vous souhaitez obtenir une évaluation de votre travail, ou si vous bloquez et que vous souhaitez obtenir de l'aide :
 
-1.  Enregistrez votre travail dans un éditeur en ligne partageable, du type [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez soit écrire le code vous-même, soit utiliser les fichiers de départ fournis dans chacune des sections ci-dessus.
-2.  Écrivez un message demandant une évaluation et/ou de l'aide dans la catégorie ["Apprentissage" (Learning) du forum Discourse de MDN](https://discourse.mozilla.org/c/mdn/learn). Votre message doit inclure :
+1. Enregistrez votre travail dans un éditeur en ligne partageable, du type [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez soit écrire le code vous-même, soit utiliser les fichiers de départ fournis dans chacune des sections ci-dessus.
+2. Écrivez un message demandant une évaluation et/ou de l'aide dans la catégorie ["Apprentissage" (Learning) du forum Discourse de MDN](https://discourse.mozilla.org/c/mdn/learn). Votre message doit inclure :
 
     - Un titre explicite, par exemple "Évaluation demandée pour le test de modèle de boîte CSS 1".
     - Des détails sur ce que vous avez déjà tenté, et ce que vous attendez de nous : par exemple, si vous bloquez et avez besoin d'aide, ou si vous souhaitez obtenir une évaluation de votre travail.

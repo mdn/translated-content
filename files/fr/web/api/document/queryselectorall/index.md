@@ -9,6 +9,7 @@ tags:
   - Sélecteurs
 translation_of: Web/API/Document/querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`querySelectorAll()`**  de {{domxref("Element")}} renvoie une {{domxref("NodeList")}} statique représentant une liste des éléments du document qui correspondent au groupe de sélecteurs spécifiés.
@@ -122,18 +123,13 @@ const inner = select.querySelectorAll(':scope .outer .inner');
 inner.length; // 0
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                                | Statut                                       | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName("DOM WHATWG", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}             | {{Spec2("DOM WHATWG")}}             | Norme actuelle       |
-| {{SpecName("Selectors API Level 2", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}} | {{Spec2("Selectors API Level 2")}} | Pas de changement    |
-| {{SpecName("DOM4", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}                     | {{Spec2("DOM4")}}                     | Définition initiale  |
-| {{SpecName("Selectors API Level 1", "#interface-definitions", "document.querySelector()")}}                     | {{Spec2("Selectors API Level 1")}} | Définition originale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.querySelectorAll")}}
+{{Compat}}
 
 ## Voir aussi
 

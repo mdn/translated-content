@@ -8,22 +8,25 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/new
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_new
 ---
+
 {{jsSidebar("Operators")}}
 
 L'**opérateur `new`** permet de créer une instance d'un certain type d'objet à partir du constructeur qui existe pour celui-ci (natif ou défini par l'utilisateur).
 
 Le mot-clé `new`, utilisé avec une fonction, applique les 4 étapes suivantes :
 
-1.  Il crée un nouvel objet à partir de zéro
-2.  Il lie cet objet à un autre objet en le définissant comme son prototype.
-3.  Le nouvel objet, créé à l'étape 1, est passé comme valeur `this` à la fonction
-4.  Si la fonction ne renvoie pas d'objet, c'est la valeur `this` qui est renvoyée.
+1. Il crée un nouvel objet à partir de zéro
+2. Il lie cet objet à un autre objet en le définissant comme son prototype.
+3. Le nouvel objet, créé à l'étape 1, est passé comme valeur `this` à la fonction
+4. Si la fonction ne renvoie pas d'objet, c'est la valeur `this` qui est renvoyée.
 
 {{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
 
 ## Syntaxe
 
-    new constructeur[([arguments])]
+```js
+new constructeur[([arguments])]
+```
 
 ### Paramètres
 
@@ -36,16 +39,16 @@ Le mot-clé `new`, utilisé avec une fonction, applique les 4 étapes suivantes 
 
 La création d'un objet personnalisé se fait en deux étapes&nbsp;:
 
-1.  Définition du type d'objet en écrivant une fonction.
-2.  Création d'une instance de l'objet avec `new`.
+1. Définition du type d'objet en écrivant une fonction.
+2. Création d'une instance de l'objet avec `new`.
 
 Pour définir un type d'objet, créez une fonction pour ce type qui spécifie son nom, ses propriétés et ses méthodes. Un objet peut avoir des propriétés qui sont elles-mêmes des objets, comme on pourra le voir dans les exemples ci-dessous.
 
 Lorsque le code `new Toto(...)` est exécuté, voici ce qui se passe :
 
-1.  Un nouvel objet est créé qui hérite de `Toto.prototype`.
-2.  La fonction constructrice `Toto` est appelée avec les arguments fournis, [`this`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this) étant lié au nouvel objet créé. `new Toto` sera équivalent à `new Toto()` (i.e. un appel sans argument).
-3.  L'objet renvoyé par le constructeur devient le résultat de l'expression qui contient `new`. Si le constructeur ne renvoie pas d'objet de façon explicite, l'objet créé à l'étape 1 sera utilisé. (En général, les constructeurs ne renvoient pas de valeurs mais si on souhaite surcharger le processus habituel, on peut utiliser cette valeur de retour).
+1. Un nouvel objet est créé qui hérite de `Toto.prototype`.
+2. La fonction constructrice `Toto` est appelée avec les arguments fournis, [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) étant lié au nouvel objet créé. `new Toto` sera équivalent à `new Toto()` (i.e. un appel sans argument).
+3. L'objet renvoyé par le constructeur devient le résultat de l'expression qui contient `new`. Si le constructeur ne renvoie pas d'objet de façon explicite, l'objet créé à l'étape 1 sera utilisé. (En général, les constructeurs ne renvoient pas de valeurs mais si on souhaite surcharger le processus habituel, on peut utiliser cette valeur de retour).
 
 Il est toujours possible d'ajouter une propriété à un objet défini précédemment. Par exemple, l'instruction `voiture1.couleur = "noir"` ajoute une propriété couleur à `voiture1`, et lui assigne une valeur : "`noir`". Cependant, ceci n'affecte aucunement les autres objets. Pour ajouter une nouvelle propriété à tous les objets du même type, cette propriété doit être ajoutée à la définition du type d'objet `Voiture`.
 
@@ -145,17 +148,11 @@ voiture2.propriétaire.nom
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaires                                          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-new-operator', 'Opérateur new')}} | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES6', '#sec-new-operator', 'Opérateur new')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ES5.1', '#sec-11.2.2', 'Opérateur new')}}             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES3', '#sec-11.2.2', 'Opérateur new')}}                 | {{Spec2('ES3')}}         |                                                       |
-| {{SpecName('ES1', '#sec-11.2.2', 'Opérateur new')}}                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.new")}}
+{{Compat}}
 
 ## Voir aussi
 

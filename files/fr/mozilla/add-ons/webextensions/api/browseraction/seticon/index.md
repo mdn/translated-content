@@ -13,6 +13,7 @@ tags:
   - setIcon
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
 ---
+
 {{AddonSidebar()}}
 
 Définit l'icône pour l'action du navigateur.
@@ -43,7 +44,7 @@ var settingIcon = browser.browserAction.setIcon(
 
       - : `{{WebExtAPIRef('browserAction.ImageDataType')}}` ou `object`. Il s'agit soit d'un seul objet `ImageData` ou un dictionnaire d'objet.
 
-        Utilisez un dictionnaire d'objet pour spécifier plusieurs objets `ImageData` dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixel différentes. Si `imageData` est un dictionnaire, la valeur de chaque propriété est un objet`ImageData`, et son nom est sa taille, comme ceci :
+        Utilisez un dictionnaire d'objet pour spécifier plusieurs objets `ImageData` dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixel différentes. Si `imageData` est un dictionnaire, la valeur de chaque propriété est un objet `ImageData`, et son nom est sa taille, comme ceci :
 
         ```json
         {
@@ -163,7 +164,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -190,4 +192,4 @@ browser.browserAction.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

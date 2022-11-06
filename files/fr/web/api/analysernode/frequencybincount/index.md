@@ -3,6 +3,7 @@ title: AnalyserNode.frequencyBinCount
 slug: Web/API/AnalyserNode/frequencyBinCount
 translation_of: Web/API/AnalyserNode/frequencyBinCount
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La propriété **`frequencyBinCount`** de l'objet [`AnalyserNode`](/fr/docs/Web/API/AnalyserNode) est un nombre entier non signé équivalent à la moitié la taille de la FFT. Il correspond en général au nombre de valeurs que vous aurez à manipuler pour la visualisation.
@@ -63,15 +64,13 @@ function dessiner() {
 dessiner();
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                            | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-frequencyBinCount', 'frequencyBinCount')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.frequencyBinCount")}}
+{{Compat}}
 
 ## Voir aussi
 

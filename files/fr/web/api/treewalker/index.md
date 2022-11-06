@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/TreeWalker
 ---
+
 {{ APIRef("DOM") }}
 
 L'objet **`TreeWalker`** représente les noeuds d'un sous-arbre de document et une position à l'intérieur.
@@ -140,7 +141,7 @@ _Cette interface n'hérite d'aucune propriété._
 
 - {{domxref("TreeWalker.filter")}} {{readonlyInline}}
   - : Renvoie un {{domxref("NodeFilter")}} utilisé pour sélectionner les noeuds pertinents.
-- {{domxref("TreeWalker.expandEntityReferences")}} {{readonlyInline}}{{obsolete_inline}}
+- {{domxref("TreeWalker.expandEntityReferences")}} {{readonlyInline}}{{deprecated_inline}}
   - : est un {{domxref("Boolean")}} (_booléen_) indiquant si, lors de la suppression d'une {{domxref("EntityReference")}}, tout son sous-arbre doit être supprimé en même temps.
 - {{domxref("TreeWalker.currentNode")}}
   - : est le {{domxref("Node")}} sur lequel le `TreeWalker` pointe actuellement.
@@ -168,14 +169,11 @@ _Cette interface n'hérite d'aucune méthode._
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                       | Commentaire                                           |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ----------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#treeWalker', 'TreeWalker')}}                                                 | {{Spec2('DOM WHATWG')}}             | Suppression de la propriété `expandEntityReferences`. |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker', 'TreeWalker')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TreeWalker")}}
+{{Compat}}
 
 ## Voir aussi
 

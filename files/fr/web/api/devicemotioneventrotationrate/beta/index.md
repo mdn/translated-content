@@ -14,13 +14,16 @@ translation_of: Web/API/DeviceMotionEventRotationRate/beta
 translation_of_original: Web/API/DeviceRotationRate/beta
 original_slug: Web/API/DeviceRotationRate/beta
 ---
+
 {{ ApiRef("Device Orientation Events") }}
 
 Cette propriété indique la vitesse de rotation autour de l'axe X -- en degrés par seconde -- dans un objet {{ domxref("DeviceRotationRate") }}.
 
 ## Syntaxe
 
-    var beta = deviceRotationRate.beta;
+```js
+var beta = deviceRotationRate.beta;
+```
 
 Cette propriété est en lecture seule.
 
@@ -31,10 +34,8 @@ Cette propriété est en lecture seule.
 
 ## Spécifications
 
-| Spécification                                | Statut                                   | Commentaire          |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEventRotationRate.beta")}}
+{{Compat}}

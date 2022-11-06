@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 original_slug: Web/CSS/Comprendre_z-index/Empilement_de_couches
 ---
+
 {{CSSRef}}
 
 Le **contexte d'empilement** est une conceptualisation en trois dimensions de la façon dont les éléments HTML sont placés sur un axe de profondeur relatif à la personne qui fait face à la page web. Les éléments HTML s'organisent dans ce volume selon un ordre construit à partir des attributs de l'élément.
@@ -79,6 +80,7 @@ Il est important de noter que les blocs DIV #4, DIV #5 et DIV #6 sont les enfant
 >       - DIV #4 - z-index à 6, empilé sous un élément avec `z-index` à 4, qui aboutit à un ordre de rendu de 4.6
 >
 >     - DIV #1 - z-index à 5
+
 ## Exemple
 
 ### HTML

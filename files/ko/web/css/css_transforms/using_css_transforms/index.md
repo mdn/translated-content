@@ -12,7 +12,7 @@ translation_of: Web/CSS/CSS_Transforms/Using_CSS_transforms
 ---
 {{CSSRef}}
 
-**CSS 변형**(transform)은 좌표공간을 변형함으로써 일반적인 문서 흐름을 방해하지 않고 콘텐츠의 형태와 위치를 바꿉니다. 본 가이드는 변형 사용법의 기초를 제시합니다.
+**CSS 변형**(transform)은 좌표공간을 변형함으로써 일반적인 문서 흐름을 방해하지 않고 콘텐츠의 형태와 위치를 바꿉니다. 본 가이드는 변형 사용법의 기초를 제시합니다.
 
 CSS 변형은 HTML 요소에 선형 아핀 변형(affine linear transformation)을 적용하는 여러 개의 CSS 속성을 조합해 구현합니다. 변형은 평면과 3D 공간에서의 회전, 확대, 이동, 비틀기를 포함합니다.
 
@@ -25,7 +25,7 @@ CSS 변형을 정의할 때 중요한 두 가지 속성은 {{cssxref("transform"
 - {{cssxref("transform-origin")}}
   - : 원점의 위치를 지정합니다. 기본값은 요소의 중심이며 변경할 수 있습니다. 회전, 확대, 비틀기 등 하나의 점을 기준으로 하는 변형에서 사용합니다.
 - {{cssxref("transform")}}
-  - : 요소에 적용할 변형을 지정합니다. 여러 개의 변형 목록을 공백으로 구분하여 대입하면 순차적으로 합성한 결과물을 적용합니다. 합성은 오른쪽부터 왼쪽으로 진행합니다.
+  - : 요소에 적용할 변형을 지정합니다. 여러 개의 변형 목록을 공백으로 구분하여 대입하면 순차적으로 합성한 결과물을 적용합니다. 합성은 오른쪽부터 왼쪽으로 진행합니다.
 
 ## 예제
 
@@ -47,7 +47,7 @@ MDN 로고를 90도 회전합니다.
 
 ### 비틀고 옮기기
 
-MDN 로고를 10도 비틀고 X축으로 150픽셀 옮깁니다.
+MDN 로고를 10도 비틀고 X축으로 150픽셀 옮깁니다.
 
 ```html
 <img style="transform: skewx(10deg) translatex(150px);
@@ -240,7 +240,7 @@ th, p, td {
 
 {{EmbedLiveSample('Setting_perspective', 660, 700)}}
 
-다음으로는 {{cssxref("perspective-origin")}} 속성으로 관찰자의 위치를 정해야 합니다. 기본값은 중앙으로, 언제나 충분한 위치는 아닙니다.
+다음으로는 {{cssxref("perspective-origin")}} 속성으로 관찰자의 위치를 정해야 합니다. 기본값은 중앙으로, 언제나 충분한 위치는 아닙니다.
 
 #### Changing the perspective origin
 
@@ -538,4 +538,4 @@ section {
 
 ## 더 보기
 
-- [Using device orientation with 3D Transforms](/en-US/docs/Web/Guide/Events/Using_device_orientation_with_3D_transforms "Using Deviceorientation In 3D Transforms")
+- [Using device orientation with 3D Transforms](/ko/docs/Web/Guide/Events/Using_device_orientation_with_3D_transforms)

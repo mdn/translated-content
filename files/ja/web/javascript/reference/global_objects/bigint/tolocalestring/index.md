@@ -1,18 +1,11 @@
 ---
 title: BigInt.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
-tags:
-  - BigInt
-  - 国際化
-  - Intl
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-browser-compat: javascript.builtins.BigInt.toLocaleString
 ---
+
 {{JSRef}}
 
-**`toLocaleString()`** メソッドは、この BigInt 値の言語に合わせた表現の文字列を返します。 
+**`toLocaleString()`** メソッドは、この BigInt 値の言語に合わせた表現の文字列を返します。
 
 {{EmbedInteractiveExample("pages/js/bigint-tolocalestring.html")}}
 
@@ -90,7 +83,7 @@ var bigint = 123456789123456789n;
 
 // 通貨書式を要求
 console.log(bigint.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
-// → 123.456.789.123.456.789,00 €
+// → 123.456.789.123.456.789,00 €
 
 // 日本円には下位の単位がない
 console.log(bigint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))

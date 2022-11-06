@@ -1,126 +1,90 @@
 ---
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
-tags:
-  - Constructor
-  - Function
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Function
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function
+browser-compat: javascript.builtins.Function
 ---
+
 {{JSRef}}
 
-Le constructeur **`Function`** crée un nouvel _objet_ `Function`. En JavaScript, chaque fonction est un objet `Function`.
+Chaque fonction JavaScript est en réalité un objet `Function` (ce qu'on peut vérifier avec l'expression `(function(){}).constructor === Function` qui donne `true`).
 
-Appeler ce constructeur permet de créer des fonctions dynamiquement mais cette méthode souffre de défauts équivalents à {{jsxref("eval")}} en termes de sécurité et de performance. Toutefois, à la différence d'`eval`, le constructeur `Function` permet d'exécuter du code dans la portée globale.
+## Constructeur
 
-{{EmbedInteractiveExample("pages/js/function-constructor.html")}}
+- [`Function()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
+  - : Crée un nouvel objet `Function`. Appeler le constructeur directement permet de créer des fonctions dynamiquement, mais ouvre la porte à des problèmes de sécurité et de performances (à l'instar de la fonction [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval)). Toutefois, à la différence de `eval()`, l'impact est bien moindre, car le constructeur `Function` crée des fonctions qui s'exécutent uniquement dans la portée globale.
 
-## Syntaxe
+## Propriétés des instances
 
-    new Function ([arg1[, arg2[, ...argN]],] corpsFonction)
+- [`Function.prototype.arguments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments) {{Deprecated_Inline}}
+  - : Un tableau contenant les arguments passés à la fonction. Cette propriété de `Function` est dépréciée, il faudra à la place utiliser l'objet [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments) qui est disponible à l'intérieur de la fonction.
+- [`Function.prototype.caller`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/caller) {{Deprecated_Inline}}
+  - : Indique la fonction qui a appelé la fonction courante qui s'exécute. Cette propriété est dépréciée et ne fonctionne que pour les fonctions non-strictes.
+- [`Function.prototype.displayName`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName)
+  - : Le nom d'affichage de la fonction.
+- [`Function.prototype.length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length)
+  - : Indique le nombre d'arguments attendus par la fonction.
+- [`Function.prototype.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
+  - : Le nom de la fonction.
 
-### Paramètres
+## Méthodes des instances
 
-- `arg1, arg2, ... argN`
-  - : Les noms utilisés par la fonction pour les arguments formellement déclarés. Chacun doit être une chaîne de caractères correspondant à un identifiant JavaScript valide (ou une liste de telles chaînes séparées par des virgules). Par exemple : "`x`", "`uneValeur`", ou "`a,b`".
-- `corpsFonction`
-  - : Une chaîne de caractères qui contient les instructions JavaScript définissant la fonction.
+- [`Function.prototype.apply(<var>thisArg</var> [, <var>argsArray</var>])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+  - : Appelle une fonction et définit sa valeur `this` avec l'argument `thisArg` fourni. Les arguments peuvent être passés via un [tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array).
+- [`Function.prototype.bind(<var>thisArg</var>[, <var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]]])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
+  - : Crée une nouvelle fonction qui, lorsqu'elle est appelée, a sa valeur `this` fixée avec l'argument `thisArg` fourni. Une suite d'arguments peut également être fournie afin qu'ils soient passés parmi les premiers arguments de la nouvelle fonction ainsi créée lorsqu'elle est appelée.
+- [`Function.prototype.call(<var>thisArg</var>[, <var>arg1</var>, <var>arg2</var>, ...<var>argN</var>])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+  - : Appelle une fonction en fixant sa valeur `this` avec la valeur fournie. Les arguments sont passés tels quels.
+- [`Function.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)
+  - : Renvoie une chaîne de caractères qui représente le code source de la fonction. Il s'agit d'une surcharge de la méthode [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
 
-## Description
+## Exemples
 
-Les objets `Function` créés avec le constructeur `Function` sont analysés quand la fonction est créée. Ceci est moins efficace que de déclarer une fonction grâce à une {{jsxref("Opérateurs/L_opérateur_function","expression de fonction","",1)}} ou à une instruction {{jsxref("Instructions/function","function")}} car celles crées de cette façon sont analysées avec le reste du code.
+### Différence entre l'utilisation du constructeur `Function()` et les déclarations de fonction
 
-Tous les arguments passés à la fonction seront traités avec les noms des identifiants des paramètres de la fonction à créer, dans le même ordre dans lequel ils ont été passés. Si un argument n'est pas passé, la valeur du paramètre dans la fonction sera {{jsxref("undefined")}}.
-
-Appeler le constructeur `Function` comme une fonction (c'est-à-dire sans utiliser l'opérateur {{jsxref("Opérateurs/L_opérateur_new","new")}}) a le même effet que quand il est appelé comme constructeur.
-
-## Propriétés et méthodes de `Function`
-
-L'objet global `Function` ne possède pas de méthodes ou de propriétés propres. Cependant, il est lui-même une fonction et hérite de certaines méthodes et propriétés depuis {{jsxref("Function.prototype")}} grâce à la chaîne de prototype.
-
-## Le prototype de `Function`
-
-### Propriétés
-
-{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/prototype', 'Propri.C3.A9t.C3.A9s')}}
-
-### Méthodes
-
-{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/prototype', 'M.C3.A9thodes')}}
-
-## Les instances de `Function`
-
-Les instances de `Function` héritent des méthodes et propriétés de {{jsxref("Function.prototype")}}. Comme pour les autres constructeurs, il est possible de modifier le prototype du constructeur afin d'apporter des modifications à toutes les instances de `Function`.
-
-## Exemple
-
-### Définir des arguments avec le constructeur `Function`
-
-Le code suivant permet de créer un objet `Function` qui utilise deux arguments :
-
-```js
-// Cet exemple peut être lancé dans votre console JavaScript
-
-// On crée un fonction qui prend deux arguments
-// et qui en renvoie la somme
-var ajoute = new Function('a', 'b', 'return a + b');
-
-// On appelle la fonction
-ajoute(2, 6);
-// > 8
-```
-
-Les arguments "`a`" et "`b`" sont les noms des arguments formellement déclarés utilisés dans le corps de la fonction : "`return a + b`".
-
-### Différence entre le constructeur `Function` et les déclarations de fonction
-
-Les fonctions créées avec le constructeur {{jsxref("Function()")}} ne créent pas de fermetures liées au contexte de leur création. Ainsi, lorsqu'elles sont exécutées, elles ne peuvent accéder qu'aux variables globales et à leurs propres valeurs locales. Elles ne peuvent pas accéder aux variables de la portée dans laquelle le constructeur `Function` a été invoqué. Le comportement est différent de celui qu'on obtient avec {{jsxref("eval")}} avec du code contenant une expression de fonction.
+Les fonctions créées avec le constructeur `Function()` ne créent pas de fermetures contenant leur contexte de création&nbsp;; elles sont toujours créées dans la portée globale. Lors de leur exécution, elles ne pourront accéder qu'à leurs propres variables locales et aux variables globales, elles ne pourront pas accéder aux variables de la portée dans laquelle le constructeur `Function()` a été appelé. Il s'agit d'un comportement différent que celui obtenu en utilisant [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval) avec une expression de fonction.
 
 ```js
 var x = 10;
 
-function créerFonction1() {
-  var x = 20;
-  return new Function("return x;"); // ici |x| fait référence au |x| global
+function creerFonction1() {
+    var x = 20;
+    return new Function('return x;');
+    // ce x fait référence à la variable globale x
 }
 
-function créerFonction2() {
-  var x = 20;
-  function f() {
-    return x; // ici |x| fait référence au |x| local juste avant
-  }
-  return f;
+function creerFonction2() {
+    var x = 20;
+    function f() {
+        return x; 
+        // ce x fait référence à la variable locale x juste avant
+    }
+    return f;
 }
 
-var f1 = créerFonction1();
+var f1 = creerFonction1();
 console.log(f1());          // 10
-var f2 = créerFonction2();
+var f2 = creerFonction2();
 console.log(f2());          // 20
 ```
 
-Bien que ce code fonctionne dans un navigateur web, l'appel à `f1()` provoquera une {{jsxref("ReferenceError")}} dans Node.js car `x` ne sera pas trouvé. En effet, pour Node, la portée de plus haut niveau n'est pas la portée globale et `x` est ici local à la fonction.
+Bien que ce code fonctionne dans les navigateurs web, `f1()` déclenchera une erreur `ReferenceError` avec Node.js, car `x` ne sera pas trouvé. En effet, la portée de plus haut niveau de Node n'est pas la portée globale et `x` sera local au module.
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.3', 'Function')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-function-objects', 'Function')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-function-objects', 'Function')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("Fonctions", "Les fonctions","",1)}}
-- L'instruction {{jsxref("Instructions/function", "function")}}
-- L'expression {{jsxref("Opérateurs/L_opérateur_function", "function")}}
-- L'instruction {{jsxref("Instructions/function*", "function*")}}
-- L'expression {{jsxref("Opérateurs/function*", "function*")}}
-- {{jsxref("AsyncFunction")}}
-- {{jsxref("GeneratorFunction")}}
+- [Fonctions et portées](/fr/docs/Web/JavaScript/Reference/Functions)
+- L'instruction [`function`](/fr/docs/Web/JavaScript/Reference/Statements/function)
+- L'expression [`function`](/fr/docs/Web/JavaScript/Reference/Operators/function)
+- L'instruction [`function*`](/fr/docs/Web/JavaScript/Reference/Statements/function*)
+- L'expression [`function*`](/fr/docs/Web/JavaScript/Reference/Operators/function*)
+- [`AsyncFunction`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
+- [`GeneratorFunction`](/fr/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)

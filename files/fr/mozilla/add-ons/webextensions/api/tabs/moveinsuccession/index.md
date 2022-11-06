@@ -12,6 +12,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
 ---
+
 {{AddonSidebar()}}
 
 Modifie la relation de succession pour un groupe d'onglets.
@@ -43,7 +44,7 @@ browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})
     - `append` {{optional_inline}}
       - : `boolean`. Détermine s'il faut déplacer les onglets dans les `tabIds` avant ou après `tabId` dans la succession. Si `false`, les onglets sont déplacés avant `tabId`, si `true`, les onglets sont déplacés après `tabId`. Par défaut à `false`.
     - `insert` {{optional_inline}}
-      - : `boolean`. Détermine s'il faut lier les prédécesseurs ou successeurs actuels (selon `options.append`) de `tabId`à l'autre côté de la chaîne après son ajout ou son ajout. Si true, l'un des événements suivants se produit : si `options.append` est `false`, le premier onglet du tableau est défini comme successeur de tout prédécesseur actuel de  `tabId`; Si `options.append` est `true`, le successeur actuel de tabId est défini comme le successeur du dernier onglet du tableau. La valeur par défaut est `false`.
+      - : `boolean`. Détermine s'il faut lier les prédécesseurs ou successeurs actuels (selon `options.append`) de `tabId` à l'autre côté de la chaîne après son ajout ou son ajout. Si true, l'un des événements suivants se produit : si `options.append` est `false`, le premier onglet du tableau est défini comme successeur de tout prédécesseur actuel de  `tabId`; Si `options.append` est `true`, le successeur actuel de tabId est défini comme le successeur du dernier onglet du tableau. La valeur par défaut est `false`.
 
 ## Compatibilité du navigateur
 

@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 original_slug: Apprendre/CSS/Introduction_à_CSS/Fundamental_CSS_comprehension
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Apprendre/CSS/Introduction_à_CSS")}}
 
 Beaucoup de choses ont été passées en revue dans ce module, donc il est bon d'avoir atteint la fin ! La dernière étape avant de passer à la suite est de tenter une évaluation sur les thèmes de ce module — elle comprend un certain nombre d'exercices connexes à compléter pour créer la composition finale — une carte de visite / carte de joueur / un profil de média social.
@@ -97,15 +98,11 @@ La capture d'écran suivante montre un exemple de ce à quoi devrait ressembler 
 
 ![A view of the finished business card, show a reader header and footer, and a darker center panel containing the main details and image.](business-card.png)
 
-
-
 ## Évaluation
 
 Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur  [le fil de discussion à propos de cet exercise](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abors, il n'y rien à gagner en trichant !
 
 {{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Apprendre/CSS/Introduction_à_CSS")}}
-
-
 
 ## Dans ce module
 

@@ -8,13 +8,16 @@ tags:
   - Méthodes
 translation_of: Web/API/Document/getElementsByTagName
 ---
+
 {{ ApiRef("DOM") }}
 
 Renvoie une {{domxref ("HTMLCollection")}} des éléments avec le nom de balise donné. Le document complet est recherché, y compris le nœud racine. Le `HTMLCollection` renvoyée est en direct, ce qui signifie qu'elle se met à jour automatiquement pour rester synchronisée avec l'arborescence DOM sans avoir à rappeler document.getElementsByTagName ().
 
 ## Syntaxe
 
-    var elements = document.getElementsByTagName(name);
+```js
+var elements = document.getElementsByTagName(name);
+```
 
 - `elements` est une liste de nœuds (`NodeList`) des éléments trouvés dans l'ordre dans lequel ils apparaissent dans l'arbre.
 - `nom` est une chaîne représentant le nom des éléments. La chaîne spéciale `"*"` représente «&nbsp;tous les éléments&nbsp;».

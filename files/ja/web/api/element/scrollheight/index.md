@@ -1,15 +1,8 @@
 ---
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
-tags:
-  - API
-  - CSSOM View
-  - NeedsDHTMLRemovalInExample
-  - プロパティ
-  - リファレンス
-browser-compat: api.Element.scrollHeight
-translation_of: Web/API/Element/scrollHeight
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.scrollHeight`** は読み取り専用のプロパティで、あふれて画面上に表示されない部分を含めた、要素の中身の高さの寸法です。
@@ -18,7 +11,7 @@ translation_of: Web/API/Element/scrollHeight
 
 `scrollHeight` の値は、垂直スクロールバーを使用せずにすべてのコンテンツをビューポート内に収めるために要素に必要な最小の高さに等しくなります。高さは {{domxref("Element.clientHeight", "clientHeight")}} と同じ方法で測定されます。要素のパディングは含みますが、境界線、マージン、 (もしあれば) 水平スクロールバーは含みません。これには {{cssxref("::before")}} または {{cssxref("::after")}} のような擬似要素の高さを含むことがあります。要素の内容が垂直スクロールバーを表示することなく収まる場合、その `scrollHeight` は {{domxref("Element.clientHeight", "clientHeight")}} と等しくなります。
 
-> **Note:** このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ domxref("Element.getBoundingClientRect()") }} を使用してください。
+> **メモ:** このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ domxref("Element.getBoundingClientRect()") }} を使用してください。
 
 ## 構文
 

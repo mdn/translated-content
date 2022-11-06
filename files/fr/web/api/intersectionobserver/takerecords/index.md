@@ -12,6 +12,7 @@ tags:
   - takeRecords
 translation_of: Web/API/IntersectionObserver/takeRecords
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 La méthode **`takeRecords()`** de l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) renvoie un tableau d'objets [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionObserverEntry), un pour chaque élément ciblé qui a subi un changement d'intersection depuis la dernière vérification des intersections, soit explicitement par un appel à cette méthode, soit implicitement par un appel automatique à la fonction de rappel de l'observateur.
@@ -20,7 +21,9 @@ La méthode **`takeRecords()`** de l'interface [`IntersectionObserver`](/fr/docs
 
 ## Syntaxe
 
-    intersectionObserverEntries = intersectionObserver.takeRecords();
+```js
+intersectionObserverEntries = intersectionObserver.takeRecords();
+```
 
 ### Paramètres
 
@@ -32,14 +35,12 @@ Un tableau d'objets [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionO
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                       | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-takerecords','IntersectionObserver.takeRecords()')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.takeRecords")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [L'API _Intersection Observer_](/en-US/docs/Web/API/Intersection_Observer_API)
+- [L'API _Intersection Observer_](/fr/docs/Web/API/Intersection_Observer_API)

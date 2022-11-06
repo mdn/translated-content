@@ -3,6 +3,7 @@ title: Expires
 slug: Web/HTTP/Headers/Expires
 translation_of: Web/HTTP/Headers/Expires
 ---
+
 {{HTTPSidebar}}
 
 Le header **`Expires`** contient la date/heure après laquelle la réponse est considérée comme dépréciée.
@@ -32,7 +33,9 @@ Si un header {{HTTPHeader("Cache-Control")}} contient une directive "max-age" ou
 
 ## Syntaxe
 
-    Expires: <http-date>
+```
+Expires: <http-date>
+```
 
 ## Directives
 
@@ -41,7 +44,9 @@ Si un header {{HTTPHeader("Cache-Control")}} contient une directive "max-age" ou
 
 ## Exemples
 
-    Expires: Wed, 21 Oct 2015 07:28:00 GMT
+```
+Expires: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Spécifications
 
@@ -53,7 +58,7 @@ Si un header {{HTTPHeader("Cache-Control")}} contient une directive "max-age" ou
 
 {{Compat("http.headers.Expires")}}
 
-## See also
+## Voir aussi
 
 - {{HTTPHeader("Cache-Control")}}
 - {{HTTPHeader("Age")}}

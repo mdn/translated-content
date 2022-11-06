@@ -9,6 +9,7 @@ tags:
 translation_of: Web/SVG/Element/polygon
 browser-compat: svg.elements.polygon
 ---
+
 {{SVGRef}}
 
 L'élément **`<polygon>`** délimite une forme close composée d'un groupe de plusieurs segments de droites. Le dernier point est relié au premier afin de fermer la forme et de relier les traits entre deux. Pour créer une forme ouverte, voir l'élément {{SVGElement("polyline")}}.
@@ -71,6 +72,6 @@ Cet élément implémente l'interface {{domxref("SVGPolygonElement")}}.
 
 {{Compat}}
 
-## Voir également
+## Voir aussi
 
 - Autres formes élémentaires en SVG: {{ SVGElement('circle') }}, {{ SVGElement('ellipse') }}, {{ SVGElement('line') }}, **{{ SVGElement('polyline') }}** et **{{ SVGElement('rect') }}.**

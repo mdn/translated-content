@@ -1,18 +1,8 @@
 ---
 title: MouseEvent.clientX
 slug: Web/API/MouseEvent/clientX
-tags:
-  - API
-  - CSSOM View
-  - DOM
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.clientX
-translation_of: Web/API/MouseEvent/clientX
 ---
+
 {{APIRef("DOM Events")}}
 
 **`clientX`** は {{domxref("MouseEvent")}} の読み取り専用のプロパティで、このイベントが発生した時点のアプリケーションの{{glossary("viewport", "ビューポート")}}における水平座標を定義します（ページにおける座標ではありません）。

@@ -1,18 +1,8 @@
 ---
 title: StylePropertyMapReadOnly.keys()
 slug: Web/API/StylePropertyMapReadOnly/keys
-tags:
-  - API
-  - CSS Typed Object Model API
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - StylePropertyMapReadOnly
-  - keys()
-browser-compat: api.StylePropertyMapReadOnly.keys
-translation_of: Web/API/StylePropertyMapReadOnly/keys
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 **`StylePropertyMapReadOnly.keys()`** メソッドは、 `StylePropertyMapReadOnly` の各項目のキーを含む新しい*配列反復子*を返します。

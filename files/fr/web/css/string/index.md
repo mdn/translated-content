@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/string
 ---
+
 {{CSSRef}}
 
 Le type de donnée CSS **`<string>`** représente une chaîne de caractères. En CSS, les chaînes de caractères sont présentes dans de nombreuses propriétés comme {{cssxref("content")}}, {{cssxref("font-family")}} et {{cssxref("quotes")}}.
@@ -42,18 +43,14 @@ de caractères"
 
 ## Spécifications
 
-| Spécification                                                        | État                             | Commentaires                                                                        |
-| -------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Values', '#strings', '')}}             | {{Spec2('CSS3 Values')}} | Aucune modification significative depuis CSS Level 2 (Revision 1)                   |
-| {{SpecName('CSS2.1', 'syndata.html#strings', '')}} | {{Spec2('CSS2.1')}}         | Définition explicite. Les valeurs Unicode échappées sur 6 chiffres sont autorisées. |
-| {{SpecName('CSS1', '', '')}}                                 | {{Spec2('CSS1')}}         | Définition implicite. Les valeurs Unicode échappées sur 4 chiffres sont autorisées. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.string")}}
+{{Compat}}
 
 ## Voir aussi
 
 - [Valeurs et unités en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
-- [Tutoriel - Introduction aux valeurs et unités CSS](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Tutoriel - Introduction aux valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
 - [Types de donnée en CSS](/fr/docs/Web/CSS/CSS_Types)

@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/A_cool_looking_box
 original_slug: Apprendre/CSS/styliser_boites/A_cool_looking_box
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 
 Avec cette évaluation, vous obtiendrez une meilleure pratique dans la création de boîtes d'aspect rafraîchissant en faisant en sorte qu'elles attirent le regard.
@@ -79,8 +80,6 @@ Cette capture d'écran montre un exemple de ce à quoi l'aspect final pourrait r
 Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur  [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abord, il n'y rien à gagner en trichant !
 
 {{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
-
-
 
 ## Dans ce module
 

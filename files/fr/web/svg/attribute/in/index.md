@@ -7,7 +7,8 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Attribute/in
 ---
-« [SVG Attribute reference home](/fr/SVG/Attribute "en/SVG/Attribute")
+
+« [SVG Attribute reference home](/fr/SVG/Attribute)
 
 L'attribut `in` identifie l'entrée pour la primitive de filtre donnée.
 

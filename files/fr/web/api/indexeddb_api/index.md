@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/IndexedDB_API
 original_slug: Web/API/API_IndexedDB
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 IndexedDB est une API de bas niveau qui permet le stockage côté client de quantités importantes de données structurées, incluant des fichiers/blobs. Cette API utilise des index afin de permettre des recherches performantes sur ces données. Alors que [Web Storage](/fr/docs/Web/API/Web_Storage_API) est utile pour stocker de petites quantités de données, il est moins utile pour stocker de grandes quantités de données structurées. IndexedDB fournit une solution. Cette page est le point d'entrée pour tout ce qui concerne IndexedDB sur MDN - vous y trouverez les liens vers la référence complète de l'API et les guides d'utilisation, le support par les navigateurs, et quelques explications des concepts clés.
@@ -81,23 +82,23 @@ Cette spécification provoque des évènements avec les interfaces personnalisé
 
 Une précedente version des spécifications a défini ces interfaces, désormais supprimées. Elles sont toujours documentées dans le cas où vous avez besoin de mettre à jour du code déja écrit :
 
-- {{domxref("IDBVersionChangeRequest")}} {{obsolete_inline}}
+- {{domxref("IDBVersionChangeRequest")}} {{deprecated_inline}}
   - : Représente une requête de changement de version de la base de données. Le moyen pour changer de version de la base de données a désormais changé (avec un appel de {{domxref("IDBFactory.open")}} sans aussi appeler {{domxref("IDBDatabase.setVersion")}}), et l'interface  {{domxref("IDBOpenDBRequest")}} a désormais la fonction de l'ancienne (supprimée) {{domxref("IDBVersionChangeRequest")}}.
-- {{domxref("IDBDatabaseException")}}  {{obsolete_inline}}
+- {{domxref("IDBDatabaseException")}}  {{deprecated_inline}}
   - : Représente une exception (erreur) qui peut survenir durant les opérations sur la base de données.
-- {{domxref("IDBTransactionSync")}} {{obsolete_inline}}
+- {{domxref("IDBTransactionSync")}} {{deprecated_inline}}
   - : Version synchrone de {{domxref("IDBTransaction")}}.
-- {{domxref("IDBObjectStoreSync")}} {{obsolete_inline}}
+- {{domxref("IDBObjectStoreSync")}} {{deprecated_inline}}
   - : Version synchrone de {{domxref("IDBObjectStore")}}.
-- {{domxref("IDBIndexSync")}} {{obsolete_inline}}
+- {{domxref("IDBIndexSync")}} {{deprecated_inline}}
   - : Version synchrone de  {{domxref("IDBIndex")}}.
-- {{domxref("IDBFactorySync")}} {{obsolete_inline}}
+- {{domxref("IDBFactorySync")}} {{deprecated_inline}}
   - : Version synchrone de {{domxref("IDBFactory")}}.
-- {{domxref("IDBEnvironmentSync")}} {{obsolete_inline}}
+- {{domxref("IDBEnvironmentSync")}} {{deprecated_inline}}
   - : Version synchrone de {{domxref("IDBEnvironment")}}.
-- {{domxref("IDBDatabaseSync")}} {{obsolete_inline}}
+- {{domxref("IDBDatabaseSync")}} {{deprecated_inline}}
   - : Version synchrone de {{domxref("IDBDatabase")}}.
-- {{domxref("IDBCursorSync")}} {{obsolete_inline}}
+- {{domxref("IDBCursorSync")}} {{deprecated_inline}}
   - : Version synchrone de {{domxref("IDBCursor")}}.
 
 ## Exemples
@@ -108,10 +109,7 @@ Une précedente version des spécifications a défini ces interfaces, désormais
 
 ## Spécifications
 
-| Spécification                        | Statut                           | Commentaire         |
-| ------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('IndexedDB')}}     | {{Spec2('IndexedDB')}}     | Définition initiale |
-| {{SpecName("IndexedDB 2")}} | {{Spec2("IndexedDB 2")}} |                     |
+{{Specifications}}
 
 ## Voir aussi
 

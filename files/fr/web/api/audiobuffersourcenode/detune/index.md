@@ -8,6 +8,7 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioBufferSourceNode/detune
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La propriété `detune` de l'interface {{ domxref("AudioBufferSourceNode") }} est un {{domxref("AudioParam")}} de type [k-rate](/fr/docs/DOM/AudioParam#k-rate) représentant le désaccord des oscillations en [cents](http://en.wikipedia.org/wiki/Cent_%28music%29).
@@ -53,13 +54,11 @@ source.start();
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-detune', 'detune')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBufferSourceNode.detune")}}
+{{Compat}}
 
 ## Voir aussi
 

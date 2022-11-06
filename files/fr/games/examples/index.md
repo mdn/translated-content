@@ -9,6 +9,7 @@ tags:
 translation_of: Games/Examples
 original_slug: Jeux/Exemples
 ---
+
 {{GamesSidebar}}
 
 Cette page liste un grand nombre de démos de technologies web impressionnantes vous permettant de vous inspirer et de vous amuser. Une preuve de ce qui peut être fait avec Javascript, WebGL et autres. Les deux premières sections listent des jeux tandis que la troisième est une liste de démos de technologies web.
@@ -16,7 +17,7 @@ Cette page liste un grand nombre de démos de technologies web impressionnantes 
 ## Démos/Jeux gratuits
 
 - [Orpega](http://orpe.ga/)
-  - : Jeu de tir massivement multijoueur sur le thème de l'espace en HTML5 / JavaScript sans moteur et NodeJS pour le serveur (http\://orpe.ga/)
+  - : Jeu de tir massivement multijoueur sur le thème de l'espace en HTML5 / JavaScript sans moteur et NodeJS pour le serveur (<http://orpe.ga/>)
 - [Beloola](http://www.beloola.com)
   - : Plateforme sociale de réalité virtuelle web pour les passionnés. Expérience disponible à la fois sur écrans 2D et casques de réalité virtuelle (_Paramètres / Passer en mode VR_)
 - [Tanx](http://playcanv.as/p/aP0oxhUr)
@@ -53,7 +54,7 @@ Cette page liste un grand nombre de démos de technologies web impressionnantes 
   - : Un jeu de réflexion hexagonal ressemblant à Tetris.
 - [2048](https://gabrielecirulli.github.io/2048/)
   - : Un jeu de réflexion où il faut faire glisser des tuiles.
-- [BananaBread](/fr/demos/detail/bananabread "/fr/demos/detail/bananabread")
+- [BananaBread](/fr/demos/detail/bananabread)
   - : Un jeu de tir à la première personne en 3D développé en utilisant Emscripten, WebGL et WebRTC.
 - [Monster Madness](https://hacks.mozilla.org/2013/12/monster-madness-creating-games-on-the-web-with-emscripten/)
   - : Un jeu de tir multijoueur en ligne développé par "Nom Nom Games" et "Trendy entertainment" en utilisant WebGL et asm.js.

@@ -1,21 +1,13 @@
 ---
 title: ServiceWorkerRegistration.unregister()
 slug: Web/API/ServiceWorkerRegistration/unregister
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-  - unregister
-browser-compat: api.ServiceWorkerRegistration.unregister
-translation_of: Web/API/ServiceWorkerRegistration/unregister
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`unregister()`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのメソッドで、サービスワーカーの登録を解除し、プロミス ({{jsxref("Promise")}}) を返します。 登録が見つからなかった場合、プロミスは `false` に解決されます。 それ以外の場合は、登録解除したかどうかに関係なく、`true` に解決されます（誰かが同じスコープで {{domxref("ServiceWorkerContainer.register()")}} を同時に呼び出した場合は、登録解除されない場合があります）。 サービスワーカーは、登録解除される前に進行中の操作を完了します。
 
-> **Note:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
+> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
 ## 構文
 

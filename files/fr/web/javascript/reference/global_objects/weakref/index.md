@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakRef
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef
 browser-compat: javascript.builtins.WeakRef
 ---
+
 {{JSRef}}
 
 Un objet **`WeakRef`** permet de tenir une référence faible vers un autre objet, sans empêcher que ce dernier puisse être récupéré par le ramasse-miettes.
@@ -27,7 +28,6 @@ Un objet `WeakRef` contient une référence faible vers un objet, appelé _cible
 ## À éviter si possible
 
 Une utilisation correcte de `WeakRef` nécessite une réflexion suffisante et il est préférable d'avoir à utiliser ces traitements si possible. Il est également important d'éviter d'avoir à dépendre de fonctionnements spécifiques non garantis par la spécification. Le moment, la façon et l'exécution même du ramasse-miettes dépendent éminemment de l'implémentation du moteur JavaScript. Tout comportement observé pour un moteur pourra être différent dans un autre moteur, dans une version différente du même moteur ou encore même dans une situation légèrement différente et pour la même version du même moteur. La gestion du ramasse-miettes est un problème complexe sur lequel travaillent constamment les personnes qui implémentent les moteurs JavaScript.
-
 
 Voici quelques sujets spécifiques inclus dans [le document explicatif de la proposition correspondante](https://github.com/tc39/proposal-weakrefs/blob/master/reference.md)&nbsp;:
 

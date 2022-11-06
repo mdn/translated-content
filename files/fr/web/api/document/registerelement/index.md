@@ -10,11 +10,10 @@ tags:
   - Référence(2)
 translation_of: Web/API/Document/registerElement
 ---
+
 {{APIRef("DOM")}} {{Deprecated_header}}
 
 > **Attention :** document.registerElement() est déprécié en faveur de [customElements.define()](/fr/docs/Web/API/CustomElementRegistry/define).
-
-{{draft}}
 
 La méthode **`Document.registerElement()`** permet d'enregistrer un nouvel [élément personnalisé](/fr/docs/Web/Web_Components/Custom_Elements) dans le navigateur, et retourne un constructeur pour ce nouvel élément.
 
@@ -22,7 +21,9 @@ La méthode **`Document.registerElement()`** permet d'enregistrer un nouvel [él
 
 ## Syntaxe
 
-    var constructeur = document.registerElement(nom-tag, options);
+```js
+var constructeur = document.registerElement(nom-tag, options);
+```
 
 ### Paramètres
 

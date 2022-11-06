@@ -12,27 +12,30 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/from
 ---
+
 {{JSRef}}
 
 La méthode **`TypedArray.from()`** crée un nouvel objet {{jsxref("TypedArray", "TypedArray", "#Les_objets_TypedArray")}} à partir d'un objet itérable ou d'un objet semblable à un tableau. Cette méthode est similaire à {{jsxref("Array.from()")}}.
 
 ## Syntaxe
 
-    TypedArray.from(source[, mapFn[, thisArg]])
+```js
+TypedArray.from(source[, mapFn[, thisArg]])
+```
 
-    où TypedArray est l'un de :
+où TypedArray est l'un de :
 
-    Int8Array
-    Uint8Array
-    Uint8ClampedArray
-    Int16Array
-    Uint16Array
-    Int32Array
-    Uint32Array
-    Float32Array
-    Float64Array
-    BigInt64Array
-    BigUint64Array
+- [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
+- [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+- [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
+- [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)
+- [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)
+- [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
+- [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)
+- [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)
+- [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)
+- [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)
+- [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)
 
 ### Paramètres
 
@@ -90,14 +93,11 @@ Uint8Array.from({length: 5}, (v, k) => k);
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.from', '%TypedArray%.from')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.from', '%TypedArray%.from')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.from")}}
+{{Compat}}
 
 ## Voir aussi
 

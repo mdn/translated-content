@@ -1,14 +1,8 @@
 ---
 title: アクセシビリティのためのメディアクエリーの使用
 slug: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
-tags:
-  - '@media'
-  - アクセシビリティ
-  - アニメーション
-  - CSS
-  - ガイド
-translation_of: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
 ---
+
 **メディアクエリー**は、障碍を持ったユーザーがウェブサイトをより理解することを支援するためにも利用することができます。
 
 ## 動きの縮減

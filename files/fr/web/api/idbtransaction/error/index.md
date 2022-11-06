@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/error
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`IDBTransaction.error`** de l'interface {{domxref("IDBTransaction")}} renvoie un type d'erreur lorsque la {{domxref("IDBTransaction","transaction","",1)}} échoue.
@@ -18,7 +19,9 @@ La propriété **`IDBTransaction.error`** de l'interface {{domxref("IDBTransacti
 
 ## Syntaxe
 
-    var myError = transaction.error;
+```js
+var myError = transaction.error;
+```
 
 ### Valeur
 
@@ -83,13 +86,11 @@ function addData() {
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#transaction', 'IDBTransaction')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBTransaction.error")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -13,6 +13,7 @@ tags:
   - find
 translation_of: Web/API/Window/find
 ---
+
 {{ApiRef}}{{Non-standard_Header}}
 
 > **Note :** La prise en charge de `Window.find()` pourrait changer dans les futures versions de Gecko. Voir {{Bug("672395")}}.
@@ -21,8 +22,10 @@ La méthode **`Window.find()`** trouve une chaîne dans une fenêtre.
 
 ## Syntaxe
 
-    window.find(aString, aCaseSensitive, aBackwards, aWrapAround,
-                aWholeWord, aSearchInFrames, aShowDialog);
+```js
+window.find(aString, aCaseSensitive, aBackwards, aWrapAround,
+            aWholeWord, aSearchInFrames, aShowDialog);
+```
 
 - `aString`
   - : La chaîne de caractère à rechercher.

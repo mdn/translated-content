@@ -10,6 +10,7 @@ tags:
   - Video
 translation_of: Web/API/HTMLVideoElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLVideoElement`** fournit des propriétés et des méthodes spéciales pour manipuler des objets vidéo. Elle hérite également des propriétés et des méthodes de [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) et de [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
@@ -76,13 +77,11 @@ _Hérite des méthodes de son parent {{domxref("HTMLMediaElement")}} et de son a
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', "#htmlvideoelement", "HTMLVideoElement")}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLVideoElement")}}
+{{Compat}}
 
 ## Voir aussi
 

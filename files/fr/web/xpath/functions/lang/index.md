@@ -6,13 +6,16 @@ tags:
 translation_of: Web/XPath/Functions/lang
 original_slug: Web/XPath/Fonctions/lang
 ---
+
 {{ XsltRef() }}
 
 La fonction `lang` détermine si le nœud de contexte correspond à la langue indiquée et retourne le booléen `true` ou `false`.
 
 ### Syntaxe
 
-    lang( chaîne )
+```
+lang( chaîne )
+```
 
 ### Arguments
 
@@ -33,23 +36,29 @@ La fonction `lang` détermine si le nœud de contexte correspond à la langue in
 
 Regardons le code XML suivant&nbsp;:
 
-    <p xml:lang="en">I went up a floor.</p>
-    <p xml:lang="en-GB">I took the lift.</p>
-    <p xsl:lang="en-US">I rode the elevator.</p>
+```xml
+<p xml:lang="en">I went up a floor.</p>
+<p xml:lang="en-GB">I took the lift.</p>
+<p xsl:lang="en-US">I rode the elevator.</p>
+```
 
 et ce modèle XSL&nbsp;:
 
-    <xsl:value-of select="count(//p[lang('en')])" />
-    <xsl:value-of select="count(//p[lang('en-GB')])" />
-    <xsl:value-of select="count(//p[lang('en-US')])" />
-    <xsl:value-of select="count(//p[lang('de')])" />
+```xml
+<xsl:value-of select="count(//p[lang('en')])" />
+<xsl:value-of select="count(//p[lang('en-GB')])" />
+<xsl:value-of select="count(//p[lang('en-US')])" />
+<xsl:value-of select="count(//p[lang('de')])" />
+```
 
 La sortie sera&nbsp;:
 
-    3
-    1
-    1
-    0
+```
+3
+1
+1
+0
+```
 
 ### Définition
 

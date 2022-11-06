@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBKeyRange/upper
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`upper`**, rattachée à l'interface {{domxref("IDBKeyRange")}}, renvoie la borne supérieure de l'intervalle de clé.
@@ -54,17 +55,15 @@ function displayData() {
   };
 ```
 
-> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) ([ainsi que la démonstration associée](https://mdn.github.io/IDBKeyRange-example/)).
+> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) ([ainsi que la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBKeyRange-upper', 'upper')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBKeyRange.upper")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -9,13 +9,16 @@ tags:
   - Propriétés
 translation_of: Web/API/Element/tagName
 ---
+
 {{ApiRef("DOM")}}
 
 Renvoie le nom de l'étiquette de l'élément sur lequel elle est appelée. Si l'élément est une {{HTMLElement("img")}}, sa propriété `tagName` est `"IMG"` (pour les documents HTML, elle peut être différente pour les documents XML et XHTML).
 
 ## Syntaxe
 
-    elementName = element.tagName;
+```js
+elementName = element.tagName;
+```
 
 ### Valeur
 
@@ -29,7 +32,9 @@ Une chaîne indiquant le nom de l'étiquette de l'élément. Cette chaîne compo
 
 ### Contenu HTML
 
-    <span id="naissance">Lorsque je suis né…</span>
+```html
+<span id="naissance">Lorsque je suis né…</span>
+```
 
 ### Contenu JavaScript
 
@@ -42,11 +47,8 @@ En XHTML (ou tout autre format XML), la casse d'origine sera conservée, de sort
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaire         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("DOM3 Core", "core.html#ID-104682815", "Element.tagName")}} | {{Spec2("DOM3 Core")}} | Pas de changement   |
-| {{SpecName("DOM2 Core", "core.html#ID-104682815", "Element.tagName")}} | {{Spec2("DOM2 Core")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.tagName")}}
+{{Compat}}

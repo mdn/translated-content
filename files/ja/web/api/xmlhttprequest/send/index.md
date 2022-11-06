@@ -1,28 +1,15 @@
 ---
 title: XMLHttpRequest.send()
 slug: Web/API/XMLHttpRequest/send
-tags:
-  - AJAX
-  - API
-  - HTTP リクエスト
-  - メソッド
-  - NeedsContent
-  - NeedsExample
-  - リファレンス
-  - XHR
-  - XHR リクエスト
-  - XMLHttpRequest
-  - send
-browser-compat: api.XMLHttpRequest.send
-translation_of: Web/API/XMLHttpRequest/send
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} の **`send()`** メソッドは、リクエストをサーバーに送信します。
 
 リクエストが非同期の場合 (これが既定)、このメソッドはリクエストが送信されるとすぐに戻り、結果はイベントを用いて配信されます。リクエストが同期の場合、このメソッドはレスポンスが到着するまで戻りません。
 
-`send()` はリクエストの本文を示す引数を一つ受け取ることができます。これは主に {{HTTPMethod("PUT")}} のようなリクエストに使用されます。リクエストメソッドが {{HTTPMethod("GET")}} あｍたは {{HTTPMethod("HEAD")}} であれば、 `body` 引数は無視され、リクエストの本文は `null` に設定されます。
+`send()` はリクエストの本文を示す引数を一つ受け取ることができます。これは主に {{HTTPMethod("PUT")}} のようなリクエストに使用されます。リクエストメソッドが {{HTTPMethod("GET")}} または {{HTTPMethod("HEAD")}} であれば、 `body` 引数は無視され、リクエストの本文は `null` に設定されます。
 
 {{HTTPHeader("Accept")}} ヘッダーを {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}} を使用して設定しなかった場合、 `Accept` ヘッダーは `"*/*"` 型 (任意の型) が送信されます。
 

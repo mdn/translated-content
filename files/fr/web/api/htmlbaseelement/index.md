@@ -3,6 +3,7 @@ title: HTMLBaseElement
 slug: Web/API/HTMLBaseElement
 translation_of: Web/API/HTMLBaseElement
 ---
+
 {{APIRef("HTML DOM")}}L'interface **`HTMLBaseElement`** contient l'URI de base pour un document. Cet objet hérite de toutes les propriétés et des méthodes telles quelles sont décrites dans l'interface {{domxref("HTMLElement")}}.
 
 ## Propriétés
@@ -20,17 +21,11 @@ _Pas de méthodes spécifiques; Hérite des propriétés de son parent, {{domxre
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire                                                                    |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "semantics.html#the-base-element", "HTMLBaseElement")}}         | {{Spec2('HTML WHATWG')}} | Aucun changement depuis le dernier snapshot, {{SpecName("HTML5.1")}}. |
-| {{SpecName('HTML5.1', "document-metadata.html#the-base-element", "HTMLBaseElement")}}     | {{Spec2('HTML5.1')}}     | Aucun changement depuis {{SpecName("HTML5 W3C")}}                       |
-| {{SpecName('HTML5 W3C', "document-metadata.html#the-base-element", "HTMLBaseElement")}} | {{Spec2('HTML5 W3C')}}     | Aucun changement depuis {{SpecName("DOM2 HTML")}}.                      |
-| {{SpecName('DOM2 HTML', 'html.html#ID-73629039', 'HTMLBaseElement')}}                         | {{Spec2('DOM2 HTML')}}     | Aucun changement depuis {{SpecName("DOM1")}}.                          |
-| {{SpecName('DOM1', 'level-one-html.html#ID-73629039', 'HTMLBaseElement')}}                 | {{Spec2('DOM1')}}         | Première définition.                                                           |
+{{Specifications}}
 
-## Compatibilités navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.HTMLBaseElement")}}
+{{Compat}}
 
 ## Voir aussi
 

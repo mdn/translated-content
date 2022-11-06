@@ -1,16 +1,8 @@
 ---
 title: scroll-snap-coordinate
 slug: Web/CSS/scroll-snap-coordinate
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS スクロールスナップ
-  - 非推奨
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.scroll-snap-coordinate
-translation_of: Web/CSS/scroll-snap-coordinate
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`scroll-snap-coordinate`** は [CSS](/ja/docs/Web/CSS)のプロパティで、このプロパティは、最も近い祖先のスクロールコンテナーの {{cssxref("scroll-snap-destination")}} に配置される要素内の X 座標と Y 座標の位置をそれぞれの軸で定義します。
@@ -57,31 +49,31 @@ scroll-snap-coordinate: unset;
 ```html
 <div id="container">
   <div>
-    <p>At coordinate (0, 0)</p>
-    <div class="scrollContainer coordinate0">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>
-  </div>
+    <p>At coordinate (0, 0)</p>
+    <div class="scrollContainer coordinate0">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 
-  <div>
-    <p>At coordinate (25, 0)</p>
-    <div class="scrollContainer coordinate25">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>
-  </div>
+  <div>
+    <p>At coordinate (25, 0)</p>
+    <div class="scrollContainer coordinate25">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 
-  <div>
-    <p>At coordinate (50, 0)</p>
-    <div class="scrollContainer coordinate50">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>
-  </div>
+  <div>
+    <p>At coordinate (50, 0)</p>
+    <div class="scrollContainer coordinate50">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 </div>
 ```
 

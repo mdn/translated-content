@@ -3,259 +3,52 @@ title: AJAX
 slug: Web/Guide/AJAX
 translation_of: Web/Guide/AJAX
 ---
-**AJAX (Asynchronous JavaScript + XML)** n'est pas une technologie en soi, mais un terme désignant une «&nbsp;nouvelle&nbsp;» approche utilisant un ensemble de technologies existantes, dont&nbsp;: [HTML](/fr/HTML "fr/HTML") ou [XHTML](/fr/XHTML "fr/XHTML"), [les feuilles de styles CSS](/fr/CSS "fr/CSS"), [JavaScript](/fr/JavaScript "fr/JavaScript"), [le modèle objet de document](/fr/DOM "fr/DOM") (DOM), [XML](/fr/XML "fr/XML"), [XSLT](/fr/XSLT "fr/XSLT"), et l'[objet XMLHttpRequest](/fr/XMLHttpRequest "fr/XMLHttpRequest"). Lorsque ces technologies sont combinées dans le modèle AJAX, les applications Web sont capables de réaliser des mises à jour rapides et incrémentielles de l'interface utilisateur sans devoir recharger la page entière du navigateur. Les applications fonctionnent plus rapidement et sont plus réactives aux actions de l'utilisateur.
 
-#### **Quand utiliser (ou non) AJAX ?**
+## Démarrer avec AJAX
 
-S'il n'y a pas de "bonne réponse", quelques éléments généraux sont à garder à mémoire :
+**AJAX (<i lang="en">Asynchronous JavaScript + XML</i>)** n'est pas une technologie en soi, mais un terme désignant une «&nbsp;nouvelle&nbsp;» approche utilisant un ensemble de technologies existantes, dont&nbsp;: [HTML](/fr/docs/Web/HTML) ou [XHTML](/fr/docs/Glossary/XHTML), [CSS](/fr/docs/Web/CSS), [JavaScript](/fr/docs/Web/JavaScript), [DOM](/fr/docs/Web/API/Document_Object_Model), [XML](/fr/docs/Web/XML), [XSLT](/fr/docs/Web/XSLT), et surtout [l'objet `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest). Lorsque ces technologies sont combinées dans le modèle AJAX, les applications web sont capables de réaliser des mises à jour rapides et incrémentales de l'interface utilisateur sans devoir recharger la page entière dans le navigateur. Les applications fonctionnent plus rapidement et sont plus réactives aux actions de l'utilisatrice ou de l'utilisateur.
 
-- La méthode AJAX peut être résumée comme un compromis : elle évite un rechargement complet de la page mais **n'autorise pas davantage** que ce qu'apporte une requête HTTP GET ou POST (ou HEAD) classique. Les échanges sont plutôt lourds car, même pour peu d'éléments, le navigateur **doit** envoyer des entêtes et négocier la transaction.
-  La méthode est alors intérressante pour tous les sites où le contenu est changé peu fréquemment et reste prévisible : un blog, un forum, etc. où c'est l'utilisateur qui décide de changer le contenu (_le serveur ne peut pas être à l'initiative, sauf à faire des requêtes régulièrement mais il serait alors préférable de passer par les [WebSockets](https://developer.mozilla.org/fr/docs/WebSockets)_).
-- La méthode AJAX a comme qualité de rester dans les standards HTTP, en plus d'être du côté client : c'est donc une méthode qui est **totalement** transparente dans les échanges standards entre un client et un serveur, donc avec tous les langages de programmes qui supportent une connexion socket classique. C'est important à garder à l'esprit dans des environnements mixtes : un serveur Apache / PHP pour la génération de pages maîtresses et un contenu déployé dans un autre langage.
-  Ne pas confondre *possible* et *souhaitable*&nbsp;: AJAX **peut** négocier avec plusieurs domaines différents ou (des ports différents dans un même domaine). Cependant pour des [raisons de sécurité](https://developer.mozilla.org/fr/docs/HTTP/Access_control_CORS) les possibilités sont restreintes voire impossibles. La méthode AJAX est donc dépendante de ce qu'autorise ou permet le navigateur du client.
-- La méthode AJAX est connue et reconnue, pouvant être utilisées à large échelle dans des bibliothèques comme [JQuery](https://fr.wikipedia.org/wiki/JQuery), dont l'intérêt de ces bibliothéques est d'accélérer la vitesse de développement. De plus l'utilisation de Javascript permet d'accéder aux ressources du DOM de la page et des données reçues si elles sont au format XML, permettant la sérialisation dans la plupart des situations.
-  Cependant AJAX rencontre aussi les difficultés liées à la grande hétérogénité des navigateurs (implantation différente de JS, donc _in fine_ des possibilités AJAX), des règles de sécurité, etc. Comme pour CSS, AJAX peut être vu comme un "plus" dans la navigation (_voir le principe de [dégradation élégante](https://fr.wikipedia.org/wiki/Am%C3%A9lioration_progressive)_) mais ne doit pas être vu comme une finalité au risque, sinon, de se couper d'une partie des utilisateurs.
+Bien que le X de AJAX signifie XML, c'est le format [`JSON`](/fr/docs/Glossary/JSON) qui est le plus souvent utilisé aujourd'hui à la place de XML, du fait de sa proximité avec JavaScript et de sa légèreté par rapport à XML. Autrement dit, tant JSON que XML peuvent être utilisés comme format afin d'empaqueter des données en AJAX.
 
-<table>
-  <tbody>
-    <tr>
-      <td>
-        <h2 class="Documentation" id="Documentation">Documentation</h2>
-        <dl>
-          <dt>
-            <a href="/fr/AJAX/Premiers_pas" title="fr/AJAX/Premiers_pas"
-              >AJAX:Premiers pas</a
-            >
-          </dt>
-          <dd>
-            <small
-              >Cet article vous guide à travers les bases d'AJAX et vous donne
-              deux exemples simples pour commencer.</small
-            >
-          </dd>
-        </dl>
-        <dl>
-          <dt>
-            <a
-              class="external"
-              href="http://www.webreference.com/programming/ajax_tech/"
-              >Techniques AJAX alternatives</a
-            >
-          </dt>
-          <dd>
-            <small
-              >La plupart des articles sur AJAX se concentrent sur l'utilisation
-              de XMLHttp comme moyen de communication, mais les techniques AJAX
-              ne s'arrêtent pas à XMLHttp. Il y en a bien d'autres.</small
-            >
-          </dd>
-        </dl>
-        <dl>
-          <dt>
-            <a
-              class="external"
-              href="http://www.adaptivepath.com/publications/essays/archives/000385.php"
-              >Ajax: A New Approach to Web Applications (en)</a
-            >
-          </dt>
-          <dd>
-            <small
-              >Jesse James Garrett, du site
-              <a class="external" href="http://www.adaptivepath.com"
-                >adaptive path</a
-              >, a écrit cet article en février 2005, introduisant le terme AJAX
-              et les concepts liés.</small
-            >
-          </dd>
-        </dl>
-        <dl>
-          <dt>
-            <a
-              class="external"
-              href="http://www.onlamp.com/pub/a/onlamp/2005/05/19/xmlhttprequest.html"
-              >A Simpler Ajax Path</a
-            >
-          </dt>
-          <dd>
-            <small
-              >«&nbsp;Comme on le remarquera, il est assez facile de tirer parti de
-              l'objet XMLHttpRequest pour faire se comporter une application Web
-              un peu plus comme une application traditionnelle, tout en
-              continuant à utiliser des outils comme des formulaires Web pour
-              collecter les entrées de l'utilisateur.&nbsp;»</small
-            >
-          </dd>
-        </dl>
-        <dl>
-          <dt>
-            <a
-              class="external"
-              href="http://www.contentwithstyle.co.uk/Articles/38/fixing-the-back-button-and-enabling-bookmarking-for-ajax-apps"
-              >Fixing the Back Button and Enabling Bookmarking for AJAX Apps</a
-            >
-          </dt>
-          <dd>
-            <small
-              >Cet article rédigé par Mike Stenhouse détaille certaines méthodes
-              utilisables pour rendre fonctionnel le bouton Précédent et réparer
-              les problèmes causés au marquage des pages lorsque des
-              applications sont développées avec les outils AJAX.</small
-            >
-          </dd>
-        </dl>
-        <dl>
-          <dt>
-            <a
-              class="external"
-              href="http://alexbosworth.backpackit.com/pub/67688"
-              >Ajax Mistakes</a
-            >
-          </dt>
-          <dd>
-            <small
-              >Cet article d'Alex Bosworth attire l'attention sur certaines
-              erreurs que les développeurs d'applications AJAX peuvent
-              faire.</small
-            >
-          </dd>
-        </dl>
-        <dl>
-          <dt>
-            <a class="external" href="http://www.xul.fr/xml-ajax.html"
-              >Tutoriel</a
-            >
-            avec des exemples.
-          </dt>
-        </dl>
-        <dl>
-          <dt>
-            <a class="external" href="http://www.w3.org/TR/XMLHttpRequest/"
-              >La spécification XMLHttpRequest</a
-            >-
-            <a class="external" href="http://www.xul.fr/XMLHttpRequest.html"
-              >(Traduction française)</a
-            >
-          </dt>
-          <dd><small>Brouillon de travail du W3C</small></dd>
-        </dl>
-      </td>
-      <td>
-        <h2 class="Community" id="Communauté">Communauté</h2>
-        <ul>
-          <li>
-            Voir les forums de Mozilla…
-            {{ DiscussionList("dev-ajax", "mozilla.dev.ajax") }}
-          </li>
-        </ul>
-        <h2 class="Tools" id="Outils">Outils</h2>
-        <ul>
-          <li>
-            <a class="external" href="http://www.ajaxprojects.com"
-              >Toolkits et frameworks</a
-            >
-          </li>
-          <li>
-            <a class="external" href="http://www.getfirebug.com/"
-              >Firebug — Outil de développement AJAX/Web</a
-            >
-          </li>
-          <li>
-            <a
-              class="external"
-              href="http://blog.monstuff.com/archives/000252.html"
-              >Outils de débogage AJAX</a
-            >
-          </li>
-          <li>
-            <a
-              class="external"
-              href="http://www.osflash.org/doku.php?id=flashjs"
-              >Kit d'intégration Flash/AJAX</a
-            >
-          </li>
-          <li>
-            <a class="external" href="http://xkr.us/code/javascript/XHConn/"
-              >Une bibliothèque d'interface XMLHTTP simple</a
-            >
-          </li>
-          <li>
-            <a
-              class="external"
-              href="http://chandlerproject.org/Projects/AjaxLibraries"
-              >Bibliothèques AJAX</a
-            >
-          </li>
-        </ul>
-        <h2 id="Exemples">Exemples</h2>
-        <ul>
-          <li>
-            <a
-              class="external"
-              href="http://www.dhtmlgoodies.com/index.html?whichScript=ajax-poller"
-              >AJAX poller script</a
-            >
-          </li>
-          <li>
-            <a
-              class="external"
-              href="http://www.ajaxprojects.com/ajax/tutorialdetails.php?itemid=9"
-              >Ajax Chat Tutorial</a
-            >
-          </li>
-          <li>
-            <a class="external" href="http://www.funwithjustin.com/ajax-toybox/"
-              >Ajax Toybox</a
-            >
-          </li>
-          <li>
-            <a
-              class="external"
-              href="http://www.ajaxprojects.com/ajax/tutorialdetails.php?itemid=13"
-              >RSS Ticker with AJAX</a
-            >
-          </li>
-          <li>
-            <a
-              class="external"
-              href="http://www.jamesdam.com/ajax_login/login.html#login"
-              >AJAX Login System using XMLHttpRequest</a
-            >
-          </li>
-          <li>
-            <a
-              class="external"
-              href="http://www.thinkvitamin.com/features/ajax/create-your-own-ajax-effects"
-              >Create your own Ajax effects</a
-            >
-          </li>
-          <li>
-            <a
-              class="external"
-              href="http://codinginparadise.org/weblog/2005/08/ajax-creating-huge-bookmarklets.html"
-              >AJAX: Creating Huge Bookmarklets</a
-            >
-          </li>
-          <li>
-            <a class="external" href="http://www.hotajax.org"
-              >Hot!Ajax: many cool examples</a
-            >
-          </li>
-        </ul>
-        <h2 class="Related_Topics" id="Sujets_liés">Sujets liés</h2>
-        <dl>
-          <dd>
-            <a href="/fr/HTML" title="fr/HTML">HTML</a>,
-            <a href="/fr/XHTML" title="fr/XHTML">XHTML</a>,
-            <a href="/fr/CSS" title="fr/CSS">Feuilles de style (CSS)</a>,
-            <a href="/fr/DOM" title="fr/DOM">Modèle objet de document (DOM)</a>,
-            <a href="/fr/JavaScript" title="fr/JavaScript">JavaScript</a>,
-            <a href="/fr/XML" title="fr/XML">XML</a>,
-            <a href="/fr/XSLT" title="fr/XSLT">XSLT</a> ,
-            <a href="/fr/DHTML" title="fr/DHTML">DHTML</a>,
-            <a href="/fr/HTML/Canvas" title="fr/HTML/Canvas">Canvas</a>
-          </dd>
-        </dl>
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Documentation
+
+- [Démarrer](/fr/docs/Web/Guide/AJAX/Getting_Started)
+  - : Cet article vous guide parmi les notions de base d'AJAX et fournit deux exemples pour mettre le pied à l'étrier.
+- [Utiliser l'API `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+
+  - : L'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) est au cœur d'AJAX. Dans cet article, plusieurs techniques sont abordées&nbsp;:
+
+    - [Analyser et manipuler la réponse du serveur](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#gérer_les_réponses)
+    - [Surveiller l'avancement d'une requête](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#surveiller_la_progression)
+    - [Soumettre des formulaires et uploader des fichiers binaires](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#envoyer_des_formulaires_et_uploader_des_fichiers) en AJAX pur ou en utilisant des objets [`FormData`](/fr/docs/Web/API/FormData)
+    - Utiliser AJAX avec les [<i lang="en">web workers</i>](/fr/docs/Web/API/Worker)
+
+- [API Fetch](/fr/docs/Web/API/Fetch_API)
+  - : L'API `Fetch` fournit une interface permettant de récupérer (<i lang="en">fetch</i> en anglais) des ressources. Elle ressemble à celle exposée par [`XMLHTTPRequest`](/fr/docs/Web/API/XMLHttpRequest), mais fournit des fonctionnalités plus flexibles et puissantes.
+- [Évènements émis par le serveur](/fr/docs/Web/API/Server-sent_events)
+  - : Généralement, c'est la page web qui initie une requête vers le serveur afin de recevoir de nouvelles données. Avec les évènements émis par le serveur, un serveur peut envoyer de nouvelles données à une page web à tout moment, via des messages. Ces derniers peuvent être traités par la page web comme des [évènements](/fr/docs/Web/API/Event) contenant des données. Voir aussi&nbsp;: [Utiliser les évènements émis par le serveur](/fr/docs/Web/API/Server-sent_events/Using_server-sent_events).
+- [Exemple de navigation avec un site utilisant AJAX pur](/fr/docs/Web/API/History_API/Example)
+  - : Cet article contient un exemple fonctionnel minimaliste d'un site web composé de trois pages et qui utilise AJAX.
+- [Envoyer et recevoir des données binaires](/fr/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data)
+  - : La propriété `responseType` de l'objet `XMLHttpRequest` peut être modifiée afin de changer le type de réponse attendu du serveur. Les valeurs possibles sont la chaîne vide (la valeur par défaut), `arraybuffer`, `blob`, `document`, `json`, et `text`. La propriété `response` contiendra le corps de l'entité selon la valeur de `responseType`, ce pourra donc être un objet `ArrayBuffer`, `Blob`, `Document`, `JSON`, ou une chaîne de caractères. Cet article aborde quelques techniques d'entrée/sortie AJAX.
+- [XML](/fr/docs/Web/XML)
+  - : Le langage **XML (<i lang="en">Extensible Markup Language</i>)** est un langage balisé qui permet de créer des formats pour des données particulières. Il s'agit d'un sous-ensemble simplifié de SGML, capable de décrire différentes sortes de données. Son principal objectif est de faciliter le partage de données entre différents systèmes, notamment ceux connectés par Internet.
+- [Analyser et sérialiser du XML](/fr/docs/Web/Guide/Parsing_and_serializing_XML)
+  - : Dans cet article, on voit comment analyser un document XML à partir d'une chaîne de caractères, d'un fichier ou via JavaScript. On voit également comment sérialiser des documents XML en chaînes de caractères, en arbres d'objets JavaScript ou en fichiers.
+- [XPath](/fr/docs/Web/XPath)
+  - : XPath signifie **<i lang="en">XML Path</i>**, c'est-à-dire un langage pour décrire des chemins dans un document XML. Il s'agit d'une syntaxe non-XML qui permet de cibler différentes parties d'un document [XML](/fr/docs/Web/XML). On peut aussi l'utiliser pour tester certains nœuds d'un document afin de déterminer s'ils suivent un motif donné ou non.
+- L'API [`FileReader`](/fr/docs/Web/API/FileReader)
+  - : L'API `FileReader` permet aux applications web de lire le contenu de fichiers (ou de tampons de données brutes) stockés sur l'ordinateur de la personne de façon asynchrone, en utilisant des objets [`File`](/fr/docs/Web/API/File) ou [`Blob`](/fr/docs/Web/API/Blob) pour représenter le fichier ou les données à lire. On peut obtenir des objets `File` depuis un objet [`FileList`](/fr/docs/Web/API/FileList) qui pourra être produit à partir d'un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) de sélection de fichiers, à partir d'un objet [`DataTransfer`](/fr/docs/Web/API/DataTransfer) d'une opération de glisser/déposer.
+- [HTML et `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+  - : [La spécification pour l'API `XMLHttpRequest`](https://xhr.spec.whatwg.org/) ajoute la capacité d'analyser du HTML à [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) (initialement limité à l'analyse de XML). Cette fonctionnalité permet aux applications web d'obtenir une ressource HTML comme un DOM analysé en utilisant `XMLHttpRequest`.
+
+## Outils
+
+- [axios](https://github.com/axios/axios)
+  - : Un client [HTTP](/fr/docs/Glossary/HTTP) utilisant les [promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) et qui utilise `XMLHttpRequest` en interne.
+
+## Voir aussi
+
+- [AJAX&nbsp;: une nouvelle approche pour les applications web (en anglais)](https://www.semanticscholar.org/paper/Ajax%3A-A-New-Approach-to-Web-Applications-Garrett/c440ae765ff19ddd3deda24a92ac39cef9570f1e?p2df)
+  - Un article écrit par Jesse James Garrett en février 2005 qui introduit AJAX et les concepts associés.
+- [La spécification de `XMLHttpRequest` au sein du standard évolutif WHATWG](https://xhr.spec.whatwg.org/)

@@ -5,6 +5,7 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/Window/close
 ---
+
 {{ ApiRef() }}
 
 ### Résumé
@@ -13,7 +14,9 @@ Ferme la fenêtre référencée.
 
 ### Syntaxe
 
-    window.close();
+```js
+window.close();
+```
 
 ### Description
 

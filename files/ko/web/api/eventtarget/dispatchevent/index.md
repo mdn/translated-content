@@ -53,4 +53,4 @@ dispatchEvent(event)
 
 ## See also
 
-- The [Event object reference](/en-US/docs/Web/API/Event)
+- The [Event object reference](/ko/docs/Web/API/Event)

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/const
 original_slug: Web/JavaScript/Reference/Instructions/const
 ---
+
 {{jsSidebar("Statements")}}
 
 La **déclaration `const`** permet de créer une constante nommée accessible uniquement en lecture. Cela ne signifie pas que la valeur contenue est immuable, uniquement que l'identifiant ne peut pas être réaffecté. Autrement dit la valeur d'une constante ne peut pas être modifiée par des réaffectations ultérieures. Une constante ne peut pas être déclarée à nouveau.
@@ -17,7 +18,9 @@ La **déclaration `const`** permet de créer une constante nommée accessible un
 
 ## Syntaxe
 
-    const nom1 = valeur1 [, nom2 = valeur2 [, ... [, nomN = valeurN]]];
+```js
+const nom1 = valeur1 [, nom2 = valeur2 [, … [, nomN = valeurN]]];
+```
 
 - `nomN`
   - : Le nom de la constante. Ce nom peut être n'importe quel identifiant valide.
@@ -103,14 +106,11 @@ mon_tableau = ["B"]; // lève une exception
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Déclarations let et const')}} | {{Spec2('ESDraft')}} | Aucune modification. |
-| {{SpecName('ES2015', '#sec-let-and-const-declarations', 'Déclarations let et const')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.const")}}
+{{Compat}}
 
 ## Voir aussi
 

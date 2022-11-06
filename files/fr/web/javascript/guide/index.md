@@ -6,6 +6,7 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Guide
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Le guide JavaScript illustre comment utiliser [JavaScript](/fr/docs/Web/JavaScript) et fournit un aperçu des fonctionnalités du langage. Pour des informations exhaustives à propos des fonctionnalités du langage, voir la [référence JavaScript](/fr/docs/Web/JavaScript/Reference).
@@ -81,12 +82,12 @@ Ce guide est divisé en plusieurs chapitres :
 
 ## [Collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections#le_type_array)
 
-- [Tableaux](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
+- [Tableaux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
 - [Tableaux typés](/fr/docs/Web/JavaScript/Guide/Indexed_collections#les_tableaux_typ.c3.a9s)
 
 ## [Collections avec clés](/fr/docs/Web/JavaScript/Guide/Keyed_collections) - [`Map`](/fr/docs/Web/JavaScript/Guide/Keyed_collections#le_type_map)
 
-- [`WeakMap`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
+- [`WeakMap`](/fr/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
 - [`Set`](/fr/docs/Web/JavaScript/Guide/Keyed_collections#le_type_set)
 - [`WeakSet`](/fr/docs/Web/JavaScript/Guide/Keyed_collections#le_type_weakset)
 

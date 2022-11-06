@@ -4,6 +4,7 @@ slug: Web/CSS/scroll-behavior
 translation_of: Web/CSS/scroll-behavior
 browser-compat: css.properties.scroll-behavior
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-behavior`** définit le comportement du défilement pour une boîte de défilement lorsque celui-ci provient de la navigation ou des API CSSOM.
@@ -65,6 +66,7 @@ La propriété `scroll-behavior` est définie avec l'un des mots-clés suivants.
 ```
 
 #### CSS
+
 ```css
 a {
   display: inline-block;

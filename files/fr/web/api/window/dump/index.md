@@ -1,34 +1,35 @@
 ---
-title: window.dump
+title: Window.dump()
 slug: Web/API/Window/dump
-tags:
-  - DOM
-  - DOM_0
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/Window/dump
+browser-compat: api.Window.dump
 ---
-{{ ApiRef() }}
 
-### Résumé
+{{ApiRef}} {{Non-standard_header}}
 
-Affiche des messages dans la console (native).
+La méthode **`Window.dump()`** permet d'afficher des messages sur la sortie standard (`stdout`) du navigateur. Si le navigateur a été démarré depuis un terminal, la sortie produite par `dump()` apparaîtra dans le terminal.
 
-### Syntaxe
+La sortie produite par `dump()` n'est _pas_ envoyée vers la console des outils de développement du navigateur. Pour afficher des messages dans la console des outils de développement, il faudra utiliser [`console.log()`](/fr/docs/Web/API/Console/log).
 
-    dump(message);
+## Syntaxe
 
-- `message` est le message texte à afficher.
+```js
+dump(message)
+```
 
-### Notes
+### Paramètres
 
-`dump` est habituellement utilisé pour débogage du JavaScript. Du code avec permissions peut également utiliser [Components.utils.reportError](/fr/Components.utils.reportError) et [nsIConsoleService](/fr/nsIConsoleService) pour afficher des messages dans la [console JavaScript](/fr/Console_JavaScript).
+- `message`
+  - : Une chaîne de caractères contenant le message à afficher.
 
-Dans [Gecko](/fr/Gecko), `dump` est désactivé par défaut – il ne fait rien mais ne génère aucune erreur. Pour que `dump` écrive dans le flux standard de sortie, vous devez l'activer en mettant la préférence `browser.dom.window.dump.enabled` à `true`. Vous pouvez définir cette préférence dans [about:config](http://kb.mozillazine.org/About:config) ou dans un [fichier user.js](http://kb.mozillazine.org/User.js_file).
+### Valeur de retour
 
-Vous aurez besoin d'une console pour voir quelque chose. Si vous n'en avez pas déjà une, fermez et réouvrez le programme en ajoutant le paramètre `-console` à la ligne de commande.
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
-`dump` est également disponible au composants XPCOM implémentés en JavaScript, même si [window](/fr/DOM/window) n'est pas l'objet global dans ce contexte.
+## Spécifications
 
-### Spécification
+Cette fonctionnalité ne fait partie d'aucune spécification.
 
-{{ DOM0() }}
+## Compatibilité des navigateurs
+
+{{Compat}}

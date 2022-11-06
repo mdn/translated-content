@@ -1,26 +1,17 @@
 ---
 title: ':fullscreen'
 slug: Web/CSS/:fullscreen
-tags:
-  - CSS
-  - 全画面
-  - 全画面 API
-  - フルスクリーン API
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - fullscreen
-  - 画面
-browser-compat: css.selectors.fullscreen
-translation_of: Web/CSS/:fullscreen
 ---
+
 {{CSSRef}}
 
 **`:fullscreen`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/CSS/Pseudo-classes)で、現在全画面モードにあるすべての要素に一致します。複数の要素が全画面モードにある場合は、それらすべてを選択します。
 
 ## 構文
 
-{{csssyntax}}
+```
+:fullscreen
+```
 
 ## 使用上のメモ
 

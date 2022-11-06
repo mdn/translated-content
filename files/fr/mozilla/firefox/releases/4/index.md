@@ -7,40 +7,41 @@ tags:
 translation_of: Mozilla/Firefox/Releases/4
 original_slug: Mozilla/Firefox/Versions/4
 ---
-1.  Notes de versions pour développeurs
 
-    1.  [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
+1. Notes de versions pour développeurs
 
-2.  Modules complémentaires
+    1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
-    1.  [WebExtensions](/fr/Add-ons/WebExtensions)
-    2.  [Thèmes](/fr/Add-ons/Themes)
+2. Modules complémentaires
 
-3.  Fonctionnement interne de Firefox
+    1. [WebExtensions](/fr/Add-ons/WebExtensions)
+    2. [Thèmes](/fr/Add-ons/Themes)
 
-    1.  [Le projet Mozilla](/fr/docs/Mozilla/)
-    2.  [Gecko](/fr/docs/Mozilla/Gecko)
-    3.  [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
-    4.  [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
-    5.  [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
-    6.  [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
-    7.  [MFBT](/fr/docs/Mozilla/MFBT)
-    8.  [Les projets Mozilla](/fr/docs/Mozilla/Projects)
-    9.  [Le système de préférences](/fr/docs/Mozilla/Preferences)
+3. Fonctionnement interne de Firefox
+
+    1. [Le projet Mozilla](/fr/docs/Mozilla/)
+    2. [Gecko](/fr/docs/Mozilla/Gecko)
+    3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
+    4. [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
+    5. [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
+    6. [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
+    7. [MFBT](/fr/docs/Mozilla/MFBT)
+    8. [Les projets Mozilla](/fr/docs/Mozilla/Projects)
+    9. [Le système de préférences](/fr/docs/Mozilla/Preferences)
     10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
     11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
     12. [XUL](/fr/docs/Mozilla/Tech/XUL)
 
-4.  Développer et contribuer
+4. Développer et contribuer
 
-    1.  [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
-    2.  [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
-    3.  [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
-    4.  [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
-    5.  [Localisation](/fr/docs/Mozilla/Localization)
-    6.  [Mercurial](/fr/docs/Mozilla/Mercurial)
-    7.  [Assurance qualité](/fr/docs/Mozilla/QA)
-    8.  [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
+    1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
+    2. [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
+    3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
+    4. [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
+    5. [Localisation](/fr/docs/Mozilla/Localization)
+    6. [Mercurial](/fr/docs/Mozilla/Mercurial)
+    7. [Assurance qualité](/fr/docs/Mozilla/QA)
+    8. [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
 
 Firefox 4, est sorti le 22 mars 2011, améliore les performances, le support d'HTML5 et d'autres technologies du web et aussi la sécurité. Cet article fournit des informations sur cette version et sur les fonctionnalités qui sont disponibles pour les développeurs Web, les développeurs de modules complémentaires et les développeurs de la plate-forme Gecko.
 
@@ -86,8 +87,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
 - L'élément [`<isindex>`](/fr/docs/Web/HTML/Element/isindex), qui était crée par [`document.createElement()`](/fr/docs/Web/API/Document/createElement), est maintenant crée comme un simple élément sans propriétés ou méthodes.
 - Gecko supporte maintenant l'appel `click()` sur l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) pour ouvrir le sélecteur de fichiers. Voir l'[exemple](</fr/docs/Using_files_from_web_applications#Using_hidden_file_input_elements_using_the_click()_method>) dans l'article [Using files from web applications](/fr/docs/Using_files_from_web_applications).
 - L'élément [`<input>`](/fr/docs/Web/HTML/Element/input) supporte un nouvel attribut [`mozactionhint`](/fr/docs/HTML/Element/Input#attr-mozactionhint), qui permet de spécifier l'étiquette de la touche Entrée sur un clavier virtuel.
-- L'élément [`<script>`](/fr/docs/Web/HTML/Element/script) à l'intérieur des éléments [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<noembed>`](/fr/docs/Web/HTML/Element/noembed "L'élément <noembed> est une façon obsolète et non standardisée de fournir une alternative de contenu pour les navigateurs ne supportant pas l'élément <embed> ou des catégories de contenu qu'un auteur aimerait utiliser.
- Cet élément a été rendu obsolète à partir de la version HTML 4.01 et a été remplacé par `<object>`. Le contenu alternatif doit être inséré entre la balise d'ouverture et celle de fermeture de `<object>`) et [`<noframes>`](/fr/docs/Web/HTML/Element/noframes) sont maintenant exécutés, contrairement aux versions précédentes de Firefox. Ceci est conforme à la spécification et correspond au comportement des autres navigateurs.
+- L'élément [`<script>`](/fr/docs/Web/HTML/Element/script) à l'intérieur des éléments [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<noembed>`](/fr/docs/Web/HTML/Element/noembed) et [`<noframes>`](/fr/docs/Web/HTML/Element/noframes) sont maintenant exécutés, contrairement aux versions précédentes de Firefox. Ceci est conforme à la spécification et correspond au comportement des autres navigateurs.
 
 ### CSS
 
@@ -471,8 +471,6 @@ Plusieurs éléments HTML ont vu leur interface DOM modifier, conformément à l
       <td>
         <a
           href="/fr/docs/Web/HTML/Element/noembed"
-          title="L&#x27;élément <noembed> est une façon obsolète et non standardisée de fournir une alternative de contenu pour les navigateurs ne supportant pas l&#x27;élément <embed> ou des catégories de contenu qu&#x27;un auteur aimerait utiliser.
- Cet élément a été rendu obsolète à partir de la version HTML 4.01 et a été remplacé par &lt;object&gt;. Le contenu alternatif doit être inséré entre la balise d&#x27;ouverture et celle de fermeture de &lt;object&gt;"
           ><code>&#x3C;noembed></code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/noframes"
@@ -724,7 +722,7 @@ En plus des changements spécifiques référencés ci-dessous, il est important 
 - Changements dans les gestes
   - : Les gestes par défaut ont été changés, en faisant glisser trois doigts de haut en bas sur le trackpad cela ouvrira ou fermera Firefox Panorama. Pour modifier les éléments précédents, afin d'avoir les commandes de défilement haut et défilement bas, ouvrez about:config et mettez `cmd_scrollBottom` pour `browser.gesture.swipe.down` et `cmd_scrollTop` pour `browser.gesture.swipe.up`.
 
-## Voir également
+## Voir aussi
 
 - [Firefox 3.6 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.6)
 - [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.5)

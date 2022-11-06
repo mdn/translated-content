@@ -6,6 +6,7 @@ translation_of: >-
   Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 ---
+
 ## Introduction
 
 Cet article propose une vue d'ensemble de certaines méthodes DOM Level 1 fondamentales et la façon de les utiliser depuis JavaScript. Vous y apprendrez à créer, accéder, contrôler et supprimer dynamiquement des éléments HTML. Les méthodes DOM décrites ne sont pas spécifiques au HTML et s'appliquent également au XML. Les exemples fonctionneront dans tous les navigateurs offrant le support complet du DOM niveau 1, ce qui est le cas de tous les navigateurs basés sur Mozilla comme Firefox ou Netscape. Les morceaux de code de ce document fonctionneront également dans Internet Explorer 5.
@@ -63,44 +64,56 @@ function generate_table() {
 
 Remarquez l'ordre dans lequel les éléments et le nœud texte sont créés&nbsp;:
 
-1.  On crée d'abord l'élément \<table>.
-2.  Ensuite, l'élément \<tbody> qui est un enfant de l'élément \<table>.
-3.  Puis, grâce à une boucle, on crée les éléments \<tr>, qui sont des enfants de l'élément \<tbody>.
-4.  Pour chaque élément \<tr>, on emploie une boucle pour créer les éléments enfants \<td>.
-5.  Enfin pour chaque élément \<td>, on crée le nœud texte contenant le texte de la cellule du tableau.
+1. On crée d'abord l'élément \<table>.
+2. Ensuite, l'élément \<tbody> qui est un enfant de l'élément \<table>.
+3. Puis, grâce à une boucle, on crée les éléments \<tr>, qui sont des enfants de l'élément \<tbody>.
+4. Pour chaque élément \<tr>, on emploie une boucle pour créer les éléments enfants \<td>.
+5. Enfin pour chaque élément \<td>, on crée le nœud texte contenant le texte de la cellule du tableau.
 
 Après avoir créé les éléments \<table>, \<tbody>, \<tr>, \<td> et le nœud texte, on ajoute chaque objet à son parent dans l'ordre inverse&nbsp;:
 
-1.  On attache d'abord chaque nœud texte à son élément parent \<td> en utilisant
+1. On attache d'abord chaque nœud texte à son élément parent \<td> en utilisant
 
-        cell.appendChild(texte);
+    ```js
+    cell.appendChild(texte);
+    ```
 
-2.  Ensuite, on lie chaque élément \<td> à son élément \<tr> parent avec
+2. Ensuite, on lie chaque élément \<td> à son élément \<tr> parent avec
 
-        row.appendChild(cell);
+    ```js
+    row.appendChild(cell);
+    ```
 
-3.  Puis chaque \<tr> à son parent \<tbody> avec
+3. Puis chaque \<tr> à son parent \<tbody> avec
 
-        tablebody.appendChild(row);
+    ```js
+    tablebody.appendChild(row);
+    ```
 
-4.  Puis l'élément \<tbody> est attaché à son élément parent \<table> grace à
+4. Puis l'élément \<tbody> est attaché à son élément parent \<table> grace à
 
-        table.appendChild(tablebody);
+    ```js
+    table.appendChild(tablebody);
+    ```
 
-5.  Enfin, \<table> est rattaché à \<body> avec
+5. Enfin, \<table> est rattaché à \<body> avec
 
-        body.appendChild(table);
+    ```js
+    body.appendChild(table);
+    ```
 
 Souvenez-vous de cette technique, vous l'utiliserez souvent en programmant pour le DOM W3C. On crée d'abord les éléments du haut vers le bas, puis on attache les enfants aux parents dans l'ordre inverse.
 
 Voici l'HTML généré par ce code JavaScript&nbsp;:
 
-    ...
-    <table border="2">
-    <tr><td>la cellule est ligne 0 colonne 0</td><td>la cellule est ligne 0 colonne 1</td></tr>
-    <tr><td>la cellule est ligne 1 colonne 0</td><td>la cellule est ligne 1 colonne 1</td></tr>
-    </table>
-    ...
+```html
+...
+<table border="2">
+<tr><td>la cellule est ligne 0 colonne 0</td><td>la cellule est ligne 0 colonne 1</td></tr>
+<tr><td>la cellule est ligne 1 colonne 0</td><td>la cellule est ligne 1 colonne 1</td></tr>
+</table>
+...
+```
 
 Voici l'arborescence objet DOM créée par le code, pour l'élément TABLE et ses enfants&nbsp;:
 
@@ -143,21 +156,21 @@ function set_background() {
 
 Dans cet exemple, on assigne à la variable `myP` l'objet DOM du second élément `p` du corps (body).
 
-1.  On récupère d'abord une liste de tous les éléments body avec
+1. On récupère d'abord une liste de tous les éléments body avec
 
     ```js
     myBody = document.getElementsByTagName("body")[0]
     ```
 
-    Puisqu'il n'existe qu'un seul élément body dans un document HTML valide, cette liste ne comporte qu'un élément, que l'on récupère en sélectionnant le premier élément de la liste grace à `{{mediawiki.external(0)}}`.
+    Puisqu'il n'existe qu'un seul élément body dans un document HTML valide, cette liste ne comporte qu'un élément, que l'on récupère en sélectionnant le premier élément de la liste grace à `[0]`.
 
-2.  Ensuite, on récupère tous les éléments p qui sont des enfants de body en utilisant
+2. Ensuite, on récupère tous les éléments p qui sont des enfants de body en utilisant
 
     ```js
     myBodyElements = myBody.getElementsByTagName("p");
     ```
 
-3.  Pour finir on prend le deuxième élément de la liste des éléments p avec
+3. Pour finir on prend le deuxième élément de la liste des éléments p avec
 
     ```js
     myP = myBodyElements[1];
@@ -167,8 +180,10 @@ Dans cet exemple, on assigne à la variable `myP` l'objet DOM du second élémen
 
 Une fois que vous avez l'objet DOM pour un élément HTML, vous pouvez modifier ses propriétés. Si par exemple vous voulez définir la propriété couleur d'arrière-plan du style, ajoutez simplement&nbsp;:
 
-    myP.style.background = "rgb(255,0,0)";
-    // ajoute une propriété de style inline
+```js
+myP.style.background = "rgb(255,0,0)";
+// ajoute une propriété de style inline
+```
 
 ### Création de nœuds texte avec `document.createTextNode("..")`
 
@@ -182,9 +197,11 @@ Ce morceau de code crée un nœud de type TEXT_NODE qui contient la donnée text
 
 ### Insertion d'éléments avec appendChild(...)
 
-En invoquant `myP.appendChild` ({{mediawiki.external('node_element')}}) , vous définissez `element_nœud` comme un nouvel enfant du second élément `p` (`myP` a été défini plus haut comme étant le second élément p).
+En invoquant `myP.appendChild('node_element')` , vous définissez `node_element` comme un nouvel enfant du second élément `p` (`myP` a été défini plus haut comme étant le second élément p).
 
-    myP.appendChild(noeudTexte);
+```js
+myP.appendChild(noeudTexte);
+```
 
 En exécutant cet exemple, vous pouvez remarquer que les mots «&nbsp;hello&nbsp;» et «&nbsp;world&nbsp;» ne sont pas séparés&nbsp;: `helloworld`. Quand vous parcourez la page HTML les deux nœuds semblent donc n'en former qu'un seul, rappelez-vous cependant qu'ils sont bien distincts dans le modèle de document. Le second nœud est de type TEXT_NODE, et est le second enfant de la seconde balise \<p>. Le schéma suivant situe ce nouvel objet dans l'arborescence du document&nbsp;:
 
@@ -196,8 +213,10 @@ En exécutant cet exemple, vous pouvez remarquer que les mots «&nbsp;hello&nbsp
 
 Vous pouvez créer de nouveaux éléments, dont des éléments HTML, avec `createElement`. Pour créer un élément \<p> enfant de l'élément \<body>, vous pouvez vous servir de `body` défini dans l'exemple précédent et lui greffer un nouvel élément nœud. Pour ce faire, invoquez `document.createElement("nombalise")`. Voici un exemple&nbsp;:
 
-    nouveauNoeudBALISEP = document.createElement("p");
-    body.appendChild(nouveauNoeudBALISEP);
+```js
+nouveauNoeudBALISEP = document.createElement("p");
+body.appendChild(nouveauNoeudBALISEP);
+```
 
 ![](sample2c.jpg)
 
@@ -205,11 +224,15 @@ Vous pouvez créer de nouveaux éléments, dont des éléments HTML, avec `creat
 
 Tous les nœuds peuvent être supprimés. La ligne ci-dessous supprime de `myP` (deuxième élément \<p>) le nœud texte contenant le mot «&nbsp;world&nbsp;»&nbsp;:
 
-    myP.removeChild(noeudTexte);
+```js
+myP.removeChild(noeudTexte);
+```
 
 Vous pouvez ensuite ajouter `monNoeudTexte` (contenant `"world"`) dans l'élément \<p> récemment créé&nbsp;:
 
-    nouveauNoeudBALISEP.appendChild(noeudTexte);
+```js
+nouveauNoeudBALISEP.appendChild(noeudTexte);
+```
 
 L'arborescence des objets se présente désormais comme ceci&nbsp;:
 
@@ -284,7 +307,7 @@ Le code source qui suit est un exemple commenté qui crée le tableau de Exemple
 
 ### Récupérer un nœud texte dans le tableau
 
-Cet exemple présente deux nouveaux attributs DOM. D'abord, l'attribut `childNodes` qui est utilisé pour récupérer la liste des nœuds enfants de `cel`. A la différence de `getElementsByTagName`, la liste renvoyée par `childNodes` comporte tous les enfants sans considération de type. Une fois la liste obtenue, la méthode `{{ mediawiki.external('x') }}` est employée pour sélectionner l'élément enfant désiré. Dans cet exemple, le nœud texte de la seconde cellule de la seconde ligne du tableau est enregistré dans `celtext`. Ensuite, un nouveau nœud texte contenant les données de `celtext` est greffé en tant qu'enfant sur l'élément \<body>.
+Cet exemple présente deux nouveaux attributs DOM. D'abord, l'attribut `childNodes` qui est utilisé pour récupérer la liste des nœuds enfants de `cel`. A la différence de `getElementsByTagName`, la liste renvoyée par `childNodes` comporte tous les enfants sans considération de type. Une fois la liste obtenue, la notation `[x]` est employée pour sélectionner l'élément enfant désiré. Dans cet exemple, le nœud texte de la seconde cellule de la seconde ligne du tableau est enregistré dans `celtext`. Ensuite, un nouveau nœud texte contenant les données de `celtext` est greffé en tant qu'enfant sur l'élément \<body>.
 
 > **Note :** Si l'objet est un nœud texte, vous pouvez récupérer le texte qu'il contient en employant l'attribut `data`.
 
@@ -315,43 +338,45 @@ mytable.getAttribute("border");
 
 Une fois que vous avez l'objet dans une variable JavaScript, vous pouvez définir les propriétés directement. Le code qui suit est une version modifiée de Exemple1.html où les cellules de la seconde colonne sont cachées, et le fond de celles de la première colonne est rouge. Remarquez que la propriété de style y est définie directement.
 
-    <html>
-    <body onload="start()">
-    </body>
-    <script>
-        function start() {
-           var body  = document.getElementsByTagName("body")[0];
-           table     = document.createElement("table");
-           tablebody = document.createElement("tbody");
+```html
+<html>
+<body onload="start()">
+</body>
+<script>
+    function start() {
+        var body  = document.getElementsByTagName("body")[0];
+        table     = document.createElement("table");
+        tablebody = document.createElement("tbody");
 
-           for(var j = 0; j < 2; j++) {
-               row = document.createElement("tr");
-               for(var i = 0; i < 2; i++) {
-                   cell = document.createElement("td");
-                   text = document.createTextNode("la cellule est&nbsp;:" + i + j);
-                   cell.appendChild(text);
-                   row.appendChild(cell);
-                   // change la couleur de fond de la cellule
-                   // si la colonne est 0. Si la colonne est 1, cache la cellule
-                   if (i == 0) {
-                       cell.style.background = "rgb(255,0,0)";
-                   } else {
-                       cell.style.display = "none";
-                   }
-               }
-               tablebody.appendChild(row);
-           }
-           table.appendChild(tablebody);
-           body.appendChild(table);
+        for(var j = 0; j < 2; j++) {
+            row = document.createElement("tr");
+            for(var i = 0; i < 2; i++) {
+                cell = document.createElement("td");
+                text = document.createTextNode("la cellule est&nbsp;:" + i + j);
+                cell.appendChild(text);
+                row.appendChild(cell);
+                // change la couleur de fond de la cellule
+                // si la colonne est 0. Si la colonne est 1, cache la cellule
+                if (i == 0) {
+                    cell.style.background = "rgb(255,0,0)";
+                } else {
+                    cell.style.display = "none";
+                }
+            }
+            tablebody.appendChild(row);
         }
-    </script>
-    </html>
+        table.appendChild(tablebody);
+        body.appendChild(table);
+    }
+</script>
+</html>
+```
 
 #### Original Document Information
 
 - Author(s)
   - : Marcio Galli
 - Migrated from
-  - : http\://web.archive.org/web/20000815054125/http\://mozilla.org/docs/dom/technote/tn-dom-table/
+  - : <http://web.archive.org/web/20000815054125/http://mozilla.org/docs/dom/technote/tn-dom-table/>
 
 Interwik

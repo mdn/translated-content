@@ -1,19 +1,15 @@
 ---
 title: Node.firstChild
 slug: Web/API/Node/firstChild
-tags:
-  - プロパティ
-  - リファレンス
-browser-compat: api.Node.firstChild
-translation_of: Web/API/Node/firstChild
 ---
+
 {{APIRef("DOM")}}
 
 **`firstChild`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、ツリー内におけるこのノードの最初の子、またはこのノードに子がない場合は `null` を返します。
 
 このノードが {{domxref("Document")}} であった場合は、このプロパティは直接のこのリスト内で最初のノードを返します。
 
-> **Note:** このプロパティはこのノードの最初の子であれば、あらゆる種類のノードを返します。
+> **メモ:** このプロパティはこのノードの最初の子であれば、あらゆる種類のノードを返します。
 > {{domxref("Text")}} または {{domxref("Comment")}} ノードになることがあります。
 > 他の要素の子である最初の {{domxref("Element")}} を取得したい場合は、 {{domxref("Element.firstElementChild")}} を使用することを検討してください。
 

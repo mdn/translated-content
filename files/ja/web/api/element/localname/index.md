@@ -1,16 +1,8 @@
 ---
 title: Element.localName
 slug: Web/API/Element/localName
-tags:
-- API
-- DOM
-- NeedsBrowserCompatibility
-- NeedsMobileBrowserCompatibility
-- プロパティ
-- リファレンス
-browser-compat: api.Element.localName
-translation_of: Web/API/Element/localName
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.localName`** は読み取り専用プロパティで、要素の修飾名のローカル部分を返します。
@@ -68,7 +60,7 @@ name = element.localName
 </ecomm:business>
 ```
 
-> **Note:** {{Gecko("1.9.2")}} 以前、このプロパティは、HTML DOM における HTML 要素ではローカル名を大文字で返していました（XML DOM における XHTML 要素とは対照的に）。最新バージョンでは HTML5 に従い、このプロパティは内部の DOM ストレージの場合、 HTML DOM における HTML 要素と XHTML DOM における XHTML 要素のいずれも、小文字で返します。{{domxref("element.tagName","tagName")}} プロパティは引き続き、 HTML DOM における HTML 要素では大文字で返します。
+> **メモ:** {{Gecko("1.9.2")}} 以前、このプロパティは、HTML DOM における HTML 要素ではローカル名を大文字で返していました（XML DOM における XHTML 要素とは対照的に）。最新バージョンでは HTML5 に従い、このプロパティは内部の DOM ストレージの場合、 HTML DOM における HTML 要素と XHTML DOM における XHTML 要素のいずれも、小文字で返します。{{domxref("element.tagName","tagName")}} プロパティは引き続き、 HTML DOM における HTML 要素では大文字で返します。
 
 ## 仕様書
 

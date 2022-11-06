@@ -4,6 +4,7 @@ slug: Web/API/XMLHttpRequest/XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/XMLHttpRequest
 browser-compat: api.XMLHttpRequest.XMLHttpRequest
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 Le constructeur **`XMLHttpRequest()`** crée un nouvel objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest).

@@ -1,12 +1,8 @@
 ---
 title: Firefox 95 for developers
 slug: Mozilla/Firefox/Releases/95
-tags:
-  - '95'
-  - Firefox
-  - Mozilla
-  - Release
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 95 の変更点をまとめています。
@@ -35,7 +31,6 @@ Firefox 95 は、2021 年 12 月 7 日にリリースされました。
 #### Media、WebRTC、Web Audio
 
 - 仕様書の更新に合わせて、{{domxref("SpeechSynthesisEvent.elapsedTime")}} が経過時間をミリ秒単位ではなく秒単位で返すようになりました ({{bug(1732498)}})。
-
 
 ### WebDriver conformance (Marionette)
 

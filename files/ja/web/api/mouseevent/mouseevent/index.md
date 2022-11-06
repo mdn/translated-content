@@ -1,16 +1,8 @@
 ---
 title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
-tags:
-  - API
-  - コンストラクター
-  - DOM
-  - MouseEvent
-  - リファレンス
-  - イベント
-browser-compat: api.MouseEvent.MouseEvent
-translation_of: Web/API/MouseEvent/MouseEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent()`** コンストラクターは、新しい {{domxref("MouseEvent")}} を生成します。
@@ -78,7 +70,7 @@ translation_of: Web/API/MouseEvent/MouseEvent
 
     実装によっては、 screen と client フィールドに数値以外のものを渡すと `TypeError` が発生します。
 
-    > **Note:** `MouseEventInit` ディクショナリーは {{domxref("UIEvent.UIEvent", "UIEventInit")}} および {{domxref("Event.Event", "EventInit")}} のフィールドも受け入れます。
+    > **メモ:** `MouseEventInit` ディクショナリーは {{domxref("UIEvent.UIEvent", "UIEventInit")}} および {{domxref("Event.Event", "EventInit")}} のフィールドも受け入れます。
 
 ## 仕様書
 
@@ -98,36 +90,36 @@ Internet Explorer 9 以降では、以下のコードで `MouseEvent()` コン�
     new MouseEvent('test');
     return false; // No need to polyfill
   } catch (e) {
-		// Need to polyfill - fall through
+    // Need to polyfill - fall through
   }
 
     // Polyfills DOM4 MouseEvent
-	var MouseEventPolyfill = function (eventType, params) {
-		params = params || { bubbles: false, cancelable: false };
-		var mouseEvent = document.createEvent('MouseEvent');
-		mouseEvent.initMouseEvent(eventType,
-			params.bubbles,
-			params.cancelable,
-			window,
-			0,
-			params.screenX || 0,
-			params.screenY || 0,
-			params.clientX || 0,
-			params.clientY || 0,
-			params.ctrlKey || false,
-			params.altKey || false,
-			params.shiftKey || false,
-			params.metaKey || false,
-			params.button || 0,
-			params.relatedTarget || null
-		);
+  var MouseEventPolyfill = function (eventType, params) {
+    params = params || { bubbles: false, cancelable: false };
+    var mouseEvent = document.createEvent('MouseEvent');
+    mouseEvent.initMouseEvent(eventType,
+      params.bubbles,
+      params.cancelable,
+      window,
+      0,
+      params.screenX || 0,
+      params.screenY || 0,
+      params.clientX || 0,
+      params.clientY || 0,
+      params.ctrlKey || false,
+      params.altKey || false,
+      params.shiftKey || false,
+      params.metaKey || false,
+      params.button || 0,
+      params.relatedTarget || null
+    );
 
-		return mouseEvent;
-	}
+    return mouseEvent;
+  }
 
-	MouseEventPolyfill.prototype = Event.prototype;
+  MouseEventPolyfill.prototype = Event.prototype;
 
-	window.MouseEvent = MouseEventPolyfill;
+  window.MouseEvent = MouseEventPolyfill;
 })(window);
 ```
 

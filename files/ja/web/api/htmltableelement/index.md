@@ -1,14 +1,8 @@
 ---
 title: HTMLTableElement
 slug: Web/API/HTMLTableElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLTableElement
-translation_of: Web/API/HTMLTableElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement`** インターフェイスは、（継承元でもある通常の {{DOMxRef("HTMLElement")}} オブジェクトのインターフェイスのほかに） HTML 文書内の表のレイアウトと表現を操作するための特別なプロパティやメソッドを提供します。
@@ -32,26 +26,26 @@ _親である {{DOMxRef("HTMLElement")}} からプロパティを継承してい
 
 ### 廃止されたプロパティ
 
-> **Warning:** 以下のプロパティは廃止されました。使用は避けてください。
+> **警告:** 以下のプロパティは廃止されました。使用は避けてください。
 
 - {{DOMxRef("HTMLTableElement.align")}} {{deprecated_inline}}
-  - : {{DOMxRef("DOMString")}} で、 {{HTMLAttrxRef("align", "table")}} 属性を反映した列挙型の値が入ります。これは、周囲のコンテキストに対する要素の内容物の配置を示します。利用可能な値は `"left"`, `"right"`, `"center"` です。
+  - : 文字列で、 {{HTMLAttrxRef("align", "table")}} 属性を反映した列挙型の値が入ります。これは、周囲のコンテキストに対する要素の内容物の配置を示します。利用可能な値は `"left"`, `"right"`, `"center"` です。
 - {{DOMxRef("HTMLTableElement.bgColor")}} {{deprecated_inline}}
-  - : {{DOMxRef("DOMString")}} で、セルの背景色が入ります。これは廃止された {{HTMLAttrxRef("bgColor", "table")}} 属性を反映します。
+  - : 文字列で、セルの背景色が入ります。これは廃止された {{HTMLAttrxRef("bgColor", "table")}} 属性を反映します。
 - {{DOMxRef("HTMLTableElement.border")}} {{deprecated_inline}}
-  - : {{DOMxRef("DOMString")}} で、表の境界の幅がピクセル数で入ります。これは廃止された {{HTMLAttrxRef("border", "table")}} 属性を反映します。
+  - : 文字列で、表の境界の幅がピクセル数で入ります。これは廃止された {{HTMLAttrxRef("border", "table")}} 属性を反映します。
 - {{DOMxRef("HTMLTableElement.cellPadding")}} {{deprecated_inline}}
-  - : {{DOMxRef("DOMString")}} で、セルの内容とセルの境界の間の水平・垂直空間の幅がピクセル数で入ります。これは廃止された {{HTMLAttrxRef("cellpadding", "table")}} 属性を反映します。
+  - : 文字列で、セルの内容とセルの境界の間の水平・垂直空間の幅がピクセル数で入ります。これは廃止された {{HTMLAttrxRef("cellpadding", "table")}} 属性を反映します。
 - {{DOMxRef("HTMLTableElement.cellSpacing")}} {{deprecated_inline}}
-  - : {{DOMxRef("DOMString")}} で、セル間の水平・垂直の距離がピクセル数で入ります。これは廃止された {{HTMLAttrxRef("cellspacing", "table")}} 属性を反映します。
+  - : 文字列で、セル間の水平・垂直の距離がピクセル数で入ります。これは廃止された {{HTMLAttrxRef("cellspacing", "table")}} 属性を反映します。
 - {{DOMxRef("HTMLTableElement.frame")}} {{deprecated_inline}}
-  - : {{DOMxRef("DOMString")}} で、表の外部境界の種類が入ります。これは廃止された {{HTMLAttrxRef("frame", "table")}} 属性を反映し、 `"void"`, `"above"`, `"below"`, `"hsides"`, `"vsides"`, `"lhs"`, `"rhs"`, `"box"`, `"border"` のうちの何れかを取ります。
+  - : 文字列で、表の外部境界の種類が入ります。これは廃止された {{HTMLAttrxRef("frame", "table")}} 属性を反映し、 `"void"`, `"above"`, `"below"`, `"hsides"`, `"vsides"`, `"lhs"`, `"rhs"`, `"box"`, `"border"` のうちの何れかを取ります。
 - {{DOMxRef("HTMLTableElement.rules")}} {{deprecated_inline}}
-  - : {{DOMxRef("DOMString")}} で、表の内部の境界の種類が入ります。これは廃止された {{HTMLAttrxRef("rules", "table")}} 属性を反映し、 `"none"`, `"groups"`, `"rows"`, `"cols"`, `"all"` のうちのいずれかを取ります。
+  - : 文字列で、表の内部の境界の種類が入ります。これは廃止された {{HTMLAttrxRef("rules", "table")}} 属性を反映し、 `"none"`, `"groups"`, `"rows"`, `"cols"`, `"all"` のうちのいずれかを取ります。
 - {{DOMxRef("HTMLTableElement.summary")}} {{deprecated_inline}}
-  - : {{DOMxRef("DOMString")}} で、目的の説明や表の構造が入ります。これは廃止された {{HTMLAttrxRef("summary", "table")}} 属性を反映します。
+  - : 文字列で、目的の説明や表の構造が入ります。これは廃止された {{HTMLAttrxRef("summary", "table")}} 属性を反映します。
 - {{DOMxRef("HTMLTableElement.width")}} {{deprecated_inline}}
-  - : {{DOMxRef("DOMString")}} で、表全体の推奨される幅を表すピクセル数またはパーセント値が入ります。これは廃止された {{HTMLAttrxRef("width", "table")}} 属性を反映します。
+  - : 文字列で、表全体の推奨される幅を表すピクセル数またはパーセント値が入ります。これは廃止された {{HTMLAttrxRef("width", "table")}} 属性を反映します。
 
 ## メソッド
 

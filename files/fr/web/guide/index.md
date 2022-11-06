@@ -7,6 +7,7 @@ tags:
   - Web
 translation_of: Web/Guide
 ---
+
 **Ces articles sont des tutoriels et guides pratiques permettant d'utiliser certaines API et technologies web.**
 
 - [Apprendre - HTML](/fr/docs/Apprendre/HTML)
@@ -25,7 +26,7 @@ translation_of: Web/Guide
   - : Les sites et applications web modernes utilisent généralement des graphismes (avec différents degrés de sophistication).
 - [Guide pour les API web](/fr/docs/Web/Guide/API)
   - : Une liste de l'ensemble des API web et de leur rôle.
-- [JavaScript](/fr/docs/JavaScript "/fr/docs/JavaScript")
+- [JavaScript](/fr/docs/JavaScript)
   - : JavaScript est un langage de script notamment utilisé pour créer des applications sur le Web.
 - [Localisations et encodages](/fr/docs/Localizations_and_character_encodings)
   - : En interne, les navigateurs traitent le texte en Unicode. Toutefois, la façon de représenter les caractères sous forme d'octets (l'encodage) est utilisée lors du transfert du texte sur le réseau vers le navigateur. La [spécification HTML recommande l'usage de l'encodage UTF-8](http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset) (qui peut représenter l'ensemble des caractères Unicode). Quel que soit l'encodage utilisé, le contenu web doit déclarer l'encodage qu'il utilise.
@@ -42,7 +43,7 @@ translation_of: Web/Guide
 - [Algorithme de texte Unicode bidirectionnel (BiDi)](/fr/docs/Web/Guide/Unicode_Bidrectional_Text_Algorithm)
   - : L'algorithme Unicode® BiDi fait partie du standard Unicode. Il décrit la façon dont le navigateur doit ordonner les caractères lorsqu'il affiche du texte Unicode. Ce guide présente l'algorithme en général et la façon dont il s'applique au contenu que vous créez. Cela s'avère particulièrement utile lorsque vous concevez et implémentez des systèmes avec une localisation et une internationalisation.
 - [Manipuler les objets `FormData`](/fr/docs/Web/Guide/Using_FormData_Objects)
-  - : L'objet [`FormData`](https://developer.mozilla.org/en/DOM/XMLHttpRequest/FormData) permet de compiler un ensemble de paires de clés/valeurs et de l'envoyer via une `XMLHttpRequest`. Son but principal est d'envoyer des données de formulaire mais il peut être utilisé sans formulaire afin de transmettre des données utilisant des clés. Le format de la transmission est identique à ce qui serait utilisé par la méthode `submit()` d'un formulaire si l'encodage de celui-ci valait `"multipart/form-data"`.
+  - : L'objet [`FormData`](/fr/docs/Web/API/FormData) permet de compiler un ensemble de paires de clés/valeurs et de l'envoyer via une `XMLHttpRequest`. Son but principal est d'envoyer des données de formulaire mais il peut être utilisé sans formulaire afin de transmettre des données utilisant des clés. Le format de la transmission est identique à ce qui serait utilisé par la méthode `submit()` d'un formulaire si l'encodage de celui-ci valait `"multipart/form-data"`.
 - [Gérer la saisie de l'utilisateur et les contrôles](/fr/docs/Web/Guide/User_input_methods)
   - : Sur les sites et applications web, un utilisateur peut interagir avec sa souris et son clavier mais aussi avec d'autres outils (écran tactile par exemple). Cet article fournit quelques recommandations sur la gestion de la saisie de l'utilisateur pour les applications web ainsi qu'une FAQ, des exemples concrets et des liens vers des informations supplémentaires détaillées.
 - [Glossaire](/fr/docs/Glossaire)
@@ -50,4 +51,4 @@ translation_of: Web/Guide
 
 ## Voir aussi
 
-- [Référence pour les développeurs web](/fr/docs/Web/Reference "/fr/docs/Web/Reference")
+- [Référence pour les développeurs web](/fr/docs/Web/Reference)

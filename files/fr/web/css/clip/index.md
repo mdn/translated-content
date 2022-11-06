@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/clip
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 La propriété **`clip`** permet de définir la zone d'un élément qui est visible. La propriété `clip` s'applique uniquement aux éléments positionnés de façon absolue (autrement dit, ceux avec {{cssxref("position","position:absolute")}} ou {{cssxref("position","position:fixed")}}).
@@ -36,7 +37,7 @@ clip: unset;
 ### Valeurs
 
 - `<shape>`
-  - : Une forme rectangulaire indiquée avec `rect(<haut>, <droite>, <bas>, <gauche>)` ou avec `rect(<haut> <droite> <bas> <gauche>)`. `<haut>` et `<bas>` indiquent les décalages à partir du haut de la boîte de bordure, `<gauche>` et `<droite>` indiquent les décalages à partir du bord gauche de la boîte de bordure.`<haut>`, `<droite>`, `<bas>` et `<gauche>` peuvent avoir une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou `auto`. Si un des côtés vaut `auto`, l'élément est rogné sur ce côté avec le bord intérieur de la boîte de bordure.
+  - : Une forme rectangulaire indiquée avec `rect(<haut>, <droite>, <bas>, <gauche>)` ou avec `rect(<haut> <droite> <bas> <gauche>)`. `<haut>` et `<bas>` indiquent les décalages à partir du haut de la boîte de bordure, `<gauche>` et `<droite>` indiquent les décalages à partir du bord gauche de la boîte de bordure. `<haut>`, `<droite>`, `<bas>` et `<gauche>` peuvent avoir une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou `auto`. Si un des côtés vaut `auto`, l'élément est rogné sur ce côté avec le bord intérieur de la boîte de bordure.
 - `auto`
   - : L'élément n'est pas rogné (la valeur par défaut). Attention, l'effet obtenu n'est pas le même que `rect(auto, auto, auto, auto)`.
 
@@ -97,15 +98,11 @@ clip: unset;
 
 ## Spécifications
 
-| Spécification                                                                    | État                                     | Commentaires                                                                                                |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS Masks', '#clip-property', 'clip')}}             | {{Spec2('CSS Masks')}}             | Dépréciation de la propriété `clip` et proposition de  {{cssxref("clip-path")}} comme remplacement. |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'clip')}} | {{Spec2('CSS3 Transitions')}} | `clip` peut être animée.                                                                                    |
-| {{SpecName('CSS2.1', 'visufx.html#clipping', 'clip')}}         | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.clip")}}
+{{Compat}}
 
 ## Voir aussi
 

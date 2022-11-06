@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/return
 original_slug: Web/JavaScript/Reference/Instructions/return
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`return`** met fin à l'exécution d'une fonction et définit une valeur à renvoyer à la fonction appelante.
@@ -16,7 +17,9 @@ L'instruction **`return`** met fin à l'exécution d'une fonction et définit un
 
 ## Syntaxe
 
-    return [[expression]];
+```js
+return [expression];
+```
 
 - `expression`
   - : L'expression dont on souhaite renvoyer la valeur. Si elle est absente, la valeur renvoyée par défaut sera {{jsxref("undefined")}}.
@@ -61,7 +64,7 @@ a + b;
 // après une instruction return sans point-virgule"
 ```
 
-> **Note :** À partir de Gecko 40 {{geckoRelease(40)}}, un avertissement sera affiché dans la console si l'analyse du code trouve une instruction semblable à une expression après une instruction `return` sans point-virgule. Voir le {{bug(1005110)}} pour plus d'informations.
+> **Note :** À partir de Gecko 40, un avertissement sera affiché dans la console si l'analyse du code trouve une instruction semblable à une expression après une instruction `return` sans point-virgule. Voir le {{bug(1005110)}} pour plus d'informations.
 
 Pour éviter ce problème et l'insertion automatique, on peut, si besoin, utiliser des parenthèses.
 
@@ -128,16 +131,11 @@ réponse(1337); // 56154
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                                     | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-12.9', 'Return statement')}}                     | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-return-statement', 'Return statement')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-return-statement', 'Return statement')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.return")}}
+{{Compat}}
 
 ## Voir aussi
 

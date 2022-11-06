@@ -9,13 +9,16 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/childNodes
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule  **`Node.childNodes`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) de {{domxref("Node","noeuds")}} enfants de l'élément donné avec le premier noeud enfant affecté à l'index 0.
 
 ## Syntaxe
 
-    var collNoeuds = elementDeReference.childNodes;
+```js
+var collNoeuds = elementDeReference.childNodes;
+```
 
 ## Exemples
 
@@ -37,12 +40,14 @@ if (parg.hasChildNodes()) {
 
 ### Supprimer tous les enfants d'un nom
 
-    // Voici une manière de supprimer tous les enfants d'un nœud
-    // (boite est une référence à un élément ayant des enfants)
-    while( boite.firstChild) {
-        // La liste n'est pas une copie, elle sera donc réindexée à chaque appel
-        boite.removeChild( boite.firstChild);
-    }
+```js
+// Voici une manière de supprimer tous les enfants d'un nœud
+// (boite est une référence à un élément ayant des enfants)
+while( boite.firstChild) {
+  // La liste n'est pas une copie, elle sera donc réindexée à chaque appel
+  boite.removeChild( boite.firstChild);
+}
+```
 
 ## Notes
 
@@ -52,20 +57,13 @@ L'objet [`document`](/fr/DOM/document) lui-même a deux enfants&nbsp;: la décla
 
 `childNodes`  inclut tous les noeuds enfants, y compris les noeuds qui ne sont pas des éléments comme les noeuds texte et commentaire. Pour obtenir une collection des seuls éléments, utilisez {{domxref("ParentNode.children")}} à la place.
 
+## Spécifications
 
-
-## Spécification
-
-| Spécification                                                                                        | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#dom-node-childnodes', 'Node.childNodes')}}         | {{Spec2('DOM WHATWG')}} | Pas de changement   |
-| {{SpecName('DOM3 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}     | {{Spec2('DOM3 Core')}}     | Pas de changement   |
-| {{SpecName('DOM2 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}     | {{Spec2('DOM2 Core')}}     | Pas de changement   |
-| {{SpecName('DOM1', 'level-one-core.html#ID-1451460987', 'Node.childNodes')}} | {{Spec2('DOM1')}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.childNodes")}}
+{{Compat}}
 
 ## Voir aussi
 

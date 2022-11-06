@@ -9,6 +9,7 @@ tags:
   - requestAnimationFrame
 translation_of: Web/API/Document/scroll_event
 ---
+
 {{APIRef}}
 
 L’évènement **`scroll`** (défilement) est émis lorsque l’on fait défiler le document ou un élément.
@@ -93,26 +94,15 @@ window.addEventListener('scroll', function(e) {
 
 ### Autres exemples
 
-Pour plus d’exemples similaires, voir l’évènement [resize](/en-US/docs/Web/Events/resize#Example).
+Pour plus d’exemples similaires, voir l’évènement [resize](/fr/docs/Web/Events/resize#Example).
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>Spécification</td>
-      <td>État</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSSOM View', '#scrolling-events')}}</td>
-      <td>{{Spec2('CSSOM View')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.scroll_event")}}
+{{Compat}}
 
 ## Voir aussi
 

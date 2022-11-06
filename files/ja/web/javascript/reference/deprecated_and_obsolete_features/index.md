@@ -1,13 +1,8 @@
 ---
 title: 非推奨の機能、廃止された機能
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
-tags:
-  - 非推奨
-  - ガイド
-  - JavaScript
-  - 廃止
-translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 ---
+
 {{JsSidebar("More")}}
 
 このページのリストは JavaScript で廃止予定（まだ使用できるが削除する予定）とされた、あるいは既に廃止され使用不可となった機能の一覧です。
@@ -30,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
       <td>{{jsxref("RegExp.n", "$1-$9")}}</td>
       <td>
         <p>
-          （もしあれば）括弧で囲まれた部分文字列にイッチします。
+          （もしあれば）括弧で囲まれた部分文字列に一致します。
           <strong>警告:</strong>このプロパティを使うことで、問題が起こる恐れがあります。なぜなら、ブラウザーの拡張機能がそれらを変更可能なためです。使用は避けるべきです。
         </p>
       </td>
@@ -89,7 +84,7 @@ translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 | {{jsxref("RegExp.global", "global")}}             | 対象文字列で可能な一致すべてに対して正規表現をテストするか、それとも、最初の一致に対してのみテストするどうかのフラグです。 |
 | {{jsxref("RegExp.ignoreCase", "ignoreCase")}} | 文字列の照合を試みる際に、大文字と小文字の違いを無視するかどうかのフラグです。                                                |
 | {{jsxref("RegExp.lastIndex", "lastIndex")}}     | 次の照合が始まる位置です。                                                                        |
-| {{jsxref("RegExp.multiline", "multiline")}}     | 複数行に渡って文字列を検索するかどうかのフラグです。。                                                         |
+| {{jsxref("RegExp.multiline", "multiline")}}     | 複数行に渡って文字列を検索するかどうかのフラグです。                                                         |
 | {{jsxref("RegExp.source", "source")}}             | パターンのテキストです。                                                                                           |
 
 ### `RegExp` オブジェクトのメソッド
@@ -119,7 +114,7 @@ translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 
 ### Date のメソッド
 
-- {{jsxref("Global_Objects/Date/getYear", "getYear")}} と {{jsxref("Global_Objects/Date/setYear", "setYear")}} は「{{interwiki('wikipedia', '2000年問題')}}」の影響を受けます。代替策として、{{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} および {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}} の使用が推奨されます。
+- {{jsxref("Global_Objects/Date/getYear", "getYear")}} と {{jsxref("Global_Objects/Date/setYear", "setYear")}} は「[2000年問題](https://ja.wikipedia.org/wiki/2000年問題)」の影響を受けます。代替策として、{{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} および {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}} の使用が推奨されます。
 - 新しいコードでは {{jsxref("Global_Objects/Date/toUTCString", "toUTCString")}} を非推奨の {{jsxref("Global_Objects/Date/toGMTString", "toGMTString")}} メソッドの代わりに使用してください。
 - {{jsxref("Global_Objects/Date/toLocaleFormat", "toLocaleFormat")}} は非推奨です。
 

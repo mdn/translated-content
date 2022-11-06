@@ -1,17 +1,8 @@
 ---
 title: HTTP ヘッダー
 slug: Web/HTTP/Headers
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Networking
-  - Reference
-  - header
-  - ネットワーク
-  - ヘッダー
-  - リファレンス
-translation_of: Web/HTTP/Headers
 ---
+
 {{HTTPSidebar}}
 
 **HTTP ヘッダー**により、 HTTP リクエストやレスポンスでクライアントやサーバーが追加情報を渡すことができます。 HTTP ヘッダーは、大文字小文字を区別しないヘッダー名とそれに続くコロン (`:`)、 値で構成されます。値の前にある{{Glossary("Whitespace", "ホワイトスペース")}}は無視されます。
@@ -76,7 +67,7 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
 サーバーは、 {{HTTPHeader("Accept-CH")}} を使用して、クライアントが関心を持っているクライアントヒントヘッダーを積極的に要求します。クライアントは、要求されたヘッダーを後続のリクエストに含めることがあります。
 
 - {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
-  - : サーバーはクライアントヒントに対応していることを、 `Accept-CH` ヘッダーフィールドまたは HTML の `<meta>` 要素の [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) 属性で同等の指定をすることで広報することができます。
+  - : サーバーはクライアントヒントに対応していることを、 `Accept-CH` ヘッダーフィールドまたは HTML の `<meta>` 要素の [`http-equiv`](/ja/docs/Web/HTML/Element/meta#attr-http-equiv) 属性で同等の指定をすることで広報することができます。
 - {{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}
   - : サーバーは、指定された期間サーバーが対応する一連のクライアントヒントを記憶するようクライアントに依頼し、そのサーバーのオリジンに対するその後のリクエストでクライアントヒントを配信できるようにすることができます。
 
@@ -184,7 +175,7 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
 - {{HTTPHeader("Origin")}}
   - : どこから読み込みが発生したかを示します。
 - {{HTTPHeader("Timing-Allow-Origin")}}
-  - : [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API) の機能を通じて受け取った属性の値を見ることができるオリジンを指定します。そうでなければオリジン間の制約によってゼロとして報告されます。
+  - : [Resource Timing API](/ja/docs/Web/API/Resource_Timing_API) の機能を通じて受け取った属性の値を見ることができるオリジンを指定します。そうでなければオリジン間の制約によってゼロとして報告されます。
 
 ## ダウンロード
 
@@ -269,7 +260,7 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
   - : サイトが証明書の透明性要件の報告や実施を選択できるようにします。これにより、そのサイトで不正な証明書の使用に気づかないことを防ぎます。サイトが Expect-CT ヘッダーを有効にした場合、そのサイトの証明書が公開CTログに表示されることを Chrome が確認するようにリクエストしています。
 - {{HTTPHeader("Feature-Policy")}}
   - : 自身のフレームまたはその中の iframe で、ブラウザーの機能を使用することを許可または拒否する仕組みを提供します。
-- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
+- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
   - : ウェブアプリケーションをオリジンから独立させるための仕組みを提供します。
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : HTTP の代わりに HTTPS による通信を強制します。
@@ -386,13 +377,13 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
 - {{HTTPHeader("X-Requested-With")}}
   - : TBD
 - {{HTTPHeader("X-Robots-Tag")}}{{non-standard_inline}}
-  - : [`X-Robots-Tag`](https://developers.google.com/search/reference/robots_meta_tag#xrobotstag) ヘッダーは、一般の検索エンジンの結果でウェブページをどのように索引付けをするかを示します。このヘッダーは `&lt;meta name="robots" content="..."&gt;` と等価です。
+  - : [`X-Robots-Tag`](https://developers.google.com/search/reference/robots_meta_tag#xrobotstag) ヘッダーは、一般の検索エンジンの結果でウェブページをどのように索引付けをするかを示します。このヘッダーは `<meta name="robots" content="...">` と等価です。
 - {{HTTPHeader("X-UA-Compatible")}} {{non-standard_inline}}
   - : 使用する文書モードを示すために Internet Explorer で使用されています。
 
 ## 協力
 
-[新しい記事を書いたり](/en-US/docs/MDN/Contribute/Howto/Document_an_HTTP_header)、既存のものを改善したりすることにご協力ください。
+[新しい記事を書いたり](/ja/docs/MDN/Contribute/Howto/Document_an_HTTP_header)、既存のものを改善したりすることにご協力ください。
 
 ## 関連情報
 

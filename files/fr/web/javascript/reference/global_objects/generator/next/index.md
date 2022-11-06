@@ -11,13 +11,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
 original_slug: Web/JavaScript/Reference/Objets_globaux/Generator/next
 ---
+
 {{JSRef}}
 
 La méthode **`next()`** renvoie un objet possédant deux propriétés `done` et `value`. Cette méthode peut également recevoir un paramètre pour envoyer une valeur au générateur.
 
 ## Syntaxe
 
-    gen.next(valeur)
+```js
+gen.next(valeur)
+```
 
 ### Paramètres
 
@@ -77,14 +80,11 @@ g.next(2);
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-generator.prototype.next', 'Generator.prototype.next')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-generator.prototype.next', 'Generator.prototype.next')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Generator.next")}}
+{{Compat}}
 
 ## Voir aussi
 

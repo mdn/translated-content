@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-inline
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`border-inline`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de paramétrer les différentes propriétés logiques relatives à la bordure sur l'axe en ligne.
@@ -36,13 +37,15 @@ La propriété `border-inline` peut être utilisée avec une ou plusieurs de ces
 - `<'color'>`
   - : La couleur de la bordure. Voir {{cssxref("color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
-
-
 
 ### CSS
 
@@ -59,8 +62,6 @@ div {
 }
 ```
 
-
-
 ### HTML
 
 ```html
@@ -75,15 +76,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-inline", "border-inline")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-inline")}}
+{{Compat}}
 
 ## Voir aussi
 

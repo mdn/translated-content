@@ -11,6 +11,7 @@ tags:
   - Window
 translation_of: Web/API/Window/cut_event
 ---
+
 {{APIRef}}
 
 L'événement **`cut`** est déclenché lorsque l'utilisateur a lancé une action de "cut" via l'interface utilisateur du navigateur.
@@ -36,7 +37,7 @@ L'événement **`cut`** est déclenché lorsque l'utilisateur a lancé une actio
   </tbody>
 </table>
 
-La cible d'origine de cet événement est le {{domxref("Element")}} qui était la cible prévue de l'action cut. Vous pouvez écouter cet événement sur l'interface {{domxref("Window")}} pour le gérer dans les phases de capture ou de bullage. Pour plus de détails sur cet événement, veuillez consulter la page sur l'événement [Element: cut event](/en-US/docs/Web/API/Element/cut_event).
+La cible d'origine de cet événement est le {{domxref("Element")}} qui était la cible prévue de l'action cut. Vous pouvez écouter cet événement sur l'interface {{domxref("Window")}} pour le gérer dans les phases de capture ou de bullage. Pour plus de détails sur cet événement, veuillez consulter la page sur l'événement [Element: cut event](/fr/docs/Web/API/Element/cut_event).
 
 ## Exemples
 
@@ -48,15 +49,13 @@ window.addEventListener('cut', (event) => {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-cut')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.cut_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - Événements liés: {{domxref("Window/copy_event", "copy")}}, {{domxref("Window/paste_event", "paste")}}
 - Cet événement sur {{domxref("Element")}} targets: {{domxref("Element/cut_event", "cut")}}

@@ -1,22 +1,8 @@
 ---
 title: 'Element: mouseup イベント'
 slug: Web/API/Element/mouseup_event
-tags:
-  - API
-  - DOM
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - リファレンス
-  - Release
-  - UI
-  - Up
-  - ボタン
-  - マウス
-  - mouseup
-browser-compat: api.Element.mouseup_event
-translation_of: Web/API/Element/mouseup_event
 ---
+
 {{APIRef}}
 
 **`mouseup`** イベントは、ポインターが要素の中にあるときに、ポインティングデバイス (マウスやトラックパッドなど) のボタンが離されるとその要素 ({{domxref("Element")}}) に発行されます。

@@ -1,21 +1,13 @@
 ---
 title: ServiceWorkerRegistration.installing
 slug: Web/API/ServiceWorkerRegistration/installing
-tags:
-  - API
-  - Installing
-  - プロパティ
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-browser-compat: api.ServiceWorkerRegistration.installing
-translation_of: Web/API/ServiceWorkerRegistration/installing
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`installing`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、{{domxref("ServiceWorker.state")}} がインストール中 (`installing`) のサービスワーカーを返します。 このプロパティは、最初は `null` に設定されています。
 
-> **Note:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
+> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
 ## 値
 

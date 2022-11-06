@@ -12,6 +12,7 @@ tags:
   - pkcs11
 translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/isModuleInstalled
 ---
+
 {{AddonSidebar()}}
 
 Vérifie si le module PKCS #11 nommé est actuellement installé dans Firefox.
@@ -31,7 +32,7 @@ var checking = browser.pkcs11.isModuleInstalled(
 - `name`
   - : `string`. Nom du module à vérifier.
 
-### valeur retournée
+### Valeur retournée
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `true` si le module est installé, `false` sinon.
 

@@ -1,0 +1,56 @@
+---
+title: Access-Control-Request-Method
+slug: Web/HTTP/Headers/Access-Control-Request-Method
+---
+
+{{HTTPSidebar}}
+
+**`Access-Control-Request-Method`** リクエストヘッダーは、{{glossary("preflight request", "プリフライトリクエスト")}}を発行する際にブラウザーが使用し、実際のリクエストが行われた際にどの HTTP メソッドが使用されるかをサーバーに知らせるために使用されます。プリフライトリクエストは常に OPTIONS であり、実際のリクエストとは同じメソッドを使用しないため、このヘッダーが必要です。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">ヘッダー種別</th>
+      <td>
+        {{Glossary("Request header", "リクエストヘッダー")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+      </th>
+      <td>はい</td>
+    </tr>
+  </tbody>
+</table>
+
+## 構文
+
+```
+Access-Control-Request-Method: <method>
+```
+
+## ディレクティブ
+
+- \<method>
+  - : [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)の 1 つ。例えば {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, {{HTTPMethod("DELETE")}} など。
+
+## 例
+
+```
+Access-Control-Request-Method: POST
+```
+
+## 仕様書
+
+| 仕様書                                                                                                                       | 状態                     | 備考     |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
+| {{SpecName('Fetch','#http-access-control-request-method', 'Access-Control-Request-Method')}} | {{Spec2("Fetch")}} | 初回定義 |
+
+## ブラウザーの互換性
+
+{{Compat("http.headers.Access-Control-Request-Method")}}
+
+## 関連情報
+
+- {{HTTPHeader("Access-Control-Request-Headers")}}

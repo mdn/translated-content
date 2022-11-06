@@ -10,6 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 translation_of_original: Web/JavaScript/Reference/Global_Objects/Proxy/handler
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler
 ---
+
 {{JSRef}}
 
 L'objet gestionnaire d'un proxy est un objet qui contient les trappes de captures (_traps_) pour le  {{jsxref("Proxy", "proxy", "", 1)}}.
@@ -49,14 +50,11 @@ Certaines trappes non standards sont désormais [obsolètes et ont été supprim
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                    | État                         | Commentaires                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots', 'Proxy Object Internal Methods and Internal Slots')}} | {{Spec2('ES2015')}}     | Définition initiale.                      |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots', 'Proxy Object Internal Methods and Internal Slots')}} | {{Spec2('ESDraft')}} | La trappe pour `enumerate` a été retirée. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -8,13 +8,16 @@ tags:
   - XPath
 translation_of: Web/API/Document/createExpression
 ---
+
 {{ ApiRef("DOM") }}
 
 Cette méthode compile une [`XPathExpression`](/fr/docs/Web/API/XPathExpression) qui peut ensuite être utilisée pour des évaluations (répétées).
 
 ## Syntaxe
 
-    xpathExpr = document.createExpression(xpathText, namespaceURLMapper);
+```js
+xpathExpr = document.createExpression(xpathText, namespaceURLMapper);
+```
 
 ### Paramètres
 

@@ -3,6 +3,7 @@ title: IDBObjectStore.add()
 slug: Web/API/IDBObjectStore/add
 translation_of: Web/API/IDBObjectStore/add
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`add()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, crée un [clone structurel](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur et stocke la valeur clonée dans le magasin d'objet. Cette méthode permet d'ajouter de nouveaux enregistrements dans un magasin d'objet.
@@ -152,13 +153,11 @@ function addData() {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-add-IDBRequest-any-value-any-key', 'add()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.add")}}
+{{Compat}}
 
 ## Voir aussi
 

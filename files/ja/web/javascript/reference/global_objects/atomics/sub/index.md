@@ -1,14 +1,8 @@
 ---
 title: Atomics.sub()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.sub
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 ---
+
 {{JSRef}}
 
 静的な **`Atomics.sub()`** メソッドは、配列内の指定した位置の値から減算して、その場所にあった古い値を返します。この不可分操作は、修正された値が書き戻されるまで、ほかの書き込みが発生しないことを保証します。

@@ -8,13 +8,16 @@ tags:
   - HTMLOptionElement
 translation_of: Web/API/HTMLOptionElement/Option
 ---
+
 {{APIRef("HTML DOM")}}
 
 Le constructeur **`Option()`** permet de créer un nouvel objet {{domxref("HTMLOptionElement")}}.
 
 ## Syntaxe
 
-    var optionElementReference = new Option(text, value, defaultSelected, selected);
+```js
+var optionElementReference = new Option(text, value, defaultSelected, selected);
+```
 
 ### Parameters
 

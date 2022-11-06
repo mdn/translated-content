@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/NodeList
 ---
+
 {{APIRef("DOM")}}
 
 Les objets **`NodeList`** sont des collections de nœuds comme celles retournées par {{domxref("Node.childNodes")}} et la méthode {{domxref("document.querySelectorAll()")}}.
@@ -83,13 +84,8 @@ Array.prototype.forEach.call(list, function (item) {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}}             | {{ Spec2('DOM WHATWG') }} |                      |
-| {{SpecName('DOM3 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM3 Core') }} |                      |
-| {{SpecName('DOM2 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM2 Core') }} |                      |
-| {{SpecName('DOM1', 'level-one-core.html#ID-536297177', 'NodeList')}} | {{ Spec2('DOM1') }}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeList")}}
+{{Compat}}

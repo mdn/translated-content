@@ -4,6 +4,7 @@ slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 translation_of: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 original_slug: Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation_FR
 ---
+
 {{GamesSidebar}}
 
 Dans ce tutoriel, nous allons passer par le processus de construction d'un jeu mobile HTML5 qui utilise les API [Device Orientation](/fr/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes) et [Vibration](/fr/docs/Web/API/Vibration_API) pour améliorer le "gameplay" et est construit avec le "framework" [Phaser](http://phaser.io/). La connaissance JavaScript de base est recommandée pour tirer le meilleur parti de ce tutoriel.
@@ -279,7 +280,7 @@ La particularité du jeu est qu'il utilise l'API gyroscopique sur les mobiles. G
 window.addEventListener("deviceorientation", this.handleOrientation, true);
 ```
 
-L'ajout d'un évènement "listener" à l'évenement `"deviceorientation"` et la modification de la fonction `handleOrientation`ressembleront à ceci :
+L'ajout d'un évènement "listener" à l'évenement `"deviceorientation"` et la modification de la fonction `handleOrientation` ressembleront à ceci :
 
 ```js
 handleOrientation: function(e) {
@@ -307,7 +308,7 @@ this.hole.anchor.set(0.5);
 this.hole.body.setSize(2, 2);
 ```
 
-La seule différence est que '`hole.body`' est mis à `immovable`_(fixe)_, il ne bougera donc pas quand la balle le touchera et la collision sera alors calculée ( ce point sera approfondit plus loin dans cet article ).
+La seule différence est que '`hole.body`' est mis à `immovable` _(fixe)_, il ne bougera donc pas quand la balle le touchera et la collision sera alors calculée ( ce point sera approfondit plus loin dans cet article ).
 
 ### Création du mur du labyrinthe
 

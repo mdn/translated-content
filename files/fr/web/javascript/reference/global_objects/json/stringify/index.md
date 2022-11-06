@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 original_slug: Web/JavaScript/Reference/Objets_globaux/JSON/stringify
 ---
+
 {{JSRef}}
 
 La méthode **`JSON.stringify()`** convertit une valeur JavaScript en chaîne JSON. Optionnellement, elle peut remplacer des valeurs ou spécifier les propriétés à inclure si un tableau de propriétés a été fourni.
@@ -17,7 +18,9 @@ La méthode **`JSON.stringify()`** convertit une valeur JavaScript en chaîne JS
 
 ## Syntaxe
 
-    JSON.stringify( valeur[, remplaçant [, espace]])
+```js
+JSON.stringify( valeur[, remplaçant [, espace]])
+```
 
 ### Paramètres
 
@@ -327,15 +330,11 @@ Cette modification est rétrocompatible pour toutes les opérations où le résu
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.12.3', 'JSON.stringify')}}             | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.7. |
-| {{SpecName('ES6', '#sec-json.stringify', 'JSON.stringify')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-json.stringify', 'JSON.stringify')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.JSON.stringify")}}
+{{Compat}}
 
 ## Voir aussi
 

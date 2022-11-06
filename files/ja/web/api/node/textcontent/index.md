@@ -1,17 +1,13 @@
 ---
 title: Node.textContent
 slug: Web/API/Node/textContent
-tags:
-  - プロパティ
-  - リファレンス
-browser-compat: api.Node.textContent
-translation_of: Web/API/Node/textContent
 ---
+
 {{APIRef("DOM")}}
 
 **`textContent`** は {{domxref ("Node")}} のプロパティで、ノードおよびその子孫のテキストの内容を表します。
 
-> **Note:** `textContent` と {{domxref("HTMLElement.innerText")}} は混同しやすいものですが、 2 つのプロパティは[重要な点が異なります](#innertext_との違い)。
+> **メモ:** `textContent` と {{domxref("HTMLElement.innerText")}} は混同しやすいものですが、 2 つのプロパティは[重要な点が異なります](#innertext_との違い)。
 
 ## 値
 
@@ -19,12 +15,12 @@ translation_of: Web/API/Node/textContent
 
 - ノードが {{domxref("document")}} または {{glossary("doctype")}} である場合、 `textContent` は {{jsxref("null")}} を返します。
 
-  > **Note:** 文書全体の*すべての*テキストと [CDATA データ](/ja/docs/Web/API/CDATASection)を取得するには、 `document.documentElement.textContent` を使用する方法があります。
+  > **メモ:** 文書全体の*すべての*テキストと [CDATA データ](/ja/docs/Web/API/CDATASection)を取得するには、 `document.documentElement.textContent` を使用する方法があります。
 
 - ノードが [CDATA セクション](/ja/docs/Web/API/CDATASection)、コメント、[処理命令ノード](/ja/docs/Web/API/ProcessingInstruction)、 [テキストノード](/ja/docs/Web/API/Text)の場合、 `textContent` はそのノードの内側のテキスト、すなわち {{domxref("Node.nodeValue")}} を返します。
 - 他のノード型の場合、`textContent` は、コメントと処理命令ノードを除く、すべての子ノードの `textContent` 属性値を連結したものを返します。（ノードが子を持たない場合、これは空文字列になります。）
 
-> **Warning:** ノードの `textContent` を設定すると、そのノードの*すべて*の子が取り除かれて、指定された値を持つ単一のテキストノードに置き換わります。
+> **警告:** ノードの `textContent` を設定すると、そのノードの*すべて*の子が取り除かれて、指定された値を持つ単一のテキストノードに置き換わります。
 
 ### innerText との違い
 

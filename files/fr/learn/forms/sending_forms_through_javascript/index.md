@@ -4,6 +4,7 @@ slug: Learn/Forms/Sending_forms_through_JavaScript
 translation_of: Learn/Forms/Sending_forms_through_JavaScript
 original_slug: Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript
 ---
+
 {{LearnSidebar}}
 
 Comme dans le [précédent article](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires), les formulaires HTML peuvent envoyer une requête HTTP par déclaration. Mais des formulaires peuvent aussi préparer une requête HTTP à adresser via JavaScript. Cet article explore comment faire cela.
@@ -25,8 +26,6 @@ L'envoi asynchrone de données arbitraires est connu sous le nom AJAX, qui signi
 [AJAX](/fr/docs/AJAX) utilise l'objet DOM {{domxref("XMLHttpRequest")}} (XHR).Il peut construire des requêtes HTTP, les envoyer et retrouver leur résultats.
 
 > **Note :** Les techniques AJAX anciennes ne se fondaient pas forcément sur {{domxref("XMLHttpRequest")}}. Par exemple, [JSONP](http://en.wikipedia.org/wiki/JSONP) combiné à la fonction [`eval()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/eval). Cela fonctionne, mais n'est pas recommandé en raison de sérieux problèmes de sécurité. La seule raison d'en poursuivre l'utilisation est l'utilisation de navigateurs anciens qui ne prennent pas en charge {{domxref("XMLHttpRequest")}} ou [JSON](/fr/docs/Glossaire/JSON), mais ce sont vraiment des navigateurs anciens ! **Évitez ces techniques.**
-
-
 
 Historiquement, {{domxref("XMLHttpRequest")}} a été conçu pour récupérer et envoyer du XML comme format d'échange. Cependant, [JSON](/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON) a remplacé XML et est de plus en plus courant aujourd'hui.
 
@@ -265,8 +264,6 @@ function sendData(data) {
 Voici le résultat en direct :
 
 {{EmbedLiveSample('Construire_un_DOM_dans_un_iframe_caché', "100%", 50)}}
-
-
 
 ## Gestion des données binaires
 

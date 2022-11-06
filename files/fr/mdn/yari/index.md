@@ -8,6 +8,7 @@ tags:
 translation_of: MDN/Kuma
 original_slug: MDN/Kuma
 ---
+
 {{MDNSidebar}}
 
 Kuma est le code Django qui alimente le MDN Web Docs.

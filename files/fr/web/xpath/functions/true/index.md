@@ -6,13 +6,16 @@ tags:
 translation_of: Web/XPath/Functions/true
 original_slug: Web/XPath/Fonctions/true
 ---
+
 {{ XsltRef() }}
 
 La fonction `true` retourne la valeur booléenne `true`.
 
 ### Syntaxe
 
-    true()
+```
+true()
+```
 
 ### Retour
 

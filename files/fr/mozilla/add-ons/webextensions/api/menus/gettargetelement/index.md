@@ -10,6 +10,7 @@ tags:
   - menus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 ---
+
 {{AddonSidebar}}
 
 Renvoie l'élément pour un `targetElementId` donné
@@ -24,12 +25,14 @@ Une extension nécessite la permission "menus" pour utiliser cette API
 
 ## Syntaxe
 
-    let elem = browser.menus.getTargetElement(targetElementId);
+```js
+let elem = browser.menus.getTargetElement(targetElementId);
+```
 
 ### Paramètres
 
 - `targetElementId`
-  - : La propriété de l'objet `{{WebExtAPIRef("menus.OnClickData")}}` passé au gestionnaire `{{WebExtAPIRef("menus.onClicked")}}`ou à l'événement `{{WebExtAPIRef("menus.onShown")}}`.
+  - : La propriété de l'objet `{{WebExtAPIRef("menus.OnClickData")}}` passé au gestionnaire `{{WebExtAPIRef("menus.onClicked")}}` ou à l'événement `{{WebExtAPIRef("menus.onShown")}}`.
 
 ### Valeur retournée
 
@@ -59,7 +62,7 @@ browser.menus.create({
 
 {{Compat("webextensions.api.menus.getTargetElement")}}
 
-## voir aussi
+## Voir aussi
 
 - {{WebExtAPIRef("menus.create")}}
 - {{WebExtAPIRef("menus.OnClickData")}}

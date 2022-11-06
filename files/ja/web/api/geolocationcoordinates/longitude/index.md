@@ -1,21 +1,8 @@
 ---
 title: GeolocationCoordinates.longitude
 slug: Web/API/GeolocationCoordinates/longitude
-tags:
-  - API
-  - GPS
-  - Geolocation
-  - 位置情報 API
-  - GeolocationCoordinates
-  - Global Positioning System
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - 安全なコンテキスト
-  - longitude
-browser-compat: api.GeolocationCoordinates.longitude
-translation_of: Web/API/GeolocationCoordinates/longitude
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 {{domxref("GeolocationCoordinates")}} インターフェイスの **`longitude`** プロパティは読み取り専用であり、地理的な位置の経度 10 進数で表す倍精度浮動小数点値です。計測時刻を表す {{domxref("DOMTimeStamp")}} と共に、 `GeolocationCoordinates` オブジェクトは {{domxref("GeolocationPosition")}} インターフェイスの一部であり、地理位置を取得して返す位置情報 API 関数が返すオブジェクト型です。
@@ -30,7 +17,7 @@ let longitude = geolocationCoordinatesInstance.longitude
 
 `longitude` の値は `Coordinates` オブジェクトによって記述された地球上の場所の地理的な経度を 10 進数で表したものです。この値は World Geodetic System 1984 仕様 (WGS 84) で定義されています。
 
-> **Note:** ゼロ子午線（本初子午線、基準子午線とも呼ばれる）は、多くの人が思い浮かべるグリニッジ子午線と正確には同じではありません。これは　{{interwiki("wikipedia", "IERS基準子午線", "IERS 基準子午線")}} であり、 5.3 {{interwiki("wikipedia", "度_(角度)", "秒")}} （102 メートル/335 フィート）だけ{{interwiki("wikipedia", "グリニッジ子午線")}}より東に位置しています。これは{{interwiki("wikipedia", "グローバル・ポジショニング・システム", "グローバルポジショニングシステム")}} (GPS) で使われている規格と同じものです。
+> **メモ:** ゼロ子午線（本初子午線、基準子午線とも呼ばれる）は、多くの人が思い浮かべるグリニッジ子午線と正確には同じではありません。これは　[IERS 基準子午線](https://ja.wikipedia.org/wiki/IERS基準子午線) であり、 5.3 [秒](https://ja.wikipedia.org/wiki/度_(角度)) （102 メートル/335 フィート）だけ[グリニッジ子午線](https://ja.wikipedia.org/wiki/グリニッジ子午線)より東に位置しています。これは[グローバルポジショニングシステム](https://ja.wikipedia.org/wiki/グローバル・ポジショニング・システム) (GPS) で使われている規格と同じものです。
 
 ## 例
 

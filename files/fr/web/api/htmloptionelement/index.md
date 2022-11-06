@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLOptionElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface `HTMLOptionElement` représente l'élément {{HTMLElement("option")}} et hérite de toutes les classes et méthodes de l'intreface {{domxref("HTMLElement")}} .
@@ -121,65 +122,11 @@ _Hérite des méthodes de son parent , {{domxref("HTMLElement")}}._
 
 ## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', "the-button-element.html#the-option-element", "HTMLOptionElement")}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>
-        <p>pas de changement depuis la {{SpecName("HTML5 W3C")}}.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', "forms.html#the-option-element", "HTMLOptionElement")}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>
-        <p>
-          Le constructeur, <code>Option()</code>, a été ajouté. la propriété
-          <code>form </code>peut avoir la valeur <code>null</code>.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('DOM2 HTML', 'html.html#ID-70901257', 'HTMLOptionElement')}}
-      </td>
-      <td>{{Spec2('DOM2 HTML')}}</td>
-      <td>
-        <p>
-          Le sens de la propriété <code>selected a changé</code>: elle indique
-          désormais si l'option est sélectionnée à l'instant , au lieu
-          d'indiquer si elle a été initialement sélectionnée.
-        </p>
-        <p>
-          La propriété <code>defaultSelected</code> n'est plus en lecture seule
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('DOM1', 'level-one-html.html#ID-70901257', 'HTMLOptionElement')}}
-      </td>
-      <td>{{Spec2('DOM1')}}</td>
-      <td>La définition initiale .</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLOptionElement")}}
+{{Compat}}
 
 ## Voir aussi
 

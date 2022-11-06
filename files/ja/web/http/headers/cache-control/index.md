@@ -1,15 +1,6 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
-tags:
-  - Cache-Control
-  - HTTP
-  - HTTP ヘッダー
-  - リクエストヘッダー
-  - レスポンスヘッダー
-  - リファレンス
-browser-compat: http.headers.Cache-Control
-translation_of: Web/HTTP/Headers/Cache-Control
 ---
 
 {{HTTPSidebar}}
@@ -191,7 +182,7 @@ Cache-Control: public, max-age=604800
 
 なお、`s-maxage` や `must-revalidate` もこの制限を解除します。
 
-リクエストに `Authorization` ヘッダーがない場合、あるいはレスポンスに ` s-maxage` または `must-revalidate` をすでに使用している場合は、` public` を使用する必要はありません。
+リクエストに `Authorization` ヘッダーがない場合、あるいはレスポンスに `s-maxage` または `must-revalidate` をすでに使用している場合は、`public` を使用する必要はありません。
 
 #### `must-understand`
 

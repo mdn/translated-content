@@ -1,17 +1,8 @@
 ---
 title: SpeechSynthesis.getVoices()
 slug: Web/API/SpeechSynthesis/getVoices
-tags:
-  - API
-  - Method
-  - Reference
-  - SpeechSynthesis
-  - Web Speech API
-  - getVoices
-  - speech
-  - synthesis
-translation_of: Web/API/SpeechSynthesis/getVoices
 ---
+
 {{APIRef("Web Speech API")}}
 
 {{domxref("SpeechSynthesis")}} 接口的 **`getVoices()`** 方法返回一个 {{domxref("SpeechSynthesisVoice")}} 列表，用于表示当前设备上所有可用的语音。

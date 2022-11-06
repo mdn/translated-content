@@ -15,7 +15,8 @@ tags:
 translation_of: Web/HTML/Element/embed
 browser-compat: html.elements.embed
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<embed>`** permet d'intégrer du contenu externe à cet endroit dans le document. Le contenu peut être fourni par une application externe ou une autre source telle qu'un _plugin_ du navigateur.
 
@@ -31,19 +32,16 @@ Il faut garder à l'esprit que la plupart des navigateurs ont déprécié voire 
       <th scope="row">
         <a
           href="/fr/docs/Web/Guide/HTML/Content_categories"
-          title="HTML/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
         <a
           href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          title="HTML/Content categories#Flow content"
           >Contenu de flux</a
         >,
         <a
           href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          title="HTML/Content categories#phrasing_content"
           >contenu phrasé</a
         >,
         <a href="/fr/docs/Web/Guide/HTML/Content_categories#embedded_content"

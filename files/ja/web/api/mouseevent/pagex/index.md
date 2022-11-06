@@ -1,21 +1,8 @@
 ---
 title: MouseEvent.pageX
 slug: Web/API/MouseEvent/pageX
-tags:
-  - API
-  - CSSOM View
-  - DOM
-  - マウスイベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - UI イベント
-  - イベント
-  - pageX
-translation_of: Web/API/MouseEvent/pageX
-browser-compat: api.MouseEvent.pageX
 ---
+
 {{APIRef("CSSOM View")}}
 
 **`pageX`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、マウスがクリックされた位置の X（水平）座標を、文書全体の左端からの相対座標で返します。
@@ -24,8 +11,8 @@ browser-compat: api.MouseEvent.pageX
 文書の端をそのまま基準とするため、このプロパティは、ページの水平方向のスクロールを加味します。
 例えば、文書の左側 200 ピクセルが隠れるようにページがスクロールされ、ビューの左端から 100 ピクセル内側でマウスがクリックされた場合、 `pageX` が返す値は 300 となります。
 
-元々、このプロパティは `long` 型の整数として定義されていましたが、 [CSSOM View モジュール](/en-US/docs/Web/CSS/CSSOM_View) では、 `double` 型の浮動小数点値として再定義しています。
-詳しくは{{anch("ブラウザーの互換性")}}の節を参照してください。
+元々、このプロパティは `long` 型の整数として定義されていましたが、 [CSSOM View モジュール](/ja/docs/Web/CSS/CSSOM_View) では、 `double` 型の浮動小数点値として再定義しています。
+詳しくは[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
 この方法で指定された座標について詳しくは、[座標系](/ja/docs/Web/CSS/CSSOM_View/Coordinate_systems)の[ページ](/ja/docs/Web/CSS/CSSOM_View/Coordinate_systems#ページ)の節を参照してください。
 
@@ -36,7 +23,7 @@ browser-compat: api.MouseEvent.pageX
 このプロパティは、もともと Touch Events 仕様では long 型の整数として規定されていましたが、 CSSOM View モジュールではサブピクセルの精度が利用できるようにするために倍精度浮動小数点数として再定義されました。
 JavaScript では数値型はどちらも `Number` 型で表現されますが、ブラウザーのコード内部では異なる扱いを受ける可能性があり、結果として動作に差異が生じる可能性があります。
 
-どのブラウザーが改訂されたデータ型を使用するように更新されているかは{{anch("ブラウザーの互換性")}}を参照してください。
+どのブラウザーが改訂されたデータ型を使用するように更新されているかは[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
 ## 例
 

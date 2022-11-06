@@ -8,7 +8,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/hgroup
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<hgroup>`** représente un titre de plusieurs niveaux pour une section d'un document. Il regroupe un ensemble d'éléments [`<h1>–<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements).
 
@@ -61,7 +62,7 @@ Où on voit que le titre principal est suivi de deux points puis d'un espace ava
 
 On pourrait également avoir cet affichage :
 
-![Plan rendu en incluant un élément <hgroup>, avec des parenthèses autour du titre secondaire](outline-paren.png)
+![Plan rendu en incluant un élément \<hgroup>, avec des parenthèses autour du titre secondaire](outline-paren.png)
 
 Ici, le titre secondaire est placé entre parenthèses après le titre principal.
 
@@ -137,13 +138,11 @@ Ici, le titre secondaire est placé entre parenthèses après le titre principal
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.hgroup")}}
+{{Compat}}
 
 ## Voir aussi
 

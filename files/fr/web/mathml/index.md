@@ -1,54 +1,52 @@
 ---
 title: MathML
 slug: Web/MathML
-tags:
-  - Landing
-  - MathML
-  - Reference
-  - Web
-  - XML
 translation_of: Web/MathML
+browser-compat: mathml.elements.math
 ---
-**Mathematical Markup Language (MathML)** est un dialecte de [XML](/fr/docs/XML) permettant de décrire des formules mathématiques à la fois dans leur structure et dans leur contenu.
 
-Vous trouverez ici des liens vers la documentation, les exemples et les outils permettant de travailler avec cette technologie. Pour un bref aperçu, veuillez consulter [la présentation pour le Mozilla Summit Innovation Fair de 2013 (en)](http://fred-wang.github.io/MozSummitMathML/index.html).
+{{MathMLRef}}
 
-## Documentations à propos de MathML
+**Mathematical Markup Language (MathML)** est un langage basé sur [XML](/fr/docs/Web/XML) permettant de décrire des formules mathématiques.
+
+[MathML](https://w3c.github.io/mathml/) était à l'origine conçu comme une spécification générique pour les navigateurs, les suites bureautiques, [les systèmes de calcul formel](https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_calcul_formel), les lecteurs [EPUB](https://www.w3.org/publishing/epub32/), les générateurs vers [LaTeX](https://fr.wikipedia.org/wiki/LaTeX)… Toutefois, cette approche n'était pas adaptée au Web&nbsp;: [le sous-ensemble concernant la sémantique](https://w3c.github.io/mathml/#contm) n'a jamais été implémenté dans les navigateurs tandis que [le sous-ensemble sur la disposition mathématique](https://w3c.github.io/mathml/#presm) a conduit à des implémentations incomplètes et/ou incohérentes par les navigateurs.
+
+[<i lang="en">MathML Core</i>](https://w3c.github.io/mathml-core/) est un sous-ensemble avec des détails d'implémentation plus précis, basés sur des règles provenant de [LaTeX](https://en.wikipedia.org/wiki/LaTeX) et du [format Open Font](https://docs.microsoft.com/en-us/typography/opentype/spec/math). Il est conçu pour les navigateurs et pour fonctionner en accord avec les autres standards du Web que sont [HTML](/fr/docs/Web/HTML), [CSS](/fr/docs/Web/CSS), [DOM](/fr/docs/Web/API/Document_Object_Model), et [JavaScript](/fr/docs/Web/JavaScript).
+
+Vous trouverez ici des liens vers la documentation, les exemples et les outils permettant de travailler avec cette technologie. Bien que nombre de ces ressources soient encore basées sur [<i lang="en">MathML Full</i>](https://w3c.github.io/mathml/), la transition vers [<i lang="en">MathML Core</i>](https://w3c.github.io/mathml-core/) est en cours. Il est recommandé d'utiliser cette nouvelle spécification pour le développement et l'édition sur le Web et de recourir à d'autres technologies web pour compléter les cas d'usages qui étaient uniquement couverts par l'ancienne spécification.
+
+## Référence MathML
 
 - [Référence des éléments MathML](/fr/docs/Web/MathML/Element)
   - : Des informations précises sur chaque élément MathML et leurs compatibilités avec les différents navigateurs.
 - [Référence des attributs MathML](/fr/docs/Web/MathML/Attribute)
   - : Des informations sur les attributs MathML qui modifient l'apparence ou le comportement des éléments.
-- [Exemples avec MathML](/fr/docs/Web/MathML/Examples)
-  - : Des fragments de code MathML ainsi que des exemples pour comprendre comment ça fonctionne.
-- [Éditer du MathML](/docs/Web/MathML/Authoring)
-  - : Des conseils sur l'édition de document en MathML : quels éditeurs à utiliser et comment intégrer le code produit dans du contenu web.
+- [Exemples MathML](/fr/docs/Web/MathML/Examples)
+  - : Des fragments de code MathML ainsi que des exemples pour comprendre son fonctionnement.
+- [Éditer du MathML](/fr/docs/Web/MathML/Authoring)
+  - : Des conseils sur l'édition de document en MathML&nbsp;: les éditeurs à utiliser et comment intégrer le code produit dans du contenu web.
 
 ## Obtenir de l'aide de la communauté
 
-- Les forums de Mozilla
-  {{ DiscussionList("dev-tech-mathml", "mozilla.dev.tech.mathml") }}
-- [Les salons IRC](irc://irc.mozilla.org/%23mathml)
-- [Le Wiki utilisé par les contributeurs de Mozilla](https://wiki.mozilla.org/MathML:Home_Page)
-- [La page d'accueil de W3C Math](http://www.w3.org/Math/)
-- [Les archives mail de www-math w3.org](http://lists.w3.org/Archives/Public/www-math/)
+- [La page d'accueil de W3C Math](https://www.w3.org/Math/)
+- [Les archives mail de www-math w3.org](https://lists.w3.org/Archives/Public/www-math/)
+- [Le groupe Google mozilla.dev.tech.mathml (inactif depuis 2020)](https://groups.google.com/g/mozilla.dev.tech.mathml)
+- [Le wiki utilisé par les contributrices et contributeurs de Mozilla (page éditée pour la dernière fois en 2016)](https://wiki.mozilla.org/MathML:Home_Page)
 
-## Outils facilitant le développement avec MathML
+## Outils
 
-- [Le validateur W3C](http://validator.w3.org)
-- [L'extension FireMath pour Firefox](https://addons.mozilla.org/de/firefox/addon/8969/)
-- [L'ensemble d'extensions Mathzilla pour Firefox](https://addons.mozilla.org/firefox/collections/fred_wang/mathzilla/)
-- [TeXZilla](https://github.com/fred-wang/TeXZilla) - Convertisseur Javascript de LaTeX à MathML ([demo](http://fred-wang.github.io/TeXZilla/), [Firefox OS webapp](http://r-gaia-cs.github.io/TeXZilla-webapp/), [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/texzilla/), [utilisation dans une page Web Page, un programme JS etc](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla))
-- [LaTeXML](http://dlmf.nist.gov/LaTeXML/) - Transformez vos documents LaTeX en pages HTML+MathML.
-- [Web Equation](http://webdemo.visionobjects.com/equation.html) - Transformez des équations manuscrites en MathML ou LaTeX
-- [Mathjax](http://www.mathjax.org/) - Moteur de rendu de Javascript pour les formules mathématiques, compatible avec tous les navigateurs. Pour forcer MathJax à utiliser le MathML natif, essayez cette [extension pour Safari](http://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz) ou ce [script GreaseMonkey](https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/).
+- [Le validateur W3C](https://validator.w3.org)
+- [L'ensemble d'extensions Mathzilla pour Firefox](https://addons.mozilla.org/fr/firefox/collections/5509895/mathzilla/)
+- [TeXZilla](https://github.com/fred-wang/TeXZilla) — convertisseur JavaScript de LaTeX à MathML ([démo](http://fred-wang.github.io/TeXZilla/), [extension Firefox](https://addons.mozilla.org/fr/firefox/addon/texzilla/), [utilisation dans une page web, un programme JavaScript, etc.](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla))
+- [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) qui permet de transformer des documents LaTeX en pages HTML+MathML
+- [MathJax](https://www.mathjax.org/) — moteur de rendu de JavaScript pour les formules mathématiques, compatible avec tous les navigateurs. Pour forcer MathJax à utiliser le MathML natif, essayez [cette extension Firefox](https://addons.mozilla.org/fr/firefox/addon/native-mathml/), ou [cette extension pour Safari](https://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz) ou [ce script GreaseMonkey](https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/).
 
-## Sujets liés
+## Sujets connexes
 
-- [CSS](/fr/docs/CSS)
+- [CSS](/fr/docs/Web/CSS)
 - [HTML](/fr/docs/Web/HTML)
-- [SVG](/fr/docs/SVG)
+- [SVG](/fr/docs/Web/SVG)
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.math", 0)}}
+{{Compat}}

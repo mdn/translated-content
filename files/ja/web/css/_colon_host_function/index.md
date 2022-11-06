@@ -1,25 +1,16 @@
 ---
 title: ':host()'
 slug: Web/CSS/:host_function
-tags:
-  - ':host()'
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-translation_of: Web/CSS/:host()
 original_slug: Web/CSS/:host()
-browser-compat: css.selectors.hostfunction
 ---
+
 {{CSSRef}}
 
 **`:host()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、その中で使われている CSS を含む[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) のシャドウホストを選択します（従ってカスタム要素をそのシャドウ DOM 内部から選択できます）。ただし、関数の引数として与えられたセレクターがシャドウホストと一致した場合のみです。
 
 この最も明白な使用法は、特定のカスタム要素インスタンスにのみクラス名を付け、関数の引数として関連するクラスセレクターを指定することです。特定の祖先の内部にあるカスタム要素のインスタンスのみを選択するために、子孫セレクター式でこれを使用することはできません。それは {{CSSxRef(":host-context()")}} の仕事です。
 
-> **Note:** これは、シャドウ DOM の外部で使用されても効果がありません。
+> **メモ:** これは、シャドウ DOM の外部で使用されても効果がありません。
 
 ```css
 /* セレクターの引数に一致する場合のみ、
@@ -31,7 +22,9 @@ browser-compat: css.selectors.hostfunction
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:host( <compound-selector> )
+```
 
 ## 例
 

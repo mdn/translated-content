@@ -1,20 +1,8 @@
 ---
 title: フレックスコンテナー内のアイテムの配置
 slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
-tags:
-  - 配置
-  - CSS
-  - Flex
-  - ガイド
-  - align-content
-  - align-items
-  - align-self
-  - alignment
-  - フレックスボックス
-  - justify
-  - justify-content
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 ---
+
 {{CSSRef}}
 
 フレックスボックスがウェブ開発者の関心を急速に集めた理由の一つに、ウェブコンテンツで適切な位置合わせができる初めての機能であってことが挙げられます。正しい縦の位置合わせが可能になったことで、ついにボックスの中央寄せを簡単にできるようになりました。このガイドでは、フレックスボックスにおいて位置合わせや行端揃えのプロパティがどのように働くかを詳しくみていきます。
@@ -111,7 +99,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}}
 
-> **Note:** `space-evenly` はフレックスボックス仕様書では定義されておらず、あとからボックス配置仕様書に追加されたものです。この値に対するブラウザーの対応は、フレックスボックス仕様書に定義されている他の値より遅れています。
+> **メモ:** `space-evenly` はフレックスボックス仕様書では定義されておらず、あとからボックス配置仕様書に追加されたものです。この値に対するブラウザーの対応は、フレックスボックス仕様書に定義されている他の値より遅れています。
 
 上述の値についての詳細とブラウザーの対応状況については [MDN の `justify-content` のページ](/ja/docs/Web/CSS/justify-content)を参照してください。
 
@@ -195,7 +183,6 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 フレックスのアイテム間に間隔を作るには、{{cssxref("gap")}}、{{cssxref("column-gap")}}、{{cssxref("row-gap")}}の各プロパティを使用します。{{cssxref("column-gap")}} プロパティは、主軸のアイテム間に間隔を作成します。{{cssxref("row-gap")}} プロパティは、{{cssxref("flex-wrap")}} が `wrap` に設定されている場合、フレックス行間に間隔を作成します。{{cssxref("gap")}} プロパティは、両方を一緒に設定する一括指定です。
 
 {{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 700)}}
-
 
 ## 関連情報
 

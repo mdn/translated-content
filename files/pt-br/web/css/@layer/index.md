@@ -1,17 +1,8 @@
 ---
 title: '@layer'
 slug: Web/CSS/@layer
-tags:
-  - '@layer'
-  - At-rule
-  - CSS
-  - Referência
-  - Web
-  - camada
-  - cascata
-
-browser-compat: css.at-rules.layer
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 A [regra at (at-rule)](/pt-BR/docs/Web/CSS/At-rule) **`@layer`** define uma _camada de cascata_. Dentro dessa camada, as regras CSS fazem parte da mesma cascata, dando mais controle sobre as cascatas para os desenvolvedores web.
@@ -97,6 +88,7 @@ Se uma camada não tiver seu nome declarado, como por exemplo:
   }
 }
 ```
+
 Então uma camada anônima é criada. Ela funciona da mesma maneira das camadas nomeadas, porém novas regras não podem ser adicionadas à essa camada.
 
 ## Sintaxe formal

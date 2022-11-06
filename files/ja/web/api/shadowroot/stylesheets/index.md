@@ -1,14 +1,8 @@
 ---
 title: ShadowRoot.styleSheets
 slug: Web/API/ShadowRoot/styleSheets
-tags:
-  - API
-  - ShadowRoot
-  - プロパティ
-  - リファレンス
-  - スタイルシート
-browser-compat: api.ShadowRoot.styleSheets
 ---
+
 {{APIRef("CSSOM")}}
 
 **`styleSheets`** は {{domxref("ShadowRoot")}} インターフェイスの読み取り専用プロパティで、シャドウツリーに明示的にリンクされるか埋め込まれたスタイルシートを表す {{domxref('CSSStyleSheet')}} オブジェクトの {{domxref('StyleSheetList')}} を返します。

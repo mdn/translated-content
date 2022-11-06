@@ -10,6 +10,7 @@ tags:
   - Types CSS
 translation_of: Web/CSS/Reference
 ---
+
 {{CSSRef}}
 
 Cette **référence CSS** fournit un **[index alphabétique](#index_des_mots-clés)** de toutes les propriétés [CSS](/fr/docs/Web/CSS) standards, des [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes), des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements), des [types de données](/fr/docs/Web/CSS/CSS_Types) et des [règles @](/fr/docs/Web/CSS/At-rule). Vous pouvez également trouver une liste alphabétique de tous les **[sélecteurs CSS par type](#sélecteurs)** et une liste des **[concepts clés de CSS](#concepts)**. Enfin est inclus un bref sommaire de **[référence sur DOM-CSS / CSSOM](#dom-css_cssom)**.
@@ -18,19 +19,23 @@ Cette **référence CSS** fournit un **[index alphabétique](#index_des_mots-cl�
 
 ### Syntaxe de style basique
 
-    règle-de-style-basique ::=
-        liste-de-sélecteurs {
-          liste-de-propriétés
-        }
+```
+règle-de-style-basique ::=
+    liste-de-sélecteurs {
+      liste-de-propriétés
+    }
+```
 
 ... où :
 
-    liste-de-sélecteurs ::=
-        sélecteur[:pseudo-classe] [::pseudo-élément]
-        [, liste-de-sélecteurs]
+```
+liste-de-sélecteurs ::=
+    sélecteur[:pseudo-classe] [::pseudo-élément]
+    [, liste-de-sélecteurs]
 
-    liste-de-propriétés ::=
-        [propriété : valeur] [; liste-de-propriétés]
+liste-de-propriétés ::=
+    [propriété : valeur] [; liste-de-propriétés]
+```
 
 Voir aussi les [_sélecteurs_](#sélecteurs), [_pseudo-classes_](#pseudo-classes), et _[pseudo-éléments](#pseudo-éléments)_ listés ci-dessous. La syntaxe des _valeurs_ dépend du type de données attendu pour chaque _propriété_ indiquée.
 

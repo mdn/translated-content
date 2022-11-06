@@ -1,44 +1,42 @@
 ---
-title: WindowOrWorkerGlobalScope.crossOriginIsolated
+title: crossOriginIsolated
 slug: Web/API/crossOriginIsolated
-translation_of: Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated
+page-type: web-api-global-property
+translation_of: Web/API/crossOriginIsolated
 original_slug: Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated
+browser-compat: api.crossOriginIsolated
 ---
+
 {{APIRef()}}{{SeeCompatTable}}
 
-La propriéte en lecture seule **`crossOriginIsolated`** de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne une valeur booléenne qui indique si un {{jsxref("SharedArrayBuffer")}} peut être envoyé via un appel à {{domxref("Window.postMessage()")}}.
+La propriété globale en lecture seule **`crossOriginIsolated`** renvoie une valeur booléenne indiquant si un objet [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) peut être envoyé via un appel à [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage).
 
-Cette valeur est dépendante de toute entête {{httpheader("Cross-Origin-Opener-Policy")}} et {{httpheader("Cross-Origin-Embedder-Policy")}} présente dans la réponse.
+Cette valeur dépend des en-têtes [`Cross-Origin-Opener-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) et
+[`Cross-Origin-Embedder-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) présents dans la réponse HTTP.
 
-## Syntaxe
+## Valeur
 
-    var myCrossOriginIsolated = self.crossOriginIsolated; // or just crossOriginIsolated
-
-### Valeur
-
-Une valeur booléenne
+Une valeur booléenne.
 
 ## Exemples
 
 ```js
 if(crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  // On peut envoyer un SharedArrayBuffer
 } else {
-  // Do something else
+  // Sinon on fait autre chose
 }
 ```
 
 ## Spécifications
 
-| Spécification                        | Statut | Commentaire                          |
-| ------------------------------------ | ------ | ------------------------------------ |
-| {{SpecName("HTML WHATWG")}} |        | Pas encore ajouté à la spécification |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.crossOriginIsolated")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Service Workers](/en-US/docs/Web/API/ServiceWorker_API)
-- [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
+- [L'API <i lang="en">Service Workers</i>](/fr/docs/Web/API/Service_Worker_API)
+- [L'API <i lang="en">Web Workers</i>](/fr/docs/Web/API/Web_Workers_API)

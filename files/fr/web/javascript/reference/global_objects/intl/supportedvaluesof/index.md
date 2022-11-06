@@ -3,6 +3,7 @@ title: Intl.supportedValuesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
 browser-compat: javascript.builtins.Intl.supportedValuesOf
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 La méthode **`Intl.supportedValuesOf()`** renvoie un tableau qui contient le calendrier, la collation, la devise, les systèmes de numérations ou les unités prises en charge par l'implémentation.
@@ -55,8 +56,8 @@ Intl.supportedValuesOf("calendar").forEach(function(calendar) {
    // "buddhist", "chinese", "coptic", "dangi", ...
 });
 ```
-> **Note :** Le tableau renvoyé pour les calendriers contiendra toujours la valeur "gregory" (calendrier grégorien).
 
+> **Note :** Le tableau renvoyé pour les calendriers contiendra toujours la valeur "gregory" (calendrier grégorien).
 
 Les autres valeurs peuvent être obtenues de la même façon&nbsp;:
 
@@ -96,7 +97,6 @@ try {
 
 [Prothèse pour `Intl.supportedValuesOf()` dans la proposition TC39](https://github.com/tc39/proposal-intl-enumeration/tree/master/polyfill)
 
-
 ## Spécifications
 
 {{Specifications}}
@@ -108,4 +108,3 @@ try {
 ## Voir aussi
 
 - [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
-

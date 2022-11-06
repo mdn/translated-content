@@ -6,13 +6,16 @@ tags:
 translation_of: Web/XPath/Functions/string-length
 original_slug: Web/XPath/Fonctions/string-length
 ---
+
 {{ XsltRef() }}
 
 La fonction `string-length` retourne le nombre de caractères dans une chaîne donnée.
 
 ### Syntaxe
 
-    string-length( [chaîne] )
+```
+string-length( [chaîne] )
+```
 
 ### Arguments
 

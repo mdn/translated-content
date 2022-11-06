@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-column
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-column`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) pour {{cssxref("grid-column-start")}} et {{cssxref("grid-column-end")}}. Elle permet de définir la taille et l'emplacement d'un élément sur la grille en indiquant l'emplacement du début, de la fin et/ou sa taille.
@@ -82,9 +83,13 @@ Une valeur `<grid-line>` peut être définie avec :
 
     Si l'entier n'est pas défini, la valeur par défaut qui sera utilisée sera `1`. Les entiers négatifs ou nuls sont invalides.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -133,15 +138,11 @@ IE11 ne prend pas en charge le placement automatique des objets sur la grille.To
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-column", "grid-column")}} | {{Spec2("CSS3 Grid")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid-column")}}
+{{Compat}}
 
 ## Voir aussi
 

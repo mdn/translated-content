@@ -9,9 +9,10 @@ tags:
   - vrdisplaydisconnect
 translation_of: Web/API/Window/vrdisplaydisconnect_event
 ---
+
 {{APIRef("Window")}}
 
-L'événement **`vrdisplaydisconnect`** de l'[API WebVR](/en-US/docs/Web/API/WebVR_API) est déclenché lorsqu'un écran VR compatible est déconnecté de l'ordinateur.
+L'événement **`vrdisplaydisconnect`** de l'[API WebVR](/fr/docs/Web/API/WebVR_API) est déclenché lorsqu'un écran VR compatible est déconnecté de l'ordinateur.
 
 <table class="properties">
   <tbody>
@@ -42,7 +43,7 @@ L'événement **`vrdisplaydisconnect`** de l'[API WebVR](/en-US/docs/Web/API/Web
 
 ## Exemples
 
-Vous pouvez utiliser l'événement `vrdisplaydisconnect` dans une méthode [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) :
+Vous pouvez utiliser l'événement `vrdisplaydisconnect` dans une méthode [`addEventListener`](/fr/docs/Web/API/EventTarget/addEventListener) :
 
 ```js
 window.addEventListener('vrdisplaydisconnect', function() {
@@ -51,7 +52,7 @@ window.addEventListener('vrdisplaydisconnect', function() {
 });
 ```
 
-Ou utilisez la propriété du gestionnaire d'événements [`onvrdisplaydisconnect`](/en-US/docs/Web/API/Window/onvrdisplaydisconnect) :
+Ou utilisez la propriété du gestionnaire d'événements [`onvrdisplaydisconnect`](/fr/docs/Web/API/Window/onvrdisplaydisconnect) :
 
 ```js
 window.onvrdisplaydisconnect = function() {
@@ -62,15 +63,13 @@ window.onvrdisplaydisconnect = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                       | Commentair          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('WebVR 1.1', '#dom-window-onvrdisplaydisconnect', 'vrdisplaydisconnect')}} | {{Spec2('WebVR 1.1')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.vrdisplaydisconnect_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- [WebVR API homepage](/fr/docs/Web/API/WebVR_API)
 - [MozVr.com](http://mozvr.com/) — démos, téléchargements et autres ressources de l'équipe Mozilla VR.

@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/Session_Hijacking
 original_slug: Glossaire/Détournement_de_session
 ---
+
 **Le détournement de session** se produit lorsqu'un attaquant prend le contrôle d'une session valide entre deux ordinateurs. L'attaquant vole un identifiant de session valide afin de pénétrer dans le système et de fouiller les données.
 
 Le plus souvent, l'authentification se produit seulement au début d'une session {{glossary("TCP")}}. Dans un détournement de session TCP, un attaquant obtient l'accès en prenant en charge une session TCP entre deux machines en milieu de session.
@@ -25,11 +26,11 @@ Le plus souvent, l'authentification se produit seulement au début d'une session
 
 ### Le processus de piratage de session
 
-1.  **Sniffez**, c'est-à-dire effectuez une attaque d'homme-dans-le-milieu (MitM), placez-vous entre la victime et le serveur.
-2.  **Surveillez** les paquets circulant entre le serveur et l'utilisateur.
-3.  **Brisez** la connexion de la machine victime.
-4.  **Prenez le contrôle** de la session.
-5.  **Injectez** de nouveaux paquets au serveur en utilisant l'ID de session de la victime.
+1. **Sniffez**, c'est-à-dire effectuez une attaque d'homme-dans-le-milieu (MitM), placez-vous entre la victime et le serveur.
+2. **Surveillez** les paquets circulant entre le serveur et l'utilisateur.
+3. **Brisez** la connexion de la machine victime.
+4. **Prenez le contrôle** de la session.
+5. **Injectez** de nouveaux paquets au serveur en utilisant l'ID de session de la victime.
 
 ### Protection contre le détournement de session
 
@@ -40,8 +41,8 @@ Le plus souvent, l'authentification se produit seulement au début d'une session
 - transmettre des données chiffrées entre les utilisateurs et le serveur web
 - utiliser une chaîne ou un long nombre aléatoire comme clé de session
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Hijacking")}} sur Wikipedia
+- [<i lang="en">Hijacking</i>](https://fr.wikipedia.org/wiki/Hijacking) sur Wikipédia

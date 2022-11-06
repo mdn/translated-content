@@ -4,6 +4,7 @@ slug: Web/CSS/cursor
 translation_of: Web/CSS/cursor
 browser-compat: css.properties.cursor
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`cursor`** définit la forme du curseur (s'il y en a un) lorsque le pointeur est au-dessus de l'élément.
@@ -349,9 +350,13 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
       </tbody>
     </table>
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Notes d'utilisation
 
@@ -395,12 +400,7 @@ Pour plus d'informations, voir le tableau de compatibilité ci-après.
 
 ## Spécifications
 
-| Spécification                                                                | État                                 | Commentaires                                                                  |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Basic UI', '#cursor', 'cursor')}}         | {{Spec2('CSS3 Basic UI')}} | Ajout de plusieurs mots-clés et de la syntaxe de positionnement pour `url()`. |
-| {{SpecName('CSS2.1', 'ui.html#cursor-props', 'cursor')}} | {{Spec2('CSS2.1')}}             | Définition initiale.                                                          |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/has
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/has
 ---
+
 {{JSRef}}
 
 La méthode **`has()`** renvoie un booléen permettant de déterminer si l'objet `Map` en question contient la clé donnée.
@@ -19,7 +20,9 @@ La méthode **`has()`** renvoie un booléen permettant de déterminer si l'objet
 
 ## Syntaxe
 
-    maMap.has(clé);
+```js
+maMap.has(clé);
+```
 
 ### Paramètres
 
@@ -42,14 +45,11 @@ maMap.has("machin");// renvoie false
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-map.prototype.has', 'Map.prototype.has')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.has', 'Map.prototype.has')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Map.has")}}
+{{Compat}}
 
 ## Voir aussi
 

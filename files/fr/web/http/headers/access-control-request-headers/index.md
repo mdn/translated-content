@@ -1,55 +1,52 @@
 ---
 title: Access-Control-Request-Headers
 slug: Web/HTTP/Headers/Access-Control-Request-Headers
-tags:
-  - CORS
-  - HTTP
-  - entête
-  - pré-vérification
 translation_of: Web/HTTP/Headers/Access-Control-Request-Headers
+browser-compat: http.headers.Access-Control-Request-Headers
 ---
+
 {{HTTPSidebar}}
 
-L'entête **`Access-Control-Request-Headers`** est utilisé quand une requête de pré-vérification ({{glossary("preflight request")}}) et faite vers le serveur pour savoir les entêtes qui seront utilisés après la pré-vérification.
+L'en-tête de requête **`Access-Control-Request-Headers`** est utilisé lors de l'émission d'[une requête de pré-vérification](/fr/docs/Glossary/Preflight_request) pour indiquer au serveur quels sont les [en-têtes HTTP](/fr/docs/Web/HTTP/Headers) que le client pourrait envoyer lors de la requête effective (comme avec [`setRequestHeader()`](/fr/docs/Web/API/XMLHttpRequest/setRequestHeader)). L'en-tête correspondant côté serveur, indiquant en retour au client les en-têtes pouvant être utilisés pour la requête effective, est [`Access-Control-Allow-Headers`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Headers).
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}</td>
+      <th scope="row">Type d'en-tête</th>
+      <td><a href="/fr/docs/Glossary/Request_header">En-tête de requête</a></td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <th scope="row"><a href="/fr/docs/Glossary/Forbidden_header_name">Nom d'en-tête interdit</a></th>
+      <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntaxe
 
-    Access-Control-Request-Headers: <header-name>, <header-name>, ...
+```
+Access-Control-Request-Headers: <nom_en-tete>, <nom_en-tete>, …
+```
 
 ## Directives
 
-- \<header-name>
-  - : Une liste [d'entête HTTP](/en-US/docs/Web/HTTP/Headers) séparé par des virgules qui sont inclus dans la requête.
+- `<nom_en-tete>`
+  - : Une liste [d'en-têtes HTTP](/fr/docs/Web/HTTP/Headers) séparés par des virgules qui sont inclus dans la requête.
 
 ## Exemples
 
-    Access-Control-Request-Headers: X-PINGOTHER, Content-Type
-
-Dans cet exemple le serveur en réponse à la demande de pré-vérification indiquer au demandeur de la pré-vérification que la requête suivante sera accepté si elle contient _X-PINGOTHER_ ou _Content-type_.
+```
+Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+```
 
 ## Spécifications
 
-| Spécification                                                                                                                | Status                   | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#http-access-control-request-headers', 'Access-Control-Request-Headers')}} | {{Spec2("Fetch")}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("http/headers/access-control-request-headers")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
-- {{HTTPHeader("Access-Control-Request-Method")}}
+- [`Access-Control-Request-Method`](/fr/docs/Web/HTTP/Headers/Access-Control-Request-Method)

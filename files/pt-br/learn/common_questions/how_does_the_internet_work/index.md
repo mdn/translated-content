@@ -1,12 +1,6 @@
 ---
 title: Como a Internet funciona?
 slug: Learn/Common_questions/How_does_the_Internet_work
-tags:
-  - Iniciante
-  - Mecanismos Web
-  - Tutorial
-  - Web
-translation_of: Learn/Common_questions/How_does_the_Internet_work
 original_slug: Learn/Common_questions/Como_a_internet_funciona
 ---
 
@@ -37,13 +31,13 @@ Este artigo discute sobre o que é e como funciona a internet.
 
 A **Internet** é a espinha dorsal da Web, a infraestrutura técnica que faz a Web possível. Mas basicamente, a Internet é uma gigantesca rede de computadores que se comunicam juntos.
 
-[A história da internet é um pouco obscura](https://pt.wikipedia.org/wiki/Internet#Hist.C3.B3ria). Ela começou nos anos 60 como um projeto de pesquisa consolidado pelo exército norte americano, e tornou-se uma infraestrutura pública nos anos 80 com o suporte dado por diversas universidades públicas e companhias privadas. As várias tecnologias que suportam a internet evoluíram através do tempo, mas a forma de funcionamento não mudou muito: Internet é uma forma de conectar computadores e garantir, em qualquer situação, que eles encontrem uma forma de se manter conectados.
+[A história da internet é um pouco obscura](https://pt.wikipedia.org/wiki/Internet#Hist.C3.B3ria). Ela começou nos anos 60 como um projeto de pesquisa consolidado pelo exército norte americano, e tornou-se uma infraestrutura pública nos anos 80 com o suporte dado por diversas universidades públicas e companhias privadas. As várias tecnologias que suportam a internet evoluíram através do tempo, mas a forma de funcionamento não mudou muito: Internet é uma forma de conectar computadores e garantir, em qualquer situação, que eles encontrem uma forma de se manter conectados.
 
 ## Aprendizado Ativo
 
 - [Como a Internet funciona em 5 minutos](https://www.youtube.com/watch?v=7_LPdttKXPc): Um vídeo de 5 minutos para entender os conceitos básicos da Internet feito por Aaron Titus.
 
-- [Como a Internet funciona?](https://www.youtube.com/watch?v=x3c1ih2NJEg): Vídeo animado de 9 minutos bem detalhado feito pelo canal Lesics (Learn Engineering Through Physics).
+- [Como a Internet funciona?](https://www.youtube.com/watch?v=x3c1ih2NJEg): Vídeo animado de 9 minutos bem detalhado feito pelo canal Lesics (Learn Engineering Through Physics).
 
 ## Mergulho Profundo
 
@@ -75,7 +69,7 @@ Conectando computadores a roteadores, e então roteadores a roteadores nós pode
 
 ![Roteadores conectados a roteadores](internet-schema-5.png)
 
-Esta rede é muito parecida com o que chamamos de Internet, mas alguma coisa está faltando. Nós construímos tais redes para nossos próprios fins. Existem outras redes além das nossas ligadas em outros lugares: nossos amigos, vizinhos, qualquer pessoa pode ter uma rede de computadores. Mas é inviável ligarmos cabos entre nossas casas e o resto do mundo, então como nos podemos lidar com isso? Muito bem, já existem cabos ligados a sua casa, como por exemplo, cabos de eletricidade e telefone. A estrutura do telefone já conecta nossa casa com o resto do mundo, então é exatamente o que nós precisamos. Para conectar nossa rede a rede telefônica, precisamos de um equipamento especial chamado _modem_. Este *modem* transforma a informação da nossa rede em uma informação gerenciável pela rede telefônica e vice-versa.
+Esta rede é muito parecida com o que chamamos de Internet, mas alguma coisa está faltando. Nós construímos tais redes para nossos próprios fins. Existem outras redes além das nossas ligadas em outros lugares: nossos amigos, vizinhos, qualquer pessoa pode ter uma rede de computadores. Mas é inviável ligarmos cabos entre nossas casas e o resto do mundo, então como nos podemos lidar com isso? Muito bem, já existem cabos ligados a sua casa, como por exemplo, cabos de eletricidade e telefone. A estrutura do telefone já conecta nossa casa com o resto do mundo, então é exatamente o que nós precisamos. Para conectar nossa rede a rede telefônica, precisamos de um equipamento especial chamado _modem_. Este *modem* transforma a informação da nossa rede em uma informação gerenciável pela rede telefônica e vice-versa.
 
 ![Um roteador conectado a um modem](internet-schema-6.png)
 

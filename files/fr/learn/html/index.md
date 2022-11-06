@@ -1,5 +1,5 @@
 ---
-title: 'Apprendre le HTML&nbsp;: guides et didacticiels'
+title: 'Apprendre le HTML : guides et didacticiels'
 slug: Learn/HTML
 tags:
   - Apprentissage
@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/HTML
 original_slug: Apprendre/HTML
 ---
+
 {{LearnSidebar}}
 
 > Pour créer des sites Web, vous devez connaître le {{Glossary('HTML')}} — technique fondamentale utilisée pour définir la structure d'une page Web. HTML est utilisé pour dire si votre contenu web doit être reconnu en tant que paragraphe, liste, en-tête, lien, image, lecteur multimédia, formulaire ou l'un des nombreux autres éléments disponibles ou même un nouvel élément à définir par vous même.

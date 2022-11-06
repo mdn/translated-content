@@ -1,20 +1,8 @@
 ---
 title: Element.getClientRects()
 slug: Web/API/Element/getClientRects
-tags:
-  - API
-  - CSSOM View
-  - Element
-  - メソッド
-  - リファレンス
-  - clientHeight
-  - getBoundingClientRect
-  - getClientRects
-  - offsetHeight
-  - scrollHeight
-browser-compat: api.Element.getClientRects
-translation_of: Web/API/Element/getClientRects
 ---
+
 {{APIRef("DOM")}}
 
 **`getClientRects()`** は {{domxref("Element")}} インターフェイスのメソッドで、クライアントにあるそれぞれの [CSS 境界ボックス](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)の境界線を示す {{DOMxRef("DOMRect")}} オブジェクトのコレクションを返します。

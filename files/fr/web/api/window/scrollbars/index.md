@@ -9,13 +9,16 @@ tags:
   - Window
 translation_of: Web/API/Window/scrollbars
 ---
+
 {{APIRef()}}
 
 La propriété **`Window.scrollbars`** renvoie l'objet `scrollbars`, dont la visibilité peut être vérifié.
 
 ## Syntaxe
 
-    objRef = window.scrollbars
+```js
+objRef = window.scrollbars
+```
 
 ## Exemple
 
@@ -38,16 +41,13 @@ L'exemple HTML complet suivant montre comment la propriété `visible` de l'obje
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-scrollbars', 'Window.scrollbars')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-scrollbars', 'Window.scrollbars')}}     | {{Spec2('HTML5 W3C')}}     |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.scrollbars")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("window.locationbar")}}
 - {{domxref("window.menubar")}}

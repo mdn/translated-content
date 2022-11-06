@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/CSS_Fonts/OpenType_fonts_guide
 original_slug: Web/CSS/CSS_Fonts/Guide_caractéristiques_police_OpenType
 ---
+
 {{CSSRef}}
 
 Les caractéristiques de police ou variantes font référence à différents glyphes ou styles de caractère contenus dans une police OpenType. Cela inclut notamment les ligatures (des caractères spéciaux qui permettent de combiner des caractères entre eux comme œ qui est la ligature entre o et e), le crénage (_kerning_ en anglais) qui définit l'espacement entre certaines lettres, les fractions et styles numériques, etc. Toutes ces caractéristiques sont des caractéristiques OpenType Features et peuvent être utilisées sur le Web grâce à certaines propriétés spécifiques qui permettent un contrôle de bas niveau comme {{cssxref("font-feature-settings")}}. Dans cet article, nous verrons tout ce qu'il faut savoir pour manipuler les caractéristiques OpenType avec CSS.
@@ -136,7 +137,7 @@ La propriété raccourcie `font-variant` permet de définir l'ensemble des carac
 
 ## Utiliser `font-feature-settings`
 
-La propriété {{cssxref("font-feature-settings")}} permet d'utiliser une syntaxe « bas niveau » qui permet un accès explicite à chaque caractéristique OpenType disponible. On dispose ainsi d'un contrôle accru mais on perd l'héritage et il faut tout redéclarer à chaque fois qu'on souhaite modifier une caractéristique (sauf à utiliser [des propriétés CSS personnalisées](/en-US/docs/Web/CSS/Using_CSS_custom_properties) afin de définir les valeurs). Aussi, mieux vaut utiliser les propriétés standards lorsque c'est possible.
+La propriété {{cssxref("font-feature-settings")}} permet d'utiliser une syntaxe « bas niveau » qui permet un accès explicite à chaque caractéristique OpenType disponible. On dispose ainsi d'un contrôle accru mais on perd l'héritage et il faut tout redéclarer à chaque fois qu'on souhaite modifier une caractéristique (sauf à utiliser [des propriétés CSS personnalisées](/fr/docs/Web/CSS/Using_CSS_custom_properties) afin de définir les valeurs). Aussi, mieux vaut utiliser les propriétés standards lorsque c'est possible.
 
 Il existe une myriade de caractéristiques possibles. Vous pouvez en voir quelques exemples ici et il existe plusieurs ressources pour en exploiter d'autres.
 

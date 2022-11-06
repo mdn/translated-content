@@ -14,6 +14,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 ---
+
 {{AddonSidebar()}}
 
 Injecte du code JavaScript dans une page.
@@ -78,7 +79,7 @@ Le résultat du script est la dernière instruction évaluée, ce qui est simila
 var foo='my result';foo;
 ```
 
-Ici, le tableau des résultats contiendra la chaîne `"my result"` en tant qu’élément. Les valeurs de résultat doivent être [clonables tructurées](/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure). La dernière déclaration peut également être une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), mais cette fonctionnalité n'est pas supportée par la bibliothèque [webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript).
+Ici, le tableau des résultats contiendra la chaîne `"my result"` en tant qu’élément. Les valeurs de résultat doivent être [clonables structurées](/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure). La dernière déclaration peut également être une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), mais cette fonctionnalité n'est pas supportée par la bibliothèque [webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript).
 Si une erreur se produit, la promesse sera rejetée avec un message d’erreur.
 
 ## Exemples
@@ -148,7 +149,8 @@ executing.then(onExecuted, onError);
 >
 > Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -175,4 +177,4 @@ executing.then(onExecuted, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

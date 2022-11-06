@@ -9,6 +9,7 @@ tags:
   - URL API
 translation_of: Web/API/URL/URL
 ---
+
 {{APIRef("URL API")}}
 
 Le constructeur **`URL()`** renvoie un nouvel objet {{domxref("URL")}} représentant l'URL définie par les paramètres.
@@ -17,9 +18,11 @@ Si l'URL de base donnée ou l'URL résultante ne sont pas des URL valides, une {
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Syntaxe
 
-    url = new URL(url, [base])
+```
+url = new URL(url, [base])
+```
 
 ### Paramètres
 
@@ -54,16 +57,14 @@ var k = new URL('http://www.example.com', 'https://developers.mozilla.com');
 var l = new URL('http://www.example.com', b);          // Crée une URL pointant vers 'http://www.example.com/'
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                    | Statut               | Commentaire     |
-| ---------------------------------------------------------------- | -------------------- | --------------- |
-| {{SpecName('URL', '#constructors', 'URL.URL()')}} | {{Spec2('URL')}} | initialisation. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.URL.URL")}}
+{{Compat}}
 
-## À voir également
+## Voir aussi
 
 - L'interface à laquelle il appartient : {{domxref("URL")}}.

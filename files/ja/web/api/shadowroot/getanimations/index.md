@@ -1,23 +1,8 @@
 ---
 title: ShadowRoot.getAnimations()
 slug: Web/API/ShadowRoot/getAnimations
-tags:
-  - API
-  - Animation
-  - CSS
-  - CSS アニメーション
-  - CSS トランジション
-  - ShadowRoot
-  - メソッド
-  - リファレンス
-  - トランジション
-  - ウェブアニメーション
-  - getAnimations
-  - waapi
-  - ウェブアニメーション API
-browser-compat: api.ShadowRoot.getAnimations
-translation_of: Web/API/ShadowRoot/getAnimations
 ---
+
 {{APIRef("Web Animations")}}
 
 **`getAnimations()`** は {{domxref("ShadowRoot")}} のメソッドで、ターゲット要素がシャドウツリーの子孫である、現在有効なすべての {{domxref("Animation")}} オブジェクトの配列を返します。この配列には [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)、[CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)、[ウェブアニメーション](/ja/docs/Web/API/Web_Animations_API) が含まれています。

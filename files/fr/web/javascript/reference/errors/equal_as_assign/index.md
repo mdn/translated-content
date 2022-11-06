@@ -8,11 +8,14 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Equal_as_assign
 original_slug: Web/JavaScript/Reference/Erreurs/Equal_as_assign
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
+```
+Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
+```
 
 ## Type d'erreur
 

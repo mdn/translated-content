@@ -13,6 +13,7 @@ tags:
   - placeholders
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
 ---
+
 {{AddonSidebar()}}
 
 Chaque extension internationalisée a au moins un fichier nommé `messages.json` qui fournit des chaînes spécifiques aux paramètres régionaux. Cette page décrit le format des fichiers `messages.json`.
@@ -118,7 +119,7 @@ Le nom de l'espace réservé est utilisé pour représenter l'espace réservé d
 
 L'élément "contenu" définit le contenu de l'espace réservé. Cela peut être une chaîne codée en dur, telle que "My placeholder", mais elle peut également inclure des valeurs obtenues à partir d'un appel {{WebExtAPIRef("i18n.getMessage()")}}. Cette propriété est obligatoire Pour plus d'informations, voir [Récupération des chaînes de messages à partir de Javascript](/fr/Add-ons/WebExtensions/Internationalization#Retrieving_message_strings_from_JavaScript).
 
-#### exemple
+#### Exemple
 
 {{optional_inline}}
 

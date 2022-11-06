@@ -3,6 +3,7 @@ title: KeyboardEvent.code
 slug: Web/API/KeyboardEvent/code
 translation_of: Web/API/KeyboardEvent/code
 ---
+
 {{APIRef("DOM Events")}}
 
 La propriété **`KeyboardEvent.code`** représente une touche physique du clavier (contrairement au caractère généré par celle-ci). En d'autres termes, cette propriété retourne une valeur qui n'est pas modifiée par la disposition du clavier ou l'état des touches de modification.
@@ -64,7 +65,7 @@ Pour essayer ce code, cliquez sur le lien ci-dessous:
 
 ### Gérer les événements de clavier dans un jeu
 
-Cet exemple établit un écouteur d'événements pour l'événement {{event("keydown")}}  qui gère la saisie au clavier pour un jeu qui utilise la disposition de clavier typique "ZQSD" pour se déplacer en avant, à gauche, en arrière et à droite. Cela utilisera les quatre mêmes touches physiquement, quels que soient les caractères correspondants, par exemple si l'utilisateur utilise un clavier QWERTY.
+Cet exemple établit un écouteur d'événements pour l'événement [`keydown`](/fr/docs/Web/API/Element/keydown_event) qui gère la saisie au clavier pour un jeu qui utilise la disposition de clavier typique "ZQSD" pour se déplacer en avant, à gauche, en arrière et à droite. Cela utilisera les quatre mêmes touches physiquement, quels que soient les caractères correspondants, par exemple si l'utilisateur utilise un clavier QWERTY.
 
 #### HTML
 
@@ -139,7 +140,7 @@ function updatePosition(offset) {
 }
 ```
 
-La fonction `refresh()` gère l'application de la rotation et de la position à l'aide d'un [SVG transform](/en-US/docs/Web/SVG/Attribute/transform).
+La fonction `refresh()` gère l'application de la rotation et de la position à l'aide d'un [SVG transform](/fr/docs/Web/SVG/Attribute/transform).
 
 ```js
 function refresh() {
@@ -151,7 +152,7 @@ function refresh() {
 }
 ```
 
-Enfin, la méthode `addEventListener()` est utilisée pour commencer à écouter les événements {{event ("keydown")}}, en mettant à jour chaque touche en mettant à jour la position et l’angle de rotation du vaisseau, puis en appelant la méthode `refresh()` pour tracer le navire dans sa nouvelle position et son nouvel angle.
+Enfin, la méthode `addEventListener()` est utilisée pour commencer à écouter les événements [`keydown`](/fr/docs/Web/API/Element/keydown_event), en mettant à jour chaque touche en mettant à jour la position et l’angle de rotation du vaisseau, puis en appelant la méthode `refresh()` pour tracer le navire dans sa nouvelle position et son nouvel angle.
 
 ```js
 window.addEventListener("keydown", function(event) {
@@ -195,14 +196,12 @@ Pour essayer le code ci-dessus, cliquez sur le bouton ci-dessous:
 
 {{EmbedLiveSample("Gérer_les_événements_de_clavier_dans_un_jeu", 420, 460)}}
 
-Ce code peut être amélioré de plusieurs manières. La plupart des jeux réels surveillent les événements {{event("keydown")}}, démarrent le mouvement lorsque cela se produit et stoppent le mouvement lorsque l'événement {{event("keyup")}} se produit, au lieu de compter sur des répétitions de touches. Cela permettrait des mouvements plus fluides et plus rapides, mais permettrait également au joueur de bouger et de diriger en même temps. Des transitions ou des animations peuvent également être utilisées pour rendre le mouvement du navire plus fluide. Pour permettre cela, il ne faudrait pas utiliser de `switch`, ni de `else if`.ff
+Ce code peut être amélioré de plusieurs manières. La plupart des jeux réels surveillent les événements [`keydown`](/fr/docs/Web/API/Element/keydown_event), démarrent le mouvement lorsque cela se produit et stoppent le mouvement lorsque l'événement [`keyup`](/fr/docs/Web/API/Element/keyup_event) se produit, au lieu de compter sur des répétitions de touches. Cela permettrait des mouvements plus fluides et plus rapides, mais permettrait également au joueur de bouger et de diriger en même temps. Des transitions ou des animations peuvent également être utilisées pour rendre le mouvement du navire plus fluide. Pour permettre cela, il ne faudrait pas utiliser de `switch`, ni de `else if`.ff
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                                                             |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------- |
-| {{SpecName('UI Events', '#dom-keyboardevent-code', 'KeyboardEvent.code')}} | {{Spec2('UI Events')}} | Définition initiale, inclut les [valeurs de code](https://w3c.github.io/uievents-code/). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.KeyboardEvent.code")}}
+{{Compat}}

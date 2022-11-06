@@ -3,13 +3,16 @@ title: CanvasRenderingContext2D.ellipse()
 slug: Web/API/CanvasRenderingContext2D/ellipse
 translation_of: Web/API/CanvasRenderingContext2D/ellipse
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
 La méthode **`CanvasRenderingContext2D.ellipse()`** de l'API Canvas 2D ajoute une ellipse au trajet, centrée en _(x, y)_, les rayons *rayonX* et *rayonY* commençant à *angleDeDébut* et se terminant à *angleDeFin* en allant dans le sens indiqué par *antiHoraire* (par défaut, horaire).
 
 ## Syntaxe
 
-    void ctx.ellipse(x, y, rayonX, rayonY, rotation, angleDébut, angleFin, antihoraire);
+```js
+void ctx.ellipse(x, y, rayonX, rayonY, rotation, angleDébut, angleFin, antihoraire);
+```
 
 ### Paramètres
 
@@ -99,13 +102,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-ellipse", "CanvasRenderingContext2D.ellipse")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.ellipse")}}
+{{Compat}}
 
 ## Voir aussi
 

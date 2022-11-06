@@ -1,18 +1,8 @@
 ---
 title: XMLHttpRequest.status
 slug: Web/API/XMLHttpRequest/status
-tags:
-  - API
-  - エラー
-  - プロパティ
-  - リファレンス
-  - XMLHttpRequest
-  - XMLHttpRequest ステータス
-  - 結果
-  - status
-browser-compat: api.XMLHttpRequest.status
-translation_of: Web/API/XMLHttpRequest/status
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **`XMLHttpRequest.status`** プロパティは読み取り専用で、 `XMLHttpRequest` のレスポンスにおける数値の HTTP [ステータスコード](/ja/docs/Web/HTTP/Status)を返します。

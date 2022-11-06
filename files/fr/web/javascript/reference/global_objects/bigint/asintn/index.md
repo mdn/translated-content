@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt/asIntN
 ---
+
 {{JSRef}}
 
 La méthode statique **`BigInt.asIntN()`** permet d'écréter un nombre `BigInt` pour obtenir un entier signé entre 2^(largeur-1) et 2^(largeur-1)-1.
@@ -17,7 +18,9 @@ La méthode statique **`BigInt.asIntN()`** permet d'écréter un nombre `BigInt`
 
 ## Syntaxe
 
-    var resultat = BigInt.asIntN(largeur, bigint);
+```js
+var resultat = BigInt.asIntN(largeur, bigint);
+```
 
 ### Paramètres
 

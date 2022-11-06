@@ -1,0 +1,85 @@
+---
+title: ':in-range'
+slug: Web/CSS/:in-range
+---
+
+{{CSSRef}}
+
+**`in-range`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes) 代表一个 {{htmlelement("input")}} 元素，其当前值处于属性{{htmlattrxref("min", "input")}} 和{{htmlattrxref("max","input")}} 限定的范围之内。
+
+```css
+/* 该伪类可选定任意的<input>, 但只有在该元素指定了取值范围，并且元素值处于指定范围时才有效*/
+input:in-range {
+  background-color: rgba(0, 255, 0, 0.25);
+}
+```
+
+该伪类用于给用户一个可视化的提示，表示输入域的当前值处于允许范围内。
+
+> **备注：** 该伪类仅适用于那些拥有（或可以接受）取值范围设定的元素。若缺少此类设定，元素值就无所谓“in-range”和“out-range”。
+
+## 语法
+
+{{csssyntax}}
+
+## 示例
+
+### HTML
+
+```html
+<form action="" id="form1">
+  <ul>Values between 1 and 10 are valid.
+    <li>
+      <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12">
+      <label for="value1">Your value is </label>
+    </li>
+  </ul>
+</form>
+```
+
+### CSS
+
+```css
+li {
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+input {
+  border: 1px solid black;
+}
+
+input:in-range {
+  background-color: rgba(0, 255, 0, 0.25);
+}
+
+input:out-of-range {
+  background-color: rgba(255, 0, 0, 0.25);
+  border: 2px solid red;
+}
+
+input:in-range + label::after {
+  content: 'okay.';
+}
+
+input:out-of-range + label::after {
+  content: 'out of range!';
+}
+```
+
+### 结果
+
+{{EmbedLiveSample('Example', 600, 140)}}
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{cssxref(":out-of-range")}}
+- [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)

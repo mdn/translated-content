@@ -1,20 +1,8 @@
 ---
 title: column-rule-color
 slug: Web/CSS/column-rule-color
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - HTML 色
-  - リファレンス
-  - スタイル
-  - HTML のスタイル付け
-  - column-rule-color
-  - columns
-  - recipe:css-property
-browser-compat: css.properties.column-rule-color
-translation_of: Web/CSS/column-rule-color
 ---
+
 {{CSSRef}}
 
 **`column-rule-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の色を設定します。

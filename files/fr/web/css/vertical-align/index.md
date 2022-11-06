@@ -4,6 +4,7 @@ slug: Web/CSS/vertical-align
 translation_of: Web/CSS/vertical-align
 browser-compat: css.properties.vertical-align
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`vertical-align`** définit l'alignement vertical d'une boîte en ligne (<i lang="en">inline</i>), en ligne / bloc (<i lang="en">inline-block</i>) ou d'une boîte de cellule de tableau.
@@ -45,6 +46,7 @@ vertical-align: initial;
 vertical-align: revert;
 vertical-align: unset;
 ```
+
 La propriété `vertical-align` s'utilise avec une des valeurs suivantes.
 
 ### Valeurs pour les éléments en lignes
@@ -223,7 +225,6 @@ td {
 #### Résultat
 
 {{EmbedLiveSample("", '100%', 230)}}
-
 
 ## Spécifications
 

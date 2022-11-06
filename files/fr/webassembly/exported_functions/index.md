@@ -3,6 +3,7 @@ title: Exported WebAssembly functions
 slug: WebAssembly/Exported_functions
 translation_of: WebAssembly/Exported_functions
 ---
+
 {{WebAssemblySidebar}}
 
 Les fonctions WebAssembly exportées sont la représentation des fonctions WebAssembly dans JavaScript. Cet article décrit un plus en détail à quoi elle correspondent...
@@ -20,7 +21,7 @@ Dans les deux cas, vous obtenez le même genre de wrapper pour la fonction sous 
 
 ## Un exemple
 
-Regardons un exemple pour mettre les choses au clair (tu peux le trouver sur GitHub sur [table-set.html](https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html); à voir également en [live ](https://mdn.github.io/webassembly-examples/other-examples/table-set.html), et check la [representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) textuelle wasm):
+Regardons un exemple pour mettre les choses au clair (tu peux le trouver sur GitHub sur [table-set.html](https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html); à voir également en [live](https://mdn.github.io/webassembly-examples/other-examples/table-set.html), et check la [representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) textuelle wasm):
 
 ```js
 var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });

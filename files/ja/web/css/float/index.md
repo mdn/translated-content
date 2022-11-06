@@ -1,15 +1,8 @@
 ---
 title: float
 slug: Web/CSS/float
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.float
-translation_of: Web/CSS/float
 ---
+
 {{CSSRef}}
 
 **`float`** は CSS のプロパティで、要素を包含ブロックの左右どちらかの側に沿うように設置し、テキストやインライン要素がその周りを回りこめるように定義します。要素はウェブページの通常のフローから外れますが、 ([絶対位置指定](/ja/docs/Web/CSS/position#absolute_positioning) とは対照的に) フローの一部であり続けます。
@@ -37,7 +30,7 @@ translation_of: Web/CSS/float
 | `inline-grid`        | `grid`         |
 | _その他_             | _変更なし_     |
 
-> **Note:** JavaScript で {{domxref("HTMLElement.style")}} オブジェクトのメンバーとしてこのプロパティを参照する場合、最近のブラウザーは `float` に対応していますが、古いブラウザーは `cssFloat` という綴りになり、 Internet Explorer のバージョン 8 以前では、 `styleFloat` を使用しています。これは、ダッシュ区切りの CSS 名は DOM メンバーとしてキャメルケースで綴るというルールの例外でした (これは "float" が JavaScript の予約語であるためで、 "class" を "className" とする必要があったり、 \<label> の "for" を "htmlFor" とする必要があったりするのと同じです)。
+> **メモ:** JavaScript で {{domxref("HTMLElement.style")}} オブジェクトのメンバーとしてこのプロパティを参照する場合、最近のブラウザーは `float` に対応していますが、古いブラウザーは `cssFloat` という綴りになり、 Internet Explorer のバージョン 8 以前では、 `styleFloat` を使用しています。これは、ダッシュ区切りの CSS 名は DOM メンバーとしてキャメルケースで綴るというルールの例外でした (これは "float" が JavaScript の予約語であるためで、 "class" を "className" とする必要があったり、 \<label> の "for" を "htmlFor" とする必要があったりするのと同じです)。
 
 ## 構文
 

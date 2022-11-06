@@ -6,6 +6,7 @@ tags:
   - WebGLProgram
 translation_of: Web/API/WebGLProgram
 ---
+
 {{APIRef("WebGL")}}
 
 Le **WebGLProgram** fait partie de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) et il est une combinaison de deux {{domxref ("WebGLShader")}} compilés constitués d'un shader de sommet et d'un shader de fragment (tous deux écrits en GLSL). Ces dernier sont ensuite liés dans un programme utilisable.
@@ -56,13 +57,11 @@ gl.deleteProgram(programme);
 
 ## Spécifications
 
-| Spécification                                                | Statut                   | Commentaire         |
-| ------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('WebGL', "#5.6", "WebGLProgram")}} | {{Spec2('WebGL')}} | Définition initale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLProgram")}}
+{{Compat}}
 
 ## Voir aussi
 

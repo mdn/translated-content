@@ -7,6 +7,7 @@ tags:
 translation_of: Glossary/Null
 original_slug: Glossaire/Null
 ---
+
 En informatique, une valeur **`null`** représente une référence qui pointe, en général de manière volontaire, vers un {{glossary("objet")}} ou une adresse invalide ou inexistant. La signification d'une référence nulle varie selon les implémentations des langages.
 
 En {{Glossary("JavaScript")}}, null est l'une des {{Glossary("Primitive", "valeurs primitives")}}.
@@ -15,7 +16,7 @@ En {{Glossary("JavaScript")}}, null est l'une des {{Glossary("Primitive", "valeu
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Null")}} sur Wikipédia
+- [`Null`](https://fr.wikipedia.org/wiki/Null) sur Wikipédia
 
 ### Référence technique
 

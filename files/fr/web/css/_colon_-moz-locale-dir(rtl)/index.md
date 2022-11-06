@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:-moz-locale-dir(rtl)
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 La [pseudo-classe CSS](/fr/docs/Web/CSS/Pseudo-classes) **`:-moz-locale-dir(rtl)`** correspond à un élément si l'interface utilisateur est affichée de droite à gauche. Elle est déterminée par la préférence `intl.uidirection.`_`locale`_ (où _`locale`_ est la langue courante) qui est fixée à `"rtl"`.
@@ -45,4 +46,4 @@ Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla e
 ## Voir aussi
 
 - {{cssxref(":-moz-locale-dir(ltr)")}}
-- [Garantir le fonctionnement de votre thème avec les locales RTL](/en-US/docs/Making_Sure_Your_Theme_Works_with_RTL_Locales)
+- [Garantir le fonctionnement de votre thème avec les locales RTL](/fr/docs/Making_Sure_Your_Theme_Works_with_RTL_Locales)

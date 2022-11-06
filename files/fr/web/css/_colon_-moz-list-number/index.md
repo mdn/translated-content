@@ -4,13 +4,16 @@ slug: Web/CSS/:-moz-list-number
 translation_of: Web/CSS/:-moz-list-number
 original_slug: Web/CSS/::-moz-list-number
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 Le [pseudo-élément CSS](/fr/docs/Web/CSS/Pseudo-éléments) **`::-moz-list-number`** permet de personnaliser l'apparence des numéros des éléments de liste ({{HTMLElement("li")}}) au sein des listes numérotées ({{HTMLElement("ol")}}).
 
 ## Syntaxe
 
-    li::-moz-list-number { propriétés de style }
+```
+li::-moz-list-number { propriétés de style }
+```
 
 ## Exemples
 

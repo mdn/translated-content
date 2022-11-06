@@ -1,25 +1,13 @@
 ---
 title: Document.querySelector()
 slug: Web/API/Document/querySelector
-tags:
-  - API
-  - CSS セレクター
-  - DOM
-  - DOM 要素
-  - Document
-  - メソッド
-  - リファレンス
-  - セレクター API
-  - セレクター
-  - querySelector
-translation_of: Web/API/Document/querySelector
-browser-compat: api.Document.querySelector
 ---
+
 {{ApiRef("DOM")}}
 
 {{domxref("Document")}} の **`querySelector()`** メソッドは、指定されたセレクターまたはセレクター群に一致する、文書内の最初の {{domxref("Element")}} を返します。一致するものが見つからない場合は `null` を返します。
 
-> **Note:** 照合処理は、文書マークアップにおける最初の要素を経由して文書ノードの深さ優先前順走査 (depth-first pre-order traversal) を使用して実行され、子ノードのカウント順で順次ノードを反復して行われます。
+> **メモ:** 照合処理は、文書マークアップにおける最初の要素を経由して文書ノードの深さ優先前順走査 (depth-first pre-order traversal) を使用して実行され、子ノードのカウント順で順次ノードを反復して行われます。
 
 ## 構文
 
@@ -32,7 +20,7 @@ element = document.querySelector(selectors);
 - _selectors_
   - : {{domxref("DOMString")}} で、照合する 1 つ以上のセレクターを設定します。この文字列は妥当な CSS セレクターでなければなりません。そうでない場合は `SyntaxError` が発生します。セレクターとその管理の方法の詳細について、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)を参照してください。
 
-> **Note:** 標準の CSS 構文に含まれない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は[特殊文字のエスケープ](#特殊文字のエスケープ)を参照してください。
+> **メモ:** 標準の CSS 構文に含まれない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は[特殊文字のエスケープ](#特殊文字のエスケープ)を参照してください。
 
 ### 返値
 

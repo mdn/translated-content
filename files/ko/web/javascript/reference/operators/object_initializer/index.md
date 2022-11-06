@@ -17,7 +17,7 @@ browser-compat: javascript.operators.object_initializer
 ---
 {{JsSidebar("Operators")}}
 
-객체는 [`new Object()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/Object), [`Object.create()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 또는 _literal_ 표기법(_initializer_ 표기법)을 사용해 초기화될 수 있습니다. 객체 초기자는 중괄호(`{}`)로 묶인 0개 이상의 객체의 프로퍼티명과 관련 값의 쌍을 콤마로 구분한 목록입니다.
+객체는 [`new Object()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/Object), [`Object.create()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 또는 _literal_ 표기법(_initializer_ 표기법)을 사용해 초기화될 수 있습니다. 객체 초기자는 중괄호(`{}`)로 묶인 0개 이상의 객체의 프로퍼티명과 관련 값의 쌍을 콤마로 구분한 목록입니다.
 
 {{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}
 
@@ -46,7 +46,7 @@ let o = {
 let a = 'foo', b = 42, c = {};
 let o = {a, b, c}
 
-// 프로퍼티명 약식 (ES2015)
+// 메서드명 약식 (ES2015)
 let o = {
   property(parameters) {}
 }

@@ -1,15 +1,8 @@
 ---
 title: 列結合子
 slug: Web/CSS/Column_combinator
-tags:
-  - CSS
-  - 実験的
-  - リファレンス
-  - セレクター
-  - 表
-browser-compat: css.selectors.column
-translation_of: Web/CSS/Column_combinator
 ---
+
 {{CSSRef("Selectors")}}{{SeeCompatTable}}
 
 **列結合子** (column combinator, `||`) は、2 つの CSS セレクターの間に配置されます。前者のセレクターに一致する列要素に所属する、後者のセレクターに一致する要素に一致します。

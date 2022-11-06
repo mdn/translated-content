@@ -6,13 +6,16 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/has-same-node
 ---
+
 {{ XsltRef() }}
 
 `set:has-same-node()` détermine si deux ensembles de nœuds ont ou non des nœuds communs.
 
 ### Syntaxe
 
-    set:has-same-node(ensembleNœuds1,ensembleNœuds2)
+```
+set:has-same-node(ensembleNœuds1,ensembleNœuds2)
+```
 
 ### Arguments
 

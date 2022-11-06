@@ -1,19 +1,8 @@
 ---
 title: 'Element: mouseout イベント'
 slug: Web/API/Element/mouseout_event
-tags:
-  - API
-  - DOM
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - リファレンス
-  - マウス
-  - mouseout
-  - move
-browser-compat: api.Element.mouseout_event
-translation_of: Web/API/Element/mouseout_event
 ---
+
 {{APIRef}}
 
 **`mouseout`** イベントは、ポインティングデバイス (通常はマウス) を使ってカーソルを移動させ、要素やその子の中からカーソルが出たときに、その要素 ({{domxref("Element")}}) に発行されます。

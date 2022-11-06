@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:active
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:active`** permet de cibler un élément lorsque celui-ci est activé par l'utilisateur. Elle permet de fournir un _feedback_ indiquant que l'activation a bien été détectée par le navigateur. Lorsqu'on a une interaction avec un pointeur, il s'agit généralement du moment entre l'appui sur le pointeur et le relâchement de celui-ci.
@@ -25,7 +26,7 @@ La mise en forme associée peut être surchargée par les autres pseudo-classes 
 
 > **Note :** Pour les systèmes qui utilisent une souris avec plusieurs boutons, CSS 3 spécifie que la pseudo-classe `:active` ne doit s'appliquer qu'au bouton principal. Pour les souris de droitiers, c'est généralement le bouton le plus à gauche.
 
-## Syntax
+## Syntaxe
 
 {{csssyntax}}
 
@@ -87,17 +88,11 @@ form button {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-active', ':active')}} | {{Spec2('HTML WHATWG')}}     |                      |
-| {{SpecName('CSS4 Selectors', '#active-pseudo', ':active')}}                 | {{Spec2('CSS4 Selectors')}} | Aucune modification. |
-| {{SpecName('CSS3 Selectors', '#useraction-pseudos', ':active')}}             | {{Spec2('CSS3 Selectors')}} | Aucune modification. |
-| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':active')}} | {{Spec2('CSS2.1')}}             | Aucune modification. |
-| {{SpecName('CSS1', '#anchor-pseudo-classes', ':active')}}                     | {{Spec2('CSS1')}}             | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.active")}}
+{{Compat}}
 
 ## Voir aussi
 

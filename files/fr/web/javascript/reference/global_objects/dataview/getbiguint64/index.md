@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getBigUint64
 ---
+
 {{JSRef}}
 
 La méthode **`getBigUint64()`** permet de lire un entier non signé sur 64 bits (type _unsigned long long_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.
@@ -20,7 +21,9 @@ La méthode **`getBigUint64()`** permet de lire un entier non signé sur 64 bits
 
 ## Syntaxe
 
-    dataview.getBigUint64(positionOctet [, littleEndian])
+```js
+dataview.getBigUint64(positionOctet [, littleEndian])
+```
 
 ### Paramètres
 

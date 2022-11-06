@@ -1,13 +1,8 @@
 ---
 title: Node.nodeName
 slug: Web/API/Node/nodeName
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.nodeName
-translation_of: Web/API/Node/nodeName
 ---
+
 {{APIRef("DOM")}}
 
 **`nodeName`** は {{domxref("Node")}} の読み取り専用プロパティで、現在のノードの名前を文字列で返します。

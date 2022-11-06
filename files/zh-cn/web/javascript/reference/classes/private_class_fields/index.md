@@ -1,12 +1,8 @@
 ---
 title: 类私有域
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
-tags:
-  - JavaScript
-  - 类
-  - 语言特性
-translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
 类属性在默认情况下是{{jsxref('Classes/Public_class_fields','公有')}}的，但可以使用增加哈希前缀 `#` 的方法来定义私有类字段，这一隐秘封装的类特性由 JavaScript 自身强制执行。
@@ -235,11 +231,11 @@ console.log(Derived.publicStaticMethod2());
 
 ## 浏览器兼容性
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## 参见
 
-- [Working with private class features](/en-US/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features)
+- [Working with private class features](/zh-CN/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features)
 - [Public class fields](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - [The
   Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)

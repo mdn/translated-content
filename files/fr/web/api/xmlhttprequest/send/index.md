@@ -15,6 +15,7 @@ tags:
   - send
 translation_of: Web/API/XMLHttpRequest/send
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 La méthode  {{domxref("XMLHttpRequest")}} **`send()`** envoie la requête au serveur.  Si la requête est asynchrone (elle l'est par défaut), la méthode envoie un retour dés que la requête est partie et le résultat est intégré en utilisant les évènements. En cas de requête synchrone, elle ne renvoie rien tant que la réponse n'est pas retournée.
@@ -25,7 +26,9 @@ Si aucun "header"{{HTTPHeader("Accept")}} n'a été paramétré dans {{domxref("
 
 ## Syntaxe
 
-    XMLHttpRequest.send(body)
+```js
+XMLHttpRequest.send(body)
+```
 
 ### Paramètres
 
@@ -88,17 +91,15 @@ xhr.send("foo=bar&lorem=ipsum");
 // xhr.send(document);
 ```
 
-## Spécificités
+## Spécifications
 
-| Specificité                                                                          | Statut                               | Commentaire            |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-send()-method', 'send()')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest.send")}}
+{{Compat}}
 
 ## Voir aussi
 
 - [L'utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
-- [HTML dans XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [HTML dans XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)

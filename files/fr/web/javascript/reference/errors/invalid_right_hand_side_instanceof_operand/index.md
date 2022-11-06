@@ -10,14 +10,17 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 original_slug: Web/JavaScript/Reference/Erreurs/invalid_right_hand_side_instanceof_operand
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    TypeError: invalid 'instanceof' operand "x" (Firefox)
-    TypeError: "x" is not a function (Firefox)
-    TypeError: Right-hand side of 'instanceof' is not an object (Chrome)
-    TypeError: Right-hand side of 'instanceof' is not callable (Chrome)
+```
+TypeError: invalid 'instanceof' operand "x" (Firefox)
+TypeError: "x" is not a function (Firefox)
+TypeError: Right-hand side of 'instanceof' is not an object (Chrome)
+TypeError: Right-hand side of 'instanceof' is not callable (Chrome)
+```
 
 ## Type d'erreur
 

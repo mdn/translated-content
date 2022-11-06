@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Methods/TRACE
 original_slug: Web/HTTP/Méthode/TRACE
 ---
+
 {{HTTPSidebar}}
 
 La **méthode HTTP `TRACE`** effectue un test de rebouclage des messages le long du chemin vers la ressource cible, fournissant ainsi un mécanisme de débogage utile.
@@ -45,7 +46,9 @@ Le destinataire final de la demande doit renvoyer au client le message reçu, à
 
 ## Syntaxe
 
-    TRACE /index.html
+```
+TRACE /index.html
+```
 
 ## Specifications
 
@@ -57,6 +60,6 @@ Le destinataire final de la demande doit renvoyer au client le message reçu, à
 
 {{Compat("http.methods.TRACE")}}
 
-## Voir également
+## Voir aussi
 
 - [Méthodes HTTP](/fr/docs/Web/HTTP/Méthode)

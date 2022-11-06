@@ -8,6 +8,7 @@ tags:
   - Interface
 translation_of: Web/API/HTMLFormControlsCollection
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLFormControlsCollection`** représente une _collection_ _d'éléments de contrôle de formulaires_. Il représente les listes retournées par le {{domxref("HTMLFormElement")}} et le {{domxref("HTMLFieldSetElement")}} de la propriété d'interface {{domxref("HTMLFieldSetElement.elements", "elements")}}.
@@ -29,14 +30,11 @@ _Cette interface hérite des méthodes de son parent {{domxref("HTMLCollection")
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                           | Commentaire                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "infrastructure.html#htmlformcontrolscollection", "HTMLFormControlsCollection")}} | {{Spec2('HTML WHATWG')}} | Pas de changement depuis le dernier instantané {{SpecName('HTML5 W3C')}}.                                             |
-| {{SpecName('HTML5 W3C', "infrastructure.html#htmlformcontrolscollection", "HTMLFormControlsCollection")}}     | {{Spec2('HTML5 W3C')}}     | Dans cet instantané de {{SpecName("HTML WHATWG")}}, `HTMLFormControlsCollections` est défini pour la première fois. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLFormControlsCollection")}}
+{{Compat}}
 
 ## Voir aussi
 

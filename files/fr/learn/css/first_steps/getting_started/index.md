@@ -11,6 +11,7 @@ tags:
   - Sélecteurs
 translation_of: Learn/CSS/First_steps/Getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
 Dans cet article nous vous montrons comment appliquer un style CSS à un document HTML simple. Vous apprendrez des choses pratiques concernant CSS.
@@ -294,8 +295,8 @@ Dans la leçon suivante, nous étudirons comment CSS est structuré.
 
 ## Dans ce cours
 
-1.  [Qu'est ce que CSS?](/fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS)
-2.  [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3.  [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [CSS comment ça marche ?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Utiliser vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [Qu'est ce que CSS?](/fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS)
+2. [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
+3. [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS comment ça marche ?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Utiliser vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

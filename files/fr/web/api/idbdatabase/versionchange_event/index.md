@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/IDBDatabase/onversionchange
 original_slug: Web/API/IDBDatabase/onversionchange
 ---
+
 {{APIRef("IndexedDB")}}
 
 Le gestionnaire d'événement **`onversionchange`**, rattaché à l'interface {{domxref("IDBDatabase")}}, s’exécute au déclenchement de l'événement `versionchange` qui se produit lorsque la structure de la base de donnée change (l'événement {{domxref("IDBOpenDBRequest.onupgradeneeded")}} ou {{domxref("IDBFactory.deleteDatabase")}} a été demandé par ailleurs (probablement dans une autre fenêtre ou onglet sur le même ordinateur)).
@@ -63,13 +64,11 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-onversionchange', 'onversionchange')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBDatabase.onversionchange")}}
+{{Compat}}
 
 ## Voir aussi
 

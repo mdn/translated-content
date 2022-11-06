@@ -11,6 +11,7 @@ tags:
   - URL
 translation_of: Web/API/Client/url
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}La propriété **`url`** (lecture seule) de l'interface {{domxref("Client")}} retourne l'url du service worker client courant.
 
 ## Syntaxe
@@ -48,10 +49,8 @@ self.addEventListener('notificationclick', function(event) {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#client-url', 'url')}} | {{Spec2('Service Workers')}} | Défintion initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Client.url")}}
+{{Compat}}

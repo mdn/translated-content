@@ -50,7 +50,7 @@ class WordCount extends HTMLParagraphElement {
 
 이것은 단순히 간단한 예제이지만, 여기서 할 수 있는 더 많은 것이 있습니다. 클래스 내부에서 특정한 생명 주기 콜백을 정의할 수 있는데, 이 콜백은 요소의 생명 주기의 특정한 지점에서 실행됩니다. 예를 들어, `connectedCallback` 은 사용자 정의 요소가 문서에 연결된 요소에 추가될 때마다 호출되는 반면, `attributeChangedCallback` 은 사용자 정의 요소의 특성 중 하나가 추가되거나, 제거되거나, 변경될 때 호출됩니다.
 
-아래의 {{anch("생명 주기 콜백 사용하기")}} 섹션에서 더 많은 것을 배울 수 있습니다.
+아래의 [생명 주기 콜백 사용하기](#생명_주기_콜백_사용하기) 섹션에서 더 많은 것을 배울 수 있습니다.
 
 두 종류의 사용자 정의 요소가 있습니다.
 
@@ -127,6 +127,7 @@ customElements.define('popup-info', PopUpInfo);
 ```
 
 > **참고:** [전체 JavaScript 소스 코드](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js)를 여기서 확인할 수 있습니다.
+
 ### 내부 스타일 대 외부 스타일
 
 상기의 예제에서 {{htmlelement("style")}} 요소가 사용되어 Shadow DOM에 스타일을 적용했으나, 대신 {{htmlelement("link")}} 요소로부터 외부 스타일시트를 참조함으로써 스타일을 적용하는 것도 완벽히 가능합니다.
@@ -187,6 +188,7 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 `<ul>` 요소를 평범하게 사용하나, `is` 특성 내부에 사용자 정의 요소의 이름을 명시합니다.
 
 > **참고:** [전체 JavaScript 소스 코드](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js)를 확인해볼 수 있습니다.
+
 ## 생명 주기 콜백 사용하기
 
 몇 가지 다른 콜백을 사용자 정의 요소의 클래스 정의 내부에 정의할 수 있는데, 이 콜백들은 요소의 생명 주기의 각기 다른 지점에서 발생됩니다.
@@ -219,14 +221,14 @@ shadow.appendChild(div);
 
 ```js
 function updateStyle(elem) {
-  const shadow = elem.shadowRoot;
-  shadow.querySelector('style').textContent = `
-    div {
-      width: ${elem.getAttribute('l')}px;
-      height: ${elem.getAttribute('l')}px;
-      background-color: ${elem.getAttribute('c')};
-    }
-  `;
+  const shadow = elem.shadowRoot;
+  shadow.querySelector('style').textContent = `
+    div {
+      width: ${elem.getAttribute('l')}px;
+      height: ${elem.getAttribute('l')}px;
+      background-color: ${elem.getAttribute('c')};
+    }
+  `;
 }
 ```
 
@@ -269,6 +271,7 @@ static get observedAttributes() { return ['c', 'l']; }
 이 예제에서 이 메서드는 생성자의 바로 위에 위치해 있습니다.
 
 > **참고:** [전체 JavaScript 소스 코드](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js)를 확인해 보세요.
+
 ## 트랜스파일러 대 클래스
 
 ES2015 class는 레거시 브라우저를 목표로 하는 Babel 6 또는 TypeScript 에서 신뢰할만하게 트랜스파일될 수 없다는 점에 주의하세요. Babel 7을 사용하거나 Babel 6에 대해서 [babel-plugin-transform-builtin-classes](https://www.npmjs.com/package/babel-plugin-transform-builtin-classes)를 사용할 수 있고, 레거시 대신에 TypeScript의 ES2015를 목표로 할 수 있습니다.

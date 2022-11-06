@@ -1,28 +1,15 @@
 ---
 title: XMLHttpRequest.getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
-tags:
-  - API
-  - ヘッダーの取得
-  - HTTP
-  - HTTP ヘッダー
-  - ヘッダー
-  - メソッド
-  - リファレンス
-  - XHR
-  - XHR ヘッダー
-  - XMLHttpRequest
-  - getResponseHeader
-browser-compat: api.XMLHttpRequest.getResponseHeader
-translation_of: Web/API/XMLHttpRequest/getResponseHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{DOMxRef("XMLHttpRequest")}} の **`getResponseHeader()`** メソッドは、特定のヘッダー値のテキストを含んだ文字列を返します。
 
 同じ名前で複数のレスポンスヘッダーがあった場合、値はカンマと空白で区切って値を接続した単一の文字列として返されます。 `getResponseHeader()` メソッドは値を UTF バイト列として返します。
 
-> **Note:** ヘッダー名の検索は、大文字小文字の区別がありません。
+> **メモ:** ヘッダー名の検索は、大文字小文字の区別がありません。
 
 ヘッダーすべての生の文字列を取得する必要がある場合は、生のヘッダー文字列全体を返す {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}} メソッドを使用してください。
 

@@ -1,15 +1,8 @@
 ---
 title: Element.getElementsByTagNameNS()
 slug: Web/API/Element/getElementsByTagNameNS
-tags:
-  - API
-  - DOM
-  - Element
-  - メソッド
-  - リファレンス
-browser-compat: api.Element.getElementsByTagNameNS
-translation_of: Web/API/Element/getElementsByTagNameNS
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.getElementsByTagNameNS()`** メソッドは、指定された名前空間に属する、指定されたタグ名を持つ要素の {{domxref("HTMLCollection")}} をライブで返します。これは {{Domxref("Document.getElementsByTagNameNS")}} に似ていますが、検索対象が指定された要素の子孫に限定される点が異なります。

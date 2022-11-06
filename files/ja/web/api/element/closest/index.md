@@ -1,39 +1,31 @@
 ---
 title: Element.closest()
 slug: Web/API/Element/closest
-tags:
-  - API
-  - CSS セレクター
-  - DOM
-  - Element
-  - メソッド
-  - リファレンス
-  - セレクター
-browser-compat: api.Element.closest
-translation_of: Web/API/Element/closest
 ---
+
 {{APIRef('DOM')}}
 
-**`closest()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素 ({{domxref("Element")}}) とその親階層に（文書ルートに向かって）、指定されたセレクター文字列に一致するノードが見つかるまで探索します。自分自身または一致する祖先を返します。そのような要素が存在しない場合は、 `null` を返します。
+**`closest()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素とその親に（文書ルートに向かって）、指定された [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)に一致するノードが見つかるまで探索します。
 
 ## 構文
 
 ```js
-var closestElement = targetElement.closest(selectors);
+closest(selectors)
 ```
 
 ### 引数
 
-- `selectors` は {{domxref("DOMString")}} で、セレクターのリストを指定します。
-  例: `p:hover, .toto + q`
+- `selectors`
+  - : 有効な [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)を表す文字列です。これをこの要素 ({{domxref("Element")}}) およびその祖先に向けて照合します。
 
 ### 返値
 
-- `closestElement` は選択された要素の直近の祖先に当たる {{domxref("Element")}} です。 `null` になることがあります。
+`selectors` に一致する最も近い祖先の {{domxref("Element")}} または自分自身です。そのような要素がない場合は `null` を返します。
 
 ### 例外
 
-- {{exception("SyntaxError")}} は `selectors` が妥当なセレクターリストの文字列ではない場合に発生します。
+- `SyntaxError` {{domxref("DOMException")}}
+  - : `selectors` が有効なセレクターリストの文字列ではない場合に発生します。
 
 ## 例
 
@@ -52,19 +44,19 @@ var closestElement = targetElement.closest(selectors);
 ### JavaScript
 
 ```js
-var el = document.getElementById('div-03');
+const el = document.getElementById('div-03');
 
-var r1 = el.closest("#div-02");
-// id=div-02 である要素を返す
+// "div-02" の id を持つ直近の祖先
+console.log(el.closest('#div-02')); // <div id="div-02">
 
-var r2 = el.closest("div div");
-// div の中にある div である直近の祖先、ここでは div-03 自身を返す
+// div の中にある div である直近の祖先
+console.log(el.closest('div div')); // <div id="div-03">
 
-var r3 = el.closest("article &gt; div");
-// 親に article を持つ div である直近の祖先、ここでは div-01 を返す
+// div であって親に article がある直近の祖先
+console.log(el.closest("article > div")); // <div id="div-01">
 
-var r4 = el.closest(":not(div)");
-// div ではない直近の祖先、ここではもっとも外側の article を返す
+// div ではない直近の祖先
+console.log(el.closest(":not(div)")); // <article>
 ```
 
 ## ポリフィル
@@ -122,6 +114,5 @@ if (window.Element && !Element.prototype.closest) {
 
 ## 関連情報
 
-- {{domxref("Element")}} インターフェイス
-- [セレクターの構文](/ja/docs/Learn/CSS/Building_blocks/Selectors)
-- セレクターを取る他のメソッド: {{domxref("element.querySelector()")}} および {{domxref("element.matches()")}}
+- [CSS セレクターリファレンス](/ja/docs/Web/CSS/CSS_Selectors)
+- セレクターを取る他の {{domxref("Element")}} のメソッド: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}}, {{domxref("Element.matches()")}}

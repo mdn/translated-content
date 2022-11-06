@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/toString
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Locale.prototype.toString()`** renvoie [l'identifiant de locale complet](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier) pour la locale courante.
@@ -18,7 +19,9 @@ La méthode **`Intl.Locale.prototype.toString()`** renvoie [l'identifiant de loc
 
 ## Syntaxe
 
-    locale.toString()
+```js
+locale.toString()
+```
 
 ### Valeur de retour
 

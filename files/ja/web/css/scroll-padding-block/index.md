@@ -1,17 +1,8 @@
 ---
 title: scroll-padding-block
 slug: Web/CSS/scroll-padding-block
-tags:
-  - CSS
-  - CSS スクロールスナップ
-  - Reference
-  - Web
-  - recipe:css-shorthand-property
-  - scroll-padding
-  - scroll-padding-block
-browser-compat: css.properties.scroll-padding-block
-translation_of: Web/CSS/scroll-padding-block
 ---
+
 {{CSSRef}}
 
 `scroll-padding-block` は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素のブロック軸のスクロールパディングを設定します。

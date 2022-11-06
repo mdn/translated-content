@@ -10,6 +10,7 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/timeout
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 La propriété **`XMLHttpRequest.timeout`** est un `unsigned long` (un entier long, non-signé) représentant la durée, en millisecondes, qu'une requête peut prendre avant d'être automatiquement terminée. Par défaut, la valeur est 0 et il n'y pas de _timeout_. Lorsqu'une requête expire, un évènement [`timeout`](/fr/docs/Web/API/XMLHttpRequest/timeout_event) est déclenché.
@@ -39,12 +40,8 @@ xhr.send(null);
 
 ## Spécifications
 
-| Spécification                                                                | État                                 | Commentaires             |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------------ |
-| {{SpecName('XMLHttpRequest', '#the-timeout-attribute')}} | {{Spec2('XMLHttpRequest')}} | Standard évolutif WHATWG |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest.timeout")}}
-
-Pour Internet Explorer, la propriété `timeout` ne peut être définie qu'après avoir appelé la méthode [`open()`](/fr/docs/Web/API/XMLHttpRequest/open) et avant d'appeler la méthode [`send()`](/fr/docs/Web/API/XMLHttpRequest/send).
+{{Compat}}

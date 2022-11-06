@@ -3,6 +3,7 @@ title: SVGRectElement
 slug: Web/API/SVGRectElement
 translation_of: Web/API/SVGRectElement
 ---
+
 {{APIRef("SVG")}}
 
 L'interface `SVGRectElement` fournit un accès aux propriétés et aux méthodes de l'élément {{SVGElement("rect")}}.
@@ -34,14 +35,11 @@ _Cette interface hérite aussi des propriétés de_ _{{domxref("SVGGeometryEleme
 
 ## Spécifications
 
-| Specification                                                                                            | Status                   | Comment                                                                                                                                                                                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("SVG2", "shapes.html#InterfaceSVGRectElement", "SVGRectElement")}} | {{Spec2('SVG2')}} | Remplace l'héritage de {{domxref("SVGElement")}}{{domxref("SVGTests")}}, {{domxref("SVGLangSpace")}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}} et {{domxref("SVGTransformable")}} par {{domxref("SVGGeometryElement")}} |
-| {{SpecName("SVG1.1", "shapes.html#InterfaceSVGRectElement", "SVGRectElement")}} | {{Spec2('SVG1.1')}} | Définition initiale                                                                                                                                                                                                                                                                                                        |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.SVGRectElement")}}
+{{Compat}}
 
 ## Voir aussi
 

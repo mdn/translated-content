@@ -1,21 +1,13 @@
 ---
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLVideoElement
-  - インターフェイス
-  - リファレンス
-  - Video
-browser-compat: api.HTMLVideoElement
-translation_of: Web/API/HTMLVideoElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLVideoElement`** インターフェイスは、動画ブジェクトを操作するための特別なプロパティとメソッドを提供します。また、 {{domxref("HTMLMediaElement")}} と {{domxref("HTMLElement")}} のプロパティとメソッドを継承しています。
 
-[対応しているメディア形式](/en-US/docs/Web/Media/Formats)のリストは、ブラウザーによって異なります。動画を提供する際には、関連するすべてのブラウザーが対応している単一の形式で提供するか、対応する必要のあるすべてのブラウザーをカバーするように、異なる形式で複数の動画ソースを提供するかしてください。
+[対応しているメディア形式](/ja/docs/Web/Media/Formats)のリストは、ブラウザーによって異なります。動画を提供する際には、関連するすべてのブラウザーが対応している単一の形式で提供するか、対応する必要のあるすべてのブラウザーをカバーするように、異なる形式で複数の動画ソースを提供するかしてください。
 
 {{InheritanceDiagram(600, 140)}}
 
@@ -40,32 +32,32 @@ _祖先インターフェイスである {{domxref("HTMLMediaElement")}} およ�
 
 ### Gecko 固有のプロパティ
 
-- {{domxref("HTMLVideoElement.mozParsedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
+- {{domxref("HTMLVideoElement.mozParsedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
   - : `unsigned long` で、メディアリソースから解析された動画のフレーム数を返します。
-- {{domxref("HTMLVideoElement.mozDecodedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}} {{deprecated_inline}}
+- {{domxref("HTMLVideoElement.mozDecodedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}} {{deprecated_inline}}
   - : `unsigned long` で、すでに画像にデコードされた、解析された動画のフレーム数を返します。
-- {{domxref("HTMLVideoElement.mozPresentedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
+- {{domxref("HTMLVideoElement.mozPresentedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
   - : `unsigned long` で、描画のためにレンダリングパイプラインに提示されたデコード済みのフレーム数を返します。
-- {{domxref("HTMLVideoElement.mozPaintedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
+- {{domxref("HTMLVideoElement.mozPaintedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
   - : `unsigned long` で、画面上に描画されたフレームの数を返します。
-- {{domxref("HTMLVideoElement.mozFrameDelay")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
+- {{domxref("HTMLVideoElement.mozFrameDelay")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
   - : `double` で、最後にペイントされたビデオフレームの時刻をを秒単位で返します。
-- {{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
+- {{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
   - : 論理値で、動画に音声があるかどうかを示す値を返します。
 
 ### Microsoft 拡張
 
-- {{DOMxRef("HTMLVideoElement.msFrameStep()")}} {{Non-standard_Inline}}
+- {{DOMxRef("HTMLVideoElement.msFrameStep()")}} {{Non-standard_Inline}}
   - : 動画を 1 フレーム前、または 1 フレーム後にコマ送りします。
-- {{DOMxRef("HTMLVideoElement.msHorizontalMirror")}} {{Non-standard_Inline}}
+- {{DOMxRef("HTMLVideoElement.msHorizontalMirror")}} {{Non-standard_Inline}}
   - : 画面上で video 要素を水平方向に反転させるかどうかを取得または設定します。
-- {{DOMxRef("HTMLVideoElement.msInsertVideoEffect()")}} {{Non-standard_Inline}}
+- {{DOMxRef("HTMLVideoElement.msInsertVideoEffect()")}} {{Non-standard_Inline}}
   - : 指定された動画エフェクトをメディアパイプラインに挿入します。
-- {{DOMxRef("HTMLVideoElement.msIsLayoutOptimalForPlayback")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLVideoElement.msIsLayoutOptimalForPlayback")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
   - : 動画をより効率的にレンダリングできるかどうかを示します。
-- {{DOMxRef("HTMLVideoElement.msIsStereo3D")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLVideoElement.msIsStereo3D")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
   - : 読み込まれた動画ソースがステレオ 3D であるとシステムが判断するかどうかを決定します。true に設定されていると、ソースがステレオ 3D であることを示します。
-- {{DOMxRef("HTMLVideoElement.msZoom")}} {{Non-standard_Inline}}
+- {{DOMxRef("HTMLVideoElement.msZoom")}} {{Non-standard_Inline}}
   - : 動画フレームを動画の画面に合わせてトリミングするかどうかを制御します。
 
 ## メソッド

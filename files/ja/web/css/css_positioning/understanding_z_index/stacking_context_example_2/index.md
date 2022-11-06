@@ -1,13 +1,8 @@
 ---
 title: 重ね合わせコンテキストの例 2
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - Understanding_CSS_z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
 ---
+
 {{CSSRef}}
 
 « [CSS](/ja/docs/Web/CSS) « [CSS の z-index を理解する](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
@@ -31,7 +26,7 @@ DIV #2 (z-index: 2) が DIV #3 (z-index: 1) よりも上にあることがわか
 
     - DIV #4 (z-index 10)
 
-> **Note:** 一般に、 HTML の階層構造と重ね合わせコンテキストの階層構造は異なるということを覚えておくと良いでしょう。重ね合わせコンテキストの階層構造では、重ね合わせコンテキストを作らない要素はその親要素に吸収されます。
+> **メモ:** 一般に、 HTML の階層構造と重ね合わせコンテキストの階層構造は異なるということを覚えておくと良いでしょう。重ね合わせコンテキストの階層構造では、重ね合わせコンテキストを作らない要素はその親要素に吸収されます。
 
 <h2 id="Example_source_code">例のソースコード</h2>
 
@@ -86,30 +81,30 @@ span.bold { font-weight: bold; }
 
 <body>
 
-    <br />
+    <br />
 
-    <div id="div1"><br />
-        <span class="bold">DIV #1</span><br />
-        position: relative;
-        <div id="div2"><br />
-            <span class="bold">DIV #2</span><br />
-            position: absolute;<br />
-            z-index: 2;
-        </div>
-    </div>
+    <div id="div1"><br />
+        <span class="bold">DIV #1</span><br />
+        position: relative;
+        <div id="div2"><br />
+            <span class="bold">DIV #2</span><br />
+            position: absolute;<br />
+            z-index: 2;
+        </div>
+    </div>
 
-    <br />
+    <br />
 
-    <div id="div3"><br />
-        <span class="bold">DIV #3</span><br />
-        position: relative;<br />
-        z-index: 1;
-        <div id="div4"><br />
-            <span class="bold">DIV #4</span><br />
-            position: absolute;<br />
-            z-index: 10;
-        </div>
-    </div>
+    <div id="div3"><br />
+        <span class="bold">DIV #3</span><br />
+        position: relative;<br />
+        z-index: 1;
+        <div id="div4"><br />
+            <span class="bold">DIV #4</span><br />
+            position: absolute;<br />
+            z-index: 10;
+        </div>
+    </div>
 
 </body>
 </html>

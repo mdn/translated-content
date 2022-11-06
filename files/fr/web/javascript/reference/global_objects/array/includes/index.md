@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/includes
 ---
+
 {{JSRef}}
 
 La méthode **`includes()`** permet de déterminer si un tableau contient une valeur et renvoie `true` si c'est le cas, `false` sinon.
@@ -21,8 +22,10 @@ La méthode **`includes()`** permet de déterminer si un tableau contient une va
 
 ## Syntaxe
 
-    array.includes(élémentRecherché)
-    array.includes(élémentRecherché, indiceDépart)
+```js
+array.includes(élémentRecherché)
+array.includes(élémentRecherché, indiceDépart)
+```
 
 ### Paramètres
 
@@ -79,7 +82,7 @@ arr.includes('c', -100); // true
 
 ### Utilisation d'`includes()` comme méthode générique
 
-`includes()` est une méhtode générique : l'objet sur lequel elle est appelée ne doit pas nécessairement être un tableau. On peut l'utiliser sur des objets semblables à des tableaux (ex. [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments) ou des chaînes de caractères) :
+`includes()` est une méthode générique : l'objet sur lequel elle est appelée ne doit pas nécessairement être un tableau. On peut l'utiliser sur des objets semblables à des tableaux (ex. [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments) ou des chaînes de caractères) :
 
 ```js
 function argumentsContientA(){
@@ -92,14 +95,11 @@ console.log(argumentsContientA('d','e','f')); // false
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES7', '#sec-array.prototype.includes', 'Array.prototype.includes')}}     | {{Spec2('ES7')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype.includes', 'Array.prototype.includes')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.includes")}}
+{{Compat}}
 
 ## Voir aussi
 

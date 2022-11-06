@@ -6,6 +6,7 @@ slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
 translation_of: Learn/Common_questions/Pages_sites_servers_and_search_engines
 original_slug: Apprendre/page_vs_site_vs_serveur_vs_moteur_recherche
 ---
+
 Dans cet article, nous démystifions plusieurs notions liées au Web : page web, site web, serveur web et moteur de recherche. Ces termes sont souvent une source de confusion ou utilisés incorrectement : voyons leur signification.
 
 <table class="standard-table">
@@ -46,9 +47,9 @@ Nous approfondirons bientôt ces notions, mais vous pouvez commencer par vous fa
 
 Prenons une analogie simple avec une bibliothèque. Voici une suite d'actions qu'on peut effectuer lorsqu'on se rend dans une bibliothèque :
 
-1.  On parcourt un index de recherche afin de trouver le titre du livre qu'on veut.
-2.  On note la référence / le code du livre.
-3.  On se rend à la section correspondante de la bibliothèque, on trouve le rayonnage pour la section qui contient le code, on trouve le livre spécifique via son code.
+1. On parcourt un index de recherche afin de trouver le titre du livre qu'on veut.
+2. On note la référence / le code du livre.
+3. On se rend à la section correspondante de la bibliothèque, on trouve le rayonnage pour la section qui contient le code, on trouve le livre spécifique via son code.
 
 Comparons maintenant la bibliothèque avec un serveur web :
 

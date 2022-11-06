@@ -1,13 +1,6 @@
 ---
 title: QUIC
 slug: Glossary/QUIC
-tags:
-  - Glossary
-  - HTTP
-  - QUIC
-  - Reference
-  - Web Performance
-translation_of: Glossary/QUIC
 ---
 **Quick UDP Internet Connection** 또는 **QUIC**은 UDP 상에 구현된 실험적인 다중 전송 프로토콜로 TCP 및 웹 애플리케이션 전송을 개선하기 위한 방법을 위해 Google에서 실험적으로 개발하였습니다.
 

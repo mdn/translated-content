@@ -4,21 +4,24 @@ slug: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 original_slug: Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C
 ---
+
 Le DOM Level 1 Core du W3C est un modèle objet puissant permettant de modifier l'arbre de contenu de documents. Il est géré dans Mozilla (sur lequel Firefox et Netscape sont basés) et (pour la plus grande partie) dans Internet Explorer 5 pour Windows. Il s'agit d'une base essentielle du scripting sur le Web dans l'avenir.
 
 ## Définition d'un arbre de contenu
 
 Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un gros amas de texte avec quelques balises au milieu. Cependant, c'est aussi beaucoup plus que ça. Tout document HTML (ou, par ailleurs, tout document SGML ou XML) forme une structure arborescente. Par exemple, le document et la structure arborescente qui suivent sont similaires (bien que non identiques — consultez les notes sur [les espaces dans le DOM](/fr/docs/Gestion_des_espaces_dans_le_DOM))&nbsp;:
 
-    <html>
-    <head>
-      <title>Mon document</title>
-    </head>
-    <body>
-      <h1>Titre</h1>
-      <p>Paragraphe</p>
-    </body>
-    </html>
+```html
+<html>
+<head>
+  <title>Mon document</title>
+</head>
+<body>
+  <h1>Titre</h1>
+  <p>Paragraphe</p>
+</body>
+</html>
+```
 
 ![](using_the_w3c_dom_level_1_core-doctree.jpg)
 

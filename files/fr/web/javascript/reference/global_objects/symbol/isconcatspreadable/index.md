@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/isConcatSpreadable
 ---
+
 {{JSRef}}
 
 Le symbole connu **`Symbol.isConcatSpreadable`** est utilisé pour configurer la façon dont un tableau est aplati lors d'une concaténation via la méthode  {{jsxref("Array.prototype.concat()")}}.
@@ -75,14 +76,11 @@ x.concat(fauxTableau); // [1, 2, 3, "coucou", "monde"]
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.isconcatspreadable', 'Symbol.isconcatspreadable')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.isconcatspreadable', 'Symbol.isconcatspreadable')}} | {{Spec2('ESDraft')}} | Aucune modification. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.isConcatSpreadable")}}
+{{Compat}}
 
 ## Voir aussi
 

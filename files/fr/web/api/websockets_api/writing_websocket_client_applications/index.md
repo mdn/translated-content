@@ -3,6 +3,7 @@ title: Ecrire des applications client WebSocket
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
+
 Les WebSockets représentent une technologie, basée sur le protocole web socket, qui permet d'établir une session de communication bilatérale entre un navigateur web et un serveur. Un navigateur web est un exemple typique de client websocket typique mais le protocole n'est dépendant d'aucune plateforme.
 
 > **Note :** Un exemple d'utilisation des WebSockets à travers un système de chat sera mis à disposition sous forme de code dès que nos infrastructures seront en mesure de supporter les WebSockets.
@@ -15,15 +16,17 @@ Pour utiliser le protocole WebSocket, il faut créer un objet [`WebSocket`](/en/
 
 Le constructeur WebSocket accepte un paramètre obligatoire et un paramètre optionnel :
 
-    WebSocket WebSocket(
-      in DOMString url,
-      in optional DOMString protocols
-    );
+```
+WebSocket WebSocket(
+  in DOMString url,
+  in optional DOMString protocols
+);
 
-    WebSocket WebSocket(
-      in DOMString url,
-      in optional DOMString[] protocols
-    );
+WebSocket WebSocket(
+  in DOMString url,
+  in optional DOMString[] protocols
+);
+```
 
 - `url`
   - : L'URL à laquelle le client se connecte, et le serveur répond.
@@ -169,7 +172,7 @@ Ici nous utilisons [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON
 
 Le texte reçu à travers une connexion WebSocket est encodé au format UTF-8.
 
-Avant Gecko 9.0 {{ geckoRelease("9.0") }}, certains charactères spéciaux dans une chaîne UTF-8 provoquaient l'interruption de la connexion. Maintenant Gecko accepte ces caractères.
+Avant Gecko 9.0, certains charactères spéciaux dans une chaîne UTF-8 provoquaient l'interruption de la connexion. Maintenant Gecko accepte ces caractères.
 
 ## Fermeture de la connexion
 

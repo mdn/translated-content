@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
 original_slug: Mozilla/Add-ons/WebExtensions/Differences_entre_les_implementations_api
 ---
+
 {{AddonSidebar}}
 
 L'API d'extension de navigateur est encore un [standard emergent](https://browserext.github.io/browserext/). Par conséquent, bien qu'il soit pris en charge par la plupart des principaux navigateurs, dont Firefox, Chrome, Edge et Opera, il existe des différences entre les différentes implémentations. Cela signifie que certaines modifications peuvent être nécessaires pour implémenter votre extension pour plusieurs navigateurs

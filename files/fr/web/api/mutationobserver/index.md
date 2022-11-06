@@ -3,9 +3,10 @@ title: MutationObserver
 slug: Web/API/MutationObserver
 translation_of: Web/API/MutationObserver
 ---
+
 {{APIRef("DOM")}}
 
-`MutationObserver` fournit un moyen d’intercepter les changements dans le [DOM](/en-US/docs/DOM). Il a été conçu pour remplacer les [Mutation Events](/en-US/docs/DOM/Mutation_events) définis dans la spécification DOM3 Events.
+`MutationObserver` fournit un moyen d’intercepter les changements dans le [DOM](/fr/docs/DOM). Il a été conçu pour remplacer les [Mutation Events](/fr/docs/DOM/Mutation_events) définis dans la spécification DOM3 Events.
 
 ## Constructeur
 
@@ -13,7 +14,9 @@ translation_of: Web/API/MutationObserver
 
 Le constructeur permettant d’instancier un nouvel observateur de mutations DOM.
 
-    new MutationObserver( function callback );
+```
+new MutationObserver( function callback );
+```
 
 #### Paramètres
 
@@ -53,7 +56,9 @@ Le constructeur permettant d’instancier un nouvel observateur de mutations DOM
 
 Inscrit l’instance du `MutationObserver` afin d’être notifié des mutations DOM du nœud sélectionné.
 
-    void observe( {{domxref("Node")}} target, MutationObserverInit options );
+```
+void observe( {{domxref("Node")}} target, MutationObserverInit options );
+```
 
 #### Paramètres
 
@@ -68,7 +73,9 @@ Inscrit l’instance du `MutationObserver` afin d’être notifié des mutations
 
 L’instance `MutationObserver` cesse de recevoir les notifications de mutations DOM. Jusqu’à ce que la méthode [`observe()`](<#observe()>) soit appelée à nouveau, les callbacks de l’observateur ne seront pas invoquées.
 
-    void disconnect();
+```
+void disconnect();
+```
 
 > **Note :** Selon la [spécification](https://dom.spec.whatwg.org/#garbage-collection), un `MutationObserver` est supprimé par le garbage collector si l'élément cible est supprimé.
 
@@ -76,7 +83,9 @@ L’instance `MutationObserver` cesse de recevoir les notifications de mutations
 
 Vide la file des mutations enregistrées du `MutationObserver` et retourne son contenu.
 
-    Array takeRecords();
+```
+Array takeRecords();
+```
 
 - Valeur de retour
   - : Retourne un tableau de {{domxref("MutationRecord")}}.
@@ -187,10 +196,8 @@ observer.disconnect();
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#mutationobserver', 'MutationObserver')}} | {{ Spec2('DOM WHATWG') }} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MutationObserver")}}
+{{Compat}}

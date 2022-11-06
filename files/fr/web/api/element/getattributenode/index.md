@@ -10,6 +10,7 @@ tags:
   - Noeud
 translation_of: Web/API/Element/getAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 ## Résumé
@@ -27,10 +28,12 @@ var attrNode = element.getAttributeNode(attrName);
 
 ## Exemple
 
-    // html: <div id="top" />
-    var t = document.getElementById("top");
-    var idAttr = t.getAttributeNode("id");
-    alert(idAttr.value == "top")
+```js
+// html: <div id="top" />
+var t = document.getElementById("top");
+var idAttr = t.getAttributeNode("id");
+alert(idAttr.value == "top");
+```
 
 ## Notes
 

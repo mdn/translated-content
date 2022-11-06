@@ -1,19 +1,8 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
-tags:
-  - AJAX
-  - API
-  - 通信
-  - HTTP
-  - インターフェイス
-  - リファレンス
-  - ウェブ
-  - XHR
-  - XMLHttpRequest
-browser-compat: api.XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest
 ---
+
 {{DefaultAPISidebar("XMLHttpRequest")}}
 
 `XMLHttpRequest` (XHR) オブジェクトは、サーバーと対話するために使用されます。ページ全体を更新する必要なしに、データを受け取ることができます。これでユーザーの作業を中断させることなく、ウェブページの一部を更新することができます。
@@ -57,7 +46,7 @@ _このインターフェイスは、 {{domxref("XMLHttpRequestEventTarget")}} �
 
   - : {{domxref("DOMString")}} で HTTP サーバーから返ってきたレスポンス文字列を返します。 {{domxref("XMLHttpRequest.status")}} とは異なり、("`200 OK`" のような) レスポンスメッセージの完全な文が含まれています。
 
-    > **Note:** HTTP/2 仕様書 ([8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [レスポンス擬似ヘッダーフィールド](https://http2.github.io/http2-spec/#HttpResponse)) によれば、 HTTP/2 では、 HTTP/1.1 のステータス行に含まれていたバージョンや原因の文を伝える方法が定義されていません。
+    > **メモ:** HTTP/2 仕様書 ([8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [レスポンス擬似ヘッダーフィールド](https://http2.github.io/http2-spec/#HttpResponse)) によれば、 HTTP/2 では、 HTTP/1.1 のステータス行に含まれていたバージョンや原因の文を伝える方法が定義されていません。
 
 - {{domxref("XMLHttpRequest.timeout")}}
   - : `unsigned long` 型で、リクエストを自動的に終了できるようになるまでの時間をミリ秒単位で表します。

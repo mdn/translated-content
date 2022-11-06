@@ -8,15 +8,18 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/for-await...of
 original_slug: Web/JavaScript/Reference/Instructions/for-await...of
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`for await…of`** permet de créer une boucle qui parcourt les objets itérables asynchrones de la même façon qu'on parcourt les itérables synchrones (tels que les chaînes de caractères ({{jsxref("String")}}), les tableaux {{jsxref("Array")}}, les objets semblables aux tableaux comme {{jsxref("Fonctions/arguments", "arguments")}} ou {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}. Cette instruction invoque un mécanisme d'itération spécifique et les instructions à exécuter pour chaque propriété de l'objet.
 
 ## Syntaxe
 
-    for await (variable of iterable) {
-      instruction
-    }
+```js
+for await (const variable of iterable) {
+  instruction
+}
+```
 
 - `variable`
   - : À chaque itération, la valeur d'une propriété différente est affectée à _variable_. Cette variable peut être déclarée avec `const`, `let` ou `var`.
@@ -57,21 +60,23 @@ var asyncIterable = {
 
 Les générateurs asynchrones implémentent le protocole d'itérateur asynchrone et on peut donc les parcourir avec `for await...of`:
 
-    async function* asyncGenerator() {
-      var i = 0;
-      while (i < 3) {
-        yield i++;
-      }
-    }
+```js
+async function* asyncGenerator() {
+  var i = 0;
+  while (i < 3) {
+    yield i++;
+  }
+}
 
-    (async function() {
-      for await (let num of asyncGenerator()) {
-        console.log(num);
-      }
-    })();
-    // 0
-    // 1
-    // 2
+(async function() {
+  for await (let num of asyncGenerator()) {
+    console.log(num);
+  }
+})();
+// 0
+// 1
+// 2
+```
 
 Pour prendre un exemple plus concret, on peut parcourir les données fournies par une API avec un générateur asynchrone grâce à `for await... of`. Dans cet exemple, on commence par créer un itérateur asynchrone à partir d'un flux de données puis on utilise cet itérateur et `for await...of` afin de calculer la taille de la réponse fournie par l'API :
 
@@ -111,13 +116,11 @@ getResponseSize('https://jsonplaceholder.typicode.com/photos');
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                    | État                         | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}} | {{Spec2('ESDraft')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.for_await_of")}}
+{{Compat}}
 
 ## Voir aussi
 

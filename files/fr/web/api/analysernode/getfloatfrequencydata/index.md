@@ -3,6 +3,7 @@ title: AnalyserNode.getFloatFrequencyData()
 slug: Web/API/AnalyserNode/getFloatFrequencyData
 translation_of: Web/API/AnalyserNode/getFloatFrequencyData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La méthode **`getFloatFrequencyData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de fréquence dans un tableau {{domxref("Float32Array")}} passé en paramètre.
@@ -76,14 +77,12 @@ dessiner();
 
 ## Spécifications
 
-| Spécification                                                                                                                                                        | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-getFloatFrequencyData-void-Float32Array-array', 'getFloatFrequencyData()')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.getFloatFrequencyData")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - [Utiliser la Web Audio API](/fr/docs/Web_Audio_API/Using_Web_Audio_API)

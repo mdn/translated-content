@@ -10,12 +10,15 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Bad_octal
 original_slug: Web/JavaScript/Reference/Erreurs/Bad_octal
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    Warning: SyntaxError: 08 is not a legal ECMA-262 octal constant.
-    Warning: SyntaxError: 09 is not a legal ECMA-262 octal constant.
+```
+Warning: SyntaxError: 08 is not a legal ECMA-262 octal constant.
+Warning: SyntaxError: 09 is not a legal ECMA-262 octal constant.
+```
 
 ## Type d'erreur
 

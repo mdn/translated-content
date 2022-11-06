@@ -13,6 +13,7 @@ tags:
   - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** spécifie les parents pouvant intégrer une page en utilisant {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, ou {{HTMLElement("applet")}}.
@@ -46,8 +47,10 @@ Définir cette directive à `'none'` est comparable à len-tête HTTP {{HTTPHead
 
 Une ou plusieurs sources peuvent être autorisées pour cette directive :
 
-    Content-Security-Policy: frame-ancestors <source>;
-    Content-Security-Policy: frame-ancestors <source> <source>;
+```
+Content-Security-Policy: frame-ancestors <source>;
+Content-Security-Policy: frame-ancestors <source> <source>;
+```
 
 ### Sources
 
@@ -70,7 +73,7 @@ La \<source> peut être une des suivantes :
 
   - : Un protocole tel que `http:` or `https:`. Les deux-points sont nécessaires et vous ne devez pas mettre de guillemets. Vous pouvez aussi spécifier des schémas de données bien que ce ne soit pas recommandé.
 
-    - `data:` Autorise [les URI `data:`](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) à être utilisées comme source de contenu. _Cette pratique manque de sécurité ; une personne malveillante peut aussi injecter des URI data: arbitraires. Utilisez cette valeur avec parcimonie et certainement pas pour des scripts._
+    - `data:` Autorise [les URI `data:`](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) à être utilisées comme source de contenu. _Cette pratique manque de sécurité ; une personne malveillante peut aussi injecter des URI data: arbitraires. Utilisez cette valeur avec parcimonie et certainement pas pour des scripts._
     - `mediastream:` permet aux [URI `mediastream:`](/fr/docs/Web/API/MediaStream_API) d'être utilisées comme source de contenu.
     - `blob:` permet aux [URI `blob:`](/fr/docs/Web/API/Blob) d'être utilisées comme source de contenu.
     - `filesystem:` Allows [URI `filesystem:`](/fr/docs/Web/API/FileSystem) d'être utilisées comme source de contenu.
@@ -90,14 +93,11 @@ Content-Security-Policy: frame-ancestors 'self' https://www.example.org;
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                       | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-frame-ancestors", "frame-ancestors")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1", "#directive-frame-ancestors", "frame-ancestors")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.frame-ancestors")}}
+{{Compat}}
 
 ## Voir aussi
 

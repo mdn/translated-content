@@ -7,8 +7,9 @@ tags:
 translation_of: Glossary/Telnet
 original_slug: Glossaire/Telnet
 ---
+
 **Telnet** est un outil en ligne de commandes et un protocole basé sur TCP/IP pour accéder à des ordinateurs distants.
 
 ## Plus d'informations
 
-- {{interwiki('wikipedia','Telnet')}} sur Wikipédia
+- [Telnet](https://fr.wikipedia.org/wiki/Telnet) sur Wikipédia

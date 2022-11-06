@@ -9,19 +9,22 @@ tags:
   - XPath
 translation_of: Web/API/Document/evaluate
 ---
+
 {{ ApiRef("DOM") }}
 
 La méthode **`evaluate()`** renvoie un {{domxref("XPathResult")}} basé sur une expression [XPath](/fr/docs/XPath) et d'autres paramètres donnés.
 
 ## Syntaxe
 
-    var xpathResult = document.evaluate(
-     xpathExpression,
-     contextNode,
-     namespaceResolver,
-     resultType,
-     result
-    );
+```js
+var xpathResult = document.evaluate(
+  xpathExpression,
+  contextNode,
+  namespaceResolver,
+  resultType,
+  result
+);
+```
 
 - `xpathExpression` est une chaîne de caractères représentant le XPath à évaluer.
 - `contextNode` spécifie le noeud de contexte pour la requête (voir [XPath specification](http://www.w3.org/TR/xpath)) . Il est courant de transmettre un document en tant que nœud de contexte.
@@ -165,13 +168,11 @@ Les résultats des types `NODE_SNAPSHOT` sont des instantanés, qui sont essenti
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("DOM3 XPath", "xpath.html#XPathEvaluator-evaluate", "Document.evaluate")}} | {{Spec2("DOM3 XPath")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.evaluate")}}
+{{Compat}}
 
 ## Voir aussi
 

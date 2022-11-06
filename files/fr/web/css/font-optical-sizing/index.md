@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-optical-sizing
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`font-optical-sizing`** permet de contrôler la façon dont l'agent utilisateur rend le texte avec (ou non) différentes représentations visuelles en fonction de la taille.  Cette propriété ne fonctionne qu'avec les polices qui disposent d'un axe de variation pour la taille optique.
@@ -35,9 +36,13 @@ font-optical-sizing: unset;
 - `auto`
   - : L'agent utilisateur modifiera la forme des glyphes pour une vue optimale.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -75,12 +80,8 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('CSS4 Fonts', '#font-optical-sizing-def', 'font-optical-sizing')}} | {{Spec2('CSS4 Fonts')}} |              |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-optical-sizing")}}
+{{Compat}}

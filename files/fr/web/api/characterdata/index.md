@@ -6,6 +6,7 @@ tags:
   - DOM
 translation_of: Web/API/CharacterData
 ---
+
 {{APIRef("DOM")}}
 
 L'interface abstraite **`CharacterData`** représente un objet {{domxref("Node")}} (_noeud_) qui contient des caractères. C'est une interface abstraite, ce qui signifie qu'il n'existe aucun objet de type `CharacterData` : elle est implémentée par d'autres interfaces comme {{domxref("Text")}}, {{domxref("Comment")}} ou {{domxref("ProcessingInstruction")}} qui ne sont pas abstraites.
@@ -44,16 +45,11 @@ _Hérite des propriétés de son parent {{domxref("Node")}} et implémente les i
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire                                                                                                                     |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#characterdata', 'CharacterData')}}                 | {{Spec2('DOM WHATWG')}} | Ajoute une implémention des interfaces {{domxref("ChildNode")}} et{{domxref("NonDocumentTypeChildNode")}}. |
-| {{SpecName('DOM3 Core', 'core.html#ID-FF21A306', 'CharacterData')}}         | {{Spec2('DOM3 Core')}}     | Pas de changement depuis {{SpecName('DOM2 Core')}}.                                                                      |
-| {{SpecName('DOM2 Core', 'core.html#ID-FF21A306', 'CharacterData')}}         | {{Spec2('DOM2 Core')}}     | Pas de changement depuis {{SpecName('DOM1')}}.                                                                          |
-| {{SpecName('DOM1', 'level-one-core.html#ID-FF21A306', 'CharacterData')}} | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CharacterData")}}
+{{Compat}}
 
 ## Voir aussi
 

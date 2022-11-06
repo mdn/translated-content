@@ -1,12 +1,8 @@
 ---
 title: EventTarget
 slug: Web/API/EventTarget
-tags:
-  - インターフェイス
-  - リファレンス
-browser-compat: api.EventTarget
-translation_of: Web/API/EventTarget
 ---
+
 {{ApiRef("DOM")}}
 
 **`EventTarget`** インターフェイスは、イベントを受け取ることや、リスナーを持つことができるオブジェクトが実装します。

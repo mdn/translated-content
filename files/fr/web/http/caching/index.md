@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Caching
 original_slug: Web/HTTP/Cache
 ---
+
 {{HTTPSidebar}}
 
 Les performances des sites et applications web peuvent être significativement améliorées en réutilisant les ressources déjà collectées précédemment. Les caches web réduisent la latence et le trafic du réseau, et ainsi diminuent le temps nécessaire à l'affichage de la représentation d'une ressource. En utilisant la mise en cache HTTP, les sites web deviennent plus réactifs.
@@ -22,7 +23,7 @@ Il y a différents types de caches, qui peuvent être groupés en deux principal
 
 ### Caches de navigateur privés
 
-Un cache privé est dédié à un seul utilisateur. Il se peut que vous ayez déjà vu les termes «&nbsp;mise en cache&nbsp;» dans les paramètres de votre navigateur. Un cache de navigateur contient tous les documents téléchargés via [HTTP](/fr/docs/Web/HTTP "en/HTTP") par l’utilisateur. Ce cache est utilisé pour rendre les documents visités disponibles à la navigation via les boutons précédent / suivant, la sauvegarde, l’affichage du code source, etc. sans nécessiter un aller-retour au serveur supplémentaire. De la même manière, il améliore la navigation hors-ligne de contenu en cache.
+Un cache privé est dédié à un seul utilisateur. Il se peut que vous ayez déjà vu les termes «&nbsp;mise en cache&nbsp;» dans les paramètres de votre navigateur. Un cache de navigateur contient tous les documents téléchargés via [HTTP](/fr/docs/Web/HTTP) par l’utilisateur. Ce cache est utilisé pour rendre les documents visités disponibles à la navigation via les boutons précédent / suivant, la sauvegarde, l’affichage du code source, etc. sans nécessiter un aller-retour au serveur supplémentaire. De la même manière, il améliore la navigation hors-ligne de contenu en cache.
 
 ### Caches de proxy partagés
 
@@ -50,21 +51,27 @@ Le {{HTTPHeader("Cache-Control")}} HTTP/1.1 Le champ d'en-tête général est ut
 
 Le cache ne doit rien stocker concernant la demande du client ou la réponse du serveur. Une demande est envoyée au serveur et une réponse complète est téléchargée à chaque fois.
 
-    Cache-Control: no-store
-    Cache-Control: no-cache, no-store, must-revalidate
+```
+Cache-Control: no-store
+Cache-Control: no-cache, no-store, must-revalidate
+```
 
 #### Pas de cache
 
 Un cache enverra la demande au serveur d'origine pour validation avant de publier une copie en cache.
 
-    Cache-Control: no-cache
+```
+Cache-Control: no-cache
+```
 
 #### Caches privées et publiques
 
 La directive "public" indique que la réponse peut être mise en cache par n'importe quel cache. Cela peut être utile si les pages avec une authentification HTTP ou des codes d’état de réponse qui ne sont pas normalement mis en cache doivent maintenant être mis en cache. En revanche, "privé" indique que la réponse est destinée à un seul utilisateur et ne doit pas être stockée par un cache partagé. Un cache de navigateur privé peut stocker la réponse dans ce cas.
 
-    Cache-Control: private
-    Cache-Control: public
+```
+Cache-Control: private
+Cache-Control: public
+```
 
 #### Expiration
 
@@ -72,15 +79,19 @@ La directive la plus importante ici est "max-age = \<secondes>", qui correspond 
 
 Pour plus de détails, voir aussi la section [Freshness](#Freshness) ci-dessous..
 
-    Cache-Control: max-age=31536000
+```
+Cache-Control: max-age=31536000
+```
 
 #### Validation
 
 Lors de l'utilisation de la directive "must-revalidate", le cache doit vérifier l'état des ressources obsolètes avant de l'utiliser, et celles qui ont expiré ne doivent pas être utilisées. Pour plus de détails, voir la section [Validation](#Cache_validation) ci-dessous.
 
-    Cache-Control: must-revalidate
+```
+Cache-Control: must-revalidate
+```
 
-### L'en-tête`Pragma`
+### L'en-tête `Pragma`
 
 {{HTTPHeader ("Pragma")}} est un en-tête HTTP / 1.0. Il n'est pas spécifié pour les réponses HTTP et ne constitue donc pas un remplacement fiable pour l'en-tête général HTTP / 1.1 Cache-Control, bien qu'il se comporte de la même manière que Cache-Control: no-cache, si le champ d'en-tête Cache-Control est omis dans une requête. Utilisez Pragma uniquement pour une compatibilité ascendante avec les clients HTTP / 1.0.
 
@@ -96,7 +107,9 @@ Le calcul de la durée de vie de la fraîcheur est basé sur plusieurs en-têtes
 
 Le temps d'expiration s'organise comme ceci :
 
-    expirationTime = responseTime + freshnessLifetime - currentAge
+```
+expirationTime = responseTime + freshnessLifetime - currentAge
+```
 
 Où `responseTime` est le moment auquel a été reçue la réponse selon le navigateur.
 
@@ -136,7 +149,9 @@ Quand un cache reçoit une requête qui peut être satisfaite par une réponse e
 
 Cela peut être très utile pour servir du contenu dynamique par exemple. Quand on se sert de l'en-tête  `Vary: User-Agent`, les serveurs de cache devront considérer l'agent utilisateur pour décider de servir la page du cache. Si vous servez du contenu varié aux utilisateurs de mobiles, cela vous aidera à éviter qu'un cache puisse servir, par erreur, une version "Desktop" de votre site. En plus, cela aidera Google et d'autres moteurs de recherche à découvrir la version mobile d'une page et peut aussi les avertir qu'aucun "masquage" ([Cloaking](https://en.wikipedia.org/wiki/Cloaking)) n'est à craindre.
 
-    Vary: User-Agent
+```
+Vary: User-Agent
+```
 
 Parce que la valeur d'en-tête  {{HTTPHeader("User-Agent")}} est différente  ("varie") pour les clients mobiles ou Bureau, les caches ne seront pas utilisés pour servir du contenu mobile à un utilisateur "Desktop" et vice-versa.
 

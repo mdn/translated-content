@@ -10,6 +10,7 @@ tags:
   - mouseleave
 translation_of: Web/API/Element/mouseleave_event
 ---
+
 {{APIRef}}
 
 L'évènement **`mouseleave`** est déclenché à partir d'un {{domxref("Element")}} lorsque le curseur d'un dispositif de pointage (ex. une souris) se déplace en dehors de cet élément.
@@ -37,7 +38,7 @@ L'évènement **`mouseleave`** est déclenché à partir d'un {{domxref("Element
   </tbody>
 </table>
 
-`mouseleave` et {{event('mouseout')}} se ressemblent mais `mouseleave` ne remonte pas dans le DOM tandis que `mouseout` remonte. `mouseleave` est donc déclenché lorsque le pointeur a quitté l'élément et tout ses descendants tandis que `mouseout` est déclenché lorsque le pointeur quitte l'élément ou l'un des descendants (quand bien même il serait toujours sur le parent).
+`mouseleave` et [`mouseout`](/fr/docs/Web/API/Element/mouseout_event) se ressemblent mais `mouseleave` ne remonte pas dans le DOM tandis que `mouseout` remonte. `mouseleave` est donc déclenché lorsque le pointeur a quitté l'élément et tout ses descendants tandis que `mouseout` est déclenché lorsque le pointeur quitte l'élément ou l'un des descendants (quand bien même il serait toujours sur le parent).
 
 ![](mouseleave.png)
 
@@ -116,14 +117,11 @@ function addListItem(text) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('UI Events', '#event-type-mouseleave', 'mouseleave')}} | {{Spec2('UI Events')}}     |
-| {{SpecName('DOM3 Events', '#event-type-mouseleave', 'mouseleave')}} | {{Spec2('DOM3 Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.mouseleave_event")}}
+{{Compat}}
 
 ## Voir aussi
 

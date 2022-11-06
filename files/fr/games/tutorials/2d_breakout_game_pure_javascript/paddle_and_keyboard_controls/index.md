@@ -14,6 +14,7 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contrôle_clavier
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Faire_rebondir_la_balle_sur_les_murs", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
@@ -47,8 +48,6 @@ function drawPaddle() {
 ## Permettre à l'utilisateur de contrôler la raquette
 
 Nous pouvons dessiner la raquette où nous voulons, mais elle doit répondre aux actions de l'utilisateur. Il est temps de mettre en place certaines commandes au clavier. Nous aurons besoin de ce qui suit :
-
-
 
 - Deux variables pour stocker des informations sur l'état des touches "gauche" et "droite".
 - Deux écouteurs d'événements pour les événements `keydown` et `keyup` du clavier. Nous voulons exécuter un code pour gérer le mouvement de la raquette lorsque des appuis sur les touches.

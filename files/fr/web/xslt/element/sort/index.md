@@ -6,18 +6,21 @@ tags:
 translation_of: Web/XSLT/Element/sort
 original_slug: Web/XSLT/sort
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:sort>` définit les paramètres de tri pour des nœuds sélectionnés par `<xsl:apply-templates>` ou par `<xsl:for-each>`.
 
 ### Syntaxe
 
-    <xsl:sort
-    	select=EXPRESSION
-    	order="ascending" | "descending"
-    	case-order="upper-first"| "lower-first"
-    	lang=XML:LANG-CODE
-    	data-type="text" | "number" />
+```xml
+<xsl:sort
+  select=EXPRESSION
+  order="ascending" | "descending"
+  case-order="upper-first"| "lower-first"
+  lang=XML:LANG-CODE
+  data-type="text" | "number" />
+```
 
 ### Attributs obligatoires
 

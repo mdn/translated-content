@@ -1,16 +1,10 @@
 ---
 title: Aligner des éléments dans un conteneur flexible
-slug: Web/CSS/css_flexible_box_layout/aligning_items_in_a_flex_container
-tags:
-  - CSS
-  - Flex
-  - Guide
-  - Web
-  - flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 original_slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Aligner_des_éléments_dans_un_conteneur_flexible
 ---
+
 {{CSSRef}}
 
 Une des raisons qui ont poussé à l'adoption des boîtes flexibles est la présence d'outils d'alignement enfin corrects pour le Web. On pouvait ainsi enfin centrer une boîte sur un axe vertical. Dans ce guide, nous verrons dans le détail comment fonctionnent les propriétés d'alignement et de justification relatives aux boîtes flexibles.
@@ -18,8 +12,6 @@ Une des raisons qui ont poussé à l'adoption des boîtes flexibles est la prés
 Afin de centrer notre boîte, nous allons utiliser la propriété `align-items` afin d'aligner l'objet sur l'axe secondaire (_cross axis_ en anglais). Dans notre exemple, cet axe est l'axe de bloc et est orienté verticalement. La propriété `justify-content` est quant à elle utilisée pour aligner l'objet sur l'axe principal (_main axis_ en anglais) (ici l'axe principal est l'axe en ligne qui s'étend horizontalement).
 
 ![Un élément contenant une autre boîte centrée à l'intérieur](align1.png)
-
-
 
 Vous pouvez étudier le code de l'exemple suivant et modifier la taille du conteneur ou d'un élément imbriqué : l'élément imbriqué sera toujours centré.
 

@@ -1,18 +1,8 @@
 ---
 title: StylePropertyMapReadOnly.has()
 slug: Web/API/StylePropertyMapReadOnly/has
-tags:
-  - API
-  - CSS Typed Object Model API
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - StylePropertyMapReadOnly
-  - has()
-browser-compat: api.StylePropertyMapReadOnly.has
-translation_of: Web/API/StylePropertyMapReadOnly/has
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 **`has()`** は {{domxref("StylePropertyMapReadOnly")}} インターフェイスのメソッドで、指定されたプロパティが `StylePropertyMapReadOnly` オブジェクトにあるかどうかを示します。

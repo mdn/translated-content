@@ -3,6 +3,7 @@ title: IDBObjectStore
 slug: Web/API/IDBObjectStore
 translation_of: Web/API/IDBObjectStore
 ---
+
 {{APIRef("IndexedDB")}}
 
 L'interface **`IDBObjectStore`** de l'{{domxref("IndexedDB_API","API IndexedDB")}} est un accès aux magasins d'objet de la base de données.
@@ -131,13 +132,11 @@ objectStoreRequest.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBObjectStore', 'IDBObjectStore')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore")}}
+{{Compat}}
 
 ## Voir aussi
 

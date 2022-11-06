@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log10
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/log10
 ---
+
 {{JSRef}}
 
 La fonction **`Math.log10()`** renvoie le logarithme en base 10 d'un nombre, donné par la formule :
@@ -21,7 +22,9 @@ La fonction **`Math.log10()`** renvoie le logarithme en base 10 d'un nombre, don
 
 ## Syntaxe
 
-    Math.log10(x)
+```js
+Math.log10(x)
+```
 
 ### Paramètres
 
@@ -36,7 +39,7 @@ Le logarithme en base 10 du nombre passé en argument. Si cette valeur est néga
 
 Si la valeur de l'argument est strictement inférieure à 0, la valeur renvoyée à {{jsxref("NaN")}}.
 
-`log10()` étant une méthode statique de `Math`, il faut utiliser `Math.log10()`et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Cette fonction est équivalente à la fonction donnée par `Math.log(x) / Math.log(10)`.
+`log10()` étant une méthode statique de `Math`, il faut utiliser `Math.log10()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Cette fonction est équivalente à la fonction donnée par `Math.log(x) / Math.log(10)`.
 
 ## Exemple
 
@@ -62,14 +65,11 @@ Math.log10 = Math.log10 || function(x) {
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-math.log10', 'Math.log10')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.log10', 'Math.log10')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.log10")}}
+{{Compat}}
 
 ## Voir aussi
 

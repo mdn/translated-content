@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Définition_de_paramètres
 ---
+
 ## Définition de paramètres
 
 Alors que l'exécution de transformations à l'aide des fichiers .xsl et .xml pré codés est utile, la configuration du fichier .xsl par JavaScript peut l'être bien plus. Par exemple, JavaScript et XSLT peuvent être utilisés pour trier des données XML puis les afficher. L'ordre du tri pourra alterner entre le tri ascendant et le tri descendant.
@@ -16,13 +17,17 @@ XSLT fournit l'élément `xsl:param`, qui est un descendant de l'élément `xsl:
 
 _XSLT&nbsp;:_
 
-    <xsl:param name="myOrder" />
+```xml
+<xsl:param name="myOrder" />
+```
 
 _JavaScript&nbsp;:_
 
-    var sortVal = xsltProcessor.getParameter(null, "monOrdre");
+```js
+var sortVal = xsltProcessor.getParameter(null, "monOrdre");
 
-    if (sortVal == "" || sortVal == "descendant")
-      xsltProcessor.setParameter(null, "monOrdre", "ascendant");
-    else
-      xsltProcessor.setParameter(null, "monOrdre", "descendant");
+if (sortVal == "" || sortVal == "descendant")
+  xsltProcessor.setParameter(null, "monOrdre", "ascendant");
+else
+  xsltProcessor.setParameter(null, "monOrdre", "descendant");
+```

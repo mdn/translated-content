@@ -1,13 +1,8 @@
 ---
 title: hyphenate-character
 slug: Web/CSS/hyphenate-character
-tags:
-  - CSS
-  - CSS プロパティ
-  - リファレンス
-browser-compat: css.properties.hyphenate-character
-translation_of: Web/CSS/hyphenate-character
 ---
+
 {{CSSRef}}
 
 **`hyphenate-character`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ハイフンによる改行の前で行末に使用される文字（または文字列）を設定します。

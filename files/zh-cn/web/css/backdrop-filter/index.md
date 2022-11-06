@@ -1,19 +1,8 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
-tags:
-  - CSS
-  - CSS Property
-  - Graphics
-  - Layout
-  - NeedsContent
-  - Reference
-  - SVG
-  - SVG Filter
-  - Web
-  - recipe:css-property
-translation_of: Web/CSS/backdrop-filter
 ---
+
 {{CSSRef}}
 
 **`backdrop-filter`** [CSS](/zh-CN/docs/Web/CSS) 属性可以让你为一个元素后面区域添加图形效果（如模糊或颜色偏移）。因为它适用于元素*背后*的所有元素，为了看到效果，必须使元素或其背景至少部分透明。

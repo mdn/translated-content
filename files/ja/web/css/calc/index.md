@@ -1,20 +1,9 @@
 ---
 title: calc()
 slug: Web/CSS/calc
-tags:
-  - CSS
-  - CSS 関数
-  - 計算
-  - 演算
-  - 関数
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - calc
-translation_of: Web/CSS/calc()
 original_slug: Web/CSS/calc()
-browser-compat: css.types.calc
 ---
+
 {{CSSRef}}
 
 **`calc()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 CSS のプロパティ値を指定する際に計算を行うことができるものです。 {{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;frequency&gt;")}}、{{cssxref("&lt;angle&gt;")}}、{{cssxref("&lt;time&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("&lt;number&gt;")}}、{{cssxref("&lt;integer&gt;")}} が利用できる場所ならば使用できます。</p>
@@ -80,7 +69,7 @@ h1 {
 
 これによって最終的に `.modal` は `z-index` の値は 2 になります。
 
-**Note:** Chrome ブラウザーでは現在のところ、整数が求められる場面で **`calc()`** から返される一部の値を受け付けません。例えば、結果が整数になる場合であっても割り算は受け付けません。すなわち、 `z-index: calc(4 / 2);` は受け付けられません。
+**メモ:** Chrome ブラウザーでは現在のところ、整数が求められる場面で **`calc()`** から返される一部の値を受け付けません。例えば、結果が整数になる場合であっても割り算は受け付けません。すなわち、 `z-index: calc(4 / 2);` は受け付けられません。
 
 ## 例
 

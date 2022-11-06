@@ -1,15 +1,8 @@
 ---
 title: CSS の z-index を理解する
 slug: Web/CSS/CSS_Positioning/Understanding_z_index
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - リファレンス
-  - Understanding_CSS_z-index
-  - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index
 ---
+
 {{CSSRef}}
 
 最も基本的な場合では、 [HTML](/ja/docs/Web/HTML) のページは二次元であると考えることができ、テキスト、画像、その他の要素が重なることなくページに並べられます。この場合、単一のレンダリングの流れがあり、すべての要素で他の要素との間で取る間隔が分かっています。{{cssxref("z-index")}} 属性で、コンテンツの描画時にオブジェクトの重なり合いの順番を調整することができます。
@@ -24,10 +17,10 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index
 
 この記事では、いくつかの例を挙げながら、それらのルールを簡単に説明してみます。
 
-1.  [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index): 既定の重ね合わせ規則
-2.  [浮動ブロックの重ね合わせ](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float): 浮動要素が重ね合わせでどのように扱われるか
-3.  [z-index の使用](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index): `z-index` を使って既定の重ね合わせ変更する方法
-4.  [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context): 重ね合わせコンテキストについてのメモ
-5.  [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1): 2 階層の HTML 構造で、最終階層の `z-index`
-6.  [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2): 2 階層の HTML 構造、全レベルの `z-index`
-7.  [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3): 3 階層の HTML 構造、第 2 階層の `z-index`
+1. [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index): 既定の重ね合わせ規則
+2. [浮動ブロックの重ね合わせ](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float): 浮動要素が重ね合わせでどのように扱われるか
+3. [z-index の使用](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index): `z-index` を使って既定の重ね合わせ変更する方法
+4. [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context): 重ね合わせコンテキストについてのメモ
+5. [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1): 2 階層の HTML 構造で、最終階層の `z-index`
+6. [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2): 2 階層の HTML 構造、全レベルの `z-index`
+7. [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3): 3 階層の HTML 構造、第 2 階層の `z-index`

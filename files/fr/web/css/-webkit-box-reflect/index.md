@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-box-reflect
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 La propriété **`-webkit-box-reflect`** peut être utilisée afin de créer un effet de réflexion d'un élément dans une direction donnée.

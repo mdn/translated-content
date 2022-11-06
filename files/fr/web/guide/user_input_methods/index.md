@@ -3,6 +3,7 @@ title: Entrées utilisateur et méthodes
 slug: Web/Guide/User_input_methods
 translation_of: Web/Guide/User_input_methods
 ---
+
 Les entrées utilisateur modernes vont au-delà du simple clavier et souris: pensez aux écrans tactiles par exemple. Cet article fournit des recommendations pour gérer les entrées utilisateur et implémenter les contrôles des Open Web Apps, ainsi que des FAQs, des exemples concrets, et des liens pour ceux qui ont besoin d'informations supplémentaires sur les technologies utilisées. Les APIs et événements abordés sont en autre [les événements tactiles](/fr/docs/Web/Guide/DOM/Events/Touch_events), [l'API Pointer Lock](/fr/docs/WebAPI/Pointer_Lock), [l'API Screen Orientation](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation), [l'API Fullscreen](/fr/docs/Web/Guide/DOM/Using_full_screen_mode) et [Drag & Drop](/fr/docs/Web/API/API_HTML_Drag_and_Drop).
 
 ## Workflow entrées utilisateur et contrôles
@@ -168,5 +169,4 @@ Dans un Open Web App, tout élément DOM peut être rendu directement éditable 
 - [Fullscreen API](/fr/docs/Web/Guide/DOM/Using_full_screen_mode)
 - [Drag & Drop](/fr/docs/Web/API/API_HTML_Drag_and_Drop)
 - [Content Editable](/fr/docs/Web/HTML/Contenu_editable)
-- [Keyboard events in Firefox OS TV](https://developer.mozilla.org/en-US/Firefox_OS/Platform/Keyboard_events_in_Firefox_OS_TV)
-- [Implementing TV remote control navigation](/en-US/docs/Mozilla/Firefox_OS/TVs_connected_devices/TV_remote_control_navigation)
+- [Implementing TV remote control navigation](/fr/docs/Mozilla/Firefox_OS/TVs_connected_devices/TV_remote_control_navigation)

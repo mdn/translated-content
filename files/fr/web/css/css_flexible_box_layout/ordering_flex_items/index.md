@@ -12,6 +12,7 @@ tags:
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Ordonner_éléments_flexibles
 ---
+
 {{CSSRef}}
 
 Les nouvelles méthodes de disposition telles que les boîtes flexibles (_flexbox_) et la grille CSS (_CSS Grid_) apportent la possibilité de contrôler l'ordre du contenu. Dans cet article, nous verrons comment changer l'ordre visuel du contenu grâce aux boîtes flexibles. Nous examinerons également les conséquences de cette réorganisation du point de vue de l'accessibilité.
@@ -70,8 +71,8 @@ Dans l'exemple qui suit, on dispose de 5 objets flexibles et on affecte les vale
 - Premier élément selon la source : `order: 2`
 - Deuxième élément selon la source : `order: 3`
 - Troisième élément selon la source : `order: 1`
-- Quatrième élément selon la source :`order: 3`
-- Cinquième élément selon la source :`order: 1`
+- Quatrième élément selon la source : `order: 3`
+- Cinquième élément selon la source : `order: 1`
 
 Les éléments seront affichés sur la page dans l'ordre suivant :
 

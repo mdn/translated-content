@@ -3,6 +3,7 @@ title: transition-duration
 slug: Web/CSS/transition-duration
 translation_of: Web/CSS/transition-duration
 ---
+
 {{CSSRef}}
 
 La propriété **`transition-duration`** définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, `0s`, indique qu'il n'y aura aucune animation.
@@ -32,9 +33,13 @@ transition-duration: unset;
 - `<time>`
   - : Une valeur {{cssxref("&lt;time&gt;")}} qui définit la durée que doit prendre l'animation pour changer la valeur d'une propriété (entre l'ancienne valeur et la nouvelle). Une durée de `0s` qu'aucune transition ne sera appliquée et que le passage d'un état à l'autre sera instantanné. Si la valeur utilisée est négative, la déclaration sera considérée comme invalide.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -109,17 +114,13 @@ changeButton.addEventListener("click", change);
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Transitions', '#transition-duration', 'transition-duration')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.transition-duration")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser les transitions CSS](/fr/docs/CSS/Using_CSS_transitions "en/CSS/CSS transitions")
+- [Utiliser les transitions CSS](/fr/docs/CSS/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}}

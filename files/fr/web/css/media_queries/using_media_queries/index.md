@@ -4,6 +4,7 @@ slug: Web/CSS/Media_Queries/Using_media_queries
 translation_of: Web/CSS/Media_Queries/Using_media_queries
 original_slug: Web/CSS/Requêtes_média/Utiliser_les_Media_queries
 ---
+
 {{CSSRef}}
 
 **Les requêtes média (_media queries_)** permettent de modifier l'apparence d'un site ou d'une application en fonction du type d'appareil (impression ou écran par exemple) et de ses caractéristiques (la résolution d'écran ou la largeur de la zone d'affichage (_viewport_) par exemple).
@@ -72,9 +73,9 @@ Les caractéristiques média décrivent certaines caractéristiques spécifiques
 | {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}                      | L'utilisateur préfère utiliser un thème clair ou un thème sombre.                                                                | Ajoutée avec le niveau 5 du module de spécification _Media Queries_.                                                                      |
 | {{cssxref("@media/forced-colors", "forced-colors")}}                                          | Détecte si l'agent utilisateur restreint la palette de couleurs.                                                                 | Ajoutée avec le niveau 5 du module de spécification _Media Queries_.                                                                      |
 | {{cssxref("@media/scripting","scripting")}}                                                      | La disponibilité des fonctions de script (JavaScript par exemple)                                                                | Reportée au niveau 5 du module de spécification _Media Queries_.                                                                          |
-| {{cssxref("@media/device-width","device-width")}} {{obsolete_inline}}                     | La largeur de la surface de rendu pour l'appareil d'affichage                                                                    | Dépréciée par le niveau 4 du module de spécification _Media Queries_.                                                                     |
-| {{cssxref("@media/device-height","device-height")}} {{obsolete_inline}}                 | La hauteur de la surface de rendu pour l'appareil d'affichage                                                                    | Dépréciée par le niveau 4 du module de spécification _Media Queries_.                                                                     |
-| {{cssxref("@media/device-aspect-ratio","device-aspect-ratio")}} {{obsolete_inline}} | Le rapport largeur/hauteur de la surface de rendu pour l'appareil d'affichage                                                    | Dépréciée par le niveau 4 du module de spécification _Media Queries_.                                                                     |
+| {{cssxref("@media/device-width","device-width")}} {{deprecated_inline}}                     | La largeur de la surface de rendu pour l'appareil d'affichage                                                                    | Dépréciée par le niveau 4 du module de spécification _Media Queries_.                                                                     |
+| {{cssxref("@media/device-height","device-height")}} {{deprecated_inline}}                 | La hauteur de la surface de rendu pour l'appareil d'affichage                                                                    | Dépréciée par le niveau 4 du module de spécification _Media Queries_.                                                                     |
+| {{cssxref("@media/device-aspect-ratio","device-aspect-ratio")}} {{deprecated_inline}} | Le rapport largeur/hauteur de la surface de rendu pour l'appareil d'affichage                                                    | Dépréciée par le niveau 4 du module de spécification _Media Queries_.                                                                     |
 
 ### Opérateurs logiques
 

@@ -8,12 +8,15 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/No_variable_name
 original_slug: Web/JavaScript/Reference/Erreurs/No_variable_name
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: missing variable name (Firefox)
-    SyntaxError: Unexpected token = (Chrome)
+```
+SyntaxError: missing variable name (Firefox)
+SyntaxError: Unexpected token = (Chrome)
+```
 
 ## Type d'erreur
 

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 browser-compat: javascript.builtins.Object.hasOwn
 ---
+
 {{JSRef}}{{SeeCompatTable}}
 
 La méthode statique **`Object.hasOwn()`** renvoie `true` si l'objet indiqué possède la propriété indiquée comme propriété _propre_. Si la propriété est héritée ou qu'elle n'existe pas, la méthode renverra `false`.
@@ -40,7 +41,7 @@ La méthode **`Object.hasOwn()`** renvoie `true` si la propriété indiquée est
 ### Utiliser Object.hasOwn() pour tester l'existence d'une propriété
 
 Le code suivant illustre comment déterminer si l'objet `exemple` contient une propriété intitulée `prop`.
- 
+
 ```js
 let exemple = {};
 Object.hasOwn(exemple, 'prop');   // false : 'prop' n'a pas été définie

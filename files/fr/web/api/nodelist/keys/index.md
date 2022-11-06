@@ -9,13 +9,16 @@ tags:
   - Noeuds
 translation_of: Web/API/NodeList/keys
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`NodeList.keys()`** renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des `unsigned integer` (_entier non signé_).
 
 ## Syntaxe
 
-    nodeList.keys();
+```js
+nodeList.keys();
+```
 
 ### Valeur retournée
 
@@ -43,19 +46,19 @@ for(var key of list.keys()) {
 
 Le résultat est :
 
-    0
-    1
-    2
+```
+0
+1
+2
+```
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#interface-nodelist','keys() (as iterable)')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeList.keys")}}
+{{Compat}}
 
 ## Voir aussi
 

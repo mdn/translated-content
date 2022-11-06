@@ -3,13 +3,16 @@ title: DOMTokenList.item()
 slug: Web/API/DOMTokenList/item
 translation_of: Web/API/DOMTokenList/item
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`item()`** de l'interface {{domxref("DOMTokenList")}} renvoie un élément de la liste par son index.
 
 ## Syntaxe
 
-    tokenList.item(index);
+```js
+tokenList.item(index);
+```
 
 ### Paramètres
 
@@ -45,10 +48,8 @@ La sortie ressemble à ceci :
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#dom-domtokenlist-item','item()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.item")}}
+{{Compat}}

@@ -1,19 +1,8 @@
 ---
 title: File.lastModifiedDate
 slug: Web/API/File/lastModifiedDate
-tags:
-  - API
-  - 非推奨
-  - File
-  - File API
-  - ファイル
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - lastModifiedDate
-browser-compat: api.File.lastModifiedDate
-translation_of: Web/API/File/lastModifiedDate
 ---
+
 {{APIRef("File API") }} {{deprecated_header}}
 
 **`File.lastModifiedDate`** 読み取り専用プロパティは、ファイルの最終更新日を返します。最終更新日がわからないファイルは、現在の日付を返します。

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/collation
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.collation`** est une propriété (à laquelle on accède via un accesseur) qui renvoie le [type de collation](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_Collation) pour l'instance de `Locale` courante. La collation est la méthode qui permet d'ordonner des chaînes de caractères en fonction des règles de la locale.
@@ -152,7 +153,7 @@ Voici un tableau listant les types de collation possibles tels que définis dans
 
 ### Définir le type de collation via la chaîne décrivant la locale
 
-Le premier argument passé à [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale "The Intl.Locale constructor is a standard built-in property of the Intl object.") est une chaîne de caractères qui décrit la locale. Cette chaîne peut contenir des fragments additionnels (en plus de l'identifiant canonique de la locale). Pour cela, on ajoutera `-u` afin d'indiquer qu'on définit une extension. On ajoutera ensuite la clé identifiant cette extension, ici `-co` pour la collation. Enfin, on ajoutera la valeur souhaitée pour cette extension (dans cet exemple, `-emoji`) :
+Le premier argument passé à [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale) est une chaîne de caractères qui décrit la locale. Cette chaîne peut contenir des fragments additionnels (en plus de l'identifiant canonique de la locale). Pour cela, on ajoutera `-u` afin d'indiquer qu'on définit une extension. On ajoutera ensuite la clé identifiant cette extension, ici `-co` pour la collation. Enfin, on ajoutera la valeur souhaitée pour cette extension (dans cet exemple, `-emoji`) :
 
 ```js
 let stringColl = new Intl.Locale("en-Latn-US-u-co-emoji");
@@ -161,7 +162,7 @@ console.log(stringColl.collation); // Affichera "emoji" dans la console
 
 ### Définir le type de collation via l'objet de configuration
 
-Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale "The Intl.Locale constructor is a standard built-in property of the Intl object.") possède un deuxième argument optionnel qui est un objet de configuration. Chaque propriété de cet objet pourra permettre de préciser une extension à la locale, y compris un type de collation. Pour définir le type de collation, on pourra utiliser une propriété `collation` sur cet objet avec une des valeurs indiquées ci-avant :
+Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale) possède un deuxième argument optionnel qui est un objet de configuration. Chaque propriété de cet objet pourra permettre de préciser une extension à la locale, y compris un type de collation. Pour définir le type de collation, on pourra utiliser une propriété `collation` sur cet objet avec une des valeurs indiquées ci-avant :
 
 ```js
 let configColl = new Intl.Locale("en-Latn-US", {collation: "emoji"});

@@ -1,13 +1,8 @@
 ---
 title: 機能クエリーの使用
 slug: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
-tags:
-  - CSS
-  - 条件付き CSS
-  - ガイド
-  - 機能クエリー
-  - プログレッシブエンハンスメント
 ---
+
 {{CSSRef}}
 
 **機能クエリー**は、 CSS の [@supports](/ja/docs/Web/CSS/@supports) アットルールを使って作成され、ウェブ開発者がある機能に対応しているかどうかを検査し、その検査結果に基づいて実行する CSS を提供する方法として有益です。このガイドでは、機能クエリを使用してプログレッシブエンハンスメントを実装する方法を学びます。

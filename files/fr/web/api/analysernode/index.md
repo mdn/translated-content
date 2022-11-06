@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/API/AnalyserNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 L' interface **`AnalyserNode`** représente un noeud capable de fournir en temps réel des informations d'analyse de la fréquence et du domaine temporel. C'est un {{domxref("AudioNode")}} qui transmet le flux audio inchangé depuis l'entrée vers la sortie, mais permet de capturer les données générées pour les traiter et/ou les visualiser.
@@ -56,7 +57,7 @@ L'interface hérite des parents suivants:
 _Hérite des propriétés de son parent._ _{{domxref("AudioNode")}}_.
 
 - {{domxref("AnalyserNode.fftSize")}}
-  - : Entier long non signé qui représente la taille de la [FFT](/en-US/docs/) (transformation de Fourier rapide) qui sera utilisé pour déterminer le domaine fréquentiel.
+  - : Entier long non signé qui représente la taille de la [FFT](/fr/docs/) (transformation de Fourier rapide) qui sera utilisé pour déterminer le domaine fréquentiel.
 - {{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}
   - : Entier long non signé égal à la moitié fftSize. C'est en général le nombre de valeurs qu'on manipule pour la visualisation.
 - {{domxref("AnalyserNode.minDecibels")}}
@@ -146,13 +147,11 @@ function dessiner() {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                 | Commentaires |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('Web Audio API', '#the-analysernode-interface', 'AnalyserNode')}} | {{Spec2('Web Audio API')}} |              |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode")}}
+{{Compat}}
 
 ## Voir aussi
 

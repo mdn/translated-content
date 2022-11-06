@@ -8,11 +8,14 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat
 original_slug: Web/JavaScript/Reference/Erreurs/Deprecated_toLocaleFormat
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    Warning: Date.prototype.toLocaleFormat is deprecated; consider using Intl.DateTimeFormat instead
+```
+Warning: Date.prototype.toLocaleFormat is deprecated; consider using Intl.DateTimeFormat instead
+```
 
 ## Type d'erreur
 

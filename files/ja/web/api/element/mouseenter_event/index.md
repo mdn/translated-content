@@ -1,21 +1,8 @@
 ---
 title: 'Element: mouseenter イベント'
 slug: Web/API/Element/mouseenter_event
-tags:
-  - API
-  - Cursor
-  - DOM
-  - Element
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - リファレンス
-  - マウス
-  - mouseenter
-  - ポインター
-browser-compat: api.Element.mouseenter_event
-translation_of: Web/API/Element/mouseenter_event
 ---
+
 {{APIRef}}
 
 **`mouseenter`** イベントは、ポインティングデバイス (通常はマウス) のホットスポットが最初にイベントが発行された要素の中に移動したときにその要素 ({{domxref("Element")}}) に発行されます。

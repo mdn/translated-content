@@ -1,13 +1,9 @@
 ---
 title: <input type="hidden">
-slug: Web/HTML/Element/Input/hidden
-tags:
-  - Element
-  - Input
-  - Reference
-translation_of: Web/HTML/Element/input/hidden
+slug: Web/HTML/Element/input/hidden
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Les éléments {{HTMLElement("input")}} de type **`"hidden"`** permettent aux développeurs web d'inclure des données qui ne peuvent pas être vues ou modifiées lorsque le formulaire est envoyé. Cela permet par exemple d'envoyer l'identifiant d'une commande ou un jeton de sécurité unique. Les champs de ce type sont invisibles sur la page.
 
@@ -49,9 +45,9 @@ Comme évoqué ci-avant, les éléments `<input type="hidden"`> peuvent être ut
 
 Un usage fréquent de ces éléments est de garder un registre des données qui doivent être mises à jour dans une base de données lorsque le formulaire est envoyé. Le processus est généralement le suivant :
 
-1.  L'utilisateur édite du contenu (un billet de blog, une fiche d'un produit) en commençant par cliquer sur le bouton Éditer.
-2.  Le contenu à modifier est extrait de la base de données et est chargé dans le formulaire HTML afin que l'utilisateur puis appliquer les modifications voulues.
-3.  Après avoir éditer, l'utilisateur envoie le formulaire et les données mises à jour sont envoyées au serveur qui se charge d'appliquer cette mise à jour en base de données.
+1. L'utilisateur édite du contenu (un billet de blog, une fiche d'un produit) en commençant par cliquer sur le bouton Éditer.
+2. Le contenu à modifier est extrait de la base de données et est chargé dans le formulaire HTML afin que l'utilisateur puis appliquer les modifications voulues.
+3. Après avoir éditer, l'utilisateur envoie le formulaire et les données mises à jour sont envoyées au serveur qui se charge d'appliquer cette mise à jour en base de données.
 
 Ici, lors de la deuxième étape, on peut récupérer l'identifiant de l'enregistrement et le placer dans un champ caché du formulaire. Lorsque le formulaire est envoyé à l'étape 3, l'identifiant est automatiquement envoyé au serveur avec le contenu. L'identifiant permet alors au serveur de connaître l'enregistrement de la base de données qui doit être mis à jour.
 
@@ -182,14 +178,11 @@ Bien que le champ masqué soit invisible sur la page, il fait toujours partie de
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#hidden-state-(type=hidden)', '&lt;input type="hidden"&gt;')}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
-| {{SpecName('HTML5.2', 'sec-forms.html#hidden-state-typehidden', '&lt;input type="hidden"&gt;')}}     | {{Spec2('HTML5.2')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.input.input-hidden")}}
+{{Compat}}
 
 ## Voir aussi
 

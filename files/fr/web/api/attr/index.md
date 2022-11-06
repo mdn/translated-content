@@ -7,11 +7,12 @@ tags:
   - DOM
 translation_of: Web/API/Attr
 ---
+
 {{APIRef("DOM")}}
 
 Ce type représente un attribut d'un élément DOM comme un objet. Dans la plupart des méthodes DOM, vous auriez probablement récupéré l'attribut directement comme une chaîne (par exemple, {{domxref ("element.getAttribute()")}}, mais certaines fonctions (par exemple, {{domxref ("element.getAttributeNode()" )}}) ou des moyens d'itération donnent des types Attr.
 
-> **Attention :** À partir de Gecko 7.0 {{geckoRelease ("7.0")}}, ceux qui vont être retirés afficheront des messages d'avertissement dans la console. Vous devriez modifier votre code en conséquence. Voir [Propriétés et méthodes dépréciées](#propriétés_et_méthodes_dépréciées) pour une liste complète.
+> **Attention :** À partir de Gecko 7.0, ceux qui vont être retirés afficheront des messages d'avertissement dans la console. Vous devriez modifier votre code en conséquence. Voir [Propriétés et méthodes dépréciées](#propriétés_et_méthodes_dépréciées) pour une liste complète.
 
 ## Propriétés
 
@@ -29,7 +30,7 @@ Ce type représente un attribut d'un élément DOM comme un objet. Dans la plupa
 > **Note :** DOM Niveau 4 a supprimé cette propriété . L'hypothèse était que puisque nous obtenons un objet Attr d'un {{domxref("Element")}}, nous devrions déjà connaître les éléments associés.
 > Comme cela n'est pas vrai quand les objets `Attr`  sont retournés par {{domxref("Document.evaluate")}}, le DOM Living Standard a réintroduit la propriété.
 >
-> Gecko affiche une note de dépréciation à partir de Gecko 7.0 {{geckoRelease("7.0")}}. Cette note a été supprimée dans Gecko 49.0 {{geckoRelease("49.0")}}.
+> Gecko affiche une note de dépréciation à partir de Gecko 7.0. Cette note a été supprimée dans Gecko 49.0.
 
 - {{domxref("Attr.specified", "specified")}} {{readOnlyInline}}
   - : Cette propriété renvoie toujours la valeur `true`. À l'origine, elle renvoyait true si l'attribut était explicitement spécifié dans le code source ou par un script, et `false` si sa valeur provenait de la valeur par défaut définie dans la DTD du document.
@@ -68,7 +69,7 @@ Les propriétés suivantes ont été dépréciées. Si elle est disponible, la m
   - : Cette propriété retourne désormais toujours NULL.
 - `previousSibling`
   - : Cette propriété retourne désormais toujours NULL.
-- `schemaTypeInfo` {{obsolete_inline}} {{readOnlyInline}}
+- `schemaTypeInfo` {{deprecated_inline}} {{readOnlyInline}}
   - : Les informations de type associées à cet attribut. Bien que l'information de type contenue dans cet attribut soit garantie après le chargement du document ou l'appel de {{domxref("Document.normalizeDocument")}}, cette propriété peut ne pas être fiable si le nœud a été déplacé.
 - `specified`
   - : Cette propriété retourne désormais toujours true.
@@ -114,12 +115,8 @@ Les méthodes suivantes ont été dépréciées:
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire                                                                                                                                            |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("DOM WHATWG", "#interface-attr", "Attr")}}         | {{Spec2("DOM WHATWG")}} | Ajoute la propriété `ownerElement` property                                                                                                            |
-| {{SpecName("DOM4", "#interface-attr", "Attr")}}                 | {{Spec2("DOM4")}}         | A déplacé les `namespaceURI`, `prefix` et `localName` de {{domxref("Node")}} vers cet API et supprimé `ownerElement`, `schemaTypeInfo` et `isId`. |
-| {{SpecName("DOM3 Core", "core.html#ID-637646024", "Attr")}} | {{Spec2("DOM3 Core")}}     | Définition initiale                                                                                                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Attr")}}
+{{Compat}}

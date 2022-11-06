@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/create
 ---
+
 {{AddonSidebar()}}
 
 Crée et affiche une notification.

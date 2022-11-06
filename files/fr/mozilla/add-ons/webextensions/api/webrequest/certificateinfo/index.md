@@ -12,6 +12,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
 ---
+
 {{AddonSidebar()}}
 
 Un objet décrivant un seul [certificat X.509](https://tools.ietf.org/html/rfc5280).

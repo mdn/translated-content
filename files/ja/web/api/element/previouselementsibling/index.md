@@ -1,16 +1,8 @@
 ---
 title: Element.previousElementSibling
 slug: Web/API/Element/previousElementSibling
-tags:
-  - API
-  - DOM
-  - Element
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Element.previousElementSibling
-translation_of: Web/API/Element/nextElementSibling
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.previousElementSibling`** は読み取り専用のプロパティで、この要素 ({{domxref("Element")}}) の親の子リスト内ですぐ前にある要素を返します。このノードがリストの最初のノードであった場合は `null` を返します。

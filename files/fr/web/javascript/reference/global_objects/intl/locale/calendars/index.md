@@ -3,6 +3,7 @@ title: Intl.Locale.prototype.calendars
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendars
 browser-compat: javascript.builtins.Intl.Locale.calendars
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.calendars`** est un accesseur qui renvoie un tableau avec le ou les identifiants des calendriers utilisés par la locale représentée par l'instance `Locale` courante.
@@ -66,6 +67,7 @@ console.log(arEG.calendars); // affiche ["gregory", "coptic", "islamic", "islami
 let jaJP = new Intl.Locale("ja-JP");
 console.log(jaJP.calendars); // affiche ["gregory", "japanese"]
 ```
+
 ## Spécifications
 
 {{Specifications}}

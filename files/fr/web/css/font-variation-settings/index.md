@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-variation-settings
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`font-variation-settings`** permet de contrôler les caractéristiques typographiques de bas niveau OpenType ou TrueType en utilisant les quatres lettres représentant les axes des caractéristiques qu'on souhaite faire varier, ainsi que les valeurs pour les variations associées.
@@ -47,9 +48,13 @@ La valeur de cette propriété peut être définie selon deux formes :
 - `<string> <number>`
   - : Lors de l'affichage du texte, les axes OpenType sont passés au moteur graphique afin d'activer ou de désactiver certaines fonctionnalités de la police. Chaque valeur est une chaîne de caractères (type {{cssxref("&lt;string&gt;")}}) avec quatre caractères ASCII, suivie par un nombre (type {{cssxref("number")}}) qui indique la valeur pour l'axe correspondant. Si la chaîne de caractères `<string>` a plus ou moins de 4 caractères et contient des caractères en dehors de l'intervalle U+20 - U+7E, la propriété sera considérée comme invalide. La valeur numérique `<number>` n'est pas nécessairement entière et positive, ce peut être un nombre décimal ou un nombre négatif.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Axes enregistrés et axes spécifiques
 
@@ -118,15 +123,11 @@ L'exemple suivant peut être édite afin de voir l'effet de la modification des 
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Fonts', '#low-level-font-variation-settings-control-the-font-variation-settings-property', 'font-variation-settings')}} | {{Spec2('CSS4 Fonts')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-variation-settings")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -3,13 +3,16 @@ title: Element.scrollLeftMax
 slug: Web/API/Element/scrollLeftMax
 translation_of: Web/API/Element/scrollLeftMax
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 La propriété non modifiable  **`Element.scrollLeftMax`** renvoie un {{jsxref("Number")}} représentant la distance restante de défilement vers la gauche de l'élément.
 
 ## Syntaxe
 
-    var pxl = elt.scrollLeftMax;
+```js
+var pxl = elt.scrollLeftMax;
+```
 
 ## Spécifications
 

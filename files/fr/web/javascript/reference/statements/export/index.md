@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/export
 original_slug: Web/JavaScript/Reference/Instructions/export
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`export`** est utilisée lors de la création de modules JavaScript pour exporter des fonctions, des objets ou des valeurs primitives à partir du module, de sorte qu'ils puissent être utilisés par d'autres programmes grâce à l'instruction {{jsxref("Instructions/import", "import")}}.
@@ -18,32 +19,34 @@ Les modules exportés sont interprétés en [mode strict](/fr/docs/Web/JavaScrip
 
 ## Syntaxe
 
-    // Exporter des propriétés individuelles
-    export let nom1, nom2, …, nomN; // utilisable avec var, const
-    export let nom1 = …, nom2 = …, …, nomN; // utilisable avec var, const
-    export function nomFonction(){...}
-    export class NomClasse {...}
+```js
+// Exporter des propriétés individuelles
+export let nom1, nom2, …, nomN; // utilisable avec var, const
+export let nom1 = …, nom2 = …, …, nomN; // utilisable avec var, const
+export function nomFonction(){...}
+export class NomClasse {...}
 
-    // Export d'une liste de valeur
-    export { nom1, nom2, …, nomN };
+// Export d'une liste de valeur
+export { nom1, nom2, …, nomN };
 
-    // Renommage des valeurs exportées
-    export { variable1 as nom1, variable2 as nom2, …, nomN };
+// Renommage des valeurs exportées
+export { variable1 as nom1, variable2 as nom2, …, nomN };
 
-    // Renommage avec la décomposition pour l'affectation
-    export const { nom1, nom2: truc } = o;
+// Renommage avec la décomposition pour l'affectation
+export const { nom1, nom2: truc } = o;
 
-    // Exports par défauts
-    export default expression;
-    export default function (…) { … } // fonctionne avec class, function*
-    export default function nom1(…) { … } // fonctionne avec class, function*
-    export { nom1 as default, … };
+// Exports par défauts
+export default expression;
+export default function (…) { … } // fonctionne avec class, function*
+export default function nom1(…) { … } // fonctionne avec class, function*
+export { nom1 as default, … };
 
-    // Agrégation de modules
-    export * from …;
-    export { nom1, nom2, …, nomN } from …;
-    export { import1 as nom1, import2 as nom2, …, nomN } from …;
-    export { default } from …;
+// Agrégation de modules
+export * from …;
+export { nom1, nom2, …, nomN } from …;
+export { import1 as nom1, import2 as nom2, …, nomN } from …;
+export { default } from …;
+```
 
 - `nomN`
   - : Identifiant à exporter (afin qu'il puisse être importé via {{jsxref("Statements/import", "import")}} dans un autre script).
@@ -163,14 +166,11 @@ Notez qu'il n'est pas possible d'utiliser `var`, `let` ou `const` avec `export d
 
 ## Spécifications
 
-| Spécification                                                        | Statut                       | Commentaire         |
-| -------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-exports', 'Exports')}}     | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-exports', 'Exports')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -3,13 +3,16 @@ title: CanvasRenderingContext2D.direction
 slug: Web/API/CanvasRenderingContext2D/direction
 translation_of: Web/API/CanvasRenderingContext2D/direction
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
 La propriété **`CanvasRenderingContext2D.direction`** de l'API Canvas 2D indique la direction de texte courante utilisé lors du dessin de texte.
 
 ## Syntaxe
 
-    ctx.direction = "ltr" || "rtl" || "inherit";
+```js
+ctx.direction = "ltr" || "rtl" || "inherit";
+```
 
 ### Options
 
@@ -93,13 +96,11 @@ window.addEventListener('load', drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-direction", "CanvasRenderingContext2D.direction")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.direction")}}
+{{Compat}}
 
 ## Voir aussi
 

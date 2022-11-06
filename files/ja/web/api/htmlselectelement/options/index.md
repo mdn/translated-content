@@ -1,16 +1,8 @@
 ---
 title: HTMLSelectElement.options
 slug: Web/API/HTMLSelectElement/options
-tags:
-  - API
-  - HTMLSelectElement
-  - Options
-  - プロパティ
-  - 読み取り専用
-  - ウェブ
-browser-compat: api.HTMLSelectElement.options
-translation_of: Web/API/HTMLSelectElement/options
 ---
+
 {{APIRef("DOM")}}
 
 **`HTMLSelectElement.options`** は読み取り専用のプロパティで、{{domxref("HTMLOptionsCollection")}} で {{HTMLElement("select")}} 要素に含まれる {{HTMLElement("option")}} 要素を返します。
@@ -50,10 +42,10 @@ window.addEventListener("DOMContentLoaded", function() {
 
 {{EmbedLiveSample("Example", "100%", 30)}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}

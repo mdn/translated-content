@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/abort
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`abort()`**, rattachée à l'interface {{domxref("IDBTransaction")}}, permet d'annuler les modifications apportées aux objets de la base de données pendant la transaction courante.
@@ -19,7 +20,9 @@ Tous les objets {{domxref("IDBRequest")}} créés pendant cette transaction verr
 
 ## Syntaxe
 
-    transaction.abort();
+```js
+transaction.abort();
+```
 
 ### Valeur de retour
 
@@ -87,13 +90,11 @@ function addData() {
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBTransaction-abort-void', 'abort')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBTransaction.abort")}}
+{{Compat}}
 
 ## Voir aussi
 

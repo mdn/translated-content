@@ -3,6 +3,7 @@ title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
+
 {{HTTPSidebar}}
 
 L'entête **`Access-Control-Allow-Origin`** renvoie une réponse indiquant si les ressources peuvent être partagées avec une [origine](/fr/docs/Glossaire/Origine) donnée.
@@ -22,9 +23,11 @@ L'entête **`Access-Control-Allow-Origin`** renvoie une réponse indiquant si le
 
 ## Syntaxe
 
-    Access-Control-Allow-Origin: *
-    Access-Control-Allow-Origin: <origin>
-    Access-Control-Allow-Origin: null
+```
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Origin: <origin>
+Access-Control-Allow-Origin: null
+```
 
 ## Directives
 
@@ -37,28 +40,32 @@ L'entête **`Access-Control-Allow-Origin`** renvoie une réponse indiquant si le
 
 Pour permettre à n'importe quelle ressource d'accéder à vos ressources, vous pouvez indiquer :
 
-    Access-Control-Allow-Origin: *
+```
+Access-Control-Allow-Origin: *
+```
 
 Pour permettre `https://developer.mozilla.org` d'accéder à vos ressources, vous pouvez indiquer :
 
-    Access-Control-Allow-Origin: https://developer.mozilla.org
+```
+Access-Control-Allow-Origin: https://developer.mozilla.org
+```
 
 ### CORS et le cache
 
 Si le serveur spécifie un hôte d'origine plutôt que "\*", il doit également inclure "_Origin_" dans l'en-tête de réponse "_[Vary](/fr/docs/Web/HTTP/Headers/Vary)_" pour indiquer aux clients que les réponses du serveur seront différentes en fonction de la valeur de la demande d'origine entête.
 
-    Access-Control-Allow-Origin: https://developer.mozilla.org
-    Vary: Origin
+```
+Access-Control-Allow-Origin: https://developer.mozilla.org
+Vary: Origin
+```
 
-## Caractéristiques
+## Spécifications
 
-| Caractéristiques                                                                                                     | Statue                   | Commentaire         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}} | {{Spec2("Fetch")}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilité
+## Compatibilité des navigateurs
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## Voir aussi
 

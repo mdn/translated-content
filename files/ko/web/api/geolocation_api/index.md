@@ -57,7 +57,7 @@ Geolocation API는 {{domxref("Navigator.geolocation", "navigator.geolocation")}}
 
 ## 명세
 
-{{Specifications("api.Geolocation")}}
+{{Specifications}}
 
 ## 브라우저 호환성
 

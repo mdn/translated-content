@@ -12,6 +12,7 @@ tags:
   - TopicStub
 translation_of: Web/API/IDBIndex
 ---
+
 {{APIRef("IndexedDB")}}
 
 L'interface **`IDBIndex`**de l'{{domxref("IndexedDB_API","API IndexedDB")}} est un accès à un index d'un magasins d'objet. Un index permet de trier les enregistrements d'un magasin d'objet sur une autre clé que la clé primaire.
@@ -102,15 +103,13 @@ function displayDataByIndex() {
 
 > **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                | Statut                       | Commentaire |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBIndex', 'IDBIndex')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex")}}
+{{Compat}}
 
 ## Voir aussi
 

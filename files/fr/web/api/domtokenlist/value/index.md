@@ -3,13 +3,16 @@ title: DOMTokenList.value
 slug: Web/API/DOMTokenList/value
 translation_of: Web/API/DOMTokenList/value
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`value`** (_valeur_) de l'interface {{domxref("DOMTokenList")}} renvoie la valeur de la liste en tant que {{domxref("DOMString")}} (chaîne de caractères), ou efface et définit la liste à la valeur donnée.
 
 ## Syntaxe
 
-    tokenList.value;
+```js
+tokenList.value;
+```
 
 ### Valeur
 
@@ -39,10 +42,8 @@ La sortie ressemble à ceci :
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#dom-domtokenlist-value','value')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.value")}}
+{{Compat}}

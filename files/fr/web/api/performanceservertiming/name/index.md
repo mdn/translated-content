@@ -11,6 +11,7 @@ tags:
   - name
 translation_of: Web/API/PerformanceServerTiming/name
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`name`** retourne une valeur [`DOMString`](/fr/docs/Web/API/DOMString) qui est le nom de la métrique spécifiée par le serveur.
@@ -23,13 +24,11 @@ serverTiming.name;
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Server Timing','#dom-performanceservertiming-name', 'name')}} | {{Spec2('Server Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceServerTiming.name")}}
+{{Compat}}
 
 ## Voir aussi
 

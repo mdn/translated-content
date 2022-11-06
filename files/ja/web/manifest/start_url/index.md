@@ -1,13 +1,8 @@
 ---
 title: start_url
 slug: Web/Manifest/start_url
-tags:
-  - マニフェスト
-  - ウェブ
-  - start_url
-browser-compat: html.manifest.start_url
-translation_of: Web/Manifest/start_url
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">
@@ -25,7 +20,7 @@ translation_of: Web/Manifest/start_url
 
 _`start_url`_ メンバーは文字列で、_ウェブアプリケーションの開始 URL_ を表します。 — ユーザーがウェブアプリケーションを起動したとき (例えば、ユーザーが端末のアプリケーションメニューやホーム画面でウェブアプリケーションのアイコンをタップしたときなど) に読み込まれるべき推奨 URL です。
 
-> **Note:** `start_url` メンバーは純粋に参考であり、ユーザーエージェントがこれを無視したり、インストール時やその後でユーザーに変更を許したりすることがあります。
+> **メモ:** `start_url` メンバーは純粋に参考であり、ユーザーエージェントがこれを無視したり、インストール時やその後でユーザーに変更を許したりすることがあります。
 
 ## 例
 

@@ -4,6 +4,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
 translation_of: Learn/CSS/First_steps/What_is_CSS
 original_slug: Learn/CSS/First_steps/Qu_est_ce_que_CSS
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
 **[CSS](/fr/docs/Glossary/CSS)** (_Cascading Style Sheets_) permet de créer des pages web à l'apparence soignée. Cet article vous propose de lever le voile en expliquant ce qu'est CSS ; un exemple simple en présentera la syntaxe, puis quelques termes clés du langage seront introduits.
@@ -123,8 +124,8 @@ Maintenant que vous avez compris ce qu'est CSS, vous pourrez commencer à écrir
 
 ## Dans ce module
 
-1.  [Qu'est-ce que CSS&nbsp;?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3.  [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [CSS, comment ça marche&nbsp;?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Mettre en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [Qu'est-ce que CSS&nbsp;?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
+3. [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS, comment ça marche&nbsp;?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Mettre en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

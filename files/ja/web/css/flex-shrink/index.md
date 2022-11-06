@@ -1,16 +1,8 @@
 ---
 title: flex-shrink
 slug: Web/CSS/flex-shrink
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS プロパティ
-  - NeedsContent
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.flex-shrink
-translation_of: Web/CSS/flex-shrink
 ---
+
 {{CSSRef}}
 
 **`flex-shrink`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムの縮小係数を設定します。すべてのフレックスアイテムの寸法がフレックスコンテナーよりも大きい場合、アイテムは `flex-shrink` の数値に従って縮小して収まります。

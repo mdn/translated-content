@@ -4,6 +4,7 @@ slug: Learn/CSS/CSS_layout/Grids
 translation_of: Learn/CSS/CSS_layout/Grids
 original_slug: Apprendre/CSS/CSS_layout/Grids
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
 
 «&nbsp;CSS Grid Layout&nbsp;» (Trames avec les CSS) est un système de mise en page bidimensionnel. Il vous permet de disposer les contenus en lignes et en colonnes&nbsp;; il possède de nombreuses fonctionnalités simplifiant la construction de mises en page complexes. Cet article vous indique tout ce que vous devez savoir pour commencer une mise en page avec une trame.
@@ -210,7 +211,7 @@ body {
 {{ EmbedLiveSample('', '100%', 400) }}
 
 > **Note :** Les propriétés `-gap` (`column-gap`, `row-gap` et `gap`) étaient traditionnellement préfixées par `grid-`, mais la norme a été modifiée avec l'intention de la rendre utilisable dans les diverses méthodes de mise en page. Les versions préfixées seront maintenues en tant qu'alias, de sorte qu'elles seront utilisables en toute sécurité pendant un certain temps. En appliquant le principe de précaution, vous pouvez doubler et mettre les deux types de propriétés pour «&nbsp;blinder&nbsp;» votre code&nbsp;:
-> 
+>
 > ```css
 > .container {
 >     display: grid;

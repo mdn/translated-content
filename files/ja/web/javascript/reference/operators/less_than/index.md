@@ -1,14 +1,8 @@
 ---
 title: 小なり (<)
 slug: Web/JavaScript/Reference/Operators/Less_than
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.less_than
-translation_of: Web/JavaScript/Reference/Operators/Less_than
 ---
+
 {{jsSidebar("Operators")}}
 
 小なり演算子 (`<`) は、左辺のオペランドが右辺のオペランドより小さい場合は `true` を返し、それ以外の場合は `false` を返します。
@@ -88,8 +82,8 @@ console.log(true < 1);         // false
 console.log(null < 0);         // false
 console.log(null < 1);         // true
 
-console.log(undefined < 3);    // false
-console.log(3 < undefined);    // false
+console.log(undefined < 3);    // false
+console.log(3 < undefined);    // false
 
 console.log(3 < NaN);          // false
 console.log(NaN < 3);          // false

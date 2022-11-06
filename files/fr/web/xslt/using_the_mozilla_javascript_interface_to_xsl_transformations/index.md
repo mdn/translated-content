@@ -1,71 +1,103 @@
 ---
-title: Utilisation de l'interface JavaScript de Mozilla pour les transformations XSL
+title: Utilisation de XSLTProcessor pour les transformations XSL
 slug: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
-tags:
-  - XSLT
-translation_of: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
-original_slug: >-
-  Web/XSLT/Utilisation_de_l'interface_JavaScript_de_Mozilla_pour_les_transformations_XSL
+l10n:
+  sourceCommit: 5d88855e1d963ca0b0c3c14aeaa6414f8386c64e
 ---
-Ce document décrit l'interface JavaScript pour le moteur de traitement XSLT (TransforMiiX) de Mozilla 1.2 et supérieur.
 
-### Création de XSLTProcessor
+Ce document décrit l'utilisation de l'interface JavaScript [`XSLTProcessor`](/fr/docs/Web/API/XSLTProcessor) pour effectuer des transformations XSL.
 
-Pour commencer, nous avons besoin de créer un objet [XSLTProcessor](fr/XSLTProcessor)&nbsp;:
+## Créer une instance `XSLTProcessor`
 
-    var processor = new XSLTProcessor();
+Pour commencer, on crée un objet [`XSLTProcessor`](/fr/docs/Web/API/XSLTProcessor) à l'aide du constructeur&nbsp;:
 
-### Spécification de la feuille de style
+```js
+const processor = new XSLTProcessor();
+```
 
-Avant d'utiliser cet objet, nous devons importer une feuille de style avec la fonction `importStylesheet()`. Elle a un unique paramètre, qui est le nœud DOM de la feuille de style XSLT à importer — remarquez que l'importation est directe, ce qui signifie que si nous modifions la feuille de style DOM après son importation, cela sera reflété lors du traitement. Il est cependant conseillé d'utiliser les paramètres de feuille de style plutôt que de modifier le DOM. C'est généralement plus facile et on obtient de meilleures performances.
+## Indiquer la feuille de style à utiliser pour la transformation
 
-    var testTransform = document.implementation.createDocument("", "test", null);
-    // juste un exemple pour obtenir une transformation dans un script étant donné que
-    // la fonction DOM XMLDocument.load est asynchrone, donc tout le traitement se fait
-    // dans le gestionnaire onload
-    testTransform.addEventListener("load", onload, false);
-    testTransform.load("test-transform.xml");
-    function onload() {
-      processor.importStylesheet(testTransform);
-    }
+Avant d'utiliser l'opérateur de transformation, il faut importer la feuille de style à l'aide de la méthode [`XSLTProcessor.importStylesheet()`](/fr/docs/Web/API/XSLTProcessor/importStylesheet). Cette dernière prend un seul paramètre, le nœud DOM de la feuille de style XSLT à importer.
 
-`importStylesheet` requiert un argument, un nœud DOM. Si ce nœud est un nœud de document, nous pouvons passer par une transformation XSL ou une [transformation littérale d'élément résultant](http://www.w3.org/TR/xslt#result-element-stylesheet), autrement il devra être un élément \<tt>xsl:stylesheet\</tt> ou \<tt>xsl:transform\</tt>.
+> **Note :** L'import est dynamique. Cela signifie que si la feuille de style est modifiée après l'import, cela aura un impact sur le traitement ultérieur. Plutôt que de modifier le DOM, il est recommandé d'utiliser des paramètres, une solution souvent plus simple et qui donne de meilleures performances.
 
-### Transformation du document
+```js
+const testTransform = document.implementation.createDocument("", "test", null);
 
-Nous pouvons utiliser les méthodes [`transformToDocument()`](#transformToDocument) ou [`transformToFragment()`](#transformToFragment) pour transformer un document à l'aide de la feuille de style spécifiée.
+// Un exemple pour obtenir une transformation dans un script
+// XMLDocument.load() est asynchrone et le traitement a lieu
+// dans le gestionnaire onload
+testTransform.addEventListener("load", onload, false);
 
-#### transformToDocument
+// On privilégiera XMLHTTPRequest ou fetch() à load()
+testTransform.load("test-transform.xml");
 
-`transformToDocument()` prend un argument, le nœud source à transformer, et retourne un nouveau `Document` DOM avec les résultats de la transformation&nbsp;:
+function onload() {
+  processor.importStylesheet(testTransform);
+}
+```
 
-    var newDocument = processor.transformToDocument(domToBeTransformed);
+[`XSLTProcessor.importStylesheet()`](/fr/docs/Web/API/XSLTProcessor/importStylesheet) prend un argument en entrée, un nœud DOM. Si ce nœud est un document, on peut passer une transformation XSL complète ou [un élément de résultat littéral](https://www.w3.org/TR/2021/REC-xslt20-20210330/#literal-result-element), sinon, ce doit être un élément `xsl:stylesheet` ou `xsl:transform`.
 
-L'objet résultant est un `HTMLDocument` si la [méthode de sortie](http://www.w3.org/TR/xslt#output) de la feuille de style est \<tt>html\</tt>, un `XMLDocument` pour \<tt>xml\</tt>, et pour la méthode de sortie \<tt>text\</tt> un `XMLDocument` avec uniquement un élément racine `<transformiix:result>` avec le texte comme descendant.
+## Transformer le document
 
-#### transformToFragment
+On peut utiliser les méthodes [`XSLTProcessor.transformToDocument()`](/fr/docs/Web/API/XSLTProcessor/transformToDocument) ou [`XSLTProcessor.transformToFragment()`](/fr/docs/Web/API/XSLTProcessor/transformToFragment) afin de transformer un document en utilisant la feuille de style XSLT importée.
 
-Nous pouvons également utiliser `transformToFragment()` qui retournera un nœud `DocumentFragment` DOM. C'est très efficace car l'adjonction d'un fragment à un autre nœud adjoint de façon transparente tous les descendants de ce fragment, et le fragment lui-même n'est pas fusionné. Les fragment sont donc utiles pour déplacer les nœuds et les stocker sans les éléments inutiles d'un objet document entier.
+### `transformToDocument()`
 
-`transformToFragment` prend deux arguments&nbsp;: le document source à transformer (comme ci-dessus) et un objet `Document` qui possèdera le fragment (tous les fragments doivent être possédés par un document).
+[`XSLTProcessor.transformToDocument()`](/fr/docs/Web/API/XSLTProcessor/transformToDocument) prend un argument&nbsp;: le nœud source à transformer et renvoie un nouvel objet [`Document`](/fr/docs/Web/API/Document) qui est le résultat de la transformation&nbsp;:
 
-    var ownerDocument = document.implementation.createDocument("", "test", null);
-    var newFragment = processor.transformToFragment(domToBeTransformed, ownerDocument);
+```js
+const newDocument = processor.transformToDocument(domToBeTransformed);
+```
 
-`transformToFragment` ne produira que des objets HTML DOM que si le propriétaire du document est lui-même un `HTMLDocument`, ou si la méthode de sortie de la feuille de style est \<tt>HTML\</tt>. Il **ne produira pas** un objet HTML DOM si seul l'élément de haut niveau du résultat est `<html>` car `transformToFragment` est rarement utilisé pour créer cet élément. Si nous voulons annuler cela, nous pouvons définir la méthode de sortie normale par le moyen standard.
+L'objet résultant dépend de [la méthode de sortie](https://www.w3.org/TR/2021/REC-xslt20-20210330/#element-output) de la feuille de style&nbsp;:
 
-### Définition des paramètres
+- `"html"`
+  - : [`HTMLDocument`](/fr/docs/Web/API/HTMLDocument)
+- `"xml"`
+  - : [`XMLDocument`](/fr/docs/Web/API/XMLDocument)
+- `"text"`
+  - : [`XMLDocument`](/fr/docs/Web/API/XMLDocument) avec un seul élément racine, `<transformiix:result>`, dont l'enfant est le texte.
 
-Nous pouvons contrôler les [paramètres de la feuille de style](http://www.w3.org/TR/xslt#variables) à l'aide des méthodes `setParameter`, `getParameter` et `removeParameter`. Elles nécessitent une URI d'espace de nommage et un nom local qui seront les deux premiers paramètres, `setParameter` sera un troisième paramètres — la valeur de ce dernier paramètre étant à définir.
+### `transformToFragment()`
 
-### Réinitialisation
+Il est aussi possible d'utiliser [`XSLTProcessor.transformToFragment()`](/fr/docs/Web/API/XSLTProcessor/transformToFragment) qui renverra un nœud [`DocumentFragment`](/fr/docs/Web/API/DocumentFragment). Cette méthode est pratique, car ajouter un fragment à un autre nœud permet d'ajouter tous les enfants de ce fragment, qui n'est pas fusionné. Les fragments sont donc utiles lorsqu'on souhaite déplacer des nœuds et les stocker, sans avoir besoin d'un objet représentant un document complet.
 
-L'objet `XSLTProcessor` implémente également une méthode `reset()` qui peut être utilisée pour supprimer toutes les feuilles de style et tous les paramètres puis ramener le processeur dans son état initial. Cette méthode est implémentée dans [Mozilla](fr/Gecko) 1.3 et supérieurs.
+[`XSLTProcessor.transformToFragment()`](/fr/docs/Web/API/XSLTProcessor/transformToFragment) prend deux arguments&nbsp;: le document source qu'on souhaite transformer (comme précédemment), et l'objet [`Document`](/fr/docs/Web/API/Document) qui sera le propriétaire du fragment (tout fragment doit être possédé par un document).
 
-### Ressources
+```js
+const ownerDocument = document.implementation.createDocument("", "test", null);
+const newFragment = processor.transformToFragment(
+  domToBeTransformed,
+  ownerDocument
+);
+```
 
-- [nsIXSLTProcessor.idl](https://dxr.mozilla.org/mozilla-central/source/content/xslt/public/nsIXSLTProcessor.idl) reflètera toujours l'interface réelle de l'objet `XSLTProcessor`.
+[`XSLTProcessor.transformToFragment()`](/fr/docs/Web/API/XSLTProcessor/transformToFragment) produira uniquement des objets DOM HTML si le document propriétaire est lui-même un objet [`HTMLDocument`](/fr/docs/Web/API/HTMLDocument), ou si la méthode de sortie de la feuille de style est `"html"`. Elle ne produira **pas** d'objets DOM HTML si on a uniquement l'élément de plus haut niveau du résultat qui est [`<html>`](/fr/docs/Web/HTML/Element/html) ([`XSLTProcessor.transformToFragment()`](/fr/docs/Web/API/XSLTProcessor/transformToFragment) étant rarement utilisée pour créer cet élément). Si vous souhaitez surcharger ce comportement, vous pouvez définir la méthode de sortie normalement, de façon standard.
 
-  - [A XULPlanet reference page (en)](http://xulplanet.com/references/objref/XSLTProcessor.html).
+### Transformer du HTML
 
-- [The nsIXMLProcessorObsolete IDL file (en)](http://lxr.mozilla.org/seamonkey/source/content/xslt/public/nsIXSLTProcessorObsolete.idl) : l'interface JS dans les versions de Mozilla antérieures à la 1.2.
+La transformation de nœuds HTML à l'aide de XSLT n'est pas prise en charge. Certaines choses pourraient fonctionner en utilisant les noms des nœuds en minuscules dans les motifs et les expressions, et en les considérant comme appartenant à l'espace de noms nul. Toutefois, ce contournement n'est pas testé et pourrait ne pas fonctionner dans tous les situations.
+
+En revanche, la transformation de documents XHTML doit fonctionner.
+
+## Définir des paramètres
+
+Vous pouvez contrôler [des paramètres pour la feuille de style](https://www.w3.org/TR/1999/REC-xslt-19991116/#variables) à l'aide des méthodes [`XSLTProcessor.setParameter()`](/fr/docs/Web/API/XSLTProcessor/setParameter), [`XSLTProcessor.getParameter()`](/fr/docs/Web/API/XSLTProcessor/getParameter), et [`XSLTProcessor.removeParameter()`](/fr/docs/Web/API/XSLTProcessor/removeParameter). Toutes ces méthodes prennent un URI d'un espace de noms et un nom local comme deux premiers paramètres. [`XSLTProcessor.setParameter()`](/fr/docs/Web/API/XSLTProcessor/setParameter) en prend un troisième&nbsp;: la valeur du paramètre à définir. Voir [cet article sur la définition des paramètres](/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters) pour un exemple.
+
+## Réinitialisation
+
+L'interface [`XSLTProcessor`](/fr/docs/Web/API/XSLTProcessor) implémente également une méthode [`XSLTProcessor.reset()`](/fr/docs/Web/API/XSLTProcessor/reset), qui peut être utilisée afin de supprimer toutes les feuilles de style et paramètres passés à l'opérateur de traitement afin de le ramener dans son état initial.
+
+## Ressources
+
+Les fichiers suivants reflètent l'interface de l'objet [`XSLTProcessor`](/fr/docs/Web/API/XSLTProcessor)&nbsp;:
+
+- [`XSLTProcessor.webidl`](https://dxr.mozilla.org/mozilla-central/source/dom/webidl/XSLTProcessor.webidl)
+- [`txXSLTProcessor.cpp`](https://dxr.mozilla.org/mozilla-central/source/dom/xslt/xslt/txXSLTProcessor.cpp)
+
+## Voir aussi
+
+- [L'interface JavaScript XSLT dans Gecko](/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
+- [`XMLHTTPRequest`](/fr/docs/Web/API/XMLHttpRequest) ou [`fetch()`](/fr/docs/Web/API/fetch) qui doivent désormais être utilisés à la place de `XMLDocument.load()` mentionné ci-avant

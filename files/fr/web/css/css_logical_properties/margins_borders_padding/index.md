@@ -9,11 +9,12 @@ translation_of: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 original_slug: >-
   Web/CSS/CSS_Logical_Properties/Propriétés_logiques_marges_bordures_remplissages
 ---
+
 {{CSSRef}}
 
 La spécification [sur les propriétés et valeurs logiques](https://drafts.csswg.org/css-logical/) définit des correspondances pour les propriétés servant à définir les marges, les bordures et les remplissages (_padding_) et les propriétés raccourcies associées. Dans ce guide, nous verrons comment utiliser ces propriétés logiques.
 
-Si vous avez consulté la page principale sur [les propriétés et valeurs logiques](/en-US/docs/Web/CSS/CSS_Logical_Properties), vous avez pu voir une grande quantité de propriétés. Cela est principalement du au fait que pour chaque marge, bordure et remplissage, il y a quatre propriétés détaillées et une propriété raccourcie.
+Si vous avez consulté la page principale sur [les propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_Logical_Properties), vous avez pu voir une grande quantité de propriétés. Cela est principalement du au fait que pour chaque marge, bordure et remplissage, il y a quatre propriétés détaillées et une propriété raccourcie.
 
 ## Correspondances pour les marges, les bordures et les remplissages (_padding_)
 

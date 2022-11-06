@@ -11,6 +11,7 @@ tags:
   - Stockage
 translation_of: Web/API/IDBOpenDBRequest
 ---
+
 {{APIRef("IndexedDB")}}
 
 L'interface **`IDBOpenDBRequest`** de l'API IndexedDB donne un accès aux résultats des requêtes permettant d'ouvrir ou de supprimer des bases de donnée (Effectuée via {{domxref("IDBFactory.open")}} et {{domxref("IDBFactory.deleteDatabase")}}).
@@ -88,14 +89,11 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBOpenDBRequest', 'IDBOpenDBRequest')}} | {{Spec2('IndexedDB')}}     | Définition initiale |
-| {{SpecName("IndexedDB 2", "#idbopendbrequest", "IDBOpenDBRequest")}}         | {{Spec2("IndexedDB 2")}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBOpenDBRequest")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -14,6 +14,7 @@ tags:
 translation_of: Learn
 original_slug: Apprendre
 ---
+
 {{LearnSidebar}}
 
 Bienvenue dans l'Espace d'apprentissage (_Learning Area_) de MDN. Cet ensemble d'articles a pour but de fournir aux développeurs web débutants tout ce dont ils ont besoin pour commencer à développer des sites web simples.
@@ -49,8 +50,6 @@ Si vous avez des questions concernant des sujets que vous aimeriez voir couverts
 
 > **Note :** Notre [Glossaire](/fr/docs/Glossary) fournit des définitions de la terminologie employée.
 
-{{LearnBox({"title":"Entrée aléatoire dans le glossaire"})}}
-
 ## Rubriques couvertes
 
 Voici une liste de toutes les rubriques couvertes dans la zone d'apprentissage de MDN.
@@ -80,27 +79,27 @@ Les exemples de code que vous rencontrerez dans l'Espace d'apprentissage sont to
 
 Si vous préférez copier le dépôt d'une manière plus flexible qui permet des mises à jour automatiques, vous pouvez suivre les instructions plus complexes :
 
-1.  [Installer Git](https://git-scm.com/downloads) sur votre machine. C'est le logiciel sous-jacent de contrôle de version sur lequel GitHub fonctionne.
-2.  [S'inscrire pour obtenir un compte GitHub](https://github.com/join).
-3.  Une fois inscrit, se connecter dans [github.com](https://github.com) avec votre nom d'utilisateur et votre mot de passe.
-4.  Ouvrir l'[invite de commande](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) ou un terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
-5.  Pour copier depuis le dépôt de l'espace d'apprentissage un répertoire nommé «&nbsp;learning-area&nbsp;» à l'emplacement courant dans votre ordinateur, utilisez la commande suivante&nbsp;:
+1. [Installer Git](https://git-scm.com/downloads) sur votre machine. C'est le logiciel sous-jacent de contrôle de version sur lequel GitHub fonctionne.
+2. [S'inscrire pour obtenir un compte GitHub](https://github.com/join).
+3. Une fois inscrit, se connecter dans [github.com](https://github.com) avec votre nom d'utilisateur et votre mot de passe.
+4. Ouvrir l'[invite de commande](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) ou un terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
+5. Pour copier depuis le dépôt de l'espace d'apprentissage un répertoire nommé «&nbsp;learning-area&nbsp;» à l'emplacement courant dans votre ordinateur, utilisez la commande suivante&nbsp;:
 
     ```bash
     git clone https://github.com/mdn/learning-area
     ```
 
-6.  Vous pouvez maintenant saisir le répertoire et retrouver les fichiers recherchés (soit avec votre explorateur de fichiers ou avec la [commande `cd`](<https://en.wikipedia.org/wiki/Cd_(command)>)).
+6. Vous pouvez maintenant saisir le répertoire et retrouver les fichiers recherchés (soit avec votre explorateur de fichiers ou avec la [commande `cd`](<https://en.wikipedia.org/wiki/Cd_(command)>)).
 
 Vous pouvez mettre à jour le dépôt de `learning-area` pour tout changement intervenu sur la version principale « main » de GitHub en parcourant les étapes suivantes&nbsp;:
 
-1.  Dans votre terminal/invite de commande, allez dans le répertoire `learning-area` avec `cd`. Par exemple, si vous êtes dans son répertoire parent&nbsp;:
+1. Dans votre terminal/invite de commande, allez dans le répertoire `learning-area` avec `cd`. Par exemple, si vous êtes dans son répertoire parent&nbsp;:
 
     ```bash
     cd learning-area
     ```
 
-2.  Mettez à jour le dépôt avec la commande&nbsp;:
+2. Mettez à jour le dépôt avec la commande&nbsp;:
 
     ```bash
     git pull

@@ -1,18 +1,8 @@
 ---
 title: ServiceWorkerRegistration.index
 slug: Web/API/ServiceWorkerRegistration/index
-tags:
-  - Content
-  - Content Index API
-  - Index
-  - PWA
-  - プロパティ
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - content index
-  - content indexing
-browser-compat: api.ServiceWorkerRegistration.index
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`index`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、オフラインコンテンツの索引付けができる {{domxref('ContentIndex')}} インターフェイスへの参照を返します。

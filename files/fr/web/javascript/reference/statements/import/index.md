@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/import
 original_slug: Web/JavaScript/Reference/Instructions/import
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`import`** est utilisée pour importer des liens qui sont exportés par un autre module. Les modules importés sont interprétés en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) dans tous les cas. L'instruction `import` ne peut pas être utilisée dans les scripts embarqués sauf si ceux-ci proviennent de ressources avec [`type="module"`](/fr/docs/Web/HTML/Element/script#Attributs).
@@ -18,17 +19,19 @@ L'instruction **`import`** est utilisée pour importer des liens qui sont export
 
 ## Syntaxe
 
-    import exportParDefaut from "nom-module";
-    import * as nom from "nom-module";
-    import { export } from "nom-module";
-    import { export as alias } from "nom-module";
-    import { export1 , export2 } from "nom-module";
-    import { export1 , export2 as alias2 , [...] } from "nom-module";
-    import exportParDefaut, { export [ , [...] ] } from "nom-module";
-    import exportParDefaut, * as nom from "nom-module";
-    import "nom-module";
-    import { toto , truc } from "nom-module/chemin/vers/fichier-non-exporte";
-    let promesse = import("nom-module");
+```js
+import exportParDefaut from "nom-module";
+import * as nom from "nom-module";
+import { export } from "nom-module";
+import { export as alias } from "nom-module";
+import { export1 , export2 } from "nom-module";
+import { export1 , export2 as alias2 , [...] } from "nom-module";
+import exportParDefaut, { export [ , [...] ] } from "nom-module";
+import exportParDefaut, * as nom from "nom-module";
+import "nom-module";
+import { toto , truc } from "nom-module/chemin/vers/fichier-non-exporte";
+let promesse = import("nom-module");
+```
 
 - `exportParDefaut`
   - : Nom qui fera référence à l'export par défaut du module.
@@ -199,18 +202,11 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 ## Spécifications
 
-| Spécification                                                                                                       | État                         | Commentaires                   |
-| ------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------ |
-| [Proposition pour les imports dynamiques « fonctionnels »](https://github.com/tc39/proposal-dynamic-import/#import) | Proposition de niveau 4      | Fera partie de ECMAScript 2020 |
-| {{SpecName("ESDraft", "#sec-imports", "Imports")}}                                                | {{Spec2("ESDraft")}} |                                |
-| {{SpecName("ES2018", "#sec-imports", "Imports")}}                                                    | {{Spec2("ES2018")}}     |                                |
-| {{SpecName("ES2017", "#sec-imports", "Imports")}}                                                    | {{Spec2("ES2017")}}     |                                |
-| {{SpecName("ES2016", "#sec-imports", "Imports")}}                                                    | {{Spec2("ES2016")}}     |                                |
-| {{SpecName("ES2015", "#sec-imports", "Imports")}}                                                    | {{Spec2("ES2015")}}     | Définition initiale.           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.import")}}
+{{Compat}}
 
 ## Voir aussi
 

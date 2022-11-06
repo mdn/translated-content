@@ -12,6 +12,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
 ---
+
 {{AddonSidebar}}
 
 Renvoie les informations sur le navigateur dans lequel l'extension est installée.
@@ -28,7 +29,7 @@ var gettingInfo = browser.runtime.getBrowserInfo()
 
 None.
 
-### valeur retournée
+### Valeur retournée
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet qui a les propriétés suivantes :
 

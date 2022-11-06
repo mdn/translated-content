@@ -9,6 +9,7 @@ tags:
   - hors-ligne
 translation_of: Web/API/Service_Worker_API
 ---
+
 {{ServiceWorkerSidebar}}
 
 {{ SeeCompatTable() }}
@@ -17,7 +18,7 @@ Les service workers jouent essentiellement le rôle de serveurs proxy placés en
 
 ## Service worker, concepts et usage
 
-Un service worker est un [worker](/en-US/docs/Web/API/Worker) événementiel enregistré auprès d'une origine et d'un chemin. Il prend la forme d'un fichier JavaScript qui peut contrôler la page ou le site web auquel il est associé, en interceptant et en modifiant la navigation et les requêtes de ressources, et en mettant en cache les ressources selon une granularité très fine pour vous donner une maîtrise complète de la manière dont doit se comporter votre application dans certaines situations (l'une des plus évidentes étant l'indisponibilité du réseau.)
+Un service worker est un [worker](/fr/docs/Web/API/Worker) événementiel enregistré auprès d'une origine et d'un chemin. Il prend la forme d'un fichier JavaScript qui peut contrôler la page ou le site web auquel il est associé, en interceptant et en modifiant la navigation et les requêtes de ressources, et en mettant en cache les ressources selon une granularité très fine pour vous donner une maîtrise complète de la manière dont doit se comporter votre application dans certaines situations (l'une des plus évidentes étant l'indisponibilité du réseau.)
 
 Un service worker fonctionne dans le contexte d'un worker : il n'a donc pas d'accès au DOM, et s'exécute dans une tâche différente de celle du script principal de votre application, ainsi il est non-bloquant. Il est conçu pour être totalement asynchrone; en conséquence, des APIs telles que [XHR](/fr/docs/Web/API/XMLHttpRequest) en synchrone et [localStorage](/fr/docs/Web/API/Web_Storage_API) ne peuvent pas être utilisées au sein d'un service worker.
 
@@ -35,9 +36,9 @@ Un service worker est d'abord enregistré en utilisant la méthode {{domxref("Se
 
 A cette étape, votre service worker observera le cycle de vie suivant :
 
-1.  Téléchargement
-2.  Installation
-3.  Activation
+1. Téléchargement
+2. Installation
+3. Activation
 
 Le service worker est immédiatement téléchargé lorsqu'un utilisateur accède pour la première fois à une page ou à un site contrôlé par un service worker.
 
@@ -91,7 +92,7 @@ Les service workers sont aussi destinés à être utilisés pour des choses tell
 - {{domxref("ExtendableEvent") }}
   - : Étend la durée de vie des événements `install` et `activate` envoyés au {{domxref("ServiceWorkerGlobalScope")}} comme partie du cycle de vie d'un service worker. Cela garantit que tout événement fonctionnel (comme {{domxref("FetchEvent")}}) n'est pas envoyé au {{domxref("ServiceWorker")}} avant qu'il ne mette à jour des schémas de base de données, supprime des entrées de cache obsolètes, etc.
 - {{domxref("ExtendableMessageEvent") }}
-  - : L'objet événement d'un événement {{event("message_(ServiceWorker)","message")}} déclenché sur un service worker (lorsqu'un message est reçu par le {{domxref("ServiceWorkerGlobalScope")}} à partir d'un autre contexte) — étend la durée de vie de tels événements.
+  - : L'objet événement d'un événement [`message`](/fr/docs/Web/API/ServiceWorkerGlobalScope/message_event) déclenché sur un service worker (lorsqu'un message est reçu par le {{domxref("ServiceWorkerGlobalScope")}} à partir d'un autre contexte) — étend la durée de vie de tels événements.
 - {{domxref("FetchEvent") }}
   - : Le paramètre passé au gestionnaire {{domxref("ServiceWorkerGlobalScope.onfetch")}}, l'interface `FetchEvent` représente une action de recherche qui est envoyée au {{domxref("ServiceWorkerGlobalScope")}} d'un {{domxref("ServiceWorker")}}. Il contient des informations à propos de la requête et de la réponse résultante, et fournit la méthode {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}, qui nous permet de produire une réponse arbitraire en retour à la page contrôlée.
 - {{domxref("InstallEvent") }}
@@ -127,13 +128,11 @@ Les service workers sont aussi destinés à être utilisés pour des choses tell
 
 ## Spécifications
 
-| Spécification                                    | Statut                               | Commentaire          |
-| ------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 
-- [ServiceWorker Cookbook](https://serviceworke.rs)
+- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Utilisation des Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Exemple basique de Service workers](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)

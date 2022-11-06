@@ -5,6 +5,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 ---
+
 {{AddonSidebar}}
 
 L'un des cas d'utilisation les plus courants pour un complément de navigateur est de modifier une page Web. Par exemple, une extension pourrait vouloir modifier le style appliqué à une page, cacher des nœuds DOM particuliers ou injecter des nœuds DOM supplémentaires dans la page.

@@ -13,6 +13,7 @@ tags:
   - onClicked
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onClicked
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque l'utilisateur clique sur une notification, mais pas sur l'un des boutons de la notification (pour cela, voir {{WebExtAPIRef("notifications.onButtonClicked")}}).
@@ -34,7 +35,7 @@ Les événements ont trois fonctions :
 - `hasListener(listener)`
   - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-## syntaxe addListener
+## Syntaxe addListener
 
 ### Paramètres
 

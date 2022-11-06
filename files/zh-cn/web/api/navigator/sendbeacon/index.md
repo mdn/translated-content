@@ -1,21 +1,11 @@
 ---
 title: Navigator.sendBeacon()
 slug: Web/API/Navigator/sendBeacon
-tags:
-  - API
-  - Beacon
-  - Method
-  - Navigator
-  - NeedsExample
-  - Networking
-  - Reference
-  - Web Performance
-  - sendBeacon
-translation_of: Web/API/Navigator/sendBeacon
 ---
+
 {{APIRef("HTML DOM")}}
 
-**`navigator.sendBeacon()`** 方法可用于通过 [HTTP POST](/zh-CN/docs/Web/HTTP/Methods/POST) 将少量数据{{glossary("Asynchronous", "异步")}}传输到 Web 服务器。
+**`navigator.sendBeacon()`** 方法可用于通过 [HTTP POST](/zh-CN/docs/Web/HTTP/Methods/POST) 将少量数据 {{glossary("Asynchronous", "异步")}} 传输到 Web 服务器。
 
 它主要用于将统计数据发送到 Web 服务器，同时避免了用传统技术（如：{{domxref("XMLHttpRequest","XMLHttpRequest")}}）发送分析数据的一些问题。
 
@@ -39,9 +29,9 @@ navigator.sendBeacon(url, data);
 
 ## 描述
 
-这个方法主要用于满足统计和诊断代码的需要，这些代码通常尝试在卸载（unload）文档之前向web服务器发送数据。过早的发送数据可能导致错过收集数据的机会。然而，对于开发者来说保证在文档卸载期间发送数据一直是一个困难。因为用户代理通常会忽略在 {{event("unload")}} 事件处理器中产生的异步 {{domxref("XMLHttpRequest")}}。
+这个方法主要用于满足统计和诊断代码的需要，这些代码通常尝试在卸载（unload）文档之前向 Web 服务器发送数据。过早的发送数据可能导致错过收集数据的机会。然而，对于开发者来说保证在文档卸载期间发送数据一直是一个困难。因为用户代理通常会忽略在 [`unload`](/zh-CN/docs/Web/API/Window/unload_event) 事件处理器中产生的异步 {{domxref("XMLHttpRequest")}}。
 
-过去，为了解决这个问题， 统计和诊断代码通常要在 
+过去，为了解决这个问题，统计和诊断代码通常要在
 
 - 发起一个同步 `XMLHttpRequest` 来发送数据。
 - 创建一个 {{HTMLElement("img")}} 元素并设置 `src`，大部分用户代理会延迟卸载（unload）文档以加载图像。
@@ -59,7 +49,7 @@ navigator.sendBeacon(url, data);
 
 ### 在会话结束时发送统计数据
 
-网站通常希望在用户完成页面浏览后向服务器发送分析或诊断数据，最可靠的方法是在 {{event("visibilitychange")}} 事件发生时发送数据：
+网站通常希望在用户完成页面浏览后向服务器发送分析或诊断数据，最可靠的方法是在 [`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event) 事件发生时发送数据：
 
 ```js
 document.addEventListener('visibilitychange', function logData() {
@@ -71,7 +61,7 @@ document.addEventListener('visibilitychange', function logData() {
 
 ### 避免使用 unload 和 beforeunload
 
-过去，许多网站使用 {{event("unload")}} 或 {{event("beforeunload")}} 事件以在会话结束时发送统计数据。然而这是不可靠的，在许多情况下（尤其是移动设备）浏览器不会产生 `unload`、`beforeunload` 或 `pagehide` 事件。下面列出了一种不触发上述事件的情况：
+过去，许多网站使用 [`unload`](/zh-CN/docs/Web/API/Window/unload_event) 或 [`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event) 事件以在会话结束时发送统计数据。然而这是不可靠的，在许多情况下（尤其是移动设备）浏览器不会产生 `unload`、`beforeunload` 或 `pagehide` 事件。下面列出了一种不触发上述事件的情况：
 
 1. 用户加载了网页并与其交互。
 2. 完成浏览后，用户切换到了其它应用程序，而不是关闭选项卡。
@@ -83,11 +73,11 @@ Firefox 也会在 bfcache 中排除包含 `beforeunload` 事件处理器的页�
 
 #### 使用 pagehide 作为回退
 
-可使用 {{event("pagehide")}} 事件来代替部分浏览器未实现的 `visibilitychange` 事件。和 `beforeunload` 与 `unload` 事件类似，这一事件不会被可靠地触发（特别是在移动设备上），但它与 bfcache 兼容。
+可使用 [`pagehide`](/zh-CN/docs/Web/API/Window/pagehide_event) 事件来代替部分浏览器未实现的 `visibilitychange` 事件。和 `beforeunload` 与 `unload` 事件类似，这一事件不会被可靠地触发（特别是在移动设备上），但它与 bfcache 兼容。
 
 ## 示例
 
-示例代码使用 {{event("visibilitychange")}} 事件来调用 `sendBeacon()` 以发送统计数据。
+示例代码使用 [`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event) 事件来调用 `sendBeacon()` 以发送统计数据。
 
 ```js
 document.addEventListener('visibilitychange', function logData() {
@@ -107,7 +97,7 @@ document.addEventListener('visibilitychange', function logData() {
 
 ## 参见
 
-- {{event("visibilitychange")}} 事件。
+- [`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event) 事件。
 - {{domxref("Beacon_API","Beacon API", "" , "true")}} 概述。
 - [Don't
   lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) 解释了为什么你应该使用 `visibilitychange` 而不是 `beforeunload`/`unload`。

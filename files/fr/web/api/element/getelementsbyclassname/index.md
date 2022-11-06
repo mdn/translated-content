@@ -10,6 +10,7 @@ tags:
   - getElementByClassName
 translation_of: Web/API/Element/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Element.getElementsByClassName()`** retourne une {{domxref("HTMLCollection")}} contenant une référence sur tous les éléments ayant les noms de classes passés en paramètre. Quand la méthode est appelée sur l'objet document, la recherche s'effectue dans le document complet, noeud racine compris.
@@ -18,7 +19,9 @@ La méthode **`Element.getElementsByClassName()`** retourne une {{domxref("HTMLC
 
 ## Syntaxe
 
-    var elements = element.getElementsByClassName(names);
+```js
+var elements = element.getElementsByClassName(names);
+```
 
 - **elements** est une {{ domxref("HTMLCollection") }} de référence vers les élements trouvés.
 - **names** est une chaine représentant la liste des noms de classes à trouver; les noms de classes sont séparés par un espace.
@@ -55,10 +58,8 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-getelementsbyclassname', 'Element.getElementsByClassName()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.getElementsByClassName")}}
+{{Compat}}

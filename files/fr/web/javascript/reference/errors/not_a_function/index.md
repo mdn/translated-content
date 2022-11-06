@@ -8,12 +8,15 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Not_a_function
 original_slug: Web/JavaScript/Reference/Erreurs/Not_a_function
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    TypeError: Object doesn't support property or method {x} (Edge)
-    TypeError: "x" is not a function
+```
+TypeError: Object doesn't support property or method {x} (Edge)
+TypeError: "x" is not a function
+```
 
 ## Type d'erreur
 

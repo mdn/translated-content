@@ -9,6 +9,7 @@ tags:
   - test
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Cet article commence en donnant un aperçu sur le sujet des test sur navigateurs (croisé), répondant aux questions telles que "qu'est-ce que le test en navigateur croisé?", "Quels sont les problèmes les plus communs que vous allez rencontrer?", et "quelles sont les principales approches pour tester, identifier, et fixer les problèmes?"
@@ -112,9 +113,9 @@ Normalement votre développement devra inclure une combinaison des trois approch
 
 Après chaque phase d'implémentation, vous allez avoir besoin de tester les nouvelles fonctionnalités. Pour commencer, vous devez vous assurer qu'il n'y a pas des problème généraux avec votre code qui empêcheraient votre fonctionnalité de fonctionner :
 
-1.  Tester sur quelque navigateurs stables sur votre ordinateur, comme Firefox, Safari, Chrome, ou IE/Edge.
-2.  Faites quelque test brut, comme essayer de tester votre site exclusivement avec le clavier, ou utiliser votre site avec un lecteur d'écran afin de voir s'il est navigable.
-3.  Tester sur une plateforme mobile, comme Android ou iOS.
+1. Tester sur quelque navigateurs stables sur votre ordinateur, comme Firefox, Safari, Chrome, ou IE/Edge.
+2. Faites quelque test brut, comme essayer de tester votre site exclusivement avec le clavier, ou utiliser votre site avec un lecteur d'écran afin de voir s'il est navigable.
+3. Tester sur une plateforme mobile, comme Android ou iOS.
 
 A cet instant, résolvez tous les problèmes que vous avez trouvé sur votre nouveau code.
 

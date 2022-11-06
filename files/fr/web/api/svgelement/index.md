@@ -1,115 +1,68 @@
 ---
 title: SVGElement
 slug: Web/API/SVGElement
-tags:
-  - Reference
 translation_of: Web/API/SVGElement
+browser-compat: api.SVGElement
 ---
-## Interface d'élément SVG
 
-Toutes les interfaces SVG DOM qui correspondent directement à des éléments du langage SVG dérivent de l'interface `SVGElement`.
+{{APIRef("SVG")}}
 
-### Vue d'ensemble de l'interface
+Toutes les interfaces du DOM SVG qui correspondent à des éléments SVG dérivent de l'interface `SVGElement`.
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="row">Implémente aussi</th>
-      <td>Voir l'interface générique DOM {{ domxref("Element") }}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Méthodes</th>
-      <td><em>Aucune</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Propriétés</th>
-      <td>
-        <ul>
-          <li>readonly {{ domxref("DOMString") }} <code>id</code></li>
-          <li>
-            readonly {{ domxref("DOMString") }} <code>xmlbase</code>
-          </li>
-          <li>
-            readonly {{ domxref("SVGSVGElement") }}
-            <code>ownerSVGElement</code>
-          </li>
-          <li>
-            readonly {{ domxref("SVGElement") }}
-            <code>viewportElement</code>
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Normative document</th>
-      <td>
-        <a href="http://www.w3.org/TR/SVG11/types.html#InterfaceSVGElement"
-          >SVG 1.1 (2nd Edition)</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{InheritanceDiagram}}
 
-## Properties
+## Propriétés
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Nom</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>id</code></td>
-      <td>{{ domxref("DOMString") }}</td>
-      <td>
-        La valeur de l'attribut {{ SVGAttr("id") }} de l'élément, ou une
-        chaîne vide si <code>id</code> n'est pas présent.
-      </td>
-    </tr>
-    <tr>
-      <td><code>xmlbase</code></td>
-      <td>{{ domxref("DOMString") }}</td>
-      <td>
-        Correspond à l'attribut {{ SVGAttr("xml:base") }} de l'élément.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ownerSVGElement</code></td>
-      <td>{{ domxref("SVGSVGElement") }}</td>
-      <td>
-        <p>
-          L'élément {{ SVGElement("svg") }} parent le plus près.
-          <code>Null</code> si l'élément est l'élément svg le plus à
-          l'extérieur.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>viewportElement</code></td>
-      <td>{{ domxref("SVGElement") }}</td>
-      <td>
-        <p>
-          L'élément qui a établi la fenêtre actuelle. Souvent l'élément parent
-          {{ SVGElement("svg") }} le plus prêt. <code>Null</code> si
-          l'élément est l'élément svg le plus à l'extérieur.
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+_Cette interface hérite également des propriétés de [`DocumentAndElementEventHandlers`](/fr/docs/Web/API/DocumentAndElementEventHandlers), [`Element`](/fr/docs/Web/API/Element), [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), et [`SVGElementInstance`](/fr/docs/Web/API/SVGElementInstance)_
+
+- [`SVGElement.attributeStyleMap`](/fr/docs/Web/API/SVGElement/attributeStyleMap) {{ReadOnlyInline}}
+  - : Un objet [`StylePropertyMap`](/fr/docs/Web/API/StylePropertyMap) qui représente les déclarations de l'attribut [`style`](/fr/docs/Web/SVG/Attribute/style) de l'élément.
+- [`SVGElement.dataset`](/fr/docs/Web/API/SVGElement/dataset) {{ReadOnlyInline}}
+  - : Un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) qui fournit une liste de paires de clé/valeur des attributs de données nommés correspondant aux [attributs de données spécifiques](/fr/docs/Learn/HTML/Howto/Use_data_attributes) attachés à l'élément. Ils peuvent également être définis en SVG avec des attributs de la forme [`data-*`](/fr/docs/Web/SVG/Attribute/data-*), où `*` représente le nom de la clé. Cette propriété et cet attribut fonctionnent de façon analogue aux équivalents HTML (propriété du DOM [`HTMLElement.dataset`](/fr/docs/Web/API/HTMLElement/dataset) et attribut HTML global [`data-*`](/fr/docs/Web/HTML/Global_attributes#attr-data-*)).
+- [`SVGElement.className`](/fr/docs/Web/API/SVGElement/className) {{Deprecated_Inline}}{{ReadOnlyInline}}
+  - : Une chaîne de caractères [`SVGAnimatedString`](/fr/docs/Web/API/SVGAnimatedString) qui reflète la valeur de l'attribut [`class`](/fr/docs/Web/SVG/Attribute/class) de l'élément courant, ou la chaîne vide s'il n'a pas de classe. Cet attribut est déprécié et pourrait être retiré des prochaines versions de la spécification. Il est conseillé d'utiliser [`Element.classList`](/fr/docs/Web/API/Element/classList) à la place.
+- [`SVGElement.nonce`](/fr/docs/Web/API/SVGElement/nonce)
+  - : Renvoie le nonce cryptographique utilisé par la politique de sécurité du contenu (CSP) pour déterminer si une opération de récupération peut avoir lieu.
+- [`SVGElement.ownerSVGElement`](/fr/docs/Web/API/SVGElement/ownerSVGElement) {{ReadOnlyInline}}
+  - : Un objet [`SVGSVGElement`](/fr/docs/Web/API/SVGSVGElement) qui fait référence à l'ancêtre [`<svg>`](/fr/docs/Web/SVG/Element/svg) le plus proche ou `null` si l'élément courant est l'élément `<svg>` de plus haut niveau.
+- [`SVGElement.style`](/fr/docs/Web/API/SVGElement/style)
+  - : Un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration) qui représente les déclarations de mise en forme portées par l'attribut [`style`](/fr/docs/Web/SVG/Attribute/style).
+- [`SVGElement.tabIndex`](/fr/docs/Web/API/SVGElement/tabIndex)
+  - : La position de l'élément dans l'ordre de tabulation.
+- [`SVGElement.viewportElement`](/fr/docs/Web/API/SVGElement/viewportElement) {{ReadOnlyInline}}
+  - : L'objet `SVGElement` qui a établi la zone d'affichage (<i lang="en">viewport</i>) courante. Il s'agit généralement de l'ancêtre [`<svg>`](/fr/docs/Web/SVG/Element/svg) le plus proche. Cette propriété vaut `null` si l'élément courant est déjà l'élément `<svg>` de plus haut niveau.
 
 ## Méthodes
 
-L'interface `SVGElement` ne possède aucune méthode spécifique.
+_Cette interface n'a pas de méthode en propre, mais elle hérite de celles fournies par [`DocumentAndElementEventHandlers`](/fr/docs/Web/API/DocumentAndElementEventHandlers), [`Element`](/fr/docs/Web/API/Element), [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), et [`SVGElementInstance`](/fr/docs/Web/API/SVGElementInstance)_
+
+## Évènements
+
+On pourra intercepter les évènements suivants en utilisant [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) ou en affectant un gestionnaire d'évènements à la propriété `on…` correspondante de [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers).
+
+- [`abort`](/fr/docs/Web/API/SVGElement/abort_event)
+  - : Déclenché lorsque le chargement de la page est interrompu avant qu'un élément SVG ait pu être chargé complètement. Également disponible avec la propriété [`onabort`](/fr/docs/Web/API/GlobalEventHandlers/onabort).
+- [`error`](/fr/docs/Web/API/SVGElement/error_event)
+  - : Déclenché lorsqu'un élément SVG ne charge pas correctement ou lorsqu'une erreur se produit lors de l'exécution d'un script. Également disponible avec la propriété [`onerror`](/fr/docs/Web/API/GlobalEventHandlers/onerror).
+- [`load`](/fr/docs/Web/API/SVGElement/load_event)
+  - : Déclenché sur un objet `SVGElement` lorsqu'il est chargé dans le navigateur. Également disponible avec la propriété [`onload`](/fr/docs/Web/API/GlobalEventHandlers/onload).
+- [`resize`](/fr/docs/Web/API/SVGElement/resize_event)
+  - : Déclenché lorsqu'un document SVG est redimensionné. Également disponible avec la propriété [`onresize`](/fr/docs/Web/API/GlobalEventHandlers/onresize).
+- [`scroll`](/fr/docs/Web/API/SVGElement/scroll_event)
+  - : Declenché lorsque la vue d'un document SVG est décalée le long de l'axe horizontal ou vertical. Également disponible avec la propriété [`onscroll`](/fr/docs/Web/API/GlobalEventHandlers/onscroll).
+- [`unload`](/fr/docs/Web/API/SVGElement/unload_event)
+  - : Déclenché lorsque l'implémentation du DOM retire un document SVG de la fenêtre ou de la <i lang="en">frame</i>.
+
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SVGElement")}}
+{{Compat}}
 
 ## Voir aussi
 
-- Référence DOM {{ SVGElement("element") }}
+- Les attributs de données HTML [`data-*`](/fr/docs/Web/HTML/Global_attributes#attr-data-*)
+- Les attributs de données SVG [`data-*`](/fr/docs/Web/SVG/Attribute/data-*)
+- [Utiliser les attributs de données spécifiques en HTML](/fr/docs/Learn/HTML/Howto/Use_data_attributes)

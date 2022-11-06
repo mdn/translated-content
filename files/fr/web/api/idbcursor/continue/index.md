@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBCursor/continue
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`continue()`** de l'interface {{domxref("IDBCursor")}} fait avancer le curseur jusqu'à la prochaine position qui corrrespond à une clé donnée si celle-ci est passée en paramètre, si aucune clé n'est indiquée, le curseur avancera à la position qui suit immédiatement la position actuelle (dans la direction de progression du curseur).
@@ -69,7 +70,7 @@ Cette méthode peut déclencher des exceptions  {{domxref("DOMException")}} de t
 
 ## Exemple
 
-Dans ce petit morceau de code, on fait une transaction, on récupère un magasin d'objet, puis on utilise un curseur afin d'itérer sur les enregistrements contenus dans le magasin. Il n'est pas nécessaire de sélectionner les données selon une clé, on peut simplement toutes les récupérer. On notera qu'à chaque itération de la boucle, on récupère les données correspondantes à l'enregistrement grâce au curseur sous la forme `curseur.value.toto`. Pour étudier un exemple de travail complet, voir [notre exemple IDBCursor](https://github.com/mdn/IDBcursor-example/) ([voir l'exemple live](https://mdn.github.io/IDBcursor-example/)).
+Dans ce petit morceau de code, on fait une transaction, on récupère un magasin d'objet, puis on utilise un curseur afin d'itérer sur les enregistrements contenus dans le magasin. Il n'est pas nécessaire de sélectionner les données selon une clé, on peut simplement toutes les récupérer. On notera qu'à chaque itération de la boucle, on récupère les données correspondantes à l'enregistrement grâce au curseur sous la forme `curseur.value.toto`. Pour étudier un exemple de travail complet, voir [notre exemple IDBCursor](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([voir l'exemple live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
 
 ```js
 function afficheDonnee() {
@@ -93,13 +94,11 @@ function afficheDonnee() {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBCursor-continue-void-any-key', 'continue()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBCursor.continue")}}
+{{Compat}}
 
 ## Voir aussi
 

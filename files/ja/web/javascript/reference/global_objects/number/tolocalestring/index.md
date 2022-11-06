@@ -1,15 +1,8 @@
 ---
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-tags:
-  - 国際化
-  - JavaScript
-  - メソッド
-  - Number
-  - プロトタイプ
-browser-compat: javascript.builtins.Number.toLocaleString
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 ---
+
 {{JSRef}}
 
 **`toLocaleString()`** メソッドは、この数値を表す言語依存の文字列を返します。
@@ -57,19 +50,19 @@ console.log(number.toLocaleString()); // アメリカ英語のロケールでは
 
 ```js
 function toLocaleStringSupportsLocales() {
-  var number = 0;
-  try {
-    number.toLocaleString('i');
-  } catch (e) {
-    return e.name === 'RangeError';
+  var number = 0;
+  try {
+    number.toLocaleString('i');
+  } catch (e) {
+    return e.name === 'RangeError';
   }
   return false;
 }
 ```
 
-ES5.1 以前の実装では、引数を使って `toLocaleString` を呼んだ場合に {{jsxref("RangeError")}} 例外を throw する必要はありませんでした。
+ES5.1 以前の実装では、引数を使って `toLocaleString` を呼んだ場合に {{jsxref("RangeError")}} 例外を throw する必要はありませんでした。
 
-5.1 以前の ECMAScript をサポートしているものも含めたすべてのホストで動くチェックは、直接 `Number.prototype.toLocaleString` の地域オプションのサポートに必要な ECMA-402 で指定された機能をテストすることで行えます。
+5.1 以前の ECMAScript をサポートしているものも含めたすべてのホストで動くチェックは、直接 `Number.prototype.toLocaleString` の地域オプションのサポートに必要な ECMA-402 で指定された機能をテストすることで行えます。
 
 ```js
 function toLocaleStringSupportsOptions() {
@@ -77,9 +70,9 @@ function toLocaleStringSupportsOptions() {
 }
 ```
 
-上記のコードは、グローバル `Intl` オブジェクトが `null` でないことと、`Intl` オブジェクトが `NumberFormat` プロパティを持ち、それが関数であることをテストします。
+上記のコードは、グローバル `Intl` オブジェクトが `null` でないことと、`Intl` オブジェクトが `NumberFormat` プロパティを持ち、それが関数であることをテストします。
 
-### `locales` を使う
+### `locales` を使う
 
 この例ではローカライズされた数値変換のバリエーションのいくつかを示します。アプリケーションのユーザーインターフェイスで使われる言語の形式を得るために、`locales` 引数を用いている言語（そしておそらくいくつかのフォールバック言語）を明示することを確かめてください。
 
@@ -117,7 +110,7 @@ var number = 123456.789;
 
 // 通貨形式をリクエスト
 console.log(number.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
-// → 123.456,79 €
+// → 123.456,79 €
 
 // 日本円には副単位がない
 console.log(number.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))

@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/Localization
 original_slug: Localization
 ---
+
 La localisation (l10n) est le processus d'adaptation d'une interface utilisateur de logiciel à une culture spécifique.
 
 Les facteurs communs suivants sont à considérer :
@@ -29,9 +30,6 @@ Les facteurs communs suivants sont à considérer :
 - les vacances locales
 - Les noms de personnes
 
-## En apprendre plus
+## Voir aussi
 
-### Culture générale
-
-- {{Link("fr/docs/Mozilla/Localization")}} sur MDN
-- {{interwiki("wikipedia", "Localisation_linguistique", "Localisation")}} sur Wikipedia
+- [Localisation](https://fr.wikipedia.org/wiki/Localisation_(linguistique)) sur Wikipédia

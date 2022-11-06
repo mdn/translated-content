@@ -1,36 +1,32 @@
 ---
-title: leading
+title: set:leading()
 slug: Web/EXSLT/set/leading
-tags:
-  - EXSLT
-  - XSLT
 translation_of: Web/EXSLT/set/leading
 ---
-{{ XsltRef() }}
 
-`set:leading()` retourne les nœuds d'un 1er ensemble de nœuds qui se trouvent avant le 1er nœud du 2nd ensemble de nœuds.
+{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
-### Syntaxe
+`set:leading()` renvoie les nœuds d'un premier ensemble de nœuds qui viennent avant le premier nœud d'un deuxième ensemble.
 
-    set:leading(ensembleNœuds1,ensembleNœuds2)
+## Syntaxe
 
-### Arguments
+```js
+set:leading(nodeSet1, nodeSet2)
+```
 
-- `ensembleNœuds1`
-  - : L'ensemble de nœuds dans lequel chercher les nœuds qui précèdent le 1er nœuds du 2nd ensemble de nœuds.
-- `ensembleNœuds2`
-  - : L'ensemble de nœuds avec lequel on compare le 1er ensemble de nœuds.
+### Paramètres
 
-### Retourne
+- `nodeSet1`
+  - : L'ensemble de nœuds dont on souhaite connaître les nœuds qui précèdent le premier nœud de l'autre ensemble.
+- `nodeSet2`
+  - : L'ensemble de nœuds à comparer.
 
-Un ensemble de nœuds contenant les nœuds appartenant à `ensembleNœuds1` dont les valeurs précèdent le 1er nœud de `ensembleNœuds2`.
+### Valeur de retour
 
-{{ Note("Si le 1er nœud de <code>ensembleNœuds2</code> n\'est pas contenu dans <code>ensembleNœuds1</code>, cette fonction retourne un ensemble vide. Si <code>ensembleNœuds2</code> est vide, alors le résultat est <code>ensembleNœuds1</code>.") }}
+Un ensemble de nœuds qui contient les nœuds de `nodeSet1` dont les valeurs précèdent le premier nœud de `nodeSet2`.
 
-### Définition
+> **Note :** Si le premier nœud de `nodeSet2` n'est pas contenu dans `nodeSet1`, un ensemble vide sera renvoyé. Si `nodeSet2` est vide, le résultat sera `nodeSet1`.
 
-- [EXSLT - SET:LEADING (en)](http://www.exslt.org/set/functions/leading/index.html)
+## Spécifications
 
-### Support par Gecko
-
-Supporté par Gecko 1.9 et ultérieur.
+[EXSLT - SET:LEADING](http://exslt.org/set/functions/leading/index.html)

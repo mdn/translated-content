@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 ---
+
 {{AddonSidebar}}
 
 Les modèles de correspondance sont un moyen de spécifier des groupes d’URL : un modèle de correspondance correspond à un ensemble spécifique d'URL. Ils sont destinés à des extensions à l’aide d’API WebExtensions dans quelques endroits, notamment pour spécifier les documents dans lesquels charger des [content scripts](/fr/Add-ons/WebExtensions/Content_scripts), et pour spécifier les URL à ajouter aux auditeurs [`webRequest`](/fr/Add-ons/WebExtensions/API/webRequest).
@@ -20,7 +21,9 @@ Les API qui utilisent des modèles de correspondance acceptent généralement un
 
 Tous les modèles de correspondance sont spécifiés comme des chaînes. Outre le motif spécial « [\<all_urls>](/fr/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E) », les modèles de correspondance se composent de trois partie : _schéma_, l’hôte, et le _chemin d’accès._ Le schéma et l’hôte sont séparés par « :// ».
 
-    <scheme>://<host><path>
+```
+<scheme>://<host><path>
+```
 
 ### schéma
 

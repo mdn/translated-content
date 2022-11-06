@@ -1,13 +1,9 @@
 ---
 title: 初期値
 slug: Web/CSS/initial_value
-tags:
-  - CSS
-  - ガイド
-  - リファレンス
-translation_of: Web/CSS/initial_value
 ---
-{{cssref}}
+
+{{CSSRef}}
 
 **初期値 (initial value)** は [CSS](/ja/docs/Web/CSS) のプロパティの既定値であり、仕様書の定義表に挙げられているものです。初期値の使い方はプロパティが継承されているかどうかで異なります。
 
@@ -16,16 +12,29 @@ translation_of: Web/CSS/initial_value
 
 {{cssxref("initial")}} キーワードを使用すると、明示的に初期値を指定することができます。
 
-> **Note:** 初期値をブラウザーのスタイルシートで指定された値と混同しないでください。
+> **メモ:** 初期値をブラウザーのスタイルシートで指定された値と混同しないでください。
 
 ## 仕様書
 
-| 仕様書                                                                  | 状態                | 備考         |
-| ----------------------------------------------------------------------- | ------------------- | ------------ |
-| [CSS Cascade 4](https://drafts.csswg.org/css-cascade-4/#initial-values) |                     | 公式定義     |
-| {{SpecName("CSS2.1", "cascade.html#specified-value", "initial value")}} | {{Spec2("CSS2.1")}} | 暗黙的な定義 |
+{{Specifications}}
 
 ## 関連情報
 
 - {{cssxref("initial")}}
-- {{CSS_key_concepts}}
+- CSS の主要概念:
+  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
+  - [アットルール](/ja/docs/Web/CSS/At-rule)
+  - [コメント](/ja/docs/Web/CSS/Comments)
+  - [詳細度](/ja/docs/Web/CSS/Specificity)
+  - [継承](/ja/docs/Web/CSS/inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 値
+    - [計算値](/ja/docs/Web/CSS/computed_value)
+    - [使用値](/ja/docs/Web/CSS/used_value)
+    - [実効値](/ja/docs/Web/CSS/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/Replaced_element)

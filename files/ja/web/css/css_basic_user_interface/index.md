@@ -1,14 +1,8 @@
 ---
 title: CSS 基本ユーザーインターフェイス
 slug: Web/CSS/CSS_Basic_User_Interface
-tags:
-  - CSS
-  - CSS 基本ユーザーインターフェイス
-  - ガイド
-  - 概要
-  - Reference
-translation_of: Web/CSS/CSS_Basic_User_Interface
 ---
+
 {{CSSRef}}
 
 **CSS 基本ユーザーインターフェイス** (CSS Basic User Interface) は CSS のモジュールの一つで、ユーザーインターフェイスに関する表示や機能を定義します。

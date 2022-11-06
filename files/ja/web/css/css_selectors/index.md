@@ -1,19 +1,13 @@
 ---
 title: CSS セレクター
 slug: Web/CSS/CSS_Selectors
-tags:
-  - CSS
-  - ガイド
-  - 概要
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/CSS_Selectors
 ---
+
 {{CSSRef("Selectors")}}
 
 **CSS セレクター**は、一連の CSS のルールが適用される要素を定義します。
 
-> **Note:** 親のアイテム、親の兄弟、親の兄弟の子を選択するセレクターや結合子はありません。
+> **メモ:** 親のアイテム、親の兄弟、親の兄弟の子を選択するセレクターや結合子はありません。
 
 ## 基本セレクター
 
@@ -52,7 +46,7 @@ translation_of: Web/CSS/CSS_Selectors
 ## 結合子
 
 - [子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)
-  - : ` ` (空白) 結合子は、第 1 の要素の子孫にあたるノードを選択します。  
+  - : " " (空白) 結合子は、第 1 の要素の子孫にあたるノードを選択します。  
     **構文:** `A B`  
     **例:** `div span` は {{HTMLElement("div")}} 要素の中にある {{HTMLElement("span")}} 要素をすべて選択します。  
 
@@ -71,7 +65,7 @@ translation_of: Web/CSS/CSS_Selectors
     **構文:** `A + B`  
     **例:** `h2 + p` は {{HTMLElement("h2")}} 要素の後にすぐに続く {{HTMLElement("p")}} 要素をすべて選択します。  
 
-- [列結合子](/ja/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
+- [列結合子](/ja/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
   - : `||` 結合子は列に所属するノードを選択します。  
     **構文:** `A || B`  
     **例:** `col || td` は {{HTMLElement("col")}} 要素のスコープに所属するすべての {{HTMLElement("td")}} 要素を選択します。  

@@ -9,19 +9,22 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 original_slug: Web/JavaScript/Reference/Objets_globaux/Generator
 ---
+
 {{JSRef}}
 
 L'objet **`Generator`** est renvoyé par une {{jsxref("Instructions/function*","fonction génératrice","",1)}}, c'est à la fois [un itérateur](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_%C2%AB_it%C3%A9rateur_%C2%BB) et [un itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_%C2%AB_it%C3%A9rable_%C2%BB).
 
 ## Syntaxe
 
-    function* gen() {
-      yield 1;
-      yield 2;
-      yield 3;
-    }
+```js
+function* gen() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
 
-    var g = gen(); // "Generator { }"
+var g = gen(); // "Generator { }"
+```
 
 ## Méthodes
 
@@ -84,14 +87,11 @@ console.log(it.next());   // throws StopIteration (le générateur est clôturé
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-generator-objects', 'Generator objects')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-generator-objects', 'Generator objects')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Generator")}}
+{{Compat}}
 
 ## Voir aussi
 

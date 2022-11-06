@@ -1,14 +1,8 @@
 ---
 title: Element.nextElementSibling
 slug: Web/API/Element/nextElementSibling
-tags:
-  - API
-  - DOM
-  - Element
-  - プロパティ
-browser-compat: api.Element.nextElementSibling
-translation_of: Web/API/Element/nextElementSibling
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.nextElementSibling`** は読み取り専用のプロパティで、この要素の親の子リスト内ですぐ次にある要素を返します。このノードがリストの最後のノードであった場合は `null` を返します。

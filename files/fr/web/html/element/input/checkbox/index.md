@@ -1,15 +1,9 @@
 ---
 title: <input type="checkbox">
-slug: Web/HTML/Element/Input/checkbox
-tags:
-  - Element
-  - HTML
-  - Input
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/input/checkbox
+slug: Web/HTML/Element/input/checkbox
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Les éléments {{htmlelement("input")}} de type **`checkbox`** sont affichés sous la forme de boîtes à cocher qui sont cochées lorsqu'elles sont activées. Elles permettent de sélectionner une ou plusieurs valeurs dans un formulaire.
 
@@ -52,7 +46,7 @@ En plus des attributs qui sont partagés par l'ensemble des éléments {{HTMLEle
 
 ### {{htmlattrdef("checked")}}
 
-Un attribut booléen qui indique si la case est cochée. Cet attribut n'indique pas si la case est actuellement cochée : si l'état a été modifié, l'attribut dans le document ne reflètera pas cette modification (seul l'attribut IDL `checked`de l'objet {{domxref("HTMLInputElement")}} est mis à jour).
+Un attribut booléen qui indique si la case est cochée. Cet attribut n'indique pas si la case est actuellement cochée : si l'état a été modifié, l'attribut dans le document ne reflètera pas cette modification (seul l'attribut IDL `checked` de l'objet {{domxref("HTMLInputElement")}} est mis à jour).
 
 > **Note :** À la différence des autres champs, les valeurs des cases à cocher ne sont envoyées au serveur que lorsqu'elles sont cochées. Lorsque c'est le cas, c'est la valeur de l'attribut `value` qui est envoyé.
 
@@ -280,7 +274,7 @@ otherCheckbox.onchange = function() {
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
-      <td>{{event("change")}} et {{event("input")}}</td>
+      <td><a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/input_event"><code>input</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
@@ -301,14 +295,11 @@ otherCheckbox.onchange = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.input.input-checkbox")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/filter
 ---
+
 {{JSRef}}
 
 La méthode **`filter()`** crée un nouveau tableau qui contient l'ensemble des éléments qui remplissent une condition fournie par la fonction de test passée en argument. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.filter()")}}_._ _TypedArray_ est utilisé ici de façon générique pour représenter [l'un des types de tableaux typés possibles](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
@@ -20,7 +21,9 @@ La méthode **`filter()`** crée un nouveau tableau qui contient l'ensemble des 
 
 ## Syntaxe
 
-    typedarray.filter(callback[, thisArg])
+```js
+typedarray.filter(callback[, thisArg])
+```
 
 ### Paramètres
 
@@ -39,9 +42,9 @@ La méthode `filter()` appelle une fonction `callback` appelée une fois pour ch
 
 `callback` est appelée avec trois arguments :
 
-1.  la valeur de l'élément
-2.  l'indice de l'élément
-3.  le tableau typé courant
+1. la valeur de l'élément
+2. l'indice de l'élément
+3. le tableau typé courant
 
 Si le paramètre `thisArg` est fourni, il sera utilisé comme objet `this` lors de l'appel de la fonction `callback`. Sinon, la valeur `undefined` sera utilisée à la place. Par ailleurs, la valeur de `this` accessible depuis la fonction `callback` est déterminée selon [les règles usuelles déterminant la valeur this au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
 
@@ -74,14 +77,11 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(élém => élém >= 10);
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.filter', 'TypedArray.prototype.filter')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.filter', 'TypedArray.prototype.filter')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.filter")}}
+{{Compat}}
 
 ## Voir aussi
 

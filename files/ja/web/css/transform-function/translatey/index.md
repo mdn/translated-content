@@ -1,23 +1,16 @@
 ---
 title: translateY()
 slug: Web/CSS/transform-function/translateY
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/translateY()
 original_slug: Web/CSS/transform-function/translateY()
-browser-compat: css.types.transform-function.translateY
 ---
+
 {{CSSRef}}
 
 **`translateX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上の水平方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 ![](translatey.png)
 
-> **Note:** `translateY(ty)` は `translate(0, ty)` または `translate3d(0, ty, 0)` と等価です。
+> **メモ:** `translateY(ty)` は `translate(0, ty)` または `translate3d(0, ty, 0)` と等価です。
 
 ## 構文
 

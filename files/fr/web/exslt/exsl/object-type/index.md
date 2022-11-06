@@ -1,41 +1,36 @@
 ---
-title: object-type
+title: exsl:object-type()
 slug: Web/EXSLT/exsl/object-type
-tags:
-  - EXSLT
-  - XSLT
-translation_of: Web/EXSLT/exsl/object-type
 ---
-{{ XsltRef() }}
 
-`exsl:object-type()` retourne une chaîne indiquant le type de l'objet spécifié.
+{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
-{{ Note("La plupart des types d\'objet <a href='\"fr/XSLT\"'>XSLT</a> peuvent être contraints les uns avec les autres sans risque. Cependant, certaines contraintes peuvent provoquer des erreurs. En particulier, le traitement de quelque chose qui n\'est pas un ensemble de nœuds comme tel. Cette fonction laisse aux auteurs des modèles nommés et des fonctions d\'extensions de fournir facilement une certaine flexibilité pour les valeurs de paramètres.") }}
+`exsl:object-type()` renvoie une chaîne de caractères indiquant le type de l'objet indiqué en paramètre.
 
-### Syntaxe
+> **Note :** La plupart des types d'objet [XSLT](/fr/docs/Web/XSLT) peuvent être convertis implicitement vers les autres. Toutefois, certaines conversions implicites sont sources d'erreur, par exemple traiter quelque chose qui n'est pas un `node-set` comme tel. Cette fonction permet de fournir une certaine flexibilité dans les valeurs de paramètres.
 
-    exsl:object-type(objet)
+## Syntaxe
 
-### Arguments
+```js
+exsl:object-type(object)
+```
 
-- `objet`
-  - : L'objet dont on désire connaître le type.
+### Paramètres
 
-### Retourne
+- `object`
+  - : L'objet dont on souhaite connaître le type.
 
-Le type de l'`objet`, qui sera un des types suivants&nbsp;:
+### Valeur de retour
 
-- `string` (chaîne)
-- `number` (nombre)
-- `boolean` (booléen)
-- `node-set` (ensemble de nœuds)
+Le type de l'objet, parmi&nbsp;:
+
+- `string`
+- `number`
+- `boolean`
+- `node-set`
 - `RTF`
-- `external` (externe)
+- `external`
 
-### Définition
+## Spécifications
 
-- [EXSLT - EXSL:OBJECT-TYPE (en)](http://www.exslt.org/regexp/functions/object-type/index.html)
-
-### Support par Gecko
-
-Supporté par Gecko 1.9 et ultérieur.
+[EXSLT - EXSL:OBJECT-TYPE](http://exslt.org/exsl/functions/object-type/index.html)

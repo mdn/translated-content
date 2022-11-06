@@ -6,6 +6,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 original_slug: Mozilla/Add-ons/WebExtensions/Ajouter_un_bouton_a_la_barre_d_outils
 ---
+
 {{AddonSidebar}}
 
 Les boutons de la barre d’outils sont l’un des principaux composants UI disponibles aux WebExtensions. Les boutons de la barre d’outils sont présents dans la barre d’outils principale du navigateur et contiennent une icône. Lorsque l’utilisateur clique sur l’icône, une des deux choses peut arriver&nbsp;:
@@ -20,7 +21,7 @@ Dans WebExtensions, ces types de boutons s’appellent « actions du navigateur 
 
 ## Un bouton simple
 
-Dans cette section, nous créerons une WebExtension qui ajoute un bouton à la barre d’outils. Lorsque l’utilisateur clique sur le bouton, nous ouvrirons [https&nbsp;://developer.mozilla.org](https://developer.mozilla.org) dans un nouveau onglet.
+Dans cette section, nous créerons une WebExtension qui ajoute un bouton à la barre d’outils. Lorsque l’utilisateur clique sur le bouton, nous ouvrirons [https://developer.mozilla.org](/) dans un nouveau onglet.
 
 Tout d’abord, créez un nouveau dossier, «&nbsp;bouton&nbsp;», et créez un fichier appelé «&nbsp;manifest.json&nbsp;» à l’intérieur avec le contenu suivant&nbsp;:
 
@@ -181,15 +182,17 @@ Dans notre JavaScript, nous écoutons les clics sur les choix contextuels. Nous 
 
 La structure finale de l’add‐on devrait ressembler à ceci&nbsp;:
 
-    button/
-        icons/
-            page-16.png
-            page-32.png
-        popup/
-            choose_page.css
-            choose_page.html
-            choose_page.js
-        manifest.json
+```
+button/
+    icons/
+        page-16.png
+        page-32.png
+    popup/
+        choose_page.css
+        choose_page.html
+        choose_page.js
+    manifest.json
+```
 
 Maintenant, rechargez l’extension, cliquez de nouveau sur le bouton et essayez de cliquer sur les choix dans la fenêtre contextuelle&nbsp;:
 

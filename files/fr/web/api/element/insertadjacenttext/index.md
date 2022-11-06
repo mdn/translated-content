@@ -10,13 +10,16 @@ tags:
   - Texte
 translation_of: Web/API/Element/insertAdjacentText
 ---
+
 {{APIRef("DOM")}}
 
 La méthode `insertAdjacentText()` insère un noeud texte donné à une position donnée par rapport à l'élément sur lequel elle est appelé.
 
 ## Syntaxe
 
-    element.insertAdjacentText(position, element);
+```js
+element.insertAdjacentText(position, element);
+```
 
 ### Paramètres
 
@@ -44,13 +47,15 @@ Vide.
 
 ### Visualisation des noms de position
 
-    <!-- beforebegin -->
-    <p>
-    <!-- afterbegin> -->
-    machin
-    <!-- beforeend -->
-    </p>
-    <!-- afterend -->
+```html
+<!-- beforebegin -->
+<p>
+<!-- afterbegin> -->
+machin
+<!-- beforeend -->
+</p>
+<!-- afterend -->
+```
 
 > **Note :** Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est dans l'arbre et possède un élément parent.
 
@@ -72,25 +77,25 @@ Jetez un œil à notre démo [insertAdjacentText.html](https://mdn.github.io/dom
 
 Vous pouvez utiliser une émulation de la méthode `insertAdjacentText()` dans Internet Explorer 5.5 (et peut-être antérieur) et supérieur avec le code suivant :
 
-    if (!Element.prototype.insertAdjacentText)
-      Element.prototype.insertAdjacentText = function(type, txt){
-        this.insertAdjacentHTML(
-          type,
-          (txt+'') // convertir en chaîne de caractères
-            .replace(/&/g, '&amp;') // intégrer des symboles d'esperluette
-            .replace(/</g, '&lt;') // intégrer les symboles "plus petit que"
-        )
-      }
+```js
+if (!Element.prototype.insertAdjacentText)
+  Element.prototype.insertAdjacentText = function(type, txt){
+    this.insertAdjacentHTML(
+      type,
+      (txt+'') // convertir en chaîne de caractères
+        .replace(/&/g, '&amp;') // intégrer des symboles d'esperluette
+        .replace(/</g, '&lt;') // intégrer les symboles "plus petit que"
+    )
+  }
+```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-element-insertadjacenttext', 'insertAdjacentText()')}} | {{ Spec2('DOM WHATWG') }} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.insertAdjacentText")}}
+{{Compat}}
 
 ## Voir aussi
 

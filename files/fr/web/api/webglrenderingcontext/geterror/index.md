@@ -9,13 +9,16 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/getError
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.getError()`** de l'[API WebGL](/fr-Fr/docs/Web/API/WebGL_API) retourne des informations d'erreur.
 
 ## Syntaxe
 
-    GLenum gl.getError();
+```js
+GLenum gl.getError();
+```
 
 ### Paramètres
 
@@ -44,14 +47,11 @@ gl.getError(); // gl.INVALID_ENUM;
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                               | Commentaire               |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------- |
-| {{SpecName('WebGL', "#5.14.3", "getError")}}                     | {{Spec2('WebGL')}}             | Définition initiale.      |
-| {{SpecName('OpenGL ES 2.0', "glGetError.xml", "glGetError")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.getError")}}
+{{Compat}}
 
 ## Voir aussi
 

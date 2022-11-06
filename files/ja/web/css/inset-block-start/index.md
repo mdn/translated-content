@@ -1,16 +1,8 @@
 ---
 title: inset-block-start
 slug: Web/CSS/inset-block-start
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.inset-block-start
-translation_of: Web/CSS/inset-block-start
 ---
+
 {{CSSRef}}
 
 **`inset-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における先頭からの論理的なオフセットを定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。

@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/stroke-opacity
 ---
+
 {{SVGRef}}
 
 L'attribut **`stroke-opacity`** définit l'opacité du contour (_couleur_, _dégradé_, _motif_, etc) appliqué à une forme SVG.
@@ -71,13 +72,10 @@ html,body,svg { height:100% }
 
 Il est important de savoir que le contour recouvre partiellement le remplissage d'une forme. Ainsi, un contour avec une opacité différente de 1 affichera partiellement le remplissage du dessous. Pour éviter cet effet, il est possible d'appliquer une opacité globale avec l'attribut {{SVGAttr('opacity')}} ou placer le contour derrière le remplissage avec {{SVGAttr('paint-order')}}.
 
+## Spécifications
+
+{{Specifications}}
+
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.stroke-opacity")}}
-
-## Spécification
-
-| Spécification                                                                                            | Statut                   | Commentaire                                     |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------- |
-| {{SpecName("SVG2", "painting.html#StrokeOpacityProperty", "stroke-opacity")}} | {{Spec2("SVG2")}} | Définition pour les formes et le texte          |
-| {{SpecName("SVG1.1", "painting.html#StrokeOpacityProperty", "stroke-opacity")}} | {{Spec2("SVG1.1")}} | Définition initiale pour les formes et le texte |
+{{Compat}}

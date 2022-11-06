@@ -8,6 +8,7 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/perspective-origin
 ---
+
 {{CSSRef}}
 
 La propriété **`perspective-origin`** détermine la poisition depuis laquelle le spectateur regarde le document. Elle est utilisée comme point de fuite par la propriété {{cssxref("perspective")}}.
@@ -56,9 +57,13 @@ perspective-origin: unset;
     - `center` : un mot-clé qui est un alias pour indiquer une valeur de pourcentage de `50%`.
     - `bottom` : un mot-clé qui est un alias pour indiquer un pourcentage de `100%`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -352,19 +357,15 @@ section {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS Transforms 2', '#perspective-origin-property', 'perspective-origin')}} | {{Spec2('CSS Transforms 2')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.perspective-origin")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Utilisation_des_transformations_CSS "CSS/Using_CSS_transforms")
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Utilisation_des_transformations_CSS)
 - {{cssxref('transform-style')}}
 - {{cssxref('transform-function')}}
 - {{cssxref('perspective')}}

@@ -4,13 +4,16 @@ slug: Web/API/WorkerGlobalScope/languagechange_event
 translation_of: Web/API/WorkerGlobalScope/onlanguagechange
 original_slug: Web/API/WorkerGlobalScope/onlanguagechange
 ---
+
 {{APIRef("Web Workers API")}}
 
-La propriété **`onlanguagechange`** de l'interface {{domxref("WorkerGlobalScope")}} représente un {{event("Event_handlers", "event handler")}} à appeler lorsque l'événement {{event("languagechange")}} survient et se propage à travers le {{domxref("Worker")}}.
+La propriété **`onlanguagechange`** de l'interface {{domxref("WorkerGlobalScope")}} représente un gestionnaire d'évènement à appeler lorsque l'événement `languagechange` survient et se propage à travers le {{domxref("Worker")}}.
 
 ## Syntaxe
 
-    self.onlanguagechange = function() { ... };
+```js
+self.onlanguagechange = function() { ... };
+```
 
 ## Exemple
 
@@ -24,13 +27,11 @@ self.onlanguagechange = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#handler-workerglobalscope-onlanguagechange", "WorkerGlobalScope.onlanguagechange")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope.onlanguagechange")}}
+{{Compat}}
 
 ## Voir aussi
 

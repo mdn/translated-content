@@ -1,15 +1,8 @@
 ---
 title: animation-direction
 slug: Web/CSS/animation-direction
-tags:
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.animation-direction
-translation_of: Web/CSS/animation-direction
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`animation-direction`** プロパティは、アニメーション再生の向きを順方向、逆方向、前後反転のいずれにするかを設定します。
@@ -49,7 +42,7 @@ animation-direction: unset;
 - `alternate-reverse`
   - : アニメーションを毎回反転させ、初回は<em>逆方向</em>になります。周期が偶数か奇数かを特定する回数は1から始まります。
 
-> **Note:** `animation-*` プロパティにコンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} プロパティで指定したアニメーションに割り当てられますが、いくつあるかによって異なる方法で割り当てられます。詳しくは、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)を参照してください。
+> **メモ:** `animation-*` プロパティにコンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} プロパティで指定したアニメーションに割り当てられますが、いくつあるかによって異なる方法で割り当てられます。詳しくは、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)を参照してください。
 
 ## 公式定義
 

@@ -1,15 +1,8 @@
 ---
 title: AbortController
 slug: Web/API/AbortController
-tags:
-  - API
-  - AbortController
-  - 実験的
-  - インターフェース
-  - リファレンス
-translation_of: Web/API/AbortController
-browser-compat: api.AbortController
 ---
+
 {{APIRef("DOM")}}
 
 **`AbortController`** インターフェースは一つ以上のリクエストをいつでも中断することを可能にするコントローラーオブジェクトを表します。
@@ -63,7 +56,7 @@ function fetchVideo() {
 }
 ```
 
-> **Note:** `abort()` が呼ばれると、`fetch()` promise は `AbortError` と呼ばれる `DOMException` で失敗します。
+> **メモ:** `abort()` が呼ばれると、`fetch()` promise は `AbortError` と呼ばれる `DOMException` で失敗します。
 
 GitHub で完全に動作する例を見ることができます — [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) (または、[実際に動作する様子](https://mdn.github.io/dom-examples/abort-api/)) を参照してください。
 

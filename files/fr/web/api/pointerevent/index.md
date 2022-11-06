@@ -3,6 +3,7 @@ title: PointerEvent
 slug: Web/API/PointerEvent
 translation_of: Web/API/PointerEvent
 ---
+
 {{ APIRef("Pointer Events") }}
 
 L'interface **`PointerEvent`** représente les données de l'état d'un évènement du DOM produit par un pointeur, tels que la géométrie du point de contact, le type d'appareil qui a généré l'évènement, l'intensité de pression qui a été appliquée au contact de la surface, etc.
@@ -44,7 +45,7 @@ _Cette interface hérite des proprétés de {{domxref("MouseEvent")}} et {{domxr
 ## Methods
 
 - {{ domxref('PointerEvent.getCoalescedEvents()')}} {{deprecated_inline}}
-  - : Retourne une séquence de toutes les instances de `PointerEvent` qui ont été dirigées vers l'évènement {{event("pointermove")}} envoyé.
+  - : Retourne une séquence de toutes les instances de `PointerEvent` qui ont été dirigées vers l'évènement [`pointermove`](/fr/docs/Web/API/Element/pointermove_event) envoyé.
 
 ## Types d'évènements de pointeur
 
@@ -52,45 +53,45 @@ L'interface `PointerEvent` a plusieurs types d'évènements. Pour déterminer qu
 
 > **Note :** Il est important de remarquer que dans beaucoup de cas, à la fois les évènements du pointeur et de la souris sont envoyés (afin de laisser la logique interagir avec l'utilisateur même lorsqu'elle n'est pas spécifique à un type de pointeur) . Si vous utilisez les évènements de pointeur, vous devez exécuter {{ domxref("event.preventDefault()") }} afin d'empêcher l'évènement de la souris d'être également envoyée.
 
-- {{event('pointerover')}}
+- [`pointerover`](/fr/docs/Web/API/Element/pointerover_event)
   - : Cet évènement est déclenché lorsqu'un appareil de pointage est déplacé vers la zone du test de ciblage d'un élément.
-- {{event('pointerenter')}}
+- [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event)
   - : Cet évènement est déclenché lorsqu'un appareil de pointage est déplacé vers la zone du test de ciblage d'un élément ou l'un de ses descendants, ce qui inclut un évènement de pointage vers le bas d'un appareil qui ne propose pas de fonctionnalité de survol (voir pointage vers le bas). Ce type d'évènement est similaire à un pointage par dessus, mais se différencie en ne faisant pas circuler l'évènement.
-- {{event('pointerdown')}}
+- [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event)
   - : L'évènement est déclenché lorsqu'un pointeur devient _actif_. Pour une souris, il est déclenché lorsque l'appareil passe d'aucun bouton pressé à au moins un bouton pressé. Pour un touché, il est déclenché lorsqu'un contact physique est effectué avec le numériseur. Pour un stylet, il est déclenché au contact de ce dernier avec le numériseur.
-- {{event('pointermove')}}
+- [`pointermove`](/fr/docs/Web/API/Element/pointermove_event)
   - : Cet évènement est déclenché lorsqu'un pointeur change de coordonnées.
-- {{event('pointerup')}}
+- [`pointerup`](/fr/docs/Web/API/Element/pointerup_event)
   - : Cet événement est déclenché lorsqu'un pointeur n'est plus _actif_.
-- {{event('pointercancel')}}
+- [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event)
   - : Un navigateur déclenche cet évènement s'il conclut que le pointeur ne sera plus capable de générer des évènements (par exemple, l'appareil concerné a été désactivé).
-- {{event('pointerout')}}
+- [`pointerout`](/fr/docs/Web/API/Element/pointerout_event)
   - : Cet évènement est déclenché pour plusieurs raisons qui incluent : l'appareil de pointage est déplacé en dehors de la zone du test de ciblage d'un élément; déclencher l'évènement de pointage vers le haut pour un appareil qui ne supporte pas le survol (voir pointage vers le haut); après avoir déclenché un évènement de pointage annulé (voir pointage annulé); lorsqu'un stylet quitte la zone de portée pour être détectée au survol par le numériseur.
-- {{event('pointerleave')}}
+- [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event)
   - : Cet évènement est déclenché lorsqu'un appareil de pointage est déplacé en dehors de la zone de ciblage d'un élément. Pour les appareils avec un stylet, cet évènement est déclenché lorsque le stylet quitte la zone de portée pour être détectée au survol par le numériseur.
-- {{event('gotpointercapture')}}
+- [`gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)
   - : Cet évènement est déclenché lorsqu'un élément est capturé par un pointeur.
-- {{event('lostpointercapture')}}
+- [`lostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event)
   - : Cet évènement est déclenché après qu'un pointeur ait relâché sa capture.
 
 ## GlobalEventHandlers
 
 - {{ domxref('GlobalEventHandlers.onpointerover') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement {{event('pointerover')}}.
+  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerover`](/fr/docs/Web/API/Element/pointerover_event).
 - {{ domxref('GlobalEventHandlers.onpointerenter') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement {{event('pointerenter')}}.
+  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event).
 - {{ domxref('GlobalEventHandlers.onpointerdown') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement {{event('pointerdown')}}.
+  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event).
 - {{ domxref('GlobalEventHandlers.onpointermove') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement {{event('pointermove')}}.
+  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointermove`](/fr/docs/Web/API/Element/pointermove_event).
 - {{ domxref('GlobalEventHandlers.onpointerup') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement {{event('pointerup')}}.
+  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerup`](/fr/docs/Web/API/Element/pointerup_event).
 - {{ domxref('GlobalEventHandlers.onpointercancel') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement {{event('pointercancel')}}.
+  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event).
 - {{ domxref('GlobalEventHandlers.onpointerout') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement {{event('pointerout')}}.
+  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerout`](/fr/docs/Web/API/Element/pointerout_event).
 - {{ domxref('GlobalEventHandlers.onpointerleave') }}
-  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement {{event('pointerleave')}}.
+  - : Un {{domxref('GlobalEventHandlers','global event handler')}} pour l'événement [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event).
 
 ## Exemple
 
@@ -98,16 +99,13 @@ Un exemple de chaque propriété, type d'évènement, et un gestionnaire d'évè
 
 ## Spécifications
 
-| Specification                                                                                        | Status                                   | Comment              |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Pointer Events 2','#pointerevent-interface', 'PointerEvent')}} | {{Spec2('Pointer Events 2')}} | Version non-stable.  |
-| {{SpecName('Pointer Events', '#pointerevent-interface', 'PointerEvent')}}     | {{Spec2('Pointer Events')}}     | Définition initiale. |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.PointerEvent")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - {{ domxref("Touch_events","Touch Events") }}
 - {{ domxref("GestureEvent") }}

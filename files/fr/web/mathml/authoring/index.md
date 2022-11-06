@@ -7,6 +7,7 @@ tags:
   - MathML Project
 translation_of: Web/MathML/Authoring
 ---
+
 Cette page explique comment écrire des formules mathématiques en utilisant le langage MathML. À l'instar du HTML, le MathML est décrit par des balises et des attributs. Le code source HTML devient lourd lorsque votre document contient des structures avancées telles que des listes ou tableaux mais heureusement il existe plusieurs générateurs de HTML à partir de notations simples, des éditeurs WYSIWYG ainsi que des systèmes de gestions de contenu (CMS) qui aide à l'écriture de page Web.
 
 Les notations mathématiques sont encore plus complexes, avec des structures telles que les fractions, les racines carrées ou les matrices qui sont susceptibles de nécessiter leur propre balisage. Par conséquent, de bons outils d'édition MathML sont encore plus importants et nous en décrivons quelques-uns ci-dessous. En particulier, l'équipe MathML de Mozilla a développé [TeXZilla](https://github.com/fred-wang/TeXZilla/), un convertisseur Javascript de LaTeX vers MathML compatible avec Unicode, dont le but est d'être utilisé dans divers scénarios décrits ici. Bien sûr, la liste n'est pas exhaustive et vous êtes invité à jeter un œil à la [liste du W3C des logiciels MathML (en)](https://www.w3.org/Math/Software/) où vous pouvez trouver divers outils.
@@ -273,28 +274,38 @@ input.html
 
 Alors pour générer à partir de la page input.html la page output.html en remplaçant les expressions TeX par leurs équivalents MathML, entrez simplement :
 
-    cat input.html | itex2MML > output.html
+```bash
+cat input.html | itex2MML > output.html
+```
 
 Il y a des outils encore plus sophistiqués pour convertir des documents arbitraires LaTeX en HTML et MathML. Par exemple [TeX4ht](https://www.tug.org/tex4ht/) est souvent inclus dans les distributions TeX et a une option pour utiliser MathML plutôt que des images PNG. Cette commande générera un document en XHTML et MathML du nom de foo.xml à partir d'un fichier source LaTeX foo.tex :
 
-    mk4ht mzlatex foo.tex # Linux / MacOS
-    mzlatex foo.tex       # Windows
+```bash
+mk4ht mzlatex foo.tex # Linux / MacOS
+mzlatex foo.tex       # Windows
+```
 
 Notez que [tex4ebook](https://github.com/michal-h21/tex4ebook) s'appuie sur TeX4ht pour générer des documents EPUB.
 
 [LaTeXML](https://dlmf.nist.gov/LaTeXML/) est un autre outil qui permet de générer des documents HTML5 et EPUB. Les utilisateurs de Windows peuvent regarder ce [tutoriel vidéo](https://www.youtube.com/watch?v=Dg881w2e-lI). Étant donné un fichier LaTeX foo.tex, vous pouvez utiliser ces simples commandes :
 
-    latexml --dest foo.xml foo.tex
-    latexmlpost --dest foo.html --format=html5 foo.xml
+```bash
+latexml --dest foo.xml foo.tex
+latexmlpost --dest foo.html --format=html5 foo.xml
+```
 
 Pour gérer le cas des navigateurs ne supportant pas MathML, vous pouvez utiliser le paramètre `--javascript` pour indiquer à LaTeXML d'inclure l'un des [scripts de substitution](#fallback_for_browsers_without_mathml_support) :
 
-    latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/mspace.js foo.tex  # Add the CSS fallback
-    latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
+```bash
+latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/mspace.js foo.tex  # Add the CSS fallback
+latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
+```
 
 Si votre document LaTeX est volumineux, vous pouvez vouloir le diviser en plusieurs petites pages plutôt que de tout mettre dans une seule grande page. Par exemple, ceci va diviser les pages au niveau de la `\section` :
 
-    latexmlc --dest foo.html --splitat=section foo.tex
+```bash
+latexmlc --dest foo.html --splitat=section foo.tex
+```
 
 ### Conversion côté serveur
 

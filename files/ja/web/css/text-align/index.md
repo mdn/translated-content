@@ -1,15 +1,8 @@
 ---
 title: text-align
 slug: Web/CSS/text-align
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.text-align
-translation_of: Web/CSS/text-align
 ---
+
 {{CSSRef}}
 
 **`text-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロック要素または表セルボックスの水平方向の配置を設定します。つまり、 {{cssxref("vertical-align")}} のように、ただし水平方向に動作します。
@@ -46,9 +39,9 @@ text-align: unset;
 
 `text-align` プロパティは、以下の方法のうちの一つで指定されます。
 
- - キーワード値 `start`, `end`, `left`, `right`, `center`, `justify`, `justify-all`, `match-parent` のいずれかを使用。
- - `<string>` 値のみを使用、この場合は他の値の既定値が `right` になります。
- - キーワード値または [`<string>`](#string) 値の使用。
+- キーワード値 `start`, `end`, `left`, `right`, `center`, `justify`, `justify-all`, `match-parent` のいずれかを使用。
+- `<string>` 値のみを使用、この場合は他の値の既定値が `right` になります。
+- キーワード値または [`<string>`](#string) 値の使用。
 
 ### 値
 

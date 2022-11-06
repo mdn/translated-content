@@ -3,6 +3,7 @@ title: IDBFactory
 slug: Web/API/IDBFactory
 translation_of: Web/API/IDBFactory
 ---
+
 {{APIRef("IndexedDB")}}
 
 L'interface **`IDBFactory`** fait partie de l'[API IndexedDB](/fr/docs/Web/API/API_IndexedDB) et permet aux applications d'accéder à des bases de données de façon asynchrone. L'objet qui implémente cette interface est `window.indexedDB`. Autrement dit, on créera et on accèdera à une base de données (voire on la supprimera) directement via cet objet plutôt qu'en utilisant l'objet `IDBFactory`.
@@ -62,15 +63,11 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName("IndexedDB", "#idl-def-IDBFactory", "IDBFactory")}} | {{Spec2("IndexedDB")}}     |              |
-| {{SpecName("IndexedDB 2", "#factory-interface", "IDBFactory")}} | {{Spec2("IndexedDB 2")}} |              |
-| {{SpecName("IndexedDB 3", "#factory-interface", "IDBFactory")}} | {{Spec2("IndexedDB 3")}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBFactory")}}
+{{Compat}}
 
 ## Voir aussi
 

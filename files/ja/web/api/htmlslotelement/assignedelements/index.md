@@ -1,28 +1,21 @@
 ---
 title: HTMLSlotElement.assignedElements()
 slug: Web/API/HTMLSlotElement/assignedElements
-tags:
-  - API
-  - HTMLSlotElement
-  - メソッド
-  - リファレンス
-  - ウェブコンポーネント
-  - assignedElements
-  - シャドウ DOM
-browser-compat: api.HTMLSlotElement.assignedElements
-translation_of: Web/API/HTMLSlotElement/assignedElements
+l10n:
+  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 **`assignedElements()`** は {{domxref("HTMLSlotElement")}} インターフェイスのメソッドで、このスロットに割り当てられた一連の要素を返します (そしてそれ以外の要素を除きます)。
 
-`flatten` オプションが `true` に設定されていた場合は、このスロットの子孫である他のスロットに割り当てられた要素も返します。割り当てられたノードが見つからない場合は、スロットの代替コンテンツを返します。
+`flatten` オプションが `true` に設定されていた場合、このスロットに代入された要素と、このスロットの子孫である他のスロットに代入された要素の両方を配列で返します。代入された要素が見つからなかった場合は、スロットの代替コンテンツを返します。
 
 ## 構文
 
-```js
-HTMLSlotElement.assignedElements()
-HTMLSlotElement.assignedElements(options)
+```js-nolint
+assignedElements()
+assignedElements(options)
 ```
 
 ### 引数

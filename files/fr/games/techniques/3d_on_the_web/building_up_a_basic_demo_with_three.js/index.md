@@ -3,6 +3,7 @@ title: Building up a basic demo with Three.js
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 ---
+
 {{GamesSidebar}}
 
 Une scène 3D dans un jeu - même la plus simple - contient des éléments standard comme des formes situées dans un système de coordonnées, une caméra pour les voir réellement, des lumières et des matériaux pour amelioré son esthétique, des animations pour la rendre vivante, etc. **Three.js**, comme avec toute autre bibliothèque 3D, fournit des fonctions d'assistance intégrées pour vous aider à implémenter plus rapidement les fonctionnalités 3D courantes. Dans cet article, nous vous expliquerons les bases de l'utilisation de Three, notamment la configuration d'un environnement de développement, la structuration du code HTML nécessaire, les objets fondamentaux de Three et la manière de créer une démonstration de base.
@@ -26,19 +27,19 @@ Voici la structure que nous allons utiliser
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>MDN Games: Three.js demo</title>
-	<style>
-		body { margin: 0; padding: 0; }
-		canvas { width: 100%; height: 100%; }
-	</style>
+  <meta charset="utf-8">
+  <title>MDN Games: Three.js demo</title>
+  <style>
+    body { margin: 0; padding: 0; }
+    canvas { width: 100%; height: 100%; }
+  </style>
 </head>
 <body>
 <script src="three.min.js"></script>
 <script>
-	var WIDTH = window.innerWidth;
-	var HEIGHT = window.innerHeight;
-	/* all our JavaScript code goes here */
+  var WIDTH = window.innerWidth;
+  var HEIGHT = window.innerHeight;
+  /* all our JavaScript code goes here */
 </script>
 </body>
 </html>
@@ -81,7 +82,7 @@ plutard nous utiliserons la methode add() , pour ajouter des objets a cette scen
 
 ## Camera
 
-Nous avons la scène , mais nous devons encore ajouter une caméra pour voir notre travail - imaginez un film sans caméra. Les lignes suivantes mettent la caméra en place dans le système de coordonnées 3D et la pointent dans la direction de notre scène, afin que nous puissions enfin voir quelque chose:
+Nous avons la scène , mais nous devons encore ajouter une caméra pour voir notre travail - imaginez un film sans caméra. Les lignes suivantes mettent la caméra en place dans le système de coordonnées 3D et la pointent dans la direction de notre scène, afin que nous puissions enfin voir quelque chose :
 
 ```js
 var camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
@@ -103,12 +104,12 @@ Vous devez expérimenter ces valeurs et voir comment elles changent ce que vous 
 
 ## Rendu de la scene
 
-Tout est prêt, mais on ne voit toujours rien. Bien que nous ayons configuré le moteur de rendu, nous devons toujours effetué le rendu. Notre fonction render () fera ce travail, avec un peu d'aide de requestAnimationFrame (), ce qui fait que la scène sera restituée sur chaque image:
+Tout est prêt, mais on ne voit toujours rien. Bien que nous ayons configuré le moteur de rendu, nous devons toujours effetué le rendu. Notre fonction render () fera ce travail, avec un peu d'aide de requestAnimationFrame (), ce qui fait que la scène sera restituée sur chaque image :
 
 ```js
 function render() {
-	requestAnimationFrame(render);
-	renderer.render(scene, camera);
+  requestAnimationFrame(render);
+  renderer.render(scene, camera);
 }
 render();
 ```

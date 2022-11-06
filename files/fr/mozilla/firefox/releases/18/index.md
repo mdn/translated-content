@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/18
 original_slug: Mozilla/Firefox/Versions/18
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 18, basé sur Gecko 18.0, est sorti le 8 janvier 2013. Cette page résume les principaux changements dans Firefox 18 qui sont utiles aux développeurs.
@@ -32,7 +33,7 @@ Firefox 18, basé sur Gecko 18.0, est sorti le 8 janvier 2013. Cette page résum
 - `window.devicePixelRatio` a été lancé. ({{bug("564815")}})
 - Le backend MacOS X pour `window.navigator.battery` a été implémenté. ({{bug("696045")}})
 - {{domxref("BlobBuilder", "MozBlobBuilder")}} a été retiré. Les développeurs doivent utiliser le constructeur {{domxref("Blob")}} pour créer un objet `Blob`. ({{bug("744907")}})
-- L'évènement {{event("visibilitychange")}} et l'[API Page Visibility](/fr/docs/DOM/Using_the_Page_Visibility_API) ont été dépréfixés. ({{bug("812086")}})
+- L'évènement [`visibilitychange`](/fr/docs/Web/API/Document/visibilitychange_event) et l'[API Page Visibility](/fr/docs/DOM/Using_the_Page_Visibility_API) ont été dépréfixés. ({{bug("812086")}})
 - `TextDecoder` et `TextEncoder` ont été ajoutés. ({{bug("764234")}})
 - `HTMLMediaElement.src` a été séparée en deux propriétés : la propriété `src` standard, qui traite {{domxref("DOMString")}}, et la propriété préfixée `mozSrcObject`, qui traite [les flux multimédia](/fr/docs/WebRTC/MediaStream_API). ({{bug("792665")}})
 - Support des [objets transférables](/fr/docs/DOM/Using_web_workers#Passing_data_by_transferring_.C2.A0ownership_%28transferable_objects%29).
@@ -50,24 +51,24 @@ Firefox 18, basé sur Gecko 18.0, est sorti le 8 janvier 2013. Cette page résum
 
 ### Changements dans les interfaces
 
-- {{interface("nsIStreamListener")}}
+- `nsIStreamListener`
   - : Le 4ème paramètre (aOffset) de la méthode `onDataAvailable()` modifie unsigned long long. ({{bug("784912")}})
-- {{interface("nsIUploadChannel")}}
+- `nsIUploadChannel`
   - : `setUploadStream()` supporte plus de 2 Go de content-length. ({{bug("790617")}})
-- {{interface("nsIEditor")}}
-  - : `addEditorObserver()` a été supprimé, utilisez `setEditorObserver()` à la place, `removeEditorObserver()` ne prend plus le paramètre {{interface("nsIEditorObserver")}}. ({{bug("785091")}})
-- {{interface("nsIHttpProtocolHandler")}}
-  - : Il n'y a plus de garantie que les observateurs `http-on-modify-request` soit appelés de manière synchrone au cours de `nsIChannel.asyncOpen().` Pour les observateurs qui ont besoin d'être appelés pendant `asyncOpen`(), le nouvel observateur `http-on-opening-request` a été ajouté. {{bug("800799")}}
-- {{interface("nsIProtocolProxyService")}}
+- `nsIEditor`
+  - : `addEditorObserver()` a été supprimé, utilisez `setEditorObserver()` à la place, `removeEditorObserver()` ne prend plus le paramètre `nsIEditorObserver`. ({{bug("785091")}})
+- `nsIHttpProtocolHandler`
+  - : Il n'y a plus de garantie que les observateurs `http-on-modify-request` soit appelés de manière synchrone au cours de `nsIChannel.asyncOpen().` Pour les observateurs qui ont besoin d'être appelés pendant `asyncOpen()`, le nouvel observateur `http-on-opening-request` a été ajouté. {{bug("800799")}}
+- `nsIProtocolProxyService`
   - : La méthode `resolve` a été retirée. Maintenant, seule la méthode `asyncResolve` peut être utilisée. Voir ({{bug("769764")}}).
 
 #### Interfaces supprimées
 
 Les interfaces suivantes ont été supprimées.
 
-- {{interface("nsIEditorObserver")}}
+- `nsIEditorObserver`
 
-## Voir également
+## Voir aussi
 
 - [Notes de version de Firefox 18](http://www.mozilla.org/en-US/firefox/18.0/releasenotes/)
 - [Aurora 18 : HiDPI & Touch Events](https://hacks.mozilla.org/2012/10/aurora-18-hidpi-touch-events/) (Mozilla Hacks)

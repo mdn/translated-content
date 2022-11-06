@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/204
 translation_of: Web/HTTP/Status/204
 browser-compat: http.status.204
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse HTTP **`204 No Content`** indique que la requête a réussi mais que le client n'a pas besoin de quitter la page actuelle.
@@ -25,7 +26,6 @@ Par défaut, une réponse 204 peut être mise en cache. Un en-tête [`ETag`](/fr
 ## Compatibilité des navigateurs
 
 {{Compat}}
-
 
 ### Notes de compatibilités
 

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/trimEnd
 ---
+
 {{JSRef}}
 
 La méthode **`trimEnd()`** permet de retirer les blancs situés à la fin d'une chaîne de caractères. `trimRight()` est un synonyme pour cette méthode.
@@ -18,8 +19,10 @@ La méthode **`trimEnd()`** permet de retirer les blancs situés à la fin d'une
 
 ## Syntaxe
 
-    str.trimEnd();
-    str.trimRight();
+```js
+str.trimEnd();
+str.trimRight();
+```
 
 ### Valeur de retour
 

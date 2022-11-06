@@ -1,45 +1,61 @@
 ---
-title: window.alert
+title: Window.alert()
 slug: Web/API/Window/alert
-tags:
-  - DOM
-  - DOM_0
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/Window/alert
+browser-compat: api.Window.alert
 ---
-{{ ApiRef() }}
 
-### Résumé
+{{APIRef}}
 
-Affiche un dialogue d'alerte contenant le texte spécifié.
+`window.alert()` indique au navigateur d'afficher une boîte de dialogue avec un message optionnel, et d'attendre que la personne ferme cette boîte de dialogue.
 
-### Syntaxe
+Sous certaines conditions, par exemple au changement d'onglet, le navigateur pourra ne pas afficher la boîte de dialogue ou ne pas attendre que la personne la ferme.
 
-    window.alert(message);
+## Syntaxe
 
-- `message` est une chaîne contenant le texte à afficher dans le dialogue d'alerte.
+```js
+alert()
+alert(message)
+```
 
-### Exemple
+### Paramètres
 
-    window.alert("Bonjour&nbsp;!");
+- `message` {{optional_inline}}
+  - : Une chaîne de caractères qu'on souhaite afficher dans la boîte de dialogue. Si la valeur fournie est un objet, elle sera convertie en chaîne de caractères puis affichée.
 
-produira&nbsp;:
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+
+## Exemples
+
+```js
+window.alert("Hello world!");
+alert("Hello world!");
+```
+
+produiront tous les deux ce qui suit&nbsp;:
 
 ![](alerthelloworld.png)
 
-### Notes
+## Notes
 
-Le dialogue d'alerte doit être utilisé pour les messages qui ne demandent aucune réponse de la part de l'utilisateur, à part son acceptation du message.
+Les boîtes de dialogue créées avec `alert()` ne doivent pas nécessiter de réponse de la part de l'utilisatrice ou de l'utilisateur, en dehors de l'acquittement du message.
 
-Le texte suivant est commun à cet article, `DOM:window.prompt` et `DOM:window.confirm` Les boîtes de dialogue sont des fenêtres modales&nbsp;: elles empêchent l'utilisateur d'accéder au reste de l'interface du programme tant qu'elles ne sont pas fermées. C'est pourquoi il ne faut pas abuser des fonctions créant une boîte de dialogue (ou fenêtre modale).
+Ces boîtes de dialogue sont des fenêtres modales qui empêchent d'accéder au reste de l'interface utilisateur du programme, à moins que la boîte de dialogue soit fermée. Aussi, il ne faut pas abuser de cette fonction.
 
-Les applications utilisant le chrome (par exemple les extensions) devront plutôt utiliser les méthodes de [nsIPromptService](fr/NsIPromptService).
+Une autre méthode consiste à utiliser l'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) afin d'afficher des alertes.
 
-### Spécification
+## Spécifications
 
-{{ DOM0() }}
+{{Specifications}}
 
-### Voir aussi
+## Compatibilité des navigateurs
 
-- [confirm](/fr/DOM/window.confirm)
-- [prompt](/fr/DOM/window.prompt)
+{{Compat}}
+
+## Voir aussi
+
+- L'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)
+- [`confirm`](/fr/docs/Web/API/Window/confirm)
+- [`prompt`](/fr/docs/Web/API/Window/prompt)

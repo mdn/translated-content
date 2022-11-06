@@ -14,7 +14,7 @@ translation_of: Web/API/CustomEvent/detail
 
 ## 값
 
-이벤트를 초기화할 때 제공한 아무 데이터.
+이벤트를 초기화할 때 제공한 데이터입니다.
 
 ## 예제
 

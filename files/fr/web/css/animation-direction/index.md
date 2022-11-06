@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-direction
 ---
+
 {{CSSRef}}
 
 La propriété **`animation-direction`** indique si les cycles de l'animation doivent être joués dans le sens inverse et/ou de façon alternée.
@@ -47,9 +48,13 @@ animation-direction: unset;
 
 > **Note :** Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/Animations_CSS/Utiliser_les_animations_CSS).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -103,17 +108,13 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Animations', '#animation-direction', 'animation-direction')}} | {{Spec2('CSS3 Animations')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.animation-direction")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Utiliser_les_animations_CSS "Tutorial about CSS animations")
+- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Utiliser_les_animations_CSS)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

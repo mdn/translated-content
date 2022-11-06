@@ -9,6 +9,7 @@ tags:
   - Quadrilatère
 translation_of: Web/API/DOMPoint
 ---
+
 {{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}
 
 Un **`DOMPoint`** représente un point 2D ou 3D dans le système de coordonnées.
@@ -71,13 +72,11 @@ function setView() {
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                                       | Commentaire                                     |
-| -------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------- |
-| {{SpecName('Geometry Interfaces', '#DOMPoint', 'DOMPoint')}} | {{Spec2('Geometry Interfaces')}} | Dernière version de la spécification est un ED. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMPoint")}}
+{{Compat}}
 
 ## Voir aussi
 

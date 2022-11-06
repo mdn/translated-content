@@ -56,7 +56,7 @@ translation_of: Web/API/DOMRect
 ## 정적 메서드
 
 - {{domxref("DOMRectReadOnly.fromRect()")}}
-  - : 주어진 위치와 면적을 갖는 새로운 `DOMRect` 객체를 생성합니다.
+  - : 주어진 위치와 면적을 갖는 새로운 `DOMRect` 객체를 생성합니다.
 
 ## 명세
 

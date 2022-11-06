@@ -25,7 +25,6 @@ translation_of: Web/API/Event/eventPhase
 - `Event.BUBBLING_PHASE (3)`
   - : 이벤트가 대상의 조상을 따라 역순으로 전파 중입니다. 이 단계는 대상의 부모에서 시작해서 마침내 {{domxref("Window")}}에 도달할 때까지 지속됩니다. 이 동작을 버블링이라고 부르며, {{domxref("Event.bubbles")}}가 `true`여야 발생합니다. [이벤트 수신기](/ko/docs/Web/API/EventListener) 중 캡처 모드가 아닌 수신기는 이 단계에서 발동합니다.
 
-
 ## 예제
 
 ### HTML

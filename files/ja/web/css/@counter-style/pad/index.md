@@ -1,16 +1,8 @@
 ---
 title: pad
 slug: Web/CSS/@counter-style/pad
-tags:
-  - '@counter-style'
-  - アットルール記述子
-  - CSS
-  - CSS カウンタースタイル
-  - CSS 記述子
-  - リファレンス
-browser-compat: css.at-rules.counter-style.pad
-translation_of: Web/CSS/@counter-style/pad
 ---
+
 {{CSSRef}}
 
 **`pad`** 記述子を使用すると、マーカー表現に最小限の長さが必要な場合に、カスタムカウンターのスタイル定義を行うことができます。
@@ -36,21 +28,28 @@ pad: 3 "0";
 
 ## 形式文法
 
-{{csssyntax}}
+```
+<integer> && <symbol>
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## 例
 
-<h3 id="Padding_a_counter">カウンターをゼロ埋めにする</h3>
+### カウンターをゼロ埋めにする
 
 #### HTML
 
 ```html
 <ul class="list">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
 </ul>
 ```
 
@@ -58,19 +57,19 @@ pad: 3 "0";
 
 ```css
 @counter-style pad-example {
-  system: numeric;
-  symbols: "0" "1" "2" "3" "4" "5";
-  pad: 2 "0";
+  system: numeric;
+  symbols: "0" "1" "2" "3" "4" "5";
+  pad: 2 "0";
 }
 
 .list {
-  list-style: pad-example;
+  list-style: pad-example;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Padding_a_counter', '', '', '', 'Web/CSS/@counter-style/pad') }}
+{{ EmbedLiveSample('Padding a counter') }}
 
 ## 仕様書
 
@@ -83,4 +82,4 @@ pad: 3 "0";
 ## 関連情報
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()")}}、無名のカウンタースタイルを生成する関数記法
+- {{cssxref("symbols", "symbols()")}}、無名のカウンタースタイルを生成する関数記法

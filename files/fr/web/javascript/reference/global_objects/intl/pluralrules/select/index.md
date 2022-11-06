@@ -11,13 +11,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules/select
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.PluralRules.prototype.select`** renvoie une chaîne de caractères qui indique la règle de nombre utilisée pour le formatage relatif à la locale.
 
 ## Syntaxe
 
-    pluralRule.select(nombre)
+```js
+pluralRule.select(nombre)
+```
 
 ### Paramètres
 
@@ -49,13 +52,11 @@ new Intl.PluralRules('ar-EG').select(18);
 
 ## Spécifications
 
-| Spécification                                                                                                       | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| [Brouillon pour les règles de nombre avec Intl](https://rawgit.com/caridy/intl-plural-rules-spec/master/index.html) | {{Spec2('ES Int Draft')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.PluralRules.select")}}
+{{Compat}}
 
 ## Voir aussi
 

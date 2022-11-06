@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/History_API
 original_slug: Web/Guide/DOM/Manipuler_historique_du_navigateur
 ---
+
 L'objet DOM {{ domxref("window") }} fournit un accès à l'historique du navigateur via l'objet {{ domxref("window.history", "history") }}. Il expose un ensemble de méthodes et de propriétés qui permettent d'avancer et de reculer dans l'historique de l'utilisateur ainsi que -- à partir d'HTML5 -- manipuler le contenu de l'ensemble de l'historique.
 
 ## Se déplacer dans l'historique
@@ -64,18 +65,18 @@ L'utilisation de `history.pushState()` change le référent créé habituellemen
 
 ### Exemple de la méthode pushState()
 
-Supposons que http\://mozilla.org/foo.html exécute la séquence JavaScript suivante :
+Supposons que `http://mozilla.org/foo.html` exécute la séquence JavaScript suivante :
 
 ```js
 var stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-Cela va provoquer l'apparition dans la barre de navigation de http\://mozilla.org/bar.html, mais ne provoquera pas le chargement effectif de `bar.html` ni même le test d'existence de `bar.html`.
+Cela va provoquer l'apparition dans la barre de navigation de `http://mozilla.org/bar.html`, mais ne provoquera pas le chargement effectif de `bar.html` ni même le test d'existence de `bar.html`.
 
-Supposons à présent que l'utilisateur accède à la page http\://google.com, puis clique sur l'icône "Recul". La barre de navigation va alors afficher http\://mozilla.org/bar.html, et si vous lisez l'`history.state`, vous obtiendrez le `stateObj`.  L'événement `popstate` ne sera pas lancé car la page a été rechargée. La page elle-même ressemblera à `bar.html`.
+Supposons à présent que l'utilisateur accède à la page `http://google.com`, puis clique sur l'icône "Recul". La barre de navigation va alors afficher `http://mozilla.org/bar.html`, et si vous lisez l'`history.state`, vous obtiendrez le `stateObj`.  L'événement `popstate` ne sera pas lancé car la page a été rechargée. La page elle-même ressemblera à `bar.html`.
 
-Si on clique à nouveau sur Recul, l'URL de la barre de navigation va se changer en http\://mozilla.org/foo.html et le document va recevoir un autre événement `popstate`, qui comportera, cette fois, un état null. Dans ce cas aussi, revenir en arrière ne modifie pas le contenu du document par rapport à ce qu'il était à l'étape précédente, cela bien qu'il ait pu être mis à jour manuellement sur réception de l'événement `popstate`.
+Si on clique à nouveau sur Recul, l'URL de la barre de navigation va se changer en `http://mozilla.org/foo.html` et le document va recevoir un autre événement `popstate`, qui comportera, cette fois, un état null. Dans ce cas aussi, revenir en arrière ne modifie pas le contenu du document par rapport à ce qu'il était à l'étape précédente, cela bien qu'il ait pu être mis à jour manuellement sur réception de l'événement `popstate`.
 
 ### La méthode pushState()
 
@@ -117,15 +118,15 @@ var stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-L'explication des deux lignes ci-dessus peut être trouvée dans la section "[Exemple de la méthode pushState()](#)". Supposons ensuite que http\://mozilla.org/bar.html exécute le code JavaScript suivant :
+L'explication des deux lignes ci-dessus peut être trouvée dans la section "[Exemple de la méthode pushState()](#)". Supposons ensuite que `http://mozilla.org/bar.html` exécute le code JavaScript suivant :
 
 ```js
 history.replaceState(stateObj, "page 3", "bar2.html");
 ```
 
-Cela entraînera l'affichage de la barre d'URL http\://mozilla.org/bar2.html, mais le navigateur ne chargera pas `bar2.html` ou même vérifiera que `bar2.html` existe.
+Cela entraînera l'affichage de la barre d'URL `http://mozilla.org/bar2.html`, mais le navigateur ne chargera pas `bar2.html` ou même vérifiera que `bar2.html` existe.
 
-Supposons maintenant que l'utilisateur accède à http\://www\.microsoft.com, puis clique sur le bouton Précédent. À ce stade, la barre d'URL affichera http\://mozilla.org/bar2.html. Si l'utilisateur clique à nouveau sur Retour, la barre d'URL affichera http\://mozilla.org/foo.html et contournera totalement bar.html.
+Supposons maintenant que l'utilisateur accède à `http://www.microsoft.com`, puis clique sur le bouton Précédent. À ce stade, la barre d'URL affichera `http://mozilla.org/bar2.html`. Si l'utilisateur clique à nouveau sur Retour, la barre d'URL affichera `http://mozilla.org/foo.html` et contournera totalement bar.html.
 
 ### L'événement popstate
 
@@ -149,14 +150,11 @@ Pour un exemple comple de site web AJAX, vous pouvez voir : [Exemple de navigati
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                           | Commentaire                                            |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "browsers.html#history", "History")}} | {{Spec2('HTML WHATWG')}} | Pas de changement de {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#history", "History")}}     | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## Voir aussi
 

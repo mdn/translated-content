@@ -1,19 +1,12 @@
 ---
 title: Map.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/Map/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Map.get
 ---
+
 {{JSRef}}
 
-O método **`get()`** retorna um elemento específico do objeto `Map`. Se o valor 
-associado à chave for um objeto, será retornado a referência do objeto e qualquer mudança no mesmo 
+O método **`get()`** retorna um elemento específico do objeto `Map`. Se o valor
+associado à chave for um objeto, será retornado a referência do objeto e qualquer mudança no mesmo
 irá afetar o valor que está dentro do objeto `Map`.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-get.html")}}
@@ -31,7 +24,7 @@ get(key)
 
 ### Valor retornado
 
-O elemento associado à chave especificada, ou {{jsxref("undefined")}} se 
+O elemento associado à chave especificada, ou {{jsxref("undefined")}} se
 a chave não puder ser encontrada no objeto `Map`.
 
 ## Exemplos

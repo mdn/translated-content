@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt/asUintN
 ---
+
 {{JSRef}}
 
 La méthode statique **`BigInt.asUintN()`** permet d'écréter un `BigInt` pour ramener sa valeur sur un entier non-signé entre 0 et 2^(largeur)-1.
@@ -18,7 +19,9 @@ La méthode statique **`BigInt.asUintN()`** permet d'écréter un `BigInt` pour 
 
 ## Syntaxe
 
-    var résultat = BigInt.asUintN(largeur, bigint);
+```js
+var résultat = BigInt.asUintN(largeur, bigint);
+```
 
 ### Paramètres
 

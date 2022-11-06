@@ -3,6 +3,7 @@ title: 'Django didactique Section 3: Utilisation des modèles de données'
 slug: Learn/Server-side/Django/Models
 translation_of: Learn/Server-side/Django/Models
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
 Ce troisième article est consacré aux modèles de données pour les sites web générés avec Django. Après une définition et une présentation de la notion de modèle de données, il explique comment les déclarer, choisir le type de champs et quelques méthodes d'accès au modèle de données via Django.
@@ -67,27 +68,29 @@ Cette section fournit une rapide introduction à la définition des objets de co
 
 Les objets sont **toujours** définis dans le fichier **models.py** de chaque application. Ils sont conçus comme sous-classe de `django.db.models.Model`, et sont caractérisés par des attributs ou champs, des méthodes et des métadonnées. L'extrait ci-dessous définit donc la classe `MyModelName`:
 
-    from django.db import models
+```python
+from django.db import models
 
-    class MyModelName(models.Model):
-        """A typical class defining a model, derived from the Model class."""
+class MyModelName(models.Model):
+    """A typical class defining a model, derived from the Model class."""
 
-        # Fields
-        my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
-        ...
+    # Fields
+    my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
+    ...
 
-        # Metadata
-        class Meta:
-            ordering = ['-my_field_name']
+    # Metadata
+    class Meta:
+        ordering = ['-my_field_name']
 
-        # Methods
-        def get_absolute_url(self):
-            """Returns the url to access a particular instance of MyModelName."""
-            return reverse('model-detail-view', args=[str(self.id)])
+    # Methods
+    def get_absolute_url(self):
+        """Returns the url to access a particular instance of MyModelName."""
+        return reverse('model-detail-view', args=[str(self.id)])
 
-        def __str__(self):
-            """String for representing the MyModelName object (in Admin site etc.)."""
-            return self.my_field_name
+    def __str__(self):
+        """String for representing the MyModelName object (in Admin site etc.)."""
+        return self.my_field_name
+```
 
 Détaillons ce qu'il en retourne :
 
@@ -128,7 +131,7 @@ Vous trouverez ci-dessous les arguments les principaux type de champs :
 
 - [CharField](https://docs.djangoproject.com/fr/2.2/ref/models/fields/#django.db.models.CharField) caractérise un champ de type chaîne de caractères de taille maximale fixe. Ce champ nécessite l'option obligatoire `max_length` pour définir la taille maximale de la chaîne de caractère.
 - [TextField](https://docs.djangoproject.com/fr/2.2/ref/models/fields/#django.db.models.TextField) caractérise un champs texte (de longeur non définit dans la base de données). Si l'option `max_length` est utilisé, celui-ci précisera la taille du champs texte des formulaires web mais n'aura pas d'impact dans la définition du champs en base de données.
-- [IntegerField](https://docs.djangoproject.com/fr/2.2/ref/models/fields/#django.db.models.IntegerField "django.db.models.IntegerField") caractérise un champs de type nombre entier.
+- [IntegerField](https://docs.djangoproject.com/fr/2.2/ref/models/fields/#django.db.models.IntegerField) caractérise un champs de type nombre entier.
 - [DateField](https://docs.djangoproject.com/fr/2.2/ref/models/fields/#datefield) et [DateTimeField](https://docs.djangoproject.com/fr/2.2/ref/models/fields/#datetimefield) sont des type utilisées pour caractériser une date et une heure comme les objets `datetime.date` et `datetime.datetime` en Python. Les options (incompatibles ensemble) les plus courantes pour ces champs sont l'enregistrement au moment de la sauvegarde (`auto_now=True`), l'enregistrement à la création de l'objet (`auto_now_add`) et une valeur par défaut (`default)` qui pourra être changée par l'utilisateur.
 - [EmailField](https://docs.djangoproject.com/fr/2.2/ref/models/fields/#emailfield) est le type dédié à la gestion des courriers électroniques.
 - [FileField](https://docs.djangoproject.com/fr/2.2/ref/models/fields/#filefield) et [ImageField](https://docs.djangoproject.com/fr/2.2/ref/models/fields/#imagefield) sont deux type utilisés pour permettre de télécharger des fichiers ou, plus spécifiquement des images. Les options de ces champs définissent où et comment ces fichiers seront enregistrés et conservés.
@@ -188,7 +191,7 @@ def get_absolute_url(self):
     return reverse('model-detail-view', args=[str(self.id)])
 ```
 
-> **Note :** En supposant que vous allez utiliser des URLs du type `/myapplication/mymodelname/2` pour afficher individuellement les données des enregistrements de la table associée à votre modèle de données (où "2" est l'`id`entifiant d'un enregistrement donné), vous devrez créer un routage d'URL pour vous permettre de transmettre l'id à une vue détaillée de l'enregistrement (model detail view dans le cadriciel Django). Cette vue détaillée réalisera l'affichage de l'enregistrement. La fonction `reverse()` a pour objectif d'écrire l'URL dans un format cohérent avec le traitement des URL par les navigateurs.
+> **Note :** En supposant que vous allez utiliser des URLs du type `/myapplication/mymodelname/2` pour afficher individuellement les données des enregistrements de la table associée à votre modèle de données (où "2" est l'`id` d'un enregistrement donné), vous devrez créer un routage d'URL pour vous permettre de transmettre l'id à une vue détaillée de l'enregistrement (model detail view dans le cadriciel Django). Cette vue détaillée réalisera l'affichage de l'enregistrement. La fonction `reverse()` a pour objectif d'écrire l'URL dans un format cohérent avec le traitement des URL par les navigateurs.
 >
 > Bien entendu, cela requiert d'écrire le routage de l'URL, la vue et le gabarit...
 
@@ -243,7 +246,7 @@ wild_books = Book.objects.filter(title__contains='wild')
 number_wild_books = wild_books.count()
 ```
 
-Les arguments passés en option sont le champs et la nature du contrôle à effectuer. On utilise le format : `field_name__match_type` : dans l'exemple ci-dessus, le double sous-ligné marque la séparation entre le champ `title` et le type de contrôle `contains` ; concrètement, le filtre est appliqué sur le champ `title` contenant le mot `wild` en respectant la casse. Il existe d'autres options de contrôle : `icontains` (sans respect de la casse), `iexact` (le champs correspond exactement à la valeur donnée sans respect de la casse), `exact` (idem en respectant la casse) et `in`, `gt` (plus grand que), `startswith`(commence par), etc. La liste complète est [consultable sur la documentation de Django](https://docs.djangoproject.com/fr/2.2/ref/models/querysets/#field-lookups).
+Les arguments passés en option sont le champs et la nature du contrôle à effectuer. On utilise le format : `field_name__match_type` : dans l'exemple ci-dessus, le double sous-ligné marque la séparation entre le champ `title` et le type de contrôle `contains` ; concrètement, le filtre est appliqué sur le champ `title` contenant le mot `wild` en respectant la casse. Il existe d'autres options de contrôle : `icontains` (sans respect de la casse), `iexact` (le champs correspond exactement à la valeur donnée sans respect de la casse), `exact` (idem en respectant la casse) et `in`, `gt` (plus grand que), `startswith` (commence par), etc. La liste complète est [consultable sur la documentation de Django](https://docs.djangoproject.com/fr/2.2/ref/models/querysets/#field-lookups).
 
 Le marqueur "double souligné" permet de construire une chaîne de navigation à travers les objets lorsque le champ considéré est une clé étrangère (`ForeignKey`). C'est systématiquement le cas lorsque l'on doit filtrer sur une propriété d'un attribut dans une relation un-à-un. Dans ce cas (exemple ci-dessous), vous identifiez l'attribut de la clé étrangère par le biais d'un "double souligné" qui indique le champs à filter. L'exemple ci-dessous indique que vous filtrez les livres selon le nom (`name`) du genre (`genre`) du livre.
 
@@ -409,8 +412,10 @@ Désormais les notions manipulées pour définir cet objet vous sont connues. L'
 
 Les objets sont tous décrits dans le fichier dédié à la modélisation. Pour qu'elles soient effectives, il est nécessaire d'exécuter les deux commandes python qui gèrent les migrations de la base de données.
 
-    python3 manage.py makemigrations
-    python3 manage.py migrate
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
 
 ## Défi — Introduire les langues
 
@@ -425,8 +430,10 @@ Après avoir fait vos choix, modéliser le et ajouter les champs utiles. Vous po
 
 Une dernière chose... n'oubliez pas d'appliquer les modifications en base de données
 
-    python3 manage.py makemigrations
-    python3 manage.py migrate
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
 
 ## Résumé
 
@@ -434,7 +441,7 @@ Cet article est consacré à la création des objets et leur lien en base de don
 
 A ce stade, il est prématuré de créer le site web, nous allons simplement utiliser le site d'administration qui permet d'ajouter et de manipuler des données. Nous afficherons ces informations ensuite en créant des vues et de gabarits.
 
-## A voir aussi
+## Voir aussi
 
 - [Ecriture de votre première application Django, Deuxième partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial02/) (Documentation Django)
 - [Création de requêtes](https://docs.djangoproject.com/fr/2.2/topics/db/queries/) (Documentation Django)

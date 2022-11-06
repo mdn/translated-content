@@ -9,6 +9,7 @@ tags:
   - Propriétés
 translation_of: Web/API/NodeList/length
 ---
+
 {{APIRef("DOM")}}
 
 ## Résumé

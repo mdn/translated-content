@@ -9,13 +9,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Too_much_recursion
 original_slug: Web/JavaScript/Reference/Erreurs/Too_much_recursion
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    Error: Out of stack space (Edge)
-    InternalError: too much recursion (Firefox)
-    RangeError: Maximum call stack size exceeded (Chrome)
+```
+Error: Out of stack space (Edge)
+InternalError: too much recursion (Firefox)
+RangeError: Maximum call stack size exceeded (Chrome)
+```
 
 ## Type d'erreur
 

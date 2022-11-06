@@ -4,6 +4,7 @@ slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 translation_of: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 original_slug: Apprendre/CSS/Building_blocks/Sizing_items_in_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}Dans les différentes leçons vues jusqu'à présent vous avez rencontré de nombreuses manières de dimensionner les éléments sur une page en utilisant CSS. Comprendre le dimensionnement des différentes caractéristiques de votre design est important. Cette leçon résumera les diverses méthodes pour appliquer une taille via CSS et définira également quelques termes au sujet du dimensionnement qui vous aideront dans le futur.
 
 <table class="standard-table">
@@ -63,7 +64,7 @@ De bien des manières, les pourcentages agissent de la même manière que les un
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/percent-width.html", '100%', 600)}}
 
-En effet, les pourcentages sont déterminés en fonction de la taille de l'élément parent. Si aucun pourcentage n'est spécifié, notre `<div>` prendra 100% de l'espace disponible (car il s'agit du comportement par défaut d'un élément de type bloc). En revanche si nous lui donnons une largeur en pourcentage, ce pourcentage fera référence à l'espace que la ` <div``> ` aurait normalement occupé dans l'élément parent.
+En effet, les pourcentages sont déterminés en fonction de la taille de l'élément parent. Si aucun pourcentage n'est spécifié, notre `<div>` prendra 100% de l'espace disponible (car il s'agit du comportement par défaut d'un élément de type bloc). En revanche si nous lui donnons une largeur en pourcentage, ce pourcentage fera référence à l'espace que la `<div>` aurait normalement occupé dans l'élément parent.
 
 ### Marges et remplissage en pourcentages
 
@@ -123,21 +124,21 @@ Cette leçon a voulu vous sensibiliser aux difficultés principales qu'on rencon
 
 ## Dans ce module
 
-1.  [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Sélecteurs de type, de classe et d'ID](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Sélecteurs d'attributs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Arrière-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Gestion de différentes directions de texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Débordements de contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Définir la taille des éléments en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, médias et éléments de formulaire](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Arrière-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Gestion de différentes directions de texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Débordements de contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Définir la taille des éléments en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, médias et éléments de formulaire](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Mise en page de tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Débogage de CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organiser votre CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

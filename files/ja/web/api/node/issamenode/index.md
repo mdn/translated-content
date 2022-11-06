@@ -1,18 +1,14 @@
 ---
 title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.isSameNode
-translation_of: Web/API/Node/isSameNode
 ---
+
 {{APIRef("DOM")}}
 
 **`isSameNode()`** は {{domxref("Node")}} インターフェイスのメソッドで、 [`===` 厳密等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)の古い別名です。
 すなわち、 2 つのノードが全く同じであるかどうか（言い換えれば、同じオブジェクトを指しているかどうか）を検査します。
 
-> **Note:** `isSameNode()` を使用する必要はありません。 `===` 厳密等価演算子を使用してください。
+> **メモ:** `isSameNode()` を使用する必要はありません。 `===` 厳密等価演算子を使用してください。
 
 ## 構文
 
@@ -24,7 +20,7 @@ isSameNode(otherNode);
 
 - `otherNode`
   - : 検査対象となる {{domxref("Node")}} です。
-    > **Note:** この引数は省略可能ではありませんが、 `null` に設定することはできます。
+    > **メモ:** この引数は省略可能ではありませんが、 `null` に設定することはできます。
 
 ### 返値
 

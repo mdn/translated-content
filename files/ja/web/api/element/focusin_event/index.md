@@ -1,17 +1,8 @@
 ---
 title: 'Element: focusin イベント'
 slug: Web/API/Element/focusin_event
-tags:
-  - API
-  - DOM
-  - Element
-  - イベント
-  - FocusEvent
-  - リファレンス
-  - focusin
-browser-compat: api.Element.focusin_event
-translation_of: Web/API/Element/focusin_event
 ---
+
 {{APIRef}}
 
 **`focusin`** イベントは、要素がフォーカスを受け取ろうとしているときに発生します。このイベントと {{domxref("Element/focus_event", "focus")}} との主な違いは、 `focusin` がバブリングを行うのに対し `focus` は行わないことです。
@@ -92,4 +83,3 @@ form.addEventListener('focusout', (event) => {
 
 - 関連イベント: {{domxref("Element/blur_event", "blur")}}, {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/focusout_event", "focusout")}}
 - [Focusing: focus/blur](https://javascript.info/focus-blur)
-

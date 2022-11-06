@@ -3,6 +3,7 @@ title: clear()
 slug: Web/API/Console/clear
 translation_of: Web/API/Console/clear
 ---
+
 {{APIRef("Console API")}}
 
 Vide la console.
@@ -13,17 +14,17 @@ Tous les messages de la console seront supprimés et remplacés par un message d
 
 ## Syntaxe
 
-    console.clear();
+```js
+console.clear();
+```
 
-## Paramètres
+## Spécifications
 
-| Paramètres                                                                   | Status                           | Commentaire        |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#clear", "console.clear()")}} | {{Spec2("Console API")}} | Définition Initial |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.clear")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: Element.setHTML()
 slug: Web/API/Element/setHTML
-tags:
-  - HTML 無害化 API
-  - メソッド
-  - Element.setHTML
-  - setHTML
-  - 実験的
-browser-compat: api.Element.setHTML
-translation_of: Web/API/Element/setHTML
 ---
+
 {{SeeCompatTable}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
 **`setHTML()`** は {{domxref("Element")}} インターフェイスのメソッドで、 HTML の文字列を解釈して無害化し、この要素のサブツリーとして DOM に挿入します。
@@ -19,7 +12,7 @@ translation_of: Web/API/Element/setHTML
 既定の `Sanitizer()` 設定では、{{HTMLElement("script")}} タグ、カスタム要素、コメントを含む XSS 関連の入力が取り除かれます。
 無害化の設定は {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} コンストラクターのオプションを使用してカスタマイズすることができます。
 
-> **Note:** 対象となる要素がまだない場合など、後の時点で DOM に文字列を挿入する必要がある場合は、このメソッドの代わりに {{domxref("Sanitizer.sanitizeFor()")}} を使用してください。
+> **メモ:** 対象となる要素がまだない場合など、後の時点で DOM に文字列を挿入する必要がある場合は、このメソッドの代わりに {{domxref("Sanitizer.sanitizeFor()")}} を使用してください。
 
 ## 構文
 
@@ -56,7 +49,7 @@ document.getElementById("target").setHTML(unsanitized_string, sanitizer);
 // 結果 (文字列): "abc  def"
 ```
 
-> **Note:** この例では既定の無害化を使用しています。
+> **メモ:** この例では既定の無害化を使用しています。
 > {{domxref("Sanitizer/Sanitizer","Sanitizer")}} コンストラクターで無害化のオプションを構成することができます。
 
 ## 仕様書

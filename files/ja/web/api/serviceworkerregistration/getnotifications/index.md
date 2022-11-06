@@ -1,19 +1,8 @@
 ---
 title: ServiceWorkerRegistration.getNotifications()
 slug: Web/API/ServiceWorkerRegistration/getNotifications
-tags:
-  - API
-  - 実験的
-  - メソッド
-  - 通知
-  - リファレンス
-  - サービスワーカー
-  - サービスワーカー API
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - getNotifications
-translation_of: Web/API/ServiceWorkerRegistration/getNotifications
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`getNotifications()`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのメソッドで、現在のサービスワーカー登録を介して現在のオリジンから作成された順序で通知のリストを返します。オリジンには、アクティブではあるがスコープが異なるサービスワーカー登録が多数あります。 同じオリジンの 1 つのサービスワーカーによって作成された通知は、同じオリジンの他のアクティブなサービスワーカーでは利用できません。

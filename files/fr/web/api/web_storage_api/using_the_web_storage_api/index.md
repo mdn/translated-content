@@ -9,6 +9,7 @@ tags:
   - localStorage
 translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
+
 L'API "Web Storage" fournit des mécanismes par lesquels les navigateurs web peuvent stocker des paires de clé-valeur, d'une manière plus intuitive qu'en utilisant des cookies. Cet article décrit pas à pas comment se servir de cette technologie facile d'utilisation.
 
 ## Concepts de base
@@ -72,10 +73,10 @@ Et voici comment l'utiliser :
 
 ```js
 if (storageAvailable('localStorage')) {
-	// Nous pouvons utiliser localStorage
+  // Nous pouvons utiliser localStorage
 }
 else {
-	// Malheureusement, localStorage n'est pas disponible
+  // Malheureusement, localStorage n'est pas disponible
 }
 ```
 
@@ -161,7 +162,7 @@ imageForm.onchange = populateStorage;
 
 ## Répondre aux changements du stockage avec StorageEvent
 
-L'événement {{event("StorageEvent")}} est lancé dès lors qu'un changement est fait sur l'objet {{domxref("Storage")}}. Cela ne va pas marcher sur la même page qui a provoqué le changement: c'est vraiment un moyen pour que les autres pages du domaine qui utilisent le stockage local puissent se synchroniser avec tous les changements qui ont été fait.
+L'événement [`StorageEvent`](/fr/docs/Web/API/StorageEvent) est lancé dès lors qu'un changement est fait sur l'objet {{domxref("Storage")}}. Cela ne va pas marcher sur la même page qui a provoqué le changement: c'est vraiment un moyen pour que les autres pages du domaine qui utilisent le stockage local puissent se synchroniser avec tous les changements qui ont été fait.
 
 Les pages des autres domaines ne peuvent pas accéder aux mêmes objets de stockage.
 
@@ -188,23 +189,11 @@ l'API de Stockage Web fournit aussi un couple de méthodes simples pour supprime
 
 ## Spécifications
 
-| Spécification                        | Statut                           | Commentaire |
-| ------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('Web Storage')}} | {{Spec2('Web Storage')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### `Window.localStorage`
-
-{{Compat("api.Window.localStorage")}}
-
-### `Window.sessionStorage`
-
-{{Compat("api.Window.sessionStorage")}}
-
-Tous les navigateurs ont des niveaux de capacité différents pour localStorage et sessionStorage. Voici un [détail des capacités de stockage pour différents navigateurs](http://dev-test.nemikor.com/web-storage/support-test/).
-
-> **Note :** Depuis iOS 5.1, Safari Mobile stocke les données de localStorage dans le repertoire de cache, qui est parfois sujet à des nettoyages, à la demande de l'OS, typiquement quand l'espace restant est faible.
+{{Compat}}
 
 ## Voir aussi
 

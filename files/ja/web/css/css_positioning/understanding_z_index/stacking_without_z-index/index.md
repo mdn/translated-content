@@ -1,22 +1,15 @@
 ---
 title: z-index なしの重ね合わせ
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - リファレンス
-  - Understanding_CSS_z-index
-  - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 ---
+
 {{CSSRef}}
 
 どの要素にも {{cssxref("z-index")}} プロパティが指定されていない場合、要素は以下の順序で (下から上に) 重ね合わせられます。
 
-1.  ルート要素の背景と境界
-2.  位置指定なしの子孫ブロック、 HTML 内での出現順
-3.  位置指定ありの子孫要素、 HTML 内での出現順
+1. ルート要素の背景と境界
+2. 位置指定なしの子孫ブロック、 HTML 内での出現順
+3. 位置指定ありの子孫要素、 HTML 内での出現順
 
 位置指定要素、位置指定なしの要素についての説明は、[位置指定の種類](/ja/docs/Web/CSS/position#types_of_positioning)を参照してください。
 

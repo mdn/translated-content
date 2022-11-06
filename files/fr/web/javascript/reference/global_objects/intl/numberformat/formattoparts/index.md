@@ -12,13 +12,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat/formatToParts
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Numberformat.prototype.formatToParts()`** permet de produire des fragments de chaînes à partir d'un nombre pour le mettre en forme avec des formateurs `NumberTimeFormat`.
 
 ## Syntaxe
 
-    Intl.NumberFormat.prototype.formatToParts(nombre)
+```js
+Intl.NumberFormat.prototype.formatToParts(nombre)
+```
 
 ### Paramètres
 
@@ -123,13 +126,11 @@ Une prothèse pour cette fonctionnalité est disponible [dans le dépôt associ�
 
 ## Spécifications
 
-| Spécification                                                                                                                                                        | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('ES Int Draft', '#sec-Intl.NumberFormat.prototype.formatToParts', 'Intl.NumberFormat.prototype.formatToParts')}} | {{Spec2('ES Int Draft')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.NumberFormat.formatToParts")}}
+{{Compat}}
 
 ## Voir aussi
 

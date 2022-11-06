@@ -1,18 +1,8 @@
 ---
 title: HTMLTableElement.summary
 slug: Web/API/HTMLTableElement/summary
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - プロパティ
-  - リファレンス
-  - 非推奨
-browser-compat: api.HTMLTableElement.summary
-translation_of: Web/API/HTMLTableElement/summary
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 **`HTMLTableElement.summary`** プロパティは表の説明を表します。

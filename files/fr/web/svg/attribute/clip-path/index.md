@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/clip-path
 ---
+
 {{SVGRef}}
 
 L'attribut **`clip-path`** permet d'appliquer un détourage à un élément.
@@ -75,13 +76,10 @@ html,body,svg { height:100% }
 
 > **Note :** Pour plus d'informations sur la syntaxe de clip-path, voir la propriété CSS {{cssxref('clip-path')}}.
 
-## Compatibilité des navigateurs
-
-{{Compat("svg.attributes.presentation.clip-path")}}
-
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaire                                                                                                                 |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS Masks", "#the-clip-path", 'clip-path')}}                 | {{Spec2('CSS Masks')}} | Étend son application aux éléments HTML. La propriété `clip-path` remplace la propriété {{cssxref("clip")}} dépréciée. |
-| {{SpecName('SVG1.1', 'masking.html#ClipPathProperty', 'clip-path')}} | {{Spec2('SVG1.1')}}     | Définition initiale (s'applique sur les éléments SVG uniquement).                                                           |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

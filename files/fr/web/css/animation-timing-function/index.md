@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-timing-function
 ---
+
 {{CSSRef}}
 
 La propriété **`animation-timing-function`** définit la façon dont une animation CSS doit se dérouler au fur et à mesure de chaque cycle. Cette propriété prendra comme valeurs une ou plusieurs fonctions {{cssxref("easing-function")}}.
@@ -96,9 +97,13 @@ Une fonction de progression pour une animation qui est définie pour une étape 
 
 > **Note :** Lorsqu'on définit plusieurs valeurs, séparées par des virgules, sur une propriété `animation-*`, elles seront affectées selon leur ordre aux différentes animations listées par  {{cssxref("animation-name")}}. Si le nombre de valeurs n'est pas le même que le nombre d'animation, voir [Paramétrer plusieurs valeurs de propriétés pour les animations](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations#utiliser_plusieurs_valeurs_pour_diff%c3%a9rentes_animations).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -234,18 +239,14 @@ Une fonction de progression pour une animation qui est définie pour une étape 
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                 | Commentaires          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------------- |
-| {{SpecName('CSS3 Animations', '#animation-timing-function', 'animation-timing-function')}} | {{Spec2('CSS3 Animations')}} | Définition initiale.. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.animation-timing-function")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS developer guide about CSS animations")
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{cssxref('easing-function')}}
 - L'API JavaScript {{domxref("AnimationEvent")}}

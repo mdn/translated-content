@@ -6,13 +6,16 @@ tags:
 translation_of: Web/XPath/Functions/last
 original_slug: Web/XPath/Fonctions/last
 ---
+
 {{ XsltRef() }}
 
 La fonction `last` retourne un nombre égal à la taille du contexte dans le contexte d'évaluation d'expression.
 
 ### Syntaxe
 
-    last()
+```
+last()
+```
 
 ### Retour
 

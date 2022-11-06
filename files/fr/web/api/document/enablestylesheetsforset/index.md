@@ -10,13 +10,16 @@ tags:
   - Méthode
 translation_of: Web/API/Document/enableStyleSheetsForSet
 ---
+
 {{ APIRef("DOM") }}
 
 Active les feuilles de styles correspondant au nom spécifié dans l'ensemble de feuilles de styles en cours et désactive toutes les autres (à l'exception de celles sans titre qui sont toujours activées).
 
 ## Syntaxe
 
-    document.enableStyleSheetsForSet(name)
+```js
+document.enableStyleSheetsForSet(name)
+```
 
 ### Paramètres
 
@@ -32,7 +35,9 @@ Active les feuilles de styles correspondant au nom spécifié dans l'ensemble de
 
 ## Exemple
 
-    document.enableStyleSheetsForSet("Some style sheet set name");
+```js
+document.enableStyleSheetsForSet("Some style sheet set name");
+```
 
 ## Spécifications
 

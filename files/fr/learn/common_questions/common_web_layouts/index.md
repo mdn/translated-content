@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/Common_questions/Common_web_layouts
 original_slug: Apprendre/Concevoir_page_web
 ---
+
 Lorsque vous concevez des pages pour votre site Internet, il est utile d'avoir en tête les modèles de mise en page les plus fréquemment utilisés.
 
 <table class="standard-table">
@@ -45,9 +46,9 @@ Même aujourd'hui, malgré toute l'attention portée aux appareils mobiles, la m
 
   - : Il peut s'agir&nbsp;:
 
-    1.  d'informations complémentaires au contenu principal&nbsp;;
-    2.  d'informations partagées entre un sous-ensemble de pages&nbsp;;
-    3.  d'un moyen alternatif de navigation. En fait, ce peut être un peu tout ce qui est superflu par rapport au contenu principal.
+    1. d'informations complémentaires au contenu principal&nbsp;;
+    2. d'informations partagées entre un sous-ensemble de pages&nbsp;;
+    3. d'un moyen alternatif de navigation. En fait, ce peut être un peu tout ce qui est superflu par rapport au contenu principal.
 
 - Bas de page
   - : Visible au bas de chaque page du site, cette section contient, tout comme l'en-tête, des informations pertinentes pour l'ensemble des pages. On peut, entre autres, y trouver les mentions légales et les informations nécessaires pour contacter les responsables du site.

@@ -1,8 +1,9 @@
 ---
-title: Loading and running WebAssembly code
+title: Charger et exécuter du code WebAssembly
 slug: WebAssembly/Loading_and_running
 translation_of: WebAssembly/Loading_and_running
 ---
+
 {{WebAssemblySidebar}}Pour utiliser webassembly au sein de javascript, votre module doit être placé en mémoire. La mise en mémoire du module précède les étapes de compiliation et d'instantiation. Cet article fournit une référence pour les différents méchanismes qui permettent de récupérer le bytecode webassembly, ainsi que des informations sur la manière de le compiler, l'instancier, et l'exécuter.
 
 ## Quelles sont les différentes options?
@@ -80,10 +81,10 @@ WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 
 [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) est plus ancien que Fetch, mais peut toujours être utiliser afin récupérer un array buffer. En supposant que notre module se nome `simple.wasm`:
 
-1.  Créer une nouvel instance {{domxref("XMLHttpRequest()")}}, afin d'utiliser la méthode {{domxref("XMLHttpRequest.open","open()")}} nécessaire pour ouvrir une requête. Paramètrer la requête avec une méthode `GET`, et y déclarer le chemin du fichier que nous souhaiter récupérer.
-2.  L'étape essentielle est içi de définir la réponse comme une réponse de type `'arraybuffer'` en utilisant la propriété {{domxref("XMLHttpRequest.responseType","responseType")}}.
-3.  Ensuite, la requête est envoyée à l'aide de la méthode {{domxref("XMLHttpRequest.send()")}}.
-4.  Enfin l'event handler {{domxref("XMLHttpRequest.onload", "onload")}} se charge d'invoquer une fonction lorsque la réponse a terminé de se télécharger — au sein de cette fonction, la propriété {{domxref("XMLHttpRequest.response", "response")}} nous donne accès à un array buffer. Celui ci est fournit à notre méthode {{jsxref("WebAssembly.instantiate()")}} d'un manière similaire à ce qui est fait avec la méthode Fetch().
+1. Créer une nouvel instance {{domxref("XMLHttpRequest()")}}, afin d'utiliser la méthode {{domxref("XMLHttpRequest.open","open()")}} nécessaire pour ouvrir une requête. Paramètrer la requête avec une méthode `GET`, et y déclarer le chemin du fichier que nous souhaiter récupérer.
+2. L'étape essentielle est içi de définir la réponse comme une réponse de type `'arraybuffer'` en utilisant la propriété {{domxref("XMLHttpRequest.responseType","responseType")}}.
+3. Ensuite, la requête est envoyée à l'aide de la méthode {{domxref("XMLHttpRequest.send()")}}.
+4. Enfin l'event handler {{domxref("XMLHttpRequest.onload", "onload")}} se charge d'invoquer une fonction lorsque la réponse a terminé de se télécharger — au sein de cette fonction, la propriété {{domxref("XMLHttpRequest.response", "response")}} nous donne accès à un array buffer. Celui ci est fournit à notre méthode {{jsxref("WebAssembly.instantiate()")}} d'un manière similaire à ce qui est fait avec la méthode Fetch().
 
 Le code final est le suivant:
 

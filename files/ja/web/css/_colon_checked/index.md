@@ -1,21 +1,8 @@
 ---
 title: ':checked'
 slug: Web/CSS/:checked
-tags:
-  - ':checked'
-  - CSS
-  - Checked
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - Toggled
-  - ウェブ
-  - button
-  - checkbox
-  - radio
-translation_of: Web/CSS/:checked
 ---
+
 {{CSSRef}}
 
 **`:checked`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、**ラジオボタン** ([`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio))、 **チェックボックス** ([`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox))、 **オプションボタン** ({{HTMLElement("select")}} の中の {{HTMLElement("option")}}) 要素がチェックされていたり `on` の状態にあったりすることを表します。
@@ -30,11 +17,13 @@ translation_of: Web/CSS/:checked
 
 ユーザーは要素をチェック/選択することでこの状態にすることができ、要素のチェックや選択を外すとこの状態から外れます。
 
-> **Note:** ブラウザーは `<option>` を[置換要素](/ja/docs/Web/CSS/Replaced_element)として扱うことが多いので、 `:checked` 擬似クラスでスタイルが適用される部分の大きさはブラウザーによって異なります。
+> **メモ:** ブラウザーは `<option>` を[置換要素](/ja/docs/Web/CSS/Replaced_element)として扱うことが多いので、 `:checked` 擬似クラスでスタイルが適用される部分の大きさはブラウザーによって異なります。
 
 ## 構文
 
-{{csssyntax}}
+```
+:checked
+```
 
 ## 例
 
@@ -163,9 +152,9 @@ option:checked {
 
 ### 画像ギャラリー
 
-`:checked` 擬似クラスを使って、ユーザーがサムネイルをクリックしたときだけフルサイズの画像が表示される画像ギャラリーを構築できます。実行してみるには[このデモ](/@api/deki/files/6268/=css-checked-gallery.zip "css-checked-gallery.zip")を参照してください。
+`:checked` 擬似クラスを使って、ユーザーがサムネイルをクリックしたときだけフルサイズの画像が表示される画像ギャラリーを構築できます。実行してみるには[このデモ](/@api/deki/files/6268/=css-checked-gallery.zip)を参照してください。
 
-> **Note:** 似たような効果で、 [`:hover`](/ja/docs/Web/CSS/:hover) 擬似クラスを使用して隠しラジオボタンを使わないものについては、 [`:hover`](/ja/docs/Web/CSS/:hover) のリファレンスページからの[このデモ](/@api/deki/files/6247/=css-gallery.zip "css-gallery.zip")を参照してください。
+> **メモ:** 似たような効果で、 [`:hover`](/ja/docs/Web/CSS/:hover) 擬似クラスを使用して隠しラジオボタンを使わないものについては、 [`:hover`](/ja/docs/Web/CSS/:hover) のリファレンスページからの[このデモ](/@api/deki/files/6247/=css-gallery.zip)を参照してください。
 
 ## 仕様書
 

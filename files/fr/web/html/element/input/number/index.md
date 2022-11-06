@@ -4,7 +4,8 @@ slug: Web/HTML/Element/input/number
 translation_of: Web/HTML/Element/input/number
 browser-compat: html.elements.input.input-number
 ---
-{{HTMLRef("Input_types")}}
+
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`number`** permettent à une utilisatrice ou un utilisateur de saisir des nombres dans un formulaire. De tels contrôles incluent des mécanismes de validation natifs afin de rejeter les valeurs non-numériques.
 
@@ -260,7 +261,7 @@ Ici, on a utilisé les pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et
 
 ### Utilisation d'un motif de validation
 
-Les éléments `<input type="number">` ne prennent pas en charge l'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) qui permet de restreindre les valeurs selon une expression rationnelle. 
+Les éléments `<input type="number">` ne prennent pas en charge l'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) qui permet de restreindre les valeurs selon une expression rationnelle.
 
 En effet, les contrôles de saisie numérique sont destinés à contenir des nombres plutôt que des chaînes de caractères et les autres attributs permettent de paramétrer les valeurs recevables (cf. ci-avant).
 

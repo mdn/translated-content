@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::placeholder
 ---
+
 {{CSSRef}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-%C3%A9l%C3%A9ments) **`::placeholder`** représente [le texte de substitution](/fr/docs/Web/Guide/HTML/Forms_in_HTML#The_placeholder_attribute) pour un élément {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}. Cela permet aux développeurs web de personnaliser l'apparence de ce texte.
@@ -91,7 +92,7 @@ Avec cette méthode, le contenu indicatif est disponible à tout moment (même l
 
 ### Mode « contraste élevé » de Windows
 
-Lorsque le [mode de contraste élevé de Windows](/en-US/docs/Web/CSS/@media/-ms-high-contrast) est actif, les textes de substitution apparaîtront avec la même mise en forme que les textes saisis par l'utilisateur. Il est alors impossible de distinguer un texte saisi d'un texte indicatif.
+Lorsque le [mode de contraste élevé de Windows](/fr/docs/Web/CSS/@media/-ms-high-contrast) est actif, les textes de substitution apparaîtront avec la même mise en forme que les textes saisis par l'utilisateur. Il est alors impossible de distinguer un texte saisi d'un texte indicatif.
 
 - [Greg Whitworth — Comment utiliser `-ms-high-contrast` (en anglais)](https://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast)
 - {{cssxref("@media/-ms-high-contrast")}}
@@ -105,13 +106,11 @@ Les textes de substitution ne doivent pas remplacer les éléments {{htmlelement
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                         | Commentaires           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#placeholder-pseudo', '::placeholder')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Définitions initiales. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.placeholder")}}
+{{Compat}}
 
 ## Voir aussi
 

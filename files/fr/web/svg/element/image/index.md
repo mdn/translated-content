@@ -3,6 +3,7 @@ title: <image>
 slug: Web/SVG/Element/image
 translation_of: Web/SVG/Element/image
 ---
+
 {{SVGRef}}
 
 L'élément Image SVG (\<image>) permet d'inclure une image matricielle dans un document SVG.
@@ -29,11 +30,11 @@ Rendu basique d'une image PNG dans un objet SVG :
 
 ### Attributs globaux
 
-- [Attributs de traitement conditionnel](/fr/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Attributs noyau](/fr/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Attributs d'événement graphique](/fr/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [Attributs Xlink](/fr/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
-- [Attributs de présentation](/fr/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [Attributs de traitement conditionnel](/fr/SVG/Attribute#ConditionalProccessing) »
+- [Attributs noyau](/fr/SVG/Attribute#Core) »
+- [Attributs d'événement graphique](/fr/SVG/Attribute#GraphicalEvent) »
+- [Attributs Xlink](/fr/SVG/Attribute#XLink) »
+- [Attributs de présentation](/fr/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -50,7 +51,7 @@ Rendu basique d'une image PNG dans un objet SVG :
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGImageElement`](/fr/DOM/SVGImageElement "en/DOM/SVGImageElement").
+Cet élément implémente l'interface [`SVGImageElement`](/fr/DOM/SVGImageElement).
 
 ## Compatibilité des navigateurs
 

@@ -4,13 +4,16 @@ slug: Web/API/NodeList/forEach
 translation_of: Web/API/NodeList/forEach
 browser-compat: api.NodeList.forEach
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`forEach()`** de l'interface {{domxref("NodeList")}} appelle le rappel donné en paramètre une fois pour chaque paire de valeurs dans la liste, dans l'ordre d'insertion.
 
 ## Syntaxe
 
-    nodeList.forEach(callback[, thisArg]);
+```js
+nodeList.forEach(callback[, thisArg]);
+```
 
 ### Paramètres
 
@@ -60,9 +63,11 @@ list.forEach(
 
 résultat :
 
-    [object HTMLParagraphElement], 0, myThisArg
-    [object Text], 1, myThisArg
-    [object HTMLSpanElement], 2, myThisArg
+```
+[object HTMLParagraphElement], 0, myThisArg
+[object Text], 1, myThisArg
+[object HTMLSpanElement], 2, myThisArg
+```
 
 ## Polyfill
 

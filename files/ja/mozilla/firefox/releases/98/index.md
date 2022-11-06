@@ -1,12 +1,8 @@
 ---
 title: Firefox 98 for developers
 slug: Mozilla/Firefox/Releases/98
-tags:
-  - '98'
-  - Firefox
-  - Mozilla
-  - Release
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 98 の変更点をまとめています。Firefox 98 は、米国時間 2022 年 3 月 8 日にリリースされました。
@@ -47,7 +43,6 @@ tags:
 
 - {{WebExtAPIRef("webRequest")}} を使用するウェブ拡張機能は Firefox が起動している間、初期に開始していました。これを、{{WebExtAPIRef("webRequest")}} ブロッキング呼び出しを使用する拡張機能に限って早期スタートアップするように変更しました。ブロッキングでない呼出では、拡張機能の早期スタートアップが発生しません ({{bug(1749871)}})。
 - {{WebExtAPIRef("userScripts.register")}} に `cookieStoreId` を追加しました。これは、拡張機能がコンテナー特有のユーザースクリプトを登録できるようにします ({{bug(1738567)}})。
-
 
 ## 過去のバージョン
 

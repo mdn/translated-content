@@ -1,25 +1,17 @@
 ---
 title: ServiceWorkerRegistration.active
 slug: Web/API/ServiceWorkerRegistration/active
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-  - active
-browser-compat: api.ServiceWorkerRegistration.active
-translation_of: Web/API/ServiceWorkerRegistration/active
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`active`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、{{domxref("ServiceWorker.state")}} がアクティブ化中 (`activating`) またはアクティブ化済み (`activated`) のサービスワーカーを返します。 このプロパティは、最初は `null` に設定されています。
 
 クライアントの URL が登録のスコープ内にある場合、アクティブワーカーは {{domxref("Client")}} を制御します（{{domxref("ServiceWorkerContainer.register")}} が最初に呼び出されたときに設定された `scope` オプション）。
 
-> **Note:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
+> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
-> **Note:** アクティブワーカーが `activating` になると、ランタイムスクリプトエラーやアクティブワーカーの強制終了でもアクティブワーカーが `activated` になります。
+> **メモ:** アクティブワーカーが `activating` になると、ランタイムスクリプトエラーやアクティブワーカーの強制終了でもアクティブワーカーが `activated` になります。
 
 ## 値
 

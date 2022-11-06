@@ -1,16 +1,8 @@
 ---
 title: image-rendering
 slug: Web/CSS/image-rendering
-tags:
-  - CSS
-  - CSS 画像
-  - CSS プロパティ
-  - Reference
-  - image-rendering
-  - recipe:css-property
-browser-compat: css.properties.image-rendering
-translation_of: Web/CSS/image-rendering
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`image-rendering`** プロパティは、画像を拡大縮小するアルゴリズムを設定します。このプロパティは要素自身に適用され、他のプロパティで設定されるあらゆる画像、子孫要素に適用されます。
@@ -47,7 +39,7 @@ image-rendering: unset;
 - `pixelated`
   - : 画像を拡大する時は、最近傍 (nearest neighbor) 法が使用され、画像は画像が大きなピクセルで構成されたように表示されます。縮小する時は `auto` と同じになります。
 
-> **Note:** `optimizeQuality` および `optimizeSpeed` の値は、初期の草稿で (SVG の仕様 {{SVGAttr("image-rendering")}} に似たものとして) `smooth` および `pixelated` の同義語として定義されていました。
+> **メモ:** `optimizeQuality` および `optimizeSpeed` の値は、初期の草稿で (SVG の仕様 {{SVGAttr("image-rendering")}} に似たものとして) `smooth` および `pixelated` の同義語として定義されていました。
 
 ## 公式定義
 
@@ -107,7 +99,7 @@ img {
 
 {{Compat}}
 
-> **Note:** 仕様書の例にあるようなピクセルアートの拡大縮小には `crisp-edges` を使うことが想定されていますが、実際にはどのブラウザーも (2020 年 1 月時点で) 対応していません。[Firefox](https://dxr.mozilla.org/mozilla-central/rev/5fd4cfacc90ddd975c82ba27fdc56f4187b3f180/gfx/wr/webrender/src/resource_cache.rs#1727) では、 `pixelated` は最近傍法として解釈されますが、 `auto` と `crisp-edges` はトリリニア法または線形で補間されます。
+> **メモ:** 仕様書の例にあるようなピクセルアートの拡大縮小には `crisp-edges` を使うことが想定されていますが、実際にはどのブラウザーも (2020 年 1 月時点で) 対応していません。[Firefox](https://dxr.mozilla.org/mozilla-central/rev/5fd4cfacc90ddd975c82ba27fdc56f4187b3f180/gfx/wr/webrender/src/resource_cache.rs#1727) では、 `pixelated` は最近傍法として解釈されますが、 `auto` と `crisp-edges` はトリリニア法または線形で補間されます。
 >
 > Chromium と Safari (WebKit) での動作については、 [`GetInterpolationQuality`](https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/style/computed_style.cc?type=cs&q=GetInterpolationQuality&g=0&l=1160) 関数と [`CSSPrimitiveValue::operator ImageRendering()`](https://github.com/WebKit/webkit/blob/9b169b6c85394d94f172e5d75ca2f6c74830e99c/Source/WebCore/css/CSSPrimitiveValueMappings.h#L4324) をそれぞれ参照してください。
 

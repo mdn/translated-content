@@ -11,8 +11,8 @@ Robots.txt est un fichier qui est habituellement placé à la racine d'un site w
 
 Par exemple, l'administrateur d'un site peut interdire aux robots d'indexation de parcourir un certain dossier (et tous les fichiers contenus à l'intérieur) ou de parcourir un fichier spécifique, généralement pour empêcher ces fichiers d'être indexés par d'autres moteurs de recherche.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Protocole_d'exclusion_des_robots", "Robots.txt")}} sur Wikipédia
+- [Protocole d'exclusion des robots](https://fr.wikipedia.org/wiki/Protocole_d'exclusion_des_robots) sur Wikipédia

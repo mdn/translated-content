@@ -1,14 +1,9 @@
 ---
 title: <input type="radio">
-slug: Web/HTML/Element/Input/radio
-tags:
-  - Formulaires
-  - HTML
-  - Input
-  - Reference
-translation_of: Web/HTML/Element/input/radio
+slug: Web/HTML/Element/input/radio
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Les éléments `<input>` dont l'attribut `type` vaut **`radio`** sont généralement utilisés pour construire des groupes d'options parmi lesquelles on ne peut choisir qu'une valeur. Les « boutons radio » sont représentés par des cercles remplis lorsqu'ils sont sélectionnés.
 
@@ -96,7 +91,7 @@ Ajoutant un peu de code à notre exemple pour étudier les données générées 
 </pre>
 ```
 
-Ensuite, on ajoute du code [JavaScript](/fr/docs/Web/JavaScript) pour rattacher un gestionnaire d'évènement sur l'évènement {{event("submit")}} qui est déclenché lorsque l'utilisateur clique sur le bouton « Envoyer » :
+Ensuite, on ajoute du code [JavaScript](/fr/docs/Web/JavaScript) pour rattacher un gestionnaire d'évènement sur l'évènement [`submit`](/fr/docs/Web/API/HTMLFormElement/submit_event) qui est déclenché lorsque l'utilisateur clique sur le bouton « Envoyer » :
 
 ```js
 var form = document.querySelector("form");
@@ -294,7 +289,7 @@ De plus, la légende et le bouton d'envoi ont été mis en forme pour avoir un c
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
-      <td>{{event("change")}} et {{event("input")}}</td>
+      <td><a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/input_event"><code>input</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
@@ -315,15 +310,11 @@ De plus, la légende et le bouton d'envoi ont été mis en forme pour avoir un c
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-|                                                                                                                                          |                                  |              |
-| {{SpecName('HTML WHATWG', 'forms.html#radio-button-state-(type=radio)', '&lt;input type="radio"&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'forms.html#radio-button-state-(type=radio)', '&lt;input type="radio"&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.input.input-radio")}}
+{{Compat}}
 
 ## Voir aussi
 

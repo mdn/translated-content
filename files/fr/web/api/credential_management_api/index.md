@@ -10,6 +10,7 @@ tags:
   - WebAuthn
 translation_of: Web/API/Credential_Management_API
 ---
+
 {{APIRef("Credential Management API")}}{{ SeeCompatTable() }}
 
 L'API **Credential Management** (en français : gestion des informations d'authentification) permet à un site web d'enregistrer et de récupérer des informations d'authentifications pour un utilisateur (qu'elles soient fédérées, utilisent un mot de passe ou une paire de clés asymétrique). Un utilisateur peut ainsi se connecter à un service sans avoir à saisir de mot de passe, de voir le compte fédéré utilisé pour se connecter à un site, de rouvrir une session sans avoir à se reconnecter après une session expirée.
@@ -41,7 +42,4 @@ Les versions les plus récentes de la spécification permettent de récupérer l
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
-| {{SpecName('WebAuthn')}}                 | {{Spec2('WebAuthn')}}                 | Définition initiale. |
+{{Specifications}}

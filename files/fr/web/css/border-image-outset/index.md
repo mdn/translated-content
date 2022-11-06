@@ -4,6 +4,7 @@ slug: Web/CSS/border-image-outset
 browser-compat: css.properties.border-image-outset
 translation_of: Web/CSS/border-image-outset
 ---
+
 {{CSSRef}}
 
 La propriété **`border-image-outset`** définit la distance avec laquelle la bordure est déplacée par rapport à la boîte de bordure.

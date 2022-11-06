@@ -8,13 +8,16 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/removeAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 `removeAttributeNode` enlève l'attribut spécifié de l'élément courant.
 
 ## Syntaxe
 
-    removedAttr =element.removeAttributeNode(attributeNode)
+```js
+removedAttr =element.removeAttributeNode(attributeNode)
+```
 
 - `attributeNode` est le nœud `Attr` à enlever.
 - `removedAttr` est le nœud `Attr` qui vient d'être enlevé.

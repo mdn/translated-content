@@ -1,16 +1,8 @@
 ---
 title: HTMLTableElement.deleteTHead()
 slug: Web/API/HTMLTableElement/deleteTHead
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - メソッド
-  - NeedsSpecTable
-  - リファレンス
-browser-compat: api.HTMLTableElement.deleteTHead
-translation_of: Web/API/HTMLTableElement/deleteTHead
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.deleteTHead()`** は、 {{HTMLElement("thead")}} 要素をこの {{HtmlElement("table")}} から取り除きます。

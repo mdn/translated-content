@@ -1,64 +1,79 @@
 ---
-title: element.scrollLeft
+title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
-tags:
-  - DOM
-  - DOM_0
 translation_of: Web/API/Element/scrollLeft
+browser-compat: api.Element.scrollLeft
 ---
-{{ ApiRef() }}
 
-### Résumé
+{{APIRef("DOM")}}
 
-Définit ou obtient le nombre de pixels dont le contenu est défilé vers la gauche.
+La propriété **`Element.scrollLeft`** permet de lire ou de modifier le nombre de pixels le long desquels le contenu d'un élément a défilé depuis son bord gauche.
 
-### Syntaxe
+Si la propriété [`direction`](/fr/docs/Web/CSS/direction) de l'élément vaut `rtl` (pour une écriture de droite à gauche), `scrollLeft` est à `0` lorsque la barre de défilement est à la position la plus à droite possible (ce qui correspond au début du contenu à faire défiler) et elle devient de plus en plus négative lors du défilement vers la fin du contenu.
 
-    // Obtient le nombre de pixels défilés
-    var sLeft = element.scrollLeft;
+Cette propriété peut être définie avec n'importe quelle valeur entière. Toutefois&nbsp;:
 
-_sLeft_ est un entier représentant le nombre de pixels dont _element_ a été défilé vers la gauche.
+- Si l'élément ne peut pas défiler (par exemple parce qu'il n'y a aucun défilement), `scrollLeft` sera fixée à `0`.
+- Si la valeur fournie est inférieure à `0` (ou supérieure à `0` pour les éléments écrits de droite à gauche), `scrollLeft` sera fixée à `0`.
+- Si la valeur fournie est supérieure au défilement maximal possible pour le contenu, `scrollLeft` sera fixée à la valeur maximale possible.
 
-    // Définit le nombre de pixels défilés
-    element.scrollLeft = 10;
+> **Attention :** Pour les systèmes qui utilisent une mise à l'échelle pour l'affichage (<i lang="en">display scaling</i>), `scrollLeft` pourra fournir une valeur décimale.
 
-**scrollLeft** peut être n'importe quelle valeur entière, cependant&nbsp;:
+## Valeur
 
-- Si l'élément ne peut pas défiler (par exemple parce qu'il ne déborde pas), `scrollLeft` est mis à 0.
-- S'il reçoit une valeur inférieure à 0, `scrollLeft` est mis à 0.
-- S'il reçoit une valeur plus grande que le maximum dont le contenu peut défiler, `scrollLeft` est mis au maximum.
+Un nombre
 
-### Exemple
+## Exemples
+
+### HTML
 
 ```html
-<script type="text/javascript">
-
-function doScrollLeft(el, p)
-{
-  el.scrollLeft = p;
-}
-
-</script>
-
-<div id="aDiv"
-     style="width: 100px; height: 200px; overflow: auto;"
->
-<script type="text/javascript">
-for (var i=0; i<100; ++i){
-  document.write(i + '-FooBar-FooBar-FooBar<br>');
-}
-</script>
+<div id="container">
+  <div id="content">Cliquez sur le bouton pour glisser à droite !</div>
 </div>
-<br>
-<input type="button" value="Défile de 50 pixels"
-       onclick="doScrollLeft(document.getElementById('aDiv'), 50);"
->
+
+<button id="slide" type="button">Glisser à droite</button>
 ```
 
-### Spécification
+### CSS
 
-{{ DOM0() }}
+```css
+#container {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  overflow-x: scroll;
+}
 
-### Références
+#content {
+  width: 250px;
+  background-color: #ccc;
+}
+```
 
-- [_scrollLeft_ sur MSDN](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/scrollleft.asp)
+### JavaScript
+
+```js
+const button = document.getElementById('slide');
+
+button.onclick = function () {
+  document.getElementById('container').scrollLeft += 20;
+};
+```
+
+### Résultat
+
+{{EmbedLiveSample("")}}
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- [`Element.scrollTop`](/fr/docs/Web/API/Element/scrollTop)
+- [`Element.scrollTo()`](/fr/docs/Web/API/Element/scrollTo)

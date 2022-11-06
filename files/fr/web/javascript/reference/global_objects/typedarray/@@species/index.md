@@ -11,25 +11,28 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/@@species
 ---
+
 {{JSRef}}
 
 La propriété d'accesseur **`TypedArray[@@species]`** renvoie le constructeur [du tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
 
 ## Syntaxe
 
-    TypedArray[Symbol.species]
+```js
+TypedArray[Symbol.species]
+```
 
-    où TypedArray vaut :
+où TypedArray vaut :
 
-    Int8Array
-    Uint8Array
-    Uint8ClampedArray
-    Int16Array
-    Uint16Array
-    Int32Array
-    Uint32Array
-    Float32Array
-    Float64Array
+- [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
+- [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+- [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
+- [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)
+- [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)
+- [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
+- [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)
+- [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)
+- [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)
 
 ## Description
 
@@ -57,14 +60,11 @@ class MonTableauTypé extends Uint8Array {
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-%typedarray%-@@species', 'get %TypedArray% [ @@species ]')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%-@@species', 'get %TypedArray% [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.@@species")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,11 +1,8 @@
 ---
 title: DOM を使用したウェブと XML の開発の例
 slug: Web/API/Document_Object_Model/Examples
-tags:
-  - DOM
-  - DOM リファレンス
-translation_of: Web/API/Document_Object_Model/Examples
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 この章では、DOM を利用したウェブと XML 開発のより長い例をいくつか紹介します。可能な限りこれらの例ではドキュメントオブジェクトを操作する上でよく用いられる API や技法や JavaScript のパターンを利用しています。
@@ -155,9 +152,11 @@ p { font-face: Arial; font-size: 10pt; margin-left: .125in; }
 
 このスクリプトは以下の項目を表示します。
 
-    BODY
-    P
-    #LUMPY
+```
+BODY
+P
+#LUMPY
+```
 
 ## 例 5: イベント伝播 (propagation)
 
@@ -296,40 +295,40 @@ td { padding: 2px 10px 2px 10px; }
 <script>
 
 function showEventProperties(e) {
-  function addCell(row, text) {
-    var cell = row.insertCell(-1);
-    cell.appendChild(document.createTextNode(text));
-  }
+  function addCell(row, text) {
+    var cell = row.insertCell(-1);
+    cell.appendChild(document.createTextNode(text));
+  }
 
-  var e = e || window.event;
-  document.getElementById('eventType').innerHTML = e.type;
+  var e = e || window.event;
+  document.getElementById('eventType').innerHTML = e.type;
 
-  var table = document.createElement('table');
-  var thead = table.createTHead();
-  var row = thead.insertRow(-1);
-  var labelList = ['#', 'Property', 'Value'];
-  var len = labelList.length;
+  var table = document.createElement('table');
+  var thead = table.createTHead();
+  var row = thead.insertRow(-1);
+  var labelList = ['#', 'Property', 'Value'];
+  var len = labelList.length;
 
-  for (var i=0; i<len; i++) {
-    addCell(row, labelList[i]);
-  }
+  for (var i=0; i<len; i++) {
+    addCell(row, labelList[i]);
+  }
 
-  var tbody = document.createElement('tbody');
-  table.appendChild(tbody);
+  var tbody = document.createElement('tbody');
+  table.appendChild(tbody);
 
-  for (var p in e) {
-    row = tbody.insertRow(-1);
-    row.className = (row.rowIndex % 2)? 'odd':'even';
-    addCell(row, row.rowIndex);
-    addCell(row, p);
-    addCell(row, e[p]);
-  }
+  for (var p in e) {
+    row = tbody.insertRow(-1);
+    row.className = (row.rowIndex % 2)? 'odd':'even';
+    addCell(row, row.rowIndex);
+    addCell(row, p);
+    addCell(row, e[p]);
+  }
 
-  document.body.appendChild(table);
+  document.body.appendChild(table);
 }
 
 window.onload = function(event){
-  showEventProperties(event);
+  showEventProperties(event);
 }
 </script>
 </head>

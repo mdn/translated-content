@@ -1,16 +1,8 @@
 ---
 title: device-height
 slug: Web/CSS/@media/device-height
-tags:
-  - '@media'
-  - CSS
-  - 非推奨
-  - リファレンス
-  - メディアクエリー
-  - メディア特性
-browser-compat: css.at-rules.media.device-height
-translation_of: Web/CSS/@media/device-height
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
 [CSS](/ja/docs/Web/CSS) の **`device-height`** [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、出力機器の描画面の高さを調べるために使用することができます。

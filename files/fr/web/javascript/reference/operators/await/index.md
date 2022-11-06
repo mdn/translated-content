@@ -8,13 +8,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/await
 original_slug: Web/JavaScript/Reference/Opérateurs/await
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur **`await`** permet d'attendre la résolution d'une promesse ({{jsxref("Promise")}}). Il ne peut être utilisé qu'au sein d'une fonction asynchrone (définie avec l'instruction {{jsxref("Instructions/async_function", "async function")}}).
 
 ## Syntaxe
 
-    [rv] = await expression;
+```js
+[rv] = await expression;
+```
 
 - `expression`
   - : Une promesse ({{jsxref("Promise")}}) ou toute autre valeur dont on souhaite attendre la résolution.
@@ -96,15 +99,11 @@ var response = await maFonctionPromesse().catch(
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("ESDraft", "#sec-async-function-definitions", "async functions")}} | {{Spec2("ESDraft")}} |                      |
-| {{SpecName("ES2018", "#sec-async-function-definitions", "async functions")}}     | {{Spec2('ES2018')}}     |                      |
-| {{SpecName("ES2017", "#sec-async-function-definitions", "async functions")}}     | {{Spec2('ES2017')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.await")}}
+{{Compat}}
 
 ## Voir aussi
 

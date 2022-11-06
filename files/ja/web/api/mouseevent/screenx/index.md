@@ -1,22 +1,13 @@
 ---
 title: MouseEvent.screenX
 slug: Web/API/MouseEvent/screenX
-tags:
-  - API
-  - CSSOM View
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.screenX
-translation_of: Web/API/MouseEvent/screenX
 ---
+
 {{APIRef("DOM Events")}}
 
 **`screenX`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、グローバル（スクリーン）座標における、マウスポインターの水平方向の座標（オフセット）を示します。
 
-> **Note:** マルチスクリーン環境では、水平方向に並べられた画面が単一の機器として扱われ、 `screenX` の範囲に画面の幅が加算されることがあります。
+> **メモ:** マルチスクリーン環境では、水平方向に並べられた画面が単一の機器として扱われ、 `screenX` の範囲に画面の幅が加算されることがあります。
 
 ## 構文
 

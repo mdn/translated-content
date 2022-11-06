@@ -9,13 +9,16 @@ tags:
   - TextMetrics
 translation_of: Web/API/TextMetrics/width
 ---
+
 {{APIRef("Canvas API")}}
 
 La propriété en lecture seule **TextMetrics.width** contient en pixels CSS la largeur d'avance du texte (la largeur de la boîte de ligne).
 
 ## Syntaxe
 
-    readonly metrics.width;
+```js
+readonly metrics.width;
+```
 
 ## Exemples
 
@@ -37,13 +40,11 @@ texte.width; // 16;
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-textmetrics-width", "TextMetrics.width")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TextMetrics.width")}}
+{{Compat}}
 
 ## Voir aussi
 

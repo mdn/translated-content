@@ -1,16 +1,8 @@
 ---
 title: image-resolution
 slug: Web/CSS/image-resolution
-tags:
-  - CSS
-  - CSS 画像
-  - CSS プロパティ
-  - 実験的
-  - Reference
-  - image-resolution
-browser-compat: css.properties.image-resolution
-translation_of: Web/CSS/image-resolution
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`image-resolution`** は [CSS](/ja/docs/Web/CSS) のプロパティで、この要素で使用されているすべてのラスター画像の内在解像度を指定します。これは置換要素や生成コンテンツ、`background-image` のような装飾画像などのコンテンツ画像に作用します。
@@ -41,7 +33,7 @@ image-resolution: unset;
 - `snap`
   - : `snap` キーワードが指定された場合、計算された解像度は、指定された解像度を、画像の 1 ピクセルを端末の整数のピクセルにマッピングする最も近い値に丸めたものになります。解像度が画像から取得された場合、使用される固有の解像度は、画像のネイティブ解像度を同様に調整したものになります。
 
-> **Note:** SVG などのベクター形式は内在解像度を持たないので、このプロパティはベクター画像には影響しません。
+> **メモ:** SVG などのベクター形式は内在解像度を持たないので、このプロパティはベクター画像には影響しません。
 
 ## 公式定義
 

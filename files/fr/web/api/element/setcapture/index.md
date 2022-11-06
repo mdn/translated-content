@@ -10,13 +10,16 @@ tags:
   - Souris
 translation_of: Web/API/Element/setCapture
 ---
+
 {{ APIRef("DOM") }}
 
 Appelez cette méthode pendant la gestion d'un évènement de la souris pour recibler tous les évènements de la souris sur cet élément jusqu'à ce que le bouton de la souris soit relâché ou que soit appelée {{ domxref("document.releaseCapture()") }}.
 
 ## Syntaxe
 
-    element.setCapture(retargetToElement);
+```js
+element.setCapture(retargetToElement);
+```
 
 - `retargetToElement`
   - : Si la valeur est `true` (_vrai_), tous les évènements sont ciblés directement vers cet élément ; si elle est `false` (_faux_), les évènements peuvent aussi être déclenchés sur les descendants de cet élément.

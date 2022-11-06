@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 original_slug: Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres
 ---
+
 {{jsSidebar("Operators")}}
 
 Les **accesseurs de propriété** permettent de fournir un accès aux propriétés d'un objet en utilisant une notation avec un point ou une notation avec des crochets
@@ -16,8 +17,10 @@ Les **accesseurs de propriété** permettent de fournir un accès aux propriét�
 
 ## Syntaxe
 
-    objet.propriété
-    objet["propriété"]
+```js
+objet.propriété
+objet["propriété"]
+```
 
 ## Description
 
@@ -115,16 +118,11 @@ x = document.formulaire[controle].value;
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-property-accessors', 'Property Accessors')}}     | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES6', '#sec-property-accessors', 'Accesseurs de propriété')}} | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ES5.1', '#sec-11.2.1', 'Accesseurs de propriété')}}             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES1', '#sec-11.2.1', 'Accesseurs de propriété')}}                 | {{Spec2('ES1')}}         | Définition initiale, implémentée avec JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.property_accessors")}}
+{{Compat}}
 
 ## Voir aussi
 

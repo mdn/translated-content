@@ -12,6 +12,7 @@ tags:
   - keys
 translation_of: Web/API/Cache/keys
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La méthode **`keys()`** de l'interface {{domxref("Cache")}} retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en un tableau de clé de {{domxref("Cache")}}.
@@ -59,13 +60,11 @@ caches.open('v1').then(function(cache) {
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-cache-keys', 'Cache: keys')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Cache.keys")}}
+{{Compat}}
 
 ## Voir aussi
 

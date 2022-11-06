@@ -9,6 +9,7 @@ tags:
   - synthèse vocale
 translation_of: Web/API/Web_Speech_API
 ---
+
 {{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}
 
 L'API <i lang="en">Web Speech</i> permet d'intégrer des données liées à la voix dans des applications web. L'API <i lang="en">Web Speech</i> se compose de deux parties : <i lang="en">SpeechSynthesis</i> (synthèse vocale) et <i lang="en">SpeechRecognition</i> (reconnaissance vocale asynchrone).
@@ -42,7 +43,7 @@ Pour plus de détails concernant ces fonctionnalités, voir [Using the Web Speec
 - {{domxref("SpeechRecognitionError")}}
   - : Répresente les messages d'erreur de l'outil de reconnaissance vocale.
 - {{domxref("SpeechRecognitionEvent")}}
-  - : L'objet événement pour les événements {{event("result")}} et {{event("nomatch")}}, et contient toutes les données associées avec un résultat de reconnaissance vocale intermédiaire ou définitif.
+  - : L'objet événement pour les événements [`result`](/fr/docs/Web/API/SpeechRecognition/result_event) et [`nomatch`](/fr/docs/Web/API/SpeechRecognition/nomatch_event), et contient toutes les données associées avec un résultat de reconnaissance vocale intermédiaire ou définitif.
 - {{domxref("SpeechGrammar")}}
   - : Les mots ou schémas de mots que l'on demande à l'outil de reconnaissance vocale de reconnaître.
 - {{domxref("SpeechGrammarList")}}
@@ -76,19 +77,11 @@ Le [Web Speech API repo](https://github.com/mdn/web-speech-api/) sur GitHub cont
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaire         |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Web Speech API')}} | {{Spec2('Web Speech API')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### <i lang="en"><code>SpeechRecognition</code></i>
-
-{{Compat("api.SpeechRecognition", 0)}}
-
-### <i lang="en"><code>SpeechSynthesis</code></i>
-
-{{Compat("api.SpeechSynthesis", 0)}}
+{{Compat}}
 
 ## Voir aussi
 

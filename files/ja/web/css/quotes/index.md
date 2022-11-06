@@ -1,16 +1,8 @@
 ---
 title: quotes
 slug: Web/CSS/quotes
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 生成コンテンツ
-  - リファレンス
-  - ウェブ
-  - レイアウト
-  - 生成コンテンツ
-translation_of: Web/CSS/quotes
 ---
+
 {{CSSRef}}
 
 **`quotes`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [`content`](/ja/docs/Web/CSS/content) プロパティの `open-quotes` や `close-quotes` を使用して追加された引用符をどのように表示するかを設定します。
@@ -88,19 +80,19 @@ q::after {
 
 ```html
 <div lang="ja">
-  <q>これが日本語の引用符です。</q>
+  <q>これが日本語の引用符です。</q>
 <div>
 <hr>
 <div lang="ru">
-  <q>Это русская цитата</q>
+  <q>Это русская цитата</q>
 <div>
 <hr>
 <div lang="de">
-  <q>Dies ist ein deutsches Zitat</q>
+  <q>Dies ist ein deutsches Zitat</q>
 <div>
 <hr>
 <div lang="en">
-  <q>This is an English quote.</q>
+  <q>This is an English quote.</q>
 <div>
 ```
 

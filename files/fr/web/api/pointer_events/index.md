@@ -8,6 +8,7 @@ tags:
   - TopicStub
 translation_of: Web/API/Pointer_events
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 La plupart du contenu web d'aujourd'hui suppose que le périphérique de pointage de l'utilisateur sera une souris. Cependant, beaucoup d'appareils prennent en charge d'autres types de d'entrée pour pointeur, comme le stylet ou les doigts pour les écrans tactiles. Des extensions aux modèles d'événement de pointage sont nécessaires et les _événements de pointeur_ répondent à ce besoin.
@@ -56,16 +57,16 @@ Il existe dix types d'événement de pointeur, dont sept qui ont la même séman
 
 | Event                                    | On Event Handler                                                                             | Description                                                                                                                                                                                                                                   |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{event('pointerover')}}         | {{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}         | déclenché quand un pointeur entre à l'intérieur des limites du [hit test](#term_hit_test) d'un élément.                                                                                                                                       |
-| {{event('pointerenter')}}         | {{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}     | déclenché quand un pointeur entre à l'intérieur des limites du [hit test](#term_hit_test) d'un élément ou d'un de ses descendants.                                                                                                            |
-| {{event('pointerdown')}}         | {{domxref('GlobalEventHandlers.onpointerdown','onpointerdown')}}         | déclenché quand le pointeur devient _actif_ (que le contact est établit).                                                                                                                                                                     |
-| {{event('pointermove')}}         | {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}         | déclenché quand les coordonnées du pointeur changent (que le pointeur bouge).                                                                                                                                                                 |
-| {{event('pointerup')}}             | {{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}             | déclenché quand le pointeur n'est plus _actif_ (que le contact est relaché).                                                                                                                                                                  |
-| {{event('pointercancel')}}     | {{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}} | le navigateur déclenche cet événement s'il détecte que le pointeur ne pourra plus générer d'événement (si l'appareil est désactivé par exemple).                                                                                              |
-| {{event('pointerout')}}         | {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}         | déclenché quand le pointeur n'est plus affecté à l'élément: qu'il sort des limites du [hit test](term_hit_test) de l'élément; qu'il déclenche l'événement pointerup ou pointercancel; que le stylet sort de la zone de l'écran de l'appareil. |
-| {{event('pointerleave')}}         | {{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}     | déclenché quand le pointeur sort des limites du [hit test](term_hit_test) de l'élément. Cet événement est également déclenché lorsqu'on utilise un stylet et qu'il sort de la zone détectable par le numériseur.                              |
-| {{event('gotpointercapture')}} | Aucun (voir [Extensions d'Elements](#Extensions_d'Element))                                  | déclenché quand un élément reçoit la capture du pointeur.                                                                                                                                                                                     |
-| {{event('lostpointercapture')}} | Aucun (voir [Extensions d'Element](#Extensions_d'Element))                                   | déclenché quand la capture du pointeur est désactivée.                                                                                                                                                                                        |
+| [`pointerover`](/fr/docs/Web/API/Element/pointerover_event)         | {{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}         | déclenché quand un pointeur entre à l'intérieur des limites du [hit test](#term_hit_test) d'un élément.                                                                                                                                       |
+| [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event)         | {{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}     | déclenché quand un pointeur entre à l'intérieur des limites du [hit test](#term_hit_test) d'un élément ou d'un de ses descendants.                                                                                                            |
+| [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event)         | {{domxref('GlobalEventHandlers.onpointerdown','onpointerdown')}}         | déclenché quand le pointeur devient _actif_ (que le contact est établit).                                                                                                                                                                     |
+| [`pointermove`](/fr/docs/Web/API/Element/pointermove_event)         | {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}         | déclenché quand les coordonnées du pointeur changent (que le pointeur bouge).                                                                                                                                                                 |
+| [`pointerup`](/fr/docs/Web/API/Element/pointerup_event)             | {{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}             | déclenché quand le pointeur n'est plus _actif_ (que le contact est relaché).                                                                                                                                                                  |
+| [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event)     | {{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}} | le navigateur déclenche cet événement s'il détecte que le pointeur ne pourra plus générer d'événement (si l'appareil est désactivé par exemple).                                                                                              |
+| [`pointerout`](/fr/docs/Web/API/Element/pointerout_event)         | {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}         | déclenché quand le pointeur n'est plus affecté à l'élément: qu'il sort des limites du [hit test](term_hit_test) de l'élément; qu'il déclenche l'événement pointerup ou pointercancel; que le stylet sort de la zone de l'écran de l'appareil. |
+| [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event)         | {{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}     | déclenché quand le pointeur sort des limites du [hit test](term_hit_test) de l'élément. Cet événement est également déclenché lorsqu'on utilise un stylet et qu'il sort de la zone détectable par le numériseur.                              |
+| [`gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event) | Aucun (voir [Extensions d'Elements](#Extensions_d'Element))                                  | déclenché quand un élément reçoit la capture du pointeur.                                                                                                                                                                                     |
+| [`lostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event) | Aucun (voir [Extensions d'Element](#Extensions_d'Element))                                   | déclenché quand la capture du pointeur est désactivée.                                                                                                                                                                                        |
 
 ### Extensions d'Element
 
@@ -243,7 +244,7 @@ function init() {
 </html>
 ```
 
-The following example shows a pointer capture being released (when a {{event("pointercancel")}} event occurs. The browser does this automatically when a {{event("pointerup")}} or {{event("pointercancel")}} event occurs.
+The following example shows a pointer capture being released (when a [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event) event occurs. The browser does this automatically when a [`pointerup`](/fr/docs/Web/API/Element/pointerup_event) or [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event) event occurs.
 
 ```html
 <html>
@@ -323,7 +324,7 @@ Here are some _best practices_ to consider when using pointer events:
 
 ## Implémentation et déploiement
 
-The [pointer events browser compatibility data](/en-US/docs/Web/API/PointerEvents#Browser_compatibility) indicates pointer event support among desktop and mobile browsers is relatively low, although additional implementations are in progress.
+The [pointer events browser compatibility data](/fr/docs/Web/API/PointerEvents#Browser_compatibility) indicates pointer event support among desktop and mobile browsers is relatively low, although additional implementations are in progress.
 
 Some new value have been proposed for the {{cssxref("touch-action", "CSS touch-action")}} property as part of [Pointer Events Level 2](https://w3c.github.io/pointerevents/) specification but currently those new values have no implementation support.
 

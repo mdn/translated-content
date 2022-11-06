@@ -4,6 +4,7 @@ slug: Learn/CSS/Building_blocks/The_box_model
 translation_of: Learn/CSS/Building_blocks/The_box_model
 original_slug: Apprendre/CSS/Building_blocks/Le_modele_de_boite
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
 
 En CSS, tout élément est inclus dans une boîte ("_box_" en anglais). Comprendre le fonctionnement de ces boîtes est essentiel pour maîtriser la mise en page CSS ainsi que le positionement des éléments d'une page HTML. Dans cette leçon, nous verrons en détails le _Modèle de Boîtes CSS_ - son fonctionnement ainsi que sa terminologie - pour vous permettre de réaliser des mises en pages plus complexes.
@@ -52,7 +53,7 @@ Si une boîte est définie en bloc, elle suivra alors les règles suivantes :
 
   , à la marge et à la bordure de la boîte — auront pour effet de repousser les autres éléments.
 
-À moins que l'on ne décide de changer le type de positionnement de la boîte en "en ligne", certains éléments tels que les titres (`<h1>`,`<h2>`, etc.) et les paragraphes (`<p>`) utilisent le mode "bloc" comme propriété de positionnement extérieur par défaut.
+À moins que l'on ne décide de changer le type de positionnement de la boîte en "en ligne", certains éléments tels que les titres (`<h1>`, `<h2>`, etc.) et les paragraphes (`<p>`) utilisent le mode "bloc" comme propriété de positionnement extérieur par défaut.
 
 Si une boîte est positionnée en ligne, alors :
 
@@ -310,7 +311,7 @@ Dans l'exemple ci-après, nous avons un élément `<span>` inclus dans un paragr
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 600)}}
 
-## le positionnement display: inline-block
+## Le positionnement display: inline-block
 
 Il existe une valeur spéciale pour la propriété `display`, qui constitue un compromis entre la disposition en ligne et la disposition en bloc, une sorte d'entre-deux qui combine ces deux dispositions. Cet état peut-être utile dans les situations où l'on désire utiliser les propriétés `width` et `height`, et éviter les superpositions (voir l'exemple précédent), tout en conservant la disposition dans une même ligne (i.e. sans créer de nouvelle ligne, comme le ferait une disposition en bloc).
 
@@ -343,21 +344,21 @@ Dans la leçon suivante, ce sont les arrières-plans et les bordures qui captero
 
 ## Dans ce module
 
-1.  [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Sélecteurs de classe, de type et d'identifiant](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  Le modèle de boîte
-4.  [Arrières-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Gérer la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Le dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Dimensionnement des objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, médias, et formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. Le modèle de boîte
+4. [Arrières-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Gérer la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Le dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Dimensionnement des objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, médias, et formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Mettre en forme les tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Déboguer CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organiser son code CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

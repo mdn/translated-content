@@ -1,16 +1,8 @@
 ---
 title: バッジ付きリストグループ
 slug: Web/CSS/Layout_cookbook/List_group_with_badges
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - ボックス配置
-  - 料理帳
-  - フレックスボックス
-  - リスト
-translation_of: Web/CSS/Layout_cookbook/List_group_with_badges
 ---
+
 {{CSSRef}}
 
 このレシピでは、カウントを示すバッジ付きのリストグループのパターンを作成します。
@@ -25,7 +17,7 @@ translation_of: Web/CSS/Layout_cookbook/List_group_with_badges
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/list-group-badges.html", '100%', 720)}}
 
-> **Callout:**
+> **注目:**
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/list-group-badges--download.html)
 

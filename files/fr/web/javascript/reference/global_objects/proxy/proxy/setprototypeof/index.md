@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/setPrototypeOf
 ---
+
 {{JSRef}}
 
 La méthode **`handler.setPrototypeOf()`** est une trappe pour intercepter {{jsxref("Object.setPrototypeOf()")}}.
@@ -97,14 +98,11 @@ Reflect.setPrototypeOf(p2, newProto);
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-setprototypeof-v', '[[SetPrototypeOf]]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-setprototypeof-v', '[[SetPrototypeOf]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.setPrototypeOf")}}
+{{Compat}}
 
 ## Voir aussi
 

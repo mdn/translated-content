@@ -1,24 +1,8 @@
 ---
 title: Element.querySelector()
 slug: Web/API/Element/querySelector
-tags:
-  - API
-  - CSS
-  - CSS セレクター
-  - DOM
-  - Element
-  - 要素
-  - Finding Elements
-  - Locating Elements
-  - メソッド
-  - リファレンス
-  - Searching Elements
-  - Selecting Elements
-  - セレクター
-  - querySelector
-browser-compat: api.Element.querySelector
-translation_of: Web/API/Element/querySelector
 ---
+
 {{APIRef("DOM")}}
 
 **`querySelector()`** は {{domxref("Element")}} インターフェイスのメソッドで、呼び出された要素の子孫要素の中で、指定されたセレクター群に一致する最初の要素を返します。

@@ -9,13 +9,16 @@ tags:
 translation_of: Web/API/WebGLRenderingContext/canvas
 original_slug: Web/API/WebGLRenderingContext/canevas
 ---
+
 {{APIRef("WebGL")}}
 
 La propriété `WebGLRenderingContext.canvas` est une référence en lecture seule à l'objet {{domxref("HTMLCanvasElement")}} ou {{domxref("OffscreenCanvas")}} associé au contexte. Il peut s'agir de {{jsxref("null")}} s'il n'est pas associé à un élément {{HTMLElement("canvas")}} ou à un objet {{domxref("OffscreenCanvas")}}.
 
 ## Syntaxe
 
-    gl.canvas;
+```js
+gl.canvas;
+```
 
 ### Valeur retournée
 
@@ -51,13 +54,11 @@ gl.canvas; // OffscreenCanvas
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('WebGL', "#DOM-WebGLRenderingContext-canvas", "WebGLRenderingContext.canvas")}} | {{Spec2('WebGL')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.canvas")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@split
 ---
+
 {{JSRef}}
 
 La méthode **`[@@split]()`** permet de découper une chaîne de caractères ({{jsxref("String")}}) en un tableau de sous-chaînes.
@@ -19,7 +20,9 @@ La méthode **`[@@split]()`** permet de découper une chaîne de caractères ({{
 
 ## Syntaxe
 
-    regexp[Symbol.split](str[, limite])
+```js
+regexp[Symbol.split](str[, limite])
+```
 
 ### Paramètres
 
@@ -79,14 +82,11 @@ console.log(résultat); // ["(2016)", "(01)", "(02)"]
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-regexp.prototype-@@split', 'RegExp.prototype[@@split]')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-regexp.prototype-@@split', 'RegExp.prototype[@@split]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.@@split")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
 original_slug: Web/CSS/overflow-anchor/Guide_ancrage_défilement
 ---
+
 {{CSSRef}}
 
 Lorsque vous naviguez sur le Web avec une connexion plus ou moins performante, vous avez déjà pu rencontrer le problème suivant : vous faites défiler verticalement le contenu d'une page qui est en cours de chargement puis, au milieu de votre lecture, le contenu se décale brutalement plus bas (parce que des images au-dessus ou d'autres éléments ont fini de charger et s'affichent enfin).
@@ -20,7 +21,7 @@ L'ancrage du défilement ajuste la position du défilement pour compenser les mo
 
 ## Comment activer l'ancrage du défilement ?
 
-Il n'y a rien à fait. Cette fonctionnalité est activée par défaut pour les navigateurs qui la prennent en charge. Dans la plupart des cas, ces sauts inattendus ne sont pas une expérience voulue.
+Il n'y a rien à faire. Cette fonctionnalité est activée par défaut pour les navigateurs qui la prennent en charge. Dans la plupart des cas, ces sauts inattendus ne sont pas une expérience voulue.
 
 ## Si besoin, que faire pour le désactiver ?
 

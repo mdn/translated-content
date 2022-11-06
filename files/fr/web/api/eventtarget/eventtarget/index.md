@@ -9,13 +9,16 @@ tags:
   - évènements
 translation_of: Web/API/EventTarget/EventTarget
 ---
+
 {{APIRef("DOM Events")}}
 
 Le constructeur **`EventTarget()`** crée une nouvelle instance d'objet {{domxref("EventTarget")}}.
 
 ## Syntaxe
 
-    var myEventTarget = new EventTarget();
+```js
+var myEventTarget = new EventTarget();
+```
 
 ### Paramètres
 
@@ -50,13 +53,11 @@ let newValue = myEventTarget.secret; // == 7
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-eventtarget-eventtarget', 'EventTarget() constructor')}} | {{Spec2('DOM WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EventTarget.EventTarget")}}
+{{Compat}}
 
 ## Voir aussi
 

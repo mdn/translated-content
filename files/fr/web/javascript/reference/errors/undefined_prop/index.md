@@ -9,11 +9,14 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 original_slug: Web/JavaScript/Reference/Erreurs/Undefined_prop
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    ReferenceError: reference to undefined property "x" (Firefox)
+```
+ReferenceError: reference to undefined property "x" (Firefox)
+```
 
 ## Type d'erreur
 

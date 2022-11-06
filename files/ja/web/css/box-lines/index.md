@@ -1,18 +1,11 @@
 ---
 title: box-lines
 slug: Web/CSS/box-lines
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.box-lines
-translation_of: Web/CSS/box-lines
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
-> **Warning:** これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
+> **警告:** これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
 
 **`box-lines`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスの配置行 (水平方向のボックスでは行、垂直方向のボックスでは列) が単一なのか複数なのかを指定します。
 

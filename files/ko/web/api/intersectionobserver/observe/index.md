@@ -24,6 +24,7 @@ translation_of: Web/API/IntersectionObserver/observe
 ```js
 IntersectionObserver.observe(targetElement);
 ```
+
 ### 매개변수
 
 - `targetElement`

@@ -3,6 +3,7 @@ title: DOMTokenList
 slug: Web/API/DOMTokenList
 translation_of: Web/API/DOMTokenList
 ---
+
 {{APIRef("DOM")}}
 
 L'interface **`DOMTokenList`** représente un ensemble de marques («&nbsp;<i lang="en">token</i>&nbsp;») séparées par un espace. On obtient un tel ensemble grâce aux propriétés [`Element.classList`](/fr/docs/Web/API/Element/classList), [`HTMLLinkElement.relList`](/fr/docs/Web/API/HTMLLinkElement/relList), [`HTMLAnchorElement.relList`](/fr/docs/Web/API/HTMLAnchorElement/relList) ou [`HTMLAreaElement.relList`](/fr/docs/Web/API/HTMLAreaElement/relList). Les positions de cette liste sont numérotées à partir de 0. `DOMTokenList` est toujours sensible à la casse.
@@ -83,13 +84,11 @@ La sortie ressemble à ceci :
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("DOM WHATWG", "#interface-domtokenlist", "DOMTokenList")}} | {{Spec2("DOM WHATWG")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList")}}
+{{Compat}}
 
 ## Voir aussi
 

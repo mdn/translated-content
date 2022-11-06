@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setBigInt64
 ---
+
 {{JSRef}}
 
 La méthode **`setBigInt64()`** permet d'enregister un entier signé sur 64 bits (type _long long_ par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.
@@ -19,7 +20,9 @@ La méthode **`setBigInt64()`** permet d'enregister un entier signé sur 64 bits
 
 ## Syntaxe
 
-    dataview.setBigInt64(positionOctet, value [, littleEndian])
+```js
+dataview.setBigInt64(positionOctet, value [, littleEndian])
+```
 
 ### Paramètres
 

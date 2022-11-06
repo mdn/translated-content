@@ -10,6 +10,7 @@ tags:
 translation_of: Glossary/Falsy
 original_slug: Glossaire/Falsy
 ---
+
 Les valeurs fausses (**falsy**) sont des valeurs évaluées comme fausses quand elles sont évaluées dans un contexte {{Glossary("Boolean","booléen")}}.
 
 {{Glossary("JavaScript")}} utilise le type {{Glossary("Type_Conversion", "contrainte")}} dans les contextes Booléens comme les {{Glossary("Conditional", "conditions")}} et les {{Glossary("Loop", "boucles")}}.
@@ -33,7 +34,7 @@ if (document.all) [1]
 
 Parfois écrit falsey, bien qu'en anglais, transformer un mot en adjectif avec un _-y_ fait disparaître tout e final (noise => noisy, ice => icy, shine => shiny) .
 
-## En apprendre plus
+## Voir aussi
 
 - {{Glossary("Truthy")}}
 - {{Glossary("Boolean")}}

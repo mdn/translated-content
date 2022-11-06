@@ -8,11 +8,14 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Already_has_pragma
 original_slug: Web/JavaScript/Reference/Erreurs/Already_has_pragma
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    Warning: -fichier- is being assigned a //# sourceMappingURL, but already has one.
+```
+Warning: -fichier- is being assigned a //# sourceMappingURL, but already has one.
+```
 
 ## Type d'erreur
 

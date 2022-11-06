@@ -3,6 +3,7 @@ title: Permissions API
 slug: Web/API/Permissions_API
 translation_of: Web/API/Permissions_API
 ---
+
 {{DefaultAPISidebar("Permissions API")}}
 
 L'API Permissions fournit une manière cohérente pour connaître, dans un programme, le statut des permissions dans le contexte courant. On pourra par exemple utiliser cette API afin de déterminer si la permission d'accéder à une API donnée a été accordée ou refusée.
@@ -43,13 +44,9 @@ Vous pouvez également en lire plus sur le fonctionnement de cet exemple dans l'
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires         |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Permissions API')}} | {{Spec2('Permissions API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
-
-### Interface `Permissions`
 
 {{Compat("api.Permissions")}}
 

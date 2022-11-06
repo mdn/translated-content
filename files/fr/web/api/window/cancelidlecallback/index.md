@@ -3,13 +3,16 @@ title: window.cancelIdleCallback()
 slug: Web/API/Window/cancelIdleCallback
 translation_of: Web/API/Window/cancelIdleCallback
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 La méthode **`window.cancelIdleCallback()`** annule une fonction précedemment planifiée via {{domxref("window.requestIdleCallback()")}}.
 
 ## Syntaxe
 
-    window.cancelIdleCallback(idleCallbackId);
+```js
+window.cancelIdleCallback(idleCallbackId);
+```
 
 ### Paramètres
 
@@ -18,10 +21,8 @@ La méthode **`window.cancelIdleCallback()`** annule une fonction précedemment 
 
 ## Spécifications
 
-| Spécification                                | Status                                   | Commentaire          |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Background Tasks')}} | {{Spec2('Background Tasks')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.cancelIdleCallback")}}
+{{Compat}}

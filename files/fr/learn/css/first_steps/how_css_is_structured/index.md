@@ -3,6 +3,7 @@ title: Comment CSS est structuré
 slug: Learn/CSS/First_steps/How_CSS_is_structured
 translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 Vous avez maintenant une idée plus claire de CSS. Vous connaissez les bases de son fonctionnement. Il est temps d'explorer plus avant la structure du langage lui-même. Nous avons déjà rencontré nombre des concepts apparaissant dans ce tutoriel ; reportez vous aux leçons précédentes si un concept vous semble peu clair.
@@ -241,7 +242,7 @@ p {
 
 Cependant, dans l'exemple plus haut avec le sélecteur de classe et le sélecteur d'élément, la classe l'emportera, rendant le paragraphe rouge — même s'il apparaît plus tôt dans la feuille de style. Une classe est décrite comme étant plus spécifique ou ayant plus de _spécificité_ que le sélecteur d'élément, elle gagne donc.
 
-**Tentez vous-même l'expérience ci-dessus** — **ajoutez le code HTML à votre expérience, puis ajoutez les deux règles `p {…}` à votre feuille de style. Ensuite, changez le premier sélecteur `p` en `.special`pour voir comment il affecte le style.**
+**Tentez vous-même l'expérience ci-dessus** — **ajoutez le code HTML à votre expérience, puis ajoutez les deux règles `p {…}` à votre feuille de style. Ensuite, changez le premier sélecteur `p` en `.special` pour voir comment il affecte le style.**
 
 Au premier abord, les règles de cascade et de spécificité peuvent sembler compliquées ; avec une meilleure connaissance de CSS, elles vous paraîtront plus naturelles. Dans le prochain module, l'article [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) vous détaillera ces principes et expliquera notamment comment calculer la spécificité. Pour le moment, rappelez vous que de tels cas existent et que le CSS peut parfois ne pas s'appliquer comme prévu. Dans une telle situation, souvenez-vous qu'un même élément peut être la cible de plusieurs sélecteurs concurrents.
 
@@ -307,7 +308,7 @@ La page devrait s'afficher comme ceci :
 
 Une fonction est composée du nom de la fonction suivi d'une paire de parenthèses entre lesquelles sont placées les valeurs autorisées pour cette fonction. Dans le cas de l'exemple `calc()` ci-dessus, on demande que la largeur de cette zone soit égale à 90% de la largeur du bloc conteneur, moins 30 pixels. Ce n'est pas quelque chose que l'on peut calculer à l'avance et simplement entrer la valeur dans le CSS, car on ne sait pas ce que seront 90%. Comme pour toutes les valeurs, chaque fonction a sa page de documentation sur MDN avec des exemples d'utilisation pour en voir le fonctionnement.
 
-Un autre exemple serait les différentes valeurs de la propriété [`<transform>`](/fr/docs/Web/CSS/<transform>), telles que `rotate()`.
+Un autre exemple serait les différentes valeurs de la propriété [`<transform>`](/fr/docs/Web/CSS/transform), telles que `rotate()`.
 
 #### Exemple transform
 
@@ -551,8 +552,8 @@ Il est utile de comprendre, au moins dans les grandes lignes, comment votre navi
 
 ## Dans ce cours
 
-1.  [Qu'est ce que CSS?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3.  Comment CSS est structuré
-4.  [CSS comment ça marche ?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Mettre en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [Qu'est ce que CSS?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
+3. Comment CSS est structuré
+4. [CSS comment ça marche ?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Mettre en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

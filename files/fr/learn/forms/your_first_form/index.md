@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/Forms/Your_first_form
 original_slug: Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
 
 Le premier article de notre série vous offre une toute première expérience de création de formulaire en HTML, y compris sa conception, sa mise en œuvre en utilisant les bons éléments HTML, l'ajout de quelques très simples décorations avec les CSS et la façon dont les données sont envoyées à un serveur.
@@ -60,7 +61,7 @@ Dans ce guide, nous allons concevoir un formulaire de contact simple. Posons les
 
 Notre formulaire contiendra trois champs de texte et un bouton. Nous demandons simplement à notre utilisateur son nom, son adresse électronique et le message qu'il souhaite envoyer. En appuyant sur le bouton, le message sera envoyé au serveur web.
 
-##  Apprentissage actif&nbsp;: mise en œuvre de notre formulaire HTML
+## Apprentissage actif&nbsp;: mise en œuvre de notre formulaire HTML
 
 Très bien, nous sommes maintenant prêts à passer au HTML et à coder notre formulaire. Pour construire notre formulaire, nous aurons besoin des éléments HTML suivants : {{HTMLElement("form")}}, {{HTMLElement("label")}}, {{HTMLElement("input")}}, {{HTMLElement("textarea")}} et {{HTMLElement("button")}}.
 

@@ -9,13 +9,16 @@ tags:
   - parent
 translation_of: Web/API/Node/parentNode
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **parentNode** renvoie le parent du nœud spécifié dans l'arborescence de DOM.
 
 ## Syntaxe
 
-    parentNode = node.parentNode
+```js
+parentNode = node.parentNode
+```
 
 `parentNode` est l'élément parent du nœud courant. Le parent d'un élément est un nœud `Element`, un nœud `Document` ou un nœud `DocumentFragment`.
 

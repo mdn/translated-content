@@ -1,15 +1,8 @@
 ---
 title: speak-as
 slug: Web/CSS/@counter-style/speak-as
-tags:
-  - '@counter-style'
-  - アットルール記述子
-  - CSS
-  - CSS 記述子
-  - リファレンス
-browser-compat: css.at-rules.counter-style.speak-as
-translation_of: Web/CSS/@counter-style/speak-as
 ---
+
 {{CSSRef}}
 
 **`speak-as`** 記述子は、与えられた {{cssxref('@counter-style')}} で構築されたカウンター記号が、どのように話し言葉で表現されるかを指定します。例えば、カウンター記号を数値として話すか、あるいは単にオーディオキューで表現するかを指定することができます。
@@ -62,7 +55,16 @@ speak-as: <counter-style-name>;
 
 ## 形式文法
 
-{{csssyntax}}
+```
+auto                 |
+bullets              |
+numbers              |
+words                |
+spell-out            |
+<counter-style-name>
+
+<counter-style-name> = <custom-ident>
+```
 
 ## 例
 
@@ -110,4 +112,4 @@ speak-as: <counter-style-name>;
 ## 関連情報
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()")}}、無名のカウンタースタイルを生成する関数記法
+- {{cssxref("symbols", "symbols()")}}、無名のカウンタースタイルを生成する関数記法

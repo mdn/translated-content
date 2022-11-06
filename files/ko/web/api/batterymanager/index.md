@@ -15,7 +15,7 @@ translation_of: Web/API/BatteryManager
 
 **`BatteryManager`** 인터페이스는 시스템의 배터리 충전 상태에 대한 정보를 확인 하는 방법을 제공합니다.
 
-{{domxref("window.navigator.battery","navigator.battery")}} 프로퍼티는 Battery Status API와 상호작용 할 수 있는 `BatteryManager 인터페이스의 `인스턴스를 반환합니다.
+{{domxref("window.navigator.battery","navigator.battery")}} 프로퍼티는 Battery Status API와 상호작용 할 수 있는 `BatteryManager` 인터페이스의 인스턴스를 반환합니다.
 
 ## 속성
 
@@ -54,4 +54,4 @@ translation_of: Web/API/BatteryManager
 ## 참고
 
 - {{ domxref("window.navigator.battery","navigator.battery") }}
-- [Battery Status API](/ko/docs/WebAPI/Battery_Status "/en-US/docs/WebAPI/Battery_Status")
+- [Battery Status API](/ko/docs/WebAPI/Battery_Status)

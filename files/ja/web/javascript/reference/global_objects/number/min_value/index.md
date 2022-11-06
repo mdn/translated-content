@@ -1,13 +1,8 @@
 ---
 title: Number.MIN_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
-tags:
-  - JavaScript
-  - Number
-  - プロパティ
-browser-compat: javascript.builtins.Number.MIN_VALUE
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 ---
+
 {{JSRef}}
 
 **`Number.MIN_VALUE`** プロパティは、 JavaScript において表すことが可能な最小の正の数値です。

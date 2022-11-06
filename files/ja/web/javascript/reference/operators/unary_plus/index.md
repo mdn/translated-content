@@ -1,14 +1,8 @@
 ---
 title: 単項プラス (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.unary_plus
-translation_of: Web/JavaScript/Reference/Operators/Unary_plus
 ---
+
 {{jsSidebar("Operators")}}
 
 <p>単項プラス演算子 (`+`) は、オペランドの前に置かれ、そのオペランドを評価し、それが数値以外の場合は数値に変換します。</p>
@@ -46,7 +40,7 @@ console.log(+y);
 +false // 0
 +null  // 0
 +function(val){ return val } // NaN
-+1n    //  BigInt 値は数値に変換できないためエラーになります
++1n    //  BigInt 値は数値に変換できないためエラーになります
 ```
 
 ## 仕様書

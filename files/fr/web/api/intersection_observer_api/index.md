@@ -3,6 +3,7 @@ title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
 translation_of: Web/API/Intersection_Observer_API
 ---
+
 {{SeeCompatTable}}{{DefaultAPISidebar("Intersection Observer API")}}
 
 L'API _Intersection Observer_ permet d'observer de manière asynchrone l'évolution de l'intersection d'un élément cible avec un élément ancêtre ou avec la zone d'affichage d'un document de niveau supérieur.
@@ -364,7 +365,7 @@ Les constantes et variables que nous préparons sont :
 - `decreasingColor`
   - : De même, il s'agit d'une chaîne de caractères qui définit une couleur que nous appliquerons lorsque le ratio de visibilité diminue.
 
-On appelle {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} pour commencer à écouter l'évènement {{event("load")}} ; une fois que la page a finit de charger, on obtient une référence de l'élément avec l'identifiant `"box"` grâce à {{domxref("Document.querySelector", "querySelector()")}}, puis on appelle la méthode `createObserver()` que l'on va définir un peu plus tard pour gérer la création et l'installation de l'observateur d'intersection.
+On appelle {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} pour commencer à écouter l'évènement [`load`](/fr//docs/Web/API/Window/load_event) ; une fois que la page a finit de charger, on obtient une référence de l'élément avec l'identifiant `"box"` grâce à {{domxref("Document.querySelector", "querySelector()")}}, puis on appelle la méthode `createObserver()` que l'on va définir un peu plus tard pour gérer la création et l'installation de l'observateur d'intersection.
 
 #### Création de l'observateur d'intersection
 
@@ -391,11 +392,11 @@ La liste de paliers de ratio de visibilité, `threshold`, est construite par la 
 
 Une fois que `options` est prêt, nous pouvons créer le nouvel observateur, en appelant le constructeur {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} , en précisant une fonction _callback_ à appeler quand l'intersection franchit l'un de nos paliers, `handleIntersect()`, et notre ensemble d'options. On appelle alors {{domxref("IntersectionObserver.observe", "observe()")}} sur l'observateur retourné, afin de le passer à l'élément qui sera notre cible
 
-On pourrait également choisir de surveiller l'évolution de la visibilité de l'intersection de plusieurs éléments par rapport au _viewport_ en appelant `observer.observe()`pour chacun de ces éléments.
+On pourrait également choisir de surveiller l'évolution de la visibilité de l'intersection de plusieurs éléments par rapport au _viewport_ en appelant `observer.observe()` pour chacun de ces éléments.
 
 #### Construction du tableau de paliers de ratios
 
-La fonction`buildThresholdList()`, qui construit la liste de paliers, ressemble à ceci :
+La fonction `buildThresholdList()`, qui construit la liste de paliers, ressemble à ceci :
 
 ```js
 function buildThresholdList() {
@@ -411,7 +412,7 @@ function buildThresholdList() {
 }
 ```
 
-Cela construit la tableau de paliers (chacun de ces paliers étant un ratio compris entre 0.0 et 1.0, ajouté en poussant la valeur`i/numSteps`dans le tableau `thresholds` pour chaque entier `i` entre 1 et `numSteps`). On pousse également 0 pour inclure cette valeur. Le résultat, dans le cas où`numSteps`a sa valeur par défaut, est la liste de paliers suivante :
+Cela construit la tableau de paliers (chacun de ces paliers étant un ratio compris entre 0.0 et 1.0, ajouté en poussant la valeur `i/numSteps` dans le tableau `thresholds` pour chaque entier `i` entre 1 et `numSteps`). On pousse également 0 pour inclure cette valeur. Le résultat, dans le cas où `numSteps` a sa valeur par défaut, est la liste de paliers suivante :
 
 <table class="standard-table">
   <tbody>
@@ -520,13 +521,11 @@ Vous pouvez consulter un exemple encore plus détaillé sur l'article _[Timing e
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaire          |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## Voir aussi
 

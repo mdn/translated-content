@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 ---
+
 {{CSSRef}}
 
 {{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_grille", "Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS","Web/CSS/CSS_Grid_Layout")}}

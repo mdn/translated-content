@@ -9,6 +9,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceMark
 ---
+
 {{APIRef("User Timing API")}}
 
 **`PerformanceMark`** est une interface _abstraite_ pour les objets [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) avec un [`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) « `mark` ».Les entrées de ce type sont créées en appelant [`performance.mark()`](/fr/docs/Web/API/Performance/mark) pour ajouter un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) _nommé_ (le _marqueur_) à la _chronologie des performances_ du navigateur.
@@ -40,14 +41,11 @@ Voir l'exemple dans [Utilisation de l'API User Timing](/fr/docs/Web/API/User_Tim
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('User Timing Level 2', '#performancemark', 'PerformanceMark')}} | {{Spec2('User Timing Level 2')}} |                      |
-| {{SpecName('User Timing', '#performancemark', 'PerformanceMark')}}             | {{Spec2('User Timing')}}             | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceMark")}}
+{{Compat}}
 
 ## Voir aussi
 

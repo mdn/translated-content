@@ -3,6 +3,7 @@ title: transform-origin
 slug: Web/CSS/transform-origin
 translation_of: Web/CSS/transform-origin
 ---
+
 {{CSSRef}}
 
 La propriété **`transform-origin`** permet de modifier l'origine du repère pour les opérations de transformation d'un élément.
@@ -11,9 +12,9 @@ La propriété **`transform-origin`** permet de modifier l'origine du repère po
 
 Par exemple, l'origine par défaut pour la fonction `rotate()` est le centre de la rotation. Cette propriété est utilisée en :
 
-1.  Translatant l'élément avec l'opposé de la valeur fournie
-2.  Appliquant la transformation souhaitée sur l'élément
-3.  Translatant l'élément avec la valeur fournie pour cette propriété.
+1. Translatant l'élément avec l'opposé de la valeur fournie
+2. Appliquant la transformation souhaitée sur l'élément
+3. Translatant l'élément avec la valeur fournie pour cette propriété.
 
 Les valeurs qui ne sont pas définies explicitement sont réinitialisées avec les valeurs correspondantes.
 
@@ -105,9 +106,13 @@ Les mots-clés sont des raccourcis qui correspondent aux valeurs {{cssxref("&lt;
 | `top`    | `0%`   |
 | `bottom` | `100%` |
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -298,15 +303,11 @@ transform-origin: 100% -30%;
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                 | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Transforms', '#transform-origin-property', 'transform-origin')}} | {{Spec2('CSS3 Transforms')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.transform-origin")}}
+{{Compat}}
 
 ## Voir aussi
 

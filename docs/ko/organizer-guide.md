@@ -1,4 +1,4 @@
-# MDN yari-content-ko 팀에 대한 일반 지침 
+# MDN yari-content-ko 팀에 대한 일반 지침
 
 ## yari-content-ko 구성원 변경에 대한 일반 지침
 

@@ -1,15 +1,8 @@
 ---
 title: <display-outside>
 slug: Web/CSS/display-outside
-tags:
-  - CSS
-  - CSS データ型
-  - CSS 表示
-  - データ型
-  - リファレンス
-  - display-outside
-translation_of: Web/CSS/display-outside
 ---
+
 {{CSSRef}}
 
 `<display-outside>` のキーワードは、本質的にフローレイアウトにおける要素の役割である、要素の {{CSSxRef("display")}} の外部表示種別を指定します。これらのキーワードは `display` プロパティの値として使用され、単一のキーワードとしては伝統的な目的に、または Level 3 仕様書では {{CSSxRef("&lt;display-inside&gt;")}} のキーワードと共に使用されます。
@@ -23,7 +16,7 @@ translation_of: Web/CSS/display-outside
 - `inline`
   - : 要素は自分自身の前後に改行を生成しない、一つ以上のインライン要素ボックスを生成します。通常フローでは、次の要素は空間があれば同じ行に来ます。
 
-> **Note:** 二つの値の構文に対応しているブラウザーは、 `display: block` や `display: inline` などの外部表示種別のみが指定されていると、内部表示種別を `flow` に設定します。これで期待通りに動作します。例えば、ある要素を block になるよう指定した場合、その要素の子はブロックおよびインラインの通常フローレイアウトに加わることを期待するでしょう。
+> **メモ:** 二つの値の構文に対応しているブラウザーは、 `display: block` や `display: inline` などの外部表示種別のみが指定されていると、内部表示種別を `flow` に設定します。これで期待通りに動作します。例えば、ある要素を block になるよう指定した場合、その要素の子はブロックおよびインラインの通常フローレイアウトに加わることを期待するでしょう。
 
 <h2 id="Examples">例</h2>
 

@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/Accessibility/CSS_and_JavaScript
 original_slug: Apprendre/a11y/CSS_and_JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
 
 CSS et JavaScript, lorsqu'ils sont utilisés correctement, peuvent également permettre des expériences web accessibles... ou peuvent nuire considérablement à l'accessibilité s'ils sont mal utilisés. Cet article décrit certaines des meilleures pratiques CSS et JavaScript à prendre en compte pour garantir que même un contenu complexe soit aussi accessible que possible.
@@ -319,10 +320,12 @@ De plus, le champ `errorField` est placé en haut de l'ordre source (bien qu'il 
 
 Pour terminer, nous avons utilisé certains attributs de WAI-ARIA dans notre démonstration pour résoudre les problèmes d’accessibilité causés par des zones de contenu constamment mises à jour sans rechargement de page (les lecteurs d’écran ne le détectent pas et n'en avertissent pas les utilisateurs par défaut) :
 
-    <div class="errors" role="alert" aria-relevant="all">
-      <ul>
-      </ul>
-    </div>
+```html
+<div class="errors" role="alert" aria-relevant="all">
+  <ul>
+  </ul>
+</div>
+```
 
 Nous expliquerons ces attributs dans notre prochain article, qui couvre [WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics) de manière beaucoup plus détaillée.
 

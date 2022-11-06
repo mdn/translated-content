@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/place-self
 ---
+
 {{CSSRef}}
 
 La propriété **`place-self`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de paramétrer les valeurs des propriétés {{cssxref("align-self")}} et  {{cssxref("justify-self")}}. La première valeur sera utilisée pour `align-self` et la seconde pour `justify-self`. S'il n'y a pas de seconde valeur, la première sera également utilisée pour `justify-self`.
@@ -82,21 +83,11 @@ place-self: unset;
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Box Alignment", "#place-self-property", "place-self")}} | {{Spec2("CSS3 Box Alignment")}} | Définition initiale. |
-
-{{CSSInfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Prise en charge pour les dispositions flexibles
-
-{{Compat("css.properties.place-self.flex_context")}}
-
-### Prise en charge pour les grilles
-
-{{Compat("css.properties.place-self.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

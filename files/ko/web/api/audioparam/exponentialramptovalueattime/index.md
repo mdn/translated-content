@@ -70,11 +70,11 @@ gainNode.connect(audioCtx.destination);
 
 // onclick이 발생했을 때 무언가를 하기 위해 버튼을 설정합니다
 expRampPlus.onclick = function() {
-  gainNode.gain.exponentialRampToValueAtTime(1.0, audioCtx.currentTime + 2);
+  gainNode.gain.exponentialRampToValueAtTime(1.0, audioCtx.currentTime + 2);
 }
 
 expRampMinus.onclick = function() {
-  gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 2);
+  gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 2);
 }
 ```
 

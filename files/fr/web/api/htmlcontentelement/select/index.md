@@ -9,13 +9,16 @@ tags:
   - Web Components
 translation_of: Web/API/HTMLContentElement/select
 ---
+
 {{ APIRef("Web Components") }}
 
 La propriété **`HTMLContentElement.select`** represente l'attribut `select`. La valeur de retour est une liste de sélecteurs CSS séparés par des espaces. Ils récupèrent le contenu à inserer à la place de l'élément `<content>`.
 
 ## Syntaxe
 
-    object.select = "CSSselector CSSselector ...";
+```js
+object.select = "CSSselector CSSselector ...";
+```
 
 ## Exemple
 
@@ -26,13 +29,11 @@ myContentObject.select = "h1 .error";
 
 ## Spécifications
 
-| Specification                                                                    | Status                           | Comment |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLContentElement.getDistributedNodes")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -8,6 +8,7 @@ tags:
   - requête
 translation_of: Web/HTTP/Headers/Authorization
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête de requête HTTP **`Authorization`** contient les identifiants permettant l'authentification d'un utilisateur auprès d'un serveur, habituellement après que le serveur ait répondu avec un statut {{HTTPStatus("401")}} `Unauthorized` et l'en-tête {{HTTPHeader("WWW-Authenticate")}}
@@ -31,13 +32,15 @@ L'en-tête de requête HTTP **`Authorization`** contient les identifiants permet
 
 ## Syntaxe
 
-    Authorization: <type> <credentials>
+```
+Authorization: <type> <credentials>
+```
 
 ## Directives
 
 - _\<type>_
 
-  - : [Le type d'authentification](/fr/docs/Web/HTTP/Authentication#Schéma_d'authentification). Le type [`"Basic"`](/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme) est souvent utilisé. Pour connaître les autres types :
+  - : [Le type d'authentification](/fr/docs/Web/HTTP/Authentication#Schéma_d'authentification). Le type [`"Basic"`](/fr/docs/Web/HTTP/Authentication#Basic_authentication_scheme) est souvent utilisé. Pour connaître les autres types :
 
     - [IANA registry of Authentication schemes](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
 
@@ -52,7 +55,9 @@ L'en-tête de requête HTTP **`Authorization`** contient les identifiants permet
 
 ## Exemples
 
-    Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+```
+Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+```
 
 Voir aussi l'article [authentification HTTP](/fr/docs/Web/HTTP/Authentication) avec des exemples de configuration de serveurs Apache ou nginx pour protéger votre site grâce à un mot de passe et l'authentification HTTP basique.
 

@@ -4,6 +4,7 @@ slug: Learn/JavaScript/Building_blocks/Functions
 translation_of: Learn/JavaScript/Building_blocks/Functions
 original_slug: Apprendre/JavaScript/Building_blocks/Fonctions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 
 Les **fonctions** sont un autre concept essentiel de la programmation, qui permettent de stocker dans un bloc défini une partie de code qui effectue une seule tâche afin de l'appeler plus tard lorsque nous en avons besoin en utilisant une seule commande courte — au lieu de ré-écrire l'intégralité de ce code à chaque fois. Dans cet article nous explorons les concepts fondamentaux inhérents aux fonctions tels que la syntaxe de base, comment les définir et les invoquer, leur portée et leurs paramètres.
@@ -83,7 +84,7 @@ Vous n'aurez pas besoin d'apprendre les rouages des objets structurés du JavaSc
 
 ## Fonctions personnalisées
 
-Nous avons également rencontré beaucoup de fonctions personnalisées dans le cours jusqu'ici — fonctions définies dans votre code, et non pas dans le navigateur. À chaque fois que vous voyez un nom personnalisé suivi de parenthèses, vous utilisez une fonction personnalisée. Dans notre exemple [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) tiré de l'article [les boucles dans le code](/fr/Apprendre/JavaScript/Building_blocks/Looping_code) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) complet), nous avons inclus une fonction personnalisée `draw()`qui ressemblait à ça :
+Nous avons également rencontré beaucoup de fonctions personnalisées dans le cours jusqu'ici — fonctions définies dans votre code, et non pas dans le navigateur. À chaque fois que vous voyez un nom personnalisé suivi de parenthèses, vous utilisez une fonction personnalisée. Dans notre exemple [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) tiré de l'article [les boucles dans le code](/fr/Apprendre/JavaScript/Building_blocks/Looping_code) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) complet), nous avons inclus une fonction personnalisée `draw()` qui ressemblait à ça :
 
 ```js
 function draw() {
@@ -287,9 +288,9 @@ Le gardien du zoo est comme la portée globale — il ou elle a les clefs pour a
 
 Jetons un coup d'oeil à un exemple réel pour démontrer les effets de la portée.
 
-1.  Tout d'abord, faisons un copie locale de notre exemple [function-scope.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html). Celui-ci contient deux fonctions appelées `a()` et `b()`, et trois variables — `x`, `y`, and `z` — deux d'entre elles sont définies à l'intérieur de la fonction, et l'autre dans la portée globale. Il contient également une troisième fonction appelée `output()`, qui prend un seul paramètre et le renvoie dans un paragraphe de la page.
-2.  Ouvrez l'exemple ci-dessus dans un navigateur et dans un éditeur de texte.
-3.  Ouvrez la console JavaScript dans les outils de développement de votre navigateur et entrez la commande suivante :
+1. Tout d'abord, faisons un copie locale de notre exemple [function-scope.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html). Celui-ci contient deux fonctions appelées `a()` et `b()`, et trois variables — `x`, `y`, and `z` — deux d'entre elles sont définies à l'intérieur de la fonction, et l'autre dans la portée globale. Il contient également une troisième fonction appelée `output()`, qui prend un seul paramètre et le renvoie dans un paragraphe de la page.
+2. Ouvrez l'exemple ci-dessus dans un navigateur et dans un éditeur de texte.
+3. Ouvrez la console JavaScript dans les outils de développement de votre navigateur et entrez la commande suivante :
 
     ```js
     output(x);
@@ -297,7 +298,7 @@ Jetons un coup d'oeil à un exemple réel pour démontrer les effets de la port�
 
     Vous devriez voir la valeur de la variable `x` renvoyée à l'écran.
 
-4.  Maintenant essayez d'entrer les commandes suivantes :
+4. Maintenant essayez d'entrer les commandes suivantes :
 
     ```js
     output(y);
@@ -306,7 +307,7 @@ Jetons un coup d'oeil à un exemple réel pour démontrer les effets de la port�
 
     Toutes les deux devraient vous renvoyer un message d'erreur du type : "[ReferenceError: y is not defined](/fr/docs/Web/JavaScript/Reference/Errors/Not_defined)". Pourquoi ? À cause de la portée de la fonction — `y` and `z` sont enfermées dans les fonctions `a()` et `b()`, donc `output()` ne peut pas les atteindre lorsqu'elles sont appelées depuis la portée globale.
 
-5.  Néanmoins, que se passe-t-il losqu'elles sont appelées de l'intérieur d'une autre fonction ? Essayer d'éditer `a()` et `b()` pour qu'elles aient la forme suivante :
+5. Néanmoins, que se passe-t-il losqu'elles sont appelées de l'intérieur d'une autre fonction ? Essayer d'éditer `a()` et `b()` pour qu'elles aient la forme suivante :
 
     ```js
     function a() {
@@ -329,7 +330,7 @@ Jetons un coup d'oeil à un exemple réel pour démontrer les effets de la port�
 
     Vous devriez voir les valeurs `y` and `z` renvoyées sur la page. Cela fonctionne très bien car la fonction `output()` est applée à l'intérieur des autres fonctions — dans la portée dans laquelle les variables qu'elle renvoie sont définies. La fonction `output()` est elle-même disponible n'importe où dans le code, car elle est définie dans la portée globale.
 
-6.  Maintenant essayer de mettre à jour le code comme ceci :
+6. Maintenant essayer de mettre à jour le code comme ceci :
 
     ```js
     function a() {
@@ -345,14 +346,14 @@ Jetons un coup d'oeil à un exemple réel pour démontrer les effets de la port�
 
     Sauvegardez et rechargez à nouveau dans la console JavaScript :
 
-7.  ```js
+   ```js
     a();
     b();
     ```
 
     Les deux fonctions `a()` et `b()` appelées devraient renvoyer la valeur x — 1. Cela fonctionne très bien car même si la fonction `output()` n'est pas dans la même portée que celle dans laquelle  `x` est définie, `x` est une variable globale et donc elle est disponible dans n'importe quelle partie du code.
 
-8.  Pour finir, essayez de mettre à jour le code comme ceci :
+7. Pour finir, essayez de mettre à jour le code comme ceci :
 
     ```js
     function a() {
@@ -366,7 +367,7 @@ Jetons un coup d'oeil à un exemple réel pour démontrer les effets de la port�
     }
     ```
 
-9.  Sauvegardez et rechargez à nouveau dans la console JavaScript :
+8. Sauvegardez et rechargez à nouveau dans la console JavaScript :
 
     ```js
     a();

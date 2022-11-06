@@ -110,7 +110,7 @@ null || undefined ?? "foo"; // вызывает SyntaxError
 true || undefined ?? "foo"; // вызывает SyntaxError
 ```
 
-Но если явно указать приоритет, создав подвыражение через круглые скобки, то всё заработает: 
+Но если явно указать приоритет, создав подвыражение через круглые скобки, то всё заработает:
 
 ```js example-good
 (null || undefined) ?? "foo"; // вернёт "foo"
@@ -137,6 +137,6 @@ console.log(foo.someBarProp?.toUpperCase() ?? "нет значения"); // "н
 
 ## Смотрите также
 
-- [Оператор опциональной последовательности](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [Оператор логического ИЛИ (`||`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [Параметры по умолчанию функций](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [Оператор опциональной последовательности](/ru/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [Оператор логического ИЛИ (`||`)](/ru/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+- [Параметры по умолчанию функций](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters)

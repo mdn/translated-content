@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/accesskey
 original_slug: Web/HTML/Attributs_universels/accesskey
 ---
+
 {{HTMLSidebar("Global_attributes")}}L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`accesskey`** fournit une indication afin de générer un raccourci clavier pour l'élément courant. La valeur de cet attribut est une liste de caractères (un caractère étant ici un seul point de code Unicode) séparés par des espaces. Le navigateur utilisera le premier caractère qui est disponible selon la disposition du clavier utilisée.{{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
 
 La combinaison de touches utilisée pour le raccourci clavier dépend du navigateur et du système d'exploitation utilisés.
@@ -110,17 +111,11 @@ Au-delà de la prise en charge limitée des navigateurs, `accesskey` pose plusie
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires                                                                                                                                                                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML5.2', "editing.html#the-accesskey-attribute", "accesskey")}}             | {{Spec2('HTML5.2')}}     | Un comportement plus réaliste est défini et correspond à ce qui est réellement implémenté.                                                                                                                                                                                                   |
-| {{SpecName('HTML WHATWG', "interaction.html#the-accesskey-attribute", "accesskey")}} | {{Spec2('HTML WHATWG')}} | Aucune modification depuis {{SpecName('HTML5.1')}}                                                                                                                                                                                                                                  |
-| {{SpecName('HTML5.1', "editing.html#the-accesskey-attribute", "accesskey")}}             | {{Spec2('HTML5.1')}}     | Aucune modification depuis {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                                  |
-| {{SpecName('HTML5 W3C', "editing.html#the-accesskey-attribute", "accesskey")}}         | {{Spec2('HTML5 W3C')}}     | Plusieurs caractères peuvent être définis via cet attribut depuis {{SpecName('HTML4.01')}}. Cet attribut peut désormais être défini sur n'importe quel élément.                                                                                                                      |
-| {{SpecName('HTML4.01', "interact/forms.html#h-17.11.2", "accesskey")}}                     | {{Spec2('HTML4.01')}}     | L'attribut est uniquement pris en charge par {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}} et {{HTMLElement("textarea")}}. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.accesskey")}}
+{{Compat}}
 
 ## Voir aussi
 

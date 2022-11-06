@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
 ---
 {{JSRef}}
 
-**`Math.sign()`** 함수는 주어진 수의 부호를 나타내는 +/-1을 반환합니다. 단, `Math.sign()`에 제공한 수가 0일 경우 부호에 따라 +/-0을 반환합니다.
+**`Math.sign()`** 함수는 주어진 수의 부호를 나타내는 +/-1을 반환합니다. 단, `Math.sign()`에 제공한 수가 0일 경우 부호에 따라 +/-0을 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/math-sign.html")}}
 
@@ -43,7 +43,7 @@ Math.sign(x)
 
 ## 예제
 
-###  `Math.sign()` 사용하기
+### `Math.sign()` 사용하기
 
 ```js
 Math.sign(3);     //  1

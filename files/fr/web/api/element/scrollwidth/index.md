@@ -5,6 +5,7 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/Element/scrollWidth
 ---
+
 {{ ApiRef() }}
 
 ### Résumé
@@ -13,18 +14,22 @@ translation_of: Web/API/Element/scrollWidth
 
 ### Syntaxe
 
-    var xScrollWidth = element.scrollWidth;
+```js
+var xScrollWidth = element.scrollWidth;
+```
 
 _xScrollWidth_ est la largeur du contenu d'_element_ en pixels.
 
 ### Exemple
 
-    <div id="aDiv"
-         style="width: 100px; height: 200px; overflow: auto;"
-    >-FooBar-FooBar-FooBar</div>
-    <br>
-    <input type="button" value="Show scrollWidth"
-           onclick="alert(document.getElementById('aDiv').scrollWidth);">
+```html
+<div id="aDiv"
+      style="width: 100px; height: 200px; overflow: auto;"
+>-FooBar-FooBar-FooBar</div>
+<br>
+<input type="button" value="Show scrollWidth"
+        onclick="alert(document.getElementById('aDiv').scrollWidth);">
+```
 
 ### Spécification
 

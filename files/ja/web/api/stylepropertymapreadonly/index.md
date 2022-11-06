@@ -1,17 +1,8 @@
 ---
 title: StylePropertyMapReadOnly
 slug: Web/API/StylePropertyMapReadOnly
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - 実験的
-  - Houdini
-  - インターフェイス
-  - リファレンス
-  - StylePropertyMapReadOnly
-browser-compat: api.StylePropertyMapReadOnly
-translation_of: Web/API/StylePropertyMapReadOnly
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 **`StylePropertyMapReadOnly`** は [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_Object_Model_API) のインターフェイスで、 {{domxref("CSSStyleDeclaration")}} の代替となる読み取り専用の CSS 宣言ブロックの表現を提供します。このインターフェイスのインスタンスを取得するには、 {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}} を使用してください。

@@ -8,6 +8,7 @@ tags:
   - TextMetrics
 translation_of: Web/API/TextMetrics
 ---
+
 {{APIRef("Canvas API")}}
 
 L'interface **TextMetrics** représente la dimension d'un texte dans le canevas, tel que créée par la méthode {{domxref ("CanvasRenderingContext2D.measureText()")}}.
@@ -41,13 +42,11 @@ L'interface **TextMetrics** représente la dimension d'un texte dans le canevas,
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                           | Commentaire        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', "the-canvas-element.html#textmetrics", "TextMetrics")}} | {{Spec2('HTML WHATWG')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TextMetrics")}}
+{{Compat}}
 
 ## Voir aussi
 

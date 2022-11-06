@@ -1,17 +1,8 @@
 ---
 title: Intl.DisplayNames() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
-tags:
-  - Constructor
-  - DisplayNames
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-browser-compat: javascript.builtins.Intl.DisplayNames.DisplayNames
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
 ---
+
 {{JSRef}}
 
 **`Intl.DisplayNames()`** コンストラクターは、言語、地域、文字体系の表示名の一貫した翻訳を可能にする {{jsxref("Intl/DisplayNames", "Intl.DisplayNames")}} オブジェクトを生成します。

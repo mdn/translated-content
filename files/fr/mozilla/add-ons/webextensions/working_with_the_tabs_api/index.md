@@ -11,6 +11,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 original_slug: Mozilla/Add-ons/WebExtensions/Travailler_avec_l_API_Tabs
 ---
+
 {{AddonSidebar}}
 
 Les onglets permettent à un utilisateur d'ouvrir plusieurs pages Web dans la fenêtre de son navigateur, puis de basculer entre ces pages Web. Grâce à l'API Tabs, vous pouvez utiliser et manipuler ces onglets pour créer des utilitaires qui offrent aux utilisateurs de nouvelles façons de travailler avec des onglets ou de fournir les fonctionnalités de votre extension.
@@ -140,9 +141,9 @@ Ici, vous pouvez voir que, après la création des éléments de menu, un div vi
 
 Voici un résumé de ce qui précède :
 
-1.  Les éléments de menu sont déclarés.
-2.  Une `div` vide avec `tabs-list` est déclaré comme contenant la liste des onglets.
-3.  tabs.js est appelé.
+1. Les éléments de menu sont déclarés.
+2. Une `div` vide avec `tabs-list` est déclaré comme contenant la liste des onglets.
+3. tabs.js est appelé.
 
 ### tabs.js
 
@@ -170,10 +171,10 @@ Maintenant, `listTabs()` est prêt à créer le contenu de la popup.
 
 Pour commencer :
 
-1.  Récupérer les `tabs-list` `div`.
-2.  Créer un fragment de document (dans lequel la liste sera construite).
-3.  Mettre les compteurs.
-4.  Effacer le contenu de `tabs-list` `div`.
+1. Récupérer les `tabs-list` `div`.
+2. Créer un fragment de document (dans lequel la liste sera construite).
+3. Mettre les compteurs.
+4. Effacer le contenu de `tabs-list` `div`.
 
 ```js
 function listTabs() {
@@ -188,8 +189,8 @@ function listTabs() {
 
 Ensuite, nous allons créer les liens pour chaque onglet :
 
-1.  Boucle les 5 premiers éléments de l'objet {{WebExtAPIRef("tabs.Tab")}}.
-2.  Pour chaque poste, ajoutez un hyperlien vers le fragment de document.
+1. Boucle les 5 premiers éléments de l'objet {{WebExtAPIRef("tabs.Tab")}}.
+2. Pour chaque poste, ajoutez un hyperlien vers le fragment de document.
 
     - L'étiquette du lien, c'est-à-dire son texte, est définie à l'aide du titre de l'onglet (ou de l'ID, s'il n'a pas de titre).
     - L'adresse du lien est définie à l'aide de l'ID de l'onglet.

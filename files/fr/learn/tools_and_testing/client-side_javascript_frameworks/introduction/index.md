@@ -3,6 +3,7 @@ title: Introduction aux frameworks côté client
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 We begin our look at frameworks with a general overview of the area, looking at a brief history of JavaScript and frameworks, why frameworks exist and what they give us, how to start thinking about choosing a framework to learn, and what alternatives there are to client-side frameworks.
@@ -246,9 +247,9 @@ The upshot is that you should consider accessibility from the very start of _eve
 
 Each of the frameworks discussed in this module take different approaches to web application development. Each is regularly improving or changing, and each has its pros and cons. Choosing the right framework is a team- and project-dependent process, and you should do your own research to uncover what suits your needs. That said, we've identified a few questions you can ask in order to research your options more effectively:
 
-1.  What browsers does the framework support?
-2.  What domain-specific languages does the framework utilize?
-3.  Does the framework have a strong community and good docs (and other support) available?
+1. What browsers does the framework support?
+2. What domain-specific languages does the framework utilize?
+3. Does the framework have a strong community and good docs (and other support) available?
 
 The table in this section provides a glanceable summary of the current _browser support_ offered by each framework, as well as the **domain-specific languages** with which it can be used.
 

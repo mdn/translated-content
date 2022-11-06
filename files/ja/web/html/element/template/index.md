@@ -1,23 +1,9 @@
 ---
 title: '<template>: コンテンツテンプレート要素'
 slug: Web/HTML/Element/template
-tags:
-  - Element
-  - HTML
-  - HTML ウェブコンポーネント
-  - HTML:フローコンテンツ
-  - HTML:メタデータコンテンツ
-  - HTML:記述コンテンツ
-  - HTML:スクリプト対応要素
-  - リファレンス
-  - Template
-  - ウェブ
-  - ウェブコンポーネント
-browser-compat: html.elements.template
-translation_of: Web/HTML/Element/template
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<template>`** は [HTML](/ja/docs/Web/HTML) の要素で、ページが読み込まれたときにすぐにレンダリングされるのではなく、実行時に JavaScript を使って後からインスタンス化することができる {{Glossary("HTML")}} を保持するためのメカニズムです。
 
@@ -30,10 +16,10 @@ translation_of: Web/HTML/Element/template
         <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#metadata_content">メタデータコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#flow_content">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#script-supporting_elements">スクリプト対応要素</a>
+        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#スクリプト対応要素">スクリプト対応要素</a>
       </td>
     </tr>
     <tr>
@@ -47,9 +33,9 @@ translation_of: Web/HTML/Element/template
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#metadata_content">メタデータコンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#script-supporting_elements">スクリプト対応要素</a>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#スクリプト対応要素">スクリプト対応要素</a>
         を受け付けるすべての要素。また、 {{htmlattrxref("span", "colgroup")}} 属性を持たない {{HTMLElement("colgroup")}} 要素の子になることもできます。
       </td>
     </tr>

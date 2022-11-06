@@ -4,6 +4,7 @@ slug: Web/CSS/::-moz-range-thumb
 browser-compat: css.selectors.-moz-range-thumb
 translation_of: Web/CSS/::-moz-range-thumb
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Le pseudo-élément **`::-moz-range-thumb`** représente le curseur qui se déplace le long de la piste dans un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) de type `range` et qui permet de modifier la valeur numérique associée.
@@ -36,7 +37,7 @@ input[type=range]::-moz-range-thumb {
 
 Une barre de progression mise en forme avec ces règles devrait ressembler à&nbsp;:
 
-![Un élément <input type=range> avec un curseur vert](screen_shot_2015-12-04_at_13.30.08.png)
+![Un élément \<input type=range> avec un curseur vert](screen_shot_2015-12-04_at_13.30.08.png)
 
 ## Spécifications
 
