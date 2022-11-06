@@ -7,6 +7,7 @@ browser-compat: javascript.builtins.Symbol.toStringTag
 l10n:
   sourceCommit: d5d9a70d1f8bc041c4ff226c3ff7e02382c5efef
 ---
+
 {{JSRef}}
 
 El símbolo conocido como **`Symbol.toStringTag`** es una propiedad con valor de cadena que se utiliza en la creación de la descripción de cadena por defecto de un objeto. Se accede a ella internamente mediante el método {{jsxref("Object.prototype.toString()")}}.

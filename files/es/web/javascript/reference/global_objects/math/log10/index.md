@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/log10
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log10
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/log10
 ---
+
 {{JSRef}}
 
 **`Math.log10()`** funcion que retorna el logaritmo de base 10 de un numero, esto es

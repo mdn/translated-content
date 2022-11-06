@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/abs
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/abs
 ---
+
 {{JSRef}}
 
 La función **`Math.abs()`** retorna el valor absoluto de un número, que es

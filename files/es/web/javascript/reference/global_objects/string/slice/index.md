@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/slice
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 ## Resumen

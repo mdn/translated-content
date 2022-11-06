@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/ignoreCase
 ---
+
 {{JSRef}}
 
 La propiedad **`ignoreCase`** indica si la expresión regular está usando la bandera "i". `ignoreCase` es una propiedad de _sólo lectura_ de una instancia de expresión regular.

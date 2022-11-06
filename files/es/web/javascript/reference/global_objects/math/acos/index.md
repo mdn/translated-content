@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/acos
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/acos
 ---
+
 {{JSRef}}
 
 La función **`Math.acos()`** devuelve el arco coseno (en radianes) de un número que es

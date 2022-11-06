@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/reject
 ---
+
 {{JSRef}}
 
 El método **`Promise.reject(reason)`** retorna un objeto `Promise` que es rechazado por la razón específicada.

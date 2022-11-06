@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Iteration_protocols
 original_slug: Web/JavaScript/Referencia/Iteration_protocols
 ---
+
 {{jsSidebar("More")}}Las nuevas características de ECMAScript 6 no solo están asociadas a cambios y adiciones de sintaxis o a nuevos objetos nativos, sino también a protocolos. Dichos protocolos puede ser implementados por cualquier objeto en relación a algunas convenciones.Existen dos protocolos: El[protocolo iterable](#The_.22iterable.22_protocol) y el[protocolo iterador](#The_.22iterator.22_protocol).
 
 ## El protocolo iterable

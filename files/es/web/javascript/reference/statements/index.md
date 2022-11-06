@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements
 original_slug: Web/JavaScript/Referencia/Sentencias
 ---
+
 {{jsSidebar("Statements")}}
 
 Las aplicaciones JavaScript se componen de sentencias con una sintaxis propia. Una sentencia puede estar formada por múltiples líneas. Puede haber varias sentencias en una sola línea si separamos cada una de las sentencias por un punto y coma. No es una palabra clave, sino un grupo de palabras clave.

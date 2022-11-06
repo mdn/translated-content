@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isFinite
 ---
+
 {{JSRef}}
 
 El método **`Number.isFinite()`** determina si el valor pasado es un número finito.

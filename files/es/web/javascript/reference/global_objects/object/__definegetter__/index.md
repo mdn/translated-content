@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/__defineGetter__
 ---
+
 {{JSRef}}
 
 > **Advertencia:** Esta característica está obsoleta en favor de definir getters usando el [object initializer syntax](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer) o la API {{jsxref("Object.defineProperty()")}}.

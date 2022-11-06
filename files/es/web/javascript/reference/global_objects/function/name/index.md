@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/name
 ---
+
 {{JSRef}}
 
 La propiedad **`function.name`** retorna el nombre de la función o retorna `"anonymous"` por funciones creadas anónimamente.

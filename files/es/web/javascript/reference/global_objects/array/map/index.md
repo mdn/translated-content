@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/map
 ---
+
 {{JSRef}}
 
 El método **`map()`** crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.

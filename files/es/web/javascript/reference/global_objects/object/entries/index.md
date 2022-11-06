@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/entries
 ---
+
 {{JSRef}}
 
 El método **`Object.entries()`** devuelve una matriz de pares propios de una propiedad enumerable [key, value] de un objeto dado, en el mismo orden que es proporcionado por {{jsxref("Sentencias/for...in", "for...in")}} (La diferencia es que un bucle for-in enumera las propiedades en la cadena de prototipos).

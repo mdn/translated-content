@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/entries
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/entries
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/entries
 ---
+
 {{JSRef}}
 
 El método **`entries()`** devuelve un nuevo objeto de tipo `Iterator` que contiene **un array de tuplas `[value, value]`** por cada elemento en el `Set` original, manteniendo el orden de inserción. En los objetos de tipo `Set` no existe una clave key como ocurre en los objetos de tipo `Map`. Sin embargo, para mantener una API similar a la de los objetos de tipo `Map`, cada _entry_ contiene el mismo valor para su clave y valor, devolviendo por tanto un array de tuplas `[value, value]`.

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/propertyIsEnumerable
 ---
+
 {{JSRef}}
 
 El método **`propertyIsEnumerable()`** regresa un Boleano indicando si la propiedad especificada es enumerable.

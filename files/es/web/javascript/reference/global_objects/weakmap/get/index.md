@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/get
 ---
+
 {{JSRef}}
 
 El método **`get()`** devuelve un elemento específico del objeto `WeakMap`.

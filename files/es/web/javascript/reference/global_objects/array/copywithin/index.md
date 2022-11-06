@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/copyWithin
 ---
+
 {{JSRef}}
 
 El método **`copyWithin()`** transfiere una copia plana de una sección a otra dentro del mismo array ( o contexto similar ), sin modificar su propiedad length y lo devuelve.

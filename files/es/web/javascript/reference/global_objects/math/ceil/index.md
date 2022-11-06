@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/ceil
 ---
+
 {{JSRef}}
 
 La función **`Math.ceil()`** devuelve el entero mayor o igual más próximo a un número dado.

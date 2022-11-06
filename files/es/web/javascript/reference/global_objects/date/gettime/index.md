@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getTime
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 ## Resumen

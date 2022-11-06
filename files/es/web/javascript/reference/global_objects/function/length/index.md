@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/length
 ---
+
 {{JSRef("Global_Objects", "Function")}}
 
 ## Sumario

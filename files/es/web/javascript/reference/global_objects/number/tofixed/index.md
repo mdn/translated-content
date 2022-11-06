@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toFixed
 ---
+
 {{JSRef}}
 
 El método **`toFixed()`** formatea un número usando notación de punto fijo.

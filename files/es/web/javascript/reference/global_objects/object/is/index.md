@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/is
 ---
+
 {{JSRef}}
 
 El método **`Object.is()`** determina si dos valores [son iguales](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness).

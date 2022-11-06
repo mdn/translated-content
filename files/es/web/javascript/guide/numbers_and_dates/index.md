@@ -16,6 +16,7 @@ tags:
   - l10n:priority
 translation_of: Web/JavaScript/Guide/Numbers_and_dates
 ---
+
 {{jsSidebar("JavaScript Guide", "Guía JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
 
 Este capítulo presenta los conceptos, objetos y funciones que se utilizan para trabajar y realizar cálculos utilizando números y fechas en JavaScript. Esto incluye el uso de números escritos en varias bases, incluyendo decimal, binario y hexadecimal, así como el uso del objeto global {{JSxRef("Math")}} para realizar una amplia variedad de operaciones matemáticas con números.

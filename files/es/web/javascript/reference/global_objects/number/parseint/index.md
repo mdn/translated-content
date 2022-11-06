@@ -6,6 +6,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/parseInt
 ---
+
 {{JSRef}}
 
 The **`Number.parseInt()`** method parses a string argument and returns an integer of the specified radix or base.

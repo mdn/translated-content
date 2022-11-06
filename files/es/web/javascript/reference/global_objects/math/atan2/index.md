@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan2
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/atan2
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Resumen

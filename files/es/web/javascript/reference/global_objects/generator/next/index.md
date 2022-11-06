@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Generator/next
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador/next
 ---
+
 {{JSRef}}
 
 El método **`next()`** regresa un objeto con las propiedades `done` y `value`. También puedes pasar un parámetro al método `next` para enviar un valor al generador.

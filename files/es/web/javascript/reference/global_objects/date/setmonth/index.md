@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/setMonth
 ---
+
 {{JSRef}}El método **`setMonth()`** establece el mes para una fecha específica de acuerdo con el año establecido actualmente.{{EmbedInteractiveExample("pages/js/date-setmonth.html")}}
 
 ## Sintaxis

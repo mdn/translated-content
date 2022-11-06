@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 browser-compat: javascript.builtins.String.localeCompare
 ---
+
 {{JSRef}}
 
 El método **`localeCompare()`** retorna un número indicando si una cadena de
