@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
+
 {{JSRef}}
 
 El objeto **`WebAssembly`** de JavaScript actua como un namespace para todas las funcionalidades realcionados con [WebAssembly](/es/docs/WebAssembly).

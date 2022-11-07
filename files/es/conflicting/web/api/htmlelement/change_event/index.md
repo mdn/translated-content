@@ -4,6 +4,7 @@ slug: conflicting/Web/API/HTMLElement/change_event
 translation_of: Web/API/GlobalEventHandlers/onchange
 original_slug: Web/API/GlobalEventHandlers/onchange
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 La propiedad `onchange` establece y devuelve el [event handler](/docs/Web/Guide/Events/Event_handlers) para el evento {{event("change")}}.

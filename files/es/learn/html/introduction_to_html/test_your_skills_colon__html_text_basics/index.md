@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics
 original_slug: Learn/HTML/Introduccion_a_HTML/Prueba_tus_habilidades:_Texto_básico_HTML
 ---
+
 {{learnsidebar}}
 
 El objetivo de esta prueba de habilidad es evaluar si has comprendido el artículo [Fundamentos de texto en HTML](/es/docs/Learn/HTML/Introduccion_a_HTML/texto).

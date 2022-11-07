@@ -18,6 +18,7 @@ tags:
   - l10n:priority
 translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 
 Cuando construiste el juego "Adivina el número" en el artículo anterior, es posible que hayas descubierto que no funcionó. Tranquilo — este artículo tiene como objetivo evitar que te rasques la cabeza por este tipo de problemas brindándote algunos consejos sobre cómo encontrar y corregir errores en programas JavaScript.

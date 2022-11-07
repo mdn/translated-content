@@ -12,6 +12,7 @@ tags:
 translation_of: Web/API/DOMString
 original_slug: Web/API/DOMString
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMString`** es un String UTF-16. Dado que JavaScript ya usa estos strings, se mapea `DOMString` directamente a {{jsxref("String")}}.

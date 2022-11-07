@@ -7,6 +7,7 @@ tags:
   - Principante
 translation_of: Learn/JavaScript/Howto
 ---
+
 {{LearnSidebar}}
 
 Los siguientes enlaces apuntan a soluciones a problemas comunes de todos los días que deberá solucionar para que su código JavaScript se ejecute correctamente..

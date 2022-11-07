@@ -4,6 +4,7 @@ slug: Learn/CSS/Howto
 translation_of: Learn/CSS/Howto
 original_slug: Learn/CSS/Sábercomo
 ---
+
 {{LearnSidebar}}
 
 Los siguientes enlaces apuntan a soluciones comunes a los problemas cotidianos que necesitará resolver con CSS.

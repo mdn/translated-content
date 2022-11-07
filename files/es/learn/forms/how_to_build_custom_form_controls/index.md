@@ -4,6 +4,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: Learn/HTML/Forms/como_crear_widgets_de_formularios_personalizados
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
 
 Hay muchos casos donde los [widgets de formularios HTML disponibles](/es/docs/HTML/Forms/The_native_form_widgets) simplemente no son suficientes. si desea [establecer un estilo avanzado](/es/docs/Advanced_styling_for_HTML_forms) en algunos widgets como el elemento {{HTMLElement("select")}} o si desea proporcionar comportamientos personalizados, no tiene más opción que crear sus propios widgets.

@@ -7,6 +7,7 @@ tags:
   - Lenguaje de programación
 translation_of: Glossary/Java
 ---
+
 Java es un lenguaje de {{Glossary("computer programming", "programación")}} semi-compilado, {{glossary("OOP", "orientado a objetos")}} y portable.
 
 Java está tipado estáticamente y tiene una sintaxis parecida a la de C. Tiene una gran librería de funciones fáciles de usar, el Java Software Development Kit (SDK).
