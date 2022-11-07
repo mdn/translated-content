@@ -80,7 +80,7 @@ box.valueOf();
 
 ### 在对象上使用一元加操作符
 
-[一元加](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)对其操作数会执行 [number coercion](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)，对于大多数没有 [`@@toPrimitive`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 的对象，意味这调用它的 `valueOf()`。然而，如果对象没有一个自定义的 `valueOf()` 方法，原始的实现将会导致 `valueOf()` 被忽略，转而使用 `toString()` 的返回值。
+[一元加](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)对其操作数会执行[强制数字转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)，对于大多数没有 [`@@toPrimitive`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 的对象，意味这调用它的 `valueOf()`。然而，如果对象没有一个自定义的 `valueOf()` 方法，原始的实现将会导致 `valueOf()` 被忽略，转而使用 `toString()` 的返回值。
 
 ```js
 +new Date(); // the current timestamp; same as new Date().getTime()
