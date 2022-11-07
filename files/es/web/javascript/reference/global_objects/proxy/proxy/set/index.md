@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 ---
+
 {{JSRef}}
 
 El método **`handler.set()`** captura las asignaciones de un valor a una determinada propiedad.

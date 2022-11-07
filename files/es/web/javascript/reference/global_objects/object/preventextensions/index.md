@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/preventExtensions
 ---
+
 {{JSRef}}
 
 El método **`Object.preventExtensions()`** previene que nuevas propiedades sean agregadas a un objeto (p.e. previene la extensión futuras al objeto).

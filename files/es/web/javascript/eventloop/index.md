@@ -6,6 +6,7 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/EventLoop
 ---
+
 {{JsSidebar("Advanced")}}JavaScript poseé un modelo de concurrencia basado en un "loop de eventos". Este modelo es bastante diferente al modelo de otros lenguajes como C o Java.
 
 ## Conceptos de un programa en ejecución

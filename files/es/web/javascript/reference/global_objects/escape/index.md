@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/escape
 original_slug: Web/JavaScript/Referencia/Objetos_globales/escape
 ---
+
 {{Deprecated_header}}
 
 > **Advertencia:**  `escape()` no esta estrictamente en desuso("eliminada por los estándares Web"), esta definida en [Anexo B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) El estándar ECMA-262 , cuya introducción establece:

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/message
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/message
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/message
 ---
+
 {{JSRef}}
 
 La propiedad **`message`** es una descripción legible del error.

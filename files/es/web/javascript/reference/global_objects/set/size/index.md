@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/size
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/size
 ---
+
 {{JSRef}}
 
 La propiedad de acceso **`size`** devuelve el número de elementos que hay en el objeto {{jsxref("Set")}}.

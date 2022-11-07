@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/atan
 ---
+
 {{JSRef}}
 
 La función **`Math.atan()`** retorna el arcotangente (en radianes) de un number, esto es

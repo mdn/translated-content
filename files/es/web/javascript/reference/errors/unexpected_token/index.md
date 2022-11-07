@@ -7,6 +7,7 @@ tags:
   - errores
 translation_of: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensaje

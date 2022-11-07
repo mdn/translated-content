@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/add
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/add
 ---
+
 {{JSRef}}
 
 El método **`add()`** añade un nuevo elemento con un valor específico al final del objeto `Set`.

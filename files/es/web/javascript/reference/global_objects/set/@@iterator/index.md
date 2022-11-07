@@ -6,6 +6,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/@@iterator
 ---
+
 {{JSRef}}
 
 El valor inicial de la propiedad **`@@iterator`**, es la misma función objeto que el valor inicial de la propiedad {{jsxref("Set.prototype.values()", "values")}}.

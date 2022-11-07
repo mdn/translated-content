@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/expm1
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/expm1
 ---
+
 {{JSRef}}
 
 La función **`Math.expm1()`** regresa `e^x - 1`, donde `x` es el argumento, y {{jsxref("Math.E", "e", "", 1)}} la base del logaritmo natural.

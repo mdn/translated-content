@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/min
 ---
+
 {{JSRef}}
 
 La función **`Math.min()`** devuelve el menor de cero o más números.

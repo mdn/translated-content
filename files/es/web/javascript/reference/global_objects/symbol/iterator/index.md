@@ -7,6 +7,7 @@ browser-compat: javascript.builtins.Symbol.iterator
 l10n:
   sourceCommit: 552892d8fc6707c47ae879aef32e6ac3023166ee
 ---
+
 {{JSRef}}
 
 El símbolo conocido como **`Symbol.iterator`** especifica el iterador por defecto para un objeto. Utilizado por [`for...of`](/es/docs/Web/JavaScript/Reference/Statements/for...of).

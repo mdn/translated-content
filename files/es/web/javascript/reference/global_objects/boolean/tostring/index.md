@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Boolean/toSource
 ---
+
 {{JSRef("Objetos_globales", "Boolean")}} {{ Non-standard_header() }}
 
 ## Resumen

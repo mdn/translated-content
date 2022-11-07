@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Template_literals
 original_slug: Web/JavaScript/Referencia/template_strings
 ---
+
 {{JsSidebar("More")}}
 
 Las plantillas literales son cadenas literales que habilitan el uso de expresiones incrustadas. Con ellas, es posible utilizar cadenas de caracteres de más de una línea, y funcionalidades de interpolación de cadenas de caracteres.

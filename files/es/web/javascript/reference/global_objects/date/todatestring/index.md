@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toDateString
 ---
+
 {{JSRef}}
 
 El método **`toDateString()`** devuelve la porción de la fecha de un objeto {{jsxref("Date")}} en formato humano legible en Inglés Americano.

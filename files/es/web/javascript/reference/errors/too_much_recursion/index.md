@@ -10,6 +10,7 @@ tags:
   - Recursión(2)
 translation_of: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensaje

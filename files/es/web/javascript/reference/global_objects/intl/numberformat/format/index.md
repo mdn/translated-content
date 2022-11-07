@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/NumberFormat/format
 ---
+
 {{JSRef}}
 
 El método **`Intl.NumberFormat.prototype.format()`** formatea un número de acuerdo con la configuración regional y las opciones de formato de este objeto {{jsxref("NumberFormat")}}.

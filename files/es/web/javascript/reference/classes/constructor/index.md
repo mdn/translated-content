@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Classes/constructor
 original_slug: Web/JavaScript/Referencia/Classes/constructor
 ---
+
 {{jsSidebar("Classes")}}
 
 El método constructor es un metodo especial para crear e inicializar un objeto creado a partir de una clase.

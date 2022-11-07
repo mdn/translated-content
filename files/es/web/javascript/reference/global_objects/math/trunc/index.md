@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/trunc
 ---
+
 {{JSRef}}
 
 La función **`Math.trunc()`** devuelve la parte entera de un numero removiendo cualquier dígito decimal (dígitos situados después de la coma).

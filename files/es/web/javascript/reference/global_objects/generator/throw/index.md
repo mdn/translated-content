@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador/throw
 ---
+
 {{JSRef}}
 
 El método **`throw()`** reanuda la ejecución de un generador al lanzar un error en éste y regresar un objeto con las dos propiedades `done` y `value`.

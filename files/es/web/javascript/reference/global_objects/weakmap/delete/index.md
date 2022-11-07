@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/delete
 ---
+
 {{JSRef}}
 
 El método **`delete()`** elimina un elemento específico del objeto `WeakMap` .

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/test
 ---
+
 {{JSRef}}
 
 El método **`test()`** ejecuta la búsqueda de una ocurrencia entre una expresión regular y una cadena especificada. Devuelve `true` o `false`.

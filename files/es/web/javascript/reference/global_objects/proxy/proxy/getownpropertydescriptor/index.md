@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}El método **`handler.getOwnPropertyDescriptor()`** captura {{jsxref("Object.getOwnPropertyDescriptor()")}}.
 
 ## Sintaxis

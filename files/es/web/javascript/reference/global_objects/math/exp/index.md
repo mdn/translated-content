@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/exp
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/exp
 ---
+
 {{JSRef}}La función **Math.exp()** devuelve `ex`, donde `x` es el argumento, y `e` es {{jsxref("Math.E", "El número de Euler (también conocido como la constante de Napier)", "", 1)}}, la base de los algoritmos naturales.
 
 ## Sintaxis
