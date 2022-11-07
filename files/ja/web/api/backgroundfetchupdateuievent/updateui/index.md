@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`updateUI()`** method of the {{domxref("BackgroundFetchUpdateUIEvent")}} interface updates the title and icon in the user interface to show the status of a background fetch.
+{{domxref("BackgroundFetchUpdateUIEvent")}} インターフェイスの **`updateUI()`** メソッドは、 UI 上のタイトルとアイコンを更新し、バックグラウンドのフェッチの成否を表示します。
 
-This method may only be run once, to notify the user on a failed or a successful fetch.
+このメソッドは一度だけ実行され、フェッチの成否をユーザーに通知することができます。
 
 ## 構文
 
@@ -21,39 +21,39 @@ updateUI(options)
 
 - `options` {{optional_inline}}
 
-  - : An object containing any of the following:
+  - : 下記のいずれかを含むオブジェクト。
 
     - `icons` {{optional_inline}}
 
-      - : A list of one or more image resources, containing icons for use in the user interface. An image resource is an object containing:
+      - : UI で用いるアイコンを含む、 1 枚以上の画像リソースのリストです。画像リソースは下記の情報を持つオブジェクトです。
 
         - `src`
-          - : A string which is a URL of an image.
+          - : 画像のURL文字列。
         - `sizes` {{optional_inline}}
-          - : A string which is equivalent to a {{htmlelement("link")}} `sizes` attribute.
+          - : {{htmlelement("link")}} `sizes` 属性と同じ意味を持つ文字列。
         - `type` {{optional_inline}}
-          - : A string containing an image MIME type.
+          - : 画像の MIME タイプを含む文字列。
         - `label` {{optional_inline}}
-          - : A string providing a name for the associated image.
+          - : 画像の名前を指定する文字列。
 
     - `title` {{optional_inline}}
-      - : A string containing the new title of the user interface.
+      - : UI の新しいタイトルを指定する文字列。
 
 ### 返値
 
-A {{jsxref("Promise")}}.
+{{jsxref("Promise")}} 。
 
 ### 例外
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if any of the following are true:
-    - The {{domxref("Event.isTrusted","isTrusted")}} property is `false`.
-    - The {{domxref("BackgroundFetchUpdateUIEvent")}} UI updated flag is already set, indicating that the `updateUI()` method has already been called.
-    - The {{domxref("BackgroundFetchUpdateUIEvent")}} is not active.
+  - : 以下のいずれかに当てはまるとき、発生します。
+    - {{domxref("Event.isTrusted","isTrusted")}} プロパティが `false` のとき。
+    - {{domxref("BackgroundFetchUpdateUIEvent")}} UI 更新のフラグがすでにセットされている、すなわち、すでに `updateUI()` メソッドが呼ばれたあとであるとき。
+    - {{domxref("BackgroundFetchUpdateUIEvent")}} がアクティブではないとき。
 
 ## 例
 
-The following example demonstrates updating the UI with a title and image icon on a successful fetch.
+以下の例では、フェッチ成功時に UI のタイトルとアイコン画像を更新しています。
 
 ```js
 addEventListener("backgroundfetchsuccess", (event) => {
