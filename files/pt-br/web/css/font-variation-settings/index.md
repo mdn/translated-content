@@ -2,6 +2,7 @@
 title: font-variation-settings
 slug: Web/CSS/font-variation-settings
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`font-variation-settings`** fornece controle de baixo nível sobre características de [variable font](/pt-BR/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide), especificando os nomes dos quatro eixos das características que você deseja variar, juntamente com seus valores.

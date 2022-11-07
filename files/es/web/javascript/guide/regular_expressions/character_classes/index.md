@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Clases_de_caracteres
 ---
+
 {{JsSidebar("Guía de JavaScript")}}
 
 Las clases de caracteres distinguen tipos de caracteres como, por ejemplo, distinguen entre letras y dígitos.

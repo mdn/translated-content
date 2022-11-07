@@ -5,6 +5,7 @@ translation_of: Web/HTML/Element/input
 original_slug: Web/HTML/Elemento/input
 browser-compat: html.elements.input
 ---
+
 ## Resumen
 
 El elemento HTML `<input>` se usa para crear controles interactivos para formularios basados en la web con el fin de recibir datos del usuario.Hay disponible una amplia variedad de tipos de datos de entrada y widgets de control, que dependen del dispositivo y el agente de usuario ([user agent](/es/docs/Glossary/user_agent)).El elemento `<input>` es uno de los más potentes y complejos en todo HTML debido a la gran cantidad de combinaciones de tipos y atributos de entrada.

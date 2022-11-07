@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/seal
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/seal
 ---
+
 {{JSRef}}
 
 El método **`Object.seal()`** sella un objeto, previniendo que puedan añadirse nuevas propiedades al mismo, y marcando todas las propiedades existentes como no-configurables. Los valores de las propiedades presentes permanecen pudiendo cambiarse en tanto en cuanto dichas propiedades sean de escritura.

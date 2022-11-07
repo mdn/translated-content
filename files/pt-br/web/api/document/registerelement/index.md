@@ -3,6 +3,7 @@ title: Document.registerElement()
 slug: Web/API/Document/registerElement
 original_slug: Web/API/Document/ElementoRegistrado
 ---
+
 {{APIRef("DOM")}}
 
 > **Nota:**document.registerElement() está depreciado em favor do customElements.define().

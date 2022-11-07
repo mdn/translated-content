@@ -2,6 +2,7 @@
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 A interface HTMLInputElement fornece propriedades e métodos especiais (além da interface regular {{domxref ("HTMLElement")}}) que também tem disponível por herança) para manipular o layout e a apresentação dos elementos de entrada.

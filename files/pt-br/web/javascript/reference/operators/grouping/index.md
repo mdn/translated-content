@@ -2,6 +2,7 @@
 title: Operador de Agrupamento
 slug: Web/JavaScript/Reference/Operators/Grouping
 ---
+
 {{jsSidebar("Operators")}}
 
 ## Sumário

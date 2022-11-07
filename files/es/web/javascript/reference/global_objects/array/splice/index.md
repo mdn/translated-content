@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/splice
 ---
+
 {{JSRef}}
 
 El método **`splice()`** cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.

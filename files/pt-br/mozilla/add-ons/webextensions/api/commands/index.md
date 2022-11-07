@@ -2,6 +2,7 @@
 title: commands
 slug: Mozilla/Add-ons/WebExtensions/API/commands
 ---
+
 {{AddonSidebar}}
 
 Escuta por usuário executando comandos que você registrou usando o [`commands` manifest.json key](/pt-BR/Add-ons/WebExtensions/manifest.json/commands).

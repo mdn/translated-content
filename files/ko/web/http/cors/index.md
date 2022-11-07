@@ -11,6 +11,7 @@ tags:
   - 동일 출처
 translation_of: Web/HTTP/CORS
 ---
+
 **교차 출처 리소스 공유**(Cross-Origin Resource Sharing, {{Glossary("CORS")}})는 추가 {{Glossary("HTTP")}} 헤더를 사용하여, 한 {{glossary("origin", "출처")}}에서 실행 중인 웹 애플리케이션이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 부여하도록 브라우저에 알려주는 체제입니다. 웹 애플리케이션은 리소스가 자신의 출처(도메인, 프로토콜, 포트)와 다를 때 교차 출처 HTTP 요청을 실행합니다.
 
 교차 출처 요청의 예시: `https://domain-a.com`의 프론트 엔드 JavaScript 코드가 {{domxref("XMLHttpRequest")}}를 사용하여 `https://domain-b.com/data.json`을 요청하는 경우.
@@ -258,11 +259,11 @@ CORS 프로토콜은 본래 그 동작(리다이렉트)이 필요했지만, [이
 브라우저가 명세를 따라잡을 때 까지 다음 중 하나 혹은 둘 다를 수행하여 이 제한을 해결할 수 있습니다.
 
 - preflight 리다이렉트를 방지하기 위해 서버측 동작을 변경
-- preflight를 발생시키지 않는 [simple request](/ko/docs/Web/HTTP/Access_control_CORS$edit#Simple_requests) 가 되도록 요청을 변경
+- preflight를 발생시키지 않는 [simple request](#simple_requests) 가 되도록 요청을 변경
 
 이것이 가능하지 않은 경우 다른 방법도 있습니다.
 
-1. Fetch API를 통해 {{domxref("Response.url")}} 이나 {{domxref("XMLHttpRequest.responseURL")}}를 사용하여 [simple request](/ko/docs/Web/HTTP/Access_control_CORS$edit#Simple_requests) 를 작성합니다. 이 simple request를 이용하여 실제 preflighted request가 끝나는 URL을 판별하세요.
+1. Fetch API를 통해 {{domxref("Response.url")}} 이나 {{domxref("XMLHttpRequest.responseURL")}}를 사용하여 [simple request](#simple_requests) 를 작성합니다. 이 simple request를 이용하여 실제 preflighted request가 끝나는 URL을 판별하세요.
 2. 첫 번째 단계에서 `Response.url` 혹은 `XMLHttpRequest.responseURL` 로부터 얻은 URL을 사용하여 또 다른 요청(실제 요청)을 만듭니다.
 
 그러나 요청에 `Authorization` 헤더가 있기 때문에 preflight를 트리거하는 요청일 경우에, 위의 단계를 사용하여 제한을 제거할 수 없습니다. 또한 요청이 있는 서버를 제어하지 않으면 문제를 해결할 수 없습니다.
@@ -401,7 +402,7 @@ Access-Control-Max-Age: <delta-seconds>
 Access-Control-Allow-Credentials: true
 ```
 
-[Credentialed requests](/ko/docs/Web/HTTP/Access_control_CORS$edit#Requests_with_credentials) 은 위에 설명되어 있습니다.
+[Credentialed requests](#requests_with_credentials) 은 위에 설명되어 있습니다.
 
 ### Access-Control-Allow-Methods
 
@@ -411,11 +412,11 @@ Access-Control-Allow-Credentials: true
 Access-Control-Allow-Methods: <method>[, <method>]*
 ```
 
-이 헤더를 브라우저로 전송하는 예제를 포함하여 [preflight request 의 예제는](/ko/docs/Web/HTTP/Access_control_CORS$edit#Preflighted_requests), 위에 나와 있습니다.
+이 헤더를 브라우저로 전송하는 예제를 포함하여 [preflight request 의 예제는](#preflighted_requests), 위에 나와 있습니다.
 
 ### Access-Control-Allow-Headers
 
-[preflight request](/ko/docs/Web/HTTP/Access_control_CORS$edit#Preflighted_requests) 에 대한 응답으로 {{HTTPHeader("Access-Control-Allow-Headers")}} 헤더가 사용됩니다. 실제 요청시 사용할 수 있는 HTTP 헤더를 나타냅니다.
+[preflight request](#preflighted_requests) 에 대한 응답으로 {{HTTPHeader("Access-Control-Allow-Headers")}} 헤더가 사용됩니다. 실제 요청시 사용할 수 있는 HTTP 헤더를 나타냅니다.
 
 ```
 Access-Control-Allow-Headers: <header-name>[, <header-name>]*
@@ -447,7 +448,7 @@ origin 은 요청이 시작된 서버를 나타내는 URI 입니다. 경로 정�
 Access-Control-Request-Method: <method>
 ```
 
-이 사용법의 예제는 [위에서](/ko/docs/Web/HTTP/Access_control_CORS$edit#Preflighted_requests) 찾을 수 있습니다.
+이 사용법의 예제는 [위에서](#preflighted_requests) 찾을 수 있습니다.
 
 ### Access-Control-Request-Headers
 
@@ -457,7 +458,7 @@ Access-Control-Request-Method: <method>
 Access-Control-Request-Headers: <field-name>[, <field-name>]*
 ```
 
-이 사용법의 예제는 [위에서](/ko/docs/Web/HTTP/Access_control_CORS$edit#Preflighted_requests) 찾을 수 있습니다.
+이 사용법의 예제는 [위에서](#preflighted_requests) 찾을 수 있습니다.
 
 ## 명세
 

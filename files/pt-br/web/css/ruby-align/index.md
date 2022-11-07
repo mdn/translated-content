@@ -2,6 +2,7 @@
 title: ruby-align
 slug: Web/CSS/ruby-align
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Summary

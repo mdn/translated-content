@@ -4,6 +4,7 @@ slug: Web/API/Node/selectstart_event
 translation_of: Web/API/GlobalEventHandlers/onselectstart
 original_slug: Web/API/Document/selectstart_event
 ---
+
 {{ApiRef('DOM')}}{{SeeCompatTable}}
 
 La propiedad **`GlobalEventHandlers.onselectstart`** representa el manejador de evento que es invocado cuando un evento {{event("selectstart")}} alcanza el objeto.

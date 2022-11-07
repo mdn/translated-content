@@ -11,6 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 translation_of_original: Web/JavaScript/Reference/Global_Objects/Proxy/handler
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler
 ---
+
 {{JSRef}}
 
 The proxy's handler object is a placeholder object which contains traps for {{jsxref("Proxy", "proxies", "", 1)}}.

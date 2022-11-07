@@ -7,6 +7,7 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/has-same-node
 ---
+
 {{XsltRef}}
 
 `set:has-same-node()` determina si dos conjuntos de nodos tienen algún nodo en común.

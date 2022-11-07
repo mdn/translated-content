@@ -11,6 +11,7 @@ tags:
   - TopicStub
 translation_of: Web/API/ClipboardEvent
 ---
+
 {{APIRef("Clipboard API")}} {{SeeCompatTable}}
 
 The **`ClipboardEvent`** interface represents events providing information related to modification of the clipboard, that is {{event("cut")}}, {{event("copy")}}, and {{event("paste")}} events.

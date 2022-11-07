@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/API/Element/removeAttribute
 ---
+
 {{ APIRef }}
 
 `removeAttribute` elimina un atributo del elemento especificado.

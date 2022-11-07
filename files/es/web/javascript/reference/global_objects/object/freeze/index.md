@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/freeze
 ---
+
 {{JSRef}}
 
 El método **`Object.freeze()`** _congela_ un objeto, es decir: impide que se le agreguen nuevas propiedades; impide que se puedan eliminar las propiedades ya existentes; impide que dichas propiedades, o su capacidad de enumeración, configuración, o escritura, puedan ser modificadas; impide también que se pueda modificar su prototipo. El método devuelve el objeto recibido.

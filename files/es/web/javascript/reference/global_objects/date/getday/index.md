@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getDay
 ---
+
 {{JSRef}}
 
 El método **`getDay()`** devuelve el día de la semana de la fecha especificada en función de la fecha local; siendo 0 (Domingo) el primer día.

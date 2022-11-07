@@ -3,6 +3,7 @@ title: Window.confirm()
 slug: Web/API/Window/confirm
 translation_of: Web/API/Window/confirm
 ---
+
 {{ApiRef("Window")}}
 
 El método **`Window.confirm()`** muestra una ventana de diálogo con un mensaje opcional y dos botones, Aceptar y Cancelar.

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/some
 ---
+
 {{JSRef}}
 
 El método **`some()`** comprueba si al menos un elemento del array cumple con la condición implementada por la función proporcionada.

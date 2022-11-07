@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/log
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/log
 ---
+
 {{JSRef}}
 
 La función **`Math.log()`** devuelve la base neutral de un número (base {{jsxref ("Math.E", "e")}})

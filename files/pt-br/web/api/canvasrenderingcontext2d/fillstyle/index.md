@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
 ---
+
 {{APIRef}}
 
 A propriedade **`CanvasRenderingContext2D.fillStyle`** da API do Canvas 2D especifica a cor ou o estilo para usar regiões internas. O valor inicial é `#000` (preto).

@@ -3,6 +3,7 @@ title: HTMLCanvasElement.width
 slug: Web/API/HTMLCanvasElement/width
 translation_of: Web/API/HTMLCanvasElement/width
 ---
+
 {{APIRef("Canvas API")}}
 
 TLa propiedad **`HTMLCanvasElement.width`** es un entero positivo que refleja el atributo {{htmlattrxref("width", "canvas")}} del elemento {{HTMLElement("canvas")}} interpretado en pixeles CSS. Cuando el atributo no esta especificado o se define con un valor invalido (ej. Número negativo), es usado el valor por defecto de 150.

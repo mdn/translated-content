@@ -10,6 +10,7 @@ tags:
   - Web
 translation_of: Web/CSS/frequency
 ---
+
 {{CSSRef}}
 
 ## Resumen

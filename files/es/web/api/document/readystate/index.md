@@ -3,6 +3,7 @@ title: Document.readyState
 slug: Web/API/Document/readyState
 translation_of: Web/API/Document/readyState
 ---
+
 {{APIRef("DOM")}}
 
 ## Resumen

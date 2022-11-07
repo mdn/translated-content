@@ -4,6 +4,7 @@ slug: Web/HTML/Element/th
 translation_of: Web/HTML/Element/th
 original_slug: Web/HTML/Elemento/th
 ---
+
 El elemento **HTML `<th>`** define una celda como encabezado de un grupo de celdas en una tabla. La naturaleza exacta de este grupo está definida por los atributos {{htmlattrxref("scope", "th")}} y {{htmlattrxref("headers", "th")}}.
 
 <table class="properties">

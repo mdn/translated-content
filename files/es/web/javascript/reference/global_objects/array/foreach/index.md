@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/forEach
 ---
+
 {{JSRef}}
 
 El método **`forEach()`** ejecuta la función indicada una vez por cada elemento del array.

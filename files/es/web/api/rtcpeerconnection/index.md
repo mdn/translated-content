@@ -3,6 +3,7 @@ title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
 translation_of: Web/API/RTCPeerConnection
 ---
+
 {{APIRef('WebRTC')}}
 
 La interfaz **`RTCPeerConnection`** representa una conexión WebRTC entre un computador local y un par remoto (otro computador). Esta interfaz provee métodos para: conectar un equipo remoto (remote peer), mantener y monitorear esa coneexión y cerrar la conexión una vez que no se necesite más.

@@ -2,6 +2,7 @@
 title: Element.querySelector()
 slug: Web/API/Element/querySelector
 ---
+
 {{APIRef("DOM")}}
 
 Retorna o primeiro elemento descendente do elemento em que a função foi invocada e que corresponde aos seletores especificado.

@@ -4,6 +4,7 @@ slug: Web/Performance/How_browsers_work
 translation_of: Web/Performance/How_browsers_work
 original_slug: Web/Performance/브라우저는_어떻게_동작하는가
 ---
+
 Users want web experiences with content that is fast to load and smooth to interact with. Therefore, a developer should strive to achieve these two goals.
 
 To understand how to improve performance and perceived performance, it helps to understand how the browser works.

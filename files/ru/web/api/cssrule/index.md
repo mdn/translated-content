@@ -3,6 +3,7 @@ title: CSSRule
 slug: Web/API/CSSRule
 translation_of: Web/API/CSSRule
 ---
+
 {{APIRef("CSSOM")}}
 
 Интерфейс **CSSRule** представляет собой одно правило CSS. Есть несколько типов правил, перечисленных в разделе [Type constants](#type_constants) ниже.

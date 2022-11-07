@@ -9,6 +9,7 @@ tags:
   - transacción
 translation_of: Web/API/IDBDatabase/transaction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 El método **`transaction()`** _**`[transacción]`**_ de la interfaz {{domxref("IDBDatabase")}} retorna inmediatamente un objeto de transacción ({{domxref("IDBTransaction")}}) que contiene el método {{domxref("IDBTransaction.objectStore")}}, el cual puedes usar para acceder a tu almacén de objetos.

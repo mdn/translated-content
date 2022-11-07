@@ -2,6 +2,7 @@
 title: <caption>
 slug: Web/HTML/Element/caption
 ---
+
 ## Sumário
 
 O **Elemento** **HTML `<caption>` (**ou _Elemento HTML Subtitulo de Tabela_) representa o título de uma tabela. Embora ele seja sempre o primeiro filho de um {{HTMLElement("table")}}, seu estilo, usando CSS pode colocar ele em qualquer lugar relativo a tabela.

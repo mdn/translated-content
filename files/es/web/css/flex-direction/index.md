@@ -9,6 +9,7 @@ tags:
   - flexbox
 translation_of: Web/CSS/flex-direction
 ---
+
 {{CSSRef}}
 
 La propiedad CSS **`flex-direction`** especifica cómo colocar los objetos flexibles en el contenedor flexible definiendo el eje principal y la dirección (normal o al revés).

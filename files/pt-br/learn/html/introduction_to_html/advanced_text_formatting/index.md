@@ -3,6 +3,7 @@ title: Formatação avançada de texto
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 original_slug: Aprender/HTML/Introducao_ao_HTML/Formatacao_avancada_texto
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
 Existem muitos outros elementos em HTML para formatação de texto, que não tratamos no artigo de [Fundamentos do texto em HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML). Os elementos descritos neste artigo são menos conhecidos, mas ainda são úteis para conhecer (e isso ainda não é uma lista completa de todos os elementos). Aqui, você aprenderá a marcar citações, listas de descrição, código de computador e outros textos relacionados, subscrito e sobrescrito, informações de contato e muito mais.

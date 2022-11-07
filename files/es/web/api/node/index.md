@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/Node
 ---
+
 {{APIRef("DOM")}}
 
 **`Node`** es una interfaz en la cuál un número de objetos de tipo DOM API heredan. Esta interfaz permite que esos objetos sean tratados similarmente.

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/Document_Object_Model/Whitespace
 original_slug: Referencia_DOM_de_Gecko/Cómo_espacioenblanco
 ---
+
 {{APIRef("DOM")}}
 
 La presencia de espacios en blanco en el [DOM](/es/docs/Web/API/Document_Object_Model) puede causar problemas de diseño y dificultar la manipulación del árbol de contenido de formas inesperadas, dependiendo de dónde se encuentra. Este artículo explora cuándo pueden surgir dificultades y analiza qué se puede hacer para mitigar los problemas resultantes.

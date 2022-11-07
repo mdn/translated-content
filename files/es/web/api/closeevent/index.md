@@ -3,6 +3,7 @@ title: CloseEvent
 slug: Web/API/CloseEvent
 translation_of: Web/API/CloseEvent
 ---
+
 {{APIRef("Websockets API")}}
 
 Un `CloseEvent` se envia a los clientes usando {{Glossary("WebSockets")}} cuando la conexión esta cerrada. Esto se entrega al que escucha indicado por el atributo `onclose` del objeto `WebSocket.`

@@ -8,6 +8,7 @@ tags:
   - параметры
 translation_of: Learn/JavaScript/Building_blocks/Functions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 
 Другая важная концепция в кодировании — **функции** — позволяют хранить фрагмент кода, который выполняет одну задачу внутри определённого блока, а затем вызывать этот код всякий раз, когда вам это нужно, используя одну короткую команду, вместо того, чтобы вводить один и тот же код несколько раз.

@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/debugger
 original_slug: Web/JavaScript/Referencia/Sentencias/debugger
 ---
+
 {{jsSidebar("Statements")}}
 
 La sentencia **debugger** invoca cualquier funcionalidad de depuración disponible, tiene la misma función que un breakpoint. Si la funcionalidad de depuración no está disponible, esta sentencia no tiene efecto alguno.

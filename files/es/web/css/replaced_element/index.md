@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Replaced_element
 original_slug: Web/CSS/Elemento_reemplazo
 ---
+
 {{CSSRef()}}
 
 ## Summary

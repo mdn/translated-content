@@ -2,6 +2,7 @@
 title: Progressive web apps
 slug: Web/Progressive_web_apps
 ---
+
 Os aplicativos web progressivos usam APIs web modernas, juntamente com a estratégia tradicional de aprimoramento progressivo para criar aplicativos web entre plataformas. Esses aplicativos funcionam em todos os lugares e fornecem vários recursos que lhes dão as mesmas vantagens de experiência do usuário que os aplicativos nativos. Este conjunto de médicos diz tudo o que você precisa saber sobre eles.
 
 ## PWA advantages

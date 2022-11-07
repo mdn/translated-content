@@ -6,6 +6,7 @@ tags:
   - HTML DOM
 translation_of: Web/API/HTMLLIElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La interfaz **HTMLLIElement** expone las propiedades y los métodos específicos (más allá de los definidos por la interfaz regular {{domxref ("HTMLElement")}} que también tiene disponible por herencia) para manipular elementos de la lista.

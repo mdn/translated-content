@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/Heading_Elements
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<h1>`–`<h6>` 요소**는 6단계의 구획 제목을 나타냅니다. 구획 단계는 `<h1>`이 가장 높고 `<h6>`은 가장 낮습니다.
 

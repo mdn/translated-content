@@ -2,6 +2,7 @@
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 `Objetos do tipo KeyboardEvent` descrevem a interação do usuário com o teclado. Cada evento descreve uma tecla; o tipo de evento (`keydown`, `keypress`, ou `keyup`) identifica qual tipo de ação foi executada.

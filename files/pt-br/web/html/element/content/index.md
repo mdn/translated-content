@@ -3,6 +3,7 @@ title: '<content>: The Shadow DOM Content Placeholder element (obsolete)'
 slug: Web/HTML/Element/content
 original_slug: Web/HTML/Element/conteúdo
 ---
+
 {{Deprecated_header}}
 
 The **HTML `<content>` element**—an obsolete part of the [Web Components](/pt-BR/docs/Web/Web_Components) suite of technologies—was used inside of [Shadow DOM](/pt-BR/docs/Web/Web_Components/Shadow_DOM) as an {{glossary("insertion point")}}, and wasn't meant to be used in ordinary HTML. It has now been replaced by the {{HTMLElement("slot")}} element, which creates a point in the DOM at which a shadow DOM can be inserted.

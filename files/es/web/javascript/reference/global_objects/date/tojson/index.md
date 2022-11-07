@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toJSON
 ---
+
 {{JSRef}}
 
 El metodo **`toJSON()`** retorna una representacion de cadena del objeto {{jsxref("Date")}}

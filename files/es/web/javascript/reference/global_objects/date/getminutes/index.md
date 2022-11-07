@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getMinutes
 ---
+
 {{JSRef}}
 
 El método **`getMinutes()`** devuelve los minutos de la fecha especificada en función de la hora local.

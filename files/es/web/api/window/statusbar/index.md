@@ -3,6 +3,7 @@ title: Window.statusbar
 slug: Web/API/Window/statusbar
 translation_of: Web/API/Window/statusbar
 ---
+
 {{APIRef}}
 
 ## Resumen

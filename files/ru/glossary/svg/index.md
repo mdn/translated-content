@@ -10,6 +10,7 @@ tags:
 translation_of: Glossary/SVG
 original_slug: Глоссарий/SVG
 ---
+
 _Масштабируемая векторная графика_ ( **SVG** ) - это формат двумерного векторного изображения на основе синтаксиса {{Glossary("XML")}}.
 
 {{Glossary("W3C")}} начал работу над SVG в конце 1990 - х годов, но SVG стал популярным, когда {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 вышел с поддержкой SVG. Все основные, {{Glossary("browser","браузеры")}} теперь поддерживают SVG.

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 ---
+
 {{JSRef}}
 
 **`Object.fromEntries()`** 메서드는 키값 쌍의 목록을 객체로 바꿉니다.

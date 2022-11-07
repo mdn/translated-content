@@ -4,6 +4,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTML
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
 В начале Web был просто текстом, что было довольно скучно. К счастью, это продолжалось не долго - до появления возможности вставлять изображения (и другие, более интересные, типы контента) в веб-страницы. Существуют и другие типы мультимедиа, однако логичнее начать со скромного {{htmlelement("img")}} элемента, используемого для вставки простого изображения в веб-страницу. В этой статье мы рассмотрим, как использовать элемент, начиная с основ, снабжать примечаниями, используя {{htmlelement("figure")}}, и разберём, как это относится к фоновым изображениям {{glossary("CSS")}}.

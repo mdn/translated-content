@@ -2,6 +2,7 @@
 title: Date.prototype.toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ---
+
 {{JSRef}}
 
 O método **`toJSON()`** retorna uma representação representation do objeto {{jsxref("Date")}} como string.

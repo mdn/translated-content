@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador
 ---
+
 {{JSRef}}
 
 El objeto `Generator` es retornado por una {{jsxref("Statements/function*", "función generator", "", 1)}} y es conformado tanto el protocolo iterable como el protocolo iterador.

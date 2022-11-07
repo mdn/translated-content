@@ -10,6 +10,7 @@ tags:
   - getImageData
 translation_of: Web/API/CanvasRenderingContext2D/getImageData
 ---
+
 {{APIRef}}
 
 El método CanvasRenderingContext2D.getImageData() de la API de Canvas 2D devuelve un objeto ImageData que representa los datos de píxeles subyacentes para el área del lienzo denotada por el rectángulo que comienza en (sx, sy) y tiene un ancho de sw y una altura de sh. Este método no se ve afectado por la matriz de transformación de la lona.

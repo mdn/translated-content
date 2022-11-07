@@ -11,6 +11,7 @@ tags:
   - webkitMatchesSelector
 translation_of: Web/API/Element/matches
 ---
+
 {{APIRef}}
 
 El método `matches()` comprueba si el {{domxref("Element")}} sería seleccionable por el selector CSS especificado en la cadena; en caso contrario, retorna `false`.

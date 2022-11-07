@@ -9,6 +9,7 @@ tags:
   - encabezado
 translation_of: Web/HTTP/Headers/Expires
 ---
+
 {{HTTPSidebar}}
 
 El encabezado **`Expires`** contiene la fecha y hora en la que se considerará la respuesta caducada.

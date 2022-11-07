@@ -3,6 +3,7 @@ title: Extensiones CSS de Mozilla
 slug: Web/CSS/Mozilla_Extensions
 translation_of: Web/CSS/Mozilla_Extensions
 ---
+
 {{CSSRef}}
 
 Mozilla soporta ciertas extensiones de [CSS](/es/docs/CSS) con el prefijo`-moz-`.
@@ -257,7 +258,7 @@ W—Z
 
 ### {{cssxref("background-image")}}
 
-- Gradientes 
+- Gradientes
 
   - {{cssxref("-moz-linear-gradient")}}
   - {{cssxref("-moz-radial-gradient")}}
@@ -286,8 +287,8 @@ W—Z
 - `-moz-buttondefault`
 - `-moz-buttonhoverface`
 - `-moz-buttonhovertext`
-- `-moz-default-background-color` 
-- `-moz-default-color` 
+- `-moz-default-background-color`
+- `-moz-default-color`
 - `-moz-cellhighlight`
 - `-moz-cellhighlighttext`
 - `-moz-field`
@@ -302,8 +303,8 @@ W—Z
 - `-moz-mac-accentlightshadow`
 - `-moz-mac-accentregularhighlight`
 - `-moz-mac-accentregularshadow`
-- `-moz-mac-chrome-active` 
-- `-moz-mac-chrome-inactive` 
+- `-moz-mac-chrome-active`
+- `-moz-mac-chrome-inactive`
 - `-moz-mac-focusring`
 - `-moz-mac-menuselect`
 - `-moz-mac-menushadow`
@@ -311,8 +312,8 @@ W—Z
 - `-moz-menuhover`
 - `-moz-menuhovertext`
 - `-moz-win-communicationstext`
-- `-moz-win-mediatext` 
-- `-moz-nativehyperlinktext` 
+- `-moz-win-mediatext`
+- `-moz-nativehyperlinktext`
 
 ### {{Cssxref("display")}}
 
@@ -354,7 +355,7 @@ W—Z
 
 ### {{Cssxref("image-rendering")}}
 
-- {{Cssxref("image-rendering","-moz-crisp-edges")}} 
+- {{Cssxref("image-rendering","-moz-crisp-edges")}}
 
 ### {{cssxref("&lt;length&gt;")}}
 

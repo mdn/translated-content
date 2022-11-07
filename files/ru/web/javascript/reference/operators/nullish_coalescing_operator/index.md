@@ -9,6 +9,7 @@ tags:
   - nullish coalescing
 browser-compat: javascript.operators.nullish_coalescing
 ---
+
 {{JSSidebar("Operators")}}
 
 **Оператор нулевого слияния (`??`)** — это логический оператор, возвращающий значение правого операнда, если значение левого операнда содержит {{jsxref("null")}} или {{jsxref("undefined")}}, в противном случае возвращается значение левого операнда.

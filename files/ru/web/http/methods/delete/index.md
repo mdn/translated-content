@@ -8,6 +8,7 @@ tags:
   - Справка
 translation_of: Web/HTTP/Methods/DELETE
 ---
+
 {{HTTPSidebar}}
 
 **Метод запроса HTTP DELETE** удаляет указанный ресурс.

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/resolve
 ---
+
 {{JSRef}}
 
 El método **`Promise.resolve(value)`** retorna un objeto {{jsxref("Promise")}} que es resuelto con el valor dado. Si el valor es una _promise_, esa _promise_ es devuelta; si el valor es un _thenable_ (si tiene un {{jsxref("Promise.then", "método \"then\"")}}), el valor devuelto le seguirá a ese _thenable_, adoptando su estado; de otro modo la _promise_ devuelta estará completada con el valor.

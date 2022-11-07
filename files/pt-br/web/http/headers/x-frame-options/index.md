@@ -2,6 +2,7 @@
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta [HTTP](/pt-BR/docs/Web/HTTP) **`X-Frame-Options`** pode ser usado para indicar se o navegador deve ou não renderizar a página em um {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} ou {{HTMLElement("object")}}. Sites podem usar isso para evitar ataques _[click-jacking](/pt-BR/docs/Web/Security/Types_of_attacks#Click-jacking)_, assegurando que seus conteúdos não sejam embebedados em outros sites.

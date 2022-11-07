@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/indexOf
 ---
+
 {{JSRef}}
 
 El método **indexOf()** retorna el primer índice en el que se puede encontrar un elemento dado en el array, ó retorna -1 si el elemento no esta presente.

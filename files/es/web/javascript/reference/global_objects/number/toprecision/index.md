@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toPrecision
 ---
+
 {{JSRef}}
 
 El método **`toPrecision()`** devuelve una cadena que representa un objeto {{jsxref("Number")}} según la precisión especificada.

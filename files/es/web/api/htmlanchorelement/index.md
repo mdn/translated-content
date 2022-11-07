@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/API/HTMLAnchorElement
 ---
+
 {{APIRef ("HTML DOM")}}
 La interfaz **HTMLAnchorElement** representa elementos de hipervínculo y proporciona propiedades y métodos especiales (más allá de los de la interfaz de objeto {{domxref ("HTMLElement")}} regular de la que heredan) para manipular el diseño y la presentación de dichos elementos.
 

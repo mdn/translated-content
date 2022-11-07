@@ -3,6 +3,7 @@ title: URLSearchParams
 slug: Web/API/URLSearchParams
 translation_of: Web/API/URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 **`URLSearchParams`** интерфейс определяет служебные методы для работы со строкой запроса URL.

@@ -7,6 +7,7 @@ tags:
   - таблицы
 translation_of: Learn/CSS/Building_blocks/Styling_tables
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Borders", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Styling_boxes")}}
 
 Стилизация HTML таблиц это не самая гламурная работа в мире, но иногда нам нужно это делать. Эта статья руководство как сделать, чтобы ваши HTML таблицы выглядели хорошо, с некоторыми свойствами подробно рассмотренными в предыдущих статьях.

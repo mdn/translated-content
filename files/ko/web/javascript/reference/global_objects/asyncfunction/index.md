@@ -5,9 +5,10 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
+
 {{JSRef}}
 
-**`Async`\*\***`Function` 생성자는\*\* 새로운 {{jsxref("Statements/async_function", "async function")}} 객체를 만든다. 자바스크립트에서 모든 비동기 함수는 사실상 AsyncFunction 객체이다.
+**`AsyncFunction`** 생성자는 새로운 {{jsxref("Statements/async_function", "async function")}} 객체를 만든다. 자바스크립트에서 모든 비동기 함수는 사실상 AsyncFunction 객체이다.
 
 `AsyncFunction`이 전역변수가 아님에 주의한다. 다음코드를 보면 알 수 있다.
 

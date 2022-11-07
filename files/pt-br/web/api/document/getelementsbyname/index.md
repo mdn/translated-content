@@ -2,6 +2,7 @@
 title: Document.getElementsByName()
 slug: Web/API/Document/getElementsByName
 ---
+
 {{APIRef("DOM")}}
 
 O método**`getElementsByName()`** do objeto {{domxref("Document")}} retorna uma coleção de elementos {{domxref("NodeList")}} com um dado {{domxref("element.name","name")}} no documento.

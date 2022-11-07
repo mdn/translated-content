@@ -2,6 +2,7 @@
 title: Math.LOG10E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 ---
+
 {{JSRef}}
 
 A propriedade **`Math.LOG10E`** representa o logaritmo com base 10 de `e`, aproximadamente 0.434:

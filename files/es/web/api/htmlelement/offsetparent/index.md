@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/HTMLElement/offsetParent
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La propiedad de solo lectura **`HTMLElement.offsetParent`** retorna una referencia al objeto, el cual es el elemento contenedor posicionado más cercano (más cercano en la jerarquía contenedora). Si el elemento es no-posicionado, `td`, `th`, `table` o el `body` más cercano es retornado.

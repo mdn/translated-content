@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/valueOf
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 El método **`valueOf()`** retorna el valor primitivo del objeto especificado.

@@ -7,6 +7,7 @@ tags:
   - ReferenceError
 translation_of: Web/JavaScript/Reference/Errors/Not_defined
 ---
+
 {{jsSidebar("Errors")}}
 
 ```

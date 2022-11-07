@@ -2,6 +2,7 @@
 title: Window.navigator
 slug: Web/API/Window/navigator
 ---
+
 {{APIRef}}
 
 A propriedade somente leitura `Window.navigator` retorna uma referência para o objeto {{domxref("Navigator")}}, que pode ser consultada para obter informações sobre a aplicação executando o script.

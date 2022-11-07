@@ -9,6 +9,7 @@ tags:
   - Ubicación
 translation_of: Web/API/Location/origin
 ---
+
 {{APIRef("Location")}}
 
 La propiedad de sólo-lectura **`origin`** de la interfaz {{domxref("Location")}} es una {{domxref("USVString")}} que contiene la serialización Unicode del origen de la URL que representa; que es:

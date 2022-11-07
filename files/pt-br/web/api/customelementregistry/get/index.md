@@ -2,6 +2,7 @@
 title: CustomElementRegistry.get()
 slug: Web/API/CustomElementRegistry/get
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 O **`get()`** é um método de {{domxref("CustomElementRegistry")}} a interface retorna um construtor para um elemento personalizado previamente definido.

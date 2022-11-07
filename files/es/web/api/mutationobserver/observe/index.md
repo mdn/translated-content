@@ -3,6 +3,7 @@ title: MutationObserver.observe()
 slug: Web/API/MutationObserver/observe
 translation_of: Web/API/MutationObserver/observe
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 El método {{domxref("MutationObserver")}} **`observe()`** configura la funcion `MutationObserver` para que inicie la recepción de cambios en el DOM que coincidan con las opciones dadas.

@@ -2,6 +2,7 @@
 title: <input type="password">
 slug: Web/HTML/Element/Input/password
 ---
+
 {{HTMLSidebar}}
 
 Elementos `<input>` do tipo **`"password"`** são uma maneira do usuário digitar senhas com segurança. O elemento é mostrado como um controle de edição de texto de uma linha, no qual o texto é omitido para que não possa ser lido, geralmente substituindo cada caractere por um símbolo como o astesrisco ("\*") ou um ponto ("•"). Esse caracter varia dependendo do {{Glossary("agente de usuário")}} e do {{Glossary("OS")}}.

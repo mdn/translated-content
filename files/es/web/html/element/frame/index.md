@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/frame
 original_slug: Web/HTML/Elemento/frame
 ---
+
 ### Definición
 
 - **frame** -_marcos_ . Define la organización de los marcos dentro de la ventana del usuario.

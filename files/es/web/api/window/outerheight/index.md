@@ -7,6 +7,7 @@ tags:
   - Referencia
 translation_of: Web/API/Window/outerHeight
 ---
+
 {{APIRef}}
 
 ## Sumario

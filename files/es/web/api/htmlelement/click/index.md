@@ -7,6 +7,7 @@ tags:
   - metodo
 translation_of: Web/API/HTMLElement/click
 ---
+
 {{ APIRef("HTML DOM") }}
 
 El método **`HTMLElement.click()`** simula el click de un ratón físico en un elemento HTML.

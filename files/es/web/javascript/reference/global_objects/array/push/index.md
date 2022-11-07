@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/push
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/push
 ---
+
 {{JSRef}}
 
 El método **`push()`** añade uno o más elementos al final de un array y devuelve la nueva longitud del array.

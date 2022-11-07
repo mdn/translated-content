@@ -6,6 +6,7 @@ title: >-
 slug: Web/JavaScript/Reference/Errors/Already_has_pragma
 translation_of: Web/JavaScript/Reference/Errors/Already_has_pragma
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

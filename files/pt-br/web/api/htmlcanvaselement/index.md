@@ -2,6 +2,7 @@
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`HTMLCanvasElement`** interface provides properties and methods for manipulating the layout and presentation of canvas elements. The `HTMLCanvasElement` interface also inherits the properties and methods of the {{domxref("HTMLElement")}} interface.

@@ -2,6 +2,7 @@
 title: X-DNS-Prefetch-Control
 slug: Web/HTTP/Headers/X-DNS-Prefetch-Control
 ---
+
 {{HTTPSidebar}}O cabeçalho de resposta HTTP **`X-DNS-Prefetch-Control`** controla a pré-busca de DNS, um recurso pelo qual os navegadores realizam proativamente a resolução de nomes de domínio em ambos os links que o usuário pode escolher, além de URLs para itens referenciados pelo documento, incluindo imagens , CSS, JavaScript e assim por diante.
 
 Essa pré-busca é realizada em segundo plano, de forma que o {{glossary ("DNS")}} provavelmente tenha sido resolvido quando os itens referenciados forem necessários. Isso reduz a latência quando o usuário clica em um link.

@@ -3,6 +3,7 @@ title: Глобальные атрибуты
 slug: Web/HTML/Global_attributes
 translation_of: Web/HTML/Global_attributes
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **Глобальные атрибуты** — **это атрибуты общие для всех HTML-элементов**; они могут использоваться всеми элементами, хотя на некоторые элементы могут не оказывать влияния.

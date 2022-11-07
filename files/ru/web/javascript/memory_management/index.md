@@ -3,6 +3,7 @@ title: Управление памятью
 slug: Web/JavaScript/Memory_Management
 translation_of: Web/JavaScript/Memory_Management
 ---
+
 {{JsSidebar("Advanced")}}
 
 ## Введение

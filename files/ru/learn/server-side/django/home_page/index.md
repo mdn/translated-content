@@ -13,6 +13,7 @@ tags:
   - Шаблоны
 translation_of: Learn/Server-side/Django/Home_page
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 
 Теперь мы готовы создать код нашей первой страницы — домашняя страница сайта [LocalLibrary](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website) будет показывать количество записей в каждой модели, кроме того, она будет выводить боковую навигационную панель с ссылками на другие страницы сайта. В результате мы приобретём практический навык написания простых URL-преобразований и отображений, получения записей из базы данных и применения шаблонов.

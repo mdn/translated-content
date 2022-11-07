@@ -6,6 +6,7 @@ tags:
   - Расширение
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
 ---
+
 {{AddonSidebar()}}
 
 Используя {{WebExtAPIRef("omnibox")}} API, расширения могут взаимодействовать с адресной строкой и заполнять её выпадающий список предложений своими значениями, после введения пользователем определённого ключевого слова.

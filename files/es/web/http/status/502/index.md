@@ -7,6 +7,7 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Status/502
 ---
+
 {{HTTPSidebar}}
 
 El código de respuesta de error del servidor de HTTP **`502 Bad Gateway`** indica que el servidor, mientras actuaba como una puerta de enlace o proxy, recibió una respuesta no válida del servidor ascendente.

@@ -9,6 +9,7 @@ tags:
   - metodo
 translation_of: Web/API/CanvasRenderingContext2D/save
 ---
+
 {{APIRef}}
 
 El método **`CanvasRenderingContext2D.save()`** del API Canvas 2D guarda el estado completo del canvas añadiendo el estado actual a una pila.

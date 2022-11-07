@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/toString
 ---
+
 {{JSRef}}
 
 El método **`toString()`** devuelve una cadena que representa el patrón de la expresión regular.

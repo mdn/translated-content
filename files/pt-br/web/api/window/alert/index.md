@@ -2,6 +2,7 @@
 title: Window.alert
 slug: Web/API/Window/alert
 ---
+
 {{ APIRef }}
 
 O método **`Window.alert()`** mostra uma caixa de diálogo de aviso com o conteúdo opcionalmente especificado e um botão OK.

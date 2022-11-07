@@ -2,6 +2,7 @@
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 ---
+
 {{JSRef}}
 
 O método **`find()`** retorna o **valor** do **primeiro elemento** do array que satisfizer a função de teste provida. Caso contrario, {{jsxref("undefined")}} é retornado.

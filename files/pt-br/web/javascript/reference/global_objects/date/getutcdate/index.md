@@ -2,6 +2,7 @@
 title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 ---
+
 {{JSRef}}
 
 O método **`getUTCDate()`** retorna o dia (data) do mês na data especificada de acordo com o horário universal.

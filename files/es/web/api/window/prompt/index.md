@@ -6,6 +6,7 @@ tags:
   - metodo
 translation_of: Web/API/Window/prompt
 ---
+
 {{ApiRef("Window")}}
 
 El método `Window.prompt()` muestra un diálogo con mensaje opcional, que solicita al usuario que introduzca un texto.

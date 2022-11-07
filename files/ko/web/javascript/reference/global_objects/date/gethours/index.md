@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getHours
 ---
+
 {{JSRef}}
 
 **`getHours()`** 메서드는 주어진 날짜의 현지 시간 기준 시를 반환합니다.

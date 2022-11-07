@@ -13,6 +13,7 @@ tags:
   - consola web
 translation_of: Web/API/console/assert
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 Aparece un mensaje de error en la consola si la afirmación es falsa. Si la afirmación es verdadera, no aparecerá nada.

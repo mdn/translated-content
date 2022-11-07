@@ -2,6 +2,7 @@
 title: <wbr>
 slug: Web/HTML/Element/wbr
 ---
+
 ## Resumo
 
 O elemento HTML `<wbr>` representa uma posição no texto onde o navegador pode, opcionalmente, quebrar uma linha, embora suas regras de quebra de linha de outra forma não criar uma ruptura naquele local.

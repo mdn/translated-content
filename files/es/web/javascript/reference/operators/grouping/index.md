@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Grouping
 original_slug: Web/JavaScript/Referencia/Operadores/Grouping
 ---
+
 {{jsSidebar("Operators")}}
 
 El operador de agrupación `( )` controla la precedencia de las expresiones a evaluar.

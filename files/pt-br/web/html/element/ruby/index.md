@@ -2,6 +2,7 @@
 title: <ruby>
 slug: Web/HTML/Element/ruby
 ---
+
 ## Resumo
 
 O **elemento** **HTML `<ruby>` **representa uma anotação ruby. Anotações ruby são para mostrar a pronúncia de caracteres do Leste Asiático

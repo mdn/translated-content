@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:invalid
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:invalid`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}} u otro elemento {{HTMLElement("form")}} cuyos contenidos no se puedan [validar](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation).

@@ -3,6 +3,7 @@ title: Configurando um ambiente de desenvolvimento Django
 slug: Learn/Server-side/Django/development_environment
 original_slug: Learn/Server-side/Django/ambiente_de_desenvolvimento
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 
 Agora que você sabe para que serve o Django, nós iremos te mostrar como instalar, configurar e testar um ambiente de desenvolvimento no Windows, Linux (Ubuntu), e macOS - seja qual for o sistema operacional (SO) que você usar, este artigo deve fornecê-lo o suficiente para conseguir começar a desenvolver aplicativos Django.

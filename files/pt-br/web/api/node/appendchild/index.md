@@ -2,6 +2,7 @@
 title: Node.appendChild
 slug: Web/API/Node/appendChild
 ---
+
 {{ApiRef("DOM")}}
 
 ## Resumo

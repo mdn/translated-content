@@ -2,6 +2,7 @@
 title: AudioContext
 slug: Web/API/AudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 A interface `AudioContext` representa um grafo de processamento de áudio construído a partir de nós de áudio conectados, cada um representado por um {{domxref("AudioNode")}} Um contexto de áudio controla a criação dos nós que contém e a execução do processamento de áudio, ou decodificação. Você precisa criar um AudioContext antes de fazer qualquer outra coisa, pois tudo acontece dentro de um contexto.

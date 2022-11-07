@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 original_slug: Web/JavaScript/Reference/Functions/애로우_펑션
 ---
+
 {{jsSidebar("Functions")}}
 
 화살표 함수 표현(**arrow function expression**)은 [전통적인 함수표현(function)](/ko/docs/Web/JavaScript/Reference/Operators/function)의 간편한 대안입니다. 하지만, 화살표 함수는 몇 가지 제한점이 있고 모든 상황에 사용할 수는 없습니다.

@@ -82,5 +82,4 @@ original_slug: Web/API/Document/dragover_event
 - [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)
 - [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)
 - [`dragleave`](/zh-CN/docs/Web/API/HTMLElement/dragleave_event)
-- {{event("dragexit")}}
 - [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)

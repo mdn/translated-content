@@ -9,6 +9,7 @@ tags:
   - errores
 translation_of: Web/JavaScript/Reference/Errors/in_operator_no_object
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensaje

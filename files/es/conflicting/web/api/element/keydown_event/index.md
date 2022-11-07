@@ -4,6 +4,7 @@ slug: conflicting/Web/API/Element/keydown_event
 translation_of: Web/API/GlobalEventHandlers/onkeydown
 original_slug: Web/API/GlobalEventHandlers/onkeydown
 ---
+
 {{ApiRef("HTML DOM")}}
 
 La propiedad **`onkeydown`** devuelve un manejador para el evento `onKeyDown` del elemento actual.

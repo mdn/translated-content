@@ -3,6 +3,7 @@ title: HTMLTableElement.insertRow()
 slug: Web/API/HTMLTableElement/insertRow
 translation_of: Web/API/HTMLTableElement/insertRow
 ---
+
 {{APIRef("HTML DOM")}}
 
 El método **`HTMLTableElement.insertRow()`** inserta una nueva fila en la tabla.

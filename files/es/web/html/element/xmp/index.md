@@ -10,6 +10,7 @@ tags:
 translation_of: Web/HTML/Element/xmp
 original_slug: Web/HTML/Elemento/xmp
 ---
+
 {{Deprecated_Header}}
 
 ## Resumen

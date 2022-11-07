@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/lastIndexOf
 ---
+
 {{JSRef}}
 
 El método **`lastIndexOf()`** devuelve el último índice en el que un cierto elemento puede encontrarse en el arreglo, ó `-1` si el elemento no se encontrara. El arreglo es recorrido en sentido contrario, empezando por el índice `fromIndex`.

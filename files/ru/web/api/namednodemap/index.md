@@ -3,6 +3,7 @@ title: NamedNodeMap
 slug: Web/API/NamedNodeMap
 translation_of: Web/API/NamedNodeMap
 ---
+
 {{APIRef("DOM")}}
 
 Интерфейс **`NamedNodeMap`** представляет собой коллекцию объектов {{domxref("Attr")}}. Объекты внутри `NamedNodeMap` не находятся в каком-либо определённом порядке, в отличие от {{domxref("NodeList")}}, хотя они могут быть доступны при использовании индекса, как в массиве.

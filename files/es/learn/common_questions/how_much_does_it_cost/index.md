@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/Common_questions/How_much_does_it_cost
 original_slug: Learn/Common_questions/Cuanto_cuesta
 ---
+
 Dedicarse a la web no es tan barato como parece. En este artículo discutimos cuánto puedes tener que gastar, y por qué.
 
 <table>

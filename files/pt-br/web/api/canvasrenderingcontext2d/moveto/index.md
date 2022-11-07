@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.moveTo()
 slug: Web/API/CanvasRenderingContext2D/moveTo
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.moveTo()`** da API Canvas 2D move o ponto inicial de um novo sub-caminho (sub-path) para as coordenadas `(x, y)`.

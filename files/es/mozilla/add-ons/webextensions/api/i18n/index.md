@@ -12,6 +12,7 @@ tags:
   - i18n
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n
 ---
+
 {{AddonSidebar}}
 
 Funciones para internacionalizar su extensión. Es posible utilizar estas API para obtener cadenas de texto traducidas a partir de archivos de configuración regional incluidos en la extensión, conocer el idioma actual del navegador y recuperar el valor de su [cabecera Accept-Language](/es/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header).

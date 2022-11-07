@@ -2,6 +2,7 @@
 title: From
 slug: Web/HTTP/Headers/From
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição **`From`** contém um endereço de email da Internet para um usuário humano que controla o agente de usuário requisitante poder enviar uma mensagem.

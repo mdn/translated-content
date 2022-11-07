@@ -2,6 +2,7 @@
 title: <q>
 slug: Web/HTML/Element/q
 ---
+
 {{HTMLSidebar}}O elemento HTML \<q> indica que o texto dentro da tag é uma pequena citação. Este elemento destina-se a citações curtas que não requerem marcações de parágrafo; para citações maiores use o elemento {{HTMLElement("blockquote")}}.
 
 <table class="properties">

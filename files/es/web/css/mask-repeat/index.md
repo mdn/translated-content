@@ -11,6 +11,7 @@ translation_of: Web/CSS/mask-repeat
 translation_of_original: Web/CSS/-webkit-mask-repeat
 original_slug: Web/CSS/-webkit-mask-repeat
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

@@ -2,6 +2,7 @@
 title: Web Animations API
 slug: Web/API/Web_Animations_API
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 The **Web Animations API** allows for synchronizing and timing changes to the presentation of a Web page, i.e. animation of DOM elements. It does so by combining two models: the Timing Model and the Animation Model.

@@ -3,6 +3,7 @@ title: Window.open()
 slug: Web/API/Window/open
 translation_of: Web/API/Window/open
 ---
+
 {{APIRef}}
 
 Carga un recurso en el contexto de un nuevo navegador (como una ventana) o uno que ya existe, dependiendo de los parametros.

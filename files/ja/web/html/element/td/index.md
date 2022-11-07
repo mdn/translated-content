@@ -3,7 +3,7 @@ title: '<td>: 表データセル要素'
 slug: Web/HTML/Element/td
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<td>`** は [HTML](/ja/docs/Web/HTML) の要素で、表でデータを包含するセルを定義します。これは*モデル*に関与します。
 

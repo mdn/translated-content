@@ -3,6 +3,7 @@ title: Aprendendo desenvolvimento web
 slug: Learn
 original_slug: Aprender
 ---
+
 {{LearnSidebar}}
 
 Bem-vindo à área de aprendizado da MDN. Este conjunto de artigos tem como objetivo fornecer aos iniciantes no desenvolvimento web tudo o que eles precisam para começar a codificar sites.

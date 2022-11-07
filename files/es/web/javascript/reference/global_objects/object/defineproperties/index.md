@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/defineProperties
 ---
+
 {{JSRef("Objetos_globales", "Object")}}
 
 ## Sumario

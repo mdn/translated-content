@@ -14,6 +14,7 @@ tags:
   - TopicStub
 translation_of: Web/API/HTMLInputElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La interface **`HTMLInputElement`** proporciona propiedades y métodos especiales para manipular las opciones, estructura y presentacion de los elementos {{HtmlElement("input")}}.

@@ -3,6 +3,7 @@ title: Form data validation
 slug: Learn/Forms/Form_validation
 original_slug: Web/Guide/HTML/Forms/Form_validation
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
 
 A validação de formulário nos ajuda a garantir que os usuários preencham os campos no formato correto, garantindo que os dados enviados funcionem com êxito em nossos aplicativos. Este artigo apresentará conceitos e exemplos básicos sobre validação de formulário. Para mais informações adicionais, consulte o [Guia de validação](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation).
@@ -40,7 +41,6 @@ Vá a qualquer site popular com um formulário de registro, e perceberá que ele
 Isso é chamado de validação de formulário - quando você insere dados, o aplicativo da Web faz a verificação para ver se os dados estão corretos. Se estiver correto, o aplicativo permite que os dados sejam enviados ao servidor e (geralmente) salvos em um banco de dados; se não, você receberá uma mensagem de erro explicando quais correções precisam ser feitas. A validação de formulários pode ser implementada de várias maneiras diferentes.
 
 Queremos tornar o preenchimento de formulários da web o mais fácil possível. Então, por que insistimos em validar nossos formulários? Existem três razões principais:
-
 
 - **Nos queremos que o dado correto e no formato correto** — nossa aplicação não irá trabalhar de forma correta se os dados dos nossos usuarios estivem armazenados em formato incorreto, ou quando esses dados são omitidos.
 - **Quemos proteger os dados dos nossos usuários** — Forçarnosos usuários a fornecer senhas seguras facilita na proteção das informações da conta do usuário.

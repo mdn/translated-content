@@ -6,6 +6,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 original_slug: Web/JavaScript/Referencia/Objetos_globales/undefined
 ---
+
 {{jsSidebar("Objects")}}
 
 ## Resumen

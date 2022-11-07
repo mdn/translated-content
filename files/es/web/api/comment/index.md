@@ -8,6 +8,7 @@ tags:
   - comentários
 translation_of: Web/API/Comment
 ---
+
 {{ ApiRef("DOM") }}
 
 La interfaz **`Comment`** representa las anotaciones y comentarios dentro del código fuente; aunque generalmente no se muestran visualmente en el navegador, dichos comentarios están disponibles para ser leídos en la** [vista de código](/es/docs/Tools/View_source)**.

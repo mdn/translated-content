@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Functions/set
 translation_of: Web/JavaScript/Reference/Functions/set
 original_slug: Web/JavaScript/Referencia/Funciones/set
 ---
+
 {{jsSidebar("Funciones")}}
 
 La sintaxis **`set`** asocia la propiedad de un objeto a una función que será llamada cuando haya un intento de asignar valor a esa propiedad.

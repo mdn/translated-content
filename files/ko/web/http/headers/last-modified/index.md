@@ -8,6 +8,7 @@ tags:
   - 참고자료
 translation_of: Web/HTTP/Headers/Last-Modified
 ---
+
 {{HTTPSidebar}}
 
 **`Last-Modified`** 응답은 HTTP 헤더에 서버가 알고있는 가장 마지막 수정된 날짜와 시각을 담고 있습니다. 이는 저장된 리소스가 이전과 같은지 유효성 검사자로 사용됩니다. {{HTTPHeader("ETag")}} 헤더보다는 덜 정확하지만, 이는 대비책으로 사용됩니다. 조건 요청은 {{HTTPHeader("If-Modified-Since")}} 또는 {{HTTPHeader("If-Unmodified-Since")}} 헤더로 이와 같은 필드를 사용하여 만들어집니다.

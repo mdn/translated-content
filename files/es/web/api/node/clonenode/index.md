@@ -9,6 +9,7 @@ tags:
   - metodo
 translation_of: Web/API/Node/cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 El método **`Node.cloneNode()`** devuelve un duplicado del nodo en el que este método fue llamado.

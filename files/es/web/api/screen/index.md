@@ -4,6 +4,7 @@ slug: Web/API/Screen
 translation_of: Web/API/Screen
 browser-compat: api.Screen
 ---
+
 {{APIRef("CSSOM")}}
 
 La interfaz `Screen` representa una pantalla,

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fontsize
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fontsize
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 El método **`fontsize()`** crea {{HTMLElement("font")}} elemento HTML que muestra una cadena con el tamaño especificado.

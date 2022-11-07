@@ -4,6 +4,7 @@ slug: MDN/Writing_guidelines/Page_structures/Macros/Other
 translation_of: MDN/Structures/Macros/Other
 original_slug: MDN/Structures/Macros/Other
 ---
+
 {{MDNSidebar}}
 
 A diferencia de las macros enumeradas en [Macros de uso común](/es/docs/MDN/Structures/Macros/Commonly-used_macros), las macros documentadas en este artículo se usan con poca frecuencia o solo en contextos específicos, o están obsoletas.

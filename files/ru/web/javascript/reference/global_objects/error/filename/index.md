@@ -9,6 +9,7 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/fileName
 ---
+
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}} {{non-standard_header}}
 
 ## Сводка

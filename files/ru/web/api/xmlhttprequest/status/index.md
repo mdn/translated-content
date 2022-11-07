@@ -12,6 +12,7 @@ tags:
   - status
 translation_of: Web/API/XMLHttpRequest/status
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 Доступное только для чтения свойство **`XMLHttpRequest.status`**, возвращает числовой [код состояния](/ru/docs/Web/HTTP/Status) HTTP ответа `XMLHttpRequest`.

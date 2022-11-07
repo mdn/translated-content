@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/keys
 ---
+
 {{JSRef}}
 
 El método **`keys()`** devuelve un nuevo objeto **`Array Iterator`** que contiene las claves de índice con las que acceder a cada elemento en el array.

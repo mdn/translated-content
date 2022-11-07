@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Assignment
 original_slug: Web/JavaScript/Referencia/Operadores/Asignacion
 ---
+
 {{jsSidebar("Operators")}}
 
 El operador de asignación (=) se utiliza para asignar un valor a una variable. La operación de asignación evalúa el valor asignado. Es posible encadenar el operador de asignación para asignar un solo valor a múltiples variables

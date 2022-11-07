@@ -5,6 +5,7 @@ tags:
   - CSS
 translation_of: Web/CSS/word-break
 ---
+
 {{CSSRef}}
 
 Свойство [CSS](/ru/docs/Web/CSS) **`word-break`** определяет, где будет установлен перевод на новую строку в случае превышения текстом границ блока.

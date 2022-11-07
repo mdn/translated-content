@@ -3,6 +3,7 @@ title: IDBIndex.locale
 slug: Web/API/IDBIndex/locale
 translation_of: Web/API/IDBIndex/locale
 ---
+
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}
 
 The **`locale`** read-only property of the {{domxref("IDBIndex")}} interface returns the locale of the index (for example `en-US`, or `pl`) if it had a `locale` value specified upon its creation (see [`createIndex()`'s optionalParameters](/ru/docs/Web/API/IDBObjectStore/createIndex#Parameters).) Note that this property always returns the current locale being used in this index, in other words, it never returns `"auto"`.

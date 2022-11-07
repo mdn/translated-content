@@ -3,6 +3,7 @@ title: BatteryManager.ondischargingtimechange
 slug: Web/API/BatteryManager/dischargingtimechange_event
 original_slug: Web/API/BatteryManager/ondischargingtimechange
 ---
+
 {{APIRef("Battery API")}}
 
 Especifica um _event listener_ para receber eventos {{event("dischargingtimechange")}}. Esses eventos ocorrem quando a propriedade {{domxref("BatteryManager.dischargingTime","dischargingTime")}} (tempo de descarregamento) da bateria é atualizada.

@@ -9,6 +9,7 @@ tags:
   - metodo
 translation_of: Web/API/Performance/now
 ---
+
 {{APIRef("High Resolution Timing")}}
 
 El método **`performance.now()`** devuelve un {{domxref("DOMHighResTimeStamp")}}, medido en milisegundos, con una precisión de cinco milésimas de segundo (5 microsegundos).

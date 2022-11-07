@@ -2,6 +2,7 @@
 title: Comparações de igualdade e uniformidade
 slug: Web/JavaScript/Equality_comparisons_and_sameness
 ---
+
 {{jsSidebar("Intermediate")}}
 
 JavaScript fornece três diferentes operações de comparação de valores:

@@ -2,6 +2,7 @@
 title: Clear-Site-Data
 slug: Web/HTTP/Headers/Clear-Site-Data
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho HTTP **`Clear-Site-Data`** limpa os dados de navegação (_cookies_, armazenamento, _cache_) associados com o site requisitado. Ele permite desenvolvedores web terem maior controle sobre os dados armazenados localmente pelo navegador para suas origens.

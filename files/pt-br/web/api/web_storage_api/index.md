@@ -3,6 +3,7 @@ title: API de Armazenamento na Web
 slug: Web/API/Web_Storage_API
 original_slug: Web/API/Web_Storage_API_pt_br
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 A API de armazenamento na web (**Web Storage**) fornece mecanismos para que os navegadores possam armazenar dados através de chave/valor de uma forma mais eficiente que os cookies.

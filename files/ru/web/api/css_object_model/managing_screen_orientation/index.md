@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/CSS_Object_Model/Managing_screen_orientation
 original_slug: Web/API/CSS_Object_Model/ориентация_экрана
 ---
+
 {{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
 
 Ориентация экрана не идентична [ориентации устройства](/ru/docs/WebAPI/Detecting_device_orientation).

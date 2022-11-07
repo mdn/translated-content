@@ -2,6 +2,7 @@
 title: 502 Bad Gateway
 slug: Web/HTTP/Status/502
 ---
+
 {{HTTPSidebar}}
 
 O código de erro HTTP **`502 Bad Gateway`** retornado pelo servidor indica que ele, enquanto atuando como um servidor intermediário (_gateway_ ou _proxy_), recebeu uma resposta inválida do servidor para o qual a requisição foi encaminhada (_upstream server_).

@@ -14,6 +14,7 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
 original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
+
 {{APIRef("Fetch API")}}
 
 El método **`fetch()`** del mixin {{domxref("WindowOrWorkerGlobalScope")}} lanza el proceso de solicitud de un recurso de la red. Esto devuelve una promesa que resuelve al objeto {{domxref("Response")}} que representa la respuesta a la solicitud realizada.

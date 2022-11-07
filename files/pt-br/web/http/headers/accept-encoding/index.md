@@ -2,6 +2,7 @@
 title: Accept-Encoding
 slug: Web/HTTP/Headers/Accept-Encoding
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição HTTP **`Accept-Encoding`** indica qual codificação de conteúdo, usualmente um algoritmo de compressão, o cliente está apto a entender. Usando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation), o servidor seleciona uma das propostas, a utiliza e informa o cliente da escolha feita com o cabeçalho de resposta {{HTTPHeader("Content-Encoding")}}.

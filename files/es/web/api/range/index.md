@@ -6,6 +6,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/API/Range
 ---
+
 {{ APIRef("DOM") }}
 
 ### Introducción

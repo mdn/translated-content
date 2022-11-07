@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/values
 ---
+
 {{JSRef}}
 
 El método **`Object.values()`** devuelve un array con los valores correspondientes a las propiedades **enumerables** de un objeto. Las propiedades son devueltas en el mismo orden a como lo haría un bucle {{jsxref("Statements/for...in", "for...in")}} (la única diferencia es que un bucle `for-in` también enumera las propiedades en la cadena de prototipo de un objeto).

@@ -5,6 +5,7 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/concat
 ---
+
 {{ XsltRef() }}
 
 `concat` 함수는 둘 또는 둘 이상의 문자열을 연결하고 연결한 문자열을 반환합니다.

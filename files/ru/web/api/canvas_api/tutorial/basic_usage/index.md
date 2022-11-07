@@ -5,6 +5,7 @@ tags:
   - Canvas
 translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
 
 Давайте начнём этот урок с изучения элемента {{HTMLElement("canvas")}} как такового. В конце этой страницы вы узнаете как устанавливать canvas 2D context и нарисуете первый пример в вашем браузере.

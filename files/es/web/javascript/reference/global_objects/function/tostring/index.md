@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/toString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/toString
 ---
+
 {{JSRef}}
 
 El método **`toString()`** retorna una cadena representando el código fuente de la función.

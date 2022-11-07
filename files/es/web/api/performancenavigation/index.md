@@ -14,6 +14,7 @@ tags:
   - Tiempo de navegación
 translation_of: Web/API/PerformanceNavigation
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Advertencia:** Esta interfaz está deprecada en [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Por favor usa la interfaz {{domxref("PerformanceNavigationTiming")}} en lugar de esta.

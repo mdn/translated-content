@@ -3,6 +3,7 @@ title: Console.timeEnd()
 slug: Web/API/Console/timeEnd
 translation_of: Web/API/Console/timeEnd
 ---
+
 {{APIRef("Console API")}}
 
 Detiene un temporizador que haya sido establecido previamente con {{domxref("console.time()")}}.

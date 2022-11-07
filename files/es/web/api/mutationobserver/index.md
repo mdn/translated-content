@@ -3,6 +3,7 @@ title: MutationObserver
 slug: Web/API/MutationObserver
 translation_of: Web/API/MutationObserver
 ---
+
 {{APIRef("DOM")}}
 
 `MutationObserver` establece un mecanismo para reaccionar ante cambios en el [DOM](/es/docs/DOM). Ha sido diseñado como un sustituto de los [Mutation Events](/es/docs/DOM/Mutation_events) definidos en las especificaciones de _DOM3 Events_.

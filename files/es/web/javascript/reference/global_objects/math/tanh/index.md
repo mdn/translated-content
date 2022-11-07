@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/tanh
 ---
+
 {{JSRef}}
 
 La funcion **`Math.tanh()`** devuelve la hyperbolica tangente de un numero, esto es

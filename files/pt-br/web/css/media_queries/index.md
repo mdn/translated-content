@@ -2,6 +2,7 @@
 title: Media queries
 slug: Web/CSS/Media_Queries
 ---
+
 {{CSSRef}}
 
 **Media Queries** (consultas de mídia ) são um módulo de CSS que definem expressões, permitindo ajustar visualizações a uma variedade específica de dispositivos de saída sem mudar o conteúdo.

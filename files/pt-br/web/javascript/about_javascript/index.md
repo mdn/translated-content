@@ -2,6 +2,7 @@
 title: Sobre JavaScript
 slug: Web/JavaScript/About_JavaScript
 ---
+
 {{JsSidebar}}
 
 ## O que é JavaScript?

@@ -2,6 +2,7 @@
 title: <body>
 slug: Web/HTML/Element/body
 ---
+
 {{HTMLSidebar}}
 
 O **elemento** `<body>` do **HTML** representa o conteúdo de um documento HTML. è permitido apenas um `<body>` por documento.

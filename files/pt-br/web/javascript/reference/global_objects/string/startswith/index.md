@@ -2,6 +2,7 @@
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
 ---
+
 {{JSRef}}
 
 O método **`startsWith()`** determina se uma string começa com os caracteres especificados, retornando `true` ou `false`.

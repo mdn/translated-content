@@ -9,6 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getMilliseconds
 browser-compat: javascript.builtins.Date.getMilliseconds
 ---
+
 {{JSRef}}
 
 El método **`getMilliseconds()`** devuelve la cantidad de milisegundos en el objeto fecha especificado de acuerdo a la hora local.

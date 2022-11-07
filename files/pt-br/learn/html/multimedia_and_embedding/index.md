@@ -3,6 +3,7 @@ title: Multimídia e Incorporação
 slug: Learn/HTML/Multimedia_and_embedding
 original_slug: Aprender/HTML/Multimedia_and_embedding
 ---
+
 {{LearnSidebar}}
 
 Nós vimos muito sobre texto até aqui nesse curso, mas a internet seria muito chata se usassemos apenas texto. Vamos começar a ver como fazer a internet criar vida, com conteúdo mais interessante! Esse módulo explora como usar HTML para incluir multimídia em sua pagina web,usando as diferentes formas de inclusão de imagens , e como adicionar video, audio, e até paginas da web inteiras.

@@ -2,6 +2,7 @@
 title: NodeList
 slug: Web/API/NodeList
 ---
+
 {{APIRef("DOM")}}
 
 Objetos **`NodeList`** são coleções de nodos semelhantes aos objetos retornados pelos métodos {{domxref("Node.childNodes")}} e {{domxref("document.querySelectorAll()")}}.

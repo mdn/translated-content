@@ -6163,10 +6163,6 @@
     "modified": "2019-05-30T06:59:50.297Z",
     "contributors": ["SDSkyKlouD", "Seia-Soto", "xfq"]
   },
-  "Web/Guide/Mobile/Separate_sites": {
-    "modified": "2019-03-18T21:20:46.007Z",
-    "contributors": ["jinah1000"]
-  },
   "Web/Guide/Parsing_and_serializing_XML": {
     "modified": "2019-03-23T22:16:47.020Z",
     "contributors": ["young-gratia"]
@@ -11411,6 +11407,10 @@
   "conflicting/Web/JavaScript/Reference/Strict_mode": {
     "modified": "2020-03-12T19:48:28.686Z",
     "contributors": ["SeonHyungJo"]
+  },
+  "conflicting/Web/Progressive_web_apps": {
+    "modified": "2019-03-18T21:20:46.007Z",
+    "contributors": ["jinah1000"]
   },
   "conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript": {
     "modified": "2019-01-16T14:19:09.939Z",

@@ -12,6 +12,7 @@ tags:
   - Referência DOM
 translation_of: Web/API/HTMLCollection
 ---
+
 {{APIRef("HTML DOM")}}
 
 La interfaz **`HTMLCollection`** representa una colección genérica (objeto tipo array similar a arguments) de elementos (en orden de documento) y ofrece métodos y propiedades para seleccionarlos de la lista.

@@ -12,6 +12,7 @@ tags:
   - metodo
 translation_of: Web/API/Document/getElementById
 ---
+
 {{ ApiRef("DOM") }}
 
 Devuelve una referencia al elemento por su [ID](/es/docs/DOM/element.id).

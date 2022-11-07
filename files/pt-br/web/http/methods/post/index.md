@@ -2,6 +2,7 @@
 title: POST
 slug: Web/HTTP/Methods/POST
 ---
+
 {{HTTPSidebar}}
 
 O **método HTTP `POST`** envia dados ao servidor. O tipo do corpo da solicitação é indicado pelo cabeçalho {{HTTPHeader("Content-Type")}}.

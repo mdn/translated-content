@@ -11,6 +11,7 @@ tags:
   - Referencia
 translation_of: Web/API/HTMLFormElement/reset
 ---
+
 {{APIRef("HTML DOM")}}
 
 El método **`HTMLFormElement.reset()`** restaura los elementos de un formulario a sus valores por defecto. Este método hace lo mismo que haciendo clic en el botón de restauración.

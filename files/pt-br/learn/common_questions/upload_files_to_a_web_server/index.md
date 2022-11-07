@@ -2,6 +2,7 @@
 title: Como eu faço o upload de arquivos para um servidor web ?
 slug: Learn/Common_questions/Upload_files_to_a_web_server
 ---
+
 Este artigo mostra como publicar seu site online usando ferramentas de transferência de arquivos.
 
 <table class="learn-box standard-table">

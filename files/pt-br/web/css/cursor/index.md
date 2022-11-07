@@ -2,6 +2,7 @@
 title: cursor
 slug: Web/CSS/cursor
 ---
+
 {{CSSRef}}
 
 ## Sumário

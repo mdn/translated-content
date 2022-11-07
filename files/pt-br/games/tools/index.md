@@ -2,6 +2,7 @@
 title: Ferramentas para o desenvolvimento de jogos
 slug: Games/Tools
 ---
+
 {{GamesSidebar}}
 
 Nesta página você pode encontrar links para a nossa ferramenta de desenvolvimento de jogos, artigos, os quais eventualmente abrangem frameworks, compiladores, e ferramentas de debug.

@@ -5,6 +5,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Attribute/Core
 ---
+
 Основные атрибуты SVG — это все общие атрибуты, которые могут быть указаны в SVG элементах.
 
 - `id`

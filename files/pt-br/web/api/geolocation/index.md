@@ -2,6 +2,7 @@
 title: Geolocation
 slug: Web/API/Geolocation
 ---
+
 {{APIRef("Geolocation API")}}
 
 A interface **Geolocation** representa um objeto ábil de programaticamente obter a posição do aparelho. Dá ao conteúdo web acesso à localização do aparelho. Isto permite com que o website ou a aplicação ofereça resultados customizados baseados na localização do usuário.

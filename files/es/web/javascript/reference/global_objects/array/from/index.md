@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/from
 ---
+
 {{JSRef}}
 
 El método **`Array.from()`** crea una nueva instancia de `Array` a partir de un objeto iterable.

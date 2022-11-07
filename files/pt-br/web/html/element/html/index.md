@@ -2,6 +2,7 @@
 title: <html>
 slug: Web/HTML/Element/html
 ---
+
 ## Sumário
 
 O elemento **HTML \<html> **(ou _HTML root element_) representa a raiz de um HTML ou XHTML documento. Todos os outros elementos devem ser descendentes desse elemento.

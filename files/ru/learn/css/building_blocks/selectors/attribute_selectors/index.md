@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 original_slug: Learn/CSS/Building_blocks/Селекторы/Attribute_selectors
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
 
 Как вы знаете из курса о HTML, элементы могут иметь атрибуты, которые дают дополнительную информацию о размечаемом элементе. В CSS вы можете использовать селекторы атрибута для стилизации элементов с определёнными атрибутами. Этот урок покажет вам, как использовать эти очень полезные селекторы.

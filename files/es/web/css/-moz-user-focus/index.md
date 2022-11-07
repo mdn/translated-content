@@ -7,6 +7,7 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/-moz-user-focus
 ---
+
 {{Non-standard_header}}
 
 ## Resumen

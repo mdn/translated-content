@@ -4,6 +4,7 @@ slug: Web/HTML/Element/audio
 translation_of: Web/HTML/Element/audio
 original_slug: Web/HTML/Elemento/audio
 ---
+
 El elemento `audio` se usa para insertar contenido de audio en un documento HTML o XHTML. El elemento `audio` se agregó como parte de HTML 5.
 
 > **Nota:** actualmente Gecko admite solamente Vorbis, en contenedores Ogg, así como formato WAV. Asimismo, el servidor debe servir el archivo mediante el tipo MIME correcto con el fin de que Gecko lo reproduzca correctamente.
@@ -24,7 +25,7 @@ Puedes usar las características API de audio mejoradas - que son específicas d
   - : Un atributo booleano; si se especifica (incluso aunque el valor sea "false"), el sonido comenzará a reproducirse automáticamente en cuanto sea posible, sin detenerse para terminar de cargar los datos.
 - autobuffer {{ deprecated_inline("2.0") }}
   - : Un atributo booleano; si se especifica, el sonido comenzará a reproducirse automáticamente, incluso aunque no se haya configurado para la reproducción automática. Esto continuará hasta que la caché de medios esté llena o se haya descargado el archivo de audio completo, lo que suceda primero. Debería usarse sólo si se espera que el usuario elija reproducir el audio; por ejemplo si el usuario ha navegado hasta una página usando un vínculo de "Reproducir este audio". Este atributo se eliminó de Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) en favor del atributo preload.
-- buffered 
+- buffered
   - : Un atributo que se puede leer para determinar qué intervalos de tiempo del multimedia se han almacenado en búfer. Este atributo contiene un objeto {{ domxref("TimeRanges") }}.
 - controls
   - : Si está presente este atributo, el navegador ofrecerá controles para permitir que el usuario controle la reproducción de audio, incluyendo volumen, búsqueda y pausar/reanudar reproducción.

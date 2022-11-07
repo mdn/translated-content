@@ -2,6 +2,7 @@
 title: Document
 slug: Web/API/Document
 ---
+
 {{ ApiRef("DOM") }}
 
 Para cada página carregada no browser, existe um objeto **`Document`**. A interface `Document` serve como um ponto de entrada para o conteúdo da Página ( a árvore DOM, incluindo elementos como {{HTMLElement("body")}} e {{HTMLElement("table")}}) e provê funcionalidades globais ao documento (como obter a URL da página e criar novos elementos no documento).

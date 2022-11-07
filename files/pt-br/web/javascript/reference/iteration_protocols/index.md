@@ -2,6 +2,7 @@
 title: Iteration protocols
 slug: Web/JavaScript/Reference/Iteration_protocols
 ---
+
 {{jsSidebar("More")}}Algumas adições do ECMAScript 2015 não são novos _built-ins_ ou uma nova sintaxe, mas protocolos. Estes protocolos podem ser implementados por qualquer objeto desde que respeitando algumas convenções.Existem dois protocolos: O _protocolo iterável_ ([iterable protocol](#The_iterable_protocol)) e o _protocolo iterador_ ([iterator protocol](#The_iterator_protocol)).
 
 ## O protocolo iterável (iterable protocol)

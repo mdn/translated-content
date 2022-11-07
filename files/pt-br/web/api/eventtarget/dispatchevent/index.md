@@ -2,6 +2,7 @@
 title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 Dispara um {{domxref("Event")}} para o {{domxref("EventTarget")}} especificado, invocando os {{domxref("EventListener")}}s especificados, em uma ordem apropriada. O processamento normal das regras (including the capturing and optional bubbling phase) aplica-se a eventos disparados manualmente com `dispatchEvent()`.

@@ -3,6 +3,7 @@ title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
 translation_of: Web/API/BeforeUnloadEvent
 ---
+
 {{APIRef}}
 
 El evento **`beforeunload`** se diapara cuando la ventana, el documento y sus recursos están a punto de ser cerrados.

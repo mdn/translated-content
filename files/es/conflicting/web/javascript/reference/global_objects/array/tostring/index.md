@@ -4,6 +4,7 @@ slug: conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Array/toSource
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 El método **`toSource()`** devuelve un string representando el código fuente de un arreglo.

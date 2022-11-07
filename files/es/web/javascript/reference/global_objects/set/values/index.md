@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/values
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/values
 ---
+
 {{JSRef}}
 
 El método **`values()`** retorna un objeto de tipo `Iterator` que contiene los valores para cada elemento en el objecto `Set` en orden de inserción.

@@ -2,6 +2,7 @@
 title: transition-delay
 slug: Web/CSS/transition-delay
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`transition-delay`** (atraso de transição) determina o tempo de duração da espera antes de iniciar um efeito de transição([transition effect](/pt-BR/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)) quando seu valor muda.

@@ -15,6 +15,7 @@ tags:
   - metodo
 translation_of: Web/API/Element/getBoundingClientRect
 ---
+
 {{APIRef}}
 
 El método `Element.getBoundingClientRect()` devuelve el tamaño de un elemento y su posición relativa respecto a la ventana de visualización (_viewport)._

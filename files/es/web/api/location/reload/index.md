@@ -11,6 +11,7 @@ tags:
   - metodo
 translation_of: Web/API/Location/reload
 ---
+
 {{ APIRef("HTML DOM") }}
 
 El metodo **`location.reload()`** carga de nuevo la URL actual, como lo hace el boton de Refresh de los navegadores.

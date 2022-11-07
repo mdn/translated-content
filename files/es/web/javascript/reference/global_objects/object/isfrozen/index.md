@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isFrozen
 ---
+
 {{JSRef}}
 
 El método **`Object.isFrozen()`** determina si un objeto está _congelado_.

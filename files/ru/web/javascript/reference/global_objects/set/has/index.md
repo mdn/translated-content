@@ -3,6 +3,7 @@ title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
+
 {{JSRef}}
 
 Метод **`has()`** возвращает логическое значение, показывающее, существует ли элемент с указанным значением в объекте `Set` или нет.

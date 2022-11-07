@@ -2,6 +2,7 @@
 title: <ol>
 slug: Web/HTML/Element/ol
 ---
+
 ## Sumário
 
 O **Elemento HTML \<ol>** (ou _Elemento HTML de lista ordenada_) representa uma lista de itens ordenados. De forma característica esses itens ordenados em uma lista são mostrados com uma contagem que os precede, que pode ser de qualquer tipo, como numerais, letras, algarismos romanos, ou simples símbolos. Esse modelo numerado não é definido na descrição html da página, mas na folha de estilos CSS associada, pela propriedade {{cssxref("list-style-type")}}.

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/every
 ---
+
 {{JSRef}}
 
 Determina si todos los elementos en el array satisfacen una condición.

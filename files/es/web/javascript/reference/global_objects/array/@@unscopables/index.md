@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/@@unscopables
 ---
+
 {{JSRef}}
 
 La propiedad de símbolo **`@@unscopable`** contiene nombres de propiedad que no se incluyeron en el estándar ECMAScript antes de la versión ES2015. Estas propiedades se excluyen de los enlaces de declaración [`with`](/es/docs/Web/JavaScript/Reference/Statements/with).

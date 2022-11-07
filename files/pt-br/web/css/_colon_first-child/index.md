@@ -2,6 +2,7 @@
 title: ':first-child'
 slug: Web/CSS/:first-child
 ---
+
 {{ CSSRef() }}
 
 ## Sumário

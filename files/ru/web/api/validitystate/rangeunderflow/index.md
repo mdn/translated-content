@@ -9,6 +9,7 @@ tags:
   - Справочник
 browser-compat: api.ValidityState.rangeUnderflow
 ---
+
 Доступное только для чтения свойство **`rangeUnderflow`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли значение {{HTMLElement("input")}} после изменения пользователем ограничениям, установленным атрибутом [`min`](/en-US/docs/Web/HTML/Attributes/min).
 
 Если поле является числовым, включая типы {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}} и заданно значение атрибута `min`, если содержимое поля не соответствует ограничению атрибута [`min`](/en-US/docs/Web/HTML/Attributes/step), свойство `rangeUnderflow` будет true.
