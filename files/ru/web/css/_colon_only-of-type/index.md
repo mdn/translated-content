@@ -6,6 +6,7 @@ tags:
   - Псевдоклассы
 translation_of: Web/CSS/:only-of-type
 ---
+
 {{CSSRef}}
 
 ## Описание

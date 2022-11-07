@@ -3,6 +3,7 @@ title: 100 Continue
 slug: Web/HTTP/Status/100
 translation_of: Web/HTTP/Status/100
 ---
+
 {{HTTPSidebar}}
 
 Код ответа "HTTP **`100 Continue"`** на информационный статус указывает, что все до сих пор в порядке и что клиент должен продолжить запрос или игнорировать его, если он уже завершён.

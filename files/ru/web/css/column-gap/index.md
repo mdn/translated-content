@@ -12,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.column-gap
 ---
+
 {{CSSRef}}
 
 Свойство [CSS](/ru/docs/Web/CSS) **`column-gap`** устанавливает промежуток ({{glossary("Gutters","интервал")}}) между колонками.

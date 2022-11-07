@@ -3,6 +3,7 @@ title: 405 Method Not Allowed
 slug: Web/HTTP/Status/405
 translation_of: Web/HTTP/Status/405
 ---
+
 {{HTTPSidebar}}
 
 Код состояния протокола HTTP **`405 Method Not Allowed`**, указывает, что метод запроса известен серверу, но был отключён и не может быть использован. Два обязательных метода {{HTTPMethod("GET")}} и {{HTTPMethod("HEAD")}} никогда не должны быть отключены и не должны возвращать этот код ошибки.

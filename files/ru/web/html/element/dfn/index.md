@@ -3,6 +3,7 @@ title: '<dfn>: Элемент определения'
 slug: Web/HTML/Element/dfn
 translation_of: Web/HTML/Element/dfn
 ---
+
 {{HTMLSidebar}}
 
 **Элемент определения HTML** (**_\<dfn>_**) используется для указания термина, определяемого в контексте фразы или предложения. Элемент{{HTMLElement("p")}}, пара{{HTMLElement("dt")}}/{{HTMLElement("dd")}} или {{HTMLElement("section")}} элемент, который является ближайшим предком `<dfn>` считается определением термина.
