@@ -9,6 +9,7 @@ tags:
   - метод
 translation_of: Web/API/Document/close
 ---
+
 {{APIRef("DOM")}}
 
 Метод `document.close()` завершает запись в документ, открытый с помощью [document.open()](/en/DOM/document.open).

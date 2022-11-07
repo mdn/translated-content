@@ -4,6 +4,7 @@ slug: Web/API/MediaRecorder/dataavailable_event
 translation_of: Web/API/MediaRecorder/ondataavailable
 original_slug: Web/API/MediaRecorder/ondataavailable
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder.ondataavailable`** обработчик события (часть [MediaStream Recording API](/ru/docs/Web/API/MediaStream_Recording_API)) обрабатывает {{event("dataavailable")}} событие, позволяет выполнить код, когда тип данных {{domxref("Blob")}}, представляющий обработанные данные становиться доступным для использования.

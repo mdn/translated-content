@@ -3,6 +3,7 @@ title: Node.lookupNamespaceURI()
 slug: Web/API/Node/lookupNamespaceURI
 translation_of: Web/API/Node/lookupNamespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`Node.lookupNamespaceURI()`** берёт префикс и возвращает пространство имён URI связанное с ним в данном узле, если найден (и `null` если нет). Устанавливает `null` для префикса который возвращает пространство имён по умолчанию.

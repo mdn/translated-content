@@ -6,6 +6,7 @@ tags:
   - CSSOM
 translation_of: Web/API/CSS_Object_Model
 ---
+
 {{DefaultAPISidebar('CSSOM')}}
 
 **CSS Object Model** представляет собой набор API-интерфейсов, позволяющих манипулировать CSS из JavaScript. Это очень похоже на DOM, но для CSS, а не HTML. Это позволяет пользователям динамически читать и изменять стиль CSS.

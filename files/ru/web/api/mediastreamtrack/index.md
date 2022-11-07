@@ -13,6 +13,7 @@ tags:
   - аудио
 translation_of: Web/API/MediaStreamTrack
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 Интерфейс **`MediaStreamTrack`** представляет один медиа трек в потоке; обычно это аудио или видео трек, но могут использоваться и другие типы.

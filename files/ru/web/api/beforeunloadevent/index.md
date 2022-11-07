@@ -6,6 +6,7 @@ tags:
   - Окно
 translation_of: Web/API/BeforeUnloadEvent
 ---
+
 {{APIRef}}
 
 Событие **`beforeunload`** (en: перед_выгрузкой) происходит (непосредственно) перед выгрузкой окна, документа и их ресурсов.

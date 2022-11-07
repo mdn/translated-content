@@ -6,6 +6,7 @@ tags:
   - Справка
 translation_of: Web/API/SVGTextContentElement
 ---
+
 {{APIRef("SVG")}}
 
 Интерфейс **`SVGTextContentElement`** реализуется элементами, которые поддерживают рендеринг дочернего текстового содержимого. Он наследуется различными текстовыми интерфейсами, такими как {{domxref("SVGTextElement")}}, {{domxref("SVGTSpanElement")}}, {{domxref("SVGTRefElement")}}, {{domxref("SVGAltGlyphElement")}} и {{domxref("SVGTextPathElement")}}.

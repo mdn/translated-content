@@ -3,6 +3,7 @@ title: Использование интерфейса Screen Capture API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
 translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 В этой статье изучается использование программного интерфейса Screen Capture и его метода {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} для захвата потока экрана (всего или его части), его записи или передачи через сессию [WebRTC](/ru/docs/Web/API/WebRTC_API) .

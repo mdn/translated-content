@@ -3,6 +3,7 @@ title: Using server-sent events
 slug: Web/API/Server-sent_events/Using_server-sent_events
 translation_of: Web/API/Server-sent_events/Using_server-sent_events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 Разрабатывать web-приложения, использующие [Server-Sent Events](/ru/docs/Web/API/Server-sent_events) намного проще, чем с использованием websockets. Нужно всего лишь немного кода на стороне сервера, чтобы переправлять события web-приложению, но клиентская часть кода для обработки этих событий работает почти точно так же, как и для любых других событий.

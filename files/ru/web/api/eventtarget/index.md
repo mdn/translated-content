@@ -6,6 +6,7 @@ tags:
   - Interface
 translation_of: Web/API/EventTarget
 ---
+
 {{ ApiRef("DOM Events") }}
 
 **`EventTarget`** - это интерфейс, реализуемый объектами, которые могут генерировать события и могут иметь подписчиков на эти события.

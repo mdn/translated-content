@@ -3,6 +3,7 @@ title: Document.write()
 slug: Web/API/Document/write
 translation_of: Web/API/Document/write
 ---
+
 {{ ApiRef("DOM") }}
 
 Пишет строку в поток документа, открытый с помощью [document.open()](/ru/docs/Web/API/document.open).
