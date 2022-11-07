@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/Trim
 translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/Trim
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Resumen

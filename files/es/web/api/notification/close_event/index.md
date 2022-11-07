@@ -4,6 +4,7 @@ slug: Web/API/Notification/close_event
 page-type: web-api-event
 browser-compat: api.Notification.close_event
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 El evento **`close`** de la interfaz de {{domxref("Notification")}} se activa cuando se cierra una {{domxref("Notification")}}.

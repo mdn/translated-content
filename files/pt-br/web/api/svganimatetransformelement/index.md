@@ -2,6 +2,7 @@
 title: SVGAnimateTransformElement
 slug: Web/API/SVGAnimateTransformElement
 ---
+
 {{APIRef("SVG")}}
 
 A interface `SVGAnimateTransformElement` corresponde ao elemento {{SVGElement("animateTransform")}}.

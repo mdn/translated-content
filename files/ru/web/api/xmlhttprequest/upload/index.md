@@ -3,6 +3,7 @@ title: XMLHttpRequest.upload
 slug: Web/API/XMLHttpRequest/upload
 translation_of: Web/API/XMLHttpRequest/upload
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 Свойство **XMLHttpRequest.upload** возвращает объект {{domxref("XMLHttpRequestUpload")}}, представляющий процесс загрузки. Это непрозрачный объект, но так как он является {{domxref("XMLHttpRequestEventTarget")}}, к нему можно добавить обработчики событий.

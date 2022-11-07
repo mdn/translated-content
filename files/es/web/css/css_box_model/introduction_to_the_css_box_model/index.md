@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 original_slug: Web/CSS/CSS_Modelo_Caja/Introducción_al_modelo_de_caja_de_CSS
 ---
+
 {{CSSRef}}
 
 Al diseñar un documento, el motor de representación del navegador representa cada elemento como un cuadro rectangular según el estándar **modelo de caja de CSS**. CSS determina el tamaño, la posición y las propiedades (color, fondo, tamaño del borde, etc.) de estos cuadros.

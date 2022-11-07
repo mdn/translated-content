@@ -3,6 +3,7 @@ title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
 translation_of: Web/API/Node/isSameNode
 ---
+
 {{APIRef("DOM")}} {{Deprecated_Header}}
 **`Node.isSameNode()`** comprueba si dos nodos son iguales, es decir si hacen referencia al mismo objecto.
 

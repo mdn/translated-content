@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/HTMLElement/transitioncancel_event
 original_slug: Web/API/HTMLElement/transitioncancel_event
 ---
+
 {{ APIRef }}{{SeeCompatTable}}
 
 El evento `transitioncancel` es lanzado cuando una [transición CSS](/es/docs/CSS/Using_CSS_transitions) es cancelada.

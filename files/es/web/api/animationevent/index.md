@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/AnimationEvent
 ---
+
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
 
 La interfaz **`AnimationEvent`** representa los eventos que proporciona información relacionada con las [animaciones](/es/docs/Web/Guide/CSS/Using_CSS_animations).

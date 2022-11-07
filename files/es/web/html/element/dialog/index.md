@@ -4,6 +4,7 @@ slug: Web/HTML/Element/dialog
 translation_of: Web/HTML/Element/dialog
 original_slug: Web/HTML/Elemento/dialog
 ---
+
 {{HTMLSidebar}}
 
 El **elemento** **HTML `<dialog>`** representa una caja de diálogo u otro componente interactivo, como inspector o ventana.

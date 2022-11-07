@@ -9,6 +9,7 @@ tags:
   - 혼합 모드
 translation_of: Web/CSS/blend-mode
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`<blend-mode>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 요소가 겹칠 경우 색상이 어떻게 나타나야 하는지 정의합니다. {{cssxref("background-blend-mode")}}와 {{cssxref("mix-blend-mode")}} 속성에서 사용합니다.

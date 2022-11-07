@@ -4,6 +4,7 @@ slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 original_slug: Web/HTTP/Basics_of_HTTP/Identificación_recursos_en_la_Web
 ---
+
 {{HTTPSidebar}}
 
 El objetivo de una solicitud HTTP se denomina "recurso", (es decir: datos), y dicho recurso, no posee un tipo definido por defecto; puede ser un documento, o una foto, o cualquier otra posibilidad. Cada recurso es identificado por un Identificador Uniforme de Recursos ({{Glossary("URI")}}) y es utilizado a través de HTTP, para la identificación del tipo de recurso.

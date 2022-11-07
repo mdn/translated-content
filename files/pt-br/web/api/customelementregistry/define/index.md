@@ -2,6 +2,7 @@
 title: CustomElementRegistry.define()
 slug: Web/API/CustomElementRegistry/define
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 O método **`define()`** da interface {{domxref("CustomElementRegistry")}} define um novo elemento personalizado.

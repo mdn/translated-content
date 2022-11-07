@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/isArray
 ---
+
 {{JSRef}}
 
 El método **`Array.isArray()`** determina si el valor pasado es un {{jsxref("Array")}}.

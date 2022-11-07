@@ -4,10 +4,6 @@ slug: Web/Performance/Fundamentals
 translation_of: Web/Performance/Fundamentals
 ---
 
-Hola mundo ound, a [`visibilitychange`](/es/docs/Web/Reference/Events/visibilitychange) event You should use [`touchstart`](/es/docs/Web/Reference/Events/touchstart) and [`touchend`](/es/docs/Web/Reference/Events/touchend) instead. The reason is that these don’t have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don’t sacrifice accessibility, either. For example, the Financial Times
-
-Hola mundo ound, a [`visibilitychange`](/es/docs/Web/Reference/Events/visibilitychange) event You should use [`touchstart`](/es/docs/Web/Reference/Events/touchstart) and [`touchend`](/es/docs/Web/Reference/Events/touchend) instead. The reason is that these don’t have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don’t sacrifice accessibility, either. For example, the Financial Times
-
 Performance significa eficiencia. En el contexto de Open Web Apps, este documento explica en general qué es performance, cómo la plataforma del navegador ayuda a mejorarlo y qué herramientas y procesos puede usar para probarlo y mejorarlo.
 
 ## ¿Qué es performance?

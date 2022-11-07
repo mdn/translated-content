@@ -8,6 +8,7 @@ tags:
   - juegos
 translation_of: Web/API/Gamepad_API
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}
 
 **Gamepad API** es la manera de los desarrolladores de acceder y responder a las señales de los gamepads y otros controles para juegos de una manera simple y consistente. Éste contiene tres interfaces, dos eventos y una función especializada, para responder a los gamepads siendo conectados y desconectados, y acceder a otra información sobre los mismos gamepads, y que botones y otros controles están siendo presionados.

@@ -6,6 +6,7 @@ tags:
   - Glosario
 translation_of: Glossary/event
 ---
+
 Los eventos son sucesos generados por elementos del [DOM](/en-US/docs/Glossary/DOM), que pueden ser manipulados por un código Javascript
 
 ## Saber más

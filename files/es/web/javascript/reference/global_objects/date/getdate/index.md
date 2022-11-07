@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDate
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getDate
 ---
+
 {{JSRef}}
 
 El método **`getDate()`** devuelve el día del mes para la fecha especificada de acuerdo con la hora local.

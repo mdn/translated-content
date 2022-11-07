@@ -8,6 +8,7 @@ tags:
   - Tipos de letra de CSS
 translation_of: Web/CSS/font-weight
 ---
+
 {{CSSRef}}
 
 ## Resumen

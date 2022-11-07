@@ -5,6 +5,7 @@ translation_of: Web/API/BatteryManager/onlevelchange
 original_slug: Web/API/BatteryManager/onlevelchange
 browser-compat: api.BatteryManager.onlevelchange
 ---
+
 {{deprecated_header}} {{APIRef("Battery API")}}
 
 La propiedad **`BatteryManager.onlevelchange`** especifica un detector

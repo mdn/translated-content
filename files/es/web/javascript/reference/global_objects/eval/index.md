@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/eval
 original_slug: Web/JavaScript/Referencia/Objetos_globales/eval
 ---
+
 {{jsSidebar("Objects")}}
 
 ## Resumen

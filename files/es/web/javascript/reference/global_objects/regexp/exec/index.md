@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/exec
 ---
+
 {{JSRef}}
 
 El método **`exec()`** ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o {{jsxref("null")}}.

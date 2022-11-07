@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/Server-side/First_steps/Introduction
 original_slug: Learn/Server-side/Primeros_pasos/Introducción
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
 ¡Bienvenidos al curso MDN de programación para principiantes de lado servidor! En este primer artículo enfocamos la programación de Lado-Servidor desde un nivel alto, respondiendo a preguntas tales como "¿qué es?", "¿en qué se diferencia de la programación de Lado-Cliente?" y "¿porqué es tan útil?". Después de leer este artículo entenderás el poder adicional para los sitios web disponible a través de la codificación lado-servidor.

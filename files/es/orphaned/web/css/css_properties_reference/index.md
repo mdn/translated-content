@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/CSS_Properties_Reference
 original_slug: Web/CSS/CSS_Properties_Reference
 ---
+
 ## Propiedades CSS Básicas Referencia
 
 La siguiente lista es una lista de la propiedades CSS más comunes junto con su equivalente en notación DOM que es cómo son normalmente accedidas desde JavaScript.

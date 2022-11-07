@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/margin
 translation_of_original: Web/CSS/margin-new
 ---
+
 {{CSSRef}}
 
 Свойство **`margin`** [CSS](/ru/CSS) определяет [внешний отступ](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) на всех четырёх сторонах элемента. Это сокращение, которое устанавливает все отдельные поля одновременно: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}.

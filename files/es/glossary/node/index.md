@@ -6,6 +6,7 @@ tags:
   - Glosario
 translation_of: Glossary/Node
 ---
+
 El término **nodo** puede tener varios significados según el contexto. Puede referirse a:
 
 {{GlossaryDisambiguation}}

@@ -12,6 +12,7 @@ tags:
 translation_of: Web/API/Animation/onfinish
 original_slug: Web/API/Animation/onfinish
 ---
+
 {{ APIRef("Web Animations") }}
 
 La propiedad `onfinish` de la interfaz {{domxref("Animation")}} (de la [Web Animations API](/es/docs/Web/API/Web_Animations_API)) es el manejador de eventos para el evento [`finish`](/es/docs/Web/Reference/Events/finish). Este evento se envía cuando la animación termina de reproducirse.

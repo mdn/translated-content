@@ -10,6 +10,7 @@ tags:
   - aprende
 translation_of: Learn/Getting_started_with_the_web/CSS_basics
 ---
+
 {{LearnSideBar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics","Learn/Getting_started_with_the_web")}}
 
 CSS (_Hojas de Estilo en Cascada_) es el código que usas para dar estilo a tu página web. _CSS Básico_ te lleva a través de lo que tú necesitas para empezar. Contestará a preguntas del tipo: ¿Cómo hago mi texto rojo o negro? ¿Cómo hago que mi contenido se muestre en tal y tal lugar de la pantalla? ¿Cómo decoro mi página web con imágenes de fondo y colores?

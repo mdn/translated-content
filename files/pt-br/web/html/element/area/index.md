@@ -2,6 +2,7 @@
 title: <area>
 slug: Web/HTML/Element/area
 ---
+
 ## Resumo
 
 O _HTML `<area>` elemento_ define uma região hot-spot em uma imagem, e, opcionalmente, associa-lo com um {{Glossary ("Hyperlink", "link de hipertexto")}}. Este elemento é usado somente dentro de um {{HTMLElement ("map")}} elemento.

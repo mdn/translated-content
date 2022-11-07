@@ -2,6 +2,7 @@
 title: min-height
 slug: Web/CSS/min-height
 ---
+
 {{ CSSRef() }}
 
 ## Sumário

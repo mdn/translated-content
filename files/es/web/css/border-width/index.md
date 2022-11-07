@@ -7,6 +7,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/CSS/border-width
 ---
+
 ### Resumen
 
 La propiedad **`border-width`** define el ancho del borde.

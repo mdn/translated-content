@@ -2,6 +2,7 @@
 title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
 ---
+
 {{HTTPSidebar}}
 
 Quando o servidor retorna um código de erro (HTTP) 500, indica que encontrou uma condição inesperada e que o impediu de atender à solicitação.

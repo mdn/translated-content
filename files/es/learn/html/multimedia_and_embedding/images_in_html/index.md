@@ -14,6 +14,7 @@ tags:
   - texto alt
 translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
+
 {{LearnSidebar}}
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}

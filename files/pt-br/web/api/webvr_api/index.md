@@ -2,6 +2,7 @@
 title: WebVR API
 slug: Web/API/WebVR_API
 ---
+
 {{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}
 
 O WebVR oferece suporte para expor dispositivos de realidade virtual - por exemplo, telas montadas na cabeça, como o Oculus Rift - para aplicativos da web, permitindo que os desenvolvedores traduzam informações de posição e movimento da tela para movimento em torno de uma cena 3D. Isso tem inúmeras aplicações muito interessantes, de passeios de produtos virtuais e aplicativos de treinamento interativo para super imersivo jogos em primeira pessoa.

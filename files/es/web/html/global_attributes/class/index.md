@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/class
 original_slug: Web/HTML/Atributos_Globales/class
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 El [atributo global](/es/docs/Web/HTML/Atributos_Globales) **class** es una lista de las clases del elemento separada por espacios . Las clases permiten a CSS y Javascript seleccionar y acceder a elementos específicos a través de los [selectores de clase](/es/docs/Web/CSS/Class_selectors) o funciones como el método {{domxref("document.getElementsByClassName")}} del DOM.
 

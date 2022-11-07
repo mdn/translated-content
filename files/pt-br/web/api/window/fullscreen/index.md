@@ -2,6 +2,7 @@
 title: Window.fullScreen
 slug: Web/API/Window/fullScreen
 ---
+
 {{APIRef}}
 
 ## Sumário

@@ -3,6 +3,7 @@ title: O que é JavaScript?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
 original_slug: Learn/JavaScript/First_steps/O_que_e_JavaScript
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 Sejam bem-vindos ao curso de JavaScript para iniciantes do MDN! Neste primeiro artigo vamos fazer uma análise profunda da linguagem, respondendo questões como "O que é JavaScript?", e "O que ele faz?", para você se sentir confortável com a proposta da linguagem.

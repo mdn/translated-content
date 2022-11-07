@@ -3,6 +3,7 @@ title: Streams API
 slug: Web/API/Streams_API
 translation_of: Web/API/Streams_API
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 Streams API (API обработки потоков) позволяет программно получить доступ с помощью JavaScript к полученным по сети потокам данных и обработать их по желанию разработчика.

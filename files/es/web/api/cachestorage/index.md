@@ -13,6 +13,7 @@ tags:
   - TopicStub
 translation_of: Web/API/CacheStorage
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}} objects.

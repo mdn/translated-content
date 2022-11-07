@@ -11,6 +11,7 @@ tags:
   - box-shadow
 translation_of: Web/CSS/box-shadow
 ---
+
 {{ CSSRef() }}
 
 La propiedad CSS `box-shadow` añade efectos de sombra alrededor del marco de un elemento. Se pueden definir múltiples efectos separados por comas. La caja de la sombra se describe por los desplazamientos en X e Y, los radios de desenfoque y dispersión, y el color relativos al elemento.

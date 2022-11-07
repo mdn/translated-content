@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Adjacent_sibling_combinator
 original_slug: Web/CSS/Selectores_hermanos_adyacentes
 ---
+
 {{CSSRef("Selectors")}}
 
 Se hace referencia a este selector como selector adyacente o selector del próximo hermano. Sólo seleccionará un elemento especificado que esté inmediatamente después de otro elemento especificado.

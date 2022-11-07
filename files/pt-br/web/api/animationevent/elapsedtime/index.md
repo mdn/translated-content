@@ -2,6 +2,7 @@
 title: AnimationEvent.elapsedTime
 slug: Web/API/AnimationEvent/elapsedTime
 ---
+
 {{SeeCompatTable}}{{ apiref("Web Animations API") }}
 
 ## Sumário

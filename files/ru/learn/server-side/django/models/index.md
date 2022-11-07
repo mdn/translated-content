@@ -8,6 +8,7 @@ tags:
   - туториал
 translation_of: Learn/Server-side/Django/Models
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
 В этой статье показано, как определить модели для [LocalLibrary](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website) сайта. Она объясняет, что такое модель, как она объявляется, и некоторые из основных типов полей. В ней также кратко показаны некоторые из основных способов доступа к данным модели.

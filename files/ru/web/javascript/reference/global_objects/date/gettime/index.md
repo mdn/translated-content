@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 Метод **`getTime()`** возвращает числовое значение, соответствующее указанной дате по всемирному координированному времени.

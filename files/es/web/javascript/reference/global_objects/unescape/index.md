@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/unescape
 translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 original_slug: Web/JavaScript/Referencia/Objetos_globales/unescape
 ---
+
 {{jsSidebar("Objects")}}
 
 La función deprecada **`unescape()`** calcula un nuevo string en el cual secuencia de valores hexadecimales son reemplazados con el caracter que representa. La secuencia de calculo deber{ia ser introducida por una función como {{jsxref("escape")}}. Por que `unescape` está deprecada, usar {{jsxref("decodeURI")}} or {{jsxref("decodeURIComponent")}}.

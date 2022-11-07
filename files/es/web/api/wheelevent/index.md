@@ -10,6 +10,7 @@ tags:
   - eventos
 translation_of: Web/API/WheelEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 El interface **`WheelEvent`** retrata los eventos que ocurren cuando el usuario mueve la rueda del ratón o de un dispositivo similar.

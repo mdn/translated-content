@@ -3,6 +3,7 @@ title: HTMLElement.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
 translation_of: Web/API/HTMLElement/offsetLeft
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La propiedad de solo lectura **`HTMLElement.offsetLeft`** devuelve el número de _píxeles a la izquierda_ del elemento actual con respecto al nodo {{domxref("HTMLElement.offsetParent")}} .

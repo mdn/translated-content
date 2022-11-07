@@ -2,6 +2,7 @@
 title: Visão geral do cliente-servidor
 slug: Learn/Server-side/First_steps/Client-Server_overview
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 Agora que você conhece o propósito e os benefícios potenciais da programação do lado do servidor, examinaremos em detalhes o que acontece quando um servidor recebe uma "solicitação dinâmica" de um navegador. Como a maioria dos códigos do lado servidor do site lida com solicitações e respostas de maneiras semelhantes, isso o ajudará a entender o que você precisa fazer ao escrever a maior parte do seu próprio código.

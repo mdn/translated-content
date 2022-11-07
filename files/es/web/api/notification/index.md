@@ -3,6 +3,7 @@ title: Notification
 slug: Web/API/notification
 translation_of: Web/API/Notification
 ---
+
 {{APIRef("Web Notifications")}}
 
 La interfaz `Notification` de la [Notifications API](/es/docs/Web/API/Notifications_API) se usa para configurar y mostrar notificaciones de escritorio al usuario. La apariencia y las funcionalidad especificas de esta notificacion varia a traves de las distintas plataformas, pero generalmente esta plataformas proveen un camino para proveer informacion al usuario de manera asincronica.

@@ -8,6 +8,7 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Closures
 ---
+
 {{jsSidebar("Intermediate")}}
 
 Una clausura o _closure_ es una función que guarda referencias del estado adyacente (**ámbito léxico**). En otras palabras, una clausura permite acceder al ámbito de una función exterior desde una función interior. En JavaScript, las clausuras se crean cada vez que una función es creada.

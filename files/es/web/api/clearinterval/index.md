@@ -4,6 +4,7 @@ slug: Web/API/clearInterval
 translation_of: Web/API/WindowOrWorkerGlobalScope/clearInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearInterval
 ---
+
 {{APIRef("HTML DOM")}}
 
 Cancela una acción reiterativa que se inició mediante una llamada a {{domxref("window.setInterval", "setInterval")}}.

@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.lineCap
 slug: Web/API/CanvasRenderingContext2D/lineCap
 translation_of: Web/API/CanvasRenderingContext2D/lineCap
 ---
+
 {{APIRef}}
 
 La propiedad **`CanvasRenderingContext2D.lineCap`** del API Canvas 2D determina la forma usada para dibujar los puntos finales de las líneas.

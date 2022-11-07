@@ -13,6 +13,7 @@ tags:
   - WebVR
 translation_of: Web/API/WebVR_API
 ---
+
 {{SeeCompatTable}}{{APIRef("WebVR API")}}
 
 WebVR proporciona soporte para la exposición de dispositivos de realidad virtual — por ejemplo el visualizador de Oculus Rift o HTC Vive — para aplicaciones web, permitiendo a los desarrolladores traducir la información de posición y movimiento del visualizador al movimiento alrededor de una escena en 3D. Esto tiene numerosas aplicaciones interesantes, desde visitas virtuales de productos y aplicaciones de capacitación interactiva hasta juegos inmersivos en primera persona.

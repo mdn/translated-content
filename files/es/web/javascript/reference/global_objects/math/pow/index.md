@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/pow
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/pow
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Resumen

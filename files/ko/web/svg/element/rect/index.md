@@ -4,6 +4,7 @@ slug: Web/SVG/Element/rect
 translation_of: Web/SVG/Element/rect
 original_slug: Web/SVG/Element/사각형
 ---
+
 {{SVGRef}}
 
 **\<rect>** 요소는 SVG 기본 모형이고 코너의 위치와 폭과 높이에 따라 사각형을 만드는데 사용된다. 또한 모서리가 둥근 사각형을 만들 수 있다.

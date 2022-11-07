@@ -3,6 +3,7 @@ title: HTMLMediaElement.paused
 slug: Web/API/HTMLMediaElement/paused
 translation_of: Web/API/HTMLMediaElement/paused
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propiedad **`HTMLMediaElement.paused`** es solo de lectura, indica si el elemento multimedia está en pausa.

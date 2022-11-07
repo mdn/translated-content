@@ -2,6 +2,7 @@
 title: <mark>
 slug: Web/HTML/Element/mark
 ---
+
 ## Sumário
 
 O **Elemento HMTL `<mark>` **representa um trecho de destaque em um texto, por exemplo, uma sequência de texto marcado como referência, devido à sua relevância em um contexto particular. Por Exemplo, pode ser utilizado em uma página que mostra os resultados de uma busca onde todas as instâncias da palavra pesquisadas receberam destaque.

@@ -3,7 +3,7 @@ title: <input type="time">
 slug: Web/HTML/Element/input/time
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{htmlelement("input")}} 要素の **`time`** 型は、ユーザーが簡単に時刻 (時と分、任意で秒) を入力できるように設計された入力欄を生成します。
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 original_slug: Web/JavaScript/Referencia/Funciones/parametros_rest
 ---
+
 {{jsSidebar("Functions")}}
 
 La sintaxis de los **parámetros rest** nos permiten representar un número indefinido de argumentos como un array.

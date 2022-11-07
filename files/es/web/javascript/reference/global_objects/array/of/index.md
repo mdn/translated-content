@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/of
 ---
+
 {{JSRef}}
 
 El método **`Array.of()`** crea una nueva instancia `Array` con un número variable de elementos pasados como argumento, independientemente del número o del tipo.

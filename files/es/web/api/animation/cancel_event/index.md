@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/Animation/oncancel
 original_slug: Web/API/Animation/oncancel
 ---
+
 {{ APIRef("Web Animations") }}
 
 La propiedad `oncancel` de la interfaz {{domxref("Animation")}} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) es el manejador de eventos para el evento [`cancel`](/es/docs/Web/Reference/Events/cancel) .

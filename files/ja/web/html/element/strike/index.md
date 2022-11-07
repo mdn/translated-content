@@ -3,7 +3,7 @@ title: <strike>
 slug: Web/HTML/Element/strike
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 **`<strike>`** は [HTML](/ja/docs/Web/HTML) の要素で、テキストの上に取り消し線（水平線）を引きます。
 

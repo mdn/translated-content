@@ -3,6 +3,7 @@ title: Document.getElementsByName()
 slug: Web/API/Document/getElementsByName
 translation_of: Web/API/Document/getElementsByName
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`getElementsByName()`** объекта {{domxref("Document")}} возвращает коллекцию {{domxref("NodeList")}} элементов с заданным {{domxref("element.name","name")}}.

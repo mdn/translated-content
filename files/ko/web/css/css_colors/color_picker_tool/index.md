@@ -3,6 +3,7 @@ title: Color picker tool
 slug: Web/CSS/CSS_Colors/Color_picker_tool
 translation_of: Web/CSS/CSS_Colors/Color_picker_tool
 ---
+
 ```html hidden
     <div id="container">
         <div id="palette" class="block">

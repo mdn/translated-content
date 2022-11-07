@@ -3,6 +3,7 @@ title: Window.outerWidth
 slug: Web/API/Window/outerWidth
 translation_of: Web/API/Window/outerWidth
 ---
+
 {{APIRef}}
 
 ## Sumario

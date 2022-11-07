@@ -7,6 +7,7 @@ tags:
   - Interfaz
 translation_of: Web/API/EventSource
 ---
+
 {{APIRef("Websockets API")}}
 
 La interfaz **`EventSource`** se utiliza para recibir eventos server-side. Se realiza la conexión a un servidor sobre HTTP y se reciben eventos en formato `text/event-stream` sin tener que cerrar la conexión.

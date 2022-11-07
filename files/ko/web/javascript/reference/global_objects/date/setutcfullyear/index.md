@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
 browser-compat: javascript.builtins.Date.setUTCFullYear
 ---
+
 {{JSRef}}
 
 **setUTCFullYear()** 메서드는 지정된 날짜의 전체 연도를 표준시에 따라 설정합니다.

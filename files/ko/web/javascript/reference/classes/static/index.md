@@ -9,6 +9,7 @@ tags:
   - 클래스
 translation_of: Web/JavaScript/Reference/Classes/static
 ---
+
 {{jsSidebar("Classes")}}
 
 **static** 키워드는 클래스의 정적 메서드를 정의합니다.

@@ -4,6 +4,7 @@ slug: Web/HTML/Element/article
 translation_of: Web/HTML/Element/article
 original_slug: Web/HTML/Elemento/article
 ---
+
 El _Elemento article de HTML_ (\<article>) representa una composición auto-contenida en un documento, página, una aplicación o en el sitio, que se destina a distribuir de forma independiente o reutilizable, por ejemplo, en la indicación. Podría ser un mensaje en un foro, un artículo de una revista o un periódico, una entrada de blog, un comentario de un usuario, un widget interactivo o gadget, o cualquier otro elemento independiente del contenido.
 
 > **Nota:** Notas de uso:

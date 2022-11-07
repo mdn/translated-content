@@ -3,6 +3,9 @@ title: <input>
 slug: Web/HTML/Element/Input
 translation_of: Web/HTML/Element/input
 ---
+
+{{HTMLSidebar}}
+
 ## Описание
 
 **Элемент** **HTML `<input>`** используется для создания интерактивных элементов управления в веб-формах для получения данных от пользователя; в зависимости от устройства и {{Glossary("user agent")}}, доступен широкий выбор типов входных данных и виджетов управления. Из-за огромного количества возможных сочетаний типов ввода и атрибутов это один из самых мощных и сложных элементов HTML.
@@ -256,5 +259,3 @@ Firefox for Android also sets a default {{ cssxref("border") }} on all `<input t
 
 - Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 - [Cross-browser HTML5 placeholder text](http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text)
-
-{{HTMLRef}}

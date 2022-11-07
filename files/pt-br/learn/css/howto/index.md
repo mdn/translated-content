@@ -2,6 +2,7 @@
 title: Use CSS to solve common problems
 slug: Learn/CSS/Howto
 ---
+
 {{LearnSidebar}}
 
 The following links point to solutions to common everyday problems you'll need to solve with CSS.

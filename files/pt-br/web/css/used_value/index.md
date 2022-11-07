@@ -3,6 +3,7 @@ title: Valor usado
 slug: Web/CSS/used_value
 original_slug: Web/CSS/Valor_usado
 ---
+
 {{cssref}}
 
 O **valor usado** de uma propriedade CSS é o valor final dessa propriedade depois de todos os cálculos terem sido executados.

@@ -2,6 +2,7 @@
 title: RTCIceTransport
 slug: Web/API/RTCIceTransport
 ---
+
 {{APIRef("WebRTC")}}
 
 A interface **`RTCIceTransport`** fornece informação a respeito da camada de transporte {{Glossary("ICE")}} na qual os dados estão sendo enviados e recebidos. Isso é particulamente útil se você precisa acessar as informações de estado da conexão.

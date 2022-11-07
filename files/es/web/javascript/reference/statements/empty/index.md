@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/Empty
 original_slug: Web/JavaScript/Referencia/Sentencias/Empty
 ---
+
 {{jsSidebar("Statements")}}
 
 Un **empty statement** o sentencia vacía es usada para no proveer una sentencia, incluso si la sintaxis JavaScript esperase una.

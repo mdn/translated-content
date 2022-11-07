@@ -2,6 +2,7 @@
 title: FileReader()
 slug: Web/API/FileReader/FileReader
 ---
+
 O construtor **`FileReader()`** cria um novo `FileReader`.
 
 Para mais detalhes de como usar o `FileReader`, veja [Using files from web applications](/pt-BR/docs/Web/API/File/Using_files_from_web_applications).

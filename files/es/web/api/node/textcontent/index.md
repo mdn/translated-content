@@ -3,6 +3,7 @@ title: Node.textContent
 slug: Web/API/Node/textContent
 translation_of: Web/API/Node/textContent
 ---
+
 {{APIRef("DOM")}}
 
 La propiedad **`textContent`** de la interfaz {{domxref("Node")}} representa el contenido de texto de un nodo y sus dencendientes.

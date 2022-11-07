@@ -4,6 +4,7 @@ slug: conflicting/Web/API/HTMLElement/input_event
 translation_of: Web/API/GlobalEventHandlers/oninput
 original_slug: Web/API/GlobalEventHandlers/oninput
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 Un controlador de eventos para el evento input en la ventana. El evento input es llamado cuando el valor de un elemento {{ HTMLElement("input") }} ha cambiado.

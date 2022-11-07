@@ -2,6 +2,7 @@
 title: PUT
 slug: Web/HTTP/Methods/PUT
 ---
+
 {{HTTPSidebar}}
 
 O **método de requisição** **HTTP PUT** cria um novo recurso ou subsititui uma representação do recurso de destino com os novos dados.

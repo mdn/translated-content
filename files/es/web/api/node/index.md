@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/Node
 ---
+
 {{APIRef("DOM")}}
 
 **`Node`** es una interfaz en la cuál un número de objetos de tipo DOM API heredan. Esta interfaz permite que esos objetos sean tratados similarmente.
@@ -32,10 +33,10 @@ _herendan propiedades de sus padres {{domxref("EventTarget")}}_.\[1]
 - {{domxref("Node.lastChild")}} {{readonlyInline}}
   - : Returns a {{domxref("Node")}} representing the last direct child node of the node, or `null` if the node has no child.
 - {{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} representing the local part of the qualified name of an element. In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML. 
+  - : Returns a {{domxref("DOMString")}} representing the local part of the qualified name of an element. In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML.
     Though recent specifications require `localName` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
 - {{domxref("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}
-  - : The namespace URI of this node, or `null` if it is no namespace. In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) namespace in both HTML and XML trees. 
+  - : The namespace URI of this node, or `null` if it is no namespace. In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) namespace in both HTML and XML trees.
     Though recent specifications require `namespaceURI` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
 - {{domxref("Node.nextSibling")}} {{readonlyInline}}
   - : Returns a {{domxref("Node")}} representing the next node in the tree, or `null` if there isn't such node.

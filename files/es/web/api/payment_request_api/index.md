@@ -13,6 +13,7 @@ tags:
   - Tarjeta de Crédito
 translation_of: Web/API/Payment_Request_API
 ---
+
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
 El API de solicitud de pago provee una experiencia consistente tanto para comerciantes, como para usuarios. No es una nueva forma de pagar; más bien, es una manera para que los usuarios puedan seleccionar su forma de pago preferida para pagar por cosas, y que esa información esté disponible para el comerciante.

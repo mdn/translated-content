@@ -16,6 +16,7 @@ tags:
 translation_of: Web/HTML/Element/input/text
 original_slug: Web/HTML/Elemento/input/text
 ---
+
 {{HTMLSidebar}}
 
 Los elementos {{HTMLElement("input")}} de tipo {{HTMLAttrDef("text")}} crean campos de texto básicos de una sola línea.

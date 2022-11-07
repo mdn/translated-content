@@ -4,6 +4,7 @@ slug: Web/API/caches
 translation_of: Web/API/WindowOrWorkerGlobalScope/caches
 original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 ---
+
 {{APIRef()}}{{SeeCompatTable}}
 
 La propiedad de sólo-lectura **`caches`**, de la interfaz {{domxref("WindowOrWorkerGlobalScope")}}, devuelve el objeto {{domxref("CacheStorage")}} asociado al contexto actual. Este objeto habilita funcionalidades como guardar assets para su utilización _offline_, y generar respuestas personalizadas a las peticiones.

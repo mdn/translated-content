@@ -13,6 +13,7 @@ tags:
   - WebVTT
 translation_of: Web/API/TextTrack
 ---
+
 {{APIRef("WebVTT")}}
 
 The `TextTrack` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes and controls the text track associated with a particular {{HTMLElement("track")}} element.

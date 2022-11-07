@@ -2,6 +2,7 @@
 title: <form>
 slug: Web/HTML/Element/form
 ---
+
 ## Resumo
 
 O **elemento HTML `<form>` **representa uma seção de um documento que contém controles interativos que permitem ao usuário submeter informação a um determinado servidor web.

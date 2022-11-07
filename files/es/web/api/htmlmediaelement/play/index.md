@@ -3,6 +3,7 @@ title: HTMLMediaElement.play()
 slug: Web/API/HTMLMediaElement/play
 translation_of: Web/API/HTMLMediaElement/play
 ---
+
 {{APIRef("HTML DOM")}}
 
 El método `play()` de {{domxref("HTMLMediaElement")}} intenta comenzar la reproducción de los medios. Devuelve una promesa ({{jsxref("Promise")}}) que se resuelve cuando la reproducción se ha iniciado con éxito. Si no se inicia la reproducción por cualquier motivo, como problemas de permisos, la promesa será rechazada.

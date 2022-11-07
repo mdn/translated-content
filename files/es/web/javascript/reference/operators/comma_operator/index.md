@@ -6,6 +6,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 original_slug: Web/JavaScript/Referencia/Operadores/operador_coma
 ---
+
 {{jsSidebar("Operators")}}
 
 El operador coma evalua cada uno de sus operandos (de izquierda a derecha) y retorna el valor del último operando.

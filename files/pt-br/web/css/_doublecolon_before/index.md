@@ -2,6 +2,7 @@
 title: '::before (:before)'
 slug: Web/CSS/::before
 ---
+
 {{CSSRef}}
 
 ## Sumário

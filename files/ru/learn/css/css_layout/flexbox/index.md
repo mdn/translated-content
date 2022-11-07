@@ -7,6 +7,7 @@ tags:
   - Стилизация
 translation_of: Learn/CSS/CSS_layout/Flexbox
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
 Это новая технология, которая уже имеет достаточно широкую поддержку браузеров. Flexbox предоставляет инструменты для быстрого создания сложных, гибких макетов, и функции, которые были сложны в традиционных методах CSS. В этой статье объясняются все основы данной технологии.

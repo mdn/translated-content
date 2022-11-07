@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/length
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/length
 ---
+
 {{JSRef}}
 
 La propiedad **`length`** de un objeto {{jsxref("String")}} representa la longitud de una cadena, en unidades de código UTF-16.

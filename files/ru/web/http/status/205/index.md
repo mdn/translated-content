@@ -3,6 +3,7 @@ title: 205 Reset Content
 slug: Web/HTTP/Status/205
 translation_of: Web/HTTP/Status/205
 ---
+
 {{HTTPSidebar}}
 
 Статус ответа HTTP **`205 Reset Content`** сообщает клиенту об изменении вида документа, например, для очистки содержимого формы, сброса состояния холста или обновления пользовательского интерфейса.

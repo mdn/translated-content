@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/export
 original_slug: Web/JavaScript/Referencia/Sentencias/export
 ---
+
 {{jsSidebar("Statements")}}
 
 La declaración **`export`** se utiliza al crear módulos de JavaScript para exportar funciones, objetos o tipos de dato primitivos del módulo para que puedan ser utilizados por otros programas con la sentencia {{jsxref("Statements/import", "import")}}.

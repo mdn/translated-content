@@ -3,6 +3,7 @@ title: Conceptos básicos de las Propiedades y Valores Lógicos
 slug: Web/CSS/CSS_Logical_Properties/Basic_concepts
 translation_of: Web/CSS/CSS_Logical_Properties/Basic_concepts
 ---
+
 {{CSSRef}}
 
 La Especificación de Propiedades y Valores Lógicos introduce asignaciones relativas al flujo para muchas de las propiedades y valores en CSS. Este artículo introduce la especificación y explica las propiedades y valores relativos al flujo.

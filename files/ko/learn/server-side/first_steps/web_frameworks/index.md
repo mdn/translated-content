@@ -120,7 +120,7 @@ class Team(models.Model):
 
 Django 모델은 데이터베이스 검색을 위한 간단한 쿼리를 제공 합니다. 다른 기준을 사용하여 한 번에 여러 필드와 일치시킬 수 있습니다. (예 : 대소 문자를 구분하지 않음,보다 큼, 등), 그리고 복잡한 명령문을 지원 할 수 있습니다 (예를 들어 당신이 "Fr"로 시작하거나 "al"로 끝나는 특별한 U11팀을 찾을 수 있습니다).
 
-두번째 코드 스니펫은 U09의 모든 팀을 보여주는 view function(요청 핸들러)을 보겠습니다. 이 경우 우리는 `team_level` 필드의 텍스트가 정확히 'U09'인 모든 레코드를 필터링하도록 지정합니다. ( 이 기준이 필드 이름과 일치 유형이 두 개의 밑줄로 구분 된 인수로 `filter()` 함수에 전달되는 방법을 아래에 기록하십시오. team_level\_\_exact ).
+두번째 코드 스니펫은 U09의 모든 팀을 보여주는 view function(요청 핸들러)을 보겠습니다. 이 경우 우리는 **`team_level`** 필드의 텍스트가 정확히 'U09'인 모든 레코드를 필터링하도록 지정합니다. ( 이 기준이 필드 이름과 일치 유형이 두 개의 밑줄로 구분 된 인수로 `filter()` 함수에 전달되는 방법을 아래에 기록하십시오. **`team_level__exact`** ).
 
 ```python
 #best/views.py
@@ -249,7 +249,7 @@ Rails follows a very similar design philosophy to Django. Like Django it provide
 
 There are of course many differences due to specific design decisions and the nature of the languages.
 
-Rails has been used for high profile sites, including:\*\* \*\*[Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://shopify.com/), [Airbnb](https://airbnb.com/), [Twitch](https://twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://hulu.com/), [Zendesk](https://zendesk.com/), [Square](https://square.com/), [Highrise](https://highrisehq.com/).
+Rails has been used for high profile sites, including: [Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://shopify.com/), [Airbnb](https://airbnb.com/), [Twitch](https://twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://hulu.com/), [Zendesk](https://zendesk.com/), [Square](https://square.com/), [Highrise](https://highrisehq.com/).
 
 ### Laravel (PHP)
 

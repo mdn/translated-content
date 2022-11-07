@@ -2,6 +2,7 @@
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
 ---
+
 {{ APIref("Geolocation API") }}
 
 O método **`Geolocation.watchPosition()`** é usado para registrar uma função manipuladora (handler function) que irá ser chamada automáticamente cada vez que a posição no dispositivo mudar. Você pode, opcionalemnte, especificar uma função de retorno que manipulará qualquer erro.

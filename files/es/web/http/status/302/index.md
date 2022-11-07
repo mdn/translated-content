@@ -8,6 +8,7 @@ tags:
   - redirecciones
 translation_of: Web/HTTP/Status/302
 ---
+
 {{HTTPSidebar}}
 
 El código de estado de redirección HTTP **`302 Found`** indica que el recurso solicitado ha sido movido temporalmente a la URL dada por las cabeceras {{HTTPHeader("Location")}}. Un navegador redirecciona a esta página, pero los motores de búsqueda no actualizan sus enlaces al recurso ( hablando en lenguaje SEO, se suele decir que el link juice no es enviado a la nueva URL).

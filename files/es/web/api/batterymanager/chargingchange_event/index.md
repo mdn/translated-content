@@ -12,6 +12,7 @@ translation_of: Web/API/BatteryManager/onchargingchange
 original_slug: Web/API/BatteryManager/onchargingchange
 browser-compat: api.BatteryManager.onchargingchange
 ---
+
 {{deprecated_header}}
 
 {{APIRef("Battery API")}}

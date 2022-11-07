@@ -3,6 +3,7 @@ title: ':not()'
 slug: Web/CSS/:not
 translation_of: Web/CSS/:not
 ---
+
 {{ CSSRef() }}
 
 ## Описание

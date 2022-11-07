@@ -9,6 +9,7 @@ tags:
   - literales
 translation_of: Web/JavaScript/Guide/Grammar_and_types
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 Este capítulo analiza la gramática básica de JavaScript, la declaración de variables, los tipos de datos y literales.

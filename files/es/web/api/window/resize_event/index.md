@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onresize
 original_slug: Web/API/GlobalEventHandlers/onresize
 ---
+
 {{ ApiRef() }}
 
 La propiedad **GlobalEventHandlers.onresize** contiene un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) desencadenado cuando un evento [`resize`](/es/docs/Web/Reference/Events/resize) es recibido.

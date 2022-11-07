@@ -4,6 +4,7 @@ slug: Web/API/DragEvent
 translation_of: Web/API/DragEvent
 browser-compat: api.DragEvent
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 La interfaz **`DragEvent`** es un {{domxref("Event","DOM event")}} que representa una interacción de arrastrar y soltar. El usuario inicia el evento al posicionar el puntero sobre un elemento, seleccionándolo con el puntero y comenazado a arrasrrarlo a una nueva posición (Cambiando su ubicación en el DOM). Las aplicaciones tienen la libertad de interpretar esta interacción de una manera especifica en ella.

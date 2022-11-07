@@ -4,6 +4,7 @@ slug: Web/HTTP/Protocol_upgrade_mechanism
 translation_of: Web/HTTP/Protocol_upgrade_mechanism
 original_slug: Web/HTTP/mecanismo_actualizacion_protocolo
 ---
+
 {{HTTPSidebar}}
 
 El protocolo [HTTP](/en/HTTP) posee un mecanismo especifico para permitir que una conexión de comunicación ya establecida, pueda actualizar su protocolo a un nuevo protocolo, incluso si es incompatible. Este documento muestra este mecanismo y presenta ejemplos de posibles escenarios en los que se puede usar.

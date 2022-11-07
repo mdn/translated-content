@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/arguments/length
 original_slug: Web/JavaScript/Referencia/Funciones/arguments/length
 ---
+
 {{jsSidebar("Functions")}}
 
 La propiedad **`arguments.length`** contiene el número de argumentos pasados a una función.

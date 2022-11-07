@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Aserciones
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Las aserciones incluyen límites, que indican el comienzo y el final de líneas y palabras, y otros patrones que indican de alguna manera que el reconocimiento es posible (incluidas las expresiones anticipadas, condicionales e inversas).

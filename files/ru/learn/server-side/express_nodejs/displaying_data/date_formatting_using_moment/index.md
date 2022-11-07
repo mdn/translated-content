@@ -3,6 +3,7 @@ title: Форматирование даты при помощи moment
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 ---
+
 По умолчанию отображение дат наших моделей некрасиво: _Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_. В этом разделе мы покажем, как можно обновить страницу списка _BookInstance List_ из предыдущего раздела, чтобы представить поле `due_date` в более удобном формате: December 6th, 2016.
 
 Подход, который будет использован, состоит в создании виртуального свойства в модели `BookInstance`, которое будет возвращать отформатированную дату. Форматирование будет производиться с использованием [moment](https://www.npmjs.com/package/moment), легковесной библиотеки JavaScript для разбора, проверки, изменения и форматирования дат.

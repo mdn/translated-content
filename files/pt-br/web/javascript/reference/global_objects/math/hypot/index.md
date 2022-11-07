@@ -2,6 +2,7 @@
 title: Math.hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
 ---
+
 {{JSRef}}
 
 A função **`Math.hypot()`** retorna a raiz quadrada do somátorio do quadrado de seus parâmetros, ou seja

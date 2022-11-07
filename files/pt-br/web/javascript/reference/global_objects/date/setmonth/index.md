@@ -2,6 +2,7 @@
 title: Date.prototype.setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 ---
+
 {{JSRef}}
 
 O método **`setMonth()`** atribui o mês para uma data específica de acordo com o ano corrente.

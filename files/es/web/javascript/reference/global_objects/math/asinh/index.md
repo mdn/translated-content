@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/asinh
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/asinh
 ---
+
 {{JSRef}}
 
 La función **`Math.asinh()`** retorna el arcoseno hyperbólico de un número, es decir

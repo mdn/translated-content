@@ -3,6 +3,7 @@ title: FileReader
 slug: Web/API/FileReader
 translation_of: Web/API/FileReader
 ---
+
 {{ APIRef("File API") }}
 
 ## Sumario
@@ -56,7 +57,7 @@ Mira el artículo _[Using files from web applications](/es/docs/Using_files_from
 
 - {{domxref("FileReader.abort()")}}
   - : Interrumpe la operación de lectura. A su regreso `readyState` será `DONE`.
-- {{domxref("FileReader.readAsArrayBuffer()")}} 
+- {{domxref("FileReader.readAsArrayBuffer()")}}
   - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }} especificado, una vez terminada, el atributo `result` contiene un {{domxref("ArrayBuffer")}} representando los datos del fichero.
 - {{domxref("FileReader.readAsBinaryString()")}}
   - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo `result` contiene los datos binarios en bruto del archivo como una cadena.

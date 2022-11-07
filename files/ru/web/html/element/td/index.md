@@ -3,6 +3,9 @@ title: '<td>: элемент ячейки таблицы данных'
 slug: Web/HTML/Element/td
 translation_of: Web/HTML/Element/td
 ---
+
+{{HTMLSidebar}}
+
 **HTML-элемент `<td>`** определяет ячейку таблицы которая содержит данные. Участвует в _табличной модели_.
 
 | [Категория контента](/ru/docs/Web/HTML/Content_categories) | None.                                                                                                                                                                                                                     |
@@ -84,5 +87,3 @@ translation_of: Web/HTML/Element/td
 ## Смотрите также
 
 - Другие табличные HTML-элементы: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}.
-
-{{HTMLRef}}

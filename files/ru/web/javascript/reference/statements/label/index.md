@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/label
 browser-compat: javascript.statements.label
 ---
+
 {{jsSidebar("Statements")}}
 
 **Метки** используются вместе с операторами {{jsxref("Statements/break", "break")}} и {{jsxref("Statements/continue", "continue")}}. Они выступают в роли идентификатора выражения, на который можно сослаться.

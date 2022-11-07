@@ -3,6 +3,7 @@ title: Referência HTML
 slug: Web/HTML/Reference
 original_slug: Web/HTML/ReferenciaHTML
 ---
+
 {{HTMLSidebar}}
 
 Esta referência de [HTML](/pt-BR/docs/Web/HTML) descreve todos os **elementos** e **atributos** do HTML, incluindo **atributos globais** que se aplicam a todos elementos.

@@ -5,6 +5,7 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/string
 ---
+
 {{ XsltRef() }}
 
 `string` 함수는 인수를 문자열로 변환합니다.

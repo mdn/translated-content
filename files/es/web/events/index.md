@@ -3,6 +3,7 @@ title: Referencia de Eventos
 slug: Web/Events
 translation_of: Web/Events
 ---
+
 Los eventos se envían para notificar al código de cosas interesantes que han ocurrido. Cada evento está representado por un objeto que se basa en la interfaz {{domxref("Event")}}, y puede tener campos y/o funciones personalizadas adicionales para obtener más información acerca de lo sucedido. Los eventos pueden representar cualquier cosa desde las interacciones básicas del usuario para notificaciones automatizadas de las cosas que suceden en el modelo de representación.
 
 Este artículo ofrece una lista de eventos que se pueden enviar; algunos son eventos estándar definidos en las especificaciones oficiales, mientras que otros son eventos usados internamente por los navegadores específicos; por ejemplo, Eventos específicos de Mozilla se enumeran de manera que los [complementos](/es/docs/Mozilla/Add-ons) pueden usarlos para interactuar con el navegador.

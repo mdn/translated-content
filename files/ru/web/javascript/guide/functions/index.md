@@ -6,6 +6,7 @@ tags:
   - Функции
 translation_of: Web/JavaScript/Guide/Functions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
 
 ## Функции в JavaScript

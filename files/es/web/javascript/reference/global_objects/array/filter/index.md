@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/filter
 ---
+
 {{JSRef}}
 
 El método **`filter()`** crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.

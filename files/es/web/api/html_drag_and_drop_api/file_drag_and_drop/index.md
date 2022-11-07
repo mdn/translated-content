@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 original_slug: DragDrop/Drag_and_Drop/drag_and_drop_archivo
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 Las interfaces Drag-and-Drop posibilitan arrastrar y soltar archivos en una página web. En este documento se describe cómo una aplicación puede aceptar uno, o más, archivos que son arrastrados desde el _explorador de archivos_ de la plataforma y soltados en una página web.

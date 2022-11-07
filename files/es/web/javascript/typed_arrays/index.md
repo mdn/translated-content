@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Typed_arrays
 original_slug: Web/JavaScript/Vectores_tipados
 ---
+
 {{JsSidebar("Advanced")}}
 
 **Los arreglos tipados en JavaScript** son objetos similares a arreglos que proporcionan un mecanismo para leer y escribir datos binarios sin procesar en búferes de memoria. Como ya sabrás, los objetos {{jsxref("Array", "Arreglo")}} crecen y se encogen dinámicamente y pueden tener cualquier valor de JavaScript. Los motores de JavaScript realizan optimizaciones para que estos arreglos sean rápidos.

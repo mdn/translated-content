@@ -12,6 +12,7 @@ tags:
 translation_of: Web/API/GlobalEventHandlers
 original_slug: Web/API/GlobalEventHandlers
 ---
+
 {{ApiRef("DOM HTML")}}
 
 La combinación («_mixin_» en inglés) **`GlobalEventHandlers`** describe los controladores de eventos comunes a varias interfaces como {{DOMxRef("HTMLElement")}}, {{DOMxRef("Document")}} o {{DOMxRef("Window")}}. Cada una de estas interfaces puede, por supuesto, agregar más controladores de eventos además de los que se enumeran a continuación.

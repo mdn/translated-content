@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 original_slug: Referencia_DOM_de_Gecko/Localizando_elementos_DOM_usando_selectores
 ---
+
 Los selectores api proveen metodos que hacen mas facil y rapido devolver elementos del nodo {{domxref("Element")}} del DOM mediante emparejamiento de un conjunto de selectores. Esto es mucho mas rapido que las tecnicas anteriores, donde fuera necesario, por ejemplo usar un loop en un codigo JavaScript para localizar el item especifico que quisieras encontrar.
 
 ## Interfaz de NodeSelector

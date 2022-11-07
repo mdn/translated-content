@@ -2,6 +2,7 @@
 title: width
 slug: Web/CSS/width
 ---
+
 {{CSSRef}}
 
 ## Resumo

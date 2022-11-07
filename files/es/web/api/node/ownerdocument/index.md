@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/Node/ownerDocument
 ---
+
 {{APIRef("DOM")}}
 
 La propiedad de lectura **`ownerDocument`** de la interfaz {{domxref("Node")}} devuelve el objeto Document de más alto nivel/jerarquia para ese nodo.

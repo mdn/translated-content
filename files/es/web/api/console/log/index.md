@@ -18,6 +18,7 @@ tags:
   - Árbol JSON
 translation_of: Web/API/Console/log
 ---
+
 {{APIRef("Console API")}}Muestra un mensaje en la consola web (o del intérprete JavaScript).
 
 {{AvailableInWorkers}}

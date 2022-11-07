@@ -11,7 +11,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/address
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<address>` 요소**는 가까운 HTML 요소의 사람, 단체, 조직 등에 대한 연락처 정보를 나타냅니다.
 

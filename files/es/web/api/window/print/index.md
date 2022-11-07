@@ -11,6 +11,7 @@ tags:
   - metodo
 translation_of: Web/API/Window/print
 ---
+
 {{ ApiRef() }}
 
 Abre el diálogo para imprimir el documento actual.

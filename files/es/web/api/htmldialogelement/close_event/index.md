@@ -7,6 +7,7 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onclose
 original_slug: Web/API/GlobalEventHandlers/onclose
 ---
+
 {{ApiRef("HTML DOM")}}
 
 Un gestor de eventos para los eventos de cerrar enviados a la ventana. (No disponible con Firefox 2 o Safari)

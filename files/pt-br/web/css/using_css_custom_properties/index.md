@@ -2,6 +2,7 @@
 title: Utilizando variáveis CSS
 slug: Web/CSS/Using_CSS_custom_properties
 ---
+
 {{cssref}}
 
 **Variáveis CSS** são entidades definidas por desenvolvedores, contendo valores específicos para serem reutilizados ao longo do documento. São configuradas usando esta notação (ex: **`--cor-principal: black;`** ) e são acessadas usando a funcão {{cssxref("var", "var()")}} (ex: `color: var(--cor-principal);` )

@@ -3,6 +3,7 @@ title: Valor Computado
 slug: Web/CSS/computed_value
 original_slug: Web/CSS/valor_computado
 ---
+
 {{cssref}}
 
 The **computed value** of a CSS property is computed from the specified value by:

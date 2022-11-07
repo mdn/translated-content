@@ -16,6 +16,7 @@ tags:
   - transactions
 translation_of: Web/API/IDBDatabase
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBDatabase`** interface of the IndexedDB API provides a [connection to a database](/es/docs/IndexedDB#database_connection); you can use an `IDBDatabase` object to open a [transaction](/es/docs/IndexedDB#gloss_transaction) on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database.

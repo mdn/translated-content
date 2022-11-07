@@ -2,6 +2,7 @@
 title: XMLHttpRequest.send()
 slug: Web/API/XMLHttpRequest/send
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 O método **`send()`**, do {{domxref("XMLHttpRequest")}}, envia uma requisição para o servidor.Se a solicitação for assíncrona (que é o padrão), esse método retornará assim que a solicitação for enviada e o resultado for entregue usando eventos. Se a solicitação for síncrona, esse método não retornará até que a resposta chegue.

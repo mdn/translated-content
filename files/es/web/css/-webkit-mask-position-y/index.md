@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/-webkit-mask-position-y
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

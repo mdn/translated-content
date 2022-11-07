@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/UIEvent
 browser-compat: api.UIEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 The **`UIEvent`** interface represents simple user interface events.

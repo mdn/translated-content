@@ -2,6 +2,7 @@
 title: Storage.clear()
 slug: Web/API/Storage/clear
 ---
+
 {{APIRef("Web Storage API")}}
 
 O método `clear()` da interface {{domxref("Storage")}}, quando realizado uma chamada, todas as chaves do armazenamento são esvaziadas.

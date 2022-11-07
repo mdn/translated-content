@@ -3,6 +3,7 @@ title: 'TypeError: invalid assignment to const "x"(недопустимое на
 slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
 translation_of: Web/JavaScript/Reference/Errors/Invalid_const_assignment
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

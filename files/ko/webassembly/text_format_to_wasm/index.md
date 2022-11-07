@@ -2,6 +2,7 @@
 title: Converting WebAssembly text format to wasm
 slug: WebAssembly/Text_format_to_wasm
 ---
+
 {{WebAssemblySidebar}}
 
 WebAssembly에는 S- expression 기반의 텍스트 표현, 텍스트 편집기, 브라우저 개발자 도구 등에서 노출되도록 고안된 중간 양식이 있습니다.이 기사에서는 어떻게 작동하는지, 텍스트 형식 파일을 `.wasm` 어셈블리 형식으로 변환할 수 있는 도구를 사용하는 방법에 대해 설명합니다.

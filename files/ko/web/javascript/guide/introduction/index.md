@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Introduction
 original_slug: Web/JavaScript/Guide/소개
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 이 장은 JavaScript를 소개하고 그 일부 기초 개념을 다룹니다.

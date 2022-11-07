@@ -9,6 +9,7 @@ tags:
   - metodo
 translation_of: Web/API/Node/appendChild
 ---
+
 {{APIRef("DOM")}}
 
 Agrega un nuevo nodo al final de la lista de un elemento hijo de un elemento padre especificado.

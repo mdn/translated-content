@@ -6,6 +6,7 @@ tags:
   - Propiedad CSS
 translation_of: Web/CSS/outline
 ---
+
 {{CSSRef}}
 
 La propiedad [CSS](/es/docs/Web/CSS) **`outline`** es una [forma reducida](/es/docs/Web/CSS/Shorthand_properties) para establecer una o más de las propiedades individuales de contorno {{cssxref("outline-style")}}, {{cssxref("outline-width")}} y {{cssxref("outline-color")}} en una sola declaración. En la mayoría de los casos el uso de este atajo es preferible y más conveniente.

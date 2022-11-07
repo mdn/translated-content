@@ -5,7 +5,7 @@ slug: Web/API/EventSource/open_event
 
 {{APIRef('WebSockets API')}}
 
-{{domxref("EventSource")}}接口的 **`onopen`** 属性是一个 {{event("Event_handlers", "event handler")}} ，它在收到{{event("open")}} 事件时被调用，在那时，连接刚被打开。
+{{domxref("EventSource")}}接口的 **`onopen`** 属性是一个事件处理器，它在收到 `open` 事件时被调用，在那时，连接刚被打开。
 
 ## 语法
 

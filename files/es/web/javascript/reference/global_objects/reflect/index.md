@@ -10,6 +10,7 @@ tags:
   - TopicStub
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
+
 {{JSRef}}
 
 **Reflect** es un objecto incorporado que proporciona metodos para interceptar operaciones de javascript. Los métodos son los mismos que los de [proxy handlers](/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler). `Reflect` no es un objeto de funciones y por lo tanto no puede ser construido.

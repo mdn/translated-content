@@ -5,6 +5,7 @@ tags:
   - API
 translation_of: Web/API/MouseEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 The **`MouseEvent`** interface represents events that occur due to the user interacting with a pointing device (such as a mouse). Common events using this interface include [`click`](/es/docs/Web/Reference/Events/click), [`dblclick`](/es/docs/Web/Reference/Events/dblclick), [`mouseup`](/es/docs/Web/Reference/Events/mouseup), [`mousedown`](/es/docs/Web/Reference/Events/mousedown).

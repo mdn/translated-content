@@ -8,6 +8,7 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## Сводка

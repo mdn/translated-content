@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:indeterminate
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:indeterminate`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento de formulario cuyo estado sea indeterminado.

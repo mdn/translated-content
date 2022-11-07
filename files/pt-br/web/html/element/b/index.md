@@ -2,6 +2,7 @@
 title: <b>
 slug: Web/HTML/Element/b
 ---
+
 ## Resumo
 
 O **elemento HTML \<b>** representa um intervalo de texto estilísticamente diferente do texto normal, sem transmitir qualquer importância ou relevância. Ele é geralmente usado para destacar palavras-chaves em um resumo, nomes de produtos em um comentário ou outros vãos de texto cuja a apresentação típica seria negrito. Outro exemplo de seu uso é como marcação da frase principal de cada paragrafo de um artigo.

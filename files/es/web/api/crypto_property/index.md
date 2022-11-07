@@ -4,6 +4,7 @@ slug: Web/API/crypto_property
 translation_of: Web/API/Window/crypto
 original_slug: Web/API/Window/crypto
 ---
+
 {{APIRef}}
 
 La propiedad de sólo lectura {{domxref("Window.crypto")}} devuelve el objeto [Crypto](/es/docs/Web/API/Crypto) asociado a un objeto global. Este objeto permite a las páginas web acceder a ciertos servicios relacionados con criptografía.

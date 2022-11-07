@@ -2,6 +2,7 @@
 title: border-left
 slug: Web/CSS/border-left
 ---
+
 {{CSSRef}}
 
 ## Resumo

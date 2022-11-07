@@ -8,6 +8,7 @@ tags:
   - TopicStub
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques
 ---
+
 ### Roles
 
 #### Widget roles

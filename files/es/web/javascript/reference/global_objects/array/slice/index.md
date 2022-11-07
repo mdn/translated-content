@@ -6,6 +6,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/slice
 ---
+
 {{JSRef}}
 
 `El método slice()` devuelve una copia de una parte del array dentro de un nuevo array empezando por _inicio_ hasta _fin_ (_fin_ no incluido). El array original no se modificará.

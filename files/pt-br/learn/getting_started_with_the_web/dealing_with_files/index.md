@@ -3,6 +3,7 @@ title: Lidando com arquivos
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
 original_slug: Aprender/Getting_started_with_the_web/lidando_com_arquivos
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
 Um site consiste de muitos arquivos: conteúdo em texto, código, folhas de estilo, conteúdo em mídia e por aí vai. Ao criar um site, você precisa reunir esses arquivos em uma certa estrutura no computador local, certificar-se de que eles possam se comunicar e obter todo o conteúdo antes de [enviá-los para o servidor](/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site). _Lidando com Arquivos_ discute algumas questões às quais você deve estar ciente para que você possa configurar uma estrutura de arquivos para o seu site.

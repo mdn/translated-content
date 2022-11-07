@@ -3,6 +3,7 @@ title: '::slotted()'
 slug: Web/CSS/::slotted
 translation_of: Web/CSS/::slotted
 ---
+
 {{ CSSRef }}
 
 [CSS](/ru/docs/Web/CSS) [псевдо-элемент](/ru/docs/Web/CSS/Pseudo-elements) **`::slotted()`** представляет собой любой элемент, помещённый в слот внутри HTML-шаблона (дополнительная информация в [Using templates and slots](/ru/docs/Web/Web_Components/Using_templates_and_slots)).

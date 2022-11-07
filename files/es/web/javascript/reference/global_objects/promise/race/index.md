@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/race
 ---
+
 {{JSRef}}
 
 El método **`Promise.race(iterable)`** retorna una promesa que se cumplirá o no tan pronto como una de las promesas del argumento iterable se cumpla o se rechace, con el valor o razón de rechazo de ésta.

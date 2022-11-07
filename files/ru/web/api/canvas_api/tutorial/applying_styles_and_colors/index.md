@@ -4,6 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 original_slug: Web/API/Canvas_API/Tutorial/Применение_стилей_и_цветов
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
 В главе о [рисовании фигур](/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), мы использовали для линий и заполнения только стили по умолчанию. Здесь мы будем исследовать опции canvas, которые мы имеем в нашем распоряжении, чтобы сделать наши рисунки немного более привлекательными. Вы узнаете, как добавлять различные цвета, стили линий, градиенты, узоры и тени вашим рисункам.

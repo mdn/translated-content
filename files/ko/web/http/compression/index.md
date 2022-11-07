@@ -3,6 +3,7 @@ title: HTTP에서의 압축
 slug: Web/HTTP/Compression
 translation_of: Web/HTTP/Compression
 ---
+
 {{HTTPSidebar}}
 
 **압축은 웹 사이트의 성능을 높이는 중요한 방법입니다. 어떤 문서에 대해, 70%가 넘는 사이즈 축소는 필요로 하는 대역폭 용량을 낮춰줍니다. 수년간, 알고리즘은 점점 더 효율적으로 변해왔고, 클라이언트와 서버에 의해 새로운 것들이 지원되고 있습니다.**

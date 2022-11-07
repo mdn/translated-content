@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/import
 original_slug: Web/JavaScript/Referencia/Sentencias/import
 ---
+
 {{jsSidebar("Sentencias")}}
 
 La sentencia **`import`** se usa para importar funciones que han sido exportadas desde un módulo externo.

@@ -2,6 +2,7 @@
 title: stroke
 slug: Web/SVG/Attribute/stroke
 ---
+
 {{SVGRef}}
 
 O atributo **`stroke`** é um atributo de apresentação que define a cor (_ou qualquer SVG_ _paint servers, como gradientes ou patterns_) usado para pintar o contorno da forma;

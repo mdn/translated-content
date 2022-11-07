@@ -3,6 +3,7 @@ title: WebGLRenderingContext.canvas
 slug: Web/API/WebGLRenderingContext/canvas
 translation_of: Web/API/WebGLRenderingContext/canvas
 ---
+
 {{APIRef("WebGL")}}
 
 `Свойство WebGLRenderingContext.canvas` доступно только для чтения. Возвращает ссылку на объекты {{domxref("HTMLCanvasElement")}} или {{domxref("OffscreenCanvas")}} связанные с установленным контекстом отрисовки. Если объект {{HTMLElement("canvas")}} или {{domxref("OffscreenCanvas")}} не связан с контекстом, то возвращается значение {{jsxref("null")}}.

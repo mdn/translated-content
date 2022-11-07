@@ -2,6 +2,7 @@
 title: autocapitalize
 slug: Web/HTML/Global_attributes/autocapitalize
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`autocapitalize`** é um atributo enumerado que controla quando e como entradas de texto são automaticamente capitalizadas confome são escritas/editadas pelo usuário. O atributo deve receber um dos seguintes valores:

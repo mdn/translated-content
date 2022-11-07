@@ -6,6 +6,7 @@ tags:
 translation_of: MDN_at_ten
 original_slug: MDN_en_diez
 ---
+
 ## La historia de MDN (Mozilla Developers Network)
 
 Celebra 10 años documentando tu Web.

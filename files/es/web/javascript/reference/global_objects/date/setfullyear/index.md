@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/setFullYear
 ---
+
 {{JSRef}}
 
 El método **`setFullYear()`** fija el año completo para una fecha específica de acuerdo a la zona horaria local. Devuelve un nuevo valor de tipo timestamp.

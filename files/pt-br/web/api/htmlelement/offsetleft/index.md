@@ -2,6 +2,7 @@
 title: HTMLElement.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
 ---
+
 {{ APIRef("HTML DOM") }}
 
 O **`HTMLElement.offsetLeft`** é um método apenas de leitura que retorna a medida, em pixels, da distância do canto superior esquerdo do elemento atual para o nó {{domxref("HTMLElement.offsetParent")}}.

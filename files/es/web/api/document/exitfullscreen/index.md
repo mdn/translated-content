@@ -3,6 +3,7 @@ title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
 translation_of: Web/API/Document/exitFullscreen
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 El método **`exitFullscreen()`** de {{domxref("Document")}} solicita que el elemento de este documento que se presenta actualmente en modo de pantalla completa se retire del modo de pantalla completa, restaurando el estado anterior de la pantalla. Esto generalmente revierte los efectos de una llamada previa a {{domxref("Element.requestFullscreen()")}}.

@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/normalize
 ---
+
 {{JSRef}}
 
 El método **`normalize()`** retorna la Forma de Normalización Unicode de la cadena dada (si el valor no es una cadena, primero será convertido a ese tipo).

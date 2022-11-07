@@ -3,6 +3,7 @@ title: CSS básico
 slug: Learn/Getting_started_with_the_web/CSS_basics
 original_slug: Aprender/Getting_started_with_the_web/CSS_basico
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 
 CSS (Folha de Estilo em Cascata) é o código que você usa para dar estilo à sua página Web. _CSS básico_ apresenta tudo que você precisa para começar. Responderemos a perguntas do tipo: Como mudo meu texto para preto ou vermelho? Como faço para que meu conteúdo apareça em determinados lugares na tela? Como decoro minha página com imagens e cores de fundo?

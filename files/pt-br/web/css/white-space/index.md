@@ -2,6 +2,7 @@
 title: white-space
 slug: Web/CSS/white-space
 ---
+
 {{CSSRef}}
 
 ## Resumo

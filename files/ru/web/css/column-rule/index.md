@@ -5,6 +5,7 @@ tags:
   - мультиколоночная вёрстка
 translation_of: Web/CSS/column-rule
 ---
+
 {{CSSRef}}
 
 [Краткая форма записи](/ru/docs/Web/CSS/Shorthand_properties) [CSS](/ru/docs/Web/CSS) свойств **`column-rule`** устанавливает ширину, стиль и цвет линии, находящейся между колонками в мультиколоночной вёрстке.

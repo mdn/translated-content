@@ -11,6 +11,7 @@ tags:
   - колбэк
 translation_of: Learn/JavaScript/Asynchronous/Introducing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}
 
 В этой статье мы кратко остановимся на проблемах, связанных с синхронным Javascript, а также ознакомимся с несколькими асинхронными методами, демонстрирующими как они могут помочь нам подобные проблемы решить.

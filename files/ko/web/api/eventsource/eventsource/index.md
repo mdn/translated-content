@@ -11,7 +11,7 @@ translation_of: Web/API/EventSource/EventSource
 ---
 {{APIRef('WebSockets API')}}
 
-**`EventSource`\*\***`()`\*\* 생성자는 원격 자원을 나타내는 새롭게 생성된 {{domxref("EventSource")}} 를 반환합니다.
+**`EventSource()`** 생성자는 원격 자원을 나타내는 새롭게 생성된 {{domxref("EventSource")}} 를 반환합니다.
 
 ## 구문
 

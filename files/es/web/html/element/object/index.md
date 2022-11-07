@@ -11,6 +11,7 @@ tags:
 translation_of: Web/HTML/Element/object
 original_slug: Web/HTML/Elemento/object
 ---
+
 {{HTMLSidebar}}
 
 El **elemento HTML `<object>`** representa un recurso externo, que puede ser tratado como una imagen, un contexto de navegación anidado, o como un recurso que debe ser manejado por un plugin.

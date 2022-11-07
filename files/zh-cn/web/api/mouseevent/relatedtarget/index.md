@@ -16,7 +16,6 @@ slug: Web/API/MouseEvent/relatedTarget
 | [`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event)     | 指针设备离开 {{domxref("EventTarget")}} | The {{domxref("EventTarget")}}          |
 | [`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event)     | 指针设备进入 {{domxref("EventTarget")}} | 指针设备离开 {{domxref("EventTarget")}} |
 | [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)     | 指针设备进入 {{domxref("EventTarget")}} | 指针设备离开 {{domxref("EventTarget")}} |
-| {{Event("dragexit")}}     | 指针设备离开 {{domxref("EventTarget")}} | 指针设备进入 {{domxref("EventTarget")}} |
 
 如果事件没有次要目标，`relatedTarget` 将返回 `null`.
 
@@ -108,7 +107,7 @@ function overListener(event) {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{ domxref("MouseEvent") }}
 - [Comparison of Event Targets](/zh-CN/docs/DOM/event/Comparison_of_Event_Targets)

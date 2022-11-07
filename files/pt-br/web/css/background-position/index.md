@@ -2,6 +2,7 @@
 title: background-position
 slug: Web/CSS/background-position
 ---
+
 {{CSSRef}}
 
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`background-position`** define a posição inicial, relativa a posição de fundo na camada definido por {{cssxref("background-origin")}}, para cada background image definido.

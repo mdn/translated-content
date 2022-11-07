@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/s
 original_slug: Web/HTML/Elemento/s
 ---
+
 ### Definición
 
 - Muestra el texto tachado con una linea horizontal.

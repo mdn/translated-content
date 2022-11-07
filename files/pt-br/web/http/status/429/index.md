@@ -2,6 +2,7 @@
 title: 429 Too Many Requests
 slug: Web/HTTP/Status/429
 ---
+
 {{HTTPSidebar}}
 
 O código de resposta HTTP **`429 Too Many Requests`** indica que o usuário enviou muitos pedidos em um determinado período de tempo.

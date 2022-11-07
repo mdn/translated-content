@@ -2,6 +2,7 @@
 title: Document.designMode
 slug: Web/API/Document/designMode
 ---
+
 {{ ApiRef() }}
 
 ## Sumário

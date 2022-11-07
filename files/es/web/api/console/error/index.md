@@ -10,6 +10,7 @@ tags:
   - metodo
 translation_of: Web/API/Console/error
 ---
+
 {{APIRef("Console API")}}
 
 Muestra un mensaje de error en la Consola Web.

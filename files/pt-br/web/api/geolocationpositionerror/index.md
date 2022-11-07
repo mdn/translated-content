@@ -2,6 +2,7 @@
 title: PositionError
 slug: Web/API/GeolocationPositionError
 ---
+
 {{APIRef("Geolocation API")}}
 
 A interface **`PositionError`** representa a rasão de um erro ocorrer quando usando o dispositivo de geolocalização.

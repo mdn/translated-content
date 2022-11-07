@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Text
 original_slug: Web/CSS/Texto_CSS
 ---
+
 {{CSSRef}}
 
 **Texto CSS** es el módulo de CSS que define cómo realizar la manipulación de elementos de texto como los saltos de línea, la justificación, la alineación, la gestión de espacios en blanco y las transformaciones de texto.

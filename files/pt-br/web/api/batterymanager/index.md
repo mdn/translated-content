@@ -2,6 +2,7 @@
 title: BatteryManager
 slug: Web/API/BatteryManager
 ---
+
 {{APIRef("Battery API")}}
 
 ## Resumo

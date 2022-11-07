@@ -8,6 +8,7 @@ tags:
   - metodo
 translation_of: Web/API/Window/scroll
 ---
+
 {{APIRef}}
 
 El método **`Window.scroll()`** desplaza la ventana a un lugar particular en el documento.

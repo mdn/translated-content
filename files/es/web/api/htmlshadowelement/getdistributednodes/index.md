@@ -5,6 +5,7 @@ tags:
   - Necesita traducción
 translation_of: Web/API/HTMLShadowElement/getDistributedNodes
 ---
+
 {{APIRef("Web Components")}}
 
 The **`HTMLShadowElement.getDistributedNodes()`** method returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}} associated with this `<shadow>` element.

@@ -2,6 +2,7 @@
 title: Blob
 slug: Web/API/Blob
 ---
+
 {{ APIRef("File API") }}
 
 ## Sumário

@@ -4,6 +4,7 @@ slug: Web/API/Navigator/getBattery
 translation_of: Web/API/Navigator/getBattery
 browser-compat: api.Navigator.getBattery
 ---
+
 {{ ApiRef("Battery API") }}
 
 El método **`getBattery()`** provee información acerca de la

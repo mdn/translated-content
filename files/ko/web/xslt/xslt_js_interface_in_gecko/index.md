@@ -7,6 +7,7 @@ tags:
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko
 original_slug: Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko
 ---
+
 1. [개요](ko/The_XSLT%2f%2fJavaScript_Interface_in_Gecko/Introduction)
 2. [The XSLT/JavaScript Interface in Gecko:JavaScript/XSLT Bindings](ko/The_XSLT%2f%2fJavaScript_Interface_in_Gecko/JavaScript%2f%2fXSLT_Bindings)
 3. [The XSLT/JavaScript Interface in Gecko:Basic Example](ko/The_XSLT%2f%2fJavaScript_Interface_in_Gecko/Basic_Example)

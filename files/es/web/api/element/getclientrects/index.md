@@ -9,6 +9,7 @@ tags:
   - Referencia_DOM_de_Gecko
 translation_of: Web/API/Element/getClientRects
 ---
+
 {{ APIRef }}
 
 El método `Element.getClientRects()` devuelve una colección de objetos {{domxref("DOMRect")}} que indican los rectángulos que delimitan el rectángulo de cada línea de texto en el navegador.

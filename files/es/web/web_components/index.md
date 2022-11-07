@@ -9,6 +9,7 @@ tags:
   - Web Components
 translation_of: Web/Web_Components
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 Los Componentes Web son un paquete de diferentes tecnologías que te permiten crear elementos personalizados reutilizables — con su funcionalidad encapsulada apartada del resto del código — y utilizarlos en las aplicaciones web.

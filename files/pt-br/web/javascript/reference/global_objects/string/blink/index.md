@@ -2,6 +2,7 @@
 title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 O método **`blink()`** cria um elemento HTML [\<blink>](/pt-BR/docs/Web/HTML/Element/blink) que faz uma string piscar.

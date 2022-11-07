@@ -4,6 +4,7 @@ slug: Web/API/Window/beforeunload_event
 translation_of: Web/API/Window/beforeunload_event
 original_slug: Web/Events/beforeunload
 ---
+
 {{APIRef}}
 
 El evento **beforeunload** es disparado cuando la ventana, el documento y sus recursos estan a punto de ser descargados. El documento todavia es visible y el evento todavia es cancelable en este punto.

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/shift
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/shift
 ---
+
 {{JSRef}}
 
 El método **`shift()`** elimina el **primer** elemento del array y lo retorna. Este método modifica la longitud del array.

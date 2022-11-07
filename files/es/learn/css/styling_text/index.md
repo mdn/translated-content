@@ -20,6 +20,7 @@ tags:
   - web fonts
 translation_of: Learn/CSS/Styling_text
 ---
+
 {{LearnSidebar}}
 
 Con los conceptos básicos del lenguaje CSS cubiertos, el siguiente tema de CSS para concentrarse es estilizar texto — una de las cosas más comunes que hará con CSS. Aquí observamos los fundamentos para estilizar texto, incluyendo la configuración de fuente, negrita, cursiva, linea y espacios entre letras, sombras paralelas y otras funciones de texto. Completamos el módulo observando la aplicación de fuentes personalizadas en su página, y el diseño de listas y enlaces.

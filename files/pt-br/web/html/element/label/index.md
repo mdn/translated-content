@@ -2,6 +2,7 @@
 title: <label>
 slug: Web/HTML/Element/label
 ---
+
 ## Resumo
 
 Um **elemento** **HTML `<label>` **representa uma legenda para um item em uma interface de usuário. Ele pode estar associado com um elemento de controle, colocando este dentro do elemento `label`, ou usando o atributo `for`. Tal controle é chamado o _controle etiquetado_ do elemento etiqueta. Um input pode ser associado a diversas etiquetas (\<label>s).

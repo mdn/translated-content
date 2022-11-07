@@ -6,6 +6,7 @@ tags:
   - Руководство
 translation_of: Web/JavaScript/Guide/Text_formatting
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
 
 В этой главе приводится порядок работы со строками и текстом в JavaScript.

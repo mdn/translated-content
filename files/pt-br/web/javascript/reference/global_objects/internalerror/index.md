@@ -2,6 +2,7 @@
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 O **objeto** **`InternalError`** indica que um erro ocorreu internamente na engine do JavaScript.

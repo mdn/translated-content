@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/acosh
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/acosh
 ---
+
 {{JSRef}}
 
 La función **`Math.acosh()`** retorna el arco coseno hiperbólico de un número que es:

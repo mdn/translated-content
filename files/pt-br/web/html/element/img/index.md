@@ -2,6 +2,7 @@
 title: <img>
 slug: Web/HTML/Element/img
 ---
+
 ## Resumo
 
 O **elemento** **HTML `<img>` **(or _HTML Image Element_) representa a inserção de imagem no documento, sendo implementado também pelo HTML5 para uma melhor experiência com o elemento {{HTMLElement("figure")}} e {{HTMLElement("figcaption")}}.

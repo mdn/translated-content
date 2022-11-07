@@ -10,6 +10,7 @@ tags:
   - Экспериментальный
 translation_of: Web/JavaScript/Reference/Operators/yield
 ---
+
 {{jsSidebar("Operators")}}
 
 Ключевое слово `yield` используется для остановки и возобновления функций-генераторов ({{jsxref("Statements/function*", "function*")}} или [legacy generator function](/ru/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)).

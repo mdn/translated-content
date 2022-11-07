@@ -6,6 +6,7 @@ tags:
   - Graphics
 translation_of: Web/API/Canvas_API/Tutorial
 ---
+
 [![](https://mdn.mozillademos.org/files/257/Canvas_tut_examples.jpg)](/ru/docs/Web/API/Canvas_API){{CanvasSidebar}}
 
 [**`<canvas>`**](/ru/docs/Web/HTML/Element/canvas) — это [HTML](Web/HTML) элемент, использующийся для рисования графики средствами языков программирования (обычно это [JavaScript](Glossary/JavaScript)). Он может, к примеру, использоваться для рисования графов, создания коллажей или простой ([и не очень](/ru/docs/Web/API/Canvas_API/A_basic_ray-caster)) анимации.

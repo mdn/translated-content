@@ -4,6 +4,7 @@ slug: Web/API/Web_Audio_API
 translation_of: Web/API/Web_Audio_API
 original_slug: Web_Audio_API
 ---
+
 {{apiref("Web Audio API")}}
 
 La API de Audio Web provee un sistema poderoso y versatil para controlar audio en la Web, permitiendo a los desarrolladores escoger fuentes de audio, agregar efectos al audio, crear visualizaciones de audios, aplicar efectos espaciales (como paneo) y mucho más.

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getPrototypeOf
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## Resumen

@@ -12,6 +12,7 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Сводка

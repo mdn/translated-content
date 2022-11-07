@@ -2,6 +2,7 @@
 title: How do I use GitHub Pages?
 slug: Learn/Common_questions/Using_Github_pages
 ---
+
 [GitHub](https://github.com/) is a "social coding" site. It allows you to upload code repositories for
 storage in thecelio [Git](http://git-scm.com/) **version control system.** You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. You can do that with other people's code too! This article provides a basic guide to publishing content using Github's gh-pages feature.
 

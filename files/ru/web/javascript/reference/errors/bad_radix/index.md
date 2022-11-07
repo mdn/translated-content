@@ -7,6 +7,7 @@ tags:
   - Ошибки
 translation_of: Web/JavaScript/Reference/Errors/Bad_radix
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/sort
 ---
+
 {{JSRef}}
 
 El método **`sort()`** ordena los elementos de un arreglo (array) _localmente_ y devuelve el arreglo ordenado. La ordenación no es necesariamente [estable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability). El modo de ordenación por defecto responde a la posición del valor del string de acuerdo a su valor [Unicode](https://es.wikipedia.org/wiki/Unicode).

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 original_slug: Web/JavaScript/Referencia/Funciones/Parametros_por_defecto
 ---
+
 {{jsSidebar("Functions", "Funciones")}}
 
 **Parámetros predeterminados de función** permiten que los parámetros con nombre se inicien con valores predeterminados si no se pasa ningún valor o `undefined`.

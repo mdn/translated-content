@@ -2,6 +2,7 @@
 title: offset
 slug: Web/CSS/offset
 ---
+
 {{SeeCompatTable}}{{CSSRef}}
 
 A propriedade CSS **`offset`** é uma propriedade abreviada para animar um elemento ao longo de um caminho definido.

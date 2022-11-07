@@ -3,6 +3,7 @@ title: Blob.slice()
 slug: Web/API/Blob/slice
 translation_of: Web/API/Blob/slice
 ---
+
 {{APIRef("File API")}}
 
 Метод **`Blob.slice()`** используется для создания нового объекта {{domxref("Blob")}}, содержащего данные в указанном диапазоне байтов исходника {{domxref("Blob")}}.

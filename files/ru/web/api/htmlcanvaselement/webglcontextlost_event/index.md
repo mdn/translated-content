@@ -7,6 +7,7 @@ tags:
   - WebGL
 translation_of: Web/API/HTMLCanvasElement/webglcontextlost_event
 ---
+
 {{APIRef}}
 
 Событие **`webglcontextlost`** [WebGL API](/ru/docs/Web/API/WebGL_API) вызывается когда {{Glossary("User agent")}}
