@@ -7,6 +7,7 @@ tags:
 translation_of: Learn/CSS/CSS_layout/Normal_Flow
 original_slug: Learn/CSS/CSS_layout/Нормальный_поток
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}

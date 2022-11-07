@@ -4,6 +4,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Жизни
 ---
+
 {{GamesSidebar}}{{IncludeSubnav("/ru/docs")}}
 
 {{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Победа", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Анимация")}}

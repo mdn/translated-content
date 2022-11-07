@@ -3,6 +3,7 @@ title: Значения свойств CSS
 slug: Learn/CSS/Building_blocks/Values_and_units
 translation_of: Learn/CSS/Building_blocks/Values_and_units
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 
 Каждое свойство используемое в CSS имеет значение или набор значений которые допустимы для этого свойства, и изучение страниц MDN со свойствами поможет вам понять какие значения валидны для того или иного свойства. В этом уроке мы рассмотрим некоторые наиболее общие значения и единицы в использовании.

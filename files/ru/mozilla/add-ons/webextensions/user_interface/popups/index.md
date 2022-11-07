@@ -3,6 +3,7 @@ title: Всплывающие окна
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 ---
+
 {{AddonSidebar}}
 
 A popup is a dialog that's associated with a [toolbar button](/en-US/Add-ons/WebExtensions/Browser_action) or [address bar button](/en-US/Add-ons/WebExtensions/Page_actions).

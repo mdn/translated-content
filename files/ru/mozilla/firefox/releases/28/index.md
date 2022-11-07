@@ -7,6 +7,7 @@ tags:
   - Mozilla
 translation_of: Mozilla/Firefox/Releases/28
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 28 был выпущен 18 марта 2014 года. Список ключевых изменений в данной статье будет полезен не только веб-разработчикам, но и Firefox-, Gecko-разработчикам и разработчикам дополнений.

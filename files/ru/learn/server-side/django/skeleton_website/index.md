@@ -10,6 +10,7 @@ tags:
   - Статья
 translation_of: Learn/Server-side/Django/skeleton_website
 ---
+
 {{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
 Это вторая статья из нашего [руководства по Django](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website), которая показывает, как можно создать "скелет" сайта, как фундамент, на котором можно строить всё остальное: настройки, ссылки, модели, контроллеры и представления.

@@ -3,6 +3,7 @@ title: Как выбрать текстовый редактор?
 slug: Learn/Common_questions/Available_text_editors
 translation_of: Learn/Common_questions/Available_text_editors
 ---
+
 {{IncludeSubnav("/en-US/Learn")}}
 
 In this article we highlight some things to think about when installing a text editor for web development.

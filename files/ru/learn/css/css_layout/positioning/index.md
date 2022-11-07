@@ -3,6 +3,7 @@ title: Позиционирование
 slug: Learn/CSS/CSS_layout/Positioning
 translation_of: Learn/CSS/CSS_layout/Positioning
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
 
 Позиционирование позволяет вам изымать элементы из нормального потока макета документа и заставить их вести себя по-другому; например, располагаться друг на друге или всегда оставаться на одном и том же месте внутри окна просмотра браузера. Эта статья объясняет разные значения {{cssxref("position")}} и как их использовать.

@@ -20,6 +20,7 @@ tags:
   - XUL
 translation_of: Mozilla/Firefox/Releases/1.5
 ---
+
 {{FirefoxSidebar}}
 
 Based on the [Gecko](/ru/docs/Gecko) 1.8 engine, Firefox 1.5 improved its already best in class standards support, and provided new capabilities to enable the next generation of web applications. Firefox 1.5 features improved support for CSS2 and CSS3, APIs for scriptable and programmable 2D graphics through [SVG](/ru/docs/SVG) 1.1 and [`<canvas>`](/ru/docs/HTML/Canvas), [XForms](/ru/docs/XForms) and XML events, as well as many DHTML, JavaScript, and DOM enhancements.
