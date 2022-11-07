@@ -5840,10 +5840,6 @@
     "modified": "2019-03-23T23:28:21.815Z",
     "contributors": ["clebermatheus1"]
   },
-  "Web/Guide/Mobile/Separate_sites": {
-    "modified": "2019-03-23T23:28:15.359Z",
-    "contributors": ["clebermatheus1"]
-  },
   "Web/Guide/Performance": {
     "modified": "2019-03-18T20:49:01.451Z",
     "contributors": ["ssamuel645", "KelviDalmazo"]
@@ -11396,8 +11392,8 @@
     "contributors": ["alefesouza"]
   },
   "conflicting/Web/Progressive_web_apps": {
-    "modified": "2020-08-27T09:35:40.497Z",
-    "contributors": ["bermarques", "clebermatheus1"]
+    "modified": "2019-03-23T23:28:15.359Z",
+    "contributors": ["clebermatheus1"]
   },
   "conflicting/Web/SVG/Element/animate": {
     "modified": "2019-03-23T22:57:25.579Z",
