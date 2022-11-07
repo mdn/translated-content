@@ -28050,34 +28050,5 @@
       "si0ls",
       "dattaz"
     ]
-  },
-  "conflicting/Mozilla/Add-ons/WebExtensions/API/menus/create": {
-    "modified": "2020-10-15T22:30:24.941Z",
-    "contributors": ["hellosct1"]
-  },
-  "conflicting/Web/API/XSLTProcessor": {
-    "modified": "2019-01-16T16:04:45.409Z",
-    "contributors": ["VincentN", "Mgjbot", "Kyodev", "Fredchat", "BenoitL"]
-  },
-  "conflicting/Web/CSS": {
-    "modified": "2020-10-15T21:21:36.008Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "J.DMB",
-      "louuis",
-      "teoli",
-      "Igro",
-      "FredB",
-      "Delapouite"
-    ]
-  },
-  "conflicting/Web/CSS_7fc1a1afe4642afd225ebf1b3d6227a7": {
-    "modified": "2020-10-15T21:44:13.646Z",
-    "contributors": ["SphinxKnight", "xdelatour"]
-  },
-  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
-    "modified": "2020-03-12T19:40:23.053Z",
-    "contributors": ["SphinxKnight"]
   }
 }
