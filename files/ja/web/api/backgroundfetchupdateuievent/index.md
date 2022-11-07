@@ -7,27 +7,27 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`BackgroundFetchUpdateUIEvent`** interface of the {{domxref('Background Fetch API','','',' ')}} is an event type for the {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} events, and provides a method for updating the title and icon of the app to inform a user of the success or failure of a background fetch.
+{{domxref('Background Fetch API','','',' ')}} の **`BackgroundFetchUpdateUIEvent`** インターフェイスは、 {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} 、および、 {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} イベントのためのイベント型で、バックグラウンドでのフェッチの成否をユーザーに伝えるために、アプリのタイトルやアイコンを更新するメソッドを有しています。
 
 {{InheritanceDiagram}}
 
 ## コンストラクター
 
 - {{domxref("BackgroundFetchUpdateUIEvent.BackgroundFetchUpdateUIEvent()", "BackgroundFetchUpdateUIEvent()")}} {{Experimental_Inline}}
-  - : Creates a new `BackgroundFetchUIEvent` object. This constructor is not typically used, as the browser creates these objects itself for the {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} events.
+  - : 新規に `BackgroundFetchUIEvent` オブジェクトを作成します。通常、このコンストラクタが使用されることはありません。なぜなら、これらのオブジェクトは {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} 、および、 {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} イベントのためにブラウザによって自動で生成されるからです。
 
 ## プロパティ
 
-_This interface doesn't implement any specific properties, but inherits properties from {{domxref("Event")}}, and {{domxref("BackgroundFetchEvent")}}._
+_このインスタンスは特にプロパティを持っていませんが、 {{domxref("Event")}} 、および、 {{domxref("BackgroundFetchEvent")}} のプロパティを継承します。_
 
 ## メソッド
 
 - {{domxref("BackgroundFetchUpdateUIEvent.updateUI()")}} {{Experimental_Inline}}
-  - : Updates the title and icon in the user interface to show the status of a background fetch. Resolves with a {{jsxref("Promise")}}.
+  - : バックグラウンドのフェッチの状況を知らせるために、 UI 上のタイトルとアイコンを更新します。 {{jsxref("Promise")}} によって解決されます。
 
 ## 例
 
-In this example, the `backgroundfetchsuccess` event is listened for, indicating that a fetch has completed successfully. The {{domxref("BackgroundFetchUpdateUIEvent.updateUI()", "updateUI()")}} method is then called, with a message to let the user know the episode they downloaded is ready.
+以下の例では、 `backgroundfetchsuccess` イベントの発生が待ち受けられおり、イベントの発生はフェッチが完遂されたことを意味します。イベント発生時、ユーザーにエピソードのダウンロードが完了したことを伝えるメッセージと共に、 {{domxref("BackgroundFetchUpdateUIEvent.updateUI()", "updateUI()")}} メソッドが呼ばれています。
 
 ```js
 addEventListener("backgroundfetchsuccess", (event) => {
@@ -35,20 +35,20 @@ addEventListener("backgroundfetchsuccess", (event) => {
 
   event.waitUntil(
     (async () => {
-      // Create/open a cache.
+      // キャッシュを作成
       const cache = await caches.open("downloads");
-      // Get all the records.
+      // すべての BackgroundFetchRecord オブジェクトを取得
       const records = await bgFetch.matchAll();
-      // Copy each request/response across.
+      // 各リクエスト/レスポンスの組をコピー
       const promises = records.map(async (record) => {
         const response = await record.responseReady;
         await cache.put(record.request, response);
       });
 
-      // Wait for the copying to complete.
+      // コピーの完了を待つ
       await Promise.all(promises);
 
-      // Update the progress notification.
+      // 進捗表示を更新
       event.updateUI({ title: "Episode 5 ready to listen!" });
     })()
   );
