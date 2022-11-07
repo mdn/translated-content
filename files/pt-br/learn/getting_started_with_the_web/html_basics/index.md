@@ -58,7 +58,7 @@ Você pode colocar elementos dentro de outros elementos também — isso é cham
 
 Você precisa, no entanto, certificar-se de que seus elementos estejam adequadamente aninhados. No exemplo acima, abrimos primeiro o elemento {{htmlelement ("p")}}, depois o elemento {{htmlelement ("strong")}}; portanto, temos que fechar primeiro o elemento {{htmlelement ("strong")}}, depois o elemento {{htmlelement ("p")}}. O código abaixo está incorreto:
 
-```html example-bad
+```html-nolint example-bad
 <p>Meu gatinho é <strong>muito mal humorado.</p></strong>
 ```
 
