@@ -37,7 +37,7 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 在生成器的代码路径中的 `yield` 运算符，以及通过将其传递给 {{jsxref("Generator.prototype.next()")}} 指定新的起始值的能力之间，生成器提供了强大的控制力。
 
-> **警告：** 不幸地是，`next()` 是不对称的，但这并不是没有帮助：它总是向当前暂停的 `yield` 发送一个值，但是返回的是 `yield` 之后表达式的运算结果。
+> **警告：** 不幸地是，`next()` 是不对成的，但这并不是没有帮助：它总是向当前暂停的 `yield` 发送一个值，但是返回的是 `yield` 之后表达式的运算结果。
 
 ## 示例
 
@@ -45,8 +45,8 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 ```js
 function* countAppleSales () {
-  var saleList = [3, 7, 5];
-  for (var i = 0; i < saleList.length; i++) {
+  const saleList = [3, 7, 5];
+  for (let i = 0; i < saleList.length; i++) {
     yield saleList[i];
   }
 }
