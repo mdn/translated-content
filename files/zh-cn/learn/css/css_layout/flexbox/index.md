@@ -42,7 +42,7 @@ slug: Learn/CSS/CSS_layout/Flexbox
 
 ## 一个简单的例子
 
-在本文中，我们将通过一系列练习来帮助你了解 弹性盒子的工作原理。开始前，你应该拷贝 mozilla github 仓库的 [弹性盒子 0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) 到本地。在现代浏览器里打开它（比如 Firefox 或 Chrome），然后打开你的编辑器看一眼它的代码。你可以看它的[线上](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html)实例。
+在本文中，我们将通过一系列练习来帮助你了解弹性盒子的工作原理。开始前，你应该拷贝 mozilla github 仓库的 [弹性盒子 0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) 到本地。在现代浏览器里打开它（比如 Firefox 或 Chrome），然后打开你的编辑器看一眼它的代码。你可以看它的[线上](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html)实例。
 
 ![显示 Flexbox 教程开始的图像](bih741v.png)
 
@@ -95,7 +95,7 @@ flex-direction: column;
 
 ## 换行
 
-当你在布局中使用定宽或者定高的时候，可能会出现问题即处于容器中的弹性盒子子元素会溢出，破坏了布局。你可以看一下 [弹性盒子——wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html) 示例（你也可以拷贝到本地），如下所示：
+当你在布局中使用定宽或者定高的时候，可能会出现问题即处于容器中的弹性盒子子元素会溢出，破坏了布局。你可以看一下[弹性盒子——wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html) 示例（你也可以拷贝到本地），如下所示：
 
 ![简单弹性盒子示例，将所有 flex 项都布置在弹性容器的一行中。第八个 flex 项在浏览器窗口溢出，页面具有可见的水平和垂直滚动条，因为它无法容纳在窗口的宽度内，因为前七个 flex 项占用了视口中的可用空间。默认情况下，如果将弹性方向设置为行，浏览器会尝试将所有 flex 项放在一行中；如果弹性方向设置为列，则会尝试将所有 flex 项置于单列中。](flexbox-example3.png)
 
@@ -113,7 +113,7 @@ flex: 200px;
 
 现在尝试一下吧；你会看到布局比原来好多了：
 
-![ flex 项在弹性容器中分多行排列。flex-wrap 属性在弹性容器中设置为“wrap”，如果上一行中的 flex 项在弹性容器外溢出，则弹性容器中显示新行中的 flex 项。每个 flex 项的宽度为 200 像素。所有物品都被拉伸到相同的高度，与内容最多的 flex 项一样高。](flexbox-example4.png)
+![flex 项在弹性容器中分多行排列。flex-wrap 属性在弹性容器中设置为“wrap”，如果上一行中的 flex 项在弹性容器外溢出，则弹性容器中显示新行中的 flex 项。每个 flex 项的宽度为 200 像素。所有物品都被拉伸到相同的高度，与内容最多的 flex 项一样高。](flexbox-example4.png)
 
 我们现在有多个行。每行都安装了尽可能多的 flex 项。任何溢出都会向下移动到下一行。在 article 上设置的 `flex：200px` 声明意味着每个声明将至少为 200px 宽。我们稍后会更详细地讨论这个属性。你可能还注意到，最后一行上的最后几个项每个都变得更宽，以便把整个行填满。
 
@@ -204,7 +204,7 @@ div {
 }
 ```
 
-![带有 Smile、Laugh、Wink、Shrug & Blush 标签的五个按钮排在一个弹性容器中。通过将对齐项属性设置为中心，弹性项目位于横轴的中心。通过将 justify-content 属性设置为 space-around，flex 项沿着主轴均匀间隔。](flexbox_center_space-around.png)
+![带有 Smile、Laugh、Wink、Shrug & Blush 标签的五个按钮排在一个弹性容器中。通过将对齐项属性设置为中心，flex 项位于横轴的中心。通过将 justify-content 属性设置为 space-around，flex 项沿着主轴均匀间隔。](flexbox_center_space-around.png)
 
 刷新一下页面，你就会看到这些按钮很好的垂直水平居中了。我们是通过下面所说的两个新的属性做到的。
 
@@ -222,7 +222,7 @@ button:first-child {
 }
 ```
 
-！[带有 Smile、Laugh、Wink、Shrug & Blush 标签的五个按钮排在一个弹性容器中。除第一个项外，所有弹性项都通过将对齐项属性设置为中心，位于十字轴的中心或垂直居中。第一项与交叉轴末端的弹性容器底部齐平，对齐自属性设置为弹性端。弹性项沿着容器的主轴或宽度均匀间隔。](flexbox_first-child_flex-end.png)
+！[带有 Smile、Laugh、Wink、Shrug & Blush 标签的五个按钮排在一个弹性容器中。除第一个项外，所有 flex 项都通过将对齐项属性设置为中心，位于十字轴的中心或垂直居中。第一项与交叉轴末端的弹性容器底部齐平，对齐自属性设置 flex 端。flex 项沿着容器的主轴或宽度均匀间隔。](flexbox_first-child_flex-end.png)
 
 去看看它产生的效果，然后删除它。
 
@@ -330,11 +330,11 @@ button {
 
 ## 跨浏览器兼容性
 
-大多数浏览器都支持 弹性盒子，诸如 Firefox、Chrome、Opera、Microsoft Edge 和 IE 11，较新版本的 Android/iOS 等等。但是你应该要意识到仍旧有被人使用的老浏览器不支持 弹性盒子（或者支持，但是只是支持非常非常老版本的 弹性盒子）。
+大多数浏览器都支持弹性盒子，诸如 Firefox、Chrome、Opera、Microsoft Edge 和 IE 11，较新版本的 Android/iOS 等等。但是你应该要意识到仍旧有被人使用的老浏览器不支持弹性盒子（或者支持，但是只是支持非常非常老版本的弹性盒子）。
 
 虽然你只是在学习和实验，这不太要紧; 然而，如果你正在考虑在真实网站中使用弹性盒子，则需要进行测试，并确保在尽可能多的浏览器中你的用户体验仍然可以接受。
 
-弹性盒子相较其他一些 CSS 特性可能更为棘手。例如，如果浏览器缺少 CSS 阴影，则该网站可能仍然可用。但是假如不支持 弹性盒子功能就会完全打破布局，使其不可用。
+弹性盒子相较其他一些 CSS 特性可能更为棘手。例如，如果浏览器缺少 CSS 阴影，则该网站可能仍然可用。但是假如不支持弹性盒子功能就会完全打破布局，使其不可用。
 
 我们在[跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)模块中讨论了克服跨浏览器支持问题的策略。
 
