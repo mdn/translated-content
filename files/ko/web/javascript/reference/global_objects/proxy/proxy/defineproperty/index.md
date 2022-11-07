@@ -9,6 +9,7 @@ tags:
 browser-compat: javascript.builtins.Proxy.handler.defineProperty
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 ---
+
 {{JSRef}}
 
 **`handler.defineProperty()`** 메서드는 {{jsxref("Object.defineProperty()")}}에 대한 트랩입니다.

@@ -3,6 +3,7 @@ title: 소개
 slug: Web/JavaScript/Reference/About
 translation_of: Web/JavaScript/Reference/About
 ---
+
 {{JsSidebar}}
 The JavaScript reference serves as a repository of facts about the JavaScript language. The entire language is described here in detail. As you write JavaScript code, you'll refer to these pages often (thus the title "JavaScript reference"). If you're learning JavaScript, or need help understanding some of its capabilities or features, check out the [JavaScript guide](/en-US/docs/Web/JavaScript/Guide).
 

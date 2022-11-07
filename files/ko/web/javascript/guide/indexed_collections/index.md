@@ -3,6 +3,7 @@ title: Indexed collections
 slug: Web/JavaScript/Guide/Indexed_collections
 translation_of: Web/JavaScript/Guide/Indexed_collections
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
 이번 장에서는 인덱스값에 의해 정렬이 되는 데이터 자료구조에 대해 소개합니다. 배열과 유사 배열 생성자인 {{jsxref("Array")}} 객체와 {{jsxref("TypedArray")}} 객체 같은 생성자들을 포함합니다.

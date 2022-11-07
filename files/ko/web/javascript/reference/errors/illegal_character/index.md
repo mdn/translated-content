@@ -8,6 +8,7 @@ tags:
   - 폭 없는 공백
 translation_of: Web/JavaScript/Reference/Errors/Illegal_character
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지
