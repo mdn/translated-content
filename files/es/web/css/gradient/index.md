@@ -12,6 +12,7 @@ tags:
 translation_of: Web/CSS/gradient
 original_slug: Web/CSS/Gradiente
 ---
+
 {{CSSRef}}
 
 ## Resumen

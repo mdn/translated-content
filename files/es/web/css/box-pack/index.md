@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/box-pack
 original_slug: Web/CSS/-moz-box-pack
 ---
+
 {{CSSRef}}
 
 > **Advertencia:** Esta propiedad es parte del módulo estándar original para el diseño de las cajas CSS Flexible que fue sustituida por un nuevo estándar.

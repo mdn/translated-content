@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:required
 ---
+
 {{ CSSRef }}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:required`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} que tenga el atributo {{ htmlattrxref("required", "input") }} establecido en él.

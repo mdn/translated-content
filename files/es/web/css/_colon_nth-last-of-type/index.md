@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:nth-last-of-type
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:nth-last-of-type()`** [CSS](/es/docs/Web/CSS) coincide con uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos, contando desde el final.

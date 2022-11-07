@@ -8,6 +8,7 @@ tags:
   - Vista CSSOM
 translation_of: Web/CSS/scroll-behavior
 ---
+
 {{ CSSRef }}
 
 La propiedad CSS **`scroll-behavior`** especifica el comportamiento del desplazamiento para un elemento con desplazamiento, cuando éste se produce debido a la navegación o a APIs CSSOM. Otros desplazamientos, p.ej. aquellos realizados por el usuario, no se ven afectados por esta propiedad. Cuando esta propiedad está especificada en el elemento raíz, se aplica al viewport.

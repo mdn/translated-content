@@ -12,6 +12,7 @@ tags:
 translation_of: Web/CSS/repeat()
 original_slug: Web/CSS/repeat()
 ---
+
 {{cssref}}
 
 La función [CSS](/es/docs/Web/CSS) **`repeat()`** representa un fragmento repetido de la lista de la pista, permitiendo un gran número de columnas o renglones que exhiben un patrón recurrente para ser escrito de una forma más compacta.

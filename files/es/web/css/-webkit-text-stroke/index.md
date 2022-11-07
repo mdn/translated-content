@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/-webkit-text-stroke
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen
