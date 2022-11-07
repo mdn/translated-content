@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/await
 
 {{jsSidebar("Operators")}}
 
-`await` 操作符用于等待 一个{{jsxref("Promise")}}对象。它只能在异步函数（{{jsxref("Statements/async_function", "async function")}}）中使用。
+`await` 操作符用于等待一个 {{jsxref("Promise")}} 对象并获取它兑现之后的值。它只能在异步函数（{{jsxref("Statements/async_function", "async function")}}）或者[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)顶层中使用。
 
 ## 语法
 
