@@ -8,6 +8,7 @@ tags:
   - Классы
 translation_of: Web/JavaScript/Reference/Classes/constructor
 ---
+
 {{jsSidebar("Classes")}}
 
 `constructor` - это специальный метод, служащий для создания и инициализации объектов, созданных с использованием `class`.

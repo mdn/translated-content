@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/deleteProperty
 ---
+
 {{JSRef}}
 
 Метод **`handler.deleteProperty()`** является "ловушкой" (функция-перехватчик) для оператора {{jsxref("Operators/delete", "delete")}}.

@@ -3,6 +3,7 @@ title: Инициализация объектов
 slug: Web/JavaScript/Reference/Operators/Object_initializer
 translation_of: Web/JavaScript/Reference/Operators/Object_initializer
 ---
+
 {{JsSidebar("Операторы")}}
 
 Объекты могут быть инициализированы с помощью [`new Object()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object),` Object.create() `или _литеральной_ (_инициирующей_) нотации. Инициализатор объекта это разделённый запятыми список ноль или более пар имён свойств и ассоциируемых с ними значений, заключённых в фигурные скобки (`{}`).

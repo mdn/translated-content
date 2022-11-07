@@ -14,6 +14,7 @@ tags:
   - Все_категории
 translation_of: Web/JavaScript
 ---
+
 {{JsSidebar()}}
 
 **JavaScript**® (часто просто **JS**) — это легковесный, интерпретируемый или JIT-компилируемый, объектно-ориентированный язык с {{Glossary("First-class_Function", "функциями первого класса")}}. Наиболее широкое применение находит как язык сценариев веб-страниц, но также [используется и в других программных продуктах](http://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages), например, [node.js](http://nodejs.org) или [Apache CouchDB](http://couchdb.apache.org). JavaScript это {{Glossary("Prototype-based_programming", "прототипно-ориентированный")}}, мультипарадигменный язык с динамической типизацией, который поддерживает объектно-ориентированный, императивный и декларативный (например, функциональное программирование) стили программирования. Подробнее [о JavaScript](/ru/docs/Web/JavaScript/%D0%9E_JavaScript).

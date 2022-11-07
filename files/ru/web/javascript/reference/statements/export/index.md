@@ -10,6 +10,7 @@ tags:
   - Модули
 translation_of: Web/JavaScript/Reference/Statements/export
 ---
+
 {{jsSidebar("Statements")}}
 
 Инструкция **export** используется для экспорта функций, объектов или примитивов из файла (или модуля).
