@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/await
 
 {{jsSidebar("Operators")}}
 
-`await` 操作符用于等待一个 {{jsxref("Promise")}} 对象并获取它兑现之后的值。它只能在异步函数（{{jsxref("Statements/async_function", "async function")}}）或者[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)顶层中使用。
+`await` 操作符用于等待一个 {{jsxref("Promise")}} 兑现并获取它兑现之后的值。它只能在异步函数（{{jsxref("Statements/async_function", "async function")}}）或者[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)顶层中使用。
 
 ## 语法
 
@@ -16,35 +16,36 @@ await 表达式;
 ### 参数
 
 - `表达式`
-  - : 要等待的 {{jsxref("Promise")}}对象 或 Thenable对象，或者任意类型的值。
-
-### 异常
-
-reject的原因会被作为异常抛出。
+  - 要等待的 {{jsxref("Promise")}} 实例
+  - Thenable 对象
+  - 任意类型的值。
 
 ### 返回值
 
-返回 Promise对象 或 Thenable对象 的处理结果。如果等待的值不符合thenable，则返回该值本身。
+返回从 `Promise` 实例或 Thenable 对象取得的处理结果。如果等待的值不符合thenable，则返回该值本身。
+
+### 异常
+
+`reject` 的原因 (`reason`) 会被作为异常抛出。
 
 ## 描述
 
-`await` 通常被用于从 {{jsxref("Promise")}} 中取出结果。
-使用 `await` 总会暂停当前 {{jsxref("Statements/async_function", "async function")}} 的执行，在 `Promise` 完成（fulfilled 或 rejected）后继续执行。
-执行恢复（resume）时，`await` 的 返回值 或 抛出的异常 将会是 `Promise` 的处理结果。
+`await` 通常被用于从一个 {{jsxref("Promise")}} 中取出结果。
+使用 `await` 总会暂停当前 {{jsxref("Statements/async_function", "async function")}} 的执行，在该 `Promise` 完成 (fulfilled 或 rejected) 后继续执行。
+函数的执行恢复 (resume) 时，`await` 的返回值或抛出的异常将会是该 `Promise` 的处理结果。
+- 若该 `Promise` 状态为 fulfilled（正常处理)，其回调的 `resolve` 的参数将作为 `await` 表达式的值，继续执行 {{jsxref("Statements/async_function", "async function")}}。
+- 若该 `Promise` 状态为 rejected（出现异常)，`await` 表达式会把 reject 的原因抛出。
 
-- 若 Promise 状态为 fulfilled（正常处理)，其回调的 `resolve` 的参数将作为 `await` 表达式的值，继续执行 {{jsxref("Statements/async_function", "async function")}}。
-- 若 `Promise` 状态为 rejected（出现异常)，`await` 表达式会把 `Promise` 的reject原因抛出。
+`await` 总会同步求表达式的值并处理，处理的行为与 {{jsxref("Promise.resolve()")}} 一致，不属于 `Promise` 实例的值全都会被隐式地包装成 `Promise` 实例。
+- 值若是原生 `Promise` 实例，会被直接用于等待。
+- 值若是 Thenable 对象（包括非原生的 `Promise` 实例），会被包装为 `Promise` 实例，以保证其行为符合原生 {{jsxref("Promise")}}。
+- 值若不是 Thenable 对象，会创建一个已经兑现的 {{jsxref("Promise")}} 实例，其结果就是表达式的值。
 
-表达式总会被 {{jsxref("Promise.resolve()")}} 处理，非{{jsxref("Promise")}}的值会被隐式地包装成 {{jsxref("Promise")}}对象。
+## 示例
 
-- 值若 属于 Thenable对象，包装后的行为将总是符合{{jsxref("Promise")}}。
-- 值若 不属于 Thenable对象，会创建一个已经正常处理的{{jsxref("Promise")}}，其处理结果会是表达式的值。
+### 等待 Promise 的结果
 
-## 例子
-
-### 等待Promise的结果
-
-当 一个`Promise` 被传递给 `await` 操作符，`await` 将等待 `Promise` 正常处理完成并返回其处理结果。
+当一个 `Promise` 被传递给 `await` 操作符，`await` 将等待该 `Promise` 兑现完成并返回其处理结果。
 
 ```js
 function resolveAfter2Seconds(x) {
@@ -63,7 +64,7 @@ async function f1() {
 f1();
 ```
 
-如果该值不是一个 `Promise`，`await` 会把该值转换为已正常处理的 `Promise`，然后返回其处理结果。
+若表达式的值既不是 {{jsxref("Promise")}} 实例，又不是 Thenable 对象，`await` 会把该值转换为已兑现的 `Promise`，然后返回其结果。
 
 ```js
 async function f2() {
@@ -73,7 +74,7 @@ async function f2() {
 f2();
 ```
 
-如果 `Promise` 状态为rejected（遇到异常），则抛出。
+如果该 `Promise` 的状态为 rejected（遇到异常），则抛出。
 
 ```js
 async function f3() {
@@ -87,7 +88,7 @@ f3();
 ```
 
 也可以用 `catch()` 提前处理异常。
-请注意！该值必须是 一个{{jsxref("Promise")}}，否则将出现不符合{{jsxref("Promise")}}的行为。
+请注意！该值必须是一个原生 `Promise`，否则可能出现不符合原生 {{jsxref("Promise")}} 的行为。
 
 ```js
 const response = await promisedFunction().catch((err) => {
@@ -97,9 +98,9 @@ const response = await promisedFunction().catch((err) => {
 // response will be "default response" if the promise is rejected
 ```
 
-### 等待非Promise的表达式的结果
+### 等待非 Promise 的表达式的结果
 
-#### 等待 正常处理的 Thenable 对象
+#### 等待正常处理的 Thenable 对象
 
 ```js
 async function f() {
@@ -114,7 +115,7 @@ async function f() {
 f();
 ```
 
-#### 等待 遇到异常的 Thenable 对象
+#### 等待遇到异常的 Thenable 对象
 
 ```js
 async function f() {
@@ -129,9 +130,9 @@ async function f() {
 f();
 ```
 
-#### 等待 其它类型的值
+#### 等待其它类型的值
 
-若表达式的值 既不是 {{jsxref("Promise")}}对象 又不是 Thenable对象，函数恢复执行时`await`将直接返回该值。
+如果表达式的值不是 {{jsxref("Promise")}} 实例，也不是 Thenable 对象，函数恢复执行时 `await` 将直接返回该值。
 
 ```js
 async function f3() {
@@ -147,10 +148,10 @@ f3();
 
 ### await对执行过程的影响
 
-当程序执行到`await`时，被等待的表达式会立即(同步)被求值，（如同该值被传进{{jsxref("Promise.resolve()")}}一样）`await`会临时地储存一个原生{{jsxref("Promise")}}，然后函数执行会暂停。
-当该`Promise`完成(fulfilled 或 rejected)时，一个**新**的微任务(microtask)会被push进 微任务队列(microtask queue)，该微任务被执行时，函数执行会恢复。
+当函数执行到 `await` 时，被等待的表达式会立即(同步)被求值，并确定一个原生 {{jsxref("Promise")}}，然后函数的执行会暂停。
+当该 `Promise` 完成 (fulfilled 或 rejected) 时，一个**新**的微任务(microtask)会被 push 进微任务队列 (microtask queue)，该微任务被执行时，函数执行会恢复。
 
-当{{jsxref("Statements/async_function", "async function")}}不执行任何`await`时，
+若 {{jsxref("Statements/async_function", "async function")}} 到结束都没有执行任何 `await`，
 整个函数都将被同步执行：
 
 ```js
@@ -171,7 +172,7 @@ foo("Second");
 // Second end
 ```
 
-对应到`Promise`的写法是：
+对应到 `Promise` 的写法是：
 
 ```js
 function foo(name) {
@@ -184,7 +185,7 @@ function foo(name) {
 }
 ```
 
-执行到`await`时，后面的代码就会整体被安排进一个新的微任务，函数的执行此后变为异步执行。
+执行到 `await` 时，后面的代码就会整体被安排进一个新的微任务，函数的执行此后变为异步执行。
 通常情况下，入队顺序就是执行顺序：
 
 ```js
@@ -205,7 +206,7 @@ foo("Second");
 // Second end
 ```
 
-对应的`Promise`写法是：
+对应的 `Promise` 写法是：
 
 ```js
 function foo(name) {
@@ -218,9 +219,9 @@ function foo(name) {
 }
 ```
 
-虽然这里的`then()`看起来很多余，其中的代码完全可以被合并到构造器的回调里，但不管`Promise`的状态如何，`then()`的回调**总会被异步执行**，`await`的行为也一样。
+虽然这里的 `then()` 看起来很多余，其中的代码完全可以被合并到构造器的回调里，但不管该 `Promise` 的状态如何，`then()` 的回调**总会被异步执行**，`await` 的行为也一样。
 
-因此，只要情况不是需要(或可能需要)等待`Promise`的结果，就应该避免使用`await`。
+因此，只要情况不是必须或可能需要等待 `Promise` 的结果，就应该避免使用 `await`。
 其它微任务能在函数执行恢复之前执行：
 
 ```js
