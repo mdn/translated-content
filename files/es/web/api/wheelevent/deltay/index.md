@@ -3,6 +3,7 @@ title: WheelEvent.deltaY
 slug: Web/API/WheelEvent/deltaY
 translation_of: Web/API/WheelEvent/deltaY
 ---
+
 {{APIRef("DOM Events")}}
 
 La propiedad de solo lectura **`WheelEvent.deltaY`** es un `double` que representa la cantidad de deslizamiento vertical en la unidad {{domxref("WheelEvent.deltaMode")}} .

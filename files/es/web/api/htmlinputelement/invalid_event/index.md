@@ -10,6 +10,7 @@ tags:
   - inválido
 translation_of: Web/API/HTMLInputElement/invalid_event
 ---
+
 {{APIRef}}
 
 El evento **`invalid`** se dispara cuando se ha comprobado la validez de un elemento que se puede enviar y no satisface sus restricciones.

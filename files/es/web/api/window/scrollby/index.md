@@ -10,6 +10,7 @@ tags:
   - Referencia
 translation_of: Web/API/Window/scrollBy
 ---
+
 {{ APIRef() }}
 
 ## Resumen

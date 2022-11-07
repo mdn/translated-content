@@ -10,6 +10,7 @@ tags:
   - metodo
 translation_of: Web/API/HTMLCanvasElement/toDataURL
 ---
+
 {{APIRef("Canvas API")}}
 
 El método **`HTMLCanvasElement.toDataURL()`** devuelve un [data URI](/es/docs/Web/HTTP/data_URIs) el cual contiene una representación de la imagen en el formato especificado por el parámetro `type` (por defecto es [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). La imagen obtenida tendrá una resolución de 96 dpi.

@@ -9,6 +9,7 @@ tags:
   - Referência DOM
 translation_of: Web/API/Node/childNodes
 ---
+
 {{APIRef("DOM")}}
 
 La propiedad de solo lectura **`Node.childNodes`** devuelve una colección de hijos {{domxref("Node","nodes")}} del elemento dado donde el primer nodo hijo es asignado un índice 0.

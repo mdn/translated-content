@@ -10,6 +10,7 @@ tags:
   - metodo
 translation_of: Web/API/ClipboardEvent/clipboardData
 ---
+
 {{ apiref("Clipboard API") }} {{SeeCompatTable}}
 
 La propiedad **`ClipboardEvent.clipboardData`**, del tipo {{domxref("DataTransfer")}}, puede ser usuada:

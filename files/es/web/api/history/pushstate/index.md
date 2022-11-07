@@ -15,6 +15,7 @@ tags:
   - pushState
 translation_of: Web/API/History/pushState
 ---
+
 {{APIRef("History API")}}
 
 En un documento [HTML](/es/docs/Web/HTML), el método **`history.pushState()`** anexa un registro en la sesión de historial del navegador.

@@ -4,6 +4,7 @@ slug: Web/API/Window/popstate_event
 translation_of: Web/API/WindowEventHandlers/onpopstate
 original_slug: Web/API/WindowEventHandlers/onpopstate
 ---
+
 {{APIRef}}
 
 La propiedad **`onpopstate`** del [mixin](/es/docs/Glossary/Mixin) {{domxref("WindowEventHandlers")}} es el {{event("Event_handlers", "event handler")}} para procesar eventos [`popstate`](/en-US/docs/Web/API/Window/popstate_event) de la ventana.

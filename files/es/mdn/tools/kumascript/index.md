@@ -4,6 +4,7 @@ slug: MDN/Tools/KumaScript
 translation_of: MDN/Tools/KumaScript
 original_slug: MDN/Tools/Introduction_to_KumaScript
 ---
+
 {{MDNSidebar}}
 
 ## Vistazo general

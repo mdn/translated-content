@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
 translation_of: Web/API/CanvasRenderingContext2D
 ---
+
 {{APIRef}}
 
 La interfaz **`CanvasRenderingContext2D`** proporciona el contexto de renderizado 2D para la superficie de dibujo de un elemento {{ HTMLElement("canvas") }}.

@@ -3,6 +3,7 @@ title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
 translation_of: Web/API/Window/devicePixelRatio
 ---
+
 {{APIRef}}
 
 La propiedad de sólo-lectura `Window.devicePixelRatio` retorna la relación de tamaño (vertical) de un pixel físico en el dispositivo de visualización actual respecto del de un dispositivo de tamaño de pixel independiente (dips).

@@ -7,6 +7,7 @@ tags:
 translation_of: Web/API/Document/keydown_event
 original_slug: Web/API/Document/keydown_event
 ---
+
 {{ APIRef }}
 
 El evento `keydown` se produce cuando se presiona una tecla.

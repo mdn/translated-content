@@ -3,6 +3,7 @@ title: range.commonAncestorContainer
 slug: Web/API/Range/commonAncestorContainer
 translation_of: Web/API/Range/commonAncestorContainer
 ---
+
 {{ApiRef("DOM")}}
 
 ### Resumen

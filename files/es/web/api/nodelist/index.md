@@ -8,6 +8,7 @@ tags:
   - NodeList
 translation_of: Web/API/NodeList
 ---
+
 {{APIRef("DOM")}}
 
 Los objetos **`NodeList`** son colecciones de nodos como los devueltos por propiedades como {{domxref ("Node.childNodes")}} y el método {{domxref ("document.querySelectorAll ()")}}..

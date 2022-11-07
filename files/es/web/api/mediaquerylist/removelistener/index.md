@@ -3,6 +3,7 @@ title: MediaQueryList.removeListener()
 slug: Web/API/MediaQueryList/removeListener
 translation_of: Web/API/MediaQueryList/removeListener
 ---
+
 {{APIRef("CSSOM View")}}
 
 El método **`removeListener()`** de la interfaz {{domxref ("MediaQueryList")}} elimina un escucha de `MediaQueryListener`.

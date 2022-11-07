@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/Event/type
 ---
+
 {{APIRef}}
 
 La propiedad de sólo-lectura **`Event.type`** devuelve una cadena de texto que contiene el tipo de evento. Se establece cuando se contruye el evento y es el nombre que se utiliza normalmente para referirse al evento en cuestión, como `click`, `load` o `error`.

@@ -7,6 +7,7 @@ tags:
   - Referencia
 translation_of: Web/API/Event/target
 ---
+
 {{ApiRef("DOM")}}
 
 La propiedad **`target`** de la interfaz del {{domxref("event.currentTarget")}} es una referencia al objeto en el cual se lanzo el evento. Es diferente de {{domxref("event.currentTarget")}} donde el controlador de eventos (event handler) es llamado durante la fase de bubbling or capturing del evento.

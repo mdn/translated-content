@@ -3,6 +3,7 @@ title: Window.locationbar
 slug: Web/API/Window/locationbar
 translation_of: Web/API/Window/locationbar
 ---
+
 {{APIRef}}
 
 Devuelve el objeto `locationbar`, del cual se puede comprobar su visibilidad.

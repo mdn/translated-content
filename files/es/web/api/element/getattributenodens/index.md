@@ -8,6 +8,7 @@ tags:
   - metodo
 translation_of: Web/API/Element/getAttributeNodeNS
 ---
+
 {{ APIRef }}
 
 ## Sumario

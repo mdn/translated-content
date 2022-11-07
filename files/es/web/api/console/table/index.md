@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/Console/table
 original_slug: Web/API/Console/tabla
 ---
+
 {{APIRef("Console API")}}
 
 Muestra datos tabulares como una tabla.

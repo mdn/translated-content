@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLImageElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 La interfaz **`HTMLImageElement`** provee de propiedas especiales y métodos (más allá de las interfaces {{domxref("HTMLElement")}}, también tiene disponible la herencia) para manipular el diseño y la presentación de elementos {{HTMLElement("img")}}.

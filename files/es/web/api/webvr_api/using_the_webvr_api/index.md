@@ -12,6 +12,7 @@ tags:
   - WebVR
 translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 ---
+
 {{APIRef("WebVR API")}}
 
 La API WebVR es una fantástica adición al kit de herramientas del desarrollador web, permitiendo que las escenas de WebGL sean presentadas en pantallas de realidad virtual como el Oculus Rift y HTC Vive. Pero, ¿cómo empezar a desarrollar aplicaciones VR para la Web? Este artículo le guiará a través de los fundamentos.

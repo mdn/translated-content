@@ -5,6 +5,7 @@ tags:
   - API
 translation_of: Web/API/EventTarget
 ---
+
 {{ ApiRef("DOM Events") }}
 
 `EventTarget` es una interfaz implementada por los objetos que pueden administrar eventos y sus escuchadores.

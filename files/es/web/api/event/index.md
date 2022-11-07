@@ -5,6 +5,7 @@ tags:
   - para_revisar
 translation_of: Web/API/Event
 ---
+
 {{APIRef("DOM")}}
 
 « [Referencia DOM de Gecko](/es/Referencia_DOM_de_Gecko)

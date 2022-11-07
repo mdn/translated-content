@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 original_slug: Mozilla/Add-ons/WebExtensions/Que_son_las_WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Una extensión agrega características y funciones a un explorador. Se ha creado utilizando tecnologías basadas en Web conocidas: HTML, CSS y JavaScript. Puede aprovechar las mismas API Web que JavaScript en una página web, pero una extensión también tiene acceso a su propio conjunto de APIs de JavaScript. Esto significa que puede hacer mucho más en una extensión de lo que puede con el código en una página web. Estos son sólo algunos ejemplos de las cosas que puedes hacer:

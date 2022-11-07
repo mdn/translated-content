@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/Push_API
 ---
+
 {{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}
 
 La **API Push** otorga a las aplicaciones web la habilidad de recibir mensajes enviados a ellas desde un servidor, sin importar si la aplicación está o no en primer plano o cargada. Esto permite a los desarrolladores enviar notificaciones asíncronas y actualizaciones para los usuarios que las aceptan.
