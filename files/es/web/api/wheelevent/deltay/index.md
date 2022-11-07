@@ -33,5 +33,5 @@ console.log(syntheticEvent.deltaY);
 
 ## Ver más
 
-- {{ event("wheel") }}
+- [`wheel`](/es/docs/Web/Reference/Events/wheel)
 - {{domxref("WheelEvent")}}

@@ -91,7 +91,7 @@ El núcleo del lenguaje JavaScript de lado del cliente consta de algunas caracte
 
 - Almacenar valores útiles dentro de variables. En el ejemplo anterior, por ejemplo, pedimos que ingreses un nuevo nombre y luego almacenamos ese nombre en una variable llamada `name`.
 - Operaciones sobre fragmentos de texto (conocidas como "cadenas" (`strings`) en programación). En el ejemplo anterior, tomamos la cadena "`Player1`:" y la unimos a la variable `name` para crear la etiqueta de texto completa, p. ej. ''`Player1: Chris`".
-- Y ejecuta código en respuesta a ciertos eventos que ocurren en una página web. Usamos un evento {{Event("click")}} en nuestro ejemplo anterior para detectar cuándo se hace clic en el botón y luego ejecutar el código que actualiza la etiqueta de texto.
+- Y ejecuta código en respuesta a ciertos eventos que ocurren en una página web. Usamos un evento [`click`](/es/docs/Web/Reference/Events/click) en nuestro ejemplo anterior para detectar cuándo se hace clic en el botón y luego ejecutar el código que actualiza la etiqueta de texto.
 - ¡Y mucho más!
 
 Sin embargo, lo que aún es más emocionante es la funcionalidad construida sobre el lenguaje JavaScript de lado del cliente. Las denominadas **interfaces de programación de aplicaciones** (**API**) te proporcionan superpoderes adicionales para utilizar en tu código JavaScript.

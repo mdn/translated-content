@@ -29,13 +29,13 @@ La interfaz `BatteryManager` de la [API del Estado de la Batería](/en-US/docs/W
 ### Eventos del controlador
 
 - {{domxref("BatteryManager.onchargingchange")}}
-  - : Controlador para el evento {{event("chargingchange")}} ; Este evento se envía cuando se actualiza el estado de carga de la batería.
+  - : Controlador para el evento [`chargingchange`](/es/docs/Web/Reference/Events/chargingchange) ; Este evento se envía cuando se actualiza el estado de carga de la batería.
 - {{domxref("BatteryManager.onchargingtimechange")}}
-  - : Controlador para el evento {{event("chargingtimechange")}}; Este evento se envía cuando se actualiza el tiempo de carga de la batería.
+  - : Controlador para el evento [`chargingtimechange`](/es/docs/Web/Reference/Events/chargingtimechange); Este evento se envía cuando se actualiza el tiempo de carga de la batería.
 - {{domxref("BatteryManager.ondischargingtimechange")}}
-  - :  Controlador para el evento{{event("dischargingtimechange")}}; Este evento se envía cuando se actualiza el tiempo de descarga de la batería.
+  - :  Controlador para el evento[`dischargingtimechange`](/es/docs/Web/Reference/Events/dischargingtimechange); Este evento se envía cuando se actualiza el tiempo de descarga de la batería.
 - {{domxref("BatteryManager.onlevelchange")}}
-  - : Controlador para el evento {{event("levelchange")}}; Este evento se envía cuando se actualizael nivel de la batería.
+  - : Controlador para el evento [`levelchange`](/es/docs/Web/Reference/Events/levelchange); Este evento se envía cuando se actualizael nivel de la batería.
 
 ## Métodos
 

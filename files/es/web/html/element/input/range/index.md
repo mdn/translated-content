@@ -45,7 +45,7 @@ Si el navegador del usuario no soporta el tipo `"range"`, será tratado como un 
     </tr>
     <tr>
       <td><strong>Eventos</strong></td>
-      <td>{{event("change")}} e {{event("input")}}</td>
+      <td>[`change`](/es/docs/Web/Reference/Events/change) e [`input`](/es/docs/Web/Reference/Events/input)</td>
     </tr>
     <tr>
       <td><strong>Atributos comunes soportados</strong></td>

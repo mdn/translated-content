@@ -36,9 +36,9 @@ El evento `animationend` es lanzado cuando una animación CSS se ha completado.
 
 ## Eventos relacionados
 
-- {{Event("animationstart")}}
-- {{Event("animationend")}}
-- {{Event("animationiteration")}}
+- [`animationstart`](/es/docs/Web/Reference/Events/animationstart)
+- [`animationend`](/es/docs/Web/Reference/Events/animationend)
+- [`animationiteration`](/es/docs/Web/Reference/Events/animationiteration)
 
 ## Especificaciones
 

@@ -7,7 +7,7 @@ translation_of: Web/API/MouseEvent
 ---
 {{APIRef("DOM Events")}}
 
-The **`MouseEvent`** interface represents events that occur due to the user interacting with a pointing device (such as a mouse). Common events using this interface include {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}}, {{event("mousedown")}}.
+The **`MouseEvent`** interface represents events that occur due to the user interacting with a pointing device (such as a mouse). Common events using this interface include [`click`](/es/docs/Web/Reference/Events/click), [`dblclick`](/es/docs/Web/Reference/Events/dblclick), [`mouseup`](/es/docs/Web/Reference/Events/mouseup), [`mousedown`](/es/docs/Web/Reference/Events/mousedown).
 
 `MouseEvent` derives from {{domxref("UIEvent")}}, which in turn derives from {{domxref("Event")}}. Though the {{domxref("MouseEvent.initMouseEvent()")}} method is kept for backward compatibility, creating of a `MouseEvent` object should be done using the {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} constructor.
 
@@ -43,9 +43,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : Returns `true` if the <kbd>meta</kbd> key was down when the mouse event was fired.
 
 - {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
-  - : The X coordinate of the mouse pointer relative to the position of the last {{event("mousemove")}} event.
+  - : The X coordinate of the mouse pointer relative to the position of the last [`mousemove`](/es/docs/Web/Reference/Events/mousemove) event.
 - {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
-  - : The Y coordinate of the mouse pointer relative to the position of the last {{event("mousemove")}} event.
+  - : The Y coordinate of the mouse pointer relative to the position of the last [`mousemove`](/es/docs/Web/Reference/Events/mousemove) event.
 - {{domxref("MouseEvent.region")}} {{readonlyinline}}
   - : Returns the id of the hit region affected by the event. If no hit region is affected, `null` is returned.
 - {{domxref("MouseEvent.relatedTarget")}} {{readonlyinline}}

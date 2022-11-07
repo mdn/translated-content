@@ -83,10 +83,10 @@ Empezando desde Gecko 25, una llamada a `preventDefault()` del evento `keydown` 
 
 ## Eventos relacionados
 
-- {{event("keydown")}}
-- {{event("keyup")}}
-- {{event("keypress")}}
-- {{event("input")}}
+- [`keydown`](/es/docs/Web/Reference/Events/keydown)
+- [`keyup`](/es/docs/Web/Reference/Events/keyup)
+- [`keypress`](/es/docs/Web/Reference/Events/keypress)
+- [`input`](/es/docs/Web/Reference/Events/input)
 
 ## Ejemplo
 

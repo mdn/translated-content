@@ -51,7 +51,7 @@ Inherits from: [EventTarget](/es/docs/DOM/EventTarget)
 - {{domxref("IDBDatabase.onabort")}}
   - : Fires when access of the database is aborted.
 - {{domxref("IDBDatabase.onclose")}}
-  - : Fires when the {{event("close")}} event occurs; this happens when the database is unexpectedly closed, such as during application shutdown.
+  - : Fires when the [`close`](/es/docs/Web/Reference/Events/close) event occurs; this happens when the database is unexpectedly closed, such as during application shutdown.
 - {{domxref("IDBDatabase.onerror")}}
   - : Fires when access to the database fails.
 - {{domxref("IDBDatabase.onversionchange")}}

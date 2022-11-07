@@ -31,10 +31,10 @@ El manejador `close` es ejecutado cuando una conexión con un websocket es cerra
 
 ## Related Events
 
-- {{event("open")}}
-- {{event("close")}}
-- {{event("error")}}
-- {{event("message")}}
+- [`open`](/es/docs/Web/Reference/Events/open)
+- [`close`](/es/docs/Web/Reference/Events/close)
+- [`error`](/es/docs/Web/Reference/Events/error)
+- [`message`](/es/docs/Web/Reference/Events/message)
 
 ## See also
 

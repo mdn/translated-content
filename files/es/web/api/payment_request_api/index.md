@@ -66,7 +66,7 @@ Puedes encontrar una guía completa en [Usando la API de Solicitud de Pago](/es/
 ### Diccionarios relacionados para la especificación Basic Card
 
 - {{domxref("BasicCardChangeDetails")}}
-  - : Un objeto que proporciona información de dirección redactada que se proporciona como {{domxref ("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} en el evento {{event ("paymentmethodchange")}} enviado al {{domxref ("PaymentRequest" )}} cuando el usuario cambia la información de pago.
+  - : Un objeto que proporciona información de dirección redactada que se proporciona como {{domxref ("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} en el evento [`paymentmethodchange`](/es/docs/Web/Reference/Events/paymentmethodchange) enviado al {{domxref ("PaymentRequest" )}} cuando el usuario cambia la información de pago.
 - {{domxref("BasicCardErrors")}}
   - : Un objeto que proporciona mensajes de error asociados con los campos del objeto {{domxref ("BasicCardResponse")}} que no son válidos. Esto se usa como el valor de la propiedad {{domxref ("PaymentValidationErrors.paymentMethod", "paymentMethod")}} en el objeto {{domxref ("PaymentValidationErrors")}} enviado al {{domxref ("PaymentRequest")}} cuando ocurre un error.
 - {{domxref('BasicCardRequest')}}

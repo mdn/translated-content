@@ -14,7 +14,7 @@ El juego en sí está terminado, así que ahora vamos a pulirlo. Ya le hemos pue
 
 ## Detectar el movimiento del ratón
 
-Detectar el movimiento del ratón es más fácil que detectar las pulsaciones de las teclas. Todo lo que necesitamos es un añadir "escuchador" al evento {{event("mousemove")}}.Añade esta línea destrás de los otros "listeners", justo debajo del evento `keyup`:
+Detectar el movimiento del ratón es más fácil que detectar las pulsaciones de las teclas. Todo lo que necesitamos es un añadir "escuchador" al evento [`mousemove`](/es/docs/Web/Reference/Events/mousemove).Añade esta línea destrás de los otros "listeners", justo debajo del evento `keyup`:
 
 ```js
 document.addEventListener("mousemove", mouseMoveHandler, false);

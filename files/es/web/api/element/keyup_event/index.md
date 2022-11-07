@@ -74,10 +74,10 @@ El evento es iniciado cuando la tecla es soltada.
 
 ## Eventos Relacionados
 
-- {{event("keydown")}}
-- {{event("keyup")}}
-- {{event("keypress")}}
-- {{event("input")}}
+- [`keydown`](/es/docs/Web/Reference/Events/keydown)
+- [`keyup`](/es/docs/Web/Reference/Events/keyup)
+- [`keypress`](/es/docs/Web/Reference/Events/keypress)
+- [`input`](/es/docs/Web/Reference/Events/input)
 
 ## Especificaciones
 

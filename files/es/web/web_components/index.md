@@ -133,7 +133,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
 
     - {{cssxref("::slotted")}}: Coincide cualquier contenido que es insertado dentro de un slot.
 
-- El evento {{event("slotchange")}}
+- El evento [`slotchange`](/es/docs/Web/Reference/Events/slotchange)
   - : Disparado en una instancia {{domxref("HTMLSlotElement")}} (elemento {{htmlelement("slot")}}) cuando el o los nodos contenidos es ese slot cambia.
 
 ## Ejemplos

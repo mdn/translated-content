@@ -197,7 +197,7 @@ Propiedades aun no categorizadas
 - `setCustomValidity()`
   - : Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.
 - `checkValidity()`
-  - : Returns a {{jsxref("Boolean")}} that is `false` if the element is a candidate for constraint validation, and it does not satisfy its constraints. In this case, it also fires an {{event("invalid")}} event at the element. It returns `true` if the element is not a candidate for constraint validation, or if it satisfies its constraints.
+  - : Returns a {{jsxref("Boolean")}} that is `false` if the element is a candidate for constraint validation, and it does not satisfy its constraints. In this case, it also fires an [`invalid`](/es/docs/Web/Reference/Events/invalid) event at the element. It returns `true` if the element is not a candidate for constraint validation, or if it satisfies its constraints.
 
 <!---->
 

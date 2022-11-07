@@ -66,5 +66,5 @@ element.addEventListener("transitionend", function(event) {
 
 La interfaz {{domxref("TransitionEvent")}}
 
-- {{event("transitionstart")}}, {{event("transitioncancel")}}
+- [`transitionstart`](/es/docs/Web/Reference/Events/transitionstart), [`transitioncancel`](/es/docs/Web/Reference/Events/transitioncancel)
 - Propiedades CSS: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}.

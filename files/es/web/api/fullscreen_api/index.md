@@ -46,7 +46,7 @@ Por otro lado, si quieres emular el comportamiento de WebKit en Gecko, necesitar
 
 ### Notificación
 
-Cuando el modo de pantalla completa sea invocado exitosamente, el documento que contiene al elemento recibe un evento {{ event("fullscreenchange") }}. Cuando se sale del modo de pantalla completa, el documento recibe de nuevo un evento {{ event("fullscreenchange") }}. Nótese que el evento {{ event("fullscreenchange") }} no provee información alguna sobre si el documento está entrando o saliendo a modo de pantalla completa, pero puedes saber si está en dicho modo si la propiedad {{ domxref("document.fullscreenElement", "fullscreenElement") }} del documento no es nula.
+Cuando el modo de pantalla completa sea invocado exitosamente, el documento que contiene al elemento recibe un evento [`fullscreenchange`](/es/docs/Web/Reference/Events/fullscreenchange). Cuando se sale del modo de pantalla completa, el documento recibe de nuevo un evento [`fullscreenchange`](/es/docs/Web/Reference/Events/fullscreenchange). Nótese que el evento [`fullscreenchange`](/es/docs/Web/Reference/Events/fullscreenchange) no provee información alguna sobre si el documento está entrando o saliendo a modo de pantalla completa, pero puedes saber si está en dicho modo si la propiedad {{ domxref("document.fullscreenElement", "fullscreenElement") }} del documento no es nula.
 
 ### Cuando la solicitud de pantalla completa falla
 

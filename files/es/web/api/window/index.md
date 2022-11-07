@@ -315,19 +315,19 @@ _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTa
 - {{domxref("Window.ondeviceproximity")}}
   - : An event handler property for device proximity event
 - {{domxref("GlobalEventHandlers.onerror")}}
-  - : An event handler property for {{event("error")}} events raised on the window.
+  - : An event handler property for [`error`](/es/docs/Web/Reference/Events/error) events raised on the window.
 - {{domxref("GlobalEventHandlers.onfocus")}}
-  - : An event handler property for {{event("focus")}} events on the window.
+  - : An event handler property for [`focus`](/es/docs/Web/Reference/Events/focus) events on the window.
 - {{domxref("WindowEventHandlers.onhashchange")}}
   - : An event handler property for hash change events on the window; called when the part of the URL after the hash mark ("#") changes.
 - {{domxref("GlobalEventHandlers.onkeydown")}}
-  - : An event handler property for {{event("keydown")}} events on the window.
+  - : An event handler property for [`keydown`](/es/docs/Web/Reference/Events/keydown) events on the window.
 - {{domxref("GlobalEventHandlers.onkeypress")}}
-  - : An event handler property for {{event("keypress")}} events on the window.
+  - : An event handler property for [`keypress`](/es/docs/Web/Reference/Events/keypress) events on the window.
 - {{domxref("GlobalEventHandlers.onkeyup")}}
-  - : An event handler property for {{event("keyup")}} events on the window.
+  - : An event handler property for [`keyup`](/es/docs/Web/Reference/Events/keyup) events on the window.
 - {{domxref("WindowEventHandlers.onlanguagechange")}}
-  - : An event handler property for {{event("languagechange")}} events on the window.
+  - : An event handler property for [`languagechange`](/es/docs/Web/Reference/Events/languagechange) events on the window.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : An event handler property for window loading.
 - {{domxref("GlobalEventHandlers.onmousedown")}}
