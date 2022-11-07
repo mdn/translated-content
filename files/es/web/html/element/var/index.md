@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/var
 original_slug: Web/HTML/Elemento/var
 ---
+
 {{HTMLSidebar}}
 
 ### Definición

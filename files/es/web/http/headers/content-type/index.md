@@ -3,6 +3,7 @@ title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
 translation_of: Web/HTTP/Headers/Content-Type
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Type`** es la propiedad de cabecera (header) usada para indicar el {{Glossary("MIME type","media type")}} del recurso.

@@ -4,6 +4,7 @@ slug: Web/HTML/Element/audio
 translation_of: Web/HTML/Element/audio
 original_slug: Web/HTML/Elemento/audio
 ---
+
 El elemento `audio` se usa para insertar contenido de audio en un documento HTML o XHTML. El elemento `audio` se agregó como parte de HTML 5.
 
 > **Nota:** actualmente Gecko admite solamente Vorbis, en contenedores Ogg, así como formato WAV. Asimismo, el servidor debe servir el archivo mediante el tipo MIME correcto con el fin de que Gecko lo reproduzca correctamente.

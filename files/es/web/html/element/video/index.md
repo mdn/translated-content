@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Element/video
 original_slug: Web/HTML/Elemento/video
 ---
+
 El elemento `video` se utiliza para incrustar vídeos en un documento HTML o XHTML.
 
 Para obtener una lista de formatos compatibles, consulta [Formatos multimedia admitidos por los elementos de audio y vídeo](/es/Formatos_multimedia_admitidos_por_los_elementos_de_video_y_audio) .

@@ -3,6 +3,7 @@ title: Usando shadow DOM
 slug: Web/Web_Components/Using_shadow_DOM
 translation_of: Web/Web_Components/Using_shadow_DOM
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 Un aspecto importante de los componentes Web es la encapsulación — ser capaz de mantener la estructura de marcado, estilo, y comportamiento oculto y separado de otro código en la página para que las diferentes partes no entre en conflicto, y el código pueda permanecer limpio y agradable. El API de DOM Shadow es un parte clave para esto, proporcionando una forma de enlazar un DOM oculto y separado a un elemento. Este artículo cubre los aspectos básicos para utilizar Shadow DOM.

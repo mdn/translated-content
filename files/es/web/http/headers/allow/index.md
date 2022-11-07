@@ -3,6 +3,7 @@ title: Allow
 slug: Web/HTTP/Headers/Allow
 translation_of: Web/HTTP/Headers/Allow
 ---
+
 {{HTTPSidebar}}
 
 La cabecera **`Allow`** enumera el conjunto de métodos admitidos por un recurso.

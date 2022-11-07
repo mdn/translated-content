@@ -4,6 +4,7 @@ slug: Web/HTTP/Connection_management_in_HTTP_1.x
 translation_of: Web/HTTP/Connection_management_in_HTTP_1.x
 original_slug: Web/HTTP/Gestion_de_la_conexion_en_HTTP_1.x
 ---
+
 {{HTTPSidebar}}
 
 La gestión de las conexiones en un tema fundamental en HTTP: crear y mantener una conexión tiene una gran influencia en el rendimiento de las páginas Web y las aplicaciones Web. En la versión HTTP/1.x, hay modos de conexión: conexiones breves, conexiones persistentes, y '_pipelining_'.

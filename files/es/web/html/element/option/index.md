@@ -11,6 +11,7 @@ tags:
 translation_of: Web/HTML/Element/option
 original_slug: Web/HTML/Elemento/option
 ---
+
 {{HTMLSidebar}}
 
 En un formulario Web , el **elemento** **HTML `<option>`** se usa para representar un item dentro de un {{HTMLElement("select")}}, un {{HTMLElement("optgroup")}} o un elemento HTML5 {{HTMLElement("datalist")}} .

@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Headers/Link
 ---
+
 {{HTTPSidebar}}
 
 El campo de encabezado de entidad de **`Link`** HTTP proporciona un medio para serializar uno o más enlaces en encabezados HTTP. Es semánticamente equivalente al elemento HTML {{HTMLElement("link")}}.

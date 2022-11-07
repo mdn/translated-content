@@ -17,6 +17,7 @@ tags:
   - graficos
 translation_of: Web/Guide/Graphics
 ---
+
 Los sitios web modernos a menudo necesitan aplicaciones para presentar y/o visualizar gráficos . Se
 
 - [Dibujando gráficas con canvas](/es/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas)

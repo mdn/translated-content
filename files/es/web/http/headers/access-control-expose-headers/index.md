@@ -7,6 +7,7 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Headers/Access-Control-Expose-Headers
 ---
+
 {{HTTPSidebar}}
 
 La cabecera de respuesta **`Access-Control-Expose-Headers`** indica qué cabeceras pueden ser expuestas como parte de la respuesta listando sus nombres.

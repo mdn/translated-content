@@ -14,6 +14,7 @@ tags:
 translation_of: Web/HTML/Element/iframe
 original_slug: Web/HTML/Elemento/iframe
 ---
+
 {{HTMLSidebar}}
 
 El **elemento HTML `<iframe>`** (de inline frame) representa un {{Glossary("contexto de navegación")}} anidado, el cual permite incrustrar otra página HTML en la página actual.

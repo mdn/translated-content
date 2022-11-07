@@ -3,6 +3,7 @@ title: Performance fundamentals
 slug: Web/Performance/Fundamentals
 translation_of: Web/Performance/Fundamentals
 ---
+
 Performance significa eficiencia. En el contexto de Open Web Apps, este documento explica en general qué es performance, cómo la plataforma del navegador ayuda a mejorarlo y qué herramientas y procesos puede usar para probarlo y mejorarlo.
 
 ## ¿Qué es performance?
