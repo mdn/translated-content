@@ -1,7 +1,8 @@
 ---
 title: createProperties
-slug: Mozilla/Add-ons/WebExtensions/API/menus/createProperties
+slug: conflicting/Mozilla/Add-ons/WebExtensions/API/menus/create
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/createProperties
+original_slug: Mozilla/Add-ons/WebExtensions/API/menus/createProperties
 ---
 
 {{AddonSidebar()}}

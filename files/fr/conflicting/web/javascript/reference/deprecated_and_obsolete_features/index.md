@@ -1,13 +1,13 @@
 ---
 title: Le protocole itérateur historique
-slug: >-
-  Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol
+slug: conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 tags:
   - JavaScript
   - Legacy Iterator
 translation_of: >-
   Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol
-original_slug: Web/JavaScript/Guide/Le_protocole_itérateur_historique
+original_slug: >-
+  Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol
 ---
 
 {{JSSideBar("More")}}

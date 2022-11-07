@@ -1,10 +1,10 @@
 ---
 title: FAQ sur les transformations XSL dans Mozilla
-slug: Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
+slug: conflicting/Web/API/XSLTProcessor
 tags:
   - XSLT
 translation_of: Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
-original_slug: FAQ_sur_les_transformations_XSL_dans_Mozilla
+original_slug: Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
 ---
 
 #### Pourquoi ma feuille de style ne s'applique pas&nbsp;?

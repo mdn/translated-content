@@ -1,10 +1,11 @@
 ---
 title: CSS Device Adaptation
-slug: Web/CSS/CSS_Device_Adaptation
+slug: conflicting/Web/CSS_7fc1a1afe4642afd225ebf1b3d6227a7
 tags:
   - CSS
   - Reference
 translation_of: Web/CSS/CSS_Device_Adaptation
+original_slug: Web/CSS/CSS_Device_Adaptation
 ---
 
 {{CSSRef}}

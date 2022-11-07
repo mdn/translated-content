@@ -1,7 +1,8 @@
 ---
 title: '@viewport'
-slug: Web/CSS/@viewport
+slug: conflicting/Web/CSS
 translation_of: Web/CSS/@viewport
+original_slug: Web/CSS/@viewport
 browser-compat: css.at-rules.viewport
 ---
 
