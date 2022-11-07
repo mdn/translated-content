@@ -537,7 +537,7 @@ L'espace utilisé par les gouttières sera pris en compte avant l'assignation de
 
 Un élément placé dans une grille peut aussi être le conteneur d'une autre grille. Dans l'exemple suivant nous retrouvons la grille de trois colonnes créée plus haut, avec deux éléments explicitement positionnés. Le premier élément contient lui-même des éléments. Comme ils ne sont pas des enfants directs de la grille principale, ils se positionnent normalement dans le flux.
 
-![Nested grid in flow](grid3.jpg)
+[Grille imbriquée dans le flux](1_nested_grids_in_flow.png)
 
 ### Imbrication sans sous-grille
 
