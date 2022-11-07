@@ -3,6 +3,7 @@ title: HTMLButtonElement
 slug: Web/API/HTMLButtonElement
 translation_of: Web/API/HTMLButtonElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 Интерфейс HTMLButtonElement предоставляет свойства и методы для управления элементами {{HTMLElement("button")}} (помимо обычного интерфейса {{domxref("HTMLElement")}}, он также доступен - по наследованию) .

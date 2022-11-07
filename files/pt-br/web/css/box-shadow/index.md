@@ -2,6 +2,7 @@
 title: box-shadow
 slug: Web/CSS/box-shadow
 ---
+
 {{CSSRef}}
 
 O **`box-shadow`** é uma propriedade do CSS, é utilizado para adicionar efeitos de sombra em volta de um elemento. Você pode especificar mais de um efeito, os separando com virgulas.

@@ -2,6 +2,7 @@
 title: WebSocket
 slug: Web/API/WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}{{SeeCompatTable}}
 
 O objeto `WebSocket` provê uma API para criação e gerenciamento de uma conexão [WebSocket](/pt-BR/docs/Web/API/WebSockets_API) com um servidor, bem como o envio e recebimento de dados através dessa conexão.

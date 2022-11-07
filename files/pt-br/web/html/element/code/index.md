@@ -2,6 +2,7 @@
 title: '<code>: O Elemento Inline Code'
 slug: Web/HTML/Element/code
 ---
+
 {{HTMLSidebar}}
 
 O **elemento** **HTML `<code>` **apresenta seu conteúdo estilizado de maneira a indicar que o texto é um pequeno fragmento de código. Por padrão, o conteúdo é exibido utilizando a fonte monoespaçada padrão do {{Glossary("user agent", "user agent's")}}.

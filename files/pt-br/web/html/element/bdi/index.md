@@ -2,6 +2,7 @@
 title: <bdi>
 slug: Web/HTML/Element/bdi
 ---
+
 ## Resumo
 
 O HTML \<bdi>elemento (ou elemento de isolamento de Bi-direcional) isola um trechode texto que pode ser formatado em uma direção diferente de outro texto fora dela.

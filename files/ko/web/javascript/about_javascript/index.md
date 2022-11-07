@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/About_JavaScript
 original_slug: Web/JavaScript/About
 ---
+
 {{JsSidebar}}
 
 ## JavaScript란 무엇인가?

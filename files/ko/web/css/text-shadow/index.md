@@ -6,6 +6,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-shadow
 ---
+
 {{CSSRef}}
 
 **`text-shadow`** [CSS](/ko/docs/Web/CSS) 속성은 텍스트에 그림자(shadow)를 추가합니다. 텍스트와 그 장식에 적용 할 쉼표로 구분 된 그림자 목록을 허용합니다. 각 그림자는 요소, 흐림 반경 및 색상의 X 및 Y 오프셋 조합으로 설명됩니다.

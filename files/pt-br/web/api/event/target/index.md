@@ -2,6 +2,7 @@
 title: Event.target
 slug: Web/API/Event/target
 ---
+
 {{ApiRef("DOM")}}
 
 Uma referência ao objeto que enviou o evento. É diferente de {{domxref ("event.currentTarget")}} quando o manipulador de eventos é chamado durante a fase de borbulhagem ou captura do evento.

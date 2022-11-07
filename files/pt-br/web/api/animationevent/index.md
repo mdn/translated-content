@@ -2,6 +2,7 @@
 title: AnimationEvent
 slug: Web/API/AnimationEvent
 ---
+
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
 
 A interface **`AnimationEvent`** representa eventos provendo informações relacionadas a [animações](/pt-BR/docs/Web/Guide/CSS/Using_CSS_animations/).

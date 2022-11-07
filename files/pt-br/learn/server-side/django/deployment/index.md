@@ -3,6 +3,7 @@ title: 'Tutorial Django Parte 11: Hospedando Django para produção'
 slug: Learn/Server-side/Django/Deployment
 original_slug: Learn/Server-side/Django/Hospedagem
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
 Agora que criou (e testou) um fantástico website de Biblioteca Local, vai querer instalá-lo em um servidor web público para que possa ser acessado pelo pessoal da biblioteca e membros através da Internet. Este artigo fornece uma visão geral de como poderá encontrar um servidor de hospedagem para instalar o seu web site, e o que precisa fazer para ter o seu site web pronto para produção.

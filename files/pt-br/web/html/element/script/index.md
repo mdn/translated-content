@@ -2,6 +2,7 @@
 title: <script>
 slug: Web/HTML/Element/script
 ---
+
 O **elemento HTML `<script>`** é usado para incluir ou referenciar um script executável.
 
 <table class="properties">

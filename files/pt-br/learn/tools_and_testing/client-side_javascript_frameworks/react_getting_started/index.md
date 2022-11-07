@@ -3,6 +3,7 @@ title: Começando com React
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Comecando_com_React
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Neste artigo mostraremos como dizer Olá para o React. Descobriremos um pouco sobre e os casos de usos, configurar uma React toolchain no computador localmente, e criar e usar um app simples como partida, aprendendo um pouco sobre como os processos do React funcionam.

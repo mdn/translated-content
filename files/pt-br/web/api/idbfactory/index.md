@@ -2,6 +2,7 @@
 title: IDBFactory
 slug: Web/API/IDBFactory
 ---
+
 {{APIRef("IndexedDB")}}
 
 A interface IDBFactory, pertencente a [IndexedDB API](/pt-BR/docs/IndexedDB) , permite que aplicativos acessem de forma assíncrona os bancos de dados indexados. O objeto que implementa a interface é o window\.indexedDB, com este objeto é possível criar, acessar, modificar e excluir informações de um banco de dados.

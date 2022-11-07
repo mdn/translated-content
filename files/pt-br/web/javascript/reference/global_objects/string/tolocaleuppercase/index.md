@@ -2,6 +2,7 @@
 title: String.prototype.toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 ---
+
 {{JSRef}}
 
 O método `toLocaleUpperCase()` retorna o valor da string em maiúsculas, de acordo com qualquer mapeamento de caixa de texto específico da localidade.

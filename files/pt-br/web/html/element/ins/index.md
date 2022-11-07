@@ -2,6 +2,7 @@
 title: <ins>
 slug: Web/HTML/Element/ins
 ---
+
 ## Summary
 
 The **HTML `<ins>` Element** (or _HTML Inserted Text_) HTML represents a range of text that has been added to a document.

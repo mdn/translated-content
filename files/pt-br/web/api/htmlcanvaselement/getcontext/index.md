@@ -2,6 +2,7 @@
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
 ---
+
 {{APIRef("Canvas API")}}
 
 O metodo **`HTMLCanvasElement.getContext()`** retorna um contexto de desenho no canvas, ou {{jsxref("null")}} se o contexto identificado não é suportado.

@@ -2,6 +2,7 @@
 title: 'SVG: Gráficos Vetoriais Escaláveis'
 slug: Web/SVG
 ---
+
 **[Iniciando](/pt-BR/docs/Web/SVG/Tutorial)** Este tutorial irá ajudá-lo a começar a trabalhar com SVG.
 
 {{SVGRef}}

@@ -2,6 +2,7 @@
 title: <color>
 slug: Web/CSS/color_value
 ---
+
 {{CSSRef}}
 
 ## Sumário

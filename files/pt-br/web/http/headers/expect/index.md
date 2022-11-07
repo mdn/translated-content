@@ -2,6 +2,7 @@
 title: Expect
 slug: Web/HTTP/Headers/Expect
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição HTTP **`Expect`** indica expectativas que precisão ser cumpridas pelo servidor para lidar com a requisição apropriadamente.

@@ -2,6 +2,7 @@
 title: Event.currentTarget
 slug: Web/API/Event/currentTarget
 ---
+
 {{APIRef("DOM")}}
 
 Identifica o alvo atual para o evento quando o event percorre o DOM. O currentTarget sempre se refere ao elemento associado ao event handler, ao invés do event.target que identifica o elemento ao qual o evento ocorreu.

@@ -2,6 +2,7 @@
 title: Expect-CT
 slug: Web/HTTP/Headers/Expect-CT
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho `Expect-CT` deixa sites optarem em reportar e/ou forçar requirimentos do [Certificado de Transparência](/pt-BR/docs/Web/Security/Certificate_Transparency), para previnir o uso incorreto de certificados do site passar despercebido.

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** 생성자는 주로 프로미스를 지원하지 않는 함수를 감쌀 때 사용합니다.

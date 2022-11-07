@@ -3,6 +3,7 @@ title: Element.clientTop
 slug: Web/API/Element/clientTop
 translation_of: Web/API/Element/clientTop
 ---
+
 {{ APIRef("DOM") }}
 
 Толщина верхней границы элемента в пикселях. Не включает в себя margin и padding. Свойство только для чтения.

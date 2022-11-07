@@ -2,6 +2,7 @@
 title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Resumo

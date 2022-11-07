@@ -2,6 +2,7 @@
 title: Animation.playState
 slug: Web/API/Animation/playState
 ---
+
 {{APIRef("Web Animations")}}{{SeeCompatTable}}
 
 A propriedade **`Animation.playState`** do [Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API) retorna e altera um valor enumerado que descreve o estado de reprodução da animação.

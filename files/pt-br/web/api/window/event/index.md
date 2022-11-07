@@ -2,6 +2,7 @@
 title: Window.event
 slug: Web/API/Window/event
 ---
+
 {{APIRef}}
 
 {{ Non-standard_header() }}

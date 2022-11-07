@@ -3,6 +3,7 @@ title: Debugging HTML
 slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 original_slug: Aprender/HTML/Introducao_ao_HTML/Debugging_HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
 Escrever HTML é legal, mas e se algo der errado, e você não conseguir descobrir onde está o erro no código? Este artigo apresentará algumas ferramentas que podem ajudá-lo a encontrar e corrigir erros no HTML.

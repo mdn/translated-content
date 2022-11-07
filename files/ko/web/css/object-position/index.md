@@ -10,6 +10,7 @@ tags:
   - 대체 요소
 translation_of: Web/CSS/object-position
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`object-position`** 속성은 [대체 요소](/ko/docs/Web/CSS/Replaced_element)의 콘텐츠 정렬 방식을 지정합니다. 대체 요소의 객체가 덮지 않은 부분은 요소의 배경이 보이게 됩니다.

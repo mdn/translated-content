@@ -2,6 +2,7 @@
 title: Firefox 49 para desenvolvedores
 slug: Mozilla/Firefox/Releases/49
 ---
+
 {{FirefoxSidebar}}
 
 [Para testar estes novos recursos do Firefox,

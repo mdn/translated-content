@@ -2,6 +2,7 @@
 title: Response
 slug: Web/API/Response
 ---
+
 {{APIRef("Fetch API")}}
 
 A interface **`Response`** da [Fetch API](/pt-BR/docs/Web/API/Fetch_API) representa a resposta para uma requisição.

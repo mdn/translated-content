@@ -2,6 +2,7 @@
 title: CSS
 slug: Web/API/CSS
 ---
+
 {{APIRef("CSSOM")}}
 
 `A interface CSS` carrega métodos CSS-relacionados úteis. Nenhum objeto com essa interface foi implementado: Aqui só contém métodos estáticos e futuramente uma interface útil.

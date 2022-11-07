@@ -3,6 +3,7 @@ title: Como a Web funciona
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
 original_slug: Aprender/Getting_started_with_the_web/Como_a_Web_funciona
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}

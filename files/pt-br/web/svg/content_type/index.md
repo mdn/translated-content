@@ -2,6 +2,7 @@
 title: Content type
 slug: Web/SVG/Content_type
 ---
+
 ## Angle
 
 - \<angle>

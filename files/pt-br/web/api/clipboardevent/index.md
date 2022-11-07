@@ -2,6 +2,7 @@
 title: ClipboardEvent
 slug: Web/API/ClipboardEvent
 ---
+
 {{APIRef("Clipboard API")}} {{SeeCompatTable}}
 
 A interface **`ClipboardEvent`** representa eventos correlatos à modificação da área de transferência, i. e., eventos de cortar ({{event("cut")}}), de copiar ({{event("copy")}}), e de colar ({{event("paste")}}).

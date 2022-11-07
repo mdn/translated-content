@@ -4,6 +4,7 @@ slug: WebAssembly/JavaScript_interface/compileStreaming
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 ---
+
 {{JSRef}}
 
 **`WebAssembly.compileStreaming()`**함수는 스트림 된 원본 소스에서 직접 {{jsxref ( "WebAssembly.Module")}}을 컴파일합니다. 이 함수는 모듈을 인스턴스화하기 전에 컴파일해야하는 경우 유용합니다 (그렇지 않으면 {{jsxref ( "WebAssembly.instantiateStreaming ()")}} 함수를 사용해야합니다).

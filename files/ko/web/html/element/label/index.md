@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/label
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<label>` 요소**는 사용자 인터페이스 항목의 설명을 나타냅니다.

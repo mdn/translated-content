@@ -1,8 +1,9 @@
 ---
 title: Sites separados para celular e desktop
-slug: Web/Guide/Mobile/Separate_sites
-original_slug: Web_Development/Mobile/Sites_separados
+slug: conflicting/Web/Progressive_web_apps
+original_slug: Web/Guide/Mobile/Separate_sites
 ---
+
 The "separate sites" approach to mobile Web development involves creating different sites for mobile and desktop Web users. This approach has positive and negative aspects.
 
 ## The good

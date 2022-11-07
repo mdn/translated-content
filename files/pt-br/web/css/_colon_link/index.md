@@ -2,6 +2,7 @@
 title: ':link'
 slug: Web/CSS/:link
 ---
+
 {{ CSSRef() }}
 
 ## Resumo

@@ -2,6 +2,7 @@
 title: writing-mode
 slug: Web/CSS/writing-mode
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`writing-mode`** define se as linhas do texto são dispostas horizontalmente ou verticalmente e a direção que os blocos seguem

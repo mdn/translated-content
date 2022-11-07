@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/Server-side/Django/Introduction
 original_slug: Learn/Server-side/Django/Введение
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 В первой статье о Django мы отвечаем на вопрос «Что такое Django?» и даём обзор того, что делает его особенным. Мы опишем основные функции, в том числе некоторые из расширенных функций, которые у нас не будет времени подробно рассмотреть в этом модуле. Мы также покажем вам некоторые основные строительные блоки приложения Django (хотя на данный момент у вас ещё не будет среды разработки для тестирования).

@@ -2,6 +2,7 @@
 title: Node.replaceChild
 slug: Web/API/Node/replaceChild
 ---
+
 {{ApiRef("DOM")}}
 
 ## Sumário

@@ -3,6 +3,7 @@ title: Переполнение содержимого
 slug: Learn/CSS/Building_blocks/Overflowing_content
 translation_of: Learn/CSS/Building_blocks/Overflowing_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
 
 В этом уроке мы рассмотрим другую важную концепцию в CSS — **переполнение**. Переполнение это то, что случается когда слишком много контента содержится внутри блока. В этом гайде вы изучите что это и как этим управлять.

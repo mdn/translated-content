@@ -17,6 +17,7 @@ tags:
 translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 original_slug: Learn/CSS/First_steps/Как_структурирован_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 Теперь, когда у вас есть представление о том, чем является CSS, и о его основах, настало время посмотреть немного глубже в структуру самого языка. Нам уже встречались многие из обсуждаемых здесь концепций; вы можете вернуться к этому, чтобы разобраться, если вы обнаружите какие-либо более поздние концепции запутанными.

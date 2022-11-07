@@ -2,6 +2,7 @@
 title: clipboard
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard
 ---
+
 {{AddonSidebar}}
 
 A API de área de transferência habilita uma extensão para copiar itens para a área de transferência do sistema. Atualmente a API suporta apenas a cópia de imagens, mas é pretendido suportar a cópia de texto e HTML no futuro.

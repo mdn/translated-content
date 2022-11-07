@@ -2,6 +2,7 @@
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
 ---
+
 {{APIRef("DOM")}}
 
 A propriedade **`Element.innerHTML`** define ou obtém a sintaxe HTML ou XML descrevendo os elementos descendentes.

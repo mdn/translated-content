@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Classes/Public_class_fields
 translation_of: Web/JavaScript/Reference/Classes/Public_class_fields
 original_slug: Web/JavaScript/Reference/Classes/Class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
 > **note: This page describes experimental features.** Both Public and private field declarations are an [experimental feature (stage 3)](https://github.com/tc39/proposal-class-fields) proposed at [TC39](https://tc39.github.io/beta/), the JavaScript standards committee. Support in browsers is limited, but the feature can be used through a build step with systems like [Babel](https://babeljs.io/). See the [compat information](#Browser_compatibility) below.

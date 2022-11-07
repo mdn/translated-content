@@ -29,7 +29,7 @@ Worker 也可以创建新的 Worker，当然，所有 Worker 必须与其创建�
 - {{domxref("Worker.onmessage")}}
   - : 当{{domxref("MessageEvent")}}类型的事件冒泡到 worker 时，事件监听函数 {{ domxref("EventListener") }} 被调用。例如，一个消息通过 {{domxref("DedicatedWorkerGlobalScope.postMessage")}}，从执行者发送到父页面对象，消息保存在事件对象的 {{domxref("MessageEvent.data", "data")}} 属性中。
 - {{domxref("Worker.onmessageerror")}}
-  - : 当[`messageerror`](/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event) 类型的事件发生时，对应的{{event("Event_handlers", "event handler")}} 代码被调用。
+  - : 当[`messageerror`](/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event) 类型的事件发生时，对应的事件处理器代码被调用。
 
 ## 方法
 

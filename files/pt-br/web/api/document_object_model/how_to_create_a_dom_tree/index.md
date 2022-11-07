@@ -3,6 +3,7 @@ title: How to create a DOM tree
 slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
 original_slug: DOM/Referencia_do_DOM/How_to_create_a_DOM_tree
 ---
+
 Esta página descreve como usar [DOM Core](http://www.w3.org/TR/DOM-Level-3-Core/core.html) API DOM em JavaScript para criar e modificar objetos do DOM. Aplica-se a todas as aplicações baseadas em Gecko (como o Firefox), tanto em código privilegiado (extensões) como em código não privilegiado (páginas web)
 
 ### Criando uma árvore DOM dinamicamente

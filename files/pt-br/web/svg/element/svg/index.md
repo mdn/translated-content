@@ -2,6 +2,7 @@
 title: svg
 slug: Web/SVG/Element/svg
 ---
+
 {{SVGRef}}
 
 O elemento `svg` é um contêiner que define um novo sistema de coordenadas e [janela de visualização](/pt-BR/docs/Web/SVG/Attribute/viewBox). É usado como o elemento mais externo dos documentos SVG, mas também pode ser usado para incorporar um fragmento SVG dentro de um documento SVG ou HTML.

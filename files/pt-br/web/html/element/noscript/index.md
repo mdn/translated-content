@@ -2,6 +2,7 @@
 title: <noscript>
 slug: Web/HTML/Element/noscript
 ---
+
 {{HTMLSidebar}}
 
 ## Resumo

@@ -2,6 +2,7 @@
 title: linearGradient
 slug: Web/SVG/Element/linearGradient
 ---
+
 {{SVGRef}}
 
 O elemento `linearGradient` permite que os autores definam gradientes lineares para preenchimento (fill) ou contornos (stroke) de elementos gráficos.

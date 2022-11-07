@@ -10,6 +10,7 @@ tags:
 browser-compat: javascript.builtins.WeakMap.has
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 ---
+
 {{JSRef}}
 
 **`has()`** 메서드는 지정된 키를 가진 요소가 `WeakMap` 객체에 존재하는지를 나타내는 불리언 값을 반환합니다.

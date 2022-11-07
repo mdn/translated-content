@@ -2,6 +2,7 @@
 title: Precedência de Operadores
 slug: Web/JavaScript/Reference/Operators/Operator_Precedence
 ---
+
 {{jsSidebar("Operators")}}
 
 ## Resumo

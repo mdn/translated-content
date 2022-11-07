@@ -2,6 +2,7 @@
 title: menus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
 ---
+
 {{AddonSidebar}}
 
 Adicione itens ao sistema de menu do navegador.

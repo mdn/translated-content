@@ -2,6 +2,7 @@
 title: HTMLInputElement.select()
 slug: Web/API/HTMLInputElement/select
 ---
+
 {{ APIRef("HTML DOM") }}
 
 O método **`HTMLInputElement.select()`** seleciona todo o texto em um elemento {{HTMLElement("textarea")}} ou em um elemento {{HTMLElement("input")}} do tipo _text_.

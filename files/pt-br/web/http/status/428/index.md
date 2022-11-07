@@ -2,6 +2,7 @@
 title: 428 Precondition Required
 slug: Web/HTTP/Status/428
 ---
+
 {{HTTPSidebar}}
 
 O codigo de resposta HTTP **`428 Precondition Required`** indica que o servidor precisa que a requisição seja [condicional](/pt-BR/docs/Web/HTTP/Conditional_requests).

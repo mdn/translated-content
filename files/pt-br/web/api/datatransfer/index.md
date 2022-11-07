@@ -2,6 +2,7 @@
 title: DataTransfer
 slug: Web/API/DataTransfer
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{ gecko_minversion_header("1.9") }} O objeto `DataTransfer` é usado para guardar os dados que estão sendo arrastados durante uma operação de Drag e Drop (arrastar e soltar). Ele pode guardar um ou mais itens de dados, cada um de um ou mais tipos de dados. Para mais informações sobre drag e drop (arrastar e soltar), veja [Drag and Drop](/En/DragDrop/Drag_and_Drop).

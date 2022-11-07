@@ -2,6 +2,7 @@
 title: Object.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 ---
+
 {{JSRef}}
 
 O método **`toLocaleString()`** retorna uma cadeia de caracteres (_string_) representando o objeto. Este método é feito para ser sobrescrito por objetos derivados para propósitos de localização específica.

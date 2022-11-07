@@ -3,6 +3,7 @@ title: 'Руководство Django часть 4: административн
 slug: Learn/Server-side/Django/Admin_site
 translation_of: Learn/Server-side/Django/Admin_site
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 
 Теперь, когда модели для сайта [местной библиотеки](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website) созданы, добавим некоторые "настоящие" данные о книгах, используя административную панель Django Admin. Для начала мы покажем, как зарегистрировать в ней модели, потом как войти и создать какие-нибудь данные. В конце статьи мы покажем некоторые способы дальнейшего улучшения вида админ-панели.

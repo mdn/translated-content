@@ -2,6 +2,7 @@
 title: 'SyntaxError: missing } after function body'
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing } after function body" occurs when there is a syntax mistake when creating a function somewhere. Check if any closing curly brackets or parenthesis are in the correct order.

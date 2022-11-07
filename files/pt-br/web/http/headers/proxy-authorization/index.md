@@ -2,6 +2,7 @@
 title: Proxy-Authorization
 slug: Web/HTTP/Headers/Proxy-Authorization
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição HTTP **`Proxy-Authorization`** contém as credenciais para autenticar o agente de usuário em um servidor proxy, usualmente depois do servidor responder com um código de status {{HTTPStatus("407")}} `Proxy Authentication Required` e cabeçalho {{HTTPHeader("Proxy-Authenticate")}}.

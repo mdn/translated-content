@@ -2,6 +2,7 @@
 title: ServiceWorkerGlobalScope
 slug: Web/API/ServiceWorkerGlobalScope
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 The `ServiceWorkerGlobalScope` interface of the [ServiceWorker API](/pt-BR/docs/Web/API/ServiceWorker_API) represents the global execution context of a service worker.

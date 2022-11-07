@@ -2,6 +2,7 @@
 title: NEL
 slug: Web/HTTP/Headers/NEL
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta HTTP **`NEL`** é usado para configurar o registro de _logs_ de requisição na rede.

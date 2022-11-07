@@ -3,6 +3,7 @@ title: mask
 slug: Web/CSS/mask
 original_slug: mask
 ---
+
 {{CSSRef}}
 
 ## Resumo

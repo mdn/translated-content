@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Grammar_and_types
 original_slug: Web/JavaScript/Guide/Values,_variables,_and_literals
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/소개", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 이 장은 JavaScript의 기본 문법과 변수 선언, 자료형 및 리터럴을 다룹니다.
