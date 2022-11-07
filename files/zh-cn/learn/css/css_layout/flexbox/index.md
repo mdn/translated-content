@@ -12,10 +12,10 @@ slug: Learn/CSS/CSS_layout/Flexbox
     <tr>
       <th scope="row">前提：</th>
       <td>
-        HTML 基础 (学习
+        HTML 基础（学习
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 介绍</a
-        >)，和了解 CSS 如何工作的（学习
+        >），和了解 CSS 如何工作的（学习
         <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >CSS 介绍</a
         >）。
@@ -64,7 +64,7 @@ section {
 
 所以，就这样一个简单的声明就给了我们所需要的一切—非常不可思议，对吧？我们的多列布局具有大小相等的列，并且列的高度都是一样。这是因为这样的 flex 项（flex 容器的子项）的默认值是可以解决这些的常见问题的。后面还有更多内容。
 
-> **备注：** 假如你想设置行内元素为 flexible box，也可以置 {{cssxref("display")}} 属性的值为 `inline-flex`。
+为了更清晰的表述，让我们重申这里发生的事情。关于它如何与页面其余部分交互，我们给的 {{cssxref("display")}} 值为 `flex` 的元素就像一个块级元素，但是它的子元素布局为 flex 项。下个部分将更详细地描述这些意味着什么。请注意，如果你希望该元素的子元素作为 flex 项，你也可以使用 `display` 值为 `inline-flex`，但是该元素的行为类似于行内元素。
 
 ## flex 模型说明
 
@@ -105,7 +105,7 @@ flex-direction: column;
 flex-wrap: wrap
 ```
 
-同时，把以下规则也添加到{{htmlelement("article")}} 规则中：
+同时，把以下规则也添加到 {{htmlelement("article")}} 规则中：
 
 ```css
 flex: 200px;
@@ -170,7 +170,7 @@ article:nth-of-type(3) {
 }
 ```
 
-这表示“每个 flex 项将首先给出 200px 的可用空间，然后，剩余的可用空间将根据分配的比例共享“。尝试刷新，你会看到分配空间的差别。
+这表示“每个 flex 项将首先给出 200px 的可用空间，然后，剩余的可用空间将根据分配的比例共享”。尝试刷新，你会看到分配空间的差别。
 
 ![简单的 flexbox 示例，flex 容器中有三个 flex 项。所有 flex 项的最低宽度为 200 像素——使用“flex”设置。前两个 flex 项的 flex 值为 1，第三个项的 flex 值为 2。这会将弹性容器中的剩余空间分成 4 个比例单位。前两个 flex 项各分配一个单元，第三个 flex 项分配两个单元，使第三个 flex 项比宽度相同的其他两个更宽。](flexbox-example1.png)
 
@@ -265,7 +265,7 @@ button:last-child {
 
 ## flex 嵌套
 
-弹性盒子也能创建一些颇为复杂的布局。设置一个元素为 flex 项，那么他同样成为一个 flex 容器，它的孩子 (直接子节点) 也表现为 flexible box。看一下 [complex-弹性盒子.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html)（[在线浏览](http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)）。
+弹性盒子也能创建一些颇为复杂的布局。设置一个元素为 flex 项，那么他同样成为一个 flex 容器，它的孩子（直接子节点）也表现为弹性盒子。看一下 [复杂弹性盒子.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html)（[在线浏览](http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)）。
 
 [简单 Flexbox 示例，连续列出三个 flex 项的子元素。前两个宽度相同，第三个略宽。第三个 flex 项也是一个弹性容器。它有一组两行的按钮，后跟文本。第一行按钮有 4 个按钮，排列成一排；按钮的宽度相同，占据了容器的全部宽度。第二行只有一个按钮，可以单独占据该行的整个宽度。这是复杂的布局，很少有 flex 项继续被视为弹性容器。](flexbox-example7.png)
 
@@ -283,7 +283,7 @@ section - article
 
 现在让我们看一下布局用到的代码。
 
-首先，我们设置 {{htmlelement("section")}} 的子节点布局为 flexible box。
+首先，我们设置 {{htmlelement("section")}} 的子节点布局为弹性盒子。
 
 ```css
 section {
@@ -291,7 +291,7 @@ section {
 }
 ```
 
-下面我们给 {{htmlelement("article")}} 元素设置 flex 值。特别注意这里的第二条 CSS 规则—我们设置第三个 {{htmlelement("article")}} 元素的子节点的布局同样为 flex，但是属性值为列布局。
+下面我们给 {{htmlelement("article")}} 元素设置 flex 值。特别注意这里的第二条 CSS 规则——我们设置第三个 {{htmlelement("article")}} 元素的子节点的布局同样为 flex，但是属性值为列布局。
 
 ```css
 article {
