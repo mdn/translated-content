@@ -18,7 +18,7 @@ Une grille est un ensemble de lignes horizontales et verticales qui se croisent 
 
 ### Pistes à taille fixe ou variable
 
-On peut créer une grille avec des pistes à taille fixes en utilisant une unité comme le pixel. Pour les pistes à taille variable on peut utiliser le pourcentage ou l’unité `fr` créée à cet effet.
+On peut créer une grille avec des pistes à taille fixes en utilisant une unité comme le pixel. Pour les pistes à taille variable on peut utiliser le pourcentage ou l'unité `fr` créée à cet effet.
 
 ### Placement des éléments
 
@@ -137,7 +137,7 @@ Nous avons créé une grille avec trois pistes de 200 pixels de large. Chaque é
 
 {{ EmbedLiveSample('Exemple_simple', '610', '140') }}
 
-### L’unité `fr`
+### L'unité `fr`
 
 Les pistes peuvent être définies à l'aide de n'importe quelle unité de mesure. Les grilles proposent aussi une nouvelle unité de mesure pour aider à la création de pistes flexibles. Cette unité, `fr`, représente une fraction de l'espace disponible dans le conteneur de la grille. Le code suivant crée trois colonnes égales qui se redimensionnent en fonction de l'espace disponible.
 
@@ -174,7 +174,7 @@ Les pistes peuvent être définies à l'aide de n'importe quelle unité de mesur
 }
 ```
 
-{{ EmbedLiveSample("L’unité_fr", '220', '140') }}
+{{ EmbedLiveSample("L'unité_fr", '220', '140') }}
 
 ### Tailles différentes
 
@@ -187,7 +187,7 @@ L'exemple suivant crée une grille avec une colonne de `2fr`, et deux colonnes d
 }
 ```
 
-```html hidden
+```html
 <div class="wrapper">
   <div>Un</div>
   <div>Deux</div>
@@ -228,7 +228,7 @@ Dans ce dernier exemple nous utilisons à la fois des dimensions absolues et des
 }
 ```
 
-```html hidden
+```html
 <div class="wrapper">
   <div>Un</div>
   <div>Deux</div>
@@ -452,9 +452,9 @@ Le second élément commence sur la ligne de colonne 1 et s'étend sur une seule
 
 ### Raccourcis de positionnement sur ligne
 
-Les valeurs écrites en entier utilisées plus haut peuvent être abrégées en une ligne pour les colonnes avec {{cssxref("grid-column")}} et une ligne pour les rangées avec {{cssxref("grid-row")}}. L’exemple suivant donne le même positionnement que le code précédent, mais avec beaucoup moins de CSS. La valeur avant la barre oblique (`/`) représente la ligne de début, celle d’après représente la ligne de fin.
+Les valeurs écrites en entier utilisées plus haut peuvent être abrégées en une ligne pour les colonnes avec {{cssxref("grid-column")}} et une ligne pour les rangées avec {{cssxref("grid-row")}}. L'exemple suivant donne le même positionnement que le code précédent, mais avec beaucoup moins de CSS. La valeur avant la barre oblique (`/`) représente la ligne de début, celle d'après représente la ligne de fin.
 
-Vous pouvez omettre la valeur de la ligne de fin si la zone ne recouvre qu’une piste.
+Vous pouvez omettre la valeur de la ligne de fin si la zone ne recouvre qu'une piste.
 
 ```css
 .wrapper {
@@ -501,7 +501,7 @@ Les _gouttières_ entre les cellules sont définies à l'aide des propriétés {
 
 > **Note :** Les anciens navigateurs utilisent {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, {{cssxref("gap")}} avec le préfixe `grid-` soit : {{cssxref("grid-column-gap")}}, {{cssxref("grid-row-gap")}} et {{cssxref("grid-gap")}}.
 >
-> Les navigateurs prennent dorénavant tous en charge les valeurs sans ce préfixe, mais les versions préfixées continuent d’être prises en charge sous forme d’alias.
+> Les navigateurs prennent dorénavant tous en charge les valeurs sans ce préfixe, mais les versions préfixées continuent d'être prises en charge sous forme d'alias.
 
 ```html
 <div class="wrapper">
@@ -541,7 +541,7 @@ Un élément placé dans une grille peut aussi être le conteneur d'une autre gr
 
 ### Imbrication sans sous-grille
 
-En définissant la propriété `display:grid` sur l'élément `box1`, il devient lui-même une grille et ses enfants se positionnent sur cette grille.
+En définissant la propriété `display: grid` sur l'élément `box1`, il devient lui-même une grille et ses enfants se positionnent sur cette grille.
 
 ```html
 <div class="wrapper">
@@ -606,9 +606,9 @@ Dans ce cas la grille imbriquée n'est pas liée à la grille qui la contient. E
 
 Dans le brouillon de travail pour la spécification de niveau 2 pour CSS Grid, il existe une fonctionnalité nommée _sous-grille_ qui permet de créer des grilles imbriquées qui utilisent la définition de la grille parent.
 
-> **Note :** Cette fonctionnalité apparait dans Firefox 71, le seul navigateur pour le moment à la prendre en charge.
+> **Note :** Cette fonctionnalité apparaît dans Firefox 71, le seul navigateur pour le moment à la prendre en charge.
 
-Selon la version actuelle de la spécifiction, il faudrait modifier l'exemple de grille imbriquée précédent et remplacer `grid-template-columns: repeat(3, 1fr)` en `grid-template-columns: subgrid`. La grille imbriquée utilisera alors la grille parente pour inscrire ses éléments dans le document.
+Selon la version actuelle de la spécification, il faudrait modifier l'exemple de grille imbriquée précédent et remplacer `grid-template-columns: repeat(3, 1fr)` en `grid-template-columns: subgrid`. La grille imbriquée utilisera alors la grille parente pour inscrire ses éléments dans le document.
 
 ```css
 .box1 {
@@ -623,7 +623,7 @@ Selon la version actuelle de la spécifiction, il faudrait modifier l'exemple de
 
 ## Superposer les éléments avec `z-index`
 
-Plusieurs éléments peuvent être placés dans la même cellule. Dans ce cas, il faut utiliser la propriété {{cssxref("z-index")}} pour contrôler l’ordre dans lequel les éléments se chevauchent.
+Plusieurs éléments peuvent être placés dans la même cellule. Dans ce cas, il faut utiliser la propriété {{cssxref("z-index")}} pour contrôler l'ordre dans lequel les éléments se chevauchent.
 
 ### Chevauchement sans `z-index`
 
@@ -678,7 +678,7 @@ Si nous reprenons notre exemple avec les éléments positionnés par numéros de
 
 {{ EmbedLiveSample('Chevauchement_sans_z-index', '230', '460') }}
 
-L’élément `box2` chevauche maintenant `box1` ; il s’affiche par-dessus parce qu’il arrive après dans le code source.
+L'élément `box2` chevauche maintenant `box1`&nbsp;; il s'affiche par-dessus parce qu'il arrive après dans le code source.
 
 ### Contrôler l’ordre de superposition
 
