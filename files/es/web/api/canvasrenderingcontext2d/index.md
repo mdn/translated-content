@@ -276,9 +276,9 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 #### Prefixed APIs
 
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransform`
-  - : Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}. 
+  - : Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransformInverse`
-  - : Sets or gets the current inversed transformation matrix. 
+  - : Sets or gets the current inversed transformation matrix.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozFillRule`
   - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`
