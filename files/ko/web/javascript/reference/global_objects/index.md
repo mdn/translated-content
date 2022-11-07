@@ -30,7 +30,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects
 
 객체에 붙지 않고 전역으로 호출하는 함수로, 반환 값을 호출자에게 바로 반환합니다.
 
-
 - {{JSxRef("Global_Objects/eval", "eval()")}}
 - {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
 - {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
