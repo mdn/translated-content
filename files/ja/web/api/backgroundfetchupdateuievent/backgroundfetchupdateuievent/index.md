@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`BackgroundFetchUpdateUIEvent()`** constructor creates a new {{domxref("BackgroundFetchUpdateUIEvent")}} object. This constructor is not typically used as the browser creates these objects itself and provides them to background fetch event callbacks.
+コンストラクター **`BackgroundFetchUpdateUIEvent()`** は新しく {{domxref("BackgroundFetchUpdateUIEvent")}} オブジェクトを生成します。 このコンストラクタは通常、使用されることはありません。なぜなら、これらのオブジェクトはブラウザによって自動で生成され、バックグラウンドのフェッチイベントのコールバックに渡されるからです。
 
 ## 構文
 
@@ -18,16 +18,16 @@ new BackgroundFetchEvent(type, options)
 ### 引数
 
 - `type`
-  - : A string with the name of the event.
-    It is case-sensitive and browsers set it to `backgroundfetchsuccess` or `backgroundfetchfail`.
+  - : イベント名の文字列。
+    大文字と小文字は区別されます。ブラウザーはこれを `backgroundfetchsuccess` または `backgroundfetchfail` に設定します。
 - `options`
-  - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, has the following properties:
+  - : _{{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}} で定義されたプロパティに加えて_、下記のプロパティを持つオブジェクト。
     - `registration`
-      - : A {{domxref("BackgroundFetchRegistration")}} object.
+      - : {{domxref("BackgroundFetchRegistration")}} オブジェクト。
 
 ### 返値
 
-A new {{domxref("BackgroundFetchUpdateUIEvent")}} object.
+新しく生成された {{domxref("BackgroundFetchUpdateUIEvent")}} オブジェクト。
 
 ## 仕様書
 
