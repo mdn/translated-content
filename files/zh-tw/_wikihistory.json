@@ -5113,16 +5113,5 @@
   "orphaned/Glossary/Bootstrap": {
     "modified": "2020-05-23T17:07:57.268Z",
     "contributors": ["iigmir"]
-  },
-  "orphaned/MDN/Yari": {
-    "modified": "2019-09-06T03:30:44.825Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "iigmir",
-      "SecondSpirit",
-      "a8040282",
-      "Sheppy"
-    ]
   }
 }
