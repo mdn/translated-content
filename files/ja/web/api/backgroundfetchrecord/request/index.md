@@ -7,24 +7,24 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`request`** read-only property of the {{domxref("BackgroundFetchRecord")}} interface returns the details of the resource to be fetched.
+**`request`** は {{domxref("BackgroundFetchRecord")}} インターフェイスの読み取り専用プロパティで、フェッチするリソースの詳細を返します。
 
 ## 値
 
-A {{domxref("Request")}}.
+{{domxref("Request")}} 。
 
 ## 例
 
-In this example an individual `BackgroundFetchRecord` is returned using {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. The `request` is returned and logged to the console.
+以下の例では、 {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}} の使用によって生成された `BackgroundFetchRecord` から `request` の値を受け取り、コンソールにログ出力しています。
 
 ```js
 bgFetch.match("/ep-5.mp3").then(async (record) => {
   if (!record) {
-    console.log("No record found");
+    console.log("recordは見つかりませんでした");
     return;
   }
 
-  console.log(`Here's the request`, record.request);
+  console.log(`リクエスト：`, record.request);
 });
 ```
 
