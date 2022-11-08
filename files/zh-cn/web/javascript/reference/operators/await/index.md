@@ -276,4 +276,4 @@ console.log("script sync part end");
 - {{jsxref("Statements/async_function", "async 函数")}}
 - {{jsxref("Operators/async_function", "async 函数表达式")}}
 - {{jsxref("AsyncFunction")}} 对象
-- [Top level await](https://v8.dev/features/top-level-await) on v8.dev
+- v8.dev 上的 [Top level await](https://v8.dev/features/top-level-await)
