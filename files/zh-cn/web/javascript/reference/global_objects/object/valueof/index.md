@@ -42,6 +42,7 @@ JavaScript 调用 `valueOf` 方法[将对象转换为一个原始值](/zh-CN/doc
 ```js
 const obj = { foo: 1 };
 console.log(obj.valueOf() === obj); // true
+
 console.log(Object.prototype.valueOf.call("primitive"));
 // [String: 'primitive'] (a wrapper object)
 ```
