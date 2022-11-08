@@ -14,7 +14,7 @@ La interfaz **`HTMLHeadElement`** contiene la información descriptiva, o metada
 
 _Hereda las propiedades del padre, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLHeadElement.profile")}} {{obsolete_inline}}
+- {{domxref("HTMLHeadElement.profile")}} {{deprecated_inline}}
   - : Es un {{domxref("DOMString")}} que representa las URI de uno o más perfiles de metadatos (separados por espacios en blanco).
 
 ## Métodos

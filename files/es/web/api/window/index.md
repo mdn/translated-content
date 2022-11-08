@@ -54,19 +54,19 @@ Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prot
   - : El punto de acceso a muchas propiedades [XPCOM](/es/docs/XPCOM). Algunas propiedades, ej. [classes](/es/docs/Components.classes), son disponibles solamente a codigo suficientemente privilegiado. **El codigo Web no deberia usar esta propiedad.**
 - {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Retorna una referencia al objeto de la consola proveyendo acceso a la consola debugger del navegador.
-- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
+- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}} {{deprecated_inline}}{{ReadOnlyInline}}
   - : Returns a reference to the content element in the current window. The obsolete variant with underscore is no longer available from Web content.
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Returns the XUL controller objects for the current chrome window.
 - {{domxref("Window.crypto")}} {{readOnlyInline}}
   - : Returns the browser crypto object.
-- {{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}
+- {{domxref("Window.defaultStatus")}} {{deprecated_inline("gecko23")}}
   - : Gets/sets the status bar text for the given window.
 - {{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}
   - : Returns the ratio between physical pixels and device independent pixels in the current display.
 - {{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}
   - : Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an `nsIArray`.
-- {{domxref("Window.directories")}} {{obsolete_inline}}
+- {{domxref("Window.directories")}} {{deprecated_inline}}
   - : Sinonimo de {{domxref("window.personalbar")}}
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : Retorna una referencia al documento que esa ventana contiene.
@@ -76,7 +76,7 @@ Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prot
   - : Returns an array of the subframes in the current window.
 - {{domxref("Window.fullScreen")}}
   - : Esta propiedad indica si la ventana esta desplegada en pantalla completa o no.
-- `{{domxref("window.globalStorage")}}` {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
+- `{{domxref("window.globalStorage")}}` {{Non-standard_inline}} {{deprecated_inline("gecko13")}}
   - : Unsupported since Gecko 13 (Firefox 13). Use {{domxref("Window.localStorage")}} instead.
     Was: Multiple storage objects that are used for storing data across multiple pages.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
@@ -129,7 +129,7 @@ Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prot
   - : Provides a hosting area for [performance related](/es/docs/Navigation_timing) attributes.
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : Returns the personalbar object, whose visibility can be toggled in the window.
-- {{domxref("Window.pkcs11")}} {{obsolete_inline(29)}}
+- {{domxref("Window.pkcs11")}} {{deprecated_inline(29)}}
   - : Formerly provided access to install and remove PKCS11 modules.
 - {{domxref("Window.returnValue")}}
   - : The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.
@@ -178,7 +178,7 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
   - : Muestra una pequeña ventana de alerta. El estilo y posición de la ventana puede variar dependiendo de que navegador este usando.
 - {{domxref("WindowBase64.atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
-- {{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.back()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Regresa en la ventana de historial.
 - {{domxref("Window.blur()")}}
   - : Sets focus away from the window.
@@ -196,19 +196,19 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
   - : Cierra la ventana actual.
 - {{domxref("Window.confirm()")}}
   - : Muestra una ventana de comfirmación con dos únicas y posibles respuestas. **Confirmar** y **Cancelar**.
-- {{domxref("Window.disableExternalCapture()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.disableExternalCapture()")}} {{deprecated_inline(24)}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.dispatchEvent()")}}
   - : Usado para activar un evento.
 - {{domxref("Window.dump()")}}
   - : Escribe un mensaje a la consola.
-- {{domxref("Window.enableExternalCapture()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.enableExternalCapture()")}} {{deprecated_inline(24)}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.find()")}}
   - : Busca un string dado en una ventana.
 - {{domxref("Window.focus()")}}
   - : Fija el enfoque en la ventana actual.
-- {{domxref("Window.forward()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.forward()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Moves the window one document forward in the history.
 - {{domxref("Window.getAttention()")}}
   - : Flashes the application icon.
@@ -220,7 +220,7 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
   - : Gets default computed style for the specified element, ignoring author stylesheets.
 - {{domxref("Window.getSelection()")}}
   - : Returns the selection object representing the selected item(s).
-- {{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.home()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Regresa el navegador a la pagina de inicio.
 - {{domxref("Window.matchMedia()")}}
   - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
@@ -254,7 +254,7 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
   - : Dynamically resizes window.
 - {{domxref("Window.restore()")}}
   - : {{todo("NeedsContents")}}
-- {{domxref("Window.routeEvent()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.routeEvent()")}} {{deprecated_inline(24)}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.scroll()")}}
   - : Scrolls the window to a particular place in the document.
