@@ -1,6 +1,7 @@
 ---
-title: 'Yari：MDN 的渲染平台'
-slug: MDN/Yari
+title: Yari：MDN 的渲染平台
+slug: orphaned/MDN/Yari
+original_slug: MDN/Yari
 ---
 
 {{MDNSidebar}}
