@@ -148,7 +148,7 @@ f3();
 
 ### await对执行过程的影响
 
-当函数执行到 `await` 时，被等待的表达式会立即(同步)被求值，并确定一个原生 {{jsxref("Promise")}}，然后函数的执行会暂停。
+当函数执行到 `await` 时，被等待的表达式会立即（同步）被求值，并确定一个原生 {{jsxref("Promise")}}，然后函数的执行会暂停。
 当该 `Promise` 完成 (fulfilled 或 rejected) 时，一个**新**的微任务(microtask)会被 push 进微任务队列 (microtask queue)，该微任务被执行时，函数执行会恢复。
 
 若 {{jsxref("Statements/async_function", "async function")}} 到结束都没有执行任何 `await`，
