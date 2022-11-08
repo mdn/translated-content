@@ -7,25 +7,25 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`responseReady`** read-only property of the {{domxref("BackgroundFetchRecord")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("Response")}}.
+**`responseReady`** は、 {{domxref("BackgroundFetchRecord")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Response")}} によって解決される {{jsxref("Promise")}} を返します。
 
 ## 値
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("Response")}}.
+ {{domxref("Response")}} によって解決される {{jsxref("Promise")}} 。
 
 ## 例
 
-In this example an individual `BackgroundFetchRecord` is returned using {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. The value of `responseReady` is returned and logged to the console.
+以下の例では、 {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}} の使用によって生成された `BackgroundFetchRecord` から `responseReady` の値を受け取り、コンソールにログ出力しています。
 
 ```js
 bgFetch.match("/ep-5.mp3").then(async (record) => {
   if (!record) {
-    console.log("No record found");
+    console.log("recordは見つかりませんでした");
     return;
   }
 
   const response = await record.responseReady;
-  console.log(`Here's the response`, response);
+  console.log(`応答：`, response);
 });
 ```
 

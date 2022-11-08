@@ -7,33 +7,33 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`BackgroundFetchRecord`** interface of the {{domxref('Background Fetch API','','',' ')}} represents an individual request and response.
+{{domxref('Background Fetch API','','',' ')}} の **`BackgroundFetchRecord`** インターフェイスは、個々のリクエストと応答を表します。
 
-A `BackgroundFetchRecord` is created by the {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}} method, therefore there is no constructor for this interface.
+`BackgroundFetchRecord` は {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}} メソッドによって生成されるので、このインターフェイスにはコンストラクターがありません。
 
-There will be one `BackgroundFetchRecord` for each resource requested by `fetch()`.
+`fetch()` で要求された各リソースに対して、 `BackgroundFetchRecord` が 1 つずつ存在することになります。
 
 ## プロパティ
 
 - {{domxref("BackgroundFetchRecord.request","request")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("Request")}}.
+  - : {{domxref("Request")}} を返します。
 - {{domxref("BackgroundFetchRecord.responseReady","responseReady")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a promise that resolves with a {{domxref("Response")}}.
+  - : {{domxref("Response")}} によって解決されるプロミスを返します。
 
 ## 例
 
-In this example an individual `BackgroundFetchRecord` is returned using {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. The {{domxref("BackgroundFetchRecord.request")}} and {{domxref("BackgroundFetchRecord.responseReady")}} are returned and logged to the console.
+以下の例では、 {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}} の使用によって生成された `BackgroundFetchRecord` から {{domxref("BackgroundFetchRecord.request")}} と {{domxref("BackgroundFetchRecord.responseReady")}} の値を受け取り、コンソールにログ出力しています。
 
 ```js
 bgFetch.match("/ep-5.mp3").then(async (record) => {
   if (!record) {
-    console.log("No record found");
+    console.log("recordは見つかりませんでした");
     return;
   }
 
-  console.log(`Here's the request`, record.request);
+  console.log(`リクエスト：`, record.request);
   const response = await record.responseReady;
-  console.log(`And here's the response`, response);
+  console.log(`応答：`, response);
 });
 ```
 
