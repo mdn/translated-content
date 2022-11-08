@@ -1,6 +1,7 @@
 ---
 title: 'Yari: MDN''s rendering platform'
-slug: MDN/Yari
+slug: orphaned/MDN/Yari
+original_slug: MDN/Yari
 ---
 
 {{MDNSidebar}}
