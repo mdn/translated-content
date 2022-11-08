@@ -1233,7 +1233,7 @@
 /es/docs/MDN/Guidelines/Conventions_definitions	/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /es/docs/MDN/Guidelines/Project:Guía_de_estilo	/es/docs/MDN/Writing_guidelines/Writing_style_guide
 /es/docs/MDN/Guidelines/Writing_style_guide	/es/docs/MDN/Writing_guidelines/Writing_style_guide
-/es/docs/MDN/Kuma	/es/docs/MDN/Yari
+/es/docs/MDN/Kuma	/es/docs/orphaned/MDN/Yari
 /es/docs/MDN/Kuma/Introduction_to_KumaScript	/es/docs/MDN/Tools/KumaScript
 /es/docs/MDN/Structures	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Structures/Compatibility_tables	/es/docs/MDN/Writing_guidelines/Page_structures
@@ -1245,6 +1245,7 @@
 /es/docs/MDN/Structures/Macros/Otras	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Structures/Tablas_de_compatibilidad	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Tools/Introduction_to_KumaScript	/es/docs/MDN/Tools/KumaScript
+/es/docs/MDN/Yari	/es/docs/orphaned/MDN/Yari
 /es/docs/MDN_en_diez	/es/docs/MDN/At_ten
 /es/docs/Manipular_video_por_medio_de_canvas	/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /es/docs/MathML	/es/docs/Web/MathML
