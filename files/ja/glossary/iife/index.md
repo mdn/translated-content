@@ -3,9 +3,9 @@ title: IIFE (即時実行関数式)
 slug: Glossary/IIFE
 ---
 
-**IIFE** (Immediately Invoked Function Expression; 即時実行関数式) は定義されるとすぐに実行される {{glossary("JavaScript")}} の {{glossary("function", "関数")}} です。
+**IIFE** (Immediately Invoked Function Expression; 即時実行関数式) は定義されるとすぐに実行される {{glossary("JavaScript")}} の{{glossary("function", "関数")}}です。
 
-IIFE という名前は[Ben Almanのブログ](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife)で付けられました。
+IIFE という名前は [Ben Alman のブログ](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife)で付けられました。
 
 
 ```js
@@ -97,7 +97,7 @@ console.log(secondAccount.withdraw(20)); // 0
 ### ES6 以前の var を使ったループ
 
 ブロックスコープや **ES6** での **let** や **const** の導入前の古いコードで、次のような IIFE の使い方を見ることができます。
-**var**では、関数のスコープとグローバルなスコープしかありませんでした。
+**var** では、関数のスコープとグローバルなスコープしかありませんでした。
 「ボタン 0」「ボタン 1」という 2 つのボタンをクリックした時に、それぞれ「0」「1」が表示されるようにしてみます。以下のコードではうまく動きません:
 
 ```js
@@ -133,7 +133,7 @@ console.log(i); // 2
 
 クリックすると、「ボタン 0」なら 0 が、「ボタン 1」なら 1 が表示されます。
 上記のコードでも、変数 `i` はグローバルに定義されています。
-**let**を使うともっと簡単に書けます:
+**let** を使うともっと簡単に書けます:
 
 ```js
 for (let i = 0; i < 2; i++) {
