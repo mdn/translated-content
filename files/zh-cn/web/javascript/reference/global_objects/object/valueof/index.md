@@ -23,7 +23,7 @@ valueOf()
 
 `this` 值，将其转换为一个对象。
 
-> **备注：** 为了使 `valueOf` 在类型转换期间有用，它必须返回一个原始值。因为所有原始类型都有它们自己的 `valueOf()` 方法，因此调用 `aPrimitiveValue.valueOf()` 通常不会调用 `Object.prototype.valueOf()`。
+> **备注：** 为了使 `valueOf` 在类型转换期间有用，它必须返回一个原始值。因为所有原始类型都有它们自己的 `valueOf()` 方法，调用 `aPrimitiveValue.valueOf()` 通常不会调用 `Object.prototype.valueOf()`。
 
 ## 描述
 
