@@ -4043,18 +4043,6 @@
       "kenji-yamasaki"
     ]
   },
-  "MDN/Yari": {
-    "modified": "2020-08-13T21:24:52.575Z",
-    "contributors": [
-      "eltociear",
-      "mfuji09",
-      "SphinxKnight",
-      "silverskyvicto",
-      "wbamberg",
-      "Uemmra3",
-      "groovecoder"
-    ]
-  },
   "Mozilla": {
     "modified": "2020-08-10T23:23:31.255Z",
     "contributors": ["eltociear", "dskmori", "ethertank", "ziyunfei"]
@@ -25875,10 +25863,6 @@
   "Web/JavaScript/Reference/Global_Objects/Map/@@species": {
     "modified": "2020-11-06T05:22:22.573Z",
     "contributors": ["mfuji09", "SphinxKnight", "shide55"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
-    "modified": "2020-10-15T21:39:55.689Z",
-    "contributors": ["mfuji09", "Kisaragi", "YuichiNukiyama"]
   },
   "Web/JavaScript/Reference/Global_Objects/Map/Map": {
     "modified": "2020-11-06T12:31:37.635Z",

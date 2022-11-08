@@ -2761,7 +2761,6 @@
 /ja/docs/MDN/Guidelines/Editorial	/ja/docs/MDN/Writing_guidelines/What_we_write
 /ja/docs/MDN/Guidelines/Video	/ja/docs/MDN/Writing_guidelines/Howto/Images_media
 /ja/docs/MDN/Guidelines/Writing_style_guide	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
-/ja/docs/MDN/Kuma	/ja/docs/MDN/Yari
 /ja/docs/MDN/MDN_Product_Advisory_Board/Members	/ja/docs/conflicting/MDN/MDN_Product_Advisory_Board
 /ja/docs/MDN/Structures	/ja/docs/MDN/Writing_guidelines/Page_structures
 /ja/docs/MDN/Structures/API_references	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
