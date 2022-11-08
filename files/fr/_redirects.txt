@@ -3056,12 +3056,13 @@
 /fr/docs/MDN/Guidelines/Editorial	/fr/docs/MDN/Writing_guidelines/What_we_write
 /fr/docs/MDN/Guidelines/Video	/fr/docs/MDN/Writing_guidelines/Howto/Images_media
 /fr/docs/MDN/Guidelines/Writing_style_guide	/fr/docs/MDN/Writing_guidelines/Writing_style_guide
-/fr/docs/MDN/Kuma	/fr/docs/MDN/Yari
+/fr/docs/MDN/Kuma	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /fr/docs/MDN/Structures	/fr/docs/MDN/Writing_guidelines/Page_structures
 /fr/docs/MDN/Structures/Live_samples	/fr/docs/MDN/Writing_guidelines/Page_structures
 /fr/docs/MDN/Structures/Macros	/fr/docs/MDN/Writing_guidelines/Page_structures
 /fr/docs/MDN/Structures/Macros/Commonly-used_macros	/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /fr/docs/MDN/User_guide	/fr/docs/MDN/Tools
+/fr/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /fr/docs/MDN_a_dix_ans	/fr/docs/MDN/At_ten
 /fr/docs/MDN_a_dix_ans/Contribuer_à_MDN	/fr/docs/MDN/Contribute
 /fr/docs/MDN_a_dix_ans/Histoire_MDN	/fr/docs/MDN/At_ten/History_of_MDN
@@ -4937,7 +4938,9 @@
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl
 /fr/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
@@ -6408,6 +6411,7 @@
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/GeneratorFunction	/fr/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/InternalError	/fr/docs/Web/JavaScript/Reference/Global_Objects/InternalError
+/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/Collator	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
@@ -6416,7 +6420,6 @@
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/JSON	/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON
-/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Map	/fr/docs/Web/JavaScript/Reference/Global_Objects/Map
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number	/fr/docs/Web/JavaScript/Reference/Global_Objects/Number
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
@@ -6468,6 +6471,7 @@
 /fr/docs/orphaned/Glossary/Modern_web_apps	/fr/docs/Glossary/Progressive_web_apps
 /fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Signatures_numériques	/fr/docs/Glossary/Signature/Security
 /fr/docs/orphaned/MDN/Contribute/Documentation_priorities	https://mdn-contributor-docs.mozilla.org/legacy/documentation-priorities/
+/fr/docs/orphaned/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /fr/docs/orphaned/Tools/Debugger/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#debugger
 /fr/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#page_inspector
 /fr/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#web_console

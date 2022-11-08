@@ -2055,10 +2055,6 @@
       "-"
     ]
   },
-  "MDN/Yari": {
-    "modified": "2019-09-09T15:53:42.526Z",
-    "contributors": ["SphinxKnight", "wbamberg", "richellyitalo"]
-  },
   "Mozilla": {
     "modified": "2019-03-23T23:37:34.048Z",
     "contributors": ["joselima", "-", "ethertank", "ziyunfei"]
@@ -11538,6 +11534,10 @@
   "orphaned/MDN/Tools/Page_regeneration": {
     "modified": "2020-09-30T16:52:54.361Z",
     "contributors": ["chrisdavidmills", "wbamberg", "-", "juniorgarcia"]
+  },
+  "orphaned/MDN/Yari": {
+    "modified": "2019-09-09T15:53:42.526Z",
+    "contributors": ["SphinxKnight", "wbamberg", "richellyitalo"]
   },
   "orphaned/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox": {
     "modified": "2019-03-18T21:15:50.836Z",

@@ -1,7 +1,7 @@
 ---
 title: 'Kuma: MDN''s wiki platform'
-slug: MDN/Yari
-original_slug: MDN/Kuma
+slug: orphaned/MDN/Yari
+original_slug: MDN/Yari
 ---
 
 {{MDNSidebar}}

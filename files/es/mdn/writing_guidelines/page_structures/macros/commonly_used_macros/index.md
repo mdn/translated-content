@@ -136,21 +136,6 @@ No utilices el parámetro en ningún área independiente del navegador (HTML, AP
 - Icon: {{Deprecated_Inline}}
 - Insignia: {{Deprecated_Inline("gecko5")}}
 
-#### Obsoleto
-
-[`Obsolete_Inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/Obsolete_Inline.ejs) inserta una marca de obsoleto en línea (`Deprecated_Inline`) para evitar el uso de, por ejemplo, una función, método o propiedad que oficialmente es obsoleto.
-
-No utilices el parámetro en ningún área independiente del navegador (HTML, API, JS, CSS, …).
-
-##### Sintaxis
-
-`\{{Obsolete_Inline}}` u `\{{Obsolete_Inline("js1.8.5")}}`
-
-##### Ejemplos
-
-- Icon: {{Obsolete_Inline}}
-- Badge: {{Obsolete_Inline("js1.8.5")}}
-
 ### Plantilla de insignias
 
 Estas macros se utilizan principalmente en la página [WebAPI](/es/docs/Web/API). Consulta [Creación de nuevas insignias](#creación_de_nuevas_insignias) para obtener información sobre cómo crear una nueva insignia (`Badge`).
