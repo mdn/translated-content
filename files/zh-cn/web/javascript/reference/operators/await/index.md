@@ -33,8 +33,8 @@ await 表达式;
 `await` 通常被用于从一个 {{jsxref("Promise")}} 中取出结果。
 使用 `await` 总会暂停当前 {{jsxref("Statements/async_function", "async function")}} 的执行，在该 `Promise` 完成 (fulfilled 或 rejected) 后继续执行。
 函数的执行恢复 (resume) 时，`await` 的返回值或抛出的异常将会是该 `Promise` 的处理结果。
-- 若该 `Promise` 状态为 fulfilled（正常处理)，其回调的 `resolve` 的参数将作为 `await` 表达式的值，继续执行 {{jsxref("Statements/async_function", "async function")}}。
-- 若该 `Promise` 状态为 rejected（出现异常)，`await` 表达式会把 reject 的原因抛出。
+- 若该 `Promise` 状态为 fulfilled（正常处理），其回调的 `resolve` 的参数将作为 `await` 表达式的值，继续执行 {{jsxref("Statements/async_function", "async function")}}。
+- 若该 `Promise` 状态为 rejected（出现异常），`await` 表达式会把 reject 的原因抛出。
 
 `await` 总会同步求表达式的值并处理，处理的行为与 {{jsxref("Promise.resolve()")}} 一致，不属于 `Promise` 实例的值全都会被隐式地包装成 `Promise` 实例。
 - 值若是原生 `Promise` 实例，会被直接用于等待。
@@ -149,7 +149,7 @@ f3();
 ### await 对执行过程的影响
 
 当函数执行到 `await` 时，被等待的表达式会立即（同步）被求值，并确定一个原生 {{jsxref("Promise")}}，然后函数的执行会暂停。
-当该 `Promise` 完成 (fulfilled 或 rejected) 时，一个**新**的微任务(microtask)会被 push 进微任务队列 (microtask queue)，该微任务被执行时，函数执行会恢复。
+当该 `Promise` 完成（fulfilled 或 rejected 状态）时，一个**新**的微任务（microtask）会被推送进微任务队列（microtask queue），该微任务被执行时，函数执行会恢复。
 
 若 {{jsxref("Statements/async_function", "async function")}} 到结束都没有执行任何 `await`，
 整个函数都将被同步执行：
