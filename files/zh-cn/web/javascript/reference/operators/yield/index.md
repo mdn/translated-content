@@ -41,6 +41,8 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 ## 示例
 
+### 使用 yield
+
 以下代码是一个生成器函数的声明。
 
 ```js
@@ -67,6 +69,7 @@ console.log(appleStore.next()); // { value: undefined, done: true }
 ```js
 function* counter(value) {
   let step;
+
   while (true) {
     step = yield value++;
     if (step) {
@@ -74,6 +77,7 @@ function* counter(value) {
     }
   }
 }
+
 const generatorFunc = counter(0);
 console.log(generatorFunc.next().value); // 0
 console.log(generatorFunc.next().value); // 1
@@ -92,9 +96,9 @@ console.log(generatorFunc.next(10).value); // 26
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [The Iterator protocol](/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
+- [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Operators/yield*", "yield*")}}
