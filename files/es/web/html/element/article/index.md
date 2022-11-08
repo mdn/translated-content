@@ -1,15 +1,11 @@
 ---
-title: '<article>'
+title: '<article>' El elemento con contendio del artículo
 slug: Web/HTML/Element/article
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/article
 browser-compat: html.elements.article
 ---
+
+El _Elemento article de HTML_ (\<article>) representa una composición auto-contenida en un documento, página, una aplicación o en el sitio, que se destina a distribuir de forma independiente o reutilizable, por ejemplo, en la indicación. Podría ser un mensaje en un foro, un artículo de una revista o un periódico, una entrada de blog, un comentario de un usuario, un widget interactivo o gadget, o cualquier otro elemento independiente del contenido.
 
 {{HTMLSidebar}}
 
@@ -61,7 +57,7 @@ Un mismo documento puede tener varios artículos; por ejemplo, en un blog en el 
         Todo elemento que permita 
         <a href="/es/docs/Web/Guide/HTML/Content_categories#flujo_de_contenido"
           >contenido de flujo</a
-        >. Un elemento <code>&#x3C;article></code> no puede ser descendente de
+        >. Un elemento <code>&#x3C;article></code> no puede ser hijo de
         un elemento 
         <a href="/es/docs/Web/HTML/Element/address"
           ><code>&#x3C;address></code></a
@@ -100,52 +96,54 @@ Un mismo documento puede tener varios artículos; por ejemplo, en un blog en el 
 
 ## Atributos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes), comunes para todos los elementos.
+Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 ## Notas de uso
 
-- Cada `<article>` independiente debe ser identificado, normalment con un elemento header (de `<h1>` a `<h6>`).
-- Cuando un `<article>` está incorporado dentro de otro, representa un artículo cuyo contenido está relacionado con el artículo que lo anida. Por ejemplo, un comentario en una entrada de blog puede ser un `<article>` dentro de otro`<article>` que representa la propia entrada del blog.
+- Cada `<article>` debe ser identificado, normalmente con un elemento de encabezado (elementos [`<h1>` - `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements)) como hijo.
+- Cuando un `<article>` está incorporado dentro de otro, representa un artículo cuyo contenido está relacionado con el artículo que lo anida. Por ejemplo, un comentario en una entrada de blog puede ser un `<article>` dentro de otro` <article>` que representa la propia entrada del blog.
 - La información del autor de un `<article>` se pueden proporcionar mediante el elemento [`<address>`](/es/docs/Web/HTML/Element/address), pero esto no se aplica a los artículos anidados dentro de otros.
-- La fecha y momento de publicación de un elemento `<article>` pueden ser declarados mediante el atributo [`datetime`](/es/docs/Web/HTML/Element/time#attr-datetime) de un elemento [`<time>`](/es/docs/Web/HTML/Element/time). _Nótese que el atributo [`pubdate`](/es/docs/Web/HTML/Element/time#attr-pubdate) de [`<time>`](/es/docs/Web/HTML/Element/time) no forma parte del estándar W3C HTML 5._
+- La fecha y momento de publicación de un elemento `<article>` pueden ser declarados mediante el atributo [`datetime`](/es/docs/Web/HTML/Element/time#attr-datetime) de un elemento [`<time>`](/es/docs/Web/HTML/Element/time).
 
 ## Ejemplo
 
 ```html
 <article class="film_review">
-  <header>
-    <h2>Jurassic Park</h2>
-  </header>
+  <h2>Jurassic Park</h2>
   <section class="main_review">
-    <p>Les dinosaurios estubieron genial!</p>
+    <h3>Reseña</h3>
+    <p>¡Los dinosaurios estuvieron genial!</p>
   </section>
   <section class="user_reviews">
+    <h3>Reseñas de usuarios</h3>
     <article class="user_review">
+      <h4>¡Demasiado aterrador!</h4>
       <p>Demasiado aterradores para mí</p>
       <footer>
         <p>
-          Comentado el
+          Publicado el
           <time datetime="2015-05-16 19:00">16 de mayo</time>
           por Lisa.
         </p>
       </footer>
     </article>
     <article class="user_review">
-      <p>Estoy de acuerdo, lo que más me gusta son los dinosaurios.</p>
+      <h4>¡Amo a los dinos!</h4>
+      <p>Estoy de acuerdo, los dinosaurios son mis favoritos.</p>
       <footer>
         <p>
-          Comentado el 
+          Publicado el
           <time datetime="2015-05-17 19:00">17 de mayo</time>
-          por Gilles Stella.
+          por Tom.
         </p>
       </footer>
     </article>
   </section>
   <footer>
     <p>
-      Comentado el
+      Publicado el
       <time datetime="2015-05-15 19:00">15 de mayo</time>
-      por personal.
+      por Staff.
     </p>
   </footer>
 </article>
@@ -155,11 +153,11 @@ Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_att
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 
-## Ver también
+## Véase también
 
 - Otros elementos relacionados : [`<body>`](/es/docs/Web/HTML/Element/body), [`<nav>`](/es/docs/Web/HTML/Element/nav), [`<section>`](/es/docs/Web/HTML/Element/section), [`<aside>`](/es/docs/Web/HTML/Element/aside), [`<h1>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<hgroup>`](/es/docs/Web/HTML/Element/hgroup), [`<header>`](/es/docs/Web/HTML/Element/header), [`<footer>`](/es/docs/Web/HTML/Element/footer), [`<address>`](/es/docs/Web/HTML/Element/address)
-- [Secciones y estructura de un documento HTML5](/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- [Uso de secciones y esquemas HTML](/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
