@@ -1,5 +1,5 @@
 ---
-title: '<article>' El elemento con contendio del artículo
+title: '<article>: El elemento con contendio del artículo'
 slug: Web/HTML/Element/article
 translation_of: Web/HTML/Element/article
 browser-compat: html.elements.article
