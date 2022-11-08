@@ -14,7 +14,7 @@ l10n:
 ## コンストラクター
 
 - {{domxref("BackgroundFetchUpdateUIEvent.BackgroundFetchUpdateUIEvent()", "BackgroundFetchUpdateUIEvent()")}} {{Experimental_Inline}}
-  - : 新規に `BackgroundFetchUIEvent` オブジェクトを作成します。通常、このコンストラクタが使用されることはありません。なぜなら、これらのオブジェクトは {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} 、および、 {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} イベントのためにブラウザによって自動で生成されるからです。
+  - : 新規に `BackgroundFetchUIEvent` オブジェクトを作成します。通常、このコンストラクターが使用されることはありません。なぜなら、これらのオブジェクトは {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} 、および、 {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} イベントのためにブラウザーによって自動で生成されるからです。
 
 ## プロパティ
 
