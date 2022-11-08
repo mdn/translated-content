@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Operators/yield
 ```
 
 - `expression`
-  - : 定义通过[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterator)从生成器函数返回的值。如果省略，则返回`undefined`。
+  - : 定义通过[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterator)从生成器函数返回的值。如果省略，则返回 `undefined`。
 - `rv`
   - : 返回传递给生成器的 `next()` 方法的可选值，以恢复其执行。
 
