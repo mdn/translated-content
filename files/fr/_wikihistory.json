@@ -3685,10 +3685,6 @@
     "modified": "2020-09-30T09:06:59.707Z",
     "contributors": ["chrisdavidmills", "wbamberg", "teoli", "fscholz", "jmh"]
   },
-  "MDN/Yari": {
-    "modified": "2020-02-08T12:56:22.102Z",
-    "contributors": ["tristantheb"]
-  },
   "Mozilla": {
     "modified": "2019-03-23T23:34:28.870Z",
     "contributors": ["Dralyab", "Hell_Carlito", "PtitPou", "jmh", "ethertank"]
@@ -28050,5 +28046,9 @@
       "si0ls",
       "dattaz"
     ]
+  },
+  "orphaned/MDN/Yari": {
+    "modified": "2020-02-08T12:56:22.102Z",
+    "contributors": ["tristantheb"]
   }
 }
