@@ -29,7 +29,7 @@ letter-spacing: unset;
 ### 值
 
 - `normal`
-  - : 此间距是按照当前字体的正常间距确定的。和 `0` 不同的是，`normal`会让{{glossary("user agent", "用户代理")}}调整文字之间空间来对齐文字。
+  - : 此间距是按照当前字体的正常间距确定的。和 `0` 不同的是，`normal` 会让{{glossary("user agent", "用户代理")}}调整文字之间空间来对齐文字。
 - {{cssxref("&lt;length&gt;")}}
   - : 指定文字间的间距以替代默认间距。可以是负值，但有可能会出现 implementation 限制。用户代理不会在此基础上进一步增加或缩减间距来对齐文字。
 
