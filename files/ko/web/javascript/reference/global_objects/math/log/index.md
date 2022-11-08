@@ -3,6 +3,7 @@ title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
 ---
+
 {{JSRef}}
 
 **`Math.log()`** 함수는 자연 로가리즘은 ({{jsxref("Math.E", "e")}} 를 기초) 의 수를 계산합니다, 이건 다음의

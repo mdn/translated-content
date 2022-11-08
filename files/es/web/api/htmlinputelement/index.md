@@ -14,6 +14,7 @@ tags:
   - TopicStub
 translation_of: Web/API/HTMLInputElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La interface **`HTMLInputElement`** proporciona propiedades y métodos especiales para manipular las opciones, estructura y presentacion de los elementos {{HtmlElement("input")}}.
@@ -164,9 +165,9 @@ Propiedades aun no categorizadas
 
 <!---->
 
-- {{domxref("HTMLInputElement.align")}} {{obsolete_inline}}
+- {{domxref("HTMLInputElement.align")}} {{deprecated_inline}}
   - : `string:` **represents** the alignment of the element. _Use CSS instead._
-- {{domxref("HTMLInputElement.useMap")}} {{ obsolete_inline }}
+- {{domxref("HTMLInputElement.useMap")}} {{deprecated_inline}}
   - : `string:` **represents** a client-side image map.
 
 ## Métodos

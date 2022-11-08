@@ -2,6 +2,7 @@
 title: Stylesheet.ownerRule
 slug: Web/API/CSSStyleSheet/ownerRule
 ---
+
 {{ ApiRef() }}
 
 ### Resumen

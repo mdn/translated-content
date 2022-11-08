@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Headers/X-Content-Type-Options
 ---
+
 {{HTTPSidebar}}
 
 El encabezado HTTP de respuesta **`X-Content-Type-Options`** es un marcador utilizado por el servidor para indicar que los [tipos MIME](/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types) anunciados en los encabezados {{HTTPHeader("Content-Type")}} no se deben cambiar ni seguir. Esto permite desactivar el [MIME type sniffing](/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types#MIME_sniffing), o, en otras palabras, es una manera de decir que los webmasters sabían lo que estaban haciendo.

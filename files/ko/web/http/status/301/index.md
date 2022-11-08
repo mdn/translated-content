@@ -3,6 +3,7 @@ title: 301 Moved Permanently
 slug: Web/HTTP/Status/301
 translation_of: Web/HTTP/Status/301
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`301 Moved Permanently`** 리다이렉트 상태 응답 코드는 요청한 리소스가 {{HTTPHeader("Location")}} 헤더에 주어진 URL로 완전히 옮겨졌다는 것을 나타낸다. 브라우저는 이 페이지로 리다이렉트하고, 검색 엔진은 해당 리소스로 연결되는 링크를 갱신한다\[검색엔진 최적화의 관점에서는 '원 콘텐츠가 새로운 URL로 옮겨졌다'(the link-juice is sent to the new URL)고 한다].

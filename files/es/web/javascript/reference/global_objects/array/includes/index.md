@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/includes
 ---
+
 {{JSRef}}
 
 El método **`includes()`** determina si una matriz incluye un determinado elemento, devuelve `true` o `false` según corresponda.

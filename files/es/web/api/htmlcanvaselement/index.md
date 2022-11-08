@@ -3,6 +3,7 @@ title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
 translation_of: Web/API/HTMLCanvasElement
 ---
+
 {{APIRef("Canvas API")}}
 
 La interfaz **`HTMLCanvasElement`** provee propiedades y métodos para manipular la capa de presentación de los elementos de tipo canvas. La interfaz `HTMLCanvasElement` también hereda las propiedades y métodos de la interfaz {{domxref("HTMLElement")}} .

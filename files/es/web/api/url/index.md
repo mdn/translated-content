@@ -10,6 +10,7 @@ tags:
   - URL API
 translation_of: Web/API/URL
 ---
+
 {{ApiRef("URL API")}} {{SeeCompatTable}}
 
 La interfaz **`URL`** representa a un objeto que provee métodos estáticos para crear objetos URL.

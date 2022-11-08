@@ -3,7 +3,7 @@ title: <datalist>
 slug: Web/HTML/Element/datalist
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<datalist>` 要素**は、他のコントロールで利用可能な値を表現する一連の {{HTMLElement("option")}} 要素を含みます。
 

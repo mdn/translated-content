@@ -2,6 +2,7 @@
 title: Window.document
 slug: Web/API/Window/document
 ---
+
 {{APIRef}}
 
 ## Resumo

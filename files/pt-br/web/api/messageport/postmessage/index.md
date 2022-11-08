@@ -2,6 +2,7 @@
 title: MessagePort.postMessage()
 slug: Web/API/MessagePort/postMessage
 ---
+
 {{APIRef("HTML DOM")}}
 
 O método **`postMessage()`** da interface {{domxref("MessagePort")}} envia uma mensagem da porta e opcionalmente transfere a propriedade do objeto para outros contexto de navegação.

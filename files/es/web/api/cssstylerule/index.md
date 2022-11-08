@@ -5,6 +5,7 @@ tags:
   - API
 translation_of: Web/API/CSSStyleRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`CSSStyleRule`** representa una sola regla de estilos CSS. Implementa la interfaz {{domxref("CSSRule")}} with a type value of `1` (`CSSRule.STYLE_RULE`).

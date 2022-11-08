@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/yield*
 original_slug: Web/JavaScript/Referencia/Operadores/yield*
 ---
+
 {{jsSidebar("Operators")}}
 
 `La expresión` **`yield*`** es usada para delegar a otro {{jsxref("Statements/function*", "generator")}} u objeto iterable.

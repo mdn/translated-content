@@ -11,6 +11,7 @@ tags:
   - Узлы
 translation_of: Web/API/Node/previousSibling
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Node.previousSibling`** используется только для чтения, оно возвращает узел предшествующий указанному в родительском элементе {{domxref("Node.childNodes", "childNodes")}}, или `null`, если указанный узел первый в своём родителе.

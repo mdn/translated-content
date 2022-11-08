@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/wbr
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<wbr>` 요소**는 현재 요소의 줄 바꿈 규칙을 무시하고 브라우저가 줄을 바꿀 수 있는 위치를 나타냅니다.

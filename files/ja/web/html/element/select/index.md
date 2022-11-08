@@ -3,7 +3,7 @@ title: '<select>: HTML 選択要素'
 slug: Web/HTML/Element/select
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<select>` 要素**は、選択式のメニューを提供するコントロールを表します。
 

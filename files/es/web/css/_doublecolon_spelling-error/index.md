@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/::spelling-error
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 El [pseudo-elemento](/en/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::spelling-error`** representa un segmento de texto que el {{glossary("user agent")}} ha marcado como deletreado incorrectamente.

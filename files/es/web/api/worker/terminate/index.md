@@ -3,6 +3,7 @@ title: Worker.terminate()
 slug: Web/API/Worker/terminate
 translation_of: Web/API/Worker/terminate
 ---
+
 {{APIRef("Web Workers API")}}
 
 El método **`terminate()`** de la interfaz {{domxref("Worker")}} termina inmediatamente el {{domxref("Worker")}}. Esto no ofrece la oportunidad de finalizar las operaciones que estuviera realizando el worker, termina la ejecución por completo.

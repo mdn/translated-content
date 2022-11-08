@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 original_slug: Web/JavaScript/Referencia/Objetos_globales/isFinite
 ---
+
 {{jsSidebar("Objects")}}
 
 ## Resumen

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math
 ---
+
 {{JSRef}}
 
 **`Math`** es un objeto incorporado que tiene propiedades y métodos para constantes y funciones matemáticas. No es un objeto de función.

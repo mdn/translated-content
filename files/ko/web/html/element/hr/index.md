@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/hr
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<hr>` 요소**는 이야기 장면 전환, 구획 내 주제 변경 등, 문단 레벨 요소에서 주제의 분리를 나타냅니다.

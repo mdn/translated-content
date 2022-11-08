@@ -14,6 +14,7 @@ tags:
   - WebVR
 translation_of: Web/API/VRStageParameters
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`VRStageParameters`** interface of the [WebVR API](/ru/docs/Web/API/WebVR_API) represents the values describing the the stage area for devices that support room-scale experiences.

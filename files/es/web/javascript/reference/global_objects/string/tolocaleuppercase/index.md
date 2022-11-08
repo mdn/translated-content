@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/toLocaleUpperCase
 ---
+
 {{JSRef}}
 
 El método **`toLocaleUpperCase()`** devuelve el valor de la cadena que lo llama convertido en mayúsculas, de acuerdo con las asignaciones de casos específicos de la configuración regional.

@@ -1,15 +1,6 @@
 ---
 title: Operador de coalescência nula
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
-tags:
-  - JavaScript
-  - Operador
-  - Operadores lógicos
-  - Referencia
-  - coalescencia nula
-  - duas interrogações
-  - nulidade
-translation_of: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 original_slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 ---
 

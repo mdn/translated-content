@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/CanvasImageSource
 original_slug: Web/API/CanvasImageSource
 ---
+
 {{APIRef("Canvas API")}}
 
 El tipo auxiliar **`CanvasImageSource`** representa cualquiera de los siguientes tipos:

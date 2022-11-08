@@ -5,6 +5,7 @@ translation_of: Web/API/DocumentOrShadowRoot/styleSheets
 translation_of_original: Web/API/Document/styleSheets
 original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 ---
+
 {{ ApiRef() }}
 
 ### Resumen

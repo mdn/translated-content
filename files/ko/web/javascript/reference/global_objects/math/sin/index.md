@@ -8,6 +8,7 @@ tags:
   - 자바스크립트
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 ---
+
 {{JSRef}}
 
 **`Math.sin()`** 함수는 숫자의 사인값을 반환합니다.

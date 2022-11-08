@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/constructor
 ---
+
 {{JSRef("Objetos_globales", "Object")}}
 
 ## Resumen

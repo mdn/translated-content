@@ -3,6 +3,7 @@ title: Window.scroll()
 slug: Web/API/Window/scroll
 translation_of: Web/API/Window/scroll
 ---
+
 {{APIRef}}
 
 Прокручивает страницу до указанного места.

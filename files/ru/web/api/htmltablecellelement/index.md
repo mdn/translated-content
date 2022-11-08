@@ -3,6 +3,7 @@ title: HTMLTableCellElement
 slug: Web/API/HTMLTableCellElement
 translation_of: Web/API/HTMLTableCellElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Интерфейс **`HTMLTableCellElement`** содержит специальные свойства и методы (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of table cells, either header or data cells, in an HTML document.

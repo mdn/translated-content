@@ -3,6 +3,7 @@ title: HTTP 인증
 slug: Web/HTTP/Authentication
 translation_of: Web/HTTP/Authentication
 ---
+
 {{HTTPSidebar}}
 
 HTTP는 액세스 제어와 인증을 위한 프레임워크를 제공합니다. 가장 일반적인 인증 방식은 "Basic" 인증 방식입니다. 이 페이지에서는 일반적인 HTTP 인증 프레임워크를 소개하고 서버에 HTTP의 Basic 인증 방식으로 접근을 제한하는 것을 보여 줍니다.

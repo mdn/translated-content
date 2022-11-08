@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/E
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/E
 ---
+
 {{JSRef}}
 
 La propiedad **`Math.E`** representa la base de los logaritmos naturales, e, aproximadamente 2.718.

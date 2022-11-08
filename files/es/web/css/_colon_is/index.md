@@ -10,6 +10,7 @@ translation_of: Web/CSS/:is
 translation_of_original: Web/CSS/:any
 original_slug: Web/CSS/:any
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Resumen

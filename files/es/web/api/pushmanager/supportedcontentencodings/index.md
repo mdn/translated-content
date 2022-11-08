@@ -3,6 +3,7 @@ title: PushManager.supportedContentEncodings
 slug: Web/API/PushManager/supportedContentEncodings
 translation_of: Web/API/PushManager/supportedContentEncodings
 ---
+
 {{SeeCompatTable}}{{APIRef("Push API")}}
 
 La propiedad **`supportedContentEncodings`** de solo lectura (read-only) de la interfaz {{domxref("PushManager")}} devuelve un array de los codigos de contenido que puede soportar y que pueden ser usados para encriptar los datos (payload) de un push-message.

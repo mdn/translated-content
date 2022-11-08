@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isPrototypeOf
 ---
+
 {{JSRef}}
 
 El método **`isPrototypeOf()`** comprueba si un objeto se encuentra en la cadena de prototipado de otro.

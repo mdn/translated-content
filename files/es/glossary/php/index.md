@@ -6,6 +6,7 @@ tags:
   - Infraestructura
 translation_of: Glossary/PHP
 ---
+
 PHP (una inicialización recursiva para PHP: preprocesador de hipertexto) es un lenguaje de script de código abierto del lado del servidor que puede integrarse en HTML para crear aplicaciones web y sitios web dinámicos.
 
 ## Examples

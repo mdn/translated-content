@@ -584,11 +584,11 @@ IndexedDB 使用同源原则，这意味着它把存储空间绑定到了创建�
 
 1. 受影响的数据库（在浏览器关闭的场景下，所有打开的数据库）的所有事务会以 AbortError 错误中断。该影响和在每个事务中调用 {{domxref("IDBTransaction.abort()")}} 相同。
 2. 所有的事务完成后，数据库连接就会关闭。
-3. 最终，表示数据库连接的 {{domxref("IDBDatabase")}} 对象收到一个 {{event("close")}} 事件。你可以使用 {{domxref("IDBDatabase.onclose")}} 事件句柄来监听这些事件，这样你就可以知道什么时候数据库被意外关闭了。
+3. 最终，表示数据库连接的 {{domxref("IDBDatabase")}} 对象收到一个 {{domxref("IDBDatabase/close_event", "close")}} 事件。你可以使用 {{domxref("IDBDatabase.onclose")}} 事件句柄来监听这些事件，这样你就可以知道什么时候数据库被意外关闭了。
 
 上述的行为只在 Firefox 50、Google Chrome 31（近似的）发行版本中支持。
 
-在这些版本之前的浏览器，事务会静默中断，并且 {{event("close")}} 事件不会触发，这样就无法察觉数据库的异常关闭。
+在这些版本之前的浏览器，事务会静默中断，并且 {{domxref("IDBDatabase/close_event", "close")}} 事件不会触发，这样就无法察觉数据库的异常关闭。
 
 由于用户可以在任何时候关闭浏览器，因此你不能依赖于任何特定事务的完成。并且在老版本的浏览器，你甚至都无法感知它们是否顺利完成。针对这种行为这里有一些启示：
 

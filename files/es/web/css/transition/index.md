@@ -3,6 +3,7 @@ title: transition
 slug: Web/CSS/transition
 translation_of: Web/CSS/transition
 ---
+
 {{ CSSRef("CSS Transitions") }}
 
 {{ SeeCompatTable() }}

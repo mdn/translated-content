@@ -10,6 +10,7 @@ tags:
   - Principiante
 translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
 En esta evaluación, se espera que use la demo de bouncing balls del artículo anterior como punto de partida y le agregue algunas características nuevas e interesantes.

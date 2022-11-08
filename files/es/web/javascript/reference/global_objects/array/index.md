@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array
 ---
+
 {{JSRef}}
 El objeto **`Array`** de JavaScript es un objeto global que es usado en la construcción de _arrays_, que son objetos tipo lista de alto nivel.
 

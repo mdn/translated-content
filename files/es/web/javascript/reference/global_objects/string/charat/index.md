@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/charAt
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 ## Resumen

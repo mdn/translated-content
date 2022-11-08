@@ -4,6 +4,7 @@ slug: Web/API/Document/open
 translation_of: Web/API/Document/open
 original_slug: Web/API/Document/abrir
 ---
+
 {{APIRef("DOM")}}
 
 El método **`Document.open()`** abre un documento para escritura ([writing](/es/docs/Web/API/Document/write))

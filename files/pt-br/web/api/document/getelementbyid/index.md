@@ -2,6 +2,7 @@
 title: document.getElementById()
 slug: Web/API/Document/getElementById
 ---
+
 {{ ApiRef("DOM") }}
 
 ## Sumário

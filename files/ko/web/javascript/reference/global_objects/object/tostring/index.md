@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** 은 문자열을 반환하는 object의 대표적인 방법이다

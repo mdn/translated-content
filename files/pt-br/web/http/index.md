@@ -20,12 +20,12 @@ Aprenda como usar HTTP com guias e tutoriais.
 - [Controle de Acesso HTTP (CORS)](/pt-BR/docs/Web/HTTP/CORS)
   - : **As requisições CORS** são requisições HTTP de recursos de domínios diferentes do domínio que está fazendo a requisição. um exemplo é um site A (SiteA.com) realizando uma requisição de uma imagem por meio de um elemento _img_ para um site B (SiteB.com/img.png). Hoje em dia encontramos o CORS em grande maioria das páginas webs, carregando scripts, imagens, folhas de estilos, etc.
 - [Dicas de cliente HTTP](/pt-BR/docs/Web/HTTP/Client_hints)
-   - : **Dicas do cliente** são um conjunto de cabeçalhos de resposta que um servidor pode usar para solicitar proativamente informações de um cliente sobre o dispositivo, a rede, o usuário e as preferências específicas do agente do usuário.
+  - : **Dicas do cliente** são um conjunto de cabeçalhos de resposta que um servidor pode usar para solicitar proativamente informações de um cliente sobre o dispositivo, a rede, o usuário e as preferências específicas do agente do usuário.
      O servidor pode então determinar quais recursos enviar, com base nas informações que o cliente escolher fornecer.
 - [Evolução do HTTP](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
   - : Uma breve descrição das mudanças que ocorreram no HTTP em versões mais antigas para o moderno HTTP/2 em diante.
 - [Diretrizes de segurança da Web da Mozilla](https://infosec.mozilla.org/guidelines/web_security)
-   - : uma coleção de dicas para ajudar as equipes operacionais na criação de aplicativos Web seguros.
+  - : uma coleção de dicas para ajudar as equipes operacionais na criação de aplicativos Web seguros.
 - [Mensagens HTTP](/pt-BR/docs/Web/HTTP/Messages)
   - : Descreve os tipos e a estrutura das diferentes mensagens do HTTP/1.x e HTTP/2.
 - [Uma sessão típica em HTTP](/pt-BR/docs/Web/HTTP/Session)
@@ -46,7 +46,7 @@ Navegue por uma detalhada documentação de referências em HTTP.
 - [Respostas de códigos de status em HTTP](/pt-BR/docs/Web/HTTP/Response_codes)
   - : Os códigos de status do HTTP indicam quando uma requisição foi completada. Códigos de status são agrupados em cinco classes: Informações, respostas, respostas de sucesso, redirecionamentos, erros de cliente e erros de servidor.
 - [Diretivas CSP](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy)
-   - : Os campos de cabeçalho de resposta {{HTTPHeader("Content-Security-Policy")}} permitem que os administradores do site controlem os recursos que o agente do usuário pode carregar para uma determinada página. Com algumas exceções, as políticas envolvem principalmente a especificação de origens de servidor e endpoints de script.
+  - : Os campos de cabeçalho de resposta {{HTTPHeader("Content-Security-Policy")}} permitem que os administradores do site controlem os recursos que o agente do usuário pode carregar para uma determinada página. Com algumas exceções, as políticas envolvem principalmente a especificação de origens de servidor e endpoints de script.
 
 ## Ferramentas & recursos
 
@@ -55,7 +55,7 @@ Ferramentas que irão lhe ajudar a testar e debugar as suas requisições HTTP.
 - [Ferramentas de desenvolvedores Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - : [Network monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
 - [Observatório Mozilla](https://observatory.mozilla.org/)
-   - : Um projeto desenvolvido para ajudar desenvolvedores, administradores de sistema e profissionais de segurança a configurar seus sites com segurança.
+  - : Um projeto desenvolvido para ajudar desenvolvedores, administradores de sistema e profissionais de segurança a configurar seus sites com segurança.
 - [RedBot](https://redbot.org/)
   - : Uma ferramenta para visualizar seus Headers relacionados em cache.
 - [Como os navegadores funcionam (2011)](https://web.dev/howbrowserswork/)

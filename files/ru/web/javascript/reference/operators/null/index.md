@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/null
 original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
+
 {{jsSidebar("Objects")}}
 
 Значение `null` представляет отсутствие какого-либо объектного значения. В JavaScript, `null` является {{Glossary("Primitive", "примитивом")}}, и в контексте логических операций, рассматривается как {{Glossary("Falsy", "ложное (falsy)")}}.

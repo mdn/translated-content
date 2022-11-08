@@ -3,7 +3,7 @@ title: '<title>: 文書題名要素'
 slug: Web/HTML/Element/title
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<title>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{glossary("Browser", "ブラウザー")}}のタイトルバーやページのタブに表示される文書の題名を定義します。テキストのみを含めることができます。要素内のタグはすべて無視されます。
 

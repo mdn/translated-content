@@ -6,6 +6,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 original_slug: Learn/HTML/Введение_в_HTML/Marking_up_a_letter
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
 
 Мы все учимся писать письма рано или поздно; это также хороший способ испытать наши навыки форматирования! В этом задании у вас будет письмо для проверки ваших навыков форматирования текста HTML, использования гиперссылок и элемента `<head>`.

@@ -3,6 +3,7 @@ title: XMLHttpRequest.responseText
 slug: Web/API/XMLHttpRequest/responseText
 translation_of: Web/API/XMLHttpRequest/responseText
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 Только для чтения {{domxref("XMLHttpRequest")}} свойство **`responseText`** возвращает текст ответа от сервера на отправленный запрос.

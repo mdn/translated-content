@@ -5,6 +5,7 @@ tags:
   - Glosario
 translation_of: Glossary/Hypertext
 ---
+
 El hipertexto es texto que contiene enlaces a otros textos, y no un flujo único y lineal como el de una novela.
 
 El término fue acuñado por Ted Nelson alrededor del año 1965.

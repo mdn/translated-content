@@ -2,6 +2,7 @@
 title: DOMStringMap
 slug: Web/API/DOMStringMap
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Usado pelo atributo HTML {{ htmlattrxref("dataset") }} para representar atributos próprios adicionados ao elemento.

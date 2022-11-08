@@ -11,6 +11,7 @@ tags:
   - regex
 translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
 Las expresiones regulares son patrones que se utilizan para hacer coincidir combinaciones de caracteres en cadenas. En JavaScript, las expresiones regulares también son objetos. Estos patrones se utilizan con los métodos {{jsxref("RegExp.exec", "exec()")}} y {{jsxref("RegExp.test", "test()")}} de {{jsxref("RegExp")}}, y con {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.replaceAll", "replaceAll()")}}, {{jsxref("String.search", "search()")}} y {{jsxref("String.split", "split()")}} métodos de {{jsxref("String")}}. Este capítulo describe las expresiones regulares de JavaScript.

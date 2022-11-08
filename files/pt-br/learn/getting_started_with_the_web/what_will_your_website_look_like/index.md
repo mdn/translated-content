@@ -3,6 +3,7 @@ title: Com será o seu site?
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 original_slug: Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
 _Como será o seu site?_ discute o trabalho de planejamento e design que você precisa fazer para o seu site antes de escrever o código, incluindo "Quais informações meu site oferece?", "Quais fontes e cores eu quero?" e ​​"O que meu site faz?"

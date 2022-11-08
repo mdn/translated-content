@@ -3,6 +3,7 @@ title: <font>
 slug: Web/HTML/Element/font
 translation_of: Web/HTML/Element/font
 ---
+
 {{obsolete_header}}
 
 ## Summary

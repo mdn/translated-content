@@ -4,7 +4,8 @@ slug: Web/HTML/Element/input
 l10n:
   sourceCommit: 24e69ffb152389ad535eec8fed5f3c19c4bc27c4
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **`<input>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーからデータを受け取るための、ウェブベースのフォーム用の操作可能なコントロールを作成するために使用します。端末と{{Glossary("user agent", "ユーザーエージェント")}}によりますが、広範に渡る種類のデータ入力やコントロールウィジェットが利用できます。 `<input>` 要素は入力型と属性の組み合わせの数が非常に多いため、 HTML の中で最も強力かつ最も複雑な要素の一つです。
 
@@ -38,7 +39,7 @@ l10n:
       <td id="examplebutton">
         <pre class="brush: html hidden">
 &#x3C;input type="button" name="button" value="ボタン" /></pre>
-        {{EmbedLiveSample("examplebutton",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplebutton",200,55)}}
       </td>
     </tr>
     <tr>
@@ -142,7 +143,7 @@ l10n:
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
       <td>
-        数値を入力するためのコントロールです。対応していればスピナーを表示し、既定の検証を追加します。動的キーボードを持つ一部の端末では、テンキーを表示します。
+        数値を入力するためのコントロールです。スピナーを表示し、既定の検証を追加します。動的キーボードを持つ一部の端末では、テンキーを表示します。
       </td>
       <td id="examplenumber">
         <pre class="brush: html hidden">
@@ -651,8 +652,6 @@ l10n:
 
 - `results` {{non-standard_inline}}
 
-- `results` {{non-standard_inline}}
-
   - : `results` 属性は Safari のみが対応しており、 {{HTMLElement("input")}} 要素のネイティブな検索クエリーのドロップダウンメニューに表示する項目の最大数を上書きすることができる数値です。
 
     この値は、負でない 10 進数でなければならなりません。指定しない場合、または無効な値を指定した場合は、ブラウザーの既定の最大項目数が使用されます。
@@ -1138,7 +1137,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
-      <td>なし。これは{{Glossary("empty element", "空要素")}}です。</td>
+      <td>なし。これは{{Glossary("void element", "空要素")}}です。</td>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>

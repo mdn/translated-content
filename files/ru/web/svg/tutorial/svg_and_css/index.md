@@ -4,6 +4,7 @@ slug: Web/SVG/Tutorial/SVG_and_CSS
 translation_of: Web/SVG/Tutorial/SVG_and_CSS
 original_slug: Web/Guide/CSS/Getting_started/SVG_и_CSS
 ---
+
 На этой странице показано, как использовать CSS со специальным языком для создания графики: [SVG](/ru/docs/SVG).
 
 Вы сделаете небольшой пример, которые можно будет запустить в любом браузере с поддержкой SVG.

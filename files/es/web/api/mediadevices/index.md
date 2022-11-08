@@ -11,6 +11,7 @@ tags:
   - TopicStub
 translation_of: Web/API/MediaDevices
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`MediaDevices`** interface provides access to connected media input devices like cameras and microphones, as well as screensharing.

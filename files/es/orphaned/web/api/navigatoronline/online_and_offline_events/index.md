@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/NavigatorOnLine/Online_and_offline_events
 original_slug: Web/API/NavigatorOnLine/Online_and_offline_events
 ---
+
 [Firefox 3](/es/Firefox_3_para_desarrolladores) implementa [eventos Online/Offline](http://www.whatwg.org/specs/web-apps/current-work/#offline) de la [especificacióbn WHATWG Web Applications 1.0](http://www.whatwg.org/specs/web-apps/current-work/).
 
 ### Descripción

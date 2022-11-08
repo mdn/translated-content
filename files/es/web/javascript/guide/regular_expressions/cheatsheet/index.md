@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Hoja_de_referencia
 ---
+
 {{jsSidebar("Guía de JavaScript")}}
 
 Esta página proporciona una hoja de referencia general de todas las capacidades de la sintaxis de `RegExp` agregando el contenido de los artículos en la guía `RegExp`. Si necesitas más información sobre un tema específico, sigue el enlace del título correspondiente para acceder al artículo completo o dirígete a [la guía](/es/docs/Web/JavaScript/Guide/Regular_Expressions/).

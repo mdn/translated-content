@@ -2,6 +2,7 @@
 title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta HTTP **`Accept-Ranges`** é um marcador usado pelo servidor para indicar que ele suporta requisições parciais. O valor deste campo indica a unidade utilizada para definir o tamanho.

@@ -5,6 +5,7 @@ tags:
   - Funciones
 translation_of: Glossary/IIFE
 ---
+
 Las expresiones de función ejecutadas inmediatamente (**IIFE** por su sigla en inglés) son funciones que se ejecutan tan pronto como se definen.
 
 ```js

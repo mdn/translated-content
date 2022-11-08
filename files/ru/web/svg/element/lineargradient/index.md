@@ -8,6 +8,7 @@ tags:
 translation_of: Web/SVG/Element/linearGradient
 original_slug: Web/SVG/Элемент/linearGradient
 ---
+
 {{SVGRef}}
 
 **`<linearGradient>`** позволяет определять линейные градиенты для заполнения или изменения графических элементов.

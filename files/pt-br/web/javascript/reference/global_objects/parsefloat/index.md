@@ -2,6 +2,7 @@
 title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
 ---
+
 {{jsSidebar("Objects")}}
 
 A função `parseFloat` analisa um argumento (convertendo-o para uma string primeiro caso necessário) e retorna um número de ponto flutuante (número decimal).

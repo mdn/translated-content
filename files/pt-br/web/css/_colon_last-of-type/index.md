@@ -2,6 +2,7 @@
 title: ':last-of-type'
 slug: Web/CSS/:last-of-type
 ---
+
 {{CSSRef}}
 
 ## Sumário

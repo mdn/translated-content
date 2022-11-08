@@ -2,6 +2,7 @@
 title: Map.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 ---
+
 {{JSRef}}
 
 O método **`delete()`** remove o elemento específico do objeto `Map` através de sua chave.

@@ -2,6 +2,7 @@
 title: video
 slug: Web/HTML/Element/Video
 ---
+
 ## Sumário
 
 O elemento HTML `<video>` é utilizado para incorporar conteúdo de vídeo em um documento HTML ou XHTML.

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/valueOf
 ---
+
 {{JSRef}}
 
 El método **`valueOf()`** retorna el valor primitivo inserto en un objeto {{jsxref("Number")}}.

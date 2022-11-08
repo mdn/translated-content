@@ -2,6 +2,7 @@
 title: Console.info()
 slug: Web/API/Console/info
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 Apresenta uma mensagem de saída no console do navegador . No Firefox e Chrome , um pequeno ícone "i" e apresentado próximo aos items do log do console .

@@ -13,6 +13,7 @@ tags:
   - Window
 translation_of: Web/API/Window/parent
 ---
+
 {{APIRef}}
 
 Ссылка на родительский объект window или родительский iframe.

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-fill-mode
 ---
+
 {{ CSSRef() }}{{ SeeCompatTable() }}
 
 ## Definición

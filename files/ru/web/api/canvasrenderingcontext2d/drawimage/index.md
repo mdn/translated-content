@@ -9,6 +9,7 @@ tags:
   - метод
 translation_of: Web/API/CanvasRenderingContext2D/drawImage
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.drawImage()`** метод Canvas 2D API предоставляет разные способы рисования изображения на холсте.

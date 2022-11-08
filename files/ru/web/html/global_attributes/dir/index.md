@@ -3,6 +3,7 @@ title: dir
 slug: Web/HTML/Global_attributes/dir
 translation_of: Web/HTML/Global_attributes/dir
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 The **`dir`** [global attribute](/ru/docs/Web/HTML/Global_attributes) is an enumerated attribute that indicates the directionality of the element's text.

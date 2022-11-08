@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/toString
 ---
+
 {{JSRef}}
 
 El método **`toString()`** devuelve una cadena de caracteres representando el array especificado y sus elementos.

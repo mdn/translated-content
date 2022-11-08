@@ -3,6 +3,7 @@ title: ParentNode.childElementCount
 slug: Web/API/Element/childElementCount
 original_slug: Web/API/ParentNode/childElementCount
 ---
+
 {{ APIRef("DOM") }}
 
 A propriedade **`ParentNode.childElementCount`**, do tipo "somente leitura" (read-only), tem como retorno um `unsigned long` que representa q quantidade de elementos filhos de um outro determinado elemento.

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 ---
+
 {{JSRef}}
 
 **`BigInt()`** 생성자는 {{jsxref("BigInt")}} 객체를 생성합니다.

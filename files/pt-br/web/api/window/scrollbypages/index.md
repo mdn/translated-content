@@ -2,6 +2,7 @@
 title: Window.scrollByPages()
 slug: Web/API/Window/scrollByPages
 ---
+
 {{ ApiRef() }}{{Non-standard_header}}
 
 ### Resumo

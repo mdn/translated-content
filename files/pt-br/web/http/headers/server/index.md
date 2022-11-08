@@ -2,6 +2,7 @@
 title: Server
 slug: Web/HTTP/Headers/Server
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho **`Server`** contem informação sobre o software usado pelo servidor de origem para manipular a solicitação.

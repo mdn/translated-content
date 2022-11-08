@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@font-face/unicode-range
 ---
+
 {{cssref}}
 
 La regla CSS **`unicode-range`** especifica un rango específico de caracteres a ser usados por una fuente definida {{cssxref("@font-face")}} y hacerla disponible para su uso en la página actual. Si la página no usa algún caracter en ese rango, la fuente no es descargada; si usa al menos uno de ellos, la fuente es descargada.

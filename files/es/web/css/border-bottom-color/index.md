@@ -7,6 +7,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/CSS/border-bottom-color
 ---
+
 << [Volver](/es/Guía_de_referencia_de_CSS)
 
 ### Resumen

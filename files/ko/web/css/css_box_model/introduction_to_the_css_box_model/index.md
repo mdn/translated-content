@@ -8,6 +8,7 @@ tags:
   - Layout
 translation_of: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 ---
+
 {{CSSRef}}
 
 문서의 레이아웃을 계산할 때, 브라우저의 렌더링 엔진은 표준 **CSS 기본 박스 모델**에 따라 각각의 요소를 사각형 박스로 표현합니다. CSS는 박스의 크기, 위치, 속성(색, 배경, 테두리 모양 등)을 결정합니다.

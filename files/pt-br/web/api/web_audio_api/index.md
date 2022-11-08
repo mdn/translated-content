@@ -35,7 +35,7 @@ A API de áudio da Web também nos permite controlar como o áudio é _espaciali
 
 A API de áudio da Web pode parecer intimidante para aqueles que não estão familiarizados com termos de áudio ou música e, como incorpora uma grande quantidade de funcionalidades, pode ser difícil começar se você for um desenvolvedor.
 
-Ele pode ser usado para incorporar áudio em seu site ou aplicativo, [fornecendo uma atmosfera como futurelibrary.no](https://www.futurelibrary.no/) ou [feedback auditivo em formulários](https://css-tricks .com/form-validation-web-audio/). No entanto, também pode ser usado para criar instrumentos interativos _avançados_. Com isso em mente, é adequado tanto para desenvolvedores quanto para músicos.
+Ele pode ser usado para incorporar áudio em seu site ou aplicativo, [fornecendo uma atmosfera como futurelibrary.no](https://www.futurelibrary.no/) ou [feedback auditivo em formulários](https://css-tricks.com/form-validation-web-audio/). No entanto, também pode ser usado para criar instrumentos interativos _avançados_. Com isso em mente, é adequado tanto para desenvolvedores quanto para músicos.
 
 Temos um [tutorial introdutório simples](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) para aqueles que estão familiarizados com programação, mas precisam de uma boa introdução a alguns dos termos e estrutura da API.
 
@@ -117,7 +117,7 @@ Assim que você terminar de processar seu áudio, essas interfaces definem onde 
 - {{domxref("AudioDestinationNode")}}
   - : A interface **`AudioDestinationNode`** representa o destino final de uma fonte de áudio em um determinado contexto — geralmente os alto-falantes do seu dispositivo.
 - {{domxref("MediaStreamAudioDestinationNode")}}
-  - : A interface **`MediaStreamAudioDestinationNode`** representa um destino de áudio que consiste em um [WebRTC](/pt-BR/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} com um único `AudioMediaStreamTrack `, que pode ser usado de maneira semelhante a um {{domxref("MediaStream")}} obtido de {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}. É um {{domxref("AudioNode")}} que atua como destino de áudio.
+  - : A interface **`MediaStreamAudioDestinationNode`** representa um destino de áudio que consiste em um [WebRTC](/pt-BR/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} com um único `AudioMediaStreamTrack`, que pode ser usado de maneira semelhante a um {{domxref("MediaStream")}} obtido de {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}. É um {{domxref("AudioNode")}} que atua como destino de áudio.
 
 ### Análise e visualização de dados
 
@@ -219,7 +219,7 @@ Você pode encontrar vários exemplos em nosso [repositório webaudio-example](h
 
 - [Tones](https://github.com/bit101/tones): uma biblioteca simples para tocar tons/notas específicos usando a API de áudio da Web.
 - [Tone.js](https://tonejs.github.io/): um framework para criar música interativa no navegador.
-- [howler.js](https://github.com/goldfire/howler.js/): uma biblioteca de áudio JS que tem como padrão [Web Audio API](https://webaudio.github.io/web-audio- api/) e retorna para [HTML Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element), além de fornecer outros recursos úteis.
+- [howler.js](https://github.com/goldfire/howler.js/): uma biblioteca de áudio JS que tem como padrão [Web Audio API](https://webaudio.github.io/web-audio-api/) e retorna para [HTML Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element), além de fornecer outros recursos úteis.
 - [Mooog](https://github.com/mattlima/mooog): encadeamento de AudioNodes no estilo jQuery, envios/retornos no estilo do mixer e muito mais.
 - [XSound](https://xsound.jp/): Biblioteca Web Audio API para Sintetizador, Efeitos, Visualização, Gravação, etc.
 - [OpenLang](https://github.com/chrisjohndigital/OpenLang): aplicativo da Web do laboratório de linguagem de vídeo HTML usando a API de áudio da Web para gravar e combinar vídeo e áudio de diferentes fontes em um único arquivo ([fonte no GitHub]( https://github.com/chrisjohndigital/OpenLang))

@@ -2,6 +2,7 @@
 title: URLSearchParams.get()
 slug: Web/API/URLSearchParams/get
 ---
+
 {{ApiRef("URL API")}}{{SeeCompatTable}}
 
 O métod **get()** da interface {{domxref("URLSearchParams")}}, retorna o primeiro valor associado ao parametro de busca fornecido.

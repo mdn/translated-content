@@ -3,6 +3,7 @@ title: Window.close()
 slug: Web/API/Window/close
 translation_of: Web/API/Window/close
 ---
+
 {{ ApiRef() }}
 
 ## Resumen

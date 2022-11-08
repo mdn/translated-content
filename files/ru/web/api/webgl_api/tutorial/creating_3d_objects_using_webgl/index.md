@@ -7,6 +7,7 @@ tags:
 translation_of: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Создание_3D_объектов_с_помощью_WebGL
 ---
+
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
 Давайте поместим наш квадрат в трёхмерное пространство, добавив ещё 5 граней, чтобы получить куб. Чтобы сделать это наиболее продуктивно, вместо рисования вершин непосредственным вызовом метода {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} , мы будем использовать массив вершин в виде таблицы и ссылаться на каждую вершину в этой таблице, чтобы определить положение каждой вершины грани, вызывая {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.

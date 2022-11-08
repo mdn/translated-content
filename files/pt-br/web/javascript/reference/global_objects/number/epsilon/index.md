@@ -2,6 +2,7 @@
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
+
 {{JSRef}}
 
 A propriedade **`Number.EPSILON`** representa a diferença entre 1 e o menor ponto flutuante maior que 1.

@@ -7,6 +7,7 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/str/split
 ---
+
 {{XsltRef}}
 
 `str:split()` divide una cadena usando una cadena patrón que determina donde deberían ocurrir las divisiones y devuelve un conjunto de nodos que contiene las cadenas resultantes.

@@ -3,6 +3,7 @@ title: Agregar botón a la barra de herramientas
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 ---
+
 {{AddonSidebar}}
 
 La barra de herramientas es una de las principales componentes UI disponibles para las extensiones. Toolbar buttons live in the main browser toolbar y contienen un icono. Cuando el usuario da click en el icono, dos cosas pueden suceder:

@@ -7,6 +7,7 @@ tags:
   - Property
 translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 ---
+
 {{APIRef}}
 
 Свойство **`CanvasRenderingContext2D.lineJoin`** предоставляемое Canvas 2D API определяет форму вершин в которых линии сходятся. Длина линий должна быть ненулевой.

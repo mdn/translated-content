@@ -14,6 +14,7 @@ tags:
   - списки
 translation_of: Web/HTML/Element/dd
 ---
+
 {{HTMLSidebar}}
 
 **HTML-элемент `<dd>`** (_от англ. Description Details_) предоставляет подробности или определение предшествующего термина ({{HTMLElement("dt")}}) в списке определений ({{HTMLElement("dl")}}).

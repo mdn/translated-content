@@ -2,6 +2,7 @@
 title: Map.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/Map/get
 ---
+
 {{JSRef}}
 
 O método **`get()`** retorna um elemento específico do objeto `Map`. Se o valor

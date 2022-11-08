@@ -11,6 +11,7 @@ tags:
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 original_slug: Web/CSS/CSS_Positioning/entendiendo_z_index/Apilamiento_y_float
 ---
+
 {{cssref}}
 
 ### Apilamiento y float

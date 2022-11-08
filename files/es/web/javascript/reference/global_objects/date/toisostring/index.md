@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toISOString
 ---
+
 {{JSRef}}
 
 El método **`toISOString()`** devuelve una cadena en el formato _simplificado_ extendido ISO ([ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)), que siempre mide 24 o 27 caracteres de largo: (`YYYY-MM-DDTHH:mm:ss.sssZ` or `±YYYYYY-MM-DDTHH:mm:ss.sssZ`, respectivamente). El uso horario no tiene retraso respecto a UTC, como lo denota el sufijo `"Z"`.

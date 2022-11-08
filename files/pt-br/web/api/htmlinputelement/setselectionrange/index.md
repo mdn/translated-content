@@ -2,6 +2,7 @@
 title: HTMLInputElement.setSelectionRange()
 slug: Web/API/HTMLInputElement/setSelectionRange
 ---
+
 {{APIRef("HTML DOM")}}
 
 O método**`HTMLInputElement.setSelectionRange()`** define as posições inicial e final da seleção atual do texto em um elemento {{HTMLElement("input")}}.

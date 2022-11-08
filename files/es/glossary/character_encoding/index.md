@@ -8,6 +8,7 @@ tags:
   - Glosario
 translation_of: Glossary/character_encoding
 ---
+
 Una codificación define cómo se traducen los bytes a texto y viceversa. Una secuencia de bytes se pueden interpretar de diferentes formas. Eligiendo una codificación en particular (como UTF-8), decimos como la secuencia de bytes debe ser interpretada.
 
 Por ejemplo, en HTML normalmente especificamos que la codificiación va a ser UTF-8 con la siguiente linea:

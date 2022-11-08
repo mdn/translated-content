@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/delete
 ---
+
 {{JSRef}}
 
 El método **`delete()`** remueve el elemento especificado del objeto `Set`.

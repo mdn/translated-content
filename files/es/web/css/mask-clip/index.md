@@ -7,6 +7,7 @@ translation_of: Web/CSS/mask-clip
 translation_of_original: Web/CSS/-webkit-mask-clip
 original_slug: Web/CSS/-webkit-mask-clip
 ---
+
 {{ CSSRef() }}
 
 {{ Non-standard_header() }}

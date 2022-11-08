@@ -22,7 +22,7 @@ _从父级 {{domxref("AudioContext")}} 获取属性。_
 ### 事件处理程序
 
 - {{domxref("OfflineAudioContext.oncomplete")}}
-  - : 当进程完成时，基于事件版本的{{domxref("OfflineAudioContext.startRendering()")}} 被使用之后，{{event("Event_handlers", "event handler")}} 将会被调用，[`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event) 事件类型为 {{domxref("OfflineAudioCompletionEvent")}}）被触发。
+  - : 当进程完成时，基于事件版本的{{domxref("OfflineAudioContext.startRendering()")}} 被使用之后，事件处理器将会被调用，[`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event) 事件类型为 {{domxref("OfflineAudioCompletionEvent")}}）被触发。
 
 ## 方法
 
@@ -35,7 +35,7 @@ _从父级 {{domxref("AudioContext")}} 和 {{domxref("EventTarget")}} 获取方�
 - {{domxref("OfflineAudioContext.startRendering()")}}
   - : 开始渲染音频，考虑当前连接和当前计划的修改。这个页面涵盖基于事件的和基于 Promise 的版本。
 
-## 例子
+## 示例
 
 这个简单的例子中，我们声明了 {{domxref("AudioContext")}} 和 `OfflineAudioContext` 对象。我们使用 `AudioContext` 去加载一个 XHR（{{domxref("AudioContext.decodeAudioData")}}）获取的音轨，然后使用 `OfflineAudioContext` 去渲染音频并得到一个 into an {{domxref("AudioBufferSourceNode")}}，并播放这个音轨。在离线音频处理图建立后，你需要去使用 {{domxref("OfflineAudioContext.startRendering")}} 来渲染它成为 {{domxref("AudioBuffer")}}。
 

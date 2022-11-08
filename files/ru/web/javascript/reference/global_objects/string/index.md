@@ -8,6 +8,7 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 Объект **`String`** используется, чтобы представить и конструировать последовательность символов.

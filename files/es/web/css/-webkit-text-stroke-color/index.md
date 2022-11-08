@@ -7,6 +7,7 @@ tags:
   - Propiedad CSS
 translation_of: Web/CSS/-webkit-text-stroke-color
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

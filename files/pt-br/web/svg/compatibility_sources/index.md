@@ -2,6 +2,7 @@
 title: Compatibility sources
 slug: Web/SVG/Compatibility_sources
 ---
+
 As seguintes fontes são usada para as tabelas de compatibilidade no elemento SVG e atributos:
 
 - [Aqui](/En/SVG_in_Firefox) juntos podemos revisar o histórico para Firefox.

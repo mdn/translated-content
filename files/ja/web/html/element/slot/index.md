@@ -3,7 +3,7 @@ title: '<slot>: ウェブコンポーネントのスロット要素'
 slug: Web/HTML/Element/slot
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<slot>`** は [HTML](/ja/docs/Web/HTML) の要素 — <a href="/ja/docs/Web/Web_Components">ウェブコンポーネント</a>技術の一部 — は、ウェブコンポーネント内で別な DOM ツリーを構築し、いっしょに表示することができる独自のマークアップを入れることができるプレイスホルダーです。
 

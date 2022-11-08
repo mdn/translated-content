@@ -2,6 +2,7 @@
 title: Document.head
 slug: Web/API/Document/head
 ---
+
 {{APIRef("DOM")}}
 
 Retorna o elemento {{HTMLElement("head")}} do documento atual. Se existir mais de um elemento `<head>`, apenas o primeiro será devolvido.

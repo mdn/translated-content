@@ -10,6 +10,7 @@ tags:
   - 자바스크립트
 translation_of: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지

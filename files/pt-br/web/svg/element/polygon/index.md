@@ -2,6 +2,7 @@
 title: polygon
 slug: Web/SVG/Element/polygon
 ---
+
 {{SVGRef}}
 
 O elemento `polygon` define uma forma fechada que consiste em um conjunto de segmentos de linha reta reta ligados.

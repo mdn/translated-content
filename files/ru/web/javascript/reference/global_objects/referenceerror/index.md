@@ -9,6 +9,7 @@ tags:
   - ReferenceError
 translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 ---
+
 {{JSRef}}
 
 Объект **`ReferenceError`** представляет ошибку, возникающую при обращении к несуществующей переменной.

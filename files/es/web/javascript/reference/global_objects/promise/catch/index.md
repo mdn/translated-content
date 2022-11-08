@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/catch
 ---
+
 {{JSRef}}
 
 El método **catch()** retorna una `Promise` y solo se ejecuta en los casos en los que la promesa se marca como `Reject`. Se comporta igual que al llamar {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} (de hecho, al llamar `obj.catch(onRejected)` internamente llama a `obj.then(undefined, onRejected)`).

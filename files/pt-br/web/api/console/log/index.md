@@ -2,6 +2,7 @@
 title: Console.log()
 slug: Web/API/Console/log
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 ## Sumário

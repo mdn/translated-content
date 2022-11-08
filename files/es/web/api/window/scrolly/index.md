@@ -8,6 +8,7 @@ tags:
   - Scroll Vertical
 translation_of: Web/API/Window/scrollY
 ---
+
 {{APIRef}}
 
 ## Sumario

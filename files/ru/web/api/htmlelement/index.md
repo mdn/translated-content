@@ -3,6 +3,7 @@ title: HTMLElement
 slug: Web/API/HTMLElement
 translation_of: Web/API/HTMLElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Интерфейс **`HTMLElement`** представляет собой любой элемент [HTML](/ru/docs/Web/HTML). Некоторые элементы напрямую используют этот интерфейс, другие - через промежуточный интерфейс.

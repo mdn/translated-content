@@ -2,6 +2,7 @@
 title: image
 slug: Web/SVG/Element/image
 ---
+
 {{SVGRef}}
 
 O elemento SVG **`<image>`** carrega imagens dentro de documentos SVG. Ele pode exibir arquivos {{glossary("raster image")}} ou outros arquivos SVG.

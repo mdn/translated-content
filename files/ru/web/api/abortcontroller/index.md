@@ -3,6 +3,7 @@ title: AbortController
 slug: Web/API/AbortController
 translation_of: Web/API/AbortController
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 Интерфейс **`AbortController`** представляет объект контроллера, который позволяет вам при необходимости обрывать один и более DOM запросов.

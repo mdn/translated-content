@@ -3,6 +3,7 @@ title: abort
 slug: Web/API/AbortSignal/abort_event
 translation_of: Web/API/AbortSignal/abort_event
 ---
+
 {{SeeCompatTable}}
 
 Событие **`abort`** из [Fetch API](/ru/docs/Web/API/Fetch_API) вызывается когда fetch запрос прерывается, т.е. с помощью {{domxref("AbortController.abort()")}}.

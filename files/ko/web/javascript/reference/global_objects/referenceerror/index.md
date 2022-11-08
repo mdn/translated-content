@@ -3,6 +3,7 @@ title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
 translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 ---
+
 {{JSRef}}
 
 **`ReferenceError`** 객체는 존재하지 않는 변수를 참조했을 때 발생하는 에러를 나타냅니다.

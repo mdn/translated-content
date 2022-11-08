@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/API/HTMLAnchorElement
 ---
+
 {{APIRef ("HTML DOM")}}
 La interfaz **HTMLAnchorElement** representa elementos de hipervínculo y proporciona propiedades y métodos especiales (más allá de los de la interfaz de objeto {{domxref ("HTMLElement")}} regular de la que heredan) para manipular el diseño y la presentación de dichos elementos.
 
@@ -19,9 +20,9 @@ Hereda propiedades de su elemento primario, {{domxref ("HTMLElement")}}, y las i
 
 - {{domxref ("HTMLAnchorElement.accessKey")}}
   - : Es un {{domxref ("DOMString")}} que representa un solo carácter que cambia el foco de entrada al hipervínculo.
-- {{domxref ("HTMLAnchorElement.charset")}} {{obsolete_inline}}
+- {{domxref ("HTMLAnchorElement.charset")}} {{deprecated_inline}}
   - : Es un {{domxref ("DOMString")}} que representa la codificación de caracteres del recurso vinculado.
-- {{domxref ("HTMLAnchorElement.coords")}} {{obsolete_inline}}
+- {{domxref ("HTMLAnchorElement.coords")}} {{deprecated_inline}}
   - : Es un {{domxref ("DOMString")}} que representa una lista de coordenadas separadas por comas.
 - {{domxref ("HTMLAnchorElement.download")}} {{experimental_inline}}
   - : Es un {{domxref ("DOMString")}} que indica que el recurso vinculado está destinado a descargarse en lugar de mostrarse en el navegador. El valor representa el nombre propuesto del archivo. Si el nombre no es un nombre de archivo válido del sistema operativo subyacente, el navegador lo adaptará.
@@ -37,7 +38,7 @@ Hereda propiedades de su elemento primario, {{domxref ("HTMLElement")}}, y las i
   - : Es un {{domxref ("DOMString")}} que refleja el atributo HTML {{htmlattrxref ("hreflang", "a")}}, que indica el idioma del recurso vinculado.
 - {{domxref ("HTMLAnchorElement.media")}}
   - : Es un {{domxref ("DOMString")}} que refleja el atributo HTML {{htmlattrxref ("media", "a")}}, que indica los medios previstos para el recurso vinculado.
-- {{domxref ("HTMLAnchorElement.name")}} {{obsolete_inline}}
+- {{domxref ("HTMLAnchorElement.name")}} {{deprecated_inline}}
   - : Es un {{domxref ("DOMString")}} que representa el nombre del ancla.
 - {{domxref ("HTMLHyperlinkElementUtils.password")}}
   - : Es un {{domxref ("USVString")}} que contiene la contraseña especificada antes del nombre de dominio.
@@ -55,11 +56,11 @@ Hereda propiedades de su elemento primario, {{domxref ("HTMLElement")}}, y las i
   - : Es un {{domxref ("DOMString")}} que refleja el atributo HTML {{htmlattrxref ("rel", "a")}}, que especifica la relación del objeto de destino con el objeto vinculado.
 - {{domxref ("HTMLAnchorElement.relList")}} {{readonlyInline}}
   - : Devuelve un {{domxref ("DOMTokenList")}} que refleja el atributo HTML {{htmlattrxref ("rel", "a")}}, como una lista de tokens.
-- {{domxref ("HTMLAnchorElement.rev")}} {{obsolete_inline}}
+- {{domxref ("HTMLAnchorElement.rev")}} {{deprecated_inline}}
   - : Es un {{domxref ("DOMString")}} que representa el atributo HTML {{htmlattrxref ("rev", "a")}}, que especifica la relación del objeto de enlace con el objeto de destino.
 - {{domxref ("HTMLHyperlinkElementUtils.search")}}
   - : Es un {{domxref ("USVString")}} que representa el elemento de búsqueda, incluido el signo de interrogación principal ('?'), Si lo hay, de la URL a la que se hace referencia.
-- {{domxref ("HTMLAnchorElement.shape")}} {{obsolete_inline}}
+- {{domxref ("HTMLAnchorElement.shape")}} {{deprecated_inline}}
   - : Es un {{domxref ("DOMString")}} que representa la forma del área activa.
 - {{domxref ("HTMLAnchorElement.tabindex")}}
   - : Es un largo que contiene la posición del elemento en el orden de navegación de tabulación para el documento actual.

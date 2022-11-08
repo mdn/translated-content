@@ -3,6 +3,7 @@ title: Escrevendo aplicações cliente WebSocket
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 original_slug: WebSockets/Escrevendo_aplicacoes_cliente_WebSocket
 ---
+
 Aplicações cliente usam o [WebSocket API](/pt-BR/docs/Web/API/Websockets_API) para se comunicar com [WebSocket servers](/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) sob o protocolo WebSocket.
 
 {{AvailableInWorkers}}

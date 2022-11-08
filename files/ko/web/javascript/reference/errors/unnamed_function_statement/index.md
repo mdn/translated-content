@@ -10,6 +10,7 @@ tags:
   - 함수 이름
 translation_of: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지

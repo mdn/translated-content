@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/for...of
 original_slug: Web/JavaScript/Referencia/Sentencias/for...of
 ---
+
 {{jsSidebar("Statements")}}
 
 La sentencia **sentencia `for...of`** ejecuta un bloque de código para cada elemento de un [objeto iterable](/es/docs/Web/JavaScript/Guide/iterable), como lo son: {{jsxref("String")}}, {{jsxref("Array")}}, objetos similares a array (por ejemplo, {{jsxref("Functions/arguments", "arguments")}} or [`NodeList`](/es/docs/Web/API/NodeList)), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} e iterables definidos por el usuario.

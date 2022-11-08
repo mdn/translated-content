@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isInteger
 ---
+
 {{JSRef}}
 
 El método **`Number.isInteger()`** determina si el valor pasado es de tipo entero.

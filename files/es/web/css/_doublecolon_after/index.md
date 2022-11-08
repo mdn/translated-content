@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/::after
 ---
+
 {{CSSRef}}
 
 En CSS, **`::after`** crea un [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) que es el último hijo del elemento seleccionado. Es comunmente usado para añadir contenido cosmético a un elemento con la propiedad {{CSSxRef("content")}}.Es en linea (inline) de forma predeterminada.

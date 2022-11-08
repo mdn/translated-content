@@ -2,6 +2,7 @@
 title: Gerenciamento de Memória
 slug: Web/JavaScript/Memory_Management
 ---
+
 {{JsSidebar("Advanced")}}
 
 ## Introdução

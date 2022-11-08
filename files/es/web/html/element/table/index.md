@@ -4,6 +4,7 @@ slug: Web/HTML/Element/table
 translation_of: Web/HTML/Element/table
 original_slug: Web/HTML/Elemento/table
 ---
+
 ## Resumen
 
 El _Elemento de Tabla HTML_ (`<table>`) representa datos en dos o mas dimensiones.

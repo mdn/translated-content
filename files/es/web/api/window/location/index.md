@@ -7,6 +7,7 @@ tags:
   - navegación
 translation_of: Web/API/Window/location
 ---
+
 {{APIRef}}
 
 La propiedad de sólo lectura `Window.location` retorna un objeto {{domxref("Location")}} con información acerca de la ubicación actual del documento.

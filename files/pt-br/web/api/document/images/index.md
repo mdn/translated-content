@@ -2,6 +2,7 @@
 title: Document.images
 slug: Web/API/Document/images
 ---
+
 {{ ApiRef("DOM") }}
 
 ## Summary

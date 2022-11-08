@@ -2,6 +2,7 @@
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
 ---
+
 {{HTTPSidebar}}
 
 O **método de requisição HTTP PATCH** aplica modificações parciais a um recurso.

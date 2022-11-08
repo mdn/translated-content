@@ -2,6 +2,7 @@
 title: '::backdrop'
 slug: Web/CSS/::backdrop
 ---
+
 {{CSSRef}} {{SeeCompatTable}}
 
 Cada elemento na [camada superior](https://fullscreen.spec.whatwg.org/#top-layer) de uma pilha de elementos possui um {{Cssxref("pseudo-elementos", "pseudo-elemento")}} _`::backdrop`_. Esse pseudo-elemento é uma caixa renderizada imediatamente abaixo do elemento superior (e acima do elemento logo abaixo desse elemento, caso exista algum), dentro da camada superior.

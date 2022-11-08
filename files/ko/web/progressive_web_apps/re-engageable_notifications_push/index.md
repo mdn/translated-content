@@ -10,6 +10,7 @@ tags:
   - 프로그레시브 웹 앱
 translation_of: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
+
 {{PreviousMenu("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
 
 앱을 오프라인에서 동작하도록 컨텐츠를 캐싱하는 능력은 훌륭한 기능입니다. 사용자가 홈 화면에 웹 앱을 설치하도록 허용하는 것은 더 좋습니다. 하지만, 사용자의 동작에 의존하는 대신 푸시 메시지와 알림을 사용해 새로운 컨텐츠가 있을때 이를 전달하여 사용자를 자동으로 다시 참여하도록 할 수 있습니다.

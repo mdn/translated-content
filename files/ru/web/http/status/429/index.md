@@ -3,6 +3,7 @@ title: 429 Too Many Requests
 slug: Web/HTTP/Status/429
 translation_of: Web/HTTP/Status/429
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`429 Too Many Requests`** код ответа указывает, что пользователь отправил слишком много запросов за последнее время ("ограничение скорости" или "rate limiting" ).

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/HTML/Element/details
 original_slug: Web/HTML/Elemento/details
 ---
+
 {{ SeeCompatTable() }}
 
 ## Resumen

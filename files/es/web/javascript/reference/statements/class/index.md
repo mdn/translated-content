@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Statements/class
 translation_of: Web/JavaScript/Reference/Statements/class
 original_slug: Web/JavaScript/Referencia/Sentencias/class
 ---
+
 {{jsSidebar("Statements")}}
 
 La **declaración class** crea una nueva clase con el nombre proporcionado utilizando la herencia basada en prototipos

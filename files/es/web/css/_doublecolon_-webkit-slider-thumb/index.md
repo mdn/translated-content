@@ -13,6 +13,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/::-webkit-slider-thumb
 ---
+
 admi{{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

@@ -2,6 +2,7 @@
 title: Document.write()
 slug: Web/API/Document/write
 ---
+
 {{ApiRef("DOM")}}
 
 O método **`Document.write()`** grava uma sequência de caracteres em um documento aberto por {{domxref("document.open()")}}.

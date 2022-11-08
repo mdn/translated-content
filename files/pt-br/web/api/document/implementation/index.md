@@ -2,6 +2,7 @@
 title: Document.implementation
 slug: Web/API/Document/implementation
 ---
+
 {{ ApiRef("DOM") }}
 
 ## Sumário

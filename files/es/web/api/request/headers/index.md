@@ -3,6 +3,7 @@ title: Request.headers
 slug: Web/API/Request/headers
 translation_of: Web/API/Request/headers
 ---
+
 {{APIRef("Fetch")}}
 
 La propiedad de solo lectura **headers** de la interface {{domxref("Request")}} es un objeto de tipo {{domxref("Headers")}}, asociado a la petición.

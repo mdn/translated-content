@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects
 ---
+
 {{jsSidebar("Objects")}}
 
 이 장은 JavaScript의 모든 표준 내장 객체와 그 메서드 및 속성을 나열합니다.

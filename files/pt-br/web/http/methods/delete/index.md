@@ -2,6 +2,7 @@
 title: DELETE
 slug: Web/HTTP/Methods/DELETE
 ---
+
 {{HTTPSidebar}}O **método de requisição HTTP DELETE** remove o recurso especificado.
 
 <table class="properties">

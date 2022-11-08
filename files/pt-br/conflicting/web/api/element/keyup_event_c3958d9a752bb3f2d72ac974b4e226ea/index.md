@@ -11,6 +11,7 @@ tags:
 original_slug: Web/API/Document/keyup_event
 browser-compat: api.Document.keyup_event
 ---
+
 {{APIRef}}
 
 O evento **`keyup`** é acionado quando a tecla é liberada.

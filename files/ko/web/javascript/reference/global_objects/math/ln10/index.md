@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN10
 ---
+
 {{JSRef}}
 
 **`Math.LN10`** 속성은 10의 자연로그 값, 약 2.302의 값을 가집니다.

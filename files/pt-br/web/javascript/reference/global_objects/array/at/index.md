@@ -2,6 +2,7 @@
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
 ---
+
 {{JSRef}}
 
 O método **`at()`** recebe um valor inteiro e retorna o item referente ao index dele, permitindo valores positivos ou negativos. Valores negativos contam apartir do último item do array.

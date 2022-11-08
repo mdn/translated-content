@@ -2,6 +2,7 @@
 title: touch-action
 slug: Web/CSS/touch-action
 ---
+
 {{CSSRef}}
 
 A propriedade **`touch-action`** é uma especificação CSS , e forma, uma determinada região que pode ser manipulada pelo usuário através de uma tela sensível ao toque (por exemplo, recursos panorâmicos ou de zoom incorporados no navegador).

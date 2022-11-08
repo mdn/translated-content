@@ -2,6 +2,7 @@
 title: Content-Range
 slug: Web/HTTP/Headers/Content-Range
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta HTTP **`Content-Range`** indica em que lugar uma mensagem parcial pertence em uma mensagem completa no corpo.

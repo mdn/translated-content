@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:nth-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS) **`:nth-child()`** de [CSS](/es/docs/Web/CSS) coincide con uno o más elementos en función de su posición entre un grupo de hermanos.

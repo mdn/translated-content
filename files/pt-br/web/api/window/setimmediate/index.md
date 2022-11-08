@@ -2,6 +2,7 @@
 title: Window.setImmediate()
 slug: Web/API/Window/setImmediate
 ---
+
 {{APIRef("HTML DOM")}}{{Non-standard_header}}
 
 Esse método é usado para interromper operações de longa duração e executar uma função de retorno de chamada imediatamente após o navegador ter concluído outras operações, como eventos e atualizações de exibição.

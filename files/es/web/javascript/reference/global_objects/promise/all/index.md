@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/all
 ---
+
 {{JSRef}}
 
 El método **`Promise.all(iterable)`** devuelve una promesa que termina correctamente cuando todas las promesas en el argumento iterable han sido concluídas con éxito, o bien rechaza la petición con el motivo pasado por la primera promesa que es rechazada.

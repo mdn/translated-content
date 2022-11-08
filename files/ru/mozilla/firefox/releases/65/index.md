@@ -3,6 +3,7 @@ title: Firefox 65 для разработчиков
 slug: Mozilla/Firefox/Releases/65
 translation_of: Mozilla/Firefox/Releases/65
 ---
+
 {{FirefoxSidebar}}
 
 В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 64 был выпущен 29 января 2019 года.

@@ -10,6 +10,7 @@ tags:
   - TopicStub
 translation_of: Web/API/HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement`** interface provides methods to create and modify {{HTMLElement("form")}} elements; it inherits from properties and methods of the {{domxref("HTMLElement")}} interface.

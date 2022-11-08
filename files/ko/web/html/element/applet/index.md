@@ -3,6 +3,7 @@ title: <applet>
 slug: Web/HTML/Element/applet
 translation_of: Web/HTML/Element/applet
 ---
+
 ## 개요
 
 HTML의 Applet 태그 (`<applet>`) 는 자바 애플릿을 보이게 하는 곳에 쓰입니다.

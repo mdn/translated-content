@@ -3,6 +3,7 @@ title: click
 slug: Web/API/Element/click_event
 translation_of: Web/API/Element/click_event
 ---
+
 {{ APIRef }}
 
 El evento "click" se dispara cuando se presiona el botón de un dispositivo de entrada (Mouse o Mousepad) sobre un elemento.

@@ -11,6 +11,7 @@ tags:
   - Tiempo de navegación
 translation_of: Web/API/Performance/timing
 ---
+
 {{APIRef("Navigation Timing")}}{{deprecated_header}}
 
 > **Advertencia:** Esta propiedad está deprecada en [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Por favor usa {{domxref("Performance.timeOrigin")}} en vez esta..

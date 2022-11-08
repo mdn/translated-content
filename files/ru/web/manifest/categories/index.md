@@ -7,6 +7,7 @@ tags:
   - categories
 translation_of: Web/Manifest/categories
 ---
+
 {{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}
 
 <table class="properties">

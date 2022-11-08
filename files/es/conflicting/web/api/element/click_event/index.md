@@ -4,6 +4,7 @@ slug: conflicting/Web/API/Element/click_event
 translation_of: Web/API/GlobalEventHandlers/onclick
 original_slug: Web/API/GlobalEventHandlers/onclick
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 La propiedad **onclick** devuelve el manejador del evento `click` del elemento actual.

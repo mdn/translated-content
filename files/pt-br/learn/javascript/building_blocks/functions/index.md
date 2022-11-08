@@ -3,6 +3,7 @@ title: Funções — blocos reutilizáveis de código
 slug: Learn/JavaScript/Building_blocks/Functions
 original_slug: Aprender/JavaScript/Elementos_construtivos/Functions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 
 Outro conceito essencial em código é função, que permitem que você armazene um pedaço de código que realiza uma simples tarefa dentro de um bloco, e então chama aquele código sempre que você precisar usá-lo com um curto comando — em vez de ter que escrever o mesmo código multiplas vezes. Neste artigo nós vamos explorar conceitos fundamentais por trás das funções como sintaxe básica, como invocá-las e defini-las, escopo, e parâmetros.

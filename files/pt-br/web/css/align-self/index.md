@@ -2,6 +2,7 @@
 title: align-self
 slug: Web/CSS/align-self
 ---
+
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`align-self`** alinha itens-flex da linha flex alvo, sobreescrevendo o valor {{cssxref("align-items")}}. Se alguma dos eixos das margens do dado item está estabelecido como `auto`, então `align-self` é ignorado.
 
 {{EmbedInteractiveExample("pages/css/align-self.html")}}

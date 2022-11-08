@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getHours
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getHours
 ---
+
 {{JSRef}}
 
 El método **`getHours()`** retorna la hora de la fecha especificada, de acuerdo a la hora local.

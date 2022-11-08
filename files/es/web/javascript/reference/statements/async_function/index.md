@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/async_function
 original_slug: Web/JavaScript/Referencia/Sentencias/funcion_asincrona
 ---
+
 {{jsSidebar("Statements")}}
 
 La declaración de función **`async`** define una _función asíncrona_, la cual devuelve un objeto {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}.

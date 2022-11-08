@@ -7,6 +7,7 @@ tags:
   - WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
+
 {{JSRef()}}
 
 Объект **`WeakSet`** - коллекция, элементами которой могут быть только _объекты._ Ссылки на эти объекты в WeakSet являются слабыми. Каждый объект может быть добавлен в WeakSet только один раз.

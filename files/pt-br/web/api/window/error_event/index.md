@@ -3,6 +3,7 @@ title: GlobalEventHandlers.onerror
 slug: Web/API/Window/error_event
 original_slug: Web/API/GlobalEventHandlers/onerror
 ---
+
 {{ApiRef("HTML DOM")}}
 
 Um [event handler](/pt-BR/docs/Web/Guide/Events/Event_handlers) para o evento [`error`](/pt-BR/docs/Web/Events/error) . Eventos de erro são disparados contra diversos tipos de alvos, para diferentes tipos de erros:

@@ -3,6 +3,7 @@ title: MessageEvent
 slug: Web/API/MessageEvent
 translation_of: Web/API/MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 La interface **`MessageEvent`** representa un mensaje recibido por un objeto de destino.

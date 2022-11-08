@@ -3,6 +3,7 @@ title: MediaRecorder.requestData()
 slug: Web/API/MediaRecorder/requestData
 translation_of: Web/API/MediaRecorder/requestData
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 Метод **`MediaRecorder.requestData()`** (часть [MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API)) используется, чтобы поднять {{domxref("dataavailable")}} событие содержащее {{domxref("Blob")}} объект захваченных медиа-данных как это было когда метод был вызван. This can then be grabbed и манипулировать как необходимо.

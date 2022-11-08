@@ -3,6 +3,7 @@ title: Referência de CSS
 slug: Web/CSS/Reference
 original_slug: Web/CSS/CSS_Reference
 ---
+
 {{CSSRef}}
 
 Use esta **referência de CSS** para navegar por um índice alfabético das propriedades padrão do [CSS](/en/CSS), [pseudo-classes](/en/CSS/Pseudo-classes), [pseudo-elementos](/en/CSS/Pseudo-elements), tipos de dados e [@-rules](/en/CSS/At-rule).

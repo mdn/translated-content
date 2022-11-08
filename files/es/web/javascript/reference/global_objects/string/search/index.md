@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/search
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 ## Resumen

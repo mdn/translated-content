@@ -3,7 +3,7 @@ title: '<thead>: 表ヘッダー要素'
 slug: Web/HTML/Element/thead
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<thead>`** は [HTML](/ja/docs/Web/HTML) の要素で、表の列の見出しを定義する行のセットを定義します。
 

@@ -10,6 +10,7 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 ---
+
 {{JSRef}}
 
 **`trim()`** 메서드는 문자열 양 끝의 공백을 제거합니다.

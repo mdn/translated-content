@@ -3,6 +3,7 @@ title: Envie sugestões sobre o MDN
 slug: MDN/Community
 original_slug: MDN/Contribute/Feedback
 ---
+
 {{MDNSidebar}}
 
 Bem-vindo ao Mozilla Developer Network! Se você tem sugestões, ou está tendo problemas usando MDN, este é o lugar certo para estar. O fato de que você está interessado em oferecer um feedback, faz de você mais uma parte da comunidade Mozilla e agradecemos antecipadamente por seu interesse.

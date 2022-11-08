@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:last-of-type
 ---
+
 {{CSSRef}}
 
 La [pseudo-class](/es/docs/Web/CSS/Pseudo-classes) **`:last-of-type`** de [CSS](/es/docs/Web/CSS) representa el último elemento de su tipo entre un grupo de elementos hermanos.

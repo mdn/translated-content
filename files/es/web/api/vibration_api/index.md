@@ -13,6 +13,7 @@ tags:
 translation_of: Web/API/Vibration_API
 original_slug: Web/Guide/API/Vibration
 ---
+
 La mayoría de los dispositivos modernos pueden vibrar a través del hardware, esto permite que a través del código de software se pueda emitir estas vibraciones. La **Vibration API** ofrece a las aplicaciones web la capacidad de acceder a este hardware en caso este lo soporte, caso contrario el dispositivo no hace nada.
 
 ## Describiendo vibraciones

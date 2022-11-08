@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/param
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<param>` 요소**는 {{HTMLElement("object")}} 요소의 매개변수를 정의합니다.

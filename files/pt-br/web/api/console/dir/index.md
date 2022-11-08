@@ -2,6 +2,7 @@
 title: Console.dir()
 slug: Web/API/Console/dir
 ---
+
 {{ APIRef("Console API") }}{{Non-standard_header}}
 
 ## Resumo

@@ -2,6 +2,7 @@
 title: Window.innerHeight
 slug: Web/API/Window/innerHeight
 ---
+
 {{APIRef}}
 
 Altura (em pixels) da janela de visualização do navegador, incluindo, se renderizado, a barra de rolagem horizontal.

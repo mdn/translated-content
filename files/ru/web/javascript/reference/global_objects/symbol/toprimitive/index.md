@@ -7,6 +7,7 @@ tags:
   - toPrimitive
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 ---
+
 {{JSRef}}
 
 **`Symbol.toPrimitive` **является символом (symbol), который описывает свойство объекта как функцию, которая вызывается при преобразовании объекта в соответствующее примитивное значение.

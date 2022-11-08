@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/Node/insertBefore
 original_slug: Web/API/Node/insertarAntes
 ---
+
 {{APIRef("DOM")}}
 
 El método **`Node.insertBefore()`** inserta un nodo antes del nodo de referencia como hijo de un nodo padre indicado. Si el nodo hijo es una referencia a un nodo ya existente en el documento, `insertBefore()` lo mueve de la posición actual a la nueva posición (no hay necesidad de eliminar el nodo de su nodo padre antes de agregarlo al algún nodo nuevo).

@@ -3,6 +3,7 @@ title: Desde object hasta iframe - otras tecnologías de incrustación
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
 Ahora ya deberías estar acostumbrado a integrar cosas en tus páginas web, incluyendo imágenes, video y audio. En este punto nos gustaría que des algo así como un paso al costado, prestando atención a elementos que te permiten integrar una amplia variedad de tipos de contenido en tus páginas web: los elementos {{htmlelement("iframe")}}, {{htmlelement("embed")}} y {{htmlelement("object")}}. Los `<iframe>`s son para incrustar otras páginas web, y los otros dos te permiten incrustar PDFs, SVG e incluso Flash — una tecnología que está en su camino de despedida, pero la cual seguirás viendo semi-regularmente.

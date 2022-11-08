@@ -13,6 +13,7 @@ translation_of: Web/API/GlobalEventHandlers/ongotpointercapture
 translation_of_original: Web/API/Element/ongotpointercapture
 original_slug: Web/API/GlobalEventHandlers/ongotpointercapture
 ---
+
 {{ APIRef }}
 
 `ongotpointercapture` es una propiedad {{event("Event_handlers", "event handler")}} de la interfaz {{domxref("Element")}} que devuelve el controlador de eventos (función) para el evento tipo {{event("gotpointercapture")}}.

@@ -2,6 +2,7 @@
 title: <link>
 slug: Web/HTML/Element/link
 ---
+
 ## Resumo
 
 O **Elemento HTML _\<link>_** especifica as relações entre o documento atual e um recurso externo. Possíveis usos para este elemento incluem a definição de uma estrutura relacional para navegação. Este elemento é mais usado para vincular as folhas de estilo.

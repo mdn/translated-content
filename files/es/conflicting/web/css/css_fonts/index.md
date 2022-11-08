@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/basefont
 original_slug: Web/HTML/Element/basefont
 ---
+
 ### Definición
 
 - **basefont** -_fuente base_ . Permite cambiar algunas propiedades del texto.
