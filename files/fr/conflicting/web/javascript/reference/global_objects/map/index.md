@@ -1,6 +1,6 @@
 ---
 title: Map.prototype[@@toStringTag]()
-slug: Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Map
 tags:
   - ECMAScript 2015
   - JavaScript
