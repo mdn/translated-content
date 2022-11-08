@@ -1,8 +1,8 @@
 ---
 title: Kuma
-slug: MDN/Yari
+slug: orphaned/MDN/Yari
 translation_of: MDN/Kuma
-original_slug: MDN/Kuma
+original_slug: MDN/Yari
 ---
 
 {{MDNSidebar}}
