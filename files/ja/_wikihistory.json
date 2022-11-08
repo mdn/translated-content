@@ -4043,18 +4043,6 @@
       "kenji-yamasaki"
     ]
   },
-  "MDN/Yari": {
-    "modified": "2020-08-13T21:24:52.575Z",
-    "contributors": [
-      "eltociear",
-      "mfuji09",
-      "SphinxKnight",
-      "silverskyvicto",
-      "wbamberg",
-      "Uemmra3",
-      "groovecoder"
-    ]
-  },
   "Mozilla": {
     "modified": "2020-08-10T23:23:31.255Z",
     "contributors": ["eltociear", "dskmori", "ethertank", "ziyunfei"]
@@ -25876,10 +25864,6 @@
     "modified": "2020-11-06T05:22:22.573Z",
     "contributors": ["mfuji09", "SphinxKnight", "shide55"]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
-    "modified": "2020-10-15T21:39:55.689Z",
-    "contributors": ["mfuji09", "Kisaragi", "YuichiNukiyama"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Map/Map": {
     "modified": "2020-11-06T12:31:37.635Z",
     "contributors": ["mfuji09"]
@@ -31352,6 +31336,10 @@
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-10-15T21:39:55.689Z",
+    "contributors": ["mfuji09", "Kisaragi", "YuichiNukiyama"]
+  },
   "conflicting/Web/Progressive_web_apps": {
     "modified": "2019-04-17T00:04:34.176Z",
     "contributors": ["Uemmra3", "Wind1808"]
@@ -31387,6 +31375,18 @@
   "orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo": {
     "modified": "2020-09-30T09:07:30.169Z",
     "contributors": ["chrisdavidmills", "mfuji09", "silverskyvicto"]
+  },
+  "orphaned/MDN/Yari": {
+    "modified": "2020-08-13T21:24:52.575Z",
+    "contributors": [
+      "eltociear",
+      "mfuji09",
+      "SphinxKnight",
+      "silverskyvicto",
+      "wbamberg",
+      "Uemmra3",
+      "groovecoder"
+    ]
   },
   "orphaned/Microsummary_XML_grammar_reference": {
     "modified": "2019-03-23T23:42:58.294Z",

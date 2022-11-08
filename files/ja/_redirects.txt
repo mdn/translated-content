@@ -2761,7 +2761,7 @@
 /ja/docs/MDN/Guidelines/Editorial	/ja/docs/MDN/Writing_guidelines/What_we_write
 /ja/docs/MDN/Guidelines/Video	/ja/docs/MDN/Writing_guidelines/Howto/Images_media
 /ja/docs/MDN/Guidelines/Writing_style_guide	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
-/ja/docs/MDN/Kuma	/ja/docs/MDN/Yari
+/ja/docs/MDN/Kuma	/ja/docs/orphaned/MDN/Yari
 /ja/docs/MDN/MDN_Product_Advisory_Board/Members	/ja/docs/conflicting/MDN/MDN_Product_Advisory_Board
 /ja/docs/MDN/Structures	/ja/docs/MDN/Writing_guidelines/Page_structures
 /ja/docs/MDN/Structures/API_references	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
@@ -2784,6 +2784,7 @@
 /ja/docs/MDN/Tools/Document_parameters	/ja/docs/MDN/Tools/Unsupported_GET_API
 /ja/docs/MDN/User_guide	/ja/docs/MDN/Tools
 /ja/docs/MDN/User_guide/Linking_to_MDN	/ja/docs/orphaned/MDN/About/Linking_to_MDN
+/ja/docs/MDN/Yari	/ja/docs/orphaned/MDN/Yari
 /ja/docs/MDN_at_ten	/ja/docs/MDN/At_ten
 /ja/docs/MDN_at_ten/Contributing_to_MDN	/ja/docs/MDN/Contribute
 /ja/docs/MDN_at_ten/History_of_MDN	/ja/docs/MDN/At_ten/History_of_MDN
@@ -4629,6 +4630,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Locale/region	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/region
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Locale/script	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Locale/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Map
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Number/constructor	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
