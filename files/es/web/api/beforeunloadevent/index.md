@@ -66,4 +66,4 @@ window.addEventListener("beforeunload", function (e) {
 - [`load`](/es/docs/Web/Reference/Events/load)
 - [`beforeunload`](/es/docs/Web/Reference/Events/beforeunload)
 - [`unload`](/es/docs/Web/Reference/Events/unload)
-- [Descargas de documentos — Solicitud para descargar un documento](http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
+- [Descargas de documentos — Solicitud para descargar un documento](https://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)

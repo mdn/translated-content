@@ -36,7 +36,7 @@ A pesar que esta interfaz tiene un constructor, no es posible crear un objeto `D
 - [`dragleave`](/es/docs/Web/Reference/Events/dragleave)
   - : Este evento se activa cuando un elemento o texto seleccionado sale de una área de soltado válida.
 - [`dragover`](/es/docs/Web/Reference/Events/dragover)
-  - : Este evento es activado continuamente cuando un elemento o texto selecionado es arrrastrado y el punterose pocisiona sobre una área de soltado válido (cada 50ms WHEN el puntero no se encuentra en movimiento, ELSE 5ms cuando el puntero se mueve lentamente y 1ms cuando el movimiento es rápido. Este patrón de activación es diferente de [`mouseover`](/es/docs/Web/Reference/Events/mouseover) ).
+  - : Este evento es activado continuamente cuando un elemento o texto selecionado es arrrastrado y el punterose pocisiona sobre una área de soltado válido (cada 50ms WHEN el puntero no se encuentra en movimiento, ELSE 5ms cuando el puntero se mueve lentamente y 1ms cuando el movimiento es rápido. Este patrón de activación es diferente de [`mouseover`](/es/docs/Web/Reference/Events/mouseover)).
 - [`dragstart`](/es/docs/Web/Reference/Events/dragstart)
   - : Este evento se activa cuando el usuario comienza a hacer un arrastre sobre un elemento o texto seleccionado.
 - [`drop`](/es/docs/Web/Reference/Events/drop)
