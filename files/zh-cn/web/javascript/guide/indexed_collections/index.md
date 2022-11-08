@@ -288,7 +288,7 @@ const myArray = ['a', 'b', 'c', 'd', 'e'];
 myArray.at(-2); // "d", the second-last element of myArray
 ```
 
-[`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法从数组移出一些元素，（可选）并替换它们。它返回从数组中删除的元素。
+[`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法从数组移出一些元素，并（可选地）替换它们。它返回从数组中删除的元素。
 
 ```js
 const myArray = ['1', '2', '3', '4', '5'];
@@ -323,21 +323,16 @@ myArray.sort();
 // sorts the array so that myArray = ["Fire", "Rain", "Wind"]
 ```
 
-`sort()` 也可以接受回调函数来决定怎么比较数组元素。
-
-接受回调的 `sort` 方法（以及下面的其他方法）被称为*迭代方法*，因为它们以某种方式遍历整个数组。每一个都有第二个可选参数 `thisObject`。如果提供，`thisObject` 将成为回调函数体中 `this` 关键字的值。如果没有提供，就像在显式对象上下文之外调用函数的其他情况一样，当使用箭头函数作为回调函数时，`this` 将引用全局对象（[`window`](/zh-CN/docs/Web/API/window)），或当使用普通函数作为回调函数时，`undefined` 将引用全局对象。
-
-调用回调函数时使用两个参数，它们是数组的元素。
-
-下面的回调函数比较两个值，并返回 3 个值中的一个：
-
-例如，下面的代码通过字符串的最后一个字母进行排序：
+`sort()` 也可以接受回调函数来决定如何比较数组元素。使用两个参数调用回调函数，它们是来自数组的两个值。该函数比较这两个值并返回正数、负数或零，表示这两个值的顺序。例如，以下命令将根据字符串的最后一个字母对数组进行排序：
 
 ```js
 const sortFn = (a, b) => {
-  if (a[a.length - 1] < b[b.length - 1]) return -1;
-  if (a[a.length - 1] > b[b.length - 1]) return 1;
-  if (a[a.length - 1] === b[b.length - 1]) return 0;
+  if (a[a.length - 1] < b[b.length - 1]) {
+    return -1; // Negative number => a < b, a comes before b
+  } else if (a[a.length - 1] > b[b.length - 1]) {
+    return 1; // Positive number => a > b, a comes after b
+  }
+  return 0; // Zero => a = b, a and b keep their original order
 }
 myArray.sort(sortFn);
 // sorts the array so that myArray = ["Wind","Fire","Rain"]
@@ -351,11 +346,11 @@ myArray.sort(sortFn);
 
 ```js
 const a = ['a', 'b', 'a', 'b', 'a'];
-console.log(a.indexOf('b')); // logs 1
+console.log(a.indexOf('b')); // 1
 
 // Now try again, starting from after the last match
-console.log(a.indexOf('b', 2)); // logs 3
-console.log(a.indexOf('z')); // logs -1, because 'z' was not found
+console.log(a.indexOf('b', 2)); // 3
+console.log(a.indexOf('z')); // -1, because 'z' was not found
 ```
 
 [`lastIndexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf) 方法的工作原理类似于 `indexOf`，但这是从末尾开始，向后搜索。
@@ -376,8 +371,15 @@ const a = ['a', 'b', 'c'];
 a.forEach((element) => {
   console.log(element);
 });
-// logs each item in turn
+// Logs:
+// a
+// b
+// c
 ```
+
+接受回调的 `forEach` 方法（以及下面的其他方法）被称为*迭代方法*，因为它们以某种方式遍历整个数组。每个都接受第二个可选的参数 `thisArg`。如果提供，`thisArg` 将成为回调函数体中 `this` 关键字的值。如果没有提供，就像在明确的对象上下文之外被调用一样，当函数在严格模式下时，`this` 是 `undefined`，当函数在[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下时，`this` 将引用全局对象（[`window`](/zh-CN/docs/Web/API/Window)、[`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis) 等。）。
+
+> **注释：** 上面介绍的 `sort()` 方法不是迭代方法，因为它的回调函数只用于比较，不能基于元素顺序以任何特定顺序调用。`sort()` 也不接受 `thisArg` 形参。
 
 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 方法返回由每个数组元素上执行 `callback` 的返回值所组成的新数组。
 
