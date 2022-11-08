@@ -454,12 +454,13 @@
 /pt-BR/docs/MDN/Guidelines	/pt-BR/docs/conflicting/MDN/Writing_guidelines
 /pt-BR/docs/MDN/Guidelines/Style_guide	/pt-BR/docs/MDN/Writing_guidelines/Writing_style_guide
 /pt-BR/docs/MDN/Guidelines/Writing_style_guide	/pt-BR/docs/MDN/Writing_guidelines/Writing_style_guide
-/pt-BR/docs/MDN/Kuma	/pt-BR/docs/MDN/Yari
+/pt-BR/docs/MDN/Kuma	/pt-BR/docs/orphaned/MDN/Yari
 /pt-BR/docs/MDN/Primeiros_Passos	/pt-BR/docs/MDN/Community/Contributing/Getting_started
 /pt-BR/docs/MDN/Structures	/pt-BR/docs/conflicting/MDN/Writing_guidelines/Page_structures
 /pt-BR/docs/MDN/Structures/Compatibility_tables	/pt-BR/docs/MDN/Writing_guidelines/Page_structures
 /pt-BR/docs/MDN/Structures/Macros	/pt-BR/docs/conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7
 /pt-BR/docs/MDN/Tools/KumaScript/Solucionando_problemas_de_erros_de_KumaScript	/pt-BR/docs/MDN/Tools/KumaScript/Troubleshooting
+/pt-BR/docs/MDN/Yari	/pt-BR/docs/orphaned/MDN/Yari
 /pt-BR/docs/MDN/guia_usuário	/pt-BR/docs/MDN/Tools
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tema	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/theme
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomia_de_uma_WebExtension	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
@@ -860,6 +861,7 @@
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/toSource	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Map
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
