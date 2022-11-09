@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 
 {{JSRef}}
 
-**`toString()`** 方法返回一个表示该对象的字符串。该方法旨在用于自定义[类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#type_coercion)的逻辑时，重写派生类对象，
+**`toString()`** 方法返回一个表示该对象的字符串。该方法旨在重写（自定义）派生类对象的[类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#类型转换)的逻辑。
 
 {{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
 
@@ -17,7 +17,7 @@ toString()
 
 ### 参数
 
-默认情况下，`toString()` 不接受任何参数。然而，继承自 `Object` 的对象可能用它们自己的实现重写它，这些实现确实需要参数。例如，[`Number.prototype.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 和 [`BigInt.prototype.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) 方法采用一个可选的 `radix` 参数。
+默认情况下，`toString()` 不接受任何参数。然而，继承自 `Object` 的对象可能用它们自己的实现重写它，这些实现可以接受参数。例如，[`Number.prototype.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 和 [`BigInt.prototype.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) 方法接受一个可选的 `radix` 参数。
 
 ### 返回值
 
@@ -25,11 +25,11 @@ toString()
 
 ## 描述
 
-JavaScript 调用 `toString` 方法[将对象转换为一个原始值](/zh-CN/docs/Web/JavaScript/Data_structures#type_coercion)。你很少需要自己去调用 `toString` 方法；当遇到需要原始值的对象时，JavaScript 会自己调用它。
+JavaScript 调用 `toString` 方法[将对象转换为一个原始值](/zh-CN/docs/Web/JavaScript/Data_structures#类型转换)。你很少需要自己去调用 `toString` 方法；当遇到需要原始值的对象时，JavaScript 会自己调用它。
 
 该方法由[字符串转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)优先调用，但是[数字的强制转换](/zh-CN/docs/Web/JavaScript/Data_structures#numeric_coercion)和[原始值的强制转换](/zh-CN/docs/Web/JavaScript/Data_structures#primitive_coercion)会优先调用 `valueOf()`。然而，因为基本的 [`valueOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 方法返回一个对象，`toString()` 方法通常在结束时调用，除非对象重写了 `valueOf()`。例如，`+[1]` 返回 `1`，因为它的 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 方法返回 `"1"`，然后将其转换为数字。
 
-所有继承自 `Object.prototype` 的对象（当然，除了 [`null`-prototype 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)之外）都继承 `toString()` 方法。当你创建一个自定义对象时，你可以重写 `toString()` 以调用自定义方法，以便将自定义对象转换为一个字符串。或者，你可以增加一个 [`@@toPrimitive`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，该方法允许对转换过程有更多的控制，并且对于任意的类型转换，且总是优先于 `valueOf` 或 `toString`。
+所有继承自 `Object.prototype` 的对象（即，除了 [`null`-prototype 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)之外的对象）都继承 `toString()` 方法。当你创建一个自定义对象时，你可以重写 `toString()` 以调用自定义方法，以便将自定义对象转换为一个字符串。或者，你可以增加一个 [`@@toPrimitive`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，该方法允许对转换过程有更多的控制，并且对于任意的类型转换，且总是优先于 `valueOf` 或 `toString`。
 
 要将基本的 `Object.prototype.toString()` 用于重写的对象（或者在 `null` 或 `undefined` 上调用它），你需要在它上面调用 {{jsxref("Function.prototype.call()")}} 或者 {{jsxref("Function.prototype.apply()")}}，将要检查的对象作为第一个参数传递（称为 `thisArg`）。
 
@@ -146,7 +146,7 @@ Object.prototype.toString.call(new Date()); // [object prototype polluted]
 
 ## 参见
 
-- [`Object.prototype.toString` 的 Polyfill，在 `core-js` 支持 `Symbol.toStringTag`](https://github.com/zloirock/core-js#ecmascript-object)
+- [`core-js` 中 `Object.prototype.toString` 的 Polyfill（支持 `Symbol.toStringTag`）](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.valueOf()")}}
 - {{jsxref("Number.prototype.toString()")}}
 - {{jsxref("Symbol.toPrimitive")}}
