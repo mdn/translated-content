@@ -66,4 +66,4 @@ Por último, tenga en cuenta que para los elementos en línea no modificados, la
     - [Valor real](/es/docs/Web/CSS/actual_value)
   - [Sintaxis de definición de valor](/es/docs/Web/CSS/Value_definition_syntax)
   - [Propiedades abreviadas](/es/docs/Web/CSS/Shorthand_properties)
-  - [Elemento de reemplazo](/es/docs/Web/CSS/Replaced_element)
+  - [Elementos reemplazados](/es/docs/Web/CSS/Replaced_element)
