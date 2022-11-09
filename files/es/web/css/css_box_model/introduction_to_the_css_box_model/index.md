@@ -50,7 +50,7 @@ Por último, tenga en cuenta que para los elementos en línea no modificados, la
 - [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - Conceptos clave de CSS
   - [Sintaxis CSS](/es/docs/web/CSS/Syntax)
-  - [Regla-At](/es/docs/Web/CSS/At-rule)
+  - [Reglas-At](/es/docs/Web/CSS/At-rule)
   - [Comentarios](/es/docs/Web/CSS/Comments)
   - [Especificidad](/es/docs/Web/CSS/Specificity)
   - [Herencia](/es/docs/Web/CSS/inheritance)
