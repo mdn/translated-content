@@ -7,28 +7,28 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`BackgroundFetchRegistration`** interface of the {{domxref('Background Fetch API','','',' ')}} represents an individual background fetch.
+{{domxref('Background Fetch API','','',' ')}} の **`BackgroundFetchRegistration`** インターフェイスは個々のバックグラウンドフェッチを表します。
 
-A `BackgroundFetchRegistration` instance is returned by the {{domxref("BackgroundFetchManager.fetch()")}} or {{domxref("BackgroundFetchManager.get()")}} methods, and therefore there has no constructor.
+`BackgroundFetchRegistration` インスタンスは、{{domxref("BackgroundFetchManager.fetch()")}} メソッド、または {{domxref("BackgroundFetchManager.get()")}} メソッドによって返されるため、コンストラクターは存在しません。
 
 {{InheritanceDiagram}}
 
 ## プロパティ
 
-The following properties are available synchronously, as convenience properties copied from those in the `BackgroundFetchRegistration` instance.
+以下のプロパティは、`BackgroundFetchRegistration` インスタンスからコピーされた便利なプロパティとして、同期的に利用できます。
 
 - {{domxref("BackgroundFetchRegistration.id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A string containing the background fetch's ID.
+  - : バックグラウンドフェッチのIDを示す文字列。
 - {{domxref("BackgroundFetchRegistration.uploadTotal")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("number")}} containing the total number of bytes to be uploaded.
+  - : アップロードされる総バイト数を表す {{jsxref("number")}}。
 - {{domxref("BackgroundFetchRegistration.uploaded")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("number")}} containing the size in bytes successfully sent, initially `0`.
+  - : 送信に成功したバイト数を表す {{jsxref("number")}}。初期値は `0`。
 - {{domxref("BackgroundFetchRegistration.downloadTotal")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("number")}} containing the total size in bytes of this download. This is the value set when the background fetch was registered, or `0`.
+  - : ダウンロード全体のバイト数を表す {{jsxref("number")}}。これはバックグラウンドフェッチの登録時に設定される値です。設定されなかった場合は `0` となります。
 - {{domxref("BackgroundFetchRegistration.downloaded")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("number")}} containing the size in bytes that has been downloaded, initially `0`.
+  - : 今までにダウンロードされたバイト数を表す {{jsxref("number")}}。初期値は `0`。
 - {{domxref("BackgroundFetchRegistration.result")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns an empty string initially, on completion either the string `"success"` or `"failure"`.
+  - : 初期状態では空文字列。完了時には `"success"` または `"failure"` という文字列。
 - {{domxref("BackgroundFetchRegistration.failureReason")}} {{ReadOnlyInline}} {{Experimental_Inline}}
 
   - : 下記文字列のいずれかの値をとります。
@@ -47,7 +47,7 @@ The following properties are available synchronously, as convenience properties 
       - : バックグラウンドフェッチの登録時に指定された `downloadTotal` を超過したとき。
 
 - {{domxref("BackgroundFetchRegistration.recordsAvailable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("boolean")}} indicating whether the `recordsAvailable` flag is set.
+  - : `recordsAvailable` フラグが設定されているかどうかを表す {{jsxref("boolean")}}。
 
 ## メソッド
 
@@ -94,7 +94,7 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 });
 ```
 
-Logging the {{domxref("BackgroundFetchRegistration.id","id")}} to the console returns `"my-fetch"`.
+{{domxref("BackgroundFetchRegistration.id","id")}} をコンソールにログ出力すると、`"my-fetch"` が出力されます。
 
 ```js
 console.log(bgFetch.id); // "my-fetch"
