@@ -72,7 +72,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ## 例
 
-以下のコードは、 `"my-fetch"` という `id` を持つ `BackGroundFetchRegistration` を `bgFetch` として作成しています。
+以下のコードは、`"my-fetch"` という `id` を持つ `BackGroundFetchRegistration` を `bgFetch` として作成しています。
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-**`downloadTotal`** は {{domxref("BackgroundFetchRegistration")}} インターフェイスの読み取り専用プロパティで、このダウンロード全体の容量をバイト単位で返します。このプロパティはバックグラウンドフェッチの登録時に設定されます。値が設定されなかった場合、 `0` を返します。
+**`downloadTotal`** は {{domxref("BackgroundFetchRegistration")}} インターフェイスの読み取り専用プロパティで、このダウンロード全体の容量をバイト単位で返します。このプロパティはバックグラウンドフェッチの登録時に設定されます。値が設定されなかった場合、`0` を返します。
 
 ## 値
 

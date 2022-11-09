@@ -9,7 +9,7 @@ l10n:
 
 **`downloaded`** は {{domxref("BackgroundFetchRegistration")}} インターフェイスの読み取り専用プロパティで、 今までにダウンロードされた容量(バイト単位)を返します。初期値は `0` です。
 
-このプロパティの値が変化したとき、関連する {{domxref("BackgroundFetchRegistration")}} オブジェクトで、 [progress](/ja/docs/Web/API/BackgroundFetchRegistration/progress_event) イベントが発火します。
+このプロパティの値が変化したとき、関連する {{domxref("BackgroundFetchRegistration")}} オブジェクトで、[progress](/ja/docs/Web/API/BackgroundFetchRegistration/progress_event) イベントが発火します。
 
 ## 値
 
