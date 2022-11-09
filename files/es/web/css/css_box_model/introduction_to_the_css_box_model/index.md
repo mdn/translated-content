@@ -23,7 +23,7 @@ Si la propiedad {{cssxref("box-sizing")}} está definida como `content-box` (que
 
 El **área de relleno** o **padding area**, delimitada por el límite de relleno (Padding Edge en la imagen), extiende el área de contenido para incluir el relleno del elemento. Sus dimensiones son _"padding-box width"_ para el ancho y _"padding-box height"_ para el alto.
 
-El espesor del relleno viene determinado por las propiedades {{cssxref("padding-top")}} , {{cssxref("padding-right")}} , {{cssxref("padding-bottom")}} , {{cssxref("padding-left")}} y la propiedad resumida {{cssxref("padding")}} .
+El tamaño del relleno viene determinado por las propiedades {{cssxref("padding-top")}} , {{cssxref("padding-right")}} , {{cssxref("padding-bottom")}} , {{cssxref("padding-left")}} y la propiedad resumida {{cssxref("padding")}} .
 
 ## Área de borde (border area)
 
