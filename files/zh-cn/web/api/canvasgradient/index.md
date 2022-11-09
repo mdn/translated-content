@@ -28,5 +28,5 @@ _没有继承的方法_
 
 ## 请参考
 
-- 创建方法在{{domxref("CanvasRenderingContext2D")}}.
+- 创建方法在{{domxref("CanvasRenderingContext2D")}}.法大师傅士大夫大师傅士大夫但是想方设法的身份违反规定分别为发热我果宝特攻违法
 - {{HTMLElement("canvas")}} 元素及其有关接口{{domxref("HTMLCanvasElement")}}.
