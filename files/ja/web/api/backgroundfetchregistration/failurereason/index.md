@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`failureReason`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string with a value that indicates a reason for a background fetch failure.
+**`failureReason`** は {{domxref("BackgroundFetchRegistration")}} インターフェイスの読み取り専用プロパティで、バックグラウンドフェッチが失敗した理由を示す値を文字列で返します。
 
 このプロパティの値が変化したとき、関連する {{domxref("BackgroundFetchRegistration")}} オブジェクトで、[progress](/ja/docs/Web/API/BackgroundFetchRegistration/progress_event) イベントが発火します。
 
@@ -30,7 +30,7 @@ The **`failureReason`** read-only property of the {{domxref("BackgroundFetchRegi
 
 ## 例
 
-Logging this property to the console prints the reason the fetch failed, or an empty string if it was successful or has not yet completed.
+このプロパティをコンソールにログ出力すると、フェッチが失敗した理由が表示されます。フェッチが進行中または成功した場合は空文字列が表示されます。
 
 ```js
 console.log(bgFetch.failureReason);
