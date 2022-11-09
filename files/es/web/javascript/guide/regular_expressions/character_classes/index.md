@@ -111,7 +111,7 @@ La siguiente tabla también está duplicada en {{JSxRef("../Guide/Regular_Expres
      <tr>
       <td><code>\c<em>X</em></code></td>
       <td>
-       <p>Coincide con un caracter de control mediante {{Interwiki("wikipedia", "Caret_notation", "notación de intercalación")}}, donde "X" es una letra de la A a la Z (correspondiente a los puntos de código <code>U+0001</code><em>-</em><code>U+001F</code>). Por ejemplo, <code>/\cM/</code> encuentra "\r" en "\r\n".</p>
+       <p>Coincide con un caracter de control mediante [notación de intercalación](https://es.wikipedia.org/wiki/Caret_notation), donde "X" es una letra de la A a la Z (correspondiente a los puntos de código <code>U+0001</code><em>-</em><code>U+001F</code>). Por ejemplo, <code>/\cM/</code> encuentra "\r" en "\r\n".</p>
       </td>
      </tr>
      <tr>

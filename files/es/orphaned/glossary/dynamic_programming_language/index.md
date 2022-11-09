@@ -13,4 +13,4 @@ Esto es opuesto a los llamados lenguajes de programación estáticos, en los que
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "Dynamic programming language")}} en Wikipedia
+- [Dynamic programming language](https://es.wikipedia.org/wiki/Dynamic_programming_language) en Wikipedia

@@ -17,4 +17,4 @@ Un entorno de desarrollo integrado (**IDE**) o entorno de desarrollo interactivo
 
 ### Conocimientos generales
 
-- {{interwiki("wikipedia", "Entorno_de_desarrollo_integrado", "IDE")}} en Wikipedia
+- [IDE](https://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado) en Wikipedia

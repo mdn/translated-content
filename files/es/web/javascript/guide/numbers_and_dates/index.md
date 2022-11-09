@@ -23,7 +23,7 @@ Este capítulo presenta los conceptos, objetos y funciones que se utilizan para 
 
 ## Números
 
-En JavaScript, los números se implementan en {{interwiki("wikipedia", "Formato en coma flotante de doble precisión")}} de 64 bits IEEE 754 (es decir, un número entre ±2−1022 y ±2+1023, o aproximadamente ±10−308 a ±10+308, con una precisión numérica de 53 bits). Los valores enteros hasta ±253 - 1 se pueden representar con exactitud.
+En JavaScript, los números se implementan en [Formato en coma flotante de doble precisión](https://es.wikipedia.org/wiki/Formato_en_coma_flotante_de_doble_precisión) de 64 bits IEEE 754 (es decir, un número entre ±2−1022 y ±2+1023, o aproximadamente ±10−308 a ±10+308, con una precisión numérica de 53 bits). Los valores enteros hasta ±253 - 1 se pueden representar con exactitud.
 
 Además de poder representar números de punto flotante, el tipo `number` tiene tres valores simbólicos: `+`{{JSxRef("Infinity")}}, `-`{{JSxRef("Infinity")}} y {{JSxRef("NaN")}} (_Not-a-Number_, no es un número).
 
