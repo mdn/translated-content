@@ -57,7 +57,7 @@ Por último, tenga en cuenta que para los elementos en línea no modificados, la
   - [Modo de diseño](/es/docs/Web/CSS/Layout_mode)
   - [Modelo de formato visual](/es/docs/Web/CSS/Visual_formatting_model)
   - [Entendiendo el colapso de margen](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
-  - Values
+  - Valores
     - [Valor inicial](/es/docs/Web/CSS/initial_value)
     - [Valor calculado](/es/docs/Web/CSS/computed_value)
     - [Valor usado](/es/docs/Web/CSS/used_value)
