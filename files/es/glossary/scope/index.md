@@ -38,4 +38,4 @@ console.log(x);
 
 ### Conocimentos Generales
 
-- {{Interwiki("wikipedia", "Scope (computer science)")}} on Wikipedia
+- [Scope (computer science)](https://es.wikipedia.org/wiki/Scope_(computer_science)) on Wikipedia

@@ -25,5 +25,5 @@ Esto significa que XML tiene una mayor aplicación; por ejemplo, a través de XM
 
 ### General knowledge
 
-- {{Interwiki("wikipedia","XML")}} en Wikipedia
+- [XML](https://es.wikipedia.org/wiki/XML) en Wikipedia
 - [Introducción a XML](/es/docs/Introducción_a_XML)

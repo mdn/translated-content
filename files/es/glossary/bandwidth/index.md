@@ -8,4 +8,4 @@ El ancho de banda es la medida de cuanta información puede pasar a través de u
 
 ## Saber más
 
-- {{Interwiki("wikipedia", "Bandwidth")}} on Wikipedia
+- [Bandwidth](https://es.wikipedia.org/wiki/Bandwidth) on Wikipedia

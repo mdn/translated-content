@@ -17,4 +17,4 @@ Al igual que las variables, algunas constantes están unidas a identificadores. 
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "Constante_(informática)", "Constante")}} en Wikipedia
+- [Constante](https://es.wikipedia.org/wiki/Constante_(informática)) en Wikipedia

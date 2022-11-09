@@ -16,5 +16,5 @@ En la Web, {{Glossary("HTML")}} 4, {{Glossary("XHTML")}}, y {{Glossary("XML")}} 
 
 ## Aprender más
 
-- {{Interwiki("wikipedia", "SGML")}} en Wikipedia
+- [SGML](https://es.wikipedia.org/wiki/SGML) en Wikipedia
 - [Introduction to SGML](http://www.isgmlug.org/)

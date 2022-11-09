@@ -15,4 +15,4 @@ La clasificación por tarjetas (card sorting) es una técnica simple utilizada e
 
 ### Conocimientos generales
 
-- {{interwiki("wikipedia", "Card_sorting", "Card sorting")}} en Wikipedia
+- [Card sorting](https://es.wikipedia.org/wiki/Card_sorting) en Wikipedia

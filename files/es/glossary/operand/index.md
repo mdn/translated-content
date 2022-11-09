@@ -12,4 +12,4 @@ original_slug: Glossary/Operando
 
 ## Aprende mas
 
-- {{Interwiki("wikipedia", "Operador")}} en Wikipedia
+- [Operador](https://es.wikipedia.org/wiki/Operador) en Wikipedia

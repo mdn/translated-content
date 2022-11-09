@@ -13,7 +13,7 @@ translation_of: Glossary/ECMAScript
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "ECMAScript")}} en Wikipedia
+- [ECMAScript](https://es.wikipedia.org/wiki/ECMAScript) en Wikipedia
 
 ### Referencia técnica
 

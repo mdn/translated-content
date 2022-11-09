@@ -15,4 +15,4 @@ Un lenguaje de **tipo estático** es un lenguaje (como Java, C, o C++) en donde 
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "Type system")}} on Wikipedia
+- [Type system](https://es.wikipedia.org/wiki/Type_system) on Wikipedia

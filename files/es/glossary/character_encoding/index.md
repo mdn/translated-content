@@ -24,4 +24,4 @@ Con esto te aseguras de que usando caracteres propios de cualquier lenguaje huma
 ### Conocimientos generales
 
 - [Character encoding on W3C](https://www.w3.org/International/articles/definitions-characters/)
-- {{Interwiki("wikipedia", "Codificación_de_caracteres", "Codificación de caracteres")}} en Wikipedia
+- [Codificación de caracteres](https://es.wikipedia.org/wiki/Codificación_de_caracteres) en Wikipedia

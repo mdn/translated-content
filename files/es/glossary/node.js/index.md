@@ -15,7 +15,7 @@ Node.js es un entorno de ejecucion multiplataforma en {{Glossary("JavaScript")}}
 
 Conocimientos generales
 
-- {{Interwiki("wikipedia", "Node.js")}} en Wikipedia
+- [Node.js](https://es.wikipedia.org/wiki/Node.js) en Wikipedia
 - [Sitio web de](https://nodejs.org/) [Node.js](https://nodejs.org/)
 
 ### Información técnica

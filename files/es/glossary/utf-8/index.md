@@ -22,5 +22,5 @@ Los primeros 128 carácteres UTF-8 se ajustan a los 128 primeros carácteres ASC
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "UTF-8")}} en Wikipedia
+- [UTF-8](https://es.wikipedia.org/wiki/UTF-8) en Wikipedia
 - [PF sobre UTF-8 en el sitio web de Unicode](http://www.unicode.org/faq/utf_bom.html#UTF8)

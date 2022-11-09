@@ -18,7 +18,7 @@ WebVTT files provide metadata that is time-aligned with audio or video content l
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "WebVTT")}} en Wikipedia
+- [WebVTT](https://es.wikipedia.org/wiki/WebVTT) en Wikipedia
 
 ### Referencia técnica
 

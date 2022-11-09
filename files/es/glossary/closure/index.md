@@ -13,7 +13,7 @@ Una clausura o _closure_ es una función que guarda referencias del estado adyac
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Clausura (informática)", "Clausura")}} en Wikipedia
+- [Clausura](https://es.wikipedia.org/wiki/Clausura_(informática)) en Wikipedia
 
 ### Referencia técnica
 

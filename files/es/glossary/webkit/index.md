@@ -22,7 +22,7 @@ WebKit es una marca registrada de Apple, y es distribuido bajo la licencia BSD. 
 
 ### Cultura General
 
-- {{Interwiki("wikipedia", "WebKit")}} en Wikipedia
+- [WebKit](https://es.wikipedia.org/wiki/WebKit) en Wikipedia
 
 ### Referencia técnica
 

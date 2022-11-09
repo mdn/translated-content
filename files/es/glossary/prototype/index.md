@@ -12,4 +12,4 @@ Mira [La herencia y la cadena de prototipado.](/en-US/docs/Web/JavaScript/Inheri
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Software Prototyping")}} en la Wikipedia
+- [Software Prototyping](https://es.wikipedia.org/wiki/Software_Prototyping) en la Wikipedia

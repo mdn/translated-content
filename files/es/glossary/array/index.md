@@ -32,7 +32,7 @@ var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Array data structure", "Array")}} en Wikipedia
+- [Array](https://es.wikipedia.org/wiki/Array_data_structure) en Wikipedia
 
 ### Referencia técnica
 

@@ -18,4 +18,4 @@ Un {{glossary("object", "objeto")}} inmutable es aquel cuyo contenido no se pued
 
 ### Conocimientos generales
 
-- {{interwiki("wikipedia", "Objeto_inmutable", "Objeto Inmutable")}} en Wikipedia
+- [Objeto Inmutable](https://es.wikipedia.org/wiki/Objeto_inmutable) en Wikipedia

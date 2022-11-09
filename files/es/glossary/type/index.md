@@ -16,5 +16,5 @@ El tipo de datos de un valor también afecta a qué operaciones son válidas en 
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "Tipo_de_dato", "Data Type")}} en Wikipedia
+- [Data Type](https://es.wikipedia.org/wiki/Tipo_de_dato) en Wikipedia
 - [Data types en JavaScript](/es/docs/Web/JavaScript/Data_structures)
