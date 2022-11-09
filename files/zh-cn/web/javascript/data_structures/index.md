@@ -1,7 +1,7 @@
 ---
 title: JavaScript 数据类型和数据结构
 slug: Web/JavaScript/Data_structures
---- 
+---
 
 {{jsSidebar("More")}}
 
@@ -14,9 +14,9 @@ slug: Web/JavaScript/Data_structures
 JavaScript 是一种有着[动态类型](https://en.wikipedia.org/wiki/Type_system#DYNAMIC)的[动态](https://en.wikipedia.org/wiki/Dynamic_programming_language)语言。JavaScript 中的变量与任何特定值类型没有任何关联，并且任何变量都可以分配（重新分配）所有类型的值：
 
 ```js
-let foo = 42; // foo is now a number
-foo = "bar"; // foo is now a string
-foo = true; // foo is now a boolean
+let foo = 42; // foo 现在是一个数值
+foo = "bar"; // foo 现在是一个字符串
+foo = true; // foo 现在是一个布尔值
 ```
 
 JavaScript 也是一个[弱类型](https://en.wikipedia.org/wiki/Strong_and_weak_typing)语言，这意味着当操作涉及不匹配的类型是否，它将允许隐式类型转换，而不是抛出一个错误。
