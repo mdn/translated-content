@@ -2744,10 +2744,8 @@
 /ja/docs/MDN/Contribute/Structures/Syntax_sections	/ja/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /ja/docs/MDN/Contribute/Structures/マクロ	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros
 /ja/docs/MDN/Contribute/Tools	/ja/docs/MDN/Tools
-/ja/docs/MDN/Contribute/Tools/Document_parameters	/ja/docs/conflicting/MDN_097c5cfc342607a29b105ed97a10a079
 /ja/docs/MDN/Contribute/Tools/KumaScript	/ja/docs/MDN/Tools/KumaScript
 /ja/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/ja/docs/MDN/Tools/KumaScript/Troubleshooting
-/ja/docs/MDN/Contribute/Tools/Sample_server	/ja/docs/conflicting/MDN
 /ja/docs/MDN/Contribute/Where_is_everything	/ja/docs/MDN/Community/Contributing/Our_repositories
 /ja/docs/MDN/Feedback	/ja/docs/MDN/Community
 /ja/docs/MDN/Getting_started	/ja/docs/MDN/Community/Contributing/Getting_started
