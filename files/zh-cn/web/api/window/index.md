@@ -331,7 +331,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 > **备注：** Starting in {{Gecko("9.0")}}, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/zh-CN/docs/DOM/DOM_event_handlers) for details.
 
 - {{domxref("Window.onappinstalled")}}
-  - : Called when the page is installed as a webapp. See {{event('appinstalled')}} event.
+  - : Called when the page is installed as a webapp. See `appinstalled` event.
 - {{domxref("Window.onbeforeinstallprompt")}}
   - : An event handler property dispatched before a user is prompted to save a web site to a home screen on mobile.
 - {{domxref("Window.ondevicelight")}}
@@ -355,19 +355,19 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("Window.onuserproximity")}}
   - : An event handler property for user proximity events.
 - {{domxref("Window.onvrdisplayconnect")}}
-  - : Represents an event handler that will run when a compatible VR device has been connected to the computer (when the {{event("vrdisplayconnected")}} event fires).
+  - : Represents an event handler that will run when a compatible VR device has been connected to the computer (when the `vrdisplayconnected` event fires).
 - {{domxref("Window.onvrdisplaydisconnect")}}
-  - : Represents an event handler that will run when a compatible VR device has been disconnected from the computer (when the {{event("vrdisplaydisconnected")}} event fires).
+  - : Represents an event handler that will run when a compatible VR device has been disconnected from the computer (when the `vrdisplaydisconnected` event fires).
 - {{domxref("Window.onvrdisplayactivate")}}
-  - : Represents an event handler that will run when a display is able to be presented to (when the {{event("vrdisplayactivate")}} event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
+  - : Represents an event handler that will run when a display is able to be presented to (when the `vrdisplayactivate` event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
 - {{domxref("Window.onvrdisplaydeactivate")}}
-  - : Represents an event handler that will run when a display can no longer be presented to (when the {{event("vrdisplaydeactivate")}} event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
+  - : Represents an event handler that will run when a display can no longer be presented to (when the `vrdisplaydeactivate` event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
 - {{domxref("Window.onvrdisplayblur")}}
-  - : Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the {{event("vrdisplayblur")}} event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.
+  - : Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the `vrdisplayblur` event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.
 - {{domxref("Window.onvrdisplayfocus")}}
-  - : Represents an event handler that will run when presentation to a display has resumed after being blurred (when the {{event("vrdisplayfocus")}} event fires).
+  - : Represents an event handler that will run when presentation to a display has resumed after being blurred (when the `vrdisplayfocus` event fires).
 - {{domxref("Window.onvrdisplaypresentchange")}}
-  - : represents an event handler that will run when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa (when the {{event("vrdisplaypresentchange")}} event fires).
+  - : represents an event handler that will run when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa (when the `vrdisplaypresentchange` event fires).
 
 ### Event handlers implemented from elsewhere
 
@@ -410,7 +410,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
 - {{domxref("WindowEventHandlers.onmessage")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) event is raised.
+  - : Is an event handler representing the code to be called when the [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) event is raised.
 - {{domxref("GlobalEventHandlers.onmousedown")}}
   - : Called when ANY mouse button is pressed.
 - {{domxref("GlobalEventHandlers.onmousemove")}}
@@ -442,7 +442,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onselect")}}
   - : Called after text in an input field is selected
 - {{domxref("GlobalEventHandlers.onselectionchange")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("selectionchange")}} event is raised.
+  - : Is an event handler representing the code to be called when the `selectionchange` event is raised.
 - {{domxref("WindowEventHandlers.onstorage")}}
   - : Called when there is a change in session storage or local storage. See [`storage`](/zh-CN/docs/Web/API/Window/storage_event) event
 - {{domxref("GlobalEventHandlers.onsubmit")}}
