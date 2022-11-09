@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`abort()`** method of the {{domxref("BackgroundFetchRegistration")}} interface aborts an active background fetch.
+{{domxref("BackgroundFetchRegistration")}} インターフェイスの **`abort()`** メソッドは、アクティブなバックグラウンドフェッチを中止します。
 
 ## 構文
 
@@ -17,15 +17,15 @@ abort()
 
 ### 引数
 
-None.
+なし。
 
 ### 返値
 
-A {{jsxref("Promise")}} that resolves with `true` if the fetch is successfully aborted.
+フェッチの中止が成功したときに `true` で解決される {{jsxref("Promise")}} を返します。
 
 ## 例
 
-Use `abort()` to terminate a background fetch that is in progress.
+進行中のバックグラウンドフェッチを終了させるには、`abort()` を呼び出します。
 
 ```js
 bgFetch.abort();
