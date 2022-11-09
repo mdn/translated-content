@@ -5,7 +5,7 @@ slug: Web/JavaScript/Data_structures
 
 {{jsSidebar("More")}}
 
-编程语言都具有内建的数据结构，但各种编程语言的数据结构常有不同之处。本文试图列出 JavaScript 语言中内建的数据结构及其属性，它们可以用来构建其他的数据结构。同时尽可能地描述与其他语言的不同之处。
+编程语言都具有内建的数据结构，但各种编程语言的数据结构常有不同之处。本文试图列出 JavaScript 语言中内建的数据结构及其属性，它们可以用来构建其它的数据结构。同时尽可能地描述与其它语言的不同之处。
 
 [JavaScript 语言概述](/zh-CN/docs/Web/JavaScript/Language_Overview)提供了对常见数据类型的类似总结，但是和其它的语言有着更多的比较。
 
@@ -76,7 +76,7 @@ Undefined 类型只有一个值：[`undefined`](/zh-CN/docs/Web/JavaScript/Refer
 
 ### Number 类型
 
-{{jsxref("Number")}} 类型是一种[基于 IEEE 754 标准的双精度 64 位二进制格式的值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding)。他能够存储 2<sup>-1074</sup>（{{jsxref("Number.MIN_VALUE")}}）和 2<sup>1024</sup>（{{jsxref("Number.MAX_VALUE")}}）之间的正浮点数，以及 -2<sup>-1074</sup> 和 -2<sup>1024</sup> 之间的负浮点数，但是它仅能安全地存储在 -(2<sup>53</sup> − 1)（{{jsxref("Number.MIN_SAFE_INTEGER")}}）到 2<sup>53</sup> − 1（{{jsxref("Number.MAX_SAFE_INTEGER")}}）范围内的整数。超出这个范围，JavaScript 可能不再安全的表示整数；相反，它们将由双精度浮点近似表示。你可以使用 {{jsxref("Number.isSafeInteger()")}} 检查一个数是否在安全的整数范围内。
+{{jsxref("Number")}} 类型是一种[基于 IEEE 754 标准的双精度 64 位二进制格式的值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding)。它能够存储 2<sup>-1074</sup>（{{jsxref("Number.MIN_VALUE")}}）和 2<sup>1024</sup>（{{jsxref("Number.MAX_VALUE")}}）之间的正浮点数，以及 -2<sup>-1074</sup> 和 -2<sup>1024</sup> 之间的负浮点数，但是它仅能安全地存储在 -(2<sup>53</sup> − 1)（{{jsxref("Number.MIN_SAFE_INTEGER")}}）到 2<sup>53</sup> − 1（{{jsxref("Number.MAX_SAFE_INTEGER")}}）范围内的整数。超出这个范围，JavaScript 可能不再安全的表示整数；相反，它们将由双精度浮点近似表示。你可以使用 {{jsxref("Number.isSafeInteger()")}} 检查一个数是否在安全的整数范围内。
 
 ±(2<sup>-1074</sup> 到 2<sup>1024</sup>) 范围之外的值会自动转换：
 
@@ -98,7 +98,7 @@ console.log(42 / -0); // -Infinity
 
 虽然 number 在概念上是一个“数学的值”，并且总是隐式的编码为浮点类型，但是 JavaScript 提供了 [按位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)。当应用按位运算符时，number 首先转换为 32 位整数。
 
-> **备注：** 尽管按位运算符*可以*使用[位掩码](https://en.wikipedia.org/wiki/Mask_%28computing%29)来表示单个数值中的几个布尔值，但通常这不是一个好的做法。JavaScript 提供了表示一组布尔值的其他方法（如布尔数组，或将布尔值分配给命名属性的对象）。位掩码也往往会使代码更难读取、理解和维护。
+> **备注：** 尽管按位运算符*可以*使用[位掩码](https://en.wikipedia.org/wiki/Mask_%28computing%29)来表示单个数值中的几个布尔值，但通常这不是一个好的做法。JavaScript 提供了表示一组布尔值的其它方法（如布尔数组，或将布尔值分配给命名属性的对象）。位掩码也往往会使代码更难读取、理解和维护。
 
 可能有必要在非常受限的环境中使用此类技术，例如在试图应对本地存储的限制时，或在极端情况下（例如当网络上的每个位计数时）。只有当这项技术是优化尺寸的最后一项措施时，才应考虑这项技术。
 
@@ -154,7 +154,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 
 ### 属性
 
-在 JavaScript 中，对象可以被看作是一组属性的集合。用[对象字面量语法](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#对象字面量_object_literals)来定义一个对象时，会自动初始化一组有限的属性；然后，这些属性还可以被添加和移除。对象属性等价于键值对。属性键要么是[字符串](#string-类型)类型，要么是 [symbol](#symbol-类型)。属性值可以是任何类型的值，包括其他对象，从而可以构建复杂的数据结构。
+在 JavaScript 中，对象可以被看作是一组属性的集合。用[对象字面量语法](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#对象字面量_object_literals)来定义一个对象时，会自动初始化一组有限的属性；然后，这些属性还可以被添加和移除。对象属性等价于键值对。属性键要么是[字符串](#string-类型)类型，要么是 [symbol](#symbol-类型)。属性值可以是任何类型的值，包括其它对象，从而可以构建复杂的数据结构。
 
 有两种对象属性的类型：[*数据*属性](#数据属性)和[*访问器*属性](#访问器属性)。每个属性都有对应的*特性*（attribute）。JavaScript 引擎在内部内置了访问性，但是你可以通过 {{jsxref("Object.defineProperty()")}} 设置它们，或者通过 {{jsxref("Object.getOwnPropertyDescriptor()")}} 读取它们。你可以在 {{jsxref("Object.defineProperty()")}} 页面上读取更多有关信息。
 
@@ -167,7 +167,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 - `writable`
   - : 一个布尔值，表示是否可以通过赋值来改变属性。
 - `enumerable`
-  - : 一个布尔值，表示是否可以通过 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环来枚举属性。另请参阅[枚举性和属性所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)，以了解枚举属性如何与其他函数和语法交互。
+  - : 一个布尔值，表示是否可以通过 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环来枚举属性。另请参阅[枚举性和属性所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)，以了解枚举属性如何与其它函数和语法交互。
 - `configurable`
   - : 一个布尔值，表示该属性是否可以删除，是否可以更改为访问器属性，并可以更改其特性。
 
@@ -184,7 +184,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 - `set`
   - : 使用包含分配值的参数调用的函数。每当尝试更改指定属性时执行。参见 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。可能是 `undefined`。
 - `enumerable`
-  - : 一个布尔值，表示是否可以通过 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环来枚举属性。另请参阅[枚举性和属性所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)，以了解枚举属性如何与其他函数和语法交互。
+  - : 一个布尔值，表示是否可以通过 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环来枚举属性。另请参阅[枚举性和属性所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)，以了解枚举属性如何与其它函数和语法交互。
 - `configurable`
   - : 一个布尔值，表示该属性是否可以删除，是否可以更改为访问器属性，并可以更改其特性。
 
@@ -243,13 +243,13 @@ JavaScript 有一个内置对象的标准库。发现更多关于内置对象，
 console.log({} + []); // "[object Object]"
 ```
 
-`{}` 和 `[]` 都没有 `[@@toPrimitive]()` 方法。`{}` 和 `[]` 都从 {{jsxref("Object.prototype.valueOf")}} 继承 `valueOf()`，其返回对象自身。因为返回值是一个对象，因此他被忽略。因此，调用 `toString()` 方法。[`{}.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 返回 `"[object Object]"`，而 [`[].toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 返回 `""`，因此这个结果是它们的串联：`"[object Object]"`。
+`{}` 和 `[]` 都没有 `[@@toPrimitive]()` 方法。`{}` 和 `[]` 都从 {{jsxref("Object.prototype.valueOf")}} 继承 `valueOf()`，其返回对象自身。因为返回值是一个对象，因此它被忽略。因此，调用 `toString()` 方法。[`{}.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 返回 `"[object Object]"`，而 [`[].toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 返回 `""`，因此这个结果是它们的串联：`"[object Object]"`。
 
 在强制转换为任意的原始类型时，`[@@toPrimitive]()` 方法总是优先调用。原始值的强制转换的行为通常与强制 number 类型类似，因为优先调用 `valueOf()`；然而，有着自定义 `[@@toPrimitive]()` 方法的对象可以选择返回任意的原始值。{{jsxref("Date")}} 和 {{jsxref("Symbol")}} 对象是唯一重写 `[@@toPrimitive]()` 方法的对象。[`Date.prototype[@@toPrimitive]()`]((/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive)) 将 `"default"` hint 视为 `"string"`，而 [`Symbol.prototype[@@toPrimitive]()`]((/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)) 忽略 hint 并始终返回一个 symbol。
 
 ### 强制数字类型转换
 
-有两种数字类型：[number](#number-类型) 和 [BigInt](#bigint-类型)。有时候，该语言尤其希望是 number 或 BigInt（例如 {{jsxref("Array.prototype.slice()")}}，其中索引必须是一个数字）；其它时候，它可能容忍并且根据运算对象的类型不同执行不同的运算。有关不允许从其他类型隐式转换的严格强制转换过程，请参阅[强制 number 转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)和[强制 BigInt 转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion)。
+有两种数字类型：[number](#number-类型) 和 [BigInt](#bigint-类型)。有时候，该语言尤其希望是 number 或 BigInt（例如 {{jsxref("Array.prototype.slice()")}}，其中索引必须是一个数字）；其它时候，它可能容忍并且根据运算对象的类型不同执行不同的运算。有关不允许从其它类型隐式转换的严格强制转换过程，请参阅[强制 number 转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)和[强制 BigInt 转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion)。
 
 强制数字类型转换与[强制 number 类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)几乎相同，只是 BigInt 会按原样返回，而不是引起 {{jsxref("TypeError")}}。强制数字类型转换用于所有算术运算，因为它们重载了 number 和 BigInt 类型。唯一例外的是[一元加](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)，它总是强制 number 类型转换。
 
