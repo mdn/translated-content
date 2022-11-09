@@ -11,7 +11,7 @@ Al maquetar un documento, el motor de renderizado del navegador representa cada 
 
 Cada caja está compuesta de cuatro partes (o _áreas_), definidas por sus respectivos límites: _límite de contenido (content edge)_ , _límite de relleno (padding edge)_ , _límite de borde (border edge)_  y  _límite de margen (margin edge)_ .
 
-![CSS Box model](<boxmodel-(3).png>)
+![Modelo de caja de CSS](<boxmodel-(3).png>)
 
 ## Área de contenido (content area)
 
