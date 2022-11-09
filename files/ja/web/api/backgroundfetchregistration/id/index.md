@@ -7,15 +7,15 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`id`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a copy of the background fetch's `ID`.
+**`id`** は {{domxref("BackgroundFetchRegistration")}} インターフェイスの読み取り専用プロパティで、バックグラウンドフェッチの `ID` をコピーした文字列を返します。
 
 ## 値
 
-A string.
+文字列。
 
 ## 例
 
-Logging the this part to the console returns the identifier set when registering the fetch. In this case, `"my-fetch"`.
+このプロパティをコンソールにログ出力すると、 fetch を登録したときに設定された識別子が出力されます。今回の場合、 `"my-fetch"` が出力されます。
 
 ```js
 console.log(bgFetch.id); // "my-fetch"
