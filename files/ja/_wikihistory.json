@@ -3856,26 +3856,6 @@
       "Uemmra3"
     ]
   },
-  "MDN/Tools/Sample_server": {
-    "modified": "2020-09-30T16:50:23.148Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Uemmra3",
-      "lv7777",
-      "hamasaki"
-    ]
-  },
-  "MDN/Tools/Unsupported_GET_API": {
-    "modified": "2020-09-30T16:50:24.472Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "wbamberg",
-      "Uemmra3",
-      "hamasaki"
-    ]
-  },
   "MDN/Writing_guidelines": {
     "modified": "2020-05-10T05:09:00.798Z",
     "contributors": [
