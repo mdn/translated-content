@@ -31,20 +31,20 @@ The following properties are available synchronously, as convenience properties 
   - : Returns an empty string initially, on completion either the string `"success"` or `"failure"`.
 - {{domxref("BackgroundFetchRegistration.failureReason")}} {{ReadOnlyInline}} {{Experimental_Inline}}
 
-  - : One of the following strings:
+  - : 下記文字列のいずれかの値をとります。
 
     - `""`
-      - : The background fetch has not completed, or was successful.
+      - : バックグラウンドフェッチが完了していない、もしくは成功したとき。
     - `"aborted"`
-      - : The operation was cancelled by the user, or {{domxref("BackgroundFetchRegistration.abort()","abort()")}} was called.
+      - : ユーザーによって操作がキャンセルされたとき、または {{domxref("BackgroundFetchRegistration.abort()","abort()")}} が呼び出されたとき。
     - `"bad-status"`
-      - : A response had a not-ok status (a status outside the range 200-299).
+      - : 応答ステータスが OK ではないとき ( 200 ~ 299 の範囲外のとき)
     - `"fetch-error"`
-      - : A fetch failed for other reasons, for example CORS, or a network failure.
+      - : その他の理由によりフェッチが失敗したとき。例えば、CORS 違反や、ネットワーク障害が理由の場合です。
     - `"quota-exceeded"`
-      - : Storage quota was reached during the operation.
+      - : 途中でストレージ容量の上限に達したとき。
     - `"download-total-exceeded"`
-      - : The provided `downloadTotal` was exceeded. This value was set when the background fetch was registered.
+      - : バックグラウンドフェッチの登録時に指定された `downloadTotal` を超過したとき。
 
 - {{domxref("BackgroundFetchRegistration.recordsAvailable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("boolean")}} indicating whether the `recordsAvailable` flag is set.
@@ -60,9 +60,9 @@ The following properties are available synchronously, as convenience properties 
 
 ## イベント
 
-Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+Listen to these events using [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`progress`](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) {{Experimental_Inline}}
+- [`progress`](/ja/docs/Web/API/BackgroundFetchRegistration/progress_event) {{Experimental_Inline}}
 
   - : 次のプロパティのいずれかに変化があったとき、発火されます。:
     {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}} 、

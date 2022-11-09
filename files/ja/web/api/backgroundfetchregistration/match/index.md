@@ -37,7 +37,7 @@ match(request, options)
         prevents matching operations from validating the {{domxref("Request")}} `http` method.
         If `false` (the default) only `GET` and `HEAD` are allowed.
     - `ignoreVary`
-      - : A boolean value. When `true` indicates that the [`VARY`](/en-US/docs/Web/HTTP/Headers/Vary)
+      - : A boolean value. When `true` indicates that the [`VARY`](/ja/docs/Web/HTTP/Headers/Vary)
         header should be ignored.
         It defaults to `false`.
 

@@ -9,24 +9,24 @@ l10n:
 
 The **`failureReason`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string with a value that indicates a reason for a background fetch failure.
 
-If the value of this property changes, the [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) event is fired at the associated {{domxref("BackgroundFetchRegistration")}} object.
+このプロパティの値が変化したとき、関連する {{domxref("BackgroundFetchRegistration")}} オブジェクトで、[progress](/ja/docs/Web/API/BackgroundFetchRegistration/progress_event) イベントが発火します。
 
 ## 値
 
-One of the following strings:
+下記文字列のいずれかの値をとります。
 
 - `""`
-  - : The background fetch has not completed, or was successful.
+  - : バックグラウンドフェッチが完了していない、もしくは成功したとき。
 - `"aborted"`
-  - : The operation was cancelled by the user, or {{domxref("BackgroundFetchRegistration.abort()","abort()")}} was called.
+  - : ユーザーによって操作がキャンセルされたとき、または {{domxref("BackgroundFetchRegistration.abort()","abort()")}} が呼び出されたとき。
 - `"bad-status"`
-  - : A response had a not-ok status (a status outside the range 200-299).
+  - : 応答ステータスが OK ではないとき ( 200 ~ 299 の範囲外のとき)
 - `"fetch-error"`
-  - : A fetch failed for other reasons, for example CORS, or a network failure.
+  - : その他の理由によりフェッチが失敗したとき。例えば、CORS 違反や、ネットワーク障害が理由の場合です。
 - `"quota-exceeded"`
-  - : Storage quota was reached during the operation.
+  - : 途中でストレージ容量の上限に達したとき。
 - `"download-total-exceeded"`
-  - : The provided `downloadTotal` was exceeded. This value was set when the background fetch was registered.
+  - : バックグラウンドフェッチの登録時に指定された `downloadTotal` を超過したとき。
 
 ## 例
 
