@@ -7,15 +7,15 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`uploadTotal`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the total number of bytes to be sent to the server.
+**`uploadTotal`** は {{domxref("BackgroundFetchRegistration")}} インターフェイスの読み取り専用プロパティで、サーバーに送信される総バイト数を返します。
 
 ## 値
 
-A {{jsxref("number")}}.
+{{jsxref("number")}}。
 
 ## Examples
 
-Logging {{domxref("BackgroundFetchRegistration.uploadTotal")}} to the console returns the uploadTotal.
+{{domxref("BackgroundFetchRegistration.uploadTotal")}} をコンソールにログ出力すると、 uploadTotal が出力されます。
 
 ```js
 console.log(bgFetch.uploadTotal);
