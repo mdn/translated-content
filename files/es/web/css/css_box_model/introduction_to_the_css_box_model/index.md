@@ -54,7 +54,7 @@ Por último, tenga en cuenta que para los elementos en línea no modificados, la
   - [Comentarios](/es/docs/Web/CSS/Comments)
   - [Especificidad](/es/docs/Web/CSS/Specificity)
   - [Herencia](/es/docs/Web/CSS/inheritance)
-  - [Layout mode](/es/docs/Web/CSS/Layout_mode)
+  - [Modo de diseño](/es/docs/Web/CSS/Layout_mode)
   - [Modelo de formato visual](/es/docs/Web/CSS/Visual_formatting_model)
   - [Entendiendo el colapso de margen](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
   - Values
