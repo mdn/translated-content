@@ -1,6 +1,7 @@
 ---
 title: MDN のサンプルサーバー
-slug: MDN/Tools/Sample_server
+slug: conflicting/MDN
+original_slug: MDN/Tools/Sample_server
 ---
 
 {{MDNSidebar}}

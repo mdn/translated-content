@@ -3856,26 +3856,6 @@
       "Uemmra3"
     ]
   },
-  "MDN/Tools/Sample_server": {
-    "modified": "2020-09-30T16:50:23.148Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Uemmra3",
-      "lv7777",
-      "hamasaki"
-    ]
-  },
-  "MDN/Tools/Unsupported_GET_API": {
-    "modified": "2020-09-30T16:50:24.472Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "wbamberg",
-      "Uemmra3",
-      "hamasaki"
-    ]
-  },
   "MDN/Writing_guidelines": {
     "modified": "2020-05-10T05:09:00.798Z",
     "contributors": [
@@ -30962,6 +30942,16 @@
       "sii"
     ]
   },
+  "conflicting/MDN": {
+    "modified": "2020-09-30T16:50:23.148Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "Uemmra3",
+      "lv7777",
+      "hamasaki"
+    ]
+  },
   "conflicting/MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-03-14T06:36:03.749Z",
     "contributors": ["mfuji09", "silverskyvicto"]
@@ -31072,6 +31062,16 @@
   "conflicting/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide": {
     "modified": "2020-09-30T15:30:24.568Z",
     "contributors": ["chrisdavidmills", "dvincent"]
+  },
+  "conflicting/MDN_097c5cfc342607a29b105ed97a10a079": {
+    "modified": "2020-09-30T16:50:24.472Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "wbamberg",
+      "Uemmra3",
+      "hamasaki"
+    ]
   },
   "conflicting/Web/API/CredentialsContainer/create": {
     "modified": "2020-10-15T22:26:49.264Z",

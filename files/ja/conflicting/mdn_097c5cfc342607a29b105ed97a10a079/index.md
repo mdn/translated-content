@@ -1,6 +1,7 @@
 ---
 title: 非公式の GET API
-slug: MDN/Tools/Unsupported_GET_API
+slug: conflicting/MDN_097c5cfc342607a29b105ed97a10a079
+original_slug: MDN/Tools/Unsupported_GET_API
 ---
 
 {{MDNSidebar}}
