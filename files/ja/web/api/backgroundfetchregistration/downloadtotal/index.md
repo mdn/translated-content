@@ -7,15 +7,15 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`downloadTotal`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the total size in bytes of this download. This is set when the background fetch was registered, or `0` if not set.
+**`downloadTotal`** は {{domxref("BackgroundFetchRegistration")}} インターフェイスの読み取り専用プロパティで、このダウンロード全体の容量をバイト単位で返します。このプロパティはバックグラウンドフェッチの登録時に設定されます。値が設定されなかった場合、 `0` を返します。
 
 ## 値
 
-A {{jsxref("number")}}.
+{{jsxref("number")}}。
 
 ## 例
 
-Logging this property to the console returns the total size in bytes of this download.
+このプロパティをコンソールにログ出力すると、ダウンロード全体の容量(バイト単位)が出力されます。
 
 ```js
 console.log(bgFetch.downloadTotal);
