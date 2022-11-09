@@ -15,7 +15,7 @@ Cada caja está compuesta de cuatro partes (o _áreas_), definidas por sus respe
 
 ## Área de contenido (content area)
 
-El **área de contenido** o **content area**, delimitada por el límite de contenido (Content edge en la imagen), contiene el "contenido real" del elemento, como texto, una imagen o un reproductor de video. Sus dimensiones son _content width_ o (_content-box width_) que hace referencia al ancho del contenido, y _content height_ o (_content-box height_) que hace referencia al alto. A menudo, tiene un color o una imagen de fondo.
+El **área de contenido** o **content area**, delimitada por el límite de contenido (Content edge en la imagen), contiene el contenido "real" del elemento, como texto, una imagen o un reproductor de video. Sus dimensiones son _"content width"_ o (_"content-box width"_) que hace referencia al ancho del contenido, y _"content height"_ o (_"content-box height"_) que hace referencia al alto. A menudo, tiene un color o una imagen de fondo.
 
 Si la propiedad {{cssxref("box-sizing")}} está definida como `content-box` (que es el valor por defecto) y el elemento es un "elemento de bloque", el tamaño del área de contenido puede definirse explícitamente con las propiedades {{cssxref("width")}} , {{cssxref("min-width")}} , {{cssxref("max-width")}} , {{cssxref("height")}} , {{cssxref("min-height")}} y {{cssxref("max-height")}} .
 
