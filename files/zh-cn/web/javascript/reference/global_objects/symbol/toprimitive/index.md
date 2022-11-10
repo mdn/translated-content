@@ -26,7 +26,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 以下示例描述了 `Symbol.toPrimitive` 属性如何修改从对象转换的原始值。
 
 ```js
-// An object without Symbol.toPrimitive property.
+// 一个没有提供 Symbol.toPrimitive 属性的对象，参与运算时的输出结果。
 const obj1 = {};
 console.log(+obj1); // NaN
 console.log(`${obj1}`); // "[object Object]"
