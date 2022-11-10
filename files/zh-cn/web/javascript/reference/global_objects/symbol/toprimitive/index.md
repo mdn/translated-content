@@ -44,9 +44,9 @@ const obj2 = {
     return true;
   },
 };
-console.log(+obj2); // 10  — hint is "number"
-console.log(`${obj2}`); // "hello"   — hint is "string"
-console.log(obj2 + ""); // "true"    — hint is "default"
+console.log(+obj2); // 10  — hint 参数值是 "number"
+console.log(`${obj2}`); // "hello"   — hint 参数值是 "string"
+console.log(obj2 + ""); // "true"    — hint 参数值是 "default"
 ```
 
 ## 规范
