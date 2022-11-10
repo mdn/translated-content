@@ -1,21 +1,21 @@
 ---
-title: Web Audio API
+title: ウェブオーディオ API
 slug: Web/API/Web_Audio_API
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
 
-Web Audio API はウェブ上で音声を扱うための強力で多機能なシステムを提供します。これにより開発者は音源を選択したり、エフェクトを加えたり、ビジュアライゼーションを加えたり、パンニングなどの特殊効果を適用したり、他にもたくさんのいろいろなことができるようになります。
+ウェブオーディオ API はウェブ上で音声を扱うための強力で多機能なシステムを提供します。これにより開発者は音源を選択したり、エフェクトを加えたり、視覚効果を加えたり、パンニングなどの特殊効果を適用したり、他にもたくさんのいろいろなことができるようになります。
 
-## Web audio の概念と利用方法
+## ウェブオーディオの概念と利用方法
 
-Web Audio API は音声操作を**オーディオコンテキスト**内の操作として実現し、モジュラールーティングできるようにデザインされています。基本的な操作は **オーディオノード**として表現されています。これを接続することで、オーディオグラフを作成します。チャンネル構成の異なる複数の音源も 1 つのコンテキスト内で扱えます。この構成によって、複雑で動的な音声操作を実現できるようになっています。
+ウェブオーディオ API は音声操作を**音声コンテキスト**内の操作として実現し、**モジュラールーティング**できるようにデザインされています。基本的な操作は **音声ノード**として表現されています。これを接続することで、**音声ルーティンググラフ**を作成します。チャンネル構成の異なる複数の音源も 1 つのコンテキスト内で扱えます。この構成によって、複雑で動的な音声操作を実現できるようになっています。
 
 オーディオノードは、入力と出力によってチェーンと単純なウェブにリンクされています。通常、1 つまたは複数の音源から始まります。音源は、非常に小さなタイムスライス、多くの場合は 1 秒間に数万個のサウンドインテンシティ (サンプル) の配列を提供します。これらは数学的に計算されたもの ({{domxref("OscillatorNode")}} など) や、音声ファイルや動画ファイル ({{domxref("AudioBufferSourceNode")}} や {{domxref("MediaElementAudioSourceNode")}} など) やオーディオストリーム ({{domxref("MediaStreamAudioSourceNode")}}) からの録音である場合もあります。実際には、サウンドファイルは、マイクや電気楽器から入ってきた音の強さそのものを録音したものであり、それがミックスされて一つの複雑な波になっています。
 
 ノードの出力は他のノードの入力に紐付けられます。つまり、入力ストリームにミックスや編集をして他へ出力できるわけです。一般的な編集の例としては音量の変更です( {{domxref("GainNode")}} )。意図した効果を十分に施したあと、ユーザーに音声を聞かせたい場合、サウンドをスピーカーやヘッドオンに流すために、{{domxref("AudioContext.destination")}} の入力に紐付ける必要があります。
 
-簡潔で通常の Web Audio の使い方は次のようになります:
+簡潔で通常のウェブオーディオの使い方は、次のようになります。
 
 1. オーディオコンテキストを作成する
 2. コンテキストの中で、`<audio>`,オシレーター,ストリームなどの音源を作成する
@@ -27,19 +27,19 @@ Web Audio API は音声操作を**オーディオコンテキスト**内の操�
 
 タイミングは高精度で低遅延に制御されます。正確にイベントに反応したり特定の音声サンプルにアクセスしたりすることができます。ドラムマシンやシーケンサーのようなアプリケーションを作ることができます。
 
-Web Audio API では、立体音響を制御することもできます。*ソースリスナーモデル*に基づいたシステムを使用することで、*パンモデル*を制御し、音源の移動 (またはリスナーの移動) によって引き起こされる*距離に起因する減衰*を処理することができます。
+ウェブオーディオ API では、立体音響を制御することもできます。*ソースリスナーモデル*に基づいたシステムを使用することで、*パンモデル*を制御し、音源の移動 (またはリスナーの移動) によって引き起こされる*距離に起因する減衰*を処理することができます。
 
-> **メモ:** Web Audio API の理論に関する詳細は [Basic concepts behind Web Audio API](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) をご覧ください。
+> **メモ:** ウェブオーディオ API の理論に関する詳細は [ウェブオーディオ API の基本概念](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) をご覧ください。
 
-## Web Audio API がターゲットとする人
+## ウェブオーディオ API が対象とする人
 
-Web Audio API は音声技術に馴染みがない人にとって、怖気づくかもしれません。また、多くの機能があるため、開発者にとってとっつきにくいものになっています。
+ウェブオーディオ API は、音声や音楽用語に慣れない人には敷居が高く感じられるかもしれません。また、非常に多くの機能が組み込まれているため、開発者であれば使い始めるのは難しいかもしれません。
 
-Web Audio API の用途としては、[futurelibrary.no](https://www.futurelibrary.no/) のような雰囲気作りのためや[フォームの検証に音を活用](https://css-tricks.com/form-validation-web-audio/)するために、単に音声をウェブサイトに組み込むために使用できます。一方で、高度な対話型ツールの作成にも利用できます。こうしたことを踏まえると、開発者とミュージシャンの双方に適していると言えます。
+ウェブオーディオ API の用途としては、 [futurelibrary.no](https://www.futurelibrary.no/) のような雰囲気作りのためや[フォームの検証に音を活用](https://css-tricks.com/form-validation-web-audio/)するために、単に音声をウェブサイトに組み込むために使用できます。一方で、高度な対話型ツールの作成にも利用できます。こうしたことを踏まえると、開発者とミュージシャンの双方に適していると言えます。
 
 プログラミングは得意だけど API の構造と用語の解説が必要な人のために、[簡単なチュートリアル](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)があります。
 
-また、[Web Audio API の背景にある基本理念](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)に関する記事もあり、特にこの API の範囲でデジタルオーディオがどのように動作するのかを理解するのに役立ちます。また API の基礎となる優れた概念の紹介も含んでいます。
+また、[ウェブオーディオ API の基本理念](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)に関する記事もあり、特にこの API の範囲でデジタル音声がどのように動作するのかを理解するのに役立ちます。また API の基礎となる優れた概念の紹介も含んでいます。
 
 プログラムを書く作業はカードゲームに例えられます。ルールを学んで遊んでみて、またルールを学んで再び遊んでみて・・・。したがって最初のチュートリアルと記事を見たあとにピンとこなかった場合、最初のチュートリアルを拡張して、学んだことを実践して、段階的に高度なことを学んでいく[発展的なチュートリアル](/ja/docs/Web/API/Web_Audio_API/Advanced_techniques)があります。
 
@@ -49,13 +49,13 @@ Web Audio API の用途としては、[futurelibrary.no](https://www.futurelibra
 
 プログラミングの基本に慣れていない場合は、まず初級者向けの JavaScript チュートリアルを参照してから、このページに戻ってください。[初級者向けの JavaScript 学習モジュール](/ja/docs/Learn/JavaScript)を参照してください。
 
-## Web Audio API インターフェイス
+## ウェブオーディオ API インターフェイス
 
-Web Audio API は全部で 28 のインターフェイスと関連するイベントを持ちます。それらは機能的に 9 個のカテゴリに分けられます。
+ウェブオーディオ API には、たくさんのインターフェイスと関連するイベントがあり、機能的に 9 個のカテゴリーに分けられます。
 
 ### 一般的なオーディオグラフの定義
 
-Web Audio API で利用するオーディオグラフのコンテナと、その構成要素は以下の通りです。
+ウェブオーディオ API で利用する音声グラフのコンテナーと、その構成要素は以下の通りです。
 
 - {{domxref("AudioContext")}}
   - : 音声モジュールを組み合わせて作成される、音声処理のグラフを表します。グラフ内の各モジュールは {{domxref("AudioNode")}} として表現されています。オーディオコンテキストは、コンテキスト内での処理を担当するノードの作成を行います。
@@ -74,7 +74,7 @@ Web Audio API で利用するオーディオグラフのコンテナと、その
 
 ### 音源の定義
 
-Web Audio API 内で利用できる音源は以下の通りです。
+ウェブオーディオ API 内で利用できる音源は以下の通りです。
 
 - {{domxref("AudioScheduledSourceNode")}}
   - : **`AudioScheduledSourceNode`** は {{domxref("AudioNode")}} の一種で、いくつかの音源ノードの親インターフェイスです。
@@ -163,7 +163,7 @@ Web Audio API 内で利用できる音源は以下の通りです。
 
 #### Obsolete: script processor nodes
 
-音声 Worklet が定義されるよりも昔、Web Audio API は JavaScript を使用する音声処理に `ScriptProcessorNode` を利用していました。しかしながら処理がメインスレッドで走るためにパフォーマンスが良くありませんでした。歴史的な理由から `ScriptProcessorNode` は維持されていますが非推奨であり、将来の規格から取り除かれる予定です。
+音声ワークレットが定義されるよりも昔、ウェブオーディオ API は `ScriptProcessorNode` を使用して JavaScript ベースの音声処理をしていました。コードがメインスレッドで実行されるため、パフォーマンスが悪くなります。 `ScriptProcessorNode` は歴史的な理由から残されていますが、非推奨とされています。
 
 - {{domxref("ScriptProcessorNode")}} {{deprecated_inline}}
   - : **`ScriptProcessorNode`** を利用すると、JavaScript から音声データの生成、処理、分析を行えます。このノードは {{domxref("AudioNode")}} の一種で、入力と出力の二つのバッファとリンクしています。入力バッファに新しいデータがセットされる度に {{domxref("AudioProcessingEvent")}} インターフェイスを実装したイベントが生起します。イベントハンドラは出力バッファにデータをセットして処理を終了します。
@@ -216,17 +216,17 @@ GitHub の [webaudio-example](https://github.com/mdn/webaudio-examples/) に多�
 
 ### チュートリアル/ガイド
 
-- [Web Audio API の背後にある基本概念](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
-- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Advanced techniques: creating sound, sequencing, timing, scheduling](/ja/docs/Web/API/Web_Audio_API/Advanced_techniques)
+- [ウェブオーディオ API の背後にある基本概念](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [高度なテクニック: 音の作成、シーケンス、タイミング、スケジューリング](/ja/docs/Web/API/Web_Audio_API/Advanced_techniques)
 - [メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)
 - [Using IIR filters](/ja/docs/Web/API/Web_Audio_API/Using_IIR_filters)
-- [Web Audio API による視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [Web audio spatialisation basics](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
-- [Controlling multiple parameters with ConstantSourceNode](/ja/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
-- [Mixing Positional Audio and WebGL](http://www.html5rocks.com/tutorials/webaudio/positional_audio/)
-- [Developing Game Audio with the Web Audio API](http://www.html5rocks.com/tutorials/webaudio/games/)
-- [Porting webkitAudioContext code to standards based AudioContext](/ja/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
+- [ウェブオーディオ API による視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
+- [ウェブオーディオの空間設定の基本](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
+- [ConstantSourceNode で複数の引数を制御する](/ja/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
+- [Mixing Positional Audio and WebGL](https://www.html5rocks.com/tutorials/webaudio/positional_audio/)
+- [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/tutorials/webaudio/games/)
+- [webkitAudioContext のコードを標準ベースの AudioContext に移植する](/ja/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
 
 ### ライブラリ
 

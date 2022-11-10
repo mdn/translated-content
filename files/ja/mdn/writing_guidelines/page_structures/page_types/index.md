@@ -162,7 +162,7 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 ### 例
 
 - [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)
-- [ウェブ音声 API の視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
+- [ウェブオーディオ API の視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [CSS のカスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 
 ## 用語集ページ

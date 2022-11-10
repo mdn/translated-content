@@ -52,4 +52,9 @@ source.stop(3);
 
 ## 参考
 
-- [Using the Web Audio API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- {{domxref("AudioScheduledSourceNode.start", "start()")}}
+- {{domxref("AudioScheduledSourceNode")}}
+- {{domxref("AudioBufferSourceNode")}}
+- {{domxref("ConstantSourceNode")}}
+- {{domxref("OscillatorNode")}}

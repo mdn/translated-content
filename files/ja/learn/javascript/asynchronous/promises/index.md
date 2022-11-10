@@ -373,7 +373,7 @@ catch(error) {
 
 この記事ではプロミスのすべての機能には触れず，最も興味深く有用なものだけを取り上げました。プロミスについて学び始めると，もっと多くの機能やテクニックに出会うでしょう。
 
-[WebRTC](/ja/docs/Web/API/WebRTC_API)、[ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API)、[メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)などなど、多くの現代的なウェブ API は、プロミスベースになっています。
+[WebRTC](/ja/docs/Web/API/WebRTC_API)、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)、[メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)などなど、多くの現代的なウェブ API は、プロミスベースになっています。
 
 ## 関連情報
 

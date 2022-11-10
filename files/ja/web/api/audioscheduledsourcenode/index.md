@@ -3,9 +3,11 @@ title: AudioScheduledSourceNode
 slug: Web/API/AudioScheduledSourceNode
 ---
 
-{{APIRef("Web Audio API")}}AudioScheduledSourceNode インターフェース (Web Audio API の一部分) は、オーディオソースノード各種の親インターフェースであり、必要に応じ、指定された時間で開始や停止を行う機能を持ちます。具体的には、このインタフェースでは、{{domxref("AudioScheduledSourceNode.start", "start()")}} や、{{domxref("AudioScheduledSourceNode.stop", "stop()")}} メソッドの他、{{domxref("AudioScheduledSourceNode.onended", "onended")}} イベントハンドラーを定義しています。
+{{APIRef("Web Audio API")}}
 
-> **メモ:** AudioScheduledSourceNode オブジェクトは、直接作成することはできません。
+`AudioScheduledSourceNode` インターフェイス（ウェブオーディオ API の一部）は、オーディオソースノード各種の親インターフェイスであり、必要に応じ、指定された時間で開始や停止を行う機能を持ちます。具体的には、このインターフェイスでは、{{domxref("AudioScheduledSourceNode.start", "start()")}} や、{{domxref("AudioScheduledSourceNode.stop", "stop()")}} メソッドの他、{{domxref("AudioScheduledSourceNode.ended_event", "ended")}} イベントを定義しています。
+
+> **メモ:** `AudioScheduledSourceNode` オブジェクトは、直接作成することはできません。
 > かわりに、{{domxref("AudioBufferSourceNode")}} や、{{domxref("OscillatorNode")}}、または {{domxref("ConstantSourceNode")}} を使用してください。
 
 特に明記しない限り、AudioScheduledSourceNode をベースにしたノードは、再生されていない時 (つまり、start() の前や、stop() の後) は、無音を出力します。無音は、値がゼロ (0) であるサンプルストリームを、常に流し続けることで表現されています。
@@ -40,5 +42,5 @@ slug: Web/API/AudioScheduledSourceNode
 
 ## See also
 
-- [Using the Web Audio API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("AudioNode")}}
