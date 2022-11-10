@@ -5,12 +5,15 @@ slug: Web/API/MediaRecorder/MediaRecorder
 
 {{APIRef("MediaStream Recording")}}
 
-**`MediaRecorder()`** 构造函数会创建一个对指定的 {{domxref("MediaStream")}} 进行录制的 {{domxref("MediaRecorder")}} 对象
+**`MediaRecorder()`** 构造函数会创建一个新的 {{domxref("MediaRecorder")}} 对象，它将记录一个指定的 {{domxref("MediaStream")}}。
+
+该对象可以选择性地配置为使用特定的媒体容器（文件类型）进行录制，并且，可以通过指定[编解码器参数](/en-US/docs/Web/Media/Formats/codecs_parameter)来指定要使用的确切编解码器和编解码器配置。
 
 ## 语法
 
-```
-var mediaRecorder = new MediaRecorder(stream[, options]);
+```js
+new MediaRecorder(stream)
+new MediaRecorder(stream, options)
 ```
 
 ### 参数
@@ -21,7 +24,7 @@ var mediaRecorder = new MediaRecorder(stream[, options]);
 
   - : 一个字典对象，它可以包含下列属性：
 
-    - `mimeType`: 为新构建的 `MediaRecorder` 指定录制容器的 MIME 类型。在应用中通过调用 {{domxref("MediaRecorder.isTypeSupported()")}} 来检查浏览器是否支持此种`mimeType` .
+    - `mimeType`: 为新构建的 `MediaRecorder` 指定录制容器的 MIME 类型。在应用中通过调用 {{domxref("MediaRecorder.isTypeSupported()")}} 来检查浏览器是否支持此种`mimeType`。
     - `audioBitsPerSecond`: 指定音频的比特率。
     - `videoBitsPerSecond`: 指定视频的比特率。
     - `bitsPerSecond`: 指定音频和视频的比特率。此属性可以用来指定上面两个属性。如果上面两个属性只有其中之一和此属性被指定，则此属性可以用于设定另外一个属性。
