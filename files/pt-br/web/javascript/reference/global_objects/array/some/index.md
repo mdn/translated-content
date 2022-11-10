@@ -7,6 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/some
 
 O método **`some()`** testa se ao menos um dos elementos no array passa no teste implementado pela função atribuída e retorna um valor **`true`** ou **`false`**.
 
+{{EmbedInteractiveExample("pages/js/array-some.html")}}
+
 ## Sintaxe
 
 ```
