@@ -32,7 +32,7 @@ console.log(+obj1); // NaN
 console.log(`${obj1}`); // "[object Object]"
 console.log(obj1 + ""); // "[object Object]"
 
-// An object with Symbol.toPrimitive property.
+// 接下面声明一个对象，手动赋予了 Symbol.toPrimitive 属性，再来查看输出结果。
 const obj2 = {
   [Symbol.toPrimitive](hint) {
     if (hint === "number") {
