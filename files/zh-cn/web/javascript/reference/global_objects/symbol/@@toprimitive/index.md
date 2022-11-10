@@ -9,19 +9,28 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
 
 ## 语法
 
-```plain
-Symbol()[Symbol.toPrimitive](hint);
+```js-nolint
+Symbol()[Symbol.toPrimitive](hint)
 ```
 
 ### 返回值
 
-该原始值为指定的 {{jsxref("Symbol")}} 对象
+指定的 {{jsxref("Symbol")}} 对象的原始值。
 
 ## 描述
 
-{{jsxref("Symbol")}} 的 `[@@toPrimitive]()` 方法返回该 Symbol 对象原始值作为 Symbol 数据形式。 `hint` 参数未被使用。
+`hint` 参数未使用时，{{jsxref("Symbol")}} 的 `[@@toPrimitive]()` 方法返回 Symbol 对象的原始值作为数据类型返回。
 
 JavaScript 调用 `[@@toPrimitive]()` 方法将一个对象转换为原始值表示。你不需要自己调用 `[@@toPrimitive]()` 方法；当对象需要被转换为原始值时，JavaScript 会自动地调用该方法。
+
+## 示例
+
+### 使用 @@toPrimitive
+
+```js
+const sym = Symbol("example");
+sym === sym[Symbol.toPrimitive](); // true
+```
 
 ## 规范
 
@@ -31,6 +40,6 @@ JavaScript 调用 `[@@toPrimitive]()` 方法将一个对象转换为原始值表
 
 {{Compat}}
 
-## 参考资料
+## 参见
 
 - {{jsxref("Symbol.toPrimitive")}}
