@@ -11,7 +11,7 @@ slug: Web/JavaScript/Data_structures
 
 ## 动态和弱类型
 
-JavaScript 是一种有着[动态类型](https://en.wikipedia.org/wiki/Type_system#DYNAMIC)的[动态](https://en.wikipedia.org/wiki/Dynamic_programming_language)语言。JavaScript 中的变量与任何特定值类型没有任何关联，并且任何变量都可以分配（重新分配）所有类型的值：
+JavaScript 是一种有着[动态类型](https://zh.wikipedia.org/wiki/類型系統#靜態和動態檢查)的[动态](https://zh.wikipedia.org/wiki/动态语言)语言。JavaScript 中的变量与任何特定值类型没有任何关联，并且任何变量都可以分配（重新分配）所有类型的值：
 
 ```js
 let foo = 42; // foo 现在是一个数值
@@ -39,13 +39,13 @@ console.log(result); // 421
 
 | 类型                         | `typeof` 返回值 | 对象包装器            |
 | ---------------------------- | --------------- | --------------------- |
-| [Null](#null-类型)           | `"object"`      | N/A                   |
-| [Undefined](#undefined-类型) | `"undefined"`   | N/A                   |
-| [Boolean](#boolean-类型)     | `"boolean"`     | {{jsxref("Boolean")}} |
-| [Number](#number-类型)       | `"number"`      | {{jsxref("Number")}}  |
-| [BigInt](#bigint-类型)       | `"bigint"`      | {{jsxref("BigInt")}}  |
-| [String](#string-类型)       | `"string"`      | {{jsxref("String")}}  |
-| [Symbol](#symbol-类型)       | `"symbol"`      | {{jsxref("Symbol")}}  |
+| [Null](#null_类型)           | `"object"`      | N/A                   |
+| [Undefined](#undefined_类型) | `"undefined"`   | N/A                   |
+| [Boolean](#boolean_类型)     | `"boolean"`     | {{jsxref("Boolean")}} |
+| [Number](#number_类型)       | `"number"`      | {{jsxref("Number")}}  |
+| [BigInt](#bigint_类型)       | `"bigint"`      | {{jsxref("BigInt")}}  |
+| [String](#string_类型)       | `"string"`      | {{jsxref("String")}}  |
+| [Symbol](#symbol_类型)       | `"symbol"`      | {{jsxref("Symbol")}}  |
 
 对象包装器类的参考页面包含关于每个类型可用方法和属性类型的更多用法，以及原始类型本身的详细描述。
 
@@ -57,37 +57,37 @@ Null 类型只有一个值：[`null`](/zh-CN/docs/Web/JavaScript/Reference/Opera
 
 Undefined 类型只有一个值：[`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。
 
-从概念上讲，`undefined` 表示没有任何*值*，`null` 表示没有任何*对象*（这也可以构成 [`typeof null === "object"` 的接口](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null))。当某些东西没有值时，该语言通常默认为 `undefined`：
+从概念上讲，`undefined` 表示没有任何*值*，`null` 表示没有任何*对象*（这也可以构成 [`typeof null === "object"` 的接口](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null)）。当某些东西没有值时，该语言通常默认为 `undefined`：
 
-- 没有值(`return;`)的 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句，隐式返回 `undefined`。
+- 没有值（`return;`）的 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句，隐式返回 `undefined`。
 - 访问不存在的[对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)属性（`obj.iDontExist`），返回 `undefined`。
 - 变量声明时没有初始化（`let x;`），隐式初始化为 `undefined`。
 - 许多如 {{jsxref("Array.prototype.find()")}} 和 {{jsxref("Map.prototype.get()")}} 的方法，当没有发现元素时，返回 `undefined`。
 
 `null` 在核心语言中使用频率少得多。最重要的地方是[原型链的末端](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)——其次是与原型交互的方法，如 {{jsxref("Object.getPrototypeOf()")}}、{{jsxref("Object.create()")}} 等，接受或返回 `null` 而不是 `undefined`。
 
-`null` 是一个[关键字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)，但是 `undefined` 是一个普通的[标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers)，恰好是一个全局属性。在实践中，这两个差异很小，因为 `undefined` 不应该被重新定义或者遮蔽。
+`null` 是一个[关键字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#关键字)，但是 `undefined` 是一个普通的[标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers)，恰好是一个全局属性。在实践中，这两个差异很小，因为 `undefined` 不应该被重新定义或者遮蔽。
 
 ### Boolean 类型
 
 {{jsxref("Boolean")}} 类型表示一个逻辑实体并且包括两个值：`true` 和 `false`。
 
-布尔值通常用于条件运算，包括 [三元运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)、[`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)、[`while`](/zh-CN/docs/Web/JavaScript/Reference/Statements/while) 等。
+布尔值通常用于条件运算，包括[三元运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)、[`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)、[`while`](/zh-CN/docs/Web/JavaScript/Reference/Statements/while) 等。
 
 ### Number 类型
 
-{{jsxref("Number")}} 类型是一种[基于 IEEE 754 标准的双精度 64 位二进制格式的值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding)。它能够存储 2<sup>-1074</sup>（{{jsxref("Number.MIN_VALUE")}}）和 2<sup>1024</sup>（{{jsxref("Number.MAX_VALUE")}}）之间的正浮点数，以及 -2<sup>-1074</sup> 和 -2<sup>1024</sup> 之间的负浮点数，但是它仅能安全地存储在 -(2<sup>53</sup> − 1)（{{jsxref("Number.MIN_SAFE_INTEGER")}}）到 2<sup>53</sup> − 1（{{jsxref("Number.MAX_SAFE_INTEGER")}}）范围内的整数。超出这个范围，JavaScript 可能不再安全的表示整数；相反，它们将由双精度浮点近似表示。你可以使用 {{jsxref("Number.isSafeInteger()")}} 检查一个数是否在安全的整数范围内。
+{{jsxref("Number")}} 类型是一种[基于 IEEE 754 标准的双精度 64 位二进制格式的值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding)。它能够存储 2<sup>-1074</sup>（{{jsxref("Number.MIN_VALUE")}}）和 2<sup>1024</sup>（{{jsxref("Number.MAX_VALUE")}}）之间的正浮点数，以及 -2<sup>-1074</sup> 和 -2<sup>1024</sup> 之间的负浮点数，但是它仅能安全地存储在 -(2<sup>53</sup> − 1)（{{jsxref("Number.MIN_SAFE_INTEGER")}}）到 2<sup>53</sup> − 1（{{jsxref("Number.MAX_SAFE_INTEGER")}}）范围内的整数。超出这个范围，JavaScript 将不能安全地表示整数；相反，它们将由双精度浮点近似表示。你可以使用 {{jsxref("Number.isSafeInteger()")}} 检查一个数是否在安全的整数范围内。
 
 ±(2<sup>-1074</sup> 到 2<sup>1024</sup>) 范围之外的值会自动转换：
 
 - 大于 {{jsxref("Number.MAX_VALUE")}} 的正值被转换为 `+Infinity`。
-- 小于 {{jsxref("Number.MIN_VALUE")}} 的正值被转换为 `+0`.
-- 小于 -{{jsxref("Number.MAX_VALUE")}} 的负值被转换为 `-Infinity`.
-- 大于 -{{jsxref("Number.MIN_VALUE")}} 的负值被转换为 `-0`.
+- 小于 {{jsxref("Number.MIN_VALUE")}} 的正值被转换为 `+0`。
+- 小于 -{{jsxref("Number.MAX_VALUE")}} 的负值被转换为 `-Infinity`。
+- 大于 -{{jsxref("Number.MIN_VALUE")}} 的负值被转换为 `-0`。
 
 `+Infinity` 和 `-Infinity` 行为类似于数学上的无穷大，但是有一些细微的区别；更多细节，参见 {{jsxref("Number.POSITIVE_INFINITY")}} 和 {{jsxref("Number.NEGATIVE_INFINITY")}}。
 
-Number 类型仅有一个具有多个表现形式的值：`0` 同时表示为 `-0` 和 `+0`（其中 `0` 是 `+0` 的别名）。实际上，这两者之间机会没有区别；例如，`+0 === -0` i是 `true`。然而，当你除以 0 的时候，你要注意到这一点：
+Number 类型仅有一个具有多个表现形式的值：`0` 同时表示为 `-0` 和 `+0`（其中 `0` 是 `+0` 的别名）。实际上，这两者之间机会没有区别；例如，`+0 === -0` 是 `true`。然而，当你除以 0 的时候，你要注意到这一点：
 
 ```js
 console.log(42 / +0); // Infinity
@@ -137,8 +137,8 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 使用字符串来表示复杂的数据可能很诱人。这样做会带来短期的好处：
 
 - 容易通过字符串拼接来构造复杂的字串符。
-- 字符串容易被调试（你看到的往往在字符串里）.
-- 字符串通常是许多 APIs 的常见标准（[input fields](/zh-CN/docs/Web/API/HTMLInputElement)、[local storage](/zh-CN/docs/Web/API/Web_Storage_API) 中的值，以及 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 使用 `responseText` 等作为响应）而且这些 APIs 可能只能与字符串一同使用。
+- 字符串容易被调试（你看到的打印的内容始终是字符串）。
+- 字符串通常是许多 API 的常见标准（[input 字段](/zh-CN/docs/Web/API/HTMLInputElement)、[local storage](/zh-CN/docs/Web/API/Web_Storage_API) 中的值，以及 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 使用 `responseText` 等作为响应）而且这些 API 可能只能与字符串一同使用。
 
 使用约定，字符串一般可以用来表示任何数据结构。但这并不总是一个好主意。例如，使用一个分隔符，可以模拟一个列表（而 JavaScript 数组可能更适合）。不幸的是，当分隔符用于列表中的元素时，列表就会被破坏。这时可以选择转义字符，等等。所有这些都需要约定，并造成不必要的维护负担。
 
@@ -198,7 +198,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 
 ### 索引类集合：数组和类型化数组
 
-[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)是一种使用整数作为键（integer-keyed）属性并与长度（length）属性关联的常规对象。
+[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)是一种以整数为键（integer-keyed）的属性并与长度（length）属性关联的常规对象。
 
 此外，数组对象还继承了 `Array.prototype` 的一些操作数组的便捷方法。例如，[`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)（搜索数组中的一个值）或 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)（向数组中添加一个元素），等等。这使得数组是表示列表或集合的最优选择。
 
@@ -229,7 +229,7 @@ JavaScript 有一个内置对象的标准库。发现更多关于内置对象，
 ### 强制原始值转换
 
 在期望原始值的地方使用原始强制过程，但对实际类型应该是什么没有强烈的偏好。
-在期望原始值的地方使用[强制原始值转换](https://tc39.es/ecma262/#sec-toprimitive)的过程，但对实际的类型并不是什么特殊的要求。这通常是当 [字符串](#string-类型)、[数值](#number-类型)或 [BigInt](#bigint-类型) 相同可以接受的时候。
+在期望原始值的地方使用[强制原始值转换](https://tc39.es/ecma262/#sec-toprimitive)的过程，但对实际的类型并不是什么特殊的要求。这通常是当 [字符串](#string_类型)、[数值](#number_类型)或 [BigInt](#bigint_类型) 相同可以接受的时候。
 
 - [`Date()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) 构造函数，当它收到一个不是 `Date` 实例的参数时——字符串表示日期字符串，而数值表示时间戳。
 - [`+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition) 运算符——如果运算对象是字符串，执行字符串串联；否则，执行数值相加。
@@ -249,7 +249,7 @@ console.log({} + []); // "[object Object]"
 
 ### 强制数字类型转换
 
-有两种数字类型：[number](#number-类型) 和 [BigInt](#bigint-类型)。有时候，该语言尤其希望是 number 或 BigInt（例如 {{jsxref("Array.prototype.slice()")}}，其中索引必须是一个数字）；其它时候，它可能容忍并且根据运算对象的类型不同执行不同的运算。有关不允许从其它类型隐式转换的严格强制转换过程，请参阅[强制 number 转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)和[强制 BigInt 转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion)。
+有两种数字类型：[number](#number_类型) 和 [BigInt](#bigint_类型)。有时候，该语言尤其希望是 number 或 BigInt（例如 {{jsxref("Array.prototype.slice()")}}，其中索引必须是一个数字）；其它时候，它可能容忍并且根据运算对象的类型不同执行不同的运算。有关不允许从其它类型隐式转换的严格强制转换过程，请参阅[强制 number 转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)和[强制 BigInt 转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion)。
 
 强制数字类型转换与[强制 number 类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)几乎相同，只是 BigInt 会按原样返回，而不是引起 {{jsxref("TypeError")}}。强制数字类型转换用于所有算术运算，因为它们重载了 number 和 BigInt 类型。唯一例外的是[一元加](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)，它总是强制 number 类型转换。
 
@@ -260,7 +260,7 @@ console.log({} + []); // "[object Object]"
 你可能已经注意到，有三种不同的路径可以将对象转换为原始值：
 
 - [强制原始值转换](#强制原始值转换)：`[@@toPrimitive]("default")` → `valueOf()` → `toString()`
-- [强制数字类型转换](#强制数字类型转换)、[强制 number 类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)、[强制 BigInt 类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion)：`[@@toPrimitive]("number")` → `valueOf()` → `toString()`
+- [强制数字类型转换](#强制数字类型转换)、[强制 number 类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)、[强制 BigInt 类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#转化)：`[@@toPrimitive]("number")` → `valueOf()` → `toString()`
 - [强制字符串类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)：`[@@toPrimitive]("string")` → `toString()` → `valueOf()`
 
 在所有情况下，`[@@toPrimitive]()` 如果存在，必须可调用并返回原始值，而如果它们不可调用或返回对象，`valueOf` 或 `toString` 将被忽略。在过程结束时，如果成功，结果保证是原始值。然后，由此产生的原始值会进一步强制类型转换，具体取决于上下文。
