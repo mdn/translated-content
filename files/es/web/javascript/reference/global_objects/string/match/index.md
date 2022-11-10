@@ -12,67 +12,175 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/match
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef('Objetos_globales', 'String')}}
 
-## Resumen
+El método **`match()`** devuelve todas las ocurrencias de una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_Expressions) dentro de una _cadena_.
 
-El método **`match()`** se usa para obtener todas las ocurrencias de una _expresión regular_ dentro de una _cadena_.
+{{EmbedInteractiveExample('pages/js/string-match.html', 'shorter')}}
 
 ## Sintaxis
 
-```
-cadena.match(regexp)
+```js-nolint
+match(regexp)
 ```
 
 ### Parámetros
 
 - `regexp`
-  - : Un objeto [expresión regular](/es/docs/Web/JavaScript/Referencia/Objetos_globales/RegExp). Si se pasa un objeto `obj` que no es expresión regular, se convierte implícitamente a RegExp usando `new RegExp(obj)`.
+  - : Un objeto de expresión regular o cualquier objeto que tenga un método [`Symbol.match`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match).
+
+    Si `regexp` no es un objeto `RegExp` y no tiene un método `Symbol.match`, se convierte implícitamente en {{jsxref('RegExp')}} usando `new RegExp(regexp)`.
+
+    Si no se proporciona ningún parámetro y se utiliza el método `match()` directamente, se obtendrá un {{jsxref('Array')}} con una cadena vacía: `['']`, ya que esto es equivalente a `match(/(?:)/)`.
+
+### Valor devuelto
+
+Un {{jsxref('Array')}} cuyo contenido depende de la presencia de la bandera global (`g`), o [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) si no se encuentran coincidencias.
+
+- Si se usa la bandera `g`, se devolverán todos los resultados que coincidan con la expresión regular completa, pero no se incluirán los grupos de captura.
+
+- Si no se usa la bandera `g`, se devolverán sólo la primera coincidencia completa y sus grupos de captura relacionados. En este caso, `match()` devolverá el mismo resultado que {{jsxref('RegExp.prototype.exec()')}} (un {{jsxref('Array')}} con algunas propiedades adicionales).
 
 ## Descripción
 
-Si la expresión regular no incluye el flag `g`, devuelve el mismo resultado que {{jsxref("Regexp.exec()")}}.
+La implementación de `String.prototype.match` en sí es muy simple. Se llama al método `Symbol.match` del argumento con la cadena como primer parámetro. La implementación real proviene de [`RegExp.prototype[@@match]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match).
 
-Si la expresión regular incluye el flag `g`, el método devuelve un {{jsxref("Array")}} que contiene todos los emparejamientos.
+- Si se necesita saber si una cadena coincide con una expresión regular {{jsxref('RegExp')}}, use {{jsxref('RegExp.prototype.test()')}}.
 
-### Notas
+- Si solo se desea que se encuentre la primera coincidencia, es posible que desee utilizar {{jsxref('RegExp.prototype.exec()')}} en su lugar.
 
-- Si necesita conocer si una cadena se empareja con una expresión regular `regexp`, use {{jsxref("Regexp.test()")}}.
-- Si sólo quiere el primer emparejamiento hallado, podría querer usar {{jsxref("Regexp.exec()")}} a cambio.
+- Si se desea obtener grupos de captura y la bandera global `g` está siendo utilizada, debe usar {{jsxref('RegExp.prototype.exec()')}} o {{jsxref('String.prototype.matchAll()')}} en su lugar.
+
+Para obtener más información sobre la semántica de `match()` cuando se pasa una expresión regular, consulte [`RegExp.prototype[@@match]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match).
 
 ## Ejemplos
 
-### Ejemplo: Usando `match`
+### Uso de match()
 
-En el siguiente ejemplo, se usa `match` para hallar "`Capítulo`" seguido de 1 o más caracteres numéricos seguidos de un punto decimal y caracteres numéricos cero o más veces. La expresión regular incluye el flag `i` por lo que las mayúsculas serán ignoradas.
+En el siguiente ejemplo, se usa `match` para hallar '`Capítulo`' seguido de uno o más caracteres numéricos seguidos de un punto decimal y caracteres numéricos cero o más veces.
 
-```js
-cadena = "Para más información, vea Capítulo 3.4.5.1";
-expresion = /(capítulo \d+(\.\d)*)/i;
-hallado = cadena.match(expresion);
-console.log(hallado);
-```
-
-Esto devuelve un array que contiene Capítulo 3.4.5.1,Capítulo 3.4.5.1,.1
-
-"`Capítulo 3.4.5.1`" es el primer emparejamiento y el primer valor referenciado por `(Chapter \d+(\.\d)*)`.
-
-"`.1`" es el segundo valor referenciado por `(\.\d)`.
-
-### Ejemplo: Usando los flags global e ignorar mayúsculas con `match`
-
-El siguiente ejemplo demuestra el uso de los flags global e ignorar mayúsculas con `match`. Todas las letras de A hasta E y de a hasta e son devueltas, en su propio elemento dentro del array.
+La expresión regular incluye la bandera `i` por lo que las mayúsculas serán ignoradas.
 
 ```js
-var cadena = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-var expresion = /[A-E]/gi;
-var array_emparejamientos = cadena.match(expresion);
-console.log(array_emparejamientos);
+const cadena = 'Para más información, consulte el Capítulo 3.4.5.1';
+const regex = /consulte el (capítulo \d+(\.\d)*)/i;
+const resultado = cadena.match(regex)
+
+console.log(resultado);
+// [
+//   'consulte el Capítulo 3.4.5.1',
+//   'Capítulo 3.4.5.1',
+//   '.1',
+//   index: 22,
+//   input: 'Para más información, consulte el Capítulo 3.4.5.1',
+//   groups: undefined
+// ]
 ```
 
-`array_emparejamientos` será `['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']`
+En el resultado anterior:
 
-## Vea También
+- `'consulte el Capítulo 3.4.5.1'` es la ocurrencia completa.
+- `'Capítulo 3.4.5.1'` fue capturado por `(capítulo \d+(\.\d)*)`.
+- `'.1'` fue el último valor capturado por `(\.\d)`.
+- La propiedad `index` (`22`) es el índice de la coincidencia completa.
+- La propiedad `input` es la cadena original que se analizó.
 
+### Uso de las banderas global e ignoreCase
+
+El siguiente ejemplo demuestra el uso de la bandera global e ignorar mayúsculas con `match()`. Se devuelven todas las letras de la `A` a la `E` y de la `a` a la `e`, cada una con su propio elemento en el _array_.
+
+```js
+var cadena = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz';
+var regex = /[A-E]/gi;
+var resultado = cadena.match(regex);
+
+console.log(resultado);
+// ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
+```
+
+> **Nota:** Véase también {{jsxref("String.prototype.matchAll()")}} y [Búsqueda avanzada con banderas](/es/docs/Web/JavaScript/Guide/Regular_Expressions#búsqueda_avanzada_con_banderas).
+
+### Uso de grupos de captura con nombre
+
+En los navegadores que soporten grupos de captura con nombre, el siguiente código captura `'zorro'` o `'gato'` en un grupo llamado `animal`:
+
+```js
+const parrafo = 'El veloz zorro marrón salta sobre el perro perezoso. Ladró.';
+const regex = /(?<animal>zorro|gato) marrón/;
+const resultado = parrafo.match(regex);
+
+console.log(resultado.groups); // { animal: 'zorro' }
+```
+
+### Uso sin parámetros
+
+```js
+const cadena = 'Nada saldrá de la nada.';
+
+cadena.match();  // ['']
+```
+
+### Uso de la función @@match
+
+Si un objeto tiene un método `Symbol.match`, entonces se puede usar como un comparador personalizado. El valor de retorno de `Symbol.match` se convierte en el valor de retorno de `match()`.
+
+```js
+const cadena = 'Mmmm, esto es interesante.';
+
+const resultado = cadena.match({
+  [Symbol.match](str) {
+    return ['Sí lo es!'];
+  }
+});
+
+console.log(resultado);  // ['Sí lo es!']
+```
+
+Véase [`RegExp.prototype[@@match]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match).
+
+### Uso de parámetros distintos de RegEx
+
+Cuando el parámetro `regexp` es una cadena o un número, se convierte implícitamente en {{jsxref('RegExp')}} mediante el uso de `new RegExp(regexp)`.
+
+```js
+const cadena1 = 'NaN significa que no es un número. Infinity contiene -Infinity e +Infinity en JavaScript.';
+const cadena2 = 'Mi abuelo tiene 65 años y mi abuela tiene 63 años.';
+const cadena3 = 'The contract was declared null and void.';
+
+cadena1.match('number');   // 'number' es una cadena - devuelve ['number']
+cadena1.match(NaN);        // NaN es de tipo número - devuelve ['NaN']
+cadena1.match(Infinity);   // Infinity es de tipo número - devuelve ['Infinity']
+cadena1.match(+Infinity);  // devuelve ['Infinity']
+cadena1.match(-Infinity);  // devuelve ['-Infinity']
+cadena2.match(65);         // devuelve ['65']
+cadena2.match(+65);        // un número con signo positivo - devuelve ['65']
+cadena3.match(null);       // devuelve ['null']
+```
+
+Esto puede tener resultados inesperados si los caracteres especiales no se escapan correctamente.
+
+```js
+console.log('123'.match('1.3')); // ['123']
+```
+
+Esta es una ocurrencia porque `.` en una expresión regular coincide con todos los caracteres. Para que solo coincida con el carácter de punto, se debe escapar de la entrada.
+
+```js
+console.log("123".match("1\\.3")); // null
+```
+
+## Especificaciones
+
+{{Specifications}}
+
+## Compatibilidad en navegadores
+
+{{Compat}}
+
+## Véase también
+
+- [Polyfill de `String.prototype.match` en `core-js` con correcciones e implementación del comportamiento moderno como el soporte para `Symbol.match`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.matchAll()")}}
+- {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
