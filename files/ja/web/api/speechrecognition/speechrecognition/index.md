@@ -68,4 +68,4 @@ speech recognition を使用するには、[manifest](/ja/docs/Web/Apps/Build/Ma
 
 ## 関連項目
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
