@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 在 JavaScript 中，数组不是[基本类型](/zh-CN/docs/Glossary/Primitive)，而是具有以下核心特征的 `Array` 对象：
 
-- **JavaScript 数组是可调整大小的**，**并且可以包含不同的[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)**。（当不需要这些特征时，可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)）
+- **JavaScript 数组是可调整大小的，并且可以包含不同的[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)**。（当不需要这些特征时，可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)。）
 - **JavaScript 数组不是关联数组**，因此，不能使用任意字符串作为索引访问数组元素，但必须使用非负整数（或它们各自的字符串形式）作为索引访问。
 - **JavaScript 数组的[索引从 0 开始](https://zh.wikipedia.org/zh-cn/從零開始的編號)**：数组的第一个元素在索引 `0` 处，第二个在索引 `1` 处，以此类推，最后一个元素是数组的 {{jsxref("Array/length", "length")}} 属性减去 `1` 的值。
 - **JavaScript [数组复制操作](#复制数组)创建[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)**。（*所有* JavaScript 对象的标准内置复制操作都会创建浅拷贝，而不是[深拷贝](/zh-CN/docs/Glossary/Deep_copy)）。
@@ -36,13 +36,13 @@ console.log(years['2'] !== years['02']);
 
 只有 `years['2']` 是一个实际的数组索引。`years['02']` 是一个在数组迭代中不会被访问的任意字符串属性。
 
-### 长度与数值性质的关系
+### 长度与数值属性的关系
 
 JavaScript 数组的 {{jsxref("Array/length", "length")}} 属性和数值属性是连接的。
 
 一些内置数组方法（例如 {{jsxref("Array/join", "join()")}}、{{jsxref("Array/slice", "slice()")}}、{{jsxref("Array/indexOf", "indexOf()")}} 等）在被调用时会考虑到数组的 {{jsxref("Array/length", "length")}} 属性的值。
 
-其他方法（例如，{{jsxref("Array/push", "push()")}}、{{jsxref("Array/splice", "splice()")}} 等）也会导致更新数组的 {{jsxref("Array/length", "length")}} 属性。
+其他方法（例如，{{jsxref("Array/push", "push()")}}、{{jsxref("Array/splice", "splice()")}} 等）也会更新数组的 {{jsxref("Array/length", "length")}} 属性。
 
 ```js
 const fruits = [];
