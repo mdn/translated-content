@@ -1,7 +1,6 @@
 ---
 title: <input type="month">
 slug: Web/HTML/Element/input/month
-original_slug: Web/HTML/Element/Input/月份
 ---
 
 {{HTMLSidebar}}
@@ -10,7 +9,7 @@ original_slug: Web/HTML/Element/Input/月份
 
 {{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
 
-通常来说控件的 UI 界面因浏览器的不同而有变化，到目前为止此控件还不被所有浏览器支持，在桌面浏览器中只有 Chrome/Opera 和 Edge 支持；在移动端支持大部分现代浏览器。在不支持的浏览器中，这个控件会被优雅的降级到[`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)，不过对输入的文字会有自动的验证，保证它按照预期进行格式化。
+通常来说控件的 UI 界面因浏览器的不同而有变化，到目前为止此控件还不被所有浏览器支持，在桌面浏览器中只有 Chrome/Opera 和 Edge 支持；在移动端被大部分现代浏览器所支持。在不支持的浏览器中，这个控件会被优雅的降级到 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)，不过对输入的文字会有自动的验证，保证它按照预期进行格式化。
 
 对于那些使用不支持 `month` 控制器的浏览器用户，以下的截图呈现了 Chrome 和 Opera 的月份控制器。单击右侧的向下箭头会显示日期选择器，以便选择年份和月份。
 
@@ -28,7 +27,7 @@ Edge 的 `month` 控制器看起来像这样的：
   </tr>
   <tr>
    <td><strong>事件</strong></td>
-   <td> 
+   <td>
      {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}
     </td>
   </tr>
@@ -310,7 +309,7 @@ input:valid + span::after {
 }
 ```
 
-目前，以跨浏览器方式处理时间的最佳方法（至少在所有主流浏览器实现它们之前）是让用户在单独的控件中输入月份和年份（特别是在 ({{htmlelement("select")}} 元素中，参见下面的示例），或使用 JavaScript 库（例如 [jQuery 日期选择器](https://jqueryui.com/datepicker/)插件）。
+目前，以跨浏览器方式处理时间的最佳方法（至少在所有主流浏览器实现它们之前）是让用户在单独的控件中输入月份和年份（特别是在 {{htmlelement("select")}} 元素中，参见下面的示例），或使用 JavaScript 库（例如 [jQuery 日期选择器](https://jqueryui.com/datepicker/)插件）。
 
 ## 示例
 
@@ -393,7 +392,7 @@ input:valid + span::after {
 
 处理选择哪种方案并设定一系列包含于非原生的 `<select>` 的年份列表的 JavaScript 代码如下所示。
 
-该代码中可能有趣的另一部分是特性检测代码。要检测浏览器是否支持 `<input type="month">`，我们创建一个新的 {{htmlelement("input")}} 元素，尝试将其 `type` 设置为 `month`，然后立即检查其 `type` 值。不支持的浏览器将返回 `text`，与 month 的回退行为相符。如果不支持 ·<input type="month">`，我们将隐藏原生选择器并显示后备选择器 UI。
+该代码中可能有趣的另一部分是特性检测代码。要检测浏览器是否支持 `<input type="month">`，我们创建一个新的 {{htmlelement("input")}} 元素，尝试将其 `type` 设置为 `month`，然后立即检查其 `type` 值。不支持的浏览器将返回 `text`，与 month 的回退行为相符。如果不支持 `<input type="month">`，我们将隐藏原生选择器并显示作为回退的选择器 UI。
 
 ```js
 // 获取 UI 元素
