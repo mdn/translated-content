@@ -57,10 +57,7 @@ Been formally correct it suffers from a number of issues related to floating poi
 
 ## Especificaciones
 
-| Specification                                                                | Status                       | Comment             |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-math.asinh', 'Math.asinh')}}         | {{Spec2('ES6')}}         | Initial definition. |
-| {{SpecName('ESDraft', '#sec-math.asinh', 'Math.asinh')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidades de buscadores
 

@@ -68,10 +68,7 @@ if (!Date.prototype.toISOString) {
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estatus                  | Comentario                                         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.9.5.43', 'Date.prototype.toISOString')}}                     | {{Spec2('ES5.1')}} | Definición inicial. Implementado en javascript 1.8 |
-| {{SpecName('ES6', '#sec-date.prototype.toisostring', 'Date.prototype.toISOString')}} | {{Spec2('ES6')}}     |                                                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

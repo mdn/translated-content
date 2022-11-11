@@ -53,11 +53,7 @@ console.log(formatted.join('; '));
 
 ## Especificaciones
 
-| Specification                                                                                                                                    | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('ES Int 1.0', '#sec-11.3.2', 'Intl.NumberFormat.prototype.format')}}                                         | {{Spec2('ES Int 1.0')}} | Initial definition. |
-| {{SpecName('ES Int 2.0', '#sec-11.3.2', 'Intl.NumberFormat.prototype.format')}}                                         | {{Spec2('ES Int 2.0')}} |                     |
-| {{SpecName('ES Int Draft', '#sec-intl.numberformat.prototype.format', 'Intl.NumberFormat.prototype.format')}} | {{Spec2('ES Int Draft')}} |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

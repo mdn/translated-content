@@ -71,12 +71,9 @@ g.next(2);
 // "{ value: null, done: false }"
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                    | Status                       | Comment             |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-generator.prototype.next', 'Generator.prototype.next')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-generator.prototype.next', 'Generator.prototype.next')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

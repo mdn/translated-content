@@ -55,12 +55,7 @@ arr.unshift([-3]);
 
 ## Especificaciones
 
-| Especificación                                                                                               | Status                       | Comentario                                         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.13', 'Array.prototype.unshift')}}                     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-array.prototype.unshift', 'Array.prototype.unshift')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-array.prototype.unshift', 'Array.prototype.unshift')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

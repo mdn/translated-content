@@ -142,11 +142,7 @@ var z = new Uint8Array(buffer, 1, 4);
 
 ## Especificaciones
 
-| Especificación                                                                       | Estatus                          | Comentario                                                                      |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Sustituida por ECMAScript 6.                                                    |
-| {{SpecName('ES6', '#table-49', 'TypedArray constructors')}}     | {{Spec2('ES6')}}             | Definición inicial en un ECMA standard. Se especificó que `new` es requirerido. |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     |                                                                                 |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

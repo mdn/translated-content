@@ -123,14 +123,9 @@ Math.ceil10(-55.59, -1);   // -55.5
 Math.ceil10(-59, 1);       // -50
 ```
 
-## Espicificaciones
+## Especificaciones
 
-| Especificación                                                           | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.6', 'Math.ceil')}}     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-math.ceil', 'Math.ceil')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-math.ceil', 'Math.ceil')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

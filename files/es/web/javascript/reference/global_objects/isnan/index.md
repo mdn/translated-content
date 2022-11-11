@@ -45,12 +45,7 @@ isNaN(12) //devuelve false
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                       | Comentario         |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Definición inicial |
-| {{SpecName('ES5.1', '#sec-15.1.2.4', 'isNaN')}}         | {{Spec2('ES5.1')}}     |                    |
-| {{SpecName('ES6', '#sec-isnan-number', 'isNaN')}}         | {{Spec2('ES6')}}         |                    |
-| {{SpecName('ESDraft', '#sec-isnan-number', 'isNaN')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 
