@@ -15,7 +15,7 @@ original_slug: Web/API/GlobalEventHandlers/onlostpointercapture
 
 {{ APIRef }}
 
-`onlostpointercapture` es una propiedad {{event("Event_handlers", "event handler")}} de la interfaz {{domxref("Element")}} que devuelve el controlador de eventos (función) para el evento tipo {{event("lostpointercapture")}} .
+`onlostpointercapture` es una propiedad [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la interfaz {{domxref("Element")}} que devuelve el controlador de eventos (función) para el evento tipo [`lostpointercapture`](/es/docs/Web/Reference/Events/lostpointercapture) .
 
 ## Síntaxis
 
@@ -58,4 +58,4 @@ function init() {
 
 ## Véase también
 
-- {{ event("lostpointercapture") }}
+- [`lostpointercapture`](/es/docs/Web/Reference/Events/lostpointercapture)

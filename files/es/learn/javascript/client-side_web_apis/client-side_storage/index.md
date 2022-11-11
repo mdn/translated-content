@@ -272,7 +272,7 @@ Ahora veamos lo que tenemos que hacer en primer lugar, para configurar una base 
    window.onload = function () {};
    ```
 
-   Escribiremos todo nuestro subsiguiente código dentro de esta función controladora de eventos `window.onload`, llamada cuando se activa el evento {{event("load")}} de la ventana, para asegurarnos de que no intentemos usar la funcionalidad `IndexedDB` antes de que la aplicación haya terminado de cargarse por completo (podría fallar si no lo hacemos).
+   Escribiremos todo nuestro subsiguiente código dentro de esta función controladora de eventos `window.onload`, llamada cuando se activa el evento [`load`](/es/docs/Web/Reference/Events/load) de la ventana, para asegurarnos de que no intentemos usar la funcionalidad `IndexedDB` antes de que la aplicación haya terminado de cargarse por completo (podría fallar si no lo hacemos).
 
 3. Dentro del controlador `window.onload`, agrega lo siguiente:
 

@@ -61,9 +61,9 @@ window.addEventListener("beforeunload", function (e) {
 
 ## Ver también
 
-- {{Event("DOMContentLoaded")}}
-- {{Event("readystatechange")}}
-- {{Event("load")}}
-- {{Event("beforeunload")}}
-- {{Event("unload")}}
-- [Descargas de documentos — Solicitud para descargar un documento](http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
+- [`DOMContentLoaded`](/es/docs/Web/Reference/Events/DOMContentLoaded)
+- [`readystatechange`](/es/docs/Web/Reference/Events/readystatechange)
+- [`load`](/es/docs/Web/Reference/Events/load)
+- [`beforeunload`](/es/docs/Web/Reference/Events/beforeunload)
+- [`unload`](/es/docs/Web/Reference/Events/unload)
+- [Descargas de documentos — Solicitud para descargar un documento](https://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)

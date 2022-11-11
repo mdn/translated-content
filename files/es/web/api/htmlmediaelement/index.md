@@ -124,7 +124,7 @@ These attributes are obsolete and should not be used, even if a browser still su
 ### Obsolete event handlers
 
 - {{domxref("HTMLMediaElement.onmozinterruptbegin")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Sets the {{event("Event_handlers", "event handler")}} called when the media element is interrupted because of the Audio Channel manager. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.
+  - : Sets the [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) called when the media element is interrupted because of the Audio Channel manager. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.
 - {{domxref("HTMLMediaElement.onmozinterruptend")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Sets the {{domxref('EventHandler')}} called when the interruption is concluded. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.
 

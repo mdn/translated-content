@@ -7,7 +7,7 @@ original_slug: Web/API/GlobalEventHandlers/onchange
 
 {{ ApiRef("HTML DOM") }}
 
-La propiedad `onchange` establece y devuelve el [event handler](/docs/Web/Guide/Events/Event_handlers) para el evento {{event("change")}}.
+La propiedad `onchange` establece y devuelve el [event handler](/docs/Web/Guide/Events/Event_handlers) para el evento [`change`](/es/docs/Web/Reference/Events/change).
 
 ## Sintaxis
 
@@ -22,7 +22,7 @@ var handlerFunction = element.onchange;
 
 Mir el la págna [Manejadores de eventos DOM](/es/docs/Web/Guide/Events/Event_handlers) para más información sobre cómo trabajar con los manejadore `on`.
 
-Mira la documentación para el evento {{event("change")}}.
+Mira la documentación para el evento [`change`](/es/docs/Web/Reference/Events/change).
 
 ## Especificaciones
 

@@ -88,5 +88,5 @@ function logValue(e) {
 
 - {{domxref("GlobalEventHandlers.oninvalid")}}
 - Elemento HTML {{HtmlElement("form")}}
-- Evento relacionado: {{Event("submit")}}
+- Evento relacionado: [`submit`](/es/docs/Web/Reference/Events/submit)
 - [CSS `:invalid` pseudo class](/es/docs/Web/CSS/:invalid)

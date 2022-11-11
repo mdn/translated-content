@@ -137,6 +137,6 @@ The compatibility table in this page is generated from structured data. If you'd
 ## Ver también
 
 - [Formularios HTML](/es/docs/Web/Guide/HTML/Forms).
-- El evento {{event("close")}}
-- El evento {{event("cancel")}}
+- El evento [`close`](/es/docs/Web/Reference/Events/close)
+- El evento [`cancel`](/es/docs/Web/Reference/Events/cancel)
 - El pseudo-elemento {{cssxref("::backdrop")}}
