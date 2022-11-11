@@ -209,11 +209,7 @@ if (!Array.prototype.indexOf) {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.14', 'Array.prototype.indexOf')}}                     | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

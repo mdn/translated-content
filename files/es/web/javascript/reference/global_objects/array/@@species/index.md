@@ -47,10 +47,7 @@ class MyArray extends Array {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                       | Comentario          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-get-array-@@species', 'get Array [ @@species ]')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-get-array-@@species', 'get Array [ @@species ]')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

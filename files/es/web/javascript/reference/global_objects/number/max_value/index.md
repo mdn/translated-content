@@ -39,12 +39,7 @@ verificarValorMaximo(numero2); // El número es infinito
 
 ## Especificaciones
 
-| Specification                                                                                | Status                       | Comment                                            |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                     | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.7.3.2', 'Number.MAX_VALUE')}}                 | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-number.max_value', 'Number.MAX_VALUE')}}         | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-number.max_value', 'Number.MAX_VALUE')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidad
 

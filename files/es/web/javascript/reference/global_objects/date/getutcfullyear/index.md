@@ -36,12 +36,7 @@ var year = today.getUTCFullYear();
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estado                       | Comentario                                          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Definición inicial. Implementada en JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.11', 'Date.prototype.getUTCFullYear')}}                             | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-date.prototype.getutcfullyear', 'Date.prototype.getUTCFullYear')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-date.prototype.getutcfullyear', 'Date.prototype.getUTCFullYear')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

@@ -37,12 +37,7 @@ Function.prototype.toString.call(proxy); // TypeError
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                       | Observaciones                                                             |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                 | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.1.                       |
-| {{SpecName('ES5.1', '#sec-15.3.4.2', 'Function.prototype.toString')}}                             | {{Spec2('ES5.1')}}     |                                                                           |
-| {{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}     | {{Spec2('ES6')}}         | Añadidos requerimientos más específicos para la representación de cadena. |
-| {{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                                           |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

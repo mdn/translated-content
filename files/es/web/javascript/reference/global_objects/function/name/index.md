@@ -123,10 +123,7 @@ Para versiones de IE < 9, se puede usar `fn._name()` en su lugar. Para IE9 o pos
 
 ## Especificaciones
 
-| Especificación                                               | Estado                       | Comentarios         |
-| ------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-name', 'name')}}     | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-name', 'name')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

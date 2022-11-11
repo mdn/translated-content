@@ -49,12 +49,7 @@ console.log(a); // [3, 2, 1]
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.4.4.8', 'Array.prototype.reverse')}}                     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-array.prototype.reverse', 'Array.prototype.reverse')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.reverse', 'Array.prototype.reverse')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

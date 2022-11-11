@@ -66,10 +66,7 @@ if (!Array.of) {
 
 ## Especificaciones
 
-| Especificación                                                       | Estado                       | Comentario          |
-| -------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-array.of', 'Array.of')}} | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-array.of', 'Array.of')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

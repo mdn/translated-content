@@ -45,10 +45,7 @@ for (let e of iterator) {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentarios         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-array.prototype.entries', 'Array.prototype.entries')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-array.prototype.entries', 'Array.prototype.entries')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -37,10 +37,7 @@ Math.pow(2, 53) - 1     // 9007199254740991
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estatus                      | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-number.max_safe_integer', 'Number.MAX_SAFE_INTEGER')}} | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-number.max_safe_integer', 'Number.MAX_SAFE_INTEGER')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

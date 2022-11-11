@@ -224,11 +224,7 @@ var result = mapped.map(function(el){
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                   | Comentario          |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| ECMAScript 1st Edition                                                                           | Standard                 | Definicióñ inicial. |
-| {{SpecName('ES5.1', '#sec-15.4.4.11', 'Array.prototype.sort')}}             | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-array.prototype.sort', 'Array.prototype.sort')}} | {{Spec2('ES6')}}     |                     |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

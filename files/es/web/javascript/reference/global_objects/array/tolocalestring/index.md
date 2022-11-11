@@ -139,10 +139,7 @@ Si necesitas soportar motores de JavaScript obsoletos que no compatibilizan con 
 
 ## Especificaciones
 
-| Especificación                                                                                                                           | Estado                           | Comentario                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}}         | {{Spec2('ESDraft')}}     | La definicion original fue en ECMAScript 3.             |
-| {{SpecName('ES Int Draft', '#sup-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}} | {{Spec2('ES Int Draft')}} | Esta definición reemplaza la proporcionada en ECMA-262. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -55,10 +55,7 @@ console.log(eArr.next().value); // p
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                       | Comentario           |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}} | {{Spec2('ES2015')}}     | Definición inicial.. |
-| {{SpecName('ESDraft', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
