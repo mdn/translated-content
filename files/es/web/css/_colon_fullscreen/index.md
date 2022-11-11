@@ -134,9 +134,7 @@ fullscreenButton.addEventListener('click', enterFullscreen);
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentarios         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('Fullscreen', '#:fullscreen-pseudo-class', ':fullscreen')}} | {{Spec2('Fullscreen')}} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

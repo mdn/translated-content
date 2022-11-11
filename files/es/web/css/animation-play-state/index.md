@@ -47,9 +47,7 @@ Visita [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejempl
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                               | Comentario        |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
-| {{SpecName('CSS3 Animations', '#animation-play-state', 'animation-play-state')}} | {{Spec2('CSS3 Animations')}} | Definición incial |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

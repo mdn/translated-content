@@ -98,9 +98,7 @@ flex-grow: unset;
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                           | Comentario         |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox','#flex-grow','flex-grow')}} | {{Spec2('CSS3 Flexbox')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

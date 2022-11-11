@@ -80,9 +80,7 @@ Para más información por favor, referirse a estos artículos:
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox', '#order-property', 'order')}} | {{Spec2('CSS3 Flexbox')}} | Definición Inicial |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

@@ -82,12 +82,9 @@ Esta puede ser incluida en un docuemnto HTML5 de la siguiente manera:
 
 Este elemento implementa [`SVGSVGElement`](/en-US/docs/Web/API/SVGSVGElement) en la interfaz.
 
-## Specificaciones
+## Especificaciones
 
-| Specificación                                                                        | Estado                   | Comentario         |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'struct.html#NewDocument', '&lt;svg&gt;')}} | {{Spec2('SVG2')}} |                    |
-| {{SpecName('SVG1.1', 'struct.html#NewDocument', '&lt;svg&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad de Navegador
 

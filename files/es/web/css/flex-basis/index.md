@@ -174,9 +174,7 @@ flex-basis: unset;
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox', '#propdef-flex-basis', 'flex-basis')}} | {{Spec2('CSS3 Flexbox')}} | Definición Inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 
