@@ -19,7 +19,7 @@ El DOM surgió a partir de la implementación de [JavaScript](/es/docs/Glossary/
 
 ### Cultura General
 
-- {{Interwiki("wikipedia","DOM")}} en Wikipedia
+- [DOM](https://es.wikipedia.org/wiki/DOM) en Wikipedia
 
 ### Información Técnica
 

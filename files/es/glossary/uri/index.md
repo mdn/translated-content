@@ -13,7 +13,7 @@ Un **URI** _(Identificador Uniforme de Recursos de sus siglas en inglés: Unifor
 
 ### Conocimientos Generales
 
-- {{Interwiki("wikipedia", "URI")}} en Wikipedia
+- [URI](https://es.wikipedia.org/wiki/URI) en Wikipedia
 - [RFC 3986 on URI](http://tools.ietf.org/html/rfc3986)
 - [data URIs](/en-US/docs/Web/HTTP/data_URIs)
 - [www vs non-www](/en-US/docs/URI/www_vs_non-www_URLs)

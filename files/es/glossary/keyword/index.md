@@ -18,4 +18,4 @@ Cuando usas un motor de búsqueda, utilizas palabras clave para especificar lo q
 
 ### Conocimientos generales
 
-- {{interwiki("wikipedia", "Keyword_research", "Keyword")}} on Wikipedia
+- [Keyword](https://es.wikipedia.org/wiki/Keyword_research) on Wikipedia

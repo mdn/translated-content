@@ -15,4 +15,4 @@ Un sistema de gestión de contenidos o CMS es un programa informático que permi
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Sistema de gestión de contenidos")}} en Wikipedia
+- [Sistema de gestión de contenidos](https://es.wikipedia.org/wiki/Sistema_de_gestión_de_contenidos) en Wikipedia

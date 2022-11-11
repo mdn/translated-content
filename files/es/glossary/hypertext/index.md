@@ -14,7 +14,7 @@ El término fue acuñado por Ted Nelson alrededor del año 1965.
 
 ### Conocimiento general
 
-- {{interwiki("wikipedia", "Hipertexto", "Hipertexto")}} en Wikipedia
+- [Hipertexto](https://es.wikipedia.org/wiki/Hipertexto) en Wikipedia
 
 ### Referencia Técnica
 

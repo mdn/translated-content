@@ -18,7 +18,7 @@ Las URLs también se pueden utilizar para la transferencia de archivos ({{Glossa
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "URL")}} en Wikipedia
+- [URL](https://es.wikipedia.org/wiki/URL) en Wikipedia
 
 ### Aprende sobre esto
 

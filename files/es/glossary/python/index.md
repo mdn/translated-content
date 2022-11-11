@@ -19,5 +19,5 @@ Python es administrado y soportado por la [Python Software Foundation](https://w
 
 ## Aprende Más
 
-- {{interwiki('wikipedia','Python','Python')}} en Wikipedia
+- [Python](https://es.wikipedia.org/wiki/Python) en Wikipedia
 - [Tutorial de Python en Español](https://docs.python.org/es/3/tutorial/index.html)

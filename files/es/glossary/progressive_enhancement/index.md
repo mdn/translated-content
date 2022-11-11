@@ -20,4 +20,4 @@ Es una técnica útil que permite a los desarrolladores web centrarse en desarro
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "Mejora progresiva")}} en Wikipedia
+- [Mejora progresiva](https://es.wikipedia.org/wiki/Mejora_progresiva) en Wikipedia

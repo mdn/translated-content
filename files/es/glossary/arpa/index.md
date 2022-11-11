@@ -13,4 +13,4 @@ translation_of: Glossary/ARPA
 ### General knowledge
 
 - [Official website](http://www.iana.org/domains/arpa)
-- {{Interwiki("wikipedia", ".arpa")}} on Wikipedia
+- [.arpa](https://es.wikipedia.org/wiki/.arpa) on Wikipedia

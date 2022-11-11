@@ -19,7 +19,7 @@ Con los sitios web interactivos y los estándares web modernos, AJAX está siend
 
 ### Conocimiento general
 
-- {{interwiki("wikipedia", "AJAX")}} en Wikipedia
+- [AJAX](https://es.wikipedia.org/wiki/AJAX) en Wikipedia
 - [Comunicación sincrona vs asincrona](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
 
 ### Información técnica

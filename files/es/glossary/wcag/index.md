@@ -23,7 +23,7 @@ WCAG uses three levels of conformance:
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "Web_Content_Accessibility_Guidelines", "WCAG")}} en Wikipedia
+- [WCAG](https://es.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines) en Wikipedia
 
 ### Technical knowledge
 

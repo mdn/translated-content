@@ -16,7 +16,7 @@ Por ejemplo, las librerías SDK de AWS son un ejemplo de wrappers.
 
 ### Conocimientos generales
 
-{{Interwiki("wikipedia", "Wrapper function")}} on Wikipedia
+[Wrapper function](https://es.wikipedia.org/wiki/Wrapper_function) on Wikipedia
 
 <section id="Quick_links">
  <ol>

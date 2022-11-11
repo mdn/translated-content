@@ -17,7 +17,7 @@ Las expresiones regulares están incluidas en varios lenguages, pero las más co
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "Regular expressions")}} en Wikipedia
+- [Regular expressions](https://es.wikipedia.org/wiki/Regular_expressions) en Wikipedia
 - [Interactive tutorial](http://regexone.com/)
 - [Visualized Regular Expression](http://regexper.com/)
 

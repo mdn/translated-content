@@ -16,7 +16,7 @@ translation_of: Glossary/Apple_Safari
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Safari (web browser)", "Safari")}} en Wikipedia
+- [Safari](https://es.wikipedia.org/wiki/Safari_(web_browser)) en Wikipedia
 - [Safari en apple.com](http://www.apple.com/safari/)
 
 ### Información técnica

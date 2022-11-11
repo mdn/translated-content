@@ -10,4 +10,4 @@ translation_of: Glossary/jpeg
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "JPEG")}} on Wikipedia
+- [JPEG](https://es.wikipedia.org/wiki/JPEG) on Wikipedia

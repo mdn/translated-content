@@ -13,7 +13,7 @@ Un _códec_ (acrónimo de "***co***dificador-***dec***odificador") es un program
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Códec")}} en Wikipedia
+- [Códec](https://es.wikipedia.org/wiki/Códec) en Wikipedia
 
 ### Referencias técnicas
 

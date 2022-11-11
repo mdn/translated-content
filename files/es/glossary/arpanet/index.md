@@ -10,4 +10,4 @@ La **ARPAnet** (advanced research projects agency network) o Red de Angencias de
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Arpanet")}} on Wikipedia
+- [Arpanet](https://es.wikipedia.org/wiki/Arpanet) on Wikipedia

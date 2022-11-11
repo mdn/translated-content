@@ -16,4 +16,4 @@ En {{glossary("Cryptography", "Criptografía")}}, un texto cifrado es un mensaje
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Ciphertext")}} on Wikipedia
+- [Ciphertext](https://es.wikipedia.org/wiki/Ciphertext) on Wikipedia
