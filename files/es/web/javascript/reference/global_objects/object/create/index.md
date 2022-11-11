@@ -351,11 +351,7 @@ Note that while the setting of `null` as `[[Prototype]]` is supported in the rea
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                       | Comentario                                           |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.5', 'Object.create')}}             | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.8.5 |
-| {{SpecName('ES6', '#sec-object.create', 'Object.create')}}         | {{Spec2('ES2015')}}     |                                                      |
-| {{SpecName('ESDraft', '#sec-object.create', 'Object.create')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

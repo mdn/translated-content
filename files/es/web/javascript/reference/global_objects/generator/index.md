@@ -104,12 +104,7 @@ console.log(it.next());   // throws StopIteration (as the generator is now close
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                       | Comentario         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-generator-objects', 'Generator objects')}} | {{Spec2('ES2015')}}     | Definición inicial |
-| {{SpecName('ESDraft', '#sec-generator-objects', 'Generator objects')}} | {{Spec2('ESDraft')}} |                    |
-|                                                                                              |                              |                    |
-|                                                                                              |                              |                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

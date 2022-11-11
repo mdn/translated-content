@@ -109,10 +109,7 @@ Object.isFrozen(1);
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                   | Comentario                                            |
-| ------------------------------------------------------------------------------------ | ------------------------ | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.12', 'Object.isFrozen')}}         | {{Spec2('ES5.1')}} | Definición inicial. Implementada en JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.isfrozen', 'Object.isFrozen')}} | {{Spec2('ES6')}}     |                                                       |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

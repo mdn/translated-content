@@ -91,12 +91,9 @@ if (!String.prototype.codePointAt) {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                | Status                       | Comment             |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-string.prototype.codepointat', 'String.prototype.codePointAt')}}     | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-string.prototype.codepointat', 'String.prototype.codePointAt')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

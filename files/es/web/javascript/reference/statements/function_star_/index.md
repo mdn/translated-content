@@ -86,9 +86,7 @@ console.log(gen.next().value); // 20
 
 ## Especificaciones
 
-| Especificaciones                                     | Status                   | Comentarios         |
-| ---------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('ES2015', '#', 'function*')}} | {{Spec2('ES2015')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -71,9 +71,7 @@ Y lo mejor es que está siendo desarrollado como un estándar web a través del 
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Comentarios                                                |
-| ---------------------------------------- | ------------------------------------ | ---------------------------------------------------------- |
-| {{SpecName('WebAssembly JS')}} | {{Spec2('WebAssembly JS')}} | Borrador inicial de la definición de la API de JavaScript. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

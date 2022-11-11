@@ -192,10 +192,7 @@ Para poder usar los métodos de `Array` en el objeto `arguments`, se debe conver
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function Definitions')}}     | {{Spec2('ES6')}}         | definción inicial. |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Function Definitions')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

@@ -28,9 +28,7 @@ El evento keyup se lanza cuando el usuario suelta la tecla que ha sido presionad
 
 ## Especificaciones
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onkeyup','onkeyup')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

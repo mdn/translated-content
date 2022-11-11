@@ -149,13 +149,9 @@ var strReverse = str.split('').reverse().join(''); // 'lkjhgfdsa'
 
 **Extra:** usar el operador [===](</es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity_.2F_strict_equality_(.3D.3D.3D)>) para verificar si la cadena anterior era un palíndromo.
 
-## Specifications
+## Especificaciones
 
-| Especificación                                                                                       | Estado                   | Comentario                                          |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------- |
-| ECMAScript 3rd Edition.                                                                              | Estándar                 | Definición inicial. Implementado en JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.5.4.14', 'String.prototype.split')}}             | {{Spec2('ES5.1')}} |                                                     |
-| {{SpecName('ES6', '#sec-string.prototype.split', 'String.prototype.split')}} | {{Spec2('ES6')}}     |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con los navegadores
 

@@ -88,10 +88,7 @@ Object.getOwnPropertyDescriptor(p, 'a'); // TypeError is thrown
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                   | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-getownproperty-p', '[[GetOwnProperty]]')}}     | {{Spec2('ES2015')}}     | Definición Inicial. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-getownproperty-p', '[[GetOwnProperty]]')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con buscadores
 

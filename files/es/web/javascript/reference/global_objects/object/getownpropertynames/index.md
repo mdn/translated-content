@@ -100,10 +100,7 @@ console.log(nonenum_only);
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Status                   | Comentario                                          |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.4', 'Object.getOwnPropertyNames')}}                     | {{Spec2('ES5.1')}} | Initial definition. Implemented in JavaScript 1.8.5 |
-| {{SpecName('ES6', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}} | {{Spec2('ES6')}}     |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

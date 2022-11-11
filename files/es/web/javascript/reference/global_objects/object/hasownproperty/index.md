@@ -107,11 +107,7 @@ Observe que en el último caso no han habido nuevos objetos creados.
 
 ## Especificaciones
 
-| Especificaciones                                                                                                             | Estado                   | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| ECMAScript 3rd Edition. Implemented in JavaScript 1.5                                                                        | Standard                 | Initial definition. |
-| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                             | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ES6')}}     |                     |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

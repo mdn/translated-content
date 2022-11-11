@@ -83,10 +83,7 @@ Object.getOwnPropertyDescriptor("foo", 0);
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estado                   | Comentario                                            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.3', 'Object.getOwnPropertyDescriptor')}}                             | {{Spec2('ES5.1')}} | Definición inicial. Implementado en JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.getownpropertydescriptor', 'Object.getOwnPropertyDescriptor')}} | {{Spec2('ES6')}}     |                                                       |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
