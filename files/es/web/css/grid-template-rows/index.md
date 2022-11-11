@@ -121,10 +121,7 @@ Esta propiedad puede especificarse como:
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSS3 Grid", "#propdef-grid-template-rows", "grid-template-rows")}} | {{Spec2("CSS3 Grid")}}     | Definición inicial |
-| {{SpecName("CSS Grid 2", "#subgrids", "subgrid")}}                                     | {{Spec2("CSS Grid 2")}} | Incorpora subgrid  |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

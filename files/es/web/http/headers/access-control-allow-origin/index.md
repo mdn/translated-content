@@ -78,9 +78,7 @@ Vary: Origin
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                   | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}} | {{Spec2("Fetch")}} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad del Navegador
 

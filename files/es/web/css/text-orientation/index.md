@@ -72,11 +72,9 @@ p {
 
 {{EmbedLiveSample('Examples')}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                       | Estado                                   | Comentario          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Writing Modes', '#text-orientation', 'text-orientation')}} | {{Spec2('CSS3 Writing Modes')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

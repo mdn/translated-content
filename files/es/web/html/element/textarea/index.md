@@ -107,11 +107,7 @@ Un _textarea_ tiene dimensiones intrínsecas, como una imagen agrandada.
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estado                           | Comentarios |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'the-button-element.html#the-textarea-element', '&lt;textarea&gt;')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'forms.html#the-textarea-element', '&lt;textarea&gt;')}}                     | {{Spec2('HTML5 W3C')}}     |             |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.7', '&lt;textarea&gt;')}}                             | {{Spec2('HTML4.01')}}     |             |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

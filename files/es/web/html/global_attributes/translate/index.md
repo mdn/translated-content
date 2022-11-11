@@ -19,10 +19,7 @@ El [atributo global](/es/docs/Web/HTML/Atributos_Globales) **translate** es un a
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estatus                          | Comentario                                                            |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#attr-translate", "translate")}}         | {{Spec2('HTML WHATWG')}} | Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}} |
-| {{SpecName('HTML5.1', "dom.html#the-translate-attribute", "translate")}} | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, definición inicial  |
+{{Specifications}}
 
 ## Compatibilidad en exploradores
 

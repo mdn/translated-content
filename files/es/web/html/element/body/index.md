@@ -164,11 +164,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                               | Comentario                                                                                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-body-element', '&lt;body&gt;')}} | {{ Spec2('HTML WHATWG') }} | Cambió la lista de características no conformes.                                                                                                                                                      |
-| {{SpecName('HTML5 W3C', 'sections.html#the-body-element', '&lt;body&gt;')}}     | {{ Spec2('HTML5 W3C') }}     | Los atributos anteriormente obsoletos. Definieron el comportamiento de `topmargin`, `leftmargin`, `rightmargin` y `bottommargin` no conforme y nunca estandarizado. Se agregaron los atributos `on*`. |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.1', '&lt;body&gt;')}}             | {{ Spec2('HTML4.01') }}     | En desuso el `alink`, `background`, `bgcolor`, `link`, `text` y atributos `vlink`.                                                                                                                    |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

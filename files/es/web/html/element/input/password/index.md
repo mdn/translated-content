@@ -113,10 +113,4 @@ El ejemplo de arriba creará un elemento password que deberá contener 6 o más 
 
 ## Especificaciones
 
-| Especificacion                                                                                                       | Status                           | Comentario |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'the-input-element.html#the-input-element', '&lt;input&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'forms.html#the-input-element', '&lt;input&gt;')}}                 | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.4', '&lt;form&gt;')}}                         | {{Spec2('HTML4.01')}}     |            |
-
-> **Nota:** **Fix me:** Insert Browser Compatibility table here.
+{{Specifications}}
