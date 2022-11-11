@@ -74,10 +74,7 @@ console.log(url.origin);    // https://developer.mozilla.org
 
 ## Especificaciones
 
-| Especificacion                                                                                           | Estado                           | Comentario                                       |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "browsers.html#the-location-interface", "Location")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Location")}} | {{Spec2('HTML5 W3C')}}     | Definicion inicial.                              |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -46,9 +46,7 @@ Prueba el resultado:
 
 ## Especificaciones
 
-| Especificacion                                                   | Estado                       | Comentario          |
-| ---------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('File API', '#file-attrs', 'name')}} | {{Spec2('File API')}} | Definicion inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

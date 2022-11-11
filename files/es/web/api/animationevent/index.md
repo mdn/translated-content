@@ -41,9 +41,7 @@ _También hereda los métodos de su padre {{domxref("Event")}}_.
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estatus                                  | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations', '#AnimationEvent-interface', 'AnimationEvent') }} | {{ Spec2('CSS3 Animations') }} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

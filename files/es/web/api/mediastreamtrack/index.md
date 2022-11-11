@@ -64,9 +64,7 @@ La interfaz **`MediaStream`** representa un flujo de contenido de los medios. Un
 
 ## Especificaciones
 
-| Specification                                                                                | Status                               | Comment            |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Media Capture', '#mediastreamtrack', 'MediaStreamTrack')}} | {{Spec2('Media Capture')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

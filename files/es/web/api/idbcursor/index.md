@@ -88,11 +88,9 @@ function displayData() {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                | Status                       | Comment |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBCursor', 'cursor')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

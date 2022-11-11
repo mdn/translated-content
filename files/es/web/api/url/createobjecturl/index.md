@@ -44,9 +44,7 @@ Cada vez que se llama a `createObjectURL()`, un nuevo objeto URL es creado, incl
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                       | Comentario          |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('File API', '#dfn-createObjectURL', 'URL')}} | {{Spec2('File API')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

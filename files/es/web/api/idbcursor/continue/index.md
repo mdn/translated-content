@@ -73,9 +73,7 @@ function displayData() {
 
 ## Especificaciones
 
-| Specification                                                                                                | Estado                       | Comentarios |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBCursor-continue-void-any-key', 'continue()')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

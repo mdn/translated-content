@@ -65,9 +65,7 @@ function gameLoop() {
 
 ## Especificaciones
 
-| Specification                                                                                | Status                       | Comment            |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("Gamepad", "#gamepadbutton-interface", "GamepadButton")}} | {{Spec2("Gamepad")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

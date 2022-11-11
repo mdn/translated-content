@@ -104,9 +104,7 @@ console.log(digestHex);
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                               | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-digest', 'SubtleCrypto.digest()')}} | {{Spec2('Web Crypto API')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 
