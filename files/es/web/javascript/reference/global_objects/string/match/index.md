@@ -59,14 +59,14 @@ Para obtener más información sobre la semántica de `match()` cuando se pasa u
 
 En el siguiente ejemplo, se usa `match` para hallar '`Capítulo`' seguido de uno o más caracteres numéricos seguidos de un punto decimal y caracteres numéricos cero o más veces.
 
-La expresión regular incluye la bandera `i` por lo que las mayúsculas serán ignoradas.
+La expresión regular incluye la bandera `i` por lo que las diferencias entre mayúsculas y minúsculas serán ignoradas.
 
 ```js
-const cadena = 'Para más información, consulte el Capítulo 3.4.5.1';
-const regex = /consulte el (capítulo \d+(\.\d)*)/i;
-const resultado = cadena.match(regex)
+const str = 'Para más información, consulte el Capítulo 3.4.5.1';
+const re = /consulte el (capítulo \d+(\.\d)*)/i;
+const found = str.match(re)
 
-console.log(resultado);
+console.log(found);
 // [
 //   'consulte el Capítulo 3.4.5.1',
 //   'Capítulo 3.4.5.1',
@@ -112,7 +112,7 @@ const resultado = parrafo.match(regex);
 console.log(resultado.groups); // { animal: 'zorro' }
 ```
 
-### Uso sin parámetros
+### Uso de match() sin parámetros
 
 ```js
 const cadena = 'Nada saldrá de la nada.';
@@ -120,7 +120,7 @@ const cadena = 'Nada saldrá de la nada.';
 cadena.match();  // ['']
 ```
 
-### Uso de la función @@match
+### Uso de match() sin RegExp implementando @@match
 
 Si un objeto tiene un método `Symbol.match`, entonces se puede usar como un comparador personalizado. El valor de retorno de `Symbol.match` se convierte en el valor de retorno de `match()`.
 
@@ -173,7 +173,7 @@ console.log("123".match("1\\.3")); // null
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 
