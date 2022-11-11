@@ -10,5 +10,5 @@ HTTPS (HTTP Secure) es una versión encriptada del protocolo {{Glossary("HTTP")}
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "HTTPS")}} en Wikipedia
+- [HTTPS](https://es.wikipedia.org/wiki/HTTPS) en Wikipedia
 - [Pasando a la guia comunitaria HTTPS](https://movingtohttps.com/)

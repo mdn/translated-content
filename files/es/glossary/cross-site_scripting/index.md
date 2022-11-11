@@ -25,7 +25,7 @@ Los ataques XSS se pueden clasificar en tres categorías: almacenados (también 
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "Cross-site scripting")}} on Wikipedia
+- [Cross-site scripting](https://es.wikipedia.org/wiki/Cross-site_scripting) on Wikipedia
 - [Cross-site scripting on OWASP](https://owasp.org/www-community/attacks/xss/)
 - [Another article about Cross-site scripting](http://www.acunetix.com/blog/web-security-zone/articles/dom-xss-explained/)
 - [XSS Attack – Exploit & Protection](https://secure.wphackedhelp.com/blog/wordpress-xss-attack/)

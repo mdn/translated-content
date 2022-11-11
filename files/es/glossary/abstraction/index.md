@@ -23,4 +23,4 @@ En {{Glossary("computer programming", "programación")}}, una abstracción es un
 
 ### Conocimiento general
 
-- {{interwiki("wikipedia", "Abstraction (computer science)", "Abstraction")}} on Wikipedia
+- [Abstraction](https://es.wikipedia.org/wiki/Abstraction_(computer_science)) on Wikipedia

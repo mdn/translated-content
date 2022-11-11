@@ -109,7 +109,7 @@ Referrer-Policy: unsafe-url
 
 ## Véase también
 
-- {{interwiki("wikipedia", "HTTP_referer", "Referente HTTP en Wikipedia")}}
+- [Referente HTTP en Wikipedia](https://es.wikipedia.org/wiki/HTTP_referer)
 - Otras maneras de definir una directiva de referentes:
 
   - Un elemento {{HTMLElement("meta")}} con un [nombre de `referrer`](/es/docs/Web/HTML/Element/meta#attr-name).

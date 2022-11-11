@@ -51,4 +51,4 @@ Para una pagina 404 de ejemplo, mire la pagina [MDN 404](/es/404).
 ## Vea también
 
 - {{HTTPStatus(410)}}
-- {{interwiki("wikipedia", "HTTP_404", "Wikipedia: HTTP 404")}}
+- [Wikipedia: HTTP 404](https://es.wikipedia.org/wiki/HTTP_404)
