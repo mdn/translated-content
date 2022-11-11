@@ -90,9 +90,7 @@ p.variant {
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estatus                          | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#propdef-font-variant-alternates', 'font-variant-alternates')}} | {{Spec2('CSS3 Fonts')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

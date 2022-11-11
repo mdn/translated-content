@@ -82,10 +82,7 @@ body :not(.crazy, .fancy) {
 
 ## Especificaciones
 
-| Specification                                                            | Status                               | Comment                                                            |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#negation', ':not()')}} | {{Spec2('CSS4 Selectors')}} | Extiende su argumento para permitir algunos selectores no simples. |
-| {{SpecName('CSS3 Selectors', '#negation', ':not()')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                                |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

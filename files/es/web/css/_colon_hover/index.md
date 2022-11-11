@@ -64,12 +64,7 @@ Puede usar la pseudoclase `:hover` para crear una galería de imágenes con imá
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                                   | Comentarios                                           |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', 'scripting.html#selector-hover', ':hover') }}                     | {{ Spec2('HTML WHATWG') }}     |                                                       |
-| {{ SpecName('CSS4 Selectors', '#the-hover-pseudo', ':hover') }}                                 | {{ Spec2('CSS4 Selectors') }} | Permite aplicar `:hover` a cualquier pseudo-elemento. |
-| {{ SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':hover') }} | {{ Spec2('CSS3 Selectors') }} | Ningún cambio significativo.                          |
-| {{ SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':hover') }}                 | {{ Spec2('CSS2.1') }}             | Definición Inicial.                                   |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

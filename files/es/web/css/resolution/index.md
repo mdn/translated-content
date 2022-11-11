@@ -47,13 +47,9 @@ ten dpi                                            Incorecto: sólo deben ser ut
 0                                                  Incorecto: la unidad se puede omitir por 0 sólo para valores {{ cssxref("&lt;length&gt;") }}.
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                   | Estado                                   | Comentario                                                               |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Values', '#resolution', '&lt;resolution&gt;')}}             | {{Spec2('CSS3 Values')}}         | Factorización del tipo en una especificación más genérica. Ningún cambio |
-| {{SpecName('CSS3 Images', '#resolution-units', '&lt;resolution&gt;')}}     | {{Spec2('CSS3 Images')}}         | Añadida la unidad `dppx`                                                 |
-| {{SpecName('CSS3 Media Queries', '#resolution', '&lt;resolution&gt;')}} | {{Spec2('CSS3 Media Queries')}} | Definición inicial                                                       |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

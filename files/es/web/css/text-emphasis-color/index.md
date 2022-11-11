@@ -72,9 +72,7 @@ h3 {
 
 ## Especificaciones
 
-| Especificaciones                                                                                                     | Estado                                       | Comentario         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Text Decoration', '#text-emphasis-color-property', 'text-emphasis')}} | {{Spec2('CSS3 Text Decoration')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

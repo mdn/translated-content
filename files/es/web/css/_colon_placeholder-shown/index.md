@@ -75,9 +75,7 @@ input:placeholder-shown {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentarios         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS4 Selectors", "#placeholder", ":placeholder-shown")}} | {{Spec2("CSS4 Selectors")}} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

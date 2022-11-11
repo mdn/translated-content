@@ -80,9 +80,7 @@ El ejemplo anterior tiene el mismo efecto que el código siguiente, que además 
 
 ## Especificaciones
 
-| Especificación                                                                                                                       | Estado                                           | Comentarios                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Text Decoration', '#text-decoration-color-property', 'text-decoration-color') }} | {{ Spec2('CSS3 Text Decoration') }} | Definición inicial. La propiedad {{cssxref("text-decoration")}} no era una forma reducida anteriormente |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 
