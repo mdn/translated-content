@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 
 {{JSRef}}
 
-**`trimEnd()`** 方法会删除字符串末尾的空格。`trimRight()`是这个方法的别名。
+**`trimEnd()`** 方法会删除字符串末尾的空白字符。`trimRight()` 是这个方法的别名。
 
 {{EmbedInteractiveExample("pages/js/string-trimend.html")}}
 
@@ -19,9 +19,9 @@ trimRight()
 
 ### 返回值
 
-一个表示 `str` 的新字符串，去掉了其末尾（右侧）的空格。
+一个表示 `str` 去掉了末尾（右侧）的空白字符后的新字符串。
 
-如果 `str` 的结尾没有空格，仍然会返回一个新的字符串（本质上是 `str` 的副本），不会抛出异常。
+如果 `str` 的末尾没有空白字符，仍然会返回一个新字符串（本质上是 `str` 的副本），不会抛出异常。
 
 ### 别名
 

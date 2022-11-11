@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
 
 {{JSRef}}
 
-**`trimStart()`** 方法从字符串的开头删除空格。`trimLeft()` 是此方法的别名。
+**`trimStart()`** 方法会删除字符串开头的空白字符。`trimLeft()` 是此方法的别名。
 
 {{EmbedInteractiveExample("pages/js/string-trimstart.html")}}
 
@@ -19,9 +19,9 @@ trimLeft()
 
 ### 返回值
 
-一个表示 `str` 的新字符串，从它的开头（左边）去掉空格。
+一个表示 `str` 去掉了开头（左侧）的空白字符后的新字符串。
 
-如果 `str` 的开头没有空格，则仍然会返回一个新字符串（本质上是 `str` 的副本），不会抛出异常。
+如果 `str` 的开头没有空白字符，仍然会返回一个新字符串（本质上是 `str` 的副本），不会抛出异常。
 
 ### 别名
 
