@@ -51,9 +51,7 @@ console.log(objectSymbols[0]);     // Symbol(a)
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado               | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}} | {{Spec2('ES6')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -166,9 +166,7 @@ george(); // 'Hello guys!!'
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado               | Comentario          |
-| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-object.setprototypeof', 'Object.setProtoypeOf')}} | {{Spec2('ES6')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

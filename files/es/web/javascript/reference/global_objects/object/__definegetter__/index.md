@@ -64,9 +64,7 @@ console.log(o.gimmeFive); // 5
 
 ## Especificaciones
 
-| Especificación                                                                                                                           | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('JavaScript', '#object.prototype.__definegetter__', 'Object.prototype.__defineGetter__()')}} | {{Spec2('JavaScript')}} |            |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

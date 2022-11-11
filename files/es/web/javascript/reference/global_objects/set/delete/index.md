@@ -40,10 +40,7 @@ mySet.has("foo");    // Retorna false. El elemento "foo" ya no está presente.
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-set.prototype.delete', 'Set.prototype.delete')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-set.prototype.delete', 'Set.prototype.delete')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

@@ -118,13 +118,9 @@ console.log(bar.foo1()); // 1
 console.log(bar.foo2()); // 2
 ```
 
-## Especificaciónes
+## Especificaciones
 
-| Especificación                                                                                   | Estado                       | Observaciones                                                                                                              |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}         | Definición inicial.                                                                                                        |
-| {{SpecName('ES7', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES7')}}         | Cambiado el que los métodos generadores no deban tener una trampa \[\[Construct]] y deban fallar cuando se usen con `new`. |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                                                                                                            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -74,12 +74,9 @@ String.raw({
 }, 2 + 3, 'Java' + 'Script'); // 'foo5barJavaScriptbaz'
 ```
 
-## Especificaciónes
+## Especificaciones
 
-| Especificación                                                               | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-string.raw', 'String.raw')}}     | {{Spec2('ES2015')}}     | Definicion inicial. |
-| {{SpecName('ESDraft', '#sec-string.raw', 'String.raw')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad de navegador
 

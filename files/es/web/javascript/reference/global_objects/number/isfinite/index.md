@@ -54,12 +54,9 @@ Number.isFinite = Number.isFinite || function(value) {
 }
 ```
 
-## Specificaciones
+## Especificaciones
 
-| Specification                                                                            | Status                       | Comment             |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-number.isfinite', 'Number.isInteger')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-number.isfinite', 'Number.isInteger')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad de navegador
 

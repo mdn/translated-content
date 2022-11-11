@@ -26,9 +26,7 @@ Mira la documentación para el evento [`change`](/es/docs/Web/Reference/Events/c
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estatus                          | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onchange','onchange')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

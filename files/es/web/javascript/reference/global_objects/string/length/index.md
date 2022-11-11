@@ -60,12 +60,7 @@ console.log(myString);
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estatus                      | Comentario                                          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                                                          | Estándar                     | Primera definicíon. Implementado en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.5.5.1', 'String.prototype.length')}}                                         | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-properties-of-string-instances-length', 'String.prototype.length')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-properties-of-string-instances-length', 'String.prototype.length')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
