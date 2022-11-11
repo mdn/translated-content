@@ -351,8 +351,9 @@
 /ko/docs/MDN/Guidelines/Code_guidelines/General	/ko/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /ko/docs/MDN/Guidelines/Conventions_definitions	/ko/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ko/docs/MDN/Guidelines/Does_this_belong_on_MDN	/ko/docs/MDN/Writing_guidelines/What_we_write
-/ko/docs/MDN/Kuma	/ko/docs/MDN/Yari
+/ko/docs/MDN/Kuma	/ko/docs/orphaned/MDN/Yari
 /ko/docs/MDN/Structures/API_references/API_reference_sidebars	/ko/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
+/ko/docs/MDN/Yari	/ko/docs/orphaned/MDN/Yari
 /ko/docs/MDN/피드백	/ko/docs/MDN/Community
 /ko/docs/MDN_at_ten	/ko/docs/MDN/At_ten
 /ko/docs/MathML	/ko/docs/Web/MathML
