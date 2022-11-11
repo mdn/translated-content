@@ -65,7 +65,7 @@ grid-area: unset;
 
 - `<integer> && <custom-ident>?`
 
-  - : Contributes the \_n_th grid line to the grid item’s placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
+  - : Contributes the n-th grid line to the grid item’s placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
 
     If a name is given as a {{cssxref("&lt;custom-ident&gt;")}}, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
 

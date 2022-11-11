@@ -682,7 +682,7 @@ aside {
 
 ## 참조 항목
 
-- [CSS\_그리드\_안내서](/ko/docs/Web/CSS/CSS_Grid_Layout#Guides)
+- [CSS 그리드 안내서](/ko/docs/Web/CSS/CSS_Grid_Layout#Guides)
 - [CSS 그리드 검사기: 그리드 레이아웃을 검사](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
