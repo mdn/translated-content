@@ -30,7 +30,7 @@ Se pueden crear cadenas más avanzadas usando secuencias de escape:
 
 #### Secuencias de escape hexadecimales
 
-El número después de \x se interpreta como un número del {{Interwiki("wikipedia", "Sistema_hexadecimal")}}.
+El número después de \x se interpreta como un número del [Sistema_hexadecimal](https://es.wikipedia.org/wiki/Sistema_hexadecimal).
 
 ```js
 '\xA9' // "©"
@@ -113,7 +113,7 @@ La siguiente tabla resume los métodos de los objetos {{JSxRef("String")}}.
 
 Las {{JSxRef("template_strings", "plantillas literales")}} son cadena literales que permiten expresiones incrustadas. Puedes utilizar cadenas de varias líneas y funciones de interpolación de cadenas con ellas.
 
-Las plantillas literales están encerradas por el carácter (` `` `) ({{Interwiki("wikipedia", "Acento_grave", "acento grave")}}) en lugar de comillas simples o dobles. Las plantillas literales pueden contener marcadores de posición. Estos se indican mediante el signo de dólar y llaves (`${expresión}`).
+Las plantillas literales están encerradas por el carácter (` `` `) ([acento grave](https://es.wikipedia.org/wiki/Acento_grave)) en lugar de comillas simples o dobles. Las plantillas literales pueden contener marcadores de posición. Estos se indican mediante el signo de dólar y llaves (`${expresión}`).
 
 #### Multilíneas
 

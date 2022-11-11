@@ -12,4 +12,4 @@ En palabras simples: este tipo de estilo permite la creación de un {{Glossary('
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Prototype-based programming", "Prototype-based programming")}} on Wikipedia
+- [Prototype-based programming](https://es.wikipedia.org/wiki/Prototype-based_programming) on Wikipedia

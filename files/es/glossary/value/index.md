@@ -16,4 +16,4 @@ En el contexto de datos o un objeto **{{Glossary("Wrapper", "wrapper")}}** alred
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "Primitive wrapper class")}} en Wikipedia
+- [Primitive wrapper class](https://es.wikipedia.org/wiki/Primitive_wrapper_class) en Wikipedia

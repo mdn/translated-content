@@ -19,4 +19,4 @@ original_slug: Glossary/Tipado_dinámico
 
 ### Conocimientos generales
 
-- {{interwiki("wikipedia", "Sistema_de_tipos", "Sistema de tipos")}} en Wikipedia
+- [Sistema de tipos](https://es.wikipedia.org/wiki/Sistema_de_tipos) en Wikipedia

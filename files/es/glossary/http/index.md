@@ -19,4 +19,4 @@ También se puede utilizar como base para los servicios web {{glossary("REST")}}
 ## Learn more
 
 - [HTTP en MDN](/es/docs/Web/HTTP)
-- {{interwiki("wikipedia", "Hypertext Transfer Protocol", "HTTP")}} on Wikipedia
+- [HTTP](https://es.wikipedia.org/wiki/Hypertext_Transfer_Protocol) on Wikipedia

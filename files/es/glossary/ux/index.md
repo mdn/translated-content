@@ -18,4 +18,4 @@ El sistema puede ser cualquier tipo de producto o aplicación con el que un usua
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "User experience")}} on Wikipedia
+- [User experience](https://es.wikipedia.org/wiki/User_experience) on Wikipedia

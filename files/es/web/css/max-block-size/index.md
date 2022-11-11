@@ -82,7 +82,7 @@ Los valores de `writing-mode` afectan al mapeo de `max-block-size` a `max-width`
 
 ### Configuración de max-block-size con texto horizontal y vertical
 
-En este ejemplo, el mismo texto (las oraciones de apertura de {{interwiki("wikipedia", "Herman Melville", "Herman Melville's")}} en la novela _{{interwiki("wikipedia", "Moby-Dick")}}_) se presenta en ambos modos de escritura `horizontal-tb` y `vertical-rl`.
+En este ejemplo, el mismo texto (las oraciones de apertura de [Herman Melville's](https://es.wikipedia.org/wiki/Herman_Melville) en la novela _[Moby-Dick](https://es.wikipedia.org/wiki/Moby-Dick)_) se presenta en ambos modos de escritura `horizontal-tb` y `vertical-rl`.
 
 #### HTML
 

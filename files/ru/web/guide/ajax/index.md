@@ -24,12 +24,6 @@ translation_of: Web/Guide/AJAX
 - [Ошибки использования Ajax](http://alexbosworth.backpackit.com/pub/67688)
   - : Alex Bosworth написал эту статью, где описал некоторые ошибки которые могут сделать разработчики приложений AJAX.
 
-## Сообщество
-
-- Смотрите форумы Mozilla...
-
-{{ DiscussionList("dev-ajax", "mozilla.dev.ajax") }}
-
 ## Инструменты
 
 - [Toolkits and frameworks](http://www.ajaxprojects.com)

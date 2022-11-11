@@ -15,4 +15,4 @@ La arquitectura de la información, aplicada al diseño y desarrollo web, es la 
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "Arquitectura_de_la_información", "Arquitectura de la información")}} en Wikipedia
+- [Arquitectura de la información](https://es.wikipedia.org/wiki/Arquitectura_de_la_información) en Wikipedia

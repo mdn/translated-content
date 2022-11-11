@@ -19,7 +19,7 @@ La lincencia GNU _GPL_ (GNU General Public License en español **Licencia Públi
 
 ### Cultura General
 
-- {{Interwiki("wikipedia","GNU_General_Public_License")}} en Wikipedia
+- [GNU_General_Public_License](https://es.wikipedia.org/wiki/GNU_General_Public_License) en Wikipedia
 
 ### Referencia Técnica
 

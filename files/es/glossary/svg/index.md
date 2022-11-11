@@ -16,7 +16,7 @@ Como [formato de imagen vectorial](http://en.wikipedia.org/wiki/Vector_graphics)
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "SVG")}} en Wikipedia
+- [SVG](https://es.wikipedia.org/wiki/SVG) en Wikipedia
 
 ### Aprendiendo SVG
 

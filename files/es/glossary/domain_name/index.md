@@ -11,5 +11,5 @@ Un nombre de dominio es la dirección de un sitio web en {{Glossary("Internet")}
 
 ### Conocimientos generales
 
-- {{interwiki("wikipedia", "Dominio_de_Internet", "Dominio de Internet")}} en Wikipedia
+- [Dominio de Internet](https://es.wikipedia.org/wiki/Dominio_de_Internet) en Wikipedia
 - [Entendiendo los nombres de los dominios](/en-US/Learn/Understanding_domain_names)

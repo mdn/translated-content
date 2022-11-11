@@ -36,7 +36,7 @@ var defaultReference = new Default();
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Constructor_%28object-oriented_programming%29", "Constructor")}} en Wikipedia
+- [Constructor](https://es.wikipedia.org/wiki/Constructor_%28object-oriented_programming%29) en Wikipedia
 
 ### Referencia técnica
 

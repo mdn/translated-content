@@ -16,7 +16,7 @@ Una variable es una ubicación nombrada para almacenar un {{Glossary("Value", "v
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "Variable (computer science)")}} en Wikipedia
+- [Variable (computer science)](https://es.wikipedia.org/wiki/Variable_(computer_science)) en Wikipedia
 
 ### Referencia técnica
 

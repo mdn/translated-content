@@ -15,4 +15,4 @@ original_slug: Glossary/Estructura_de_datos
 
 ### Conocimiento general
 
-- {{interwiki("wikipedia", "Estructura_de_datos", "Estructura de datos")}} en Wikipedia
+- [Estructura de datos](https://es.wikipedia.org/wiki/Estructura_de_datos) en Wikipedia

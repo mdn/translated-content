@@ -13,4 +13,4 @@ translation_of: Glossary/CRUD
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "CRUD")}} en Wikipedia
+- [CRUD](https://es.wikipedia.org/wiki/CRUD) en Wikipedia

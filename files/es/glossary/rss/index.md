@@ -19,7 +19,7 @@ Cuando te subscribes a un _feed_ RSS (boletín de noticias de servicios web), é
 
 ### Cultura General
 
-- {{Interwiki("wikipedia", "RSS")}} en Wikipedia
+- [RSS](https://es.wikipedia.org/wiki/RSS) en Wikipedia
 
 ### Referencia Técnica
 

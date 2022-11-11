@@ -97,5 +97,4 @@ slug: Web/API/DataTransfer
 - [拖与放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
 - [拖动操作](HTML_Drag_and_Drop_API/Drag_operations)
 - [推荐拖动类型](HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [拖动多项](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer 测试 - 粘贴、拖放](https://codepen.io/tech_query/pen/MqGgap)

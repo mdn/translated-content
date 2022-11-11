@@ -14,4 +14,4 @@ CID (Confidencialidad, Integridad, Disponibilidad) (también llamado la triada C
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Seguridad_de_la_información#Concepción_de_la_seguridad_de_la_información", "CIA")}} en Wikipedia
+- [CIA](https://es.wikipedia.org/wiki/Seguridad_de_la_información#Concepción_de_la_seguridad_de_la_información) en Wikipedia

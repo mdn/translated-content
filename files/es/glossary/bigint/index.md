@@ -10,7 +10,7 @@ En {{Glossary("JavaScript")}}, **BigInt** es un tipo de dato numerico que puede 
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "Data type#Numeric_types", "Tipos numéricos")}} en Wikipedia
+- [Tipos numéricos](https://es.wikipedia.org/wiki/Data_type#Numeric_types) en Wikipedia
 
 ### Referencia tecnica
 

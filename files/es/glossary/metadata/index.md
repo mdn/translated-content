@@ -15,7 +15,7 @@ Los **metadatos** son, en su definición más simple, datos que describen otros 
 
 ### Conocimientos generales
 
-- {{interwiki("wikipedia", "Metadatos", "Metadatos")}} en Wikipedia
+- [Metadatos](https://es.wikipedia.org/wiki/Metadatos) en Wikipedia
 
 ### HTML metadata
 

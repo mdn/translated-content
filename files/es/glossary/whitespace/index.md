@@ -35,7 +35,7 @@ La [especificación del lenguaje ECMAScript® 2015](https://www.ecma-internation
   </li>
   <li>Artículos de Wikipedia
    <ol>
-    <li>{{interwiki("wikipedia", "El caracter de espacio en blanco")}}</li>
+    <li>[El caracter de espacio en blanco](https://es.wikipedia.org/wiki/El_caracter_de_espacio_en_blanco)</li>
    </ol>
   </li>
   <li><a href="/es/docs/Glossary">Glosario</a>
