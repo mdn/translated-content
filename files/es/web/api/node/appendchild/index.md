@@ -65,12 +65,7 @@ document.body.appendChild(p);
 
 ## Especificaciones
 
-| Especifación                                                                                             | Estado                           | Comentario                                         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-node-appendchild', 'Node.appendChild()')}}         | {{Spec2('DOM WHATWG')}} | Sin cambio desde {{SpecName("DOM3 Core")}}. |
-| {{SpecName('DOM3 Core', 'core.html#ID-184E7107', 'Node.appendChild()')}}         | {{Spec2('DOM3 Core')}}     | Sin cambio desde {{SpecName("DOM2 Core")}}. |
-| {{SpecName('DOM2 Core', 'core.html#ID-184E7107', 'Node.appendChild()')}}         | {{Spec2('DOM2 Core')}}     | Sin cambio desde {{SpecName("DOM1")}}.     |
-| {{SpecName('DOM1', 'level-one-core.html#ID-184E7107', 'Node.appendChild()')}} | {{Spec2('DOM1')}}         | Definición inicial.                                |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

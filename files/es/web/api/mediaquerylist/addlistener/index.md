@@ -43,11 +43,9 @@ function screenTest(e) {
 mql.addListener(screenTest);
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                        | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-mediaquerylist-addlistener", "addListener")}} | {{Spec2("CSSOM View")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

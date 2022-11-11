@@ -165,11 +165,9 @@ try {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                        | Status                               | Comment             |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#cachestorage', 'CacheStorage')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

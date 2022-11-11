@@ -42,9 +42,7 @@ Tenga en cuenta que, a pesar de que la entrada original (para `http://example.co
 
 ## Especificaciones
 
-| Specification                                                                                                        | Status                           | Comment |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#handler-window-onpopstate', 'onpopstate')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

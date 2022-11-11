@@ -58,11 +58,9 @@ Las siguientes adiciones al [Service Worker API](/es/docs/Web/API/Service_Worker
 
 Mozilla's [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook/) contiene varios ejemplos Push muy utiles
 
-## Specifications
+## Especificaciones
 
-| Specification                    | Status                       | Comment            |
-| -------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("Push API")}} | {{Spec2("Push API")}} | Initial definition |
+{{Specifications}}
 
 ## Browser Compatibility
 

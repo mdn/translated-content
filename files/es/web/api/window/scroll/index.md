@@ -53,11 +53,9 @@ window.scroll({
 
 Para desplazarse sobre elementos, mira {{domxref("Element.scrollTop")}} y {{domxref("Element.scrollLeft")}}.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario          |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

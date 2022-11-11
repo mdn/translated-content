@@ -25,9 +25,7 @@ A diferencia de MSIE, en que casi toda clase de elemento puede recibir el evento
 
 ## Especificaciones
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onfocus','onfocus')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilidad con los Navegadores
 

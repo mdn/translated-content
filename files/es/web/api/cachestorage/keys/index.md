@@ -48,9 +48,7 @@ then.addEventListener('activar', función (evento) {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                                               | Comentario         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | ------------------ |
-| {{SpecName('Service Workers', '# dom-cachestorage-keys', 'CacheStorage: keys')}} | {{Spec2 ('Trabajadores de servicio')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

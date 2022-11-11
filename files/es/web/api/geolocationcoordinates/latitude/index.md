@@ -16,9 +16,7 @@ lat = coordinates.latitude
 
 ## Especificaciones
 
-| Especificación                                                                   | Estatus                          | Comentario              |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('Geolocation', '#lat', 'Coordinates.latitude')}} | {{Spec2('Geolocation')}} | Especificación Inicial. |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

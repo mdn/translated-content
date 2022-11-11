@@ -35,6 +35,4 @@ Para desplazar el visor dentro de elementos, ver [Element.scrollTop](/es/docs/We
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario          |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | Definición inicial. |
+{{Specifications}}

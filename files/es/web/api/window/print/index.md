@@ -32,11 +32,9 @@ window.print()
 
 Empezando con Chrome 46.0 este método esta bloqueado dentro de un {{htmlelement("iframe")}} a menos que el atributo del contenedor tenga el valor `allow-modal`.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                       | Estatus                                      | Comentario          |
-| ------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('HTML5 Web application', '#dom-print', 'print()')}} | {{Spec2('HTML5 Web application')}} | Initial definition. |
+{{Specifications}}
 
 ## Ver también
 

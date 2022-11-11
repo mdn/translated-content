@@ -31,9 +31,7 @@ xhr.send(null);
 
 ## Especificaciones
 
-| Especificaciones                                                                 | estado                               | Comentarios            |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-responsetext-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

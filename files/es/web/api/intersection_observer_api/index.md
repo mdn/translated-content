@@ -500,9 +500,7 @@ Hay un ejemplo aún más extensivo en [Cronometrando la visibilidad de un elemen
 
 ## Especificaciones
 
-| Especificación                                   | Estado                                       | Comentario |
-| ------------------------------------------------ | -------------------------------------------- | ---------- |
-| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} |            |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

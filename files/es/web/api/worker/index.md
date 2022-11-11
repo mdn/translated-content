@@ -64,12 +64,9 @@ first.onchange = function() {
 
 For a full example, see our[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
 
-## Specifications
+## Especificaciones
 
-| Specification                                                    | Status                           | Comment                                              |
-| ---------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#worker", "Worker")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("Web Workers")}}. |
-| {{SpecName('Web Workers', "#worker", "Worker")}} | {{Spec2('Web Workers')}} | Initial definition.                                  |
+{{Specifications}}
 
 ## Browser compatibility
 

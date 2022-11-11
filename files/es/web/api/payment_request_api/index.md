@@ -75,13 +75,9 @@ Puedes encontrar una guía completa en [Usando la API de Solicitud de Pago](/es/
 - {{domxref('BasicCardResponse')}}
   - : Define una estructura de objeto para los detalles de la respuesta de pago, como el número o la fecha de vencimiento de la tarjeta utilizada para realizar el pago y la dirección de facturación.
 
-## Specificaciones
+## Especificaciones
 
-| Specificación                                            | Estatus                                              | Comentario                                                                                                                                                                   |
-| -------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Payment')}}                         | {{Spec2('Payment')}}                         | Definición inicial.                                                                                                                                                          |
-| {{SpecName('Basic Card Payment')}}             | {{Spec2('Basic Card Payment')}}             | Define {{domxref ("BasicCardRequest")}} y {{domxref ("BasicCardResponse")}}, entre otras cosas necesarias para manejar el pago con tarjeta de crédito |
-| {{SpecName('Payment Method Identifiers')}} | {{Spec2('Payment Method Identifiers')}} | Define los identificadores de los métodos de pago y cómo se validan y, en su caso, se acuñan y se registran formalmente en el W3C.                                           |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

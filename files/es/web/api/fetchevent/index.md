@@ -74,9 +74,7 @@ addEventListener('fetch', event => {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentario          |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#fetch-event-section', 'FetchEvent')}} | {{Spec2('Service Workers')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

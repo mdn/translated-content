@@ -65,10 +65,7 @@ logMeasureCount() // "Found this many entries: 0"
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                                       | Comentario                      |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------- |
-| {{SpecName('User Timing Level 2', '#dom-performance-clearmeasures', 'clearMeasures()')}} | {{Spec2('User Timing Level 2')}} | Se clarifica `clearMeasures()`. |
-| {{SpecName('User Timing', '#dom-performance-clearmeasures', 'clearMeasures()')}}         | {{Spec2('User Timing')}}             | Definición básica.              |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

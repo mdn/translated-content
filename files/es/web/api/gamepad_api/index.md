@@ -52,10 +52,7 @@ Ver también las [extensiones para la interfaz del navegador](/es/docs/Web/API/G
 
 ## Especificaciones
 
-| Especificación                                                                   | Estatus                                  | Comentario                                                                       |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | Defines the [Experimental Gamepad extensions](#experimental_gamepad_extensions). |
-| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | Initial definition                                                               |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

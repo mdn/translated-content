@@ -67,9 +67,7 @@ localStorage.clear();
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('Web Storage', '#dom-localstorage', 'localStorage')}} | {{Spec2('Web Storage')}} |            |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

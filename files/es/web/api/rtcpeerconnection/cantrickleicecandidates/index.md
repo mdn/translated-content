@@ -55,11 +55,9 @@ pc.addEventListener('icecandidate', e => {
 });
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                                                        | Status                           | Comment                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------- |
-| {{ SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-cantrickleicecandidates', 'RTCPeerConnection.canTrickleIceCandidates') }} | {{ Spec2('WebRTC 1.0') }} | Initial specification. |
+{{Specifications}}
 
 ## Browser compatibility
 

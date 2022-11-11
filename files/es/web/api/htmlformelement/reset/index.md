@@ -32,9 +32,7 @@ document.getElementById('myform').reset();
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', '#dom-form-reset', 'HTMLFormElement: reset')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

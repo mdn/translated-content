@@ -84,9 +84,7 @@ En [esta página](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browse
 
 ## Especificaciones
 
-| Especificacion                                                                                       | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'indices.html#event-hashchange', 'hashchange')}} | {{Spec2('HTML WHATWG')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

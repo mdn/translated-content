@@ -25,10 +25,7 @@ const length = history.length
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                           | Comentario                                          |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#dom-history-length", "History.length")}} | {{Spec2('HTML WHATWG')}} | Sin cambios desde {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#dom-history-length", "History.length")}}     | {{Spec2('HTML5 W3C')}}     | Definición Inicial.                                 |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

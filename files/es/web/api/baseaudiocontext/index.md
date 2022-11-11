@@ -106,11 +106,9 @@ var finish = audioCtx.destination;
 // etc.
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                | Status                               | Comment |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#BaseAudioContext', 'BaseAudioContext')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

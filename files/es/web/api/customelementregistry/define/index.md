@@ -198,9 +198,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## Especificaciones
 
-| Especificación                                                                                                                                       | Estado                           | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "custom-elements.html#dom-customelementregistry-define", "customElements.define()")}} | {{Spec2("HTML WHATWG")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad navegadores
 

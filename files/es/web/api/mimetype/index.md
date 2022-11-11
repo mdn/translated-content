@@ -26,9 +26,7 @@ La interfaz **`MimeType`** provee información acerca de un tipo MIME asociado c
 
 ## Especificaciones
 
-| Especificación                                                       | Estado                           | Comentario          |
-| -------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG','#mimetype','MimeType')}} | {{Spec2('HTML WHATWG')}} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

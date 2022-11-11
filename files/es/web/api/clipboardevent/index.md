@@ -32,11 +32,9 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 
 _No specific methods; inherits methods from its parent {{domxref("Event")}}_.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                | Status                               | Comment             |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{ SpecName('Clipboard API', '#clipboard-event-interfaces', 'ClipboardEvent') }} | {{ Spec2('Clipboard API') }} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

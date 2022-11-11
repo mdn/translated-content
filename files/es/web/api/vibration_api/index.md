@@ -85,9 +85,7 @@ Esta API es claramente accesible a través de dispositivos móbiles. Vibration A
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Comentario              |
-| ---------------------------------------- | ------------------------------------ | ----------------------- |
-| {{SpecName('Vibration API')}} | {{Spec2('Vibration API')}} | Especificación inicial. |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

@@ -16,11 +16,9 @@ No hay retrofunciones o eventos a escuchar cuando este valor cambia (por ejemplo
 value = window.devicePixelRatio;
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                   | Estado                           | Observaciones      |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-window-devicepixelratio", "Window.devicePixelRatio")}} | {{Spec2("CSSOM View")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
