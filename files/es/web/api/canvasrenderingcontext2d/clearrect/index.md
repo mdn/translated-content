@@ -110,9 +110,7 @@ window.addEventListener("load", drawCanvas);
 
 ## Especificaciones
 
-| Especificación                                                                                                                                   | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-clearrect", "CanvasRenderingContext2D.clearRect")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con exploradores
 

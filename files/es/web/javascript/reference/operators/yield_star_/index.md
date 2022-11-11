@@ -107,10 +107,7 @@ console.log(result);          // "foo"
 
 ## Especificaciones
 
-| Especificación                                   | Estado                       | Comentarios        |
-| ------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#', 'Yield')}}     | {{Spec2('ES6')}}         | Definición inical. |
-| {{SpecName('ESDraft', '#', 'Yield')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -65,9 +65,7 @@ ctx.fillRect(150, 40, 100, 100);
 
 ## Especificaciones
 
-| Especificación                                                                                                                       | Estado                           | Comentarios |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-save", "CanvasRenderingContext2D.save")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilidad con exploradores
 

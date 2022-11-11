@@ -192,9 +192,7 @@ El almacenamiento web también provee un par de métodos simples para remover da
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                           | Comentario |
-| ---------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

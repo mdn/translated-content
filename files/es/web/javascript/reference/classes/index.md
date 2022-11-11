@@ -323,9 +323,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
 
 ## Especificaciones
 
-| Specification                                                                                | Status                   | Comment             |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2015')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

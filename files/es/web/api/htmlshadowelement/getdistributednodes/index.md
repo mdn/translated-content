@@ -23,11 +23,9 @@ var nodeList = object.getDistributedNodes()
 var nodes = myShadowObject.getDistributedNodes();
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                    | Status                           | Comment            |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('Shadow DOM', '#the-shadow-element', 'shadow')}} | {{Spec2('Shadow DOM')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

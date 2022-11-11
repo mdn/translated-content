@@ -53,10 +53,7 @@ var x = function*(y) {
 
 ## Especificaciones
 
-| Especificación                                           | Estado                       | Comentario          |
-| -------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#', 'function*')}}     | {{Spec2('ES2015')}}     | Definición Inicial. |
-| {{SpecName('ESDraft', '#', 'function*')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

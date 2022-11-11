@@ -83,12 +83,7 @@ Puedes [probar o remezclar este ejemplo en tiempo real en Glitch](https://media-
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                          | Comentarios                               |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------- |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#dom-media-play', 'play()')}} | {{Spec2('HTML WHATWG')}} | Initial definition; living specification. |
-| {{SpecName('HTML5 W3C','embedded-content-0.html#dom-media-play','play()')}}     | {{Spec2('HTML5 W3C')}}     | Initial definition.                       |
-
-> **Nota:** Las versiones WHATWG y W3C de la especificación difieren (a partir de agosto de 2018) en cuanto a si este método devuelve una {{jsxref("Promise")}} o nada en absoluto, respectivamente.
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

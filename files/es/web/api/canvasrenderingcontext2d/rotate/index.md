@@ -111,9 +111,7 @@ El rectángulo no rotado es gris, y el rectángulo rotado es rojo.
 
 ## Especificaciones
 
-| Especificación                                                                                                                           | Status                           | Comentarios |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-rotate", "CanvasRenderingContext2D.rotate")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilidad con exploradores
 

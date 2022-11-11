@@ -46,12 +46,9 @@ También puede utilizar SHIFT junto a la tecla ALT.</p>
 </html>
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentario                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------- |
-| {{SpecName('DOM3 Events','#widl-MouseEvent-shiftKey','MouseEvent.shiftKey')}} | {{Spec2('DOM3 Events')}} | Sin cambios desde {{SpecName('DOM2 Events')}}. |
-| {{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.shiftKey')}}             | {{Spec2('DOM2 Events')}} | Primera definición.                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -49,9 +49,7 @@ for (i = 0; i < files.length; i++) {
 
 ## Especificaciones
 
-| Espeficicaciones                                             | Estado                       | Comentario          |
-| ------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('File API', '#dfn-type', 'type')}} | {{Spec2('File API')}} | Definicion inicial. |
+{{Specifications}}
 
 ## Compatibilidad con browsers
 

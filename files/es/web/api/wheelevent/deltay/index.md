@@ -24,9 +24,7 @@ console.log(syntheticEvent.deltaY);
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM3 Events','#widl-WheelEvent-deltaY','WheelEvent.deltaY')}} | {{Spec2('DOM3 Events')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

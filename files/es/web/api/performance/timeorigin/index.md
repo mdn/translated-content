@@ -29,9 +29,7 @@ Una marca de tiempo de alta precisión.
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                                       |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| {{SpecName('Highres Time Level 2','#dom-performance-timeorigin','timeOrigin')}} | {{Spec2('Highres Time Level 2')}} |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

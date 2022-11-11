@@ -116,12 +116,9 @@ This next line opens up a transaction on the Database, then opens an object stor
     var objectStore = db.transaction('toDoList').objectStore('toDoList');
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                            | Status                           | Comment         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | --------------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBDatabase', 'IDBDatabase')}}     | {{Spec2('IndexedDB')}}     | Initial version |
-| {{SpecName("IndexedDB 2", "#database-interface", "IDBDatabase")}} | {{Spec2("IndexedDB 2")}} |                 |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -113,9 +113,7 @@ Ver artículo aquí: [nsIDOMParser](/es/docs/nsIDOMParser)
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM Parsing', '#the-domparser-interface', 'DOMParser')}} | {{Spec2('DOM Parsing')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

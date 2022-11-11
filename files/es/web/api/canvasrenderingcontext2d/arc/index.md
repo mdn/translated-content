@@ -130,11 +130,9 @@ for (var i = 0; i < 4; i++) {
 
 {{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png") }}
 
-## Specifications
+## Especificaciones
 
-| Especificación                                                                                                                   | Estado                           | Comentario | [WHATWG HTML Estándar de vida](https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-arc) [La definición de 'CanvasRenderingContext2D.arc' en esa especificación.](https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-arc) | Estándar de vida | Status | Comment |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------ | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arc", "CanvasRenderingContext2D.arc")}} | {{Spec2('HTML WHATWG')}} |            |                                                                                                                                                                                                                                                             |                  |        |         |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

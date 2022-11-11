@@ -95,9 +95,7 @@ for (let i = 0; i < lineCap.length; i++) {
 
 ## Especificaciones
 
-| Specification                                                                                                                                | Status                           | Comment |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linecap", "CanvasRenderingContext2D.lineCap")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilidad de navegador.
 

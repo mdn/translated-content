@@ -77,10 +77,7 @@ event.type
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                               | Comentario          |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-type', 'Event.type')}}     | {{ Spec2('DOM WHATWG') }}     |                     |
-| {{SpecName('DOM2 Events', '#Events-Event-type', 'Event.type')}} | {{ Spec2('DOM2 Events') }} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

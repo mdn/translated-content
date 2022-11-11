@@ -71,9 +71,7 @@ f3();
 
 ## Especificaciones
 
-| Specification                                                                                            | Status                       | Comment                       |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async functions')}} | {{Spec2('ESDraft')}} | Initial definition in ES2017. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

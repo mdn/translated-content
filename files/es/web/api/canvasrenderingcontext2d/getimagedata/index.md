@@ -69,9 +69,7 @@ console.log(ctx.getImageData(50, 50, 100, 100));
 
 ## Especificaciones
 
-| Especificación                                                                                                                                           | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-getimagedata", "CanvasRenderingContext2D.getImageData")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -262,9 +262,7 @@ let bad = `bad escape sequence: \unicode`;
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                                | Status               | Comentarios         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-template-literals', 'Template Literals')}} {{SpecName('ES6', '#sec-tagged-templates', 'Tagged Templates')}} | {{Spec2('ES6')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

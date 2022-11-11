@@ -28,9 +28,7 @@ var timingInfo = performance.timing;
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estado                                   | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Navigation Timing', '#sec-window.performance-attribute', 'Performance.timing')}} | {{Spec2('Navigation Timing')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

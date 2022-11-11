@@ -35,9 +35,7 @@ Ver [Salida de texto en la consola](/es/docs/Web/API/console#Outputting_text_to_
 
 ## Especificaciones
 
-| Especificacion                                                           | Estado                           | Comentario         |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#info", "console.info()")}} | {{Spec2("Console API")}} | Definicion inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

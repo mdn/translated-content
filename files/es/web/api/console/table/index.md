@@ -135,9 +135,7 @@ console.table(data [, columns]);
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#table", "console.table()")}} | {{Spec2("Console API")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

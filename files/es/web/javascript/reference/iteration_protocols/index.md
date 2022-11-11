@@ -286,9 +286,7 @@ aGeneratorObject[Symbol.iterator]() === aGeneratorObject;
 
 ## Especificaciones
 
-| Especificación                                                       | Estado               | Comentario          |
-| -------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-iteration', 'Iteration')}} | {{Spec2('ES6')}} | Definición inicial. |
+{{Specifications}}
 
 ## Temas relacionados
 

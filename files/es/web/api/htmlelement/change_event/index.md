@@ -129,9 +129,7 @@ function updateValue(e) {
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', "indices.html#event-change", "change")}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

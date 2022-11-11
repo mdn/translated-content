@@ -68,9 +68,7 @@ Mira el artículo _[Using files from web applications](/es/docs/Using_files_from
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                       | Comentario          |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('File API','#FileReader-interface','FileReader')}} | {{Spec2('File API')}} | Definición inicial. |
+{{Specifications}}
 
 ## Soporte en los navegadores
 
