@@ -70,11 +70,9 @@ input[type="checkbox"]:checked {
 
 {{EmbedLiveSample("Example")}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                               | Status                                   | Comentario          |
-| ---------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS4 Media Queries', '#pointer', 'pointer')}} | {{Spec2('CSS4 Media Queries')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad
 

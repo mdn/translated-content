@@ -82,9 +82,7 @@ Ver [Uso de CSS transforms](/En/CSS/Using_CSS_transforms) para más ejemplos.
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                                   | Comentario |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Transforms', '#transform-origin', 'transform-origin') }} | {{ Spec2('CSS3 Transforms') }} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

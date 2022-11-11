@@ -64,10 +64,7 @@ span:nth-last-of-type(2) {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                               | Comentarios                                             |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#nth-last-of-type-pseudo', ':nth-last-of-type')}} | {{Spec2('CSS4 Selectors')}} | Los elementos coincidentes no requieren tener un padre. |
-| {{SpecName('CSS3 Selectors', '#nth-last-of-type-pseudo', ':nth-last-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

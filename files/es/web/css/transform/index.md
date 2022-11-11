@@ -228,10 +228,7 @@ Translada un elemento a lo largo del eje Y.
 
 ## Especificaciones
 
-| Specification                                                                                | Status                                   | Comment                      |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------- |
-| {{SpecName('CSS Transforms 2', '#transform-functions', 'transform')}} | {{Spec2('CSS Transforms 2')}} | Adds 3D transform functions. |
-| {{SpecName('CSS3 Transforms', '#transform-property', 'transform')}}     | {{Spec2('CSS3 Transforms')}}     | Initial definition.          |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

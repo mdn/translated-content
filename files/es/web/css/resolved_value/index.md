@@ -13,9 +13,7 @@ El **valor resuelto** (**resolved value**) de una propiedad CSS es el valor devu
 
 ## Especificaciones
 
-| Especificación                                                                   | Estatus                  | Comentarios        |
-| -------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName("CSSOM", "#resolved-values", "resolved value")}} | {{Spec2("CSSOM")}} | Definición inicial |
+{{Specifications}}
 
 ## Véase también
 

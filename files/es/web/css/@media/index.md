@@ -89,13 +89,7 @@ Cada _característica de medios_ verifica una característica específica del na
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                                   | Comentarios                                                                                                                                                                                                                       |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Compat', '#css-media-queries', 'CSS Media Queries')}} | {{Spec2('Compat')}}                 | Estandariza las características `-webkit-device-pixel-ratio` y `-webkit-transform-3d`.                                                                                                                                            |
-| {{SpecName('CSS3 Conditional', '#at-media', '@media')}}                 | {{Spec2('CSS3 Conditional')}} | Define la sintaxis básica de la regla `@media`.                                                                                                                                                                                   |
-| {{SpecName('CSS4 Media Queries', '#media', '@media')}}                 | {{Spec2('CSS4 Media Queries')}} | Se agregan las características `scripting`, `pointer`, `hover`, `light-level`, `update-frequency`, `overflow-block`, y `overflow-inline`. Se descontinúan todos los tipos de medios excepto `screen`, `print`, `speech`, y `all`. |
-| {{SpecName('CSS3 Media Queries', '#media0', '@media')}}                 | {{Spec2('CSS3 Media Queries')}} | Sin cambios.                                                                                                                                                                                                                      |
-| {{SpecName('CSS2.1', 'media.html#at-media-rule', '@media')}}         | {{Spec2('CSS2.1')}}                 | Definición inicial.                                                                                                                                                                                                               |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

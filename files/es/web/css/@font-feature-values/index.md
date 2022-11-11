@@ -58,9 +58,7 @@ La regla-at `@font-feature-values` debe ser usada en la parte superior de la hoj
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estatus                          | Comentarios        |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#font-feature-values', '@font-feature-values')}} | {{Spec2('CSS3 Fonts')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

@@ -73,9 +73,7 @@ p {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#descdef-font-face-unicode-range', 'unicode-range')}} | {{Spec2('CSS3 Fonts')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con los distintos navegadores
 

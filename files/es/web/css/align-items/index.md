@@ -80,9 +80,7 @@ align-items: unset;
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           | Comentarios        |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox', '#propdef-align-items', 'align-items')}} | {{Spec2('CSS3 Flexbox')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 
