@@ -52,10 +52,9 @@ toLocaleString(locales, options)
 ```js
 const date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
-// toLocaleString() without arguments depends on the
-// implementation, the default locale, and the default time zone
+// 인수가 없는 toLocaleString() 은 구현, 기본 로케일, 기본 타임존에 따라 달라집니다
 console.log(date.toLocaleString());
-// → "12/11/2012, 7:00:00 PM" if run in en-US locale with time zone America/Los_Angeles
+// → "12/11/2012, 7:00:00 PM" en-Us 로케일 및 America/Los_Angeles 타임존에서 실행했을 때
 ```
 
 ### 로케일 및 옵션 인수에 대한 지원 확인
@@ -80,32 +79,31 @@ function toLocaleStringSupportsLocales() {
 ```js
 const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
-// Formats below assume the local time zone of the locale;
+// 아래의 형식은 로케일의 로컬 타임존을 가정한다
 // America/Los_Angeles for the US
 
-// US English uses month-day-year order and 12-hour time with AM/PM
+// 미국 영어는 달-일-년 순서와 AM/PM이 있는 12시간을 사용합니다
 console.log(date.toLocaleString("en-US"));
 // → "12/19/2012, 7:00:00 PM"
 
-// British English uses day-month-year order and 24-hour time without AM/PM
+// 영국 영어는 일-달-년 순서와 AM/PM이 없는 24시간을 사용합니다
 console.log(date.toLocaleString("en-GB"));
 // → "20/12/2012 03:00:00"
 
-// Korean uses year-month-day order and 12-hour time with AM/PM
+// 한국어는 년-월-일 순서와 AM/PM이 있는 12시간을 사용합니다
 console.log(date.toLocaleString("ko-KR"));
 // → "2012. 12. 20. 오후 12:00:00"
 
-// Arabic in most Arabic-speaking countries uses Eastern Arabic numerals
+// 아랍어를 사용하는 대부분의 아랍국가는 동부 아라비안 숫자를 사용합니다
 console.log(date.toLocaleString("ar-EG"));
 // → "٢٠‏/١٢‏/٢٠١٢ ٥:٠٠:٠٠ ص"
 
-// For Japanese, applications may want to use the Japanese calendar,
-// where 2012 was the year 24 of the Heisei era
+// 일본어의 경우, 어플리케이션이 일본 달력을 사용하고 싶을 수 있습니다
+// 2012년의 경우 Heisei 24년 이었습니다
 console.log(date.toLocaleString("ja-JP-u-ca-japanese"));
 // → "24/12/20 12:00:00"
 
-// When requesting a language that may not be supported, such as
-// Balinese, include a fallback language (in this case, Indonesian)
+// 발리어와 같이 지원되지 않을 수 있는 언어를 요청할 때, 대체 언어를 포함합니다. (이 경우에는 인도네시아어)
 console.log(date.toLocaleString(["ban", "id"]));
 // → "20/12/2012 11.00.00"
 ```
@@ -128,14 +126,14 @@ const options = {
 console.log(date.toLocaleString("de-DE", options));
 // → "Donnerstag, 20. Dezember 2012"
 
-// An application may want to use UTC and make that visible
+// 어플리케이션은 UTC를 사용할 수 있고 그것을 보이게 할 수 있습니다.
 options.timeZone = "UTC";
 options.timeZoneName = "short";
 
 console.log(date.toLocaleString("en-US", options));
 // → "Thursday, December 20, 2012, GMT"
 
-// Sometimes even the US needs 24-hour time
+// en-US도 24시간 사용이 가능합니다
 console.log(date.toLocaleString("en-US", { hour12: false }));
 // → "12/19/2012, 19:00:00"
 ```
@@ -151,8 +149,8 @@ console.log(date.toLocaleString("en-US", { hour12: false }));
 ```js example-bad
 "1/1/2019, 01:00:00" ===
   new Date("2019-01-01T01:00:00Z").toLocaleString("en-US");
-// true in Firefox and others
-// false in IE and Edge
+// Firefox나 다른 기타 브라우저에서 true 입니다
+// IE나 Edge에서 false 입니다
 ```
 
 > **Note:** See also this
