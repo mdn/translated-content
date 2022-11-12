@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
 {{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
 
-새로운 `locales` 인수와 `options` 인수를 사용하면 정렬에 사용될 언어를 지정하고 함수의 동작을 사용자 정의할 수 있습니다. 
+새로운 `locales` 인수와 `options` 인수를 사용하면 정렬에 사용될 언어를 지정하고 함수의 동작을 사용자 정의할 수 있습니다.
 `locales`와 `options`의 인수를 무시하는 오래된 구현에서는 사용되는 locale과 정렬 순서는 완전히 구현에 의존합니다.
 
 ## 구문
@@ -34,16 +34,17 @@ localeCompare(compareString, locales, options)
   - `referenceStr`가 비교되는 문자열.
 - `locales`와 `options`
 
-  - 이러한 인수는 함수의 동작을 사용자 정의하여 응용 프로그램에서 포맷 규칙을 사용할 언어를 지정합니다. 
-    `"locales"`와 `"options"`의 인자를 무시하는 구현에서는 사용되는 로케일과 반환되는 문자열의 형식은 
+  - 이러한 인수는 함수의 동작을 사용자 정의하여 응용 프로그램에서 포맷 규칙을 사용할 언어를 지정합니다.
+    `"locales"`와 `"options"`의 인자를 무시하는 구현에서는 사용되는 로케일과 반환되는 문자열의 형식은
     완전히 구현에 의존합니다.
-    
+
     매개변수의 상세 및 사용 방법은 [`Intl.Collator()`
     constructor](/ko/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator)를 참조하세요.
 
 ### 반환 값
 
 `compareString` 전에 `referenceStr`가 위치하는 경우 **음수**, `compareString` 후에 `referenceStr`가 위치하는 경우 **양수**, 동등할 경우 `0`이 됩니다.
+
 ## 설명
 
 `referenceStr`가 `compareString` 전 혹은 뒤에 오는지 또는 동등한지를 나타내는 정수를 반환합니다.
@@ -54,12 +55,12 @@ localeCompare(compareString, locales, options)
 
 > **주의:** `-1` 또는 `1`의 정확한 반환 값에 의존하지 마세요.
 >
-> 음의 정수와 양의 정수의 결과는 브라우저마다(브라우저 버전에 따라서도) 다릅니다.이는 W3C 사양에서는 음의 값과 양의 값만 필요하기 때문입니다. 
+> 음의 정수와 양의 정수의 결과는 브라우저마다(브라우저 버전에 따라서도) 다릅니다.이는 W3C 사양에서는 음의 값과 양의 값만 필요하기 때문입니다.
 > 브라우저에 따라서는, `-2`나 `2`를 반환하거나, 그 외의 음의 값이나 양의 값을 반환할 수도 있습니다.
 
 ## 성능
 
-큰 배열의 정렬과 같이 대량의 문자열을 비교하는 경우, {{jsxref("Global_Objects/Collator", "Intl.Collator")}} 객체를 작성하고 
+큰 배열의 정렬과 같이 대량의 문자열을 비교하는 경우, {{jsxref("Global_Objects/Collator", "Intl.Collator")}} 객체를 작성하고
 해당 {{jsxref("Collator.prototype.compare", "compare")}} 프로퍼티가 제공하는 함수를 사용하는 것이 좋습니다.
 
 ## 예시
@@ -106,7 +107,7 @@ function localeCompareSupportsLocales() {
 
 ### `locales` 사용
 
-`localeCompare()` 결과는 언어에 따라 달라집니다. 
+`localeCompare()` 결과는 언어에 따라 달라집니다.
 응용 프로그램의 사용자 인터페이스에서 사용되는 언어의 정렬 순서를 얻으려면 반드시 `locales` 인자를 사용하여 해당 언어(및 폴백 언어의 일부)를 지정하세요.
 
 ```js

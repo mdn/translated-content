@@ -7,7 +7,6 @@ slug: Web/HTTP/Headers/SourceMap
 
 **`SourceMap`** [HTTP](/ko/docs/Web/HTTP) 응답 헤더는 생성된 코드를 [소스맵](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)에 연결해서, 브라우저가 원본 소스를 재구성하여 디버거에서 재구성된 원본을 표시할 수 있도록 합니다.
 
-
 <table class="properties">
   <tbody>
     <tr>
