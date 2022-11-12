@@ -39,7 +39,7 @@ toLocaleString(locales, options)
 
 ### 반환 값
 
-언어 구분 표현 형식이 있는 날짜 문자열
+언어별 표현 형식을 따른 날짜 문자열
 
 `Intl.DateTimeFormat`를 지원하는 구현에서 안에서 `new Intl.DateTimeFormat(locales, options).format(date)` 와 동일합니다.
 
