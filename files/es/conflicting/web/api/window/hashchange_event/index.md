@@ -66,11 +66,7 @@ El evento `hashchange` enviado, tiene los siguientes campos:
 
 ## Especificaciones
 
-| Especificacion                                                                                       | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}         | {{Spec2('HTML5.1')}}     |            |
-| {{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}     | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

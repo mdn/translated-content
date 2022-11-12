@@ -158,10 +158,7 @@ Tenga en cuenta que no es posible usar `var`, `let` o `const` con `export defaul
 
 ## Especificaciones
 
-| Especificación                                                       | Estado                       | Comentario          |
-| -------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-exports', 'Exports')}}         | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-exports', 'Exports')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatiblidad en navegadores
 

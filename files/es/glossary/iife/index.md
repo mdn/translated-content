@@ -50,4 +50,4 @@ result; // "Barry"
 
 ### General knowledge
 
-- {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}} on Wikipedia
+- [IIFE](https://es.wikipedia.org/wiki/Immediately-invoked_function_expression) on Wikipedia

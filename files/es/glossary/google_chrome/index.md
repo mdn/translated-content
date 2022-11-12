@@ -20,7 +20,7 @@ _Google Chrome_ es un [navegador](/es/docs/Glossary/Browser) web gratuito desarr
 
 ### Cultura general
 
-- {{Interwiki("wikipedia", "WebKit")}} en Wikipedia
+- [WebKit](https://es.wikipedia.org/wiki/WebKit) en Wikipedia
 
 ### Para usuarios de Chrome
 

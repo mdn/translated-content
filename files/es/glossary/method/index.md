@@ -16,7 +16,7 @@ Un **metodo** es una {{glossary("function", "función")}} la cual es {{glossary(
 
 ### Aprender acerca de esto
 
-- {{InterWiki("wikipedia","Método (informática)")}} en Wikipedia
+- [Método (informática)](https://es.wikipedia.org/wiki/Método_%28informática%29) en Wikipedia
 - [Definiendo un método en JavaScript](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) (comparacion de la sintaxis tradicionas y la nueva abreviación)
 
 ### Referencia Técnica

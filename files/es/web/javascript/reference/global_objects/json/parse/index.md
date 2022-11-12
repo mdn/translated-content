@@ -86,11 +86,7 @@ JSON.parse('{"foo" : 1, }');
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                       | Comentario                                          |
-| ---------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.12.2', 'JSON.parse')}}         | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.7. |
-| {{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}}         | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-json.parse', 'JSON.parse')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

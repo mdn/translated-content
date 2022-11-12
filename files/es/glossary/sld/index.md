@@ -16,4 +16,4 @@ Otro ejemplo es el de `developer.mozilla.org`, el subdominio `developer` es util
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "Second-level domain", "SLD")}} on Wikipedia
+- [SLD](https://es.wikipedia.org/wiki/Second-level_domain) on Wikipedia

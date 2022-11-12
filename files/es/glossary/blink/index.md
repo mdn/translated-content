@@ -20,5 +20,5 @@ Blink es un motor de renderizado para [navegadores](/es/docs/Glossary/Browser) d
 ### Cultura General
 
 - Página principal de [Blink](http://www.chromium.org/blink)
-- {{interwiki("wikipedia", "Blink")}} en Wikipedia
+- [Blink](https://es.wikipedia.org/wiki/Blink) en Wikipedia
 - [FAQ](http://www.chromium.org/blink/developer-faq) de Blink

@@ -49,12 +49,9 @@ All traps are optional. If a trap has not been defined, the default behavior is 
 
 Some non-standard traps are [obsolete and have been removed](/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#Proxy).
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                                                                    | Status                       | Comment                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots', 'Proxy Object Internal Methods and Internal Slots')}} | {{Spec2('ES2015')}}     | Initial definition.                       |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots', 'Proxy Object Internal Methods and Internal Slots')}} | {{Spec2('ESDraft')}} | The `enumerate` handler has been removed. |
+{{Specifications}}
 
 ## Browser compatibility
 

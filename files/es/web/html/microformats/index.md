@@ -23,7 +23,7 @@ They all aim at adding semantics to web documents.
 
 ## See also
 
-- {{Interwiki("wikipedia", "Microformat")}} on Wikipedia
+- [Microformat](https://es.wikipedia.org/wiki/Microformat) on Wikipedia
 - [Microformats official website](http://www.microformats.org)
 - [Search engines support](http://microformats.org/wiki/search_engines) on Microformats official website
 - [IndieWebCamp](https://indiewebcamp.com/microformats)

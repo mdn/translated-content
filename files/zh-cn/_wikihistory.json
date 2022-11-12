@@ -857,7 +857,7 @@
     "modified": "2019-03-18T21:34:33.337Z",
     "contributors": ["yshenhua"]
   },
-  "Glossary/Grid_Rows": {
+  "Glossary/Grid_Row": {
     "modified": "2019-03-18T21:34:36.923Z",
     "contributors": ["yshenhua"]
   },
@@ -11211,10 +11211,6 @@
   "Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop": {
     "modified": "2019-12-23T04:36:06.230Z",
     "contributors": ["Sherr_Y", "suvyme"]
-  },
-  "Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
-    "modified": "2020-10-21T09:56:11.699Z",
-    "contributors": ["Oliverz"]
   },
   "Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types": {
     "modified": "2019-03-23T22:11:24.812Z",

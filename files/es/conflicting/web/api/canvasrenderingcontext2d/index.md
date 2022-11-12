@@ -26,6 +26,4 @@ Este es un tipo auxiliar usado para simplificar la especificación, no es una in
 
 ## Especificaciones
 
-| Specification                                                                                                    | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', "scripting.html#canvasimagesource", "CanvasImageSource")}} | {{Spec2('HTML WHATWG')}} | Definición inicial. |
+{{Specifications}}

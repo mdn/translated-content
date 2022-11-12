@@ -595,7 +595,7 @@ Puedes llamar a cualquiera de los métodos del objeto {{JSxRef("String")}} en un
 console.log("John's cat".length)  // En este caso, 10.
 ```
 
-En ES2015, también están disponibles las _plantillas literales_. Las plantillas literales están encerradas por la comilla invertida (`` ` ``) ({{Interwiki("wikipedia", "Acento_grave")}}) en lugar de comillas simples o dobles.
+En ES2015, también están disponibles las _plantillas literales_. Las plantillas literales están encerradas por la comilla invertida (`` ` ``) ([Acento_grave](https://es.wikipedia.org/wiki/Acento_grave)) en lugar de comillas simples o dobles.
 
 Las cadenas de las plantillas literales proporcionan azúcar sintáctica para construir cadenas. (Esto es similar a las funciones de interpolación de cadenas en Perl, Python y más).
 

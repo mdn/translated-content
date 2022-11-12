@@ -21,7 +21,7 @@ Los compiladores JIT suelen ser transparentes para el programador. Por ejemplo e
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "Compiler")}} on Wikipedia
+- [Compiler](https://es.wikipedia.org/wiki/Compiler) on Wikipedia
 - The [GNU Compiler Collection (GCC)](https://gcc.gnu.org)
 
 ### Véase también

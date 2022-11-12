@@ -44,10 +44,7 @@ mySet.has("bar")  // false
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-set.prototype.clear', 'Set.prototype.clear')}}         | {{Spec2('ES6')}}         | Initial definition. |
-| {{SpecName('ESDraft', '#sec-set.prototype.clear', 'Set.prototype.clear')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

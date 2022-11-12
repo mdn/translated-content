@@ -96,9 +96,7 @@ if (!Object.is) {
 
 ## Especificaciones
 
-| Especificación                                                       | Estado               | Comentario          |
-| -------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-object.is', 'Object.is')}} | {{Spec2('ES6')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

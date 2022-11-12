@@ -99,11 +99,7 @@ o.propertyIsEnumerable('firstMethod'); // regresa false
 
 ## Especificaciones
 
-| Especificación                                                                                                                               | Estatus                  | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('ES3')}}                                                                                                                     | {{Spec2('ES3')}}     | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-15.2.4.7', 'Object.prototype.propertyIsEnumerable')}}                                     | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}} | {{Spec2('ES6')}}     |                     |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

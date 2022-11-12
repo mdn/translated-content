@@ -50,7 +50,7 @@ PHP (una inicialización recursiva para PHP: preprocesador de hipertexto) es un 
 <section id="Quick_links">
  <ol>
   <li><a href="http://php.net/">Official website</a></li>
-  <li>{{Interwiki("wikipedia", "PHP")}} en Wikipedia</li>
+  <li>[PHP](https://es.wikipedia.org/wiki/PHP) en Wikipedia</li>
   <li><a href="https://en.wikibooks.org/wiki/PHP_Programming">PHP</a> en Wikibooks</li>
   <li><a href="/es/docs/Glossary">MDN Web Docs Glossary</a>
    <ol>

@@ -15,4 +15,4 @@ translation_of: Glossary/gif
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia","GIF")}} en Wikipedia
+- [GIF](https://es.wikipedia.org/wiki/GIF) en Wikipedia

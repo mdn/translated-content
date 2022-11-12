@@ -29,7 +29,7 @@ Node와 Express를 통해 웹앱 개발을 한결 수월하게 할 수 있습니
 
 ### Express 개발 환경이란 무엇입니까?
 
-Express개발환경은 Nodejs의 설치, NPM 패키지 매니저, 그리고 (선택적) 로컬 컴퓨터의 *Express Application Generator*를\_ \_포함합니다.
+Express개발환경은 Nodejs의 설치, NPM 패키지 매니저, 그리고 (선택적) 로컬 컴퓨터의 *Express Application Generator*를 포함합니다.
 
 _Node_ and the _NPM_ package manager are installed together from prepared binary packages, installers, operating system package managers or from source (as shown in the following sections). _Express_ is then installed by NPM as a dependency of your individual _Express_ web applications (along with other libraries like template engines, database drivers, authentication middleware, middleware to serve static files, etc.)
 

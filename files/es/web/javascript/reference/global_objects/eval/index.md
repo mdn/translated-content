@@ -227,12 +227,7 @@ var fct2 = eval(fctStr2)  // deuelve una función
 
 ## Especificaciones
 
-| Especificaciones                                             | Status                       | Comentario          |
-| ------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES1')}}                                     | {{Spec2('ES1')}}         | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-15.1.2.1', 'eval')}} | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES6', '#sec-eval-x', 'eval')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ESDraft', '#sec-eval-x', 'eval')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

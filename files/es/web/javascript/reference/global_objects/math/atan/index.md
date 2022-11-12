@@ -62,12 +62,7 @@ Nota que podrías querer evitar usar **±**`Infinity` por razones de estilo. En 
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Definición inicial. Implementada en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.4', 'Math.atan')}}     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-math.atan', 'Math.atan')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-math.atan', 'Math.atan')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con el navegador
 

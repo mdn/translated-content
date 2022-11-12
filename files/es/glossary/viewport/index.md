@@ -15,7 +15,7 @@ La porción del viewport que se encuentra visible en ese momento se denomina **v
 
 ### Conocimiento General
 
-- {{Interwiki("wikipedia", "Viewport")}} en Wikipedia
+- [Viewport](https://es.wikipedia.org/wiki/Viewport) en Wikipedia
 - [What is viewport in HTML](https://stackoverflow.com/questions/2939693/what-is-viewport-in-html) en Stackoverflow
 - [Get viewport/window size (width and height) with javascript](https://andylangton.co.uk/blog/development/get-viewportwindow-size-width-and-height-javascript)
 - [A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode)

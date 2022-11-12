@@ -1,6 +1,8 @@
 ---
 title: AudioScheduledSourceNode
 slug: Web/API/AudioScheduledSourceNode
+l10n:
+  sourceCommit: 6b8b53f565c67eb22fd78f8dec036c4694ad18d4
 ---
 
 {{APIRef("Web Audio API")}}
@@ -10,37 +12,39 @@ slug: Web/API/AudioScheduledSourceNode
 > **メモ:** `AudioScheduledSourceNode` オブジェクトは、直接作成することはできません。
 > かわりに、{{domxref("AudioBufferSourceNode")}} や、{{domxref("OscillatorNode")}}、または {{domxref("ConstantSourceNode")}} を使用してください。
 
-特に明記しない限り、AudioScheduledSourceNode をベースにしたノードは、再生されていない時 (つまり、start() の前や、stop() の後) は、無音を出力します。無音は、値がゼロ (0) であるサンプルストリームを、常に流し続けることで表現されています。
+特に明記しない限り、 `AudioScheduledSourceNode` をベースにしたノードは、再生されていない時（つまり、 `start()` の前や、 `stop()` の後）は、無音を出力します。無音は、値がゼロ (0) であるサンプルストリームを、常に流し続けることで表現されています。
 
-## プロパティ
+{{InheritanceDiagram}}
 
-親インターフェース、_{{domxref("AudioNode")}}_ のプロパティ継承に加え、以下のプロパティがあります。
+## インスタンスプロパティ
 
-### イベントハンドラ
+_親インターフェイスである {{domxref("AudioNode")}} からプロパティを継承しています。_
 
-- {{domxref("AudioScheduledSourceNode.onended", "onended")}}
-  - : {{event("ended")}} イベントが発生したときに呼び出されるメソッドです。ノードが再生を終えたことを示します。
+## インスタンスメソッド
 
-## メソッド
-
-親インターフェース、_{{domxref("AudioNode")}}_ のメソッド継承に加え、以下のメソッドがあります。
+_親インターフェイスである {{domxref("AudioNode")}} からメソッドを継承しており、さらに以下のメソッドがあります。_
 
 - {{domxref("AudioScheduledSourceNode.start", "start()")}}
-  - : 指定した時刻に、ノードが特定の音を再生するよう、スケジュールします。時間を指定しない場合、ノードはすぐに再生を開始します。
+  - : 指定した時刻に、ノードが特定の音を再生するようスケジュールします。時刻を指定しない場合、ノードはすぐに再生を開始します。
 - {{domxref("AudioScheduledSourceNode.stop", "stop()")}}
-  - : 指定した時刻に、ノードの再生を停止するよう、スケジュールします。時間を指定しない場合、ノードはすぐに停止します。
+  - : 指定した時刻に、ノードの再生を停止するよう、スケジュールします。時刻を指定しない場合、ノードはすぐに停止します。
 
-## Specification
+## イベント
 
-| Specification                                                                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#idl-def-AudioScheduledSourceNode', 'AudioScheduledSourceNode')}} | {{Spec2('Web Audio API')}} |         |
+これらのイベントは [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用するか、このインターフェイス `onイベント名` プロパティにイベントリスナーを代入することで待ち受けすることができます。
 
-## Browser compatibility
+- [`ended`](/ja/docs/Web/API/AudioScheduledSourceNode/ended_event)
+  - : ソースノードが、所定の停止時間に達した、音声の全時間が演奏された、あるいはバッファの全体が演奏されたなどの理由で、再生を停止したときに発行されます。
 
-{{Compat("api.AudioScheduledSourceNode")}}
+## 仕様書
 
-## See also
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
 
 - [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("AudioNode")}}

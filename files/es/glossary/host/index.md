@@ -14,4 +14,4 @@ El anfitrión no es necesariamente un elemento hardware. Pueden ser generado com
 
 ### Conocimiento general
 
-- {{interwiki("wikipedia", "Host")}} en la Wikipedia
+- [Host](https://es.wikipedia.org/wiki/Host) en la Wikipedia

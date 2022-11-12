@@ -17,4 +17,4 @@ _Copyleft_ es un término, que normalmente se refiere a una licencia, y que se u
 
 ### Cultura General
 
-- {{Interwiki("wikipedia", "Copyleft")}} en Wikipedia
+- [Copyleft](https://es.wikipedia.org/wiki/Copyleft) en Wikipedia

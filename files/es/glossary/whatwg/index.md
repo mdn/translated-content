@@ -23,5 +23,5 @@ El WHATWG mantiene especifiaciones para {{Glossary("HTML")}}, {{Glossary("DOM")}
 
 ### General Knowledge
 
-- {{Interwiki("wikipedia", "WHATWG")}} en Wikipedia
+- [WHATWG](https://es.wikipedia.org/wiki/WHATWG) en Wikipedia
 - [WHATWG.org Official Website](http://wiki.whatwg.org/)

@@ -50,9 +50,7 @@ document.getElementById('yourElemId').style.color = 'red';
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estatus              | Comentario                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES6', '#sec-string.prototype.fontcolor', 'String.prototype.fontcolor')}} | {{Spec2('ES6')}} | Initial definition. Implemented in JavaScript 1.0. Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

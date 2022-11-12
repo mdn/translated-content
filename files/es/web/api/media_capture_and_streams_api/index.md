@@ -19,25 +19,25 @@ Los objetos `MediaStream` poseen una sola **entrada** y **salida[**\[ii\]**](#ed
 
 ## Referencia
 
-- {{event("addtrack")}} (event)
+- [`addtrack`](/es/docs/Web/Reference/Events/addtrack) (event)
 - {{domxref("AudioStreamTrack")}}
 - {{domxref("BlobEvent")}}
 - {{domxref("BlobEventInit")}}
-- {{event("ended (MediaStream)")}} (event)
-- {{event("ended (MediaStreamTrack)")}} (event)
+- [`ended (MediaStream)`](/es/docs/Web/Reference/Events/ended (MediaStream)) (event)
+- [`ended (MediaStreamTrack)`](/es/docs/Web/Reference/Events/ended (MediaStreamTrack)) (event)
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamConstraints")}}
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStreamTrackEvent")}}
 - {{domxref("MediaStreamTrackList")}}
 - {{domxref("MediaTrackConstraints")}}
-- {{event("muted")}} (event)
+- [`muted`](/es/docs/Web/Reference/Events/muted) (event)
 - {{domxref("NavigatorUserMedia")}}
 - {{domxref("NavigatorUserMediaError")}}
-- {{event("overconstrained")}} (event)
-- {{event("removetrack")}} (event)
-- {{event("started")}} (event)
-- {{event("unmuted")}} (event)
+- [`overconstrained`](/es/docs/Web/Reference/Events/overconstrained) (event)
+- [`removetrack`](/es/docs/Web/Reference/Events/removetrack) (event)
+- [`started`](/es/docs/Web/Reference/Events/started) (event)
+- [`unmuted`](/es/docs/Web/Reference/Events/unmuted) (event)
 - {{domxref("URL")}}
 - {{domxref("VideoStreamTrack")}}
 

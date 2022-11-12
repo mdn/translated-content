@@ -44,11 +44,7 @@ console.log('Elemento eliminado: ' + eliminado);
 
 ## Especificaciones
 
-| Specification                                                                                        | Status                   | Comment                                             |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                             | {{Spec2('ES3')}}     | Definición inicial. Implementado en Javascript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.9', 'Array.prototype.shift')}}                 | {{Spec2('ES5.1')}} |                                                     |
-| {{SpecName('ES6', '#sec-array.prototype.shift', 'Array.prototype.shift')}} | {{Spec2('ES6')}}     |                                                     |
+{{Specifications}}
 
 ## Navegadores compatibles
 

@@ -144,12 +144,12 @@ recepción de datos binarios](/es/docs/Web/API/XMLHttpRequest/Sending_and_Receiv
 ocurrir mientras se procesa la solicitud. Esto incluye notificaciones periódicas
 del progreso, notificaciones de error, etc.
 
-La implementación para la monitorización de eventos DOM {{event("progress")}} de transferencias `XMLHttpRequest`
+La implementación para la monitorización de eventos DOM [`progress`](/es/docs/Web/Reference/Events/progress) de transferencias `XMLHttpRequest`
 sigue la [especificación de eventos de progreso](https://xhr.spec.whatwg.org/#interface-progressevent): estos
 eventos implementan la interfaz {{domxref("ProgressEvent")}}. Los eventos reales que puedes monitorizar
 para determinar el estado de una transferencia en curso son:
 
-- {{event("progress")}}
+- [`progress`](/es/docs/Web/Reference/Events/progress)
   - : La cantidad de datos que se han recibido ha cambiado.
 - {{domxref("XMLHttpRequest/load_event", "load")}}
   - : La transferencia se ha completado; todos los datos están ahora en el `response`.
@@ -895,8 +895,8 @@ XMLHttpRequest que se dispara en un evento onunload para una ventana, el esperad
 XMLHttpRequest se crea cuando la ventana a cerrar sigue ahí, y finalmente
 enviar la petición (en otras palabras, `open()`) cuando esta ventana ha perdido su foco
 y otra ventana toma el foco. La forma más eficaz de evitar este problema es
-es establecer una escucha en el evento {{event("activate")}} de la nueva ventana que se activa una vez que la
-ventana terminada tenga su evento {{event("unload")}} disparado.
+es establecer una escucha en el evento [`activate`](/es/docs/Web/Reference/Events/activate) de la nueva ventana que se activa una vez que la
+ventana terminada tenga su evento [`unload`](/es/docs/Web/Reference/Events/unload) disparado.
 
 ## Workers
 

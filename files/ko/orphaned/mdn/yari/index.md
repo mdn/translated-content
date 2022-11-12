@@ -1,8 +1,9 @@
 ---
 title: '쿠마(Kuma): MDN 위키 플랫폼'
-slug: MDN/Yari
-original_slug: MDN/Kuma
+slug: orphaned/MDN/Yari
+original_slug: MDN/Yari
 ---
+
 {{MDNSidebar}}
 
 쿠마(Kuma)는 MDN Web Docs를 작동시키는 Django 코드 입니다.

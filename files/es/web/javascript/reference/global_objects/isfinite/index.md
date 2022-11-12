@@ -47,11 +47,7 @@ isFinite("0");         // verdadero, hubiera sido falso en el caso de usar Numbe
 
 ## Especificaciones
 
-| Especificaciones                                                         | Estado                   | Comentarios        |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| ECMAScript 2nd Edition.                                                  | Estándar                 | Definición inicial |
-| {{SpecName('ES5.1', '#sec-15.1.2.5', 'isFinite')}}     | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-isfinite-number', 'isFinite')}} | {{Spec2('ES6')}}     |                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

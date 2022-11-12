@@ -52,10 +52,7 @@ El objeto `Reflect` proporciona las siguientes funciones estáticas con los mism
 
 ## Especificaciones
 
-| Specification                                                                | Status                       | Comment                             |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------------- |
-| {{SpecName('ES2015', '#sec-reflect-object', 'Reflect')}} | {{Spec2('ES2015')}}     | Initial definition.                 |
-| {{SpecName('ESDraft', '#sec-reflect-object', 'Reflect')}} | {{Spec2('ESDraft')}} | Reflect.enumerate has been removed. |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

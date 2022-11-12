@@ -13,4 +13,4 @@ translation_of: Glossary/ASCII
 
 ### Conocimientos generales
 
-{{Interwiki("wikipedia", "ASCII")}} en Wikipedia
+[ASCII](https://es.wikipedia.org/wiki/ASCII) en Wikipedia

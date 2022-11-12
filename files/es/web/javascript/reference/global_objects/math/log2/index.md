@@ -59,12 +59,9 @@ Math.log2 = Math.log2 || function(x) {
 };
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                            | Status                       | Comment             |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-math.log2', 'Math.log2')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-math.log2', 'Math.log2')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

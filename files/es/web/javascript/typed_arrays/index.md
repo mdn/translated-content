@@ -149,7 +149,7 @@ let amountDueView = new Float32Array(buffer, 20, 1);
 
 Luego puedes acceder, por ejemplo, al monto adeudado con `amountDueView[0]`.
 
-> **Nota:** La {{interwiki("wikipedia", "Data_structure_alignment")}} en una estructura C depende de la plataforma. Toma precauciones y consideraciones para estas diferencias de relleno.
+> **Nota:** La [Data_structure_alignment](https://es.wikipedia.org/wiki/Data_structure_alignment) en una estructura C depende de la plataforma. Toma precauciones y consideraciones para estas diferencias de relleno.
 
 ### Conversión a arreglos normales
 

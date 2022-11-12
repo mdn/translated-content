@@ -38,12 +38,9 @@ console.log(mySet);
 // Set [1, 5, "some text"]
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-set.prototype.add', 'Set.prototype.add')}}     | {{Spec2('ES6')}}         | Initial definition. |
-| {{SpecName('ESDraft', '#sec-set.prototype.add', 'Set.prototype.add')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

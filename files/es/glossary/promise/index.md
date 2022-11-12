@@ -19,7 +19,7 @@ Para obtener más información, echa un vistazo a los siguientes enlaces
 
 ### Conocimientos generales
 
-- {{interwiki("wikipedia", "Valor_futuro_(informática)", "Valor futuro")}}
+- [Valor futuro](https://es.wikipedia.org/wiki/Valor_futuro_(informática))
 
 ### Referencias técnicas
 

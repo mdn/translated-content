@@ -21,7 +21,7 @@ Un identificador se diferencia de una cadena en que una {{Glossary("String", "ca
 
 ### Conocimientos generales
 
-- {{interwiki("wikipedia", "Identificador#Identificadores_en_lenguajes_informáticos", "Identificador")}} en Wikipedia
+- [Identificador](https://es.wikipedia.org/wiki/Identificador#Identificadores_en_lenguajes_informáticos) en Wikipedia
 
 <section id="Quick_links">
  <ol>
@@ -33,6 +33,6 @@ Un identificador se diferencia de una cadena en que una {{Glossary("String", "ca
     <li>{{Glossary("Unicode")}}</li>
    </ol>
   </li>
-  <li>{{interwiki("wikipedia", "Identificador#Identificadores_en_lenguajes_informáticos", "Identificador")}} en Wikipedia</li>
+  <li>[Identificador](https://es.wikipedia.org/wiki/Identificador#Identificadores_en_lenguajes_informáticos) en Wikipedia</li>
  </ol>
 </section>

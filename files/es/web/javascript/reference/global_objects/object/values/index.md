@@ -64,10 +64,7 @@ Para dar soporte compatible con `Object.values()` a entornos antiguos que no la 
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                       | Comentario          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ESDraft', '#sec-object.values', 'Object.values')}} | {{Spec2('ESDraft')}} | Definición inicial. |
-| {{SpecName('ES8', '#sec-object.values', 'Object.values')}}         | {{Spec2('ES8')}}         |                     |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

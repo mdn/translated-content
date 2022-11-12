@@ -52,11 +52,7 @@ if (smallNumber === Number.NEGATIVE_INFINITY) {
 
 ## Especificaciones
 
-| Especificaciones                                                                                             | Estado                   | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| ECMAScript 1ra Edición. Implementado en JavaScript 1.1                                                       | Estándar                 | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-15.7.3.5', 'Number.NEGATIVE_INFINITY')}}                     | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-number.negative_infinity', 'Number.NEGATIVE_INFINITY')}} | {{Spec2('ES6')}}     |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -45,9 +45,7 @@ La propiedad `__proto__` es una simple propiedad de acceso a {{jsxref("Object.pr
 
 ## Especificaciones
 
-| Especificaciones                                                                                                                                     | Estado               | Comentario                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-additional-properties-of-the-object.prototype-object', 'Object.prototype.__proto__')}} | {{Spec2('ES6')}} | Incluída en el anexo (normativa) para características de legado ECMAScript para navegadores web (observar que la especificación de codificación es lo que ya está en las implementaciones). |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

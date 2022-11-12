@@ -48,4 +48,4 @@ Los frameworks de desarrollo web como AngularJS y Ember.js implementan una arqui
 
 ### General knowledge
 
-- {{interwiki("wikipedia", "Model–view–controller")}} on Wikipedia
+- [Model–view–controller](https://es.wikipedia.org/wiki/Model–view–controller) on Wikipedia

@@ -61,10 +61,7 @@ Math.acosh = Math.acosh || function(x) {
 
 ## Especificaciones
 
-| Especificación                                                               | Status                       | Comentario          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-math.acosh', 'Math.acosh')}}         | {{Spec2('ES6')}}         | Definición inicial. |
-| {{ SpecName('ESDraft', '#sec-math.acosh', 'Math.acosh')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad de navegador
 

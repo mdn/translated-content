@@ -33,5 +33,5 @@ Tan pronto como inventó la Web, Tim Berners-Lee fundó el Consorcio de la World
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "World Wide Web")}} en Wikipedia
+- [World Wide Web](https://es.wikipedia.org/wiki/World_Wide_Web) en Wikipedia
 - [The W3C website (sitio en inglés)](http://w3.org)

@@ -23,5 +23,5 @@ LGPL es usado habitualmente para licencias de componentes compartidos como por e
 
 ### Cultura General
 
-- {{interwiki("wikipedia", "GNU Lesser General Public License", "GNU LGPL")}} en Wikipedia
+- [GNU LGPL](https://es.wikipedia.org/wiki/GNU_Lesser_General_Public_License) en Wikipedia
 - [LGPL License](http://www.gnu.org/copyleft/lesser.html) en gnu.org

@@ -21,9 +21,7 @@ El evento `keydown` se lanza cuando el usuario presiona una tecla.
 
 ## Especificaciones
 
-| Specification                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onkeydown','onkeydown')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

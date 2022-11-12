@@ -10,5 +10,5 @@ El _tiempo de compilación_ es el tiempo desde que el programa es cargado por pr
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Compile time")}} en Wikipedia (inglés)
+- [Compile time](https://es.wikipedia.org/wiki/Compile_time) en Wikipedia (inglés)
 - [Tiempo de compilación](https://es.wikipedia.org/wiki/Tiempo_de_compilaci%C3%B3n) en Wikipedia

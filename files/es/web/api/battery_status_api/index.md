@@ -26,7 +26,7 @@ La **API de Estado de Batería**, también conocida como "**Battery API**", prov
 
 ## Ejemplo
 
-En este ejemplo, observamos los cambios en el estado de la carga (este o no conectado y cargando) y en el nivel de la batería. Esto se hace escuchando los eventos {{event("chargingchange")}}, {{event("levelchange")}}, {{event("chargingtimechange")}} y {{event("dischargingtimechange")}}.
+En este ejemplo, observamos los cambios en el estado de la carga (este o no conectado y cargando) y en el nivel de la batería. Esto se hace escuchando los eventos [`chargingchange`](/es/docs/Web/Reference/Events/chargingchange), [`levelchange`](/es/docs/Web/Reference/Events/levelchange), [`chargingtimechange`](/es/docs/Web/Reference/Events/chargingtimechange) y [`dischargingtimechange`](/es/docs/Web/Reference/Events/dischargingtimechange).
 
 ```js
 navigator.getBattery().then(function(battery) {

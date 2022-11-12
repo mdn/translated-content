@@ -58,10 +58,7 @@ Math.log10 = Math.log10 || function(x) {
 
 ## Especificaciones
 
-| Especificacion                                                               | Estado                       | Comentarios         |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-math.log10', 'Math.log10')}}         | {{Spec2('ES6')}}         | Initial definition. |
-| {{SpecName('ESDraft', '#sec-math.log10', 'Math.log10')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

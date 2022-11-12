@@ -18,7 +18,7 @@ Los _Hipervínculos_ ó _enlaces_ permiten conectar entre sí datos ó páginas 
 
 ### Cultura General
 
-- {{interwiki("wikipedia", "Hiperenlace")}} en Wikipedia
+- [Hiperenlace](https://es.wikipedia.org/wiki/Hiperenlace) en Wikipedia
 - [Guía de Hipervínculos](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks) en MDN
 
 ### Referencias técnicas

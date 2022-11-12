@@ -22,7 +22,7 @@ El rol de TCP es garantizar que los paquetes se entreguen de forma confiable y s
 - [IPv4](/es/docs/Glossary/IPv4)
 - [IPv6](/es/docs/Glossary/IPv6)
 - [Paquete](/es/docs/Glossary/Packet)
-- {{Interwiki("wikipedia", "Protocolo de control de transmisión")}} en Wikipedia
+- [Protocolo de control de transmisión](https://es.wikipedia.org/wiki/Protocolo_de_control_de_transmisión) en Wikipedia
 
 ## Vea también
 

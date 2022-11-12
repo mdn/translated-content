@@ -24,7 +24,7 @@ Métodos de SEO se dividen en dos grandes clases:
 
 ## Aprende más en
 
-- {{Interwiki("wikipedia", "SEO")}} on Wikipedia
+- [SEO](https://es.wikipedia.org/wiki/SEO) on Wikipedia
 
 ### Aprende SEO
 

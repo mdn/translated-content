@@ -53,5 +53,5 @@ V√©ase {{domxref("GlobalEventHandlers.ontransitioncancel")}} para mas informaci√
 
 - El manejador {{domxref("GlobalEventHandlers.ontransitioncancel")}}
 - La interfaz {{domxref("TransitionEvent")}}
-- {{event("transitionstart")}}, {{event("transitionend")}}
+- [`transitionstart`](/es/docs/Web/Reference/Events/transitionstart), [`transitionend`](/es/docs/Web/Reference/Events/transitionend)
 - Propiedades CSS: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}.

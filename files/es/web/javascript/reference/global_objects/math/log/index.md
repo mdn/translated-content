@@ -61,14 +61,9 @@ function getBaseLog(x, y) {
 
 If you run `getBaseLog(10, 1000)` it returns `2.9999999999999996` due to floating-point rounding, which is very close to the actual answer of 3.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                        | Status                       | Comment                                            |
-| -------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.10', 'Math.log')}} | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.log', 'Math.log')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-math.log', 'Math.log')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Browser compatibility
 

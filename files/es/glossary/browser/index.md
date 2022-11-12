@@ -18,7 +18,7 @@ Un _Navegador web_ es un programa o aplicación que da acceso a la [Web](/es/doc
 
 ### Cultura general
 
-- {{interwiki("wikipedia", "Navegador_web")}} en Wikipedia
+- [Navegador_web](https://es.wikipedia.org/wiki/Navegador_web) en Wikipedia
 - [La evolución de la web](http://www.evolutionoftheweb.com/)
 
 ### Descargar un navegador

@@ -40,12 +40,9 @@ console.log(setIter.next().value); // "bar"
 console.log(setIter.next().value); // "baz"
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                        | Status                       | Comment             |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-set.prototype.values', 'Set.prototype.values')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-set.prototype.values', 'Set.prototype.values')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

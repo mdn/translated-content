@@ -35,11 +35,11 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 ### Event handlers
 
 - {{domxref("ServiceWorkerContainer.oncontrollerchange")}}
-  - : Fired whenever a {{Event("controllerchange")}} event occurs — when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active","active")}} worker.
+  - : Fired whenever a [`controllerchange`](/es/docs/Web/Reference/Events/controllerchange) event occurs — when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active","active")}} worker.
 - {{domxref("ServiceWorkerContainer.onerror")}}
-  - : Fired whenever an {{Event("error")}} event occurs in the associated service workers.
+  - : Fired whenever an [`error`](/es/docs/Web/Reference/Events/error) event occurs in the associated service workers.
 - {{domxref("ServiceWorkerContainer.onmessage")}}
-  - : Fired whenever a {{Event("message")}} event occurs — when incoming messages are received to the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call.)
+  - : Fired whenever a [`message`](/es/docs/Web/Reference/Events/message) event occurs — when incoming messages are received to the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call.)
 
 ## Methods
 
