@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 
 有五种不同类型的操作返回 `NaN`：
 
-- 失败的数字转换（例如，显式转换，如 `parseInt("blabla")`、`Number(undefined)`，或隐式转换，如`Math.abs(undefined)`）
+- 失败的数字转换（例如，显式转换，如 `parseInt("blabla")`、`Number(undefined)`，或隐式转换，如 `Math.abs(undefined)`）
 - 计算结果不是实数的数学运算（例如，`Math.sqrt(1)`）
 - 不定式（例如，`0 * Infinity`、`1 ** Infinity`、`Infinity / Infinity`、`Infinity - Infinity`）
 - 一个操作数被强制转换为 `NaN` 的方法或表达式（例如，`7 ** NaN`、`7 * "blabla"`）——这意味着 `NaN` 具有传染性
@@ -27,11 +27,11 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 
 `NaN` 及其行为不是 JavaScript 发明的。它在浮点运算中的语义（包括 `NaN !== NaN`）是由 [IEEE 754](https://zh.wikipedia.org/wiki/雙精度浮點數) 指定的。`NaN` 的行为包括：
 
-- 如果 `NaN` 涉及数学运算（但不涉及[位运算](zh-CN/docs/Web/JavaScript/Reference/Operators#位移运算符)），结果通常也是 `NaN`。（参见下面的[反例](#默默逃离_NaN)。）
+- 如果 `NaN` 涉及数学运算（但不涉及[位运算](zh-CN/docs/Web/JavaScript/Reference/Operators#位移运算符)），结果通常也是 `NaN`。（参见下面的[反例](#默默逃离_nan)。）
 - 当 `NaN` 是任何关系比较（`>`, `<`, `>=`, `<=`）的操作数之一时，结果总是 `false`。
 - `NaN` 不等于（通过 [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)、[`!=`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)、[`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality) 和 [`!==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)）任何其他值——包括与另一个 `NaN` 值。
 
-`NaN` 也是 JavaScript 中的[假](/zh-CN/docs/Glossary/falsy)值之一。
+`NaN` 也是 JavaScript 中的[假](/zh-CN/docs/Glossary/Falsy)值之一。
 
 ## 示例
 
@@ -68,7 +68,7 @@ isNaN(1n); // TypeError: Conversion from 'BigInt' to 'number' is not allowed.
 Number.isNaN(1n); // false
 ```
 
-此外，一些数组方法不能找到 `NaN`，而另一些可以。也就是说，查找索引的（{{jsxref("Array/indexOf", "indexOf()")}}, {{jsxref("Array/lastIndexOf", "lastIndexOf()")}}）不能找到 `NaN`，而查找值的（{{jsxref("Array/includes", "includes()")}}）可以：
+此外，一些数组方法不能找到 `NaN`，而另一些可以。也就是说，查找索引的（{{jsxref("Array/indexOf", "indexOf()")}}、{{jsxref("Array/lastIndexOf", "lastIndexOf()")}}）不能找到 `NaN`，而查找值的（{{jsxref("Array/includes", "includes()")}}）可以：
 
 ```js
 const arr = [2, 4, NaN, 12];
