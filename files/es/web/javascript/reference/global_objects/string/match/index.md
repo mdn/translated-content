@@ -145,7 +145,7 @@ const str1 = 'NaN significa que no es un número. Infinity contiene -Infinity e 
 const str2 = 'Mi abuelo tiene 65 años y mi abuela tiene 63 años.';
 const str3 = 'The contract was declared null and void.';
 
-str1.match('number');   // 'number' es una cadena - devuelve ['number']
+str1.match('número');   // 'número' es una cadena - devuelve ['número']
 str1.match(NaN);        // NaN es de tipo número - devuelve ['NaN']
 str1.match(Infinity);   // Infinity es de tipo número - devuelve ['Infinity']
 str1.match(+Infinity);  // devuelve ['Infinity']
