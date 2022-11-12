@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 original_slug: Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer/byteLength
 ---
+
 {{JSRef}}
 
 La propiedad de acceso **`byteLength`** representa la longitud de {{jsxref("ArrayBuffer")}} en bytes.
@@ -34,11 +35,7 @@ buffer.byteLength; // 8
 
 ## Especificaciones
 
-| Especificación                                                                                                                               | Estado                           | Comentario                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                                         | {{Spec2('Typed Array')}} | Reemplazado por ECMAScript 2015.        |
-| {{SpecName('ES2015', '#sec-get-arraybuffer.prototype.bytelength', 'ArrayBuffer.prototype.byteLength')}}     | {{Spec2('ES2015')}}         | Definición inicial en un estándar ECMA. |
-| {{SpecName('ESDraft', '#sec-get-arraybuffer.prototype.bytelength', 'ArrayBuffer.prototype.byteLength')}} | {{Spec2('ESDraft')}}     |                                         |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Error.lineNumber
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`lineNumber`** 속성은 이 오류가 발생한 파일의 행 번호를 포함합니다.

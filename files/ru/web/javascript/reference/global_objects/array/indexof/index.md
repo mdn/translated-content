@@ -11,6 +11,7 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Сводка

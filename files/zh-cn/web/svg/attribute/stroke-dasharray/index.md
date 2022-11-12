@@ -5,7 +5,7 @@ slug: Web/SVG/Attribute/stroke-dasharray
 
 « [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
-`属性 stroke-dasharray 可`控制用来描边的点划线的图案范式。
+属性 `stroke-dasharray` 可控制用来描边的点划线的图案范式。
 
 作为一个外观属性，它也可以直接用作一个 CSS 样式表内部的属性。
 

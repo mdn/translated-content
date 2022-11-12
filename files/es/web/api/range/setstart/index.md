@@ -3,6 +3,7 @@ title: Range.setStart()
 slug: Web/API/Range/setStart
 translation_of: Web/API/Range/setStart
 ---
+
 {{ApiRef("DOM")}}
 
 El método **`Range.setStart()`** establece la posición de inicio de un {{ domxref("Range") }}.

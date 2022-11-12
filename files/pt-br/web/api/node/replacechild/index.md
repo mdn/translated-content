@@ -1,8 +1,8 @@
 ---
 title: Node.replaceChild
 slug: Web/API/Node/replaceChild
-translation_of: Web/API/Node/replaceChild
 ---
+
 {{ApiRef("DOM")}}
 
 ## Sumário

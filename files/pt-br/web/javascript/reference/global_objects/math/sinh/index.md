@@ -1,8 +1,8 @@
 ---
 title: Math.sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sinh
 ---
+
 {{JSRef}}
 
 A função **`Math.sinh()`** retorna o seno hiperbólico de um número, que pode ser expresso usando a {{jsxref("Math.E", "constante e", "", 1)}}:

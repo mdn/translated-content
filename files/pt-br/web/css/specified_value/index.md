@@ -1,13 +1,9 @@
 ---
 title: Valor Especifícado
 slug: Web/CSS/specified_value
-tags:
-  - CSS
-  - Iniciante
-  - Web
-translation_of: Web/CSS/specified_value
 original_slug: Web/CSS/valor_espeficifco
 ---
+
 {{CSSRef}}
 
 O **valor especificado** de uma propriedade CSS está definido em uma de três maneiras.

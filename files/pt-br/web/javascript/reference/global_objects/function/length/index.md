@@ -1,8 +1,8 @@
 ---
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
+
 {{JSRef}}
 
 A propriedade **`length`** especifica o número de argumentos esperados pela função.

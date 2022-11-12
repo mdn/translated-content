@@ -10,6 +10,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/CSS/background-repeat
 ---
+
 {{CSSRef}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`background-repeat`** define como se repiten los fondos del documento. Un fondo de imagen puede ser repetido sobre el eje horizontal, el eje vertical, ambos ejes, o no estar repetido.

@@ -8,6 +8,7 @@ tags:
   - Window
 translation_of: Web/API/Window/innerHeight
 ---
+
 {{APIRef}}
 
 Propiedad solo lectura del objeto window.

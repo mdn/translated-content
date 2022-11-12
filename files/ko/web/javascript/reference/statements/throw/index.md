@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/throw
 browser-compat: javascript.statements.throw
 ---
+
 {{jsSidebar("Statements")}}
 
 **`throw`**문은 사용자 정의 예외를 발생(throw)할 수 있습니다. 예외가 발생하면 현재 함수의 실행이 중지되고 (`throw` 이후의

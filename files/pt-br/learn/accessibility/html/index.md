@@ -1,20 +1,8 @@
 ---
 title: 'HTML: Boas práticas em acessibilidade'
 slug: Learn/Accessibility/HTML
-tags:
-  - Acessibilidade
-  - Artigo
-  - Código
-  - Iniciante
-  - aprendizado
-  - botões
-  - formulários
-  - leitor de telas
-  - semántica
-  - teclado
-  - tecnologia assistiva
-translation_of: Learn/Accessibility/HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 Uma grande parte do conteúdo presente na internet pode se tornar acessível apenas com a utilização correta dos elementos HTML. Esse artigo mostra em detalhes como o HTML pode ser utilizado para garantir o máximo de acessibilidade.

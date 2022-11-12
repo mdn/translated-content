@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/HTMLLabelElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La interfaz **`HTMLLabelElement`** proporciona acceso a propiedades especificas de los elementos {{HTMLElement("label")}}. A su vez, hereda métodos y propiedades de la interfaz base {{domxref("HTMLElement")}}.

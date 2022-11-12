@@ -3,6 +3,7 @@ title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
 translation_of: Web/API/RTCPeerConnection
 ---
+
 {{APIRef('WebRTC')}}
 
 La interfaz **`RTCPeerConnection`** representa una conexión WebRTC entre un computador local y un par remoto (otro computador). Esta interfaz provee métodos para: conectar un equipo remoto (remote peer), mantener y monitorear esa coneexión y cerrar la conexión una vez que no se necesite más.
@@ -15,7 +16,7 @@ La interfaz **`RTCPeerConnection`** representa una conexión WebRTC entre un com
 
 El siguiente método fue declarado obsoleto ya hace un tiempo, admás, nunca fue implementado en los navegadores más importantes.
 
-- {{domxref("RTCPeerConnection.createDTMFSender()")}} {{obsolete_inline}}
+- {{domxref("RTCPeerConnection.createDTMFSender()")}} {{deprecated_inline}}
   - : Crea un nuevo {{domxref("RTCDTMFSender")}}, que se asocia a un {{domxref("MediaStreamTrack")}} específico, that will be able to send {{Glossary("DTMF")}} phone signaling over the connection.
 
 ## Constantes
@@ -48,7 +49,7 @@ The `RTCIceConnectionState` enum defines the string constants used to describe t
 
 ### RTCIceGatheringState enum
 
-The `RTCIceGatheringState` enum defines string constants which reflect the current status of ICE gathering, as returned using the {{domxref("RTCPeerConnection.iceGatheringState")}} property. You can detect when this value changes by watching for an event of type {{event("icegatheringstatechange")}}.
+The `RTCIceGatheringState` enum defines string constants which reflect the current status of ICE gathering, as returned using the {{domxref("RTCPeerConnection.iceGatheringState")}} property. You can detect when this value changes by watching for an event of type [`icegatheringstatechange`](/es/docs/Web/Reference/Events/icegatheringstatechange).
 
 | Constant      | Description                                                                                                                                                                                                                                              |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -63,7 +64,7 @@ The `RTCIceTransportPolicy` enum defines string constants which can be used to l
 | Constant                            | Description                                                                                                                     |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | `"all"`                             | All ICE candidates will be considered.                                                                                          |
-| `"public"`{{obsolete_inline}} | Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._ |
+| `"public"`{{deprecated_inline}} | Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._ |
 | `"relay"`                           | Only ICE candidates whose IP addresses are being relayed, such as those being passed through a TURN server, will be considered. |
 
 ### RTCPeerConnectionState enum
@@ -99,7 +100,7 @@ The `RTCSignalingState` enum specifies the possible values of {{domxref("RTCPeer
 | `"have-remote-offer"`               | The remote peer has created an offer and used the signaling server to deliver it to the local peer, which has set the offer as the remote description by calling {{domxref("RTCPeerConnection.setRemoteDescription()")}}.                                                                                                                                                                                                                              |
 | `"have-local-pranswer"`             | The offer sent by the remote peer has been applied and an answer has been created (usually by calling {{domxref("RTCPeerConnection.createAnswer()")}}) and applied by calling {{domxref("RTCPeerConnection.setLocalDescription()")}}. This provisional answer describes the supported media formats and so forth, but may not have a complete set of ICE candidates included. Further candidates will be delivered separately later. |
 | `"have-remote-pranswer"`            | A provisional answer has been received and successfully applied in response to an offer previously sent and established by calling `setLocalDescription()`.                                                                                                                                                                                                                                                                                                             |
-| `"closed"` {{obsolete_inline}} | The connection is closed.This value moved into the [`RTCPeerConnectionState` enum](#RTCPeerConnectionState_enum) in the May 13, 2016 draft of the specification, as it reflects the state of the `RTCPeerConnection`, not the signaling connection. You now detect a closed connection by checking for {{domxref("RTCPeerConnection.connectionState", "connectionState")}} to be `"closed"` instead.                                               |
+| `"closed"` {{deprecated_inline}} | The connection is closed.This value moved into the [`RTCPeerConnectionState` enum](#RTCPeerConnectionState_enum) in the May 13, 2016 draft of the specification, as it reflects the state of the `RTCPeerConnection`, not the signaling connection. You now detect a closed connection by checking for {{domxref("RTCPeerConnection.connectionState", "connectionState")}} to be `"closed"` instead.                                               |
 
 ## Specifications
 

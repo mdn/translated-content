@@ -1,8 +1,8 @@
 ---
 title: Document.importNode()
 slug: Web/API/Document/importNode
-translation_of: Web/API/Document/importNode
 ---
+
 {{APIRef("DOM")}}
 
 Cria uma cópia de um nó a partir de um documento externo para ser inserido no document atual.

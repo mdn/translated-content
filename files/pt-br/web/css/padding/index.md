@@ -1,8 +1,8 @@
 ---
 title: padding
 slug: Web/CSS/padding
-translation_of: Web/CSS/padding
 ---
+
 {{CSSRef}}
 
 A propriedade **`padding`** define uma a distância entre o conteúdo de um elemento e suas bordas. É um atalho que evita definir uma distância para cada lado separadamente (`padding-top`, `padding-right`, `padding-bottom`, `padding-left`).

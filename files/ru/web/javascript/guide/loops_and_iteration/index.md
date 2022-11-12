@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Loops_and_iteration
 original_slug: Web/JavaScript/Guide/Циклы_и_итерации
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 Циклы - простой способ сделать какое-то действие несколько раз. Эта глава [руководства JavaScript Guide](/ru/docs/Web/JavaScript/Guide) познакомит вас с различными операторами доступными в JavaScript.

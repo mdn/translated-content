@@ -10,6 +10,7 @@ tags:
   - метод
 translation_of: Web/API/CanvasRenderingContext2D/fill
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.fill()`** метод Canvas 2D API заполняет текущий или заданный путём с текущим стилем заливки, используя одно из двух правил - ненулевого индекса или чётно-нечётное.

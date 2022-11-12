@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
 
 Существует много случаев, когда возможностей [стандартных виджетов HTML форм](/ru/docs/Learn/HTML/Forms/%D0%A1%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BD%D1%8B%D0%B5_%D0%B2%D0%B8%D0%B4%D0%B6%D0%B5%D1%82%D1%8B_%D1%84%D0%BE%D1%80%D0%BC) недостаточно. Если вы хотите [придать лучший вид](/ru/docs/Advanced_styling_for_HTML_forms) каким-либо виджетам как, например, {{HTMLElement("select")}}, или вы хотите создать особое поведение виджета, то у вас нет другого выбора, кроме как создать собственные виджеты.

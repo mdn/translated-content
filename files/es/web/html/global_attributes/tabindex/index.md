@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/tabindex
 original_slug: Web/HTML/Atributos_Globales/tabindex
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 > **Nota:** El valor máximo para tabindex no debe de exceder 32767 ([sección 17.11.1 del W3C](https://www.w3.org/TR/html401/interact/forms.html#h-17.11.1)). Si no se especifica, el valor asignado por defecto es -1.

@@ -5,6 +5,7 @@ tags:
   - API
 translation_of: Web/API/HTMLElement
 ---
+
 {{ APIRef("HTML DOM") }}La interfaz **`HTMLElement`** representa cualquier elemento [HTML](/es/docs/Web/HTML). Algunos elementos implementan directamente esta interfaz, otros la implementan a través de una interfaz que hereda de ella.
 
 ## Properties
@@ -79,17 +80,17 @@ La mayoria de las propiedades de los eventos, del formulario `onXYZ`, estan defi
 - {{ domxref("HTMLElement.onpaste") }} {{ non-standard_inline() }}
   - : Returns the event handling code for the `paste` event ({{bug("280959")}}).
 - {{domxref("TouchEventHandlers.ontouchstart")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchstart")}} event.
+  - : Returns the event handling code for the [`touchstart`](/es/docs/Web/Reference/Events/touchstart) event.
 - {{domxref("TouchEventHandlers.ontouchend")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchend")}} event.
+  - : Returns the event handling code for the [`touchend`](/es/docs/Web/Reference/Events/touchend) event.
 - {{domxref("TouchEventHandlers.ontouchmove")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchmove")}} event.
+  - : Returns the event handling code for the [`touchmove`](/es/docs/Web/Reference/Events/touchmove) event.
 - {{domxref("TouchEventHandlers.ontouchenter")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchenter")}} event.
+  - : Returns the event handling code for the [`touchenter`](/es/docs/Web/Reference/Events/touchenter) event.
 - {{domxref("TouchEventHandlers.ontouchleave")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchleave")}} event.
+  - : Returns the event handling code for the [`touchleave`](/es/docs/Web/Reference/Events/touchleave) event.
 - {{domxref("TouchEventHandlers.ontouchcancel")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchcancel")}} event.
+  - : Returns the event handling code for the [`touchcancel`](/es/docs/Web/Reference/Events/touchcancel) event.
 
 ## Methods
 

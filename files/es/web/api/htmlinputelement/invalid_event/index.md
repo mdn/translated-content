@@ -10,6 +10,7 @@ tags:
   - inválido
 translation_of: Web/API/HTMLInputElement/invalid_event
 ---
+
 {{APIRef}}
 
 El evento **`invalid`** se dispara cuando se ha comprobado la validez de un elemento que se puede enviar y no satisface sus restricciones.
@@ -87,5 +88,5 @@ function logValue(e) {
 
 - {{domxref("GlobalEventHandlers.oninvalid")}}
 - Elemento HTML {{HtmlElement("form")}}
-- Evento relacionado: {{Event("submit")}}
+- Evento relacionado: [`submit`](/es/docs/Web/Reference/Events/submit)
 - [CSS `:invalid` pseudo class](/es/docs/Web/CSS/:invalid)

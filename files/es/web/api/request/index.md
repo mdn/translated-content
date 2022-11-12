@@ -13,6 +13,7 @@ tags:
   - request
 translation_of: Web/API/Request
 ---
+
 {{APIRef("Fetch")}}
 
 La interfaz **`Request`** de la [API Fetch](/es/docs/Web/API/Fetch_API) representa una solicitud de respuesta.

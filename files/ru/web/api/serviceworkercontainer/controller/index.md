@@ -3,6 +3,7 @@ title: ServiceWorkerContainer.controller
 slug: Web/API/ServiceWorkerContainer/controller
 translation_of: Web/API/ServiceWorkerContainer/controller
 ---
+
 {{APIRef("Service Workers API")}}
 
 Свойство **`controller`** интерфейса {{domxref("ServiceWorkerContainer")}} возвращает объект {{domxref("ServiceWorker")}}, в случае, если service worker активирован. Данное свойство возвращает `null`, если страница была обновлена с помощью _Shift_ + refresh или на ней отсутствует активный service worker.

@@ -5,6 +5,7 @@ tags:
   - Desarrollo web
 translation_of: Web/API/Console/warn
 ---
+
 {{APIRef("Console API")}}
 
 Imprime un mensaje de advertencia en la Consola Web.

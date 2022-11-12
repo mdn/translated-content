@@ -7,6 +7,7 @@ tags:
   - Referencia
 translation_of: Web/API/HTMLElement/offsetHeight
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La propiedad de sólo lectura **`HTMLElement.offsetHeight`** devuelve el alto de un elemento, incluyendo el _padding_ vertical y los bordes, en píxeles, como un número entero.

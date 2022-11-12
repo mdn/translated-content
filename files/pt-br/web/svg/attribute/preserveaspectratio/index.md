@@ -1,8 +1,8 @@
 ---
 title: preserveAspectRatio
 slug: Web/SVG/Attribute/preserveAspectRatio
-translation_of: Web/SVG/Attribute/preserveAspectRatio
 ---
+
 {{SVGRef}}
 
 O atributo **`preserveAspectRatio`** indica como um elemento com uma viewBox, fornecendo uma determinada proporção deve se ajustar a uma viewport com uma proporção diferente.

@@ -1,8 +1,8 @@
 ---
 title: Using the WebVR API
 slug: Web/API/WebVR_API/Using_the_WebVR_API
-translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 ---
+
 {{APIRef("WebVR API")}}{{deprecated_header}}
 
 > **Nota:** WebVR API is replaced by [WebXR API](/pt-BR/docs/Web/API/WebXR_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.

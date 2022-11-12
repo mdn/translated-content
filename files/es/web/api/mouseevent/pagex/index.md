@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/UIEvent/pageX
 original_slug: Web/API/UIEvent/pageX
 ---
+
 {{ ApiRef() }}
 
 ### Sumario

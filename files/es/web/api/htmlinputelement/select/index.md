@@ -10,6 +10,7 @@ tags:
   - metodo
 translation_of: Web/API/HTMLInputElement/select
 ---
+
 {{ APIRef("HTML DOM") }}
 
 El método **`HTMLInputElement.select()`** selecciona todo el texto en un elemento {{HTMLElement("textarea")}} o un elemento{{HTMLElement("input")}} con un campo de texto.

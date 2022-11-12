@@ -11,6 +11,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/-webkit-mask-repeat-y
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

@@ -8,6 +8,7 @@ tags:
   - Property
 translation_of: Web/API/Event/currentTarget
 ---
+
 {{APIRef("DOM")}}
 
 Identifica el target (objetivo) actual del evento, ya que el evento atraviesa el DOM. Siempre hace referencia al elmento al cual el controlador del evento fue asociado, a diferencia de `event.target`, que identifica el elemento el el que se produjo el evento.

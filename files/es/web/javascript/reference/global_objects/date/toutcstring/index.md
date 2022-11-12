@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toUTCString
 ---
+
 {{JSRef}}
 
 `El método`**`toUTCString()`** convierte una fecha en una cadena, utilizando la zona horaria UTC.

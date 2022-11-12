@@ -5,6 +5,7 @@ tags:
   - Виртуальная реальность
 translation_of: Web/API/VRStageParameters/sizeX
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 Неизменяемое свойство **sizeX** (только для чтения) интерфейса "VRStageParameters" возвращает ширину границ игровой зоны в метрах.

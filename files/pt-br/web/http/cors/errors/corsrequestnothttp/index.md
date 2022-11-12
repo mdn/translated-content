@@ -1,20 +1,8 @@
 ---
 title: 'Reason: CORS request not HTTP'
 slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
-tags:
-  - CORS
-  - CORSRequestNotHttp
-  - Cross-Origin
-  - Erro
-  - HTTP
-  - HTTPS
-  - Mensagens
-  - Razões
-  - Segurança
-  - Solução de Problemas
-  - console
-translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
+
 {{HTTPSidebar}}
 
 ## Razão

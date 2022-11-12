@@ -7,6 +7,7 @@ tags:
   - Propiedades CSS
 translation_of: Web/CSS/display
 ---
+
 {{CSSRef}}
 
 La propiedad CSS **`display`** especifica si un elemento es tratado como [block or inline element](/es/docs/Web/CSS/CSS_Flow_Layout) y el diseño usado por sus hijos, como [flow layout](/es/docs/Web/CSS/CSS_Flow_Layout)(Diseño de Flujo), [grid](/es/docs/Web/CSS/CSS_Grid_Layout)(Cuadricula) o [flex](/es/docs/Web/CSS/CSS_Flexible_Box_Layout)(Flexible).

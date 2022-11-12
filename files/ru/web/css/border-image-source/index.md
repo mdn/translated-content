@@ -3,6 +3,7 @@ title: border-image-source
 slug: Web/CSS/border-image-source
 translation_of: Web/CSS/border-image-source
 ---
+
 {{CSSRef}}
 
 ## Описание

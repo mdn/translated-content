@@ -1,9 +1,9 @@
 ---
 title: matrix()
 slug: Web/CSS/transform-function/matrix
-translation_of: Web/CSS/transform-function/matrix()
 original_slug: Web/CSS/transform-function/matrix()
 ---
+
 {{CSSRef}}
 
 A função CSS **`matrix()`** define uma matriz de transformação 2D homogênea. Isso resulta em um dado do tipo {{cssxref("&lt;transform-function&gt;")}} .

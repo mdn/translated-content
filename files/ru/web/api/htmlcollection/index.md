@@ -3,6 +3,7 @@ title: HTMLCollection
 slug: Web/API/HTMLCollection
 translation_of: Web/API/HTMLCollection
 ---
+
 {{APIRef("HTML DOM")}}
 
 Интерфейс **`HTMLCollection`** является обобщённой коллекцией (объектом, ведущим себя подобно массиву) элементов (в порядке упоминания в документе) и предоставляет методы и свойства для получения хранящихся в нём элементов.

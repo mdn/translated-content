@@ -3,6 +3,7 @@ title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
 translation_of: Web/HTTP/Headers/X-Frame-Options
 ---
+
 {{HTTPSidebar}}
 
 The **`X-Frame-Options`** [HTTP](/ko/docs/Web/HTTP) 응답 헤더는 해당 페이지를 {{HTMLElement("frame")}} 또는{{HTMLElement("iframe")}}, {{HTMLElement("object")}} 에서 렌더링할 수 있는지 여부를 나타내는데 사용됩니다. 사이트 내 콘텐츠들이 다른 사이트에 포함되지 않도록 하여 [clickjacking](https://en.wikipedia.org/wiki/Clickjacking) 공격을 막기 위해 이 헤더를 사용합니다.

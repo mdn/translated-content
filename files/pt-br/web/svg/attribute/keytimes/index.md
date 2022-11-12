@@ -1,8 +1,8 @@
 ---
 title: keyTimes
 slug: Web/SVG/Attribute/keyTimes
-translation_of: Web/SVG/Attribute/keyTimes
 ---
+
 {{SVGRef}}
 
 O atributo **`keyTimes`** representa uma lista de valores de tempo usados ​​para controlar o ritmo da animação. Cada valor corresponde a um valor na lista de atributos {{SVGAttr("values")}} e define quando o valor é usado na animação. Cada valor de tempo na lista `keyTimes` é especificado como um valor de ponto flutuante entre 0 e 1 (inclusive), representando um deslocamento proporcional na duração do elemento de animação.

@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/Server-side/Django/Sessions
 original_slug: Learn/Server-side/Django/Сессии
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}
 
 Эта часть расширяет наш сайт [LocalLibrary](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website), добавляя счётчик посещений домашней страницы, реализованного при помощи сессий. Это относительно простой пример, но он демонстрирует то, как при помощи сессий реализовать анализ поведения анонимных пользователей на сайте.

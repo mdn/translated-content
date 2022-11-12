@@ -351,8 +351,9 @@
 /ko/docs/MDN/Guidelines/Code_guidelines/General	/ko/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /ko/docs/MDN/Guidelines/Conventions_definitions	/ko/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ko/docs/MDN/Guidelines/Does_this_belong_on_MDN	/ko/docs/MDN/Writing_guidelines/What_we_write
-/ko/docs/MDN/Kuma	/ko/docs/MDN/Yari
+/ko/docs/MDN/Kuma	/ko/docs/orphaned/MDN/Yari
 /ko/docs/MDN/Structures/API_references/API_reference_sidebars	/ko/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
+/ko/docs/MDN/Yari	/ko/docs/orphaned/MDN/Yari
 /ko/docs/MDN/피드백	/ko/docs/MDN/Community
 /ko/docs/MDN_at_ten	/ko/docs/MDN/At_ten
 /ko/docs/MathML	/ko/docs/Web/MathML
@@ -656,6 +657,7 @@
 /ko/docs/Web/Guide/HTML/폼/My_first_HTML_form	/ko/docs/Learn/Forms/Your_first_form
 /ko/docs/Web/Guide/HTML/폼/Sending_and_retrieving_form_data	/ko/docs/Learn/Forms/Sending_and_retrieving_form_data
 /ko/docs/Web/Guide/Index	/ko/docs/Web/Guide
+/ko/docs/Web/Guide/Mobile/Separate_sites	/ko/docs/conflicting/Web/Progressive_web_apps
 /ko/docs/Web/Guide/XML_파싱_및_직렬화	/ko/docs/Web/Guide/Parsing_and_serializing_XML
 /ko/docs/Web/Guide/그래픽	/ko/docs/Web/Guide/Graphics
 /ko/docs/Web/HTML/Applying_color	/ko/docs/Web/CSS/CSS_Colors/Applying_color

@@ -1,8 +1,8 @@
 ---
 title: CharacterData
 slug: Web/API/CharacterData
-translation_of: Web/API/CharacterData
 ---
+
 {{APIRef("DOM")}}
 
 A interface abstrata **CharacterData** representa um objeto {{domxref("Node")}} que contém caracteres. Esta é uma interface abstrata, o que significa que não há nenhum objeto do tipo `CharacterData`: ela é implementada por outras interfaces, como {{domxref("Text")}}, {{domxref("Comment")}} ou {{domxref("ProcessingInstruction")}}, que não são abstratas.

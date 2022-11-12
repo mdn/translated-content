@@ -1,15 +1,8 @@
 ---
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Number
-  - Número
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ---
+
 {{JSRef}}
 
 O método **`Number.parseInt()`** converte um argumento de _string_ e retorna um inteiro da raiz ou base específica.

@@ -16,6 +16,7 @@ tags:
   - Шрифты
 translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
 _Каким должен быть ваш веб-сайт?_ обсудите план и дизайн веб-сайта, _прежде_ чем приступить к написанию кода, в том числе "Какую информацию будет содержать мой веб-сайт?" "Какие шрифты и цвета я хочу использовать?" "Что будет делать мой сайт?"

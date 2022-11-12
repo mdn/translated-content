@@ -8,6 +8,7 @@ tags:
   - 자동 대문자화
 translation_of: Web/HTML/Global_attributes/autocapitalize
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`autocapitalize`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 사용자가 입력하거나 수정하는 텍스트를 자동으로 대문자로 바꾸는 방식을 제어하는 열거형 특성입니다. 가능한 값은 다음과 같습니다.

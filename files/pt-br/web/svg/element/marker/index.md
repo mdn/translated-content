@@ -1,13 +1,8 @@
 ---
 title: marker
 slug: Web/SVG/Element/marker
-tags:
-  - Container SVG
-  - Elemento
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/marker
 ---
+
 {{SVGRef}}
 
 O elemento `marker` define os gráficos quem devem ser usados para desenhar setas or polymarkers em um determinado elemento {{ SVGElement("path") }}, {{ SVGElement("line") }}, {{ SVGElement("polyline") }} ou {{ SVGElement("polygon") }}.

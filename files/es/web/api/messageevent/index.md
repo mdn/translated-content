@@ -3,6 +3,7 @@ title: MessageEvent
 slug: Web/API/MessageEvent
 translation_of: Web/API/MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 La interface **`MessageEvent`** representa un mensaje recibido por un objeto de destino.
@@ -17,7 +18,7 @@ Este es usado para representar mensajes en :
 - [Canales de Transmisión](/es/docs/Web/API/Broadcast_Channel_API)(ver{{domxref("Broadcastchannel.postMessage()")}}) y {{domxref("BroadcastChannel.onmessage")}}).
 - Canal de datos WebRTC (ver {{domxref("RTCDataChannel.onmessage")}}).
 
-La acción desencadenada por este evento es definida en una función establecida como el controlador de eventos para el evento pertinente {{event("message")}} ( es decir : Usando un manejador de `onmessage` como se lista arriba).
+La acción desencadenada por este evento es definida en una función establecida como el controlador de eventos para el evento pertinente [`message`](/es/docs/Web/Reference/Events/message) ( es decir : Usando un manejador de `onmessage` como se lista arriba).
 
 {{AvailableInWorkers}}
 
@@ -83,7 +84,7 @@ myWorker.port.onmessage = function(e) {
 }
 ```
 
-Inside the worker we use the {{domxref("SharedWorkerGlobalScope.onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the {{event("connect")}} event's `ports` property — we then use {{domxref("MessagePort")}} `start()` method to start the port, and the `onmessage` handler to deal with messages sent from the main threads.
+Inside the worker we use the {{domxref("SharedWorkerGlobalScope.onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the [`connect`](/es/docs/Web/Reference/Events/connect) event's `ports` property — we then use {{domxref("MessagePort")}} `start()` method to start the port, and the `onmessage` handler to deal with messages sent from the main threads.
 
 ```js
 onconnect = function(e) {

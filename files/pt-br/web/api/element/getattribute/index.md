@@ -1,13 +1,8 @@
 ---
 title: Element.getAttribute()
 slug: Web/API/Element/getAttribute
-tags:
-  - API
-  - DOM
-  - Referencia
-  - metodo
-translation_of: Web/API/Element/getAttribute
 ---
+
 {{APIRef("DOM")}}
 
 ## Resumo

@@ -1,18 +1,9 @@
 ---
 title: Imagens no HTML
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-tags:
-  - Guía
-  - HTML
-  - Imagens
-  - alt text
-  - captions
-  - figcaption
-  - figure
-  - img
-translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 original_slug: Aprender/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
 No início a Web era somente texto, e era tedioso. Felizmente, não demorou muito para que a capacidade de incorporar imagens (e outros tipos de conteúdo mais interessantes) dentro das páginas da web fosse adicionada. Existem outros tipo de mídia para se considerar, mas é lógico começar com o humilde elemento {{htmlelement("img")}}, usado para inserir uma simples imagem em uma página web. Neste artigo, analisaremos como dominar seu uso, incluindo o básico, anotando-o com legendas usando o elemento {{htmlelement("figure")}}, e detalhando como ele se relaciona com imagens de fundo do CSS.

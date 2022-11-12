@@ -11,6 +11,7 @@ tags:
   - igualdad
 translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 ---
+
 {{jsSidebar("Intermediate")}}
 
 Existen cuatro algoritmos de igualdad en ES2015:

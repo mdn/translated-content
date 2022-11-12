@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
 translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
+
 {{APIRef}}
 
 El método **`CanvasRenderingContext2D`** **`.arc()`** de la API de Canvas 2D añade un arco a la trayectoria centrada en la posición _(x, y)_ con el radio _r_ comenzando en _startAngle_ y terminando en _endAngle que_ va en la dirección dada en sentido _antihorario_ (predeterminado en sentido horario) .

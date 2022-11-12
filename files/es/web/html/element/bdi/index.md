@@ -11,6 +11,7 @@ tags:
 translation_of: Web/HTML/Element/bdi
 original_slug: Web/HTML/Elemento/bdi
 ---
+
 ## Resumen
 
 El elemento _HTML `<bdi>` _(o elemento de aislamiento Bi-Direccional) aisla un trozo de texto para que pueda ser formateado con una dirección diferente al texto que hay fuera de él.

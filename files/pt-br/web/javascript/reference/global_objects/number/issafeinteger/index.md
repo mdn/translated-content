@@ -1,12 +1,8 @@
 ---
 title: Number.isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
-tags:
-  - JavaScript
-  - Número
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ---
+
 {{JSRef}}
 
 O método **`Number.isSafeInteger()`** determina se o valor fornecido é seja um número seguro.

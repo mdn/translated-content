@@ -1,8 +1,8 @@
 ---
 title: History
 slug: Web/API/History
-translation_of: Web/API/History
 ---
+
 {{APIRef ("HTML DOM")}}
 
 A interface `History` permite a manipulação do histórico da sessão do navegador, ou seja, as páginas visitadas na guia ou quadro em que a página atual está carregada.

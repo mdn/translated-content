@@ -1,13 +1,9 @@
 ---
 title: Endianness
 slug: Glossary/Endianness
-tags:
-  - Coding
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Endianness
 original_slug: Glossario/Endianness
 ---
+
 "Endian" and "endianness" (ou "ordem-de-bytes") descrevem como os computadores organizam os bytes que compõem os números.
 
 Cada local de armazenamento de memória possui um indice ou endereço. Cada byte pode ser armazenado em um numero de 8-bits (ou seja, entre `0x00` e `0xff`), então você deve reservar mais que um byte para armazenar um numero maior. De longe, o mais comum na ordenação de múltiplos bytes em um único número é o **little-endian,** que é usado em todos os processadores Intel. Little-endian significa armazenar bytes na ordem do menor para o mais significativo (onde o byte menos significativo ocupa o primeiro, ou menor, endereço), comparável a maneira comum de escrever datas na Europa (por exemplo, 31 Dezembro de 2050).

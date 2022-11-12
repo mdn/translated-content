@@ -3,6 +3,7 @@ title: <a>
 slug: Web/SVG/Element/a
 translation_of: Web/SVG/Element/a
 ---
+
 {{SVGRef}}
 
 El elemento SVG \<a> crea un hipervínculo a otras páginas web, archivos, ubicaciones dentro de la misma página, direcciones de correo electrónico o cualquier otra URL.

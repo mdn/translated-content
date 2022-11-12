@@ -1,8 +1,8 @@
 ---
 title: <cite>
 slug: Web/HTML/Element/cite
-translation_of: Web/HTML/Element/cite
 ---
+
 O **elemento** **HTML \<cite>** representa uma referência a um trabalho artístico. Deve incluir o título do trabalho ou uma URL de referência, que pode ser em uma forma abreviada de acordo com as convenções usadas para a adição dos metadados de citação.
 
 <table class="properties">
@@ -94,4 +94,4 @@ Mais informações podem ser encontradas em \[ISO-0000].
 - O elemento {{HTMLElement("blockquote")}} é para citações longas.
 - O elemento {{HTMLElement("q")}} é para citações curtas ou na mesma linha.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

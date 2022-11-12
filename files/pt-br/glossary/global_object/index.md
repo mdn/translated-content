@@ -1,9 +1,9 @@
 ---
 title: Global object
 slug: Glossary/Global_object
-translation_of: Glossary/Global_object
 original_slug: Glossario/Global_object
 ---
+
 Um objeto global é um {{Glossary("objeto")}} que sempre está definido no {{Glossary("escopo global")}}.
 
 Em JavaScript, um objeto global é sempre definido. No browser, quando scripts criam variáveis globais, elas são criadas como membros desse objeto global (Em {{Glossary("Node.js")}} isso não se aplica). A {{Glossary("interface")}} do objeto global depende do contexto de execução no qual o script está sendo executado. Por exemplo:

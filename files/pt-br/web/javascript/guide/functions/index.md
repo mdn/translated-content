@@ -1,14 +1,9 @@
 ---
 title: Funções
 slug: Web/JavaScript/Guide/Functions
-tags:
-  - Funções JavaScript
-  - Guia(2)
-  - Iniciante
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Functions
 original_slug: Web/JavaScript/Guide/Funções
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
 
 Funções são blocos de construção fundamentais em JavaScript. Uma função é um procedimento de JavaScript - um conjunto de instruções que executa uma tarefa ou calcula um valor. Para usar uma função, você deve defini-la em algum lugar no escopo do qual você quiser chamá-la.

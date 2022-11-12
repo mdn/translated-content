@@ -1,8 +1,8 @@
 ---
 title: Programação elegante com Promises
 slug: Learn/JavaScript/Asynchronous/Promises
-translation_of: Learn/JavaScript/Asynchronous/Promises
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}
 
 **Promises** são uma nova implementação do JavaScript que permite você adiar ações até que determinada ação finalize. Isso é realmente bastante útil para uma sequência de operações assíncronas trabalharem corretamente. Neste artigo irá mostrar para você como Promises trabalham, como elas são usadas em web APIs e como escrever a sua Promise.

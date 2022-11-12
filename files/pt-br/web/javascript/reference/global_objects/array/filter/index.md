@@ -1,15 +1,9 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Prototype
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 original_slug: Web/JavaScript/Reference/Global_Objects/Array/filtro
 ---
+
 {{JSRef}}
 
 O método **`filter()`** cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.

@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/reduce
 ---
+
 {{JSRef}}
 
 El método **`reduce()`** ejecuta una función **reductora** sobre cada elemento de un array, devolviendo como resultado un único valor.

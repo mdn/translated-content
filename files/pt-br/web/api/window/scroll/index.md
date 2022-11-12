@@ -1,13 +1,8 @@
 ---
 title: Window.scroll()
 slug: Web/API/Window/scroll
-tags:
-  - API
-  - CSSOM View
-  - Referencia
-  - metodo
-translation_of: Web/API/Window/scroll
 ---
+
 {{APIRef}}
 
 ## Resumo

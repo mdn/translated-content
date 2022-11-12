@@ -1,8 +1,8 @@
 ---
 title: version
 slug: Web/SVG/Attribute/version
-translation_of: Web/SVG/Attribute/version
 ---
+
 {{SVGRef}}{{deprecated_header("SVG 2")}}
 
 The **`version`** attribute is used to indicate what specification a SVG document conforms to. It is only allowed on the root {{SVGElement("svg")}} element. It is purely advisory and has no influence on rendering or processing.

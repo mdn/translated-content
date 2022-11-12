@@ -6,6 +6,7 @@ tags:
   - Accesibilidad
 translation_of: Web/Accessibility/ARIA/forms
 ---
+
 Las siguientes páginas proporcionan diversas técnicas para mejorar la accesibilidad de los formularios web:
 
 - [Consejos básicos para formularios](/es/Accessibility/ARIA/Basic_form_hints): Añadir consejos y descripciones para campos erróneos u obligatorios

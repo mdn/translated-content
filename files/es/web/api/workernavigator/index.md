@@ -4,6 +4,7 @@ slug: Web/API/WorkerNavigator
 translation_of: Web/API/WorkerNavigator
 browser-compat: api.WorkerNavigator
 ---
+
 {{APIRef("Web Workers API")}}
 
 Una interfaz **`WorkerNavigator`** representa un subconjunto de la interfaz {{DOMxRef("Navigator")}}, que puede ser accedida desde un {{DOMxRef("Worker")}}. Un objeto así es inicializado para cada worker y está disponible a través de la propiedad {{DOMxRef("WorkerGlobalScope.navigator", "self.navigator")}}.

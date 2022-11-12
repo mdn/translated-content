@@ -1,8 +1,8 @@
 ---
 title: ':focus-within'
 slug: Web/CSS/:focus-within
-translation_of: Web/CSS/:focus-within
 ---
+
 {{CSSRef}}
 
 A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:focus-within`** representa um elemento que recebeu o foco ou contém um elemento que recebeu o foco. Em outras palavras, isto representa um elemento que é correspondido por si só pela pseudo-classe {{cssxref(":focus")}} ou tem um descendente que é correspondido por `:focus`. (Isto inclui descendentes em [shadow trees](/pt-BR/docs/Web/Web_Components/Shadow_DOM).)

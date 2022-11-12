@@ -3,6 +3,7 @@ title: 405 Method Not Allowed
 slug: Web/HTTP/Status/405
 translation_of: Web/HTTP/Status/405
 ---
+
 {{HTTPSidebar}}
 
 하이퍼텍스트 전송 프로토콜(HTTP)의 **`405 Method Not Allowed`** 응답 상태 코드는 요청 방법이 서버에 의해 알려졌으나, 사용 불가능한 상태임을 가리킵니다.

@@ -1,17 +1,9 @@
 ---
 title: Parâmetros Predefinidos
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - ECMA2015
-  - ECMAScript6
-  - Function
-  - Functions
-  - Função
-  - Funções
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 original_slug: Web/JavaScript/Reference/Functions/Parametros_Predefinidos
 ---
+
 {{jsSidebar("Functions")}}
 
 **Os parâmetros predefinidos de uma função** permitem que parâmetros regulares sejam inicializados com com valores iniciais caso `undefined` ou nenhum valor seja passado.

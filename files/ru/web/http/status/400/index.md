@@ -3,6 +3,7 @@ title: 400 Bad Request
 slug: Web/HTTP/Status/400
 translation_of: Web/HTTP/Status/400
 ---
+
 {{HTTPSidebar}}
 
 Код состояния ответа "HTTP **400 Bad Request**" указывает, что сервер не смог понять запрос из-за недействительного синтаксиса. Клиент не должен повторять этот запрос без изменений.

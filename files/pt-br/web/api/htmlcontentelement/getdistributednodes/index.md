@@ -1,15 +1,8 @@
 ---
 title: HTMLContentElement.getDistributedNodes()
 slug: Web/API/HTMLContentElement/getDistributedNodes
-tags:
-  - Componente web
-  - HTML DOM
-  - HTMLContentElement
-  - HTMLContentElement.getDistributedNodes()
-  - Property
-  - getDistributedNodes()
-translation_of: Web/API/HTMLContentElement/getDistributedNodes
 ---
+
 {{ APIRef("Web Components") }}
 
 O método **`HTMLContentElement.getDistributedNodes()`** retorna um static {{domxref("NodeList")}} do {{glossary("distributed nodes")}} associado com este elemento `<content>`.

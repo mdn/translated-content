@@ -3,6 +3,7 @@ title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
 translation_of: Web/API/DeviceMotionEvent
 ---
+
 {{APIRef("Device Orientation Events")}}{{SeeCompatTable}}
 
 El evento `DeviceMotionEvent` proporciona a los desarrolladores información acerca de la velocidad de los cambios en la posición y orientación del dispositivo.
@@ -45,8 +46,8 @@ window.addEventListener('devicemotion', function(event) {
 
 ## Ver también
 
-- {{Event("deviceorientation")}}
+- [`deviceorientation`](/es/docs/Web/Reference/Events/deviceorientation)
 - {{DOMxRef("DeviceOrientationEvent")}}
-- {{Event("devicemotion")}}
+- [`devicemotion`](/es/docs/Web/Reference/Events/devicemotion)
 - [Detecting device orientation](/es/docs/WebAPI/Detecting_device_orientation)
 - [Orientation and motion data explained](/es/DOM/Orientation_and_motion_data_explained)

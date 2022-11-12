@@ -3,7 +3,7 @@ title: '<canvas>: グラフィックキャンバス要素'
 slug: Web/HTML/Element/canvas
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<canvas>` 要素** と [Canvas スクリプティング API](/ja/docs/Web/API/Canvas_API) や [WebGL API](/ja/docs/Web/API/WebGL_API) を使用して、グラフィックやアニメーションを描画することができます。
 

@@ -11,6 +11,7 @@ tags:
   - Формы Django
 translation_of: Learn/Server-side/Django/Forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
 На этом уроке мы покажем вам процесс работы с HTML-формами в Django. В частности, продемонстрируем самый простой способ построения формы для создания, обновления и удаления экземпляров модели. При этом мы расширим сайт [местной библиотеки](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website), чтобы библиотекари могли обновлять книги, создавать, обновлять и удалять авторов, используя наши собственные формы (а не возможности приложения администратора).

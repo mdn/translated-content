@@ -3,6 +3,7 @@ title: 'SyntaxError: function statement requires a name(функция опер�
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 translation_of: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

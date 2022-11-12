@@ -1,14 +1,8 @@
 ---
 title: defs
 slug: Web/SVG/Element/defs
-tags:
-  - Element
-  - Elemento
-  - SVG
-  - SVG Container
-  - tag
-translation_of: Web/SVG/Element/defs
 ---
+
 {{SVGRef}}
 
 A especificação do SVG permite que objetos gráficos sejam definidos para reuso posteriormente. Recomenda-se que, sempre que possível, os elementos referenciados sejam definidos dentro da tag `defs`. A definição destes elementos dentro de uma tag `defs` promove o entendimento do conteúdo do SVG e, consequentemente, promove a acessibilidade. Elementos gráficos definidos dentro da tag `defs` não serão diretamente renderizados. Você pode utilizar a tag {{ SVGElement("use") }} para renderizar tais elementos na janela de visualização.

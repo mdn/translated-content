@@ -1,16 +1,9 @@
 ---
 title: Multiple backgrounds
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-tags:
-  - CSS
-  - CSS Background
-  - Example
-  - Guide
-  - Intermediate
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-translation_of_original: Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds
 original_slug: Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds
 ---
+
 {{CSSRef}}
 
 Com [CSS3](/en/CSS/CSS3), você pode aplicar aos elementos multiplos planos de fundo. Estes ficam em camadas empilhadas uma acima da outra onde o o primeiro fundo dado será desenhado no topo e apenas o último fundo da lista poderá definir uma cor sólida de fundo.

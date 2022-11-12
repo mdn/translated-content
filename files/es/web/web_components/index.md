@@ -9,6 +9,7 @@ tags:
   - Web Components
 translation_of: Web/Web_Components
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 Los Componentes Web son un paquete de diferentes tecnologías que te permiten crear elementos personalizados reutilizables — con su funcionalidad encapsulada apartada del resto del código — y utilizarlos en las aplicaciones web.
@@ -133,7 +134,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
 
     - {{cssxref("::slotted")}}: Coincide cualquier contenido que es insertado dentro de un slot.
 
-- El evento {{event("slotchange")}}
+- El evento [`slotchange`](/es/docs/Web/Reference/Events/slotchange)
   - : Disparado en una instancia {{domxref("HTMLSlotElement")}} (elemento {{htmlelement("slot")}}) cuando el o los nodos contenidos es ese slot cambia.
 
 ## Ejemplos

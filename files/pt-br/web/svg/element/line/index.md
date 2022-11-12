@@ -1,15 +1,8 @@
 ---
 title: line
 slug: Web/SVG/Element/line
-tags:
-  - Elemento
-  - Gráficos SVG
-  - Linha
-  - Referencia
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/line
 ---
+
 {{SVGRef}}
 
 O elemento `line` é uma forma básica do SVG, utilizada para criar uma linha conectando dois pontos.

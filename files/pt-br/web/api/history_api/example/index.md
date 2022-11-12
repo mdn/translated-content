@@ -1,11 +1,9 @@
 ---
 title: Exemplo de navegação Ajax
 slug: Web/API/History_API/Example
-tags:
-  - Exemplo navegação ajax
-translation_of: Web/API/History_API/Example
 original_slug: Web/API/History_API/Exemplo
 ---
+
 Esse é um exemplo de um web site em AJAX web site composto por apenas três páginas (_first_page.php_, _second_page.php_ e _third_page.php_). Para ver como funciona, crie os arquivos a seguir (ou _git clone_ [https://github.com/giabao/mdn-ajax-nav-example.git](https://github.com/giabao/mdn-ajax-nav-example) ):
 
 > **Nota:** Para integrar completamente os elementos {{HTMLElement("form")}} com esse _mecanismo_, porfavor dê uma olhada no parágrafo [Enviando formulários e enviando arquivos](/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).

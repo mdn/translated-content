@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/function*
 original_slug: Web/JavaScript/Referencia/Operadores/function*
 ---
+
 {{jsSidebar("Operators")}}
 
 La palabra clave **`function*`** puede ser utilizada para definir una función generadora en una expresión.

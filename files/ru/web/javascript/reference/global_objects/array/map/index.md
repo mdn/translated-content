@@ -13,6 +13,7 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Сводка

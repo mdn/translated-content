@@ -1,9 +1,9 @@
 ---
 title: Introdução às Web APIs
 slug: Learn/JavaScript/Client-side_web_APIs/Introduction
-translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 original_slug: Aprender/JavaScript/Client-side_web_APIs/Introdução
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
 
 Primeiro, vamos ver as APIs a partir de um nível mais alto: o que são, como funcionam, como usá-las em seu código e como são estruturadas? Ainda, vamos entender quais são as principais classes de APIs e quais usos elas possuem.

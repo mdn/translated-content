@@ -1,17 +1,9 @@
 ---
 title: Introdução ao lado servidor
 slug: Learn/Server-side/First_steps/Introduction
-tags:
-  - Desenvolvimento Web
-  - Iniciante
-  - Introdução
-  - Programação
-  - Programação do lado do servidor
-  - Servidor
-  - programação do lado do cliente
-translation_of: Learn/Server-side/First_steps/Introduction
 original_slug: Learn/Server-side/First_steps/Introdução
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
 Bem-vindo ao curso de programação do lado do servidor para iniciantes do MDN! Neste primeiro artigo, examinamos a programação do lado do servidor de um alto nível, respondendo a perguntas como "o que é?", "Como ela difere da programação do lado do cliente?" E "por que é tão útil?" . Depois de ler este artigo, você entenderá o poder adicional disponível para sites por meio da codificação do lado do servidor.

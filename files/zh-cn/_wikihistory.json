@@ -857,7 +857,7 @@
     "modified": "2019-03-18T21:34:33.337Z",
     "contributors": ["yshenhua"]
   },
-  "Glossary/Grid_Rows": {
+  "Glossary/Grid_Row": {
     "modified": "2019-03-18T21:34:36.923Z",
     "contributors": ["yshenhua"]
   },
@@ -4957,20 +4957,6 @@
   "MDN/Writing_guidelines/Writing_style_guide": {
     "modified": "2019-01-17T03:12:28.083Z",
     "contributors": ["wbamberg", "MartinJLiu"]
-  },
-  "MDN/Yari": {
-    "modified": "2019-09-09T15:54:47.389Z",
-    "contributors": [
-      "SphinxKnight",
-      "RainSlide",
-      "yuan81777",
-      "Chor",
-      "wbamberg",
-      "myshell1983",
-      "popcorner",
-      "Jack-Q",
-      "xgqfrms"
-    ]
   },
   "Mozilla": {
     "modified": "2020-06-07T07:01:06.707Z",
@@ -11225,10 +11211,6 @@
   "Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop": {
     "modified": "2019-12-23T04:36:06.230Z",
     "contributors": ["Sherr_Y", "suvyme"]
-  },
-  "Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
-    "modified": "2020-10-21T09:56:11.699Z",
-    "contributors": ["Oliverz"]
   },
   "Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types": {
     "modified": "2019-03-23T22:11:24.812Z",

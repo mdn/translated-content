@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/innerText
 translation_of: Web/API/HTMLElement/innerText
 original_slug: Web/API/Node/innerText
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.innerText`** - это свойство, позволяющее задавать или получать текстовое содержимое элемента и его потомков. В качестве геттера, свойство приближается к тексту, который пользователь получит, если он выделит содержимое элемента курсором, затем копирует его в буфер обмена.

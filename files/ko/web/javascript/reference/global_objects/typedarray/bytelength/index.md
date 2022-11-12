@@ -2,6 +2,7 @@
 title: TypedArray.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 ---
+
 {{JSRef}}
 
 **`byteLength`** 접근자 속성은 형식화 배열의 길이(바이트)를 나타냅니다.

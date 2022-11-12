@@ -3,6 +3,7 @@ title: Node.isSupported()
 slug: Web/API/Node/isSupported
 translation_of: Web/API/Node/isSupported
 ---
+
 {{APIRef("DOM")}}{{obsolete_header}}
 
 **`Node.isSupported()`** возвращает {{domxref("Boolean")}} флаг содержащий результат проверки реализует ли реализация DOM определённое свойство и поддерживается ли это свойство конкретным узлом.

@@ -1,8 +1,8 @@
 ---
 title: Compilando um novo módulo C/C++ para WebAssembly
 slug: WebAssembly/C_to_wasm
-translation_of: WebAssembly/C_to_wasm
 ---
+
 {{WebAssemblySidebar}}
 
 Quando você escreve um novo módulo de código em uma linguagem como C/C++, você pode compilá-lo no WebAssembly usando uma ferramenta como [Emscripten](https://emscripten.org/). Vejamos como funciona.

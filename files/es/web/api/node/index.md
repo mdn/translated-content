@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/Node
 ---
+
 {{APIRef("DOM")}}
 
 **`Node`** es una interfaz en la cuál un número de objetos de tipo DOM API heredan. Esta interfaz permite que esos objetos sean tratados similarmente.
@@ -31,10 +32,10 @@ _herendan propiedades de sus padres {{domxref("EventTarget")}}_.\[1]
   - : Returns a {{domxref("Node")}} representing the first direct child node of the node, or `null` if the node has no child.
 - {{domxref("Node.lastChild")}} {{readonlyInline}}
   - : Returns a {{domxref("Node")}} representing the last direct child node of the node, or `null` if the node has no child.
-- {{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}
+- {{domxref("Node.localName")}} {{deprecated_inline}}{{readonlyInline}}
   - : Returns a {{domxref("DOMString")}} representing the local part of the qualified name of an element. In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML. 
     Though recent specifications require `localName` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
-- {{domxref("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}
+- {{domxref("Node.namespaceURI")}} {{deprecated_inline}}{{readonlyInline}}
   - : The namespace URI of this node, or `null` if it is no namespace. In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) namespace in both HTML and XML trees. 
     Though recent specifications require `namespaceURI` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
 - {{domxref("Node.nextSibling")}} {{readonlyInline}}
@@ -70,7 +71,7 @@ _herendan propiedades de sus padres {{domxref("EventTarget")}}_.\[1]
   - : Returns a {{domxref("Node")}} that is the parent of this node. If there is no such node, like if this node is the top of the tree or if doesn't participate in a tree, this property returns `null`.
 - {{domxref("Node.parentElement")}} {{readonlyInline}}
   - : Returns an {{domxref("Element")}} that is the parent of this node. If the node has no parent, or if that parent is not an {{domxref("Element")}}, this property returns `null`.
-- {{domxref("Node.prefix")}} {{obsolete_inline}}{{readonlyInline}}
+- {{domxref("Node.prefix")}} {{deprecated_inline}}{{readonlyInline}}
   - : Is a {{domxref("DOMString")}} representing the namespace prefix of the node, or `null` if no prefix is specified.
     Though recent specifications require `prefix` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
 - {{domxref("Node.previousSibling")}} {{readonlyInline}}
@@ -90,11 +91,11 @@ _Inherits methods from its parents {{domxref("EventTarget")}}_.\[1]
   - : Empty
 - {{domxref("Node.contains()")}}
   - : Empty
-- {{domxref("Node.getFeature()")}} {{obsolete_inline}}
+- {{domxref("Node.getFeature()")}} {{deprecated_inline}}
   - : ...
-- {{domxref("Node.getUserData()")}} {{obsolete_inline}}
+- {{domxref("Node.getUserData()")}} {{deprecated_inline}}
   - : Allows a user to get some {{domxref("DOMUserData")}} from the node.
-- {{domxref("Node.hasAttributes()")}} {{obsolete_inline}}
+- {{domxref("Node.hasAttributes()")}} {{deprecated_inline}}
   - : Returns a {{domxref("Boolean")}} indicating if the element has any attributes, or not.
 - {{domxref("Node.hasChildNodes()")}}
   - : Returns a {{domxref("Boolean")}} indicating if the element has any child nodes, or not.
@@ -104,9 +105,9 @@ _Inherits methods from its parents {{domxref("EventTarget")}}_.\[1]
   - : Empty
 - {{domxref("Node.isEqualNode()")}}
   - : Empty
-- {{domxref("Node.isSameNode()")}} {{obsolete_inline}}
+- {{domxref("Node.isSameNode()")}} {{deprecated_inline}}
   - : Empty
-- {{domxref("Node.isSupported()")}} {{obsolete_inline}}
+- {{domxref("Node.isSupported()")}} {{deprecated_inline}}
   - : Returns a [`Boolean`](/es/docs/Web/API/Boolean) flag containing the result of a test whether the DOM implementation implements a specific feature and this feature is supported by the specific node.
 - {{domxref("Node.lookupPrefix()")}}
   - : Empty
@@ -118,7 +119,7 @@ _Inherits methods from its parents {{domxref("EventTarget")}}_.\[1]
   - : Removes a child node from the current element, which must be a child of the current node.
 - {{domxref("Node.replaceChild()")}}
   - : Replaces one child {{domxref("Node")}} of the current one with the second one given in parameter.
-- {{domxref("Node.setUserData()")}} {{obsolete_inline}}
+- {{domxref("Node.setUserData()")}} {{deprecated_inline}}
   - : Allows a user to attach, or remove, {{domxref("DOMUserData")}} to the node.
 
 ## Examples

@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/Guide/CSS/Block_formatting_context
 ---
+
 {{ CSSRef() }}
 
 ## Resumen

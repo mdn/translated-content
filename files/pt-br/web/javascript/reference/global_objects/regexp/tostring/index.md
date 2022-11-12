@@ -1,9 +1,8 @@
 ---
 title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-browser-compat: javascript.builtins.RegExp.toString
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 ---
+
 {{JSRef}}
 
 O método **`toString()`** retorna uma string que representa uma expressão regular.

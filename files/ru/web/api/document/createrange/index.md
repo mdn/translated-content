@@ -3,6 +3,7 @@ title: Document.createRange()
 slug: Web/API/Document/createRange
 translation_of: Web/API/Document/createRange
 ---
+
 {{APIRef("DOM")}}
 
 Возвращает новый объект типа {{domxref("Range")}}.

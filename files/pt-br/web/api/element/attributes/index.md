@@ -1,17 +1,8 @@
 ---
 title: Element.attributes
 slug: Web/API/Element/attributes
-tags:
-  - API
-  - DOM
-  - Element
-  - Elemento
-  - Property
-  - Propriedade
-  - Reference
-  - Referencia
-translation_of: Web/API/Element/attributes
 ---
+
 {{ APIRef("DOM") }}
 
 A propriedade **`Element.attributes`** retorna uma coleção de todos os atributos registrados para um nó especificado. É um {{domxref("NamedNodeMap")}}, e não um `Array`, então não há os métodos de um {{jsxref("Array")}} e os nós indexados {{domxref("Attr")}} podem ser diferentes entre os navegadores. Para ser mais específico, `attributes` é um par de chave/valor de strings que representa qualquer informação relacionada ao atributo.

@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/em
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<em>` 요소**는 텍스트의 강세를 나타냅니다. `<em>` 요소를 중첩하면 더 큰 강세를 뜻하게 됩니다.
 

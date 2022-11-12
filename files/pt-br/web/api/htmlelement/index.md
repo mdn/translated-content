@@ -1,18 +1,8 @@
 ---
 title: HTMLElement
 slug: Web/API/HTMLElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsMobileBrowserCompatibility
-  - NeedsNewLayout
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - TopicStub
-translation_of: Web/API/HTMLElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 A interface **`HTMLElement`** representa qualquer elemento [HTML](/pt-BR/docs/Web/HTML). Alguns elementos implementam diretamente essa interface, outros a implementam por meio de uma interface que a herda.

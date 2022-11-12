@@ -10,6 +10,7 @@ tags:
 translation_of: Web/HTML/Element/blink
 original_slug: Web/HTML/Elemento/blink
 ---
+
 {{Deprecated_header}} {{Non-standard_header}}
 
 El elemento HTML blink (`<blink>`) no es un elemento estándar que causa que el texto encerrado parpadee lentamente .

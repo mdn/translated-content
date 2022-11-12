@@ -1,18 +1,9 @@
 ---
 title: Elementos construtivos do Javascript
 slug: Learn/JavaScript/Building_blocks
-tags:
-  - Artigo
-  - Condicionais
-  - Exercício
-  - Funções
-  - Iniciante
-  - JavaScript
-  - Loops
-  - eventos
-translation_of: Learn/JavaScript/Building_blocks
 original_slug: Aprender/JavaScript/Elementos_construtivos
 ---
+
 {{LearnSidebar}}
 
 Neste módulo, continuaremos nossa abordagem por todos os recursos-chave fundamentais de Javascript, voltando nossa atenção para os tipos de bloco de código comumente encontrados, tais como declarações condicionais, laços, funções e eventos. Você já viu isso no curso, mas apenas de passagem - aqui nós vamos discutir tudo isso explicitamente.

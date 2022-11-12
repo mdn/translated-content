@@ -1,13 +1,8 @@
 ---
 title: polyline
 slug: Web/SVG/Element/polyline
-tags:
-  - Elemento
-  - Referencia
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/polyline
 ---
+
 {{SVGRef}}
 
 O elemento `polyline` é uma forma básica do SVG, utilizado para criar uma séries de linhas retas conectando vários pontos. Tipicamente um `polyline` é usado para criar formas abertas.

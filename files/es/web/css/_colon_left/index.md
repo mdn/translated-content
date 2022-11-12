@@ -10,6 +10,7 @@ tags:
   - Web
 translation_of: Web/CSS/:left
 ---
+
 {{ CSSRef() }}
 
 La **`:left`** [CSS](/es/docs/Web/CSS) [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes), utilizada con la regla @page at, representa todas las páginas de la izquierda de un documento impreso.

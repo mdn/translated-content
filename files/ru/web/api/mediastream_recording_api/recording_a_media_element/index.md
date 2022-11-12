@@ -3,6 +3,7 @@ title: Запись медиа элемента
 slug: Web/API/MediaStream_Recording_API/Recording_a_media_element
 translation_of: Web/API/MediaStream_Recording_API/Recording_a_media_element
 ---
+
 {{DefaultAPISidebar("MediaStream Recording")}}
 
 В статье Использование интерфейса MediaStream Recording API демонстрируется использование объекта типа {{domxref("MediaRecorder")}} для захвата потока, представляющего объект типа {{domxref("MediaStream")}} , сгенерированного аппаратными средствами устройства и возвращаемого методом {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}}, но можно также использовать HTML медиа элемент (а именно {{HTMLElement("audio")}} или {{HTMLElement("video")}}) в качестве источника потока `MediaStream` для его записи. В этой статье рассматривается пример выполняющий это.

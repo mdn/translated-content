@@ -8,6 +8,7 @@ tags:
   - metodo
 translation_of: Web/API/Performance/clearMeasures
 ---
+
 {{APIRef("User Timing API")}}
 
 El método **`clearMeasures()`** elimina _la medida llamada_ del búfer de rendimiento de entrada, si el método es llamado sin argumentos, todos los {{domxref("PerformanceEntry","performance entries")}} con un {{domxref("PerformanceEntry.entryType","entry type")}} de "`measure`" serán eliminados del búfer de rendimiento de entrada.

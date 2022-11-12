@@ -1,7 +1,6 @@
 ---
 title: <style>
 slug: Web/HTML/Element/style
-translation_of: Web/HTML/Element/style
 ---
 ## Resumo
 
@@ -76,4 +75,4 @@ body {
 
 - O elemento {{HTMLElement("link")}} que permite usar folhas de estilo externas.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

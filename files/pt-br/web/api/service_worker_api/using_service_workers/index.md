@@ -1,8 +1,8 @@
 ---
 title: Usando Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
-translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
+
 {{ServiceWorkerSidebar}}
 
 {{ SeeCompatTable() }}

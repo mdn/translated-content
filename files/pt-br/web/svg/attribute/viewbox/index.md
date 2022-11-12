@@ -1,8 +1,8 @@
 ---
 title: viewBox
 slug: Web/SVG/Attribute/viewBox
-translation_of: Web/SVG/Attribute/viewBox
 ---
+
 {{SVGRef}}
 
 O atributo **`viewBox`** define a posição e a dimensão, no espaço do usuário, de uma viewport SVG.

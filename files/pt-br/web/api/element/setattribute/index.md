@@ -1,14 +1,8 @@
 ---
 title: Element.setAttribute()
 slug: Web/API/Element/setAttribute
-tags:
-  - Elemento
-  - IPA
-  - MOD
-  - Referencia
-  - metodo
-translation_of: Web/API/Element/setAttribute
 ---
+
 {{APIRef("DOM")}}
 
 Adiciona um novo atributo ou modifica o valor de um atributo existente num elemento específico.

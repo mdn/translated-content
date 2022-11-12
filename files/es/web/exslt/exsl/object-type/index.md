@@ -7,6 +7,7 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/exsl/object-type
 ---
+
 {{ XsltRef() }}
 
 `exsl:object-type()` devuelve una cadena que indica el tipo del objeto especificado.

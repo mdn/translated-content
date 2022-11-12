@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/for...in
 original_slug: Web/JavaScript/Referencia/Sentencias/for...in
 ---
+
 {{jsSidebar("Statements")}}
 
 La instrucción {{JSxRef("Sentencias/for...in", "for-in")}} itera sobre todas las {{JSxRef("../Enumerability_and_ownership_of_properties", "propiedades enumerables")}} de un objeto que está codificado por cadenas (ignorando los codificados por {{JSxRef("Objetos_globales/Symbol", "Símbolos")}}, incluidas las propiedades enumerables heredadas.

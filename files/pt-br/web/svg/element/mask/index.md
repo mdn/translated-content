@@ -1,13 +1,8 @@
 ---
 title: mask
 slug: Web/SVG/Element/mask
-tags:
-  - Container SVG
-  - Elemento
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/mask
 ---
+
 {{SVGRef}}
 
 No SVG, você pode especificar que quaisquer outros objetos gráficos ou elementos {{ SVGElement("g") }} podem ser utilizados com uma máscar de alfa para a composição do objeto atual para o fundo. A mask is defined with the `mask` element. A máscara é usada/referenciada usando a propriedade {{ SVGAttr("mask") }}.

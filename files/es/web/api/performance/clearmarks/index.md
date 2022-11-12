@@ -8,6 +8,7 @@ tags:
   - metodo
 translation_of: Web/API/Performance/clearMarks
 ---
+
 {{APIRef("User Timing API")}}
 
 El método **`clearMarks()`** elimina la _marca llamada_ del búfer de rendimiento de entrada del navegador. Si el método es llamado sin argumentos, todos los {{domxref("PerformanceEntry","performance entries")}} con un {{domxref("PerformanceEntry.entryType","entry type")}} de "`mark`" serán eliminados del búfer de rendimiento de entrada.

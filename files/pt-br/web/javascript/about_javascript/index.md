@@ -1,14 +1,8 @@
 ---
 title: Sobre JavaScript
 slug: Web/JavaScript/About_JavaScript
-tags:
-  - Beginner
-  - Iniciante
-  - Introduction
-  - Introdução
-  - JavaScript
-translation_of: Web/JavaScript/About_JavaScript
 ---
+
 {{JsSidebar}}
 
 ## O que é JavaScript?

@@ -1,8 +1,8 @@
 ---
 title: Document.defaultView
 slug: Web/API/Document/defaultView
-translation_of: Web/API/Document/defaultView
 ---
+
 {{ ApiRef() }}
 
 ## Sumário

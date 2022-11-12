@@ -5,6 +5,7 @@ tags:
   - Referencia_DOM_de_Gecko
 translation_of: Web/API/Event/cancelable
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Resumen

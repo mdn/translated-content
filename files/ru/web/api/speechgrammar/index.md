@@ -11,6 +11,7 @@ tags:
   - речь
 translation_of: Web/API/SpeechGrammar
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 Интерфейс **`SpeechGrammar`** [Web Speech API](/ru/docs/Web/API/Web_Speech_API) представляет собой набор слов или шаблонов слов, которые мы хотим, чтобы служба распознавания распознавала.

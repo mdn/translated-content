@@ -1,19 +1,8 @@
 ---
 title: Feature-Policy
 slug: Web/HTTP/Headers/Feature-Policy
-tags:
-  - Autorização
-  - Experimental
-  - Feature-Policy
-  - HTTP
-  - Permissões
-  - Política de Funcionalidade
-  - Referencia
-  - Segurança
-  - Web
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Feature-Policy
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho HTTP **`Feature-Policy`** provém um mecanismo para permitir ou proibir o uso de funcionalidades do navegador no seu próprio enquadramento, e o conteúdo dentro de quaisquer elementos {{HTMLElement("iframe")}} no documento.

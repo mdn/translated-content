@@ -1,13 +1,8 @@
 ---
 title: glyph
 slug: Web/SVG/Element/glyph
-tags:
-  - Conteúdo de Texto SVG
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/glyph
 ---
+
 {{SVGRef}}
 
 O `glyph` determina um único glifo em uma fonte SVG.

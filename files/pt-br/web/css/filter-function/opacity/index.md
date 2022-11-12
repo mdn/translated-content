@@ -1,13 +1,9 @@
 ---
 title: opacity()
 slug: Web/CSS/filter-function/opacity
-tags:
-  - Efeitos de Filtro
-  - Função CSS
-  - Referencia
-translation_of: Web/CSS/filter-function/opacity()
 original_slug: Web/CSS/filter-function/opacity()
 ---
+
 {{cssref}}
 
 A função [CSS](/pt-BR/docs/Web/CSS) **`opacity()`** aplica transparência às amostras na imagem inputada. Seu resultado é uma {{cssxref("&lt;filter-function&gt;")}}.

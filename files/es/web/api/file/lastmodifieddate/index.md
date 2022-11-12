@@ -12,6 +12,7 @@ tags:
   - Solo lectura
 translation_of: Web/API/File/lastModifiedDate
 ---
+
 {{APIRef("File API") }} {{deprecated_header}}
 
 La propiedad de solo lectura **`File.lastModifiedDate`** retorna la fecha de ultima modificación del archivo. Archivos sin una ultima fecha de modificación conocida retornan la fecha actual.

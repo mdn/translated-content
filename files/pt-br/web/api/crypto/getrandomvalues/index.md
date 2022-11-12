@@ -1,9 +1,9 @@
 ---
 title: RandomSource.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
-translation_of: Web/API/Crypto/getRandomValues
 original_slug: Web/API/RandomSource/getRandomValues
 ---
+
 {{APIRef("Web Crypto API")}}
 
 O método **`RandomSource.getRandomValues()`** permite que você obtenha valores criptográficos randômicos. O array passado como parametro é preenchido com números randômicos (randômicos no sentido criptográfico).

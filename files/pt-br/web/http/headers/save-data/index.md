@@ -1,15 +1,8 @@
 ---
 title: Save-Data
 slug: Web/HTTP/Headers/Save-Data
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-  - Save-Data
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Save-Data
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho **`Save-Data`** é um booleano no qual, em requisições, indica a preferência do cliente para reduzir uso de dados. Isso pode ser por algumas razões como custo de transferência alto, baixa velocidade de conexão, etc.

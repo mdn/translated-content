@@ -3,6 +3,7 @@ title: Event.stopPropagation()
 slug: Web/API/Event/stopPropagation
 translation_of: Web/API/Event/stopPropagation
 ---
+
 {{APIRef("DOM")}}
 
 El método `stopPropagation()` de la interfaz {{domxref("Event")}} evita la propagación adicional del evento actual en las fases de captura y _bubbling_.

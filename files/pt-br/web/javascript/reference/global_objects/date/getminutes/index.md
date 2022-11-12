@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 ---
+
 {{JSRef}}
 
 O método **`getMinutes()`** retorna os minutos em uma data específica de acordo com o horário local.

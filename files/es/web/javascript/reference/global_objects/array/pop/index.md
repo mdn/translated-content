@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/pop
 ---
+
 {{JSRef}}
 
 El método **`pop()`** elimina el **último** elemento de un array y lo devuelve. Este método cambia la longitud del array.
@@ -52,12 +53,7 @@ console.log(popped); // 'sturgeon'
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                             | Estándar                     | Definición inicial. Implementada en JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.6', 'Array.prototype.pop')}}                     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-array.prototype.pop', 'Array.prototype.pop')}}         | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.pop', 'Array.prototype.pop')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

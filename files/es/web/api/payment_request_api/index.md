@@ -13,6 +13,7 @@ tags:
   - Tarjeta de Crédito
 translation_of: Web/API/Payment_Request_API
 ---
+
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
 El API de solicitud de pago provee una experiencia consistente tanto para comerciantes, como para usuarios. No es una nueva forma de pagar; más bien, es una manera para que los usuarios puedan seleccionar su forma de pago preferida para pagar por cosas, y que esa información esté disponible para el comerciante.
@@ -66,7 +67,7 @@ Puedes encontrar una guía completa en [Usando la API de Solicitud de Pago](/es/
 ### Diccionarios relacionados para la especificación Basic Card
 
 - {{domxref("BasicCardChangeDetails")}}
-  - : Un objeto que proporciona información de dirección redactada que se proporciona como {{domxref ("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} en el evento {{event ("paymentmethodchange")}} enviado al {{domxref ("PaymentRequest" )}} cuando el usuario cambia la información de pago.
+  - : Un objeto que proporciona información de dirección redactada que se proporciona como {{domxref ("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} en el evento [`paymentmethodchange`](/es/docs/Web/Reference/Events/paymentmethodchange) enviado al {{domxref ("PaymentRequest" )}} cuando el usuario cambia la información de pago.
 - {{domxref("BasicCardErrors")}}
   - : Un objeto que proporciona mensajes de error asociados con los campos del objeto {{domxref ("BasicCardResponse")}} que no son válidos. Esto se usa como el valor de la propiedad {{domxref ("PaymentValidationErrors.paymentMethod", "paymentMethod")}} en el objeto {{domxref ("PaymentValidationErrors")}} enviado al {{domxref ("PaymentRequest")}} cuando ocurre un error.
 - {{domxref('BasicCardRequest')}}

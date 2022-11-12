@@ -4,6 +4,7 @@ slug: Web/API/Element/animationend_event
 translation_of: Web/API/GlobalEventHandlers/onanimationend
 original_slug: Web/API/GlobalEventHandlers/onanimationend
 ---
+
 {{APIRef("CSS3 Animations")}}
 
 Обработчик события {{event("animationend")}}. Это событие вызывается когда [CSS-анимация](/ru/docs/Web/CSS/CSS_Animations) достигает конца своего активного периода, который вычисляется как ({{cssxref("animation-duration")}} \* {{cssxref("animation-iteration-count")}}) + {{cssxref("animation-delay")}}.

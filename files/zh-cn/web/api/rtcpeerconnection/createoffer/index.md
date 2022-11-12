@@ -72,7 +72,7 @@ myPeerConnection.createOffer(successCallback, failureCallback, [options]) {{depr
 
 ## 举例
 
-在这里，我们看到了{{event("negotiationneeded")}}事件的处理程序，该处理程序创建了要约，并通过信令通道将其发送到远程系统。
+在这里，我们看到了 {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 事件的处理程序，该处理程序创建了要约，并通过信令通道将其发送到远程系统。
 
 > **备注：** 请记住，这是信令过程的一部分，传输层的实现细节完全由您决定。在这种情况下，[WebSocket](/zh-CN/docs/Web/API/WebSocket_API)连接用于向其他端点发送带有值为“video-offer”的类型字段的{{Glossary("JSON")}}消息。传递给`sendToServer()`函数的对象的内容，以及承诺履行处理程序中的所有其他内容，完全取决于您的设计。
 

@@ -3,6 +3,7 @@ title: 408 Request Timeout
 slug: Web/HTTP/Status/408
 translation_of: Web/HTTP/Status/408
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`408 Request Timeout`** означает, что сервер хотел бы отключить это неиспользуемое соединение. Он отправляется на незанятое соединение некоторыми серверами, _даже без какого-либо предыдущего запроса клиентом_

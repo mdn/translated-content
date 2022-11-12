@@ -1,15 +1,9 @@
 ---
 title: Solucionando problemas de erros de KumaScript
 slug: MDN/Tools/KumaScript/Troubleshooting
-tags:
-  - Erros
-  - Ferramentas
-  - Guía
-  - KumaScript
-  - MDN Meta
-translation_of: MDN/Tools/KumaScript/Troubleshooting
 original_slug: MDN/Tools/KumaScript/Solucionando_problemas_de_erros_de_KumaScript
 ---
+
 {{MDNSidebar}}
 
 Erros de [KumaScript](/pt-BR/docs/MDN/Kuma/Introduction_to_KumaScript) aparecendo numa página podem ser muito desagradáveis aos leitores, mostrando grandes e medonhas caixas vermelhas, mas felizmente qualquer pessoa com uma conta MDN pode editar um documento e consertar tais tipos de erros. Quando uma página possui algum erro, ela é adicionada na lista de [documentos com erros](/docs/with-errors). Editores do site passam por essa lista regularmente para achar e consertar erros. Este artigo detalha os quatro tipos de erros de KumaScript, e alguns passos que você pode fazer para consertá-los.

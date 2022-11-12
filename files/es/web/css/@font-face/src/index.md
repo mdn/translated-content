@@ -7,6 +7,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/@font-face/src
 ---
+
 {{CSSRef}}
 
 El descriptor CSS **`src`** de la regla {{cssxref("@font-face")}} especifica el recurso que contiene a la fuente. Es requerido para que la regla `@font-face` sea válida.

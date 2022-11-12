@@ -4,6 +4,7 @@ slug: Web/API/Window/blur_event
 translation_of: Web/API/GlobalEventHandlers/onblur
 original_slug: Web/API/GlobalEventHandlers/onblur
 ---
+
 {{ApiRef("HTML DOM")}}
 
 La propiedad **onblur** retorna el código del manejador de evento onBlur, si existe, en el elemento actual.

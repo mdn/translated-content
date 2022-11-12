@@ -1,20 +1,8 @@
 ---
 title: 'SVG: Gráficos Vetoriais Escaláveis'
 slug: Web/SVG
-tags:
-  - Design Responsivo
-  - Gráficos 2D
-  - Gráficos Escaláveis
-  - Gráficos Vetoriais
-  - Imagens
-  - Referencia
-  - SVG
-  - Web
-  - graficos
-  - l10n:prioridade
-  - Ícones
-translation_of: Web/SVG
 ---
+
 **[Iniciando](/pt-BR/docs/Web/SVG/Tutorial)** Este tutorial irá ajudá-lo a começar a trabalhar com SVG.
 
 {{SVGRef}}

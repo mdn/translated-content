@@ -7,6 +7,7 @@ tags:
   - Ошибка
 translation_of: Web/JavaScript/Reference/Statements/try...catch
 ---
+
 {{jsSidebar("Statements")}}
 
 Конструкция `try...catch` пытается выполнить инструкции в блоке `try`, и, в случае ошибки, выполняет блок `catch`.

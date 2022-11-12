@@ -1,19 +1,8 @@
 ---
 title: SpeechSynthesisUtterance
 slug: Web/API/SpeechSynthesisUtterance
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - SpeechSynthesisUtterance
-  - TopicStub
-  - Web Speech API
-  - speech
-  - synthesis
-translation_of: Web/API/SpeechSynthesisUtterance
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 The **`SpeechSynthesisUtterance`** interface of the [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API) represents a speech request. It contains the content the speech service should read and information about how to read it (e.g. language, pitch and volume.)

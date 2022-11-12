@@ -1,13 +1,9 @@
 ---
 title: Compressão em HTTP
 slug: Web/HTTP/Compression
-tags:
-  - Guía
-  - HTTP
-  - compressão
-translation_of: Web/HTTP/Compression
 original_slug: Web/HTTP/Compressão
 ---
+
 {{HTTPSidebar}}
 
 A **Compressão** é uma forma importante de aumentar o desempenho de um Web site. Para alguns documentos, a redução de tamanho de até 70% diminui a necessidade de capacidade de largura de banda. Com o passar dos anos, os algoritmos também ficaram mais eficientes e novos têm recebido suporte por clientes e servidores.

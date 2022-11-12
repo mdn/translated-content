@@ -1,15 +1,9 @@
 ---
 title: Tópico de Alinhamento
 slug: Glossary/Alignment_Subject
-tags:
-  - CSS
-  - Glossário
-  - alinhamento
-  - assunto de alinhamento
-  - tópico de alinhamento
-translation_of: Glossary/Alignment_Subject
 original_slug: Glossario/topico_de_alinhamento
 ---
+
 No [Alinhamento de Box do CSS](/pt-BR/docs/Web/CSS/CSS_Box_Alignment), o **tópico (assunto) de alinhamento** é a coisa (ou coisas) que está sendo alinhada pelas propriedades.
 
 Para o {{cssxref("justify-self")}} e {{cssxref("align-self")}}, o tópico de alinhamento é o box de margem do box em que a propriedade está definida, usando o modo de escrita desse box.

@@ -1,11 +1,8 @@
 ---
 title: Utilizando Políticas de Segurança de Conteúdo
 slug: Web/HTTP/CSP
-tags:
-  - Política de Segurança de Conteúdo
-  - Segurança
-translation_of: Web/HTTP/CSP
 ---
+
 {{ gecko_minversion_header("2.0") }}
 
 **Content Security Policy** (Política de Segurança de Conteúdo, também conhecida como {{Glossary("CSP")}}) é uma camada adicional de segurança que facilita a detecção e mitigação de certos tipos de ataques, incluindo Cross Site Scripting ({{Glossary("XSS")}}) e ataques de injeção de dados. Esses ataques são utilizados para diversos fins, e eles vão desde roubo de dados até desfiguração do site para distribuição de malware.

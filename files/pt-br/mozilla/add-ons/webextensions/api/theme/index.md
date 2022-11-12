@@ -1,17 +1,9 @@
 ---
 title: tema
 slug: Mozilla/Add-ons/WebExtensions/API/theme
-tags:
-  - Aplicativo
-  - Extensões
-  - Navegador
-  - Tema
-  - Temas
-  - add-on
-  - extensão
-translation_of: Mozilla/Add-ons/WebExtensions/API/theme
 original_slug: Mozilla/Add-ons/WebExtensions/API/tema
 ---
+
 {{AddonSidebar}}
 
 Permite que extensões do navegador alterem seu tema.

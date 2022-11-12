@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/File/name
 ---
+
 {{APIRef("File API")}}
 
 Retorna el nombre del archivo representado por el objeto {{domxref("File")}}. Por razones de seguridad, la ruta de directorios es excluida de esta propiedad.

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
 browser-compat: javascript.builtins.Date.setUTCDate
 ---
+
 {{JSRef}}
 
 **setUTCDate()** 메서드는 표준시에 따라 지정된 날짜의 날짜를 설정합니다.

@@ -10,6 +10,7 @@ tags:
   - Sólo-Lectura
 translation_of: Web/API/Element/classList
 ---
+
 {{APIRef}}
 
 La propiedad de sólo lectura `Element.classList` devuelve una colección activa de [`DOMTokenList`](/es/docs/Web/API/DOMTokenList) de los atributos de clase del elemento.

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Attribute_selectors
 original_slug: Web/CSS/Selectores_atributo
 ---
+
 {{CSSRef}}
 
 El **selector de atributos** CSS coincide con los elementos en función de la presencia o el valor de un atributo determinado.

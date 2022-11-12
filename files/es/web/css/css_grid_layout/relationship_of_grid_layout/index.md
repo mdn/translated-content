@@ -11,6 +11,7 @@ tags:
 translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 original_slug: Web/CSS/CSS_Grid_Layout/Relacion_de_Grid_Layout
 ---
+
 CSS Grid Layout ha sido diseñado para trabajar junto con otros elementos de CSS, como parte de un sistema completo para hacer el diseño. En esta guía explicaré cómo se ajusta _Grid_ junto con otras técnicas que ya se estén usando.
 
 > **Nota:** Las traducciones posibles a la palabra Grid en este contexto son: Grilla, Rejilla, Cuadrícula, Malla. Para efecto del contenido será _Grid_.

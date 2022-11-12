@@ -1,12 +1,9 @@
 ---
 title: Operador Condicional Ternário
 slug: Web/JavaScript/Reference/Operators/Conditional_Operator
-tags:
-  - JavaScript
-  - Operadores Condicionais
-translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 original_slug: Web/JavaScript/Reference/Operators/Operador_Condicional
 ---
+
 {{jsSidebar("Operators")}}
 
 ## Sumário

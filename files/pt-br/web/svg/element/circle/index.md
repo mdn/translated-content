@@ -1,15 +1,8 @@
 ---
 title: circle
 slug: Web/SVG/Element/circle
-tags:
-  - Circulo
-  - Elemento
-  - Forma
-  - Referencia
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/circle
 ---
+
 {{SVGRef}}
 
 O elemento `circle` é uma forma básica do SVG, utilizada para criar círculos baseado em um ponto central e um raio.
