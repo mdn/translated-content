@@ -68,7 +68,7 @@ console.log(date.toLocaleString());
 
 ### 로케일 및 옵션 인수에 대한 지원 확인
 
-아직 `locales`, `options` 인수는 일부 브라우저에서 지원하지 않습니다. 구현에서 그것을 지원하는지 확인하려면 잘못된 언어 태그가 {{jsxref("RangeError")}} 예외: 로 거부되는 요구사항을 사용할 수 있습니다.
+아직 `locales`, `options` 인수는 일부 브라우저에서 지원하지 않습니다. 구현에서 해당 인수를 지원하는지 확인하려면 잘못된 언어 태그가 {{jsxref("RangeError")}} 예외로 거부되는 요구사항을 사용할 수 있습니다.
 
 ```js
 function toLocaleStringSupportsLocales() {
