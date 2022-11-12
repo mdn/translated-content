@@ -1475,7 +1475,7 @@
 /fr/docs/Glossaire/Latence	/fr/docs/Glossary/Latency
 /fr/docs/Glossaire/Lazy_load	/fr/docs/Glossary/Lazy_load
 /fr/docs/Glossaire/Ligature	/fr/docs/Glossary/Ligature
-/fr/docs/Glossaire/Lignes_de_grille_(Row)	/fr/docs/Glossary/Grid_Rows
+/fr/docs/Glossaire/Lignes_de_grille_(Row)	/fr/docs/Glossary/Grid_Row
 /fr/docs/Glossaire/Lignes_de_grille_(lines)	/fr/docs/Glossary/Grid_Lines
 /fr/docs/Glossaire/Locale	/fr/docs/Glossary/Locale
 /fr/docs/Glossaire/MOA	/fr/docs/Glossary/Accessibility_tree
@@ -1732,6 +1732,7 @@
 /fr/docs/Glossary/Bézier_curve	/fr/docs/Glossary/Bezier_curve
 /fr/docs/Glossary/Client_hints	/fr/docs/Web/HTTP/Client_hints
 /fr/docs/Glossary/Empty_element	/fr/docs/Glossary/Void_element
+/fr/docs/Glossary/Grid_Rows	/fr/docs/Glossary/Grid_Row
 /fr/docs/Glossary/Index	/fr/docs/Glossary
 /fr/docs/Glossary/Modern_web_apps	/fr/docs/Glossary/Progressive_web_apps
 /fr/docs/Glossary/Node/réseau	/fr/docs/Glossary/Node/networking
