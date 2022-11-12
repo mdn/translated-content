@@ -75,7 +75,7 @@ function toLocaleStringSupportsLocales() {
 
 ### locales 사용
 
-이 예는 지역화된 날짜 및 시간 형식의 일부 변형을 보여줍니다. 당신의 어플리케이션의 사용자 인터페이스가 사용하는 언어의 형식을 얻기 위해서, 반드시 `locales` 인수를 사용하여 해당 언어를 지정해야합니다.(and possibly some fallback languages)
+이 예는 지역화된 날짜 및 시간 형식의 일부 변형을 보여줍니다. 당신의 어플리케이션의 사용자 인터페이스가 사용하는 언어(그리고 일부 대체 언어)의 형식을 얻기 위해서, 반드시 `locales` 인수를 사용하여 해당 언어를 지정해야합니다.
 
 ```js
 const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
