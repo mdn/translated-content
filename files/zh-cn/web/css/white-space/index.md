@@ -9,6 +9,11 @@ slug: Web/CSS/white-space
 
 {{EmbedInteractiveExample("pages/css/white-space.html")}}
 
+这个属性表明了两件事:
+
+- 空白字符是否以及如何 [collapsed](#collapsing_of_white_space)。
+- 行是否采用软换行。
+
 ## 语法
 
 ```
