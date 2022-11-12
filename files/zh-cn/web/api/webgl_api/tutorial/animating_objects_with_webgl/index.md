@@ -52,8 +52,8 @@ squareRotation += deltaTime;
 
 该代码使用自上次我们更新值以来所经过的时间`squareRotation`来确定旋转正方形的距离。
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample4/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample4/index.html', 670, 510) }}
 
-[查看完整代码](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample4) | [在新页面中打开示例](http://mdn.github.io/webgl-examples/tutorial/sample4/)
+[查看完整代码](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample4) | [在新页面中打开示例](http://mdn.github.io/dom-examples/webgl-examples/tutorial/sample4/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
