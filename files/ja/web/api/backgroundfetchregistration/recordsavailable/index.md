@@ -7,15 +7,15 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`recordsAvailable`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns `true` if there are requests and responses to be accessed. If this returns false then {{domxref("BackgroundFetchRegistration.match()","match()")}} and {{domxref("BackgroundFetchRegistration.matchAll()","matchAll()")}} can't be used.
+**`recordsAvailable`** は {{domxref("BackgroundFetchRegistration")}} インターフェイスの読み取り専用プロパティで、アクセス可能なリクエストや応答が存在するとき、`true` を返します。この値が `false` のとき、{{domxref("BackgroundFetchRegistration.match()","match()")}} と {{domxref("BackgroundFetchRegistration.matchAll()","matchAll()")}} は使用できません。
 
 ## 値
 
-A {{jsxref("boolean")}}.
+{{jsxref("boolean")}}。
 
 ## 例
 
-Logging this property to the console returns `true` or `false` to indicate if there are records.
+このプロパティをコンソールにログ出力すると、`true` または `false` を出力し、record が存在するかどうかを示します。
 
 ```js
 console.log(bgFetch.recordsAvailable);
