@@ -52,15 +52,15 @@ l10n:
 ## メソッド
 
 - {{domxref("BackgroundFetchRegistration.abort","BackgroundFetchRegistration.abort()")}} {{Experimental_Inline}}
-  - : Aborts the background fetch. Returns a {{jsxref("Promise")}} that resolves with `true` if the fetch was successfully aborted.
+  - : バックグラウンドフェッチを中止します。フェッチの中止が成功したときに `true` で解決される {{jsxref("Promise")}} を返します。
 - {{domxref("BackgroundFetchRegistration.match","BackgroundFetchRegistration.match()")}} {{Experimental_Inline}}
-  - : Returns a single {{domxref("BackgroundFetchRecord")}} object which is the first match for the arguments.
+  - : 引数に対して最初にマッチした {{domxref("BackgroundFetchRecord")}} オブジェクトを 1 つ返します。
 - {{domxref("BackgroundFetchRegistration.matchAll","BackgroundFetchRegistration.matchAll()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("BackgroundFetchRecord")}} objects containing requests and responses.
+  - : リクエストと応答を含む {{domxref("BackgroundFetchRecord")}} オブジェクトの配列で解決される {{jsxref("Promise")}} を返します。
 
 ## イベント
 
-Listen to these events using [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+[`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を用いて、または、このインターフェイスの `oneventname` プロパティにイベントリスナーを割り当てて、これらイベントの発生を待ち受けてください。
 
 - [`progress`](/ja/docs/Web/API/BackgroundFetchRegistration/progress_event) {{Experimental_Inline}}
 
@@ -100,18 +100,18 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 console.log(bgFetch.id); // "my-fetch"
 ```
 
-The {{domxref("BackgroundFetchRegistration.match","match()")}} method can be used to find a particular {{domxref("BackgroundFetchRecord")}} from those that are part of the registration.
+{{domxref("BackgroundFetchRegistration.match","match()")}} メソッドを使って、registration の要素である {{domxref("BackgroundFetchRecord")}} から特定の 1 つを探すことができます。
 
 ```js
 bgFetch.match("/ep-5.mp3").then(async (record) => {
   if (!record) {
-    console.log("No record found");
+    console.log("レコードは見つかりませんでした。");
     return;
   }
 
-  console.log(`Here's the request`, record.request);
+  console.log(`リクエスト： `, record.request);
   const response = await record.responseReady;
-  console.log(`And here's the response`, response);
+  console.log(`応答： `, response);
 });
 ```
 
