@@ -28,10 +28,7 @@ mySet.size; // 3
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estatus                      | Comentario         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-get-set.prototype.size', 'Set.prototype.size')}}     | {{Spec2('ES6')}}         | Definición inicial |
-| {{SpecName('ESDraft', '#sec-get-set.prototype.size', 'Set.prototype.size')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

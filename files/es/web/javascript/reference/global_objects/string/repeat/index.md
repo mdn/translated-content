@@ -100,10 +100,7 @@ if (!String.prototype.repeat) {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentarios         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.repeat', 'String.prototype.repeat')}}     | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-string.prototype.repeat', 'String.prototype.repeat')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

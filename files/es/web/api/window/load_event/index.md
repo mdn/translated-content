@@ -72,8 +72,8 @@ El evento `load` se dispara cuando un recurso y sus recursos dependientes han te
 
 ## Eventos relacionados
 
-- {{event("DOMContentLoaded")}}
-- {{event("readystatechange")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/es/docs/Web/Reference/Events/DOMContentLoaded)
+- [`readystatechange`](/es/docs/Web/Reference/Events/readystatechange)
+- [`load`](/es/docs/Web/Reference/Events/load)
+- [`beforeunload`](/es/docs/Web/Reference/Events/beforeunload)
+- [`unload`](/es/docs/Web/Reference/Events/unload)

@@ -130,11 +130,7 @@ Math.ceil10(-59, 1);       // -50
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                   | Comentario                                          |
-| ------------------------------------------------------------------------ | ------------------------ | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}     | Definición inicial. Implementada en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.15', 'Math.round')}} | {{Spec2('ES5.1')}} |                                                     |
-| {{SpecName('ES6', '#sec-math.round', 'Math.round')}}     | {{Spec2('ES6')}}     |                                                     |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

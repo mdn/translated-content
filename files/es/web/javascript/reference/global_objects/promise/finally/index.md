@@ -62,9 +62,7 @@ fetch(myRequest).then(function(response) {
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                       | Comentario |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('ESDraft', '#sec-promise.prototype.finally', 'Promise.prototype.finally')}} | {{Spec2('ESDraft')}} |            |
+{{Specifications}}
 
 ## Compatibilidad en navegador
 

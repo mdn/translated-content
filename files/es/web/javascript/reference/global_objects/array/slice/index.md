@@ -210,11 +210,7 @@ El _shim_ también soluciona que IE pueda tratar con el caso de que el segundo a
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                   | Observaciones                                      |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 3ª edición                                                                                    | Estandar                 | Definición inicial Implementado en JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.10', 'Array.prototype.slice')}}                     | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES2015', '#sec-array.prototype.slice', 'Array.prototype.slice')}} | {{Spec2('ES2015')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

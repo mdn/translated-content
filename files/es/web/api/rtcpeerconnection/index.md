@@ -49,7 +49,7 @@ The `RTCIceConnectionState` enum defines the string constants used to describe t
 
 ### RTCIceGatheringState enum
 
-The `RTCIceGatheringState` enum defines string constants which reflect the current status of ICE gathering, as returned using the {{domxref("RTCPeerConnection.iceGatheringState")}} property. You can detect when this value changes by watching for an event of type {{event("icegatheringstatechange")}}.
+The `RTCIceGatheringState` enum defines string constants which reflect the current status of ICE gathering, as returned using the {{domxref("RTCPeerConnection.iceGatheringState")}} property. You can detect when this value changes by watching for an event of type [`icegatheringstatechange`](/es/docs/Web/Reference/Events/icegatheringstatechange).
 
 | Constant      | Description                                                                                                                                                                                                                                              |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

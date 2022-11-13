@@ -27,8 +27,6 @@ translation_of: Web/MathML
 
 ## Получение помощи из сообщества
 
-- Смотреть форумы Mozilla...
-  {{ DiscussionList("dev-tech-mathml", "mozilla.dev.tech.mathml") }}
 - [IRC канал](irc://irc.mozilla.org/%23mathml)
 - [Wiki от авторов Mozilla](https://wiki.mozilla.org/MathML:Home_Page)
 - [Домашняя страница W3C Math](http://www.w3.org/Math/)

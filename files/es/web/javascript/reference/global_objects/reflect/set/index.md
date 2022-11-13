@@ -65,10 +65,7 @@ Reflect.getOwnPropertyDescriptor(obj, 'undefined');
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                       | Comentarios         |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-reflect.set', 'Reflect.set')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-reflect.set', 'Reflect.set')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

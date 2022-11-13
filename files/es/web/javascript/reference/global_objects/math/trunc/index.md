@@ -63,12 +63,9 @@ Math.trunc = Math.trunc || function (x) {
 }
 ```
 
-## Especificaciones.
+## Especificaciones
 
-| Especificación                                                               | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-math.trunc', 'Math.trunc')}}         | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-math.trunc', 'Math.trunc')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores.
 

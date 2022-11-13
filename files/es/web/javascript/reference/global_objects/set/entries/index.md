@@ -42,10 +42,7 @@ console.log(setIter.next().value); // ["baz", "baz"]
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                       | Commentario         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-set.prototype.entries', 'Set.prototype.entries')}} | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-set.prototype.entries', 'Set.prototype.entries')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

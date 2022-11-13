@@ -34,14 +34,9 @@ unescape("%E4%F6%FC");  // "äöü"
 unescape("%u0107");     // "ć"
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                    | Status                       | Comment                                                                                |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------- |
-| {{SpecName('ES1', '#sec-15.1.2.5', 'unescape')}}                 | {{Spec2('ES1')}}         | Initial definition.                                                                    |
-| {{SpecName('ES5.1', '#sec-B.2.2', 'unescape')}}                 | {{Spec2('ES5.1')}}     | Defined in the (informative) Compatibility Annex B                                     |
-| {{SpecName('ES6', '#sec-unescape-string', 'unescape')}}         | {{Spec2('ES6')}}         | Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers |
-| {{SpecName('ESDraft', '#sec-unescape-string', 'unescape')}} | {{Spec2('ESDraft')}} | Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers |
+{{Specifications}}
 
 ## Browser compatibility
 

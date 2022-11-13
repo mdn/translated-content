@@ -160,10 +160,7 @@ getUsefulContents('http://www.example.com',
 
 ## Especificaciones
 
-| Especificación                                                       | Estado                       | Comentario        |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName('ES6', '#sec-imports', 'Imports')}}         | {{Spec2('ES6')}}         | Definición inical |
-| {{SpecName('ESDraft', '#sec-imports', 'Imports')}} | {{Spec2('ESDraft')}} |                   |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

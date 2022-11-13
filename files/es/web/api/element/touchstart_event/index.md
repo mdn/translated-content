@@ -7,7 +7,7 @@ original_slug: Web/API/GlobalEventHandlers/ontouchstart
 
 {{APIRef}}
 
-Un {{domxref("GlobalEventHandlers","global event handler")}} para el evento {{event("touchstart")}}.
+Un {{domxref("GlobalEventHandlers","global event handler")}} para el evento [`touchstart`](/es/docs/Web/Reference/Events/touchstart).
 
 {{SeeCompatTable}}
 
@@ -56,4 +56,4 @@ function init() {
 
 ## Véase también
 
-- {{ event("touchstart") }}
+- [`touchstart`](/es/docs/Web/Reference/Events/touchstart)

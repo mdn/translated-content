@@ -75,7 +75,7 @@ form.addEventListener("blur", function( event ) {
 
 ## Eventos relacionados
 
-- {{event("focus")}}
-- {{event("blur")}}
-- {{event("focusin")}}
-- {{event("focusout")}}
+- [`focus`](/es/docs/Web/Reference/Events/focus)
+- [`blur`](/es/docs/Web/Reference/Events/blur)
+- [`focusin`](/es/docs/Web/Reference/Events/focusin)
+- [`focusout`](/es/docs/Web/Reference/Events/focusout)

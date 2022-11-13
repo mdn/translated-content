@@ -31242,14 +31242,6 @@
     "modified": "2020-11-30T10:28:22.488Z",
     "contributors": ["chrisdavidmills", "mfuji09", "inkusu"]
   },
-  "conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e": {
-    "modified": "2020-11-29T12:01:32.996Z",
-    "contributors": ["mfuji09", "ExE-Boss", "dskmori", "fscholz", "storywriter"]
-  },
-  "conflicting/Web/CSS_7fc1a1afe4642afd225ebf1b3d6227a7": {
-    "modified": "2020-10-15T22:06:16.617Z",
-    "contributors": ["mfuji09"]
-  },
   "conflicting/Web/HTML/Global_attributes/contenteditable": {
     "modified": "2019-05-13T11:13:31.486Z",
     "contributors": ["mfuji09", "yyss", "ethertank"]
@@ -31304,21 +31296,9 @@
       "electrolysis"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
-    "modified": "2019-03-23T22:54:31.407Z",
-    "contributors": ["teoli", "YuichiNukiyama", "shide55"]
-  },
-  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_df783faa96fb2729e58461fd21615e98": {
-    "modified": "2020-03-12T19:41:30.751Z",
-    "contributors": ["yyss", "shide55"]
-  },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
-  },
-  "conflicting/Web/Progressive_web_apps": {
-    "modified": "2019-04-17T00:04:34.176Z",
-    "contributors": ["Uemmra3", "Wind1808"]
   },
   "conflicting/Web/SVG/Element/animate": {
     "modified": "2020-10-15T21:27:02.463Z",

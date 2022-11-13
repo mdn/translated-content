@@ -9,7 +9,7 @@ browser-compat: api.BatteryManager.onlevelchange
 {{deprecated_header}} {{APIRef("Battery API")}}
 
 La propiedad **`BatteryManager.onlevelchange`** especifica un detector
-de eventos para recibir eventos de {{event("levelchange")}}. Estos eventos ocurren
+de eventos para recibir eventos de [`levelchange`](/es/docs/Web/Reference/Events/levelchange). Estos eventos ocurren
 cuando el {{domxref("BatteryManager.level", "level")}} de batería se actualiza.
 
 ## Sintaxis
@@ -19,7 +19,7 @@ navigator.battery.onlevelchange = funcRef;
 ```
 
 Donde `battery` es un objecto {{domxref("BatteryManager")}},
-y `funcRef` es una función que se convoca cuando el evento de {{event("levelchange")}} sucede.
+y `funcRef` es una función que se convoca cuando el evento de [`levelchange`](/es/docs/Web/Reference/Events/levelchange) sucede.
 
 ## Ejemplo
 

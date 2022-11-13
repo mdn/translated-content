@@ -51,11 +51,7 @@ if (bigNumber === Number.POSITIVE_INFINITY) {
 
 ## Especificaciones
 
-| Especificaciones                                                                                             | Estado                   | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| ECMAScript 1st Edition. Implemented in JavaScript 1.1                                                        | Estándar                 | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-15.7.3.6', 'Number.POSITIVE_INFINITY')}}                     | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-number.positive_infinity', 'Number.POSITIVE_INFINITY')}} | {{Spec2('ES6')}}     |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

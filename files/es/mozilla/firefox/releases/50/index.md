@@ -62,7 +62,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 ### Redes
 
 - Cuando un error es encontrado durante una {{domxref("XMLHttpRequest")}} asíncrona, el método {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} ahora retorna un string vacio ({{bug(1286744)}}).
-- En lugar de retornar un `NetworkError`, ahora el asynchronous {{domxref("XMLHttpRequest")}} asíncrono que falla por CORS u otras restricciones de red, ahora lanza un {{event("error")}} que puede ser capturado como cualquier otro error ({{bug(709991)}}).
+- En lugar de retornar un `NetworkError`, ahora el asynchronous {{domxref("XMLHttpRequest")}} asíncrono que falla por CORS u otras restricciones de red, ahora lanza un [`error`](/es/docs/Web/Reference/Events/error) que puede ser capturado como cualquier otro error ({{bug(709991)}}).
 - {{domxref("XMLHttpRequest.getResponseHeader()")}} y {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} ahora también retornan encabezados vacíos por defecto. Esto puede ser controlado mediante la preferencia `network.http.keep_empty_response_headers_as_empty_string` ({{bug(918721)}}).
 - La opción `only-if-cached` fue agregada a [`Request.cache`](/es/docs/Web/API/Request/cache) ({{bug(1272436)}}).
 
@@ -90,7 +90,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 ### IndexedDB
 
-- Ahora se envía un evento {{event("close")}} al objeto {{domxref("IDBDatabase")}} cuando la base de datos respectiva es cerrada de forma inesperada ({{bug(1151017)}}).
+- Ahora se envía un evento [`close`](/es/docs/Web/Reference/Events/close) al objeto {{domxref("IDBDatabase")}} cuando la base de datos respectiva es cerrada de forma inesperada ({{bug(1151017)}}).
 
 ### Service Workers
 
@@ -103,8 +103,8 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 ### WebRTC
 
-- Adding a track to a {{domxref("MediaStream")}} now generates the {{event("addtrack")}} event as described in the specification. The event is of type {{domxref("MediaStreamTrackEvent")}} and is fired on the stream to which the track was added. You can use either {{domxref("EventTarget.addEventListener", "MediaStream.addEventListener('addtrack', ...)")}} or the {{domxref("MediaStream.onaddtrack")}} property to handle `"addtrack"` events.
-- The {{domxref("MediaStreamTrack")}} interface now supports the {{event("ended")}} event and the {{domxref("MediaStreamTrack.onended")}} event handler.
+- Adding a track to a {{domxref("MediaStream")}} now generates the [`addtrack`](/es/docs/Web/Reference/Events/addtrack) event as described in the specification. The event is of type {{domxref("MediaStreamTrackEvent")}} and is fired on the stream to which the track was added. You can use either {{domxref("EventTarget.addEventListener", "MediaStream.addEventListener('addtrack', ...)")}} or the {{domxref("MediaStream.onaddtrack")}} property to handle `"addtrack"` events.
+- The {{domxref("MediaStreamTrack")}} interface now supports the [`ended`](/es/docs/Web/Reference/Events/ended) event and the {{domxref("MediaStreamTrack.onended")}} event handler.
 - Firefox now supports the {{domxref("MediaStreamTrack.readyState")}} property, which indicates whether the track is live or permanently ended.
 - The {{domxref("MediaStreamTrack")}} methods {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} and {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} have been implemented; these let you get the most recently applied set of customized property constraints and the actual values of all of the track's constrainable properties, respectively. The accompanying data types have been documented as well.
 - The {{domxref("RTCDataChannel.stream")}} property has been removed. This was replaced with {{domxref("RTCDataChannel.id")}} in [Firefox 24](/es/docs/Mozilla/Firefox/Releases/24), but was supported for backward compatibility. Please be sure to update your code to use the `id` property if you haven't done so yet.

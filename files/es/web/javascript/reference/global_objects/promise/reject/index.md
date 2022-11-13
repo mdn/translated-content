@@ -44,10 +44,7 @@ Promise.reject(new Error('fail')).then(function() {
 
 ## Especificaciones
 
-| Specification                                                                        | Status                       | Comment                                 |
-| ------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.reject', 'Promise.reject')}} | {{Spec2('ES2015')}}     | Initial definition in an ECMA standard. |
-| {{SpecName('ESDraft', '#sec-promise.reject', 'Promise.reject')}} | {{Spec2('ESDraft')}} |                                         |
+{{Specifications}}
 
 ## Browser compatibility
 

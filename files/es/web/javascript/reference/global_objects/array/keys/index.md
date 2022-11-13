@@ -55,10 +55,7 @@ console.log(denseKeys);  // [0, 1, 2]
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-array.prototype.keys', 'Array.prototype.keys')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-array.prototype.keys', 'Array.prototype.keys')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

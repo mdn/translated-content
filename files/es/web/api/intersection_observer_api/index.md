@@ -402,7 +402,7 @@ Las constantes y variables que establecimos aquí son:
 - `decreasingColor`
   - : Similarly, this is a string defining a color we'll apply when the visibility ratio is decreasing.
 
-We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{event("load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
+We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the [`load`](/es/docs/Web/Reference/Events/load) event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
 
 #### Creating the intersection observer
 

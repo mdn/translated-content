@@ -70,13 +70,13 @@ El evento "click" se dispara cuando se presiona el botón de un dispositivo de e
 
 ## Véase también
 
-- {{event("mousedown")}}
-- {{event("mouseup")}}
-- {{event("mousemove")}}
-- {{event("click")}}
-- {{event("dblclick")}}
-- {{event("mouseover")}}
-- {{event("mouseout")}}
-- {{event("mouseenter")}}
-- {{event("mouseleave")}}
-- {{event("contextmenu")}}
+- [`mousedown`](/es/docs/Web/Reference/Events/mousedown)
+- [`mouseup`](/es/docs/Web/Reference/Events/mouseup)
+- [`mousemove`](/es/docs/Web/Reference/Events/mousemove)
+- [`click`](/es/docs/Web/Reference/Events/click)
+- [`dblclick`](/es/docs/Web/Reference/Events/dblclick)
+- [`mouseover`](/es/docs/Web/Reference/Events/mouseover)
+- [`mouseout`](/es/docs/Web/Reference/Events/mouseout)
+- [`mouseenter`](/es/docs/Web/Reference/Events/mouseenter)
+- [`mouseleave`](/es/docs/Web/Reference/Events/mouseleave)
+- [`contextmenu`](/es/docs/Web/Reference/Events/contextmenu)

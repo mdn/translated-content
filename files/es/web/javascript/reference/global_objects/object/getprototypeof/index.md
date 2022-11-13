@@ -52,10 +52,7 @@ String.prototype                   // ES6 code
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                   | Comentario          |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.2', 'Object.getPrototypeOf')}}             | {{Spec2('ES5.1')}} | Definición inicial. |
-| {{SpecName('ES6', '#sec-object.getprototypeof', 'Object.getProtoypeOf')}} | {{Spec2('ES6')}}     |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

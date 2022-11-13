@@ -127,10 +127,7 @@ Observe que, en el ejemplo anterior, no hay ninguna instrucción `await` dentro 
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario                    |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'Función async')}} | {{Spec2('ESDraft')}} | Definición inicial en ES2017. |
-| {{SpecName('ES8', '#sec-async-function-definitions', 'Función async')}}     | {{Spec2('ES8')}}         |                               |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

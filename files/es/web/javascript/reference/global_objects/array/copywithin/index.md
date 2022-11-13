@@ -143,10 +143,7 @@ if (!Array.prototype.copyWithin) {
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                       | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-array.prototype.copyWithin', 'Array.prototype.copyWithin')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-array.prototype.copyWithin', 'Array.prototype.copyWithin')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

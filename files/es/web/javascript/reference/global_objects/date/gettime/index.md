@@ -58,11 +58,7 @@ console.log('Operation took ' + (end.getTime() - start.getTime()) + ' msec');
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estatus                  | Comentario                                         |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                              | Standard                 | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.9', 'Date.prototype.getTime')}}                 | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.gettime', 'Date.prototype.getTime')}} | {{Spec2('ES6')}}     |                                                    |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

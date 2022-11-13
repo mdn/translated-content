@@ -82,9 +82,7 @@ fetch('simple.wasm').then(response =>
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentario                       |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------------------- |
-| {{SpecName('WebAssembly JS', '#the-webassembly-object', 'WebAssembly')}} | {{Spec2('WebAssembly JS')}} | Definición inicial del borrador. |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

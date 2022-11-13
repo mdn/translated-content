@@ -97,12 +97,7 @@ Tenga en cuenta que aunque `obj` no es un array, el método `push` ha incrementa
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                             | {{Spec2('ES3')}}         | Definición inicial. Implementado en JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.7', 'Array.prototype.push')}}                 | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-array.prototype.push', 'Array.prototype.push')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.push', 'Array.prototype.push')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

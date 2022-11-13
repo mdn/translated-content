@@ -282,10 +282,7 @@ const nextTick = (() => {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentario                              |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.prototype.then', 'Promise.prototype.then')}}     | {{Spec2('ES2015')}}     | Definición inicial en el estándar ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.prototype.then', 'Promise.prototype.then')}} | {{Spec2('ESDraft')}} |                                         |
+{{Specifications}}
 
 ## Compatibilidad en navegador
 

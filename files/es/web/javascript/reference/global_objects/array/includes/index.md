@@ -146,10 +146,7 @@ Si necesita admitir motores de JavaScript realmente obsoletos que no son compati
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                       | Comentarios         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES7', '#sec-array.prototype.includes', 'Array.prototype.includes')}}     | {{Spec2('ES7')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-array.prototype.includes', 'Array.prototype.includes')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

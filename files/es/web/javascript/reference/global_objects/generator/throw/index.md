@@ -56,12 +56,9 @@ g.throw(new Error('Something went wrong'));
 // { value: 42, done: false }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                        | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}}     | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

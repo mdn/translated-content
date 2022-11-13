@@ -31,7 +31,7 @@ var o = new Object();
 o.toString(); // returns [object Object]
 ```
 
-> **참고:** 자바스크립트 1.8.5부터 {{jsxref("null")}}의 `toString()`을 호출하는 경우 `[object Null]`을 반환하며, {{jsxref("undefined")}}는 `[object Undefined]`를 반환합니다. 이는 ECMAScript 제 5판과 후속 정오표에 정의되어 있습니다. See [toString으로\_객체\_클래스\_검사](#tostring으로_객체_클래스_검사).
+> **참고:** 자바스크립트 1.8.5부터 {{jsxref("null")}}의 `toString()`을 호출하는 경우 `[object Null]`을 반환하며, {{jsxref("undefined")}}는 `[object Undefined]`를 반환합니다. 이는 ECMAScript 제 5판과 후속 정오표에 정의되어 있습니다. See [toString으로 객체 클래스 검사](#tostring으로_객체_클래스_검사).
 
 ## 매개변수
 

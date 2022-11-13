@@ -54,12 +54,7 @@ new RegExp('\n').toString() === "/\\n/"; // true, desde ES5
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                       | Comentario                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES3')}}                                                                                             | {{Spec2('ES3')}}         | Definición inicial. Implementado en JavaScript 1.1.                                                          |
-| {{SpecName('ES5.1', '#sec-15.9.5.2', 'RegExp.prototype.toString')}}                             | {{Spec2('ES5.1')}}     | Agregado de la definición para escapado de caracteres especiales y "(?:)" para expresiones regulares vacías. |
-| {{SpecName('ES6', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}}         | {{Spec2('ES6')}}         |                                                                                                              |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                                                                              |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

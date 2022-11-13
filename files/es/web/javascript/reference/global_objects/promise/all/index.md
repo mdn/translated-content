@@ -95,10 +95,7 @@ Promise.all([p1, p2, p3, p4, p5]).then(values => {
 
 ## Especificaciones
 
-| Especificación                                                               | Status                       | Comentario                              |
-| ---------------------------------------------------------------------------- | ---------------------------- | --------------------------------------- |
-| {{SpecName('ES6', '#sec-promise.all', 'Promise.all')}}     | {{Spec2('ES6')}}         | Initial definition in an ECMA standard. |
-| {{SpecName('ESDraft', '#sec-promise.all', 'Promise.all')}} | {{Spec2('ESDraft')}} |                                         |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 
