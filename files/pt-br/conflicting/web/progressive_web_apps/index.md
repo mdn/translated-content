@@ -34,7 +34,7 @@ Most of the major Web applications you see in the wild have chosen this path, in
 
 See the following articles for background and other approaches to developing for mobile platforms.
 
-- [What is mobile-friendliness?](/pt-BR/Web_development/Mobile/Mobile-friendliness)
+- [What is mobile-friendliness?](/en/Web_development/Mobile/Mobile-friendliness)
 - [Responsive design](/pt-BR/docs/Web_Development/Mobile/Responsive_design)
 - [A hybrid approach](/pt-BR/docs/Web_Development/Mobile/A_hybrid_approach)
 
