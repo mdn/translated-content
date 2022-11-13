@@ -29,10 +29,6 @@ SVG é similar em escopo à tecnologia Flash, propriedade da Adobe, mas se disti
     - [Tutorial sobre como usá-lo](/pt-BR/docs/SVG_in_Firefox)
     - [SVG em XHTML](/pt-BR/docs/SVG_In_HTML_Introduction)
 
-## Comunidade
-
-- Ver os fóruns da Mozilla... {{DiscussionList("dev-tech-svg", "mozilla.dev.tech.svg")}}
-
 ## Ferramentas
 
 - [Suíte de Teste SVG](http://www.w3.org/Graphics/SVG/Test/)
