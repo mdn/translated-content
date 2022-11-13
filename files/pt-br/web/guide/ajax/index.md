@@ -31,14 +31,6 @@ Embora a letra X em AJAX corresponda ao XML, atualmente o [JSON](/pt-BR/docs/JSO
 - [Outros recursos](/pt-BR/docs/AJAX/Other_Resources)
   - : Outros recursos do AJAX que podem ser úteis.
 
-## Comunidade
-
-- Consulte os fóruns da Mozilla...
-
-{{ DiscussionList("dev-ajax", "mozilla.dev.ajax") }}
-
-- [Links da comunidade AJAX](/pt-BR/docs/AJAX/Community)
-
 ## Ferramentas
 
 - [Toolkits and frameworks](http://www.ajaxprojects.com)
