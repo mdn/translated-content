@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`result`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string indicating whether the background fetch was successful or failed.
+**`result`** は {{domxref("BackgroundFetchRegistration")}} インターフェイスの読み取り専用プロパティで、バックグラウンドフェッチが成功したか失敗したかを表す文字列を返します。
 
 このプロパティの値が変化したとき、関連する {{domxref("BackgroundFetchRegistration")}} オブジェクトで、[progress](/ja/docs/Web/API/BackgroundFetchRegistration/progress_event) イベントが発火します。
 
@@ -16,15 +16,15 @@ The **`result`** read-only property of the {{domxref("BackgroundFetchRegistratio
 下記文字列のいずれかの値をとります。
 
 - `""`
-  - : The fetch is active so there is no result.
+  - : フェッチは進行中なので、結果は未確定です。
 - `"success"`
-  - : The background fetch was successful.
+  - : バックグラウンドのフェッチは成功しました。
 - `"failure"`
-  - : The background fetch failed. This only appears when there is no ability for the browser to retry.
+  - : バックグラウンドのフェッチは失敗しました。これは、ブラウザーがリトライできないときにのみ返されます。
 
 ## 例
 
-Logging this property to the console returns a string indicating the status, or an empty string if the fetch is still active.
+このプロパティをコンソールにログ出力すると、フェッチの進行中であれば空文字列が、そうでなければ結果を表す文字列が出力されます。
 
 ```js
 console.log(bgFetch.result);
