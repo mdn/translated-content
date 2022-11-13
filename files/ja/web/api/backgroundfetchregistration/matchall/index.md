@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`matchAll()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns an array of matching {{domxref("BackgroundFetchRecord")}} objects.
+{{domxref("BackgroundFetchRegistration")}} インターフェイスの **`matchAll()`** メソッドは、マッチする {{domxref("BackgroundFetchRecord")}} オブジェクトの配列を返します。
 
 ## 構文
 
@@ -19,44 +19,34 @@ matchAll(request,options)
 ### 引数
 
 - `request`
-  - : The {{domxref("Request")}} for which you are attempting to find records.
-    This can be a {{domxref("Request")}} object or a URL.
+  - : 取得したい record の {{domxref("Request")}}。これは {{domxref("Request")}} オブジェクトまたは URL です。
 - `options` {{optional_inline}}
 
-  - : An object that sets options for the `match` operation. The available
-    options are:
+  - : `match` 操作のオプションを指定するオブジェクトです。以下が利用可能です。
 
     - `ignoreSearch`
-      - : A boolean value that specifies whether to
-        ignore the query string in the URL. For example, if set to
-        `true` the `?value=bar` part of
-        `http://foo.com/?value=bar` would be ignored when performing a match.
-        It defaults to `false`.
+      - : URL 中のクエリ文字列を無視するかどうか指定するbool 値です。例えば `true` のとき、`http://foo.com/?value=bar` の `?value=bar` 部分はマッチ処理で無視されます。デフォルトは `false` です。
     - `ignoreMethod`
-      - : A boolean value. When `true`,
-        prevents matching operations from validating the {{domxref("Request")}} `http` method.
-        If `false` (the default) only `GET` and `HEAD` are allowed.
+      - : bool 値です。`true` のとき、マッチ処理は {{domxref("Request")}} の `http` メソッドを検証しません。`false` (デフォルト値)の場合、`GET` と `HEAD` のみ許可されます。
     - `ignoreVary`
-      - : A boolean value. When `true` indicates that the [`VARY`](/ja/docs/Web/HTTP/Headers/Vary)
-        header should be ignored.
-        It defaults to `false`.
+      - : bool 値です。`true` は [`VARY`](/ja/docs/Web/HTTP/Headers/Vary) ヘッダーを無視することを意味します。デフォルトは `false` です。
 
 ### 返値
 
-A {{jsxref("Promise")}} that resolves with an array of all matching {{domxref("BackgroundFetchRecord")}} objects.
+マッチした全ての {{domxref("BackgroundFetchRecord")}} オブジェクトの配列で解決される {{jsxref("Promise")}} を返します。
 
 ### 例外
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if the {{domxref("BackgroundFetchRegistration.recordsAvailable","recordsAvailable")}} flag is `false`, indicating that there is no fetch in progress.
+  - : {{domxref("BackgroundFetchRegistration.recordsAvailable","recordsAvailable")}} フラグが `false` のとき、発生します。 これは、進行中のフェッチが存在しないことを意味します。
 
 ## 例
 
-Use `matchAll()` with no parameters to return all of the records in a background fetch.
+`matchAll()` を引数なしで呼び出すことで、バックグラウンドフェッチの全ての record を取得することができます。
 
 ```js
 const records = await bgFetch.matchAll();
-console.log(records); // an array of BackgroundFetchRecord objects
+console.log(records); // BackgroundFetchRecord オブジェクトの配列
 ```
 
 ## 仕様書
