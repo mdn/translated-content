@@ -301,7 +301,7 @@ input[type="range"] {
 <input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
-我们只对 range 类型的 input 施加 CSS 样式，将写作模式从默认改为 `bt-lr`，或 bottom-to-top 和 left-to-right（对于 Edge 和 Internet Explorer浏览器）。对 Blink 和 Webkit 浏览器可以添加 `appearance: slider-vertical` 配置：
+我们只对 range 类型的 input 施加 CSS 样式，将写作模式从默认改为 `bt-lr`，或 bottom-to-top 和 left-to-right（对于 Edge 和 Internet Explorer 浏览器）。对 Blink 和 Webkit 浏览器可以添加 `appearance: slider-vertical` 配置：
 
 ```css
 input[type="range"] {
