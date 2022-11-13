@@ -17,7 +17,7 @@ Objetos File podem ser obtidos a partir de um objeto {{ domxref("FileList") }} r
 FileReader FileReader();
 ```
 
-Veja [Using files from web applications](/en/Using_files_from_web_applications) para detalhes e exemplos.
+Veja [Using files from web applications](/pt-BR/Using_files_from_web_applications) para detalhes e exemplos.
 
 ## Propriedades
 
@@ -76,6 +76,6 @@ Veja [Using files from web applications](/en/Using_files_from_web_applications) 
 
 ## Veja também
 
-- [Using files from web applications](/en/Using_files_from_web_applications)
+- [Using files from web applications](/pt-BR/Using_files_from_web_applications)
 - {{ domxref("File") }}
 - {{ domxref("Blob") }}

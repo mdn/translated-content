@@ -81,7 +81,7 @@ A localização do usuário é impressa usando o objeto Position, que tem os seg
 - timestamp
   - : Momento em que a leitura foi feita, como `DOMTimeStamp`.
 - coords
-  - : Objecto [`nsIDOMGeoPositionCoords`](/en/XPCOM_Interface_Reference/NsIDOMGeoPositionCoords) indicando a localização.
+  - : Objecto [`nsIDOMGeoPositionCoords`](/pt-BR/XPCOM_Interface_Reference/NsIDOMGeoPositionCoords) indicando a localização.
 - address {{ gecko_minversion_inline("1.9.2") }} {{obsolete_inline("14.0")}}
   - : `nsIDOMGeoPositionAddress` objeto especificando o endereço correspondente, se disponível.
 

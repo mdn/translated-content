@@ -4,41 +4,41 @@ slug: Glossary/JSON
 original_slug: JSON
 ---
 
-**JSON** (Notação de Objetos JavaScript) e um formato de dados permutável. Ele assemelha - se próximo a um sub tipo da sintaxe do [JavaScript](/pt-BR/docs/Trash/MDN/JavaScript/About_JavaScript), mas ele não é um tipo de script. (Veja [JSON](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON) em [Referências JavaScript](/en/JavaScript/Reference) para todos os detalhes). Isto é útil quando escrevemos qualquer tipo de aplicação baseada em JavaScript, incluindo web sites e extensões de navegadores. Por exemplo, você pode armazenar informações no formato em JSON no formato de [cookies](/en/DOM/document.cookie), ou você pode armazenar as preferências de extensões em JSON como valor de texto nas preferências do navegador.
+**JSON** (Notação de Objetos JavaScript) e um formato de dados permutável. Ele assemelha - se próximo a um sub tipo da sintaxe do [JavaScript](/pt-BR/docs/Trash/MDN/JavaScript/About_JavaScript), mas ele não é um tipo de script. (Veja [JSON](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON) em [Referências JavaScript](/pt-BR/JavaScript/Reference) para todos os detalhes). Isto é útil quando escrevemos qualquer tipo de aplicação baseada em JavaScript, incluindo web sites e extensões de navegadores. Por exemplo, você pode armazenar informações no formato em JSON no formato de [cookies](/pt-BR/DOM/document.cookie), ou você pode armazenar as preferências de extensões em JSON como valor de texto nas preferências do navegador.
 
 JSON e capaz de representar números, booleanos, textos, vazios, e listas (sequência ordenada de valores) e objetos (mapeamento de valores de texto) composto por estes valores (ou por outras listas e objetos). Ele não representa nativamente tipos complexos de dados como funções, expressões regulares, datas, e muito mais. (Objetos de dados por padrão inicializam como texto contendo os dados no formato ISO, enquanto eles não mudam, a informação não é completamente perdida.) Se você precisa preservar muitos valores, você pode transformar valores como eles são inicializados, ou prioritariamente descontinuados, para habilitar JSON para representar tipos de dados adicionais.
 
 ## Documentação
 
-- [Objetos JSON](/en/JavaScript/Reference/Global_Objects/JSON)
+- [Objetos JSON](/pt-BR/JavaScript/Reference/Global_Objects/JSON)
   - : Os objetos JSON contém métodos para converter valores para Notação de objetos javascript (JSON) e para converter JSON para valores.
-- [Usando o JSON nativo](/en/Using_native_JSON)
+- [Usando o JSON nativo](/pt-BR/Using_native_JSON)
   - : Este artigo cobre o ECMAScript 5 compilando a linguagem nativa JSON somado em Gecko 1.9.1.
-- [Caminho JSON](/en/JSON/JSONPath)
+- [Caminho JSON](/pt-BR/JSON/JSONPath)
   - : Caminho JSON significa o uso XPath como sintaxe para a estrutura de requisições do JSON. Ele não é o padrão, mas apresenta maneiras de requisição em JavaScript diretamente sem precisar converte - la para xml.
-- [Baixando JSON e extensões em Javascript](/en/Downloading_JSON_and_JavaScript_in_extensions)
-  - : A pratica habitual encontrada em muitas extensões está usando XMLHttpRequest (ou outros mecanismos) para baixar Javascript ou [JSON](/en/JSON) (eles são diferentes) para um site web remoto. Uma vez o conteúdo já sido baixado, a extensão escrita procedida pelo uso [eval()](/en/Core_JavaScript_1.5_Reference/Functions/eval) para decodificar o texto contendo objetos JavaScript, a escolha e uma prática perigosa e não deve, de fato passar na revisão [AMO.](http://addons.mozilla.org) Este artigo mostra como evitar isto.
-- [JXON](/en/JXON)
+- [Baixando JSON e extensões em Javascript](/pt-BR/Downloading_JSON_and_JavaScript_in_extensions)
+  - : A pratica habitual encontrada em muitas extensões está usando XMLHttpRequest (ou outros mecanismos) para baixar Javascript ou [JSON](/pt-BR/JSON) (eles são diferentes) para um site web remoto. Uma vez o conteúdo já sido baixado, a extensão escrita procedida pelo uso [eval()](/pt-BR/Core_JavaScript_1.5_Reference/Functions/eval) para decodificar o texto contendo objetos JavaScript, a escolha e uma prática perigosa e não deve, de fato passar na revisão [AMO.](http://addons.mozilla.org) Este artigo mostra como evitar isto.
+- [JXON](/pt-BR/JXON)
   - : JXON padrões sem perdas de Notação de Objetos JavaScript XML, ele é um nome genérico pelo qual e definida a representação da árvore dos objetos JavaScript (JSON) usando XML.
-- [`Método JSON.stringify`](/en/JavaScript/Reference/Global_Objects/JSON/stringify)
+- [`Método JSON.stringify`](/pt-BR/JavaScript/Reference/Global_Objects/JSON/stringify)
   - : Converta valores para JSON, opcionalmente substituindo valores se a função for específica, ou opcionalmente incluindo somente propriedades especificas se a substituição na lista for especifica.
-- [`Método JSON.parse`](/en/JavaScript/Reference/Global_Objects/JSON/parse)
+- [`Método JSON.parse`](/pt-BR/JavaScript/Reference/Global_Objects/JSON/parse)
   - : Analisa a string como JSON, opcionalmente transforma o valor produzido pela análise.
 
 ## Ferramentas
 
-- [JSON polyfills](/en/JavaScript/Reference/Global_Objects/JSON#Browser_compatibility)
+- [JSON polyfills](/pt-BR/JavaScript/Reference/Global_Objects/JSON#Browser_compatibility)
 - [JSONSelect](http://jsonselect.org)
 
 ## Topicos Relacionados
 
-- [AJAX](/en/AJAX),
-- [JavaScript](/en/JavaScript),
-- [XUL](/en/XUL)
+- [AJAX](/pt-BR/AJAX),
+- [JavaScript](/pt-BR/JavaScript),
+- [XUL](/pt-BR/XUL)
 
 ## Usando JSON atráves de objetos JavaScript JSON
 
-O mais simples, fácil caminho para usar JSON e através do padrão de [objetos JSON](/en/JavaScript/Reference/Global_Objects/JSON) em JavaScript. Use [JSON.stringify](/en/JavaScript/Reference/Global_Objects/JSON/stringify) para inicializar valores em JSON, e use [JSON.parse](/en/JavaScript/Reference/Global_Objects/JSON/parse) para deserializar um valor JSON.
+O mais simples, fácil caminho para usar JSON e através do padrão de [objetos JSON](/pt-BR/JavaScript/Reference/Global_Objects/JSON) em JavaScript. Use [JSON.stringify](/pt-BR/JavaScript/Reference/Global_Objects/JSON/stringify) para inicializar valores em JSON, e use [JSON.parse](/pt-BR/JavaScript/Reference/Global_Objects/JSON/parse) para deserializar um valor JSON.
 
 Por exemplo, para inicializar um objeto JavaScript, use o método JSON.stringify():
 
@@ -56,7 +56,7 @@ var JSONfoo = JSON.stringify(foo);
 var backToJS = JSON.parse(JSONfoo);
 ```
 
-Para mais informações, veja a [documentação de objetos JSON](/en/JavaScript/Reference/Global_Objects/JSON).
+Para mais informações, veja a [documentação de objetos JSON](/pt-BR/JavaScript/Reference/Global_Objects/JSON).
 
 ## Método toJSON()
 
@@ -111,7 +111,7 @@ var backToJS = nativeJSON.decode(JSONfoo);
 
 ## Usando JSON em outras situações
 
-Enquanto na teoria e possível usar JSON usando [eval](/en/JavaScript/Reference/Global_Objects/eval) (mas somente para descerializar objetos, e não para inicializar textos) ou usando [json2.js](https://github.com/douglascrockford/JSON-js), Está não é uma boa ideia. Isto não e seguro para analisar JSON usando eval por que ele permite muito mais sintaxe que JSON faz (Melhora para execução de um código aleatório). Como para json2.js, este problema e que ele adiciona métodos para compilação como Object.prototype, escolha o mais útil para parar a execução do código antecipando está possibilidade.
+Enquanto na teoria e possível usar JSON usando [eval](/pt-BR/JavaScript/Reference/Global_Objects/eval) (mas somente para descerializar objetos, e não para inicializar textos) ou usando [json2.js](https://github.com/douglascrockford/JSON-js), Está não é uma boa ideia. Isto não e seguro para analisar JSON usando eval por que ele permite muito mais sintaxe que JSON faz (Melhora para execução de um código aleatório). Como para json2.js, este problema e que ele adiciona métodos para compilação como Object.prototype, escolha o mais útil para parar a execução do código antecipando está possibilidade.
 
 Você deve quase sempre usa - lo ou os métodos formulados para usar JSON em preferências para qualquer outro caminho.
 
