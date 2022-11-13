@@ -3,6 +3,8 @@ title: source
 slug: Web/HTML/Element/Source
 ---
 
+{{HTMLSidebar}}
+
 ## Sumário
 
 O elemento `source` é utilizado para especificar múltiplos recursos de mídia de elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}} ou {{HTMLElement("video")}} em HTML5. É um elemento vazio. É normalmente usado para disponibilizar [multiple formats supported by different browsers](/En/Media_formats_supported_by_the_audio_and_video_elements).
@@ -13,7 +15,7 @@ O elemento `source` é utilizado para especificar múltiplos recursos de mídia 
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | Omissão de tag            | Deve ter uma tag de início, mas não deve ter uma tag de fim.                                                     |
 | Elementos pais permitidos | {{HTMLElement("picture")}}, {{ HTMLElement("audio") }}, {{ HTMLElement("video") }} |
-| Documento normativo       | [HTML5, section 4.8.8](http://www.w3.org/TR/html5/video.html#the-source-element)                                 |
+| Documento normativo       | [HTML5, section 4.8.8](https://www.w3.org/TR/html5/video.html#the-source-element)                                 |
 
 ## Atributos
 
@@ -22,7 +24,7 @@ Como todos os outros elementos de HTML, esse elemento suporta os [global attribu
 - {{ htmlattrdef("src") }}
   - : Requerido, endereço do arquivo de mídia.
 - {{ htmlattrdef("type") }}
-  - : O tipo MIME do arquivo, opcionalmente com um parametro de `codecs`. Veja o [RFC 4281](http://www.rfc-editor.org/rfc/rfc4281.txt) para informações sobre como especificar codec.
+  - : O tipo MIME do arquivo, opcionalmente com um parametro de `codecs`. Veja o [RFC 4281](https://www.rfc-editor.org/rfc/rfc4281.txt) para informações sobre como especificar codec.
 - {{ htmlattrdef("media") }}
   - : Definição do tipo de mídia ([Media query](/pt-BR/CSS/Media_queries)) pretendido.
 
@@ -48,4 +50,4 @@ Para mais exemplos, veja [Using audio and video in Firefox](/pt-BR/Using_HTML5_a
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.source")}}
+{{Compat}}
