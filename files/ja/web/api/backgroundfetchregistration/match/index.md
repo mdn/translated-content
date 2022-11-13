@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`match()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns the first matching {{domxref("BackgroundFetchRecord")}}.
+{{domxref("BackgroundFetchRegistration")}} インターフェイスの **`match()`** メソッドは、最初にマッチした {{domxref("BackgroundFetchRecord")}} を返します。
 
 ## 構文
 
@@ -19,56 +19,43 @@ match(request, options)
 ### 引数
 
 - `request`
-  - : The {{domxref("Request")}} for which you are attempting to find records.
-    This can be a {{domxref("Request")}} object or a URL.
+  - : 取得したい record の {{domxref("Request")}}。これは {{domxref("Request")}} オブジェクトまたは URL です。
 - `options` {{optional_inline}}
 
-  - : An object that sets options for the `match` operation. The available
-    options are:
+  - : `match` 操作のオプションを指定するオブジェクトです。以下が利用可能です。
 
     - `ignoreSearch`
-      - : A boolean value that specifies whether to
-        ignore the query string in the URL. For example, if set to
-        `true` the `?value=bar` part of
-        `http://foo.com/?value=bar` would be ignored when performing a match.
-        It defaults to `false`.
+      - : URL 中のクエリ文字列を無視するかどうか指定するbool 値です。例えば `true` のとき、`http://foo.com/?value=bar` の `?value=bar` 部分はマッチ処理で無視されます。デフォルトは `false` です。
     - `ignoreMethod`
-      - : A boolean value. When `true`,
-        prevents matching operations from validating the {{domxref("Request")}} `http` method.
-        If `false` (the default) only `GET` and `HEAD` are allowed.
+      - : bool 値です。`true` のとき、マッチ処理は {{domxref("Request")}} の `http` メソッドを検証しません。`false` (デフォルト値)の場合、`GET` と `HEAD` のみ許可されます。
     - `ignoreVary`
-      - : A boolean value. When `true` indicates that the [`VARY`](/ja/docs/Web/HTTP/Headers/Vary)
-        header should be ignored.
-        It defaults to `false`.
+      - : bool 値です。`true` は [`VARY`](/ja/docs/Web/HTTP/Headers/Vary) ヘッダーを無視することを意味します。デフォルトは `false` です。
 
 ### 返値
 
-A {{jsxref("Promise")}} that resolves with the first {{domxref("BackgroundFetchRecord")}} that matches
-the request or {{jsxref("undefined")}} if no match is found.
+最初に request にマッチした {{domxref("BackgroundFetchRecord")}} か、または何もマッチしなかった場合には {{jsxref("undefined")}} で解決される {{jsxref("Promise")}} を返します。
 
-> **Note:** `BackgroundFetchRegistration.match()` is basically identical to
-> {{domxref("BackgroundFetchRegistration.matchAll()")}}, except that rather than resolving with an array of
-> all matching records, it resolves with the first matching record only.
+> **メモ:** `BackgroundFetchRegistration.match()` は、基本的には {{domxref("BackgroundFetchRegistration.matchAll()")}} と同じですが、マッチする全ての record を配列で返すのではなく、最初にマッチした record のみで解決するという違いがあります。
 
 ### 例外
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if you call `match()` when there are no fetches in progress. This state will be reflected by {{domxref("BackgroundFetchRegistration.recordsAvailable")}} being set to `false`.
+  - : 進行中の fetch がないときに `match()` を呼び出すと発生します。 この状態は、{{domxref("BackgroundFetchRegistration.recordsAvailable")}} が `false` に設定されることで反映されます。
 
 ## 例
 
-In this example we look for a record with the URL "/ep-5.mp3". If a {{domxref("BackgroundFetchRecord")}} is found then we can return some information about it.
+以下の例では URL に "/ep-5.mp3" を含む record を検索しており、{{domxref("BackgroundFetchRecord")}} が見つかると、関連する情報を取得することができます。
 
 ```js
 bgFetch.match("/ep-5.mp3").then(async (record) => {
   if (!record) {
-    console.log("No record found");
+    console.log("レコードは見つかりませんでした。");
     return;
   }
 
-  console.log(`Here's the request`, record.request);
+  console.log(`リクエスト： `, record.request);
   const response = await record.responseReady;
-  console.log(`And here's the response`, response);
+  console.log(`応答： `, response);
 });
 ```
 
