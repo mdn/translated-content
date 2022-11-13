@@ -106,7 +106,7 @@ l10n:
 - {{domxref("GainNode")}}
   - : **`GainNode`** インターフェイスは音量の変化を表します。これは {{domxref("AudioNode")}} の音声処理モジュールで、出力に伝搬する前に入力データに指定されたゲイン ( _gain_ ) を発生させます。
 - {{domxref("WaveShaperNode")}}
-  - : **`WaveShaperNode`** インターフェイスは非線形の歪み器（ディストーション）を表します。これは {{domxref("AudioNode")}} で、カーブを使用して信号に波形整形歪みを適用します。明らかな歪み効果の他に、信号に暖かみのある感じを追加するために多く使用されます。 
+  - : **`WaveShaperNode`** インターフェイスは非線形の歪み器（ディストーション）を表します。これは {{domxref("AudioNode")}} で、カーブを使用して信号に波形整形歪みを適用します。明らかな歪み効果の他に、信号に暖かみのある感じを追加するために多く使用されます。
 - {{domxref("PeriodicWave")}}
   - : {{ domxref("OscillatorNode") }} の出力を形成するために使用できる周期的な波形を記述します。
 - {{domxref("IIRFilterNode")}}
