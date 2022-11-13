@@ -14,58 +14,58 @@ browser-compat: api.BackgroundFetchUpdateUIEvent.updateUI
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`updateUI()`** method of the {{domxref("BackgroundFetchUpdateUIEvent")}} interface updates the title and icon in the user interface to show the status of a background fetch.
+Метод **`updateUI()`** интерфейса {{domxref("BackgroundFetchUpdateUIEvent")}} обновляет заголовок и иконку в пользовательском интерфейсе, для того чтобы показать статус фонового запроса.
 
-This method may only be run once, to notify the user on a failed or a successful fetch.
+Этот метод может быть вызван только один раз, чтобы уведомить пользователя об успехе или провале фонового запроса.
 
-## Syntax
+## Синтаксис
 
 ```js-nolint
 updateUI(options)
 ```
 
-### Parameters
+### Параметры
 
 - `options` {{optional_inline}}
 
-  - : An object containing any of the following:
+  - : Объект, содержащий любое из следующих значений:
 
     - `icons` {{optional_inline}}
 
-      - : A list of one or more image resources, containing icons for use in the user interface. An image resource is an object containing:
+      - : Список из одного или более ресурсов изображений, содержащих иконки для использования в интерфейсе пользователя. Ресурс изображения это объект, содержащий:
 
         - `src`
-          - : A string which is a URL of an image.
+          - : Строка с URL изображения.
         - `sizes` {{optional_inline}}
-          - : A string which is equivalent to a {{htmlelement("link")}} `sizes` attribute.
+          - : Строка, которая эквивалентна аттрибуту `sizes` элемента {{htmlelement("link")}}.
         - `type` {{optional_inline}}
-          - : A string containing an image MIME type.
+          - : Строка, содержащая MIME-тип изображения.
         - `label` {{optional_inline}}
-          - : A string providing a name for the associated image.
+          - : Строка, содержащая имя для изображения.
 
     - `title` {{optional_inline}}
-      - : A string containing the new title of the user interface.
+      - : Строка, содержащая новый заголовок для интерфейса пользователя.
 
-### Return value
+### Возвращаемое значение
 
-A {{jsxref("Promise")}}.
+{{jsxref("Promise")}}.
 
-### Exceptions
+### Исключения
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if any of the following are true:
-    - The {{domxref("Event.isTrusted","isTrusted")}} property is `false`.
-    - The {{domxref("BackgroundFetchUpdateUIEvent")}} UI updated flag is already set, indicating that the `updateUI()` method has already been called.
-    - The {{domxref("BackgroundFetchUpdateUIEvent")}} is not active.
+  - : Возвращается, если любое из следующих утверждений верно:
+    - Свойство {{domxref("Event.isTrusted","isTrusted")}} - `false`.
+    - {{domxref("BackgroundFetchUpdateUIEvent")}} флаг обновения UI уже установлен, указывая на то, что метод `updateUI()` уже был вызван.
+    - {{domxref("BackgroundFetchUpdateUIEvent")}} не активен.
 
-## Examples
+## Примеры
 
-The following example demonstrates updating the UI with a title and image icon on a successful fetch.
+Следующий пример демонстрирует обновление в UI заголовка и иконки, при успешном завершении запроса.
 
 ```js
 addEventListener("backgroundfetchsuccess", (event) => {
   event.updateUI({
-    title: "Episode 5 ready to listen!",
+    title: "Эпизод 5 готов к прослушиванию!",
     icon: {
       src: "path/to/success.ico",
       sizes: "16x16 32x32 64x64",
@@ -74,10 +74,10 @@ addEventListener("backgroundfetchsuccess", (event) => {
 });
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
