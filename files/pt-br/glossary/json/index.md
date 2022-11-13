@@ -4,13 +4,13 @@ slug: Glossary/JSON
 original_slug: JSON
 ---
 
-**JSON** (Notação de Objetos JavaScript) e um formato de dados permutável. Ele assemelha - se próximo a um sub tipo da sintaxe do [JavaScript](/pt-BR/docs/Trash/MDN/JavaScript/About_JavaScript), mas ele não é um tipo de script. (Veja [JSON](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON) em [Referências JavaScript](/pt-BR/JavaScript/Reference) para todos os detalhes). Isto é útil quando escrevemos qualquer tipo de aplicação baseada em JavaScript, incluindo web sites e extensões de navegadores. Por exemplo, você pode armazenar informações no formato em JSON no formato de [cookies](/pt-BR/DOM/document.cookie), ou você pode armazenar as preferências de extensões em JSON como valor de texto nas preferências do navegador.
+**JSON** (Notação de Objetos JavaScript) e um formato de dados permutável. Ele assemelha - se próximo a um sub tipo da sintaxe do [JavaScript](/pt-BR/docs/Trash/MDN/JavaScript/About_JavaScript), mas ele não é um tipo de script. (Veja [JSON](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON) em [Referências JavaScript](/pt-BR/docs/Web/JavaScript/Reference) para todos os detalhes). Isto é útil quando escrevemos qualquer tipo de aplicação baseada em JavaScript, incluindo web sites e extensões de navegadores. Por exemplo, você pode armazenar informações no formato em JSON no formato de [cookies](/pt-BR/docs/Web/API/Document/cookie), ou você pode armazenar as preferências de extensões em JSON como valor de texto nas preferências do navegador.
 
 JSON e capaz de representar números, booleanos, textos, vazios, e listas (sequência ordenada de valores) e objetos (mapeamento de valores de texto) composto por estes valores (ou por outras listas e objetos). Ele não representa nativamente tipos complexos de dados como funções, expressões regulares, datas, e muito mais. (Objetos de dados por padrão inicializam como texto contendo os dados no formato ISO, enquanto eles não mudam, a informação não é completamente perdida.) Se você precisa preservar muitos valores, você pode transformar valores como eles são inicializados, ou prioritariamente descontinuados, para habilitar JSON para representar tipos de dados adicionais.
 
 ## Documentação
 
-- [Objetos JSON](/pt-BR/JavaScript/Reference/Global_Objects/JSON)
+- [Objetos JSON](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON)
   - : Os objetos JSON contém métodos para converter valores para Notação de objetos javascript (JSON) e para converter JSON para valores.
 - [Usando o JSON nativo](/pt-BR/Using_native_JSON)
   - : Este artigo cobre o ECMAScript 5 compilando a linguagem nativa JSON somado em Gecko 1.9.1.
