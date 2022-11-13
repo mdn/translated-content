@@ -51,9 +51,7 @@ El evento submit no se genera cuando el usuario llama a la función `form.submit
 
 ## Especificaciones
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onsubmit','onsubmit')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Browser Compatibility
 

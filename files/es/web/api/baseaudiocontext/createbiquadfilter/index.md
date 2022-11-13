@@ -52,9 +52,7 @@ biquadFilter.gain.value = 25;
 
 ## Especificaciones
 
-| Especificaciones                                                                                                                 | Estados                              | Comentario |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createbiquadfilter', 'createBiquadFilter()')}} | {{Spec2('Web Audio API')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con el navegador
 

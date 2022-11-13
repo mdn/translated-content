@@ -25,9 +25,7 @@ document.onselectstart = function() { console.log("¡Selección iniciada!"); };
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Observaciones      |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Selection API','','GlobalEventHandlers.onselectstart')}} | {{Spec2('Selection API')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

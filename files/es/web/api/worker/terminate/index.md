@@ -34,10 +34,7 @@ myWorker.terminate();
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                           | Comentario                                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#dom-worker-terminate", "Worker.postMessage()")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("Web Workers")}}. |
-| {{SpecName('Web Workers', "#dom-worker-terminate", "Worker.postMessage()")}} | {{Spec2('Web Workers')}} | Definición inicial.                                  |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

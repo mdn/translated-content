@@ -133,9 +133,7 @@ fetch(myRequest)
 
 ## Especificaciones
 
-| Especificación                                                   | Estado                   | Comentario         |
-| ---------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#request-class','Request')}} | {{Spec2('Fetch')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

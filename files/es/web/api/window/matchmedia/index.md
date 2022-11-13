@@ -40,9 +40,7 @@ Consulte [Probando media queries](/es/docs/DOM/Using_media_queries_from_code) pa
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-window-matchmedia", "Window.matchMedia()")}} | {{Spec2("CSSOM View")}} | Definición initial |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

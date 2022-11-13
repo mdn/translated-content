@@ -31,9 +31,7 @@ function isInPage(node) {
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-node-contains", "Node.contains()")}} | {{Spec2("DOM WHATWG")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

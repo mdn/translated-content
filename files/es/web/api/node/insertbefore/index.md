@@ -129,13 +129,7 @@ Cuando el elemento no tiene ub primer hijo, entonces `firstChild` es `null`. Aun
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                           | Comentario                                   |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------- |
-| {{SpecName('DOM WHATWG','#dom-node-insertbefore','Node.insertBefore')}}             | {{Spec2('DOM WHATWG')}} | Corrige errores en el algoritmo de inserción |
-| {{SpecName('DOM4','#dom-node-insertbefore','Node.insertBefore')}}                     | {{Spec2('DOM4')}}         | Describe el algoritmo con mayor detalle      |
-| {{SpecName('DOM3 Core','core.html#ID-952280727','Node.insertBefore')}}                 | {{Spec2('DOM3 Core')}}     | Sin cambios notables                         |
-| {{SpecName('DOM2 Core','core.html#ID-952280727','Node.insertBefore')}}                 | {{Spec2('DOM2 Core')}}     | Sin cambios notables                         |
-| {{SpecName('DOM1','level-one-core.html#method-insertBefore','Node.insertBefore')}} | {{Spec2('DOM1')}}         | Introducido                                  |
+{{Specifications}}
 
 ## Ver también
 

@@ -59,11 +59,9 @@ En Safari, si el usuario presiona el botón Cancel, la función devuelve una cad
 
 Esta función no tiene efecto en la versión Modern UI/Metro de Internet Explorer para Windows 8. No se muestra un diálogo al usuario, y siempre devuelve `undefined`. No está claro si esto es un bug o un comportamiento previsto. Las versiones de escritorio de IE sí implementan esta función
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                       | Estado                                       | Comentarios        |
-| ------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('HTML5 Web application', '#dom-prompt', 'prompt()')}} | {{Spec2('HTML5 Web application')}} | Definición inicial |
+{{Specifications}}
 
 ## Véase también
 

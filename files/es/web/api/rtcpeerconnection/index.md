@@ -102,11 +102,9 @@ The `RTCSignalingState` enum specifies the possible values of {{domxref("RTCPeer
 | `"have-remote-pranswer"`            | A provisional answer has been received and successfully applied in response to an offer previously sent and established by calling `setLocalDescription()`.                                                                                                                                                                                                                                                                                                             |
 | `"closed"` {{deprecated_inline}} | The connection is closed.This value moved into the [`RTCPeerConnectionState` enum](#RTCPeerConnectionState_enum) in the May 13, 2016 draft of the specification, as it reflects the state of the `RTCPeerConnection`, not the signaling connection. You now detect a closed connection by checking for {{domxref("RTCPeerConnection.connectionState", "connectionState")}} to be `"closed"` instead.                                               |
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                    | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('WebRTC 1.0', '#interface-definition', 'RTCPeerConnection')}} | {{Spec2('WebRTC 1.0')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -71,9 +71,7 @@ mql.addListener(screenTest);
 
 ## Especificaciones
 
-| Especificaciones                                                                                         | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#the-mediaquerylist-interface", "MediaQueryList")}} | {{Spec2("CSSOM View")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

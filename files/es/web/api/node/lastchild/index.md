@@ -29,12 +29,7 @@ var corner_td = tr.lastChild;
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG', '#dom-node-lastchild', 'Node.lastChild')}}         | {{Spec2('DOM WHATWG')}} | Sin cambio         |
-| {{SpecName('DOM3 Core', 'core.html#ID-61AD09FB', 'Node.lastChild')}}     | {{Spec2('DOM3 Core')}}     | Sin cambio         |
-| {{SpecName('DOM2 Core', 'core.html#ID-61AD09FB', 'Node.lastChild')}}     | {{Spec2('DOM2 Core')}}     | Sin cambio         |
-| {{SpecName('DOM1', 'level-one-core.html#ID-61AD09FB', 'Node.lastChild')}} | {{Spec2('DOM1')}}         | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad en navegador
 

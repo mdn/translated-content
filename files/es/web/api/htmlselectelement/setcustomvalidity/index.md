@@ -18,12 +18,9 @@ selectElt.setCustomValidity(string);
 
 - `string` is the {{domxref("DOMString")}} containing the error message.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                                | Status                           | Comment                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-cva-setcustomvalidity', 'HTMLSelectElement.setCustomValidity()')}}         | {{Spec2('HTML WHATWG')}} | No change since the latest snapshot, {{SpecName('HTML5 W3C')}}. |
-| {{SpecName('HTML5 W3C', 'forms.html#dom-cva-setcustomvalidity', 'HTMLSelectElement.setCustomValidity()')}} | {{Spec2('HTML5 W3C')}}     | Initial definition, snapshot of {{SpecName('HTML WHATWG')}}   |
+{{Specifications}}
 
 ## Browser compatibility
 

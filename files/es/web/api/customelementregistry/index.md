@@ -76,11 +76,9 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 > **Nota:** The `CustomElementRegistry` is available through the {{domxref("Window.customElements")}} property.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                        | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "custom-elements.html#customelementregistry", "CustomElementRegistry")}} | {{Spec2("HTML WHATWG")}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

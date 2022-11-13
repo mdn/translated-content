@@ -52,9 +52,7 @@ _La interfaz `PerformanceNavigation` no hereda ninguna propiedad._
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estado                                   | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Navigation Timing', '#sec-navigation-info-interface', 'PerformanceNavigation')}} | {{Spec2('Navigation Timing')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

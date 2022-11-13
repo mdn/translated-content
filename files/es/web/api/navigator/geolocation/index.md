@@ -27,9 +27,7 @@ geo = navigator.geolocation
 
 ## Especificaciones
 
-| Especificación                       | Estado                           | Comentario             |
-| ------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Especificación inicial |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

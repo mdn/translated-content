@@ -28,10 +28,7 @@ var isSameNode = node.isSameNode(other);
 
 ## Especificaciones
 
-| Specification                                                                                        | Status                           | Comment                         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-node', 'Node')}}                             | {{Spec2('DOM WHATWG')}} | Eliminado de la especificación. |
-| {{SpecName('DOM3 Core', 'core.html#Node3-isSameNode', 'Node.isSameNode()')}} | {{Spec2('DOM3 Core')}}     | Definición inicial              |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

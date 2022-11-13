@@ -28,9 +28,7 @@ data = ClipboardEvent.clipboardData
 
 ## Especificaciones
 
-| Especificación                                                                                                                           | Estado                               | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('Clipboard API', '#widl-ClipboardEvent-clipboardData', 'ClipboardEvent.clipboardData') }} | {{ Spec2('Clipboard API') }} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

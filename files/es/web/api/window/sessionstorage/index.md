@@ -59,9 +59,7 @@ field.addEventListener("change", function() {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('Web Storage', '#the-sessionstorage-attribute', 'sessionStorage')}} | {{Spec2('Web Storage')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

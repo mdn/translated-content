@@ -45,9 +45,7 @@ myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                   | Comentario         |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#dom-request-headers','headers')}} | {{Spec2('Fetch')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

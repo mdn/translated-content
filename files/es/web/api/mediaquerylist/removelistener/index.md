@@ -50,9 +50,7 @@ mql.removeListener(screenTest);
 
 ## Especificaciones
 
-| Especificaciones                                                                                             | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-mediaquerylist-removelistener", "removeListener")}} | {{Spec2("CSSOM View")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

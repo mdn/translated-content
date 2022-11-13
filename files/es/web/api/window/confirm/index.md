@@ -39,11 +39,9 @@ A partir de la versión 46.0 de Chrome este método es bloqueado dentro de un {{
 
 El argumento es opcional y no requerido por la especificación.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                           | Estado                                       | Comentarios         |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('HTML5 Web application', '#dom-confirm', 'confirm()')}} | {{Spec2('HTML5 Web application')}} | Definición inicial. |
+{{Specifications}}
 
 ## Ver también
 

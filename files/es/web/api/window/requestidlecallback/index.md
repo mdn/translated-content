@@ -39,9 +39,7 @@ Ver [ejemplo](/es/docs/Web/API/Background_Tasks_API#Example) en el artículo [Pl
 
 ## Especificaciones
 
-| Especificación                               | Estado                                   | Comentarios         |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Background Tasks')}} | {{Spec2('Background Tasks')}} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

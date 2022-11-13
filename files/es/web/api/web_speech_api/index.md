@@ -71,11 +71,9 @@ For more details on using these features, see [Using the Web Speech API](/es/doc
 
 The [Web Speech API repo](https://github.com/mdn/web-speech-api/) on GitHub contains demos to illustrate speech recognition and synthesis.
 
-## Specifications
+## Especificaciones
 
-| Specification                            | Status                               | Comment            |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Web Speech API')}} | {{Spec2('Web Speech API')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

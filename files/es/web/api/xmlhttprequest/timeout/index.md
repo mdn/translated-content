@@ -45,9 +45,7 @@ xhr.send(null);
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                               | Comentario             |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-timeout-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

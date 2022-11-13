@@ -38,11 +38,9 @@ Desde Firefox 7, no es posible para un sitio web mover una ventana en el navegad
 1. No puedes mover una ventana o pestaña que no haya sido creada por window\.open.
 2. No puedes mover una ventana o pestaña cuando esta en una ventana con más de una sola pestaña.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{ SpecName('CSSOM View', '#dom-window-moveby', 'window.moveBy()') }} | {{ Spec2('CSSOM View') }} |            |
+{{Specifications}}
 
 ## Compatilidad de Navegador
 

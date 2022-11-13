@@ -30,9 +30,7 @@ if (frameEl) {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Observaciones           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------- |
-| {{ SpecName('HTML WHATWG', '#dom-frameelement', 'Window.frameElement') }} | {{ Spec2('WebRTC 1.0') }} | Especificación inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

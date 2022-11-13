@@ -520,12 +520,9 @@ Always provide a meaningful name to your target attribute and try to reuse such 
 - Unrequested popup windows
   - : Script-initiated windows opening automatically without the user's consent.
 
-## Especificación
+## Especificaciones
 
-| Specification                                                                                                                                                    | Status                           | Comment                                       |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-open', 'Window.open()')}}                                                                     | {{Spec2('HTML WHATWG')}} |                                               |
-| {{ SpecName('CSSOM View', '#the-features-argument-to-the-open()-method', 'The features argument to the open() method') }} | {{ Spec2('CSSOM View') }} | Defines the effect of the `features` argument |
+{{Specifications}}
 
 ## Notas
 

@@ -31,9 +31,7 @@ console.log(navigator.doNotTrack);
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                       | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("Tracking", "#widl-Navigator-doNotTrack", "Navigator.doNotTrack")}} | {{Spec2("Tracking")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

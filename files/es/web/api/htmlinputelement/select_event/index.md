@@ -52,8 +52,6 @@ para disparar el evento onselect.
 
 El evento select sólo se genera cuando es seleccionado texto dentro de un control de entrada (INPUT) de tipo text o textarea. El evento es disparado _después_ de que el texto haya sido seleccionado.
 
-## Especificación
+## Especificaciones
 
-| Especifiación                                                                                    | Estado                           | Observaciones |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onselect','onselect')}} | {{Spec2('HTML WHATWG')}} |               |
+{{Specifications}}

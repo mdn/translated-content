@@ -55,9 +55,7 @@ function setStyles() {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentarios |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('Web Storage', '#dom-storage-getitem', 'getItem()')}} | {{Spec2('Web Storage')}} |             |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -56,8 +56,6 @@ function resize()
 
 El evento **resize** es activado después de que la ventana ha sido redimensionada.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                   | Status                           | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onresize','onresize')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}

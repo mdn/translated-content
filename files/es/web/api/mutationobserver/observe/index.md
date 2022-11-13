@@ -60,9 +60,7 @@ De manera que en teoria si mantiene la pista de los objetos {{domxref("MutationR
 
 ## Especificaciones
 
-| Specification                                                                                                            | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('DOM WHATWG', '#dom-mutationobserver-observe', 'MutationObserver.observe()')}} | {{ Spec2('DOM WHATWG') }} |         |
+{{Specifications}}
 
 ## Compatibilidad
 

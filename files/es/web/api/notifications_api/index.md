@@ -47,11 +47,9 @@ In addition, the Notifications API spec specifies a number of additions to the [
 - {{domxref("NotificationEvent")}}
   - : A specific type of event object, based on {{domxref("ExtendableEvent")}}, which represents a notification that has fired.
 
-## Specifications
+## Especificaciones
 
-| Specification                                | Status                                   | Comment         |
-| -------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Browser compatibility
 
