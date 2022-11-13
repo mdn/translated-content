@@ -13,32 +13,32 @@ browser-compat: api.BackgroundFetchUpdateUIEvent.BackgroundFetchUpdateUIEvent
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`BackgroundFetchUpdateUIEvent()`** constructor creates a new {{domxref("BackgroundFetchUpdateUIEvent")}} object. This constructor is not typically used as the browser creates these objects itself and provides them to background fetch event callbacks.
+Конструктор **`BackgroundFetchUpdateUIEvent()`** создаёт новый объект {{domxref("BackgroundFetchUpdateUIEvent")}}. Этот конструктор обычно не используется, так как браузер сам создаёт эти объекты и предоставляет их для колбэков фонового запроса.
 
-## Syntax
+## Синтаксис
 
 ```js-nolint
 new BackgroundFetchEvent(type, options)
 ```
 
-### Parameters
+### Параметры
 
 - `type`
-  - : A string with the name of the event.
-    It is case-sensitive and browsers set it to `backgroundfetchsuccess` or `backgroundfetchfail`.
+  - : Строка с именем события.
+    Эта строка чувствительна к регистру и браузеры устанавливают её значение в `backgroundfetchsuccess` или `backgroundfetchfail`.
 - `options`
-  - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, has the following properties:
+  - : Объект, который , _в дополнение к свойствам, определённым в{{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, имеет следующие свойства:
     - `registration`
-      - : A {{domxref("BackgroundFetchRegistration")}} object.
+      - : Объект {{domxref("BackgroundFetchRegistration")}}.
 
-### Return value
+### Возвращаемое значение
 
-A new {{domxref("BackgroundFetchUpdateUIEvent")}} object.
+Новый объект {{domxref("BackgroundFetchUpdateUIEvent")}}.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

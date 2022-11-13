@@ -13,27 +13,27 @@ browser-compat: api.BackgroundFetchUpdateUIEvent
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`BackgroundFetchUpdateUIEvent`** interface of the {{domxref('Background Fetch API','','',' ')}} is an event type for the {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} events, and provides a method for updating the title and icon of the app to inform a user of the success or failure of a background fetch.
+Интерфейс **`BackgroundFetchUpdateUIEvent`**, из набора {{domxref('Background Fetch API','','',' ')}} это тип события для событий {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} и {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}}, который предосталвяет метод для обновления заголовка и иконки приложения, для информирования юзера об успехе или провале фонового запроса.
 
 {{InheritanceDiagram}}
 
-## Constructor
+## Конструктор
 
 - {{domxref("BackgroundFetchUpdateUIEvent.BackgroundFetchUpdateUIEvent()", "BackgroundFetchUpdateUIEvent()")}} {{Experimental_Inline}}
-  - : Creates a new `BackgroundFetchUIEvent` object. This constructor is not typically used, as the browser creates these objects itself for the {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} events.
+  - : Создаёт новый объект `BackgroundFetchUIEvent`. Этот конструктор обычно не используется, так как браузер сам создаёт эти объекты для событий {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} и {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}}.
 
-## Instance properties
+## Свойства экземпляра
 
-_This interface doesn't implement any specific properties, but inherits properties from {{domxref("Event")}}, and {{domxref("BackgroundFetchEvent")}}._
+_Этот интерфейс не реализует каких-либо особенных свойств, но наследует свойства {{domxref("Event")}}, и {{domxref("BackgroundFetchEvent")}}._
 
-## Instance methods
+## Методы экземпляра
 
 - {{domxref("BackgroundFetchUpdateUIEvent.updateUI()")}} {{Experimental_Inline}}
-  - : Updates the title and icon in the user interface to show the status of a background fetch. Resolves with a {{jsxref("Promise")}}.
+  - : Обновляет заголовок и иконку в пользовательском интерфейсе, чтобы показать статус фонового запроса. Результатом работы является {{jsxref("Promise")}}.
 
-## Examples
+## Примеры
 
-In this example, the `backgroundfetchsuccess` event is listened for, indicating that a fetch has completed successfully. The {{domxref("BackgroundFetchUpdateUIEvent.updateUI()", "updateUI()")}} method is then called, with a message to let the user know the episode they downloaded is ready.
+В этом примере слушается событие `backgroundfetchsuccess`, для того чтобы показать, что фоновый запрос успешно завершился. Затем вызывается метод {{domxref("BackgroundFetchUpdateUIEvent.updateUI()", "updateUI()")}}, дающий пользователю знать, что загруженный им эпизод готов.
 
 ```js
 addEventListener("backgroundfetchsuccess", (event) => {
@@ -41,30 +41,30 @@ addEventListener("backgroundfetchsuccess", (event) => {
 
   event.waitUntil(
     (async () => {
-      // Create/open a cache.
+      // Создать/открыть кэш.
       const cache = await caches.open("downloads");
-      // Get all the records.
+      // Получить все записи.
       const records = await bgFetch.matchAll();
-      // Copy each request/response across.
+      // Копировать каждый запрос/ответ.
       const promises = records.map(async (record) => {
         const response = await record.responseReady;
         await cache.put(record.request, response);
       });
 
-      // Wait for the copying to complete.
+      // Ждать пока копирование завершиться
       await Promise.all(promises);
 
-      // Update the progress notification.
-      event.updateUI({ title: "Episode 5 ready to listen!" });
+      // Обновить уведомление о прогрессе
+      event.updateUI({ title: "Эпизод 5 готов к прослушиванию!" });
     })()
   );
 });
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
