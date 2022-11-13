@@ -29,9 +29,7 @@ navObject = performance.navigation;
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estado                                   | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Navigation Timing', '#sec-window.performance-attribute', 'Performance.navigation')}} | {{Spec2('Navigation Timing')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

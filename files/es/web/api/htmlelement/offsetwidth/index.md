@@ -24,9 +24,7 @@ var offsetWidth =element.offsetWidth;
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetwidth', 'offsetWidth')}} | {{Spec2('CSSOM View')}} |            |
+{{Specifications}}
 
 ### Notas
 

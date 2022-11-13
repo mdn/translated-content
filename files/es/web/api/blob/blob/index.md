@@ -46,9 +46,7 @@ var oMiBlob = new Blob(unaParteDeArchivo, {type : 'text/html'}); // el blob
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                       | Comentario          |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('File API', '#constructorBlob', 'Blob()')}} | {{Spec2('File API')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

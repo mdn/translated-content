@@ -83,10 +83,7 @@ video.onloadeddata = (event) => {
 
 ## Especificaciones
 
-| Especificaciones                                                                                                                         | Estado                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', "media.html#event-media-loadeddata", "loadeddata media event")}}                 | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-loadeddata", "loadeddata media event")}} | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

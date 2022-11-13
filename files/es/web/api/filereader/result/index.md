@@ -52,9 +52,7 @@ function read(callback) {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estatus                      | Comentario         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

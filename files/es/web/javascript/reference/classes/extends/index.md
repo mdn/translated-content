@@ -80,10 +80,7 @@ Object.getPrototypeOf(nullExtends.prototype) // null
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                       | Comentarios         |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-class-definitions', 'extends')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'extends')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

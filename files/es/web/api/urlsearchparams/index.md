@@ -71,9 +71,7 @@ searchParams.toString(); // "q=URLUtils.searchParams"
 
 ## Especificaciones
 
-| Especificaciones                                                             | Estado               | Comentario          |
-| ---------------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('URL', '#urlsearchparams', "URLSearchParams")}} | {{Spec2('URL')}} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

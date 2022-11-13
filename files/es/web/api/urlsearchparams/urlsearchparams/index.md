@@ -54,9 +54,7 @@ var params4 = new URLSearchParams({"foo" : 1 , "bar" : 2});
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado               | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('URL', '#dom-urlsearchparams-urlsearchparams', "URLSearchParams()")}} | {{Spec2('URL')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de browsers
 

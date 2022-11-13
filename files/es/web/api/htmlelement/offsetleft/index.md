@@ -56,11 +56,9 @@ This example shows a 'long' sentence that wraps within a div with a blue border,
 </script>
 ```
 
-## Specification
+## Especificaciones
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetleft', 'offsetLeft')}} | {{Spec2('CSSOM View')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

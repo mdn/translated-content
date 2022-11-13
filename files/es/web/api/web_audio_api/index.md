@@ -339,9 +339,7 @@ function voiceMute() { // alternar para silenciar y activar el sonido
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Comentario |
-| ---------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('Web Audio API')}} | {{Spec2('Web Audio API')}} |            |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

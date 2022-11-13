@@ -56,10 +56,7 @@ regexObj.compile('new foo', 'g');
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                       | Commentario                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}}     | {{Spec2('ES6')}}         | Definición inicial. Definido en la (norma) Annex B ECMAScript para Características Adicionales para Navegadores Web. |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}} | {{Spec2('ESDraft')}} | Definido en la (norma) Annex B ECMAScript para Características Adicionales para Navegadores Web.                     |
+{{Specifications}}
 
 ## Compatiblidad con navegadores
 

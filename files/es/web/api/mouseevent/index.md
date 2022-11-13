@@ -119,14 +119,9 @@ Click on the button to see how the sample works:
 
 {{ EmbedLiveSample('Example', '', '', '') }}
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                    | Status                           | Comment                                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "#dom-mouseevent-region", "MouseEvent.region")}}             | {{Spec2('HTML WHATWG')}} | From {{SpecName('DOM3 Events')}}, added the `region` property.                                                                      |
-| {{SpecName('Pointer Lock','#extensions-to-the-mouseevent-interface','MouseEvent')}} | {{Spec2('Pointer Lock')}} | From {{SpecName('DOM3 Events')}}, added `movementX` and `movementY` properties.                                                     |
-| {{SpecName('DOM3 Events','#events-mouseevents','MouseEvent')}}                             | {{Spec2('DOM3 Events')}} | From {{SpecName('DOM2 Events')}}, added the `MouseEvent()` constructor, the `getModifierState()` method and the `buttons` property. |
-| {{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent')}}                                 | {{Spec2('DOM2 Events')}} | Initial definition.                                                                                                                          |
+{{Specifications}}
 
 ## Browser compatibility
 

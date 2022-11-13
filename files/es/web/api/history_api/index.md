@@ -139,10 +139,7 @@ Para un ejemplo completo de un sitio AJAX, ver: [Ejemplo de navegación AJAX](/e
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentario                                             |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "browsers.html#history", "History")}} | {{Spec2('HTML WHATWG')}} | No hay cambios desde {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#history", "History")}}     | {{Spec2('HTML5 W3C')}}     | Definición inicial                                     |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

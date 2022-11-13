@@ -23,11 +23,9 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}._
 - {{domxref("HTMLShadowElement.getDistributedNodes()")}}
   - : Returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}} associated with this `<shadow>` element.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                    | Status                           | Comment            |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('Shadow DOM', '#the-shadow-element', 'shadow')}} | {{Spec2('Shadow DOM')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -46,10 +46,7 @@ this.addEventListener('install', function(event) {
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                               | Comentario                                                                      |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------- |
-| {{SpecName('Service Workers', '#self-caches', 'caches')}} | {{Spec2('Service Workers')}} | Definido en un `WindowOrWorkerGlobalScope` parcial en la última especificación. |
-| {{SpecName('Service Workers')}}                                     | {{Spec2('Service Workers')}} | Definición inicial.                                                             |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

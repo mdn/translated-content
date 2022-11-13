@@ -41,9 +41,7 @@ foo
 
 ## Especificaciones
 
-| Specification                                                                                            | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#consoletraceobject--object-", "console.trace()")}} | {{Spec2("Console API")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad con el navegador
 

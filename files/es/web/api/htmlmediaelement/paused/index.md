@@ -27,10 +27,7 @@ console.log(obj.paused); // true
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "#dom-media-paused", "HTMLMediaElement.paused")}}                             | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.paused")}} | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

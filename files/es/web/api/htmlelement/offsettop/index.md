@@ -30,11 +30,9 @@ if (topPos > 10) {
 }
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                               | Estado                           | Observaciones |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsettop', 'offsetTop')}} | {{Spec2('CSSOM View')}} |               |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

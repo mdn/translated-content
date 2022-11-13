@@ -25,9 +25,7 @@ console.timeEnd(etiqueta);
 
 ## Especificaciones
 
-| Especificación                                                                   | Estatus                          | Comentario         |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#timeend", "console.timeEnd()")}} | {{Spec2("Console API")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

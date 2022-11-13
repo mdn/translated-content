@@ -80,10 +80,7 @@ function updateValue(e) {
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', "forms.html#event-input-input", "input event")}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('DOM3 Events', "#event-type-input", "input event")}}                 | {{Spec2('DOM3 Events')}} |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

@@ -25,9 +25,7 @@ console.time(label);
 
 ## Especificaciones
 
-| Especificacion                                                           | Status                           | Comment            |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#time", "console.time()")}} | {{Spec2("Console API")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad con exploradores
 

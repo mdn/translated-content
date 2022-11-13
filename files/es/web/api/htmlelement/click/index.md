@@ -20,11 +20,9 @@ Cuando `click()` se usa en un elemento que soporte este método (como un element
 elemento.click()
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                   | Estado                       | Comentario          |
-| ---------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('DOM2 HTML', 'html.html#ID-2651361')}} | {{Spec2('DOM2 HTML')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

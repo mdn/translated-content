@@ -101,9 +101,7 @@ onconnect = function(e) {
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                           | Comentario |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "#messageevent", "MessageEvent")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

@@ -23,9 +23,7 @@ element.contentEditable = 'true'
 
 ## Especificaciones
 
-| Especificación                                                                                               | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'interaction.html#contenteditable', 'contenteditable')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

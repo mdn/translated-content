@@ -44,10 +44,7 @@ wm.has(window);    // Devuelve false. El elemento window ya no es parte de WeakM
 
 ## Especificaciones
 
-| Specification                                                                                                    | Status                       | Comment             |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

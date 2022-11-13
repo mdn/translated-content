@@ -46,9 +46,7 @@ Para más detalles ver [Salida de texto a la consola](/es/docs/Web/API/console#O
 
 ## Especificaciones
 
-| Especificaciones                                                                                             | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#consoleassertexpression-object", "console.assert()")}} | {{Spec2("Console API")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

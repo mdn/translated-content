@@ -91,11 +91,7 @@ location.assign(url); // "stop.html"
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                   | Comentario                                         |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES6', '#sec-conditional-operator', 'Conditional Operator')}} | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ES5.1', '#sec-11.12', 'The conditional operator')}}             | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES1', '#sec-11.12', 'The conditional operator')}}                 | {{Spec2('ES1')}}     | Definición inicial implementada en JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

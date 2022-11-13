@@ -27,9 +27,7 @@ console.dir(objeto);
 
 ## Especificaciones
 
-| Especificación                                                                           | Estatus                          | Comentario         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#consoledirobject", "console.dir()")}} | {{Spec2("Console API")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 
