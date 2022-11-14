@@ -1,7 +1,6 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/input/range
-original_slug: Web/HTML/Element/Input/范围
 ---
 
 {{HTMLSidebar}}
@@ -38,7 +37,7 @@ original_slug: Web/HTML/Element/Input/范围
     </tr>
   <tr>
    <td><strong>方法</strong></td>
-   <td>{{domxref("HTMLInputElement.stepDown", "stepDown()")}} and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}</td>
+   <td>{{domxref("HTMLInputElement.stepDown", "stepDown()")}} 和 {{domxref("HTMLInputElement.stepUp", "stepUp()")}}</td>
   </tr>
  </tbody>
 </table>
@@ -101,7 +100,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### orient
 
-类似于影响 {{htmlelement('progress')}} 和 {{htmlelement('meter')}} 元素的非标准 CSS 属性 -moz-orient，`orient` 属性定义范围滑块的方向。值包括 `horizontal` 和 `vertical`, 分别代表范围的水平呈现和垂直呈现。
+类似于影响 {{htmlelement('progress')}} 和 {{htmlelement('meter')}} 元素的非标准 CSS 属性 -moz-orient，`orient` 属性定义范围滑块的方向。值包括 `horizontal` 和 `vertical`，分别代表范围的水平呈现和垂直呈现。
 
 > **备注：** 以下输入属性不适用于 range 输入：`accept`、`alt`、`checked`、`dirname`、`formaction`、`formenctype`、`formmethod`、`formnovalidate`、`formtarget`、`height`、`maxlength`、`minlength`、`multiple`、`pattern`、`placeholder`、`readonly`、`required`、`size`、`src` 和 `width`。如果包含了这些属性中的任何一个，都将被忽略。
 
@@ -173,7 +172,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 </datalist>
 ```
 
-#### 运行结果
+#### 结果
 
 {{EmbedLiveSample("添加井号标记")}}
 
@@ -217,7 +216,7 @@ input[type="range"] {
 }
 ```
 
-#### 运行结果
+#### 结果
 
 {{EmbedLiveSample("添加标签")}}
 
