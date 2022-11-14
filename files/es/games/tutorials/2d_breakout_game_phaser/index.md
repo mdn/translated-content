@@ -9,6 +9,8 @@ tags:
   - JavaScript
   - Phaser
   - Tutorial
+l10n:
+  sourceCommit: e4783c03e39807e0060a2f4df3bf3962d25d8388
 ---
 
 {{GamesSidebar}}
