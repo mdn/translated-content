@@ -42,7 +42,7 @@ Todas las lecciones - y las diferentes versiones del [juego MDN Breakout](https:
 11. [Puntuación](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
 12. [Ganar la partida](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)
 13. [Vidas extra](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
-14. [Animaciones y tweens](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
+14. [Animaciones y keyframes intermedios](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
 15. [Botones](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
 16. [Aleatorización del juego](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
 
