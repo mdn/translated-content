@@ -717,6 +717,7 @@
 /ko/docs/Web/JavaScript/Guide/함수	/ko/docs/Web/JavaScript/Guide/Functions
 /ko/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ko/docs/Web/JavaScript/Reference/About
 /ko/docs/Web/JavaScript/Reference/Classes/Class_fields	/ko/docs/Web/JavaScript/Reference/Classes/Public_class_fields
+/ko/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/ko/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
 /ko/docs/Web/JavaScript/Reference/Functions/애로우_펑션	/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /ko/docs/Web/JavaScript/Reference/Global_Functions	/ko/docs/Web/JavaScript/Reference/Global_Objects
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Array/constructor	/ko/docs/Web/JavaScript/Reference/Global_Objects/Array

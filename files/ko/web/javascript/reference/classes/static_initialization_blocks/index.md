@@ -1,6 +1,6 @@
 ---
 title: Class static initialization blocks
-slug: Web/JavaScript/Reference/Classes/Class_static_initialization_blocks
+slug: Web/JavaScript/Reference/Classes/Static_initialization_blocks
 tags:
   - Classes
   - ECMAScript 2022
@@ -9,9 +9,11 @@ tags:
   - Static
   - Reference
   - Initialization
-browser-compat: javascript.classes.static_initialization_blocks
 translation_of: Web/JavaScript/Reference/Classes/Class_static_initialization_blocks
+original_slug: Web/JavaScript/Reference/Classes/Class_static_initialization_blocks
+browser-compat: javascript.classes.static_initialization_blocks
 ---
+
 {{jsSidebar("Classes")}}
 
 **클래스 정적 초기화 블록**은 필드별 초기화를 사용하는 것보다 더 유연하게 {{jsxref("Classes/static", "정적")}} 속성을 초기화 하는 {{jsxref("Statements/class", "클래스")}}의 특수 기능입니다.
