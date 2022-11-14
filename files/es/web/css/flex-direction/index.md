@@ -111,7 +111,7 @@ Se aceptan los siguientes valores:
 
 ### Resultado
 
-{{ EmbedLiveSample('Example', '', '300', '', 'Web/CSS/flex-direction') }}
+{{EmbedLiveSample('', '', '300')}}
 
 ## Sobre Accesibilidad
 

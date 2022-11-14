@@ -14,8 +14,6 @@ Tomemos como ejemplo un menú jerárquico de tres niveles formado por varios DIV
 
 Si los tres niveles del menú se superponen parcialmente, entonces gestionar el apilamiento se podría convertir en un problema.
 
-{{ EmbedLiveSample('Example_source_code', '320', '330', '', 'Web/Guide/CSS/Understanding_z_index/Stacking_context_example_3') }}
-
 El menú de primer nivel solo tiene posición relativa, así que ningún contexto de apilamiento es creado.
 
 El menú de segundo nivel tiene posición absoluta dentro del elemento padre. Para colocarlo encima de todos los menus de primer nivel, usamos z-index. El problema es que para cada menú de segundo nivel, un contexto de apilamiento es creado y cada menú de tercer nivel pertenece al contexto de su padre.
@@ -155,6 +153,8 @@ div.lev3 {
 
 </body></html>
 ```
+
+{{EmbedLiveSample('', '320', '330')}}
 
 ### También puedes ver
 

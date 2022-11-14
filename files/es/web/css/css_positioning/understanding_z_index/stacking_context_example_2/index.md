@@ -10,8 +10,6 @@ original_slug: >-
 
 Este es un ejemplo muy simple, pero es la clave para entender el concepto de _contexto de apilamiento._ Tenemos los mismos 4 DIVs del ejemplo previo, pero ahora las propiedades z-index son asignadas en ambos niveles de la jerarquía.
 
-{{ EmbedLiveSample('Example_source_code', '352', '270', '', 'Web/Guide/CSS/Understanding_z_index/Stacking_context_example_2') }}
-
 Puedes ver que el DIV #2 (z-index: 2) está encima del DIV #3 (z-index: 1), porque ambos pertenecen al mismo contexto de apilamiento (el contexto raíz), así que los valores z-index indican cómo son apilados los elementos.
 
 Lo que puede ser considerado extraño es que el DIV #2 (z-index: 2) está encima del DIV #4 (z-index: 10), a pesar de sus valores z-index. La razón es que ellos no pertenecen al mismo contexto de apilamiento. El DIV #4 pertenece al contexto de apilamiento creado por el DIV #3, y como explicamos previamente el DIV #3 (y todos su contenido) está debajo del DIV #2.
@@ -109,6 +107,8 @@ span.bold { font-weight: bold; }
 </body>
 </html>
 ```
+
+{{EmbedLiveSample('', '352', '270')}}
 
 ### También puedes ver
 

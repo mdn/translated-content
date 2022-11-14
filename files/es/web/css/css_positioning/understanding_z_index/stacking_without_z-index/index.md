@@ -107,7 +107,7 @@ En el siguiente ejemplo, los bloques con posiciones absolutas y relativas son ap
 
 (Si la imagen no aparece en CodePen, haz clic en el botón Tidy en la sección CSS)
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index') }}
+{{EmbedLiveSample('', '', '')}}
 
 ### También puedes ver
 

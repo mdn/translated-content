@@ -94,7 +94,7 @@ p {
 
 ### Result
 
-{{EmbedLiveSample('Examples', 300, 220, '', 'Web/CSS/text-overflow')}}
+{{EmbedLiveSample('', 300, 220)}}
 
 <table class="standard-table">
   <thead>

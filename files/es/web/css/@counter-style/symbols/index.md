@@ -67,7 +67,7 @@ symbols: indic-numbers;
 
 ### Resultado
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/@counter-style/symbols') }}
+{{EmbedLiveSample('', '', '')}}
 
 ## Especificaciones
 

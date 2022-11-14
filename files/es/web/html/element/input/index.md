@@ -351,7 +351,7 @@ Nótese, sin embargo, que esto no es estándar, y no tendrá efecto en otros nav
 
 ### Resultado
 
-{{ EmbedLiveSample('Example_1_Simple_input_box', '', '100', '', 'Web/HTML/Element/input') }}
+{{EmbedLiveSample('', '', '100')}}
 
 ## Ejemplo 2: Escenario de uso común
 
@@ -369,7 +369,7 @@ Nótese, sin embargo, que esto no es estándar, y no tendrá efecto en otros nav
 
 ### Resultado
 
-{{ EmbedLiveSample('Example_2_Common_use-case_scenario', '', '200', '', 'Web/HTML/Element/input') }}
+{{EmbedLiveSample('', '', '200')}}
 
 ### Usando mozactionhint en Firefox mobile
 
