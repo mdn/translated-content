@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozUserCancelled
-slug: Web/API/DataTransfer/mozUserCancelled
+slug: orphaned/Web/API/DataTransfer/mozUserCancelled
+original_slug: Web/API/DataTransfer/mozUserCancelled
 ---
 
 {{APIRef("HTML Drag and Drop API")}}

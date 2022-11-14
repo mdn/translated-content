@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozGetDataAt()
-slug: Web/API/DataTransfer/mozGetDataAt
+slug: orphaned/Web/API/DataTransfer/mozGetDataAt
+original_slug: Web/API/DataTransfer/mozGetDataAt
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
