@@ -52,11 +52,11 @@ writing-mode: unset;
 - `tb-rl` {{deprecated_inline}}
   - : 除 SVG1 文档外，已弃用。对于 CSS，请改用 `vertical-rl`。
 
-## 正式定义
+## 形式定义
 
 {{CSSInfo}}
 
-## 正式语法
+## 形式语法
 
 {{csssyntax}}
 
