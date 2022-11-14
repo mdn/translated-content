@@ -159,11 +159,9 @@ export default await colors;
 
 ### await 对执行过程的影响
 
-当函数执行到 `await` 时，被等待的表达式会立即（同步）被求值，并确定一个原生 {{jsxref("Promise")}}，然后函数的执行会暂停。
-当该 `Promise` 完成（fulfilled 或 rejected 状态）时，一个**新**的微任务（microtask）会被推送进微任务队列（microtask queue），该微任务被执行时，函数执行会恢复。
+当函数执行到 `await` 时，被等待的表达式会立即（同步地）被求值，并确定一个原生 {{jsxref("Promise")}}，然后函数的执行会暂停。当该 `Promise` 完成（fulfilled 或 rejected 状态）时，一个**新**的微任务（microtask）会被推送进微任务队列（microtask queue），该微任务被执行时，函数执行会恢复。
 
-若 {{jsxref("Statements/async_function", "async function")}} 到结束都没有执行任何 `await`，
-整个函数都将被同步执行：
+若 {{jsxref("Statements/async_function", "async function")}} 到结束都没有执行任何 `await`，整个函数都将被同步执行：
 
 ```js
 async function foo(name) {
@@ -229,9 +227,8 @@ function foo(name) {
 }
 ```
 
-虽然这里的 `then()` 看起来很多余，其中的代码完全可以被合并到构造器的回调里，但不管该 `Promise` 的状态如何，`then()` 的回调**总会被异步执行**，`await` 的行为也一样。
+虽然这里的 `then()` 看起来很多余，其中的代码完全可以被合并到构造器的回调里，但不管该 `Promise` 的状态如何，`then()` 的回调**总会被异步执行**，`await` 的行为也一样。因此，只要情况不是必须或可能需要等待 `Promise` 的结果，就应该避免使用 `await`。
 
-因此，只要情况不是必须或可能需要等待 `Promise` 的结果，就应该避免使用 `await`。
 其它微任务能在函数执行恢复之前执行：
 
 ```js
