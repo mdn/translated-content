@@ -11,7 +11,7 @@ l10n:
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 _このインターフェイスは {{domxref("WorkerGlobalScope")}}、またその親の {{domxref("EventTarget")}} インターフェイスからプロパティを継承しています。_
 
