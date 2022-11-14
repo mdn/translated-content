@@ -1,5 +1,5 @@
 ---
-title: Breakout juego en 2D usando Phaser
+title: Juego breakout en 2D usando Phaser
 slug: Games/Tutorials/2D_breakout_game_Phaser
 tags:
   - 2D
