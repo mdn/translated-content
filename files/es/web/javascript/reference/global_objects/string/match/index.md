@@ -143,7 +143,7 @@ Cuando el parámetro `regexp` es una cadena o un número, se convierte implícit
 ```js
 const str1 = 'NaN significa que no es un número. Infinity contiene -Infinity e +Infinity en JavaScript.';
 const str2 = 'Mi abuelo tiene 65 años y mi abuela tiene 63 años.';
-const str3 = 'The contract was declared null and void.';
+const str3 = 'El contrato fue declarado null (nulo) y sin efecto.';
 
 str1.match('número');   // 'número' es una cadena - devuelve ['número']
 str1.match(NaN);        // NaN es de tipo número - devuelve ['NaN']
