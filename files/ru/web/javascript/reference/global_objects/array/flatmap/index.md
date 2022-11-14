@@ -47,7 +47,7 @@ var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
 ### `map` и `flatMap`
 
 ```js
-let arr1 = 1, 2, 3, 4];
+let arr1 = [1, 2, 3, 4];
 
 arr1.map(x => [x * 2]);
 // [[2], [4], [6], [8]]
