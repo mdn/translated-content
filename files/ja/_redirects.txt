@@ -1785,7 +1785,7 @@
 /ja/docs/DragDrop/DataTransfer/setData	/ja/docs/Web/API/DataTransfer/setData
 /ja/docs/DragDrop/Drag_Operations	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /ja/docs/DragDrop/Drag_and_Drop	/ja/docs/Web/API/HTML_Drag_and_Drop_API
-/ja/docs/DragDrop/Dragging_and_Dropping_Multiple_Items	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items
+/ja/docs/DragDrop/Dragging_and_Dropping_Multiple_Items	/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items
 /ja/docs/DragDrop/Recommended_Drag_Types	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 /ja/docs/DragDrop/ドラッグ＆ドロップ	/ja/docs/Web/API/HTML_Drag_and_Drop_API
 /ja/docs/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
@@ -1866,6 +1866,7 @@
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
 /ja/docs/Glossary/Empty_element	/ja/docs/Glossary/Void_element
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
+/ja/docs/Glossary/Grid_Rows	/ja/docs/Glossary/Grid_Row
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
 /ja/docs/Glossary/Index	/ja/docs/Glossary
 /ja/docs/Glossary/POP3	/ja/docs/Glossary/POP
@@ -3168,6 +3169,14 @@
 /ja/docs/Web/API/Coordinates	/ja/docs/Web/API/GeolocationCoordinates
 /ja/docs/Web/API/DOMString	/ja/docs/Glossary/String
 /ja/docs/Web/API/DOMString/Binary	/ja/docs/Web/API/btoa
+/ja/docs/Web/API/DataTransfer/mozClearDataAt	/ja/docs/orphaned/Web/API/DataTransfer/mozClearDataAt
+/ja/docs/Web/API/DataTransfer/mozCursor	/ja/docs/orphaned/Web/API/DataTransfer/mozCursor
+/ja/docs/Web/API/DataTransfer/mozGetDataAt	/ja/docs/orphaned/Web/API/DataTransfer/mozGetDataAt
+/ja/docs/Web/API/DataTransfer/mozItemCount	/ja/docs/orphaned/Web/API/DataTransfer/mozItemCount
+/ja/docs/Web/API/DataTransfer/mozSetDataAt	/ja/docs/orphaned/Web/API/DataTransfer/mozSetDataAt
+/ja/docs/Web/API/DataTransfer/mozSourceNode	/ja/docs/orphaned/Web/API/DataTransfer/mozSourceNode
+/ja/docs/Web/API/DataTransfer/mozTypesAt	/ja/docs/orphaned/Web/API/DataTransfer/mozTypesAt
+/ja/docs/Web/API/DataTransfer/mozUserCancelled	/ja/docs/orphaned/Web/API/DataTransfer/mozUserCancelled
 /ja/docs/Web/API/DeviceAcceleration	/ja/docs/Web/API/DeviceMotionEventAcceleration
 /ja/docs/Web/API/Document.domConfig	/ja/docs/Web/API/Document
 /ja/docs/Web/API/Document/animationcancel_event	/ja/docs/Web/API/Element/animationcancel_event
@@ -3394,6 +3403,7 @@
 /ja/docs/Web/API/HTMLTableElement.width	/ja/docs/Web/API/HTMLTableElement/width
 /ja/docs/Web/API/HTMLTableRowElement.insertCell	/ja/docs/Web/API/HTMLTableRowElement/insertCell
 /ja/docs/Web/API/HTMLTableRowElement.rowIndex	/ja/docs/Web/API/HTMLTableRowElement/rowIndex
+/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items	/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items
 /ja/docs/Web/API/IDBDatabase.close	/ja/docs/Web/API/IDBDatabase/close
 /ja/docs/Web/API/IDBDatabase.createObjectStore	/ja/docs/Web/API/IDBDatabase/createObjectStore
 /ja/docs/Web/API/IDBDatabase.name	/ja/docs/Web/API/IDBDatabase/name

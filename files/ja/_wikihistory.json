@@ -818,7 +818,7 @@
     "modified": "2019-03-18T21:35:50.075Z",
     "contributors": ["dynamis"]
   },
-  "Glossary/Grid_Rows": {
+  "Glossary/Grid_Row": {
     "modified": "2019-03-18T21:36:01.022Z",
     "contributors": ["dynamis"]
   },
@@ -10043,10 +10043,6 @@
   "Web/API/HTML_Drag_and_Drop_API/Drag_operations": {
     "modified": "2019-03-24T00:06:21.211Z",
     "contributors": ["mfuji09", "dlwe", "Piro", "drry"]
-  },
-  "Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
-    "modified": "2019-03-24T00:06:18.208Z",
-    "contributors": ["Piro", "drry"]
   },
   "Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types": {
     "modified": "2020-10-07T03:14:28.263Z",
@@ -31390,6 +31386,10 @@
   "orphaned/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API": {
     "modified": "2019-06-07T11:59:50.878Z",
     "contributors": ["silverskyvicto"]
+  },
+  "orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
+    "modified": "2019-03-24T00:06:18.208Z",
+    "contributors": ["Piro", "drry"]
   },
   "orphaned/Web/API/PerformanceFrameTiming": {
     "modified": "2020-10-15T22:19:50.630Z",

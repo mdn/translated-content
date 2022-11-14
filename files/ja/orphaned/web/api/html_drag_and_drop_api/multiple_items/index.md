@@ -1,9 +1,7 @@
 ---
 title: 複数のアイテムのドラッグ & ドロップ
-slug: Web/API/HTML_Drag_and_Drop_API/Multiple_items
-original_slug: DragDrop/Dragging_and_Dropping_Multiple_Items
-l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+slug: orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items
+original_slug: Web/API/HTML_Drag_and_Drop_API/Multiple_items
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
