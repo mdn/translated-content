@@ -160,9 +160,7 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                               | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Transforms', '#funcdef-transform-translate', 'translate()')}} | {{Spec2('CSS3 Transforms')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

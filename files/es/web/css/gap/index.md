@@ -91,9 +91,7 @@ CSS
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                       | Comentario         |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("CSS3 Grid", "#propdef-grid-gap", "grid-gap")}} | {{Spec2("CSS3 Grid")}} | definición inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

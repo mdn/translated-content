@@ -29,9 +29,7 @@ Un {{domxref("EventListener")}}.
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentarios         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', '#handler-websocket-onerror', 'WebSocket: onerror')}} | {{Spec2('HTML WHATWG')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

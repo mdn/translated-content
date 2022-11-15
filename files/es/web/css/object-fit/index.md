@@ -132,10 +132,7 @@ img {
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                           | Comentario          |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSS4 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS4 Images')}} |                     |
-| {{SpecName('CSS3 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS3 Images')}} | Definicion inicial. |
+{{Specifications}}
 
 ## Compatibilidad
 

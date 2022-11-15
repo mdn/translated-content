@@ -170,13 +170,11 @@ flex-basis: unset;
 
 ### Resultados
 
-{{EmbedLiveSample('Example', '860', '360', '', 'Web/CSS/flex-basis')}}
+{{EmbedLiveSample('', '860', '360')}}
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox', '#propdef-flex-basis', 'flex-basis')}} | {{Spec2('CSS3 Flexbox')}} | Definición Inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

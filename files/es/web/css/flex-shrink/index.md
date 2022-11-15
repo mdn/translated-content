@@ -149,13 +149,11 @@ La propiedad `flex-shrink` se especifica como un único [`<número>`](#number).
 
 ### Result
 
-{{ EmbedLiveSample('Example', '500px', '300px', '', 'Web/CSS/flex-shrink') }}
+{{EmbedLiveSample('', '500px', '300px')}}
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                               | Comentarios        |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{ SpecName('CSS3 Flexbox', '#flex-shrink', 'flex-shrink') }} | {{ Spec2('CSS3 Flexbox') }} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

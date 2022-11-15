@@ -45,11 +45,9 @@ for (var i = 0; i < array.length; i++) {
 }
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentario         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Web Crypto API', '#RandomSource-method-getRandomValues')}} | {{Spec2('Web Crypto API')}} | Definición Inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

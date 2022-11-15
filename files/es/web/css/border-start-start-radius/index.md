@@ -66,13 +66,9 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                               | Estado                                           | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-start-start-radius", "border-start-start-radius")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
-
-{{CSSInfo}}
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

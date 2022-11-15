@@ -118,11 +118,9 @@ objectStoreRequest.onsuccess = function(event) {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                | Status                       | Comment |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBObjectStore', 'IDBObjectStore')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

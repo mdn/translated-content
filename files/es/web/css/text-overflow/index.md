@@ -94,7 +94,7 @@ p {
 
 ### Result
 
-{{EmbedLiveSample('Examples', 300, 220, '', 'Web/CSS/text-overflow')}}
+{{EmbedLiveSample('', 300, 220)}}
 
 <table class="standard-table">
   <thead>
@@ -422,16 +422,9 @@ p {
   </tbody>
 </table>
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                | Status                       | Comment                                                          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------- |
-| {{SpecName('CSS4 UI', '#text-overflow', 'text-overflow')}} | {{Spec2('CSS4 UI')}} | Added the values `<string>` and `fade` and the `fade()` function |
-| {{SpecName('CSS3 UI', '#text-overflow', 'text-overflow')}} | {{Spec2('CSS3 UI')}} | Initial definition                                               |
-
-A previous version of this interface reached the _Candidate Recommendation_ status. As some not-listed-at-risk features needed to be removed, the spec was demoted to the _Working Draft_ level, explaining why browsers implemented this property unprefixed, though not at the CR state.
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Browser compatibility
 

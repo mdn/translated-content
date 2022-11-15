@@ -145,10 +145,7 @@ A pesar de que los hiden input no se pueden ver en absoluto, sus datos se siguen
 
 ## Especificaciones
 
-| Specification                                                                                                                        | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#hidden-state-(type=hidden)', '&lt;input type="hidden"&gt;')}} | {{Spec2('HTML WHATWG')}} | Definición inicial |
-| {{SpecName('HTML5.1', 'forms.html#hidden-state-(type=hidden)', '&lt;input type="hidden"&gt;')}}     | {{Spec2('HTML5.1')}}     | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con el navegador
 

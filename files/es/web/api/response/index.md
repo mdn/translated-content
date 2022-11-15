@@ -95,9 +95,7 @@ var myResponse = new Response();
 
 ## Especificaciones
 
-| Specification                                                        | Status                   | Comment            |
-| -------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#response-class','Response')}} | {{Spec2('Fetch')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

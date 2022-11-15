@@ -93,9 +93,7 @@ Si muestras esto en un explorador web , debe de verse como lo siguiente .
 
 ## Especificaciones
 
-| Especificación                                                                   | Estatus                          | Comentario |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('Shadow DOM', "#the-content-element", "content")}} | {{Spec2('Shadow DOM')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con exploradores
 

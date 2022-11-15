@@ -55,9 +55,7 @@ if (connection) {
 
 ## Especificaciones
 
-| Especifiación                                                                            | Estado                                       | Comentario            |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------- |
-| {{SpecName('Network Information', '', 'Network Information API')}} | {{Spec2('Network Information')}} | Initial specification |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

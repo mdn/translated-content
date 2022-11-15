@@ -46,11 +46,7 @@ a   {
 
 ## Especificaciones
 
-| Epecificación                                                                                                    | Estado                           | Comentarios |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'the-pre-element.html#the-pre-element', '&lt;pre&gt;')}}     | {{Spec2('HTML5 W3C')}}     |             |
-| {{SpecName('HTML4.01', 'text.html#h-9.3.4', '&lt;dl&gt;')}}                                 | {{Spec2('HTML4.01')}}     |             |
+{{Specifications}}
 
 ## Compatibilidad con exploradores
 

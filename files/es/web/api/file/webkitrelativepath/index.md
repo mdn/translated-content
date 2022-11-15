@@ -58,11 +58,7 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 
 ## Especificaciones
 
-| Especificacion                                                                                                       | Estado                                   | Comentario              |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------- |
-| {{ SpecName('File System API', '#dom-file-webkitrelativepath', 'webkitRelativePath') }} | {{ Spec2('File System API') }} | Especificacion inicial. |
-
-Esta API no tiene especificacion W3C o WHATWG.
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

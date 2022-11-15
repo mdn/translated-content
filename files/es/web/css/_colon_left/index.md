@@ -40,10 +40,7 @@ La dirección principal de escritura del documento determina si una página es "
 
 ## Especificaciones
 
-| Especificaciones                                                                     | Estatus                                  | Comentario          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Paged Media', '#left-right-first', ':left') }} | {{ Spec2('CSS3 Paged Media') }} | Sin Cambio.         |
-| {{ SpecName('CSS2.1', 'page.html#page-selectors', ':left') }}     | {{ Spec2('CSS2.1') }}             | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

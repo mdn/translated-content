@@ -332,7 +332,7 @@ function testInfo(phoneInput) {
 
 #### Resultado
 
-{{ EmbedLiveSample('Using_special_characters_to_verify_input', '', '', '', 'Web/JavaScript/Guide/Regular_Expressions') }}
+{{EmbedLiveSample('', '', '')}}
 
 ## Herramientas
 

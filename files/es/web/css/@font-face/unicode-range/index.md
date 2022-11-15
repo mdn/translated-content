@@ -62,11 +62,9 @@ div {
 
 ![What the example should looks like if your browser supports it.](https://mdn.mozillademos.org/files/6043/Refresult.png)
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#descdef-font-face-unicode-range', 'unicode-range')}} | {{Spec2('CSS3 Fonts')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

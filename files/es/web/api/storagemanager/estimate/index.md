@@ -64,9 +64,7 @@ navigator.storage.estimate().then(function(estimate) {
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Storage','#dom-storagemanager-estimate','estimate()')}} | {{Spec2('Storage')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

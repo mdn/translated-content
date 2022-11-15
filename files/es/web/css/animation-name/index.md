@@ -54,9 +54,7 @@ Ver ejemplos [CSS animations](/es/docs/CSS/CSS_animations).
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentario |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('CSS3 Animations', '#animation-name', 'animation-name')}} | {{Spec2('CSS3 Animations')}} |            |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

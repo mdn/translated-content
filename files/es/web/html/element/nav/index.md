@@ -51,10 +51,7 @@ En este ejemplo, un bloque `<nav>` es usado para contener una lista no ordenada 
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                           | Comentario                                      |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-nav-element', '&lt;nav&gt;')}} | {{Spec2('HTML WHATWG')}} | Sin cambios desde la última instantánea del W3C |
-| {{SpecName('HTML5 W3C', 'sections.html#the-nav-element', '&lt;nav&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Definición inicial                              |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -129,9 +129,7 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estatus                              | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName("CSS3 Transforms", "#funcdef-transform-translatey", "translateY()")}} | {{Spec2("CSS3 Transforms")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

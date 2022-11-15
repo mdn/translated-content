@@ -582,11 +582,7 @@ circle { mix-blend-mode: screen; }
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                               | Comentario         |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{ SpecName('Compositing', '#mix-blend-mode', 'mix-blend-mode') }} | {{ Spec2('Compositing') }} | Definición inicial |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

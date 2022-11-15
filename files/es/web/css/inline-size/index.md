@@ -67,11 +67,9 @@ La propiedad `inline-size` toma los mismos valores de las propiedades {{cssxref(
 
 {{EmbedLiveSample("Ejemplo")}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                       | Estado                                           | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#logical-dimension-properties", "inline-size")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

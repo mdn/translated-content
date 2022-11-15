@@ -83,7 +83,7 @@ El atributo itemref puede ser solo especificado en elementos que tienen un atrib
 
 ### Resultado
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/HTML/Global_attributes/itemref') }}
+{{EmbedLiveSample('', '', '')}}
 
 ## Especificación
 

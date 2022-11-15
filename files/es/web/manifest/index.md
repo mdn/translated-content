@@ -248,11 +248,9 @@ En Chrome 47 y posteriores, se muestra una pantalla de bienvenida para las aplic
 
 Los manifiestos web se deben servir con el tipo MIME `application/manifest+json`. Sin embargo, esto es opcional.
 
-## Especificación
+## Especificaciones
 
-| Specification                    | Status                       | Comment             |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Manifest')}} | {{Spec2('Manifest')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

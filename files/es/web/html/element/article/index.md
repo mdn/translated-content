@@ -54,11 +54,11 @@ Un mismo documento puede tener varios artículos; por ejemplo, en un blog en el 
     <tr>
       <th scope="row">Padres permitidos</th>
       <td>
-        Todo elemento que permita 
+        Todo elemento que permita
         <a href="/es/docs/Web/Guide/HTML/Content_categories#flujo_de_contenido"
           >contenido de flujo</a
         >. Un elemento <code>&#x3C;article></code> no puede ser hijo de
-        un elemento 
+        un elemento
         <a href="/es/docs/Web/HTML/Element/address"
           ><code>&#x3C;address></code></a
         >.

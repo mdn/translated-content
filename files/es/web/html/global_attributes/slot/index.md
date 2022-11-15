@@ -15,10 +15,7 @@ El [atributo global](/es/docs/Web/HTML/Global_attributes) **slot** asigna un esp
 
 ## Especificaciones
 
-| Specification                                                                            | Status                           | Comment |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "dom.html#attr-slot", "slot attribute")}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('DOM WHATWG', "#dom-element-slot", "slot attribute")}} | {{Spec2('DOM WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

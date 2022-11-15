@@ -65,9 +65,7 @@ fetch(url, {
 
 ## Especificaciones
 
-| Especifiación                                                                                                                        | Estado                   | Comentario         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#http-access-control-allow-credentials', 'Access-Control-Allow-Credentials')}} | {{Spec2("Fetch")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

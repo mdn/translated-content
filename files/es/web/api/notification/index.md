@@ -175,11 +175,9 @@ function spawnNotification(theBody,theIcon,theTitle) {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                | Status                                   | Comment         |
-| -------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Browser compatibility
 

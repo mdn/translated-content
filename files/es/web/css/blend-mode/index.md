@@ -424,9 +424,7 @@ Los cambios entre modos de mezcla no son interpolados. Cualquier cambio ocurrir�
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentarios        |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{ SpecName('Compositing', '#ltblendmodegt', '&lt;blend-mode&gt;') }} | {{ Spec2('Compositing') }} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

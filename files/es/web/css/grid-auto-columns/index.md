@@ -127,11 +127,7 @@ grid-auto-columns: unset;
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estatus                      | Comentario         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("CSS3 Grid", "#propdef-grid-auto-columns", "grid-auto-columns")}} | {{Spec2("CSS3 Grid")}} | Initial definition |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 
