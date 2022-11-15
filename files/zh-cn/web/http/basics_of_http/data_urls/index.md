@@ -41,7 +41,7 @@ Base64 是一组二进制到文本的编码方案，通过将其转换为 radix-
 
 ### 在 JavaScript 中编码
 
-Web APIs 已经有对 base64 进行编码解码的方法：[Base64 编码和解码](/zh-CN/docs/Glossary/Base64)。
+Web API 已经有对 base64 进行编码解码的方法：[Base64 编码和解码](/zh-CN/docs/Glossary/Base64)。
 
 ### 在 Unix 系统编码
 
