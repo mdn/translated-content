@@ -86,7 +86,7 @@ p.variant {
 
 **Nota:** se necesita la fuente Open Type [Leitura Display Swashes](http://ufonts.com/download/leituradisplay-swashes-opentype/470776.html) instalada para que este ejemplo funcione
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/font-variant-alternates') }}
+{{EmbedLiveSample('', '', '')}}
 
 ## Especificaciones
 
