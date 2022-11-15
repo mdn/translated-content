@@ -164,7 +164,7 @@ flex-grow 属性可以按比例分配空间。如果第一个元素 `flex-grow` 
 
 `flex: none` 可以把 flex 元素设置为不可伸缩。它和设置为 `flex: 0 0 auto` 是一样的。元素既不能拉伸或者收缩，但是元素会按具有 `flex-basis: auto` 属性的 flexbox 进行布局。
 
-你在教程中常看到的 `flex: 1` 或者 `flex: 2` 等等。它相当于`flex: 1 1 0`。元素可以在`flex-basis`为 0 的基础上伸缩。
+你在教程中常看到的 `flex: 1` 或者 `flex: 2` 等等。它相当于`flex: 1 1 0` 或者 `flex: 2 1 0`。元素可以在`flex-basis`为 0 的基础上伸缩。
 
 尝试在下面的实例中应用这些简写值。
 
