@@ -101,12 +101,7 @@ span {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                                   | Comentario                          |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------- |
-| {{SpecName('CSS3 Fonts', '#font-weight-prop', 'font-weight')}}             | {{Spec2('CSS3 Fonts')}}         | Sin cambio                          |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-weight')}}         | {{Spec2('CSS3 Transitions')}} | Define `font-weight` como animable. |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-weight', 'font-weight')}} | {{Spec2('CSS2.1')}}                 | Sin cambio                          |
-| {{SpecName('CSS1', '#font-weight', 'font-weight')}}                             | {{Spec2('CSS1')}}                 | Definición inicial                  |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

@@ -112,11 +112,9 @@ Si el elemento de una grilla es ubicado en una fila que no tiene un tamaño expl
 
 {{EmbedLiveSample("Example", "210px", "210px")}}
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                | Status                       | Comment            |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("CSS3 Grid", "#propdef-grid-auto-rows", "grid-auto-rows")}} | {{Spec2("CSS3 Grid")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

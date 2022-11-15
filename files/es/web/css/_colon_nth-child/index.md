@@ -147,10 +147,7 @@ div em {
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                               | Comentarios                                                                                                        |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS4 Selectors')}} | Agrega la sintaxis `of <selector>` y especifica que no se requiere que los elementos coincidentes tengan un padre. |
-| {{SpecName('CSS3 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                                                                                |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

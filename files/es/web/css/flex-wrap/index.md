@@ -49,9 +49,7 @@ element {
 
 ## Especificaciones
 
-| Especificacion                                                               | Estado                               | Comentario |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{ SpecName('CSS3 Flexbox', '#flex-wrap', 'flex-wrap') }} | {{ Spec2('CSS3 Flexbox') }} |            |
+{{Specifications}}
 
 ## Compatibilidad
 

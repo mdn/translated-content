@@ -61,9 +61,7 @@ La regla `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` estiliza tod
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                           | Comentarios         |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{ SpecName('CSS Scope', '#host-selector', ':host') }} | {{ Spec2('CSS Scope') }} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
