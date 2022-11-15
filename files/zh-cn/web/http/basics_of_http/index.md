@@ -25,7 +25,7 @@ HTTP 是一个拓展性非常好的协议。它依赖于资源或统一资源定
   - : 从 HTTP/1.0 开始，HTTP 协议允许传输不同类型的内容。本文解释了如何通过使用 {{HTTPHeader("Content-Type")}} 首部和 MIME 标准实现这一过程的。
 - [在 www 和非 www URL 间选择](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs)
   - : 在是否使用 www 前缀的域名这一问题上，本文解释了不同选择的影响，并给出了具体的实施方法。
-- [HTTP 会话流程](/zh-CN/docs/Web/HTTP/Flow_of_an_HTTP_session)
+- [HTTP 会话流程](/zh-CN/docs/Web/HTTP/Session)
   - : 本文描述了一个经典的 HTTP 会话：当你在浏览器中点击一个链接或在网页中加载一张图片时，背后到底发生了什么。
 - [HTTP 消息](/zh-CN/docs/Web/HTTP/Messages)
   - : 在请求和响应中传输的 HTTP 消息具有非常清晰的结构；本文介绍了消息的结构、设计目的以及其可能性。
