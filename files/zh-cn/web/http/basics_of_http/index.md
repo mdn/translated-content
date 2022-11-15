@@ -29,7 +29,7 @@ HTTP 是一个拓展性非常好的协议。它依赖于资源或统一资源定
   - : 本文描述了一个经典的 HTTP 会话：当你在浏览器中点击一个链接或在网页中加载一张图片时，背后到底发生了什么。
 - [HTTP 消息](/zh-CN/docs/Web/HTTP/Messages)
   - : 在请求和响应中传输的 HTTP 消息具有非常清晰的结构；本文介绍了消息的结构、设计目的以及其可能性。
-- [HTTP/2 中的帧及消息结构](/en-US/docs/Web/HTTP/Frame_and_message_structure_in_HTTP_2)
+- [HTTP/2 中的帧及消息结构](/zh-CN/docs/Web/HTTP/Frame_and_message_structure_in_HTTP_2)
   - : HTTP/2 用二进制帧来压缩和表示 HTTP/1.x 中的消息。本文解释了 HTTP/2 中的帧结构，其设计目的以及编码方式。
 - [HTTP/1.x 的连接管理](/zh-CN/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
   - : HTTP/1.1 是首个支持持久化连接和管道化的 HTTP 版本。本文介绍了这两个概念。
