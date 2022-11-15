@@ -548,7 +548,7 @@ Si quieres escribir algo de HTML en tu ordenador local para experimentar, puedes
 
 Ahora puedes abrir este archivo en un navegador web para ver cómo se ve el código renderizado. Edita el código y actualiza el navegador para ver cuál es el resultado. En principio se verá algo así:
 
-![Una sencilla página HTML que dice esta es mi página](https://mdn.mozillademos.org/files/12279/template-screenshot.png)En este ejercicio, puedes editar el código en tu ordenador como se indica arriba, o puedes editarlo en la ventana editable que tienes a continuación (la ventana editable representa solo el contenido del elemento {{htmlelement("body")}}, en este caso). Intenta reproducir los siguientes pasos:
+![Una sencilla página HTML que dice esta es mi página](https://mdn.mozillademos.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/template-screenshot.png)En este ejercicio, puedes editar el código en tu ordenador como se indica arriba, o puedes editarlo en la ventana editable que tienes a continuación (la ventana editable representa solo el contenido del elemento {{htmlelement("body")}}, en este caso). Intenta reproducir los siguientes pasos:
 
 - Justo debajo de la etiqueta de apertura {{htmlelement("body")}}, añade un título principal para el documento. Este deberá estar dentro de una etiqueta de apertura `<h1>` y una etiqueta de cierre `</h1>`.
 - Edita el contenido del párrafo e incluye algún texto sobre algo que te interese.
