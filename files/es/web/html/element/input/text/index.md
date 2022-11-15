@@ -405,10 +405,7 @@ Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los ar
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                       | Estado                               | Comentario         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', 'input.html#text-(type=text)-state-and-search-state-(type=search)', '&lt;input type="text"&gt;')}} | {{ Spec2('HTML WHATWG') }} | Definición inicial |
-| {{SpecName('HTML5.1', 'sec-forms.html#text-typetext-state-and-search-state-typesearch', '&lt;input type="text"&gt;')}}         | {{Spec2('HTML5.1')}}         | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -38,9 +38,7 @@ X-Content-Type-Options: nosniff
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estado                   | Comentario         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName("Fetch", "#x-content-type-options-header", "X-Content-Type-Options definition")}} | {{Spec2("Fetch")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

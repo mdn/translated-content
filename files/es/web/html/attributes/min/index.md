@@ -68,10 +68,7 @@ Si no se incluye explícitamente, `step` tiene como valor predeterminado 1 para 
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                               | Comentario |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'input.html#the-min-and-max-attributes', 'min attribute')}} | {{ Spec2('HTML WHATWG') }} |            |
-| {{SpecName('HTML5 W3C', 'input.html#the-min-and-max-attributes', 'min attribute')}} | {{ Spec2('HTML5 W3C') }}     |            |
+{{Specifications}}
 
 ## Problemas de accesibilidad
 

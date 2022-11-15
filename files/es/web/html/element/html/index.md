@@ -54,11 +54,7 @@ El DOCTYPE usado en el siguiente ejemplo indica que es un documento HTML5.
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentario                                                                                          |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-html-element', '&lt;html&gt;')}} | {{Spec2('HTML WHATWG')}} | Sin cambios desde la última instantánea.                                                            |
-| {{SpecName('HTML5 W3C', 'semantics.html#the-html-element', '&lt;html&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Añadido soporte para el atributo `manifest` (en desuso después). El Atributo `version` es obsoleto. |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.3', '&lt;html&gt;')}}             | {{Spec2('HTML4.01')}}     | El Atributo `version` está en desuso                                                                |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

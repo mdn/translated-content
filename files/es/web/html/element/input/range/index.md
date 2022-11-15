@@ -306,10 +306,7 @@ Además de los ejemplos anteriores, encontrarás más ejemplos en los siguientes
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estatus                          | Comentario         |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#range-state-(type=range)', '&lt;input type="range"&gt;')}} | {{Spec2('HTML WHATWG')}} | Definición inicial |
-| {{SpecName('HTML5.1', 'sec-forms.html#range-state-typerange', '&lt;input type="range"&gt;')}}     | {{Spec2('HTML5.1')}}     | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

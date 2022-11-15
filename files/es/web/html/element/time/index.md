@@ -159,11 +159,7 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                           | Comentario                                         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-time-element', '&lt;time&gt;')}}             | {{Spec2('HTML WHATWG')}} | Sin cambios desde {{SpecName('HTML5.1')}} |
-| {{SpecName('HTML5.1', 'grouping-content.html#the-time-element', '&lt;time&gt;')}}         | {{Spec2('HTML5.1')}}     | Sin cambios desde {{SpecName('HTML5 W3C')}} |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-time-element', '&lt;time&gt;')}} | {{Spec2('HTML5 W3C')}}     | Definición inicial                                 |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

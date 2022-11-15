@@ -144,11 +144,7 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName("HTML WHATWG", "embedded-content.html#the-object-element", "&lt;object&gt;")}} | {{Spec2("HTML WHATWG")}} |            |
-| {{SpecName("HTML5 W3C", "embedded-content-0.html#the-object-element", "&lt;object&gt;")}} | {{Spec2("HTML5 W3C")}}     |            |
-| {{SpecName("HTML4.01", "struct/objects.html#h-13.3", "&lt;object&gt;")}}                         | {{Spec2("HTML4.01")}}     |            |
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

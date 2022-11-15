@@ -176,13 +176,9 @@ Se crea un nuevo input tipo botón con el valor 'Click me'.
 <input type="button" value="Click me">
 ```
 
-## Especificaciónes
+## Especificaciones
 
-| Especificación                                                                                                           | Status                           |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'the-button-element.html#the-button-element', '&lt;button&gt;')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'forms.html#the-button-element', '&lt;button&gt;')}}                     | {{Spec2('HTML5 W3C')}}     |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.5', '&lt;button&gt;')}}                         | {{Spec2('HTML4.01')}}     |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 
