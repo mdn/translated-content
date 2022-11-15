@@ -1251,12 +1251,7 @@ No todos los colores de sistema son soportados por todos los sistemas. {{depreca
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario                                                                                                             |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Colors', '#colorunits', '&lt;color&gt;')}}                 | {{Spec2('CSS4 Colors')}} | Añadido el color `rebeccapurple`.                                                                                      |
-| {{SpecName('CSS3 Colors', '#colorunits', '&lt;color&gt;')}}                 | {{Spec2('CSS3 Colors')}} | Colores de sistema depreciados; añadidos colores SVG; añadidos las notaciones funcionales `rgba()`, `hsl()`, `hsla().` |
-| {{SpecName('CSS2.1', 'syndata.html#value-def-color', '&lt;color&gt;')}} | {{Spec2('CSS2.1')}}         | Añadidos el naranja y los colores de sistema.                                                                          |
-| {{SpecName('CSS1', '#color-units', '&lt;color&gt;')}}                         | {{Spec2('CSS1')}}         | Definición Inicial                                                                                                     |
+{{Specifications}}
 
 ## Compatibilidad con los distintos navegadores
 

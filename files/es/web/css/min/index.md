@@ -85,9 +85,7 @@ Aquí, el formulario en si mismo, junto con el margen, borde y padding, será de
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                           | Comentario          |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("CSS4 Values", "#calc-notation", "min()")}} | {{Spec2("CSS4 Values")}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

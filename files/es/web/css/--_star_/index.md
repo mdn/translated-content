@@ -75,9 +75,7 @@ Las propiedades personalizadas tienen como alcance los elementos en los que se d
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                               | Comentario          |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS3 Variables", "#defining-variables", "--*")}} | {{Spec2("CSS3 Variables")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

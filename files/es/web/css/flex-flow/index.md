@@ -63,9 +63,7 @@ element {
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                               | Comentario         |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{ SpecName('CSS3 Flexbox','#flex-flow','flex-flow') }} | {{ Spec2('CSS3 Flexbox') }} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegador
 

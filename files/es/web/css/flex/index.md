@@ -116,9 +116,7 @@ flex.addEventListener("click", function() {
 
 ## Especificaciones
 
-| Specification                                                            | Status                           | Comment            |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox', '#flex-property', 'flex')}} | {{Spec2('CSS3 Flexbox')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

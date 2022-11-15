@@ -100,11 +100,7 @@ p.auto {
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                       | Comentario         |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("CSS3 Text", "#hyphens-property", "hyphens")}} | {{Spec2("CSS3 Text")}} | Initial definition |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

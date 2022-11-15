@@ -50,9 +50,7 @@ En [HTML5](/es/docs/Glossary/HTML5), conocidos como[elementos externos](https://
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                               | Comentario         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Namespaces', '#declaration', '@namespace')}} | {{Spec2('CSS3 Namespaces')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad
 

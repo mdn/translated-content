@@ -105,9 +105,7 @@ grid-template-columns: unset;
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                       | Comentario        |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-template-columns", "grid-template-columns")}} | {{Spec2("CSS3 Grid")}} | Condición inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -97,11 +97,9 @@ h2 {
 
 {{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 70)}}
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                | Status                                       | Comment            |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Text Decoration', '#text-emphasis-property', 'text-emphasis')}} | {{Spec2('CSS3 Text Decoration')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 
