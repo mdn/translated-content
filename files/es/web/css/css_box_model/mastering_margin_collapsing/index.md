@@ -66,9 +66,7 @@ p {
 
 ## Especificaciones
 
-| Specification                                                                                        | Status                   | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}} | {{Spec2("CSS2.1")}} | Initial definition |
+{{Specifications}}
 
 ## También puedes ver
 

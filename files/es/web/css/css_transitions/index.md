@@ -31,9 +31,7 @@ translation_of: Web/CSS/CSS_Transitions
 
 ## Especificaciones
 
-| Especificación                               | Estado                                   | Comentario         |
-| -------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Transitions')}} | {{Spec2('CSS3 Transitions')}} | Definición Inicial |
+{{Specifications}}
 
 ## Ver además
 

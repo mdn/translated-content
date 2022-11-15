@@ -140,9 +140,7 @@ Si el valor `perspective()` es menor que el valor `translateZ()`, como `transfor
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                                   | Comentario                                                       |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------- |
-| {{SpecName('CSS Transforms 2', '#transform-functions', 'transform')}} | {{Spec2('CSS Transforms 2')}} | Agrega funciones de transformación 3D al CSS Transform estándar. |
+{{Specifications}}
 
 ## Compatibilidad con navegador
 

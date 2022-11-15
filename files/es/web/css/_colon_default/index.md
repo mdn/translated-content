@@ -65,12 +65,7 @@ input:default + label {
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                               | Comentarios                                                         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-default', ':default')}} | {{Spec2('HTML WHATWG')}}     | Ningún cambio.                                                      |
-| {{SpecName('HTML5 W3C', '#selector-default', ':default')}}     | {{Spec2('HTML5 W3C')}}         | Define la semántica HTML asociada y la validación de restricciones. |
-| {{SpecName('CSS4 Selectors', '#default-pseudo', ':default')}} | {{Spec2('CSS4 Selectors')}} | Ningún cambio.                                                      |
-| {{SpecName('CSS3 Basic UI', '#pseudo-default', ':default')}} | {{Spec2('CSS3 Basic UI')}} | Definición inicial, pero sin la semántica asociada.                 |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
