@@ -31,4 +31,4 @@ El término **asíncrono** se refiere al concepto de que más de una cosa ocurre
 ### Referencia técnica
 
 - [Obteniendo datos del servidor](/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) (Área de aprendizaje)
-- {{glossary("Synchronous")}}
+- {{glossary("Synchronous","Sincrónico")}}
