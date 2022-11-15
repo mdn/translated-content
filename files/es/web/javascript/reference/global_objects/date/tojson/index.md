@@ -40,9 +40,7 @@ console.log(jsonDate); //2015-10-26T07:46:36.611Z
 
 ## Especificaciones
 
-| Especificación                                                                                           |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}} |
+{{Specifications}}
 
 ## Compatibilidad en buscadores
 

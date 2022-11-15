@@ -54,9 +54,7 @@ console.log(endOfMonth); //Wed Mar 02 2016 00:00:00
 
 ## Especificaciones
 
-| Especificación                                                                                               |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.setmonth', 'Date.prototype.setMonth')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

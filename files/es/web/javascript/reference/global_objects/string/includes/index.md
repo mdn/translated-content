@@ -84,9 +84,7 @@ console.log(str.includes(''))             // true
 
 ## Especificaciones
 
-| Specification                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.includes', 'String.prototype.includes')}} |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

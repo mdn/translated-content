@@ -72,10 +72,7 @@ Tal argumento específico del archivo podria ser complementario al usado en toda
 
 ## Especificaciones
 
-| Especificaciones                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| [`import.meta`](https://tc39.es/proposal-import-meta/#prod-ImportMeta) proposal                                          |
-| {{SpecName("HTML WHATWG", "webappapis.html#hostgetimportmetaproperties", "import.meta")}} |
+{{Specifications}}
 
 ## Browser compatibility
 

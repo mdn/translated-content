@@ -443,9 +443,7 @@ const {self, prot} = obj;
 
 ## Especificaciones
 
-| Especificación                                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-destructuring-assignment', 'Desestructuración de asignación')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

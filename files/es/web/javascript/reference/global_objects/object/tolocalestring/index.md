@@ -86,9 +86,7 @@ let numeroFrances = unNumero.toLocaleString('fr');
 
 ## Especificaciones
 
-| Especificación                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

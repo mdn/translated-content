@@ -226,9 +226,7 @@ Un operador de asignación asigna un valor a su operando izquierdo basándose en
 
 ## Especificaciones
 
-| Especificación                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-ecmascript-language-expressions', 'ECMAScript Language: Expressions')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 
