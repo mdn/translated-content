@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/await
 
 {{jsSidebar("Operators")}}
 
-`await` 操作符用于等待一个 {{jsxref("Promise")}} 兑现并获取它兑现之后的值。它只能在异步函数（{{jsxref("Statements/async_function", "async function")}}）或者[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)顶层中使用。
+`await` 操作符用于等待一个 {{jsxref("Promise")}} 兑现并获取它兑现之后的值。它只能在{{jsxref("Statements/async_function", "异步函数", "", 1)}}或者[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)顶层中使用。
 
 ## 语法
 
@@ -28,21 +28,21 @@ await expression;
 
 ## 描述
 
-`await` 通常用于拆开承诺（promise）的包装，使用方法是传递一个 {{jsxref("Promise")}} 作为 `expression`。使用 `await` 总会暂停当前 {{jsxref("Statements/async_function", "async function")}} 的执行，在该 `Promise` 完成（settle，指兑现 fulfill 或拒绝 reject）后继续执行。函数的执行恢复（resume）时，`await` 的返回值或抛出的异常将会是该 `Promise` 的处理结果。
+`await` 通常用于拆开 promise 的包装，使用方法是传递一个 {{jsxref("Promise")}} 作为 `expression`。使用 `await` 总会暂停当前异步函数的执行，在该 `Promise` 敲定（settled，指兑现或拒绝）后继续执行。函数的执行恢复（resume）时，`await` 表达式的值已经变成了 `Promise` 兑现的值。
 
-若该 `Promise` 被拒绝（rejected），`await` 表达式会把拒绝的原因（reason）抛出。当前函数（`await` 所在的函数）会出现在抛出的错误的[栈轨迹](#改善栈追溯)（stack trace），否则当前函数就不会在栈轨迹出现。
+若该 `Promise` 被拒绝（rejected），`await` 表达式会把拒绝的原因（reason）抛出。当前函数（`await` 所在的函数）会出现在抛出的错误的[栈追踪](#改善栈追溯)（stack trace），否则当前函数就不会在栈追踪出现。
 
-`await` 总会同步地对表达式求值并处理，处理的行为与 {{jsxref("Promise.resolve()")}} 一致，不属于原生 `Promise` 的值全都会被隐式地转换为 `Promise` 实例后等待。
+`await` 总会同步地对表达式求值并处理，处理的行为与 {{jsxref("Promise.resolve()")}} 一致，不属于原生 `Promise` 的值全都会被隐式地转换为 `Promise` 实例后等待。处理的规则为，若表达式：
 
-- 值若是一个原生 `Promise`（原生{{jsxref("Promise")}} 的实例或其派生类的实例，且满足 `expression.constructor === Promise`），会被直接用于等待，等待由原生代码实现，该对象的 `then()` 不会被调用。
-- 值若是 thenable 对象（包括非原生的 `Promise` 实例、polyfill、Proxy、派生类等），会构造一个新 `Promise` 用于等待，构造时会调用该对象的 `then()` 方法。
-- 值若不是 thenable 对象，会被包装进一个已兑现的 {{jsxref("Promise")}} 用于等待，其结果就是表达式的值。
+- 是一个原生 `Promise`（原生{{jsxref("Promise")}} 的实例或其派生类的实例，且满足 `expression.constructor === Promise`），会被直接用于等待，等待由原生代码实现，该对象的 `then()` 不会被调用。
+- 是 thenable 对象（包括非原生的 `Promise` 实例、polyfill、Proxy、派生类等），会构造一个新 `Promise` 用于等待，构造时会调用该对象的 `then()` 方法。
+- 不是 thenable 对象，会被包装进一个已兑现的 `Promise` 用于等待，其结果就是表达式的值。
 
 ## 示例
 
-### 等待 Promise 的结果
+### 等待 Promise 的兑现
 
-当一个 `Promise` 被传递给 `await` 操作符，`await` 将等待该 `Promise` 兑现，并在兑现后返回该 `Promise` 的结果。
+当一个 `Promise` 被传递给 `await` 操作符，`await` 将等待该 `Promise` 兑现，并在兑现后返回该 `Promise` 兑现的值。
 
 ```js
 function resolveAfter2Seconds(x) {
@@ -61,76 +61,9 @@ async function f1() {
 f1();
 ```
 
-若表达式的值既不是 {{jsxref("Promise")}} 实例，又不是 thenable 对象，`await` 会把该值转换为已兑现的 `Promise`，然后返回其结果。
+### 转换为 promise
 
-```js
-async function f2() {
-  const y = await 20;
-  console.log(y); // 20
-}
-f2();
-```
-
-如果该 `Promise` 的状态为已拒绝，则抛出。
-
-```js
-async function f3() {
-  try {
-    let z = await Promise.reject(30);
-  } catch (e) {
-    console.log(e); // 30
-  }
-}
-f3();
-```
-
-也可以用 `catch()` 提前处理异常。
-
-```js
-const response = await promisedFunction().catch((err) => {
-  console.error(err);
-  return "default response";
-});
-// response will be "default response" if the promise is rejected
-```
-
-请注意！该值必须是一个原生 `Promise`，否则由于 `catch()` 调用比 `await` 把值转换为原生 `Promise` 执行早，该对象可能并不是原生 `Promise` 的实例，可能出现不符合 {{jsxref("Promise")}} 的行为。
-
-### 等待非 Promise 的表达式的结果
-
-#### 等待正常处理的 thenable 对象
-
-```js
-async function f() {
-  const thenable = {
-    then(resolve, _reject) {
-      resolve("resolved!");
-    },
-  };
-  console.log(await thenable); // "resolved!"
-}
-
-f();
-```
-
-#### 等待遇到异常的 thenable 对象
-
-```js
-async function f() {
-  const thenable = {
-    then(resolve, reject) {
-      reject(new Error("rejected!"));
-    },
-  };
-  await thenable; // Throws Error: rejected!
-}
-
-f();
-```
-
-#### 等待其它类型的值
-
-如果表达式的值不是 {{jsxref("Promise")}} 实例，也不是 thenable 对象，函数恢复执行时 `await` 将直接返回该值。
+若表达式的值不是 `Promise`，`await` 会把该值转换为已兑现的 `Promise`，然后返回其结果。
 
 ```js
 async function f3() {
@@ -144,11 +77,39 @@ async function f3() {
 f3();
 ```
 
+### promise 被拒绝
+
+如果 `Promise` 被拒绝，则抛出拒绝的原因。
+
+```js
+async function f4() {
+  try {
+    const z = await Promise.reject(30);
+  } catch (e) {
+    console.error(e); // 30
+  }
+}
+
+f4();
+```
+
+### 处理被拒绝的 promise
+
+你可以链式调用 [`catch()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)（而不是使用 `try`）以在等待 promise 兑现之前处理被拒绝的 promise。
+
+```js
+const response = await promisedFunction().catch((err) => {
+  console.error(err);
+  return "default response";
+});
+// response will be "default response" if the promise is rejected
+```
+
 ### 在顶层使用 await
 
 在[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)的顶层，你可以单独使用关键字 `await`（异步函数的外面）。也就是说一个模块如果包含用了 `await` 的子模块，该模块就会等待该子模块，这一过程并不会阻塞其它子模块。
 
-下面是一个在 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 中使用了 [Fetch API](/zh-CN/docs/Web/API/Fetch_API)的例子。任何文件只要导入这个模块，后面的代码就会等待，直到 fetch 完成。
+下面是一个在 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 表达式中使用了 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 的例子。任何文件只要导入这个模块，后面的代码就会等待，直到 fetch 完成。
 
 ```js
 // fetch request
@@ -159,9 +120,7 @@ export default await colors;
 
 ### await 对执行过程的影响
 
-当函数执行到 `await` 时，被等待的表达式会立即（同步地）被求值，并确定一个原生 {{jsxref("Promise")}}，然后函数的执行会暂停。当该 `Promise` 完成（fulfilled 或 rejected 状态）时，一个**新**的微任务（microtask）会被推送进微任务队列（microtask queue），该微任务被执行时，函数执行会恢复。
-
-若 {{jsxref("Statements/async_function", "async function")}} 到结束都没有执行任何 `await`，整个函数都将被同步执行：
+当函数执行到 `await` 时，被等待的表达式会立即执行，所有依赖该表达式的值的代码会被暂停，并推送进[微任务队列（microtask queue）](/zh-CN/docs/Web/JavaScript/EventLoop)。然后主线程被释放出来，用于事件循环中的下一个任务。即使等待的值是已经敲定的 promise 或不是 promise，也会发生这种情况。例如，考虑以下代码：
 
 ```js
 async function foo(name) {
@@ -272,9 +231,9 @@ console.log("script sync part end");
 
 此案例中，`test()` 总会在异步函数恢复执行前被调用，呈现轮流的调度。微任务被执行的顺序通常就是入队的先后顺序，而 `console.log("queueMicrotask() after calling async function");` 比 `await` 晚入队，因此 `"queueMicrotask() after calling async function"` 在异步函数第一次恢复之后才输出。
 
-### 改善栈追溯
+### 改善栈追踪
 
-当异步函数直接返回一个 `Promise` 时我们可能会不写 `await`。
+有时，当异步函数直接返回一个 `Promise` 时我们会省略 `await`。
 
 ```js
 async function noAwait() {
@@ -302,7 +261,7 @@ noAwait();
 //    at lastAsyncTask
 ```
 
-栈轨迹中只出现了 `lastAsyncTask`，这是因为抛出错误时 `noAwait` 已经返回——某种意义上该 `Promise` 已经与 `noAwait` 无关。若要改善栈轨迹，你可以用 `await` 提前等待，错误就会在函数体结束前抛出，接着该错误会被包装进一个新的 `Promise`，因错误被 `await` 在主调函数的函数体抛出，主调函数将会出现在栈轨迹。
+栈追踪中只出现了 `lastAsyncTask`，这是因为抛出错误时 `noAwait` 已经返回——某种意义上该 `Promise` 已经与 `noAwait` 无关。若要改善栈追踪，你可以用 `await` 提前等待，错误就会在函数体结束前抛出，接着该错误会被包装进一个新的 `Promise`，因错误被 `await` 在主调函数的函数体抛出，主调函数将会出现在栈追踪。
 
 ```js
 async function lastAsyncTask() {
@@ -331,7 +290,7 @@ withAwait();
 
 {{Compat}}
 
-## 查看更多
+## 参见
 
 - {{jsxref("Statements/async_function", "async 函数")}}
 - {{jsxref("Operators/async_function", "async 函数表达式")}}
