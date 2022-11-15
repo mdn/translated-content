@@ -35,5 +35,5 @@ HTTP 是一个拓展性非常好的协议。它依赖于资源或统一资源定
   - : HTTP/1.1 是首个支持持久化连接和管道化的 HTTP 版本。本文介绍了这两个概念。
 - [HTTP/2 的连接管理](/zh-CN/docs/Web/HTTP/Connection_management_in_HTTP_2)
   - : HTTP/2 完全改变了连接创建和维护的方式：本文介绍了 HTTP 帧是怎样支持多路复用并解决之前的 HTTP 版本中存在的队头阻塞问题的。
-- [内容商定](/zh-CN/docs/Web/HTTP/Content_negotiation)
+- [内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)
   - : HTTP 引入了一组以 [`Accept`](/zh-CN/docs/Web/HTTP/Headers/Accept) 开头的首部，作为浏览器用来声明它们期望得到的格式，语言或编码的方法。本文讲述了这一过程是怎样实现的，以及服务器是怎样处理并选择恰当的响应的。
