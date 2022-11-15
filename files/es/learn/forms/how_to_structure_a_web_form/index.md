@@ -298,7 +298,7 @@ Pongamos en práctica estas ideas y creemos un formulario un poco más complicad
 
 Debajo puedes ver en acción el formulario terminado (también lo encontrarás en GitHub; consulta el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html) de nuestro payment-form.html y [ejecútalo en vivo](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 
-{{EmbedLiveSample("A_payment_form","100%",620, "", "/en-US/Learn/Forms/How_to_structure_a_web_form/Example")}}
+{{EmbedLiveSample('',"100%",620)}}
 
 ## ¡Prueba tus habilidades!
 
