@@ -47,9 +47,7 @@ xhr.abort();
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                               | Comentario             |
-| ------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-abort()-method')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

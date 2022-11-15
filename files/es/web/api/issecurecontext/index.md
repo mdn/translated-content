@@ -21,9 +21,7 @@ Un {{domxref("Boolean")}}.
 
 ## Especificaciones
 
-| Especificación                                                                                                                               | Estado                               | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Secure Contexts', 'webappapis.html#dom-origin', 'WindowOrWorkerGlobalScope.isSecureContext')}} | {{Spec2('Secure Contexts')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

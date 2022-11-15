@@ -118,9 +118,7 @@ _Esta interfaz no hereda ningún método._
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                                   | Comentario          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('Web Crypto API', '#subtlecrypto-interface', 'SubtleCrypto') }} | {{ Spec2('Web Crypto API') }} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

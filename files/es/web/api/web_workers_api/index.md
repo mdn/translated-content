@@ -60,9 +60,7 @@ You can find out more information on how these demos work in [Using web workers]
 
 ## Especificaciones
 
-| Specification                                        | Status                           | Comment |
-| ---------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#workers')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## See also
 

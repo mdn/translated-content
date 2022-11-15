@@ -36,9 +36,7 @@ window.addEventListener('devicemotion', function(event) {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                                   | Comentario          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName("Device Orientation", "#devicemotionevent", "DeviceMotionEvent")}} | {{Spec2("Device Orientation")}} | Initial definition. |
+{{Specifications}}
 
 ## Compativilidad con los navegadores
 

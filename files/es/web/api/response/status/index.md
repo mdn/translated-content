@@ -48,9 +48,7 @@ fetch(myRequest).then(function(response) {
 
 ## Especificaciones
 
-| Especificación                                                           | Estatus                  | Comentario         |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#dom-response-status','status')}} | {{Spec2('Fetch')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

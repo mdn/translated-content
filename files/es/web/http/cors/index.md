@@ -412,10 +412,7 @@ Ejemplos de esta utilización pueden ser encontrados [arriba](/En/HTTP_access_co
 
 ## Especificaciones
 
-| Especificación                                                   | Estado                   | Comentario                                                              |
-| ---------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------- |
-| {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | Nueva definición; tiene como objetivo suplantar la especificación CORS. |
-| {{SpecName('CORS')}}                                     | {{Spec2('CORS')}} | Definición inicial.                                                     |
+{{Specifications}}
 
 ## Compatibilidad con Exploradores
 
