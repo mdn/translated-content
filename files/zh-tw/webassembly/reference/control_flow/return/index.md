@@ -11,15 +11,15 @@ tags:
 
 {{WebAssemblySidebar}}
 
-**`return`** returns from a function.
+**`return`** 用來處理函數的回傳。
 
-- If there are no values left on the stack, it returns nothing/void.
-- If there are the same amount of values left on the stack as specified in the function's type signature, it returns those values.
-- If there are more values that the function's return type specifies, then the excess values are popped from the stack and discarded, and the last N values are returned.
+- 如果記憶體堆疊中沒有記錄任何東西，函數不會回傳任何東西，或是回傳 void。
+- 如果記憶體堆疊中的值的類型、數量與函數指定的相同，則回傳該值。
+- 如果記憶體堆疊中有多個與函數指定類型相同值，則回傳最後 N 個值，其餘捨棄。
 
 {{EmbedInteractiveExample("pages/wat/return.html", "tabbed-taller")}}
 
-## Syntax
+## 語法
 
 ```wasm
 f32.const 4.3
@@ -32,6 +32,6 @@ f32.const 4.3
 return
 ```
 
-| Instruction | Binary opcode |
+| 指令        | 二進制操作碼 |
 | ----------- | ------------- |
 | `return`    | `0x0f`        |
