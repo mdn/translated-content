@@ -7,7 +7,7 @@ slug: Web/HTTP/Basics_of_HTTP/Data_URLs
 
 **Data URL**，即前缀为 `data:` 协议的 URL，其允许内容创建者向文档中嵌入小文件。它们之前被称作“data URI”，直到这个名字被 WHATWG 弃用。
 
-> **备注：** 现代浏览器将 Data URL 视作唯一的不透明来源，而不是负责用于导航的 URL。
+> **备注：** 现代浏览器将 Data URL 视作唯一的不透明来源，而不是可以用于导航的 URL。
 
 ## 语法
 
