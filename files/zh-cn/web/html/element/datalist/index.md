@@ -5,7 +5,7 @@ slug: Web/HTML/Element/datalist
 
 {{HTMLSidebar}}
 
-**_HTML_ `<datalist>`_元素_**包含了一组{{HTMLElement("option")}}元素，这些元素表示其它表单控件可选值。
+_HTML_ **`<datalist>`** _元素_ 包含了一组{{HTMLElement("option")}}元素，这些元素表示其它表单控件可选值。
 
 {{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
 
