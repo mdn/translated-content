@@ -1,6 +1,7 @@
 ---
 title: DOMTimeStamp
-slug: Web/API/DOMTimeStamp
+slug: Glossary/Unix_time
+original_slug: Web/API/DOMTimeStamp
 ---
 
 {{APIRef("DOM")}}
