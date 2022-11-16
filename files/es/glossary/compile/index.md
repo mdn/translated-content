@@ -19,7 +19,7 @@ El compilador GNU `gcc` es un ejemplo muy conocido de compilador AOT. Los compil
 
 Los compiladores JIT no son invocados típicamente de forma directa, sino que se integran internamente en software de entornos de ejecución, con el propósito de mejorar el rendimiento. Por ejemplo, la mayoría de los navegadores de ahora usan motores JavaScript que tienen compiladores JIT integrados.
 
-Los compiladores también pueden traducir entre lenguajes de alto nivel — por ejemplo, de TypeScript a [JavaScript](/es/docs/Glossary/JavaScript) —, en tal caso, a menudo se les denomina transpiladores.
+Los compiladores también pueden traducir entre lenguajes de alto nivel — por ejemplo, de TypeScript a [JavaScript](/es/docs/Glossary/JavaScript) — en tal caso, a menudo se les denomina transpiladores.
 
 ## Saber más
 
