@@ -23,7 +23,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/length
 
 对于空字符串，`length` 为 0。
 
-静态属性 `String.length` 与字符串的长度无关。它是 `String` 函数的[参数数量](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length)（简单地说，就是它有多少个形式参数），也就是 1。
+静态属性 `String.length` 与字符串的长度无关。它是 `String` 函数的[参数数量](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length)（简单地说，就是它有多少个形参），也就是 1。
 
 由于 `length` 统计的是代码单元而不是字符，如果你想得到字符的数量，你可以首先用它的[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)分割字符串，它按字符进行迭代：
 
