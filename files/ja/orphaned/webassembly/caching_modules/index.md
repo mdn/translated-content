@@ -1,8 +1,7 @@
 ---
 title: コンパイルされた WebAssembly モジュールのキャッシュ
-slug: WebAssembly/Caching_modules
-l10n:
-  sourceCommit: 2c2f8caac8cbf8e41019c01be5635e10fe65f2cd
+slug: orphaned/WebAssembly/Caching_modules
+original_slug: WebAssembly/Caching_modules
 ---
 
 {{WebAssemblySidebar}}

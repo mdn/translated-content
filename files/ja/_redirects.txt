@@ -1109,7 +1109,7 @@
 /ja/docs/DOM/DOMError	/ja/docs/Web/API/DOMError
 /ja/docs/DOM/DOMException	/ja/docs/Web/API/DOMException
 /ja/docs/DOM/DOMString	/ja/docs/Glossary/String
-/ja/docs/DOM/DOMTimeStamp	/ja/docs/Web/API/DOMTimeStamp
+/ja/docs/DOM/DOMTimeStamp	/ja/docs/Glossary/Unix_time
 /ja/docs/DOM/DOM_Reference	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/DOM_Reference/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
 /ja/docs/DOM/DOM_Reference/Examples	/ja/docs/Web/API/Document_Object_Model/Examples
@@ -3169,6 +3169,7 @@
 /ja/docs/Web/API/Coordinates	/ja/docs/Web/API/GeolocationCoordinates
 /ja/docs/Web/API/DOMString	/ja/docs/Glossary/String
 /ja/docs/Web/API/DOMString/Binary	/ja/docs/Web/API/btoa
+/ja/docs/Web/API/DOMTimeStamp	/ja/docs/Glossary/Unix_time
 /ja/docs/Web/API/DataTransfer/mozClearDataAt	/ja/docs/orphaned/Web/API/DataTransfer/mozClearDataAt
 /ja/docs/Web/API/DataTransfer/mozCursor	/ja/docs/orphaned/Web/API/DataTransfer/mozCursor
 /ja/docs/Web/API/DataTransfer/mozGetDataAt	/ja/docs/orphaned/Web/API/DataTransfer/mozGetDataAt
@@ -4914,6 +4915,7 @@
 /ja/docs/WebAPI/Proximity	/ja/docs/Web/API/Proximity_Events
 /ja/docs/WebAPI/Using_Web_Notifications	/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /ja/docs/WebAPI/Using_geolocation	/ja/docs/Web/API/Geolocation_API
+/ja/docs/WebAssembly/Caching_modules	/ja/docs/orphaned/WebAssembly/Caching_modules
 /ja/docs/WebAssembly/Index	/ja/docs/WebAssembly
 /ja/docs/WebGL	/ja/docs/Web/API/WebGL_API
 /ja/docs/WebGL/Adding_2D_content_to_a_WebGL_context	/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
