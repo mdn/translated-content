@@ -4915,7 +4915,6 @@
 /ja/docs/WebAPI/Proximity	/ja/docs/Web/API/Proximity_Events
 /ja/docs/WebAPI/Using_Web_Notifications	/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /ja/docs/WebAPI/Using_geolocation	/ja/docs/Web/API/Geolocation_API
-/ja/docs/WebAssembly/Caching_modules	/ja/docs/orphaned/WebAssembly/Caching_modules
 /ja/docs/WebAssembly/Index	/ja/docs/WebAssembly
 /ja/docs/WebGL	/ja/docs/Web/API/WebGL_API
 /ja/docs/WebGL/Adding_2D_content_to_a_WebGL_context	/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
