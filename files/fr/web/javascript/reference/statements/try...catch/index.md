@@ -120,7 +120,7 @@ try {
 
 ### L'identifiant de l'exception
 
-Lorsqu'une exception est levée dans le bloc `try`, _`exception_var`_ (par exemple le `e` dans « `catch (e)` ») contient la valeur définie par l'instruction {{jsxref("Instructions/throw","throw")}}. Cet identifiant peut être utilisé pour accéder aux propriétés de l'objet et ainsi obtenir des informations sur l'exception qui a eu lieu. Cet identifiant est local à la clause `catch`, il est créé lorsqu'on rentre dans la clause `catch` et n'est plus disponible une fois que la clause a fini son exécution.
+Lorsqu'une exception est levée dans le bloc `try`, `exception_var` (par exemple le `e` dans « `catch (e)` ») contient la valeur définie par l'instruction {{jsxref("Instructions/throw","throw")}}. Cet identifiant peut être utilisé pour accéder aux propriétés de l'objet et ainsi obtenir des informations sur l'exception qui a eu lieu. Cet identifiant est local à la clause `catch`, il est créé lorsqu'on rentre dans la clause `catch` et n'est plus disponible une fois que la clause a fini son exécution.
 
 ```js
 function isValidJSON(txt){

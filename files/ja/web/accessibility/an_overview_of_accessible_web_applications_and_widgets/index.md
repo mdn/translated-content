@@ -78,9 +78,12 @@ ARIA は Firefox、Safari、Opera、Chrome、Internet Explorer といった主�
 
 ARIA に、UI ウィジェットの現在の状態を定義する属性があります。例えば以下のとおりです (これだけではありません):
 
-- **`aria-checked`**: チェックボックスやラジオボタンの状態を示します。
-- **`aria-disabled`**: 要素は可視状態ですが、編集や他の操作ができないことを示します。
-- **`aria-grabbed`**: ドラッグアンドドロップの操作で、オブジェクトが 'つかまれている' 状態を示します。
+- `aria-checked`
+  - : チェックボックスやラジオボタンの状態を示します。
+- `aria-disabled`
+  - : 要素は可視状態ですが、編集や他の操作ができないことを示します。
+- `aria-grabbed`
+  - : ドラッグアンドドロップの操作で、オブジェクトが 'つかまれている' 状態を示します。
 
 (ARIA のすべてのステートの一覧については、[ARIA のステートとプロパティの一覧](http://www.w3.org/TR/wai-aria/states_and_properties)をご覧ください。)
 

@@ -24,8 +24,10 @@ void ctx.clip(path, fillRule);
   - : 这个算法判断一个点是在路径内还是在路径外。
     允许的值：
 
-    - **`"nonzero`**": [非零环绕原则](http://en.wikipedia.org/wiki/Nonzero-rule)，默认的原则。
-    - **`"evenodd"`**: [奇偶环绕原则](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
+    - `nonzero`
+      - : [非零环绕原则](http://en.wikipedia.org/wiki/Nonzero-rule)，默认的原则。
+    - `evenodd`
+      - : [奇偶环绕原则](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
 
 - `path`
   - : 需要剪切的 {{domxref("Path2D")}} 路径。

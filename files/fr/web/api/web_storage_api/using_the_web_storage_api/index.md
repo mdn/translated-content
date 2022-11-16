@@ -26,8 +26,8 @@ localStorage.setItem('colorSetting', '#a4509b');
 
 Les deux principaux mécanismes internes du Stockage Web sont :
 
-- **`sessionStorage`** qui maintient un espace de stockage, séparé pour chaque origine différente, disponible le temps de la session de la page (tant que le navigateur reste lancé, incluant les rechargements de la page et les restaurations).
-- **`localStorage`** qui tient le même rôle mais persiste même après le redémarrage du navigateur web.
+- `sessionStorage` qui maintient un espace de stockage, séparé pour chaque origine différente, disponible le temps de la session de la page (tant que le navigateur reste lancé, incluant les rechargements de la page et les restaurations).
+- `localStorage` qui tient le même rôle mais persiste même après le redémarrage du navigateur web.
 
 Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionStorage")}} et {{domxref("Window.localStorage")}}  (plus précisément, dans les navigateurs web le supportant, l'objet `Window`  implémente les objets `WindowLocalStorage` et `WindowSessionStorage`, sur lesquels les propriétés `localStorage` et `sessionStorage` se basent) — l'appel d'un des deux va créer une instance de l'objet {{domxref("Storage")}}, dans lequel des données pourront être ajoutées, récupérées et supprimées. Pour `sessionStorage` et `localStorage`, un objet de stockage différent est utilisé pour chaque origine — ils fonctionnent et sont contrôlés séparément.
 

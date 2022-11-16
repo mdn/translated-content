@@ -23,8 +23,8 @@ localStorage.setItem('colorSetting', '#a4509b');
 
 Web Storage には、以下の 2 種類の仕組みがあります。
 
-- セッションストレージ (**`sessionStorage`**) は、各オリジン毎に分割された保存領域を管理し、これはページセッションの間 (ブラウザーを開いている間、ページの再読み込みや復元を含む) に使用可能です。
-- ローカルストレージ (**`localStorage`**) も同様ですが、こちらはブラウザーを閉じたり再び開いたりしても持続します。
+- セッションストレージ (`sessionStorage`) は、各オリジン毎に分割された保存領域を管理し、これはページセッションの間 (ブラウザーを開いている間、ページの再読み込みや復元を含む) に使用可能です。
+- ローカルストレージ (`localStorage`) も同様ですが、こちらはブラウザーを閉じたり再び開いたりしても持続します。
 
 これらの仕組みは {{domxref("Window.sessionStorage")}} および {{domxref("Window.localStorage")}} プロパティ (正確には、対応しているブラウザーは `Window` オブジェクトが `WindowLocalStorage` および `WindowSessionStorage` オブジェクトを実装しており、これらに `localStorage` および `sessionStorage` プロパティがあります) を通して使用でき、いずれかのプロパティを使用すると {{domxref("Storage")}} オブジェクトのインスタンスを生成して、データアイテムの保存、取り出し、削除ができます。同じ生成元に対して `sessionStorage` と `localStorage` は、別の Storage オブジェクトを使用します。これらは別々に制御されて機能します。
 
