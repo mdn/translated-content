@@ -1,12 +1,11 @@
 ---
 title: Data URL
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
-original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
 
 {{HTTPSidebar}}
 
-**Data URL**，即前缀为 `data:` 协议的 URL，其允许内容创建者向文档中嵌入小文件。它们之前被称作“data URIs”，直到这个名字被 WHATWG 弃用。
+**Data URL**，即前缀为 `data:` 协议的 URL，其允许内容创建者向文档中嵌入小文件。它们之前被称作“data URI”，直到这个名字被 WHATWG 弃用。
 
 > **备注：** 现代浏览器将 Data URL 视作唯一的不透明来源，而不是负责用于导航的 URL。
 
@@ -18,16 +17,16 @@ Data URL 由四个部分组成：前缀（`data:`）、指示数据类型的 MIM
 data:[<mediatype>][;base64],<data>
 ```
 
-`mediatype` 是个 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)的字符串，例如“`image/jpeg`”表示 JPEG 图像文件。如果被省略，则默认值为 `text/plain;charset=US-ASCII`。
+`mediatype` 是个 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)的字符串，例如 `'image/jpeg'` 表示 JPEG 图像文件。如果被省略，则默认值为 `text/plain;charset=US-ASCII`。
 
-如果数据包含[RFC 3986中定义为保留字符](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2)的字符或包含空格符、换行符或者其他非打印字符，这些字符必须进行[百分比编码](/zh-CN/docs/Glossary/percent-encoding)（又名“URL编码”）。
+如果数据包含 [RFC 3986 中定义为保留字符](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2)的字符或包含空格符、换行符或者其他非打印字符，这些字符必须进行[百分号编码](/zh-CN/docs/Glossary/percent-encoding)（又名“URL 编码”）。
 
 如果数据是文本类型，你可以直接将文本嵌入（根据文档类型，使用合适的实体字符或转义字符）。否则，你可以指定 `base64` 来嵌入 base64 编码的二进制数据。你可以在[这里](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)和[这里](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)找到更多关于 MIME 类型的信息。
 
 下面是一些示例：
 
 - `data:,Hello%2C%20World!`
-  - : 简单的 text/plain 类型数据。注意逗号如何[百分比编码](/zh-CN/docs/Glossary/percent-encoding)为 `%2C`，空格字符如何编码为 `%20`。
+  - : 简单的 text/plain 类型数据。注意逗号如何[百分号编码](/zh-CN/docs/Glossary/percent-encoding)为 `%2C`，空格字符如何编码为 `%20`。
 - `data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D`
   - : 上一条示例的 base64 编码版本
 - `data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E`
@@ -66,7 +65,7 @@ base64 a.txt>b.txt
 # outputs to console: aGVsbG8=
 ```
 
-另一种方案是：使用 GNU/Linux shell (例如 [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux)）提供的使用工具 `base64`:
+另一种方案是：使用 GNU/Linux shell (例如 [WSL](https://zh.wikipedia.org/wiki/适用于Linux的Windows子系统)）提供的使用工具 `base64`:
 
 ```bash
 bash$ echo -n hello | base64
@@ -91,7 +90,7 @@ lots of text…
 - 语法
   - : `data` URL 的格式很简单，但很容易会忘记把逗号加在“data”协议名后面，在对数据进行 base64 编码时也很容易发生错误。
 - HTML 代码格式化
-  - : 一个 `data` URL 是一个文件中的文件，相对于文档来说这个文件可能就非常的长。因为 data URL 也是 URL，所以 data 会用空白符（换行符、制表符或空格）来对它进行格式化，[但使用 base64 编码](http://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12)时会出现一些实际问题。
+  - : 一个 `data` URL 是一个文件中的文件，相对于文档来说这个文件可能就非常的长。因为 data URL 也是 URL，所以 data 会用空白符（换行符、制表符或空格）来对它进行格式化，[但使用 base64 编码](https://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12)时会出现一些实际问题。
 - 长度限制
   - : 浏览器不需要支持任何规定的最大数据长度。比如，Opera 11 浏览器限制 URL 最长为 65535 个字符，这意味着 `data` URL 最长为 65529 个字符（如果你使用纯文本 `data:`，而不是指定一个 MIME 类型的话，那么 65529 字符长度是编码后的长度，而不是源文件）。Firefox 97 及更高版本支持高达 32MB 的数据 URL（在 97 之前，限制接近 256MB）。Chromium 支持到超过 512MB 的 URL，Webkit（Safari）支持到超过 2048MB 的 URL。
 - 缺乏错误处理
@@ -99,7 +98,7 @@ lots of text…
 - 不支持查询字符串
   - : 一个 data URL 的数据字段是没有结束标记的，所以尝试在一个 data URL 后面添加查询字符串（特定于页面的参数，语法为 `<url>?parameter-data`）会导致查询字符串也一并被当作数据字段。
 - 安全问题
-  - : 许多安全问题（例如，钓鱼网站）已与 data URL 相关联，并在浏览器的顶级级别导航到它们。为了缓和这样的问题，在所有现代浏览器中，顶级级别的导航 `data:` URL 是被禁止的。更多细节，请参见 [Mozilla 安全团队的这篇博客](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/)。
+  - : 许多安全问题（例如，钓鱼网站）已与 data URL 相关联，并在浏览器的顶层导航到它们。为了缓和这样的问题，在所有现代浏览器中，在顶层导航到 `data:` URL 是被禁止的。更多细节，请参见 [Mozilla 安全团队的这篇博客](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/)。
 
 ## 规范
 
@@ -112,7 +111,7 @@ lots of text…
 ## 参考
 
 - [Base64 编码和解码](/zh-CN/docs/Web/JavaScript/Base64_encoding_and_decoding)
-- [百分比编码](/zh-CN/docs/Glossary/percent-encoding)
+- [百分号编码](/zh-CN/docs/Glossary/percent-encoding)
 - {{domxref("WindowBase64.atob","atob()")}}
 - {{domxref("WindowBase64.btoa","btoa()")}}
 - [CSS `url()`](/zh-CN/docs/Web/CSS/uri)
