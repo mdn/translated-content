@@ -92,11 +92,11 @@ xhr.send();
 
 客户端和服务器之间使用 CORS 首部字段来处理权限：
 
-![](simple-req-updated.png)
+![Diagram of simple CORS GET request](simple-req.png)
 
 以下是浏览器发送给服务器的请求报文：
 
-```
+```http
 GET /resources/public-data/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
@@ -109,7 +109,9 @@ Origin: https://foo.example
 
 请求首部字段 {{HTTPHeader("Origin")}} 表明该请求来源于 `http://foo.example`。
 
-```
+让我们来看看服务器如何响应：
+
+```http
 HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 00:23:53 GMT
 Server: Apache/2
@@ -119,18 +121,18 @@ Connection: Keep-Alive
 Transfer-Encoding: chunked
 Content-Type: application/xml
 
-[XML Data]
+[…XML Data…]
 ```
 
-本例中，服务端返回的 `Access-Control-Allow-Origin: *` 表明，该资源可以被 **任意** 外域访问。
+本例中，服务端返回的 {{HTTPHeader("Access-Control-Allow-Origin")}} 标头的 `Access-Control-Allow-Origin: *` 值表明，该资源可以被 **任意** 外域访问。
 
-```
+```http
 Access-Control-Allow-Origin: *
 ```
 
 使用 {{HTTPHeader("Origin")}} 和 {{HTTPHeader("Access-Control-Allow-Origin")}} 就能完成最简单的访问控制。如果服务端仅允许来自 `https://foo.example` 的访问，该首部字段的内容如下：
 
-```
+```http
 Access-Control-Allow-Origin: https://foo.example
 ```
 
@@ -157,9 +159,10 @@ xhr.send('<person><name>Arun</name></person>');
 
 > **备注：** 如下所述，实际的 `POST` 请求不会携带 `Access-Control-Request-*` 首部，它们仅用于 `OPTIONS` 请求。
 
-下面是服务端和客户端完整的信息交互。首次交互是 _预检请求/响应_：
+下面是服务端和客户端完整的信息交互。首次交互是*预检请求/响应_*：
 
-```
+
+```http
 OPTIONS /doc HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
@@ -183,9 +186,9 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
 
-浏览器检测到，从 JavaScript 中发起的请求需要被预检。从上面的报文中，我们看到，第 1\~10 行发送了一个使用 `OPTIONS` 方法 的“预检请求”。OPTIONS 是 HTTP/1.1 协议中定义的方法，用以从服务器获取更多信息。该方法不会对服务器资源产生影响。预检请求中同时携带了下面两个首部字段：
+浏览器检测到，从 JavaScript 中发起的请求需要被预检。从上面的报文中，我们看到，第 1——10 行发送了一个使用 `OPTIONS` 方法 的“预检请求”。OPTIONS 是 HTTP/1.1 协议中定义的方法，用以从服务器获取更多信息。该方法不会对服务器资源产生影响。预检请求中同时携带了下面两个首部字段：
 
-```
+```http
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 ```
@@ -194,7 +197,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 第 13\~22 行为预检请求的响应，表明服务器将接受后续的实际请求。重点看第 16\~19 行：
 
-```
+```http
 Access-Control-Allow-Origin: https://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
@@ -209,7 +212,7 @@ Access-Control-Max-Age: 86400
 
 预检请求完成之后，发送实际请求：
 
-```
+```http
 POST /doc HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
@@ -248,7 +251,7 @@ Content-Type: text/plain
 > The request was redirected to 'https\://example.com/foo', which is disallowed for cross-origin requests that require preflight.
 > Request requires preflight, which is disallowed to follow cross-origin redirects.
 
-CORS 最初要求浏览器具有该行为，不过在后续的 [修订](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2) 中废弃了这一要求。但并非所有浏览器都实现了这一变更，而仍然表现出最初要求的行为。
+CORS 最初要求浏览器具有该行为，不过在后续的[修订](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2)中废弃了这一要求。但并非所有浏览器都实现了这一变更，而仍然表现出最初要求的行为。
 
 在浏览器的实现跟上规范之前，有两种方式规避上述报错行为：
 
@@ -290,7 +293,7 @@ function callOtherDomain() {
 
 客户端与服务器端交互示例如下：
 
-```
+```http
 GET /resources/credentialed-content/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
@@ -334,11 +337,11 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 在响应附带身份凭证的请求时：
 
-- 服务器不能将 `Access-Control-Allow-Origin` 的值设为通配符“`*`”，而应将其设置为特定的域，如：`Access-Control-Allow-Origin: https://example.com`。
+- 服务器**不能**将 `Access-Control-Allow-Origin` 的值设为通配符“`*`”，而应将其设置为特定的域，如：`Access-Control-Allow-Origin: https://example.com`。
 
-- 服务器不能将 `Access-Control-Allow-Headers` 的值设为通配符“`*`”，而应将其设置为首部名称的列表，如：`Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
+- 服务器**不能**将 `Access-Control-Allow-Headers` 的值设为通配符“`*`”，而应将其设置为首部名称的列表，如：`Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
 
-- 服务器不能将 `Access-Control-Allow-Methods` 的值设为通配符“`*`”，而应将其设置为特定请求方法名称的列表，如：`Access-Control-Allow-Methods: POST, GET`
+- 服务器**不能**将 `Access-Control-Allow-Methods` 的值设为通配符“`*`”，而应将其设置为特定请求方法名称的列表，如：`Access-Control-Allow-Methods: POST, GET`
 
 对于附带身份凭证的请求（通常是 `Cookie`），服务器不得设置 `Access-Control-Allow-Origin` 的值为“`*`”。
 
@@ -362,7 +365,7 @@ Cookie 策略受 [SameSite](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite) �
 
 响应首部中可以携带一个 {{HTTPHeader("Access-Control-Allow-Origin")}} 字段，其语法如下：
 
-```
+```http
 Access-Control-Allow-Origin: <origin> | *
 ```
 
@@ -370,20 +373,26 @@ Access-Control-Allow-Origin: <origin> | *
 
 例如，下面的字段值将允许来自 `https://mozilla.org` 的请求：
 
-```
+```http
 Access-Control-Allow-Origin: https://mozilla.org
 Vary: Origin
 ```
 
-如果服务端指定了具体的域名而非“*”，那么响应首部中的 {{HTTPHeader("Vary")}} 字段的值必须包含 {{HTTPHeader("Origin")}}。这将告诉客户端：服务器对不同的源站返回不同的内容。
+如果服务端指定了具体的域名而非“`*`”，那么响应首部中的 {{HTTPHeader("Vary")}} 字段的值必须包含 {{HTTPHeader("Origin")}}。这将告诉客户端：服务器对不同的源站返回不同的内容。
 
 ### Access-Control-Expose-Headers
 
 译者注：在跨源访问时，`XMLHttpRequest` 对象的 {{domxref("XMLHttpRequest.getResponseHeader()","getResponseHeader()")}} 方法只能拿到一些最基本的响应头，Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma，如果要访问其他头，则需要服务器设置本响应头。
 
-{{HTTPHeader("Access-Control-Expose-Headers")}} 头让服务器把允许浏览器访问的头放入白名单，例如：
+{{HTTPHeader("Access-Control-Expose-Headers")}} 头将指定标头放入允许列表中，供浏览器的 JavaScript 代码（如 {{domxref("XMLHttpRequest.getResponseHeader()","getResponseHeader()")}}）获取。
 
+```http
+Access-Control-Expose-Headers: <header-name>[, <header-name>]*
 ```
+
+例如：
+
+```http
 Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 ```
 
@@ -393,7 +402,7 @@ Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 
 {{HTTPHeader("Access-Control-Max-Age")}} 头指定了 preflight 请求的结果能够被缓存多久，请参考本文在前面提到的 preflight 例子。
 
-```
+```http
 Access-Control-Max-Age: <delta-seconds>
 ```
 
@@ -403,7 +412,7 @@ Access-Control-Max-Age: <delta-seconds>
 
 {{HTTPHeader("Access-Control-Allow-Credentials")}} 头指定了当浏览器的 `credentials` 设置为 true 时是否允许浏览器读取 response 的内容。当用在对 preflight 预检测请求的响应中时，它指定了实际的请求是否可以使用 `credentials`。请注意：简单 `GET` 请求不会被预检；如果对此类请求的响应中不包含该字段，这个响应将被忽略掉，并且浏览器也不会将相应内容返回给网页。
 
-```
+```http
 Access-Control-Allow-Credentials: true
 ```
 
@@ -413,7 +422,7 @@ Access-Control-Allow-Credentials: true
 
 {{HTTPHeader("Access-Control-Allow-Methods")}} 首部字段用于预检请求的响应。其指明了实际请求所允许使用的 HTTP 方法。
 
-```
+```http
 Access-Control-Allow-Methods: <method>[, <method>]*
 ```
 
@@ -423,7 +432,7 @@ Access-Control-Allow-Methods: <method>[, <method>]*
 
 {{HTTPHeader("Access-Control-Allow-Headers")}} 首部字段用于预检请求的响应。其指明了实际请求中允许携带的首部字段。
 
-```
+```http
 Access-Control-Allow-Headers: <field-name>[, <field-name>]*
 ```
 
@@ -435,7 +444,7 @@ Access-Control-Allow-Headers: <field-name>[, <field-name>]*
 
 {{HTTPHeader("Origin")}} 首部字段表明预检请求或实际请求的源站。
 
-```
+```http
 Origin: <origin>
 ```
 
@@ -449,7 +458,7 @@ origin 参数的值为源站 URI。它不包含任何路径信息，只是服务
 
 {{HTTPHeader("Access-Control-Request-Method")}} 首部字段用于预检请求。其作用是，将实际请求所使用的 HTTP 方法告诉服务器。
 
-```
+```http
 Access-Control-Request-Method: <method>
 ```
 
@@ -459,7 +468,7 @@ Access-Control-Request-Method: <method>
 
 {{HTTPHeader("Access-Control-Request-Headers")}} 首部字段用于预检请求。其作用是，将实际请求所携带的首部字段告诉服务器。
 
-```
+```http
 Access-Control-Request-Headers: <field-name>[, <field-name>]*
 ```
 
@@ -475,15 +484,15 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 ## 参见
 
-- [CORS errors](/zh-CN/docs/Web/HTTP/CORS/Errors)
-- [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)
+- [CORS 错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
+- [启用 CORS：如何在服务器中添加 CORS 支持](https://enable-cors.org/server.html)
 - {{domxref("XMLHttpRequest")}}
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
-- [Will it CORS?](https://httptoolkit.tech/will-it-cors) - an interactive CORS explainer & generator
-- [How to run Chrome browser without CORS](https://alfilatov.com/posts/run-chrome-without-cors/)
-- [Using CORS with All (Modern) Browsers](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
-- [Stack Overflow answer with “how to” info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
+- [它会 CORS 吗？](https://httptoolkit.tech/will-it-cors)——交互的 CORS 解释器和生成器
+- [如何不带 CORS 的运行 Chrome 浏览器](https://alfilatov.com/posts/run-chrome-without-cors/)
+- [在所有（现代）浏览器中使用 CORS](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
+- [Stack Overflow 面对常见问题的解答](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
 
-  - How to avoid the CORS preflight
-  - How to use a CORS proxy to get around _"No Access-Control-Allow-Origin header"_
-  - How to fix _"Access-Control-Allow-Origin header must not be the wildcard"_
+  - 如何避免 CORS 预检请求
+  - 如何利用 CORS 代理避免 *“No Access-Control-Allow-Origin header”*
+  - 如何修复 *“Access-Control-Allow-Origin header must not be the wildcard”*
