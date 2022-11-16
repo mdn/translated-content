@@ -1,6 +1,7 @@
 ---
 title: 缓存已编译的 WebAssembly 模块
-slug: WebAssembly/Caching_modules
+slug: orphaned/WebAssembly/Caching_modules
+original_slug: WebAssembly/Caching_modules
 ---
 
 {{WebAssemblySidebar}}
