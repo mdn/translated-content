@@ -65,12 +65,16 @@ Procurando pelo [Document object](/pt-BR/docs/DOM/document), [Window object](/pt
 
 ## Outras APIs de destaque
 
-- As funções setTimeout e setInterval foram inicialmente especificadas na interface [Window](http://www.whatwg.org/html/#window) no Padrão HTML.
+- As funções [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) e [setInterval](https://developer.mozilla.org/pt-BR/docs/Web/API/setInterval) foram inicialmente especificadas na interface [Window](http://www.whatwg.org/html/#window) no Padrão HTML.
 - [XMLHttpRequest.](http://dev.w3.org/2006/webapi/XMLHttpRequest-2/) Possibilita enviar requisições HTTP assíncronas.
+- A [Fetch API](https://fetch.spec.whatwg.org/) fornece uma abstração mais ergonômica para requisições de rede.
 - [CSS Object Model.](http://dev.w3.org/csswg/cssom/) O CSSOM é utilizado para abstrair regras CSS como objetos
 - [WebWorkers.](http://www.whatwg.org/specs/web-workers/current-work/) API que permite computação paralela.
 - [WebSockets.](http://www.whatwg.org/C/#network) API que permite comunicação bi-direcional de baixo-nível.
 - [Canvas 2D Context.](http://www.whatwg.org/html/#2dcontext) API de ilustração (desenho) para o elemento canvas.
+- A [interface WebAssembly](https://webassembly.github.io/spec/js-api) fornece utilitários para comunicação entre código JavaScript e módulos [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly).
+
+Ambientes sem navegador (como Node.js) geralmente não têm APIs DOM — porque não interagem com um documento — mas ainda assim implementam muitas APIs da Web, como [fetch()](https://developer.mozilla.org/pt-BR/docs/Web/API/fetch) e [setTimeout()](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout).
 
 ### Suporte de Navegadores
 
