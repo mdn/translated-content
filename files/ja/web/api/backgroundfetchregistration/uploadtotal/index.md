@@ -13,7 +13,7 @@ l10n:
 
 {{jsxref("number")}}。
 
-## Examples
+## 例
 
 {{domxref("BackgroundFetchRegistration.uploadTotal")}} をコンソールにログ出力すると、 uploadTotal が出力されます。
 
