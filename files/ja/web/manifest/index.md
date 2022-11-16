@@ -25,7 +25,7 @@ slug: Web/Manifest
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
-  "description": "読むことができるハッカーニュースアプリです。",
+  "description": "読みやすいハッカーニュースアプリです。",
   "icons": [{
     "src": "images/touch/homescreen48.png",
     "sizes": "48x48",
