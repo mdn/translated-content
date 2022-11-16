@@ -21,7 +21,7 @@ Los compiladores JIT no son invocados típicamente de forma directa, sino que se
 
 Los compiladores también pueden traducir entre lenguajes de alto nivel — por ejemplo, de TypeScript a [JavaScript](/es/docs/Glossary/JavaScript) — en tal caso, a menudo se les denomina transpiladores.
 
-## Saber más
+## Véase también
 
 - [Compilar de C/C++ a WebAssembly](/en-US/docs/WebAssembly/C_to_wasm)
 - [Compilar de Rust a WebAssembly](/en-US/docs/WebAssembly/Rust_to_wasm)
