@@ -7,18 +7,18 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`progress`** event of the {{domxref("BackgroundFetchRegistration")}} interface thrown when the associated background fetch progresses.
+{{domxref("BackgroundFetchRegistration")}} インターフェイスの **`progress`** イベントは、関連するバックグラウンドフェッチに進捗があった際に投げられます。
 
-Practically, this event is fired when any of the following properties will return a new value:
+実際には、このイベントは下記プロパティのいずれかが更新されるときに発火します。
 
-- {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}},
-- {{domxref("BackgroundFetchRegistration.downloaded", "downloaded")}},
-- {{domxref("BackgroundFetchRegistration.result", "result")}}, or
-- {{domxref("BackgroundFetchRegistration.failureReason", "failureReason")}}.
+- {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}}
+- {{domxref("BackgroundFetchRegistration.downloaded", "downloaded")}}
+- {{domxref("BackgroundFetchRegistration.result", "result")}}
+- {{domxref("BackgroundFetchRegistration.failureReason", "failureReason")}}
 
 ## 構文
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set the `onprogress` event property on the relevant {{domxref("BackgroundFetchRegistration")}} object.
+{{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドでイベント名を使用するか、関連する {{domxref("BackgroundFetchRegistration")}} オブジェクトに `onprogress` というイベントプロパティを設定します。
 
 ```js-nolint
 addEventListener("progress", (event) => { })
@@ -27,11 +27,11 @@ onprogress = (event) => { }
 
 ## イベント型
 
-A generic {{domxref("Event")}} with no added properties.
+追加のプロパティを持たない汎用 {{domxref("Event")}}。
 
 ## 例
 
-The following example demonstrates how to log the progress of a download. The code first checks that a `downloadTotal` was provided when the background fetch was registered. This is then used to calculate the percentage, based on the `downloaded` property.
+以下の例は、ダウンロードの進捗をログ出力する方法を示しています。このコードでは、バックグラウンドフェッチが登録された際に、まず `downloadTotal` が設定されていることを確認します。これは `downloaded` プロパティに基づいてダウンロードの進捗を計算するために使用されます。
 
 ```js
 bgFetch.addEventListener("progress", () => {
@@ -39,7 +39,7 @@ bgFetch.addEventListener("progress", () => {
   const percent = Math.round(
     (bgFetch.downloaded / bgFetch.downloadTotal) * 100
   );
-  console.log(`Download progress: ${percent}%`);
+  console.log(`ダウンロードの進捗： ${percent}%`);
 });
 ```
 
