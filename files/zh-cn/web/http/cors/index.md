@@ -15,20 +15,14 @@ slug: Web/HTTP/CORS
 
 跨源域资源共享（{{Glossary("CORS")}}）机制允许 Web 应用服务器进行跨源访问控制，从而使跨源数据传输得以安全进行。现代浏览器支持在 API 容器中（例如 {{domxref("XMLHttpRequest")}} 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API)）使用 CORS，以降低跨源 HTTP 请求所带来的风险。
 
-## 谁应该读这篇文章？
-
-说实话，每个人。
-
-更具体地来讲，这篇文章适用于 **网站管理员**、**后端和前端开发者**。现代浏览器处理跨源资源共享的客户端部分，包括 HTTP 头和相关策略的执行。但是这一新标准意味着服务器需要处理新的请求头和响应头。
-
 ## 什么情况下需要 CORS？
 
-这份 [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-protocol) 允许在下列场景中使用跨站点 HTTP 请求：
+这份[跨域共享标准](https://fetch.spec.whatwg.org/#http-cors-protocol)允许在下列场景中使用跨站点 HTTP 请求：
 
 - 前文提到的由 {{domxref("XMLHttpRequest")}} 或 [Fetch APIs](/zh-CN/docs/Web/API/Fetch_API) 发起的跨源 HTTP 请求。
 - Web 字体 (CSS 中通过 `@font-face` 使用跨源字体资源)，[因此，网站就可以发布 TrueType 字体资源，并只允许已授权网站进行跨站调用](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)。
 - [WebGL 贴图](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
-- 使用 [`drawImage`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawImage) 将 Images/video 画面绘制到 canvas。
+- 使用 [`drawImage`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawImage) 将图片或视频画面绘制到 canvas。
 - [来自图像的 CSS 图形](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
 
 本文概述了跨源资源共享机制及其所涉及的 HTTP 头。
