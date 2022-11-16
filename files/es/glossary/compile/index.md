@@ -24,5 +24,5 @@ Los compiladores también pueden traducir entre lenguajes de alto nivel — por 
 ## Véase también
 
 - [Compilar de C/C++ a WebAssembly](/es/docs/WebAssembly/C_to_wasm)
-- [Compilar de Rust a WebAssembly](/en-US/docs/WebAssembly/Rust_to_wasm)
+- [Compilar de Rust a WebAssembly](/es/docs/WebAssembly/Rust_to_wasm)
 - Wikipedia: [Compilador](https://es.wikipedia.org/wiki/Compilador)
