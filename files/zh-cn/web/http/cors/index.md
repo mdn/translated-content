@@ -5,7 +5,7 @@ slug: Web/HTTP/CORS
 
 {{HTTPSidebar}}
 
-**跨源资源共享** ({{Glossary("CORS")}})（或通俗地译为跨域资源共享）是一种基于 {{Glossary("HTTP")}} 头的机制，该机制通过允许服务器标示除了它自己以外的其它{{glossary("origin","源")}}（域，协议和端口），使得浏览器允许这些 origin 访问加载自己的资源。跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托管的跨源资源的“预检”请求。在预检中，浏览器发送的头中标示有 HTTP 方法和真实请求中会用到的头。
+**跨源资源共享**（{{Glossary("CORS")}}，或通俗地译为跨域资源共享）是一种基于 {{Glossary("HTTP")}} 头的机制，该机制通过允许服务器标示除了它自己以外的其它{{glossary("origin","源")}}（域、协议和端口），使得浏览器允许这些 origin 访问加载自己的资源。跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托管的跨源资源的“预检”请求。在预检中，浏览器发送的头中标示有 HTTP 方法和真实请求中会用到的头。
 
 跨源 HTTP 请求的一个例子：运行在 `https://domain-a.com` 的 JavaScript 代码使用 {{domxref("XMLHttpRequest")}} 来发起一个到 `https://domain-b.com/data.json` 的请求。
 
@@ -19,7 +19,7 @@ CORS 机制允许 Web 应用服务器进行跨源访问控制，从而使跨源�
 
 这份[跨源共享标准](https://fetch.spec.whatwg.org/#http-cors-protocol)允许在下列场景中使用跨站点 HTTP 请求：
 
-- 前文提到的由 {{domxref("XMLHttpRequest")}} 或 [Fetch APIs](/zh-CN/docs/Web/API/Fetch_API) 发起的跨源 HTTP 请求。
+- 前文提到的由 {{domxref("XMLHttpRequest")}} 或 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 发起的跨源 HTTP 请求。
 - Web 字体（CSS 中通过 `@font-face` 使用跨源字体资源），[因此，网站就可以发布 TrueType 字体资源，并只允许已授权网站进行跨站调用](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)。
 - [WebGL 贴图](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 - 使用 {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} 将图片或视频画面绘制到 canvas。
@@ -29,7 +29,7 @@ CORS 机制允许 Web 应用服务器进行跨源访问控制，从而使跨源�
 
 ## 功能概述
 
-跨源资源共享标准新增了一组 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)字段，允许服务器声明哪些源站通过浏览器有权限访问哪些资源。另外，规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 {{HTTPMethod("GET")}} 以外的 HTTP 请求，或者搭配某些 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 的 {{HTTPMethod("POST")}} 请求），浏览器必须首先使用 {{HTTPMethod("OPTIONS")}} 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨源请求。服务器确认允许之后，才发起实际的 HTTP 请求。在预检请求的返回中，服务器端也可以通知客户端，是否需要携带身份凭证（例如 [Cookies](/zh-CN/docs/Web/HTTP/Cookies) 和 [HTTP 认证](/zh-CN/docs/Web/HTTP/Authentication) 相关数据）。
+跨源资源共享标准新增了一组 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)字段，允许服务器声明哪些源站通过浏览器有权限访问哪些资源。另外，规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 {{HTTPMethod("GET")}} 以外的 HTTP 请求，或者搭配某些 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 的 {{HTTPMethod("POST")}} 请求），浏览器必须首先使用 {{HTTPMethod("OPTIONS")}} 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨源请求。服务器确认允许之后，才发起实际的 HTTP 请求。在预检请求的返回中，服务器端也可以通知客户端，是否需要携带身份凭证（例如 [Cookie](/zh-CN/docs/Web/HTTP/Cookies) 和 [HTTP 认证](/zh-CN/docs/Web/HTTP/Authentication) 相关数据）。
 
 CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层面*无法*获知到底具体是哪里出了问题。你只能查看浏览器的控制台以得知具体是哪里出现了错误。
 
@@ -53,7 +53,7 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
-- 除了被用户代理自动设置的首部字段（例如 {{HTTPHeader("Connection")}}，{{HTTPHeader("User-Agent")}}或其他在 Fetch 规范中定义为[禁用首部名称](https://fetch.spec.whatwg.org/#forbidden-header-name) 的首部），允许人为设置的字段为 Fetch 规范定义的 [对 CORS 安全的首部字段集合](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)。该集合为：
+- 除了被用户代理自动设置的首部字段（例如 {{HTTPHeader("Connection")}}、{{HTTPHeader("User-Agent")}} 或其他在 Fetch 规范中定义为[禁用首部名称](https://fetch.spec.whatwg.org/#forbidden-header-name) 的首部），允许人为设置的字段为 Fetch 规范定义的 [对 CORS 安全的首部字段集合](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)。该集合为：
 
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
@@ -349,7 +349,7 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 另外，响应首部中也携带了 `Set-Cookie` 字段，尝试对 Cookie 进行修改。如果操作失败，将会抛出异常。
 
-#### 第三方 cookies
+#### 第三方 cookie
 
 注意在 CORS 响应中设置的 cookie 适用一般性第三方 cookie 策略。在上面的例子中，页面是在 `foo.example` 加载，但是第 19 行的 cookie 是被 `bar.other` 发送的，如果用户设置其浏览器拒绝所有第三方 cookie，那么将不会被保存。
 
@@ -494,5 +494,5 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 - [Stack Overflow 面对常见问题的解答](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
 
   - 如何避免 CORS 预检请求
-  - 如何利用 CORS 代理避免 *“No Access-Control-Allow-Origin header”*
-  - 如何修复 *“Access-Control-Allow-Origin header must not be the wildcard”*
+  - 如何利用 CORS 代理避免“_No Access-Control-Allow-Origin header_”
+  - 如何修复“_Access-Control-Allow-Origin header must not be the wildcard_”
