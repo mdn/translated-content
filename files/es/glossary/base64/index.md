@@ -327,7 +327,7 @@ Para una librería más completa, véase [`StringView`](/es/docs/Web/JavaScript/
 - [TypedArrays](/es/docs/Web/JavaScript/Typed_arrays)
 - [ArrayBufferView](/es/docs/Web/JavaScript/Typed_arrays/ArrayBufferView)
 - [Uint8Array](/es/docs/Web/JavaScript/Typed_arrays/Uint8Array)
-- [`StringView` – una representación tipo C de cadenas basadas en arrays tipados](/es/docs/Web/JavaScript/Typed_arrays/StringView)
+- [`StringView` – una representación tipo C de cadenas basadas en arreglos tipados](/es/docs/Web/JavaScript/Typed_arrays/StringView)
 - [DOMString](/es/docs/Web/API/DOMString)
 - [`URI`](/es/docs/URI)
 - [`encodeURI()`](/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
