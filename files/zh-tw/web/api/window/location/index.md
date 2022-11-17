@@ -3,7 +3,7 @@ title: window.location
 slug: Web/API/Window/location
 ---
 
-{{ ApiRef() }}
+{{APIRef}}
 
 ### Summary
 
