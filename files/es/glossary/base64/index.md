@@ -92,7 +92,7 @@ b64_to_utf8('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
 
 Esta solución ha sido propuesta por [Johan Sundström](http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html).
 
-Otra posible solución son utilizar las funciones 'unscape' y 'escape', ya obsoletas.
+Otra posible solución sin utilizar las funciones 'unscape' y 'escape', ya obsoletas.
 
 ```js
 function b64EncodeUnicode(str) {
