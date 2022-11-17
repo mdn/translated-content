@@ -41,13 +41,18 @@ A good place to learn about general guidelines for contributing to
 
 This repo has exactly the same folder structure, concepts, and commands available to it as the [content repo](https://github.com/mdn/content), which holds all of MDN's English content. The main difference is in the setup you need to do before you can start editing. It is mostly the same, but there is a little bit more to consider.
 
-To begin with, get the basic required tooling set up, as described in the [content repo Setup section](https://github.com/mdn/content#setup).
+The basic build steps are described in the content repo [Build the site](https://github.com/mdn/content#build-the-site) section.
+More detailed steps along with hints for tooling are covered in the content repo [Contributing guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md)
 
 Now you need to fork and clone both the [content repo](https://github.com/mdn/content) and the translated-content repo (this repo).
 
 ### Content repo setup
 
-1. Once the above is done, cd into the content repo.
+1. Navigate to your local clone of the content repository fork:
+
+    ```bash
+    cd ~/path/to/content
+    ```
 
 2. Run the command `yarn install` to fetch the latest packages and get the local MDN testing environment set up. It is also recommended that you run `yarn install` before every update you do to the source, to make sure you have the latest packages.
 
@@ -57,7 +62,7 @@ Now you need to fork and clone both the [content repo](https://github.com/mdn/co
    export CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files
    ```
 
-   But you'll have to newly-set this every time you open up a new terminal window. Instead, you could put the environment variable setting in an `.env` file in the root of your content repo. This is most easily done using the following command:
+   You must set this every time you start a new shell or terminal session. To avoid this, you can put the environment variable in a `.env` file at the root of your content repo. You can do this with the following command:
 
    ```bash
    echo CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files >> .env
@@ -65,7 +70,7 @@ Now you need to fork and clone both the [content repo](https://github.com/mdn/co
 
    (the `.env` file will be created for you if it does not already exist.)
 
-4. Now you've got this set up, enter the command `yarn start` to begin the local testing server running at `localhost:5042`.
+4. Run the command `yarn start` to start the local server at `localhost:5042`.
 
 ### Working in the translated-content repo
 
@@ -77,7 +82,7 @@ Over in the translated-content repo, decide what change you want to make, and th
 
 3. When you are satisfied with your changes, create a pull request and one of our review teams will review it.
 
-4. Once the pull request has been merged, the edition may take up to 48 hours (daily build and CDN caches). To see if your change has been deployed, you can check on [What's Deployed](https://whatsdeployed.io/s/16d/mdn/translated-content).
+4. When your pull request is merged by a reviewer, the changes may take up to 48 hours to be visible.
 
 ### For more info on editing this repo
 
