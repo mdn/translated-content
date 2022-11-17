@@ -5,8 +5,6 @@ slug: Web/CSS/ime-mode
 
 {{CSSRef}}
 
-{{ CSSRef() }}
-
 ### 摘要
 
 `ime-mode` 特性可用以控制某文字輸入欄位的輸入法狀態。

@@ -5,7 +5,6 @@ slug: Web/CSS/::first-letter
 
 {{CSSRef}}
 
-{{ CSSRef() }}
 
 ## 概要
 

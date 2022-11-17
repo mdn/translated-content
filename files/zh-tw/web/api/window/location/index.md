@@ -5,8 +5,6 @@ slug: Web/API/Window/location
 
 {{APIRef}}
 
-{{ ApiRef() }}
-
 ### Summary
 
 Returns a [`Location` object](#Location_object), which contains information about the URL of the document and provides methods for changing that URL. You can also assign to this property to load another URL.
