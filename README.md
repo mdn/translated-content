@@ -30,15 +30,13 @@ When contributing to the content you agree to license your contributions accordi
 
 ## Making contributions
 
-A good place to learn about general guidelines for contributing to
-[MDN Web Docs](https://developer.mozilla.org) is the [Guidelines document](https://developer.mozilla.org/en-US/docs/MDN/Guidelines). For example, you can find out more about MDN's writing-style guidelines via the [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).
+A good place to learn about general guidelines for contributing to [MDN Web Docs](https://developer.mozilla.org) is the [Guidelines document](https://developer.mozilla.org/en-US/docs/MDN/Guidelines). For example, you can find out more about MDN's writing-style guidelines via the [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).
 
 ### Setting up to edit
 
 This repo has exactly the same folder structure, concepts, and commands available to it as the [content repo](https://github.com/mdn/content), which holds all of MDN's English content. The main difference is in the setup you need to do before you can start editing. It is mostly the same, but there is a little bit more to consider.
 
-The basic build steps are described in the content repo [Build the site](https://github.com/mdn/content#build-the-site) section.
-More detailed steps along with hints for tooling are covered in the content repo [Contributing guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md)
+The basic build steps are described in the content repo [Build the site](https://github.com/mdn/content#build-the-site) section. More detailed steps along with hints for tooling are covered in the content repo [Contributing guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md)
 
 Now you need to fork and clone both the [content repo](https://github.com/mdn/content) and the translated-content repo (this repo).
 
