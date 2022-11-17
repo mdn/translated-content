@@ -3,6 +3,8 @@ title: ime-mode
 slug: Web/CSS/ime-mode
 ---
 
+{{CSSRef}}
+
 {{ CSSRef() }}
 
 ### 摘要
