@@ -15,7 +15,7 @@ Para mais artigos sobre canvas, veja [canvas topic page](/en/HTML/Canvas).
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de tags            | Nenhuma, tanto a tag de início quanto a de fim devem ser incluídas.                                                                                                                                                                                |
 | Elementos "pai" permitidos | Qualquer elemento que aceite [phrasing content](/en/HTML/Content_categories#phrasing_content) ou [flow content](/en/HTML/Content_categories#flow_content). |
-| Documento normativo        | [HTML 5, section 4.8.10](http://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                                                                                                                    |
+| Documento normativo        | [HTML 5, section 4.8.10](https://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                                                                                                                    |
 
 ## Atributos
 

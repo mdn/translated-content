@@ -14,7 +14,7 @@ html,body,svg { height:100% }
 ```
 
 ```html
-<svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 240 80" xmlns="https://www.w3.org/2000/svg">
   <style>
     .small { font: italic 13px sans-serif; }
     .heavy { font: bold 30px sans-serif; }

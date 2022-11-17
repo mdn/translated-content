@@ -33,4 +33,4 @@ Tentar remover um atributo que não existe no elemento não fará que uma exceç
 
 ## Especificação
 
-[DOM Level 2 Core: removeAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9) (introduzido no [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute))
+[DOM Level 2 Core: removeAttribute](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9) (introduzido no [DOM Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute))

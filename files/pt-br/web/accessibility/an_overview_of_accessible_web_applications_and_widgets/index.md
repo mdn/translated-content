@@ -38,7 +38,7 @@ _Exemplo 2: Como o widget de abas pode ser visto. Seus utilizadores podem reconh
 
 ## ARIA
 
-As definições para [WAI-ARIA](http://www.w3.org/WAI/intro/aria.php) **Accessible Rich Internet Applications** (Aplicações Ricas para uma Internete Acessível), da W3C - [Web Accessibility Initiative](http://www.w3.org/WAI/) (Iniciativa pela Acessibilidade na Rede Mundial/World Wide Web Consortium-W3C) - oferecem uma via para a adição das necessidades semânticas perdidas pelas tecnologias assistivas, como os leitores de tela. O conjunto ARIA possibilita que desenvolvedores possam descrever seus _widgets_ de forma mais detalhada com a inclusão de atributos especiais à marcação. Projetado para preencher a lacuna entre o padrão de rotulagem HTML e os controles com estilo ambiente encontrados em aplicações dinâmicas pela _web_, o conjunto ARIA fornece funções (roles) e estados (states) que descrevem o comportamento da maioria das interfaces de utilização dos _widgets_ conhecidas.
+As definições para [WAI-ARIA](https://www.w3.org/WAI/intro/aria.php) **Accessible Rich Internet Applications** (Aplicações Ricas para uma Internete Acessível), da W3C - [Web Accessibility Initiative](https://www.w3.org/WAI/) (Iniciativa pela Acessibilidade na Rede Mundial/World Wide Web Consortium-W3C) - oferecem uma via para a adição das necessidades semânticas perdidas pelas tecnologias assistivas, como os leitores de tela. O conjunto ARIA possibilita que desenvolvedores possam descrever seus _widgets_ de forma mais detalhada com a inclusão de atributos especiais à marcação. Projetado para preencher a lacuna entre o padrão de rotulagem HTML e os controles com estilo ambiente encontrados em aplicações dinâmicas pela _web_, o conjunto ARIA fornece funções (roles) e estados (states) que descrevem o comportamento da maioria das interfaces de utilização dos _widgets_ conhecidas.
 
 A especificação ARIA está dividida em três tipos diferentes de atributos: funções (roles), estados (states) e propriedades (properties). As funções (roles) descrevem os _widgets_ que não estão disponíveis de outra forma em HTML 4, como deslizantes, barras de menu, abas e diálogos. As propriedades (properties) descrevem as características desses _widgets_ - se podem ser arrastados (_draggable_), se existe algum elemento obrigatório, ou se trazem uma janela de explosão (popup) associada. Os estados (states) descrevem a interação atual de um elemento, informando à tecnlogia assistiva se este se encontra ativo, desativado, selecionado, ou oculto.
 
@@ -86,7 +86,7 @@ O conjunto ARIA provê atributos para declarar o estado atual da interface de ut
 - `aria-grabbed` (arrastado)
   - : indica o estado "arrastado" para um objeto, em uma operação de "arrastar e soltar".
 
-(Para uma lista completa de estados ARIA, consulte a [ARIA list of states and properties](http://www.w3.org/TR/wai-aria/states_and_properties) (lista de estados e propriedades ARIA).
+(Para uma lista completa de estados ARIA, consulte a [ARIA list of states and properties](https://www.w3.org/TR/wai-aria/states_and_properties) (lista de estados e propriedades ARIA).
 
 Os desenvolvedores devem dar preferência ao uso dos estados ARIA para indicar a situação atual dos elemento*s widgets* na interface de utilização (UI) e os seletores de atributos CSS para alterar a sua aparência, com base nas mudanças desses estados (em vez de usar um roteiro (_script_) para mudar um nome de classe de um elemento).
 
@@ -219,12 +219,12 @@ Aqui está um resumo sobre como a navegação pelo teclado deve funcionar, com a
 
 Assim, para o exemplo de _widget_ de abas acima, a pessoa que estiver navegando deve ser capaz de entrar e sair da caixa que o contém usando as teclas "_Tab_" e "_Shift+Tab_" ( a \<ol> na nossa marcação). Uma vez que o foco, pelo teclado, estiver dentro do contêiner, as teclas de setas devem permitir a navegação entre as suas diferentes guias (os elementos \<li> ). A partir daqui as convenções variam de plataforma para plataforma. No Windows, a próxima aba deve ser ativada, automaticamente, quando as teclas de setas forem pressionadas. Em Mac OS X, seus utilizadores ativam a próxima aba pressionando a tecla "_Entra_", ou a "_barra de espaço_". Um tutorial abrangente, para a criação de _widgets_, com navegação pelo teclado, descreve como implementar esse comportamento utilizando JavaScript [Keyboard-navigable JavaScript widgets (_JavaScript para_ _widgets navegáveis pelo teclado_)](/en/Accessibility/Keyboard-navigable_JavaScript_widgets).
 
-Para mais detalhes sobre as convenções da navegação pelo teclado em modelo ambiente, um guia completo (em inglês) [DHTML style guide (_guia de estilos da HTML Dinâmica_)](http://access.aol.com/dhtml-style-guide-working-group/) está disponível. Este guia oferece uma visão global de como a navegação pelo teclado deve funcionar em cada tipo de _widget_ suportado pelo conjunto ARIA. A W3C também oferece um documento que ajuda muito, [ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html), incluindo a navegação pelo teclado e as convenções de atalhos para uma variedade de _widgets_.
+Para mais detalhes sobre as convenções da navegação pelo teclado em modelo ambiente, um guia completo (em inglês) [DHTML style guide (_guia de estilos da HTML Dinâmica_)](http://access.aol.com/dhtml-style-guide-working-group/) está disponível. Este guia oferece uma visão global de como a navegação pelo teclado deve funcionar em cada tipo de _widget_ suportado pelo conjunto ARIA. A W3C também oferece um documento que ajuda muito, [ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html), incluindo a navegação pelo teclado e as convenções de atalhos para uma variedade de _widgets_.
 
 ## Veja, também
 
 - [ARIA](/en/ARIA)
 - [Web applications and ARIA FAQ](/en/Accessibility/Web_applications_and_ARIA_FAQ)
-- [WAI-ARIA Specification](http://www.w3.org/TR/wai-aria/)
-- [WAI-ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html)
+- [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria/)
+- [WAI-ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html)
 - [DHTML Style Guide](http://access.aol.com/dhtml-style-guide-working-group/)

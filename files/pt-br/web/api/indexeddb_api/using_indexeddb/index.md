@@ -235,7 +235,7 @@ request.onupgradeneeded = function (event) {
 }
 ```
 
-Para mais detalhes veja ["W3C Key Generators"](http://www.w3.org/TR/IndexedDB/#key-generator-concept).
+Para mais detalhes veja ["W3C Key Generators"](https://www.w3.org/TR/IndexedDB/#key-generator-concept).
 
 ## Adicionando, obtendo e removendo dados
 
@@ -1031,7 +1031,7 @@ input {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     // Setting the wanted responseType to "blob"
-    // http://www.w3.org/TR/XMLHttpRequest2/#the-response-attribute
+    // https://www.w3.org/TR/XMLHttpRequest2/#the-response-attribute
     xhr.responseType = 'blob';
     xhr.onload = function (evt) {
                            if (xhr.status == 200) {
@@ -1128,7 +1128,7 @@ input {
     if (typeof store == 'undefined')
       store = getObjectStore(DB_STORE_NAME, 'readwrite');
 
-    // As per spec http://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
+    // As per spec https://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
     // the result of the Object Store Deletion Operation algorithm is
     // undefined, so it's not possible to know if some records were actually
     // deleted by looking at the request result.
@@ -1264,7 +1264,7 @@ Uma leitura adicional para você encontrar mais informações.
 ### Refências
 
 - [IndexedDB API Reference](/en/IndexedDB)
-- [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
+- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/pt-BR/docs/IndexedDB/Using_IndexedDB_in_chrome)
 - [Using JavaScript generators in Firefox](/pt-BR/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)
 - IndexedDB [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1) in the Firefox source code

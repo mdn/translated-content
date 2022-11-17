@@ -105,7 +105,7 @@ Note that this example doesn't specify a [`script-src`](/en/Security/CSP/CSP_pol
 
 ## Testando sua política
 
-To ease deployment, CSP can be deployed in ["report-only" mode](http://www.w3.org/TR/CSP/#content-security-policy-report-only-header-field). The policy is not enforced, but any violations are reported to a provided URI. Additionally, a report-only header can be used to test a future revision to a policy without actually deploying it.
+To ease deployment, CSP can be deployed in ["report-only" mode](https://www.w3.org/TR/CSP/#content-security-policy-report-only-header-field). The policy is not enforced, but any violations are reported to a provided URI. Additionally, a report-only header can be used to test a future revision to a policy without actually deploying it.
 
 You can use the `Content-Security-Policy-Report-Only` HTTP header to specify your policy, like this:
 

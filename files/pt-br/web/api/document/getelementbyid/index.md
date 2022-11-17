@@ -66,7 +66,7 @@ var el = document.getElementById('testqq'); // el será null!
 
 `getElementById` foi introduzido no DOM Level 1 para documentos HTML e movidos para todos documentos no DOM Level 2
 
-- Especificação núcleo DOM Level 2: [getElementById](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBId)
+- Especificação núcleo DOM Level 2: [getElementById](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBId)
 
 ## Veja também
 

@@ -96,7 +96,7 @@ use tabelas não-aninhadas ou divs, como em
 <TABLE>...</TABLE>
 ```
 
-Veja também: [Especificações do layout multi-colunas CSS3](http://www.w3.org/TR/css3-multicol/) e [layout de caixas flexíveis CSS3](http://www.w3.org/TR/css3-flexbox/)
+Veja também: [Especificações do layout multi-colunas CSS3](https://www.w3.org/TR/css3-multicol/) e [layout de caixas flexíveis CSS3](https://www.w3.org/TR/css3-flexbox/)
 
 ### Especifique tamanhos para imagens e tabelas
 

@@ -13,7 +13,7 @@ O elemento `source` é utilizado para especificar múltiplos recursos de mídia 
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | Omissão de tag            | Deve ter uma tag de início, mas não deve ter uma tag de fim.                                                     |
 | Elementos pais permitidos | {{HTMLElement("picture")}}, {{ HTMLElement("audio") }}, {{ HTMLElement("video") }} |
-| Documento normativo       | [HTML5, section 4.8.8](http://www.w3.org/TR/html5/video.html#the-source-element)                                 |
+| Documento normativo       | [HTML5, section 4.8.8](https://www.w3.org/TR/html5/video.html#the-source-element)                                 |
 
 ## Atributos
 

@@ -102,5 +102,5 @@ Os seguintes métodos foram reprovados:
 
 ## Especificações
 
-- [Document Object Model Core level 3: Interface Attr](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-637646024)
-- [Document Object Model 4: Interface Attr](http://www.w3.org/TR/dom/#interface-attr)
+- [Document Object Model Core level 3: Interface Attr](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-637646024)
+- [Document Object Model 4: Interface Attr](https://www.w3.org/TR/dom/#interface-attr)

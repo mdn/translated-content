@@ -6,7 +6,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 
 ### Descrição
 
-Esta técnica mostra como utilizar o atributo _role_ [alert](http://www.w3.org/TR/wai-aria/roles#alert) e demonstra seu efeito em navegadores e tecnologias assistivas.
+Esta técnica mostra como utilizar o atributo _role_ [alert](https://www.w3.org/TR/wai-aria/roles#alert) e demonstra seu efeito em navegadores e tecnologias assistivas.
 
 O atributo de alerta é utilizado para comunicar alguma mensagem importante e, frequentemente, urgente. Quando este atributo (_role_) estiver ligado a um elemento, o navegador vai enviar um evento acessível de alerta aos produtos de tecnologia assistiva que, então, poderão notificar seus utilizadores sobre o que estiver acontecendo. O atributo _alert_ é mais útil para as informações que requerem a atenção imediata na tela. Por exemplo:
 
@@ -100,7 +100,7 @@ document.getElementById("expirationWarning").className = "";
 
 ### Atributos ARIA utilizados
 
-- [alert](http://www.w3.org/TR/wai-aria/roles#alert)
+- [alert](https://www.w3.org/TR/wai-aria/roles#alert)
 
 ### Técnicas ARIA relacionadas
 
@@ -113,4 +113,4 @@ TBD: Adicionar informações de suporte para UA comum e combinações de produto
 
 ### Recursos Adicionais
 
-- Melhores práticas ARIA - Alert Role: <http://www.w3.org/TR/wai-aria-practices/#alert>
+- Melhores práticas ARIA - Alert Role: <https://www.w3.org/TR/wai-aria-practices/#alert>
