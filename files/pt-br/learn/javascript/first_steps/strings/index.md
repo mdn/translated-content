@@ -303,7 +303,7 @@ Aqui estamos usando uma função {{domxref("Window.prompt()", "Window.prompt()")
       typeof myString;
       ```
 
-    Estas construções podem ser bem úteis em algumas situações. Por exemplo, se o usuário colocar um número em um campo de texto, isso será uma string. Entretanto, se você quiser adicionar este número a algo, você precisa que seja um número, então você pode passar isto através do `Number()` para poder manipular.Nós fizemos exatamente isto no nosso [Number Guessing Game, in line 61](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L61).
+    Estas construções podem ser bem úteis em algumas situações. Por exemplo, se o usuário colocar um número em um campo de texto, isso será uma string. Entretanto, se você quiser adicionar este número a algo, você precisa que seja um número, então você pode passar isto através do `Number()` para poder manipular.Nós fizemos exatamente isto no nosso [Number Guessing Game, in line 59](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L59).
 
 ## Conclusão
 
