@@ -141,7 +141,7 @@ Access-Control-Allow-Origin: https://foo.example
 
 ### 预检请求
 
-与前述简单请求不同，“需预检的请求”要求必须首先使用 {{HTTPMethod("OPTIONS")}} 方法发起一个预检请求到服务器，以获知服务器是否允许该实际请求。"预检请求“的使用，可以避免跨域请求对服务器的用户数据产生未预期的影响。
+与[简单请求](#简单请求)不同，“需预检的请求”要求必须首先使用 {{HTTPMethod("OPTIONS")}} 方法发起一个预检请求到服务器，以获知服务器是否允许该实际请求。"预检请求“的使用，可以避免跨域请求对服务器的用户数据产生未预期的影响。
 
 如下是一个需要执行预检请求的 HTTP 请求：
 
@@ -154,14 +154,13 @@ xhr.onreadystatechange = handler;
 xhr.send('<person><name>Arun</name></person>');
 ```
 
-上面的代码使用 `POST` 请求发送一个 XML 文档，该请求包含了一个自定义的请求首部字段（X-PINGOTHER: pingpong）。另外，该请求的 `Content-Type` 为 `application/xml`。因此，该请求需要首先发起“预检请求”。
+上面的代码使用 `POST` 请求发送一个 XML 请求体，该请求包含了一个非标准的 HTTP `X-PINGOTHER` 请求首部。这样的请求首部并不是 HTTP/1.1 的一部分，但通常对于 web 应用很有用处。另外，该请求的 `Content-Type` 为 `application/xml`，且使用了自定义的请求首部，所以该请求需要首先发起“预检请求”。
 
 ![](preflight_correct.png)
 
 > **备注：** 如下所述，实际的 `POST` 请求不会携带 `Access-Control-Request-*` 首部，它们仅用于 `OPTIONS` 请求。
 
-下面是服务端和客户端完整的信息交互。首次交互是*预检请求/响应_*：
-
+下面是服务端和客户端完整的信息交互。首次交互是*预检请求/响应*：
 
 ```http
 OPTIONS /doc HTTP/1.1
@@ -187,16 +186,16 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
 
-浏览器检测到，从 JavaScript 中发起的请求需要被预检。从上面的报文中，我们看到，第 1——10 行发送了一个使用 `OPTIONS` 方法 的“预检请求”。OPTIONS 是 HTTP/1.1 协议中定义的方法，用以从服务器获取更多信息。该方法不会对服务器资源产生影响。预检请求中同时携带了下面两个首部字段：
+从上面的报文中，我们看到，第 1 - 10 行使用 {{HTTPMethod("OPTIONS")}} 方法发送了预检请求，浏览器根据上面的JavaScript代码片断所使用的请求参数来决定是否需要发送，这样服务器就可以回应是否可以接受用实际的请求参数来发送请求。OPTIONS 是 HTTP/1.1 协议中定义的方法，用于从服务器获取更多信息，是{{Glossary("Safe/HTTP", "安全")}}的方法。该方法不会对服务器资源产生影响。注意 OPTIONS 预检请求中同时携带了下面两个首部字段：
 
 ```http
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 ```
 
-首部字段 {{HTTPHeader("Access-Control-Request-Method")}} 告知服务器，实际请求将使用 POST 方法。首部字段 {{HTTPHeader("Access-Control-Request-Headers")}} 告知服务器，实际请求将携带两个自定义请求首部字段：`X-PINGOTHER` 与 `Content-Type`。服务器据此决定，该实际请求是否被允许。
+首部字段 {{HTTPHeader("Access-Control-Request-Method")}} 告知服务器，实际请求将使用 `POST` 方法。首部字段 {{HTTPHeader("Access-Control-Request-Headers")}} 告知服务器，实际请求将携带两个自定义请求首部字段：`X-PINGOTHER` 与 `Content-Type`。服务器据此决定，该实际请求是否被允许。
 
-第 13\~22 行为预检请求的响应，表明服务器将接受后续的实际请求。重点看第 16\~19 行：
+第 12 - 21 行为预检请求的响应，表明服务器将接受后续的实际请求方法（`POST`）和请求头（`X-PINGOTHER`）。重点看第 15 - 18 行：
 
 ```http
 Access-Control-Allow-Origin: https://foo.example
@@ -205,11 +204,11 @@ Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400
 ```
 
-服务器的响应携带了 `Access-Control-Allow-Origin: https://foo.example`，从而限制请求的源域。同时，携带的 `Access-Control-Allow-Methods` 表明服务器允许客户端使用 `POST` 和 `GET` 方法发起请求（与 {{HTTPHeader("Allow")}} 响应首部类似，但其具有严格的访问控制）。
+服务器的响应携带了 `Access-Control-Allow-Origin: https://foo.example`，从而限制请求的源域。同时，携带的 `Access-Control-Allow-Methods` 表明服务器允许客户端使用 `POST` 和 `GET` 方法发起请求（与 {{HTTPHeader("Allow")}} 响应首部类似，但该标头具有严格的访问控制）。
 
 首部字段 `Access-Control-Allow-Headers` 表明服务器允许请求中携带字段 `X-PINGOTHER` 与 `Content-Type`。与 `Access-Control-Allow-Methods` 一样，`Access-Control-Allow-Headers` 的值为逗号分割的列表。
 
-最后，首部字段 `Access-Control-Max-Age` 表明该响应的有效时间为 86400 秒，也就是 24 小时。在有效时间内，浏览器无须为同一请求再次发起预检请求。请注意，浏览器自身维护了一个 [最大有效时间](/zh-CN/docs/Web/HTTP/Headers/Access-Control-Max-Age)，如果该首部字段的值超过了最大有效时间，将不会生效。
+最后，首部字段 {{HTTPHeader("Access-Control-Max-Age")}} 给定了该预检请求可供缓存的时间长短，单位为秒，默认值是 5 秒。在有效时间内，浏览器无须为同一请求再次发起预检请求。以上例子中，该响应的有效时间为 86400 秒，也就是 24 小时。请注意，浏览器自身维护了一个[最大有效时间](/zh-CN/docs/Web/HTTP/Headers/Access-Control-Max-Age)，如果该首部字段的值超过了最大有效时间，将不会生效。
 
 预检请求完成之后，发送实际请求：
 
@@ -261,8 +260,8 @@ CORS 最初要求浏览器具有该行为，不过在后续的[修订](https://g
 
 如果上面两种方式难以做到，我们仍有其他办法：
 
-1. 发出一个简单请求（使用 [Response.url](/zh-CN/docs/Web/API/Response/url) 或 [XHR.responseURL](/zh-CN/docs/Web/API/XMLHttpRequest/responseURL)）以判断真正的预检请求会返回什么地址。
-2. 发出另一个请求（真正的请求），使用在上一步通过 [Response.url](/zh-CN/docs/Web/API/Response/url) 或 [XMLHttpRequest.responseURL](/zh-CN/docs/Web/API/XMLHttpRequest/responseURL) 获得的 URL。
+1. 发出一个[简单请求](#简单请求)（使用 {{domxref("Response.url")}} 或 {{domxref("XMLHttpRequest.responseURL")}}）以判断真正的预检请求会返回什么地址。
+2. 发出另一个请求（*真正*的请求），使用在上一步通过 `Response.url` 或 `XMLHttpRequest.responseURL` 获得的 URL。
 
 不过，如果请求是由于存在 `Authorization` 字段而引发了预检请求，则这一方法将无法使用。这种情况只能由服务端进行更改。
 
@@ -270,17 +269,17 @@ CORS 最初要求浏览器具有该行为，不过在后续的[修订](https://g
 
 > **备注：** 当发出跨源请求时，第三方 cookie 策略仍将适用。无论如何改变本章节中描述的服务器和客户端的设置，该策略都会强制执行。
 
-{{domxref("XMLHttpRequest")}} 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 与 CORS 的一个有趣的特性是，可以基于 [HTTP cookies](/zh-CN/docs/Web/HTTP/Cookies) 和 HTTP 认证信息发送身份凭证。一般而言，对于跨源 {{domxref("XMLHttpRequest")}} 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 请求，浏览器 **不会** 发送身份凭证信息。如果要发送凭证信息，需要设置 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 的某个特殊标志位。
+{{domxref("XMLHttpRequest")}} 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 与 CORS 的一个有趣的特性是，可以基于 [HTTP cookies](/zh-CN/docs/Web/HTTP/Cookies) 和 HTTP 认证信息发送身份凭证。一般而言，对于跨源 `XMLHttpRequest` 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 请求，浏览器**不会**发送身份凭证信息。如果要发送凭证信息，需要设置 `XMLHttpRequest` 对象的某个特殊标志位，或在构造 {{domxref("Request")}} 对象时设置。
 
-本例中，`https://foo.example` 的某脚本向 `https://bar.other` 发起一个 GET 请求，并设置 Cookies：
+本例中，`https://foo.example` 的某脚本向 `https://bar.other` 发起一个 GET 请求，并设置 Cookies。在 `foo.example` 中可能包含这样的 JavaScript 代码：
 
 ```js
 const invocation = new XMLHttpRequest();
-const url = 'https://bar.other/resources/credentialed-content/';
+const url = "https://bar.other/resources/credentialed-content/";
 
 function callOtherDomain() {
   if (invocation) {
-    invocation.open('GET', url, true);
+    invocation.open("GET", url, true);
     invocation.withCredentials = true;
     invocation.onreadystatechange = handler;
     invocation.send();
@@ -288,7 +287,7 @@ function callOtherDomain() {
 }
 ```
 
-第 7 行将 {{domxref("XMLHttpRequest")}} 的 `withCredentials` 标志设置为 `true`，从而向服务器发送 Cookies。因为这是一个简单 `GET` 请求，所以浏览器不会对其发起“预检请求”。但是，如果服务器端的响应中未携带 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true`，浏览器将不会把响应内容返回给请求的发送者。
+第 7 行将 {{domxref("XMLHttpRequest")}} 的 `withCredentials` 标志设置为 `true`，从而向服务器发送 Cookies。因为这是一个简单 `GET` 请求，所以浏览器不会对其发起“预检请求”。但是，如果服务器端的响应中未携带 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true`，浏览器将**不会**把响应内容返回给请求的发送者。
 
 ![](cred-req-updated.png)
 
@@ -324,7 +323,7 @@ Content-Type: text/plain
 [text/plain payload]
 ```
 
-即使第 10 行指定了 Cookie 的相关信息，但是，如果 `https://bar.other` 的响应中缺失 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true`（第 17 行），则响应内容不会返回给请求的发起者。
+即使第 10 行指定了 Cookie 是属于 `https://bar.other` 的内容的，但是，如果 `https://bar.other` 的响应中缺失 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true`（第 16 行），则响应内容会被忽略，不会提供给 web 内容。
 
 #### 预检请求和凭据
 
@@ -344,7 +343,7 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 - 服务器**不能**将 `Access-Control-Allow-Methods` 的值设为通配符“`*`”，而应将其设置为特定请求方法名称的列表，如：`Access-Control-Allow-Methods: POST, GET`
 
-对于附带身份凭证的请求（通常是 `Cookie`），服务器不得设置 `Access-Control-Allow-Origin` 的值为“`*`”。
+对于附带身份凭证的请求（通常是 `Cookie`），
 
 这是因为请求的首部中携带了 `Cookie` 信息，如果 `Access-Control-Allow-Origin` 的值为“`*`”，请求将会失败。而将 `Access-Control-Allow-Origin` 的值设置为 `https://example.com`，则请求将成功执行。
 
@@ -352,7 +351,7 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 #### 第三方 cookies
 
-注意在 CORS 响应中设置的 cookies 适用一般性第三方 cookie 策略。在上面的例子中，页面是在 `foo.example` 加载，但是第 20 行的 cookie 是被 `bar.other` 发送的，如果用户设置其浏览器拒绝所有第三方 cookies，那么将不会被保存。
+注意在 CORS 响应中设置的 cookies 适用一般性第三方 cookie 策略。在上面的例子中，页面是在 `foo.example` 加载，但是第 19 行的 cookie 是被 `bar.other` 发送的，如果用户设置其浏览器拒绝所有第三方 cookies，那么将不会被保存。
 
 请求中的 cookie（第 10 行）也可能在正常的第三方 cookie 策略下被阻止。因此，强制执行的 cookie 策略可能会使本节描述的内容无效（阻止你发出任何携带凭据的请求）。
 
@@ -360,7 +359,7 @@ Cookie 策略受 [SameSite](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite) �
 
 ## HTTP 响应首部字段
 
-本节列出了规范所定义的响应首部字段。上一小节中，我们已经看到了这些首部字段在实际场景中是如何工作的。
+本节列出了服务器为访问控制请求返回的 HTTP 响应头，这是由跨源资源共享规范定义的。上一小节中，我们已经看到了这些首部字段在实际场景中是如何工作的。
 
 ### Access-Control-Allow-Origin
 
@@ -370,16 +369,16 @@ Cookie 策略受 [SameSite](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite) �
 Access-Control-Allow-Origin: <origin> | *
 ```
 
-其中，origin 参数的值指定了允许访问该资源的外域 URI。对于不需要携带身份凭证的请求，服务器可以指定该字段的值为通配符，表示允许来自所有域的请求。
+`Access-Control-Allow-Origin` 参数指定了单一的源，告诉浏览器允许该源访问资源。或者，对于**不需要携带**身份凭证的请求，服务器可以指定该字段的值为通配符“`*`”，表示允许来自任意源的请求。
 
-例如，下面的字段值将允许来自 `https://mozilla.org` 的请求：
+例如，为了允许来自 `https://mozilla.org` 的代码访问资源，你可以指定：
 
 ```http
 Access-Control-Allow-Origin: https://mozilla.org
 Vary: Origin
 ```
 
-如果服务端指定了具体的域名而非“`*`”，那么响应首部中的 {{HTTPHeader("Vary")}} 字段的值必须包含 {{HTTPHeader("Origin")}}。这将告诉客户端：服务器对不同的源站返回不同的内容。
+如果服务端指定了具体的单个源（作为允许列表的一部分，可能会根据请求的来源而动态改变）而非通配符“`*`”，那么响应首部中的 {{HTTPHeader("Vary")}} 字段的值必须包含 `Origin`。这将告诉客户端：服务器对不同的 {{HTTPHeader("Origin")}} 返回不同的内容。
 
 ### Access-Control-Expose-Headers
 
@@ -421,20 +420,20 @@ Access-Control-Allow-Credentials: true
 
 ### Access-Control-Allow-Methods
 
-{{HTTPHeader("Access-Control-Allow-Methods")}} 首部字段用于预检请求的响应。其指明了实际请求所允许使用的 HTTP 方法。
+{{HTTPHeader("Access-Control-Allow-Methods")}} 首部字段指定了访问资源时允许使用的请求方法，用于预检请求的响应。其指明了实际请求所允许使用的 HTTP 方法。
 
 ```http
 Access-Control-Allow-Methods: <method>[, <method>]*
 ```
 
-有关 {{Glossary("preflight request")}} 的示例已在上方给出。
+有关{{Glossary("preflight request","预检请求")}}的示例已在上方给出，包含了将此请求头发送至浏览器的示例。
 
 ### Access-Control-Allow-Headers
 
-{{HTTPHeader("Access-Control-Allow-Headers")}} 首部字段用于预检请求的响应。其指明了实际请求中允许携带的首部字段。
+{{HTTPHeader("Access-Control-Allow-Headers")}} 首部字段用于{{Glossary("preflight request","预检请求")}}的响应。其指明了实际请求中允许携带的首部字段。这个首部是服务器端对浏览器端 {{HTTPHeader("Access-Control-Request-Headers")}} 标头的响应。
 
 ```http
-Access-Control-Allow-Headers: <field-name>[, <field-name>]*
+Access-Control-Allow-Headers: <header-name>[, <header-name>]*
 ```
 
 ## HTTP 请求首部字段
