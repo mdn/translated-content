@@ -5,7 +5,7 @@ slug: Web/API/BaseAudioContext
 
 {{APIRef("Web Audio API")}}
 
-`BaseAudioContext` は[ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) のインターフェイスで、 {{domxref("AudioContext")}} と {{domxref("OfflineAudioContext")}} で表されるオンラインとオフラインのオーディオ処理グラフの基本定義として動作します。 `BaseAudioContext` を直接使用することはありません。これらの 2 つの継承されたインターフェースのいずれかを介して、その機能を使用することになります。
+`BaseAudioContext` は[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) のインターフェイスで、 {{domxref("AudioContext")}} と {{domxref("OfflineAudioContext")}} で表されるオンラインとオフラインのオーディオ処理グラフの基本定義として動作します。 `BaseAudioContext` を直接使用することはありません。これらの 2 つの継承されたインターフェースのいずれかを介して、その機能を使用することになります。
 
 `BaseAudioContext` はイベントのターゲットとなることができるので、 {{domxref("EventTarget")}} インターフェイスを実装しています。
 
@@ -52,7 +52,7 @@ _{{domxref("EventTarget")}} インターフェイスから継承しているメ�
 - {{domxref("BaseAudioContext.createConvolver()")}}
   - : {{domxref("ConvolverNode")}} を作成します。これはオーディオグラフにコンボリューション効果（残響効果など）を適用するために使用されます。
 - {{domxref("BaseAudioContext.createDelay()")}}
-  - : {{domxref("DelayNode")}} を作成します。これは入力される音声信号を一定時間遅延させるために使用します。このノードは、ウェブ音声 API グラフでフィードバックループを作成する際にも便利です。
+  - : {{domxref("DelayNode")}} を作成します。これは入力される音声信号を一定時間遅延させるために使用します。このノードは、ウェブオーディオ API グラフでフィードバックループを作成する際にも便利です。
 - {{domxref("BaseAudioContext.createDynamicsCompressor()")}}
   - : {{domxref("DynamicsCompressorNode")}} を作成します。これは音声信号に音響圧縮をかけるために使用します。
 - {{domxref("BaseAudioContext.createGain()")}}
@@ -103,6 +103,6 @@ const finish = audioContext.destination;
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("AudioContext")}}
 - {{domxref("OfflineAudioContext")}}
