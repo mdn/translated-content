@@ -438,21 +438,21 @@ Access-Control-Allow-Headers: <header-name>[, <header-name>]*
 
 ## HTTP 请求首部字段
 
-本节列出了可用于发起跨源请求的首部字段。请注意，这些首部字段无须手动设置。当开发者使用 XMLHttpRequest 对象发起跨源请求时，它们已经被设置就绪。
+本节列出了可用于发起跨源请求的首部字段。请注意，这些首部字段无须手动设置。当开发者使用 {{domxref("XMLHttpRequest")}} 对象发起跨源请求时，它们已经被设置就绪。
 
 ### Origin
 
-{{HTTPHeader("Origin")}} 首部字段表明预检请求或实际请求的源站。
+{{HTTPHeader("Origin")}} 首部字段表明预检请求或实际跨源请求的源站。
 
 ```http
 Origin: <origin>
 ```
 
-origin 参数的值为源站 URI。它不包含任何路径信息，只是服务器名称。
+origin 参数的值为源站 URL。它不包含任何路径信息，只是服务器名称。
 
-> **备注：** 有时候将该字段的值设置为空字符串是有用的，例如，当源站是一个 data URL 时。
+> **备注：** `origin` 的值可以为 `null`。
 
-注意，在所有访问控制请求（Access control request）中，{{HTTPHeader("Origin")}} 首部字段 **总是** 被发送。
+注意，在所有访问控制请求中，{{HTTPHeader("Origin")}} 首部字段**总是**被发送。
 
 ### Access-Control-Request-Method
 
@@ -466,7 +466,7 @@ Access-Control-Request-Method: <method>
 
 ### Access-Control-Request-Headers
 
-{{HTTPHeader("Access-Control-Request-Headers")}} 首部字段用于预检请求。其作用是，将实际请求所携带的首部字段告诉服务器。
+{{HTTPHeader("Access-Control-Request-Headers")}} 首部字段用于预检请求。其作用是，将实际请求所携带的首部字段（通过 {{domxref("XMLHttpRequest.setRequestHeader()","setRequestHeader()")}} 等设置的）告诉服务器。这个浏览器端标头将由互补的服务器端标头 {{HTTPHeader("Access-Control-Allow-Headers")}} 回答。
 
 ```http
 Access-Control-Request-Headers: <field-name>[, <field-name>]*
