@@ -5,43 +5,47 @@ slug: Web/HTTP/CORS
 
 {{HTTPSidebar}}
 
-`跨源资源共享` ({{Glossary("CORS")}})（或通俗地译为跨域资源共享）是一种基于 {{Glossary("HTTP")}} 头的机制，该机制通过允许服务器标示除了它自己以外的其它 {{glossary("origin")}}（域，协议和端口），使得浏览器允许这些 origin 访问加载自己的资源。跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托管的跨源资源的"预检"请求。在预检中，浏览器发送的头中标示有 HTTP 方法和真实请求中会用到的头。
+**跨源资源共享** ({{Glossary("CORS")}})（或通俗地译为跨域资源共享）是一种基于 {{Glossary("HTTP")}} 头的机制，该机制通过允许服务器标示除了它自己以外的其它{{glossary("origin","源")}}（域，协议和端口），使得浏览器允许这些 origin 访问加载自己的资源。跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托管的跨源资源的“预检”请求。在预检中，浏览器发送的头中标示有 HTTP 方法和真实请求中会用到的头。
 
 跨源 HTTP 请求的一个例子：运行在 `https://domain-a.com` 的 JavaScript 代码使用 {{domxref("XMLHttpRequest")}} 来发起一个到 `https://domain-b.com/data.json` 的请求。
 
 出于安全性，浏览器限制脚本内发起的跨源 HTTP 请求。例如，`XMLHttpRequest` 和 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 遵循[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。这意味着使用这些 API 的 Web 应用程序只能从加载应用程序的同一个域请求 HTTP 资源，除非响应报文包含了正确 CORS 响应头。
 
-![](cors_principle.png)
+![CORS 机制的图表表示](cors_principle.png)
 
-跨源域资源共享（{{Glossary("CORS")}}）机制允许 Web 应用服务器进行跨源访问控制，从而使跨源数据传输得以安全进行。现代浏览器支持在 API 容器中（例如 {{domxref("XMLHttpRequest")}} 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API)）使用 CORS，以降低跨源 HTTP 请求所带来的风险。
+CORS 机制允许 Web 应用服务器进行跨源访问控制，从而使跨源数据传输得以安全进行。现代浏览器支持在 API 容器中（例如 {{domxref("XMLHttpRequest")}} 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API)）使用 CORS，以降低跨源 HTTP 请求所带来的风险。
 
 ## 什么情况下需要 CORS？
 
-这份[跨域共享标准](https://fetch.spec.whatwg.org/#http-cors-protocol)允许在下列场景中使用跨站点 HTTP 请求：
+这份[跨源共享标准](https://fetch.spec.whatwg.org/#http-cors-protocol)允许在下列场景中使用跨站点 HTTP 请求：
 
 - 前文提到的由 {{domxref("XMLHttpRequest")}} 或 [Fetch APIs](/zh-CN/docs/Web/API/Fetch_API) 发起的跨源 HTTP 请求。
-- Web 字体 (CSS 中通过 `@font-face` 使用跨源字体资源)，[因此，网站就可以发布 TrueType 字体资源，并只允许已授权网站进行跨站调用](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)。
-- [WebGL 贴图](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
-- 使用 [`drawImage`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawImage) 将图片或视频画面绘制到 canvas。
-- [来自图像的 CSS 图形](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
+- Web 字体（CSS 中通过 `@font-face` 使用跨源字体资源），[因此，网站就可以发布 TrueType 字体资源，并只允许已授权网站进行跨站调用](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)。
+- [WebGL 贴图](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
+- 使用 {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} 将图片或视频画面绘制到 canvas。
+- [来自图像的 CSS 图形](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)。
 
 本文概述了跨源资源共享机制及其所涉及的 HTTP 头。
 
 ## 功能概述
 
-跨源资源共享标准新增了一组 HTTP 首部字段，允许服务器声明哪些源站通过浏览器有权限访问哪些资源。另外，规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 {{HTTPMethod("GET")}} 以外的 HTTP 请求，或者搭配某些 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 的 {{HTTPMethod("POST")}} 请求），浏览器必须首先使用 {{HTTPMethod("OPTIONS")}} 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨源请求。服务器确认允许之后，才发起实际的 HTTP 请求。在预检请求的返回中，服务器端也可以通知客户端，是否需要携带身份凭证（包括 [Cookies](/zh-CN/docs/Web/HTTP/Cookies) 和 [HTTP 认证](/zh-CN/docs/Web/HTTP/Authentication) 相关数据）。
+跨源资源共享标准新增了一组 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)字段，允许服务器声明哪些源站通过浏览器有权限访问哪些资源。另外，规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 {{HTTPMethod("GET")}} 以外的 HTTP 请求，或者搭配某些 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 的 {{HTTPMethod("POST")}} 请求），浏览器必须首先使用 {{HTTPMethod("OPTIONS")}} 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨源请求。服务器确认允许之后，才发起实际的 HTTP 请求。在预检请求的返回中，服务器端也可以通知客户端，是否需要携带身份凭证（例如 [Cookies](/zh-CN/docs/Web/HTTP/Cookies) 和 [HTTP 认证](/zh-CN/docs/Web/HTTP/Authentication) 相关数据）。
 
-CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层面是无法获知到底具体是哪里出了问题。你只能查看浏览器的控制台以得知具体是哪里出现了错误。
+CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层面*无法*获知到底具体是哪里出了问题。你只能查看浏览器的控制台以得知具体是哪里出现了错误。
 
 接下来的内容将讨论相关场景，并剖析该机制所涉及的 HTTP 首部字段。
 
 ## 若干访问控制场景
 
-这里，我们使用三个场景来解释跨源资源共享机制的工作原理。这些例子都使用 {{domxref("XMLHttpRequest")}} 对象。
+这里，我们使用三个场景来解释跨源资源共享机制的工作原理。这些例子都使用在任意所支持的浏览器上都可以发出跨域请求的 {{domxref("XMLHttpRequest")}} 对象。
 
 ### 简单请求
 
-某些请求不会触发 {{Glossary("Preflight_request","CORS 预检请求")}}。本文称这样的请求为“简单请求”，请注意，该术语并不属于 [Fetch](https://fetch.spec.whatwg.org/)（其中定义了 CORS）规范。若请求 **满足所有下述条件**，则该请求可视为“简单请求”：
+某些请求不会触发 {{Glossary("Preflight_request","CORS 预检请求")}}。在废弃的 [CORS spec](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology) 中称这样的请求为*简单请求*，但是目前的 [Fetch spec](https://fetch.spec.whatwg.org/)（CORS 的现行定义规范）中不再使用这个词语。
+
+其动机是，HTML 4.0 中的 {{HTMLElement("form")}} 元素（早于跨站 {{domxref("XMLHttpRequest")}} 和 {{domxref("fetch")}}）可以向任何来源提交简单请求，所以任何编写服务器的人一定已经在保护{{Glossary("CSRF", "跨站请求伪造攻击")}}（CSRF）。在这个假设下，服务器不必选择加入（通过响应预检请求）来接收任何看起来像表单提交的请求，因为 CSRF 的威胁并不比表单提交的威胁差。然而，服务器仍然必须提供 {{HTTPHeader("Access-Control-Allow-Origin")}} 的选择，以便与脚本*共享*响应。
+
+若请求**满足所有下述条件**，则该请求可视为*简单请求*：
 
 - 使用下列方法之一：
 
@@ -49,23 +53,26 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
-- 除了被用户代理自动设置的首部字段（例如 {{HTTPHeader("Connection")}}，{{HTTPHeader("User-Agent")}}或其他在 Fetch 规范中定义为 [禁用首部名称](https://fetch.spec.whatwg.org/#forbidden-header-name) 的首部），允许人为设置的字段为 Fetch 规范定义的 [对 CORS 安全的首部字段集合](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)。该集合为：
+- 除了被用户代理自动设置的首部字段（例如 {{HTTPHeader("Connection")}}，{{HTTPHeader("User-Agent")}}或其他在 Fetch 规范中定义为[禁用首部名称](https://fetch.spec.whatwg.org/#forbidden-header-name) 的首部），允许人为设置的字段为 Fetch 规范定义的 [对 CORS 安全的首部字段集合](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)。该集合为：
 
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
   - {{HTTPHeader("Content-Type")}}（需要注意额外的限制）
+  - {{HTTPHeader("Range")}}（只允许[简单的范围首部值](https://fetch.spec.whatwg.org/#simple-range-header-value) 如 `bytes=256-` 或 `bytes=127-255`）
 
-- {{HTTPHeader("Content-Type")}} 的值仅限于下列三者之一：
+> **备注：** Firefox 还没有将 `Range` 实现为安全的请求首部。参见 [bug 1733981](https://bugzilla.mozilla.org/show_bug.cgi?id=1733981)。
+
+- {{HTTPHeader("Content-Type")}} 首部所指定的{{Glossary("MIME type","媒体类型")}}的值仅限于下列三者之一：
 
   - `text/plain`
   - `multipart/form-data`
   - `application/x-www-form-urlencoded`
 
-- 请求中的任意 {{domxref("XMLHttpRequest")}} 对象均没有注册任何事件监听器；{{domxref("XMLHttpRequest")}} 对象可以使用 {{domxref("XMLHttpRequest.upload")}} 属性访问。
+- 如果请求是使用 {{domxref("XMLHttpRequest")}} 对象发出的，在返回的 {{domxref("XMLHttpRequest.upload")} 对象属性上没有注册任何事件监听器；也就是说，给定一个 {{domxref("XMLHttpRequest")}} 实例 `xhr`，没有调用 `xhr.upload.addEventListener()`，以监听该上传请求。
 - 请求中没有使用 {{domxref("ReadableStream")}} 对象。
 
-> **备注：** WebKit Nightly 和 Safari Technology Preview 为 {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, 和 {{HTTPHeader("Content-Language")}} 首部字段的值添加了额外的限制。如果这些首部字段的值是“非标准”的，WebKit/Safari 就不会将这些请求视为“简单请求”。WebKit/Safari 并没有在文档中列出哪些值是“非标准”的，不过我们可以在这里找到相关讨论：
+> **备注：** WebKit Nightly 和 Safari Technology Preview 为 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 和 {{HTTPHeader("Content-Language")}} 首部字段的值添加了额外的限制。如果这些首部字段的值是“非标准”的，WebKit/Safari 就不会将这些请求视为“简单请求”。WebKit/Safari 并没有在文档中列出哪些值是“非标准”的，不过我们可以在这里找到相关讨论：
 >
 > - [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)
 > - [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)
@@ -84,9 +91,9 @@ xhr.onreadystatechange = someHandler;
 xhr.send();
 ```
 
-客户端和服务器之间使用 CORS 首部字段来处理权限：
+此操作实行了客户端和服务器之间的简单交换，使用 CORS 首部字段来处理权限：
 
-![Diagram of simple CORS GET request](simple-req.png)
+![简单 GET 请求的示意图](simple-req.png)
 
 以下是浏览器发送给服务器的请求报文：
 
@@ -118,19 +125,19 @@ Content-Type: application/xml
 […XML Data…]
 ```
 
-本例中，服务端返回的 {{HTTPHeader("Access-Control-Allow-Origin")}} 标头的 `Access-Control-Allow-Origin: *` 值表明，该资源可以被 **任意** 外域访问。
+本例中，服务端返回的 {{HTTPHeader("Access-Control-Allow-Origin")}} 标头的 `Access-Control-Allow-Origin: *` 值表明，该资源可以被**任意**外源访问。
 
 ```http
 Access-Control-Allow-Origin: *
 ```
 
-使用 {{HTTPHeader("Origin")}} 和 {{HTTPHeader("Access-Control-Allow-Origin")}} 就能完成最简单的访问控制。如果服务端仅允许来自 `https://foo.example` 的访问，该首部字段的内容如下：
+使用 {{HTTPHeader("Origin")}} 和 {{HTTPHeader("Access-Control-Allow-Origin")}} 就能完成最简单的访问控制。如果 `https://bar.other` 的资源持有者想限制他的资源*只能*通过 `https://foo.example` 来访问（也就是说，非 `https://foo.example` 域无法通过跨源访问访问到该资源），他可以这样做：
 
 ```http
 Access-Control-Allow-Origin: https://foo.example
 ```
 
-> **备注：** 当响应的是[附带身份凭证的请求](#附带身份凭证的请求)时，服务端 **必须** 明确 `Access-Control-Allow-Origin` 的值，而不能使用通配符“`*`”。
+> **备注：** 当响应的是[附带身份凭证的请求](#附带身份凭证的请求)时，服务端**必须**明确 `Access-Control-Allow-Origin` 的值，而不能使用通配符“`*`”。
 
 ### 预检请求
 
