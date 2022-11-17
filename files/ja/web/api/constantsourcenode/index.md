@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Audio API")}}
 
-`ConstantSourceNode` インターフェイスはウェブ音声 API の一部で、出力が 1 つの不変の値である音声ソース（{{domxref("AudioScheduledSourceNode") }} に基づいています）を表します。そのため、音声ソースから入ってくる値を一定に保つ必要がある場合に有益な値です。また、 {{domxref("ConstantSourceNode.offset", "offset")}} の値を自動化したり、他のノードを接続したりして、構成可能な {{domxref("AudioParam")}} として使用することができます。詳しくは [ConstantSourceNode による複数の引数の制御](/ja/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)を参照して下さい。
+`ConstantSourceNode` インターフェイスはウェブオーディオ API の一部で、出力が 1 つの不変の値である音声ソース（{{domxref("AudioScheduledSourceNode") }} に基づいています）を表します。そのため、音声ソースから入ってくる値を一定に保つ必要がある場合に有益な値です。また、 {{domxref("ConstantSourceNode.offset", "offset")}} の値を自動化したり、他のノードを接続したりして、構成可能な {{domxref("AudioParam")}} として使用することができます。詳しくは [ConstantSourceNode による複数の引数の制御](/ja/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)を参照して下さい。
 
 `ConstantSourceNode` は入力を持たず、ちょうど 1 つのモノラル（1 チャンネル）出力を持ちます。出力の値は常に {{domxref("ConstantSourceNode.offset", "offset")}} 引数の値と同じです。
 
@@ -93,6 +93,6 @@ gainNode3.connect(context.destination);
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("AudioScheduledSourceNode")}}
 - {{domxref("AudioNode")}}
