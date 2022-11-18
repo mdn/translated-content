@@ -9,13 +9,13 @@ slug: Web/API/Storage/getItem
 
 ## 構文
 
-```
+```js
 var aValue = storage.getItem(keyName);
 ```
 
 ### 引数
 
-- _`keyName`_
+- `keyName`
   - : 値を取り出したいキーの名称を持つ {{domxref("DOMString")}}。
 
 ### 戻り値
@@ -48,7 +48,7 @@ function setStyles() {
 
 | 仕様書                                                                               | 策定状況                         | コメント |
 | ------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('Web Storage', '#dom-storage-getitem', 'getItem()')}} | {{Spec2('Web Storage')}} |          |
+| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-getitem', 'getItem()')}} | {{Spec2('HTML WHATWG')}} |          |
 
 ## ブラウザ実装状況
 

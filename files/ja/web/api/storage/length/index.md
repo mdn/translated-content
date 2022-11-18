@@ -9,7 +9,7 @@ slug: Web/API/Storage/length
 
 ## 構文
 
-```
+```js
 var aLength = storage.length;
 ```
 
@@ -27,7 +27,7 @@ function populateStorage() {
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'cats.png');
 
-  localStorage.length; // 3 を返す
+  return localStorage.length; // 3 を返す
 }
 ```
 
@@ -35,9 +35,9 @@ function populateStorage() {
 
 ## 仕様
 
-| 仕様書                                                                           | 策定状況                         | コメント |
-| -------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Web Storage', '#dom-storage-length', 'length')}} | {{Spec2('Web Storage')}} |          |
+| 仕様書                                                                               | 策定状況                         | コメント |
+| ------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-length', 'length')}} | {{Spec2('HTML WHATWG')}} |          |
 
 ## ブラウザ実装状況
 
