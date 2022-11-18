@@ -5,13 +5,13 @@ slug: Web/API/SubtleCrypto/digest
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-{{domxref("SubtleCrypto")}} インターフェースの **`digest()`** メソッドは、指定されたデータの {{Glossary("digest")}} を返します。ダイジェストとは、可変長の入力に由来する固定長の短い値です。暗号的ダイジェスト値は耐衝突性を示すため、同じダイジェスト値を持つ 2 つの異なる入力を見つけるのは非常に困難です。
+{{domxref("SubtleCrypto")}} インターフェースの **`digest()`** メソッドは、指定されたデータの {{Glossary("digest", "ダイジェスト")}} を返します。ダイジェストとは、可変長の入力に由来する固定長の短い値です。暗号的ダイジェスト値は耐衝突性を示すため、同じダイジェスト値を持つ 2 つの異なる入力を見つけるのは非常に困難です。
 
 引数として、使用するダイジェストアルゴリズムの識別子とダイジェスト値の元となるデータを受け取ります。ダイジェスト値で解決される {{jsxref("Promise")}} を返します。
 
 ## 構文
 
-```
+```js
 const digest = crypto.subtle.digest(algorithm, data);
 ```
 
@@ -58,7 +58,7 @@ const digest = crypto.subtle.digest(algorithm, data);
 
 ### 基本的な例
 
-この例では、メッセージをエンコードし、 SHA-256 ダイジェスト値を計算して、ダイジェスト長を記録します:
+この例では、メッセージをエンコードし、 SHA-256 ダイジェスト値を計算して、ダイジェスト長を記録します。
 
 ```js
 const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
@@ -76,16 +76,16 @@ console.log(digestBuffer.byteLength);
 
 ### ダイジェスト値を 16 進文字列に変換する
 
-ダイジェストは`ArrayBuffer`として返されますが、比較および表示のために、ダイジェスト値は多くの場合 16 進文字列として表されます。 この例では、ダイジェストを計算し、`ArrayBuffer`を 16 進文字列に変換します:
+ダイジェストは`ArrayBuffer`として返されますが、比較および表示のために、ダイジェスト値は多くの場合 16 進文字列として表されます。 この例では、ダイジェストを計算し、`ArrayBuffer`を 16 進文字列に変換します。
 
 ```js
 const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
 
 async function digestMessage(message) {
-  const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // hash the message
-  const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+  const msgUint8 = new TextEncoder().encode(message);                           // (utf-8 の) Uint8Array にエンコードする
+  const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // メッセージをハッシュする
+  const hashArray = Array.from(new Uint8Array(hashBuffer));                     // バッファーをバイト列に変換する
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // バイト列を16進文字列に変換する
   return hashHex;
 }
 
@@ -103,9 +103,9 @@ console.log(digestHex);
 
 {{Compat("api.SubtleCrypto.digest")}}
 
-> **メモ:** Chrome 60 では、 TLS 接続出ない場合に crypto.subtle を無効化する機能が追加されました。
+> **メモ:** Chrome 60 では、 TLS 接続でない場合に crypto.subtle を無効化する機能が追加されました。
 
 ## 関連情報
 
 - [Chromium secure origins specification](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features)
-- [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf) specifies the SHA family of digest algorithms.
+- [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf) SHA系のダイジェストアルゴリズムを定義している。
