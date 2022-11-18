@@ -23,10 +23,10 @@ randomUUID()
 
 ## 例
 
-メソッドにグローバルの {{domxref("crypto_property", "crypto")}} プロパティを通してアクセスする。
+メソッドにグローバルの {{domxref("crypto_property", "crypto")}} プロパティを通してアクセスします。
 
 ```js
-/* self.crypto.randomUUID() が利用可能であることを仮定している */
+/* self.crypto.randomUUID() が利用可能であることを仮定しています */
 
 let uuid = self.crypto.randomUUID();
 console.log(uuid); // 例えば "36b8f84d-df4e-4d49-b662-bcde71a8764f"

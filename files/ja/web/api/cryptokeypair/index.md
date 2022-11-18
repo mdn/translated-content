@@ -5,9 +5,9 @@ slug: Web/API/CryptoKeyPair
 
 {{APIRef("Web Crypto API")}}
 
-{{domxref("Web Crypto API")}} の辞書 **`CryptoKeyPair`** は、非対称暗号アルゴリズム (公開鍵暗号アルゴリズムとしても知られる) の鍵ペアを表す。
+{{domxref("Web Crypto API")}} の辞書 **`CryptoKeyPair`** は、非対称暗号アルゴリズム (公開鍵暗号アルゴリズムとしても知られる) の鍵ペアを表します。
 
-`CryptoKeyPair` のオブジェクトは、以下の非対称暗号アルゴリズムのいずれかを選択して {{domxref("SubtleCrypto.generateKey()")}} を用いることで得られる。
+`CryptoKeyPair` のオブジェクトは、以下の非対称暗号アルゴリズムのいずれかを選択して {{domxref("SubtleCrypto.generateKey()")}} を用いることで得られます。
 
 * RSASSA-PKCS1-v1_5
 * RSA-PSS
@@ -15,18 +15,18 @@ slug: Web/API/CryptoKeyPair
 * ECDSA
 * ECDH
 
-このオブジェクトは秘密鍵を保持する `privateKey` および公開鍵を保持する `publicKey` の2個のプロパティを持つ。これらはどちらも {{domxref("CryptoKey")}} のオブジェクトである。
+このオブジェクトは秘密鍵を保持する `privateKey` および公開鍵を保持する `publicKey` の2個のプロパティを持ちます。これらはどちらも {{domxref("CryptoKey")}} のオブジェクトです。
 
 ## プロパティ
 
 - `CryptoKeyPair.privateKey`
-  - : 秘密鍵を表す {{domxref("CryptoKey")}} のオブジェクト。暗号化と復号のアルゴリズムでは、この鍵は復号に用いる。署名と署名検証のアルゴリズムでは、この鍵は署名に用いる。
+  - : 秘密鍵を表す {{domxref("CryptoKey")}} のオブジェクトです。暗号化と復号のアルゴリズムでは、この鍵は復号に用います。署名と署名検証のアルゴリズムでは、この鍵は署名に用います。
 - `CryptoKeyPair.publicKey`
-  - : 公開鍵を表す {{domxref("CryptoKey")}} のオブジェクト。暗号化と復号のアルゴリズムでは、この鍵は暗号化に用いる。署名と署名検証のアルゴリズムでは、この鍵は署名検証に用いる。
+  - : 公開鍵を表す {{domxref("CryptoKey")}} のオブジェクトです。暗号化と復号のアルゴリズムでは、この鍵は暗号化に用います。署名と署名検証のアルゴリズムでは、この鍵は署名検証に用います。
 
 ## 例
 
-`SubtleCrypto` のメソッドの例では、よく `CryptoKeyPair` が使われる。例えば以下がある。
+`SubtleCrypto` のメソッドの例では、よく `CryptoKeyPair` が使われます。例えば以下があります。
 
 - {{domxref("SubtleCrypto.generateKey()")}}
 - {{domxref("SubtleCrypto.deriveKey()")}}
