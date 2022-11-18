@@ -1,7 +1,8 @@
 ---
 title: Utiliser les champs privés d'une classe
-slug: Web/JavaScript/Guide/Working_With_Private_Class_Features
+slug: orphaned/Web/JavaScript/Guide/Working_With_Private_Class_Features
 translation_of: Web/JavaScript/Guide/Working_With_Private_Class_Features
+original_slug: Web/JavaScript/Guide/Working_With_Private_Class_Features
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -65,7 +66,7 @@ Une fois les champs privés déclarés, ils se comportent comme indiqué avec l'
 On ne peut pas non plus lire une valeur privée depuis le code à l'extérieur de la classe. Par exemple&nbsp;:
 
 ```js
-let score = new CompteurPrive(); 
+let score = new CompteurPrive();
 // #compteur et #init valent tous les deux 0
 score.augmenter(100);
 console.log(score.actuel);    // 100
@@ -196,7 +197,7 @@ class Scalaire {
   constructor(valeur) {
     this.#total = valeur || this.#total;
   }
-  
+
   ajoute(s) {
     // On vérifie que l'objet définit #total
     if (!(#total in s)) {

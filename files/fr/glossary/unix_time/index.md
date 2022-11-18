@@ -1,11 +1,12 @@
 ---
 title: DOMTimeStamp
-slug: Web/API/DOMTimeStamp
+slug: Glossary/Unix_time
 tags:
   - API
   - DOM
   - Référence DOM
 translation_of: Web/API/DOMTimeStamp
+original_slug: Web/API/DOMTimeStamp
 ---
 
 {{APIRef("DOM")}}
