@@ -4820,7 +4820,6 @@
 /fr/docs/Web/JavaScript/Guide/Utiliser_les_objets	/fr/docs/Web/JavaScript/Guide/Working_with_Objects
 /fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses	/fr/docs/Web/JavaScript/Guide/Using_promises
 /fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux	/fr/docs/Web/JavaScript/Guide/Grammar_and_types
-/fr/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features	/fr/docs/orphaned/Web/JavaScript/Guide/Working_With_Private_Class_Features
 /fr/docs/Web/JavaScript/Guide/iterable	/fr/docs/Web/JavaScript/Reference/Iteration_protocols
 /fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs	/fr/docs/Web/JavaScript/Guide/Iterators_and_Generators
 /fr/docs/Web/JavaScript/Guide/Égalité_en_JavaScript	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
