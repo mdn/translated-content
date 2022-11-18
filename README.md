@@ -45,7 +45,7 @@ Now you need to fork and clone both the [content repo](https://github.com/mdn/co
 1. Navigate to your local clone of the content repository fork:
 
     ```bash
-    cd ~/path/to/translated-content
+    cd ~/path/to/content
     ```
 
 2. Run the command `yarn install` to fetch the latest packages and get the local MDN testing environment set up. It is also recommended that you run `yarn install` before every update you do to the source, to make sure you have the latest packages.
