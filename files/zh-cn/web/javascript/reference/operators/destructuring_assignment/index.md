@@ -186,21 +186,23 @@ console.log(yellow); // "two"
 console.log(green); // "three"
 ```
 
-#### 变量先声明后赋值时的解构
+#### 解构比源更多的元素
 
-通过解构分离变量的声明，可以为一个变量赋值。
+在从赋值语句右侧指定的长度为 *N* 的数组解构的数组中，如果赋值语句左侧指定的变量数量大于 *N*，则只有前 *N* 个变量被赋值。其余变量的值将是未定义。
 
 ```js
-var a, b;
+const foo = ['one', 'two'];
 
-[a, b] = [1, 2];
-console.log(a); // 1
-console.log(b); // 2
+const [red, yellow, green, blue] = foo;
+console.log(red); // "one"
+console.log(yellow); // "two"
+console.log(green); // undefined
+console.log(blue);  //undefined
 ```
 
 #### 交换变量
 
-在一个解构表达式中可以交换两个变量的值。
+可以在一个解构表达式中交换两个变量的值。
 
 没有解构赋值的情况下，交换两个变量需要一个临时变量（或者用低级语言中的[XOR-swap 技巧](http://en.wikipedia.org/wiki/XOR_swap)）。
 
@@ -221,31 +223,33 @@ console.log(arr); // [1, 3, 2]
 
 从一个函数返回一个数组是十分常见的情况。解构使得处理返回值为数组时更加方便。
 
-在下面例子中，要让 `[1, 2]` 成为函数的 `f()` 的输出值，可以使用解构在一行内完成解析。
+在下面例子中，要让 `f()` 返回值 `[1, 2]` 作为其输出，可以使用解构在一行内完成解析。
 
 ```js
 function f() {
   return [1, 2];
 }
 
-var a, b;
-[a, b] = f();
+const [a, b] = f();
 console.log(a); // 1
 console.log(b); // 2
 ```
 
 #### 忽略某些返回值
 
-你也可以忽略你不感兴趣的返回值：
+你可以忽略你不感兴趣的返回值：
 
 ```js
 function f() {
   return [1, 2, 3];
 }
 
-var [a, , b] = f();
+const [a, , b] = f();
 console.log(a); // 1
 console.log(b); // 3
+
+const [c] = f();
+console.log(c); // 1
 ```
 
 你也可以忽略全部返回值：
@@ -254,40 +258,105 @@ console.log(b); // 3
 [,,] = f();
 ```
 
-#### 将剩余数组赋值给一个变量
+#### 使用绑定模式作为剩余属性
 
-当解构一个数组时，可以使用剩余模式，将数组剩余部分赋值给一个变量。
+数组解构赋值的剩余属性可以是另一个数组或对象绑定模式。这允许你同时提取数组的属性和索引。
 
 ```js
-var [a, ...b] = [1, 2, 3];
-console.log(a); // 1
-console.log(b); // [2, 3]
+const [a, b, ...{ pop, push }] = [1, 2];
+console.log(a, b); // 1 2
+console.log(pop, push); // [Function pop] [Function push]
 ```
 
-注意：如果剩余元素右侧有逗号，会抛出 {{jsxref("SyntaxError")}}，因为剩余元素必须是数组的最后一个元素。
+```js
+const [a, b, ...[c, d]] = [1, 2, 3, 4];
+console.log(a, b, c, d); // 1 2 3 4
+```
+
+这些绑定模式甚至可以嵌套，只要每个剩余属性都在列表的最后。
+
+```js
+const [a, b, ...[c, d, ...[e, f]]] = [1, 2, 3, 4, 5, 6];
+console.log(a, b, c, d, e, f); // 1 2 3 4 5 6
+```
+
+另一方面，对象解构只能有一个标识符作为剩余属性。
 
 ```js example-bad
-var [a, ...b,] = [1, 2, 3];
-// SyntaxError: rest element may not have a trailing comma
+const { a, ...{ b } } = { a: 1, b: 2 };
+// SyntaxError: `...` must be followed by an identifier in declaration contexts
+
+let a, b;
+({ a, ...{ b } } = { a: 1, b: 2 });
+// SyntaxError: `...` must be followed by an assignable reference in assignment contexts
 ```
 
-#### 用正则表达式匹配提取值
+#### 从正则表达式匹配项中提取值
 
-用正则表达式的 [`exec()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) 方法匹配字符串会返回一个数组，该数组第一个值是完全匹配正则表达式的字符串，然后的值是匹配正则表达式括号内内容部分。解构赋值允许你轻易地提取出需要的部分，忽略完全匹配的字符串——如果不需要的话。
+当正则表达式的 [`exec()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) 方法找到匹配项时，它将返回一个数组，该数组首先包含字符串的整个匹配部分，然后返回与正则表达式中每个括号组匹配的字符串部分。解构赋值允许你轻易地提取出需要的部分，如果不需要，则忽略完整匹配。
 
 ```js
 function parseProtocol(url) {
-  var parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
+  const parsedURL = /^(\w+):\/\/([^/]+)\/(.*)$/.exec(url);
   if (!parsedURL) {
     return false;
   }
-  console.log(parsedURL); // ["https://developer.mozilla.org/en-US/Web/JavaScript", "https", "developer.mozilla.org", "en-US/Web/JavaScript"]
+  console.log(parsedURL);
+  // ["https://developer.mozilla.org/zh-CN/docs/Web/JavaScript",
+  // "https", "developer.mozilla.org", "zh-CN/docs/Web/JavaScript"]
 
-  var [, protocol, fullhost, fullpath] = parsedURL;
+  const [, protocol, fullhost, fullpath] = parsedURL;
   return protocol;
 }
 
-console.log(parseProtocol('https://developer.mozilla.org/en-US/Web/JavaScript')); // "https"
+console.log(parseProtocol('https://developer.mozilla.org/zh-CN/docs/Web/JavaScript'));
+// "https"
+```
+
+#### 在任何可迭代对象上使用数组解构
+
+数组解构调用右侧的[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。因此，任何可迭代对象（不一定是数组）都可以解构。
+
+```js
+const [a, b] = new Map([[1, 2], [3, 4]]);
+console.log(a, b); // [1, 2] [3, 4]
+```
+
+不可迭代对象不能解构为数组。
+
+```js example-bad
+const obj = { 0: "a", 1: "b", length: 2 };
+const [a, b] = obj;
+// TypeError: obj is not iterable
+```
+
+只有在分配所有绑定之前，才会迭代可迭代对象。
+
+```js
+const obj = {
+  *[Symbol.iterator]() {
+    for (const v of [0, 1, 2, 3]) {
+      console.log(v);
+      yield v;
+    }
+  }
+}
+const [a, b] = obj; // Only logs 0 and 1
+```
+
+其余的绑定会提前求值并创建一个新数组，而不是使用旧的迭代器。
+
+```js
+const obj = {
+  *[Symbol.iterator]() {
+    for (const v of [0, 1, 2, 3]) {
+      console.log(v);
+      yield v;
+    }
+  }
+}
+const [a, b, ...rest] = obj; // Logs 0 1 2 3
+console.log(rest); // [2, 3] (an array)
 ```
 
 ### 解构对象
