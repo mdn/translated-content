@@ -22,7 +22,7 @@ Antes de iniciar este módulo, você já deve:
 
 1. Ter familiaridade básica com HTML, conforme discutido no módulo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML).
 2. Esteja familiarizado com os fundamentos do CSS, conforme discutido em [Introdução ao CSS](/pt-BR/docs/Learn/CSS/First_steps).
-3. Entenda como [estilzar caixas](/pt-BR/docs/Learn/CSS/Building_blocks).
+3. Entenda como [estilizar caixas](/pt-BR/docs/Learn/CSS/Building_blocks).
 
 > **Nota:** Se você estiver trabalhando em um computador/tablet/outro dispositivo em que não tenha a capacidade de criar seus próprios arquivos, experimente (a maioria) os exemplos de código em um programa de codificação on-line, como como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
