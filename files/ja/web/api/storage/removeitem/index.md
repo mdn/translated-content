@@ -9,7 +9,7 @@ slug: Web/API/Storage/removeItem
 
 ## 構文
 
-```
+```js
 storage.removeItem(keyName);
 ```
 
@@ -20,11 +20,11 @@ storage.removeItem(keyName);
 
 ### 返値
 
-{{jsxref("undefined")}}。
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
-以下の関数はローカルストレージに 3 個のデータ項目を作成して、 `image` データ項目を削除します。
+以下の関数はローカルストレージに 3 個のデータ項目を作成した後、データ項目 `image` を削除します。
 
 ```js
 function populateStorage() {

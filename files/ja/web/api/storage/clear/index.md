@@ -9,17 +9,21 @@ slug: Web/API/Storage/clear
 
 ## 構文
 
-```
+```js
 storage.clear();
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-{{jsxref("undefined")}} です。
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
-以下の関数はローカルストレージに 3 個のデータアイテムを作成して、 `clear()` を使用してすべて削除します。
+以下の関数はローカルストレージに 3 個のデータアイテムを作成した後、 `clear()` を使用してすべて削除します。
 
 ```js
 function populateStorage() {

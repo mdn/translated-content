@@ -5,24 +5,24 @@ slug: Web/API/Storage/setItem
 
 {{APIRef("Web Storage API")}}
 
-{{domxref("Storage")}} インターフェイスの `setItem()` メソッドはキーの名称と値を渡すと、ストレージにキーを追加する、またはキーがすでに存在する場合はキーに対する値を更新します。
+{{domxref("Storage")}} インターフェイスの `setItem()` メソッドはキーの名称と値を渡すと、ストレージにキーを追加し、またはキーがすでに存在する場合はキーに対する値を更新します。
 
 ## 構文
 
-```
+```js
 storage.setItem(keyName, keyValue);
 ```
 
 ### 引数
 
-- _keyName_
+- `keyName`
   - : 作成または更新したいキーの名称を持つ {{domxref("DOMString")}}。
-- _keyValue_
+- `keyValue`
   - : 作成または更新するキーに対して渡したい値を持つ {{domxref("DOMString")}}。
 
 ### 戻り値
 
-_戻り値なし。_
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
@@ -47,7 +47,7 @@ function populateStorage() {
 
 | 仕様書                                                                               | 策定状況                         | コメント |
 | ------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('Web Storage', '#dom-storage-setitem', 'setItem()')}} | {{Spec2('Web Storage')}} |          |
+| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-setitem', 'setItem()')}} | {{Spec2('HTML WHATWG')}} |          |
 
 ## ブラウザ実装状況
 
