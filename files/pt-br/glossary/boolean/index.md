@@ -42,7 +42,7 @@ for (let i = 0; i < 4; i++) {
 }
 ```
 
-#### Operar ternário 
+#### Operador ternário 
 
 ```js
 let bool = true
