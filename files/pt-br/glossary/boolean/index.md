@@ -6,7 +6,7 @@ original_slug: Glossario/Booleano
 
 Um **booleano**, em ciência da computação, é um tipo de dado lógico que pode ter apenas um de dois valores possíveis: `true` ou `false`. Por exemplo, em JavaScript, condicionais booleanas são usadas para decidir quais trechos do código serão executados ou repetidas.
 
-### Exemplos
+## Exemplos
 
 Veremos nos exemplos a seguir, o uso de um `boolean` em javascript, em diferentes contextos
 
