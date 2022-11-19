@@ -164,7 +164,7 @@ Este problema foi resolvido em:
 
 - Para adicionar uma nota, crie um blockquote GFM cujo primeiro parágrafo comece com `**Nota:**`.
 - Para adicionar um aviso, crie um blockquote GFM cujo primeiro parágrafo comece com `**Aviso:**`.
-- Para adicionar um texto explicativo, crie um blockquote GFM cujo primeiro parágrafo comece com `**Callout:**`.
+- Para adicionar um texto explicativo, crie um blockquote GFM cujo primeiro parágrafo comece com `**Observação:**`.
 
 Notas e avisos renderizarão o texto **Nota:** ou **Aviso:** na saída, enquanto as chamadas não. Isso torna as chamadas uma boa opção quando um autor deseja fornecer um título personalizado.
 
