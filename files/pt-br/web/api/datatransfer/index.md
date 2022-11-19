@@ -5,7 +5,7 @@ slug: Web/API/DataTransfer
 
 {{APIRef("HTML DOM")}}
 
-{{ gecko_minversion_header("1.9") }} O objeto `DataTransfer` é usado para guardar os dados que estão sendo arrastados durante uma operação de Drag e Drop (arrastar e soltar). Ele pode guardar um ou mais itens de dados, cada um de um ou mais tipos de dados. Para mais informações sobre drag e drop (arrastar e soltar), veja [Drag and Drop](/En/DragDrop/Drag_and_Drop).
+O objeto `DataTransfer` é usado para guardar os dados que estão sendo arrastados durante uma operação de Drag e Drop (arrastar e soltar). Ele pode guardar um ou mais itens de dados, cada um de um ou mais tipos de dados. Para mais informações sobre drag e drop (arrastar e soltar), veja [Drag and Drop](/En/DragDrop/Drag_and_Drop).
 
 Esse objeto está disponível pela propriedade `dataTransfer` de todos os eventos de drag. Ele não pode ser criado separadamente.
 
@@ -76,8 +76,6 @@ Atribuindo qualquer outro valor não terá efeito e permanece o valor anterior.
 
 ### files
 
-{{ gecko_minversion_header("1.9.2") }}
-
 Contains a list of all the local files available on the data transfer. If the drag operation doesn't involve dragging files, this property is an empty list. An invalid index access on the {{ domxref("FileList") }} specified by this property will return `undefined`.
 
 #### Example
@@ -113,8 +111,6 @@ O número de ítens sendo arrastados.
 > **Nota:** Essa propriedade é específica Gecko.
 
 ### mozSourceNode
-
-{{ gecko_minversion_header("2") }}
 
 O {{ domxref("Node") }} sobre o qual o cursor do mouse estava localizado quando o botão foi pressionado para iniciar a operação de arrastar. O valor é `null` para drags externos ou se o elmento não pode acessar o node.
 

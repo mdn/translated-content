@@ -18,8 +18,6 @@ if ("geolocation" in navigator) {
 }
 ```
 
-{{ gecko_minversion_header("1.9.2") }}
-
 Ao iniciar no Gecko 1.9.2 (Firefox 3.6), add-ons podem obter o objeto de geolocalização obtendo a referência para o serviço de geolocaliazação como se ve a seguir:
 
 ```js
