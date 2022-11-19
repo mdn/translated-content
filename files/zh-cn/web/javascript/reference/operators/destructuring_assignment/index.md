@@ -375,67 +375,110 @@ console.log(id); // 42
 console.log(isVerified); // true
 ```
 
-#### 给新的变量名赋值
+#### 赋值给新的变量名
 
-可以从一个对象中提取变量并赋值给和对象属性名不同的新的变量名。
+可以从对象中提取属性，并将其赋值给名称与对象属性不同的变量。
 
 ```js
-var o = {p: 42, q: true};
-var {p: foo, q: bar} = o;
+const o = { p: 42, q: true };
+const { p: foo, q: bar } = o;
 
 console.log(foo); // 42
 console.log(bar); // true
 ```
 
-#### 给新的变量命名并提供默认值
+举个例子，`const { p: foo } = o` 从对象 `o` 中获取名为 `p` 的属性，并将其赋值给名为 `foo` 的局部变量。
 
-一个属性可以同时 1）从一个对象解构，并分配给一个不同名称的变量 2）分配一个默认值，以防未解构的值是 `undefined`。
+#### 赋值到新的变量名并提供默认值
+
+一个属性可以同时是两者：
+
+- 从对象提取并分配给具有不同名称的变量。
+- 指定一个默认值，以防获取的值为 `undefined`。
 
 ```js
-var {a:aa = 10, b:bb = 5} = {a: 3};
+const { a: aa = 10, b: bb = 5 } = { a: 3 };
 
 console.log(aa); // 3
 console.log(bb); // 5
 ```
 
-### 函数参数默认值
+#### 从作为函数参数传递的对象中提取属性
 
-#### ES5 版本
+传递给函数参数的对象也可以提取到变量中，然后可以在函数体内访问这些变量。
+至于对象赋值，解构语法允许新变量具有与原始属性相同或不同的名称，并为原始对象未定义属性的情况分配默认值。
+
+请考虑此对象，其中包含有关用户的信息。
 
 ```js
-function drawES5Chart(options) {
-  options = options === undefined ? {} : options;
-  var size = options.size === undefined ? 'big' : options.size;
-  var cords = options.cords === undefined ? { x: 0, y: 0 } : options.cords;
-  var radius = options.radius === undefined ? 25 : options.radius;
-  console.log(size, cords, radius);
-  // now finally do some chart drawing
-}
-
-drawES5Chart({
-  cords: { x: 18, y: 30 },
-  radius: 30
-});
+const user = {
+  id: 42,
+  displayName: 'jdoe',
+  fullName: {
+    firstName: 'Jane',
+    lastName: 'Doe',
+  },
+};
 ```
 
-#### ES2015 版本
+在这里，我们展示了如何将传递对象的属性提取到具有相同名称的变量。
+参数值 `{ id }` 表示传递给函数的对象的 `id` 属性应该被提取到一个同名变量中，然后可以在函数中使用。
 
 ```js
-function drawES2015Chart({size = 'big', cords = { x: 0, y: 0 }, radius = 25} = {})
-{
-  console.log(size, cords, radius);
+function userId({ id }) {
+  return id;
+}
+
+console.log(userId(user)); // 42
+```
+
+你可以定义提取变量的名称。
+在这里，我们提取名为 `displayName` 的属性，并将其重命名为 `dname`，以便在函数体内使用。
+
+```js
+function userDisplayName({ displayName: dname }) {
+  return dname;
+}
+
+console.log(userDisplayName(user)); // `jdoe`
+```
+
+嵌套对象也可以提取。
+下面的示例展示了属性 `fullname.firstName` 被提取到名为 `name` 的变量中。
+
+```js
+function whois({ displayName, fullName: { firstName: name } }) {
+  return `${displayName} is ${name}`;
+}
+
+console.log(whois(user));  // "jdoe is Jane"
+```
+
+#### 设置函数参数的默认值
+
+默认值可以使用 `=` 指定，如果指定的属性在传递的对象中不存在，则将其用作变量值。
+
+下面我们展示了一个默认大小为 `big`的函数，默认坐标为 `x: 0, y: 0`，默认半径为 25。
+
+```js
+function drawChart({ size = 'big', coords = { x: 0, y: 0 }, radius = 25 } = {}) {
+  console.log(size, coords, radius);
   // do some chart drawing
 }
 
-drawES2015Chart({
-  cords: { x: 18, y: 30 },
-  radius: 30
+drawChart({
+  coords: { x: 18, y: 30 },
+  radius: 30,
 });
 ```
 
-> **备注：** 在上面的 **`drawES2015Chart`** 的函数签名中，解构的左手边被分配给右手边的空对象字面值：`{size = 'big', cords = {x: 0, y: 0}, radius = 25} = {}`。你也可以在没有右侧分配的情况下编写函数。但是，如果你忽略了右边的赋值，那么函数会在被调用的时候查找至少一个被提供的参数，而在当前的形式下，你可以直接调用 **`drawES2015Chart()`** 而不提供任何参数。如果你希望能够在不提供任何参数的情况下调用该函数，则当前的设计非常有用，而另一种方法在您确保将对象传递给函数时非常有用。
+在上面 `drawChart` 的函数签名中，解构的左侧具有空对象 `= {}` 的默认值。
 
-### 解构嵌套对象和数组
+你也可以在没有该默认值的情况下编写该函数。但是，如果你省略该默认值，该函数将在调用时寻找至少一个参数来提供，而在当前形式下，你可以在不提供任何参数的情况下调用 `drawChart()`。否则，你至少需要提供一个空对象字面量。
+
+有关详细信息，请参阅[默认参数值 > 有默认值的解构参数](zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters#有默认值的解构参数)。
+
+#### 解构嵌套对象和数组
 
 ```js
 const metadata = {
@@ -465,89 +508,52 @@ console.log(englishTitle); // "Scratchpad"
 console.log(localeTitle);  // "JavaScript-Umgebung"
 ```
 
-### For of 迭代和解构
+#### For of 迭代和解构
 
 ```js
-var people = [
+const people = [
   {
     name: 'Mike Smith',
     family: {
       mother: 'Jane Smith',
       father: 'Harry Smith',
-      sister: 'Samantha Smith'
+      sister: 'Samantha Smith',
     },
-    age: 35
+    age: 35,
   },
   {
     name: 'Tom Jones',
     family: {
       mother: 'Norah Jones',
       father: 'Richard Jones',
-      brother: 'Howard Jones'
+      brother: 'Howard Jones',
     },
-    age: 25
+    age: 25,
   }
 ];
 
-for (var {name: n, family: {father: f}} of people) {
-  console.log('Name: ' + n + ', Father: ' + f);
+for (const { name: n, family: { father: f } } of people) {
+  console.log(`Name: ${n}, Father: ${f}`);
 }
 
 // "Name: Mike Smith, Father: Harry Smith"
 // "Name: Tom Jones, Father: Richard Jones"
 ```
 
-### 从作为函数实参的对象中提取数据
+#### 对象属性计算名和解构
+
+计算属性名，如[对象字面量](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#计算属性名)，可以被解构。
 
 ```js
-function userId({id}) {
-  return id;
-}
-
-function whois({displayName: displayName, fullName: {firstName: name}}){
-  console.log(displayName + " is " + name);
-}
-
-var user = {
-  id: 42,
-  displayName: "jdoe",
-  fullName: {
-      firstName: "John",
-      lastName: "Doe"
-  }
-};
-
-console.log("userId: " + userId(user)); // "userId: 42"
-whois(user); // "jdoe is John"
-```
-
-这段代码从 user 对象中提取并输出 `id`、`displayName` 和 `firstName`。
-
-### 对象属性计算名和解构
-
-计算属性名，如 [object literals](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names)，可以被解构。
-
-```js
-let key = "z";
-let { [key]: foo } = { z: "bar" };
+const key = 'z';
+const { [key]: foo } = { z: 'bar' };
 
 console.log(foo); // "bar"
 ```
 
-### 对象解构中的 Rest
+#### 无效的 JavaScript 标识符作为属性名称
 
-[Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) 提案（阶段 4）将 [rest](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters) 语法添加到解构中。Rest 属性收集那些尚未被解构模式拾取的剩余可枚举属性键。
-
-```js
-let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}
-a; // 10
-b; // 20
-rest; // { c: 30, d: 40 }
-```
-
-### 无效的 JavaScript 标识符作为属性名称
-
-通过提供有效的替代标识符，解构可以与不是有效的 JavaScript[标识符](/zh-CN/docs/Glossary/Identifier)的属性名称一起使用。
+通过提供有效的替代标识符，解构可以与不是有效的 JavaScript [标识符](/zh-CN/docs/Glossary/Identifier)的属性名称一起使用。
 
 ```js
 const foo = { 'fizz-buzz': true };
@@ -556,17 +562,58 @@ const { 'fizz-buzz': fizzBuzz } = foo;
 console.log(fizzBuzz); // true
 ```
 
-### 解构对象时会查找原型链（如果属性不在对象自身，将从原型链中查找）
+### 解构基本类型
+
+对象解构几乎等同于[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)。这意味着，如果尝试解构基本类型的值，该值将被包装到相应的包装器对象中，并且在包装器对象上访问该属性。
 
 ```js
-// 声明对象 和 自身 self 属性
-var obj = {self: '123'};
-// 在原型链中定义一个属性 prot
-obj.__proto__.prot = '456';
-// test
-const {self, prot} = obj;
+const { a, toFixed } = 1;
+console.log(a, toFixed); // undefined ƒ toFixed() { [native code] }
+```
+
+与访问属性相同，解构 `null` 或 `undefined` 会抛出 {{jsxref("TypeError")}}。
+
+```js example-bad
+const { a } = undefined; // TypeError: Cannot destructure property 'a' of 'undefined' as it is undefined.
+const { a } = null; // TypeError: Cannot destructure property 'b' of 'null' as it is null.
+```
+
+即使模式为空，也会发生这种情况。
+
+```js example-bad
+const {} = null; // TypeError: Cannot destructure 'null' as it is null.
+```
+
+#### 组合数组和对象解构
+
+数组和对象解构可以组合使用。假设你想要下面 `props` 数组中的第三个元素，然后你想要对象中的 `name` 属性，你可以执行以下操作：
+
+```js
+const props = [
+  { id: 1, name: 'Fizz'},
+  { id: 2, name: 'Buzz'},
+  { id: 3, name: 'FizzBuzz'}
+];
+
+const [,, { name }] = props;
+
+console.log(name); // "FizzBuzz"
+```
+
+#### 解构对象时查找原型链
+
+当解构一个对象时，如果属性本身没有被访问，它将沿着原型链继续查找。
+
+```js
+const obj = {
+  self: '123',
+  __proto__: {
+    prot: '456',
+  },
+};
+const { self, prot } = obj;
 // self "123"
-// prot "456"（访问到了原型链）
+// prot "456" (Access to the prototype chain)
 ```
 
 ## 规范
@@ -579,5 +626,5 @@ const {self, prot} = obj;
 
 ## 参见
 
-- [赋值操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators#赋值运算符)
+- [赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#赋值运算符)
 - ["ES6 in Depth: Destructuring" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)
