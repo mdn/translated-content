@@ -1,29 +1,35 @@
 ---
 title: HTML 基础
 slug: Learn/Getting_started_with_the_web/HTML_basics
+tags:
+  - 学习
+  - 初学者
+  - HTML
+  - Web
+  - "l10n:priority"
 ---
 
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
-超文本标记语言 (英语：**H**yper**t**ext **M**arkup **L**anguage，简称：HTML ) 是一种用来结构化 Web 网页及其内容的标记语言。网页内容可以是：一组段落、一个重点信息列表、也可以含有图片和数据表。正如标题所示，本文将对 HTML 及其功能做一个基本介绍。
+超文本标记语言（**H**yper**t**ext **M**arkup **L**anguage，简称 HTML）是一种用来结构化 Web 网页及其内容的标记语言。网页内容可以是：一组段落、一个列表，或者含有图片和表格的内容。如标题所示，本文将介绍 HTML 及其功能的基础内容。
 
-## HTML 到底是什么？
+## HTML 是什么？
 
-HTML 不是一门编程语言，而是一种用于定义内容结构的*标记语言*。HTML 由一系列的**元素（{{Glossary("element", "elements")}}）**组成，这些元素可以用来包围不同部分的内容，使其以某种方式呈现或者工作。一对标签（ {{Glossary("tag", "tags")}}）可以为一段文字或者一张图片添加超链接，将文字设置为斜体，改变字号，等等。例如，键入下面一行内容：
+HTML 是一种用于定义内容结构的*标记语言*，它由一系列的 **{{Glossary("element", "元素")}}** 组成，这些元素可以用来包装各种内容，使其以某种方式呈现或者运行。元素两端的 {{Glossary("tag", "标签")}} 可将一段文字或一张图片转变成一个超链接、修改字型字号，等等。例如，以下一行文字：
 
-```plain
-My cat is very grumpy
+```
+我的猫咪很不爽
 ```
 
-可以将这行文字封装成一个段落（**p**aragraph）元素来使其在单独一行呈现：
+可使用段落标签，将其以段落形式单独一行呈现：
 
 ```html
-<p>My cat is very grumpy</p>
+<p>我的猫咪很不爽</p>
 ```
 
-### HTML 元素详解
+### 深入 HTML 元素
 
 让我们深入探索一下这个段落元素。
 
@@ -31,10 +37,10 @@ My cat is very grumpy
 
 这个元素的主要部分有：
 
-1. **开始标签**（Opening tag）：包含元素的名称（本例为 p），被大于号、小于号所包围。表示元素从这里开始或者开始起作用 —— 在本例中即段落由此开始。
-2. **结束标签**（Closing tag）：与开始标签相似，只是其在元素名之前包含了一个斜杠。这表示着元素的结尾 —— 在本例中即段落在此结束。初学者常常会犯忘记包含结束标签的错误，这可能会产生一些奇怪的结果。
-3. **内容**（Content）：元素的内容，本例中就是所输入的文本本身。
-4. **元素**（Element）：开始标签、结束标签与内容相结合，便是一个完整的元素。
+1. **开始标签**：包含元素的名称（本例为 p），被大于号、小于号所包围。表示元素从这里开始或者开始起作用 —— 在本例中即段落由此开始。
+2. **结束标签**：与开始标签相似，只是其在元素名之前包含了一个斜杠。这表示着元素的结尾 —— 在本例中即段落在此结束。初学者常常会犯忘记包含结束标签的错误，这可能会产生一些奇怪的结果。
+3. **内容**：元素的内容，本例中就是所输入的文本本身。
+4. **元素**：开始标签、结束标签与内容相结合，便是一个完整的元素。
 
 元素也可以有属性（Attribute）：
 
@@ -52,16 +58,16 @@ My cat is very grumpy
 
 ### 嵌套元素
 
-也可以将一个元素置于其他元素之中 —— 称作**嵌套**。要表明猫咪非常暴躁，可以将“very”用 {{htmlelement("strong")}} 元素包围，爆字将突出显示：
+也可以将一个元素置于其他元素之中 —— 称作**嵌套**。要表明猫咪非常暴躁，可以将“很”字用 {{htmlelement("strong")}} 元素包围，它将将突出显示：
 
 ```html
-<p>My cat is <strong>very</strong> grumpy.</p>
+<p>我的猫咪<strong>很</strong>不爽</p>
 ```
 
 必须保证元素嵌套次序正确：本例首先使用 {{htmlelement("p")}} 标签，然后是 {{htmlelement("strong")}} 标签，因此要先结束 {{htmlelement("strong")}} 标签，最后再结束 {{htmlelement("p")}} 标签。这样是不对的：
 
 ```html example-bad
-<p>My cat is <strong>very grumpy.</p></strong>
+<p>我的猫咪<strong>很不爽</p></strong>
 ```
 
 元素必须正确地开始和结束，才能清楚地显示出正确的嵌套层次。否则浏览器就得自己猜测，虽然它会竭尽全力，但很大程度不会给你期望的结果。所以一定要避免！
@@ -71,24 +77,24 @@ My cat is very grumpy
 不包含任何内容的元素称为空元素。比如 {{htmlelement("img")}} 元素：
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="测试图片">
 ```
 
 本元素包含两个属性，但是并没有 `</img>` 结束标签，元素里也没有内容。这是因为图像元素不需要通过内容来产生效果，它的作用是向其所在的位置嵌入一个图像。
 
 ### HTML 文档详解
 
-以上介绍了一些基本的 HTML 元素，但孤木不成林。现在来看看单个元素如何彼此协同构成一个完整的 HTML 页面。回顾 [文件处理](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 小节中创建的 `index.html` 示例：
+以上介绍了一些基本的 HTML 元素，但孤木不成林。现在来看看单个元素如何彼此协同构成一个完整的 HTML 页面。回顾 [处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 小节中创建的 `index.html` 示例：
 
 ```html
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My test page</title>
+    <title>测试页面</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="My test image">
+    <img src="images/firefox-icon.png" alt="测试图片">
   </body>
 </html>
 ```
@@ -107,12 +113,12 @@ My cat is very grumpy
 重温一下 {{htmlelement("img")}} 元素：
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="测试图片">
 ```
 
-像之前所讲，该元素通过包含图像文件路径的地址属性 `src`，可在所在位置嵌入图像。
+像之前所讲，该元素通过包含图像文件路径的地址属性 `src`（Source），可在所在位置嵌入图像。
 
-该元素还包括一个替换文字属性 `alt`，是图像的描述内容，用于当图像不能被用户看见时显示，不可见的原因可能是：
+该元素还包括一个替换文字属性 `alt`（Alternative），是图像的描述内容，用于当图像不能被用户看见时显示，不可见的原因可能是：
 
 1. 用户有视觉障碍。视障用户可以使用屏幕阅读器来朗读 `alt` 属性的内容。
 2. 有些错误使图像无法显示。可以试着故意将 `src` 属性里的路径改错。保存并刷新页面就可以在图像位置看到：
@@ -125,13 +131,13 @@ My cat is very grumpy
 
 > **备注：** 更多信息请参阅 [无障碍访问](/zh-CN/docs/learn/Accessibility)。
 
-## 标记文本
+## 排版
 
-本段包含了一些最常用的文本标记 HTML 元素。
+本段包含了一些最常用的 HTML 排版元素。
 
-### 标题（Heading）
+### 标题
 
-标题元素可用于指定内容的标题和子标题。就像一本书的书名、每章的大标题、小标题，等。HTML 文档也是一样。HTML 包括六个级别的标题， {{htmlelement("h1")}}–{{htmlelement("h6")}} ，一般最多用到 3-4 级标题。
+标题元素（Header）可用于指定内容的标题和子标题。就像一本书的书名、每章的大标题、小标题，等。HTML 文档也是一样。HTML 包括六个级别的标题， {{htmlelement("h1")}} – {{htmlelement("h6")}} ，一般最多用到 3-4 级标题。
 
 ```html
 <h1>主标题</h1>
@@ -140,72 +146,74 @@ My cat is very grumpy
 <h4>次子标题</h4>
 ```
 
-可以尝试在 {{htmlelement("img")}} 元素上面添加一个合适的标题。
+> **备注：** HTML 中所有位于 `<!--` 和 `-->` 之间的内容称为 **HTML 注释**。浏览器在渲染代码时会忽略这些注释。也就是说，注释在页面上是不可见的。HTML 程序员可使用注释来记录代码或逻辑的有用信息。
 
-> **备注：** 你可以看到第一级标题是有隐式的主题样式。不要使用标题元素来加大、加粗字体，因为标题对于 [无障碍访问](/zh-CN/docs/learn/Accessibility) 和 [搜索引擎优化](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化？) 等问题非常有意义。要保持页面结构清晰，标题整洁，不要发生标题级别跳跃。
+可以尝试在 {{htmlelement("img")}} 元素上方添加一个合适的标题。
 
-### 段落（Paragraph）
+> **备注：** 可以看到第一级标题是有隐式的主题样式。不要使用标题元素来加大、加粗字体，因为标题对于 [无障碍访问](/zh-CN/docs/learn/Accessibility) 和 [搜索引擎优化（SEO）](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化？) 等问题非常有意义。要保持页面结构清晰，标题整洁，不要发生标题级别跳跃。
 
-如上文所讲，{{htmlelement("p")}} 元素是用来指定段落的。通常用于指定常规的文本内容：
+### 段落
+
+如上文所讲，{{htmlelement("p")}} 元素（Paragraph）是用来指定段落的。通常用于指定常规的文本内容：
 
 ```html
 <p>这是一个段落</p>
 ```
 
-试着添加一些文本（在 [设计网站的外观](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like) 小节）到一个或几个段落中，并把它们放在你的 {{htmlelement("img")}} 元素下方。
+试着从 [设计网站的外观](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like) 文中选择一些文本，添加到一个或几个段落中，置于 {{htmlelement("img")}} 元素下方。
 
-### 列表（List）
+### 列表
 
 Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标记列表通常包括至少两个元素。最常用的列表类型为：
 
-1. **无序列表**（Unordered List）中项目的顺序并不重要，就像购物列表。用一个 {{htmlelement("ul")}} 元素包围。
-2. **有序列表**（Ordered List）中项目的顺序很重要，就像烹调指南。用一个 {{htmlelement("ol")}} 元素包围。
+1. **无序列表**：置于 {{htmlelement("ul")}} 元素（Unordered List）中，列表中项目顺序不重要，比如购物列表。
+2. **有序列表**：置于 {{htmlelement("ol")}} 元素（Ordered List）中，列表中项目顺序重要，比如烹调指南。
 
-列表的每个项目用一个列表项目（List Item）元素 {{htmlelement("li")}} 包围。
+列表中的项目置于 {{htmlelement("li")}} 元素（List Item）中。
 
 比如，要将下面的段落片段改成一个列表：
 
 ```html
-<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together… </p>
+<p>Mozilla 是一个全球社区，这里聚集着来自五湖四海的技术人员、思考者、建设者，我们致力于……</p>
 ```
 
 可以这样更改标记：
 
 ```html
-<p>At Mozilla, we're a global community of</p>
+<p>Mozilla 是一个全球社区，这里聚集着来自五湖四海的</p>
 
 <ul>
-  <li>technologists</li>
-  <li>thinkers</li>
-  <li>builders</li>
+  <li>技术人员</li>
+  <li>思考者</li>
+  <li>建设者</li>
 </ul>
 
-<p>working together… </p>
+<p>我们致力于…… </p>
 ```
 
 试着在示例页面中添加一个有序列表和无序列表。
 
 ## 链接
 
-链接非常重要 — 它们赋予 Web 网络属性。要植入一个链接，我们需要使用一个简单的元素 — {{htmlelement("a")}} — a 是 "anchor" （锚）的缩写。要将一些文本添加到链接中，只需如下几步：
+链接是非常重要的概念，它赋予 Web 以生命。使用简单的 {{htmlelement("a")}} 元素即可添加链接。`a` 是 "anchor"（锚）的缩写。要将一些文本添加到链接中，只需如下几步：
 
-1. 选择一些文本。比如“Mozilla Manifesto”。
+1. 选择一些文本。比如“Mozilla 宣言”。
 2. 将文本包含在 {{htmlelement("a")}} 元素内，就像这样：
 
     ```html
-    <a>Mozilla Manifesto</a>
+    <a>Mozilla 宣言</a>
     ```
 
 3. 为此 {{htmlelement("a")}} 元素添加一个 `href` 属性，就像这样：
 
     ```html
-    <a href="">Mozilla Manifesto</a>
+    <a href="">Mozilla 宣言</a>
     ```
 
 4. 把属性的值设置为所需网址：
 
     ```html
-    <a href="https://www.mozilla.org/zh-CN/about/manifesto/">Mozilla Manifesto</a>
+    <a href="https://www.mozilla.org/zh-CN/about/manifesto/">Mozilla 宣言</a>
     ```
 
 如果网址开始部分省略了 `https://` 或者 `http://`，可能会得到错误的结果。在完成一个链接后，可以试着点击它来确保指向正确。
@@ -216,13 +224,13 @@ Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标�
 
 ## 小结
 
-如果你一直跟着这篇文章里的指导做的话，你应该完成了一个像下面这样的页面。（你也可以 [从这查看](https://mdn.github.io/beginner-html-site/)）：
+如果你一直跟着这篇文章里的指导做的话，你应该完成了一个像下面这样的页面。（你也可以 [从这里查看](https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site/)）：
 
-![](finished-test-page-small.png)
+![一个网页截图，上有一个 Firefox 标志、一个标题（Mozilla酷毙了），以及两段文字](finished-test-page-small.png)
 
-如果你遇到困难，你可以将 Github 上的[完整示例代码](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html)与你的文件进行比较。
+如果你遇到困难，你可以将 Github 上的 [完整示例代码](https://github.com/roy-tian/learning-area/blob/master/extras/getting-started-web/beginner-html-site/index.html) 与你的文件进行比较。
 
-在这里，我们只是介绍了一点点 HTML。要学习更多，访问我们的 [HTML 学习主题页面](/zh-CN/Learn/HTML) 。
+本节对 HTML 的介绍只是浅尝辄止，可以阅读 [HTML 学习主题页面](/zh-CN/Learn/HTML) 来深入学习。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
