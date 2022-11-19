@@ -54,7 +54,7 @@ Vous pouvez trouver un guide complet dans l'article [Using the Payment Request A
 - {{domxref("PaymentDetailsUpdate")}}
   - : Un objet qui décrit les changements qui doivent être apportés aux détails du paiement dans l'événement dont le serveur à besoin pour mettre à jour l'information à la suite de l'instanciation de l'interface de paiment mais avant que l'utilisateur ne commence à interagir avec.
 
-### Dictionnaires connexes pour la specification *Basic Card*
+### Dictionnaires connexes pour la specification Basic Card
 
 - {{domxref("BasicCardChangeDetails")}}
   - : Un objet qui donne l'information "_redacted_ address" qui est fournie comme {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} dans l'événement  [`paymentmethodchange`](/fr/docs/Web/API/PaymentRequest/paymentmethodchange_event) envoyé à {{domxref("PaymentRequest")}} lorsque l'utilisateur modifie les informations de paiement.

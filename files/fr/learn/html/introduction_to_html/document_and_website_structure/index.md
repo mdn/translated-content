@@ -53,7 +53,7 @@ De même que HTML est utilisé pour définir les diverses parties indépendantes
   </tbody>
 </table>
 
-## **Principales parties d'un document**
+## Principales parties d'un document
 
 Les pages web peuvent sembler assez différentes les unes des autres, mais elles ont toutes tendance à partager des composantes standard similaires, sauf si la page affiche une vidéo ou un jeu en plein écran, relève d'une sorte de projet artistique ou... est simplement mal structurée :
 

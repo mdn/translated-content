@@ -4787,6 +4787,7 @@
 /ja/docs/Web/Manifest/iarc_rating_id	/ja/docs/Web/Manifest
 /ja/docs/Web/Manifest/lang	/ja/docs/Web/Manifest
 /ja/docs/Web/MathML/Index	/ja/docs/Web/MathML
+/ja/docs/Web/Media/images/aspect_ratio_mapping	/ja/docs/Learn/Performance/Multimedia
 /ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Introduction
 /ja/docs/Web/Progressive_web_apps/Responsive	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web/Reference	/ja/docs/Web

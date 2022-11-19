@@ -3475,6 +3475,10 @@
     "modified": "2020-11-22T22:20:59.818Z",
     "contributors": ["succi0303", "Potappo"]
   },
+  "Learn/Performance/Multimedia": {
+    "modified": "2020-09-26T09:38:55.116Z",
+    "contributors": ["silverskyvicto"]
+  },
   "Learn/Performance/Web_Performance_Basics": {
     "modified": "2020-10-25T07:11:50.857Z",
     "contributors": ["silverskyvicto", "shin1810"]
@@ -29569,10 +29573,6 @@
   },
   "Web/Media/images": {
     "modified": "2020-09-26T09:41:20.091Z",
-    "contributors": ["silverskyvicto"]
-  },
-  "Web/Media/images/aspect_ratio_mapping": {
-    "modified": "2020-09-26T09:38:55.116Z",
     "contributors": ["silverskyvicto"]
   },
   "Web/Performance": {

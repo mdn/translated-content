@@ -103,7 +103,7 @@ body {
 
 {{ EmbedLiveSample('', '100%', 400) }}
 
-### Trames adaptables avec l'unité **fr**
+### Trames adaptables avec l'unité fr
 
 En plus de créer des fils de chaîne en unités de longueur ou de pourcentage, nous pouvons utiliser l'unité `fr` pour moduler la taille des lignes et colonnes du quadrillage. Cette unité représente une fraction de l'espace disponible du conteneur de trame.
 

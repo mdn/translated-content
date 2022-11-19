@@ -3634,6 +3634,7 @@
 /fr/docs/Web/API/Coordinates	/fr/docs/Web/API/GeolocationCoordinates
 /fr/docs/Web/API/DOMString	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/API/DOMString/Binary	/fr/docs/Web/API/btoa
+/fr/docs/Web/API/DOMTimeStamp	/fr/docs/Glossary/Unix_time
 /fr/docs/Web/API/DOMTokenList/DOMTokenList.add()	/fr/docs/Web/API/DOMTokenList/add
 /fr/docs/Web/API/DeviceOrientationEvent.absolute	/fr/docs/Web/API/DeviceOrientationEvent/absolute
 /fr/docs/Web/API/DeviceRotationRate	/fr/docs/Web/API/DeviceMotionEventRotationRate

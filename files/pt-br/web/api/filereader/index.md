@@ -55,7 +55,7 @@ Veja [Using files from web applications](/en/Using_files_from_web_applications) 
 
 - {{domxref("FileReader.abort()")}}
   - : Aborta a operação de leitura. O retorno, no `readyState` será `DONE`.
-- {{domxref("FileReader.readAsArrayBuffer()")}} {{ gecko_minversion_inline("7.0") }}
+- {{domxref("FileReader.readAsArrayBuffer()")}}
   - : Inicia a leitura do conteúdo do {{ domxref("Blob") }} espeficado, uma vez finalizado, o atributo `result` conterá um {{domxref("ArrayBuffer")}} representando os dados do arquivo.
 - {{domxref("FileReader.readAsBinaryString()")}}
   - : Inicia a leitura do conteúdo do {{ domxref("Blob") }} especificado, uma vez finalizado, o atributo `result` conterá os dados raw binários do arquivo como string.

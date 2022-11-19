@@ -14,8 +14,8 @@ Un **mot-clé** est un mot ou une phrase décrivant un contenu. En ligne, les mo
 
 Lorsque vous utilisez un moteur de recherche, les mots-clés désignent ce que vous recherchez, et le moteur de recherche renvoie les pages web pertinentes. Pour des résultats plus précis, essayez des mots-clés plus spécifiques, comme "Mustang GTO Bleue" au lieu de simplement "Mustang". Les pages web emploient aussi les mots-clés dans les balises meta (dans la section {{htmlelement("head")}}) pour décrire le contenu des pages afin que les moteurs de recherche puissent mieux identifier et organiser les pages web.
 
-## **Pour approfondir**
+## Pour approfondir
 
-### **Culture générale**
+### Culture générale
 
 - [Mot-clé](https://fr.wikipedia.org/wiki/Mot_cl%C3%A9) sur Wikipédia
