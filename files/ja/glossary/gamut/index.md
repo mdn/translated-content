@@ -1,20 +1,20 @@
 ---
-title: Gamut
+title: Gamut (色域)
 slug: Glossary/Gamut
 l18n:
   sourceCommit: 5272602a89c279c42e18a0ab3434396fd33808f8
 ---
 
-A color **gamut** is a subset of colors, usually representing the colors that a display or a printing device can represent.
+**色域** (gamut)とは、色のサブセットのことで、通例ディスプレイや印刷用デバイスが表現できる色の範囲を指します。
 
-No display or printer can represent the whole range of colors that a human eye can perceive. The device _gamut_ represents the set that it supports.
+いかなるディスプレイやプリンターでも、人間の目が知覚できるあらゆる範囲の色を表現することはできません。デバイスの*色域*とは、そのデバイスがサポートする色の集合のことを指します。
 
-Traditionally, in web development, the only gamut used was _[sRGB](https://en.wikipedia.org/wiki/SRGB)_ (Standard Red-Green-Blue), where each color is described using three bytes, one for each primary color. However, "wide-color" monitors and professional printers support a wider range of colors, that can't be represented using this gamut.
+伝統的にウェブ開発では、 _[sRGB](https://en.wikipedia.org/wiki/SRGB)_ (Standard Red-Green-Blue)という色域だけが用いられていました。 sRGB では、それぞれの色が 3 バイトで記述され、各バイトはそれぞれの原色を表しています。しかしながら sRGB では、「ワイドカラー」なモニターやプロ向けのプリンターがサポートする、より広い範囲の色を表現することができません。
 
-Since 2021, browsers have started to provide functionality for other gamuts, like _[P3](https://en.wikipedia.org/wiki/DCI-P3)_, widely used in the movie industry, and _[rec2020](https://en.wikipedia.org/wiki/Rec._2020)_.
+2021 年以降各ブラウザーは、映画産業で広く用いられる _[P3](https://ja.wikipedia.org/wiki/DCI-P3)_ や _[Rec. 2020](https://ja.wikipedia.org/wiki/Rec._2020)_ など、そのほかの色域についての機能も提供するようになりました。
 
-Developers can define different sets of colors for devices supporting larger gamuts using the [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries). They can describe colors outside the RGB gamut using specific CSS functions like [`lch()`](/en-US/docs/Web/CSS/color_value/lch) for the LCH cylindrical coordinate system, or [`lab()`](/en-US/docs/Web/CSS/color_value/lab) for the Lab coordinate system.
+[`color-gamut`](/ja/docs/Web/CSS/@media/color-gamut) という[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)を使えば、より広範囲の色域をサポートするデバイスに向けて、様々な色域を定義することができます。そうしたデバイスでは RGB の色域外の色を、専用の CSS 関数で記述することができます。例えば、 [`lch()`](/en-US/docs/Web/CSS/color_value/lch) を使えば LCH 円筒座標系を用いることができますし、 [`lab()`](/en-US/docs/Web/CSS/color_value/lab) を使えば Lab 座標を使うことができます。
 
-## See also
+## 関連項目
 
-- [_Gamut_](https://en.wikipedia.org/wiki/Gamut) on _Wikipedia_.
+- [_色域_](https://ja.wikipedia.org/wiki/%E8%89%B2%E5%9F%9F) (_Wikipedia_).
