@@ -11,7 +11,7 @@ O elemento HTML _summary_ (`<summary>`) é utilizado como um sumário ou legenda
 
 ## Contexto de uso
 
-| Conteúdo permitido       | [Phrasing content](/en/HTML/Content_categories#Phrasing_content)                     |
+| Conteúdo permitido       | [Phrasing content](/pt-BR/HTML/Content_categories#Phrasing_content)                     |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de tag           | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                            |
 | Elementos pai permitidos | O elemento {{ HTMLElement("details") }}.                                                                                   |
@@ -23,7 +23,7 @@ Como todos os outros elementos HTML, esse elemento possui os [atributos globais]
 
 ## Interface do DOM
 
-Esse elemento implementa a interface [`HTMLElement`](/en/DOM/element).
+Esse elemento implementa a interface [`HTMLElement`](/pt-BR/DOM/element).
 
 ## Exemplos
 

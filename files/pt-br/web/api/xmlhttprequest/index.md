@@ -7,7 +7,7 @@ slug: Web/API/XMLHttpRequest
 
 `XMLHttpRequest` é um objeto que fornece funcionalidade ao cliente para transferir dados entre um cliente e um servidor. Ele fornece uma maneira fácil de recuperar dados de um URL sem ter que fazer uma atualização de página inteira. Isso permite que uma página da Web atualize apenas uma parte do conteúdo sem interromper o que o usuário esteja fazendo. XMLHttpRequest é usado constantemente na programação de [AJAX](/pt-BR/docs/AJAX).
 
-`XMLHttpRequest` foi originalmente projetado pela Microsoft e adotado pela Mozilla, Apple e Google. Está sendo padronizado pela [WHATWG](https://xhr.spec.whatwg.org/). Apesar do nome, XMLHttpRequest pode ser usado para recuperar qualquer tipo de dados, e não apenas XML, suportando também, protocolos diferentes de [HTTP](/en/HTTP) (incluindo file e ftp ).
+`XMLHttpRequest` foi originalmente projetado pela Microsoft e adotado pela Mozilla, Apple e Google. Está sendo padronizado pela [WHATWG](https://xhr.spec.whatwg.org/). Apesar do nome, XMLHttpRequest pode ser usado para recuperar qualquer tipo de dados, e não apenas XML, suportando também, protocolos diferentes de [HTTP](/pt-BR/HTTP) (incluindo file e ftp ).
 
 Para criar uma instância de XMLHttpRequest , basta fazer isso:
 
@@ -15,7 +15,7 @@ Para criar uma instância de XMLHttpRequest , basta fazer isso:
 var myRequest = new XMLHttpRequest();
 ```
 
-Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest).
+Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpRequest](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest).
 
 ## Métodos
 
@@ -537,7 +537,7 @@ void send(FormData data);
 
 ###### Notas
 
-Se os dados são um Document , ele é serializado antes de serem enviados. Ao enviar um documento, as versões do Firefox antes da versão 3 sempre enviavam a solicitação usando codificação UTF-8; [Firefox 3](/en/Firefox_3) envia corretamente o documento usando a codificação especificada por body.xmlEncoding , ou UTF-8 se nenhum encoding é especificado.
+Se os dados são um Document , ele é serializado antes de serem enviados. Ao enviar um documento, as versões do Firefox antes da versão 3 sempre enviavam a solicitação usando codificação UTF-8; [Firefox 3](/pt-BR/Firefox_3) envia corretamente o documento usando a codificação especificada por body.xmlEncoding , ou UTF-8 se nenhum encoding é especificado.
 
 Se são uma nsIInputStream , deve ser compatível com nsIUploadChannel 's setUploadStream() método. Nesse caso, um cabeçalho Content-Length é adicionado ao pedido, com o seu valor obtido usando nsIInputStream 's available() método. Quaisquer cabeçalhos incluídos na parte superior da corrente são tratados como parte do corpo da mensagem. MIMEType da transmissão deve ser especificado definindo o cabeçalho Content-Type usando o [`setRequestHeader()`](</en/nsIXMLHttpRequest#setRequestHeader()> "/en/XMLHttpRequest#setRequestHeader()") método antes de chamar send().
 
@@ -645,9 +645,9 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 
 `onreadystatechange` como uma propriedade do `XMLHttpRequest` instância é suportado em todos os navegadores.
 
-Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest).
+Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest).
 
-avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão [`addEventListener`](/en/DOM/element.addEventListener) APIs Além de definir on\* propriedades para uma função de manipulador.
+avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão [`addEventListener`](/pt-BR/DOM/element.addEventListener) APIs Além de definir on\* propriedades para uma função de manipulador.
 
 ## Compatibilidade do navegador
 
@@ -657,10 +657,10 @@ avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpR
 
 - MDN artigos sobre XMLHttpRequest:
 
-  - [AJAX - Getting Started](/en/AJAX/Getting_Started)
-  - [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-  - [HTML in XMLHttpRequest](/en/HTML_in_XMLHttpRequest)
-  - [`FormData`](/en/DOM/XMLHttpRequest/FormData)
+  - [AJAX - Getting Started](/pt-BR/AJAX/Getting_Started)
+  - [Using XMLHttpRequest](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+  - [HTML in XMLHttpRequest](/pt-BR/HTML_in_XMLHttpRequest)
+  - [`FormData`](/pt-BR/DOM/XMLHttpRequest/FormData)
 
 - XMLHttpRequest referencias da W3C e navegador fornecedores:
 

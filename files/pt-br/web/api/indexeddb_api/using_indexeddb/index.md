@@ -86,7 +86,7 @@ request.onsuccess = function(event) {
 
 Qual das duas funções, `onsuccess()` ou `onerror()`, será chamada? Se tudo correr bem, o evento de sucesso (que é um evento DOM event com propriedade `type` setada `"success"`) é chamado com `request` como seu `target`. Uma vez chamado, a função `onsuccess()` no `request` é chamada com o evento de sucesso em seu contexto. Por outro lado, se acontecer algum problema, um evento de erro (que é um evento DOM com a propriedade `type` setada para `"error"`) é chamado no `request`. Então a função `onerror()` com o evento erro em seu contexto.
 
-A API IndexedDB é feita para minimizar a necessidade de manipular erros, então você não fará muitos eventos de erro (ao menos, se você usar a API!) No caso de abrir um banco, portanto, existe algumas condições comuns para eventos de erro. O problema mais comum é o usuário não dar permissão para criar o banco. Um dos principais objetivos do IndexedDB é permitir muitos dados serem armazenados para uso offline. (Para aprender mais sobre o quanto cada navegador pode armazenar, veja [Storage limits](/en/IndexedDB#Storage_limits)).
+A API IndexedDB é feita para minimizar a necessidade de manipular erros, então você não fará muitos eventos de erro (ao menos, se você usar a API!) No caso de abrir um banco, portanto, existe algumas condições comuns para eventos de erro. O problema mais comum é o usuário não dar permissão para criar o banco. Um dos principais objetivos do IndexedDB é permitir muitos dados serem armazenados para uso offline. (Para aprender mais sobre o quanto cada navegador pode armazenar, veja [Storage limits](/pt-BR/IndexedDB#Storage_limits)).
 
 Obviamente, navegadores não querem armazenar dados que poluem seu computador, então o navegador mostra uma mensagem ao usuário na primeira vez que um aplicativo tenta abrir o IndexedDB. O usuário pode escolher permitir ou negar acesso. O IndexedDB também é desabilitado no modo privado dos navegadores (ctrl+shift+N no Chrome e ctrl+shift+P no Firefox). Isso acontece porque o intuito do modo privado é não deixar rastros na navegação.
 
@@ -136,7 +136,7 @@ Blink/Webkit suporta a versão atual da especificação, nas versões do Chrome 
 
 ### Estruturando o banco
 
-Agora a estrutura do banco. IndexedDB usa "armazens de objetos" em vez de tabelas, e um único banco de dados pode conter qualquer número de "armazem de objetos". Sempre que um valor é armazenado num objectStore, ele é associado a uma chave. Existe várias maneiras diferentes de uma chave ser mostrada, dependendo do que o objectStore usa, um [key path](/en/IndexedDB#gloss_key_path) ou [key generator](/en/IndexedDB#gloss_key_generator).
+Agora a estrutura do banco. IndexedDB usa "armazens de objetos" em vez de tabelas, e um único banco de dados pode conter qualquer número de "armazem de objetos". Sempre que um valor é armazenado num objectStore, ele é associado a uma chave. Existe várias maneiras diferentes de uma chave ser mostrada, dependendo do que o objectStore usa, um [key path](/pt-BR/IndexedDB#gloss_key_path) ou [key generator](/pt-BR/IndexedDB#gloss_key_generator).
 
 A tabela abaixo mostra as direfentes chaves suportadas:
 
@@ -1263,7 +1263,7 @@ Uma leitura adicional para você encontrar mais informações.
 
 ### Refências
 
-- [IndexedDB API Reference](/en/IndexedDB)
+- [IndexedDB API Reference](/pt-BR/IndexedDB)
 - [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/pt-BR/docs/IndexedDB/Using_IndexedDB_in_chrome)
 - [Using JavaScript generators in Firefox](/pt-BR/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)
