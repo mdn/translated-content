@@ -1,7 +1,7 @@
 ---
 title: Gamut (色域)
 slug: Glossary/Gamut
-l18n:
+l10n:
   sourceCommit: 5272602a89c279c42e18a0ab3434396fd33808f8
 ---
 
