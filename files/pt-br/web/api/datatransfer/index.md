@@ -15,10 +15,10 @@ Esse objeto está disponível pela propriedade `dataTransfer` de todos os evento
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | [`dropEffect`](#dropEffect.28.29)                                                                                      | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
 | [`effectAllowed`](#effectAllowed.28.29)                                                                             | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
-| [`files`](#files.28.29) {{ gecko_minversion_inline("1.9.2") }}                                                | {{ domxref("FileList") }}                                                                                       |
-| [`mozCursor`](#mozCursor) {{ non-standard_inline() }} {{ gecko_minversion_inline("1.9.1") }}     | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
+| [`files`](#files.28.29)                                                 | {{ domxref("FileList") }}                                                                                       |
+| [`mozCursor`](#mozCursor) {{ non-standard_inline() }}      | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
 | [`mozItemCount`](#mozItemCount.28.29) {{ non-standard_inline() }}                                           | `unsigned long`                                                                                                        |
-| [`mozSourceNode`](#mozSourceNode) {{ non-standard_inline() }} {{ gecko_minversion_inline("2") }} | {{ domxref("Node") }}                                                                                           |
+| [`mozSourceNode`](#mozSourceNode) {{ non-standard_inline() }}  | {{ domxref("Node") }}                                                                                           |
 | [`mozUserCancelled`](#mozUserCancelled)                                                                          | [`Boolean`](/en/JavaScript/Reference/Global_Objects/Boolean) |
 | [`types`](#types.28.29)                                                                                                     | [`DOMStringList`](/en-US/docs/Web/API/DOMStringList)                                |
 
