@@ -28,7 +28,7 @@ slug: Web/API/EcKeyGenParams
 
 ## ブラウザーの互換性
 
-{{domxref("SubtleCrypto.generateKey()")}} メソッドにおいてアルゴリズム "ECDH" または "ECDSA" をサポートしているブラウザは、この型をサポートするはずです。
+{{domxref("SubtleCrypto.generateKey()")}} メソッドにおいてアルゴリズム "ECDH" または "ECDSA" をサポートしているブラウザーは、この型をサポートするはずです。
 
 ## 関連情報
 

@@ -24,7 +24,7 @@ slug: Web/API/AesKeyGenParams
 
 ## ブラウザーの互換性
 
-{{domxref("SubtleCrypto.generateKey()")}} メソッドにおいて AES ベースのアルゴリズムをどれかサポートしているブラウザは、この型をサポートするはずです。
+{{domxref("SubtleCrypto.generateKey()")}} メソッドにおいて AES ベースのアルゴリズムをどれかサポートしているブラウザーは、この型をサポートするはずです。
 
 ## 関連情報
 

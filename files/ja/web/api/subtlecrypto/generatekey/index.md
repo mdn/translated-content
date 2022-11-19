@@ -32,7 +32,7 @@ generateKey(algorithm, extractable, keyUsages)
 
 - `extractable`
   - : {{domxref("SubtleCrypto.exportKey()")}} や {{domxref("SubtleCrypto.wrapKey()")}}
-      を用いて鍵を取り出すことができるかを表す真理値。
+      を用いて鍵を取り出すことができるかを表す {{jsxref("Boolean")}} 値。
 - `keyUsages`
   - : 新しく生成する鍵で何ができるかを表す {{jsxref("Array")}} 。
       配列の要素として使用可能な値は以下の通りです。
