@@ -17,11 +17,11 @@ original_slug: Web/HTML/Inline_elemente
 
 Listagem dos elementos que são "inline":
 
-- [b](/en/HTML/Element/b), [big](/en/HTML/Element/big), [i](/en/HTML/Element/i), [small](/en/HTML/Element/small), [tt](/en/HTML/Element/tt)
-- [abbr](/en/HTML/Element/abbr), [acronym](/en/HTML/Element/acronym), [cite](/en/HTML/Element/cite), [code](/en/HTML/Element/code), [dfn](/en/HTML/Element/dfn), [em](/en/HTML/Element/em), [kbd](/en/HTML/Element/kbd), [strong](/en/HTML/Element/strong), [samp](/en/HTML/Element/samp), [var](/en/HTML/Element/var)
-- [a](/en/HTML/Element/a), [bdo](/en/HTML/Element/bdo), [br](/en/HTML/Element/br), [img](/En/HTML/Element/Img), [map](/en/HTML/Element/map), [object](/en/HTML/Element/object), [q](/en/HTML/Element/q), [script](/En/HTML/Element/Script), [span](/en/HTML/Element/span), [sub](/en/HTML/Element/sub), [sup](/en/HTML/Element/sup)
-- [button](/en/HTML/Element/button), [input](/en/HTML/Element/Input), [label](/en/HTML/Element/label), [select](/en/HTML/Element/select), [textarea](/en/HTML/Element/textarea)
+- [b](/pt-BR/HTML/Element/b), [big](/pt-BR/HTML/Element/big), [i](/pt-BR/HTML/Element/i), [small](/pt-BR/HTML/Element/small), [tt](/pt-BR/HTML/Element/tt)
+- [abbr](/pt-BR/HTML/Element/abbr), [acronym](/pt-BR/HTML/Element/acronym), [cite](/pt-BR/HTML/Element/cite), [code](/pt-BR/HTML/Element/code), [dfn](/pt-BR/HTML/Element/dfn), [em](/pt-BR/HTML/Element/em), [kbd](/pt-BR/HTML/Element/kbd), [strong](/pt-BR/HTML/Element/strong), [samp](/pt-BR/HTML/Element/samp), [var](/pt-BR/HTML/Element/var)
+- [a](/pt-BR/HTML/Element/a), [bdo](/pt-BR/HTML/Element/bdo), [br](/pt-BR/HTML/Element/br), [img](/En/HTML/Element/Img), [map](/pt-BR/HTML/Element/map), [object](/pt-BR/HTML/Element/object), [q](/pt-BR/HTML/Element/q), [script](/En/HTML/Element/Script), [span](/pt-BR/HTML/Element/span), [sub](/pt-BR/HTML/Element/sub), [sup](/pt-BR/HTML/Element/sup)
+- [button](/pt-BR/HTML/Element/button), [input](/pt-BR/HTML/Element/Input), [label](/pt-BR/HTML/Element/label), [select](/pt-BR/HTML/Element/select), [textarea](/pt-BR/HTML/Element/textarea)
 
 ### Ver também
 
-- [Elementos de nível de bloco](/en/HTML/Block-level_elements)
+- [Elementos de nível de bloco](/pt-BR/HTML/Block-level_elements)

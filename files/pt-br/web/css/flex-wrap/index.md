@@ -9,7 +9,7 @@ A propriedade [CSS](/pt-BR/docs/CSS) **`flex-wrap`** define se os itens flexíve
 
 {{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 
-Veja [Using CSS flexible boxes](/en/CSS/Using_CSS_flexible_boxes) para mais propriedades e informação.
+Veja [Using CSS flexible boxes](/pt-BR/CSS/Using_CSS_flexible_boxes) para mais propriedades e informação.
 
 ## Syntax
 
