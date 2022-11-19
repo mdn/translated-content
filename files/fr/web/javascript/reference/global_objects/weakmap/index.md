@@ -18,7 +18,7 @@ Les clés des objets `WeakMap` sont nécessairement du type `Object`. {{Glossary
 
 Les clés d'une `WeakMap` sont référencées _faiblement_. Cela signifie que s'il n'existe aucune autre référence «&nbsp;forte&nbsp;» vers la clé, l'élément (la clé et la valeur) sera retiré de la `WeakMap` par le ramasse-miettes.
 
-### Pourquoi *Weak*Map ?
+### Pourquoi WeakMap ?
 
 Avec un certain recul, on peut voir que cette API aurait pu être implémentée en JavaScript grâce à deux tableaux (un tableau pour stocker les clés, l'autre pour les valeurs) associées à 4 méthodes.
 

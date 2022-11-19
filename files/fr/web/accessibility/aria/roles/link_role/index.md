@@ -33,7 +33,7 @@ Les technologies d’assistance devraient être à l’écoute de tels événeme
 
 ### Exemples
 
-#### Exemple 1&nbsp;: **Ajoute le rôle dans le code HTML**
+#### Exemple 1&nbsp;: Ajoute le rôle dans le code HTML
 
 L’extrait de code ci-dessous montre comment le rôle `link` est ajouté dans le code source HTML.
 
@@ -41,7 +41,7 @@ L’extrait de code ci-dessous montre comment le rôle `link` est ajouté dans l
 <div role=”link”>Un lien</div>
 ```
 
-#### **Exemple 2&nbsp;: Lien accessible créé depuis une application à l'aide d'un \<span>**
+#### Exemple 2&nbsp;: Lien accessible créé depuis une application à l'aide d'un \<span>
 
 ```html
 <script type="text/javascript">
