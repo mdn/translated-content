@@ -107,8 +107,6 @@ const obj = { a: 1, b: 2 };
 >
 > 如果你的编码风格不包括尾随分号，则 `( ... )` 表达式前面需要有一个分号，否则它可能用于执行前一行的函数。
 
-Note that the equivalent _binding pattern_ of the code above is not valid syntax:
-
 请注意，上述代码在等效的*绑定模式*中不是有效的语法：
 
 ```js example-bad
@@ -166,7 +164,7 @@ const [a, ...b,] = [1, 2, 3];
 在许多语法中，语言为你绑定变量，你也可以使用解构模式。其中包括：
 
 - [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 和 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环中的循环变量；
-- [Function](/zh-CN/docs/Web/JavaScript/Reference/Functions) 参数；
+- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)参数；
 - [`catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 绑定变量。
 
 有关特定于数组或对象解构的功能，请参阅下面的各个示例。
@@ -204,7 +202,7 @@ console.log(blue);  //undefined
 
 可以在一个解构表达式中交换两个变量的值。
 
-没有解构赋值的情况下，交换两个变量需要一个临时变量（或者用低级语言中的[XOR-swap 技巧](http://en.wikipedia.org/wiki/XOR_swap)）。
+没有解构赋值的情况下，交换两个变量需要一个临时变量（或者用低级语言中的[异或交换技巧](https://en.wikipedia.org/wiki/XOR_swap_algorithm)）。
 
 ```js
 let a = 1;
@@ -405,8 +403,7 @@ console.log(bb); // 5
 
 #### 从作为函数参数传递的对象中提取属性
 
-传递给函数参数的对象也可以提取到变量中，然后可以在函数体内访问这些变量。
-至于对象赋值，解构语法允许新变量具有与原始属性相同或不同的名称，并为原始对象未定义属性的情况分配默认值。
+传递给函数参数的对象也可以提取到变量中，然后可以在函数体内访问这些变量。至于对象赋值，解构语法允许新变量具有与原始属性相同或不同的名称，并为原始对象未定义属性的情况分配默认值。
 
 请考虑此对象，其中包含有关用户的信息。
 
@@ -421,8 +418,7 @@ const user = {
 };
 ```
 
-在这里，我们展示了如何将传递对象的属性提取到具有相同名称的变量。
-参数值 `{ id }` 表示传递给函数的对象的 `id` 属性应该被提取到一个同名变量中，然后可以在函数中使用。
+在这里，我们展示了如何将传递对象的属性提取到具有相同名称的变量。参数值 `{ id }` 表示传递给函数的对象的 `id` 属性应该被提取到一个同名变量中，然后可以在函数中使用。
 
 ```js
 function userId({ id }) {
@@ -432,8 +428,7 @@ function userId({ id }) {
 console.log(userId(user)); // 42
 ```
 
-你可以定义提取变量的名称。
-在这里，我们提取名为 `displayName` 的属性，并将其重命名为 `dname`，以便在函数体内使用。
+你可以定义提取变量的名称。在这里，我们提取名为 `displayName` 的属性，并将其重命名为 `dname`，以便在函数体内使用。
 
 ```js
 function userDisplayName({ displayName: dname }) {
@@ -443,8 +438,7 @@ function userDisplayName({ displayName: dname }) {
 console.log(userDisplayName(user)); // `jdoe`
 ```
 
-嵌套对象也可以提取。
-下面的示例展示了属性 `fullname.firstName` 被提取到名为 `name` 的变量中。
+嵌套对象也可以提取。下面的示例展示了属性 `fullname.firstName` 被提取到名为 `name` 的变量中。
 
 ```js
 function whois({ displayName, fullName: { firstName: name } }) {
