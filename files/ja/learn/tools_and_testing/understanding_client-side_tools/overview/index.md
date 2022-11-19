@@ -115,7 +115,7 @@ Web アプリのライフサイクルのこの段階では、通常、"将来の
 2. コードをまったく別の言語で記述し、それを Web 互換言語に変換するオプション。 例えば：
 
    - [Sass/SCSS](https://sass-lang.com/): この CSS 拡張機能を使用すると、変数、ネストされたルール、ミックスイン、関数、およびその他の多くの機能を使用できます。その一部はネイティブ CSS (変数など) で使用でき、一部は使用できません。
-   - [TypeScript](https://www.typescriptlang.org/): TypeScript は、多数の追加機能を提供する JavaScript のスーパーセットです。 TypeScript コンパイラは、本番用にビルドするときに TypeScript コードを JavaScript に変換します。 
+   - [TypeScript](https://www.typescriptlang.org/): TypeScript は、多数の追加機能を提供する JavaScript のスーパーセットです。 TypeScript コンパイラーは、本番用にビルドするときに TypeScript コードを JavaScript に変換します。 
    - [React](https://reactjs.org/)、 [Ember](https://emberjs.com/)、 [Vue](https://vuejs.org/)、 [Svelte](https://svelte.jp/) 及び [Angular](https://angular.io/)などのフレームワーク: フレームワークは多くの機能を無料で提供し、バニラ JavaScript の上に構築されたカスタム構文を介して使用できます。 バックグラウンドでは、フレームワークの JavaScript コードがこのカスタム構文を解釈し、最終的な Web アプリとしてレンダリングするために懸命に働いています。 
 
 ### 開発後評価
