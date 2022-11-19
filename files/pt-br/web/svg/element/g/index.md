@@ -1,13 +1,8 @@
 ---
 title: g
 slug: Web/SVG/Element/g
-tags:
-  - Elemento
-  - Referencia
-  - SVG
-  - SVG Recipiente
-translation_of: Web/SVG/Element/g
 ---
+
 {{SVGRef}}
 
 O elemento `g` é um recipiente utilizado para agrupar objetos. Transformações aplicadas no elemento `g` são repassadas para todos os seus elementos filhos. Atributos também são herdados por elementos filhos. Além disso, pode ser utilizado para definir objetos complexos que poderão ser referenciados mais tarde pelo elemento {{SVGElement("use")}}.

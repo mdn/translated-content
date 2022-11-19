@@ -3,7 +3,7 @@ title: '<style>: スタイル情報要素'
 slug: Web/HTML/Element/style
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<style>` 要素**は、文書あるいは文書の一部分のスタイル情報を含みます。 `<style>` 要素を含んでいる文書のコンテンツに適用される CSS を含みます。
 

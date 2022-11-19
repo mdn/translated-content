@@ -4,6 +4,7 @@ slug: Glossary/XHTML
 translation_of: Glossary/XHTML
 original_slug: Глоссарий/XHTML
 ---
+
 **XHTML** по отношению к [XML](/ru/XML) - это так же, как [HTML](/ru/HTML) по отношению к [SGML](/en/SGML). Таким образом, XHTML - язык разметки который подобен HTML, но с более строгим синтаксисом. Две версии XHTML были закончены (окончательно сформулированы) [W3C](http://www.w3.org/):
 
 - [XHTML 1.0](http://www.w3.org/TR/xhtml1/) - это HTML4 повторно сформулированный как XML-приложение , и с обратной совместимостью с HTML в ограниченных случаях.

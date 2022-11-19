@@ -96,7 +96,7 @@ inner.addEventListener("mouseleave", update, false);
 
 The event handler is in the `update()` method. It simply calls `setCoords()` once for each coordinate system, passing in the event that occurred.
 
-Our main code sets up the event handlers on the inner box by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} for each of the types {{event("mouseenter")}}, {{event("mousemove")}}, and {{event("mouseleave")}}.
+Our main code sets up the event handlers on the inner box by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} for each of the types [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event), [`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event), and [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event).
 
 ### HTML
 

@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
+
 {{JSRef}}
 
 O método **`lastIndexOf()`** retorna o ultimo índice que um certo elemento pode ser encontrado no array, ou -1 se o elemento não estiver presente. O array é pesquisado de trás para frente, começando pelo `fromIndex`.

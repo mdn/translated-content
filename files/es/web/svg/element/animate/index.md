@@ -3,6 +3,7 @@ title: <animate>
 slug: Web/SVG/Element/animate
 translation_of: Web/SVG/Element/animate
 ---
+
 {{SVGRef}}El elemento `animate` de SVG se utiliza para animar un atributo o propiedad a través del tiempo. Normalmente se inserta dentro del elemento o referenciado con el atributo `href`.
 
 ## Contexto de uso
@@ -72,10 +73,7 @@ Para más información (en inglés):
 
 ## Especificaciones
 
-| Specification                                                                                    | Status                                   | Comment            |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName("SVG Animations 2", "#AnimateElement", "&lt;animate&gt;")}}     | {{Spec2("SVG Animations 2")}} | Sin cambios        |
-| {{SpecName("SVG1.1", "animate.html#AnimateElement", "&lt;animate&gt;")}} | {{Spec2("SVG1.1")}}                 | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

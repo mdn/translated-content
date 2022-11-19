@@ -1,8 +1,8 @@
 ---
 title: <form>
 slug: Web/HTML/Element/form
-translation_of: Web/HTML/Element/form
 ---
+
 ## Resumo
 
 O **elemento HTML `<form>` **representa uma seção de um documento que contém controles interativos que permitem ao usuário submeter informação a um determinado servidor web.
@@ -117,4 +117,4 @@ Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes).
 - [HTML forms guide](/pt-BR/docs/Web/Guide/HTML/Forms)
 - Other elements that are used for creating forms: {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}},{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -1,15 +1,8 @@
 ---
 title: font-family
 slug: Web/CSS/font-family
-tags:
-  - CSS
-  - Fontes CSS
-  - Lay
-  - Propriedade CSS
-  - Refer
-  - Web
-translation_of: Web/CSS/font-family
 ---
+
 {{CSSRef}}
 
 ## Resumo

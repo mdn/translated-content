@@ -5,13 +5,14 @@ tags:
   - Referencia_CSS
 translation_of: Web/CSS/cursor
 ---
+
 {{ CSSRef() }}
 
 ### Resumen
 
 La propiedad [CSS:cursor](es/CSS/cursor) especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.
 
-- [CSS:Valor_inicial](es/CSS/Valor_inicial):`CSS:auto`
+- [CSS:Valor_inicial](es/CSS/Valor_inicial): `CSS:auto`
 - Se aplica a: todos los elementos
 - [CSS:inheritance](es/CSS/inheritance): Si
 - Porcentaje: N/A
@@ -30,7 +31,7 @@ cursor: [<url> [<x> <y>]?,]*  <std-cursor-name> ;
 
 ### Values
 
-- \<url> {{ mediawiki.external(' ') }}?
+- \<url> [ ]?
   - : URL del cursor seleccionado mas posición opcional. Mas de un URL puede provocar problemas, in caso de que algunos tipode de imágenes de cursor no puedan ser usados.vea [Uso_de_URL_como_valor_de_la_propiedad_cursor](es/Uso_de_URL_como_valor_de_la_propiedad_cursor) para mas detalles.
 - \<std-cursor-name>
   - : Algunos nombres de cursores se encuentra en la siguiente tabla.

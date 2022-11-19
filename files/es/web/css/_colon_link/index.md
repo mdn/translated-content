@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:link
 ---
+
 {{ CSSRef }}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:link`** [CSS](/es/docs/Web/CSS) representa un elemento que aún no se ha visitado. Coincide con cada elemento no visitado {{HTMLElement("a")}}, {{HTMLElement("area")}}, o {{HTMLElement("link")}} que tiene un atributo `href`.
@@ -55,13 +56,7 @@ a:link {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                                   | Comentarios                                                                               |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', 'scripting.html#selector-link', ':link') }} | {{ Spec2('HTML WHATWG') }}     |                                                                                           |
-| {{ SpecName('CSS4 Selectors', '#link', ':link') }}                         | {{ Spec2('CSS4 Selectors') }} | Ningún cambio.                                                                            |
-| {{ SpecName('CSS3 Selectors', '#link', ':link') }}                         | {{ Spec2('CSS3 Selectors') }} | Ningún cambio.                                                                            |
-| {{ SpecName('CSS2.1', 'selector.html#link-pseudo-classes', ':link') }} | {{ Spec2('CSS2.1') }}             | Elevar la restricción para aplicarla únicamente al elemento {{ HTMLElement("a") }}. |
-| {{ SpecName('CSS1', '#anchor-pseudo-classes', ':link') }}                 | {{ Spec2('CSS1') }}                 | Definición Inicial.                                                                       |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

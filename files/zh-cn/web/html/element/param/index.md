@@ -65,4 +65,4 @@ slug: Web/HTML/Element/param
 
 - {{ HTMLElement("object") }}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

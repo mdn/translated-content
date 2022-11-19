@@ -10,6 +10,7 @@ translation_of: Web/API/Document/createEvent
 translation_of_original: Web/API/Event/createEvent
 original_slug: Web/API/Event/createEvent
 ---
+
 {{APIRef("DOM")}}
 
 Crea un nuevo evento, que debe ser inicializado llamando a su método `init()`.

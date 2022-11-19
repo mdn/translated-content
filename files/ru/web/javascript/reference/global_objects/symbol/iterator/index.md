@@ -8,6 +8,7 @@ tags:
   - Символы
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
+
 {{JSRef}}
 
 **`Symbol.iterator`** — известный символ, задающий итератор объекта, используемый по умолчанию. Применяется в конструкции [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of).
@@ -26,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 - {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
 - {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
 
-Смотрите также[ ](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)[Протоколы перебора](/ru/docs/Web/JavaScript/Reference/Iteration_protocols) для получения дополнительных сведений.
+Смотрите также [Протоколы перебора](/ru/docs/Web/JavaScript/Reference/Iteration_protocols) для получения дополнительных сведений.
 
 ## Примеры
 

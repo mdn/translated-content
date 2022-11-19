@@ -7,6 +7,7 @@ translation_of: Web/CSS/mask-clip
 translation_of_original: Web/CSS/-webkit-mask-clip
 original_slug: Web/CSS/-webkit-mask-clip
 ---
+
 {{ CSSRef() }}
 
 {{ Non-standard_header() }}
@@ -31,7 +32,7 @@ donde:
 - padding
   - : Si se ha especificado `padding` , la imagen de máscara de extiendo hasta el padding (relleno) del elemento.
 - content
-  - : Si se ha espeficiado c`ontent` , la imagen de máscara se recorta al tamaño del contenido del elemento.
+  - : Si se ha espeficiado `content` , la imagen de máscara se recorta al tamaño del contenido del elemento.
 - text
   - : Si se ha especificado `text` , la imagen de máscara de recorta al tamaño del texto del elemento.
 

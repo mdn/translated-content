@@ -3,9 +3,10 @@ title: Регулярные выражения
 slug: Web/JavaScript/Guide/Regular_Expressions
 translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
-Регулярные выражения - это шаблоны, используемые для сопоставления последовательностей символов в строках. В JavaScript регулярные выражения также являются объектами. Эти шаблоны используются в методах [`exec`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/exec "exec") и [`test`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/test "test") объекта[ `RegExp`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp "RegExp"), а также [`match`](/ru/docs/JavaScript/Reference/Global_Objects/String/match "match"), [`replace`](/ru/docs/JavaScript/Reference/Global_Objects/String/replace "en-US/docs/JavaScript/Reference/Global_Objects/String/replace"),[ `search`](/ru/docs/JavaScript/Reference/Global_Objects/String/search "search") и [`split`](/ru/docs/JavaScript/Reference/Global_Objects/String/split "split") объекта [`String`](/ru/docs/JavaScript/Reference/Global_Objects/String "String"). Данная глава описывает регулярные выражения в JavaScript.
+Регулярные выражения - это шаблоны, используемые для сопоставления последовательностей символов в строках. В JavaScript регулярные выражения также являются объектами. Эти шаблоны используются в методах [`exec`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/exec) и [`test`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/test) объекта [`RegExp`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp) а также [`match`](/ru/docs/JavaScript/Reference/Global_Objects/String/match), [`replace`](/ru/docs/JavaScript/Reference/Global_Objects/String/replace), [`search`](/ru/docs/JavaScript/Reference/Global_Objects/String/search), [`split`](/ru/docs/JavaScript/Reference/Global_Objects/String/split) объекта [`String`](/ru/docs/JavaScript/Reference/Global_Objects/String). Данная глава описывает регулярные выражения в JavaScript.
 
 ## Создание регулярного выражения
 
@@ -19,7 +20,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
   Литералы регулярных выражений вызывают предварительную компиляцию регулярного выражения при анализе скрипта. Если ваше регулярное выражение постоянно, то пользуйтесь им, чтобы увеличить производительность.
 
-- Вызывая функцию конструктор объекта [`RegExp`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp "en-US/docs/JavaScript/Reference/Global Objects/RegExp"), например:
+- Вызывая функцию конструктор объекта [`RegExp`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp), например:
 
   ```js
   var re = new RegExp("ab+c");
@@ -378,7 +379,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
         </p>
         <p>
           Например, <code>[abcd]</code> эквивалентна
-          <span style="font-family: monospace">[</span><code>a-d]</code>. Они
+          [<code>a-d]</code>. Они
           соответствуют 'b' в "brisket" и 'c' в "city". <code>/[a-z.]+/</code> и
           <code>/[\w.]+/</code> обе соответствуют всему в "test.i.ng".
         </p>
@@ -757,18 +758,18 @@ function escapeRegExp(string){
 
 ## Работа с Регулярными Выражениями
 
-Регулярные выражения используются в методах `test` и `exec` объекта `RegExp` и с методами `match`, `replace`, `search`, и `split `объекта `String`. Эти методы подробно объясняются в [Справочнике JavaScript](/ru/docs/JavaScript/Reference "en-US/docs/JavaScript/Reference").
+Регулярные выражения используются в методах `test` и `exec` объекта `RegExp` и с методами `match`, `replace`, `search`, и `split` объекта `String`. Эти методы подробно объясняются в [Справочнике JavaScript](/ru/docs/JavaScript/Reference)
 
-| Метод                                                                                                                                       | Описание                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`exec`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec "en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec")          | Метод `RegExp,` который выполняет поиск совпадения в строке. Он возвращает массив данных.                                                            |
-| [`test`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/test "en-US/docs/JavaScript/Reference/Global_Objects/RegExp/test")          | Метод `RegExp`, который тестирует совпадение в строке. Возвращает либо истину либо ложь.                                                             |
-| [`match`](/en-US/docs/JavaScript/Reference/Global_Objects/String/match "en-US/docs/JavaScript/Reference/Global_Objects/String/match")       | Метод `String`, который выполняет поиск совпадения в строке. Он возвращает массив данных либо null если совпадения отсутствуют.                      |
-| [`search`](/en-US/docs/JavaScript/Reference/Global_Objects/String/search "en-US/docs/JavaScript/Reference/Global_Objects/String/search")    | Метод `String,` который тестирует на совпадение в строке. Он возвращает индекс совпадения, или -1 если совпадений не будет найдено.                  |
-| [`replace`](/en-US/docs/JavaScript/Reference/Global_Objects/String/replace "en-US/docs/JavaScript/Reference/Global_Objects/String/replace") | Метод `String`, который выполняет поиск совпадения в строке, и заменяет совпавшую подстроку другой подстрокой, переданной как аргумент в этот метод. |
-| [`split`](/en-US/docs/JavaScript/Reference/Global_Objects/String/split "en-US/docs/JavaScript/Reference/Global_Objects/String/split")       | Метод `String,` который использует регулярное выражение или фиксированную строку чтобы разбить строку на массив подстрок.                            |
+| Метод                                                                       | Описание                                                                                                                                             |
+| --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`exec`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec)       | Метод `RegExp,` который выполняет поиск совпадения в строке. Он возвращает массив данных.                                                            |
+| [`test`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/test)       | Метод `RegExp`, который тестирует совпадение в строке. Возвращает либо истину либо ложь.                                                             |
+| [`match`](/en-US/docs/JavaScript/Reference/Global_Objects/String/match)     | Метод `String`, который выполняет поиск совпадения в строке. Он возвращает массив данных либо null если совпадения отсутствуют.                      |
+| [`search`](/en-US/docs/JavaScript/Reference/Global_Objects/String/search)   | Метод `String,` который тестирует на совпадение в строке. Он возвращает индекс совпадения, или -1 если совпадений не будет найдено.                  |
+| [`replace`](/en-US/docs/JavaScript/Reference/Global_Objects/String/replace) | Метод `String`, который выполняет поиск совпадения в строке, и заменяет совпавшую подстроку другой подстрокой, переданной как аргумент в этот метод. |
+| [`split`](/en-US/docs/JavaScript/Reference/Global_Objects/String/split)     | Метод `String,` который использует регулярное выражение или фиксированную строку чтобы разбить строку на массив подстрок.                            |
 
-Чтобы просто узнать есть ли в строке что либо соответствующее шаблону, воспользуйтесь методами `test` или `search`; а чтобы получить больше информации пользуйтесь методами `exec` или `match` (хотя эти методы работают медленнее). Если вы пользуетесь `exec` или `match` и если совпадения есть, эти методы вернут массив и обновлённые свойства объекта ассоциированного регулярного выражения а также предопределённого объекта `RegExp `регулярного выражения. Если совпадений нет, метод `exec` вернёт `null` (который сконвертируется в `false`).
+Чтобы просто узнать есть ли в строке что либо соответствующее шаблону, воспользуйтесь методами `test` или `search`; а чтобы получить больше информации пользуйтесь методами `exec` или `match` (хотя эти методы работают медленнее). Если вы пользуетесь `exec` или `match` и если совпадения есть, эти методы вернут массив и обновлённые свойства объекта ассоциированного регулярного выражения а также предопределённого объекта `RegExp` регулярного выражения. Если совпадений нет, метод `exec` вернёт `null` (который сконвертируется в `false`).
 
 В след. примере, скрипт использует метод `exec` чтобы найти совпадения в строке.
 
@@ -1017,9 +1018,9 @@ console.log(output.join("\n"));
 
 В след. примере, ожидается что пользователь введёт телефонный номер и требуется проверить правильность символов набранных пользователем. Когда пользователь нажмёт кнопку "Check", скрипт проверит правильность введённого номера. Если номер правильный (совпадает с символами определёнными в регулярном выражении), то скрипт покажет сообщение благодарности для пользователя и подтвердит номер. Если нет, то скрипт проинформирует пользователя, что телефонный номер неправильный.
 
-Внутри незахватывающих скобок `(?:, регуляное выражение ищет три цифры \d{3} ИЛИ |` открывающую скобку `\(, затем три цифры \d{3}`, затем закрывающую скобку `\), `(закрывающая незахватывающая скобка `)`), затем тире, слеш, или десятичная точка, и когда это выражение найдено, запоминает символ `([-\/\.])`, следующие за ним и запомненные три цифры `\d{3}`, следующее соответствие тире, слеша или десятичной точки `\1`, и следующие четыре цифры `\d{4}.`
+Внутри незахватывающих скобок `(?:`, регуляное выражение ищет три цифры `\d{3}` ИЛИ `|` открывающую скобку `\(`, затем три цифры `\d{3}`, затем закрывающую скобку `\)`, (закрывающая незахватывающая скобка `)`), затем тире, слеш, или десятичная точка, и когда это выражение найдено, запоминает символ `([-\/\.])`, следующие за ним и запомненные три цифры `\d{3}`, следующее соответствие тире, слеша или десятичной точки `\1`, и следующие четыре цифры `\d{4}`.
 
-Регулярное выражение ищет сначала 0 или одну открывающую скобку `\(?`, `затем три цифры \d{3}`, затем 0 или одну закрывающую скобку `\)?`, потом одно тире, слеш или точка и когда найдёт это, запомнит символ`([-\/\.])`, след. три цифры` \d{3}`, followed by the remembered match of a dash, forward slash, or decimal point `\1`, followed by four digits `\d{4}`.
+Регулярное выражение ищет сначала 0 или одну открывающую скобку `\(?`, затем три цифры `\d{3}`, затем 0 или одну закрывающую скобку `\)?`, потом одно тире, слеш или точка и когда найдёт это, запомнит символ `([-\/\.])`, след. три цифры `\d{3}`, followed by the remembered match of a dash, forward slash, or decimal point `\1`, followed by four digits `\d{4}`.
 
 Событие "Изменить" активируется, когда пользователь подтвердит ввод значения регулярного выражения, нажав клавишу "Enter".
 

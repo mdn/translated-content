@@ -3,6 +3,7 @@ title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
+
 {{JSRef}}
 
 **Конструктор `AsyncFunction`** создаёт новый объект {{jsxref("Statements/async_function", "async function")}}. В JavaScript любая асинхронная функция фактически является объектом AsyncFunction.

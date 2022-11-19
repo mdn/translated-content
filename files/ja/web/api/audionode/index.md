@@ -11,7 +11,7 @@ AudioNode インターフェースは、オーディオソース（例：\<audio
 
 ![AudioNodes participating in an AudioContext create a audio routing graph.](WebAudioBasics.png)
 
-An `AudioNode` has inputs and outputs, each with a given amount of _channels_.\_ _An `AudioNode` with zero inputs and exactly one output is called a \_source node_. The exactly processing done varies from one `AudioNode` to another but, in general, a node reads its inputs, does some audio-related processing, and generates new values for its outputs.
+An `AudioNode` has inputs and outputs, each with a given amount of _channels_. An `AudioNode` with zero inputs and exactly one output is called a _source node_. The exactly processing done varies from one `AudioNode` to another but, in general, a node reads its inputs, does some audio-related processing, and generates new values for its outputs.
 
 AudioNode は複数の入力、出力を持ち、それぞれがチャンネルを持ちます。入力が無く、一つの出力を持つ AudioNode は、ソースノードと呼ばれます。厳密な処理は AudioNode によって異なりますが,　基本的に、ノードは入力を読み込み、何らかの音声関連の処理を行ってから、出力のための新しい値を出力します。
 

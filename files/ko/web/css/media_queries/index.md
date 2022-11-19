@@ -11,6 +11,7 @@ tags:
   - 반응형 디자인
 translation_of: Web/CSS/Media_Queries
 ---
+
 {{CSSRef}}
 
 **미디어 쿼리**는 다양한 기기 특성과 파라메터의 존재 여부에 따라 사이트, 혹은 앱을 조정할 수 있습니다.

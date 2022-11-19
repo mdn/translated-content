@@ -15,7 +15,7 @@ slug: Learn/JavaScript/First_steps
 - [HTML 簡介](/zh-TW/docs/Learn/HTML/Introduction_to_HTML).
 - [CSS 簡介](/zh-TW/docs/Learn/CSS/Introduction_to_CSS).
 
-> **備註：** 假如你正在使用 電腦/平板/其他裝置，你還不需要知道如何建立自己的檔案，你可以在線上程式撰寫系統來嘗試範例程式，像是 [JSBin](http://jsbin.com/) 或 [Thimble](https://thimble.mozilla.org/).
+> **備註：** 假如你正在使用 電腦/平板/其他裝置，你還不需要知道如何建立自己的檔案，你可以在線上程式撰寫系統來嘗試範例程式，像是 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/)。
 
 ## 概觀
 

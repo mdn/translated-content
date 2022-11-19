@@ -3,7 +3,7 @@ title: <time>：（日期）时间元素
 slug: Web/HTML/Element/time
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 ## 概述
 

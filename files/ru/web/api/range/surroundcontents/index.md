@@ -3,6 +3,7 @@ title: Range.surroundContents()
 slug: Web/API/Range/surroundContents
 translation_of: Web/API/Range/surroundContents
 ---
+
 {{ApiRef("DOM")}}
 
 Метод **`Range.surroundContents()`** перемещает содержимое {{ domxref("Range") }} в новый элемент, который расположится в начале указанного диапазона.

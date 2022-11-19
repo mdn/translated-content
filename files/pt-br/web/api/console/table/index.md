@@ -1,8 +1,8 @@
 ---
 title: Console.table()
 slug: Web/API/Console/table
-translation_of: Web/API/Console/table
 ---
+
 {{APIRef("Console API")}}
 
 Exibe dados tabulares como uma tabela.

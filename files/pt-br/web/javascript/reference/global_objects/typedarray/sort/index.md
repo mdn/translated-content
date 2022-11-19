@@ -1,8 +1,8 @@
 ---
 title: TypedArray.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 ---
+
 {{JSRef}}
 
 O método **`sort()`** ordena os elementos de uma matriz tipada _no local_ e retorna a matriz ordenada. Esse método tem o mesmo algoritmo que {{jsxref("Array.prototype.sort()")}}_._ _TypedArray_ é uma das maneiras de [escrever matrizes](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).

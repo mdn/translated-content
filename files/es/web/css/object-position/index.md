@@ -3,6 +3,7 @@ title: object-position
 slug: Web/CSS/object-position
 translation_of: Web/CSS/object-position
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -67,10 +68,7 @@ img {
 
 ## Especificaciones
 
-| Specification                                                                                | Status                           | Comment                                                    |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------- |
-| {{SpecName('CSS4 Images', '#the-object-position', 'object-position')}} | {{Spec2('CSS4 Images')}} | Las `palabras clave from-image` y `flip` an sido añadidas. |
-| {{SpecName('CSS3 Images', '#the-object-position', 'object-position')}} | {{Spec2('CSS3 Images')}} | Definición incial                                          |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

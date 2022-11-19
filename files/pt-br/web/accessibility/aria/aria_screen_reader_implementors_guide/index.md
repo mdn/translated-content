@@ -1,12 +1,9 @@
 ---
 title: Guia para implementar o leitor de tela ARIA
 slug: Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
-tags:
-  - ARIA
-  - Acessibilidade
-translation_of: Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 original_slug: Web/Accessibility/ARIA/Guia_para_implementar_o_leitor_de_tela_ARIA
 ---
+
 ## Regiões Ativas
 
 Este é apenas um guia. Uma marcação de região ativa é uma área complexa que é algo aberto à interpretações. O que segue pretende prover um guia de implementação que respeita a necessidade dos desenvolvedores de leitores de tela para tentar novas coisas. A intenção é chegar a um balanço entre providenciar um guia útil em como usar o significado de marcação pretendido

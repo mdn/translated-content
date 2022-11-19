@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Escapes_de_propiedades_Unicode
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Los **escapes de propiedad Unicode** en las {{JSxRef("../Guide/Regular_Expressions", "Expresiones regulares")}} permiten la coincidencia de caracteres según sus propiedades Unicode. Un caracter se describe mediante varias propiedades que, o bien, son binarias ("tipo booleano") o, no binarias. Por ejemplo, puedes usar escapes de propiedades Unicode para reconocer emojis, signos de puntuación, letras (incluso letras de idiomas específicos o scripts), etc.

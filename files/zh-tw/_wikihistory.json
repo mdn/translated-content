@@ -1480,17 +1480,6 @@
       "wildsky"
     ]
   },
-  "MDN/Yari": {
-    "modified": "2019-09-06T03:30:44.825Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "iigmir",
-      "SecondSpirit",
-      "a8040282",
-      "Sheppy"
-    ]
-  },
   "Mozilla": {
     "modified": "2019-03-23T23:33:56.932Z",
     "contributors": ["iigmir", "ethertank"]
@@ -3021,10 +3010,6 @@
   "Web/CSS/@media/height": {
     "modified": "2019-03-23T22:21:21.278Z",
     "contributors": ["MashKao", "yvonne6344"]
-  },
-  "Web/CSS/@viewport": {
-    "modified": "2019-03-18T21:16:53.558Z",
-    "contributors": ["cvrebert"]
   },
   "Web/CSS/CSS_Animations": {
     "modified": "2019-03-23T22:43:48.571Z",
@@ -5116,6 +5101,10 @@
   "conflicting/Web/Accessibility/ARIA": {
     "modified": "2019-03-23T22:50:58.911Z",
     "contributors": ["PatrickTaiwan", "Shiyou", "alk03073135"]
+  },
+  "conflicting/Web/CSS": {
+    "modified": "2019-03-18T21:16:53.558Z",
+    "contributors": ["cvrebert"]
   },
   "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:45:29.748Z",

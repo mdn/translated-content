@@ -1,8 +1,8 @@
 ---
 title: Node
 slug: Web/API/Node
-translation_of: Web/API/Node
 ---
+
 {{Apiref("DOM")}}
 
 **`Node`** é uma interface da qual diversos tipos do DOM herdam, e que permite que esses tipos sejam tratados de forma similar, por exemplo, herdando os mesmos métodos ou sendo testados da mesma forma.

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 ---
+
 {{JSRef("Global_Objects", "JSON")}}
 
 ## Сводка
@@ -83,8 +84,8 @@ JSON.stringify({ a: 2 }, null, ' ');
 JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
 // вернёт строку:
 // '{
-// 	"uno": 1,
-// 	"dos": 2
+//   "uno": 1,
+//   "dos": 2
 // }'
 ```
 

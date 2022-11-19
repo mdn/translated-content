@@ -1,22 +1,8 @@
 ---
 title: <embed>
 slug: Web/HTML/Element/embed
-tags:
-  - Conteúdo externo
-  - Elemento
-  - HTML
-  - HTML5
-  - Incorporação de conteúdo
-  - Incorporação de conteúdo HTML
-  - Internet
-  - Plugins
-  - Rede
-  - Referencia
-  - Web
-  - embutir
-  - incorporar
-translation_of: Web/HTML/Element/embed
 ---
+
 ## Sumário
 
 O **elemento HTML `<embed>` **incorpora conteúdo externo no ponto especificado no documento. Este conteúdo é fornecido por um aplicativo externo ou outra fonte de conteúdo interativo, como um plug-in de navegador.
@@ -70,4 +56,4 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - Outros elementos usados para incorporar conteúdo de vários tipos, incluem: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, and {{HTMLElement("video")}}.
 - Posicionamento e dimensionamento de conteúdos incorporados dentro da janela de exibição: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

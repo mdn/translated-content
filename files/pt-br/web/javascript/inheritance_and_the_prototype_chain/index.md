@@ -1,11 +1,9 @@
 ---
 title: Herança e cadeia de protótipos (prototype chain)
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - herança intermediário JavaScript OOP
-translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 original_slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 ---
+
 {{jsSidebar("Advanced")}}
 
 JavaScript é um pouco confuso para desenvolvedores com experiência em linguagens baseadas em classes (como Java ou C++), porque é dinâmico e não dispõe de uma implementação de uma `class` (a palavra-chave `class` foi introduzida no ES2015, mas é syntax sugar, o JavaScript permanece baseado em `prototype`).

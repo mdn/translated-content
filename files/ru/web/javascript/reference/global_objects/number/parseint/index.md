@@ -8,6 +8,7 @@ tags:
   - Number
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## Сводка
@@ -29,7 +30,7 @@ Number.parseInt(string[, radix])
 
 ### Возвращаемое значение
 
-Целое число, полученное парсингом (разбором и интерпретацией) переданной строки. Если первый символ строки не может быть преобразован в число, то возвращается [`NaN`](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN "Глобальное свойство NaN является значением, представляющим не-число (Not-A-Number).").
+Целое число, полученное парсингом (разбором и интерпретацией) переданной строки. Если первый символ строки не может быть преобразован в число, то возвращается [`NaN`](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN).
 
 ## Описание
 

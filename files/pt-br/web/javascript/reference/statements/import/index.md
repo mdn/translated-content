@@ -1,16 +1,8 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Modules
-  - Reference
-  - Statement
-  - dynamic import
-  - import
-translation_of: Web/JavaScript/Reference/Statements/import
 ---
+
 {{jsSidebar("Statements")}}
 
 A declaração estática **`import`** é usada para importar vínculos que são exportados por um outro módulo. Os módulos importados estão em {{JSxRef("Strict_mode","strict mode")}}, declarado como tal ou não. A declaração `import` não pode ser usada em scripts embutidos, a menos que tal script tenha um `type="module"`.

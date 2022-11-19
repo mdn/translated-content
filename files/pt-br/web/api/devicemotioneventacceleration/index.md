@@ -1,14 +1,9 @@
 ---
 title: DeviceAcceleration
 slug: Web/API/DeviceMotionEventAcceleration
-tags:
-  - API
-  - Experimental
-  - Interface
-translation_of: Web/API/DeviceMotionEventAcceleration
-translation_of_original: Web/API/DeviceAcceleration
 original_slug: Web/API/DeviceAcceleration
 ---
+
 {{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}
 
 Um objeto `DeviceAcceleration` fornece informações sobre a quantidade de aceleração que o dispositivo desempenha ao longo dos três eixos.

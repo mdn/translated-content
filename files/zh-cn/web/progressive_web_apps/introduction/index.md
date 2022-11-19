@@ -57,7 +57,7 @@ PWA 赋予了我们创建同时拥有以上两种优势的应用的能力。
 
 您甚至可以使用 [PWABuilder](https://www.pwabuilder.com/) 网站在线生成 PWA。
 
-对于 Service Worker 和消息推送，请务必查看 [Service Worker 手册](https://serviceworke.rs/)。这是一个在现代站点中使用 Service Worker 的方法集合。
+对于 Service Worker 和消息推送，请务必查看 [Service Worker 手册](https://github.com/mdn/serviceworker-cookbook/)。这是一个在现代站点中使用 Service Worker 的方法集合。
 
 PWA 非常值得一试，您可以自己查看它是否适用于您的应用程序。
 

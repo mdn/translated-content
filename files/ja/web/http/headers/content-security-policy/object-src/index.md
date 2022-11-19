@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/object-src
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} の `**object-src**` ディレクティブは、 {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素の妥当なソースを指定します。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} の **`object-src`** ディレクティブは、 {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素の妥当なソースを指定します。
 
 {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素の許可される種類を設定するには、 {{CSP("plugin-types")}} ディレクティブを使用してください。
 

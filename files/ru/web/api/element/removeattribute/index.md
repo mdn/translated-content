@@ -3,6 +3,7 @@ title: Element.removeAttribute()
 slug: Web/API/Element/removeAttribute
 translation_of: Web/API/Element/removeAttribute
 ---
+
 {{ APIRef("DOM") }}
 
 `removeAttribute` удаляет атрибут с элемента.

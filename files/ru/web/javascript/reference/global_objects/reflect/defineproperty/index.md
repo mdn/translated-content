@@ -7,9 +7,10 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
+
 {{JSRef}}
 
-Статический метод **`Reflect`\*\***`.defineProperty()`\*\* похож на {{jsxref("Object.defineProperty()")}}, но возвращает {{jsxref("Boolean")}}.
+Статический метод **`Reflect.defineProperty()`** похож на {{jsxref("Object.defineProperty()")}}, но возвращает {{jsxref("Boolean")}}.
 
 {{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
 

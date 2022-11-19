@@ -1,8 +1,8 @@
 ---
 title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 ---
+
 {{JSRef}}
 
 O **`Object.getOwnPropertyDescriptors()`** método retorna todas as descrições próprias da propriedade de um dado objeto.

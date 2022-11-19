@@ -101,7 +101,7 @@ foo.bind({}).name; // "bound foo"
 
 ### Имена функций для getters и setters
 
-Когда используются [`get`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) и [set](/ru/docs/Web/JavaScript/Reference/Functions/set), "get" и "set" появятся в имени функции.
+Когда используются [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) и [set](/ru/docs/Web/JavaScript/Reference/Functions/set), "get" и "set" появятся в имени функции.
 
 ```
 let o = {
@@ -136,7 +136,7 @@ class Foo {
 }
 ```
 
-Со `static name()` методом `Foo.name` больше не содержит название класса, но отсылает к функции `name()`. Приведённое выше определение класса в ES2015 будет вести себя в Chrome и Firefx как в ES5:
+Со `static name()` методом `Foo.name` больше не содержит название класса, но отсылает к функции `name()`. Приведённое выше определение класса в ES2015 будет вести себя в Chrome и Firefox как в ES5:
 
 ```
 function Foo() {}

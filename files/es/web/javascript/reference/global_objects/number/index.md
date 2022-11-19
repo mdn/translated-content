@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number
 ---
+
 {{JSRef}}
 
 **`Number`** es un objeto primitivo envolvente que permite representar y manipular valores numéricos cómo 37 o -9.25. El constructor Number contiene constantes y métodos para trabajar con números. Valores de otro tipo pueden ser convertidos a números usando la función Number().
@@ -86,7 +87,7 @@ Number(undefined)  // NaN
   - : Determina si un numero es entero.
 - {{jsxref("Number.isSafeInteger()")}}
   - : Determine si el valor pasado es un entero seguro (número entre `-(253 - 1)` y `253 - 1`).
-- ~~{{jsxref("Number.toInteger()")}} {{obsolete_inline}}~~
+- ~~{{jsxref("Number.toInteger()")}} {{deprecated_inline}}~~
   - : ~~Se usa para evaluar el valor pasado y convertirlo en un entero (or {{jsxref("Global_Objects/Infinity", "Infinity")}}), pero ha sido eliminado.~~
 - {{jsxref("Number.parseFloat()")}}
   - : El valor es el mismo que {{jsxref ("parseFloat", "parseFloat ()")}} del objeto global.
@@ -114,8 +115,8 @@ Todas las instancias `Number` heredan de {{jsxref("Number.prototype")}}. El obje
 El siguiente ejemplo utiliza las propiedades del objeto `Number` para asignar valores a varias variables numéricas:
 
 ```js
-const MásgrandeNum    = Number.MAX_VALUE;
-const MáspequeNum     = Number.MIN_VALUE;
+const masGrandeNum    = Number.MAX_VALUE;
+const masPequeNum     = Number.MIN_VALUE;
 const infinitoNum     = Number.POSITIVE_INFINITY;
 const notInfinitoNum  = Number.NEGATIVE_INFINITY;
 const noEsNum         = Number.NaN;

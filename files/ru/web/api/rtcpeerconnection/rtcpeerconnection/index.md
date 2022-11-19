@@ -3,6 +3,7 @@ title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
 translation_of: Web/API/RTCPeerConnection/RTCPeerConnection
 ---
+
 {{APIRef("WebRTC")}}
 
 Конструктор **`RTCPeerConnection()`** возвращает новый экземпляр объекта {{domxref("RTCPeerConnection")}}, который представляет соединение между локальным устройством и удалённым пиром (участником соединения)

@@ -5,6 +5,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
+
 WebExtensions está diseñado para ser compatible con las extensiones de Chrome y Opera: en la medida de lo posible, las extensiones escritas para esos navegadores deberían ejecutarse en Firefox con cambios mínimos.
 
 Sin embargo, Firefox cuenta actualmente con soporte para sólo un conjunto limitado de funciones y API compatibles con Chrome y Opera. Estamos trabajando en agregar más soporte, pero muchas características aún no son compatibles, y es posible que nunca admitamos algunas.
@@ -96,7 +97,7 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### cookies
 
 - eventos onChanged pueden ser subtely diferentes
-- Creación de cookies de sesión `set`podría fallar
+- Creación de cookies de sesión `set` podría fallar
 - `getAllCookieStores` siempre devuelve un almacén predeterminado y sin pestañas
 - el acceso a las cookies desde pestañas privadas es imposible
 
@@ -130,7 +131,7 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
   - `getAll()`.
 
 - El único evento soportado es `onClosed`.
-- Firefox no proporciona `byUser`datos.
+- Firefox no proporciona `byUser` datos.
 
 #### Tiempo de ejecución
 
@@ -147,7 +148,7 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### Almacenamiento
 
 - El único área de almacenamiento que soporta Firefox es `local`.
-- Firefox no soporta `getBytesInUse()`o `clear))`.
+- Firefox no soporta `getBytesInUse()` o `clear))`.
 
 #### tabs
 

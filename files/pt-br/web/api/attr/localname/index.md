@@ -1,13 +1,8 @@
 ---
 title: Attr.localName
 slug: Web/API/Attr/localName
-tags:
-  - API
-  - DOM
-  - Propriedade
-  - Referencia
-translation_of: Web/API/Attr/localName
 ---
+
 {{APIRef("DOM")}}
 
 A propriedade read-only **`Attr.localName`** retorna a parte do local de um nome qualificado de elemento.

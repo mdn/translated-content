@@ -1,8 +1,8 @@
 ---
 title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 ---
+
 {{JSRef}}
 
 O método **`delete()`** remover o elemento especificado ou setado a partir de um objeto instanciado do `WeakMap`.

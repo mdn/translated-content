@@ -8,6 +8,7 @@ tags:
   - errores
 translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensaje

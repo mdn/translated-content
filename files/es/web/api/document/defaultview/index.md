@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/defaultView
 ---
+
 {{ ApiRef() }}
 
 ## Resumen

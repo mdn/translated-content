@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 original_slug: Web/CSS/CSS_Positioning/entendiendo_z_index/El_contexto_de_apilamiento
 ---
+
 « [CSS](/es/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index)
 
 El contexto de apilamiento es la conceptualización tridimensional de los elementos HTML a lo largo de un eje-Z imaginario relativo al usuario que se asume está de cara al viewport o página web. Los elementos HTML ocupan este espacio por orden de prioridad basado en sus atributos.
@@ -22,7 +23,7 @@ Un contexto de apilamiento es formado, en cualquier lugar del documento, por cua
 - elementos con un valor {{cssxref("perspective")}} distinto de "none",
 - elementos con un valor {{cssxref("isolation")}} igual a "isolate",
 - `position: fixed`
-- especifican cualquier atributo superior en `{{cssxref("will-change")}} incluso si no especificas valores para estos atributos directamente`(Mira [este post](http://dev.opera.com/articles/css-will-change-property/))
+- especifican cualquier atributo superior en {{cssxref("will-change")}} incluso si no especificas valores para estos atributos directamente (Mira [este post](http://dev.opera.com/articles/css-will-change-property/))
 - elementos con un valor {{cssxref("-webkit-overflow-scrolling")}} igual a "touch"
 
 Dentro de un contexto de apilamiento, los elementos hijos son apilados de acuerdo a las mismas reglas previamente explicadas. Es importante entender que los valores z-index de los contextos de apilamiento de los hijos solo tienen sentido en el contexto del padre. Los contextos de apilamiento son tratados atómicamente como una sola unidad en el contexto de apilamiento del padre.

@@ -9,6 +9,7 @@ tags:
 browser-compat: javascript.builtins.Proxy.handler.construct
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 ---
+
 {{JSRef}}
 
 **`handler.construct()`** 메서드는 {{jsxref("Operators/new", "new")}} 연산자에 대한 트랩입니다. 결과 Proxy 객체에서 new 연산이 유효하려면 프록시를 초기화하는 데 사용되는 대상 객체 자체에 내부 `[[Construct]]` 메서드가 있어야 합니다(즉, `new target`이 유효해야 함).

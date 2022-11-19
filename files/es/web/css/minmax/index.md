@@ -123,9 +123,7 @@ La función `minmax()` puede ser usada dentro de:
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("CSS Grid", "#valdef-grid-template-columns-minmax", "minmax()")}} | {{Spec2("CSS Grid")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

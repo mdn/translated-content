@@ -1,8 +1,8 @@
 ---
 title: Node.insertBefore
 slug: Web/API/Node/insertBefore
-translation_of: Web/API/Node/insertBefore
 ---
+
 {{ApiRef("DOM")}}
 
 O método **`Node.insertBefore()` **insere um nó antes do nó de referência como um filho de um nó pai especificado. Se o filho especificado for uma referência a um nó existente no documento, `insertBefore()` o moverá de sua posição atual para a nova posição (não há necessidade de remover o nó de seu nó pai antes de anexá-lo a outro nó).

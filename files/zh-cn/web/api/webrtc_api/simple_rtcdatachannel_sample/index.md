@@ -52,7 +52,7 @@ WebRTC API 大量使用了{{jsxref("Promise")}}. 这样会让建立链接的过�
 
 ### 启动
 
-当脚本开始运行时，我们对 load 事件挂接 {{event("load")}} 事件侦听，因此一旦页面完全加载， `startup()` 函数将被调用。
+当脚本开始运行时，我们对 load 事件挂接 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件侦听，因此一旦页面完全加载， `startup()` 函数将被调用。
 
 ```js
 function startup() {
@@ -99,7 +99,7 @@ remoteConnection = new RTCPeerConnection();
 remoteConnection.ondatachannel = receiveChannelCallback;
 ```
 
-远程端的建立过程类似“local”端，但它无需自己创建 {{domxref("RTCDataChannel")}} ，因为我们将通过上面建立的渠道进行连接。我们创建对 {{event("datachannel")}} 的事件处理回调；数据通道打开时该逻辑将被执行，该回调处理将接收到一个 `RTCDataChannel` 对象，此过程将在文章后面部分描述。
+远程端的建立过程类似“local”端，但它无需自己创建 {{domxref("RTCDataChannel")}} ，因为我们将通过上面建立的渠道进行连接。我们创建对 {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} 的事件处理回调；数据通道打开时该逻辑将被执行，该回调处理将接收到一个 `RTCDataChannel` 对象，此过程将在文章后面部分描述。
 
 #### 设立 ICE 候选人
 
@@ -117,7 +117,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;
         .catch(handleAddCandidateError);
 ```
 
-我们配置每个 {{domxref("RTCPeerConnection")}} 对于事件 {{event("icecandidate")}} 建立事件处理。
+我们配置每个 {{domxref("RTCPeerConnection")}} 对于事件 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 建立事件处理。
 
 #### 启动连接尝试
 
@@ -147,7 +147,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;
 
 #### 对成功的对等连接的处理
 
-当 peer-to-peer 连接的任何一方成功连接，相应的 {{domxref("RTCPeerConnection")}}的{{event("icecandidate")}} 事件将被触发。在事件的处理中可以执行任何需要的操作，但在本例中，我们所需要做的只是更新用户界面。
+当 peer-to-peer 连接的任何一方成功连接，相应的 {{domxref("RTCPeerConnection")}} 的 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件将被触发。在事件的处理中可以执行任何需要的操作，但在本例中，我们所需要做的只是更新用户界面。
 
 ```js
   function handleLocalAddCandidateSuccess() {
@@ -163,7 +163,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;
 
 #### 数据通道（data channel）的连接
 
-{{domxref("RTCPeerConnection")}} 一旦 open，事件{{event("datachannel")}} 被发送到远端以完成打开数据通道的处理，该事件触发 `receiveChannelCallback()` 方法，如下所示：
+{{domxref("RTCPeerConnection")}} 一旦 open，事件{{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} 被发送到远端以完成打开数据通道的处理，该事件触发 `receiveChannelCallback()` 方法，如下所示：
 
 ```js
   function receiveChannelCallback(event) {
@@ -174,7 +174,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;
   }
 ```
 
-事件{{event("datachannel")}} 在它的 channel 属性中包括了：对代表 remote 节点的 channel 的{{domxref("RTCDataChannel")}} 的指向，它保存了我们用以在该 channel 上对我们希望处理的事件建立的事件监听。一旦侦听建立，每当 remote 节点接收到数据 `handleReceiveMessage()` 方法将被调用，每当通道的连接状态发生改变 `handleReceiveChannelStatusChange()` 方法将被调用，因此通道完全打开或者关闭时我们都可以作出相应的相应。
+事件 {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} 在它的 channel 属性中包括了：对代表 remote 节点的 channel 的{{domxref("RTCDataChannel")}} 的指向，它保存了我们用以在该 channel 上对我们希望处理的事件建立的事件监听。一旦侦听建立，每当 remote 节点接收到数据 `handleReceiveMessage()` 方法将被调用，每当通道的连接状态发生改变 `handleReceiveChannelStatusChange()` 方法将被调用，因此通道完全打开或者关闭时我们都可以作出相应的相应。
 
 ### 对通道状态变化的处理
 
@@ -222,7 +222,7 @@ local 节点和 remote 节点采用同样的方法处理表示通道连接状态
 
 ### 发送消息
 
-当用户按下 "Send" 按钮，触发我们已建立的该按钮的 {{event("click")}} 事件处理逻辑，在处理逻辑中调用 sendMessage() 方法。该方法也足够简单：
+当用户按下 "Send" 按钮，触发我们已建立的该按钮的 [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件处理逻辑，在处理逻辑中调用 sendMessage() 方法。该方法也足够简单：
 
 ```js
   function sendMessage() {

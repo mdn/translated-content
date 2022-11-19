@@ -5,6 +5,7 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/not
 ---
+
 {{ XsltRef() }}
 
 `not` 함수는 불린식을 평가하고 반대값을 반환합니다.

@@ -7,6 +7,7 @@ tags:
   - theme_color
 translation_of: Web/Manifest/theme_color
 ---
+
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
 
 <table class="properties">

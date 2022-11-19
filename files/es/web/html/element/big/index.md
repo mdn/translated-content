@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/big
 original_slug: Web/HTML/Elemento/big
 ---
+
 ### Definición
 
 **big** de big=grande

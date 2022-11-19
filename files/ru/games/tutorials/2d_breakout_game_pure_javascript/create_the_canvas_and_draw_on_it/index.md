@@ -12,6 +12,7 @@ translation_of: >-
 original_slug: >-
   Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создание_Canvas_и_рисование_на_нём
 ---
+
 {{GamesSidebar}}{{IncludeSubnav("/ru/docs/Games")}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Переместить_мяч")}}

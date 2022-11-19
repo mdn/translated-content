@@ -3,6 +3,7 @@ title: border-end-end-radius
 slug: Web/CSS/border-end-end-radius
 translation_of: Web/CSS/border-end-end-radius
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`border-end-end-radius`** define un radio de borde lógico en un elemento, que se asigna a un radio de borde físico que depende de los elementos {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
@@ -65,13 +66,9 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                   | Estado                                           | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-end-end-radius", "border-end-end-radius")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
-
-{{CSSInfo}}
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

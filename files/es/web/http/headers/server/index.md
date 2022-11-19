@@ -3,6 +3,7 @@ title: Server
 slug: Web/HTTP/Headers/Server
 translation_of: Web/HTTP/Headers/Server
 ---
+
 {{HTTPSidebar}}
 
 La cabecera **`Server`** contiene la información acerca del software usado por el servidor original encargado de la solicitud.

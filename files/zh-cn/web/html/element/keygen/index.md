@@ -3,7 +3,7 @@ title: <keygen>
 slug: Web/HTML/Element/keygen
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{deprecated_header}}
 

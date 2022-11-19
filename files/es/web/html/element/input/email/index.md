@@ -6,7 +6,7 @@ translation_of: Web/HTML/Element/input/email
 original_slug: Web/HTML/Elemento/input/email
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Los elementos {{HTMLElement("input")}} de tipo **`email`** se utilizan para permitir que el usuario ingrese y edite una dirección de correo electrónico o, si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple), una lista de direcciones de correo.
 

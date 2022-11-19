@@ -3,7 +3,7 @@ title: '<tfoot>: 表フッター要素'
 slug: Web/HTML/Element/tfoot
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<tfoot>`** は [HTML](/ja/docs/Web/HTML) の要素で、表の一連の列を総括する行のセットを定義します。
 

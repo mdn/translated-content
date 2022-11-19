@@ -10,6 +10,7 @@ tags:
 translation_of: Web/Guide/AJAX/Getting_Started
 original_slug: Web/Guide/AJAX/Primeros_Pasos
 ---
+
 Este artículo es una guía básica sobre AJAX e incluye dos ejemplos.
 
 ### ¿Qué es AJAX?
@@ -67,7 +68,7 @@ http_request.send();
 - El segundo parámetro es el URL de la página que se esta pidiendo. Por medida de seguridad no es posible llamar páginas en dominios de terceras personas. Se debe saber el dominio exacto de todas las páginas o se obtendrá un error de 'permiso denegado' al llamar open(). Una falla común es acceder al sitio por domain.tld e intentar llamar las páginas como www\.domain.tld.
 - El tercer parámetro establece si la petición es asíncrona. Si se define `TRUE`, la ejecución de la función de JavaScript continuará aún cuando la respuesta del servidor no haya llegado. Por esta capacidad es la A en AJAX.
 
-El parámetro en el método `send()`puede ser cualquier información que se quiera enviar al servidor si se usa POST para la petición. La información se debe enviar en forma de cadena, por ejemplo:
+El parámetro en el método `send()` puede ser cualquier información que se quiera enviar al servidor si se usa POST para la petición. La información se debe enviar en forma de cadena, por ejemplo:
 
 `name=value&anothername=othervalue&so=on`
 

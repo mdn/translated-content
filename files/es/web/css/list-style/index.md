@@ -8,6 +8,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/CSS/list-style
 ---
+
 {{ CSSRef() }}
 
 ## Resumen
@@ -23,7 +24,7 @@ La propiedad de estilo de lista (`list-style`) permite definir de golpe todos lo
 
 ## Sintaxis
 
-list-style: {{ mediawiki.external(' list-style-type || list-style-position || list-style-image ') }} | inherit
+list-style: [ list-style-type || list-style-position || list-style-image ] | inherit
 
 ### Valores
 

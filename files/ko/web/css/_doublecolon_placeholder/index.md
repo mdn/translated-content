@@ -3,6 +3,7 @@ title: '::placeholder'
 slug: Web/CSS/::placeholder
 translation_of: Web/CSS/::placeholder
 ---
+
 {{CSSRef}}
 
 The **`::placeholder`** [CSS](/ko/docs/Web/CSS) [pseudo-element](/ko/docs/Web/CSS/Pseudo-elements) represents the [placeholder text](/ko/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute) in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.

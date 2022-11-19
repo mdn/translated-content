@@ -12,6 +12,7 @@ tags:
   - web fonts
 translation_of: Web/CSS/@font-face/font-display
 ---
+
 {{CSSRef}}
 
 El descriptor `font-display` determina cómo se muestra una fuente basándose en cuándo está descargada y lista para usarse.
@@ -72,9 +73,7 @@ font-display: optional;
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS4 Fonts', '#font-display-desc', 'font-display')}} | {{Spec2('CSS4 Fonts')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

@@ -1,13 +1,8 @@
 ---
 title: altGlyph
 slug: Web/SVG/Element/altGlyph
-tags:
-  - Conteúdo Textual
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/altGlyph
 ---
+
 {{SVGRef}}
 
 O elemento `altGlyph` habilita a seleção sofisticada de símbolos utilizada para renderizar os dados de caractere de seu elemento filho.

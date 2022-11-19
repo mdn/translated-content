@@ -4,6 +4,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Жизни
 ---
+
 {{GamesSidebar}}{{IncludeSubnav("/ru/docs")}}
 
 {{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Победа", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Анимация")}}
@@ -36,7 +37,7 @@ lifeLostText.anchor.set(0.5);
 lifeLostText.visible = false;
 ```
 
-Объекты `livesText` и`lifeLostText` очень похожи на `scoreText` — они определяют положение на экране, текст надписи и стилизацию шрифта. Чтобы всё выглядело должным образом, надпись с жизнями мы закрепляем в правом верхнем углу, а надпись о потере жизни, мы выводим в центре экрана. И всё это при помощи функции `anchor.set()`.
+Объекты `livesText` и `lifeLostText` очень похожи на `scoreText` — они определяют положение на экране, текст надписи и стилизацию шрифта. Чтобы всё выглядело должным образом, надпись с жизнями мы закрепляем в правом верхнем углу, а надпись о потере жизни, мы выводим в центре экрана. И всё это при помощи функции `anchor.set()`.
 
 Надпись `lifeLostText` появится только при потере жизни, поэтому её видимость мы выставляем в `false`.
 

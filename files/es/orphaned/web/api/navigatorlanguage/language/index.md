@@ -15,6 +15,7 @@ translation_of: Web/API/NavigatorLanguage/language
 original_slug: Web/API/NavigatorLanguage/language
 browser-compat: api.NavigatorLanguage.language
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propiedad de solo lectura **`NavigatorLanguage.language`** devuelve un string representando el lenguaje predefinido del usuario, generalmente es el lenguaje configurado para la interfaz del navegador.

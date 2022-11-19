@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Equality
 original_slug: Web/JavaScript/Referencia/Operadores/Comparacion
 ---
+
 {{jsSidebar("Operators")}}
 
 El operador de comparacion (`==`) comprueba si sus dos operandos son iguales y devuelve un resultado booleano. A diferencia del operador de igualdad estricta (`===`), es que este convierte y compara operandos que son de diferentes tipos.
@@ -24,15 +25,15 @@ x == y
 
 ## Descripción
 
-Los operadores de igualdad (`==`y `!=`) Utilizan el algoritmo de comparación de igualdad abstracta para comparar dos operandos. Esto se puede resumir a grandes rasgos como:
+Los operadores de igualdad (`==` y `!=`) Utilizan el algoritmo de comparación de igualdad abstracta para comparar dos operandos. Esto se puede resumir a grandes rasgos como:
 
 - Si los operandos ambos son objetos, devuelve `true`solo si ambos operandos hacen referencia al mismo objeto.
-- Si un operando es `null`y el otro `undefined`, devuelve verdadero(`true`).
+- Si un operando es `null` y el otro `undefined`, devuelve verdadero(`true`).
 - Si los operandos son de diferente tipos, intenta convertirlos al mismo tipo antes de comparar:
 
   - Al comparar un número con una cadena, convierte la cadena en un valor numérico.
   - Si uno de los operandos es booleano, convierte el operando booleano en 1 si es verdadero y en 0 en el caso de falso.
-  - Si uno de los operandos es un objeto y el otro es un número o una cadena, convierte el objeto en una primitiva utilizando los métodos `valueOf()`y `toString()` del objeto.
+  - Si uno de los operandos es un objeto y el otro es un número o una cadena, convierte el objeto en una primitiva utilizando los métodos `valueOf()` y `toString()` del objeto.
 
 - Si los operandos tienen el mismo tipo, se comparan de la siguiente manera:
 

@@ -3,6 +3,7 @@ title: keydown
 slug: Web/API/Element/keydown_event
 translation_of: Web/API/Element/keydown_event
 ---
+
 {{APIRef}}
 
 Событие **`keydown`** срабатывает, когда клавиша была нажата.

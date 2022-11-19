@@ -7,6 +7,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/CSS/border-bottom-style
 ---
+
 << [Volver](/es/Guía_de_referencia_de_CSS)
 
 ### Resumen
@@ -39,7 +40,7 @@ border-bottom-style: <border-style> | inherit
 - solid
   - : línea única, recta y sólida.
 - double
-  - : dos líneas rectas que se suman a la cantidad de píxeles definidos como ancho de borde`border-width`.
+  - : dos líneas rectas que se suman a la cantidad de píxeles definidos como ancho de borde `border-width`.
 - groove
   - : efecto de hundido.
 - ridge

@@ -6,6 +6,7 @@ tags:
   - Operators
 translation_of: Web/JavaScript/Reference/Operators
 ---
+
 {{jsSidebar("Operators")}}
 
 Эта глава описывает все операторы, выражения и ключевые слова языка JavaScript.
@@ -212,9 +213,10 @@ translation_of: Web/JavaScript/Reference/Operators
 
 - {{jsxref("Operators/Comma_Operator", ",")}}
   - : Оператор запятая позволяет вычислять несколько выражений в одном операторе и возвращает результат вычисления последнего выражения.
-- ### Нестандартные особенности
 
-  {{non-standard_inline}} {{jsxref("Operators/Legacy_generator_function", "Legacy generator function", "", 1)}}
+### Нестандартные особенности
+
+- {{non-standard_inline}} {{jsxref("Operators/Legacy_generator_function", "Legacy generator function", "", 1)}}
 
   - : Ключевое слово `function` может быть использовано для определения устаревших функций-генераторов в одном выражении. Для того, чтобы сделать такую функцию, её тело должно содержать хотя бы одно выражение {{jsxref("Operators/yield", "yield")}}.
 

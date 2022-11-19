@@ -4,6 +4,7 @@ slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 translation_of: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
 ---
+
 Este documento describe la interfaz para usar [XPath](/es/docs/Web/XPath) internamente en JavaScript, en extensiones y desde sitios web. Mozilla implementa una gran parte del [DOM 3 XPath](http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html). Esto significa que las expresiones XPath pueden correrse en documentos HTML y XML.
 
 La interfaz principal a usar con XPath es la función [evaluate](/en/DOM/document.evaluate) del objeto [document](/en/DOM/document).
@@ -43,7 +44,7 @@ Nosotros creamos un solucionador de namespace usando el método `createNSResolve
 var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 ```
 
-O alternativamente, usar el método `createNSResolver` de un objeto`XPathEvaluator`.
+O alternativamente, usar el método `createNSResolver` de un objeto `XPathEvaluator`.
 
 ```
 var xpEvaluator = new XPathEvaluator();
@@ -113,7 +114,7 @@ Cuando el tipo de resultado especificado en el `resultType` es uno de los siguie
 
 El objeto `XPathResult` regresado es un conjunto de nodos de los nodos coincidentes los cuales se comportarán como un iterador, perimitiendo el acceso individual a los nodos mediante el uso de método `iterateNext()` del `XPathResult` .
 
-Una vez que hemos iterado sobre todos los nodos individuales coincidentes,`iterateNext()` regresará `null`.
+Una vez que hemos iterado sobre todos los nodos individuales coincidentes, `iterateNext()` regresará `null`.
 
 Es importante señalar que si el documento se ha transformado (el arbol del documento se ha modificado) entre iteraciones
 

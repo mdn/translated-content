@@ -1,8 +1,8 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
-translation_of: Web/CSS/animation-fill-mode
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`animation-fill-mode`** define como uma animação [CSS](/pt-BR/docs/Web/CSS) aplica estilos ao seu destino antes e depois de sua execução.

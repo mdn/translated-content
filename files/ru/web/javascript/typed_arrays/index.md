@@ -3,6 +3,7 @@ title: Типизированные массивы JavaScript
 slug: Web/JavaScript/Typed_arrays
 translation_of: Web/JavaScript/Typed_arrays
 ---
+
 {{JsSidebar("Advanced")}}
 
 Типизированные массивы в JavaScript являются массивоподобными объектами, предоставляющими механизм доступа к сырым двоичным данным. Как вы уже можете знать, массив {{jsxref("Array")}} растёт и обрезается динамически, и может содержать элементы любого типа JavaScript. Благодаря оптимизациям JavaScript движков, массивы остаются быстрыми. Однако, со временем, веб-приложения становятся все более и более мощными, появляется необходимость работы с аудио- и видео-данными, требуется доступ к сырым данным WebSocket, и так далее. Становится очевидным, что возможность быстрой и эффективной работы с двоичными данными в JavaScript будет очень полезной, для чего типизированные массивы и предназначены.
@@ -32,10 +33,10 @@ translation_of: Web/JavaScript/Typed_arrays
 ## Веб API, использующие типизированные массивы
 
 - [`FileReader.prototype.readAsArrayBuffer()`](</ru/docs/Web/API/FileReader#readAsArrayBuffer()>)
-  - : Метод `FileReader.prototype.readAsArrayBuffer()` читает содержимое заданного [`Blob`](/ru/docs/Web/API/Blob "/ru/docs/DOM/Blob") или [`File`](/ru/docs/Web/API/File "/ru/docs/DOM/File").
+  - : Метод `FileReader.prototype.readAsArrayBuffer()` читает содержимое заданного [`Blob`](/ru/docs/Web/API/Blob) или [`File`](/ru/docs/Web/API/File).
 - [`XMLHttpRequest.prototype.send()`](</ru/docs/Web/API/XMLHttpRequest#send()>)
   - : Метод `send()` экземпляра `XMLHttpRequest` теперь поддерживает в качестве аргумента {{jsxref("ArrayBuffer")}}.
-- [`ImageData.data`](https://developer.mozilla.org/ru/docs/Web/API/ImageData)
+- [`ImageData.data`](/ru/docs/Web/API/ImageData)
   - : Имеет тип {{jsxref("Uint8ClampedArray")}} и представляет изображение в виде одномерного массива, где цветовые компоненты расположены в порядке RGBA, и их значения принудительно ограничены диапазоном от 0 до 255.
 
 ## Примеры
@@ -95,11 +96,11 @@ int16View[0] = 32;
 console.log('Элемент 0 в 32-битном представлении теперь равен ' + int32View[0]);
 ```
 
-Результатом выполнения станет текст: "Элемент 0 в 32-битном представлении теперь равен 32". Другими словами, два массива на самом деле являются лишь разными представлениями одного и того же буфера данных в разных форматах. Вы можете повторить это с [представлениями](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects "JavaScript typed arrays/ArrayBufferView#Typed array subclasses") любого типа.
+Результатом выполнения станет текст: "Элемент 0 в 32-битном представлении теперь равен 32". Другими словами, два массива на самом деле являются лишь разными представлениями одного и того же буфера данных в разных форматах. Вы можете повторить это с [представлениями](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) любого типа.
 
 ### Работа со сложными структурами данных
 
-Комбинируя буфер и множество представлений разного формата, имеющих разные смещения относительно начала буфера, можно управляться с объектами содержащими разнородные данные. Это позволяет, к примеру, взаимодействовать со сложными структурам из [WebGL](/ru/docs/Web/WebGL "WebGL"), файлами данных или структурами языка C ([сопоставление данных JS и C](/ru/docs/Mozilla/js-ctypes "js-ctypes")).
+Комбинируя буфер и множество представлений разного формата, имеющих разные смещения относительно начала буфера, можно управляться с объектами содержащими разнородные данные. Это позволяет, к примеру, взаимодействовать со сложными структурам из [WebGL](/ru/docs/Web/WebGL), файлами данных или структурами языка C ([сопоставление данных JS и C](/ru/docs/Mozilla/js-ctypes)).
 
 Рассмотрим следующую структуру из языка C:
 
@@ -141,7 +142,7 @@ normalArray.constructor === Array;
 ## Смотрите также
 
 - [Получение `ArrayBuffer`s и типизированных массивов из _Base64 кодировки_](/ru/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
-- [`StringView` – библиотека для работы со строками в стиле языка С, основанная на типизированных массивах](/ru/docs/Code_snippets/StringView "/ru/docs/Web/JavaScript/Typed_arrays/StringView")
+- [`StringView` – библиотека для работы со строками в стиле языка С, основанная на типизированных массивах](/ru/docs/Code_snippets/StringView)
 - [Быстрая работа с пикселями Canvas через типизированные массивы](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
 - [Типизированные массивы: Двоичные данные в браузере](http://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
 - {{Glossary("Endianness")}}

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Fonts
 ---
+
 {{CSSRef}}
 
 **CSS Fonts** es el modulo CSS que define todo lo relacionado con los recursos tipográficos, sus propiedades y como son cargados. Permite definir el estilo de una fuente, su familia tipográfica, tamaño o peso, y las variantes que puede tener la fuente. También permite definir la altura de una línea.
@@ -39,7 +40,7 @@ translation_of: Web/CSS/CSS_Fonts
 
 - {{cssxref("@font-face")}}
 
-  - :&#x20;
+  - : &#x20;
 
     - {{cssxref("@font-face/font-family", "font-family")}}
     - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
@@ -59,8 +60,4 @@ _None._
 
 ## Especificaciones
 
-| Specification                                                            | Status                           | Comment            |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts')}}                                     | {{Spec2('CSS3 Fonts')}} |                    |
-| {{SpecName('CSS2.1', 'fonts.html#font-shorthand', '')}} | {{Spec2('CSS2.1')}}         |                    |
-| {{SpecName('CSS1', '#font', '')}}                             | {{Spec2('CSS1')}}         | Definición inicial |
+{{Specifications}}

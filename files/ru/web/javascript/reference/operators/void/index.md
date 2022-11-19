@@ -7,6 +7,7 @@ tags:
   - Унарные
 translation_of: Web/JavaScript/Reference/Operators/void
 ---
+
 {{jsSidebar("Operators")}}
 
 **Оператор `void`** вычисляет переданное _выражение_ и возвращает {{jsxref("Global_Objects/undefined", "undefined")}}.

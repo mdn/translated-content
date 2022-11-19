@@ -5,6 +5,7 @@ tags:
   - Referencia_CSS
 translation_of: Web/CSS/position
 ---
+
 {{CSSRef}}
 
 La propiedad **`position`** de [CSS](/es/docs/CSS) especifica cómo un elemento es posicionado en el documento. Las propiedades {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, y {{Cssxref("left")}} determinan la ubicación final de los elementos posicionados.
@@ -18,7 +19,7 @@ El código fuente de este ejemplo interactivo se encuentra almacenado en un repo
 - Un **elemento posicionado** es un elemento cuyo valor [computado](/es/docs/CSS/computed_value) de `position` es `relative`, `absolute`, `fixed`, o `sticky`. (En otras palabras, cualquiera excepto `static`).
 - Un **elemento posicionado relativamente** es un elemento cuyo valor [computado](/es/docs/CSS/computed_value) de `position` es `relative`. Las propiedades {{Cssxref("top")}} y {{Cssxref("bottom")}} especifican el desplazamiento vertical desde su posición original; las propiedades {{Cssxref("left")}} y {{Cssxref("right")}} especifican su desplazamiento horizontal.
 - Un **elemento posicionado absolutamente** es un elemento cuyo valor [computado](/es/docs/CSS/computed_value) de `position` es `absolute` o `fixed`. Las propiedades {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, y {{Cssxref("left")}} especifican el desplazamiento desde los bordes del [bloque contenedor](/es/docs/Web/CSS/All_About_The_Containing_Block) del elemento. (El bloque contenedor es el ancestro relativo al cual el elemento está posicionado). Si el elemento tiene márgenes, se agregarán al desplazamiento. el elemento establece un nuevo contexto de formato de bloque para su contenido
-- Un **elemento posicionado fijamente** es un elemento cuyo valor de `position`[computado](/es/docs/CSS/computed_value) es `sticky`. Es tratado como un elemento posicionado relativamente hasta que su [bloque contenedor](/es/docs/Web/CSS/All_About_The_Containing_Block) cruza un límite establecido (como por ejemplo dando a {{Cssxref("top")}} cualquier valor distinto de auto), dentro de su flujo principal (o el contenedor dentro del cual se mueve), desde el cual es tratado como "fijo" hasta que alcance el borde opuesto de su [bloque contenedor](/es/docs/Web/CSS/All_About_The_Containing_Block).
+- Un **elemento posicionado fijamente** es un elemento cuyo valor de [`position` computado](/es/docs/CSS/computed_value) es `sticky`. Es tratado como un elemento posicionado relativamente hasta que su [bloque contenedor](/es/docs/Web/CSS/All_About_The_Containing_Block) cruza un límite establecido (como por ejemplo dando a {{Cssxref("top")}} cualquier valor distinto de auto), dentro de su flujo principal (o el contenedor dentro del cual se mueve), desde el cual es tratado como "fijo" hasta que alcance el borde opuesto de su [bloque contenedor](/es/docs/Web/CSS/All_About_The_Containing_Block).
 
 La mayoría de las veces, los elementos absolutamente posicionados que tienen su {{Cssxref("height")}} y {{Cssxref("width")}} establecidos en `auto` son ajustados hasta acomodarse a su contenido. Sin embargo, elementos non-[replaced](/es/docs/Web/CSS/Replaced_element) y absolutamente posicionados se pueden crear para llenar el espacio vertical disponible, especificando tanto {{Cssxref("top")}} como {{Cssxref("bottom")}}, y dejando {{Cssxref("height")}} sin especificar (es decir, `auto`). De igual manera se pueden utilizar para llenar el espacio horizontal disponible especificando tanto {{Cssxref("left")}} como {{Cssxref("right")}}, y dando a {{Cssxref("width")}} el valor de `auto`.
 
@@ -283,12 +284,7 @@ Los elementos que se desplazan que contienen contenido `fixed` o `sticky` conten
 
 ## Especificaciones
 
-| Especificación                                                                           | Status                                   | Comentario                            |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------- |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-position', 'position')}} | {{Spec2('CSS2.1')}}                 |                                       |
-| {{SpecName('CSS3 Positioning','#position-property','position')}}     | {{Spec2('CSS3 Positioning')}} | Añade valor de la propiedad `sticky`. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad
 

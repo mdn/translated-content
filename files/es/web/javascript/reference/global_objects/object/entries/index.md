@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/entries
 ---
+
 {{JSRef}}
 
 El método **`Object.entries()`** devuelve una matriz de pares propios de una propiedad enumerable [key, value] de un objeto dado, en el mismo orden que es proporcionado por {{jsxref("Sentencias/for...in", "for...in")}} (La diferencia es que un bucle for-in enumera las propiedades en la cadena de prototipos).
@@ -75,12 +76,9 @@ console.log(map); // Map { foo: "bar", baz: 42 }
 
 To add compatible `Object.entries` support in older environments that do not natively support it, you can find a Polyfill in the [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) or in the [es-shims/Object.entries](https://github.com/es-shims/Object.entries) repositories.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                        | Status                       | Comment             |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ESDraft', '#sec-object.entries', 'Object.entries')}} | {{Spec2('ESDraft')}} | Initial definition. |
-| {{SpecName('ES8', '#sec-object.entries', 'Object.entries')}}     | {{Spec2('ES8')}}         |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

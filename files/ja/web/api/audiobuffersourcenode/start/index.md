@@ -54,7 +54,6 @@ source.start(audioCtx.currentTime + 1, 3, 10);
 
 > **メモ:** `start()` の使い方の完全な例は {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} を参照してください。[コードをすぐに実行する](https://mdn.github.io/webaudio-examples/decode-audio-data/)ことや、[ソースコードを閲覧する](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data)こともできます。
 
-
 ## 仕様書
 
 {{Specifications}}
@@ -65,4 +64,4 @@ source.start(audioCtx.currentTime + 1, 3, 10);
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

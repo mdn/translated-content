@@ -4,6 +4,7 @@ slug: Web/HTTP/Protocol_upgrade_mechanism
 translation_of: Web/HTTP/Protocol_upgrade_mechanism
 original_slug: Web/HTTP/mecanismo_actualizacion_protocolo
 ---
+
 {{HTTPSidebar}}
 
 El protocolo [HTTP](/en/HTTP) posee un mecanismo especifico para permitir que una conexión de comunicación ya establecida, pueda actualizar su protocolo a un nuevo protocolo, incluso si es incompatible. Este documento muestra este mecanismo y presenta ejemplos de posibles escenarios en los que se puede usar.
@@ -168,11 +169,11 @@ Sec-WebSocket-Accept: hash
 ```
 
 - `hash`
-  - : If a `Sec-WebSocket-Key` header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the {{interwiki("wikipedia", "SHA-1")}} hash of that concatenated string, resulting in a 20-byte value. That value is then [base64](/es/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) encoded to obtain the value of this property.
+  - : If a `Sec-WebSocket-Key` header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the [SHA-1](https://es.wikipedia.org/wiki/SHA-1) hash of that concatenated string, resulting in a 20-byte value. That value is then [base64](/es/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) encoded to obtain the value of this property.
 
 ### Mejora a HTTP sobre TLS iniciada por el cliente
 
-You can also upgrade an HTTP/1.1 connection to TLS/1.0. The main advantages to this are that you can avoid using URL redirection from "http\://" to "https\://" on the server and you can easily use TLS on virtual hosts. This may, however, introduce problems with proxy servers.
+You can also upgrade an HTTP/1.1 connection to TLS/1.0. The main advantages to this are that you can avoid using URL redirection from `http://` to `https://` on the server and you can easily use TLS on virtual hosts. This may, however, introduce problems with proxy servers.
 
 Upgrading an HTTP connection to use {{Glossary("TLS")}} uses the {{HTTPHeader("Upgrade")}} header with the token `"TLS/1.0"`. If the switch is made successfully, the original request (which included `Upgrade`) is completed as normal, but on the TLS connection.
 

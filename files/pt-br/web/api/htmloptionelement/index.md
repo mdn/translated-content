@@ -1,16 +1,8 @@
 ---
 title: HTMLOptionElement
 slug: Web/API/HTMLOptionElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/HTMLOptionElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLOptionElement`** interface represents {{HTMLElement("option")}} elements and inherits all classes and methods of the {{domxref("HTMLElement")}} interface.

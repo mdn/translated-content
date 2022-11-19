@@ -8,6 +8,7 @@ tags:
   - Property
 translation_of: Web/API/HTMLCanvasElement/height
 ---
+
 {{APIRef("Canvas API")}}
 
 Свойство **`HTMLCanvasElement.height`** — это положительное

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String
 ---
+
 {{JSRef}}
 
 El objeto **`String`** se utiliza para representar y manipular una secuencia de caracteres.

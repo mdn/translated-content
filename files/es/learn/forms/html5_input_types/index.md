@@ -4,6 +4,7 @@ slug: Learn/Forms/HTML5_input_types
 translation_of: Learn/Forms/HTML5_input_types
 original_slug: Learn/HTML/Forms/Tipos_input_HTML5
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
 En el [artículo anterior](/es/docs/Learn/Forms/Basic_native_form_controls) vimos el elemento {{htmlelement("input")}} y los valores de su atributo `type`, disponibles desde los inicios de HTML. Ahora veremos en detalle la funcionalidad de los controles de formulario más recientes, incluyendo algunos tipos de input nuevos, los cuales fueron añadidos en HTML5 para permitir la recolección de tipos de datos específicos
@@ -45,7 +46,7 @@ Cuando se utiliza este valor {{htmlattrxref("type","input")}} , se le obliga al 
 
 ![﻿An invalid email input showing the message "Please enter an email address."](https://mdn.mozillademos.org/files/17027/email_address_invalid.png)
 
-Puedes utilizar también el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple) en combinación con el tipo input`email` para permitir que sean introducidas varias direcciones de correo electrónico separadas por comas en el mismo input:
+Puedes utilizar también el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple) en combinación con el tipo input `email` para permitir que sean introducidas varias direcciones de correo electrónico separadas por comas en el mismo input:
 
 ```html
 <input type="email" id="email" name="email" multiple>

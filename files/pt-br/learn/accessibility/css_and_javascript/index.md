@@ -1,16 +1,9 @@
 ---
 title: CSS e JavaScript - melhores práticas de acessibilidade
 slug: Learn/Accessibility/CSS_and_JavaScript
-tags:
-  - Acessibilidade
-  - Artigo
-  - CSS
-  - JavaScript
-  - color
-  - contraste
-translation_of: Learn/Accessibility/CSS_and_JavaScript
 original_slug: Learn/Accessibility/CSS_e_JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
 
 CSS e JavaScript, quando usados de maneira correta, têm também potencial para permitir experiências web acessíveis... ou podem causar danos significativos se usados de forma indevida. Este artigo descreve algumas das melhores práticas em CSS e JavaScript a serem consideradas para garantir que até mesmo conteúdos complexos estejam tão acessíveis quanto possível.

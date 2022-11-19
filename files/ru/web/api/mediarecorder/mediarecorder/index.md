@@ -3,6 +3,7 @@ title: MediaRecorder.MediaRecorder()
 slug: Web/API/MediaRecorder/MediaRecorder
 translation_of: Web/API/MediaRecorder/MediaRecorder
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder()`** конструктор {{domxref("MediaRecorder")}} объекта который будет делать запись переданного {{domxref("MediaStream")}}.

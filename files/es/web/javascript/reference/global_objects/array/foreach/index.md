@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/forEach
 ---
+
 {{JSRef}}
 
 El método **`forEach()`** ejecuta la función indicada una vez por cada elemento del array.
@@ -114,7 +115,7 @@ Nota: Dado que el parámetro `thisArg` (this) se referencia en el `forEach()`, s
 
 ### Ejemplo: Función que copia objetos
 
-El siguiente código crea una copia de un objeto dado. Hay diferentes formas de crear una copia de un objeto, ésta es sólo una de ellas y sirve para explicar cómo funciona `Array.prototype.forEach`utilizando funciones `Object.*` de ECMAScript 5.
+El siguiente código crea una copia de un objeto dado. Hay diferentes formas de crear una copia de un objeto, ésta es sólo una de ellas y sirve para explicar cómo funciona `Array.prototype.forEach` utilizando funciones `Object.*` de ECMAScript 5.
 
 ```js
 function copy(o){
@@ -216,11 +217,7 @@ if (!Array.prototype.forEach) {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.18', 'Array.prototype.forEach')}}                     | {{Spec2('ES5.1')}}     | Definición inicial. Implementada en JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

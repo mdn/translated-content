@@ -12,6 +12,7 @@ tags:
 translation_of: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 original_slug: Web/CSS/CSS_Flow_Layout/일반_흐름_속_블록_및_인라인_레이아웃
 ---
+
 {{CSSRef}}
 
 이번 안내서에서는 블록 및 인라인 요소가 일반 대열의 일부일 때 어떻게 동작하는지에 대한 기본 사항을 살펴본다.

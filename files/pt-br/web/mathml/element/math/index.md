@@ -1,8 +1,8 @@
 ---
 title: <math>
 slug: Web/MathML/Element/math
-translation_of: Web/MathML/Element/math
 ---
+
 {{MathMLRef()}}
 
 The top-level element in MathML is `<math>`. Every valid MathML instance must be wrapped in `<math>` tags. In addition you must not nest a second `<math>` element in another, but you can have an arbitrary number of other child elements in it.

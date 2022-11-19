@@ -3,6 +3,7 @@ title: Обратная совместимость Flexbox
 slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 ---
+
 {{CSSRef}}
 
 Flexbox очень хорошо поддерживается современными браузерами, однако есть несколько проблем, с которыми вы могли столкнуться. В этом руководстве мы рассмотрим, насколько хорошо flexbox поддерживается браузерами, а так же некоторые потенциальные проблемы, ресурсы и методы для создания обходных путей и запасных вариантов.
@@ -69,7 +70,7 @@ Remove `display: flex` to see the fallback behavior. You'll see white space adde
 
 {{EmbedGHLiveSample("css-examples/flexbox/browsers/inline-block.html", '100%', 550)}}
 
-### display: table-\_\_
+### display: table-
 
 The CSS table display properties are potentially very useful as a fallback, due to the fact that they allow design patterns such as full height columns and vertical centering and work back as far as Internet Explorer 8.
 

@@ -9,7 +9,8 @@ tags:
 translation_of: Web/HTML/Element/samp
 original_slug: Web/HTML/Elemento/samp
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El elemento HTML Sample (**`<samp>`**) se utiliza para incluir texto en línea que representa una muestra (o cita) de la salida de un programa de ordenador. El contenido de esta etiqueta es renderizado generalmente usando la tipografía monoespaciada por defecto del navegador.
 

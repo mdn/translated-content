@@ -15,6 +15,7 @@ tags:
   - servidores
 translation_of: Learn/Common_questions/set_up_a_local_testing_server
 ---
+
 En este artículo explica cómo configurar un servidor de prueba local simple en su equipo y los conceptos básicos de cómo utilizarlo.
 
 <table>
@@ -95,7 +96,7 @@ Para hacer esto:
 
 5. Por defecto, se ejecutará el contenido del directorio en un servidor web local, en el puerto 8000. puedes ir a este servidor yendo a la URL `localhost:8000` en tu navegador web. Aquí verá el contenido del directorio listado - haga clic en el archivo HTML que desea ejecutar.
 
-> **Nota:** si ya tienes corriendo algo en el puerto 8000, puedes escoger otro puerto corriendo el siguiente comando de servidor por un número de puerto alternativo, por ejemplo `python -m SimpleHTTPServer 7800`. Puedes acceder a tu contenido en el`localhost:7800`.
+> **Nota:** si ya tienes corriendo algo en el puerto 8000, puedes escoger otro puerto corriendo el siguiente comando de servidor por un número de puerto alternativo, por ejemplo `python -m SimpleHTTPServer 7800`. Puedes acceder a tu contenido en el `localhost:7800`.
 
 ## Ejecución de lenguajes del lado del servidor localmente
 

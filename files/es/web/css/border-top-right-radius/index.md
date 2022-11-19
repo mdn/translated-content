@@ -7,11 +7,12 @@ tags:
   - Referencia
 translation_of: Web/CSS/border-top-right-radius
 ---
+
 {{CSSRef}}
 
 ## Resumen
 
-La propiedad CSS **`border-top-right-radius`** establece el redondeo de la esquina superior derecha del elemento. El redondeo puede ser un círculo o una elipse, o si uno de los valores es `0,`no se redondeará la esquina, dejándola cuadrada.
+La propiedad CSS **`border-top-right-radius`** establece el redondeo de la esquina superior derecha del elemento. El redondeo puede ser un círculo o una elipse, o si uno de los valores es `0`, no se redondeará la esquina, dejándola cuadrada.
 
 ![border-top-right-radius.png](/@api/deki/files/6133/=border-top-right-radius.png)
 
@@ -150,9 +151,7 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                                   | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Backgrounds', '#the-border-radius', 'border-top-right-radius')}} | {{Spec2('CSS3 Backgrounds')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

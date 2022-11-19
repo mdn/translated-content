@@ -1,9 +1,9 @@
 ---
 title: Guia de estilo de escrita
 slug: MDN/Writing_guidelines/Writing_style_guide
-translation_of: MDN/Guidelines/Writing_style_guide
 original_slug: MDN/Guidelines/Writing_style_guide
 ---
+
 {{MDNSidebar}}
 
 Em um esforço para apresentar a documentação de maneira organizada, padronizada e fácil de ler a guia de estilo MDN Web Docs descreve como o texto deve ser organizado, escrito, formatado, e assim por diante. Estas sao orientações mais do que regras estritas. Nos estamos mais interessados em conteúdo do que em formatação, então não se sinta obrigado a aprender a guia de estilo antes de contribuir. Não fique chateado/a ou surpreso/a caso algum/a voluntário/a trabalhador/a edite o seu trabalho de acordo com esta guia.

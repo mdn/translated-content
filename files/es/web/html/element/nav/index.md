@@ -12,7 +12,8 @@ tags:
 translation_of: Web/HTML/Element/nav
 original_slug: Web/HTML/Elemento/nav
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El **elemento** **HTML `<nav>`** representa una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos. Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices.
 
@@ -50,10 +51,7 @@ En este ejemplo, un bloque `<nav>` es usado para contener una lista no ordenada 
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                           | Comentario                                      |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-nav-element', '&lt;nav&gt;')}} | {{Spec2('HTML WHATWG')}} | Sin cambios desde la última instantánea del W3C |
-| {{SpecName('HTML5 W3C', 'sections.html#the-nav-element', '&lt;nav&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Definición inicial                              |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

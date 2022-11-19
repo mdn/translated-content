@@ -7,6 +7,7 @@ tags:
   - RangeError
 translation_of: Web/JavaScript/Reference/Errors/Invalid_date
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение
@@ -29,7 +30,7 @@ RangeError: Provided date is not in valid range (Chrome)
 
 ### Неверные записи
 
-Неопознанные строки или даты, содержащие недопустимые значения элементов в строках, отформатированных ISO, обычно возвращают [`NaN`](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN "Глобальное свойство NaN является значением, представляющим не-число (Not-A-Number)."). Тем не менее, в зависимости от реализации, при несоответствии строкам формата ISO, может также возникнуть ошибка `RangeError: invalid date`, например в следующих случаях, в Firefox.
+Неопознанные строки или даты, содержащие недопустимые значения элементов в строках, отформатированных ISO, обычно возвращают [`NaN`](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN). Тем не менее, в зависимости от реализации, при несоответствии строкам формата ISO, может также возникнуть ошибка `RangeError: invalid date`, например в следующих случаях, в Firefox.
 
 ```js example-bad
 new Date('foo-bar 2014');

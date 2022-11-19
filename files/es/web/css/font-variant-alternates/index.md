@@ -7,6 +7,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/font-variant-alternates
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -85,13 +86,11 @@ p.variant {
 
 **Nota:** se necesita la fuente Open Type [Leitura Display Swashes](http://ufonts.com/download/leituradisplay-swashes-opentype/470776.html) instalada para que este ejemplo funcione
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/font-variant-alternates') }}
+{{EmbedLiveSample('', '', '')}}
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estatus                          | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#propdef-font-variant-alternates', 'font-variant-alternates')}} | {{Spec2('CSS3 Fonts')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

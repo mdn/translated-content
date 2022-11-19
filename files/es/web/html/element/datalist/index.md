@@ -7,6 +7,7 @@ tags:
 translation_of: Web/HTML/Element/datalist
 original_slug: Web/HTML/Elemento/datalist
 ---
+
 El **elemento HTML `<datalist>`** contiene un conjunto de elementos {{HTMLElement("option")}} que representan los valores disponibles para otros controles.
 
 La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, copia <https://github.com/mdn/interactive-examples> y envíenos una solicitud de extracción.
@@ -87,10 +88,7 @@ Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad con los distintos navegadores
 
@@ -106,4 +104,4 @@ Incluya este polyfill para proporcionar soporte para navegadores antiguos y actu
 - El elemento {{HTMLElement("input")}}, y más especificamente este atributo {{htmlattrxref("list", "input")}};
 - El elemento {{HTMLElement("option")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

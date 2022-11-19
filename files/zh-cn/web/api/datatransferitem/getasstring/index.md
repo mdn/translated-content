@@ -33,7 +33,7 @@ The callback return value is `undefined`.
 
 ## Example
 
-This example shows the use of the `getAsString()` method as an _inline function_ in a {{event("drop")}} event handler.
+This example shows the use of the `getAsString()` method as an _inline function_ in a [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event) event handler.
 
 ```js
 function drop_handler(ev) {

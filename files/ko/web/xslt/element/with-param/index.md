@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/with-param
 original_slug: Web/XSLT/with-param
 ---
+
 {{ XsltRef() }}
 
 `<xsl:with-param>` 요소는 템플릿에 건네는 매개변수 값을 지정합니다.

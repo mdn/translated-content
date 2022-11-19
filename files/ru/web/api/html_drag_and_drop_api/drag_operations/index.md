@@ -4,6 +4,7 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 original_slug: Web/Guide/HTML/Drag_and_drop/Drag_operations
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 Ниже описаны шаги, которые происходят при drag and drop операции.
@@ -308,7 +309,7 @@ function doDrop(event) {
 
 Если свойство {{domxref("DataTransfer.dropEffect","dropEffect")}} имеет значение `none` во время события `{{event("dragend")}}`, то перетаскивание было отменено. В противном случае эффект указывает, какая операция была выполнена. Источник может использовать эту информацию после операции перемещения для удаления перетаскиваемого элемента из старого расположения. Свойство {{domxref("DataTransfer.mozUserCancelled","mozUserCancelled")}} будет присвоено значение `true`, если пользователь отменил перетаскивание (нажав <kbd>Escape</kbd>), и `false` если перетаскивание было отменено по другим причинам, таким как недопустимая цель перетаскивания, или если оно было успешным.
 
-Сброс может произойти внутри того же окна или над другим приложением. Событие`{{event("dragend")}}`будет срабатывать всегда, независимо от этого. Свойство события {{domxref("MouseEvent.screenX","screenX")}} и {{domxref("MouseEvent.screenY","screenY")}} будут установлены в координаты экрана, где произошёл сброс.
+Сброс может произойти внутри того же окна или над другим приложением. Событие `{{event("dragend")}}` будет срабатывать всегда, независимо от этого. Свойство события {{domxref("MouseEvent.screenX","screenX")}} и {{domxref("MouseEvent.screenY","screenY")}} будут установлены в координаты экрана, где произошёл сброс.
 
 Когда событие `{{event("dragend")}}` завершило распространение, операция перетаскивания завершена.
 

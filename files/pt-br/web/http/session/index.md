@@ -1,10 +1,8 @@
 ---
 title: Uma típica sessão HTTP
 slug: Web/HTTP/Session
-tags:
-  - HTTP
-translation_of: Web/HTTP/Session
 ---
+
 {{HTTPSidebar}}
 
 Em protocolos cliente-servidor, como o HTTP, sessões consistem de três partes:

@@ -1,13 +1,9 @@
 ---
 title: Truthy
 slug: Glossary/Truthy
-tags:
-  - CodingScripting
-  - Glossário
-  - JavaScript
-translation_of: Glossary/Truthy
 original_slug: Glossario/Truthy
 ---
+
 Em {{Glossary("JavaScript")}}, um valor **truthy** é um valor que se traduz em verdadeiro quando avaliado em um contexto {{Glossary("Booleano")}}. Todos os valores são **truthy** a menos que eles sejam definidos como {{Glossary("Falsy", "falsy")}} (ou seja., exceto para `false`, `0`, `""`, `null`, `undefined`, e `NaN`).
 
 O {{Glossary("JavaScript")}} usa {{Glossary("Type_Conversion", "coerção")}} de tipo em contextos booleanos.

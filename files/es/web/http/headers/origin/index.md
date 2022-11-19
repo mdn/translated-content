@@ -9,6 +9,7 @@ tags:
   - origin
 translation_of: Web/HTTP/Headers/Origin
 ---
+
 {{HTTPSidebar}}
 
 La cabecera de petición **`Origin`** indica de dónde se origina una búsqueda. No incluye ninguna información de ruta, sino sólo el nombre del servidor. Es enviado con las peticiones {{Glossary("CORS")}}, tanto como con las peticiones {{HTTPMethod("POST")}}. Es similar a la cabecera {{HTTPHeader("Referer")}}, pero, a diferencia de ésta, no revela la ruta completa.

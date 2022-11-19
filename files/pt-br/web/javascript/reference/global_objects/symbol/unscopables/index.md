@@ -1,8 +1,8 @@
 ---
 title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 ---
+
 {{JSRef}}
 
 O símbolo **`Symbol.unscopables`** é usado para específicar um valor objeto cujo os nomes de propriedade próprio e herdados são excluídos das associações do ambiente [`with`](/pt-BR/docs/Web/JavaScript/Reference/Statements/with) o objeto associado.

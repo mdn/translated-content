@@ -15,7 +15,8 @@ tags:
 translation_of: Web/HTML/Element/dt
 original_slug: Web/HTML/Elemento/dt
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El **elemento HTML `<dt>`** especifica un término en una descripción o lista de definiciones, y como tal debe utilizarse dentro de un elemento {{HTMLElement("dl")}} Es usualmente seguido por un elemento {{HTMLElement("dd")}}; sin embargo, múltiples elementos `<dt>` en un renglón indican diferentes términos los cuales todos son definidos por el siguiente elemento {{HTMLElement("dd")}}.
 
@@ -90,11 +91,7 @@ Para ver un ejemplo, vea el [proveído por el elemento `<dl>`](/es/docs/Web/HTML
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                          | Comentario |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-dt-element', '&lt;dt&gt;')}}     | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dt-element', '&lt;dt&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dt&gt;')}}                 | {{Spec2('HTML4.01')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

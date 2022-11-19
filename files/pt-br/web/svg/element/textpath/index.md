@@ -1,13 +1,8 @@
 ---
 title: textPath
 slug: Web/SVG/Element/textPath
-tags:
-  - Conteúdo Textual
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/textPath
 ---
+
 {{SVGRef}}
 
 Assim como o texto escrito em uma linha reta, o SVG também inclui a capacidade de colocar um texto ao longo de uma forma de um elemento {{ SVGElement("path") }}. Para especificar que um bloco de texto é renderizado ao longo da forma de um {{ SVGElement("path") }}, inclua o texto em um elemento `textPath` o qual inclui um atributo `xlink:href` com uma referência a um elemento {{ SVGElement("path") }}.

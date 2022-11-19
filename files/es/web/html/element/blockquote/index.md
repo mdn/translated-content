@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/blockquote
 original_slug: Web/HTML/Elemento/blockquote
 ---
+
 ### Definición
 
 - **blockquote** -_cita en bloque_ . Crea citas en bloque, marca las citas a otros autores o documentos.
@@ -206,7 +207,7 @@ original_slug: Web/HTML/Elemento/blockquote
 
 ### Ejemplos de uso
 
-#### Un **blockquote** estricto
+#### Un blockquote estricto
 
 ```
 <blockquote cite='http://html.conclase.net/w3c/html401...def-BLOCKQUOTE'>

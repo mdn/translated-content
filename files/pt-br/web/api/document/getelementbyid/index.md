@@ -1,18 +1,8 @@
 ---
 title: document.getElementById()
 slug: Web/API/Document/getElementById
-tags:
-  - API
-  - DOM
-  - Document
-  - Elements
-  - Method
-  - Reference
-  - Web
-  - getElementById
-  - id
-translation_of: Web/API/Document/getElementById
 ---
+
 {{ ApiRef("DOM") }}
 
 ## Sumário

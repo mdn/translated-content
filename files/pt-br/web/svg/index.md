@@ -1,20 +1,8 @@
 ---
 title: 'SVG: Gráficos Vetoriais Escaláveis'
 slug: Web/SVG
-tags:
-  - Design Responsivo
-  - Gráficos 2D
-  - Gráficos Escaláveis
-  - Gráficos Vetoriais
-  - Imagens
-  - Referencia
-  - SVG
-  - Web
-  - graficos
-  - l10n:prioridade
-  - Ícones
-translation_of: Web/SVG
 ---
+
 **[Iniciando](/pt-BR/docs/Web/SVG/Tutorial)** Este tutorial irá ajudá-lo a começar a trabalhar com SVG.
 
 {{SVGRef}}
@@ -40,10 +28,6 @@ SVG é similar em escopo à tecnologia Flash, propriedade da Adobe, mas se disti
     - [Como o SVG e implementado no Firefox](/pt-BR/docs/SVG_in_Firefox)
     - [Tutorial sobre como usá-lo](/pt-BR/docs/SVG_in_Firefox)
     - [SVG em XHTML](/pt-BR/docs/SVG_In_HTML_Introduction)
-
-## Comunidade
-
-- Ver os fóruns da Mozilla... {{DiscussionList("dev-tech-svg", "mozilla.dev.tech.svg")}}
 
 ## Ferramentas
 

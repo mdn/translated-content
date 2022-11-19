@@ -5,6 +5,7 @@ translation_of: Web/CSS/transform-function/rotate3d()
 original_slug: Web/CSS/transform-function/rotate3d()
 browser-compat: css.types.transform-function.rotate3d
 ---
+
 {{CSSRef}}
 
 La [función](/es/docs/Web/CSS/CSS_Functions) **`rotate3d()`** de [CSS](/es/docs/Web/CSS) define una transformación que mueve el elemento alrededor de un eje fijo sin deformarlo. Su resultado es un tipo de dato {{cssxref("&lt;transform-function&gt;")}}.

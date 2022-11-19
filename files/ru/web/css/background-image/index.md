@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/background-image
 ---
+
 {{CSSRef}}
 
 ## Краткое описание

@@ -3,6 +3,7 @@ title: 'Window: beforeunload event'
 slug: Web/API/Window/beforeunload_event
 translation_of: Web/API/Window/beforeunload_event
 ---
+
 {{APIRef}}
 
 Событие **beforeunload** запускается, когда окно, документ и его ресурсы вот-вот будут выгружены. Документ все ещё виден, и событие в этот момент может быть отменено.

@@ -1,8 +1,8 @@
 ---
 title: Introdução
 slug: Web/SVG/Tutorial/Introduction
-translation_of: Web/SVG/Tutorial/Introduction
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
 
 ![](/@api/deki/files/348/=SVG_Overview.png)[SVG](/pt-BR/SVG) é uma linguagem [XML](/pt-BR/XML), similar ao [XHTML](/pt-BR/XHTML), na qual pode ser usada para desenhar vetores gráficos (imagens), como os mostrados à direita. Ela pode ser usada para criar uma imagem qualquer especificando todas as linhas e formas necessárias, para modificar uma imagem raster já existente ou fazer ambas as opções. A imagem e seus componentes também podem ser transformados, compostas em conjunto, ou filtradas para mudar completamente sua aparência.

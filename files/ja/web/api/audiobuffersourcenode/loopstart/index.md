@@ -13,7 +13,7 @@ l10n:
 
 ## 値
 
-浮動小数点数`で、再生中に各ループを始めるべき音声バッファーへのオフセットを秒単位で示します。この値は {{domxref("AudioBufferSourceNode.loop", "loop")}} 引数が `true` のときのみ使用されます。
+浮動小数点数で、再生中に各ループを始めるべき音声バッファーへのオフセットを秒単位で示します。この値は {{domxref("AudioBufferSourceNode.loop", "loop")}} 引数が `true` のときのみ使用されます。
 
 ## 例
 
@@ -78,5 +78,5 @@ loopendControl.oninput = () => {
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API)
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

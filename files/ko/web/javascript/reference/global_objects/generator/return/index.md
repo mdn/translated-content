@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Generator.return
 ---
+
 {{JSRef}}
 
 제너레이터의 **`return()`** 메서드는 현재 중단된 위치에서 제너레이터 본체에 리턴 문이 삽입 된 것처럼 작동합니다. 이는 [`try...finally`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) 블록을 사용하여 제너레이터를 정리 할 수 있도록 합니다.

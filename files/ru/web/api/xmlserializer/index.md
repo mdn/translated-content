@@ -10,7 +10,7 @@ translation_of: Web/API/XMLSerializer
 
 ## Методы
 
-- `XMLSerializer.serializeToString`()
+- `XMLSerializer.serializeToString()`
   - : Возвращает сериализованное дерево или ветку в виде строки
 - `XMLSerializer.serializeToStream()` {{ non-standard_inline() }}{{ deprecated_inline() }}
   - : Поддерево, обёрнутое в указанный элемент, сериализуется в поток байтов с использованием указанной кодировки.

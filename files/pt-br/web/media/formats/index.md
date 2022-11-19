@@ -1,21 +1,9 @@
 ---
 title: Formatos de mídia suportados por elementos HTML  de áudio e vídeo
 slug: Web/Media/Formats
-tags:
-  - Audio
-  - Firefox
-  - HTML
-  - HTML5
-  - Ogg
-  - Reference
-  - Video
-  - formatos de arquivos
-  - mp3
-  - mp4
-translation_of: Web/Media/Formats
-translation_of_original: Web/HTML/Supported_media_formats
 original_slug: Web/HTML/formatos_midia_suportados
 ---
+
 Os elementos {{ HTMLElement("audio") }} e {{ HTMLElement("video") }} fornecem suporte para a reprodução de mídias de áudio e vídeo sem necessitar de plug-ins. Codecs de áudio e vídeo são usados para manipular arquivos de áudio e vídeo, diferentes codecs oferecem diferentes níveis de compressão e qualidade. Um formato do repositório é usado para armazenar e transmitir o codec de áudio e vídeo ( ambos juntos, no caso de um vídeo com tilha sonora). Existem muitas combinações de codecs e formatos de containers, embora apenas alguns são relevantes para a internet.
 
 Diferentes navegadores não dão suporte para os mesmos formatos de mídias em suas implementações de áudio e vídeo no HTML5, principalmente por causa de questões de patentes. A área de formatos de mídias na internet tem sofrido muito com leis de patentes em muitos países, incluindo os Estados Unidos e países da União Européia (as notas sobre patentes nesse artigo são fornecidas como estão e sem garantias). Este artigo discute a diferença de codecs e combinações de containers relevantes para a internet, incluindo suporte de navegadores em computadores ou outros tipos de dispositivos.

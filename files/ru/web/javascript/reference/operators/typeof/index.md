@@ -31,7 +31,7 @@ typeof operand
 | Type                                                       | Result                     |
 | ---------------------------------------------------------- | -------------------------- |
 | Undefined                                                  | `"undefined"`              |
-| Null                                                       | `"object" `(смотрите ниже) |
+| Null                                                       | `"object"` (смотрите ниже) |
 | Boolean                                                    | `"boolean"`                |
 | Number                                                     | `"number"`                 |
 | String                                                     | `"string"`                 |

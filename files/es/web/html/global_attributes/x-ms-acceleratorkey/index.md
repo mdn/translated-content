@@ -4,13 +4,14 @@ slug: Web/HTML/Global_attributes/x-ms-acceleratorkey
 translation_of: Web/HTML/Global_attributes/x-ms-acceleratorkey
 original_slug: Web/HTML/Atributos_Globales/x-ms-acceleratorkey
 ---
+
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
 
 La **`x-ms-acceleratorkey`** propiedad proporciona una forma de declarar que una tecla de aceleración se ha asignado a un elemento.
 
 Esta propiedad propietaria es específica de Internet Explorer y Microsoft Edge.
 
-La `x-ms-acceleratorkey`propiedad le permite exponer una notificación en el árbol de accesibilidad a los lectores de pantalla y otras tecnologías de asistencia de que existe una clave de aceleración. Este atributo no proporciona el comportamiento de la clave del acelerador. Debe proporcionar controladores de eventos de teclado, como por ejemplo `onkeypress`, `onkeydown`o `onkeyup`, para procesar las teclas de aceleración en el documento.
+La `x-ms-acceleratorkey` propiedad le permite exponer una notificación en el árbol de accesibilidad a los lectores de pantalla y otras tecnologías de asistencia de que existe una clave de aceleración. Este atributo no proporciona el comportamiento de la clave del acelerador. Debe proporcionar controladores de eventos de teclado, como por ejemplo `onkeypress`, `onkeydown` o `onkeyup`, para procesar las teclas de aceleración en el documento.
 
 ## Sintaxis
 

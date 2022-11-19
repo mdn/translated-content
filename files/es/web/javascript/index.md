@@ -7,11 +7,12 @@ tags:
  - 'l10n:priority'
 translation_of: Web/JavaScript
 ---
+
 {{JsSidebar}}
 
 **JavaScript** (**JS**) es un lenguaje de programación ligero, interpretado, o compilado [justo-a-tiempo](https://es.wikipedia.org/wiki/Compilaci%C3%B3n_en_tiempo_de_ejecuci%C3%B3n) (just-in-time) con {{Glossary("First-class Function", "funciones de primera clase")}}. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para páginas web, y es usado en [muchos entornos fuera del navegador](https://es.wikipedia.org/wiki/JavaScript), tal como {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) y [Adobe Acrobat](https://www.adobe.com/devnet/acrobat/javascript.html) JavaScript es un lenguaje de {{Glossary ("Prototype-based programming", "programación basada en prototipos")}}, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa (por ejemplo programación funcional). Lee más en [acerca de JavaScript](/es/docs/Web/JavaScript/About_JavaScript).
 
-Esta sección está dedicada al lenguaje JavaScript en sí, y no a las partes que son específicas de las páginas web u otros entornos host. Para información acerca de {{Glossary("API","APIs")}} específicas para páginas Web, consulta [APIs Web](/es/docs/Web/API ) y {{Glossary("DOM")}}.
+Esta sección está dedicada al lenguaje JavaScript en sí, y no a las partes que son específicas de las páginas web u otros entornos host. Para información acerca de {{Glossary("API","APIs")}} específicas para páginas Web, consulta [APIs Web](/es/docs/Web/API) y {{Glossary("DOM")}}.
 
 El estándar para JavaScript es [ECMAScript](/es/docs/Web/JavaScript/Language_Resources) (ECMA-262) y [la especificación de la API para la Internacionalización de ECMAScript](https://tc39.es/ecma402/) (ECMA-402). La documentación en MDN está basada enteramente en las últimas versiones preliminares de ECMA-262 y ECMA-402. Y en algunos casos donde algunas [propuestas para nuevas funciones para ECMAScript](https://github.com/tc39/proposals) ya hayan sido implementadas en los navegadores, la documentación y algunos artículos de MDN pueden hacer uso de algunas de estas funciones.
 
@@ -80,7 +81,7 @@ Consulta la documentación completa de la [referencia de JavaScript](/es/docs/We
 - [Objetos Estándar](/es/docs/Web/JavaScript/Reference/Global_Objects)
   - : Conoce los objectos estándar integrados {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}, y otros.
 - [Expresiones y operadores](/es/docs/Web/JavaScript/Reference/Operators)
-  - : Aprende más sobre el comportamiento de los operadores de JavaScript {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}, el [operador de precedencia](/es/docs/Web/JavaScript/Reference/Operators/Operator_Precedence ), y más.
+  - : Aprende más sobre el comportamiento de los operadores de JavaScript {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}, el [operador de precedencia](/es/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), y más.
 - [Sentencias y declaraciones](/es/docs/Web/JavaScript/Reference/Statements)
   - : Aprende cómo funciona {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}}, y más declaraciones y palabras reservadas de JavaScript.
 - [Funciones](/es/docs/Web/JavaScript/Reference/Functions)

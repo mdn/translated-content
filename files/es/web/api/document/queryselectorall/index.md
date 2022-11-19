@@ -16,6 +16,7 @@ tags:
   - querySelectorAll
 translation_of: Web/API/Document/querySelectorAll
 ---
+
 {{ ApiRef("DOM") }}
 
 El método **`querySelectorAll()`** de un {{domxref("Element")}} devuelve una {{domxref("NodeList")}} estática (no viva) que representa una lista de elementos del documento que coinciden con el grupo de selectores indicados.

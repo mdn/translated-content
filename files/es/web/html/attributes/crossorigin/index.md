@@ -4,6 +4,7 @@ slug: Web/HTML/Attributes/crossorigin
 translation_of: Web/HTML/Attributes/crossorigin
 original_slug: Web/HTML/Atributos_de_configuracion_CORS
 ---
+
 En HTML5, algunos elementos HTML que dan soporte para [CORS](/es/docs/HTTP/Access_control_CORS), tales como {{ HTMLElement("img") }} o {{ HTMLElement("video") }}, tienen un atributo `crossorigin` (propiedad `crossOrigin`), que les permite configurar las peticiones CORS de los datos que se cargan. Estos atributos están enumerados, y tienen los siguientes valores posibles:
 
 | Palabra clave     | Descripción                                                                                                                                      |
@@ -15,12 +16,9 @@ Por defecto, es decir cuando el atributo no es específicado, CORS no se usa. La
 
 Una clave inválida y un string vacío serán gestionados como una clave anónima.
 
-Especificaciones
+## Especificaciones
 
-| Especificación                                                                                                                           | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}                     | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

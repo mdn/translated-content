@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/assign
 ---
+
 {{JSRef}}
 
 El método **`Object.assign()`** copia todas las propiedades enumerables de uno o más objetos fuente a un objeto destino. Devuelve el objeto destino.
@@ -253,10 +254,7 @@ if (typeof Object.assign != 'function') {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                       | Comentario          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-object.assign', 'Object.assign')}}     | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-object.assign', 'Object.assign')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

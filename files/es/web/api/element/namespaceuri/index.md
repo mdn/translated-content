@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/Element/namespaceURI
 ---
+
 {{APIRef}}
 
 La propiedad `Element.namespaceURI` unicamente de lectura devuelve la URI namespace de el elemento, `o la anula si el elemento no está en un` namespace.
@@ -36,7 +37,7 @@ if (element.localName == "browser" &&
 
 Esto no es un valor calculado resultante de una búsqueda de un namespace, basado en un examen de las declaraciones del namespace en el campo de aplicación. La URI del namespace de un nodo se congela en el momento de creación del nodo.
 
-En Firefox 3.5 y versiones anteriores, la URI del namespace para elementos HTML en documentos HTML `es nula`. En versiones posteriores, de conformidad con HTML5, es [`https://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) como en XHTML. {{gecko_minversion_inline("1.9.2")}}
+En Firefox 3.5 y versiones anteriores, la URI del namespace para elementos HTML en documentos HTML `es nula`. En versiones posteriores, de conformidad con HTML5, es [`https://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) como en XHTML.
 
 Se puede crear un elemento con el `namespaceURI` especificado utilizando el método DOM Level 2 [document.createElementNS](/es/docs/Web/API/Document/createElementNS).
 

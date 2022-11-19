@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Status/400
 ---
+
 {{HTTPSidebar}}
 
 La respuesta de código de estado del Protocolo de Transferencia de Hipertexto (HTTP) **`400 Bad Request`** indica que el servidor no puede o no procesará la petición debido a algo que es percibido como un error del cliente (p. ej., sintaxis de petición malformada, solicitud inválida de enmarcado de mensajes, o enrutamiento engañoso de peticiones).

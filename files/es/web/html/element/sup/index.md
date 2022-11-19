@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/sup
 original_slug: Web/HTML/Elemento/sup
 ---
+
 El **elemento HTML** \<sup> define un fragmento de texto que se debe mostrar, por razones tipográficas, más alto, y generalmente más pequeño, que el tramo principal del texto, es decir, en superíndice.
 
 <table class="properties">
@@ -127,4 +128,4 @@ Este elemento sólo incluye los [atributos globales](/es/docs/HTML/Global_attrib
 
 - Los elementos MathML[`<msub>`](/es/docs/MathML/Element/msub), [`<msup>`](/es/docs/MathML/Element/msup), y [`<msubsup>`](/es/docs/MathML/Element/msubsup) .
 
-{{HTMLRef}}
+{{HTMLSidebar}}

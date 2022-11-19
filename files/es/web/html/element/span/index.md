@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/span
 original_slug: Web/HTML/Elemento/span
 ---
+
 ### Definición
 
 - **span** - _abarcar_. Es un contenedor en línea. Sirve para aplicar estilo al texto o agrupar elementos en línea.

@@ -12,6 +12,7 @@ tags:
 translation_of: Web/SVG/Element/script
 original_slug: Web/HTML/Elemento/script
 ---
+
 ## Resumen
 
 El _elemento HTML Script_ (**`<script>`**) se utiliza para insertar o hacer referencia a un script ejecutable dentro de un documento HTML o XHTML.
@@ -79,7 +80,7 @@ Los scripts sin atributo `async` o `defer`, así como las secuencias de comandos
 
 Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
-- {{htmlattrdef("async")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("async")}}
 
   - : Establece este atributo booleano para indicar al navegador, si es posible, ejecutar el código asincrónicamente. Esto no afecta a los scripts escritos dentro de la etiqueta (es decir a aquellos que no tienen el atributo **src**).
 
@@ -123,12 +124,7 @@ Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Glob
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                                       | Comentario                    |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ----------------------------- |
-| {{SpecName('HTML WHATWG', "scripting.html#the-script-element", "&lt;script&gt;")}} | {{Spec2('HTML WHATWG')}}             | Agrega el tipo module.        |
-| {{SpecName('HTML5 W3C', 'scripting-1.html#script', '&lt;script&gt;')}}                 | {{Spec2('HTML5 W3C')}}                 |                               |
-| {{SpecName('HTML4.01', 'interact/scripts.html#h-18.2.1', '&lt;script&gt;')}}         | {{Spec2('HTML4.01')}}                 |                               |
-| {{SpecName('Subresource Integrity', '#htmlscriptelement', '&lt;script&gt;')}}     | {{Spec2('Subresource Integrity')}} | Agrega el atributo integrity. |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 
@@ -139,4 +135,4 @@ Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Glob
 - {{domxref("document.currentScript")}}
 - [Ryan Grove's \<script> and \<link> node event compatibility chart](http://pieisgood.org/test/script-link-events/)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

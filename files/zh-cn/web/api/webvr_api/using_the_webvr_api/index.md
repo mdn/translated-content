@@ -2,6 +2,7 @@
 title: Using the WebVR API
 slug: Web/API/WebVR_API/Using_the_WebVR_API
 ---
+
 The [WebVR API](/zh-CN/docs/Web/API/WebVR_API) is a fantastic addition to the web developer's toolkit, allowing access to virtual reality hardware such as the [Oculus Rift](https://developer.oculus.com/), and converting outputted movement and orientation data into view rendering updates on a web app. But how do you get started in developing VR apps for the Web? This article will guide you through the basics.
 [WebVR API](/zh-CN/docs/Web/API/WebVR_API) 对于 web 开发者来说，是一个令人心动的功能包，允许你连接到类似于[Oculus Rift](https://developer.oculus.com/) 这样的虚拟现实硬件，并且能够在你的 web app 中，将从硬件获取到的位置移动数据和姿态角数据，实时更新你的渲染显示输出。具体要如何在 Web 上开始开发你的 VR app 呢？这篇文章将会提供基础的引导信息。
 
@@ -99,8 +100,8 @@ var body = document.querySelector('body');
 body.appendChild(myCanvas);
 ```
 
-Next, we create a new [image](/zh-CN/docs/Web/API/HTMLImageElement) and use a {{event("load")}} event to check that the image is loaded before running `draw()`, the [main loop](/zh-CN/docs/Games/Anatomy#Building_a_main_loop_in_JavaScript) for our app:
-然后，我们在主渲染循环控制中，先创建一个图片对象，并且在 draw() 方法运行前，监听 {{event("load")}} 事件回调，以检查图片是否已经被正常装载成功。
+Next, we create a new [image](/zh-CN/docs/Web/API/HTMLImageElement) and use a [`load`](/zh-CN/docs/Web/API/Window/load_event) event to check that the image is loaded before running `draw()`, the [main loop](/zh-CN/docs/Games/Anatomy#Building_a_main_loop_in_JavaScript) for our app:
+然后，我们在主渲染循环控制中，先创建一个图片对象，并且在 draw() 方法运行前，监听 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件回调，以检查图片是否已经被正常装载成功。
 
 ```js
 var image = new Image();

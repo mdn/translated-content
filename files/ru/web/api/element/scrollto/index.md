@@ -3,6 +3,7 @@ title: Element.scrollTo()
 slug: Web/API/Element/scrollTo
 translation_of: Web/API/Element/scrollTo
 ---
+
 {{ APIRef }}
 
 **`scrollTo()`** метод интерфейса {{domxref("Element")}}, осуществляет прокрутку по заданному набору координат внутри данного элемента.

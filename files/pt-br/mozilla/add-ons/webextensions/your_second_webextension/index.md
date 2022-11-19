@@ -1,13 +1,9 @@
 ---
 title: Passo-a-Passo
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-tags:
-  - Extensões Web
-  - extensões firefox
-  - passo-a-passo
-translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Passo-a-Passo
 ---
+
 Neste artigo iremos criar uma Extensão para Firefox do início ao fim.
 
 A extensão adicionará um novo botão na barra de ferramentas do Firefox. Quando clicar no botão se exibirá um popup habilitando a escolha de um animal. Uma vez que o usuário escolher um animal, a página atual do navegador será substituida por uma imagem do animal escolhido.

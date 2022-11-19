@@ -64,7 +64,7 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
   - 如果按备用键盘布局上的键输入一个 ASCII 字母或数字，请使用 keycode。
   - 否则，使用 0 或者根据下面的附加规则计算。
 
-从 Firefox 60 {{geckoRelease("60.0")}}开始，Gecko 会尽可能的根据以下规则额设置标点符号的 `keyCode` 值（当满足上述 7.1 或者 7.2 的时候）:
+从 Firefox 60 开始，Gecko 会尽可能的根据以下规则额设置标点符号的 `keyCode` 值（当满足上述 7.1 或者 7.2 的时候）:
 
 > **警告：** 这些附加规则的目的是为了使键盘布局映射 unicode 字符映射到美国键盘标点符号的用户可以使用只支持 ASCII 的键盘或者美国键盘布局的 Firefox 的 web 应用。否则，新映射的 `keyCode` 值可能会和其他按键冲突。例如，如果当前键盘布局是俄语，`"Period"` 键 和 `"Slash"` 键的 `keyCode` 都会是 `190` （`KeyEvent.DOM_VK_PERIOD`）。如果你需要区分这些按键但是你自己又不想支持时间上所有的键盘布局，你可能应该使用 {{domxref("KeyboardEvent.code")}}。
 

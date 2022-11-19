@@ -7,6 +7,7 @@ tags:
   - Tipo de Dato CSS
 translation_of: Web/CSS/basic-shape
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -19,7 +20,7 @@ Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan no
 
 - `inset()`
 
-  - :&#x20;
+  - : &#x20;
 
     ```
     inset( <shape-arg>{1,4} [round <border-radius>]? )
@@ -35,7 +36,7 @@ Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan no
 
 - `polygon()`
 
-  - :&#x20;
+  - : &#x20;
 
     ```
     polygon( [<fill-rule>,]? [<shape-arg> <shape-arg>]# )
@@ -47,7 +48,7 @@ Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan no
 
 - `circle(`)
 
-  - :&#x20;
+  - : &#x20;
 
     ```
     circle( [<shape-radius>]? [at <position>]? )
@@ -59,7 +60,7 @@ Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan no
 
 - `ellipse()`
 
-  - :&#x20;
+  - : &#x20;
 
     ```
     ellipse( [<shape-radius>{2}]? [at <position>]? )
@@ -108,9 +109,7 @@ TODO
 
 ## Especificaciones
 
-| Especificicación                                                                                         | Estatus                          | Comentarios        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{ SpecName('CSS Shapes', '#basic-shape-functions', '&lt;basic-shape&gt;') }} | {{ Spec2('CSS Shapes') }} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

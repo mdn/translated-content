@@ -548,7 +548,9 @@ Si quieres escribir algo de HTML en tu ordenador local para experimentar, puedes
 
 Ahora puedes abrir este archivo en un navegador web para ver cómo se ve el código renderizado. Edita el código y actualiza el navegador para ver cuál es el resultado. En principio se verá algo así:
 
-![Una sencilla página HTML que dice esta es mi página](https://mdn.mozillademos.org/files/12279/template-screenshot.png)En este ejercicio, puedes editar el código en tu ordenador como se indica arriba, o puedes editarlo en la ventana editable que tienes a continuación (la ventana editable representa solo el contenido del elemento {{htmlelement("body")}}, en este caso). Intenta reproducir los siguientes pasos:
+![Una sencilla página HTML que dice esta es mi página](template-screenshot.png)
+
+En este ejercicio, puedes editar el código en tu ordenador como se indica arriba, o puedes editarlo en la ventana editable que tienes a continuación (la ventana editable representa solo el contenido del elemento {{htmlelement("body")}}, en este caso). Intenta reproducir los siguientes pasos:
 
 - Justo debajo de la etiqueta de apertura {{htmlelement("body")}}, añade un título principal para el documento. Este deberá estar dentro de una etiqueta de apertura `<h1>` y una etiqueta de cierre `</h1>`.
 - Edita el contenido del párrafo e incluye algún texto sobre algo que te interese.
@@ -724,7 +726,7 @@ Haces esto con referencias de caracteres. Estos son códigos especiales que repr
 | '                | \&apos;                                 |
 | &                | \&amp;                                  |
 
-El equivalente de referencia de caracter podría recordarse fácilmente porque el texto que utiliza se puede ver como menor que para '\&lt;' , cita para ' \&quot; ' y de manera similar para otros. Para obtener más información sobre la referencia de entidad, consulta {{interwiki("wikipedia", "Anexo:Referencias a entidades de caracteres XML y HTML")}} en (Wikipedia).
+El equivalente de referencia de caracter podría recordarse fácilmente porque el texto que utiliza se puede ver como menor que para '\&lt;' , cita para ' \&quot; ' y de manera similar para otros. Para obtener más información sobre la referencia de entidad, consulta [Anexo:Referencias a entidades de caracteres XML y HTML](https://es.wikipedia.org/wiki/Anexo:Referencias_a_entidades_de_caracteres_XML_y_HTML) en (Wikipedia).
 
 Considera los dos siguientes párrafos:
 
@@ -738,7 +740,7 @@ En la salida en vivo de abajo, puedes ver que el primer párrafo salió mal. El 
 
 {{ EmbedLiveSample('Referencias_a_entidades_Inclusión_de_caracteres_especiales_en_HTML', 700, 200) }}
 
-> **Nota:** En la Wikipedia se puede localizar un listado de todas las referencias de entidades de caracteres HTML disponibles: {{interwiki("wikipedia", "Anexo:Referencias a entidades de caracteres XML y HTML")}}. Observa que no necesitas usar ninguna referencia de entidad más para ningún otro de estos símbolos porque los navegadores modernos gestionan estos símbolos correctamente siempre y cuando en tu HTML hayas [establecido la codificación de el juego de caracteres universal UTF-8](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Specifying_your_document's_character_encoding).
+> **Nota:** En la Wikipedia se puede localizar un listado de todas las referencias de entidades de caracteres HTML disponibles: [Anexo:Referencias a entidades de caracteres XML y HTML](https://es.wikipedia.org/wiki/Anexo:Referencias_a_entidades_de_caracteres_XML_y_HTML). Observa que no necesitas usar ninguna referencia de entidad más para ningún otro de estos símbolos porque los navegadores modernos gestionan estos símbolos correctamente siempre y cuando en tu HTML hayas [establecido la codificación de el juego de caracteres universal UTF-8](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Specifying_your_document's_character_encoding).
 
 ## Comentarios HTML
 

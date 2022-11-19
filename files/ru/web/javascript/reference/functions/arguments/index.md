@@ -8,6 +8,7 @@ tags:
   - arguments
 translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
+
 {{jsSidebar("Functions")}}
 
 Объект **`arguments`** — это подобный массиву объект, который содержит аргументы, переданные в функцию.
@@ -40,7 +41,7 @@ arguments[2]
 arguments[1] = 'new value';
 ```
 
-Объект `arguments` не является {{jsxref("Array")}}. Он похож на массив, но не обладает ни одним из его свойств, кроме [`length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length "JavaScript/Reference/Functions_and_function_scope/arguments/length"). Например, у него нет метода [`pop`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop "JavaScript/Reference/Global_Objects/Array/pop"). Однако, он может быть преобразован в обычный массив:
+Объект `arguments` не является {{jsxref("Array")}}. Он похож на массив, но не обладает ни одним из его свойств, кроме [`length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length). Например, у него нет метода [`pop`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop). Однако, он может быть преобразован в обычный массив:
 
 ```js
 var args = Array.prototype.slice.call(arguments);
@@ -57,7 +58,7 @@ const args = [...arguments];
 > var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
 > ```
 
-Объект `arguments` можно использовать при вызове функции с бо́льшим количеством аргументов, чем было предусмотрено в её объявлении. Такой способ удобен для функций, в которые допустимо передавать переменное количество аргументов. Можно воспользоваться [`arguments.length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length "JavaScript/Reference/Functions_and_function_scope/arguments/length"), чтобы определить количество переданных в функцию аргументов, а затем обработать каждый из них с помощью объекта `arguments`. Чтобы определить количество параметров функции, описанных в её [сигнатуре](/ru/docs/Glossary/Signature/Function), можно использовать свойство [`Function.length`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/length "JavaScript/Reference/Global_Objects/Function/length").
+Объект `arguments` можно использовать при вызове функции с бо́льшим количеством аргументов, чем было предусмотрено в её объявлении. Такой способ удобен для функций, в которые допустимо передавать переменное количество аргументов. Можно воспользоваться [`arguments.length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length), чтобы определить количество переданных в функцию аргументов, а затем обработать каждый из них с помощью объекта `arguments`. Чтобы определить количество параметров функции, описанных в её [сигнатуре](/ru/docs/Glossary/Signature/Function), можно использовать свойство [`Function.length`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/length).
 
 ### Использование `typeof` с объектом `arguments`
 
@@ -85,13 +86,13 @@ var args = [...arguments];
 
 ## Свойства
 
-- [`arguments.callee`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee "JavaScript/Reference/Functions_and_function_scope/arguments/callee")
+- [`arguments.callee`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee)
   - : Ссылка на функцию, которая выполняется в текущий момент.
-- [`arguments.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller "JavaScript/Reference/Functions_and_function_scope/arguments/caller") {{ Obsolete_inline() }}
+- [`arguments.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller) {{ Obsolete_inline() }}
   - : Ссылка на функцию, которая вызвала функцию, выполняющуюся в текущий момент.
-- [`arguments.length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length "JavaScript/Reference/Functions_and_function_scope/arguments/length")
+- [`arguments.length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : Количество переданных в функцию аргументов.
-- [`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
+- [`arguments[@@iterator]`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
   - : Возвращает новый объект `Array Iterator`, содержащий значения для каждого индекса в массиве.
 
 ## Примеры
@@ -149,7 +150,7 @@ var listHTML = list("u", "One", "Two", "Three");
 
 ### Остаточные, деструктурированные и параметры по умолчанию
 
-Объект `arguments` может использоваться совместно с [остаточными параметрами](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметрами по умолчанию ](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters)или [деструктурированными параметрами](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+Объект `arguments` может использоваться совместно с [остаточными параметрами](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметрами по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированными параметрами](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 ```js
 function foo(...args) {

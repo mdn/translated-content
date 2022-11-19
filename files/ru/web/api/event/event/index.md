@@ -3,6 +3,7 @@ title: Event()
 slug: Web/API/Event/Event
 translation_of: Web/API/Event/Event
 ---
+
 {{APIRef("DOM")}}
 
 Конструктор **`Event()`** создаёт новый объект события {{domxref("Event")}}.

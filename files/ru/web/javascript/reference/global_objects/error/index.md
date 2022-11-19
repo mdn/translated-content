@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Error
 ---
+
 {{JSRef}}
 
 Конструктор **`Error`** создаёт объект ошибки. Экземпляры объекта `Error` выбрасываются при возникновении ошибок во время выполнения. Объект `Error` также может использоваться в качестве базового для пользовательских исключений. Смотрите ниже стандартные встроенные типы ошибок.
@@ -20,7 +21,7 @@ new Error([message[, fileName[, lineNumber]]])
 
 ### Параметры
 
-- ` message ``{{optional_inline()}} `
+- `message` {{optional_inline()}}
   - : Человеко-читаемое описание ошибки.
 - `fileName` {{non-standard_inline}} `{{optional_inline()}}`
   - : Значение свойства `fileName` созданного объекта `Error`. Значением по умолчанию является имя файла, содержащего код, вызвавший конструктор `Error()`.

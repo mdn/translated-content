@@ -7,6 +7,7 @@ tags:
   - Petición
 translation_of: Web/HTTP/Methods/PUT
 ---
+
 {{HTTPSidebar}}
 
 La **petición HTTP PUT** crea un nuevo elemento o reemplaza una representación del elemento de destino con los datos de la petición.

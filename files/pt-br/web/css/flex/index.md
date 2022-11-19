@@ -1,8 +1,8 @@
 ---
 title: flex
 slug: Web/CSS/flex
-translation_of: Web/CSS/flex
 ---
+
 {{CSSRef}}
 
 A propriedade flex do CSS, define como um ítem será posicionado para no espaço disponível dentro de seu container.

@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/choose
 original_slug: Web/XSLT/choose
 ---
+
 {{ XsltRef() }}
 
 `<xsl:choose>` 요소는 많은 선택 가운데 하나를 정의합니다. 그리고 절차형 언어(procedural language)의 스위치 문처럼 동작합니다.

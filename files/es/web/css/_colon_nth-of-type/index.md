@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:nth-of-type
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:nth-of-type()`** de [CSS](/es/docs/Web/CSS) selecciona uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos.
@@ -73,10 +74,7 @@ p:nth-of-type(1) {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentarios                                             |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}} | {{Spec2('CSS4 Selectors')}} | Los elementos coincidentes no requieren tener un padre. |
-| {{SpecName('CSS3 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

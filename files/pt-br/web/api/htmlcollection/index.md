@@ -1,8 +1,8 @@
 ---
 title: HTMLCollection
 slug: Web/API/HTMLCollection
-translation_of: Web/API/HTMLCollection
 ---
+
 {{APIRef("HTML DOM")}}
 
 A interface **`HTMLCollection`** representa uma coleção genérica (objeto array) de elementos (na ordem em que aparecem no documento) e oferece métodos e propriedades para selecioná-los da lista.

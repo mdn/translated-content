@@ -8,6 +8,7 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/cite
 ---
+
 ## Описание
 
 **HTML-элемент \<cite>** (_от англ. Citation_) представляет из себя ссылку на источник цитаты. Он должен включать в себя название произведения или URL, который может быть в сокращённом виде в соответствии с правилами, используемых для добавления метаданных цитирования.
@@ -54,4 +55,4 @@ To avoid the default italic style from being used for the \<cite> element use th
 - Элемент {{HTMLElement("blockquote")}} для длинных цитат.
 - Элемент {{HTMLElement("q")}} для встраиваемых цитат.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

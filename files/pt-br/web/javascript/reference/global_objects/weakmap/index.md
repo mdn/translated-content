@@ -1,8 +1,8 @@
 ---
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 ---
+
 {{JSRef("Global_Objects", "WeakMap")}}
 
 ## Sumário

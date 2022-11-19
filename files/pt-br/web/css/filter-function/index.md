@@ -1,16 +1,8 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Filter Effects
-  - NeedsCompatTable
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/CSS/filter-function
 ---
+
 {{cssref}}
 
 The **`<filter-function>`** [CSS](/pt-BR/docs/Web/CSS) [data type](/pt-BR/docs/Web/CSS/CSS_Types) represents a graphical effect that can change the appearance of an input image. It is used in the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.

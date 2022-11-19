@@ -1,8 +1,8 @@
 ---
 title: page-break-before
 slug: Web/CSS/page-break-before
-translation_of: Web/CSS/page-break-before
 ---
+
 {{CSSRef}}
 
 > **Warning:** Esta propriedade foi substituída pela propriedade {{cssxref("break-before")}}.

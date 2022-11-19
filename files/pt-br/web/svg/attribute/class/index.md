@@ -1,13 +1,8 @@
 ---
 title: class
 slug: Web/SVG/Attribute/class
-tags:
-  - Atributos SVG
-  - Classe
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Attribute/class
 ---
+
 « [Página inicial da referência de atributos do SVG](/en/SVG/Attribute)
 
 Atribui um nome de classe ou um conjunto de nomes de classe a um elemento. Você pode atribuir o mesmo nome ou nomes de classe para qualquer número de elementos. Se você especificar vários nomes de classe, estes devem ser separados por caracteres de espaço em branco.

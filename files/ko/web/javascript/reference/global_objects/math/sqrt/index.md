@@ -3,6 +3,7 @@ title: Math.sqrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 ---
+
 {{JSRef}}
 
 **`Math.sqrt()`** 함수는 숫자의 제곱근을 반환합니다.

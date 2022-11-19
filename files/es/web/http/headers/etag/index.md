@@ -3,6 +3,7 @@ title: ETag
 slug: Web/HTTP/Headers/ETag
 translation_of: Web/HTTP/Headers/ETag
 ---
+
 {{HTTPSidebar}}
 
 El encabezado de respuesta de HTTP **`ETag`** es un identificador para una versión específica de un recurso. Permite a la memoria caché ser más eficiente, y ahorrar ancho de banda, en tanto que un servidor web no necesita enviar una respuesta completa si el contenido no ha cambiado. Por otro lado, si el contenido cambió, los etags son útiles para ayudar a prevenir actualizaciones simultáneas de un recurso de sobre-escribirlo por otro ("colisiones en el aire").
@@ -50,7 +51,7 @@ Cuando se guarda los cambios de una página a una página wiki (datos posteados)
 If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-Si las etiquetas no concuerdan, significa que el documento ha sido editado de por sí y se lanza un error {{HTTPStatus("412")}}`Precondition Failed`.
+Si las etiquetas no concuerdan, significa que el documento ha sido editado de por sí y se lanza un error {{HTTPStatus("412")}} `Precondition Failed`.
 
 ### Caching de los recursos invariados
 
@@ -60,7 +61,7 @@ Otro caso típico del uso del encabezado `ETag` es el cacheo de recursos que no 
 If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-El servidor compara el `ETag` del cliente (enviado con un `If-None-Match`) con el `ETag` para su versión actual del recurso y si ambos valores concuerdan (esto es, el recurso no ha cambiado), el servidor envió un estado {{HTTPStatus("304")}}`Not Modified`, sin ningún cuerpo, lo cual le dice al cliente que la versión cacheada de la respuesta todavía es buena para usar (_refrescar_).
+El servidor compara el `ETag` del cliente (enviado con un `If-None-Match`) con el `ETag` para su versión actual del recurso y si ambos valores concuerdan (esto es, el recurso no ha cambiado), el servidor envió un estado {{HTTPStatus("304")}} `Not Modified`, sin ningún cuerpo, lo cual le dice al cliente que la versión cacheada de la respuesta todavía es buena para usar (_refrescar_).
 
 ## Especificaciones
 

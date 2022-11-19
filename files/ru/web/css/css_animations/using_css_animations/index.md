@@ -11,6 +11,7 @@ tags:
 translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 original_slug: Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy
 ---
+
 {{SeeCompatTable}}{{CSSRef}}
 
 CSS-анимации позволяют анимировать переходы от одной конфигурации CSS стилей к другой. CSS-анимации состоят из двух компонентов: стилевое описание анимации и набор ключевых кадров, определяющих начальное, конечное и, возможно, промежуточное состояние анимируемых стилей.

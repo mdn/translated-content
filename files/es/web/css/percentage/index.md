@@ -4,13 +4,14 @@ slug: Web/CSS/percentage
 translation_of: Web/CSS/percentage
 original_slug: Web/CSS/porcentaje
 ---
+
 {{CSSRef}}
 
 ## Sumario
 
-Los tipos de dato `<porcentaje>`de [CSS](/en/CSS) representan un valor en forma de porcentaje. Muchas [propiedades de CSS](/en/CSS_Reference) pueden tomar valores porcentuales, siempre para definir longitudes con respecto al tamaño de los elementos padre. Los porcentajes estan formados por un [\<numero>](/es/docs/Web/CSS/number) seguido por el signo de porcentaje `%`. No hay un espacio entre el '%' y el numero.
+Los tipos de dato `<porcentaje>` de [CSS](/en/CSS) representan un valor en forma de porcentaje. Muchas [propiedades de CSS](/en/CSS_Reference) pueden tomar valores porcentuales, siempre para definir longitudes con respecto al tamaño de los elementos padre. Los porcentajes estan formados por un [\<numero>](/es/docs/Web/CSS/number) seguido por el signo de porcentaje `%`. No hay un espacio entre el '%' y el numero.
 
-Varias propriedades de longitud usan porcentajes, tales como `width, margin` y `padding.`Los porcentajes tambien se pueden ver en `font-size,`donde el tamaño del texto esta directamente relacionado al tamaño de su elemento padre.
+Varias propriedades de longitud usan porcentajes, tales como `width, margin` y `padding`. Los porcentajes tambien se pueden ver en `font-size`, donde el tamaño del texto esta directamente relacionado al tamaño de su elemento padre.
 
 > **Nota:** Solo los valores calculados son heredados. Entonces, incluso si un valor porcentual es usado en en la propiedad padre, un valor real, como una anchura en pixeles para un valor `<length>,`sera accesible en la propiedad heredada, no el valor porcentual.
 
@@ -49,11 +50,7 @@ El codigo de arriba de renderizara así:
 
 ## Especificaciones
 
-| Especificacion                                                                                           | Estatus                              | Comentarios                                                 |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------- |
-| {{ SpecName('CSS3 Values', '#percentages', '&lt;percentage&gt;') }}                 | {{ Spec2('CSS3 Values') }} | No hay cambios significantes desde CSS Level 2 (Revision 1) |
-| {{ SpecName('CSS2.1', 'syndata.html#percentage-units', '&lt;percentage&gt;') }} | {{ Spec2('CSS2.1') }}         | No hay cambios desde CSS Level 1                            |
-| {{ SpecName('CSS1', '#percentage-units', '&lt;percentage&gt;') }}                 | {{ Spec2('CSS1') }}             |                                                             |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

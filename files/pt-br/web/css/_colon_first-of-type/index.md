@@ -1,10 +1,8 @@
 ---
 title: ':first-of-type'
 slug: Web/CSS/:first-of-type
-tags:
-  - CSS Pseudo-classe
-translation_of: Web/CSS/:first-of-type
 ---
+
 {{CSSRef}}
 
 A [CSS](/pt-BR/docs/Web/CSS) [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:first-of-type`** representa o primeiro elemento de seu tipo entre os filhos de seu elemento pai.

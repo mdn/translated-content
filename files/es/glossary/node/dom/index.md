@@ -3,6 +3,7 @@ title: Node (DOM)
 slug: Glossary/Node/DOM
 translation_of: Glossary/Node/DOM
 ---
+
 En el contexto del {{Glossary("DOM")}}, un **nodo** es un único punto en el arbol de nodos. Los nodos pueden ser varias cosas el documento mismo, elementos, texto y comentarios.
 
 ## Saber más

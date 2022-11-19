@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/Document/cookie
 original_slug: DOM/document.cookie
 ---
+
 {{ApiRef("DOM")}}
 
 ### Resumen
@@ -49,11 +50,11 @@ En el código anterior, _`nuevacookie`_ es una cadena de la forma _`clave=valor`
   - `__Secure-` Señales para el navegador que solo deben incluirse en las perticiones de cookie transmitidas por un canal seguro.
   - `__Host-` Señales del navegador que además de la restricción de uso de cookies que provienen de un origen serugo, el ámbito de la cookie está limitado a un atributo path que proporciona el servidor. Si el servidor omite el atributo path, el directorio de las petición URI está en uso. Tabién las señales del atributo dominio no deben estar presentes, lo cual previene que la cookie sea usada en otros dominis. Para Chrome, el atributo path debe tener el mismo origen.
 
-> **Nota:** Nótese que previamente a Gecko 6.0 {{ geckoRelease("6.0") }}, rutas que contenían comillas eran tratadas como si las comillas fueran parte de la cadena, en lugar de considerarse como un delimitador de la ruta actual. Esto ya ha sido arreglado.
+> **Nota:** Nótese que previamente a Gecko 6.0 (Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3), rutas que contenían comillas eran tratadas como si las comillas fueran parte de la cadena, en lugar de considerarse como un delimitador de la ruta actual. Esto ya ha sido arreglado.
 
 ## Ejemplos
 
-### Ejemplo # 1: Uso sencillo
+### Ejemplo 1: Uso sencillo
 
 ```js
 document.cookie = "nombre=oeschger";
@@ -70,7 +71,7 @@ function alertCookie() {
 
 {{EmbedLiveSample('Example_1_Simple_usage', 200, 36)}}
 
-### Ejemplo #2: Obtener una cookie de ejemplo llamada _test2_
+### Ejemplo 2: Obtener una cookie de ejemplo llamada test2
 
 ```js
 document.cookie = "test1=Hola";
@@ -89,7 +90,7 @@ function alertCookieValue() {
 
 {{EmbedLiveSample('Example_2_Get_a_sample_cookie_named_test2', 200, 36)}}
 
-### Ejemplo #3: Hacer algo una sola vez
+### Ejemplo 3: Hacer algo una sola vez
 
 De manera a usar el siguiente código, favor remplace todas las veces la palabra `hacerAlgoUnaSolaVez` (el nombre de la cookie) con un nombre personalizado.
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -48,9 +49,7 @@ Para más información (en inglés):
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                                   | Comentario |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Animations', '#animation', 'animation') }} | {{ Spec2('CSS3 Animations') }} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -9,6 +9,7 @@ tags:
   - Visión general
 translation_of: Web/CSS/CSS_Logical_Properties
 ---
+
 {{CSSRef}}
 
 **CSS Logical Properties** (las propiedades lógicas en CSS) son un módulo de [CSS](/es/docs/Web/CSS) que introduce propiedades y valores lógicos, proporcionando la capacidad de controlar el diseño de forma lógica en vez de la asignación de dimensiones físicas de dirección y dimensión.
@@ -117,9 +118,7 @@ Las propiedades y valores lógicos usan los términos abstractos de bloque (_blo
 
 ## Especificaciones
 
-| Especificación                                       | Estado                                           | Comentario          |
-| ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en los Navegadores
 

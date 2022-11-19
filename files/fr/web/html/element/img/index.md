@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/img
 browser-compat: html.elements.img
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<img>`** permet d'intégrer une image dans un document.
 

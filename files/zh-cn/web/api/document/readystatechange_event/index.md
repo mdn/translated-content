@@ -117,7 +117,7 @@ IE 浏览器是一直支持 `readystatechange` 事件的，可作为 [DOMContent
 
 ## 参见
 
-- {{event("DOMContentLoaded")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/zh-CN/docs/Web/API/Window/DOMContentLoaded_event)
+- [`load`](/zh-CN/docs/Web/API/Window/load_event)
+- [`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/zh-CN/docs/Web/API/Window/unload_event)

@@ -11,6 +11,7 @@ tags:
   - Метапрограммирование
 translation_of: Web/JavaScript/Guide/Meta_programming
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
 
 С приходом ECMAScript 2015, в JavaScript введены объекты {{jsxref("Proxy")}} и {{jsxref("Reflect")}}, позволяющие перехватить и переопределить поведение фундаментальных процессов языка (таких как поиск свойств, присвоение, итерирование, вызов функций и так далее). С помощью этих двух объектов вы можете программировать на мета уровне JavaScript.
@@ -226,6 +227,7 @@ console.log(p.a, p.b); // 1, 42
         {{jsxref("Global_Objects/Proxy/handler/get", "handler.get()")}}
       </td>
       <td>
+        <!-- markdownlint-disable MD011 -->
         Property access: <code>proxy[foo]</code>and <code>proxy.bar</code
         ><br />Inherited property access: <code>Object.create(proxy)[foo]</code
         ><br />{{jsxref("Reflect.get()")}}
@@ -301,8 +303,7 @@ console.log(p.a, p.b); // 1, 42
       </td>
       <td>
         <code
-          ><font face="Open Sans, Arial, sans-serif">Метод </font
-          >enumerate</code
+          >Метод enumerate</code
         >
         должен возвращать объект.
       </td>

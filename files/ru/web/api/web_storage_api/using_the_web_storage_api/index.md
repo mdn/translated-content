@@ -3,6 +3,7 @@ title: Использование Web Storage API
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
+
 Web Storage API предоставляет механизм, при помощи которого браузер может безопасно хранить пары ключей/значений в намного более интуитивной форме, чем используя cookies. Эта статья предоставляет пошаговое руководство о том, как использовать эту простую технологию.
 
 ## Основные концепции
@@ -20,7 +21,7 @@ localStorage.setItem('colorSetting', '#a4509b');
 - `(sessionStorage)` обслуживает область хранения данных для каждого домена, доступное на протяжении сессии. (пока браузер открыт, даже в случае перезагрузки страницы)
 - `(localStorage)` делает то же самое, но сохраняет данные даже в случае, если переоткрыть браузер.
 
-Оба механизма доступны через {{domxref("Window.sessionStorage")}} и {{domxref("Window.localStorage")}} свойства (если быть более точным, в броузерах, поддерживающих хранилища объект `Window` выполняет объекты `WindowLocalStorage`и `WindowSessionStorage`, которые содержат свойства `localStorage`и `sessionStorage`) — вызов одного из них создаёт экземпляр объекта Storage, через который можно устанавливать, редактировать и удалять данные. Разные Storage объекты будут использовать `sessionStorage` и `localStorage поэтому они используются и управляются раздельно`
+Оба механизма доступны через {{domxref("Window.sessionStorage")}} и {{domxref("Window.localStorage")}} свойства (если быть более точным, в броузерах, поддерживающих хранилища объект `Window` выполняет объекты `WindowLocalStorage` и `WindowSessionStorage`, которые содержат свойства `localStorage` и `sessionStorage`) — вызов одного из них создаёт экземпляр объекта Storage, через который можно устанавливать, редактировать и удалять данные. Разные Storage объекты будут использовать `sessionStorage` и `localStorage поэтому они используются и управляются раздельно`
 
 Так, например, изначально вызов `localStorage` в документе возвращает {{domxref("Storage")}} объект; вызов `sessionStorage` в документе возвращает другой {{domxref("Storage")}} объект. Оба объекта могут управляться одинаково, но отдельно.
 
@@ -60,7 +61,7 @@ else {
 }
 ```
 
-Вы можете протестировать sessionStorage вместо этого используйте `storageAvailable('sessionStorage')`Смотрите здесь [краткую историю функции-обнаружения localStorage](https://gist.github.com/paulirish/5558557)
+Вы можете протестировать sessionStorage вместо этого используйте `storageAvailable('sessionStorage')` Смотрите здесь [краткую историю функции-обнаружения localStorage](https://gist.github.com/paulirish/5558557)
 
 ## Пример
 

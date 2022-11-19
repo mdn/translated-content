@@ -1,8 +1,8 @@
 ---
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
+
 {{JSRef}}
 
 O método **`Object.keys()`** retorna um array de propriedades enumeraveis de um determinado objeto, na mesma ordem em que é fornecida por um laço {{jsxref("Statements/for...in", "for...in")}} (a diferença é que um laço for-in enumera propriedades que estejam na cadeia de protótipos).

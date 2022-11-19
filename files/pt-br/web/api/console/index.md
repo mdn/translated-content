@@ -1,8 +1,8 @@
 ---
 title: Console
 slug: Web/API/Console
-translation_of: Web/API/Console
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 O objeto `console` fornece acesso ao console de debug do navegador (por exemplo, o [Web Console](/pt-BR/docs/Tools/Web_Console) do Firefox). O seu funcionamento específico varia de navegador para navegador, mas existe um conjunto de ferramentas que na prática são fornecidas normalmente.

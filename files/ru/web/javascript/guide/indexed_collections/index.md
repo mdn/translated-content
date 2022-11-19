@@ -3,6 +3,7 @@ title: Упорядоченные наборы данных
 slug: Web/JavaScript/Guide/Indexed_collections
 translation_of: Web/JavaScript/Guide/Indexed_collections
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
 Данная глава знакомит читателя с массивами - коллекциями элементов, упорядоченных по индексу. Глава включает в себя описание массивов и массивоподобных структур, таких как {{jsxref("Array")}} и {{jsxref("TypedArray")}}.
@@ -25,7 +26,7 @@ var arr = [element0, element1, ..., elementN];
 
 `element0, element1, ..., elementN` - список значений элементов массива. Если значения заданы, то эти значения будут являться элементами массива после его инициализации. Свойство `length` у массива будет равно количеству аргументов.
 
-Синтаксис с использованием квадратных скобок называется "литерал массива" (array literal) или "инициализатор массива". Такая запись короче, чем другие способы создания массива, и, как правило, более предпочтительна. См. [Array literals](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals "en-US/docs/JavaScript/Guide/Values, Variables, and Literals#Array Literals").
+Синтаксис с использованием квадратных скобок называется "литерал массива" (array literal) или "инициализатор массива". Такая запись короче, чем другие способы создания массива, и, как правило, более предпочтительна. См. [Array literals](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals).
 
 Для создания массива без элементов, но ненулевой длины, возможно использовать одно из следующих выражений:
 
@@ -38,7 +39,7 @@ var arr = [];
 arr.length = arrayLength;
 ```
 
-> **Примечание:** **Замечание**: в примере выше `arrayLength` должно иметь числовой тип `Number`. В противном случае будет создан массив с единственным элементом (указанное значение). Вызванная функция `arr.length` вернёт значение `arrayLength`, но на самом деле массив будет содержать пустые элементы (undefined). Использование цикла[ ](/ru/docs/Web/JavaScript/Reference/Statements/for...in){{jsxref("Statements/for...in","for...in")}} для обработки значений массива не вернёт ни одного элемента.
+> **Примечание:** **Замечание**: в примере выше `arrayLength` должно иметь числовой тип `Number`. В противном случае будет создан массив с единственным элементом (указанное значение). Вызванная функция `arr.length` вернёт значение `arrayLength`, но на самом деле массив будет содержать пустые элементы (undefined). Использование цикла {{jsxref("Statements/for...in", "for...in")}} для обработки значений массива не вернёт ни одного элемента.
 
 Массивы могут быть присвоены свойству нового или уже существующего объекта, как показано ниже:
 
@@ -153,7 +154,7 @@ for (var i = 0; i < colors.length; i++) {
 }
 ```
 
-Если вам заранее известно, что ни один элемент массива не будет расценён как `false` при приведении к boolean — например, каждый элемент массива является [DOM](/ru/docs/DOM "en-US/docs/DOM") узлом, тогда вы можете блеснуть чуть более эффективным оборотом:
+Если вам заранее известно, что ни один элемент массива не будет расценён как `false` при приведении к boolean — например, каждый элемент массива является [DOM](/ru/docs/DOM) узлом, тогда вы можете блеснуть чуть более эффективным оборотом:
 
 ```js
 var divs = document.getElementsByTagName('div');
@@ -430,7 +431,7 @@ for (i = 0; i < 4; i++) {
 
 ### Массивы и регулярные выражения
 
-Когда массив является результатом вычислений регулярного выражения над строкой, он содержит свойства и элементы с информацией о совпадениях. Массив возвращается функциями {{jsxref("Global_Objects/RegExp/exec","RegExp.exec()")}}, {{jsxref("Global_Objects/String/match","String.match()")}} и {{jsxref("Global_Objects/String/split","String.split()")}} Подробнее о том, как использовать массивы с регулярными выражениями смотрите в [Regular Expressions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions "en-US/docs/JavaScript/Guide/Regular Expressions").
+Когда массив является результатом вычислений регулярного выражения над строкой, он содержит свойства и элементы с информацией о совпадениях. Массив возвращается функциями {{jsxref("Global_Objects/RegExp/exec","RegExp.exec()")}}, {{jsxref("Global_Objects/String/match","String.match()")}} и {{jsxref("Global_Objects/String/split","String.split()")}} Подробнее о том, как использовать массивы с регулярными выражениями смотрите в [Regular Expressions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions).
 
 ### Работа с массивоподобными объектами
 

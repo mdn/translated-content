@@ -11,9 +11,8 @@ tags:
   - XHTML
 original_slug: Applying_SVG_effects_to_HTML_content
 ---
-Aplicación de efectos de SVG para el contenido HTML.
 
-{{ gecko_minversion_header("1.9.1") }}
+Aplicación de efectos de SVG para el contenido HTML.
 
 Firefox 3.5 introduce soporte para usar SVG como un componente de estilos CSS para aplicar efectos de SVG para el contenido HTML.
 

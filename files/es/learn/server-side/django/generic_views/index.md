@@ -10,6 +10,7 @@ tags:
   - vistas django
 translation_of: Learn/Server-side/Django/Generic_views
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
 
 Este tutorial extiende nuestro sitio web de la [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website), añadiendo páginas de listas y detalles de libros y autores. Aquí aprenderemos sobre vistas genéricas basadas en clases, y mostraremos cómo éstas pueden reducir la cantidad de código que tienes que escribir para casos de uso común. También entraremos en el manejo de URL en gran detalle, mostrando cómo realizar un emparejamiento de patrones básico.
@@ -551,7 +552,7 @@ Este método es necesario porque has declarado un campo `ForeignKey` (uno-a-much
 
 ## ¿Cómo se ve?
 
-En este punto deberíamos haber creado todo lo necesario para desplegar tanto la lista de libros como las páginas de detalles de libros. Ejecuta el servidor (`python3 manage.py runserver`) y dirígete en tu navegador a <http://127.0.0.1:8000/>.
+En este punto deberíamos haber creado todo lo necesario para desplegar tanto la lista de libros como las páginas de detalles de libros. Ejecuta el servidor (`python3 manage.py runserver`) y dirígete en tu navegador a `http://127.0.0.1:8000/`.
 
 > **Advertencia:** No hagas click aún en ningún enlace de autor o de detalles de autores -- ¡los crearás en el reto!
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Global_attributes/slot
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`slot`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소에 [섀도우 DOM](/ko/docs/Web/Web_Components/Using_shadow_DOM) 섀도우 트리를 할당합니다. `slot` 특성을 지정한 요소는 {{htmlattrxref("name", "slot")}} 특성의 값이 요소의 `slot` 값과 일치하는 {{htmlelement("slot")}} 요소에 할당됩니다.

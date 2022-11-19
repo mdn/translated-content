@@ -3,7 +3,7 @@ title: '<form>: フォーム要素'
 slug: Web/HTML/Element/form
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<form>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウェブサーバーに情報を送信するための対話型コントロールを含む文書の区間を表します。
 

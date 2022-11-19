@@ -1,9 +1,9 @@
 ---
 title: <textarea>
 slug: Web/HTML/Element/textarea
-translation_of: Web/HTML/Element/textarea
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 O **elemento** HTML `<textarea>` representa um controle de edição para uma caixa de texto, útil quando você quer permitir ao usuário informar um texto extenso em formato livre, como um comentário ou formulário de retorno.
 

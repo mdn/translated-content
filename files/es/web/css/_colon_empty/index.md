@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:empty
 ---
+
 {{ CSSRef() }}La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:empty`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento que no tenga hijos. Los hijos pueden ser nodos de elemento o texto (incluido el espacio en blanco). Los comentarios o las instrucciones de procesamiento no afectan si un elemento se considera vacío.
 
 > **Nota:** En {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} la pseudo-clase `:empty` fue modificada para actuar como {{CSSxRef(":-moz-only-whitespace")}}, pero ningún navegador actualmente suporta aún esto.
@@ -74,10 +75,7 @@ El texto que proporciona el nombre accesible del control interactivo se puede oc
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                                   | Comentarios         |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS4 Selectors', '#empty-pseudo', ':empty') }} | {{ Spec2('CSS4 Selectors') }} | Ningún cambio.      |
-| {{ SpecName('CSS3 Selectors', '#empty-pseudo', ':empty') }} | {{ Spec2('CSS3 Selectors') }} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

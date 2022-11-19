@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Conceptos_Basicos_de_Flexbox
 ---
+
 {{CSSRef}}
 
 El Módulo de Caja Flexible, comúnmente llamado flexbox, fue diseñado como un modelo unidimensional de layout, y como un método que pueda ayudar a distribuir el espacio entre los ítems de una interfaz y mejorar las capacidades de alineación. Este artículo hace un repaso de las principales características de flexbox, las que exploraremos con mayor detalle en el resto de estas guías.
@@ -196,7 +197,7 @@ La propiedad {{cssxref("justify-content")}} es usada para alinear los ítems en 
 
 También podemos usar `space-between` para tomar todo el espacio sobrante después de que los ítems hayan sido colocados, y distribuir de forma pareja los ítems para que haya un espacio equitativo entre cada ítem. O bien, usamos el valor `space-around` para crear un espacio equitativo a la derecha e izquierda de cada ítem.
 
-Pruebe con los siguientes valores de`justify-content` en el ejemplo en vivo:
+Pruebe con los siguientes valores de `justify-content` en el ejemplo en vivo:
 
 - `space-evenly`
 - `flex-start`

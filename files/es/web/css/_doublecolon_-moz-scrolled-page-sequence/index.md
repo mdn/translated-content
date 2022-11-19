@@ -9,6 +9,7 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/::-moz-scrolled-page-sequence
 ---
+
 {{CSSRef}}{{non-standard_header}}
 
 ## Resumen

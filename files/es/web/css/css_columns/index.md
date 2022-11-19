@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Columns
 original_slug: Web/CSS/Columnas_CSS
 ---
+
 {{CSSRef}}
 
 **Columnas CSS** es un módulo de CSS que define un diseño multicolumna, permitiendo indicar cómo debe fluir el contenido a través de las columnas y cómo manejar reglas y separaciones.
@@ -37,6 +38,4 @@ original_slug: Web/CSS/Columnas_CSS
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Comentario         |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Multicol')}} | {{Spec2('CSS3 Multicol')}} | Definición inicial |
+{{Specifications}}

@@ -9,6 +9,7 @@ tags:
   - Только для чтения
 translation_of: Web/API/Document/documentElement
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.documentElement`** - свойство только для чтения, которое возвращает элемент [`Element`](/ru/docs/DOM/element) , который является коренным элементом документа [`document`](/ru/docs/DOM/document) (например элемент `<html>` для HTML документов).

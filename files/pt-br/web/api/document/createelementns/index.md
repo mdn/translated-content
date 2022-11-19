@@ -1,13 +1,8 @@
 ---
 title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
-tags:
-  - API
-  - DOM
-  - Referencia
-  - metodo
-translation_of: Web/API/Document/createElementNS
 ---
+
 {{ApiRef("DOM")}}
 
 Creates an element with the specified namespace URI and qualified name.

@@ -1,15 +1,8 @@
 ---
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 ---
+
 {{JSRef}}
 
 O método **`Object.assign()`** é usado para copiar os valores de todas as propriedades próprias enumeráveis de um ou mais objetos _de origem_ para um objeto _destino_. Este método irá retornar o objeto _destino_.

@@ -222,11 +222,11 @@ function handleUserlistMsg(msg) {
 
 > **备注：** 显然，通过添加和删除单个用户而不是每次更改时都重新构建整个列表来更新列表会更有效，但对于本例而言，这已经足够好了。
 
-然后我们使用 {{jsxref("Array.forEach", "forEach()")}} 迭代用户名数组。对于每个名称，我们创建一个新的 {{HTMLElement("li")}} 元素，然后使用{{domxref("Document.createTextNode", "createTextNode()")}} 创建一个包含用户名的新文本节点。该文本节点被添加为 `<li>` 元素的子节点。接下来，我们为列表项上的 {{event("click")}} 事件设置一个处理程序，单击用户名将调用 `invite()` 方法，我们将在下一节中查看该方法。
+然后我们使用 {{jsxref("Array.forEach", "forEach()")}} 迭代用户名数组。对于每个名称，我们创建一个新的 {{HTMLElement("li")}} 元素，然后使用{{domxref("Document.createTextNode", "createTextNode()")}} 创建一个包含用户名的新文本节点。该文本节点被添加为 `<li>` 元素的子节点。接下来，我们为列表项上的 [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件设置一个处理程序，单击用户名将调用 `invite()` 方法，我们将在下一节中查看该方法。
 
 #### 开始一个通话
 
-当用户单击要调用的用户名时，将调用 `invite()` 函数作为该事件的事件处理程序 {{event("click")}} 事件：
+当用户单击要调用的用户名时，将调用 `invite()` 函数作为该事件的事件处理程序 [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件：
 
 ```js
 var mediaConstraints = {
@@ -271,7 +271,7 @@ function invite(evt) {
 
 然后遍历流中的磁道，调用 {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} 将每个磁道添加到 `RTCPeerConnection`。尽管连接尚未完全建立，但必须尽快开始向其发送媒体数据，因为媒体数据将帮助 ICE 层决定采取的最佳连接方式，这有助于协商过程。
 
-一旦媒体数据连接到 `RTCPeerConnection`，就会在连接处触发事件{{event("negotiationneeded")}} 事件，以便启动 ICE 协商。
+一旦媒体数据连接到 `RTCPeerConnection`，就会在连接处触发 {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} 事件，以便启动 ICE 协商。
 
 如果在尝试获取本地媒体流时发生错误，catch 子句将调用`handleGetUserMediaError()`，根据需要向用户显示适当的错误。
 
@@ -338,23 +338,23 @@ function createPeerConnection() {
 前三个事件处理程序是必需的；你必须处理它们才能使用 WebRTC 执行任何涉及流媒体的操作。其余的并不是严格要求的，但可能有用，我们将对此进行探讨。在这个例子中，还有一些其他的事件我们没有使用。下面是我们将要实现的每个事件处理程序的摘要：
 
 - {{domxref("RTCPeerConnection.onicecandidate")}}
-  - : 当需要你通过信令服务器将一个 ICE 候选发送给另一个对等端时，本地 ICE 层将会调用你的 {{event("icecandidate")}} 事件处理程序。有关更多信息，请参阅[交换 ICE 候选](#交换_ice_候选) 以查看此示例的代码。
+  - : 当需要你通过信令服务器将一个 ICE 候选发送给另一个对等端时，本地 ICE 层将会调用你的 `icecandidate` 事件处理程序。有关更多信息，请参阅[交换 ICE 候选](#交换_ice_候选) 以查看此示例的代码。
 - {{domxref("RTCPeerConnection.ontrack")}}
-  - : 当向连接中添加磁道时，{{event("track")}} 事件的此处理程序由本地 WebRTC 层调用。例如，可以将传入媒体连接到元素以显示它。详见[接收新的流数据](#接收新的流数据) 。
+  - : 当向连接中添加磁道时，`track` 事件的此处理程序由本地 WebRTC 层调用。例如，可以将传入媒体连接到元素以显示它。详见[接收新的流数据](#接收新的流数据) 。
 - {{domxref("RTCPeerConnection.onnegotiationneeded")}}
   - : 每当 WebRTC 基础结构需要你重新启动会话协商过程时，都会调用此函数。它的工作是创建和发送一个请求，给被叫方，要求它与我们联系。参见[开始协商](#开始协商)了解我们如何处理这一问题。
 - {{domxref("RTCPeerConnection.onremovetrack")}}
-  - : 调用与 `ontrack`相对应的对象来处理 {{event("removetrack")}} 事件；当远程对等端从正在发送的媒体中删除磁道时，它将发送到`RTCPeerConnection`。参见 [处理流的移除](#处理流的移除) 。
+  - : 调用与 `ontrack`相对应的对象来处理 `removetrack` 事件；当远程对等端从正在发送的媒体中删除磁道时，它将发送到`RTCPeerConnection`。参见[处理流的移除](#处理流的移除) 。
 - {{domxref("RTCPeerConnection.oniceconnectionstatechange")}}
-  - : ICE 层发送{{event("iceconnectionstatechange")}} 事件，让你了解 ICE 连接状态的更改。这可以帮助你了解连接何时失败或丢失。我们将在下面的[ICE 连接状态](#ice_连接状态)中查看此示例的代码。
+  - : ICE 层发送 `iceconnectionstatechange` 事件，让你了解 ICE 连接状态的更改。这可以帮助你了解连接何时失败或丢失。我们将在下面的[ICE 连接状态](#ice_连接状态)中查看此示例的代码。
 - {{domxref("RTCPeerConnection.onicegatheringstatechange")}}
   - : 当 ICE 代理收集候选对象的过程从一个状态切换到另一个状态（例如开始收集候选对象或完成协商）时，ICE 层将向你发送事件（“ICegulatingStateChange”）事件。见下文 [ICE 收集状态](#ice_收集状态)。
 - {{domxref("RTCPeerConnection.onsignalingstatechange")}}
-  - : 当信令进程的状态更改时（或如果到信令服务器的连接更改时），WebRTC 架构将向你发送 {{event("signalingstatechange")}} 消息。参见[ICE 信令状态](#ice_信令状态)查看我们的代码。
+  - : 当信令进程的状态更改时（或如果到信令服务器的连接更改时），WebRTC 架构将向你发送 `signalingstatechange` 消息。参见[ICE 信令状态](#ice_信令状态)查看我们的代码。
 
 #### 开始协商
 
-一旦调用者创建了其 {{domxref("RTCPeerConnection")}} ，创建了媒体流，并将其磁道添加到连接中，如 [开始通话的交互](#开始通话的交互) 所示，浏览器将向 {{domxref("RTCPeerConnection")}} 传递一个 {{event("negotiationneeded")}} 事件，以指示它已准备好开始与其他对等方协商。以下是我们处理 {{event("negotiationneeded")}} 事件的代码：
+一旦调用者创建了其 {{domxref("RTCPeerConnection")}} ，创建了媒体流，并将其磁道添加到连接中，如 [开始通话的交互](#开始通话的交互) 所示，浏览器将向 {{domxref("RTCPeerConnection")}} 传递一个 {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} 事件，以指示它已准备好开始与其他对等方协商。以下是我们处理 {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} 事件的代码：
 
 ```js
 function handleNegotiationNeededEvent() {
@@ -392,7 +392,7 @@ function handleNegotiationNeededEvent() {
 
 如果在初始 `createOffer()` 或后面的任何实现处理程序中发生错误，则通过调用 `reportError()` 函数报告错误。
 
-在 `setLocalDescription()`的实现处理程序运行后，ICE 代理开始向其发现的每个潜在 {{domxref("RTCPeerConnection")}} 配置发送 {{event("icecandidate")}} 事件。我们的 `icecandidate` 事件处理程序负责将候选对象传输到另一个对等方。
+在 `setLocalDescription()`的实现处理程序运行后，ICE 代理开始向其发现的每个潜在 {{domxref("RTCPeerConnection")}} 配置发送 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件。我们的 `icecandidate` 事件处理程序负责将候选对象传输到另一个对等方。
 
 #### 会话协商
 
@@ -400,7 +400,7 @@ function handleNegotiationNeededEvent() {
 
 ##### 处理请求
 
-当请求到达时，调用被调用方的 `handleVideoOfferMsg()` 函数时会收到`"video-offer"` 消息。这个函数需要做两件事。首先，它需要创建自己的{{domxref("RTCPeerConnection")}} 并添加包含麦克风和网络摄像头的音频和视频的磁道。其次，它需要对收到的请求进行处理，构建并返回应答。
+当请求到达时，调用被调用方的 `handleVideoOfferMsg()` 函数时会收到`"video-offer"` 消息。这个函数需要做两件事。首先，它需要创建自己的 {{domxref("RTCPeerConnection")}} 并添加包含麦克风和网络摄像头的音频和视频的磁道。其次，它需要对收到的请求进行处理，构建并返回应答。
 
 ```
 function handleVideoOfferMsg(msg) {
@@ -448,11 +448,11 @@ function handleVideoOfferMsg(msg) {
 
 捕捉到的任何错误都会被传递给 `handleGetUserMediaError()`，详见 [处理 getUserMedia() 错误](#处理_getusermedia_错误) 。
 
-> **备注：** 与调用者的情况一样，一旦 `setLocalDescription()`实现处理程序运行完毕，浏览器将开始触发被调用者必须处理的{{event("icecandidate")}} 事件，每个需要传输到远程对等方的候选事件对应一个事件。
+> **备注：** 与调用者的情况一样，一旦 `setLocalDescription()`实现处理程序运行完毕，浏览器将开始触发被调用者必须处理的 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件，每个需要传输到远程对等方的候选事件对应一个事件。
 
 ##### 发送 ICE 候选
 
-ICE 协商过程涉及到每一个对等端不断地向另一个对等端发送候选，直到它用尽了支持 `RTCPeerConnection`的媒体传输需求的潜在方法。因为 ICE 不知道你的信令服务器，所以你的处理程序代码需要处理 {{event("icecandidate")}} 事件中每个候选的传输。
+ICE 协商过程涉及到每一个对等端不断地向另一个对等端发送候选，直到它用尽了支持 `RTCPeerConnection`的媒体传输需求的潜在方法。因为 ICE 不知道你的信令服务器，所以你的处理程序代码需要处理 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件中每个候选的传输。
 
 你的 {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} 处理程序接收一个事件，该事件的候选属性是描述该候选的 SDP（或为 `null` ，表示 ICE 层已耗尽建议的潜在配置）。候选的内容是你需要使用信令服务器传输的内容。下面是我们的示例实现：
 
@@ -479,7 +479,7 @@ function handleICECandidateEvent(event) {
 
 此消息的格式（与处理信号时所做的所有操作一样）完全取决于你的需要；你可以根据需要提供其他信息。
 
-> **备注：** 重要的是要记住， {{event("icecandidate")}} 事件**不会**在 ICE 候选从呼叫的另一端到达时发送。相反，它们是由你自己的呼叫端发送的，这样你就可以承担通过你选择的任何通道传输数据的任务。当你刚接触 WebRTC 时，这会让人困惑。
+> **备注：** 重要的是要记住，{{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件**不会**在 ICE 候选从呼叫的另一端到达时发送。相反，它们是由你自己的呼叫端发送的，这样你就可以承担通过你选择的任何通道传输数据的任务。当你刚接触 WebRTC 时，这会让人困惑。
 
 ##### 接收 ICE 候选
 
@@ -498,7 +498,7 @@ function handleNewICECandidateMsg(msg) {
 
 每一个对等端向另一个对等端发送一个候选的可能传输配置，它认为这对于正在交换的媒体可能是可行的。在某种程度上，这两端认为，一个给定的候选是一个很好的选择，于是他们打开连接，开始分享媒体数据。然而，重点要注意的是，一旦媒体数据开始流动，ICE 上协商就不会停止。相反，在对话开始后，候选对象可能仍然在不断地进行交换，可能是在试图找到更好的连接方法的同时，也可能只是因为在对等方成功建立连接时，他们已经在传输中了。
 
-此外，如果发生什么事情导致流场景发生变化，协商将再次开始，将事件{{event("negotiationneeded")}}事件发送到{{domxref("RTCPeerConnection")}}，整个过程将如前所述重新开始。这可能发生在各种情况下，包括：
+此外，如果发生什么事情导致流场景发生变化，协商将再次开始，将事件 {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} 事件发送到{{domxref("RTCPeerConnection")}}，整个过程将如前所述重新开始。这可能发生在各种情况下，包括：
 
 - 网络状态的变化，如带宽变化、从 WiFi 过渡到蜂窝连接等。
 - 在手机的前后摄像头之间切换。
@@ -506,7 +506,7 @@ function handleNewICECandidateMsg(msg) {
 
 ##### 接收新的流数据
 
-当新的磁道添加到 `RTCPeerConnection`时——通过调用其{{domxref("RTCPeerConnection.addTrack", "addTrack()")}} 方法，或者由于重新协商流的格式——对于添加到连接的每个磁道，一个{{event("track")}}事件设置为 `RTCPeerConnection` 。使用新添加的媒体需要实现 `track` 事件的处理程序。常见的需要是将传入的媒体附加到适当的 HTML 元素。在我们的示例中，我们将磁道的流添加到显示传入视频的 {{HTMLElement("video")}} 元素：
+当新的磁道添加到 `RTCPeerConnection`时——通过调用其{{domxref("RTCPeerConnection.addTrack", "addTrack()")}} 方法，或者由于重新协商流的格式——对于添加到连接的每个磁道，一个 {{domxref("RTCPeerConnection.track_event", "track")}} 事件设置为 `RTCPeerConnection` 。使用新添加的媒体需要实现 `track` 事件的处理程序。常见的需要是将传入的媒体附加到适当的 HTML 元素。在我们的示例中，我们将磁道的流添加到显示传入视频的 {{HTMLElement("video")}} 元素：
 
 ```js
 function handleAddStreamEvent(event) {
@@ -521,7 +521,7 @@ function handleAddStreamEvent(event) {
 
 ##### 处理流的移除
 
-当远程对等方通过调用{{domxref("RTCPeerConnection.removeTrack()")}}.从连接中删除磁道时，你的代码将接收事件{{event("removetrack")}}事件。 `"removetrack"` 的处理程序是：
+当远程对等方通过调用{{domxref("RTCPeerConnection.removeTrack()")}}.从连接中删除磁道时，你的代码将接收事件 {{domxref("MediaStream/removetrack_event", "removetrack")}} 事件。`"removetrack"` 的处理程序是：
 
 ```
 function handleRemoveTrackEvent(event) {
@@ -613,11 +613,11 @@ function closeVideoCall() {
 
 #### 处理状态变更
 
-还有许多其他事件可以设置监听器，用于通知代码各种状态更改。我们使用三种方法： {{event("iceconnectionstatechange")}}，{{event("icegatheringstatechange")}}，和 {{event("signalingstatechange")}}。
+还有许多其他事件可以设置监听器，用于通知代码各种状态更改。我们使用三种方法：{{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}、{{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} 和 {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}。
 
 ##### ICE 连接状态
 
-事件{{event("iceconnectionstatechange")}}当连接状态更改时（例如，当从另一端终止调用时），由 ICE 层将事件发送到{{domxref("RTCPeerConnection")}} 。
+事件 {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} 当连接状态更改时（例如，当从另一端终止调用时），由 ICE 层将事件发送到{{domxref("RTCPeerConnection")}} 。
 
 ```js
 function handleICEConnectionStateChangeEvent(event) {
@@ -635,7 +635,7 @@ function handleICEConnectionStateChangeEvent(event) {
 
 ##### ICE 信令状态
 
-同样，我们监听{{event("signalingstatechange")}}事件。如果信号状态变为 `closed`，我们同样关闭呼叫。
+同样，我们监听 {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} 事件。如果信号状态变为 `closed`，我们同样关闭呼叫。
 
 ```js
   myPeerConnection.onsignalingstatechange = function(event) {
@@ -651,7 +651,7 @@ function handleICEConnectionStateChangeEvent(event) {
 
 ##### ICE 收集状态
 
-{{event("icegatheringstatechange")}} 事件用于让你知道何时 ICE 候选收集进程状态发生更改。我们的示例并没有将其用于任何用途，但是为了调试的目的观察这些事件以及检测候选集合何时完成都是有用的。
+{{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} 事件用于让你知道何时 ICE 候选收集进程状态发生更改。我们的示例并没有将其用于任何用途，但是为了调试的目的观察这些事件以及检测候选集合何时完成都是有用的。
 
 ```js
 function handleICEGatheringStateChangeEvent(event) {

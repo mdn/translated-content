@@ -3,6 +3,7 @@ title: <a>
 slug: Web/SVG/Element/a
 translation_of: Web/SVG/Element/a
 ---
+
 {{SVGRef}}
 
 El elemento SVG \<a> crea un hipervínculo a otras páginas web, archivos, ubicaciones dentro de la misma página, direcciones de correo electrónico o cualquier otra URL.
@@ -54,7 +55,7 @@ svgns|a:hover, svgns|a:active {
 
 {{EmbedLiveSample('Exemple', 100, 100)}}
 
-> **Advertencia:** Puesto que este elemento comparte su nombre de etiqueta con el [elemento `<a>`de HTML](/es/docs/Web/HTML/Element/a), la selección de "`a`" con CSS o [`querySelector`](/es/docs/Web/API/Document/querySelector) puede aplicarse al tipo incorrecto de elemento. Pruebe [la regla `@namespace`](/es/docs/Web/CSS/@namespace) para distinguir entre los dos.
+> **Advertencia:** Puesto que este elemento comparte su nombre de etiqueta con el [elemento `<a>` de HTML](/es/docs/Web/HTML/Element/a), la selección de "`a`" con CSS o [`querySelector`](/es/docs/Web/API/Document/querySelector) puede aplicarse al tipo incorrecto de elemento. Pruebe [la regla `@namespace`](/es/docs/Web/CSS/@namespace) para distinguir entre los dos.
 
 ## Atributos
 
@@ -109,11 +110,7 @@ svgns|a:hover, svgns|a:active {
 
 ## Especificaciones
 
-| Especificación                                                                                                                           | Estado                               | Comentatio                                                                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}} | {{Spec2('Referrer Policy')}} | Añadido el atributo `referrerpolicy`.                                                  |
-| {{SpecName("SVG2", "linking.html#Links", "&lt;a&gt;")}}                                                                 | {{Spec2("SVG2")}}             | Se sustituye el atributo {{SVGAttr("xlink:href")}} por {{SVGAttr("href")}} |
-| {{SpecName("SVG1.1", "linking.html#Links", "&lt;a&gt;")}}                                                             | {{Spec2("SVG1.1")}}             | Definición inicial                                                                     |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

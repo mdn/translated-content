@@ -7,6 +7,7 @@ browser-compat: javascript.builtins.Symbol.toString
 l10n:
   sourceCommit: cf607d68522cd35ee7670782d3ee3a361eaef2e4
 ---
+
 {{JSRef}}
 
 El método **`toString()`** devuelve una cadena que representa el objeto {{jsxref("Symbol")}} especificado.

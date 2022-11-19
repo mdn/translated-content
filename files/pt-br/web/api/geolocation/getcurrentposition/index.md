@@ -1,8 +1,8 @@
 ---
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
-translation_of: Web/API/Geolocation/getCurrentPosition
 ---
+
 {{ APIRef("Geolocation API") }}
 
 O método **`Geolocation.getCurrentPosition()`** é utilizado para capturar a posição atual do dispositivo.

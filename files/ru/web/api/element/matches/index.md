@@ -3,6 +3,7 @@ title: Element.matches()
 slug: Web/API/Element/matches
 translation_of: Web/API/Element/matches
 ---
+
 {{ APIRef("DOM") }}
 
 ## Описание
@@ -18,7 +19,7 @@ var result = element.matches(selectorString)
 ```
 
 - `Результат выполнения - true или false.`
-- **`selectorString`** - строка, содержащая любой css-селектор, к примеру:_ **"div"**_,_ **"\*"**_,_ **"#id"**_ и прочие.
+- **`selectorString`** - строка, содержащая любой css-селектор, к примеру: **"div"**, **"\*"**, **"#id"** и прочие.
 
 ## Пример
 

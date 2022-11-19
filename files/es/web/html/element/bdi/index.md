@@ -11,6 +11,7 @@ tags:
 translation_of: Web/HTML/Element/bdi
 original_slug: Web/HTML/Elemento/bdi
 ---
+
 ## Resumen
 
 El elemento _HTML `<bdi>` _(o elemento de aislamiento Bi-Direccional) aisla un trozo de texto para que pueda ser formateado con una dirección diferente al texto que hay fuera de él.
@@ -42,10 +43,7 @@ Esta palabra arábica REDLOHECALP_CIBARA se muestra automáticamente de derecha 
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-bdi-element', '&lt;bdi&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'the-bdi-element.html#the-bdi-element', '&lt;bdi&gt;')}}         | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad con los distintos navegadores
 
@@ -56,4 +54,4 @@ Esta palabra arábica REDLOHECALP_CIBARA se muestra automáticamente de derecha 
 - Elementos HTML relacionados: {{HTMLElement("bdo")}}
 - Propiedades HTML relacionadas: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

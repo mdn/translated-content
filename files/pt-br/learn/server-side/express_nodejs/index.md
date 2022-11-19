@@ -1,8 +1,8 @@
 ---
 title: Express Web Framework (Node.js/JavaScript)
 slug: Learn/Server-side/Express_Nodejs
-translation_of: Learn/Server-side/Express_Nodejs
 ---
+
 {{LearnSidebar}}
 
 Express é um popular framework web estruturado, escrito em JavaScript que roda sobre o ambiente node.js em tempo de execução. Este módulo explica alguns dos principais benefícios deste framework, como configurar o seu ambiente de desenvolvimento e como executar tarefas comuns de desenvolvimento e implantação da web.

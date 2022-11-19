@@ -4,6 +4,7 @@ slug: Web/HTML/Link_types
 translation_of: Web/HTML/Link_types
 original_slug: Web/HTML/Типы_ссылок
 ---
+
 {{HTMLSidebar}}
 
 В HTML следующие типы ссылок показывают отношения между двумя документами, в одном из которых, ссылка ведёт к другому, используя элементы {{HTMLElement("a")}}, {{HTMLElement("area")}} или {{HTMLElement("link")}}.

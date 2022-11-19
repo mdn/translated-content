@@ -7,6 +7,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/align-self
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -55,9 +56,7 @@ align-self: unset;
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                                       | Comentarios        |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
-| {{ SpecName('CSS3 Box Alignment', '#align-self-property', 'align-self') }} | {{ Spec2('CSS3 Box Alignment') }} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

@@ -3,6 +3,7 @@ title: Getting Started
 slug: Web/SVG/Tutorial/Getting_Started
 translation_of: Web/SVG/Tutorial/Getting_Started
 ---
+
 {{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
 
 ### Un Ejemplo Simple
@@ -33,7 +34,7 @@ El proceso de renderizado incluye lo siguiente :
 1. Comenzamos con el elemento raiz del `svg`:
 
     - La declaracion de tipo de documento (doctype) usual en (X)HTML debería dejarse de lado debido a que la validación DTD based SVG conduce a mas problemas que soluciones.
-    - En cambio, los atributos `version` y `baseProfile`deberian ser usados siempre para identificar la version de SVG para otro tipo de validaciones.
+    - En cambio, los atributos `version` y `baseProfile` deberian ser usados siempre para identificar la version de SVG para otro tipo de validaciones.
     - Debido a SVG es una especie de dialecto de XML, SVG debe unir siempre los namespaces correctamente (en el atributo xmlns). Para mayor información, vea [Namespaces Crash Course](/es/docs/Web/SVG/Namespaces_Crash_Course).
 
 2. El fondo esta puesto en rojo dibujando un rectangulo [`<rect/>`](/en/SVG/Element/rect) que cubre el area de la imagen.

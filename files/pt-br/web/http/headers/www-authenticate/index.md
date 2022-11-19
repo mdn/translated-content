@@ -1,14 +1,8 @@
 ---
 title: WWW-Authenticate
 slug: Web/HTTP/Headers/WWW-Authenticate
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de Resposta
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/WWW-Authenticate
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho da resposta HTTP **`WWW-Authenticate`** define o método de autenticação a ser usado para obter acesso ao recurso.

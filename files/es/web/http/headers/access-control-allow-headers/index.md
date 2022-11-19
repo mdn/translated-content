@@ -8,6 +8,7 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
+
 {{HTTPSidebar}}
 
 El encabezado de respuesta **`Access-Control-Allow-Headers`** es usado en la respuesta a una {{glossary("preflight request", "solicitud preflight")}} para indicar cuáles encabezados HTTP pueden ser usados durante dicha solicitud.
@@ -39,9 +40,7 @@ Access-Control-Allow-Headers: X-Custom-Header
 
 ## Especificaciones
 
-| Specification                                                                                                            | Status                   | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#http-access-control-allow-headers', 'Access-Control-Allow-Headers')}} | {{Spec2("Fetch")}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

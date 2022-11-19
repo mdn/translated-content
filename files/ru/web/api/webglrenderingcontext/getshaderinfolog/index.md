@@ -3,6 +3,7 @@ title: WebGLRenderingContext.getShaderInfoLog()
 slug: Web/API/WebGLRenderingContext/getShaderInfoLog
 translation_of: Web/API/WebGLRenderingContext/getShaderInfoLog
 ---
+
 {{APIRef("WebGL")}}
 
 **WebGLRenderingContext.getShaderInfoLog** возвращает логи для указанной шейдерной программы {{domxref("WebGLShader")}}. Оно содержит предупреждения, информацию для отладки и информацию о компиляции.

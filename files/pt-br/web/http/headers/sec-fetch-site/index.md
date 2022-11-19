@@ -1,8 +1,8 @@
 ---
 title: Sec-Fetch-Site
 slug: Web/HTTP/Headers/Sec-Fetch-Site
-translation_of: Web/HTTP/Headers/Sec-Fetch-Site
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de busca de metadados **`Sec-Fetch-Site`** indica a relação entre a origem do iniciador da requisição e a origem do recurso.

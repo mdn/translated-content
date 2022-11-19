@@ -1,8 +1,8 @@
 ---
 title: CanvasRenderingContext2D.clip()
 slug: Web/API/CanvasRenderingContext2D/clip
-translation_of: Web/API/CanvasRenderingContext2D/clip
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.clip()`** da API do Canvas 2D transforma o caminho atualmente construido em um caminho atual de recorte.

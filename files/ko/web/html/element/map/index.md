@@ -10,7 +10,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/map
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<map>` 요소**는 {{htmlelement("area")}} 요소와 함께 이미지 맵(클릭 가능한 링크 영역)을 정의할 때 사용합니다.
 

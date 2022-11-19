@@ -1,8 +1,8 @@
 ---
 title: 422 Unprocessable Entity
 slug: Web/HTTP/Status/422
-translation_of: Web/HTTP/Status/422
 ---
+
 {{HTTPSidebar}}
 
 O codigo de resposta HTTP **`422 Unprocessable Entity`** indica que o servidor entende o tipo de conteúdo da entidade da requisição, e a sintaxe da requisição esta correta, mas não foi possível processar as instruções presentes.

@@ -1,13 +1,8 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
-tags:
-  - Array
-  - JavaScript
-  - Lista
-  - splice
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Resumo

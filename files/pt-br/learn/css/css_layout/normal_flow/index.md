@@ -1,9 +1,9 @@
 ---
 title: Fluxo Normal
 slug: Learn/CSS/CSS_layout/Normal_Flow
-translation_of: Learn/CSS/CSS_layout/Normal_Flow
 original_slug: Learn/CSS/CSS_layout/Fluxo_Normal
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}

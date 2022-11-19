@@ -5,6 +5,7 @@ title: >-
 slug: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 translation_of: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение
@@ -38,7 +39,7 @@ x instanceof f;       // TypeError: invalid 'instanceof' operand f
 x instanceof x;       // TypeError: x is not a function
 ```
 
-Чтобы исправить эти ошибки, необходимо либо заменить оператор `instanceof `оператором `typeof`, либо убедиться, что вместо результата его вычисления используется имя функции.
+Чтобы исправить эти ошибки, необходимо либо заменить оператор `instanceof` оператором `typeof`, либо убедиться, что вместо результата его вычисления используется имя функции.
 
 ```js example-good
 typeof "test" == "string"; // true

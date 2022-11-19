@@ -7,6 +7,7 @@ tags:
 translation_of: Web/API/Web_Workers_API/Using_web_workers
 original_slug: DOM/Using_web_workers
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 Web Worker-ы предоставляют простое средство для запуска скриптов в фоновом потоке. Поток Worker'а может выполнять задачи без вмешательства в пользовательский интерфейс. К тому же, они могут осуществлять ввод/вывод, используя [`XMLHttpRequest`](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest) (хотя атрибуты `responseXML` и `channel` всегда будут равны null). Существующий Worker может отсылать сообщения JavaScript коду-создателю через обработчик событий, указанный этим кодом (и наоборот). Эта статья даёт детальную инструкцию по использованию Web Workers.
@@ -613,9 +614,9 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 </html>
 ```
 
-Встраиваемый worker теперь внесён в новое custom свойство `document.worker`Также стоит отметить, что вы также можете преобразовать функцию в BLOB-объект, а затем сгенерировать URL объекта из этого BLOB-объекта. Например:
+Встраиваемый worker теперь внесён в новое custom свойство `document.worker` Также стоит отметить, что вы также можете преобразовать функцию в BLOB-объект, а затем сгенерировать URL объекта из этого BLOB-объекта. Например:
 
-```
+```js
 function fn2workerURL(fn) {
   var blob = new Blob(['('+fn.toString()+')()'], {type: 'application/javascript'})
   return URL.createObjectURL(blob)

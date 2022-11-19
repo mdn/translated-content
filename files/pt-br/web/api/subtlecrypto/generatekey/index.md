@@ -1,14 +1,8 @@
 ---
 title: SubtleCrypto.generateKey()
 slug: Web/API/SubtleCrypto/GenerateKey
-tags:
-  - API
-  - Referencia
-  - SubtleCrypto
-  - Web Crypto API
-  - metodo
-translation_of: Web/API/SubtleCrypto/generateKey
 ---
+
 {{APIRef("Web Crypto API")}}
 
 O método **`SubtleCrypto.generateKey()`** retorna como {{jsxref("Promise")}} de uma recentemente gerada {{domxref("CryptoKey")}}, para algoritmos simétricos, ou uma {{domxref("CryptoKeyPair")}}, contendo duas keys recentemente geradas, para algoritmos assimétricos, que combina com o algoritmo, o uso e a extractividade são dados como parâmetro.

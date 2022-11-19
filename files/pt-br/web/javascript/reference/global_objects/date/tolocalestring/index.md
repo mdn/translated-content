@@ -1,16 +1,8 @@
 ---
 title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
-tags:
-  - Internacionalização
-  - JavaScript
-  - Prototype
-  - Referencia
-  - data
-  - i18n
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 ---
+
 {{JSRef}}
 
 O método **`toLocaleString()`** retorna uma _string_ com uma representação sensível ao idioma da data presente na mesma. Os novos argumentos `locales` e `options` permitem que as aplicações especifiquem o idioma cujas convenções de formatação devem ser utilizadas e personalizar o comportamento do método. Em implementações antigas, que ignoram os argumentos `locales` and `options`, o local utilizado e o formato da _string_ retornada são completamente dependentes da implementação.

@@ -3,6 +3,7 @@ title: Обзор JavaScript
 slug: Web/JavaScript/JavaScript_technologies_overview
 translation_of: Web/JavaScript/JavaScript_technologies_overview
 ---
+
 {{JsSidebar("Introductory")}}
 
 ## Введение
@@ -13,13 +14,13 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 
 ## JavaScript, базовый язык программирования (ECMAScript)
 
-Базовый язык JavaScript стандартизирован комитетом ECMA TC-39 как язык программирования под названием [ECMAScript](/ru/docs/JavaScript/Language_Resources "en-US/docs/JavaScript/Language_Resources").
+Базовый язык JavaScript стандартизирован комитетом ECMA TC-39 как язык программирования под названием [ECMAScript](/ru/docs/JavaScript/Language_Resources).
 
 Базовый язык также используется в не-браузерном окружении, например, в [node.js](http://nodejs.org/).
 
 ### Что попадает под понятие ECMAScript?
 
-Кроме прочего, [ECMAScript](/ru/docs/JavaScript/Language_Resources "en-US/docs/JavaScript/Language_Resources") определяет:
+Кроме прочего, [ECMAScript](/ru/docs/JavaScript/Language_Resources) определяет:
 
 - Синтаксис языка (правила парсинга, ключевые слова, порядок выполнения, инициализацию объекта литерала...)
 - Механизм обработки ошибок (исключения, try/catch оператор,возможность создавать новые типы ошибок)
@@ -45,7 +46,7 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 
 ### WebIDL
 
-[Спецификация WebIDL ](http://dev.w3.org/2006/webapi/WebIDL/)является связующим звеном между технологиями DOM и ECMAScript.
+[Спецификация WebIDL](http://dev.w3.org/2006/webapi/WebIDL/) является связующим звеном между технологиями DOM и ECMAScript.
 
 ### Ядро DOM
 

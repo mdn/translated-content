@@ -3,6 +3,7 @@ title: border-inline
 slug: Web/CSS/border-inline
 translation_of: Web/CSS/border-inline
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline`** es una [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) para establecer los valores lógicos individuales del borde de bloque en un solo lugar en la hoja de estilos.
@@ -63,11 +64,9 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                               | Estado                                           | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-inline", "border-inline")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

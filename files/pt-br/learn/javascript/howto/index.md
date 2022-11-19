@@ -1,9 +1,9 @@
 ---
 title: Solve common problems in your JavaScript code
 slug: Learn/JavaScript/Howto
-translation_of: Learn/JavaScript/Howto
 original_slug: Aprender/JavaScript/Howto
 ---
+
 {{LearnSidebar}}
 
 Os links a seguir apontam soluções para problemas comuns do dia a dia, você precisará consertar em ordem para que seu código javascript execute corretamente.

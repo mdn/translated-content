@@ -1,14 +1,8 @@
 ---
 title: <blink>
 slug: Web/HTML/Element/blink
-tags:
-  - Elemento
-  - HTML
-  - Não-padrão
-  - Obsoleto
-  - Web
-translation_of: Web/HTML/Element/blink
 ---
+
 {{Deprecated_header}} {{Non-standard_header}}
 
 ## Sumário
@@ -46,4 +40,4 @@ Este elemento não é padrão e não faz parte de nenhuma especificação. Se vo
 - {{htmlelement("marquee")}}, outro elemento não-padrão semelhante.
 - [CSS animations](/pt-BR/docs/Web/Guide/CSS/Using_CSS_animations) são o caminho correto para obter este efeito.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

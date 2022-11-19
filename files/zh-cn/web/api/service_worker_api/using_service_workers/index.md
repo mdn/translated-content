@@ -431,7 +431,7 @@ Firefox 也开始实现一些关于 service worker 的有用的工具：
 
 ## 查看更多
 
-- [The Service Worker Cookbook](https://serviceworke.rs/)
+- [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - 下载 [Service Workers 101 cheatsheet](https://mdn.mozillademos.org/files/12638/sw101.png).
 - [Promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)

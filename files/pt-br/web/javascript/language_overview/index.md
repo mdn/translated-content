@@ -1,9 +1,9 @@
 ---
 title: Uma reintrodução ao JavaScript (Tutorial de JS)
 slug: Web/JavaScript/Language_Overview
-translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
+
 ## Introdução
 
 Por que uma reintrodução? Porque [JavaScript](/en/JavaScript) é conhecida como [a mais incompreendida linguagem de programação do mundo](http://javascript.crockford.com/javascript.html). Embora muitas vezes ridicularizada como um brinquedo, por baixo de sua simplicidade enganosa estão alguns recursos poderosos da linguagem, que agora é usado por um número incrível de aplicações de alto nível, mostrando que o conhecimento mais profundo desta tecnologia é uma habilidade importante para qualquer desenvolvedor web, mobile ou desktop.

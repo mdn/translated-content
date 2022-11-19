@@ -1,9 +1,11 @@
 ---
 title: MouseEvent.ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`MouseEvent.ctrlKey`** は読み取り専用のプロパティで、このマウスイベントが発生した際に <kbd>ctrl</kbd> キーが押されていたかどうかを示す論理値です。
 
@@ -15,7 +17,7 @@ slug: Web/API/MouseEvent/ctrlKey
 
 ## 例
 
-この例では、 {{Event("click")}} イベントを発生させた際に `ctrlKey` プロパティを記録します。
+この例では、 {{domxref("Element/click_event", "click")}} イベントを発生させた際に `ctrlKey` プロパティを記録します。
 
 ### HTML
 
@@ -37,7 +39,7 @@ function logKey(e) {
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

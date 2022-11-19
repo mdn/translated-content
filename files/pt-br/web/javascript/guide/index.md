@@ -1,11 +1,8 @@
 ---
 title: Guia JavaScript
 slug: Web/JavaScript/Guide
-tags:
-  - Guia Javascript
-  - JavaScript
-translation_of: Web/JavaScript/Guide
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 O Guia JavaScript mostra como usar [JavaScript](/pt-BR/docs/Web/JavaScript) e dá uma visão geral da linguagem. Se você quer começar com JavaScript ou programação em geral, consulte os artigos na [área de aprendizagem](/pt-BR/docs/Aprender/JavaScript). Se você precisar de informações mais aprofundadas sobre algum recurso da linguagem, consulte a [referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference).

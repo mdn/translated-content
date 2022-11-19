@@ -3,6 +3,7 @@ title: clip
 slug: Web/CSS/clip
 translation_of: Web/CSS/clip
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 ## Resumen
@@ -42,7 +43,7 @@ clip: inherit
     rect(<top> <right> <bottom> <left>)      /* sintaxis compatible inversa */
     ```
 
-    donde`<top>` y `<bottom>` especifícan desplazamientos de la _esquina del borde superior_ de la caja, y `<right>`, y `<left>` especifican desplazamientos de la _esquina del borde izquiedo_ de la caja.
+    donde `<top>` y `<bottom>` especifícan desplazamientos de la _esquina del borde superior_ de la caja, y `<right>`, y `<left>` especifican desplazamientos de la _esquina del borde izquiedo_ de la caja.
 
     `<top>`, `<right>`, `<bottom>`, y `<left>` pueden cada uno tenerun valor {{cssxref("&lt;length&gt;")}} o `auto`.
 
@@ -73,10 +74,7 @@ p { border:dotted;  position:relative; }
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                                   | Comentario                     |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------ |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'clip') }} | {{ Spec2('CSS3 Transitions') }} | Define `clip` como animatable. |
-| {{ SpecName('CSS2.1', 'visufx.html#clipping', 'clip') }}     | {{ Spec2('CSS2.1') }}             |                                |
+{{Specifications}}
 
 ## Compatibilidad entre exploradores
 

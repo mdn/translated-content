@@ -5,6 +5,7 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/function-available
 ---
+
 {{ XsltRef() }}
 
 `function-available` 함수는 인수로 준 함수가 이용 가능한 지를 결정하고 boolean true나 false를 반환합니다.

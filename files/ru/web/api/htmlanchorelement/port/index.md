@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/port
 original_slug: Web/API/HTMLHyperlinkElementUtils/port
 ---
+
 {{ApiRef("URL API")}}
 
 Свойство **`HTMLHyperlinkElementUtils.port`** – это {{domxref("USVString")}}, содержащий номер порта.

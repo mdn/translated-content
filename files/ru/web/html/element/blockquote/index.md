@@ -55,4 +55,4 @@ translation_of: Web/HTML/Element/blockquote
 - Элемент {{HTMLElement("q")}} для встроенных (строковых) цитат.
 - Элемент {{HTMLElement("cite")}} для указания источника.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

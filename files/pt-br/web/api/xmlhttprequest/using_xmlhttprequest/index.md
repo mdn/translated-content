@@ -1,9 +1,9 @@
 ---
 title: Usando XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 original_slug: Web/API/XMLHttpRequest/Usando_XMLHttpRequest
 ---
+
 [`XMLHttpRequest`](/pt-BR/docs/DOM/XMLHttpRequest) torna o envio de requisições HTTP muito fácil. Basta criar uma instância do objeto, abrir uma url e enviar uma requisição. O [status](/pt-BR/docs/HTTP/HTTP_response_codes) [HTTP](/pt-BR/docs/HTTP/HTTP_response_codes)do resultado assim como o seu conteúdo estarão disponíveis quando a transação for completada. Esta página descreve alguns casos comuns de uso desse poderoso objeto JavaScript.
 
 ```js

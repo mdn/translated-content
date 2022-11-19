@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/lastIndexOf
 ---
+
 {{JSRef}}
 
 El método **`lastIndexOf()`** devuelve el último índice en el que un cierto elemento puede encontrarse en el arreglo, ó `-1` si el elemento no se encontrara. El arreglo es recorrido en sentido contrario, empezando por el índice `fromIndex`.
@@ -123,11 +124,7 @@ De nuevo, darse cuenta que esta implementación tiene como objeto la completa co
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.15', 'Array.prototype.lastIndexOf')}}                             | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.lastindexof', 'Array.prototype.lastIndexOf')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.lastindexof', 'Array.prototype.lastIndexOf')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
@@ -135,7 +132,7 @@ De nuevo, darse cuenta que esta implementación tiene como objeto la completa co
 
 ## Notas de compatibilidad
 
-- Desde Firefox 47 {{geckoRelease(47)}}, el método ya no devolverá `-0`. Por ejemplo, `[0].lastIndexOf(0, -0)` siempre devolverá `+0` ({{bug(1242043)}}).
+- Desde Firefox 47 (Firefox 47 / Thunderbird 47 / SeaMonkey 2.44), el método ya no devolverá `-0`. Por ejemplo, `[0].lastIndexOf(0, -0)` siempre devolverá `+0` ({{bug(1242043)}}).
 
 ## Ver también
 

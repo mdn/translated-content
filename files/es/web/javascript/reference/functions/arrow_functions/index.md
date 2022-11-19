@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 original_slug: Web/JavaScript/Referencia/Funciones/Arrow_functions
 ---
+
 {{jsSidebar("Functions", "Funciones")}}
 
 Una **expresión de función flecha** es una alternativa compacta a una {{JSxRef("Operadores/function", "expresión de función")}} tradicional, pero es limitada y no se puede utilizar en todas las situaciones.

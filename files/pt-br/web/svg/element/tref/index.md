@@ -1,13 +1,8 @@
 ---
 title: tref
 slug: Web/SVG/Element/tref
-tags:
-  - Conteúdo Textual
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/tref
 ---
+
 {{SVGRef}}
 
 O conteúdo textual para o {{ SVGElement("text") }} podem ser dados de caracteres diretamente embedados com o elemento {{ SVGElement("text") }} ou o conteúdo de dados de caracteres de um elemento referenciado, onde a referência é especificada com um elemento `tref`.
