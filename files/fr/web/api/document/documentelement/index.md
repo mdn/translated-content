@@ -13,7 +13,7 @@ translation_of: Web/API/Document/documentElement
 
 {{ ApiRef("DOM") }}
 
-**`Document.documentElement`**renvoie l'[`Element`](/fr/docs/Web/API/element) qui est l'élément racine du [document](/fr/docs/Web/API/document) (par exemple, l'élément `<html>` pour les documents HTML).
+**`Document.documentElement`** renvoie l'[`Element`](/fr/docs/Web/API/element) qui est l'élément racine du [document](/fr/docs/Web/API/document) (par exemple, l'élément `<html>` pour les documents HTML).
 
 ### Syntaxe
 

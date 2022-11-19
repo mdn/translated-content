@@ -1827,6 +1827,10 @@
     "modified": "2019-03-18T21:45:46.646Z",
     "contributors": ["loella16"]
   },
+  "Glossary/Unix_time": {
+    "modified": "2019-03-23T23:29:44.989Z",
+    "contributors": ["loella16", "FredB"]
+  },
   "Glossary/Usenet": {
     "modified": "2019-03-23T22:40:09.482Z",
     "contributors": ["xdelatour"]
@@ -7884,10 +7888,6 @@
   "Web/API/DOMStringList": {
     "modified": "2019-03-18T21:41:20.124Z",
     "contributors": ["loella16"]
-  },
-  "Web/API/DOMTimeStamp": {
-    "modified": "2019-03-23T23:29:44.989Z",
-    "contributors": ["loella16", "FredB"]
   },
   "Web/API/DOMTokenList": {
     "modified": "2020-10-15T21:34:05.793Z",

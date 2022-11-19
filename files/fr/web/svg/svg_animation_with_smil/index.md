@@ -86,7 +86,7 @@ L'élement {{ SVGElement("animateMotion") }} permet d'animer la position et la r
 
 Dans cet exemple, un cercle bleu rebondit indéfiniment entre les bords gauche et droit d'une boîte noir. L'animation est ici gérée par l'élément {{ SVGElement("animateMotion") }}.
 
-On crée ici un chemin avec les commandes **M**oveTo, pour définir le point de départ de l'animation**, H**orizontal-line, pour déplacer le cercle de 300 pixels vers la droite, et la commande **Z**, pour fermer le chemin — ce qui permet d'établir une boucle qui revient au début. En définissant la valeur de l'attribut **repeatCount** à `indefinite`, on indique que l'animation doit boucler indéfiniment, tant que l'image SVG existe.
+On crée ici un chemin avec les commandes **MoveTo**, pour définir le point de départ de l'animation, **Horizontal-line**, pour déplacer le cercle de 300 pixels vers la droite, et la commande **Z**, pour fermer le chemin — ce qui permet d'établir une boucle qui revient au début. En définissant la valeur de l'attribut **repeatCount** à `indefinite`, on indique que l'animation doit boucler indéfiniment, tant que l'image SVG existe.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="100">

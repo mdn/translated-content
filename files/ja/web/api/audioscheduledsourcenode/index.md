@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Audio API")}}
 
-`AudioScheduledSourceNode` インターフェイス（ウェブ音声 API の一部）は、オーディオソースノード各種の親インターフェイスであり、必要に応じ、指定された時間で開始や停止を行う機能を持ちます。具体的には、このインターフェイスでは、{{domxref("AudioScheduledSourceNode.start", "start()")}} や、{{domxref("AudioScheduledSourceNode.stop", "stop()")}} メソッドの他、{{domxref("AudioScheduledSourceNode.ended_event", "ended")}} イベントを定義しています。
+`AudioScheduledSourceNode` インターフェイス（ウェブオーディオ API の一部）は、オーディオソースノード各種の親インターフェイスであり、必要に応じ、指定された時間で開始や停止を行う機能を持ちます。具体的には、このインターフェイスでは、{{domxref("AudioScheduledSourceNode.start", "start()")}} や、{{domxref("AudioScheduledSourceNode.stop", "stop()")}} メソッドの他、{{domxref("AudioScheduledSourceNode.ended_event", "ended")}} イベントを定義しています。
 
 > **メモ:** `AudioScheduledSourceNode` オブジェクトは、直接作成することはできません。
 > かわりに、{{domxref("AudioBufferSourceNode")}} や、{{domxref("OscillatorNode")}}、または {{domxref("ConstantSourceNode")}} を使用してください。
@@ -46,5 +46,5 @@ _親インターフェイスである {{domxref("AudioNode")}} からメソッ�
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("AudioNode")}}

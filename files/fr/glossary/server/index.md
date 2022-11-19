@@ -17,7 +17,7 @@ Les services sont généralement fournis sur des réseaux locaux ou sur des rés
 
 Les serveurs les plus courants sur les réseaux locaux sont les serveurs de fichiers, de noms, de courrier électronique, d'impression et de fax. Un serveur Web connecté à Internet est un autre exemple de serveur classique. Les mini-ordinateurs, les mainframes et les super-ordinateurs des datacenters sont aussi des serveurs.
 
-## **Pour approfondir**
+## Pour approfondir
 
 ### Culture générale
 

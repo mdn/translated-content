@@ -90,7 +90,7 @@ Une, deux, trois ou quatre valeurs `<outline-radius>` dont chacune peut être de
 </p>
 ```
 
-### **Résultat**
+### Résultat
 
 {{EmbedLiveSample('Exemples', '200', '200')}}
 

@@ -31,7 +31,7 @@ Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-B
   - : Se esse atributo estiver presente, o navegador oferecerá controles para permitir ao usuário controlar a reprodução do áudio, incluindo volume, navegação, e pausa/continuação da reprodução.
 - {{ htmlattrdef("loop") }}
   - : Um atributo Booleano; se especificado, ao chegar no fim do áudio, ele voltará automaticamente para o começo.
-- {{ htmlattrdef("mozCurrentSampleOffset") }} {{ gecko_minversion_inline("2.0") }} {{ non-standard_inline() }}
+- {{ htmlattrdef("mozCurrentSampleOffset") }} {{ non-standard_inline() }}
   - : The offset, specified as the number of samples since the beginning of the audio stream, at which the audio is currently playing.
 - {{ htmlattrdef("muted") }}
   - : Um atributo Booleano que indica se o áudio será inicializado silenciado.
