@@ -65,7 +65,7 @@ Procurando pelo [Document object](/pt-BR/docs/DOM/document), [Window object](/pt
 
 ## Outras APIs de destaque
 
-- As funções [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) e [setInterval](https://developer.mozilla.org/pt-BR/docs/Web/API/setInterval) foram inicialmente especificadas na interface [Window](http://www.whatwg.org/html/#window) no Padrão HTML.
+- As funções [setTimeout](/pt-BR/docs/Web/API/setTimeout) e [setInterval](/pt-BR/docs/Web/API/setInterval) foram inicialmente especificadas na interface [Window](http://www.whatwg.org/html/#window) no Padrão HTML.
 - [XMLHttpRequest.](http://dev.w3.org/2006/webapi/XMLHttpRequest-2/) Possibilita enviar requisições HTTP assíncronas.
 - A [Fetch API](https://fetch.spec.whatwg.org/) fornece uma abstração mais ergonômica para requisições de rede.
 - [CSS Object Model.](http://dev.w3.org/csswg/cssom/) O CSSOM é utilizado para abstrair regras CSS como objetos
