@@ -93,5 +93,3 @@ input:required {
 - {{ cssxref(":-moz-submit-invalid") }}
 - {{ cssxref(":required") }}
 - {{ cssxref(":optional") }}
-
-{{ languages( { "fr": "fr/CSS/:invalid" }) }}
