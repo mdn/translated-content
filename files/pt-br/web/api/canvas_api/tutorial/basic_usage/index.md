@@ -52,7 +52,7 @@ Se o conteúdo alternativo não for necessário, um simples `<canvas id="foo" ..
 
 {{HTMLElement("canvas")}} cria uma superfície de desenho de tamanho fixo que expõe um ou mais contextos de renderização, que são usados ​​para criar e manipular o conteúdo mostrado. Vamos nos concentrar no contexto de renderização 2D. Outros contextos podem fornecer diferentes tipos de renderização; por exemplo, [WebGL](/pt-BR/docs/Web/WebGL) usa um contexto 3D ("experimental-WebGL") baseado em [OpenGL ES](http://www.khronos.org/opengles/).
 
-Incialmente o canvas é branco. Para mostrar alguma coisa, primeiro um _script_ precisa acessar o contexto de renderização e desenhar sobre ele. O elemento {{HTMLElement("canvas")}} tem um [método](/pt-BR/docs/Web/API/HTMLCanvasElement#Methods) chamado `getContext()`, usado para obter o contexto de renderização e suas funções de desenho. `getContext()` recebe o tipo de contexto como parâmetro. Para gráficos 2D, que serão abrangidos nesse tutorial, deverá ser especificado "2d".
+Inicialmente o canvas é branco. Para mostrar alguma coisa, primeiro um _script_ precisa acessar o contexto de renderização e desenhar sobre ele. O elemento {{HTMLElement("canvas")}} tem um [método](/pt-BR/docs/Web/API/HTMLCanvasElement#Methods) chamado `getContext()`, usado para obter o contexto de renderização e suas funções de desenho. `getContext()` recebe o tipo de contexto como parâmetro. Para gráficos 2D, que serão abrangidos nesse tutorial, deverá ser especificado "2d".
 
 ```js
 var canvas = document.getElementById('tutorial');

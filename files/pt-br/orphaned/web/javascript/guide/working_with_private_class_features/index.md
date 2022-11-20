@@ -1,6 +1,7 @@
 ---
 title: Trabalhando com recursos de classe privada.
-slug: Web/JavaScript/Guide/Working_With_Private_Class_Features
+slug: orphaned/Web/JavaScript/Guide/Working_With_Private_Class_Features
+original_slug: Web/JavaScript/Guide/Working_With_Private_Class_Features
 ---
 
 {{jsSidebar("JavaScript Guide")}}

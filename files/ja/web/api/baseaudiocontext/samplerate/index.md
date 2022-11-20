@@ -14,7 +14,7 @@ original_slug: Web/API/AudioContext/sampleRate
 
 ## 例
 
-> **メモ:** 完全なウェブ音声の実装の例は、 [MDN GitHub リポジトリー](https://github.com/mdn/)のウェブ音声デモの [panner-node](https://github.com/mdn/panner-node) などを参照してください。ブラウザーのコンソールで `audioCtx.sampleRate` と入力してみてください。
+> **メモ:** 完全なウェブオーディオの実装の例は、 [MDN GitHub リポジトリー](https://github.com/mdn/)のウェブオーディオデモの [panner-node](https://github.com/mdn/panner-node) などを参照してください。ブラウザーのコンソールで `audioCtx.sampleRate` と入力してみてください。
 
 ```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -36,4 +36,4 @@ console.log(audioCtx.sampleRate);
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

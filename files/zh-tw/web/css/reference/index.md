@@ -3,6 +3,8 @@ title: CSS 參考文件
 slug: Web/CSS/Reference
 ---
 
+{{CSSRef}}
+
 Use this **CSS reference** to browse an [alphabetical index](#index) of all the standard [CSS](/zh-TW/docs/Web/CSS) properties, [pseudo-classes](/zh-TW/docs/Web/CSS/Pseudo-classes), [pseudo-elements](/zh-TW/docs/Web/CSS/Pseudo-elements), [data types](/zh-TW/docs/Web/CSS/CSS_Types), and [at-rules](/zh-TW/docs/Web/CSS/At-rule). You can also browse a list of all the CSS [selectors organized by type](#Selectors) and a list of [key CSS concepts](#Concepts). Also included is a brief [DOM-CSS / CSSOM reference](#DOM-CSS_CSSOM).
 
 ## 基本語法規則
