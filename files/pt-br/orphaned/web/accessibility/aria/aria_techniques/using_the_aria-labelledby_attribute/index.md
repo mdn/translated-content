@@ -11,7 +11,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_
 ---
 ### Descrição
 
-Essa técnica demonstra como usar o atributo [`aria-labelledby`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby).
+Essa técnica demonstra como usar o atributo [`aria-labelledby`](https://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby).
 
 O atributo `aria-labelledby` é usado para indicar os IDs de elementos que são os rótulos para o objeto. É usado para estabelecer uma relação entre widgets ou grupos e suas labels. Usuários de tecnologias assistivas como leitores de telas navegam tipicamente uma página através de TABs entre as áreas da tela. Se uma label não está associada com um elemento input, widget ou grupo, não será legível por leitor de tela.
 
@@ -153,4 +153,4 @@ TBD: Adicionar informação de suporte para combinações de produto UA e AT
 
 ### Recursos Adicionais
 
-- [Especificação WAI-ARIA para aria-labelledby](http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby)
+- [Especificação WAI-ARIA para aria-labelledby](https://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby)

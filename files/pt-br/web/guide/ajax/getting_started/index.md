@@ -230,7 +230,7 @@ var root_node = xmldoc.getElementsByTagName('root').item(0);
 alert(root_node.firstChild.data);
 ```
 
-Este código pega o objeto `XMLDocument` obtido por `responseXML` e utiliza métodos DOM para acessar alguns dados contidos no documento XML. Você pode ver o `test.xml` [aqui](http://www.w3clubs.com/mozdev/test.xml) e o script de teste atualizado [aqui](http://www.w3clubs.com/mozdev/httprequest_test_xml.html).
+Este código pega o objeto `XMLDocument` obtido por `responseXML` e utiliza métodos DOM para acessar alguns dados contidos no documento XML. Você pode ver o `test.xml` [aqui](https://www.w3clubs.com/mozdev/test.xml) e o script de teste atualizado [aqui](https://www.w3clubs.com/mozdev/httprequest_test_xml.html).
 
 ### Passo 5 – Trabalhando com os dados
 

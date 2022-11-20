@@ -52,4 +52,4 @@ Ainda por fazer: Adicionar informação de apoio para os combinações de produt
 
 ### Recursos Adicionais
 
-- [WAI-ARIA specification for aria-label](http://www.w3.org/TR/wai-aria/states_and_properties#aria-label)
+- [WAI-ARIA specification for aria-label](https://www.w3.org/TR/wai-aria/states_and_properties#aria-label)

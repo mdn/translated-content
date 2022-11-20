@@ -59,7 +59,7 @@ Você precisa primeiro especificar no elemento de incorporação as propriedades
 Agora que você o fez, a imagem SVG pode usar os valores das propriedades {{cssxref("fill")}} e {{cssxref("stroke")}}, por exemplo:
 
 ```html
-<img class="img1" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'>
+<img class="img1" src="data:image/svg+xml;utf8,<svg xmlns='https://www.w3.org/2000/svg'>
                        <rect width='100%' height='100%' stroke-width='30px'
                        fill='context-fill red' stroke='context-stroke' fill-opacity='0.5'/></svg>">
 ```
