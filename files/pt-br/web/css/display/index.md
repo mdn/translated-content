@@ -5,7 +5,7 @@ slug: Web/CSS/display
 
 {{CSSRef}}
 
-A propriedade **`display`** [CSS](/pt-BR/docs/Web/CSS) define se um elemento é tratado como um [bloco ou elemento inline](/pt-BR/docs/Web/CSS/ CSS_Flow_Layout) e o layout usado para seus filhos, como [layout de fluxo](/pt-BR/docs/Web/CSS/CSS_Flow_Layout), [grid](/pt-BR/docs/Web/CSS/CSS_Grid_Layout) ou [ flex](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout).
+A propriedade **`display`** [CSS](/pt-BR/docs/Web/CSS) define se um elemento é tratado como um [bloco ou elemento inline](/pt-BR/docs/Web/CSS/CSS_Flow_Layout) e o layout usado para seus filhos, como [layout de fluxo](/pt-BR/docs/Web/CSS/CSS_Flow_Layout), [grid](/pt-BR/docs/Web/CSS/CSS_Grid_Layout) ou [flex](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout).
 
 Formalmente, a propriedade **`display`** define os _tipos de exibição_ internos e externos de um elemento. O tipo externo define a participação de um elemento no [layout de fluxo](/pt-BR/docs/Web/CSS/CSS_Flow_Layout); o tipo interno define o layout dos filhos. Alguns valores de `display` são totalmente definidos em suas próprias especificações individuais; por exemplo, o detalhe do que acontece quando `display: flex` é declarado é definido na especificação CSS Flexible Box Model.
 
@@ -273,9 +273,9 @@ As implementações atuais na maioria dos navegadores removerão da [árvore de 
 
 ### Tabelas
 
-Alterar o valor `display` de um elemento {{HTMLElement("table")}} para `block`, `grid` ou `flex` alterará sua representação na [árvore de acessibilidade](/pt-BR/docs/ Aprenda/Acessibilidade/What_is_accessibility#accessibility_apis). Isso fará com que a mesa não seja mais anunciada corretamente pela tecnologia de leitura de tela.
+Alterar o valor `display` de um elemento {{HTMLElement("table")}} para `block`, `grid` ou `flex` alterará sua representação na [árvore de acessibilidade](/pt-BR/docs/Aprenda/Acessibilidade/What_is_accessibility#accessibility_apis). Isso fará com que a mesa não seja mais anunciada corretamente pela tecnologia de leitura de tela.
 
-- [Pequena nota sobre o que as propriedades de exibição CSS fazem com a semântica da tabela — The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics /)
+- [Pequena nota sobre o que as propriedades de exibição CSS fazem com a semântica da tabela — The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [Conteúdo oculto para melhor a11y | Vá fazer coisas](https://gomakethings.com/hidden-content-for-better-a11y/)
 - [MDN Understanding WCAG, Diretriz 1.3 explicações](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
 - [Entendendo o Critério de Sucesso 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
