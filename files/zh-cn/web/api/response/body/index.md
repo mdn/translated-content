@@ -15,7 +15,7 @@ slug: Web/API/Response/body
 
 ## 示例
 
-在我们的[简单 pump 流](https://mdn.github.io/dom-examples/streams/simple-pump.html)示例中，我们获取一个图片，使用 `response.body` 暴露响应的流，用 {{domxref("Response.getReader()", "ReadableStream.getReader()")}} 创建一个 reader，然后将其置入第二个自定义读取流中——有效的创建了一个完全相同的图片副本。
+在我们的[简单 pump 流](https://mdn.github.io/dom-examples/streams/simple-pump.html)示例中，我们获取一个图片，使用 `response.body` 暴露响应的流，用 {{domxref("ReadableStream.getReader()", "ReadableStream.getReader()")}} 创建一个 reader，然后将其置入第二个自定义读取流中——有效的创建了一个完全相同的图片副本。
 
 ```js
 const image = document.getElementById('target');
