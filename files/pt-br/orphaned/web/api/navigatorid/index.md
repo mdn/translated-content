@@ -4,50 +4,44 @@ slug: orphaned/Web/API/NavigatorID
 translation_of: Web/API/NavigatorID
 original_slug: Web/API/NavigatorID
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>NavigatorID</strong></code> interface contains methods and properties related to the identity of the browser.</p>
+The **`NavigatorID`** interface contains methods and properties related to the identity of the browser.
 
-<p>There is no object of type <code>NavigatorID</code>, but other interfaces, like {{domxref("Navigator")}} or {{domxref("WorkerNavigator")}}, implement it.</p>
+There is no object of type `NavigatorID`, but other interfaces, like {{domxref("Navigator")}} or {{domxref("WorkerNavigator")}}, implement it.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>NavigatorID</code></em><em> interface doesn't inherit any property.</em></p>
+_The `NavigatorID`_ _interface doesn't inherit any property._
 
-<dl>
- <dt>{{domxref("NavigatorID.appCodeName")}} {{readonlyInline}}{{deprecated_inline}}</dt>
- <dd>Always returns <code>'Mozilla'</code>, on any browser. This property is kept only for compatibility purpose.</dd>
- <dt>{{domxref("NavigatorID.appName")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>Returns the official name of the browser. Do not rely on this property to return the correct value.</dd>
- <dt>{{domxref("NavigatorID.appVersion")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>Returns the version of the browser as a string. Do not rely on this property to return the correct value.</dd>
- <dt>{{domxref("NavigatorID.platform")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>Returns a string representing the platform of the browser. Do not rely on this property to return the correct value.</dd>
- <dt>{{domxref("NavigatorID.product")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>Always returns <code>'Gecko'</code>, on any browser. This property is kept only for compatibility purpose.</dd>
- <dt>{{domxref("NavigatorID.userAgent")}} {{readonlyInline}}</dt>
- <dd>Returns the user agent string for the current browser.</dd>
-</dl>
+- {{domxref("NavigatorID.appCodeName")}} {{readonlyInline}}{{deprecated_inline}}
+  - : Always returns `'Mozilla'`, on any browser. This property is kept only for compatibility purpose.
+- {{domxref("NavigatorID.appName")}} {{readonlyInline}} {{deprecated_inline}}
+  - : Returns the official name of the browser. Do not rely on this property to return the correct value.
+- {{domxref("NavigatorID.appVersion")}} {{readonlyInline}} {{deprecated_inline}}
+  - : Returns the version of the browser as a string. Do not rely on this property to return the correct value.
+- {{domxref("NavigatorID.platform")}} {{readonlyInline}} {{deprecated_inline}}
+  - : Returns a string representing the platform of the browser. Do not rely on this property to return the correct value.
+- {{domxref("NavigatorID.product")}} {{readonlyInline}} {{deprecated_inline}}
+  - : Always returns `'Gecko'`, on any browser. This property is kept only for compatibility purpose.
+- {{domxref("NavigatorID.userAgent")}} {{readonlyInline}}
+  - : Returns the user agent string for the current browser.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The </em><em><code>NavigatorID</code></em><em> interface doesn't inherit any method.</em></p>
+_The_ _`NavigatorID`_ _interface doesn't inherit any method._
 
-<dl>
- <dt>{{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline()}}</dt>
- <dd>Always returns <code>false</code>. JavaScript taint/untaint functions were removed in JavaScript 1.2. This method is only kept for compatibility purpose</dd>
-</dl>
+- {{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline()}}
+  - : Always returns `false`. JavaScript taint/untaint functions were removed in JavaScript 1.2. This method is only kept for compatibility purpose
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<div>{{Specifications}}</div>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("Navigator")}} and {{domxref("WorkerNavigator")}} interfaces that implement it.</li>
-</ul>
+- The {{domxref("Navigator")}} and {{domxref("WorkerNavigator")}} interfaces that implement it.

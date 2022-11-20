@@ -7,58 +7,35 @@ tags:
 translation_of: Web/API/NavigatorOnLine
 original_slug: Web/API/NavigatorOnLine
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>A interface <code><strong>NavigatorOnLine</strong></code> contém métodos e propriedades relacionados ao status de conectividade do navegador.</p>
+A interface **`NavigatorOnLine`** contém métodos e propriedades relacionados ao status de conectividade do navegador.
 
-<p>Não há objetosdo tipo <code>NavigatorOnLine</code>, mas há outras interfaces, como {{domxref("Navigator")}} ou {{domxref("WorkerNavigator")}} que o implementa.</p>
+Não há objetosdo tipo `NavigatorOnLine`, mas há outras interfaces, como {{domxref("Navigator")}} ou {{domxref("WorkerNavigator")}} que o implementa.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p><em>A interface <code>NavigatorOnLine</code></em><em> não herda nenhuma propriedade.</em></p>
+_A interface `NavigatorOnLine`_ _não herda nenhuma propriedade._
 
-<p> </p>
+- {{domxref("NavigatorOnLine.onLine")}} {{readonlyInline}}
+  - : Retorna um {{domxref("Boolean")}} indicando se o browser está online.
 
-<dl>
- <dt>{{domxref("NavigatorOnLine.onLine")}} {{readonlyInline}}</dt>
- <dd>Retorna um {{domxref("Boolean")}} indicando se o browser está online.</dd>
-</dl>
+## Métodos
 
-<h2 id="Métodos">Métodos</h2>
+_A interface **`NavigatorOnLine`** não implementa nem herda nenhum método._
 
-<p><em>A interface <strong><code>NavigatorOnLine</code></strong> não implementa nem herda nenhum método.</em></p>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Especificação                                                                            | Status                           | Comentário                                                                      |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#navigatoronline', 'NavigatorOnLine')}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança desde a ultima atualização, do {{SpecName('HTML5 W3C')}} |
+| {{SpecName('HTML5 W3C', '#navigatoronline', 'NavigatorOnLine')}}     | {{Spec2('HTML5 W3C')}}     | Snapshot do {{SpecName('HTML WHATWG')}} com sua especificação inicial  |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#navigatoronline', 'NavigatorOnLine')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Nenhuma mudança desde a ultima atualização, do {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', '#navigatoronline', 'NavigatorOnLine')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot do {{SpecName('HTML WHATWG')}} com sua especificação inicial</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{ Compat }}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>A interface {{domxref("Navigator")}} que o implementa.</li>
- <li><a href="/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events">Eventos online e offline.</a></li>
-</ul>
+- A interface {{domxref("Navigator")}} que o implementa.
+- [Eventos online e offline.](/pt-BR/docs/Web/API/NavigatorOnLine/Online_and_offline_events)

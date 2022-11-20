@@ -11,57 +11,36 @@ tags:
 translation_of: Web/API/NavigatorLanguage
 original_slug: Web/API/NavigatorLanguage
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><code><strong>NavigatorLanguage</strong></code> contains methods and properties related to the language of the navigator.</p>
+**`NavigatorLanguage`** contains methods and properties related to the language of the navigator.
 
-<p>There is no object of type <code>NavigatorLanguage</code>, but other interfaces, like {{domxref("Navigator")}} or {{domxref("WorkerNavigator")}}, implement it.</p>
+There is no object of type `NavigatorLanguage`, but other interfaces, like {{domxref("Navigator")}} or {{domxref("WorkerNavigator")}}, implement it.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>NavigatorLanguage</code></em><em> interface doesn't inherit any property.</em></p>
+_The `NavigatorLanguage`_ _interface doesn't inherit any property._
 
-<dl>
- <dt>{{domxref("NavigatorLanguage.language")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} representing the preferred language of the user, usually the language of the browser UI. The <code>null</code> value is returned when this is unknown.</dd>
- <dt>{{domxref("NavigatorLanguage.languages")}} {{readonlyInline}}</dt>
- <dd>Returns an array of {{domxref("DOMString")}} representing the languages known to the user, by order of preference.</dd>
-</dl>
+- {{domxref("NavigatorLanguage.language")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMString")}} representing the preferred language of the user, usually the language of the browser UI. The `null` value is returned when this is unknown.
+- {{domxref("NavigatorLanguage.languages")}} {{readonlyInline}}
+  - : Returns an array of {{domxref("DOMString")}} representing the languages known to the user, by order of preference.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The </em><em><code>NavigatorLanguage</code></em><em> interface neither implements, nor inherit any method.</em></p>
+_The_ _`NavigatorLanguage`_ _interface neither implements, nor inherit any method._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#navigatorlanguage', 'NavigatorLanguage')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Since the {{SpecName('HTML5 W3C')}} snapshot, the <code>languages</code> property has been added.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', '#navigatorlanguage', 'NavigatorLanguage')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial specification; snapshot of  an early version{{SpecName('HTML WHATWG')}}.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                           | Comment                                                                                       |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#navigatorlanguage', 'NavigatorLanguage')}} | {{Spec2('HTML WHATWG')}} | Since the {{SpecName('HTML5 W3C')}} snapshot, the `languages` property has been added. |
+| {{SpecName('HTML5 W3C', '#navigatorlanguage', 'NavigatorLanguage')}} | {{Spec2('HTML5 W3C')}}     | Initial specification; snapshot of an early version{{SpecName('HTML WHATWG')}}.      |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{ Compat }}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("Navigator")}} interface that implements it.</li>
-</ul>
+- The {{domxref("Navigator")}} interface that implements it.

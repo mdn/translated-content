@@ -4,52 +4,41 @@ slug: orphaned/Web/API/NavigatorLanguage/language
 translation_of: Web/API/NavigatorLanguage/language
 original_slug: Web/API/NavigatorLanguage/language
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>A propriedade <strong><code>NavigatorLanguage.language</code></strong> retorna uma string representando a língua de preferência do usuário, normalmente a língua da interface do navegador.</p>
+A propriedade **`NavigatorLanguage.language`** retorna uma string representando a língua de preferência do usuário, normalmente a língua da interface do navegador.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>lang</em> = navigator.language
-</pre>
+```
+var lang = navigator.language
+```
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Uma {{domxref("DOMString")}} <em><code>lang</code></em> armazena a string representando a língua como definida em <a class="external" href="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP 47</a>. Exemplos de códigos de línguas válidos incluem "en", "en-US", "fr", "fr-FR", "es-ES", etc.</p>
+Uma {{domxref("DOMString")}} _`lang`_ armazena a string representando a língua como definida em [BCP 47](http://www.ietf.org/rfc/bcp/bcp47.txt). Exemplos de códigos de línguas válidos incluem "en", "en-US", "fr", "fr-FR", "es-ES", etc.
 
-<p>Atente-se que no Safari no macOS e iOS antes da versão 10.2, o código do país é retornado em caixa baixa: "en-us", "fr-fr" etc.</p>
+Atente-se que no Safari no macOS e iOS antes da versão 10.2, o código do país é retornado em caixa baixa: "en-us", "fr-fr" etc.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">if (window.navigator.language != 'en') {
+```js
+if (window.navigator.language != 'en') {
   doLangSelect(window.navigator.language);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5.1', '#dom-navigator-language', 'NavigatorLanguage.language') }}</td>
-   <td>{{ Spec2('HTML5.1') }}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                       | Comentários       |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------- |
+| {{ SpecName('HTML5.1', '#dom-navigator-language', 'NavigatorLanguage.language') }} | {{ Spec2('HTML5.1') }} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("NavigatorLanguage.languages", "navigator.languages")}}</li>
- <li>{{domxref("navigator")}}</li>
-</ul>
+- {{domxref("NavigatorLanguage.languages", "navigator.languages")}}
+- {{domxref("navigator")}}

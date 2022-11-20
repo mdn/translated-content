@@ -4,27 +4,21 @@ slug: orphaned/Web/API/FullscreenOptions
 translation_of: Web/API/FullscreenOptions
 original_slug: Web/API/FullscreenOptions
 ---
-<p>{{APIRef("Fullscreen API")}}</p>
+{{APIRef("Fullscreen API")}}
 
-<p><span class="seoSummary">O dicionário <strong><code>FullscreenOptions</code></strong> é usado para prover configurações quando chamado {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}} em um elemento para colocar este elmento em modo full-screen (tela inteira).</span></p>
+O dicionário **`FullscreenOptions`** é usado para prover configurações quando chamado {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}} em um elemento para colocar este elmento em modo full-screen (tela inteira).
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt>{{DOMxRef("FullscreenOptions.navigationUI", "navigationUI")}}{{Optional_Inline}}</dt>
- <dd>Uma string controlando se deve ou não manter elementos da interface do usuário do navegador visíveis enquanto estiver no modo full-screen. O modo padrão, <code>"auto"</code>, deixa que o navegador faça esta decisão.</dd>
-</dl>
+- {{DOMxRef("FullscreenOptions.navigationUI", "navigationUI")}}{{Optional_Inline}}
+  - : Uma string controlando se deve ou não manter elementos da interface do usuário do navegador visíveis enquanto estiver no modo full-screen. O modo padrão, `"auto"`, deixa que o navegador faça esta decisão.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.FullscreenOptions")}}
 
+## Veja Também
 
-<p>{{Compat("api.FullscreenOptions")}}</p>
-
-<h2 id="Veja_Também">Veja Também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guia para a API de Fullscreen</a></li>
- <li>{{DOMxRef("Element.requestFullscreen()")}}</li>
-</ul>
+- [Fullscreen API](/pt-BR/docs/Web/API/Fullscreen_API)
+- [Guia para a API de Fullscreen](/pt-BR/docs/Web/API/Fullscreen_API/Guide)
+- {{DOMxRef("Element.requestFullscreen()")}}
