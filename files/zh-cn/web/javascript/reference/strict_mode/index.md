@@ -132,13 +132,11 @@ var sum = 015 + // !!! 语法错误
 第七，ECMAScript 6 中的严格模式禁止设置{{Glossary("primitive")}}值的属性。不采用严格模式，设置属性将会简单忽略 (no-op),采用严格模式，将抛出{{jsxref("TypeError")}}错误
 
 ```js
+"use strict";
 
-  "use strict";
-
-  false.true = "";              //TypeError
-  (14).sailing = "home";        //TypeError
-  "with".you = "far away";      //TypeError
-
+false.true = ""; // TypeError
+(14).sailing = "home"; // TypeError
+"with".you = "far away"; // TypeError
 ```
 
 ### 简化变量的使用
