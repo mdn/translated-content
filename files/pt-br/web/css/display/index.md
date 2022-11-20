@@ -5,9 +5,9 @@ slug: Web/CSS/display
 
 {{CSSRef}}
 
-A propriedade **`display`** [CSS](/en-US/docs/Web/CSS) define se um elemento é tratado como um [bloco ou elemento inline](/en-US/docs/Web/CSS/ CSS_Flow_Layout) e o layout usado para seus filhos, como [layout de fluxo](/en-US/docs/Web/CSS/CSS_Flow_Layout), [grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) ou [ flex](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
+A propriedade **`display`** [CSS](/pt-BR/docs/Web/CSS) define se um elemento é tratado como um [bloco ou elemento inline](/pt-BR/docs/Web/CSS/ CSS_Flow_Layout) e o layout usado para seus filhos, como [layout de fluxo](/pt-BR/docs/Web/CSS/CSS_Flow_Layout), [grid](/pt-BR/docs/Web/CSS/CSS_Grid_Layout) ou [ flex](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout).
 
-Formalmente, a propriedade **`display`** define os _tipos de exibição_ internos e externos de um elemento. O tipo externo define a participação de um elemento no [layout de fluxo](/en-US/docs/Web/CSS/CSS_Flow_Layout); o tipo interno define o layout dos filhos. Alguns valores de `display` são totalmente definidos em suas próprias especificações individuais; por exemplo, o detalhe do que acontece quando `display: flex` é declarado é definido na especificação CSS Flexible Box Model.
+Formalmente, a propriedade **`display`** define os _tipos de exibição_ internos e externos de um elemento. O tipo externo define a participação de um elemento no [layout de fluxo](/pt-BR/docs/Web/CSS/CSS_Flow_Layout); o tipo interno define o layout dos filhos. Alguns valores de `display` são totalmente definidos em suas próprias especificações individuais; por exemplo, o detalhe do que acontece quando `display: flex` é declarado é definido na especificação CSS Flexible Box Model.
 
 ## Sintaxe
 
@@ -81,16 +81,16 @@ Os valores de palavra-chave podem ser agrupados em seis categorias de valor.
 
         Se seu tipo de exibição externa for `inline` ou `run-in`, e estiver participando de um bloco ou contexto de formatação inline, ele gerará uma caixa inline. Caso contrário, gera uma caixa de contêiner de bloco.
 
-        Dependendo do valor de outras propriedades (como {{CSSxRef("position")}}, {{CSSxRef("float")}} ou {{CSSxRef("overflow")}}) e se ele próprio está participando em um contexto de formatação em bloco ou em linha, ele estabelece um novo [contexto de formatação de bloco](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC) para seu conteúdo ou integra seu conteúdo em seu contexto de formatação pai.
+        Dependendo do valor de outras propriedades (como {{CSSxRef("position")}}, {{CSSxRef("float")}} ou {{CSSxRef("overflow")}}) e se ele próprio está participando em um contexto de formatação em bloco ou em linha, ele estabelece um novo [contexto de formatação de bloco](/pt-BR/docs/Web/Guide/CSS/Block_formatting_context) (BFC) para seu conteúdo ou integra seu conteúdo em seu contexto de formatação pai.
 
     - `flow-root`
-      - : O elemento gera uma caixa de elemento de bloco que estabelece um novo [contexto de formatação de bloco](/en-US/docs/Web/Guide/CSS/Block_formatting_context), definindo onde está a raiz de formatação.
+      - : O elemento gera uma caixa de elemento de bloco que estabelece um novo [contexto de formatação de bloco](/pt-BR/docs/Web/Guide/CSS/Block_formatting_context), definindo onde está a raiz de formatação.
     - `table`
       - : Esses elementos se comportam como elementos HTML {{HTMLElement("table")}}. Ele define uma caixa de nível de bloco.
     - `flex`
-      - : O elemento se comporta como um elemento de bloco e apresenta seu conteúdo de acordo com o [modelo flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
+      - : O elemento se comporta como um elemento de bloco e apresenta seu conteúdo de acordo com o [modelo flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout).
     - `grid`
-      - : O elemento se comporta como um elemento de bloco e apresenta seu conteúdo de acordo com o [modelo de grade](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout).
+      - : O elemento se comporta como um elemento de bloco e apresenta seu conteúdo de acordo com o [modelo de grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout).
     - `ruby` {{Experimental_Inline}}
       - : O elemento se comporta como um elemento inline e apresenta seu conteúdo de acordo com o modelo de formatação ruby. Ele se comporta como os elementos HTML {{HTMLElement("ruby")}} correspondentes.
 
@@ -207,7 +207,7 @@ Atualmente, isso pode ser especificado usando um único valor.
 }
 ```
 
-Para obter mais informações sobre essas alterações na especificação, consulte o artigo [Adapting to the new two-value sintax of display](/en-US/docs/Web/CSS/display/two-value_syntax_of_display).
+Para obter mais informações sobre essas alterações na especificação, consulte o artigo [Adapting to the new two-value sintax of display](/pt-BR/docs/Web/CSS/display/two-value_syntax_of_display).
 
 ### Global
 
@@ -222,62 +222,62 @@ display: unset;
 
 As páginas individuais para os diferentes tipos de valor que o `display` pode ter definido apresentam vários exemplos desses valores em ação — consulte a seção [Sintaxe](#sintaxe). Além disso, consulte o material a seguir, que abrange os vários valores de exibição em profundidade.
 
-- [Adaptando-se à nova sintaxe de exibição de dois valores](/en-US/docs/Web/CSS/display/two-value_syntax_of_display)
+- [Adaptando-se à nova sintaxe de exibição de dois valores](/pt-BR/docs/Web/CSS/display/two-value_syntax_of_display)
 
 ### Layout de fluxo CSS (exibir: bloquear, exibir: embutido)
 
-- [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Flow Layout and Overflow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)
-- [Layout de fluxo e modos de escrita](/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
-- [Contextos de formatação explicados](/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
-- [Em fluxo e fora de fluxo](/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
+- [Block and Inline Layout in Normal Flow](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [Flow Layout and Overflow](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)
+- [Layout de fluxo e modos de escrita](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
+- [Contextos de formatação explicados](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
+- [Em fluxo e fora de fluxo](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
 
 ### display: flex
 
-- [Conceitos básicos do flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- [Alinhamento de itens em um contêiner flexível](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
-- [Controle de proporções de itens flexíveis ao longo do eixo principal](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
-- [Mastering Wrapping of Flex Items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
-- [Ordering Flex Items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
-- [Relação do flexbox com outros métodos de layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
-- [Casos de uso típicos do Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
+- [Conceitos básicos do flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- [Alinhamento de itens em um contêiner flexível](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
+- [Controle de proporções de itens flexíveis ao longo do eixo principal](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
+- [Mastering Wrapping of Flex Items](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
+- [Ordering Flex Items](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
+- [Relação do flexbox com outros métodos de layout](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
+- [Casos de uso típicos do Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
 
 ### display: grid
 
-- [Conceitos básicos de layout de grade](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-- [Relação com outros métodos de layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-- [Posicionamento baseado em linha](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-- [Áreas de modelo de grade](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-- [Layout usando linhas de grade nomeadas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-- [Colocação automática no layout da grade](/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-- [Alinhamento da caixa no layout da grade](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-- [Grades, valores lógicos e modos de escrita](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
-- [Layout e acessibilidade da grade CSS](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-- [Layout de grade CSS e aprimoramento progressivo](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-- [Realizando layouts comuns usando grades](/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+- [Conceitos básicos de layout de grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [Relação com outros métodos de layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+- [Posicionamento baseado em linha](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+- [Áreas de modelo de grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+- [Layout usando linhas de grade nomeadas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+- [Colocação automática no layout da grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+- [Alinhamento da caixa no layout da grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+- [Grades, valores lógicos e modos de escrita](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
+- [Layout e acessibilidade da grade CSS](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+- [Layout de grade CSS e aprimoramento progressivo](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [Realizando layouts comuns usando grades](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
 ## Preocupações de acessibilidade
 
 ### display: none
 
-Usar um valor `display` de `none` em um elemento irá removê-lo da [árvore de acessibilidade](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Isso fará com que o elemento e todos os seus descendentes não sejam mais anunciados pela tecnologia de leitura de tela.
+Usar um valor `display` de `none` em um elemento irá removê-lo da [árvore de acessibilidade](/pt-BR/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Isso fará com que o elemento e todos os seus descendentes não sejam mais anunciados pela tecnologia de leitura de tela.
 
 Se você deseja ocultar visualmente o elemento, uma alternativa mais acessível é usar [uma combinação de propriedades](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) para remover visualmente da tela, mas mantenha-o analisável por tecnologia assistiva, como leitores de tela.
 
 ### display: contents
 
-As implementações atuais na maioria dos navegadores removerão da [árvore de acessibilidade](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) qualquer elemento com um valor `display` de `contents` (mas os descendentes permanecerão). Isso fará com que o próprio elemento não seja mais anunciado pela tecnologia de leitura de tela. Este é um comportamento incorreto de acordo com a [especificação CSS](https://drafts.csswg.org/css-display/#valdef-display-contents).
+As implementações atuais na maioria dos navegadores removerão da [árvore de acessibilidade](/pt-BR/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) qualquer elemento com um valor `display` de `contents` (mas os descendentes permanecerão). Isso fará com que o próprio elemento não seja mais anunciado pela tecnologia de leitura de tela. Este é um comportamento incorreto de acordo com a [especificação CSS](https://drafts.csswg.org/css-display/#valdef-display-contents).
 
 - [Marcação mais acessível com exibição: conteúdo | Esconda de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
 - [Exibir: o conteúdo não é uma redefinição de CSS | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 
 ### Tabelas
 
-Alterar o valor `display` de um elemento {{HTMLElement("table")}} para `block`, `grid` ou `flex` alterará sua representação na [árvore de acessibilidade](/en-US/docs/ Aprenda/Acessibilidade/What_is_accessibility#accessibility_apis). Isso fará com que a mesa não seja mais anunciada corretamente pela tecnologia de leitura de tela.
+Alterar o valor `display` de um elemento {{HTMLElement("table")}} para `block`, `grid` ou `flex` alterará sua representação na [árvore de acessibilidade](/pt-BR/docs/ Aprenda/Acessibilidade/What_is_accessibility#accessibility_apis). Isso fará com que a mesa não seja mais anunciada corretamente pela tecnologia de leitura de tela.
 
 - [Pequena nota sobre o que as propriedades de exibição CSS fazem com a semântica da tabela — The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics /)
 - [Conteúdo oculto para melhor a11y | Vá fazer coisas](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN Understanding WCAG, Diretriz 1.3 explicações](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
+- [MDN Understanding WCAG, Diretriz 1.3 explicações](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
 - [Entendendo o Critério de Sucesso 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## Definição formal
@@ -394,7 +394,7 @@ updateDisplay();
 
 ## Veja também
 
-- [Layout de bloco e inline no fluxo normal](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Introdução aos contextos de formatação](/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
+- [Layout de bloco e inline no fluxo normal](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [Introdução aos contextos de formatação](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
 - {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
 - {{CSSxRef("grid")}}, {{CSSxRef("flex")}}
