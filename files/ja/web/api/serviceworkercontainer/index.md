@@ -95,4 +95,4 @@ if ('serviceWorker' in navigator) {
 - [サービスワーカーの基本的なコード例](https://github.com/mdn/sw-test)（英語）
 - [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
 - {{jsxref("Promise")}}
-- [Web worker の使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

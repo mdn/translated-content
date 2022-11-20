@@ -23,4 +23,4 @@ Hoje o W3C conduz a especificação do _DOM_; e o DOM Working Group está atualm
 ### Referência Técnica
 
 - [A Documentação DOM no MDN](/pt-BR/docs/DOM)
-- [As várias especificações do DOM no W3C](http://www.w3.org/DOM/DOMTR)
+- [As várias especificações do DOM no W3C](https://www.w3.org/DOM/DOMTR)

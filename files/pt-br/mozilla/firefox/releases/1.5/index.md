@@ -76,15 +76,15 @@ Some of the new features in Firefox 1.5:
 
 Firefox support for Web standards continues to lead the industry with consistent cross-platform implementations for:
 
-- Hypertext Markup Language ([HTML](/pt-BR/docs/HTML)) and Extensible Hypertext Markup Language ([XHTML](/pt-BR/docs/XHTML)): [HTML 4.01](http://www.w3.org/TR/html401/) and [XHTML 1.0/1.1](http://www.w3.org/TR/xhtml1/)
-- Cascading Style Sheets ([CSS](/pt-BR/docs/CSS)): [CSS Level 1](http://www.w3.org/TR/REC-CSS1), [CSS Level 2](http://www.w3.org/TR/REC-CSS2) and parts of [CSS Level 3](http://www.w3.org/Style/CSS/current-work.html)
-- Document Object Model ([DOM](/pt-BR/docs/DOM)): [DOM Level 1](http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/), [DOM Level 2](http://www.w3.org/DOM/DOMTR#dom2) and parts of [DOM Level 3](http://www.w3.org/DOM/DOMTR#dom3)
-- Mathematical Markup Language: [MathML Version 2.0](http://www.w3.org/Math/)
-- Extensible Markup Language ([XML](/pt-BR/docs/XML)): [XML 1.0](http://www.w3.org/TR/REC-xml), [Namespaces in XML](http://www.w3.org/TR/REC-xml-names/), [Associating Style Sheets with XML Documents 1.0](http://www.w3.org/TR/xml-stylesheet/), [Fragment Identifier for XML](http://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/01-NOTE-FIXptr-20010425.htm)
-- XSL Transformations ([XSLT](/pt-BR/docs/XSLT)): [XSLT 1.0](http://www.w3.org/TR/xslt)
-- XML Path Language ([XPath](/pt-BR/docs/XPath)): [XPath 1.0](http://www.w3.org/TR/xpath)
-- Resource Description Framework ([RDF](/pt-BR/docs/RDF)): [RDF](http://www.w3.org/RDF/)
-- Simple Object Access Protocol (SOAP): [SOAP 1.1](http://www.w3.org/TR/SOAP/)
+- Hypertext Markup Language ([HTML](/pt-BR/docs/HTML)) and Extensible Hypertext Markup Language ([XHTML](/pt-BR/docs/XHTML)): [HTML 4.01](https://www.w3.org/TR/html401/) and [XHTML 1.0/1.1](https://www.w3.org/TR/xhtml1/)
+- Cascading Style Sheets ([CSS](/pt-BR/docs/CSS)): [CSS Level 1](https://www.w3.org/TR/REC-CSS1), [CSS Level 2](https://www.w3.org/TR/REC-CSS2) and parts of [CSS Level 3](https://www.w3.org/Style/CSS/current-work.html)
+- Document Object Model ([DOM](/pt-BR/docs/DOM)): [DOM Level 1](https://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/), [DOM Level 2](https://www.w3.org/DOM/DOMTR#dom2) and parts of [DOM Level 3](https://www.w3.org/DOM/DOMTR#dom3)
+- Mathematical Markup Language: [MathML Version 2.0](https://www.w3.org/Math/)
+- Extensible Markup Language ([XML](/pt-BR/docs/XML)): [XML 1.0](https://www.w3.org/TR/REC-xml), [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/), [Associating Style Sheets with XML Documents 1.0](https://www.w3.org/TR/xml-stylesheet/), [Fragment Identifier for XML](http://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/01-NOTE-FIXptr-20010425.htm)
+- XSL Transformations ([XSLT](/pt-BR/docs/XSLT)): [XSLT 1.0](https://www.w3.org/TR/xslt)
+- XML Path Language ([XPath](/pt-BR/docs/XPath)): [XPath 1.0](https://www.w3.org/TR/xpath)
+- Resource Description Framework ([RDF](/pt-BR/docs/RDF)): [RDF](https://www.w3.org/RDF/)
+- Simple Object Access Protocol (SOAP): [SOAP 1.1](https://www.w3.org/TR/SOAP/)
 - [JavaScript](/pt-BR/docs/JavaScript) 1.6, based on [ECMA-262](/pt-BR/docs/ECMAScript), revision 3: [ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
 
 Firefox 1.5 supports the following data transport protocols (HTTP, FTP, SSL, TLS, and others), multilingual character data (Unicode), graphics (GIF, JPEG, PNG, SVG, and others) and the latest version of the world's most popular scripting language, [JavaScript 1.6](/pt-BR/docs/New_in_JavaScript_1.6).

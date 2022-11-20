@@ -17,7 +17,7 @@ O valor pode ser negativo.
 | Value               | [\<percentage>](/pt-BR/SVG/Content_type#Percentage) \| [\<length>](/pt-BR/SVG/Content_type#Length) \| inherit |
 | Valor inicial       | 0                                                                                                                                                                     |
 | Animação            | Sim                                                                                                                                                                   |
-| Documento Normativo | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty)                                                                            |
+| Documento Normativo | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty)                                                                            |
 
 ## Elementos
 
