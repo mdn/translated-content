@@ -51,7 +51,7 @@ Quando um navegador redenriza um documento, ele combina o documento com suas inf
 
 O diagrama a seguir também apresenta uma visão simples do processo.
 
-![Rendering process overview](https://github.com/mdn/content/blob/main/files/en-us/learn/css/first_steps/how_css_works/rendering.svg)
+![Rendering process overview](rendering.svg)
 
 ## Sobre o DOM
 
