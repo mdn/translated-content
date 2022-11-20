@@ -2,6 +2,7 @@
 title: <blink>
 slug: Web/HTML/Element/blink
 ---
+
 {{Deprecated_header}} {{Non-standard_header}}
 
 ## Sumário

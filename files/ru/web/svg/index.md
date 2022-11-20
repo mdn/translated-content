@@ -37,10 +37,6 @@ SVG — открытый стандарт, разработанный [World Wid
     - [SVG - учебное руководство](/ru/docs/Web/SVG/Tutorial)
     - [SVG в XHTML](/ru/docs/SVG_In_HTML_Introduction)
 
-## Сообщество
-
-- Обращайтесь на форумы Mozilla… {{DiscussionList("dev-tech-svg", "mozilla.dev.tech.svg")}}
-
 ## Инструменты
 
 - [Набор для тестирования SVG](http://www.w3.org/Graphics/SVG/Test/)

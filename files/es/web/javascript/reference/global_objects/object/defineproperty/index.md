@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/defineProperty
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## Resumen
@@ -311,10 +312,7 @@ console.log(instance.myname); // this is my name string
 
 ## Especificaciones
 
-| Specification                                                                                        | Status                   | Comment                                              |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.6', 'Object.defineProperty')}}                 | {{Spec2('ES5.1')}} | Initial definition. Implemented in JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}} | {{Spec2('ES6')}}     |                                                      |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

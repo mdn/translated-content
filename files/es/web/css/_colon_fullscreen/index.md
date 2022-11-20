@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/:fullscreen
 ---
+
 {{CSSRef}} {{SeeCompatTable}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:fullscreen`** de [CSS](/es/docs/Web/CSS) representa un elemento que se muestra cuando el navegador está en modo de [pantalla completa](/es/docs/Web/API/Fullscreen_API).
@@ -133,9 +134,7 @@ fullscreenButton.addEventListener('click', enterFullscreen);
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentarios         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('Fullscreen', '#:fullscreen-pseudo-class', ':fullscreen')}} | {{Spec2('Fullscreen')}} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

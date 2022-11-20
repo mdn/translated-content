@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/i
 original_slug: Web/HTML/Elemento/i
 ---
+
 ### Definición
 
 - Muestra el texto marcado con un estilo en cursiva o italica.

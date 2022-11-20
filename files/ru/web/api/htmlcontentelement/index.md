@@ -3,6 +3,7 @@ title: HTMLContentElement
 slug: Web/API/HTMLContentElement
 translation_of: Web/API/HTMLContentElement
 ---
+
 {{ APIRef("Web Components") }}
 
 {{Deprecated_header}}

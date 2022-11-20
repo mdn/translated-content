@@ -3,6 +3,7 @@ title: ':is() (:matches(), :any())'
 slug: Web/CSS/:is
 translation_of: Web/CSS/:is
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 > **Примечание:** `:matches()` был переименован в `:is()` в [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).

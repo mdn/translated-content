@@ -2,6 +2,7 @@
 title: <address>
 slug: Web/HTML/Element/address
 ---
+
 ## Resumo
 
 O **elemento HTML `<address>`** fornece informações de contato para seu ancestral {{HTMLElement("article")}} ou {{HTMLElement("body")}} mais próximo; no segundo caso, ele se aplica ao documento inteiro.

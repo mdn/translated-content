@@ -13,6 +13,7 @@ tags:
   - WebVR
 translation_of: Web/API/WebVR_API
 ---
+
 {{SeeCompatTable}}{{APIRef("WebVR API")}}
 
 WebVR proporciona soporte para la exposición de dispositivos de realidad virtual — por ejemplo el visualizador de Oculus Rift o HTC Vive — para aplicaciones web, permitiendo a los desarrolladores traducir la información de posición y movimiento del visualizador al movimiento alrededor de una escena en 3D. Esto tiene numerosas aplicaciones interesantes, desde visitas virtuales de productos y aplicaciones de capacitación interactiva hasta juegos inmersivos en primera persona.
@@ -86,24 +87,24 @@ The WebVR API extends the following APIs, adding the listed features.
 #### Window events
 
 - {{domxref("Window.onvrdisplaypresentchange")}}
-  - : Represents an event handler that will run when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa (when the {{event("vrdisplaypresentchange")}} event fires).
+  - : Represents an event handler that will run when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa (when the [`vrdisplaypresentchange`](/es/docs/Web/Reference/Events/vrdisplaypresentchange) event fires).
 - {{domxref("Window.onvrdisplayconnect")}}
-  - : Represents an event handler that will run when a compatible VR display has been connected to the computer (when the {{event("vrdisplayconnect")}} event fires).
+  - : Represents an event handler that will run when a compatible VR display has been connected to the computer (when the [`vrdisplayconnect`](/es/docs/Web/Reference/Events/vrdisplayconnect) event fires).
 - {{domxref("Window.onvrdisplaydisconnect")}}
-  - : Represents an event handler that will run when a compatible VR display has been disconnected from the computer (when the {{event("vrdisplaydisconnect")}} event fires).
+  - : Represents an event handler that will run when a compatible VR display has been disconnected from the computer (when the [`vrdisplaydisconnect`](/es/docs/Web/Reference/Events/vrdisplaydisconnect) event fires).
 - {{domxref("Window.onvrdisplayactivate")}}
-  - : Represents an event handler that will run when a display is able to be presented to (when the {{event("vrdisplayactivate")}} event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
+  - : Represents an event handler that will run when a display is able to be presented to (when the [`vrdisplayactivate`](/es/docs/Web/Reference/Events/vrdisplayactivate) event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
 - {{domxref("Window.onvrdisplaydeactivate")}}
-  - : Represents an event handler that will run when a display can no longer be presented to (when the {{event("vrdisplaydeactivate")}} event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
+  - : Represents an event handler that will run when a display can no longer be presented to (when the [`vrdisplaydeactivate`](/es/docs/Web/Reference/Events/vrdisplaydeactivate) event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
 
 #### Unimplemented window events
 
 The following events are listed in the spec, but do not currently seem to be implemented anywhere as yet.
 
 - {{domxref("Window.onvrdisplayblur")}}
-  - : Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the {{event("vrdisplayblur")}} event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.
+  - : Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the [`vrdisplayblur`](/es/docs/Web/Reference/Events/vrdisplayblur) event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.
 - {{domxref("Window.onvrdisplayfocus")}}
-  - : Represents an event handler that will run when presentation to a display has resumed after being blurred (when the {{event("vrdisplayfocus")}} event fires).
+  - : Represents an event handler that will run when presentation to a display has resumed after being blurred (when the [`vrdisplayfocus`](/es/docs/Web/Reference/Events/vrdisplayfocus) event fires).
 
 ## Examples
 
@@ -115,12 +116,9 @@ You can find a number of examples at these locations:
 - [WebVR.rocks Firefox demos](https://webvr.rocks/firefox#demos) — showcase examples
 - [A-Frame homepage](https://aframe.io/) — examples showing A-Frame usage
 
-## Specifications
+## Especificaciones
 
-| Specification                                | Status                                   | Comment                                                                                                      |
-| -------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("GamepadExtensions")}} | {{Spec2("GamepadExtensions")}} | Defines the [Experimental Gamepad extensions](/es/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions). |
-| {{SpecName('WebVR 1.1')}}             | {{Spec2('WebVR 1.1')}}             | Initial definition                                                                                           |
+{{Specifications}}
 
 ## Browser compatibility
 

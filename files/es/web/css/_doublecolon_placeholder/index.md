@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/::placeholder
 ---
+
 {{CSSRef}}
 
 El [pseudo-elemento CSS](/es/docs/Web/CSS/Pseudo-elements) **`::placeholder`** representa el [texto provisional](/es/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute) en un elemento {{HTMLElement("input")}} o un elemento {{HTMLElement("textarea")}}.
@@ -118,9 +119,7 @@ El texto provisional no es un reemplazo para el elemento {{htmlelement("label")}
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                                       | Comentarios        |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS4 Pseudo-Elements', '#placeholder-pseudo', '::placeholder')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

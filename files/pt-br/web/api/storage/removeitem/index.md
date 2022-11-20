@@ -2,6 +2,7 @@
 title: Storage.removeItem()
 slug: Web/API/Storage/removeItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 O método `removeItem()` da interface {{domxref("Storage")}}, quando passado um nome de chave, irá remover essa chave do armazenamento.

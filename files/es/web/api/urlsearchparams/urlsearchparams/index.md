@@ -9,6 +9,7 @@ tags:
   - URLSearchParams
 translation_of: Web/API/URLSearchParams/URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 El constructor **`URLSearchParams()`** crea y retorna un nuevo objeto {{domxref("URLSearchParams")}}. Si se incluye el caracter `'?'` al comienzo, éste es ignorado.
@@ -53,9 +54,7 @@ var params4 = new URLSearchParams({"foo" : 1 , "bar" : 2});
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado               | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('URL', '#dom-urlsearchparams-urlsearchparams', "URLSearchParams()")}} | {{Spec2('URL')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de browsers
 

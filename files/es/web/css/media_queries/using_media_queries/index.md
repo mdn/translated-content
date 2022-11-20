@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Media_Queries/Using_media_queries
 original_slug: CSS/Media_queries
 ---
+
 {{cssref}}
 
 Las **media queries** (en español "consultas de medios") son útiles cuando deseas modificar tu página web o aplicación en función del tipo de dispositivo (como una impresora o una pantalla) o de características y parámetros específicos (como la resolución de la pantalla o el ancho del {{glossary("viewport")}} del navegador).

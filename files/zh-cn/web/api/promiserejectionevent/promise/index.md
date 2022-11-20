@@ -43,9 +43,9 @@ window.onunhandledrejection = function(event) {
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{jsxref("Promise")}}
 - {{domxref("PromiseRejectionEvent")}}
-- {{event("rejectionhandled")}}
-- {{event("unhandledrejection")}}
+- {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
+- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}

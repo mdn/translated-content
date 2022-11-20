@@ -17,12 +17,12 @@ Em JavaScript existem duas funções respectivamente para decodificar e codifica
 O algoritmo usado por `atob()` e `btoa()` é especificado na [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648), seção 4.
 
 Observe que `btoa()` espera receber dados binários e lançará uma exceção se a string fornecida contiver quaisquer caracteres cuja representação UTF-16 ocupe mais de um byte. Para obter mais detalhes, consulte a documentação de [`btoa()`](/pt-BR/docs/Web/API/btoa).
- 
+
 ## Aumento de tamanho codificado
 
 Cada dígito Base64 representa exatamente 6 bits de dados. Assim, três bytes de 8 bits da string de entrada/arquivo binário (3×8 bits = 24 bits) podem ser representados por quatro dígitos Base64 de 6 bits (4×6 = 24 bits).
 
-Isso significa que a versão Base64 de uma string ou arquivo terá pelo menos 133% do tamanho de sua fonte (um aumento de ~33%). O aumento pode ser maior se os dados codificados forem pequenos. Por exemplo, a cadeia "a" com length === 1 fica codificado para "YQ==" com length === 4— um aumento de 300%. 
+Isso significa que a versão Base64 de uma string ou arquivo terá pelo menos 133% do tamanho de sua fonte (um aumento de ~33%). O aumento pode ser maior se os dados codificados forem pequenos. Por exemplo, a cadeia "a" com length === 1 fica codificado para "YQ==" com length === 4— um aumento de 300%.
 
 ## O "Unicode Problem"
 
@@ -33,8 +33,7 @@ Como as strings JavaScript são codificadas em 16 bits, na maioria dos navegador
 
 Aqui estão os dois métodos possíveis.
 
-### Solução nº 1 – escapando da string antes de codificá-la 
-
+### Solução nº 1 – escapando da string antes de codificá-la
 
 ```js
 function utf8_to_b64(str) {
@@ -53,7 +52,7 @@ b64_to_utf8("4pyTIMOgIGxhIG1vZGU="); // "✓ à la mode"
 Esta solução foi proposta por [Johan Sundström](https://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html).
 
 Outra solução possível sem utilizar as funções 'unescape' e 'escape' agora obsoletas.
-Essa alternativa, no entanto, não executa a codificação base64 da string de entrada. Observe as diferenças nas saídas de `utf8_to_b64` e `b64EncodeUnicode`. Adotar essa alternativa pode levar a problemas de interoperabilidade com outros aplicativos. 
+Essa alternativa, no entanto, não executa a codificação base64 da string de entrada. Observe as diferenças nas saídas de `utf8_to_b64` e `b64EncodeUnicode`. Adotar essa alternativa pode levar a problemas de interoperabilidade com outros aplicativos.
 
 ```js
 function b64EncodeUnicode(str) {
@@ -305,9 +304,6 @@ const sMyOutput = UTF8ArrToStr(aMyUTF8Output);
 
 alert(sMyOutput);
 ```
-//
-Apêndice: Decodifique uma string Base64 para Uint8Array ou ArrayBuffer
-
 
 ### Appendix: Decodifique uma string Base64 para Uint8Array ou ArrayBuffer
 

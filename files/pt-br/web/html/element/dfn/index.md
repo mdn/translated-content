@@ -2,6 +2,7 @@
 title: <dfn>
 slug: Web/HTML/Element/dfn
 ---
+
 ## Resumo
 
 O elemento **HTML `<dfn>` **(ou _Elemento Definição_ _HTML_) representa uma instância de definição de um termo.

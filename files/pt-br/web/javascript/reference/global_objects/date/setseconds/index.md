@@ -2,6 +2,7 @@
 title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 ---
+
 {{JSRef}}
 
 O método **`setSeconds()`** atribui os segundos na data especificada de acordo com o tempo local.

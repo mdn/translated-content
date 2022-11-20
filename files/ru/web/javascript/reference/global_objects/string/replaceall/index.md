@@ -3,6 +3,7 @@ title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
+
 {{JSRef}}
 
 Метод **`replaceAll()`** возвращает новую строку со всеми совпадениями `pattern` , который меняется на `replacement`. `pattern` может быть строкой или регулярным выражением, и `replacement` может быть строкой или функция возвращающая каждое совпадение.

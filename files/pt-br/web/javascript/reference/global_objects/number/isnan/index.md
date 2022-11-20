@@ -2,6 +2,7 @@
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## Resumo

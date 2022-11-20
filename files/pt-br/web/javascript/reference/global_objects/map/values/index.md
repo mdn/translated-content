@@ -2,6 +2,7 @@
 title: Map.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
 ---
+
 {{JSRef}}
 
 O método **`values()`** retorna um novo objeto **[iterador](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_Generators)** que contém o valor

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/@media/height
 original_slug: Web/CSS/@media/altura
 ---
+
 {{cssref}}
 
 Las [CSS](/es/docs/CSS) [media feature (consulta de medios)](/es/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) **`height`** puede ser usada para aplicar estilos basados en la altura del {{glossary("viewport")}} (o la caja de la página, para [paged media](/es/docs/Web/CSS/Paged_media)).
@@ -57,10 +58,7 @@ La característica `height` es especificada como un valor {{cssxref("&lt;length&
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                                   | Comentario                                                                |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Media Queries', '#height', 'height')}} | {{Spec2('CSS4 Media Queries')}} | El valor ahora puede ser negativo, en cuyo caso se calcula como negativo. |
-| {{SpecName('CSS3 Media Queries', '#height', 'height')}} | {{Spec2('CSS3 Media Queries')}} | Definición inicial. El valor debe ser positivo.                           |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -3,6 +3,7 @@ title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
 translation_of: Web/API/Node/isSameNode
 ---
+
 {{APIRef("DOM")}} {{ Obsolete_header }}
 
 The **`Node.isSameNode()`** проверяет ссылаются ли два узла на один и тот же объект.

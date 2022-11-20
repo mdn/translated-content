@@ -2,6 +2,7 @@
 title: Math.random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Sumário

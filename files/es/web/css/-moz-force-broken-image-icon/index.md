@@ -7,6 +7,7 @@ tags:
   - Non-standard
 translation_of: Web/CSS/-moz-force-broken-image-icon
 ---
+
 {{Non-standard_header}}{{ CSSRef() }}
 
 ## Resumen

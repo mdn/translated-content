@@ -2,6 +2,7 @@
 title: ':hover'
 slug: Web/CSS/:hover
 ---
+
 {{ CSSRef() }}
 
 ## Resumo
@@ -74,7 +75,7 @@ Veja nosso [exemplo de menu dropdown baseado em CSS](/@api/deki/files/6238/=css_
 
 Você pode usar a pseudo-classe `:hover` para construir uma galeria de imagem, exibindo imagens full-size apenas quando o mouse passa sobre as imagens. Veja [esse exemplo](/@api/deki/files/6247/=css-gallery.zip) para uma possível dica.
 
-> **Note:**Para efeitos análogos, mas baseado na pseudo-classe [`:checked`](/en/CSS/%3Achecked) (aplicada para esconder radioboxes), veja [esse demo](/@api/deki/files/6268/=css-checked-gallery.zip), tirado desta página [En/CSS/:checked.](/en/CSS/%3Achecked)
+> **Note:**Para efeitos análogos, mas baseado na pseudo-classe [`:checked`](/pt-BR/CSS/%3Achecked) (aplicada para esconder radioboxes), veja [esse demo](/@api/deki/files/6268/=css-checked-gallery.zip), tirado desta página [En/CSS/:checked.](/pt-BR/CSS/%3Achecked)
 
 ## Especificações
 

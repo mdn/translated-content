@@ -8,6 +8,7 @@ tags:
   - доступность
 translation_of: Learn/Common_questions/Design_for_all_types_of_users
 ---
+
 {{IncludeSubnav("/en-US/Learn")}}
 
 Эта статья содержит основные советы, которые помогут вам создавать веб-сайты для любого типа пользователей.

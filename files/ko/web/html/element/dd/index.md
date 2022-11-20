@@ -10,6 +10,7 @@ tags:
   - 요소
 translation_of: Web/HTML/Element/dd
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<dd>` 요소**는 정의 목록 요소({{HTMLElement("dl")}})에서 앞선 용어({{htmlelement("dt")}})에 대한 설명, 정의, 또는 값을 제공합니다.

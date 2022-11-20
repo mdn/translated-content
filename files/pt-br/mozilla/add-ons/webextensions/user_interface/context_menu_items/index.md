@@ -3,6 +3,7 @@ title: Itens do menu de contexto
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 original_slug: Mozilla/Add-ons/WebExtensions/user_interface/Itens_do_menu_de_contexto
 ---
+
 {{AddonSidebar}}
 
 Esta opção da interface de usuário adiciona um ou mais itens para o menu de contexto do navegador.Este é o menu de contexto disponível quando um usuário clica com o botão direito numa página web. As guias também podem ter menus de contexto, disponível através da API [browser.menus](/pt-BR/Add-ons/WebExtensions/API/menus).

@@ -2,6 +2,7 @@
 title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 ---
+
 {{JSRef}}
 
 O método **`Object.isSealed()`** determina se um objeto está selado.

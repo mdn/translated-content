@@ -41,7 +41,7 @@ Dans l'exemple qui suit, l'empilement des couches a été réordonné en utilisa
 
 {{EmbedLiveSample("Code_source_de_l’exemple", '468', '365')}}
 
-## **Code source de l’exemple**
+## Code source de l’exemple
 
 ### HTML
 

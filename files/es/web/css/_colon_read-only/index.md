@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:read-only
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:read-only`** de [CSS](/es/docs/Web/CSS) representa un elemento que ya no es editable por el usuario (como un [input](/es/docs/Web/HTML/Element/input)).
@@ -66,11 +67,7 @@ p[contenteditable="true"] { color: blue; }
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                                   | Comentarios                                                                       |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-read-only', ':read-only') }} | {{ Spec2('HTML WHATWG') }}     | Ningún cambio.                                                                    |
-| {{ SpecName('HTML5 W3C', '#selector-read-only', ':read-only') }}     | {{ Spec2('HTML5 W3C') }}         | Define la semántica relacionada con HTML y de la validación de las restricciones. |
-| {{ SpecName('CSS4 Selectors', '#rw-pseudos', ':read-only') }}         | {{ Spec2('CSS4 Selectors') }} | Define la pseudoclase, pero no la semántica asociada.                             |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

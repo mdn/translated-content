@@ -4,6 +4,7 @@ slug: Web/API/HTMLFormElement/submit_event
 translation_of: Web/API/GlobalEventHandlers/onsubmit
 original_slug: Web/API/GlobalEventHandlers/onsubmit
 ---
+
 {{ApiRef("HTML DOM")}}
 
 Manejador de eventos del evento submit para el objeto window.
@@ -50,9 +51,7 @@ El evento submit no se genera cuando el usuario llama a la función `form.submit
 
 ## Especificaciones
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onsubmit','onsubmit')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Browser Compatibility
 

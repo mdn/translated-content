@@ -3,6 +3,7 @@ title: HTMLElement.offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
 translation_of: Web/API/HTMLElement/offsetWidth
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La propiedad de solo lectura **`HTMLElement.offsetWidth`** devuelve el ancho del layout del elemento. Esta medida incluye los bordes del elemento asignados al mismo en los estilos CSS.
@@ -23,9 +24,7 @@ var offsetWidth =element.offsetWidth;
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetwidth', 'offsetWidth')}} | {{Spec2('CSSOM View')}} |            |
+{{Specifications}}
 
 ### Notas
 

@@ -9,6 +9,7 @@ tags:
 translation_of: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 ---
+
 {{MDNSidebar}}
 
 El [glosario](/es/docs/Glossary) MDN es el sitio donde definimos toda la terminología, jerga, y abreviaciones usadas en la documentación y en la codificación. Contribuir al glosario es una manera simple de hacer la Web más fácil para que todo el mundo la entienda. No necesitas un nivel alto de conocimientos técnicos para escribir entradas en el glosario, porque éstas deberían ser simples y sencillas.

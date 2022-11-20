@@ -8,6 +8,7 @@ translation_of: MDN/Guidelines/CSS_style_guide
 translation_of_original: MDN/Structures/Content_blocks
 original_slug: MDN/Contribute/Markdown_in_MDN
 ---
+
 {{MDNSidebar}}
 
 This pages lists reusable content blocks.

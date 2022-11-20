@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/meta
 original_slug: Web/HTML/Elemento/meta
 ---
+
 ### Definición
 
 - **meta** de "metainformation" - metainformación. Sirve para aportar información sobre el documento..

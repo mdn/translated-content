@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/grid-auto-columns
 ---
+
 La propiedad de css **`grid-auto-columns`** especifíca el tamaño de una columna de cuadrícula creada implícitamente {{glossary("grid tracks", "track")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-auto-columns.html")}}
@@ -126,11 +127,7 @@ grid-auto-columns: unset;
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estatus                      | Comentario         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("CSS3 Grid", "#propdef-grid-auto-columns", "grid-auto-columns")}} | {{Spec2("CSS3 Grid")}} | Initial definition |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

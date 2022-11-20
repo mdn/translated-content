@@ -2,6 +2,7 @@
 title: <img>
 slug: Web/HTML/Element/img
 ---
+
 ## Resumo
 
 O **elemento** **HTML `<img>` **(or _HTML Image Element_) representa a inserção de imagem no documento, sendo implementado também pelo HTML5 para uma melhor experiência com o elemento {{HTMLElement("figure")}} e {{HTMLElement("figcaption")}}.
@@ -94,11 +95,11 @@ O padrão HTML não fornece uma lista de formatos de imagem que devem ser suport
 - [JPEG](http://en.wikipedia.org/wiki/JPEG)
 - [GIF](http://en.wikipedia.org/wiki/Graphics_Interchange_Format), incluindo GIFs animados
 - [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics)
-- [APNG](/pt-BR/docs/Animated_PNG_graphics) {{gecko_minversion_inline("1.9.2")}}
-- [SVG](/pt-BR/docs/SVG) {{gecko_minversion_inline("2.0")}}
+- [APNG](/pt-BR/docs/Animated_PNG_graphics)
+- [SVG](/pt-BR/docs/SVG)
 - [BMP](http://en.wikipedia.org/wiki/BMP_file_format)
 - [BMP ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
-- [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29) {{gecko_minversion_inline("9.0")}}
+- [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
 
 ## Interação com CSS
 

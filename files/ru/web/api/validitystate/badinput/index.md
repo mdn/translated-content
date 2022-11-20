@@ -10,6 +10,7 @@ tags:
   - ValidityState
 browser-compat: api.ValidityState.badInput
 ---
+
 {{APIRef("HTML DOM")}}
 
 Доступное только для чтения свойство **`badInput`** объекта [ValidityState](/ru/docs/Web/API/ValidityState), указывающее, что пользователь ввёл значение, которое браузер не может преобразовать. Например, поле ввода чисел, содержащее строку. _**Примечание:** Во всех браузерах, кроме Internet Explorer, ввести в числовое поле любое нечисловое значения не удастся._

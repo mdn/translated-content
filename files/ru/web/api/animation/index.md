@@ -3,6 +3,7 @@ title: Animation
 slug: Web/API/Animation
 translation_of: Web/API/Animation
 ---
+
 {{ APIRef("Web Animations") }}{{SeeCompatTable}}
 
 **`Animation`** это интерфейс [Web Animations API](/ru/docs/Web/API/Web_Animations_API), представляет из себя одиночный проигрыватель анимации и обеспечивает управление воспроизведением и временную шкалу для узла анимации или источника.

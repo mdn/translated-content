@@ -2,6 +2,7 @@
 title: Expires
 slug: Web/HTTP/Headers/Expires
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho **`Expires`** contém a data/hora após a qual a resposta é considerada velha.

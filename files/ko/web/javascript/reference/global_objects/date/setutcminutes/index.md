@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
 browser-compat: javascript.builtins.Date.setUTCMinutes
 ---
+
 {{JSRef}}
 
 **setUTCMinutes()** 메서드는 표준시에 따라 지정된 날짜의 분을 설정합니다.

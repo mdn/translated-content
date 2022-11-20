@@ -3,6 +3,7 @@ title: Enumerability and ownership of properties
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
 translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 ---
+
 {{JsSidebar("More")}}
 
 В языке JavaScript свойства объектов могут быть перечисляемыми или неперечисляемыми (встречается вариант перевода: счётные или несчётные). Если внутреннему флагу \[\[Enumerable]] свойства присвоить значение true, то данное свойство становится перечисляемым. Это происходит по умолчанию для свойств, созданных простым присваиванием или через инициализацию свойств (свойства, определённые через [Object.defineProperty](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) получают по умолчанию значение флага \[\[Enumerable]] равным false). Перечисляемые свойства участвуют в итерации в цикле [for...in](/ru/docs/Web/JavaScript/Reference/Statements/for...in), если только имя свойства не [Символ](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Принадлежность свойства определяется тем, принадлежит ли оно непосредственно объекту или получено из цепочки прототипов. Также можно получить весь список свойств объекта. Ниже, в таблице, указаны возможные способы нахождения, получения и итерации свойств объектов. Некоторые из них нельзя использовать без дополнительного кода, примеры которого приведены после таблицы.

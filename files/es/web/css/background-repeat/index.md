@@ -10,6 +10,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/CSS/background-repeat
 ---
+
 {{CSSRef}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`background-repeat`** define como se repiten los fondos del documento. Un fondo de imagen puede ser repetido sobre el eje horizontal, el eje vertical, ambos ejes, o no estar repetido.
@@ -158,11 +159,7 @@ En este ejemplo,cada elemento de la listcoincide con un valor diferente de `back
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                                   | Comentario                                                                                                                                                                                                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-background-repeat', 'background-repeat')}}         | {{Spec2('CSS3 Backgrounds')}} | Añade soporte para diferentes imágenes de fondo, el atributo de doble valor equivalente permite un comportamiento de repetición diferente para las direcciones verticales y horizontales, las palabras clave `space` y `round` , y para fondos en elementos en la misma línea mediante la definición precisa de la zona disponible del fondo. |
-| {{SpecName('CSS2.1', 'colors.html#propdef-background-repeat', 'background-repeat')}} | {{Spec2('CSS2.1')}}                 | Sin cambios significativos.                                                                                                                                                                                                                                                                                                                   |
-| {{SpecName('CSS1', '#background-repeat', 'background-repeat')}}                             | {{Spec2('CSS1')}}                 | Definición inicial.                                                                                                                                                                                                                                                                                                                           |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

@@ -7,6 +7,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.toString
 ---
+
 {{JSRef}}
 
 **`toString()`** 메서드는 명시된 {{jsxref("Error")}} 객체를 표현하는 문자열을 반환합니다.

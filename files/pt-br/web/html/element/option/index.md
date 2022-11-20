@@ -2,6 +2,7 @@
 title: <option>
 slug: Web/HTML/Element/option
 ---
+
 ## Sumário
 
 Em um formulário Web, o **elemento HTML** `<option>` é usado para criar um controle que representa um item dentro de um elemento HTML5 {{HTMLElement("select")}}, {{HTMLElement("optgroup")}} ou {{HTMLElement("datalist")}}.

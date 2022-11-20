@@ -2,6 +2,7 @@
 title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
 ---
+
 {{ APIRef() }}
 
 ## Resumo

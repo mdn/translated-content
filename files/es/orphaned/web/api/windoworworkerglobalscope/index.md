@@ -15,6 +15,7 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope
 original_slug: Web/API/WindowOrWorkerGlobalScope
 ---
+
 {{ApiRef()}}
 
 El mixin **`WindowOrWorkerGlobalScope`** describe diversas características comunes a las interfaces {{domxref("Window")}} y {{domxref("WorkerGlobalScope")}}. Cada una de estas interfaces pueden, por supuesto, añadir más funcionalidades sobre las listadas a continuación.
@@ -57,13 +58,7 @@ Estas propiedades se definen en el mixin {{domxref("WindowOrWorkerGlobalScope")}
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                           | Estado                               | Comentario                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------------------------------------- |
-| {{SpecName("HTML WHATWG",'webappapis.html#windoworworkerglobalscope-mixin', '<code>WindowOrWorkerGlobalScope</code> mixin')}} | {{Spec2('HTML WHATWG')}}     | Aquí es donde se define el mixin principal.   |
-| {{SpecName('Fetch','#fetch-method','fetch()')}}                                                                                                         | {{Spec2('Fetch')}}             | Definición del método `fetch().`              |
-| {{SpecName('Service Workers', '#self-caches', 'caches')}}                                                                                             | {{Spec2('Service Workers')}} | Definición de la propiedad `caches`.          |
-| {{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}}                                                         | {{Spec2('IndexedDB 2')}}     | Definición de la propiedad `indexedDB`.       |
-| {{SpecName('Secure Contexts', 'webappapis.html#dom-origin', 'isSecureContext')}}                                                             | {{Spec2('Secure Contexts')}} | Definición de la propiedad `isSecureContext.` |
+{{Specifications}}
 
 ## Ver también
 

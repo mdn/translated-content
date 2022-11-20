@@ -2,6 +2,7 @@
 title: Element.insertAdjacentHTML()
 slug: Web/API/Element/insertAdjacentHTML
 ---
+
 {{APIRef("DOM")}}
 
 ## Resumo

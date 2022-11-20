@@ -3,6 +3,7 @@ title: Web Workers API
 slug: Web/API/Web_Workers_API
 translation_of: Web/API/Web_Workers_API
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 **Los Web Workers** hacen posible ejecutar la operación de un script en un hilo en segundo plano separado de la ejecución el hilo principal de la aplicación web. La ventaja de esto es que un proceso laborioso puede actuar en un hilo separado, permitiendo al hilo principal (normlamente la UI) ejecutarse sin ser bloqueado o ralentizado.
@@ -59,9 +60,7 @@ You can find out more information on how these demos work in [Using web workers]
 
 ## Especificaciones
 
-| Specification                                        | Status                           | Comment |
-| ---------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#workers')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## See also
 

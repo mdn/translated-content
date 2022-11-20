@@ -2,6 +2,7 @@
 title: Extensões CSS da Microsoft
 slug: Web/CSS/Microsoft_Extensions
 ---
+
 {{CSSRef}}
 
 Aplicativos da Microsoft, como Edge e Internet Explorer, suportam uma série de extensões especiais da **Microsoft para [css](/pt-BR/docs/Web/CSS)**. Essas extensões são prefixadas com .`-ms-`

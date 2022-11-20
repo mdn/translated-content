@@ -2,6 +2,7 @@
 title: Node.previousSibling
 slug: Web/API/Node/previousSibling
 ---
+
 {{ApiRef("DOM")}}
 
 ## Resumo

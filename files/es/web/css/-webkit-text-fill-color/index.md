@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/-webkit-text-fill-color
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen
@@ -16,10 +17,7 @@ La propiedad CSS -**`webkit-text-fill-color`** especifica el [color](/es/docs/We
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                                                                                                                    | Estado                                | Comentario               |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ------------------------ |
-| {{SpecName('Compat', '#the-webkit-text-fill-color', '-webkit-text-fill-color')}}                                                                                                                                                      | {{Spec2('Compat')}}              | Estandarización estándar |
-| [Referencia CSS Safari '-webkit-text-fill-color' en ese documento.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-fill-color) | Documentanción no oficial no estándar | Documentación inicial    |
+{{Specifications}}
 
 ## Compatibilidad con los distintos navegadores
 

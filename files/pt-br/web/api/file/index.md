@@ -2,7 +2,8 @@
 title: File
 slug: Web/API/File
 ---
-{{gecko_minversion_header("1.9")}}{{APIRef("File API")}}
+
+{{APIRef("File API")}}
 
 ## Sumário
 
@@ -18,9 +19,9 @@ A referência ao arquivo pode ser salva quando o formulário é submetido enquan
 
 **Propriedades**
 
-- {{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}
+- {{domxref("File.lastModifiedDate")}} {{readonlyinline}}
   - : A Data da última modificação do arquivo referenciado pelo objeto `File`.
-- {{domxref("File.name")}} {{readonlyinline}} {{gecko_minversion_inline("1.9.2")}}
+- {{domxref("File.name")}} {{readonlyinline}}
   - : O nome do arquivo referenciado pelo objeto `File`.
 - {{domxref("File.fileName")}} {{non-standard_inline}} {{readonlyinline}} {{obsolete_inline("7.0")}}
   - : O nome do arquivo referenciado pelo objeto `File`.

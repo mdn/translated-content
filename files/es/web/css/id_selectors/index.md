@@ -8,6 +8,7 @@ tags:
   - Selectores
 translation_of: Web/CSS/ID_selectors
 ---
+
 {{CSSRef}}
 
 En un documento HTML, los **selectores de ID** de CSS buscan un elemento basado en el contenido del atributo {{htmlattrxref("ID")}}. El atributo `ID` del elemento seleccionado debe coincidir exactamente con el valor dado en el selector.
@@ -54,12 +55,7 @@ Nótese que esto es equivalente al siguiente {{Cssxref("Attribute_selectors", "a
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentarios         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS4 Selectors", "#id-selectors", "ID selectors")}}         | {{Spec2("CSS4 Selectors")}} |                     |
-| {{SpecName("CSS3 Selectors", "#id-selectors", "ID selectors")}}         | {{Spec2("CSS3 Selectors")}} |                     |
-| {{SpecName("CSS2.1", "selector.html#id-selectors", "ID selectors")}} | {{Spec2("CSS2.1")}}             |                     |
-| {{SpecName("CSS1", "#id-as-selector", "ID selectors")}}                     | {{Spec2("CSS1")}}             | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

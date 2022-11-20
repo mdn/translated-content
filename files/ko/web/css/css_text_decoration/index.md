@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Text_Decoration
 ---
+
 {{CSSRef}}
 
 **CSS Text Decoration**은 밑줄, 텍스트 그림자 및 강조 표시 등 텍스트 장식에 관련된 기능을 정의하는 CSS 모듈입니다.

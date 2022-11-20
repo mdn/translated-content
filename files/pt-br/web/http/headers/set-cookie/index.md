@@ -2,6 +2,7 @@
 title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta HTTP **`Set-Cookie`** é usado para enviar cookies de um servidor para o agente usuário.

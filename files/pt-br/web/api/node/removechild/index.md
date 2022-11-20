@@ -2,6 +2,7 @@
 title: Node.removeChild
 slug: Web/API/Node/removeChild
 ---
+
 {{ApiRef("DOM")}}
 
 ## Sumário

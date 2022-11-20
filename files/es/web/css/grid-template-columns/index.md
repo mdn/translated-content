@@ -3,6 +3,7 @@ title: grid-template-columns
 slug: Web/CSS/grid-template-columns
 translation_of: Web/CSS/grid-template-columns
 ---
+
 La propiedad CSS **`grid-template-columns`** define el nombre de las líneas y las funciones de tamaño de línea de {{glossary("grid column", "grid columns")}}.
 
 ```css
@@ -104,9 +105,7 @@ grid-template-columns: unset;
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                       | Comentario        |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-template-columns", "grid-template-columns")}} | {{Spec2("CSS3 Grid")}} | Condición inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/writing-mode
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Resumen
@@ -121,11 +122,9 @@ th {background-color: lightgray; }
 
 ![](https://mdn.mozillademos.org/files/12201/writing-mode-actual-result.png)
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                           | Estado                                   | Comentario         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}} | {{Spec2("CSS3 Writing Modes")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

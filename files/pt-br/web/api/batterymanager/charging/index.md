@@ -2,6 +2,7 @@
 title: BatteryManager.charging
 slug: Web/API/BatteryManager/charging
 ---
+
 {{APIRef("Battery API")}}
 
 Um valor Booleano que indica se a bateria está sendo ou não carregada no momento.

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Adjacent_sibling_combinator
 original_slug: Web/CSS/Selectores_hermanos_adyacentes
 ---
+
 {{CSSRef("Selectors")}}
 
 Se hace referencia a este selector como selector adyacente o selector del próximo hermano. Sólo seleccionará un elemento especificado que esté inmediatamente después de otro elemento especificado.
@@ -56,11 +57,7 @@ que coincidiría con los siguientes elementos {{HTMLElement("span")}} :
 
 ## Especificaciones
 
-| Especificacion                                                                                                               | Estado                               | Comentarios        |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS4 Selectors', '#adjacent-sibling-combinators', 'next-sibling combinator')}}     | {{Spec2('CSS4 Selectors')}} |                    |
-| {{SpecName('CSS3 Selectors', '#adjacent-sibling-combinators', 'Adjacent sibling combinator')}} | {{Spec2('CSS3 Selectors')}} |                    |
-| {{SpecName('CSS2.1', 'selector.html#adjacent-selectors', 'Adjacent sibling selectors')}}         | {{Spec2('CSS2.1')}}             | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

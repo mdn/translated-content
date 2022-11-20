@@ -2,6 +2,7 @@
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
+
 {{JSRef}}
 
 O objeto **`Boolean`** é um objeto wrapper para um valor booleano.

@@ -5,6 +5,7 @@ translation_of: Web/CSS/outline-color
 original_slug: Web/CSS/outline-color
 browser-compat: css.properties.outline-color
 ---
+
 {{CSSRef}}
 
 La propiedad CSS **`outline-color`** establece el color del contorno de un elemento.

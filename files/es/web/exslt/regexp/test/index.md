@@ -7,6 +7,7 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/regexp/test
 ---
+
 {{XsltRef}}
 
 `regexp:test()` comprueba si una cadena coincide con una expresión regular especificada.

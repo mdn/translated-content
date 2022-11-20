@@ -11,6 +11,7 @@ tags:
   - metodo
 translation_of: Web/API/Storage/removeItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 El método `removeItem()` de la interfaz {{domxref("Storage")}} elimina la clave cuyo nombre recibe por parámetro del almacenamiento. La interfaz `Storage` de la [API de almacenamiento web](/es/docs/Web/API/API_de_almacenamiento_web) provee acceso al almacenamiento de la sesión (`sessionStorage`) o al almacenamiento local (`localStorage`).
@@ -60,9 +61,7 @@ function populateSessionStorage() {
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentarios |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-removeitem', 'Storage.removeItem')}} | {{Spec2('Web Storage')}} |             |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

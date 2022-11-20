@@ -6,6 +6,7 @@ tags:
   - Propiedad CSS
 translation_of: Web/CSS/outline-width
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -96,11 +97,7 @@ span {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                                   | Comentarios                                                  |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------ |
-| {{SpecName('CSS3 Basic UI', '#outline-width', 'outline-width')}}             | {{Spec2('CSS3 Basic UI')}}     | Sin cambios                                                  |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'outline-width')}}     | {{Spec2('CSS3 Transitions')}} | Define `outline-width` como propiedad que puede ser animada. |
-| {{SpecName('CSS2.1', 'ui.html#propdef-outline-width', 'outline-width')}} | {{Spec2('CSS2.1')}}                 | Definición inicial                                           |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

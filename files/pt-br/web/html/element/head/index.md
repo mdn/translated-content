@@ -2,6 +2,7 @@
 title: <head>
 slug: Web/HTML/Element/head
 ---
+
 {{HTMLSidebar}}
 
 O elemento **HTML `<head>` providencia informações gerais** (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de estilos.

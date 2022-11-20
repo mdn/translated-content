@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/setPrototypeOf
 ---
+
 {{JSRef}}
 
 El método **`Object.setPrototypeOf()`** establece el prototipo (p.e., la propiedad interna `[[Prototype]]`) de un objeto especificado a otro objeto o sino establece {{jsxref("null")}}.
@@ -165,9 +166,7 @@ george(); // 'Hello guys!!'
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado               | Comentario          |
-| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-object.setprototypeof', 'Object.setProtoypeOf')}} | {{Spec2('ES6')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

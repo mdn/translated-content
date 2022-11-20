@@ -2,6 +2,7 @@
 title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
 ---
+
 {{JSRef}}
 
 O objeto **`TypeError`** representa um erro de quando um valor não é do tipo esperado.

@@ -11,13 +11,191 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 在 JavaScript 中，数组不是[基本类型](/zh-CN/docs/Glossary/Primitive)，而是具有以下核心特征的 `Array` 对象：
 
-- **JavaScript 数组是可调整大小的**，**并且可以包含不同的[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)**。（当不需要这些特征时，可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)）
-
-- **JavaScript 数组不是关联数组**，因此，[不能使用任意字符串作为索引访问数组元素](#备注)，但必须使用非负整数（或它们各自的字符串形式）作为索引访问。
-
+- **JavaScript 数组是可调整大小的，并且可以包含不同的[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)**。（当不需要这些特征时，可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)。）
+- **JavaScript 数组不是关联数组**，因此，不能使用任意字符串作为索引访问数组元素，但必须使用非负整数（或它们各自的字符串形式）作为索引访问。
 - **JavaScript 数组的[索引从 0 开始](https://zh.wikipedia.org/zh-cn/從零開始的編號)**：数组的第一个元素在索引 `0` 处，第二个在索引 `1` 处，以此类推，最后一个元素是数组的 {{jsxref("Array/length", "length")}} 属性减去 `1` 的值。
-
 - **JavaScript [数组复制操作](#复制数组)创建[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)**。（*所有* JavaScript 对象的标准内置复制操作都会创建浅拷贝，而不是[深拷贝](/zh-CN/docs/Glossary/Deep_copy)）。
+
+### 数组下标
+
+`Array` 对象不能使用任意字符串作为元素索引（如[关联数组](https://zh.wikipedia.org/wiki/关联数组)），必须使用非负整数（或它们的字符串形式）。通过非整数设置或访问不会设置或从数组列表本身检索元素， 但会设置或访问与该数组的[对象属性集合](/zh-CN/docs/Web/JavaScript/Data_structures#属性)相关的变量。数组的对象属性和数组元素列表是分开的，数组的[遍历和修改操作](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#数组的方法_array_methods)不能应用于这些命名属性。
+
+数组元素是对象属性，就像 `toString` 是属性一样（具体来说，`toString()` 是一种方法）。然而，尝试按以下方式访问数组的元素会抛出语法错误，因为属性名无效：
+
+```js example-bad
+console.log(arr.0); // a syntax error
+```
+
+JavaScript 语法要求使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#对象和属性)而不是[点号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)来访问以数字开头的属性。也可以用引号包裹数组下标（例如，`years['2']` 而不是 `years[2]`），尽管通常没有必要。
+
+JavaScript 引擎通过隐式的 `toString`，将 `years[2]` 中的 `2` 强制转换为字符串。因此，`'2'` 和 `'02'` 将指向 `years` 对象上的两个不同的槽位，下面的例子可能是 `true`：
+
+```js
+console.log(years['2'] !== years['02']);
+```
+
+只有 `years['2']` 是一个实际的数组索引。`years['02']` 是一个在数组迭代中不会被访问的任意字符串属性。
+
+### 长度与数值属性的关系
+
+JavaScript 数组的 {{jsxref("Array/length", "length")}} 属性和数值属性是连接的。
+
+一些内置数组方法（例如 {{jsxref("Array/join", "join()")}}、{{jsxref("Array/slice", "slice()")}}、{{jsxref("Array/indexOf", "indexOf()")}} 等）在被调用时会考虑到数组的 {{jsxref("Array/length", "length")}} 属性的值。
+
+其他方法（例如，{{jsxref("Array/push", "push()")}}、{{jsxref("Array/splice", "splice()")}} 等）也会更新数组的 {{jsxref("Array/length", "length")}} 属性。
+
+```js
+const fruits = [];
+fruits.push('banana', 'apple', 'peach');
+console.log(fruits.length); // 3
+```
+
+当在 JavaScript 数组上设置一个属性时，如果该属性是一个有效的数组索引并且该索引在数组的当前边界之外，引擎将相应地更新数组的 {{jsxref("Array/length", "length")}} 属性：
+
+```js
+fruits[5] = 'mango';
+console.log(fruits[5]);            // 'mango'
+console.log(Object.keys(fruits));  // ['0', '1', '2', '5']
+console.log(fruits.length);        // 6
+```
+
+增加 {{jsxref("Array/length", "length")}}。
+
+```js
+fruits.length = 10;
+console.log(fruits);              // ['banana', 'apple', 'peach', empty x 2, 'mango', empty x 4]
+console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
+console.log(fruits.length);       // 10
+console.log(fruits[8]);           // undefined
+```
+
+但是，减少 {{jsxref("Array/length", "length")}} 属性会删除元素。
+
+```js
+fruits.length = 2;
+console.log(Object.keys(fruits)); // ['0', '1']
+console.log(fruits.length);       // 2
+```
+
+这将在 {{jsxref("Array/length")}} 页中进一步解释。
+
+### 数组方法和空槽
+
+[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)中的空槽在数组方法之间的行为不一致。通常，旧方法会跳过空槽，而新方法将它们视为 `undefined`。
+
+在遍历多个元素的方法中，下面的方法在访问索引之前执行 [`in`](/zh-CN/docs/Web/JavaScript/Reference/Operators/in) 检查，并且不将空槽与 `undefined` 合并：
+
+- {{jsxref("Array/concat", "concat()")}}
+- {{jsxref("Array/copyWithin", "copyWithin()")}}
+- {{jsxref("Array/every", "every()")}}
+- {{jsxref("Array/filter", "filter()")}}
+- {{jsxref("Array/flat", "flat()")}}
+- {{jsxref("Array/flatMap", "flatMap()")}}
+- {{jsxref("Array/forEach", "forEach()")}}
+- {{jsxref("Array/indexOf", "indexOf()")}}
+- {{jsxref("Array/lastIndexOf", "lastIndexOf()")}}
+- {{jsxref("Array/map", "map()")}}
+- {{jsxref("Array/reduce", "reduce()")}}
+- {{jsxref("Array/reduceRight", "reduceRight()")}}
+- {{jsxref("Array/reverse", "reverse()")}}
+- {{jsxref("Array/slice", "slice()")}}
+- {{jsxref("Array/some", "some()")}}
+- {{jsxref("Array/sort", "sort()")}}
+- {{jsxref("Array/splice", "splice()")}}
+
+关于它们是如何处理空槽的，请参阅每个方法的页面。
+
+这些方法将空槽视为 `undefined`：
+
+- {{jsxref("Array/entries", "entries()")}}
+- {{jsxref("Array/fill", "fill()")}}
+- {{jsxref("Array/find", "find()")}}
+- {{jsxref("Array/findIndex", "findIndex()")}}
+- {{jsxref("Array/findLast", "findLast()")}}
+- {{jsxref("Array/findLastIndex", "findLastIndex()")}}
+- {{jsxref("Array/group", "group()")}}
+- {{jsxref("Array/groupToMap", "groupToMap()")}}
+- {{jsxref("Array/includes", "includes()")}}
+- {{jsxref("Array/join", "join()")}}
+- {{jsxref("Array/keys", "keys()")}}
+- {{jsxref("Array/toLocaleString", "toLocaleString()")}}
+- {{jsxref("Array/values", "values()")}}
+
+### 复制方法和修改方法
+
+有些方法不改变调用该方法的现有数组，而是返回一个新数组。它们首先访问 [`this.constructor[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) 来确定用于新数组的构造函数。然后用元素填充新构造的数组。复制总是触发[*浅拷贝*](/zh-CN/docs/Glossary/Shallow_copy)——该方法从不复制初始创建数组以外的任何内容。原数组的元素按如下方式复制到新数组中：
+
+- 对象：对象引用被复制到新数组中。原数组和新数组都引用同一个对象。也就是说，如果一个被引用的对象被修改，新数组和原数组都可以看到更改。
+- 基本类型，如字符串，数字和布尔值（不是 {{jsxref("Global_Objects/String", "String")}}、{{jsxref("Global_Objects/Number", "Number")}} 和 {{jsxref("Global_Objects/Boolean", "Boolean")}} 对象）：它们的值被复制到新数组中。
+
+其他方法会改变调用该方法的数组，在这种情况下，它们的返回值根据方法的不同而不同：有时是对相同数组的引用，有时是新数组的长度。
+
+以下方法使用 `@@species` 创建新数组：
+
+- {{jsxref("Array/concat", "concat()")}}
+- {{jsxref("Array/filter", "filter()")}}
+- {{jsxref("Array/flat", "flat()")}}
+- {{jsxref("Array/flatMap", "flatMap()")}}
+- {{jsxref("Array/map", "map()")}}
+- {{jsxref("Array/slice", "slice()")}}
+- {{jsxref("Array/splice", "splice()")}}（构造返回的已删除元素数组）
+
+注意，{{jsxref("Array/group", "group()")}} 和 {{jsxref("Array/groupToMap", "groupToMap()")}} 不使用 `@@species` 为每个组条目创建新数组，而是始终使用普通的 `Array` 构造函数。从概念上讲，它们也不是复制方法。
+
+以下方法可以对原数组进行修改：
+
+- {{jsxref("Array/copyWithin", "copyWithin()")}}
+- {{jsxref("Array/fill", "fill()")}}
+- {{jsxref("Array/pop", "pop()")}}
+- {{jsxref("Array/push", "push()")}}
+- {{jsxref("Array/reverse", "reverse()")}}
+- {{jsxref("Array/shift", "shift()")}}
+- {{jsxref("Array/sort", "sort()")}}
+- {{jsxref("Array/splice", "splice()")}}
+- {{jsxref("Array/unshift", "unshift()")}}
+
+### 通用数组方法
+
+数组方法总是通用的——它们不访问数组对象的任何内部数据。它们只通过 `length` 属性和索引访问数组元素。这意味着它们也可以在类数组对象上调用。
+
+```js
+const arrayLike = {
+  0: "a",
+  1: "b",
+  length: 2,
+};
+console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
+```
+
+#### 长度属性的规范化
+
+`length` 属性被[转换为一个数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)，被截断为一个整数，然后固定为 0 到 2<sup>53</sup> - 1 之间的范围。`NaN` 变成 `0`，所以即使 `length` 没有出现或 `undefined`，它也会表现得好像它的值是 `0`。
+
+```js
+Array.prototype.flat.call({}); // []
+```
+
+一些数组方法会设置数组对象的 `length` 属性。它们总是在规范化后设置值，因此 `length` 总是以整数结尾。
+
+```js
+const a = { length: 0.7 };
+Array.prototype.push.call(a);
+console.log(a.length); // 0
+```
+
+#### 类数组对象
+
+术语[*类数组对象*](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)指的是在上面描述的 `length` 转换过程中不抛出的任何对象。在实践中，这样的对象应该实际具有 `length` 属性，并且索引元素的范围在 `0` 到 `length - 1` 之间。（如果它没有所有的索引，它将在功能上等同于[稀疏数组](#数组方法和空槽)。）
+
+许多 DOM 对象都是类数组对象——例如 [`NodeList`](/zh-CN/docs/Web/API/NodeList) 和 [`HTMLCollection`](/zh-CN/docs/Web/API/HTMLCollection)。[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象也是类数组对象。你可以在它们上调用数组方法，即使它们本身没有这些方法。
+
+```js
+function f() {
+  console.log(Array.prototype.join.call(arguments, "+"));
+}
+
+f("a", "b"); // 'a+b'
+```
 
 ## 构造函数
 
@@ -474,8 +652,6 @@ console.log(result.vegetables);
 
 如果不能使用字符串作为键，例如，如果要分组的信息与可能更改的对象相关联，那么可以使用 {{jsxref("Array.prototype.groupToMap()")}}。这与 `group` 非常相似，只是它将数组的元素分组到 {{jsxref("Map")}} 中，可以使用任意值（{{Glossary("object", "对象")}}或{{Glossary("primitive", "基本类型")}}）作为键。
 
-## 其它示例
-
 ### 创建二维数组
 
 下面的例子创建了一个代表棋盘的二维字符串数组。第一步是将 `board[6][4]` 中的 `'p'` 复制到 `board[4][4]`。原本的 `[6][4]` 位置则被设置为空格。
@@ -571,187 +747,6 @@ console.log(execResult); // [ "dbBd", "bB", "d" ]
 
 有关匹配结果的更多信息，请参见 {{jsxref("RegExp.prototype.exec()")}} 和 {{jsxref("String.prototype.match()")}} 页。
 
-## 备注
-
-`Array` 对象不能使用任意字符串作为元素索引（如[关联数组](https://zh.wikipedia.org/wiki/关联数组)），必须使用非负整数（或它们的字符串形式）。通过非整数设置或访问不会设置或从数组列表本身检索元素， 但会设置或访问与该数组的[对象属性集合](/zh-CN/docs/Web/JavaScript/Data_structures#属性)相关的变量。数组的对象属性和数组元素列表是分开的，数组的[遍历和修改操作](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#数组的方法_array_methods)不能应用于这些命名属性。
-
-数组元素是对象属性，就像 `toString` 是属性一样（具体来说，`toString()` 是一种方法）。然而，尝试按以下方式访问数组的元素会抛出语法错误，因为属性名无效：
-
-```js example-bad
-console.log(arr.0); // a syntax error
-```
-
-JavaScript 语法要求使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#对象和属性)而不是[点号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)来访问以数字开头的属性。也可以用引号包裹数组下标（例如，`years['2']` 而不是 `years[2]`），尽管通常没有必要。
-
-JavaScript 引擎通过隐式的 `toString`，将 `years[2]` 中的 `2` 强制转换为字符串。因此，`'2'` 和 `'02'` 将指向 `years` 对象上的两个不同的槽位，下面的例子可能是 `true`：
-
-```js
-console.log(years['2'] !== years['02']);
-```
-
-只有 `years['2']` 是一个实际的数组索引。`years['02']` 是一个在数组迭代中不会被访问的任意字符串属性。
-
-### 长度与数值性质的关系
-
-JavaScript 数组的 {{jsxref("Array/length", "length")}} 属性和数值属性是连接的。
-
-一些内置数组方法（例如 {{jsxref("Array/join", "join()")}}、{{jsxref("Array/slice", "slice()")}}、{{jsxref("Array/indexOf", "indexOf()")}} 等）在被调用时会考虑到数组的 {{jsxref("Array/length", "length")}} 属性的值。
-
-其他方法（例如，{{jsxref("Array/push", "push()")}}、{{jsxref("Array/splice", "splice()")}} 等）也会导致更新数组的 {{jsxref("Array/length", "length")}} 属性。
-
-```js
-const fruits = [];
-fruits.push('banana', 'apple', 'peach');
-console.log(fruits.length); // 3
-```
-
-当在 JavaScript 数组上设置一个属性时，如果该属性是一个有效的数组索引并且该索引在数组的当前边界之外，引擎将相应地更新数组的 {{jsxref("Array/length", "length")}} 属性：
-
-```js
-fruits[5] = 'mango';
-console.log(fruits[5]);            // 'mango'
-console.log(Object.keys(fruits));  // ['0', '1', '2', '5']
-console.log(fruits.length);        // 6
-```
-
-增加 {{jsxref("Array/length", "length")}}。
-
-```js
-fruits.length = 10;
-console.log(fruits);              // ['banana', 'apple', 'peach', empty x 2, 'mango', empty x 4]
-console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
-console.log(fruits.length);       // 10
-console.log(fruits[8]);           // undefined
-```
-
-但是，减少 {{jsxref("Array/length", "length")}} 属性会删除元素。
-
-```js
-fruits.length = 2;
-console.log(Object.keys(fruits)); // ['0', '1']
-console.log(fruits.length);       // 2
-```
-
-这将在 {{jsxref("Array/length")}} 页中进一步解释。
-
-### 数组方法和空槽
-
-[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)中的空槽在数组方法之间的行为不一致。通常，旧方法会跳过空槽，而新方法将它们视为 `undefined`。
-
-在遍历多个元素的方法中，下面的方法在访问索引之前执行 [`in`](/zh-CN/docs/Web/JavaScript/Reference/Operators/in) 检查，并且不将空槽与 `undefined` 合并：
-
-- {{jsxref("Array/concat", "concat()")}}
-- {{jsxref("Array/copyWithin", "copyWithin()")}}
-- {{jsxref("Array/every", "every()")}}
-- {{jsxref("Array/filter", "filter()")}}
-- {{jsxref("Array/flat", "flat()")}}
-- {{jsxref("Array/flatMap", "flatMap()")}}
-- {{jsxref("Array/forEach", "forEach()")}}
-- {{jsxref("Array/indexOf", "indexOf()")}}
-- {{jsxref("Array/lastIndexOf", "lastIndexOf()")}}
-- {{jsxref("Array/map", "map()")}}
-- {{jsxref("Array/reduce", "reduce()")}}
-- {{jsxref("Array/reduceRight", "reduceRight()")}}
-- {{jsxref("Array/reverse", "reverse()")}}
-- {{jsxref("Array/slice", "slice()")}}
-- {{jsxref("Array/some", "some()")}}
-- {{jsxref("Array/sort", "sort()")}}
-- {{jsxref("Array/splice", "splice()")}}
-
-关于它们是如何处理空槽的，请参阅每个方法的页面。
-
-这些方法将空槽视为 `undefined`：
-
-- {{jsxref("Array/entries", "entries()")}}
-- {{jsxref("Array/fill", "fill()")}}
-- {{jsxref("Array/find", "find()")}}
-- {{jsxref("Array/findIndex", "findIndex()")}}
-- {{jsxref("Array/findLast", "findLast()")}}
-- {{jsxref("Array/findLastIndex", "findLastIndex()")}}
-- {{jsxref("Array/group", "group()")}}
-- {{jsxref("Array/groupToMap", "groupToMap()")}}
-- {{jsxref("Array/includes", "includes()")}}
-- {{jsxref("Array/join", "join()")}}
-- {{jsxref("Array/keys", "keys()")}}
-- {{jsxref("Array/toLocaleString", "toLocaleString()")}}
-- {{jsxref("Array/values", "values()")}}
-
-### 复制方法和修改方法
-
-有些方法不改变调用该方法的现有数组，而是返回一个新数组。它们首先访问 [`this.constructor[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) 来确定用于新数组的构造函数。然后用元素填充新构造的数组。复制总是触发[*浅拷贝*](/zh-CN/docs/Glossary/Shallow_copy)——该方法从不复制初始创建数组以外的任何内容。原数组的元素按如下方式复制到新数组中：
-
-- 对象：对象引用被复制到新数组中。原数组和新数组都引用同一个对象。也就是说，如果一个被引用的对象被修改，新数组和原数组都可以看到更改。
-- 基本类型，如字符串，数字和布尔值（不是 {{jsxref("Global_Objects/String", "String")}}、{{jsxref("Global_Objects/Number", "Number")}} 和 {{jsxref("Global_Objects/Boolean", "Boolean")}} 对象）：它们的值被复制到新数组中。
-
-其他方法会改变调用该方法的数组，在这种情况下，它们的返回值根据方法的不同而不同：有时是对相同数组的引用，有时是新数组的长度。
-
-以下方法使用 `@@species` 创建新数组：
-
-- {{jsxref("Array/concat", "concat()")}}
-- {{jsxref("Array/filter", "filter()")}}
-- {{jsxref("Array/flat", "flat()")}}
-- {{jsxref("Array/flatMap", "flatMap()")}}
-- {{jsxref("Array/map", "map()")}}
-- {{jsxref("Array/slice", "slice()")}}
-- {{jsxref("Array/splice", "splice()")}}（构造返回的已删除元素数组）
-
-注意，{{jsxref("Array/group", "group()")}} 和 {{jsxref("Array/groupToMap", "groupToMap()")}} 不使用 `@@species` 为每个组条目创建新数组，而是始终使用普通的 `Array` 构造函数。从概念上讲，它们也不是复制方法。
-
-以下方法可以对原数组进行修改：
-
-- {{jsxref("Array/copyWithin", "copyWithin()")}}
-- {{jsxref("Array/fill", "fill()")}}
-- {{jsxref("Array/pop", "pop()")}}
-- {{jsxref("Array/push", "push()")}}
-- {{jsxref("Array/reverse", "reverse()")}}
-- {{jsxref("Array/shift", "shift()")}}
-- {{jsxref("Array/sort", "sort()")}}
-- {{jsxref("Array/splice", "splice()")}}
-- {{jsxref("Array/unshift", "unshift()")}}
-
-### 通用数组方法
-
-数组方法总是通用的——它们不访问数组对象的任何内部数据。它们只通过 `length` 属性和索引访问数组元素。这意味着它们也可以在类数组对象上调用。
-
-```js
-const arrayLike = {
-  0: "a",
-  1: "b",
-  length: 2,
-};
-console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
-```
-
-#### 长度属性的规范化
-
-`length` 属性被[转换为一个数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)，被截断为一个整数，然后固定为 0 到 2<sup>53</sup> - 1 之间的范围。`NaN` 变成 `0`，所以即使 `length` 没有出现或 `undefined`，它也会表现得好像它的值是 `0`。
-
-```js
-Array.prototype.flat.call({}); // []
-```
-
-一些数组方法会设置数组对象的 `length` 属性。它们总是在规范化后设置值，因此 `length` 总是以整数结尾。
-
-```js
-const a = { length: 0.7 };
-Array.prototype.push.call(a);
-console.log(a.length); // 0
-```
-
-#### 类数组对象
-
-术语[*类数组对象*](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)指的是在上面描述的 `length` 转换过程中不抛出的任何对象。在实践中，这样的对象应该实际具有 `length` 属性，并且索引元素的范围在 `0` 到 `length - 1` 之间。（如果它没有所有的索引，它将在功能上等同于[稀疏数组](#数组方法和空槽)。）
-
-许多 DOM 对象都是类数组对象——例如 [`NodeList`](/zh-CN/docs/Web/API/NodeList) 和 [`HTMLCollection`](/zh-CN/docs/Web/API/HTMLCollection)。[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象也是类数组对象。你可以在它们上调用数组方法，即使它们本身没有这些方法。
-
-```js
-function f() {
-  console.log(Array.prototype.join.call(arguments, "+"));
-}
-
-f("a", "b"); // 'a+b'
-```
-
 ## 规范
 
 {{Specifications}}
@@ -765,7 +760,7 @@ f("a", "b"); // 'a+b'
 - JavaScript 指南：
 
   - [对象属性索引](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#对象属性索引)
-  - [索引集合类：数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#数组对象array_object)
+  - [索引集合类：数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 
 - [类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - [RangeError: invalid array length](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

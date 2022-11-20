@@ -2,6 +2,7 @@
 title: Event.stopPropagation()
 slug: Web/API/Event/stopPropagation
 ---
+
 {{APIRef("DOM")}}
 
 ## Resumo

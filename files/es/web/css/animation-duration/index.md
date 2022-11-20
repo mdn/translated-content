@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-duration
 ---
+
 {{ CSSRef() }}
 
 {{ SeeCompatTable() }}
@@ -47,9 +48,7 @@ Visitar [CSS animations](/es/CSS/Usando_animaciones_CSS) para ver algunos ejempl
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                                   | Comentarios |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------- |
-| {{ SpecName('CSS3 Animations', '#animation-duration', 'animation-duration') }} | {{ Spec2('CSS3 Animations') }} |             |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

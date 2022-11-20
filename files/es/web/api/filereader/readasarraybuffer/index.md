@@ -13,6 +13,7 @@ tags:
 browser-compat: api.FileReader.readAsArrayBuffer
 translation_of: Web/API/FileReader/readAsArrayBuffer
 ---
+
 {{APIRef("File API")}}
 
 El método **`readAsArrayBuffer()`** de la interfaz {{domxref("FileReader")}}

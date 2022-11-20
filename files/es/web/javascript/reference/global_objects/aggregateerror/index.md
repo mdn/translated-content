@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 original_slug: Web/JavaScript/Referencia/Objetos_globales/AggregateError
 ---
+
 {{JSRef}}
 
 El objeto **`AggregateError`** representa un error cuando se deben agrupar varios errores en un solo error. Se lanza cuando una operación necesita informar de varios errores, por ejemplo, {{JSxRef("Promise.any()")}}, cuando todas las promesas que se le pasan son rechazadas.

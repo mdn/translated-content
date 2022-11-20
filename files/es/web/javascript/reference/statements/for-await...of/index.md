@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/for-await...of
 original_slug: Web/JavaScript/Referencia/Sentencias/for-await...of
 ---
+
 {{jsSidebar("Statements")}}
 
 La **sentencia** **`for await...of`** crea un bucle iterando tanto sobre objetos iterables asincrónicos como sincrónicos, incluyendo: built-in {{jsxref("String")}}, {{jsxref("Array")}}, objetos `Array`-like (por ej., {{jsxref("Functions/arguments", "arguments")}} o {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, y async/sync iterables definidos por el usuario. Invoca un hook de iteración personalizada con sentencias a ser ejecutadas por el valor de cada propiedad diferente del objeto.
@@ -121,9 +122,7 @@ getResponseSize('https://jsonplaceholder.typicode.com/photos');
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                                   | Estado                       | Comentarios |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}} | {{Spec2('ESDraft')}} |             |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

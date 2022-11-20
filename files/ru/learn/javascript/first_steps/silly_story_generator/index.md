@@ -16,6 +16,7 @@ tags:
 translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 original_slug: Learn/JavaScript/Первые_шаги/Создатель_глупых_историй
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Первые_шаги/Arrays", "Learn/JavaScript/Первые_шаги")}}
 
 В этом испытании вам будет нужно, используя знания, полученные в статьях этого модуля, применить их для создания забавного приложения, создающего случайные глупые истории. Удачно повеселиться!

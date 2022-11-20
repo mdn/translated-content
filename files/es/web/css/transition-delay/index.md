@@ -3,6 +3,7 @@ title: transition-delay
 slug: Web/CSS/transition-delay
 translation_of: Web/CSS/transition-delay
 ---
+
 {{ CSSRef() }}
 
 ## Resumen
@@ -305,11 +306,9 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 {{EmbedLiveSample("delay_4s",275,150)}}
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                        | Status                                   | Comment |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------- |
-| {{ SpecName('CSS3 Transitions', '#transition-delay', 'transition-delay') }} | {{ Spec2('CSS3 Transitions') }} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

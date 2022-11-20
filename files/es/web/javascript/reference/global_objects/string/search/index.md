@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/search
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 ## Resumen
@@ -56,12 +57,7 @@ function testinput(re, str) {
 
 ## Especificaciones
 
-| Especificaciones                                                                                             | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Definición inicial. Implementado en JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.12', 'String.prototype.search')}}                     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-string.prototype.search', 'String.prototype.search')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-string.prototype.search', 'String.prototype.search')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

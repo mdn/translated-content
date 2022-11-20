@@ -3,6 +3,7 @@ title: Math.SQRT2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 ---
+
 {{JSRef}}
 
 **`Math.SQRT2`** 는 2의 제곱근을 나타내고 약 1.414 입니다:

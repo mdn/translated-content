@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/Element/className
 ---
+
 {{APIRef}}
 
 ## Resumen

@@ -11,6 +11,7 @@ tags:
   - counter
 translation_of: Web/CSS/@counter-style
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -118,11 +119,9 @@ Which will produce lists like this:
 
 Checkout more examples on the [demo page](https://mdn.github.io/css-counter-style-demo/).
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                            | Status                                       | Comment             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Counter Styles', '#the-counter-style-rule', 'counter-style')}} | {{Spec2('CSS3 Counter Styles')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

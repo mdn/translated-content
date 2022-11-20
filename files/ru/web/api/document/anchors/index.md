@@ -10,6 +10,7 @@ tags:
   - Якоря
 translation_of: Web/API/Document/anchors
 ---
+
 {{APIRef("DOM")}}
 
 **`anchors`** возвращает массив всех якорей в документе.

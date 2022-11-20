@@ -9,6 +9,7 @@ tags:
   - WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 ---
+
 {{JSRef("Global_Objects", "WeakSet")}}
 
 Метод **`add()`** добавляет новый объект в конец объекта WeakSet.

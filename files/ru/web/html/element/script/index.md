@@ -5,6 +5,7 @@ tags:
   - Script
 translation_of: Web/HTML/Element/script
 ---
+
 {{HTMLSidebar}}
 
 HTML Элемент** `<script>` **используется для встраивания или подключения исполняемого JavaScript кода. Элемент `<script>` также может использоваться с другими языками, такими как [GLSL](/ru/docs/Web/API/WebGL_API/By_example/Hello_GLSL) от [WebGL](/ru/docs/Web/API/WebGL_API).

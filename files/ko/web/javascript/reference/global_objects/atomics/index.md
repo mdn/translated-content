@@ -9,6 +9,7 @@ tags:
 browser-compat: javascript.builtins.Atomics
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 ---
+
 {{JSRef}}
 
 **`Atomics`** 객체는 atomic 작업을 정적 메서드로 제공합니다. {{jsxref("SharedArrayBuffer")}} 와 {{jsxref("ArrayBuffer")}} 객체와 함께 사용됩니다.

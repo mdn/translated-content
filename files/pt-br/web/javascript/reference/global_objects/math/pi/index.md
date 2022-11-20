@@ -2,6 +2,7 @@
 title: Math.PI
 slug: Web/JavaScript/Reference/Global_Objects/Math/PI
 ---
+
 {{JSRef}}
 
 A propriedade **`Math.PI`** representa a proporção entre circunferência de um círculo com o seu diâmetro, aproximadamente 3.14159:

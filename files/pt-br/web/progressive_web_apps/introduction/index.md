@@ -3,6 +3,7 @@ title: Introdução a progressive web apps
 slug: Web/Progressive_web_apps/Introduction
 original_slug: Web/Progressive_web_apps/Introdução
 ---
+
 {{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
 
 Este artigo fornece uma intrução as Progressive Web Apps (PWAs), explicando o que são e quais vantagens elas trazem em relação ao desenvolvimento de aplicações web comuns.

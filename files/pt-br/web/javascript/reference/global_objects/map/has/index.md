@@ -2,6 +2,7 @@
 title: Map.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
 ---
+
 {{JSRef}}
 
 O método **`has()`** retorna um booleano indicando se o elemento com a chave especificada existe ou não.

@@ -2,6 +2,7 @@
 title: Aplicando cores a elementos HTML usando CSS
 slug: Web/CSS/CSS_Colors/Applying_color
 ---
+
 {{HTMLSidebar}}
 
 {{CSSRef}}
@@ -126,7 +127,7 @@ Por exemplo, um vermelho brilhante que é 50% opaco pode ser representado como `
 
 Designers e artistas geralmente preferem trabalhar usando o método de cores [HSL](https://en.wikipedia.org/wiki/HSL_and_HSV) (Hue/Saturation/Luminosity). Na web, as cores HSL são representadas usando a notação funcional HSL. A função CSS `hsl()` é muito semelhante à função `rgb()` em uso de outra forma.
 
-O diagrama abaixo mostra um cilindro de cor HSL. Hue define a cor real com base na posição ao longo de uma {{glossary("color wheel")}} circular que representa as cores do espectro visível. A saturação é uma porcentagem de quanto do caminho entre ser um tom de cinza e ter a quantidade máxima possível do tom fornecido. À medida que o valor da luminância (ou luminosidade) aumenta, a cor passa do mais escuro possível para o mais claro possível (do preto para o branco). Imagem cortesia do usuário [SharkD](https://commons.wikimedia.org/wiki/User:SharkD) na [Wikipedia](https://en.wikipedia.org/), distribuído sob a licença [CC BY-SA 3.0 ](https://creativecommons.org/licenses/by-sa/3.0/).
+O diagrama abaixo mostra um cilindro de cor HSL. Hue define a cor real com base na posição ao longo de uma {{glossary("color wheel")}} circular que representa as cores do espectro visível. A saturação é uma porcentagem de quanto do caminho entre ser um tom de cinza e ter a quantidade máxima possível do tom fornecido. À medida que o valor da luminância (ou luminosidade) aumenta, a cor passa do mais escuro possível para o mais claro possível (do preto para o branco). Imagem cortesia do usuário [SharkD](https://commons.wikimedia.org/wiki/User:SharkD) na [Wikipedia](https://en.wikipedia.org/), distribuído sob a licença [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 
 ![cilindro de cores HSL](640px-hsl_color_solid_cylinder.png)
 

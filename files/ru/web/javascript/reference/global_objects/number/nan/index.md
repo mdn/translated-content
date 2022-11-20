@@ -7,6 +7,7 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/NaN
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## Сводка

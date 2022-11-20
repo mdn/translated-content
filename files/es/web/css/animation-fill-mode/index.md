@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-fill-mode
 ---
+
 {{ CSSRef() }}{{ SeeCompatTable() }}
 
 ## Definición
@@ -111,9 +112,7 @@ CSS
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                                   | Comentario |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Animations', '#animation-fill-mode', 'animation-fill-mode') }} | {{ Spec2('CSS3 Animations') }} |            |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

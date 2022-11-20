@@ -7,6 +7,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/CSS/background-position
 ---
+
 {{ PreviousNext("CSS:background-image", "CSS:background-repeat") }}
 
 ## Resumen

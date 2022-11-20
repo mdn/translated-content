@@ -2,7 +2,8 @@
 title: style
 slug: Web/SVG/Attribute/style
 ---
-« [Página inicial de referência do atributo SVG](/en/SVG/Attribute)
+
+« [Página inicial de referência do atributo SVG](/pt-BR/SVG/Attribute)
 
 Este atributo especifica informação de estilo para o elemento atual. O atributo "style" especifica informação de estilo para um único elemento. As linguagem da folha de estilos para as regras de estilos em linhas é dada pelo valor do atributo {{ SVGAttr("contentStyleType") }} no elemento the {{ SVGElement("SVG") }}.
 
@@ -32,12 +33,12 @@ O exemplo a seguir mostra a estilização de um retângulo com um atributo de es
 
 Os seguintes elementos podem utilizar o atributo `style`
 
-- [Elementos "container"](/en/SVG/Element#Container) »
-- [Elementos de filtro primitivo](/en/SVG/Element#FilterPrimitive) »
-- [Elementos de gradiente](/en/SVG/Element#Gradient) »
-- [Elementos gráficos](/en/SVG/Element#Graphics) »
-- [Elementos estruturais](/en/SVG/Element#Structural) »
-- [Elementos de texto](/en/SVG/Element#TextContent) »
+- [Elementos "container"](/pt-BR/SVG/Element#Container) »
+- [Elementos de filtro primitivo](/pt-BR/SVG/Element#FilterPrimitive) »
+- [Elementos de gradiente](/pt-BR/SVG/Element#Gradient) »
+- [Elementos gráficos](/pt-BR/SVG/Element#Graphics) »
+- [Elementos estruturais](/pt-BR/SVG/Element#Structural) »
+- [Elementos de texto](/pt-BR/SVG/Element#TextContent) »
 - {{ SVGElement("clipPath") }}
 - {{ SVGElement("filter") }}
 - {{ SVGElement("font") }}

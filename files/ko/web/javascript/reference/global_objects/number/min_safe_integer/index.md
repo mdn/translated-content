@@ -8,6 +8,7 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 ---
+
 {{JSRef}}
 
 **`Number.MIN_SAFE_INTEGER`** 상수는 JavaScript에서 안전한 최소 정수값을 나타냅니다. (`-(2^53 - 1)`)

@@ -4,6 +4,7 @@ slug: Learn/Forms/HTML5_input_types
 translation_of: Learn/Forms/HTML5_input_types
 original_slug: Learn/HTML/Forms/Tipos_input_HTML5
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
 En el [artículo anterior](/es/docs/Learn/Forms/Basic_native_form_controls) vimos el elemento {{htmlelement("input")}} y los valores de su atributo `type`, disponibles desde los inicios de HTML. Ahora veremos en detalle la funcionalidad de los controles de formulario más recientes, incluyendo algunos tipos de input nuevos, los cuales fueron añadidos en HTML5 para permitir la recolección de tipos de datos específicos

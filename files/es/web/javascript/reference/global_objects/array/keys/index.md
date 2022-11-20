@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/keys
 ---
+
 {{JSRef}}
 
 El método **`keys()`** devuelve un nuevo objeto **`Array Iterator`** que contiene las claves de índice con las que acceder a cada elemento en el array.
@@ -54,10 +55,7 @@ console.log(denseKeys);  // [0, 1, 2]
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-array.prototype.keys', 'Array.prototype.keys')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-array.prototype.keys', 'Array.prototype.keys')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

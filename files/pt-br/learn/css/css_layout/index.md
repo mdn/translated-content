@@ -2,6 +2,7 @@
 title: CSS layout
 slug: Learn/CSS/CSS_layout
 ---
+
 {{LearnSidebar}}
 
 Até esse ponto nós já vimos fundamentos do CSS, como estilizar textos, e como estilizar e manipular os blocos que envolvem o conteúdo. Chegou a hora de ver como posicionar seus blocos no lugar certo tendo como referência o viewport ou outro elemento. Cobrimos os pré-requisitos necessários para que possamos ir mais a fundo no layout CSS, veremos diferentes configurações de exibição, métodos tradicionais de layout envolvendo float e posicionamento, e ferramentas modernas de layout como flexbox.

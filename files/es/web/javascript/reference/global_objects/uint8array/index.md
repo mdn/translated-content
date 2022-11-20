@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Uint8Array
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Uint8Array
 ---
+
 {{JSRef}}
 
 Los **`Uint8Array`** representan un array de enteros sin signo de 8 bits. El contenido se inicializa a 0. Una vez establecido, puedes hacer referencia a un elemento usando los métodos del objeto o usando la sintaxis de array estándar (esto es, usando la notación de corchetes).
@@ -141,11 +142,7 @@ var z = new Uint8Array(buffer, 1, 4);
 
 ## Especificaciones
 
-| Especificación                                                                       | Estatus                          | Comentario                                                                      |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Sustituida por ECMAScript 6.                                                    |
-| {{SpecName('ES6', '#table-49', 'TypedArray constructors')}}     | {{Spec2('ES6')}}             | Definición inicial en un ECMA standard. Se especificó que `new` es requirerido. |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     |                                                                                 |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

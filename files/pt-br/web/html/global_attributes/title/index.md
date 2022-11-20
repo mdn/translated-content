@@ -2,6 +2,7 @@
 title: title
 slug: Web/HTML/Global_attributes/title
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **title** contém textos representando informações de orientação, relacionados ao elemento a que pertence. Geralmente, mas não obrigatoriamente, esta informação pode ser apresentada ao usuário como uma dica. Alguns usos comuns:

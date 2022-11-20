@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/arguments/callee
 original_slug: Web/JavaScript/Referencia/Funciones/arguments/callee
 ---
+
 {{jsSidebar("Functions")}}
 
 ## Resumen

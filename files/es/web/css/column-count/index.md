@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/column-count
 ---
+
 {{CSSRef}}
 
 La propiedad [CSS](/es/docs/Web/CSS) **`column-count`** divide el contenido de un elemento en el número de columnas indicado.
@@ -66,11 +67,7 @@ column-count: unset;
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                               | Comentario         |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Multicol', '#column-count', 'column-count')}} | {{Spec2('CSS3 Multicol')}} | Definición inicial |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

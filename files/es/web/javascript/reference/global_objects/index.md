@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects
 original_slug: Web/JavaScript/Referencia/Objetos_globales
 ---
+
 {{jsSidebar("Objects")}}
 
 Este capítulo documenta todo acerca de estándares de Javascript, los objetos integrados en JavaScript, así como los métodos y propiedades de cada uno.

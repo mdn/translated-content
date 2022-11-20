@@ -3,6 +3,7 @@ title: TouchEvent.touches
 slug: Web/API/TouchEvent/touches
 translation_of: Web/API/TouchEvent/touches
 ---
+
 {{ APIRef("Touch Events") }}
 
 **`touches`** это доступный только для чтения список {{ domxref("TouchList") }}, в котором перечислены все объекты {{ domxref("Touch") }} для точек контакта с сенсорной поверхностью, независимо от того, изменились ли они и какой целевой элемент был у них во время события {{event("touchstart")}}.

@@ -4,6 +4,7 @@ slug: Web/SVG/Tutorial/Introduction
 translation_of: Web/SVG/Tutorial/Introduction
 original_slug: Web/SVG/Tutorial/Introducción
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
 
 ![Ejemplo de imagenes vectoriales, una cría de leon, una curva con flechas direccionales a intervalos regulares y un texto que sigue una trayectoria ondulada](/@api/deki/files/348/=SVG_Overview.png)[SVG](/es/docs/Web/SVG) es un lenguaje [XML](/es/docs/Introducción_a_XML), parecido a [XHTML](/es/docs/XHTML), el cual puede ser usado para dibujar gráficos vectoriales, como los mostrados a la derecha. Puede ser usado para crear una imagen ya sea especificando todas las líneas y formas necesarias, modificando las imágenes matriciales (raster images) o una combinación de ambas. La imagen y sus componentes pueden ser transformados, compuestos o filtrados para cambiar completamente su apariencia.

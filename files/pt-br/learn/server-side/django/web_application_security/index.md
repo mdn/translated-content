@@ -2,6 +2,7 @@
 title: Segurança de aplicações web Django
 slug: Learn/Server-side/Django/web_application_security
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
 
 Proteger dados do usuário é uma parte essencial de qualquer projeto de website. Anteriormente, explicamos algumas das ameaças de segurança mais comuns no artigo [Web security](/pt-BR/docs/Web/Security) — esse artigo fornece uma demonstração prática de como as proteções internas de Django lidam com essas ameaças.

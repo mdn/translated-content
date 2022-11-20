@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/if...else
 original_slug: Web/JavaScript/Referencia/Sentencias/if...else
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Resumen

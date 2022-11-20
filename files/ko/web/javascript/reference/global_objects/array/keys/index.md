@@ -11,6 +11,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
+
 {{JSRef}}
 
 **`keys()`** 메서드는 배열의 각 인덱스를 키 값으로 가지는 새로운 **`Array Iterator`** 객체를 반환합니다.

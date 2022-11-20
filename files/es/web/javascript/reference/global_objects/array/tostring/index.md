@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/toString
 ---
+
 {{JSRef}}
 
 El método **`toString()`** devuelve una cadena de caracteres representando el array especificado y sus elementos.
@@ -37,12 +38,7 @@ Desde JavaScript 1.8.5 (Firefox 4), y consistente con la 5ª edición de semánt
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                       | Comentario                                          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.4.4.2', 'Array.prototype.toString')}}                         | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-array.prototype.tostring', 'Array.prototype.toString')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.tostring', 'Array.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

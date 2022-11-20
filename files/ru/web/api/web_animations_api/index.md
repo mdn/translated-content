@@ -3,6 +3,7 @@ title: Web Animations API
 slug: Web/API/Web_Animations_API
 translation_of: Web/API/Web_Animations_API
 ---
+
 {{DefaultAPISidebar("Веб-анимация")}} {{SeeCompatTable()}}
 
 API веб-анимации позволяет синхронизировать и сроки изменения представления веб-страницы, то есть анимации элементов DOM. Она делает это путём объединения двух моделей: Модель синхронизации и анимации модели.

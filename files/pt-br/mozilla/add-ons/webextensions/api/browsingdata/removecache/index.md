@@ -2,6 +2,7 @@
 title: browsingData.removeCache()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 ---
+
 {{AddonSidebar()}}
 
 Limpa o cache do navegador.

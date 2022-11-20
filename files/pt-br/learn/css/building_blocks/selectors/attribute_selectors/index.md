@@ -2,6 +2,7 @@
 title: Attribute selectors
 slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
 
 Como você sabe de seu estudo de HTML, os elementos podem ter atributos que fornecem mais detalhes sobre o elemento que está sendo marcado. Em CSS, você pode usar seletores de atributo para direcionar elementos com determinados atributos. Esta lição mostrará como usar esses seletores que são muito úteis.

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 original_slug: Consistent_List_Indentation
 ---
+
 {{CSSRef}}
 
 가장 흔하게 리스트에 적용되는 스타일 변경은 들여쓰기(indentation)거리의 변경입니다 -- 즉, 리스트 아이텡을 오른쪽으로 얼마나 멀리 들여쓸것인가 라는것입니다. 이 작업은 가끔 한 브라우저에서 나오던 효과가 다른 브라우저에서는 같은 효과를 내지 못해서 애를 먹게하곤 합니다. 예를들면, 리스트가 왼쪽 마진을 갖지 못하도록 선언할 경우, 익스플로러에선 이동이되지만, Gecko기반의 브라우저에선 고집스럽게도 꼼짝않고 제 자리를 지키며 있는 그런 경우 입니다.

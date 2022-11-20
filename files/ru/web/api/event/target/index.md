@@ -5,6 +5,7 @@ tags:
   - Событие
 translation_of: Web/API/Event/target
 ---
+
 {{ApiRef("DOM")}}
 
 Свойство **`target`** интерфейса {{domxref ("Event")}} является ссылкой на объект, который был инициатором события. Он отличается от {{domxref ("Event.currentTarget")}}, если обработчик события вызывается во время всплытия (bubbling) или захвата события.

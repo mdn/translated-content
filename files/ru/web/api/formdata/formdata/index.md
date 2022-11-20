@@ -3,6 +3,7 @@ title: FormData()
 slug: Web/API/FormData/FormData
 translation_of: Web/API/FormData/FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 Конструктор **`FormData()`** создаёт новые объект {{domxref("FormData")}}, если проще - HTML-форму**.**

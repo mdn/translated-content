@@ -1,5 +1,5 @@
 ---
-title: "Types de liens\_: manifest"
+title: "Types de liens : manifest"
 slug: Web/HTML/Link_types/manifest
 translation_of: Web/HTML/Link_types/manifest
 browser-compat: html.elements.link.rel.manifest

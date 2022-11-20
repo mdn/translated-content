@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Attribute_selectors
 original_slug: Web/CSS/Selectores_atributo
 ---
+
 {{CSSRef}}
 
 El **selector de atributos** CSS coincide con los elementos en función de la presencia o el valor de un atributo determinado.
@@ -206,11 +207,7 @@ ol[type="A" s] {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                               | Comentarios                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#attribute-selectors', 'attribute selectors')}}     | {{Spec2('CSS4 Selectors')}} | Agrega un modificador para la selección de valores de atributos insensibles a mayúsculas / minúsculas ASCII. |
-| {{SpecName('CSS3 Selectors', '#attribute-selectors', 'attribute selectors')}}     | {{Spec2('CSS3 Selectors')}} |                                                                                                              |
-| {{SpecName('CSS2.1', 'selector.html#attribute-selectors', 'attribute selectors')}} | {{Spec2('CSS2.1')}}             | Definición Inicial.                                                                                          |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

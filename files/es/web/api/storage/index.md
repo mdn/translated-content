@@ -76,9 +76,7 @@ function setStyles() {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('Web Storage', '#the-storage-interface', 'Storage')}} | {{Spec2('Web Storage')}} |            |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

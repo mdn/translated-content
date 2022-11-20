@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/reduceRight
 ---
+
 {{JSRef("Objetos_globales", "Array")}}
 
 ## Resumen

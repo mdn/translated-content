@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects
 ---
+
 {{jsSidebar("Objects")}}
 
 이 장은 JavaScript의 모든 표준 내장 객체와 그 메서드 및 속성을 나열합니다.
@@ -29,7 +30,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects
 ### 함수 속성
 
 객체에 붙지 않고 전역으로 호출하는 함수로, 반환 값을 호출자에게 바로 반환합니다.
-
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
 - {{JSxRef("Global_Objects/isFinite", "isFinite()")}}

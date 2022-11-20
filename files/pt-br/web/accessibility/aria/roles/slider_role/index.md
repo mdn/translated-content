@@ -3,6 +3,7 @@ title: Usando o slider role
 slug: Web/Accessibility/ARIA/Roles/slider_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 ---
+
 ### Descrição
 
 Essa técnica demonstrará como usar o [slider](http://www.w3.org/TR/wai-aria/roles#slider) role.
@@ -83,11 +84,11 @@ var updateSlider = function (newValue) {
 
 ### Atributos ARIA usados
 
-- [aria-valuemin](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute)
-- [aria-valuemax](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute)
-- [aria-valuenow](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute)
-- [aria-valuetext](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute)
-- [aria-orientation](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute)
+- [aria-valuemin](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute)
+- [aria-valuemax](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute)
+- [aria-valuenow](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute)
+- [aria-valuetext](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute)
+- [aria-orientation](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute)
 
 ### Related ARIA techniques
 

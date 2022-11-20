@@ -6,6 +6,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Tutorial
 ---
+
 {{AddonSidebar}}
 
 Si ya ha visto el artículo [tu primer extensión](/es/Add-ons/WebExtensions/Tu_primera_WebExtension), ya posee una idea de como escribir una extensión. En este artículo se escribirá una extensión ligeramente más compleja para demostrar un par de cosas más de las APIs.

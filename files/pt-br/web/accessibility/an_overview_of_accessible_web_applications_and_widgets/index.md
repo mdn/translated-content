@@ -3,11 +3,12 @@ title: Visão geral da acessibilidade nas aplicações web e widgets
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 original_slug: Web/Acessibilidade/An_overview_of_accessible_web_applications_and_widgets
 ---
+
 A Rede Mundial está mudando. Estatísticamente, os sítios baseados em páginas estão, cada vez mais, sendo repostos por aplicações dinâmicas, em estilo Ambiente, que fazem uso intenso de JavaScript e AJAX. Estilistas estão criando novos _widgets_ e controles inteiramente com a combinação de JavaScript, HTML e CSS. Este salto tem o potencial de aperfeiçoar, dramaticamente, a capacidade de resposta e a usabilidade da Rede, mas milhares de utilizadores estão sob o risco de exclusão, devido a algumas lacunas na acessibilidade. A JavaScript tem, tradicionalmente, tido a reputação de ser inviável para quem usa tecnologias assistivas, como leitores de tela mas, agora, existem maneiras de criar interfaces de utilização dinâmicas acessíveis a uma ampla variedade de pessoas.
 
 ## O problema
 
-A maior parte do conjunto de ferramentas JavaScript oferece uma biblioteca de utilização de _widgets_ que imita o comportamento de interfaces de Ambiente familiares. Deslizantes, barras de menus, visão de arquivos em lista e muito mais pode ser construído com uma combinação de JavaScript, CSS e HTML. Uma vez que a especificação da HTML 4 não fornece etiquetas integradas (_built-in tags_) que descrevam estes tipos de _widgets_ semanticamente, os desenvolvedores recorrem ao uso de elementos genéricos, tais como \<div> e \<span>. Embora isto resulte em um _widget_ que se pareça com seu duplo de ambiente, geralmente não existe informação semântica suficiente, na marcação, para torná-lo utilizável por uma tecnologia assistiva. Teor dinâmico em uma página da Rede Mundial pode ser particularmente problemático para quem, por alguma razão, não pode ver a tela. Cotações de ações, alimentação instantânea de atualizações do twitter, indicadores de progresso e conteúdos similares alteram o DOM, enquanto uma tecnologia assistiva (TA/AT) pode não ser alertada disso. Aqui é onde o conjunto [ARIA](/en/ARIA) entra.
+A maior parte do conjunto de ferramentas JavaScript oferece uma biblioteca de utilização de _widgets_ que imita o comportamento de interfaces de Ambiente familiares. Deslizantes, barras de menus, visão de arquivos em lista e muito mais pode ser construído com uma combinação de JavaScript, CSS e HTML. Uma vez que a especificação da HTML 4 não fornece etiquetas integradas (_built-in tags_) que descrevam estes tipos de _widgets_ semanticamente, os desenvolvedores recorrem ao uso de elementos genéricos, tais como \<div> e \<span>. Embora isto resulte em um _widget_ que se pareça com seu duplo de ambiente, geralmente não existe informação semântica suficiente, na marcação, para torná-lo utilizável por uma tecnologia assistiva. Teor dinâmico em uma página da Rede Mundial pode ser particularmente problemático para quem, por alguma razão, não pode ver a tela. Cotações de ações, alimentação instantânea de atualizações do twitter, indicadores de progresso e conteúdos similares alteram o DOM, enquanto uma tecnologia assistiva (TA/AT) pode não ser alertada disso. Aqui é onde o conjunto [ARIA](/pt-BR/ARIA) entra.
 
 _Exemplo 1: Marcação para um widget de abas construído sem as indicações ARIA. Não existem informações semânticas, na marcação, que descrevam a sua forma, nem a sua função._
 
@@ -200,7 +201,7 @@ Não faça isso. Em substituição, implemente o modo "_visualizar_" usando um e
 
 ### Mudanças assíncronas de conteúdo
 
-> **Nota:** Em construção. Veja, também, [Regiões Dinâmicas](/en/ARIA/Live_Regions)
+> **Nota:** Em construção. Veja, também, [Regiões Dinâmicas](/pt-BR/ARIA/Live_Regions)
 
 ## Navegação pelo Teclado
 
@@ -216,14 +217,14 @@ Aqui está um resumo sobre como a navegação pelo teclado deve funcionar, com a
 - Dentro de um formulário, a tecla "barra de spaço" deve selecionar, ou ativar um controle, enquanto a tecla "Entra" deve submeter sua ação padrão.
 - Se houver dúvidas, copie o comportamento das ações padronizadas para ambiente nos controles que você estiver criando.
 
-Assim, para o exemplo de _widget_ de abas acima, a pessoa que estiver navegando deve ser capaz de entrar e sair da caixa que o contém usando as teclas "_Tab_" e "_Shift+Tab_" ( a \<ol> na nossa marcação). Uma vez que o foco, pelo teclado, estiver dentro do contêiner, as teclas de setas devem permitir a navegação entre as suas diferentes guias (os elementos \<li> ). A partir daqui as convenções variam de plataforma para plataforma. No Windows, a próxima aba deve ser ativada, automaticamente, quando as teclas de setas forem pressionadas. Em Mac OS X, seus utilizadores ativam a próxima aba pressionando a tecla "_Entra_", ou a "_barra de espaço_". Um tutorial abrangente, para a criação de _widgets_, com navegação pelo teclado, descreve como implementar esse comportamento utilizando JavaScript [Keyboard-navigable JavaScript widgets (_JavaScript para_ _widgets navegáveis pelo teclado_)](/en/Accessibility/Keyboard-navigable_JavaScript_widgets).
+Assim, para o exemplo de _widget_ de abas acima, a pessoa que estiver navegando deve ser capaz de entrar e sair da caixa que o contém usando as teclas "_Tab_" e "_Shift+Tab_" ( a \<ol> na nossa marcação). Uma vez que o foco, pelo teclado, estiver dentro do contêiner, as teclas de setas devem permitir a navegação entre as suas diferentes guias (os elementos \<li> ). A partir daqui as convenções variam de plataforma para plataforma. No Windows, a próxima aba deve ser ativada, automaticamente, quando as teclas de setas forem pressionadas. Em Mac OS X, seus utilizadores ativam a próxima aba pressionando a tecla "_Entra_", ou a "_barra de espaço_". Um tutorial abrangente, para a criação de _widgets_, com navegação pelo teclado, descreve como implementar esse comportamento utilizando JavaScript [Keyboard-navigable JavaScript widgets (_JavaScript para_ _widgets navegáveis pelo teclado_)](/pt-BR/Accessibility/Keyboard-navigable_JavaScript_widgets).
 
 Para mais detalhes sobre as convenções da navegação pelo teclado em modelo ambiente, um guia completo (em inglês) [DHTML style guide (_guia de estilos da HTML Dinâmica_)](http://access.aol.com/dhtml-style-guide-working-group/) está disponível. Este guia oferece uma visão global de como a navegação pelo teclado deve funcionar em cada tipo de _widget_ suportado pelo conjunto ARIA. A W3C também oferece um documento que ajuda muito, [ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html), incluindo a navegação pelo teclado e as convenções de atalhos para uma variedade de _widgets_.
 
 ## Veja, também
 
-- [ARIA](/en/ARIA)
-- [Web applications and ARIA FAQ](/en/Accessibility/Web_applications_and_ARIA_FAQ)
+- [ARIA](/pt-BR/ARIA)
+- [Web applications and ARIA FAQ](/pt-BR/Accessibility/Web_applications_and_ARIA_FAQ)
 - [WAI-ARIA Specification](http://www.w3.org/TR/wai-aria/)
 - [WAI-ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html)
 - [DHTML Style Guide](http://access.aol.com/dhtml-style-guide-working-group/)

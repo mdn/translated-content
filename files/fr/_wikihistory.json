@@ -829,7 +829,7 @@
     "modified": "2019-03-23T22:03:18.469Z",
     "contributors": ["loella16"]
   },
-  "Glossary/Grid_Rows": {
+  "Glossary/Grid_Row": {
     "modified": "2019-03-23T22:03:16.488Z",
     "contributors": ["loella16"]
   },
@@ -1826,6 +1826,10 @@
   "Glossary/Unicode": {
     "modified": "2019-03-18T21:45:46.646Z",
     "contributors": ["loella16"]
+  },
+  "Glossary/Unix_time": {
+    "modified": "2019-03-23T23:29:44.989Z",
+    "contributors": ["loella16", "FredB"]
   },
   "Glossary/Usenet": {
     "modified": "2019-03-23T22:40:09.482Z",
@@ -3685,10 +3689,6 @@
     "modified": "2020-09-30T09:06:59.707Z",
     "contributors": ["chrisdavidmills", "wbamberg", "teoli", "fscholz", "jmh"]
   },
-  "MDN/Yari": {
-    "modified": "2020-02-08T12:56:22.102Z",
-    "contributors": ["tristantheb"]
-  },
   "Mozilla": {
     "modified": "2019-03-23T23:34:28.870Z",
     "contributors": ["Dralyab", "Hell_Carlito", "PtitPou", "jmh", "ethertank"]
@@ -4723,10 +4723,6 @@
   },
   "Mozilla/Add-ons/WebExtensions/API/menus/create": {
     "modified": "2020-10-15T22:04:43.381Z",
-    "contributors": ["hellosct1"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/menus/createProperties": {
-    "modified": "2020-10-15T22:30:24.941Z",
     "contributors": ["hellosct1"]
   },
   "Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement": {
@@ -7892,10 +7888,6 @@
   "Web/API/DOMStringList": {
     "modified": "2019-03-18T21:41:20.124Z",
     "contributors": ["loella16"]
-  },
-  "Web/API/DOMTimeStamp": {
-    "modified": "2019-03-23T23:29:44.989Z",
-    "contributors": ["loella16", "FredB"]
   },
   "Web/API/DOMTokenList": {
     "modified": "2020-10-15T21:34:05.793Z",
@@ -13556,10 +13548,6 @@
       "Fredchat"
     ]
   },
-  "Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ": {
-    "modified": "2019-01-16T16:04:45.409Z",
-    "contributors": ["VincentN", "Mgjbot", "Kyodev", "Fredchat", "BenoitL"]
-  },
   "Web/API/atob": {
     "modified": "2019-09-24T09:32:03.862Z",
     "contributors": [
@@ -15133,19 +15121,6 @@
       "FredB"
     ]
   },
-  "Web/CSS/@viewport": {
-    "modified": "2020-10-15T21:21:36.008Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "J.DMB",
-      "louuis",
-      "teoli",
-      "Igro",
-      "FredB",
-      "Delapouite"
-    ]
-  },
   "Web/CSS/Adjacent_sibling_combinator": {
     "modified": "2020-10-15T21:46:19.453Z",
     "contributors": ["SphinxKnight", "builgui", "ffoodd"]
@@ -15357,10 +15332,6 @@
       "Kyodev",
       "Fredchat"
     ]
-  },
-  "Web/CSS/CSS_Device_Adaptation": {
-    "modified": "2020-10-15T21:44:13.646Z",
-    "contributors": ["SphinxKnight", "xdelatour"]
   },
   "Web/CSS/CSS_Display": {
     "modified": "2020-10-15T21:44:13.926Z",
@@ -22467,10 +22438,6 @@
       "matteodelabre"
     ]
   },
-  "Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol": {
-    "modified": "2020-03-12T19:40:23.053Z",
-    "contributors": ["SphinxKnight"]
-  },
   "Web/JavaScript/Reference/Errors": {
     "modified": "2020-03-12T19:43:16.869Z",
     "contributors": ["SphinxKnight"]
@@ -25998,7 +25965,7 @@
     "modified": "2020-10-15T21:27:45.620Z",
     "contributors": ["SphinxKnight", "thomasgodart", "teoli"]
   },
-  "Web/JavaScript/Reference/Operators/Nullish_coalescing_operator": {
+  "Web/JavaScript/Reference/Operators/Nullish_coalescing": {
     "modified": "2020-11-11T08:53:19.207Z",
     "contributors": ["JNa0", "SphinxKnight", "nkokla"]
   },

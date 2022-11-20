@@ -16,6 +16,7 @@ tags:
   - track
 translation_of: Web/API/TextTrack/cuechange_event
 ---
+
 {{APIRef}}
 
 El evento **`cuechange`** se activa cuando un {{domxref("TextTrack")}} ha cambiado las anotaciones que se estan mostrando. El evento es activado tanto en `TextTrack` _y_ en el {{domxref("HTMLTrackElement")}} donde esta siendo mostrado, si lo hay.
@@ -87,9 +88,7 @@ textTrackElem.oncuechange = (event) => {
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', '#event-media-cuechange', 'cuechange')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

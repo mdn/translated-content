@@ -2,6 +2,7 @@
 title: content
 slug: Web/CSS/content
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`content`** é usada com os pseudoelementos {{cssxref("::before")}} e {{cssxref("::after")}} para gerar conteúdo em um elemento. Objetos inseridos usando a propriedade `content` são _[elementos substituídos](/pt-BR/docs/CSS/Replaced_element) anônimos_.

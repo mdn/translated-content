@@ -2,6 +2,7 @@
 title: Animation.currentTime
 slug: Web/API/Animation/currentTime
 ---
+
 {{APIRef("Web Animations")}}{{SeeCompatTable}}
 
 A propriedade **`Animation.currentTime`** da [Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API) retorna e altera o tempo atual da animação em milésimos de segundos, seja estando em execução ou pausada.

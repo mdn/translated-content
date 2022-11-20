@@ -2,6 +2,7 @@
 title: Window.confirm()
 slug: Web/API/Window/confirm
 ---
+
 {{ApiRef("Window")}}
 
 O método **`Window.confirm()`** mostra uma janela modal com uma mensagem opcional e dois botões, OK e Cancelar.
@@ -33,7 +34,7 @@ The following text is shared between this article, DOM:window\.prompt and DOM:wi
 
 Usuários do [Mozilla Chrome](/pt-BR/Chrome) (Ex.: Extensões do Firefox) devem utilizar métodos de `nsIPromptService`.
 
-{{gecko_minversion_inline("23.0")}}O argumento é opcional e não é requerido por especificações.
+O argumento é opcional e não é requerido por especificações.
 
 ## Especificação
 

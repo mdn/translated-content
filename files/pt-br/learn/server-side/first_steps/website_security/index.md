@@ -3,6 +3,7 @@ title: Segurança em aplicação web
 slug: Learn/Server-side/First_steps/Website_security
 original_slug: Learn/Server-side/First_steps/Seguranca_site
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 A segurança do site requer vigilância em todos os aspectos do design e uso do site. Este artigo introdutório não fará de você um guru da segurança de sites, mas ajudará a entender de onde vem as ameaças e o que você pode fazer para proteger sua aplicação web contra os ataques mais comuns.

@@ -2,6 +2,7 @@
 title: Expressão da função async
 slug: Web/JavaScript/Reference/Operators/async_function
 ---
+
 {{jsSidebar("Operators")}}A palavra chave async pode ser usado para definir funções async dentro das expressões.Você tambem pode definir funções async usando a declaração de função async.
 
 ## Sintaxe

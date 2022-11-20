@@ -2,6 +2,7 @@
 title: <a>
 slug: Web/HTML/Element/a
 ---
+
 {{HTMLSidebar}}
 
 O **elemento** **`<a>` **em **HTML** (ou elemento âncora), com o atributo [`href`](#href) cria-se um hiperligação nas páginas web, arquivos, endereços de emails, ligações na mesma página ou endereços na URL. O conteúdo dentro de cada `<a>` **precisará** indicar o destino do link.

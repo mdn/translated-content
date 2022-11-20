@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/ParentNode/childElementCount
 original_slug: Web/API/ParentNode/childElementCount
 ---
+
 {{ APIRef }}
 
 La propiedad de sólo lectura `ParentNode.childElementCount` devuelve un número del tipo `unsigned long` que representa la cantidad de elementos hijo que penden del elemento padre (ParentNode).

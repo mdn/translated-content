@@ -2,6 +2,7 @@
 title: Document.alinkColor
 slug: Web/API/Document/alinkColor
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 Retorna ou define a cor de um link ativo no corpo do documento. Um link está ativo durante o tempo entre os eventos `mousedown` e `mouseup`.

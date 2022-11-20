@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/Common_questions/What_software_do_I_need
 original_slug: Learn/Common_questions/Que_software_necesito
 ---
+
 En este artículo se explican cuales componentes de software necesita para editar, cargar, o visualizar un sitio web.
 
 <table>

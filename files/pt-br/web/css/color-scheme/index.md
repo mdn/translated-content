@@ -2,6 +2,7 @@
 title: color-scheme
 slug: Web/CSS/color-scheme
 ---
+
 {{CSSRef}}
 
 A Propriedade CSS **`color-scheme`** possibilita que um elemento possa indicar em qual esquema de cores é mais amigável de ser renderizado.

@@ -4,6 +4,7 @@ slug: Glossary/Whitespace
 translation_of: Glossary/Whitespace
 original_slug: Глоссарий/Пробельные_символы
 ---
+
 **Пробельные символы** — это множество {{Glossary("Character", "символов")}} использующихся для горизонтального или вертикального разделения остальных символов. Они используются для разделения токенов в {{Glossary("HTML")}}, {{Glossary("CSS")}}, {{Glossary("JavaScript")}} и других компьютерных языках.
 
 ## В HTML

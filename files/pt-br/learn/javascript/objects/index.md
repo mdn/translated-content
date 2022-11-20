@@ -3,6 +3,7 @@ title: Introdução a objetos em Javascript
 slug: Learn/JavaScript/Objects
 original_slug: Aprender/JavaScript/Objetos
 ---
+
 {{LearnSidebar}}
 
 Em JavaScript, quase tudo é objeto. Desde as funcionalidades padrão, como strings e arrays, até as APIs para navegadores baseadas na linguagem. Até você pode criar seus próprios objetos. Você pode encapsular funções e variáveis relacionadas de uma forma eficiente. Os objetos agem como uma espécie de manipuladores de dados. Compreender a natureza da orientação a objetos do JavaScript é crucial para aprofundar os conhecimentos acerca da linguagem. Por isso, nós elaboramos esse módulo para auxiliá-lo. Ensinaremos a teoria de objetos em detalhes. Crie seus próprios objetos!

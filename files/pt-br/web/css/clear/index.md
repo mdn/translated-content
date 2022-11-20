@@ -2,6 +2,7 @@
 title: clear
 slug: Web/CSS/clear
 ---
+
 {{CSSRef}}
 
 A propriedade **`clear do`** [CSS](/pt-BR/docs/CSS) especifica se um elemento pode ter elementos [flutuantes](/pt-BR/docs/CSS/float) ao seu lado ou se devem ser movidos para abaixo dele (clear). Essa propriedade se aplica à elementos flutuantes ou não flutuantes.

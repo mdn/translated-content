@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 original_slug: Web/JavaScript/Referencia/Objetos_globales/JSON
 ---
+
 {{JSRef("Objetos_globales", "JSON")}}
 
 ## Resumen
@@ -123,10 +124,7 @@ Los objectos [JSON2](https://github.com/douglascrockford/JSON-js) y [JSON3](http
 
 ## Especificaciones
 
-| Especificación                                                   | Estado                   | Comentario |
-| ---------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('ES5.1', '#sec-15.12', 'JSON')}}         | {{Spec2('ES5.1')}} |            |
-| {{SpecName('ES6', '#sec-json-object', 'JSON')}} | {{Spec2('ES6')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

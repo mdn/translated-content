@@ -17,7 +17,7 @@ window.print()
 
 ## Примечания
 
-Начиная с Chrome {{CompatChrome(46.0)}} этот метод заблокирован внутри {{htmlelement("iframe")}} до тех пор, пока его атрибут sandbox не имеет значение `allow-modals`.
+Начиная с Chrome 46.0 этот метод заблокирован внутри {{htmlelement("iframe")}} до тех пор, пока его атрибут sandbox не имеет значение `allow-modals`.
 
 ## Спецификации
 

@@ -5,6 +5,7 @@ tags:
   - геттер
 translation_of: Web/JavaScript/Reference/Functions/get
 ---
+
 {{jsSidebar("Functions")}}
 
 Синтаксис **`get`** связывает свойство объекта с функцией, которая будет вызываться при обращении к этому свойству.

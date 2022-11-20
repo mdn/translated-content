@@ -17,6 +17,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
 
 Элемент {{glossary("Head", "head")}} HTML-документа не отображается на странице в веб-браузере. Он содержит такую информацию, как:
@@ -172,7 +173,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 <meta property="og:title" content="MDN Web Docs">
 ```
 
-Один из результатов добавления этих метаданных в том, что когда вы добавите ссылку MDN Web Docs на facebook, она отобразится с изображением и описанием, улучшая опыт взаимодействия _[(User eXperience, UX](https://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D1%8B%D1%82_%D0%B2%D0%B7%D0%B0%D0%B8%D0%BC%D0%BE%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%8F))\_.
+Один из результатов добавления этих метаданных в том, что когда вы добавите ссылку MDN Web Docs на facebook, она отобразится с изображением и описанием, улучшая опыт взаимодействия _[(User eXperience, UX](https://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D1%8B%D1%82_%D0%B2%D0%B7%D0%B0%D0%B8%D0%BC%D0%BE%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%8F))_.
 
 ![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](https://mdn.mozillademos.org/files/12349/facebook-output.png)У Twitter также есть собственный формат метаданных, с помощью которого создаётся аналогичный эффект, при отображении URL сайта на twitter.com:
 

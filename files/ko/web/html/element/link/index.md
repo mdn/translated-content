@@ -13,6 +13,7 @@ tags:
   - 파비콘
 translation_of: Web/HTML/Element/link
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<link>`** 요소는 현재 문서와 외부 리소스의 관계를 명시합니다. `<link>`는 {{glossary("CSS", "스타일 시트")}}를 연결할 때 제일 많이 사용하지만, 사이트 아이콘("파비콘"과 홈 화면 아이콘) 연결 등 여러가지로 쓰일 수 있습니다.
@@ -27,7 +28,7 @@ translation_of: Web/HTML/Element/link
 <link href="main.css" rel="stylesheet">
 ```
 
-위의 간단한 예제는 `href` 특성에 스타일 시트의 경로를, `rel` 특성에 `stylesheet`을 사용합니다. `rel`은 관계(\_rel_ationship)를 뜻하며, 현재 문서와 연결한 아이템의 관계가 어떻게 되는지 설명합니다. 따라서 `<link>` 요소의 제일 중요한 기능 중 하나라고 볼 수 있습니다. [링크 유형](/ko/docs/Web/HTML/Link_types) 참고서에서 볼 수 있듯 관계에는 다양한 종류가 있습니다.
+위의 간단한 예제는 `href` 특성에 스타일 시트의 경로를, `rel` 특성에 `stylesheet`을 사용합니다. `rel` 은 관계(**rel**ationship)를 뜻하며, 현재 문서와 연결한 아이템의 관계가 어떻게 되는지 설명합니다. 따라서 `<link>` 요소의 제일 중요한 기능 중 하나라고 볼 수 있습니다. [링크 유형](/ko/docs/Web/HTML/Link_types) 참고서에서 볼 수 있듯 관계에는 다양한 종류가 있습니다.
 
 그중에서도 몇 가지 자주 쓰이는 유형이 있습니다. 사이트의 파비콘을 연결하려면 다음과 같이 사용합니다.
 

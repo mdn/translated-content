@@ -3,6 +3,7 @@ title: The XSLT/JavaScript Interface in Gecko
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko
 original_slug: The_XSLT_JavaScript_Interface_in_Gecko
 ---
+
 1. [Introduction](/pt-BR/docs/The_XSLT//JavaScript_Interface_in_Gecko/Introduction)
 2. [JavaScript/XSLT Bindings](/pt-BR/docs/The_XSLT//JavaScript_Interface_in_Gecko/JavaScript//XSLT_Bindings)
 3. [Basic Example](/pt-BR/docs/The_XSLT//JavaScript_Interface_in_Gecko/Basic_Example)

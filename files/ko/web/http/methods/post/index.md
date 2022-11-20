@@ -7,6 +7,7 @@ tags:
   - Request method
 translation_of: Web/HTTP/Methods/POST
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `POST` 메서드**는 서버로 데이터를 전송합니다. 요청 본문의 유형은 {{httpheader("Content-Type")}} 헤더로 나타냅니다.

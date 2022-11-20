@@ -2,6 +2,7 @@
 title: CSS Columns
 slug: Web/CSS/CSS_Columns
 ---
+
 {{CSSRef}}
 
 **CSS Columns** is a module of CSS that defines a multi-column layout, allowing to express how content should flow between columns and how gaps and rules are handled.

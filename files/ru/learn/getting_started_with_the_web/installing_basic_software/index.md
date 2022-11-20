@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
 original_slug: Learn/Getting_started_with_the_web/Установка_базового_программного_обеспечения
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 
 В _Установке базового программного обеспечения_, мы покажем вам, какие инструменты вам необходимы для простой веб-разработки, и как правильно установить их.

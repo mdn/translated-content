@@ -3,6 +3,7 @@ title: AudioContext.currentTime
 slug: Web/API/BaseAudioContext/currentTime
 original_slug: Web/API/AudioContext/currentTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `currentTime` read-only property of the {{ domxref("AudioContext") }} interface returns a double representing an ever-increasing hardware timestamp in seconds that can be used for scheduling audio playback, visualizing timelines, etc. It starts at 0.

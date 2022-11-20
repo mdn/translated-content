@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/includes
 ---
+
 {{JSRef}}
 
 El método **`includes()`** determina si una cadena de texto puede ser encontrada dentro de otra cadena de texto, devolviendo **`true`** o **`false`** según corresponda.

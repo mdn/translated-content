@@ -2,6 +2,7 @@
 title: 'Tutorial Django Parte 10: Testando uma aplicação web Django'
 slug: Learn/Server-side/Django/Testing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
 
 À medida que websites crescem, eles se tornam mais difíceis de testar manualmente. Não apenas mais para testar, mas, as interações entre componentes tornam-se mais complexas, uma pequena mudança em uma área pode impactar outras áreas, portanto mais mudanças serão necessárias para garantir que tudo permaneça funcionando e erros não sejam introduzidos à medida que mais alterações forem feitas. Uma maneira de mitigar esses problemas é escrever testes automatizados, que podem ser executados facilmente e confiavelmente toda vez que você faz uma alteração. Este tutorial mostra como automatizar testes unitários do seu website utilizando o _framework_ de testes do Django.

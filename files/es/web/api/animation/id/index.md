@@ -10,6 +10,7 @@ tags:
   - id
 translation_of: Web/API/Animation/id
 ---
+
 {{ APIRef("Web Animations") }}
 
 La propiedad `Animation.id` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve o establece una cadena(string) utilizado para identificar la animación.

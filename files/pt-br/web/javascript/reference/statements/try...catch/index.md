@@ -2,6 +2,7 @@
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
 ---
+
 {{jsSidebar("Statements")}}
 
 As declarações **try...catch** marcam um bloco de declarações para testar (**try**), e especifica uma resposta, caso uma exceção seja lançada.
@@ -239,5 +240,5 @@ O "oops" externo não é lançado devido ao retorno do bloco `finally`. O mesmo 
 
 ## Vejam também
 
-- [throw](/en/JavaScript/Reference/Statements/throw)
-- [Error](/en/JavaScript/Reference/Global_Objects/Error)
+- [throw](/pt-BR/JavaScript/Reference/Statements/throw)
+- [Error](/pt-BR/JavaScript/Reference/Global_Objects/Error)

@@ -3,6 +3,7 @@ title: 'Avaliação: solucionando problemas de acessibilidade'
 slug: Learn/Accessibility/Accessibility_troubleshooting
 original_slug: Learn/Accessibility/Acessibilidade_problemas
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
 Na avaliação deste módulo, apresentamos a você um site simples com vários problemas de acessibilidade que você precisa diagnosticar e corrigir.

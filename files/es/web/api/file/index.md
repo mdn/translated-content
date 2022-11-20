@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/API/File
 ---
+
 {{APIRef }}
 
 La interfaz **`File`** provee información acerca de los archivos y permite que el código JavaScript en una página web tenga acceso a su contenido.
@@ -30,7 +31,7 @@ Ver [Utilizando archivos desde aplicaciones web (Using files from web applicatio
 
 - {{DOMxRef("File.lastModified")}}{{ReadOnlyInline}}
   - : Retorna el último tiempo que el archivo se modifico, en milisegundos desde la época de UNIX (1 de enero de 1970 a medianoche).
-- {{DOMxRef("File.lastModifiedDate")}} {{Deprecated_Inline}}{{ReadOnlyInline}} 
+- {{DOMxRef("File.lastModifiedDate")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
   - : Retorna la última fecha (en un objeto {{JSxRef("Date")}}[`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)) de modificación del archivo referenciada por el objeto `File`.
 - {{DOMxRef("File.name")}}{{ReadOnlyInline}}
   - : Retorna el nombre del archivo referenciada por el objeto `File`.
@@ -60,9 +61,7 @@ _La interfaz `File` no define algún método, pero los hereda de la interfaz {{d
 
 ## Especificaciones
 
-| Especificación                   | Estado                       | Comentario          |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('File API')}} | {{Spec2('File API')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

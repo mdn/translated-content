@@ -10,6 +10,7 @@ tags:
   - local
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
+
 {{AddonSidebar()}}
 
 Representa el área de almacenamiento local. Los elementos en el almacenamiento local son locales a la máquina en la que se instaló la extensión.

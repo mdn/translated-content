@@ -3,6 +3,8 @@ title: Understanding CSS z-index
 slug: Web/CSS/CSS_Positioning/Understanding_z_index
 ---
 
+{{CSSRef}}
+
 Usually HTML pages can be considered two-dimensional, because text, images and other elements are arranged on the page without overlapping. There is a single rendering flow, and all elements are aware of the space taken by others. The {{cssxref("z-index")}} attribute lets you adjust the order of the layering of objects when rendering content.
 
 > _In CSS 2.1, each box has a position in three dimensions. In addition to their horizontal and vertical positions, boxes lie along a "z-axis" and are formatted one on top of the other. Z-axis positions are particularly relevant when boxes overlap visually._

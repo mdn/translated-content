@@ -20,6 +20,7 @@ tags:
   - this
 translation_of: Learn/JavaScript/Objects/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 En éste artículo, veremos fundamentos de sintaxis de los objetos de JavaScript y revisaremos algunas características de JavaScript que ya hemos analizado anteriormente en el curso, reiterando el hecho de que muchas de las funciones con las que ya has tratado de hecho son objetos.

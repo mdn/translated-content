@@ -3,6 +3,7 @@ title: 'ReferenceError: assignment to undeclared variable "x"'
 slug: Web/JavaScript/Reference/Errors/Undeclared_var
 translation_of: Web/JavaScript/Reference/Errors/Undeclared_var
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

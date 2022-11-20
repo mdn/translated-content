@@ -3,6 +3,7 @@ title: DeviceRotationRate
 slug: Web/API/DeviceMotionEventRotationRate
 original_slug: Web/API/DeviceRotationRate
 ---
+
 {{ ApiRef("Device Orientation Events") }} {{SeeCompatTable}}
 
 Um objeto `DeviceRotationRate` fornece informações sobre a taxa na qual o dispositivo está girando em torno de todos os três eixos.

@@ -3,6 +3,7 @@ title: Understanding CSS z-index
 slug: Web/CSS/CSS_Positioning/Understanding_z_index
 original_slug: Web/Guide/CSS/Understanding_z_index
 ---
+
 Normalmente páginas HTML podem ser consideradas bi-dimensionais, pois texto, imagens e outros elementos podem ser dispostos na página sem sobreposição. Há apenas um fluxo de renderização e todos os elementos sabem do espaço ocupado por outros. O atributo {{cssxref("z-index")}} lhe permite ajustar a ordem de sobreposição dos objetos ao renderizar o conteúdo.
 
 > _Em CSS 2.1, cada caixa tem uma posição nas três dimensões. Em adição às suas posições na horizontal e vertical, caixas ficam no "eixo-z" e são formatadas uma em cima da outra. Posições no Eixo-Z são particularmente relevantes quando caixas se sobrepõem visualmente._
@@ -15,13 +16,13 @@ Usar z-index aparenta ser extremamente fácil: uma única propriedade, endereça
 
 Esse artigo tentará explicar essas regras, com algumas simplificações e vários exemplos.
 
-1. [Stacking without z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index) : Regras padrões de empilhamento
-2. [Stacking and float](/en/CSS/Understanding_z-index/Stacking_and_float) : Como lidar com elementos que usam _float_
-3. [Adding z-index](/en/CSS/Understanding_z-index/Adding_z-index) : Usando index-z para mudar o empilhamento padrão
-4. [The stacking context](/en/CSS/Understanding_z-index/The_stacking_context) : Notas sobre contexto do empilhamento
-5. [Stacking context example 1](/en/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarquia, z-index no último _level_
-6. [Stacking context example 2](/en/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarquia, z-index em todos os _levels_
-7. [Stacking context example 3](/en/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarquia, z-index no segundo _level_
+1. [Stacking without z-index](/pt-BR/CSS/Understanding_z-index/Stacking_without_z-index) : Regras padrões de empilhamento
+2. [Stacking and float](/pt-BR/CSS/Understanding_z-index/Stacking_and_float) : Como lidar com elementos que usam _float_
+3. [Adding z-index](/pt-BR/CSS/Understanding_z-index/Adding_z-index) : Usando index-z para mudar o empilhamento padrão
+4. [The stacking context](/pt-BR/CSS/Understanding_z-index/The_stacking_context) : Notas sobre contexto do empilhamento
+5. [Stacking context example 1](/pt-BR/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarquia, z-index no último _level_
+6. [Stacking context example 2](/pt-BR/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarquia, z-index em todos os _levels_
+7. [Stacking context example 3](/pt-BR/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarquia, z-index no segundo _level_
 
 _Note of the author: Thanks to Wladimir Palant and Rod Whiteley for the review\._
 

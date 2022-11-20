@@ -2,6 +2,7 @@
 title: String.prototype.fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 O método **`fixed()`** cria um elemento HTML [`<tt>`](/pt-BR/docs/Web/HTML/Element/tt) que faz com que uma string seja exibida em uma fonte de densidade fixa.

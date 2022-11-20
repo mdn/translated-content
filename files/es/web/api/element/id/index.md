@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/Element/id
 ---
+
 {{ APIRef }}
 
 La propiedad `Element.id` representa el identificador del elemento, reflejando el atributo global de **[id](/es/docs/Web/HTML/Global_attributes/id)**.

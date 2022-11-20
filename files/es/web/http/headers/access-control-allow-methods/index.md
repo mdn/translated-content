@@ -3,6 +3,7 @@ title: Access-Control-Allow-Methods
 slug: Web/HTTP/Headers/Access-Control-Allow-Methods
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Methods
 ---
+
 {{HTTPSidebar}}
 
 La cabecera de respuesta **`Access-Control-Allow-Methods`** especifica el método o los métodos aceptados cuando se accede al recurso en respuesta de un {{glossary("preflight request")}}.
@@ -30,9 +31,7 @@ Access-Control-Allow-Methods: POST, GET, OPTIONS
 
 ## Especificaciones
 
-| Specification                                                                                                            | Status                   | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#http-access-control-allow-methods', 'Access-Control-Allow-Methods')}} | {{Spec2("Fetch")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad de navegador
 

@@ -7,6 +7,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/@counter-style/additive-symbols
 ---
+
 ## Resumen
 
 El descriptor additive-symbols es similar al descriptor {{cssxref('symbols')}}, y permite al usuario especificar símbolos que se usarán para representación de contadores cuando el valor del descriptor {{cssxref('system')}} es _additive_. El descriptor `additive-symbols` define lo que se conoce como tuplas aditivas, cada una de las cuales es un par que contiene un símbolo y su peso como entero no negativo. El sistema aditivo es usado para construir sistemas de [numeración de valores de signos](http://en.wikipedia.org/wiki/Sign-value_notation) como la numeración romana.
@@ -59,9 +60,7 @@ additive-symbols: 3 "0", 2 url(symbol.png);
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estatus                                      | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-symbols', 'additive-symbols')}} | {{Spec2('CSS3 Counter Styles')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

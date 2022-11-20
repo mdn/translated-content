@@ -4,6 +4,7 @@ slug: Web/CSS/cursor
 translation_of: Web/CSS/cursor
 browser-compat: css.properties.cursor
 ---
+
 {{CSSRef}}
 
 ## Описание

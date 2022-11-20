@@ -3,6 +3,7 @@ title: widows
 slug: Web/CSS/widows
 translation_of: Web/CSS/widows
 ---
+
 {{CSSRef}}
 
 La propiedad [CSS](/es/docs/CSS) **`widows`** especifica el número minimo de lineas en un contenedor de bloques que se deben mostrar en la parte superior de la [pagina](/es/docs/Web/CSS/Paged_Media), region o [columna](/es/docs/Web/CSS/CSS_Columns). Esta propiedad se usa normalmente para controlar como se producen las pausas.
@@ -69,11 +70,7 @@ p:first-child {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                                   | Comentario                                                                                                    |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Fragmentation', '#widows-orphans', 'widows')}} | {{Spec2('CSS3 Fragmentation')}} | Extiende `widows` para que se apliqye a cualquier tipo de fragmento, incluyendo paginas, regiones o columnas. |
-| {{SpecName('CSS3 Multicol', '#filling-columns', 'widows')}}     | {{Spec2('CSS3 Multicol')}}     | Recomendaciones a considerar de `widows` en relacion con las columnas.                                        |
-| {{SpecName('CSS2.1', 'page.html#break-inside', 'widows')}}         | {{Spec2('CSS2.1')}}                 | Definición Inicial.                                                                                           |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

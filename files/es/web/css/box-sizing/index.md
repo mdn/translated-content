@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/CSS/box-sizing
 ---
+
 {{CSSRef}}
 
 La propiedad CSS **`box-sizing`** como el {{glossary("user agent")}} debe calcular el ancho y alto total de un elemento.
@@ -89,11 +90,7 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                               | Estatus                              | Comentario         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Basic UI', '#box-sizing', 'box-sizing')}} | {{Spec2('CSS3 Basic UI')}} | Definición inicial |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

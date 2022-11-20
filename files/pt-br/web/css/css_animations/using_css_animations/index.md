@@ -3,6 +3,7 @@ title: Usando animações CSS
 slug: Web/CSS/CSS_Animations/Using_CSS_animations
 original_slug: Web/CSS/CSS_Animations/Usando_animações_CSS
 ---
+
 {{SeeCompatTable}}{{CSSRef}}
 
 Animações CSS tornam possível animar transições de um estilo CSS para outro. Animações se consistem de dois componentes: um estilo descrevendo a animação e um set de keyframes que indicam o estado final e inicial do estilo CSS da animação, bem como possíveis waypoints intermediários ao longo do caminho.
@@ -345,4 +346,4 @@ Apenas por questão de completude, aqui está o HTML que exibe o conteúdo da pa
 ## Veja também
 
 - {{ domxref("AnimationEvent", "AnimationEvent") }}
-- [Detectando suporte de animação CSS](/en/CSS/CSS_animations/Detecting_CSS_animation_support)
+- [Detectando suporte de animação CSS](/pt-BR/CSS/CSS_animations/Detecting_CSS_animation_support)

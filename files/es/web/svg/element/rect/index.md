@@ -8,6 +8,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/rect
 ---
+
 {{SVGRef}}
 
 El elemento `rect` es una forma básica de SVG, usada para crear rectángulos basada en la posición de una esquina, su alto y ancho.

@@ -2,6 +2,7 @@
 title: <data>
 slug: Web/HTML/Element/data
 ---
+
 ## Summary
 
 The **HTML `<data>` Element** links a given content with a machine-readable translation. If the content is time- or date-related, the {{HTMLElement("time")}} must be used.

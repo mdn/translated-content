@@ -7,6 +7,7 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
 
 컬렉션 내 각 항목 처리는 매우 흔한 연산입니다. JavaScript는 간단한 {{jsxref("Statements/for","for")}} 루프에서 {{jsxref("Global_Objects/Array/map","map()")}} 및 {{jsxref("Global_Objects/Array/filter","filter()")}}에 이르기까지, 컬렉션을 반복하는 많은 방법을 제공합니다. 반복기(iterator) 및 생성기(generator)는 반복 개념을 핵심 언어 내로 바로 가져와 {{jsxref("Statements/for...of","for...of")}} 루프의 동작(behavior)을 사용자 정의하는 메커니즘을 제공합니다.

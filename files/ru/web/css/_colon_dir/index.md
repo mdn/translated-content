@@ -3,6 +3,7 @@ title: ':dir()'
 slug: Web/CSS/:dir
 translation_of: Web/CSS/:dir
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`:dir()`** — это [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS), который выбирает элементы на основе направления текста в них.

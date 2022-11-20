@@ -9,6 +9,7 @@ tags:
 translation_of: Web/SVG/Element/use
 original_slug: Web/SVG/Элемент/use
 ---
+
 {{SVGRef}}
 
 Элемент **`<use>`** берёт элементы из SVG-документа и дублирует их где-то ещё.

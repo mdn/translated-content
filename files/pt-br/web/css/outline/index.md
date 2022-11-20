@@ -2,6 +2,7 @@
 title: outline
 slug: Web/CSS/outline
 ---
+
 {{CSSRef}}
 
 ## Sumário

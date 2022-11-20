@@ -7,6 +7,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/border-bottom-right-radius
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -150,9 +151,7 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estado                                   | Comentarios        |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Backgrounds', '#border-bottom-right-radius', 'border-bottom-right-radius')}} | {{Spec2('CSS3 Backgrounds')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

@@ -2,6 +2,7 @@
 title: Element
 slug: Web/API/Element
 ---
+
 {{ APIRef("DOM") }}
 
 A interface **`Element`** é a classe base mais geral da qual todos os objetos em um {{domxref("Document")}} herda. Ela somente tem métodos e propriedades comuns para todos os tipos de elementos. Mais classes específicas herdam de `Element`. Por exemplo, a interface {{domxref("HTMLElement")}} é a interface base para elementos HTML, enquanto a interface {{domxref("SVGElement")}} é a base para todos os elementos SVG. A maioria das funcionalidades é especificada mais abaixo da hierarquia de classes.

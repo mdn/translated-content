@@ -5,6 +5,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/Data_URIs
 original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 browser-compat: http.data-url
 ---
+
 {{HTTPSidebar}}
 
 **Data URIs**, 즉 `data:` 스킴이 접두어로 붙은 URL은 컨텐츠 작성자가 작은 파일을 문서 내에 인라인으로 임베드할 수 있도록 해줍니다.

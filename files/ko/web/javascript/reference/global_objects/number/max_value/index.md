@@ -7,6 +7,7 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 ---
+
 {{JSRef}}
 
 **`Number.MAX_VALUE`** 속성은 JavaScript가 표현할 수 있는 제일 큰 양의 숫자 값을 나타냅니다.

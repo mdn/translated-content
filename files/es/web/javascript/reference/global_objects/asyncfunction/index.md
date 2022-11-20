@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Funcionesasíncronas
 browser-compat: javascript.builtins.AsyncFunction
 ---
+
 {{JSRef}}
 
 El **constructor `AsyncFunction`** crea un nuevo objeto {{jsxref("Statements/async_function", "async function", "", 1)}}.

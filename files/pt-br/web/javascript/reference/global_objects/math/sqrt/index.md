@@ -2,6 +2,7 @@
 title: Math.sqrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Resumo

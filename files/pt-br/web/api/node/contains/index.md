@@ -2,6 +2,7 @@
 title: Node.contains
 slug: Web/API/Node/contains
 ---
+
 {{ApiRef("DOM")}}
 
 ## Sumário
