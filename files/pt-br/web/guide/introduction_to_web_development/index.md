@@ -14,7 +14,7 @@ Para outro conjunto (sobreposto) de links sobre recursos de aprendizado, consult
 
 ### HTML
 
-- [O básico da Hypertext Mark-up Language (HTML)](http://www.w3.org/community/webed/wiki/The_basics_of_HTML) — o quê exatamente é HTML?
+- [O básico da Hypertext Mark-up Language (HTML)](https://www.w3.org/community/webed/wiki/The_basics_of_HTML) — o quê exatamente é HTML?
 - [A estrutura básica de uma página web](http://reference.sitepoint.com/html/page-structure) — o doctype e a 'árvore' do documento
 - [Elementos HTML fundamentais](http://reference.sitepoint.com/html/elements) — estrutura, cabeçalho, lista, elementos de formulário e mais, explicados por categoria.
 - [Tutorial para iniciantes HTML](http://htmldog.com/guides/htmlbeginner/) — um tutorial e exercícios que recapitulam o conhecimento básico aprendido acima.
@@ -24,7 +24,7 @@ Para outro conjunto (sobreposto) de links sobre recursos de aprendizado, consult
 
 - [Iniciando com o CSS](/pt-BR/CSS/Getting_Started) — um guia para iniciantes sobre CSS, cobrindo os conceitos básicos e fundamentais.
 - [Guia de referência CSS](/pt-BR/CSS/CSS_Reference) — um guia completo para CSS com detalhes do nível de suporte do Gecko/Firefox para cada um deles.
-- [Introdução do W3C à estilização com CSS](http://www.w3.org/MarkUp/Guide/Style) — um breve guia para estilizar páginas da web para iniciantes.
+- [Introdução do W3C à estilização com CSS](https://www.w3.org/MarkUp/Guide/Style) — um breve guia para estilizar páginas da web para iniciantes.
 - [Perguntas comuns sobre CSS](/pt-BR/Common_CSS_Questions) — perguntas frequentes e respostas para iniciantes.
 - [Conceitos intermediários de CSS](http://www.html.net/tutorials/css/) — agrupamento, pseudo-classes e mais.
 
@@ -52,7 +52,7 @@ Para outro conjunto (sobreposto) de links sobre recursos de aprendizado, consult
 
 ## Recursos
 
-- [W3C Web Education Community Group Wiki](http://www.w3.org/community/webed/wiki/Main_Page)
+- [W3C Web Education Community Group Wiki](https://www.w3.org/community/webed/wiki/Main_Page)
   - : Aborda design web, HTML e HTML5, CSS, JavaScript e acessibilidade. Este é um bom ponto de partida para iniciantes que desejam aprender fundamentos de desenvolvimento web em várias áreas
 - [SitePoint](http://reference.sitepoint.com/)
   - : Uma referência confiável para aprender HTML, CSS e Javascript que também menciona o suporte através de diferentes navegadores e erros conhecidos.

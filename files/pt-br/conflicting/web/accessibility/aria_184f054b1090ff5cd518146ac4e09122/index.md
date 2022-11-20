@@ -16,7 +16,7 @@ original_slug: Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
 ---
 ## O que significa ARIA?
 
-WAI-ARIA, que quer dizer [Accessible Rich Internet Applications](http://www.w3.org/WAI/intro/aria.php)(Aplicações Ricas para uma Internete Acessível), são as especificações da [Web Accessibility Initiative](http://www.w3.org/WAI/) (Iniciativa pela Acessibilidade na _Web_), da [W3C](http://www.w3.org/) (World Wide Web Consortium). O conjunto ARIA oferece a maneira de tornar as aplicações e _widgets_ da rede mundial mais acessíveis a uma diversidade maior de pessoas, incluindo quem utiliza tecnologias assistivas, como leitores de telas, ou lentes de aumento.
+WAI-ARIA, que quer dizer [Accessible Rich Internet Applications](https://www.w3.org/WAI/intro/aria.php)(Aplicações Ricas para uma Internete Acessível), são as especificações da [Web Accessibility Initiative](https://www.w3.org/WAI/) (Iniciativa pela Acessibilidade na _Web_), da [W3C](https://www.w3.org/) (World Wide Web Consortium). O conjunto ARIA oferece a maneira de tornar as aplicações e _widgets_ da rede mundial mais acessíveis a uma diversidade maior de pessoas, incluindo quem utiliza tecnologias assistivas, como leitores de telas, ou lentes de aumento.
 
 O conjunto ARIA fornece semânticas adicionais para descrever a função (role), estado (state) e funcionalidade de muitos controles familiares da interface de utilização, tais como menus, deslizantes, árvores e diálogos. E, também, provê informação estrutural adicional, o que auxilia os autores a identificar as áreas de referência (_landmarks_), regiões e malhas nas suas páginas. O conjunto ARIA habilita aplicações dinâmicas e _widgets_ gerenciados pela JavaScript a interoperar com uma gama de tecnologias assistivas baseadas em ambiente.
 
@@ -231,7 +231,7 @@ Outras ferramentas de teste úteis e técnicas para aplicativos e _widgets_ com 
 
 - [Visão geral sobre a acessibilidade nas aplicações e _widgets_ _web_](/en/Accessibility/An_overview_of_accessible_web_applications_and_widgets "en/Accessibility/An overview of accessible web applications and widgets")
 - [Formulários acessíveis](/en/Accessibility/Accessible_forms "en/Accessibility/Accessible forms")
-- The W3C's [WAI-ARIA Frequently Asked Questions](http://www.w3.org/WAI/aria/faq)
+- The W3C's [WAI-ARIA Frequently Asked Questions](https://www.w3.org/WAI/aria/faq)
 - WebAIM's [Accessibility of Rich Internet Applications](http://webaim.org/techniques/aria/)
 
 a autoria do artigo é de: morenoh149, kscarfone, akhabibullina, xfq, Fredchat, mpiotrowicz, Sheppy, BrendanMcKeon, anastasia, jswisher, Aaronlev, colinbdclark.

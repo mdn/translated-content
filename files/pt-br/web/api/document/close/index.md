@@ -26,4 +26,4 @@ document.close();
 
 ## Especificação
 
-[DOM Level 2 HTML: `close()` Method](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-98948567)
+[DOM Level 2 HTML: `close()` Method](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-98948567)

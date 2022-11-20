@@ -52,7 +52,7 @@ httpRequest.open('GET', 'http://www.example.org/some.file', true);
 httpRequest.send(null);
 ```
 
-- O primeiro parâmetro da chamada `para open()` é o método da requisição HTTP – GET, POST, HEAD ou qualquer outro método que você deseja usar e que é suportado pelo seu servidor. Mantenha o método em letras maiúsculas de acordo com o padrão HTTP; caso contrário, alguns navegadores (como o Firefox) podem não processar a requisição. Para mais informações sobre os possíveis métodos de requisição HTTP verifique as [especificações do W3C](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html).
+- O primeiro parâmetro da chamada `para open()` é o método da requisição HTTP – GET, POST, HEAD ou qualquer outro método que você deseja usar e que é suportado pelo seu servidor. Mantenha o método em letras maiúsculas de acordo com o padrão HTTP; caso contrário, alguns navegadores (como o Firefox) podem não processar a requisição. Para mais informações sobre os possíveis métodos de requisição HTTP verifique as [especificações do W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html).
 - O segundo parâmetro é a URL da página que você está requisitando. Como um recurso de segurança, você não pode chamar páginas em domínios de terceiros. Certifique-se de usar o nome exato do domínio em todas as suas páginas ou irá obter um erro de "permissão negada" quando chamar o `open()`. Uma cilada comum é acessar o seu site pelo `domain.tld`, mas tentar chamar páginas com `www.domain.tld`. Se você realmente precisa enviar uma requisição para outro domínio, veja [controle de acesso HTTP](/En/HTTP_access_control).
 - O terceiro parâmetro opcional define se a requisição é assíncrona. Se `TRUE` (o padrão), a execução da função JavaScript irá continuar enquanto a resposta do servidor não chegar. Isso é o A no AJAX.
 
@@ -100,7 +100,7 @@ A lista completa dos valores `readyState` é a seguinte:
 
 ([Fonte](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx))
 
-A próxima coisa a se checar é o [código de resposta](/pt-BR/HTTP#HTTP_Response_Codes) do servidor HTTP. Todos os possíveis códigos estão listados no site do [W3C](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). No exemplo a seguir, nós tratamos do retorno bem sucedido ou mal sucedido da requisição HTTP do AJAX, verificando se o código de resposta for [`200`](/pt-BR/HTTP/HTTP_response_codes#200).
+A próxima coisa a se checar é o [código de resposta](/pt-BR/HTTP#HTTP_Response_Codes) do servidor HTTP. Todos os possíveis códigos estão listados no site do [W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). No exemplo a seguir, nós tratamos do retorno bem sucedido ou mal sucedido da requisição HTTP do AJAX, verificando se o código de resposta for [`200`](/pt-BR/HTTP/HTTP_response_codes#200).
 
 ```js
 if (httpRequest.status === 200) {
@@ -230,7 +230,7 @@ var root_node = xmldoc.getElementsByTagName('root').item(0);
 alert(root_node.firstChild.data);
 ```
 
-Este código pega o objeto `XMLDocument` obtido por `responseXML` e utiliza métodos DOM para acessar alguns dados contidos no documento XML. Você pode ver o `test.xml` [aqui](http://www.w3clubs.com/mozdev/test.xml) e o script de teste atualizado [aqui](http://www.w3clubs.com/mozdev/httprequest_test_xml.html).
+Este código pega o objeto `XMLDocument` obtido por `responseXML` e utiliza métodos DOM para acessar alguns dados contidos no documento XML. Você pode ver o `test.xml` [aqui](https://www.w3clubs.com/mozdev/test.xml) e o script de teste atualizado [aqui](https://www.w3clubs.com/mozdev/httprequest_test_xml.html).
 
 ### Passo 5 – Trabalhando com os dados
 

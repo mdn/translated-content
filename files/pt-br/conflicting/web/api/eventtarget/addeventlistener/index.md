@@ -39,4 +39,4 @@ Conforme a interface for marcada com a flag `[function]`, todos os objetos [Func
 
 ## Veja também
 
-- {{ spec("http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}
+- {{ spec("https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}

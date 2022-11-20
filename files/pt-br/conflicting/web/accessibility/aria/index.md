@@ -100,7 +100,7 @@ If the search term is found, the `aria-invalid` attribute is reset to “`false`
 
 This function first removes any old alerts. The function is simple: It looks for an element with id “`alert`”, and if found, removes that from the [document object model](/pt-BR/docs/Mozilla/Tech/XUL/Tutorial/Document_Object_Model).
 
-Next, the function creates a `div` element to hold the alert text. It gets an ID of “`alert`”. And it gets a role set of “alert”. This is actually ARIA-inspired, even though it doesn’t say “aria” in the attribute name. This is because that role is based on the [XHTML Role Attribute Module](http://www.w3.org/TR/xhtml-role/ "XHTML Role Attribute Module") that was simply ported to HTML for simplicity.
+Next, the function creates a `div` element to hold the alert text. It gets an ID of “`alert`”. And it gets a role set of “alert”. This is actually ARIA-inspired, even though it doesn’t say “aria” in the attribute name. This is because that role is based on the [XHTML Role Attribute Module](https://www.w3.org/TR/xhtml-role/ "XHTML Role Attribute Module") that was simply ported to HTML for simplicity.
 
 The text is added to the `div` element, and the `div` element is added to the document.
 

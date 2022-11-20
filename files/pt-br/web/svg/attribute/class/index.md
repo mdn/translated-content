@@ -20,7 +20,7 @@ A classe pode ser utilizada pra estilizar o conteúdo do SVG com CSS.
 | ------------------- | --------------------------------------------------------------------------------------------- |
 | Valor               | [\<list-of-class-names>](/pt-BR/SVG/Content_type#List-of-Ts)    |
 | Animável            | Sim                                                                                           |
-| Documento normativo | [SVG 1.1 (2ª Edição): O atributo class](http://www.w3.org/TR/SVG/styling.html#ClassAttribute) |
+| Documento normativo | [SVG 1.1 (2ª Edição): O atributo class](https://www.w3.org/TR/SVG/styling.html#ClassAttribute) |
 
 {{ page("/pt-BR/SVG/Content_type","List-of-Ts") }}
 
@@ -31,7 +31,7 @@ A classe pode ser utilizada pra estilizar o conteúdo do SVG com CSS.
     <body>
   <svg width="120" height="220"
      viewPort="0 0 120 120" version="1.1"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="https://www.w3.org/2000/svg">
 
     <style type="text/css" >
       <![CDATA[
