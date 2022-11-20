@@ -9,7 +9,7 @@ slug: Web/API/ReadableStreamDefaultReader
 
 `ReadableStreamDefaultReader` 可以用于读取有任何类型的底层源 {{domxref("ReadableStream")}}（和 {{domxref("ReadableStreamBYOBReader")}} 不同的是，ReadableStreamBYOBReader 仅可以和拥有*底层字节源*的可读流一起使用）。
 
-然而，请注意，仅有自动分配缓冲区的基础字节源支持从底层源进行零副本传输。换句话说，流必须同时指定[构造函数](/en-US/docs/Web/API/ReadableStream/ReadableStream)中的 [`type="bytes"`](/en-US/docs/Web/API/ReadableStream/ReadableStream#type) 和 [`autoAllocateChunkSize`](/en-US/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize)。对于任何其它底层源，流将始终使用来自内置队列的数据满足读取请求。
+然而，请注意，只有自动分配缓冲区的基础字节源支持从底层源进行零副本传输。换句话说，流必须同时指定[构造函数](/en-US/docs/Web/API/ReadableStream/ReadableStream)中的 [`type="bytes"`](/en-US/docs/Web/API/ReadableStream/ReadableStream#type) 和 [`autoAllocateChunkSize`](/en-US/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize)。对于任何其它底层源，流将始终使用来自内置队列的数据满足读取请求。
 
 ## 构造方法
 
