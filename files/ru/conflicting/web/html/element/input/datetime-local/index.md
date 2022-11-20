@@ -14,17 +14,15 @@ tags:
 translation_of: Web/HTML/Element/input/datetime
 original_slug: Web/HTML/Element/Input/datetime
 ---
-<div>{{HTMLSidebar}}{{obsolete_header}}</div>
+{{HTMLSidebar}}{{obsolete_header}}
 
-<p>HTML <code>&lt;input type="datetime"&gt;</code>  был элементом для ввода даты и времени (час, минута, секунда и доля секунды), а также часовой пояс. <strong>Эта функция была <a class="external external-icon" href="https://github.com/whatwg/html/issues/336">удалена из WHATWG HTML</a></strong> и больше не поддерживается в браузерах.</p>
+HTML `<input type="datetime">` был элементом для ввода даты и времени (час, минута, секунда и доля секунды), а также часовой пояс. **Эта функция была [удалена из WHATWG HTML](https://github.com/whatwg/html/issues/336)** и больше не поддерживается в браузерах.
 
-<p>Вместо этого, браузеры реализуют (и разработчикам рекомендуется использовать)  <code><a href="/ru/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>.</p>
+Вместо этого, браузеры реализуют (и разработчикам рекомендуется использовать) [`<input type="datetime-local">`](/ru/docs/Web/HTML/Element/input/datetime-local).
 
-<p>Формат значений даты и времени, используемый этим типом описан в {{SectionOnPage("/ru/docs/Web/HTML/Date_and_time_formats", "Строки глобальной даты и времени")}}.</p>
+Формат значений даты и времени, используемый этим типом описан в {{SectionOnPage("/ru/docs/Web/HTML/Date_and_time_formats", "Строки глобальной даты и времени")}}.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Элемент {{HTMLElement("input")}}</li>
- <li><a href="/ru/docs/Web/HTML/Date_and_time_formats">Форматы даты и времени используемые в HTML</a></li>
-</ul>
+- Элемент {{HTMLElement("input")}}
+- [Форматы даты и времени используемые в HTML](/ru/docs/Web/HTML/Date_and_time_formats)

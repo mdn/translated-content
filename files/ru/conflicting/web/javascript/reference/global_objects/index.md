@@ -8,32 +8,33 @@ translation_of: Web/JavaScript/Reference/Global_Objects/uneval
 original_slug: Web/JavaScript/Reference/Global_Objects/uneval
 ---
 
-<p>{{jsSidebar("Objects")}}{{Non-standard_header}}</p>
+{{jsSidebar("Objects")}}{{Non-standard_header}}
 
-<div><strong style="font-size: 2.14285714285714rem; font-weight: 700; letter-spacing: -1px; line-height: 30px;">Сводка</strong></div>
+**Сводка**
 
-<p><code style="font-style: normal; line-height: 1.5;"><strong>uneval()</strong></code><span style="line-height: 1.5;"> метод создаёт строковое представление исходного кода объекта.</span></p>
+**`uneval()`** метод создаёт строковое представление исходного кода объекта.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">uneval(object)</pre>
+```
+uneval(object)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>object</code></dt>
- <dd>JavaScript-выражение или оператор.</dd>
-</dl>
+- `object`
+  - : JavaScript-выражение или оператор.
 
-<div class="note"><strong>Примечание:</strong> вы не получите корректное JSON-представление объекта.</div>
+> **Примечание:** вы не получите корректное JSON-представление объекта.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p><code>uneval()</code> является функцией высшего порядка и не связана с любым объектом.</p>
+`uneval()` является функцией высшего порядка и не связана с любым объектом.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush:js">var a = 1;
+```js
+var a = 1;
 uneval(a); // возвращает строку, содержащую 1
 
 var b = "1";
@@ -45,27 +46,19 @@ uneval(function foo(){}); // возвращает "(function foo(){})"
 var a = uneval(function foo(){return 'привет'});
 var foo = eval(a);
 foo(); // возвращает "привет"
-</pre>
+```
 
-<h2 id="See_also">Технические характеристики</h2>
+## Технические характеристики
 
-<p>Не является частью какой-либо спецификации.</p>
+Не является частью какой-либо спецификации.
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p> </p>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Смотрите также
 
-<p> </p>
-
-<div id="compat-mobile"> </div>
-
-<h2 id="See_Also">Смотрите также</h2>
-
-<ul>
- <li>{{jsxref("Global_Objects/eval", "eval()")}}</li>
- <li>{{jsxref("JSON.stringify")}}</li>
- <li>{{jsxref("JSON.parse")}}</li>
- <li>{{jsxref("Object.toSource")}}</li>
-</ul>
+- {{jsxref("Global_Objects/eval", "eval()")}}
+- {{jsxref("JSON.stringify")}}
+- {{jsxref("JSON.parse")}}
+- {{jsxref("Object.toSource")}}

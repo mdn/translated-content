@@ -4,30 +4,30 @@ slug: conflicting/Web/API/File/name
 translation_of: Web/API/File/fileName
 original_slug: Web/API/File/fileName
 ---
-<p>{{APIRef("File API")}}{{non-standard_header}}</p>
+{{APIRef("File API")}}{{non-standard_header}}
 
-<p>{{deprecated_header(7.0)}}</p>
+{{deprecated_header(7.0)}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Возвращает имя файла. В целях безопасности путь исключён из этого свойства.</p>
+Возвращает имя файла. В целях безопасности путь исключён из этого свойства.
 
-<div class="note">Это свойство исключено. Используйте вместо него  {{domxref("File.name")}}.</div>
+> **Примечание:** Это свойство исключено. Используйте вместо него {{domxref("File.name")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre>var name = instanceOfFile.fileName</pre>
+```
+var name = instanceOfFile.fileName
+```
 
-<h2 id="Значение">Значение</h2>
+## Значение
 
-<p>Строка</p>
+Строка
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<p>Не является частью документации.</p>
+Не является частью документации.
 
-<h2 id="Смотреть_ещё">Смотреть ещё</h2>
+## Смотреть ещё
 
-<ul>
- <li>{{domxref("File.name")}}</li>
-</ul>
+- {{domxref("File.name")}}

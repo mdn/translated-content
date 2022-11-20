@@ -5,36 +5,39 @@ translation_of: Web/API/GlobalEventHandlers/onmouseup
 original_slug: Web/API/GlobalEventHandlers/onmouseup
 ---
 
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p><span id="result_box" lang="ru"><span>Свойство <strong>onmouseup</strong> возвращает код обработчика события onMouseUp текущего элемента.</span></span></p>
+Свойство **onmouseup** возвращает код обработчика события onMouseUp текущего элемента.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">element.onmouseup =  <span class="short_text" id="result_box" lang="ru"><span>код обработки событий</span></span>
-</pre>
+```
+element.onmouseup =  код обработки событий
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p><span id="result_box" lang="ru"><span>Событие mouseup возникает, когда пользователь отпускает кнопку мыши.</span></span></p>
+Событие mouseup возникает, когда пользователь отпускает кнопку мыши.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onmouseup','onmouseup')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML WHATWG','webappapis.html#handler-onmouseup','onmouseup')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

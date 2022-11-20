@@ -5,35 +5,31 @@ translation_of: Web/Web_Components/HTML_Imports
 original_slug: Web/Web_Components/HTML_Imports
 ---
 
-<div class="warning">
-<p>Firefox will not ship <em>HTML Imports</em> in its current form. See this <a href="https://hacks.mozilla.org/2015/06/the-state-of-web-components/">status update</a> for more information. Until there is a consensus on the standard or alternative mechanisms are worked out, you can use a polyfill such as Google's <code><a href="https://github.com/webcomponents/webcomponentsjs">webcomponents.js</a></code>.</p>
-</div>
+> **Предупреждение:** Firefox will not ship _HTML Imports_ in its current form. See this [status update](https://hacks.mozilla.org/2015/06/the-state-of-web-components/) for more information. Until there is a consensus on the standard or alternative mechanisms are worked out, you can use a polyfill such as Google's [`webcomponents.js`](https://github.com/webcomponents/webcomponentsjs).
 
-<p><em>HTML Импорты</em> is intended to be the packaging mechanism for <a href="/en-US/docs/Web/Web_Components">web components</a>, but you can also use HTML Imports by itself.</p>
+_HTML Импорты_ is intended to be the packaging mechanism for [web components](/ru/docs/Web/Web_Components), but you can also use HTML Imports by itself.
 
-<div>You import an HTML file by using a <a href="/en-US/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> tag in an HTML document like this: </div>
+You import an HTML file by using a [`<link>`](/ru/docs/Web/HTML/Element/link) tag in an HTML document like this:
 
-<div> </div>
+```
+<link rel="import" href="myfile.html">
+```
 
-<pre>&lt;link rel="import" href="myfile.html"&gt;</pre>
+The `import` link type is new.
 
-<p><span style="line-height: 1.5;">The </span><code style="font-style: normal; line-height: 1.5;">import</code><span style="line-height: 1.5;"> </span><span style="line-height: 1.5;">link type </span><span style="line-height: 1.5;">is new.</span></p>
-
-<h2 id="Specification">Specification</h2>
+## Specification
 
 <table class="spec-table standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Imports', "", "")}}</td>
-   <td>{{Spec2('HTML Imports')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML Imports', "", "")}}</td>
+      <td>{{Spec2('HTML Imports')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
-
-<p> </p>

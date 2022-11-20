@@ -12,36 +12,43 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/String/toSource
 ---
 
-<div>{{JSRef("Global_Objects", "String")}} {{non-standard_header}}</div>
+{{JSRef("Global_Objects", "String")}} {{non-standard_header}}
 
-<h2 id="Summary">Сводка</h2>
-<p>Метод <strong><code>toSource()</code></strong> возвращает строковое представление исходного кода объекта.</p>
+## Сводка
 
-<h2 id="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code>String.toSource()
-<var>str</var>.toSource()
-</code></pre>
+Метод **`toSource()`** возвращает строковое представление исходного кода объекта.
 
-<h2 id="Description">Описание</h2>
-<p>Метод <code>toSource()</code> возвращает следующие значения:</p>
-<ul>
- <li>Для встроенного объекта {{jsxref("Global_Objects/String", "String")}} метод <code>toSource()</code> возвращает следующую строку, указывающую, что исходный код недоступен:
-<pre class="brush: js">function String() {
-    [native code]
-}
-</pre>
- </li>
- <li>Для экземпляров объекта {{jsxref("Global_Objects/String", "String")}} или строковых литералов, метод <code>toSource()</code> возвращает строковое представление исходного кода.</li>
-</ul>
-<p>Этот метод обычно вызывается внутренними механизмами движка JavaScript, а не явно в коде.</p>
+## Синтаксис
 
-<h2 id="Specifications">Спецификации</h2>
-<p>Не является частью какого-либо стандарта. Реализована в JavaScript 1.3.</p>
+```
+String.toSource()
+str.toSource()
+```
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Описание
 
-<h2 id="See_also">Смотрите также</h2>
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+Метод `toSource()` возвращает следующие значения:
+
+- Для встроенного объекта {{jsxref("Global_Objects/String", "String")}} метод `toSource()` возвращает следующую строку, указывающую, что исходный код недоступен:
+
+  ```js
+  function String() {
+      [native code]
+  }
+  ```
+
+- Для экземпляров объекта {{jsxref("Global_Objects/String", "String")}} или строковых литералов, метод `toSource()` возвращает строковое представление исходного кода.
+
+Этот метод обычно вызывается внутренними механизмами движка JavaScript, а не явно в коде.
+
+## Спецификации
+
+Не является частью какого-либо стандарта. Реализована в JavaScript 1.3.
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Object.prototype.toSource()")}}

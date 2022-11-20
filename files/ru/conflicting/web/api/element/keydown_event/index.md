@@ -9,65 +9,62 @@ translation_of: Web/API/GlobalEventHandlers/onkeydown
 original_slug: Web/API/GlobalEventHandlers/onkeydown
 ---
 
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>Свойство <code><strong>onkeydown</strong></code> возвращает обработчик события {{event("keydown")}} на текущем элементе.</p>
+Свойство **`onkeydown`** возвращает обработчик события {{event("keydown")}} на текущем элементе.
 
-<p>Событие <code>keydown</code> вызывается, когда пользователь нажал клавишу на клавиатуре.</p>
+Событие `keydown` вызывается, когда пользователь нажал клавишу на клавиатуре.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">element.onkeydown = <var>event handling code</var>
-</pre>
+```
+element.onkeydown = event handling code
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Имя функции <code>functionRef</code> или <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. Функция получает объект {{domxref("KeyboardEvent")}} в качестве единственного аргумента.</p>
+Имя функции `functionRef` или [function expression](/ru/docs/Web/JavaScript/Reference/Operators/function). Функция получает объект {{domxref("KeyboardEvent")}} в качестве единственного аргумента.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Этот пример показывает значение {{domxref("KeyboardEvent.code")}}, когда вы нажимаете клавишу внутри элемента {{HtmlElement("input")}}.</p>
+Этот пример показывает значение {{domxref("KeyboardEvent.code")}}, когда вы нажимаете клавишу внутри элемента {{HtmlElement("input")}}.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<input>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const input = document.querySelector('input');
+```js
+const input = document.querySelector('input');
 const log = document.getElementById('log');
 
 input.onkeydown = logKey;
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;
-}</pre>
+}
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample("Пример")}}</p>
+{{EmbedLiveSample("Пример")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<div>
-<ul>
- <li>Событие {{Event("keydown")}}</li>
- <li>Похожие обработчики событий
-  <ul>
-   <li>{{domxref("GlobalEventHandlers.onkeypress")}}</li>
-   <li>{{domxref("GlobalEventHandlers.onkeyup")}}</li>
-  </ul>
- </li>
-</ul>
-</div>
+- Событие {{Event("keydown")}}
+- Похожие обработчики событий
 
-<div id="compat-mobile"></div>
+  - {{domxref("GlobalEventHandlers.onkeypress")}}
+  - {{domxref("GlobalEventHandlers.onkeyup")}}

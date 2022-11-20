@@ -8,42 +8,35 @@ translation_of: Web/API/MouseEvent/which
 original_slug: Web/API/MouseEvent/which
 ---
 
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}} {{Non-standard_header}}
 
-<p>{{Non-standard_header}}</p>
+**`MouseEvent.which`** это свойство только для чтения которое показывает какая именно кнопка мыши вызвала событие MouseEvent. Стандартная альтернатива этому свойству – {{ domxref("MouseEvent.button") }} и {{ domxref("MouseEvent.buttons") }}.
 
-<p><strong><code>MouseEvent.which</code></strong> это свойство только для чтения которое показывает какая именно кнопка мыши вызвала событие MouseEvent. Стандартная альтернатива этому свойству – {{ domxref("MouseEvent.button") }} и {{ domxref("MouseEvent.buttons") }}.</p>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
+```
+var buttonPressed = instanceOfMouseEvent.which
+```
 
-<pre class="syntaxbox">var <em>buttonPressed</em> = <em>instanceOfMouseEvent</em>.which
-</pre>
+### Возвращаемое значение
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+Значения соответствующие кнопкам:
 
-<p>Значения соответствующие кнопкам:</p>
+- `0`: Нет кнопки
+- `1`: Левая кнопка
+- `2`: Средняя (если есть)
+- `3`: Права кнопка
 
-<ul>
- <li><code>0</code>: Нет кнопки</li>
- <li><code>1</code>: Левая кнопка</li>
- <li><code>2</code>: Средняя (если есть)</li>
- <li><code>3</code>: Права кнопка</li>
-</ul>
+Для мыши настроенной для левшей порядок значений будет изменён. В этом случае значению `1` будет соответствовать правая кнопка, а `3` – левая.
 
-<p>Для мыши настроенной для левшей порядок значений будет изменён. В этом случае значению <code>1</code> будет соответствовать правая кнопка, а <code>3</code> – левая.</p>
+## Спецификация
 
-<h2 id="Спецификация">Спецификация</h2>
+Это свойство не является частью спецификации.
 
-<p>Это свойство не является частью спецификации.</p>
+## Совместимость с браузерами
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+{{Compat("api.MouseEvent.which")}}
 
+## Смотрите также
 
-
-<p>{{Compat("api.MouseEvent.which")}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
-</ul>
+- {{ domxref("MouseEvent") }}

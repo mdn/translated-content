@@ -5,85 +5,55 @@ translation_of: Web/API/WindowEventHandlers/onbeforeunload
 original_slug: Web/API/WindowEventHandlers/onbeforeunload
 ---
 
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<div> </div>
+Свойство обработчика события **`WindowEventHandlers.onbeforeunload`** содержит код, который выполняется при отправке события {{event("beforeunload")}}. Это событие срабатывает, когда окно браузера {{event("unload")}} свои ресурсы. При этом документ остаётся видимым и событие всё ещё можно отменить.
 
-<p>Свойство обработчика события <code><strong>WindowEventHandlers.onbeforeunload</strong></code> содержит код, который выполняется при отправке события {{event("beforeunload")}}. Это событие срабатывает, когда окно браузера {{event("unload")}} свои ресурсы. При этом документ остаётся видимым и событие всё ещё можно отменить.</p>
+> **Примечание:** Для борьбы с нежелательными всплывающими окнами, некоторые браузеры не отображают текст передаваемый в beforeunload событии, если они не связаны с самой страницей; некоторые не показывают их вообще. Список конкретных браузеров смотрите в секции: [Совместимость_с_браузерами](#совместимость_с_браузерами).
 
-<div class="note">
-<p><strong>Примечание:</strong> Для борьбы с нежелательными всплывающими окнами, некоторые браузеры не отображают текст передаваемый в beforeunload событии, если они не связаны с самой страницей; некоторые не показывают их вообще. Список конкретных браузеров смотрите в секции: <a href="#совместимость_с_браузерами">Совместимость_с_браузерами</a>.</p>
-</div>
+## Синтаксис
 
-<h2 id="Syntax">Синтаксис</h2>
+```
+window.onbeforeunload = funcRef
+```
 
-<pre class="syntaxbox">window.onbeforeunload = <var>funcRef</var></pre>
+- `funcRef` является ссылкой на функцию или выражение функции.
+- Функция должна назначать строковое значение свойству `returnValue` объекта Event и возвращать ту же строку.
 
-<ul>
- <li><code>funcRef</code> является ссылкой на функцию или выражение функции.</li>
- <li>Функция должна назначать строковое значение свойству <code>returnValue</code> объекта Event и возвращать ту же строку.</li>
-</ul>
+## Пример
 
-<h2 id="Example">Пример</h2>
-
-<pre class="brush:js">window.onbeforeunload = function(e) {
+```js
+window.onbeforeunload = function(e) {
   var dialogText = 'Dialog text here';
   e.returnValue = dialogText;
   return dialogText;
 };
-</pre>
+```
 
-<h2 id="Примечания">Примечания</h2>
+## Примечания
 
-<p>Когда это событие возвращает (или выставляет свойство returnValue)  значение, отличное от null или undefined, пользователю предлагается подтвердить {{event("unload")}} страницы в {{domxref("window.prompt", "prompt")}} . В некоторых браузерах возвращаемое значение отображается в этом диалоговом окне. Начиная с Firefox 4, Chrome 51, Opera 38 и Safari 9.1 вместо возвращаемой строки будет показана общая строка, не контролируемая страницей. Например, Firefox отображает строку: "This page is asking you to confirm that you want to leave - data you have entered may not be saved.". Смотрите {{bug("588292")}} и <a href="https://www.chromestatus.com/feature/5349061406228480">Chrome Platform Status</a>.</p>
+Когда это событие возвращает (или выставляет свойство returnValue) значение, отличное от null или undefined, пользователю предлагается подтвердить {{event("unload")}} страницы в {{domxref("window.prompt", "prompt")}} . В некоторых браузерах возвращаемое значение отображается в этом диалоговом окне. Начиная с Firefox 4, Chrome 51, Opera 38 и Safari 9.1 вместо возвращаемой строки будет показана общая строка, не контролируемая страницей. Например, Firefox отображает строку: "This page is asking you to confirm that you want to leave - data you have entered may not be saved.". Смотрите {{bug("588292")}} и [Chrome Platform Status](https://www.chromestatus.com/feature/5349061406228480).
 
-<p>С 25 мая 2011, в спецификации HTML5 указано, что исполнение методов {{domxref("window.alert()")}}, {{domxref("window.confirm()")}} и {{domxref("window.prompt()")}} может игнорироваться во время этого события. Смотрите <a href="http://www.w3.org/TR/html5/webappapis.html#user-prompts">спецификацию HTML5</a> чтобы узнать подробности.</p>
+С 25 мая 2011, в спецификации HTML5 указано, что исполнение методов {{domxref("window.alert()")}}, {{domxref("window.confirm()")}} и {{domxref("window.prompt()")}} может игнорироваться во время этого события. Смотрите [спецификацию HTML5](http://www.w3.org/TR/html5/webappapis.html#user-prompts) чтобы узнать подробности.
 
-<p>Также необходимо отметить, что различные мобильные браузеры игнорируют результат этого события (это является причиной, почему они не запрашивают подтверждения пользователя). Firefox имеет скрытую настройку в about:config для того, чтобы вести себя также. В сущности это значит, что пользователь постоянно подтверждает, что документ может быть выгружен.</p>
+Также необходимо отметить, что различные мобильные браузеры игнорируют результат этого события (это является причиной, почему они не запрашивают подтверждения пользователя). Firefox имеет скрытую настройку в about:config для того, чтобы вести себя также. В сущности это значит, что пользователь постоянно подтверждает, что документ может быть выгружен.
 
-<p>Вы <em>можете </em>и <em>должны </em>обрабатывать данное событие через {{domxref("EventTarget.addEventListener","window.addEventListener()")}} и событие {{event("beforeunload")}}. Больше документации доступно здесь.</p>
+Вы _можете_ и _должны_ обрабатывать данное событие через {{domxref("EventTarget.addEventListener","window.addEventListener()")}} и событие {{event("beforeunload")}}. Больше документации доступно здесь.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<p>Событие было первоначально добавлено Microsoft в Internet Explorer 4 и стандартизовано в HTML5 спецификации.</p>
+Событие было первоначально добавлено Microsoft в Internet Explorer 4 и стандартизовано в HTML5 спецификации.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                           | Comment |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}         | {{Spec2('HTML5.1')}}     |         |
+| {{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}     | {{Spec2('HTML5 W3C')}}     |         |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div id="compat-mobile"> </div>
+## Смотрите также
 
-<h2 id="See also">Смотрите также</h2>
-
-<ul>
- <li><a href="http://msdn.microsoft.com/en-us/library/ms536907(VS.85).aspx">MSDN: onbeforeunload event</a></li>
-</ul>
+- [MSDN: onbeforeunload event](<http://msdn.microsoft.com/en-us/library/ms536907(VS.85).aspx>)

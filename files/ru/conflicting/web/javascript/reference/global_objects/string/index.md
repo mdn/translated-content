@@ -7,30 +7,17 @@ translation_of: Web/API/ByteString
 original_slug: Web/API/ByteString
 ---
 
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>ByteString</code></strong> является UTF-8 строкой, которая соответствует набору всех возможных последовательностей байтов. <code>ByteString</code> отображается как {{jsxref("String")}} при возврате в JavaScript; как правило, используется только при взаимодействии с протоколами, которые равнозначно используют байты и строки, например HTTP.</p>
+**`ByteString`** является UTF-8 строкой, которая соответствует набору всех возможных последовательностей байтов. `ByteString` отображается как {{jsxref("String")}} при возврате в JavaScript; как правило, используется только при взаимодействии с протоколами, которые равнозначно используют байты и строки, например HTTP.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebIDL', '#idl-ByteString', 'ByteString')}}</td>
-   <td>{{Spec2('WebIDL')}}</td>
-   <td>Изначальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                             | Статус                   | Комментарии             |
+| ------------------------------------------------------------------------ | ------------------------ | ----------------------- |
+| {{SpecName('WebIDL', '#idl-ByteString', 'ByteString')}} | {{Spec2('WebIDL')}} | Изначальное определение |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/String" title="/en-US/docs/Web/API/DOMString">String</a></li>
- <li><a href="/ru/docs/Web/API/DOMString/Binary">Binary strings</a></li>
-</ul>
+- [String](/ru/docs/Web/JavaScript/Reference/Global_Objects/String "/en-US/docs/Web/API/DOMString")
+- [Binary strings](/ru/docs/Web/API/DOMString/Binary)

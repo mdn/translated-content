@@ -5,51 +5,53 @@ translation_of: Web/API/GlobalEventHandlers/onkeypress
 original_slug: Web/API/GlobalEventHandlers/onkeypress
 ---
 
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Свойство<strong> onkeypress</strong> задаёт и возвращает код обработчика событий onKeyPress для текущего элемента.</p>
+Свойство **onkeypress** задаёт и возвращает код обработчика событий onKeyPress для текущего элемента.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">element.onkeypress = <em>код обработчика событий</em>
-</pre>
+```
+element.onkeypress = код обработчика событий
+```
 
-<h2 id="Примечания">Примечания</h2>
+## Примечания
 
-<p>Событие нажатия <strong>должно</strong> вызываться тогда, когда пользователь нажимает клавишу на клавиатуре. Тем не менее, не все браузеры отрабатывают это событие для некоторых (определённых) клавиш.</p>
+Событие нажатия **должно** вызываться тогда, когда пользователь нажимает клавишу на клавиатуре. Тем не менее, не все браузеры отрабатывают это событие для некоторых (определённых) клавиш.
 
-<h3 id="Несовместимость_в_браузерах">Несовместимость в браузерах</h3>
+### Несовместимость в браузерах
 
-<p>Браузеры на основе Webkit (к примеру, Google Chrome и Safari) не отрабатывают события нажатия клавиш-указателей ("стрелок").</p>
+Браузеры на основе Webkit (к примеру, Google Chrome и Safari) не отрабатывают события нажатия клавиш-указателей ("стрелок").
 
-<p>Firefox не отрабатывает события, в основе которых лежат клавиши управления (модификаторы) - такие, как, например, SHIFT.</p>
+Firefox не отрабатывает события, в основе которых лежат клавиши управления (модификаторы) - такие, как, например, SHIFT.
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
-<p>Не является частью спецификации.</p>
+Не является частью спецификации.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий пример демонстрирует использование события <code>onkeypress</code>  в процессе заполнения поля формы (только) цифрами:</p>
+Следующий пример демонстрирует использование события `onkeypress` в процессе заполнения поля формы (только) цифрами:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
-&lt;title&gt;Пример&lt;/title&gt;
-&lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Пример</title>
+<script>
   function numbersOnly(oToCheckField, oKeyEvent) {
     return oKeyEvent.char === 0 || /\d/.test(String.fromCharCode(oKeyEvent.char));
   }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-&lt;form name="myForm"&gt;
-&lt;p&gt;Вводите только цифры: &lt;input type="text" name="myInput" onkeypress="return numbersOnly(this, event);" onpaste="return false;" /&gt;&lt;/p&gt;
-&lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body>
+<form name="myForm">
+<p>Вводите только цифры: <input type="text" name="myInput" onkeypress="return numbersOnly(this, event);" onpaste="return false;" /></p>
+</form>
+</body>
+</html>
+```

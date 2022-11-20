@@ -5,56 +5,55 @@ translation_of: Web/API/GlobalEventHandlers/onload
 original_slug: Web/API/GlobalEventHandlers/onload
 ---
 
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>Обработчик для события загрузки объекта {{ domxref("window") }}.</p>
+Обработчик для события загрузки объекта {{ domxref("window") }}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">window.onload = <em>funcRef</em>;
-</pre>
+```
+window.onload = funcRef;
+```
 
-<ul>
- <li><code>funcRef</code> функция обработчик события будет вызвана, когда произойдёт событие загрузки окна.</li>
-</ul>
+- `funcRef` функция обработчик события будет вызвана, когда произойдёт событие загрузки окна.
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">window.onload = function() {
+```js
+window.onload = function() {
   init();
   doSomethingElse();
 };
-</pre>
+```
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;onload test&lt;/title&gt;
-    &lt;script&gt;
+```html
+<!doctype html>
+<html>
+  <head>
+    <title>onload test</title>
+    <script>
       function load() {
         alert("Событие загрузки поймано!");
       }
       window.onload = load;
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;Событие загрузки произойдёт, когда документ будет загружен!&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </script>
+  </head>
+  <body>
+    <p>Событие загрузки произойдёт, когда документ будет загружен!</p>
+  </body>
+</html>
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Событие загрузки возникают в конце процесса загрузки документа. В этот момент все объекты документа находятся в DOM, и все картинки, скрипты, фреймы, ссылки загружены.</p>
+Событие загрузки возникают в конце процесса загрузки документа. В этот момент все объекты документа находятся в DOM, и все картинки, скрипты, фреймы, ссылки загружены.
 
-<p>Есть также <a href="/en/Gecko-Specific_DOM_Events" title="en/Gecko-Specific_DOM_Events">Gecko</a> события как <code>DOMContentLoaded</code> и <code>DOMFrameContentLoaded</code> (которые могут быть навешены с помощью {{ domxref("EventTarget.addEventListener()") }}) которые возникают после того как DOM для страницы будет собран, но не ждут, когда другие ресурсы будут загружены.</p>
+Есть также [Gecko](/en/Gecko-Specific_DOM_Events "en/Gecko-Specific_DOM_Events") события как `DOMContentLoaded` и `DOMFrameContentLoaded` (которые могут быть навешены с помощью {{ domxref("EventTarget.addEventListener()") }}) которые возникают после того как DOM для страницы будет собран, но не ждут, когда другие ресурсы будут загружены.
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<p>Этот обработчик события указан в стандарте <a class="external" href="http://www.whatwg.org/html/#handler-window-onload">HTML</a>.</p>
+Этот обработчик события указан в стандарте [HTML](http://www.whatwg.org/html/#handler-window-onload).
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><code>DOMContentLoaded</code> событие в <a href="/En/Listening_to_events#Simple_DOM.c2.a0events" title="En/Listening to events#Simple DOM.c2.a0events">Listening to events: Simple DOM events</a></li>
-</ul>
+- `DOMContentLoaded` событие в [Listening to events: Simple DOM events](/En/Listening_to_events#Simple_DOM.c2.a0events "En/Listening to events#Simple DOM.c2.a0events")

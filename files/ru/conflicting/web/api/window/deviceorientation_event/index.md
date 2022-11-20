@@ -11,30 +11,29 @@ translation_of: Web/API/Window/ondeviceorientation
 original_slug: Web/API/Window/ondeviceorientation
 ---
 
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h2 id="Summary">Кратко</h2>
+## Кратко
 
-<p>Обработчик события {{event('deviceorientation')}}, который содержит информацию об изменении относительной ориентации устройства.</p>
+Обработчик события {{event('deviceorientation')}}, который содержит информацию об изменении относительной ориентации устройства.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">window.ondeviceorientation = function(event) { ... };
+```
+window.ondeviceorientation = function(event) { ... };
 window.addEventListener('deviceorientation', function(event) { ... });
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{ page("/en-US/docs/Web/API/DeviceOrientationEvent","Browser_compatibility") }}</p>
+{{ page("/en-US/docs/Web/API/DeviceOrientationEvent","Browser_compatibility") }}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ event("deviceorientation") }}</li>
- <li>{{ domxref("DeviceOrientationEvent") }}</li>
- <li><a href="/en/Detecting_device_orientation" title="Detecting device orientation">Определение ориентации устройства</a> </li>
-</ul>
+- {{ event("deviceorientation") }}
+- {{ domxref("DeviceOrientationEvent") }}
+- [Определение ориентации устройства](/en/Detecting_device_orientation "Detecting device orientation")

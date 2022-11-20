@@ -5,62 +5,54 @@ translation_of: Web/API/EventListener
 original_slug: Web/API/EventListener
 ---
 
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>Интерфейс <code>EventListener</code> представляет собой объект, который может обработать событие, отправленное объектом {{domxref ("EventTarget")}}.</p>
+Интерфейс `EventListener` представляет собой объект, который может обработать событие, отправленное объектом {{domxref ("EventTarget")}}.
 
-<div class="note">
-<p><strong>Note:</strong> Из-за необходимости совместимости с унаследованным контентом, <code>EventListener</code> принимает функцию или объект с методом  <code>handleEvent()</code>. Это показано в <a href="#Example">примере</a> ниже.</p>
-</div>
+> **Примечание:** Из-за необходимости совместимости с унаследованным контентом, `EventListener` принимает функцию или объект с методом `handleEvent()`. Это показано в [примере](#Example) ниже.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Интерфейс не реализует и не наследует никаких свойств.</em></p>
+_Интерфейс не реализует и не наследует никаких свойств._
 
-<h2 id="Method_overview">Синтаксис</h2>
+## Синтаксис
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>void <a href="#handleEvent()">handleEvent</a>(in Event event);</code></td>
-  </tr>
- </tbody>
-</table>
+| `void handleEvent(in Event event);` |
+| ----------------------------------- |
 
-<h2 id="Methods">Методы</h2>
+## Методы
 
-<h3 id="handleEvent">handleEvent()</h3>
+### handleEvent()
 
-<p>Этот метод вызывается всякий раз, когда происходит событие того типа, для которого был зарегистрирован интерфейс EventListener.</p>
+Этот метод вызывается всякий раз, когда происходит событие того типа, для которого был зарегистрирован интерфейс EventListener.
 
-<pre class="eval">void handleEvent(
+```
+void handleEvent(
   in Event event
 );
-</pre>
+```
 
-<h5 id="Parameters">Параметры</h5>
+##### Параметры
 
-<dl>
- <dt><code>event</code></dt>
- <dd>Событие DOM {{ domxref("Event") }} для которого регистрируется обработчик.</dd>
-</dl>
+- `event`
+  - : Событие DOM {{ domxref("Event") }} для которого регистрируется обработчик.
 
-<h3 id="Remarks">Примечания</h3>
+### Примечания
 
-<p>Поскольку у интерфейса отмечен флаг <code><span class="nowiki">[function]</span></code>, все объекты JavaScript <a href="/en/JavaScript/Reference/Global_Objects/Function" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Function">Function</a> автоматически реализуют этот интерфейс. Вызов метода <a href="#handleevent">handleEvent</a> на такой реализации автоматически вызовет эту функцию.</p>
+Поскольку у интерфейса отмечен флаг `[function]`, все объекты JavaScript [Function](/en/JavaScript/Reference/Global_Objects/Function "en/Core_JavaScript_1.5_Reference/Global_Objects/Function") автоматически реализуют этот интерфейс. Вызов метода [handleEvent](#handleevent) на такой реализации автоматически вызовет эту функцию.
 
+## Пример
 
+### HTML
 
-<h2 id="Пример">Пример</h2>
+```html
+<button id="btn">Нажми сюда!</button>
+```
 
-<h3 id="HTML">HTML</h3>
+### JavaScript
 
-<pre class="brush: html"><code>&lt;button id="btn"&gt;Нажми сюда!&lt;/button&gt;</code>
-</pre>
-
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js"><code>const buttonElement = document.getElementById('btn');
+```js
+const buttonElement = document.getElementById('btn');
 
 // Добавим обработчик для события "click", предоставив callback.
 // Теперь по клику на элемент будет всплывать подсказка.
@@ -75,16 +67,13 @@ buttonElement.addEventListener('click', {
   handleEvent: function (event) {
     alert('Событие вызвал handleEvent!');
   }
-});</code></pre>
+});
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('Пример')}}</p>
+{{EmbedLiveSample('Пример')}}
 
+## Смотрите также
 
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{ spec("http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}</li>
-</ul>
+- {{ spec("http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}

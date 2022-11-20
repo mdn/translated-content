@@ -10,44 +10,43 @@ translation_of: Web/API/Document/height
 original_slug: Web/API/Document/height
 ---
 
-<div>{{APIRef("DOM")}} {{Obsolete_header}}</div>
+{{APIRef("DOM")}} {{Obsolete_header}}
 
-<div class="note">
-<p><strong>Примечание: </strong>Начиная с  {{Gecko("6.0")}},<code> document.height </code> больше не поддерживается. Используйте <code>document.body.clientHeight</code>. Также смотрите: {{domxref("element.clientHeight")}}.</p>
-</div>
+> **Примечание:** Начиная с {{Gecko("6.0")}},` document.height `больше не поддерживается. Используйте `document.body.clientHeight`. Также смотрите: {{domxref("element.clientHeight")}}.
 
-<p>Возвращает высоту {{domxref("document")}} объекта. В большинстве случаев, она соответствует {{HTMLElement("body")}} элементу документа.</p>
+Возвращает высоту {{domxref("document")}} объекта. В большинстве случаев, она соответствует {{HTMLElement("body")}} элементу документа.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>height_value</em> = document.height
-</pre>
+```
+height_value = document.height
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">// вывести высоту документа
+```js
+// вывести высоту документа
 alert(document.height);
-</pre>
+```
 
-<h2 id="Альтернативы">Альтернативы</h2>
+## Альтернативы
 
-<pre class="syntaxbox">document.body.clientHeight
+```
+document.body.clientHeight
 document.documentElement.clientHeight
 document.documentElement.scrollHeight
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<p>HTML5</p>
+HTML5
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("document.width")}}</li>
- <li>{{domxref("Element.clientHeight")}}</li>
- <li>{{domxref("Element.scrollHeight")}}</li>
-</ul>
+- {{domxref("document.width")}}
+- {{domxref("Element.clientHeight")}}
+- {{domxref("Element.scrollHeight")}}

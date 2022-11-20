@@ -5,25 +5,24 @@ translation_of: Web/API/GlobalEventHandlers/onmousedown
 original_slug: Web/API/GlobalEventHandlers/onmousedown
 ---
 
-<div>
-<div>{{ ApiRef("HTML DOM") }}</div>
-</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>Свойство <code>onmousedown</code> возвращает  код обработчика события <code>onmousedown</code> на соответствующем элементе.</p>
+Свойство `onmousedown` возвращает код обработчика события `onmousedown` на соответствующем элементе.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">element.onmousedown = <em>код обработчика этого события (функция)</em>
-</pre>
+```
+element.onmousedown = код обработчика этого события (функция)
+```
 
-<h2 id="Примечания">Примечания</h2>
+## Примечания
 
-<p>Событие <code>mousedown</code> обрабатывается когда пользователь нажимает кнопку мыши. </p>
+Событие `mousedown` обрабатывается когда пользователь нажимает кнопку мыши.
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

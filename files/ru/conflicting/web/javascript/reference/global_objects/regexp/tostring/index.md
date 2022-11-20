@@ -12,49 +12,47 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/toSource
 ---
 
-<div>{{JSRef("Global_Objects", "RegExp")}} {{non-standard_header}}</div>
+{{JSRef("Global_Objects", "RegExp")}} {{non-standard_header}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <strong><code>toSource()</code></strong> возвращает строковое представление исходного кода объекта.</p>
+Метод **`toSource()`** возвращает строковое представление исходного кода объекта.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><var>regexObj</var>.toSource()
+```
+regexObj.toSource()
 RegExp.toSource()
-</code></pre>
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h2 id="Description">Описание</h2>
+## Описание
 
-<p>Метод <code>toSource()</code> возвращает следующие значения:</p>
+Метод `toSource()` возвращает следующие значения:
 
-<ul>
- <li>Для встроенного объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}, метод <code>toSource()</code> возвращает следующую строку, указывающую, что исходный код недоступен:
+- Для встроенного объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}, метод `toSource()` возвращает следующую строку, указывающую, что исходный код недоступен:
 
-  <pre class="brush: js">function RegExp() {
-    [native code]
-}
-</pre>
- </li>
- <li>Для экземпляров объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}, метод <code>toSource()</code> возвращает строковое представление исходного кода.</li>
-</ul>
+  ```js
+  function RegExp() {
+      [native code]
+  }
+  ```
 
-<p>Этот метод обычно вызывается внутри движка JavaScript, а не явно в коде.</p>
+- Для экземпляров объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}, метод `toSource()` возвращает строковое представление исходного кода.
 
-<h2 id="Specifications">Спецификации</h2>
+Этот метод обычно вызывается внутри движка JavaScript, а не явно в коде.
 
-<p>Не является частью какого-либо стандарта. Реализована в JavaScript 1.3.</p>
+## Спецификации
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+Не является частью какого-либо стандарта. Реализована в JavaScript 1.3.
 
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="See_also">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+## Смотрите также
+
+- {{jsxref("Object.prototype.toSource()")}}

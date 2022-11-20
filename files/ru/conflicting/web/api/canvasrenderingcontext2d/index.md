@@ -11,33 +11,35 @@ translation_of: Web/API/CanvasRenderingContext2D/currentTransform
 original_slug: Web/API/CanvasRenderingContext2D/currentTransform
 ---
 
-<div>{{APIRef()}} {{SeeCompatTable}}</div>
+{{APIRef()}} {{SeeCompatTable}}
 
-<p>Свойство <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.currentTransform</code></strong>, предоставляемое Canvas 2D API, возвращает или устанавливает объект {{domxref("SVGMatrix")}} для текущей матрицы преобразований.</p>
+Свойство **`CanvasRenderingContext2D.currentTransform`**, предоставляемое Canvas 2D API, возвращает или устанавливает объект {{domxref("SVGMatrix")}} для текущей матрицы преобразований.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>ctx.currentTransform [= value];</var>
-</pre>
+```
+ctx.currentTransform [= value];
+```
 
-<dl>
- <dt><code>value</code></dt>
- <dd>Объект {{domxref("SVGMatrix")}}, который будет использован в роли текущей матрицы преобразований.</dd>
-</dl>
+- `value`
+  - : Объект {{domxref("SVGMatrix")}}, который будет использован в роли текущей матрицы преобразований.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_currentTransform">Использование метода <code>currentTransform</code></h3>
+### Использование метода `currentTransform`
 
-<p>Ниже представлен простой фрагмент кода, использующий свойство <code>currentTransform</code> для установки матрицы преобразований.</p>
+Ниже представлен простой фрагмент кода, использующий свойство `currentTransform` для установки матрицы преобразований.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: html">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let matrix = ctx.currentTransform;
@@ -48,28 +50,23 @@ matrix.d = 1;
 matrix.e = 0;
 matrix.f = 0;
 ctx.currentTransform = matrix;
-ctx.fillRect(0, 0, 100, 100);</pre>
+ctx.fillRect(0, 0, 100, 100);
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Использование_метода_currentTransform', 700, 180) }}</p>
+{{ EmbedLiveSample('Использование_метода_currentTransform', 700, 180) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p> </p>
+## Смотрите также
 
-<p> </p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс, определяющий его, {{domxref("CanvasPattern")}}</li>
- <li>{{domxref("SVGMatrix")}}</li>
- <li>{{domxref("DOMMatrix")}}</li>
-</ul>
+- Интерфейс, определяющий его, {{domxref("CanvasPattern")}}
+- {{domxref("SVGMatrix")}}
+- {{domxref("DOMMatrix")}}

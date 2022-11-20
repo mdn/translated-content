@@ -5,36 +5,35 @@ translation_of: Web/API/Window/ongamepaddisconnected
 original_slug: Web/API/Window/ongamepaddisconnected
 ---
 
-<div>{{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}</div>
+{{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}
 
-<p>Свойство <strong><code>ongamepaddisconnected</code></strong> интерфейса {{domxref("Window")}} представляет собой обработчик события, который будет вызван при отключении геймпада (когда сработает событие {{event('gamepaddisconnected')}}).</p>
+Свойство **`ongamepaddisconnected`** интерфейса {{domxref("Window")}} представляет собой обработчик события, который будет вызван при отключении геймпада (когда сработает событие {{event('gamepaddisconnected')}}).
 
-<p>Тип объекта события {{domxref("GamepadEvent")}}.</p>
+Тип объекта события {{domxref("GamepadEvent")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">window.ongamepaddisconnected = function() { ... };
-</pre>
+```
+window.ongamepaddisconnected = function() { ... };
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush:js; line-numbers  language-js"><code class="language-js">window<span class="punctuation token">.</span><span class="punctuation token">on</span><span class="string token">gamepaddisconnected =</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// A gamepad has been disconnected</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+```js
+window.ongamepaddisconnected = function() {
+  // A gamepad has been disconnected
+};
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a class="external text" href="https://hacks.mozilla.org/2013/12/the-gamepad-api/" rel="nofollow">The Gamepad API</a> by Ted Mielczarek and Robert Nyman</li>
- <li><a href="http://luser.github.io/gamepadtest/">Simple API demo page</a> (<a href="https://github.com/luser/gamepadtest">source</a>)</li>
-</ul>
+- [The Gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) by Ted Mielczarek and Robert Nyman
+- [Simple API demo page](http://luser.github.io/gamepadtest/) ([source](https://github.com/luser/gamepadtest))

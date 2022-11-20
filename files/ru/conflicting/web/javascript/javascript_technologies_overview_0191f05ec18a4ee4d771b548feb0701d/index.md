@@ -6,42 +6,38 @@ translation_of: Web/JavaScript/Shells
 original_slug: Web/JavaScript/Shells
 ---
 
-<div>{{JsSidebar}}</div>
+{{JsSidebar}}
 
-<p>JavaScript оболочки позволяют быстро проверить фрагменты <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a> кода без перезагрузки страницы. Они чрезвычайно полезны для разработки и отладки кода.</p>
+JavaScript оболочки позволяют быстро проверить фрагменты [JavaScript](/en/JavaScript "en/JavaScript") кода без перезагрузки страницы. Они чрезвычайно полезны для разработки и отладки кода.
 
-<h2 id="Автономные_JavaScript_оболочки">Автономные JavaScript оболочки</h2>
+## Автономные JavaScript оболочки
 
-<p>Следующие JavaScript шеллы являются автономными средами, как Perl или Python.</p>
+Следующие JavaScript шеллы являются автономными средами, как Perl или Python.
 
-<ul>
- <li><a href="http://nodejs.org/">Node.js</a> - это платформа для простого создания быстрых, масштабируемых сетевых приложений..</li>
- <li><a class="external" href="http://www.jsdb.org/">JSDB</a> - Автономная JavaScript оболочка для Windows, Mac, и Linux.</li>
- <li><a href="http://javalikescript.free.fr/">JavaLikeScript</a> - Автономная расширяемая оболочка JavaScript, включающая как нативные библиотеки, так и библиотеки JavaScript.</li>
- <li><a class="external" href="http://gluescript.sourceforge.net/">GLUEscript</a> - Автономная JavaScript оболочка для создания кросс-платформенных JavaScript приложений. Он может использовать wxWidgets для GUI приложений, и раньше назывался wxJavaScript.</li>
- <li><a class="external" href="http://jspl.msg.mx/">jspl</a> - Автономная JavaScript оболочка, улучшенная  при помощи Perl. Может использовать модули Perl прямо из JavaScript: DBI для интеграции с базами данных, GTK2 для GUI приложений, POSIX для системного программирования и т.д. Лучший из существующих CPAN для JavaScript программистов.</li>
- <li><a href="http://shelljs.org/">ShellJS</a> - это портативная реализация команд оболочки Unix поверх API-интерфейса Node.js.</li>
-</ul>
+- [Node.js](http://nodejs.org/) - это платформа для простого создания быстрых, масштабируемых сетевых приложений..
+- [JSDB](http://www.jsdb.org/) - Автономная JavaScript оболочка для Windows, Mac, и Linux.
+- [JavaLikeScript](http://javalikescript.free.fr/) - Автономная расширяемая оболочка JavaScript, включающая как нативные библиотеки, так и библиотеки JavaScript.
+- [GLUEscript](http://gluescript.sourceforge.net/) - Автономная JavaScript оболочка для создания кросс-платформенных JavaScript приложений. Он может использовать wxWidgets для GUI приложений, и раньше назывался wxJavaScript.
+- [jspl](http://jspl.msg.mx/) - Автономная JavaScript оболочка, улучшенная при помощи Perl. Может использовать модули Perl прямо из JavaScript: DBI для интеграции с базами данных, GTK2 для GUI приложений, POSIX для системного программирования и т.д. Лучший из существующих CPAN для JavaScript программистов.
+- [ShellJS](http://shelljs.org/) - это портативная реализация команд оболочки Unix поверх API-интерфейса Node.js.
 
-<h2 id="Список_JavaScript_оболочек">Список JavaScript оболочек</h2>
+## Список JavaScript оболочек
 
-<p>Следующие JavaScript оболочки работают с Mozilla.</p>
+Следующие JavaScript оболочки работают с Mozilla.
 
-<ul>
- <li>Firefox имеет <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter">встроенную консоль JavaScript</a>, которая поддерживает многострочное редактирование.</li>
- <li><a href="/En/SpiderMonkey/Introduction_to_the_JavaScript_shell" title="En/SpiderMonkey/Introduction_to_the_JavaScript_shell">JavaScript Shell</a> (<code>js</code>) - Интерпретатор командной строки для JavaScript (необходима собственная сборка Mozilla).</li>
- <li><a href="/en/XPConnect/xpcshell" title="en/xpcshell">xpcshell</a> — это оболочка с поддержкой <a href="/en/XPConnect" title="en/XPConnect">XPConnect</a> , иногда используется для разработки Mozilla.</li>
- <li><a href="http://babeljs.io/repl">Babel REPL</a> - это  <a href="https://en.wikipedia.org/wiki/REPL">REPL</a> на основе браузера для экспериментов с будущим JavaScript.</li>
- <li><a href="http://es6console.com/">ES6Console.com</a> -  консоль JavaScript с открытым исходным кодом для тестирования кода ECMAScript 2015 внутри браузера.</li>
- <li><a href="http://jsconsole.com/">jsconsole.com</a> -- Консоль JavaScript с открытым исходным кодом с возможностью легко сослаться на конкретное выражение .</li>
- <li><a class="external" href="http://www.squarefree.com/shell/">JavaScript Shell (web page)</a> - также доступен как часть <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/7434">Extension Developer's Extension</a></li>
- <li><a class="external" href="http://www.billyreisinger.com/jash/">Jash: JavaScript Shell</a> - оболочка, основана на DHTML, которая предоставляет доступ к командной строки веб-страницы.</li>
- <li><a class="external" href="http://hyperstruct.net/projects/mozrepl">MozRepl</a> - Подключайтесь к Firefox и другим приложениям Mozilla, изучайте и изменяйте их изнутри, пока они работают.</li>
- <li><a class="external" href="http://www.mouseless.de/index.php?/content/view/18/31/">Execute JS</a> - (больше не поддерживается) Расширение для Firefox, представляющее собой расширенную JavaScript-консоль, в которой можно удобно набирать и выполнять произвольный JavaScript-код и изменить функции.</li>
- <li><a href="https://addons.mozilla.org/addon/159546">xqjs</a> - Простая консоль для Firefox.</li>
- <li><a class="external" href="http://code.eligrey.com/shell/help.html">JavaScript Shell Extended</a> - Модифицированная версия вышеупомянутого шелла с различными улучшениями, такими как поддержка JSON, поддержка последней версии JavaScript и т.д.</li>
- <li><a class="link-https" href="https://sekhmet.acceleration.net/ADW/JsShellServer/">JavaScript Shell Server</a> - Осуществляет связь через Emacs.</li>
- <li><a class="external" href="http://rainbow9.org">rainbow9 - JavaScript IDE</a></li>
- <li><a class="external" href="http://www.croczilla.com/bits_and_pieces/jssh/">JSSh</a> - TCP/IP серверный шелл для Mozilla.</li>
- <li><a class="external" href="http://blogs.activestate.com/shanec/2008/05/jssh-replacemen.html">SD Connector</a> - Аналогичен JSSh, но полностью написан на JavaScript, поэтому не требует компиляции компонентов.</li>
-</ul>
+- Firefox имеет [встроенную консоль JavaScript](/ru/docs/Tools/Web_Console/The_command_line_interpreter), которая поддерживает многострочное редактирование.
+- [JavaScript Shell](/En/SpiderMonkey/Introduction_to_the_JavaScript_shell "En/SpiderMonkey/Introduction_to_the_JavaScript_shell") (`js`) - Интерпретатор командной строки для JavaScript (необходима собственная сборка Mozilla).
+- [xpcshell](/en/XPConnect/xpcshell "en/xpcshell") — это оболочка с поддержкой [XPConnect](/en/XPConnect "en/XPConnect") , иногда используется для разработки Mozilla.
+- [Babel REPL](http://babeljs.io/repl) - это [REPL](https://en.wikipedia.org/wiki/REPL) на основе браузера для экспериментов с будущим JavaScript.
+- [ES6Console.com](http://es6console.com/) - консоль JavaScript с открытым исходным кодом для тестирования кода ECMAScript 2015 внутри браузера.
+- [jsconsole.com](http://jsconsole.com/) -- Консоль JavaScript с открытым исходным кодом с возможностью легко сослаться на конкретное выражение .
+- [JavaScript Shell (web page)](http://www.squarefree.com/shell/) - также доступен как часть [Extension Developer's Extension](https://addons.mozilla.org/en-US/firefox/addon/7434)
+- [Jash: JavaScript Shell](http://www.billyreisinger.com/jash/) - оболочка, основана на DHTML, которая предоставляет доступ к командной строки веб-страницы.
+- [MozRepl](http://hyperstruct.net/projects/mozrepl) - Подключайтесь к Firefox и другим приложениям Mozilla, изучайте и изменяйте их изнутри, пока они работают.
+- [Execute JS](http://www.mouseless.de/index.php?/content/view/18/31/) - (больше не поддерживается) Расширение для Firefox, представляющее собой расширенную JavaScript-консоль, в которой можно удобно набирать и выполнять произвольный JavaScript-код и изменить функции.
+- [xqjs](https://addons.mozilla.org/addon/159546) - Простая консоль для Firefox.
+- [JavaScript Shell Extended](http://code.eligrey.com/shell/help.html) - Модифицированная версия вышеупомянутого шелла с различными улучшениями, такими как поддержка JSON, поддержка последней версии JavaScript и т.д.
+- [JavaScript Shell Server](https://sekhmet.acceleration.net/ADW/JsShellServer/) - Осуществляет связь через Emacs.
+- [rainbow9 - JavaScript IDE](http://rainbow9.org)
+- [JSSh](http://www.croczilla.com/bits_and_pieces/jssh/) - TCP/IP серверный шелл для Mozilla.
+- [SD Connector](http://blogs.activestate.com/shanec/2008/05/jssh-replacemen.html) - Аналогичен JSSh, но полностью написан на JavaScript, поэтому не требует компиляции компонентов.

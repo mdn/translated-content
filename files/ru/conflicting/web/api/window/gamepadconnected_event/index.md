@@ -5,37 +5,36 @@ translation_of: Web/API/Window/ongamepadconnected
 original_slug: Web/API/Window/ongamepadconnected
 ---
 
-<div>{{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}</div>
+{{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}
 
-<p>Свойство <strong><code>ongamepadconnected</code></strong> интерфейса {{domxref("Window")}} представляет собой обработчик, который будет запущен при подключении геймпада (когда событие  {{event('gamepadconnected')}} запустится).</p>
+Свойство **`ongamepadconnected`** интерфейса {{domxref("Window")}} представляет собой обработчик, который будет запущен при подключении геймпада (когда событие {{event('gamepadconnected')}} запустится).
 
-<p>Тип объекта события - {{domxref("GamepadEvent")}}.</p>
+Тип объекта события - {{domxref("GamepadEvent")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">window.ongamepadconnected = function() { ... };
-</pre>
+```
+window.ongamepadconnected = function() { ... };
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush:js; line-numbers  language-js"><code class="language-js">window<span class="punctuation token">.</span><span class="punctuation token">on</span><span class="string token">gamepadconnected =</span> <span class="keyword token">function</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// All buttons and axes values can be accessed through</span>
-  event<span class="punctuation token">.</span>gamepad<span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+```js
+window.ongamepadconnected = function(event) {
+  // All buttons and axes values can be accessed through
+  event.gamepad;
+};
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a class="external text" href="https://hacks.mozilla.org/2013/12/the-gamepad-api/" rel="nofollow">The Gamepad API</a> by Ted Mielczarek and Robert Nyman</li>
- <li><a href="http://luser.github.io/gamepadtest/">Simple API demo page</a> (<a href="https://github.com/luser/gamepadtest">source</a>)</li>
-</ul>
+- [The Gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) by Ted Mielczarek and Robert Nyman
+- [Simple API demo page](http://luser.github.io/gamepadtest/) ([source](https://github.com/luser/gamepadtest))

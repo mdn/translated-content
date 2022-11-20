@@ -9,63 +9,39 @@ translation_of: Web/Manifest/lang
 original_slug: Web/Manifest/lang
 ---
 
-<div>{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}</div>
+{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json no-line-numbers">
-"lang": "en-US"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td><pre class="brush: json no-line-numbers">"lang": "en-US"</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<p><dfn><code>lang</code></dfn> является строкой, содержащей единственный <a href="../HTML/Global_attributes/lang">языковой тег</a>. Он определяет основной язык для значений направленных свойств манифеста, и вместе с <code><a href="./dir">dir</a></code> определяет их направленность.</p>
+_`lang`_ является строкой, содержащей единственный [языковой тег](../HTML/Global_attributes/lang). Он определяет основной язык для значений направленных свойств манифеста, и вместе с [`dir`](./dir) определяет их направленность.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: json">"lang": "en-US"</pre>
+```json
+"lang": "en-US"
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-   <th scope="col">Feedback</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <p>{{SpecName('Manifest', '#lang-member', 'lang')}}</p>
-   </td>
-   <td>
-    <p>{{Spec2('Manifest')}}</p>
-   </td>
-   <td>
-    <p>Initial definition.</p>
-   </td>
-   <td>
-    <p><a href="https://github.com/w3c/manifest/issues/">Web App Manifest Working Group drafts</a></p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                    | Status                       | Comment             | Feedback                                                                         |
+| ---------------------------------------------------------------- | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
+| {{SpecName('Manifest', '#lang-member', 'lang')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

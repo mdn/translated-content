@@ -5,19 +5,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 original_slug: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 ---
 
-<div>{{JSRef}} {{obsolete_header}}</div>
+{{JSRef}} {{obsolete_header}}
 
-<p>Метод <code><strong>clear()</strong></code> удаляет все элементы из объекта WeakMap, но он больше не является частью ECMAScript и его реализаций.</p>
+Метод **`clear()`** удаляет все элементы из объекта WeakMap, но он больше не является частью ECMAScript и его реализаций.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><code><em>wm</em>.clear();</code></pre>
+```
+wm.clear();
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_clear">Использование метода <code>clear</code></h3>
+### Использование метода `clear`
 
-<pre class="brush: js">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 var obj = {};
 
 wm.set(obj, "foo");
@@ -30,18 +33,16 @@ wm.clear();
 
 wm.has(obj)  // false
 wm.has(window)  // false
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<p>Не входит ни в одну текущую спецификацию или черновик. Этот метод был частью черновика ECMAScript 6, до 28 ревизии (версия от 14 октября, 2014), но был удалён в последующих версиях черновика. В финальном стандарте его не будет.</p>
+Не входит ни в одну текущую спецификацию или черновик. Этот метод был частью черновика ECMAScript 6, до 28 ревизии (версия от 14 октября, 2014), но был удалён в последующих версиях черновика. В финальном стандарте его не будет.
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}

@@ -5,46 +5,49 @@ translation_of: Web/API/GlobalEventHandlers/onabort
 original_slug: Web/API/GlobalEventHandlers/onabort
 ---
 
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Обработчик событий, позволяющий прерывать события объекта <strong>window</strong>. (Недоступен для<strong> Firefox 2</strong> и <strong>Safari</strong>).</p>
+Обработчик событий, позволяющий прерывать события объекта **window**. (Недоступен для **Firefox 2** и **Safari**).
 
-<p>TODO define what "abort" is. Closing the window via window manager? Stopping the load of the page? By which means and reasons (user, network/server)? At which stages would it fire / be catched? Для IE, событие <strong>onabort</strong> доступно только для тега <code>img</code>.</p>
+TODO define what "abort" is. Closing the window via window manager? Stopping the load of the page? By which means and reasons (user, network/server)? At which stages would it fire / be catched? Для IE, событие **onabort** доступно только для тега `img`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">window.onabort = <em>funcRef</em>
-</pre>
+```
+window.onabort = funcRef
+```
 
-<ul>
- <li><code>funcRef</code>: Reference to a function</li>
-</ul>
+- `funcRef`: Reference to a function
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">window.onabort = function() {
+```js
+window.onabort = function() {
   alert("Load aborted.");
-}</pre>
+}
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
 <table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onabort','onabort')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML WHATWG','webappapis.html#handler-onabort','onabort')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
