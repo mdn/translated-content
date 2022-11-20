@@ -157,7 +157,7 @@ original_slug: Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
 
 <p>Além de inseridos diretamente na marcação, os atributos ARIA podem ser<span id="result_box" lang="pt"> <span>adicionados ao elemento</span> <span>e atualizados</span> <span>dinamicamente</span></span> pela utilização de códigos em JavaScript, como este:</p>
 
-<pre class="brush: javascript" id="line96">// Find the progress bar &lt;div&gt; in the DOM.
+<pre class="brush:javascript">// Find the progress bar &lt;div&gt; in the DOM.
 var progressBar = document.getElementById("percent-loaded");
 
 // Set its ARIA roles and states, so that assistive technologies know what kind of widget it is.
@@ -169,8 +169,6 @@ progressBar.setAttribute("aria-valuemax", 100);
 function updateProgress(percentComplete) {
   progressBar.setAttribute("aria-valuenow", percentComplete);
 }</pre>
-
-<h2 id="sect1" style="line-height: 23px;"> </h2>
 
 <h2 id="Se_eu_adicionar_ARIA_a_estruturação_ou_o_comportamento_da_minha_página_vão_mudar" style="line-height: 23px;">Se eu adicionar ARIA a estruturação, ou o comportamento, da minha página vão mudar?</h2>
 
@@ -203,7 +201,7 @@ function updateProgress(percentComplete) {
 
 <p>Aqui você tem um exemplo da marcação usada para uma barra de progresso em HTML5:</p>
 
-<pre class="brush: html" id="line96">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;&lt;title&gt;Gracefully degrading progress bar&lt;/title&gt;&lt;/head&gt;
   &lt;body&gt;
@@ -215,7 +213,7 @@ function updateProgress(percentComplete) {
 
 <p>...e aqui está o código JavaScript que vai garantir que a barra de progresso ainda funcione em navegadores mais antigos:</p>
 
-<pre class="brush: javascript" id="line96">var progressBar = document.getElementById("progress-bar");
+<pre class="brush:javascript">var progressBar = document.getElementById("progress-bar");
 
 // Check to see if the browser supports the HTML5 &lt;progress&gt; tag.
 var supportsHTML5Progress = (typeof (HTMLProgressElement) !== "undefined");
@@ -262,8 +260,6 @@ initDemo();
 <p>Tecnologias assistivas usam uma API (Interface de Programação de Aplicações) construída em cada sistema operacional, concebida, especificamente, para descrever as funções, estados e estruturas da interface de utilização de uma aplicação. Por exemplo, um leitor de tela utiliza esta API para ler a interface de utilização com um mecanismo de vocalização do texto, uma lente de aumento a utiliza para realçar áreas importantes - ou ativas - da tela e um teclado virtual pode utilizá-la para proporcionar um tipo de teclado mais eficiente dentro de determinado contexto - ou o controle da UI. Tecnologias assistivas, muitas vezes, também acessam uma página do DOM, do princípio ao fim, <span id="result_box" lang="pt"> <span>através desta</span> <span>API,</span> <span>para entender sua semântica e atributos da página.</span></span></p>
 
 <p>O conjunto ARIA proporciona uma ponte entre o mundo do DOM e a área de trabalho. Os navegadores expõe os elementos capacitados com o conjunto ARIA para as APIs das tecnologias assistivas, como se estes fossem <em>widgets</em> nativos. Como resultado, quem os utiliza ganha uma experiência de uso muito mais consistente, na qual <em>widgets</em> dinâmicos, da <em>web</em>, impulsionados pela JavaScript são <span id="result_box" lang="pt"><span>comparáveis a</span><span>os seus equivalentes</span> <span>da área de trabalho.</span></span></p>
-
-<h2 id="sect3"> </h2>
 
 <h2 id="Como_experimento_o_uso_que_fiz_do_conjunto_ARIA_Existem_ferramentas_gratuitas_disponíveis">Como experimento o uso que fiz do conjunto ARIA? Existem ferramentas gratuitas disponíveis?</h2>
 
@@ -317,5 +313,3 @@ initDemo();
 </ul>
 
 <p>a autoria do artigo é de: morenoh149, kscarfone, akhabibullina, xfq, Fredchat, mpiotrowicz, Sheppy, BrendanMcKeon, anastasia, jswisher, Aaronlev, colinbdclark.</p>
-
-<p> </p>
