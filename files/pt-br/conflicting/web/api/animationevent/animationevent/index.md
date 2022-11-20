@@ -12,72 +12,53 @@ tags:
 translation_of: Web/API/AnimationEvent/initAnimationEvent
 original_slug: Web/API/AnimationEvent/initAnimationEvent
 ---
-<p>{{obsolete_header}}{{non-standard_header}}{{ apiref("Web Animations API") }}</p>
+{{obsolete_header}}{{non-standard_header}}{{ apiref("Web Animations API") }}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O <code><strong>AnimationEvent.initAnimationEvent() </strong></code>é um método iniciado com o evento da animção criando um depreciativo {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}} método.</p>
+O **`AnimationEvent.initAnimationEvent()`** é um método iniciado com o evento da animção criando um depreciativo {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}} método.
 
-<p><code>AnimationEvent</code> criado desse modo não é confiável.</p>
+`AnimationEvent` criado desse modo não é confiável.
 
-<div class="note">
-<p><strong>Note:</strong> Durante o processo de padronização, esse método foi removido das especificações. É que ele foi depreciado e esse processo foi removido da maioria das implementações . <strong>Não use este método</strong>; ao invés, use o construtor padrão, {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}, para criar um sintético {{domxref("AnimationEvent")}}.</p>
-</div>
+> **Nota:** Durante o processo de padronização, esse método foi removido das especificações. É que ele foi depreciado e esse processo foi removido da maioria das implementações . **Não use este método**; ao invés, use o construtor padrão, {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}, para criar um sintético {{domxref("AnimationEvent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>animationEvent</em>.initAnimationEvent(<em>typeArg</em>, <em>canBubbleArg</em>, <em>cancelableArg</em>, <em>animationNameArg</em>, <em>elapsedTimeArg</em>);</pre>
+```
+animationEvent.initAnimationEvent(typeArg, canBubbleArg, cancelableArg, animationNameArg, elapsedTimeArg);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>typeArg</code></dt>
- <dd>Um {{domxref("DOMString")}} identificado com um tipo específico de evento animação que ocorreu. Os seguintes valores são aceitados:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">Valor</th>
-    <th scope="col">Significado</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>animationstart</code></td>
-    <td>A animação começou.</td>
-   </tr>
-   <tr>
-    <td><code>animationend</code></td>
-    <td>A animação terminou.</td>
-   </tr>
-   <tr>
-    <td><code>animationiteration</code></td>
-    <td>A iteração corrente se completou.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>canBubbleArg</code></dt>
- <dd>Uma {{domxref("Boolean")}} bandeira indicando se o evento pode ser bolha (<code>true</code>) ou não (<code>false)</code>.</dd>
- <dt><code>cancelableArg</code></dt>
- <dd>Uma {{domxref("Boolean")}} bandeira indicando se o evento associado pode ser evitado (<code>true</code>) ou não (<code>false)</code>.</dd>
- <dt><code>animationNameArg</code></dt>
- <dd>Um {{domxref("DOMString")}} contendo o valor do{{cssxref("animation-name")}} propriedade CSS associada com a transição.</dd>
- <dt><code>elapsedTimeArg</code></dt>
- <dd>Um ponto flutuante indicando a quantidade de tempo que a animação esteve rodando, em segundos, com o tempo do evento terminar, excluirá-se o tempo em que a animação esteve em pausa.Para um <code>"animationstart"</code> evento, <code>elapsedTime</code> é <code>0.0</code> a não ser que haja um valor negativo para <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay" title="The animation-delay CSS property specifies when the animation should start. This lets the animation sequence begin some time after it's applied to an element.">animation-delay</a></code>, nesse caso o evento irá terminar com <code>elapsedTime</code> contendo <code>(-1 * </code><em>delay</em><code>)</code>.</dd>
-</dl>
+- `typeArg`
 
-<h2 id="Especificações">Especificações</h2>
+  - : Um {{domxref("DOMString")}} identificado com um tipo específico de evento animação que ocorreu. Os seguintes valores são aceitados:
 
-<p><em>Esse método é não-padrão e não é parte de qualquer especificação, no entanto ele esteve presente nos primeiros rascunhos de {{SpecName("CSS3 Animations")}}.</em></p>
+    | Valor                | Significado                       |
+    | -------------------- | --------------------------------- |
+    | `animationstart`     | A animação começou.               |
+    | `animationend`       | A animação terminou.              |
+    | `animationiteration` | A iteração corrente se completou. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+- `canBubbleArg`
+  - : Uma {{domxref("Boolean")}} bandeira indicando se o evento pode ser bolha (`true`) ou não (`false)`.
+- `cancelableArg`
+  - : Uma {{domxref("Boolean")}} bandeira indicando se o evento associado pode ser evitado (`true`) ou não (`false)`.
+- `animationNameArg`
+  - : Um {{domxref("DOMString")}} contendo o valor do{{cssxref("animation-name")}} propriedade CSS associada com a transição.
+- `elapsedTimeArg`
+  - : Um ponto flutuante indicando a quantidade de tempo que a animação esteve rodando, em segundos, com o tempo do evento terminar, excluirá-se o tempo em que a animação esteve em pausa.Para um `"animationstart"` evento, `elapsedTime` é `0.0` a não ser que haja um valor negativo para [`animation-delay`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay "The animation-delay CSS property specifies when the animation should start. This lets the animation sequence begin some time after it's applied to an element."), nesse caso o evento irá terminar com `elapsedTime` contendo `(-1 * delay)`.
+
+## Especificações
+
+_Esse método é não-padrão e não é parte de qualquer especificação, no entanto ele esteve presente nos primeiros rascunhos de {{SpecName("CSS3 Animations")}}._
+
+## Compatibilidade com navegadores
 
 {{Compat()}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations">Using CSS animations</a></li>
- <li>Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.</li>
- <li>The {{domxref("AnimationEvent")}} interface it belongs to.</li>
-</ul>
+- [Using CSS animations](/pt-BR/docs/CSS/Using_CSS_animations)
+- Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
+- The {{domxref("AnimationEvent")}} interface it belongs to.

@@ -9,33 +9,35 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onkeyup
 original_slug: Web/API/GlobalEventHandlers/onkeyup
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>A propriedade<strong> onkeyup</strong> retorna o código de manipulador de eventos onKeyUp no elemento atual.</p>
+A propriedade **onkeyup** retorna o código de manipulador de eventos onKeyUp no elemento atual.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">element.onkeyup = <em>código do manipulador do evento</em>s
-</pre>
+```
+element.onkeyup = código do manipulador do eventos
+```
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js"> &lt;input type="text" onKeyUp="teclaPressionada(event)"&gt;
- &lt;script&gt;
+```js
+ <input type="text" onKeyUp="teclaPressionada(event)">
+ <script>
     function teclaPressionada(evt) {
        console.log(evt.keyCode)
     }
- &lt;/script&gt;
-</pre>
+ </script>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>O evento keyup é iniciado quando o usuário libera a tecla é pressionada.</p>
+O evento keyup é iniciado quando o usuário libera a tecla é pressionada.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<div>{{Specifications}}</div>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.GlobalEventHandlers.onkeyup")}}</p>
+{{Compat("api.GlobalEventHandlers.onkeyup")}}

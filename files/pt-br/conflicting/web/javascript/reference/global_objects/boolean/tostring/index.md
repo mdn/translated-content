@@ -4,46 +4,45 @@ slug: conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Boolean/toSource
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>O método <code><strong>toSource()</strong></code> retorna uma representação string do código fonte do objeto.</p>
+O método **`toSource()`** retorna uma representação string do código fonte do objeto.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>booleanObj</var>.toSource()
-Boolean.toSource()</code></pre>
+```
+booleanObj.toSource()
+Boolean.toSource()
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<p>Nenhum.</p>
+Nenhum.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>toSource</code> retorna os seguintes valores:</p>
+O método `toSource` retorna os seguintes valores:
 
-<ul>
- <li>Para o objeto pré-construido {{jsxref("Boolean")}}, <code>toSource</code> retorna a seguinte string indicando que o código não está disponível:
+- Para o objeto pré-construido {{jsxref("Boolean")}}, `toSource` retorna a seguinte string indicando que o código não está disponível:
 
-  <pre class="brush: js">function Boolean() {
-    [native code]
-}
-</pre>
- </li>
- <li>Para instancias de {{jsxref("Boolean")}}, <code>toSource</code> retorna a string representando o código fonte.</li>
-</ul>
+  ```js
+  function Boolean() {
+      [native code]
+  }
+  ```
 
-<p>Este método normalmente é chamando internamente pelo JavaScript e não explicitamente no código fonte.</p>
+- Para instancias de {{jsxref("Boolean")}}, `toSource` retorna a string representando o código fonte.
 
-<h2 id="Especificações">Especificações</h2>
+Este método normalmente é chamando internamente pelo JavaScript e não explicitamente no código fonte.
 
-<p>Não é parte de nenhum padrão. Implementado no Javascript 1.3.</p>
+## Especificações
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+Não é parte de nenhum padrão. Implementado no Javascript 1.3.
 
-<div>{{Compat}}</div>
+## Compatibilidade com navegadores
 
-<h2 id="Ver_também">Ver também</h2>
+{{Compat}}
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}} {{non-standard_inline}}</li>
-</ul>
+## Ver também
+
+- {{jsxref("Object.prototype.toSource()")}} {{non-standard_inline}}

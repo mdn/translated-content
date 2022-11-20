@@ -14,150 +14,82 @@ tags:
 translation_of: Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
 original_slug: Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
 ---
-<h2 id="O_que_significa_ARIA">O que significa ARIA?</h2>
+## O que significa ARIA?
 
-<p>WAI-ARIA, que quer dizer <a class="external" href="http://www.w3.org/WAI/intro/aria.php" title="http://www.w3.org/WAI/intro/aria.php">Accessible Rich Internet Applications </a>(Aplicações Ricas para uma Internete Acessível), são as especificações da <a class="external" href="http://www.w3.org/WAI/">Web Accessibility Initiative</a> (Iniciativa pela Acessibilidade na <em>Web</em>), da <a class="external" href="http://www.w3.org/">W3C</a> (World Wide Web Consortium). O conjunto ARIA oferece a maneira de tornar as aplicações e <em>widgets</em> da rede mundial mais acessíveis a uma diversidade maior de pessoas, incluindo quem utiliza tecnologias assistivas, como leitores de telas, ou lentes de aumento.</p>
+WAI-ARIA, que quer dizer [Accessible Rich Internet Applications](http://www.w3.org/WAI/intro/aria.php)(Aplicações Ricas para uma Internete Acessível), são as especificações da [Web Accessibility Initiative](http://www.w3.org/WAI/) (Iniciativa pela Acessibilidade na _Web_), da [W3C](http://www.w3.org/) (World Wide Web Consortium). O conjunto ARIA oferece a maneira de tornar as aplicações e _widgets_ da rede mundial mais acessíveis a uma diversidade maior de pessoas, incluindo quem utiliza tecnologias assistivas, como leitores de telas, ou lentes de aumento.
 
-<p>O conjunto ARIA fornece semânticas adicionais para descrever a função (role), estado (state) e funcionalidade de muitos controles familiares da interface de utilização, tais como menus, deslizantes, árvores e diálogos. E, também, provê informação estrutural adicional, o que auxilia os autores a identificar as áreas de referência (<em>landmarks</em>), regiões e malhas nas suas páginas. O conjunto ARIA habilita aplicações dinâmicas e <em>widgets</em> gerenciados pela JavaScript a interoperar com uma gama de tecnologias assistivas baseadas em ambiente.</p>
+O conjunto ARIA fornece semânticas adicionais para descrever a função (role), estado (state) e funcionalidade de muitos controles familiares da interface de utilização, tais como menus, deslizantes, árvores e diálogos. E, também, provê informação estrutural adicional, o que auxilia os autores a identificar as áreas de referência (_landmarks_), regiões e malhas nas suas páginas. O conjunto ARIA habilita aplicações dinâmicas e _widgets_ gerenciados pela JavaScript a interoperar com uma gama de tecnologias assistivas baseadas em ambiente.
 
-<p>Para mais informações sobre como criar <em>widgets</em> acessíveis com ARIA, veja a <a href="/en/Accessibility/An_overview_of_accessible_web_applications_and_widgets" title="en/Accessibility/An overview of accessible web applications and widgets">Visão geral da acessibilidade em aplicações <em>web</em> e <em>widgets </em>-  Overview of accessible web applications and widgets</a>.</p>
+Para mais informações sobre como criar _widgets_ acessíveis com ARIA, veja a [Visão geral da acessibilidade em aplicações _web_ e _widgets_ - Overview of accessible web applications and widgets](/en/Accessibility/An_overview_of_accessible_web_applications_and_widgets).
 
-<h2 id="ARIA_-_onde_tem_suporte">ARIA - onde tem suporte?</h2>
+## ARIA - onde tem suporte?
 
-<p>ARIA é um grupo de especificações relativamente novo, mas o suporte está crescendo. Uma larga variedade de navegadores comumente usados, tecnologias assistivas, conjunto de ferramentas JavaScript e aplicações, agora, suportam o conjunto ARIA. Entretanto, velhas versões destas tecnologias ainda podem estar sendo utilizadas por muita gente. Quem sabe você possa considerar a implementação de ARIA pela utilização de <span class="short_text" id="result_box" lang="pt"><span>técnicas de aprimoramento</span> <span>progressivo</span></span> — como adicionar ARIA usando JavaScript e não diretamente na sua marcação — no intuito<span class="short_text" id="result_box" lang="pt"><span> de</span> <span>obter, </span><span>graciosamente,</span></span> o<span id="result_box" lang="pt"> <span>suporte</span> <span>nos navegadores e tecnologias assistivas mais antigos.</span></span></p>
+ARIA é um grupo de especificações relativamente novo, mas o suporte está crescendo. Uma larga variedade de navegadores comumente usados, tecnologias assistivas, conjunto de ferramentas JavaScript e aplicações, agora, suportam o conjunto ARIA. Entretanto, velhas versões destas tecnologias ainda podem estar sendo utilizadas por muita gente. Quem sabe você possa considerar a implementação de ARIA pela utilização de técnicas de aprimoramento progressivo — como adicionar ARIA usando JavaScript e não diretamente na sua marcação — no intuito de obter, graciosamente, o suporte nos navegadores e tecnologias assistivas mais antigos.
 
-<h3 id="Navegadores">Navegadores</h3>
+### Navegadores
 
-<p>O conjunto ARIA encontra suporte nos seguintes navegadores:</p>
+O conjunto ARIA encontra suporte nos seguintes navegadores:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Navegadorr</th>
-   <th>Versão Mínima</th>
-   <th>Observações</th>
-  </tr>
-  <tr>
-   <td>Firefox</td>
-   <td>3.0+</td>
-   <td>Funciona com NVDA,  JAWS 10+ e Orca</td>
-  </tr>
-  <tr>
-   <td><a class="external" href="http://dev.chromium.org/developers/design-documents/accessibility#TOC-WAI-ARIA-Support">Chrome</a></td>
-   <td>Mais recentes</td>
-   <td>O suporte a leitores de tela ainda é experimental a partir do Chrome 15</td>
-  </tr>
-  <tr>
-   <td>Safari</td>
-   <td>4+</td>
-   <td>No Safari 5 o suporte está <span class="short_text" id="result_box" lang="pt"><span>muito melhorado</span></span>.<br>
-    Para regiões dinâmicas é preciso o Safari 5 com VoiceOver no iOS5, ou OS X Lion</td>
-  </tr>
-  <tr>
-   <td><a class="external" href="http://www.opera.com/docs/specs/presto28/wai-aria/roleattributes/">Opera</a></td>
-   <td>9.5+</td>
-   <td>
-    <p>Necessita o VoiceOver no OS X.                                                   TBD: <span class="short_text" id="result_box" lang="pt"><span>como está funcionando</span> <span>atualmente</span></span>?</p>
-   </td>
-  </tr>
-  <tr>
-   <td><a class="external" href="http://msdn.microsoft.com/en-us/library/cc891505%28v=vs.85%29.aspx">Internet Explorer</a></td>
-   <td>8+</td>
-   <td>Funciona com JAWS 10+ e NVDA.                                          Não existe suporte para regiões dinâmicas no NVDA.<br>
-    O suporte em IE9  está muito aperfeiçoado.</td>
-  </tr>
- </tbody>
-</table>
+| Navegadorr                                                                                       | Versão Mínima | Observações                                                                                                                 |
+| ------------------------------------------------------------------------------------------------ | ------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Firefox                                                                                          | 3.0+          | Funciona com NVDA, JAWS 10+ e Orca                                                                                          |
+| [Chrome](http://dev.chromium.org/developers/design-documents/accessibility#TOC-WAI-ARIA-Support) | Mais recentes | O suporte a leitores de tela ainda é experimental a partir do Chrome 15                                                     |
+| Safari                                                                                           | 4+            | No Safari 5 o suporte está muito melhorado. Para regiões dinâmicas é preciso o Safari 5 com VoiceOver no iOS5, ou OS X Lion |
+| [Opera](http://www.opera.com/docs/specs/presto28/wai-aria/roleattributes/)                       | 9.5+          | Necessita o VoiceOver no OS X. TBD: como está funcionando atualmente?                                                       |
+| [Internet Explorer](http://msdn.microsoft.com/en-us/library/cc891505%28v=vs.85%29.aspx)          | 8+            | Funciona com JAWS 10+ e NVDA. Não existe suporte para regiões dinâmicas no NVDA. O suporte em IE9 está muito aperfeiçoado.  |
 
-<p>Em certos casos, as versões anteriores podem suportar, apenas, algumas características do conjunto ARIA. Tabelas mais detalhadas da compatibilidade de navegadores estão disponíveis a partir de múltiplas fontes:</p>
+Em certos casos, as versões anteriores podem suportar, apenas, algumas características do conjunto ARIA. Tabelas mais detalhadas da compatibilidade de navegadores estão disponíveis a partir de múltiplas fontes:
 
-<ul>
- <li><a class="external" href="http://caniuse.com/wai-aria">caniuse.com</a></li>
- <li><a class="external" href="http://www.paciellogroup.com/blog/2012/02/rough-guide-browsers-operating-systems-and-screen-reader-support/">The Paciello Group</a></li>
-</ul>
+- [caniuse.com](http://caniuse.com/wai-aria)
+- [The Paciello Group](http://www.paciellogroup.com/blog/2012/02/rough-guide-browsers-operating-systems-and-screen-reader-support/)
 
-<h3 id="Tecnologias_Assistivas">Tecnologias Assistivas</h3>
+### Tecnologias Assistivas
 
-<p>As tecnologias assistivas estão, progressivamente, abraçando o conjunto ARIA. Algumas delas incluem:</p>
+As tecnologias assistivas estão, progressivamente, abraçando o conjunto ARIA. Algumas delas incluem:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Tecnologia Assistiva</th>
-   <th>Versão mínima para o conjunto ARIA básico</th>
-   <th>Versão mínima para regiões dinâmicas e suportes de alerta</th>
-  </tr>
-  <tr>
-   <td>NVDA</td>
-   <td>2010.2<br>
-    (NVDA é, sempre, um aprimoramento gratuito)</td>
-   <td>2011.1 para Firefox, sem apoio para regiões dinãmicas no IE a partir de 2011.2.</td>
-  </tr>
-  <tr>
-   <td>Orca</td>
-   <td>? (TBD)</td>
-   <td>? (TBD)</td>
-  </tr>
-  <tr>
-   <td>VoiceOver</td>
-   <td>OSX 10.5,<br>
-    iOS 4</td>
-   <td>OS X 10.7<br>
-    iOS 5</td>
-  </tr>
-  <tr>
-   <td>JAWS</td>
-   <td>8</td>
-   <td>10</td>
-  </tr>
-  <tr>
-   <td>Window-Eyes</td>
-   <td>7</td>
-   <td>Atualmente, sem suporte para regiões vivas</td>
-  </tr>
-  <tr>
-   <td>ZoomText</td>
-   <td>?</td>
-   <td>Atualmente, sem suporte para regiões vivas</td>
-  </tr>
- </tbody>
-</table>
+| Tecnologia Assistiva | Versão mínima para o conjunto ARIA básico          | Versão mínima para regiões dinâmicas e suportes de alerta                       |
+| -------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------- |
+| NVDA                 | 2010.2 (NVDA é, sempre, um aprimoramento gratuito) | 2011.1 para Firefox, sem apoio para regiões dinãmicas no IE a partir de 2011.2. |
+| Orca                 | ? (TBD)                                            | ? (TBD)                                                                         |
+| VoiceOver            | OSX 10.5, iOS 4                                    | OS X 10.7 iOS 5                                                                 |
+| JAWS                 | 8                                                  | 10                                                                              |
+| Window-Eyes          | 7                                                  | Atualmente, sem suporte para regiões vivas                                      |
+| ZoomText             | ?                                                  | Atualmente, sem suporte para regiões vivas                                      |
 
-<p>Nota: as primeiras versões destas ferramentas tinham, muitas vezes, implementações ARIA parciais, ou com problemas.</p>
+Nota: as primeiras versões destas ferramentas tinham, muitas vezes, implementações ARIA parciais, ou com problemas.
 
-<p>Para notas sobre o suporte  JAWS para ARIA a partir do JAWS 10, veja este artigo do Paciello Group: <a class="external" href="http://www.paciellogroup.com/blog/2010/10/jaws-support-for-aria/">JAWS Support for ARIA</a>.</p>
+Para notas sobre o suporte JAWS para ARIA a partir do JAWS 10, veja este artigo do Paciello Group: [JAWS Support for ARIA](http://www.paciellogroup.com/blog/2010/10/jaws-support-for-aria/).
 
-<h3 id="O_Conjunto_de_Ferramentas_JavaScript">O Conjunto de Ferramentas JavaScript</h3>
+### O Conjunto de Ferramentas JavaScript
 
-<p>Funções, estados, e propriedades ARIA <span class="short_text" id="result_box" lang="pt"><span>foram adiciona</span></span>das a <span id="result_box" lang="pt"><span>uma série de</span> <span>conjuntos de ferramentas</span> JavaScript </span><span lang="pt"><span>populares</span> <span>para a interface de utilização</span></span>, incluindo:</p>
+Funções, estados, e propriedades ARIA foram adicionadas a uma série de conjuntos de ferramentas JavaScript populares para a interface de utilização, incluindo:
 
-<ul>
- <li>Dojo/Dijit</li>
- <li>jQuery UI</li>
- <li>Fluid Infusion</li>
- <li>Google Closure</li>
- <li>Google Web Toolkit</li>
- <li>BBC Glow</li>
- <li>Yahoo! User Interface Library (YUI)</li>
-</ul>
+- Dojo/Dijit
+- jQuery UI
+- Fluid Infusion
+- Google Closure
+- Google Web Toolkit
+- BBC Glow
+- Yahoo! User Interface Library (YUI)
 
-<p>Para mais informações sobre acessibilidade com o conjunto de ferramentas JavaScript, leia:</p>
+Para mais informações sobre acessibilidade com o conjunto de ferramentas JavaScript, leia:
 
-<ul>
- <li>Steve Faulkner's <a class="external" href="http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/">WAI-ARIA Implementation in JavaScript UI Libraries</a></li>
-</ul>
+- Steve Faulkner's [WAI-ARIA Implementation in JavaScript UI Libraries](http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/)
 
-<h2 id="Você_pode_me_dar_um_exemplo_do_conjunto_ARIA_em_ação">Você pode me dar um exemplo do conjunto ARIA em ação?</h2>
+## Você pode me dar um exemplo do conjunto ARIA em ação?
 
-<p><a name="aria-in-action">Com prazer: ) Eis, aqui, a marcação para um <em>widget</em> de uma barra de progresso: </a></p>
+Com prazer: ) Eis, aqui, a marcação para um _widget_ de uma barra de progresso:
 
-<pre class="brush:html;">&lt;div id="percent-loaded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" /&gt;</pre>
+```html
+<div id="percent-loaded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" />
+```
 
-<p>Esta barra de progresso é construída usando uma <code>&lt;div&gt;</code>, o que não é muito descritivo. Infelizmente, não há muitas etiquetas semânticas disponíveis para desenvolvedores em HTML 4, logo, nós precisamos incluir as funções e propriedades ARIA. Estas são especificadas pela adição de atributos ao elemento. Neste exemplo, o atributo <code>role="progressbar" </code>informa, ao navegador, que este elemento é, agora, um <em>widget</em> de barra de progresso movimentado pela JavaScript. Os atributos <strong>aria-valuemin</strong> (aria-valor mínimo) e <strong>aria-valuemax</strong> (aria-valor máximo) determinam os valores mínimo e máximo para essa barra de progresso e o <strong>aria-valuenow </strong>(aria-valor agora) descreve o seu estado atual.</p>
+Esta barra de progresso é construída usando uma `<div>`, o que não é muito descritivo. Infelizmente, não há muitas etiquetas semânticas disponíveis para desenvolvedores em HTML 4, logo, nós precisamos incluir as funções e propriedades ARIA. Estas são especificadas pela adição de atributos ao elemento. Neste exemplo, o atributo `role="progressbar"` informa, ao navegador, que este elemento é, agora, um _widget_ de barra de progresso movimentado pela JavaScript. Os atributos **aria-valuemin** (aria-valor mínimo) e **aria-valuemax** (aria-valor máximo) determinam os valores mínimo e máximo para essa barra de progresso e o **aria-valuenow** (aria-valor agora) descreve o seu estado atual.
 
-<p>Além de inseridos diretamente na marcação, os atributos ARIA podem ser<span id="result_box" lang="pt"> <span>adicionados ao elemento</span> <span>e atualizados</span> <span>dinamicamente</span></span> pela utilização de códigos em JavaScript, como este:</p>
+Além de inseridos diretamente na marcação, os atributos ARIA podem ser adicionados ao elemento e atualizados dinamicamente pela utilização de códigos em JavaScript, como este:
 
-<pre class="brush:javascript">// Find the progress bar &lt;div&gt; in the DOM.
+```js
+// Find the progress bar <div> in the DOM.
 var progressBar = document.getElementById("percent-loaded");
 
 // Set its ARIA roles and states, so that assistive technologies know what kind of widget it is.
@@ -168,59 +100,63 @@ progressBar.setAttribute("aria-valuemax", 100);
 // Create a function that can be called at any time to update the value of the progress bar.
 function updateProgress(percentComplete) {
   progressBar.setAttribute("aria-valuenow", percentComplete);
-}</pre>
+}
+```
 
-<h2 id="Se_eu_adicionar_ARIA_a_estruturação_ou_o_comportamento_da_minha_página_vão_mudar" style="line-height: 23px;">Se eu adicionar ARIA a estruturação, ou o comportamento, da minha página vão mudar?</h2>
+## Se eu adicionar ARIA a estruturação, ou o comportamento, da minha página vão mudar?
 
-<p>Não, o conjunto ARIA é disponibilizado, apenas, para as tecnologias assistivas APIs (Interface de Programação de Aplicações) e não afeta as funcionalidades nativas dos navegadores em relação ao DOM, nem ao estilo. Do ponto de vista dos navegadores, a HTML nativa define o significado semântico e o comportamento de um elemento, com os atributos ARIA agindo como uma camada de topo, com a finalidade de dar suporte à TA/AT API. Embora o conjunto ARIA não vá alterar qualquer modelo, bem como <span class="short_text" id="result_box" lang="pt"> <span>todos os atributos</span> <span>HTML, a CSS pode</span></span> <span id="result_box" lang="pt"><span>tirar vantagem dos atributos</span></span><span lang="pt"> <span>ARIA</span> <span>como seletores</span> <span>de elemento.</span></span> Isto pode providenciar um mecanismo conveniente para <span id="result_box" lang="pt"><span>o modelo</span> <span>de <em>widgets</em></span> <span>capacitados com ARIA</span></span>.</p>
+Não, o conjunto ARIA é disponibilizado, apenas, para as tecnologias assistivas APIs (Interface de Programação de Aplicações) e não afeta as funcionalidades nativas dos navegadores em relação ao DOM, nem ao estilo. Do ponto de vista dos navegadores, a HTML nativa define o significado semântico e o comportamento de um elemento, com os atributos ARIA agindo como uma camada de topo, com a finalidade de dar suporte à TA/AT API. Embora o conjunto ARIA não vá alterar qualquer modelo, bem como todos os atributos HTML, a CSS pode tirar vantagem dos atributos ARIA como seletores de elemento. Isto pode providenciar um mecanismo conveniente para o modelo de _widgets_ capacitados com ARIA.
 
-<pre class="brush: css">.tab-panel[aria-hidden="true"] {
+```css
+.tab-panel[aria-hidden="true"] {
   display: none;
   }
 
 .tab-panel[aria-hidden="false"] {
   display: block;
   }
-</pre>
+```
 
-<p><strong style="font-family: georgia,times,times new roman,serif; font-size: 1.628em; font-weight: 700; letter-spacing: -1px; line-height: 23px;">E quanto à validação?</strong></p>
+**E quanto à validação?**
 
-<p>O<span class="short_text" id="result_box" lang="pt"><span>s</span> <span>novos atributos</span> <span>introduzidas</span> <span>em</span></span> ARIA, tais como <strong>role</strong> <span class="short_text" id="result_box" lang="pt"><span>e</span> <span>aqueles</span> <span>com o prefixo</span></span> <strong>aria-</strong>, não são, oficialmente, parte das especificações HTML 4, ou XHTML 4. Como resultado, as páginas que incluem ARIA podem não validar o uso ferramentas como o  <a class="external" href="http://validator.w3.org/">W3C's Markup Validator</a>.</p>
+Os novos atributos introduzidas em ARIA, tais como **role** e aqueles com o prefixo **aria-**, não são, oficialmente, parte das especificações HTML 4, ou XHTML 4. Como resultado, as páginas que incluem ARIA podem não validar o uso ferramentas como o [W3C's Markup Validator](http://validator.w3.org/).
 
-<p>A primeira solução potencial para este problema é evitar inserir as funções e os estados ARIA diretamente na sua marcação. Em vez disso, use a JavaScript para adicionar, dinamicamente, o conjunto ARIA à sua página, como mostrado na resposta à " <a href="/#aria-in-action" title="#aria-in-action">Você pode me dar um exemplo do conjunto ARIA em ação?</a>". A sua página ainda vai ser, teoricamente, inválida, mas vai passar todas as verificações de validação estática corretamente.</p>
+A primeira solução potencial para este problema é evitar inserir as funções e os estados ARIA diretamente na sua marcação. Em vez disso, use a JavaScript para adicionar, dinamicamente, o conjunto ARIA à sua página, como mostrado na resposta à " [Você pode me dar um exemplo do conjunto ARIA em ação?](/#aria-in-action "#aria-in-action")". A sua página ainda vai ser, teoricamente, inválida, mas vai passar todas as verificações de validação estática corretamente.
 
-<p>Outra alternativa é usar a declaração de tipo de documento (<em>doctype</em>) HTML5, que inclui suporte embutido para ARIA. O <span id="result_box" lang="pt"><span>validador</span></span> <span id="result_box" lang="pt"><span>HTML5</span>  <span>do</span> <span>W3C</span> <span>nunca vai encontrar</span> <span>usos</span> <span>inválidos</span> <span>de</span> <span>ARIA</span> <span>em</span> <span>páginas</span> <span>HTML5</span> <span>para</span> <span>você.</span></span></p>
+Outra alternativa é usar a declaração de tipo de documento (_doctype_) HTML5, que inclui suporte embutido para ARIA. O validador HTML5 do W3C nunca vai encontrar usos inválidos de ARIA em páginas HTML5 para você.
 
-<h2 id="Como_a_HTML_5_se_relaciona_com_o_conjunto_ARIA">Como a HTML 5 se relaciona com o conjunto ARIA?</h2>
+## Como a HTML 5 se relaciona com o conjunto ARIA?
 
-<p>A HTML 5 introduz uma série de novas etiquetas semânticas úteis na linguagem HTML. <span id="result_box" lang="pt"><span>Algumas delas</span> <span>se</span> <span>justapõe,</span> <span>diretamente, com</span> <span>as funções disponíveis</span></span> em ARIA, <span class="short_text" id="result_box" lang="pt"><span>tais como o novo elemento</span></span><span class="short_text" lang="pt"> <span>&lt;</span><span>progress&gt;</span>.</span> <span class="short_text" id="result_box" lang="pt"><span>Nos casos em que</span> <span>o navegador</span> <span>suporte uma marcação HTML que também exista em ARIA, normalmente, não há a necessidade de acrescentar as funções e estados ARIA ao elemento.</span></span> O conjunto ARIA engloba muitas funções, estados e propriedades que não estão disponíveis em HTML5, então, estas continuarão sendo úteis aos desenvolvedores que usam HTML5. Para mais informações, Steve Faulkner escreveu um ótimo  <a class="external" href="http://www.paciellogroup.com/blog/2010/04/html5-and-the-myth-of-wai-aria-redundance/">overview of the relationship between HTML5 and ARIA</a> (em inglês).</p>
+A HTML 5 introduz uma série de novas etiquetas semânticas úteis na linguagem HTML. Algumas delas se justapõe, diretamente, com as funções disponíveis em ARIA, tais como o novo elemento \<progress>. Nos casos em que o navegador suporte uma marcação HTML que também exista em ARIA, normalmente, não há a necessidade de acrescentar as funções e estados ARIA ao elemento. O conjunto ARIA engloba muitas funções, estados e propriedades que não estão disponíveis em HTML5, então, estas continuarão sendo úteis aos desenvolvedores que usam HTML5. Para mais informações, Steve Faulkner escreveu um ótimo [overview of the relationship between HTML5 and ARIA](http://www.paciellogroup.com/blog/2010/04/html5-and-the-myth-of-wai-aria-redundance/) (em inglês).
 
-<h4 id="Degrading_Gracefully_de_HTML5_para_ARIA"><em>Degrading Gracefully</em> de HTML5 para ARIA</h4>
+#### _Degrading Gracefully_ de HTML5 para ARIA
 
-<p>Ao entregar conteúdo a navegadores que não são sensíveis à linguagem HTML5, você pode considerar uma <em>gracefully degrading</em> para o uso do conjunto ARIA, quando necessário. Assim, utilizando o exemplo da barra de progresso, você pode fazer a <span class="short_text" id="result_box" lang="pt"><span>alteração para uma</span></span> <code>"role="progressbar"</code>, nos casos em que a marcação <code>&lt;progressbar&gt;</code> não for suportada.</p>
+Ao entregar conteúdo a navegadores que não são sensíveis à linguagem HTML5, você pode considerar uma _gracefully degrading_ para o uso do conjunto ARIA, quando necessário. Assim, utilizando o exemplo da barra de progresso, você pode fazer a alteração para uma `"role="progressbar"`, nos casos em que a marcação `<progressbar>` não for suportada.
 
-<p>Aqui você tem um exemplo da marcação usada para uma barra de progresso em HTML5:</p>
+Aqui você tem um exemplo da marcação usada para uma barra de progresso em HTML5:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;&lt;title&gt;Gracefully degrading progress bar&lt;/title&gt;&lt;/head&gt;
-  &lt;body&gt;
-    &lt;progress id="progress-bar" value="0" max="100"&gt;0% complete&lt;/progress&gt;
-    &lt;button id="update-button"&gt;Update&lt;/button&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<!DOCTYPE html>
+<html>
+  <head><title>Gracefully degrading progress bar</title></head>
+  <body>
+    <progress id="progress-bar" value="0" max="100">0% complete</progress>
+    <button id="update-button">Update</button>
+ </body>
+</html>
+```
 
-<p>...e aqui está o código JavaScript que vai garantir que a barra de progresso ainda funcione em navegadores mais antigos:</p>
+...e aqui está o código JavaScript que vai garantir que a barra de progresso ainda funcione em navegadores mais antigos:
 
-<pre class="brush:javascript">var progressBar = document.getElementById("progress-bar");
+```js
+var progressBar = document.getElementById("progress-bar");
 
-// Check to see if the browser supports the HTML5 &lt;progress&gt; tag.
+// Check to see if the browser supports the HTML5 <progress> tag.
 var supportsHTML5Progress = (typeof (HTMLProgressElement) !== "undefined");
 
 function setupProgress() {
   if (!supportsHTML5Progress) {
-    // HTML5 &lt;progress&gt; isn't supported in this browser, so we need to add
+    // HTML5 <progress> isn't supported in this browser, so we need to add
     // ARIA roles and states to the element.
     progressBar.setAttribute("role", "progressbar");
     progressBar.setAttribute("aria-valuemin", 0);
@@ -230,11 +166,11 @@ function setupProgress() {
 
 function updateProgress(percentComplete) {
   if (!supportsHTML5Progress) {
-    // HTML5 &lt;progress&gt; isn't supported by this browser,
+    // HTML5 <progress> isn't supported by this browser,
     // so we need to update the aria-valuenow attribute
     progressBar.setAttribute("aria-valuenow", percentComplete);
   } else {
-    // HTML5 &lt;progress&gt; is supported, so update the value attribute instead.
+    // HTML5 <progress> is supported, so update the value attribute instead.
     progressBar.setAttribute("value", percentComplete);
   }
 
@@ -251,65 +187,51 @@ function initDemo() {
   }, false);
 }
 initDemo();
-</pre>
+```
 
-<h2 id="sect2"> </h2>
+## Como funcionam as tecnologias assistivas?
 
-<h2 id="Como_funcionam_as_tecnologias_assistivas">Como funcionam as tecnologias assistivas?</h2>
+Tecnologias assistivas usam uma API (Interface de Programação de Aplicações) construída em cada sistema operacional, concebida, especificamente, para descrever as funções, estados e estruturas da interface de utilização de uma aplicação. Por exemplo, um leitor de tela utiliza esta API para ler a interface de utilização com um mecanismo de vocalização do texto, uma lente de aumento a utiliza para realçar áreas importantes - ou ativas - da tela e um teclado virtual pode utilizá-la para proporcionar um tipo de teclado mais eficiente dentro de determinado contexto - ou o controle da UI. Tecnologias assistivas, muitas vezes, também acessam uma página do DOM, do princípio ao fim, através desta API, para entender sua semântica e atributos da página.
 
-<p>Tecnologias assistivas usam uma API (Interface de Programação de Aplicações) construída em cada sistema operacional, concebida, especificamente, para descrever as funções, estados e estruturas da interface de utilização de uma aplicação. Por exemplo, um leitor de tela utiliza esta API para ler a interface de utilização com um mecanismo de vocalização do texto, uma lente de aumento a utiliza para realçar áreas importantes - ou ativas - da tela e um teclado virtual pode utilizá-la para proporcionar um tipo de teclado mais eficiente dentro de determinado contexto - ou o controle da UI. Tecnologias assistivas, muitas vezes, também acessam uma página do DOM, do princípio ao fim, <span id="result_box" lang="pt"> <span>através desta</span> <span>API,</span> <span>para entender sua semântica e atributos da página.</span></span></p>
+O conjunto ARIA proporciona uma ponte entre o mundo do DOM e a área de trabalho. Os navegadores expõe os elementos capacitados com o conjunto ARIA para as APIs das tecnologias assistivas, como se estes fossem _widgets_ nativos. Como resultado, quem os utiliza ganha uma experiência de uso muito mais consistente, na qual _widgets_ dinâmicos, da _web_, impulsionados pela JavaScript são comparáveis aos seus equivalentes da área de trabalho.
 
-<p>O conjunto ARIA proporciona uma ponte entre o mundo do DOM e a área de trabalho. Os navegadores expõe os elementos capacitados com o conjunto ARIA para as APIs das tecnologias assistivas, como se estes fossem <em>widgets</em> nativos. Como resultado, quem os utiliza ganha uma experiência de uso muito mais consistente, na qual <em>widgets</em> dinâmicos, da <em>web</em>, impulsionados pela JavaScript são <span id="result_box" lang="pt"><span>comparáveis a</span><span>os seus equivalentes</span> <span>da área de trabalho.</span></span></p>
+## Como experimento o uso que fiz do conjunto ARIA? Existem ferramentas gratuitas disponíveis?
 
-<h2 id="Como_experimento_o_uso_que_fiz_do_conjunto_ARIA_Existem_ferramentas_gratuitas_disponíveis">Como experimento o uso que fiz do conjunto ARIA? Existem ferramentas gratuitas disponíveis?</h2>
+Existem várias ferramentas de inspeção e depuração para ajudar você no seu teste da ação do conjunto ARIA:
 
-<p>Existem <span id="result_box" lang="pt"><span>várias ferramentas</span></span><span lang="pt"> <span>de</span> <span>inspeção e</span><span> depuração</span> <span>para ajudar você no seu</span> <span>teste</span> da ação do conjunto <span>ARIA</span><span>:</span></span></p>
+- Inspetor de Objetos no Windows
+- Inspetor de Acessibilidade em OS X
+- AccProbe em Linux
+- Inspetor Firebug's DOM
+- O [Accessibility Inspector for Firebug](http://code.google.com/p/ainspector/)
+- [Ferramentas para Desenvolvedores de Acessibilidade (Accessibility Developer Tools)](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb), para Chrome
 
-<ul>
- <li>Inspetor de Objetos no Windows</li>
- <li>Inspetor de Acessibilidade em OS X</li>
- <li>AccProbe em Linux</li>
- <li>Inspetor Firebug's DOM</li>
- <li>O <a class="external" href="http://code.google.com/p/ainspector/">Accessibility Inspector for Firebug</a></li>
- <li><a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb">Ferramentas para Desenvolvedores de Acessibilidade (Accessibility Developer Tools)</a>, para Chrome</li>
-</ul>
+Há vários leitores de tela gratuitos, ou de código aberto, que podem ser utilizados, para você colocar a mão na massa nos seus testes com ARIA. Estes incluem:
 
-<p>Há vários leitores de tela gratuitos, ou de código aberto, que podem ser utilizados, para você colocar a mão na massa nos seus testes com ARIA. Estes incluem:</p>
+- [Orca](http://live.gnome.org/Orca) para Linux
+- [NVDA](http://www.nvda-project.org/) para Windows
+- [VoiceOver](http://www.apple.com/accessibility/voiceover/) é construído dentro do OS X
 
-<ul>
- <li><a class="external" href="http://live.gnome.org/Orca">Orca</a> para Linux</li>
- <li><a class="external" href="http://www.nvda-project.org/">NVDA</a> para Windows</li>
- <li><a class="external" href="http://www.apple.com/accessibility/voiceover/">VoiceOver</a> é construído dentro do OS X</li>
-</ul>
+Quando você estiver testando um leitor de tela, mantenha dois pontos-chave em mente:
 
-<p>Quando você estiver testando um leitor de tela, mantenha dois pontos-chave em mente:</p>
+1. Experimentadores ocasionais de leitores de tela nunca vão opinar suficientemente, por isso, teste e obtenha respostas de quem, realmente, utiliza essas tecnologias.
+2. A acessibilidade vai muito além de, apenas, dar suporte aos leitores de tela. Tente experimentar uma variedade de técnicas de usabilidade e acessibilidade.
 
-<ol>
- <li>Experimentadores ocasionais de leitores de tela nunca vão opinar suficientemente, por isso, teste e obtenha respostas de quem, realmente, utiliza essas tecnologias.</li>
- <li>A acessibilidade vai muito além de, apenas, dar suporte aos leitores de tela. Tente experimentar uma variedade de técnicas de usabilidade e acessibilidade.</li>
-</ol>
+Outras ferramentas de teste úteis e técnicas para aplicativos e _widgets_ com habilitação ARIA:
 
-<p>Outras ferramentas de teste úteis e técnicas para aplicativos e <em>widgets</em> com habilitação ARIA:</p>
+- [Yahoo!'s ARIA bookmarklets](http://yaccessibilityblog.com/library/test-aria-focus-bookmarklets.html) (marcadores de ítens ARIA, da Yahoo!)
+- Fluid Project's [simple accessibility evaluation techniques](http://wiki.fluidproject.org/display/fluid/Simple+Accessibility+Review+Protocol)
 
-<ul>
- <li><a class="external" href="http://yaccessibilityblog.com/library/test-aria-focus-bookmarklets.html">Yahoo!'s ARIA bookmarklets</a>  (marcadores de ítens ARIA, da Yahoo!)</li>
- <li>Fluid Project's <a class="external" href="http://wiki.fluidproject.org/display/fluid/Simple+Accessibility+Review+Protocol">simple accessibility evaluation techniques</a></li>
-</ul>
+## Onde acontecem as discussões sobre ARIA?
 
-<h2 id="Onde_acontecem_as_discussões_sobre_ARIA">Onde acontecem as discussões sobre ARIA?</h2>
+- [Wai-xtech mailing list](http://lists.w3.org/Archives/Public/wai-xtech/) -- holds discussions on ARIA specs. (mantém discussões sobre as especificações ARIA)
+- [Free-ARIA google group](http://groups.google.com/group/free-aria) -- para desenvolvedores e utilizadores dos recursos e ferramentas gratuitas.
 
-<ul>
- <li><a class="external" href="http://lists.w3.org/Archives/Public/wai-xtech/">Wai-xtech mailing list</a> -- holds discussions on ARIA specs. (<span class="short_text" id="result_box" lang="pt"><span>mantém discussões</span> <span>sobre as</span> <span>especificações</span> <span>ARIA)</span></span></li>
- <li><a class="external" href="http://groups.google.com/group/free-aria">Free-ARIA google group</a> -- para desenvolvedores e utilizadores dos <span id="result_box" lang="pt"><span>recursos</span></span> e ferramentas gratuitas.</li>
-</ul>
+## Onde posso aprender mais sobre ARIA?
 
-<h2 id="Onde_posso_aprender_mais_sobre_ARIA">Onde posso aprender mais sobre ARIA?</h2>
+- [Visão geral sobre a acessibilidade nas aplicações e _widgets_ _web_](/en/Accessibility/An_overview_of_accessible_web_applications_and_widgets "en/Accessibility/An overview of accessible web applications and widgets")
+- [Formulários acessíveis](/en/Accessibility/Accessible_forms "en/Accessibility/Accessible forms")
+- The W3C's [WAI-ARIA Frequently Asked Questions](http://www.w3.org/WAI/aria/faq)
+- WebAIM's [Accessibility of Rich Internet Applications](http://webaim.org/techniques/aria/)
 
-<ul>
- <li><a href="/en/Accessibility/An_overview_of_accessible_web_applications_and_widgets" title="en/Accessibility/An overview of accessible web applications and widgets">Visão geral sobre a acessibilidade nas aplicações e <em>widgets</em> <em>web</em></a></li>
- <li><a href="/en/Accessibility/Accessible_forms" title="en/Accessibility/Accessible forms">Formulários acessíveis</a></li>
- <li>The W3C's <a class="external" href="http://www.w3.org/WAI/aria/faq">WAI-ARIA Frequently Asked Questions</a></li>
- <li>WebAIM's <a class="external" href="http://webaim.org/techniques/aria/">Accessibility of Rich Internet Applications</a></li>
-</ul>
-
-<p>a autoria do artigo é de: morenoh149, kscarfone, akhabibullina, xfq, Fredchat, mpiotrowicz, Sheppy, BrendanMcKeon, anastasia, jswisher, Aaronlev, colinbdclark.</p>
+a autoria do artigo é de: morenoh149, kscarfone, akhabibullina, xfq, Fredchat, mpiotrowicz, Sheppy, BrendanMcKeon, anastasia, jswisher, Aaronlev, colinbdclark.

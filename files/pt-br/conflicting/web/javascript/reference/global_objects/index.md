@@ -4,30 +4,31 @@ slug: conflicting/Web/JavaScript/Reference/Global_Objects
 translation_of: Web/JavaScript/Reference/Global_Objects/uneval
 original_slug: Web/JavaScript/Reference/Global_Objects/uneval
 ---
-<div>{{jsSidebar("Objects")}}{{Non-standard_header}}</div>
+{{jsSidebar("Objects")}}{{Non-standard_header}}
 
-<p>O  método <code><strong>uneval()</strong></code> cria uma representação do código fonte de um Objeto.</p>
+O método **`uneval()`** cria uma representação do código fonte de um Objeto.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">uneval(<var>object</var>)</pre>
+```
+uneval(object)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>object</code></dt>
- <dd>A JavaScript expression or statement.</dd>
-</dl>
+- `object`
+  - : A JavaScript expression or statement.
 
-<div class="note"><strong>Nota:</strong> Você não obterá uma representação em JSON válida para o Objeto..</div>
+> **Nota:** Você não obterá uma representação em JSON válida para o Objeto..
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p><code>uneval()</code> é uma função top-level e não é associada a nenhum objeto.</p>
+`uneval()` é uma função top-level e não é associada a nenhum objeto.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:js">var a = 1;
+```js
+var a = 1;
 uneval(a); // retorna uma String contendo 1
 
 var b = "1";
@@ -39,21 +40,19 @@ uneval(function foo(){}); // retorna"(function foo(){})"
 var a = uneval(function foo(){return 'hi'});
 var foo = eval(a);
 foo(); // retorna "hi"
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>Not part of any specifications.</p>
+Not part of any specifications.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Global_Objects/eval", "eval()")}}</li>
- <li>{{jsxref("JSON.stringify")}}</li>
- <li>{{jsxref("JSON.parse")}}</li>
- <li>{{jsxref("Object.toSource")}}</li>
-</ul>
+- {{jsxref("Global_Objects/eval", "eval()")}}
+- {{jsxref("JSON.stringify")}}
+- {{jsxref("JSON.parse")}}
+- {{jsxref("Object.toSource")}}

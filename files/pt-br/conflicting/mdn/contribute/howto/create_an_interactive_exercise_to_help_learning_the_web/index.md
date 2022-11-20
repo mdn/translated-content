@@ -7,19 +7,22 @@ translation_of: >-
 original_slug: >-
   MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<h2 id="O_exemplo">O exemplo</h2>
+## O exemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="square"&gt;
-  #&lt;input class="color"&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="square">
+  #<input class="color">
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   padding: 10px;
   margin : 0;
 }
@@ -37,11 +40,12 @@ original_slug: >-
   width: 60px;
   text-transform: uppercase;
 }
-</pre>
+```
 
-<h3 id="JS">JS</h3>
+### JS
 
-<pre class="brush: js">function setColor(color) {
+```js
+function setColor(color) {
   document.querySelector('.square').style.backgroundColor = '#' + color;
   document.querySelector('.color').value = color;
 }
@@ -67,8 +71,8 @@ document.addEventListener('click', function () {
 document.addEventListener('keyup', function () {
   setColor(getInputColor());
 });
-</pre>
+```
 
-<h2 id="Resultado_ao_vivo">Resultado ao vivo</h2>
+## Resultado ao vivo
 
-<p>{{EmbedLiveSample('O exemplo', 120, 120)}}</p>
+{{EmbedLiveSample('O exemplo', 120, 120)}}

@@ -4,533 +4,581 @@ slug: conflicting/Learn/JavaScript/Asynchronous/Promises
 translation_of: Learn/JavaScript/Asynchronous/Async_await
 original_slug: Learn/JavaScript/Asynchronous/Async_await
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}</div>
-
-<p class="summary">Adições mais recentes à linguagem JavaScript são as <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function">funções assíncronas</a> e a palavra-chave <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/await">await</a></code>, adicionadas no ECMAScript 2017. Esses recursos atuam basicamente como um syntactic sugar em cima de promises, tornando o código assíncrono mais fácil de escrever e ler. Isso faz com que o código assíncrono pareça mais com o código síncrono old-school, então vale a pena aprender. Este artigo fornece o que você precisa saber.</p>
+Adições mais recentes à linguagem JavaScript são as [funções assíncronas](/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function) e a palavra-chave [`await`](/pt-BR/docs/Web/JavaScript/Reference/Operators/await), adicionadas no ECMAScript 2017. Esses recursos atuam basicamente como um syntactic sugar em cima de promises, tornando o código assíncrono mais fácil de escrever e ler. Isso faz com que o código assíncrono pareça mais com o código síncrono old-school, então vale a pena aprender. Este artigo fornece o que você precisa saber.
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Pré-requisitos:</th>
-   <td>Conhecimento básico de informática, uma compreensão razoável dos fundamentos do JavaScript, uma compreensão de código assíncrono em geral e promises.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objetivo:</th>
-   <td>Entender o uso do async/await.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Pré-requisitos:</th>
+      <td>
+        Conhecimento básico de informática, uma compreensão razoável dos
+        fundamentos do JavaScript, uma compreensão de código assíncrono em geral
+        e promises.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objetivo:</th>
+      <td>Entender o uso do async/await.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="O_basico_de_async_await">O básico de async/await</h2>
+## O básico de async/await
 
-<p>Existem duas formas de usar async/await no seu código.</p>
+Existem duas formas de usar async/await no seu código.
 
-<h3 id="A_palavra_chave_async">A palavra-chave async</h3>
+### A palavra-chave async
 
-<p>Em primeiro lugar, temos a palavra-chave <code>async</code>, que você coloca antes de uma declaração de função para transformá-la em uma função assíncrona. Uma <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function">função assíncrona</a> é uma função que espera a possibilidade de a palavra-chave await ser usada para invocar código assíncrono.</p>
+Em primeiro lugar, temos a palavra-chave `async`, que você coloca antes de uma declaração de função para transformá-la em uma função assíncrona. Uma [função assíncrona](/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function) é uma função que espera a possibilidade de a palavra-chave await ser usada para invocar código assíncrono.
 
-  <p>Experimente digitar as seguintes linhas no console JS do seu navegador.</p>
+Experimente digitar as seguintes linhas no console JS do seu navegador.
 
-  <pre class="brush: js notranslate"><span class="token keyword">function</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token string">"Hello"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre>
+```js
+function hello() { return "Hello" };
+    hello();
+```
 
-    <p>A funcão retorna "Hello" — nada de especial, certo?</p>
+A funcão retorna "Hello" — nada de especial, certo?
 
-    <p>Mas o que acontece se transformar-mos isso em uma função assíncrona? Tente o seguinte:</p>
+Mas o que acontece se transformar-mos isso em uma função assíncrona? Tente o seguinte:
 
-    <pre class="brush: js notranslate"><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token string">"Hello"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
-      <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre>
+```js
+async function hello() { return "Hello" };
+      hello();
+```
 
-    <p>Ah. A invocação da função agora retorna uma promise. Isso é uma das características das funções assíncronas — seus valores de retorno são garantidos para serem convertidos em promises.</p>
+Ah. A invocação da função agora retorna uma promise. Isso é uma das características das funções assíncronas — seus valores de retorno são garantidos para serem convertidos em promises.
 
-    <p>Você também pode criar uma <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/async_function">expressão de função assíncrona</a>, assim:</p>
+Você também pode criar uma [expressão de função assíncrona](/pt-BR/docs/Web/JavaScript/Reference/Operators/async_function), assim:
 
-    <pre class="brush: js notranslate"><span class="token keyword">let</span> <span class="token function-variable function">hello</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token string">"Hello"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
-      <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre>
+```js
+let hello = async function() { return "Hello" };
+      hello();
+```
 
-    <p>E você pode usar arrow functions:</p>
+E você pode usar arrow functions:
 
-    <pre class="brush: js notranslate"><span class="token keyword">let</span> <span class="token function-variable function">hello</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token string">"Hello"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span></pre>
+```js
+let hello = async () => { return "Hello" };
+```
 
-    <p>Tudo isso faz basicamente a mesma coisa.</p>
+Tudo isso faz basicamente a mesma coisa.
 
-    <p>Para consumir o valor retornado quando a promise é finalizada, desde que esteja retornando uma promise, podemos usar um bloco <code>.then()</code>:</p>
+Para consumir o valor retornado quando a promise é finalizada, desde que esteja retornando uma promise, podemos usar um bloco `.then()`:
 
-    <pre class="brush: js notranslate"><span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span></pre>
+```js
+hello().then((value) => console.log(value))
+```
 
-    <p>ou mesmo de forma simplificada</p>
+ou mesmo de forma simplificada
 
-    <pre class="brush: js notranslate"><span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>console<span class="token punctuation">.</span>log<span class="token punctuation">)</span></pre>
+```js
+hello().then(console.log)
+```
 
-    <p>Como vimos no último artigo.</p>
+Como vimos no último artigo.
 
-    <p>Então a palavra-chave <code>async</code> é adicionada nas funções para dizer a elas para retornar uma promise ao invés de diretamente retornar uma valor.</p>
+Então a palavra-chave `async` é adicionada nas funções para dizer a elas para retornar uma promise ao invés de diretamente retornar uma valor.
 
-  <h3 id="A_palavra_chave_await">A palavra-chave await</h3>
+### A palavra-chave await
 
-    <p>A vantagem de uma função assíncrona só se torna aparente quando você a combina com a palavra-chave <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/await">await</a>. <code>await</code> só funciona dentro de funções assíncronas no código JavaScript regular, no entanto, pode ser usado por conta própria com <a href="/pt-BR/docs/Web/JavaScript/Guide/Modules">JavaScript modules.</a></p>
+A vantagem de uma função assíncrona só se torna aparente quando você a combina com a palavra-chave [await](/pt-BR/docs/Web/JavaScript/Reference/Operators/await). `await` só funciona dentro de funções assíncronas no código JavaScript regular, no entanto, pode ser usado por conta própria com [JavaScript modules.](/pt-BR/docs/Web/JavaScript/Guide/Modules)
 
-    <p><code>await</code> pode ser colocado na frente de qualquer função assíncrona baseada em promise para pausar seu código nessa linha até que a promise seja resolvida e, em seguida, retornar o valor resultante.</p>
+`await` pode ser colocado na frente de qualquer função assíncrona baseada em promise para pausar seu código nessa linha até que a promise seja resolvida e, em seguida, retornar o valor resultante.
 
-    <p>Você pode usar <code>await</code> quando chamar qualquer função que retorne uma Promise, incluindo funções de API web.</p>
+Você pode usar `await` quando chamar qualquer função que retorne uma Promise, incluindo funções de API web.
 
-    <p>Aqui está um exemplo comum:</p>
+Aqui está um exemplo comum:
 
-    <pre class="brush: js notranslate"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> greeting <span class="token operator">=</span> <span class="token keyword">await</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"Hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+```js
+async function hello() {
+      return greeting = await Promise.resolve("Hello");
+    };
 
-    <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>alert<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+    hello().then(alert);
+```
 
-    <p>Com certeza, o exemplo acima não é muito útil, porém serve para ilustrar a sintaxe. Vamos seguir em frente e ver um exemplo real.</p>
+Com certeza, o exemplo acima não é muito útil, porém serve para ilustrar a sintaxe. Vamos seguir em frente e ver um exemplo real.
 
-  <h2 id="Reescrevendo_codigo_baseado_em_promises_com_asyncawait">Reescrevendo código baseado em promises com async/await</a></h2>
+## Reescrevendo código baseado em promises com async/await
 
-    <p>Vejamos um exemplo simples de busca que vimos no artigo anterior:</p>
+Vejamos um exemplo simples de busca que vimos no artigo anterior:
 
-    <pre class="brush: js notranslate"><code><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'coffee.jpg'</span><span class="token punctuation">)</span>
-    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">HTTP error! status: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>response<span class="token punctuation">.</span>status<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-      <span class="token keyword">return</span> response<span class="token punctuation">.</span><span class="token function">blob</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">myBlob</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      <span class="token keyword">let</span> objectURL <span class="token operator">=</span> <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>myBlob<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> image <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      image<span class="token punctuation">.</span>src <span class="token operator">=</span> objectURL<span class="token punctuation">;</span>
-      document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'There has been a problem with your fetch operation: '</span> <span class="token operator">+</span> e<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+```js
+fetch('coffee.jpg')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.blob();
+    })
+    .then(myBlob => {
+      let objectURL = URL.createObjectURL(myBlob);
+      let image = document.createElement('img');
+      image.src = objectURL;
+      document.body.appendChild(image);
+    })
+    .catch(e => {
+      console.log('There has been a problem with your fetch operation: ' + e.message);
+    });
+```
 
-    <p>Por enquanto, você precisa ter um entendimento razoável das promises e como elas funcionam, mas vamos converter isso para usar async/await e ver o quão simples as coisas se tornam:</p>
+Por enquanto, você precisa ter um entendimento razoável das promises e como elas funcionam, mas vamos converter isso para usar async/await e ver o quão simples as coisas se tornam:
 
-    <pre class="brush: js notranslate"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">myFetch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">let</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'coffee.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+```js
+async function myFetch() {
+      let response = await fetch('coffee.jpg');
 
-      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">HTTP error! status: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>response<span class="token punctuation">.</span>status<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
-      <span class="token keyword">let</span> myBlob <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">blob</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      let myBlob = await response.blob();
 
-      <span class="token keyword">let</span> objectURL <span class="token operator">=</span> <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>myBlob<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> image <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      image<span class="token punctuation">.</span>src <span class="token operator">=</span> objectURL<span class="token punctuation">;</span>
-      document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+      let objectURL = URL.createObjectURL(myBlob);
+      let image = document.createElement('img');
+      image.src = objectURL;
+      document.body.appendChild(image);
+    }
 
-    <span class="token function">myFetch</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'There has been a problem with your fetch operation: '</span> <span class="token operator">+</span> e<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+    myFetch()
+    .catch(e => {
+      console.log('There has been a problem with your fetch operation: ' + e.message);
+    });
+```
 
-    <p>Isto faz o código muito mais simples and fácil de entender — sem mais blocos <code>.then()</code> em todo lugar!</p>
+Isto faz o código muito mais simples and fácil de entender — sem mais blocos `.then()` em todo lugar!
 
-    <p>Visto que a palavra-chave <code>async</code> transforma a funcão em uma promise, você pode refatorar seu código para usar uma abordagem de promises e await, trazendo a segunda metade da funcão para um novo bloco e torná-la mais flexível:</p>
+Visto que a palavra-chave `async` transforma a funcão em uma promise, você pode refatorar seu código para usar uma abordagem de promises e await, trazendo a segunda metade da funcão para um novo bloco e torná-la mais flexível:
 
-    <pre class="brush: js notranslate"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">myFetch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">let</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'coffee.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">HTTP error! status: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>response<span class="token punctuation">.</span>status<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-      <span class="token keyword">return</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">blob</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+```js
+async function myFetch() {
+      let response = await fetch('coffee.jpg');
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return await response.blob();
 
-    <span class="token punctuation">}</span>
+    }
 
-    <span class="token function">myFetch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">blob</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      <span class="token keyword">let</span> objectURL <span class="token operator">=</span> <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>blob<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> image <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      image<span class="token punctuation">.</span>src <span class="token operator">=</span> objectURL<span class="token punctuation">;</span>
-      document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">e</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+    myFetch().then((blob) => {
+      let objectURL = URL.createObjectURL(blob);
+      let image = document.createElement('img');
+      image.src = objectURL;
+      document.body.appendChild(image);
+    }).catch(e => console.log(e));
+```
 
-    <p>Você pode tentar fazer o exemplo sozinho, ou rodar o nosso <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await.html" class="external" rel=" noopener">exemplo ao vivo</a> (veja também o<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await.html" class="external" rel=" noopener">código-fonte</a>).</p>
+Você pode tentar fazer o exemplo sozinho, ou rodar o nosso [exemplo ao vivo](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await.html) (veja também o[código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await.html)).
 
-  <h3 id="but_how_does_it_work">Mas como isso funciona?</h3>
+### Mas como isso funciona?
 
-    <p>Você notará que empacotamos o código dentro de uma função, e incluímos a palavra-chave <code>async</code> antes da palavra-chave<code>function</code>. Isso é necessário — você tem que criar uma função assíncrona para definir o bloco de código no qual você executará seu código assíncrono; como falamos mais cedo, <code>await</code> só funciona dentro de funções assíncronas.</p>
+Você notará que empacotamos o código dentro de uma função, e incluímos a palavra-chave `async` antes da palavra-chave`function`. Isso é necessário — você tem que criar uma função assíncrona para definir o bloco de código no qual você executará seu código assíncrono; como falamos mais cedo, `await` só funciona dentro de funções assíncronas.
 
-    <p>Dentro da definição da função <code>myFetch()</code> você pode ver que o código se parece muito à versão anterior com promise, , mas tem algumas diferenças. Ao invés de precisar encadear um bloco <code>.then()</code> no final de cada método baseado em promise, você apenas adiciona a palavra-chave <code>await</code> antes de cada chamada de método, e então atribui o resultado a variável. A palavra-chave <code>await</code> faz com que o JavaScript pause seu código em tempo de execução nesta linha, não permitindo mais &nbsp;nenhum código ser executado nesse meio tempo até que a chamada de função assíncrona retorne seu resultado — muito útil se o código subsequente depender desse resultado!</p>
+Dentro da definição da função `myFetch()` você pode ver que o código se parece muito à versão anterior com promise, , mas tem algumas diferenças. Ao invés de precisar encadear um bloco `.then()` no final de cada método baseado em promise, você apenas adiciona a palavra-chave `await` antes de cada chamada de método, e então atribui o resultado a variável. A palavra-chave `await` faz com que o JavaScript pause seu código em tempo de execução nesta linha, não permitindo mais  nenhum código ser executado nesse meio tempo até que a chamada de função assíncrona retorne seu resultado — muito útil se o código subsequente depender desse resultado!
 
-    <p>Assim que estiver completo, seu código continua a ser executado começando na próxima linha. Por exemplo:</p>
+Assim que estiver completo, seu código continua a ser executado começando na próxima linha. Por exemplo:
 
-    <pre class="brush: js notranslate"><code><span class="token keyword">let</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'coffee.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+```js
+let response = await fetch('coffee.jpg');
+```
 
-    <p>A resposta retornada pela promise <code>fetch()</code> preenchida é atribuída a variável <code>response</code> quando a resposta estiver disponível, e o parser pausa nesta linha até que isso ocorra. Uma vez que a resposta está disponível, o parser move para a próxima linha, o qual cria o <code><a href="/pt-BR/docs/Web/API/Blob">Blob</a></code> fora dele. Esta linha também invoca um método assíncrono baseado em promise, assim podemos usar <code>await</code> aqui também. Quando o resultado da operação retorna, retornamos isso fora da funcão <code>myFetch()</code>.</p>
+A resposta retornada pela promise `fetch()` preenchida é atribuída a variável `response` quando a resposta estiver disponível, e o parser pausa nesta linha até que isso ocorra. Uma vez que a resposta está disponível, o parser move para a próxima linha, o qual cria o [`Blob`](/pt-BR/docs/Web/API/Blob) fora dele. Esta linha também invoca um método assíncrono baseado em promise, assim podemos usar `await` aqui também. Quando o resultado da operação retorna, retornamos isso fora da funcão `myFetch()`.
 
-    <p>Isso significa que quando nós chamamos a função <code>myFetch()</code>, isso retorna uma promise, então podemos encadear um <code>.then()</code> no final, dentro do qual lidamos com a exibição do blob na tela.</p>
+Isso significa que quando nós chamamos a função `myFetch()`, isso retorna uma promise, então podemos encadear um `.then()` no final, dentro do qual lidamos com a exibição do blob na tela.
 
-    <p>Provavelmente você já está pensando "isso é realmente demais!", e você está certo — menos blocos <code>.then()</code> para envolver o código, e quase sempre se parece com um código síncrono, por isso é muito intuitivo.</p>
+Provavelmente você já está pensando "isso é realmente demais!", e você está certo — menos blocos `.then()` para envolver o código, e quase sempre se parece com um código síncrono, por isso é muito intuitivo.
 
-  <h3 id="adding_error_handling">Adicionando tratamento de erros</h3>
+### Adicionando tratamento de erros
 
-    <p>E se você deseja adicionar tratamento de erros, você tem algumas opções.</p>
+E se você deseja adicionar tratamento de erros, você tem algumas opções.
 
-    <p>Você pode usar uma estrutura <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code>  síncrona com <code>async</code>/<code>await</code>. Este exemplo se expande da primeira versão do código que mostramos acima:</p>
+Você pode usar uma estrutura [`try...catch`](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch) síncrona com `async`/`await`. Este exemplo se expande da primeira versão do código que mostramos acima:
 
-    <pre class="brush: js notranslate"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">myFetch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">try</span> <span class="token punctuation">{</span>
-        <span class="token keyword">let</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'coffee.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+```js
+async function myFetch() {
+      try {
+        let response = await fetch('coffee.jpg');
 
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">HTTP error! status: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>response<span class="token punctuation">.</span>status<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">let</span> myBlob <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">blob</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">let</span> objectURL <span class="token operator">=</span> <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>myBlob<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">let</span> image <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        image<span class="token punctuation">.</span>src <span class="token operator">=</span> objectURL<span class="token punctuation">;</span>
-        document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        let myBlob = await response.blob();
+        let objectURL = URL.createObjectURL(myBlob);
+        let image = document.createElement('img');
+        image.src = objectURL;
+        document.body.appendChild(image);
 
-      <span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
+      } catch(e) {
+        console.log(e);
+      }
+    }
 
-    <span class="token function">myFetch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+    myFetch();
+```
 
-    <p>Ao bloco <code>catch() {}</code> é passado um objeto de erro, qual nós chamamos <code>e</code>; agora podemos registrar isso no console, e isso nos fornecerá uma mensagem de erro detalhada mostrando onde o erro foi gerado no código.</p>
+Ao bloco `catch() {}` é passado um objeto de erro, qual nós chamamos `e`; agora podemos registrar isso no console, e isso nos fornecerá uma mensagem de erro detalhada mostrando onde o erro foi gerado no código.
 
-    <p>Se você quiser usar a segunda versão (refatorada) do código que mostramos acima, seria melhor apenas continuar a abordagem híbrida e encadear um bloco <code>.catch()</code> no final da chamada <code>.then()</code>, dessa forma:</p>
+Se você quiser usar a segunda versão (refatorada) do código que mostramos acima, seria melhor apenas continuar a abordagem híbrida e encadear um bloco `.catch()` no final da chamada `.then()`, dessa forma:
 
-    <pre class="brush: js notranslate"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">myFetch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">let</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'coffee.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">HTTP error! status: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>response<span class="token punctuation">.</span>status<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-      <span class="token keyword">return</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">blob</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+```js
+async function myFetch() {
+      let response = await fetch('coffee.jpg');
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return await response.blob();
 
-    <span class="token punctuation">}</span>
+    }
 
-    <span class="token function">myFetch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">blob</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      <span class="token keyword">let</span> objectURL <span class="token operator">=</span> <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>blob<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> image <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      image<span class="token punctuation">.</span>src <span class="token operator">=</span> objectURL<span class="token punctuation">;</span>
-      document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
-    <span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+    myFetch().then((blob) => {
+      let objectURL = URL.createObjectURL(blob);
+      let image = document.createElement('img');
+      image.src = objectURL;
+      document.body.appendChild(image);
+    })
+    .catch((e) =>
+      console.log(e)
+    );
+```
 
-    <p>Isso ocorre porque o bloco <code>.catch()</code> vai pegar os erros que ocorrem em ambos, na chamada de função com async e com cadeia de promises. Se você usou bloco <code>try</code>/<code>catch</code> aqui, você ainda pode obter erros não tratados na função <code>myFetch()</code> quando ela for chamada.</p>
+Isso ocorre porque o bloco `.catch()` vai pegar os erros que ocorrem em ambos, na chamada de função com async e com cadeia de promises. Se você usou bloco `try`/`catch` aqui, você ainda pode obter erros não tratados na função `myFetch()` quando ela for chamada.
 
-    <p>Você pode encontrar esses dois exemplos no GitHub:</p>
+Você pode encontrar esses dois exemplos no GitHub:
 
-    <ul>
-     <li><a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await-try-catch.html" class="external" rel=" noopener">simple-fetch-async-await-try-catch.html</a> (veja <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await-try-catch.html" class="external" rel=" noopener">código-fonte</a>)</li>
-     <li><a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await-promise-catch.html" class="external" rel=" noopener">simple-fetch-async-await-promise-catch.html</a> (veja <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await-promise-catch.html" class="external" rel=" noopener">código-fonte</a>)</li>
-    </ul>
+- [simple-fetch-async-await-try-catch.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await-try-catch.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await-try-catch.html))
+- [simple-fetch-async-await-promise-catch.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await-promise-catch.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await-promise-catch.html))
 
-  <h2 id="awaiting_a_promise.all">Esperando um Promise.all()</h2>
+## Esperando um Promise.all()
 
-    <p>async/await é construído em cima de <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a>, por isso é compatível com todos os recursos oferecidos por promises. Isso inclui <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a></code> — você pode esperar felizmente uma chamada <code>Promise.all()</code> para obter todos os resultados retornados em uma variável de uma forma que se pareça com um código síncrono simples. De novo, vamos voltar para <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html" class="external" rel=" noopener">um exemplo que vimos em nosso artigo anterior</a>. Mantenha-o aberto em uma guia separada para que você possa comparar e contrastar com a nova versão mostrada abaixo.</p>
+async/await é construído em cima de [promises](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), por isso é compatível com todos os recursos oferecidos por promises. Isso inclui [`Promise.all()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) — você pode esperar felizmente uma chamada `Promise.all()` para obter todos os resultados retornados em uma variável de uma forma que se pareça com um código síncrono simples. De novo, vamos voltar para [um exemplo que vimos em nosso artigo anterior](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html). Mantenha-o aberto em uma guia separada para que você possa comparar e contrastar com a nova versão mostrada abaixo.
 
-    <p>Convertendo este para async/await (veja <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-all-async-await.html" class="external" rel=" noopener">demonstração ao vivo</a> e <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-all-async-await.html" class="external" rel=" noopener">código-fonte</a>), isso agora parece assim:</p>
+Convertendo este para async/await (veja [demonstração ao vivo](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-all-async-await.html) e [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-all-async-await.html)), isso agora parece assim:
 
-    <pre class="brush: js notranslate"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">fetchAndDecode</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">let</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+```js
+async function fetchAndDecode(url, type) {
+      let response = await fetch(url);
 
-      <span class="token keyword">let</span> content<span class="token punctuation">;</span>
+      let content;
 
-      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">HTTP error! status: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>response<span class="token punctuation">.</span>status<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'blob'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          content <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">blob</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'text'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          content <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span>
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      } else {
+        if(type === 'blob') {
+          content = await response.blob();
+        } else if(type === 'text') {
+          content = await response.text();
+        }
+      }
 
-      <span class="token keyword">return</span> content<span class="token punctuation">;</span>
+      return content;
 
 
-    <span class="token punctuation">}</span>
+    }
 
-    <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">displayContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">let</span> coffee <span class="token operator">=</span> <span class="token function">fetchAndDecode</span><span class="token punctuation">(</span><span class="token string">'coffee.jpg'</span><span class="token punctuation">,</span> <span class="token string">'blob'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> tea <span class="token operator">=</span> <span class="token function">fetchAndDecode</span><span class="token punctuation">(</span><span class="token string">'tea.jpg'</span><span class="token punctuation">,</span> <span class="token string">'blob'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> description <span class="token operator">=</span> <span class="token function">fetchAndDecode</span><span class="token punctuation">(</span><span class="token string">'description.txt'</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    async function displayContent() {
+      let coffee = fetchAndDecode('coffee.jpg', 'blob');
+      let tea = fetchAndDecode('tea.jpg', 'blob');
+      let description = fetchAndDecode('description.txt', 'text');
 
-      <span class="token keyword">let</span> values <span class="token operator">=</span> <span class="token keyword">await</span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>coffee<span class="token punctuation">,</span> tea<span class="token punctuation">,</span> description<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      let values = await Promise.all([coffee, tea, description]);
 
-      <span class="token keyword">let</span> objectURL1 <span class="token operator">=</span> <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>values<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> objectURL2 <span class="token operator">=</span> <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>values<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> descText <span class="token operator">=</span> values<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      let objectURL1 = URL.createObjectURL(values[0]);
+      let objectURL2 = URL.createObjectURL(values[1]);
+      let descText = values[2];
 
-      <span class="token keyword">let</span> image1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> image2 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      image1<span class="token punctuation">.</span>src <span class="token operator">=</span> objectURL1<span class="token punctuation">;</span>
-      image2<span class="token punctuation">.</span>src <span class="token operator">=</span> objectURL2<span class="token punctuation">;</span>
-      document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>image1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>image2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      let image1 = document.createElement('img');
+      let image2 = document.createElement('img');
+      image1.src = objectURL1;
+      image2.src = objectURL2;
+      document.body.appendChild(image1);
+      document.body.appendChild(image2);
 
-      <span class="token keyword">let</span> para <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      para<span class="token punctuation">.</span>textContent <span class="token operator">=</span> descText<span class="token punctuation">;</span>
-      document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>para<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+      let para = document.createElement('p');
+      para.textContent = descText;
+      document.body.appendChild(para);
+    }
 
-    <span class="token function">displayContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
-    <span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+    displayContent()
+    .catch((e) =>
+      console.log(e)
+    );
+```
 
-    <p>Você notará que a função <code>fetchAndDecode()</code> foi convertida facilmente em uma função assíncrona com apenas algumas alterações. Veja a linha do <code>Promise.all()</code>:</p>
+Você notará que a função `fetchAndDecode()` foi convertida facilmente em uma função assíncrona com apenas algumas alterações. Veja a linha do `Promise.all()`:
 
-    <pre class="brush: js notranslate"><code><span class="token keyword">let</span> values <span class="token operator">=</span> <span class="token keyword">await</span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>coffee<span class="token punctuation">,</span> tea<span class="token punctuation">,</span> description<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+```js
+let values = await Promise.all([coffee, tea, description]);
+```
 
-    <p>Usando <code>await</code> aqui podemos obter todos os resultados das três promises retornadas no array <code>values</code>, quando todos eles estão disponíveis, de uma forma que se parece muito com o código síncrono. Tivemos que envolver todo o código em uma nova função assíncrona, <code>displayContent()</code>, e não reduzimos o código em muitas linhas, mas ser capaz de mover a maior parte do código para fora do bloco <code>.then()</code> fornece uma simplificação agradável e útil, deixando-nos com um programa muito mais legível.</p>
+Usando `await` aqui podemos obter todos os resultados das três promises retornadas no array `values`, quando todos eles estão disponíveis, de uma forma que se parece muito com o código síncrono. Tivemos que envolver todo o código em uma nova função assíncrona, `displayContent()`, e não reduzimos o código em muitas linhas, mas ser capaz de mover a maior parte do código para fora do bloco `.then()` fornece uma simplificação agradável e útil, deixando-nos com um programa muito mais legível.
 
-    <p>Para tratamento de erros, nós incluímos um bloco <code>.catch()</code> no nossa chamada <code>displayContent()</code>; isso vai lidar com os erros que ocorrem em ambas as funções.</p>
+Para tratamento de erros, nós incluímos um bloco `.catch()` no nossa chamada `displayContent()`; isso vai lidar com os erros que ocorrem em ambas as funções.
 
-    <div class="notecard note">
-    <p><strong>Nota:</strong> Também é possível usar um bloco <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_clause">finally</a></code> síncrono na função assíncrona, no lugar de um bloco assíncrono<code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally">.finally()</a></code>, para mostrar um relatório final sobre como foi a operação — você pode ver isso em ação no nosso <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html" class="external" rel=" noopener">exemplo ao vivo</a> (veja também o <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html" class="external" rel=" noopener">código-fonte</a>).</p>
-    </div>
+> **Nota:** Também é possível usar um bloco [`finally`](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_clause) síncrono na função assíncrona, no lugar de um bloco assíncrono[`.finally()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally), para mostrar um relatório final sobre como foi a operação — você pode ver isso em ação no nosso [exemplo ao vivo](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html) (veja também o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html)).
 
-  <h2 id="handling_asyncawait_slowdown">Tratando lentidão com async/await</h2>
+## Tratando lentidão com async/await
 
-    <p>Async/await faz seu código parecer síncrono e, de certa forma, faz com que se comporte de maneira mais síncrona. A palavra-chave <code>await</code> bloqueia a execução de todo o código que o segue até que a promise seja cumprida, exatamente como faria com uma operação síncrona. Ele permite que outras tarefas continuem sendo executadas enquanto isso, mas o código com await é bloqueado. Por exemplo:</p>
+Async/await faz seu código parecer síncrono e, de certa forma, faz com que se comporte de maneira mais síncrona. A palavra-chave `await` bloqueia a execução de todo o código que o segue até que a promise seja cumprida, exatamente como faria com uma operação síncrona. Ele permite que outras tarefas continuem sendo executadas enquanto isso, mas o código com await é bloqueado. Por exemplo:
 
-    <pre class="brush: js notranslate"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">makeResult</span><span class="token punctuation">(</span><span class="token parameter">items</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">let</span> newArr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-      <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> items<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        newArr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'word_'</span><span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-      <span class="token keyword">return</span> newArr<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+```js
+async function makeResult(items) {
+      let newArr = [];
+      for(let i=0; i < items.length; i++) {
+        newArr.push('word_'+i);
+      }
+      return newArr;
+    }
 
-    <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">makeResult</span><span class="token punctuation">(</span>items<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Blocked on this line</span>
-      <span class="token function">useThatResult</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Will not be executed before makeResult() is done</span>
-    <span class="token punctuation">}</span>
+    async function getResult() {
+      let result = await makeResult(items); // Blocked on this line
+      useThatResult(result); // Will not be executed before makeResult() is done
+    }
 
-    </code></pre>
 
-    <p>Como resultado, seu código pode ser retardado por um número significativo de promises aguardadas acontecendo uma após a outra. Cada <code>await</code> vai esperar que o anterior termine, ao passo que, na verdade, o que você pode querer é que as promises comecem a ser processadas simultaneamente, como fariam se não estivéssemos usando async/await.</p>
+```
 
-    <p>Vejamos esses dois exemplos — <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html" class="external" rel=" noopener">slow-async-await.html</a> (veja <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html" class="external" rel=" noopener">código-fonte</a>) e <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html" class="external" rel=" noopener">fast-async-await.html</a> (veja <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html" class="external" rel=" noopener">código-fonte</a>). Ambos começam com uma função promise personalizada que simula um processo assíncrono com uma chamada <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code>:</p>
+Como resultado, seu código pode ser retardado por um número significativo de promises aguardadas acontecendo uma após a outra. Cada `await` vai esperar que o anterior termine, ao passo que, na verdade, o que você pode querer é que as promises comecem a ser processadas simultaneamente, como fariam se não estivéssemos usando async/await.
 
-    <pre class="brush: js notranslate"><code><span class="token keyword">function</span> <span class="token function">timeoutPromise</span><span class="token punctuation">(</span><span class="token parameter">interval</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-          <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span> interval<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+Vejamos esses dois exemplos — [slow-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html)) e [fast-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html)). Ambos começam com uma função promise personalizada que simula um processo assíncrono com uma chamada [`setTimeout()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout):
 
-    <p>Cada um deles inclui uma função assíncrona <code>timeTest()</code> que espera três chamadas <code>timeoutPromise()</code>:</p>
+```js
+function timeoutPromise(interval) {
+      return new Promise((resolve, reject) => {
+        setTimeout(function(){
+          resolve("done");
+        }, interval);
+      });
+    };
+```
 
-    <pre class="brush: js notranslate"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">timeTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token operator">...</span>
-    <span class="token punctuation">}</span></code></pre>
+Cada um deles inclui uma função assíncrona `timeTest()` que espera três chamadas `timeoutPromise()`:
 
-    <p>Cada um termina registrando um horário de início, vendo quanto tempo a promise <code>timeTest()</code> leva para completar, em seguida, registrando um horário de término e relatando quanto tempo a operação levou no total:</p>
+```js
+async function timeTest() {
+      ...
+    }
+```
 
-    <pre class="brush: js notranslate"><code><span class="token keyword">let</span> startTime <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">timeTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      <span class="token keyword">let</span> finishTime <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> timeTaken <span class="token operator">=</span> finishTime <span class="token operator">-</span> startTime<span class="token punctuation">;</span>
-      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Time taken in milliseconds: "</span> <span class="token operator">+</span> timeTaken<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+Cada um termina registrando um horário de início, vendo quanto tempo a promise `timeTest()` leva para completar, em seguida, registrando um horário de término e relatando quanto tempo a operação levou no total:
 
-    <p>Isso é a função <code>timeTest()</code> que difere em cada caso.</p>
+```js
+let startTime = Date.now();
+    timeTest().then(() => {
+      let finishTime = Date.now();
+      let timeTaken = finishTime - startTime;
+      alert("Time taken in milliseconds: " + timeTaken);
+    })
+```
 
-    <p>No exemplo <code>slow-async-await.html</code>, <code>timeTest()</code> se parece com isso:</p>
+Isso é a função `timeTest()` que difere em cada caso.
 
-    <pre class="brush: js notranslate"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">timeTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">await</span> <span class="token function">timeoutPromise</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">await</span> <span class="token function">timeoutPromise</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">await</span> <span class="token function">timeoutPromise</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span></code></pre>
+No exemplo `slow-async-await.html`, `timeTest()` se parece com isso:
 
-    <p>Aqui esperamos diretamente todas as três chamadas <code>timeoutPromise()</code>, fazendo cada uma a cada 3 segundos. Cada chamada subsequente é forçada a esperar até que a última termine — se você executar o primeiro exemplo, você verá a caixa de alerta relatando um tempo total de execução de cerca de 9 segundos.</p>
+```js
+async function timeTest() {
+      await timeoutPromise(3000);
+      await timeoutPromise(3000);
+      await timeoutPromise(3000);
+    }
+```
 
-    <p>No exemplo <code>fast-async-await.html</code>, <code>timeTest()</code> se parece com isso:</p>
+Aqui esperamos diretamente todas as três chamadas `timeoutPromise()`, fazendo cada uma a cada 3 segundos. Cada chamada subsequente é forçada a esperar até que a última termine — se você executar o primeiro exemplo, você verá a caixa de alerta relatando um tempo total de execução de cerca de 9 segundos.
 
-    <pre class="brush: js notranslate"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">timeTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">const</span> timeoutPromise1 <span class="token operator">=</span> <span class="token function">timeoutPromise</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">const</span> timeoutPromise2 <span class="token operator">=</span> <span class="token function">timeoutPromise</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">const</span> timeoutPromise3 <span class="token operator">=</span> <span class="token function">timeoutPromise</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+No exemplo `fast-async-await.html`, `timeTest()` se parece com isso:
 
-      <span class="token keyword">await</span> timeoutPromise1<span class="token punctuation">;</span>
-      <span class="token keyword">await</span> timeoutPromise2<span class="token punctuation">;</span>
-      <span class="token keyword">await</span> timeoutPromise3<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span></code></pre>
+```js
+async function timeTest() {
+      const timeoutPromise1 = timeoutPromise(3000);
+      const timeoutPromise2 = timeoutPromise(3000);
+      const timeoutPromise3 = timeoutPromise(3000);
 
-    <p>Aqui nós armazenamos os três objetos <code>Promise</code> em variáveis, que tem o efeito de desencadear seus processos associados, todos rodando simultaneamente.</p>
+      await timeoutPromise1;
+      await timeoutPromise2;
+      await timeoutPromise3;
+    }
+```
 
-    <p>A seguir, aguardamos seus resultados — porque todas as promises começaram a ser processadas essencialmente ao mesmo tempo, as promises serão cumpridas todas ao mesmo tempo; ao executar o segundo exemplo, você verá a caixa de alerta relatando um tempo total de execução de pouco mais de 3 segundos!</p>
+Aqui nós armazenamos os três objetos `Promise` em variáveis, que tem o efeito de desencadear seus processos associados, todos rodando simultaneamente.
+
+A seguir, aguardamos seus resultados — porque todas as promises começaram a ser processadas essencialmente ao mesmo tempo, as promises serão cumpridas todas ao mesmo tempo; ao executar o segundo exemplo, você verá a caixa de alerta relatando um tempo total de execução de pouco mais de 3 segundos!
+
+### Tratamento de erros
+
+Há um problema com o padrão acima, no entanto — pode levar a erros não tratados.
+
+Vamos atualizar os exemplos anteriores, desta vez adicionando uma promise rejeitada e uma declaração `catch` no final:
+
+```js
+function timeoutPromiseResolve(interval) {
+      return new Promise((resolve, reject) => {
+        setTimeout(function(){
+          resolve("successful");
+        }, interval);
+      });
+    };
+
+    function timeoutPromiseReject(interval) {
+      return new Promise((resolve, reject) => {
+        setTimeout(function(){
+          reject("error");
+        }, interval);
+      });
+    };
+
+    async function timeTest() {
+      await timeoutPromiseResolve(5000);
+      await timeoutPromiseReject(2000);
+      await timeoutPromiseResolve(3000);
+    }
 
-  <h3 id="handling_errors">Tratamento de erros</h3>
-
-    <p>Há um problema com o padrão acima, no entanto — pode levar a erros não tratados.</p>
-
-    <p>Vamos atualizar os exemplos anteriores, desta vez adicionando uma promise rejeitada e uma declaração <code>catch</code> no final:</p>
-
-    <pre class="brush: js notranslate"><code><span class="token keyword">function</span> <span class="token function">timeoutPromiseResolve</span><span class="token punctuation">(</span><span class="token parameter">interval</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-          <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"successful"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span> interval<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">function</span> <span class="token function">timeoutPromiseReject</span><span class="token punctuation">(</span><span class="token parameter">interval</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-          <span class="token function">reject</span><span class="token punctuation">(</span><span class="token string">"error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span> interval<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">timeTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">await</span> <span class="token function">timeoutPromiseResolve</span><span class="token punctuation">(</span><span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">await</span> <span class="token function">timeoutPromiseReject</span><span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">await</span> <span class="token function">timeoutPromiseResolve</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">let</span> startTime <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">timeTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> finishTime <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> timeTaken <span class="token operator">=</span> finishTime <span class="token operator">-</span> startTime<span class="token punctuation">;</span>
-      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Time taken in milliseconds: "</span> <span class="token operator">+</span> timeTaken<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
-
-    <p>No exemplo acima, o erro é tratado corretamente, e o alerta aparece após aproximadamente 7 segundos.</p>
-
-    <p>Agora no segundo padrão:</p>
-
-    <pre class="brush: js notranslate"><code><span class="token keyword">function</span> <span class="token function">timeoutPromiseResolve</span><span class="token punctuation">(</span><span class="token parameter">interval</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-          <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"successful"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span> interval<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">function</span> <span class="token function">timeoutPromiseReject</span><span class="token punctuation">(</span><span class="token parameter">interval</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-          <span class="token function">reject</span><span class="token punctuation">(</span><span class="token string">"error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span> interval<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">timeTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">const</span> timeoutPromiseResolve1 <span class="token operator">=</span> <span class="token function">timeoutPromiseResolve</span><span class="token punctuation">(</span><span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">const</span> timeoutPromiseReject2 <span class="token operator">=</span> <span class="token function">timeoutPromiseReject</span><span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">const</span> timeoutPromiseResolve3 <span class="token operator">=</span> <span class="token function">timeoutPromiseResolve</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-      <span class="token keyword">await</span> timeoutPromiseResolve1<span class="token punctuation">;</span>
-      <span class="token keyword">await</span> timeoutPromiseReject2<span class="token punctuation">;</span>
-      <span class="token keyword">await</span> timeoutPromiseResolve3<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">let</span> startTime <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">timeTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> finishTime <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> timeTaken <span class="token operator">=</span> finishTime <span class="token operator">-</span> startTime<span class="token punctuation">;</span>
-      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Time taken in milliseconds: "</span> <span class="token operator">+</span> timeTaken<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
-
-    <p>Neste exemplo, temos um erro não tratado no console (depois de 2 segundos), e o alerta aparece após aproximadamente 5 segundos.</p>
-
-    <p>Para iniciar as promises em paralelo e detectar o erro corretamente, nós poderíamos usar <code>Promise.all()</code>, como discutido anteriormente:</p>
-
-    <pre class="brush: js notranslate"><code><span class="token keyword">function</span> <span class="token function">timeoutPromiseResolve</span><span class="token punctuation">(</span><span class="token parameter">interval</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-          <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"successful"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span> interval<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">function</span> <span class="token function">timeoutPromiseReject</span><span class="token punctuation">(</span><span class="token parameter">interval</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-          <span class="token function">reject</span><span class="token punctuation">(</span><span class="token string">"error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span> interval<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">timeTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">const</span> timeoutPromiseResolve1 <span class="token operator">=</span> <span class="token function">timeoutPromiseResolve</span><span class="token punctuation">(</span><span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">const</span> timeoutPromiseReject2 <span class="token operator">=</span> <span class="token function">timeoutPromiseReject</span><span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">const</span> timeoutPromiseResolve3 <span class="token operator">=</span> <span class="token function">timeoutPromiseResolve</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-      <span class="token keyword">const</span> results <span class="token operator">=</span> <span class="token keyword">await</span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>timeoutPromiseResolve1<span class="token punctuation">,</span> timeoutPromiseReject2<span class="token punctuation">,</span> timeoutPromiseResolve3<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">return</span> results<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">let</span> startTime <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">timeTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> finishTime <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">let</span> timeTaken <span class="token operator">=</span> finishTime <span class="token operator">-</span> startTime<span class="token punctuation">;</span>
-      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Time taken in milliseconds: "</span> <span class="token operator">+</span> timeTaken<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
-
-    <p>Neste exemplo, o erro é tratado corretamente após aproximadamente 2 segundos e também vemos o alerta após aproximadamente 2 segundos.</p>
-
-    <p>A <code>Promise.all()</code> rejeita quando qualquer uma das promises de entrada é rejeitada. Se você deseja que todas as promises sejam cumpridas e, em seguida, usar alguns de seus valores retornados, mesmo quando alguns deles são rejeitados, você pode usar <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled"><code>Promise.allSettled()</code></a>.</p>
-
-  <h2 id="asyncawait_class_methods">Async/await em métodos de classe</a></h2>
-
-    <p>Como nota final, antes de prosseguirmos, você pode até adicionar <code>async</code> na frente de métodos de classe / objeto para fazê-los retornar promises, e <code>await</code> promises dentro deles. Dê uma olhada no artigo <a href="/pt-BR/docs/Learn/JavaScript/Objects/Inheritance#ecmascript_2015_classes">Código de classe ES que vimos em nosso JavaScript orientado a objetos</a>. em seguida, olhe para nossa versão modificada com um método <code>async</code>:</p>
-
-    <pre class="brush: js notranslate"><code><span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
-      <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">first<span class="token punctuation">,</span> last<span class="token punctuation">,</span> age<span class="token punctuation">,</span> gender<span class="token punctuation">,</span> interests</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token punctuation">{</span>
-          first<span class="token punctuation">,</span>
+    let startTime = Date.now();
+    timeTest().then(() => {})
+    .catch(e => {
+      console.log(e);
+      let finishTime = Date.now();
+      let timeTaken = finishTime - startTime;
+      alert("Time taken in milliseconds: " + timeTaken);
+    })
+```
+
+No exemplo acima, o erro é tratado corretamente, e o alerta aparece após aproximadamente 7 segundos.
+
+Agora no segundo padrão:
+
+```js
+function timeoutPromiseResolve(interval) {
+      return new Promise((resolve, reject) => {
+        setTimeout(function(){
+          resolve("successful");
+        }, interval);
+      });
+    };
+
+    function timeoutPromiseReject(interval) {
+      return new Promise((resolve, reject) => {
+        setTimeout(function(){
+          reject("error");
+        }, interval);
+      });
+    };
+
+    async function timeTest() {
+      const timeoutPromiseResolve1 = timeoutPromiseResolve(5000);
+      const timeoutPromiseReject2 = timeoutPromiseReject(2000);
+      const timeoutPromiseResolve3 = timeoutPromiseResolve(3000);
+
+      await timeoutPromiseResolve1;
+      await timeoutPromiseReject2;
+      await timeoutPromiseResolve3;
+    }
+
+    let startTime = Date.now();
+    timeTest().then(() => {
+    }).catch(e => {
+      console.log(e);
+      let finishTime = Date.now();
+      let timeTaken = finishTime - startTime;
+      alert("Time taken in milliseconds: " + timeTaken);
+    })
+```
+
+Neste exemplo, temos um erro não tratado no console (depois de 2 segundos), e o alerta aparece após aproximadamente 5 segundos.
+
+Para iniciar as promises em paralelo e detectar o erro corretamente, nós poderíamos usar `Promise.all()`, como discutido anteriormente:
+
+```js
+function timeoutPromiseResolve(interval) {
+      return new Promise((resolve, reject) => {
+        setTimeout(function(){
+          resolve("successful");
+        }, interval);
+      });
+    };
+
+    function timeoutPromiseReject(interval) {
+      return new Promise((resolve, reject) => {
+        setTimeout(function(){
+          reject("error");
+        }, interval);
+      });
+    };
+
+    async function timeTest() {
+      const timeoutPromiseResolve1 = timeoutPromiseResolve(5000);
+      const timeoutPromiseReject2 = timeoutPromiseReject(2000);
+      const timeoutPromiseResolve3 = timeoutPromiseResolve(3000);
+
+      const results = await Promise.all([timeoutPromiseResolve1, timeoutPromiseReject2, timeoutPromiseResolve3]);
+      return results;
+    }
+
+    let startTime = Date.now();
+    timeTest().then(() => {
+    }).catch(e => {
+      console.log(e);
+      let finishTime = Date.now();
+      let timeTaken = finishTime - startTime;
+      alert("Time taken in milliseconds: " + timeTaken);
+    })
+```
+
+Neste exemplo, o erro é tratado corretamente após aproximadamente 2 segundos e também vemos o alerta após aproximadamente 2 segundos.
+
+A `Promise.all()` rejeita quando qualquer uma das promises de entrada é rejeitada. Se você deseja que todas as promises sejam cumpridas e, em seguida, usar alguns de seus valores retornados, mesmo quando alguns deles são rejeitados, você pode usar [`Promise.allSettled()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled).
+
+## Async/await em métodos de classe
+
+Como nota final, antes de prosseguirmos, você pode até adicionar `async` na frente de métodos de classe / objeto para fazê-los retornar promises, e `await` promises dentro deles. Dê uma olhada no artigo [Código de classe ES que vimos em nosso JavaScript orientado a objetos](/pt-BR/docs/Learn/JavaScript/Objects/Inheritance#ecmascript_2015_classes). em seguida, olhe para nossa versão modificada com um método `async`:
+
+```js
+class Person {
+      constructor(first, last, age, gender, interests) {
+        this.name = {
+          first,
           last
-        <span class="token punctuation">}</span><span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>gender <span class="token operator">=</span> gender<span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>interests <span class="token operator">=</span> interests<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
+        };
+        this.age = age;
+        this.gender = gender;
+        this.interests = interests;
+      }
 
-      <span class="token keyword">async</span> <span class="token function">greeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token keyword">await</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hi! I'm </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">.</span>first<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      async greeting() {
+        return await Promise.resolve(`Hi! I'm ${this.name.first}`);
+      };
 
-      <span class="token function">farewell</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">.</span>first<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> has left the building. Bye for now!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+      farewell() {
+        console.log(`${this.name.first} has left the building. Bye for now!`);
+      };
+    }
 
-    <span class="token keyword">let</span> han <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'Han'</span><span class="token punctuation">,</span> <span class="token string">'Solo'</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token string">'male'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'Smuggling'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+    let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);
+```
 
-    <p>O primeiro método da classe agora pode ser usado assim:</p>
+O primeiro método da classe agora pode ser usado assim:
 
-    <pre class="brush: js notranslate"><code>han<span class="token punctuation">.</span><span class="token function">greeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>console<span class="token punctuation">.</span>log<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+```js
+han.greeting().then(console.log);
+```
 
-  <h2 id="browser_support"><a href="#browser_support" title="Permalink to Browser support">Suporte de navegador</a></h2>
+## [Suporte de navegador](#browser_support "Permalink to Browser support")
 
-    <p>Uma consideração ao decidir se deve usar async/await é o suporte para navegadores mais antigos. Eles estão disponíveis em versões modernas da maioria dos navegadores, o mesmo que promises; os principais problemas de suporte vêm com o Internet Explorer e o Opera Mini.</p>
+Uma consideração ao decidir se deve usar async/await é o suporte para navegadores mais antigos. Eles estão disponíveis em versões modernas da maioria dos navegadores, o mesmo que promises; os principais problemas de suporte vêm com o Internet Explorer e o Opera Mini.
 
-    <p>Se você deseja usar async/await, mas está preocupado com o suporte a navegadores mais antigos, pode considerar o uso da biblioteca <a href="https://babeljs.io/" class="external" rel=" noopener">BabelJS</a> — isso permite que você escreva seus aplicativos usando o JavaScript mais recente e deixe Babel descobrir quais mudanças, se houver, são necessárias para os navegadores de seu usuário. Ao encontrar um navegador que não suporta async/await, o polyfill do Babel pode fornecer automaticamente substitutos que funcionam em navegadores mais antigos.</p>
+Se você deseja usar async/await, mas está preocupado com o suporte a navegadores mais antigos, pode considerar o uso da biblioteca [BabelJS](https://babeljs.io/) — isso permite que você escreva seus aplicativos usando o JavaScript mais recente e deixe Babel descobrir quais mudanças, se houver, são necessárias para os navegadores de seu usuário. Ao encontrar um navegador que não suporta async/await, o polyfill do Babel pode fornecer automaticamente substitutos que funcionam em navegadores mais antigos.
 
-  <h2 id="Conclusao">Conclusão</h2>
+## Conclusão
 
-  <p>E aí está - async/await fornecem uma maneira agradável e simplificada de escrever código assíncrono que é mais simples de ler e manter. Mesmo com o suporte do navegador sendo mais limitado do que outros mecanismos de código assíncrono no momento da escrita, vale a pena aprender e considerar o uso, agora e no futuro.</p>
+E aí está - async/await fornecem uma maneira agradável e simplificada de escrever código assíncrono que é mais simples de ler e manter. Mesmo com o suporte do navegador sendo mais limitado do que outros mecanismos de código assíncrono no momento da escrita, vale a pena aprender e considerar o uso, agora e no futuro.
 
-  <p>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}</p>
+{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}
 
-  <h2 id="Neste_modulo">Neste módulo</h2>
+## Neste módulo
 
-  <ul>
-    <li><a href="/pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts">Conceitos gerais da programação assíncrona</a></li>
-    <li><a href="/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing">Introdução ao JavaScript Async</a></li>
-    <li><a href="/pt-BR/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Timeouts e intervalos</a></li>
-    <li><a href="/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises">Programação elegante com Promises</a></li>
-    <li><a href="/pt-BR/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Escolhendo a abordagem correta</a></li>
-   </ul>
+- [Conceitos gerais da programação assíncrona](/pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts)
+- [Introdução ao JavaScript Async](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing)
+- [Timeouts e intervalos](/pt-BR/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
+- [Programação elegante com Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Escolhendo a abordagem correta](/pt-BR/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)

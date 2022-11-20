@@ -8,57 +8,57 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Array/toSource
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>O método <code><strong>toSource()</strong></code> retorna uma representação string do código fonte do array.</p>
+O método **`toSource()`** retorna uma representação string do código fonte do array.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>arr</var>.toSource()</code></pre>
+```
+arr.toSource()
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<p>Nenhum.</p>
+Nenhum.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>toSource</code> retorna os seguintes valores:</p>
+O método `toSource` retorna os seguintes valores:
 
-<ul>
- <li>Para o objeto {{jsxref("Array")}} pré-construido, <code>toSource</code> retorna a seguinte string indicando que o código fonte não está disponível:
+- Para o objeto {{jsxref("Array")}} pré-construido, `toSource` retorna a seguinte string indicando que o código fonte não está disponível:
 
-  <pre class="brush: js">function Array() {
-    [native code]
-}
-</pre>
- </li>
- <li>Para instancias de {{jsxref("Array")}}, <code>toSource</code> retorna uma representação string do código fonte.</li>
-</ul>
+  ```js
+  function Array() {
+      [native code]
+  }
+  ```
 
-<p>Este método normalmente é chamando internamente pelo JavaScript e não explicitamente no código. Você pode chamar <code>toSource</code> durante o debug para examinar o conteúdo de um array.</p>
+- Para instancias de {{jsxref("Array")}}, `toSource` retorna uma representação string do código fonte.
 
-<h2 id="Exemplos">Exemplos</h2>
+Este método normalmente é chamando internamente pelo JavaScript e não explicitamente no código. Você pode chamar `toSource` durante o debug para examinar o conteúdo de um array.
 
-<h3 id="Examinando_o_código_fonte_de_um_array">Examinando o código fonte de um array</h3>
+## Exemplos
 
-<p>Para examinar o código fonte de um array:</p>
+### Examinando o código fonte de um array
 
-<pre class="brush: js">var alpha = new Array('a', 'b', 'c');
+Para examinar o código fonte de um array:
+
+```js
+var alpha = new Array('a', 'b', 'c');
 
 alpha.toSource();   //retorna ['a', 'b', 'c']
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>Não é parte de nenhum padrão. Implementado no JavaScript 1.3.</p>
+Não é parte de nenhum padrão. Implementado no JavaScript 1.3.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
- <li>{{jsxref("Array.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Array.prototype.toString()")}}

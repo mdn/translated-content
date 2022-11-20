@@ -11,45 +11,45 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/String/toSource
 ---
-<div>{{JSRef}} {{obsolete_header}}</div>
+{{JSRef}} {{obsolete_header}}
 
-<p>O método <code>toSource()</code> retorna uma string que representa o código-fonte do objeto.</p>
+O método `toSource()` retorna uma string que representa o código-fonte do objeto.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code>String.toSource()
-<var>str</var>.toSource()
-</code></pre>
+```
+String.toSource()
+str.toSource()
+```
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Uma string que representa o código-fonte do objeto chamado.</p>
+Uma string que representa o código-fonte do objeto chamado.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Função_nativa">Função nativa</h3>
+### Função nativa
 
-<p>Para o objeto {{jsxref("String")}} , <code>toSource()</code> retorna  a seguinte string (indicando que o código-fonte não está disponível):</p>
+Para o objeto {{jsxref("String")}} , `toSource()` retorna a seguinte string (indicando que o código-fonte não está disponível):
 
-<pre class="brush: js notranslate">function String() {
+```js
+function String() {
     [native code]
 }
-</pre>
+```
 
-<p>Ao chamar {{jsxref("String")}} ou string literais, <code>toSource()</code> retorna a string que representa o código-fonte.</p>
+Ao chamar {{jsxref("String")}} ou string literais, `toSource()` retorna a string que representa o código-fonte.
 
-<p>Esse método é usualmente invocado internamente pelo JavaScript e não explicitamente no código.</p>
+Esse método é usualmente invocado internamente pelo JavaScript e não explicitamente no código.
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<p>Não é parte de nenhum padrão.</p>
+Não é parte de nenhum padrão.
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}

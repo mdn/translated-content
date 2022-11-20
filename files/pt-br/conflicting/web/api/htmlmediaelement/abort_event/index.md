@@ -4,29 +4,30 @@ slug: conflicting/Web/API/HTMLMediaElement/abort_event
 translation_of: Web/API/GlobalEventHandlers/onabort
 original_slug: Web/API/GlobalEventHandlers/onabort
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>Um manipulador de eventos que aborta eventos enviados para a janela. (Não disponível para o Firefox 2 ou Safari)</p>
+Um manipulador de eventos que aborta eventos enviados para a janela. (Não disponível para o Firefox 2 ou Safari)
 
-<p>TODO define what "abort" is. Closing the window via window manager? Stopping the load of the page? By which means and reasons (user, network/server)? At which stages would it fire / be catched? For IE, onabort is only available with <code>img</code> tags.</p>
+TODO define what "abort" is. Closing the window via window manager? Stopping the load of the page? By which means and reasons (user, network/server)? At which stages would it fire / be catched? For IE, onabort is only available with `img` tags.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">window.onabort =<em>funcRef</em>
-</pre>
+```
+window.onabort =funcRef
+```
 
-<ul>
- <li><code>funcRef</code>: Reference to a function</li>
-</ul>
+- `funcRef`: Reference to a function
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:js">window.onabort = function() {
+```js
+window.onabort = function() {
   alert("Load aborted.");
-}</pre>
+}
+```
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<div>{{Specifications}}</div>
+{{Specifications}}
