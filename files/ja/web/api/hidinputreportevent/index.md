@@ -9,7 +9,7 @@ slug: Web/API/HIDInputReportEvent
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 _このインターフェイスには、{{domxref("Event")}} から継承したプロパティもあります。_
 
@@ -20,7 +20,7 @@ _このインターフェイスには、{{domxref("Event")}} から継承した�
 - {{domxref("HIDInputReportEvent.reportId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : レポートを識別する 1 バイトの接頭辞、もしくは HID インターフェイスがレポート ID を用いていない場合 0 です。
 
-## メソッド
+## インスタンスメソッド
 
 _このインターフェイスは、親の {{domxref("Event")}} からメソッドを継承しています。_
 

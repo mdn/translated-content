@@ -9,11 +9,11 @@ slug: Web/API/HID
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 _このインターフェイスは、親の {{domxref("EventTarget")}} から継承したプロパティも持ちます。_
 
-## メソッド
+## インスタンスメソッド
 
 _このインターフェイスは、親の {{domxref("EventTarget")}} から継承したメソッドも持ちます。_
 

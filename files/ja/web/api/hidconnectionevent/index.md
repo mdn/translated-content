@@ -14,7 +14,7 @@ slug: Web/API/HIDConnectionEvent
 - {{domxref("HIDConnectionEvent.HIDConnectionEvent", "HIDConnectionEvent()")}} {{Experimental_Inline}}
   - : 新しい `HIDConnectionEvent` オブジェクトを返します。通常は、イベントは Input レポートを受信した際に生成されるため、このコンストラクターは使用されません。
 
-## プロパティ
+## インスタンスプロパティ
 
 _{{domxref("Event")}} から継承したプロパティもあります。_
 
@@ -27,11 +27,11 @@ _{{domxref("Event")}} から継承したプロパティもあります。_
 
 ```js
 navigator.hid.addEventListener('connect', ({device}) => {
-  console.log(`HID が接続されました: ${device.productName}`);
+  console.log(`HID が接続されました : ${device.productName}`);
 });
 
 navigator.hid.addEventListener('disconnect', ({device}) => {
-  console.log(`HID が切断されました: ${device.productName}`);
+  console.log(`HID が切断されました : ${device.productName}`);
 });
 ```
 

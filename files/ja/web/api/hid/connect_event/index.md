@@ -5,11 +5,11 @@ slug: Web/API/HID/connect_event
 
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
-{{domxref("HID")}}  インターフェイスの **`connect`** イベントは、ユーザーエージェントが HID デバイスに接続した時発火します。
+{{domxref("HID")}} インターフェイスの **`connect`** イベントは、ユーザーエージェントが HID デバイスに接続した時発火します。
 
 ## 構文
 
-イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使うか、イベントハンドラプロパティを設定します。
+イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使うか、イベントハンドラープロパティを設定します。
 
 ```js
 addEventListener('connect', (event) => { })
@@ -17,13 +17,13 @@ addEventListener('connect', (event) => { })
 onconnect = (event) => { }
 ```
 
-## 型
+## イベント型
 
 {{domxref("HIDConnectionEvent")}} です。 {{domxref("Event")}} を継承しています。
 
 {{InheritanceDiagram("HIDConnectionEvent")}}
 
-## プロパティ
+## イベントプロパティ
 
 _以下のプロパティに加え、親の {{domxref("Event")}} インターフェイスから継承したプロパティが使用可能です。_
 

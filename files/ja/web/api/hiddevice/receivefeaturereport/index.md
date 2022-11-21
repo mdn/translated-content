@@ -20,7 +20,7 @@ receiveFeatureReport(reportId)
 - `reportId`
   - :8 ビットのレポート ID です。HID デバイスがレポート ID を使わない場合、`0` を送信します。
 
-### 返り値
+### 返値
 
 Feature レポートが入った {{jsxref("DataView")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。
 

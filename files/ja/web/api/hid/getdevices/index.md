@@ -17,7 +17,7 @@ getDevices()
 
 なし。
 
-### 返り値
+### 返値
 
 {{domxref("HIDDevice")}} オブジェクトのリストで解決する {{jsxref("Promise")}} を返します。
 

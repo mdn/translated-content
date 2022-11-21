@@ -9,7 +9,7 @@ slug: Web/API/HIDDevice
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 このインターフェイスには、{{domxref("EventTarget")}} から継承したプロパティもあります。
 
@@ -29,7 +29,7 @@ slug: Web/API/HIDDevice
 - {{domxref("HIDDevice.inputreport_event", "inputreport")}} {{Experimental_Inline}}
   - : レポートがデバイスから送られてきた時、発火します。
 
-## メソッド
+## インスタンスメソッド
 
 このインターフェイスには、{{domxref("EventTarget")}} から継承したメソッドもあります。
 

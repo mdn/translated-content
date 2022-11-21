@@ -17,13 +17,13 @@ addEventListener('inputreport', (event) => { });
 oninputreport = (event) => { };
 ```
 
-## 型
+## イベント型
 
 {{domxref("HIDInputReportEvent")}} です。{{domxref("Event")}} を継承しています。
 
 {{InheritanceDiagram("HIDInputReportEvent")}}
 
-## プロパティ
+## イベントプロパティ
 
 _このインターフェイスは、{{domxref("Event")}} から継承したプロパティも持ちます。_
 

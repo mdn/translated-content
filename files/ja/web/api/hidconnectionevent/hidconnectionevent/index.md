@@ -23,7 +23,7 @@ new HIDConnectionEvent(type, options)
     - `device`
       - : Input レポートを送信したデバイスを表す {{domxref("HIDDevice")}} のインスタンスです。
 
-### 返り値
+### 返値
 
 新しい {{domxref("HIDConnectionEvent")}} オブジェクトを返します。
 

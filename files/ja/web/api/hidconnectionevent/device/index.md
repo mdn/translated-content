@@ -17,11 +17,11 @@ slug: Web/API/HIDConnectionEvent/device
 
 ```js
 navigator.hid.addEventListener('connect', ({device}) => {
-  console.log(`HID が接続されました: ${device.productName}`);
+  console.log(`HID が接続されました : ${device.productName}`);
 });
 
 navigator.hid.addEventListener('disconnect', ({device}) => {
-  console.log(`HID が切断されました: ${device.productName}`);
+  console.log(`HID が切断されました : ${device.productName}`);
 });
 ```
 

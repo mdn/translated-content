@@ -22,7 +22,7 @@ sendFeatureReport(reportId, data)
 - `data`
   - : {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}} のいずれかで表されるバイト列です。
 
-### 返り値
+### 返値
 
 レポートの送信完了後 `undefined` で解決する {{jsxref("Promise")}} を返します。
 
