@@ -58,7 +58,7 @@ void initStorageEvent(
 - `newValueArg`
   - : キーに対する新しい値。
 - `urlArg`
-  - : 値を変化させたドキュメントのURL。
+  - : 値を変化させたドキュメントの URL。
 - `storageAreaArg`
   - : イベントが発生したストレージエリアを表す DOM {{domxref("Storage")}} オブジェクト。
 
