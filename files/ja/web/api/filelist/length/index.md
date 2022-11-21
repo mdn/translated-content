@@ -1,6 +1,8 @@
 ---
 title: FileList.length
 slug: Web/API/FileList/length
+l10n:
+  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
 ---
 
 {{APIRef("File API")}}
