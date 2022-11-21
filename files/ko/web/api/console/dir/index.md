@@ -16,10 +16,10 @@ browser-compat: api.console.dir
 
 {{APIRef("Console API")}}
 
-**`console.dir()`** 메서드는 주어진 자바스크립트 객체 속성을 인터랙티브한 목록으로 표시합니다.
+**`console.dir()`** 메서드는 주어진 JavaScript 객체 속성을 인터랙티브한 목록으로 표시합니다.
 출력된 결과는 자식 객체의 내용을 볼 수 있는 여닫는 삼각형과 함께 계층적인 목록으로 나타납니다.
 
-다시 말해, `console.dir()`은 주어진 자바스크립트 객체의 모든 속성을 콘솔에서 볼 수 있는 방법으로서 
+다시 말해, `console.dir()`은 주어진 JavaScript 객체의 모든 속성을 콘솔에서 볼 수 있는 방법으로서 
 이를 사용하면 개발자가 객체의 속성을 쉽게 확인할 수 있습니다.
 
 {{AvailableInWorkers}}
@@ -35,7 +35,7 @@ dir(object)
 ### 매개변수
 
 - `object`
-  - : 출력하고 싶은 속성을 포함한 자바스크립트 객체
+  - : 출력하고 싶은 속성을 포함한 JavaScript 객체
 
 ### 반환 값
 

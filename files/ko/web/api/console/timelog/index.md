@@ -16,7 +16,7 @@ browser-compat: api.console.timeLog
 
 **`console.timeLog()`** 메서드는 앞서 {{domxref("console.time()")}}을 호출하여 시작한 타이머의 현재 값을 콘솔에 출력합니다.
 
-상세한 내용과 예제는 [타이머](/en-US/docs/Web/API/console#timers) 문서를 참고하세요.
+상세한 내용과 예제는 [타이머](/ko/docs/Web/API/console#timers) 문서를 참고하세요.
 
 {{AvailableInWorkers}}
 
@@ -45,7 +45,7 @@ default: 1042ms
 timer name: 1242ms
 ```
 
-### 예상 결과
+### 예외 처리
 
 실행 중인 타이머가 없다면 `timeLog()`는 경고를 반환합니다.
 
