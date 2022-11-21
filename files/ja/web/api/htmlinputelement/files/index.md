@@ -1,6 +1,8 @@
 ---
 title: HTMLInputElement.files
 slug: Web/API/HTMLInputElement/files
+l10n:
+  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
 ---
 
 {{APIRef("File and Directory Entries API")}}
