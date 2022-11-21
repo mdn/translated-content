@@ -1,6 +1,8 @@
 ---
 title: CompressionStream
 slug: Web/API/CompressionStream
+l10n:
+  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
 {{APIRef("Compression Streams API")}}
@@ -12,7 +14,7 @@ slug: Web/API/CompressionStream
 - {{domxref("CompressionStream.CompressionStream", "CompressionStream()")}}
   - : 新しい `CompressionStream` を生成します。
 
-## プロパティ
+## インスタンスプロパティ
 
 - {{domxref("CompressionStream.readable")}}
   - : このオブジェクトの制御下にある {{domxref("ReadableStream")}} のインスタンスを返します。

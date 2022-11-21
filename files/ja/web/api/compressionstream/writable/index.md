@@ -1,6 +1,8 @@
 ---
 title: CompressionStream.writable
 slug: Web/API/CompressionStream/writable
+l10n:
+  sourceCommit: 3a8ddeac2f0957b775b1c6c237f565b266c274c0
 ---
 
 {{APIRef("Compression Streams API")}}
