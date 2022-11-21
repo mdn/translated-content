@@ -18,7 +18,7 @@ var aValue = storage.getItem(keyName);
 - `keyName`
   - : 値を取り出したいキーの名称を持つ {{domxref("DOMString")}}。
 
-### 戻り値
+### 返値
 
 キーに対する値を持つ {{domxref("DOMString")}}。キーが存在しない場合は `null` が返ります。
 

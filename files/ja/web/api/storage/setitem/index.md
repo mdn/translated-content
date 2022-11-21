@@ -20,7 +20,7 @@ storage.setItem(keyName, keyValue);
 - `keyValue`
   - : 作成または更新するキーに対して渡したい値を持つ {{domxref("DOMString")}}。
 
-### 戻り値
+### 返値
 
 なし ({{jsxref("undefined")}})。
 

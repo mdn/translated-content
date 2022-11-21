@@ -18,7 +18,7 @@ var aKeyName = storage.key(index);
 - `index`
   - : 名称を取得したいキーの番号を表す整数。これは 0 から始まるインデックスです。
 
-### 戻り値
+### 返値
 
 キーの名称を持つ {{domxref("DOMString")}}。該当のインデックスが存在しない場合は `null` が返ります。
 

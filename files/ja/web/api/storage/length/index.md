@@ -13,7 +13,7 @@ slug: Web/API/Storage/length
 var aLength = storage.length;
 ```
 
-### 戻り値
+### 返値
 
 整数
 
