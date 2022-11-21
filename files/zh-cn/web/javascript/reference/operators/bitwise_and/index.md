@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Operators/按位与
 
 {{jsSidebar("Operators")}}
 
-**按位与（`&`）** 运算符在两个操作数对应的二进位都为 `1` 时，该位的结果值才为 `1`。
+**按位与**（**`&`**）运算符在两个操作数对应的二进位都为 `1` 时，该位的结果值才为 `1`。
 
 {{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html", "shorter")}}
 
