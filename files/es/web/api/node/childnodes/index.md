@@ -9,6 +9,7 @@ tags:
   - Referência DOM
 translation_of: Web/API/Node/childNodes
 ---
+
 {{APIRef("DOM")}}
 
 La propiedad de solo lectura **`Node.childNodes`** devuelve una colección de hijos {{domxref("Node","nodes")}} del elemento dado donde el primer nodo hijo es asignado un índice 0.
@@ -59,12 +60,7 @@ El objeto `document` contiene 2 hijos: la declaración del Doctype y el elemento
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                           | Comentarios        |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG', '#dom-node-childnodes', 'Node.childNodes')}}         | {{Spec2('DOM WHATWG')}} | Sin cambios        |
-| {{SpecName('DOM3 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}     | {{Spec2('DOM3 Core')}}     | Sin cambios        |
-| {{SpecName('DOM2 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}     | {{Spec2('DOM2 Core')}}     | Sin cambios        |
-| {{SpecName('DOM1', 'level-one-core.html#ID-1451460987', 'Node.childNodes')}} | {{Spec2('DOM1')}}         | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

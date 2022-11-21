@@ -8,6 +8,7 @@ tags:
   - grid css
 translation_of: Web/CSS/grid-template-rows
 ---
+
 La propiedad CSS **`grid-template-rows`** define el nombre de las líneas y las funciones de tamaño de línea de {{glossary("grid rows", "grid rows")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-template-rows.html")}}
@@ -120,10 +121,7 @@ Esta propiedad puede especificarse como:
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSS3 Grid", "#propdef-grid-template-rows", "grid-template-rows")}} | {{Spec2("CSS3 Grid")}}     | Definición inicial |
-| {{SpecName("CSS Grid 2", "#subgrids", "subgrid")}}                                     | {{Spec2("CSS Grid 2")}} | Incorpora subgrid  |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

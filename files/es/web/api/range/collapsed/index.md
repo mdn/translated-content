@@ -3,6 +3,7 @@ title: range.collapsed
 slug: Web/API/Range/collapsed
 translation_of: Web/API/Range/collapsed
 ---
+
 {{ APIRef("DOM") }}
 
 ### Resumen

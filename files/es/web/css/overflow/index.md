@@ -3,6 +3,7 @@ title: overflow (excedente)
 slug: Web/CSS/overflow
 translation_of: Web/CSS/overflow
 ---
+
 {{ CSSRef() }}
 
 ## Sumario
@@ -43,7 +44,7 @@ overflow: inherit
 
 #### Extensiones de Mozilla
 
-- `-moz-scrollbars-none`{{ obsolete_inline() }}
+- `-moz-scrollbars-none`{{deprecated_inline}}
   - : Usar `overflow:hidden`.
 - `-moz-scrollbars-horizontal`{{ Deprecated_inline() }}
   - : Es preferible el uso de {{ Cssxref("overflow-x") }} y {{ Cssxref("overflow-y") }}.
@@ -120,10 +121,7 @@ p { overflow: auto; /* se dibujan barras según se necesite */ }
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                           | Comentario   |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{ SpecName('CSS3 Box', '#overflow1', 'overflow') }}             | {{ Spec2('CSS3 Box') }} | Sin cambios. |
-| {{ SpecName('CSS2.1', 'visufx.html#overflow', 'overflow') }} | {{ Spec2('CSS2.1') }}     |              |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

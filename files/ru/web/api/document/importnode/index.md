@@ -3,6 +3,7 @@ title: Document.importNode()
 slug: Web/API/Document/importNode
 translation_of: Web/API/Document/importNode
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`importNode()`** объекта {{domxref("Document")}} создаёт копию {{domxref("Node")}} или {{domxref("DocumentFragment")}} из другого документа, для последующей вставки в текущий документ.

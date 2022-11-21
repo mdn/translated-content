@@ -3,6 +3,7 @@ title: WebGLRenderingContext.bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
 translation_of: Web/API/WebGLRenderingContext/bindBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 **`ebGLRenderingContext.bindBuffer()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) связывает {{domxref("WebGLBuffer")}} c точкой связывания(Атрибут регистром).

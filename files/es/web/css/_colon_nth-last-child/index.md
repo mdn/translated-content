@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:nth-last-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:nth-last-child()`** de [CSS](/es/docs/Web/CSS) selecciona uno o más elementos en función de su posición entre un grupo de hermanos, contando desde el final.
@@ -158,10 +159,7 @@ tr:nth-last-child(n+1){
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                               | Comentarios                                             |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}} | {{Spec2('CSS4 Selectors')}} | Los elementos coincidentes no requieren tener un padre. |
-| {{SpecName('CSS3 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

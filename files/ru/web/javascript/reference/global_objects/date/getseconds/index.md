@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 ## Сводка

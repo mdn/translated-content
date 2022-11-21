@@ -3,6 +3,7 @@ title: Setting up a Node development environment
 slug: Learn/Server-side/Express_Nodejs/development_environment
 translation_of: Learn/Server-side/Express_Nodejs/development_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
 Теперь, когда вы знаете, что такое Express, мы покажем вам, как настроить и протестировать среду разработки Express для Windows, Linux (Ubuntu) и Mac OS X - какую бы операционную систему вы не использовали, эта статья должна дать вам все, что необходимо для возможности начать разрабатывать приложения Express.

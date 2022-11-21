@@ -15,8 +15,8 @@ Assim como o texto escrito em uma linha reta, o SVG também inclui a capacidade 
 
 ```html
 <svg width="100%" height="100%" viewBox="0 0 1000 300"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+     xmlns="https://www.w3.org/2000/svg"
+     xmlns:xlink="https://www.w3.org/1999/xlink">
   <defs>
     <path id="MyPath"
           d="M 100 200

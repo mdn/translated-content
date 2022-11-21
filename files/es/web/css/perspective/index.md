@@ -11,6 +11,7 @@ tags:
   - graficos
 translation_of: Web/CSS/perspective
 ---
+
 {{ CSSRef("CSS Transforms") }} {{ SeeCompatTable() }}
 
 ## Resumen
@@ -54,9 +55,7 @@ perspective: inherited
 
 ## Especificaciones
 
-| Especifiación                                                                        | Estado                                   | Comentario |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
-| {{ Specname('CSS3 Transforms', '#perspective', 'perspective') }} | {{ Spec2('CSS3 Transforms') }} |            |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

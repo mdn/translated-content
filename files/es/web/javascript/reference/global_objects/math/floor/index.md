@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/floor
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/floor
 ---
+
 {{JSRef("Objetos_globales", "Math")}}
 
 ## Sumario

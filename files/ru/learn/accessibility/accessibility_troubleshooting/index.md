@@ -4,6 +4,7 @@ slug: Learn/Accessibility/Accessibility_troubleshooting
 translation_of: Learn/Accessibility/Accessibility_troubleshooting
 original_slug: Learn/Доступность/Accessibility_troubleshooting
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
 In the assessment for this module, we present to you a simple site with a number of accessibility issues that you need to diagnose and fix.

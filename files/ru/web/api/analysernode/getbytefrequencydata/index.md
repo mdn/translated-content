@@ -3,6 +3,7 @@ title: AnalyserNode.getByteFrequencyData()
 slug: Web/API/AnalyserNode/getByteFrequencyData
 translation_of: Web/API/AnalyserNode/getByteFrequencyData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 Метод **`getByteFrequencyData()`** интерфейса {{ domxref("AnalyserNode") }} копирует текущие данные частоты в переданный в него Uint8Array {{domxref("Uint8Array")}} (unsigned byte array).

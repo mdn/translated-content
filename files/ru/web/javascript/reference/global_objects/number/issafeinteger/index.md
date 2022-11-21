@@ -8,6 +8,7 @@ tags:
   - Number
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ---
+
 {{JSRef}}
 
 Метод **`Number.isSafeInteger()`** определяет, является ли переданное значение _безопасным целым числом_.

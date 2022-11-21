@@ -15,6 +15,7 @@ tags:
   - publishing
 translation_of: Games/Publishing_games
 ---
+
 {{GamesSidebar}}
 
 Los juegos desarrollados en HTML5 tienen una gran ventaja sobre los nativos en términos de publicación y distribución: tienen la libertad de distribución, promoción y monetización de su juego en la Web, en lugar de que cada versión esté restringida a una única tienda controlada por una empresa. Pueden, beneficiándose de la web, ser verdaderamente multiplataforma. Esta serie de artículos analiza las opciones que tienes a la hora de publicar y distribuir tu juego, y ganar algo con él mientras esperas que se haga famoso.

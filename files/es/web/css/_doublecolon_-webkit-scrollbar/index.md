@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/::-webkit-scrollbar
 ---
+
 {{CSSRef}}
 
 ## Resumen

@@ -3,6 +3,7 @@ title: height
 slug: Web/CSS/height
 translation_of: Web/CSS/height
 ---
+
 {{CSSRef}}
 
 CSS атрибут **`height`** позволят обозначать высоту элемента. По умолчанию, свойство определяет высоту [внутренней области](/ru/docs/Web/CSS/box_model#content). Если {{cssxref("box-sizing")}} имеет значение `border-box`, то свойство будет определять высоту [области рамки](/ru/docs/Web/CSS/box_model#border).

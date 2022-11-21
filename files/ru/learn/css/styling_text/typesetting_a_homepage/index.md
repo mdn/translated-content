@@ -4,6 +4,7 @@ slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 translation_of: Learn/CSS/Styling_text/Typesetting_a_homepage
 original_slug: Learn/CSS/Styling_text/Задание:_Стилизирование_школьного_сайта
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 В этой оценке мы проверим ваше понимание всех методов стилизации текста, которые мы рассмотрели в этом модуле дав вам задание стилизовать текст домашней страницы общественной школы. Вы можете просто развлечься, выполняя задание.

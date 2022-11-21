@@ -51,7 +51,7 @@ HTML 的拖拽接口有 {{domxref("DragEvent")}}, {{domxref("DataTransfer")}}, {
 
 ### Gecko 专用接口
 
-Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。它们是一些帮助实现拖拽多个项目和拖拽非文本内容（如文件）的便捷函数。想要了解更多信息，请参见 [拖放多个项目](/zh-CN/docs/DragDrop/Dragging_and_Dropping_Multiple_Items)。另外，请查看 {{domxref("DataTransfer")}} 参考页以获取所有 [Gecko 专有属性](/zh-CN/docs/Web/API/DataTransfer#Gecko_properties) 和 [Gecko 专有方法](/zh-CN/docs/Web/API/DataTransfer#Gecko_methods)。
+Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。请查看 {{domxref("DataTransfer")}} 参考页以获取所有 [Gecko 专有属性](/zh-CN/docs/Web/API/DataTransfer#Gecko_properties) 和 [Gecko 专有方法](/zh-CN/docs/Web/API/DataTransfer#Gecko_methods)。
 
 ## 基础
 
@@ -218,7 +218,6 @@ function drop_handler(ev) {
 ## 参见
 
 - [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [拖放多个项目](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [推荐拖拽元素类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML5 Living Standard：HTML5 拖放操作](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
 - [来自 CanIUse 的拖放兼容数据](http://caniuse.com/#search=draganddrop)

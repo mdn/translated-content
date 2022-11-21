@@ -4,6 +4,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls
 original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Платформа_и_управление
 ---
+
 {{GamesSidebar}}{{IncludeSubnav("/ru/docs/")}}
 
 {{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Bounce_off_the_walls", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Game_over")}}

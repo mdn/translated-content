@@ -5,6 +5,7 @@ tags:
   - API
 translation_of: Web/API/IDBObjectStore
 ---
+
 {{APIRef("IndexedDB")}}
 
 The `IDBObjectStore` interface of the [IndexedDB API](/en/IndexedDB) represents an [object store](/en/IndexedDB#gloss_object_store) in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.
@@ -117,11 +118,9 @@ objectStoreRequest.onsuccess = function(event) {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                | Status                       | Comment |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBObjectStore', 'IDBObjectStore')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

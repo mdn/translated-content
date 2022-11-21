@@ -12,6 +12,7 @@ tags:
   - waapi
 translation_of: Web/API/Animation/pause
 ---
+
 {{ APIRef("Web Animations") }}
 
 El método `pause()` de la interfaz {{domxref("Animation")}} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API), suspende la reproducción de la animación.

@@ -4,6 +4,7 @@ slug: Web/HTML/Element/label
 translation_of: Web/HTML/Element/label
 original_slug: Web/HTML/Elemento/label
 ---
+
 ## Resumen
 
 El **Elemento HTML `<label>`** representa una etiqueta para un elemento en una interfaz de usuario. Este puede estar asociado con un control ya sea mediante la utilizacion del atributo for, o ubicando el control dentro del elemento label. Tal control es llamado "el control etiquetado" del elemento label.
@@ -44,11 +45,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 ## Especificaciones
 
-| Especificacion                                                                                       | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-label-element', '&lt;label&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'forms.html#the-label-element', '&lt;label&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.9.1', '&lt;label&gt;')}}     | {{Spec2('HTML4.01')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad
 

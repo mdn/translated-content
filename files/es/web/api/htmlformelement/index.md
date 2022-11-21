@@ -7,6 +7,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/API/HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 ### Interfaz del elemento formulario de HTML

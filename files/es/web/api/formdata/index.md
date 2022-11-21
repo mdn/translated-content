@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/FormData
 original_slug: Web/API/XMLHttpRequest/FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La interfaz **`FormData`** proporciona una manera sencilla de construir un conjunto de parejas clave/valor que representan los campos de un formulario y sus valores, que pueden ser enviados fácilmente con el método {{domxref("XMLHttpRequest.send()")}}. Utiliza el mismo formato que usaría un formulario si el tipo de codificación fuera `"multipart/form-data"`.
@@ -48,9 +49,7 @@ Un objeto que implementa `FormData` puede usarse directamente en una estructura 
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                               | Comentario                    |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------- |
-| {{SpecName('XMLHttpRequest','#interface-formdata','FormData')}} | {{Spec2('XMLHttpRequest')}} | FormData definido en XHR spec |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -3,6 +3,7 @@ title: resize
 slug: Web/CSS/resize
 translation_of: Web/CSS/resize
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -108,9 +109,7 @@ p {
 
 ## Especificaciones
 
-| Espacificación                                                       | Estado                               | Comentario |
-| -------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('CSS3 Basic UI', '#resize', 'resize')}} | {{Spec2('CSS3 Basic UI')}} |            |
+{{Specifications}}
 
 ## Compatibilidad de Navegador
 

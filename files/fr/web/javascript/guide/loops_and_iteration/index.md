@@ -54,7 +54,7 @@ Voici ce qui se passe quand une boucle `for` s'exécute :
 4. Si elle est présente, l'expression de mise à jour `expressionIncrément` est exécutée.
 5. On retourne ensuite à l'étape 2.
 
-### **Exemple**
+### Exemple
 
 La fonction suivante contient une instruction `for` qui compte le nombre d'options sélectionnées dans une liste déroulante (ici, un objet {{HTMLElement("select")}} permettant une sélection multiple). L'instruction `for` déclare une variable `i` et l'initialise à zéro. Elle vérifie que `i` est bien inférieur au nombre d'options et, pour chaque option, effectue un test conditionnel pour savoir si l'option est sélectionnée puis passe à l'option suivante en incrémentant la variable `i` pour chaque itération.
 
@@ -202,7 +202,7 @@ La syntaxe de cette instruction possède donc deux formes :
 
 La première forme permet d'interrompre la boucle la plus imbriquée (ou le `switch`) dans laquelle on se trouve. La seconde forme interrompt l'exécution d'une instruction identifiée par un label.
 
-### Exemple **1**
+### Exemple 1
 
 Dans l'exemple qui suit, on itère sur un tableau grâce à une boucle jusqu'à trouver un élément dont la valeur est `valeurTest`&nbsp;:
 

@@ -7,6 +7,7 @@ tags:
 translation_of: Web/XPath/Functions/true
 original_slug: Web/XPath/Funciones/true
 ---
+
 {{XsltRef}}
 
 La función `true` devuelve un valor booleano de verdadero.

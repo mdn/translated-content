@@ -8,6 +8,7 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## Сводка

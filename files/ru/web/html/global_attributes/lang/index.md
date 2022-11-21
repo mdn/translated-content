@@ -5,6 +5,7 @@ tags:
   - HTML
 translation_of: Web/HTML/Global_attributes/lang
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 [Глобальный атрибут](/ru/docs/Web/HTML/Global_attributes) `lang` помогает определить язык элемента: язык, на котором написаны нередактируемые элементы, или язык, на котором пользователем должны быть написаны редактируемые элементы. Атрибут содержит единственный “языковой тег” (`language tag`) в формате, определённом в _[Tags for Identifying Languages (BCP47)](https://www.ietf.org/rfc/bcp/bcp47.txt)._

@@ -10,6 +10,7 @@ tags:
   - Referencia
 translation_of: Web/API/Element/prefix
 ---
+
 {{APIRef}}
 
 La propiedad `Element.prefix` unicamente de lectura devuelve el namespace prefix de el elemento especificado, o` null si no hay especificado `prefix .

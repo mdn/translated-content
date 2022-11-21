@@ -3,6 +3,7 @@ title: Atomics.sub()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 ---
+
 {{JSRef}}
 
 Статический метод **`Atomics.sub()`** вычитает представленное значение из текущего по указанной позиции в массиве и возвращает предыдущее значение в этой позиции. Эта атомарная операция гарантирует, что никакой другой записи не произойдёт, пока изменённое значение не будет записано обратно.

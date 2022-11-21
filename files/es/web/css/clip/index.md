@@ -3,6 +3,7 @@ title: clip
 slug: Web/CSS/clip
 translation_of: Web/CSS/clip
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 ## Resumen
@@ -73,10 +74,7 @@ p { border:dotted;  position:relative; }
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                                   | Comentario                     |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------ |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'clip') }} | {{ Spec2('CSS3 Transitions') }} | Define `clip` como animatable. |
-| {{ SpecName('CSS2.1', 'visufx.html#clipping', 'clip') }}     | {{ Spec2('CSS2.1') }}             |                                |
+{{Specifications}}
 
 ## Compatibilidad entre exploradores
 

@@ -14,6 +14,7 @@ tags:
   - метод
 translation_of: Web/API/Element/getBoundingClientRect
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`Element.getBoundingClientRect()`** возвращает размер элемента и его позицию относительно viewport (часть страницы, показанная на экране, и которую мы видим).

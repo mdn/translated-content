@@ -8,6 +8,7 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/-webkit-overflow-scrolling
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propiedad CSS `-webkit-overflow-scrolling` controla si los dispositivos táctiles usan el desplazamiento momentum o inercial (momentum-based scroll) para el elemento dado.

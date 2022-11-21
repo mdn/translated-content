@@ -3,6 +3,7 @@ title: 503 Service Unavailable
 slug: Web/HTTP/Status/503
 translation_of: Web/HTTP/Status/503
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`503 Service Unavailable`** код состояния сервера, указывающий на то, что сервер не готов обработать данный запрос.

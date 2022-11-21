@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
 translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
+
 {{APIRef}}
 
 El método **`CanvasRenderingContext2D`** **`.arc()`** de la API de Canvas 2D añade un arco a la trayectoria centrada en la posición _(x, y)_ con el radio _r_ comenzando en _startAngle_ y terminando en _endAngle que_ va en la dirección dada en sentido _antihorario_ (predeterminado en sentido horario) .
@@ -129,11 +130,9 @@ for (var i = 0; i < 4; i++) {
 
 {{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png") }}
 
-## Specifications
+## Especificaciones
 
-| Especificación                                                                                                                   | Estado                           | Comentario | [WHATWG HTML Estándar de vida](https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-arc) [La definición de 'CanvasRenderingContext2D.arc' en esa especificación.](https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-arc) | Estándar de vida | Status | Comment |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------ | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arc", "CanvasRenderingContext2D.arc")}} | {{Spec2('HTML WHATWG')}} |            |                                                                                                                                                                                                                                                             |                  |        |         |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

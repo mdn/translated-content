@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/:dir
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:dir` de [CSS](/es/docs/Web/CSS) coincide con los elementos en función de la direccionalidad del texto contenido en ellos.
@@ -71,10 +72,7 @@ La pseudoclase `:dir()` requiere un parámetro, que representa la direccionalida
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentario          |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-ltr', ':dir(ltr)')}} | {{Spec2('HTML WHATWG')}}     | Ningún cambio.      |
-| {{SpecName('CSS4 Selectors', '#the-dir-pseudo', ':dir()')}}                 | {{Spec2('CSS4 Selectors')}} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

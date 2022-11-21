@@ -20,6 +20,7 @@ tags:
 translation_of: Web/API/NavigatorConcurrentHardware
 original_slug: Web/API/NavigatorConcurrentHardware
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`NavigatorConcurrentHardware`** {{Glossary("mixin")}} adds to the {{domxref("Navigator")}} interface features which allow Web content to determine how many logical processors the user has available, in order to let content and Web apps optimize their operations to best take advantage of the user's CPU.
@@ -37,11 +38,9 @@ The number of **logical processor cores** is a way to measure the number of thre
 
 _The `NavigatorConcurrentHardware`_ _mixin has no methods._
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                            | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', '#navigatorconcurrenthardware', 'NavigatorConcurrentHardware')}} | {{Spec2('HTML WHATWG')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

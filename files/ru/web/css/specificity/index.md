@@ -10,6 +10,7 @@ tags:
   - Специфичность селектора
 translation_of: Web/CSS/Specificity
 ---
+
 {{cssref}}
 
 ## Определение

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/:not
 original_slug: Web/CSS/:not()
 ---
+
 {{CSSRef}}
 
 La [pseudoclase](/es/docs/Web/CSS/Pseudo-classes) **`:not()`** de [CSS](/es/docs/Web/CSS) representa elementos que no coinciden con una lista de selectores. Como evita que se seleccionen elementos específicos, se lo conoce como la _pseudoclase de negación_.
@@ -81,10 +82,7 @@ body :not(.crazy, .fancy) {
 
 ## Especificaciones
 
-| Specification                                                            | Status                               | Comment                                                            |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#negation', ':not()')}} | {{Spec2('CSS4 Selectors')}} | Extiende su argumento para permitir algunos selectores no simples. |
-| {{SpecName('CSS3 Selectors', '#negation', ':not()')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                                |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

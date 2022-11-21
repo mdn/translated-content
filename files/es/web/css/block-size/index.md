@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/block-size
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`block-size`** [CSS](/es/docs/Web/CSS) define el tamaño horizontal o vertical de los elementos en bloque, dependiendo de los modos de escritura. estos corresponden ya sea a la propiedad {{cssxref("width")}} o la propiedad {{cssxref("height")}}, dependiendo de los valores de {{cssxref("writing-mode")}}.
@@ -75,11 +76,9 @@ La propiedad `block-size` toma los mismos valores que las propiedades {{cssxref(
 
 {{EmbedLiveSample("Ejemplo")}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                   | Estatus                                          | Comentarios        |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Logical Properties", "#logical-dimension-properties", "block-size")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

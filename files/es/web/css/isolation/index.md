@@ -7,6 +7,7 @@ tags:
   - Propieiedad CSS
 translation_of: Web/CSS/isolation
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -81,9 +82,7 @@ isolation: unset;
 
 ## Especificaciones
 
-| Specification                                                                | Status                               | Comment            |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{ SpecName('Compositing', '#isolation', 'Isolation') }} | {{ Spec2('Compositing') }} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

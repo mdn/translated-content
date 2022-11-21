@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-image
 ---
+
 {{CSSRef("CSS Borders")}}
 
 ## Resumen
@@ -83,9 +84,7 @@ Resultado:
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                                   | Comentarios |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ----------- |
-| {{SpecName('CSS3 Backgrounds', '#border-image', 'border-image')}} | {{Spec2('CSS3 Backgrounds')}} |             |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

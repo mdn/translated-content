@@ -3,6 +3,7 @@ title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
 translation_of: Web/API/Document/createElementNS
 ---
+
 {{ApiRef("DOM")}}
 
 Crea un elemento del DOM con el espacio de nombres URI y un nombre calificado.

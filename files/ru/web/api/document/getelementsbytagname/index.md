@@ -8,6 +8,7 @@ tags:
   - метод
 translation_of: Web/API/Document/getElementsByTagName
 ---
+
 {{ ApiRef("DOM") }}
 
 Возвращает {{domxref("HTMLCollection")}} элементов с указанным именем тега. Поиск осуществляется по всему документу, включая корневой узел. Возвращаемая HTMLCollection живая, это значит что она автоматически обновляет сама себя чтобы оставаться синхронизированной с DOM деревом без необходимости вызова document.getElementByTagName() снова.

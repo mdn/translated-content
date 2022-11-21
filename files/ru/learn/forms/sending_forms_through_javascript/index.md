@@ -4,6 +4,7 @@ slug: Learn/Forms/Sending_forms_through_JavaScript
 translation_of: Learn/Forms/Sending_forms_through_JavaScript
 original_slug: Learn/HTML/Forms/Sending_forms_through_JavaScript
 ---
+
 {{LearnSidebar}}
 
 HTML формы могут декларативно отправлять [HTTP](/ru/docs/HTTP)-запросы. Но формы также могут подготовить HTTP-запросы для отправки с помощью JavaScript, например при помощи `XMLHttpRequest`. В этой статье исследуются подобные подходы.

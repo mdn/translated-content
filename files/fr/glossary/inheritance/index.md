@@ -15,7 +15,7 @@ L'héritage est une fonctionnalité majeure de la {{glossary("OOP","programmatio
 
 En tant que développeur d'applications, vous pouvez choisir quels seront les {{glossary("Attribute","attributs")}} et les {{glossary("Method","méthodes")}} de la superclasse à garder et ajouter les vôtres, rendant la définition de la classe très souple. Certains langages permettent à une classe d'hériter de plus d'un parent (héritage multiple).
 
-## **Pour approfondir**
+## Pour approfondir
 
 ### Apprendre sur ce sujet
 

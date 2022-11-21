@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/:placeholder-shown
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:placeholder-shown`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{htmlElement("input")}} o {{htmlElement("textarea")}} que esté mostrando actualmente el [texto de marcador de posición (placeholder)](/es/docs/Web/HTML/Element/input#attr-placeholder).
@@ -74,9 +75,7 @@ input:placeholder-shown {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentarios         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS4 Selectors", "#placeholder", ":placeholder-shown")}} | {{Spec2("CSS4 Selectors")}} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

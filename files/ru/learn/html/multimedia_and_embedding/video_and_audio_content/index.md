@@ -3,6 +3,7 @@ title: Видео и аудио контент
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
 
 Теперь, когда мы спокойно добавляем простые изображения на веб-страницу, сделаем следующий шаг — начнём добавлять видео и аудиоплееры в ваши HTML-документы! В этой статье вы увидите, как это делать с элементами {{htmlelement("video")}} и {{htmlelement("audio")}} ; а в завершение посмотрите, как добавить титры и субтитры к вашим видео.

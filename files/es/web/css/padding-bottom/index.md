@@ -3,6 +3,7 @@ title: padding-bottom
 slug: Web/CSS/padding-bottom
 translation_of: Web/CSS/padding-bottom
 ---
+
 {{CSSRef}}
 
 ## Sumario
@@ -48,12 +49,7 @@ padding-bottom: unset;
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                                   | Comentarios                                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Box', '#the-padding', 'padding-bottom') }}                 | {{ Spec2('CSS3 Box') }}         | No change from {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-bottom') }}. |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-bottom') }} | {{ Spec2('CSS3 Transitions') }} | Defines `padding-bottom` as animatable.                                                                          |
-| {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-bottom') }} | {{ Spec2('CSS2.1') }}             | No change from {{ Specname('CSS1', '#padding-bottom', 'padding-bottom') }}.                 |
-| {{ Specname('CSS1', '#padding-bottom', 'padding-bottom') }}                 | {{ Spec2('CSS1') }}                 | Initial definition                                                                                               |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

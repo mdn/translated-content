@@ -10,7 +10,7 @@ O evento `mousedown` é ativado quando um botão de um dispositivo apontador é 
 ## Informação geral
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mousedown)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-mousedown)
 - Interface
   - : {{domxref("MouseEvent")}}
 - Bubbles

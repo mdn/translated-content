@@ -4,6 +4,7 @@ slug: Learn/JavaScript/First_steps/What_is_JavaScript
 translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 original_slug: Learn/JavaScript/Первые_шаги/What_is_JavaScript
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Первые_шаги/A_first_splash", "Learn/JavaScript/Первые_шаги")}}
 
 Добро пожаловать на курс MDN JavaScript для начинающих! В первой статье курса мы дадим базовое определение JavaScript, ответим на вопросы «Что такое JavaScript?» и «Что он делает?», узнаем как работает JavaScript и как добавить его на веб-страницу.

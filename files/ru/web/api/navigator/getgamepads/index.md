@@ -3,6 +3,7 @@ title: Navigator.getGamepads()
 slug: Web/API/Navigator/getGamepads
 translation_of: Web/API/Navigator/getGamepads
 ---
+
 {{APIRef("Gamepad API")}}{{SeeCompatTable}}
 
 **`Navigator.getGamepads()`** метод, возвращающий массив {{ domxref("Gamepad") }} объектов, по одному для каждого геймпада, подключённому к устройству.

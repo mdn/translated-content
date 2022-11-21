@@ -13,7 +13,7 @@ original_slug: Web/API/WebSocket/onerror
 ---
 {{APIRef("Web Sockets API")}}
 
-La propiedad **`WebSocket.onerror`**, del tipo {{event("Event_handlers", "event handler")}}, será llamada cuando se dé un error. Esta llamada recibirá un tipo {{domxref("Event")}} como argumento.
+La propiedad **`WebSocket.onerror`**, del tipo [`event handler`](/es/docs/Web/Reference/Events/Event_handlers), será llamada cuando se dé un error. Esta llamada recibirá un tipo {{domxref("Event")}} como argumento.
 
 ## Sintaxis
 
@@ -29,9 +29,7 @@ Un {{domxref("EventListener")}}.
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentarios         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', '#handler-websocket-onerror', 'WebSocket: onerror')}} | {{Spec2('HTML WHATWG')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

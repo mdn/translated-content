@@ -3,6 +3,7 @@ title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 ---
+
 {{JSRef}}
 
 **`Symbol.split`** общеизвестный символ определяет метод, который делит строки в индексах, соответствующих регулярному выражению. Эта функция вызывается методом {{jsxref("String.prototype.split()")}}.

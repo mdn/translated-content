@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/::-moz-range-track
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

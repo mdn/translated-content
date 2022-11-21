@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/noframes
 original_slug: Web/HTML/Elemento/noframes
 ---
+
 ### Definición
 
 - **noframes** de -_sin marcos_ . Aporta contenidos alternativos a los marcos. Las aplicaciones de usuario que no soporten [marcos](http://html.conclase.net/w3c/html401-es/present/frames.html), o que estén configuradas para no mostrarlos, deben mostrar en su lugar el contenido de este elemento.

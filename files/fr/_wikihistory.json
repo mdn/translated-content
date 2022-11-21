@@ -829,7 +829,7 @@
     "modified": "2019-03-23T22:03:18.469Z",
     "contributors": ["loella16"]
   },
-  "Glossary/Grid_Rows": {
+  "Glossary/Grid_Row": {
     "modified": "2019-03-23T22:03:16.488Z",
     "contributors": ["loella16"]
   },
@@ -1826,6 +1826,10 @@
   "Glossary/Unicode": {
     "modified": "2019-03-18T21:45:46.646Z",
     "contributors": ["loella16"]
+  },
+  "Glossary/Unix_time": {
+    "modified": "2019-03-23T23:29:44.989Z",
+    "contributors": ["loella16", "FredB"]
   },
   "Glossary/Usenet": {
     "modified": "2019-03-23T22:40:09.482Z",
@@ -3684,10 +3688,6 @@
   "MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros": {
     "modified": "2020-09-30T09:06:59.707Z",
     "contributors": ["chrisdavidmills", "wbamberg", "teoli", "fscholz", "jmh"]
-  },
-  "MDN/Yari": {
-    "modified": "2020-02-08T12:56:22.102Z",
-    "contributors": ["tristantheb"]
   },
   "Mozilla": {
     "modified": "2019-03-23T23:34:28.870Z",
@@ -7888,10 +7888,6 @@
   "Web/API/DOMStringList": {
     "modified": "2019-03-18T21:41:20.124Z",
     "contributors": ["loella16"]
-  },
-  "Web/API/DOMTimeStamp": {
-    "modified": "2019-03-23T23:29:44.989Z",
-    "contributors": ["loella16", "FredB"]
   },
   "Web/API/DOMTokenList": {
     "modified": "2020-10-15T21:34:05.793Z",

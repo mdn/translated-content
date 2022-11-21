@@ -8,6 +8,7 @@ tags:
   - метод
 translation_of: Web/API/CanvasRenderingContext2D/createLinearGradient
 ---
+
 {{APIRef}}
 
 Метод **`CanvasRenderingContext2D.createLinearGradient()`**, предоставляемый Canvas 2D API, создаёт градиент вдоль линии, соединённой двумя точками с заданными координатами.

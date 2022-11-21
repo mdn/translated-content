@@ -3,6 +3,7 @@ title: Set() конструктор
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/Set
 ---
+
 {{JSRef}}
 
 **Конструктор Set** позволяет создавать объекты Set, в которых хранятся уникальные значения любого типа, будь то [примитивные значения](/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Primitive) или ссылки на объекты.

@@ -13,6 +13,7 @@ tags:
   - Хостинг
 translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
 
 После того, как вы закончите писать код и организовывать файлы, которые составляют ваш веб-сайт, вам нужно расположить все это в Интернете, чтобы люди могли найти ваш сайт. В этой статье описывается, как разместить простой пример вашего кода с минимальными усилиями.

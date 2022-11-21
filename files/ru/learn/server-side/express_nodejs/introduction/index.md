@@ -3,6 +3,7 @@ title: Express/Node introduction
 slug: Learn/Server-side/Express_Nodejs/Introduction
 translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
+
 {{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
 
 В этой первой статье по Express мы ответим на вопросы "Что такое Node?" и "Что такое Express?", и сделаем обзор того, что делает веб-фреймворк Express таким особенным. Мы расскажем об основных функциях и покажем вам некоторые из основных строительных блоков приложения Express (хотя на данный момент у вас ещё нет среды разработки, в которой можно её протестировать).

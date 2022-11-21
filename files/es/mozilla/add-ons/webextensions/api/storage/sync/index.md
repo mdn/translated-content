@@ -5,6 +5,7 @@ tags:
   - Complementos Extensiones
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/sync
 ---
+
 {{AddonSidebar()}}
 
 Representa el área de almacenamiento de sincronización. Los elementos en el almacenamiento de sincronización están sincronizados por el navegador y están disponibles en todas las instancias de ese navegador en el que el usuario está conectado (por ejemplo, a través de Firefox Sync o una cuenta de Google), en diferentes dispositivos.

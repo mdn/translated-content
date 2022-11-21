@@ -23,13 +23,9 @@ var encodedData = window.btoa("Hello, world"); // encode a string
 var decodedData = window.atob(encodedData); // decode the string
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                        | Status                           | Comment                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', '#dom-windowbase64-atob', 'WindowBase64.atob()')}} | {{Spec2('HTML WHATWG')}} | No change since the latest snapshot, {{SpecName("HTML5.1")}}.                                                   |
-| {{SpecName('HTML5.1', '#dom-windowbase64-atob', 'WindowBase64.atob()')}}     | {{Spec2('HTML5.1')}}     | Snapshot of {{SpecName("HTML WHATWG")}}. No change.                                                             |
-| {{SpecName("HTML5 W3C", "#dom-windowbase64-atob", "WindowBase64.atob()")}} | {{Spec2('HTML5 W3C')}}     | Snapshot of {{SpecName("HTML WHATWG")}}. Creation of `WindowBase64` (properties where on the target before it). |
+{{Specifications}}
 
 ## Browser compatibility
 

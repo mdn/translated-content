@@ -11,6 +11,7 @@ tags:
   - metodo
 translation_of: Web/API/Window/matchMedia
 ---
+
 {{APIRef}}
 
 El método **`Window.matchMedia()`** devuelve un nuevo objeto {{domxref("MediaQueryList")}} que representa los analizados de la [media query](/es/docs/CSS/Media_queries) indicada.
@@ -39,9 +40,7 @@ Consulte [Probando media queries](/es/docs/DOM/Using_media_queries_from_code) pa
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-window-matchmedia", "Window.matchMedia()")}} | {{Spec2("CSSOM View")}} | Definición initial |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

@@ -3,6 +3,7 @@ title: border-block-end-width
 slug: Web/CSS/border-block-end-width
 translation_of: Web/CSS/border-block-end-width
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propieda de [CSS](/es/docs/Web/CSS) **`border-block-end-width`** define el ancho del borde final lógico de bloque de un elemento, que se asigna al borde físico que depende del modo de escritura, direccionalidad, y orientación del texto del elemento. Esto corresponde a la propiedad {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, o {{cssxref("border-left-width")}} property dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
@@ -58,11 +59,9 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                       | Estado                                           | Comentario         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-end-width", "border-block-end-width")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

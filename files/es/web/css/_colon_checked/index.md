@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:checked
 ---
+
 {{ CSSRef() }}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:checked` de [CSS](/es/docs/Web/CSS) representa cualquier **radio** ([\<input type="radio">](/es/docs/Web/HTML/Element/input/radio)), **checkbox** ([\<input type="checkbox">](/es/docs/Web/HTML/Element/input/checkbox)) u **option** ({{ HTMLElement("option") }} en un elemento {{ HTMLElement("select") }}) que está marcado o conmutado a un estado `on`.
@@ -162,13 +163,7 @@ Puede usar la pseudoclase `:checked` para crear una galería de imágenes con im
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                                   | Comentarios                                           |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-checked', ':checked') }} | {{ Spec2('HTML WHATWG') }}     | Ningún cambio.                                        |
-| {{ SpecName('HTML5 W3C', '#selector-checked', ':checked') }}     | {{ Spec2('HTML5 W3C') }}         | Define la semántica con respecto a HTML.              |
-| {{ SpecName('CSS4 Selectors', '#checked', ':checked') }}         | {{ Spec2('CSS4 Selectors') }} | Ningún cambio.                                        |
-| {{ SpecName('CSS3 UI', '#pseudo-checked', ':checked') }}         | {{ Spec2('CSS3 UI') }}             | Enlace al Nivel 3 de Selectores.                      |
-| {{ SpecName('CSS3 Selectors', '#checked', ':checked') }}         | {{ Spec2('CSS3 Selectors') }} | Define la pseudoclase, pero no la semántica asociada. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

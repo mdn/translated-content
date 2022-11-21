@@ -5,6 +5,7 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/rangeCount
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Resumen

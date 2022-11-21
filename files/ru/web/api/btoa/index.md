@@ -4,6 +4,7 @@ slug: Web/API/btoa
 translation_of: Web/API/WindowOrWorkerGlobalScope/btoa
 original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
+
 {{APIRef("HTML DOM")}}
 
 Создаёт ASCII строку закодированную в base-64 из "строки" бинарных данных.

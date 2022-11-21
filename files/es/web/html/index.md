@@ -13,6 +13,7 @@ tags:
   - Web
 translation_of: Web/HTML
 ---
+
 {{HTMLSidebar}}
 
 **HTML** (Lenguaje de Marcas de Hipertexto, del inglés _HyperText Markup Language_) es el componente más básico de la Web. Define el significado y la estructura del contenido web. Además de HTML, generalmente se utilizan otras tecnologías para describir la apariencia/presentación de una página web ([CSS](/es/docs/Web/CSS)) o la funcionalidad/comportamiento ([JavaScript](/es/docs/Web/JavaScript)).

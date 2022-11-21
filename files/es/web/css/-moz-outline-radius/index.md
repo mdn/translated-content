@@ -7,6 +7,7 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/-moz-outline-radius
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 ## Resumen
@@ -85,7 +86,7 @@ border: 1px solid black; outline: dotted red;
 
 ### Result
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/-moz-outline-radius') }}
+{{EmbedLiveSample('', '', '')}}
 
 ## Notas
 

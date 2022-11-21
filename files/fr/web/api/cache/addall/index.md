@@ -64,7 +64,7 @@ Une {{jsxref("Promise", "Promesse")}} qui est résolue en void.
   </tbody>
 </table>
 
-## **Exemples**
+## Exemples
 
 Ce bloc de code attends le déclenchement d'un {{domxref("InstallEvent")}}, puis lance {{domxref("ExtendableEvent.waitUntil","waitUntil")}} qui gère la phase d'installation de l'application. Cela consite à appeler {{domxref("CacheStorage.open")}} afin de créer un nouveau cache, puis à utiliser `addAll()` pour y ajouter une série de ressources.
 

@@ -5,6 +5,7 @@ translation_of: Web/HTML/Element/input
 original_slug: Web/HTML/Elemento/input
 browser-compat: html.elements.input
 ---
+
 ## Resumen
 
 El elemento HTML `<input>` se usa para crear controles interactivos para formularios basados en la web con el fin de recibir datos del usuario.Hay disponible una amplia variedad de tipos de datos de entrada y widgets de control, que dependen del dispositivo y el agente de usuario ([user agent](/es/docs/Glossary/user_agent)).El elemento `<input>` es uno de los más potentes y complejos en todo HTML debido a la gran cantidad de combinaciones de tipos y atributos de entrada.
@@ -71,7 +72,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
     - `checkbox`: Casilla de selección. Se debe usar el atributo **value** para definir el valor que se enviará por este elemento. Se usa el atributo **checked** para indicar si el elemento está seleccionado. También se puede usar el atributo **indeterminate** (el cual solo se puede establecer programaticamente) para indicar que la casilla está en un estado indeterminado (en la mayoría de las plataformas, se dibuja una línea horizontal a través de la casilla).
     - `color`:  Control para espicificar un color. Una interfaz de selección de color no requiere más funcionalidad que la de aceptar colores simples como texto ([más información](<http://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
     - `date`:  Control para introducir una fecha (año, mes y día, sin tiempo).
-    - `datetime`:  {{deprecated_inline}} {{obsolete_inline}} Control para introducir una fecha y hora (horas, minutos, segundos y fracción de segundo), basado en la zona horaria UTC. **Esta característica ha sido [removida de WHATWG HTML.](https://github.com/whatwg/html/issues/336)**
+    - `datetime`:  {{deprecated_inline}} Control para introducir una fecha y hora (horas, minutos, segundos y fracción de segundo), basado en la zona horaria UTC. **Esta característica ha sido [removida de WHATWG HTML.](https://github.com/whatwg/html/issues/336)**
     - `datetime-local`:  Control para introducir fecha y hora, sin zona horaria específica.
     - `email`: Campo para introducir una dirección de correo electrónico. El valor introducido se valida para que contenga una cadena vacía o una dirección de correo válida antes de enviarse. Las pseudo-clases {{cssxref(":valid")}} y {{cssxref(":invalid")}} son aplicadas segun corresponda.
     - `file`: Control que permite al usuario seleccionar un archivo. Se puede usar el atributo **accept** para definir los tipos de archivo que el control podrá seleccionar.
@@ -350,7 +351,7 @@ Nótese, sin embargo, que esto no es estándar, y no tendrá efecto en otros nav
 
 ### Resultado
 
-{{ EmbedLiveSample('Example_1_Simple_input_box', '', '100', '', 'Web/HTML/Element/input') }}
+{{EmbedLiveSample('', '', '100')}}
 
 ## Ejemplo 2: Escenario de uso común
 
@@ -368,7 +369,7 @@ Nótese, sin embargo, que esto no es estándar, y no tendrá efecto en otros nav
 
 ### Resultado
 
-{{ EmbedLiveSample('Example_2_Common_use-case_scenario', '', '200', '', 'Web/HTML/Element/input') }}
+{{EmbedLiveSample('', '', '200')}}
 
 ### Usando mozactionhint en Firefox mobile
 

@@ -9,6 +9,7 @@ tags:
   - Символы
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
 ---
+
 {{JSRef}}
 
 ## Сводка

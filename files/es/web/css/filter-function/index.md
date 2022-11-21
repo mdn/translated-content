@@ -8,6 +8,7 @@ tags:
   - Tipos de dato CSS
 translation_of: Web/CSS/filter-function
 ---
+
 {{cssref}}
 
 El [tipo de datos](/es/docs/Web/CSS/CSS_Types) [CSS](/es/docs/Web/CSS) **`<filter-function>`** representa un efecto gráfico que puede cambiar la apariencia de una imagen de entrada. Se usa en las propiedades {{cssxref("filter")}} y {{cssxref("backdrop-filter")}}.
@@ -37,11 +38,9 @@ El tipo de datos `<filter-function>` se especifica utilizando una de las funcion
 - [`sepia()`](/en-US/docs/Web/CSS/filter-function/sepia)
   - : Convierte la imagen a sepia.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                   | Estado                               | Comentarios         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('Filters 1.0', '#typedef-filter-function', '&lt;filter-function&gt;') }} | {{ Spec2('Filters 1.0') }} | Definición inicial. |
+{{Specifications}}
 
 ## Ver también
 

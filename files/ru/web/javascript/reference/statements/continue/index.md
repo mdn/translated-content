@@ -6,6 +6,7 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/continue
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Сводка

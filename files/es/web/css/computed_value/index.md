@@ -6,6 +6,7 @@ tags:
 translation_of: Web/CSS/computed_value
 original_slug: Web/CSS/Valor_calculado
 ---
+
 {{ CSSRef() }}
 
 ### Sumario

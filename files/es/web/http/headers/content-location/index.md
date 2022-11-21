@@ -3,6 +3,7 @@ title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
 translation_of: Web/HTTP/Headers/Content-Location
 ---
+
 {{HTTPSidebar}}
 
 La cabecera **`Content-Location`** indica una ubicación alternativa para los datos devueltos. Su principal uso es indicar la URL de un recurso transmitido y que ha resultado de una [negociación de contenido](/es/docs/Web/HTTP/Content_negotiation).

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/preventExtensions
 ---
+
 {{JSRef}}
 
 El método **`Object.preventExtensions()`** previene que nuevas propiedades sean agregadas a un objeto (p.e. previene la extensión futuras al objeto).
@@ -76,12 +77,9 @@ Object.preventExtensions(1);
 // 1                             (ES6 code)
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                               | Estado                   | Comentario                                            |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.10', 'Object.preventExtensions')}}                     | {{Spec2('ES5.1')}} | Definición inicial. Implementada en JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.preventextensions', 'Object.preventExtensions')}} | {{Spec2('ES6')}}     |                                                       |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

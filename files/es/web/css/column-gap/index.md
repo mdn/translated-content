@@ -5,6 +5,7 @@ translation_of: Web/CSS/column-gap
 translation_of_original: Web/CSS/grid-column-gap
 original_slug: Web/CSS/grid-column-gap
 ---
+
 La propiedad CSS **`grid-column-gap`** especifica el {{glossary("gutters","gutter")}} entre {{glossary("grid columns")}}.
 
 ```css
@@ -70,9 +71,7 @@ CSS
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                       | Comentario        |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-column-gap", "grid-column-gap")}} | {{Spec2("CSS3 Grid")}} | Definición incial |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

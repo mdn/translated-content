@@ -3,6 +3,7 @@ title: transform-origin
 slug: Web/CSS/transform-origin
 translation_of: Web/CSS/transform-origin
 ---
+
 {{ CSSRef("CSS Transforms") }} {{ SeeCompatTable() }}
 
 ## Resumen
@@ -81,9 +82,7 @@ Ver [Uso de CSS transforms](/En/CSS/Using_CSS_transforms) para más ejemplos.
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                                   | Comentario |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Transforms', '#transform-origin', 'transform-origin') }} | {{ Spec2('CSS3 Transforms') }} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

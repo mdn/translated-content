@@ -11,6 +11,7 @@ tags:
   - Web
 translation_of: Web/CSS/background-clip
 ---
+
 {{ CSSRef() }}
 
 ## Resumen
@@ -75,9 +76,7 @@ p {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                                   | Comentario |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip') }} | {{ Spec2('CSS3 Backgrounds') }} |            |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -3,6 +3,7 @@ title: Storage.length
 slug: Web/API/Storage/length
 translation_of: Web/API/Storage/length
 ---
+
 {{APIRef("Web Storage API")}}
 
 La propiedad de sólo lectura `length` de la interfaz {{domxref("Storage")}} devuelve un entero que indica el numero de elementos guardados en el objeto`Storage`.
@@ -35,9 +36,7 @@ function populateStorage() {
 
 ## Especificaciones
 
-| Especificacíon                                                                   | Estado                           | Comentario |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('Web Storage', '#dom-storage-length', 'length')}} | {{Spec2('Web Storage')}} |            |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

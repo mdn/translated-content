@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/CSS/:in-range
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:in-range`** de [CSS](/es/docs/Web/CSS) representa un elemento {{htmlelement("input")}} cuyo valor actual se encuentra dentro de los límites de rango especificados por los atributos {{htmlattrxref("min", "input")}} y {{htmlattrxref("max","input")}}.
@@ -79,10 +80,7 @@ input:out-of-range + label::after {
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                               | Comentarios                                               |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-in-range', ':in-range')}} | {{Spec2('HTML WHATWG')}}     | Define cuándo `:in-range` coincide con elementos en HTML. |
-| {{SpecName('CSS4 Selectors', '#in-range-pseudo', ':in-range')}}                 | {{Spec2('CSS4 Selectors')}} | Definición Inicial.                                       |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

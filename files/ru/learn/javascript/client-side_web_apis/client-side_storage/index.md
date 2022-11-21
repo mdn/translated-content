@@ -3,6 +3,7 @@ title: Client-side storage
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -734,7 +735,7 @@ self.addEventListener('fetch', function(e) {
 Для тестирования [примера](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/), вам нужно загрузить его несколько раз, чтобы быть уверенным, что сервис-воркер точно установлен. Когда это сделано, вы можете:
 
 - отключиться от сетевого соединения.
-- нажмите _Файл > Перейти в офлайн,_ если вы используете\_ \_Firefox.
+- нажмите _Файл > Перейти в офлайн,_ если вы используете Firefox.
 - перейдите в инструменты разработчика, выберите _Application > Service Workers_, нажмите галочку _Offline_, если используете Chrome.
 
 Если обновите страницу с примером снова, вы увидите, что все работает как обычно. Все данные хранятся в офлайн хранилище — ресурсы страницы в кеше, а видео в базе данных IndexedDB.

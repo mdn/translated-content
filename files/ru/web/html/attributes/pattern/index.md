@@ -3,6 +3,7 @@ title: 'HTML attribute: pattern'
 slug: Web/HTML/Attributes/pattern
 translation_of: Web/HTML/Attributes/pattern
 ---
+
 {{HTMLSidebar}}
 
 Атрибут **`pattern`** определяет [регулярное выражение](/ru/docs/Web/JavaScript/Guide/Regular_Expressions), которому должно соответствовать значение элемента формы. Если ненулевое значение не соответствует ограничениям, установленным в `pattern`, доступное только для чтения свойство {{domxref('ValidityState.patternMismatch','patternMismatch')}} объекта {{domxref('ValidityState')}} будет истинным.

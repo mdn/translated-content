@@ -16,6 +16,7 @@ tags:
 translation_of: Web/HTML/Element/input/range
 original_slug: Web/HTML/Elemento/input/range
 ---
+
 {{HTMLSidebar}}
 
 El elemento {{HTMLElement("input")}} del tipo **`"range"`** permite que el usuario especifique un valor numérico comprendido entre un valor mínimo y máximo. El valor exacto, sin embargo, no se considera importante. Se repesenta típicamente como un "tirador" o un control deslizante en lugar de un campo de texto como otros tipos de {{HTMLElement("input")}}. Como este tipo de widget es bastante inmpreciso, no debe utilizarse normalmente a menos que el valor exacto del control no sea importante.
@@ -45,7 +46,7 @@ Si el navegador del usuario no soporta el tipo `"range"`, será tratado como un 
     </tr>
     <tr>
       <td><strong>Eventos</strong></td>
-      <td>{{event("change")}} e {{event("input")}}</td>
+      <td>[`change`](/es/docs/Web/Reference/Events/change) e [`input`](/es/docs/Web/Reference/Events/input)</td>
     </tr>
     <tr>
       <td><strong>Atributos comunes soportados</strong></td>
@@ -305,10 +306,7 @@ Además de los ejemplos anteriores, encontrarás más ejemplos en los siguientes
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estatus                          | Comentario         |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#range-state-(type=range)', '&lt;input type="range"&gt;')}} | {{Spec2('HTML WHATWG')}} | Definición inicial |
-| {{SpecName('HTML5.1', 'sec-forms.html#range-state-typerange', '&lt;input type="range"&gt;')}}     | {{Spec2('HTML5.1')}}     | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

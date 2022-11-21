@@ -11,6 +11,7 @@ tags:
   - metodo
 translation_of: Web/API/Storage/getItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 El método `getItem()` de la interfaz {{domxref("Storage")}} devuelve el valor de la clave cuyo nombre se le pasa por parámetro.
@@ -54,9 +55,7 @@ function setStyles() {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentarios |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('Web Storage', '#dom-storage-getitem', 'getItem()')}} | {{Spec2('Web Storage')}} |             |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

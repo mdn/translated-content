@@ -9,6 +9,7 @@ tags:
   - Web Components
 translation_of: Web/Web_Components
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 Los Componentes Web son un paquete de diferentes tecnologías que te permiten crear elementos personalizados reutilizables — con su funcionalidad encapsulada apartada del resto del código — y utilizarlos en las aplicaciones web.
@@ -133,7 +134,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
 
     - {{cssxref("::slotted")}}: Coincide cualquier contenido que es insertado dentro de un slot.
 
-- El evento {{event("slotchange")}}
+- El evento [`slotchange`](/es/docs/Web/Reference/Events/slotchange)
   - : Disparado en una instancia {{domxref("HTMLSlotElement")}} (elemento {{htmlelement("slot")}}) cuando el o los nodos contenidos es ese slot cambia.
 
 ## Ejemplos
@@ -142,13 +143,7 @@ Se están construyendo varios ejemplos en nuestro repositorio de GitHub [web-com
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estado                           | Comentario                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG","scripting.html#the-template-element","&lt;template&gt; element")}} | {{Spec2("HTML WHATWG")}} | La definición de {{HTMLElement("template")}}.                                                                      |
-| {{SpecName("HTML WHATWG","custom-elements.html#custom-elements","custom elements")}}             | {{Spec2("HTML WHATWG")}} | La definición de [elementos personalizados HTML (HTML Custom Elements)](/es/docs/Web/Web_Components/Using_custom_elements). |
-| {{SpecName("DOM WHATWG","#shadow-trees","shadow trees")}}                                                 | {{Spec2("DOM WHATWG")}} | La definición de [Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM).                                                |
-| {{SpecName("HTML Imports", "", "")}}                                                                             | {{Spec2("HTML Imports")}} | Definición inicial de [HTML Imports](/es/docs/Web/Web_Components/HTML_Imports).                                             |
-| {{SpecName("Shadow DOM", "", "")}}                                                                                 | {{Spec2("Shadow DOM")}} | Definición inicial de [Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM).                                           |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

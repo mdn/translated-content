@@ -6,6 +6,7 @@ tags:
   - Propiedad CSS
 translation_of: Web/CSS/outline-style
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -178,10 +179,7 @@ CSS
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentarios              |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------ |
-| {{SpecName('CSS3 Basic UI', '#outline-style', 'outline-style')}}             | {{Spec2('CSS3 Basic UI')}} | Se añade el valor `auto` |
-| {{SpecName('CSS2.1', 'ui.html#propdef-outline-style', 'outline-style')}} | {{Spec2('CSS2.1')}}             | Definición inicial       |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

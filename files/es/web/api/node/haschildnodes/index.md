@@ -8,6 +8,7 @@ tags:
   - metodo
 translation_of: Web/API/Node/hasChildNodes
 ---
+
 {{APIRef("DOM")}}
 
 El método **`Node.hasChildNodes()`** devuelve un valor **Boolean** indicando si el {{domxref("Node")}} (nodo) actual tiene [nodos hijos](/es/docs/Web/API/Node/childNodes) o no.

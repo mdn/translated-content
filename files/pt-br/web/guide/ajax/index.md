@@ -26,18 +26,10 @@ Embora a letra X em AJAX corresponda ao XML, atualmente o [JSON](/pt-BR/docs/JSO
   - : Alex Bosworth has written this article outlining some of the mistakes AJAX application developers can make.
 - [HTML no XMLHttpRequest](/pt-BR/docs/HTML_in_XMLHttpRequest)
   - : MDN guide
-- [Especificação XMLHttpRequest](http://www.w3.org/TR/XMLHttpRequest/)
+- [Especificação XMLHttpRequest](https://www.w3.org/TR/XMLHttpRequest/)
   - : W3C Working draft
 - [Outros recursos](/pt-BR/docs/AJAX/Other_Resources)
   - : Outros recursos do AJAX que podem ser úteis.
-
-## Comunidade
-
-- Consulte os fóruns da Mozilla...
-
-{{ DiscussionList("dev-ajax", "mozilla.dev.ajax") }}
-
-- [Links da comunidade AJAX](/pt-BR/docs/AJAX/Community)
 
 ## Ferramentas
 

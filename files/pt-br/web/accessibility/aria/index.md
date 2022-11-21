@@ -66,7 +66,7 @@ As informações ARIA nos blogues tendem a ficar desatualizadas rapidamente. Sem
 
 ### Encontrando Erros
 
-[Erros nos arquivos ARIA em navegadores, leitores de telas e bibliotecas JavaScript](/en/Accessibility/ARIA/How_to_file_ARIA-related_bugs).
+[Erros nos arquivos ARIA em navegadores, leitores de telas e bibliotecas JavaScript](/pt-BR/Accessibility/ARIA/How_to_file_ARIA-related_bugs).
 
 ### Exemplos
 
@@ -81,11 +81,11 @@ As informações ARIA nos blogues tendem a ficar desatualizadas rapidamente. Sem
 
 ### Esforços pela Padronização
 
-- [Uma Visão Geral das Atividades WAI-ARIA na W3C](http://www.w3.org/WAI/intro/aria.php)
+- [Uma Visão Geral das Atividades WAI-ARIA na W3C](https://www.w3.org/WAI/intro/aria.php)
   - : Uma visão geral oficial dos esforços de padronização da WAI-ARIA pela Iniciativa de tornar a _Web_ Acessível (Web Accessibility Initiative - WAI)
-- [Especificações WAI-ARIA](http://www.w3.org/TR/wai-aria/)
+- [Especificações WAI-ARIA](https://www.w3.org/TR/wai-aria/)
   - : As especificações W3C são referências úteis. Note que, nesta fase, é importante testar a compatibilidade, uma vez que as implementações ainda estão inconsistentes.
-- [Práticas Oficiais WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/)
+- [Práticas Oficiais WAI-ARIA](https://www.w3.org/WAI/PF/aria-practices/)
 
   - : Conforme as especificações da W3C WAI-ARIA, a excelênca nas práticas oficiais representam o futuro ideal - o dia em que todos os autores possam trabalhar em suas realizações sobre uma base ARIA consistente em navegadores e leitores de tela. A documentação W3C proporcionará a você uma visão aprofundada de ARIA.
 

@@ -7,6 +7,7 @@ tags:
   - Ficheros
 translation_of: Web/API/FileReader/result
 ---
+
 {{APIRef("File API")}}La propiedad **`result`** de {{domxref("FileReader")}} retorna el contenido del archivo. Esta propiedad es válida únicamente después de que la operación de lectura del archivo es completada. El formato de la infomación devuelta depende de cuál de los métodos de lectura fue usado.
 
 ## Sintaxis
@@ -51,9 +52,7 @@ function read(callback) {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estatus                      | Comentario         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

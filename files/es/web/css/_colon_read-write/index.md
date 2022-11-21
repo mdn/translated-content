@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:read-write
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:read-write`** de [CSS](/es/docs/Web/CSS) representa un elemento (como un [input](/es/docs/Web/HTML/Element/input)) que es editable por el usuario.
@@ -61,11 +62,7 @@ p[contenteditable="true"] { color: blue; }
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                                   | Comentarios                                                            |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-read-write', ':read-write') }} | {{ Spec2('HTML WHATWG') }}     | Ningún cambio.                                                         |
-| {{ SpecName('HTML5 W3C', '#selector-read-write', ':read-write') }}     | {{ Spec2('HTML5 W3C') }}         | Define la semántica con respecto a HTML y validación de restricciones. |
-| {{ SpecName('CSS4 Selectors', '#rw-pseudos', ':read-write') }}         | {{ Spec2('CSS4 Selectors') }} | Define la pseudo-clase, pero no la semántica asociada.                 |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

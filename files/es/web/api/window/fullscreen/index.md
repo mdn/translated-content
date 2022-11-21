@@ -6,6 +6,7 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Window/fullScreen
 ---
+
 {{APIRef}}
 
 ### Resumen

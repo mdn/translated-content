@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Statements/switch
 translation_of: Web/JavaScript/Reference/Statements/switch
 original_slug: Web/JavaScript/Referencia/Sentencias/switch
 ---
+
 {{jsSidebar("Statements")}}
 
 La **declaración** **`switch`** evalúa una [expresión](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators), comparando el valor de esa expresión con una instancia **`case`**, y ejecuta [declaraciones](/es/docs/Web/JavaScript/Referencia/Sentencias) asociadas a ese `case`, así como las declaraciones en los `case` que siguen.

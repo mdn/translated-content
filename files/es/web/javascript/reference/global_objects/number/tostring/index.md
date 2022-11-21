@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toString
 ---
+
 {{JSRef("Objetos_globales", "Number")}}
 
 ## Resumen

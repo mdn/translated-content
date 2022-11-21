@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/length
 original_slug: Web/CSS/размер
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) [тип данных](/ru/docs/Web/CSS/CSS_Types) `<length>` представляет единицу длины. Длина может быть использована в таких свойствах CSS как {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, и {{Cssxref("text-shadow")}}.

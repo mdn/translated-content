@@ -6,6 +6,7 @@ tags:
   - TypedArray
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
 ---
+
 {{JSRef}}
 
 Свойство **`TypedArray.BYTES_PER_ELEMENT`** содержит размер в байтах каждого элемента типизированного массива.

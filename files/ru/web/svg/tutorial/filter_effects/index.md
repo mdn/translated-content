@@ -3,6 +3,7 @@ title: Фильтры
 slug: Web/SVG/Tutorial/Filter_effects
 translation_of: Web/SVG/Tutorial/Filter_effects
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Other_content_in_SVG", "Web/SVG/Tutorial/SVG_Fonts") }}
 
 Бывают ситуации, при которых базовые фигуры не обеспечивают гибкость, необходимую для достижения определённого эффекта. Тени, например, не могут быть созданы с помощью комбинации градиентов. Фильтры - это механизм SVG для создания сложных эффектов.

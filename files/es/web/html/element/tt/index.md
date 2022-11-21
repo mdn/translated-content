@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/tt
 original_slug: Web/HTML/Elemento/tt
 ---
+
 ### Definición
 
 - Muestra el texto marcado con una fuente de ancho fijo.

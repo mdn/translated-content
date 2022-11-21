@@ -7,7 +7,7 @@ slug: Web/API/SpeechGrammar
 
 A interface **`SpeechGrammar`** da [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API) representa um conjunto de palavras ou padrões de palavras, os quais, nós queremos que o serviço de reconhecimento reconheça.
 
-A gramática é definida usando [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**.) Outros formatos podem ser suportados no futuro.
+A gramática é definida usando [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**.) Outros formatos podem ser suportados no futuro.
 
 ## Construtor
 

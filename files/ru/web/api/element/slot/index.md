@@ -10,6 +10,7 @@ tags:
   - shadow dom
 translation_of: Web/API/Element/slot
 ---
+
 {{APIRef("Shadow DOM")}}
 
 Свойство **`slot`** интерфейса {{domxref("Element")}} возвращает имя слота теневого DOM, в который вставлен элемент.

@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/-webkit-text-stroke-width
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen
@@ -33,10 +34,7 @@ La propiedad [CSS](/es/docs/Web/CSS) **`-webkit-text-stroke-width`** especifica 
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                                                                                                                           | Estado                                | Comentario              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------- | ----------------------- |
-| {{SpecName('Compat', '#the-webkit-text-stroke-width', '-webkit-text-stroke-width')}}                                                                                                                                                         | {{Spec2('Compat')}}              | Estandarización Inicial |
-| [Referencia CSS de Safari '-webkit-text-stroke-width' en ese documento.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-stroke-width) | Non-standard unofficial documentation | Documentación Inicial   |
+{{Specifications}}
 
 ## Compatibilidad con los distintos navegadores
 
