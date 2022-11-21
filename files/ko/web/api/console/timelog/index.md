@@ -14,11 +14,9 @@ browser-compat: api.console.timeLog
 
 {{APIRef("Console API")}}
 
-The **`console.timeLog()`** method logs the current value of a timer that was previously started by calling
-{{domxref("console.time()")}} to the console.
+**`console.timeLog()`** 메서드는 앞서 {{domxref("console.time()")}}을 호출하여 시작한 타이머의 현재 값을 콘솔에 출력합니다.
 
-See [Timers](/en-US/docs/Web/API/console#timers) in the documentation for
-details and examples.
+상세한 내용과 예제는 [타이머](/en-US/docs/Web/API/console#timers) 문서를 참고하세요.
 
 {{AvailableInWorkers}}
 
@@ -31,37 +29,37 @@ timeLog(label)
 ### 매개변수
 
 - `label`
-  - : The name of the timer to log to the console.
+  - : 콘솔에 출력할 타이머의 이름
 
 ### 반환 값
 
-If no label parameter included:
+레이블(`label`) 매개변수를 전달하지 않았을 때
 
 ```
 default: 1042ms
 ```
 
-If an existing `label` is included:
+전달된 `label`이 있을 때
 
 ```
 timer name: 1242ms
 ```
 
-### Exceptions
+### 예상 결과
 
-If there is no running timer, `timeLog()` returns the warning:
+실행 중인 타이머가 없다면 `timeLog()`는 경고를 반환합니다.
 
 ```
 Timer "default" doesn't exist.
 ```
 
-If a label parameter is included, but there is no corresponding timer:
+레이블 매개변수를 전달했지만 해당하는 타이머가 없을 때는 다음과 같은 경고를 반환합니다.
 
 ```
 Timer "timer name" doesn't exist.
 ```
 
-## Examples
+## 예제
 
 ```js
 console.time("answer time");
@@ -71,20 +69,19 @@ alert("Do a bunch of other stuff…");
 console.timeEnd("answer time");
 ```
 
-The output from the example above shows the time taken by the user to dismiss the first
-alert box, followed by the time it took for the user to dismiss the second alert:
+위 예제의 출력 결과는 사용자가 첫 번째 경고창을 닫을 때까지 걸린 시간을 보여준 다음,
+두 번째 경고 창을 닫을 때까지 걸린 시간을 보여줍니다.
 
-![Timer output in Firefox console](timer_output.png)
+![파이어폭스 콘솔의 타이머 출력 결과](timer_output.png)
 
-Notice that the timer's name is displayed when the timer value is logged using
-`timeLog()` and again when it's stopped. In addition, the call to timeEnd()
-has the additional information, "timer ended" to make it obvious that the timer is no
-longer tracking time.
+타이머의 이름은 `timeLog()`를 사용해서 타이머의 값이 기록될 때 그리고 타이머가 중단되었을 때 표시된다는 점을 명심하세요.
+또한 `timeEnd()`를 실행하면 "timer ended(타이머가 종료됨)"이라는 추가적인 정보도 표시되는데
+이를 통해 해당 타이머가 더 이상 시간을 추적하지 않는다는 사실을 명확하게 해줍니다.
 
-## Specifications
+## 명세
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
