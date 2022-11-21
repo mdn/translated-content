@@ -1,6 +1,8 @@
 ---
 title: XMLSerializer.serializeToString()
 slug: Web/API/XMLSerializer/serializeToString
+l10n:
+  sourceCommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
 ---
 
 {{APIRef("DOM Parsing")}}
@@ -18,7 +20,7 @@ serializeToString(rootNode)
 - `rootNode`
   - : XML 表現を構築する DOM ツリーまたはサブツリーのルートとして用いる {{domxref("Node")}} です。
 
-### 戻り値
+### 返値
 
 指定された DOM ツリーの XML 表現が入った文字列です。
 
@@ -55,7 +57,7 @@ serializeToString(rootNode)
 `serializeToString()` から出力される XML について、注意するべき点がいくつかあります。
 
 - XML シリアライズにおいては、`Element` および `Attr` のノードの {{domxref("Element.namespaceURI", "namespaceURI")}} は常にそのままシリアライズされます。すなわち、指定されている {{domxref("Element.prefix", "prefix")}} やデフォルト名前空間は消されたり変更されたりする可能性があります。
-- 結果の XML は HTML パーサに対応しています。
+- 結果の XML は HTML パーサーに対応しています。
 - HTML 名前空間にある子ノードを持たない (すなわち、空タグを表している) 要素は、空要素タグ (`"<someelement/>"`) ではなく開始タグと終了タグ (`"<someelement></someelement>"`) を用いてシリアライズされます。
 
 ## 仕様書
