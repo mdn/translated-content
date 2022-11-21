@@ -1,6 +1,8 @@
 ---
 title: DecompressionStream()
 slug: Web/API/DecompressionStream/DecompressionStream
+l10n:
+  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---
 
 {{APIRef("Compression Streams API")}}

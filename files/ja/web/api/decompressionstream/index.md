@@ -1,6 +1,8 @@
 ---
 title: DecompressionStream
 slug: Web/API/DecompressionStream
+l10n:
+  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
 ---
 
 {{APIRef("Compression Streams API")}}
@@ -12,7 +14,7 @@ slug: Web/API/DecompressionStream
 - {{domxref("DecompressionStream.DecompressionStream", "DecompressionStream()")}}
   - : 新しい `DecompressionStream` を生成します。
 
-## プロパティ
+## インスタンスプロパティ
 
 - {{domxref("DecompressionStream.readable")}}
   - : このオブジェクトの制御下にある {{domxref("ReadableStream")}} のインスタンスを返します。
