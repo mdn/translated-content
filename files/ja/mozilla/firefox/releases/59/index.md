@@ -1,7 +1,11 @@
 ---
 title: Firefox 59 for developers
 slug: Mozilla/Firefox/Releases/59
+l10n:
+  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
+
+{{FirefoxSidebar}}
 
 Firefox 59 は、米国時間 2018 年 3 月 13 日にリリースされました。このページでは、開発者に影響する Firefox 59 の変更点をまとめています。
 
@@ -9,11 +13,11 @@ Firefox 59 は、米国時間 2018 年 3 月 13 日にリリースされまし�
 
 ### 開発者ツール
 
-- [ネットワークモニター](/ja/docs/Tools/Network_Monitor) の応答タブで、応答が HTML である場合に [描画された HTML のプレビュー](/ja/docs/Tools/Network_Monitor#HTML_preview) を表示するようになりました ({{bug(1353319)}})。
-- ストレージインスペクターで表示する Cookie の情報 ([Cookie](/ja/docs/Tools/Storage_Inspector#Cookies) をご覧ください) で、それぞれの Cookie が same-site 状態であるかを示す _sameSite_ 列を追加しました ({{bug(1298370)}})。
-- [定規](/ja/docs/Tools/Rulers) ツールで、ビューポートの現在の寸法を示す情報を表示するようになりました ({{bug(1402633)}})。
-- [レスポンシブデザインモード](/ja/docs/Tools/Responsive_Design_Mode) で、カーソルキーを使用して画面の寸法を設定できるようにになりました ({{bug(1421663)}})。詳しくは [画面のサイズを設定する](/ja/docs/Tools/Responsive_Design_Mode#Setting_screen_size) をご覧ください。
-- [ネットワークモニター](/ja/docs/Tools/Network_Monitor) の _ヘッダー_ タブに表示する*生ヘッダー*で、応答のステータスコードを表示するようになりました ({{bug(1419401)}})。
+- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) の応答タブで、応答が HTML である場合に [描画された HTML のプレビュー](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#html-preview) を表示するようになりました ({{bug(1353319)}})。
+- ストレージインスペクターで表示する Cookie の情報 ([Cookie](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html#cookies) をご覧ください) で、それぞれの Cookie が same-site 状態であるかを示す _sameSite_ 列を追加しました ({{bug(1298370)}})。
+- [定規](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) ツールで、ビューポートの現在の寸法を示す情報を表示するようになりました ({{bug(1402633)}})。
+- [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) で、カーソルキーを使用して画面の寸法を設定できるようにになりました ({{bug(1421663)}})。詳しくは [画面のサイズを設定する](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#setting-screen-size) をご覧ください。
+- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) の _ヘッダー_ タブに表示する*生ヘッダー*で、応答のステータスコードを表示するようになりました ({{bug(1419401)}})。
 
 ### HTML
 
@@ -24,8 +28,8 @@ Firefox 59 は、米国時間 2018 年 3 月 13 日にリリースされまし�
 - {{cssxref("overscroll-behavior")}} プロパティと、このプロパティに関係するロングハンドプロパティである {{cssxref("overscroll-behavior-x")}} および {{cssxref("overscroll-behavior-y")}} を実装しました ({{bug(951793)}})。また、すべてのリリースで、デフォルトで有効化しました ({{bug(1428879)}})。
 - "unusual elements" (置換要素のように、CSS のボックスの概念に従って描画されない要素) で {{cssxref("display")}} の値に `contents` を指定したときの動作を、仕様書に従って更新しました ({{bug(1427292)}})。仕様で定められた正確な動作については、[Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) をご覧ください。
 - {{cssxref("position")}} の `sticky` を、適切な [HTML テーブル](/ja/docs/Learn/HTML/Tables) の部品 (例えば {{htmlelement("th")}} 要素) でサポートしました ({{bug(975644)}})。
-- {{cssxref("&lt;color&gt;")}} 値 (`rgb()`, `rgba()`, `hsl()`, `hsla()`) で {{cssxref("calc()")}} をサポートしました ({{bug(984021)}})。
-- [メディアクエリー](/ja/docs/Web/CSS/Media_Queries) の値で {{cssxref("calc()")}} をサポートしました ({{bug(1396057)}})。
+- {{cssxref("&lt;color&gt;")}} 値 (`rgb()`, `rgba()`, `hsl()`, `hsla()`) で {{cssxref("calc", "calc()")}} をサポートしました ({{bug(984021)}})。
+- [メディアクエリー](/ja/docs/Web/CSS/Media_Queries) の値で {{cssxref("calc", "calc()")}} をサポートしました ({{bug(1396057)}})。
 - {{cssxref("@document")}} @-規則の使用を、ユーザースタイルシートと UA スタイルシートに限定しました ({{bug(1035091)}})。
 - {{cssxref("font-optical-sizing")}} プロパティを実装しました ({{bug(1435692)}})。
 
@@ -61,7 +65,7 @@ _変更なし。_
 
 #### メディアと WebRTC
 
-- {{domxref("MediaStreamTrack")}} の {{domxref("MediaStreamTrack.muted")}} プロパティ、および {{event("mute")}} イベントと {{event("unmute")}} イベント、さらにこれに対応するイベントハンドラーである {{domxref("MediaStreamTrack.onmute", "onmute")}} と {{domxref("MediaStreamTrack.onmute", "onunmute")}} を実装しました。トラックの `muted` 状態は、トラックが今のところメディアデータを提供できないことを示します。
+- {{domxref("MediaStreamTrack")}} の {{domxref("MediaStreamTrack.muted")}} プロパティ、および {{domxref("MediaStreamTrack.mute_event", "mute")}} イベントと {{domxref("MediaStreamTrack.unmute_event", "unmute")}} イベント、さらにこれに対応するイベントハンドラーである {{domxref("MediaStreamTrack.mute_event", "onmute")}} と {{domxref("MediaStreamTrack.unmute_event", "onunmute")}} を実装しました。トラックの `muted` 状態は、トラックが今のところメディアデータを提供できないことを示します。
 
   > **メモ:** トラックの `muted` 状態は、一般的に考えられているトラックのミュートやミュート解除として役に立つものではありません。代わりに {{domxref("MediaStreamTrack.enabled", "enabled")}} プロパティを使用します。`enabled` を `false` に設定すると、トラックは空のフレームだけを出力します。
 
@@ -90,7 +94,7 @@ _変更なし。_
 - {{httpheader("X-Frame-Options")}} ヘッダーの `SAMEORIGIN` ディレクティブが、トップレベルのインラインフレームが同一オリジンであるかだけでなく、すべての祖先も同様であるかを確認するようになりました ({{bug(725490)}})。
 - 異なるオリジンから現在のドキュメントに読み込まれる画像リソースが、HTTP 認証ダイアログを表示させることができなくなりました。 ({{bug(1423146)}})。
 - ほかのブラウザーに合わせるため、および {{bug(1419658)}} で説明されている潜在的な問題を避けるため、HTTP 認証でユーザー名やパスワードに (`ISO-8859-1` ではなく) `utf-8` エンコーディングを使用するようになりました。
-- [HSTS プリロードリスト](https://searchfox.org/mozilla-central/source/security/manager/ssl/nsSTSPreloadList.inc)は Google によって毎日更新されています。いつもの更新であれば注意する必要はないのですが、このリリースから新しい TLD が追加されました。このうち具体的に注目したいのが `.app` と `.dev` です。これらの新しい TLD を知らず、ローカルの開発環境に使用した場合、予期しない挙動となるかもしれません。なお、ローカルでの開発には[予約済み TLD](https://tools.ietf.org/html/rfc2606) を使うべきとされています。
+- [HSTS プリロードリスト](https://searchfox.org/mozilla-central/source/security/manager/ssl/nsSTSPreloadList.inc)は Google によって毎日更新されています。いつもの更新であれば注意する必要はないのですが、このリリースから新しい TLD が追加されました。このうち具体的に注目したいのが `.app` と `.dev` です。これらの新しい TLD を知らず、ローカルの開発環境に使用した場合、予期しない挙動となるかもしれません。なお、ローカルでの開発には[予約済み TLD](https://datatracker.ietf.org/doc/html/rfc2606) を使うべきとされています。
 
 ### プラグイン
 
@@ -113,38 +117,38 @@ _変更なし。_
 
 ### JavaScript
 
-- 非標準の [条件付き catch 節](/ja/docs/Web/JavaScript/Reference/Statements/try...catch#Conditional_catch_clauses) を削除しました ({{bug(1228841)}})。
+- 非標準の [条件付き catch 節](/ja/docs/Web/JavaScript/Reference/Statements/try...catch#conditional_catch_clauses) を削除しました ({{bug(1228841)}})。
 
 ### API
 
 - 非標準の `Event.getPreventDefault()` メソッドを削除しました。{{domxref("Event")}} で {{domxref("Event.preventDefault", "preventDefault()")}} が呼び出されたかを判断するには、代わりに {{domxref("Event.defaultPrevented")}} プロパティを使用します。
-- 標準の [Notifications API](/ja/docs/Web/API/Notifications_API) が好ましいため、独自仕様の [`Navigator.mozNotification`](/ja/docs/Archive/API/Navigator/mozNotification) プロパティと `DesktopNotification` インターフェイスを削除しました ({{bug(952453)}})。
+- 標準の [通知 API](/ja/docs/Web/API/Notifications_API) が好ましいため、独自仕様の [`Navigator.mozNotification`](/ja/docs/Archive/API/Navigator/mozNotification) プロパティと `DesktopNotification` インターフェイスを削除しました ({{bug(952453)}})。
 - 独自仕様の `window.external.addSearchEngine()` メソッドを削除しました ({{bug("862147")}})。詳しくは {{domxref("Window.sidebar")}} もご覧ください。
-- Firefox 限定の非標準プロパティである {{domxref("HTMLMediaElement")}} property `mozAutoplayEnabled` を削除しました。
+- Firefox 限定の非標準プロパティである {{domxref("HTMLMediaElement")}} の `mozAutoplayEnabled` プロパティを削除しました。
 
 ### SVG
 
-- SMIL の `accessKey` 機能のサポートを廃止しました ({{bug(1423098)}})。
+SMIL の `accessKey` 機能のサポートを廃止しました ({{bug(1423098)}})。
 
 ### その他
 
-- 非標準の `pcast:` および `feed:` プロトコルのサポートを廃止しました ({{bug(1420622)}})。
+非標準の `pcast:` および `feed:` プロトコルのサポートを廃止しました ({{bug(1420622)}})。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 
 ### WebExtensions
 
-- [theme](/ja/Add-ons/WebExtensions/manifest.json/theme) の更新:
+- [Theme](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) の更新:
 
   - 新しいプロパティ: `colors.background_tab_text`, `colors.toolbar_field_border`
   - すべての色関連プロパティで、Chrome 形式の配列と CSS の色の値の両方をサポートしました。
 
-- 新しい [ブラウザー設定](/ja/Add-ons/WebExtensions/API/browserSettings):
+- 新しい [ブラウザー設定](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings):
 
   - [`contextMenuShowEvent`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent)
   - [`openBookmarksInNewTabs`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs)
   - [`openSearchResultsInNewTabs`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs)
-  - [`proxyConfig`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/proxyConfig)
+  - [`proxyConfig`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings)
 
 - 新しい [`tabs`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs) の API:
 
@@ -152,7 +156,7 @@ _変更なし。_
   - [`tabs.hide()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/hide)
   - [`tabs.show()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/show)
 
-- [`contextMenus`](/ja/docs/Archive/Add-ons/Legacy_Firefox_for_Android/API/NativeWindow/contextmenus) API で ["bookmark" コンテキスト](/ja/Add-ons/WebExtensions/API/menus/ContextType) をサポートしました。
+- [`contextMenus`](/ja/docs/Archive/Add-ons/Legacy_Firefox_for_Android/API/NativeWindow/contextmenus) API で ["bookmark" コンテキスト](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType) をサポートしました。
 - 新しい [`contentScripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts) API で、ランタイムがコンテンツスクリプトを登録できます。
 - 新しい [`pageAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction), [`browserAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), [`SidebarAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction) の API:
 
@@ -167,12 +171,8 @@ _変更なし。_
   - IPFS のための "ipfs", "ipns", "dweb"
 
 - [`privacy.websites`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites) の新しい設定 "cookieConfig"。
-- [`cookies`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/cookies) API で [ファーストパーティ分離](/ja/Add-ons/WebExtensions/API/cookies#First-party_isolation) をサポート。
+- [`cookies`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/cookies) API で [ファーストパーティ分離](/ja/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation) をサポート。
 - [`webRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) の新しいオプションである `upgradeToSecure`。
-
-## 関連情報
-
-- [Firefox — Notes (59.0)](https://www.mozilla.org/firefox/59.0/releasenotes/)
 
 ## 過去のバージョン
 

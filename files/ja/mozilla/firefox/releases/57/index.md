@@ -1,6 +1,8 @@
 ---
 title: Firefox 57 (Quantum) for developers
 slug: Mozilla/Firefox/Releases/57
+l10n:
+  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
 {{FirefoxSidebar}}
@@ -9,11 +11,11 @@ Firefox 57 (別名 Firefox Quantum) は、米国時間 2017 年 11 月 14 日に
 
 ## Firefox 57 === Firefox Quantum
 
-Firefox 57 は、Firefox を徹底的に再構築してパフォーマンス、安定性、外見を大きく向上させることを目指す [Firefox Quantum](https://wiki.mozilla.org/Quantum) エンジニアリングプロジェクトにちなんで **Quantum** というリリース名を与えられました。Firefox 57 はこれらの改善点の一部をリリースする最初のバージョンであり、祝福を求めていました。
+Firefox 57 は、Firefox を徹底的に再構築してパフォーマンス、安定性、外見を大きく向上させることを目指す [Firefox Quantum](https://wiki.mozilla.org/Quantum) エンジニアリングプロジェクトにちなんで **Quantum** というリリース名が与えられました。Firefox 57 はこれらの改善点の一部をリリースする最初のバージョンであり、祝福を求めていました。
 
 > **メモ:** このリリースの Quantum の特徴について詳しくは、Dan Callahan による記事 [Firefox Quantum Developer Edition: the fastest Firefox ever with Photon UI and better tooling](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/) をご覧ください。
 
-[Firefox's new parallel CSS engine](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/)、別名 **Quantum CSS** または **Stylo** はデスクトップ版の Firefox 57 でデフォルトで有効であり、モバイル版の Firefox は追って有効化します。多くのパフォーマンス向上は別として、開発者が何らかの大きな違いに気づくことがあってはいけません。Stylo には多くの小規模な機能差がありますが、Gecko で取り除くべき非標準の動作を修正するために実装したものです。このような差異は、適宜リファレンスのページやリリースノートに掲載します ([Quantum CSS に関する補足](#quantum_css_notes) を参照)。
+[Firefox's new parallel CSS engine](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/)、別名 **Quantum CSS** または **Stylo** はデスクトップ版の Firefox 57 でデフォルトで有効であり、モバイル版の Firefox は追って有効化します。多くのパフォーマンス向上は別として、開発者が何らかの大きな違いに気づくことがあってはいけません。Stylo には多くの小規模な機能差がありますが、Gecko で取り除くべき非標準の動作を修正するために実装したものです。このような差異は、適宜リファレンスのページやリリースノートに掲載します ([Quantum CSS に関する補足](#quantum_css_に関する補足) を参照)。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -23,29 +25,29 @@ _変更なし。_
 
 ### HTML
 
-- {{htmlelement("input")}} の [date](/ja/docs/Web/HTML/Element/input/date) および [time](/ja/docs/Web/HTML/Element/input/time) タイプが、すべてのビルドで有効になりました ({{bug("1399036")}})。
+- {{htmlelement("input")}} の [date](/ja/docs/Web/HTML/Element/input/date) および [time](/ja/docs/Web/HTML/Element/input/time) 型が、すべてのビルドで有効になりました ({{bug("1399036")}})。
 
 ### CSS
 
-- [`display-mode`](/ja/docs/Web/CSS/@media/display-mode) メディアクエリーの値 `minimal-ui` および `standalone` をサポートしました ({{bug(1369815)}})。[Web app manifest の `display` フィールド](/ja/docs/Web/Manifest#display) もご覧ください。
-- {{CSSxRef("grid-row-gap")}} および {{CSSxRef("grid-column-gap")}} プロパティが、{{CSSxRef("grid")}} ショートハンドプロパティでリセットされないようになりました ({{bug(1387410)}})。
+- [`display-mode`](/ja/docs/Web/CSS/@media/display-mode) メディアクエリーの値 `minimal-ui` および `standalone` をサポートしました ({{bug(1369815)}})。[ウェブアプリマニフェストの `display` フィールド](/ja/docs/Web/Manifest#display) もご覧ください。
+- `grid-row-gap` および `grid-column-gap` プロパティが、{{CSSxRef("grid")}} ショートハンドプロパティでリセットされないようになりました ({{bug(1387410)}})。
 - 設定項目 `layout.css.clip-path-shapes.enabled` を削除しました ({{bug(1399767)}})。この設定項目で、{{CSSxRef("clip-path")}} の {{cssxref("&lt;basic-shape&gt;")}} のサポートを無効化できました。これは Firefox 54 で導入されたものであり、今後は無効化できません。
 
 #### Quantum CSS に関する補足
 
-Quantum で以下の不具合を修正しました:
+Quantum で以下の不具合を修正しました。
 
 - 以前の Gecko のスタイルシステムでは `radial-gradient(circle gold,red)` のような放射状のグラデーションが、`circle` と `gold` の間にカンマがないため動作すべきではないにもかかわらず、動作していました ({{bug(1383323)}})。
 - オフスクリーンの要素をオンスクリーンにアニメーションするときに遅延を指定すると、Gecko は Windows など一部のプラットフォームで再描画を行いません ({{bug(1383239)}})。
 - Gecko では、{{htmlelement("details")}} 要素で {{CSSxRef("animation")}} をアクティブにすると `open` 属性を使用して既定で開かせることができません ({{bug(1382124)}})。
-- Gecko では、色を指定した {{CSSxRef("text-shadow")}} から色を指定しない {{CSSxRef("text-shadow")}} へ遷移する場合に {{cssxref("transition", "transitions")}} が動作しません ({{bug(726550)}})。
+- Gecko では、色を指定した {{CSSxRef("text-shadow")}} から色を指定しない `text-shadow` へ遷移する場合に{{cssxref("transition", "トランジション", "", 1)}}が動作しません ({{bug(726550)}})。
 - Gecko ではアニメーションのフィリングをキャンセルする (例えば `animation-fill-mode: forwards` を設定) と、1 回だけですが同じ要素に設定したトランジションを発生させられます (詳しくは {{bug(1192592)}} および [こちらのテストケース](https://bug1192592.bmoattachments.org/attachment.cgi?id=8843824) をご覧ください)。一般的に、宣言的なアニメーションがトランジションを発生させるべきではありません。
 - Gecko では em 単位を使用するアニメーションが、アニメーションする要素の親で {{CSSxRef("font-size")}} を変更しても影響を受けませんが、実際は影響を受けるべきです ({{bug(1254424)}})。
 - Gecko と Quantum CSS では `font-size` の継承が異なっており、Gecko では一部の言語設定で継承したフォントのサイズが想定より小さくなります ({{bug(1391341)}})。
 - Gecko では {{CSSxRef("@document", "@-moz-document")}} 規則の `domain()` あるいは `url-prefix()` URL マッチング関数で解析するときに、URL トークンの解析と同じ仕組みを再使用します。Quantum CSS は同じ仕組みを使用せず、括弧や引用符を含む場合にトークンを無効とみなしません ({{bug(1362333)}})。
 - Gecko では canvas 2D コンテキストの {{DOMxRef("CanvasRenderingContext2D.font", "font")}} の値としてシステムフォント (例えば `menu`) を設定すると、期待するフォントが返りません (何も返りません)。Quantum でこの不具合を修正しました ({{bug(1374885)}})。
 - Gecko では、切り離されたサブツリー (例えば {{DOMxRef("Document.createElement","createElement()")}} を使用して作成した、DOM に未挿入の {{htmlelement("div")}}) を作成すると、サブツリーのルート要素がブロックレベル要素として設定されます。Quantum CSS では仕様書に従って、インラインとして設定します ({{bug(1374994)}})。
-- Gecko では {{CSSxRef("radial-gradient")}} の半径の構成要素として {{CSSxRef("calc")}} 式を使用すると、式が拒否されて値が無効になります ({{bug(1376019)}})。
+- Gecko では {{CSSxRef("calc", "calc()")}} 式を {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}} の半径の構成要素として使用すると、式が拒否されて値が無効になります ({{bug(1376019)}})。
 - Gecko では `calc(1*2*3)` が正しく解析されません。Quantum CSS でこの不具合を修正しました ({{bug(1379467)}})。
 - Quantum CSS では、[`calc()` を仕様書で説明されているとおり全面的にサポートしています](https://drafts.csswg.org/css-values-3/#calc-notation) ({{bug(1350857)}})。Gecko はそうではありません。
 - Gecko は {{CSSxRef("::before")}} および {{CSSxRef("::after")}} 疑似要素で、{{CSSxRef("content")}} プロパティの値が `normal` や `none` であっても疑似要素を生成する不具合があります。仕様書によると、このようにするべきではありません ({{bug(1387931)}})。
@@ -68,7 +70,7 @@ _変更なし。_
 #### 新規 API
 
 - {{DOMxRef("PerformanceObserver")}} API をデフォルトで有効にしました ({{bug(1386021)}})。
-- {{DOMxRef("AbortController")}} および {{DOMxRef("AbortSignal")}} インターフェイス (Abort API) を追加しました。必要に応じて、DOM リクエスト ([fetch リクエスト](/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch) など) を中止できます ({{bug(1378342)}})。
+- {{DOMxRef("AbortController")}} および {{DOMxRef("AbortSignal")}} インターフェイス (Abort API) を追加しました。必要に応じて、DOM リクエスト ([fetch リクエスト](/ja/docs/Web/API/fetch) など) を中止できます ({{bug(1378342)}})。
 - [Storage API](/ja/docs/Web/API/Storage_API) を実装して、デフォルトで有効にしました ({{bug(1399038)}})。
 
 #### DOM
@@ -77,8 +79,8 @@ _変更なし。_
 - {{DOMxRef("Document.createEvent", "Document.createEvent('FocusEvent')")}} をサポートしました ({{bug(1388069)}})。
 - {{DOMxRef("HTMLInputElement")}} インターフェイスの `files` プロパティが設定可能になりました ({{bug(1384030)}})。
 - `HTMLDocument.getSelection()` メソッドを {{DOMxRef("Document.getSelection","Document")}} インターフェイスに移動して、XML ドキュメントで使用可能になりました ({{bug(718711)}})。
-- {{Event("messageerror")}} イベントを実装して、メッセージターゲットで実装したイベントハンドラーの発動に反応して実行するコードを持つことが可能になりました。{{DOMxRef("MessagePort.onmessageerror")}}、{{DOMxRef("DedicatedWorkerGlobalScope.onmessageerror")}}、{{domxref("Worker.onmessageerror")}}、{{domxref("BroadcastChannel.onmessageerror")}}、{{domxref("Window.onmessageerror")}} をご覧ください ({{bug(1359017)}})。
-- {{DOMxRef("Headers")}} の値でイテレートを行うとき、値を自動的に辞書順で整列して、さらに重複するヘッダー名の値を結合するようになりました ({{bug(1396848)}})。
+- `messageerror` イベントを実装して、メッセージターゲットで実装したイベントハンドラーの発動に反応して実行するコードを持つことが可能になりました。{{DOMxRef("MessagePort.messageerror_event")}}、{{DOMxRef("DedicatedWorkerGlobalScope.messageerror_event")}}、{{DOMxRef("Worker.messageerror_event")}}、{{DOMxRef("BroadcastChannel.messageerror_event")}}、{{DOMxRef("Window.messageerror_event")}} をご覧ください ({{bug(1359017)}})。
+- {{DOMxRef("Headers")}} の値で反復処理を行うとき、値を自動的に辞書順で整列して、さらに重複するヘッダー名の値を結合するようになりました ({{bug(1396848)}})。
 
 #### DOM イベント
 
@@ -91,7 +93,7 @@ _変更なし。_
   > **メモ:** Firefox は、複数のソースの SCTP メッセージを多重化する機能を提供する SCTP ndata プロトコルが未サポートですので、大きなデータオブジェクトを送信すると他のすべての SCTP 通信で著しい遅延が発生する可能性があります。Firefox の ndata サポートの実装および展開の進捗を追跡するには、{{bug(1381145)}} をご覧ください。
 
 - {{DOMxRef("RTCDataChannel.send()")}} メソッドで、送信しようとしたメッセージのサイズが受信側の {{Glossary("user agent","ユーザーエージェント")}} と互換性がない場合に `TypeError` 例外を発生できるようになりました (これは {{bug(979417)}} の一部として実装しました)。
-- 録画中に発生した問題を報告するために送信される {{event("error")}} イベントを一般的なイベントから {{DOMxRef("MediaRecorderErrorEvent")}} 型にするため、[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) を更新しました。
+- [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) を更新し、録画中に発生した問題を報告するために送信される {{domxref("MediaRecorder/error_event", "error")}} イベントを一般的なイベントから {{DOMxRef("MediaRecorderErrorEvent")}} 型にしました。
 - {{DOMxRef("OfflineAudioContext")}} のコンストラクターで引数のリストに加えてオブジェクトを指定可能になったため、関連文書を更新しました ({{bug(1388591)}})。
 
 ### セキュリティ
@@ -111,11 +113,11 @@ _変更なし。_
 
 ### HTML
 
-- さまざまなウェブ互換性の問題があるため、Firefox 57 で `<link rel="preload">` ([Preloading content with rel="preload"](/ja/docs/Web/HTML/Preloading_content) をご覧ください) を無効化しました ({{bug(1405761)}})。キャッシュ不可のリソース向けに改良したバージョンを Firefox 58 に搭載する予定です。
+- さまざまなウェブ互換性の問題があるため、Firefox 57 で `<link rel="preload">` ([Preloading content with rel="preload"](/ja/docs/Web/HTML/Link_types/preload) をご覧ください) を無効化しました ({{bug(1405761)}})。キャッシュ不可のリソース向けに改良したバージョンを Firefox 58 に搭載する予定です。
 
 ### API
 
-- Mozilla 独自仕様の [Social API](/ja/docs/Archive/Social_API) を完全に削除しました ({{bug(1388902)}})。
+- Mozilla 独自仕様 [ソーシャル API](/ja/docs/Archive/Social_API) を完全に削除しました ({{bug(1388902)}})。
 
 ### SVG
 
@@ -123,7 +125,7 @@ _変更なし。_
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 
-> **メモ:** Firefox 57 より、XPCOM ベースのアドオンのサポートを全面的に廃止します。すべての拡張機能は新しい [ブラウザー拡張機能](/ja/Add-ons/WebExtensions) (WebExtensions としても知られています) への移行が必要であり、そうしなければ動作しません。
+> **メモ:** Firefox 57 より、XPCOM ベースのアドオンのサポートを全面的に廃止します。すべての拡張機能は新しい [ブラウザー拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions) (WebExtensions としても知られています) への移行が必要であり、そうしなければ動作しません。
 
 ### WebExtensions
 
@@ -163,7 +165,7 @@ _変更なし。_
   - [`onUpdated`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated)
   - [`contextualIdentitities.ContextualIdentity`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity) の `colorCode` および `iconUrl`
 
-- [`devtools.panels`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels)
+- [`devtools.panels`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)
 
   - [`devtools.panels.ElementsPanel.createSidebarPane()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane)
 
@@ -172,16 +174,16 @@ _変更なし。_
   - [`downloads.download()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download) の `incognito` オプション
   - [`downloads.DownloadItem`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem) の `estimatedEndTime` プロパティ
 
-- [`find`](/ja/Add-ons/WebExtensions/API/find)
+- [`find`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find)
 
   - [`find()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find/find)
   - [`highlightResults()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find/highlightResults)
   - [`removeHighlighting()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting)
 
 - [`pageAction.openPopup()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup)
-- [`privacy`](/ja/Add-ons/WebExtensions/API/privacy/websites)
+- [`privacy`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
 
-  - [`websites.trackingProtectionMode`](/ja/Add-ons/WebExtensions/API/privacy/websites)
+  - [`websites.trackingProtectionMode`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
 
 - [`proxy`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
 
@@ -211,7 +213,7 @@ _変更なし。_
 - [`tabs`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
 
   - [`tabs.update()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update) の `loadReplace` オプション
-  - [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab)、[`tabs.onUpdated`](/ja/docs/)、[`tabs.query()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) の `discarded` プロパティ
+  - [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab)、[`tabs.onUpdated`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated)、[`tabs.query()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) の `discarded` プロパティ
   - [`tabs.create()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create) で "view-source:" URL を開くことが可能になりました
   - [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab)、[`tabs.create()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create)、[`tabs.query()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)、[`tabs.update()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update) の `openerTabId` プロパティ
 
@@ -224,7 +226,7 @@ _変更なし。_
 
 - [`theme`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/theme)
 
-  - [`theme.update()`](/ja/Add-ons/WebExtensions/API/theme/update) の `windowId` オプション
+  - [`theme.update()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/theme/update) の `windowId` オプション
 
 - [`webRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
 
