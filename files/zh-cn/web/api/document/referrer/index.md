@@ -1,5 +1,5 @@
 ---
-title: document.referrer
+title: Document.referrer
 slug: Web/API/Document/referrer
 ---
 
