@@ -1,6 +1,8 @@
 ---
 title: CryptoKeyPair
 slug: Web/API/CryptoKeyPair
+l10n:
+  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
 {{APIRef("Web Crypto API")}}
