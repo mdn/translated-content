@@ -1,6 +1,8 @@
 ---
 title: HID.getDevices()
 slug: Web/API/HID/getDevices
+l10n:
+  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
 
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}

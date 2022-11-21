@@ -1,6 +1,8 @@
 ---
 title: HIDDevice.productId
 slug: Web/API/HIDDevice/productId
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}

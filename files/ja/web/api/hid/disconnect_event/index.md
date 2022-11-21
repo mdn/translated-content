@@ -1,6 +1,8 @@
 ---
 title: "HID: disconnect イベント"
 slug: Web/API/HID/disconnect_event
+l10n:
+  sourceCommit: ff3545b816d9a945d3793ecc330a3b6cbdc59c1c
 ---
 
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}

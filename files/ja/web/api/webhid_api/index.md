@@ -1,6 +1,8 @@
 ---
 title: WebHID API
 slug: Web/API/WebHID_API
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
 {{DefaultAPISidebar("WebHID API")}}{{SeeCompatTable}}

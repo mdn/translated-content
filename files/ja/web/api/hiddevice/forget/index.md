@@ -1,6 +1,8 @@
 ---
 title: HIDDevice.forget()
 slug: Web/API/HIDDevice/forget
+l10n:
+  sourceCommit: f58ce40b926e376c5b7aa061277a8dc6ff7b32da
 ---
 
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}

@@ -1,6 +1,8 @@
 ---
 title: HIDConnectionEvent
 slug: Web/API/HIDConnectionEvent
+l10n:
+  sourceCommit: 066257cb0d23e29e269703450e4b1216a65e3b26
 ---
 
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
