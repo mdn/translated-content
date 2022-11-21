@@ -5,9 +5,9 @@ slug: Web/API/AesKeyGenParams
 
 {{ APIRef("Web Crypto API") }}
 
-[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) の辞書 **`AesKeyGenParams`** は、AES 鍵、すなわちアルゴリズムとして [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw) のいずれかを指定する鍵を生成する際に {{domxref("SubtleCrypto.generateKey()")}} の引数 `algorithm` として渡すべきオブジェクトを表します。
+[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) の辞書 **`AesKeyGenParams`** は、AES 鍵、すなわちアルゴリズムとして [AES-CBC](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-CTR](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-GCM](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), [AES-KW](/ja/docs/Web/API/SubtleCrypto/wrapKey#aes-kw) のいずれかを指定する鍵を生成する際に {{domxref("SubtleCrypto.generateKey()")}} の引数 `algorithm` として渡すべきオブジェクトを表します。
 
-## プロパティ
+## インスタンスプロパティ
 
 - `name`
   - : 文字列。使用したいアルゴリズムにより、`AES-CBC`, `AES-CTR`, `AES-GCM`, `AES-KW` のいずれかに設定するべきです。

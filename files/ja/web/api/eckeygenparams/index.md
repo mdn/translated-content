@@ -5,9 +5,9 @@ slug: Web/API/EcKeyGenParams
 
 {{ APIRef("Web Crypto API") }}
 
-[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) の辞書 **`EcKeyGenParams`** は、楕円曲線ベース、すなわちアルゴリズムとして [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) または [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh) を指定する鍵ペアを生成する際に {{domxref("SubtleCrypto.generateKey()")}} の引数 `algorithm` として渡すべきオブジェクトを表します。
+[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) の辞書 **`EcKeyGenParams`** は、楕円曲線ベース、すなわちアルゴリズムとして [ECDSA](/ja/docs/Web/API/SubtleCrypto/sign#ecdsa) または [ECDH](/ja/docs/Web/API/SubtleCrypto/deriveKey#ecdh) を指定する鍵ペアを生成する際に {{domxref("SubtleCrypto.generateKey()")}} の引数 `algorithm` として渡すべきオブジェクトを表します。
 
-## プロパティ
+## インスタンスプロパティ
 
 - `name`
   - : 文字列。使用したいアルゴリズムにより、`ECDSA` または `ECDH` に設定するべきです。

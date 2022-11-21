@@ -5,7 +5,7 @@ slug: Web/API/SubtleCrypto/generateKey
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-{{domxref("SubtleCrypto")}} インターフェースの **`generateKey()`** メソッドは、新しい (対称鍵アルゴリズム用の) 鍵または (公開鍵アルゴリズム用の) 鍵ペアを生成します。
+{{domxref("SubtleCrypto")}} インターフェイスの **`generateKey()`** メソッドは、新しい (対称鍵アルゴリズム用の) 鍵または (公開鍵アルゴリズム用の) 鍵ペアを生成します。
 
 ## 構文
 
@@ -19,15 +19,15 @@ generateKey(algorithm, extractable, keyUsages)
 
   - : 生成する鍵の種類を指定し、アルゴリズム固有の追加パラメータを与えるオブジェクト。
 
-    - [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss),
-      [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep):
+    - [RSASSA-PKCS1-v1_5](/ja/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/ja/docs/Web/API/SubtleCrypto/sign#rsa-pss),
+      [RSA-OAEP](/ja/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep):
       {{domxref("RsaHashedKeyGenParams")}} オブジェクトを渡します。
-    - [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa), [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh):
+    - [ECDSA](/ja/docs/Web/API/SubtleCrypto/sign#ecdsa), [ECDH](/ja/docs/Web/API/SubtleCrypto/deriveKey#ecdh):
       {{domxref("EcKeyGenParams")}} オブジェクトを渡します。
-    - [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac):
+    - [HMAC](/ja/docs/Web/API/SubtleCrypto/sign#hmac):
       {{domxref("HmacKeyGenParams")}} オブジェクトを渡します。
-    - [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
+    - [AES-CTR](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
+      [AES-GCM](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), [AES-KW](/ja/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
       {{domxref("AesKeyGenParams")}} オブジェクトを渡します。
 
 - `extractable`

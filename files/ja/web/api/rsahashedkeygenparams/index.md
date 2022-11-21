@@ -5,9 +5,9 @@ slug: Web/API/RsaHashedKeyGenParams
 
 {{ APIRef("Web Crypto API") }}
 
-[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) の辞書 **`RsaHashedKeyGenParams`** は、RSA ベース、すなわちアルゴリズムとして [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep) のいずれかを指定する鍵ペアを生成する際に {{domxref("SubtleCrypto.generateKey()")}} の引数 `algorithm` として渡すべきオブジェクトを表します。
+[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) の辞書 **`RsaHashedKeyGenParams`** は、RSA ベース、すなわちアルゴリズムとして [RSASSA-PKCS1-v1_5](/ja/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/ja/docs/Web/API/SubtleCrypto/sign#rsa-pss), [RSA-OAEP](/ja/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep) のいずれかを指定する鍵ペアを生成する際に {{domxref("SubtleCrypto.generateKey()")}} の引数 `algorithm` として渡すべきオブジェクトを表します。
 
-## プロパティ
+## インスタンスプロパティ
 
 - `name`
   - : 文字列。使用したいアルゴリズムにより、`RSASSA-PKCS1-v1_5`, `RSA-PSS`, `RSA-OAEP` のいずれかに設定するべきです。
@@ -16,7 +16,7 @@ slug: Web/API/RsaHashedKeyGenParams
 - `publicExponent`
   - : {{jsxref("Uint8Array")}}。公開指数です。他の値を用いるいい理由が無い限り、65,537 ( `[0x01, 0x00, 0x01]` ) を指定してください。
 - `hash`
-  - : 用いる[ダイジェスト関数](/en-US/docs/Web/API/SubtleCrypto/digest)の名前を表す文字列です。`SHA-256`, `SHA-384`, `SHA-512` のうちのいずれかを指定できます。
+  - : 用いる[ダイジェスト関数](/ja/docs/Web/API/SubtleCrypto/digest)の名前を表す文字列です。`SHA-256`, `SHA-384`, `SHA-512` のうちのいずれかを指定できます。
 
     > **警告:** 技術的にはここに `SHA-1` を指定することもできますが、SHA-1 は脆弱であるとみなされているため強く非推奨です。
 
