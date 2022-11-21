@@ -1,6 +1,8 @@
 ---
 title: AesKeyGenParams
 slug: Web/API/AesKeyGenParams
+l10n:
+  sourceCommit: 6b8b53f565c67eb22fd78f8dec036c4694ad18d4
 ---
 
 {{ APIRef("Web Crypto API") }}

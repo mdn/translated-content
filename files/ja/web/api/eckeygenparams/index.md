@@ -1,6 +1,8 @@
 ---
 title: EcKeyGenParams
 slug: Web/API/EcKeyGenParams
+l10n:
+  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
 ---
 
 {{ APIRef("Web Crypto API") }}

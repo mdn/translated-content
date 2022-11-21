@@ -1,6 +1,8 @@
 ---
 title: RsaHashedKeyGenParams
 slug: Web/API/RsaHashedKeyGenParams
+l10n:
+  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
 ---
 
 {{ APIRef("Web Crypto API") }}

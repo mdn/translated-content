@@ -1,6 +1,8 @@
 ---
 title: HmacKeyGenParams
 slug: Web/API/HmacKeyGenParams
+l10n:
+  sourceCommit: 066257cb0d23e29e269703450e4b1216a65e3b26
 ---
 
 {{ APIRef("Web Crypto API") }}
