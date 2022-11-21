@@ -42,21 +42,21 @@ slug: Web/API/Window/storage_event
 
 ## 文法
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか、イベントハンドラプロパティを設定します。
+{{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
 
 ```js
 addEventListener('storage', (event) => { });
 onstorage = (event) => { };
 ```
 
-## イベントの型
+## イベント型
 
 {{domxref("Event")}} を継承した {{domxref("StorageEvent")}}
 <br>
 
 {{InheritanceDiagram("StorageEvent")}}
 
-## プロパティ
+## イベントプロパティ
 
 | プロパティ                       | 型                                | 説明                                         |
 | -------------------------------- | --------------------------------- | -------------------------------------------- |
@@ -71,9 +71,9 @@ onstorage = (event) => { };
 | `storageArea` {{readonlyInline}} | {{domxref("Storage")}}            | 変更された `Storage` オブジェクト            |
 
 
-## イベントハンドラエイリアス
+## イベントハンドラーエイリアス
 
-`Window` インターフェイスに加え、イベントハンドラプロパティ `onstorage` は以下の対象でも利用可能です。
+`Window` インターフェイスに加え、イベントハンドラープロパティ `onstorage` は以下の対象でも利用可能です。
 
 - {{domxref("HTMLBodyElement")}}
 - {{domxref("HTMLFrameSetElement")}}
@@ -91,7 +91,7 @@ window.addEventListener('storage', () => {
 });
 ```
 
-`onstorage` イベントハンドラプロパティを用いても、同じことができます。
+`onstorage` イベントハンドラープロパティを用いても、同じことができます。
 
 ```js
 window.onstorage = () => {

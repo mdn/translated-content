@@ -20,7 +20,7 @@ myStorage = localStorage;
 ### 例外
 
 - `SecurityError`
-  - : リクエストがポリシーの決定に反している、またはオリジンが[妥当な scheme/host/port tuple](/ja/docs/Web/Security/Same-origin_policy#Definition_of_an_origin)でない (これは例えば、オリジンが `file:` や `data:` スキームを使うときに起こります)。例えば、ユーザーがブラウザー設定で特定オリジンへのデータ永続化のパーミッションを拒否していることもあります。
+  - : リクエストがポリシーの決定に反している、またはオリジンが[妥当な scheme/host/port tuple](/ja/docs/Web/Security/Same-origin_policy#Definition_of_an_origin) でない (これは例えば、オリジンが `file:` や `data:` スキームを使うときに起こります)。例えば、ユーザーがブラウザー設定で特定オリジンへのデータ永続化のパーミッションを拒否していることもあります。
       なお、ユーザーが Cookie をブロックしている場合、ブラウザーはこれをデータ永続化の拒否と解釈する可能性が高いです。
 
 ## 説明
@@ -73,7 +73,7 @@ localStorage.clear();
 
 ## 関連情報
 
-- [Using the Web Storage API](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Web Storage API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 - {{domxref("LocalStorage")}}
 - {{domxref("SessionStorage")}}
 - {{domxref("Window.sessionStorage")}}
