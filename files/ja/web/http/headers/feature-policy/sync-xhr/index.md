@@ -1,6 +1,8 @@
 ---
 title: 'Feature-Policy: sync-xhr'
 slug: Web/HTTP/Headers/Feature-Policy/sync-xhr
+l10n:
+  sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}{{Non-standard_header}}
