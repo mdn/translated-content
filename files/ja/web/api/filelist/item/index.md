@@ -1,6 +1,8 @@
 ---
 title: FileList.item()
 slug: Web/API/FileList/item
+l10n:
+  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
 ---
 
 {{APIRef("File API")}}
@@ -18,7 +20,7 @@ item(index)
 - `index`
   - : リストから取得するファイルの、0 始まりの添字です。
 
-### 返り値
+### 返値
 
 要求されたファイルを表す [`File`](/ja/docs/Web/API/File) オブジェクトを返します。
 
