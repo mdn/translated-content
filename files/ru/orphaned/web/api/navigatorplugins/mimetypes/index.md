@@ -5,24 +5,24 @@ translation_of: Web/API/NavigatorPlugins/mimeTypes
 original_slug: Web/API/NavigatorPlugins/mimeTypes
 ---
 
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<div> </div>
+## Резюме
 
-<h2 id="Summary">Резюме</h2>
+Возвращает объект {{domxref("MimeTypeArray")}}, который содержит список объектов {{domxref("MimeType")}}, представляющий собой MIME-типы, известные браузеру.
 
-<p>Возвращает объект {{domxref("MimeTypeArray")}}, который содержит список объектов {{domxref("MimeType")}}, представляющий собой MIME-типы, известные браузеру.</p>
+## Синтаксис
 
-<h2 id="Syntax">Синтаксис</h2>
+```
+mimeTypes = navigator.mimeTypes;
+```
 
-<pre class="syntaxbox"><var>mimeTypes</var> = navigator.mimeTypes;
-</pre>
+`mimeTypes` - объект `MimeTypeArray,` который имеет свойство `length`, а также методы `item(index)` и `namedItem(name)`.
 
-<p><code>mimeTypes</code> - объект <code>MimeTypeArray,</code> который имеет свойство <code>length</code>, <span id="result_box" lang="ru"><span>а также</span> методы </span><code>item(index)</code><span lang="ru"><span> и</span> </span><code>namedItem(name)</code><span lang="ru"><span>.</span></span></p>
+## Примеры
 
-<h2 id="Example">Примеры</h2>
-
-<pre class="brush:js">function isJavaPresent() {
+```js
+function isJavaPresent() {
   return 'application/x-java-applet' in navigator.mimeTypes;
 }
 
@@ -34,8 +34,8 @@ function getJavaPluginDescription() {
   }
   return mimetype.enabledPlugin.description;
 }
-</pre>
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<p><em>Не является частью какой-либо спецификации.</em></p>
+_Не является частью какой-либо спецификации._

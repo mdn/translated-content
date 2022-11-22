@@ -9,207 +9,176 @@ translation_of: Web/API/GlobalEventHandlers
 original_slug: Web/API/GlobalEventHandlers
 ---
 
-<div>
-<div>{{ ApiRef("HTML DOM") }}</div>
-</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>The <strong><code>GlobalEventHandlers</code></strong> interface describes the event handlers common to several interfaces like {{domxref("HTMLElement")}}, {{domxref("Document")}}, {{domxref("Window")}}, or {{domxref("WorkerGlobalScope")}} for Web Workers. Each of these interfaces can implement more event handlers.</p>
+The **`GlobalEventHandlers`** interface describes the event handlers common to several interfaces like {{domxref("HTMLElement")}}, {{domxref("Document")}}, {{domxref("Window")}}, or {{domxref("WorkerGlobalScope")}} for Web Workers. Each of these interfaces can implement more event handlers.
 
-<p><code>GlobalEventHandlers</code> is a raw interface and no object of this type can be created.</p>
+`GlobalEventHandlers` is a raw interface and no object of this type can be created.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>The events properties, of the form <code>onXYZ</code>, are defined on the {{domxref("GlobalEventHandlers")}}, and implemented by {{domxref("HTMLElement")}}, {{domxref("Document")}}, {{domxref("Window")}}, and {{domxref("WorkerGlobalScope")}} for Web Workers.</p>
+The events properties, of the form `onXYZ`, are defined on the {{domxref("GlobalEventHandlers")}}, and implemented by {{domxref("HTMLElement")}}, {{domxref("Document")}}, {{domxref("Window")}}, and {{domxref("WorkerGlobalScope")}} for Web Workers.
 
-<dl>
- <dt>{{domxref("GlobalEventHandlers.onabort")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("abort")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onblur")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("blur")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onerror")}}</dt>
- <dd>Is an {{domxref("OnErrorEventHandler")}} representing the code to be called when the {{event("error")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onfocus")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("focus")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.oncancel")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("cancel")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.oncanplay")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("canplay")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.oncanplaythrough")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("canplaythrough")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onchange")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("change")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onclick")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("click")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onclose")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("close")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.oncontextmenu")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("contextmenu")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.oncuechange")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("cuechange")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.ondblclick")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("dblclick")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.ondrag")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("drag")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.ondragend")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("dragend")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.ondragenter")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("dragenter")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.ondragexit")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("dragexit")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.ondragleave")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("dragleave")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.ondragover")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("dragover")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.ondragstart")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("dragstart")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.ondrop")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("drop")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.ondurationchange")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("durationchange")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onemptied")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("emptied")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onended")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("ended")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.oninput")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("input")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.oninvalid")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("invalid")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onkeydown")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("keydown")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onkeypress")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("keypress")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onkeyup")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("keyup")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onload")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("load")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onloadeddata")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("loadeddata")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onloadedmetadata")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("loadedmetadata")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onloadstart")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("loadstart")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmousedown")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mousedown")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmouseenter")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mouseenter")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmouseleave")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mouseleave")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmousemove")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mousemove")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmouseout")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mouseout")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmouseover")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mouseover")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmouseup")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mouseup")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmousewheel")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mousewheel")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandler.onmozfullscreenchange")}} {{non-standard_inline}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("fullscreenchange")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandler.onmozfullscreenerror")}} {{non-standard_inline}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("fullscreenerror")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onpause")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pause")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onplay")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("play")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onplaying")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("playing")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onpointerdown")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerdown")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onpointermove")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointermove")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onpointerup")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerup")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onpointercancel")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointercancel")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onpointerover")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerover")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onpointerout")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerout")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onpointerenter")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerevent")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onpointerleave")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerleave")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onpointerlockchange")}} {{experimental_inline}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerlockchange")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onpointerlockerror")}} {{experimental_inline}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerlockerror")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onprogress")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("progress")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onratechange")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("ratechange")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onreset")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("reset")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onscroll")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("scroll")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onseeked")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("seeked")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onseeking")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("seeking")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onselect")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("select")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onshow")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("show")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onsort")}} {{experimental_inline}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("sort")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onstalled")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("stalled")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onsubmit")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("submit")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onsuspend")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("suspend")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.ontimeupdate")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("timeupdate")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onvolumechange")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("volumechange")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onwaiting")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("waiting")}} event is raised.</dd>
-</dl>
+- {{domxref("GlobalEventHandlers.onabort")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("abort")}} event is raised.
+- {{domxref("GlobalEventHandlers.onblur")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("blur")}} event is raised.
+- {{domxref("GlobalEventHandlers.onerror")}}
+  - : Is an {{domxref("OnErrorEventHandler")}} representing the code to be called when the {{event("error")}} event is raised.
+- {{domxref("GlobalEventHandlers.onfocus")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("focus")}} event is raised.
+- {{domxref("GlobalEventHandlers.oncancel")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("cancel")}} event is raised.
+- {{domxref("GlobalEventHandlers.oncanplay")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("canplay")}} event is raised.
+- {{domxref("GlobalEventHandlers.oncanplaythrough")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("canplaythrough")}} event is raised.
+- {{domxref("GlobalEventHandlers.onchange")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("change")}} event is raised.
+- {{domxref("GlobalEventHandlers.onclick")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("click")}} event is raised.
+- {{domxref("GlobalEventHandlers.onclose")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("close")}} event is raised.
+- {{domxref("GlobalEventHandlers.oncontextmenu")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("contextmenu")}} event is raised.
+- {{domxref("GlobalEventHandlers.oncuechange")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("cuechange")}} event is raised.
+- {{domxref("GlobalEventHandlers.ondblclick")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("dblclick")}} event is raised.
+- {{domxref("GlobalEventHandlers.ondrag")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("drag")}} event is raised.
+- {{domxref("GlobalEventHandlers.ondragend")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("dragend")}} event is raised.
+- {{domxref("GlobalEventHandlers.ondragenter")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("dragenter")}} event is raised.
+- {{domxref("GlobalEventHandlers.ondragexit")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("dragexit")}} event is raised.
+- {{domxref("GlobalEventHandlers.ondragleave")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("dragleave")}} event is raised.
+- {{domxref("GlobalEventHandlers.ondragover")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("dragover")}} event is raised.
+- {{domxref("GlobalEventHandlers.ondragstart")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("dragstart")}} event is raised.
+- {{domxref("GlobalEventHandlers.ondrop")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("drop")}} event is raised.
+- {{domxref("GlobalEventHandlers.ondurationchange")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("durationchange")}} event is raised.
+- {{domxref("GlobalEventHandlers.onemptied")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("emptied")}} event is raised.
+- {{domxref("GlobalEventHandlers.onended")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("ended")}} event is raised.
+- {{domxref("GlobalEventHandlers.oninput")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("input")}} event is raised.
+- {{domxref("GlobalEventHandlers.oninvalid")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("invalid")}} event is raised.
+- {{domxref("GlobalEventHandlers.onkeydown")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("keydown")}} event is raised.
+- {{domxref("GlobalEventHandlers.onkeypress")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("keypress")}} event is raised.
+- {{domxref("GlobalEventHandlers.onkeyup")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("keyup")}} event is raised.
+- {{domxref("GlobalEventHandlers.onload")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("load")}} event is raised.
+- {{domxref("GlobalEventHandlers.onloadeddata")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("loadeddata")}} event is raised.
+- {{domxref("GlobalEventHandlers.onloadedmetadata")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("loadedmetadata")}} event is raised.
+- {{domxref("GlobalEventHandlers.onloadstart")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("loadstart")}} event is raised.
+- {{domxref("GlobalEventHandlers.onmousedown")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mousedown")}} event is raised.
+- {{domxref("GlobalEventHandlers.onmouseenter")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mouseenter")}} event is raised.
+- {{domxref("GlobalEventHandlers.onmouseleave")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mouseleave")}} event is raised.
+- {{domxref("GlobalEventHandlers.onmousemove")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mousemove")}} event is raised.
+- {{domxref("GlobalEventHandlers.onmouseout")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mouseout")}} event is raised.
+- {{domxref("GlobalEventHandlers.onmouseover")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mouseover")}} event is raised.
+- {{domxref("GlobalEventHandlers.onmouseup")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mouseup")}} event is raised.
+- {{domxref("GlobalEventHandlers.onmousewheel")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("mousewheel")}} event is raised.
+- {{domxref("GlobalEventHandler.onmozfullscreenchange")}} {{non-standard_inline}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("fullscreenchange")}} event is raised.
+- {{domxref("GlobalEventHandler.onmozfullscreenerror")}} {{non-standard_inline}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("fullscreenerror")}} event is raised.
+- {{domxref("GlobalEventHandlers.onpause")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pause")}} event is raised.
+- {{domxref("GlobalEventHandlers.onplay")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("play")}} event is raised.
+- {{domxref("GlobalEventHandlers.onplaying")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("playing")}} event is raised.
+- {{domxref("GlobalEventHandlers.onpointerdown")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerdown")}} event is raised.
+- {{domxref("GlobalEventHandlers.onpointermove")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointermove")}} event is raised.
+- {{domxref("GlobalEventHandlers.onpointerup")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerup")}} event is raised.
+- {{domxref("GlobalEventHandlers.onpointercancel")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointercancel")}} event is raised.
+- {{domxref("GlobalEventHandlers.onpointerover")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerover")}} event is raised.
+- {{domxref("GlobalEventHandlers.onpointerout")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerout")}} event is raised.
+- {{domxref("GlobalEventHandlers.onpointerenter")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerevent")}} event is raised.
+- {{domxref("GlobalEventHandlers.onpointerleave")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerleave")}} event is raised.
+- {{domxref("GlobalEventHandlers.onpointerlockchange")}} {{experimental_inline}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerlockchange")}} event is raised.
+- {{domxref("GlobalEventHandlers.onpointerlockerror")}} {{experimental_inline}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pointerlockerror")}} event is raised.
+- {{domxref("GlobalEventHandlers.onprogress")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("progress")}} event is raised.
+- {{domxref("GlobalEventHandlers.onratechange")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("ratechange")}} event is raised.
+- {{domxref("GlobalEventHandlers.onreset")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("reset")}} event is raised.
+- {{domxref("GlobalEventHandlers.onscroll")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("scroll")}} event is raised.
+- {{domxref("GlobalEventHandlers.onseeked")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("seeked")}} event is raised.
+- {{domxref("GlobalEventHandlers.onseeking")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("seeking")}} event is raised.
+- {{domxref("GlobalEventHandlers.onselect")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("select")}} event is raised.
+- {{domxref("GlobalEventHandlers.onshow")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("show")}} event is raised.
+- {{domxref("GlobalEventHandlers.onsort")}} {{experimental_inline}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("sort")}} event is raised.
+- {{domxref("GlobalEventHandlers.onstalled")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("stalled")}} event is raised.
+- {{domxref("GlobalEventHandlers.onsubmit")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("submit")}} event is raised.
+- {{domxref("GlobalEventHandlers.onsuspend")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("suspend")}} event is raised.
+- {{domxref("GlobalEventHandlers.ontimeupdate")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("timeupdate")}} event is raised.
+- {{domxref("GlobalEventHandlers.onvolumechange")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("volumechange")}} event is raised.
+- {{domxref("GlobalEventHandlers.onwaiting")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("waiting")}} event is raised.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface defines no method.</em></p>
+_This interface defines no method._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Pointer Lock', '#extensions-to-the-document-interface', 'Extension of Document')}}</td>
-   <td>{{Spec2('Pointer Lock')}}</td>
-   <td>Adds <code>onpointerlockchange</code> and <code>onpointerlockerror</code> on {{domxref("Document")}}. It is experimentally implemented on <code>GlobalEventHandlers</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#globaleventhandlers', 'GlobalEventHandlers')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change since the latest snapshot, {{SpecName("HTML5.1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', '#globaleventhandlers', 'GlobalEventHandlers')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot of {{SpecName("HTML WHATWG")}}. Added <code>onsort</code> since the {{SpecName("HTML 5")}} snapshot.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "#globaleventhandlers", "GlobalEventHandlers")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot of {{SpecName("HTML WHATWG")}}. Creation of <code>GlobalEventHandlers</code> (properties where on the target before it).</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                | Status                           | Comment                                                                                                                                             |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Pointer Lock', '#extensions-to-the-document-interface', 'Extension of Document')}} | {{Spec2('Pointer Lock')}} | Adds `onpointerlockchange` and `onpointerlockerror` on {{domxref("Document")}}. It is experimentally implemented on `GlobalEventHandlers`. |
+| {{SpecName('HTML WHATWG', '#globaleventhandlers', 'GlobalEventHandlers')}}                         | {{Spec2('HTML WHATWG')}} | No change since the latest snapshot, {{SpecName("HTML5.1")}}.                                                                              |
+| {{SpecName('HTML5.1', '#globaleventhandlers', 'GlobalEventHandlers')}}                                 | {{Spec2('HTML5.1')}}     | Snapshot of {{SpecName("HTML WHATWG")}}. Added `onsort` since the {{SpecName("HTML 5")}} snapshot.                                   |
+| {{SpecName("HTML5 W3C", "#globaleventhandlers", "GlobalEventHandlers")}}                             | {{Spec2('HTML5 W3C')}}     | Snapshot of {{SpecName("HTML WHATWG")}}. Creation of `GlobalEventHandlers` (properties where on the target before it).                     |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Element")}}</li>
-</ul>
+- {{domxref("Element")}}

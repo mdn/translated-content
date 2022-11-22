@@ -8,29 +8,25 @@ translation_of: MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 original_slug: MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 ---
 
-<div>{{MDNSidebar}}{{IncludeSubnav("/ru/docs/MDN")}}</div>
+{{MDNSidebar}}{{IncludeSubnav("/ru/docs/MDN")}}
 
-<p class="summary"><span class="seoSummary">Если вы знаете информацию о браузерной совместимости с веб-функциями — или вы хотите помочь и можете провести некоторые исследования или эксперименты — вы можете помочь обновить MDN <a class="external external-icon" href="https://github.com/mdn/browser-compat-data/" rel="noopener">База данных о браузерной совместимости</a> (BCD).</span></p>
+Если вы знаете информацию о браузерной совместимости с веб-функциями — или вы хотите помочь и можете провести некоторые исследования или эксперименты — вы можете помочь обновить MDN [База данных о браузерной совместимости](https://github.com/mdn/browser-compat-data/) (BCD).
 
-<dl>
- <dt>Где это нужно сделать?</dt>
- <dd>
- <p>Есть несколько способов как вы можете улучшить информацию о браузерной совместимости на MDN:</p>
+- Где это нужно сделать?
 
- <ul>
-  <li>Добавить данные о веб-функциях, ещё не включённых в BCD репозиторий</li>
-  <li>Обновить существующие данные новой информацией на основе либо изменениях в новых версиях браузеров, исправления ошибок в существующих данных, либо обновления о данных функциях</li>
-  <li>Отправить pull request по адресу <a class="external external-icon" href="https://github.com/mdn/browser-compat-data/issues" rel="noopener">BCD проблемы на Github</a>.</li>
- </ul>
- </dd>
- <dt>Что вам нужно знать, чтобы выполнить задачу?</dt>
- <dd>
- <ul>
-  <li>Знакомство с Github</li>
-  <li>Знакомство с JSON</li>
-  <li>Информация о чём-либо или возможность проверить совместимость функций веб-стандартов в различных браузерах. Вы также можете конвертировать "старые" таблицы совместимости в формат JSON.</li>
- </ul>
- </dd>
- <dt>Какие шаги нужно сделать, чтобы выполнить задачу?</dt>
- <dd>Подробнее о том как обновить <a class="glossaryLink" href="https://developer.mozilla.org/ru/docs/Glossary/JSON" title="JSON: The JavaScript Object Notation (JSON) — это формат обмена данными.  Хотя это и не строгое подмножество, JSON очень напоминает подмножество JavaScript синтаксиса. Несмотря на то, что многие языки программирования поддерживаю JSON, JSON особенно для JavaScript приложений, включая веб-сайты и браузерные расширения.">JSON</a> файлы в BCD репозитории на Github, смотри нашу статью <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Structures/Compatibility_tables">таблицы совместимости</a>. Для списка проблем по которым конкретно ищется помощь ищите  <a class="external external-icon" href="https://github.com/mdn/browser-compat-data/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22" rel="noopener">Github проблемы с тегом "Help Wanted"</a>.</dd>
-</dl>
+  - : Есть несколько способов как вы можете улучшить информацию о браузерной совместимости на MDN:
+
+    - Добавить данные о веб-функциях, ещё не включённых в BCD репозиторий
+    - Обновить существующие данные новой информацией на основе либо изменениях в новых версиях браузеров, исправления ошибок в существующих данных, либо обновления о данных функциях
+    - Отправить pull request по адресу [BCD проблемы на Github](https://github.com/mdn/browser-compat-data/issues).
+
+- Что вам нужно знать, чтобы выполнить задачу?
+
+  - :&#x20;
+
+    - Знакомство с Github
+    - Знакомство с JSON
+    - Информация о чём-либо или возможность проверить совместимость функций веб-стандартов в различных браузерах. Вы также можете конвертировать "старые" таблицы совместимости в формат JSON.
+
+- Какие шаги нужно сделать, чтобы выполнить задачу?
+  - : Подробнее о том как обновить [JSON](/ru/docs/Glossary/JSON "JSON: The JavaScript Object Notation (JSON) — это формат обмена данными.  Хотя это и не строгое подмножество, JSON очень напоминает подмножество JavaScript синтаксиса. Несмотря на то, что многие языки программирования поддерживаю JSON, JSON особенно для JavaScript приложений, включая веб-сайты и браузерные расширения.") файлы в BCD репозитории на Github, смотри нашу статью [таблицы совместимости](/ru/docs/MDN/Contribute/Structures/Compatibility_tables). Для списка проблем по которым конкретно ищется помощь ищите [Github проблемы с тегом "Help Wanted"](https://github.com/mdn/browser-compat-data/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22).

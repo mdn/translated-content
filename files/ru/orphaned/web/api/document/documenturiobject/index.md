@@ -6,22 +6,24 @@ tags:
 translation_of: Web/API/Document/documentURIObject
 original_slug: Web/API/Document/documentURIObject
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p><code><strong>Document.documentURIObject</strong></code> свойство только для чтения возвращает <code>nsIURI</code> объект представляющий URI <a href="/en-US/docs/">документа</a>.</p>
+**`Document.documentURIObject`** свойство только для чтения возвращает `nsIURI` объект представляющий URI [документа](/ru/docs/).
 
-<p>Это работает только для привилегированных  (UniversalXPConnect) скриптов, включая расширенный код. Для веб содержания это свойство не имеет какого-либо специального значения и может быть использовано так же как и любое другое обычное свойство.</p>
+Это работает только для привилегированных (UniversalXPConnect) скриптов, включая расширенный код. Для веб содержания это свойство не имеет какого-либо специального значения и может быть использовано так же как и любое другое обычное свойство.
 
-<p>Привилегированный код должен быть осторожным не пытаясь получить или установить это свойство на объект с незапакованным  содержанием (e.g. on a <code>wrappedJSObject</code> of an <code><a href="/en/XPCNativeWrapper" title="en/XPCNativeWrapper">XPCNativeWrapper</a></code>). Смотрите {{ Bug(324464) }}' комментарии для детализации.</p>
+Привилегированный код должен быть осторожным не пытаясь получить или установить это свойство на объект с незапакованным содержанием (e.g. on a `wrappedJSObject` of an [`XPCNativeWrapper`](/en/XPCNativeWrapper "en/XPCNativeWrapper")). Смотрите {{ Bug(324464) }}' комментарии для детализации.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">var <em>uri</em> = <em>doc</em>.documentURIObject;
-</pre>
+```
+var uri = doc.documentURIObject;
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="eval">// Проверка является ли этот URI scheme текущей вкладки Firefox - 'http',
+```
+// Проверка является ли этот URI scheme текущей вкладки Firefox - 'http',
 // предполагая что этот код выполняется в контексте  browser.xul
 var uriObj = content.document.documentURIObject;
 var uriPort = uriObj.port;
@@ -29,8 +31,8 @@ var uriPort = uriObj.port;
 if (uriObj.schemeIs('http')) {
   ...
 }
-</pre>
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<p>Не является частью спецификации.</p>
+Не является частью спецификации.

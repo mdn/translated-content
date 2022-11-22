@@ -5,38 +5,25 @@ translation_of: Web/API/RenderingContext
 original_slug: Web/API/RenderingContext
 ---
 
-<p>{{APIRef("Canvas API")}}</p>
+{{APIRef("Canvas API")}}
 
-<p><span class="seoSummary"><code><strong>RenderingContext</strong></code> - это WebIDL <code>typedef</code> который ссылается на один из интерфейсов, представляющие собой графический контекст внутри элемента <code>&lt;canvas&gt;</code>: </span>{{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}},<span class="seoSummary"> а так же </span>{{domxref("WebGL2RenderingContext")}}</p>
+**`RenderingContext`** - это WebIDL `typedef` который ссылается на один из интерфейсов, представляющие собой графический контекст внутри элемента `<canvas>`: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}}, а так же {{domxref("WebGL2RenderingContext")}}
 
-<p>Используя <code>RenderingContext</code>, методы и поля которого могут использоваться любыми из этих интерфейсов могут быть перезаписаны в более простой форме; с тех пор, как <code>&lt;canvas&gt;</code> поддерживает несколько систем прорисовки контекста, это полезная форма спецификации, в буквальном смысле обозначающая "один из интерфейсов"</p>
+Используя `RenderingContext`, методы и поля которого могут использоваться любыми из этих интерфейсов могут быть перезаписаны в более простой форме; с тех пор, как `<canvas>` поддерживает несколько систем прорисовки контекста, это полезная форма спецификации, в буквальном смысле обозначающая "один из интерфейсов"
 
-<p>В любом случае, <code>RenderingContext</code> - просто общее название и оно не является тем, что в основном используют веб-разработчики. Не существует интерфейса <code>RenderingContext</code> как такого и нет классов, наследуемых от него.</p>
+В любом случае, `RenderingContext` - просто общее название и оно не является тем, что в основном используют веб-разработчики. Не существует интерфейса `RenderingContext` как такого и нет классов, наследуемых от него.
 
-<p>Для получения <code>RenderingContext</code> из веб-элемента <code>&lt;canvas&gt;</code> используется метод {{domxref("HTMLCanvasElement.getContext()")}}, возвращающий "один из интерфейсов"</p>
+Для получения `RenderingContext` из веб-элемента `<canvas>` используется метод {{domxref("HTMLCanvasElement.getContext()")}}, возвращающий "один из интерфейсов"
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#renderingcontext", "RenderingContext")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Внутреннее объявление.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                 | Статус                           | Комментарий            |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
+| {{SpecName('HTML WHATWG', "scripting.html#renderingcontext", "RenderingContext")}} | {{Spec2('HTML WHATWG')}} | Внутреннее объявление. |
 
-<h2 id="Связанное_с_этим">Связанное с этим</h2>
+## Связанное с этим
 
-<ul>
- <li>Интерфейсы, объединяемые <code>RenderingContext</code>: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}} и {{domxref("WebGL2RenderingContext")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Graphics">Graphics on the Web</a></li>
- <li><a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a> и {{HTMLElement("canvas")}}</li>
- <li><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a></li>
-</ul>
+- Интерфейсы, объединяемые `RenderingContext`: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}} и {{domxref("WebGL2RenderingContext")}}
+- [Graphics on the Web](/ru/docs/Web/Guide/Graphics)
+- [Canvas API](/ru/docs/Web/API/Canvas_API) и {{HTMLElement("canvas")}}
+- [WebGL](/ru/docs/Web/API/WebGL_API)

@@ -10,31 +10,28 @@ translation_of: Web/API/File/getAsDataURL
 original_slug: Web/API/File/getAsDataURL
 ---
 
-<div>{{APIRef("File API") }}</div>
+{{APIRef("File API") }} {{non-standard_header}} {{deprecated_header(7.0)}}
 
-<p>{{non-standard_header}}</p>
+## Описание
 
-<p>{{deprecated_header(7.0)}}</p>
+Метод getAsDataURL возвращает содержимое файла закодированное в формате [`data:`](/ru/docs/data_URIs) URL
 
-<h2 id="Описание">Описание</h2>
+> **Примечание:** Этот метод является устаревшим; предпочтительнее использовать {{domxref ("FileReader")}} Метод {{domxref ("FileReader.readAsDataURL", "readAsDataURL ()")}} вместо этого.
 
-<p>Метод getAsDataURL возвращает содержимое файла закодированное в формате <a href="/en-US/docs/data_URIs"><code>data:</code></a> URL</p>
+## Синтаксис
 
-<div class="note">
-<p><strong>Примечание:</strong> Этот метод является устаревшим; предпочтительнее использовать {{domxref ("FileReader")}} Метод {{domxref ("FileReader.readAsDataURL", "readAsDataURL ()")}} вместо этого.</p>
-</div>
+```
+var url = instanceOfFile.getAsDataURL();
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Возвращает
 
-<pre>var url = <em>instanceOfFile</em>.getAsDataURL();</pre>
+Строку в формате [`data:`](/ru/docs/data_URIs) URL
 
-<h3 id="Возвращает">Возвращает</h3>
+## Пример
 
-<p>Строку в формате <a href="/en-US/docs/data_URIs"><code>data:</code></a> URL</p>
-
-<h2 id="Пример">Пример</h2>
-
-<pre class="brush: js">// fileInput is a HTMLInputElement: &lt;input type="file" id="myfileinput" multiple&gt;
+```js
+// fileInput is a HTMLInputElement: <input type="file" id="myfileinput" multiple>
 var fileInput = document.getElementById("myfileinput");
 
 // files is a FileList object (similar to NodeList)
@@ -43,24 +40,22 @@ var files = fileInput.files;
 // array with acceptable file types
 var accept = ["image/png"];
 
-// img is a HTMLImgElement: &lt;img id="myimg"&gt;
+// img is a HTMLImgElement: <img id="myimg">
 var img = document.getElementById("myimg");
 
 // if we accept the first selected file type
-if (accept.indexOf(files[0].mediaType) &gt; -1) {
+if (accept.indexOf(files[0].mediaType) > -1) {
   // display the image
-  // same as &lt;img src="data:image/png,&lt;imagedata&gt;"&gt;
+  // same as <img src="data:image/png,<imagedata>">
   img.src = files[0].getAsDataURL();
 }
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
-<p>Не является частью какой-либо спецификации</p>
+Не является частью какой-либо спецификации
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("File")}}</li>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("File")}}
+- {{domxref("FileReader")}}

@@ -5,26 +5,28 @@ translation_of: Web/API/NavigatorPlugins/plugins
 original_slug: Web/API/NavigatorPlugins/plugins
 ---
 
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>Возвращает объект {{domxref("PluginArray")}}, список плагинов установленных в приложении.</p>
+Возвращает объект {{domxref("PluginArray")}}, список плагинов установленных в приложении.
 
-<div class="note">Приложения, которые должны проверять наличие плагинов у браузера должны запросить navigator.plugins или {{domxref("navigator.mimeTypes")}} с точным названием плагина, а не перебирать массив navigator.plugins сравнения имя каждого плагина. Это изменение конфиденциальности не отключает все плагины; оно просто скрывает некоторые имена плагинов от перебора.</div>
+> **Примечание:** Приложения, которые должны проверять наличие плагинов у браузера должны запросить navigator.plugins или {{domxref("navigator.mimeTypes")}} с точным названием плагина, а не перебирать массив navigator.plugins сравнения имя каждого плагина. Это изменение конфиденциальности не отключает все плагины; оно просто скрывает некоторые имена плагинов от перебора.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <var>plugins</var> = navigator.plugins;
-</pre>
+```
+var plugins = navigator.plugins;
+```
 
-<p><code>plugins</code> используется для доступа к объекту {{domxref("Plugin")}} или по имени, или как элемент массива..</p>
+`plugins` используется для доступа к объекту {{domxref("Plugin")}} или по имени, или как элемент массива..
 
-<p>Возвращаемое значение не массив JavaScript, но оно имеет свойство размера и поддерживает доступ к индивидуальным элементам с использованием квадратных скобок (<code>plugins{{mediawiki.external(2)}}</code>), <span id="result_box" lang="ru"><span class="hps">а также через</span> <span class="hps">пункт</span> <span class="hps">(индекс</span><span>)</span> <span class="hps">и</span> <span class="hps">namedItem</span> <span class="hps">("Name"</span><span>)</span> <span class="hps">методы.</span></span></p>
+Возвращаемое значение не массив JavaScript, но оно имеет свойство размера и поддерживает доступ к индивидуальным элементам с использованием квадратных скобок (`plugins{{mediawiki.external(2)}}`), а также через пункт (индекс) и namedItem ("Name") методы.
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<p><span id="result_box" lang="ru"><span>Следующий пример</span> <span class="hps">функции</span> <span class="hps">возвращает версию</span> <span class="hps">Flash.</span></span></p>
+Следующий пример функции возвращает версию Flash.
 
-<pre>function getFlashVersion() {
+```
+function getFlashVersion() {
   var flash = navigator.plugins['Shockwave Flash'];
   if (flash === undefined) {
     // flash is not present
@@ -32,18 +34,19 @@ original_slug: Web/API/NavigatorPlugins/plugins
   }
   return flash.version;
 }
-</pre>
+```
 
-<p><span id="result_box" lang="ru"><span>Следующий пример</span> <span class="hps">выводит</span> <span class="hps">информацию</span> <span class="hps">об установленном</span>(ых) <span class="hps">плагине</span> (<span>ах) для</span> <span class="hps">документа</span> <span class="hps">высокого уровня.</span></span></p>
+Следующий пример выводит информацию об установленном(ых) плагине (ах) для документа высокого уровня.
 
-<pre class="brush:js">var L = navigator.plugins.length;
+```js
+var L = navigator.plugins.length;
 
 document.write(
-  L.toString() + " Plugin(s)&lt;br&gt;" +
-  "Name | Filename | description&lt;br&gt;"
+  L.toString() + " Plugin(s)<br>" +
+  "Name | Filename | description<br>"
 );
 
-for(var i = 0; i &lt; L; i++) {
+for(var i = 0; i < L; i++) {
   document.write(
     navigator.plugins[i].name +
     " | " +
@@ -52,14 +55,15 @@ for(var i = 0; i &lt; L; i++) {
     navigator.plugins[i].description +
     " | " +
     navigator.plugins[i].version +
-    "&lt;br&gt;"
+    "<br>"
   );
-}</pre>
+}
+```
 
-<h2 id="Notes">Примечание</h2>
+## Примечание
 
-<p>{{domxref("Plugin")}} <span id="result_box" lang="ru"><span class="hps">объект, предоставляет</span> <span class="hps">небольшой</span> <span class="hps">интерфейс</span> <span class="hps">для получения</span> <span class="hps">информации</span> <span class="hps">о различных</span> <span class="hps">плагинах</span><span>, установленных в</span> <span class="hps">вашем браузере</span><span>. Список плагинов также доступен если ввести </span></span><code>about:plugins</code> в адресную строку браузера.</p>
+{{domxref("Plugin")}} объект, предоставляет небольшой интерфейс для получения информации о различных плагинах, установленных в вашем браузере. Список плагинов также доступен если ввести `about:plugins` в адресную строку браузера.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<p><em>Не определено ни к какой спецификации.</em></p>
+_Не определено ни к какой спецификации._

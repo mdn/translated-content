@@ -5,50 +5,35 @@ translation_of: Web/API/NavigatorID/taintEnabled
 original_slug: Web/API/NavigatorID/taintEnabled
 ---
 
-<div>{{APIRef("HTML DOM")}}{{deprecated_header}}</div>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>Метод<code><strong> </strong></code><strong><code>NavigatorID.taintEnabled()</code></strong> всегда возвращает <code>false</code>.</p>
+Метод **`NavigatorID.taintEnabled()`** всегда возвращает `false`.
 
-<div class="note"><span id="result_box" lang="ru"><strong><span class="hps">Примечание</span><span>:</span></strong> </span>Taint <span lang="ru"><span class="hps">был</span> <span class="hps">метод защиты</span> <span class="hps">используемый в</span> <span class="hps">JavaScript 1.2</span><span>.</span> <span class="hps">Он давно</span> <span class="hps">был удалён</span><span>;</span> <span class="hps">этот метод</span> <span class="hps">остаётся</span> <span class="hps">только</span> <span class="hps">для поддержания</span> <span class="hps">совместимости</span> <span class="hps">с очень</span> <span class="hps">старыми скриптами</span><span>.</span></span></div>
+> **Примечание:** Taint был метод защиты используемый в JavaScript 1.2. Он давно был удалён; этот метод остаётся только для поддержания совместимости с очень старыми скриптами.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em><var>result</var></em> = window.navigator.taintEnabled()
-</pre>
+```
+result = window.navigator.taintEnabled()
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">alert(window.navigator.taintEnabled());
+```js
+alert(window.navigator.taintEnabled());
 // returns false
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-navigator-taintEnabled', 'NavigatorID.taintEnabled')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Изначальное описание</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                                             | Статус                           | Комментарий          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('HTML WHATWG', 'webappapis.html#dom-navigator-taintEnabled', 'NavigatorID.taintEnabled')}} | {{Spec2('HTML WHATWG')}} | Изначальное описание |
 
-<h2 id="Доступность_в_браузере">Доступность в браузере</h2>
+## Доступность в браузере
 
+{{Compat("api.NavigatorID.taintEnabled")}}
 
+## Смотрите также
 
-<p>{{Compat("api.NavigatorID.taintEnabled")}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("NavigatorID")}}</li>
-</ul>
+- {{domxref("NavigatorID")}}

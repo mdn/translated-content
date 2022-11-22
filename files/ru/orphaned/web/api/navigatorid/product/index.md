@@ -5,66 +5,53 @@ translation_of: Web/API/NavigatorID/product
 original_slug: Web/API/NavigatorID/product
 ---
 
-<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>Свойство <strong><code>NavigatorID.product </code></strong>возвращает имя продукта текущего браузера.</p>
+Свойство **`NavigatorID.product`** возвращает имя продукта текущего браузера.
 
-<div class="note"><strong>Примечание:</strong> Не полагайтесь на это свойство для получения настоящего имени продукта. Все браузеры возвращает "Gecko" в качестве значения этого свойства.</div>
+> **Примечание:** Не полагайтесь на это свойство для получения настоящего имени продукта. Все браузеры возвращает "Gecko" в качестве значения этого свойства.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>productName</em> = window.navigator.product
-</pre>
+```
+productName = window.navigator.product
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>{{domxref("DOMString")}}.</p>
+{{domxref("DOMString")}}.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;script&gt;
+```html
+<script>
 function prod() {
   dt = document.getElementById("d");
   dt.innerHTML = window.navigator.product;
 }
-&lt;/script&gt;
+</script>
 
-&lt;button onclick="prod();"&gt;product&lt;/button&gt;
-&lt;div id="d"&gt; &lt;/div&gt;
-&lt;!-- вернёт "Gecko" --&gt;
-</pre>
+<button onclick="prod();">product</button>
+<div id="d"> </div>
+<!-- вернёт "Gecko" -->
+```
 
-<h2 id="Notes">Примечание</h2>
+## Примечание
 
-<p>В браузерах на основе Gecko  <code>product</code> соответствует части полной строки агента пользователя которая идёт первой после платформы. В пользовательском агенте Netscape 6.1, к примеру, <code>product</code> это "Gecko" а полная строка пользовательского агента будет: <code>Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape6/6.1</code></p>
+В браузерах на основе Gecko `product` соответствует части полной строки агента пользователя которая идёт первой после платформы. В пользовательском агенте Netscape 6.1, к примеру, `product` это "Gecko" а полная строка пользовательского агента будет: `Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape6/6.1`
 
-<p>В браузере на основе WebKit <code>product </code>вернёт "<code>Gecko</code>", хотя часть полной строки пользовательского агента непосредственно после после платформы на самом деле следующая: <code>(KHTML, like Gecko)</code>.</p>
+В браузере на основе WebKit `product` вернёт "`Gecko`", хотя часть полной строки пользовательского агента непосредственно после после платформы на самом деле следующая: `(KHTML, like Gecko)`.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-navigator-product', 'NavigatorID.product')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Действующее описание</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                         | Статус                           | Комментарий          |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('HTML WHATWG', '#dom-navigator-product', 'NavigatorID.product')}} | {{Spec2('HTML WHATWG')}} | Действующее описание |
 
-<h2 id="Доступность_в_браузере">Доступность в браузере</h2>
+## Доступность в браузере
 
-<p>{{Compat("api.NavigatorID.product")}}</p>
+{{Compat("api.NavigatorID.product")}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("NavigatorID.appCodeName")}}</li>
-</ul>
+- {{domxref("NavigatorID.appCodeName")}}

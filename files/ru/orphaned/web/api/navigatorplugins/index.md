@@ -5,55 +5,36 @@ translation_of: Web/API/NavigatorPlugins
 original_slug: Web/API/NavigatorPlugins
 ---
 
-<p>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</p>
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-<p><span id="result_box" lang="ru"><span>Интерфейс</span> <strong><code>NavigatorPlugins</code></strong> <span class="hps">содержит методы и</span> <span class="hps">свойства, связанные</span> <span class="hps">с</span> <span class="hps">установленными плагинами</span> <span class="hps">в браузере</span><span>.</span></span></p>
+Интерфейс **`NavigatorPlugins`** содержит методы и свойства, связанные с установленными плагинами в браузере.
 
-<p><code>NavigatorPlugins</code> не содержит в себе объектов другого типа, но другие интерфейсы, такие как {{domxref("Navigator")}} реализуют его<code>.</code></p>
+`NavigatorPlugins` не содержит в себе объектов другого типа, но другие интерфейсы, такие как {{domxref("Navigator")}} реализуют его`.`
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Возвращает {{domxref("MimeTypeArray")}} листинг MIME типов поддерживаемые браузером.</dd>
- <dt>{{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Возвращает листинг плагинов {{domxref("PluginArray")}}, установленных в браузере.</dd>
-</dl>
+- {{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}{{experimental_inline}}
+  - : Возвращает {{domxref("MimeTypeArray")}} листинг MIME типов поддерживаемые браузером.
+- {{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}{{experimental_inline}}
+  - : Возвращает листинг плагинов {{domxref("PluginArray")}}, установленных в браузере.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p>Интерфейс <em><code>NavigatorPlugins</code></em> не наследует никаких методов.</p>
+Интерфейс _`NavigatorPlugins`_ не наследует никаких методов.
 
-<dl>
- <dt>{{domxref("NavigatorPlugins.javaEnabled")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Возвращает флаг {{domxref("Boolean")}} показывающий включён ли java в браузере или нет.</dd>
-</dl>
+- {{domxref("NavigatorPlugins.javaEnabled")}} {{readonlyInline}}{{experimental_inline}}
+  - : Возвращает флаг {{domxref("Boolean")}} показывающий включён ли java в браузере или нет.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#navigatorplugins', 'NavigatorPlugins')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Начальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                 | Статус                           | Комментарий           |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
+| {{SpecName('HTML WHATWG', '#navigatorplugins', 'NavigatorPlugins')}} | {{Spec2('HTML WHATWG')}} | Начальное определение |
 
-<h2 id="Доступность_в_браузерах">Доступность в браузерах</h2>
+## Доступность в браузерах
 
-<p>{{Compat("api.NavigatorPlugins")}}</p>
+{{Compat("api.NavigatorPlugins")}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Интерфейс {{domxref("Navigator")}} реализующий его.</li>
-</ul>
+- Интерфейс {{domxref("Navigator")}} реализующий его.

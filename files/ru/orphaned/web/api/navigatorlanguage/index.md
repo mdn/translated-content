@@ -5,57 +5,36 @@ translation_of: Web/API/NavigatorLanguage
 original_slug: Web/API/NavigatorLanguage
 ---
 
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><span id="result_box" lang="ru"><strong><code><span class="hps">NavigatorLanguage</span></code></strong> <span class="hps">содержит методы и</span> <span class="hps">свойства, связанные</span> <span class="hps">с языком</span> <span class="hps">навигатора</span><span>.</span></span></p>
+**`NavigatorLanguage`** содержит методы и свойства, связанные с языком навигатора.
 
-<p>В нем нет объекта типа <code>NavigatorLanguage</code>, но другие интерфейсы, такие как {{domxref("Navigator")}} или {{domxref("WorkerNavigator")}}, реализуют его.</p>
+В нем нет объекта типа `NavigatorLanguage`, но другие интерфейсы, такие как {{domxref("Navigator")}} или {{domxref("WorkerNavigator")}}, реализуют его.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Интерфейс<code> NavigatorLanguage</code></em><em> не наследует других свойств.</em></p>
+_Интерфейс `NavigatorLanguage` не наследует других свойств._
 
-<dl>
- <dt>{{domxref("NavigatorLanguage.language")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("DOMString")}} представляющий собой предпочитаемый язык пользователя, как правило, язык пользовательского интерфейса браузера.</dd>
- <dt>{{domxref("NavigatorLanguage.languages")}} {{readonlyInline}}</dt>
- <dd>Возвращает массив {{domxref("DOMString")}} представляющий собой языки известные пользователю в порядке предпочтения.</dd>
-</dl>
+- {{domxref("NavigatorLanguage.language")}} {{readonlyInline}}
+  - : Возвращает {{domxref("DOMString")}} представляющий собой предпочитаемый язык пользователя, как правило, язык пользовательского интерфейса браузера.
+- {{domxref("NavigatorLanguage.languages")}} {{readonlyInline}}
+  - : Возвращает массив {{domxref("DOMString")}} представляющий собой языки известные пользователю в порядке предпочтения.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Интерфейс </em><em><code>NavigatorLanguage</code></em><em> ничего не реализовывает и ничего не наследует.</em></p>
+_Интерфейс_ _`NavigatorLanguage`_ _ничего не реализовывает и ничего не наследует._
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#navigatorlanguage', 'NavigatorLanguage')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Со времени последнего снимка {{SpecName('HTML5 W3C')}}, языковое свойство было добавлено.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', '#navigatorlanguage', 'NavigatorLanguage')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Первоначальная спецификация; снимок ранней версии {{SpecName('HTML WHATWG')}}.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                 | Статус                           | Комментарий                                                                                      |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------ |
+| {{SpecName('HTML WHATWG', '#navigatorlanguage', 'NavigatorLanguage')}} | {{Spec2('HTML WHATWG')}} | Со времени последнего снимка {{SpecName('HTML5 W3C')}}, языковое свойство было добавлено. |
+| {{SpecName('HTML5 W3C', '#navigatorlanguage', 'NavigatorLanguage')}} | {{Spec2('HTML5 W3C')}}     | Первоначальная спецификация; снимок ранней версии {{SpecName('HTML WHATWG')}}.          |
 
-<h2 id="Доступность_в_браузерах">Доступность в браузерах</h2>
+## Доступность в браузерах
 
-<p>{{Compat("api.NavigatorLanguage")}}</p>
+{{Compat("api.NavigatorLanguage")}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Интерфейс {{domxref("Navigator")}} который реализует его.</li>
-</ul>
+- Интерфейс {{domxref("Navigator")}} который реализует его.

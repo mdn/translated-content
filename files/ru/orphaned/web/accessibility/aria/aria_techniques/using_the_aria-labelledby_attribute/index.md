@@ -6,138 +6,141 @@ translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
 ---
 
-<h3 id="Описание">Описание</h3>
+### Описание
 
-<p><span class="seoSummary">Атрибут <a class="external" href="https://www.w3.org/TR/wai-aria/#aria-labelledby" rel="external"><code>aria-labelledby</code></a> содержит идентификаторы (атрибут id) меток для таких объектов как элементы ввода (input), виджеты, группы. Атрибут создаёт связь между объектами и их метками. Вспомогательные технологии, такие как средства чтения экрана, используют этот атрибут чтобы собирать все метки в каталог документа, из которого пользователь может перемещаться между ними. Без идентификатора (атрибута id) вспомогательные технологии не могут собрать данные объекты в каталог.</span></p>
+Атрибут [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) содержит идентификаторы (атрибут id) меток для таких объектов как элементы ввода (input), виджеты, группы. Атрибут создаёт связь между объектами и их метками. Вспомогательные технологии, такие как средства чтения экрана, используют этот атрибут чтобы собирать все метки в каталог документа, из которого пользователь может перемещаться между ними. Без идентификатора (атрибута id) вспомогательные технологии не могут собрать данные объекты в каталог.
 
-<p><code>aria-labelledby</code> очень похож на <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a>: Метка (label) предоставляет основную информацию об объекте, в то время как описание (description) даёт более полную/детальную информацию которая может понадобится пользователю.</p>
+`aria-labelledby` очень похож на [aria-describedby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute"): Метка (label) предоставляет основную информацию об объекте, в то время как описание (description) даёт более полную/детальную информацию которая может понадобится пользователю.
 
-<p><span class="tlid-translation translation"><span title="">В дополнение к элементам формы вы можете использовать атрибут <code>aria-labelledby</code>, чтобы связать статический текст с виджетами, группами элементов, панелями, областями, которые имеют заголовок, определения и другие типы объектов</span></span>. Ниже, в разделе <a href="#примеры">Примеры</a> приведенны примеры и информация как использовать атрибут в данном виде.</p>
+В дополнение к элементам формы вы можете использовать атрибут `aria-labelledby`, чтобы связать статический текст с виджетами, группами элементов, панелями, областями, которые имеют заголовок, определения и другие типы объектов. Ниже, в разделе [Примеры](#примеры) приведенны примеры и информация как использовать атрибут в данном виде.
 
-<p>Чтобы повысить совместимость с <a href="https://ru.wikipedia.org/wiki/User_agent">клиентскими приложениями </a>которые не поддерживают ARIA атрибуты, вы можете использовать <code>aria-labelledby</code> вместе элементом {{ HTMLElement("label") }} (используя <code>for</code> атрибут)</p>
+Чтобы повысить совместимость с [клиентскими приложениями](https://ru.wikipedia.org/wiki/User_agent) которые не поддерживают ARIA атрибуты, вы можете использовать `aria-labelledby` вместе элементом {{ HTMLElement("label") }} (используя `for` атрибут)
 
-<p>Этот атрибут может быть использован в любом типичном HTML-элементе формы, он не ограничен элементами которые имеют атрибут ARIA <code>role</code></p>
+Этот атрибут может быть использован в любом типичном HTML-элементе формы, он не ограничен элементами которые имеют атрибут ARIA `role`
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Список идентификаторов (id) разделённых пробелом</p>
+Список идентификаторов (id) разделённых пробелом
 
-<h3 id="Возможные_эффекты_в_клиентских_приложениях_и_вспомогательных_технологиях">Возможные эффекты в клиентских приложениях и вспомогательных технологиях</h3>
+### Возможные эффекты в клиентских приложениях и вспомогательных технологиях
 
-<p>Когда клиентское приложение вычисляют доступное имя элемента который имеет и атрибут <code>aria-labelledby</code>, и атрибут <code><a href="https://developer.mozilla.org/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a></code>, они отдадут приоритет <code>aria-labelledby</code></p>
+Когда клиентское приложение вычисляют доступное имя элемента который имеет и атрибут `aria-labelledby`, и атрибут [`aria-label`](https://developer.mozilla.org/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute), они отдадут приоритет `aria-labelledby`
 
-<h3 id="Примеры">Примеры</h3>
+### Примеры
 
-<h4 id="Example_1_Multiple_Labels">Example 1: Multiple Labels</h4>
+#### Example 1: Multiple Labels
 
-<p>In the example below, each input field is labelled by both its own individual label and by the label for the group:</p>
+In the example below, each input field is labelled by both its own individual label and by the label for the group:
 
-<pre class="brush: html">&lt;div id="billing"&gt;Billing&lt;/div&gt;
+```html
+<div id="billing">Billing</div>
 
-&lt;div&gt;
-    &lt;div id="name"&gt;Name&lt;/div&gt;
-    &lt;input type="text" aria-labelledby="billing name"/&gt;
-&lt;/div&gt;
-&lt;div&gt;
-    &lt;div id="address"&gt;Address&lt;/div&gt;
-    &lt;input type="text" aria-labelledby="billing address"/&gt;
-&lt;/div&gt;
-</pre>
+<div>
+    <div id="name">Name</div>
+    <input type="text" aria-labelledby="billing name"/>
+</div>
+<div>
+    <div id="address">Address</div>
+    <input type="text" aria-labelledby="billing address"/>
+</div>
+```
 
-<h4 id="Example_2_Associating_Headings_With_Regions">Example 2: Associating Headings With Regions</h4>
+#### Example 2: Associating Headings With Regions
 
-<p>In the example below, header elements are associated with the content they head. Note that the region being referenced is the region that <em>contains</em> the header.</p>
+In the example below, header elements are associated with the content they head. Note that the region being referenced is the region that _contains_ the header.
 
-<pre class="brush: html">&lt;div role="main" aria-labelledby="foo"&gt;
-   &lt;h1 id="foo"&gt;Wild fires spread across the San Diego Hills&lt;/h1&gt;
+```html
+<div role="main" aria-labelledby="foo">
+   <h1 id="foo">Wild fires spread across the San Diego Hills</h1>
    Strong winds expand fires ignited by high temperatures ...
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-<h4 id="Example_3_Radio_Groups">Example 3: Radio Groups</h4>
+#### Example 3: Radio Groups
 
-<p>In the example below, the container of a <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role" title="Using the radio role">radiogroup</a> is associated with its label using the <code>aria-labelledby</code> attribute:</p>
+In the example below, the container of a [radiogroup](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role "Using the radio role") is associated with its label using the `aria-labelledby` attribute:
 
-<pre class="brush: html">&lt;div id="radio_label"&gt;My radio label&lt;/div&gt;
-&lt;ul role="radiogroup" aria-labelledby="radio_label"&gt;
-    &lt;li role="radio"&gt;Item #1&lt;/li&gt;
-    &lt;li role="radio"&gt;Item #2&lt;/li&gt;
-    &lt;li role="radio"&gt;Item #3&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<div id="radio_label">My radio label</div>
+<ul role="radiogroup" aria-labelledby="radio_label">
+    <li role="radio">Item #1</li>
+    <li role="radio">Item #2</li>
+    <li role="radio">Item #3</li>
+</ul>
+```
 
-<h4 id="Example_4_Dialog_Label">Example 4: Dialog Label</h4>
+#### Example 4: Dialog Label
 
-<p>In the example below, the header element that labels the dialog is referred to by the <code>aria-labelledby</code> attribute:</p>
+In the example below, the header element that labels the dialog is referred to by the `aria-labelledby` attribute:
 
-<pre class="brush: html">&lt;div role="dialog" aria-labelledby="dialogheader"&gt;
-    &lt;h2 id="dialogheader"&gt;Choose a File&lt;/h2&gt;
+```html
+<div role="dialog" aria-labelledby="dialogheader">
+    <h2 id="dialogheader">Choose a File</h2>
     ... Dialog contents
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-<h4 id="Example_5_Inline_Definition">Example 5: Inline Definition</h4>
+#### Example 5: Inline Definition
 
-<p>In the example below, the definition of a term that is described in the natural flow of the narrative is associated with the term itself using the <strong>aria-labelledby</strong> attribute:</p>
+In the example below, the definition of a term that is described in the natural flow of the narrative is associated with the term itself using the **aria-labelledby** attribute:
 
-<pre class="brush: html">&lt;p&gt;The doctor explained it had been a &lt;dfn id="placebo"&gt;placebo&lt;/dfn&gt;, or &lt;span role="definition" aria-labelledby="placebo"&gt;
-an inert preparation prescribed more for the mental relief of the patient than for its actual effect on a disorder.&lt;/span&gt;
-&lt;/p&gt;
-</pre>
+```html
+<p>The doctor explained it had been a <dfn id="placebo">placebo</dfn>, or <span role="definition" aria-labelledby="placebo">
+an inert preparation prescribed more for the mental relief of the patient than for its actual effect on a disorder.</span>
+</p>
+```
 
-<h4 id="Example_6_Definition_Lists">Example 6: Definition Lists</h4>
+#### Example 6: Definition Lists
 
-<p>In the example below, the definitions in a formal definition list are associated with the terms they define using the <code>aria-labelledby</code> attribute:</p>
+In the example below, the definitions in a formal definition list are associated with the terms they define using the `aria-labelledby` attribute:
 
-<pre class="brush: html">&lt;dl&gt;
-    &lt;dt id="anathema"&gt;anathema&lt;/dt&gt;
-    &lt;dd role="definition" aria-labelledby="anathema"&gt;a ban or curse solemnly pronounced by ecclesiastical authority
-                                                     and accompanied by excommunication&lt;/dd&gt;
-    &lt;dd role="definition" aria-labelledby="anathema"&gt;a vigorous denunciation : cursor&lt;/dd&gt;
+```html
+<dl>
+    <dt id="anathema">anathema</dt>
+    <dd role="definition" aria-labelledby="anathema">a ban or curse solemnly pronounced by ecclesiastical authority
+                                                     and accompanied by excommunication</dd>
+    <dd role="definition" aria-labelledby="anathema">a vigorous denunciation : cursor</dd>
 
-    &lt;dt id="homily"&gt;homily&lt;/dt&gt;
-    &lt;dd role="definition" aria-labelledby="homily"&gt;a usually short sermon&lt;/dd&gt;
-    &lt;dd role="definition" aria-labelledby="homily"&gt;a lecture or discourse on or of a moral theme&lt;/dd&gt;
-&lt;/dl&gt;
-</pre>
+    <dt id="homily">homily</dt>
+    <dd role="definition" aria-labelledby="homily">a usually short sermon</dd>
+    <dd role="definition" aria-labelledby="homily">a lecture or discourse on or of a moral theme</dd>
+</dl>
+```
 
-<h4 id="Example_7_Menus">Example 7: Menus</h4>
+#### Example 7: Menus
 
-<p>In the example below, a popup menu is associated with its label using the <code>aria-labelledby</code> attribute:</p>
+In the example below, a popup menu is associated with its label using the `aria-labelledby` attribute:
 
-<pre class="brush: html">&lt;div role="menubar"&gt;
-    &lt;div role="menuitem" aria-haspopup="true" id="fileMenu"&gt;File&lt;/div&gt;
-    &lt;div role="menu" aria-labelledby="fileMenu"&gt;
-        &lt;div role="menuitem"&gt;Open&lt;/div&gt;
-        &lt;div role="menuitem"&gt;Save&lt;/div&gt;
-        &lt;div role="menuitem"&gt;Save as ...&lt;/div&gt;
+```html
+<div role="menubar">
+    <div role="menuitem" aria-haspopup="true" id="fileMenu">File</div>
+    <div role="menu" aria-labelledby="fileMenu">
+        <div role="menuitem">Open</div>
+        <div role="menuitem">Save</div>
+        <div role="menuitem">Save as ...</div>
         ...
-    &lt;/div&gt;
+    </div>
     ...
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-<h4 id="Notes">Notes </h4>
+#### Notes
 
-<p>The most common <em>accessibility API</em> mapping for a label is the <em>accessible name</em> property</p>
+The most common _accessibility API_ mapping for a label is the _accessible name_ property
 
-<h3 id="Used_by_ARIA_roles">Used by ARIA roles</h3>
+### Used by ARIA roles
 
-<p>All elements of the base markup</p>
+All elements of the base markup
 
-<h3 id="Related_ARIA_techniques">Related ARIA techniques </h3>
+### Related ARIA techniques
 
-<ul>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">Using the aria-label attribute</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">Using the aria-describedby attribute</a></li>
-</ul>
+- [Using the aria-label attribute](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute")
+- [Using the aria-describedby attribute](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute")
 
-<h3 id="Compatibility">Compatibility</h3>
+### Compatibility
 
-<p class="comment">TBD: Add support information for common UA and AT product combinations</p>
+TBD: Add support information for common UA and AT product combinations
 
-<h3 id="Additional_resources">Additional resources</h3>
+### Additional resources
 
-<ul>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria/#aria-labelledby">WAI-ARIA specification for aria-labelledby</a></li>
-</ul>
+- [WAI-ARIA specification for aria-labelledby](https://www.w3.org/TR/wai-aria/#aria-labelledby)

@@ -5,37 +5,37 @@ translation_of: Web/API/NavigatorLanguage/language
 original_slug: Web/API/NavigatorLanguage/language
 ---
 
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p><span id="result_box" lang="ru"><span>Свойство <code><strong>NavigatorLanguage.language</strong></code></span> <span class="hps">только для чтения, оно</span> <span class="hps">возвращает</span> <span class="hps">строку, представляющую</span> <span class="hps">предпочитаемый</span> <span class="hps">пользователем язык</span><span>, как правило это</span><span class="hps"> язык</span> <span class="hps">пользовательского интерфейса</span> <span class="hps">браузера</span><span>.</span></span></p>
+Свойство **`NavigatorLanguage.language`** только для чтения, оно возвращает строку, представляющую предпочитаемый пользователем язык, как правило это язык пользовательского интерфейса браузера.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval"><em>lang</em> = <em>globalObj</em>.navigator.language
-</pre>
+```
+lang = globalObj.navigator.language
+```
 
-<h3 id="Parameters">Значение</h3>
+### Значение
 
-<p>Строка представляющая версию языка которая определена в <a class="external" href="http://tools.ietf.org/html/rfc4646">RFC 4646</a>. Примеры валидных языковых кодов включают "en", "EN-US", "FR", "es-ES" и т.д.</p>
+Строка представляющая версию языка которая определена в [RFC 4646](http://tools.ietf.org/html/rfc4646). Примеры валидных языковых кодов включают "en", "EN-US", "FR", "es-ES" и т.д.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: js">if ( window.navigator.language.slice(0, 2) !== "en" ) {
+```js
+if ( window.navigator.language.slice(0, 2) !== "en" ) {
  doLangSelect(window.navigator.language);
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<div>{{Specifications}}</div>
+{{Specifications}}
 
-<h2 id="Доступность_в_браузерах">Доступность в браузерах</h2>
+## Доступность в браузерах
 
-<p>{{Compat("api.NavigatorLanguage.language")}}</p>
+{{Compat("api.NavigatorLanguage.language")}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("NavigatorLanguage.languages","navigator.languages")}}</li>
- <li>{{domxref("navigator")}}</li>
-</ul>
+- {{domxref("NavigatorLanguage.languages","navigator.languages")}}
+- {{domxref("navigator")}}

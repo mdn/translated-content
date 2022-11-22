@@ -4,33 +4,31 @@ slug: orphaned/Glossary/jQuery
 translation_of: Glossary/jQuery
 original_slug: Glossary/jQuery
 ---
-<p><strong>jQuery</strong> это  {{Glossary("JavaScript")}} {{Glossary("Библиотека")}} сфокусированная на  управлении {{Glossary("DOM")}} , вызовах {{Glossary("AJAX")}} , и  {{Glossary("событиях")}} обработки.</p>
+**jQuery** это {{Glossary("JavaScript")}} {{Glossary("Библиотека")}} сфокусированная на управлении {{Glossary("DOM")}} , вызовах {{Glossary("AJAX")}} , и {{Glossary("событиях")}} обработки.
 
-<p>jQuery синтаксис использования <code>$(selector).action()</code> позволяет выбранному селектору совершить действие.Пример:</p>
+jQuery синтаксис использования `$(selector).action()` позволяет выбранному селектору совершить действие.Пример:
 
-<pre>$(document).ready(function(){
+```
+$(document).ready(function(){
   alert("Hello World!");
 });
-</pre>
+```
 
-<p>JQuery имеет аналогичный эффект, что и следующий код JavaScript:</p>
+JQuery имеет аналогичный эффект, что и следующий код JavaScript:
 
-<pre class="brush: js">window.onload = function() {
+```js
+window.onload = function() {
   alert( "Hello World!" );
 };
-</pre>
+```
 
-<h2 id="Изучите_больше">Изучите больше</h2>
+## Изучите больше
 
-<h3 id="База_знаний">База знаний</h3>
+### База знаний
 
-<ul>
- <li>{{Interwiki("wikipedia", "jQuery")}} В Википедии</li>
- <li><a href="https://jquery.com/">jQuery website(официальный веб-сайт)</a></li>
-</ul>
+- {{Interwiki("wikipedia", "jQuery")}} В Википедии
+- [jQuery website(официальный веб-сайт)](https://jquery.com/)
 
-<h3 id="Техническая_информация">Техническая информация</h3>
+### Техническая информация
 
-<ul>
- <li><a href="https://api.jquery.com/">Справочная документация по API</a><a href="https://api.jquery.com/"> </a></li>
-</ul>
+- [Справочная документация по API](https://api.jquery.com/)[](https://api.jquery.com/)

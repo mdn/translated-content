@@ -5,55 +5,34 @@ translation_of: Web/API/NavigatorOnLine
 original_slug: Web/API/NavigatorOnLine
 ---
 
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>Интерфейс <code><strong>NavigatorOnLine</strong></code><code> </code>содержит методы и свойства<code>, </code>связанные со статусом подключения браузера.</p>
+Интерфейс **`NavigatorOnLine`** содержит методы и свойства, связанные со статусом подключения браузера.
 
-<p>В NavigatorOnLine нет объектов другого типа, но другие интерфейсы, {{domxref("Navigator")}} или {{domxref("WorkerNavigator")}}, реализуют его.</p>
+В NavigatorOnLine нет объектов другого типа, но другие интерфейсы, {{domxref("Navigator")}} или {{domxref("WorkerNavigator")}}, реализуют его.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p>Интерфейс<em><code> NavigatorOnLine</code></em> не наследует других свойств.</p>
+Интерфейс *`NavigatorOnLine`* не наследует других свойств.
 
-<dl>
- <dt>{{domxref("NavigatorOnLine.onLine")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("Boolean")}}, показывающий работает ли браузер в сети.</dd>
-</dl>
+- {{domxref("NavigatorOnLine.onLine")}} {{readonlyInline}}
+  - : Возвращает {{domxref("Boolean")}}, показывающий работает ли браузер в сети.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Интерфейс </em><em><code>NavigatorOnLine</code></em><em> не имеет никакой реализации и не наследует никакой метод.</em></p>
+_Интерфейс_ _`NavigatorOnLine`_ _не имеет никакой реализации и не наследует никакой метод._
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#navigatoronline', 'NavigatorOnLine')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Без изменений с последнего снимка,{{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', '#navigatoronline', 'NavigatorOnLine')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Снимок {{SpecName('HTML WHATWG')}} с первоначальной спецификацией.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                             | Статус                           | Комментарий                                                                 |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#navigatoronline', 'NavigatorOnLine')}} | {{Spec2('HTML WHATWG')}} | Без изменений с последнего снимка,{{SpecName('HTML5 W3C')}}          |
+| {{SpecName('HTML5 W3C', '#navigatoronline', 'NavigatorOnLine')}}     | {{Spec2('HTML5 W3C')}}     | Снимок {{SpecName('HTML WHATWG')}} с первоначальной спецификацией. |
 
-<h2 id="Совместимость_в_браузерах">Совместимость в браузерах</h2>
+## Совместимость в браузерах
 
-<p>{{Compat("api.NavigatorOnLine")}}</p>
+{{Compat("api.NavigatorOnLine")}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Интерфейс {{domxref("Navigator")}} который реализует его.</li>
-</ul>
+- Интерфейс {{domxref("Navigator")}} который реализует его.

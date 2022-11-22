@@ -11,52 +11,40 @@ tags:
 translation_of: Web/API/NavigatorID/platform
 original_slug: Web/API/NavigatorID/platform
 ---
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p>Возвращает строку, показывающую платформу браузера. <span id="result_box" lang="ru"><span>Спецификация позволяет</span> <span class="hps">браузерам</span> <span class="hps">всегда возвращает</span> <span class="hps">пустую строку</span><span>,</span> <span class="hps">так что не стоит</span> <span class="hps">полагаться</span> <span class="hps">на это свойство</span><span>, чтобы получить</span> <span class="hps">надёжный ответ</span><span>.</span></span></p>
+Возвращает строку, показывающую платформу браузера. Спецификация позволяет браузерам всегда возвращает пустую строку, так что не стоит полагаться на это свойство, чтобы получить надёжный ответ.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval"><em>platform</em> = <em>navigator</em>.platform
-</pre>
+```
+platform = navigator.platform
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>{{domxref("DOMString")}}, идентифицирующий платформу, на которой работает браузер, или выводит пустую строку, если браузер отказывается (или не может) идентифицировать платформу. <code>platform</code> - это строка, которая должна быть пустой строкой или строкой, представляющей платформу, на которой выполняется браузер.</p>
+{{domxref("DOMString")}}, идентифицирующий платформу, на которой работает браузер, или выводит пустую строку, если браузер отказывается (или не может) идентифицировать платформу. `platform` - это строка, которая должна быть пустой строкой или строкой, представляющей платформу, на которой выполняется браузер.
 
-<p><span style="font-size: 14px; line-height: 1.5;">Например: "<code>MacIntel</code>", "<code>Win32</code>", "<code>FreeBSD i386</code>", "<code>WebTV OS</code>"</span></p>
+Например: "`MacIntel`", "`Win32`", "`FreeBSD i386`", "`WebTV OS`"
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre><code>console.log(navigator.platform);</code></pre>
+```
+console.log(navigator.platform);
+```
 
-<h2 id="Notes">Примечание</h2>
+## Примечание
 
-<p>Большинство браузеров, включая Chrome, Edge и Firefox 63 и более поздние, возвращают «Win32», даже если работают в 64-разрядной версии Windows. Internet Explorer и версии Firefox до версии 63 по-прежнему сообщают «Win64».</p>
+Большинство браузеров, включая Chrome, Edge и Firefox 63 и более поздние, возвращают «Win32», даже если работают в 64-разрядной версии Windows. Internet Explorer и версии Firefox до версии 63 по-прежнему сообщают «Win64».
 
-<p>В Firefox, <code>general.platform.override</code> можно использовать для переопределения значения, которое в противном случае было бы возвращено этим свойством.</p>
+В Firefox, `general.platform.override` можно использовать для переопределения значения, которое в противном случае было бы возвращено этим свойством.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-navigator-platform', 'NavigatorID.platform')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Текущее описание.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                             | Статус                           | Комментарий       |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| {{SpecName('HTML WHATWG', '#dom-navigator-platform', 'NavigatorID.platform')}} | {{Spec2('HTML WHATWG')}} | Текущее описание. |
 
-<h2 id="Доступность_в_браузере">Доступность в браузере</h2>
+## Доступность в браузере
 
-<p>{{Compat("api.NavigatorID.platform")}}</p>
-
-<div id="compat-desktop"> </div>
+{{Compat("api.NavigatorID.platform")}}

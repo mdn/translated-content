@@ -5,26 +5,28 @@ translation_of: Web/API/NavigatorPlugins/javaEnabled
 original_slug: Web/API/NavigatorPlugins/javaEnabled
 ---
 
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p>Этот метод показывает включён ли java в текущем браузере или нет.</p>
+Этот метод показывает включён ли java в текущем браузере или нет.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval"><em>result</em> = window.navigator.javaEnabled()
-</pre>
+```
+result = window.navigator.javaEnabled()
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="eval">if (window.navigator.javaEnabled()) {
+```
+if (window.navigator.javaEnabled()) {
    // browser has java
 }
-</pre>
+```
 
-<h2 id="Notes">Примечание</h2>
+## Примечание
 
-<p>Возвращаемое значение этого метода показывает положение java, включён ли или выключен - не предполагает поддержку java браузером полностью.</p>
+Возвращаемое значение этого метода показывает положение java, включён ли или выключен - не предполагает поддержку java браузером полностью.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<p><span class="short_text" id="result_box" lang="ru">Не является <span class="hps">частью</span> <span class="hps">какой-либо</span> <span class="hps">спецификации</span><span>.</span></span></p>
+Не является частью какой-либо спецификации.

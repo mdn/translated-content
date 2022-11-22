@@ -5,40 +5,29 @@ translation_of: Web/API/HTMLOrForeignElement/nonce
 original_slug: Web/API/HTMLOrForeignElement/nonce
 ---
 
-<p>{{SeeCompatTable}}{{APIRef("HTML DOM")}}</p>
+{{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
-<p>Свойство <strong><code>nonce</code></strong> интерфейса {{domxref("HTMLElement")}} возвращает криптографический номер, который используется политикой безопасности содержимого для определения того, будет ли разрешена дальнейшая работа с данной выборкой.</p>
+Свойство **`nonce`** интерфейса {{domxref("HTMLElement")}} возвращает криптографический номер, который используется политикой безопасности содержимого для определения того, будет ли разрешена дальнейшая работа с данной выборкой.
 
-<p>В более поздних реализациях элементы, имеющие атрибут nonce, предоставляют его только скриптам (а не сторонним каналам, таким как селекторы атрибутов CSS).</p>
+В более поздних реализациях элементы, имеющие атрибут nonce, предоставляют его только скриптам (а не сторонним каналам, таким как селекторы атрибутов CSS).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <em>nonce</em> = HTMLElement.nonce
-HTMLElement.nonce = <em>nonce</em></pre>
+```
+var nonce = HTMLElement.nonce
+HTMLElement.nonce = nonce
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Криптографический код.</p>
+Криптографический код.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','#attr-nonce','nonce')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Первоначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                    | Status                           | Comment                     |
+| ---------------------------------------------------------------- | -------------------------------- | --------------------------- |
+| {{SpecName('HTML WHATWG','#attr-nonce','nonce')}} | {{Spec2('HTML WHATWG')}} | Первоначальное определение. |
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
-<div>
-<p>{{Compat("api.HTMLElement.nonce")}}</p>
-</div>
+{{Compat("api.HTMLElement.nonce")}}

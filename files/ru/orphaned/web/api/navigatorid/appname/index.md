@@ -5,37 +5,37 @@ translation_of: Web/API/NavigatorID/appName
 original_slug: Web/API/NavigatorID/appName
 ---
 
-<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>Свойство <strong><code>NavigatorID.appName </code></strong>возвращает название браузера. HTML5 спецификация также позволяет любому браузеру вернуть <code>Netscape</code>", по причине совместимости.</p>
+Свойство **`NavigatorID.appName`** возвращает название браузера. HTML5 спецификация также позволяет любому браузеру вернуть `Netscape`", по причине совместимости.
 
-<p><strong>Примечание:</strong> не полагайтесь на это свойство для получения корректного имени браузера.В большинстве браузеров (Firefox, как, Chrome, Safari, Opera и Internet Explorer) возвращаемой строкой будет "Netscape".</p>
+**Примечание:** не полагайтесь на это свойство для получения корректного имени браузера.В большинстве браузеров (Firefox, как, Chrome, Safari, Opera и Internet Explorer) возвращаемой строкой будет "Netscape".
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>appName</var> = window.navigator.appName
-</pre>
+```
+appName = window.navigator.appName
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p><code>appName</code> это имя браузера в виде строки.</p>
+`appName` это имя браузера в виде строки.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">alert(window.navigator.appName);
+```js
+alert(window.navigator.appName);
 // показывает имя браузера.
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<div>{{Specifications}}</div>
+{{Specifications}}
 
-<h2 id="Доступность_в_браузере">Доступность в браузере</h2>
+## Доступность в браузере
 
-<p>{{Compat("api.NavigatorID.appName")}}</p>
+{{Compat("api.NavigatorID.appName")}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("NavigatorID.appCodeName")}}</li>
-</ul>
+- {{domxref("NavigatorID.appCodeName")}}

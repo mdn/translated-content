@@ -5,53 +5,38 @@ translation_of: Web/API/NavigatorID/appCodeName
 original_slug: Web/API/NavigatorID/appCodeName
 ---
 
-<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p><strong><code>NavigatorID.appCodeName</code></strong> всегда возвращает<code>'Mozilla'</code> в любом браузере. Это свойство сохраняется только для совместимости.</p>
+**`NavigatorID.appCodeName`** всегда возвращает`'Mozilla'` в любом браузере. Это свойство сохраняется только для совместимости.
 
-<div class="note"><strong>Примечание:</strong> Не полагаетесь на это свойство, чтобы получить настоящее имя продукта. Все браузеры возвращают "Mozilla" в качестве значения свойства.</div>
+> **Примечание:** Не полагаетесь на это свойство, чтобы получить настоящее имя продукта. Все браузеры возвращают "Mozilla" в качестве значения свойства.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">codeName = window.navigator.appCodeName
-</pre>
+```
+codeName = window.navigator.appCodeName
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p><code>codeName</code> это внутреннее имя браузера в виде {{domxref("DOMString")}}.</p>
+`codeName` это внутреннее имя браузера в виде {{domxref("DOMString")}}.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">console.log(window.navigator.appCodeName);
-</pre>
+```js
+console.log(window.navigator.appCodeName);
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-navigator-appcodename', 'NavigatorID.appCodeName')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Изначальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                     | Статус                           | Комментарий             |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
+| {{SpecName('HTML WHATWG', '#dom-navigator-appcodename', 'NavigatorID.appCodeName')}} | {{Spec2('HTML WHATWG')}} | Изначальное определение |
 
-<h2 id="Доступность_в_браузере">Доступность в браузере</h2>
+## Доступность в браузере
 
-<p>{{Compat("api.NavigatorID.appCodeName")}}</p>
+{{Compat("api.NavigatorID.appCodeName")}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("NavigatorID.product")}}</li>
-</ul>
-
-<p> </p>
+- {{domxref("NavigatorID.product")}}

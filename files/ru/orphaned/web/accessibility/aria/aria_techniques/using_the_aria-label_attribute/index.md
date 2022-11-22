@@ -11,56 +11,47 @@ translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attr
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
 ---
 
-<p><span class="seoSummary">Атрибут  <a class="external" href="https://www.w3.org/TR/wai-aria/#aria-label" rel="external"><code>aria-label</code></a>  создаёт текстовую метку текущего элемента в случае отсутствия видимого текста описания элемента. Если есть видимый текст, обозначающий элемент, используйте вместо этого <a href="/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute" title="Using the aria-labelledby attribute">aria-labelledby</a>.</span></p>
+Атрибут [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) создаёт текстовую метку текущего элемента в случае отсутствия видимого текста описания элемента. Если есть видимый текст, обозначающий элемент, используйте вместо этого [aria-labelledby](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute "Using the aria-labelledby attribute").
 
-<p>Этот атрибут может быть использован для любого стандартного HTML-элемента; не ограничивается элементами с ARIA <code>role</code>.</p>
+Этот атрибут может быть использован для любого стандартного HTML-элемента; не ограничивается элементами с ARIA `role`.
 
-<h3 class="editable" id="Значение">Значение</h3>
+### Значение
 
-<p>строка</p>
+строка
 
-<h3 class="editable" id="Возможные_эффекты_на_клиентские_приложения_и_вспомогательные_технологии">Возможные эффекты на клиентские приложения и вспомогательные технологии</h3>
+### Возможные эффекты на клиентские приложения и вспомогательные технологии
 
-<div class="note"><strong>Примечание:</strong> Мнения могут отличаться от того, как вспомогательные технологии должны справляться с этой техникой. Информация, представленная выше, является одним из таких мнений и поэтому не является нормативной.</div>
+> **Примечание:** Мнения могут отличаться от того, как вспомогательные технологии должны справляться с этой техникой. Информация, представленная выше, является одним из таких мнений и поэтому не является нормативной.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<div id="section_5">
-<h4 id="Пример_1_Множественные_лейблы">Пример 1: Множественные лейблы</h4>
+#### Пример 1: Множественные лейблы
 
-<p>В примере ниже, кнопка стилизована под типичную кнопку "закрыть" с X посередине. Поскольку нет ничего обозначающего значение того, что кнопка закрывает диалог, то <code>aria-label</code> атрибут используется чтобы обеспечить метку для любой вспомогающей технологии.</p>
-</div>
+В примере ниже, кнопка стилизована под типичную кнопку "закрыть" с X посередине. Поскольку нет ничего обозначающего значение того, что кнопка закрывает диалог, то `aria-label` атрибут используется чтобы обеспечить метку для любой вспомогающей технологии.
 
-<pre class="deki-transform"><span class="tag">&lt;button aria-label=<span class="str">"Close"</span> onclick=<span class="str">"myDialog.close()"</span>&gt;</span>X<span class="tag">&lt;/button&gt;</span>
-</pre>
+```
+<button aria-label="Close" onclick="myDialog.close()">X</button>
+```
 
-<h4 id="Рабочие_примеры">Рабочие примеры:</h4>
+#### Рабочие примеры:
 
-<h3 id="Примечания">Примечания</h3>
+### Примечания
 
-<ul>
- <li>Чаще всего API доступности для лейбла привязывается к свойству <em>accessible name</em>.</li>
- <li>
-  <p>Атрибуты, включая <strong>aria-label, </strong>игнорируются большинством автоматических сервисов перевода<strong>.</strong></p>
- </li>
-</ul>
+- Чаще всего API доступности для лейбла привязывается к свойству _accessible name_.
+- Атрибуты, включая **aria-label,** игнорируются большинством автоматических сервисов перевода**.**
 
-<h3 id="Использование_ARIA_ролями">Использование ARIA ролями</h3>
+### Использование ARIA ролями
 
-<p>Все элементы базовой разметки</p>
+Все элементы базовой разметки
 
-<h3 id="Связанные_ARIA_техники">Связанные ARIA техники</h3>
+### Связанные ARIA техники
 
-<ul>
- <li><a href="/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute" title="en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">Использование атрибута aria-labelledby</a></li>
-</ul>
+- [Использование атрибута aria-labelledby](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute "en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute")
 
-<h3 id="Совместимость">Совместимость</h3>
+### Совместимость
 
-<p class="comment">Будет определено позднее: Добавить информацию о поддержке для общих комбинаций продуктов UA и AT</p>
+Будет определено позднее: Добавить информацию о поддержке для общих комбинаций продуктов UA и AT
 
-<h3 id="Дополнительные_ресурсы">Дополнительные ресурсы</h3>
+### Дополнительные ресурсы
 
-<ul>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria/#aria-label">WAI-ARIA спецификация для aria-label</a></li>
-</ul>
+- [WAI-ARIA спецификация для aria-label](https://www.w3.org/TR/wai-aria/#aria-label)

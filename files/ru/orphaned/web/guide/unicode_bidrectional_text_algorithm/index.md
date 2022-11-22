@@ -10,136 +10,86 @@ tags:
 translation_of: Web/Guide/Unicode_Bidrectional_Text_Algorithm
 original_slug: Web/Guide/Unicode_Bidrectional_Text_Algorithm
 ---
-<div></div>
+**Алгоритм обработки текста двусторонней направленности** (Unicode® Bidirectional Algorithm или **BiDi** Algorithm) — раздел стандарта текста Unicode, описывающий в каком порядке раскладываются символы во время обработки страницы {{Glossary("агентом пользователя")}}.
+Этот алгоритм полезен при создании локализированного веб-контента.
 
-<p><span class="seoSummary"><strong>Алгоритм обработки текста двусторонней направленности</strong> (Unicode® Bidirectional Algorithm или <strong>BiDi</strong> Algorithm) — раздел стандарта текста Unicode, описывающий в каком порядке раскладываются символы во время обработки страницы {{Glossary("агентом пользователя")}}.</span>
-Этот алгоритм полезен при создании локализированного веб-контента.</p>
+В руководстве рассказывается о том, как работает BiDi алгоритм и как его применить. Алгоритм непосредственно связан с {{Glossary("HTML")}} и {{Glossary("CSS")}}, при обработке которых определяется порядок и направление символов в тексте.
 
-<p class="summary">В руководстве рассказывается о том, как работает BiDi алгоритм и как его применить. Алгоритм непосредственно связан с {{Glossary("HTML")}} и {{Glossary("CSS")}}, при обработке которых определяется порядок и направление символов в тексте.</p>
+## Основы
 
-<h2 id="Основы">Основы</h2>
+(Базовое направление, типы символов, и т.д.)
 
-<p>(Базовое направление, типы символов, и т.д.)</p>
+## Алгоритм
 
-<h2 id="Алгоритм">Алгоритм</h2>
+### Уровни направленности символов
 
-<h3 id="Уровни_направленности_символов">Уровни направленности символов</h3>
+### Directional runs
 
-<h3 id="Directional_runs">Directional runs</h3>
+(Что это, что такое базовое направление)
 
-<p>(Что это, что такое базовое направление)</p>
+### Символы нейтральной направленности
 
-<h3 id="Символы_нейтральной_направленности">Символы нейтральной направленности</h3>
+## Overriding the algorithm
 
-<h2 id="Overriding_the_algorithm">Overriding the algorithm</h2>
+Content about using HTML and CSS to override the default behavior of the algorithm; include info about isolating ranges etc.
 
-<p>Content about using HTML and CSS to override the default behavior of the algorithm; include info about isolating ranges etc.</p>
+### Overiding BiDi using Unicode control characters
 
-<h3 id="Overiding_BiDi_using_Unicode_control_characters">Overiding BiDi using Unicode control characters</h3>
+Unicode provides a number of special control characters that make it possible to control directionality of ranges of text. There are two sets of control characters; one set opens the override, and another restores the original directionality. You must always follow each opening character with an appropriate closing character.
 
-<p>Unicode provides a number of special control characters that make it possible to control directionality of ranges of text. There are two sets of control characters; one set opens the override, and another restores the original directionality. You must always follow each opening character with an appropriate closing character.</p>
-
-<table class="standard-table">
- <caption>Initial Unicode BiDi algorithm control characters</caption>
- <thead>
-  <tr>
-   <th scope="row">Character</th>
-   <th scope="col">Code point</th>
-   <th scope="col">HTML entity</th>
-   <th scope="col">Markup equivalent</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Left-to-Right Isolate (LRI)</th>
-   <td>U+2066</td>
-   <td><code>&amp;#x2066;</code></td>
-   <td><code>dir="ltr"</code></td>
-   <td>Sets the base direction to LTR, isolating the embedded content from the surrounding text</td>
-  </tr>
-  <tr>
-   <th scope="row">Right-to-Left Isolate (LRI)</th>
-   <td>U+2067</td>
-   <td><code>&amp;#x2067;</code></td>
-   <td><code>dir="rtl"</code></td>
-   <td>Sets the base direction to RTL, isolating the embedded content from the surrounding text</td>
-  </tr>
-  <tr>
-   <th scope="row">First Strong Isolate (FSI)</th>
-   <td>U+2068</td>
-   <td><code>&amp;#x2068;</code></td>
-   <td><code>dir="auto"</code></td>
-   <td>Isolates the content and sets the base direction according to the first strongly-typed directional character in the embedded content</td>
-  </tr>
-  <tr>
-   <th scope="row">Left-to-Right Embedding (LRE)</th>
-   <td>U+202A</td>
-   <td><code>&amp;#x202A;</code></td>
-   <td><code>dir="ltr"</code></td>
-   <td>Sets the base direction to LTR but allows the embedded text to interact with the surrounding content; this risks the effect spilling over to the outer content</td>
-  </tr>
-  <tr>
-   <th scope="row">Right-to-Left Embedding (RLE)</th>
-   <td>U+202B</td>
-   <td><code>&amp;#x202B;</code></td>
-   <td><code>dir="rtl"</code></td>
-   <td>Sets the base direction to RTL, but lets the embedded text interact with the surrounding content, risking spillover effects</td>
-  </tr>
-  <tr>
-   <th scope="row">Left-to-Right Override (LRO)</th>
-   <td>U+202D</td>
-   <td><code>&amp;#x202D;</code></td>
-   <td><code>&lt;bdo dir="ltr"&gt;</code></td>
-   <td>Overrides the BiDi algorithm, displaying the characters in memory order, from left to right</td>
-  </tr>
-  <tr>
-   <th scope="row">Right-to-Left Override (RLO)</th>
-   <td>U+202E</td>
-   <td><code>&amp;#x202E;</code></td>
-   <td><code>&lt;bdo dir="rtl"&gt;</code></td>
-   <td>Overrides the BiDi algorithm and displays the embedded characters in reverse memory order, from right to left</td>
-  </tr>
- </tbody>
-</table>
+| Character                     | Code point | HTML entity | Markup equivalent | Description                                                                                                                                                    |
+| ----------------------------- | ---------- | ----------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Left-to-Right Isolate (LRI)   | U+2066     | `&#x2066;`  | `dir="ltr"`       | Sets the base direction to LTR, isolating the embedded content from the surrounding text                                                                       |
+| Right-to-Left Isolate (LRI)   | U+2067     | `&#x2067;`  | `dir="rtl"`       | Sets the base direction to RTL, isolating the embedded content from the surrounding text                                                                       |
+| First Strong Isolate (FSI)    | U+2068     | `&#x2068;`  | `dir="auto"`      | Isolates the content and sets the base direction according to the first strongly-typed directional character in the embedded content                           |
+| Left-to-Right Embedding (LRE) | U+202A     | `&#x202A;`  | `dir="ltr"`       | Sets the base direction to LTR but allows the embedded text to interact with the surrounding content; this risks the effect spilling over to the outer content |
+| Right-to-Left Embedding (RLE) | U+202B     | `&#x202B;`  | `dir="rtl"`       | Sets the base direction to RTL, but lets the embedded text interact with the surrounding content, risking spillover effects                                    |
+| Left-to-Right Override (LRO)  | U+202D     | `&#x202D;`  | `<bdo dir="ltr">` | Overrides the BiDi algorithm, displaying the characters in memory order, from left to right                                                                    |
+| Right-to-Left Override (RLO)  | U+202E     | `&#x202E;`  | `<bdo dir="rtl">` | Overrides the BiDi algorithm and displays the embedded characters in reverse memory order, from right to left                                                  |
 
 <table class="standard-table">
- <caption>Closing Unicode BiDi algorithm control characters</caption>
- <thead>
-  <tr>
-   <th scope="row">Character</th>
-   <th scope="col">Code point</th>
-   <th scope="col">HTML entity</th>
-   <th scope="col">Markup equivalent</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th rowspan="2" scope="row">Pop Directional Formatting (PDF)</th>
-   <td rowspan="2">U+202C</td>
-   <td rowspan="2"><code>&amp;#x202C;</code></td>
-   <td>Closing whatever opening tag used the {{htmlattrxref("dir")}} attribute</td>
-   <td>Used for RLE or LRE</td>
-  </tr>
-  <tr>
-   <td><code>&lt;/bdo&gt;</code></td>
-   <td>Used for RLO or LRO</td>
-  </tr>
-  <tr>
-   <th scope="row">Pop Directional Isolate (PDI)</th>
-   <td>U+2069</td>
-   <td><code>&amp;#x2069;</code></td>
-   <td>Closing whatever opening tag used the {{htmlattrxref("dir")}} attribute</td>
-   <td>Used for RLI, LRI, or FSI</td>
-  </tr>
- </tbody>
+  <caption>
+    Closing Unicode BiDi algorithm control characters
+  </caption>
+  <thead>
+    <tr>
+      <th scope="row">Character</th>
+      <th scope="col">Code point</th>
+      <th scope="col">HTML entity</th>
+      <th scope="col">Markup equivalent</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" scope="row">Pop Directional Formatting (PDF)</th>
+      <td rowspan="2">U+202C</td>
+      <td rowspan="2"><code>&#x26;#x202C;</code></td>
+      <td>
+        Closing whatever opening tag used the {{htmlattrxref("dir")}}
+        attribute
+      </td>
+      <td>Used for RLE or LRE</td>
+    </tr>
+    <tr>
+      <td><code>&#x3C;/bdo></code></td>
+      <td>Used for RLO or LRO</td>
+    </tr>
+    <tr>
+      <th scope="row">Pop Directional Isolate (PDI)</th>
+      <td>U+2069</td>
+      <td><code>&#x26;#x2069;</code></td>
+      <td>
+        Closing whatever opening tag used the {{htmlattrxref("dir")}}
+        attribute
+      </td>
+      <td>Used for RLI, LRI, or FSI</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://www.unicode.org/reports/tr9/">Соответствующий стандарт Юникод (Unicode® Standard Annex #9: Unicode Bidirectional Algorithm)</a></li>
- <li><a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics">W3C: Unicode Bidirectional Algorithm basics</a></li>
- <li><a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls">W3C Q&amp;A: How to use Unicode controls for bidi text</a></li>
-</ul>
+- [Соответствующий стандарт Юникод (Unicode® Standard Annex #9: Unicode Bidirectional Algorithm)](https://www.unicode.org/reports/tr9/)
+- [W3C: Unicode Bidirectional Algorithm basics](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics)
+- [W3C Q\&A: How to use Unicode controls for bidi text](https://www.w3.org/International/questions/qa-bidi-unicode-controls)

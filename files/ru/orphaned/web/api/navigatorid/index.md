@@ -5,56 +5,44 @@ translation_of: Web/API/NavigatorID
 original_slug: Web/API/NavigatorID
 ---
 
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>Интерфейс <code><strong>NavigatorID </strong></code>содержит методы и свойства, позволяющие идентифицировать браузер.</p>
+Интерфейс **`NavigatorID`** содержит методы и свойства, позволяющие идентифицировать браузер.
 
-<p>В нем нет объекта типа <code>NavigatorID</code>, но другие интерфейсы, такие как {{domxref("Navigator")}} или {{domxref("WorkerNavigator")}}, реализуют его.</p>
+В нем нет объекта типа `NavigatorID`, но другие интерфейсы, такие как {{domxref("Navigator")}} или {{domxref("WorkerNavigator")}}, реализуют его.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Интерфейс <code>NavigatorID</code></em><em> не наследует никаких других свойств.</em></p>
+_Интерфейс `NavigatorID`_ _не наследует никаких других свойств._
 
-<dl>
- <dt>{{domxref("NavigatorID.appCodeName")}} {{readonlyInline}}{{deprecated_inline}}</dt>
- <dd>Всегда возвращает <code>'Mozilla'</code>, в других браузерах.<code> </code><span id="result_box" lang="ru"><span class="hps">Это свойство</span> <span class="hps">сохраняется</span> <span class="hps">только для</span> <span class="hps">целей</span> <span class="hps">совместимости.</span></span></dd>
- <dt>{{domxref("NavigatorID.appName")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd><span class="short_text" id="result_box" lang="ru"><span class="hps">Возвращает</span> <span class="hps">официальное название</span> <span class="hps">браузера</span><span>.</span></span> <span id="result_box" lang="ru"><span class="hps">Не полагайтесь</span> <span class="hps">на это свойство</span><span>, чтобы получить</span> <span class="hps">нужное значение.</span></span></dd>
- <dt>{{domxref("NavigatorID.appVersion")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>Возвращает версию браузера в виде строки. <span id="result_box" lang="ru"><span class="hps">Не полагайтесь</span> <span class="hps">на это свойство</span><span>, чтобы получить</span> <span class="hps">нужное значение.</span></span></dd>
- <dt>{{domxref("NavigatorID.platform")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>
- <div id="gt-src-tools">
- <div><span id="result_box" lang="ru"><span class="hps">Возвращает</span> <span class="hps">строку, представляющую</span> собой <span class="hps">платформу</span> <span class="hps">браузера</span><span>.</span></span><span id="result_box" lang="ru"><span class="hps"> Не полагайтесь</span> <span class="hps">на это свойство</span><span>, чтобы получить</span> <span class="hps">нужное значение.</span></span></div>
- </div>
- </dd>
- <dt>{{domxref("NavigatorID.product")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>Всегда возвращает <code>'Gecko'</code> в других браузерах.<span id="result_box" lang="ru"><span class="hps"> Это свойство</span> <span class="hps">сохраняется</span> <span class="hps">только для</span> <span class="hps">целей</span> <span class="hps">совместимости.</span></span></dd>
- <dt>{{domxref("NavigatorID.userAgent")}} {{readonlyInline}}</dt>
- <dd>Возвращает строку пользовательского агента (user agent) для текущего браузера.</dd>
-</dl>
+- {{domxref("NavigatorID.appCodeName")}} {{readonlyInline}}{{deprecated_inline}}
+  - : Всегда возвращает `'Mozilla'`, в других браузерах. Это свойство сохраняется только для целей совместимости.
+- {{domxref("NavigatorID.appName")}} {{readonlyInline}} {{deprecated_inline}}
+  - : Возвращает официальное название браузера. Не полагайтесь на это свойство, чтобы получить нужное значение.
+- {{domxref("NavigatorID.appVersion")}} {{readonlyInline}} {{deprecated_inline}}
+  - : Возвращает версию браузера в виде строки. Не полагайтесь на это свойство, чтобы получить нужное значение.
+- {{domxref("NavigatorID.platform")}} {{readonlyInline}} {{deprecated_inline}}
+  - : Возвращает строку, представляющую собой платформу браузера. Не полагайтесь на это свойство, чтобы получить нужное значение.
+- {{domxref("NavigatorID.product")}} {{readonlyInline}} {{deprecated_inline}}
+  - : Всегда возвращает `'Gecko'` в других браузерах. Это свойство сохраняется только для целей совместимости.
+- {{domxref("NavigatorID.userAgent")}} {{readonlyInline}}
+  - : Возвращает строку пользовательского агента (user agent) для текущего браузера.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Интерфейс </em><em><code>NavigatorID</code></em><em> не наследует других методов.</em></p>
+_Интерфейс_ _`NavigatorID`_ _не наследует других методов._
 
-<dl>
- <dt>{{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline()}}</dt>
- <dd>Всегда возвращает <code>false</code>. Функции JavaScript taint/untaint были удалены в JavaScript 1.2. <span class="short_text" id="result_box" lang="ru"><span class="hps">Этот метод</span> <span class="hps">сохраняется только</span> <span class="hps">для</span> <span class="hps">целей</span> <span class="hps">совместимости</span></span>. Not available in workers.</dd>
-</dl>
+- {{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline()}}
+  - : Всегда возвращает `false`. Функции JavaScript taint/untaint были удалены в JavaScript 1.2. Этот метод сохраняется только для целей совместимости. Not available in workers.
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_в_браузерах">Совместимость в браузерах</h2>
+## Совместимость в браузерах
 
+{{Compat("api.NavigatorID")}}
 
+## Смотрите также
 
-<p>{{Compat("api.NavigatorID")}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Реализован в интерфейсах: {{domxref("Navigator")}} и {{domxref("WorkerNavigator")}}.</li>
-</ul>
+- Реализован в интерфейсах: {{domxref("Navigator")}} и {{domxref("WorkerNavigator")}}.
