@@ -9,13 +9,13 @@ slug: Web/API/PushManager/unregister
 
 ## 構文
 
-```
+```js-nolint
 var request = navigator.push.unregister(pushEndpoint);
 ```
 
-### プロパティ
+### 引数
 
-- pushEndpoint
+- `pushEndpoint`
   - : 登録解除する端点です。
 
 ### 返値
@@ -50,9 +50,7 @@ req.onerror = function(e) {
 
 ## 仕様書
 
-| 仕様書                           | 状態                         | 備考                                 |
-| -------------------------------- | ---------------------------- | ------------------------------------ |
-| {{SpecName('Push API')}} | {{Spec2('Push API')}} | `PushManager` インターフェイスを定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
