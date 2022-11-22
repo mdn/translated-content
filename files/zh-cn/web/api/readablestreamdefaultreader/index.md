@@ -7,22 +7,22 @@ slug: Web/API/ReadableStreamDefaultReader
 
 [Stream API](/zh-CN/docs/Web/API/Streams_API) 的 **ReadableStreamDefaultReader** 接口表示一个用于读取来自网络提供的流数据（例如 fetch 请求）的默认读取器。
 
-`ReadableStreamDefaultReader` 可以用于读取有任何类型的底层源 {{domxref("ReadableStream")}}（和 {{domxref("ReadableStreamBYOBReader")}} 不同的是，ReadableStreamBYOBReader 仅可以和拥有*底层字节源*的可读流一起使用）。
+`ReadableStreamDefaultReader` 可以用于读取底层为任意类型源的 {{domxref("ReadableStream")}}（这与 {{domxref("ReadableStreamBYOBReader")}} 不同，后者仅可以和*底层为字节源*的可读流一起使用）。
 
-然而，请注意，只有自动分配缓冲区的基础字节源支持从底层源进行零副本传输。换句话说，流必须同时指定[构造函数](/zh-CN/docs/Web/API/ReadableStream/ReadableStream)中的 [`type="bytes"`](/zh-CN/docs/Web/API/ReadableStream/ReadableStream#type) 和 [`autoAllocateChunkSize`](/zh-CN/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize)。对于任何其它底层源，流将始终使用来自内置队列的数据满足读取请求。
+然而，请注意，零拷贝传输仅支持自动分配缓冲区的底层字节源这一种底层源。换句话说，流必须同时指定[构造函数](/zh-CN/docs/Web/API/ReadableStream/ReadableStream)中的 [`type="bytes"`](/zh-CN/docs/Web/API/ReadableStream/ReadableStream#type) 和 [`autoAllocateChunkSize`](/zh-CN/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize)。对于任何其它底层源，流将始终使用来自内置队列的数据满足读取请求。
 
 ## 构造方法
 
 - [`ReadableStreamDefaultReader()`](/zh-CN/docs/Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader)
   - : 创建和返回一个 `ReadableStreamDefaultReader()` 对象实例。
 
-## 属性
+## 实例属性
 
 - [`ReadableStreamDefaultReader.closed`](/zh-CN/docs/Web/API/ReadableStreamDefaultReader/closed)
 
   - : 返回一个 promise，该 promise 在流关闭时兑现，如果流抛出错误或 reader 的锁被释放，则拒绝。此属性使你能够编写响应流过程结束时执行的代码。
 
-## 方法
+## 实例方法
 
 - [`ReadableStreamDefaultReader.cancel()`](/zh-CN/docs/Web/API/ReadableStreamDefaultReader/cancel)
   - : 返回一个 {{jsxref("Promise")}}，当流被取消时兑现。调用该方法表示消费者对该流失去兴趣。提供的 `reason` 参数将会传递给底层源，其可能使用它，也可能不使用它。
@@ -31,7 +31,7 @@ slug: Web/API/ReadableStreamDefaultReader
 - [`ReadableStreamDefaultReader.releaseLock()`](/zh-CN/docs/Web/API/ReadableStreamDefaultReader/releaseLock)
   - : 释放读取这个 stream 的锁。
 
-## 例子
+## 示例
 
 在下面的示例中，创建自定义 {{domxref("Response")}}，将从其他资源获取的 HTML 片段流式传输到浏览器。
 
