@@ -77,7 +77,7 @@ _Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
 
   - : O espaço de nomes URI desse nó, ou `null` se não estiver no espaço de nomes.
 
-    > **Nota:** No Firefox 3.5 e nas versões anteriores, elementos HTML estão no espaço de nomes. Em versões posteriores, elementos HTML estão em [`http://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/), nas árvores HTML e XML.
+    > **Nota:** No Firefox 3.5 e nas versões anteriores, elementos HTML estão no espaço de nomes. Em versões posteriores, elementos HTML estão em [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/), nas árvores HTML e XML.
 
 - {{domxref("Node.prefix")}} {{obsolete_inline}}{{readonlyInline}}
   - : É um {{domxref("DOMString")}} representando o espaço de nomes do nó, ou `null` se nenhum prefixo é especificado.
@@ -179,7 +179,7 @@ onload = function () {
 
 ## Especificações
 
-- [DOM Level 1 Core: Node interface](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1950641247)
-- [DOM Level 2 Core: Node interface](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1950641247)
-- [DOM Level 3 Core: Node interface](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1950641247)
+- [DOM Level 1 Core: Node interface](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1950641247)
+- [DOM Level 2 Core: Node interface](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1950641247)
+- [DOM Level 3 Core: Node interface](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1950641247)
 - [DOM Standard: Node Interface](http://dom.spec.whatwg.org/#interface-node)

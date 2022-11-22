@@ -20,9 +20,9 @@ alvo.addEventListener(type,listener[, useCapture, wantUntrusted {{ Non-standard_
 - `type`
   - : Uma linha de texto que representa o [tipo de evento](/pt-BR/docs/DOM/event.type) a ser esperado.
 - listener
-  - : O objeto que recebe uma notificação quando um evento do tipo especificado ocorre. Esse objeto precisa implementar a interface do [`EventListener`](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener), ou simplesmente executar uma [função](/pt-BR/docs/JavaScript/Guide/Functions) JavaScript.
+  - : O objeto que recebe uma notificação quando um evento do tipo especificado ocorre. Esse objeto precisa implementar a interface do [`EventListener`](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener), ou simplesmente executar uma [função](/pt-BR/docs/JavaScript/Guide/Functions) JavaScript.
 - `useCapture` {{ optional_inline() }}
-  - : Se `true`, `useCapture` indica que o usuário deseja iniciar uma captura. Depois de iniciada a captura, todos os eventos do tipo especificado serão enviados à `listener` registrada antes de serem enviados à qualquer `EventTarget` abaixo dela na hierarquia de DOMs. Eventos que borbulharem para cima na hierarquia não acionarão a escuta designada a usar a captura. Veja [Eventos DOM Nível 3](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow) para uma explicação detalhada. Perceba que esse parâmetro não é opcional em todos os navegadores. Se não for especificado, `useCapture` é `false`.
+  - : Se `true`, `useCapture` indica que o usuário deseja iniciar uma captura. Depois de iniciada a captura, todos os eventos do tipo especificado serão enviados à `listener` registrada antes de serem enviados à qualquer `EventTarget` abaixo dela na hierarquia de DOMs. Eventos que borbulharem para cima na hierarquia não acionarão a escuta designada a usar a captura. Veja [Eventos DOM Nível 3](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) para uma explicação detalhada. Perceba que esse parâmetro não é opcional em todos os navegadores. Se não for especificado, `useCapture` é `false`.
 - `wantsUntrusted` {{ Non-standard_inline() }}
   - : Se `true`, o evento pode ser acionado por conteúdo não-confiável. Veja [Interação entre páginas com e sem privilégios](/pt-BR/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages).
 
@@ -203,7 +203,7 @@ Existe um porém com `attachEvent` o valor de `this` será a referência ao obje
 
 ### Uma maneira ultrapassada de registrar esperas de evento
 
-`addEventListener()` foi introduzido com as especificações de [Eventos](http://www.w3.org/TR/DOM-Level-2-Events) DOM 2. Antes disso, esperas de evento eram registradas assim:
+`addEventListener()` foi introduzido com as especificações de [Eventos](https://www.w3.org/TR/DOM-Level-2-Events) DOM 2. Antes disso, esperas de evento eram registradas assim:
 
 ```js
 // Passe uma função de referência — não adicione '()' depois dela, o que chamaria a função!
@@ -254,5 +254,5 @@ No primeiro caso, uma nova função (anônima) é criada em cada turno do loop. 
 
 ## Especificação
 
-- [Eventos DOM Nível 2: EventTarget.addEventListener](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener)
+- [Eventos DOM Nível 2: EventTarget.addEventListener](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener)
 - [Eventos DOM Nível 3: EventTarget.addEventListener](http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html#events-EventTarget-addEventListener)

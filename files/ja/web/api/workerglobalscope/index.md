@@ -2,7 +2,7 @@
 title: WorkerGlobalScope
 slug: Web/API/WorkerGlobalScope
 l10n:
-  sourceCommit: 0aeeed7516b4f9955049b85653c451e146b1743d
+  sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
 ---
 
 {{APIRef("Web Workers API")}}
@@ -13,7 +13,7 @@ l10n:
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 _このインターフェイスには、 {{domxref("EventTarget")}} インターフェイスから継承したプロパティがあります。_
 
@@ -25,6 +25,8 @@ _このインターフェイスには、 {{domxref("EventTarget")}} インター
   - : `WorkerGlobalScope` 自身の参照を返します。ほとんどの場合、 {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, {{domxref("ServiceWorkerGlobalScope")}} のような特化されたスコープです。
 - {{domxref("WorkerGlobalScope.location")}} {{ReadOnlyInline}}
   - : ワーカーに関連した {{domxref("WorkerLocation")}} を返します。これは特化された location オブジェクトであり、ほぼ閲覧スコープのの {{domxref("Location")}} のサブセットですが、ワーカーに適合したものです。
+- {{domxref("WorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
+  - : このワーカーに関連付けられた {{domxref("FontFaceSet")}} を返します。
 
 ### 非標準プロパティ
 
@@ -33,7 +35,7 @@ _このインターフェイスには、 {{domxref("EventTarget")}} インター
 - {{domxref("WorkerGlobalScope.console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : ワーカーに関連付けられた {{domxref("console")}} オブジェクトを返します。
 
-### 他の場所で実装されているプロパティ
+### 他の場所で実装されているインスタンスプロパティ
 
 - {{domxref("caches")}} {{ReadOnlyInline}}
   - : 現在のコンテキストに関連付けられた {{domxref("CacheStorage")}} オブジェクトを返します。このオブジェクトは、オフラインで使用するための資産の保存や、リクエストに対するカスタムレスポンスの生成といった機能を実現します。
@@ -62,7 +64,7 @@ _このインターフェイスには、 {{domxref("EventTarget")}} インター
 - `unhandledrejection` {{non-standard_inline}}
   - : [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) の拒否イベントが処理されなかったときに発行されます。
 
-## メソッド
+## インスタンスメソッド
 
 _このインターフェイスは、{{domxref("EventTarget")}} インターフェイスから継承したメソッドがあります。_
 
@@ -76,7 +78,7 @@ _このインターフェイスは、{{domxref("EventTarget")}} インターフ�
 - {{domxref("WorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : 標準出力、たとえば端末にメッセージを書き込むことができます。これは Firefox の {{domxref("window.dump")}} ですが、ワーカーのためのものです。
 
-### 他で実装されているメソッド
+### 他で実装されているインスタンスメソッド
 
 - {{domxref("atob", "atob()")}}
   - : base-64 エンコーディングを使用してエンコードされた文字データをデコードする。

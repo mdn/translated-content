@@ -51,7 +51,7 @@ O Document Object Model (DOM) é uma **convenção multiplataforma** e **lndepen
 
 - A estrutura do documento, um tree model (modelo de árvore), e a arquitetura do DOM Event (Evento do DOM) no [DOM core](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) (núceo do DOM): Node, Element, DocumentFragment, Document, DOMImplementation, Event, EventTarget, …
 - Uma definição menos rigorosa do DOM Event Architecture, assim como eventos específicos no [DOM events](http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html).
-- Outras coisas como o [DOM Traversal](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) e o [DOM Range](http://html5.org/specs/dom-range.html).
+- Outras coisas como o [DOM Traversal](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) e o [DOM Range](http://html5.org/specs/dom-range.html).
 
 Pela perspectiva do EXMScript, objetos definidos na especificação do DOM são chamados de "host objects".
 

@@ -455,7 +455,7 @@ Você pode querer sobrescrever essa resposta depois que ela expirar no servidor,
 
 Um dos métodos mencionados na especificação é enviar uma solicitação para a mesma URL com um método não seguro como `POST`, mas isso geralmente é difícil de fazer intencionalmente para muitos clientes.
 
-Há também uma especificação para um cabeçalho e valor `Clear-Site-Data: cache`, mas [nem todos os navegadores o suportam](https://groups.google.com/a/mozilla.org/g/dev-platform /c/I939w1yrTp4) — e mesmo quando usado, afeta apenas os caches do navegador e não afeta os caches intermediários.
+Há também uma especificação para um cabeçalho e valor `Clear-Site-Data: cache`, mas [nem todos os navegadores o suportam](https://groups.google.com/a/mozilla.org/g/dev-platform/c/I939w1yrTp4) — e mesmo quando usado, afeta apenas os caches do navegador e não afeta os caches intermediários.
 
 Portanto, deve-se presumir que qualquer resposta armazenada permanecerá por seu período de `max-age`, a menos que o usuário execute manualmente uma ação de recarregar, forçar o recarregamento ou limpar o histórico.
 

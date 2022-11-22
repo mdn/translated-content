@@ -38,4 +38,4 @@ Repare que `cx` e `cy` são para definir as coordenadas x e y do círculo, `r` �
 ### Informação técnica
 
 - [Documentação sobre SVG na MDN](/pt-BR/docs/Web/SVG)
-- [Especificação SVG mais recente](http://www.w3.org/TR/SVG/) (em inglês)
+- [Especificação SVG mais recente](https://www.w3.org/TR/SVG/) (em inglês)

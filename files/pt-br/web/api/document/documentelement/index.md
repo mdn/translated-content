@@ -37,4 +37,4 @@ Documentos HTML tipicamente contém somente um único nó filho, `<html>`, talve
 
 ## Especificações
 
-- [Núcleo DOM Nível 2: document.documentElement](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-87CD092)
+- [Núcleo DOM Nível 2: document.documentElement](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-87CD092)

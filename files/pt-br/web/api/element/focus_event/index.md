@@ -9,7 +9,7 @@ O evento `focus` é acionado assim que um elemento recebe um foco. O grande dife
 ## Informações Gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focus)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focus)
 - Interface
   - : {{ domxref("FocusEvent") }}
 - Borbulha
