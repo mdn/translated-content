@@ -6,23 +6,19 @@
 
 ## 翻譯標題 ID
 
-基於自動產生文章內的導覽、識別程式碼區塊用於建立實際範例、以及其他的原因，我們的文章通常都會為標題配上 ID 。
-
-在翻譯標題時，你不需要翻譯它的 ID。路徑的其他部分也沒有翻譯，所以讓它維持一致吧。
+基於自動產生文章內的導覽、識別程式碼區塊用於建立實際範例、以及其他的原因，我們的文章會使用到 HTML ID。而對於 Markdown 文件，其渲染得到的 HTML 文件的 ID 則與 Markdown 文件中的標題相對應（但這並不意味著兩者相同，yari 平台對於空格、半角標點等有特殊處理）。
 
 例如：
 
-```html
-<h2 id="tutorials">Tutorials</h2>
+```md
+## Tutorials
 ```
 
 在 `zh-TW` 地區的翻譯應該是
 
-```html
-<h2 id="tutorials">教學</h2>
+```md
+## 教學
 ```
-
-一般上我們建議你用小寫的方式書寫所有 ID 。雖然平台會在呈現時自動轉換，但減少手動建立錨點，就表示在轉換的過程減少出錯的機率。
 
 ## 翻譯程式碼區塊
 
@@ -36,32 +32,33 @@
 
 在某些文章的原始碼中，你可能會發現區塊等級元素中有無關緊要的換行，例如：
 
-```html
-<p>The
-  <code><strong>HTMLCanvasElement</strong></code><strong><code>.transferControlToOffscreen()</code></strong>
-  method transfers control to an {{domxref("OffscreenCanvas")}} object, either on the main
-  thread or on a worker.</p>
+````md
+The
+**`HTMLCanvasElement.transferControlToOffscreen()`**
+method transfers control to an {{domxref("OffscreenCanvas")}} object, either on the main
+thread or on a worker.
 
-<pre
-  class="brush: js">OffscreenCanvas HTMLCanvasElement.transferControlToOffscreen()</pre>
+```js
+OffscreenCanvas HTMLCanvasElement.transferControlToOffscreen()
 ```
+````
 
 一般而言，我們並不會在原始碼中使用如此的換行，所以你可以選擇把它們移除，而且當你在進行新的翻譯時也不要把它們加進來。但毋須浪費太多時間移除這些多餘的換行，因為在最終呈現的結果上並不會有差異。
 
 ## 站內連結翻譯
 
-在翻譯文章時，記得把 MDN 內部頁面連結中的語系轉換成 `/zh-TW` ，以便讀者在點選連結時，能夠正確的跳轉到該主題的中文翻譯頁面。
+在翻譯文章時，記得把 MDN 內部頁面連結中的語系轉換成 `/zh-TW`，以便讀者在點選連結時，能夠正確的跳轉到該主題的中文翻譯頁面。
 
 例如：
 
-```html
-<p>For example, consider the <a href="/en-US/docs/Web/JavaScript">JavaScript</a> guide, which is structured as follows:</p>
+```md
+For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which is structured as follows:
 ```
 
 在翻譯時應該是（請注意 `/zh-TW` 替換了原本的 `/en-US` ）
 
-```html
-<p>以 <a href="/zh-TW/docs/Web/JavaScript">JavaScript</a> 指南為例，它的結構如下：</p>
+```md
+以 [JavaScript](/zh-TW/docs/Web/JavaScript) 指南為例，它的結構如下：
 ```
 
 ## 中文翻譯的常見問題
@@ -108,11 +105,11 @@
 
 ### 中文及拉丁語系文字間不加修飾空白
 
-中文網路界，有一派習慣是在中文字與半形英數、符號字元間，手動加入半形空格，以便視覺上美觀（如[盤古之白](https://github.com/vinta/pangu.js/blob/master/README.md)倡議）；但也有人主張中英文間不應手動加入空白，而應以系統來調整顯示樣式（如[W3C中文排版需求草案](https://www.w3.org/TR/clreq/#mixed_text_composition_in_horizontal_writing_mode)、[Fred Jame](https://fredjame.wordpress.com/2014/09/14/%e4%b8%ad%e8%8b%b1%e6%96%87%e4%b9%8b%e9%96%93%e7%82%ba%e4%bb%80%e9%ba%bc%e8%a6%81%e6%9c%89%e7%a9%ba%e6%a0%bc%e6%88%91%e5%95%8f/)、及[中文維基百科](https://zh.wikipedia.org/wiki/Wikipedia_talk:%E6%A0%BC%E5%BC%8F%E6%89%8B%E5%86%8C/%E5%AD%98%E6%A1%A35#%E6%8F%90%E8%AD%B0%E4%BF%AE%E6%94%B9%E6%A0%BC%E5%BC%8F%E6%89%8B%E5%86%8A%E4%B8%AD%E7%9A%84%E7%A9%BA%E6%A0%BC%E7%AB%A0%E7%AF%80)之討論）。
+中文網路界，有一派習慣是在中文字與半形英數、符號字元間，手動加入半形空格，以便視覺上美觀（如[盤古之白](https://github.com/vinta/pangu.js/blob/master/README.md)倡議）；但也有人主張中英文間不應手動加入空白，而應以系統來調整顯示樣式（如 [W3C 中文排版需求草案](https://www.w3.org/TR/clreq/#mixed_text_composition_in_horizontal_writing_mode)、[Fred Jame](https://fredjame.wordpress.com/2014/09/14/%e4%b8%ad%e8%8b%b1%e6%96%87%e4%b9%8b%e9%96%93%e7%82%ba%e4%bb%80%e9%ba%bc%e8%a6%81%e6%9c%89%e7%a9%ba%e6%a0%bc%e6%88%91%e5%95%8f/)、及[中文維基百科](https://zh.wikipedia.org/wiki/Wikipedia_talk:%E6%A0%BC%E5%BC%8F%E6%89%8B%E5%86%8C/%E5%AD%98%E6%A1%A35#%E6%8F%90%E8%AD%B0%E4%BF%AE%E6%94%B9%E6%A0%BC%E5%BC%8F%E6%89%8B%E5%86%8A%E4%B8%AD%E7%9A%84%E7%A9%BA%E6%A0%BC%E7%AB%A0%E7%AF%80)之討論）。
 
 ~~經 MDN 在地化團隊[討論](https://t.me/c/1099275693/2056)，著眼於簡化格式規範，並考量作業系統與瀏覽器層級中英文混排的 kerning 實作將越來越良好（如 iOS 13 、 macOS 10.15 ）， MDN上 「不」在中英文間手動插入空白字元。~~
 
-基於多數應用程式都並未很對中西文混排進行最佳化處理、不手動修飾仍對閱讀上造成一定的障礙、 `zh-CN` 也偏向於手動修正等理由，重新採取須手動修飾的原則。請貢獻者盡可能確保格式的正確，審核人員也會協助你找出遺漏的部分。以下手動增加修飾空白的範例：
+基於多數應用程式都並未很對中西文混排進行最佳化處理、不手動修飾仍對閱讀上造成一定的障礙、`zh-CN` 也偏向於手動修正等理由，重新採取須手動修飾的原則。請貢獻者盡可能確保格式的正確，審核人員也會協助你找出遺漏的部分。以下手動增加修飾空白的範例：
 
 - 正確：使用 Git 作為版本控制。
 - 不正確：使用Git作為版本控制。
