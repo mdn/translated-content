@@ -60,13 +60,11 @@ function setStyles() {
 
 > **メモ:** 完全に動作する例として実行する様子を見るために、[Web Storage Demo](https://github.com/mdn/web-storage-demo) をご覧ください。
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                                                   | 策定状況                         | コメント |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#the-storage-interface', 'Storage')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.Storage")}}
 

@@ -36,13 +36,11 @@ function forEachKey(callback) {
 
 > **メモ:** 実際の例として、[Web Storage Demo](https://github.com/mdn/web-storage-demo) をご覧ください。
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                       | 策定状況                         | コメント |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-key', 'key()')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.Storage.key")}}
 
