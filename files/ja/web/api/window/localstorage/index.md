@@ -61,13 +61,11 @@ localStorage.clear();
 
 > **メモ:** 詳細な使用例は [Web Storage API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) の記事を参照してください。
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                                                   | 策定状況                         | コメント |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#the-localstorage-attribute', 'localStorage')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("api.Window.localStorage")}}
 

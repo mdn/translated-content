@@ -44,13 +44,11 @@ function setStyles() {
 
 > **メモ:** 実際の例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                               | 策定状況                         | コメント |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-getitem', 'getItem()')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.Storage.getItem")}}
 

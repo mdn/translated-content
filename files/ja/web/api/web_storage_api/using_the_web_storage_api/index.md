@@ -185,9 +185,7 @@ window.addEventListener('storage', function(e) {
 
 ## 仕様書
 
-| 仕様書                                                                       | 状態                             | 備考 |
-| ---------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

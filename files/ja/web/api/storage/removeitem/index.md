@@ -40,11 +40,9 @@ function populateStorage() {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-removeitem', 'Storage.removeItem')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Storage.removeItem")}}
 

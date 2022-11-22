@@ -43,7 +43,7 @@ void initStorageEvent(
 );
 ```
 
-###### 引数
+#### 引数
 
 - `typeArg`
   - : イベントの名称。
@@ -66,6 +66,6 @@ void initStorageEvent(
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat}}
