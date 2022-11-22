@@ -7,6 +7,8 @@ tags:
   - Glossary
   - compilar
 translation_of: Glossary/Compile
+l10n:
+  sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
 Compilar es el proceso de transformar un programa informático escrito en un {{Glossary("computer programming", "lenguaje")}} en un conjunto de instrucciones en otro formato o lenguaje. Un **compilador** es un programa de computadora que realiza dicha tarea.
