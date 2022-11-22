@@ -63,11 +63,11 @@ O texto do cabeçalho mudou para _Hello world!_ usando JavaScript. Você fez iss
 
 Em seguida, o código define o valor da propriedade {{domxref("Node.textContent", "textContent")}} da variável `myHeading` (que representa o conteúdo do cabeçalho) como _Hello world!_.
 
-> **Nota:** Ambos os recursos usados ​​neste exercício são partes do [Façacument Object Model (DOM) API](/pt-BR/docs/Web/API/Document_Object_Model), que tem a capacidade de manipular documentos.
+> **Nota:** Ambos os recursos usados neste exercício são partes do [Modelo de Objeto de Document (DOM)](/pt-BR/docs/Web/API/Document_Object_Model), que tem a capacidade de manipular documentos.
 
-## Curso intensivo de noções básicas de idiomas
+## Curso intensivo de fundamentos da linguagem
 
-Para entender melhor como o JavaScript funciona, vamos explicar alguns dos principais recursos da linguagem. Vale a pena notar que esses recursos são comuns a todas as linguagens de programação. Se você dominar esses fundamentos, terá uma vantagem inicial na codificação em outros idiomas também!
+Para entender melhor como o JavaScript funciona, vamos explicar alguns dos principais recursos da linguagem. Vale a pena notar que esses recursos são comuns a todas as linguagens de programação. Se você dominar esses fundamentos, terá uma vantagem inicial na codificação em outras linguagens também!
 
 > **Aviso:** neste artigo, tente inserir as linhas de código de exemplo em seu console JavaScript para ver o que acontece. Para obter mais detalhes sobre consoles JavaScript, consulte [Descubra as ferramentas de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools).
 
@@ -342,7 +342,7 @@ document.querySelector("html").addEventListener("click", () => {
 });
 ```
 
-## Incrementando nosso site de exemplo
+## Melhorando nosso site de exemplo
 
 Com esta revisão dos fundamentos do JavaScript concluída (acima), vamos adicionar alguns novos recursos ao nosso site de exemplo.
 
@@ -473,11 +473,11 @@ Acabamos de arranhar a superfície do JavaScript. Se você gostou de jogar e des
 
 ## Neste módulo
 
-- [Instalando o software básico](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
+- [Instalando os programas básicos](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
 - [Como será o seu site?](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
 - [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
 - [Noções básicas de HTML](/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics)
 - [Noções básicas de CSS](/pt-BR/docs/Learn/Getting_started_with_the_web/CSS_basics)
 - [Noções básicas de JavaScript](/pt-BR/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publicando seu site](/pt-BR/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Como funciona a web](/pt-BR/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [Publicando seu website](/pt-BR/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [Como a web funciona](/pt-BR/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
