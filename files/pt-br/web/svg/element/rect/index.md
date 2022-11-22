@@ -12,7 +12,7 @@ html,body,svg { height:100% }
 ```
 
 ```html
-<svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 220 100" xmlns="https://www.w3.org/2000/svg">
   <!-- Simple rectangle -->
   <rect width="100" height="100" />
 

@@ -3270,8 +3270,8 @@
 /ja/docs/Web/API/FileReader/onabort	/ja/docs/Web/API/FileReader/abort_event
 /ja/docs/Web/API/FileReader/onerror	/ja/docs/Web/API/FileReader/error_event
 /ja/docs/Web/API/FileReader/onload	/ja/docs/Web/API/FileReader/load_event
-/ja/docs/Web/API/FileSystemEntrySync	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API_14742f14781741be7bc237d4ec1399a0
-/ja/docs/Web/API/File_Handle_API	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API
+/ja/docs/Web/API/FileSystemEntrySync	/ja/docs/Web/API/File_and_Directory_Entries_API
+/ja/docs/Web/API/File_Handle_API	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/FormDataEntryValue	/ja/docs/conflicting/Web/API/FormData
 /ja/docs/Web/API/Frame_Timing_API	/ja/docs/orphaned/Web/API/Frame_Timing_API
 /ja/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API	/ja/docs/orphaned/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API
@@ -3416,8 +3416,8 @@
 /ja/docs/Web/API/IDBRequest/onsuccess	/ja/docs/Web/API/IDBRequest/success_event
 /ja/docs/Web/API/Index	/ja/docs/Web/API
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
-/ja/docs/Web/API/LocalFileSystem	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API_330e25ac325178c58fd9fba0601787e1
-/ja/docs/Web/API/LocalFileSystemSync	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API_b98af8eade9a709904ec6e38c4e7c98a
+/ja/docs/Web/API/LocalFileSystem	/ja/docs/Web/API/File_and_Directory_Entries_API
+/ja/docs/Web/API/LocalFileSystemSync	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/MediaCapabilitiesInfo	/ja/docs/Web/API/MediaCapabilities/encodingInfo
 /ja/docs/Web/API/MediaDevices/ondevicechange	/ja/docs/Web/API/MediaDevices/devicechange_event
 /ja/docs/Web/API/MediaQueryList/onchange	/ja/docs/Web/API/MediaQueryList/change_event
@@ -4787,6 +4787,7 @@
 /ja/docs/Web/Manifest/iarc_rating_id	/ja/docs/Web/Manifest
 /ja/docs/Web/Manifest/lang	/ja/docs/Web/Manifest
 /ja/docs/Web/MathML/Index	/ja/docs/Web/MathML
+/ja/docs/Web/Media/images/aspect_ratio_mapping	/ja/docs/Learn/Performance/Multimedia
 /ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Introduction
 /ja/docs/Web/Progressive_web_apps/Responsive	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web/Reference	/ja/docs/Web
