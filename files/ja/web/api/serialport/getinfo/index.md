@@ -1,6 +1,8 @@
 ---
 title: SerialPort.getInfo()
 slug: Web/API/SerialPort/getInfo
+l10n:
+  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
 {{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}

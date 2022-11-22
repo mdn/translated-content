@@ -1,6 +1,8 @@
 ---
 title: 'SerialPort: disconnect イベント'
 slug: Web/API/SerialPort/disconnect_event
+l10n:
+  sourceCommit: ba5931fadbcc3b79ffacbb442b58380c827fc0ae
 ---
 
 {{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}

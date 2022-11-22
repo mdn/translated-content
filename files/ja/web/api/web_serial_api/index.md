@@ -1,6 +1,8 @@
 ---
 title: Web Serial API
 slug: Web/API/Web_Serial_API
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
 {{DefaultAPISidebar("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}

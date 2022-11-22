@@ -1,6 +1,8 @@
 ---
 title: 'SerialPort: connect イベント'
 slug: Web/API/SerialPort/connect_event
+l10n:
+  sourceCommit: ba5931fadbcc3b79ffacbb442b58380c827fc0ae
 ---
 
 {{APIRef("Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}

@@ -1,6 +1,8 @@
 ---
 title: SerialPort
 slug: Web/API/SerialPort
+l10n:
+  sourceCommit: f7fe5c73572eb10466583d275c20cd6e55867455
 ---
 
 {{securecontext_header}}{{APIRef("Serial API")}}{{SeeCompatTable}}

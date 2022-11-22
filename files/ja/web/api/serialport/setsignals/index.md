@@ -1,6 +1,8 @@
 ---
 title: SerialPort.setSignals()
 slug: Web/API/SerialPort/setSignals
+l10n:
+  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
 {{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}

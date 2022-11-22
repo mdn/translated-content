@@ -1,6 +1,8 @@
 ---
 title: Serial.getPorts()
 slug: Web/API/Serial/getPorts
+l10n:
+  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
 {{APIRef("Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}

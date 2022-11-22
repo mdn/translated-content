@@ -1,6 +1,8 @@
 ---
 title: SerialPort.forget()
 slug: Web/API/SerialPort/forget
+l10n:
+  sourceCommit: f58ce40b926e376c5b7aa061277a8dc6ff7b32da
 ---
 
 {{securecontext_header}}{{APIRef("Serial API")}}{{SeeCompatTable}}

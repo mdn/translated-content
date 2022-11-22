@@ -1,6 +1,8 @@
 ---
 title: SerialPort.getSignals()
 slug: Web/API/SerialPort/getSignals
+l10n:
+  sourceCommit: e04cb8cd3168730e0236979821d4550b5ab5a159
 ---
 
 {{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}

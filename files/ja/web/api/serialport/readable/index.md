@@ -1,6 +1,8 @@
 ---
 title: SerialPort.readable
 slug: Web/API/SerialPort/readable
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
 {{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}

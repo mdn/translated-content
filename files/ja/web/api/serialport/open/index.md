@@ -1,6 +1,8 @@
 ---
 title: SerialPort.open()
 slug: Web/API/SerialPort/open
+l10n:
+  sourceCommit: de73dc7280b2b84ce58d2a93b241bd8a93e8096d
 ---
 
 {{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}

@@ -1,6 +1,8 @@
 ---
 title: Serial.requestPort()
 slug: Web/API/Serial/requestPort
+l10n:
+  sourceCommit: de73dc7280b2b84ce58d2a93b241bd8a93e8096d
 ---
 
 {{APIRef("Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
