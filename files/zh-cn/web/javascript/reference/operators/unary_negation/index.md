@@ -29,7 +29,7 @@ const y = -x;
 
 ### 取反的非数字
 
-一元否运算符可以[将非数字转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number数值转换)。
+一元否运算符可以[将非数字转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#数值转换)。
 
 ```js
 const x = "4";
