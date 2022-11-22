@@ -151,7 +151,7 @@ p {
 .wspPreLine { white-space: pre-line; }
 ```
 
-{{EmbedLiveSample("white-space", "100%", 530, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("", "100%", 530, "", "", "")}}
 
 {{cssinfo}}
 
