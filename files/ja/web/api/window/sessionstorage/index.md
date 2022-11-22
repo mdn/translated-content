@@ -5,9 +5,9 @@ slug: Web/API/Window/sessionStorage
 
 {{APIRef}}
 
-`sessionStorage` プロパティで、 session {{domxref("Storage")}} オブジェクトにアクセスできます。sessionStorage は {{domxref("Window.localStorage")}} に似ています。唯一の違いは、localStorage に保存されたデータに期限がないのに対して、sessionStorage に保存されたデータはページのセッションが終了するときに消去されます。ページのセッションはブラウザを開いている限り、ページの再読み込みや復元を越えて持続します。**新しいタブやウィンドウにページを開くと、新しいセッションが開始します。**これは、セッション Cookie の動作とは異なります。
+`sessionStorage` プロパティは読み取り専用で、セッションの {{domxref("Storage")}} オブジェクトにアクセスできます。`sessionStorage` は {{domxref("Window.localStorage")}} に似ています。唯一の違いは、`localStorage` に保存されたデータに期限がないのに対して、`sessionStorage` に保存されたデータはページのセッションが終了するときに消去されることです。ページのセッションはブラウザーを開いている限り、ページの再読み込みや復元を越えて持続します。 **新しいタブやウィンドウにページを開くと、新しいセッションが開始します。** これは、セッション Cookie の動作とは異なります。
 
-注意すべき点として、sessionStorage や localStorage **はページのプロトコルに限定されます。**
+注意すべき点として、`sessionStorage` は **はそのページのプロトコル固有です。** 特に、`http://example.com` のような HTTP で読み込まれているページにおける `localStorage` は、`https://example.com` のような対応する HTTPS で読み込まれているページにおける `localStorage` とは異なるオブジェクトを返します。
 
 ## 構文
 
@@ -22,9 +22,15 @@ var data = sessionStorage.getItem('key');
 sessionStorage.removeItem('key')
 ```
 
-### 値
+## 値
 
-{{domxref("Storage")}} オブジェクト。
+現在の{{glossary("origin","オリジン")}}のセッションストレージ領域にアクセスするのに使用できる {{domxref("Storage")}} オブジェクトを返します。
+
+### 例外
+
+- `SecurityError`
+  - : リクエストがポリシーの決定に反している、またはオリジンが[妥当な scheme/host/port tuple](/ja/docs/Web/Security/Same-origin_policy#Definition_of_an_origin) でない (これは例えば、オリジンが `file:` や `data:` スキームを使うときに起こります)。例えば、ユーザーがブラウザー設定で特定オリジンへのデータ永続化のパーミッションを拒否していることもあります。
+      なお、ユーザーが Cookie をブロックしている場合、ブラウザーはこれをデータ永続化の拒否と解釈する可能性が高いです。
 
 ## 例
 
@@ -34,7 +40,7 @@ sessionStorage.removeItem('key')
 sessionStorage.setItem('myCat', 'Tom');
 ```
 
-以下の例はテキストフィールドの内容を自動的に保存して、ブラウザが意図せず再開されたときに、記入した内容を失わないようにテキストフィールドの内容を復元します。
+以下の例はテキストフィールドの内容を自動的に保存して、ブラウザーが意図せず再開されたときに、記入した内容を失わないようにテキストフィールドの内容を復元します。
 
 ```js
 // 追跡するテキストフィールドを取得する
@@ -54,15 +60,13 @@ field.addEventListener("change", function() {
 });
 ```
 
-> **メモ:** 詳細な使用例は [Web Storage API を使用する](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) の記事を参照してください。
+> **メモ:** 詳細な使用例は [Web Storage API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) の記事を参照してください。
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                                                   | 策定状況                         | コメント |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Web Storage', '#the-sessionstorage-attribute', 'sessionStorage')}} | {{Spec2('Web Storage')}} |          |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.Window.sessionStorage")}}
 
