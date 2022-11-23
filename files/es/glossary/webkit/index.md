@@ -26,4 +26,4 @@ WebKit es una marca registrada de Apple, y es distribuido bajo la licencia BSD. 
 
 ### Referencia técnica
 
-- [WebKit CSS extensions](/en-US/docs/Web/CSS/Reference/Webkit_Extensions)
+- [WebKit CSS extensions](/es/docs/Web/CSS/Reference/Webkit_Extensions)

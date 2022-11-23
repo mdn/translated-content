@@ -94,5 +94,5 @@ y = 2; // Inicializa y
 ### Referencia técnica
 
 - [JavaScript: Understanding the Weird Parts](https://www.udemy.com/understand-javascript/) - Udemy.com Course
-- [var statement](/en-US/docs/Web/JavaScript/Reference/Statements/var) - MDN
-- [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) - MDN
+- [var statement](/es/docs/Web/JavaScript/Reference/Statements/var) - MDN
+- [function statement](/es/docs/Web/JavaScript/Reference/Statements/function) - MDN

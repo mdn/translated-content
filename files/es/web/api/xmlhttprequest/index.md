@@ -48,7 +48,7 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
     En los casos en que un diálogo de seguridad debe ser mostrado (como en una autentficación o la notificación de un certificado no válido), el pedido simplemente falla.
 
 - `mozResponseArrayBuffer` {{ Non-standard_inline() }}
-  : [`ArrayBuffer`](/en-US/JavaScript_typed_arrays/ArrayBuffer)
+  : [`ArrayBuffer`](/es/JavaScript_typed_arrays/ArrayBuffer)
   - : La respuesta al pedido en la forma de un arreglo de JavaScript. Esto es NULL si el pedido no fue exitoso o si todavía no ha sido enviado. **Sólo lectura.**
 - `multipart`: `booleano`
 
@@ -81,7 +81,7 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
   - : La respuesta al pedido como texto, o `null` si el pedido no fue exitoso o todavía no se envió. **Sólo lectura.**
 - `responseXML`: `nsIDOMDocument`
 
-  - : La respuesta al pedido como un objeto DOM[`Document`](/en-US/DOM/document), o `null` si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera `text/xml`. **Sólo lectura.**
+  - : La respuesta al pedido como un objeto DOM[`Document`](/es/DOM/document), o `null` si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera `text/xml`. **Sólo lectura.**
 
     > **Nota:** Si el servidor no aplica el encabezado de tipo de contenido `text/xml`, puedes usar `overrideMimeType()` para forzar a `XMLHttpRequest` a analizarlo como XML igualmente.
 

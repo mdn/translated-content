@@ -14,7 +14,7 @@ browser-compat: api.BatteryManager
 
 {{APIRef}}{{deprecated_header}}
 
-La interfaz `BatteryManager` de la [API del Estado de la Batería](/en-US/docs/Web/API/Battery_Status_API) proporciona la información del nivel de carga de la bateria del sistema. El método {{domxref("navigator.getBattery()")}} regresa una promesa que resuelve con la interfaz de `BatteryManager`.
+La interfaz `BatteryManager` de la [API del Estado de la Batería](/es/docs/Web/API/Battery_Status_API) proporciona la información del nivel de carga de la bateria del sistema. El método {{domxref("navigator.getBattery()")}} regresa una promesa que resuelve con la interfaz de `BatteryManager`.
 
 ## Propiedades
 
@@ -52,5 +52,5 @@ _Hereda métodos de su interfaz padre:_ {{domxref("EventTarget")}}.
 
 ## Ver también
 
-- La [API del Estado de la Batería](/en-US/docs/Web/API/Battery_Status_API)
+- La [API del Estado de la Batería](/es/docs/Web/API/Battery_Status_API)
 - {{domxref("navigator.getBattery")}}
