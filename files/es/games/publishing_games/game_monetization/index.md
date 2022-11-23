@@ -1,15 +1,6 @@
 ---
 title: Monetización de videojuegos
 slug: Games/Publishing_games/Game_monetization
-tags:
-  - HTLM5
-  - JavaScript
-  - Licencias
-  - anuncios
-  - juegos
-  - marca
-  - monetización
-translation_of: Games/Publishing_games/Game_monetization
 original_slug: Games/Publishing_games/Monetización_de_los_juegos
 ---
 
