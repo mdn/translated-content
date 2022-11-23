@@ -47,9 +47,7 @@ var params4 = new URLSearchParams({"foo" : 1 , "bar" : 2});
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                 | コメント |
-| ------------------------------------------------------------------------------------------------------------ | -------------------- | -------- |
-| {{SpecName('URL', '#dom-urlsearchparams-urlsearchparams', "URLSearchParams()")}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

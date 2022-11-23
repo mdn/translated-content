@@ -26,10 +26,7 @@ history.go(-1);     // history.back(); と同等
 
 ## 仕様書
 
-| 仕様                                                                                                                     | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'browsers.html#the-history-interface', 'The History interface')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'browsers.html#the-history-interface', 'The History interface')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
