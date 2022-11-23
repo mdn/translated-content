@@ -1,13 +1,6 @@
 ---
 title: HTMLElement.focus()
 slug: orphaned/Web/API/HTMLOrForeignElement/focus
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Referencia
-  - metodo
-translation_of: Web/API/HTMLOrForeignElement/focus
 original_slug: Web/API/HTMLOrForeignElement/focus
 ---
 
