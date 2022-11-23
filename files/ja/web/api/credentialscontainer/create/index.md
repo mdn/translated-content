@@ -72,9 +72,7 @@ navigator.credentials.create({ publicKey })
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                   | 状態                         | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('WebAuthn','#dom-publickeycredentialcreationoptions-authenticatorselection','authenticatorSelection')}} | {{Spec2('WebAuthn')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
