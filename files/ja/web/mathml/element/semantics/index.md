@@ -83,10 +83,7 @@ MathML においては、数学をタグ付けるには二つの方法があり�
 
 ## 仕様
 
-| 仕様                                                                                                                                 | 状態                         | 備考       |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{ SpecName('MathML3', 'chapter5.html', 'Mixing Markup Languages for Mathematical Expressions') }} | {{ Spec2('MathML3') }} | 現在の仕様 |
-| {{ SpecName('MathML2', 'chapter5.html', 'Combining Presentation and Content Markup ') }}                 | {{ Spec2('MathML2') }} | 初期の仕様 |
+{{Specifications}}
 
 ## ブラウザー互換機
 
