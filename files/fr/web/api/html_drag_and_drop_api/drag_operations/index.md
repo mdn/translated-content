@@ -53,25 +53,25 @@ Lorsqu'un utilisateur commence un glissement, l'événement dragstart est décle
 
 ## Donnée de glissement
 
-Tous les événements de glissement ont une propriété appelée [dataTransfer](/fr/GlisserD%C3%A9poser/DataTransfer) utilisée pour contenir la donnée de glissement.
+Tous les événements de glissement ont une propriété appelée [dataTransfer](/fr/docs/Web/API/DataTransfer) utilisée pour contenir la donnée de glissement.
 
 Lorsqu'un glissement a lieu, une donnée doit être associée au glissement pour identifier ce qui est en train de glisser. Par exemple, lors du glissement d'un texte sélectionné dans un champs de texte, la donnée associée au glissement est le texte lui-même. De même, lors du glissement d'un lien, la donnée associée est l'URL du lien.
 
-La donnée de glissement contient deux informations&nbsp;: son type ou format et sa valeur. Le format est une chaîne de caractère (telle que [text/plain](/fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text) pour un texte), et la valeur est un texte. Lorsqu'un glissement démarre, vous devez lui ajouter en fournissant un type et la donnée. Dans les scrutateurs des événements `dragenter` et `dragover` au cours d'un glissement, vous pouvez vérifier les types de données et indiquer si un dépôt est permis ou non. Par exemple, une cible de dépôt qui accepte que des liens testera les types lien [text/uri-list](/fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#link). Pendant un évément de dépôt, un scrutateur récupèrera la donnée glissée et l'insèrera dans la zone de dépôt.
+La donnée de glissement contient deux informations&nbsp;: son type ou format et sa valeur. Le format est une chaîne de caractère (telle que [text/plain](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#texte) pour un texte), et la valeur est un texte. Lorsqu'un glissement démarre, vous devez lui ajouter en fournissant un type et la donnée. Dans les scrutateurs des événements `dragenter` et `dragover` au cours d'un glissement, vous pouvez vérifier les types de données et indiquer si un dépôt est permis ou non. Par exemple, une cible de dépôt qui accepte que des liens testera les types lien [text/uri-list](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#lien). Pendant un évément de dépôt, un scrutateur récupèrera la donnée glissée et l'insèrera dans la zone de dépôt.
 
-Les types MIME habituels sont [text/plain](/fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text) ou [image/jpeg](/fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#image), mais vous pouvez créer vos propres types. La liste des types les plus utilisés est disponible sur [cette page](/fr/GlisserD%C3%A9poser/Types_de_glissement).
+Les types MIME habituels sont [text/plain](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#texte) ou [image/jpeg](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#image), mais vous pouvez créer vos propres types. La liste des types les plus utilisés est disponible sur [cette page](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types).
 
-Un glissement peut fournir une donnée dans différents types. Ceci permet à une donnée d'être disponible dans des types spécifiques, souvent personnalisés, toujours en fournissant un format pour les cibles ne supportant pas ces types spécifiques. Habituellement, il s'agit toujours d'une version textuelle de type [text/plain](/fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text). La donnée n'en sera qu'une représentation sous la forme d'un texte.
+Un glissement peut fournir une donnée dans différents types. Ceci permet à une donnée d'être disponible dans des types spécifiques, souvent personnalisés, toujours en fournissant un format pour les cibles ne supportant pas ces types spécifiques. Habituellement, il s'agit toujours d'une version textuelle de type [text/plain](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#texte). La donnée n'en sera qu'une représentation sous la forme d'un texte.
 
-Pour définir une donnée dans un dataTransfer, utilisez la méthode [setData](/fr/GlisserD%C3%A9poser/DataTransfer#setData). Elle prend deux arguments qui sont le type de la donnée et sa valeur. Par exemple&nbsp;:
+Pour définir une donnée dans un dataTransfer, utilisez la méthode [setData](/fr/docs/Web/API/DataTransfer/setData). Elle prend deux arguments qui sont le type de la donnée et sa valeur. Par exemple&nbsp;:
 
 ```js
 event.dataTransfer.setData("text/plain", "Texte à glisser");
 ```
 
-Dans ce cas, la valeur de la donnée est "Texte à glisser" et son format est [text/plain](/fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text).
+Dans ce cas, la valeur de la donnée est "Texte à glisser" et son format est [text/plain](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#texte).
 
-Vous pouvez fournir une donnée dans de multiples formats. Il suffit d'appeler la méthode [setData](/fr/GlisserD%C3%A9poser/DataTransfer#setData) plusieurs fois avec chacun des formats. Vous devez l'appeler dans l'ordre du format le plus spécifique au moins spécifique.
+Vous pouvez fournir une donnée dans de multiples formats. Il suffit d'appeler la méthode [setData](/fr/docs/Web/API/DataTransfer/setData) plusieurs fois avec chacun des formats. Vous devez l'appeler dans l'ordre du format le plus spécifique au moins spécifique.
 
 ```js
 var dt = event.dataTransfer;
@@ -82,21 +82,21 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 Ici, une donnée est ajoutée avec trois types différents. Le premier type 'application/x-bookmark' est un type personnalisé. Toutes les applications ne vont pas supporter ce type, mais vous pouvez l'utiliser pour le glissement entre des zones d'une même application ou d'un même site. En fournissant la donnée avec d'autres types, vous la rendez disponible à moindre échelle pour d'autres applications. Le type 'application/x-bookmark' fournira ainsi plus de détail à l'application qu'avec les autres types qui ne seraient que de simples liens ou textes.
 
-Notez que cet exemple, [text/uri-list](/fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#link) et [text/plain](/fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text) contiennent la même donnée. C'est souvent le cas, mais pas forcément nécessaire.
+Notez que cet exemple, [text/uri-list](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#lien) et [text/plain](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#texte) contiennent la même donnée. C'est souvent le cas, mais pas forcément nécessaire.
 
 Si vous essayez d'ajouter une donnée deux fois avec le même format, alors la nouvelle donnée remplacera l'ancienne, mais à la même position que l'ancienne dans la liste.
 
-Vous pouvez effacer la donnée en utilisant la méthode [clearData](/fr/GlisserD%C3%A9poser/DataTransfer#clearData), avec un seul argument qui est le type de la donnée à effacer.
+Vous pouvez effacer la donnée en utilisant la méthode [clearData](/fr/docs/Web/API/DataTransfer/clearData), avec un seul argument qui est le type de la donnée à effacer.
 
 ```js
 event.dataTransfer.clearData("text/uri-list");
 ```
 
-L'argument de type de la méthode [clearData](/fr/GlisserD%C3%A9poser/DataTransfer#clearData) est optionnel. S'il n'est pas précisé, la donnée associée à tous les types est effacée. Et si aucune donnée à glisser n'est ajoutée, alors l'opération de glissement ne s'effectue pas.
+L'argument de type de la méthode [clearData](/fr/docs/Web/API/DataTransfer/clearData) est optionnel. S'il n'est pas précisé, la donnée associée à tous les types est effacée. Et si aucune donnée à glisser n'est ajoutée, alors l'opération de glissement ne s'effectue pas.
 
 ## Définir l'image filigrane d'un glissement
 
-Lorsqu'un glissement a lieu, une image translucide est générée à partir de l'origine du glissement (l'élément d'origine ayant déclenché l'événement), et cette image suit le déplacement de la souris. Elle est créée automatiquement donc vous n'avez pas à le faire vous même. Toutefois, vous pouvez personnaliser cette image filigrane grâce à [setDragImage](/fr/GlisserD%C3%A9poser/DataTransfer#setDragImage).
+Lorsqu'un glissement a lieu, une image translucide est générée à partir de l'origine du glissement (l'élément d'origine ayant déclenché l'événement), et cette image suit le déplacement de la souris. Elle est créée automatiquement donc vous n'avez pas à le faire vous même. Toutefois, vous pouvez personnaliser cette image filigrane grâce à [setDragImage](/fr/docs/Web/API/DataTransfer/setDragImage).
 
 ```js
 event.dataTransfer.setDragImage(image, xOffset, yOffset);
@@ -126,13 +126,13 @@ function dragWithCustomImage(event)
 
 Cette technique est utile pour dessiner des images filigranes personnalisées en utilisant l'élément canvas.
 
-Les deuxième et troisième arguments de la méthode [setDragImage](/fr/GlisserD%C3%A9poser/DataTransfer#setDragImage) sont les décalages de l'image par rapport au pointeur de la souris. Dans cet exemple, comme le canvas fait 50 pixels de large et 50 pixels de haut, nous utilisons son centre (soit 25 et 25) pour que l'image soit centrée sur le pointeur de la souris.
+Les deuxième et troisième arguments de la méthode [setDragImage](/fr/docs/Web/API/DataTransfer/setDragImage) sont les décalages de l'image par rapport au pointeur de la souris. Dans cet exemple, comme le canvas fait 50 pixels de large et 50 pixels de haut, nous utilisons son centre (soit 25 et 25) pour que l'image soit centrée sur le pointeur de la souris.
 
 ## Effets du glissement
 
 Lors d'un glisser/déposer, plusieur opérations se déroulent. L'opération `copy` indique que la donnée glissée sera copiée de son emplacement d'origine au lieu de dépot. L'opération `move` indique que la donnée glissée sera déplacée, et l'opération `link` indique une forme de relation ou de connexion entre l'origine et le lieu de dépot.
 
-Vous pouvez spécifier laquelle de ces trois opérations sera autorisée au niveau de l'origine du glissement, en définissant la propriété [effectAllowed](/fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed) dans un scrutateur d'événement `dragstart`.
+Vous pouvez spécifier laquelle de ces trois opérations sera autorisée au niveau de l'origine du glissement, en définissant la propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed) dans un scrutateur d'événement `dragstart`.
 
 ```js
 event.dataTransfer.effectAllowed = "copy";
@@ -157,15 +157,15 @@ Dans cet exemple, seule une copie n'est autorisée. Vous pouvez combiner les val
 - all
   - : Copie, déplacement ou lien
 
-Notez que ces valeurs doivent être écrites exactement comme cela. Si vous ne modifiez pas la propriété [effectAllowed](/fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed), alors tous les opérations seront permises comme pour la valeur 'all'. L'usage de cette propriété intervient seulement si vous souhaitez exclure des types spécifiques.
+Notez que ces valeurs doivent être écrites exactement comme cela. Si vous ne modifiez pas la propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed), alors tous les opérations seront permises comme pour la valeur 'all'. L'usage de cette propriété intervient seulement si vous souhaitez exclure des types spécifiques.
 
-Pendant une opération de glissement, un scrutateur pour les événements `dragenter` ou `dragover` peut tester la propriété [effectAllowed](/fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed) afin de voir quelles opérations sont autorisées. La propriété associée [dropEffect](/fr/GlisserD%C3%A9pose/DataTransfer#dropEffect) doit être définie dans un de ces événements pour spécifier ce que chaque opération aura à faire. Les valeurs valides pour [dropEffect](/fr/GlisserD%C3%A9pose/DataTransfer#dropEffect) sont `none`, `copy`, `move` ou `link`. Il n'y a pas de combinaison pour cette propriété.
+Pendant une opération de glissement, un scrutateur pour les événements `dragenter` ou `dragover` peut tester la propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed) afin de voir quelles opérations sont autorisées. La propriété associée [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) doit être définie dans un de ces événements pour spécifier ce que chaque opération aura à faire. Les valeurs valides pour [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) sont `none`, `copy`, `move` ou `link`. Il n'y a pas de combinaison pour cette propriété.
 
-Pour les événements `dragenter` et `dragover`, la propriété [dropEffect](/fr/GlisserD%C3%A9pose/DataTransfer#dropEffect) est initialisée avec l'effet attendu par l'utilisateur. L'utilisateur peut modifier l'effet désiré en appuyant sur une touche de modification. Bien que les touches varient selon la plateforme, habituellement, il s'agit d'une combinaison des touches Maj et Control qui permettent de copier, déplacer et créer un raccourci. Le pointeur de la souris change de forme pour montrer l'opération souhaitée, par exemple un signe + à côté de la souris pour une copie.
+Pour les événements `dragenter` et `dragover`, la propriété [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) est initialisée avec l'effet attendu par l'utilisateur. L'utilisateur peut modifier l'effet désiré en appuyant sur une touche de modification. Bien que les touches varient selon la plateforme, habituellement, il s'agit d'une combinaison des touches Maj et Control qui permettent de copier, déplacer et créer un raccourci. Le pointeur de la souris change de forme pour montrer l'opération souhaitée, par exemple un signe + à côté de la souris pour une copie.
 
-Vous pouvez modifier les propriétés [effectAllowed](/fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed) et [dropEffect](/fr/GlisserD%C3%A9pose/DataTransfer#dropEffect) pendant les événements `dragenter` ou `dragover`, si par exemple une cible ne supporte qu'un seul type d'opération. La modification de la propriété [effectAllowed](/fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed) vous permet de spécifier les opérations autorisées sur une cible donnée. Par exemple, mettre une propriété `copyMove` permet des opération de copie ou de déplacement, mais pas de créer un lien raccourci.
+Vous pouvez modifier les propriétés [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed) et [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) pendant les événements `dragenter` ou `dragover`, si par exemple une cible ne supporte qu'un seul type d'opération. La modification de la propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed) vous permet de spécifier les opérations autorisées sur une cible donnée. Par exemple, mettre une propriété `copyMove` permet des opération de copie ou de déplacement, mais pas de créer un lien raccourci.
 
-Vous pouvez modifier la propriété [dropEffect](/fr/GlisserD%C3%A9pose/DataTransfer#dropEffect) en remplaçant l'effet de l'utilisateur, et forcer à obtenir une opération spécifique. Notez que cet effet doit être un de ceux listé dans la propriété [effectAllowed](/fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed), sinon une valeur alternative sera attribuée.
+Vous pouvez modifier la propriété [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) en remplaçant l'effet de l'utilisateur, et forcer à obtenir une opération spécifique. Notez que cet effet doit être un de ceux listé dans la propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed), sinon une valeur alternative sera attribuée.
 
 ```js
 event.dataTransfer.effectAllowed = "copyMove";
@@ -189,7 +189,7 @@ Si vous voulez autoriser un dépôt, vous devez empêcher le comportement par d�
 
 L'appel de la méthode [event.preventDefault](/fr/DOM/event.preventDefault) pendant les événements `dragenter` et `dragover` indiquera qu'un dépôt est permis à cet endroit. Toutefois, il est fréquent d'appeler la méthode [event.preventDefault](/fr/DOM/event.preventDefault) seulement dans certaines situations, par exemple si un lien est en train d'être glissé. Pour cela, appelez une fonction qui testera une condition et annulera l'événement seulement si cette condition est rencontrée. Dans le cas contraire, il suffit de ne pas annuler l'événement et aucun dépôt ne se réalisera si l'utilisateur lache le bouton de la souris.
 
-Il est plus fréquent d'accepter ou non un dépôt en fonction du type de la donnée glissée. Par exemple, permettre les images ou les liens, ou bien les deux. Pour cela, testez les [types](/fr/GlisserD%C3%A9poser/DataTransfer#types) de l'objet `dataTransfer`. Les types sont sous la forme d'une liste de chaînes de caractères ajoutées au début du glissement, du plus signifiant au moins signifiant.
+Il est plus fréquent d'accepter ou non un dépôt en fonction du type de la donnée glissée. Par exemple, permettre les images ou les liens, ou bien les deux. Pour cela, testez les [types](/fr/docs/Web/API/DataTransfer/types) de l'objet `dataTransfer`. Les types sont sous la forme d'une liste de chaînes de caractères ajoutées au début du glissement, du plus signifiant au moins signifiant.
 
 ```js
 function doDragOver(event)
@@ -200,9 +200,9 @@ function doDragOver(event)
 }
 ```
 
-Dans cet exemple, la méthode `contains` est utilisée pour vérifier si le type [text/uri-list](/fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#link) est présent dans la liste des types. S'il l'est, l'événement est annulé, ce qui autorise un dépôt. Si la donnée ne contient pas un lien, l'événement ne sera pas annulé et le dépôt ne sera pas autorisé à cet endroit.
+Dans cet exemple, la méthode `contains` est utilisée pour vérifier si le type [text/uri-list](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#lien) est présent dans la liste des types. S'il l'est, l'événement est annulé, ce qui autorise un dépôt. Si la donnée ne contient pas un lien, l'événement ne sera pas annulé et le dépôt ne sera pas autorisé à cet endroit.
 
-Vous pouvez également définir une propriété [effectAllowed](/fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed) ou [dropEffect](/fr/GlisserD%C3%A9poser/DataTransfer#dropEffect) ou les deux à la fois si vous souhaitez être plus précis sur le type d'opération autorisé. Naturellement, le changement de propriété n'aura aucun effet si vous n'avez pas annulé l'événement.
+Vous pouvez également définir une propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed) ou [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) ou les deux à la fois si vous souhaitez être plus précis sur le type d'opération autorisé. Naturellement, le changement de propriété n'aura aucun effet si vous n'avez pas annulé l'événement.
 
 ## Retour d'information du dépôt
 
@@ -302,6 +302,6 @@ Once the drag is complete, a `dragend` is fired at the source of the drag (the s
 
 If the [dropEffect](/fr/docs/Web/API/DragDrop/DataTransfer#dropEffect.28.29) property has the value `none` during a `dragend`, then the drag was cancelled. Otherwise, the effect specifies which operation was performed. The source can use this information after a move operation to remove the dragged item from the old location. The [mozUserCancelled](/fr/docs/Web/API/DragDrop/DataTransfer#mozUserCancelled.28.29) property will be set to true if the user cancelled the drag (by pressing Escape), and false if the drag was cancelled for other reasons such as an invalid drop target, or if was successful.
 
-A drop can occur inside the same window or over another application. The `dragend` event will always fire regardless. The event's [screenX](/fr/docs/DOM/event.screenX) and [screenY](/fr/docs/DOM/event.screenY) properties will be set to the screen coordinate where the drop occurred.
+A drop can occur inside the same window or over another application. The `dragend` event will always fire regardless. The event's [screenX](/fr/docs/Web/API/Window/screenX) and [screenY](/fr/docs/Web/API/Window/screenY) properties will be set to the screen coordinate where the drop occurred.
 
 After the `dragend` event has finished propagating, the drag and drop operation is complete.

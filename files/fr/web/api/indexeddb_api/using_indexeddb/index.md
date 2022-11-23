@@ -91,7 +91,7 @@ request.onsuccess = function(event) {
 
 Laquelle de ces deux fonctions, `onsuccess()` or `onerror()`, sera appelée ? Si tout se passe bien, un évènement success (qui est un évènement DOM dont la propriété `type` est à `"success"`) est déclenché avec `request` comme cible. Une fois déclenché, la fonction `onsuccess()` de `request` est lancée avec l'évènement success comme argument. S’il y avait un quelconque problème, un évènement erreur (qui est un évènement DOM dont la propriété `type` est définie à `"error"`) est lancée dans `request`. Cela déclenche la fonction `onerror()` avec l'évènement d'erreur comme argument.
 
-L'API IndexedDB est conçue pour minimiser le recours à la gestion des erreurs, donc vous ne serez pas amené à voir beaucoup d'évènements erreurs (du moins, pas tant que vous utilisez l'API !). Cependant, dans le cas d'une ouverture de base de données, il y a quelques conditions qui génèrent des évènements d'erreurs. Le problème le plus courant est que l'utilisateur a décidé d'interdire l'accès à la création de base de données. Un des principaux objectifs d’IndexedDB est de permettre un stockage important de données pour l'utilisation hors-ligne. (Pour en savoir plus sur la capacité de stockage de chaque navigateur, voyez [Storage limits](/fr/docs/Web/API/IndexedDB#Storage_limits)).
+L'API IndexedDB est conçue pour minimiser le recours à la gestion des erreurs, donc vous ne serez pas amené à voir beaucoup d'évènements erreurs (du moins, pas tant que vous utilisez l'API !). Cependant, dans le cas d'une ouverture de base de données, il y a quelques conditions qui génèrent des évènements d'erreurs. Le problème le plus courant est que l'utilisateur a décidé d'interdire l'accès à la création de base de données. Un des principaux objectifs d’IndexedDB est de permettre un stockage important de données pour l'utilisation hors-ligne. (Pour en savoir plus sur la capacité de stockage de chaque navigateur, voyez [Limites de stockage](/fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)).
 
 Évidemment, les navigateurs ne peuvent permettre qu'une publicité en ligne ou un site malicieux pollue votre ordinateur, donc ils informent l’utilisateur la première fois qu'une application web tente d'ouvrir un espace de stockage IndexedDB. L'utilisateur peut choisir de permettre ou refuser l'accès. En ce qui concerne l’utilisation d’IndexedDB en mode privé, les données restent en mémoire jusqu’à ce que la session privée soit close (Navigation privée pour Firefox et mode Incognito pour Chrome, mais dans Firefox, cela [n'est pas encore implémenté](https://bugzilla.mozilla.org/show_bug.cgi?id=781982) depuis novembre 2015, aussi vous ne pouvez pas utiliser IndexedDB dans le mode privé de Firefo du tout).
 
@@ -141,11 +141,9 @@ Essayer de créer un objet de stockage avec un nom déjà existant (ou essayer d
 
 Si l'évènement `onupgradeneeded` quitte avec succès, le gestionnaire `onsuccess` de la requête d'ouverture de la base de données sera déclenché.
 
-Blink/Webkit supporte la version courante de la spécification, telle que livrée dans Chrome 23+ et Opera 17+ ; IE10+ également. Les autres implémentations plus anciennes ne prennent pas en charge `indexedDB.open(name, version).onupgradeneeded`. Pour plus d'informations sur la mise à jour de version de base de données sur les anciens Webkit/Blink, référez vous à [IDBDatabase reference article](/fr/docs/Web/API/IndexedDB/IDBDatabase#setVersion%28%29_.0A.0ADeprecated).
-
 ### Structurer la base de données
 
-Maintenant, structurons la base de données. IndexedDB utilise des objets de stockage plutôt que des tableaux, et une seule base de données peut contenir un nombre quelconque d'objets de stockage. Chaque fois qu'une valeur est stockée dans un objet de stockage, elle est associée à une clé. Il y a différentes manières pour une clé d'être définie, selon que l'objet de stockage utilise un [key path](/fr/docs/Web/API/IndexedDB#gloss_key_path) _(chemin de clé)_ ou un [key generator](/fr/docs/Web/API/IndexedDB#gloss_key_generator) _(générateur de clé)_.
+Maintenant, structurons la base de données. IndexedDB utilise des objets de stockage plutôt que des tableaux, et une seule base de données peut contenir un nombre quelconque d'objets de stockage. Chaque fois qu'une valeur est stockée dans un objet de stockage, elle est associée à une clé. Il y a différentes manières pour une clé d'être définie, selon que l'objet de stockage utilise un [chemin de clé](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#chemin_de_clé) ou un [générateur de clé](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#générateur_de_clé).
 
 Le tableau suivant montre les différentes manières d'attribuer des clés.
 
@@ -216,7 +214,7 @@ Les objets de stockage sont créés avec un simple appel à `createObjectStore()
 
 Nous avons aussi demandé un index nommé «&nbsp;<i lang="en">name</i>&nbsp;» qui examine la propriété `name` dans les objets stockés. Comme avec `createObjectStore()`, `createIndex()` prend un paramètre de type objet facultatif (`options`) qui définit le type d'index à créer. Ajouter des objets qui n'auront pas de propriété `name` fonctionnera, mais ces objets n'apparaîtront pas dans l'index «&nbsp;<i lang="en">name</i>&nbsp;».
 
-Nous pouvons récupérer les objets client stockés, en utilisant directement leur `ssn` dans l'objet de stockage, ou en utilisant leur nom via l’index `name`. Pour en savoir plus sur ce fonctionnement, se référer à la section [utiliser un index](/fr/docs/Web/API/IndexedDB/Using_IndexedDB#Using_an_index).
+Nous pouvons récupérer les objets client stockés, en utilisant directement leur `ssn` dans l'objet de stockage, ou en utilisant leur nom via l’index `name`. Pour en savoir plus sur ce fonctionnement, se référer à la section [Utiliser un index](#utiliser_un_index).
 
 ### Utiliser le générateur de clés
 
@@ -1313,7 +1311,7 @@ input {
 
 Référence :
 
-- [IndexedDB API Reference](/fr/docs/Web/API/IndexedDB)
+- [Référence de l'API IndexedDB](/fr/docs/Web/API/IndexedDB_API)
 - [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/fr/docs/IndexedDB/Using_IndexedDB_in_chrome)
 - [Using JavaScript generators in Firefox](/fr/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)

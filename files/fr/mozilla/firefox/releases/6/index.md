@@ -198,7 +198,7 @@ Pour des conseils utiles sur la mise à jour des extensions pour Firefox 6, voir
 - [`nsIHttpUpgradeListener`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIHttpUpgradeListener)
   - : L'interface de rappel pour le traitement des demandes de mise à niveau HTTP via la méthode [`nsIHttpChannelInternal.HTTPUpgrade()`](</fr/docs/XPCOM_Interface_Reference/nsIHttpChannelInternal#HTTPUpgrade()>).
 - [`nsIStructuredCloneContainer`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIStructuredCloneContainer)
-  - : Un conteneur pour les objets qui ont été sérialisé à l'aide de [l'algorithme de clonage structuré](/fr/docs/HTML/Structured_clones).
+  - : Un conteneur pour les objets qui ont été sérialisé à l'aide de [l'algorithme de clonage structuré](/fr/docs/Web/API/structuredClone).
 - [`nsITelemetry`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITelemetry)
   - : Implémentation du support de la télémétrie permettant d'enregistrer des données de télémétrie pour être utilisé pour présenter des histogrammes à des fins de suivi des performances. Voir [bug 649502](https://bugzilla.mozilla.org/show_bug.cgi?id=649502) et [bug 585196](https://bugzilla.mozilla.org/show_bug.cgi?id=585196).
 - [`nsITimedChannel`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITimedChannel)
