@@ -1,9 +1,6 @@
 ---
 title: Botón de la Barra de Herramientas
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
-tags:
-  - WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 original_slug: Mozilla/Add-ons/WebExtensions/user_interface/Accion_navegador
 ---
 

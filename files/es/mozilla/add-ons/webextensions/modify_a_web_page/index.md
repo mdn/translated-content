@@ -1,7 +1,6 @@
 ---
 title: Modify a web page
 slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
-translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 ---
 
 {{AddonSidebar}}Uno de los usos más comunes para las extensiones es modificar páginas web. Por ejemplo, una extension puede querer cambiar el estilo de la página, esconder determinados nodos DOM o incluir otros nuevos.Existen dos maneras de hacer esto con extensiones Web y APIs:

@@ -1,20 +1,6 @@
 ---
 title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
-tags:
-  - API
-  - Add-ons
-  - Complentos
-  - Extensions
-  - Interface
-  - NeedsTranslation
-  - Non-standard
-  - Reference
-  - Storage
-  - TopicStub
-  - WebExtensions
-  - extensiones
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 ---
 
 {{AddonSidebar}}

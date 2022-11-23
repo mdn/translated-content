@@ -1,12 +1,6 @@
 ---
 title: Funciones experimentales de Firefox
 slug: Mozilla/Firefox/Experimental_features
-tags:
-  - Experimental
-  - Firefox
-  - Preferencias
-  - características
-translation_of: Mozilla/Firefox/Experimental_features
 ---
 
 {{FirefoxSidebar}}

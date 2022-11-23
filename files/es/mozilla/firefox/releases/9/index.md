@@ -1,13 +1,6 @@
 ---
 title: Firefox 9 for developers
 slug: Mozilla/Firefox/Releases/9
-tags:
-  - Firefox
-  - Firefox 9
-  - Gecko 9
-  - NeedsTranslation
-  - TopicStub
-translation_of: Mozilla/Firefox/Releases/9
 ---
 
 Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9.0.1, which fixed a crashing bug discovered at the last minute, were released on December 21, 2011.

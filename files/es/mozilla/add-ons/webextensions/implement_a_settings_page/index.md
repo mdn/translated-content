@@ -1,9 +1,6 @@
 ---
 title: Implementar una página de configuración
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
-tags:
-  - JavaScript
-translation_of: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 ---
 
 {{AddonSidebar}}

@@ -1,12 +1,6 @@
 ---
 title: Complementos
 slug: Mozilla/Add-ons
-tags:
-  - Complementos
-  - Destino
-  - Mozilla
-  - extensiones
-translation_of: Mozilla/Add-ons
 ---
 
 {{AddonSidebar}}

@@ -1,9 +1,6 @@
 ---
 title: Incompatibilidades con Chrome
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
 
 WebExtensions está diseñado para ser compatible con las extensiones de Chrome y Opera: en la medida de lo posible, las extensiones escritas para esos navegadores deberían ejecutarse en Firefox con cambios mínimos.

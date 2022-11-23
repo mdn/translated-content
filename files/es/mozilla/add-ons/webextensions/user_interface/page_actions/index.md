@@ -1,7 +1,6 @@
 ---
 title: Address bar button
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
 
 {{AddonSidebar}}
