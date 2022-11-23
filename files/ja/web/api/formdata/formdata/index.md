@@ -63,9 +63,7 @@ let formData = new FormData(myForm);
 
 ## 仕様書
 
-| Specification                                                                    | Status                               | Comment            |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('XMLHttpRequest','#dom-formdata','FormData()')}} | {{Spec2('XMLHttpRequest')}} | Initial definition |
+{{Specifications}}
 
 ## ブラウザーの対応
 

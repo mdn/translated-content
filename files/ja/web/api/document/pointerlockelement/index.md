@@ -20,9 +20,7 @@ var element = document.pointerLockElement;
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考                              |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------- |
-| {{SpecName('Pointer Lock','#extensions-to-the-documentorshadowroot-mixin','pointerLockElement')}} | {{Spec2('Pointer Lock')}} | `Document` インターフェイスを拡張 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
