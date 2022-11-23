@@ -79,7 +79,7 @@ Content-Security-Policy: ...; report-to endpoint-1
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.report-to")}}
+{{Compat}}
 
 ## Voir aussi
 

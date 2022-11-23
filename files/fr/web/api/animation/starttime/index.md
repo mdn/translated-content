@@ -30,7 +30,7 @@ time = window.mozAnimationStartTime;
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.mozAnimationStartTime")}}
+{{Compat}}
 
 ## Voir aussi
 
