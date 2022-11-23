@@ -1,11 +1,6 @@
 ---
 title: Etiquetas de texto y nombres
 slug: Web/Accessibility/Understanding_WCAG/Text_labels_and_names
-tags:
-  - Accesibilidad
-  - Etiquetas de texto
-  - WCAG
-translation_of: Web/Accessibility/Understanding_WCAG/Text_labels_and_names
 original_slug: Web/Accesibilidad/Understanding_WCAG/Etiquetas_de_texto_y_nombres
 ---
 

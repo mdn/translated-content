@@ -1,14 +1,6 @@
 ---
 title: Creacion de plugins OpenSearch para Firefox
 slug: Web/OpenSearch
-tags:
-  - Agregados
-  - Complementos
-  - OpenSearch
-  - Plugins
-  - Plugins_de_búsqueda
-  - para_revisar
-translation_of: Web/OpenSearch
 original_slug: Creacion_de_plugins_OpenSearch_para_Firefox
 ---
 

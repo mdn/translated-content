@@ -1,7 +1,6 @@
 ---
 title: preceding-sibling
 slug: Web/XPath/Axes/preceding-sibling
-translation_of: Web/XPath/Axes/preceding-sibling
 original_slug: Web/XPath/Ejes/preceding-sibling
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: MathML attribute reference
 slug: Web/MathML/Attribute
-translation_of: Web/MathML/Attribute
 ---
 
 Esta es una lista alfabetica de atributos de MathML. Más detalles de cada atributo está disponible en cada [página de los elementos](/es/docs/MathML/Element).

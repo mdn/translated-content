@@ -1,7 +1,6 @@
 ---
 title: Comunicaciones peer-to-peer (P2P) con WebRTC
 slug: Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
-translation_of: Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
 original_slug: WebRTC/Peer-to-peer_communications_with_WebRTC
 ---
 

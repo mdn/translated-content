@@ -1,7 +1,6 @@
 ---
 title: 201 Created
 slug: Web/HTTP/Status/201
-translation_of: Web/HTTP/Status/201
 ---
 
 El código de respuesta de estado de éxito creado HTTP **`201 Created`** indica que la solicitud ha tenido éxito y ha llevado a la creación de un recurso. El nuevo recurso se crea efectivamente antes de enviar esta respuesta. y el nuevo recurso se devuelve en el cuerpo del mensaje, su ubicación es la URL de la solicitud o el contenido del encabezado de la Ubicacion

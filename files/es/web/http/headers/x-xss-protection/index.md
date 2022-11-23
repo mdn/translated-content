@@ -1,13 +1,6 @@
 ---
 title: X-XSS-Protection
 slug: Web/HTTP/Headers/X-XSS-Protection
-tags:
-  - HTTP
-  - Referencia
-  - Seguridad
-  - XSS
-  - encabezado
-translation_of: Web/HTTP/Headers/X-XSS-Protection
 ---
 
 {{HTTPSidebar}}

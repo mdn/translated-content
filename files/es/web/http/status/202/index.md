@@ -1,12 +1,6 @@
 ---
 title: 202 Aceptado
 slug: Web/HTTP/Status/202
-tags:
-  - Codigo de Estado
-  - HTTP
-  - Referencia
-  - Respuesta satisfactoria
-translation_of: Web/HTTP/Status/202
 ---
 
 {{HTTPSidebar}}
