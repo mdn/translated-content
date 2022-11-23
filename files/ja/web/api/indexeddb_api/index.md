@@ -99,9 +99,7 @@ IndexedDB を扱う操作は非同期に実行しますので、他のアプリ�
 
 ## 仕様書
 
-| 仕様書                                                   |
-| -------------------------------------------------------- |
-| [Indexed Database API](https://w3c.github.io/IndexedDB/) |
+{{Specifications}}
 
 ## 関連情報
 

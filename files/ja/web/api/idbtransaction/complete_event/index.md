@@ -42,7 +42,7 @@ DBOpenRequest.onupgradeneeded = event => {
   const db = event.target.result;
 
   db.onerror = () => {
-    console.log('Error creating database');
+    console.log('データベース作成エラー');
   };
 
   // このデータベースの objectStore を作成
@@ -64,7 +64,7 @@ DBOpenRequest.onsuccess = event => {
 
   // `complete` のためのリスナーを追加
   transaction.addEventListener('complete', event => {
-    console.log('Transaction was competed');
+    console.log('トランザクション完了');
   });
 
   const objectStore = transaction.objectStore('toDoList');
@@ -83,7 +83,7 @@ DBOpenRequest.onupgradeneeded = event => {
   const db = event.target.result;
 
   db.onerror = () => {
-    console.log('Error creating database');
+    console.log('データベース作成エラー');
   };
 
   // このデータベースの objectStore を作成
@@ -105,7 +105,7 @@ DBOpenRequest.onsuccess = event => {
 
   // `complete` のためのリスナーを追加
   transaction.oncomplete = event => {
-    console.log('Transaction was competed');
+    console.log('トランザクション完了');
   };
 
   const objectStore = transaction.objectStore('toDoList');
@@ -120,5 +120,5 @@ DBOpenRequest.onsuccess = event => {
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/IndexedDB/Using_IndexedDB)
+- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - {{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}} イベントハンドラープロパティ
