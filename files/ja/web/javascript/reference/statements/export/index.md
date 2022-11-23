@@ -244,9 +244,7 @@ import { myFunction, myVariable, myClass } from 'parentModule.js'
 
 ## 仕様
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-exports', 'Exports')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

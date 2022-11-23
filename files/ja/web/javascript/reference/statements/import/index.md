@@ -228,10 +228,7 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 ## 仕様
 
-| 仕様書                                                                           |
-| -------------------------------------------------------------------------------- |
-| {{SpecName("ESDraft", "#sec-imports", "Imports")}}             |
-| {{SpecName("ESDraft", "#sec-import-calls", "Import Calls")}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

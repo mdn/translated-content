@@ -97,9 +97,7 @@ for (const prop in obj) {
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...in statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
