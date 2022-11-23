@@ -35,9 +35,7 @@ pc.ondatachannel = function( ev ) {
 
 ## 仕様
 
-| Specification                                                                                                    | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('WebRTC 1.0', '#idl-def-RTCDataChannelEvent', 'RTCDataChannelEvent') }} | {{Spec2('WebRTC 1.0')}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザ互換性
 

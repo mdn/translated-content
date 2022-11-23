@@ -36,9 +36,7 @@ recognition.onresult = function(event) {
 
 ## 仕様
 
-| 仕様書                                                                                                                   | 策定状況                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---- |
-| {{SpecName('Web Speech API', '#speechreco-alternative', 'SpeechRecognitionAlternative')}} | {{Spec2('Web Speech API')}} |      |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 
