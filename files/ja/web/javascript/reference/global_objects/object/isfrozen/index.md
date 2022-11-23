@@ -130,9 +130,7 @@ Object.isFrozen(1);
 
 ## 仕様書
 
-| 仕様書                                                                                   |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.isfrozen', 'Object.isFrozen')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

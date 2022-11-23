@@ -44,9 +44,7 @@ new Float64Array([NaN]).includes(NaN); // true;
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.includes', 'TypedArray.prototype.includes')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

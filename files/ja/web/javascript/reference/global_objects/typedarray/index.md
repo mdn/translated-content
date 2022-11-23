@@ -185,9 +185,7 @@ Int8Array.prototype.foo = 'bar';
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

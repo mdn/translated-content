@@ -39,9 +39,7 @@ wm.has(window);    // false を返す。 window はもう WeakMap に存在し�
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

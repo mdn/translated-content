@@ -70,9 +70,7 @@ new Uint8Array([0, 1, 2, 3]).forEach(logArrayElements);
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.foreach', '%TypedArray%.prototype.forEach')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -47,9 +47,7 @@ Object.getPrototypeOf('foo');
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.getprototypeof', 'Object.getPrototypeOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

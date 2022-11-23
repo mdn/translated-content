@@ -48,9 +48,7 @@ console.log(Animal[Symbol.hasInstance](cat)); // true
 
 ## 仕様
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.hasinstance', 'Symbol.hasInstance')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

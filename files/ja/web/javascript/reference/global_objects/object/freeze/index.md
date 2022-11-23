@@ -210,9 +210,7 @@ obj2.internal.a; // null
 
 ## 仕様書
 
-| 仕様書                                                                               |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

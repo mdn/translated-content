@@ -46,9 +46,7 @@ console.log(Array.from(str.matchAll(numbers)));
 
 ## 仕様
 
-| 仕様書                                                                                   |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.matchall', 'Symbol.matchAll')}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

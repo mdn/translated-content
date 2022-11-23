@@ -25,9 +25,7 @@ throw e;
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error.prototype.name', 'Error.prototype.name')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

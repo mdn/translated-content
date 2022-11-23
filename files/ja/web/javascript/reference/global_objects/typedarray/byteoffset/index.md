@@ -27,9 +27,7 @@ uint8.byteOffset; // 3 (as specified when constructing Uint8Array)
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.byteoffset', 'TypedArray.prototype.byteOffset')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

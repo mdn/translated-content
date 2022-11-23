@@ -76,9 +76,7 @@ subclass.prototype = Object.create(
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
