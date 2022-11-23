@@ -1,12 +1,6 @@
 ---
 title: Herramientas de MDN y Utilidades
 slug: MDN/Tools
-tags:
-  - Documentacion(2)
-  - Documentación
-  - MDN
-  - Proyecto MDC
-translation_of: MDN/Tools
 ---
 
 {{MDNSidebar}}

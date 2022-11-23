@@ -1,12 +1,6 @@
 ---
 title: Guías prácticas
 slug: MDN/Contribute/Howto
-tags:
-  - Documentation
-  - Landing
-  - MDN
-  - TopicStub
-translation_of: MDN/Contribute/Howto
 ---
 
 {{MDNSidebar}}
