@@ -144,9 +144,7 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 ## 仕様書
 
-| 仕様書                                           | 状態                                         | 備考     |
-| ------------------------------------------------ | -------------------------------------------- | -------- |
-| {{SpecName('Page Visibility API')}} | {{Spec2('Page Visibility API')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 
