@@ -1,7 +1,6 @@
 ---
 title: Grid Row
 slug: Glossary/Grid_Row
-translation_of: Glossary/Grid_Rows
 original_slug: Glossary/Grid_Rows
 ---
 

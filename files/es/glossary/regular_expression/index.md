@@ -1,12 +1,6 @@
 ---
 title: Expresiones regulares
 slug: Glossary/Regular_expression
-tags:
-  - Expresion Regular
-  - Expresiones Regulares
-  - Glosario
-  - JavaScript
-translation_of: Glossary/Regular_expression
 ---
 
 **Expresiones regulares** (o _regex_) son reglas que definen las secuencias de caracteres obtenidas en una busqueda.

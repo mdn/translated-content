@@ -1,11 +1,6 @@
 ---
 title: Variable
 slug: Glossary/Variable
-tags:
-  - CodingScripting
-  - Glosario
-  - JavaScript
-translation_of: Glossary/Variable
 ---
 
 {{jsSidebar}}

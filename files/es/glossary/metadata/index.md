@@ -1,11 +1,6 @@
 ---
 title: Metadato
 slug: Glossary/Metadata
-tags:
-  - CodingScripting
-  - Glosario
-  - HTML
-translation_of: Glossary/Metadata
 original_slug: Glossary/Metadato
 ---
 

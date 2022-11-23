@@ -1,10 +1,6 @@
 ---
 title: Grid
 slug: Glossary/Grid
-tags:
-  - CSS
-  - CSS Grids
-translation_of: Glossary/Grid
 ---
 
 _CSS grid_ es definido usando el valor grid en la propiedad `display`; puedes definir columnas y filas en tu diseño grid, con las propiedades {{cssxref("grid-template-rows")}} y {{cssxref("grid-template-columns")}} .

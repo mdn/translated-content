@@ -1,13 +1,6 @@
 ---
 title: Nombre de encabezado prohibido
 slug: Glossary/Forbidden_header_name
-tags:
-  - Encabezados
-  - Fetch
-  - Glosario
-  - HTTP
-  - prohibido
-translation_of: Glossary/Forbidden_header_name
 original_slug: Glossary/Nombre_de_encabezado_prohibido
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Prototipo
 slug: Glossary/Prototype
-translation_of: Glossary/Prototype
 ---
 
 Un prototipo es un modelo que muestra pronto en el ciclo de desarrollo la apariencia y el comportamiento de una aplicación o producto.

@@ -1,7 +1,6 @@
 ---
 title: XForm
 slug: Glossary/XForms
-translation_of: Glossary/XForms
 original_slug: Glossary/XForm
 ---
 

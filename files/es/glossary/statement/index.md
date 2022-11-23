@@ -1,10 +1,6 @@
 ---
 title: Sentencias
 slug: Glossary/Statement
-tags:
-  - Glosario
-  - Principiante
-translation_of: Glossary/Statement
 original_slug: Glossary/Sentencias
 ---
 
