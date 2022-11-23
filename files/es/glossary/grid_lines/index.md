@@ -1,5 +1,5 @@
 ---
-title: líneas de Cuadrícula
+title: Líneas de Cuadrícula
 slug: Glossary/Grid_Lines
 translation_of: Glossary/Grid_Lines
 ---
