@@ -43,9 +43,7 @@ navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result => { // result
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                                     | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('Media Capabilities','#media-capabilities-info','MediaCapabilitiesInfo')}} | {{Spec2('Media Capabilities')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

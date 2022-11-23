@@ -54,9 +54,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
 ## 仕様
 
-| 仕様                                             | 状態                                         | コメント |
-| ------------------------------------------------ | -------------------------------------------- | -------- |
-| {{SpecName("MediaStream Recording")}} | {{Spec2("MediaStream Recording")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
