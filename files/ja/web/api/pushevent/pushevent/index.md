@@ -37,9 +37,7 @@ myPushEvent.data.text(); // 'Some sample text' を返す
 
 ## 仕様
 
-| 仕様                                                                     | 状態                         | コメント   |
-| ------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{SpecName('Push API','#the-push-event','PushEvent')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

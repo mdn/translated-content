@@ -29,9 +29,7 @@ PushManager.permissionState(options).then(function(PushMessagingState) { ... });
 
 ## 仕様
 
-| 仕様                                                                                                                                                                                         | 状態                         | コメント   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('Push API','#widl-PushManager-permissionState-Promise-PushPermissionState--PushSubscriptionOptions-options','permissionState()')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

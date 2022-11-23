@@ -43,9 +43,7 @@ self.addEventListener('push', function(event) {
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                         | コメント   |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{SpecName('Push API', '#pushmessagedata-interface', 'PushMessageData')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

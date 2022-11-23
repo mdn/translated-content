@@ -51,9 +51,7 @@ self.addEventListener('push', function(event) {
 
 ## 仕様
 
-| 仕様                                                                     | 状態                         | コメント |
-| ------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName('Push API','#widl-PushEvent-data','data')}} | {{Spec2('Push API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

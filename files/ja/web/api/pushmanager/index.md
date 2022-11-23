@@ -65,9 +65,7 @@ navigator.serviceWorker.register('serviceworker.js').then(
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                         | コメント   |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{SpecName('Push API','#pushmanager-interface','PushManager')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

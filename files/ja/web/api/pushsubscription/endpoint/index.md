@@ -34,9 +34,7 @@ navigator.serviceWorker.ready.then(function(reg) {
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                         | コメント   |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('Push API','#widl-PushSubscription-endpoint','endPoint')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

@@ -66,9 +66,7 @@ navigator.serviceWorker.ready.then(
 
 ## 仕様
 
-| 仕様                                                                                                                                                                         | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Push API', '#widl-PushManager-subscribe-Promise-PushSubscription--PushSubscriptionOptions-options', 'subscribe()')}} | {{Spec2('Push API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

@@ -48,9 +48,7 @@ navigator.serviceWorker.ready.then(function(reg) {
 
 ## 仕様
 
-| 仕様                                                                                                 | 状態                         | コメント   |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName("Push API", "#pushsubscription-interface", "PushSubscription")}} | {{Spec2("Push API")}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

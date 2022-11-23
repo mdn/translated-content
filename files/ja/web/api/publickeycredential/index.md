@@ -82,9 +82,7 @@ navigator.credentials.get({ "publicKey": options })
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                         | 備考     |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('WebAuthn','#iface-pkcredential','PublicKeyCredential interface')}} | {{Spec2('WebAuthn')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
