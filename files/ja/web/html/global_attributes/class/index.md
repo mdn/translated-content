@@ -13,12 +13,7 @@ slug: Web/HTML/Global_attributes/class
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                             | 備考                                                                                                                                                                                                                                                                                                                                  |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "elements.html#classes", "class")}}     | {{Spec2('HTML WHATWG')}} | 最新のスナップショットである {{SpecName('HTML5.1')}} から変更なし。                                                                                                                                                                                                                                                          |
-| {{SpecName('HTML5.1', "elements.html#classes", "class")}}         | {{Spec2('HTML5.1')}}     | {{SpecName('HTML WHATWG')}} のスナップショットであり、{{SpecName('HTML5 W3C')}} から変更はありません。                                                                                                                                                                                                                |
-| {{SpecName('HTML5 W3C', "elements.html#classes", "class")}}     | {{Spec2('HTML5 W3C')}}     | {{SpecName('HTML WHATWG')}} のスナップショット。`class` 属性は、{{SpecName('HTML4.01')}} よりも真にグローバルな属性になりました。                                                                                                                                                                                    |
-| {{SpecName('HTML4.01', "struct/global.html#h-7.5.2", "class")}} | {{Spec2('HTML4.01')}}     | {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}} 以外の要素で対応 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
