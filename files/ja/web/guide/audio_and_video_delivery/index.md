@@ -36,7 +36,7 @@ l10n:
 
 > **メモ:** モバイルブラウザーによっては、 `preload` 属性が無視される場合があります。
 
-詳しい情報は、[クロスブラウザーのお音声の基本（HTML Audio の詳細）](/ja/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
+詳しい情報は、[クロスブラウザーの音声の基本（HTML Audio の詳細）](/ja/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
 
 ### HTML の動画
 
