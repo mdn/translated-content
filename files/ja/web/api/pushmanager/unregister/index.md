@@ -56,7 +56,7 @@ req.onerror = function(e) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PushManager.register")}}
+{{Compat}}
 
 ## 関連情報
 

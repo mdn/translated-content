@@ -60,4 +60,4 @@ document.querySelector("output").textContent = tagNames.join(", ");
 
 ## ブラウザーの互換性
 
-{{Compat("api.WindowOrWorkerGlobalScope.clearTimeout")}}
+{{Compat}}

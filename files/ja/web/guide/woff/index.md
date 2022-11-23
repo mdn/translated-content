@@ -30,7 +30,7 @@ Web コンテンツのテキストに WOFF フォントを使用するには、{
 
 ## ブラウザ実装状況
 
-{{Compat("css.at-rules.font-face")}}
+{{Compat}}
 
 ## 関連情報
 

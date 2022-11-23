@@ -54,7 +54,7 @@ numbers.sort((a, b) => a - b); // 数値を比較
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.TypedArray.indexOf")}}
+{{Compat}}
 
 ## 関連情報
 

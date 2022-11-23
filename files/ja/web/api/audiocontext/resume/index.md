@@ -49,7 +49,7 @@ susresBtn.onclick = function() {
 
 ## ブラウザ互換性
 
-{{Compat("api.BaseAudioContext.resume")}}
+{{Compat}}
 
 ## 参考
 

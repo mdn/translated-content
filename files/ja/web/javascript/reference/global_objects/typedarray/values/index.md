@@ -90,7 +90,7 @@ iterator.next().value;        //  "n"
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Array.values")}}
+{{Compat}}
 
 ## 関連情報
 
