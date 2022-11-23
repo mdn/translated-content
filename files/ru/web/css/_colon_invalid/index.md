@@ -89,9 +89,7 @@ input:required {
 
 ## Смотрите также
 
-- {{ cssxref(":valid") }}
-- {{ cssxref(":-moz-submit-invalid") }}
-- {{ cssxref(":required") }}
-- {{ cssxref(":optional") }}
-
-{{ languages( { "fr": "fr/CSS/:invalid" }) }}
+- Other validation-related pseudo-classes: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}
+- Related Mozilla pseudo-classes: {{cssxref(":user-invalid")}}, {{cssxref(":-moz-submit-invalid")}}
+- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
+- Accessing the [validity state](/en-US/docs/Web/API/ValidityState) from JavaScript
