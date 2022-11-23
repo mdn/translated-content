@@ -310,7 +310,7 @@ Además de los ejemplos anteriores, encontrarás más ejemplos en los siguientes
 
 ## Compatibilidad en navegadores
 
-{{Compat("html.elements.input.input-range")}}
+{{Compat}}
 
 ## Ver también
 

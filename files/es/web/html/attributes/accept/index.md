@@ -146,7 +146,7 @@ div {
 
 ## Compatibilidad del navegador
 
-{{Compat("html.elements.attribute.accept")}}
+{{Compat}}
 
 ## Ve también
 

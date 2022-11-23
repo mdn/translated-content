@@ -68,7 +68,7 @@ Ten en cuenta que el servidor no está obligado a usar algun método de compresi
 
 ## Compatibilidad con los navegadores
 
-{{Compat("http/headers/content-encoding")}}
+{{Compat}}
 
 ## Ver también
 
