@@ -93,10 +93,7 @@ slug: Web/Accessibility/ARIA/Roles/Region_role
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                                             |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#region","ARIA Region Role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_region","Region landmark role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 
