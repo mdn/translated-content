@@ -81,15 +81,7 @@ hello[0] = 'L'; // 无效，因为字符串是不变的
 hello[0]; // 返回 "H"
 ```
 
-Unicode scalar values（Unicode 标量值）大于 U+FFFF 的字符（比如一些不常用的文字或者emoji表情）使用 2 个代理码点存储在 UTF-16 中。比如，一个包含 U+20BB7 "𠮷" 字符的字符串，其长度为2。使用括号访问单个码点的时候，可能不会得到你所期望的结果，你得到的可能是一个不匹配字符串位置的代理码点，并且其违反了Unicode规范。
-
-```js
-const string = "𠮷";
-console.log(string.length) // 2
-console.log(string[0]) // '\uD842'
-```
-
-请参阅 {{jsxref("String.fromCodePoint()")}} 或 {{jsxref("String.prototype.codePointAt()")}}。
+Unicode 标量值（Unicode scalar value）大于 U+FFFF 的字符（比如中文、日文、韩文、越南语中的一些不常用的文字或者 emoji 表情）使用 2 个代理码点存储在 UTF-16 中。比如，一个包含 U+20BB7“𠮷”字符的字符串，其长度为 2。使用括号访问单个码点的时候，可能不会得到你所期望的结果，你得到的可能是一个不匹配字符串位置的代理码点，并且其违反了 Unicode 规范。请参阅 {{jsxref("String.fromCodePoint()")}} 或 {{jsxref("String.prototype.codePointAt()")}}。
 
 `String`对象有许多方法：举例来说有些方法返回字符串本身的变体，如 `substring` 和`toUpperCase`.
 
