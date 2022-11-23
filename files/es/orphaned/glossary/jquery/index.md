@@ -1,11 +1,6 @@
 ---
 title: jQuery
 slug: orphaned/Glossary/jQuery
-tags:
-  - Glosario
-  - JQuery
-  - JavaScript
-translation_of: Glossary/jQuery
 original_slug: Glossary/jQuery
 ---
 

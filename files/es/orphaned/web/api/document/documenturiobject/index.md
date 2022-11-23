@@ -1,9 +1,6 @@
 ---
 title: document.documentURIObject
 slug: orphaned/Web/API/Document/documentURIObject
-tags:
-  - Referencia_DOM_de_Gecko
-translation_of: Web/API/Document/documentURIObject
 original_slug: Web/API/Document/documentURIObject
 ---
 
