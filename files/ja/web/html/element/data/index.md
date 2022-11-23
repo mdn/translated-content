@@ -85,10 +85,7 @@ slug: Web/HTML/Element/data
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-data-element', '&lt;data&gt;')}}             | {{Spec2('HTML WHATWG')}} | {{SpecName('HTML5 W3C')}} から変更なし |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-data-element', '&lt;data&gt;')}} | {{Spec2('HTML5 W3C')}}     | 初回定義                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
