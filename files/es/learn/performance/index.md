@@ -1,7 +1,6 @@
 ---
 title: Rendimiento web
 slug: Learn/Performance
-translation_of: Learn/Performance
 ---
 
 {{LearnSidebar}}

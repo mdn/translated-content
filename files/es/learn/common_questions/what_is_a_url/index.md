@@ -1,7 +1,6 @@
 ---
 title: ¿Qué es una URL?
 slug: Learn/Common_questions/What_is_a_URL
-translation_of: Learn/Common_questions/What_is_a_URL
 original_slug: Learn/Common_questions/Qué_es_una_URL
 ---
 

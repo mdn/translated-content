@@ -1,15 +1,6 @@
 ---
 title: Preguntas frecuentes
 slug: Learn/Common_questions
-tags:
-  - CodingScripting
-  - Infrastructure
-  - Learn
-  - NeedsTranslation
-  - TopicStub
-  - Web
-  - WebMechanics
-translation_of: Learn/Common_questions
 ---
 
 {{LearnSidebar}}

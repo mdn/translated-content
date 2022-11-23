@@ -1,16 +1,6 @@
 ---
 title: Puesta en marcha de un entorno de desarrollo Django
 slug: Learn/Server-side/Django/development_environment
-tags:
-  - Aprendizaje
-  - Codificación de scripts
-  - Entorno de Desarrollo
-  - Principiante
-  - Python
-  - django
-  - instalación
-  - introducción
-translation_of: Learn/Server-side/Django/development_environment
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}

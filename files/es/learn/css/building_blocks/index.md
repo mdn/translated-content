@@ -1,12 +1,6 @@
 ---
 title: Bloques de construcción CSS
 slug: Learn/CSS/Building_blocks
-tags:
-  - Aprender
-  - CSS
-  - Principiante
-  - bloques de construcción
-translation_of: Learn/CSS/Building_blocks
 ---
 {{LearnSidebar}}
 

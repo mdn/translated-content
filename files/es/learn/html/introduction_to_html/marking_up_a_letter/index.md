@@ -1,14 +1,6 @@
 ---
 title: Marcando una Carta
 slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
-tags:
-  - Cabecera
-  - Codificación
-  - Enlaces
-  - Evaluación
-  - Principiante
-  - Texto
-translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 original_slug: Learn/HTML/Introduccion_a_HTML/Marking_up_a_letter
 ---
 

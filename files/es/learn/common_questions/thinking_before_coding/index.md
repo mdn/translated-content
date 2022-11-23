@@ -1,13 +1,6 @@
 ---
 title: ¿Cómo empiezo a diseñar mi sitio web?
 slug: Learn/Common_questions/Thinking_before_coding
-tags:
-  - Pensar
-  - Principiante
-  - antes de codificar
-  - ideación
-  - proyecto
-translation_of: Learn/Common_questions/Thinking_before_coding
 ---
 
 Este artículo cubre el primer paso importante de cada proyecto: definir lo que se desea lograr con él.

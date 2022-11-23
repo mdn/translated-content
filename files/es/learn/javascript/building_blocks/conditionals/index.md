@@ -1,14 +1,6 @@
 ---
 title: Tomando decisiones en tu código — condicionales
 slug: Learn/JavaScript/Building_blocks/conditionals
-tags:
-  - Aprendizaje
-  - Artículo
-  - Codificación
-  - Condicionales
-  - JavaScript
-  - Principiante
-translation_of: Learn/JavaScript/Building_blocks/conditionals
 ---
 
 {{LearnSidebar}}

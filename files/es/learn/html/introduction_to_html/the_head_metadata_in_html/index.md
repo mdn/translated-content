@@ -1,20 +1,6 @@
 ---
 title: ¿Qué hay en la cabecera? Metadatos en HTML
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
-tags:
-  - Cabecera
-  - CodingScripting
-  - Guía
-  - HTML
-  - Meta
-  - Metadatos
-  - Novato
-  - Principiante
-  - favicon
-  - head
-  - lang
-  - metadata
-translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 original_slug: Learn/HTML/Introduccion_a_HTML/Metados_en
 ---
 

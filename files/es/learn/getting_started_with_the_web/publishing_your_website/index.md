@@ -1,19 +1,6 @@
 ---
 title: Publicar tu sitio web
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-tags:
-  - Aprender
-  - Aprendiz
-  - Dropbox
-  - FTP
-  - GitHub
-  - Publicacion
-  - Sitio Web
-  - Web
-  - Web Hosting
-  - publicar
-  - web server
-translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 ---
 
 {{LearnSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: Herencia en JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-translation_of: Learn/JavaScript/Objects/Inheritance
 original_slug: Learn/JavaScript/Objects/Inheritance
 ---
 

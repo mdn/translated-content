@@ -1,14 +1,6 @@
 ---
 title: General asynchronous programming concepts
 slug: Learn/JavaScript/Asynchronous/Introducing
-tags:
-  - Aprender
-  - Hilos
-  - JavaScript
-  - Promesas
-  - Threads
-  - bloques
-translation_of: Learn/JavaScript/Asynchronous/Concepts
 original_slug: Learn/JavaScript/Asynchronous/Concepts
 ---
 

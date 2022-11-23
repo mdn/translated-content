@@ -1,7 +1,6 @@
 ---
 title: El modelo de caja
 slug: Learn/CSS/Building_blocks/The_box_model
-translation_of: Learn/CSS/Building_blocks/The_box_model
 original_slug: Learn/CSS/Building_blocks/El_modelo_de_caja
 ---
 

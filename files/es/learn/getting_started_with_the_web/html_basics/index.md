@@ -1,12 +1,6 @@
 ---
 title: Conceptos básicos de HTML
 slug: Learn/Getting_started_with_the_web/HTML_basics
-tags:
-  - Aprendizaje
-  - HTML
-  - Principiante
-  - Web
-translation_of: Learn/Getting_started_with_the_web/HTML_basics
 ---
 
 {{LearnSideBar}}

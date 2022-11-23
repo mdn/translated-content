@@ -1,7 +1,6 @@
 ---
 title: Fuentes web
 slug: Learn/CSS/Styling_text/Web_fonts
-translation_of: Learn/CSS/Styling_text/Web_fonts
 original_slug: Learn/CSS/Styling_text/Fuentes_web
 ---
 
