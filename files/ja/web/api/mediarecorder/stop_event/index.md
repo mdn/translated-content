@@ -48,7 +48,7 @@ MediaRecorder.addEventListener('stop', function(event) { ... })
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaRecorder.onstop")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -46,9 +46,7 @@ const buf2 = buf1.slice(0);
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

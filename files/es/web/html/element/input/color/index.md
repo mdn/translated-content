@@ -188,4 +188,4 @@ El resultado final es el siguiente:
 
 ## Compatibilidad entre navegadores
 
-{{Compat("html.elements.input.input-color")}}
+{{Compat}}

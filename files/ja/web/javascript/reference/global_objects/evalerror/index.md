@@ -49,9 +49,7 @@ try {
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

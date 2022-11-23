@@ -89,9 +89,7 @@ console.log(proxy.proxied);    // "replaced value"
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-constructor', 'Proxy constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

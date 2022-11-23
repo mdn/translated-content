@@ -132,7 +132,7 @@ var myRequest = new Request('flowers.jpg', miInicializador);
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat}}
 
 ## Ver también
 

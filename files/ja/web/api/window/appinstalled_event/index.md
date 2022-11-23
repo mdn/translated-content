@@ -56,7 +56,7 @@ window.onappinstalled = function() {
 
 ## ブラウザーの対応
 
-{{Compat("api.Window.onappinstalled")}}
+{{Compat}}
 
 ## 関連情報
 

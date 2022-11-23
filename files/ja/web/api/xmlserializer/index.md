@@ -57,9 +57,7 @@ document.body.insertAdjacentHTML('afterbegin', inp_xmls);
 
 ## 仕様
 
-| 仕様書                                                                                               | 策定状況                         | 備考 |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM Parsing', '#the-xmlserializer-interface', 'XMLSerializer')}} | {{Spec2('DOM Parsing')}} |      |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 

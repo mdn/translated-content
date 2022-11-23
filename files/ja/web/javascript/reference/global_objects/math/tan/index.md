@@ -49,9 +49,7 @@ function getTanDeg(deg) {
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.tan', 'Math.tan')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

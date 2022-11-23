@@ -34,4 +34,4 @@ window.onclose = resetThatServerThing;
 
 ## Compatibilidad con Navegadores
 
-{{Compat("api.GlobalEventHandlers.onclose")}}
+{{Compat}}

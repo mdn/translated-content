@@ -49,7 +49,7 @@ navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result => { // result
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaCapabilitiesInfo")}}
+{{Compat}}
 
 ## 関連情報
 

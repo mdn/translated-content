@@ -31,9 +31,7 @@ Float64Array.name;      // "Float64Array"
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-properties-of-the-typedarray-constructors', 'TypedArray.name')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

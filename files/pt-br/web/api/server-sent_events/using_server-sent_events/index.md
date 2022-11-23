@@ -1,189 +1,195 @@
 ---
-title: Using server-sent events
+title: Usando eventos enviados pelo servidor
 slug: Web/API/Server-sent_events/Using_server-sent_events
 ---
 
 {{DefaultAPISidebar("Server Sent Events")}}
 
-É fácil desenvolver um aplicativo Web que usa [server-sent events](/pt-BR/docs/Web/API/Server-sent_events). Você precisará de um pouco de código no servidor para transmitir eventos para o front-end, mas o código do lado do cliente funciona quase de forma idêntica aos [websockets](/pt-BR/docs/Web/API/WebSockets_API) em questão de tratamento de eventos recebidos. Essa é uma conexão unidirecional, portanto você não pode enviar eventos de um cliente para um servidor.
+O desenvolvimento de um aplicativo da Web que usa [eventos enviados pelo servidor](/en-US/docs/Web/API/Server-sent_events) é simples. Você precisará de um pouco de código no servidor para transmitir eventos para o front-end, mas o código do lado do cliente funciona quase de forma idêntica a [websockets](/en-US/docs/Web/API/WebSockets_API) em parte do tratamento eventos de entrada. Esta é uma conexão unidirecional, portanto, você não pode enviar eventos de um cliente para um servidor.
 
-## Receiving events from the server
+## Recebendo eventos do servidor
 
-The server-sent event API is contained in the {{domxref("EventSource")}} interface; to open a connection to the server to begin receiving events from it, create a new `EventSource` object with the URL of a script that generates the events. For example:
+A API de eventos enviados pelo servidor está contida na interface {{domxref("EventSource")}}; para abrir uma conexão com o servidor para começar a receber eventos dele, crie um novo objeto `EventSource` com a URL de um script que gera os eventos. Por exemplo:
 
 ```js
 const evtSource = new EventSource("ssedemo.php");
 ```
 
-If the event generator script is hosted on a different origin, a new `EventSource` object should be created with both the URL and an options dictionary. For example, assuming the client script is on `example.com`:
+Se o script do gerador de eventos estiver hospedado em uma origem diferente, um novo objeto `EventSource` deve ser criado com a URL e um dicionário de opções. Por exemplo, supondo que o script do cliente esteja em `example.com`:
 
 ```js
 const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
 ```
 
-Once you've instantiated your event source, you can begin listening for messages from the server by attaching a handler for the {{event("message")}} event:
+Depois de instanciar a origem do evento, você pode começar a ouvir as mensagens do servidor anexando um manipulador para o evento {{domxref("EventSource.message_event", "message")}}:
 
 ```js
-evtSource.onmessage = function(event) {
+evtSource.onmessage = (event) => {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
 
-  newElement.innerHTML = "message: " + event.data;
+  newElement.textContent = `message: ${event.data}`;
   eventList.appendChild(newElement);
 }
 ```
 
-This code listens for incoming messages (that is, notices from the server that do not have an `event` field on them) and appends the message text to a list in the document's HTML.
+Este código escuta as mensagens recebidas (ou seja, avisos do servidor que não possuem um campo `event`) e anexa o texto da mensagem a uma lista no HTML do documento.
 
-You can also listen for events with `addEventListener()`:
+Você também pode escutar eventos com `addEventListener()`:
 
-```js
-evtSource.addEventListener("ping", function(event) {
-  const newElement = document.createElement("li");
+``` js
+evtSource.addEventListener("ping", (evento) => {
+  const novoElemento = document.createElement("li");
+  const eventList = document.getElementById("list");
   const time = JSON.parse(event.data).time;
-  newElement.innerHTML = "ping at " + time;
+  newElement.textContent = `ping em ${time}`;
   eventList.appendChild(newElement);
 });
 ```
 
-This code is similar, except that it will be called automatically whenever the server sends a message with the `event` field set to "ping"; it then parses the JSON in the `data` field and outputs that information.
+Este código é semelhante, exceto que será chamado automaticamente sempre que o servidor enviar uma mensagem com o campo `event` definido como "ping"; ele então analisa o JSON no campo `data` e gera essa informação.
 
-> **Aviso:** When **not used over HTTP/2**, SSE suffers from a limitation to the maximum number of open connections, which can be specially painful when opening various tabs as the limit is _per browser_ and set to a very low number (6). The issue has been marked as "Won't fix" in [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) and [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896). This limit is per browser + domain, so that means that you can open 6 SSE connections across all of the tabs to `www.example1.com` and another 6 SSE connections to `www.example2.com` (from [Stackoverflow](https://stackoverflow.com/a/5326159/1905229)). When using HTTP/2, the maximum number of simultaneous _HTTP streams_ is negotiated between the server and the client (defaults to 100).
+> **Aviso:** quando **não usado em HTTP/2**, o SSE sofre de uma limitação ao número máximo de conexões abertas, o que pode ser especialmente doloroso ao abrir várias guias, pois o limite é _por navegador_ e é definido para um número muito baixo (6). O problema foi marcado como "Não será corrigido" no [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) e no [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896). Esse limite é por navegador + domínio, o que significa que você pode abrir 6 conexões SSE em todas as guias para `www.example1.com` e outras 6 conexões SSE para `www.example2.com` (por [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)). Ao usar HTTP/2, o número máximo de _streams HTTP_ simultâneos é negociado entre o servidor e o cliente (o padrão é 100).
 
-## Sending events from the server
+## Enviando eventos do servidor
 
-The server-side script that sends events needs to respond using the MIME type `text/event-stream`. Each notification is sent as a block of text terminated by a pair of newlines. For details on the format of the event stream, see [Event stream format](#event_stream_format).
+O script do lado do servidor que envia eventos precisa responder usando o tipo MIME `text/event-stream`. Cada notificação é enviada como um bloco de texto finalizado por um par de novas linhas. Para obter detalhes sobre o formato do fluxo de eventos, consulte [Formato do fluxo de eventos](#event_stream_format).
 
-The {{Glossary("PHP")}} code for the example we're using here follows:
+O código {{Glossary("PHP")}} para o exemplo que estamos usando aqui segue:
 
 ```php
 date_default_timezone_set("America/New_York");
-header("Cache-Control: no-cache");
+header("Cache-Control: no-store");
 header("Content-Type: text/event-stream");
 
 $counter = rand(1, 10);
 while (true) {
-  // Every second, send a "ping" event.
+  // A cada segundo, envia um evento "ping".
 
-  echo "event: ping\n";
+  echo "evento: ping\n";
   $curDate = date(DATE_ISO8601);
   echo 'data: {"time": "' . $curDate . '"}';
   echo "\n\n";
 
-  // Send a simple message at random intervals.
+  // Envia uma mensagem simples em intervalos aleatórios.
 
   $counter--;
 
   if (!$counter) {
-    echo 'data: This is a message at time ' . $curDate . "\n\n";
+    echo 'data: Esta é uma mensagem no momento ' . $curDate . "\n\n";
     $counter = rand(1, 10);
   }
 
   ob_end_flush();
   flush();
+
+  // Interrompe o loop se o cliente abortou a conexão (fechou a página)
+
+  if (connection_aborted()) break;
+
   sleep(1);
 }
 ```
 
-The code above generates an event every second, with the event type "ping". Each event's data is a JSON object containing the ISO 8601 timestamp corresponding to the time at which the event was generated. At random intervals, a simple message (with no event type) is sent.
+O código acima gera um evento a cada segundo, com o tipo de evento "ping". Os dados de cada evento são um objeto JSON contendo o carimbo de data/hora ISO 8601 correspondente à hora em que o evento foi gerado. Em intervalos aleatórios, uma mensagem simples (sem tipo de evento) é enviada.
+O loop continuará funcionando independentemente do status da conexão, portanto, uma verificação é incluída
+para quebrar o loop se a conexão foi fechada (por exemplo, o cliente fecha a página).
 
-> **Nota:** You can find a full example that uses the code shown in this article on GitHub — see [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> **Observação:** você pode encontrar um exemplo completo que usa o código mostrado neste artigo no GitHub — veja [Simple SSE demo using PHP](<https://github.com/mdn/dom-examples/tree/main> /servidor-enviados-eventos).
 
-## Error handling
+## Manipulação de erros
 
-When problems occur (such as a network timeout or issues pertaining to [access control](/pt-BR/docs/HTTP/Access_control_CORS)), an error event is generated. You can take action on this programmatically by implementing the `onerror` callback on the `EventSource` object:
+Quando ocorrem problemas (como um tempo limite de rede ou problemas relacionados a [controle de acesso](/en-US/docs/Web/HTTP/CORS)), um evento de erro é gerado. Você pode agir sobre isso programaticamente implementando o retorno de chamada `onerror` no objeto `EventSource`:
 
 ```js
-evtSource.onerror = function(err) {
-  console.error("EventSource failed:", err);
+evtSource.onerror = (err) => {
+  console.error("EventSource falhou:", err);
 };
 ```
 
-## Closing event streams
+## Fechando streams de eventos
 
-By default, if the connection between the client and server closes, the connection is restarted. The connection is terminated with the `.close()` method.
+Por padrão, se a conexão entre o cliente e o servidor for fechada, a conexão será reiniciada. A conexão é finalizada com o método `.close()`.
 
-```
+```js
 evtSource.close();
 ```
 
-## Event stream format
+## Formato do fluxo de eventos
 
-The event stream is a simple stream of text data which must be encoded using [UTF-8](/pt-BR/docs/Glossary/UTF-8). Messages in the event stream are separated by a pair of newline characters. A colon as the first character of a line is in essence a comment, and is ignored.
+O fluxo de eventos é um fluxo simples de dados de texto que deve ser codificado usando [UTF-8](/en-US/docs/Glossary/UTF-8). As mensagens no fluxo de eventos são separadas por um par de caracteres de nova linha. Dois pontos como o primeiro caractere de uma linha é essencialmente um comentário e é ignorado.
 
-> **Nota:** The comment line can be used to prevent connections from timing out; a server can send a comment periodically to keep the connection alive.
+> **Nota:** A linha de comentário pode ser usada para evitar que as conexões atinjam o tempo limite; um servidor pode enviar um comentário periodicamente para manter a conexão ativa.
 
-Each message consists of one or more lines of text listing the fields for that message. Each field is represented by the field name, followed by a colon, followed by the text data for that field's value.
+Cada mensagem consiste em uma ou mais linhas de texto listando os campos dessa mensagem. Cada campo é representado pelo nome do campo, seguido por dois pontos, seguido pelos dados de texto para o valor desse campo.
 
-### Fields
+### Campos
 
-Each message received has some combination of the following fields, one per line:
+Cada mensagem recebida tem alguma combinação dos seguintes campos, um por linha:
 
 - `event`
-  - : A string identifying the type of event described. If this is specified, an event will be dispatched on the browser to the listener for the specified event name; the website source code should use `addEventListener()` to listen for named events. The `onmessage` handler is called if no event name is specified for a message.
+  - : Uma string que identifica o tipo de evento descrito. Se isso for especificado, um evento será despachado no navegador para o ouvinte para o nome do evento especificado; o código-fonte do site deve usar `addEventListener()` para ouvir eventos nomeados. O manipulador `onmessage` é chamado se nenhum nome de evento for especificado para uma mensagem.
 - `data`
-  - : The data field for the message. When the `EventSource` receives multiple consecutive lines that begin with `data:`, [it will concatenate them](http://www.w3.org/TR/eventsource/#dispatchMessage), inserting a newline character between each one. Trailing newlines are removed.
+  - : O campo de dados para a mensagem. Quando o `EventSource` recebe várias linhas consecutivas que começam com `data:`, [ele as concatena](https://www.w3.org/TR/eventsource/#dispatchMessage), inserindo um caractere de nova linha entre cada uma. As novas linhas à direita são removidas.
 - `id`
-  - : The event ID to set the [`EventSource`](/en/Server-sent_events/EventSource) object's last event ID value.
+  - : o ID do evento para definir o último valor do ID do evento do objeto [`EventSource`](/en-US/docs/Web/API/EventSource).
 - `retry`
-  - : The reconnection time to use when attempting to send the event. This must be an integer, specifying the reconnection time in milliseconds. If a non-integer value is specified, the field is ignored.
+  - : O tempo de reconexão. Se a conexão com o servidor for perdida, o navegador aguardará o tempo especificado antes de tentar se reconectar. Deve ser um número inteiro, especificando o tempo de reconexão em milissegundos. Se um valor não inteiro for especificado, o campo será ignorado.
 
-All other field names are ignored.
+Todos os outros nomes de campo são ignorados.
 
-> **Nota:** If a line doesn't contain a colon, the entire line is treated as the field name with an empty value string.
+> **Nota:** se uma linha não contiver dois pontos, a linha inteira será tratada como o nome do campo com uma string de valor vazia.
 
-### Examples
+### Exemplos
 
-#### Data-only messages
+#### Mensagens somente de dados
 
-In the following example, there are three messages sent. The first is just a comment, since it starts with a colon character. As mentioned previously, this can be useful as a keep-alive if messages may not be sent regularly.
+No exemplo a seguir, há três mensagens enviadas. O primeiro é apenas um comentário, pois começa com dois pontos. Como mencionado anteriormente, isso pode ser útil como um mecanismo de manutenção se as mensagens não forem enviadas regularmente.
 
-The second message contains a data field with the value "some text". The third message contains a data field with the value "another message\nwith two lines". Note the newline special character in the value.
+A segunda mensagem contém um campo de dados com o valor "algum texto". A terceira mensagem contém um campo de dados com o valor "outra mensagem\ncom duas linhas". Observe o caractere especial de nova linha no valor.
 
+```bash
+: este é um fluxo de teste
+
+dados: algum texto
+
+dados: outra mensagem
+dados: com duas linhas
 ```
-: this is a test stream
 
-data: some text
+#### Eventos nomeados
 
-data: another message
-data: with two lines
-```
+Este exemplo envia eventos nomeados. Cada um tem um nome de evento especificado pelo campo `event` e um campo `data` cujo valor é uma string JSON apropriada com os dados necessários para que o cliente atue no evento. O campo `data` pode, é claro, ter qualquer string de dados; não precisa ser JSON.
 
-#### Named events
-
-This example sends some named events. Each has an event name specified by the `event` field, and a `data` field whose value is an appropriate JSON string with the data needed for the client to act on the event. The `data` field could, of course, have any string data; it doesn't have to be JSON.
-
-```
-event: userconnect
+```bash
+evento: userconnect
 data: {"username": "bobby", "time": "02:33:48"}
 
-event: usermessage
-data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+evento: mensagem do usuário
+data: {"username": "bobby", "time": "02:34:11", "text": "Olá a todos."}
 
-event: userdisconnect
+evento: userdisconnect
 data: {"username": "bobby", "time": "02:34:23"}
 
-event: usermessage
-data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
+evento: mensagem do usuário
+data: {"username": "sean", "time": "02:34:36", "text": "Tchau, bobby."}
 ```
 
-#### Mixing and matching
+#### Misturando e combinando
 
-You don't have to use just unnamed messages or typed events; you can mix them together in a single event stream.
+Você não precisa usar apenas mensagens sem nome ou eventos digitados; você pode misturá-los em um único fluxo de eventos.
 
-```
-event: userconnect
+```bash
+evento: userconnect
 data: {"username": "bobby", "time": "02:33:48"}
 
-data: Here's a system message of some kind that will get used
-data: to accomplish some task.
+data: Aqui está uma mensagem do sistema de algum tipo que será usada
+dados: para realizar alguma tarefa.
 
-event: usermessage
-data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+evento: mensagem do usuário
+data: {"username": "bobby", "time": "02:34:11", "text": "Olá a todos."}
 ```
 
-## Compatibilidade com navegadores
+## Compatibilidade do navegador
 
-### `EventSource`
-
-{{Compat("api.EventSource")}}
+{{Compat}}

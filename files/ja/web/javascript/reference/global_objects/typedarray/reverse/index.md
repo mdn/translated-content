@@ -32,9 +32,7 @@ console.log(uint8); // Uint8Array [3, 2, 1]
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reverse', 'TypedArray.prototype.reverse')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

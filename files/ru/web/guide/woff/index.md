@@ -34,7 +34,7 @@ You can use the {{cssxref("@font-face")}} CSS property to use WOFF fonts for tex
 
 ## Совместимость с браузерами
 
-{{Compat("css.at-rules.font-face")}}
+{{Compat}}
 
 ## Смотрите также
 

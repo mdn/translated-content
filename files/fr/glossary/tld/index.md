@@ -33,7 +33,7 @@ De nos jours, {{Glossary("IANA")}} divise les domaines de premier niveau en plus
 
 ## Voir aussi
 
-### **Culture générale**
+### Culture générale
 
 - [Domaine de premier niveau](https://fr.wikipedia.org/wiki/Domaine_de_premier_niveau) sur Wikipédia
 - [Liste de domaines de premier niveau](http://www.iana.org/domains/root/db)

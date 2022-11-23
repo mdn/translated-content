@@ -54,7 +54,7 @@ Cette fonctionnalité ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.referrer")}}
+{{Compat}}
 
 ## Voir aussi
 

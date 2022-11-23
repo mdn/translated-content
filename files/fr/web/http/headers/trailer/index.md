@@ -43,7 +43,7 @@ Trailer: header-names
 
 ## Exemple
 
-### **Encodage de transfert en bloc** en utilisant les en-têtes "trailer".
+### Encodage de transfert en bloc en utilisant les en-têtes "trailer".
 
 Dans cet exemple, l'en-tête {{HTTPHeader("Expires")}} est utilisée à la fin du bloc du message et sert en tant qu'un "trailing header".
 
@@ -73,7 +73,7 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Compatibilités
 
-{{Compat("http/headers/trailer")}}
+{{Compat}}
 
 ## Voir aussi
 
