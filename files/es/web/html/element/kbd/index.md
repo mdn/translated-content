@@ -1,11 +1,6 @@
 ---
 title: kbd
 slug: Web/HTML/Element/kbd
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/kbd
 original_slug: Web/HTML/Elemento/kbd
 ---
 

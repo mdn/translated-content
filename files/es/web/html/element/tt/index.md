@@ -1,11 +1,6 @@
 ---
 title: tt
 slug: Web/HTML/Element/tt
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/tt
 original_slug: Web/HTML/Elemento/tt
 ---
 

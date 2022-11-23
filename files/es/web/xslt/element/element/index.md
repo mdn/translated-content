@@ -1,10 +1,6 @@
 ---
 title: element
 slug: Web/XSLT/Element/element
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/element
 ---
 
 {{XsltRef}}

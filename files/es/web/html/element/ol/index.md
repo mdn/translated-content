@@ -1,11 +1,6 @@
 ---
 title: ol
 slug: Web/HTML/Element/ol
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/ol
 original_slug: Web/HTML/Elemento/ol
 ---
 

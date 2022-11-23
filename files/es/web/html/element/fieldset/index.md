@@ -1,11 +1,6 @@
 ---
 title: fieldset
 slug: Web/HTML/Element/fieldset
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/fieldset
 original_slug: Web/HTML/Elemento/fieldset
 ---
 

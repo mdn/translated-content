@@ -1,12 +1,6 @@
 ---
 title: Atributos globales
 slug: Web/HTML/Global_attributes
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Global_attributes
 original_slug: Web/HTML/Atributos_Globales
 ---
 

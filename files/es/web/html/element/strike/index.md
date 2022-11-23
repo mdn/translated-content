@@ -1,11 +1,6 @@
 ---
 title: strike
 slug: Web/HTML/Element/strike
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/strike
 original_slug: Web/HTML/Elemento/strike
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: area
 slug: Web/HTML/Element/area
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/area
 original_slug: Web/HTML/Elemento/area
 ---
 ### Definición

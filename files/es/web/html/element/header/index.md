@@ -1,11 +1,6 @@
 ---
 title: header
 slug: Web/HTML/Element/header
-tags:
-  - HTML5
-  - header
-  - para_revisar
-translation_of: Web/HTML/Element/header
 original_slug: Web/HTML/Elemento/header
 ---
 

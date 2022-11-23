@@ -1,12 +1,6 @@
 ---
 title: head
 slug: Web/HTML/Element/head
-tags:
-  - HTML
-  - HTML:Elemento
-  - Metadatos de documento HTML
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/head
 original_slug: Web/HTML/Elemento/head
 ---
 

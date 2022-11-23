@@ -1,11 +1,6 @@
 ---
 title: li
 slug: Web/HTML/Element/li
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/li
 original_slug: Web/HTML/Elemento/li
 ---
 

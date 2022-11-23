@@ -1,19 +1,6 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/input/range
-tags:
-  - Elementos
-  - Formulários HTML
-  - HTML etiqueta input
-  - Input
-  - Range
-  - Rango
-  - Referencia
-  - Web
-  - deslizador
-  - formulários
-  - slider
-translation_of: Web/HTML/Element/input/range
 original_slug: Web/HTML/Elemento/input/range
 ---
 

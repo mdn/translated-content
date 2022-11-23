@@ -1,11 +1,6 @@
 ---
 title: param
 slug: Web/HTML/Element/param
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/param
 original_slug: Web/HTML/Elemento/param
 ---
 

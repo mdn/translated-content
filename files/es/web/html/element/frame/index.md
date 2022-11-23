@@ -1,11 +1,6 @@
 ---
 title: frame
 slug: Web/HTML/Element/frame
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/frame
 original_slug: Web/HTML/Elemento/frame
 ---
 

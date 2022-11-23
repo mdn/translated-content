@@ -1,13 +1,7 @@
 ---
 title: dir
 slug: Web/HTML/Global_attributes/dir
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/dir
 original_slug: Web/HTML/Atributos_Globales/dir
-browser-compat: html.global_attributes.dir
 ---
 
 {{HTMLSidebar("Global_attributes")}}

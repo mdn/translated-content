@@ -1,11 +1,6 @@
 ---
 title: <abbr>
 slug: Web/HTML/Element/abbr
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/abbr
 original_slug: Web/HTML/Elemento/abbr
 ---
 

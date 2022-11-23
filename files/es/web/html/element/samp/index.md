@@ -1,12 +1,6 @@
 ---
 title: samp
 slug: Web/HTML/Element/samp
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/samp
 original_slug: Web/HTML/Elemento/samp
 ---
 

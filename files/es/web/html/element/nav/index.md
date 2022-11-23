@@ -1,15 +1,6 @@
 ---
 title: '<nav>: El elemento de sección de navegación'
 slug: Web/HTML/Element/nav
-tags:
-  - Elemento
-  - HTML5
-  - menu
-  - nav
-  - navegación
-  - programacion
-  - sección
-translation_of: Web/HTML/Element/nav
 original_slug: Web/HTML/Elemento/nav
 ---
 
