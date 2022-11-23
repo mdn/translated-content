@@ -27,7 +27,7 @@ Sa valeur sous-jacente est une chaîne qui peut prendre l'une des valeurs suivan
 
 ## Compatibilité du navigateur
 
-{{Compat("webextensions.api.browserSettings.openUrlbarResultsInNewTabs")}}
+{{Compat}}
 
 ## Exemples
 

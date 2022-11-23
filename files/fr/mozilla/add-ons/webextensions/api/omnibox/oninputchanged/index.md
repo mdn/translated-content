@@ -52,7 +52,7 @@ The listener function will be passed two parameters: a string `text`, and a call
 
 ## Compatibilité du navigateur
 
-{{Compat("webextensions.api.omnibox.onInputStarted")}}
+{{Compat}}
 
 ## Exemples
 
