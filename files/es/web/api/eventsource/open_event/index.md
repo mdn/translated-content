@@ -31,7 +31,7 @@ evtSource.onopen = function() {
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.EventSource.onopen")}}
+{{Compat}}
 
 ## Mira también
 

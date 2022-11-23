@@ -36,7 +36,7 @@ HTTP define un conjunto de **métodos de petición** para indicar la acción que
 
 ## Compatibilidad del navegador
 
-{{Compat("http/methods")}}
+{{Compat}}
 
 ## Ver también
 

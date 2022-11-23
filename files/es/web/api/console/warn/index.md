@@ -38,7 +38,7 @@ Vea [Outputting text to the console](/es/docs/Web/API/console#Outputting_text_to
 
 ## Compatibilidad del Navegador
 
-{{Compat("api.Console.warn")}}
+{{Compat}}
 
 ## Ver también
 

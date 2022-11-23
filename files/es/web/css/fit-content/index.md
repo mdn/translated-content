@@ -95,4 +95,4 @@ Función que acepta un `<length>` o un `<percentage>` como un argumento.
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-template-columns.fit-content")}}
+{{Compat}}

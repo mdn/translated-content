@@ -190,7 +190,7 @@ See [Mozilla Web Security Guidelines](https://wiki.mozilla.org/Security/Guidelin
 
 ## Compatibilidad con navegadores
 
-{{Compat("http.headers.csp.Content-Security-Policy")}}
+{{Compat}}
 
 ## Mirar tambien
 

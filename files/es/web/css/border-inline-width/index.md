@@ -64,7 +64,7 @@ div {
 
 ## Compatibilidad en navegadores
 
-{{Compat("css.properties.border-block-width")}}
+{{Compat}}
 
 ## Mira también
 
