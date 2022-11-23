@@ -36,7 +36,7 @@ console.profileEnd(profileName);
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.profileEnd")}}
+{{Compat}}
 
 ## Voir aussi
 

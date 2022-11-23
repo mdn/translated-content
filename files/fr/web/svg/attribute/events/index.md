@@ -38,4 +38,4 @@ Tous les attributs d'événements _ne peuvent pas être animés._
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.events")}}
+{{Compat}}

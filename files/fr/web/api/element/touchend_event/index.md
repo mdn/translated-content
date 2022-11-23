@@ -52,7 +52,7 @@ Des exemples d'implémentation de cet événement sont disponibles : [Touch even
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.touchend_event")}}
+{{Compat}}
 
 ## Voir aussi
 
