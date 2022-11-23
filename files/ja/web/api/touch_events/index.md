@@ -302,10 +302,7 @@ function onTouch(evt) {
 
 ## 仕様書
 
-| 仕様書                                                                           | 状態                                 | 備考                                                              |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------- |
-| {{SpecName('Touch Events 2', '#touch-interface', 'Touch')}} | {{Spec2('Touch Events 2')}} | `radiusX`, `radiusY`, `rotationAngle`, `force` プロパティを追加。 |
-| {{SpecName('Touch Events', '#touch-interface', 'Touch')}}     | {{Spec2('Touch Events')}}     | 初回定義                                                          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
