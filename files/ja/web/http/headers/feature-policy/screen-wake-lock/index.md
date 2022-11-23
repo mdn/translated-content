@@ -24,10 +24,7 @@ Feature-Policy: screen-wake-lock <allowlist>;
 
 ## 仕様書
 
-| 仕様書                                                                                                | 状態                        | 備考                                                     |
-| ----------------------------------------------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------- |
-| {{SpecName('Feature Policy')}}                                                                        | {{Spec2('Feature Policy')}} | 初回定義                                         |
-| [Screen Wake Lock API](https://w3c.github.io/screen-wake-lock/#the-screen-wake-lock-powerful-feature) | 編集者草稿                  | `screen-wake-lock` 機能ディレクティブの初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

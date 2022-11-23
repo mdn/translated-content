@@ -22,10 +22,7 @@ Feature-Policy: payment <allowlist>;
 
 ## 仕様書
 
-| 仕様書                         | 状態                        | 備考                                                                                                   |
-| ------------------------------ | --------------------------- | ------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Payment')}}        | {{Spec2('Payment')}}        | [Section 16. Feature Policy integration](https://w3c.github.io/payment-request/#feature-policy) を参照 |
-| {{SpecName('Feature Policy')}} | {{Spec2('Feature Policy')}} | 初回定義                                                                                               |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
