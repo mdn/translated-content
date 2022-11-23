@@ -1,17 +1,6 @@
 ---
 title: Making content editable
 slug: conflicting/Web/HTML/Global_attributes/contenteditable
-tags:
-  - Avanzado
-  - Ejemplo
-  - Entrada de texto
-  - Guía
-  - HTML
-  - HTML5
-  - Texto
-  - Web
-  - contentediatable
-translation_of: Web/Guide/HTML/Editable_content
 original_slug: Web/Guide/HTML/Editable_content
 ---
 

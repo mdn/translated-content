@@ -1,12 +1,6 @@
 ---
 title: '404'
 slug: conflicting/Web/HTTP/Status/404
-tags:
-  - Errores HTTP
-  - Glosario
-  - Insfraestructura
-  - navegación
-translation_of: Glossary/404
 original_slug: Glossary/404
 ---
 

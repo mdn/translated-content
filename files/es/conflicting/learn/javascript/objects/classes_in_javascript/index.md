@@ -1,25 +1,6 @@
 ---
 title: JavaScript orientado a objetos para principiantes
 slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - Aprender
-  - Artículo
-  - Constructor
-  - Crear
-  - Create
-  - JSOO
-  - JavaScript
-  - OOJS
-  - OOP
-  - Object
-  - Objeto
-  - Orientado a Objeto
-  - Principiante
-  - Programación orientada a objetos
-  - instance
-  - instanciar
-  - l10n:priority
-translation_of: Learn/JavaScript/Objects/Object-oriented_JS
 original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 ---
 

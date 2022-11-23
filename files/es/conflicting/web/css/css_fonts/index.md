@@ -1,11 +1,6 @@
 ---
 title: basefont
 slug: conflicting/Web/CSS/CSS_Fonts
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/basefont
 original_slug: Web/HTML/Element/basefont
 ---
 
