@@ -72,9 +72,7 @@ new RegExp('ab+c', 'i') // コンストラクター
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-regexp-constructor', 'RegExp constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

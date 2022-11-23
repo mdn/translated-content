@@ -53,9 +53,7 @@ console.log(orig.trim()); // 'foo'
 
 ## 仕様
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.trim', 'String.prototype.trim')}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

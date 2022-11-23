@@ -59,9 +59,7 @@ Math.atan2(±Infinity, +Infinity); // ±PI/4.
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.atan2', 'Math.atan2')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

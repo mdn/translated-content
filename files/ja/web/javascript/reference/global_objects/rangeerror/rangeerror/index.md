@@ -74,9 +74,7 @@ catch(error)
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-nativeerror-constructors', 'NativeError constructors')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

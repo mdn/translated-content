@@ -388,9 +388,7 @@ console.log(merged.get(3)) // three
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map-objects', 'Map')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

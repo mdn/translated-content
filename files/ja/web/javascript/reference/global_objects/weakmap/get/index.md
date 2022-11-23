@@ -38,9 +38,7 @@ wm.get('baz');  // undefined を返す
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -154,9 +154,7 @@ function replaceString(oldS, newS, fullS) {
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.substring', 'String.prototype.substring')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
