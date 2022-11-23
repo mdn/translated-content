@@ -55,10 +55,7 @@ slug: Web/SVG/Attribute/id
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                     | 備考                                       |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------------------------------ |
-| {{SpecName("SVG2", "struct.html#IDAttribute", "id")}} | {{Spec2("SVG2")}} | Defines the allowed values in more detail. |
-| {{SpecName("SVG1.1", "struct.html#IDAttribute", "id")}} | {{Spec2("SVG1.1")}} | 初回定義                                   |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

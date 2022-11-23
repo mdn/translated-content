@@ -87,10 +87,7 @@ Access-Control-Allow-Origin: *
 
 ## 仕様
 
-| 仕様書                                           | 状態                                         | 備考 |
-| ------------------------------------------------ | -------------------------------------------- | ---- |
-| {{SpecName('Subresource Integrity')}} | {{Spec2('Subresource Integrity')}} |      |
-| {{SpecName('Fetch')}}                     | {{Spec2('Fetch')}}                     |      |
+{{Specifications}}
 
 ## ブラウザの互換性
 
