@@ -28,9 +28,7 @@ console.log(gp.mapping);
 
 ## 仕様書
 
-| 仕様                                                                                     | ステータス                   | 備考               |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("Gamepad", "#dom-gamepad-mapping", "Gamepad.mapping")}} | {{Spec2("Gamepad")}} | Initial definition |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

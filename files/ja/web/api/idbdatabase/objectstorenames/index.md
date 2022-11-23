@@ -42,9 +42,7 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## 仕様
 
-| Specification                                                                                                    | Status                       | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-objectStoreNames', 'objectStoreNames')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

@@ -62,10 +62,7 @@ function advanceResult() {
 
 ## 仕様
 
-| 仕様書                                                                                                                   | 策定状況                         | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('IndexedDB', '#widl-IDBCursor-advance-void-unsigned-long-count', 'advance()')}} | {{Spec2('IndexedDB')}}     |          |
-| {{SpecName("IndexedDB 2", "#dom-idbcursor-advance", "advance()")}}                                 | {{Spec2("IndexedDB 2")}} |          |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

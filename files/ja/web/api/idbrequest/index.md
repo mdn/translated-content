@@ -75,10 +75,7 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## Specifications
 
-| Specification                                                                        | Status                           | Comment             |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBRequest', 'IDBRequest')}} | {{Spec2('IndexedDB')}}     | Initial definition. |
-| {{SpecName("IndexedDB 2", "#request-api", "IDBRequest")}}         | {{Spec2("IndexedDB 2")}} |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

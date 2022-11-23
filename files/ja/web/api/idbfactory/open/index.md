@@ -97,10 +97,7 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('IndexedDB', '#widl-IDBFactory-open-IDBOpenDBRequest-DOMString-name-unsigned-long-long-version', 'open()')}} | {{Spec2('IndexedDB')}}     |      |
-| {{SpecName("IndexedDB 2", "#dom-idbfactory-open", "open()")}}                                                                                 | {{Spec2("IndexedDB 2")}} |      |
+{{Specifications}}
 
 ## ブラウザーの対応
 

@@ -23,9 +23,7 @@ intersectionObserver.disconnect();
 
 ## 仕様書
 
-| 仕様書                                                                                                                                               | 状態                                         | 備考     |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-disconnect','IntersectionObserver.disconnect()')}} | {{Spec2('IntersectionObserver')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

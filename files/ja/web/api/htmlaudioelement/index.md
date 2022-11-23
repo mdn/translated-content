@@ -64,10 +64,7 @@ flush.addEventListener('loadeddata',() => {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | ------ |
-| {{SpecName('HTML WHATWG', "#htmlaudioelement", "HTMLAudioElement")}}                             | {{Spec2('HTML WHATWG')}} |        |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#the-audio-element", "HTMLAudioElement")}} | {{Spec2('HTML5 W3C')}}     |    |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

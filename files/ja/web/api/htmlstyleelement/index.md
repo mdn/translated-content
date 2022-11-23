@@ -28,12 +28,7 @@ This interface doesn't allow to manipulate the CSS it contains (in most case). T
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 策定状況                         | コメント                                                        |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "semantics.html#the-style-element", "HTMLStyleElement")}}         | {{Spec2('HTML WHATWG')}} | {{SpecName("HTML5 W3C")}} より変更無し                   |
-| {{SpecName('HTML5 W3C', "document-metadata.html#the-style-element", "HTMLStyleElement")}} | {{Spec2('HTML5 W3C')}}     | `scoped` プロパティの追加                                       |
-| {{SpecName('DOM2 HTML', 'html.html#ID-16428977', 'HTMLStyleElement')}}                             | {{Spec2('DOM2 HTML')}}     | {{domxref("LinkStyle")}} インタフェースからの継承の追加 |
-| {{SpecName('DOM1', 'level-one-html.html#ID-16428977', 'HTMLStyleElement')}}                     | {{Spec2('DOM1')}}         | 最初期の定義                                                    |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

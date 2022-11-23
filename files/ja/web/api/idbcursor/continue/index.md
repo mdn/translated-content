@@ -88,10 +88,7 @@ function displayData() {
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('IndexedDB', '#widl-IDBCursor-continue-void-any-key', 'continue()')}} | {{Spec2('IndexedDB')}}     |      |
-| {{SpecName("IndexedDB 2", "#dom-idbcursor-continue", "continue()")}}                 | {{Spec2("IndexedDB 2")}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

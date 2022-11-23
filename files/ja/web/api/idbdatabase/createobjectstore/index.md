@@ -85,9 +85,7 @@ IDBDatabase.createObjectStore(name, options);
 
 ## 仕様
 
-| Specification                                                                                                                                                                                                            | Status                       | Comment |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-createObjectStore-IDBObjectStore-DOMString-name-IDBObjectStoreParameters-optionalParameters', 'createObjectStore()')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

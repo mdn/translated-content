@@ -43,9 +43,7 @@ Void。
 
 ## 仕様
 
-| Specification                                                                                | Status                       | Comment |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-close-void', 'close()')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

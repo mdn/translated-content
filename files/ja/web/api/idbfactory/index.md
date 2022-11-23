@@ -51,11 +51,7 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## 仕様
 
-| 仕様書                                                                               | 策定状況                         | 備考 |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName("IndexedDB", "#idl-def-IDBFactory", "IDBFactory")}} | {{Spec2("IndexedDB")}}     |      |
-| {{SpecName("IndexedDB 2", "#factory-interface", "IDBFactory")}} | {{Spec2("IndexedDB 2")}} |      |
-| {{SpecName("IndexedDB 3", "#factory-interface", "IDBFactory")}} | {{Spec2("IndexedDB 3")}} |      |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 

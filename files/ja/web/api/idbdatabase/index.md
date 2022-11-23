@@ -100,9 +100,7 @@ Inherits from: [EventTarget](/ja/docs/DOM/EventTarget)
 
 ## 仕様
 
-| Specification                                                                        | Status                       | Comment |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBDatabase', 'IDBDatabase')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

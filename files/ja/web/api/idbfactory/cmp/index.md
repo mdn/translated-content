@@ -51,9 +51,7 @@ console.log( "Comparison results: " + result );
 
 ## 仕様
 
-| Specification                                                                                                    | Status                       | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#widl-IDBFactory-cmp-short-any-first-any-second', 'cmp')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

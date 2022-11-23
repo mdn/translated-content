@@ -54,9 +54,7 @@ DBDeleteRequest.onsuccess = function(event) {
 
 ## 仕様
 
-| Specification                                                                                                                                        | Status                       | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#widl-IDBFactory-deleteDatabase-IDBOpenDBRequest-DOMString-name', 'deleteDatabase')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

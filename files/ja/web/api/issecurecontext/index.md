@@ -20,9 +20,7 @@ var isItSecure = self.isSecureContext; // or just isSecureContext
 
 ## 仕様
 
-| 仕様                                                                                                                                                                     | ステータス                           | コメント   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{SpecName('Secure Contexts', '#dom-windoworworkerglobalscope-issecurecontext', 'WindowOrWorkerGlobalScope.isSecureContext')}} | {{Spec2('Secure Contexts')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザ互換性
 

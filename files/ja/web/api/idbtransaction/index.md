@@ -149,10 +149,7 @@ function addData() {
 
 ## 仕様書
 
-| 仕様書                                                                           | 状態                             | 備考     |
-| -------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('IndexedDB', '#transaction', 'IDBTransaction')}} | {{Spec2('IndexedDB')}}     | 初回定義 |
-| {{SpecName("IndexedDB 2", "#transaction", "IDBTransaction")}} | {{Spec2("IndexedDB 2")}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
