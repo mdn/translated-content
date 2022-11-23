@@ -35,7 +35,7 @@ translation_of: Web/SVG/Element/animate
 
 ## DOM
 
-Este elemento implementa la interfaz de [`SVGAnimateElement`](/en-US/docs/Web/DOM/SVGAnimateElement).
+Este elemento implementa la interfaz de [`SVGAnimateElement`](/es/docs/Web/DOM/SVGAnimateElement).
 
 ## Ejemplo
 

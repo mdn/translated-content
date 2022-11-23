@@ -433,4 +433,4 @@ Esperamos que este artículo te haya proporcionado todo lo que necesitas saber a
 - [Aplicar estilo a listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
 - [Aplicar estilo a enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
 - [Tipos de letra para web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Composición tipográfica de una página de inicio de una escuela comunitaria](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Composición tipográfica de una página de inicio de una escuela comunitaria](/es/Learn/CSS/Styling_text/Typesetting_a_homepage)
