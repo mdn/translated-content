@@ -1,17 +1,6 @@
 ---
 title: Animation.reverse()
 slug: Web/API/Animation/reverse
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Interface
-  - Reference
-  - metodo
-  - reverse
-  - waapi
-translation_of: Web/API/Animation/reverse
 ---
 
 {{APIRef("Web Animations")}}

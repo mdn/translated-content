@@ -1,7 +1,6 @@
 ---
 title: Optimizing canvas
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
-translation_of: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 original_slug: Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas
 ---
 

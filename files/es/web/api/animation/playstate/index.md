@@ -1,14 +1,6 @@
 ---
 title: Animation.playState
 slug: Web/API/Animation/playState
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Reference
-  - playState
-translation_of: Web/API/Animation/playState
 ---
 
 {{APIRef("Web Animations")}}
