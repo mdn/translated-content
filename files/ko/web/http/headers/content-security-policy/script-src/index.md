@@ -158,7 +158,7 @@ will act like`'unsafe-inline' https:` in browsers that support CSP1, `https: 'no
 
 ## Browser compatibility
 
-{{Compat("http.headers.csp.script-src")}}
+{{Compat}}
 
 ## See also
 
