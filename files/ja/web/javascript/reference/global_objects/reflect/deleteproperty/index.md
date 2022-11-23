@@ -70,7 +70,7 @@ if (Reflect.defineProperty(target, property, attributes)) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.defineProperty")}}
+{{Compat}}
 
 ## 関連情報
 

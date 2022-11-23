@@ -37,7 +37,7 @@ Simply put, these properties describe how the {{Glossary("user agent")}} should 
 
 ## Browser compatibility
 
-{{Compat("api.EffectTiming")}}
+{{Compat}}
 
 ## See also
 

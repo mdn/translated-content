@@ -109,7 +109,7 @@ setTimeout(() => {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakMap")}}
+{{Compat}}
 
 ## 関連情報
 

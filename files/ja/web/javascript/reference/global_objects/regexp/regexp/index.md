@@ -78,7 +78,7 @@ new RegExp('ab+c', 'i') // コンストラクター
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RegExp")}}
+{{Compat}}
 
 ## 関連情報
 

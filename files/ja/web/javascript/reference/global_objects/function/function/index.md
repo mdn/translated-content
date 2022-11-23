@@ -57,7 +57,7 @@ adder(2, 6);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function")}}
+{{Compat}}
 
 ## 関連情報
 

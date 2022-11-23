@@ -35,7 +35,7 @@ RegExp.$_;            // "hi world!"
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RegExp.lastMatch")}}
+{{Compat}}
 
 ## 関連情報
 

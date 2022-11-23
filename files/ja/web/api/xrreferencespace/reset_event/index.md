@@ -88,4 +88,4 @@ viewerRefSpace.onreset = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRReferenceSpace.onreset")}}
+{{Compat}}

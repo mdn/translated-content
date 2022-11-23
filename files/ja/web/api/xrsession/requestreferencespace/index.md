@@ -32,4 +32,4 @@ original_slug: Web/API/XRReferenceSpaceType
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRReferenceSpaceType")}}
+{{Compat}}
