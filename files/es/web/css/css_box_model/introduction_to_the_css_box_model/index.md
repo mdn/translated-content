@@ -1,8 +1,6 @@
 ---
 title: Introducción al modelo de caja básico de CSS
 slug: Web/CSS/CSS_Box_Model/introduction_to_the_CSS_box_model
-page-type: guide
-spec-urls: https://drafts.csswg.org/css-box/#intro
 l10n:
   sourceCommit: 71c4bc0b6329ec40ddbefd8d3124547e91cfa612
 ---

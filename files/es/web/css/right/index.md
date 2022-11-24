@@ -1,11 +1,6 @@
 ---
 title: right
 slug: Web/CSS/right
-tags:
-  - CSS Reference
-  - NeedsTechnicalReview
-  - Referencia_CSS
-translation_of: Web/CSS/right
 ---
 
 {{ CSSRef() }}

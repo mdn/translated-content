@@ -1,8 +1,6 @@
 ---
 title: margin
 slug: Web/CSS/margin
-translation_of: Web/CSS/margin
-translation_of_original: Web/CSS/margin-new
 ---
 
 {{CSSRef}}

@@ -1,15 +1,6 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content
-tags:
-  - CSS
-  - CSS Grid
-  - Experimental
-  - Función CSS
-  - Layout
-  - Referencia
-  - Web
-translation_of: Web/CSS/fit-content
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

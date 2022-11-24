@@ -1,10 +1,6 @@
 ---
 title: outline-style
 slug: Web/CSS/outline-style
-tags:
-  - Contorno CSS
-  - Propiedad CSS
-translation_of: Web/CSS/outline-style
 ---
 
 {{CSSRef}}
