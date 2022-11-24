@@ -35,7 +35,7 @@ l10n:
 
 この例では、利用可能なポートを調べ、ユーザーが他のポートへのアクセスを許可できるようにする方法を示します。
 
-{{domxref("SerialPort.connect_event", "connect")}} および {{domxref("SerialPort.disconnect_event", "disconnect")}} イベントにロードイベントリスナーを追加することで、デバイスが接続された時や切断された時にサイトが反応できるようにします。{{domxref("Serial.getPorts()","getPorts()")}} メソッドを呼ぶことで、接続されたポートが既にサイトからのアクセスが許可されたものかどうかを調べることができます。
+`load` イベントの受信時に {{domxref("SerialPort.connect_event", "connect")}} および {{domxref("SerialPort.disconnect_event", "disconnect")}} イベントにリスナーを追加することで、デバイスが接続された時や切断された時にサイトが反応できるようにします。{{domxref("Serial.getPorts()","getPorts()")}} メソッドを呼ぶことで、接続されたポートが既にサイトからのアクセスが許可されたものかどうかを調べることができます。
 
 接続されたポートの中にサイトからアクセスできるものが無い場合、ユーザーが有効化するのを待つ必要があります。この例では、このためにボタンの {{domxref("Element.click_event", "click")}} イベントハンドラーを用います。{{domxref("Serial.requestPort()","requestPort()")}} に USB ベンダー ID を入れたフィルターを渡し、ユーザーに提示するデバイスのリストを特定の生産者によって作られた USB デバイスのみに絞り込んでいます。
 
