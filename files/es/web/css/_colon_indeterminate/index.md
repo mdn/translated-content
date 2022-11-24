@@ -1,13 +1,6 @@
 ---
 title: ':indeterminate'
 slug: Web/CSS/:indeterminate
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:indeterminate
 ---
 
 {{CSSRef}}

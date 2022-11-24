@@ -1,11 +1,6 @@
 ---
 title: all
 slug: Web/CSS/all
-tags:
-  - Cascada CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/all
 ---
 
 {{CSSRef}}
