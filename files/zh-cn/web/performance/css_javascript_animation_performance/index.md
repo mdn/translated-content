@@ -24,7 +24,7 @@ CSS 中的 transitions 和 animations 都可以用于编写动画，它们都有
 
 ## 性能对比：<br>transitions vs. requestAnimationFrame
 
-事实上，大多数场景下，基于 CSS 的动画几乎是跟 JavaScript 动画表现一致——至少在 FireFox 上是如此。一些基于 Javascript 的动画库，像 [GSAP](http://greensock.com/gsap) 和 [Velocity.JS](http://velocityjs.org/)，甚至声称他们在性能上可以做得比[原生 CSS transitions/animations](https://css-tricks.com/myth-busting-css-animations-vs-javascript/)（原生的 CSS transitions 和 animations）更好。这是可能的，因为在重绘事件发生之前，CSS transitions 和 animations 在主的 UI 线程仅仅是重新采集元素的样式，这跟通过 `requestAnimationFrame()` 回调，获取重新采集元素样式是一样的，也是在下一次重绘之前触发。假如二者都是在主 UI 线程创建的动画，那它们在性能方面没有差异。
+事实上，大多数场景下，基于 CSS 的动画几乎是跟 JavaScript 动画表现一致——至少在 FireFox 上是如此。一些基于 Javascript 的动画库，像 [GSAP](http://greensock.com/gsap) 和 [Velocity.JS](http://velocityjs.org/)，甚至声称他们在性能上可以做得比[原生 CSS transitions/animations](https://css-tricks.com/myth-busting-css-animations-vs-javascript/)（原生的 CSS transitions 和 animations）更好。这是可能的，因为在重绘事件发生之前，CSS transitions 和 animations 在主的 UI 线程仅仅是重新采集元素的样式，这跟通过 `requestAnimationFrame()` 回调获取重新采集元素样式是一样的，也是在下一次重绘之前触发。假如二者都是在主 UI 线程创建的动画，那它们在性能方面没有差异。
 
 在这一节，我们将会使用 FireFox 通过一个性能测试，去看看哪种动画方式更好。
 
@@ -32,7 +32,7 @@ CSS 中的 transitions 和 animations 都可以用于编写动画，它们都有
 
 在进行示例之前，请启用 FPS 工具先查看当前帧速率：
 
-1. 在地址栏中，输入 *about:config*，点击 `I'll be careful, I promise!` 按钮，以输入配置屏幕。
+1. 在地址栏中，输入 *about:config*，点击 `I'll be careful, I promise!` 按钮，以进入配置屏幕。
     ![](pic1.png)
 2. 在搜索栏中搜索 `layers.acceleration.draw-fps` 首选项。
 3. 双击该条目将值设置为 `true`。现在您可以在 Firefox 窗口的左上角看到三个紫色的框。第一个框代表 FPS。
