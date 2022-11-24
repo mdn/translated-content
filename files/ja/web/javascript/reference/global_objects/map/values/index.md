@@ -38,9 +38,7 @@ console.log(mapIter.next().value); // "baz"
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map.prototype.values', 'Map.prototype.values')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

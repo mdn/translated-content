@@ -1,12 +1,6 @@
 ---
 title: Eventos online y offline
 slug: orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
-tags:
-  - AJAX
-  - DOM
-  - Desarrollo_Web
-  - Todas_las_Categorías
-translation_of: Web/API/NavigatorOnLine/Online_and_offline_events
 original_slug: Web/API/NavigatorOnLine/Online_and_offline_events
 ---
 

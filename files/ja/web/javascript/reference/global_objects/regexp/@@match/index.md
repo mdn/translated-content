@@ -78,9 +78,7 @@ console.log(result.group(3)); // 02
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-regexp.prototype-@@match', 'RegExp.prototype[@@match]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

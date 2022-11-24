@@ -50,9 +50,7 @@ console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.subarray', 'TypedArray.prototype.subarray')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

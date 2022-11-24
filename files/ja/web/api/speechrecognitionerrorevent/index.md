@@ -36,7 +36,7 @@ recognition.onerror = function(event) {
 
 ## ブラウザーの実装状況
 
-{{Compat("api.SpeechRecognitionError")}}
+{{Compat}}
 
 ### Firefox OS の許可設定
 

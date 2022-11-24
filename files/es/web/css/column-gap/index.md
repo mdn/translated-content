@@ -75,7 +75,7 @@ CSS
 
 ## Compatibilidad en navegadores
 
-{{Compat("css.properties.grid-column-gap")}}
+{{Compat}}
 
 ## Ver también
 

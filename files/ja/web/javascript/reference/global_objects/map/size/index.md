@@ -28,9 +28,7 @@ myMap.size // 3
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-map.prototype.size', 'Map.prototype.size')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -71,9 +71,7 @@ function getRandomIntInclusive(min, max) {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.random', 'Math.random')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

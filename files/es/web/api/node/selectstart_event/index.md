@@ -29,7 +29,7 @@ document.onselectstart = function() { console.log("¡Selección iniciada!"); };
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.GlobalEventHandlers.onselectstart")}}
+{{Compat}}
 
 ## Ver también
 

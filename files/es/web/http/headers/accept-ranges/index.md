@@ -40,7 +40,7 @@ Accept-Ranges: bytes
 
 ## Compatibilidad con navegadores
 
-{{Compat("http/headers/accept-ranges")}}
+{{Compat}}
 
 ## Vea también
 

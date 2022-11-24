@@ -231,4 +231,4 @@ cpf.oninput = function(event) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.input.input-password")}}
+{{Compat}}

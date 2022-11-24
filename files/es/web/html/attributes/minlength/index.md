@@ -46,7 +46,7 @@ input:invalid:focus {
 
 ## Compatibilidad del navegador
 
-{{Compat("html.elements.attribute.minlength")}}
+{{Compat}}
 
 ## Ve también
 

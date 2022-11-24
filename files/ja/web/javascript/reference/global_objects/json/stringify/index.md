@@ -325,9 +325,7 @@ JSON.stringify("\uD800"); // '"\\ud800"'
 
 ## 仕様書
 
-| 仕様書                                                                               |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-json.stringify', 'JSON.stringify')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

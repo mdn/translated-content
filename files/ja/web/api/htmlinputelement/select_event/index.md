@@ -75,4 +75,4 @@ input.onselect = logSelection;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.select_event")}}
+{{Compat}}

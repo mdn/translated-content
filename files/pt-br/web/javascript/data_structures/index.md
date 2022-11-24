@@ -209,7 +209,7 @@ Além disso, arrays herdam de `Array.prototype`, que fornece a eles um punhado d
 
 ### Coleções chaveadas: Maps, Sets, WeakMaps, WeakSets
 
-Essas estruturas de dados usam referências de objetos como chaves. {{jsxref("Set")}} e {{jsxref("WeakSet")}} representantereenviam um conjunto de objetos, enquanto {{jsxref("Map")}} e {{jsxref("WeakMap")}} associam um valor a um objeto.
+Essas estruturas de dados usam referências de objetos como chaves. {{jsxref("Set")}} e {{jsxref("WeakSet")}} representante reenviam um conjunto de objetos, enquanto {{jsxref("Map")}} e {{jsxref("WeakMap")}} associam um valor a um objeto.
 
 A diferença entre `Map`s e `WeakMap`s é que no primeiro, as chaves de objeto podem ser enumeradas. Isso permite otimizações de coleta de lixo no último caso.
 

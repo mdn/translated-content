@@ -85,7 +85,7 @@ image.src = 'sprites.png';
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.WindowOrWorkerGlobalScope.createImageBitmap")}}
+{{Compat}}
 
 ## Ver también
 

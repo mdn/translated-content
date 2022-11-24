@@ -37,9 +37,7 @@ xrReferenceSpace.addEventListener("reset", event => {
 
 ## 仕様
 
-| 仕様                                                                                                                         | 状態                     | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#dom-xrreferencespaceevent-transform','XRReferenceSpaceEvent.transform')}} | {{Spec2('WebXR')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
