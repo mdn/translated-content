@@ -71,7 +71,7 @@ function logScroll(e) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.GlobalEventHandlers.onscroll")}}
+{{Compat}}
 
 ## Veja também
 

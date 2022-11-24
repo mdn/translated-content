@@ -28,7 +28,7 @@ _A interface `Position` não herda nenhuma propriedade_.
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Position")}}
+{{Compat}}
 
 ## Veja também
 

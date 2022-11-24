@@ -33,7 +33,7 @@ var dadoDecodificado = window.atob(dadoCodificado); // decodifica a string
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.WindowOrWorkerGlobalScope.atob")}}
+{{Compat}}
 
 \[1] `atob()` também está disponível para os componentes do XPCOM implementado em JavaScript, porém o objeto [`window`](/pt-BR/docs/Web/API/Window) não é global nos componentes.
 
