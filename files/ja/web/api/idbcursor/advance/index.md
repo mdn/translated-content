@@ -54,7 +54,7 @@ function advanceResult() {
       list.appendChild(listItem);
       cursor.advance(2);
     } else {
-      console.log('全エントリを 1 つおきに表示しました。');
+      console.log('全エントリーを 1 つおきに表示しました。');
     }
   };
 };
@@ -71,9 +71,9 @@ function advanceResult() {
 ## 関連情報
 
 - [IndexedDB を使用する](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションを開始する: {{domxref("IDBDatabase")}}
-- トランザクションを使用する: {{domxref("IDBTransaction")}}
-- キーレンジを設定する: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルを使用する: {{domxref("IDBCursor")}}
-- リファレンスの例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([ライブ例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- トランザクションを開始する : {{domxref("IDBDatabase")}}
+- トランザクションを使用する : {{domxref("IDBTransaction")}}
+- キーレンジを設定する : {{domxref("IDBKeyRange")}}
+- データの取得と変更 : {{domxref("IDBObjectStore")}}
+- カーソルを使用する : {{domxref("IDBCursor")}}
+- リファレンスの例 : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([ライブ例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

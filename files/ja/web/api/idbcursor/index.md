@@ -18,7 +18,7 @@ slug: Web/API/IDBCursor
 - {{domxref("IDBCursor.source")}} {{readonlyInline}}
   - : カーソルが繰り返している{{domxref("IDBObjectStore")}} か {{domxref("IDBIndex")}} を返します。この関数は、カーソルが現在繰り返されていたり、繰り返しが終わりを過ぎたり、トランザクションがアクティブでなくても、`null` や例外を返しません。
 - {{domxref("IDBCursor.direction")}} {{readonlyInline}}
-  - : カーソルの横断の向きを返します。取りうる値については [定数](/ja/docs/Web/API/IDBCursor#%E5%AE%9A%E6%95%B0) を見てください。
+  - : カーソルの横断の向きを返します。取りうる値については[定数](/ja/docs/Web/API/IDBCursor#%E5%AE%9A%E6%95%B0)を見てください。
 - {{domxref("IDBCursor.key")}} {{readonlyInline}}
   - : カーソル位置のレコードのキーを返します。カーソルが範囲外の場合、`undefined` にセットされます。カーソルキーはあらゆるデータ型となりえます。
 - {{domxref("IDBCursor.value")}} {{readonlyInline}}
@@ -68,7 +68,7 @@ function displayData() {
 
       cursor.continue();
     } else {
-      console.log('全エントリを表示しました。');
+      console.log('全エントリーを表示しました。');
     }
   };
 }

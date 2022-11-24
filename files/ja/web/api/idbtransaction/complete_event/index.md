@@ -59,7 +59,7 @@ DBOpenRequest.onupgradeneeded = event => {
 DBOpenRequest.onsuccess = event => {
   const db = DBOpenRequest.result;
 
-  // DB の読み書きトランザクションを開き、データを追加する準備ができる
+  // DB の読み書きトランザクションを開き、データを追加する準備をする
   const transaction = db.transaction(['toDoList'], 'readwrite');
 
   // `complete` のためのリスナーを追加

@@ -61,7 +61,7 @@ var IDBOpenDBRequest = indexedDB.open(name, version);
 var request = window.indexedDB.open("toDoList", 4);
 ```
 
-次のコードスニペットは、データベースを開く要求をして、成功の場合と失敗の場合のイベントハンドラを登録しています。完璧に動作する例は、 [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](http://mdn.github.io/to-do-notifications/).) を見てください。
+次のコードスニペットは、データベースを開く要求をして、成功の場合と失敗の場合のイベントハンドラを登録しています。完璧に動作する例は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーション ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/)) を見てください。
 
 ```js
 var note = document.querySelector("ul");

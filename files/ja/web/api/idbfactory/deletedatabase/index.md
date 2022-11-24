@@ -5,7 +5,7 @@ slug: Web/API/IDBFactory/deleteDatabase
 
 {{ APIRef("IDBFactory") }}
 
-{{domxref("IDBFactory")}} インターフェイスの **`deleteDatabase()`** メソッドは、データベースの削除を要求します。 このメソッドは直ちに{{domxref("IDBOpenDBRequest")}} オブジェクトを返し、非同期でデータベースの削除処理を行います。
+{{domxref("IDBFactory")}} インターフェイスの **`deleteDatabase()`** メソッドは、データベースの削除を要求します。このメソッドは直ちに {{domxref("IDBOpenDBRequest")}} オブジェクトを返し、非同期でデータベースの削除処理を行います。
 
 データベースの削除が成功した場合、このメソッドから返された `request` オブジェクトにおいて、`result` に `null` が設定された状態で `success` イベントが発生します。 データベースの削除中にエラーが発生した場合、このメソッドから返された `request` オブジェクトで、`error` イベントが発生します。
 

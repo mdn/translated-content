@@ -5,7 +5,7 @@ slug: Web/API/IDBDatabase
 
 {{APIRef()}}
 
-IndexedDB API の `IDBDatabase` インターフェイスは、[データベースへの接続](/ja/docs/IndexedDB#database_connection)を提供します。 `IDBDatabase` オブジェクトで、データベースの[トランザクション](/ja/docs/IndexedDB#gloss_transaction)を開き、データベースのオブジェクト（データ）を生成したり、操作したり、削除したりできます。このインターフェイスはデータベースのバージョンを取得したり、統合したりする唯一の方法を提供します。
+IndexedDB API の `IDBDatabase` インターフェイスは、[データベースへの接続](/ja/docs/IndexedDB#database_connection)を提供します。`IDBDatabase` オブジェクトで、データベースの[トランザクション](/ja/docs/IndexedDB#gloss_transaction)を開き、データベースのオブジェクト（データ）を生成したり、操作したり、削除したりできます。このインターフェイスはデータベースのバージョンを取得したり、統合したりする唯一の方法を提供します。
 
 > **メモ:** IndexedDB 内で行う全ての操作は、データベース内のデータとの作用を表す[トランザクション](/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction)の文脈で起こります。IndexedDB 内の全てのオブジェクト (オブジェクトストア、インデックス、カーソルを含みます) は、特定のトランザクションに紐づいています。そのため、トランザクション外では、コマンドを実行したり、データにアクセスしたり、何かを開いたりできません。
 

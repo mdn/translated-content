@@ -22,7 +22,7 @@ slug: Web/API/IDBFactory
 
 ## 例
 
-次のコードスニペットでは、 データベースを開く要求をし、 成功の場合と失敗の場合のイベントハンドラーを登録しています。完全に動作する例は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーション ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/)) を見てください。
+次のコードスニペットでは、データベースを開く要求をし、成功の場合と失敗の場合のイベントハンドラーを登録しています。完全に動作する例は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーション ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/)) を見てください。
 
 ```js
 var note = document.querySelector("ul");
