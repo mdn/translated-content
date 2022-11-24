@@ -1,14 +1,6 @@
 ---
 title: Notifications API
 slug: Web/API/Notifications_API
-tags:
-  - Landing
-  - NeedsTranslation
-  - Notifications
-  - TopicStub
-  - permission
-  - system
-translation_of: Web/API/Notifications_API
 ---
 
 {{DefaultAPISidebar("Web Notifications")}}

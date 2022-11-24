@@ -1,13 +1,6 @@
 ---
 title: Node
 slug: Web/API/Node
-tags:
-  - API
-  - DOM
-  - Interfaz
-  - Nodo
-  - Referencia
-translation_of: Web/API/Node
 ---
 
 {{APIRef("DOM")}}

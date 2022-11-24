@@ -1,9 +1,6 @@
 ---
 title: event.preventDefault
 slug: Web/API/Event/preventDefault
-tags:
-  - Referencia_DOM_de_Gecko
-translation_of: Web/API/Event/preventDefault
 ---
 
 {{ApiRef("DOM")}}

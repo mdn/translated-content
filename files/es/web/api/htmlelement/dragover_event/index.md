@@ -1,10 +1,7 @@
 ---
-title: "HTMLElement: dragover event"
+title: 'HTMLElement: dragover event'
 slug: Web/API/HTMLElement/dragover_event
-translation_of: Web/API/HTMLElement/dragover_event
 original_slug: Web/API/HTMLElement/dragover_event
-page-type: web-api-event
-browser-compat: api.HTMLElement.dragover_event
 ---
 
 {{APIRef}}

@@ -1,9 +1,6 @@
 ---
 title: element.nodeName
 slug: Web/API/Node/nodeName
-tags:
-  - Referencia_DOM_de_Gecko
-translation_of: Web/API/Node/nodeName
 ---
 
 {{APIRef("DOM")}}

@@ -1,11 +1,6 @@
 ---
 title: FileReader.result
 slug: Web/API/FileReader/result
-tags:
-  - API
-  - Archivos
-  - Ficheros
-translation_of: Web/API/FileReader/result
 ---
 
 {{APIRef("File API")}}La propiedad **`result`** de {{domxref("FileReader")}} retorna el contenido del archivo. Esta propiedad es válida únicamente después de que la operación de lectura del archivo es completada. El formato de la infomación devuelta depende de cuál de los métodos de lectura fue usado.

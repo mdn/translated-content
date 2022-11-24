@@ -1,7 +1,6 @@
 ---
 title: MediaQueryList.addListener()
 slug: Web/API/MediaQueryList/addListener
-translation_of: Web/API/MediaQueryList/addListener
 ---
 
 {{APIRef("CSSOM View")}}El método **`addListener()`** de la interfaz {{domxref ("MediaQueryList")}} añade un escucha al `MediaQueryListener` que ejecutará una función de devolución de llamada personalizada en respuesta al cambio de estado de consulta de medios.
