@@ -287,7 +287,7 @@ Both request and response (and by extension the `fetch()` function), will try to
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat}}
 
 - [ServiceWorker API](/pt-BR/docs/Web/API/ServiceWorker_API)
 - [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/Access_control_CORS)
