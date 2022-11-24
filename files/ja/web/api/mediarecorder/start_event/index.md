@@ -47,7 +47,7 @@ MediaRecorder.addEventListener('start', function(event) { ... })
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaRecorder.onstart")}}
+{{Compat}}
 
 ## 関連情報
 

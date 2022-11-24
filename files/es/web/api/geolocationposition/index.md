@@ -35,7 +35,7 @@ La interfaz `Position` no implementa ni hereda ningún método.
 
 ## Compatibilidad de navegadores
 
-{{Compat("api.Position")}}
+{{Compat}}
 
 ## Ver también
 

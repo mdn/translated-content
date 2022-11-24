@@ -29,7 +29,7 @@ console.timeEnd(etiqueta);
 
 ## Compatibilidad con Navegadores
 
-{{Compat("api.Console.timeEnd")}}
+{{Compat}}
 
 ## Relacionados
 

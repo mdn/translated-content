@@ -43,9 +43,7 @@ uint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.tolocalestring', 'TypedArray.prototype.toLocaleString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -56,4 +56,4 @@ src.addEventListener('touchend', function(e) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Touch.clientY")}}
+{{Compat}}

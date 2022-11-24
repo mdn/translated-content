@@ -94,13 +94,7 @@ Access-Control-Allow-Origin: *
 
 ## ブラウザの互換性
 
-### \<script integrity>
-
-{{Compat("html.elements.script.integrity")}}
-
-### CSP: require-sri-for
-
-{{Compat("http.headers.csp.require-sri-for")}}
+{{Compat}}
 
 ## 関連情報
 

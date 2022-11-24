@@ -248,7 +248,7 @@ display.addEventListener('change', function (evt) {
 
 ### Support in Grid layout
 
-{{Compat("css.properties.align-content.grid_context")}}
+{{Compat}}
 
 ## Смотрите также
 

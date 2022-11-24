@@ -57,7 +57,7 @@ MediaRecorder.addEventListener('resume', function(event) { ... })
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaRecorder.onresume")}}
+{{Compat}}
 
 ## 関連情報
 

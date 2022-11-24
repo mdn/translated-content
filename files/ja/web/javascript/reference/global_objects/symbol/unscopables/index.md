@@ -58,9 +58,7 @@ with (obj) {
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.unscopables', 'Symbol.unscopables')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

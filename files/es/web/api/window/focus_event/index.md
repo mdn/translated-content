@@ -29,4 +29,4 @@ A diferencia de MSIE, en que casi toda clase de elemento puede recibir el evento
 
 ## Compatibilidad con los Navegadores
 
-{{Compat("api.GlobalEventHandlers.onfocus")}}
+{{Compat}}

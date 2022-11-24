@@ -55,4 +55,4 @@ El evento submit no se genera cuando el usuario llama a la función `form.submit
 
 ## Browser Compatibility
 
-{{Compat("api.GlobalEventHandlers.onsubmit")}}
+{{Compat}}

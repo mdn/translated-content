@@ -1,15 +1,6 @@
 ---
 title: GlobalEventHandlers
 slug: orphaned/Web/API/GlobalEventHandlers
-tags:
-  - API
-  - DOM HTML
-  - GlobalEventHandlers
-  - Mixin
-  - Referencia
-  - combinación
-  - eventos
-translation_of: Web/API/GlobalEventHandlers
 original_slug: Web/API/GlobalEventHandlers
 ---
 

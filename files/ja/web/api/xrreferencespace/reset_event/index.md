@@ -82,10 +82,8 @@ viewerRefSpace.onreset = (event) => {
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                     | コメント |
-| -------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#eventdef-xrreferencespace-reset','reset event')}} | {{Spec2('WebXR')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRReferenceSpace.onreset")}}
+{{Compat}}

@@ -76,7 +76,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 ## Compatibilidad de navegadores
 
-{{Compat("http/headers/strict-transport-security")}}
+{{Compat}}
 
 ## Ver también
 
