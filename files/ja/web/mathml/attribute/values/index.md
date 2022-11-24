@@ -16,7 +16,7 @@ l10n:
 - `<unsigned-integer>`: [`<integer>`](/ja/docs/Web/CSS/integer) で、最初の文字が U+002D HYPHEN-MINUS character (-) でも U+002B PLUS SIGN (+) でもないものです。例えば `1234` です。
 - `<boolean>`: `true` または `false` の文字列で、論理値を表します。
 
-## 古い MathML における長さ
+## MathML における古い長さ
 
 {{deprecated_header}}
 
