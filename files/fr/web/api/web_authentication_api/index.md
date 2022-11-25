@@ -13,7 +13,7 @@ L'API <i lang="en">Web Authentication</i> est une extension de l'API [<i lang="e
 
 L'API <i lang="en">Web Authentication</i> (qu'on pourrait traduire en «&nbsp;authentification web&nbsp;»), généralement désignée par le terme WebAuthn, utilise [la cryptographie asymétrique (à clé publique)](https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique) plutôt que des mots de passe ou des SMS pour l'enregistrement, l'authentification et [l'authentification forte](https://fr.wikipedia.org/wiki/Authentification_forte) sur les sites web. Cela présente différents avantages&nbsp;:
 
-- Protection contre le hameçonnage (<i lang="en">phishing</i>)
+- Protection contre l'hameçonnage (<i lang="en">phishing</i>)
   - : Une personne malveillante qui crée un faux site de connexion ne peut pas récupérer les informations de l'utilisatrice ou de l'utilisateur, car la signature change avec [l'origine](/fr/docs/Glossary/Origin) du site.
 - Réduction de l'impact pour les fuites de données
   - : Les équipes de développement n'ont pas besoin de calculer l'empreinte d'une clé publique. Si un acteur malveillant obtient la clé publique utilisée pour vérifier l'authentification, il ne peut pas s'authentifier sans la clé privée.
@@ -112,7 +112,7 @@ On a ensuite ces étapes pour l'authentification&nbsp;:
     - L'authentificateur renvoie `authenticatorData` et la signature de l'assertion au navigateur.
 
 5. **Le navigateur crée les données finales et l'application envoie sa réponse au serveur.**
-    - Le navigateur résoud [la promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) en un objet [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential) ayant une propriété [`PublicKeyCredential.response`](/fr/docs/Web/API/PublicKeyCredential/response). L'application JavaScript transmet alors ces données au serveur en utilisant le format et le protocole de son choix.
+    - Le navigateur résout [la promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) en un objet [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential) ayant une propriété [`PublicKeyCredential.response`](/fr/docs/Web/API/PublicKeyCredential/response). L'application JavaScript transmet alors ces données au serveur en utilisant le format et le protocole de son choix.
 
 6. **Le serveur valide les données reçues et finalise l'authentification.**
     1. À la réception de la réponse à la requête d'authentification, le serveur réalise une validation de la réponse avec différentes étapes comme&nbsp;:
@@ -132,7 +132,7 @@ On a ensuite ces étapes pour l'authentification&nbsp;:
 - [`CredentialsContainer`](/fr/docs/Web/API/CredentialsContainer)
   - : Expose des méthodes pour demander des informations d'authentification et notifier l'agent utilisateur lorsque des évènements comme une connexion ou une déconnexion sont réussis. Cette interface est accessible via [`Navigator.credentials`](/fr/docs/Web/API/Navigator/credentials). La spécification <i lang="en">Web Authentication</i> ajoute une propriété d'option `publicKey` aux méthodes [`CredentialsContainer.create()`](/fr/docs/Web/API/CredentialsContainer/create) et [`CredentialsContainer.get()`](/fr/docs/Web/API/CredentialsContainer/get) afin de créer une nouvelle paire de clés ou d'obtenir une authentification à partir d'une paire de clés existante.
 - [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential)
-  - : Fournit des informations à propos d'une paire de clés publique et privée, composant les informations pour l'authentification à un service (fonctionnant sur une paire de clés asymétrique évitant les risques de hameçonnage et de fuite des données qu'on rencontre lorsqu'on utilise des mots de passe).
+  - : Fournit des informations à propos d'une paire de clés publique et privée, composant les informations pour l'authentification à un service (fonctionnant sur une paire de clés asymétrique évitant les risques d'hameçonnage et de fuite des données qu'on rencontre lorsqu'on utilise des mots de passe).
 - [`AuthenticatorResponse`](/fr/docs/Web/API/AuthenticatorResponse)
   - : L'interface de base pour [`AuthenticatorAttestationResponse`](/fr/docs/Web/API/AuthenticatorAttestationResponse) et [`AuthenticatorAssertionResponse`](/fr/docs/Web/API/AuthenticatorAssertionResponse), qui fournit une racine de confiance cryptographique pour une paire de clés, renvoyées respectivement par [`CredentialsContainer.create()`](/fr/docs/Web/API/CredentialsContainer/create) et [`CredentialsContainer.get()`](/fr/docs/Web/API/CredentialsContainer/get). Les interfaces enfant contiennent des informations du navigateur comme l'origine du challenge. On pourra obtenir un objet implémentant cette interface en consultant la propriété [`PublicKeyCredential.response`](/fr/docs/Web/API/PublicKeyCredential/response).
 - [`AuthenticatorAttestationResponse`](/fr/docs/Web/API/AuthenticatorAttestationResponse)
@@ -199,15 +199,15 @@ const createCredentialDefaultArgs = {
 const getCredentialDefaultArgs = {
   publicKey: {
     timeout: 60000,
-    // allowCredentials: [newCredential] // see below
-    challenge: new Uint8Array([ // must be a cryptographically random number sent from a server
+    // allowCredentials: [newCredential] // voir ci-dessous
+    challenge: new Uint8Array([ // doit être un nombre cryptographiquement aléatoire fourni par le serveur
       0x79, 0x50, 0x68, 0x71, 0xDA, 0xEE, 0xEE, 0xB9, 0x94, 0xC3, 0xC2, 0x15, 0x67, 0x65, 0x26, 0x22,
       0xE3, 0xF3, 0xAB, 0x3B, 0x78, 0x2E, 0xD5, 0x6F, 0x81, 0x26, 0xE2, 0xA6, 0x01, 0x7D, 0x74, 0x50
     ]).buffer
   },
 };
 
-// register / create a new credential
+// enregistrer / créer de nouvelles informations d'authentification
 navigator.credentials.create(createCredentialDefaultArgs)
   .then((cred) => {
     console.log("Nouvelles informations d'authentification ", cred);
