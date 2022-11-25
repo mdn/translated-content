@@ -195,7 +195,7 @@ Voir la section qui suit sur [la sécurité](#sécurité)&nbsp;: les cookies dis
 
 ## Sécurité
 
-> **Note :** Quand des informations sont enregistrées dans des cookies, elles sont visibles et éditables par l'utilisatrice ou l'utilisateur final. Selon le cas d'usage de l'application, vous pouvez utiliser un identifiant opaque qui sera utilisé par le serveur ou utiliser d'autres mécanismes d'authentification ou de confidentialité comme [les JSON Web Tokens](https://jwt.io/introduction).
+> **Note :** Quand des informations sont enregistrées dans des cookies, elles sont visibles et éditables par l'utilisatrice ou l'utilisateur final·e. Selon le cas d'usage de l'application, vous pouvez utiliser un identifiant opaque qui sera utilisé par le serveur ou utiliser d'autres mécanismes d'authentification ou de confidentialité comme [les JSON Web Tokens](https://jwt.io/introduction).
 
 Plusieurs mécanismes existent pour prévenir les attaques utilisant les cookies&nbsp;:
 
@@ -220,7 +220,7 @@ Un serveur tiers peut créer un profil d'une personne à partir des habitudes et
 
 Les régulations ou législations qui s'appliquent aux cookies incluent:
 
-- Le réglement général sur la protection des données (RGPD ou GDPR en anglais) de l'Union européenne
+- Le règlement général sur la protection des données (RGPD ou GDPR en anglais) de l'Union européenne
 - La directive ePrivacy de l'Union européenne
 - Le <i lang="en">California Consumer Privacy Act</i> pour l'état de Californie aux États-Unis (s'applique aux entités ayant un revenu brut supérieur à 25 millions de dollars entre autres choses)
 
