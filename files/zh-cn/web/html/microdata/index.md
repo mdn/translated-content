@@ -66,6 +66,7 @@ slug: Web/HTML/Microdata
   <link
     itemprop="applicationCategory"
     href="https://schema.org/GameApplication" />
+
   <div
     itemprop="aggregateRating"
     itemscope
@@ -74,6 +75,7 @@ slug: Web/HTML/Microdata
     <span itemprop="ratingValue">4.6</span> (
     <span itemprop="ratingCount">8864</span> ratings )
   </div>
+
   <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
     Price: $<span itemprop="price">1.00</span>
     <meta itemprop="priceCurrency" content="USD" />
