@@ -23,6 +23,6 @@
     "node": "^16.0.0 || >=18.0.0"
   },
   "dependencies": {
-    "prettier": "2.7.1"
+    "prettier": "2.8.0"
   }
 }
