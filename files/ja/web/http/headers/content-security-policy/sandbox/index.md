@@ -63,7 +63,7 @@ Content-Security-Policy: sandbox <value>;
 - `allow-top-navigation-by-user-activation`
   - : ユーザーの指示で開始された場合に限り、リソースが最上位の閲覧コンテキストを移動させます。
 - `allow-top-navigation-to-custom-protocols`
-  - :  非フェッチスキームへのナビゲーションを外部ソフトウェアに引き渡せるようにします。
+  - : 非フェッチスキームへのナビゲーションを外部ソフトウェアに引き渡せるようにします。
 
 ## 例
 
