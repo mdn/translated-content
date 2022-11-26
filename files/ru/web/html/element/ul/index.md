@@ -1,5 +1,5 @@
 ---
-title: '<ul> - "Неупорядоченный список"'
+title: '<ul> - элемент «Неупорядоченный список»'
 slug: Web/HTML/Element/ul
 translation_of: Web/HTML/Element/ul
 ---
