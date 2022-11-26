@@ -35,7 +35,7 @@ toLocaleTimeString(locales, options)
 
     在不支持 `Intl.DateTimeFormat` 的实现中，该参数会被忽略。
 
-参见 [`Intl.DateTimeFormat()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) 以详细了解这些参数以及如何使用它们。
+参见 [`Intl.DateTimeFormat()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)以详细了解这些参数以及如何使用它们。
 
 ### 返回值
 
