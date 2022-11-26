@@ -21,7 +21,7 @@ l10n:
   - [`pointerup`](/ja/docs/Web/API/Element/pointerup_event) (`pointerType` が "mouse" でないとき)
   - [`touchend`](/ja/docs/Web/API/Element/touchend_event)
 
-有効化が起きる時、ユーザーエージェントは「粘着性」と「一時的」の 2 種類のウインドウのユーザーによる有効化状態を区別します。
+有効化が起きる時、ユーザーエージェントは「粘着的」と「一時的」の 2 種類のウインドウのユーザーによる有効化状態を区別します。
 
 ## 一時的な有効化
 
@@ -59,11 +59,11 @@ l10n:
 - `Window.queryLocalFonts()`
 - {{domxref("XRSystem.requestSession()")}}
 
-## 粘着性の有効化
+## 粘着的な有効化
 
-{{Glossary("Sticky activation", "粘着性の有効化")}}は、ユーザーがボタンを押したか、マウスを動かしたか、メニューを使用したか、他の何らかの操作をしたことを表すウインドウの状態です。これは、(一時的な有効化と違って) 最初にセットされた後はリセットされません。
+{{Glossary("Sticky activation", "粘着的な有効化")}}は、ユーザーがボタンを押したか、マウスを動かしたか、メニューを使用したか、他の何らかの操作をしたことを表すウインドウの状態です。これは、(一時的な有効化と違って) 最初にセットされた後はリセットされません。
 
-以下が､粘着性の有効化を必要とする API の例です｡
+以下が､粘着的な有効化を必要とする API の例です｡
 
 - {{domxref("Navigator.vibrate()")}}
 - `navigator.getAutoplayPolicy()`
@@ -71,14 +71,14 @@ l10n:
 
 ## UserActivation API
 
-ウインドウで粘着性のまたは一時的なユーザーによる有効化がなされているかどうかをプログラムから識別するため、{{domxref("UserActivation")}} API は {{domxref("navigator.userActivation")}} を通じて利用可能な 2 個のプロパティを提供しています。
+ウインドウで粘着的または一時的なユーザーによる有効化がなされているかどうかをプログラムから識別するため、{{domxref("UserActivation")}} API は {{domxref("navigator.userActivation")}} を通じて利用可能な 2 個のプロパティを提供しています。
 
-- {{domxref("UserActivation.hasBeenActive")}} は、ウインドウで粘着性の有効化がなされているかを表します。
+- {{domxref("UserActivation.hasBeenActive")}} は、ウインドウで粘着的な有効化がなされているかを表します。
 - {{domxref("UserActivation.isActive")}} は、ウインドウで一時的な有効化がなされているかを表します｡
 
 ## 関連情報
 
 - {{Glossary("Transient activation", "一時的な有効化")}}
-- {{Glossary("Sticky activation", "粘着性の有効化")}}
+- {{Glossary("Sticky activation", "粘着的な有効化")}}
 - {{domxref("UserActivation")}} API
 - [安全なコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
