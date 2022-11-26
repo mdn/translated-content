@@ -14,16 +14,16 @@ l10n:
 ウインドウにおけるユーザーによる有効化の状態は、以下の 2 種類があります。
 
 - {{Glossary("Transient activation", "一時的な有効化")}} (ユーザーが現在ページを操作している)
-- {{Glossary("Sticky activation", "粘着性の有効化")}} (ユーザーがページを読み込んでから少なくとも 1 回ページを操作した)
+- {{Glossary("Sticky activation", "粘着的な有効化")}} (ユーザーがページを読み込んでから少なくとも 1 回ページを操作した)
 
-より詳しい情報と、ユーザーによる一時的なもしくは粘着性の有効化を必要とする API の一覧については、[ユーザーによる有効化によって制御される機能](/ja/docs/Web/Security/User_activation)を参照してください。
+より詳しい情報と、ユーザーによる一時的もしくは粘着的な有効化を必要とする API の一覧については、[ユーザーによる有効化によって制御される機能](/ja/docs/Web/Security/User_activation)を参照してください。
 
 この API はウインドウコンテキストでのみ利用可能で、ワーカーには提供されていません。
 
 ## インスタンスプロパティ
 
 - {{domxref("UserActivation.hasBeenActive")}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : 現在のウインドウでユーザーによる粘着性の有効化がされているかを表します。
+  - : 現在のウインドウでユーザーによる粘着的な有効化がされているかを表します。
 - {{domxref("UserActivation.isActive")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : 現在のウインドウでユーザーによる一時的な有効化がされているかを表します｡
 
@@ -41,7 +41,7 @@ if (navigator.userActivation.isActive) {
 
 ### これまでにユーザーによる操作が行われたかをチェックする
 
-ユーザーがこれまでにページを操作したか ({{Glossary("Sticky activation", "粘着性の有効化")}}) をチェックするために {{domxref("UserActivation.hasBeenActive")}} を使用します｡
+ユーザーがこれまでにページを操作したか ({{Glossary("Sticky activation", "粘着的な有効化")}}) をチェックするために {{domxref("UserActivation.hasBeenActive")}} を使用します｡
 
 ```js
 if (navigator.userActivation.hasBeenActive) {
