@@ -32,7 +32,7 @@ Example 1: 탭 위젯을 ARIA 레이블링 없이 만든 마크업. 마크업에
 </div>
 ```
 
-Example 2: 탭 위젯의 렌더링 화면. 유저는 비주얼로 확인 가능하지만, 보조기술과 같은 기계들은 읽지 못합니다.  [Screenshot of the tabs widget](/@api/deki/files/4926/=Tabs_Widget.png)
+Example 2: 탭 위젯의 렌더링 화면. 유저는 비주얼로 확인 가능하지만, 보조기술과 같은 기계들은 읽지 못합니다. [Screenshot of the tabs widget](/@api/deki/files/4926/=Tabs_Widget.png)
 
 ## ARIA
 

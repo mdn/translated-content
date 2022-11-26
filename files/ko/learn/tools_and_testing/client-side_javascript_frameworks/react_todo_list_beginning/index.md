@@ -219,7 +219,7 @@ function App(props) {
 >
 ```
 
-`role` 속성은 보조 기술이 태그가 나타내고 있는 요소의 종류가 무엇인지 설명하는 데 도움이 됩니다. `<ul>`은 기본적으로 리스트처럼 취급되지만, 우리가 추가할 스타일은 리스트의 기능성을 해칩니다. `role="list"`는 `<ul>` 요소가  "리스트"의 의미를 회복하도록 합니다. 이것이 왜 필요한지 알고 싶다면, [Scott O'Hara’s article, “Fixing Lists”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)을 참고하세요.
+`role` 속성은 보조 기술이 태그가 나타내고 있는 요소의 종류가 무엇인지 설명하는 데 도움이 됩니다. `<ul>`은 기본적으로 리스트처럼 취급되지만, 우리가 추가할 스타일은 리스트의 기능성을 해칩니다. `role="list"`는 `<ul>` 요소가 "리스트"의 의미를 회복하도록 합니다. 이것이 왜 필요한지 알고 싶다면, [Scott O'Hara’s article, “Fixing Lists”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)을 참고하세요.
 
 `aria-labelledby` 속성은 보조 기술에게 리스트 헤딩을 헤딩 아래의 리스트의 목적을 나타내는 라벨로 사용하고 있음을 알립니다. 이러한 연관을 만드는 것은 리스트가 더욱 정보가 많은 맥락을 가지게 하여, 스크린 리더 사용자가 리스트의 목적을 더 잘 이해할 수 있도록 합니다.
 
