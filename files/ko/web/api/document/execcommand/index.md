@@ -143,4 +143,4 @@ CodePen의 [how to use](http://codepen.io/netsi1964/full/QbLLGW/)를 참고하�
 - {{domxref("HTMLElement.contentEditable")}}
 - {{domxref("document.designMode")}}
 - [Rich-Text Editing in Mozilla](/ko/docs/Rich-Text_Editing_in_Mozilla)
-- [Scribe's "Browser Inconsistencies" documentation](https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md) with bugs related to `document.execCommand`.{{CompatUnknown}}
+- [Scribe's "Browser Inconsistencies" documentation](https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md) with bugs related to `document.execCommand`.
