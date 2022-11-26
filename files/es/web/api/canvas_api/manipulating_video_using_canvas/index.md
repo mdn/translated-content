@@ -1,12 +1,6 @@
 ---
 title: Manipular video por medio de canvas
 slug: Web/API/Canvas_API/Manipulating_video_using_canvas
-tags:
-  - Canvas
-  - Firefox 3.5
-  - Video
-  - para_revisar
-translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
 original_slug: Web/HTML/anipular_video_por_medio_de_canvas
 ---
 

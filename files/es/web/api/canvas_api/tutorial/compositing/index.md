@@ -1,18 +1,6 @@
 ---
 title: Compositing and clipping
 slug: Web/API/Canvas_API/Tutorial/Compositing
-tags:
-  - Canvas
-  - Graphics
-  - HTML
-  - HTML5
-  - Intermediate
-  - Lienzo
-  - NeedsTranslation
-  - Recorte
-  - TopicStub
-  - Tutorial
-translation_of: Web/API/Canvas_API/Tutorial/Compositing
 ---
 
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

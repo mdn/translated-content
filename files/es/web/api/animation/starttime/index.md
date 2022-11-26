@@ -1,15 +1,6 @@
 ---
 title: Animation.startTime
 slug: Web/API/Animation/startTime
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Interface
-  - Reference
-  - startTime
-translation_of: Web/API/Animation/startTime
 ---
 
 {{ APIRef("Web Animations") }}

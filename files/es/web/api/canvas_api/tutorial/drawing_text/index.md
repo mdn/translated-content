@@ -1,9 +1,6 @@
 ---
 title: Dibujar texto usando canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-tags:
-  - HTML:Canvas
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 original_slug: Dibujar_texto_usando_canvas
 ---
 

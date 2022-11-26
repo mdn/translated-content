@@ -1,15 +1,6 @@
 ---
 title: self.createImageBitmap()
 slug: Web/API/createImageBitmap
-tags:
-  - API
-  - Canvas
-  - DOM
-  - Referencia
-  - WindowOrWorkerGlobalScope
-  - createImageBitmap
-  - metodo
-translation_of: Web/API/WindowOrWorkerGlobalScope/createImageBitmap
 original_slug: Web/API/WindowOrWorkerGlobalScope/createImageBitmap
 ---
 
