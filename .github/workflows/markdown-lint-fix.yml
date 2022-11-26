@@ -47,6 +47,7 @@ jobs:
           branch: markdownlint-auto-cleanup-${{ matrix.lang }}
           title: "Markdownlint auto-cleanup for ${{ matrix.lang }}"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
+          token: ${{ secrets.AUTOMERGE_TOKEN }}
           body: |
             All issues auto-fixed
 
@@ -58,6 +59,7 @@ jobs:
           branch: markdownlint-auto-cleanup-${{ matrix.lang }}
           title: "Markdownlint auto-cleanup for ${{ matrix.lang }}"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
+          token: ${{ secrets.AUTOMERGE_TOKEN }}
           body: |
             Auto-fix was run, but additional issues found.
             Please review the run log: https://github.com/mdn/translated-content/actions/runs/${{ github.run_id }}
