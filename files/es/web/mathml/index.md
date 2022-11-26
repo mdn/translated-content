@@ -1,7 +1,6 @@
 ---
 title: MathML
 slug: Web/MathML
-translation_of: Web/MathML
 ---
 
 **Lenguaje de Marcado Matemático (MathML)** es un lenguaje de marcado [XML](/es/docs/Introducción_a_XML) para describir expresiones matemáticas capturando tanto su contenido como su estructura.

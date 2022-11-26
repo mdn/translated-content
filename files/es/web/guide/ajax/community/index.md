@@ -1,7 +1,6 @@
 ---
 title: Comunidad
 slug: Web/Guide/AJAX/Community
-translation_of: Web/Guide/AJAX/Community
 original_slug: Web/Guide/AJAX/Comunidad
 ---
 
