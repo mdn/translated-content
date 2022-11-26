@@ -9,11 +9,11 @@ slug: Web/API/CryptoKeyPair
 
 `CryptoKeyPair` のオブジェクトは、以下の非対称暗号アルゴリズムのいずれかを選択して {{domxref("SubtleCrypto.generateKey()")}} を用いることで得られます。
 
-* RSASSA-PKCS1-v1_5
-* RSA-PSS
-* RSA-OAEP
-* ECDSA
-* ECDH
+- RSASSA-PKCS1-v1_5
+- RSA-PSS
+- RSA-OAEP
+- ECDSA
+- ECDH
 
 このオブジェクトは秘密鍵を保持する `privateKey` および公開鍵を保持する `publicKey` の2個のプロパティを持ちます。これらはどちらも {{domxref("CryptoKey")}} のオブジェクトです。
 
