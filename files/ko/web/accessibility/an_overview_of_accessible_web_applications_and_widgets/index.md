@@ -80,9 +80,9 @@ ARIA provides attributes for declaring the current state of a UI widget. Example
 - `aria-checked`
   - : indicates the state of a checkbox or radio button
 - `aria-disabled`
- - : indicates that an element is visible, but not editable or otherwise operable
+  - : indicates that an element is visible, but not editable or otherwise operable
 - `aria-grabbed`
- - : indicates the 'grabbed' state of an object in a drag-and-drop operation
+  - : indicates the 'grabbed' state of an object in a drag-and-drop operation
 
 (For a full list of ARIA states, consult the [ARIA list of states and properties](http://www.w3.org/TR/wai-aria/states_and_properties).)
 
