@@ -113,7 +113,7 @@ WebRTC の呼び出しを行う際に一般的に使用されるコーデック�
 | `audio/3gp2`  | `video/3gp2`  |
 
 これらの MIME タイプは、3GP メディアコンテナーの基本的なタイプです。使用する特定のコーデックやコーデックによっては、他のタイプが使用されることもあります。
-さらに、MIME タイプ文字列に [`codecs` 引数を追加] (/ja/docs/Web/Media/Formats/codecs_parameter#iso-bmff)して、音声トラックやビデオトラックにどのコーデックを使用しているかを示し、オプションでプロファイル、レベル、他にもコーデック構成に関する特定の詳細を提供することができます。
+さらに、MIME タイプ文字列に [`codecs` 引数を追加](/ja/docs/Web/Media/Formats/codecs_parameter#iso-bmff)して、音声トラックやビデオトラックにどのコーデックを使用しているかを示し、オプションでプロファイル、レベル、他にもコーデック構成に関する特定の詳細を提供することができます。
 
 <table class="standard-table">
   <caption>

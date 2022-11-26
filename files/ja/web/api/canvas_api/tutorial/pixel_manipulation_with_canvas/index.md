@@ -153,7 +153,7 @@ canvas.addEventListener('click', function(event) {
 
 ## コンテキストへのピクセルデータの描画
 
-[putImageData()](/ja/docs/Web/API/CanvasRenderingContext2D/putImageData) メソッドを使用して、コンテキストにピクセルデータを描くことができます。
+{{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}} メソッドを使用して、コンテキストにピクセルデータを描くことができます。
 
 ```js
 ctx.putImageData(myImageData, dx, dy);
@@ -169,7 +169,7 @@ ctx.putImageData(myImageData, 0, 0);
 
 ### 色のグレースケール化と反転
 
-この例では、すべてのピクセルに対して繰り返し処理を行い、値を変更したピクセル配列を [putImageData()] (/ja/docs/Web/API/CanvasRenderingContext2D/putImageData) を使ってキャンバスに戻しています。反転機能は、最大値 255 から各色を減算します。グレースケール関数は、赤、緑、青の平均値を使用します。また、例えば `x = 0.299r + 0.587g + 0.114b` という式で与えられる加重平均を使用することもできます。詳しくは Wikipedia の[グレースケール](https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB)をご覧ください。
+この例では、すべてのピクセルに対して繰り返し処理を行い、値を変更したピクセル配列を {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}} を使ってキャンバスに戻しています。反転機能は、最大値 255 から各色を減算します。グレースケール関数は、赤、緑、青の平均値を使用します。また、例えば `x = 0.299r + 0.587g + 0.114b` という式で与えられる加重平均を使用することもできます。詳しくは Wikipedia の[グレースケール](https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB)をご覧ください。
 
 ```js
 var img = new Image();
