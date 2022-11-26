@@ -1,5 +1,5 @@
 ---
-title: 一元否（-）
+title: 一元减（-）
 slug: Web/JavaScript/Reference/Operators/Unary_negation
 ---
 
