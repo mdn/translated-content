@@ -1,12 +1,6 @@
 ---
 title: ':-moz-first-node'
 slug: Web/CSS/:-moz-first-node
-tags:
-  - CSS
-  - NeedsCompatTable
-  - No estandar
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-first-node
 ---
 
 {{Non-standard_header}}{{CSSRef}}

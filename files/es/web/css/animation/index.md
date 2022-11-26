@@ -1,13 +1,6 @@
 ---
 title: animation
 slug: Web/CSS/animation
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Experimental
-  - Reference
-translation_of: Web/CSS/animation
 ---
 
 {{CSSRef}}

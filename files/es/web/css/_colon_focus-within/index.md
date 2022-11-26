@@ -1,13 +1,6 @@
 ---
 title: ':focus-within'
 slug: Web/CSS/:focus-within
-tags:
-  - CSS
-  - Diseño
-  - Referencia
-  - Web
-  - pseudo-clases
-translation_of: Web/CSS/:focus-within
 ---
 
 {{CSSRef}}

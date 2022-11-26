@@ -1,11 +1,6 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/basic-shape
-tags:
-  - CSS
-  - Referencia
-  - Tipo de Dato CSS
-translation_of: Web/CSS/basic-shape
 ---
 
 {{CSSRef}}

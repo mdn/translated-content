@@ -1,13 +1,6 @@
 ---
 title: border-block-end
 slug: Web/CSS/border-block-end
-tags:
-  - CSS
-  - Experimental
-  - Propiedad CSS
-  - Propiedad Lógica CSS
-  - Referencia
-translation_of: Web/CSS/border-block-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
