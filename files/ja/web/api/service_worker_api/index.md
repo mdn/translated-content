@@ -96,7 +96,7 @@ slug: Web/API/Service_Worker_API
 - {{DOMxRef("NavigationPreloadManager")}} {{Experimental_Inline}}
   - : サービスワーカーによるリソースの先読みを管理するためのメソッドを提供します。
 - {{DOMxRef("Navigator.serviceWorker")}}
-  - :  {{DOMxRef("ServiceWorker")}} オブジェクトを返します。これにより、[関連ドキュメント](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)に対する登録、削除、アップグレード、通信へのアクセスを提供します。
+  - : {{DOMxRef("ServiceWorker")}} オブジェクトを返します。これにより、[関連ドキュメント](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)に対する登録、削除、アップグレード、通信へのアクセスを提供します。
 - {{DOMxRef("NotificationEvent")}} {{Experimental_Inline}}
   - : {{DOMxRef("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} ハンドラーに渡される引数で、`NotificationEvent` インターフェースは {{DOMxRef("ServiceWorker")}} で通知クリックイベントを表現します。
 - {{DOMxRef("ServiceWorker")}} {{Experimental_Inline}}

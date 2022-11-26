@@ -5,7 +5,7 @@ slug: Web/API/Window/devicePixelRatio
 
 {{APIRef}}
 
-**`devicePixelRatio`** は {{domxref("Window")}} インターフェイスのプロパティで、現在のディスプレイ機器における  CSS 解像度と物理解像度の比を返します。
+**`devicePixelRatio`** は {{domxref("Window")}} インターフェイスのプロパティで、現在のディスプレイ機器における CSS 解像度と物理解像度の比を返します。
 
 これは 1 物理ピクセルの大きさに対する 1 CSS ピクセルの大きさの比率と考えることもできます。もっと簡単に言うと、 1 つの CSS ピクセルが実際にはいくつの物理ピクセルで表示されるかという値です。
 
