@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
 
 {{JSRef}}
 
-**`setUTCDate()`** 메서드는 표준시에 따라 지정된 날짜의 날짜를 설정합니다.
+**`setUTCDate()`** 메서드는 UTC 시간을 기준으로 지정된 {{jsxref("Date")}} 인스턴스의 날짜를 변경합니다.
 
 표준시 대신 현지 시간을 기준으로 하는 {{jsxref("Date")}} 인스턴스의 날짜를 변경하려면 {{jsxref("Date.prototype.setDate", "setDate()")}} 메소드를 사용하세요.
 
