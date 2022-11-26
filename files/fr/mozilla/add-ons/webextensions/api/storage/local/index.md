@@ -31,14 +31,14 @@ Bien que cette API soit similaire à {{domxref("Window.localStorage")}} il est r
 
 ## Méthodes
 
-L'objet `local` local implémente les méthodes définies sur le type  {{WebExtAPIRef("storage.StorageArea")}} :
+L'objet `local` local implémente les méthodes définies sur le type {{WebExtAPIRef("storage.StorageArea")}} :
 
 - {{WebExtAPIRef("storage.StorageArea.get()")}}
   - : Récupère un ou plusieurs éléments de la zone de stockage.
 - {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}
   - : Obtient la quantité d'espace de stockage (en octets) utilisée pour stocker un ou plusieurs éléments dans la zone de stockage.
 - {{WebExtAPIRef("storage.StorageArea.set()")}}
-  - : Stocke un ou plusieurs éléments dans la zone de stockage. Si l'élément existe déjà, sa valeur sera mise à jour. Lorsque vous définissez une valeur, l'événement  {{WebExtAPIRef("storage.onChanged")}} se déclenche.
+  - : Stocke un ou plusieurs éléments dans la zone de stockage. Si l'élément existe déjà, sa valeur sera mise à jour. Lorsque vous définissez une valeur, l'événement {{WebExtAPIRef("storage.onChanged")}} se déclenche.
 - {{WebExtAPIRef("storage.StorageArea.remove()")}}
   - : Supprime un ou plusieurs éléments de la zone de stockage..
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
