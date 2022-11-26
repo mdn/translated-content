@@ -15,7 +15,7 @@ translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 original_slug: Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest
 ---
 
-[`XMLHttpRequest`](/fr/docs/DOM/XMLHttpRequest) permet d'envoyer des requêtes HTTP de manière très simple.  Il suffit de créer une instance de l'objet, d'ouvrir une URL, et d'envoyer la requête.  Le [status HTTP](/fr/docs/HTTP/HTTP_response_codes) du résultat, tout comme le contenu de la réponse, sont disponibles dans l'objet de la requête quand la transaction est terminée. Cette page présente quelques-uns des cas d'utilisation communs et même un peu obscurs pour cet objet JavaScript puissant.
+[`XMLHttpRequest`](/fr/docs/DOM/XMLHttpRequest) permet d'envoyer des requêtes HTTP de manière très simple. Il suffit de créer une instance de l'objet, d'ouvrir une URL, et d'envoyer la requête. Le [status HTTP](/fr/docs/HTTP/HTTP_response_codes) du résultat, tout comme le contenu de la réponse, sont disponibles dans l'objet de la requête quand la transaction est terminée. Cette page présente quelques-uns des cas d'utilisation communs et même un peu obscurs pour cet objet JavaScript puissant.
 
 ```js
 function reqListener () {
@@ -50,7 +50,7 @@ Si vous utilisez `XMLHttpRequest` pour obtenir le contenu d'un fichier XML dista
 
 ### Analyser et manipuler une propriété `responseText` contenant un document HTML
 
-> **Note :** La spécification W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html)  autorise le HTML a être parsé via la propritété `XMLHttpRequest.responseXML`. Lisez l'article à propos du [HTML dans XMLHttpRequest](/fr/docs/HTML_in_XMLHttpRequest) pour plus de détails.
+> **Note :** La spécification W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) autorise le HTML a être parsé via la propritété `XMLHttpRequest.responseXML`. Lisez l'article à propos du [HTML dans XMLHttpRequest](/fr/docs/HTML_in_XMLHttpRequest) pour plus de détails.
 
 Si vous utilisez `XMLHttpRequest` pour récupérer le contenu d'une page HTML distante, la propriété `responseText` est une chaîne de caractères contenant une "soupe" de tous les tags HTML, qui peut être difficile à manipuler et à analyser. Il y a trois moyens principaux d'analyser cette soupe de HTML :
 
@@ -131,7 +131,7 @@ Les lignes 3-6 ajoutent des écouteurs pour les différents évènements lancés
 
 > **Note :** Vous devez ajouter les écouteurs avant d'appeler `open()` sur la requête. Sinon, les évènements de progression ne seront pas lancés.
 
-Le gestionnaire de progression, spécifié par la fonction `updateProgress()` dans cet exemple, reçoit le nombre total de bytes à transférer ainsi que le nombre de bytes déjà transférés dans les champs `total` et `loaded`.  Cependant, si le champ `lengthComputable` est false, la taille totale est inconnue et sera zéro.
+Le gestionnaire de progression, spécifié par la fonction `updateProgress()` dans cet exemple, reçoit le nombre total de bytes à transférer ainsi que le nombre de bytes déjà transférés dans les champs `total` et `loaded`. Cependant, si le champ `lengthComputable` est false, la taille totale est inconnue et sera zéro.
 
 Les évènements de progression sont disponibles pour l'envoi et la réception de données. Les évènements de téléchargement sont lancés sur l'objet `XMLHttpRequest` lui-même, comme montré dans l'exemple ci-dessus. Les évènements d'envoi (upload) sont lancés sur l'objet `XMLHttpRequest.upload`, comme montré ci-dessous:
 
@@ -164,7 +164,7 @@ function loadEnd(e) {
 }
 ```
 
-Notez qu'il n'y a pas moyen d'être certain des informations reçues dans l'évènement  `loadend` event comme la condition qui a causé la fin de l'opération; toutefois, vous pouvez utiliser cet évènement pour gérer les tâches qui doivent être exécutées dans tous les cas une fois un transfert terminé.
+Notez qu'il n'y a pas moyen d'être certain des informations reçues dans l'évènement `loadend` event comme la condition qui a causé la fin de l'opération; toutefois, vous pouvez utiliser cet évènement pour gérer les tâches qui doivent être exécutées dans tous les cas une fois un transfert terminé.
 
 ## Envoyer des formulaires et uploader des fichiers
 
@@ -702,7 +702,7 @@ Si vous voulez savoir **si la _page courante_ a changée**, lisez l'article à p
 
 ## Cross-site XMLHttpRequest
 
-Les navigateurs récents supportent les requêtes cross-site en implémentant le Standard [Access Control for Cross-Site Requests](/fr/docs/HTTP_access_control) (Web Application Working Group).  Tant que le serveur est configuré pour autoriser les requêtes depuis l'origine de votre web application, `XMLHttpRequest` fonctionnera. Sinon, une exception `INVALID_ACCESS_ERR` sera lancée.
+Les navigateurs récents supportent les requêtes cross-site en implémentant le Standard [Access Control for Cross-Site Requests](/fr/docs/HTTP_access_control) (Web Application Working Group). Tant que le serveur est configuré pour autoriser les requêtes depuis l'origine de votre web application, `XMLHttpRequest` fonctionnera. Sinon, une exception `INVALID_ACCESS_ERR` sera lancée.
 
 ## Contourner le cache
 
