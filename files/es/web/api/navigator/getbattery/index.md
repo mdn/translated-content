@@ -1,8 +1,6 @@
 ---
 title: Navigator.getBattery()
 slug: Web/API/Navigator/getBattery
-translation_of: Web/API/Navigator/getBattery
-browser-compat: api.Navigator.getBattery
 ---
 
 {{ ApiRef("Battery API") }}
