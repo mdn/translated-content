@@ -21,33 +21,23 @@ jobs:
         uses: softprops/diffset@v1
         with:
           base: ${{ github.base_ref }}
-          document_files: |
-            files/**/*.html
-            files/**/*.md
-          image_files: |
-            files/**/*.png
-            files/**/*.jpeg
-            files/**/*.jpg
-            files/**/*.gif
-            files/**/*.svg
-            files/**/*.webp
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Check file changes
-        if: steps.diffset.outputs.document_files || steps.diffset.outputs.image_files
+      - name: Check diffset
         run: |
-          echo "FILE_CHANGE=true" >> ${GITHUB_ENV}
-          echo "GIT_DIFF_CONTENT=${{ steps.diffset.outputs.document_files }}" >> ${GITHUB_ENV}
-          echo "GIT_DIFF_IMAGES=${{ steps.diffset.outputs.image_files }}" >> ${GITHUB_ENV}
-
-      - name: Print diffset
-        if: env.FILE_CHANGE
-        run: |
-          # print changed documents
-          echo "changed documents: ${{ env.GIT_DIFF_CONTENT }}"
-          # print changed images
-          echo "changed images: ${{ env.GIT_DIFF_IMAGES }}"
+          # document changes
+          GIT_DIFF_CONTENT=$(echo "${{ steps.diffset.outputs.diffset }}" | tr -s " " "\n" | egrep -i "^files/.*/.*\.(html|md)$" | tr "\n" " ")
+          echo "GIT_DIFF_CONTENT=$GIT_DIFF" >> $GITHUB_ENV
+          echo "changed documents: $GIT_DIFF_CONTENT"
+          # image changes
+          GIT_DIFF_IMAGE=$(echo "${{ steps.diffset.outputs.diffset }}" | tr -s " " "\n" | egrep -i "^files/.*/.*\.(png|jpeg|jpg|gif|svg|webp)$" | tr "\n" " ")
+          echo "GIT_DIFF_IMAGE=$GIT_DIFF_IMAGE" >> $GITHUB_ENV
+          echo "changed images: $GIT_DIFF_IMAGE"
+          # set global flag if there are any changes
+          if [ ! -z "$GIT_DIFF_CONTENT" ] || [ ! -z "$GIT_DIFF_IMAGE" ]; then
+            echo "FILE_CHANGE=1" >> $GITHUB_ENV
+          fi
 
       - uses: actions/checkout@v3
         if: env.FILE_CHANGE
