@@ -164,7 +164,7 @@ Object.defineProperty(o, "conflit", { value: 0x9f91102,
 
 ### Modifier une propriété existante
 
-Quand une propriété existe d'ores et déjà pour un objet, `Object.defineProperty()` tentera de modifier la propriété pour qu'elle corresponde aux valeurs indiquées dans le descripteur et à la configuration de l'objet courant. Si l'ancien descripteur avait `configurable` à  `false` (la propriété est dite non-configurable), aucun attribut, à l'exception de `writable`, ne peut être changé. Dans ce cas, il n'est pas possible de changer entre les types de descripteur.
+Quand une propriété existe d'ores et déjà pour un objet, `Object.defineProperty()` tentera de modifier la propriété pour qu'elle corresponde aux valeurs indiquées dans le descripteur et à la configuration de l'objet courant. Si l'ancien descripteur avait `configurable` à `false` (la propriété est dite non-configurable), aucun attribut, à l'exception de `writable`, ne peut être changé. Dans ce cas, il n'est pas possible de changer entre les types de descripteur.
 
 Si une propriété est non-configurable, son attribut `writable` ne peut être mis qu'à `false`.
 
