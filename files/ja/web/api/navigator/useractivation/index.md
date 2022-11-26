@@ -27,7 +27,7 @@ if (navigator.userActivation.isActive) {
 
 ### これまでにユーザーによる操作が行われたかをチェックする
 
-ユーザーがこれまでにページを操作したか ({{Glossary("Sticky activation", "粘着性の有効化")}}) をチェックするために {{domxref("UserActivation.hasBeenActive")}} を使用します｡
+ユーザーがこれまでにページを操作したか ({{Glossary("Sticky activation", "粘着的な有効化")}}) をチェックするために {{domxref("UserActivation.hasBeenActive")}} を使用します｡
 
 ```js
 if (navigator.userActivation.hasBeenActive) {

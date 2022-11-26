@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
-{{domxref("UserActivation")}} インターフェイスの読み取り専用プロパティ **`hasBeenActive`** は、現在のウインドウでユーザーによる粘着性の有効化がされているかを表します。({{Glossary("sticky activation", "粘着性の有効化")}}を参照してください)
+{{domxref("UserActivation")}} インターフェイスの読み取り専用プロパティ **`hasBeenActive`** は、現在のウインドウでユーザーによる粘着的な有効化がされているかを表します。({{Glossary("sticky activation", "粘着的な有効化")}}を参照してください)
 
 ## 値
 
