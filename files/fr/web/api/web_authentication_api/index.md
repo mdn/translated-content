@@ -153,7 +153,7 @@ On a ensuite ces étapes pour l'authentification&nbsp;:
 
 - [webauthn.io](https://github.com/duo-labs/webauthn.io), un site web de démonstration et [son code source](https://github.com/duo-labs/webauthn.io)
 - [github.com/webauthn-open-source](https://github.com/webauthn-open-source) avec&nbsp;:
-  - [le code source côté client](https://github.com/webauthn-open-source/webauthn-simple-app) 
+  - [le code source côté client](https://github.com/webauthn-open-source/webauthn-simple-app)
   - [le code source côté serveur](https://github.com/webauthn-open-source/fido2-lib)
 - [webauthn.bin.coffee](https://webauthn.bin.coffee/), un site web de démonstration construit par J.C. Jones, ainsi que [le code source](https://github.com/jcjones/webauthn.bin.coffee).
 - [try-webauthn.appspot.com](https://try-webauthn.appspot.com/), un site web de démonstration de Google, ainsi que [le code source](https://github.com/google/webauthndemo).
