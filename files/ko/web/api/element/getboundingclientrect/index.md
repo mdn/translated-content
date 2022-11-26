@@ -24,6 +24,7 @@ tags:
   - scrollHeight
 browser-compat: api.Element.getBoundingClientRect
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.getBoundingClientRect()`** 메서드는 엘리먼트의 크기와

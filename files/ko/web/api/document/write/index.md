@@ -3,6 +3,7 @@ title: Document.write()
 slug: Web/API/Document/write
 translation_of: Web/API/Document/write
 ---
+
 {{ ApiRef("DOM") }}
 
 {{domxref("document.open()")}}에 의해 열린 문서 스팀에 텍스트 스트링을 적는다.

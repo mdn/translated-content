@@ -5,6 +5,7 @@ page-type: web-api-instance-method
 browser-compat: api.FormData.getAll
 translation_of: Web/API/FormData/getAll
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 {{domxref("FormData")}} 인터페이스의 **`getAll()`** 메서드는 `FormData` 객체에서 지정된 키와 연관된 모든 값을 반환합니다.
