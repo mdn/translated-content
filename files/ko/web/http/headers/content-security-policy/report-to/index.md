@@ -69,7 +69,7 @@ Content-Security-Policy: ...; report-to endpoint-1
 
 이 페이지의 호환성 테이블은 구조화된 데이터에서 생성됩니다. 데이터에 기여하고 싶다면 <https://github.com/mdn/browser-compat-data> 를 확인하고 pull request를 보내주세요.
 
-{{Compat("http.headers.csp.report-to")}}
+{{Compat}}
 
 ## See also
 

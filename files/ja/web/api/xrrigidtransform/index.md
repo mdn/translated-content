@@ -54,9 +54,7 @@ xrSession.requestReferenceSpace(refSpaceType)
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                     | コメント |
-| -------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName("WebXR","#xrrigidtransform-interface","XRRigidTransform")}} | {{Spec2("WebXR")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

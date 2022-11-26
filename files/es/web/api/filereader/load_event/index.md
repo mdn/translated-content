@@ -1,13 +1,6 @@
 ---
 title: FileReader.onload
 slug: Web/API/FileReader/load_event
-tags:
-  - Archivo
-  - Controlador de Eventos
-  - Lector de Archivos
-  - Propiedad
-  - Referencia
-translation_of: Web/API/FileReader/onload
 original_slug: Web/API/FileReader/onload
 ---
 

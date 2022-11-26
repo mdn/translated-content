@@ -1,11 +1,6 @@
 ---
 title: Referencia DOM de Gecko
 slug: Web/API/Document_Object_Model
-tags:
-  - DOM
-  - NecesitaRevisiónTécnica
-  - Todas_las_Categorías
-translation_of: Web/API/Document_Object_Model
 original_slug: Referencia_DOM_de_Gecko
 ---
 

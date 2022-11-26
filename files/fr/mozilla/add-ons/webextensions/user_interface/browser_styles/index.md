@@ -102,7 +102,7 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
 
 ## Compatibilité du navigateur
 
-{{Compat("webextensions.browser_style")}}
+{{Compat}}
 
 ## Composants du panneau Firefox
 

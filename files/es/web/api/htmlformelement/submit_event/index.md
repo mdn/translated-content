@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onsubmit
 slug: Web/API/HTMLFormElement/submit_event
-translation_of: Web/API/GlobalEventHandlers/onsubmit
 original_slug: Web/API/GlobalEventHandlers/onsubmit
 ---
 
@@ -55,4 +54,4 @@ El evento submit no se genera cuando el usuario llama a la función `form.submit
 
 ## Browser Compatibility
 
-{{Compat("api.GlobalEventHandlers.onsubmit")}}
+{{Compat}}

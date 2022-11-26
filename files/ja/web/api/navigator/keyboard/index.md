@@ -25,4 +25,4 @@ var keyboard = navigator.keyboard
 
 ## ブラウザーの互換性
 
-{{Compat("api.navigator.keyboard")}}
+{{Compat}}

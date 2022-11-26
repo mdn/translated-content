@@ -5,6 +5,7 @@ slug: >-
 translation_of: Web/JavaScript/Shells
 original_slug: Web/JavaScript/Shells
 ---
+
 {{JsSidebar}}
 
 여러분은 JavaScript 쉘을 통해 웹페이지 새로고침하지 않고 빠르게 [JavaScript](/ko/docs/Web/JavaScript) 의 코드를 테스트해볼 수 있습니다. 코드를 개발하고 디버깅하는데 매우 유용한 도구입니다.

@@ -847,6 +847,7 @@
 /ko/docs/WebAPI/Using_Web_Notifications	/ko/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /ko/docs/WebAPI/Using_geolocation	/ko/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
 /ko/docs/WebAPI/Vibration	/ko/docs/Web/API/Vibration_API
+/ko/docs/WebAssembly/Caching_modules	/ko/docs/orphaned/WebAssembly/Caching_modules
 /ko/docs/WebSockets	/ko/docs/Web/API/WebSockets_API
 /ko/docs/WebSockets/Writing_WebSocket_client_applications	/ko/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
 /ko/docs/WebSockets/Writing_WebSocket_servers	/ko/docs/Web/API/WebSockets_API/Writing_WebSocket_servers

@@ -46,9 +46,7 @@ document.body.innerHTML = myString.anchor('contents_anchor');
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.anchor', 'String.prototype.anchor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

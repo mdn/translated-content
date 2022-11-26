@@ -155,9 +155,7 @@ if (!Math.clz32) Math.clz32 = (function(log, LN2){
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.clz32', 'Math.clz32')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

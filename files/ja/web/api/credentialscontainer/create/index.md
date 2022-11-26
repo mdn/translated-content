@@ -78,7 +78,7 @@ navigator.credentials.create({ publicKey })
 
 ## ブラウザーの互換性
 
-{{Compat("api.PublicKeyCredentialCreationOptions.excludeCredentials")}}
+{{Compat}}
 
 ## See also
 

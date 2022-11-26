@@ -94,9 +94,7 @@ new p(); // TypeError is thrown, "p" is not a constructor
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-construct-argumentslist-newtarget', '[[Construct]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

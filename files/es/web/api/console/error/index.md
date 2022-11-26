@@ -1,14 +1,6 @@
 ---
 title: console.error()
 slug: Web/API/Console/error
-tags:
-  - API
-  - DOM
-  - Depurando
-  - Desarrollo web
-  - consola web
-  - metodo
-translation_of: Web/API/Console/error
 ---
 
 {{APIRef("Console API")}}

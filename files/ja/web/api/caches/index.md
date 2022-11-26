@@ -51,7 +51,7 @@ this.addEventListener('install', function(event) {
 
 ## ブラウザー実装状況
 
-{{Compat("api.WindowOrWorkerGlobalScope.caches")}}
+{{Compat}}
 
 ## 関連項目
 

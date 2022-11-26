@@ -443,7 +443,7 @@ function returnFileSize(number) {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.input.input-file")}}
+{{Compat}}
 
 ## 같이 보 기
 

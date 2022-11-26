@@ -46,7 +46,7 @@ Tenga en cuenta que, a pesar de que la entrada original (para `http://example.co
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.WindowEventHandlers.onpopstate")}}
+{{Compat}}
 
 ## Vea también
 

@@ -12,6 +12,7 @@ tags:
   - sound
 browser-compat: api.BaseAudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 [Web Audio API](/ko/docs/Web/API/Web_Audio_API)의 `BaseAudioContext` 인터페이스는 {{domxref("AudioContext")}} 와 {{domxref("OfflineAudioContext")}}에 의해 표현되는 온라인과 오프라인 오디오 프로세싱 그래프에 대한 기본 정의로 작동합니다. `BaseAudioContext`는 직접적으로 사용될 수 없습니다. 대신 위에서 언급한 두 상속 인터페이스를 통해 `BaseAudioContext`의 기능을 사용할 수 있습니다.

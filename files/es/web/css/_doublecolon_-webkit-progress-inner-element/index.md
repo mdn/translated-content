@@ -1,12 +1,6 @@
 ---
 title: '::-webkit-progress-inner-element'
 slug: Web/CSS/::-webkit-progress-inner-element
-tags:
-  - CSS
-  - No estándar(2)
-  - Pseudo-elemento
-  - Referencia
-translation_of: Web/CSS/::-webkit-progress-inner-element
 ---
 
 {{CSSRef}}{{Non-standard_header}}

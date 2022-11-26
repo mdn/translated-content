@@ -31,9 +31,7 @@ console.log('football'.replace(new CustomReplacer('foo')));
 
 ## 仕様書
 
-| 仕様書                                                                               |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.replace', 'Symbol.replace')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

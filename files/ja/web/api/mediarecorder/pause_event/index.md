@@ -57,7 +57,7 @@ MediaRecorder.addEventListener('pause', function(event) { ... })
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaRecorder.onpause")}}
+{{Compat}}
 
 ## 関連情報
 

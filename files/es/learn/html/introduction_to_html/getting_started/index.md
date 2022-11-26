@@ -57,7 +57,7 @@ Si queremos que la línea sea independiente de otras, podemos especificar que es
 
 Exploremos un poco el elemento párrafo:
 
-![Anatomía de los elementos HTML](https://mdn.mozillademos.org/files/11913/htmlexp.png)
+![Anatomía de los elementos HTML](grumpy-cat-small.png)
 
 Las principales partes de nuestro elemento son:
 
@@ -265,7 +265,7 @@ Este texto mostrará lo siguiente en tu página:
 
 Los elementos también pueden tener atributos. Los atributos tienen este aspecto:
 
-![atributo html](https://mdn.mozillademos.org/files/11915/htmlatributos.png)
+![atributo html](grumpy-cat-attribute-small.png)
 
 Los atributos contienen información extra sobre el elemento que no se mostrará en el contenido. En este caso, el atributo `class` asigna al elemento un identificador que se puede utilizar para dotarlo de información de estilo.
 

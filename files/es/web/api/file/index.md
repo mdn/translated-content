@@ -1,13 +1,6 @@
 ---
 title: File
 slug: Web/API/File
-tags:
-  - API
-  - File API
-  - Interfaz
-  - Referencia
-  - Web
-translation_of: Web/API/File
 ---
 
 {{APIRef }}

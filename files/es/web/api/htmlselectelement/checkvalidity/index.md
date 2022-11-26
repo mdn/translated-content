@@ -1,14 +1,6 @@
 ---
 title: HTMLSelectElement.checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
-tags:
-  - API
-  - Constraint Validation API
-  - HTML DOM
-  - HTMLSelectElement
-  - Referencia
-  - metodo
-translation_of: Web/API/HTMLSelectElement/checkValidity
 ---
 
 {{ APIRef("HTML DOM") }}

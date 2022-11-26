@@ -36,9 +36,7 @@ class MyTypedArray extends Uint8Array {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%-@@species', 'get %TypedArray% [ @@species ]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

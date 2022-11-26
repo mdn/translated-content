@@ -2,6 +2,7 @@
 title: 표 스타일링
 slug: Learn/CSS/Building_blocks/Styling_tables
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 
 HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, 때로는 우리 모두가 해야할 일입니다. 이 기사에서는 특정 표 스타일링 기술을 강조 표시하여 HTML 표를 보기좋게 만드는 방법에 대한 안내서를 제공합니다.

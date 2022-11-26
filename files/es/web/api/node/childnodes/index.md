@@ -1,13 +1,6 @@
 ---
 title: Node.childNodes
 slug: Web/API/Node/childNodes
-tags:
-  - API
-  - DOM
-  - Propiedad
-  - Referencia
-  - Referência DOM
-translation_of: Web/API/Node/childNodes
 ---
 
 {{APIRef("DOM")}}

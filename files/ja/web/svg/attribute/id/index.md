@@ -62,7 +62,7 @@ slug: Web/SVG/Attribute/id
 
 ## ブラウザーの互換性
 
-{{Compat("svg.attributes.style.class")}}
+{{Compat}}
 
 ## 関連情報
 

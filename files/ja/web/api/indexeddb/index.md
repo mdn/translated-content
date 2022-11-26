@@ -39,7 +39,7 @@ function openDB() {
 
 ## ブラウザーの実装状況
 
-{{Compat("api.WindowOrWorkerGlobalScope.indexedDB")}}
+{{Compat}}
 
 ## 関連情報
 

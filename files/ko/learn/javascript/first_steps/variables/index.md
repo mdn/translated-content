@@ -2,6 +2,7 @@
 title: 필요한 정보를 저장하기-변수
 slug: Learn/JavaScript/First_steps/Variables
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
 앞선 두 수업을 듣고, 자바스크립트에 대해(웹 기술에서 어떻게 사용되는지, 큰 범위에서의 특징) 알아보았다. 이번 수업에서는 기본중에 기본인 자바스크립트의 주된 구성중 하나인 변수가 어떻게 이루어져 있는지 알아볼 것이다.

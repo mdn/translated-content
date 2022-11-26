@@ -1,11 +1,6 @@
 ---
 title: SVG en Firefox
 slug: orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
-tags:
-  - NecesitaRevisiónTécnica
-  - SVG
-  - Todas_las_Categorías
-translation_of: Web/SVG/SVG_1.1_Support_in_Firefox
 original_slug: Web/SVG/SVG_1.1_Support_in_Firefox
 ---
 

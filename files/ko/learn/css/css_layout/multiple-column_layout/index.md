@@ -2,6 +2,7 @@
 title: 다단 레이아웃
 slug: Learn/CSS/CSS_layout/Multiple-column_Layout
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
 
 CSS 다단 레이아웃 규격은 신문에서 볼 수 있듯이 콘텐츠를 단으로 배치하는 방법을 제공합니다. 이 문서는 그 기능을 어떻게 사용하는지 설명합니다.

@@ -2,6 +2,7 @@
 title: CSS 란 무엇인가?
 slug: Learn/CSS/First_steps/What_is_CSS
 ---
+
 {{LearnSidebar}}
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
