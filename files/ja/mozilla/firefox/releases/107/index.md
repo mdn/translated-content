@@ -24,7 +24,7 @@ l10n:
 
 - [`contain-intrinsic-size`](/ja/docs/Web/CSS/contain-intrinsic-size) ショートハンド CSS プロパティを、[サイズの封じ込め](/ja/docs/Web/CSS/CSS_Containment#size_containment) の対象になる UI 要素のサイズを指定するために適用できるようになりました。
   これはユーザーエージェントが、子要素をレンダリングせずに要素のサイズを特定することを可能にします。
-  ショートハンドプロパティの [`contain-intrinsic-width`](/ja/docs/Web/CSS/contain-intrinsic-width) および [`contain-intrinsic-height`](/ja/docs/Web/CSS/contain-intrinsic-height) とともに、[論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties) の [`contain-intrinsic-block-size`](/ja/docs/Web/CSS/contain-intrinsic-block-size) および [`contain-intrinsic-inline-size`](/ja/docs/Web/CSS/contain-intrinsic-inline-size) もサポートしました 
+  ショートハンドプロパティの [`contain-intrinsic-width`](/ja/docs/Web/CSS/contain-intrinsic-width) および [`contain-intrinsic-height`](/ja/docs/Web/CSS/contain-intrinsic-height) とともに、[論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties) の [`contain-intrinsic-block-size`](/ja/docs/Web/CSS/contain-intrinsic-block-size) および [`contain-intrinsic-inline-size`](/ja/docs/Web/CSS/contain-intrinsic-inline-size) もサポートしました
   ({{bug(1597529)}})。
 
 ### JavaScript
@@ -35,7 +35,7 @@ l10n:
 
 #### 廃止
 
-- 非標準かつ非推奨である [`SVGSVGElement.useCurrentView`](/ja/docs/Web/API/SVGSVGElement#svgsvgelement.usecurrentview) プロパティを削除しました 
+- 非標準かつ非推奨である [`SVGSVGElement.useCurrentView`](/ja/docs/Web/API/SVGSVGElement#svgsvgelement.usecurrentview) プロパティを削除しました
   (詳しくは {{bug(1174097)}} をご覧ください)。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
