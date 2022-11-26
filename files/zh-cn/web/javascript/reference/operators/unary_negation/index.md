@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Unary_negation
 
 {{jsSidebar("Operators")}}
 
-**一元否**（**`-`**）运算符在其操作数之前，并对其求反。
+**一元减**（**`-`**）运算符在其操作数之前，并对其取反。
 
 {{EmbedInteractiveExample("pages/js/expressions-unary-negation.html")}}
 
@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Operators/Unary_negation
 
 ## 示例
 
-### 取反的数字
+### 数字取反
 
 ```js
 const x = 3;
@@ -27,9 +27,9 @@ const y = -x;
 // x = 3
 ```
 
-### 取反的非数字
+### 非数字取反
 
-一元否运算符可以[将非数字转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#数值转换)。
+一元减运算符可以[将非数字转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#数值转换)。
 
 ```js
 const x = "4";
