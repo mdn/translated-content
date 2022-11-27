@@ -191,5 +191,5 @@ The interfaces described in this document are defined in the **Performance Timel
 
 ## あわせて参照
 
-- [Performance Timeline (Overview)](/Web/API/Performance_Timeline)
+- [Performance Timeline (Overview)](/ja/docs/Web/API/Performance_Timeline)
 - [A Primer for Web Performance Timing APIs](http://siusin.github.io/perf-timing-primer/)

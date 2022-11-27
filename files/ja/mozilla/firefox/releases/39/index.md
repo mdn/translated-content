@@ -37,7 +37,7 @@ Firefox 39 は、米国時間 2015 年 6 月 30 日にリリースされまし�
 ### JavaScript
 
 - [`RegExp` コンストラクタ](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp)は第 1 引数に `RegExp`、また第 2 引数に `flags` を指定した場合に、例外が発生しないようになりました ({{bug(1108949)}})。
-- {{jsxref("Object.noSuchMethod", "Object.prototype.__noSuchMethod__")}} プロパティは非推奨になり、コンソールに警告を表示します ({{bug(1140428)}} および [platform でのアナウンス](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)をご覧ください)。
+- `Object.prototype.__noSuchMethod__` プロパティは非推奨になり、コンソールに警告を表示します ({{bug(1140428)}} および [platform でのアナウンス](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)をご覧ください)。
 - {{jsxref("Proxy")}} オブジェクトの実装を、ES6 仕様へさらに準拠するよう更新しました:
 
   - {{jsxref("Global_Objects/Proxy/handler/defineProperty", "defineProperty")}} ハンドラおよび {{jsxref("Global_Objects/Proxy/handler/set", "set")}} ハンドラは、成功時に `true` を、strict モードで成功しない場合は {{jsxref("TypeError")}} 例外を明示的に返すことが必要になりました ({{bug(1132522)}})。

@@ -139,7 +139,7 @@ Function.prototype.construct = function(aArgs) {
 
 > **メモ:** 上記で使用している `Object.create()` メソッドは比較的新しいです。代わりの方法として、以下の例を検討してください。
 >
-> {{jsxref("Object/__proto__", "Object.__proto__")}} を利用:
+> [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) を利用:
 >
 > ```js
 > Function.prototype.construct = function (aArgs) {
