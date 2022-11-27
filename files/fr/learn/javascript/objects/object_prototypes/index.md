@@ -34,7 +34,7 @@ En réalité, les méthodes et attributs sont définis dans l'attribut `prototyp
 
 En programmation orientée objet classique, les classes sont définies, puis lorsque des instances sont créées, l'ensemble des attributs et des méthodes sont copiés dans l'instance. En JavaScript en revanche, tout n'est pas copié&nbsp;: on établit un lien entre l'objet instancié et son constructeur (c'est un lien dans la chaîne de prototypage). On détermine alors les méthodes et les attributs en remontant la chaîne.
 
-> **Note :** Il faut bien comprendre qu'il y a une différence entre la notion de prototype d'un objet (qu'on obtient via [`Object.getPrototypeOf(obj)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf), ou via la propriété dépréciée  [`__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) ) et l' attribut `prototype` d'une fonction constructrice. La première concerne chaque instance, le dernier existe uniquement sur une fonction constructrice. Cela dit, `Object.getPrototypeOf(new Object())` renvoie au même object que `Object.prototype`.
+> **Note :** Il faut bien comprendre qu'il y a une différence entre la notion de prototype d'un objet (qu'on obtient via [`Object.getPrototypeOf(obj)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf), ou via la propriété dépréciée [`__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) ) et l' attribut `prototype` d'une fonction constructrice. La première concerne chaque instance, le dernier existe uniquement sur une fonction constructrice. Cela dit, `Object.getPrototypeOf(new Object())` renvoie au même object que `Object.prototype`.
 
 Prenons un exemple afin de rendre cela un peu plus clair.
 

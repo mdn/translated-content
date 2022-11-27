@@ -39,7 +39,7 @@ Allez sur n'importe quel site à la mode avec un formulaire d'inscription et vou
 - «&nbsp;Veuillez entrer une adresse e-mail valide&nbsp;» (ce que vous avez saisi ne ressemble pas à une adresse e-mail valide).
 - «&nbsp;Votre mot de passe doit comporter entre 8 et 30 caractères et contenir une majuscule, un symbole et un chiffre&nbsp;» (sérieusement ?).
 
-C'est ce qu'on appelle la validation de formulaire —  lorsque vous saisissez des données, l'application Web vérifie si elles sont correctes. Si elles sont correctes, l'application permet que les données soient soumises au serveur et (généralement) sauvegardées dans une base de données ; si ce n'est pas le cas, elle émet des messages d'erreur pour expliquer ce que vous avez fait de mal (pour autant que vous l'ayez fait). La validation des formulaires peut être mise en œuvre de différentes manières.
+C'est ce qu'on appelle la validation de formulaire — lorsque vous saisissez des données, l'application Web vérifie si elles sont correctes. Si elles sont correctes, l'application permet que les données soient soumises au serveur et (généralement) sauvegardées dans une base de données ; si ce n'est pas le cas, elle émet des messages d'erreur pour expliquer ce que vous avez fait de mal (pour autant que vous l'ayez fait). La validation des formulaires peut être mise en œuvre de différentes manières.
 
 La vérité est qu'aucun d'entre nous n'_aime_ remplir des formulaires — les formulaires ennuient les utilisateurs, tout le prouve&nbsp;: cela les incite à partir et à aller voir ailleurs s'ils sont mal faits. Bref, les formulaires, c'est nullissime.
 
