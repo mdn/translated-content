@@ -69,7 +69,7 @@ Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto
 
 - {{jsxref("Object.watch", "watch")}} y {{jsxref("Object.unwatch", "unwatch")}} están en desuso. En su lugar usa {{jsxref("Proxy")}}.
 - `__iterator__` está en desuso.
-- {{jsxref("Object.noSuchMethod", "__noSuchMethod__")}} está en desuso. En su lugar usa {{jsxref("Proxy")}}.
+- `Object.prototype.__noSuchMethod__` está en desuso. En su lugar usa {{jsxref("Proxy")}}.
 
 ### Métodos de `Date`
 
@@ -109,14 +109,8 @@ Estas características obsoletas se han eliminado por completo de JavaScript y y
 
 ### Objeto
 
-| Propiedad                                                                                | Descripción                                                                                      |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| {{jsxref("Global_Objects/Object/count", "__count__")}}                 | Devuelve el número de propiedades enumerables directamente en un objeto definido por el usuario. |
-| {{jsxref("Global_Objects/Object/Parent", "__parent__")}}             | Apunta al contexto de un objeto.                                                                 |
-| {{jsxref("Global_Objects/Object/eval", "Object.prototype.eval()")}} | Evalúa una cadena de código JavaScript en el contexto del objeto especificado.                   |
-| {{jsxref("Object.observe()")}}                                                 | Observar de forma asincrónica los cambios en un objeto.                                          |
-| {{jsxref("Object.unobserve()")}}                                             | Elimina observadores.                                                                            |
-| {{jsxref("Object.getNotifier()")}}                                             | Crea un objeto que permite desencadenar sintéticamente un cambio.                                |
+- The [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors are deprecated. Use [`Object.getPrototypeOf`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf) and [`Object.setPrototypeOf`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) instead. This does not apply to the `__proto__` literal key in object literals.
+- The [`Object.prototype.__defineGetter__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`Object.prototype.__defineSetter__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`Object.prototype.__lookupGetter__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), and [`Object.prototype.__lookupSetter__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) methods are deprecated. Use [`Object.getOwnPropertyDescriptor`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) and [`Object.defineProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) instead.
 
 ### Función
 

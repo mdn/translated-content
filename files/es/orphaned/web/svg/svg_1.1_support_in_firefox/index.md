@@ -6,7 +6,7 @@ original_slug: Web/SVG/SVG_1.1_Support_in_Firefox
 
 **Firefox 2** sigue avanzando en la mejora de la implementación de [Gráficos vectoriales escalables (SVG)](http://www.w3.org/Graphics/SVG/). Aunque el único elemento añadido a los ya soportados por Firefox 1.5 ha sido `<textPath>`, se han resuelto varios fallos y se ha incorporado parte de la especificación.
 
-**Firefox SVG** es un subconjunto de [SVG 1.1](http://www.w3.org/TR/SVG11/), pero no es ninguno de los perfiles oficiales (Tiny, Basic, Full). Al final de este documento se puede encontrar una lista completa de los elementos [SVG](es/SVG) y su estado de implementación en Firefox 2.0. El resto del documento aporta información sobre las limitaciones en la implementación.
+**Firefox SVG** es un subconjunto de [SVG 1.1](http://www.w3.org/TR/SVG11/), pero no es ninguno de los perfiles oficiales (Tiny, Basic, Full). Al final de este documento se puede encontrar una lista completa de los elementos [SVG](/es/SVG) y su estado de implementación en Firefox 2.0. El resto del documento aporta información sobre las limitaciones en la implementación.
 
 La particular implementación que hemos realizado puede dificultar la creación de contenidos. Le pedimos que tenga paciencia mientras trabajamos en la implementación completa de esta extensa especificación.
 

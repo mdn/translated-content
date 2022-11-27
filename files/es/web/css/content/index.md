@@ -3,7 +3,7 @@ title: content
 slug: Web/CSS/content
 ---
 
-<< [Volver](es/Gu%c3%ada_de_referencia_de_CSS)
+<< [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
 
 ### Resumen
 
