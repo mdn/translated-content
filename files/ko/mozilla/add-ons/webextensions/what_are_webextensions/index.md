@@ -38,7 +38,7 @@ Examples: [Swimlanes for Trello](https://addons.mozilla.org/en-US/firefox/addon/
 
 Examples: [Solitaire Card Game](https://addons.mozilla.org/en-US/firefox/addon/solitaire-spider-freecell/), and [2048 Prime](https://addons.mozilla.org/en-US/firefox/addon/2048-prime/).
 
-**개발 도구 추가**: 웹 개발 도구를 비즈니스로써 제공한다던가 공유하고자 하는 유용한 기술이나 웹 개발 접근법을 만들었을 수 있습니다. 어느 쪽이든 간에, 개발자 툴바에 새 탭을 추가하여 내장 Firefox 개발자 도구를 개선할 수 있습니다.
+**개발 도구 추가**: 웹 개발 도구를 비즈니스로 제공하거나 공유하고 싶은 웹 개발에 대한 유용한 기술 또는 접근 방식을 개발했을 수 있습니다. 어느 쪽이든 간에, 개발자 도구 모음에 새 탭을 추가하여 내장 Firefox 개발자 도구를 향상시킬 수 있습니다.
 
 ![](axe_developer_tools_add_on.png)
 
