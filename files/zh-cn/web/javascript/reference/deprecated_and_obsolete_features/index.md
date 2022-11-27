@@ -64,7 +64,7 @@ slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 
 - {{jsxref("Object.watch", "watch")}} 方法和 {{jsxref("Object.unwatch", "unwatch")}} 方法已被废弃。使用 {{jsxref("Proxy")}} 并编写相应的捕获器代替它们。
 - `__iterator__` 方法已被废弃。
-- {{jsxref("Object.noSuchMethod", "__noSuchMethod__")}} 方法已被废弃。使用 {{jsxref("Proxy")}} 并编写相应的捕获器作为代替。
+- `Object.prototype.__noSuchMethod__` 方法已被废弃。使用 {{jsxref("Proxy")}} 并编写相应的捕获器作为代替。
 
 ### Date 对象的方法
 
@@ -107,8 +107,8 @@ slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 
 | 属性                                                                                     | 描述                                                             |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| {{jsxref("Global_Objects/Object/count", "__count__")}}                 | 返回用户自定义对象上的可枚举自身属性的个数。                     |
-| {{jsxref("Global_Objects/Object/Parent", "__parent__")}}             | 指向一个对象的上下文。                                           |
+| {{jsxref("Global_Objects/Object/count", "**count**")}}                 | 返回用户自定义对象上的可枚举自身属性的个数。                     |
+| {{jsxref("Global_Objects/Object/Parent", "**parent**")}}             | 指向一个对象的上下文。                                           |
 | {{jsxref("Global_Objects/Object/eval", "Object.prototype.eval()")}} | 在指定对象的上下文上执行一个包含 JavaScript 代码的字符串。       |
 | {{jsxref("Object.observe()")}}                                                 | Asynchronously observing the changes to an object.               |
 | {{jsxref("Object.unobserve()")}}                                             | Remove observers.                                                |

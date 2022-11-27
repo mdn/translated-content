@@ -79,7 +79,7 @@ Object.defineProperty(obj, prop, descriptor)
 
 如果一个描述符不具有 `value`、`writable`、`get` 和 `set` 中的任意一个键，那么它将被认为是一个数据描述符。如果一个描述符同时拥有 `value` 或 `writable` 和 `get` 或 `set` 键，则会产生一个异常。
 
-记住，这些选项不一定是自身属性，也要考虑继承来的属性。为了确认保留这些默认值，在设置之前，可能要冻结 {{jsxref("Object.prototype")}}，明确指定所有的选项，或者通过 {{jsxref("Object.create", "Object.create(null)")}} 将 {{jsxref("Object.prototype.__proto__", "__proto__")}} 属性指向 {{jsxref("null")}}。
+记住，这些选项不一定是自身属性，也要考虑继承来的属性。为了确认保留这些默认值，在设置之前，可能要冻结 {{jsxref("Object.prototype")}}，明确指定所有的选项，或者通过 {{jsxref("Object.create", "Object.create(null)")}} 将 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 属性指向 {{jsxref("null")}}。
 
 ```js
 // 使用 __proto__
