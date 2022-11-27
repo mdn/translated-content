@@ -69,5 +69,7 @@ Les APIs JavaScript comme [`iframe.contentWindow`](/fr/docs/DOM/HTMLIFrameElemen
 
 ## Voir aussi
 
-- [Same-origin policy for file: URIs](/en/Same-origin_policy_for_file:_URIs)
-- [Same-Origin Policy at W3C](http://www.w3.org/Security/wiki/Same_Origin_Policy)
+- [Same Origin Policy at W3C](https://www.w3.org/Security/wiki/Same_Origin_Policy)
+- [Same-origin policy at web.dev](https://web.dev/same-origin-policy/)
+- {{httpheader("Cross-Origin-Resource-Policy")}}
+- {{httpheader("Cross-Origin-Embedder-Policy")}}

@@ -7,7 +7,7 @@ browser-compat: api.CSSRuleList
 
 {{ APIRef("CSSOM") }}
 
-A `CSSRuleList` est un objet de type tableau contenant une collection ordonnée d'objects [`CSSRule`](/en/DOM/cssRule).
+Une `CSSRuleList` est un objet de type tableau contenant une collection ordonnée d'objects [`CSSRule`](/fr/docs/Web/API/CSSRule).
 
 ## Description
 
