@@ -191,7 +191,7 @@ Usando a função [`var()`](/pt-BR/docs/Web/CSS/var), você pode definir vários
 
 > **Nota:** os valores alternativos não são usados ​​para corrigir a compatibilidade do navegador. Se o navegador não oferecer suporte a propriedades personalizadas de CSS, o valor de fallback não ajudará. É apenas um backup para o navegador que suporta propriedades personalizadas CSS para escolher um valor diferente se a variável fornecida não estiver definida ou tiver um valor inválido.
 
-O primeiro argumento para a função é o nome da [propriedade personalizada](https://www.w3.org/TR/css-variables/#custom-property) a ser substituída. O segundo argumento para a função, se fornecido, é um valor de fallback, que é usado como valor de substituição quando a [propriedade personalizada] referenciada (https://www.w3.org/TR/css-variables/#custom-property ) é inválido. A função aceita apenas dois parâmetros, atribuindo tudo o que segue a primeira vírgula como segundo parâmetro. Se esse segundo parâmetro for inválido, o fallback falhará. Por exemplo:
+O primeiro argumento para a função é o nome da [propriedade personalizada](https://www.w3.org/TR/css-variables/#custom-property) a ser substituída. O segundo argumento para a função, se fornecido, é um valor de fallback, que é usado como valor de substituição quando a [propriedade personalizada] referenciada (<https://www.w3.org/TR/css-variables/#custom-property> ) é inválido. A função aceita apenas dois parâmetros, atribuindo tudo o que segue a primeira vírgula como segundo parâmetro. Se esse segundo parâmetro for inválido, o fallback falhará. Por exemplo:
 
 ```css
 .two {
