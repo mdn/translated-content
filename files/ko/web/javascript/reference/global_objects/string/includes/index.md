@@ -2,6 +2,7 @@
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
 ---
+
 {{JSRef}}
 
 **`includes()`** 메서드는 하나의 문자열이 다른 문자열에 포함되어 있는지를 판별하고, 결과를 `true` 또는 `false` 로 반환합니다. 검색 시 대소문자를 구분합니다.
@@ -24,7 +25,7 @@ includes(searchString, position)
 
 ### 반환값
 
-문자열을 찾아내면 `true`. 실패하면 `false`.
+문자열을 찾아내면 **`true`** . 실패하면 **`false`** .
 
 ### 예외
 
@@ -54,7 +55,7 @@ includes(searchString, position)
 ### `includes()` 사용하기
 
 ```js
-var str = 'To be, or not to be, that is the question.';
+const str = 'To be, or not to be, that is the question.';
 
 console.log(str.includes("To be")); // true
 console.log(str.includes("question")); // true
@@ -74,7 +75,7 @@ console.log(str.includes("")); // true
 
 ## 같이 보기
 
-- [Polyfill of `String.prototype.includes` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [`core-js`에서 `String.prototype.includes`의 폴리필](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("Array.prototype.includes()")}}
 - {{jsxref("TypedArray.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}
