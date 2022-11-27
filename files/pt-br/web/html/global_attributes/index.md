@@ -2,6 +2,7 @@
 title: Atributos Globais
 slug: Web/HTML/Global_attributes
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **Atributos Globais** são atributos comuns a todos elementos HTML; eles podem ser usados em todos os elementos, embora os atributos não tenham efeito em alguns elementos.

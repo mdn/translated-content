@@ -1,17 +1,9 @@
 ---
 title: Tutoriales
 slug: Web/Tutorials
-tags:
-  - Articulo Web
-  - Código
-  - Diseño Web
-  - Guía
-  - Principiante
-  - Programa Web
-  - Tutoriales
-translation_of: Web/Tutorials
 original_slug: Web/Tutoriales
 ---
+
 Los enlaces de esta página llevan a una gran variedad de tutoriales y material de formación. Tanto si estás en tus comienzos, aprendiendo lo básico, como si eres un veterano en desarrollo web, aquí puedes encontrar recursos que te ayuden a lograr mejores prácticas.
 
 Estos recursos son creados por empresas innovadoras y desarrolladores web que han adoptado los estándares abiertos y las mejores prácticas para el desarrollo web proporcionando o permitiendo traducciones mediante licencias de contenido abierto como Creative Commons.

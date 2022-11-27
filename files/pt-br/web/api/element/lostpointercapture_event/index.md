@@ -3,6 +3,7 @@ title: GlobalEventHandlers.onlostpointercapture
 slug: Web/API/Element/lostpointercapture_event
 original_slug: Web/API/GlobalEventHandlers/onlostpointercapture
 ---
+
 {{ApiRef("HTML DOM")}}
 
 A propriedade **`onlostpointercapture`** do mixin {{domxref("GlobalEventHandlers")}} é uma {{event("Event_handlers", "event handler")}} que processa eventos {{event("lostpointercapture")}}.
@@ -39,7 +40,7 @@ function init() {
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.GlobalEventHandlers.onlostpointercapture")}}
+{{Compat}}
 
 ## See also
 

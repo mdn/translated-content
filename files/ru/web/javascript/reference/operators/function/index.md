@@ -7,6 +7,7 @@ tags:
   - Функция
 translation_of: Web/JavaScript/Reference/Operators/function
 ---
+
 {{jsSidebar("Operators")}}
 
 Ключевое слово **`function`** может использоваться для определения функции внутри выражения.

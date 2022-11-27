@@ -3,6 +3,7 @@ title: 위치잡기
 slug: Learn/CSS/CSS_layout/Positioning
 original_slug: Learn/CSS/CSS_layout/위치잡기
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
 
 당신이 일반 문서 레이아웃 대열에서 요소를 끄집어 내어, 그것이 다르게 행동하게 만들수 있게 해주는 것이 위치잡기다. 예를 들어 상대 요소 위에 놓거나 브라우저 뷰 포트 내부의 동일한 위치를 항상 유지하게 해준다. 이 문서는 서로 다른 {{cssxref("position")}} 값을 설명하고, 그 걸 사용하는 방법에 대해서도 설명한다.

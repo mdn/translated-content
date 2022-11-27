@@ -2,6 +2,7 @@
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 ---
+
 {{JSRef}}
 
 O método **`Object.defineProperties()`** define uma nova propriedade ou modifica uma existente no objeto, retornando o objeto.

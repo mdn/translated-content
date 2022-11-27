@@ -7,6 +7,7 @@ tags:
 translation_of: Learn/HTML/Howto
 original_slug: Learn/HTML/como
 ---
+
 {{LearnSidebar}}
 
 Los siguientes enlaces brindan soluciones puntuales a los problemas más comunes a los que te enfrentarás a diario en HTML.

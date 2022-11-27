@@ -2,6 +2,7 @@
 title: margin
 slug: Web/CSS/margin
 ---
+
 {{CSSRef}}
 
 A propriedade **`margin`** do [CSS](/pt-BR/docs/Web/CSS) define a [área de margem](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) nos quatro lados do elemento. É uma abreviação que define todas as margens individuais de uma só vez: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, e {{cssxref("margin-left")}}.
@@ -134,5 +135,5 @@ Contudo, em navegadores antigos, como IE8-9 que não suporta layout flexbox, est
 
 ## Veja também
 
-- [CSS Box Model](/en/CSS/box_model)
-- [Margin collapsing](/en/CSS/margin_collapsing)
+- [CSS Box Model](/pt-BR/CSS/box_model)
+- [Margin collapsing](/pt-BR/CSS/margin_collapsing)

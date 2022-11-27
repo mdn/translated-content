@@ -1,8 +1,8 @@
 ---
 title: DOMError
 slug: Web/API/DOMError
-translation_of: Web/API/DOMError
 ---
+
 {{ APIRef("DOM") }}
 
 La interfaz **`DOMError`** describe un objeto de error que contiene un nombre de error.

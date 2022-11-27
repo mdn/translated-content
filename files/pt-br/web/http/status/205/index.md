@@ -2,6 +2,7 @@
 title: 205 Reset Content
 slug: Web/HTTP/Status/205
 ---
+
 {{HTTPSidebar}}
 
 O código de estado HTTP **`205 Reset Content`** informa ao cliente para reconfigurar a visualização do documento, para, por exemplo, limpar o conteúdo de um formulário, redefinir um estado da tela ou atualizar a interface do usuário.

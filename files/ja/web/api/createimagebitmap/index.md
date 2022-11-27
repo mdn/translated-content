@@ -78,7 +78,7 @@ image.src = 'sprites.png';
 
 ## ブラウザの互換性
 
-{{Compat("api.WindowOrWorkerGlobalScope.createImageBitmap")}}
+{{Compat}}
 
 ## あわせて参照
 

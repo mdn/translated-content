@@ -2,6 +2,7 @@
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 O método **`Object.getOwnPropertyDescriptor()`** retorna um descritor de propriedades para uma propriedade (isto é, uma diretamente presente, e não pertencente ao objeto por força da cadeia de protótipo do objeto) de um dado objeto.

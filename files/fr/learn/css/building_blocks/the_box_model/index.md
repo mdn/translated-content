@@ -91,7 +91,7 @@ Les dispositions "en ligne" et "en bloc" demeurent néanmoins le comportement pa
 
 ## Exemples de quelques types de positionnement
 
-Lançons nous à présent dans la pratique et étudions quelques exemples. Vous trouverez ci-dessous trois éléments HTML différents, mais qui sont tous en postionnement extérieur "en bloc" (`block`). Le premier est un paragraphe, possèdant une bordure ajoutée en CSS. Le navigateur va alors disposer l'élément comme une boîte "en bloc" lors de sa phase de rendu : le paragraphe occupe alors sa propre nouvelle ligne et s'étend en largeur pour occuper tout l'espace disponible.
+Lançons nous à présent dans la pratique et étudions quelques exemples. Vous trouverez ci-dessous trois éléments HTML différents, mais qui sont tous en positionnement extérieur "en bloc" (`block`). Le premier est un paragraphe, possèdant une bordure ajoutée en CSS. Le navigateur va alors disposer l'élément comme une boîte "en bloc" lors de sa phase de rendu : le paragraphe occupe alors sa propre nouvelle ligne et s'étend en largeur pour occuper tout l'espace disponible.
 
 Le deuxième élément est une liste, qui est disposée selon la règle `display: flex;`. Ceci définit une mise en page "flex" pour tous les éléments contenus dans la liste, bien que la liste en elle-même est en disposition "en bloc" — c'est pourquoi elle s'étend en largeur sur une nouvelle ligne, exactement comme le premier paragraphe.
 
@@ -101,7 +101,7 @@ Juste en dessous, se trouve un autre paragraphe, diposé en bloc comme le préc�
 
 Nous avons dans cet exemple le comportement typique d'un élément en ligne (`inline`), observant chacune des règles énoncées plus haut : l'élément `<span>` du premier paragraphe ne force pas de retour à la ligne et se place à la suite - _en ligne_ donc - des autres éléments.
 
-Nous avons en suite un élément `<ul>` dont la propriété de positionnement est `display: inline-flex;`, ce qui fait du `<ul>` une boîte en ligne, contenant des éléments de liste (`<li>`) dipsosés en "flex".
+Nous avons ensuite un élément `<ul>` dont la propriété de positionnement est `display: inline-flex;`, ce qui fait du `<ul>` une boîte en ligne, contenant des éléments de liste (`<li>`) disposés en "flex".
 
 Pour finir, nous avons deux paragraphes, tous deux définis en `display: inline;`. Le texte dans ces paragraphes, tout comme les éléments de listes, sont disposés sur la même ligne sans retour à la ligne pour chaque élément, contrairement à une disposition en bloc.
 
@@ -209,7 +209,7 @@ Dans l'exemple ci-dessous, se trouvent deux boîtes. Ces deux boîtes possèdent
 
 ### Utiliser les outils de développement pour voir le modèle de boîte
 
-Les [outils de développement](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) de votre navigateur peuvent vous permettre d'apréhender les concepts de boîte bien plus facilement. Si vous inspectez un élément dans les DevTools de Firefox (clic droit > Examiner l'élément), vous pouvez avoir accès à toutes les propriétés des différentes couches de la boîte (contenu, <i lang="en">padding</i>, bordure et marge) dans l'interface graphique interactive montrée ci-dessous. Inspecter un élément ainsi, c'est s'assurer qu'il possède bien la taille que l'on désire !
+Les [outils de développement](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) de votre navigateur peuvent vous permettre d'appréhender les concepts de boîte bien plus facilement. Si vous inspectez un élément dans les DevTools de Firefox (clic droit > Examiner l'élément), vous pouvez avoir accès à toutes les propriétés des différentes couches de la boîte (contenu, <i lang="en">padding</i>, bordure et marge) dans l'interface graphique interactive montrée ci-dessous. Inspecter un élément ainsi, c'est s'assurer qu'il possède bien la taille que l'on désire !
 
 ![Inspecter le modèle de boîte d'un élément grâce aux outils de développement de Firefox](box-model-devtools.png)
 

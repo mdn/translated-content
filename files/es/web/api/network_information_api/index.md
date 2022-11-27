@@ -1,13 +1,8 @@
 ---
 title: Network Information API
 slug: Web/API/Network_Information_API
-tags:
-  - API
-  - Experimental
-  - JSAPI Reference
-  - Referencia
-translation_of: Web/API/Network_Information_API
 ---
+
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 
 La Network Information (Información de red) API provee información sobre el sistema de conexión en términos genéricos de tipos de conexión (ej., 'wifi', 'cellular', etc.). Esta puede ser usada para elegir contenido en alta definición o contenido baja definición basándose en la conexión del usuario. Toda la API consiste en la adición de la {{domxref("NetworkInformation")}} interfaz y una única propiedad para la {{domxref("Navigator")}} interfaz: {{domxref("Navigator.connection")}}.
@@ -54,9 +49,7 @@ if (connection) {
 
 ## Especificaciones
 
-| Especifiación                                                                            | Estado                                       | Comentario            |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------- |
-| {{SpecName('Network Information', '', 'Network Information API')}} | {{Spec2('Network Information')}} | Initial specification |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

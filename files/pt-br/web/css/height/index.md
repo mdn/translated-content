@@ -2,6 +2,7 @@
 title: height
 slug: Web/CSS/height
 ---
+
 {{CSSRef()}}
 
 ## Sumário

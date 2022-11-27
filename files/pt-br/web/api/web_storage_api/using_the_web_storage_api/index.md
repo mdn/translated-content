@@ -3,6 +3,7 @@ title: Usando a API Web Storage
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 original_slug: Web/API/Web_Storage_API_pt_br/Using_the_Web_Storage_API
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 A API Web Storage fornece mecanismos pelos quais os navegadores podem armazenar pares de chaves/valores de uma maneira muito mais segura e intuitiva do que usar cookies. Este artigo fornece um passo a passo sobre como usar essa tecnologia.
@@ -21,8 +22,8 @@ localStorage.setItem('corDefinida', '#a4509b');
 
 Os dois mecanismos presentes na Web Storage são os seguintes:
 
-- O **`sessionStorage`** mantém uma área de armazenamento separada para cada origem diferente. Cada uma dessas áreas fica disponível durante a sessão da página (ou seja, enquanto a aba do navegador estiver aberta, incluindo recarregamentos e restaurações de páginas).
-- O **`localStorage`** faz a mesma coisa, mas os dados armazenados aqui continuam existindo mesmo depois do navegador ser fechado e reaberto.
+- O `sessionStorage` mantém uma área de armazenamento separada para cada origem diferente. Cada uma dessas áreas fica disponível durante a sessão da página (ou seja, enquanto a aba do navegador estiver aberta, incluindo recarregamentos e restaurações de páginas).
+- O `localStorage` faz a mesma coisa, mas os dados armazenados aqui continuam existindo mesmo depois do navegador ser fechado e reaberto.
 
 Esses mecanismos estão disponíveis através das propriedades {{domxref("Window.sessionStorage")}} e {{domxref("Window.localStorage")}} (de forma mais específica, em navegadores compatíveis, o objeto `Window` implementa os objetos `WindowLocalStorage` e `WindowSessionStorage`, aos quais as propriedades `localStorage` and `sessionStorage` pertencem, respectivamente) — invocar uma dessas propriedades irá criar uma instância do objeto {{domxref("Storage")}}, através do qual itens de dados podem ser definidos, acessados e removidos. Cada origem recebe objetos Storage diferentes para `sessionStorage` and `localStorage` — eles operam e são controlados separadamente.
 

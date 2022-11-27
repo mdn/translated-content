@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/hostname
 original_slug: Web/API/HTMLHyperlinkElementUtils/hostname
 ---
+
 {{ApiRef("URL API")}}
 
 Свойство **`HTMLHyperlinkElementUtils.hostname`** – это {{domxref("USVString")}}, содержащий домен.

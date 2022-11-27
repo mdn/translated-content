@@ -1,13 +1,9 @@
 ---
 title: Advanced animations
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
-tags:
-  - Canvas
-  - Tutoria
-  - graficos
-translation_of: Web/API/Canvas_API/Tutorial/Advanced_animations
 original_slug: Web/Guide/HTML/Canvas_tutorial/Advanced_animations
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
 
 En el último capítulo hicimos unas [animaciones básicas](/es/docs/Web/API/Canvas_API/Tutorial/Basic_animations) y nos familiarizamos con varias maneras de mover cosas. En esta parte examinaremos la moción misma y agregaremos la física para hacer nuestras animaciones más avanzadas.

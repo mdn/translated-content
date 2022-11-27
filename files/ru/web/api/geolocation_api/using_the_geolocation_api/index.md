@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/Geolocation_API/Using_the_Geolocation_API
 original_slug: Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 Geolocation API позволяет пользователю предоставлять своё местоположение web-приложению, если пользователь согласится предоставить его. Из соображений конфиденциальности, у пользователя будет запрошено разрешение на предоставление информации о местоположении.

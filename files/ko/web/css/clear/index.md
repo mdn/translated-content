@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/clear
 ---
+
 {{CSSRef}}
 
 **`clear`** [CSS](/ko/docs/Web/CSS) 속성은 요소가 선행 [부동](/ko/docs/Web/CSS/float)(floating) 요소 다음일 수 있는지 또는 그 아래로 내려가(해제되어(cleared))야 하는 지를 지정합니다. `clear` 속성은 부동 및 비부동 요소 모두에 적용됩니다.

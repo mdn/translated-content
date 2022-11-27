@@ -2,6 +2,7 @@
 title: <table>
 slug: Web/HTML/Element/table
 ---
+
 ## Resumo
 
 O elemento HTML _Table_ (`<table>`) representa dados em duas dimensões ou mais.
@@ -80,7 +81,7 @@ O elemento HTML _Table_ (`<table>`) representa dados em duas dimensões ou mais.
         >
         (<a
           class="external"
-          href="http://www.w3.org/TR/REC-html40/struct/tables.html#edef-TABLE"
+          href="https://www.w3.org/TR/REC-html40/struct/tables.html#edef-TABLE"
           >HTML4.01, section 11.2.1</a
         >)
       </td>
@@ -106,7 +107,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-  - : Este atributo define a cor de fundo da tabela e seu conteúdo. É um dos códigos hexadecimais de 6 dígitos como definido em [sRGB](http://www.w3.org/Graphics/Color/sRGB), prefixado por um '#'. Um dos textos das dezesseis cores predefinidas podem também ser utilizados:
+  - : Este atributo define a cor de fundo da tabela e seu conteúdo. É um dos códigos hexadecimais de 6 dígitos como definido em [sRGB](https://www.w3.org/Graphics/Color/sRGB), prefixado por um '#'. Um dos textos das dezesseis cores predefinidas podem também ser utilizados:
 
     |     | black = "#000000"   |     | green = "#008000"  |
     | --- | ------------------- | --- | ------------------ |

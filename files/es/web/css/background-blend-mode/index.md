@@ -1,11 +1,8 @@
 ---
 title: background-blend-mode
 slug: Web/CSS/background-blend-mode
-tags:
-  - Composición CSS
-  - Propiedad CSS
-translation_of: Web/CSS/background-blend-mode
 ---
+
 {{CSSRef()}}
 
 ## Resumen
@@ -80,9 +77,7 @@ console.log(document.getElementById('div'));
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                               | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{ SpecName('Compositing', '#background-blend-mode', 'background-blend-mode') }} | {{ Spec2('Compositing') }} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

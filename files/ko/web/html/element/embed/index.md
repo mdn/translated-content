@@ -10,7 +10,7 @@ tags:
   - 웹
 translation_of: Web/HTML/Element/embed
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<embed>` 요소**는 외부 어플리케이션이나 대화형 컨텐츠와의 통합점을 나타냅니다.
 

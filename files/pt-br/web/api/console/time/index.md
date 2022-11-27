@@ -2,6 +2,7 @@
 title: Console.time()
 slug: Web/API/Console/time
 ---
+
 {{ APIRef("Console API") }}{{Non-standard_header}}
 
 ## Sumário

@@ -225,9 +225,7 @@ new Intl.NumberFormat('bn', {
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES Int Draft', '#sec-intl-numberformat-constructor', 'Intl.NumberFormat constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

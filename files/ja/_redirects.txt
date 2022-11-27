@@ -7,10 +7,8 @@
 /ja/docs/AJAX	/ja/docs/Web/Guide/AJAX
 /ja/docs/AJAX/Community	/ja/docs/Web/Guide/AJAX/Community
 /ja/docs/AJAX/Getting_Started	/ja/docs/Web/Guide/AJAX/Getting_Started
-/ja/docs/AJAX/Other_Resources	/ja/docs/orphaned/Web/Guide/AJAX/Other_Resources
 /ja/docs/AJAX:Community	/ja/docs/Web/Guide/AJAX/Community
 /ja/docs/AJAX:Getting_Started	/ja/docs/Web/Guide/AJAX/Getting_Started
-/ja/docs/AJAX:Other_Resources	/ja/docs/orphaned/Web/Guide/AJAX/Other_Resources
 /ja/docs/API	/ja/docs/Web/API
 /ja/docs/API/Document	/ja/docs/Web/API/Document
 /ja/docs/API/Document/Document	/ja/docs/Web/API/Document/Document
@@ -581,7 +579,6 @@
 /ja/docs/Core_JavaScript_1.5_Guide/Creating_New_Objects/Using_Object_Initializers	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_object_initializers
 /ja/docs/Core_JavaScript_1.5_Guide/Creating_New_Objects/Using_a_Constructor_Function	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_a_constructor_function
 /ja/docs/Core_JavaScript_1.5_Guide/Creating_New_Objects/Using_this_for_Object_References	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_this_for_object_references
-/ja/docs/Core_JavaScript_1.5_Guide/Creating_a_Regular_Expression	/ja/docs/orphaned/Web/JavaScript/Guide/Creating_a_Regular_Expression
 /ja/docs/Core_JavaScript_1.5_Guide/Details_of_the_Object_Model	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Core_JavaScript_1.5_Guide/Expressions_and_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /ja/docs/Core_JavaScript_1.5_Guide/Functions	/ja/docs/Web/JavaScript/Guide/Functions
@@ -626,7 +623,6 @@
 /ja/docs/Core_JavaScript_1.5_Guide:Creating_New_Objects:Using_Object_Initializers	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_object_initializers
 /ja/docs/Core_JavaScript_1.5_Guide:Creating_New_Objects:Using_a_Constructor_Function	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_a_constructor_function
 /ja/docs/Core_JavaScript_1.5_Guide:Creating_New_Objects:Using_this_for_Object_References	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_this_for_object_references
-/ja/docs/Core_JavaScript_1.5_Guide:Creating_a_Regular_Expression	/ja/docs/orphaned/Web/JavaScript/Guide/Creating_a_Regular_Expression
 /ja/docs/Core_JavaScript_1.5_Guide:Details_of_the_Object_Model	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Core_JavaScript_1.5_Guide:Expressions_and_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /ja/docs/Core_JavaScript_1.5_Guide:Functions	/ja/docs/Web/JavaScript/Guide/Functions
@@ -1113,7 +1109,7 @@
 /ja/docs/DOM/DOMError	/ja/docs/Web/API/DOMError
 /ja/docs/DOM/DOMException	/ja/docs/Web/API/DOMException
 /ja/docs/DOM/DOMString	/ja/docs/Glossary/String
-/ja/docs/DOM/DOMTimeStamp	/ja/docs/Web/API/DOMTimeStamp
+/ja/docs/DOM/DOMTimeStamp	/ja/docs/Glossary/Unix_time
 /ja/docs/DOM/DOM_Reference	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/DOM_Reference/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
 /ja/docs/DOM/DOM_Reference/Examples	/ja/docs/Web/API/Document_Object_Model/Examples
@@ -1789,7 +1785,7 @@
 /ja/docs/DragDrop/DataTransfer/setData	/ja/docs/Web/API/DataTransfer/setData
 /ja/docs/DragDrop/Drag_Operations	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /ja/docs/DragDrop/Drag_and_Drop	/ja/docs/Web/API/HTML_Drag_and_Drop_API
-/ja/docs/DragDrop/Dragging_and_Dropping_Multiple_Items	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items
+/ja/docs/DragDrop/Dragging_and_Dropping_Multiple_Items	/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items
 /ja/docs/DragDrop/Recommended_Drag_Types	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 /ja/docs/DragDrop/ドラッグ＆ドロップ	/ja/docs/Web/API/HTML_Drag_and_Drop_API
 /ja/docs/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
@@ -1870,6 +1866,7 @@
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
 /ja/docs/Glossary/Empty_element	/ja/docs/Glossary/Void_element
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
+/ja/docs/Glossary/Grid_Rows	/ja/docs/Glossary/Grid_Row
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
 /ja/docs/Glossary/Index	/ja/docs/Glossary
 /ja/docs/Glossary/POP3	/ja/docs/Glossary/POP
@@ -2125,8 +2122,6 @@
 /ja/docs/JavaScript/Guide/Creating_New_Objects/Using_a_Constructor_Function-redirect-1	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_a_constructor_function
 /ja/docs/JavaScript/Guide/Creating_New_Objects/Using_this_for_Object_References	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_this_for_object_references
 /ja/docs/JavaScript/Guide/Creating_New_Objects/Using_this_for_Object_References-redirect-1	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_this_for_object_references
-/ja/docs/JavaScript/Guide/Creating_a_Regular_Expression	/ja/docs/orphaned/Web/JavaScript/Guide/Creating_a_Regular_Expression
-/ja/docs/JavaScript/Guide/Creating_a_Regular_Expression-redirect-1	/ja/docs/orphaned/Web/JavaScript/Guide/Creating_a_Regular_Expression
 /ja/docs/JavaScript/Guide/Details_of_the_Object_Model	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/JavaScript/Guide/Expressions_and_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /ja/docs/JavaScript/Guide/Expressions_and_Operators-redirect-1	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators
@@ -2732,7 +2727,6 @@
 /ja/docs/MDN/Contribute/Structures	/ja/docs/MDN/Writing_guidelines/Page_structures
 /ja/docs/MDN/Contribute/Structures/API_references	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
 /ja/docs/MDN/Contribute/Structures/API_references/API_reference_sidebars	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
-/ja/docs/MDN/Contribute/Structures/API_references/What_does_an_API_reference_need	/ja/docs/orphaned/MDN/Structures/API_references/What_does_an_API_reference_need
 /ja/docs/MDN/Contribute/Structures/Banners_and_notices	/ja/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices
 /ja/docs/MDN/Contribute/Structures/Code_examples	/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples
 /ja/docs/MDN/Contribute/Structures/Compatibility_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
@@ -2751,10 +2745,8 @@
 /ja/docs/MDN/Contribute/Structures/Syntax_sections	/ja/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /ja/docs/MDN/Contribute/Structures/マクロ	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros
 /ja/docs/MDN/Contribute/Tools	/ja/docs/MDN/Tools
-/ja/docs/MDN/Contribute/Tools/Document_parameters	/ja/docs/MDN/Tools/Unsupported_GET_API
 /ja/docs/MDN/Contribute/Tools/KumaScript	/ja/docs/MDN/Tools/KumaScript
 /ja/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/ja/docs/MDN/Tools/KumaScript/Troubleshooting
-/ja/docs/MDN/Contribute/Tools/Sample_server	/ja/docs/MDN/Tools/Sample_server
 /ja/docs/MDN/Contribute/Where_is_everything	/ja/docs/MDN/Community/Contributing/Our_repositories
 /ja/docs/MDN/Feedback	/ja/docs/MDN/Community
 /ja/docs/MDN/Getting_started	/ja/docs/MDN/Community/Contributing/Getting_started
@@ -2768,12 +2760,10 @@
 /ja/docs/MDN/Guidelines/Editorial	/ja/docs/MDN/Writing_guidelines/What_we_write
 /ja/docs/MDN/Guidelines/Video	/ja/docs/MDN/Writing_guidelines/Howto/Images_media
 /ja/docs/MDN/Guidelines/Writing_style_guide	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
-/ja/docs/MDN/Kuma	/ja/docs/MDN/Yari
 /ja/docs/MDN/MDN_Product_Advisory_Board/Members	/ja/docs/conflicting/MDN/MDN_Product_Advisory_Board
 /ja/docs/MDN/Structures	/ja/docs/MDN/Writing_guidelines/Page_structures
 /ja/docs/MDN/Structures/API_references	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
 /ja/docs/MDN/Structures/API_references/API_reference_sidebars	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
-/ja/docs/MDN/Structures/API_references/What_does_an_API_reference_need	/ja/docs/orphaned/MDN/Structures/API_references/What_does_an_API_reference_need
 /ja/docs/MDN/Structures/Banners_and_notices	/ja/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices
 /ja/docs/MDN/Structures/Code_examples	/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples
 /ja/docs/MDN/Structures/Compatibility_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
@@ -2789,7 +2779,6 @@
 /ja/docs/MDN/Structures/Quicklinks	/ja/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
 /ja/docs/MDN/Structures/Specification_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /ja/docs/MDN/Structures/Syntax_sections	/ja/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
-/ja/docs/MDN/Tools/Document_parameters	/ja/docs/MDN/Tools/Unsupported_GET_API
 /ja/docs/MDN/User_guide	/ja/docs/MDN/Tools
 /ja/docs/MDN/User_guide/Linking_to_MDN	/ja/docs/orphaned/MDN/About/Linking_to_MDN
 /ja/docs/MDN_at_ten	/ja/docs/MDN/At_ten
@@ -3180,6 +3169,15 @@
 /ja/docs/Web/API/Coordinates	/ja/docs/Web/API/GeolocationCoordinates
 /ja/docs/Web/API/DOMString	/ja/docs/Glossary/String
 /ja/docs/Web/API/DOMString/Binary	/ja/docs/Web/API/btoa
+/ja/docs/Web/API/DOMTimeStamp	/ja/docs/Glossary/Unix_time
+/ja/docs/Web/API/DataTransfer/mozClearDataAt	/ja/docs/orphaned/Web/API/DataTransfer/mozClearDataAt
+/ja/docs/Web/API/DataTransfer/mozCursor	/ja/docs/orphaned/Web/API/DataTransfer/mozCursor
+/ja/docs/Web/API/DataTransfer/mozGetDataAt	/ja/docs/orphaned/Web/API/DataTransfer/mozGetDataAt
+/ja/docs/Web/API/DataTransfer/mozItemCount	/ja/docs/orphaned/Web/API/DataTransfer/mozItemCount
+/ja/docs/Web/API/DataTransfer/mozSetDataAt	/ja/docs/orphaned/Web/API/DataTransfer/mozSetDataAt
+/ja/docs/Web/API/DataTransfer/mozSourceNode	/ja/docs/orphaned/Web/API/DataTransfer/mozSourceNode
+/ja/docs/Web/API/DataTransfer/mozTypesAt	/ja/docs/orphaned/Web/API/DataTransfer/mozTypesAt
+/ja/docs/Web/API/DataTransfer/mozUserCancelled	/ja/docs/orphaned/Web/API/DataTransfer/mozUserCancelled
 /ja/docs/Web/API/DeviceAcceleration	/ja/docs/Web/API/DeviceMotionEventAcceleration
 /ja/docs/Web/API/Document.domConfig	/ja/docs/Web/API/Document
 /ja/docs/Web/API/Document/animationcancel_event	/ja/docs/Web/API/Element/animationcancel_event
@@ -3272,8 +3270,8 @@
 /ja/docs/Web/API/FileReader/onabort	/ja/docs/Web/API/FileReader/abort_event
 /ja/docs/Web/API/FileReader/onerror	/ja/docs/Web/API/FileReader/error_event
 /ja/docs/Web/API/FileReader/onload	/ja/docs/Web/API/FileReader/load_event
-/ja/docs/Web/API/FileSystemEntrySync	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API_14742f14781741be7bc237d4ec1399a0
-/ja/docs/Web/API/File_Handle_API	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API
+/ja/docs/Web/API/FileSystemEntrySync	/ja/docs/Web/API/File_and_Directory_Entries_API
+/ja/docs/Web/API/File_Handle_API	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/FormDataEntryValue	/ja/docs/conflicting/Web/API/FormData
 /ja/docs/Web/API/Frame_Timing_API	/ja/docs/orphaned/Web/API/Frame_Timing_API
 /ja/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API	/ja/docs/orphaned/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API
@@ -3406,6 +3404,7 @@
 /ja/docs/Web/API/HTMLTableElement.width	/ja/docs/Web/API/HTMLTableElement/width
 /ja/docs/Web/API/HTMLTableRowElement.insertCell	/ja/docs/Web/API/HTMLTableRowElement/insertCell
 /ja/docs/Web/API/HTMLTableRowElement.rowIndex	/ja/docs/Web/API/HTMLTableRowElement/rowIndex
+/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items	/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items
 /ja/docs/Web/API/IDBDatabase.close	/ja/docs/Web/API/IDBDatabase/close
 /ja/docs/Web/API/IDBDatabase.createObjectStore	/ja/docs/Web/API/IDBDatabase/createObjectStore
 /ja/docs/Web/API/IDBDatabase.name	/ja/docs/Web/API/IDBDatabase/name
@@ -3417,8 +3416,8 @@
 /ja/docs/Web/API/IDBRequest/onsuccess	/ja/docs/Web/API/IDBRequest/success_event
 /ja/docs/Web/API/Index	/ja/docs/Web/API
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
-/ja/docs/Web/API/LocalFileSystem	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API_330e25ac325178c58fd9fba0601787e1
-/ja/docs/Web/API/LocalFileSystemSync	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API_b98af8eade9a709904ec6e38c4e7c98a
+/ja/docs/Web/API/LocalFileSystem	/ja/docs/Web/API/File_and_Directory_Entries_API
+/ja/docs/Web/API/LocalFileSystemSync	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/MediaCapabilitiesInfo	/ja/docs/Web/API/MediaCapabilities/encodingInfo
 /ja/docs/Web/API/MediaDevices/ondevicechange	/ja/docs/Web/API/MediaDevices/devicechange_event
 /ja/docs/Web/API/MediaQueryList/onchange	/ja/docs/Web/API/MediaQueryList/change_event
@@ -3457,8 +3456,6 @@
 /ja/docs/Web/API/NavigatorLanguage/languages	/ja/docs/Web/API/Navigator/languages
 /ja/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/ja/docs/conflicting/Web/API/Navigator/onLine
 /ja/docs/Web/API/NavigatorOnLine/onLine	/ja/docs/Web/API/Navigator/onLine
-/ja/docs/Web/API/NavigatorStorage	/ja/docs/orphaned/Web/API/NavigatorStorage
-/ja/docs/Web/API/NavigatorStorage/storage	/ja/docs/orphaned/Web/API/NavigatorStorage/storage
 /ja/docs/Web/API/NetworkInformation/onchange	/ja/docs/Web/API/NetworkInformation/change_event
 /ja/docs/Web/API/Node.appendChild	/ja/docs/Web/API/Node/appendChild
 /ja/docs/Web/API/Node.attributes	/ja/docs/Web/API/Element/attributes
@@ -3517,9 +3514,6 @@
 /ja/docs/Web/API/PublicKeyCredentialCreationOptions/excludeCredentials	/ja/docs/conflicting/Web/API/CredentialsContainer/create
 /ja/docs/Web/API/Push_API/Using_the_Push_API	/ja/docs/Web/API/Push_API
 /ja/docs/Web/API/RTCConfiguration	/ja/docs/Web/API/RTCPeerConnection/RTCPeerConnection
-/ja/docs/Web/API/RTCIdentityErrorEvent	/ja/docs/orphaned/Web/API/RTCIdentityErrorEvent
-/ja/docs/Web/API/RTCIdentityEvent	/ja/docs/orphaned/Web/API/RTCIdentityEvent
-/ja/docs/Web/API/RTCSessionDescriptionCallback	/ja/docs/orphaned/Web/API/RTCSessionDescriptionCallback
 /ja/docs/Web/API/RandomSource	/ja/docs/Web/API/Crypto/getRandomValues
 /ja/docs/Web/API/RandomSource/getRandomValues	/ja/docs/Web/API/Crypto/getRandomValues
 /ja/docs/Web/API/Range1	/ja/docs/Web/API/Range
@@ -3532,8 +3526,6 @@
 /ja/docs/Web/API/Range1/setStart	/ja/docs/Web/API/Range/setStart
 /ja/docs/Web/API/Range1/startContainer	/ja/docs/Web/API/Range/startContainer
 /ja/docs/Web/API/Range1/startOffset	/ja/docs/Web/API/Range/startOffset
-/ja/docs/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController	/ja/docs/orphaned/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController
-/ja/docs/Web/API/SVGTransformable	/ja/docs/orphaned/Web/API/SVGTransformable
 /ja/docs/Web/API/Screen/onorientationchange	/ja/docs/Web/API/Screen/orientationchange_event
 /ja/docs/Web/API/ScrollToOptions	/ja/docs/conflicting/Web/API/Window/scroll
 /ja/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/ja/docs/Web/API/ServiceWorkerContainer/controllerchange_event
@@ -3553,8 +3545,6 @@
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /ja/docs/Web/API/ShadowRoot/onslotchange	/ja/docs/Web/API/HTMLSlotElement/slotchange_event
 /ja/docs/Web/API/Slotable	/ja/docs/Web/API/Element
-/ja/docs/Web/API/SourceBuffer/trackDefaults	/ja/docs/orphaned/Web/API/SourceBuffer/trackDefaults
-/ja/docs/Web/API/SourceBufferList/SourceBuffer	/ja/docs/orphaned/Web/API/SourceBufferList/SourceBuffer
 /ja/docs/Web/API/SpeechRecognition/onaudioend	/ja/docs/Web/API/SpeechRecognition/audioend_event
 /ja/docs/Web/API/SpeechRecognition/onaudiostart	/ja/docs/Web/API/SpeechRecognition/audiostart_event
 /ja/docs/Web/API/SpeechRecognition/onend	/ja/docs/Web/API/SpeechRecognition/end_event
@@ -3566,7 +3556,6 @@
 /ja/docs/Web/API/SpeechRecognition/onspeechend	/ja/docs/Web/API/SpeechRecognition/speechend_event
 /ja/docs/Web/API/SpeechRecognition/onspeechstart	/ja/docs/Web/API/SpeechRecognition/speechstart_event
 /ja/docs/Web/API/SpeechRecognition/onstart	/ja/docs/Web/API/SpeechRecognition/start_event
-/ja/docs/Web/API/SpeechRecognition/serviceURI	/ja/docs/orphaned/Web/API/SpeechRecognition/serviceURI
 /ja/docs/Web/API/SpeechRecognitionError	/ja/docs/Web/API/SpeechRecognitionErrorEvent
 /ja/docs/Web/API/StorageEstimate	/ja/docs/conflicting/Web/API/StorageManager/estimate
 /ja/docs/Web/API/SyncEvent/registration	/ja/docs/conflicting/Web/API/SyncEvent
@@ -3692,7 +3681,6 @@
 /ja/docs/Web/API/Worker/onmessageerror	/ja/docs/Web/API/Worker/messageerror_event
 /ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/caches
 /ja/docs/Web/API/XMLHttpRequest/onreadystatechange	/ja/docs/Web/API/XMLHttpRequest/readystatechange_event
-/ja/docs/Web/API/XMLHttpRequest/openRequest	/ja/docs/orphaned/Web/API/XMLHttpRequest/openRequest
 /ja/docs/Web/API/XMLHttpRequestEventTarget/onabort	/ja/docs/Web/API/XMLHttpRequest/abort_event
 /ja/docs/Web/API/XMLHttpRequestEventTarget/onerror	/ja/docs/Web/API/XMLHttpRequest/error_event
 /ja/docs/Web/API/XMLHttpRequestEventTarget/onload	/ja/docs/Web/API/XMLHttpRequest/load_event
@@ -3703,7 +3691,6 @@
 /ja/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace	/ja/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 /ja/docs/Web/API/XRReferenceSpaceEventInit/transform	/ja/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 /ja/docs/Web/API/XRReferenceSpaceType	/ja/docs/Web/API/XRSession/requestReferenceSpace
-/ja/docs/Web/API/XRSessionMode	/ja/docs/orphaned/Web/API/XRSessionMode
 /ja/docs/Web/API/XRTargetRayMode	/ja/docs/conflicting/Web/API/XRInputSource/targetRayMode
 /ja/docs/Web/API/console.dir	/ja/docs/Web/API/Console/dir
 /ja/docs/Web/API/console.log	/ja/docs/Web/API/Console/log
@@ -3976,7 +3963,6 @@
 /ja/docs/Web/CSS/-moz-cell	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-moz-column-width	/ja/docs/Web/CSS/column-width
 /ja/docs/Web/CSS/-moz-context-menu	/ja/docs/Web/CSS/cursor
-/ja/docs/Web/CSS/-moz-context-properties	/ja/docs/orphaned/Web/CSS/-moz-context-properties
 /ja/docs/Web/CSS/-moz-copy	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-moz-outline	/ja/docs/Web/CSS/outline
 /ja/docs/Web/CSS/-moz-outline-color	/ja/docs/Web/CSS/outline-color
@@ -3994,22 +3980,18 @@
 /ja/docs/Web/CSS/::-webkit-input-placeholder	/ja/docs/Web/CSS/::placeholder
 /ja/docs/Web/CSS/:any	/ja/docs/Web/CSS/:is
 /ja/docs/Web/CSS/:host()	/ja/docs/Web/CSS/:host_function
-/ja/docs/Web/CSS/:host-context()	/ja/docs/orphaned/Web/CSS/:host-context()
 /ja/docs/Web/CSS/:matches	/ja/docs/Web/CSS/:is
 /ja/docs/Web/CSS/@font-face/font-variant	/ja/docs/Web/CSS/@font-face
-/ja/docs/Web/CSS/@media/scan	/ja/docs/orphaned/Web/CSS/@media/scan
-/ja/docs/Web/CSS/@page/bleed	/ja/docs/orphaned/Web/CSS/@page/bleed
-/ja/docs/Web/CSS/@page/marks	/ja/docs/orphaned/Web/CSS/@page/marks
 /ja/docs/Web/CSS/@scroll-timeline	/ja/docs/Web/CSS/scroll-timeline
-/ja/docs/Web/CSS/@viewport	/ja/docs/conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
-/ja/docs/Web/CSS/@viewport/height	/ja/docs/conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
-/ja/docs/Web/CSS/@viewport/max-height	/ja/docs/conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
-/ja/docs/Web/CSS/@viewport/max-zoom	/ja/docs/conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
-/ja/docs/Web/CSS/@viewport/min-zoom	/ja/docs/conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
-/ja/docs/Web/CSS/@viewport/orientation	/ja/docs/conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
-/ja/docs/Web/CSS/@viewport/user-zoom	/ja/docs/conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
-/ja/docs/Web/CSS/@viewport/viewport-fit	/ja/docs/conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
-/ja/docs/Web/CSS/@viewport/zoom	/ja/docs/conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
+/ja/docs/Web/CSS/@viewport	/ja/docs/Web/CSS
+/ja/docs/Web/CSS/@viewport/height	/ja/docs/Web/CSS
+/ja/docs/Web/CSS/@viewport/max-height	/ja/docs/Web/CSS
+/ja/docs/Web/CSS/@viewport/max-zoom	/ja/docs/Web/CSS
+/ja/docs/Web/CSS/@viewport/min-zoom	/ja/docs/Web/CSS
+/ja/docs/Web/CSS/@viewport/orientation	/ja/docs/Web/CSS
+/ja/docs/Web/CSS/@viewport/user-zoom	/ja/docs/Web/CSS
+/ja/docs/Web/CSS/@viewport/viewport-fit	/ja/docs/Web/CSS
+/ja/docs/Web/CSS/@viewport/zoom	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Adjacent_sibling_selectors	/ja/docs/Web/CSS/Adjacent_sibling_combinator
 /ja/docs/Web/CSS/Background_Backup	/ja/docs/Web/CSS/background
 /ja/docs/Web/CSS/Block_formatting_context	/ja/docs/Web/Guide/CSS/Block_formatting_context
@@ -4021,7 +4003,7 @@
 /ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /ja/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_Color	/ja/docs/Web/CSS/CSS_Colors
-/ja/docs/Web/CSS/CSS_Device_Adaptation	/ja/docs/conflicting/Web/CSS_7fc1a1afe4642afd225ebf1b3d6227a7
+/ja/docs/Web/CSS/CSS_Device_Adaptation	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
@@ -4065,12 +4047,12 @@
 /ja/docs/Web/CSS/Media/Visual	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/Motion_Path	/ja/docs/Web/CSS/CSS_Motion_Path
 /ja/docs/Web/CSS/Other_Resources	/ja/docs/Web/CSS
-/ja/docs/Web/CSS/Reference/@viewport	/ja/docs/conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
-/ja/docs/Web/CSS/Reference/@viewport/max-zoom	/ja/docs/conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
-/ja/docs/Web/CSS/Reference/@viewport/min-zoom	/ja/docs/conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
-/ja/docs/Web/CSS/Reference/@viewport/orientation	/ja/docs/conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
-/ja/docs/Web/CSS/Reference/@viewport/user-zoom	/ja/docs/conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
-/ja/docs/Web/CSS/Reference/@viewport/zoom	/ja/docs/conflicting/Web/CSS_45a2c646ac3ef9d19832f9815908896e
+/ja/docs/Web/CSS/Reference/@viewport	/ja/docs/Web/CSS
+/ja/docs/Web/CSS/Reference/@viewport/max-zoom	/ja/docs/Web/CSS
+/ja/docs/Web/CSS/Reference/@viewport/min-zoom	/ja/docs/Web/CSS
+/ja/docs/Web/CSS/Reference/@viewport/orientation	/ja/docs/Web/CSS
+/ja/docs/Web/CSS/Reference/@viewport/user-zoom	/ja/docs/Web/CSS
+/ja/docs/Web/CSS/Reference/@viewport/zoom	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
 /ja/docs/Web/CSS/Scaling_background_images	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /ja/docs/Web/CSS/Tools	/ja/docs/conflicting/Web/CSS
@@ -4262,7 +4244,6 @@
 /ja/docs/Web/Events/vrdisplaydisconnected	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
 /ja/docs/Web/Events/vrdisplaypresentchange	/ja/docs/Web/API/Window/vrdisplaypresentchange_event
 /ja/docs/Web/Events/waiting	/ja/docs/Web/API/HTMLMediaElement/waiting_event
-/ja/docs/Web/Guide/AJAX/Other_Resources	/ja/docs/orphaned/Web/Guide/AJAX/Other_Resources
 /ja/docs/Web/Guide/API/Gamepad	/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
 /ja/docs/Web/Guide/API/Vibration	/ja/docs/Web/API/Vibration_API
 /ja/docs/Web/Guide/Audio_and_video_delivery/H.264_support_in_Firefox	/ja/docs/Web/Guide/Audio_and_video_delivery
@@ -4349,6 +4330,7 @@
 /ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ja/docs/Web/Guide/Index	/ja/docs/Web/Guide
 /ja/docs/Web/Guide/Localizations_and_character_encodings	/ja/docs/orphaned/Web/Guide/Localizations_and_character_encodings
+/ja/docs/Web/Guide/Mobile/Separate_sites	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web/Guide/Performance/Using_web_workers	/ja/docs/Web/API/Web_Workers_API/Using_web_workers
 /ja/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/ja/docs/Web/API/Page_Visibility_API
 /ja/docs/Web/Guide/Using_FormData_Objects	/ja/docs/Web/API/FormData/Using_FormData_Objects
@@ -4509,7 +4491,6 @@
 /ja/docs/Web/JavaScript/Guide/Creating_New_Objects/Using_Object_Initializers	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_object_initializers
 /ja/docs/Web/JavaScript/Guide/Creating_New_Objects/Using_a_Constructor_Function	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_a_constructor_function
 /ja/docs/Web/JavaScript/Guide/Creating_New_Objects/Using_this_for_Object_References	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_this_for_object_references
-/ja/docs/Web/JavaScript/Guide/Creating_a_Regular_Expression	/ja/docs/orphaned/Web/JavaScript/Guide/Creating_a_Regular_Expression
 /ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Web/JavaScript/Guide/Expressions	/ja/docs/orphaned/Web/JavaScript/Guide/Expressions
 /ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain	/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
@@ -4560,7 +4541,7 @@
 /ja/docs/Web/JavaScript/Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ja/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
-/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/ja/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_df783faa96fb2729e58461fd21615e98
+/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/ja/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /ja/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 /ja/docs/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
@@ -4707,7 +4688,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint16Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint32Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint8Array
-/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/ja/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly	/ja/docs/WebAssembly/JavaScript_interface
@@ -4806,6 +4787,7 @@
 /ja/docs/Web/Manifest/iarc_rating_id	/ja/docs/Web/Manifest
 /ja/docs/Web/Manifest/lang	/ja/docs/Web/Manifest
 /ja/docs/Web/MathML/Index	/ja/docs/Web/MathML
+/ja/docs/Web/Media/images/aspect_ratio_mapping	/ja/docs/Learn/Performance/Multimedia
 /ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Introduction
 /ja/docs/Web/Progressive_web_apps/Responsive	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web/Reference	/ja/docs/Web

@@ -3,6 +3,7 @@ title: AnalyserNode
 slug: Web/API/AnalyserNode
 translation_of: Web/API/AnalyserNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 `AnalyserNode` интерфейс который предоставляет частоту (frequency) в реальном времени. Элемент {{domxref("AudioNode")}} который пропускает аудиопоток неизменным от ввода (input) до вывода (output), но позволяет использовать генерируемые данные, обрабатывать или создавать аудиовизуализацию.

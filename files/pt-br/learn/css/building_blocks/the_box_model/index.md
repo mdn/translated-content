@@ -3,6 +3,7 @@ title: The box model
 slug: Learn/CSS/Building_blocks/The_box_model
 original_slug: Aprender/CSS/Construindo_blocos/The_box_model
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
 
 Tudo em CSS tem um quadro em torno de si, e entender estes quadros é chave para ser capaz de criar arranjos ( layouts ) com CSS, ou para alinhar itens com outros itens. Nesta lição, olharemos de modo apropiado para o modelo de caixas do CSS ( CSS Box Model ), de forma que você possa montar arranjos mais complexos com um melhor entendimento de como ele funciona e da terminologia relacionada.

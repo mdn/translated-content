@@ -3,6 +3,7 @@ title: Imagens responsivas
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 original_slug: Aprender/HTML/Multimedia_and_embedding/Responsive_images
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
 
 Neste artigo nós iremos aprender sobre o conceito de imagens responsivas —imagens que funcionam em dispositivos com diferentes tamanhos de tela, resoluções e outras funcionalidades— e entrar em contato com quais ferramentas o HTML oferece para ajudar a implementá-las. Imagens responsivas são apenas uma parte do web design responsivo, um futuro [tópico de CSS](/pt-BR/docs/Learn/CSS) para você aprender.
@@ -69,7 +70,7 @@ Os atributos `srcset` e `sizes` parecem complicados, mas não são difíceis de 
 
 1. Um **nome do arquivo da imagem** (`elva-fairy-480w.jpg`).
 2. Um espaço.
-3. A **largura da imagem em pixels** (`480w`) — note que é usado a unidade `w`, e não `px` como você pode esperar. Este é o tamanho real da imagem, que pode ser encontrado no arquivo dela no seu computador (por exemplo no Mac você pode selecionar a imagem no Finder, e pressionar
+3. A **largura da imagem em pixels** (`480w`) — note que é usada a unidade `w`, e não `px` como você pode esperar. Este é o tamanho real da imagem, que pode ser encontrado no arquivo dela no seu computador (por exemplo no Mac você pode selecionar a imagem no Finder, e pressionar
 
     <kbd>Cmd</kbd>
 
@@ -125,7 +126,7 @@ Se você está dando suporte a múltiplas resoluções de vídeo, mas todas veem
      src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
 ```
 
-![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](https://mdn.mozillademos.org/files/12942/resolution-example.png)Neste exemplo, o seguinte CSS é aplicado na imagem, então ela etra uma largura de 320 pixels na tela (também chamado pixels CSS):
+![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](https://mdn.mozillademos.org/files/12942/resolution-example.png)Neste exemplo, o seguinte CSS é aplicado na imagem, então ela terá uma largura de 320 pixels na tela (também chamado pixels CSS):
 
 ```css
 img {
@@ -145,7 +146,7 @@ Voltando para o nosso exemplo [not-responsive.html](http://mdn.github.io/learnin
 <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
 ```
 
-Vamos consertar isso, com {{htmlelement("picture")}}! Como [`<video>` e `<audio>`](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), O elemento `<picture>` é um invólocro contendo muitos elementos {{htmlelement("source")}} que fornecem muitas fontes diferentes para o navegador escolher, seguido pelo elemento mais importante {{htmlelement("img")}}. O código em [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) ficará assim então:
+Vamos consertar isso, com {{htmlelement("picture")}}! Como [`<video>` e `<audio>`](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), O elemento `<picture>` é um invólucro contendo muitos elementos {{htmlelement("source")}} que fornecem muitas fontes diferentes para o navegador escolher, seguido pelo elemento mais importante {{htmlelement("img")}}. O código em [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) ficará assim então:
 
 ```html
 <picture>
@@ -167,7 +168,7 @@ Este código nos permite mostrar uma imagem adequada em ambas extensas e estreit
 
 ### Por que não podemos só fazer isso usando CSS ou JavaScript?
 
-Quando o navegador começa a carregar a página, inicia o download de todas as imagens antes do analisador principal ter começado a carregar e interpretar o JavaScript e o CSS da página. Isto é uma técnica útil, a qual diminui o tempo de carregamento médio em 20%. Entretanto, isto não é útil para imagens responsivas, então é necessário implementar soluções como srcset. Você não pode, por exemplo, carregar o elemento {{htmlelement("img")}}, então detectar a largura da janela com JavaScript e mudar dinamicamente o arquivo da imagem para um menor, caso deseje. Até lá, a imagem original deveria já ter sido carregado, e você iria carregar uma menor, o que é ainda pior em termos de imagens responsivas.
+Quando o navegador começa a carregar a página, inicia o download de todas as imagens antes do analisador principal ter começado a carregar e interpretar o JavaScript e o CSS da página. Isto é uma técnica útil, a qual diminui o tempo de carregamento médio em 20%. Entretanto, isto não é útil para imagens responsivas, então é necessário implementar soluções como srcset. Você não pode, por exemplo, carregar o elemento {{htmlelement("img")}}, então detectar a largura da janela com JavaScript e mudar dinamicamente o arquivo da imagem para um menor, caso deseje. Até lá, a imagem original deveria já ter sido carregada, e você iria carregar uma menor, o que é ainda pior em termos de imagens responsivas.
 
 ### Use bastante formatos de imagens modernos
 
@@ -184,7 +185,7 @@ Há vários novos e excitantes formatos de imagens (como WebP e JPEG-2000) que p
 ```
 
 - _Não_ use o atributo `media`, a menos que você também precise de direção de arte.
-- No elemento `<source>`, você só pode refenciar imagens de tipos declarados em `type`.
+- No elemento `<source>`, você só pode referenciar imagens de tipos declarados em `type`.
 - Como antes, você é encorajado a usar uma lista separada por vírgula com `srcset` e `sizes`, caso precise.
 
 ## Aprendizado ativo: Implementando suas próprias imagens responsivas
@@ -192,7 +193,7 @@ Há vários novos e excitantes formatos de imagens (como WebP e JPEG-2000) que p
 Para esse exercício, nós estamos esperando que você seja corajoso e vá sozinho.. principalmente. Nós queremos que você implemente sua própria adequada direção de arte em tela estreita/ampla usando `<picture>`, e um exemplo de mudança de resolução que use `srcset`.
 
 1. Escreva um simples HTML contendo seu código (use `not-responsive.html` como um ponto de partida, se quiser)
-2. Encontre uma boa imagem ampla de um panorama com algum detalhe contido em alguma parte. Crie uma versão de tamanho web usando um editor de imagem, então coloque parra mostrar uma pequena parte que amplia o detalhe, e salve em uma segunda imagem (algo como 480px está bom).
+2. Encontre uma boa imagem ampla de um panorama com algum detalhe contido em alguma parte. Crie uma versão de tamanho web usando um editor de imagem, então coloque para mostrar uma pequena parte que amplia o detalhe, e salve em uma segunda imagem (algo como 480px está bom).
 3. Use o elemento `<picture>` para implementar uma mudança de imagem!
 4. Crie múltiplos arquivos de imagem de diferentes tamanhos, cada um mostrando a mesma imagem.
 5. Use `srcset`/`size` para criar um exemplo de mudança de resolução, que sirva para os mesmos tamanhos de imagens em diferentes resoluções, ou diferentes tamanhos de imagens em cada largura de janela.

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Element/input/button
 original_slug: Web/HTML/Elemento/input/Botón
 ---
+
 {{HTMLSidebar}}
 
 El elemento HTML **`<input type="button">`** es una versión específica del elemento **`<input>`**`,` que se usa para crear un botón en el que se puede hacer click sin ningún valor por defecto, es decir, **no tiene un comportamiento predeterminado** como por ejemplo **`<input type="reset">`** . En HTML5 ha sido sustituido por el elemento **[\<button>](/es/docs/Web/HTML/Element/button)**.
@@ -175,17 +176,13 @@ Se crea un nuevo input tipo botón con el valor 'Click me'.
 <input type="button" value="Click me">
 ```
 
-## Especificaciónes
+## Especificaciones
 
-| Especificación                                                                                                           | Status                           |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'the-button-element.html#the-button-element', '&lt;button&gt;')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'forms.html#the-button-element', '&lt;button&gt;')}}                     | {{Spec2('HTML5 W3C')}}     |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.5', '&lt;button&gt;')}}                         | {{Spec2('HTML4.01')}}     |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 
-{{Compat("html.elements.input.input-button")}}
+{{Compat}}
 
 ## Ver también
 

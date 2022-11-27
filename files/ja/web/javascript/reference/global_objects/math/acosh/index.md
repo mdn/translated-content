@@ -56,9 +56,7 @@ Math.acosh = Math.acosh || function(x) {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.acosh', 'Math.acosh')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

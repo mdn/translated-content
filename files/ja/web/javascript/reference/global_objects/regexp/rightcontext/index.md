@@ -28,9 +28,7 @@ RegExp["$'"];       // " world!"
 
 ## 仕様書
 
-| 仕様書                                               |
-| ---------------------------------------------------- |
-| {{SpecName('Legacy RegExp features')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

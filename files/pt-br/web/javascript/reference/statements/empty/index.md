@@ -2,6 +2,7 @@
 title: empty
 slug: Web/JavaScript/Reference/Statements/Empty
 ---
+
 {{jsSidebar("Statements")}}
 
 Uma **declaração vazia** é usada para fornecer nenhuma declaração, embora a sintaxe do JavaScript esperasse uma.

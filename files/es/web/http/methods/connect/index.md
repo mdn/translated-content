@@ -1,11 +1,8 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
-tags:
-  - HTTP
-  - Método de petición
-translation_of: Web/HTTP/Methods/CONNECT
 ---
+
 {{HTTPSidebar}}
 
 El método **HTTP `CONNECT` **inicia la comunicación en dos caminos con la fuente del recurso solicitado. Puede ser usado para abrir una comunicación tunel.

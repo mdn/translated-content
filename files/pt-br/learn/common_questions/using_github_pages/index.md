@@ -2,6 +2,7 @@
 title: How do I use GitHub Pages?
 slug: Learn/Common_questions/Using_Github_pages
 ---
+
 [GitHub](https://github.com/) is a "social coding" site. It allows you to upload code repositories for
 storage in thecelio [Git](http://git-scm.com/) **version control system.** You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. You can do that with other people's code too! This article provides a basic guide to publishing content using Github's gh-pages feature.
 
@@ -21,7 +22,7 @@ You can store any code you like in a Github repository, but to use the GitHub Pa
 
 The other thing you need to do before moving on is to initialise your code directory as a Git repository. To do this:
 
-1. Point the command line to your `test-site` directory (or whatever you called the directory containing your website). For this, use the `cd` command (i.e. "\_c_hange \_d_irectory"). Here's what you'd type if you've put your website in a directory called `test-site` on your desktop:
+1. Point the command line to your `test-site` directory (or whatever you called the directory containing your website). For this, use the `cd` command (i.e. "**c**hange **d**irectory"). Here's what you'd type if you've put your website in a directory called `test-site` on your desktop:
 
    ```bash
    cd Desktop/test-site

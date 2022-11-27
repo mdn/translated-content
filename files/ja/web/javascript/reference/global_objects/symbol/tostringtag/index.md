@@ -68,9 +68,7 @@ test[Symbol.toStringTag];  // Returns HTMLButtonElement
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.tostringtag', 'Symbol.toStringTag')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -3,6 +3,7 @@ title: SVGAElement
 slug: Web/API/SVGAElement
 translation_of: Web/API/SVGAElement
 ---
+
 {{APIRef("SVG")}}
 
 {{SeeCompatTable}}

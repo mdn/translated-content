@@ -3,6 +3,7 @@ title: HTML
 slug: Glossary/HTML
 original_slug: Glossario/HTML
 ---
+
 HTML (HyperText Markup Language) é uma linguagem descritiva que especifica a estrutura de uma página web.
 
 ## Breve história
@@ -35,4 +36,4 @@ Um arquivo HTML normalmente é salvo com uma extensão .htm ou .html, é disponi
 ### Referência Técnica
 
 - [A documentação HTML no MDN](/pt-BR/docs/Web/HTML)
-- [A especificação HTML (W3C)](http://www.w3.org/TR/html5/)
+- [A especificação HTML (W3C)](https://www.w3.org/TR/html5/)

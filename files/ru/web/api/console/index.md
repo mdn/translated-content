@@ -12,6 +12,7 @@ tags:
   - Справочник по DOM Gecko
 translation_of: Web/API/Console
 ---
+
 {{APIRef("Console API")}}
 
 Объект **Console** служит для доступа к средствам отладки браузера (например, [Web Console (Веб-консоль)](/ru/docs/Tools/Web_Console) в Firefox). Работа с ним отличается в разных браузерах, но эти методы и свойства по факту поддерживаются всеми браузерами.

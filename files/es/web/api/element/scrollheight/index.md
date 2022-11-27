@@ -1,14 +1,8 @@
 ---
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
-tags:
-  - API
-  - Necesidad de Ejemplo de eliminación DHTML
-  - Propiedad
-  - Referencia
-  - Vista CSSOM
-translation_of: Web/API/Element/scrollHeight
 ---
+
 {{APIRef}}
 
 El elemento **Element.scrollHeight** atributo unicamente de lectura es una medida de la altura del contenido de un elemento, incluyendo el contenido que no es visible en la pantalla debido al desbordamiento. El valor `scrollHeight` es igual a la altura mínima (donde la altura incluye el relleno , pero no incluye bordes y márgenes) El elemento lo necesita con el fin de adaptarse a todos los contenidos en el punto de vista sin necesidad de utilizar una barra de desplazamiento vertical. Incluye el elemento relleno pero no su margen.

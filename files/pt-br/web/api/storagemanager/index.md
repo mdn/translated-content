@@ -2,6 +2,7 @@
 title: StorageManager
 slug: Web/API/StorageManager
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}
 
 **`StorageManager`** é uma inteface da [Storage API](/pt-BR/docs/Web/API/Storage_API) que fornece uma interface para controlar as permissões de gravações e estima o espaço disponível. Você pode obter a referência desta interface usando {{domxref("navigator.storage")}} ou {{domxref("WorkerNavigator.storage")}}.

@@ -1,7 +1,6 @@
 ---
 title: Coordinates
 slug: Web/API/GeolocationCoordinates
-translation_of: Web/API/GeolocationCoordinates
 ---
 {{APIRef("Geolocation API")}}
 
@@ -32,9 +31,7 @@ La interfaz `Coordinates` no implementa ni edita ningún método.
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                           | Comentario             |
-| ---------------------------------------------------------------------------- | -------------------------------- | ---------------------- |
-| {{SpecName('Geolocation', '#coordinates', 'Coordinates')}} | {{Spec2('Geolocation')}} | Especificación inicial |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

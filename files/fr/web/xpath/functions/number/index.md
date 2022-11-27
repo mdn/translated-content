@@ -19,7 +19,7 @@ number( [objet] )
 
 ### Arguments
 
-- _`objet`_ (optionnel)
+- `objet` (optionnel)
   - : L'objet à convertir en nombre.
 
 ### Retour

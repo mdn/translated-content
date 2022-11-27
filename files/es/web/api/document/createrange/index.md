@@ -1,12 +1,8 @@
 ---
 title: document.createRange
 slug: Web/API/Document/createRange
-tags:
-  - Rango
-  - Referencia_DOM_de_Gecko
-  - crear rango
-translation_of: Web/API/Document/createRange
 ---
+
 {{ ApiRef() }}
 
 ### Resumen

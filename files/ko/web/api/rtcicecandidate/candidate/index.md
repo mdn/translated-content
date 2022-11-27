@@ -3,6 +3,7 @@ title: RTCIceCandidate.candidate
 slug: Web/API/RTCIceCandidate/candidate
 translation_of: Web/API/RTCIceCandidate/candidate
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("RTCIceCandidate")}} 인터페이스에 대한 읽기 속성인 **`candidate`**는 candidate에 대해 자세히 설명해주는 {{domxref("DOMString")}}를 반환합니다.

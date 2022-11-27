@@ -13,6 +13,7 @@ tags:
   - Обучение
 translation_of: Learn/Getting_started_with_the_web/CSS_basics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 
 CSS (Cascading Style Sheets) — это код, который вы используете для стилизации вашей веб-страницы. _Основы CSS_ помогут вам понять, что вам нужно для начала работы. Мы ответим на такие вопросы как: Как сделать мой текст черным или красным? Как сделать так, чтобы контент появлялся в определённом месте на экране? Как украсить мою веб-страницу с помощью фоновых изображений и цветов?

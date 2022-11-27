@@ -1,16 +1,8 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content
-tags:
-  - CSS
-  - CSS Grid
-  - Experimental
-  - Función CSS
-  - Layout
-  - Referencia
-  - Web
-translation_of: Web/CSS/fit-content
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La función [CSS](/es/docs/Web/CSS) **`fit-content()`** ajusta un tamaño dado a un tamaño disponible de acuerdo a la fórmula: `min(maximum size, max(minimum size, argument))`.
@@ -90,11 +82,8 @@ Función que acepta un `<length>` o un `<percentage>` como un argumento.
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentario                                                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS3 Sizing", "#valdef-width-fit-content-length-percentage", "fit-content()")}} | {{Spec2("CSS3 Sizing")}} | Define la función como el tamaño de caja disponible para {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} y {{cssxref("max-height")}}. |
-| {{SpecName("CSS Grid", "#valdef-grid-template-columns-fit-content", "fit-content()")}}     | {{Spec2("CSS Grid")}}     | Define la función cuando es usada como un tamaño de track.                                                                                                                                                                                                    |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-template-columns.fit-content")}}
+{{Compat}}

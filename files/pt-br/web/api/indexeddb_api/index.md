@@ -2,6 +2,7 @@
 title: IndexedDB
 slug: Web/API/IndexedDB_API
 ---
+
 IndexedDB é uma API para armazenamento client-side de quantidades significantes de informações e buscas com alta performance por índices. Enquanto [DOM Storage](/pt-BR/docs/DOM/Storage) é útil para armazenamento de pequenas quantidade de dados, IndexedDB é a solução para grande porção de dados estruturados.
 
 Esta página basicamente é o ponto de entrada para uma descrição técnica dos objetos da API. Precisando de suporte ainda mais inicial consulte os [Conceitos Básicos sobre IndexedDb](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB). Para mais detalhes sobre a implementação, veja [Usando IndexedDB](/pt-BR/docs/IndexedDB/Using_IndexedDB).
@@ -65,7 +66,7 @@ Não há qualquer limite em um único elemento da database. Entretanto podem hav
 - [Conceitos Básicos sobre IndexedDB](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB)
 - [Utilizando IndexedDB](/pt-BR/docs/IndexedDB/Using_IndexedDB)
 - [Armazenando Imagens e Arquivos com IndexedDB](http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
-- [Especificação da API de Indexed Database](http://www.w3.org/TR/IndexedDB/)
+- [Especificação da API de Indexed Database](https://www.w3.org/TR/IndexedDB/)
 - [IndexedDB — O armazenamento em seu Navegador](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
 - [IndexedDB Exemplos](http://nparashuram.com/IndexedDB/trialtool/index.html)
 - [IndexedDB Polyfill/Shim](https://github.com/axemclion/IndexedDBShim) para navegadores que apenas suportam WebSQL (e.g. mobile WebKit)

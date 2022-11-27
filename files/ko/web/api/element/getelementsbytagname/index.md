@@ -3,6 +3,7 @@ title: Element.getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
 translation_of: Web/API/Element/getElementsByTagName
 ---
+
 {{ APIRef("DOM") }}
 
 **Element.getElementsByTagName()** 메서드는 제공된 태그 네임([tag name](/en/DOM/element.tagName))을 가지는 엘리먼트의 유효한 {{domxref("HTML 컬랙션")}}를 반환합니다. 엘리먼트가 특정된 범위를 검색하는 경우, 그 자신의 엘리먼트는 제외하고, 특정된 엘리먼트의 하위에 있는 서브트리가 검색됩니다. 반환된 리스트가 _live_ 상태이면, 리스트는 DOM 트리와 함께 자동적으로 업데이트 되는 것을 의미합니다. 결과적으로, 동일한 엘리먼트와 인자값으로 **Element.getElementsByTagName()**을 여러번 호출할 필요성은 없어집니다.

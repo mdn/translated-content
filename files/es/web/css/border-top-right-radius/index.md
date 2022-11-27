@@ -1,12 +1,8 @@
 ---
 title: border-top-right-radius
 slug: Web/CSS/border-top-right-radius
-tags:
-  - Bordes CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/border-top-right-radius
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -150,9 +146,7 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                                   | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Backgrounds', '#the-border-radius', 'border-top-right-radius')}} | {{Spec2('CSS3 Backgrounds')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

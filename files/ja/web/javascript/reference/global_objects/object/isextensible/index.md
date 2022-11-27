@@ -64,9 +64,7 @@ Object.isExtensible(1);
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.isextensible', 'Object.isExtensible')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

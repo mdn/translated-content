@@ -1793,10 +1793,6 @@
     "modified": "2020-09-30T15:30:35.142Z",
     "contributors": ["chrisdavidmills", "java2020007"]
   },
-  "MDN/Yari": {
-    "modified": "2019-09-06T03:29:26.311Z",
-    "contributors": ["SphinxKnight", "wbamberg", "zziuni"]
-  },
   "Mozilla": {
     "modified": "2019-03-23T23:35:24.435Z",
     "contributors": ["zziuni", "ethertank"]
@@ -6162,10 +6158,6 @@
   "Web/Guide/Mobile": {
     "modified": "2019-05-30T06:59:50.297Z",
     "contributors": ["SDSkyKlouD", "Seia-Soto", "xfq"]
-  },
-  "Web/Guide/Mobile/Separate_sites": {
-    "modified": "2019-03-18T21:20:46.007Z",
-    "contributors": ["jinah1000"]
   },
   "Web/Guide/Parsing_and_serializing_XML": {
     "modified": "2019-03-23T22:16:47.020Z",
@@ -10892,10 +10884,6 @@
     "modified": "2020-10-29T08:46:10.367Z",
     "contributors": ["limkukhyun", "jung-han", "04SeoHyun", "nakyong"]
   },
-  "WebAssembly/Caching_modules": {
-    "modified": "2019-03-18T21:26:57.835Z",
-    "contributors": ["limkukhyun"]
-  },
   "WebAssembly/Concepts": {
     "modified": "2020-12-08T12:12:26.855Z",
     "contributors": [
@@ -11412,6 +11400,10 @@
     "modified": "2020-03-12T19:48:28.686Z",
     "contributors": ["SeonHyungJo"]
   },
+  "conflicting/Web/Progressive_web_apps": {
+    "modified": "2019-03-18T21:20:46.007Z",
+    "contributors": ["jinah1000"]
+  },
   "conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript": {
     "modified": "2019-01-16T14:19:09.939Z",
     "contributors": ["kmaglione", "Gilchris"]
@@ -11535,6 +11527,10 @@
   "orphaned/MDN/Tools/Page_regeneration": {
     "modified": "2020-09-30T16:51:25.059Z",
     "contributors": ["chrisdavidmills", "wbamberg", "Netaras"]
+  },
+  "orphaned/MDN/Yari": {
+    "modified": "2019-09-06T03:29:26.311Z",
+    "contributors": ["SphinxKnight", "wbamberg", "zziuni"]
   },
   "orphaned/Places/Custom_Containers": {
     "modified": "2020-01-12T05:08:34.067Z",
@@ -11958,6 +11954,10 @@
   "orphaned/Web/Security/Information_Security_Basics": {
     "modified": "2019-03-23T22:05:46.762Z",
     "contributors": ["daebum-lee"]
+  },
+  "orphaned/WebAssembly/Caching_modules": {
+    "modified": "2019-03-18T21:26:57.835Z",
+    "contributors": ["limkukhyun"]
   },
   "orphaned/Windows_and_menus_in_XULRunner": {
     "modified": "2019-01-16T15:50:48.799Z",

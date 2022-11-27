@@ -16,6 +16,7 @@ tags:
 translation_of: Web/HTML/Element/input/text
 original_slug: Web/HTML/Elemento/input/text
 ---
+
 {{HTMLSidebar}}
 
 Los elementos {{HTMLElement("input")}} de tipo {{HTMLAttrDef("text")}} crean campos de texto básicos de una sola línea.
@@ -37,7 +38,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
     </tr>
     <tr>
       <td><strong>Eventos</strong></td>
-      <td>{{event("change")}} y {{event("input")}}</td>
+      <td>[`change`](/es/docs/Web/Reference/Events/change) y [`input`](/es/docs/Web/Reference/Events/input)</td>
     </tr>
     <tr>
       <td><strong>Atributos comunes admitidos</strong></td>
@@ -404,14 +405,11 @@ Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los ar
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                       | Estado                               | Comentario         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', 'input.html#text-(type=text)-state-and-search-state-(type=search)', '&lt;input type="text"&gt;')}} | {{ Spec2('HTML WHATWG') }} | Definición inicial |
-| {{SpecName('HTML5.1', 'sec-forms.html#text-typetext-state-and-search-state-typesearch', '&lt;input type="text"&gt;')}}         | {{Spec2('HTML5.1')}}         | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 
-{{Compat("html.elements.input.input-text")}}
+{{Compat}}
 
 ## Ve también
 

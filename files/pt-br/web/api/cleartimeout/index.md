@@ -3,6 +3,7 @@ title: WindowTimers.clearTimeout()
 slug: Web/API/clearTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 ## Sumário
@@ -63,7 +64,7 @@ Passar um _ID_ inválido para `clearTimeout` não causa nenhum efeito (não lan�
 
 ## Compatibilidade
 
-{{Compat("api.WindowOrWorkerGlobalScope.clearTimeout")}}
+{{Compat}}
 
 ## Veja também
 

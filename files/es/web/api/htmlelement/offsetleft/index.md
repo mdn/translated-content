@@ -1,8 +1,8 @@
 ---
 title: HTMLElement.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
-translation_of: Web/API/HTMLElement/offsetLeft
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La propiedad de solo lectura **`HTMLElement.offsetLeft`** devuelve el número de _píxeles a la izquierda_ del elemento actual con respecto al nodo {{domxref("HTMLElement.offsetParent")}} .
@@ -55,11 +55,9 @@ This example shows a 'long' sentence that wraps within a div with a blue border,
 </script>
 ```
 
-## Specification
+## Especificaciones
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetleft', 'offsetLeft')}} | {{Spec2('CSSOM View')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

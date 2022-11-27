@@ -14,6 +14,7 @@ tags:
 translation_of: Web/HTML/Element/iframe
 original_slug: Web/HTML/Elemento/iframe
 ---
+
 {{HTMLSidebar}}
 
 El **elemento HTML `<iframe>`** (de inline frame) representa un {{Glossary("contexto de navegación")}} anidado, el cual permite incrustrar otra página HTML en la página actual.
@@ -170,17 +171,17 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
 Estos atributos están obsoletos y es posible que ya no sean compatibles con todos los agentes de usuario. No debe utilizarlos en contenido nuevo y tratar de eliminarlos del contenido existente.
 
-- {{htmlattrdef("align")}} {{deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("align")}} {{deprecated_inline("html4.01")}}, {{deprecated_inline("html5")}}
   - : La alineación de este elemento con respecto al contexto que lo rodea.
-- {{ htmlattrdef("frameborder") }} {{ obsolete_inline("html5")}}
+- {{ htmlattrdef("frameborder") }} {{ deprecated_inline("html5")}}
   - : El valor 1 (por defecto) indica al navegador establecer una frontera entre este marco y todo otro marco. El valor 0 indica que el navegador no establece una frontera entre este marco y otros marcos.
-- {{ htmlattrdef("longdesc") }} {{ obsolete_inline("html5")}}
+- {{ htmlattrdef("longdesc") }} {{ deprecated_inline("html5")}}
   - : Una URI de una descripción larga del marco. Debido al mal uso generalizado, esto no es útil para navegadores no visuales.
-- {{ htmlattrdef("marginheight") }} {{ obsolete_inline("html5") }}
+- {{ htmlattrdef("marginheight") }} {{ deprecated_inline("html5") }}
   - : La cantidad de espacio en píxeles entre el contenido del marco y sus márgenes superior e inferior.
-- {{ htmlattrdef("marginwidth") }} {{ obsolete_inline("html5") }}
+- {{ htmlattrdef("marginwidth") }} {{ deprecated_inline("html5") }}
   - : La cantidad de espacio en píxeles entre el contenido del marco y sus márgenes izquierdo y derecho.
-- {{ htmlattrdef("scrolling") }} {{ obsolete_inline("html5") }}
+- {{ htmlattrdef("scrolling") }} {{ deprecated_inline("html5") }}
 
   - : Indica cuándo el navegador debe proporcionar una barra de desplazamiento para el marco:
 
@@ -257,14 +258,7 @@ En este ejemplo, se muestra un mapa de Google en un marco.
 
 ## Especificaciones
 
-| Specification                                                                                                                                    | Status                                   | Comment                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | --------------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrerpolicy attribute')}} | {{Spec2('Referrer Policy')}}     | Added the `referrerpolicy` attribute.                     |
-| {{SpecName('HTML WHATWG', 'iframe-embed-object.html#the-iframe-element', '&lt;iframe&gt;')}}                     | {{Spec2('HTML WHATWG')}}         |                                                           |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-iframe-element', '&lt;iframe&gt;')}}                         | {{Spec2('HTML5 W3C')}}             |                                                           |
-| {{SpecName('HTML4.01', 'present/frames.html#h-16.5', '&lt;iframe&gt;')}}                                                 | {{Spec2('HTML4.01')}}             |                                                           |
-| {{SpecName('Screen Orientation')}}                                                                                                     | {{Spec2('Screen Orientation')}} | Adds `allow-orientation-lock` to the `sandbox` attribute. |
-| {{SpecName('Presentation','#sandboxing-and-the-allow-presentation-keyword','allow-presentation')}}             | {{Spec2('Presentation')}}         | Adds `allow-presentation` to the `sandbox` attribute      |
+{{Specifications}}
 
 ## Notes
 

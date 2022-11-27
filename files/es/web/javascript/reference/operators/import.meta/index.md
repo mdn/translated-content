@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Operators/import.meta
 translation_of: Web/JavaScript/Reference/Statements/import.meta
 original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
+
 {{JSSidebar("Statements")}}
 
 El objeto **`import.meta`** expone el contenido especifico de la metadata al módulo JavaScript. Este contiene informacion sobre el módulo, como por ejemplo, la URL del mismo.
@@ -78,7 +79,7 @@ Tal argumento específico del archivo podria ser complementario al usado en toda
 
 ## Browser compatibility
 
-{{Compat("javascript.statements.import_meta")}}
+{{Compat}}
 
 ## Ver también
 

@@ -2,6 +2,7 @@
 title: Fetch API
 slug: Web/API/Fetch_API
 ---
+
 {{DefaultAPISidebar("Fetch API")}}{{ SeeCompatTable() }}
 
 A Fetch API fornece uma interface para buscar recursos (por exemplo, em toda a rede). Parecerá familiar para qualquer pessoa que tenha usado XMLHttpRequest, porém a nova API oferece um conjunto de recursos mais poderoso e flexível.
@@ -46,7 +47,7 @@ Você pode criar um pedido e uma resposta diretamente usando os construtores {{d
 
 ## Navegadores Compatíveis
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat}}
 
 ## Veja também
 

@@ -8,7 +8,7 @@ original_slug: Web/API/AudioContext/decodeAudioData
 
 `decodeAudioData()` は {{ domxref("BaseAudioContext") }} のメソッドで、 {{jsxref("ArrayBuffer")}} に書き込まれた音声ファイルデータを非同期にデコードするために使用されます。この場合、 `ArrayBuffer` は {{domxref("XMLHttpRequest")}} と {{domxref("FileReader")}} から読み込まれます。デコードされた {{domxref("AudioBuffer")}} は {{domxref("AudioContext")}} のサンプリングレートにリサンプリングされ、コールバックやプロミスに渡されます。
 
-この方法は、オーディオトラックからウェブ音声 API 用のオーディオソースを作成する際に推奨される方法です。この方法は、音声ファイルの断片的なデータではなく、完全なファイルデータに対してのみ動作します。
+この方法は、オーディオトラックからウェブオーディオ API 用のオーディオソースを作成する際に推奨される方法です。この方法は、音声ファイルの断片的なデータではなく、完全なファイルデータに対してのみ動作します。
 
 ## 構文
 
@@ -122,4 +122,4 @@ ctx.decodeAudioData(audioData).then(function(decodedData) {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

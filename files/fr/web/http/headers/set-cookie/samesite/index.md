@@ -75,7 +75,7 @@ Même si vous pouvez compter sur la valeur par défaut `SameSite=Lax` des naviga
 Set-Cookie: flavor=choco; SameSite=Lax
 ```
 
-## **Exemples**
+## Exemples
 
 ```
 RewriteEngine on

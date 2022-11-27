@@ -1,8 +1,8 @@
 ---
 title: Evolución del protocolo HTTP
 slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
-translation_of: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 ---
+
 {{HTTPSidebar}}
 
 **HTTP** es el protocolo en el que se basa la Web. Fue inventado por Tim Berners-Lee entre los años 1989-1991, HTTP ha visto muchos cambios, manteniendo la mayor parte de su simplicidad y desarrollando su flexibilidad. HTTP ha evolucionado, desde un protocolo destinado al intercambio de archivos en un entorno de un laboratorio semi-seguro, al actual laberinto de Internet, sirviendo ahora para el intercambio de imágenes, vídeos en alta resolución y en 3D.

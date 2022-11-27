@@ -72,9 +72,7 @@ console.log(uint8.find(isPrime)); // 5
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.find', '%TypedArray%.prototype.find')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -34,9 +34,7 @@ class MyArrayBuffer extends ArrayBuffer {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: <optgroup>
 slug: Web/HTML/Element/optgroup
 ---
+
 ## Sumário
 
 Em um Formulário Web, o elemento HTML `<optgroup>` cria um agrupamento de opções dentro do elemento {{HTMLElement("select")}}.

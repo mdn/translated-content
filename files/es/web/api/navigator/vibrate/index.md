@@ -1,8 +1,8 @@
 ---
 title: window.navigator.vibrate
 slug: Web/API/Navigator/vibrate
-translation_of: Web/API/Navigator/vibrate
 ---
+
 {{ApiRef}}{{SeeCompatTable}}
 
 ## Resumen

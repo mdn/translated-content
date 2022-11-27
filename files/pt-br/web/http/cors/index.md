@@ -3,6 +3,7 @@ title: Cross-Origin Resource Sharing (CORS)
 slug: Web/HTTP/CORS
 original_slug: Web/HTTP/Controle_Acesso_CORS
 ---
+
 {{HTTPSidebar}}
 
 {{Glossary("CORS")}} - Cross-Origin Resource Sharing (Compartilhamento de recursos com origens diferentes) é um mecanismo que usa cabeçalhos adicionais {{Glossary("HTTP")}} para informar a um navegador que permita que um aplicativo Web seja executado em uma origem (domínio) com permissão para acessar recursos selecionados de um servidor em uma origem distinta. Um aplicativo Web executa uma **requisição _cross-origin_ HTTP** ao solicitar um recurso que tenha uma origem diferente (domínio, protocolo e porta) da sua própria origem.

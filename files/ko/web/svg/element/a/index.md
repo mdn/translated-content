@@ -7,6 +7,7 @@ tags:
   - SVG Anchor 엘리먼트
 translation_of: Web/SVG/Element/a
 ---
+
 {{SVGRef}}
 
 The **\<a>** SVG element creates a hyperlink to other web pages, files, locations within the same page, email addresses, or any other URL.

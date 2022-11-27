@@ -533,7 +533,7 @@
     "modified": "2019-05-27T03:46:29.561Z",
     "contributors": ["asael2"]
   },
-  "Glossary/Grid_Rows": {
+  "Glossary/Grid_Row": {
     "modified": "2019-03-18T21:23:35.644Z",
     "contributors": ["Xino"]
   },
@@ -2760,17 +2760,6 @@
       "Nanomo",
       "Eqx",
       "Jorolo"
-    ]
-  },
-  "MDN/Yari": {
-    "modified": "2019-09-09T15:52:33.535Z",
-    "contributors": [
-      "SphinxKnight",
-      "clarii",
-      "wbamberg",
-      "Jeremie",
-      "Diio",
-      "atlas7jean"
     ]
   },
   "Mozilla": {
@@ -15427,6 +15416,17 @@
   "orphaned/MDN/Tools/Template_editing": {
     "modified": "2020-09-30T16:48:19.234Z",
     "contributors": ["chrisdavidmills", "wbamberg", "juan-ferrer-toribio"]
+  },
+  "orphaned/MDN/Yari": {
+    "modified": "2019-09-09T15:52:33.535Z",
+    "contributors": [
+      "SphinxKnight",
+      "clarii",
+      "wbamberg",
+      "Jeremie",
+      "Diio",
+      "atlas7jean"
+    ]
   },
   "orphaned/Migrar_aplicaciones_desde_Internet_Explorer_a_Mozilla": {
     "modified": "2019-03-23T23:59:56.566Z",

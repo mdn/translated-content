@@ -3,6 +3,7 @@ title: 이건 MDN에 있나요?
 slug: MDN/Writing_guidelines/What_we_write
 original_slug: MDN/Guidelines/Does_this_belong_on_MDN
 ---
+
 {{MDNSidebar}}
 
 무엇인가를 문서로 남겨두겠다는 생각을 하기 시작했다면, 그 문서를 어디에 둘지도 고민해보았을 겁니다. 문서가 위치할 수 있는 몇 가지 장소가 있고, MDN이 웹에서 가장 큰 문서 저장소 중 하나이지만 유일한 옵션은 아닙니다. 또한 소스 코드에 문서를 보관해둘 수도 있고, [Mozilla 위키](https://wiki.mozilla.org/)나 git 저장소의 README 파일에 저장해 두어도 좋습니다. 이 글에서는 어느 방법이 여러분들의 문서와 어울릴지를 판단하는데 도움이 되기 위해서 쓰였습니다.

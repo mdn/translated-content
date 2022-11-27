@@ -1,8 +1,8 @@
 ---
 title: Stylesheet.deleteRule
 slug: Web/API/CSSStyleSheet/deleteRule
-translation_of: Web/API/CSSStyleSheet/deleteRule
 ---
+
 {{ ApiRef() }}
 
 ### Resumen

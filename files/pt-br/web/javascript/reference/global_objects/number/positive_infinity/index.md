@@ -2,6 +2,7 @@
 title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 ---
+
 {{JSRef}}
 
 A propriedade **`Number.POSITIVE_INFINITY`** representa o valor positivo infinito.

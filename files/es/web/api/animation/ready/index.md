@@ -1,15 +1,8 @@
 ---
 title: Animation.ready
 slug: Web/API/Animation/ready
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Ready Promise
-  - Reference
-translation_of: Web/API/Animation/ready
 ---
+
 {{ APIRef("Web Animations") }}
 
 La propiedad de solo-lectura `Animation.ready` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve un {{jsxref("Promise")}} que se resuelve cuando la animación está lista para reproducirse. Una nueva 'promesa' es creada cada vez que la animación entra en [play state(estado de reproducción)](/es/docs/Web/API/Animation/playState) `"pending"(pendiente)` así como si la reproducción es cancelada, ya que en ambos escenarios, la animación estará lista para ser reiniciada.

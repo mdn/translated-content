@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/Java
 original_slug: Глоссарий/Java
 ---
+
 Java — {{glossary("Compile", "компилируемый")}}, {{glossary("OOP", "объектно-ориентированный")}} и легко переносимый язык {{Glossary("computer programming", "программирования")}}.
 
 Java {{glossary("Static typing", "статически типизирован")}} и имеет C-подобный синтаксис. Содержит большую библиотеку полезных функций — инструменты разработчика Java (Java Software Development Kit, SDK).

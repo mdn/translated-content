@@ -2,6 +2,7 @@
 title: Crypto.subtle
 slug: Web/API/Crypto/subtle
 ---
+
 {{APIRef("Web Crypto API")}}
 
 A prorpiedade **`Crypto.subtle`** de apenas leitura retorna como objeto {{domxref("SubtleCrypto")}} permitindo exercer operações de criptografia.

@@ -92,9 +92,7 @@ Reflect.setPrototypeOf(p2, newProto); // throws new Error("custom error")
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-setprototypeof-v', '[[SetPrototypeOf]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

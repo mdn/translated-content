@@ -13,6 +13,7 @@ tags:
   - TopicStub
 translation_of: Web/API/IDBIndex
 ---
+
 {{APIRef("IndexedDB")}}
 
 `IDBIndex` interface of the [IndexedDB API](/en/IndexedDB) provides asynchronous access to an [index](/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_index) in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.

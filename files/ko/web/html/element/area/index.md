@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/area
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<area>` 요소**는 이미지의 핫스팟 영역을 정의하고 {{glossary("hyperlink", "하이퍼링크")}}를 추가할 수 있습니다. {{htmlelement("map")}} 요소 안에서만 사용할 수 있습니다.
 

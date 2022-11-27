@@ -6,6 +6,7 @@ tags:
   - 상태 코드
 translation_of: Web/HTTP/Status/404
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`404 Not Found`** 클라이언트 오류 응답 코드는 서버가 요청받은 리소스를 찾을 수 없다는 것을 의미합니다. 404 페이지를 띄우는 링크는 대체로 브로큰 링크(broken link) 또는 데드 링크(dead link)라고 부르며, [link rot](https://en.wikipedia.org/wiki/Link_rot) 대상일 수도 있습니다.

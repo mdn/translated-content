@@ -2,6 +2,7 @@
 title: Window.applicationCache
 slug: Web/API/Window/applicationCache
 ---
+
 {{APIRef}}
 
 ## Sumário
@@ -20,7 +21,7 @@ cache = window.applicationCache
 
 ## Especificação
 
-- {{spec("http://www.w3.org/TR/2008/WD-html5-20080122/#appcache","HTML 5","WD")}}
+- {{spec("https://www.w3.org/TR/2008/WD-html5-20080122/#appcache","HTML 5","WD")}}
 
 ## Veja também
 

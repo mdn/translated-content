@@ -34,4 +34,4 @@ navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus
 
 ## ブラウザーの互換性
 
-{{Compat("api.PermissionStatus.onchange")}}
+{{Compat}}

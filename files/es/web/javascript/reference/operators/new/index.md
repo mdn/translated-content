@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/new
 original_slug: Web/JavaScript/Referencia/Operadores/new
 ---
+
 {{jsSidebar("Operators", "Operadores")}}
 
 El **operador `new`** permite a los desarrolladores crear una instancia de un tipo de objeto definido por el usuario o de uno de los tipos de objeto integrados que tiene un función constructora.

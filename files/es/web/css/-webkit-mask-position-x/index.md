@@ -1,14 +1,8 @@
 ---
 title: '-webkit-mask-position-x'
 slug: Web/CSS/-webkit-mask-position-x
-tags:
-  - CSS
-  - Máscaras CSS
-  - No estándar(2)
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/-webkit-mask-position-x
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

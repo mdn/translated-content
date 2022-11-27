@@ -12,6 +12,7 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/strong
 ---
+
 Элемент **сильной значимости** (**`<strong>`)** указывает на то, что его содержание имеет большое значение, серьёзность или срочность. Браузеры обычно отображают содержимое жирным шрифтом.
 
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковой контент](/ru/docs/Web/Guide/HTML/Content_categories), [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories), явный контент.                                                               |

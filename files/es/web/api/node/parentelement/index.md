@@ -1,15 +1,9 @@
 ---
 title: Node.parentElement
 slug: Web/API/Node/parentElement
-tags:
-  - API
-  - DOM
-  - NecesitaCompatiblidadNavegador
-  - Nodo
-  - Propiedad
-translation_of: Web/API/Node/parentElement
 original_slug: Web/API/Node/elementoPadre
 ---
+
 {{APIRef("DOM")}}
 
 La propiedad de sólo lectura de **`Nodo.parentElement`** devuelve el nodo padre del DOM {{domxref("Element")}}, o `null`, si el nodo no tiene padre o si el padre no es un {{domxref("Element")}} DOM .

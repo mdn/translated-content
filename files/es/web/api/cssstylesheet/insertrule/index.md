@@ -1,10 +1,8 @@
 ---
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
-tags:
-  - CSSStyleSheet
-translation_of: Web/API/CSSStyleSheet/insertRule
 ---
+
 {{APIRef}}
 
 El método **`CSSStyleSheet.insertRule()`** inserta una nueva regla de estilo en la actual hoja de estilos.

@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/filter
 ---
+
 {{JSRef}}
 
 El método **`filter()`** crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.
@@ -197,11 +198,7 @@ if (!Array.prototype.filter){
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.20', 'Array.prototype.filter')}}                     | {{Spec2('ES5.1')}}     | Definición Inicial. Implementado en JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.filter', 'Array.prototype.filter')}}         | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.filter', 'Array.prototype.filter')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

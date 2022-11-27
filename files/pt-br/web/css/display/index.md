@@ -2,6 +2,7 @@
 title: display
 slug: Web/CSS/display
 ---
+
 {{CSSRef}}
 
 ## Resumo

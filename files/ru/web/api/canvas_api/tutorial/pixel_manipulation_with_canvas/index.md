@@ -8,6 +8,7 @@ tags:
   - Холст
 translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
 
 До сих пор мы не смотрели на фактические пиксели нашего объекта canvas (далее "холст"). С объектом `ImageData` вы можете напрямую читать и писать массив данных для управления пиксельными данными. Мы также рассмотрим, как можно сгладить сглаживание изображения (сглаживание) и как сохранить изображения с вашего холста.

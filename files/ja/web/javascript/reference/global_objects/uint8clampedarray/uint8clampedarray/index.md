@@ -63,9 +63,7 @@ var uintc8 = new Uint8ClampedArray(iterable);
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-constructors', 'TypedArray constructors')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

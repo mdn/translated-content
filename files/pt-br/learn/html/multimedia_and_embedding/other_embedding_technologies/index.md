@@ -3,6 +3,7 @@ title: Do objeto ao iframe - outras tecnologias de incorporação
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 original_slug: Aprender/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
 Até agora você já deve ter aprendido a incorporar coisas em suas páginas da web, incluindo imagens, vídeo e áudio. Neste ponto, gostaria de ter um pouco de um passo para o lado, olhando para alguns elementos que permitem incorporar uma ampla variedade de tipos de conteúdo em suas páginas: as [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe), [`<embed>`](/pt-BR/docs/Web/HTML/Element/embed)e [`<object>`](/pt-BR/docs/Web/HTML/Element/object)elementos. `<iframe>`s são para incorporar outras páginas da Web, e as outras duas permitem incorporar PDFs, SVG e até Flash - uma tecnologia que está saindo, mas que você ainda verá semi-regularmente.

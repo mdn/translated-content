@@ -1,16 +1,9 @@
 ---
 title: WebAssembly
 slug: WebAssembly/JavaScript_interface
-tags:
-  - API
-  - Experimental
-  - JavaScript
-  - Objeto
-  - Referencia
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
+
 {{JSRef}}
 
 El objeto **`WebAssembly`** de JavaScript actua como un namespace para todas las funcionalidades realcionados con [WebAssembly](/es/docs/WebAssembly).
@@ -81,9 +74,7 @@ fetch('simple.wasm').then(response =>
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentario                       |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------------------- |
-| {{SpecName('WebAssembly JS', '#the-webassembly-object', 'WebAssembly')}} | {{Spec2('WebAssembly JS')}} | Definición inicial del borrador. |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

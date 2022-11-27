@@ -2,6 +2,7 @@
 title: Date.prototype.getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 ## Resumo

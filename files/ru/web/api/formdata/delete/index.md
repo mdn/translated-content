@@ -3,6 +3,7 @@ title: FormData.delete()
 slug: Web/API/FormData/delete
 translation_of: Web/API/FormData/delete
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 Метод **`delete()`** интерфейса {{domxref("FormData")}} удаляет ключ и его значение(-ия) из объекта `FormData`.

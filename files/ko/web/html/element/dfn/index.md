@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/dfn
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<dfn>` 요소**는 현재 맥락이나 문장에서 정의하고 있는 용어를 나타냅니다. `<dfn>`에서 가장 가까운 {{htmlelement("p")}}, {{htmlelement("dt")}}/{{htmlelement("dd")}} 쌍, {{htmlelement("section")}} 조상 요소를 용어 정의로 간주합니다.
 

@@ -7,6 +7,7 @@ tags:
   - 웹 스토리지
 translation_of: Web/API/Storage/key
 ---
+
 {{APIRef("Web Storage API")}}
 
 {{domxref("Storage")}} 인터페이스의 `key()` 메서드는 숫자 `n`이 전달되면 Storage의 `n`번째 key 이름을 반환합니다. key의 순서는 user-agent에 의해 정의되므로 이 순서에 의존성이 있어서는 안됩니다.

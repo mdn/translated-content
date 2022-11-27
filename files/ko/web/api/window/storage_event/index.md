@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/WindowEventHandlers/onstorage
 original_slug: Web/API/WindowEventHandlers/onstorage
 ---
+
 <div class="syntaxbox">{{APIRef}}</div>
 
 {{domxref("WindowEventHandlers")}} 믹스인의 **`onstorage`** 속성은 [`storage`](/ko/docs/Web/API/Window/storage_event) 이벤트를 처리하는 {{event("Event_handlers", "event handler")}}입니다.

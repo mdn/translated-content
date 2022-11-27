@@ -2,6 +2,7 @@
 title: String.prototype.toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 ---
+
 {{JSRef}}
 
 O método `toUpperCase()` retorna o valor da string original convertido em letras maiúsculas.

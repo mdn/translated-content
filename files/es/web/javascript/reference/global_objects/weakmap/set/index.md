@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/set
 ---
+
 {{JSRef}}
 
 El método **`set()`** añade un nuevo elemento con su `key` y `value` específicos al objeto `WeakMap`.
@@ -49,10 +50,7 @@ wm.set(obj, 'baz');
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                       | Comentarios         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}} | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

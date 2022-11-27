@@ -2,6 +2,7 @@
 title: <input type="button">
 slug: Web/HTML/Element/Input/button
 ---
+
 {{HTMLSidebar}}
 
 Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como um simples botão, que podem ser programados para controlar funcionalidades customizadas em qualquer lugar de uma página web quando for atribuído um evento (tipicamente para um evento {{event("click")}}).
@@ -316,7 +317,7 @@ draw();
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.input.input-button")}}
+{{Compat}}
 
 ## Veja também
 

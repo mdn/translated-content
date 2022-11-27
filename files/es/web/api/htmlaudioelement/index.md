@@ -1,13 +1,8 @@
 ---
 title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
-tags:
-  - DOM
-  - HTML
-  - Media
-  - para_revisar
-translation_of: Web/API/HTMLAudioElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 La interfaz `HTMLAudioElement` proporciona acceso a las propiedades de los elementos {{ HTMLElement("audio") }}, así como métodos para manipularlos. Se deriva de la interfaz [`HTMLMediaElement`](/en/DOM/HTMLMediaElement); se implementa por medio de `nsIDOMHTMLMediaElement`.

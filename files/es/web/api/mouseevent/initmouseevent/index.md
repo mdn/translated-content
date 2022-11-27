@@ -1,10 +1,8 @@
 ---
 title: event.initMouseEvent
 slug: Web/API/MouseEvent/initMouseEvent
-tags:
-  - Referencia_DOM_de_Gecko
-translation_of: Web/API/MouseEvent/initMouseEvent
 ---
+
 {{ApiRef("DOM Events")}}{{deprecated_header}}
 
 > **Nota:** **No utilize este método porque está obsoleto.**

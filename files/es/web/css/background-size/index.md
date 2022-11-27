@@ -1,13 +1,8 @@
 ---
 title: background-size
 slug: Web/CSS/background-size
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/background-size
 ---
+
 {{ CSSRef() }}
 
 ## Resumen
@@ -91,9 +86,7 @@ Tenga en cuenta que particularmente no es recomendado usar una dimensión de pí
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estados                                  | Comentario |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Backgrounds', '#the-background-size', 'background-size') }} | {{ Spec2('CSS3 Backgrounds') }} |            |
+{{Specifications}}
 
 ## Compatibilidad de navegador
 

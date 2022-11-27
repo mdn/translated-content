@@ -1,8 +1,8 @@
 ---
 title: Métodos de petición HTTP
 slug: Web/HTTP/Methods
-translation_of: Web/HTTP/Methods
 ---
+
 {{HTTPSidebar}}
 
 HTTP define un conjunto de **métodos de petición** para indicar la acción que se desea realizar para un recurso determinado. Aunque estos también pueden ser sustantivos, estos métodos de solicitud a veces son llamados _HTTP verbs_. Cada uno de ellos implementan una semántica diferente, pero algunas características similares son compartidas por un grupo de ellos: ej. un _request method_ puede ser {{glossary("safe")}}, {{glossary("idempotent")}}, o {{glossary("cacheable")}}.
@@ -35,7 +35,7 @@ HTTP define un conjunto de **métodos de petición** para indicar la acción que
 
 ## Compatibilidad del navegador
 
-{{Compat("http/methods")}}
+{{Compat}}
 
 ## Ver también
 

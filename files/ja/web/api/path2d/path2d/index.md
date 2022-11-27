@@ -76,7 +76,7 @@ ctx.fill(p);
 
 ## ブラウザー実装状況
 
-{{Compat("api.Path2D")}}
+{{Compat}}
 
 ## 関連情報
 

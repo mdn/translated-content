@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ---
+
 {{JSRef}}
 
 Объект **`SharedArrayBuffer`** подобен ArrayBuffer, то есть это буфер фиксированной длины, использующийся для хранения любых бинарных данных. Главное отличие `SharedArrayBuffer` от `ArrayBuffer` заключается в том, что он используется для создания разделяемой области памяти. В отличие от `ArrayBuffer` `SharedArrayBuffer` не может быть откреплён от соответствующей ему области памяти.

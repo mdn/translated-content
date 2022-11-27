@@ -2,6 +2,7 @@
 title: font-size
 slug: Web/CSS/font-size
 ---
+
 {{CSSRef}}
 
 A propriedade **`font-size`** no [CSS](/pt-BR/docs/Web/CSS) estabelece o tamanho da fonte.

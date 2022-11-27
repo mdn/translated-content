@@ -1,12 +1,8 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
-tags:
-  - CSS
-  - Cajas Flexibles de CSS
-  - Propiedad de CSS
-translation_of: Web/CSS/flex-basis
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -169,13 +165,11 @@ flex-basis: unset;
 
 ### Resultados
 
-{{EmbedLiveSample('Example', '860', '360', '', 'Web/CSS/flex-basis')}}
+{{EmbedLiveSample('', '860', '360')}}
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox', '#propdef-flex-basis', 'flex-basis')}} | {{Spec2('CSS3 Flexbox')}} | Definición Inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

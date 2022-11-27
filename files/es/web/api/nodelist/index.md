@@ -1,13 +1,8 @@
 ---
 title: NodeList
 slug: Web/API/NodeList
-tags:
-  - API
-  - DOM
-  - Interfaz
-  - NodeList
-translation_of: Web/API/NodeList
 ---
+
 {{APIRef("DOM")}}
 
 Los objetos **`NodeList`** son colecciones de nodos como los devueltos por propiedades como {{domxref ("Node.childNodes")}} y el método {{domxref ("document.querySelectorAll ()")}}..
@@ -82,12 +77,7 @@ Array.prototype.forEach.call(list, function (item) {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario          |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}}             | {{ Spec2('DOM WHATWG') }} |                     |
-| {{SpecName('DOM3 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM3 Core') }} |                     |
-| {{SpecName('DOM2 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM2 Core') }} |                     |
-| {{SpecName('DOM1', 'level-one-core.html#ID-536297177', 'NodeList')}} | {{ Spec2('DOM1') }}         | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

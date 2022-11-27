@@ -10,6 +10,7 @@ tags:
   - localStorage
 translation_of: Web/API/Window/localStorage
 ---
+
 {{APIRef()}}
 
 La propiedad de sólo lectura **`localStorage`** te permite acceder al objeto local {{DOMxRef("Storage")}}; los datos persisten almacenados entre de las diferentes sesiones de navegación. localStorage es similar a [`sessionStorage`](/es/docs/Web/API/Window.sessionStorage). La única diferencia es que, mientras los datos almacenados en localStorage no tienen fecha de expiración, los datos almacenados en sessionStorage son eliminados cuando finaliza la sesion de navegación - lo cual ocurre cuando se cierra la página.
@@ -66,9 +67,7 @@ localStorage.clear();
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('Web Storage', '#dom-localstorage', 'localStorage')}} | {{Spec2('Web Storage')}} |            |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

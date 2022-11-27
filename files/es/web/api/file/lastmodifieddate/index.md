@@ -1,17 +1,8 @@
 ---
 title: File.lastModifiedDate
 slug: Web/API/File/lastModifiedDate
-tags:
-  - API
-  - Archivo
-  - Archivos
-  - Deprecado
-  - File API
-  - Propiedad
-  - Referencia
-  - Solo lectura
-translation_of: Web/API/File/lastModifiedDate
 ---
+
 {{APIRef("File API") }} {{deprecated_header}}
 
 La propiedad de solo lectura **`File.lastModifiedDate`** retorna la fecha de ultima modificación del archivo. Archivos sin una ultima fecha de modificación conocida retornan la fecha actual.

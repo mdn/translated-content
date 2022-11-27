@@ -9,6 +9,7 @@ tags:
   - URL API
 translation_of: Web/API/URL/createObjectURL
 ---
+
 {{APIRef("URL API")}}
 
 **`URL.createObjectURL()`** 정적 메서드는 주어진 객체를 가리키는 URL을 {{domxref("DOMString")}}으로 반환합니다. 해당 URL은 자신을 생성한 창의 {{domxref("document")}}가 사라지면 함께 무효화됩니다.

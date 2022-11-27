@@ -1,12 +1,8 @@
 ---
 title: inherit
 slug: Web/CSS/inherit
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/inherit
 ---
+
 << [Volver](es/Gu%c3%ada_de_referencia_de_CSS)
 
 ### Resumen

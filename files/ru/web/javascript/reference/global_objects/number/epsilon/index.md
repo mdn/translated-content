@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
+
 {{JSRef}}
 
 Свойство **`Number.EPSILON`** представляет собой разницу между единицей и наименьшим значением, большим единицы, которое может быть представлено типом {{jsxref("Number")}}.

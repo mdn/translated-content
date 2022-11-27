@@ -1,7 +1,6 @@
 ---
 title: Propiedades lógicas para flotantes y posicionamiento
 slug: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
-translation_of: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 ---
 {{CSSRef}}
 

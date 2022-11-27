@@ -3,6 +3,7 @@ title: Criando e editando páginas
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
+
 {{MDNSidebar}}
 
 As duas tarefas mais básicas sobre MDN que quase todo contribuinte MDN irá eventualmente executar são para editar uma página já existente ou criar uma nova. Este artigo aborda os conceitos básicos de como fazer cada uma delas.

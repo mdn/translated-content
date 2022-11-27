@@ -1,16 +1,8 @@
 ---
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
-translation_of: Web/HTTP/Headers/X-Frame-Options
-tags:
-  - Gecko
-  - HAProxy
-  - HTTP
-  - Response Header
-  - Security
-  - nginx
-browser-compat: http.headers.X-Frame-Options
 ---
+
 {{HTTPSidebar}}
 
 El encabezado de respuesta [HTTP](/es/docs/Web/HTTP) **`X-Frame-Options`** puede ser usado para indicar si debería permitírsele a un navegador renderizar una página en un {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} u {{HTMLElement("object")}}. Las páginas web pueden usarlo para evitar ataques de [click-jacking](/en-US/docs/Web/Security/Types_of_attacks#click-jacking), asegurándose de que su contenido no es embebido en otros sitios.

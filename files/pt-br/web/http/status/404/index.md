@@ -2,6 +2,7 @@
 title: 404 Not Found
 slug: Web/HTTP/Status/404
 ---
+
 {{HTTPSidebar}}
 
 A resposta de erro **`404 Not Found`** indica que o servidor não conseguiu encontrar o recurso solicitado. Normalmente, links que levam para uma página 404 estão quebrados ou desativados e podem estar sujeitos a [link rot](https://en.wikipedia.org/wiki/Link_rot).

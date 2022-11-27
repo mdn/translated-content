@@ -2,6 +2,7 @@
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
 ---
+
 {{jsSidebar("Objects")}}
 
 `A função global isFinite()` determina se o valor transmitido é um número finito. Se necessário, o parâmetro é primeiro convertido a um número.

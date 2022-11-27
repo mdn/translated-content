@@ -146,9 +146,7 @@ if (!Int8Array.__proto__.from) {
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.from', '%TypedArray%.from')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

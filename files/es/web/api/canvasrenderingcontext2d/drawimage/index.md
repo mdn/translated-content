@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContect2D
-  - Métodos
-  - Referencia
-translation_of: Web/API/CanvasRenderingContext2D/drawImage
 ---
+
 {{APIRef}}
 
 El método **`CanvasRenderingContext2D.drawImage()`** de la API Canvas 2D proporciona diferentes formas para dibujar una imagen dentro de canvas.
@@ -123,9 +117,7 @@ window.addEventListener("load", drawCanvas);
 
 ## Especificaciones
 
-| Especificación                                                                                                                                   | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-drawimage", "CanvasRenderingContext2D.drawImage")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

@@ -3,6 +3,9 @@ title: '<fieldset>: The Field Set element'
 slug: Web/HTML/Element/fieldset
 translation_of: Web/HTML/Element/fieldset
 ---
+
+{{HTMLSidebar}}
+
 **HTML-элемент `<fieldset>`** используется для группировки нескольких элементов управления в веб-форме.
 
 {{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}
@@ -105,5 +108,3 @@ translation_of: Web/HTML/Element/fieldset
   - {{HTMLElement("output")}}
   - {{HTMLElement("progress")}}
   - {{HTMLElement("meter")}}
-
-{{HTMLRef}}

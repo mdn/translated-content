@@ -1,11 +1,9 @@
 ---
 title: Trazado de una tabla HTML mediante JavaScript y la Interface DOM
-slug: >-
-  Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-translation_of: >-
-  Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 original_slug: Trazado_de_una_tabla_HTML_mediante_JavaScript_y_la_Interface_DOM
 ---
+
 ## Introducción
 
 Este artículo es un resumen de algunos métodos DOM nivel 1 poderosos y fundamentales así como una descripción de cómo utilizarlos utilizando Javascript. Aprenderás a crear, accesar, controlar, y remover elementos HTML dinámicamente. Los métodos DOM presentados aquí no son específicos de HTML; también aplican para XML. Las demostraciones aquí proporcionadas funcionarán en cualquier navegador moderno, incluyendo todas las versiones de Firefox e IE 5+.

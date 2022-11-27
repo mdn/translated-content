@@ -3,6 +3,7 @@ title: vertical-align
 slug: Web/CSS/vertical-align
 translation_of: Web/CSS/vertical-align
 ---
+
 {{CSSRef}}
 
 Свойство [CSS](/ru/docs/Web/CSS) `vertical-align` описывает вертикальное позиционирование строчных (inline), строчно-блочных (inline-block) элементов или ячеек таблицы (table-cell).

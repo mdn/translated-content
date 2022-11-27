@@ -2,6 +2,7 @@
 title: '<tfoot>: Elemento para o rodapé da tabela'
 slug: Web/HTML/Element/tfoot
 ---
+
 {{HTMLSidebar}}
 
 O **`<tfoot>` **é um **elemento HTML** que define um conjunto de linhas as quais farão parte do rodapé de uma tabela HTML

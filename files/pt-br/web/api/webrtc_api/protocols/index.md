@@ -2,6 +2,7 @@
 title: Introdução aos protocolos WebRTC
 slug: Web/API/WebRTC_API/Protocols
 ---
+
 {{WebRTCSidebar}}
 
 Este artigo apresenta os protocolos sobre os quais a API WebRTC é construída.

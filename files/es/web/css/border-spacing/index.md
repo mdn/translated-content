@@ -1,12 +1,8 @@
 ---
 title: border-spacing
 slug: Web/CSS/border-spacing
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/border-spacing
 ---
+
 << [Volver](es/Gu%c3%ada_de_referencia_de_CSS)
 
 ### Resumen

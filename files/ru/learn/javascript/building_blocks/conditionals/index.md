@@ -11,6 +11,7 @@ tags:
   - Статья
 translation_of: Learn/JavaScript/Building_blocks/conditionals
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
 Во многих языках программирования код должен иметь возможность принимать решения на основе введённых пользователем данных. Например, в игре, если у пользователя осталось 0 жизней, то игра завершается. В приложении о погоде утром отображается восход солнца, а вечером звезды и луна. В этой статье мы рассмотрим как в JavaScript работают так называемые "условия".

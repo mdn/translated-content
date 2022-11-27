@@ -2,6 +2,7 @@
 title: font-kerning
 slug: Web/CSS/font-kerning
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`font-kerning`** controla o o uso da informação de kerning, que é, o controle de como as letras serão espaçadas. A informação de kerning é armazenada na fonte, e se a fonte é _well-kerned_, essa caracteristica permite que o espaçamento entre caracteres seja muito parecido, independente dos caracteres.

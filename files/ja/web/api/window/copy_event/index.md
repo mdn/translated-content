@@ -46,7 +46,7 @@ window.addEventListener('copy', (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.copy_event")}}
+{{Compat}}
 
 ## 関連情報
 

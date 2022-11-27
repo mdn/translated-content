@@ -1,8 +1,8 @@
 ---
 title: Uso de CSS transforms
 slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
-translation_of: Web/CSS/CSS_Transforms/Using_CSS_transforms
 ---
+
 {{CSSRef}}
 
 Al modificar las coordenadas del espacio, las transformaciones CSS permiten cambiar la posición del contenido afectado sin interrumpir el flujo normal. Se implementan haciendo uso de un conjunto de propiedades CSS que permiten aplicar transformaciones lineales a elementos HTML. Estas transformaciones incluyen rotar, torcer, escalar y desplazar en plano o en un espacio 3D.
@@ -20,7 +20,7 @@ Se usan dos propiedades principalmente para definir las transformaciones CSS: {{
 
 Esta es una imagen inalterada del logo de MDN:
 
-![MDN Logo](https://mdn.mozillademos.org/files/12539/Screen%20Shot%202016-02-16%20at%2015.53.54.png)
+![MDN Logo](logo.png)
 
 ### Ejemplo: Rotando
 
@@ -29,10 +29,10 @@ Aquí está el logo MDN en un iframe rotado 90 grados desde su esquina inferior 
 ```html
 <img style="transform: rotate(90deg);
             transform-origin: bottom left;"
-     src="https://mdn.mozillademos.org/files/12539/Screen%20Shot%202016-02-16%20at%2015.53.54.png">
+     src="logo.png">
 ```
 
-{{ EmbedLiveSample('Ejemplo_Rotando', 'auto', 240, '', 'Web/CSS/CSS_Transforms/Using_CSS_transforms') }}
+{{EmbedLiveSample('', 'auto', 240)}}
 
 ### Ejemplo: Torciendo y desplazando
 
@@ -41,8 +41,10 @@ Aquí está el logo MDN torcido 10 grados y desplazado 150 pixels en el eje X.
 ```html
 <img style="transform: skewx(10deg) translatex(150px);
             transform-origin: bottom left;"
-     src="https://mdn.mozillademos.org/files/12539/Screen%20Shot%202016-02-16%20at%2015.53.54.png">
+     src="logo.png">
 ```
+
+{{EmbedLiveSample('', '', '')}}
 
 ## Propiedades CSS específicas para 3D
 
@@ -58,11 +60,7 @@ Definímos como de rápido se encogen con la propiedad {{ cssxref("perspective")
 | ---------------- | -------------------- | ------ | ------ |
 | 123456           | 123456               | 123456 | 123456 |
 
-El segundo elemento a configurar es la posición del espectador, con la propiedad {{ cssxref("perspective-origin") }}. Por defecto, la perspectiva está centrada en el espectad
-
-{{ EmbedLiveSample('Definiendo_una_perspectiva', '', '', '', 'Web/CSS/CSS_Transforms/Using_CSS_transforms') }}
-
-or, pero no siempre es lo adecuado.
+El segundo elemento a configurar es la posición del espectador, con la propiedad {{ cssxref("perspective-origin") }}. Por defecto, la perspectiva está centrada en el espectador, pero no siempre es lo adecuado.
 
 | `perspective-origin:150px 150px;` | `perspective-origin:50% 50%;` | `perspective-origin:-50px -50px;` |
 | --------------------------------- | ----------------------------- | --------------------------------- |

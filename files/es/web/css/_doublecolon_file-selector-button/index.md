@@ -1,10 +1,9 @@
 ---
 title: '::file-selector-button'
 slug: Web/CSS/::file-selector-button
-translation_of: Web/CSS/::file-selector-button
 original_slug: Web/CSS/::file-selector-button
-browser-compat: css.selectors.file-selector-button
 ---
+
 {{CSSRef}}
 
 El [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::file-selector-button`** representa el botón de un {{HTMLElement("input") }} con el atributo [`type="file"`](/es/docs/Web/HTML/Element/input/file).

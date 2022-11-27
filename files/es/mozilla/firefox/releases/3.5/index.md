@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/3.5
 translation_of: Mozilla/Firefox/Releases/3.5
 original_slug: Firefox_3.5_para_desarrolladores
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el funcionamiento de una amplia variedad de estándares web. Este artículo ofrece una extensa lista con enlaces a artículos que explican estas grandes mejoras.

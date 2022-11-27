@@ -1,15 +1,8 @@
 ---
 title: line-height
 slug: Web/CSS/line-height
-tags:
-  - CSS
-  - CSS:Referencias
-  - Referencia_CSS
-  - Todas_las_Categorías
-  - para_revisar
-  - páginas_a_traducir
-translation_of: Web/CSS/line-height
 ---
+
 ```
 https://developer.mozilla.org/en-US/docs/Web/CSS{{ CSSRef() }}
 /*Keyword value*/

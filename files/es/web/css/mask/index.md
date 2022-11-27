@@ -1,15 +1,9 @@
 ---
 title: '-webkit-mask'
 slug: Web/CSS/mask
-tags:
-  - CSS
-  - No estandar
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/mask
-translation_of_original: Web/CSS/-webkit-mask
 original_slug: Web/CSS/-webkit-mask
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

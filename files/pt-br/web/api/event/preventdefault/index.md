@@ -2,6 +2,7 @@
 title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
 ---
+
 {{ ApiRef("DOM") }}
 
 ## Resumo
@@ -109,4 +110,4 @@ Você pode usar o [event.cancelable](/pt-BR/docs/Web/API/event.cancelable) para 
 
 ## Especificação
 
-- [DOM Level 2 Events: preventDefault](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-preventDefault)
+- [DOM Level 2 Events: preventDefault](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-preventDefault)

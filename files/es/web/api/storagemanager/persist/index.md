@@ -9,6 +9,7 @@ tags:
   - persist()
 translation_of: Web/API/StorageManager/persist
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
 
 El método **`persist()`** de la interfaz {{domxref("StorageManager")}} solicita permiso para usar el almacenamiento persistente, y devuelve una {{jsxref('Promise')}} que se resuelve como `true` si se concede el permiso y _box mode_ es persistente, y `false` en cualquier otro caso.
@@ -41,9 +42,7 @@ if (navigator.storage && navigator.storage.persist)
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                       | Comentario          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('Storage','#dom-storagemanager-persist','persist')}} | {{Spec2('Storage')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -3,6 +3,7 @@ title: Aplicando estilos e cores
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 original_slug: Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
 No capítulo sobre [desenhando formas com canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), usamos apenas os estilos padrões de preenchimento e linha. Aqui vamos explorar as opções do canvas que temos à nossa disposição para tornar nossos desenhos um pouco mais atraentes. Você aprenderá a adicionar cores diferentes, estilos de linhas, gradientes, padrões e sombras aos seus desenhos.
@@ -709,8 +710,10 @@ When using `fill` (or {{domxref("CanvasRenderingContext2D.clip", "clip")}} and {
 
 Two values are possible:
 
-- **`"nonzero`**": The [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule), which is the default rule.
-- **`"evenodd"`**: The [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+- `nonzero`
+  - : The [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule), which is the default rule.
+- `evenodd`
+  - : The [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 In this example we are using the `evenodd` rule.
 

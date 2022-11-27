@@ -3,6 +3,7 @@ title: Instalando os programas básicos
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
 original_slug: Aprender/Getting_started_with_the_web/instalando_programas_basicos
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 
 Em _Instalando os programas básicos_, mostraremos quais ferramentas você precisa para o desenvolvimento web simples e como instalá-los apropriadamente.

@@ -1,9 +1,11 @@
 ---
-title: WritableStreamDefaultWriter.WritableStreamDefaultWriter()
+title: WritableStreamDefaultWriter()
 slug: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
+l10n:
+  sourceCommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
 ---
 
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
 **`WritableStreamDefaultWriter()`** コンストラクターは、新しい {{domxref("WritableStreamDefaultWriter")}} オブジェクトのインスタンスを作成します。
 
@@ -11,23 +13,23 @@ slug: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
 
 ## 構文
 
-```
-var writableStreamDefaultWriter = new WritableStreamDefaultWriter(stream);
+```js-nolint
+new WritableStreamDefaultWriter(stream)
 ```
 
-### パラメーター
+### 引数
 
-- stream
+- `stream`
   - : 書き込む {{domxref("WritableStream")}}。
 
-### 戻り値
+### 返値
 
 {{domxref("WritableStreamDefaultWriter")}} オブジェクトのインスタンス。
 
 ### 例外
 
-- TypeError
-  - : 指定された `stream` 値は {{domxref("WritableStream")}} ではないか、すでに別のライターにロックされています。
+- {{jsxref("TypeError")}}
+  - : 提供された `stream` 値は {{domxref("WritableStream")}} ではないか、すでに別のライターにロックされている場合。
 
 ## 例
 
@@ -43,9 +45,7 @@ function sendMessage(message, writableStream) {
   const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() => {
-        return defaultWriter.write(chunk);
-      })
+      .then(() => defaultWriter.write(chunk))
       .then(() => {
         console.log("Chunk written to sink.");
       })
@@ -74,20 +74,20 @@ const writableStream = new WritableStream({
   // シンクの実装
   write(chunk) {
     return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(2);
-      var view = new Uint16Array(buffer);
+      const buffer = new ArrayBuffer(1);
+      const view = new Uint8Array(buffer);
       view[0] = chunk;
-      var decoded = decoder.decode(view, { stream: true });
-      var listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+      const decoded = decoder.decode(view, { stream: true });
+      const listItem = document.createElement('li');
+      listItem.textContent = `Chunk decoded: ${decoded}`;
       list.appendChild(listItem);
       result += decoded;
       resolve();
     });
   },
   close() {
-    var listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
+    const listItem = document.createElement('li');
+    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
     list.appendChild(listItem);
   },
   abort(err) {
@@ -100,12 +100,10 @@ sendMessage("Hello, world.", writableStream);
 
 完全なコードは、[単純なライターの例](https://mdn.github.io/dom-examples/streams/simple-writer/)にあります。
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                             | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#default-writer-constructor","WritableStreamDefaultWriter()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.WritableStreamDefaultWriter.WritableStreamDefaultWriter")}}
+{{Compat}}

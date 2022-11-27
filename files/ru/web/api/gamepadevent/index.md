@@ -3,6 +3,7 @@ title: GamepadEvent
 slug: Web/API/GamepadEvent
 translation_of: Web/API/GamepadEvent
 ---
+
 {{APIRef("Gamepad API")}}
 
 `GamepadEvent` интерфейс {{ domxref("Gamepad API")}} содержит ссылки на геймпады, подключённые к системе, передающиеся при возникновении событий [Window.gamepadconnected](/ru/docs/Web/Events/gamepadconnected) и [Window.gamepaddisconnected](/ru/docs/Web/Events/gamepaddisconnected).

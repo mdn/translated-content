@@ -712,8 +712,10 @@ Lors de l'utilisation de `fill` (ou {{domxref ("CanvasRenderingContext2D.clip", 
 
 Deux valeurs sont possibles :
 
-- **`"nonzero`**": la [règle non-zero](http://en.wikipedia.org/wiki/Nonzero-rule), qui est la règle par défaut.
-- **`"evenodd"`**: La [règle even-odd](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+- `nonzero`
+  - : la [règle non-zero](http://en.wikipedia.org/wiki/Nonzero-rule), qui est la règle par défaut.
+- `evenodd`
+  - : La [règle even-odd](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 Dans cet exemple, nous utilisons la règle `evenodd` .
 

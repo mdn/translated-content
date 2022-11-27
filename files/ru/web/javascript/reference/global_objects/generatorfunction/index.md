@@ -3,6 +3,7 @@ title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 ---
+
 {{JSRef}}
 
 **`GeneratorFunction` constructor** создаёт новый {{jsxref("Statements/function*", "generator function")}} объект. В JavaScript каждая функция-генератор - это фактически `GeneratorFunction` объект.

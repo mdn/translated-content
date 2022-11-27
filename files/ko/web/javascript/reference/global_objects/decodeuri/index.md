@@ -38,7 +38,7 @@ decodeURI(encodedURI)
 
 ### 예외
 
-`encodedURI`에 유효하지 않은 문자열이 포함된 경우 {{jsxref("URIError")}} ("malformed URI sequence") 예외가 발생합니다. 
+`encodedURI`에 유효하지 않은 문자열이 포함된 경우 {{jsxref("URIError")}} ("malformed URI sequence") 예외가 발생합니다.
 
 ## 설명
 

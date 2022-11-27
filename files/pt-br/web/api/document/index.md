@@ -2,6 +2,7 @@
 title: Document
 slug: Web/API/Document
 ---
+
 {{ ApiRef("DOM") }}
 
 Para cada página carregada no browser, existe um objeto **`Document`**. A interface `Document` serve como um ponto de entrada para o conteúdo da Página ( a árvore DOM, incluindo elementos como {{HTMLElement("body")}} e {{HTMLElement("table")}}) e provê funcionalidades globais ao documento (como obter a URL da página e criar novos elementos no documento).
@@ -52,13 +53,13 @@ No futuro, todas essas interfaces irão ser divididas na interface `Document`.
   - : Returns the encoding used when the document was parsed.
 - {{domxref("Document.lastStyleSheetSet")}}
   - : Returns the name of the style sheet set that was last enabled. Has the value `null` until the style sheet is changed by setting the value of {{domxref("Document.selectedStyleSheetSet","selectedStyleSheetSet")}}.
-- {{domxref("Document.mozSyntheticDocument")}} {{non-standard_inline}} {{gecko_minversion_inline("8.0")}}
+- {{domxref("Document.mozSyntheticDocument")}} {{non-standard_inline}}
   - : `true` if this document is synthetic, such as a standalone image, video, audio file, or the like.
-- {{domxref("Document.mozFullScreen")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
+- {{domxref("Document.mozFullScreen")}} {{non-standard_inline}}
   - : `true` when the document is in {{domxref("Using_full-screen_mode","full-screen mode")}}.
-- {{domxref("Document.mozFullScreenElement")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
+- {{domxref("Document.mozFullScreenElement")}} {{non-standard_inline}}
   - : The element that's currently in full screen mode for this document.
-- {{domxref("Document.mozFullScreenEnabled")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
+- {{domxref("Document.mozFullScreenEnabled")}} {{non-standard_inline}}
   - : `true` if calling {{domxref("element.mozRequestFullscreen()")}} would succeed in the curent document.
 - {{domxref("Document.pointerLockElement")}} {{experimental_inline}}
   - : Returns the element set as the target for mouse events while the pointer is locked. `null` if lock is pending, pointer is unlocked, or if the target is in another document.
@@ -129,7 +130,7 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns the URI of the current document.
 - {{domxref("Document.plugins")}}
   - : Returns a list of the available plugins.
-- {{domxref("Document.readyState")}} {{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Document.readyState")}}
   - : Returns loading status of the document.
 - {{domxref("Document.referrer")}}
   - : Returns the URI of the page that linked to this page.
@@ -150,7 +151,7 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns the event handling code for the {{event("pointerlockchange")}} event.
 - {{domxref("Document.onpointerlockerror")}} {{experimental_inline}}
   - : Returns the event handling code for the {{event("pointerlockerror")}} event.
-- {{domxref("Document.onreadystatechange")}} {{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Document.onreadystatechange")}}
   - : Returns the event handling code for the `readystatechange` event.
 
 ## Methods
@@ -205,11 +206,11 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns a list of elements with the given tag name and namespace.
 - {{domxref("Document.importNode","Document.importNode(Node node, Boolean deep)")}}
   - : Returns a clone of a node from an external document.
-- {{domxref("document.mozSetImageElement")}} {{non-standard_inline}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("document.mozSetImageElement")}} {{non-standard_inline}}
   - : Allows you to change the element being used as the background image for a specified element ID.
 - {{domxref("Document.normalizeDocument()")}} {{obsolete_inline}}
   - : Replaces entities, normalizes text nodes, etc.
-- {{domxref("Document.releaseCapture()")}} {{non-standard_inline}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Document.releaseCapture()")}} {{non-standard_inline}}
   - : Releases the current mouse capture if it's on an element in this document.
 - {{domxref("Document.releaseEvents")}} {{non-standard_inline}} {{Deprecated_inline}}
   - : See {{domxref("window.releaseEvents")}}.
@@ -220,9 +221,9 @@ The `Document` interface is extended with the {{domxref("ParentNode")}} interfac
 
 - {{domxref("Document.getElementById","Document.getElementById(String id)")}}
   - : Returns an object reference to the identified element.
-- {{domxref("Document.querySelector","Document.querySelector(String selector)")}} {{gecko_minversion_inline("1.9.1")}}
+- {{domxref("Document.querySelector","Document.querySelector(String selector)")}}
   - : Returns the first Element node within the document, in document order, that matches the specified selectors.
-- {{domxref("Document.querySelectorAll","Document.querySelectorAll(String selector)")}} {{gecko_minversion_inline("1.9.1")}}
+- {{domxref("Document.querySelectorAll","Document.querySelectorAll(String selector)")}}
   - : Returns a list of all the Element nodes within the document that match the specified selectors.
 
 The `Document` interface is extended with the {{domxref("XPathEvaluator")}} interface:
@@ -290,9 +291,9 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
 
 Mozilla defines a set of non-standard properties made only for XUL content:
 
-- {{domxref("document.currentScript")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("document.currentScript")}}
   - : Returns the {{HTMLElement("script")}} element that is currently executing.
-- {{domxref("document.documentURIObject")}} {{gecko_minversion_inline("1.9")}}
+- {{domxref("document.documentURIObject")}}
   - : (**Mozilla add-ons only!**) Returns the `nsIURI` object representing the URI of the document. This property only has special meaning in privileged JavaScript code (with UniversalXPConnect privileges).
 - {{domxref("document.popupNode")}}
   - : Returns the node upon which a popup was invoked.

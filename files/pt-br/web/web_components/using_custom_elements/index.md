@@ -3,6 +3,7 @@ title: Usando custom elements
 slug: Web/Web_Components/Using_custom_elements
 original_slug: Web/Web_Components/Usando_custom_elements
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 Um dos principais recursos do padrão de Web Components é a capacidade de criar elementos personalizados que encapsulam sua funcionalidade em uma página HTML, em vez de ter que se contentar com um lote longo e aninhado de elementos que, juntos, fornecem um recurso de página personalizada. Este artigo apresenta o uso da API de Custom Elements.

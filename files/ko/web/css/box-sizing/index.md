@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/box-sizing
 ---
+
 {{CSSRef}}
 
 **`box-sizing`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 너비와 높이를 계산하는 방법을 지정합니다.

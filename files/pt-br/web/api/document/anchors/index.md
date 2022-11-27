@@ -2,6 +2,7 @@
 title: Document.anchors
 slug: Web/API/Document/anchors
 ---
+
 {{APIRef("DOM")}}
 
 {{deprecated_header("HTML5")}}

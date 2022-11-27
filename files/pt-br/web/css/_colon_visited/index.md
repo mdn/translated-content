@@ -2,6 +2,7 @@
 title: ':visited'
 slug: Web/CSS/:visited
 ---
+
 {{ CSSRef }}
 
 O **`:visited`** é uma [Pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) do [CSS](/pt-BR/docs/Web/CSS) para indicar se o link em questão já foi visitado pelo usuário. Por questões de privacidade, os styles que podem ser modificados usando este seletor são muito limitados.

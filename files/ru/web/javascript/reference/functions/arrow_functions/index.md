@@ -7,6 +7,7 @@ tags:
   - Функции
 translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
+
 {{jsSidebar("Functions")}}
 
 ## Сводка

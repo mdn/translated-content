@@ -3,6 +3,7 @@ title: Числа и даты
 slug: Web/JavaScript/Guide/Numbers_and_dates
 translation_of: Web/JavaScript/Guide/Numbers_and_dates
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
 
 Данный раздел представляет собой введение в работу с числами и датами в JavaScript.

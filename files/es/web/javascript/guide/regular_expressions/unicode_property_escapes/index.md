@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Escapes_de_propiedades_Unicode
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Los **escapes de propiedad Unicode** en las {{JSxRef("../Guide/Regular_Expressions", "Expresiones regulares")}} permiten la coincidencia de caracteres según sus propiedades Unicode. Un caracter se describe mediante varias propiedades que, o bien, son binarias ("tipo booleano") o, no binarias. Por ejemplo, puedes usar escapes de propiedades Unicode para reconocer emojis, signos de puntuación, letras (incluso letras de idiomas específicos o scripts), etc.
@@ -49,7 +50,7 @@ Consulta también [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/
 - NombreDePropiedadUnicode
   - : El nombre de una propiedad [no binaria](https://tc39.es/ecma262/#table-nonbinary-unicode-properties):
 - ValorDePropiedadUnicode
-  - : Uno de los fragmentos enumerados en la sección Valores, más adelante. Muchos valores tienen alias o abreviaturas (por ejemplo, el valor `Decimal_Number` para la propiedad `General_Category` se puede escribir `Nd`, `digit`, o `Decimal_Number`). Para la mayoría de los valores, la parte _`NombreDePropiedadUnicode`_ y el signo igual se pueden omitir. Si se especifica un _`NombreDePropiedadUnicode`_, el valor debe corresponder al tipo de propiedad proporcionado.
+  - : Uno de los fragmentos enumerados en la sección Valores, más adelante. Muchos valores tienen alias o abreviaturas (por ejemplo, el valor `Decimal_Number` para la propiedad `General_Category` se puede escribir `Nd`, `digit`, o `Decimal_Number`). Para la mayoría de los valores, la parte `NombreDePropiedadUnicode` y el signo igual se pueden omitir. Si se especifica un `NombreDePropiedadUnicode`, el valor debe corresponder al tipo de propiedad proporcionado.
 
 > **Nota:** Debido a que hay muchas propiedades y valores disponibles, no los describiremos exhaustivamente aquí, en su lugar proporcionaremos varios ejemplos.
 

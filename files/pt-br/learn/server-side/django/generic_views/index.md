@@ -2,6 +2,7 @@
 title: 'Tutorial Django Parte 6: Lista genérica e detail views'
 slug: Learn/Server-side/Django/Generic_views
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
 
 Este tutorial estende nosso website [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website), adicionando páginas de lista e detalhes para livros e autores. Aqui, aprenderemos sobre visualizações genéricas baseadas em classe e mostraremos como elas podem reduzir a quantidade de código que você precisa escrever para casos de uso comuns. Também abordaremos o tratamento de URLs em mais detalhes, mostrando como executar a correspondência básica de padrões.
@@ -496,7 +497,7 @@ Os links de paginação são exibidos na parte inferior, com os links seguinte/a
 The challenge in this article is to create the author detail and list views required to complete the project. These should be made available at the following URLs:
 
 - `catalog/authors/` — The list of all authors.
-- `catalog/author/<id>` — The detail view for the specific author with a primary key field named _`<id>`_
+- `catalog/author/<id>` — The detail view for the specific author with a primary key field named `<id>`
 
 The code required for the URL mappers and the views should be virtually identical to the `Book` list and detail views we created above. The templates will be different but will share similar behaviour.
 

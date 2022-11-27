@@ -5,6 +5,7 @@ slug: >-
 translation_of: Web/JavaScript/Shells
 original_slug: Web/JavaScript/Shells
 ---
+
 {{JsSidebar}}
 
 Un shell(\*) JavaScript te permite probar rápidamente fragmentos de código [JavaScript](/es/docs/Web/JavaScript) si tener que recargar un sitio web. Éstos son extremadamente útiles para desarrollar y depurar código.

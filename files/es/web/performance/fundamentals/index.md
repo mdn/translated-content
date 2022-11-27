@@ -1,8 +1,8 @@
 ---
 title: Performance fundamentals
 slug: Web/Performance/Fundamentals
-translation_of: Web/Performance/Fundamentals
 ---
+
 Performance significa eficiencia. En el contexto de Open Web Apps, este documento explica en general qué es performance, cómo la plataforma del navegador ayuda a mejorarlo y qué herramientas y procesos puede usar para probarlo y mejorarlo.
 
 ## ¿Qué es performance?
@@ -128,7 +128,7 @@ Improving memory and power usage is a similar problem to speeding up startup: do
 
 Modern CPUs can enter a lower-power mode when mostly idle. Applications that constantly fire timers or keep unnecessary animations running prevent CPUs from entering low-power mode. Power-efficient applications shouldn't do that.
 
-When applications are sent to the background, a {{event("visibilitychange")}} event is fired on their documents. This event is a developer's friend; applications should listen for it. Applications that drop as many loaded resources as possible when sent to the background use less memory and are less likely discarded, in the case of Firefox OS (see the note below). This in turn means they "start up" faster (since they are already running) and have better UPP.
+When applications are sent to the background, a [`visibilitychange`](/es/docs/Web/Reference/Events/visibilitychange) event is fired on their documents. This event is a developer's friend; applications should listen for it. Applications that drop as many loaded resources as possible when sent to the background use less memory and are less likely discarded, in the case of Firefox OS (see the note below). This in turn means they "start up" faster (since they are already running) and have better UPP.
 
 > **Nota:** As mentioned above, Firefox OS tries to keep as many applications running simultaneously as it can, but does have to discard applications sometimes, usually when the device runs out of memory. To find out more about how Firefox OS manages memory usage and kills apps when out of memory issues are encountered, read [Debugging out of memory errors on Firefox OS](/en-US/Firefox_OS/Debugging/Debugging_OOMs).
 
@@ -160,7 +160,7 @@ Instead, you should try to use {{domxref("window.requestAnimationFrame()")}}. Th
 
 #### Make events immediate
 
-As old-school, accessibility-aware Web developers we love click events since they also support keyboard input. On mobile devices, these are too slow. You should use {{event("touchstart")}} and {{event("touchend")}} instead. The reason is that these don’t have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don’t sacrifice accessibility, either. For example, the Financial Times uses a library called [fastclick](https://github.com/ftlabs/fastclick) for that purpose, which is available for you to use.
+As old-school, accessibility-aware Web developers we love click events since they also support keyboard input. On mobile devices, these are too slow. You should use [`touchstart`](/es/docs/Web/Reference/Events/touchstart) and [`touchend`](/es/docs/Web/Reference/Events/touchend) instead. The reason is that these don’t have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don’t sacrifice accessibility, either. For example, the Financial Times uses a library called [fastclick](https://github.com/ftlabs/fastclick) for that purpose, which is available for you to use.
 
 #### Keep your interface simple
 

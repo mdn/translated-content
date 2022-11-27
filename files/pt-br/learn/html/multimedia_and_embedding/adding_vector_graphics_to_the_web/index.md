@@ -3,6 +3,7 @@ title: Adicionando vetor gráfico na web
 slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 original_slug: Aprender/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 Vector graphics are very useful in many circumstances — they have small file sizes and are highly scalable, so they don't pixelate when zoomed in or blown up to a large size. In this article we'll show you how to include one in your webpage.
@@ -58,7 +59,7 @@ As a simple example, the following code creates a circle and a rectangle:
 <svg version="1.1"
      baseProfile="full"
      width="300" height="200"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="https://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="black" />
   <circle cx="150" cy="100" r="90" fill="blue" />
 </svg>

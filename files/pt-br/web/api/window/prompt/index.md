@@ -2,6 +2,7 @@
 title: Window.prompt()
 slug: Web/API/Window/prompt
 ---
+
 {{ApiRef("Window")}}O Window\.prompt() exibe uma caixa de diálogo com uma mensagem opcional solicitando ao usuário a entrada de algum texto.
 
 ## Sintaxe

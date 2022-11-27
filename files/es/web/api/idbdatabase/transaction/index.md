@@ -1,14 +1,8 @@
 ---
 title: IDBDatabase.transaction()
 slug: Web/API/IDBDatabase/transaction
-tags:
-  - Almacenamiento
-  - Base de datos
-  - Referencia
-  - metodo
-  - transacción
-translation_of: Web/API/IDBDatabase/transaction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 El método **`transaction()`** _**`[transacción]`**_ de la interfaz {{domxref("IDBDatabase")}} retorna inmediatamente un objeto de transacción ({{domxref("IDBTransaction")}}) que contiene el método {{domxref("IDBTransaction.objectStore")}}, el cual puedes usar para acceder a tu almacén de objetos.
@@ -108,11 +102,9 @@ var objectStore = transaction.objectStore("toDoList");
 
     > **Nota:** En Firefox, si deseas asegurar la durabilidad por alguna razón (por ejemplo, que estés almacenando datos críticos que no puedan ser recalculados después) puedes forzar una transacción a descargar al disco antes de invocar el evento `complete` creando una transacción que use un modo experimental `readwriteflush` (no-estándar) (ver {{domxref("IDBDatabase.transaction")}}). Esto actualmente es experimental, y puede usarse únicamente si la configuración `dom.indexedDB.experimental` es igual a `true` en `about:config`.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                                                                                                   | Estado                       | Comentario |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-transaction-IDBTransaction-DOMString-sequence-DOMString--storeNames-IDBTransactionMode-mode', 'transaction()')}} | {{Spec2('IndexedDB')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

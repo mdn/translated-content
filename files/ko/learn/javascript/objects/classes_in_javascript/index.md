@@ -3,6 +3,7 @@ title: Classes in JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 original_slug: Learn/JavaScript/Objects/Inheritance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 OOJS에 대한 개념을 설명했으니, 이 글에서는 부모 클래스에서 자식 클래스를 상속하는 방법을 알아봅니다. 덤으로 OOJS를 구현하는데 몇 가지 참고사항도 있습니다.
@@ -347,7 +348,7 @@ class Teacher extends Person {
 }
 ```
 
-위 클래스를 보시면 `subject` 속성에 대해 getter와 setter가 생겼습니다. 멤버 변수에는 \_를 붙여 getter/setter와 구분을 하였습니다. 이렇게 하지 않으면 get/set을 호출할때마다 에러가 발생합니다:
+위 클래스를 보시면 `subject` 속성에 대해 getter와 setter가 생겼습니다. 멤버 변수에는 를 붙여 getter/setter 와 구분을 하였습니다. 이렇게 하지 않으면 get/set 을 호출할때마다 에러가 발생합니다:
 
 - `snape` 객체의 `_subject` 속성 값을 보려면 `snape._subject`를 실행합니다.
 - To show the current value of the `_subject` property of the `snape` object we can use `snape._subject`.

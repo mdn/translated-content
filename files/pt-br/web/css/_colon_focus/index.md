@@ -2,6 +2,7 @@
 title: ':focus'
 slug: Web/CSS/:focus
 ---
+
 {{CSSRef}}
 
 ## Resumo

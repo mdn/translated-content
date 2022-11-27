@@ -26,7 +26,7 @@ var isItSecure = self.isSecureContext; // or just isSecureContext
 
 ## ブラウザ互換性
 
-{{Compat("api.WindowOrWorkerGlobalScope.isSecureContext")}}
+{{Compat}}
 
 ## 参照
 

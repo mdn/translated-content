@@ -1,14 +1,8 @@
 ---
 title: X-XSS-Protection
 slug: Web/HTTP/Headers/X-XSS-Protection
-tags:
-  - HTTP
-  - Referencia
-  - Seguridad
-  - XSS
-  - encabezado
-translation_of: Web/HTTP/Headers/X-XSS-Protection
 ---
+
 {{HTTPSidebar}}
 
 El encabezado de respuesta HTTP **`X-XSS-Protection`** es una característica de Internet Explorer, Chrome y Safari que impide la carga de una página cuando detecta ataques del tipo Cross-Site ({{Glossary("XSS")}}). Esta protección ya no es necesaria en los navegadores modernos cuando el sitio implementa una fuerte {{HTTPHeader("Content-Security-Policy")}} que deshabilita el uso de Javascript inline (`'unsafe-inline'`). Sin embargo da protección a los usuarios de navegadores más antiguos que no soportan {{Glossary("CSP")}}

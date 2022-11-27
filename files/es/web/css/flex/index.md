@@ -1,8 +1,8 @@
 ---
 title: flex
 slug: Web/CSS/flex
-translation_of: Web/CSS/flex
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -115,9 +115,7 @@ flex.addEventListener("click", function() {
 
 ## Especificaciones
 
-| Specification                                                            | Status                           | Comment            |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox', '#flex-property', 'flex')}} | {{Spec2('CSS3 Flexbox')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

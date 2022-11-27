@@ -2,6 +2,7 @@
 title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 ---
+
 {{JSRef}}
 
 O método **`clear()`** remove todos os elementos de um objeto `Map`.

@@ -1,10 +1,8 @@
 ---
 title: HTMLShadowElement.getDistributedNodes()
 slug: Web/API/HTMLShadowElement/getDistributedNodes
-tags:
-  - Necesita traducción
-translation_of: Web/API/HTMLShadowElement/getDistributedNodes
 ---
+
 {{APIRef("Web Components")}}
 
 The **`HTMLShadowElement.getDistributedNodes()`** method returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}} associated with this `<shadow>` element.
@@ -22,11 +20,9 @@ var nodeList = object.getDistributedNodes()
 var nodes = myShadowObject.getDistributedNodes();
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                    | Status                           | Comment            |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('Shadow DOM', '#the-shadow-element', 'shadow')}} | {{Spec2('Shadow DOM')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

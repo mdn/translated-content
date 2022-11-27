@@ -3,6 +3,7 @@ title: 'Учебник Express часть 3: Использование базы
 slug: Learn/Server-side/Express_Nodejs/mongoose
 translation_of: Learn/Server-side/Express_Nodejs/mongoose
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 
 В этой статье даётся краткое введение в базы данных, и методика их использования в приложениях Node/Express. Затем мы покажем, как можно использовать [Mongoose](http://mongoosejs.com/) для доступа к базе данных веб-сайта [LocalLibrary](/ru/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website). Мы объясним, как объявляются схемы и модели объектов, укажем основные типы полей, и методику базовой валидации. В статье также кратко показаны основные методы доступа к данным модели.

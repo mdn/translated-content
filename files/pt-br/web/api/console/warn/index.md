@@ -2,6 +2,7 @@
 title: Console.warn()
 slug: Web/API/Console/warn
 ---
+
 {{APIRef("Console API")}}{{non-standard_header}}
 
 Escreve uma mensagem de alerta no Console Web.

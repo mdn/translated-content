@@ -2,6 +2,7 @@
 title: 416 Range Not Satisfiable
 slug: Web/HTTP/Status/416
 ---
+
 {{HTTPSidebar}}
 
 O código de erro de resposta HTTP **`416 Range Not Satisfiable`** indica que o servidor não pode servir as sequências solicitadas. A razão mais provável é que o documento não contenha tais sequências, ou que o valor do cabeçalho {{HTTPHeader("Range")}}, apesar de sintaticamente correto, não faça sentido.

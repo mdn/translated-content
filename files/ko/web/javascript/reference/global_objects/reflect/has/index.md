@@ -9,6 +9,7 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/has
 ---
+
 {{JSRef}}
 
 **`Reflect.has()`** 정적 메서드는 [`in` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/in)의 함수판입니다.

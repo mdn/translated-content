@@ -1,14 +1,9 @@
 ---
 title: Ejemplos
 slug: Web/API/Document_Object_Model/Examples
-tags:
-  - DOM
-  - Referencia_DOM_de_Gecko
-  - Todas_las_Categorías
-  - páginas_a_traducir
-translation_of: Web/API/Document_Object_Model/Examples
 original_slug: Referencia_DOM_de_Gecko/Ejemplos
 ---
+
 En este capítulo se brindan ejemplos relativamente extensos que ilustran el uso del DOM para el desarrollo web y XML. Siempre que sea posible, usaremos las APIs, trucos y patrones comunes en JavaScript para la manipulación del objeto `document`.
 
 ### Ejemplo 1: Altos y anchos

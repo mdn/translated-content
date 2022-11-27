@@ -3,6 +3,7 @@ title: HTMLInputElement
 slug: Web/API/HTMLInputElement
 translation_of: Web/API/HTMLInputElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Интерфейс **`HTMLInputElement`** предоставляет специальные свойства и методы (расширяющие интерфейс {{domxref("HTMLElement")}} который также доступен через наследование) для управления размещением и отображением элементов input.

@@ -4,6 +4,7 @@ slug: Web/Performance/How_browsers_work
 translation_of: Web/Performance/How_browsers_work
 original_slug: Web/Performance/브라우저는_어떻게_동작하는가
 ---
+
 Users want web experiences with content that is fast to load and smooth to interact with. Therefore, a developer should strive to achieve these two goals.
 
 To understand how to improve performance and perceived performance, it helps to understand how the browser works.
@@ -197,7 +198,7 @@ Once the main thread is done painting the page, you would think we would be "all
 
 In our example, maybe the image loaded quickly, but perhaps the `anotherscript.js` file was 2MB and our user's network connection was slow. In this case the user would see the page super quickly, but wouldn't be able to scroll without jank until the script was downloaded, parsed and executed. That is not a good user experience. Avoid occupying the main thread, as demonstrated in this WebPageTest example:
 
-![The main thread is occupied by the downloading, parsing and execution of a  javascript file - over a fast connection](https://mdn.mozillademos.org/files/16760/visa_network.png)
+![The main thread is occupied by the downloading, parsing and execution of a javascript file - over a fast connection](https://mdn.mozillademos.org/files/16760/visa_network.png)
 
 In this example, the DOM content load process took over 1.5 seconds, and the main thread was fully occupied that entire time, unresponsive to click events or screen taps.
 

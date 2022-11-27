@@ -1,13 +1,8 @@
 ---
 title: font-style
 slug: Web/CSS/@font-face/font-style
-tags:
-  - '@font-face'
-  - CSS
-  - Fuentes
-  - Referências
-translation_of: Web/CSS/@font-face/font-style
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -64,11 +59,9 @@ Por otra parte, si existe un verdadera versión en _cursiva_ del estilo de fuent
 
 ![italic garamond](https://mdn.mozillademos.org/files/12269/garamonditalic.JPG)
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                            | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#descdef-font-face-unicode-range', 'unicode-range')}} | {{Spec2('CSS3 Fonts')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

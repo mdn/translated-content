@@ -54,7 +54,7 @@ Gecko で `getModifierState()` が true を返すときです。
       <th scope="row"><code>"AltGraph"</code></th>
       <td>
         <p>
-          <kbd>Alt</kbd> と <kbd>Ctrl</kbd> の両方のキーが押されている、または  <kbd>AltGr</kbd> キーが押されている
+          <kbd>Alt</kbd> と <kbd>Ctrl</kbd> の両方のキーが押されている、または <kbd>AltGr</kbd> キーが押されている
         </p>
       </td>
       <td>

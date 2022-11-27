@@ -1,15 +1,9 @@
 ---
 title: Funciones
 slug: Web/XPath/Functions
-tags:
-  - Referência_XPath
-  - Referência_XSLT
-  - Transformando_XML_con_XSLT
-  - XPath
-  - XSLT
-translation_of: Web/XPath/Functions
 original_slug: Web/XPath/Funciones
 ---
+
 {{ XsltRef() }} A continuación se presenta una lista ordenada de las funciones core de XPath y agregados específicos de XSLT a XPath, incluyendo una descripción, sintaxis, un listado de argumentos, tipo de resultado, referencia apopiada a W3C y el estado actual de soporte en el motor Gecko. para más información sobre el uso de las funciones de XPath/XSLT, por favor vea la página [**Para más información**](/en/Transforming_XML_with_XSLT/For_Further_Reading).
 
 - [boolean()](/en/XPath/Functions/boolean)

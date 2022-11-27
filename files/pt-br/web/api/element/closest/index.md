@@ -2,6 +2,7 @@
 title: Element.closest()
 slug: Web/API/Element/closest
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 O método **`Element.closest()`** retorna o ancestral mais próximo, em relação ao elemento atual, que possui o seletor fornecido como parâmetro. No caso de o elemento atual possuir o seletor, o mesmo é retornado. Caso não exista um ancestral o método retorna `null`.

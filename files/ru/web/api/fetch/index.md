@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
 original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
+
 {{APIRef("Fetch API")}}
 
 Метод **`fetch()`** , относящийся к миксину {{domxref("WindowOrWorkerGlobalScope")}}, запускает процесс извлечения ресурса из сети. Возвращает promise, содержащий {{domxref("Response")}} объект (ответ на запрос).

@@ -56,7 +56,7 @@ MediaRecorder.addEventListener('dataavailable', function(event) { ... })
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaRecorder.ondataavailable")}}
+{{Compat}}
 
 ## 関連情報
 

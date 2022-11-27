@@ -3,6 +3,7 @@ title: '-moz-box-ordinal-group'
 slug: Web/CSS/box-ordinal-group
 original_slug: Web/CSS/-moz-box-ordinal-group
 ---
+
 {{CSSRef}}
 
 > **Aviso:** Essa propriedade é parte do projeto do módulo original do CSS Flexible Box Layout, e foi substituído em projetos recentes.

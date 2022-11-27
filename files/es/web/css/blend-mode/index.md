@@ -1,14 +1,8 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-tags:
-  - Composición
-  - Composición CSS
-  - Modos de mezcla
-  - Referencia
-  - Tipo de Dato CSS
-translation_of: Web/CSS/blend-mode
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -423,9 +417,7 @@ Los cambios entre modos de mezcla no son interpolados. Cualquier cambio ocurrir�
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentarios        |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{ SpecName('Compositing', '#ltblendmodegt', '&lt;blend-mode&gt;') }} | {{ Spec2('Compositing') }} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

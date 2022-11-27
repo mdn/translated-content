@@ -11,6 +11,7 @@ tags:
   - 이벤트핸들링
 translation_of: Web/API/Document/scroll_event
 ---
+
 document view 나 element가 스크롤 될 때, **`scroll`** 이벤트가 발생합니다.
 
 ## 개요

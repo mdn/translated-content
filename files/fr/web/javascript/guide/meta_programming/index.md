@@ -28,7 +28,7 @@ p.a = 1;
 console.log(p.a, p.b); // 1, 42
 ```
 
-Ici, l'objet `Proxy` définit une _cible_ (ici c'est un objet vide) et un gestionnaire (_handler_) qui implémente une _trappe_ pour l'opération _get_. Ainsi, l'objet qui est « proxyfié » ne renverra pas `undefined` lorsqu'on tentera d'accéder à une propriété qui n'est pas définie, à la place le nombre 42 sera renvoyé.
+Ici, l'objet `Proxy` définit une `cible` (ici c'est un objet vide) et un gestionnaire (`handler`) qui implémente une _trappe_ pour l'opération _get_. Ainsi, l'objet qui est « proxyfié » ne renverra pas `undefined` lorsqu'on tentera d'accéder à une propriété qui n'est pas définie, à la place le nombre 42 sera renvoyé.
 
 > **Note :** D'autres exemples sont disponibles sur la page de l'objet {{jsxref("Proxy")}}.
 

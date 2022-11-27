@@ -2,6 +2,7 @@
 title: Window.length
 slug: Web/API/Window/length
 ---
+
 {{ ApiRef() }}
 
 ## Resumo

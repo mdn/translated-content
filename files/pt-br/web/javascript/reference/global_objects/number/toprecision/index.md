@@ -2,6 +2,7 @@
 title: Number.prototype.toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 ---
+
 {{JSRef}}
 
 O método **`toPrecision()`** retorna uma string que representa o valor do objeto {{jsxref("Number")}} com uma precisão específica.

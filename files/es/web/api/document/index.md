@@ -1,10 +1,9 @@
 ---
 title: Document
 slug: Web/API/Document
-browser-compat: api.Document
-translation_of: Web/API/Document
 original_slug: Web/API/Document
 ---
+
 {{APIRef("DOM")}}
 
 La interfaz **`Document`** representa cualquier página web cargada en el navegador y sirve como punto de entrada al contenido de la página web, que es el [árbol DOM (Document Object Model)](/es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core).

@@ -1,15 +1,8 @@
 ---
 title: font-style
 slug: Web/CSS/font-style
-tags:
-  - CSS
-  - Propiedad de CSS
-  - Referencia
-  - Tipos de letra de CSS
-  - Web
-  - tipo de letra
-translation_of: Web/CSS/font-style
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -76,10 +69,8 @@ Ten en cuenta que no todas las fuentes tienen tipos de letra distintos para `obl
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#font-style-prop', 'font-style')}}             | {{Spec2('CSS3 Fonts')}} | Sin cambio         |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-style', 'font-style')}} | {{Spec2('CSS2.1')}}         | Sin cambio         |
-| {{SpecName('CSS1', '#font-style', 'font-style')}}                             | {{Spec2('CSS1')}}         | Definición inicial |
+{{Specifications}}
+
+## Compatibilidad con navegadores
 
 {{Compat("css.properties.font-style")}}

@@ -1,44 +1,44 @@
 ---
 title: BroadcastChannel()
 slug: Web/API/BroadcastChannel/BroadcastChannel
+l10n:
+  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
 
 {{APIRef("BroadCastChannel API")}}
 
-**`BroadcastChannel()`** コンストラクタは新しい {{domxref("BroadcastChannel")}} を作成し、それを基礎となるチャネルに接続します。
+**`BroadcastChannel()`** コンストラクターは、新しい {{domxref("BroadcastChannel")}} を作成し、それを基礎となるチャンネルに接続します。
 
 {{AvailableInWorkers}}
 
 ## 構文
 
-```
- channel = new BroadcastChannel(channel);
+```js-nolint
+new BroadcastChannel(channelName)
 ```
 
 ### 値
 
-- _channel_
-  - : チャネルの名前を表す {{domxref("DOMString")}} です。 同じ{{glossary("origin","オリジン")}}を持つすべての{{glossary("browsing context", "閲覧コンテキスト")}}に対して、この名前を持つ単一のチャンネルがあります。
+- `channelName`
+  - : 文字列で、チャンネルの名前を表します。 同じ{{glossary("origin","オリジン")}}を持つすべての{{glossary("browsing context", "閲覧コンテキスト")}}に対して、この名前を持つ単一のチャンネルがあります。
 
 ## 例
 
 ```js
 // "internal_notification" チャンネルをリッスンする新しいチャンネルを作成します。
 
-var bc = new BroadcastChannel('internal_notification');
-bc.postMessage('New listening connected!');
+const bc = new BroadcastChannel("internal_notification");
+bc.postMessage("New listening connected!");
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                             | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "comms.html#dom-broadcastchannel", "BroadcastChannel()")}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.BroadcastChannel.BroadcastChannel")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("BroadcastChannel")}}: これが属するインターフェース。
+- {{domxref("BroadcastChannel")}}: 所属するインターフェイス。

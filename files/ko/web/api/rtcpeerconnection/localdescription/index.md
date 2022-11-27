@@ -3,6 +3,7 @@ title: RTCPeerConnection.localDescription
 slug: Web/API/RTCPeerConnection/localDescription
 translation_of: Web/API/RTCPeerConnection/localDescription
 ---
+
 {{WebRTCSidebar}}{{SeeCompatTable}}
 
 읽기 속성인 **`RTCPeerConnection.localDescription`**는 연결의 로컬 엔드에 대한 세션을 설명하는 {{domxref("RTCSessionDescription")}}를 반환합니다. 아직 설정이 안되어있다면, **null** 입니다.

@@ -2,6 +2,7 @@
 title: Animation
 slug: Web/API/Animation
 ---
+
 {{ APIRef("Web Animations API") }}{{SeeCompatTable}}
 
 A interface **`Animation`** da [Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API) representa um único player de animação e fornece controles e uma linha do tempo (timeline) para um nó de animação ou recurso.

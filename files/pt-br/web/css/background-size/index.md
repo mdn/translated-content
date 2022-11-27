@@ -2,6 +2,7 @@
 title: background-size
 slug: Web/CSS/background-size
 ---
+
 {{CSSRef}}
 
 A propriedade **`background-size`** do [CSS](/pt-BR/docs/CSS) especifica o tamanho das imagens de fundo. O tamanho da imagem pode ser totalmente ou apenas parcialmente comprimido com o objetivo de preservar sua proporção.
@@ -170,7 +171,7 @@ Observe que o dimensionamento de fundo para vectors que não possuem dimensões 
 
 ## Notas
 
-Se você estiver especificando um gradient como plano de fundo e tiver especificado um `background-size` junto, é melhor não especificar um tamanho que use um único componente setado como auto ou seja especificado usando apenas um valor de largura (por exemplo, `background-size: 50%`). A renderização de gradients em tais casos mudou no Firefox 8 e, no momento, geralmente é inconsistente em todos os navegadores, pois nem todos implementam a renderização em total conformidade com a especificação [`background-size`](http://www.w3.org/TR/css3-background/#the-background-size) do CSS3 e com a [especificação do CSS3 para valores de gradient](http://dev.w3.org/csswg/css3-images/#gradients).
+Se você estiver especificando um gradient como plano de fundo e tiver especificado um `background-size` junto, é melhor não especificar um tamanho que use um único componente setado como auto ou seja especificado usando apenas um valor de largura (por exemplo, `background-size: 50%`). A renderização de gradients em tais casos mudou no Firefox 8 e, no momento, geralmente é inconsistente em todos os navegadores, pois nem todos implementam a renderização em total conformidade com a especificação [`background-size`](https://www.w3.org/TR/css3-background/#the-background-size) do CSS3 e com a [especificação do CSS3 para valores de gradient](http://dev.w3.org/csswg/css3-images/#gradients).
 
 ```css
 .bar {

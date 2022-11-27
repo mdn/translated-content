@@ -1,11 +1,9 @@
 ---
 title: document.cookie
 slug: Web/API/Document/cookie
-tags:
-  - NeedsContent
-translation_of: Web/API/Document/cookie
 original_slug: DOM/document.cookie
 ---
+
 {{ApiRef("DOM")}}
 
 ### Resumen

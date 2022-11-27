@@ -2,6 +2,7 @@
 title: What are extensions?
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Extension(이하 확장앱)은 웹 브라우저의 기능을 수정하는 코드를 지칭합니다. 확장앱은 표준 웹 기술(JavaScript, HTML 그리고 CSS)과 일부 전용 JavaScript API를 사용하여 작성됩니다. 여러 가지 특징이 있지만 무엇보다도 확장앱은 브라우저에 새로운 기능을 추가할 수 있고 특정 웹사이트의 모양이나 내용을 변경할 수 있다는 점이 대표적입니다.

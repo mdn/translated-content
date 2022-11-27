@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/for
 original_slug: Web/JavaScript/Referencia/Sentencias/for
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Resumen

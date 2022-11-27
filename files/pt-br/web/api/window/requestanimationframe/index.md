@@ -2,6 +2,7 @@
 title: window.requestAnimationFrame()
 slug: Web/API/Window/requestAnimationFrame
 ---
+
 {{APIRef}}
 O método **`window.requestAnimationFrame()`** fala para o navegador que deseja-se realizar uma animação e pede que o navegador chame uma função específica para atualizar um quadro de animação antes da próxima repaint (repintura). O método tem como argumento uma callback que deve ser invocado antes da repaint.
 

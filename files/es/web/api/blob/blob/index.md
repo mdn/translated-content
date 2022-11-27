@@ -1,14 +1,8 @@
 ---
 title: Blob()
 slug: Web/API/Blob/Blob
-tags:
-  - API
-  - Archivo
-  - Blob
-  - File API
-  - Referencia
-translation_of: Web/API/Blob/Blob
 ---
+
 {{APIRef("File API")}}
 
 El constructor **`Blob()`** retorna un nuevo objeto {{domxref("Blob")}} . El contenido del blob consiste en la concatenación de los valores obtenidos en el parrametro _array_.
@@ -45,9 +39,7 @@ var oMiBlob = new Blob(unaParteDeArchivo, {type : 'text/html'}); // el blob
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                       | Comentario          |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('File API', '#constructorBlob', 'Blob()')}} | {{Spec2('File API')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

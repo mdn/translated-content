@@ -1,16 +1,9 @@
 ---
 title: '-moz-box-ordinal-group'
 slug: Web/CSS/box-ordinal-group
-tags:
-  - CSS
-  - 'CSS: Extensiones Mozilla'
-  - Caja Flexible
-  - No estandar
-  - Referencia CSS
-translation_of: Web/CSS/box-ordinal-group
-translation_of_original: Web/CSS/-moz-box-ordinal-group
 original_slug: Web/CSS/-moz-box-ordinal-group
 ---
+
 {{CSSRef}}
 
 > **Advertencia:** Esta propiedad pertenece al borrador original del diseño o esquema de la caja CSS flexible, y ha sido reemplazada en borradores posteriores.

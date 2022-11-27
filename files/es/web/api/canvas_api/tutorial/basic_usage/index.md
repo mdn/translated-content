@@ -1,9 +1,9 @@
 ---
 title: Uso básico de Canvas
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
-translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_usage
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Dibujando_formas")}}
 
 Comenzamos este tutorial observando el elemento {{HTMLElement("canvas")}}. Al final de esta página, sabrás como configurar el entorno 2D de canvas y habrás dibujado el primer ejemplo en tu navegador.

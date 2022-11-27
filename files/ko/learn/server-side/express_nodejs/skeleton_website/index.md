@@ -3,6 +3,7 @@ title: 'Express Tutorial Part 2: 스켈레톤 웹사이트 만들기'
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
 original_slug: Learn/Server-side/Express_Nodejs/스켈레톤_웹사이트
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}

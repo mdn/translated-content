@@ -2,6 +2,7 @@
 title: align-self
 slug: Web/CSS/align-self
 ---
+
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`align-self`** alinha itens-flex da linha flex alvo, sobreescrevendo o valor {{cssxref("align-items")}}. Se alguma dos eixos das margens do dado item está estabelecido como `auto`, então `align-self` é ignorado.
 
 {{EmbedInteractiveExample("pages/css/align-self.html")}}
@@ -129,13 +130,7 @@ div:nth-child(3) {
 
 ## Compatibilidade com navegadores
 
-### Suporte em Flex layout
-
-{{Compat("css.properties.align-self.flex_context")}}
-
-### Suporte em Grid layout
-
-{{Compat("css.properties.align-self.grid_context")}}
+{{Compat}}
 
 ## Veja também
 

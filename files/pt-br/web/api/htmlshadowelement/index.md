@@ -2,6 +2,7 @@
 title: HTMLShadowElement
 slug: Web/API/HTMLShadowElement
 ---
+
 {{obsolete_header}}
 
 {{ APIRef("Web Components") }}

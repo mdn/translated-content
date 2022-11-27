@@ -21,6 +21,7 @@ tags:
 translation_of: Glossary/Internet
 original_slug: Глоссарий/Internet
 ---
+
 Интернет — это всемирная сеть сетей, в которой используется набор интернет-протоколов (называемый также {{glossary("TCP")}}/{{glossary("IPv6","IP")}} по двум наиболее важным {{glossary("protocol","протоколам")}}).
 
 ## Подробнее

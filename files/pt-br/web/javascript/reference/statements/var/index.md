@@ -2,6 +2,7 @@
 title: var
 slug: Web/JavaScript/Reference/Statements/var
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Sumário

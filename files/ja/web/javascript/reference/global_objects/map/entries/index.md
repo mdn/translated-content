@@ -38,9 +38,7 @@ console.log(mapIter.next().value)  // [Object, "baz"]
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map.prototype.entries', 'Map.prototype.entries')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

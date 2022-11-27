@@ -3,6 +3,7 @@ title: WebGLRenderingContext.enable()
 slug: Web/API/WebGLRenderingContext/enable
 translation_of: Web/API/WebGLRenderingContext/enable
 ---
+
 {{APIRef("WebGL")}}
 
 Метод **`WebGLRenderingContext.enable()`** из [WebGL API](/ru/docs/Web/API/WebGL_API) активирует определённые возможности WebGL для текущего контекста.

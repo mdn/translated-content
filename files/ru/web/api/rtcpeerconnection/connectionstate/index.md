@@ -3,6 +3,7 @@ title: RTCPeerConnection.connectionState
 slug: Web/API/RTCPeerConnection/connectionState
 translation_of: Web/API/RTCPeerConnection/connectionState
 ---
+
 {{APIRef("WebRTC")}}
 
 Только для чтения свойство **`connectionState`** интерфейса {{domxref("RTCPeerConnection")}} указывает на текущее состояние соединения, возвращая одно из строковых значений, определяемых в перечислении [`RTCPeerConnectionState`](#RTCPeerConnectionState_enum).

@@ -1,12 +1,8 @@
 ---
 title: initial
 slug: Web/CSS/initial
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/initial
 ---
+
 [Guía de referencia de CSS](es/Gu%c3%ada_de_referencia_de_CSS)
 
 ### Resumen

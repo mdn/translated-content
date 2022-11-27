@@ -2,6 +2,7 @@
 title: <base>
 slug: Web/HTML/Element/base
 ---
+
 ## Resumo
 
 O _elemento HTML Base_ (**\<base>**) especifica o endereço (URL) utilizada por todos os endereços relativos contidos dentro de um documento. Há um número máximo de 1 (um) elemento _Base_ \<base> do documento.

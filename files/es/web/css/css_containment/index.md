@@ -1,8 +1,8 @@
 ---
 title: CSS Containment
 slug: Web/CSS/CSS_Containment
-translation_of: Web/CSS/CSS_Containment
 ---
+
 {{CSSRef}}
 
 El objetivo de la espicificación CSS Containment es mejorar el rendimiento de las páginas web permitiendo a los desarrolladores aislar un subárbol del resto de la página. Si el navegador sabe si una parte de la página es independiente, se puede optimizar la renderización y el rendimiento mejora. La especificación define una única propiedad CSS {{cssxref("contain")}}. Este documento relata los objetivos básicos de la especificación.

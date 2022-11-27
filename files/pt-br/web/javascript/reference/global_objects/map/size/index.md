@@ -2,6 +2,7 @@
 title: Map.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
 ---
+
 {{JSRef}}
 
 A propriedade acessora **`size`** retorna o número de elementos que estão dentro do objeto {{jsxref("Map")}}

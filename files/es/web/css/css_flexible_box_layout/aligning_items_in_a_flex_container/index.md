@@ -1,22 +1,8 @@
 ---
 title: Aligning Items in a Flex Container
 slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
-tags:
-  - Align
-  - CSS
-  - Flex
-  - Guía
-  - Tutorial
-  - align-content
-  - align-self
-  - alineación
-  - alinear
-  - flexbox
-  - justify
-  - justify-content
-  - rejillas
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 ---
+
 {{CSSRef}}
 
 Una de las razones por las que flexbox atrajo rápidamente el interés de los desarrolladores web es que por primera vez en la web se ha conseguido unas posibilidades completas de alineamiento de elementos. Se habilita la alineación vertical, de modo que por fin existe una manera rápida y facil de centrar una caja. A lo largo de esta guía, vamos a desarrollar un exhaustivo recorrido sobre el funcionamiento de las propiedades de alineamiento y justificación en Flexbox.

@@ -8,6 +8,7 @@ tags:
   - 자바스크립트
 translation_of: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지

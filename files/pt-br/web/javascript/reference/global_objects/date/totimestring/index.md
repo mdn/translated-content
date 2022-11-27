@@ -2,6 +2,7 @@
 title: Date.prototype.toTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
 ---
+
 {{JSRef}}
 
 O método **`toTimeString()`** retorna uma porção de tempo de um objeto {{jsxref("Date")}} de forma legível para um ser humano em Inglês Americano.

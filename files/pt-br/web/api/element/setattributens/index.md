@@ -2,6 +2,7 @@
 title: Element.setAttributeNS()
 slug: Web/API/Element/setAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `setAttributeNS` adiciona um novo atributo ou modifica o valor de um atributo com um namespace e um nome.
@@ -29,4 +30,4 @@ d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
 
 ## Especificação
 
-[DOM Level 2 Core: setAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)
+[DOM Level 2 Core: setAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/HTML/Element/select
 original_slug: Web/HTML/Elemento/select
 ---
+
 ## Resumen
 
 El elemento select (`<select>`) de HTML representa un control que muestra un menú de opciones. Las opciones contenidas en el menú son representadas por elementos {{HTMLElement("option")}}, los cuales pueden ser agrupados por elementos {{HTMLElement("optgroup")}}. La opcion puede estar preseleccionada por el usuario.
@@ -71,10 +72,7 @@ El siguiente ejemplo muestra como simular una lista con opciones editables, pero
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('HTML5 W3C', 'forms.html#the-select-element', '&lt;select&gt;')}} | {{Spec2('HTML5 W3C')}} |            |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;select&gt;')}}     | {{Spec2('HTML4.01')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

@@ -1,9 +1,9 @@
 ---
 title: animationend
 slug: Web/API/Element/animationend_event
-translation_of: Web/API/HTMLElement/animationend_event
 original_slug: Web/API/HTMLElement/animationend_event
 ---
+
 {{ APIRef }}
 
 El evento `animationend` es lanzado cuando una animación CSS se ha completado.
@@ -36,9 +36,9 @@ El evento `animationend` es lanzado cuando una animación CSS se ha completado.
 
 ## Eventos relacionados
 
-- {{Event("animationstart")}}
-- {{Event("animationend")}}
-- {{Event("animationiteration")}}
+- [`animationstart`](/es/docs/Web/Reference/Events/animationstart)
+- [`animationend`](/es/docs/Web/Reference/Events/animationend)
+- [`animationiteration`](/es/docs/Web/Reference/Events/animationiteration)
 
 ## Especificaciones
 

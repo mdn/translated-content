@@ -10,6 +10,7 @@ tags:
   - Response
 translation_of: Web/API/Response
 ---
+
 {{APIRef("Fetch API")}}
 
 Интерфейс **`Response`** из [Fetch API](/ru/docs/Web/API/Fetch_API) представляет собой ответ на запрос.

@@ -11,6 +11,7 @@ tags:
   - TopicStub
 translation_of: Web/API/Selection
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}A **`Selection`** object represents the range of text selected by the user or the current position of the caret. To obtain a Selection object for examination or modification, call {{domxref("window.getSelection()")}}.
 
 ## Свойства

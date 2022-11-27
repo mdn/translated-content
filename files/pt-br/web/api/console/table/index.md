@@ -2,6 +2,7 @@
 title: Console.table()
 slug: Web/API/Console/table
 ---
+
 {{APIRef("Console API")}}
 
 Exibe dados tabulares como uma tabela.
@@ -133,4 +134,4 @@ console.table(data [, columns]);
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Console.table")}}
+{{Compat}}

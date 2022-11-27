@@ -1,14 +1,8 @@
 ---
 title: Loading and running WebAssembly code
 slug: WebAssembly/Loading_and_running
-tags:
-  - JavaScript
-  - Traer
-  - WebAssembly
-  - XMLHttpRequest
-  - bytecode
-translation_of: WebAssembly/Loading_and_running
 ---
+
 {{WebAssemblySidebar}}
 
 Para utilizar WebAssembly en JavaScript, necesita primero jalar su módulo dentro de la memoria antes dela compilación/instanciación. Este artículo ofrece una referencia para mecanismos distintos que pueden traer el bytecode de WebAssembly, así como tener la forma de compilar/instanciarlo una vez que ya funciona.

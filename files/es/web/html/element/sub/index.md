@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/sub
 original_slug: Web/HTML/Elemento/sub
 ---
+
 {{HTMLSidebar}}
 
 El **elemento HTML** \<sub> define un fragmento de texto que se debe mostrar, por razones tipográficas, más bajo, y generalmente más pequeño, que el tramo principal del texto, es decir, en subíndice.
@@ -39,10 +40,7 @@ Este elemento sólo incluye los [atributos globales](/es/docs/HTML/Global_attrib
 
 ## Especificaciones
 
-| Especificaciones                                                                                                                                     | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;')}}             | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;;')}} | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad navegadores
 

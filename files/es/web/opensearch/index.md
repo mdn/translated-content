@@ -1,16 +1,9 @@
 ---
 title: Creacion de plugins OpenSearch para Firefox
 slug: Web/OpenSearch
-tags:
-  - Agregados
-  - Complementos
-  - OpenSearch
-  - Plugins
-  - Plugins_de_búsqueda
-  - para_revisar
-translation_of: Web/OpenSearch
 original_slug: Creacion_de_plugins_OpenSearch_para_Firefox
 ---
+
 ## OpenSearch
 
 [Firefox 2](es/Firefox_2) admite el formato de descripción [OpenSearch](http://opensearch.org/) para complementos (_plugins_) de búsqueda. Aquellos complementos que usen [la sintaxis OpenSearch](http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document) son compatibles con Firefox e Internet Explorer 7. Por ello es el formato recomendado para cualquier nuevo desarrollo.

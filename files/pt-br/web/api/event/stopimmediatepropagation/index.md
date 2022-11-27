@@ -2,6 +2,7 @@
 title: Event.stopImmediatePropagation()
 slug: Web/API/Event/stopImmediatePropagation
 ---
+
 {{APIRef("DOM")}}
 
 Evita que outros _listeners_ escutem o evento.

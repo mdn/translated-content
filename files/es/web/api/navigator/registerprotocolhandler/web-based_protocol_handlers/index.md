@@ -1,12 +1,8 @@
 ---
 title: Controladores de protocolos basados en web
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
-tags:
-  - Avanzado
-  - Controladores de Protocolos Basados en Web
-  - HTML5
-translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
+
 ## Antecedentes
 
 Es bastante común encontrar enlaces de páginas web a recursos que no usan protocolos `http`. Un ejemplo es el protocolo `mailto:`

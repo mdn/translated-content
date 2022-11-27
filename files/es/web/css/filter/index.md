@@ -1,15 +1,8 @@
 ---
 title: filter
 slug: Web/CSS/filter
-tags:
-  - CSS
-  - Filtro
-  - Filtro SVG
-  - Propiedad CSS
-  - Referencia
-  - SVG
-translation_of: Web/CSS/filter
 ---
+
 {{SeeCompatTable}}{{CSSRef}}
 
 ## Resumen
@@ -1125,9 +1118,7 @@ table.standard-table td {
 
 ## Especificaciones
 
-| Especificación                                                               | Estatus                              | Comentarios        |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{ SpecName('Filters 1.0', '#FilterProperty', 'filter') }} | {{ Spec2('Filters 1.0') }} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

@@ -62,9 +62,7 @@ Reflect.apply(''.charAt, 'ponies', [3])
 
 ## 仕様書
 
-| 仕様書                                                                               |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-reflect.apply', 'Reflect.apply')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

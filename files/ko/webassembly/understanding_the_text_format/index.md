@@ -2,6 +2,7 @@
 title: Understanding WebAssembly text format
 slug: WebAssembly/Understanding_the_text_format
 ---
+
 {{WebAssemblySidebar}}
 
 사람이 WebAssembly를 읽고 편집 할 수 있게하려면 wasm 이진 형식의 텍스트 표현이 있어야합니다. 이것은 텍스트 편집기, 브라우저 개발자 도구 등에서 노출되도록 고안된 중간 양식입니다.이 장에서는 원시 구문과 텍스트 형식이 나타내는 기본 바이트 코드와 관련하여 Text format이 작동하는 방식과 자바 스크립트에서 wasm을 나타내는 객체 래퍼에 대해 설명합니다.

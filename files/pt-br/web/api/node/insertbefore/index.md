@@ -2,6 +2,7 @@
 title: Node.insertBefore
 slug: Web/API/Node/insertBefore
 ---
+
 {{ApiRef("DOM")}}
 
 O método **`Node.insertBefore()` **insere um nó antes do nó de referência como um filho de um nó pai especificado. Se o filho especificado for uma referência a um nó existente no documento, `insertBefore()` o moverá de sua posição atual para a nova posição (não há necessidade de remover o nó de seu nó pai antes de anexá-lo a outro nó).
@@ -87,4 +88,4 @@ Quando o elemento não possui o primeiro filho, então `firstChild` é `null`. O
 
 ## Especificação
 
-- [insertBefore](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-952280727)
+- [insertBefore](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-952280727)
