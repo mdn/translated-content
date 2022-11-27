@@ -18,7 +18,7 @@ Examples: [Amazon Assistant for Firefox](https://addons.mozilla.org/en-US/firefo
 
 **사용자의 개성 표현**: 브라우저 확장 기능은 웹페이지의 콘텐츠를 조작할 수 있습니다. 예를 들어, 사용자가 방문하는 모든 페이지에 좋아하는 로고나 사진을 배경으로 추가하거나, 독립형 [테마 애드온](https://extensionworkshop.com/documentation/themes/)과 동일한 방식으로 Firefox UI을 업데이트할 수 있습니다. 
 
-![](myweb_new_tab_add_on.png)
+![배트맨 테마를 보여주는 나의 웹 새 탭 애드온](myweb_new_tab_add_on.png)
 
 Examples: [MyWeb New Tab](https://chrome.google.com/webstore/detail/myweb-new-tab/cnbiadnhebmicjcbpgajglfemclnlagh), [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/), and [VivaldiFox](https://addons.mozilla.org/en-US/firefox/addon/vivaldifox/).
 
