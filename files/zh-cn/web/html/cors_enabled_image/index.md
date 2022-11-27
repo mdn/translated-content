@@ -47,7 +47,7 @@ HTML 规范为图片提供了 {{ htmlattrxref("crossorigin", "img") }} 属性，
 </IfModule>
 ```
 
-简单来说，该配置允许服务器的图形文件（那些扩展名为 ".bmp"、".cur"、".gif"、".ico"、".jpg"、".jpeg"、".png"、".svg"、".svgz" 和 ".webp" 的文件）从互联网上的任何位置跨域访问。
+简单来说，该配置允许服务器的图形文件（那些扩展名为 ".bmp"、".cur"、".gif"、".ico"、".jpg"、".jpeg"、".png"、".svg"、".svgz" 和 ".webp" 的文件）从互联网上的任何位置跨源访问。
 
 ### 实现保存功能
 
