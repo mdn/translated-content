@@ -1,8 +1,8 @@
 ---
 title: Communication de pair-à-pair avec WebRTC
-slug: Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
+slug: conflicting/Web/API/WebRTC_API
 translation_of: Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
-original_slug: WebRTC/communication-de-pair-a-pair-avec-WebRTC
+original_slug: Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
 ---
 
 {{SeeCompatTable}}
