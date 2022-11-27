@@ -19,7 +19,7 @@ Firefox 29 est sorti le 29 Avril, 2014. Cet article répertorie les modification
 Les principaux changements comprennent:
 
 - Console web largement améliorée - Les tableaux sont affichés en lgne sans cliquer pour faire apparaître l'inspecteur de droite, les objets de fenêtre affichent leur URL, etc.
-- Ajout de l'[API console](/docs/Web/API/console) aux Web Workers ([bug 620935](https://bugzilla.mozilla.org/show_bug.cgi?id=620935)). Vous pouvez désormais consigner les messages dans la console Web à partir de Web Workers.
+- Ajout de l'[API console](/fr/docs/Web/API/console) aux Web Workers ([bug 620935](https://bugzilla.mozilla.org/show_bug.cgi?id=620935)). Vous pouvez désormais consigner les messages dans la console Web à partir de Web Workers.
 - L'outil [Moniteur réseau](/fr/docs/Outils/Moniteur_réseau) affiche désormais des statistiques de performances à l'aide de graphiques à secteurs ({{bug(846601)}}).
 - Sur l'[inspecteur](/fr/docs/Outils/Inspecteur), des info-bulles d'aperçu des transformations CSS sont désormais disponibles ({{bug(726427)}}).
 - Les éléments DOM vus dans le débogueur et la console peuvent être supprimés ou inspectés directement, via les nouveaux boutons à droite de la liste des variables.

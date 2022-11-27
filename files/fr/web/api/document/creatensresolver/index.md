@@ -37,7 +37,7 @@ Notez que XPath définit QNames sans préfixe pour correspondre uniquement aux �
 
 ## Voir aussi
 
-- [document.evaluate](/en/DOM/document.evaluate)
+- [`Document.evaluate()`](/fr/docs/Web/API/Document/evaluate)
 - [Introduction à l'utilisation de XPath avec JavaScript](/fr/docs/Web/JavaScript/Introduction_%C3%A0_l_utilisation_de_XPath_avec_JavaScript)
 
 ## Spécifications
