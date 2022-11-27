@@ -14,7 +14,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 ![가격 비교 기능을 제공하는 Amazon 애드온 예제](amazon_add_on.png)
 
-Examples: [Amazon Assistant for Firefox](https://addons.mozilla.org/en-US/firefox/addon/amazon-browser-bar/), [OneNote Web Clipper](https://addons.mozilla.org/en-US/firefox/addon/onenote-clipper/), and [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/).
+예제: [Amazon Assistant for Firefox](https://addons.mozilla.org/en-US/firefox/addon/amazon-browser-bar/), [OneNote Web Clipper](https://addons.mozilla.org/en-US/firefox/addon/onenote-clipper/), and [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/).
 
 **사용자의 개성 표현**: 브라우저 확장 기능은 웹페이지의 콘텐츠를 조작할 수 있습니다. 예를 들어, 사용자가 방문하는 모든 페이지에 좋아하는 로고나 사진을 배경으로 추가하거나, 독립형 [테마 애드온](https://extensionworkshop.com/documentation/themes/)과 동일한 방식으로 Firefox UI을 업데이트할 수 있습니다. 
 
