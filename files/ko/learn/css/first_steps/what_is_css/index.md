@@ -29,7 +29,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
 
 > **참고**: 브라우저는 {{Glossary("User agent","user agent")}} 라고도 하며, 기본적으로 컴퓨터 시스템 내부의 개인을 나타내는 컴퓨터 프로그램을 의미합니다. 브라우저는 CSS 에 대해 이야기 할 때, 우리가 생각하는 주요 유형의 user agent 이지만, 유일한 user agent는 아닙니다. HTML 및 CSS 문서를 인쇄할 PDF로 변환하는 것과 같은 사용 가능한 다른 user agent 가 있습니다.
 
-CSS 는 매우 기본적인 텍스트 문서 스타일링에 사용될 수 있습니다 — 예를 들어, 제목 및 링크의 [색상](ko/docs/Web/CSS/color_value)과 [크기](/ko/docs/Web/CSS/font-size) 변경. 또한, 레이아웃을 만드는 데 사용 할 수 있습니다 — 예를 들어, [단일 텍스트 열을 변환](/ko/docs/Web/CSS/Layout_cookbook/Column_layouts) (기본 콘텐츠 영역과 관련 정보에 대한 사이드 바가 있는 레이아웃으로) 하는 등 레이아웃을 만드는 데 사용 할 수 있습니다. [애니메이션](/ko/docs/Web/CSS/CSS_Animations) 과 같은 효과에도 사용 할 수 있습니다. 구체적인 예는 이 단락의 링크를 살펴 보십시오.
+CSS 는 매우 기본적인 텍스트 문서 스타일링에 사용될 수 있습니다 — 예를 들어, 제목 및 링크의 [색상](/ko/docs/Web/CSS/color_value)과 [크기](/ko/docs/Web/CSS/font-size) 변경. 또한, 레이아웃을 만드는 데 사용 할 수 있습니다 — 예를 들어, [단일 텍스트 열을 변환](/ko/docs/Web/CSS/Layout_cookbook/Column_layouts) (기본 콘텐츠 영역과 관련 정보에 대한 사이드 바가 있는 레이아웃으로) 하는 등 레이아웃을 만드는 데 사용 할 수 있습니다. [애니메이션](/ko/docs/Web/CSS/CSS_Animations) 과 같은 효과에도 사용 할 수 있습니다. 구체적인 예는 이 단락의 링크를 살펴 보십시오.
 
 ## CSS 구문
 
