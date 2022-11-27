@@ -103,7 +103,6 @@ function imageReceived() {
 
 现在是时候本地存储图片了。我们使用 Web Storage API 的本地存储机制来将图片实际存储到本地，该机制可通过全局 {{domxref("Window.localStorage", "localStorage")}} 进行访问。canvas 的 {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} 方法用于将图像转换为 data:// URL 形式的 PNG 格式图片，之后使用 {{domxref("Storage.setItem", "setItem()")}} 存储到本地。
 
-您可以在 Glitch 上[尝试](https://cors-image-example.glitch.me)或[重写](https://glitch.com/edit/#!/remix/cors-image-example)此例子。
 
 ## 参见
 
