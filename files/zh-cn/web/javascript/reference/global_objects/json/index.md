@@ -39,8 +39,8 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON
 
   <pre class="brush: js">
 let code = '"\u2028\u2029"';
-JSON.parse(code);  // 正常
-eval(code);  // 错误
+JSON.parse(code); // 正常
+eval(code); // 错误
 </pre>
    </td>
   </tr>
