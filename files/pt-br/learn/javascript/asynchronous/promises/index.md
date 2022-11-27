@@ -1,9 +1,6 @@
 ---
 title: Como usar Promises
 slug: Learn/JavaScript/Asynchronous/Promises
-tags:
-  - JavaScript
-  - Learn
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}
@@ -13,7 +10,7 @@ tags:
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisitos:</th>
+      <th scope="row">Pré-requisitos:</th>
       <td>
         Conhecimentos básicos em informática, um básico entendimento do
         JavaScript e seus fundamentos.
@@ -26,7 +23,7 @@ tags:
   </tbody>
 </table>
 
-No ultimo artigo falamos sobre o uso de callbacks para implementar funções assíncronas. Com esse design, você chama a função assíncrona, passando sua função de callback como parametro. A função executa imediatamente e chama seu callback quando a operação é finalizada.
+No último artigo falamos sobre o uso de callbacks para implementar funções assíncronas. Com esse design, você chama a função assíncrona, passando sua função de callback como parâmetro. A função executa imediatamente e chama seu callback quando a operação é finalizada.
 
 Com uma API baseada em promises, a função assíncrona inicia a operação e retorna o objeto {{jsxref("Promise")}}. Você pode então anexar manipuladores nesse objeto, e esses manipuladores vão ser executados quando a operação tiver sucesso ou falhar.
 
@@ -35,12 +32,12 @@ Com uma API baseada em promises, a função assíncrona inicia a operação e re
 > **Nota:** Neste artigo, vamos explorar promises copiando exemplos de código desta página dentro do console Javascript do seu navegador. Para configurar isso:
 >
 > 1. abra o navegador e visite <https://example.org>
-> 2. nesta aba, abra o console Javascript nas [ferramentas de desenvolvimento do navegador](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
+> 2. nesta aba, abra o console Javascript nas [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools)
 > 3. quando mostrarmos um exemplo, copie-o dentro do console. Você vai ter que recarregar a página cada vez que você começar um novo exemplo, caso contrário o console irá reclamar que você redeclarou a função `fetchPromise`.
 
 Neste exemplo, vamos baixar o seguinte arquivo JSON <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json> e registrar algumas informações sobre ele.
 
-Para isso, vamos fazer uma **Requisição HTTP** para o servidor. Em uma requisição HTTP, enviamos uma solicitação para o servidor e ele nos envia uma resposta de volta. Neste caso, vamos enviar uma solicitação para obeter um arquivo JSON do servidor. Relembre o ultimo artigo, onde fizamos requisições HTTP usando a API {{domxref("XMLHttpRequest")}}?
+Para isso, vamos fazer uma **Requisição HTTP** para o servidor. Em uma requisição HTTP, enviamos uma solicitação para o servidor e ele nos envia uma resposta de volta. Neste caso, vamos enviar uma solicitação para obeter um arquivo JSON do servidor. Relembre o último artigo, onde fizamos requisições HTTP usando a API {{domxref("XMLHttpRequest")}}? Bem, neste artigo, usaremos a API {{domxref("fetch", "fetch()")}}, que é a substituição moderna baseada em promise para XMLHttpRequest.
 
 Cole o seguinte código no console do seu navegador:
 
@@ -71,7 +68,7 @@ Requisição iniciada…
 Resposta recebida: 200
 ```
 
-Note que `Requisição iniciada…` foi exibido antes de recebermos a resposta. Diferente de uma função síncrona, `fetch()` retorna enquanto a requisição ainda está ocorrendo, permitindo que nosso programa permaneça ágil. A resposta mostra o [status code](/en-US/docs/Web/HTTP/Status) `200` (OK), que significa que nossa requisição obteve sucesso.
+Note que `Requisição iniciada…` foi exibido antes de recebermos a resposta. Diferente de uma função síncrona, `fetch()` retorna enquanto a requisição ainda está ocorrendo, permitindo que nosso programa permaneça ágil. A resposta mostra o [status code](/pt-BR/docs/Web/HTTP/Status) `200` (OK), que significa que nossa requisição obteve sucesso.
 
 Esse exemplo provavelmente se parece muito com o exemplo do último artigo, onde adicionamos manipuladores de eventos ao objeto {{domxref("XMLHttpRequest")}}. Em vez disso, passamos um manipulador dentro do método `then()` da promise retornada.
 
@@ -98,7 +95,7 @@ Isso deve registrar "baked beans" (o nome do primeiro produto listado em "produc
 
 Mas espere! Lembra do último artigo, onde dissemos que ao chamar um callback dentro de outro callback, obtínhamos sucessivamente mais níveis de código aninhados? E dissemos que esse "inferno de callback" tornava nosso código difícil de entender? Isso não é exatamente o mesmo, apenas com chamadas `then()`?
 
-É claro. Mas a característica elegante das promises é que o próprio _`then()` retorna uma promise, que será completada com o resultado da função passada para ela_. Isso significa que podemos (e certamente devemos) reescrever o código acima assim:
+Sim, claro. Mas a característica elegante das promises é que o próprio _`then()` retorna uma promise, que será completada com o resultado da função passada para ela_. Isso significa que podemos (e certamente devemos) reescrever o código acima assim:
 
 ```js
 const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
@@ -113,6 +110,21 @@ fetchPromise
 Em vez de chamar o segundo `then()` dentro do manipulador para o primeiro `then()`, podemos _retornar_ a promise retornada por `json()` e chamar o segundo `then()` nesse valor de retorno. Isso é chamado de **encadeamento de promises** e significa que podemos evitar níveis cada vez maiores de indentação quando precisamos fazer chamadas de função assíncronas consecutivas.
 
 Antes de passarmos para a próxima etapa, há mais uma peça a ser adicionada. Precisamos verificar se o servidor aceitou e foi capaz de lidar com a solicitação antes de tentarmos lê-la. Faremos isso verificando o código de status na resposta e lançando um erro se não estiver "OK":
+
+```js
+const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+
+fetchPromise
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data[0].name);
+  });
+```
 
 ## Capturando errors
 
@@ -156,9 +168,13 @@ Primeiro, uma promise pode estar em um dos três estados:
 - **fulfilled**: a função assíncrona foi concluída com sucesso. Quando uma promise é _fulfilled_, seu manipulador `then()` é chamado.
 - **rejected**: a função assíncrona falhou. Quando uma promise é _rejected_, seu manipulador `catch()` é chamado.
 
-Observe que o significado de "sucesso" ou "falha" aqui depende da API em questão: por exemplo, `fetch()` considera uma solicitação que foi concluída com sucesso se o servidor retornar um erro como [404 Not Found](/en-US/docs/Web/HTTP/Status/404), mas não se um erro de rede impediu o envio da solicitação.
+Observe que o significado de "sucesso" ou "falha" aqui depende da API em questão: por exemplo, `fetch()` considera uma solicitação que foi concluída com sucesso se o servidor retornar um erro como [404 Not Found](/pt-BR/docs/Web/HTTP/Status/404), mas não se um erro de rede impediu o envio da solicitação.
 
 Às vezes, usamos o termo **settled** para cobrir tanto **fulfilled** quanto **rejected**.
+
+Uma promise é **resolved** se for resolvida ou se tiver sido "bloqueada" para seguir o estado de outra promise.
+
+O artigo [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/) dá uma ótima explicação dos detalhes desta terminologia.
 
 ## Combinando múltiplas promises
 
@@ -324,7 +340,7 @@ const promise = fetchProducts();
 promise.then((data) => console.log(data[0].name));
 ```
 
-Além disso, observe que você só pode usar `await` dentro de uma função `async`, a menos que seu código esteja em um [módulo JavaScript](/en-US/docs/Web/JavaScript/Guide/Modules). Isso significa que você não pode fazer isso em um script normal:
+Além disso, observe que você só pode usar `await` dentro de uma função `async`, a menos que seu código esteja em um [módulo JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Modules). Isso significa que você não pode fazer isso em um script normal:
 
 ```js
 try {
@@ -355,12 +371,12 @@ As promises funcionam nas versões mais recentes de todos os navegadores moderno
 
 Não abordamos todos os recursos das promises neste artigo, apenas os mais interessantes e úteis. Ao começar a aprender mais sobre promises, você encontrará mais recursos e técnicas.
 
-Muitas APIs da Web modernas são baseadas em promises, incluindo [WebRTC](/en-US/docs/Web/API/WebRTC_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) e muito mais.
+Muitas APIs da Web modernas são baseadas em promises, incluindo [WebRTC](/pt-BR/docs/Web/API/WebRTC_API), [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API), [Media Capture and Streams API](/pt-BR/docs/Web/API/Media_Capture_and_Streams_API) e muito mais.
 
 ## Veja também
 
-- [`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
+- [`Promise()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Using promises](/pt-BR/docs/Web/JavaScript/Guide/Using_promises)
 - [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) by Nolan Lawson
 - [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/)
 
@@ -370,6 +386,6 @@ Muitas APIs da Web modernas são baseadas em promises, incluindo [WebRTC](/en-US
 
 - [Introdução ao JavaScript Async](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing)
 - **Como usar Promises**
-- [Implementing a promise-based API](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Introducing workers](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Assessment: sequencing animations](/en-US/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
+- [Implementing a promise-based API](/pt-BR/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
+- [Introducing workers](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+- [Assessment: sequencing animations](/pt-BR/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
