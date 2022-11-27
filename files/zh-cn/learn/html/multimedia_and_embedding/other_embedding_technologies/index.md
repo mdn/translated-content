@@ -147,14 +147,11 @@ MDN 页面被嵌入在其它页面中没有多大意义，除非你想要将其�
 
 #### 只有在必要时嵌入
 
-有时嵌入第三方内容（例如 YouTube
-视频和地图）是有意义的，但如果你只在完全需要时嵌入第三方内容，你可以省去很多麻烦。网络安全的一个很好的经验法则是*“你怎么谨慎都不为过，如果你决定要做这件事，多检查一遍；如果是别人做的，在被证明是安全的之前，都假设这是危险的。”*
+有时嵌入第三方内容（例如 YouTube 视频和地图）是有意义的，但如果你只在完全需要时嵌入第三方内容，你可以省去很多麻烦。网络安全的一个很好的经验法则是 *“你怎么谨慎都不为过，如果你决定要做这件事，多检查一遍；如果是别人做的，在被证明是安全的之前，都假设这是危险的。”*
 
-除了安全问题，你还应该意识到知识产权问题。无论在线内容还是离线内容，绝大部分内容都是有版权的，甚至是一些你没想到有版权的内容（例如，[Wikimedia
-Commons](https://commons.wikimedia.org/wiki/Main_Page) 上的大多数图片）。不要在网页上展示一些不属于你的内容，除非你是所有者或所有者给了你明确的、书面的许可。对于侵犯版权的惩罚是严厉的。再说一次，你再小心也不为过。
+除了安全问题，你还应该意识到知识产权问题。无论在线内容还是离线内容，绝大部分内容都是有版权的，甚至是一些你没想到有版权的内容（例如，[Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page) 上的大多数图片）。不要在网页上展示一些不属于你的内容，除非你是所有者或所有者给了你明确的、书面的许可。对于侵犯版权的惩罚是严厉的。再说一次，你再小心也不为过。
 
-如果内容获得许可，你必须遵守许可条款。例如，MDN 上的内容是 [在
-CC-BY-SA 下许可的](/zh-CN/docs/MDN/About#版权和许可)，这意味着，如果你要引用我们的内容，就必须[用适当的方式注明来源](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution)，即使你对内容做了实质性的修改。
+如果内容获得许可，你必须遵守许可条款。例如，MDN 上的内容是 [在 CC-BY-SA 下许可的](/zh-CN/docs/MDN/About#版权和许可)，这意味着，如果你要引用我们的内容，就必须[用适当的方式注明来源](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution)，即使你对内容做了实质性的修改。
 
 #### 使用 HTTPS
 
@@ -184,9 +181,9 @@ Google Maps 或 Youtube，当你嵌入内容时，`<iframe>`将通过 HTTPS 提�
 
 #### 配置 CSP 指令
 
-[CSP](/zh-CN/docs/Glossary/CSP)代表**[内容安全策略](/zh-CN/docs/Web/Security/CSP)**，它提供[一组 HTTP 标头](/zh-CN/docs/Web/Security/CSP/CSP_policy_directives)（由 web 服务器发送时与元数据一起发送的元数据），旨在提高 HTML
-文档的安全性。在`<iframe>`的安全性方面，你可以*[将服务器配置为发送适当的`X-Frame-Options`
-标题。](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)*这样做可以防止其他网站在其网页中嵌入你的内容（这将导致[点击](https://en.wikipedia.org/wiki/clickjacking)和一系列其他攻击），正如我们之前看到的那样，MDN 开发人员已经做了这些工作。
+{{Glossary("CSP")}}代表 **[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)**，它提供[一组 HTTP 标头](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)（由 web 服务器发送时与元数据一起发送的元数据），旨在提高 HTML
+文档的安全性。在 `<iframe>` 的安全性方面，你可以 *[将服务器配置为发送适当的`X-Frame-Options`
+标题](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)*。这样做可以防止其他网站在其网页中嵌入你的内容（这将导致[点击劫持](https://en.wikipedia.org/wiki/clickjacking)和一系列其他攻击），正如我们之前看到的那样，MDN 开发人员已经做了这些工作。
 
 > **备注：** 你可以阅读 Frederik Braun 的帖子[在 X-Frame-Options 安全性头上](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)来获取有关此主题的更多背景信息。显然，在这篇文章中已经解释得很清楚了。
 
