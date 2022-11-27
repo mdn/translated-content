@@ -2,6 +2,7 @@
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
 ---
+
 {{JSRef}}
 
 **`startsWith()`** 메서드는 어떤 문자열이 특정 문자로 시작하는지 확인하여 결과를 `true` 혹은 `false`로 반환합니다.
@@ -35,12 +36,13 @@ startsWith(searchString, position)
 
 `startsWith` 메소드로 어떤 문자열이 다른 문자열로 시작하는지 확인 할 수 있습니다. 대소문자를 구분합니다.
 
-## 예시
+## 예제
 
 ### `startsWith()` 사용하기
 
 ```js
 const str = "To be, or not to be, that is the question.";
+
 console.log(str.startsWith("To be")); // true
 console.log(str.startsWith("not to be")); // false
 console.log(str.startsWith("not to be", 10)); // true
@@ -54,9 +56,9 @@ console.log(str.startsWith("not to be", 10)); // true
 
 {{Compat}}
 
-## 관련 문서
+## 같이 보기
 
-- [Polyfill of `String.prototype.startsWith` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [`core-js`에서 `String.prototype.startsWith`의 폴리필](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.endsWith()")}}
 - {{jsxref("String.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}

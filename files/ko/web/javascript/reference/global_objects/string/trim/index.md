@@ -7,6 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/Trim
 
 **`trim()`** 메서드는 문자열 양 끝의 공백을 제거하고 원본 문자열을 수정하지 않고 새로운 문자열을 반환합니다. 여기서 말하는 공백이란 모든 공백문자(space, tab, NBSP 등)와 모든 개행문자(LF, CR 등)를 의미합니다.
 
+한쪽 끝의 공백만 제거한 새로운 문자열을 반환하려면 {{jsxref("String.prototype.trimStart()", "trimStart()")}} 또는 {{jsxref("String.prototype.trimEnd()" , "trimEnd()")}}를 사용하세요.
+
 {{EmbedInteractiveExample("pages/js/string-trim.html")}}
 
 ## 구문
@@ -17,12 +19,9 @@ trim()
 
 ### 반환 값
 
-`str` 문자열의 양끝의 공백을 제거한 문자열을 반환합니다.  
-
-`str` 문자열에 공백이 없어도 예외가 발생하지 않고 새 문자열이 반환됩니다. (본질적으로 `str`의 복사본).  
+시작과 끝에서 공백이 제거된 `str`을 나타내는 새로운 문자열입니다. 공백은 [white space](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#white_space) 문자와 [line terminators](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators)로 정의됩니다.
 
 한쪽 끝의 공백만 제거한 문자열을 반환하시려면 {{jsxref("String.prototype.trimStart()", "trimStart()")}} 또는 {{jsxref("String.prototype.trimEnd()", "trimEnd()")}} 메서드를 사용하세요.
-
 
 ## 예제
 
