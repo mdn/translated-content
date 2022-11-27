@@ -5,7 +5,7 @@ slug: Web/HTML/CORS_enabled_image
 
 {{HTMLSidebar}}
 
-HTML 规范为图片提供了 {{ htmlattrxref("crossorigin", "img") }} 属性，结合合适的 {{Glossary("CORS")}} 响应头，就可以实现在 {{HTMLElement("canvas")}} 中使用外部域加载的 {{ HTMLElement("img") }} 元素，就像在当前源加载一样。
+HTML 规范为图片提供了 {{ htmlattrxref("crossorigin", "img") }} 属性，结合合适的 {{Glossary("CORS")}} 响应标头，就可以实现在 {{HTMLElement("canvas")}} 中使用外部域加载的 {{ HTMLElement("img") }} 元素，就像在当前源加载一样。
 
 查看 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)来了解更多 `crossorigin` 属性的用法。
 
@@ -26,13 +26,15 @@ HTML 规范为图片提供了 {{ htmlattrxref("crossorigin", "img") }} 属性，
 
 尝试以上行为会导致抛出 `SecurityError` 异常。这种机制可以避免未经许可拉取远程网站信息而导致的用户隐私泄露。
 
-## 存储一张外部域中的图片
+## 存储一张外部来源中的图片
 
 在以下例子中，将实现允许检索来自外部的图像，并将其保存在本地存储。要实现这一点，我们需要配置服务器以及网站本身的编码。
 
 ### 网站服务器配置
 
-首先，你必须有一个可以对图片响应正确 {{HTTPHeader("Access-Control-Allow-Origin")}} 响应头的服务器。你可以使用以下片段（来自 [HTML5 Boilerplate Apache server configs](https://github.com/h5bp/server-configs-apache/blob/main/h5bp/cross-origin/images.conf) ）实现正确响应头，该配置为允许跨域访问图片。
+首先，你必须有一个可以对图片正确响应 {{HTTPHeader("Access-Control-Allow-Origin")}} 响应头的服务器。
+
+我们假设服务器正在使用 [Apache](https://httpd.apache.org/)。你可以参考以下 HTML5 样板 [为跨源图片准备的 Apache 服务器配置](https://github.com/h5bp/server-configs-apache/blob/main/h5bp/cross-origin/images.conf)）：
 
 ```xml
 <IfModule mod_setenvif.c>
@@ -49,9 +51,9 @@ HTML 规范为图片提供了 {{ htmlattrxref("crossorigin", "img") }} 属性，
 
 ### 实现保存功能
 
-以上配置完毕后，服务器就可以跨域获取图片了。现在我们可以开始撰写将图片保存在[本地存储](/zh-CN/docs/Web/API/Web_Storage_API) 中的代码了，就像这些图片在你自己域名之下一样。
+以上配置完毕后，服务器就可以跨源获取图片了。现在我们可以开始撰写将图片保存在[本地存储](/zh-CN/docs/Web/API/Web_Storage_API) 中的代码了，就像这些图片在你自己域名之下一样。
 
-关键在于在 {{domxref("HTMLImageElement")}} 上设置 {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} 的 {{htmlattrxref("crossorigin")}} 属性，这引导浏览器在下载图像数据时使用跨域访问。
+关键在于在 {{domxref("HTMLImageElement")}} 上设置 {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} 的 {{htmlattrxref("crossorigin")}} 属性，这引导浏览器在下载图像数据时使用跨源访问。
 
 #### 开始下载图片
 
@@ -70,7 +72,7 @@ function startDownload() {
 }
 ```
 
-在这里，我们使用了“硬编码”的图片网址（`imageURL`）和相关描述文字（`imageDescription`），当然这些可以很方便地从任何地方获取。当开始下载图片时，我们使用 {{domxref("HTMLImageElement.Image", "Image()")}} 构造器创建新的 {{domxref("HTMLImageElement")}} 对象，将图片的 `crossOrigin` 属性设置为 `"Anonymous"`（即允许对未经过验证的图像进行跨域下载）。为图片添加 {{domxref("Window/load_event", "load")}} 事件的监听来判断图片数据是否已接收。我们为图片添加了替代性文字，当 `<canvas>` 不支持 `alt` 属性时，该值可以用于设置 `aria-label` 或 canvas 的内部内容。
+在这里，我们使用了“硬编码”的图片网址（`imageURL`）和相关描述文字（`imageDescription`），当然这些可以很方便地从任何地方获取。当开始下载图片时，我们使用 {{domxref("HTMLImageElement.Image", "Image()")}} 构造器创建新的 {{domxref("HTMLImageElement")}} 对象，将图片的 `crossOrigin` 属性设置为 `"Anonymous"`（即允许对未经过验证的图像进行跨源下载）。为图片添加 {{domxref("Window/load_event", "load")}} 事件的监听来判断图片数据是否已接收。我们为图片添加了替代性文字，当 `<canvas>` 不支持 `alt` 属性时，该值可以用于设置 `aria-label` 或 canvas 的内部内容。
 
 最后，将图片的 {{domxref("HTMLImageElement.src", "src")}} 属性设置为图片的 URL 以触发图片下载。
 
@@ -106,6 +108,6 @@ function imageReceived() {
 
 ## 参见
 
-- [在 Chrome 13 的 WebGL 中使用跨域图片](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
+- [在 Chrome 13 的 WebGL 中使用跨源图片](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
 - [HTML 标准——`crossorigin` 属性](http://whatwg.org/html#attr-img-crossorigin)
 - [Web 存储 API](/zh-CN/docs/Web/API/Web_Storage_API)
