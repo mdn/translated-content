@@ -28,7 +28,7 @@ L'API `topSites.get()` permet à une extension d'accéder à cette liste. Appel�
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-Pour utiliser l'API topSites, vous devez avoir la [permission de l'API](fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "topSites"
+Pour utiliser l'API topSites, vous devez avoir la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "topSites"
 
 ## Syntaxe
 
