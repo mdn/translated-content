@@ -32,9 +32,9 @@ HTML 规范为图片提供了 {{ htmlattrxref("crossorigin", "img") }} 属性，
 
 ### 网站服务器配置
 
-首先，你必须有一个可以对图片正确响应 {{HTTPHeader("Access-Control-Allow-Origin")}} 响应头的服务器。
+首先，你必须有一个可以对图片正确响应 {{HTTPHeader("Access-Control-Allow-Origin")}} 标头，以允许跨源访问的服务器。
 
-我们假设服务器正在使用 [Apache](https://httpd.apache.org/)。你可以参考以下 HTML5 样板 [为跨源图片准备的 Apache 服务器配置](https://github.com/h5bp/server-configs-apache/blob/main/h5bp/cross-origin/images.conf)）：
+我们假设服务器正在使用 [Apache](https://httpd.apache.org/)。你可以参考以下 HTML5 样板[为跨源图片准备的 Apache 服务器配置](https://github.com/h5bp/server-configs-apache/blob/main/h5bp/cross-origin/images.conf)：
 
 ```xml
 <IfModule mod_setenvif.c>
@@ -51,13 +51,13 @@ HTML 规范为图片提供了 {{ htmlattrxref("crossorigin", "img") }} 属性，
 
 ### 实现保存功能
 
-以上配置完毕后，服务器就可以跨源获取图片了。现在我们可以开始撰写将图片保存在[本地存储](/zh-CN/docs/Web/API/Web_Storage_API) 中的代码了，就像这些图片在你自己域名之下一样。
+以上配置完毕后，服务器就可以跨源获取图片了。现在我们可以开始编写将图片保存在[本地存储](/zh-CN/docs/Web/API/Web_Storage_API)中的代码了，就像这些图片在你自己域名之下一样。
 
 关键在于在 {{domxref("HTMLImageElement")}} 上设置 {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} 的 {{htmlattrxref("crossorigin")}} 属性，这引导浏览器在下载图像数据时使用跨源访问。
 
 #### 开始下载图片
 
-以下代码将在用户点击 "Download" 按钮时开始下载：
+以下代码会（例如，在用户点击“下载”按钮时）开始下载：
 
 ```js
 function startDownload() {
