@@ -1,7 +1,9 @@
 ---
 title: Caching compiled WebAssembly modules
-slug: WebAssembly/Caching_modules
+slug: orphaned/WebAssembly/Caching_modules
+original_slug: WebAssembly/Caching_modules
 ---
+
 {{WebAssemblySidebar}}
 
 > **경고:** Experimental {{jsxref("WebAssembly.Module")}} IndexedDB serialization은 브라우저로부터의 지원이 종료됩니다. {{bug("1469395")}} 와 [spec issue](https://github.com/WebAssembly/spec/issues/821)를 확인해 보세요.

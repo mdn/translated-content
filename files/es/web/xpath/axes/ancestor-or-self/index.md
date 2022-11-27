@@ -1,7 +1,6 @@
 ---
 title: ancestor-or-self
 slug: Web/XPath/Axes/ancestor-or-self
-translation_of: Web/XPath/Axes/ancestor-or-self
 original_slug: Web/XPath/Ejes/ancestor-or-self
 ---
 

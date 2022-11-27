@@ -1,11 +1,6 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Status/404
-tags:
-  - Codigo de Estado
-  - Error de Cliente
-  - HTTP
-translation_of: Web/HTTP/Status/404
 ---
 
 {{HTTPSidebar}}

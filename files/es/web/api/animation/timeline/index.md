@@ -1,14 +1,6 @@
 ---
 title: Animation.timeline
 slug: Web/API/Animation/timeline
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Reference
-  - timeline
-translation_of: Web/API/Animation/timeline
 ---
 
 {{ APIRef("Web Animations") }}

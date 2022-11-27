@@ -1,11 +1,6 @@
 ---
 title: '-webkit-mask-origin'
 slug: Web/CSS/mask-origin
-tags:
-  - CSS
-  - Referencia
-translation_of: Web/CSS/mask-origin
-translation_of_original: Web/CSS/-webkit-mask-origin
 original_slug: Web/CSS/-webkit-mask-origin
 ---
 

@@ -5,7 +5,7 @@ slug: Web/API/Document/pictureInPictureEnabled
 
 {{APIRef("Picture-in-Picture API")}}
 
-{{domxref("Document")}}  接口的只读属性 **`pictureInPictureEnabled`**，表示画中画模式是否可用。
+{{domxref("Document")}} 接口的只读属性 **`pictureInPictureEnabled`**，表示画中画模式是否可用。
 
 除非 [Feature-Policy](/zh-CN/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture) 另有规定，否则画中画模式默认是可用的。
 

@@ -1,12 +1,6 @@
 ---
 title: Códigos de estado de respuesta HTTP
 slug: Web/HTTP/Status
-tags:
-  - Códigos de estado
-  - HTTP
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/HTTP/Status
 ---
 
 {{HTTPSidebar}}

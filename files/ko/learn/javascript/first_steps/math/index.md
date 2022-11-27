@@ -2,6 +2,7 @@
 title: 자바스크립트의 기본적인 연산 - 숫자와 연산자
 slug: Learn/JavaScript/First_steps/Math
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
 이 장은 자바스크립트의 연산에 대해 다룹니다. 능숙하게 숫자를 다루기 위해 어떻게 {{Glossary("Operator","operators")}} 와 그 외 기능을 사용하는지 알아봅니다.

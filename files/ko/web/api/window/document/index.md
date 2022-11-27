@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/document
 ---
+
 {{APIRef}}
 
 **`window.document`** 속성은 창이 포함한 [문서](/ko/docs/Web/API/Document)의 참조를 반환합니다.

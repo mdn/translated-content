@@ -148,6 +148,6 @@ document.querySelector("#myfiles").onchange=pullfiles;
 
 ## 関連情報
 
-- [ウェブアプリケーションからのファイルを使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
 - [`File`](/ja/docs/Web/API/File)
 - [`FileReader`](/ja/docs/Web/API/FileReader)

@@ -1,7 +1,6 @@
 ---
 title: HTMLTableElement.insertRow()
 slug: Web/API/HTMLTableElement/insertRow
-translation_of: Web/API/HTMLTableElement/insertRow
 ---
 
 {{APIRef("HTML DOM")}}

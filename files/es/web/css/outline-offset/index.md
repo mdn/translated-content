@@ -1,10 +1,6 @@
 ---
 title: outline-offset
 slug: Web/CSS/outline-offset
-tags:
-  - Contorno CSS
-  - Propiedad CSS
-translation_of: Web/CSS/outline-offset
 ---
 
 {{CSSRef}}

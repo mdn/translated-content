@@ -45,8 +45,8 @@ reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ },
 
 - `callbackFn`
   - : 一个“reducer”函数，包含四个参数：
-    - `previousValue`：上一次调用 `callbackFn` 时的返回值。在第一次调用时，若指定了初始值  `initialValue`，其值则为 `initialValue`，否则为数组索引为 0 的元素 `array[0]`。
-    - `currentValue`：数组中正在处理的元素。在第一次调用时，若指定了初始值  `initialValue`，其值则为数组索引为 0 的元素 `array[0]`，否则为 `array[1]`。
+    - `previousValue`：上一次调用 `callbackFn` 时的返回值。在第一次调用时，若指定了初始值 `initialValue`，其值则为 `initialValue`，否则为数组索引为 0 的元素 `array[0]`。
+    - `currentValue`：数组中正在处理的元素。在第一次调用时，若指定了初始值 `initialValue`，其值则为数组索引为 0 的元素 `array[0]`，否则为 `array[1]`。
     - `currentIndex`：数组中正在处理的元素的索引。若指定了初始值 `initialValue`，则起始索引号为 0，否则从索引 1 起始。
     - `array`：用于遍历的数组。
 - `initialValue` {{optional_inline}}

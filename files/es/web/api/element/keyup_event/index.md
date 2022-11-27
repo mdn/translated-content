@@ -1,7 +1,6 @@
 ---
 title: Tecla Arriba
 slug: Web/API/Element/keyup_event
-translation_of: Web/API/Document/keyup_event
 original_slug: Web/API/Document/keyup_event
 ---
 

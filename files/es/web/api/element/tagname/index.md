@@ -1,9 +1,6 @@
 ---
 title: element.tagName
 slug: Web/API/Element/tagName
-tags:
-  - Referencia_DOM_de_Gecko
-translation_of: Web/API/Element/tagName
 ---
 
 {{ APIRef }}

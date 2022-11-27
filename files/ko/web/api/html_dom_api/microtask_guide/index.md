@@ -18,6 +18,7 @@ tags:
   - queueMicrotask
 translation_of: Web/API/HTML_DOM_API/Microtask_guide
 ---
+
 {{APIRef("HTML DOM")}}
 
 **마이크로태스크**는 자신을 생성한 함수 또는 프로그램이 종료됐고 [JavaScript 실행 스택](/ko/docs/Web/JavaScript/EventLoop#스택)이 빈 후에, 그러나 {{glossary("user agent", "사용자 에이전트")}}가 스크립트 실행 환경을 운용하기 위해 사용하는 이벤트 루프로 통제권을 넘기기는 전에 실행되는 짧은 함수입니다.

@@ -1,12 +1,6 @@
 ---
 title: ImageBitmap
 slug: Web/API/ImageBitmap
-tags:
-  - API
-  - Canvas
-  - Imagen de mapa de bits
-  - Referencia
-translation_of: Web/API/ImageBitmap
 ---
 
 {{APIRef("Canvas API")}}

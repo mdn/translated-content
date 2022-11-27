@@ -70,7 +70,6 @@ onstorage = (event) => { };
 | `url` {{readonlyInline}}         | {{domxref("DOMString")}} (string) | キーが変更されたドキュメントのアドレス       |
 | `storageArea` {{readonlyInline}} | {{domxref("Storage")}}            | 変更された `Storage` オブジェクト            |
 
-
 ## イベントハンドラーエイリアス
 
 `Window` インターフェイスに加え、イベントハンドラープロパティ `onstorage` は以下の対象でも利用可能です。

@@ -1,12 +1,6 @@
 ---
 title: Comment
 slug: Web/API/Comment
-tags:
-  - API
-  - DOM
-  - Referências
-  - comentários
-translation_of: Web/API/Comment
 ---
 
 {{ ApiRef("DOM") }}

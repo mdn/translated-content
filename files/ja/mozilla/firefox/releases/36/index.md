@@ -138,7 +138,7 @@ _変更なし。_
 ### JavaScript コードモジュール
 
 - `PromiseUtils.resolveOrTimeout` を実装しました ({{bug(1080466)}})。
-- [PromiseUtils.defer](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/PromiseUtils.html#defer()) (`Promise.defer()` を置き換えるもの) を実装しました ({{bug(1093021)}})。
+- [PromiseUtils.defer](<<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/PromiseUtils.html#defer>()) (`Promise.defer()` を置き換えるもの) を実装しました ({{bug(1093021)}})。
 
 ### インターフェイス
 

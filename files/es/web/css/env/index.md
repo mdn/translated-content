@@ -1,14 +1,6 @@
 ---
 title: env()
 slug: Web/CSS/env
-tags:
-  - CSS
-  - Experimental
-  - Función CSS
-  - Variables CSS
-  - env
-  - env()
-translation_of: Web/CSS/env()
 original_slug: Web/CSS/env()
 ---
 

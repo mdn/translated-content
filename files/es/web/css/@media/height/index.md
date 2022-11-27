@@ -1,13 +1,6 @@
 ---
 title: Altura
 slug: Web/CSS/@media/height
-tags:
-  - '@media'
-  - CSS
-  - Media Queries
-  - Referencia
-  - características media
-translation_of: Web/CSS/@media/height
 original_slug: Web/CSS/@media/altura
 ---
 

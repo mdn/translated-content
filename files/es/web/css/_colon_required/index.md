@@ -1,13 +1,6 @@
 ---
 title: ':required'
 slug: Web/CSS/:required
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:required
 ---
 
 {{ CSSRef }}

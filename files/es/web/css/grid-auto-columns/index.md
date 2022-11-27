@@ -1,13 +1,6 @@
 ---
 title: grid-auto-columns
 slug: Web/CSS/grid-auto-columns
-tags:
-  - CSS
-  - CSS Grid
-  - Experimental
-  - Propiedades CSS
-  - Referencia
-translation_of: Web/CSS/grid-auto-columns
 ---
 
 La propiedad de css **`grid-auto-columns`** especifíca el tamaño de una columna de cuadrícula creada implícitamente {{glossary("grid tracks", "track")}}.

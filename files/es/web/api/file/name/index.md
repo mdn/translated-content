@@ -1,13 +1,6 @@
 ---
 title: File.name
 slug: Web/API/File/name
-tags:
-  - API
-  - Archivo
-  - Archivos
-  - Propiedad
-  - Referencia
-translation_of: Web/API/File/name
 ---
 
 {{APIRef("File API")}}

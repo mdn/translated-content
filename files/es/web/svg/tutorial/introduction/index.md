@@ -1,7 +1,6 @@
 ---
 title: Introducción
 slug: Web/SVG/Tutorial/Introduction
-translation_of: Web/SVG/Tutorial/Introduction
 original_slug: Web/SVG/Tutorial/Introducción
 ---
 
