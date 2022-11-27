@@ -12,7 +12,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 **웹사이트를 개선하거나 보완**: 애드온을 사용하여 웹사이트에서 추가 기능이나 정보를 제공할 수 있습니다. 서비스의 향상을 위해 사용자가 방문한 페이지에서 세부 정보를 수집하도록 허용할 수 있습니다.
 
-![](amazon_add_on.png)
+![가격 비교 기능을 제공하는 Amazon 애드온 예제](amazon_add_on.png)
 
 Examples: [Amazon Assistant for Firefox](https://addons.mozilla.org/en-US/firefox/addon/amazon-browser-bar/), [OneNote Web Clipper](https://addons.mozilla.org/en-US/firefox/addon/onenote-clipper/), and [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/).
 
