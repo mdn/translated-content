@@ -106,6 +106,6 @@ function imageReceived() {
 
 ## 参见
 
-- [在 Chrome 13 的 WebGL 中使用跨域图片](http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
+- [在 Chrome 13 的 WebGL 中使用跨域图片](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
 - [HTML 标准——`crossorigin` 属性](http://whatwg.org/html#attr-img-crossorigin)
 - [Web 存储 API](/zh-CN/docs/Web/API/Web_Storage_API)
