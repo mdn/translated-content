@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 > **참고:** 만약 브라우저 확장 기능의 기본적인 개념은 이미 익숙하다면, 이 섹션을 스킵하고 [확장 기능 파일이 어떻게 구성되는지 읽어보세요](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). 그 다음, [참고 문서](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference)와 함께 확장 기능을 개발해 보세요. [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)을 방문하여 Firefox용 테스트, 게시 및 확장 기능에 대한 작업 흐름에 대해 자세히 알아보세요.
 
 
-확장 기능은 브라우저에 기능을 추가합니다. 확장 기능은 표준 웹 기술(HTML, CSS, JavaScript)을 이용해 만들어집니다. 확장 기능은 JavaScript에서 사용되는 웹 API 뿐만이 아니라 전용 JavaScript API에도 접근할 수 있어 웹페이지의 코드가 할 수 있는 것보다 더 많은 일을 할 수 있습니다. 아래는 몇 가지 예시입니다.
+확장 기능은 브라우저에 기능을 추가합니다. 확장 기능은 표준 웹 기술(HTML, CSS, JavaScript)을 이용해 만들어집니다. 확장 기능은 JavaScript에서 사용되는 웹 API 뿐만이 아니라 전용 JavaScript API에도 접근할 수 있어 웹페이지의 코드가 할 수 있는 것보다 더 많은 일을 할 수 있습니다. 다음은 수행할 수 있는 작업의 몇 가지 예시입니다.
 
 
 **웹사이트를 개선하거나 보완**: 애드온을 사용하여 웹사이트에서 추가 기능이나 정보를 제공할 수 있습니다. 서비스의 향상을 위해 사용자가 방문한 페이지에서 세부 정보를 수집하도록 허용할 수 있습니다.
