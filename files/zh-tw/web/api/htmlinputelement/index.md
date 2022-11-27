@@ -186,7 +186,7 @@ slug: Web/API/HTMLInputElement
     - if the {{htmlattrxref("value","input")}} cannot be converted to a number,
     - if the resulting value is above the {{htmlattrxref("max","input")}} or below the {{htmlattrxref("min","input")}}.
 - {{domxref("HTMLInputElement.stepUp()")}}
-  - : Increments the {{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}}  n), where n defaults to 1 if not specified. Throws an INVALID_STATE_ERR exception: if the method is not applicable to for the current {{htmlattrxref("type","input")}} value.,
+  - : Increments the {{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}} n), where n defaults to 1 if not specified. Throws an INVALID_STATE_ERR exception: if the method is not applicable to for the current {{htmlattrxref("type","input")}} value.,
     - if the element has no {{htmlattrxref("step","input")}} value,
     - if the {{htmlattrxref("value","input")}} cannot be converted to a number,
     - if the resulting value is above the {{htmlattrxref("max","input")}} or below the {{htmlattrxref("min","input")}}.
