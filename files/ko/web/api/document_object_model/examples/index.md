@@ -1,8 +1,15 @@
 ---
 title: Examples
 slug: Web/API/Document_Object_Model/Examples
+page-type: guide
+tags:
+  - DOM
+  - DOM Reference
 ---
-이 장에서는 DOM을 사용한 웹, XML 개발의 자세한 예제를 제공합니다. 예제는 문서의 객체를 조작하기 위해 가능한 JavaScript의 일반적인 API, 트릭, 패턴을 사용합니다.
+
+{{DefaultAPISidebar("DOM")}}
+
+이 장에서는 DOM을 사용한 웹, XML 개발의 자세한 예제를 제공합니다. 예제는 문서의 객체를 조작하기 위해 가능한 JavaScript의 공통 API, 트릭, 패턴을 사용합니다.
 
 ## 예제 1: 높이와 너비
 
@@ -173,7 +180,7 @@ P
 
 이번 예제에서는 DOM에서 어떻게 이벤트가 실행되고 처리되는지 매우 간단하게 알아보겠습니다. HTML 문서의 BODY가 로드되면, TABLE의 상단 행에 이벤트 수신기가 등록됩니다. 이벤트 수신기는 이벤트를 처리하기 위해 stopEvent 함수를 실행합니다. stopEvent 함수는 테이블의 하단 셀의 값을 변경합니다.
 
-stopEvent는 이벤트 객체 메서드인 {{domxref("event.stopPropagation")}}도 호출합니다. 이 메서드는 이벤트가 DOM으로 더 이상 버블링(bubbling)되지 않도록 합니다. 테이블이 클릭될 때 메시지를 표시해야 하는 {{domxref("element.onclick","onclick")}} 이벤트 처리기가 있다는 것에 주의하세요. 하지만 stopEvent 메서드가 전파를 중지했기 때문에 테이블의 데이터가 업데이트된 후 이벤트 단계는 효과적으로 종료되고, 이를 확인하는 alert 창이 표시됩니다.
+stopEvent는 이벤트 객체 메서드인 {{domxref("event.stopPropagation")}}도 호출합니다. 이 메서드는 이벤트가 DOM으로 더 이상 버블링(bubbling)되지 않도록 합니다. 테이블이 클릭될 때 메시지를 표시해야 하는 {{domxref("Element.click_event","onclick")}} 이벤트 처리기가 있다는 것에 주의하세요. 하지만 stopEvent 메서드가 전파를 중지했기 때문에 테이블의 데이터가 업데이트된 후 이벤트 단계는 효과적으로 종료되고, 이를 확인하는 alert 창이 표시됩니다.
 
 ```html
 <!DOCTYPE html>
@@ -219,7 +226,7 @@ stopEvent는 이벤트 객체 메서드인 {{domxref("event.stopPropagation")}}�
 
 ## Example 6: getComputedStyle
 
-이번 예제에서는 {{domxref("window.getComputedStyle")}} 메서드가 `style` 속성이나 JavaScript(예시: `elt.style.backgroundColor="rgb(173, 216, 230)"`)를 사용하지 않고 요소의 스타일을 가져오는 방법을 보여줍니다. 후자와 같은 유형의 스타일은 {{domxref("element.style", "elt.style")}} 처럼 직접적인 속성으로 가져올 수 있습니다. 자세한 내용은 [DOM CSS Properties List](/ko/docs/Web/CSS/Reference)를 참고하세요.
+이번 예제에서는 {{domxref("window.getComputedStyle")}} 메서드가 `style` 속성이나 JavaScript(예시: `elt.style.backgroundColor="rgb(173, 216, 230)"`)를 사용하지 않고 요소의 스타일을 가져오는 방법을 보여줍니다. 후자와 같은 유형의 스타일은 {{domxref("HTMLElement.style", "elt.style")}} 처럼 직접적인 속성으로 가져올 수 있습니다. 자세한 내용은 [DOM CSS Properties List](/ko/docs/Web/CSS/Reference)를 참고하세요.
 
 `getComputedStyle()`은 {{domxref("CSSStyleDeclaration")}} 객체를 반환합니다. 다음 예제에서 알 수 있듯이 이 객체의 개별 스타일 속성은 {{domxref("CSSStyleDeclaration.getPropertyValue()", "getPropertyValue()")}} 메서드를 사용하여 참조할 수 있습니다.
 
@@ -351,7 +358,7 @@ stopEvent는 이벤트 객체 메서드인 {{domxref("event.stopPropagation")}}�
 
 ## Example 8: DOM 테이블 인터페이스 사용하기
 
-DOM {{domxref("HTMLTableElement")}} 인터페이스는 편리하게 테이블을 생성하고 조작해주는 메서드를 제공합니다. 자주 사용되는 메서드는 {{domxref("HTMLTableElement.insertRow")}}와 {{domxref("tableRow.insertCell")}}입니다.
+DOM {{domxref("HTMLTableElement")}} 인터페이스는 편리하게 테이블을 생성하고 조작해주는 메서드를 제공합니다. 자주 사용되는 메서드는 {{domxref("HTMLTableElement.insertRow")}}와 {{domxref("HTMLTableRowElement.insertCell")}}입니다.
 
 아래 코드에서는 기존 테이블에 행과 셀을 추가하는 방법을 보여줍니다.
 
@@ -384,10 +391,3 @@ DOM {{domxref("HTMLTableElement")}} 인터페이스는 편리하게 테이블을
 - 만약 DOM의 핵심 메서드인 {{domxref("document.createElement")}}와 {{domxref("Node.appendChild")}}를 이용하여 행과 셀을 작성하는데 사용되는 경우, 인터넷 익스플로어(IE)에서는 해당 메서드를 tbody 요소에 추가해야 하지만 다른 브라우저는 테이블 요소에 추가할 수 있습니다(행은 마지막 tbody 요소에 추가됩니다).
 
 - 테이블을 생성하고 수정하는 데 사용할 수 있는 더 많은 편리한 메서드가 [table interface](/ko/docs/Web/API/HTMLTableElement#Methods)에 있습니다.
-
-## 참고 문서
-
-- [DOM Reference](/ko/docs/Web/API/Document_Object_Model)
-- [Introduction to the DOM](/ko/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/ko/docs/Web/API/Document_Object_Model/Events)
-- [Examples](/ko/docs/Web/API/Document_Object_Model/Examples)
