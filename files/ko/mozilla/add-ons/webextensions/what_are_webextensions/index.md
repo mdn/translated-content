@@ -22,7 +22,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 Examples: [MyWeb New Tab](https://chrome.google.com/webstore/detail/myweb-new-tab/cnbiadnhebmicjcbpgajglfemclnlagh), [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/), and [VivaldiFox](https://addons.mozilla.org/en-US/firefox/addon/vivaldifox/).
 
-**웹페이지에 컨텐츠를 추가 또는 제거**: 사용자를 위해 웹페이지에서 거슬리는 광고를 제거한다던가, 웹페이지에 국가나 도시명이 띄워질 때 마다 여행 가이드를 제공한다던가, 일관된 읽기 경험을 제공하기 위해 페이지 컨텐츠를 재구성하는 작업을 하고 싶을 수 있습니다. 웹페이지의 HTML과 CSS에 접근하고 업데이트함으로써 확장 기능은 사용자가 원하는 방식으로 웹을 볼 수 있도록 돕습니다.
+**웹페이지에 컨텐츠를 추가 또는 제거**: 사용자를 위해 웹페이지에서 방해가 되는 광고를 차단하도록 돕거나, 웹 페이지에서 국가 또는 도시가 언급될 때마다 여행 가이드에 대한 접근을 제공하거나, 일관된 읽기 경험을 제공하기 위해 페이지 컨텐츠를 재구성하는 작업을 하고 싶을 수 있습니다. 웹페이지의 HTML과 CSS에 접근하고 업데이트함으로써 확장 기능은 사용자가 원하는 방식으로 웹을 볼 수 있도록 돕습니다.
 
 ![](ublock_origin_add_on.png)
 
