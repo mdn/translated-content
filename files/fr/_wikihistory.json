@@ -28042,9 +28042,5 @@
       "si0ls",
       "dattaz"
     ]
-  },
-  "conflicting/Web/API/WebRTC_API": {
-    "modified": "2019-03-23T23:24:59.049Z",
-    "contributors": ["AbrahamT"]
   }
 }
