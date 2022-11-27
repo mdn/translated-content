@@ -28,7 +28,7 @@ Examples: [MyWeb New Tab](https://chrome.google.com/webstore/detail/myweb-new-ta
 
 Examples: [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/), [Reader](https://addons.mozilla.org/en-US/firefox/addon/reader/), and [Toolbox for Google Play Store™](https://addons.mozilla.org/en-US/firefox/addon/toolbox-google-play-store/).
 
-**도구와 브라우징 기능 제공**: 태스크보드에 새로운 기능을 추가하고, URL, 하이퍼링크, 페이지 텍스트로부터 QR코드 이미지를 생성합니다. [WebExtensions APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions)가 제공하는 유연한 UI옵션과 강력한 기능을 통해 브라우저에 새로운 기능을 쉽게 추가할 수 있습니다. 그리고 당신의 웹사이트가 아니더라도, 거의 모든 웹사이트의 기능을 향상시킬 수 있습니다.
+**도구 및 새로운 브라우징 기능 추가**: 작업 보드에 새로운 기능을 추가하거나, URL, 하이퍼링크, 화면의 글자로부터 QR코드 이미지를 생성합니다. [WebExtensions APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions)가 제공하는 유연한 UI 옵션들과 강력한 기능을 통해 브라우저에 새로운 기능을 쉽게 추가할 수 있습니다. 그리고 당신의 웹사이트가 아니더라도, 거의 모든 웹사이트의 기능을 향상시킬 수 있습니다.
 
 ![](qr_code_image_generator_add_on.png)
 
