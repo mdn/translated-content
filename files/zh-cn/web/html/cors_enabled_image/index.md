@@ -98,7 +98,7 @@ function imageReceived() {
 }
 ```
 
-在 `HTMLImageElement` 调用 `imageReceived()` 来处理 `"load"` 事件以接收下载图片。一旦下载完成全部有效的数据即可触发该事件。首先我们会创建用于转换图片到数据 URL 的 {{HTMLElement("canvas")} 元素，然后在变量 `context` 中获取 canvas 的 2D 绘画上下文（{{domxref("CanvasRenderingContext2D")}}）。
+在 `HTMLImageElement` 调用 `imageReceived()` 来处理 `"load"` 事件以接收下载图片。一旦下载完成全部有效的数据即可触发该事件。首先我们会创建用于转换图片到数据 URL 的 {{HTMLElement("canvas")}} 元素，然后在变量 `context` 中获取 canvas 的 2D 绘画上下文（{{domxref("CanvasRenderingContext2D")}}）。
 
 调整画布大小以匹配接收到的图像，内部文字将设置为图片的描述，然后使用 {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} 将图像绘制到画布中。画布之后被插入到文档中显示。
 
