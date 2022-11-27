@@ -22,7 +22,7 @@ HTML 规范为图片提供了 {{ htmlattrxref("crossorigin", "img") }} 属性，
 在"被污染"的 canvas 中调用以下方法将会抛出安全错误：
 
 - 在 canvas 的上下文上调用 {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}
-- 在 {{HTMLElement("canvas")} 元素本身调用 {{domxref("HTMLCanvasElement.toBlob", "toBlob()")}}、{{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} 或 {{domxref("HTMLCanvasElement.captureStream", "captureStream()")}}
+- 在 {{HTMLElement("canvas")}} 元素本身调用 {{domxref("HTMLCanvasElement.toBlob", "toBlob()")}}、{{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} 或 {{domxref("HTMLCanvasElement.captureStream", "captureStream()")}}
 
 尝试以上行为会导致抛出 `SecurityError` 异常。这种机制可以避免未经许可拉取远程网站信息而导致的用户隐私泄露。
 
@@ -44,6 +44,7 @@ HTML 规范为图片提供了 {{ htmlattrxref("crossorigin", "img") }} 属性，
   </IfModule>
 </IfModule>
 ```
+
 简单来说，该配置允许服务器的图形文件（那些扩展名为 ".bmp"、".cur"、".gif"、".ico"、".jpg"、".jpeg"、".png"、".svg"、".svgz" 和 ".webp" 的文件）从互联网上的任何位置跨域访问。
 
 ### 实现保存功能
@@ -102,7 +103,6 @@ function imageReceived() {
 调整画布大小以匹配接收到的图像，内部文字将设置为图片的描述，然后使用 {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} 将图像绘制到画布中。画布之后被插入到文档中显示。
 
 现在是时候本地存储图片了。我们使用 Web Storage API 的本地存储机制来将图片实际存储到本地，该机制可通过全局 {{domxref("Window.localStorage", "localStorage")}} 进行访问。canvas 的 {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} 方法用于将图像转换为 data:// URL 形式的 PNG 格式图片，之后使用 {{domxref("Storage.setItem", "setItem()")}} 存储到本地。
-
 
 ## 参见
 
