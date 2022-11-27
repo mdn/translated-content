@@ -154,7 +154,7 @@ On pourrait avoir une implémentation par défaut de `sePrésenter()` pour les p
 
 ```js
 thomas = new Person("Thomas");
-thomas.sePrésenter(); // "Je m'appelle Thomas.'
+thomas.sePrésenter(); // "Je m'appelle Thomas."
 ```
 
 Cette fonctionnalité où une méthode possède le même nom mais différentes implémentations dans différentes classes est appelée **polymorphisme**. Lorsqu'une méthode d'une classe enfant remplace l'implémentation de sa classe parente, on dit qu'elle **surcharge** la version de la classe parente.
@@ -228,7 +228,7 @@ Pour commencer, dans un modèle objet basé sur les classes, les classes et les 
 
 Ensuite, bien que la chaîne de prototypes ressemble à une hiérarchie d'héritage et en partage quelques aspects, elle en diffère sur d'autres. Lorsqu'une classe enfant est instanciée, un seul objet est créé qui combine les propriétés définies par la sous-classe et les propriétés définies plus haut dans la hiérarchie. Avec les prototypes, chaque niveau de la hiérarchie est représenté par un objet différent et le lien se fait avec le prototype (voir [`Object.getPrototypeOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)). Le comportement de la chaîne de prototype se rapproche plus de la **délégation** que de l'héritage. La délégation est une approche où un objet, lorsqu'on lui demande de réaliser une tâche, peut le faire lui-même ou demander à un autre objet de réaliser la tâche à sa place (lui **déléguer**). Sous plusieurs aspects, la délégation est une méthode plus flexible que l'héritage pour combiner les objets (on peut, entre autres, changer l'objet délégué au moment de l'exécution).
 
-Ceci étant posé, les constructeurs et les prototypes peuvent être utilisés afin d'implémenter une programmation orientée objet basée sur les classes en JavaScript. Toutefois, les utiliser directement afin d'implémenter des fonctionnalités comme l'héritage peut s'avérer délicat. C'est pourquoi JavaScript fournit des fonctionnalités supplémentaires, construites par dessus le modèle prototypal et qui correspondent mieux aux concepts de la programmation orientée objet basée sur les classes. Ces fonctionnalités supplémentaires seront abordées dans l'article suivant.
+Ceci étant posé, les constructeurs et les prototypes peuvent être utilisés afin d'implémenter une programmation orientée objet basée sur les classes en JavaScript. Toutefois, les utiliser directement afin d'implémenter des fonctionnalités comme l'héritage peut s'avérer délicat. C'est pourquoi JavaScript fournit des fonctionnalités supplémentaires, construites par-dessus le modèle prototypal et qui correspondent mieux aux concepts de la programmation orientée objet basée sur les classes. Ces fonctionnalités supplémentaires seront abordées dans l'article suivant.
 
 ## Résumé
 

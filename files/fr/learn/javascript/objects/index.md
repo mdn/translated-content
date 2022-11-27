@@ -11,7 +11,7 @@ En JavaScript, la plupart des valeurs manipulées sont des objets, qu'ils provie
 
 > **Remarque :**
 >
-> #### Vous souhaitez devenir développeuse ou développeur web ?
+> #### Vous souhaitez devenir développeuse ou développeur web&nbsp;?
 >
 > Nous avons construit un cursus contenant toutes les informations essentielles pour parvenir à cet objectif.
 >
