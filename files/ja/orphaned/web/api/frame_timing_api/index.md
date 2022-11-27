@@ -10,7 +10,7 @@ The **`PerformanceFrameTiming`** interface provides _frame_ timing data about th
 
 An application can register a {{domxref("PerformanceObserver")}} for "`frame`" {{domxref("PerformanceEntry","performance entry types")}}. The _observer_ (callback) will be notified when new "`frame`" events are added to the browser's _performance timeline_ and the frame's {{domxref("PerformanceEntry.duration","duration")}} (length of time) will be available. This data can be used to help identify areas that take too long to provide a good user experience.
 
-Example code of the interfaces described in this document is included in _[Using the Frame Timing API](/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API)_.
+Example code of the interfaces described in this document is included in _[Using the Frame Timing API](/ja/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API)_.
 
 ## Performance `frames`
 
@@ -39,9 +39,9 @@ When a frame {{domxref("PerformanceObserver","observer")}} is invoked, frame {{d
 
 ## Browser compatibility
 
-{{experimental_inline}}As shown in the {{domxref("PerformanceFrameTiming")}} interface's [Browser Compatibility](/Web/API/PerformanceFrameTiming#Browser_compatibility) table, this interface has no implementations.
+{{experimental_inline}}As shown in the {{domxref("PerformanceFrameTiming")}} interface's [Browser Compatibility](/ja/docs/Web/API/PerformanceFrameTiming#Browser_compatibility) table, this interface has no implementations.
 
 ## See also
 
 - [Frame Rate (Firefox Performance Tool)](/ja/docs/Tools/Performance/Frame_rate)
-- [Using the Frame Timing API](/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API)
+- [Using the Frame Timing API](/ja/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API)
