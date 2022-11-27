@@ -8,6 +8,7 @@ slug: Web/API/Element/requestFullScreen
 **`Element.requestFullscreen()`** 方法用于发出异步请求使元素进入全屏模式。
 
 调用此 API 并不能保证元素一定能够进入全屏模式。如果元素被允许进入全屏幕模式，返回的{{JSxRef("Promise")}}会 resolve，并且该元素会收到一个[`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event)事件，通知它已经进入全屏模式。如果全屏请求被拒绝，返回的 promise 会变成 rejected 并且该元素会收到一个[`fullscreenerror`](/zh-CN/docs/Web/API/Document/fullscreenerror_event)事件。如果该元素已经从原来的文档中分离，那么该文档将会收到这些事件。
+
 ## 语法
 
 ```js-nolint
