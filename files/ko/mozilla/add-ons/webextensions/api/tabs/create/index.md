@@ -24,19 +24,19 @@ var creating = browser.tabs.create(
     - `active`{{optional_inline}}
       - : `boolean`. 활성탭이 되는지를 정한다. 윈도우의 포커스에는 영향이 없다({{WebExtAPIRef('windows.update')}} 참조). 기본값은 `true`.
     - `cookieStoreId` {{optional_inline}}
-      - : `string`. 탭의 쿠키 저장 ID를  `cookieStoreId`로 지정한다. 이 옵션은 확장이  `"cookies"` [권한](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)을 가져야 쓸 수 있다.
+      - : `string`. 탭의 쿠키 저장 ID를 `cookieStoreId`로 지정한다. 이 옵션은 확장이 `"cookies"` [권한](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)을 가져야 쓸 수 있다.
     - `index`{{optional_inline}}
       - : `integer`. 윈도우에서 탭의 위치를 지정한다. 쓸 수 있는 값은 0에서 윈도에 있는 탭의 수까지다.
     - `openerTabId`{{optional_inline}}
       - : `integer`. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as the newly created tab.
     - `openInReaderMode`{{optional_inline}}
-      - : `boolean`. If  `true`, open this tab in [Reader Mode](/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Defaults to  `false`.
+      - : `boolean`. If `true`, open this tab in [Reader Mode](/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Defaults to `false`.
     - `pinned`{{optional_inline}}
       - : `boolean`. Whether the tab should be pinned. Defaults to `false`.
     - `selected`{{optional_inline}}
-      - : `boolean`. 윈도우에서 탭이 선택되는지를 지정한다. 기본값은  `true`.
+      - : `boolean`. 윈도우에서 탭이 선택되는지를 지정한다. 기본값은 `true`.
 
-        > **경고:** 이 속성은 사용이 중단되었다. 파이어폭스에서는 지원하지 않는다.  `active`가 대신한다.
+        > **경고:** 이 속성은 사용이 중단되었다. 파이어폭스에서는 지원하지 않는다. `active`가 대신한다.
     - `url` {{optional_inline}}
       - : `string`. 최초 표시될 URL. 기본값은 새 탭 페이지다.
         URL은 반드시 scheme를 포함해야 한다 (가령은 'http://www.google.com'은 되지만, 'www.google.com'은 안된다).
@@ -46,7 +46,7 @@ var creating = browser.tabs.create(
         - javascript: URL
         - data: URL
         - file: URL (예, 파일시스템의 파일들. 단, 확장 안에 포함된 파일의 사용은 아래를 보라)
-        - 특권이 있는 about: URL (예,  `about:config`, `about:addons`,  `about:debugging`). 특권이 없는 URL은 된다 (예, `about:blank`).
+        - 특권이 있는 about: URL (예, `about:config`, `about:addons`, `about:debugging`). 특권이 없는 URL은 된다 (예, `about:blank`).
         - 새 탭 페이지 ( `about:newtab`)는 URL 값이 주어지지 않으면 열린다.
 
         확장에 포함된 페이지의 로딩은 확장의 manifest.json 파일이 있는데서 시작하는 절대 경로를 써라. 예를 들면: '/path/to/my-page.html'. 만약 첫 '/'를 빼면 URL은 상대 경로로 취급되고, 다른 브라우저들은 다른 절대 경로를 생성해낼 것이다.
