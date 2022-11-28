@@ -27,7 +27,7 @@ Un nom de fonctionnalité doit être fourni.
 
 ### Valeur de retour
 
-Une [liste de permissions](fr/Web/HTTP/Feature_Policy/Using_Feature_Policy) pour la fonctionnalité demandée est retournée.
+Une [liste de permissions](/fr/Web/HTTP/Feature_Policy/Using_Feature_Policy) pour la fonctionnalité demandée est retournée.
 
 ## Erreurs
 

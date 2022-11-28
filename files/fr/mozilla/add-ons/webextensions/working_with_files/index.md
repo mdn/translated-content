@@ -146,7 +146,7 @@ Vous avez deux options :
 
 Pour ajouter le fichier ou le blob, vous souhaitez que l'application native utilise [JSON.stringify()](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
 
-Pour utiliser cette méthode, l'extension doit demander la [permission](fr/Add-ons/WebExtensions/manifest.json/permissions) "nativeMessaging" dans son fichier manifest.json. Réciproquement, l'application native doit accorder l'autorisation à l'extension en incluant son ID dans le champ "allowed_extensions" de l'application "manifest".
+Pour utiliser cette méthode, l'extension doit demander la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "nativeMessaging" dans son fichier manifest.json. Réciproquement, l'application native doit accorder l'autorisation à l'extension en incluant son ID dans le champ "allowed_extensions" de l'application "manifest".
 
 Exemple : [Native Messaging](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) (illustre simplement une messagerie)
 Guide : [Native messaging](/fr/Add-ons/WebExtensions/Native_messaging)
