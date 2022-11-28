@@ -120,7 +120,7 @@ Observe que as variáveis ​​podem conter valores que têm diferentes [tipos 
       <th scope="col">Exemplo</th>
     </tr>
   </thead>
-  <corpo>
+  <tbody>
     <tr>
       <th scope="row">{{Glossary("String")}}</th>
       <td>
