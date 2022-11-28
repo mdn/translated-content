@@ -86,9 +86,7 @@ console.log(c); // 1 が出力され、SyntaxError は発生しない...
 
 ## 仕様
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-block', 'Block statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

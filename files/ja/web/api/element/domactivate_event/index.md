@@ -62,9 +62,7 @@ slug: Web/API/Element/DOMActivate_event
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- |
-| {{SpecName('UI Events', '#event-type-DOMActivate', 'DOMActivate')}} | {{Spec2('UI Events')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -269,7 +269,7 @@ Vous pouvez procéder ainsi pour créer un objet URL lorsque vous souhaitez réf
 var objectURL = window.URL.createObjectURL(fileObj);
 ```
 
-L'objet URL est une chaîne identifiant l'objet {{ domxref("File") }}. Un objet URL unique est créé à chaque fois que vous appelez {{ domxref("window.URL.createObjectURL()") }}, même si vous avez déjà créé un objet URL pour ce fichier. Chacun d'eux doit être libéré&nbsp;; bien qu'ils soient automatiquement libérés lorsque le document est déchargé, vous devez explicitement les libérer en appelant {{ domxref("window.URL.revokeObjectURL()") }}  si votre page les utilise de manière dynamique&nbsp;:
+L'objet URL est une chaîne identifiant l'objet {{ domxref("File") }}. Un objet URL unique est créé à chaque fois que vous appelez {{ domxref("window.URL.createObjectURL()") }}, même si vous avez déjà créé un objet URL pour ce fichier. Chacun d'eux doit être libéré&nbsp;; bien qu'ils soient automatiquement libérés lorsque le document est déchargé, vous devez explicitement les libérer en appelant {{ domxref("window.URL.revokeObjectURL()") }} si votre page les utilise de manière dynamique&nbsp;:
 
 ```js
 window.URL.revokeObjectURL(objectURL);

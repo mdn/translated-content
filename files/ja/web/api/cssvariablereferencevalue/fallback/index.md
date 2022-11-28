@@ -19,9 +19,7 @@ var variable = CSSVariableReferenceValue.variable;
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                     | 備考     |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('CSSOM','#dom-cssvariablereferencevalue-fallback','fallback')}} | {{Spec2('CSSOM')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

@@ -64,11 +64,7 @@ _このインターフェイスは、親である {{domxref("HTMLElement")}} か
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "#htmloutputelement", "HTMLOutputElement")}}             | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5.1', "forms.html#the-output-element", "HTMLOutputElement")}} | {{Spec2('HTML5.1')}}     | 変更なし |
-| {{SpecName('HTML5 W3C', "forms.html#the-output-element", "HTMLOutputElement")}} | {{Spec2('HTML5 W3C')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -23,9 +23,7 @@ var myAudioTracks = sourceBuffer.audioTracks;
 
 ## 仕様
 
-| 仕様                                                                                                                     | 状態                                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-audiotracks', 'audioTracks')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

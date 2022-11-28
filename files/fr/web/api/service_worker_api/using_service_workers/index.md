@@ -30,7 +30,7 @@ Les service workers devraient finalement résoudre ces problèmes. La syntaxe du
 
 De nombreuses fonctionnalités des service workers sont désormais disponibles par défaut dans les plus récentes versions des navigateurs qui les supportent. Cependant, si vous constatez que le code de la démo ne fonctionne pas dans votre version actuelle, vous pourriez avoir besoin d'activer une configuration :
 
-- **Firefox Nightly** : rendez-vous sur `about:config` et configurer  `dom.serviceWorkers.enabled` à true; redémarrer le navigateur.
+- **Firefox Nightly** : rendez-vous sur `about:config` et configurer `dom.serviceWorkers.enabled` à true; redémarrer le navigateur.
 - **Chrome Canary** : rendez-vous sur `chrome://flags` et activer `experimental-web-platform-features`; redémarrer le navigateur (à noter que certaines fonctionnalités sont désormais activées par défaut dans Chrome.)
 - **Opera** : rendez-vous sur `opera://flags` et activer `Support for ServiceWorker`; redémarrer le navigateur.
 
@@ -222,7 +222,7 @@ this.addEventListener('install', function(event) {
 });
 ```
 
-1. Un écouteur d'événement `install` est d'abord ajouté au service worker (d'où le  `this`), puis une méthode {{domxref("ExtendableEvent.waitUntil()") }} est chaînée à l'événement — cela garantit que le Service Worker ne s'installera pas tant que le code à l'intérieur de `waitUntil()` n'a pas été exécuté avec succès.
+1. Un écouteur d'événement `install` est d'abord ajouté au service worker (d'où le `this`), puis une méthode {{domxref("ExtendableEvent.waitUntil()") }} est chaînée à l'événement — cela garantit que le Service Worker ne s'installera pas tant que le code à l'intérieur de `waitUntil()` n'a pas été exécuté avec succès.
 2. A l'intérieur de `waitUntil()` la méthode [`caches.open()`](/fr/docs/Web/API/CacheStorage/open) est utilisée pour créer un nouveau cache appelé `v1`, ce qui constitue la version 1 du cache de ressources de notre site. Cette fonction retourne une promesse lorsque le cache est créé; une fois résolue, est appelée une fonction qui appelle elle-même `addAll()` sur le cache créé, avec pour paramètre un tableau d'URLs relatives à l'origine correspondant aux ressources à mettre en cache.
 3. Si la promesse est rejetée, l'installation échoue, et le worker ne fait rien de plus. Le code peut être alors corrigé et l'opération retentée la prochaine fois que l'enregistrement survient.
 4. Après une installation couronnée de succès, le service worker est activé. Cela ne fait pas une grande différence la première fois que le service worker est installé/activé, mais cela fait plus sens lorsque le service worker est mis à jour (voir la section [Mettre à jour le service worker](#mettre_à_jour_le_service_worker) plus bas).
@@ -333,7 +333,7 @@ this.addEventListener('fetch', function(event) {
 
 Ici on retourne la requête réseau par défaut au moyen de `return fetch(event.request)`, qui retourne lui-même une promesse. Lorsque cette promesse est résolue, on exécute une fonction qui sollicite le cache en utilisant `caches.open('v1')`; une promesse est de nouveau retournée. Lorsque cette promesse est résolue, `cache.put()` est utilisée pour ajouter la ressource au cache. La ressource est récupérée à partir de `event.request`, et la réponse est alors clonée avec `response.clone()` et ajoutée au cache. Le clone est placé dans le cache, et la réponse originale est retournée au navigateur et délivrée à la page qui la requiert.
 
-Pourquoi un clone ? Il se trouve que les flux de requête et de réponse peuvent seulement être lus une fois.  Afin de retourner la réponse au navigateur et de la mettre en cache, elle doit être clonée. Aussi, l'original est retourné au navigateur tandis que le clone est envoyé dans le cache. Ils sont chacun lus une seule fois.
+Pourquoi un clone ? Il se trouve que les flux de requête et de réponse peuvent seulement être lus une fois. Afin de retourner la réponse au navigateur et de la mettre en cache, elle doit être clonée. Aussi, l'original est retourné au navigateur tandis que le clone est envoyé dans le cache. Ils sont chacun lus une seule fois.
 
 Le dernier problème qui demeure alors est l'échec de la requête au cas où elle n'a aucune correspondance dans le cache et que le réseau n'est pas disponible. Fournir un document de rechange par défaut permet quoiqu'il arrive, à l'utilisateur de récupérer quelque chose :
 

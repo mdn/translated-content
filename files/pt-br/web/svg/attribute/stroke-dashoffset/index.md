@@ -2,6 +2,7 @@
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
 ---
+
 « [SVG Attribute reference home](/pt-BR/SVG/Attribute)
 
 O atributo `stroke-dashoffset` especifica a distância entre o inicio traço e o fim.

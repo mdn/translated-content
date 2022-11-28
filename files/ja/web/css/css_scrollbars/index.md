@@ -46,9 +46,7 @@ Dandelion cucumber earthnut pea peanut soko zucchini.
 
 ## 仕様書
 
-| 仕様書                            | 状態                               | 備考             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS Scrollbars")}} | {{Spec2("CSS Scrollbars")}} | 初回定義 |
+{{Specifications}}
 
 ## アクセシビリティの考慮
 

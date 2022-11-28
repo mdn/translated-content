@@ -24,9 +24,7 @@ document.addEventListener("visibilitychange", function() {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                                         | 備考     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName('Page Visibility API','#dom-document-hidden', 'Document.hidden')}} | {{Spec2('Page Visibility API')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

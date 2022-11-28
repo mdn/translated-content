@@ -46,7 +46,7 @@ Cette méthode renvoie un tableau qui est un sous-ensemble des balises de locale
 
 ## Exemples
 
-Si on dispose d'un environnement (un navigateur par exemple) qui supporte la comparaison de chaînes dans les locales indonésienne, allemande mais pas balinaise,  `supportedLocalesOf` renvoie les balises pour l'indonésien et l'allemand quand bien même la collation avec pinyin n'est pas utilisée avec l'indonésien et qu'il n'existe pas une version spécifique de l'allemand pour l'Indonésie. On illustre ici l'algorithme `"lookup"`. SI on utilisait `"best fit"` pour trouver les locales correspondantes, on aurait pu avoir une balise supplémentaire pour le balinais en plus car la plupart des balinais comprennent l'indonésien.
+Si on dispose d'un environnement (un navigateur par exemple) qui supporte la comparaison de chaînes dans les locales indonésienne, allemande mais pas balinaise, `supportedLocalesOf` renvoie les balises pour l'indonésien et l'allemand quand bien même la collation avec pinyin n'est pas utilisée avec l'indonésien et qu'il n'existe pas une version spécifique de l'allemand pour l'Indonésie. On illustre ici l'algorithme `"lookup"`. SI on utilisait `"best fit"` pour trouver les locales correspondantes, on aurait pu avoir une balise supplémentaire pour le balinais en plus car la plupart des balinais comprennent l'indonésien.
 
 ```js
 var locales = ["ban", "id-u-co-pinyin", "de-ID"];

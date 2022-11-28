@@ -1,6 +1,8 @@
 ---
 title: KeyboardEvent.metaKey
 slug: Web/API/KeyboardEvent/metaKey
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("UI Events")}}
@@ -9,7 +11,7 @@ slug: Web/API/KeyboardEvent/metaKey
 
 > **メモ:** Macintosh のキーボードでは、これは <kbd>⌘ Command</kbd> キーです。
 
-> **警告:** 少なくとも Firefox 48 の時点では、 <kbd>⊞ Windows</kbd> キーは "Meta" キーとみなされなくなりました。<kbd>⊞ Windows</kbd> キーが押されたとき `KeyboardEvent.metaKey` は `false` になります。
+> **警告:** 少なくとも Firefox 48 の時点で、 <kbd>⊞ Windows</kbd> キーは "Meta" キーとみなされなくなりました。<kbd>⊞ Windows</kbd> キーが押されたとき `KeyboardEvent.metaKey` は `false` になります。
 
 ## 値
 
@@ -25,7 +27,7 @@ slug: Web/API/KeyboardEvent/metaKey
 
 ```js
 function ismetaKey(e) {
-  document.querySelector("#output").textContent = "metaKey pressed? " + e.metaKey;
+  document.querySelector("#output").textContent = `metaKey pressed? ${e.metaKey}`;
 }
 ```
 

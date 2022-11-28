@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-Le [type de données](/fr/docs/Web/CSS/CSS_Types) [CSS](/fr/docs/Web/CSS)  **`<image>`** représente une image en deux dimensions.
+Le [type de données](/fr/docs/Web/CSS/CSS_Types) [CSS](/fr/docs/Web/CSS) **`<image>`** représente une image en deux dimensions.
 
 ## Syntaxe
 

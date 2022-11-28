@@ -78,9 +78,7 @@ window.onload = function (){
 
 ## 仕様
 
-| 仕様                                                                                                                         | ステータス                       | 備考                |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSSOM View','#dom-document-caretpositionfrompoint','caretPositionFromPoint()')}} | {{Spec2('CSSOM View')}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

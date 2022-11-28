@@ -53,9 +53,7 @@ let imageCapture = new ImageCapture(track);
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                                 | 備考     |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}} | {{Spec2('Media Capture')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
