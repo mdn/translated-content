@@ -27,7 +27,7 @@ Voir [les notes sur la page `WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_
 
 ### Utiliser deref()
 
-Voir la section [Exemples](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#exemples) de la page  [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) pour un exemple complet.
+Voir la section [Exemples](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#exemples) de la page [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) pour un exemple complet.
 
 ```js
 const tick = () => {
