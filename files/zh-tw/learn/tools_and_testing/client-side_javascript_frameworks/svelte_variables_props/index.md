@@ -99,15 +99,15 @@ npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior
 3. 回到應用程式，你應該會看到和以前一樣的「2 out of 3 items completed」訊息，但這次的資訊來自 `todos` 陣列。
 4. 為了證明這一點，回到陣列並嘗試改變一些待辦事項物件的已完成屬性值，甚至是新增一個新的待辦事項物件。觀察訊息中的數字是如何適當地被更新。
 
-## Dynamically generating the to-dos from the data
+## 從資料動態地產生待辦事項
 
-At the moment, our displayed to-do items are all static. We want to iterate over each item in our `todos` array and render the markup for each task, so let's do that now.
+目前我們顯示的待辦事項都是靜態的。而我們想要迭代 `todos` 陣列中的每個項目並為每個任務渲染其標記，讓我們馬上動手吧。
 
-HTML doesn't have a way of expressing logic — like conditionals and loops. Svelte does. In this case we use the [`{#each}`](https://svelte.dev/docs#each) directive to iterate over the `todos` array. The second parameter, if provided, will contain the index of the current item. Also, a key expression can be provided, which will uniquely identify each item. Svelte will use it to diff the list when data changes, rather than adding or removing items at the end, and it's a good practice to always specify one. Finally, an `:else` block can be provided, which will be rendered when the list is empty.
+HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到了。在這種情況下，我們使用 [`{#each}`](https://svelte.dev/docs#each) 指令來迭代 `todos` 陣列。假如有提供第二個參數，將包含當前項目的索引。此外，可以提供一個關鍵表達式，它將唯一識別每個項目。Svelte 將在資料改變時使用它來差異清單，而不是在最後新增或刪除項目，所以始終指定一個是一種好的做法。最後，可以提供 `:else` 區塊，它將在清單為空時呈現。
 
-Let's give it a try.
+試一試吧。
 
-1. Replace the existing `<ul>` element with the following simplified version to get an idea of how it works:
+1. 將現有的 `<ul>` 元素替換為以下的簡化版本，以了解其工作原理：
 
    ```html
    <ul>
@@ -121,11 +121,11 @@ Let's give it a try.
    </ul>
    ```
 
-2. Go back to the app; you'll see something like this:
+2. 回到應用程式，你會看到這樣的畫面：
 
    ![very simple to-do list output created using an each block](01-each-block.png)
 
-3. Now that we've seen that this is working, let's generate a complete to-do item with each loop of the `{#each}` directive, and inside embed the information from the `todos` array: `id`, `name`, and `completed`. Replace your existing `<ul>` block with the following:
+3. 現在我們已經看到這是有效的，接著讓我們使用 `{#each}` 指令的每個循環產生一個完整的待辦事項並在其中嵌入來自 `todos` 陣列中的資訊：`id`、`name` 和 `completed`。將現有的 `<ul>` 區塊替換為以下內容：
 
    ```html
    <!-- To-dos -->
@@ -156,9 +156,9 @@ Let's give it a try.
    </ul>
    ```
 
-   Notice how we are using curly braces to embed JavaScript expressions in HTML attributes, like we did with the `checked` and `id` attributes of the checkbox.
+   請注意我們如何使用大括號將 JavaScript 表達式嵌入 HTML 屬性中，就像我們對勾選框的 `checked` 和 `id` 屬性所做的那樣。
 
-We've turned our static markup into a dynamic template ready to display the tasks from our component's state. Great! We are getting there.
+我們已經將靜態標記轉為動態範本並從元件的狀態來顯示這些任務。做得好！
 
 ## Working with props
 
