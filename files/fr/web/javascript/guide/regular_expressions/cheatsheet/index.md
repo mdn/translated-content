@@ -549,6 +549,6 @@ Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnal
     Voir aussi [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt)
 
 - ValeurPropriétéUnicode
-  - : L'une des valeurs indiquées dans la section "Values". De nombreuses valeurs ont des alias ou des noms raccourcis (par exemple, la valeur `Decimal_Number`, de la propriété `General_Category`, peut être écrite `Nd`, `digit`, ou encore `Decimal_Number`). Pour la plupart des valeurs, la partie *`NomPropriétéUnicode`* et le signe égal peuvent être omis. Si *`NomPropriétéUnicode`* est indiqué, la valeur doit correspondre au type de propriété indiquée.
+  - : L'une des valeurs indiquées dans la section "Values". De nombreuses valeurs ont des alias ou des noms raccourcis (par exemple, la valeur `Decimal_Number`, de la propriété `General_Category`, peut être écrite `Nd`, `digit`, ou encore `Decimal_Number`). Pour la plupart des valeurs, la partie `NomPropriétéUnicode` et le signe égal peuvent être omis. Si `NomPropriétéUnicode` est indiqué, la valeur doit correspondre au type de propriété indiquée.
 
 > **Note :** Il existe de nombreuses propriétés et valeurs disponibles. Il serait laborieux de les lister ici de façon exhaustive.

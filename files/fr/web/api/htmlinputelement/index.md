@@ -119,7 +119,7 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
 - [`maxLength`](/fr/docs/Web/API/HTMLInputElement/maxLength)
   - : Une valeur numérique de type `unsigned long` qui permet de lire ou d'écrire l'attribut [`maxlength`](/fr/docs/Web/HTML/Element/input#maxlength) de l'élément, qui contient le nombre maximal de caractères (exprimés en codets Unicode) que doit contenir la valeur.
 - [`min`](/fr/docs/Web/API/HTMLInputElement/min)
-- : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`min`](/fr/docs/Web/HTML/Element/input#min) de l'élément, qui contient la valeur minimale (numérique ou temporelle) de la valeur pour ce champ. Cette valeur ne doit pas être supérieure à la valeur maximale portée par l'attribut [`max`](/fr/docs/Web/HTML/Element/input#max).
+  - : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`min`](/fr/docs/Web/HTML/Element/input#min) de l'élément, qui contient la valeur minimale (numérique ou temporelle) de la valeur pour ce champ. Cette valeur ne doit pas être supérieure à la valeur maximale portée par l'attribut [`max`](/fr/docs/Web/HTML/Element/input#max).
 - [`minLength`](/fr/docs/Web/API/HTMLInputElement/minLength)
   - : Une valeur numérique de type `unsigned long` qui permet de lire ou d'écrire l'attribut [`maxlength`](/fr/docs/Web/HTML/Element/input#maxlength) de l'élément, qui contient le nombre minimal de caractères (exprimés en codets Unicode) que doit contenir la valeur.
 - [`pattern`](/fr/docs/Web/API/HTMLInputElement/pattern)

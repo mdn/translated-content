@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 
 **`ReferenceError`** 객체는 현재 범위에서 존재하지 않거나 초기화되지 않은 변수를 참조했을 때 발생하는 에러를 나타냅니다.
 
-`ReferenceError`는 {{Glossary("serializable object", "직렬화 가능한 객체")}}이기 때문에, {{domxref("structuredClone()")}} 혹은 [Workers](/ko/docs/Web/API/Worker) 사이에서 {{domxref("Worker/postMessage()", "postMessage()")}}를 사용하여 복사할 수 있습니다. 
+`ReferenceError`는 {{Glossary("serializable object", "직렬화 가능한 객체")}}이기 때문에, {{domxref("structuredClone()")}} 혹은 [Workers](/ko/docs/Web/API/Worker) 사이에서 {{domxref("Worker/postMessage()", "postMessage()")}}를 사용하여 복사할 수 있습니다.
 
 ## 생성자
 
@@ -31,7 +31,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
   - : 오류가 발생한 곳의 줄에서 열 위치. {{jsxref("Error")}}에서 상속되었습니다..
 - {{jsxref("Error.prototype.stack", "ReferenceError.prototype.stack")}} {{non-standard_inline}}
   - : 스택 추적. {{jsxref("Error")}}에서 상속되었습니다.
-
 
 ## 예제
 

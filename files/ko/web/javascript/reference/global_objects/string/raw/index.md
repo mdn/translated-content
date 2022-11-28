@@ -49,7 +49,7 @@ String.raw`templateString`
 `String.raw()`의 경우 보통 템플릿 리터럴과 많이 사용하고, 첫번째 구문의 경우 잘 사용되지 않습니다.  
 왜냐하면 자바스크립트 엔진이 당신을 위해서 자동으로 적절한 인수로 호출해주기 때문입니다. ( 다른 [태그 메서드](/ko/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals) 들과 마찬가지로).
 
-`String.raw()`은 템플릿 리터럴의 유일한 내장 함수입니다. 기본 템플릿 기능과 동일하게 작동하며 연결을 수행합니다.  JavaScript 코드를 사용하여 다시 구현할 수도 있습니다.
+`String.raw()`은 템플릿 리터럴의 유일한 내장 함수입니다. 기본 템플릿 기능과 동일하게 작동하며 연결을 수행합니다. JavaScript 코드를 사용하여 다시 구현할 수도 있습니다.
 
 ## 예시
 

@@ -19,11 +19,11 @@ Eventos inicializados desta maneira precisam ter sido criados com o método {{ d
 event.initEvent(tipo, bubbles, cancelable);
 ```
 
-- _`tipo`_
+- `tipo`
   - : É um {{domxref("DOMString")}} definido o tipo do evento.
-- _`bolhas`_
+- `bolhas`
   - : É um {{jsxref("Boolean")}} decidindo se o evento precisa ser enviado para cima, na cadeia de eventos ou não. Uma vez definido, a propriedade read-only {{ domxref("Event.bubbles") }} irá informar o seu valor.
-- _`cancelable`_
+- `cancelable`
   - : É um {{jsxref("Boolean")}} definindo se o evento pode ser cancelado. Uma vez definido, a propriedade read-only {{ domxref("Event.cancelable") }} will irá informar o seu valor.
 
 ## Exemplo

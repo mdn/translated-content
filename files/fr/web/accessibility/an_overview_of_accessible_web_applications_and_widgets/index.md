@@ -88,9 +88,12 @@ Les changements représentationnels incluent l'utilisation du CSS pour changer l
 
 Les attributs pour décrire l’état actuel d'un widget sont fournis, par exemple&nbsp;:
 
-- **`aria-checked`** indique l’état d'une case à cocher ou d'un bouton radio,
-- **`aria-disabled`** indique qu’un élément est visible, mais désactivé,
-- **`aria-expanded`** indique qu’un élément est déroulé.
+- `aria-checked`
+  - : indique l’état d'une case à cocher ou d'un bouton radio,
+- `aria-disabled`
+  - : indique qu’un élément est visible, mais désactivé,
+- `aria-expanded`
+  - : indique qu’un élément est déroulé.
 
 La liste n’est pas exhaustive. Pour voir la liste complète, consulter [les spécifications des états et propriétés ARIA)](https://www.w3.org/TR/wai-aria-1.1/#introstates).
 

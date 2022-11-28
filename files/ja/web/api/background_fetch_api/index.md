@@ -29,7 +29,7 @@ Background Fetch API は、ユーザーがプロセスをオフラインで開�
 - {{domxref("BackgroundFetchRecord")}}
   - : 個々のフェッチ要求と応答を表します。
 - {{domxref("BackgroundFetchEvent")}}
-  - :  `onbackgroundfetchabort` と `onbackgroundfetchclick` に渡されるイベント型。
+  - : `onbackgroundfetchabort` と `onbackgroundfetchclick` に渡されるイベント型。
 - {{domxref("BackgroundFetchUpdateUIEvent")}}
   - : `onbackgroundfetchsuccess` と `onbackgroundfetchfail` に渡されるイベント型。
 
