@@ -85,10 +85,7 @@ history.go(2)  // alerts "location: http://example.com/example.html?page=3, stat
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                             | 備考                                          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------- |
-| {{SpecName("HTML WHATWG", "browsers.html#history", "History")}} | {{Spec2("HTML WHATWG")}} | {{SpecName("HTML5 W3C")}} から変更なし |
-| {{SpecName("HTML5 W3C", "browsers.html#history", "History")}}     | {{Spec2("HTML5 W3C")}}     | 初回定義                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

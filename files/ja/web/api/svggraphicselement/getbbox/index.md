@@ -60,9 +60,7 @@ rectBoundingClientRect.setAttribute('height', boundingClientRectGroup.height);
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                     | 備考                           |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------ |
-| {{SpecName('SVG1.1', 'types.html#__svg__SVGLocatable__getBBox', 'getBBox')}} | {{Spec2('SVG1.1')}} | 初回定義 (SVG 要素のみに適用). |
+{{Specifications}}
 
 ## 関連情報
 

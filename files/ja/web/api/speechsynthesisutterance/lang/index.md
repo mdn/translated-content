@@ -50,9 +50,7 @@ inputForm.onsubmit = function(event) {
 
 ## Specifications
 
-| Specification                                                                    | Status                               | Comment |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Speech API', '#dfn-utterancelang', 'lang')}} | {{Spec2('Web Speech API')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

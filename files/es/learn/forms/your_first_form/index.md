@@ -300,6 +300,7 @@ En el lado del servidor, la secuencia de comandos de la URL «`/my-handling-form
   </div>
 </form>
 ```
+
 ```css hidden
 form {
   /* Just to center the form on the page */

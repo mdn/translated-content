@@ -111,11 +111,7 @@ li span {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-span-element', '&lt;span&gt;')}} | {{Spec2('HTML WHATWG')}} |                                                                                             |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-span-element', '&lt;span&gt;')}}     | {{Spec2('HTML5 W3C')}}     | {{glossary("DOM")}} インターフェイスを {{domxref("HTMLSpanElement")}} に変更 |
-| {{SpecName('HTML4.01', 'struct/global.html#edef-SPAN', '&lt;span&gt;')}}                         | {{Spec2('HTML4.01')}}     |                                                                                             |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

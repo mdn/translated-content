@@ -36,11 +36,7 @@ _固有メソッドはありません。 {{domxref("HTMLElement")}} インター
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                             | 備考                                            |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('EME', '#dom-sourcekeysystem', 'HTMLSourceElement')}}                                         | {{Spec2('EME')}}             | `keySystem` 属性を追加。                        |
-| {{SpecName('HTML WHATWG', "the-video-element.html#the-source-element", "HTMLSourceElement")}} | {{Spec2('HTML WHATWG')}} | {{SpecName("HTML5 W3C")}} より変更なし。 |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#the-source-element", "HTMLSourceElement")}} | {{Spec2('HTML5 W3C')}}     | 初回定義                                        |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

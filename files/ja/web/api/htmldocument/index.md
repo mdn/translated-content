@@ -13,10 +13,7 @@ slug: Web/API/HTMLDocument
 
 ## 仕様書
 
-| {{SpecName("HTML WHATWG", "#htmldocument", "HTMLDocument")}}                 | {{Spec2("HTML WHATWG")}} | `HTMLDocument` インターフェイスを、{{DOMxRef("Document")}} の拡張に転換。 |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------- |
-| {{SpecName("DOM2 HTML", "html.html#ID-26809268", "HTMLDocument")}}         | {{Spec2('DOM2 HTML')}}     | DOM 1 の後継                                                                       |
-| {{SpecName("DOM1", "level-one-html.html#ID-26809268", "HTMLDocument")}} | {{Spec2("DOM1")}}         | 初期定義                                                                           |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

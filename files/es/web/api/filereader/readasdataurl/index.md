@@ -3,7 +3,7 @@ title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
 ---
 
-El método `readAsDataURL` es usado para leer el contenido del especificado {{domxref("Blob")}} o {{domxref("File")}}.  Cuando la operación de lectura es terminada, el {{domxref("FileReader.readyState","readyState")}} se convierte en `DONE`, y el [`loadend`](/es/docs/Web/Reference/Events/loadend) es lanzado. En ese momento, el atributo {{domxref("FileReader.result","result")}} contiene la información como un [datos: URL](/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) representando la información del archivo como una cadena de caracteres codificados en base64.
+El método `readAsDataURL` es usado para leer el contenido del especificado {{domxref("Blob")}} o {{domxref("File")}}. Cuando la operación de lectura es terminada, el {{domxref("FileReader.readyState","readyState")}} se convierte en `DONE`, y el [`loadend`](/es/docs/Web/Reference/Events/loadend) es lanzado. En ese momento, el atributo {{domxref("FileReader.result","result")}} contiene la información como un [datos: URL](/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) representando la información del archivo como una cadena de caracteres codificados en base64.
 
 > **Nota:** El {{domxref("FileReader.result","result")}} de blob no puede ser
 > directamente decodificado como Base64 sin primero remover la delaración de Datos-URL

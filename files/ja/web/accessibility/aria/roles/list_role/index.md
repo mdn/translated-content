@@ -72,9 +72,7 @@ HTML の {{htmlelement("ol")}} と {{htmlelement("ul")}} とは異なり、ARIA 
 
 ## 仕様
 
-| 仕様                                             | 状態                     |
-| ------------------------------------------------ | ------------------------ |
-| {{SpecName("ARIA","#list","list")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

@@ -38,7 +38,7 @@ Aprende cómo utilizar HTTP con guías y tutoriales.
 Explora la detallada documentación de referencia HTTP.
 
 - [Cabeceras HTTP](/es/docs/Web/HTTP/Headers)
-  - : Las cabeceras de mensaje HTTP se usan para describir un recurso, o el comportamiento del servidor o del cliente. Se pueden agregar cabeceras personalizadas usando el prefijo 'X-'; otras en un [registro IANA](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers), cuyo contenido fue inicialmente definido en [RFC 4229](https://tools.ietf.org/html/rfc4229).  IANA también mantiene un [registro de nuevas cabeceras de mensaje HTTP propuestas](https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers).
+  - : Las cabeceras de mensaje HTTP se usan para describir un recurso, o el comportamiento del servidor o del cliente. Se pueden agregar cabeceras personalizadas usando el prefijo 'X-'; otras en un [registro IANA](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers), cuyo contenido fue inicialmente definido en [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA también mantiene un [registro de nuevas cabeceras de mensaje HTTP propuestas](https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers).
 - [Métodos de Petición HTTP](/es/docs/Web/HTTP/Methods)
   - : Las distintas operaciones que se pueden realizar con HTTP: {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, y solicitudes menos comunes como {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("DELETE")}}, o {{HTTPMethod("TRACE")}}.
 - [Códigos de Respuesta de Estado HTTP](/es/docs/Web/HTTP/Status)

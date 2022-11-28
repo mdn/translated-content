@@ -587,10 +587,7 @@ document.querySelector('table').addEventListener("keydown", function(event) {
 
 ## 仕様
 
-| 仕様                                                                             | 状態                                             |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#grid","Role Grid")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#grid","Role Grid")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

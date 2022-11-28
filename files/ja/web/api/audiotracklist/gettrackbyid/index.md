@@ -38,10 +38,7 @@ function disableCharacter(videoElem, characterName) {
 
 ## 仕様
 
-| 仕様                                                                                                                                                         | 状態                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-audiotracklist-gettrackbyid', 'AudioTrackList.getTrackById()')}}                             | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#dom-audiotracklist-getTrackById', 'AudioTrackList.getTrackById()')}} | {{Spec2('HTML5 W3C')}}     |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
