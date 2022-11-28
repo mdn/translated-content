@@ -149,7 +149,9 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
   - : `string`: **Retorna / Define** o atributo [`src`](/pt-BR/docs/Web/HTML/Element/Input#src) do elemento, que especifica um URI para a localização de uma imagem para exibir no botão gráfico de envio.
 
 - {{domxref("HTMLInputElement.width", "width")}}
+
   - : `string`: **Retorna / Define** o atributo [`width`](/pt-BR/docs/Web/HTML/Element/Input#width) do elemento, que define a largura da imagem exibida para o botão.
+
 ### Propriedades de instância que se aplicam apenas a elementos do tipo arquivo
 
 - {{domxref("HTMLInputElement.accept", "accept")}}
