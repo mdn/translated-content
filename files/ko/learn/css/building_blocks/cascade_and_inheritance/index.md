@@ -1,6 +1,15 @@
 ---
 title: 계단식 및 상속
 slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
+tags:
+  - Beginner
+  - CSS
+  - Cascade
+  - Inheritance
+  - Learn
+  - rules
+  - source order
+  - specificity
 ---
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
