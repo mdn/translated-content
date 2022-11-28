@@ -32,7 +32,7 @@ var decodedData = window.atob(encodedData); // decode the string
 
 ## See also
 
-- [Base64 encoding and decoding](/Web/API/WindowBase64/Base64_encoding_and_decoding)
+- [Base64 encoding and decoding](/es/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)
 - [`data` URIs](/es/docs/data_URIs)
 - {{domxref("window.btoa()")}}
 - [Components.utils.importGlobalProperties](/es/docs/Components.utils.importGlobalProperties)
