@@ -446,7 +446,7 @@ Access-Control-Allow-Credentials: true
 
 ### `Access-Control-Allow-Methods`
 
-L'en-tête {{HTTPHeader("Access-Control-Allow-Methods")}} indique la ou les méthodes qui sont autorisées pour accéder à la ressoure. Cet en-tête est utilisé dans la réponse à la requête préliminaire (voir ci-avant [les conditions dans lesquelles une requête préliminaire est nécessaire](#preflight)).
+L'en-tête {{HTTPHeader("Access-Control-Allow-Methods")}} indique la ou les méthodes qui sont autorisées pour accéder à la ressource. Cet en-tête est utilisé dans la réponse à la requête préliminaire (voir ci-avant [les conditions dans lesquelles une requête préliminaire est nécessaire](#preflight)).
 
 ```
 Access-Control-Allow-Methods: <methode>[, <methode>]*
