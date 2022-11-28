@@ -91,9 +91,7 @@ el.addEventListener('wheel', zoom);
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                         | 備考 |
-| ------------------------------------------------------------------------ | ---------------------------- | ---- |
-| {{SpecName('UI Events','#event-type-wheel','wheel')}} | {{Spec2('UI Events')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

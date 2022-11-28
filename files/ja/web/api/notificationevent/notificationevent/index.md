@@ -30,9 +30,7 @@ var myNotificationEvent = new NotificationEvent(type, init);
 
 ## 仕様書
 
-| 仕様書                                                                                                                                               | 状態                                     | 備考            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications','#dom-notificationevent-notificationevent','NotificationEvent() constructor')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

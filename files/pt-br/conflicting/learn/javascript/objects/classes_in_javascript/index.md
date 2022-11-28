@@ -4,6 +4,7 @@ slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 translation_of: Learn/JavaScript/Objects/Object-oriented_JS
 original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 Com o básico fora do caminho, agora vamos nos concentrar no JavaScript orientado a objetos (OOJS) — Este artigo apresenta uma visão básica da teoria de programação orientada a objeto (OOP), em seguida, explora como o JavaScript emula as classes de objetos através de funções de construtor e como criar instâncias de objeto.

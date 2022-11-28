@@ -1,13 +1,6 @@
 ---
 title: ':has'
 slug: Web/CSS/:has
-tags:
-  - CSS
-  - Experimental
-  - Pseudo clase
-  - Referencia
-  - Selectores CSS
-translation_of: Web/CSS/:has
 ---
 
 {{ CSSRef() }}{{SeeCompatTable}}

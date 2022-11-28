@@ -34,9 +34,7 @@ var observe_all = new PerformanceObserver(function(list, obs) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                       | ステータス                                               | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------- |
-| {{SpecName('Performance Timeline Level 2', '#idl-def-performanceobserverentrylist', 'PerformanceObserverEntryList')}} | {{Spec2('Performance Timeline Level 2')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

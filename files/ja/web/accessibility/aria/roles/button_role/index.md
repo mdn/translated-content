@@ -231,10 +231,7 @@ function toggleButton(element) {
 
 ## 仕様
 
-| 仕様                                                                             | 状態                                             |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#button","button")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#button","button")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## 注記
 

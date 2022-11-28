@@ -24,8 +24,10 @@ void ctx.clip(path, fillRule);
   - : O algoritmo pelo qual determina se um ponto esta dentro de um caminho ou fora de um caminho.
     Valores Possíveis:
 
-    - **`"nonzero`**": A [regra contorno diferente de zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
-    - **`"evenodd"`**: A [regra do contorno par ou ímpar](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+    - `nonzero`
+      - : A [regra contorno diferente de zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
+    - `evenodd`
+      - : A [regra do contorno par ou ímpar](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 - `path`
   - : Um {{domxref("Path2D")}} caminho para recorte.

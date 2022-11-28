@@ -1600,7 +1600,7 @@ These keys are only available on Japanese keyboards.
 
 ### Dead keycodes for Linux
 
-Linux generates accented characters using special **dead keys**; these are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the  {{domxref("KeyboardEvent")}}'s associated [`compositionupdate`](/fr/docs/Web/API/Element/compositionupdate_event) event's {{domxref("CompositionEvent.data", "data")}} property.
+Linux generates accented characters using special **dead keys**; these are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the {{domxref("KeyboardEvent")}}'s associated [`compositionupdate`](/fr/docs/Web/API/Element/compositionupdate_event) event's {{domxref("CompositionEvent.data", "data")}} property.
 
 You can find a table of the dead keys and the characters they can be used with to generate accented or otherwise special characters on Linux using GTK
 

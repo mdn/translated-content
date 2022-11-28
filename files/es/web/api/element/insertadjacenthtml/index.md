@@ -1,17 +1,6 @@
 ---
 title: Element.insertAdjacentHTML()
 slug: Web/API/Element/insertAdjacentHTML
-tags:
-  - API
-  - Cambiando el DOM
-  - DOM
-  - HTML
-  - Insertando Elementos
-  - Insertando Nodos
-  - Referencia
-  - insertAdjacentHTML
-  - metodo
-translation_of: Web/API/Element/insertAdjacentHTML
 ---
 
 {{APIRef}}

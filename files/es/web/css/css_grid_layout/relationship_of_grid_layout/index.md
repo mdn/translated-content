@@ -1,14 +1,6 @@
 ---
 title: Relación de Grid Layout con otros métodos de diseño y posicionamiento - CSS
 slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
-tags:
-  - CSS
-  - CSS Cuadrícula
-  - CSS Grids
-  - CSS Grilla
-  - CSS Rejilla
-  - Guía
-translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 original_slug: Web/CSS/CSS_Grid_Layout/Relacion_de_Grid_Layout
 ---
 

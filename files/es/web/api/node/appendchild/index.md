@@ -1,13 +1,6 @@
 ---
 title: Nodo appendChild
 slug: Web/API/Node/appendChild
-tags:
-  - API
-  - DOM
-  - Node
-  - Referencia
-  - metodo
-translation_of: Web/API/Node/appendChild
 ---
 
 {{APIRef("DOM")}}

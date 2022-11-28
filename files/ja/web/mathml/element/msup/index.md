@@ -48,10 +48,7 @@ Rendering in your browser: <math><msup><mi>X</mi> <mn>2</mn></msup></math>
 
 ## 仕様
 
-| Specification                                                                    | Status                       | Comment               |
-| -------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.msup', 'msup') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.msup', 'msup') }} | {{ Spec2('MathML2') }} | Initial specification |
+{{Specifications}}
 
 ## See also
 

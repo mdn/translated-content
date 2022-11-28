@@ -20,7 +20,7 @@ translation_of: Web/API/Screen_Capture_API
 
 {{DefaultAPISidebar("Screen Capture API")}}
 
-The Screen Capture API introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network.
+L'API Screen Capture ajoute aux API Media Capture et Streams la possibilité de laisser l'utilisatrice ou l'utilisateur sélectionner l'écran ou une partie de celui-ci (comme une fenêtre) pour obtenir un flux média. Ce flux peut ensuite être enregistré ou partagé sur le réseau.
 
 ## API Screen Capture concepts et utilisation
 
@@ -32,7 +32,7 @@ Pour commencer à capturer une vidéo de l'écran, il faut appeler `getDisplayMe
 captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
 ```
 
-La {{jsxref("Promise")}} retournée par `getDisplayMedia()` résout un {{domxref("MediaStream")}} qui diffuse le dédia capturé.
+La [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) retournée par `getDisplayMedia()` est résolue en un objet [`MediaStream`](/fr/docs/Web/API/MediaStream) qui diffuse le média capturé.
 
 Voir l'article [Utiliser l'API Screen Capture](/fr/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) pour plus de détails sur l’utilisation de l’API pour capturer le contenu de l’écran sous forme de flux.
 
@@ -43,7 +43,7 @@ L'API Screen Capture n'a pas sa propre interface. Cependant, elle ajoute une mé
 ### Interface MediaDevices
 
 - {{domxref("MediaDevices.getDisplayMedia()")}}
-  - : La méthode `getDisplayMedia()` est ajoutée à l'interface `MediaDevices`. Similaire à {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, cette méthode crée une promise qui method creates a promise qui résout un {{domxref("MediaStream")}} contenant la zone d'affichage sélectionnée par l'utilisateur, dans un format qui correspond aux options spécifiées.
+  - : La méthode `getDisplayMedia()` est ajoutée à l'interface `MediaDevices`. Similaire à [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia), cette méthode renvoie une promise est résolue en un, objet [`MediaStream`](/fr/docs/Web/API/MediaStream) contenant la zone d'affichage sélectionnée par la personne, dans un format qui correspond aux options spécifiées.
 
 ## Ajouts aux dictionnaires actuels
 
@@ -52,7 +52,7 @@ L'API Screen Capture ajoute des propriétés au dictionnaire suivant définit pa
 ### MediaTrackConstraints
 
 - {{domxref("MediaTrackConstraints.cursor")}}
-  - : Un {{domxref("ConstrainDOMString")}}  indiquant si le curseur doit ou non être inclus dans le flux de la surface d'affichage capturée, et s'il doit toujours être visible ou s'il ne doit l'être que lorsque la souris est en mouvement.
+  - : Un {{domxref("ConstrainDOMString")}} indiquant si le curseur doit ou non être inclus dans le flux de la surface d'affichage capturée, et s'il doit toujours être visible ou s'il ne doit l'être que lorsque la souris est en mouvement.
 - {{domxref("MediaTrackConstraints.displaySurface")}}
   - : Un {{domxref("ConstrainDOMString")}} indiquant quel type de surface d'affichage doit être capturé. La valeur peut être `application`, `browser`, `monitor`, ou `window`.
 - {{domxref("MediaTrackConstraints.logicalSurface")}}
@@ -87,7 +87,7 @@ Le dictionnaire suivant est difinit par l'API Screen Capture.
 
 ## Validation de Feature Policy
 
-{{Glossary("User agent", "User agents")}} qui supportent Feature Policy (soit en utilisant les entetes HTTP {{HTTPHeader("Feature-Policy")}} ou l'attribut {{HTMLElement("iframe")}}{{htmlattrxref("allow", "iframe")}} peut spécifier la volonté d'utiliser l'API Screen Capture API en utilisant la directive Policy Controle `display-capture`:
+Les [agents utilisateurs](/fr/docs/Glossary/User_agent) qui prennent en charge les politiques de fonctionnalités (<i lang="en">feature policy</i>) (soit en utilisant l'en-tête HTTP [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Feature-Policy) ou l'attribut [`allow`](/fr/docs/Web/HTML/Element/iframe#allow) de l'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) peuvent indiquer le souhait d'utiliser l'API Screen Capture via la directive `display-capture`&nbsp;:
 
 ```html
 <iframe allow="display-capture" src="/some-other-document.html">

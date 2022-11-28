@@ -1,8 +1,6 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
-translation_of: Web/HTTP/Headers/User-Agent
-browser-compat: http.headers.User-Agent
 l10n:
   sourceCommit: 281e3b21178946c8301232a8eb50d11770ee8450
 ---

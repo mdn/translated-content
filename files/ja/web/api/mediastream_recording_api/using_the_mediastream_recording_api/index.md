@@ -251,9 +251,7 @@ mediaRecorder.onstop = function(e) {
 
 ## 仕様書
 
-| 仕様書                                                                       | 状態                                         | 備考     |
-| ---------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName("MediaStream Recording", "#MediaRecorderAPI")}} | {{Spec2("MediaStream Recording")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

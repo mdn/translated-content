@@ -1,11 +1,6 @@
 ---
 title: '-moz-box-flex'
 slug: Web/CSS/box-flex
-tags:
-  - CSS
-  - No estándar(2)
-  - Referencia CSS
-translation_of: Web/CSS/box-flex
 original_slug: Web/CSS/-moz-box-flex
 ---
 

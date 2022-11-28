@@ -1,13 +1,6 @@
 ---
 title: HTMLLabelElement
 slug: Web/API/HTMLLabelElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLLabeledElement
-  - Interface
-  - Referencia
-translation_of: Web/API/HTMLLabelElement
 ---
 
 {{ APIRef("HTML DOM") }}

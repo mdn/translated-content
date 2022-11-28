@@ -68,9 +68,7 @@ record();
 
 ## 仕様
 
-| 仕様                                                                             | 状態                                         |
-| -------------------------------------------------------------------------------- | -------------------------------------------- |
-| {{SpecName('MediaStream Recording', '#errorevent-section')}} | {{Spec2('MediaStream Recording')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

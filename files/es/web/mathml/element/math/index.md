@@ -1,7 +1,6 @@
 ---
 title: <math>
 slug: Web/MathML/Element/math
-translation_of: Web/MathML/Element/math
 original_slug: Web/MathML/Elemento/math
 ---
 

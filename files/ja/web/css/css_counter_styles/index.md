@@ -35,9 +35,7 @@ slug: Web/CSS/CSS_Counter_Styles
 
 ## 仕様書
 
-| 仕様書                              | 状態                             | 備考     |
-| ----------------------------------- | -------------------------------- | -------- |
-| {{SpecName('CSS3 Counter Styles')}} | {{Spec2('CSS3 Counter Styles')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

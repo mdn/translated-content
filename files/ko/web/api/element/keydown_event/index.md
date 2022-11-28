@@ -4,6 +4,7 @@ slug: Web/API/Element/keydown_event
 translation_of: Web/API/Document/keydown_event
 original_slug: Web/API/Document/keydown_event
 ---
+
 `keydown` 이벤트늘 키가 눌렸을 때 발생합니다.
 
 ## General info

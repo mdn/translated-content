@@ -1,12 +1,6 @@
 ---
 title: Node.previousSibling
 slug: Web/API/Node/previousSibling
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Propiedad
-translation_of: Web/API/Node/previousSibling
 ---
 
 {{APIRef("DOM")}}

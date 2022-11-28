@@ -1,14 +1,6 @@
 ---
 title: Usando elementos personalizados
 slug: Web/Web_Components/Using_custom_elements
-tags:
-  - Autonomos
-  - Clases
-  - Guía
-  - HTML
-  - Preconstruidos
-  - elementos personalizados
-translation_of: Web/Web_Components/Using_custom_elements
 ---
 
 {{DefaultAPISidebar("Web Components")}}

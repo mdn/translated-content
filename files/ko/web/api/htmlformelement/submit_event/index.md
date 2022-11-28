@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onsubmit
 original_slug: Web/API/GlobalEventHandlers/onsubmit
 ---
+
 {{ApiRef("HTML DOM")}}
 
 현재 창에서 폼을 제출하는 이벤트를 다루는 이벤트 핸들러

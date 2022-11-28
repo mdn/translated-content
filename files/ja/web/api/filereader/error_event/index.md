@@ -55,9 +55,7 @@ fileInput.addEventListener('change', handleSelected);
 
 ## 仕様書
 
-| 仕様書                                                       | 状態                         |
-| ------------------------------------------------------------ | ---------------------------- |
-| {{SpecName('File API', '#dfn-error-event')}} | {{Spec2('File API')}} |
+{{Specifications}}
 
 ## ブラウザーの対応
 

@@ -2,6 +2,7 @@
 title: '장고 튜토리얼 강좌 2 : 뼈대 사이트 만들기'
 slug: Learn/Server-side/Django/skeleton_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
 [장고 튜토리얼](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website)의 두 번째 기사에서는 웹 사이트 프로젝트의 기본 뼈대(skeleton)를 만들고, 사이트의 특성에 맞춰 설정, 경로, 모델, 뷰 및 템플릿을 다루는 방법을 보여줍니다.

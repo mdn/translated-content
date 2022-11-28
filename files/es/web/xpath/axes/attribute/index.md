@@ -1,7 +1,6 @@
 ---
 title: attribute
 slug: Web/XPath/Axes/attribute
-translation_of: Web/XPath/Axes/attribute
 original_slug: Web/XPath/Ejes/attribute
 ---
 

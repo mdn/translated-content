@@ -1,12 +1,6 @@
 ---
 title: Herencia
 slug: Web/CSS/inheritance
-tags:
-  - CSS
-  - CSS:Referencias
-  - Referencia_CSS
-  - Todas_las_Categorías
-translation_of: Web/CSS/inheritance
 ---
 
 {{ CSSRef() }}

@@ -1,12 +1,6 @@
 ---
 title: 100 Continue
 slug: Web/HTTP/Status/100
-tags:
-  - Códigos de estado
-  - HTTP
-  - Informativa
-  - continue
-translation_of: Web/HTTP/Status/100
 ---
 
 {{HTTPSidebar}}

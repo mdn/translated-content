@@ -1,7 +1,6 @@
 ---
 title: padding-block-start
 slug: Web/CSS/padding-block-start
-translation_of: Web/CSS/padding-block-start
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -1,7 +1,6 @@
 ---
 title: Document.scripts
 slug: Web/API/Document/scripts
-translation_of: Web/API/Document/scripts
 ---
 
 {{APIRef("DOM")}}

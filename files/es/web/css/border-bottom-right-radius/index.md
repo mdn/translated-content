@@ -1,11 +1,6 @@
 ---
 title: border-bottom-right-radius
 slug: Web/CSS/border-bottom-right-radius
-tags:
-  - Bordes CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/border-bottom-right-radius
 ---
 
 {{CSSRef}}
