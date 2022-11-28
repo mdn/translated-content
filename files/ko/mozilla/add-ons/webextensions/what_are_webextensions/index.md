@@ -2,6 +2,7 @@
 title: What are extensions?
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 ---
+
 {{AddonSidebar}}
 
 > **참고:** 만약 브라우저 확장 기능의 기본적인 개념은 이미 익숙하다면, 이 섹션을 스킵하고 [확장 기능 파일이 어떻게 구성되는지 읽어보세요](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). 그 다음, [참고 문서](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference)와 함께 확장 기능을 개발해 보세요. [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)을 방문하여 Firefox용 테스트, 게시 및 확장 기능에 대한 작업 흐름에 대해 자세히 알아보세요.
@@ -38,7 +39,7 @@ Examples: [Swimlanes for Trello](https://addons.mozilla.org/en-US/firefox/addon/
 
 Examples: [Solitaire Card Game](https://addons.mozilla.org/en-US/firefox/addon/solitaire-spider-freecell/), and [2048 Prime](https://addons.mozilla.org/en-US/firefox/addon/2048-prime/).
 
-**개발 도구 추가**: 웹 개발 도구를 비즈니스로써 제공한다던가 공유하고자 하는 유용한 기술이나 웹 개발 접근법을 만들었을 수 있습니다. 어느 쪽이든 간에, 개발자 툴바에 새 탭을 추가하여 내장 Firefox 개발자 도구를 개선할 수 있습니다.
+**개발 도구 추가**: 웹 개발 도구를 비즈니스로 제공하거나 공유하고 싶은 웹 개발에 대한 유용한 기술 또는 접근 방식을 개발했을 수 있습니다. 어느 쪽이든 간에, 개발자 도구 모음에 새 탭을 추가하여 내장 Firefox 개발자 도구를 향상시킬 수 있습니다.
 
 ![](axe_developer_tools_add_on.png)
 

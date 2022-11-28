@@ -2,6 +2,7 @@
 title: 웹사이트의 외관은 어떻게 할까요?
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
 _웹사이트의 외관은 어떻게 할까요?_ 에서는 "나의 웹사이트가 무슨 정보를 제공할 것인지?" "무슨 글꼴과 색상을 사용할 것인지?" "나의 웹사이트가 무엇을 하는지?" 를 포함해, 코드를 작성하기 _전에_ 여러분이 해야할 계획 세우기와 디자인에 대해 이야기 할 것입니다.

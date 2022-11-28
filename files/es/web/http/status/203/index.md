@@ -1,13 +1,6 @@
 ---
 title: 203 Non-Authoritative Information
 slug: Web/HTTP/Status/203
-tags:
-  - Códigos de respuesta
-  - Códigos de respuestas HTTP
-  - HTTP
-  - Referências
-  - Respuesta satisfactoria
-translation_of: Web/HTTP/Status/203
 ---
 
 {{HTTPSidebar}}

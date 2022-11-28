@@ -1,7 +1,6 @@
 ---
 title: Control de acceso HTTP (CORS)
 slug: Web/HTTP/CORS
-translation_of: Web/HTTP/CORS
 original_slug: Web/HTTP/Access_control_CORS
 ---
 

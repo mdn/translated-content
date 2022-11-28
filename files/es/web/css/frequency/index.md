@@ -1,14 +1,6 @@
 ---
 title: <frequency>
 slug: Web/CSS/frequency
-tags:
-  - CSS
-  - Presentación
-  - Referencia
-  - Tipos de datos CSS
-  - Unidad CSS
-  - Web
-translation_of: Web/CSS/frequency
 ---
 
 {{CSSRef}}

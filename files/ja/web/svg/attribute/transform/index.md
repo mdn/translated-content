@@ -40,7 +40,7 @@ html,body,svg { height:100% }
 
 ## 変換関数
 
-以下の変換関数は、 `transform` 属性の _`<transform-list>`_ で使用することができます。
+以下の変換関数は、 `transform` 属性の `<transform-list>` で使用することができます。
 
 > **警告:** 仕様書によれば、 CSS の[変換関数](/ja/docs/Web/CSS/transform-function)も使用することができます。しかし、互換性は保証されていません。
 

@@ -1,7 +1,6 @@
 ---
 title: 'HTMLMediaElement: canplay'
 slug: Web/API/HTMLMediaElement/canplay_event
-translation_of: Web/API/HTMLMediaElement/canplay_event
 ---
 
 El evento canplay es lanzado cuando el elemento [\<video>](/es/docs/Web/HTML/Elemento/video) o [\<audio>](/es/docs/Web/HTML/Elemento/Audio) puede ser iniciado o fue iniciado satisfactoriamente.

@@ -2,6 +2,7 @@
 title: CSS 디버깅
 slug: Learn/CSS/Building_blocks/Debugging_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 
 때로는 CSS 를 작성할 때 CSS 가 예상한 대로 동작하지 않는 문제가 발생합니다. 아마도 특정 선택자가 요소와 일치해야 하지만, 아무일도 일어나지 않거나 박스의 크기가 예상과 다릅니다. 이 기사에서는 CSS 문제를 디버깅하는 방법에 대한 지침을 제공하고 모든 최신 브라우저에 포함된 DevTools 가 진행 상황을 찾는 데 어떻게 도움이 되는지 보여줍니다.

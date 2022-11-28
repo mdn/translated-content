@@ -1,12 +1,6 @@
 ---
 title: Ejemplos
 slug: Web/API/Document_Object_Model/Examples
-tags:
-  - DOM
-  - Referencia_DOM_de_Gecko
-  - Todas_las_Categorías
-  - páginas_a_traducir
-translation_of: Web/API/Document_Object_Model/Examples
 original_slug: Referencia_DOM_de_Gecko/Ejemplos
 ---
 

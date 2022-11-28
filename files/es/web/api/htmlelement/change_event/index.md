@@ -1,14 +1,6 @@
 ---
 title: 'HTMLElement: Evento change'
 slug: Web/API/HTMLElement/change_event
-tags:
-  - Change
-  - DOM
-  - Evento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/API/HTMLElement/change_event
 ---
 
 {{APIRef}}

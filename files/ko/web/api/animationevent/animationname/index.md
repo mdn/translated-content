@@ -11,6 +11,7 @@ tags:
 browser-compat: api.AnimationEvent.animationName
 translation_of: Web/API/AnimationEvent/animationName
 ---
+
 {{APIRef("Web Animations API")}}
 
 **`AnimationEvent.animationName`** 읽기 전용 속성은 트랜지션에 관련된 {{cssxref("animation-name")}} CSS 속성 값을 나타내는 {{domxref("DOMString")}}입니다.

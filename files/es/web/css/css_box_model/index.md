@@ -1,12 +1,6 @@
 ---
 title: Modelo de Caja de CSS
 slug: Web/CSS/CSS_Box_Model
-tags:
-  - CSS
-  - Modelo de Caja CSS
-  - Referencia CSS
-  - Visión general
-translation_of: Web/CSS/CSS_Box_Model
 original_slug: Web/CSS/CSS_Modelo_Caja
 ---
 

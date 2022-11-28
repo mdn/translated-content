@@ -1,12 +1,6 @@
 ---
 title: Introducción
 slug: Web/API/Document_Object_Model/Introduction
-tags:
-  - DOM
-  - Gecko
-  - Manuales
-  - Todas_las_Categorías
-translation_of: Web/API/Document_Object_Model/Introduction
 original_slug: Referencia_DOM_de_Gecko/Introducción
 ---
 

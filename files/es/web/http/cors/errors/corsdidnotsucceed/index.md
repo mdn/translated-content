@@ -1,18 +1,6 @@
 ---
 title: 'Reason: CORS request did not succeed'
 slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
-tags:
-  - CORS
-  - CORSNoTuvoExito
-  - Consola
-  - Error
-  - HTTP
-  - HTTPS
-  - Messages
-  - Reasons
-  - Security
-  - solución de problemas
-translation_of: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
 
 {{HTTPSidebar}}

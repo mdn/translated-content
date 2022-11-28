@@ -1,9 +1,6 @@
 ---
 title: background-attachment
 slug: Web/CSS/background-attachment
-tags:
-  - CSS
-translation_of: Web/CSS/background-attachment
 ---
 
 {{CSSRef}}

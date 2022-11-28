@@ -15,7 +15,7 @@ var observer = new PerformanceObserver(callback);
 
 ### 引数
 
-- _`callback`_
+- `callback`
   - : 監視対象のパフォーマンスイベントが記録されたときに呼び出される `PerformanceObserverCallback` コールバック。コールバックが呼び出されるとき、その最初の引数は {{domxref("PerformanceObserverEntryList","パフォーマンスオブザーバエントリのリスト",'','true')}} で、2 番目の引数は {{domxref("PerformanceObserver","observer")}} オブジェクトです。
 
 ### 返値

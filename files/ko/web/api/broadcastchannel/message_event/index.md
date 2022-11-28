@@ -4,6 +4,7 @@ slug: Web/API/BroadcastChannel/message_event
 translation_of: Web/API/BroadcastChannel/message_event
 original_slug: Web/Events/message
 ---
+
 메시지 이벤트는 메시지가 수신되었음을 알리는 메시지, {{domxref("WebSocket")}}, {{domxref("RTCDataConnection")}} 또는 {{domxref("BroadcastChannel")}} 개체를 알려 줍니다.
 
 대상이 {{domxref("RTCDataConnection")}}, 인 경우 이 이벤트에 대한 이벤트 핸들러를 {{domxref("RTCDataConnection.onmessage")}}속성을 통해 추가할 수 있습니다.

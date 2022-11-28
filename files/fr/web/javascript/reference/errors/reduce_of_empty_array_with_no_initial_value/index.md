@@ -27,9 +27,9 @@ TypeError: reduce of empty array with no initial value
 En JavaScript, il existe plusieurs fonctions qui permettent de réduire un tableau :
 
 - {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}} ainsi que
-- {{jsxref("TypedArray.prototype.reduce()")}},  {{jsxref("TypedArray.prototype.reduceRight()")}}).
+- {{jsxref("TypedArray.prototype.reduce()")}}, {{jsxref("TypedArray.prototype.reduceRight()")}}).
 
-Ces fonctions utilisent un argument optionnel `valeurInitiale` (qui sera utilisée comme premier argument pour le premier appel du `callback`). Toutefois, si aucune valeur initiale explicite est fournie, la méthode utilisera le premier élément de l'objet  {{jsxref("Array")}} / {{jsxref("TypedArray")}} comme valeur initiale. Cette exception est déclenchée lorsqu'on souhaite réduire un tableau vide car aucune valeur initiale n'a été fournie.
+Ces fonctions utilisent un argument optionnel `valeurInitiale` (qui sera utilisée comme premier argument pour le premier appel du `callback`). Toutefois, si aucune valeur initiale explicite est fournie, la méthode utilisera le premier élément de l'objet {{jsxref("Array")}} / {{jsxref("TypedArray")}} comme valeur initiale. Cette exception est déclenchée lorsqu'on souhaite réduire un tableau vide car aucune valeur initiale n'a été fournie.
 
 ## Exemples
 

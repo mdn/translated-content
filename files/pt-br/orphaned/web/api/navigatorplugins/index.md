@@ -14,6 +14,7 @@ tags:
 translation_of: Web/API/NavigatorPlugins
 original_slug: Web/API/NavigatorPlugins
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 O **`NavigatorPlugins`** {{Glossary("mixin")}} adiciona na interface do {{domxref ("Navigator")}} métodos e propriedades para descobrir e interagir com plugins instalados no navegador.

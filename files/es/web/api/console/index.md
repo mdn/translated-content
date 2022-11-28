@@ -1,10 +1,7 @@
 ---
 title: Consola
 slug: Web/API/Console
-page-type: web-api-interface
-translation_of: Web/API/Console
 original_slug: Web/API/Console
-browser-compat: api.console
 l10n:
   sourceCommit: 71aac3e50b8bc5afea791d69d232dab98e1c5c0d
 ---

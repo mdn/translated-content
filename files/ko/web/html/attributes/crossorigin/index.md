@@ -45,13 +45,7 @@ Media element의 `crossorigin` 속성은 CORS 세팅입니다.
 
 ## 브라우저 호환성
 
-### \<script crossorigin>
-
-{{Compat("html.elements.script.crossorigin")}}
-
-### \<video crossorigin>
-
-{{Compat("html.elements.video.crossorigin")}}
+{{Compat}}
 
 ## 더 보기
 

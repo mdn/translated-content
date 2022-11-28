@@ -1,13 +1,6 @@
 ---
 title: '::-moz-range-track'
 slug: Web/CSS/::-moz-range-track
-tags:
-  - CSS
-  - No estándar(2)
-  - Pseudo-elemento
-  - Pseudo-elemento CSS
-  - Referencia
-translation_of: Web/CSS/::-moz-range-track
 ---
 
 {{CSSRef}}{{Non-standard_header}}

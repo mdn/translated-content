@@ -1,7 +1,6 @@
 ---
 title: Console.dir()
 slug: Web/API/Console/dir
-translation_of: Web/API/Console/dir
 ---
 
 {{APIRef("Console API")}}

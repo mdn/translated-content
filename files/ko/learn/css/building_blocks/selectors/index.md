@@ -3,6 +3,7 @@ title: CSS 선택자
 slug: Learn/CSS/Building_blocks/Selectors
 original_slug: Learn/CSS/Building_blocks/선택자
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
 {{Glossary("CSS")}} 에서, 선택자는 스타일을 지정할 웹 페이지의 {{glossary("HTML")}} 요소를 대상으로 하는 데 사용됩니다. 사용 가능한 다양한 CSS 선택자가 있으며, 스타일을 지정할 요소를 선택할 때 세밀한 정밀도를 허용합니다. 이 기사와 하위 기사에서는 다양한 유형을 자세히 살펴보고 작동 방식을 살펴보겠습니다.

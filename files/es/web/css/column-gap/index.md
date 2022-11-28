@@ -1,8 +1,6 @@
 ---
 title: grid-column-gap
 slug: Web/CSS/column-gap
-translation_of: Web/CSS/column-gap
-translation_of_original: Web/CSS/grid-column-gap
 original_slug: Web/CSS/grid-column-gap
 ---
 

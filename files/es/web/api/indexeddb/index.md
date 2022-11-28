@@ -1,7 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.indexedDB
 slug: Web/API/indexedDB
-translation_of: Web/API/WindowOrWorkerGlobalScope/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
 

@@ -1,13 +1,6 @@
 ---
 title: 'Location: origin'
 slug: Web/API/Location/origin
-tags:
-  - API
-  - Location
-  - Propiedad
-  - Referencia
-  - Ubicación
-translation_of: Web/API/Location/origin
 ---
 
 {{APIRef("Location")}}

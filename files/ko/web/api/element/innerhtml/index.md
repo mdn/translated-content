@@ -3,6 +3,7 @@ title: Element.innerHTML
 slug: Web/API/Element/innerHTML
 translation_of: Web/API/Element/innerHTML
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Element")}} 속성(property) **`innerHTML`** 은 요소(element) 내에 포함 된 HTML 또는 XML 마크업을 가져오거나 설정합니다.

@@ -1,14 +1,6 @@
 ---
 title: Ejemplo de composición
 slug: Web/API/Canvas_API/Tutorial/Compositing/Example
-tags:
-  - Canvas
-  - Ejemplo
-  - HTML
-  - HTML5
-  - Tutorial
-  - graficos
-translation_of: Web/API/Canvas_API/Tutorial/Compositing/Example
 original_slug: Web/API/Canvas_API/Tutorial/Compositing/Ejemplo
 ---
 

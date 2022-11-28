@@ -1,12 +1,6 @@
 ---
 title: list-style-image
 slug: Web/CSS/list-style-image
-tags:
-  - CSS
-  - CSS:Referencias
-  - Referencia_CSS
-  - Todas_las_Categorías
-translation_of: Web/CSS/list-style-image
 ---
 
 {{ CSSRef() }}
