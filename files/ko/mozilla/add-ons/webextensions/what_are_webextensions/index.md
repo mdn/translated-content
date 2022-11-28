@@ -25,13 +25,13 @@ Examples: [MyWeb New Tab](https://chrome.google.com/webstore/detail/myweb-new-ta
 
 **웹페이지에 컨텐츠를 추가 또는 제거**: 사용자를 위해 웹페이지에서 방해가 되는 광고를 차단하도록 돕거나, 웹 페이지에서 국가 또는 도시가 언급될 때마다 여행 가이드에 대한 접근을 제공하거나, 일관된 읽기 경험을 제공하기 위해 페이지 컨텐츠를 재구성하는 작업을 하고 싶을 수 있습니다. 웹페이지의 HTML과 CSS에 접근하고 업데이트함으로써 확장 기능은 사용자가 원하는 방식으로 웹을 볼 수 있도록 돕습니다.
 
-![](ublock_origin_add_on.png)
+![트래커 통계를 차단하는 uBlock origin 애드온 예제](ublock_origin_add_on.png)
 
 Examples: [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/), [Reader](https://addons.mozilla.org/en-US/firefox/addon/reader/), and [Toolbox for Google Play Store™](https://addons.mozilla.org/en-US/firefox/addon/toolbox-google-play-store/).
 
 **도구 및 새로운 브라우징 기능 추가**: 작업 보드에 새로운 기능을 추가하거나, URL, 하이퍼링크, 화면의 글자로부터 QR코드 이미지를 생성합니다. [WebExtensions APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions)가 제공하는 유연한 UI 옵션들과 강력한 기능을 통해 브라우저에 새로운 기능을 쉽게 추가할 수 있습니다. 그리고 당신의 웹사이트가 아니더라도, 거의 모든 웹사이트의 기능을 향상시킬 수 있습니다.
 
-![](qr_code_image_generator_add_on.png)
+![QR코드 생성기 애드온 예제](qr_code_image_generator_add_on.png)
 
 Examples: [Swimlanes for Trello](https://addons.mozilla.org/en-US/firefox/addon/swimlanes-for-trello/) and [Tomato Clock](https://addons.mozilla.org/en-US/firefox/addon/tomato-clock/).
 
@@ -41,7 +41,7 @@ Examples: [Solitaire Card Game](https://addons.mozilla.org/en-US/firefox/addon/s
 
 **개발 도구 추가**: 웹 개발 도구를 비즈니스로 제공하거나 공유하고 싶은 웹 개발에 대한 유용한 기술 또는 접근 방식을 개발했을 수 있습니다. 어느 쪽이든 간에, 개발자 도구 모음에 새 탭을 추가하여 내장 Firefox 개발자 도구를 향상시킬 수 있습니다.
 
-![](axe_developer_tools_add_on.png)
+![Axe 접근성 테스팅 애드온 예제](axe_developer_tools_add_on.png)
 
 Examples: [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/), and [aXe Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/).
 
