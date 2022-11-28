@@ -6,7 +6,7 @@ translation_of: Web/API/WorkerGlobalScope/self
 
 {{APIRef("Web Workers API")}}
 
-La propriété en lecture seule **`self`** de l'interface {{domxref("WorkerGlobalScope")}} retourne une référence au `WorkerGlobalScope` lui-même. La plupart du temps il s'agit d'un contexte spécifique comme {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}}, ou {{domxref("ServiceWorkerGlobalScope")}}.
+La propriété en lecture seule **`self`** de l'interface {{domxref("WorkerGlobalScope")}} retourne une référence au `WorkerGlobalScope` lui-même. La plupart du temps il s'agit d'un contexte spécifique comme {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, ou {{domxref("ServiceWorkerGlobalScope")}}.
 
 ## Syntaxe
 

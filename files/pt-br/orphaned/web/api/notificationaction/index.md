@@ -4,6 +4,7 @@ slug: orphaned/Web/API/NotificationAction
 translation_of: Web/API/NotificationAction
 original_slug: Web/API/NotificationAction
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 A interface `NotificationAction` de [Notifications API](/pt-BR/docs/Web/API/Notifications_API) é usada para representar botões de ação que o usuário pode clicar para intergair com as notificações. As aparências e as funcionalidades específicas dos botões variam entre plataformas, mas geralmente providenciam maneiras de mostrar ações assincronamente ao usuário, em forma de notificações.

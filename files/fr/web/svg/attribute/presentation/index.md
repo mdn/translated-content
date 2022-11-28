@@ -77,19 +77,19 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
     _Valeur_: **`auto`**|`baseline`|`before-edge`|`text-before-edge`|`middle`|`central`|`after-edge`|`text-after-edge`|`ideographic`|`alphabetic`|`hanging`|`mathematical`|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('baseline-shift')}}
   - : Permet de positionner la ligne de pied de l'élément par rapport à celle de son parent.
-    _Valeur_: **`auto`**|`baseline`|`super`|`sub`|[\<percentage>](/docs/Web/SVG/Content_type#Percentage)|[\<length>](/docs/Web/SVG/Content_type#Length)|`inherit`; _Animation_: **Oui**
+    _Valeur_: **`auto`**|`baseline`|`super`|`sub`|[\<percentage>](/fr/docs/Web/SVG/Content_type#Percentage)|[\<length>](/fr/docs/Web/SVG/Content_type#Length)|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('clip')}} {{deprecated_inline('css')}}
   - : Définit quelle partie d'un élément est visible.
     _Valeur_: **`auto`**|{{cssxref("shape")}}|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('clip-path')}}
   - : Associe un chemin de détourage {{SVGElement('clipPath')}} à l'élément.
-    _Valeur_: **`none`**|[\<FuncIRI>](/docs/Web/SVG/Content_type#FuncIRI)|`inherit`; _Animation_: **Oui**
+    _Valeur_: **`none`**|[\<FuncIRI>](/fr/docs/Web/SVG/Content_type#FuncIRI)|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('clip-rule')}}
   - : Indique la règle de remplissage à appliquer sur un élément {{SVGElement('clipPath')}}.
     _Valeur_: **`nonezero`**|`evenodd`|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('color')}}
   - : Définit la valeur potentielle (valeur de `currentColor`) pour les attributs de présentation `fill`, `stroke`, `stop-color`, `flood-color` et `lighting-color`.
-    _Valeur_: [\<color>](/docs/Web/SVG/Content_type#Color)|`inherit`; _Animation_: **Oui**
+    _Valeur_: [\<color>](/fr/docs/Web/SVG/Content_type#Color)|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('color-interpolation')}}
   - : Spécifie l'espace colométrique pour les interpolations de dégradés, les animations couleur et composition alpha.
     _Valeur_: `auto`|**`sRGB`**|`linearRGB`|`inherit`; _Animation_: **Oui**
@@ -98,13 +98,13 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
     _Valeur_: `auto`|`sRGB`|**`linearRGB`**|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('color-profile')}} {{deprecated_inline('svg2')}}
   - : Définit le profil de couleur qu'une image bitmap incluse via l'élément {{SVGElement('image')}} doit utiliser.
-    _Valeur_: `auto`|`sRGB`|`linearRGB`|[\<name>](/docs/Web/SVG/Content_type#Name)|[\<IRI>](/docs/Web/SVG/Content_type#IRI)|`inherit`; _Animation_: **Oui**
+    _Valeur_: `auto`|`sRGB`|`linearRGB`|[\<name>](/fr/docs/Web/SVG/Content_type#Name)|[\<IRI>](/fr/docs/Web/SVG/Content_type#IRI)|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('color-rendering')}}
   - : Indique au navigateur comment optimiser ses opérations d'interpolation et de composition des couleurs.
     _Valeur_: **`auto`**|`optimizeSpeed`|`optimizeQuality`|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('cursor')}}
   - : Spécifie le curseur affiché lorsque la souris passe au-desuss de l'élément.
-    _Valeur_: [\<FuncIRI>](/docs/Web/SVG/Content_type#FuncIRI)|[\<keywords>](/docs/Web/CSS/cursor#Values)|`inherit`; _Animation_: **Oui**
+    _Valeur_: [\<FuncIRI>](/fr/docs/Web/SVG/Content_type#FuncIRI)|[\<keywords>](/fr/docs/Web/CSS/cursor#Values)|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('direction')}}
   - : Spécifie la direction d'écriture du texte.
     _Valeur_: **`ltr`**|`rtl`|`inherit`; _Animation_: **Oui**
@@ -119,22 +119,22 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
     _Valeur_: **`accumulate`**|`new`|`inherit`; _Animation_: **Non**
 - {{SVGAttr('fill')}}
   - : Définit la couleur de remplissage d'un élément graphique.
-    _Valeur_: [\<paint>](/docs/Web/SVG/Content_type#Paint); _Animation_: **Oui**
+    _Valeur_: [\<paint>](/fr/docs/Web/SVG/Content_type#Paint); _Animation_: **Oui**
 - {{SVGAttr('fill-opacity')}}
   - : Définit l'opacité du remplissage de l'élément.
-    _Valeur_: [\<number>](/docs/Web/SVG/Content_type#Number)|[\<percentage>](/docs/Web/SVG/Content_type#Percentage); _Animation_: **Oui**
+    _Valeur_: [\<number>](/fr/docs/Web/SVG/Content_type#Number)|[\<percentage>](/fr/docs/Web/SVG/Content_type#Percentage); _Animation_: **Oui**
 - {{SVGAttr('fill-rule')}}
   - : Indique comment déterminer quelles parties du chemin se trouvent à l'intérieur de la forme.
     _Valeur_: **`nonzero`**|`evenodd`|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('filter')}}
   - : Applique un filtre, définit par un élément {{SVGElement('filter')}}, à l'élément.
-    _Valeur_: [\<FuncIRI>](/docs/Web/SVG/Content_type#FuncIRI)|**`none`**|`inherit`; _Animation_: **Oui**
+    _Valeur_: [\<FuncIRI>](/fr/docs/Web/SVG/Content_type#FuncIRI)|**`none`**|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('flood-color')}}
   - : Indique quelle couleur utiliser pour remplir la région du filtre, définit par les éléments {{SVGElement('feFlood')}} ou {{SVGElement('feDropShadow')}}.
-    _Valeur_: [\<color>](/docs/Web/SVG/Content_type#Color); _Animation_: **Oui**
+    _Valeur_: [\<color>](/fr/docs/Web/SVG/Content_type#Color); _Animation_: **Oui**
 - {{SVGAttr('flood-opacity')}}
   - : Indique l'opacité à utiliser pour remplir la région du filtre, définit par les éléments {{SVGElement('feFlood')}} ou {{SVGElement('feDropShadow')}}.
-    _Valeur_: [\<number>](/docs/Web/SVG/Content_type#Number)|[\<percentage>](/docs/Web/SVG/Content_type#Percentage); _Animation_: **Oui**
+    _Valeur_: [\<number>](/fr/docs/Web/SVG/Content_type#Number)|[\<percentage>](/fr/docs/Web/SVG/Content_type#Percentage); _Animation_: **Oui**
 - {{SVGAttr('font-family')}}
   - : Indique la police utiliser pour restituer le texte de l'élément.
     _Valeur_: see css {{cssxref('font-family')}}; _Animation_: **Oui**
@@ -143,7 +143,7 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
     _Valeur_: see css {{cssxref('font-size')}}; _Animation_: **Oui**
 - {{SVGAttr('font-size-adjust')}}
   - : Spécifie que la taille de la police doit être choisit en se basant sur la taille des lettres minuscules et non des majuscules.
-    _Valeur_: [\<number>](/docs/Web/SVG/Content_type#Number)|**`none`**|`inherit`; _Animation_: **Oui**
+    _Valeur_: [\<number>](/fr/docs/Web/SVG/Content_type#Number)|**`none`**|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('font-stretch')}}
   - : Sélectionne la version normale, condensée ou espacée d'une police.
     _Valeur_: see css {{cssxref('font-stretch')}}; _Animation_: **Oui**
@@ -158,37 +158,37 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
     _Valeur_: **`normal`**|`bold`|`lighter`|`bolder`|`100`|`200`|`300`|`400`|`500`|`600`|`700`|`800`|`900`; _Animation_: **Oui**
 - {{SVGAttr('glyph-orientation-horizontal')}} {{deprecated_inline('svg2')}}
   - : Contrôle l'orientation des glyphes lorsque la direction en ligne est horizontale.
-    _Valeur_: [\<angle>](/docs/Web/SVG/Content_type#Angle)|`inherit`; _Animation_: **Non**
+    _Valeur_: [\<angle>](/fr/docs/Web/SVG/Content_type#Angle)|`inherit`; _Animation_: **Non**
 - {{SVGAttr('glyph-orientation-vertical')}} {{deprecated_inline('svg2')}}
   - : Contrôle l'orientation des glyphes lorsque la direction en ligne est verticale.
-    _Valeur_: **`auto`**|[\<angle>](/docs/Web/SVG/Content_type#Angle)|`inherit`; _Animation_: **Non**
+    _Valeur_: **`auto`**|[\<angle>](/fr/docs/Web/SVG/Content_type#Angle)|`inherit`; _Animation_: **Non**
 - {{SVGAttr('image-rendering')}}
   - : Indique au navigateur le compromis à effectuer entre vitesse et qualité du rendu des images.
     _Valeur_: **`auto`**|`optimizeQuality`|`optimizeSpeed`; _Animation_: **Oui**
 - {{SVGAttr('kerning')}} {{deprecated_inline('svg2')}}
   - : Indique au navigateur s'il doit ajuster l'espacement entre les glyphes.
-    _Valeur_: **`auto`**|[\<length>](/docs/Web/SVG/Content_type#Length)|`inherit`; _Animation_: **Oui**
+    _Valeur_: **`auto`**|[\<length>](/fr/docs/Web/SVG/Content_type#Length)|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('letter-spacing')}}
   - : Contrôle l'espacement entre les caratères du texte.
-    _Valeur_: **`normal`**|[\<length>](/docs/Web/SVG/Content_type#Length)|`inherit`; _Animation_: **Oui**
+    _Valeur_: **`normal`**|[\<length>](/fr/docs/Web/SVG/Content_type#Length)|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('lighting-color')}}
   - : Définit la couleur de la source de lumière pour les filtres {{SVGElement('feDiffuseLighting')}} et {{SVGElement('feSpecularLighting')}}.
-    _Valeur_: [\<color>](/docs/Web/SVG/Content_type#Color); _Animation_: **Oui**
+    _Valeur_: [\<color>](/fr/docs/Web/SVG/Content_type#Color); _Animation_: **Oui**
 - {{SVGAttr('marker-end')}}
   - : Définit la pointe de la flèche ou polymarker dessiné à la fin de l'élément {{SVGElement('path')}} ou ou de la forme.
-    _Valeur_: [\<FuncIRI>](/docs/Web/SVG/Content_type#FuncIRI)|**`none`**|`inherit`; _Animation_: **Oui**
+    _Valeur_: [\<FuncIRI>](/fr/docs/Web/SVG/Content_type#FuncIRI)|**`none`**|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('marker-mid')}}
   - : Définit la pointe de la flèche ou polymarker dessiné entre chaque segment de l'élément {{SVGElement('path')}} ou de la forme.
-    _Valeur_: [\<FuncIRI>](/docs/Web/SVG/Content_type#FuncIRI)|**`none`**|`inherit`; _Animation_: **Oui**
+    _Valeur_: [\<FuncIRI>](/fr/docs/Web/SVG/Content_type#FuncIRI)|**`none`**|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('marker-start')}}
   - : Définit la pointe de la flèche ou polymarker dessiné au début de l'élément {{SVGElement('path')}} ou ou de la forme.
-    _Valeur_: [\<FuncIRI>](/docs/Web/SVG/Content_type#FuncIRI)|**`none`**|`inherit`; _Animation_: **Oui**
+    _Valeur_: [\<FuncIRI>](/fr/docs/Web/SVG/Content_type#FuncIRI)|**`none`**|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('mask')}}
   - : Modifie la visibilité d'un élément en masquant ou détourant l'image à des endroits spécifiques.
     _Valeur_: see css {{cssxref('mask')}}; _Animation_: **Oui**
 - {{SVGAttr('opacity')}}
   - : Spécifie l'opacité d'un objet ou d'un groupe d'objets.
-    _Valeur_: [\<opacity-value>](/docs/Web/SVG/Content_type#Opacity_value); _Animation_: **Oui**
+    _Valeur_: [\<opacity-value>](/fr/docs/Web/SVG/Content_type#Opacity_value); _Animation_: **Oui**
 - {{SVGAttr('overflow')}}
   - : Spécifie si le contenu d'un élément bloc est tronqué lorsqu'il déborde de la zone de l'élément.
     _Valeur_: **`visible`**|`hidden|scroll`|`auto`|`inherit`; _Animation_: **Oui**
@@ -212,7 +212,7 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
     _Valeur_: [\<opacity-value>](/fr/SVG/Content_type#Opacity_value)|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('stroke')}}
   - : Définit la couleur à utiliser pour le contour de l'élément.
-    _Valeur_: [\<paint>](/docs/Web/SVG/Content_type#Paint); _Animation_: **Oui**
+    _Valeur_: [\<paint>](/fr/docs/Web/SVG/Content_type#Paint); _Animation_: **Oui**
 - {{SVGAttr('stroke-dasharray')}}
   - : Définit le motif des pointillés utilisé pour dessiner le contour de la forme.
     _Valeur_: `none`|`<dasharray>`; _Animation_: **Oui**
@@ -230,10 +230,10 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
     _Valeur_: [\<number>](/fr/SVG/Content_type#Number); _Animation_: **Oui**
 - **{{SVGAttr('stroke-opacity')}}**
   - : Définit l'opacité du contour d'une forme.
-    _Valeur_: [\<opacity-value>](/fr/SVG/Content_type#Opacity_value)|[\<percentage>](/docs/Web/SVG/Content_type#Paint); _Animation_: **Oui**
+    _Valeur_: [\<opacity-value>](/fr/SVG/Content_type#Opacity_value)|[\<percentage>](/fr/docs/Web/SVG/Content_type#Paint); _Animation_: **Oui**
 - **{{SVGAttr('stroke-width')}}**
   - : Définit l'épaisseur du contour appliqué à une forme.
-    _Valeur_: [\<length>](/docs/Web/SVG/Content_type#Length)|[\<percentage>](/docs/Web/SVG/Content_type#Percentage); _Animation_: **Oui**
+    _Valeur_: [\<length>](/fr/docs/Web/SVG/Content_type#Length)|[\<percentage>](/fr/docs/Web/SVG/Content_type#Percentage); _Animation_: **Oui**
 - **{{SVGAttr('text-anchor')}}**
   - : Définit l'alignement vertical d'une chaîne de texte.
     _Valeur_: `start`|`middle`|`end`|**`inherit`**; _Animation_: **Oui**
@@ -245,7 +245,7 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
     _Valeur_: **`auto`**|`optimizeSpeed`|`optimizeLegibility`|`geometricPrecision`|`inherit`; _Animation_: **Oui**
 - **{{SVGAttr('transform')}}**
   - : Définit une liste de transformations à appliquer à un élément et à ses enfants.
-    _Valeur_: [\<transform-list>](/docs/Web/SVG/Content_type#Transform-list); _Animation_: **Oui**
+    _Valeur_: [\<transform-list>](/fr/docs/Web/SVG/Content_type#Transform-list); _Animation_: **Oui**
 - **{{SVGAttr('unicode-bidi')}}**
   - : -
     _Valeur_:; _Animation_: **-**
@@ -259,7 +259,7 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
   - : Définit la longueur des espaces entre les mots d'un texte.
     _Valeur_: [\<length>](/fr/SVG/Content_type#Length)|**`inherit`**; _Animation_: **Oui**
 - **{{SVGAttr('writing-mode')}}**
-  - : Spécifie si la direction d'un élément  {{SVGElement('text')}} doit être de gauche-à-droite, droite-à-gauche, ou de haut-en-bas.
+  - : Spécifie si la direction d'un élément {{SVGElement('text')}} doit être de gauche-à-droite, droite-à-gauche, ou de haut-en-bas.
     _Valeur_: **`lr-tb`**|`rl-tb`|`tb-rl`|`lr`|`rl`|`tb`|`inherit`; _Animation_: **Oui**
 
 ## Compatibilité des navigateurs

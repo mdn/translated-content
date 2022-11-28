@@ -44,9 +44,7 @@ function print_nextHopProtocol(perfEntry) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | ステータス                           | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-nextHopProtocol', 'nextHopProtocol')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

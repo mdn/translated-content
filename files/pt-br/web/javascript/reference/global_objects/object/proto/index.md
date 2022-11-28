@@ -108,10 +108,7 @@ A propriedade `__proto__` é simplesmente uma propriedade acessora {{jsxref("Obj
 
 ## Especificações
 
-| Especificação                                                                                                                                            | Status                       | Comentários                                                                                                                                                             |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-additional-properties-of-the-object.prototype-object', 'Object.prototype.__proto__')}}     | {{Spec2('ES6')}}         | Included in the (normative) annex for additional ECMAScript legacy features for Web browsers (note that the specification codifies what is already in implementations). |
-| {{SpecName('ESDraft', '#sec-additional-properties-of-the-object.prototype-object', 'Object.prototype.__proto__')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

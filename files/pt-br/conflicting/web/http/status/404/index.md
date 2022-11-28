@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/404
 original_slug: Glossary/404
 ---
+
 O 404 é um código de resposta padrão que significa que o {{Glossary("Server", "server")}} não consegue encontrar o recurso solicitado.
 
 ## Aprenda mais

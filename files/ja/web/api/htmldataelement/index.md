@@ -22,10 +22,7 @@ _固有のメソッドなし。親である{{domxref("HTMLElement")}}からメ�
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', "#htmldataelement", "HTMLDataElement")}}                                 | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-data-element', 'HTMLDataElement')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

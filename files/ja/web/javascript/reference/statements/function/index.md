@@ -122,9 +122,7 @@ function calc_sales(units_a, units_b, units_c) {
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

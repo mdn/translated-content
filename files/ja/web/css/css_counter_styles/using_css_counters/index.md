@@ -291,10 +291,7 @@ li::before {
 
 ## 仕様書
 
-| 仕様書                                                           | 状態                    | 備考     |
-| ---------------------------------------------------------------- | ----------------------- | -------- |
-| {{SpecName("CSS3 Lists", "#auto-numbering", "CSS Counters")}}    | {{Spec2("CSS3 Lists")}} | 変更なし |
-| {{SpecName("CSS2.1", "generate.html#counters", "CSS Counters")}} | {{Spec2("CSS2.1")}}     | 初回定義 |
+{{Specifications}}
 
 ## 関連情報
 

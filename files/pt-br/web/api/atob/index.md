@@ -41,7 +41,7 @@ var dadoDecodificado = window.atob(dadoCodificado); // decodifica a string
 
 ## Veja também
 
-- [Base64 encoding and decoding](/Web/API/WindowBase64/Base64_encoding_and_decoding)
+- [Base64 encoding and decoding](/pt-BR/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)
 - [`data` URIs](/pt-BR/docs/data_URIs)
 - {{domxref("WindowBase64.btoa","window.btoa()")}}
 - [Components.utils.importGlobalProperties](/pt-BR/docs/Components.utils.importGlobalProperties)

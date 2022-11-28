@@ -14,6 +14,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
 original_slug: Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
 ---
+
 ## O que significa ARIA?
 
 WAI-ARIA, que quer dizer [Accessible Rich Internet Applications](https://www.w3.org/WAI/intro/aria.php)(Aplicações Ricas para uma Internete Acessível), são as especificações da [Web Accessibility Initiative](https://www.w3.org/WAI/) (Iniciativa pela Acessibilidade na _Web_), da [W3C](https://www.w3.org/) (World Wide Web Consortium). O conjunto ARIA oferece a maneira de tornar as aplicações e _widgets_ da rede mundial mais acessíveis a uma diversidade maior de pessoas, incluindo quem utiliza tecnologias assistivas, como leitores de telas, ou lentes de aumento.

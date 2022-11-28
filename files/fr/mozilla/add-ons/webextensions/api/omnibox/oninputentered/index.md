@@ -41,7 +41,7 @@ Les événements ont trois fonctions :
 
 ## Syntaxe addListener
 
-La fonction d'écouteur recevra deux paramètres: une chaine de `text`, et un  {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.
+La fonction d'écouteur recevra deux paramètres: une chaine de `text`, et un {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.
 
 ### Paramètres
 
