@@ -4,6 +4,7 @@ slug: orphaned/Web/API/HTMLOrForeignElement/focus
 translation_of: Web/API/HTMLOrForeignElement/focus
 original_slug: Web/API/HTMLOrForeignElement/focus
 ---
+
 {{ APIRef("HTML DOM") }}
 
 O método **`HTMLElement.focus()`** seta o foco em um determinado elemento em especifico, caso esse elemento permita ter o foco neste elemento.
