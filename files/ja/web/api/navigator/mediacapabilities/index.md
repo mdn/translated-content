@@ -38,9 +38,7 @@ navigator.mediaCapabilities.decodingInfo({
 
 ## 仕様書
 
-| 仕様書                                       | 状態                                     | 備考     |
-| -------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('Media Capabilities')}} | {{Spec2('Media Capabilities')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

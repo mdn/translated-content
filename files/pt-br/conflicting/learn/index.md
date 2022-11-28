@@ -4,6 +4,7 @@ slug: conflicting/Learn
 translation_of: Learn/Release_notes
 original_slug: Learn/Release_notes
 ---
+
 {{learnsidebar}}
 
 Esta página detalha as mudanças significativas feitas na área de aprendizagem. Volte aqui se quiser saber qual conteúdo novo está disponível e qual conteúdo existente foi aprimorado.

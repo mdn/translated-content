@@ -38,10 +38,7 @@ slug: Web/HTML/Attributes/size
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-size', 'size attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'input.html#attr-size-accept', 'size attribute')}}     | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -33,7 +33,7 @@ Vous pouvez aussi écrire des données vers les flux en utilisant {{domxref("Wri
 ### Readable streams
 
 - {{domxref("ReadableStream")}}
-  - : Correspond à un flux de données lisible. Il peut être utlisé afin de gérer les réponses des flux de l'[API Fetch](/fr/docs/Web/API/Fetch_API), ou des flux définis par le développeur (cad. un constructeur  {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} personnalisé).
+  - : Correspond à un flux de données lisible. Il peut être utlisé afin de gérer les réponses des flux de l'[API Fetch](/fr/docs/Web/API/Fetch_API), ou des flux définis par le développeur (cad. un constructeur {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} personnalisé).
 - {{domxref("ReadableStreamDefaultReader")}}
   - : Correspond à un lecteur par défaut pouvant être utilisé afin de lire un flux de données fourni par le réseau (cad. une requête fetch).
 - {{domxref("ReadableStreamDefaultController")}}

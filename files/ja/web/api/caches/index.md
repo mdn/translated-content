@@ -45,9 +45,7 @@ this.addEventListener('install', function(event) {
 
 ## 仕様
 
-| 仕様                                     | ステータス                           | コメント   |
-| ---------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('Service Workers')}} | {{Spec2('Service Workers')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

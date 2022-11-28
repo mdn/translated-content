@@ -17,11 +17,9 @@ var audioContext = new AudioContext(options)
 
 なし。
 
-**仕様**
+## 仕様
 
-| 仕様                                                                                 | 状態                                 | コメント            |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Web Audio API','#AudioContext','AudioContext()')}} | {{Spec2('Web Audio API')}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザー互換性
 

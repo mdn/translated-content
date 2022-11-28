@@ -103,11 +103,7 @@ nameInput.addEventListener('invalid', () => {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | 状態                             | 備考                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------ |
-| {{ SpecName('HTML WHATWG', 'forms.html#the-constraint-validation-api', 'constraint validation API') }} | {{Spec2('HTML WHATWG')}} |                                                                                            |
-| {{ SpecName('HTML5.1', 'sec-forms.html#the-constraint-validation-api', 'constraint validation API') }} | {{Spec2('HTML5.1')}}     | 前回のスナップショット {{SpecName('HTML5 W3C')}} から変更なし。                     |
-| {{ SpecName('HTML5 W3C', 'forms.html#the-constraint-validation-api', 'constraint validation API') }}     | {{Spec2('HTML5 W3C')}}     | このインターフェイスを含む {{SpecName('HTML WHATWG')}} の最初のスナップショット。 |
+{{Specifications}}
 
 ## 関連情報
 

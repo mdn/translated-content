@@ -24,7 +24,7 @@ La valeur de `Number.POSITIVE_INFINITY` est identique à la valeur de la propri�
 
 Cette valeur possède un comportement légèrement différent de l'infini au sens mathématique :
 
-- Tout valeur positive, y compris `POSITIVE_INFINITY,` multipliée par  `POSITIVE_INFINITY` sera égale à `POSITIVE_INFINITY`.
+- Tout valeur positive, y compris `POSITIVE_INFINITY,` multipliée par `POSITIVE_INFINITY` sera égale à `POSITIVE_INFINITY`.
 - Toute valeur négative, y compris {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}, multipliée par `POSITIVE_INFINITY` sera égale à `NEGATIVE_INFINITY`.
 - Zéro multiplié par `POSITIVE_INFINITY` sera égal à {{jsxref("NaN")}}.
 - NaN multiplié par `POSITIVE_INFINITY` sera égal à NaN.

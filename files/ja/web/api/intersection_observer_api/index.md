@@ -570,9 +570,7 @@ function handleIntersect(entries, observer) {
 
 ## 仕様書
 
-| 仕様書                                    | 状態                                       | 備考 |
-| ------------------------------------------------ | -------------------------------------------- | ------- |
-| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} |         |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

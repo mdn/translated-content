@@ -125,11 +125,7 @@ text{
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                                                                                                                     |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("CSS3 Inline", "#propdef-alignment-baseline", "alignment-baseline")}}     | {{Spec2("CSS3 Inline")}} | 変更なし                                                                                                                 |
-| {{SpecName("SVG2", "text.html#AlignmentBaselineProperty", "alignment-baseline")}}     | {{Spec2("SVG2")}}         | CSS Inline Layout および注釈を参照し、 `auto`, `before-edge`, `after-edge`, `text-before-edge`, `text-after-edge` へ変更 |
-| {{SpecName("SVG1.1", "text.html#AlignmentBaselineProperty", "alignment-baseline")}} | {{Spec2("SVG1.1")}}         | 初回定義                                                                                                                 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

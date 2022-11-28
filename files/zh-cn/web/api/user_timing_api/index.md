@@ -9,7 +9,7 @@ slug: Web/API/User_Timing_API
 
 `mark` 事件可以指定任意的名字并且可以在放在应用的任何位置，`measure` 事件也可以指定为任意的名字，但是需要放在两个 mark 之间，所以它实际上是两个 mark 的中间点。
 
-此文档提供了对 `mark` 和 `measure` {{domxref("PerformanceEntry.entryType","性能事件类型")}}的概览，包括四个拓展了{{domxref("Performance")}}接口的`User Timing`方法。想要了解这两种性能事件类型和相关方法的更多详细内容和示例代码，请查阅[使用自定义时间测量 API](/Web/API/User_Timing_API/Using_the_User_Timing_API)。
+此文档提供了对 `mark` 和 `measure` {{domxref("PerformanceEntry.entryType","性能事件类型")}}的概览，包括四个拓展了{{domxref("Performance")}}接口的`User Timing`方法。想要了解这两种性能事件类型和相关方法的更多详细内容和示例代码，请查阅[使用自定义时间测量 API](/zh-CN/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)。
 
 ## 性能`标记`
 
@@ -73,7 +73,7 @@ slug: Web/API/User_Timing_API
 
 ## 互操作性
 
-如{{domxref("Performance")}}接口的[浏览器兼容性](/Web/API/Performance#Browser_compatibility)表所示，`User Timing` 方法被大多数桌面和移动浏览器（唯一的例外是桌面 Safari 和移动版 Safari，[Safari Technology Preview 24 已经支持该方法](https://developer.apple.com/safari/technology-preview/release-notes/#r24))。
+如{{domxref("Performance")}}接口的[浏览器兼容性](/zh-CN/docs/Web/API/Performance#Browser_compatibility)表所示，`User Timing` 方法被大多数桌面和移动浏览器（唯一的例外是桌面 Safari 和移动版 Safari，[Safari Technology Preview 24 已经支持该方法](https://developer.apple.com/safari/technology-preview/release-notes/#r24))。
 
 想要测试你的浏览器是否支持该 API，运行[`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html)程序。
 

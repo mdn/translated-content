@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/ownKeys
 
 {{JSRef}}
 
-La méthode statique **`Reflect.ownKeys()`** renvoie un tableau qui contient les clés des propriétés propres (non héritées) de l'objet  `cible`.
+La méthode statique **`Reflect.ownKeys()`** renvoie un tableau qui contient les clés des propriétés propres (non héritées) de l'objet `cible`.
 
 {{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}
 

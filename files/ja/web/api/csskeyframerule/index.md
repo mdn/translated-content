@@ -22,9 +22,7 @@ slug: Web/API/CSSKeyframeRule
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                                 | コメント   |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{SpecName('CSS3 Animations', '#CSSKeyframeRule-interface', 'CSSKeyframeRule')}} | {{Spec2('CSS3 Animations')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

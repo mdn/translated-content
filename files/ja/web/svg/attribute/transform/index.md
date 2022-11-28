@@ -228,9 +228,5 @@ html,body,svg { height:100% }
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                                     | 備考     |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('CSS Transforms 2', '#svg-transform', 'transform')}}         | {{Spec2('CSS Transforms 2')}} |          |
-| {{SpecName('CSS3 Transforms', '#svg-transform', 'transform')}}         | {{Spec2('CSS3 Transforms')}}     |          |
-| {{SpecName("SVG2", "coords.html#TransformProperty", "transform")}}     | {{Spec2("SVG2")}}                 |          |
-| {{SpecName("SVG1.1", "coords.html#TransformAttribute", "transform")}} | {{Spec2("SVG1.1")}}                 | 初回定義 |
+{{Specifications}}
+

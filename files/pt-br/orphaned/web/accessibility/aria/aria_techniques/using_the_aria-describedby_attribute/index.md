@@ -9,6 +9,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
 ---
+
 ### Descrição
 
 O atributo [`aria-describedby`](https://www.w3.org/TR/wai-aria/#aria-describedby) é usado para indicar os IDs dos elementos que descrevem o objeto. Isso é usado para estabelecer um relacionamento entre widgets ou grupos e texto que descrevem eles. Isso é muito similar ao [aria-labelledby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute "Using the aria-labelledby attribute"): um rótulo (label) que descreve a essência de um objeto, enquanto a descrição fornece mais informação do que o usuário pode precisar.
