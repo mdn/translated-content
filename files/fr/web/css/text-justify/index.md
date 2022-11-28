@@ -33,7 +33,7 @@ La propriété `text-justify` peut être définie grâce à l'un des mots-clés 
 - `inter-word`
   - : Le texte est justifié en ajustant les espaces entre les mots (en faisant varier {{cssxref("word-spacing")}}) ; cette propriété est appropriée pour les langues qui séparent les mots avec des espaces, comme le Français ou le Coréen.
 - `inter-character`
-  - : Le texte est justifié en ajustant les espaces entre les caractères (en faisant varier {{cssxref("letter-spacing")}}) ;  cette propritété est plus appropriée pour des langues comme le Japonais.
+  - : Le texte est justifié en ajustant les espaces entre les caractères (en faisant varier {{cssxref("letter-spacing")}}) ; cette propritété est plus appropriée pour des langues comme le Japonais.
 - `distribute` {{deprecated_inline}}
   - : Même effet que `inter-character` ; cette valeur sert uniquement à de fins de compatibilité.
 
