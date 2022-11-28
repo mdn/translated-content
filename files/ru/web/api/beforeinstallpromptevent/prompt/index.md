@@ -10,6 +10,7 @@ tags:
   - prompt
 translation_of: Web/API/BeforeInstallPromptEvent/prompt
 ---
+
 Метод **`prompt()`** интерфейса {{domxref("BeforeInstallPromptEvent")}} позволяет разработчику показывать подсказку об установке в любое время по своему выбору.
 
 ## Синтаксис

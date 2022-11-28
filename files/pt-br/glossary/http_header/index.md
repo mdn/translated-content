@@ -1,16 +1,9 @@
 ---
 title: Cabeçalho HTTP
 slug: Glossary/HTTP_header
-tags:
-  - Cabeçalho HTTP
-  - Glossary
-  - Glossário
-  - HTTP Header
-  - Mecânicas da Web
-  - WebMechanics
-translation_of: Glossary/HTTP_header
 original_slug: Glossario/Cabecalho_HTTP
 ---
+
 Um **Cabeçalho HTTP** é um campo de uma requisição ou resposta HTTP que passa informações adicionais, alterando ou melhorando a precisão da semântica da mensagem ou do corpo. Cabeçalhos são _case-insensitive_, iniciam-se no começo da linha e são seguidos imediamente por um `':'` e um valor dependendo do cabeçalho em si. O valor termina no próximo CRLF ou no fim da mensagem.
 
 Tradicionalmente, cabeçalhos são classificados em categorias, apesar disso, essa classificação não faz mais parte de nenhuma especificação:

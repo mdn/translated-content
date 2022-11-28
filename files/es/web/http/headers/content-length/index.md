@@ -1,8 +1,8 @@
 ---
 title: Content-Length
 slug: Web/HTTP/Headers/Content-Length
-translation_of: Web/HTTP/Headers/Content-Length
 ---
+
 {{HTTPSidebar}}
 
 El encabezado de entidad **`Content-Length`** indica el tamaño de la entidad-cuerpo, en bytes, enviado al destinatario.

@@ -2,6 +2,7 @@
 title: 텍스트 표시 방향 제어하기
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
 
 CSS 학습에서 지금까지 경험한 많은 속성과 값은 화면의 크기와 연결되어 있습니다. 예를 들어, 박스의 위, 오른쪽, 아래쪽 및 왼쪽에 테두리를 만듭니다. 이러한 실제 측정 기준은 가로로 표시되는 콘텐츠에 매우 깔끔하게 매핑되며, 기본적으로 웹은 오른쪽에서 왼쪽으로 쓰는 언어 (예: 아랍어) 보다 왼쪽에서 오른쪽으로 쓰는 언어 (예: 영어 또는 프랑스어) 를 더 잘 지원하는 경향이 있습니다.

@@ -1,16 +1,8 @@
 ---
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
-tags:
-  - Expressões Regulares
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - split()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 ---
+
 {{JSRef}}
 
 O método `split()` divide uma {{jsxref ("String")}} em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array. A divisão é feita procurando um padrão, onde o padrão é fornecido como o primeiro parâmetro na chamada do método.

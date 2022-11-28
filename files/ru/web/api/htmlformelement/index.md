@@ -10,6 +10,7 @@ tags:
   - TopicStub
 translation_of: Web/API/HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement`** interface provides methods to create and modify {{HTMLElement("form")}} elements; it inherits from properties and methods of the {{domxref("HTMLElement")}} interface.
@@ -24,7 +25,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("action", "form") }} HTML attribute, containing the URI of a program that processes the information submitted by the form.
 - {{domxref("HTMLFormElement.autocomplete")}}
   - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("autocomplete", "form") }} HTML attribute, containing a string that indicates whether the controls in this form can have their values automatically populated by the browser.
-- {{domxref("HTMLFormElement.elements")}}[` `](/en/DOM/form.elements "en/DOM/form.elements"){{readonlyinline}}
+- {{domxref("HTMLFormElement.elements")}} {{readonlyinline}}
   - : Returns a live {{domxref("HTMLFormControlsCollection")}} containing all the form controls belonging to this form element.
 - {{domxref("HTMLFormElement.encoding")}}
   - : Is a synonym for `enctype`.
@@ -43,7 +44,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Methods
 
-_Inherits methods from its parent, {{domxref("HTMLElement")}}\_\_._
+_Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLFormElement.checkValidity()")}}
   - : Returns a {{jsxref("Boolean")}} that is `true` if the element's child controls are subject to constraint validation and satify those contraints, or `false` if some controls do not satisfy their constraints. Fires an event named {{event("invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to `false`.
@@ -59,7 +60,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}\_\_._
 <!---->
 
 - {{domxref("HTMLFormElement.reportValidity()")}}
-  - : Returns `true` if the element's child controls satisfy their validation constraints. When `false` is returned, cancelable [`invalid`](https://developer.mozilla.org/en-US/docs/Web/Events/invalid "/en-US/docs/Web/Events/invalid") events are fired for each invalid child and validation problems are reported to the user.
+  - : Returns `true` if the element's child controls satisfy their validation constraints. When `false` is returned, cancelable [`invalid`](/en-US/docs/Web/Events/invalid) events are fired for each invalid child and validation problems are reported to the user.
 
 ## Examples
 

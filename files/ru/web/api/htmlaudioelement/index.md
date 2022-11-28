@@ -3,6 +3,7 @@ title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
 translation_of: Web/API/HTMLAudioElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAudioElement`** позволяет получить доступ к элементу {{HTMLElement("audio")}} и имеет DOM-элемент {{domxref("HTMLMediaElement")}}.
@@ -38,7 +39,7 @@ mySound = new Audio([URLString]);
 | ----------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `mozCurrentSampleOffset()` {{non-standard_inline}}                         | `unsigned long long` | `Отображает текущую нагрузку аудиострима, который был создан методом mozWriteAudio()`. Эта цифра отражает количество сэмплов с момента начала стрима                                 |
 | `mozSetup(in PRUint32 channels, in PRUint32 rate)` {{non-standard_inline}} | `void`               | Создаёт аудиострима для записи. Вы можете указать такие параметры, как количество каналов (`1` for mono or `2` for stereo), так и частота сэмпла (`44100` for 44.1kHz, for example). |
-| `mozWriteAudio(in jsval data) `{{non-standard_inline}}                     | `unsigned long`      | Запускает аудио стрим на текущую частоту. Возвращает количество байтов, которые записаны в стрим                                                                                     |
+| `mozWriteAudio(in jsval data)` {{non-standard_inline}}                     | `unsigned long`      | Запускает аудио стрим на текущую частоту. Возвращает количество байтов, которые записаны в стрим                                                                                     |
 
 ## Спецификации
 

@@ -75,8 +75,8 @@ Aucune.
 ### Exceptions
 
 - Une erreur `gl.OUT_OF_MEMORY` est déclenchée si le contexte ne peut pas créer un magasin de données de la `taille` indiquée.
-- Une erreur`gl.INVALID_VALUE` est déclenchée si `taille` est négative.
-- Une erreur `gl.INVALID_ENUM` est déclenchée si `cible` ou`utilisation` ne sont pas l'un des enums autorisés.
+- Une erreur `gl.INVALID_VALUE` est déclenchée si `taille` est négative.
+- Une erreur `gl.INVALID_ENUM` est déclenchée si `cible` ou `utilisation` ne sont pas l'un des enums autorisés.
 
 ## Exemples
 

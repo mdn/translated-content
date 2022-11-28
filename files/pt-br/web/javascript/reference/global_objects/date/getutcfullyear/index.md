@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.getUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 ---
+
 {{JSRef}}
 
 O método **`getUTCFullYear()`** retorna o ano na data indicada de acordo com o horário universal.

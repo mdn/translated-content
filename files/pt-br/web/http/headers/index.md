@@ -1,16 +1,8 @@
 ---
 title: Cabeçalhos HTTP
 slug: Web/HTTP/Headers
-tags:
-  - Cabeçalhos
-  - HTTP
-  - Internet
-  - Networking
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/HTTP/Headers
 ---
+
 {{HTTPSidebar}}Os cabeçalhos HTTP permitem que o cliente e o servidor passem informações adicionais com a solicitação ou a resposta HTTP. Um cabeçalho de solicitação é composto por seu nome _case-insensitive_ (não diferencia letras maiúsculas e minúsculas), seguido por dois pontos ':' e pelo seu valor (sem quebras de linha). Espaços em branco antes do valor serão ignorados.
 
 Cabeçalhos proprietários personalizados podem ser adicionados usando o prefixo 'X-', mas essa convenção foi descontinuada em Junho de 2012, devido aos inconvenientes que causou quando os campos não-padronizados tornaram-se padronizados na [RFC 6648](https://tools.ietf.org/html/rfc6648); outros estão listados em um [registro IANA](http://www.iana.org/assignments/message-headers/perm-headers.html), cujo o conteúdo original foi definido na [RFC 4229](http://tools.ietf.org/html/rfc4229). O IANA também mantém o [registro das propostas de novas mensagens de cabeçalhos HTTP](http://www.iana.org/assignments/message-headers/prov-headers.html).
@@ -155,7 +147,7 @@ O recurso HTTP [Client hints](/pt-BR/docs/Glossary/Client_hints) ainda está em 
 - {{HTTPHeader("Origin")}}
   - : Inddica de onde uma busca se origina.
 - {{HTTPHeader("Timing-Allow-Origin")}}
-  - : Especifica as origens que tem permissão para ver valores de atributos recuperados por meio de recursos da API de Tempo de Recurso ([Resource Timing API](/pt-BR/en-US/docs/Web/API/Resource_Timing_API)) que, de outra forma, seriam relatados como zero devido a restrições de origem cruzada (cross-origin restrictions).
+  - : Especifica as origens que tem permissão para ver valores de atributos recuperados por meio de recursos da API de Tempo de Recurso ([Resource Timing API](/pt-BR/pt-BR/docs/Web/API/Resource_Timing_API)) que, de outra forma, seriam relatados como zero devido a restrições de origem cruzada (cross-origin restrictions).
 
 ## Do Not Track
 

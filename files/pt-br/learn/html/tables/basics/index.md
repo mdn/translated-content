@@ -1,9 +1,9 @@
 ---
 title: HTML table basics
 slug: Learn/HTML/Tables/Basics
-translation_of: Learn/HTML/Tables/Basics
 original_slug: Aprender/HTML/Tables/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Aprender/HTML/Tabelas/Avançado", "Aprender/HTML/Tabelas")}}
 
 Este artigo é uma introdução às tabelas HTML, cobrindo o básico, como linhas e células, cabeçalhos, fazendo as células ocuparem várias colunas e linhas e como agrupar todas as células em uma coluna para fins de estilo.
@@ -37,7 +37,7 @@ Uma tabela é um conjunto estruturado de dados composto de linhas e colunas (**d
 
 As tabelas são muito comumente usadas na sociedade humana, e têm sido por muito tempo, como evidenciado por este documento do Censo dos EUA de 1800:
 
-![Um documento de pergaminho muito antigo;  os dados não são facilmente legíveis, mas mostram claramente uma tabela de dados sendo usada.](https://mdn.mozillademos.org/files/14585/1800-census.jpg)
+![Um documento de pergaminho muito antigo; os dados não são facilmente legíveis, mas mostram claramente uma tabela de dados sendo usada.](https://mdn.mozillademos.org/files/14585/1800-census.jpg)
 
 Portanto, não é de se admirar que os criadores do HTML tenham fornecido um meio de estruturar e apresentar dados tabulares na web.
 

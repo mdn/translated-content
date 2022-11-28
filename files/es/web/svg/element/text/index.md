@@ -1,8 +1,8 @@
 ---
 title: text
 slug: Web/SVG/Element/text
-translation_of: Web/SVG/Element/text
 ---
+
 {{SVGRef}}
 
 El elemento text define un elemento gráfico que consiste en texto. Nótese que es posible aplicar un degradado, patrón, recorte, máscara o filtro al texto

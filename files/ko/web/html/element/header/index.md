@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/header
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<header>` 요소**는 소개 및 탐색에 도움을 주는 콘텐츠를 나타냅니다. 제목, 로고, 검색 폼, 작성자 이름 등의 요소도 포함할 수 있습니다.
 

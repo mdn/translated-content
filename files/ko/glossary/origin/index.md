@@ -2,6 +2,7 @@
 title: 출처
 slug: Glossary/Origin
 ---
+
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 
 웹 콘텐츠의 **출처**(origin)는 접근할 때 사용하는 {{glossary("URL")}}의 스킴({{glossary("protocol", "프로토콜")}}), 호스트(도메인), 포트로 정의됩니다. 두 객체의 스킴, 호스트, 포트가 모두 일치하는 경우 같은 출처를 가졌다고 말합니다.

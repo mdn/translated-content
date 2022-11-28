@@ -47,7 +47,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 Firefox 扩展使用 [WebExtensions APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)来构建，这是一种用以开发扩展的跨浏览器系统。在很大程度上，它与 Google Chrome 和 Opera 所支持的[扩展 API](https://developer.chrome.com/extensions) 兼容。在大多数情况下，为这些浏览器所写的扩展只需要少量[修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)就可以在 Firefox 和 Microsoft Edge 上运行。这些 API 也完全兼容[多进程 Firefox](/zh-CN/docs/Mozilla/Firefox/Multiprocess_Firefox)。
 
-如果你有想法或者问题，或者在[迁移旧的附加组件到 WebExtensions APIs](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension)时需要帮助，可以在 [dev-addons 邮件列表](https://mail.mozilla.org/listinfo/dev-addons)或者 [Matrix](https://chat.mozilla.org/#/room/#addons:mozilla.org) 上的 [Add-ones room](https://wiki.mozilla.org/Matrix) 与我们联系。
+如果你有想法或者问题，或者在[迁移旧的附加组件到 WebExtensions API](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension)时需要帮助，可以在 [dev-addons 讨论版块](https://discourse.mozilla.org/c/add-ons/35)或者 [Matrix](https://chat.mozilla.org/#/room/#addons:mozilla.org) 上的 [Add-ones room](https://wiki.mozilla.org/Matrix) 与我们联系。
 
 ## 接下来呢？
 

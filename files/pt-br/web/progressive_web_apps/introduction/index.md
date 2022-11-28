@@ -1,9 +1,9 @@
 ---
 title: Introdução a progressive web apps
 slug: Web/Progressive_web_apps/Introduction
-translation_of: Web/Progressive_web_apps/Introduction
 original_slug: Web/Progressive_web_apps/Introdução
 ---
+
 {{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
 
 Este artigo fornece uma intrução as Progressive Web Apps (PWAs), explicando o que são e quais vantagens elas trazem em relação ao desenvolvimento de aplicações web comuns.
@@ -58,7 +58,7 @@ You can check the list at [pwa.rocks](https://pwa.rocks/) for more examples. Par
 
 You can even generate PWAs online using the [PWABuilder](https://www.pwabuilder.com/) website.
 
-For service worker- and push- specific information, be sure to check The [Service Worker Cookbook](https://serviceworke.rs/), a collection of recipes using service workers in modern sites.
+For service worker- and push- specific information, be sure to check The [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/), a collection of recipes using service workers in modern sites.
 
 It's well worth trying out a PWA approach, so you can see for yourself if it works for your app.
 

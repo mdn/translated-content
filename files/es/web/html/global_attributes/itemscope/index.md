@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/itemscope
 original_slug: Web/HTML/Atributos_Globales/itemscope
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`itemscope`** es un [atributo global](/es/docs/Web/HTML/Global_attributes) booleano que define el scope asociado del metadata. Especificando el atributo **`itemscope`** en un elemento crea un nuevo item, cuyos resultados estan en los numeros de pares name-value asociados con el elemento. Un atributo relativo, {{htmlattrxref("itemtype")}}, es usado para especificar el URL valido de un medio/recipe (como lo es [schema.org](http://schema.org/)) que describe que el item es de propiedad contextual. En cada uno de los siguientes ejemplos, el medio/recipe es de [schema.org](https://schema.org/).
@@ -238,10 +239,7 @@ Los siguientes son un ejemplo renderizado resultado del codigo del anterior ejem
 
 ## Especificaciones
 
-| Especificaciones                                                                                 | Estados                              | Comentario |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{SpecName('HTML Microdata', "#dfn-itemscope", "itemscope")}}                 | {{Spec2('HTML Microdata')}} |            |
-| {{SpecName('HTML WHATWG', "microdata.html#attr-itemscope", "itemscope")}} | {{Spec2('HTML WHATWG')}}     |            |
+{{Specifications}}
 
 ## Navegadores compatibles
 

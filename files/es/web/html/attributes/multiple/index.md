@@ -175,16 +175,13 @@ Hay varias formas de seleccionar varias opciones en un elemento `<select>` con u
 
 ## Especificaciones
 
-| Especificación                                                                     | Estado                     | Comentario |
-| ---------------------------------------------------------------------------------- | -------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-multiple', 'Atributo multiple')}} | {{ Spec2('HTML WHATWG') }} |            |
-| {{SpecName('HTML5 W3C', 'input.html#attr-input-multiple', 'Atributo multiple')}}   | {{ Spec2('HTML5 W3C') }}   |            |
+{{Specifications}}
 
 ## Problemas de accesibilidad
 
 Proporciona instrucciones para ayudar a los usuarios a comprender cómo completar el formulario y utilizar controles de formulario individuales. Indica cualquier entrada requerida y opcional, formatos de datos y otra información relevante. Cuando utilices el atributo {{HTMLAttrxRef("multiple", "input")}}, informa al usuario que se permiten múltiples valores y proporciona instrucciones sobre cómo proveer más valores, como "direcciones de correo electrónico separadas con una coma".
 
-Configurar [size](/es/docs/Web/HTML/Attributes/size)`="1"` en una selección múltiple puedes hacer que aparezca como una única selección en algunos navegadores, pero luego no se expande en el enfoque, lo que perjudica la usabilidad. No hagas eso. Si cambias la apariencia de un `select`, e incluso si no lo haces, asegúrate de informar al usuario que se puede seleccionar más de una opción mediante otro método.
+Configurar [size](/es/docs/Web/HTML/Attributes/size) `="1"` en una selección múltiple puedes hacer que aparezca como una única selección en algunos navegadores, pero luego no se expande en el enfoque, lo que perjudica la usabilidad. No hagas eso. Si cambias la apariencia de un `select`, e incluso si no lo haces, asegúrate de informar al usuario que se puede seleccionar más de una opción mediante otro método.
 
 ## Ve también
 

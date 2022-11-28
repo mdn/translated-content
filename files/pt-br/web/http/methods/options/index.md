@@ -1,8 +1,8 @@
 ---
 title: OPTIONS
 slug: Web/HTTP/Methods/OPTIONS
-translation_of: Web/HTTP/Methods/OPTIONS
 ---
+
 {{HTTPSidebar}}
 
 O **método HTTP `OPTIONS` **é utilizado para que um cliente possa descobrir quais as opções de requisição permitidas para um determinado recurso em um servidor. O cliente pode especificar uma URL específica no método `OPTIONS` ou um asterisco(\*) indicando que se refere ao servidor como um todo para sanar suas dúvidas em relação as opções de requisição permitidas.

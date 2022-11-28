@@ -3,6 +3,7 @@ title: Отправка и получение бинарных данных
 slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 translation_of: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 ---
+
 ## Получение бинарных данных используя JavaScript arrays
 
 Свойство responseType объекта XMLHttpRequest можно задать для изменения ожидаемого типа ответа с сервера. Возможные значения: пустая строка (по умолчанию), "arraybuffer", "blob", "document", "json" и "text". Свойство response будет содержать тело сущности в соответствии с типом ответа, как ArrayBuffer, Blob, Document, JSON или string. Это значение равно null, если запрос не завершён или не был успешным.
@@ -82,7 +83,7 @@ var abyte = filestream.charCodeAt(x) & 0xff; // throw away high-order byte (f7)
 
 The example above fetches the byte at offset `x` within the loaded binary data. The valid range for `x` is from 0 to `filestream.length-1`.
 
-See [downloading binary streams with XMLHttpRequest](http://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) for a detailed explanation. See also [downloading files](/ru/docs/Code_snippets/Downloading_Files "Code_snippets/Downloading_Files").
+See [downloading binary streams with XMLHttpRequest](http://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) for a detailed explanation. See also [downloading files](/ru/docs/Code_snippets/Downloading_Files).
 
 ## Получение бинарных данных из различных источников
 
@@ -97,7 +98,7 @@ jBinary.load(url).then(function (binary) {
 
 ## Отправка бинарных данных
 
-Метод `send` объекта XMLHttpRequest был расширен, чтобы обеспечить лёгкую передачу бинарных данных - теперь он принимает объекты [`ArrayBuffer`](/ru/docs/JavaScript_typed_arrays/ArrayBuffer "ArrayBuffer"), {{domxref("Blob")}}, или {{domxref("File")}}.
+Метод `send` объекта XMLHttpRequest был расширен, чтобы обеспечить лёгкую передачу бинарных данных - теперь он принимает объекты [`ArrayBuffer`](/ru/docs/JavaScript_typed_arrays/ArrayBuffer), {{domxref("Blob")}}, или {{domxref("File")}}.
 
 В примере ниже на лету создаётся текстовый файл и отправляется методом `POST` на сервер. Здесь используется обычный текст, но нетрудно представить себе пример с бинарным файлом.
 
@@ -132,11 +133,11 @@ xhr.send(myArray);
 
 Здесь создаётся и отправляется 512-ти байтовый массив из 8-битных целых чисел, н, разумеется, можно использовать любые двоичные данные.
 
-> **Примечание:** Поддержка передачи объектов [`ArrayBuffer`](/ru/docs/JavaScript_typed_arrays/ArrayBuffer "ArrayBuffer") с помощью XMLHttpRequest появилась в Gecko 9.0 {{geckoRelease("9.0")}}. **Add information about other browsers' support here.**
+> **Примечание:** Поддержка передачи объектов [`ArrayBuffer`](/ru/docs/JavaScript_typed_arrays/ArrayBuffer) с помощью XMLHttpRequest появилась в Gecko 9.0 {{geckoRelease("9.0")}}. **Add information about other browsers' support here.**
 
 ## Отправка форм и загрузка файлов
 
-См. [этот параграф](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files "DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files").
+См. [этот параграф](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
 
 ## Примеры для Firefox
 

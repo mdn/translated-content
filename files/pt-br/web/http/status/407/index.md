@@ -1,12 +1,8 @@
 ---
 title: 407 Proxy Authentication Required
 slug: Web/HTTP/Status/407
-tags:
-  - Código de status
-  - Erro Cliente
-  - Referencia
-translation_of: Web/HTTP/Status/407
 ---
+
 {{HTTPSidebar}}
 
 O código de resposta HTTP **`407 Proxy Authentication Required` **indica um erro do lado cliente, informando que uma solicitação não está sendo bem aplicada. Isso ocorre porque falta a validar as credencias de autenticação para um {{Glossary("proxy server")}} que intermedia o navegador e o servidor que pode acessar o recurso solicitado.

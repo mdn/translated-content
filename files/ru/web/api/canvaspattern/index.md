@@ -3,6 +3,7 @@ title: CanvasPattern
 slug: Web/API/CanvasPattern
 translation_of: Web/API/CanvasPattern
 ---
+
 {{APIRef("Canvas API")}}
 
 **`CanvasPattern`** представляет собой интерфейс [непрозрачного объекта](https://en.wikipedia.org/wiki/Opaque_data_type), описывающего шаблон, который может быть представлен как картинка, canvas или видео.

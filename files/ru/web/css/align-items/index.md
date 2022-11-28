@@ -3,6 +3,7 @@ title: align-items
 slug: Web/CSS/align-items
 translation_of: Web/CSS/align-items
 ---
+
 {{CSSRef}}
 
 ## Описание
@@ -11,7 +12,7 @@ translation_of: Web/CSS/align-items
 
 {{cssinfo}}
 
-Подробнее и больше информации читайте в [Использование гибких блоков CSS](https://developer.mozilla.org/en/CSS/Using_CSS_flexible_boxes).
+Подробнее и больше информации читайте в [Использование гибких блоков CSS](/en/CSS/Using_CSS_flexible_boxes).
 
 ## Синтаксис
 
@@ -73,7 +74,7 @@ align-items: unset;
 
 ### Support in Grid layout
 
-{{Compat("css.properties.align-items.grid_context")}}
+{{Compat}}
 
 ## Смотрите также
 

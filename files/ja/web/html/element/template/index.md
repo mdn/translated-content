@@ -3,7 +3,7 @@ title: '<template>: コンテンツテンプレート要素'
 slug: Web/HTML/Element/template
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<template>`** は [HTML](/ja/docs/Web/HTML) の要素で、ページが読み込まれたときにすぐにレンダリングされるのではなく、実行時に JavaScript を使って後からインスタンス化することができる {{Glossary("HTML")}} を保持するためのメカニズムです。
 

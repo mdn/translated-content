@@ -6,13 +6,14 @@ tags:
   - шрифт
 translation_of: Web/Guide/WOFF
 ---
+
 **WOFF**(**Web Open Font Format**) — формат шрифтов, разработанный Mozilla совместно с Type Supply, LettError, и др. По сути — это сжатая версия формата [`sfnt`](https://ru.wikipedia.org/wiki/Sfnt), используемого шрифтами TrueType, OpenType, и Open Font Format, но с возможностью добавления мета-данных и приватных структур данных (private-use data structures). Например, в формате предусмотрены поля для ввода информации о лицензии.
 
 Преимущества использования WOFF:
 
-1.  The font data is compressed, so sites using WOFF will use less bandwidth and will load faster than if they used equivalent uncompressed TrueType or OpenType files.
-2.  Many font vendors that are unwilling to license their TrueType or OpenType format fonts for use on the web will license WOFF format fonts. This improves availability of fonts to site designers.
-3.  Both proprietary and free software browser vendors like the WOFF format, so it has the potential of becoming a truly universal, interoperable font format for the web, unlike other current font formats.
+1. The font data is compressed, so sites using WOFF will use less bandwidth and will load faster than if they used equivalent uncompressed TrueType or OpenType files.
+2. Many font vendors that are unwilling to license their TrueType or OpenType format fonts for use on the web will license WOFF format fonts. This improves availability of fonts to site designers.
+3. Both proprietary and free software browser vendors like the WOFF format, so it has the potential of becoming a truly universal, interoperable font format for the web, unlike other current font formats.
 
 Существует две версии WOFF, отличающихся используемым алгоритмом сжатия: WOFF и WOFF2. В правиле {{cssxref("@font-face")}} они определяются в дескрипторе `format` как `'woff'` или `'woff2'` соответственно.
 
@@ -33,7 +34,7 @@ You can use the {{cssxref("@font-face")}} CSS property to use WOFF fonts for tex
 
 ## Совместимость с браузерами
 
-{{Compat("css.at-rules.font-face")}}
+{{Compat}}
 
 ## Смотрите также
 

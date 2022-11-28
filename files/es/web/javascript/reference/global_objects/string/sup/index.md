@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/sup
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/sup
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 ## Resumen

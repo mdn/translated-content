@@ -31,4 +31,4 @@ slug: Web/API/CSSVariableReferenceValue/CSSVariableReferenceValue
 
 ## ブラウザーの対応
 
-{{Compat("api.CSSVariableReferenceValue")}}
+{{Compat}}

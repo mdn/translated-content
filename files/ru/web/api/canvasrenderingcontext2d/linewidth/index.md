@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.lineWidth
 slug: Web/API/CanvasRenderingContext2D/lineWidth
 translation_of: Web/API/CanvasRenderingContext2D/lineWidth
 ---
+
 {{APIRef}}
 
 `Свойство CanvasRenderingContext2D`**`.lineWidth`**, предоставляемое Canvas 2D API задаёт толщину линий в пикселах. При получении свойства возвращается его текущее значение. При задании свойства, присваиваемое значение должно быть положительным числом, ноль, отрицательные числа, {{jsxref("Infinity")}} и {{jsxref("NaN")}} игнорируются.

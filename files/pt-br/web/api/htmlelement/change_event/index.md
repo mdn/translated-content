@@ -1,14 +1,9 @@
 ---
 title: GlobalEventHandlers.onchange
 slug: Web/API/HTMLElement/change_event
-tags:
-  - API
-  - HTML DOM
-  - Propriedade
-  - Referencia
-translation_of: Web/API/GlobalEventHandlers/onchange
 original_slug: Web/API/GlobalEventHandlers/onchange
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 A propriedade `onchange` determina e retorna o [manipulador de eventos](/docs/Web/Guide/Events/Event_handlers) para o evento {{event("change")}}.

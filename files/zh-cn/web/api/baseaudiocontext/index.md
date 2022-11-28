@@ -29,7 +29,7 @@ A `BaseAudioContext` can be a target of events, therefore it implements the {{do
 ### Event handlers
 
 - {{domxref("BaseAudioContext.onstatechange")}}
-  - : An event handler that runs when an event of type {{event("statechange")}} has fired. This occurs when the `AudioContext`'s state changes, due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
+  - : An event handler that runs when an event of type [`statechange`](/zh-CN/docs/Web/API/RTCIceTransport/statechange_event) has fired. This occurs when the `AudioContext`'s state changes, due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
 
 ## Methods
 

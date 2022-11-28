@@ -3,6 +3,7 @@ title: Element.removeAttribute()
 slug: Web/API/Element/removeAttribute
 translation_of: Web/API/Element/removeAttribute
 ---
+
 {{ APIRef("DOM") }}
 
 `removeAttribute` удаляет атрибут с элемента.
@@ -25,7 +26,7 @@ document.getElementById("div1").removeAttribute("align");
 
 ## Примечания
 
-Вы должны использовать removeAttribute вместо того, чтобы устанавливать значение атрибута в null, используя [setAttribute](/en/DOM/element.setAttribute "en/DOM/element.setAttribute").
+Вы должны использовать removeAttribute вместо того, чтобы устанавливать значение атрибута в null, используя [setAttribute](/en/DOM/element.setAttribute).
 
 Попытка удаления атрибута, которого нет на элементе не вызывает ошибки.
 

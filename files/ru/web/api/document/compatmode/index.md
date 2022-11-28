@@ -11,9 +11,10 @@ tags:
   - режимы
 translation_of: Web/API/Document/compatMode
 ---
+
 {{ ApiRef("DOM") }}
 
-Определяет когда документ отображается в [Quirks mode](/en/Quirks_Mode_and_Standards_Mode "en/Mozilla's Quirks Mode") или Стандартном режиме.
+Определяет когда документ отображается в [Quirks mode](/en/Quirks_Mode_and_Standards_Mode) или Стандартном режиме.
 
 ## Синтаксис
 

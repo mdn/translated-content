@@ -4,6 +4,7 @@ slug: Web/API/Window/blur_event
 translation_of: Web/API/GlobalEventHandlers/onblur
 original_slug: Web/API/GlobalEventHandlers/onblur
 ---
+
 {{ApiRef("HTML DOM")}}
 
 Свойство **`onblur`** из {{domxref("GlobalEventHandlers")}} событий {{event("Event_handlers", "event handler")}} для {{event("blur")}} события. Оно доступно для{{domxref("Element")}}, {{domxref("Document")}} и {{domxref("Window")}}.

@@ -108,9 +108,7 @@ Object.getPrototypeOf(p); // TypeError: expected same prototype value
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof', '[[GetPrototypeOf]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

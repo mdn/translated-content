@@ -9,6 +9,7 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 ---
+
 {{JSRef}}
 
 **`@@unscopable`** 기호 속성은 ES2015 이전 ECMAScript 표준에 포함되지 않은 속성 이름을 포함합니다. 해당 속성들은 {{jsxref("Statements/with", "with")}} 바인딩에서 제외됩니다.

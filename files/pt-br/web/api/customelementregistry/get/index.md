@@ -1,17 +1,8 @@
 ---
 title: CustomElementRegistry.get()
 slug: Web/API/CustomElementRegistry/get
-tags:
-  - API
-  - CustomElementRegistry
-  - Experimental
-  - Method
-  - Reference
-  - Web Components
-  - custom elements
-  - get
-browser-compat: api.CustomElementRegistry.get
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 O **`get()`** é um método de {{domxref("CustomElementRegistry")}} a interface retorna um construtor para um elemento personalizado previamente definido.

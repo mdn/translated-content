@@ -1,15 +1,8 @@
 ---
 title: Tk
 slug: Web/HTTP/Headers/Tk
-tags:
-  - DNT
-  - HTTP
-  - Rastreamento
-  - Referencia
-  - Resposta
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Tk
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta **`Tk`** indica o status de rastreamento que foi aplicado à requisição correspondente.

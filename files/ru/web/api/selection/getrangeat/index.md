@@ -46,4 +46,4 @@ for(var i = 0; i < sel.rangeCount; i++) {
 ## Смотрите также
 
 - {{domxref("Selection")}}, интерфейс, к которому принадлежит метод.
-- [Tree Selection](/ru/docs/XUL_Tutorial/Tree_Selection "XUL_Tutorial/Tree_Selection") (для метода `getRangeAt()` в интерфейсе `nsITreeSelection`)
+- [Tree Selection](/ru/docs/XUL_Tutorial/Tree_Selection) (для метода `getRangeAt()` в интерфейсе `nsITreeSelection`)

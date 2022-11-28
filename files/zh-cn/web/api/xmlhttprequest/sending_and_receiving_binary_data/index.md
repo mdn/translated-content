@@ -107,7 +107,7 @@ xhr.send(myArray);
 
 上例新建了一个 512 字节的 8 比特整数的数组并发送它，当然，你也可以发送任意的二进制数据。
 
-> **备注：** 从 Gecko 9.0 {{ geckoRelease("9.0") }} 开始，添加了使用 XMLHttpRequest 发送 [`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer) 对象的功能。
+> **备注：** 从 Gecko 9.0 开始，添加了使用 XMLHttpRequest 发送 [`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer) 对象的功能。
 
 ## 提交表单和上传文件
 

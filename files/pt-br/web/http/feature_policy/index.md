@@ -1,22 +1,8 @@
 ---
 title: Feature Policy
 slug: Web/HTTP/Feature_Policy
-tags:
-  - Feature Policy
-  - Feature-Policy
-  - HTTP
-  - Introduction
-  - NeedsTranslation
-  - Overview
-  - Reference
-  - Security
-  - TopicStub
-  - access
-  - delegation
-  - header
-  - permission
-translation_of: Web/HTTP/Feature_Policy
 ---
+
 {{HTTPSidebar}}
 
 Feature Policy allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to {{Glossary("CSP", "Content Security Policy")}} but controls features instead of security behavior.

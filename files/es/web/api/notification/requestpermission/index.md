@@ -1,16 +1,8 @@
 ---
 title: Notification.requestPermission()
 slug: Web/API/Notification/requestPermission
-tags:
-  - API
-  - Method
-  - Notification
-  - Notifications
-  - Notifications API
-  - Reference
-translation_of: Web/API/Notification/requestPermission
-browser-compat: api.Notification.requestPermission
 ---
+
 {{APIRef("Web Notifications")}}{{securecontext_header}}
 
 > **Nota:** Safari aún usa la sintaxis callback para obtener el permiso. Lee [Usando la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API) para un buen ejemplo de como detectar esto y ejecutar el código de forma apropiada.

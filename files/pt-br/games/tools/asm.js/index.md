@@ -1,8 +1,8 @@
 ---
 title: asm.js
 slug: Games/Tools/asm.js
-translation_of: Games/Tools/asm.js
 ---
+
 {{GamesSidebar}}
 
 [Asm.js](http://asmjs.org/) é uma especificação que define um subconjunto de JavaScript que é altamente otimizável. Esta seção examina exatamente o que é permitido no subconjunto asm.js, que melhorias confere, Onde e como você pode fazer uso dele, e mais Principais recursos e exemplos.

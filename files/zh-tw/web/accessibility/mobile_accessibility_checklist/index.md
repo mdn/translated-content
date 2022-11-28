@@ -10,18 +10,18 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 - 顏色對比**必須**符合[WCAG 2.0](http://www.w3.org/TR/WCAG/) AA 等級要求:
 
   - 一般文字對比值為 4.5:1(小於 18 點字或 14 點粗體)
-  - 大文字對比值為  3:1(大於 18 點字或 14 點粗體)
+  - 大文字對比值為 3:1(大於 18 點字或 14 點粗體)
 
-- 透過顏色傳遞資訊  **必須**  能藉由其他方式獲得資訊 (底線文字表示連結等)
+- 透過顏色傳遞資訊 **必須** 能藉由其他方式獲得資訊 (底線文字表示連結等)
 
-> **備註：** Jon Snook 已撰寫實用的  [Colour Contrast Checker](http://snook.ca/technical/colour_contrast/colour.html)  能用於檢查背景與前景顏色的對比。同樣地，[Tanaguru Contrast-Finder](http://contrast-finder.tanaguru.com/)  也提供類似功能，而且建議相似且更好的對比顏色提供你考量使用。
+> **備註：** Jon Snook 已撰寫實用的 [Colour Contrast Checker](http://snook.ca/technical/colour_contrast/colour.html) 能用於檢查背景與前景顏色的對比。同樣地，[Tanaguru Contrast-Finder](http://contrast-finder.tanaguru.com/) 也提供類似功能，而且建議相似且更好的對比顏色提供你考量使用。
 
 ## 可視性
 
 - 內容隱藏技術如完全不透明、Z 型態索引順序與螢幕外的配置**必須不能**單獨用於處理可視性。
 - 目前可視螢幕之外的所有事物**必須**真正地不可見(特別適用於具有多個卡片的單一頁面應用程式)：
 
-  - **使用** `hidden` 屬性或  `visibility` 或  `display`  樣式屬性。
+  - **使用** `hidden` 屬性或 `visibility` 或 `display` 樣式屬性。
   - 除非絕對無法避免，否則**不應**使用`aria-hidden` 屬性。
 
 ## 焦點
@@ -38,7 +38,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 - 在應用程式之中，為每一個非嚴格呈現的非文字元素提供文字相等意義。
 
   - 在適當情況下使用*alt 與 title*(使用指引請參見 Steve Faulkner 關於[Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/)的文章)。
-  - 如果上述屬性不適用，則使用合適的[ARIA 屬性](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header)如`aria-label`、`aria-labelledby`或  `aria-describedby。`
+  - 如果上述屬性不適用，則使用合適的[ARIA 屬性](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header)如`aria-label`、`aria-labelledby`或 `aria-describedby。`
 
 - 文字圖片 **必須**避免使用。
 - 所有表單控制措施**必須**有標籤({{ htmlelement("label") }} 元素) ，以利於螢幕報讀器使用者使用。

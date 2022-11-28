@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toLocaleString
 ---
+
 {{JSRef}}
 
 El método **`toLocaleString()`** devuelve un cadena con la representación al idioma de la fecha especificada. Los nuevos argumentos `locales` y `options` permiten a las aplicaciones especificar el idioma cuyas convenciones de formato deben usarse y personalizar el comportamiento de la función. En implementaciones anteriores, ignoran los argumentos de las configuraciones `locales` y `options` , la configuración regional utilizada y la forma de la cadena devuelta dependen completamente de la implementación .

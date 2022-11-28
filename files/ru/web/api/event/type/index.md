@@ -9,13 +9,14 @@ tags:
   - Ссылка
 translation_of: Web/API/Event/type
 ---
+
 {{APIRef}}
 
 **`Event.type`** - это доступное только для чтения свойство, возвращающее строку, содержащую тип события. Оно устанавливается в момент создания события и это имя обычно используется для ссылки на определённое событие.
 
 Аргумент _`event`_ функций {{ domxref("EventTarget.addEventListener()") }} и {{ domxref("EventTarget.removeEventListener()") }} не чувствителен к регистру.
 
-Для получения списка доступных типов событий смотри [event reference](/ru/docs/Web/Events "Mozilla event reference")
+Для получения списка доступных типов событий смотри [event reference](/ru/docs/Web/Events)
 
 ## Синтаксис
 

@@ -13,7 +13,8 @@ tags:
 translation_of: Web/HTML/Element/marquee
 original_slug: Web/HTML/Elemento/marquee
 ---
-{{HTMLRef}}{{obsolete_header}}
+
+{{HTMLSidebar}}{{Deprecated_Header}}
 
 ## Resumen
 
@@ -39,7 +40,7 @@ La etiqueta html `<marquee>` se utiliza para insertar un area de texto en movimi
 - {{htmlattrdef("scrollamount")}}
   - : Establece el valor de movimiento para cada intervalo en pixeles. Por defecto su valor es 6.
 - {{htmlattrdef("scrolldelay")}}
-  - : Establece el intervalo entre cada desplazamiento, en milisegundos. El valor por defecto es 85. Nota: Cualquier valor inferior a 60 será ignorado, (puesto que el valor minimo es 60) y se establecerá 60 en su lugar. Salvo que se especifique`truespeed.`
+  - : Establece el intervalo entre cada desplazamiento, en milisegundos. El valor por defecto es 85. Nota: Cualquier valor inferior a 60 será ignorado, (puesto que el valor minimo es 60) y se establecerá 60 en su lugar. Salvo que se especifique `truespeed`.
 - {{htmlattrdef("truespeed")}}
   - : Por defecto, si los valores de `scrolldelay son inferiores a 60 serán ignorados. Pero si truespeed está presente, esos valores inferiores a 60 serán aceptados.`
 - {{htmlattrdef("vspace")}}
@@ -50,7 +51,7 @@ La etiqueta html `<marquee>` se utiliza para insertar un area de texto en movimi
 ## Controladores de eventos
 
 - {{htmlattrdef("onbounce")}}
-  - : Este evento se lanza cuando la marquesina llegó al final del desplazamiento. Ésto solo se activa cuando el atributo `behavior`está establecido en `alternate`.
+  - : Este evento se lanza cuando la marquesina llegó al final del desplazamiento. Ésto solo se activa cuando el atributo `behavior` está establecido en `alternate`.
 - {{htmlattrdef("onfinish")}}
   - : Este evento se lanza cuando la marquesina repitió el desplazamiento la cantidad de veces establecidas en el atributo `loop`. El evento se lanza solo si el atributo `loop` tiene un valor mayor a 0.
 - {{htmlattrdef("onstart")}}
@@ -81,10 +82,7 @@ La etiqueta html `<marquee>` se utiliza para insertar un area de texto en movimi
 
 ## Especificaciones
 
-| Specification                                                                                                    | Status                           | Comment                                                                                                     |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'obsolete.html#the-marquee-element-2', '&lt;marquee&gt;')}} | {{Spec2('HTML WHATWG')}} | Marcada como obsoleta en favor de CSS. Comportamiento esperado definido por razones de retrocompatibilidad. |
-| {{SpecName('HTML5 W3C', 'obsolete.html#the-marquee-element-0', '&lt;marquee&gt;')}} | {{Spec2('HTML5 W3C')}}     | Marcada como obsoleta en favor de CSS. Comportamiento esperado definido por razones de retrocompatibilidad. |
+{{Specifications}}
 
 ## Navegadores compatibles
 

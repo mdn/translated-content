@@ -60,7 +60,7 @@ env(safe-area-inset-left, 1.4rem);
 ```html
 <p>
   If the <code>env()</code> function is supported in your browser,
-  this paragraph’s text will have 50px of padding between it and
+  this paragraph's text will have 50px of padding between it and
   the left border — but not the top, right and bottom.
   This is because the accompanying CSS is the equivalent of
   <code>padding: 0 0 0 50px</code>, because, unlike other CSS
@@ -109,4 +109,3 @@ padding: env(x, 50px, 20px); /* ignored because '50px, 20px' is not a valid padd
 - [CSS Custom Properties for Cascading Variables](/zh-CN/docs/Web/CSS/CSS_Variables)
 - [Custom Properties (--\*)](/zh-CN/docs/Web/CSS/--*)
 - [Using CSS custom properties (variables)](/zh-CN/docs/Web/CSS/Using_CSS_variables)
-- {{CSSxRef("@viewport/viewport-fit", "viewport-fit (@viewport)")}}

@@ -5,6 +5,7 @@ tags:
   - Виртуальная реальность
 translation_of: Web/API/VRStageParameters/sittingToStandingTransform
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 Постоянное свойство **`sittingToStandingTransform`** (read-only, только для чтения ) интерфейса {{domxref("VRStageParameters")}} содержит матрицу, которая преобразует матрицы горизонтального вида {{domxref("VRFrameData")}} в вертикальный.

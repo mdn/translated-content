@@ -3,6 +3,7 @@ title: Navigator.getUserMedia()
 slug: Web/API/Navigator/getUserMedia
 translation_of: Web/API/Navigator/getUserMedia
 ---
+
 {{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 
 The deprecated **`Navigator.getUserMedia()`** method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone) as the source for a {{domxref("MediaStream")}}.
@@ -77,7 +78,7 @@ if (navigator.getUserMedia) {
 
 ## Разрешения
 
-Чтобы использовать` getUserMedia()``  `в устанавливаемом приложении (например, приложении Firefox OS), вам необходимо указать одно или оба из следующих полей внутри файла манифеста:
+Чтобы использовать `getUserMedia()` в устанавливаемом приложении (например, приложении Firefox OS), вам необходимо указать одно или оба из следующих полей внутри файла манифеста:
 
 ```js
 "permissions": {

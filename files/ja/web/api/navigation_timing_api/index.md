@@ -77,4 +77,4 @@ var connectTime = perfData.responseEnd - perfData.requestStart;
 
 ## ブラウザーの実装状況
 
-{{Compat("api.PerformanceTiming")}}
+{{Compat}}

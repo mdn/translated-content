@@ -1,12 +1,8 @@
 ---
 title: PUT
 slug: Web/HTTP/Methods/PUT
-tags:
-  - Método HTTP
-  - Método de requisição
-  - Referencia
-translation_of: Web/HTTP/Methods/PUT
 ---
+
 {{HTTPSidebar}}
 
 O **método de requisição** **HTTP PUT** cria um novo recurso ou subsititui uma representação do recurso de destino com os novos dados.
@@ -38,7 +34,7 @@ A diferença entre `PUT` e {{HTTPMethod("POST")}} é que `PUT` é idempotente: c
     <tr>
       <th scope="row">
         Permitido em
-        <a href="/en-US/docs/Web/Guide/HTML/Forms">formulários HTML</a>
+        <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulários HTML</a>
       </th>
       <td>Não</td>
     </tr>

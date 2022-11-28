@@ -5,6 +5,7 @@ tags:
   - Комментарии
 translation_of: Web/API/Comment
 ---
+
 Интерфейс **`Comment`** представляет собой текстовые записи в разметке; хотя, в основном, они не отображаются, такие комментарии доступны для чтения в исходном коде. Комментарии представляются в HTML и XML как контент, заключённый между '`<!--`' и '`-->`'. В XML, последовательность символов '`--`' может не использоваться в комментариях.
 
 {{InheritanceDiagram}}
@@ -37,4 +38,4 @@ _У этого интерфейса нет конкретных методов, 
 
 ## Смотрите также
 
-- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model "/en-US/docs/DOM/DOM_Reference")
+- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model)

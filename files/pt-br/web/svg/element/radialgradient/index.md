@@ -1,13 +1,8 @@
 ---
 title: radialGradient
 slug: Web/SVG/Element/radialGradient
-tags:
-  - Elemento
-  - Gradiente SVG
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/radialGradient
 ---
+
 {{SVGRef}}
 
 `radialGradient` permite que autores definam gradientes radiais para preencher ou tracejar elementos gráficos
@@ -18,7 +13,7 @@ translation_of: Web/SVG/Element/radialGradient
 
 ## Exemplo
 
-» [radialGradient.svg](https://developer.mozilla.org/files/3266/radialGradient.svg)
+» [radialGradient.svg](/files/3266/radialGradient.svg)
 
 ## Atributos
 

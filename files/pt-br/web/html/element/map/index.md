@@ -1,8 +1,8 @@
 ---
 title: <map>
 slug: Web/HTML/Element/map
-translation_of: Web/HTML/Element/map
 ---
+
 ## Resumo
 
 O **elemento HTML `<map>`** é usado com os elementos {{HTMLElement ("area")}} para definir um mapa de imagem (a área clicável do link).
@@ -46,4 +46,4 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - {{HTMLElement ("a")}}
 - {{HTMLElement ("area")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

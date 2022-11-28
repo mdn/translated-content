@@ -1,8 +1,8 @@
 ---
 title: <img>
 slug: Web/HTML/Element/img
-translation_of: Web/HTML/Element/img
 ---
+
 ## Resumo
 
 O **elemento** **HTML `<img>` **(or _HTML Image Element_) representa a inserção de imagem no documento, sendo implementado também pelo HTML5 para uma melhor experiência com o elemento {{HTMLElement("figure")}} e {{HTMLElement("figcaption")}}.
@@ -33,7 +33,7 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
   - : The alignment of the image with respect to its surrounding context.
 - {{htmlattrdef("alt")}}
 
-  - : Este atributo define um texto alternativo que descreve a imagem. Os Usuários irão ver o texto se a URL da imagem estiver errado, a imagem não está em um dos [formatos suportados](/pt-BR/docs/Web/HTML/Element/img$edit#Supported_image_formats) ou até a imagem ser baixada .
+  - : Este atributo define um texto alternativo que descreve a imagem. Os Usuários irão ver o texto se a URL da imagem estiver errado, a imagem não está em um dos [formatos suportados](#supported_image_formats) ou até a imagem ser baixada .
 
     > **Note:** **Usage note:** Omitting this attribute indicates that the image _is_ a key part of the content, but no textual equivalent is available. Setting this attribute to the empty string indicates that this image is _not_ a key part of the content; non-visual browsers may omit it from rendering.
 
@@ -95,11 +95,11 @@ O padrão HTML não fornece uma lista de formatos de imagem que devem ser suport
 - [JPEG](http://en.wikipedia.org/wiki/JPEG)
 - [GIF](http://en.wikipedia.org/wiki/Graphics_Interchange_Format), incluindo GIFs animados
 - [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics)
-- [APNG](/pt-BR/docs/Animated_PNG_graphics) {{gecko_minversion_inline("1.9.2")}}
-- [SVG](/pt-BR/docs/SVG) {{gecko_minversion_inline("2.0")}}
+- [APNG](/pt-BR/docs/Animated_PNG_graphics)
+- [SVG](/pt-BR/docs/SVG)
 - [BMP](http://en.wikipedia.org/wiki/BMP_file_format)
 - [BMP ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
-- [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29) {{gecko_minversion_inline("9.0")}}
+- [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
 
 ## Interação com CSS
 
@@ -207,4 +207,4 @@ O valor do atributo `title` é geralmente mostrado ao usuário como uma dica, qu
 
 - {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements
 
-{{HTMLRef}}
+{{HTMLSidebar}}

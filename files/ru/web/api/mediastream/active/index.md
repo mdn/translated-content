@@ -3,6 +3,7 @@ title: active
 slug: Web/API/MediaStream/active
 translation_of: Web/API/MediaStream/active
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 Свойство только для чтения **`active`** интерфейса {{domxref("MediaStream")}} возвращает логическое значение, которое может быть `true`, если стрим активен; во всех остальных случаях, будет возвращён `false`. Стрим считается **активным,** если хотя бы один из {{domxref("MediaStreamTrack")}} не находится в состоянии {{domxref("MediaStreamTrack.ended")}}. Как только все track завершатся, свойство `active` переключится в состояние `false`.

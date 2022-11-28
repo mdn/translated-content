@@ -4,6 +4,7 @@ slug: Web/CSS/url
 translation_of: Web/CSS/url()
 original_slug: Web/CSS/url()
 ---
+
 {{CSSRef}}
 
 The **`url()`** [CSS](/ru/docs/Web/CSS) function is used to include a file. The parameter is an absolute URL, a relative URL, or a data URI. The **`url()`** function can be passed as a parameter of another CSS functions, like the {{cssxref('attr()')}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The url() functional notation is the value for the \<url> data type.

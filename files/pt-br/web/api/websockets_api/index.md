@@ -1,13 +1,9 @@
 ---
 title: WebSockets
 slug: Web/API/WebSockets_API
-tags:
-  - Referencia
-  - Sumario
-  - WebSockets
-translation_of: Web/API/WebSockets_API
 original_slug: WebSockets
 ---
+
 WebSockets é uma tecnologia avançada que torna possível abrir uma sessão de comunicação interativa entre o navegador do usuário e um servidor. Com esta API, você pode enviar mensagens para um servidor e receber respostas orientadas a eventos sem ter que consultar o servidor para obter uma resposta.
 
 ## Documentação
@@ -34,7 +30,7 @@ WebSockets é uma tecnologia avançada que torna possível abrir uma sessão de 
 ## Veja Também
 
 - [RFC 6455 - O Protocolo WebSocket](http://tools.ietf.org/html/rfc6455)
-- [Especificação da API WebSocket](http://www.w3.org/TR/websockets/)
+- [Especificação da API WebSocket](https://www.w3.org/TR/websockets/)
 - [Eventos enviados para servidor](/pt-BR/docs/Server-sent_events)
 - [WebSocket.us](http://websocket.us/) - Uma comunidade sem fins lucrativos baseada no site WebSocket
 

@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/dragstart_event
 translation_of: Web/API/GlobalEventHandlers/ondragstart
 original_slug: Web/API/GlobalEventHandlers/ondragstart
 ---
+
 {{ApiRef("HTML DOM")}}
 
 {{domxref("GlobalEventHandlers","global event handler")}} для события {{event("dragstart")}}.

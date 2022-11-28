@@ -1,17 +1,8 @@
 ---
 title: 400 Bad Request
 slug: Web/HTTP/Status/400
-tags:
-  - Client error
-  - Código HTTP
-  - Erro chamada de cliente
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Referencia
-  - Status code
-translation_of: Web/HTTP/Status/400
 ---
+
 {{HTTPSidebar}}
 
 O código de status de resposta HTTP **`400 Bad Request`** indica que o servidor não pode ou não irá processar a requisição devido a alguma coisa que foi entendida como um erro do cliente (por exemplo, sintaxe de requisição mal formada, enquadramento de mensagem de requisição inválida ou requisição de roteamento enganosa).

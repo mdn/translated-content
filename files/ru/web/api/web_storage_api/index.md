@@ -3,6 +3,7 @@ title: Веб хранилище (API)
 slug: Web/API/Web_Storage_API
 translation_of: Web/API/Web_Storage_API
 ---
+
 Web Storage API предоставляет механизмы, при помощи которых браузеры могут безопасно хранить пары ключ/значение в более интуитивно понятной манере, чем куки (cookies).
 
 ## Основы Веб хранилища и его использование
@@ -18,7 +19,7 @@ Web Storage API предоставляет механизмы, при помощ
 
 > **Примечание:** **Замечание:** Доступ к веб хранилищу из iFrame третьей стороны запрещён, если пользователь [отключил cookies третьих сторон](https://support.mozilla.org/ru/kb/disable-third-party-cookies) (Firefox ведёт себя так с [версии 43](/ru/docs/Mozilla/Firefox/Releases/43)).
 
-> **Примечание:** **Замечание:** Web Storage это не тоже самое, что [mozStorage](/ru/docs/Storage "Storage") (Mozilla's XPCOM интерфейсы для SQLite) или [Session store API](/ru/docs/Session_store_API "Session_store_API") ([XPCOM](/ru/docs/XPCOM "XPCOM") утилита хранения для расширений).
+> **Примечание:** **Замечание:** Web Storage это не тоже самое, что [mozStorage](/ru/docs/Storage) (Mozilla's XPCOM интерфейсы для SQLite) или [Session store API](/ru/docs/Session_store_API) ([XPCOM](/ru/docs/XPCOM) утилита хранения для расширений).
 
 ## Интерфейсы Веб хранилища
 

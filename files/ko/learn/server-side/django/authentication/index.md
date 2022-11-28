@@ -2,6 +2,7 @@
 title: 'Django Tutorial Part 8: User authentication and permissions'
 slug: Learn/Server-side/Django/Authentication
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 
 이 튜토리얼에서는, 당신의 사이트에 그들의 계정으로 로그인을 어떻게 허락할 것인지, 그리고 그들의 로그인 여부와 그들에게 허가한 퍼미션에 따라서 사이트에서 무엇을 할 수 있게 하거나, 볼 수 있게 할 것인지에 대해서 알려줄 것입니다. 또한 예시의 일부분으로, 우리는 이 LocalLibrary website를 확장시켜서, 로그인, 로그아웃 페이지를 덧붙이고, 사용자와 staff들이 그들이 빌려간 책들을 볼 수 있는 특별한 페이지들도 추가할 것입니다.

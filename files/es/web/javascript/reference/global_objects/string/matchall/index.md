@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/matchAll
 ---
+
 {{JSRef}}
 
 El método **`matchAll()`** retorna un iterador de todos los resultados de ocurrencia en una _cadena de texto_ contra una expresión regular, incluyendo grupos de captura.
@@ -113,9 +114,7 @@ array[1];
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                       | Comentario |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.matchall', 'String.prototype.matchAll')}} | {{Spec2('ESDraft')}} |            |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

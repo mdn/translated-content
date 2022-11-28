@@ -89,4 +89,4 @@ slug: Web/HTML/Element/content
 - [Web 组件](/zh-CN/docs/Web/Web_Components)
 - {{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

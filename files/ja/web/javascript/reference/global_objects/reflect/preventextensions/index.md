@@ -62,9 +62,7 @@ Object.preventExtensions(1)
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-reflect.preventextensions', 'Reflect.preventExtensions')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

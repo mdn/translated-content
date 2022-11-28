@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/Tools_and_testing/Understanding_client-side_tools
 original_slug: Learn/Herramientas_y_pruebas/Understanding_client-side_tools
 ---
+
 {{LearnSidebar}}
 
 Las herramientas del lado del cliente (_client-side_ en inglés) pueden ser intimidantes, pero esta serie de artículos tiene como propósito ilustrar el propósito de algunos de los tipos de herramientas _client-side_, explicar las herramientas que puedes integrar, cómo instalarlas usando administradores de paquetes y cómo controlarlas usando la línea de comandos. Terminanos esta sección dando un ejemplo de cadena de herramientas para mostrarte cómo puedes ser más productivo
@@ -27,7 +28,7 @@ Debes aprender el núcleo básico de los lenguajes [HTML](/es/docs/Learn/HTML), 
 
 > **Observación:**
 >
-> ### ¿Quieres convertirte en un desarrollador _front-end_?
+> ### ¿Quieres convertirte en un desarrollador front-end?
 >
 > Tenemos un curso que incluye toda la información esencial que necesitas para lograr tu objetivo.
 >

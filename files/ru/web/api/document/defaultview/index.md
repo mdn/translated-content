@@ -7,9 +7,10 @@ tags:
   - Property
 translation_of: Web/API/Document/defaultView
 ---
+
 {{ ApiRef() }}
 
-В браузерах возвращает объект [window](/ru/docs/DOM/window "DOM/window"), который связан с document текущей страницы или `null` если document не доступен.
+В браузерах возвращает объект [window](/ru/docs/DOM/window), который связан с document текущей страницы или `null` если document не доступен.
 
 ## Синтаксис
 

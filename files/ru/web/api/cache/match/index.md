@@ -3,6 +3,7 @@ title: Cache.match()
 slug: Web/API/Cache/match
 translation_of: Web/API/Cache/match
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 Метод **`match()`** интерфейса {{domxref("Cache")}} возвращает {{jsxref("Promise")}}, который разрешается в {{domxref("Response")}}, ассоциированный с первым совпадающим запросом в объекте {{domxref("Cache")}}. Если совпадений не найдено, {{jsxref("Promise")}} разрешается в {{jsxref("undefined")}}.

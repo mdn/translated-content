@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 original_slug: Web/JavaScript/Referencia/Operadores/Destructuring_assignment
 ---
+
 {{jsSidebar("Operators", "Operadores")}}
 
 La sintaxis de **desestructuración** es una expresión de JavaScript que permite desempacar valores de arreglos o propiedades de objetos en distintas variables.
@@ -163,7 +164,7 @@ También puedes ignorar todos los valores devueltos:
 
 #### Asignar el resto de un arreglo a una variable
 
-Al desestructurar un arreglo, puedes desempacar y asignar la parte restante a una variable usando el patrón `rest`o:
+Al desestructurar un arreglo, puedes desempacar y asignar la parte restante a una variable usando el patrón `rest` o:
 
 ```js
 const [a, ...b] = [1, 2, 3];
@@ -171,7 +172,7 @@ console.log(a); // 1
 console.log(b); // [2, 3]
 ```
 
-Ten en cuenta que se lanzará un {{jsxref("SyntaxError")}} si se usa una coma final en el lado derecho con un elemento `rest`o:
+Ten en cuenta que se lanzará un {{jsxref("SyntaxError")}} si se usa una coma final en el lado derecho con un elemento `rest` o:
 
 ```js example-bad
 const [a, ...b,] = [1, 2, 3];

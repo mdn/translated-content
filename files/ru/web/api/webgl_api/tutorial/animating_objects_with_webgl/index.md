@@ -5,6 +5,7 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 ---
+
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
 
 Наш код оставшийся от предыдущего примера уже настроен на перерисовку нашей WebGL сцены каждые 15 миллисекунд. До сих пор мы просто отрисовывали в точности одно и то же каждый раз. Пришло время изменить это так, чтобы наш квадрат начал двигаться.
@@ -41,9 +42,9 @@ mvRotate(squareRotation, [1, 0, 1]);
 ```js
   var currentTime = (new Date).getTime();
   if (lastSquareUpdateTime) {
-  	var delta = currentTime - lastSquareUpdateTime;
+    var delta = currentTime - lastSquareUpdateTime;
 
-  	squareRotation += (30 * delta) / 1000.0;
+    squareRotation += (30 * delta) / 1000.0;
   }
 
   lastSquareUpdateTime = currentTime;
@@ -93,7 +94,7 @@ mvTranslate([squareXOffset, squareYOffset, squareZOffset]);
 
 Это заставит наш квадрат двигаться по экрану, приближаясь и удаляясь от наблюдателя и при этом ещё и вращаться. Это похоже на работу заставки
 
-Если ваш браузер поддерживает работу с WebGL, [проследуйте по этой ссылке, чтобы посмотреть на этот пример](/samples/webgl/sample4/index.html "https://developer.mozilla.org/samples/webgl/sample4/index.html") в действии.
+Если ваш браузер поддерживает работу с WebGL, [проследуйте по этой ссылке, чтобы посмотреть на этот пример](/samples/webgl/sample4/index.html) в действии.
 
 ## Больше операций с матрицами
 

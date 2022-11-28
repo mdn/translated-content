@@ -12,11 +12,12 @@ tags:
   - Справочник по DOM Gecko
 translation_of: Web/API/Console
 ---
+
 {{APIRef("Console API")}}
 
 Объект **Console** служит для доступа к средствам отладки браузера (например, [Web Console (Веб-консоль)](/ru/docs/Tools/Web_Console) в Firefox). Работа с ним отличается в разных браузерах, но эти методы и свойства по факту поддерживаются всеми браузерами.
 
-Доступ к **Console** можно получить через свойство глобального объекта, то есть: {{domxref("Window")}} в браузере (в JavaScript), {{domxref("WorkerGlobalScope")}} — в `workers `это специальный способ доступа через свойство `console`. Он известен как {{domxref("Window.console")}}, и на него ссылаются для простоты так: "`console`".
+Доступ к **Console** можно получить через свойство глобального объекта, то есть: {{domxref("Window")}} в браузере (в JavaScript), {{domxref("WorkerGlobalScope")}} — в `workers` это специальный способ доступа через свойство `console`. Он известен как {{domxref("Window.console")}}, и на него ссылаются для простоты так: "`console`".
 
 ```js
 console.log("Failed to open the specified link")
@@ -53,9 +54,9 @@ console.log("Failed to open the specified link")
 - {{domxref("console._exception()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Синоним для `error();`
 - {{domxref("console.group()")}}
-  - : Создаёт новую [группировку](/ru/docs/Web/API/console#Using_groups_in_the_console) сообщений, сдвигая все следующие выводимые строки вправо на один уровень. Для завершения [группы ](/ru/docs/Web/API/console#Using_groups_in_the_console)вызовите `groupEnd()`.
+  - : Создаёт новую [группировку](/ru/docs/Web/API/console#Using_groups_in_the_console) сообщений, сдвигая все следующие выводимые строки вправо на один уровень. Для завершения [группы](/ru/docs/Web/API/console#Using_groups_in_the_console) вызовите `groupEnd()`.
 - {{domxref("console.groupCollapsed()")}}
-  - : Создаёт новую [группировку ](/ru/docs/Web/API/console#Using_groups_in_the_console)сообщений, сдвигая все следующие сообщения вправо на один уровень; в отличие от `group()` вывод происходи в свёрнутую [группу](/ru/docs/Web/API/console#Using_groups_in_the_console), требующую раскрыть её вручную по кнопке. Для завершения [группы ](/ru/docs/Web/API/console#Using_groups_in_the_console)вызовите `groupEnd()`.
+  - : Создаёт новую [группировку](/ru/docs/Web/API/console#Using_groups_in_the_console) сообщений, сдвигая все следующие сообщения вправо на один уровень; в отличие от `group()` вывод происходи в свёрнутую [группу](/ru/docs/Web/API/console#Using_groups_in_the_console), требующую раскрыть её вручную по кнопке. Для завершения [группы](/ru/docs/Web/API/console#Using_groups_in_the_console)вызовите `groupEnd()`.
 - {{domxref("console.groupEnd()")}}
   - : Выход из текущей [группы](/ru/docs/Web/API/console#Using_groups_in_the_console).
 - {{domxref("console.info()")}}
@@ -186,7 +187,7 @@ console.debug("Back to the outer level");
 
 ### Таймеры
 
-Для расчёта длительности определённых операций в Gecko 10 введена поддержка таймеров в объекте `console`. Для запуска таймера вызовите функцию ` console.time``(), ` при этом в качестве параметра передайте название таймера. Для остановки таймера и для получения прошедшего времени в миллисекундах вызовите `console.timeEnd()`, передав в качестве параметра имя таймера. На странице можно запустить до 10000 таймеров одновременно.
+Для расчёта длительности определённых операций в Gecko 10 введена поддержка таймеров в объекте `console`. Для запуска таймера вызовите функцию `console.time()`, при этом в качестве параметра передайте название таймера. Для остановки таймера и для получения прошедшего времени в миллисекундах вызовите `console.timeEnd()`, передав в качестве параметра имя таймера. На странице можно запустить до 10000 таймеров одновременно.
 
 Рассмотрим пример:
 
@@ -231,9 +232,9 @@ function foo() {
 
 ## Смотрите также
 
-- [Tools](/ru/docs/Tools "Tools")
-- [Веб-консоль](/ru/docs/Tools/Web_Console "Web Console") - как Веб-консоль в Firefox обрабатывает вызовы API-консоли
-- [Удалённая отладка ](/ru/docs/Tools/Remote_Debugging)- как посмотреть вывод в консоль, когда цель отладки находится на мобильном устройстве
+- [Tools](/ru/docs/Tools)
+- [Веб-консоль](/ru/docs/Tools/Web_Console) - как Веб-консоль в Firefox обрабатывает вызовы API-консоли
+- [Удалённая отладка](/ru/docs/Tools/Remote_Debugging)- как посмотреть вывод в консоль, когда цель отладки находится на мобильном устройстве
 - [Отладка приложений в Firefox OS](/ru/Firefox_OS/Using_the_App_Manager) - использование Менеджера приложений для отладки приложений, запущенных на Firefox OS
 - [On-device console logging](/ru/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging) - как сделать логирование на устройствах на Firefox OS
 

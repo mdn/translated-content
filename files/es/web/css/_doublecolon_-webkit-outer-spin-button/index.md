@@ -1,13 +1,8 @@
 ---
 title: '::-webkit-outer-spin-button'
 slug: Web/CSS/::-webkit-outer-spin-button
-tags:
-  - CSS
-  - No estándar(2)
-  - Pseudo-elemento
-  - Referencia
-translation_of: Web/CSS/::-webkit-outer-spin-button
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

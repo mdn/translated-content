@@ -1,8 +1,8 @@
 ---
 title: MediaDevices
 slug: Web/API/MediaDevices
-translation_of: Web/API/MediaDevices
 ---
+
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
 As interfaces **`MediaDevices`** proporcionam accesso aos dispositivos de entrada de midia conectados, como câmeras e microfones, bem como compartilhamento de tela. Essencialmente, isso te permite obter acesso a qualquer mídia gerada pelo hardware.

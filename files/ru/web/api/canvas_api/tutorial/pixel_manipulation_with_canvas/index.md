@@ -8,6 +8,7 @@ tags:
   - Холст
 translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
 
 До сих пор мы не смотрели на фактические пиксели нашего объекта canvas (далее "холст"). С объектом `ImageData` вы можете напрямую читать и писать массив данных для управления пиксельными данными. Мы также рассмотрим, как можно сгладить сглаживание изображения (сглаживание) и как сохранить изображения с вашего холста.
@@ -71,7 +72,7 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 ### Выбор цвета
 
-В этом примере мы используем метод [getImageData() ](/ru/docs/Web/API/CanvasRenderingContext2D/getImageData)для отображения цвета под курсором мыши. Для этого нам нужна текущая позиция мыши с `layerX` и `layerY`, затем мы просматриваем пиксельные данные в этой позиции в массиве пикселей, который предоставляет нам [getImageData() ](/ru/docs/Web/API/CanvasRenderingContext2D/getImageData). Наконец, мы используем данные массива для установки цвета фона и текста `<div>` для отображения цвета.
+В этом примере мы используем метод [getImageData()](/ru/docs/Web/API/CanvasRenderingContext2D/getImageData) для отображения цвета под курсором мыши. Для этого нам нужна текущая позиция мыши с `layerX` и `layerY`, затем мы просматриваем пиксельные данные в этой позиции в массиве пикселей, который предоставляет нам [getImageData()](/ru/docs/Web/API/CanvasRenderingContext2D/getImageData). Наконец, мы используем данные массива для установки цвета фона и текста `<div>` для отображения цвета.
 
 ```html hidden
 <canvas id="canvas" width="300" height="227" style="float:left"></canvas>
@@ -111,7 +112,7 @@ canvas.addEventListener('mousemove', pick);
 ctx.putImageData(myImageData, dx, dy);
 ```
 
-Параметры `dx`и `dy`указывают координаты устройства в контексте, в котором будет отображаться верхний левый угол пиксельных данных, которые вы хотите нарисовать.
+Параметры `dx` и `dy` указывают координаты устройства в контексте, в котором будет отображаться верхний левый угол пиксельных данных, которые вы хотите нарисовать.
 
 Например, чтобы нарисовать все изображение, представленное `myImageData`, в верхнем левом углу контекста, вы можете просто сделать следующее:
 

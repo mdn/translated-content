@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/KeyboardEvent/which
 original_slug: Web/API/KeyboardEvent/which
 ---
+
 {{APIRef ("События DOM")}} {{Deprecated_header}}
 Свойство which только для чтения интерфейса {{domxref ("KeyboardEvent")}} возвращает числовой код клавиши нажатой клавиши или код символа (charCode) для нажатой буквенно-цифровой клавиши.
 

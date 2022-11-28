@@ -2,6 +2,7 @@
 title: Floats
 slug: Learn/CSS/CSS_layout/Floats
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
 
 원래 텍스트 블록 내에서 float 이미지를 위한 {{cssxref("float")}} 속성은 웹 페이지에서 다단 레이아웃을 생성할 용도로 가장 널리 사용되는 도구 중 하나로 자리매김했었습니다. flexbox와 grid의 출현과 함께 float 속성은 이 문서에서 설명하겠지만, 원래의 목적대로 돌아갔습니다.

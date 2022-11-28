@@ -4,6 +4,7 @@ slug: Glossary/Origin
 translation_of: Glossary/Origin
 original_slug: Глоссарий/origin
 ---
+
 Браузер отправляет серверу **первичные данные** - протокол, _хостинг, домен_, _порт соединения через_ {{Glossary("URL")}}. Два объекта одинаковые если протокол, хост, домен и порт одинаковые.
 
 Некоторые данные могут не передаваться источником, для их получения необходимо использовать [CORS](/ru/docs/Glossary/CORS).
@@ -23,4 +24,4 @@ original_slug: Глоссарий/origin
 
 ## Больше информации
 
-Смотрите [Same-origin policy](/ru/docs/Web/JavaScript/Same_origin_policy_for_JavaScript "/en-US/docs/Web/JavaScript/Same_origin_policy_for_JavaScript").
+Смотрите [Same-origin policy](/ru/docs/Web/JavaScript/Same_origin_policy_for_JavaScript).

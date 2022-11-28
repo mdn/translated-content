@@ -1,8 +1,8 @@
 ---
 title: GET
 slug: Web/HTTP/Methods/GET
-translation_of: Web/HTTP/Methods/GET
 ---
+
 {{HTTPSidebar}}
 
 El método HTTP **`GET`** solicita una representación del recurso especificado. Las solicitudes que usan **`GET`** solo deben usarse para recuperar datos (no deben incluir datos).

@@ -56,7 +56,7 @@ console.log(child_nodes.length); // выведет "3"
 
 `NodeList` используется подобно массивам, и потому может возникнуть закономерное желание использовать в нём методы, предоставляемые `Array.prototype`. Однако `NodeList` не реализует методы, подобные таковым у `Array`.
 
-В JavaScript существует механизм наследования, основанный на прототипах, применяемый как к встроенным («native») (таким как `Array`), так и «host»-объектам, предоставляемым средой исполнения (таким как `NodeList`) . Экземпляры класса `Array` получают свои методы (к примеру, `forEach `и `map`) из следующей цепочки наследования:
+В JavaScript существует механизм наследования, основанный на прототипах, применяемый как к встроенным («native») (таким как `Array`), так и «host»-объектам, предоставляемым средой исполнения (таким как `NodeList`) . Экземпляры класса `Array` получают свои методы (к примеру, `forEach` и `map`) из следующей цепочки наследования:
 
 `myArray --> Array.prototype --> Object.prototype --> null` (Цепочка прототипов объекта может быть получена рекурсивным вызовом Object.getPrototypeOf)
 
@@ -70,7 +70,7 @@ console.log(child_nodes.length); // выведет "3"
 
 #### Обходные пути
 
-Один из способов решения данной проблемы — это копирование методов из ` Array.prototype в ``NodeList.prototype `. Однако необходимо отдавать себе отчёт в том, что [расширение объектов DOM опасно, особенно в старых версиях Internet Explorer (6, 7, 8)](http://perfectionkills.com/whats-wrong-with-extending-the-dom/).
+Один из способов решения данной проблемы — это копирование методов из `Array.prototype` в `NodeList.prototype`. Однако необходимо отдавать себе отчёт в том, что [расширение объектов DOM опасно, особенно в старых версиях Internet Explorer (6, 7, 8)](http://perfectionkills.com/whats-wrong-with-extending-the-dom/).
 
 ```js
 var arrayMethods = Object.getOwnPropertyNames( Array.prototype );
@@ -117,9 +117,9 @@ for (var i = 0; i < myNodeList.length; ++i) {
 }
 ```
 
-Не следует использовать конструкции [`for...in`](/en-US/docs/JavaScript/Reference/Statements/for...in "JavaScript/ Reference/Statements/for...in") или [`for each...in`](/en-US/docs/JavaScript/Reference/Statements/for_each...in "JavaScript/ Reference/Statements/for each...in") для перечисления элементов списка. Эти способы также перечислят и свойства `length` и `item`, что приведёт к логическим ошибкам в случае, если скрипт ожидает только объекты {{domxref("node")}}. Также `for..in` может перечислять свойства в любом порядке.
+Не следует использовать конструкции [`for...in`](/en-US/docs/JavaScript/Reference/Statements/for...in) или [`for each...in`](/en-US/docs/JavaScript/Reference/Statements/for_each...in) для перечисления элементов списка. Эти способы также перечислят и свойства `length` и `item`, что приведёт к логическим ошибкам в случае, если скрипт ожидает только объекты {{domxref("node")}}. Также `for..in` может перечислять свойства в любом порядке.
 
-Циклы [`for...of`](/en-US/docs/JavaScript/Reference/Statements/for...of "/en-US/docs/JavaScript/Reference/Statements/for...of") корректно перечисляют все объекты внутри `NodeList` в браузерах, в которых поддерживается `for...of `(например, Firefox 13 или выше):
+Циклы [`for...of`](/en-US/docs/JavaScript/Reference/Statements/for...of) корректно перечисляют все объекты внутри `NodeList` в браузерах, в которых поддерживается `for...of` (например, Firefox 13 или выше):
 
 ```js
 var list = document.querySelectorAll( 'input[type=checkbox]' );

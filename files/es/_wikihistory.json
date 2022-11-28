@@ -533,7 +533,7 @@
     "modified": "2019-05-27T03:46:29.561Z",
     "contributors": ["asael2"]
   },
-  "Glossary/Grid_Rows": {
+  "Glossary/Grid_Row": {
     "modified": "2019-03-18T21:23:35.644Z",
     "contributors": ["Xino"]
   },
@@ -2760,17 +2760,6 @@
       "Nanomo",
       "Eqx",
       "Jorolo"
-    ]
-  },
-  "MDN/Yari": {
-    "modified": "2019-09-09T15:52:33.535Z",
-    "contributors": [
-      "SphinxKnight",
-      "clarii",
-      "wbamberg",
-      "Jeremie",
-      "Diio",
-      "atlas7jean"
     ]
   },
   "Mozilla": {
@@ -14596,10 +14585,6 @@
     "modified": "2019-03-23T22:26:11.317Z",
     "contributors": ["SoftwareRVG"]
   },
-  "conflicting/Web/API/Blob": {
-    "modified": "2019-03-23T22:49:30.131Z",
-    "contributors": ["BrodaNoel", "japho"]
-  },
   "conflicting/Web/API/CanvasRenderingContext2D": {
     "modified": "2019-03-23T22:09:10.185Z",
     "contributors": ["alinarezrangel"]
@@ -14645,10 +14630,6 @@
     "modified": "2019-08-28T11:37:06.287Z",
     "contributors": ["J-Lobo", "Noreen", "gama"]
   },
-  "conflicting/Web/API/Element/clientHeight": {
-    "modified": "2019-03-23T22:09:21.631Z",
-    "contributors": ["HarleySG"]
-  },
   "conflicting/Web/API/Element/keydown_event": {
     "modified": "2019-03-18T21:31:44.954Z",
     "contributors": ["ANDRUS74"]
@@ -14668,10 +14649,6 @@
   "conflicting/Web/API/EventTarget/addEventListener": {
     "modified": "2019-03-23T22:49:37.176Z",
     "contributors": ["gdlm91", "japho"]
-  },
-  "conflicting/Web/API/File/name": {
-    "modified": "2020-02-09T09:40:59.258Z",
-    "contributors": ["blanchart", "IsraelFloresDGA", "BrodaNoel"]
   },
   "conflicting/Web/API/Geolocation": {
     "modified": "2019-03-23T23:01:31.642Z",
@@ -14942,10 +14919,6 @@
   "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
     "modified": "2020-03-12T19:44:40.392Z",
     "contributors": ["davidenriq11", "mamptecnocrata"]
-  },
-  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
-    "modified": "2020-10-15T22:13:14.699Z",
-    "contributors": ["xochilpili"]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2019-03-23T22:08:25.338Z",
@@ -15444,6 +15417,17 @@
     "modified": "2020-09-30T16:48:19.234Z",
     "contributors": ["chrisdavidmills", "wbamberg", "juan-ferrer-toribio"]
   },
+  "orphaned/MDN/Yari": {
+    "modified": "2019-09-09T15:52:33.535Z",
+    "contributors": [
+      "SphinxKnight",
+      "clarii",
+      "wbamberg",
+      "Jeremie",
+      "Diio",
+      "atlas7jean"
+    ]
+  },
   "orphaned/Migrar_aplicaciones_desde_Internet_Explorer_a_Mozilla": {
     "modified": "2019-03-23T23:59:56.566Z",
     "contributors": [
@@ -15640,10 +15624,6 @@
   "orphaned/Web/API/ElementCSSInlineStyle/style": {
     "modified": "2019-03-23T23:58:09.934Z",
     "contributors": ["SphinxKnight", "fscholz", "khalid32", "teoli", "HenryGR"]
-  },
-  "orphaned/Web/API/FileError": {
-    "modified": "2019-03-23T22:51:12.244Z",
-    "contributors": ["Jarvanux"]
   },
   "orphaned/Web/API/GlobalEventHandlers": {
     "modified": "2020-10-15T21:33:09.443Z",

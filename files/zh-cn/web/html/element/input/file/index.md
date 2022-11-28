@@ -3,7 +3,7 @@ title: <input type="file">
 slug: Web/HTML/Element/Input/file
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar("Input_types")}}
 
 带有 **`type="file"`** 的 {{HTMLElement("input")}} 元素允许用户可以从他们的设备中选择一个或多个文件。选择后，这些文件可以使用[提交表单](/zh-CN/docs/Learn/Forms)的方式上传到服务器上，或者通过 Javascript 代码和[文件 API](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications) 对文件进行操作。
 

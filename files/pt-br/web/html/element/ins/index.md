@@ -1,8 +1,8 @@
 ---
 title: <ins>
 slug: Web/HTML/Element/ins
-translation_of: Web/HTML/Element/ins
 ---
+
 ## Summary
 
 The **HTML `<ins>` Element** (or _HTML Inserted Text_) HTML represents a range of text that has been added to a document.
@@ -20,7 +20,7 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 - {{htmlattrdef("cite")}}
   - : This attribute defines the URI of a resource that explains the change, like a link to some meeting minutes or a ticket in a troubleshooting sytem.
 - {{htmlattrdef("datetime")}}
-  - : This attribute indicates the time and date of the change and must be a [valid date with an optional time string](http://www.w3.org/TR/2011/WD-html5-20110525/common-microsyntaxes.html#valid-date-string-with-optional-time). If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp.
+  - : This attribute indicates the time and date of the change and must be a [valid date with an optional time string](https://www.w3.org/TR/2011/WD-html5-20110525/common-microsyntaxes.html#valid-date-string-with-optional-time). If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp.
 
 ## Examples
 
@@ -44,4 +44,4 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 
 - {{HTMLElement("del")}} element for marking deletion into a document
 
-{{HTMLRef}}
+{{HTMLSidebar}}

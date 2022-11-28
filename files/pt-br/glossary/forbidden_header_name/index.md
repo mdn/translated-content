@@ -1,9 +1,9 @@
 ---
 title: Nome de cabeçalho proibido
 slug: Glossary/Forbidden_header_name
-translation_of: Glossary/Forbidden_header_name
 original_slug: Glossario/Forbidden_header_name
 ---
+
 Um _nome de cabeçalho proibido_ é o nome de qualquer [cabeçalho HTTP](/pt-BR/docs/Web/HTTP/Headers) que não pode ser modificado programaticamente; especificamente, um nome de cabeçalho de **solicitação** HTTP (em contraste com um {{Glossary("Forbidden response header name")}}).
 
 Modificar esses cabeçalhos é proibido porque o agente do usuário retém o controle total sobre eles. Nomes começando com `Sec-` são reservados para criar novos cabeçalhos seguros de {{glossary("API","APIs")}} usando [Fetch](/pt-BR/docs/Web/API/Fetch_API) que concedem aos desenvolvedores controle sobre cabeçalhos, como {{domxref("XMLHttpRequest")}}.

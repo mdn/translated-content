@@ -24,7 +24,7 @@ oReq.send();
 
 通过 `XMLHttpRequest` 生成的请求可以有两种方式来获取数据，异步模式或同步模式。请求的类型是由这个 `XMLHttpRequest` 对象的 [open()](/zh-CN/docs/Web/API/XMLHttpRequest/open) 方法的第三个参数`async`的值决定的。如果该参数的值为 `false`，则该 `XMLHttpRequest`请求以同步模式进行，否则该过程将以异步模式完成。这两种类型请求的详细讨论和指南可以在[同步和异步请求](/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)页找到。
 
-> **备注：** 由于对用户体验的负面影响，从 Gecko 30.0{{geckoRelease("30.0")}}版本开始，在主线程上的同步请求已经被弃用。
+> **备注：** 由于对用户体验的负面影响，从 Gecko 30.0 版本开始，在主线程上的同步请求已经被弃用。
 
 > **备注：** `XMLHttpRequest` 构造函数并不仅限于 XML 文档。它之所以使用“XML”开头是因为在它诞生之时，原先用于异步数据交换的主要格式便是 XML。
 
@@ -89,9 +89,9 @@ oReq.send();
 
 支持 DOM 的 progress 事件监测之于 `XMLHttpRequest` 传输，遵循 Web API [进度事件规范](http://dev.w3.org/2006/webapi/progress/Progress.html)：这些事件实现了 {{domxref("ProgressEvent")}} 接口。
 
-- {{event("progress")}}
+- [`progress`](/zh-CN/docs/Web/API/XMLHttpRequest/progress_event)
   - : 检索的数据量发生了变化。
-- {{event("load")}}
+- [`load`](/zh-CN/docs/Web/API/Window/load_event)
   - : 传输完成，所有数据保存在 `response` 中。
 
 ```js
@@ -534,7 +534,7 @@ AJAXSubmit(myForm);
 
 > **备注：** 发送二进制内容的最佳途径是通过 {{jsxref("ArrayBuffer", "ArrayBuffers")}} 或 {{domxref("Blob", "Blobs")}} 结合 {{domxref("XMLHttpRequest.send()", "send()")}} 方法甚至 `FileReader` API 的 {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} 方法。但是，自从该脚本的目的变成处理 [可字符串化](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 的原始数据以来，我们使用 {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} 方法结合 `FileReader` API 的 {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} 方法。同样地，上述脚本仅当你处理小文件时行之有效。如果不打算上传二进制内容，就考虑使用 `FormData` API 来替代。
 
-> **备注：** 非标准的 `sendAsBinary` 方法从 Gecko 31 {{geckoRelease(31)}} 开始将会废弃并且会很快被移除。标准方法 `send(Blob data)` 将会取而代之。
+> **备注：** 非标准的 `sendAsBinary` 方法从 Gecko 31 开始将会废弃并且会很快被移除。标准方法 `send(Blob data)` 将会取而代之。
 
 ### 使用 FormData 对象
 
@@ -761,7 +761,7 @@ oReq.send(null);
 
 ### XMLHttpRequests 被停止
 
-如果你的 XMLHttpRequest 收到 `status=0` 和 `statusText=null` 的返回，这意味着请求无法执行。就是[无法发送](http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent). 一个可能导致的原因是当 [`XMLHttpRequest` origin](http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin) (创建的 XMLHttpRequest) 改变时，XMLHttpRequest 执行 `open()`.。这种情况是可能发生的，举个例子，我们在一个窗口的`onunload`事件中关闭 XMLHttpRequest，但实际上在即将关闭窗口时，之前创建的 XMLHttpRequest 仍然在那里，最后当这个窗口失去焦点、另一个窗口获得焦点时，它还是发送了请求（也就是`open()`）。最有效的避免这个问题的方法是为新窗口的{{event("activate")}}事件设置一个监听器，一旦窗口关闭，它的{{event("unload")}}事件便触发。
+如果你的 XMLHttpRequest 收到 `status=0` 和 `statusText=null` 的返回，这意味着请求无法执行。就是[无法发送](http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent). 一个可能导致的原因是当 [`XMLHttpRequest` origin](http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin) (创建的 XMLHttpRequest) 改变时，XMLHttpRequest 执行 `open()`.。这种情况是可能发生的，举个例子，我们在一个窗口的`onunload`事件中关闭 XMLHttpRequest，但实际上在即将关闭窗口时，之前创建的 XMLHttpRequest 仍然在那里，最后当这个窗口失去焦点、另一个窗口获得焦点时，它还是发送了请求（也就是`open()`）。最有效的避免这个问题的方法是为新窗口的 {{domxref("Element/DOMActivate_event", "DOMActivate")}} 事件设置一个监听器，一旦窗口关闭，它的[`unload`](/zh-CN/docs/Web/API/Window/unload_event)事件便触发。
 
 ## Worker
 

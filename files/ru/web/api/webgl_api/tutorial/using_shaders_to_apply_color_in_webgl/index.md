@@ -5,9 +5,10 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 ---
+
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
 
-В [предыдущей статье](/ru/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context "en/WebGL/Adding 2D content to a WebGL context") мы создали квадрат, следующим шагом будет добавление ему цвета. Мы можем сделать это, используя шейдеры.
+В [предыдущей статье](/ru/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context) мы создали квадрат, следующим шагом будет добавление ему цвета. Мы можем сделать это, используя шейдеры.
 
 ## Задание цвета вершинам
 
@@ -68,7 +69,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 
 ```html
     <script id="shader-fs" type="x-shader/x-fragment">
-    	varying lowp vec4 vColor;
+      varying lowp vec4 vColor;
 
       void main(void) {
         gl_FragColor = vColor;
@@ -94,7 +95,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
   gl.vertexAttribPointer(vertexColorAttribute, 4, gl.FLOAT, false, 0, 0);
 ```
 
-На этом этапе, вы можете посмотреть [результат работы написанного кода](/samples/webgl/sample3/index.html "https://developer.mozilla.org/samples/webgl/sample3/index.html"), если используете браузер, поддерживающий WebGL. Вы увидите нечто похожее на следующий рисунок (расположенный по центру в большом чёрном поле):
+На этом этапе, вы можете посмотреть [результат работы написанного кода](/samples/webgl/sample3/index.html), если используете браузер, поддерживающий WebGL. Вы увидите нечто похожее на следующий рисунок (расположенный по центру в большом чёрном поле):
 
 ![screenshot.png](/@api/deki/files/4081/=screenshot.png)
 

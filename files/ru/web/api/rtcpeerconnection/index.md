@@ -3,6 +3,7 @@ title: Интерфейс RTCPeerConnection
 slug: Web/API/RTCPeerConnection
 translation_of: Web/API/RTCPeerConnection
 ---
+
 {{APIRef('WebRTC')}}
 
 Интерфейс **`RTCPeerConnection`** представляет соединение WebRTC между локальным пиром (участником соединения) на локальном компьютере и удалённым пиром на удалённом компьютере. Он предоставляет методы для соединения с удалённым участником соединения, обслуживания, мониторинга и закрытия соединения.
@@ -68,7 +69,7 @@ translation_of: Web/API/RTCPeerConnection
 - {{domxref("RTCPeerConnection.peeridentity_event", "peeridentity")}} {{obsolete_inline}}
   - : В старой версии спецификации WebRTC это событие использовалось для доставки полученной идентичности. Теперь, нужно ожидать результата работы промиса, возвращаемого методом доступа {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}}, для получения идентичности.
 - {{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{obsolete_inline}}
-  - : Возникает на объекте `RTCPeerConnection, `когда объект {{domxref("MediaStream")}} удаляется из соединения. Теперь, необходимо наблюдать за событиями {{domxref("MediaStream.removetrack_event", "removetrack")}} на каждом потоке, входящем в состав объекта соединения `RTCPeerConnection`.
+  - : Возникает на объекте `RTCPeerConnection`, когда объект {{domxref("MediaStream")}} удаляется из соединения. Теперь, необходимо наблюдать за событиями {{domxref("MediaStream.removetrack_event", "removetrack")}} на каждом потоке, входящем в состав объекта соединения `RTCPeerConnection`.
     Установка обработчика возможна через свойство {{domxref("RTCPeerConnection.onremovestream", "onaddstream")}} .
 
 ## Константы
@@ -116,7 +117,7 @@ translation_of: Web/API/RTCPeerConnection
 | Константа                           | Описание                                                                                                                         |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | `"all"`                             | Все ICE кандидаты будут рассмотрены.                                                                                             |
-| `"public" `{{obsolete_inline}} | Будут рассматриваться ICE кандидаты, только имеющие публичные IP адреса. _Удалён в спецификации от 13 мая 2016 (working draft)._ |
+| `"public"`{{obsolete_inline}} | Будут рассматриваться ICE кандидаты, только имеющие публичные IP адреса. _Удалён в спецификации от 13 мая 2016 (working draft)._ |
 | `"relay"`                           | Будут рассматриваться ICE кандидаты, только с переданными IP адресами через TURN сервер.                                         |
 
 ### Перечисление RTCPeerConnectionState

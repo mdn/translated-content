@@ -14,6 +14,7 @@ tags:
   - Workers
 translation_of: Web/API/ServiceWorkerRegistration
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 Интерфейс `ServiceWorkerRegistration` ссылается на регистрацию Service Worker. Вы можете зарегистрировать Service Worker, чтобы контролировать одну или несколько страниц на одном домене.
@@ -46,7 +47,7 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
 ### Event handlers
 
 - {{domxref("ServiceWorkerRegistration.onupdatefound")}} {{readonlyinline}}
-  - : An [`EventListener`](/ru/docs/Web/API/EventListener "This method is called whenever an event occurs of the type for which the EventListener interface was registered.") property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
+  - : An [`EventListener`](/ru/docs/Web/API/EventListener) property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
 
 ## Методы
 

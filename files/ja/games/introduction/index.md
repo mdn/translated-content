@@ -23,7 +23,7 @@ slug: Games/Introduction
   <tbody>
     <tr>
       <td><strong>音声</strong></td>
-      <td><a href="/ja/docs/Web/API/Web_Audio_API">ウェブ音声 API</a></td>
+      <td><a href="/ja/docs/Web/API/Web_Audio_API">ウェブオーディオ API</a></td>
     </tr>
     <tr>
       <td><strong>グラフィック</strong></td>
@@ -101,7 +101,7 @@ slug: Games/Introduction
 - [HTML](/ja/docs/Web/HTML) と [CSS](/ja/docs/Web/CSS)
   - : この 2 つのテクノロジーは一緒になって、ゲームの UI を作成、スタイル、レイアウトする事ができます。HTML の一部分は {{HTMLElement("canvas")}} 要素であり、これは 2 次元グラフィックスの 1 つの方法になります。
 - [HTML オーディオ](/ja/docs/Web/HTML/Element/audio)
-  - : {{HTMLElement("audio")}} 要素では、シンプルな SE と音楽を簡単に演奏できます。要望がもっと専門的な場合、リアルオーディオ処理のパワーのある [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) を確認してください!
+  - : {{HTMLElement("audio")}} 要素では、シンプルな SE と音楽を簡単に演奏できます。要望がもっと専門的な場合、リアルオーディオ処理のパワーのある [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) を確認してください!
 - [IndexedDB](/ja/docs/Web/API/IndexedDB_API)
   - : ユーザーデータを、ユーザー自身のコンピューターや端末に保持するパワフルなデータストレージ API です。ゲームの状態とその他の情報をローカルに保存する良い方法で、必要な時に毎回ダウンロードする必要がなくなります。またユーザーがウェブに接続していない時 (何時間もずっと飛行機に載っているような時) であっても、ゲームを遊べるようにするのにも役立ちます。
 - [JavaScript](/ja/docs/Web/JavaScript)

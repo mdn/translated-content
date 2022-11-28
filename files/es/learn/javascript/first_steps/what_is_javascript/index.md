@@ -19,6 +19,7 @@ tags:
 translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 original_slug: Learn/JavaScript/First_steps/Qué_es_JavaScript
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 ¡Bienvenido al curso de JavaScript para principiantes de MDN! En este artículo veremos JavaScript desde un alto nivel, respondiendo preguntas como "¿Qué es?" y "¿Qué puedes hacer con él?", y asegúrate de estar cómodo con el propósito de JavaScript.
@@ -91,7 +92,7 @@ El núcleo del lenguaje JavaScript de lado del cliente consta de algunas caracte
 
 - Almacenar valores útiles dentro de variables. En el ejemplo anterior, por ejemplo, pedimos que ingreses un nuevo nombre y luego almacenamos ese nombre en una variable llamada `name`.
 - Operaciones sobre fragmentos de texto (conocidas como "cadenas" (`strings`) en programación). En el ejemplo anterior, tomamos la cadena "`Player1`:" y la unimos a la variable `name` para crear la etiqueta de texto completa, p. ej. ''`Player1: Chris`".
-- Y ejecuta código en respuesta a ciertos eventos que ocurren en una página web. Usamos un evento {{Event("click")}} en nuestro ejemplo anterior para detectar cuándo se hace clic en el botón y luego ejecutar el código que actualiza la etiqueta de texto.
+- Y ejecuta código en respuesta a ciertos eventos que ocurren en una página web. Usamos un evento [`click`](/es/docs/Web/Reference/Events/click) en nuestro ejemplo anterior para detectar cuándo se hace clic en el botón y luego ejecutar el código que actualiza la etiqueta de texto.
 - ¡Y mucho más!
 
 Sin embargo, lo que aún es más emocionante es la funcionalidad construida sobre el lenguaje JavaScript de lado del cliente. Las denominadas **interfaces de programación de aplicaciones** (**API**) te proporcionan superpoderes adicionales para utilizar en tu código JavaScript.
@@ -356,7 +357,7 @@ Para resumir:
 
 - `async` y `defer` indican al navegador que descargue los `script`s en un hilo separado, mientras que el resto de la página (el DOM, etc.) se descarga, por lo que los `script`s no bloquean la carga de la página.
 - Si tus `script`s se deben ejecutar inmediatamente y no tienen ninguna dependencia, utiliza `async`.
-- Si tus `script`s necesitan esperar a ser procesados y dependen de otros `script`s y/o del DOM en su lugar, cárgalos usando `defer`y coloca tus elementos `<script>` correspondientes en el orden que desees que el navegador los ejecute.
+- Si tus `script`s necesitan esperar a ser procesados y dependen de otros `script`s y/o del DOM en su lugar, cárgalos usando `defer` y coloca tus elementos `<script>` correspondientes en el orden que desees que el navegador los ejecute.
 
 ## Comentarios
 

@@ -10,6 +10,7 @@ tags:
   - Secure context
 translation_of: Web/API/Geolocation
 ---
+
 {{APIRef}}
 
 Интерфейс **`Geolocation`** представляет возможность программно получит местоположение устройства. Он даёт доступ веб-содержимому к позиции пользователя. Это также помогает сайтам и приложениям предоставлять результаты, основываясь полученных данных.
@@ -43,4 +44,4 @@ _Интерфейс `Geolocation` ни реализует, ни наследуе
 
 ## Смотрите также
 
-- [Использование геолокации](/ru/docs/WebAPI/Geolocaion/Using_geolocation "/en-US/docs/WebAPI/Using_geolocation")
+- [Использование геолокации](/ru/docs/WebAPI/Geolocaion/Using_geolocation)

@@ -3,6 +3,7 @@ title: CSSConditionRule
 slug: Web/API/CSSConditionRule
 translation_of: Web/API/CSSConditionRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 An object implementing the **`CSSConditionRule`** interface represents a single condition CSS at-rule, which consists of a condition and a statement block. It is a child of {{domxref("CSSGroupingRule")}}.
@@ -42,4 +43,4 @@ The `CSSConditionRule` derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupi
 
 ## See also
 
-- [Using dynamic styling information](/en/DOM/Using_dynamic_styling_information "en/DOM/Using_dynamic_styling_information")
+- [Using dynamic styling information](/en/DOM/Using_dynamic_styling_information)

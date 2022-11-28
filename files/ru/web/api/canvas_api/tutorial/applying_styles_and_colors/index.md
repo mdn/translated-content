@@ -4,9 +4,10 @@ slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 original_slug: Web/API/Canvas_API/Tutorial/Применение_стилей_и_цветов
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
-В главе о [рисовании фигур](/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes "Web/Guide/HTML/Canvas_tutorial/Drawing_shapes"), мы использовали для линий и заполнения только стили по умолчанию. Здесь мы будем исследовать опции canvas, которые мы имеем в нашем распоряжении, чтобы сделать наши рисунки немного более привлекательными. Вы узнаете, как добавлять различные цвета, стили линий, градиенты, узоры и тени вашим рисункам.
+В главе о [рисовании фигур](/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), мы использовали для линий и заполнения только стили по умолчанию. Здесь мы будем исследовать опции canvas, которые мы имеем в нашем распоряжении, чтобы сделать наши рисунки немного более привлекательными. Вы узнаете, как добавлять различные цвета, стили линий, градиенты, узоры и тени вашим рисункам.
 
 ## Цвета
 
@@ -17,11 +18,11 @@ original_slug: Web/API/Canvas_API/Tutorial/Применение_стилей_и_
 - {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle = color")}}
   - : Устанавливает стиль контура фигуры.
 
-*`color `*может быть цветом, (`строка, представленная в` CSS {{cssxref("&lt;color&gt;")}}), градиентом или паттерном. Градиенты и паттерны мы рассмотрим позже. По умолчанию цвет фона и контура — чёрный (значение CSS цвета `#000000`).
+*`color`* может быть цветом, (строка, представленная в CSS {{cssxref("&lt;color&gt;")}}), градиентом или паттерном. Градиенты и паттерны мы рассмотрим позже. По умолчанию цвет фона и контура — чёрный (значение CSS цвета `#000000`).
 
 > **Примечание:** **На заметку:** Когда вы устанавливаете значения `strokeStyle` и/или `fillStyle`, то новое значение становится стандартным для всех фигур, которые будут нарисованы с этого момента. Когда вам нужен другой цвет, вы должны перезаписать значение в `fillStyle` или в `strokeStyle` для каждой фигуры.
 
-Чтобы строка *`color `*считалась валидной, она должна соответствовать CSS {{cssxref("&lt;color&gt;")}}. Далее приведены примеры того, как можно по-разному задать один и тот же цвет.
+Чтобы строка *`color`* считалась валидной, она должна соответствовать CSS {{cssxref("&lt;color&gt;")}}. Далее приведены примеры того, как можно по-разному задать один и тот же цвет.
 
 ```js
 // these all set the fillStyle to 'orange'
@@ -674,7 +675,7 @@ The `shadowBlur` property indicates the size of the blurring effect; this value 
 
 The `shadowColor` property is a standard CSS color value indicating the color of the shadow effect; by default, it is fully-transparent black.
 
-> **Примечание:** Shadows are only drawn for `source-over` [compositing operations](/ru/docs/Web/API/Canvas_API/Tutorial/Compositing "Web/Guide/HTML/Canvas_tutorial/Compositing").
+> **Примечание:** Shadows are only drawn for `source-over` [compositing operations](/ru/docs/Web/API/Canvas_API/Tutorial/Compositing).
 
 ### Пример текста с тенью
 
@@ -713,8 +714,10 @@ When using `fill` (or {{domxref("CanvasRenderingContext2D.clip", "clip")}} and {
 
 Two values are possible:
 
-- **`"nonzero`**": The [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule), which is the default rule.
-- **`"evenodd"`**: The [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+- `nonzero`
+  - : The [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule), which is the default rule.
+- `evenodd`
+  - : The [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 In this example we are using the `evenodd` rule.
 

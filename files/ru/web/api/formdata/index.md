@@ -9,13 +9,14 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 XMLHttpRequest 2 добавляет поддержку для нового интерфейса FormData. Объекты FormData позволяют вам легко конструировать наборы пар ключ-значение, представляющие поля формы и их значения, которые в дальнейшем можно отправить с помощью метода [`send()`](</ru/docs/DOM/XMLHttpRequest#send()> "XMLHttpRequest#send()").
 
 FormData использует такой же формат на выходе, как если бы мы отправляли обыкновенную форму с encoding установленным в "multipart/form-data".
 
-> **Примечание:** **Важно**: О деталях использования FormData можно прочитать в статье [Использование объекта FormData](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects").
+> **Примечание:** **Важно**: О деталях использования FormData можно прочитать в статье [Использование объекта FormData](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects).
 
 ## Конструктор
 
@@ -56,6 +57,6 @@ FormData использует такой же формат на выходе, к
 ## Смотрите также
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Использование объектов FormData](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Использование объектов FormData](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

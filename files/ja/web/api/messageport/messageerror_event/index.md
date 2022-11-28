@@ -24,7 +24,7 @@ port.onmessageerror = function() { ... };
 
 ## ブラウザー実装状況
 
-{{Compat("api.MessagePort.onmessageerror")}}
+{{Compat}}
 
 ## 関連項目
 

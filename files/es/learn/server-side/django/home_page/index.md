@@ -3,6 +3,7 @@ title: 'Tutorial de Django Parte 5: Creación de tu página de inicio'
 slug: Learn/Server-side/Django/Home_page
 translation_of: Learn/Server-side/Django/Home_page
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 
 Estamos listos ahora para añadir el código para mostrar nuestra primera página entera — una página de inicio del sitio web de la [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) que muestra cuántos registros tenemos de cada tipo de modelo y proporciona una barra lateral con enlaces de navegación a nuestras otras páginas. Por el camino ganaremos experiencia práctica en escritura básica de mapeos de URL y vistas, obtención de resgistros de la base de datos y uso de plantillas.
@@ -61,7 +62,7 @@ Las URL que vamos a necesitar para nuestras páginas son:
 - `catalog/books/` — La lista de todos los libros.
 - `catalog/authors/` — La lista de todos los autores.
 - `catalog/book/<id>` — La vista detallada para el libro específico con un campo de clave primaria de `<id>` (el valor por defecto). Así por ejemplo, `/catalog/book/3`, para el tercer libro añadido.
-- `catalog/author/<id>` — La vista detallada para el autor específico con un campo de clave primaria llamada _`<id>`_. Así por ejemplo, `/catalog/author/11`, para el 11vo autor añadido.
+- `catalog/author/<id>` — La vista detallada para el autor específico con un campo de clave primaria llamada `<id>`. Así por ejemplo, `/catalog/author/11`, para el 11vo autor añadido.
 
 La tres primeras URLs son usadas para listar el índice, los libros y autores. Esto no codifica ninguna información adicional, y mientras los resultados retornados dependerán del contenido en la base de datos, las consultas que se ejecutan para obtener la información siempre serán las mismas.
 
@@ -355,7 +356,7 @@ TEMPLATES = [
 
 ## ¿Cómo se ve?
 
-En este punto deberíamos haber creado todo lo necesario para desplegar la página index. Corre el servidor (`python3 manage.py runserver`) y dirige tu navegador a <http://127.0.0.1:8000/>. Si todo se configuró correctamente, tu sitio debería verse similar a la siguiente captura de pantalla.
+En este punto deberíamos haber creado todo lo necesario para desplegar la página index. Corre el servidor (`python3 manage.py runserver`) y dirige tu navegador a `http://127.0.0.1:8000/`. Si todo se configuró correctamente, tu sitio debería verse similar a la siguiente captura de pantalla.
 
 ![Index page for LocalLibrary website](https://mdn.mozillademos.org/files/14045/index_page_ok.png)
 

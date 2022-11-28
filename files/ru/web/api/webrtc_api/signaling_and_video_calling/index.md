@@ -3,6 +3,7 @@ title: Сигнализированные и видео вызов
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
 translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 ---
+
 {{WebRTCSidebar}}
 
 [WebRTC](/ru/docs/Web/API/WebRTC_API) позволяет обмениваться медиаданными между двумя устройствами напрямую (peer-to-peer) в режиме реального времени. Соединение устанавливается путём обнаружения и согласования, называемым **сигнализацией (signaling)**. Эта статья объясняет, как сделать двусторонний видеозвонок.
@@ -601,10 +602,10 @@ function closeVideoCall() {
 
 After pulling references to the two {{HTMLElement("video")}} elements, we check if a WebRTC connection exists; if it does, we proceed to disconnect and close the call:
 
-1.  All of the event handlers are removed. This prevents stray event handlers from being triggered while the connection is in the process of closing, potentially causing errors.
-2.  For both remote and local video streams, we iterate over each track, calling the {{domxref("MediaStreamTrack.stop()")}} method to close each one.
-3.  Close the {{domxref("RTCPeerConnection")}} by calling {{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.
-4.  Set `myPeerConnection` to `null`, ensuring our code learns there's no ongoing call; this is useful when the user clicks a name in the user list.
+1. All of the event handlers are removed. This prevents stray event handlers from being triggered while the connection is in the process of closing, potentially causing errors.
+2. For both remote and local video streams, we iterate over each track, calling the {{domxref("MediaStreamTrack.stop()")}} method to close each one.
+3. Close the {{domxref("RTCPeerConnection")}} by calling {{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.
+4. Set `myPeerConnection` to `null`, ensuring our code learns there's no ongoing call; this is useful when the user clicks a name in the user list.
 
 Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their {{htmlattrxref("src", "video")}} and {{htmlattrxref("srcObject", "video")}} attributes using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
 

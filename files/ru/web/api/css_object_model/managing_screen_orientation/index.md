@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/CSS_Object_Model/Managing_screen_orientation
 original_slug: Web/API/CSS_Object_Model/ориентация_экрана
 ---
+
 {{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
 
 Ориентация экрана не идентична [ориентации устройства](/ru/docs/WebAPI/Detecting_device_orientation).
@@ -119,7 +120,7 @@ li {
 
 ## Блокировка ориентации экрана
 
-> **Предупреждение:** Этот API вводится в экспериментальном режиме и доступен в [Firefox OS](/ru/docs/Archive/B2G_OS "Firefox OS") и [Firefox для Android](/ru/docs/Mozilla/Firefox_для_Android "Firefox for Android") с приставкой `moz`, а также для Internet Explorer на Windows 8.1 и выше с приставкой `ms`.
+> **Предупреждение:** Этот API вводится в экспериментальном режиме и доступен в [Firefox OS](/ru/docs/Archive/B2G_OS) и [Firefox для Android](/ru/docs/Mozilla/Firefox_для_Android) с приставкой `moz`, а также для Internet Explorer на Windows 8.1 и выше с приставкой `ms`.
 
 Некоторые устройства (в основном мобильные) могут изменять ориентацию экрана в соответствии с ориентацией самого устройства для удобства восприятия информации пользователем.
 Это хорошо подходит для текста, но на некоторое содержимое такое поведение может оказать негативное воздействие. Например, это трагичная ситуация для игры, разработанной под определённую ориентацию.
@@ -165,5 +166,5 @@ screen.lockOrientation('landscape');
 - {{domxref("Screen.lockOrientation()")}}
 - {{domxref("Screen.unlockOrientation()")}}
 - {{domxref("Screen.onorientationchange")}}
-- [The orientation media query](/ru/docs/CSS/Media_queries#orientation "en-US/CSS/Media queries#orientation")
+- [The orientation media query](/ru/docs/CSS/Media_queries#orientation)
 - [A short introduction to media queries in Firefox 3.5](http://hacks.mozilla.org/2009/06/media-queries/)

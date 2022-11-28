@@ -454,8 +454,9 @@
 /zh-TW/docs/MDN/Getting_started	/zh-TW/docs/MDN/Community/Contributing/Getting_started
 /zh-TW/docs/MDN/Guidelines	/zh-TW/docs/MDN/Writing_guidelines
 /zh-TW/docs/MDN/Guidelines/Writing_style_guide	/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide
-/zh-TW/docs/MDN/Kuma	/zh-TW/docs/MDN/Yari
+/zh-TW/docs/MDN/Kuma	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /zh-TW/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	/zh-TW/docs/MDN/Tools/KumaScript/Troubleshooting
+/zh-TW/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /zh-TW/docs/MDN_at_ten	/zh-TW/docs/MDN/At_ten
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome	https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
@@ -603,7 +604,8 @@
 /zh-TW/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/zh-TW/docs/conflicting/Web/Accessibility/ARIA
 /zh-TW/docs/Web/Apps/Progressive	/zh-TW/docs/Web/Progressive_web_apps
 /zh-TW/docs/Web/CSS/-moz-border-image	/zh-TW/docs/Web/CSS/border-image
-/zh-TW/docs/Web/CSS/@viewport/height	/zh-TW/docs/Web/CSS/@viewport
+/zh-TW/docs/Web/CSS/@viewport	/zh-TW/docs/conflicting/Web/CSS
+/zh-TW/docs/Web/CSS/@viewport/height	/zh-TW/docs/conflicting/Web/CSS
 /zh-TW/docs/Web/CSS/CSS_Background_and_Borders	/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders
 /zh-TW/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /zh-TW/docs/Web/CSS/CSS_Box_Model/理解邊界重疊的原因	/zh-TW/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing

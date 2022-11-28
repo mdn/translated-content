@@ -1,8 +1,8 @@
 ---
 title: <base>
 slug: Web/HTML/Element/base
-translation_of: Web/HTML/Element/base
 ---
+
 ## Resumo
 
 O _elemento HTML Base_ (**\<base>**) especifica o endereço (URL) utilizada por todos os endereços relativos contidos dentro de um documento. Há um número máximo de 1 (um) elemento _Base_ \<base> do documento.
@@ -54,4 +54,4 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - HTML 2.0 and 3.2 define only the `href` attribute
 - XHTML requires a trailing slash: `<base />`
 
-{{HTMLRef}}
+{{HTMLSidebar}}

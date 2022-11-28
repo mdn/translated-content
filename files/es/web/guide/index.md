@@ -1,15 +1,8 @@
 ---
 title: Guía de Desarrollo Web
 slug: Web/Guide
-tags:
-  - Guia(2)
-  - Guía
-  - Landing
-  - NeedsTranslation
-  - TopicStub
-  - Web
-translation_of: Web/Guide
 ---
+
 Este artículo proporciona información para ayudarte a hacer uso de tecnologías y APIs.
 
 - [Área de aprendizaje HTML](/es/docs/Learn/HTML)

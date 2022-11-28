@@ -1,16 +1,8 @@
 ---
 title: CustomElementRegistry.whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
-tags:
-  - API
-  - CustomElementRegistry
-  - Method
-  - Reference
-  - Web Components
-  - custom elements
-  - whenDefined
-browser-compat: api.CustomElementRegistry.whenDefined
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 O **`whenDefined()`** é um método de {{domxref("CustomElementRegistry")}} e a interface retorna uma {{jsxref("Promise")}} que é resolvido quando o elemento nomeado é

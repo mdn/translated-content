@@ -1,15 +1,8 @@
 ---
 title: FormData.entries()
 slug: Web/API/FormData/entries
-tags:
-  - API
-  - FormData
-  - Iterador
-  - Referencia
-  - XMLHttpRequest API
-  - metodo
-translation_of: Web/API/FormData/entries
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 O método **`FormData.entries()`** retorna um {{jsxref("Iteration_protocols",'iterator')}} permitindo percorrer todos os valores de chave/valor contidos nesse objeto. A chave de cada par é um objeto {{domxref("USVString")}}; o valor é {{domxref("USVString")}}, ou um {{domxref("Blob")}}.

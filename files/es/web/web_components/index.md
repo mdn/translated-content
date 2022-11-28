@@ -1,14 +1,8 @@
 ---
 title: Web Components
 slug: Web/Web_Components
-tags:
-  - Componentes
-  - Componentes Web
-  - Landing
-  - TopicStub
-  - Web Components
-translation_of: Web/Web_Components
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 Los Componentes Web son un paquete de diferentes tecnologías que te permiten crear elementos personalizados reutilizables — con su funcionalidad encapsulada apartada del resto del código — y utilizarlos en las aplicaciones web.
@@ -61,7 +55,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
 
 - Extensiones para crear elementos incorporados personalizados
 
-  - :&#x20;
+  - : &#x20;
 
     - El atributo global HTML {{htmlattrxref("is")}}: Permite especificar que un elemento estandar HTML debe comportarse como un elemento incorporado personalizado registrado.
     - La opción "is" del método {{domxref("Document.createElement()")}}: Permite crear una instancia de un elemento HTML estandar que se comporta como un determinado elemento incorporado personalizado registrado.
@@ -105,7 +99,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
 
   - : Extensiones a la interfaz `Event` relacionada al shadow DOM:
 
-    - {{domxref("Event.composed")}}: Retorna un {{jsxref("Boolean")}} que indica si el evento se va a propagar a través de los límites del _shadow DOM_ hacia el\_ \_DOM normal (`true`), o no (`false`).
+    - {{domxref("Event.composed")}}: Retorna un {{jsxref("Boolean")}} que indica si el evento se va a propagar a través de los límites del _shadow DOM_ hacia el DOM normal (`true`), o no (`false`).
     - {{domxref("Event.composedPath")}}: Retorna la ruta del evento (objetos en los que oyentes serán invocados). Esto no incluye nodos en _shadow trees_ si el _shadow root_ fue creado con {{domxref("ShadowRoot.mode")}} cerrado.
 
 ### Plantillas HTML
@@ -133,7 +127,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
 
     - {{cssxref("::slotted")}}: Coincide cualquier contenido que es insertado dentro de un slot.
 
-- El evento {{event("slotchange")}}
+- El evento [`slotchange`](/es/docs/Web/Reference/Events/slotchange)
   - : Disparado en una instancia {{domxref("HTMLSlotElement")}} (elemento {{htmlelement("slot")}}) cuando el o los nodos contenidos es ese slot cambia.
 
 ## Ejemplos
@@ -142,13 +136,7 @@ Se están construyendo varios ejemplos en nuestro repositorio de GitHub [web-com
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estado                           | Comentario                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG","scripting.html#the-template-element","&lt;template&gt; element")}} | {{Spec2("HTML WHATWG")}} | La definición de {{HTMLElement("template")}}.                                                                      |
-| {{SpecName("HTML WHATWG","custom-elements.html#custom-elements","custom elements")}}             | {{Spec2("HTML WHATWG")}} | La definición de [elementos personalizados HTML (HTML Custom Elements)](/es/docs/Web/Web_Components/Using_custom_elements). |
-| {{SpecName("DOM WHATWG","#shadow-trees","shadow trees")}}                                                 | {{Spec2("DOM WHATWG")}} | La definición de [Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM).                                                |
-| {{SpecName("HTML Imports", "", "")}}                                                                             | {{Spec2("HTML Imports")}} | Definición inicial de [HTML Imports](/es/docs/Web/Web_Components/HTML_Imports).                                             |
-| {{SpecName("Shadow DOM", "", "")}}                                                                                 | {{Spec2("Shadow DOM")}} | Definición inicial de [Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM).                                           |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

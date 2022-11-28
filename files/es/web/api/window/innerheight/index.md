@@ -8,6 +8,7 @@ tags:
   - Window
 translation_of: Web/API/Window/innerHeight
 ---
+
 {{APIRef}}
 
 Propiedad solo lectura del objeto window.
@@ -49,13 +50,9 @@ var alturaViewport = self.innerHeight;
 
 ![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
 
-## Especificacion
+## Especificaciones
 
-| Specification                                                                                        | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSSOM View', '#dom-window-innerheight', 'window.innerHeight')}} | {{Spec2('CSSOM View')}} | Initial definition |
-
-**Compatibilidad del navegador**
+{{Specifications}}
 
 ## Tambien me intersa
 

@@ -1,12 +1,8 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
-tags:
-  - HTTP
-  - Método de requisição
-  - Referencia
-translation_of: Web/HTTP/Methods/CONNECT
 ---
+
 {{HTTPSidebar}}
 
 O **médoto HTTP `CONNECT` **começa a comunicação bidirecional com o recurso solicitado. Ele pode ser usado para abrir um túnel.

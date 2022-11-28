@@ -1,12 +1,8 @@
 ---
 title: 'TypeError: atribuição inválida para const "x"'
 slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
-tags:
-  - Erro
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_const_assignment
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem

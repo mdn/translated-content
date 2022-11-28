@@ -1,54 +1,50 @@
 ---
 title: Primeiros Passos no MDN
 slug: MDN/Community/Contributing/Getting_started
-tags:
-  - Documentação
-  - Primeiros Passos
-  - Guia
-  - MDN
-  - Projeto MDN
-  - Novos Contribuidores
-original_slug: MDN/Contribute/Getting_started
 ---
+
 {{MDNSidebar}}
 
-Somos uma comunidade aberta de desenvolvedores construindo recursos para uma web melhor, independente de marca, navegador ou plataforma. Qualquer pessoa pode contribuir e cada contribuição nos torna mais fortes. Juntos podemos conduzir inovações na Web para servir ao bem maior. E começa aqui, com você.
+Somos uma comunidade aberta de desenvolvedores, escritores técnicos e alunos que criam recursos para uma Web melhor, independentemente da marca, navegador ou plataforma. Qualquer um pode contribuir, e cada pessoa que contribui nos fortalece. Juntos, podemos continuar a impulsionar a inovação na Web para servir ao bem maior. Começa aqui, com você.
 
-Cada parte do MDN (documentações, demos e o próprio site) são criados por uma comunidade aberta de desenvolvedores. Por favor, junte-se a nós!
+[Junte-se a nós!](https://github.com/mdn/mdn-community/)
 
-## 4 passos simples para o MDN
+## O que posso fazer para ajudar?
 
-MDN é uma fonte de código aberto na qual **qualquer pessoa** pode adicionar ou editar conteúdo. Você não precisa ser um programador ou saber muito sobre tecnologia. Existe uma variedade de tarefas que precisam ser feitas, das mais simples (Revisão e correção de erros de digitação) até as mais complexas (escrever documentação de API).
+Existem vários caminhos que você pode seguir para contribuir com o MDN, dependendo do seu conjunto de habilidades e interesses. Portanto, juntamente com cada tarefa, fornecemos uma breve descrição e um tempo aproximado que cada tipo de tarefa costuma levar.
 
-Contribuir é fácil e seguro. Caso você cometa algum erro, este pode ser facilmente corrigido. Se você não sabe exatamente como as coisas deveriam parecer, ou se a sua gramática não é assim tão boa, não se preocupe! Temos uma equipe cujo trabalho é garantir que o conteúdo do MDN esteja o melhor possível. Alguém verificará seu trabalho para garantir que esteja correto e bem escrito. Compartilhe o que você sabe e siga seus pontos fortes.
+> Se não tiver certeza do que fazer, você sempre pode [pedir ajuda](https://github.com/mdn/mdn-community/).
+> Observe também que nossa pequena, mas poderosa equipe de documentos mantém este repositório, para preservar nossa largura de banda, as conversas fora do tópico serão encerradas.
 
-### Passo 1: Crie uma conta no GitHub
+## Principais tipos de contribuição
 
-Para começar a contribuir no MDN, você precisa [criar uma conta no GitHub](https://github.com/mdn/content/#setup).
+Criamos um [quadro de tarefas de contribuidores](https://github.com/orgs/mdn/projects/25/views/1) para ajudá-lo a encontrar oportunidades de contribuição que terão um impacto significativo no projeto. O conselho tem uma visão geral e visualizações separadas para tipos de contribuição específicos.
 
-### Passo 2: Escolha uma tarefa
+### Preparando-se para contribuir
 
-Agora que você está logado, leia as descrições dos diferentes tipos de tarefas disponíveis na [página principal de Contribuição](/pt-BR/docs/MDN/Contribute), e escolha a que te agradar mais. Você pode escolher qualquer tarefa que gostar para iniciar sua contribuição.
+Para contribuir, você precisará de uma conta GitHub. Se você ainda não tem uma, vá em frente e [inscreva-se](https://github.com/signup) para uma conta antes de continuar. Se você é novo no GitHub, recomendamos que você faça os seguintes cursos gratuitos e individualizados e o material de leitura oferecido pelo GitHub. Com esse conhecimento, você pode se concentrar em suas contribuições e não aprender uma nova ferramenta ao mesmo tempo.
 
-### Passo 3: Faça a tarefa
+> NOTA: Não se sinta sobrecarregado ou como se tivesse que ler e concluir _todo_ o trabalho do curso. Com o conhecimento adquirido no curso "Introdução ao GitHub", você estará no caminho certo.
 
-Assim que decidir que tipo de tarefa você quer fazer, procure uma página específica, exemplo de código e quaisquer outros recursos disponíveis para trabalhar e faça!
+- [Introdução ao GitHub](https://github.com/skills/introduction-to-github)
+- [Configurando o Git](https://docs.github.com/pt/get-started/quickstart/set-up-git)
+- [Fluxo de trabalho do GitHub](https://docs.github.com/pt/get-started/quickstart/github-flow)
+- [Usando Markdown](https://github.com/skills/communicate-using-markdown)
 
-### Passo 4: Peça ajuda
+### Material adicional de leitura e aprendizado
 
-Se você não tiver certeza do que fazer em qualquer momento, então você está mais que bem-vindo para pedir ajuda. Existem algumas opções diferentes de ajuda:
+- [Etiqueta básica para projetos de código aberto](/pt-BR/docs/MDN/Community/Open_source_etiquette): Se você nunca contribuiu para um projeto de código aberto antes, recomendamos a leitura deste documento.
+- [Aprenda desenvolvimento web](/pt-BR/docs/Learn): Se você é novo em HTML, CSS, JavaScript, temos um ótimo conteúdo para ajudá-lo a começar.
+- [Aprofundar-se na colaboração com pull requests](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests)
 
-- Se você quer falar conosco de forma síncrona e perguntar sobre o MDN em si, junte-se a discussão no [chat da Documentação Web do MDN](https://chat.mozilla.org/#/room/#mdn:mozilla.org) no [Matrix](https://wiki.mozilla.org/Matrix).
-- Você também pode enviar um email para <mdn-admins@mozilla.org>.
-- Se você está aprendendo desenvolvimento web e está emperrado em um problema de código, nós temos [fórums ativos](https://discourse.mozilla.org/c/mdn/learn/250) nos quais você pode fazer perguntas e obter ajuda.
+Algumas oportunidades de contribuição específicas de redação exigirão um entendimento razoável do idioma inglês. Dito isso, não deixe que o perfeito seja inimigo do "suficientemente bom". Mesmo que sua gramática não seja boa, não se preocupe! Temos uma equipa de pessoas que visam garantir que os conteúdos do MDN são os melhores possíveis. Além disso, alguém estará junto para garantir que seu trabalho esteja organizado e bem escrito.
 
-Não se preocupe em fazer tudo perfeito; outros colaboradores do MDN estão aqui para ajudar a corrigir os erros que passaram despercebidos.
+Depois de decidir em que tipo de tarefa deseja trabalhar, é hora de ir para o [quadro de tarefas de contribuidores](https://github.com/orgs/mdn/projects/25/views/1), escolha um problema e informe-nos comentando sobre o problema e marcando a equipe `@mdn/mdn-community-engagement`. Alguém da equipe responderá e atribuirá o problema a você.
 
-## Guias completos úteis para iniciantes
+Isso garante que duas pessoas não trabalhem no mesmo problema e você saberá com quem entrar em contato caso fique preso.
 
-Nós esperamos que os contribuidores do MDN tenham uma certa quantidade de conhecimento prévio antes de começar a trabalhar no conteúdo. Se você é novo nos tópicos a seguir, nós aconselhamos que você visite os links fornecidos para te ajudar a começar mais rapidamente:
+### Contribuições
 
-- Tecnologias Web: Se você é novo com HTML, CSS, JavaScript, etc., confira nossos tutoriais para [Aprender desenvolvimento web](/pt-BR/docs/Learn).
-- Código aberto: Se você nunca contribuiu com um projeto de código aberto antes, leia [Etiqueta básica para projetos de código aberto](/pt-BR/docs/MDN/Contribute/Open_source_etiquette).
-- Git e GitHub: Se você não está familiarizado com estas ferramentas, [GitHub para iniciantes](/pt-BR/docs/MDN/Contribute/GitHub_beginners) vai te ajudar a começar.
-- Estrutura de repositórios do MDN: Se você não está certo sobre qual repositório editar para mudar diferentes partes do conteúdo do MDN, [Onde está tudo no MDN?](/pt-BR/docs/MDN/Contribute/Where_is_everything) será seu ponto de entrada para os lugares certos.
+Ao contribuir, você concorda em disponibilizar suas contribuições sob a [licença Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/4.0/) (ou uma licença alternativa já especificada pela página que você está editando) . Além disso, amostras de código estão disponíveis em [Creative Commons CC-0](https://creativecommons.org/share-your-work/public-domain/cc0/) (uma dedicatória de domínio público).
+
+> Se você tiver alguma dúvida ou preocupação sobre qualquer coisa discutida aqui, [abra uma discussão](https://github.com/mdn/mdn-community/discussions/categories/content) e nos avise.

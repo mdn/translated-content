@@ -5,6 +5,7 @@ translation_of: Web/API/HTMLElement/accessKey
 translation_of_original: Web/API/Element/accessKey
 original_slug: Web/API/Element/accessKey
 ---
+
 {{APIRef("DOM")}}
 
 ## Описание
@@ -15,16 +16,12 @@ original_slug: Web/API/Element/accessKey
 
 > **Предупреждение:** Данное свойство использовать не рекомендуется, поскольку в браузерах уже заданы подобные привязки и неосторожное обращение может привести к жестокому конфликту.
 
-##
-
 ## Синтаксис
 
 ```
 var key = elem.accessKey;
 elem.accessKey = key;
 ```
-
-##
 
 ## Пример
 
@@ -35,7 +32,7 @@ elem.accessKey = "w";
 
 ## Немного информации
 
-Фокусировка на элемент произойдёт при нажатии следующих клавиш (,где **acesskey** - значение свойства**` acessKey).`**
+Фокусировка на элемент произойдёт при нажатии следующих клавиш (,где **acesskey** - значение свойства **`acessKey`**).
 
 <table class="standard-table" style="height: 252px; width: 388px">
   <tbody>

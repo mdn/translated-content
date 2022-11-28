@@ -3,6 +3,7 @@ title: Window.document
 slug: Web/API/Window/document
 translation_of: Web/API/Window/document
 ---
+
 {{APIRef}}
 
 ## Описание
@@ -19,7 +20,7 @@ doc = window.document
 
 ### Параметры
 
-- `doc` является ссылкой на объект [document](/ru/docs/DOM/document "DOM/document").
+- `doc` является ссылкой на объект [document](/ru/docs/DOM/document).
 
 ## Пример
 

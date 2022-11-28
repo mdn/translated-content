@@ -267,7 +267,7 @@ slug: Web/API/HTMLInputElement
         Returns a {{jsxref("Boolean")}} that is <code>false</code> if the
         element is a candidate for constraint validation, and it does not
         satisfy its constraints. In this case, it also fires an
-        {{event("invalid")}} event at the element. It returns
+        [`invalid`](/zh-CN/docs/Web/API/HTMLInputElement/invalid_event) event at the element. It returns
         <code>true</code> if the element is not a candidate for constraint
         validation, or if it satisfies its constraints.
       </td>

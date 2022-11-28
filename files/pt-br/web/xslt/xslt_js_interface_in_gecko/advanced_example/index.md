@@ -1,9 +1,9 @@
 ---
 title: Exemplo Avançado
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 original_slug: The_XSLT_JavaScript_Interface_in_Gecko/Advanced_Example
 ---
+
 ## Exemplo Avançado
 
 O exemplo avançado apresentará vários tipos de divs baseado em seu conteúdo. O exemplo permite tipificar o conteúdo muitas vezes, alternando entre tipos ascendente ou descendente. O JavaScript apenas carrega o arquivo .xsl a primeira vez, e prepara a variável `xslloaded` verdadeira (true) assim que o arquivo tiver terminado de carregar. Usando o método `getParameter` no obejto `XSLTProcessor`, o código pode decidir pelo tipo ascendente ou descendente. Se o parâmetro estiver vazio o padrão é ascendente (primeira vezes que o tipo aparece, como não há valor para isto no aarquivo XSLT). O valor do tipo é colocado usando `setParameter`.
@@ -83,7 +83,7 @@ function sort() {
 // XSL Stylesheet:
 
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns="https://www.w3.org/1999/xhtml" xmlns:html="https://www.w3.org/1999/xhtml" xmlns:xsl="https://www.w3.org/1999/XSL/Transform">
   <xsl:output method="html" indent="yes" />
 
   <xsl:param name="myOrder" />

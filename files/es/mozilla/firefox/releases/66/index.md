@@ -23,7 +23,7 @@ Este artículo proporciona información sobre los cambios en Firefox 66 que afec
 
 ### HTML
 
-- Los archivos HTML (y texto sin formato) codificados en UTF-8 que se cargan desde las `file:`URL ahora son compatibles sin `<meta charset="utf-8">` la lista de materiales UTF-8 BOM, lo que facilita el trabajo local en dichos archivos antes de cargarlos en un servidor. Aún debe asegurarse de que el servidor envíe `charset=utf-8` en el `Content-Type` encabezado HTTP para dichos archivos, de lo contrario, el mecanismo de detección utilizado para los archivos locales interrumpiría la carga incremental en el caso de la red ({{bug(1071816)}}).
+- Los archivos HTML (y texto sin formato) codificados en UTF-8 que se cargan desde las `file:` URL ahora son compatibles sin `<meta charset="utf-8">` la lista de materiales UTF-8 BOM, lo que facilita el trabajo local en dichos archivos antes de cargarlos en un servidor. Aún debe asegurarse de que el servidor envíe `charset=utf-8` en el `Content-Type` encabezado HTTP para dichos archivos, de lo contrario, el mecanismo de detección utilizado para los archivos locales interrumpiría la carga incremental en el caso de la red ({{bug(1071816)}}).
 
 #### Removido
 
@@ -88,7 +88,7 @@ _Sin cambios._
 
 - La {{domxref("InputEvent.inputType")}} propiedad ha sido implementada ({{bug(1447239)}}).
 - Las propiedades {{domxref("Window.event")}} y {{domxref("Event.returnValue")}} ropiedades, que originalmente eran propiedad de IE, y que luego se admitían en otros navegadores por motivos de compatibilidad, se han vuelto a introducir en Firefox 66, después de haber sido agregadas primero en las versiones 63 y 64 respectivamente, pero luego se eliminaron nuevamente debido a problemas de compatibilidad.
-- A partir de 66, cuando la {{domxref("KeyboardEvent.keyCode")}} propiedad del {{event("keypress")}} evento del objeto es 0, el valor será el mismo que {{domxref("KeyboardEvent.charCode")}}. Por el contrario, cuando, `charCode` es 0, será igual que `keyCode`. Este comportamiento de duplicación coincide con otros navegadores y se espera que solucione la mayoría de los problemas de compatibilidad asociados, sin embargo, la detección de agentes de usuario puede causar problemas adicionales en algunas bibliotecas de JavaScript. Tenga en cuenta que en términos de especificaciones, hemos cambiado desde el _modelo de división_ del _modelo fusionado_ (ver [Como determinar keyCode para eventos de pulsaciones de tecla](https://w3c.github.io/uievents/#determine-keypress-keyCode) en la especificación de interfaz de usuario de eventos).
+- A partir de 66, cuando la {{domxref("KeyboardEvent.keyCode")}} propiedad del [`keypress`](/es/docs/Web/Reference/Events/keypress) evento del objeto es 0, el valor será el mismo que {{domxref("KeyboardEvent.charCode")}}. Por el contrario, cuando, `charCode` es 0, será igual que `keyCode`. Este comportamiento de duplicación coincide con otros navegadores y se espera que solucione la mayoría de los problemas de compatibilidad asociados, sin embargo, la detección de agentes de usuario puede causar problemas adicionales en algunas bibliotecas de JavaScript. Tenga en cuenta que en términos de especificaciones, hemos cambiado desde el _modelo de división_ del _modelo fusionado_ (ver [Como determinar keyCode para eventos de pulsaciones de tecla](https://w3c.github.io/uievents/#determine-keypress-keyCode) en la especificación de interfaz de usuario de eventos).
 
 #### Media, Audio Web, y WebRTC
 

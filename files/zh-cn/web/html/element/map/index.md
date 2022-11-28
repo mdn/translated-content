@@ -75,4 +75,4 @@ _For the `right.html` link_
 - {{HTMLElement("a")}}
 - {{HTMLElement("area")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

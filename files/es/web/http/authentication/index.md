@@ -1,14 +1,8 @@
 ---
 title: Autenticación HTTP
 slug: Web/HTTP/Authentication
-tags:
-  - Acceso de control
-  - Autenticación
-  - Guía
-  - HTTP
-  - HTTP Basic
-translation_of: Web/HTTP/Authentication
 ---
+
 {{HTTPSidebar}}
 
 HTTP nos brinda un marco general para el control de acceso y de autenticación. El esquema de autenticación HTTP más común es la autenticación "Basic". Esta página presenta el framework general de autenticación HTTP y muestra cómo restringir el acceso a tu servidor con la autenticación HTTP _Basic_.

@@ -39,7 +39,7 @@ _範例 1. 使用 label 的簡易表單_
 
 HTML 的 {{ HTMLElement("label") }} 元素適用於表單相關元素 , 但是許多表單控件被實現為動態 JavaScript 小部件 , 使用 {{ HTMLElement("div") }} 或 {{ HTMLElement("span") }}。[WAI-ARIA](http://www.w3.org/WAI/intro/aria.php), 來自 W3C 的網路無障礙計畫 ( [Web Accessibility Initiative](http://www.w3.org/WAI/) ) 的**無障礙互聯網應用程序**規範 ( **Accessible Rich Internet Applications** specification ) , 為這些情況提供了 [**`aria-labelledby`**](https://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby) 屬性。
 
-下面的範例顯示使用無序列表 (unordered list ) 實現的單選按鈕組 (radio button group )。注意程式碼第三行 , {{ HTMLElement("li") }} 元素將  **`aria-labelledby`** 屬性設置為 `"rg1_label"` , 在第一行中元素 {{ HTMLElement("h3") }} 的  **`id` **, 即單選按鈕組的標籤。
+下面的範例顯示使用無序列表 (unordered list ) 實現的單選按鈕組 (radio button group )。注意程式碼第三行 , {{ HTMLElement("li") }} 元素將  **`aria-labelledby`** 屬性設置為 `"rg1_label"` , 在第一行中元素 {{ HTMLElement("h3") }} 的  **`id`**, 即單選按鈕組的標籤。
 
 _範例 2._ 使用無序列表實現的單選按鈕組
 

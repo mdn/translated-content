@@ -1,13 +1,9 @@
 ---
 title: <input type="time">
 slug: Web/HTML/Element/Input/time
-tags:
-  - Formulário
-  - Hora
-  - tipo
-translation_of: Web/HTML/Element/input/time
 ---
-{{HTMLRef("Input_types")}}
+
+{{HTMLSidebar}}
 
 Elementos `<input>` do tipo **`time`** (hora) criam campos de inserção que permitem que o usuário digite horários facilmente (horas e minutos e, opcionalmente, segundos).
 
@@ -458,7 +454,7 @@ function populateMinutes() {
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.input.input-time")}}
+{{Compat}}
 
 ## See also
 

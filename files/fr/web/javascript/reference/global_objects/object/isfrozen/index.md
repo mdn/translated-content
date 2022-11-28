@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Object/isFrozen
 
 {{JSRef}}
 
-La méthode **`Object.isFrozen()`**permet de déterminer si un objet est {{jsxref("Object.freeze()", "gelé", "", 1)}}.
+La méthode **`Object.isFrozen()`** permet de déterminer si un objet est {{jsxref("Object.freeze()", "gelé", "", 1)}}.
 
 {{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}
 

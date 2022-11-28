@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Typed_arrays
 original_slug: Web/JavaScript/Vectores_tipados
 ---
+
 {{JsSidebar("Advanced")}}
 
 **Los arreglos tipados en JavaScript** son objetos similares a arreglos que proporcionan un mecanismo para leer y escribir datos binarios sin procesar en búferes de memoria. Como ya sabrás, los objetos {{jsxref("Array", "Arreglo")}} crecen y se encogen dinámicamente y pueden tener cualquier valor de JavaScript. Los motores de JavaScript realizan optimizaciones para que estos arreglos sean rápidos.
@@ -52,11 +53,11 @@ Las vistas de arreglos tipados tienen nombres autodescriptivos y proporcionan vi
 
 Estos son algunos ejemplos de APIs que utilizan arreglos tipados; hay otras, y todo el tiempo surgen más.
 
-- {{Link("/en-US/docs/Web/API/FileReader", "FileReader.prototype.readAsArrayBuffer()", "#readAsArrayBuffer()")}}
-  - : El método `FileReader.prototype.readAsArrayBuffer()` comienza a leer el contenido del {{Link("/es/docs/Web/API/Blob", "Blob")}} o {{Link("/es/docs/Web/API/File", "File")}}.
-- [`XMLHttpRequest.prototype.send()`](</es/docs/Web/API/XMLHttpRequest#send()>)
+- [`FileReader.prototype.readAsArrayBuffer()`](/es/docs/Web/API/FileReader)
+  - : El método `FileReader.prototype.readAsArrayBuffer()` comienza a leer el contenido del [Blob](/es/docs/Web/API/Blob) o [File](/es/docs/Web/API/File).
+- [`XMLHttpRequest.prototype.send()`](/es/docs/Web/API/XMLHttpRequest#send())
   - : El método `send()` de instancias de `XMLHttpRequest` ahora admiten arreglos tipados y objetos {{JSxRef("ArrayBuffer")}} como argumento.
-- {{Link("/en-US/docs/Web/API/ImageData", "ImageData.data")}}
+- [`ImageData.data`](/es/docs/Web/API/ImageData)
   - : Es un {{JSxRef("Uint8ClampedArray")}} que representa un arreglo unidimensional que contiene los datos en el orden RGBA, con valores enteros entre `0` y `255` inclusive.
 
 ## Ejemplos
@@ -122,7 +123,7 @@ En otras palabras, los dos arreglos se ven simplemente en el mismo búfer de dat
 
 ### Trabajar con complejas estructuras de datos
 
-Al combinar un solo búfer con múltiples vistas de diferentes tipos, comenzando con diferentes desplazamientos en el búfer, puedes interactuar con objetos de datos que contienen múltiples tipos de datos. Esto te permite, por ejemplo, interactuar con complejas estructuras de datos {{Link("/es/docs/Web/WebGL", "WebGL")}}, archivos de datos o estructuras C que necesitas utilizar mientras usas {{Link("/en-US/docs/Mozilla/js-ctypes", "js-ctypes")}}.
+Al combinar un solo búfer con múltiples vistas de diferentes tipos, comenzando con diferentes desplazamientos en el búfer, puedes interactuar con objetos de datos que contienen múltiples tipos de datos. Esto te permite, por ejemplo, interactuar con complejas estructuras de datos [WebGL](/es/docs/Web/API/WebGL_API), archivos de datos o estructuras C que necesitas utilizar mientras usas [js-ctypes](/es/docs/Web/JavaScript/Typed_arrays).
 
 Considera esta estructura C:
 
@@ -148,7 +149,7 @@ let amountDueView = new Float32Array(buffer, 20, 1);
 
 Luego puedes acceder, por ejemplo, al monto adeudado con `amountDueView[0]`.
 
-> **Nota:** La {{interwiki("wikipedia", "Data_structure_alignment")}} en una estructura C depende de la plataforma. Toma precauciones y consideraciones para estas diferencias de relleno.
+> **Nota:** La [Data_structure_alignment](https://es.wikipedia.org/wiki/Data_structure_alignment) en una estructura C depende de la plataforma. Toma precauciones y consideraciones para estas diferencias de relleno.
 
 ### Conversión a arreglos normales
 

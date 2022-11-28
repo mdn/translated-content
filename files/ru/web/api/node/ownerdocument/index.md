@@ -3,6 +3,7 @@ title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
 translation_of: Web/API/Node/ownerDocument
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Node.ownerDocument`** только для чтения, возвращающее объект документа верхнего уровня для этого узла.
@@ -13,7 +14,7 @@ translation_of: Web/API/Node/ownerDocument
 document = element.ownerDocument
 ```
 
-- `document` это объект [`document`](/ru/docs/DOM/document "DOM/document") родитель текущего элемента.
+- `document` это объект [`document`](/ru/docs/DOM/document) родитель текущего элемента.
 
 ## Пример
 

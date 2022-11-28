@@ -9,6 +9,7 @@ tags:
   - Ссылки
 translation_of: Web/API/Window/location
 ---
+
 {{APIRef}}
 
 Свойство только для чтения **`Window.location`** возвращает объект {{domxref("Location")}} с информацией о текущем расположении документа.
@@ -143,7 +144,7 @@ span.intLink {
 </html>
 ```
 
-> **Примечание:** функция `showNode` является также примером использования цикла [`for`](/en/JavaScript/Reference/Statements/for "en/JavaScript/Reference/Statements/for") без раздела `statement`. В этом случае **точка с запятой всегда добавляется сразу после декларации цикла.**
+> **Примечание:** функция `showNode` является также примером использования цикла [`for`](/en/JavaScript/Reference/Statements/for) без раздела `statement`. В этом случае **точка с запятой всегда добавляется сразу после декларации цикла.**
 
 …тоже самое только с анимированной прокруткой страницы:
 
@@ -201,5 +202,5 @@ var showBookmark = (function () {
 
 - Интерфейс возвращающий значение, {{domxref("Location")}}.
 - Подобная информация, но привязанная к контексту браузера, {{domxref("Document.location")}}
-- [Манипулирование историей браузера](/en/DOM/Manipulating_the_browser_history "en/DOM/Manipulating the browser history")
+- [Манипулирование историей браузера](/en/DOM/Manipulating_the_browser_history)
 - [hashchange](/ru/docs/DOM/Mozilla_event_reference/hashchange)

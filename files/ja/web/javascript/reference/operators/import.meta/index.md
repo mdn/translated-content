@@ -78,7 +78,7 @@ new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
 
 ## ブラウザー実装状況
 
-{{Compat("javascript.statements.import_meta")}}
+{{Compat}}
 
 ## 関連情報
 

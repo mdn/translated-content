@@ -13,6 +13,7 @@ tags:
   - lado servidor
 translation_of: Learn/Server-side/Django/skeleton_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
 Este segundo artículo de nuestro [Tutorial Django](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) muestra cómo puedes crear un proyecto de "esqueleto" de sitio web como base, que puedes continuar luego llenado de configuraciones específicas del sitio, urls, modelos, vistas y plantillas.
@@ -225,7 +226,7 @@ Los mapeos URL se gestionan a través de la variable `urlpatterns`, que es una _
 
 > **Nota:** La ruta en `path()` es una cadena que define un patrón URL para emparejar. Esta cadena podría incluir una variable nombrada (entre paréntesis angulares), ej. `'catalog/<id>/'`. Este patrón emparejará con una URL como **/catalog/**_any_chars_**/** y pasará a la vista _any_chars_ como cadena asociada al parámetro de nombre `id`). Trataremos de los métodos de caminos y rutas de patrones más adelante en los últimos temas.
 
-Añade las lineas de abajo al final del fichero para añadir un nuevo elemento a la lista `urlpatterns`. Este nuevo elemento incluye un `path()` que redirige las peticiones con el patrón `catalog/` al módulo`catalog.urls` (el fichero con el URL relativo **/catalog/urls.py**).
+Añade las lineas de abajo al final del fichero para añadir un nuevo elemento a la lista `urlpatterns`. Este nuevo elemento incluye un `path()` que redirige las peticiones con el patrón `catalog/` al módulo `catalog.urls` (el fichero con el URL relativo **/catalog/urls.py**).
 
 ```python
 # Use include() to add paths from the catalog application

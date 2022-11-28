@@ -3,6 +3,7 @@ title: Element.className
 slug: Web/API/Element/className
 translation_of: Web/API/Element/className
 ---
+
 {{APIRef("DOM")}}
 
 ## Описание
@@ -40,8 +41,6 @@ alert(elm.className); //"class1 class2 class3"
 ## Поддержка браузерами
 
 {{Compat}}
-
-##
 
 ## Спецификация
 

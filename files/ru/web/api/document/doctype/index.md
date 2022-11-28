@@ -9,6 +9,7 @@ tags:
   - Справка
 translation_of: Web/API/Document/doctype
 ---
+
 {{ApiRef("DOM")}}
 
 Возвращает Описание Типа Документа (Document Type Declaration, DTD) относительно текущего документа. Возвращаемый объект обеспечивает выполнение {{domxref("DocumentType")}} интерфейса. Используйте {{domxref("DOMImplementation.createDocumentType()")}} для создания `DocumentType`.

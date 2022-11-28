@@ -3,6 +3,7 @@ title: 'HTML attribute: pattern'
 slug: Web/HTML/Attributes/pattern
 translation_of: Web/HTML/Attributes/pattern
 ---
+
 {{HTMLSidebar}}
 
 Атрибут **`pattern`** определяет [регулярное выражение](/ru/docs/Web/JavaScript/Guide/Regular_Expressions), которому должно соответствовать значение элемента формы. Если ненулевое значение не соответствует ограничениям, установленным в `pattern`, доступное только для чтения свойство {{domxref('ValidityState.patternMismatch','patternMismatch')}} объекта {{domxref('ValidityState')}} будет истинным.
@@ -123,7 +124,7 @@ While `title`s are used by some browsers to populate error messaging, because br
 
 ## Browser compatibility
 
-{{Compat("html.elements.attributes.pattern")}}
+{{Compat}}
 
 ## See also
 

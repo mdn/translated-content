@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/style
 original_slug: Web/HTML/Elemento/style
 ---
+
 ### Definición
 
 - **style** - estilo. Es el elemento encargado de indicar la información de estilo.

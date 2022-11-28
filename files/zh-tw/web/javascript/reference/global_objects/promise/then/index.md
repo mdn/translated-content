@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 
 {{JSRef}}
 
-**`then()` **方法回傳一個 {{domxref("Promise")}} 物件。它接收兩個引數： `Promise` 在成功及失敗情況時的回呼函式。
+**`then()`** 方法回傳一個 {{domxref("Promise")}} 物件。它接收兩個引數： `Promise` 在成功及失敗情況時的回呼函式。
 
 > **備註：** 如果有一個或兩個引數被省略，或為非函式（non-functions），則 `then` 將處於遺失 handler(s) 的狀態，但不會產生錯誤。若發起 `then` 之 `Promise` 採取了一個狀態（實現（`fulfillment）`或拒絕（`rejection））`而 `then` 沒有處理它的函式，一個不具有額外 handlers 的新 `Promise` 物件將被建立，單純採取原 `Promise` 其最終狀態。
 
@@ -24,9 +24,9 @@ p.then(function(value) {
 ### 參數
 
 - `onFulfilled`
-  - : 一個 {{jsxref("Function")}}，當 `Promise` 被實現（fulfilled）時被呼叫。此函式接收一個實現值（`fullfillment value）作為引數。`
+  - : 一個 {{jsxref("Function")}}，當 `Promise` 被實現（fulfilled）時被呼叫。此函式接收一個實現值（`fulfillment value`）作為引數。
 - `onRejected` {{optional_inline}}
-  - : 一個 {{jsxref("Function")}}，當 `Promise` 被拒絕（rejected）時被呼叫。此函式接收一個失敗訊息（`rejection reason）作為引數。`
+  - : 一個 {{jsxref("Function")}}，當 `Promise` 被拒絕（rejected）時被呼叫。此函式接收一個失敗訊息（`rejection reason`）作為引數。
 
 ### 回傳值
 

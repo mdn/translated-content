@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/map
 original_slug: Web/HTML/Elemento/map
 ---
+
 ### Definición
 
 - descripción de uno o dos párrafos

@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.rect()
 slug: Web/API/CanvasRenderingContext2D/rect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Referencia
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/rect
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.rect()`** da Canvas 2D API cria um _path_ (trajeto) para um retângulo na posição _(x, y)_, cujo tamanho é determinado pelo _width_ (largura) e _height_ (altura). Esses quatro pontos estão conectados por linhas retas e o _sub-path_ (sub-trajeto) é marcado como fechado, para que você possa `fill (preencher)` ou `stroke (contornar)` o retângulo.

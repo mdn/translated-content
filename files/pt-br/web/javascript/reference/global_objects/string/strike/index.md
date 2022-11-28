@@ -1,15 +1,8 @@
 ---
 title: String.prototype.strike()
 slug: Web/JavaScript/Reference/Global_Objects/String/strike
-tags:
-  - Descontinuado
-  - JavaScript
-  - Prototipo
-  - String
-  - metodo
-  - strike()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/strike
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 O método `strike()` cria um elemento HTML [`<strike>`](/pt-BR/docs/Web/HTML/Element/strike) que faz com que uma string seja exibida com o texto riscado.

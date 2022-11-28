@@ -7,6 +7,7 @@ tags:
   - css шрифты
 translation_of: Web/CSS/font-size
 ---
+
 {{CSSRef}}
 
 ## Описание
@@ -46,7 +47,7 @@ font-size: unset;
 
 Свойство `font-size` устанавливается одним из следующих способов:
 
-- Ключевым словом из перечня [абсолютных значений](/ru/docs/Web/CSS/font-size$edit#absolute-size) или [относительных значений](/ru/docs/Web/CSS/font-size$edit#relative-size)
+- Ключевым словом из перечня [абсолютных значений](/ru/docs/Web/CSS/font-size#absolute-size) или [относительных значений](/ru/docs/Web/CSS/font-size#relative-size)
 - Как `<значение длины>` или `<процентное значение>`, по отношению к размеру родительского элемента.
 
 ### Значения

@@ -1,14 +1,14 @@
 ---
 title: mouseover
 slug: Web/API/Element/mouseover_event
-translation_of: Web/API/Element/mouseover_event
 ---
+
 O evento `mouseover` é acionado quando um dispositivo ponteiro é movido para o elemento que esteja escutando ou para um de seus filhos.
 
 ## Informações Gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseover)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseover)
 - Interface
   - : {{domxref("MouseEvent")}}
 - Bubbles

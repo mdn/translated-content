@@ -10,6 +10,7 @@ tags:
   - аудио
 translation_of: Web/API/MediaSource
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 **`MediaSource`** – это интерфейс [Media Source Extensions API](/ru/docs/Web/API/Media_Source_Extensions_API) для предоставления интерактивного источника медиаданных объектам типа {{domxref("HTMLMediaElement")}}.
@@ -46,9 +47,10 @@ _Наследует свойства родительского интерфей
   - : Удаляет указанный {{domxref("SourceBuffer")}} из списка {{domxref("SourceBuffers")}}, связанного с текущим `MediaSource-объектом`.
 - {{domxref("MediaSource.endOfStream()")}}
   - : Сигнализирует об окончании потока.
-- ## Статичные методы
 
-  {{domxref("MediaSource.isTypeSupported()")}}
+## Статичные методы
+
+- {{domxref("MediaSource.isTypeSupported()")}}
 
   - : Возвращает значение {{domxref("Boolean")}}, поясняющее, поддерживается ли клиентом полученный MIME-тип — если это так, то можно успешно создать объект типа {{domxref("SourceBuffer")}} для этого MIME-типа.
 

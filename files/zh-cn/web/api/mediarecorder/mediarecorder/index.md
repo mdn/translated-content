@@ -17,7 +17,7 @@ var mediaRecorder = new MediaRecorder(stream[, options]);
 
 - **`stream`**
   - : {{domxref("MediaStream")}} 将要录制的流。它可以是来自于使用 {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} 创建的流或者来自于 {{HTMLElement("audio")}}, {{HTMLElement("video")}} 以及 {{HTMLElement("canvas")}} DOM 元素。
-- **`options` **{{optional_inline}}
+- **`options`** {{optional_inline}}
 
   - : 一个字典对象，它可以包含下列属性：
 

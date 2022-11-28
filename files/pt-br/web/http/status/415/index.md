@@ -1,13 +1,6 @@
 ---
 title: 415 Unsupported Media Type
 slug: Web/HTTP/Status/415
-tags:
-  - Codigo Status
-  - Codigo Status HTTP
-  - Erro no cliente
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Status/415
 ---
 {{HTTPSidebar}}
 

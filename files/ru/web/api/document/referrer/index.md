@@ -7,6 +7,7 @@ tags:
   - Property
 translation_of: Web/API/Document/referrer
 ---
+
 {{APIRef("DOM")}}
 
 Возвращает [URI](http://www.w3.org/Addressing/#background) страницы, с которой был совершён переход на текущую.

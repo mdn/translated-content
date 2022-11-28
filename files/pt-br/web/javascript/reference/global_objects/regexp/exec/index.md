@@ -1,8 +1,8 @@
 ---
 title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 ---
+
 {{JSRef}}
 
 O método **`exec()`** executa a busca por um padrão em uma determinada string. Retorna um array, ou {{jsxref("null")}}.

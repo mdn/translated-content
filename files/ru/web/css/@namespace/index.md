@@ -5,6 +5,7 @@ tags:
   - Пространства имён
 translation_of: Web/CSS/@namespace
 ---
+
 {{ CSSRef() }}
 
 ## Описание

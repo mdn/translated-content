@@ -3,7 +3,7 @@ title: <input type="url">
 slug: Web/HTML/Element/input/url
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`url`** 型は、ユーザーに URL を入力および編集させるために使用します。
 

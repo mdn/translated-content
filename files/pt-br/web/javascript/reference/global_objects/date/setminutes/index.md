@@ -1,17 +1,8 @@
 ---
 title: Date.prototype.setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 ---
+
 {{JSRef}}
 
 O método **`setMinutes()`** atribui os minutos para uma data específica de acordo com o horário local.

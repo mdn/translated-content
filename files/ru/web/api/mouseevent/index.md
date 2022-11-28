@@ -10,11 +10,12 @@ tags:
   - Reference
 translation_of: Web/API/MouseEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 Интерфейс **`MouseEvent`** представляет собой событие, которое происходит в результате взаимодействия пользователя с манипулятором ( например, мышью). Наиболее частые из таких событий: {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}}, {{event("mousedown")}}.
 
-`MouseEvent` выводится из метода {{domxref("UIEvent")}}, который в свою очередь происходит из метода {{domxref("Event")}}. Метод {{domxref("MouseEvent.initMouseEvent()")}} допустимо использовать для лучшей совместимости с предыдущими версиями, однако, для создания `MouseEvent `рекомендуется использовать конструктор метода {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}.
+`MouseEvent` выводится из метода {{domxref("UIEvent")}}, который в свою очередь происходит из метода {{domxref("Event")}}. Метод {{domxref("MouseEvent.initMouseEvent()")}} допустимо использовать для лучшей совместимости с предыдущими версиями, однако, для создания `MouseEvent` рекомендуется использовать конструктор метода {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}.
 
 Несколько более конкретные события, производные от события mouseevent: {{domxref("WheelEvent")}} and {{domxref("DragEvent")}}.
 

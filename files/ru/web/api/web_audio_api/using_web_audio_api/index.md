@@ -3,6 +3,7 @@ title: Используем Web Audio API
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
+
 [Web Audio API](/ru/docs/Web_Audio_API) обеспечивает простой, но мощный механизм реализации и управления аудио-контентом внутри web приложения. Это позволяет разрабатывать сложные аудио миксины, эффекты и т.д. В этой статье мы постараемся объяснить основы использования Web Audio API, посредством пары простых примеров.
 
 The Web Audio API does not replace the [\<audio>](/ru/docs/Web/HTML/Element/audio) media element, but rather complements it, just like [\<canvas>](/ru/docs/Web/HTML/Element/canvas) co-exists well alongside the [\<img>](/ru/docs/Web/HTML/Element/Img) element. What you use to implement audio depends on your use case. If you just want to control playback of a simple audio track, \<audio> is probably a better, quicker solution. If you want to carry out more complex audio processing, as well as playback, Web Audio API provides much more power and control.
@@ -29,11 +30,11 @@ The Web Audio API involves handling audio operations inside an **audio context**
 
 Audio nodes are linked via their inputs and outputs, forming a chain that starts with one or more sources, goes through one or more nodes, then ends up at a destination (although you don't have to provide a destination if you, say, just want to visualise some audio data). A simple, typical workflow for web audio would look something like this:
 
-1.  Create audio context
-2.  Inside the context, create sources — such as `<audio>`, oscillator, stream
-3.  Create effects nodes, such as reverb, biquad filter, panner, compressor
-4.  Choose final destination of audio, for example your system speakers
-5.  Connect the sources up to the effects, and the effects to the destination
+1. Create audio context
+2. Inside the context, create sources — such as `<audio>`, oscillator, stream
+3. Create effects nodes, such as reverb, biquad filter, panner, compressor
+4. Choose final destination of audio, for example your system speakers
+5. Connect the sources up to the effects, and the effects to the destination
 
 ### Creating an audio context
 

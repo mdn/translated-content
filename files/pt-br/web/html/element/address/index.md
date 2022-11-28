@@ -1,20 +1,8 @@
 ---
 title: <address>
 slug: Web/HTML/Element/address
-tags:
-  - Autor
-  - Contato
-  - Elemento
-  - Email
-  - Endereço
-  - Endereço de Email
-  - HTML
-  - Informação de Contato
-  - Referencia
-  - Seções HTML
-  - Web
-translation_of: Web/HTML/Element/address
 ---
+
 ## Resumo
 
 O **elemento HTML `<address>`** fornece informações de contato para seu ancestral {{HTMLElement("article")}} ou {{HTMLElement("body")}} mais próximo; no segundo caso, ele se aplica ao documento inteiro.

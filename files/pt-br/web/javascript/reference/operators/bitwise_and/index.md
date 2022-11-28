@@ -1,7 +1,6 @@
 ---
 title: Bitwise AND (&)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND
 ---
 
 {{jsSidebar("Operadores")}}

@@ -4,6 +4,7 @@ slug: Learn/HTML/Tables/Basics
 translation_of: Learn/HTML/Tables/Basics
 original_slug: Learn/HTML/Tablas/Conceptos_básicos_de_las_tablas_HTML
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 Este artículo te ayudará a comenzar con las tablas HTML. Vamos a exponer conceptos básicos como filas y celdas, encabezados, celdas que abarcan múltiples columnas y filas, y la forma de agrupar todas las celdas de una columna para aplicarles estilo.

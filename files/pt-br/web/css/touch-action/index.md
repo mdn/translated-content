@@ -1,8 +1,8 @@
 ---
 title: touch-action
 slug: Web/CSS/touch-action
-translation_of: Web/CSS/touch-action
 ---
+
 {{CSSRef}}
 
 A propriedade **`touch-action`** é uma especificação CSS , e forma, uma determinada região que pode ser manipulada pelo usuário através de uma tela sensível ao toque (por exemplo, recursos panorâmicos ou de zoom incorporados no navegador).
@@ -28,7 +28,7 @@ touch-action: unset;
 
 {{cssinfo}}
 
-By default, panning (scrolling) and pinching gestures are handled exclusively by the browser. An application using {{domxref("Pointer_events")}} will receive a [`pointercancel`](/Web/Events/pointercancel) event when the browser starts handling a touch gesture. By explicitly specifying which gestures should be handled by the browser, an application can supply its own behavior in [`pointermove`](Web/Events/pointermove) and [`pointerup`](/Web/Events/pointerup) listeners for the remaining gestures. Applications using {{domxref("Touch_events")}} disable the browser handling of gestures by calling {{domxref("Event.preventDefault","preventDefault()")}}, but should also use **touch-action** to ensure the browser knows the intent of the application before any event listeners have been invoked.
+By default, panning (scrolling) and pinching gestures are handled exclusively by the browser. An application using {{domxref("Pointer_events")}} will receive a [`pointercancel`](/pt-BR/docs/Web/Events/pointercancel) event when the browser starts handling a touch gesture. By explicitly specifying which gestures should be handled by the browser, an application can supply its own behavior in [`pointermove`](/pt-BR/docs/Web/Events/pointermove) and [`pointerup`](/pt-BR/docs/Web/Events/pointerup) listeners for the remaining gestures. Applications using {{domxref("Touch_events")}} disable the browser handling of gestures by calling {{domxref("Event.preventDefault","preventDefault()")}}, but should also use **touch-action** to ensure the browser knows the intent of the application before any event listeners have been invoked.
 
 When a gesture is started, the browser intersects the **touch-action** values of the touched element and all its ancestors up to the one that implements the gesture (in other words, the first containing scrolling element). This means that in practice, **touch-action** is typically applied only to individual elements which have some custom behavior, without needing to specify **touch-action** explicitly on any of that element's descendants. After a gesture has started, changes to **touch-action** values will not have any impact on the behavior of the current gesture.
 

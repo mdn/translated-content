@@ -3,6 +3,7 @@ title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 translation_of: Web/API/Element/querySelectorAll
 ---
+
 ## Общая информация
 
 Возвращает список типа [NodeList](/ru/docs/Web/API/NodeList), состоящий из всех элементов, которые являются потомками для элемента, над которым была выполнена функция и удовлетворяющим условию выборки.
@@ -60,6 +61,6 @@ querySelectorAll() был представлен как часть WebApps API.
 
 ## Смотрите также
 
-- [`document.querySelectorAll`](/ru/docs/DOM/Document.querySelectorAll "DOM/document.querySelectorAll")
-- [`document.querySelector`](/ru/docs/DOM/Document.querySelector "DOM/document.querySelector")
-- [Сниппеты для `querySelector`](/ru/docs/Code_snippets/QuerySelector "Code_snippets/QuerySelector")
+- [`document.querySelectorAll`](/ru/docs/DOM/Document.querySelectorAll)
+- [`document.querySelector`](/ru/docs/DOM/Document.querySelector)
+- [Сниппеты для `querySelector`](/ru/docs/Code_snippets/QuerySelector)

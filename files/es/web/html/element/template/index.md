@@ -6,6 +6,7 @@ tags:
 translation_of: Web/HTML/Element/template
 original_slug: Web/HTML/Elemento/template
 ---
+
 El **elemento** **HTML `<template>`** es un mecanismo para mantener el contenido {{Glossary("HTML")}} del lado del cliente que no se renderiza cuando se carga una página, pero que posteriormente puede ser instanciado durante el tiempo de ejecución empleando JavaScript.
 
 Piensa en la plantilla como un fragmento de contenido que está siendo almacenado para un uso posterior en el documento. El analizador procesa el contenido del elemento **`<template>`** durante la carga de la página, pero sólo lo hace para asegurar que esos contenidos son válidos; sin embargo, estos contenidos del elemento no se renderizan.
@@ -100,10 +101,7 @@ table td {
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG','scripting.html#the-template-element','template element')}} | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5 W3C','/scripting-1.html#the-template-element','template element')}} | {{Spec2('HTML5 W3C')}}     | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad navegadores
 

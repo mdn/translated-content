@@ -3,6 +3,7 @@ title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
 translation_of: Web/API/URL/createObjectURL
 ---
+
 {{ApiRef("URL")}}{{SeeCompatTable}}
 
 ## Определение
@@ -24,7 +25,7 @@ objectURL = URL.createObjectURL(blob);
 
 ## Пример
 
-Смотрите [Using object URLs to display images](/ru/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images "https://developer.mozilla.org/en/Using_files_from_web_applications#Example:_Using_object_URLs_to_display_images").
+Смотрите [Using object URLs to display images](/ru/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images).
 
 ## Примечания
 
@@ -41,4 +42,4 @@ objectURL = URL.createObjectURL(blob);
 ## Смотрите также
 
 - {{domxref("URL.revokeObjectURL()")}}
-- [Using files from web applications](/ru/docs/Using_files_from_web_applications "Using files from web applications")
+- [Using files from web applications](/ru/docs/Using_files_from_web_applications)

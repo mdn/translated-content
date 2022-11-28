@@ -1,8 +1,8 @@
 ---
 title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
-translation_of: Web/API/Element/querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 ## Sumário
@@ -58,7 +58,7 @@ Lembre-se que o valor retornado é uma NodeList, então não é recomendado o us
 
 ## Especificações
 
-- [Selectors API](http://www.w3.org/TR/selectors-api/)
+- [Selectors API](https://www.w3.org/TR/selectors-api/)
 
 ## Veja também
 

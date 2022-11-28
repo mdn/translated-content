@@ -3,6 +3,7 @@ title: Request.mode
 slug: Web/API/Request/mode
 translation_of: Web/API/Request/mode
 ---
+
 {{APIRef("Fetch")}}
 
 Read-only свойство **`mode`** интерфейса {{domxref("Request")}} описывает режим запроса (например, `cors`, `no-cors`, `same-origin` или `navigate`.) Используется для проверки, вызывает ли кросс-доменный запрос корректный ответ, и какие свойства ответа доступны для чтения.

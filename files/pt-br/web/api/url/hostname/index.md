@@ -1,14 +1,6 @@
 ---
 title: URL.hostname
 slug: Web/API/URL/hostname
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-browser-compat: api.URL.hostname
 ---
 
 {{ApiRef("URL API")}}

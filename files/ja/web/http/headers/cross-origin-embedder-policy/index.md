@@ -47,7 +47,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 また、 {{HTTPHeader("Cross-Origin-Opener-Policy")}} ヘッダーも同様に設定する必要がありますので、参照してください。
 
-クロスオリジンの分離に成功したかどうかを確認するには、ウィンドウとワーカーのコンテキストで利用可能な [`crossOriginIsolated`] (/ja/docs/Web/API/crossOriginIsolated) プロパティで検査してください。
+クロスオリジンの分離に成功したかどうかを確認するには、ウィンドウとワーカーのコンテキストで利用可能な {{domxref("crossOriginIsolated")}} プロパティで検査してください。
 
 ```js
 if (crossOriginIsolated) {

@@ -5,6 +5,7 @@ tags:
   - API
 translation_of: Web/API/DOMStringMap
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Used by the {{ htmlattrxref("dataset") }} HTML attribute to represent data for custom attributes added to elements.

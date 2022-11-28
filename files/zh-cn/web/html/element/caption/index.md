@@ -69,4 +69,4 @@ slug: Web/HTML/Element/caption
 
   - {{cssxref("text-align")}}, {{cssxref("caption-side")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -7,9 +7,10 @@ tags:
   - Method
 translation_of: Web/API/CanvasRenderingContext2D/getImageData
 ---
+
 {{APIRef}}
 
-**`CanvasRenderingContext2D`\*\***`.getImageData() `\*\*`-` метод Canvas 2D API, возвращает объект {{domxref("ImageData")}}, представляющий базовые пиксельные данные для области холста, обозначенного прямоугольником, который начинается в точке _(sx, sy)_ и имеет ширину _sw_ и высоту _sh_.
+**`CanvasRenderingContext2D.getImageData()`** - метод Canvas 2D API, возвращает объект {{domxref("ImageData")}}, представляющий базовые пиксельные данные для области холста, обозначенного прямоугольником, который начинается в точке _(sx, sy)_ и имеет ширину _sw_ и высоту _sh_.
 
 ## Синтаксис
 

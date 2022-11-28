@@ -12,9 +12,10 @@ tags:
 translation_of: Web/API/XMLHttpRequest/onreadystatechange
 original_slug: Web/API/XMLHttpRequest/onreadystatechange
 ---
+
 {{APIRef}}
 
-[`Обработчик события (EventHandler)`](/ru/docs/Web/API/EventHandler "A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an event handler using:"), который вызывается всякий раз, когда изменяется состояние свойства `readyState`. Свойство **`XMLHttpRequest.onreadystatechange`** содержит обработчик события, вызываемый когда происходит событие {{event("readystatechange")}}, всякий раз когда свойство {{domxref("XMLHttpRequest.readyState", "readyState")}} запроса {{domxref("XMLHttpRequest")}} изменяется. Колбэк-функция запускается из потока пользовательского интерфейса.
+[`Обработчик события (EventHandler)`](/ru/docs/Web/API/EventHandler), который вызывается всякий раз, когда изменяется состояние свойства `readyState`. Свойство **`XMLHttpRequest.onreadystatechange`** содержит обработчик события, вызываемый когда происходит событие {{event("readystatechange")}}, всякий раз когда свойство {{domxref("XMLHttpRequest.readyState", "readyState")}} запроса {{domxref("XMLHttpRequest")}} изменяется. Колбэк-функция запускается из потока пользовательского интерфейса.
 
 > **Предупреждение:** **Внимание:** Не должно использоваться при синхронных запросах и из исходного кода (native code).
 

@@ -3,6 +3,7 @@ title: Node.normalize()
 slug: Web/API/Node/normalize
 translation_of: Web/API/Node/normalize
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`Node.normalize()`** преобразует указанный узел и все его под-деревья в "нормализованный" вид. В нормализованном под-дереве нет ни пустых, ни смежных текстовых узлов.
@@ -37,4 +38,4 @@ wrapper.normalize();
 
 ## Смотрите также
 
-- [`Text.splitText`](/ru/docs/DOM/Text.splitText "DOM/Text.splitText")
+- [`Text.splitText`](/ru/docs/DOM/Text.splitText)

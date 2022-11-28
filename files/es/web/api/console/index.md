@@ -1,13 +1,11 @@
 ---
 title: Consola
 slug: Web/API/Console
-page-type: web-api-interface
-translation_of: Web/API/Console
 original_slug: Web/API/Console
-browser-compat: api.console
 l10n:
   sourceCommit: 71aac3e50b8bc5afea791d69d232dab98e1c5c0d
 ---
+
 {{APIRef("Console API")}}
 
 El objeto **`console`** provee acceso a la consola de depuración de los navegadores (p. ej. la [Consola Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) en Firefox). Los detalles de como funciona varían de navegador en navegador, pero hay un conjunto de características que _de facto_ son proporcionadas generalmente.

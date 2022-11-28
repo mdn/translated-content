@@ -5,27 +5,27 @@ slug: Web/API/PushEvent
 
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
-[Push API](/ja/docs/Web/API/Push_API) の **`PushEvent`** インターフェースは、受け取ったプッシュメッセージを表します。このイベントは、{{domxref("ServiceWorker")}} の [グローバルスコープ](/ja/docs/Web/API/ServiceWorkerGlobalScope)に送信されます。これは、アプリケーションサーバーから {{domxref("PushSubscription")}} に送信された情報を含みます。
+[Push API](/ja/docs/Web/API/Push_API) の **`PushEvent`** インターフェイスは、受け取ったプッシュメッセージを表します。このイベントは、{{domxref("ServiceWorker")}} の [グローバルスコープ](/ja/docs/Web/API/ServiceWorkerGlobalScope)に送信されます。これは、アプリケーションサーバーから {{domxref("PushSubscription")}} に送信された情報を含みます。
 
-## コンストラクタ
+## コンストラクター
 
 - {{domxref("PushEvent.PushEvent()")}}
   - : 新しい `PushEvent` オブジェクトを生成します。
 
-## プロパティ
+## インスタンスプロパティ
 
 _親である {{domxref("ExtendableEvent")}} からプロパティを継承しています。追加プロパティ：_
 
 - {{domxref("PushEvent.data")}} {{readonlyinline}}
   - : {{domxref("PushSubscription")}} に送信されたデータを含む {{domxref("PushMessageData")}} オブジェクトへの参照を返します。
 
-**メソッド**
+## インスタンスメソッド
 
 _親である {{domxref("ExtendableEvent")}} からメソッドを継承しています。_
 
 ## 例
 
-次の例は、`PushEvent` からデータを取得して、すべての service worker クライアントで表示しています。
+次の例は、`PushEvent` からデータを取得して、すべてのサービスワーカークライアントで表示しています。
 
 ```js
 self.addEventListener('push', function(event) {
@@ -55,13 +55,11 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                     | 状態                         | コメント   |
-| ------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{SpecName('Push API','#the-push-event','PushEvent')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushEvent")}}
 

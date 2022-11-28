@@ -1,13 +1,8 @@
 ---
 title: cursor
 slug: Web/CSS/cursor
-tags:
-  - CSS
-  - Cursor
-  - Referencia
-translation_of: Web/CSS/cursor
-browser-compat: css.properties.cursor
 ---
+
 {{CSSRef}}
 
 ## Sumário

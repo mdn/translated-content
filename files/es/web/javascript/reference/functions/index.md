@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions
 original_slug: Web/JavaScript/Referencia/Funciones
 ---
+
 {{jsSidebar("Functions")}}
 
 En términos generales, una función es un "subprograma" que puede ser _llamado_ por código externo (o interno en caso de recursión) a la función. Al igual que el programa en sí mismo, una función se compone de una secuencia de declaraciones, que conforman el llamado _cuerpo de la función_. Se pueden pasar valores a una función, y la función puede _devolver_ un valor.
@@ -350,7 +351,7 @@ function fuerade() {
 resultado = fuerade()(20); // retorna 20 en lugar de 10
 ```
 
-El conflicto de nombres ocurre en la sentencia `return x` y está entre el parámetro `x` del `dentro`y la variable `x` del `fuerade`. La cadena de alcance aquí es {`dentro`, `fuerade`, global object}. Por lo tanto, la `x` de `inside`tiene precedentes sobre la `x` de `fuerade`, y 20 (`dentro`de `x`) se devuelve en lugar de 10 (`fuerade` de `x`).
+El conflicto de nombres ocurre en la sentencia `return x` y está entre el parámetro `x` del `dentro` y la variable `x` del `fuerade`. La cadena de alcance aquí es {`dentro`, `fuerade`, global object}. Por lo tanto, la `x` de `inside` tiene precedentes sobre la `x` de `fuerade`, y 20 (`dentro` de `x`) se devuelve en lugar de 10 (`fuerade` de `x`).
 
 ## Constructor vs declaración vs expresión
 
@@ -424,7 +425,7 @@ Todos hacen aproximadamente la misma cosa, con algunas diferencias sutiles:
               // de la función "foo"
   ```
 
-- Una función definida por un`Function` no tiene un nombre de función. Sin embargo, en el [SpiderMonkey](/es/docs/Mozilla/Projetos/SpiderMonkey) en el motor de JavaScript, la forma serializada de la función muestra como si tuviera el nombre "anónimo"("anonymous"). Por ejemplo, `alert(new Function())` salida:
+- Una función definida por un `Function` no tiene un nombre de función. Sin embargo, en el [SpiderMonkey](/es/docs/Mozilla/Projetos/SpiderMonkey) en el motor de JavaScript, la forma serializada de la función muestra como si tuviera el nombre "anónimo"("anonymous"). Por ejemplo, `alert(new Function())` salida:
 
   ```js
   function anonymous() {

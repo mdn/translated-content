@@ -18,7 +18,7 @@ _Наследует свойства от своего родителя, {{domxr
   - : Это {{domxref("DOMString")}} представляющий тип контента загружаемый по HTML ссылке.
 
 - {{domxref("HTMLLinkElement.crossOrigin")}} {{experimental_inline}}
-  - : Is a {{domxref("DOMString")}} that corresponds to the CORS setting for this link element. See [CORS settings attributes](/ru/docs/HTML/CORS_settings_attributes "HTML/CORS settings attributes") for details.
+  - : Is a {{domxref("DOMString")}} that corresponds to the CORS setting for this link element. See [CORS settings attributes](/ru/docs/HTML/CORS_settings_attributes) for details.
 - {{domxref("HTMLLinkElement.disabled")}}
   - : Is a `Boolean` which represents whether the link is disabled; currently only used with style sheet links.
 - {{domxref("HTMLLinkElement.href")}}
@@ -55,7 +55,7 @@ _Наследует свойства от своего родителя, {{domxr
 
 ## Методы
 
-_Не имеет методов; наследует методы от своего родителя, {{domxref("HTMLElement")}}\_\_, и {{domxref("LinkStyle")}}._
+_Не имеет методов; наследует методы от своего родителя, {{domxref("HTMLElement")}}, и {{domxref("LinkStyle")}}._
 
 ## Спецификации
 

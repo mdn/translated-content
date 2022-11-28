@@ -3,19 +3,20 @@ title: MediaRecorder.start()
 slug: Web/API/MediaRecorder/start
 translation_of: Web/API/MediaRecorder/start
 ---
+
 {{APIRef("Media Recorder API")}}
 
 Метод **`MediaRecorder.start()`** (часть [MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API)) используется для начала захвата медиа {{domxref("Blob")}}.
 
 When the `start()` method is invoked, the UA queues a task that runs the following steps:
 
-1.  If the {{domxref("MediaRecorder.state")}} is not "inactive", raise a DOM `InvalidState` error and terminate these steps. if the {{domxref("MediaRecorder.state")}} is "inactive", continue on to the next step.
-2.  Set the {{domxref("MediaRecorder.state")}} to "recording" and wait until media becomes available from the `stream` passed into {{domxref("Navigator.getUserMedia")}}.
-3.  Once data becomes available, raise a {{domxref("MediaRecorder.start")}} event and start gathering the data into a {{domxref("Blob")}} (see [FILE-API](https://dvcs.w3.org/hg/dap/raw-file/default/media-stream-capture/MediaRecorder.html#bib-FILE-API)).
-4.  If the `timeSlice` argument has been provided, once that many milliseconds of data have been collected — or a minimum time slice imposed by the UA, whichever is greater — raise a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob of collected data, and start gathering a new Blob of data. If `timeSlice` has not been provided, continue gathering data into the original Blob.
-5.  When the `stream` is ended, set {{domxref("MediaRecorder.state")}} to "inactive" and stop gathering data.
-6.  Raise a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob of data.
-7.  Raise a {{domxref("MediaRecorder.stop")}} event.
+1. If the {{domxref("MediaRecorder.state")}} is not "inactive", raise a DOM `InvalidState` error and terminate these steps. if the {{domxref("MediaRecorder.state")}} is "inactive", continue on to the next step.
+2. Set the {{domxref("MediaRecorder.state")}} to "recording" and wait until media becomes available from the `stream` passed into {{domxref("Navigator.getUserMedia")}}.
+3. Once data becomes available, raise a {{domxref("MediaRecorder.start")}} event and start gathering the data into a {{domxref("Blob")}} (see [FILE-API](https://dvcs.w3.org/hg/dap/raw-file/default/media-stream-capture/MediaRecorder.html#bib-FILE-API)).
+4. If the `timeSlice` argument has been provided, once that many milliseconds of data have been collected — or a minimum time slice imposed by the UA, whichever is greater — raise a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob of collected data, and start gathering a new Blob of data. If `timeSlice` has not been provided, continue gathering data into the original Blob.
+5. When the `stream` is ended, set {{domxref("MediaRecorder.state")}} to "inactive" and stop gathering data.
+6. Raise a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob of data.
+7. Raise a {{domxref("MediaRecorder.stop")}} event.
 
 > **Примечание:** If the browser is unable to start recording or continue recording, it _will_ raise a {{domxref("DOMError")}} event, followed by a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob it has gathered, followed by the {{domxref("MediaRecorder.stop")}} event.
 

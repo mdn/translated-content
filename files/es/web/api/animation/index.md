@@ -1,17 +1,8 @@
 ---
 title: Animation
 slug: Web/API/Animation
-tags:
-  - API
-  - Animacion
-  - Experimental
-  - Interfaz
-  - Reeferencia
-  - Web Animations
-  - waapi
-  - web animation api
-translation_of: Web/API/Animation
 ---
+
 {{ APIRef("Web Animations") }}
 
 La interfaz `Animation` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) representa un reproductor de animación y proporciona controles de reproducción y una línea de tiempo para un nodo o una fuente de animación.

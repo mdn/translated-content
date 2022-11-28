@@ -13,9 +13,10 @@ tags:
   - TopicStub
 translation_of: Web/API/IDBIndex
 ---
+
 {{APIRef("IndexedDB")}}
 
-`IDBIndex` interface of the [IndexedDB API](/en/IndexedDB "en/IndexedDB") provides asynchronous access to an [index](/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_index "en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_index") in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.
+`IDBIndex` interface of the [IndexedDB API](/en/IndexedDB) provides asynchronous access to an [index](/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_index) in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.
 
 You can retrieve records in an object store through the primary key or by using an index. An index lets you look up records in an object store using properties of the values in the object stores records other than the primary key
 
@@ -36,7 +37,7 @@ You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyR
 - {{domxref("IDBIndex.objectStore")}} {{readonlyInline}}
   - : The name of the object store referenced by this index.
 - {{domxref("IDBIndex.keyPath")}} {{readonlyInline}}
-  - : The [key path](/en/IndexedDB#gloss_key_path "en/IndexedDB#gloss key path") of this index. If null, this index is not [auto-populated](/en/IndexedDB/Index#gloss_auto-populated "en/IndexedDB/Index#gloss auto-populated").
+  - : The [key path](/en/IndexedDB#gloss_key_path) of this index. If null, this index is not [auto-populated](/en/IndexedDB/Index#gloss_auto-populated).
 - {{domxref("IDBIndex.multiEntry")}} {{readonlyInline}}
   - : Affects how the index behaves when the result of evaluating the index's key path yields an array. If `true`, there is one record in the index for each item in an array of keys. If `false`, then there is one record for each key that is an array.
 - {{domxref("IDBIndex.unique")}} {{readonlyInline}}
@@ -44,7 +45,7 @@ You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyR
 
 ## Methods
 
-Inherits from: [EventTarget](/en/DOM/EventTarget "en/DOM/EventTarget")
+Inherits from: [EventTarget](/en/DOM/EventTarget)
 
 - {{domxref("IDBIndex.count()")}}
   - : Returns an {{domxref("IDBRequest")}} object, and in a separate thread, returns the number of records within a key range.
@@ -57,7 +58,7 @@ Inherits from: [EventTarget](/en/DOM/EventTarget "en/DOM/EventTarget")
 - {{domxref("IDBIndex.getAllKeys()")}}
   - : Returns an {{domxref("IDBRequest")}} object, in a separate thread, finds all matching keys in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
 - {{domxref("IDBIndex.openCursor()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [cursor](/en/IndexedDB#gloss_cursor "en/IndexedDB#gloss cursor") over the specified key range.
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [cursor](/en/IndexedDB#gloss_cursor) over the specified key range.
 - {{domxref("IDBIndex.openKeyCursor()")}}
   - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a cursor over the specified key range, as arranged by this index.
 

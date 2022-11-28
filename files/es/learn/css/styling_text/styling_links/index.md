@@ -3,6 +3,7 @@ title: Dar estilo a los enlaces
 slug: Learn/CSS/Styling_text/Styling_links
 translation_of: Learn/CSS/Styling_text/Styling_links
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 A la hora de dar estilo a los [enlaces](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks), es importante comprender cómo utilizar las pseudoclases para diseñar los estados de un enlace de manera efectiva y cómo diseñar enlaces para su uso en diversas funciones de interfaz comunes, como menús y pestañas de navegación. Veremos todos estos temas en este artículo.

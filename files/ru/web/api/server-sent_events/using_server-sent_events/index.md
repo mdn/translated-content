@@ -3,6 +3,7 @@ title: Using server-sent events
 slug: Web/API/Server-sent_events/Using_server-sent_events
 translation_of: Web/API/Server-sent_events/Using_server-sent_events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 Разрабатывать web-приложения, использующие [Server-Sent Events](/ru/docs/Web/API/Server-sent_events) намного проще, чем с использованием websockets. Нужно всего лишь немного кода на стороне сервера, чтобы переправлять события web-приложению, но клиентская часть кода для обработки этих событий работает почти точно так же, как и для любых других событий.
@@ -123,7 +124,7 @@ evtSource.close();
 - `data`
   - : Поле данных для сообщения. Когда `EventSource` получает несколько последовательных строк, начинающихся с `data:`, [он объединяет их](http://www.w3.org/TR/eventsource/#dispatchMessage), вставляя символ новой строки между каждой из них. Последние переводы строки удаляются.
 - `id`
-  - : Идентификатор события для установки значения последнего ID события для объекта [`EventSource`](/en/Server-sent_events/EventSource "en/Server-sent events/EventSource").
+  - : Идентификатор события для установки значения последнего ID события для объекта [`EventSource`](/en/Server-sent_events/EventSource).
 - `retry`
   - : Время переподключения, используемое при попытке отправить событие. Это должно быть целое число, указывающее время переподключения в миллисекундах. Если указано нецелое значение, поле игнорируется.
 

@@ -9,6 +9,7 @@ tags:
   - Производительность
 translation_of: Web/API/Navigation_timing_API
 ---
+
 {{DefaultAPISidebar("Navigation Timing")}}
 
 **Navigation Timing API** предоставляет данные, которые могут быть использованы для измерения производительности веб-сайта. В отличие от других механизмов на основе JavaScript, которые были использованы с той же целью, этот API может предоставить полную и точную информацию о задержке в получении данных.
@@ -83,4 +84,4 @@ var connectTime = perfData.responseEnd - perfData.requestStart;
 
 ## Совместимость с браузерами
 
-{{Compat("api.PerformanceTiming")}}
+{{Compat}}

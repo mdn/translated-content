@@ -55,7 +55,7 @@ original_slug: MDN/About
 
 Если вы желаете внести свой вклад в эту вики, то вам нужно сделать свою документацию доступной по лицензии Attribution-ShareAlike (или альтернативной лицензии, указанной на странице, которую вы редактируете), и ваши образцы кода станут доступными под [Creative Commons CC-0](http://creativecommons.org/publicdomain/zero/1.0/) (и станут общественным достоянием). Добавление в эту вики означает, что вы согласны с тем, что ваш вклад будет доступен под этими лицензиями.
 
-Некоторое более раннее содержимое было предоставлено по лицензии, отличной от указанных выше лицензий; они указаны внизу каждой страницы в виде [Alternate License Block](/Archive/Meta_docs/Examples/Alternate_License_Block "Project:En/Examples/Alternate License Block").
+Некоторое более раннее содержимое было предоставлено по лицензии, отличной от указанных выше лицензий; они указаны внизу каждой страницы в виде [Alternate License Block](/Archive/Meta_docs/Examples/Alternate_License_Block).
 
 > **Предупреждение:** Никакие новые страницы не могут быть созданы с использованием альтернативных лицензий.
 
@@ -91,7 +91,7 @@ original_slug: MDN/About
 
 ## История MDN
 
-Сайт веб-документации MDN (ранее _Mozilla Developer Network (MDN)_, ранее _Mozilla Developer Center (MDC)_, a.k.a. _Devmo_), проект начал свою деятельность в начале 2005 года, когда [Mozilla Foundation](http://www.mozillafoundation.org) получила лицензию от AOL на использование оригинального контента Netscape [DevEdge](https://web.archive.org/web/*/devedge.netscape.com "Project:en/DevEdge"). DevEdge всё ещё создавал полезный материал, который затем был перенесён в эту вики, для того, чтобы его было легче обновлять и поддерживать.
+Сайт веб-документации MDN (ранее _Mozilla Developer Network (MDN)_, ранее _Mozilla Developer Center (MDC)_, a.k.a. _Devmo_), проект начал свою деятельность в начале 2005 года, когда [Mozilla Foundation](http://www.mozillafoundation.org) получила лицензию от AOL на использование оригинального контента Netscape [DevEdge](https://web.archive.org/web/*/devedge.netscape.com). DevEdge всё ещё создавал полезный материал, который затем был перенесён в эту вики, для того, чтобы его было легче обновлять и поддерживать.
 
 Вы можете найти больше информации об истории MDN на нашей странице [празднования десятилетия](/ru/docs/MDN_at_ten), включающую истории людей, принимавших непосредственное участие в проекте.
 

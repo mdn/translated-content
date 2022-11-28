@@ -24,8 +24,8 @@ elements = document.getElementsByTagNameNS(namespace,name)
 ```
 
 - `elements` est une {{domxref("NodeList")}} (_liste de noeud_) directe (mais voir le note ci-dessous) d'éléments trouvés dans l'ordre de leur apparition dans l'arbre.
-- `namespace` l'URI d'espace de noms des éléments à rechercher (voir [`element.namespaceURI`](/en/DOM/Node.namespaceURI)).
-- `name` est, soit le nom local des éléments à rechercher, soit la valeur spéciale `"*"` pour tous les éléments (voir [`element.localName`](/en/DOM/Node.localName)).
+- `namespace` l'URI d'espace de noms des éléments à rechercher (voir [`element.namespaceURI`](/fr/docs/Web/API/Element/namespaceURI)).
+- `name` est, soit le nom local des éléments à rechercher, soit la valeur spéciale `"*"` pour tous les éléments (voir [`element.localName`](/fr/docs/Web/API/Element/localName)).
 
 > **Note :** Tandis que la spécification W3C indique que les `elements` sont des `NodeList`, cette méthode renvoie une {{domxref("HTMLCollection")}} dans Gecko et Internet Explorer. Opera retourne une `NodeList`, mais avec une méthode implémentée `namedItem`, ce qui la rend similaire à une `HTMLCollection`. À partir de Janvier 2012, dans les navigateurs WebKit seulement, la valeur retournée est une pure `NodeList`. Voir [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) pour plus de détails.
 

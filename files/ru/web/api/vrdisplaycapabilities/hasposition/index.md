@@ -5,6 +5,7 @@ tags:
   - Виртуальная реальность
 translation_of: Web/API/VRDisplayCapabilities/hasPosition
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`hasPosition`** read-only property of the {{domxref("VRDisplayCapabilities")}} interface returns a {{domxref("Boolean")}} stating whether the VR display can track and return position information.

@@ -10,6 +10,7 @@ tags:
   - Событие
 translation_of: Web/API/Event
 ---
+
 {{APIRef("DOM")}}
 
 Интерфейс **`Event`** представляет собой любое событие, которое происходит в [DOM](/ru/docs/DOM/DOM_Reference); некоторые из них генерируемые пользователем (клик мышью или нажатие клавиши на клавиатуре), а некоторые - генерируемые API (события, обозначающие завершение процесса анимации, приостановка видео и т.д.). Существует много типов событий, некоторые из них используют интерфейсы, базирующиеся на главном интерфейсе `Event`. `Event` содержит общие свойства и методы для всех событий.
@@ -119,7 +120,7 @@ translation_of: Web/API/Event
   - : Создаёт новое событие, которое затем должно быть проинициализировано вызовом его метода `initEvent()`.
 
 - {{domxref("Event.initEvent()")}} {{deprecated_inline}}
-  - : Инициализация значений созданного с помощью [Document.createEvent()](/ru/docs/Web/API/Document/createEvent "Creates an event of the type specified. The returned object should be first initialized and can then be passed to element.dispatchEvent.") события. Если событие уже отправлено, то эта функция ничего не делает.
+  - : Инициализация значений созданного с помощью [Document.createEvent()](/ru/docs/Web/API/Document/createEvent) события. Если событие уже отправлено, то эта функция ничего не делает.
 - {{domxref("Event.preventBubble()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}
   - : Предотвращает всплытие события. Устаревшая, используйте вместо неё {{domxref("event.stopPropagation")}}.
 - {{domxref("Event.preventCapture()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}

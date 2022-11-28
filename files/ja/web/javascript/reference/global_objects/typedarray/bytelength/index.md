@@ -32,9 +32,7 @@ uint8.byteLength; // 6 (due to the offset of the constructed Uint8Array)
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.bytelength', 'TypedArray.prototype.byteLength')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -51,7 +51,7 @@ const decodedData = window.atob(encodedData); // 文字列をデコード
 
 ## ブラウザーの互換性
 
-{{Compat("api.WindowOrWorkerGlobalScope.atob")}}
+{{Compat}}
 
 ## 関連情報
 

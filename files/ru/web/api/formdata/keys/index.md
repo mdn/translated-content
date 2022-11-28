@@ -3,6 +3,7 @@ title: FormData.keys()
 slug: Web/API/FormData/keys
 translation_of: Web/API/FormData/keys
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData.keys()`** метод возвращает {{jsxref("Iteration_protocols",'iterator')}} позволяя пройтись по всем ключам содержащимся в этом объекте. Ключи являются {{domxref("USVString")}} объектами.
@@ -51,6 +52,6 @@ key2
 ## Смотрите также
 
 - {{domxref("XMLHTTPRequest")}}
-- [Использование XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Использование объектов FormData](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- [Использование XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Использование объектов FormData](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

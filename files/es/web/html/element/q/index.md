@@ -15,7 +15,8 @@ tags:
 translation_of: Web/HTML/Element/q
 original_slug: Web/HTML/Elemento/q
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El **elemento HTML `<q>`** indica que el texto adjunto es una cita corta en línea. La mayoría de los navegadores modernos implementan esto rodeando el texto entre comillas. Este elemento está destinado a citas breves que no requieren saltos de párrafo; para citas de bloque independiente, utiliza el elemento {{HTMLElement("blockquote")}}.
 
@@ -102,11 +103,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                               | Comentario         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{ SpecName('HTML WHATWG', 'semantics.html#the-q-element', '&lt;q&gt;') }}         | {{ Spec2('HTML WHATWG') }} |                    |
-| {{ SpecName('HTML5 W3C', 'textlevel-semantics.html#the-q-element', '&lt;q&gt;') }} | {{ Spec2('HTML5 W3C') }}     |                    |
-| {{ SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;q&gt;') }}                     | {{ Spec2('HTML4.01') }}     | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

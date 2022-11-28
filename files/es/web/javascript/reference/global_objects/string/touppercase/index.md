@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/toUpperCase
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 ## Resumen

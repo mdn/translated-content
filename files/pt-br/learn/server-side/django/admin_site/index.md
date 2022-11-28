@@ -1,17 +1,8 @@
 ---
 title: 'Tutorial Django Parte 4: Django admin site'
 slug: Learn/Server-side/Django/Admin_site
-tags:
-  - Aprender
-  - Artigo
-  - Iniciante
-  - Python
-  - Tutorial
-  - django
-  - django_admin
-  - lado servidor (server-side)
-translation_of: Learn/Server-side/Django/Admin_site
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 
 Agora que criamos modelos para o site da [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_website_biblioteca_local), usaremos o site do Django Admin para adicionar alguns dados de livros "reais". Primeiro, mostraremos como registrar os modelos no site de administração, depois mostraremos como fazer login e criar alguns dados. No final do artigo, mostraremos algumas maneiras de melhorar ainda mais a apresentação do site Admin.

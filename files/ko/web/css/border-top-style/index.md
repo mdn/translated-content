@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-top-style
 ---
+
 {{CSSRef}}
 
 **`border-top-style`** [CSS](/ko/docs/Web/CSS) 속성은 요소 테두리의 위쪽 스타일을 지정합니다.

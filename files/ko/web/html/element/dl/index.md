@@ -11,7 +11,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/dl
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<dl>` 요소**는 설명 목록을 나타냅니다. `<dl>`은 {{htmlelement("dt")}}로 표기한 용어와 {{htmlelement("dd")}} 요소로 표기한 설명 그룹의 목록을 감싸서 설명 목록을 생성합니다. 주로 용어사전 구현이나 메타데이터(키-값 쌍 목록)를 표시할 때 사용합니다.
 

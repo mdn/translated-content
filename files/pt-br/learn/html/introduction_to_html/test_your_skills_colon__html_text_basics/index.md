@@ -1,15 +1,9 @@
 ---
 title: 'Teste suas habilidades: Noções básicas de texto HTML'
 slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics
-tags:
-  - HTML
-  - Iniciante
-  - Teste suas habilidades
-  - Texto
-  - aprendizado
-translation_of: Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics
 original_slug: Aprender/HTML/Introducao_ao_HTML/Test_your_skills:_HTML_text_basics
 ---
+
 {{learnsidebar}}
 
 O objetivo deste teste de habilidades é avaliar se você entendeu nosso artigo [Fundamentos do texto em HTML.](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML)

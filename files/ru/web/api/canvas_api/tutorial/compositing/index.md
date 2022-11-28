@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/Canvas_API/Tutorial/Compositing
 original_slug: Web/API/Canvas_API/Tutorial/Композиции
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 Во всех наших [предыдущих примерах](/ru/docs/Web/API/Canvas_API/Tutorial/Transformations), фигуры всегда были нарисованы одна поверх другой. Это более чем достаточно для большинства ситуаций, но это ограничивает порядок, в котором построены композиционные формы. Однако, мы можем изменить это поведение, установив свойство `globalCompositeOperation`. Кроме того, свойства `clip` позволяет скрыть нежелательные части формы.
@@ -27,7 +28,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Композиции
 
 Если мы сравниваем отсечённый контур со свойством `globalCompositeOperation` на изображении, мы видим два режима композитинга, которые достигают более или менее того же эффекта в исходном и исходном состоянии. Наиболее важные различия между ними заключаются в том, что отсечение контура фактически никогда не обращается к холсту и контур обрезки никогда не влияет добавление новых форм. Это делает обрезку контура идеальным для рисования нескольких фигур в ограниченной области.
 
-В главе о [рисовании форм](/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes "Web/Guide/HTML/Canvas_tutorial/Drawing_shapes#Drawing_paths"), я назвал только `stroke()` и `fill()` методы, но есть третий способ можно использовать с контурами, так называемый `clip()`.
+В главе о [рисовании форм](/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), я назвал только `stroke()` и `fill()` методы, но есть третий способ можно использовать с контурами, так называемый `clip()`.
 
 - {{domxref("CanvasRenderingContext2D.clip", "clip()")}}
   - : Преобразует текущий выстраиваемый контур в отсечённый контур.

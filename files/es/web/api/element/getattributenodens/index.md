@@ -1,13 +1,8 @@
 ---
 title: Element.getAttributeNodeNS()
 slug: Web/API/Element/getAttributeNodeNS
-tags:
-  - API
-  - DOM
-  - Referencia
-  - metodo
-translation_of: Web/API/Element/getAttributeNodeNS
 ---
+
 {{ APIRef }}
 
 ## Sumario

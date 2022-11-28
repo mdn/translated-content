@@ -130,7 +130,7 @@ Object.getOwnPropertyNames('foo');
 
 ## Firefox-specific notes
 
-Firefox 28 {{geckoRelease("28")}}之前，`Object.getOwnPropertyNames` 不会获取到 {{jsxref("Error")}} 对象的属性。该 bug 在后面的版本修复了 ({{bug("724768")}})。
+Firefox 28 之前，`Object.getOwnPropertyNames` 不会获取到 {{jsxref("Error")}} 对象的属性。该 bug 在后面的版本修复了 ({{bug("724768")}})。
 
 ## 相关链接
 

@@ -1,9 +1,11 @@
 ---
 title: <input type="reset">
 slug: Web/HTML/Element/input/reset
+l10n:
+  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`reset`** 型はボタンとして表示され、既定の {{domxref("Element/click_event", "click")}} イベントのハンドラーは、フォーム内の入力欄すべてを初期値にリセットします。
 
@@ -14,10 +16,8 @@ slug: Web/HTML/Element/input/reset
 <table class="properties">
   <tbody>
     <tr>
-      <td>
-        <strong><a href="#value">値</a></strong>
-      </td>
-      <td>ボタンのラベルとして使用する {{domxref("DOMString")}}</td>
+      <td><strong><a href="#value">値</a></strong></td>
+      <td>ボタンのラベルとして使用する文字列</td>
     </tr>
     <tr>
       <td><strong>イベント</strong></td>
@@ -35,6 +35,10 @@ slug: Web/HTML/Element/input/reset
       <td><code>value</code></td>
     </tr>
     <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>メソッド</strong></td>
       <td>なし</td>
     </tr>
@@ -43,21 +47,23 @@ slug: Web/HTML/Element/input/reset
 
 ## 値
 
-`<input type="reset">` 要素の {{htmlattrxref("value", "input")}} 属性は、ボタンのラベルとして表示される {{domxref("DOMString")}} を示します。 `reset` などのボタンは他の値を持ちません。
+`<input type="reset">` 要素の {{htmlattrxref("value", "input")}} 属性は、ボタンのラベルとして表示される文字列を示します。 `reset` などのボタンは他の値を持ちません。
+
+### value 属性の設定
 
 ```html
-<input type="reset" value="フォームをリセット">
+<input type="reset" value="フォームをリセット" />
 ```
 
-{{EmbedLiveSample("summary-example3", 650, 30)}}
+{{EmbedLiveSample("Setting_the_value_attribute", 650, 30)}}
 
 `value` を指定しなかった場合は、既定のラベルが付いたボタンが表示されます (通常は「リセット」ですが、{{Glossary("user agent", "ユーザーエージェント")}}によって異なります)。
 
 ```html
-<input type="reset">
+<input type="reset" />
 ```
 
-{{EmbedLiveSample("summary-example1", 650, 30)}}
+{{EmbedLiveSample("Omitting_the_value_attribute", 650, 30)}}
 
 ## リセットボタンの使用
 
@@ -70,11 +76,11 @@ slug: Web/HTML/Element/input/reset
 ```html
 <form>
   <div>
-    <label for="example">Type in some sample text</label>
-    <input id="example" type="text">
+    <label for="example">何かテキストの例を入力してください</label>
+    <input id="example" type="text" />
   </div>
   <div>
-    <input type="reset" value="フォームをリセット">
+    <input type="reset" value="フォームをリセット" />
   </div>
 </form>
 ```
@@ -94,12 +100,11 @@ slug: Web/HTML/Element/input/reset
 ```html
 <form>
   <div>
-    <label for="example">Type in some sample text</label>
-    <input id="example" type="text">
+    <label for="example">何かテキストの例を入力してください</label>
+    <input id="example" type="text" />
   </div>
   <div>
-    <input type="reset" value="Reset the form"
-     accesskey="r">
+    <input type="reset" value="フォームをリセット" accesskey="r" />
   </div>
 </form>
 ```
@@ -113,12 +118,12 @@ slug: Web/HTML/Element/input/reset
 リセットボタンを無効化するには、以下のようにグローバル属性の {{htmlattrxref("disabled")}} を指定するだけです。
 
 ```html
-<input type="reset" value="Disabled" disabled>
+<input type="reset" value="Disabled" disabled />
 ```
 
 実行時に `disabled` を `true` または `false` に設定することで、ボタンを有効化したり無効化したりすることができます。 JavaScript では、これは `btn.disabled = true` や `btn.disabled = false` のようになります。
 
-> **メモ:** ボタンの有効化や無効化についてのより詳しい情報は、 [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) のページを参照してください。
+> **メモ:** ボタンの有効化や無効化についてのより詳しい情報は、 [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button#ボタンの無効化と有効化) のページを参照してください。
 
 ## 検証
 
@@ -130,10 +135,7 @@ slug: Web/HTML/Element/input/reset
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | 状態                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#reset-button-state-(type=reset)', '&lt;input type="reset"&gt;')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'forms.html#reset-button-state-(type=reset)', '&lt;input type="reset"&gt;')}} | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -142,8 +144,8 @@ slug: Web/HTML/Element/input/reset
 ## 関連情報
 
 - {{HTMLElement("input")}} およびそれが実装している {{domxref("HTMLInputElement")}} インターフェイス
-- [フォームとボタン](/ja/docs/Learn/Forms/Basic_native_form_controls#Actual_buttons)
+- [フォームとボタン](/ja/docs/Learn/Forms/Basic_native_form_controls#実際のボタン)
 - [フォーム (アクセシビリティ)](/ja/docs/Web/Accessibility/ARIA/forms)
-- [HTML フォーム](/ja/docs/Learn/HTML/Forms)
+- [HTML フォーム](/ja/docs/Learn/Forms)
 - {{HTMLElement("button")}} 要素
 - [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -1,8 +1,8 @@
 ---
 title: MutationObserver
 slug: Web/API/MutationObserver
-translation_of: Web/API/MutationObserver
 ---
+
 {{APIRef("DOM")}}
 
 MutationObserver fornece aos desenvolvedores uma maneira de reagir a mudanças em um [DOM](/pt-BR/docs/DOM). Ele é concebido como um substituto para [Mutation Events](/pt-BR/docs/DOM/Mutation_events) definido na especificação de eventos DOM nível 3.

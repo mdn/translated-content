@@ -14,8 +14,6 @@ original_slug: Web/API/File/Using_files_from_web_applications
 
 Grâce à l'API File ajoutée au DOM avec HTML5, il est maintenant possible depuis une page web de proposer à l'utilisateur de sélectionner des fichiers locaux, puis d'en lire le contenu. Cette sélection est possible en utilisant un élément HTML {{ HTMLElement("input") }} ou par glisser-déposer.
 
-Vous pouvez utiliser si vous le souhaitez l'API DOM File depuis du code chrome d'extensions ou d'un autre navigateur&nbsp;; notez cependant qu'il existe des fonctionnalités additionnelles auxquelles il vous faudra être attentif. Reportez-vous à [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code) pour plus de détails.
-
 ## Accéder au(x) fichier(s) sélectionné(s)
 
 Examinez ce code HTML&nbsp;:
@@ -197,7 +195,7 @@ dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 ```
 
-Dans cet exemple, l'élément portant l'ID `dropbox` devient notre zone de dépôt en y ajoutant les gestionnaires d'écoute des événements {{event('dragenter')}}, {{event('dragover')}}, et {{event('drop')}}.
+Dans cet exemple, l'élément portant l'ID `dropbox` devient notre zone de dépôt en y ajoutant les gestionnaires d'écoute des événements [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event), [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event), et [`drop`](/fr/docs/Web/API/HTMLElement/drop_event).
 
 Nous n'avons pas vraiment besoin dans notre cas de gérer les événements `dragenter` et `dragover`. Les deux fonctions associées restent donc assez simples, elle ne servent qu'à stopper la propagation de l'événement et empêcher le déclenchement de l'action par défaut&nbsp;:
 
@@ -257,7 +255,7 @@ function handleFiles(files) {
 
 La boucle qui manipule dans notre cas les fichiers sélectionnés par l'utilisateur examine l'attribut type de chaque fichier et contrôle qu'il s'agit bien d'une image (en utilisant une expression régulière pour vérifier la correspondance du type MIME avec la chaîne "`image/*`"). Nous créons un nouvel élément img pour chaque fichier image. Vous pouvez utiliser du CSS pour définir d'agréables bordures ou effets d'ombres ou encore pour préciser la taille de l'image \[de l'élément `img`, NDT], même si cela n'est pas nécessaire ici.
 
-La classe CSS ob`j` est ajoutée à chaque élément image afin de faciliter sa recherche dans l'arbre du DOM, ainsi qu'un attribut `file` spécifiant le {{ domxref("File") }} correspondant et qui nous permettra de récupérer les fichiers images lors du téléchargement effectif vers le serveur. Nous utilisons {{ domxref("Node.appendChild()") }} pour ajouter la nouvelle miniature à la zone de prévisualisation de notre document.
+La classe CSS `obj` est ajoutée à chaque élément image afin de faciliter sa recherche dans l'arbre du DOM, ainsi qu'un attribut `file` spécifiant le {{ domxref("File") }} correspondant et qui nous permettra de récupérer les fichiers images lors du téléchargement effectif vers le serveur. Nous utilisons {{ domxref("Node.appendChild()") }} pour ajouter la nouvelle miniature à la zone de prévisualisation de notre document.
 
 Nous définissons ensuite le {{ domxref("FileReader") }} qui gérera le chargement asynchrone de l'image et son lien à l'élément `img`. Après avoir créé le nouvel objet `FileReader`, nous définissons sa fonction `onload` pouis nous appelons `readAsDataURL()` pour démarrer l'opération de lecture en tâche de fond. Lorsque le chargement du fichier image est complètement terminé, son contenu est converti en `data`&nbsp;: c'est l'URL transmise à la fonction de rappel `onload`. Notre implémentation de cette procédure définit l'image chargée comme valeur de l'attribut `src` de l'élement `img`, faisant ainsi apparaître l'image dans la miniature à l'écran.
 
@@ -271,7 +269,7 @@ Vous pouvez procéder ainsi pour créer un objet URL lorsque vous souhaitez réf
 var objectURL = window.URL.createObjectURL(fileObj);
 ```
 
-L'objet URL est une chaîne identifiant l'objet {{ domxref("File") }}. Un objet URL unique est créé à chaque fois que vous appelez {{ domxref("window.URL.createObjectURL()") }}, même si vous avez déjà créé un objet URL pour ce fichier. Chacun d'eux doit être libéré&nbsp;; bien qu'ils soient automatiquement libérés lorsque le document est déchargé, vous devez explicitement les libérer en appelant {{ domxref("window.URL.revokeObjectURL()") }}  si votre page les utilise de manière dynamique&nbsp;:
+L'objet URL est une chaîne identifiant l'objet {{ domxref("File") }}. Un objet URL unique est créé à chaque fois que vous appelez {{ domxref("window.URL.createObjectURL()") }}, même si vous avez déjà créé un objet URL pour ce fichier. Chacun d'eux doit être libéré&nbsp;; bien qu'ils soient automatiquement libérés lorsque le document est déchargé, vous devez explicitement les libérer en appelant {{ domxref("window.URL.revokeObjectURL()") }} si votre page les utilise de manière dynamique&nbsp;:
 
 ```js
 window.URL.revokeObjectURL(objectURL);
@@ -514,10 +512,9 @@ window.URL.revokeObjectURL(obj_url);
 
 ## Voir aussi
 
-- {{ domxref("File") }}
-- {{ domxref("FileList") }}
-- {{ domxref("FileReader") }}
-- [Utiliser XMLHttpRequest](/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
-- [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code)
-- {{ domxref("XMLHttpRequest") }}
-- [jQuery](http://www.jquery.com/) JavaScript library
+- {{DOMxRef("File")}}
+- {{DOMxRef("FileList")}}
+- {{DOMxRef("FileReader")}}
+- {{DOMxRef("URL")}}
+- {{DOMxRef("XMLHttpRequest")}}
+- [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

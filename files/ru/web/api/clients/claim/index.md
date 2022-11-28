@@ -3,6 +3,7 @@ title: Clients.claim()
 slug: Web/API/Clients/claim
 translation_of: Web/API/Clients/claim
 ---
+
 {{APIRef("Service Worker Clients")}}
 
 Метод **`claim()`** интерфейса {{domxref("Clients")}} позволяет активному сервис-воркеру установить себя {{domxref("ServiceWorkerContainer.controller", "контролирующим воркером")}} для всех клиентских страниц в своей {{domxref("ServiceWorkerRegistration.scope", "области видимости")}}. Вызывает событие "`controllerchange`" на {{domxref("ServiceWorkerContainer","navigator.serviceWorker")}} всех клиентских страниц, контролируемых сервис-воркером.
@@ -21,7 +22,7 @@ await clients.claim();
 
 ### Результат
 
-[`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise is in one of these states:") с `undefined`.
+[`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) с `undefined`.
 
 ## Пример
 

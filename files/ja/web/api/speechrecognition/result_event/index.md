@@ -1,70 +1,78 @@
 ---
-title: SpeechRecognition.onresult
+title: 'SpeechRecognition: result イベント'
 slug: Web/API/SpeechRecognition/result_event
 original_slug: Web/API/SpeechRecognition/onresult
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
-{{domxref("SpeechRecognition")}}インターフェイスの **`onresult`** プロパティは、音声認識サービスが結果を返した時に、つまり正しく言葉や文法が認識でき、アプリに通信した時 ({{event("result")}}イベントが発生した時) に、実行するイベントハンドラーになります。
+**`result`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のイベントで、音声認識サービスが結果を返したとき、つまり単語やフレーズが正の値で認識され、それがアプリに伝達されたときに発行されます。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('result', (event) => { })
+
+onresult = (event) => { }
 ```
-mySpeechRecognition.onresult = function() { ... };
-```
+
+## イベント型
+
+{{domxref("SpeechRecognitionEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("SpeechRecognitionEvent")}}
+
+## イベントプロパティ
+
+_以下に列挙したプロパティに加えて、親インターフェイスである {{domxref("Event")}} から継承したプロパティも利用できます。_
+
+- {{domxref("SpeechRecognitionEvent.emma")}} {{ReadOnlyInline}}
+  - : 結果の EMMA (Extensible MultiModal Annotation markup language) - XML - 表現を返します。
+- {{domxref("SpeechRecognitionEvent.interpretation")}} {{ReadOnlyInline}}
+  - : ユーザーが言ったことの意味づけを返します。
+- {{domxref("SpeechRecognitionEvent.resultIndex")}} {{ReadOnlyInline}}
+  - : 実際に変更された {{domxref("SpeechRecognitionResultList")}} 「配列」の中で最もインデックス値の小さい結果を返します。
+- {{domxref("SpeechRecognitionEvent.results")}} {{ReadOnlyInline}}
+  - : 現在のセッションのすべての音声認識結果を表す {{domxref("SpeechRecognitionResultList")}} オブジェクトを返します。
 
 ## 例
 
-下記のソースコードは [Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) の例文から取り出しました。
+下記のソースコードは [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) の例を参考しています
+
+`result` イベントは、 [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
 
 ```js
-recognition.onresult = function(event) {
-  // SpeechRecognitionEvent プロパティーは SpeechRecognitionResultList オブジェクトを返しました。
-  // SpeechRecognitionResult オブジェクトは SpeechRecognitionResultList オブジェクトにあります。
-  // ゲッターがあるので、配列のように呼び出すことができます。
-  // 最初の[0]は 0 の位置にある SpeechRecognitionResult を返します。
-  // それぞれの結果がある SpeechRecognitionAlternative オブジェクトは各位SpeechRecognitionResult オブジェクトにあります。
-  // それもゲッターがあるので、配列のように呼び出すことができます。
-  // ２つ目の[0]は 0 の位置にある SpeechRecognitionAlternative を返します。
-  // SpeechRecognitionAlternative オブジェクトの transcript プロパティを返します。
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = '結果：' + color + '.';
+const recognition = new SpeechRecognition();
+
+recognition.addEventListener('result', (event) => {
+  const color = event.results[0][0].transcript;
+  diagnostic.textContent = `結果を受信しました: ${color}.`;
+  bg.style.backgroundColor = color;
+});
+```
+
+または `onresult` イベントハンドラープロパティを使用してください。
+
+```js
+recognition.onresult = (event) => {
+  const color = event.results[0][0].transcript;
+  diagnostic.textContent = `結果を受信しました: ${color}.`;
   bg.style.backgroundColor = color;
 }
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                             | 状態                                 | コメント |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Web Speech API', '#dfn-onresult', 'onresult')}} | {{Spec2('Web Speech API')}} |          |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.SpeechRecognition.onresult")}}
-
-### Firefox OS の権限
-
-アプリで音声認識を利用する前に、下記の権限を [manifest](/ja/docs/Web/Apps/Build/Manifest) に追加する必要があります。
-
-```json
-"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
-  }
-}
-```
-
-privileged アプリ権限も必要なので、下記も追加が必要です。
-
-```json
-  "type": "privileged"
-```
+{{Compat}}
 
 ## 関連情報
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)

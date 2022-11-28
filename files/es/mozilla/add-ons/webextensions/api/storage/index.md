@@ -16,6 +16,7 @@ tags:
   - extensiones
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 ---
+
 {{AddonSidebar}}
 
 Permite que las extensiones almacenen y recuperen datos, y escuchen los cambios realizados en los elementos almacenados.

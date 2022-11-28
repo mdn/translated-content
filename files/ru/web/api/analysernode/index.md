@@ -3,6 +3,7 @@ title: AnalyserNode
 slug: Web/API/AnalyserNode
 translation_of: Web/API/AnalyserNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 `AnalyserNode` интерфейс который предоставляет частоту (frequency) в реальном времени. Элемент {{domxref("AudioNode")}} который пропускает аудиопоток неизменным от ввода (input) до вывода (output), но позволяет использовать генерируемые данные, обрабатывать или создавать аудиовизуализацию.
@@ -52,7 +53,7 @@ translation_of: Web/API/AnalyserNode
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("AnalyserNode.fftSize")}}
-  - : Is an unsigned long value representing the size of the FFT ([Fast Fourier Transform](http://en.wikipedia.org/wiki/Fast_Fourier_transform "/en-US/docs/")) to be used to determine the frequency domain.
+  - : Is an unsigned long value representing the size of the FFT ([Fast Fourier Transform](http://en.wikipedia.org/wiki/Fast_Fourier_transform)) to be used to determine the frequency domain.
 - {{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}
   - : Is an unsigned long value half that of the FFT size. This generally equates to the number of data values you will have to play with for the visualization.
 - {{domxref("AnalyserNode.minDecibels")}}

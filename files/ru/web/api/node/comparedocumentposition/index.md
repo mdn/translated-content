@@ -3,6 +3,7 @@ title: Node.compareDocumentPosition
 slug: Web/API/Node/compareDocumentPosition
 translation_of: Web/API/Node/compareDocumentPosition
 ---
+
 {{ ApiRef() }}
 
 ## Аннотация
@@ -55,5 +56,5 @@ if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWI
 
 ## Смотрите также
 
-- [`Node.contains`](/en-US/docs/DOM/Node.contains "/en-US/docs/DOM/Node.contains")
+- [`Node.contains`](/en-US/docs/DOM/Node.contains)
 - [John Resig - Comparing Document Position](http://ejohn.org/blog/comparing-document-position/)

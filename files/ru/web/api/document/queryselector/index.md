@@ -12,6 +12,7 @@ tags:
   - селектор
 translation_of: Web/API/Document/querySelector
 ---
+
 {{ApiRef("DOM")}}
 
 {{domxref("Document")}} метод **`querySelector()`** возвращает первый элемент ({{domxref("Element")}}) документа, который соответствует указанному селектору или группе селекторов. Если совпадений не найдено, возвращает значение `null`.
@@ -101,4 +102,4 @@ var el = document.querySelector("div.user-panel.main input[name=login]");
 - {{domxref("document.querySelectorAll()")}}
 - {{domxref("element.querySelector()")}}
 - {{domxref("element.querySelectorAll()")}}
-- [Фрагменты кода для querySelector](/ru/docs/Code_snippets/QuerySelector "en-US/docs/Code snippets/QuerySelector")
+- [Фрагменты кода для querySelector](/ru/docs/Code_snippets/QuerySelector)

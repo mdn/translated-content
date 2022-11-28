@@ -1,9 +1,9 @@
 ---
 title: Entendendo o formato textual do WebAssembly
 slug: WebAssembly/Understanding_the_text_format
-translation_of: WebAssembly/Understanding_the_text_format
 original_slug: WebAssembly/Entendendo_o_formato_textual_do_WebAssembly
 ---
+
 {{WebAssemblySidebar}}
 
 Para permitir que o WebAssembly seja lido e editado por humanos foi criado uma representação textual do código binário wasm. Essa é uma forma textual intermediária desenvolvida para ser usada em editores de textos, ferramentas de desenvolvimento dos navegatores, etc. Esse artigo expica como essa expressão textual funciona, mostrando a sintase de maneira bruta, e como ela está relacionada com o código binário ao qual ela representa - e os objetos que encapsulam o wasm dentro do JavaScript.

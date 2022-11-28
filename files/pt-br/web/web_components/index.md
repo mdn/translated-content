@@ -1,8 +1,8 @@
 ---
 title: Web Components
 slug: Web/Web_Components
-translation_of: Web/Web_Components
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 Web Components é uma suíte de diferentes tecnologias que permite a criação de elementos customizados reutilizáveis — com a funcionalidade separada do resto do seu código — e que podem ser utilizados em suas aplicações web.

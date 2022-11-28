@@ -1,8 +1,8 @@
 ---
 title: Element.matches()
 slug: Web/API/Element/matches
-translation_of: Web/API/Element/matches
 ---
+
 {{APIRef("DOM")}}
 
 O método **`Element.matches()`** retorna verdadeiro se o elemento puder ser selecionado pela sequência de caracteres específica; caso contrário retorna falso.

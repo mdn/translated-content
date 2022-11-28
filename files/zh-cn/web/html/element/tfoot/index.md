@@ -3,7 +3,7 @@ title: <tfoot>
 slug: Web/HTML/Element/tfoot
 ---
 
-**HTML 元素`<tfoot>` **定义了一组表格中各列的汇总行。
+HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 
 <table class="properties">
  <tbody>
@@ -98,4 +98,4 @@ slug: Web/HTML/Element/tfoot
   - {{cssxref(":nth-child")}}伪类：设置列内元素的对齐方式；
   - {{cssxref("text-align")}}属性：可设置单元格内容与同一字符对齐，例如'.'。
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -14,10 +14,21 @@
     "url": "git+https://github.com/mdn/translated-content.git"
   },
   "scripts": {
-  },
-  "devDependencies": {
+    "fix:json": "prettier -w \"**/*.json\"",
+    "fix:md": "markdownlint-cli2-fix \"**/*.md\"",
+    "fix:yml": "prettier -w \"**/*.yml\"",
+    "lint:json": "prettier -c \"**/*.json\"",
+    "lint:md": "markdownlint-cli2 \"**/*.md\"",
+    "lint:yml": "prettier -c \"**/*.yml\"",
+    "prepare": "husky install"
   },
   "engines": {
     "node": "^16.0.0 || >=18.0.0"
+  },
+  "dependencies": {
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
+    "markdownlint-cli2": "0.5.1",
+    "prettier": "2.8.0"
   }
 }

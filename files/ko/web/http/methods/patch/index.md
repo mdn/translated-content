@@ -3,6 +3,7 @@ title: PATCH
 slug: Web/HTTP/Methods/PATCH
 translation_of: Web/HTTP/Methods/PATCH
 ---
+
 {{HTTPSidebar}}
 
 **HTTP PATCH** 메소드는 리소스의 부분적인 수정을 할 때에 사용됩니다.

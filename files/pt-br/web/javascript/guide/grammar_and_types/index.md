@@ -1,14 +1,9 @@
 ---
 title: Sintaxe e tipos
 slug: Web/JavaScript/Guide/Grammar_and_types
-tags:
-  - Guia(2)
-  - Guía
-  - Iniciante
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Grammar_and_types
 original_slug: Web/JavaScript/Guide/Values,_variables,_and_literals
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 Este capítulo trata sobre a sintaxe básica do JavaScript, declarações de variáveis, tipos de dados e literais.

@@ -1,14 +1,8 @@
 ---
 title: 'HTML: Linguagem de Marcação de Hipertexto'
 slug: Web/HTML
-tags:
-  - HTML
-  - HTML 5
-  - Página de destino
-  - Web
-  - l10n:prioridade
-translation_of: Web/HTML
 ---
+
 {{HTMLSidebar}}
 
 **HTML** (Linguagem de Marcação de HiperTexto) é o bloco de construção mais básico da web. Define o significado e a estrutura do conteúdo da web. Outras tecnologias além do HTML geralmente são usadas para descrever a aparência/apresentação ([CSS](/pt-BR/docs/Web/CSS)) ou a funcionalidade/comportamento ([JavaScript](/pt-BR/docs/Web/JavaScript)) de uma página da web.

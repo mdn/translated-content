@@ -5,7 +5,7 @@ slug: Web/API/Web_Workers_API/Using_web_workers
 
 {{DefaultAPISidebar("Web Workers API")}}
 
-Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的方法。线程可以执行任务而不干扰用户界面。此外，他们可以使用[`XMLHttpRequest`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest)执行 I/O (尽管`responseXML`和`channel`属性总是为空)。一旦创建，一个 worker 可以将消息发送到创建它的 JavaScript 代码，通过将消息发布到该代码指定的事件处理程序（反之亦然）。本文提供了有关使用 Web Worker 的详细介绍。
+Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的方法。线程可以执行任务而不干扰用户界面。此外，他们可以使用[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)执行 I/O (尽管`responseXML`和`channel`属性总是为空)。一旦创建，一个 worker 可以将消息发送到创建它的 JavaScript 代码，通过将消息发布到该代码指定的事件处理程序（反之亦然）。本文提供了有关使用 Web Worker 的详细介绍。
 
 ## Web Workers API
 
@@ -17,7 +17,7 @@ Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的�
 
 在 worker 线程中你可以运行任何你喜欢的代码，不过有一些例外情况。比如：在 worker 内，不能直接操作 DOM 节点，也不能使用{{domxref("window")}}对象的默认方法和属性。然而你可以使用大量 window 对象之下的东西，包括 WebSockets，IndexedDB 以及 FireFox OS 专用的 Data Store API 等数据存储机制。查看[Functions and classes available to workers](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers)获取详情。
 
-workers 和主线程间的数据传递通过这样的消息机制进行——双方都使用 postMessage() 方法发送各自的消息，使用 onmessage 事件处理函数来响应消息（消息被包含在{{event("Message")}}事件的 data 属性中）。这个过程中数据并不是被共享而是被复制。
+workers 和主线程间的数据传递通过这样的消息机制进行——双方都使用 postMessage() 方法发送各自的消息，使用 onmessage 事件处理函数来响应消息（消息被包含在[`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event)事件的 data 属性中）。这个过程中数据并不是被共享而是被复制。
 
 只要运行在同源的父页面中，workers 可以依次生成新的 workers；并且可以使用[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 进行网络 I/O，但是 XMLHttpRequest 的 responseXML 和 channel 属性总会返回 null。
 

@@ -1,16 +1,8 @@
 ---
 title: Accept
 slug: Web/HTTP/Headers/Accept
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Referencia
-  - Request header
-translation_of: Web/HTTP/Headers/Accept
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição HTTP **`Accept`** anuncia quais tipos de conteúdo, expressos como [MIME types](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types), o cliente é capaz de entender. Usando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation), o servidor então seleciona uma das propostas, a usa e então informa o cliente da sua escolha com o cabeçalho de resposta {{HTTPHeader("Content-Type")}}. Navegadores colocam valores adequados para este cabeçalho dependendo do contexto onde a requisição é feita: quando buscando um CSS _stylesheet_, um valor diferente é colocado para a requisição, o mesmo acontece com imagens, vídeos ou scripts.

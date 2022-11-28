@@ -3,6 +3,7 @@ title: align-content
 slug: Web/CSS/align-content
 translation_of: Web/CSS/align-content
 ---
+
 {{CSSRef}}
 
 Свойство {{cssxRef('', 'CSS')}} **`align-content`** устанавливает распределение пространства между и вокруг элементами контента вдоль поперечной оси {{cssxRef('CSS_Flexible_Box_Layout', 'flexbox')}} контейнера или вдоль блочной оси {{cssxRef('CSS_Grid_Layout', 'grid')}} контейнера.
@@ -247,7 +248,7 @@ display.addEventListener('change', function (evt) {
 
 ### Support in Grid layout
 
-{{Compat("css.properties.align-content.grid_context")}}
+{{Compat}}
 
 ## Смотрите также
 

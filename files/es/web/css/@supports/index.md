@@ -1,8 +1,8 @@
 ---
 title: '@supports'
 slug: Web/CSS/@supports
-translation_of: Web/CSS/@supports
 ---
+
 {{ CSSRef() }}
 
 ## Resumen
@@ -128,9 +128,7 @@ es equivalente a:
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                                   | Comentario          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Conditional', '#at-supports', '@supports') }} | {{ Spec2('CSS3 Conditional') }} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

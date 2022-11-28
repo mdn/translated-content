@@ -12,6 +12,7 @@ tags:
   - Узлы
 translation_of: Web/API/Node/nextSibling
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Node.nextSibling`** используется только для чтения и возвращает узел, непосредственно следующий за данным узлом в списке {{domxref("Node.childNodes","childNodes")}} его родительского элемента, или `null` если данный узел последний в этом списке.
@@ -25,7 +26,7 @@ nextNode = node.nextSibling
 ## Примечания
 
 Браузеры, основанные на Gecko, вставляют текстовые узлы в документ для представления пробелов в разметке.
-Поэтому узел, полученный, например, при использовании [`Node.firstChild`](/ru/docs/Web/API/Node/firstChild "Свойство Node.firstChild только для чтения, возвращающее первый потомок узла в древе или null, если узел является бездетным. Если узел это документ, он возвращает первый узел в списке своих прямых детей.") или [`Node.previousSibling`](/ru/docs/Web/API/Node/previousSibling "Свойство Node.previousSibling используется только для чтения, оно возвращает узел предшедствующий указанному в родительском элементе childNodes, или null,  если указанный узел первый в своём родителе.") может относиться к
+Поэтому узел, полученный, например, при использовании [`Node.firstChild`](/ru/docs/Web/API/Node/firstChild) или [`Node.previousSibling`](/ru/docs/Web/API/Node/previousSibling) может относиться к
 пробелу, а не к тому элементу, который автор хотел получить.
 
 Смотрите [Пробел в DOM](/ru/docs/Web/Guide/DOM/Whitespace_in_the_DOM) и

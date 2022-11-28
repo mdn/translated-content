@@ -3,6 +3,7 @@ title: Storage.clear()
 slug: Web/API/Storage/clear
 translation_of: Web/API/Storage/clear
 ---
+
 {{APIRef("Web Storage API")}}
 
 Метод `clear()` интерфейса {{domxref("Storage")}} удалит все значения из хранилища.

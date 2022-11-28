@@ -1,14 +1,9 @@
 ---
 title: PHP
 slug: Glossary/PHP
-tags:
-  - Back End
-  - Iniciante
-  - Introdução
-  - PHP
-translation_of: Glossary/PHP
 original_slug: Glossario/PHP
 ---
+
 PHP (um inicialismo recursivo para PHP: Hypertext Preprocessor) é uma linguagem de script do lado do servidor de código aberto que pode ser utilizada junto com HTML para construir aplicações web e sites dinâmicos.
 
 HTML pode ser usando dentro do PHP, mas não vice versa.

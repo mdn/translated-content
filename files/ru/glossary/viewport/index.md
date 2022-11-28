@@ -4,6 +4,7 @@ slug: Glossary/Viewport
 translation_of: Glossary/Viewport
 original_slug: Глоссарий/Viewport
 ---
+
 Viewport - это видимая пользователю область веб-страницы, то, что может увидеть пользователь, не прибегая к прокрутке.
 
 Окно просмотра представляет собой многоугольную (обычно прямоугольную) область в компьютерной графике, которая в настоящее время просматривается. В терминах веб-браузера это относится к той части просматриваемого документа, которая в данный момент отображается в её окне (или на экране, если документ просматривается в полноэкранном режиме).
@@ -102,7 +103,7 @@ Meta-тег **apple-mobile-web-app-capable** (<http://goo.gl/VGDYQC>) позво
 ### General Knowledge
 
 - [meta viewport. Как он работает?](https://itchief.ru/lessons/html-and-css/meta-viewport-how-it-works)
-- [Всё, что вы хотели знать о meta-теге viewport](http://www.chuvyr.ru/2015/04/meta-viewport.html)
+- [Viewport](https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%80%D1%82_%D0%BF%D1%80%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B0) на Wikipedia
 - [What is viewport in HTML](https://stackoverflow.com/questions/2939693/what-is-viewport-in-html) on Stackoverflow
 - [Get viewport/window size (width and height) with javascript](https://andylangton.co.uk/blog/development/get-viewportwindow-size-width-and-height-javascript)
 - [A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode)
