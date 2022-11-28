@@ -82,9 +82,7 @@ dc.onclose = function () {
 
 ## 仕様
 
-| Specification                                                                                    | Status                           | Comment                |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
-| {{ SpecName('WebRTC 1.0', '#idl-def-RTCDataChannel', 'RTCDataChannel') }} | {{ Spec2('WebRTC 1.0') }} | Initial specification. |
+{{Specifications}}
 
 ## ブラウザー互換性
 

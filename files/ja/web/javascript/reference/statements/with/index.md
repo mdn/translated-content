@@ -78,9 +78,7 @@ with (Math) {
 
 ## 仕様書
 
-| 仕様書                                                                               |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-with-statement', 'with statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

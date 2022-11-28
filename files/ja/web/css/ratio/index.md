@@ -32,10 +32,7 @@ slug: Web/CSS/ratio
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                                     | 備考     |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('CSS4 Media Queries', '#values', '&lt;ratio&gt;')}} | {{Spec2('CSS4 Media Queries')}} |          |
-| {{SpecName('CSS3 Media Queries', '#values', '&lt;ratio&gt;')}} | {{Spec2('CSS3 Media Queries')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
