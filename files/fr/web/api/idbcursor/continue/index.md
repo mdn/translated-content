@@ -28,7 +28,7 @@ curseur.continue(cléOptionnelle);
 
 ### Exceptions
 
-Cette méthode peut déclencher des exceptions  {{domxref("DOMException")}} de type :
+Cette méthode peut déclencher des exceptions {{domxref("DOMException")}} de type :
 
 <table class="standard-table">
   <thead>

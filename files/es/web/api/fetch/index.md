@@ -1,17 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.fetch()
 slug: Web/API/fetch
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - GlobalFetch
-  - Petición
-  - Referencia
-  - metodo
-  - solicitud
-translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
 original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
 
@@ -132,7 +121,7 @@ var myRequest = new Request('flowers.jpg', miInicializador);
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat}}
 
 ## Ver también
 

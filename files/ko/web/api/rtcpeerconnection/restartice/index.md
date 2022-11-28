@@ -3,6 +3,7 @@ title: RTCPeerConnection.restartIce()
 slug: Web/API/RTCPeerConnection/restartIce
 translation_of: Web/API/RTCPeerConnection/restartIce
 ---
+
 {{APIRef("WebRTC API")}}
 
 [WebRTC](/ko/docs/Web/API/WebRTC_API) API의 {{domxref("RTCPeerConnection")}} 인터페이스에서는 **`restartIce()`** 메소드를 제공해서 연결의 양쪽에서 {{Glossary("ICE")}} candidate의 재수집 요청을 간단하게 할 수 있게 만들어줍니다.

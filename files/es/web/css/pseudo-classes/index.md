@@ -1,12 +1,6 @@
 ---
 title: Pseudo-classes
 slug: Web/CSS/Pseudo-classes
-tags:
-  - CSS
-  - Referencia CSS
-  - Selectores
-  - pseudo-clases
-translation_of: Web/CSS/Pseudo-classes
 ---
 
 {{ CSSRef() }}

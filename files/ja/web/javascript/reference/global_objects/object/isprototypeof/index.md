@@ -69,9 +69,7 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.prototype.isprototypeof', 'Object.prototype.isPrototypeOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

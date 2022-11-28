@@ -15,9 +15,9 @@ slug: Web/API/WebGL_API/Tutorial
 
 ## 教學文件
 
-- [WebGL 新手上路](/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)
+- [WebGL 新手上路](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)
   - : 如何建置 WebGL 環境
-- [加入 2D 內容至 WebGL 環境](/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)
+- [加入 2D 內容至 WebGL 環境](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)
   - : 如何用 WebGL 渲染簡單平面的形狀
 - [使用 shaders 在 WebGL 上色](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL)
   - : 示範如何使用 shaders 在圖形上上色

@@ -27,9 +27,7 @@ console.log(regex.ignoreCase); // true
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/EventListener
 original_slug: Web/API/EventListener
 ---
+
 {{APIRef("DOM Events")}}
 
 ## Visão Geral

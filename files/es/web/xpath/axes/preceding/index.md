@@ -1,7 +1,6 @@
 ---
 title: preceding
 slug: Web/XPath/Axes/preceding
-translation_of: Web/XPath/Axes/preceding
 original_slug: Web/XPath/Ejes/preceding
 ---
 

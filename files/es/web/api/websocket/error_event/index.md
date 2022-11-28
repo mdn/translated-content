@@ -33,4 +33,4 @@ Un {{domxref("EventListener")}}.
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.WebSocket.onerror")}}
+{{Compat}}

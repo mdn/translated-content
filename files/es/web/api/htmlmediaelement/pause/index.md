@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.pause()
 slug: Web/API/HTMLMediaElement/pause
-translation_of: Web/API/HTMLMediaElement/pause
 ---
 {{APIRef("HTML DOM")}}
 

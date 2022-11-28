@@ -44,9 +44,7 @@ console.log(eArr.next().value); // 50
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype-@@iterator', '%TypedArray%.prototype[@@iterator]()')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

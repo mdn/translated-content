@@ -101,5 +101,5 @@ slug: Web/HTML/Element/li
 - 可能特定用于排版 `<li>` 元素的 CSS 属性：
 
   - {{cssxref("list-style")}} 属性，用于选择序号的展示方式，
-  - [CSS 计数器](/Web/Guide/CSS/Counters)，用于处理复杂的嵌套列表，
+  - [CSS 计数器](/zh-CN/docs/Web/Guide/CSS/Counters)，用于处理复杂的嵌套列表，
   - {{cssxref("margin")}} 属性，用于控制列表条目的缩进。

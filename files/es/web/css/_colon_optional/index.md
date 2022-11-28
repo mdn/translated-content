@@ -1,13 +1,6 @@
 ---
 title: ':optional'
 slug: Web/CSS/:optional
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:optional
 ---
 
 {{ CSSRef }}

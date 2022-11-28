@@ -11,6 +11,7 @@ tags:
 browser-compat: api.console.warn
 translation_of: Web/API/Console/warn
 ---
+
 {{APIRef("Console API")}}
 
 **`console.warn()`** 메서드는 웹 콘솔에 경고 메시지를 출력합니다.

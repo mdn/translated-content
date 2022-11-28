@@ -41,13 +41,13 @@ var result = (function () {
 result; // "Barry"
 ```
 
-## Aprende mas
+## Aprende más
 
 ### Aprende acerca de
 
-- [Ben Alman's blog post defining IIFEs](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
-- [Quick example](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) "Ejemplo Rápido"(al final de la sección "Functions" , justo despues de "Custom objects")
+- [Publicación en el blog de Ben Alman definiendo IIFEs](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
+- [Ejemplo rápido](/es/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) "Ejemplo Rápido"(al final de la sección "Functions" , justo después de "Custom objects")
 
-### General knowledge
+### Conocimiento general
 
-- [IIFE](https://es.wikipedia.org/wiki/Immediately-invoked_function_expression) on Wikipedia
+- [IIFE](https://es.wikipedia.org/wiki/Immediately-invoked_function_expression) en Wikipedia

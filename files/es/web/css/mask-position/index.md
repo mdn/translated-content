@@ -1,13 +1,6 @@
 ---
 title: '-webkit-mask-position'
 slug: Web/CSS/mask-position
-tags:
-  - CSS
-  - No estándar(2)
-  - Propiedad CSS
-  - Referencia CSS
-translation_of: Web/CSS/mask-position
-translation_of_original: Web/CSS/-webkit-mask-position
 original_slug: Web/CSS/-webkit-mask-position
 ---
 

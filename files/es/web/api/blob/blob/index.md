@@ -1,13 +1,6 @@
 ---
 title: Blob()
 slug: Web/API/Blob/Blob
-tags:
-  - API
-  - Archivo
-  - Blob
-  - File API
-  - Referencia
-translation_of: Web/API/Blob/Blob
 ---
 
 {{APIRef("File API")}}

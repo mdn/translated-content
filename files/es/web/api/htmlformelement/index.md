@@ -1,11 +1,6 @@
 ---
 title: form
 slug: Web/API/HTMLFormElement
-tags:
-  - DOM
-  - Referencia_DOM_de_Gecko
-  - Todas_las_Categorías
-translation_of: Web/API/HTMLFormElement
 ---
 
 {{APIRef("HTML DOM")}}

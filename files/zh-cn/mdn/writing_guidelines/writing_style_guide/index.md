@@ -103,7 +103,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 每段示例代码都应该就其工作原理给出说明。最好将一段较长的代码分解成多个较小的部分，并提供每个部分的说明，说明时注意细节的层次。如果代码很简单并且不直接涉及到当前 API，可以只给出一个简单的介绍，说明其用途，以及为何要把它放在这里；而如果代码比较复杂、或用到了当前的 API、或在技术上比较有创造性，那么你应该提供更详细的说明。
 
-如果使用的是[在线演示](/zh-CN/docs/MDN/Structures/Live_samples)的方式，则可以将 HTML、CSS、JavaScript 拆分到不同的  {{HTMLElement("pre")}} 中，它们在运行时会自动组合到一起，但使用这种方式每个里面都可以有自己的说明。因此这是一种很好很强大的方式。
+如果使用的是[在线演示](/zh-CN/docs/MDN/Structures/Live_samples)的方式，则可以将 HTML、CSS、JavaScript 拆分到不同的 {{HTMLElement("pre")}} 中，它们在运行时会自动组合到一起，但使用这种方式每个里面都可以有自己的说明。因此这是一种很好很强大的方式。
 
 #### 过短的文章难以被搜索到
 
@@ -191,7 +191,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 #### 语法高亮
 
-对于整行或多行代码，此时别再使用  {{HTMLElement("code")}}  元素来格式化了，而应该对其进行[语法高亮](/zh-CN/docs/MDN/Contribute/Markdown_in_MDN#示例代码块)。
+对于整行或多行代码，此时别再使用 {{HTMLElement("code")}} 元素来格式化了，而应该对其进行[语法高亮](/zh-CN/docs/MDN/Contribute/Markdown_in_MDN#示例代码块)。
 
 #### HTML 元素的样式
 
@@ -202,9 +202,9 @@ HTML 元素的样式有一套自己的规则。遵守这些规则可以让元素
 - 属性名称
   - : 请使用内联代码样式，并且使用**粗体**。
 - 属性定义
-  - : 对正在定义的术语使用  [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) 宏（如  \\{{htmlattrdef("type")}}），这样其他页面就可以使用 [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) 宏来链接到该页面了（例如 \\{{htmlattrxref("type","element")}}）。
+  - : 对正在定义的术语使用 [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) 宏（如 \\{{htmlattrdef("type")}}），这样其他页面就可以使用 [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) 宏来链接到该页面了（例如 \\{{htmlattrxref("type","element")}}）。
 - 属性值
-  - : 请使用内联代码样式，并且注意字符串两边不要加引号，除非是代码的语法要求加引号。举例：当将  `<input>` 元素的  **type** 属性设置为 `email` 或 `tel` 时……
+  - : 请使用内联代码样式，并且注意字符串两边不要加引号，除非是代码的语法要求加引号。举例：当将 `<input>` 元素的 **type** 属性设置为 `email` 或 `tel` 时……
 
 ### 拉丁文缩写
 
@@ -412,14 +412,14 @@ _A confirmation dialog box appears, which asks the user for permission to use th
 
 #### HTML 元素
 
-请使用“element”来表示 HTML 和 XML 元素，不要使用“tag”。另外，请在元素名称两边使用尖括号“<>”括起来，并使用  {{HTMLElement("code")}} 样式。当文章中第一次出现某个元素的时候，应该用  [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) 宏创建一个指向该元素文档的链接（除非你正在撰写的恰好是该元素的文档页面）。
+请使用“element”来表示 HTML 和 XML 元素，不要使用“tag”。另外，请在元素名称两边使用尖括号“<>”括起来，并使用 {{HTMLElement("code")}} 样式。当文章中第一次出现某个元素的时候，应该用 [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) 宏创建一个指向该元素文档的链接（除非你正在撰写的恰好是该元素的文档页面）。
 
 - **正确**: {{HTMLElement("span")}} element
 - **错误**: span tag
 
 #### 函数参数
 
-在 MDN 上推荐使用 **parameters**  来表示函数的参数，为了保持一致性，如果可能的话请尽量避免使用“arguments”。
+在 MDN 上推荐使用 **parameters** 来表示函数的参数，为了保持一致性，如果可能的话请尽量避免使用“arguments”。
 
 #### 描述用户的操作
 
@@ -448,8 +448,8 @@ _A confirmation dialog box appears, which asks the user for permission to use th
 
 如果你对提高写作和编辑能力感兴趣，下面的资料会对你有所帮助：
 
-- [更好的写作](https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548)（Amazon），作者  William Zinsser
-- [清晰与优雅的格式基础](https://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/)（Amazon），作者  Joseph Williams 和 Gregory Colomb
+- [更好的写作](https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548)（Amazon），作者 William Zinsser
+- [清晰与优雅的格式基础](https://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/)（Amazon），作者 Joseph Williams 和 Gregory Colomb
 - [使用英文时的常见错误](https://brians.wsu.edu/common-errors-in-english-usage/)
 - [英语语法 FAQ](https://www-personal.umich.edu/~jlawler/aue.html)
 - [Bob 的撇号快速指南，你个笨蛋](https://www.angryflower.com/bobsqu.gif)（这很有趣）

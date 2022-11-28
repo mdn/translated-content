@@ -22,8 +22,10 @@ void ctx.fill(path[, fillRule]);
   - : L'algorithme utilisé pour déterminer si un point est à l'intérieur ou à l'extérieur du chemin.
     Valeurs possible:
 
-    - **`"nonzero`**": La [règle de remplissage extérieur/intérieur non nul](http://en.wikipedia.org/wiki/Nonzero-rule), qui est la règle par défaut.
-    - **`"evenodd"`**: La [règle de remplissage pair/impair](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+    - `nonzero`
+      - : La [règle de remplissage extérieur/intérieur non nul](http://en.wikipedia.org/wiki/Nonzero-rule), qui est la règle par défaut.
+    - `evenodd`
+      - : La [règle de remplissage pair/impair](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 - `path`
   - : Un chemin {{domxref("Path2D")}} à remplir.

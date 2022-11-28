@@ -50,7 +50,7 @@ L'objet renvoyé par cette méthode possèdera les propriétés suivantes :
 
   - : Le format du message produit. Les valeurs possibles sont :
 
-    - `"always"` : la valeur par défaut (par exemple  `1 day ago`),
+    - `"always"` : la valeur par défaut (par exemple `1 day ago`),
     - `"auto"` : cette valeur indique qu'il n'est pas nécessaire d'utiliser de valeur numérique dans le message produit (par exemple `yesterday`).
 
 - `numberingSystem`

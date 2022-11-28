@@ -1,7 +1,6 @@
 ---
 title: Regla-At
 slug: Web/CSS/At-rule
-translation_of: Web/CSS/At-rule
 ---
 
 {{cssref}}

@@ -1,7 +1,6 @@
 ---
 title: Los selectores descendientes
 slug: Web/CSS/Descendant_combinator
-translation_of: Web/CSS/Descendant_combinator
 ---
 
 {{ CSSRef() }}

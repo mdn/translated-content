@@ -1,12 +1,6 @@
 ---
 title: NonDocumentTypeChildNode.nextElementSibling
 slug: Web/API/Element/nextElementSibling
-tags:
-  - API
-  - DOM
-  - NonDocumentTypeChildNode
-  - Propiedad
-translation_of: Web/API/NonDocumentTypeChildNode/nextElementSibling
 original_slug: Web/API/NonDocumentTypeChildNode/nextElementSibling
 ---
 

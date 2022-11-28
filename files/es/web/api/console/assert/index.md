@@ -1,17 +1,6 @@
 ---
 title: Console.assert()
 slug: Web/API/console/assert
-tags:
-  - API
-  - Consola
-  - DOM
-  - Debug
-  - Debugging
-  - Gecko DOM Referencia
-  - Métodos
-  - afirmación
-  - consola web
-translation_of: Web/API/console/assert
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}

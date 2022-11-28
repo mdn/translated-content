@@ -119,7 +119,7 @@ new Intl.DateTimeFormat(locales, options)
 
     - `month`
 
-      - : La représentation du mois.  Les valeurs possibles sont&nbsp;:
+      - : La représentation du mois. Les valeurs possibles sont&nbsp;:
 
         - "`numeric`" (par exemple, `3`)
         - "`2-digit`" (par exemple, `03`)

@@ -1,13 +1,6 @@
 ---
 title: '-moz-box-pack'
 slug: Web/CSS/box-pack
-tags:
-  - CSS
-  - Diseño
-  - No estándar(2)
-  - Propiedad CSS
-  - Referencia CSS
-translation_of: Web/CSS/box-pack
 original_slug: Web/CSS/-moz-box-pack
 ---
 

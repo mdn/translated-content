@@ -38,4 +38,4 @@ onmessage = function() {
 
 ## ブラウザ互換性
 
-{{Compat("api.WindowOrWorkerGlobalScope.origin")}}
+{{Compat}}

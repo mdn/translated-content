@@ -1,13 +1,6 @@
 ---
 title: Política Same-origin
 slug: Web/Security/Same-origin_policy
-tags:
-  - CORS
-  - JavaScript
-  - Mismo-Origen
-  - Política Same-Origin
-  - Seguridad
-translation_of: Web/Security/Same-origin_policy
 original_slug: Web/Security/Same-origin_politica
 ---
 

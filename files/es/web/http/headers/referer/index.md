@@ -1,11 +1,6 @@
 ---
 title: Referer
 slug: Web/HTTP/Headers/Referer
-tags:
-  - Cabecera
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Headers/Referer
 ---
 
 {{HTTPSidebar}}

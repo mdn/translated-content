@@ -58,4 +58,4 @@ function processSelectedFiles(fileInput) {
 
 ## 関連情報
 
-- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)

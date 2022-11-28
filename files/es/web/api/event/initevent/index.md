@@ -1,9 +1,6 @@
 ---
 title: event.initEvent
 slug: Web/API/Event/initEvent
-tags:
-  - Referencia_DOM_de_Gecko
-translation_of: Web/API/Event/initEvent
 ---
 
 {{ ApiRef("DOM") }}{{deprecated_header}}

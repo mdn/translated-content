@@ -26,4 +26,4 @@ performanceData = window.performance;
 
 ## ブラウザの互換性
 
-{{Compat("api.Window.performance")}}
+{{Compat}}

@@ -1,12 +1,6 @@
 ---
 title: ':-moz-last-node'
 slug: Web/CSS/:-moz-last-node
-tags:
-  - CSS
-  - NeedsCompatTable
-  - No estandar
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-last-node
 ---
 
 {{Non-standard_header}}{{CSSRef}}

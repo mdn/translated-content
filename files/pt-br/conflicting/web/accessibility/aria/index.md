@@ -4,6 +4,7 @@ slug: conflicting/Web/Accessibility/ARIA
 translation_of: Web/Accessibility/ARIA/forms/alerts
 original_slug: Web/Accessibility/ARIA/forms/alerts
 ---
+
 ## O problema
 
 Você tem um formulário — um formulário de contato, por exemplo — no qual você deseja inserir algum that you want to put some accessible error checking into. Examples of common problems include e-mail addresses which are not valid, or a name field which does not contain at least a first name or a surname.

@@ -23,7 +23,7 @@ getArg(exceptionTag, index)
 ### Paramètres
 
 - `exceptionTag`
-  - : Un objet [`WebAssembly.Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) qui doit correspondre à la balise associée à l'exception. Si les balises ne correspondent pas, une exception  [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
+  - : Un objet [`WebAssembly.Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) qui doit correspondre à la balise associée à l'exception. Si les balises ne correspondent pas, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
 - `index`
   - : L'indice de la valeur, parmi les arguments de données, à renvoyer (l'indexation commence à 0). Si l'indice dépasse le nombre d'éléments disponibles, la méthode lèvera une exception [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError).
 
@@ -65,7 +65,7 @@ Prenons le fragment de code WebAssembly qui suit en supposant qu'il soit compil�
 )
 ```
 
-Le fragment de code JavaScript qui suit appelle [`WebAssembly.instantiateStreaming`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) afin d'importer le fichier  'exemple.wasm' et lui passe un objet d'import (`importObject`) contenant une nouvelle balise [`WebAssembly.Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) intitulée `tag_to_import`. L'objet d'import définit un objet dont les propriétés correspondent à celles de l'instruction `import` présente dans le code WebAssembly (un entier `i32`).
+Le fragment de code JavaScript qui suit appelle [`WebAssembly.instantiateStreaming`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) afin d'importer le fichier 'exemple.wasm' et lui passe un objet d'import (`importObject`) contenant une nouvelle balise [`WebAssembly.Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) intitulée `tag_to_import`. L'objet d'import définit un objet dont les propriétés correspondent à celles de l'instruction `import` présente dans le code WebAssembly (un entier `i32`).
 
 Une fois le fichier instancié, le code invoque la méthode WebAssembly exportée `run1()`, qui déclenche immédiatement une exception.
 

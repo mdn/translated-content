@@ -11,6 +11,7 @@ tags:
   - WebGL
 translation_of: Web/API/OffscreenCanvas/OffscreenCanvas
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 **`OffscreenCanvas()`** 생성자는 새롭게 초기화된 {{domxref("OffscreenCanvas")}} 객체를 반환합니다.

@@ -57,9 +57,7 @@ Math.atanh = Math.atanh || function(x) {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.atanh', 'Math.atanh')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

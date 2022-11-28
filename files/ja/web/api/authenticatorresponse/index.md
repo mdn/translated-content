@@ -80,7 +80,7 @@ navigator.credentials.create({ publicKey })
 
 ## ブラウザーの互換性
 
-{{Compat("api.PublicKeyCredentialRequestOptions")}}
+{{Compat}}
 
 ## 関連情報
 

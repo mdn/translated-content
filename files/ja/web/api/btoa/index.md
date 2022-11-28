@@ -105,7 +105,7 @@ console.log(original);                // ☸☹☺☻☼☾☿
 
 ## ブラウザーの互換性
 
-{{Compat("api.WindowOrWorkerGlobalScope.btoa")}}
+{{Compat}}
 
 ## 関連情報
 
