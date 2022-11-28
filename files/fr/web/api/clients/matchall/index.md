@@ -32,7 +32,7 @@ ServiceWorkerClients.matchAll(options).then(function(clients) {
 
 ### Valeur de retour
 
-Une  [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout avec un tableau d'objets {{domxref("Client")}}.
+Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout avec un tableau d'objets {{domxref("Client")}}.
 
 ## Exemples
 
