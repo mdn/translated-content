@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Addition
 
 {{jsSidebar("Operators")}}
 
-**加法**（**`+`**）运算符计算数字操作数或字符串串联的总和。
+**加法**（**`+`**）运算符计算数字操作数或字符串连接的总和。
 
 {{EmbedInteractiveExample("pages/js/expressions-addition.html")}}
 
@@ -17,7 +17,7 @@ x + y
 
 ## 描述
 
-加法运算符（`+`）为两种不同的运算重载：数字加法和字符串串联。在求值时，它首先[将两个操作数强制转换为基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后，检查两个操作数的类型：
+加法运算符（`+`）为两种不同的运算重载：数字加法和字符串连接。在求值时，它首先[将两个操作数强制转换为基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后，检查两个操作数的类型：
 
 - 如果有一方是字符串，另一方则会被[转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#转换数字为字符串)，并且它们连接起来。
 - 如果双方都是 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)，则执行 BigInt 加法。如果一方是 BigInt 而另一方不是，会抛出 {{jsxref("TypeError")}}。
