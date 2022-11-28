@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador
 ---
+
 {{JSRef}}
 
 El objeto `Generator` es retornado por una {{jsxref("Statements/function*", "función generator", "", 1)}} y es conformado tanto el protocolo iterable como el protocolo iterador.
@@ -76,7 +77,7 @@ Firefox(SpderMonkey) tambén implementa una versón mas temprana de generadores 
 
 ### Métodos de generadores legados
 
-- `Generator.prototype.next() `{{non-standard_inline}}
+- `Generator.prototype.next()` {{non-standard_inline}}
   - : Retorna el valor ofrecido por la expresión {{jsxref("Operators/yield", "yield")}}. Esto se corresponde con el método next() en el objeto generador de ES2015.
 - `Generator.prototype.close()` {{non-standard_inline}}
   - : Cierra el generador. Sí el método next() es llamado por la expresión {{jsxref("StopIteration")}}, un error será lanzado. Esto se corresponde con el método return() del objeto generador de ES2015.
@@ -103,18 +104,11 @@ console.log(it.next());   // throws StopIteration (as the generator is now close
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                       | Comentario         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-generator-objects', 'Generator objects')}} | {{Spec2('ES2015')}}     | Definición inicial |
-| {{SpecName('ESDraft', '#sec-generator-objects', 'Generator objects')}} | {{Spec2('ESDraft')}} |                    |
-|                                                                                              |                              |                    |
-|                                                                                              |                              |                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
 {{Compat("javascript.builtins.Generator")}}
-
-##
 
 ## Vea también
 

@@ -1,8 +1,8 @@
 ---
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
-translation_of: Web/API/Document/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 Retorna un objecto similar a un array de los elementos hijos que tengan todos los nombres de clase indicados. Cuando es llamado sobre el objeto document , la busqueda se realiza en todo el document, incluido el nodo raíz. También puedes llamar {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} sobre cualquier elemento; en ese caso retornara sólo los elementos hijos del elemento raíz indicado que contengan los nombres de clase indicados.

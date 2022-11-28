@@ -3,6 +3,7 @@ title: HTMLSelectElement.selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
 translation_of: Web/API/HTMLSelectElement/selectedOptions
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **read-only** {{domxref("HTMLSelectElement")}} property **`selectedOptions`** contains a list of the {{HTMLElement("option")}} elements contained within the {{HTMLElement("select")}} element that are currently selected. The list of selected options is an {{domxref("HTMLCollection")}} object with one entry per currently selected option.

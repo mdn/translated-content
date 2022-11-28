@@ -4,6 +4,7 @@ slug: Web/API/Element/touchstart_event
 translation_of: Web/API/GlobalEventHandlers/ontouchstart
 original_slug: Web/API/GlobalEventHandlers/ontouchstart
 ---
+
 {{ApiRef("HTML DOM")}}
 
 {{event("touchstart")}} 이벤트를 위한 {{domxref("GlobalEventHandlers","global event handler")}}

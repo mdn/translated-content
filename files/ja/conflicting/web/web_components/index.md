@@ -3,11 +3,12 @@ title: HTML インポート
 slug: conflicting/Web/Web_Components
 original_slug: Web/Web_Components/HTML_Imports
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 <div class="blockIndicator obsolete"><p><strong>Google Chrome 73 で廃止</strong><br>この機能は廃止されました。まだいくつかのブラウザーで動作するかもしれませんが、いつ削除されてもおかしくないので、使わないようにしましょう。</p></div>
 
-> **Warning:** Firefox はこの形式の _HTML インポート_ は提供していません。詳細は[状況更新](https://hacks.mozilla.org/2015/06/the-state-of-web-components/)を参照してください。標準化への同意が集まるか、代替機構が発表されるまで、Google の [`webcomponents.js`](https://github.com/webcomponents/webcomponentsjs) などのポリフィルを使用することができます。
+> **警告:** Firefox はこの形式の _HTML インポート_ は提供していません。詳細は[状況更新](https://hacks.mozilla.org/2015/06/the-state-of-web-components/)を参照してください。標準化への同意が集まるか、代替機構が発表されるまで、Google の [`webcomponents.js`](https://github.com/webcomponents/webcomponentsjs) などのポリフィルを使用することができます。
 
 _HTML インポート_ は [Web Components](/ja/docs/Web/Web_Components) のパッケージング機構として使用されることを意図していますが、単独で使用することもできます。
 

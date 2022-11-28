@@ -1,13 +1,8 @@
 ---
 title: Expressão da função async
 slug: Web/JavaScript/Reference/Operators/async_function
-tags:
-  - Experimental
-  - Expressão Primária
-  - Função
-  - Operador
-translation_of: Web/JavaScript/Reference/Operators/async_function
 ---
+
 {{jsSidebar("Operators")}}A palavra chave async pode ser usado para definir funções async dentro das expressões.Você tambem pode definir funções async usando a declaração de função async.
 
 ## Sintaxe
@@ -31,7 +26,7 @@ Como no [ES2015](/pt-BR/docs/), você tambem pode usar [arrow functions](/pt-BR/
 
 ## Descrição
 
-Uma expressão `async function` é muito similar, e tem quase a mesma sintaxe de uma {{jsxref('Statements/async_function', 'declaração async function')}}. A principal diferença entre uma expressão `async function` e uma declaração `async function` é o _nome da função\_\_,_ que pode ser omitido em expressões `async function` para criar _funções anônimas_. Uma expressão `async function` pode ser utilizada como um {{Glossary("IIFE")}} (Immediately Invoked Function Expression, em tradução livre: Expressão de Função Invocada Imediatamente) que roda assim que definido. Veja também o capítulo sobre [funções](/pt-BR/docs/Web/JavaScript/Reference/Functions) para mais informações.
+Uma expressão `async function` é muito similar, e tem quase a mesma sintaxe de uma {{jsxref('Statements/async_function', 'declaração async function')}}. A principal diferença entre uma expressão `async function` e uma declaração `async function` é o _nome da função_, que pode ser omitido em expressões `async function` para criar _funções anônimas_. Uma expressão `async function` pode ser utilizada como um {{Glossary("IIFE")}} (Immediately Invoked Function Expression, em tradução livre: Expressão de Função Invocada Imediatamente) que roda assim que definido. Veja também o capítulo sobre [funções](/pt-BR/docs/Web/JavaScript/Reference/Functions) para mais informações.
 
 ## Exemplos
 

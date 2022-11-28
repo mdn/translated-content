@@ -52,4 +52,4 @@ slug: Web/HTML/Element/blockquote
 - {{HTMLElement("q")}} 元素：用以表示單行的引用內容。
 - {{HTMLElement("cite")}} 元素：用以表示引用來源。
 
-{{HTMLRef}}
+{{HTMLSidebar}}

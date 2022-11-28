@@ -11,6 +11,7 @@ tags:
   - l10n:priority
 translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext( "Learn/Getting_started_with_the_web/CSS_basics","Learn/Getting_started_with_the_web/Publishing_your_website","Learn/Getting_started_with_the_web")}}
 
 JavaScript es el lenguaje de programación que debes usar para añadir características interactivas a tu sitio web, (por ejemplo, juegos, eventos que ocurren cuando los botones son presionados o los datos son introducidos en los formularios, efectos de estilo dinámicos, animación, y mucho más). Este artículo te ayudará a comenzar con este lenguaje extraordinario y te dará una idea de qué es posible hacer con él.
@@ -31,7 +32,7 @@ Ya que se supone que este artículo es solo una introducción ligera a JavaScrip
 
 Debajo se presentan algunos aspectos del núcleo del lenguaje y también jugarás con unas pocas características de la API del navegador. ¡Diviértete!
 
-## Ejemplo «_¡Hola Mundo!_»
+## Ejemplo «¡Hola Mundo!»
 
 La sección de arriba suena realmente emocionante, y debería serlo. JavaScript es una de las tecnologías web más emocionantes, y cuando comiences a ser bueno en su uso, tus sitios web entrarán en una nueva dimensión de energía y creatividad.
 
@@ -299,13 +300,13 @@ La expresión dentro de `if (... )` es el criterio — este usa al operador de i
 
 Las {{Glossary("Function", "funciones")}} son una manera de encapsular una funcionalidad que quieres reutilizar, de manera que puedes llamar esa función con un solo nombre, y no tendrás que escribir el código entero cada vez que la utilices. Ya has visto algunas funciones más arriba, por ejemplo:
 
-1. ```js
-    let nombreDeLaVariable = document.querySelector('h1');
-    ```
+```js
+let nombreDeLaVariable = document.querySelector('h1');
+```
 
-2. ```js
-    alert('¡Hola!');
-    ```
+```js
+alert('¡Hola!');
+```
 
 Estas funciones `document.querySelector` y `alert` están integradas en el navegador para poder utilizarlas en cualquier momento.
 

@@ -4,6 +4,7 @@ slug: Learn/Getting_started_with_the_web
 l10n:
   sourceCommit: c09113477b65dd89ec52fc098aec307d3d9b9c22
 ---
+
 {{LearnSidebar}}
 
 *ウェブ入門*は、ウェブ開発の実用性を紹介する簡潔なシリーズです。簡単なウェブページを構築するために必要なツールをセットアップし、簡単なコードを書いたら、実際にウェブに公開します。

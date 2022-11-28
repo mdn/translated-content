@@ -1,9 +1,9 @@
 ---
 title: Função First-class
 slug: Glossary/First-class_Function
-translation_of: Glossary/First-class_Function
 original_slug: Glossario/Funcao-First-class
 ---
+
 Entende-se que uma linguagem de programação tem **Função First-class** quando suas funções são tratadas como qualquer outra variável. Por exemplo, numa linguagem desse tipo, a função pode ser passada como argumento pra outras funções, ser retornada por outra função e pode ser atribuída como um valor à uma variável.
 
 ## Exemplo | Atribuir uma função à uma variável
@@ -53,7 +53,7 @@ function sayHello() {
 }
 ```
 
-Neste exemplo; Precisamos retornar uma função de outra função - _Podemos retornar uma função porque tratamos função em JavaScript como um\_\_ **`valor`**._
+Neste exemplo; Precisamos retornar uma função de outra função - _Podemos retornar uma função porque tratamos função em JavaScript como um **`valor`**._
 
 > **Nota:** Uma função que retorna uma função é chamada de **Higher-Order Function**
 

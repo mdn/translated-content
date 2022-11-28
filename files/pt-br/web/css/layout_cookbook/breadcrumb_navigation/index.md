@@ -1,15 +1,8 @@
 ---
 title: Navegação "Migalha de Pão"
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-tags:
-  - CSS
-  - Layout
-  - Migalha de pão
-  - Navegação
-  - cookbook
-  - flexbox
-translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 ---
+
 {{CSSRef}}
 
 A navegação "migalha de pão" ajuda o usuário a enteder sua localização no site, fornecendo uma trilha de navegação de volta à pagina inicial.

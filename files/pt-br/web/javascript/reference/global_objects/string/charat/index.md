@@ -1,14 +1,8 @@
 ---
 title: String.prototype.charAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charAt
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 ---
+
 {{JSRef}}
 
 O método **`charAt()`** retorna o caractere especificado a partir de uma string.
@@ -26,7 +20,7 @@ str.charAt(index)
 
 ### Valor retornado
 
-Uma string representando o caractere no índice especificado. Uma string vazia se o **`index` **fornecido estiver fora do intervalo de índices da string `str`.
+Uma string representando o caractere no índice especificado. Uma string vazia se o **`index`** fornecido estiver fora do intervalo de índices da string `str`.
 
 ## Descrição
 

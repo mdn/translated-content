@@ -2,6 +2,7 @@
 title: id
 slug: Web/XPath/Functions/id
 ---
+
 {{ XsltRef() }}
 
 `id` 関数は渡された ID に一致するノードを探し、識別されたノードを格納するノード集合を返します。

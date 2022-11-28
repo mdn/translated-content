@@ -1,16 +1,8 @@
 ---
 title: Element
 slug: Web/API/Element
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Element
-  - Interface
-  - Reference
-  - Web API
-translation_of: Web/API/Element
 ---
+
 {{ APIRef("DOM") }}
 
 A interface **`Element`** é a classe base mais geral da qual todos os objetos em um {{domxref("Document")}} herda. Ela somente tem métodos e propriedades comuns para todos os tipos de elementos. Mais classes específicas herdam de `Element`. Por exemplo, a interface {{domxref("HTMLElement")}} é a interface base para elementos HTML, enquanto a interface {{domxref("SVGElement")}} é a base para todos os elementos SVG. A maioria das funcionalidades é especificada mais abaixo da hierarquia de classes.
@@ -85,7 +77,7 @@ _Herda propriedades de seus parentes {{domxref("Node")}}, e seu próprio parente
 
 ## Métodos
 
-_Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{domxref("EventTarget")}}_, e implementa aqueles de {{domxref("ParentNode")}}, {{domxref("ChildNode")}}_, {{domxref("NonDocumentTypeChildNode")}}, e\_\_ {{domxref("Animatable")}}._
+_Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{domxref("EventTarget")}}, e implementa aqueles de {{domxref("ParentNode")}}, {{domxref("ChildNode")}}, {{domxref("NonDocumentTypeChildNode")}}, e {{domxref("Animatable")}}._
 
 - {{ domxref("EventTarget.addEventListener()") }}
   - : Registra um manipulador de evento para um tipo específico de evento no elemento.
@@ -149,9 +141,6 @@ _Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{
   - : Assíncronamente pede o navegador para fazer o elemento tela cheia.
 - {{ domxref("Element.requestPointerLock()")}} {{experimental_inline}}
   - : Permite assíncronamente pedir pelo apontador para ser bloqueado em um dado elemento.
-
-<!---->
-
 - {{ domxref("Element.scrollIntoView()") }} {{experimental_inline}}
   - : Rola a página até que o elemento apareça na visão.
 - {{ domxref("Element.setAttribute()") }}

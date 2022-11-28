@@ -1,12 +1,9 @@
 ---
 title: Formatando texto
 slug: Web/JavaScript/Guide/Text_formatting
-tags:
-  - Guía
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Text_formatting
 original_slug: Web/JavaScript/Guide/Formatando_texto
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
 
 Esse capítulo introduz como trabalhar com strings e texto em JavaScript.

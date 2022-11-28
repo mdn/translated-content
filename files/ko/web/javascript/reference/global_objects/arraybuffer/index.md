@@ -11,6 +11,7 @@ tags:
 browser-compat: javascript.builtins.ArrayBuffer
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
+
 {{JSRef}}
 
 **`ArrayBuffer`** 객체는 일반적인 고정 길이 원시 이진 데이터 버퍼를 나타냅니다.
@@ -32,6 +33,7 @@ ArrayBuffer는 바이트로 구성된 배열로, 다른 언어에서는 종종 "
   - : 파생 개체를 만드는 데 사용되는 생성자 함수입니다.
 
 ## 정적 메서드
+
 - {{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(<var>arg</var>)")}}
   - : `arg` 유형이 [형식화 배열 객체](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)이거나 {{jsxref("DataView")}}와 같은 ArrayBuffer 중 하나인 경우, `true`를 반환합니다. 그렇지 않으면 `false`를 반환합니다.
 
@@ -44,6 +46,7 @@ ArrayBuffer는 바이트로 구성된 배열로, 다른 언어에서는 종종 "
 
 - {{jsxref("ArrayBuffer.prototype.slice()")}}
   - : 컨탠츠의 `begin`(포함)부터 `end`(제외)까지 해당 `ArrayBuffer`의 바이트 복사본인 새 `ArrayBuffer`를 반환합니다. `begin` 또는 `end`가 음수이면 처음부터가 아니라 배열 끝에서 인덱스를 참조합니다.
+
 ## 예제
 
 ### ArrayBuffer 만들기
@@ -69,4 +72,3 @@ const view = new Int32Array(buffer);
 - [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("SharedArrayBuffer")}}
 - [RangeError: invalid array length](/ko/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
-

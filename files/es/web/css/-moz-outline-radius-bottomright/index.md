@@ -1,13 +1,8 @@
 ---
 title: '-moz-outline-radius-bottomright'
 slug: Web/CSS/-moz-outline-radius-bottomright
-tags:
-  - CSS
-  - No estandar
-  - Propiedad CSS
-  - Referencia CSS
-translation_of: Web/CSS/-moz-outline-radius-bottomright
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 ## Summary

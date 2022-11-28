@@ -3,6 +3,7 @@ title: WebAssembly.Module() コンストラクター
 slug: WebAssembly/JavaScript_interface/Module/Module
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module
 ---
+
 {{JSRef}}
 
 **`WebAssembly.Module()`** コンストラクターは、ステートレスな WebAssembly コードを含む新しい Module オブジェクトを生成します。これはブラウザーでコンパイルされ、[Worker と効率的に共有する](/ja/docs/Web/API/Worker/postMessage)ことができ、複数回インスタンス化することができます。
@@ -12,7 +13,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module
 
 ## 構文
 
-> **Warning:** 大きなモジュールのコンパイルにはコストがかかるため、開発者はどうしても同期コンパイルが必要な場合にのみ `Module()` コンストラクターを使用し、それ以外の場合には非同期の {{jsxref("WebAssembly.compileStreaming()")}} メソッドを使用してください。
+> **警告:** 大きなモジュールのコンパイルにはコストがかかるため、開発者はどうしても同期コンパイルが必要な場合にのみ `Module()` コンストラクターを使用し、それ以外の場合には非同期の {{jsxref("WebAssembly.compileStreaming()")}} メソッドを使用してください。
 
 ```js
 new WebAssembly.Module(bufferSource)
@@ -21,7 +22,7 @@ new WebAssembly.Module(bufferSource)
 ### 引数
 
 - _bufferSource_
-  - : [型付き配列](/en-US/docs/Web/JavaScript/Typed_arrays)または [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) で、コンパイルしたい .wasm モジュールのバイナリーコードです。
+  - : [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)または [ArrayBuffer](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) で、コンパイルしたい .wasm モジュールのバイナリーコードです。
 
 ## 例
 

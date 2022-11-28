@@ -3,6 +3,7 @@ title: MediaRecorder.onstop
 slug: Web/API/MediaRecorder/stop_event
 original_slug: Web/API/MediaRecorder/onstop
 ---
+
 {{APIRef("Media Recorder API")}}
 
 **`MediaRecorder.onstop`** イベントハンドラ（[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は、`stop` イベントを処理します。 これにより、`MediaRecorder` を介してメディアの記録が停止されたことに応答してコードを実行できます。
@@ -47,7 +48,7 @@ MediaRecorder.addEventListener('stop', function(event) { ... })
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaRecorder.onstop")}}
+{{Compat}}
 
 ## 関連情報
 

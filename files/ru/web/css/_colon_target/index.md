@@ -6,9 +6,10 @@ tags:
   - Псевдоклассы
 translation_of: Web/CSS/:target
 ---
+
 {{CSSRef}}
 
-[Псевдокласс ](/ru/docs/Web/CSS/Pseudo-classes)[CSS](/ru/docs/Web/CSS) **`:target`** представляет уникальный элемент (целевой элемент) с подходящим {{htmlattrxref("id")}} URL-фрагментом.
+[Псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:target`** представляет уникальный элемент (целевой элемент) с подходящим {{htmlattrxref("id")}} URL-фрагментом.
 
 ```css
 /* Выбирает элемент с подходящим ID текущего URL-фрагмента */
@@ -19,7 +20,9 @@ translation_of: Web/CSS/:target
 
 Для примера, следующий URL имеет фрагмент (обозначается знаком _#_), который указывает на элемент с именем `section2`:
 
-    http://www.example.com/index.html#section2
+```
+http://www.example.com/index.html#section2
+```
 
 Следующий элемент будет выбран селектором `:target`, если текущий URL равен вышеуказанному:
 

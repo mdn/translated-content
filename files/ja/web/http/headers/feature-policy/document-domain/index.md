@@ -2,6 +2,7 @@
 title: 'Feature-Policy: document-domain'
 slug: Web/HTTP/Headers/Feature-Policy/document-domain
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `document-domain` ディレクティブは、現在の文書が {{domxref("document.domain")}} を設定することを許可するかどうかを制御します。このポリシーが無効であった場合、 {{domxref("document.domain")}} を設定しようとすると失敗し、 `SecurityError` の {{domxref("DOMException")}} が発生します。
@@ -13,7 +14,7 @@ Feature-Policy: document-domain <allowlist>;
 ```
 
 - \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
+  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#%E6%A7%8B%E6%96%87) を参照してください。
 
 ## 既定のポリシー
 

@@ -1,8 +1,8 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
-translation_of: Web/JavaScript/Reference/Statements/export
 ---
+
 {{jsSidebar("Statements")}}
 
 O export é utilizado quando criamos módulos JavaScript para exportar ligações em tempo real para suas funções, objetos ou valores primitivos de um módulo sejam utilizados por outros programas através de declarações {{jsxref("Statements/import", "import")}}. Ligações que são exportadas ainda podem ser modificadas localmente; quando importadas, embora elas possam ser lidas somente pelo módulo que as importou, seu valor é atualizado sempre que ela modificada pelo módulo que a exportou.
@@ -47,7 +47,7 @@ export { default } from …;
 ```
 
 - `nameN`
-  - : Identificador para ser exportado (assim ele pode ser importado via [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) em outro script).
+  - : Identificador para ser exportado (assim ele pode ser importado via [`import`](/pt-BR/docs/Web/JavaScript/Reference/Statements/import) em outro script).
 
 ## Descrição
 

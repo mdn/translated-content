@@ -1,18 +1,8 @@
 ---
 title: document.getElementById()
 slug: Web/API/Document/getElementById
-tags:
-  - API
-  - DOM
-  - Document
-  - Elements
-  - Method
-  - Reference
-  - Web
-  - getElementById
-  - id
-translation_of: Web/API/Document/getElementById
 ---
+
 {{ ApiRef("DOM") }}
 
 ## Sumário
@@ -56,9 +46,9 @@ onde
 
 Os novatos devem notar que a caixa de 'Id' no nome deste método _deve_ estar correta para o código da função - 'getElementByID _não funciona_, por mais natural que possa parecer.
 
-Se não existe um elemento com o id fornecido, esta função retorna `null`. Note que o parâmetro ID diferência maiúsculas e minúsculas. Assim document.getElementById("Main") retornará `null` ao invés do elemento `<div id="main">,` devido a "M" e "m" serem diferentes para o objetivo deste método.
+Se não existe um elemento com o id fornecido, esta função retorna `null`. Note que o parâmetro ID diferência maiúsculas e minúsculas. Assim document.getElementById("Main") retornará `null` ao invés do elemento `<div id="main">`, devido a "M" e "m" serem diferentes para o objetivo deste método.
 
-**Elementos que não estão no documento** não são procurados por `getElementById`. Quando criar um elemento e atribuir um ID ao mesmo, você deve inserir o elemento na árvore do documento com [`insertBefore`](/en-US/docs/DOM/Node.insertBefore) ou método similar antes que você possa acessá-lo com `getElementById`:
+**Elementos que não estão no documento** não são procurados por `getElementById`. Quando criar um elemento e atribuir um ID ao mesmo, você deve inserir o elemento na árvore do documento com [`insertBefore`](/pt-BR/docs/DOM/Node.insertBefore) ou método similar antes que você possa acessá-lo com `getElementById`:
 
 ```js
 var elemento = document.createElement("div");
@@ -76,7 +66,7 @@ var el = document.getElementById('testqq'); // el será null!
 
 `getElementById` foi introduzido no DOM Level 1 para documentos HTML e movidos para todos documentos no DOM Level 2
 
-- Especificação núcleo DOM Level 2: [getElementById](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBId)
+- Especificação núcleo DOM Level 2: [getElementById](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBId)
 
 ## Veja também
 

@@ -2,6 +2,7 @@
 title: location.password
 slug: Web/API/Location/password
 ---
+
 {{deprecated_header}}
 
 **`password`** は {{domxref("Location")}} インターフェイスのプロパティで、 {{domxref("USVString")}} でドメイン名の前に指定されたパスワードが入ります。

@@ -40,7 +40,7 @@ font-variant-numeric: unset;
   - : 下列特性均不启用。
 
 - `ordinal`
-  - : 启用序数形式显示。对序号标记强制启用特殊字形，如英文中的 1st，2nd，3rd，4th ，意大利文中的 1a。等同于 OpenType 特性 `ordn`。
+  - : 启用序数形式显示。对序号标记强制启用特殊字形，如英文中的 1st，2nd，3rd，4th，意大利文中的 1a。等同于 OpenType 特性 `ordn`。
 - `slashed-zero`
   - : 启用区分零显示。强制使用带有斜杠的 0；常用于区分 O 和 0。等同于 OpenType 特性 zero。
 - _\<numeric-figure-values>_

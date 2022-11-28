@@ -1,15 +1,9 @@
 ---
 title: Seleção
 slug: Web/API/Selection
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Referencia
-  - Seleção
-translation_of: Web/API/Selection
 original_slug: Web/API/Seleção
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 Um objeto **`Selection`** representa um intervalo do texto selecionado pelo usuário ou a posição atual do cursor. Para obter o objeto Selection para inspecionar ou modificar, use {{DOMxRef("Window.getSelection()")}}.
@@ -94,7 +88,7 @@ var range  = selObj.getRangeAt(0);
 - `selObj` é um objeto selection
 - `range` é um objeto {{DOMxRef("Range")}}
 
-Como consta nas [Especificações da API de seleção](http://www.w3.org/TR/selection-api/#h_note_15), a API foi inicialmente criada pela Netscape e usados multiplos intervalos, por instância, para permitir ao usuário selecionar uma coluna de uma {{HTMLElement("table")}}. Outros navegadores como Gecko não implementaram multiplos intervalos, e a especificação exige que a seleção sempre tenha um único intervalo.
+Como consta nas [Especificações da API de seleção](https://www.w3.org/TR/selection-api/#h_note_15), a API foi inicialmente criada pela Netscape e usados multiplos intervalos, por instância, para permitir ao usuário selecionar uma coluna de uma {{HTMLElement("table")}}. Outros navegadores como Gecko não implementaram multiplos intervalos, e a especificação exige que a seleção sempre tenha um único intervalo.
 
 ### Seleção e foco de input
 
@@ -166,7 +160,5 @@ Outras palavras chaves usadas nesta seção.
 ## Notas da Gecko
 
 - Gecko/Firefox provide additional features, available to chrome (internal and add-on) code only. These are defined in `nsISelectionPrivate`.
-- Mozilla source code: {{Source("dom/webidl/Selection.webidl")}}
+- Mozilla source code: [`Selection.webidl`](https://searchfox.org/mozilla-central/source/dom/webidl/Selection.webidl)
 - {{DOMxRef("Selection.selectionLanguageChange()")}}{{Obsolete_Inline("gecko29")}} used to be exposed to the web content until Firefox 29
-
-<!---->

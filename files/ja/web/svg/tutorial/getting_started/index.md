@@ -2,6 +2,7 @@
 title: 始めましょう
 slug: Web/SVG/Tutorial/Getting_Started
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
 
 ### 簡単な例

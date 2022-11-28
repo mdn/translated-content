@@ -21,15 +21,15 @@ Un intervalle de clé peut être une seule valeur ou un intervalle avec des born
 
 | Intervalle                         | Code                                                              |
 | ---------------------------------- | ----------------------------------------------------------------- |
-| Toutes les clés ≤ **x**            | {{domxref("IDBKeyRange.upperBound")}}`(x)`             |
-| Toutes les clés < **x**            | {{domxref("IDBKeyRange.upperBound")}}`(x, true)`       |
-| Toutes les clés ≥ **y**            | {{domxref("IDBKeyRange.lowerBound")}}`(y)`             |
-| Toutes les clés > **y**            | {{domxref("IDBKeyRange.lowerBound")}}`(y, true)`       |
-| Toutes les clés ≥ **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}}`(x, y)`              |
-| Toutes les clés > **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}}`(x, y, true, true)`  |
-| Toutes les clés > **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}}`(x, y, true, false)` |
-| Toutes les clés ≥ **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}}`(x, y, false, true)` |
-| La clé = **z**                     | {{domxref("IDBKeyRange.only")}}`(z)`                     |
+| Toutes les clés ≥ **x**            | [`IDBKeyRange.lowerBound(x)`](/fr/docs/Web/API/IDBKeyRange/lowerBound)             |
+| Toutes les clés > **x**            | [`IDBKeyRangelowerBound(x, true)`](/fr/docs/Web/API/IDBKeyRange/lowerBound)       |
+| Toutes les clés ≤ **y**            | [`IDBKeyRange.upperBound(y)`](/fr/docs/Web/API/IDBKeyRange/upperBound)             |
+| Toutes les clés < **y**            | [`IDBKeyRange.upperBound(y, true)`](/fr/docs/Web/API/IDBKeyRange/upperBound)       |
+| Toutes les clés ≥ **x** && ≤ **y** | [`IDBKeyRange.bound(x, y)`](/fr/docs/Web/API/IDBKeyRange/bound)              |
+| Toutes les clés > **x** &&< **y**  | [`IDBKeyRange.bound(x, y, true, true)`](/fr/docs/Web/API/IDBKeyRange/bound)  |
+| Toutes les clés > **x** && ≤ **y** | [`IDBKeyRange.bound(x, y, true, false)`](/fr/docs/Web/API/IDBKeyRange/bound) |
+| Toutes les clés ≥ **x** &&< **y**  | [`IDBKeyRange.bound(x, y, false, true)`](/fr/docs/Web/API/IDBKeyRange/bound) |
+| La clé = **z**                     | [`IDBKeyRange.only(z)`](/fr/docs/Web/API/IDBKeyRange/only)                     |
 
 Une clé est contenue dans un intervalle de clé lorsque les conditions suivantes sont réunies :
 
@@ -104,7 +104,7 @@ function displayData() {
   };
 ```
 
-> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) ([ainsi que la démonstration associée](https://mdn.github.io/IDBKeyRange-example/)).
+> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) ([ainsi que la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
 
 ## Spécifications
 

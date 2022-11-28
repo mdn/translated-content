@@ -5,6 +5,7 @@ l10n:
   sourceCommit: d09e279cd88f41649a23418f494b65149c3b53a0
 original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_2
 ---
+
 これは、[カスタムフォームウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)を説明する 2 番目の例です。
 
 ## JS

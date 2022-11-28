@@ -1,15 +1,8 @@
 ---
 title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
-tags:
-  - Descontinuado
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/big
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 O método **big()** cria um elemento HTML [\<big>](/pt-BR/docs/Web/HTML/Element/big) fazendo com que o texto dentro dele seja exibido uma uma fonte maior.

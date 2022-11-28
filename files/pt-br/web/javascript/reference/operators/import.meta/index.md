@@ -1,9 +1,9 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
-translation_of: Web/JavaScript/Reference/Statements/import.meta
 original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
+
 {{JSSidebar("Statements")}}
 
 O objeto **`import.meta`** mostra os metadados específicos do contexto de um módulo JavaScript. Ele contém informações sobre o módulo, como a sua URL.
@@ -48,7 +48,7 @@ import './index.mjs?someURLInfo=5';
 </script>
 ```
 
-O arquivo JavaScript a seguir vai registrar o parâmetro \``someURLInfo`:
+O arquivo JavaScript a seguir vai registrar o parâmetro `someURLInfo`:
 
 ```js
 // index.mjs
@@ -78,7 +78,7 @@ Nesse arquivo específico, o argumento passado pode ser complementar para ser us
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.import_meta")}}
+{{Compat}}
 
 ## Veja também
 

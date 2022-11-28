@@ -2,6 +2,7 @@
 title: Clients.get()
 slug: Web/API/Clients/get
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Clients")}} インターフェースの **`get()`** メソッドは、所与の `id` と一致するサービスワーカークライアントを取得し、{{jsxref("Promise")}} で返します。

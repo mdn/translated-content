@@ -40,7 +40,7 @@ var result = url.host // "developer.mozilla.org:4097"
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.host")}}
+{{Compat}}
 
 ## 参考
 

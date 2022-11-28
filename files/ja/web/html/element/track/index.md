@@ -3,7 +3,7 @@ title: '<track>: 埋め込みテキストトラック要素'
 slug: Web/HTML/Element/track
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<track>`** は [HTML](/ja/docs/Web/HTML) の要素で、メディア要素 ({{HTMLElement("audio")}} および {{HTMLElement("video")}}) の子として使用します。この要素は自動的に処理される字幕など、時間指定されたテキストトラック (または時系列データ) を指定することができます。トラックは [WebVTT 形式](/ja/docs/Web/API/WebVTT_API) (`.vtt` ファイル) を用います。
 

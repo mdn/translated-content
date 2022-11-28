@@ -2,6 +2,7 @@
 title: <xsl:element>
 slug: Web/XSLT/Element/element
 ---
+
 {{ XsltRef() }}
 
 `<xsl:element>` 要素は、出力文書に要素を作成します。

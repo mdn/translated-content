@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get
 
 {{JSRef}}
 
-La méthode **`get()`**, rattachéee au prototype de  {{jsxref("WebAssembly.Table()")}}, permet de récupérer une référence à une fonction stockée dans le tableau WebAssembly grâce à sa position. dans le tableau.
+La méthode **`get()`**, rattachéee au prototype de {{jsxref("WebAssembly.Table()")}}, permet de récupérer une référence à une fonction stockée dans le tableau WebAssembly grâce à sa position. dans le tableau.
 
 ## Syntaxe
 
@@ -52,13 +52,11 @@ On note ici qu'il est nécessaire d'avoir un deuxième opérateur d'appel après
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblytableprototypeget', 'get()')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initial pour WebAssembly. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.Table.get")}}
+{{Compat}}
 
 ## Voir aussi
 

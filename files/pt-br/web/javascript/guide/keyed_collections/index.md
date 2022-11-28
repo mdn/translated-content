@@ -1,14 +1,8 @@
 ---
 title: Coleções chaveadas
 slug: Web/JavaScript/Guide/Keyed_collections
-tags:
-  - Coleções
-  - Guía
-  - JavaScript
-  - Map
-  - configuração
-translation_of: Web/JavaScript/Guide/Keyed_collections
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
 
 Este capítulo apresenta coleções de dados que são ordenados por uma chave; Objetos Map e Set contêm elementos que são iteráveis em ordem de inserção.
@@ -63,7 +57,7 @@ O objeto {{jsxref("WeakMap")}} é uma coleção de pares de chave/valor em que a
 
 Uma diferença para objetos `Map` é que chaves `WeakMap` não são enumeráveis (isto é, não há um método que dê a você uma lista de chaves). Se eles fossem, a lista dependeria do estado da coleta de lixo, introduzindo um não-determinismo.
 
-Para mais informações e código de exemplo, veja também "Por quê \_Weak_Map?" na página de referência {{jsxref("WeakMap")}}.
+Para mais informações e código de exemplo, veja também "Por quê WeakMap?" na página de referência {{jsxref("WeakMap")}}.
 
 Um caso de uso de objetos `WeakMap` é armazenar dados privados para um objeto ou ocultar detalhes de implementação. O exemplo a seguir é Nick Fitzgerald a partir de um post ["Ocultando detalhes de implementação com WeakMaps ECMAScript 6"](http://fitzgeraldnick.com/weblog/53/) em seu blog. Os dados privados e métodos pertencem ao objeto e são armazenados nos objetos WeakMap `privados`. Tudo exposto na instância e o protótipo é público, todo o restante é inacessível a partir do mundo externo por que `privado` não é exportado pelo módulo.
 

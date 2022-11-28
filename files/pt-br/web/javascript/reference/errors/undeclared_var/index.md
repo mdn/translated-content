@@ -1,8 +1,8 @@
 ---
 title: 'ReferenceError: Atribuição à variável não declarada "x"'
 slug: Web/JavaScript/Reference/Errors/Undeclared_var
-translation_of: Web/JavaScript/Reference/Errors/Undeclared_var
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
@@ -27,7 +27,7 @@ Três coisas a observar sobre as variáveis declaradas e não declaradas:
 - Variáveis declaradas são criados antes de qualquer código ser executado. Variáveis não declaradas não existem até que o código atribuido for executado.
 - Variáveis declaradas são uma propriedade não-configurável de seu contexto de execução (função ou global). Variáveis não declaradas são configuráveis (por exemplo, pode ser excluído).
 
-Para mais exemplos, veja a página de referência [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var).
+Para mais exemplos, veja a página de referência [`var`](/pt-BR/docs/Web/JavaScript/Reference/Statements/var).
 
 Erros sobre atribuições de variáveis não declaradas ocorrem apenas em [código de modo estrito](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode). Em código não-estrito, eles são silenciosamente ignorados.
 

@@ -2,9 +2,10 @@
 title: IDBDatabase.version
 slug: Web/API/IDBDatabase/version
 ---
+
 {{ APIRef("IDBDatabase") }}
 
-`{{domxref("IDBDatabase")}}インターフェイスのversion`プロパティ は、接続しているデータベースのバージョンを含む[64-bit integer](/ja/docs/NSPR_API_Reference/Long_Long_%2864-bit%29_Integers)です。データベースを初めて生成した時、この属性は空文字です。
+{{domxref("IDBDatabase")}} インターフェイスの **`version`** プロパティは、接続しているデータベースのバージョンを含む [64-bit integer](/ja/docs/NSPR_API_Reference/Long_Long_%2864-bit%29_Integers) です。データベースを初めて生成した時、この属性は空文字です。
 
 ## 構文
 
@@ -19,10 +20,10 @@ db.version
 ## 例
 
 ```js
-// Let us open our database
+// 我々のデータベースを開きます｡
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-// these two event handlers act on the database being opened successfully, or not
+// これら 2 個のイベントハンドラーは､データベースが正常に開かれたか､失敗した時に動作します｡
 DBOpenRequest.onerror = function(event) {
   note.innerHTML += '<li>Error loading database.</li>';
 };
@@ -30,30 +31,28 @@ DBOpenRequest.onerror = function(event) {
 DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '<li>Database initialised.</li>';
 
-  // store the result of opening the database in the db variable. This is used a lot below
+  // データベースを開いた結果を変数 db に保存します｡これは後でたくさん使います｡
   db = DBOpenRequest.result;
 
-  // This line will log the version of the connected database, which should be "4"
+  // この行では接続したデータベースのバージョンを記録します。"4" のはずです。
   console.log(db.version);
 };
 ```
 
-## 仕様
+## 仕様書
 
-| Specification                                                                            | Status                       | Comment |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-version', 'version')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.IDBDatabase.version")}}
 
 ## 関連情報
 
-- [Using IndexedDB](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Starting transactions: {{domxref("IDBDatabase")}}
-- Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
-- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- トランザクションの開始 : {{domxref("IDBDatabase")}}
+- トランザクションの使用 : {{domxref("IDBTransaction")}}
+- キーの範囲の設定 : {{domxref("IDBKeyRange")}}
+- データの取得と変更 : {{domxref("IDBObjectStore")}}
+- カーソルの使用 : {{domxref("IDBCursor")}}
+- リファレンス例 : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

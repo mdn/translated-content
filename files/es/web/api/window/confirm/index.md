@@ -3,6 +3,7 @@ title: Window.confirm()
 slug: Web/API/Window/confirm
 translation_of: Web/API/Window/confirm
 ---
+
 {{ApiRef("Window")}}
 
 El método **`Window.confirm()`** muestra una ventana de diálogo con un mensaje opcional y dos botones, Aceptar y Cancelar.
@@ -34,15 +35,13 @@ The following text is shared between this article, DOM:window\.prompt and DOM:wi
 
 Los usuarios de [Mozilla Chrome](/en-US/Chrome) users (e.g. Firefox extensions) deberían usar métodos de `nsIPromptService` en vez de cajas de diálogo.
 
-A partir de la versión {{CompatChrome(46.0)}} de Chrome este método es bloqueado dentro de un {{htmlelement("iframe")}} a no ser que el atributo sandbox tenga el valor `allow-modal`.
+A partir de la versión 46.0 de Chrome este método es bloqueado dentro de un {{htmlelement("iframe")}} a no ser que el atributo sandbox tenga el valor `allow-modal`.
 
-{{gecko_minversion_inline("23.0")}} El argumento es opcional y no requerido por la especificación.
+El argumento es opcional y no requerido por la especificación.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                           | Estado                                       | Comentarios         |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('HTML5 Web application', '#dom-confirm', 'confirm()')}} | {{Spec2('HTML5 Web application')}} | Definición inicial. |
+{{Specifications}}
 
 ## Ver también
 

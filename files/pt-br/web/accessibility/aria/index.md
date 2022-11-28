@@ -1,19 +1,8 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-tags:
-  - AJAX
-  - ARIA
-  - Accessibility
-  - Acessibilidade
-  - Introdução
-  - JavaScript ARIA
-  - TopicStub
-  - W3C
-  - WAI-ARIA
-  - WAI-ARIA+HTML
-translation_of: Web/Accessibility/ARIA
 ---
+
 Aplicações para a Internet Ricas em Acessibilidade - Accessible Rich Internet Applications (ARIA) definem as formas de tornar o conteúdo e as aplicações da Rede Mundial - _Web_ - (especialmente aqueles desenvolvidos com Ajax e JavaScript) mais acessíveis às pessoas com deficiência.
 
 Por exemplo, a ARIA permite a marcação de regiões importantes na página (como uma caixa de busca, um cabeçalho, chamadas "pontos de referência") para facilitar a navegação (agilizam a utilização de leitores de tela, por exemplo), JavaScript para _widgets_, sugestões de preenchimento de formulário e mensagens de erro, atualizações de conteúdo em tempo real e muito mais.
@@ -77,7 +66,7 @@ As informações ARIA nos blogues tendem a ficar desatualizadas rapidamente. Sem
 
 ### Encontrando Erros
 
-[Erros nos arquivos ARIA em navegadores, leitores de telas e bibliotecas JavaScript](/en/Accessibility/ARIA/How_to_file_ARIA-related_bugs).
+[Erros nos arquivos ARIA em navegadores, leitores de telas e bibliotecas JavaScript](/pt-BR/Accessibility/ARIA/How_to_file_ARIA-related_bugs).
 
 ### Exemplos
 
@@ -85,24 +74,18 @@ As informações ARIA nos blogues tendem a ficar desatualizadas rapidamente. Sem
   - : Um conjunto de exemplos de arquivos das bibliotecas base, com os quais fica muito fácil aprender.
 - Demonstração de Biblioteca para a Accessibilidade JS em _Widget_
   - : [Dojo](http://dojotoolkit.org/widgets), [jQuery](http://hanshillen.github.com/jqtest/), [Fluid](http://wiki.fluidproject.org/display/fluid/Components), [YUI](http://yuilibrary.com/gallery/)
-
-<!---->
-
 - [Correio Eletrônico Yahoo!](http://mail.yahoo.com)
   - : A Yahoo! colocou tudo reunido com o Yahoo! _e-mail_, uma aplicação para a _web_ que parece um aplicativo nativo. E funciona muito bem. Em uma [análise do _e-mail_ Yahoo!](http://www.marcozehe.de/2011/09/21/review-the-all-new-yahoo-mail-web-application/) pelo leitor de tela, Marco Zehe diz: "Que o bom trabalho permaneça!".
-
-<!---->
-
 - [Pesquisa Yahoo!](http://search.yahoo.com)
   - : A Yahoo! tem feito um trabalho incrível no avanço do ARIA, aplicando suas posibilidades de forma plena e [compartilhando suas técnicas](http://ycorpblog.com/2011/03/23/searchdirect/). A Pesquisa Yahoo! usa uma combinação de pontos de referência ARIA, regiões dinâmicas e _widgets_.
 
 ### Esforços pela Padronização
 
-- [Uma Visão Geral das Atividades WAI-ARIA na W3C](http://www.w3.org/WAI/intro/aria.php)
+- [Uma Visão Geral das Atividades WAI-ARIA na W3C](https://www.w3.org/WAI/intro/aria.php)
   - : Uma visão geral oficial dos esforços de padronização da WAI-ARIA pela Iniciativa de tornar a _Web_ Acessível (Web Accessibility Initiative - WAI)
-- [Especificações WAI-ARIA](http://www.w3.org/TR/wai-aria/)
+- [Especificações WAI-ARIA](https://www.w3.org/TR/wai-aria/)
   - : As especificações W3C são referências úteis. Note que, nesta fase, é importante testar a compatibilidade, uma vez que as implementações ainda estão inconsistentes.
-- [Práticas Oficiais WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/)
+- [Práticas Oficiais WAI-ARIA](https://www.w3.org/WAI/PF/aria-practices/)
 
   - : Conforme as especificações da W3C WAI-ARIA, a excelênca nas práticas oficiais representam o futuro ideal - o dia em que todos os autores possam trabalhar em suas realizações sobre uma base ARIA consistente em navegadores e leitores de tela. A documentação W3C proporcionará a você uma visão aprofundada de ARIA.
 

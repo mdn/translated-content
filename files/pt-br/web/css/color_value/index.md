@@ -1,14 +1,8 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
-tags:
-  - CSS
-  - Layout
-  - Referencia
-  - Tipo de dado CSS
-  - Web
-translation_of: Web/CSS/color_value
 ---
+
 {{CSSRef}}
 
 ## Sumário
@@ -1007,20 +1001,12 @@ A cor deste texto é a mesma da linha:  <div style="background:currentcolor; hei
 
 > **Note:** **Nota**: Na especificação Módulo de cor CSS Color nível 4, a rgba() foi definida como uma função herdada com gramática e comportamento idênticos à rgb(); na verdade, um apelido. Mais para frente, ambas podem aceitar exatamente os mesmos parâmetros.
 
-Colors can be defined using the red-green-blue (RGB) model in two ways:
+RGB colors can be expressed through both hexadecimal (prefixed with `#`) and functional (`rgb()`, `rgba()`) notations.
 
-- Hexadecimal notation `#RRGGBB,` `#RGB`
-
-  - :&#x20;
-
-    - "`#`", followed by six hexadecimal characters (0-9, A-F), where the first two digits represent the red part, the second two the green part and the last two the blue part.
-    - "`#`", followed by three hexadecimal characters (0-9, A-F), where the first digit represents the red part, the second the green part and the last one the blue part.
-
-    The three-digit RGB notation (`#RGB`) and the six-digit form (`#RRGGBB`) are equal, for example `#f03` and `#ff0033` represent the same color.
-
-- Functional Notation `rgb(R,G,B)`
-  - : "`rgb`", followed by three {{cssxref("&lt;integer&gt;")}} or three {{cssxref("&lt;percentage&gt;")}} values, plus an optional alpha value that specifies the transparency of the color (this can be a {{cssxref("&lt;number&gt;")}} between 0 and 1, or a {{cssxref("&lt;percentage&gt;")}})
-    The integer number 255 corresponds to 100%, and to F or FF in the hexadecimal notation.
+- [Hexadecimal notation](/en-US/docs/Web/CSS/hex-color): `#RGB[A]` or`#RRGGBB[AA]`
+  - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. For example, `#ff0000` is equivalent to `#ff0000ff`. The three-digit notation (`#RGB`) is a shorter version of the six-digit form (`#RRGGBB`). For example, `#f09` is the same color as `#ff0099`. Likewise, the four-digit RGB notation (`#RGBA`) is a shorter version of the eight-digit form (`#RRGGBBAA`). For example, `#0f38` is the same color as `#00ff3388`.
+- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) or [`rgba()`](/en-US/docs/Web/CSS/color_value/rgba): `rgb[a](R, G, B[, A])` or `rgb[a](R G B[ / A])`
+  - : `R` (red), `G` (green), and `B` (blue) can be either {{cssxref("&lt;number&gt;")}}s or {{cssxref("&lt;percentage&gt;")}}s, where the number `255` corresponds to `100%`. `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
 ```plain
 /* These examples all specify the same RGB color: */
@@ -1099,20 +1085,12 @@ hsl(240 100% 50% / 5%) /* 5% opaque blue with percentage value for alpha */
 
 ### `rgba()`
 
-Colors can be defined in the Red-green-blue-alpha model (RGBa) in two ways:
+RGB colors can be expressed through both hexadecimal (prefixed with `#`) and functional (`rgb()`, `rgba()`) notations.
 
-- Hexadecimal notation `#RRGGBBAA and #RGBA`
-
-  - :&#x20;
-
-    - "`#`", followed by eight hexadecimal characters (0-9, A-F), where the first two digits represent the red part, the second two the green part, the third two the blue part and the last two the transparency.
-    - "`#`", followed by four hexadecimal characters (0-9, A-F), where the first digit represents the red part, the second the green part, the third one the blue part and the last one the transparency.
-
-    The four-digit RGB notation (`#RGBA`) and the eight-digit form (`#RRGGBBAA`) are equal, for example, `#f038` and `#ff003388` represent the same color.
-
-- using the `rgba()` functional notation.
-  - : RGBa extends the RGB color model to include the alpha channel, allowing specification of the opacity of a color.
-    **a** means opacity: 0=transparent; 1=opaque;
+- [Hexadecimal notation](/en-US/docs/Web/CSS/hex-color): `#RGB[A]` or`#RRGGBB[AA]`
+  - : `R` (red), `G` (green), `B` (blue), and `A` (alpha) are hexadecimal characters (0–9, A–F). `A` is optional. For example, `#ff0000` is equivalent to `#ff0000ff`. The three-digit notation (`#RGB`) is a shorter version of the six-digit form (`#RRGGBB`). For example, `#f09` is the same color as `#ff0099`. Likewise, the four-digit RGB notation (`#RGBA`) is a shorter version of the eight-digit form (`#RRGGBBAA`). For example, `#0f38` is the same color as `#00ff3388`.
+- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) or [`rgba()`](/en-US/docs/Web/CSS/color_value/rgba): `rgb[a](R, G, B[, A])` or `rgb[a](R G B[ / A])`
+  - : `R` (red), `G` (green), and `B` (blue) can be either {{cssxref("&lt;number&gt;")}}s or {{cssxref("&lt;percentage&gt;")}}s, where the number `255` corresponds to `100%`. `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
 ```css
 #f030                /* 0% opaque red */
@@ -1233,9 +1211,9 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 - \-moz-CellHighlightText
   - : Text color for a selected item in a tree. Should be used with the `-moz-CellHighlight background` color. See also `-moz-html-CellHighlightText`.
 - \-moz-Combobox
-  - : {{Gecko_minversion_inline("1.9.2")}} Background color for combo-boxes. Should be used with the `-moz-ComboboxText` foreground color. In versions prior to 1.9.2, use `-moz-Field` instead.
+  - : Background color for combo-boxes. Should be used with the `-moz-ComboboxText` foreground color. In versions prior to 1.9.2, use `-moz-Field` instead.
 - \-moz-ComboboxText
-  - : {{Gecko_minversion_inline("1.9.2")}} Text color for combo-boxes. Should be used with the `-moz-Combobox` background color. In versions prior to 1.9.2, use `-moz-FieldText` instead.
+  - : Text color for combo-boxes. Should be used with the `-moz-Combobox` background color. In versions prior to 1.9.2, use `-moz-FieldText` instead.
 - \-moz-Dialog
   - : Background color for dialog boxes. Should be used with the `-moz-DialogText` foreground color.
 - \-moz-DialogText
@@ -1244,16 +1222,16 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 
   \-moz-EvenTreeRow
 
-  - : {{gecko_minversion_inline("1.9")}} Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
+  - : Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
 
 - \-moz-Field
   - : Text field background color. Should be used with the `-moz-FieldText` foreground color.
 - \-moz-FieldText
   - : Text field text color. Should be used with the `-moz-Field`, `-moz-EvenTreeRow`, or `-moz-OddTreeRow` background color.
 - \-moz-html-CellHighlight
-  - : {{gecko_minversion_inline("1.9")}} Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`.
+  - : Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`.
 - \-moz-html-CellHighlightText
-  - : {{gecko_minversion_inline("1.9")}} Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlight` background color. Prior to Gecko 1.9, use `-moz-CellHighlightText`.
+  - : Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlight` background color. Prior to Gecko 1.9, use `-moz-CellHighlightText`.
 - \-moz-mac-accentdarkestshadow
 
   \-moz-mac-accentdarkshadow
@@ -1270,10 +1248,7 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 
   \-moz-mac-chrome-active
 
-  - : {{Gecko_minversion_inline("1.9.1")}}
-
 - \-moz-mac-chrome-inactive
-  - : {{Gecko_minversion_inline("1.9.1")}}
 - \-moz-mac-focusring
 
   \-moz-mac-menuselect
@@ -1289,26 +1264,26 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 - \-moz-MenuHoverText
   - : Text color for hovered menu items. Often similar to `HighlightText`. Should be used with the `-moz-MenuHover` background color.
 - \-moz-MenuBarText
-  - : {{Gecko_minversion_inline("1.9.2")}} Text color in menu bars. Often similar to `MenuText`. Should be used on top of `Menu` background.
+  - : Text color in menu bars. Often similar to `MenuText`. Should be used on top of `Menu` background.
 - \-moz-MenuBarHoverText
   - : Color for hovered text in menu bars. Often similar to `-moz-MenuHoverText`. Should be used on top of `-moz-MenuHover` background.
 - \-moz-nativehyperlinktext
-  - : {{Gecko_minversion_inline("1.9.1")}} Default platform hyperlink color.
+  - : Default platform hyperlink color.
 - \-moz-OddTreeRow
-  - : {{gecko_minversion_inline("1.9")}} Background color for odd-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-EvenTreeRow`.
+  - : Background color for odd-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-EvenTreeRow`.
 - \-moz-win-communicationstext
-  - : {{gecko_minversion_inline("1.9")}} Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-communications-toolbox;`.
+  - : Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-communications-toolbox;`.
 - \-moz-win-mediatext
-  - : {{gecko_minversion_inline("1.9")}} Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-media-toolbox`.
+  - : Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-media-toolbox`.
 
 ### Mozilla Color Preference Extensions
 
 - \-moz-activehyperlinktext
   - : User's preference for text color of active links. Should be used with the default document background color.
 - \-moz-default-background-color
-  - : {{Gecko_minversion_inline("5.0")}} User's preference for the document background color.
+  - : User's preference for the document background color.
 - \-moz-default-color
-  - : {{Gecko_minversion_inline("5.0")}} User's preference for the text color.
+  - : User's preference for the text color.
 - \-moz-hyperlinktext
   - : User's preference for the text color of unvisited links. Should be used with the default document background color.
 - \-moz-visitedhyperlinktext

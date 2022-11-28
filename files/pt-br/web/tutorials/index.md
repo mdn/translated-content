@@ -1,23 +1,9 @@
 ---
 title: Tutoriais
 slug: Web/Tutorials
-tags:
-  - Artigos Web
-  - CSS
-  - Codificando
-  - Código
-  - Desenvolvimento Web
-  - GitHub
-  - Guía
-  - HTML
-  - Iniciante
-  - JavaScript
-  - MDN
-  - Navegador
-  - Tutorial
-translation_of: Web/Tutorials
 original_slug: Web/Tutoriais
 ---
+
 Os links nesta página levam a uma variedade de tutoriais e materiais de treinamento. **Se você está apenas começando, aprendendo o básico ou é um veterano em desenvolvimento web, aqui você pode encontrar recursos úteis, bem como as melhores práticas**. Esses recursos são criados por empresas com visão de futuro e desenvolvedores que adotaram padrões e boas práticas para desenvolvimento na web, e que fornecem e permitem diferentes interpretações de acordo com a solução adotada pelo usuário, tudo isso através de uma licença de conteúdo aberto, como é o caso da Creative Commons.
 
 ## Para nível iniciante da Web
@@ -142,5 +128,5 @@ Os links nesta página levam a uma variedade de tutoriais e materiais de treinam
 
 ### Estendendo o desenvolvimento
 
-- [WebExtensions](https://developer.mozilla.org/pt-BR/Add-ons/WebExtensions)
-  - : WebExtensions é um sistema entre navegadores para desenvolver complementos de navegador. Em larga escala o sistema é compatível com a [API de extensão](https://developer.chrome.com/extensions) suportada pelos navegadores Google Chrome e Opera. Extensões escritas para estes navegadores na maioria dos casos funcionam no Firefox ou [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) [com poucas mudanças](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Porting_from_Google_Chrome). A API é também completamente compatível com [multiprocessos Firefox](https://developer.mozilla.org/pt-BR/Firefox/Multiprocess_Firefox).
+- [WebExtensions](/pt-BR/Add-ons/WebExtensions)
+  - : WebExtensions é um sistema entre navegadores para desenvolver complementos de navegador. Em larga escala o sistema é compatível com a [API de extensão](https://developer.chrome.com/extensions) suportada pelos navegadores Google Chrome e Opera. Extensões escritas para estes navegadores na maioria dos casos funcionam no Firefox ou [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) [com poucas mudanças](/pt-BR/Add-ons/WebExtensions/Porting_from_Google_Chrome). A API é também completamente compatível com [multiprocessos Firefox](/pt-BR/Firefox/Multiprocess_Firefox).

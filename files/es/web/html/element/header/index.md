@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/header
 original_slug: Web/HTML/Elemento/header
 ---
+
 El _elemento de HTML Header_ (\<header>) representa un grupo de ayudas introductorias o de navegación. Puede contener algunos elementos de encabezado, así como también un logo, un formulario de búsqueda, un nombre de autor y otros componentes.
 
 > **Nota:**
@@ -24,7 +25,7 @@ El _elemento de HTML Header_ (\<header>) representa un grupo de ayudas introduct
 
 ### Atributos
 
-Este elemento no tiene otros atributos que no sean los [atributos generales](../../../../en/HTML/global_attributes), comunes a todos los elementos.
+Este elemento no tiene otros atributos que no sean los [atributos generales](/en/HTML/global_attributes), comunes a todos los elementos.
 
 ### Interfaz DOM
 

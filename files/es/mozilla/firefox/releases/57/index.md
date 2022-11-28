@@ -77,7 +77,7 @@ _No hay ningún cambio._
 - Se admite {{domxref("Document.createEvent", "Document.createEvent('FocusEvent')")}} ahora ({{bug(1388069)}}).
 - La propiedad `files` de la interfaz {{domxref("HTMLInputElement")}} puede definirse ahora ({{bug(1384030)}}).
 - El método `HTMLDocument.getSelection()` se ha trasladado a la interfaz {{domxref("Document.getSelection","Document")}} para que quede disponible para los documentos XML ({{bug(718711)}}).
-- Hemos implementado el suceso {{Event("messageerror")}}, el cual puede ejecutar código tras su desencadenamiento por parte de manejadores de sucesos utilizados en destinos de mensajes. Véase {{domxref("MessagePort.onmessageerror")}}, {{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}, {{domxref("Worker.onmessageerror")}}, {{domxref("BroadcastChannel.onmessageerror")}} y {{domxref("Window.onmessageerror")}} ({{bug(1359017)}}).
+- Hemos implementado el suceso [`messageerror`](/es/docs/Web/Reference/Events/messageerror), el cual puede ejecutar código tras su desencadenamiento por parte de manejadores de sucesos utilizados en destinos de mensajes. Véase {{domxref("MessagePort.onmessageerror")}}, {{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}, {{domxref("Worker.onmessageerror")}}, {{domxref("BroadcastChannel.onmessageerror")}} y {{domxref("Window.onmessageerror")}} ({{bug(1359017)}}).
 - Cuando se emplea la iteración en valores {{domxref("Headers")}}, estos quedarán organizados en orden lexicográfico y se combinarán los valores de los nombres de cabeceras duplicados ({{bug(1396848)}}).
 
 #### Sucesos de DOM
@@ -91,7 +91,7 @@ _No hay ningún cambio._
   > **Nota:** Como Firefox aún no admite el protocolo ndata de SCTP, que permite intercalar mensajes de SCTP de varias fuentes, enviar objetos de datos grandes puede causar retardos importantes en el resto del tránsito SCTP. Véase el {{bug(1381145)}} para estar al tanto de la implementación de ndata en Firefox.
 
 - El método {{domxref("RTCDataChannel.send()")}} ahora puede emitir una excepción `TypeError` si el tamaño del mensaje que se intenta enviar no es compatible con el agente de usuario de destino (esto se implementó como parte del {{bug(979417)}}).
-- La [API MediaStream Recording](/es/docs/Web/API/MediaStream_Recording_API) se ha actualizado de modo que los sucesos {{event("error")}} que se envíen para notificar problemas acaecidos durante la grabación son ahora del tipo {{domxref("MediaRecorderErrorEvent")}} en lugar de sucesos genéricos.
+- La [API MediaStream Recording](/es/docs/Web/API/MediaStream_Recording_API) se ha actualizado de modo que los sucesos [`error`](/es/docs/Web/Reference/Events/error) que se envíen para notificar problemas acaecidos durante la grabación son ahora del tipo {{domxref("MediaRecorderErrorEvent")}} en lugar de sucesos genéricos.
 - Se actualizó la documentación concerniente a {{domxref("OfflineAudioContext")}}, dado que sus entradas de constructores pueden especificarse ahora dentro de un objeto en lugar de una lista de parámetros ({{bug(1388591)}}).
 
 ### Seguridad
@@ -99,7 +99,7 @@ _No hay ningún cambio._
 - Los URL `resource://` ya no filtran información ({{bug(863246)}})
 - Los URI de datos ahora se manipulan como orígenes opacos únicos, en vez de heredar el origen del objeto de configuración responsable de la navegación ({{bug(1324406)}}).
 
-### _Plugins_
+### Plugins
 
 _No hay ningún cambio._
 

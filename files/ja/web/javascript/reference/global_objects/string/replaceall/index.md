@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ```
 
-> **Note:** \`_regexp_\`を使用する場合は、グローバル("g")フラグを設定する必要があります。それ以外の場合は、`TypeError` が投げられます："replaceAll must be called with a global RegExp".
+> **メモ:** \`_regexp_\`を使用する場合は、グローバル("g")フラグを設定する必要があります。それ以外の場合は、`TypeError` が投げられます："replaceAll must be called with a global RegExp".
 
 ### 引数
 
@@ -94,9 +94,7 @@ TypeError: replaceAll must be called with a global RegExp
 
 ## 仕様
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.replaceall', 'String.prototype.replaceAll')}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

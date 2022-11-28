@@ -1,13 +1,9 @@
 ---
 title: Comparativo entre Event Targets
 slug: Web/API/Event/Comparison_of_Event_Targets
-tags:
-  - DOM
-  - Event
-  - event target
-translation_of: Web/API/Event/Comparison_of_Event_Targets
 original_slug: Web/API/Event/Comparativo_entre_Event_Targets
 ---
+
 {{ ApiRef() }}
 
 ### Event targets
@@ -25,14 +21,14 @@ Há 5 tipos de _targets_ a se considerar:
     </tr>
     <tr>
       <td>
-        <a href="/en/DOM/event.target" title="en/DOM/event.target"
+        <a href="/en/DOM/event.target"
           >event.target</a
         >
       </td>
       <td>
         <a
           class="external"
-          href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-interface"
+          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface"
           >DOM Event Interface</a
         >
       </td>
@@ -47,7 +43,7 @@ Há 5 tipos de _targets_ a se considerar:
     </tr>
     <tr>
       <td>
-        <a href="/en/DOM/event.currentTarget" title="en/DOM/event.currentTarget"
+        <a href="/en/DOM/event.currentTarget"
           >event.currentTarget</a
         >
       </td>
@@ -62,13 +58,13 @@ Há 5 tipos de _targets_ a se considerar:
         O
         <a
           class="external"
-          href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-EventTarget"
+          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventTarget"
           ><code>EventTarget</code></a
         >
         do qual o
         <a
           class="external"
-          href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-EventListener"
+          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventListener"
           ><code>EventListeners</code></a
         >
         está sendo atualmente processado. Logo que a captura e a subida do
@@ -77,14 +73,14 @@ Há 5 tipos de _targets_ a se considerar:
     </tr>
     <tr>
       <td>
-        <a href="/en/DOM/event.relatedTarget" title="en/DOM/event.relatedTarget"
+        <a href="/en/DOM/event.relatedTarget"
           >event.relatedTarget</a
         >
       </td>
       <td>
         <a
           class="external"
-          href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent"
+          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent"
           >DOM MouseEvent Interface</a
         >
       </td>
@@ -94,12 +90,11 @@ Há 5 tipos de _targets_ a se considerar:
       <td>
         <a
           href="/en/DOM/event.explicitOriginalTarget"
-          title="en/DOM/event.explicitOriginalTarget"
           >event.explicitOriginalTarget</a
         >
       </td>
       <td>
-        {{ Source("/dom/public/idl/events/nsIDOMNSEvent.idl", "nsIDOMNSEvent.idl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} Se o evento foi redirecionado por
@@ -117,19 +112,17 @@ Há 5 tipos de _targets_ a se considerar:
       <td>
         <a
           href="/en/DOM/event.originalTarget"
-          title="en/DOM/event.originalTarget"
           >event.originalTarget</a
         >
       </td>
       <td>
-        {{ Source("/dom/public/idl/events/nsIDOMNSEvent.idl", "nsIDOMNSEvent.idl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} O alvo original do evento, antes de
         qualquer redirecionamento. Veja
         <a
           href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
-          title="en/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
           >Anonymous Content#Event_Flow_and_Targeting</a
         >
         para mais detalhes.
@@ -218,7 +211,7 @@ TODO: Adequado apenas para desenvolvedores de extensões?
 
 A propriedade `relatedTarget` do evento de `mouseover` mantém o nó de onde o mouse estava sobre anteriormente. Para o evento de `mouseout`, mantém o nó para onde o mouse se moveu.
 
-| Tipo de Evento | [event.target](/en/DOM/event.target) | [event.relatedTarget](/en/DOM/event.relatedTarget) |
+| Tipo de Evento | [event.target](/pt-BR/DOM/event.target) | [event.relatedTarget](/pt-BR/DOM/event.relatedTarget) |
 | -------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | `mouseover`    | O EventTarget do qual o dispositivo apontador entrou.      | O EventTarget do qual o dispositivo apontador saiu.                             |
 | `mouseout`     | O EventTarget do qual o dispositivo apontador saiu.        | O EventTarget do qual o dispositivo apontador entrou.                           |

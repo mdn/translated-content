@@ -111,14 +111,11 @@ console.log( [4, 5, 8, 12].find(estPremier) ); // 5
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires        |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype.find', 'Array.prototype.find')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-array.prototype.find', 'Array.prototype.find')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.find")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -8,7 +8,8 @@ tags:
 translation_of: Web/HTML/Element/em
 original_slug: Web/HTML/Elemento/em
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El **elemento HTML `<em>`** es el apropiado para marcar con énfasis las partes importantes de un texto. El elemento `<em>` puede ser anidado, con cada nivel de anidamiento indicando un mayor grado de énfasis.
 
@@ -36,4 +37,4 @@ Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Atributos_
 
 ### Comentarios
 
-[em](es/HTML/Elemento/em) tiene un hermano mayor: [strong](es/HTML/Elemento/strong). [em](es/HTML/Elemento/em) sirve para dar énfasis y [strong](es/HTML/Elemento/strong) para dar mucho énfasis
+[em](/es/HTML/Elemento/em) tiene un hermano mayor: [strong](/es/HTML/Elemento/strong). [em](/es/HTML/Elemento/em) sirve para dar énfasis y [strong](/es/HTML/Elemento/strong) para dar mucho énfasis

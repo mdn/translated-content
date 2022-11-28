@@ -29,4 +29,4 @@ if (!navigator.cookieEnabled) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator.cookieEnabled")}}
+{{Compat}}

@@ -6,6 +6,7 @@ tags:
   - выравнивание текста
 translation_of: Web/CSS/text-justify
 ---
+
 {{CSSRef}}
 
 CSS-свойство **`text-justify`** определяет какой тип выравнивания следует применить к тексту, когда {{cssxref("text-align")}}`: justify;` применяется к элементу.

@@ -2,9 +2,10 @@
 title: PushEvent.data
 slug: Web/API/PushEvent/data
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
-**`PushEvent`** インターフェースの `data` 読み取り専用プロパティは、{{domxref("PushSubscription")}} に送信されてたデータを含む {{domxref("PushMessageData")}} オブジェクトへの参照を返します。
+**`PushEvent`** インターフェイスの `data` 読み取り専用プロパティは、{{domxref("PushSubscription")}} に送信されてたデータを含む {{domxref("PushMessageData")}} オブジェクトへの参照を返します。
 
 ## 構文
 
@@ -12,13 +13,13 @@ slug: Web/API/PushEvent/data
 var myPushData = PushEvent.data;
 ```
 
-### 値
+## 値
 
 {{domxref("PushMessageData")}} オブジェクト
 
-**例**
+## 例
 
-次の例は、 `PushEvent` からデータを取得して、すべての service worker クライアントで表示しています。
+次の例は、`PushEvent` からデータを取得して、すべてのサービスワーカークライアントで表示しています。
 
 ```js
 self.addEventListener('push', function(event) {
@@ -48,13 +49,11 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                     | 状態                         | コメント |
-| ------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName('Push API','#widl-PushEvent-data','data')}} | {{Spec2('Push API')}} | 初期定義 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushEvent.data")}}
 

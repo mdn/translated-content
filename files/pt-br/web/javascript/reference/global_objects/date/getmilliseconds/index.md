@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.getMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 ---
+
 {{JSRef}}
 
 O método **`getMilliseconds()`** retorna os milissegundos em uma data específica de acordo com o horário local.

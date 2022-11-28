@@ -102,7 +102,7 @@ console.log(newstr);  // Twas the night before Christmas...
 
 これは `'Twas the night before Christmas...'` と出力します。
 
-> **Note:** 正規表現についてのその他の例は[このガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)を参照してください。
+> **メモ:** 正規表現についてのその他の例は[このガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)を参照してください。
 
 ### 大文字小文字を区別しないフラグとグローバルフラグの使用
 

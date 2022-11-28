@@ -26,4 +26,4 @@ HTTP **`301 301 Moved Permanently`** 说明请求的资源已经被移动到了�
 ## 更多信息可见
 
 - {{HTTPStatus("308")}} 永久重定向
-- {{HTTPStatus("302")}} 找到， 暂时性转移
+- {{HTTPStatus("302")}} 找到，暂时性转移

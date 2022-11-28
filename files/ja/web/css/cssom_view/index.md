@@ -2,6 +2,7 @@
 title: CSSOM View
 slug: Web/CSS/CSSOM_View
 ---
+
 {{CSSRef}}
 
 **CSSOM View** は CSS のモジュールの一つで、文書の表示方法、特にスクロールの振る舞いを操作できるようにするものです。

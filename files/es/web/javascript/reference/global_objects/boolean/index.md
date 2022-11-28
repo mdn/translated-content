@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Boolean
 ---
+
 {{JSRef}}
 
 El objeto **`Boolean`** es un objeto contenedor para un valor booleano.

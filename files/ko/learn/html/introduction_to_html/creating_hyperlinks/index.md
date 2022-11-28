@@ -2,6 +2,7 @@
 title: 하이퍼링크 만들기
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 
 하이퍼 링크는 중요하다. — 웹을 웹답게 만들기 때문이다. 이 글에서는 링크를 만드는데 필요한 구문을 보여주고 링크의 모범 사례를 설명한다.
@@ -73,7 +74,7 @@ A basic link is created by wrapping the text (or other content, see [Block level
 
 이것은 그리고 마우스를 오버했을때에 툴팁에 대한 기능도 제공해줄 수 있다.
 
-제가 만든 링크 입니다. [the Mozilla homepage](https://www.mozilla.org/en-US/ "The best place to find more information about Mozilla's mission and how to contribute").
+제가 만든 링크 입니다. [the Mozilla homepage](https://www.mozilla.org/en-US/).
 
 > **참고:** 링크 제목은 마우스 호버시에만 공개 된다. 이것은 웹 페이지를 탐색하기 위해 키보드에만 의존하는 사람들이 타이틀 정보에 접근하는데 어려움을 겪게 된다는 것을 의미한다. 만약 title의 정보가 페이지 사용에 있어서 정말로 중요하다면, 해당하는 정보를 일반 텍스트에 넣어줌으로써 모든 사용자가 접근할 수 있는 방식으로 제시해주어야한다.
 
@@ -87,7 +88,7 @@ A basic link is created by wrapping the text (or other content, see [Block level
 
 ### Block level 링크들
 
-이전에 얘기했듯이, 여러분은 어떤 내용이든 link로 바꿀 수 있습니다. [block level 요소들](https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Block_versus_inline_elements) 이라고 할지라도요. 만약 링크로 바꾸고 싶은 이미지가 있다면, `<a> 와 </a>` 사이에 그 이미지를 넣으시기만 하시면 됩니다.
+이전에 얘기했듯이, 여러분은 어떤 내용이든 link로 바꿀 수 있습니다. [block level 요소들](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Block_versus_inline_elements) 이라고 할지라도요. 만약 링크로 바꾸고 싶은 이미지가 있다면, `<a> 와 </a>` 사이에 그 이미지를 넣으시기만 하시면 됩니다.
 
 ```html
 <a href="https://www.mozilla.org/en-US/">

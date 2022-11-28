@@ -2,6 +2,7 @@
 title: Location
 slug: Web/API/Location
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`Location`** インターフェイスは、関連付けられたオブジェクトの場所 (URL) を表します。 変更が行われると、関連するオブジェクトに反映されます。 {{domxref("Document")}} インターフェイスおよび {{domxref("Window")}} インターフェイスにはこのような関連付けられた `Location` があり、それぞれ {{domxref("Document.location")}} および {{domxref("Window.location")}} でアクセスできます。

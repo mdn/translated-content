@@ -5,7 +5,7 @@ slug: Web/API/Element/pointerup_event
 
 {{ApiRef("HTML DOM")}}
 
-`pointerup`是一个全局的事件处理函数。
+`pointerup` 是一个全局的事件处理函数。
 
 ## 语法
 
@@ -48,6 +48,16 @@ function init() {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [{{event("pointerup")}}](/zh-CN/docs/Web/Events/pointerup)
+- 相关事件
+
+  - [`gotpointercapture`](/zh-CN/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/zh-CN/docs/Web/API/Element/pointerdown_event)
+  - [`pointermove`](/zh-CN/docs/Web/API/Element/pointermove_event)
+  - [`pointercancel`](/zh-CN/docs/Web/API/Element/pointercancel_event)
+  - [`pointerout`](/zh-CN/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/zh-CN/docs/Web/API/Element/pointerleave_event)

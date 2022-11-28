@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 ---
+
 {{JSRef}}
 
 **`DataView()`** 생성자는 새로운 {{jsxref("DataView")}} 객체를 생성합니다.

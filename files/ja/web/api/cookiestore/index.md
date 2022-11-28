@@ -2,6 +2,7 @@
 title: CookieStore
 slug: Web/API/CookieStore
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
 {{domxref('Cookie Store API')}} のインターフェイスである **`CookieStore`** は、ページまたはサービスワーカーから非同期に Cookie を取得、設定するためのメソッドを提供します。

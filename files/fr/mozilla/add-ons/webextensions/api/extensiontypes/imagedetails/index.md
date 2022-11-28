@@ -25,7 +25,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `format`{{optional_inline}}
   - : {{WebExtAPIRef('extensionTypes.ImageFormat')}}. Le format du résultat de l'image. Par défaut est `"png"`.
 - `quality`{{optional_inline}}
-  - : `integer`. Quand le format est `"jpeg"`, cela controle la qualité du résultat de l'image. C'est un nombre compris entre 0 et 100, qui est converti en une valeur entre 0 et 1 puis utilisé comme argument  `encoderOptions` sur [`HTMLCanvasElement.toDataURL()`](/fr/docs/Web/API/HTMLCanvasElement/toDataURL). Si c'est choisi, 92 est utilisé. A mesure que la qualité baisse, le résultat de l'image aura plus d'artefacts visuel, et le nombre d'octets nécessaires pour le stocker diminuera. Cette valeur est ignorée pour les images PNG.
+  - : `integer`. Quand le format est `"jpeg"`, cela controle la qualité du résultat de l'image. C'est un nombre compris entre 0 et 100, qui est converti en une valeur entre 0 et 1 puis utilisé comme argument `encoderOptions` sur [`HTMLCanvasElement.toDataURL()`](/fr/docs/Web/API/HTMLCanvasElement/toDataURL). Si c'est choisi, 92 est utilisé. A mesure que la qualité baisse, le résultat de l'image aura plus d'artefacts visuel, et le nombre d'octets nécessaires pour le stocker diminuera. Cette valeur est ignorée pour les images PNG.
 
 ## Compatibilité du navigateur
 
@@ -39,7 +39,8 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -66,4 +67,4 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

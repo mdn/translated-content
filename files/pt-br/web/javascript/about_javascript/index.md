@@ -1,14 +1,8 @@
 ---
 title: Sobre JavaScript
 slug: Web/JavaScript/About_JavaScript
-tags:
-  - Beginner
-  - Iniciante
-  - Introduction
-  - Introdução
-  - JavaScript
-translation_of: Web/JavaScript/About_JavaScript
 ---
+
 {{JsSidebar}}
 
 ## O que é JavaScript?
@@ -38,7 +32,7 @@ Além das implementações citadas anteriormente, existem ainda outras _engines_
 - [Carakan](http://my.opera.com/ODIN/blog/carakan-faq), usado em versões antigas do navegador Opera.
 - A _engine_ [Chakra](http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) utilizada pelo Internet Explorer (apesar de que a linguagem implementada é formalmente chamada de "JScript" para evitar problemas de _trademark_).
 
-Cada engine de JavaScript da Mozilla expõe uma API pública que os desenvolvedores de aplicativos podem utilizar para integrar JavaScript em seus softwares. O ambiente _host_ mais utilizado para JavaScript é o navegador web. Navegadores web tipicamente usam a API pública para criar **objetos de _host_** responsáveis pelo trabalho de refletir o [DOM](http://www.w3.org/DOM/) no JavaScript.
+Cada engine de JavaScript da Mozilla expõe uma API pública que os desenvolvedores de aplicativos podem utilizar para integrar JavaScript em seus softwares. O ambiente _host_ mais utilizado para JavaScript é o navegador web. Navegadores web tipicamente usam a API pública para criar **objetos de _host_** responsáveis pelo trabalho de refletir o [DOM](https://www.w3.org/DOM/) no JavaScript.
 
 Outra aplicação comum para JavaScript é usa-lo como uma linguagem de scripting para o _server side_ (da Web). Um servidor web de JavaScript expõe objetos de _host_ que representam uma solicitação HTTP e objetos de resposta, que são então manipulados por um programa em JavaScript que gera páginas web dinamicamente. [Node.js](http://nodejs.org) é um exemplo popular deste tipo de uso.
 
@@ -46,9 +40,6 @@ Outra aplicação comum para JavaScript é usa-lo como uma linguagem de scriptin
 
 - [SpiderMonkey](/pt-BR/docs/Mozilla/Projects/SpiderMonkey)
   - : Informações pertinentes à implementação de JavaScript em C/C++ criada pela Mozilla (SpiderMonkey), incluindo como integra-la em aplicativos.
-
-<!---->
-
 - [Rhino](/pt-BR/docs/Mozilla/Projects/Rhino)
   - : Informações pertinentes à implementação de JavaScript em Java (Rhino).
 - [Recursos da linguagem](/pt-BR/docs/Web/JavaScript/Language_Resources)

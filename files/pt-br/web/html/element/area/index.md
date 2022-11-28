@@ -1,8 +1,8 @@
 ---
 title: <area>
 slug: Web/HTML/Element/area
-translation_of: Web/HTML/Element/area
 ---
+
 ## Resumo
 
 O _HTML `<area>` elemento_ define uma região hot-spot em uma imagem, e, opcionalmente, associa-lo com um {{Glossary ("Hyperlink", "link de hipertexto")}}. Este elemento é usado somente dentro de um {{HTMLElement ("map")}} elemento.
@@ -22,7 +22,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - {{Htmlattrdef ("alt")}}
   - : Uma alternativa seqüência de texto para exibir em navegadores que não exibem imagens. O texto deve ser formulada de modo a que apresenta o usuário com o mesmo tipo de escolha como a imagem iria oferecer quando exibido sem o texto alternativo. Em HTML4, este atributo é necessário, mas pode ser uma string vazia (""). Em HTML5, este atributo é necessário apenas se o **href** atributo é usado.
 - {{Htmlattrdef ("coords")}}
-  - : Um conjunto de valores que especificam as coordenadas da região de hot-spot. O número e o significado dos valores dependem do valor especificado para a **forma** de atributo. Para um `rect` forma ou retângulo, o **coords** valor é de dois pares x, y: left, top, right, e bottom. Para um `círculo` forma, o valor é `x, y, r` onde `x, y` é um par especificando o centro do círculo e `r` é um valor para o raio. Para um `poli` ou polígono \<forma, o valor é um conjunto de pares x, y de cada ponto no polígono: `X1, Y1, X2, Y2, x3, y3,` e assim por diante. Em HTML4, os valores são números de pixels ou porcentagens, se um sinal de porcentagem (%) é anexado; em HTML5, os valores são números de pixels CSS.
+  - : Um conjunto de valores que especificam as coordenadas da região de hot-spot. O número e o significado dos valores dependem do valor especificado para a **forma** de atributo. Para um `rect` forma ou retângulo, o **coords** valor é de dois pares x, y: left, top, right, e bottom. Para um `círculo` forma, o valor é `x, y, r` onde `x, y` é um par especificando o centro do círculo e `r` é um valor para o raio. Para um `poli` ou polígono \<forma>, o valor é um conjunto de pares x, y de cada ponto no polígono: `X1, Y1, X2, Y2, x3, y3`, e assim por diante. Em HTML4, os valores são números de pixels ou porcentagens, se um sinal de porcentagem (%) é anexado; em HTML5, os valores são números de pixels CSS.
 - {{Htmlattrdef ("download")}} {{HTMLVersionInline ("5")}}
   - : Este atributo, se presente, indica que o autor tem a intenção que o hiperlink seja usado para o download de um recurso. Consulte {{HTMLElement ("a")}} para uma descrição completa da {{htmlattrxref ("download", "a")}} atributo.
 - {{Htmlattrdef ("href")}}
@@ -58,7 +58,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
     Utilize este atributo somente se a **href** atributo está presente.
 
 - {{Htmlattrdef ("type")}}
-  - : Este atributo especifica o tipo de mídia na forma de um tipo MIME para o destino do link. Geralmente, este é fornecido informações estritamente como consultivo; no entanto, no futuro, um navegador pode adicionar um pequeno ícone para os tipos de multimédia. Por exemplo, um navegador pode adicionar um pequeno ícone de alto-falante quando o tipo está definido para áudio / wav. Para obter uma lista completa de tipos MIME reconhecidos, consulte [http://www.w3.org/TR/html4/references.html # REF-MIMETYPES](http://www.w3.org/TR/html4/references.html#ref-MIMETYPES) . Utilize este atributo somente se a **href** atributo está presente.
+  - : Este atributo especifica o tipo de mídia na forma de um tipo MIME para o destino do link. Geralmente, este é fornecido informações estritamente como consultivo; no entanto, no futuro, um navegador pode adicionar um pequeno ícone para os tipos de multimédia. Por exemplo, um navegador pode adicionar um pequeno ícone de alto-falante quando o tipo está definido para áudio / wav. Para obter uma lista completa de tipos MIME reconhecidos, consulte [https://www.w3.org/TR/html4/references.html # REF-MIMETYPES](https://www.w3.org/TR/html4/references.html#ref-MIMETYPES) . Utilize este atributo somente se a **href** atributo está presente.
 
 ## Exemplo
 
@@ -93,4 +93,4 @@ Netscape 1 de nível não entendem o **alvo** atributo que se refere aos quadros
 
 HTML 3.2 define apenas **alt** , **coords** , **href** , **nohref** e shape .
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -9,13 +9,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 original_slug: Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer/@@species
 ---
+
 {{JSRef}}
 
 La propiedad de acceso **`ArrayBuffer[@@species]`** devuelve el constructor `ArrayBuffer`.
 
 ## Sintaxis
 
-    ArrayBuffer[Symbol.species]
+```
+ArrayBuffer[Symbol.species]
+```
 
 ## Descripción
 
@@ -40,10 +43,7 @@ class MyArrayBuffer extends ArrayBuffer {
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                       | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

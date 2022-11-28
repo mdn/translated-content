@@ -2,7 +2,8 @@
 title: <ins>
 slug: Web/HTML/Element/ins
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<ins>` 要素**は、文書に追加されたテキストの範囲を表します。同様に、 {{HTMLElement("del")}} 要素を使用して文書から削除されたテキストの範囲を表すことができます。
 

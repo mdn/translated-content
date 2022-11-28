@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 original_slug: Web/JavaScript/Referencia/Objetos_globales/isFinite
 ---
+
 {{jsSidebar("Objects")}}
 
 ## Resumen
@@ -16,7 +17,9 @@ La función global **`isFinite()`** determina si el valor que se le pasa como ar
 
 ## Sintaxis
 
-    isFinite(testValue)
+```
+isFinite(testValue)
+```
 
 ## Parámetros
 
@@ -31,22 +34,20 @@ Puede usar esta función para determinar si un número es un número finito. La 
 
 ## Ejemplos
 
-    isFinite(Infinity);    // falso
-    isFinite(NaN);         // falso
-    isFinite(-Inifinity);  // falso
+```js
+isFinite(Infinity);    // falso
+isFinite(NaN);         // falso
+isFinite(-Inifinity);  // falso
 
-    isFinite(0);           // verdadero
-    isFinite(2e64);        // verdadero
+isFinite(0);           // verdadero
+isFinite(2e64);        // verdadero
 
-    isFinite("0");         // verdadero, hubiera sido falso en el caso de usar Number.isFinite("0") que es mas robusta
+isFinite("0");         // verdadero, hubiera sido falso en el caso de usar Number.isFinite("0") que es mas robusta
+```
 
 ## Especificaciones
 
-| Especificaciones                                                         | Estado                   | Comentarios        |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| ECMAScript 2nd Edition.                                                  | Estándar                 | Definición inicial |
-| {{SpecName('ES5.1', '#sec-15.1.2.5', 'isFinite')}}     | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-isfinite-number', 'isFinite')}} | {{Spec2('ES6')}}     |                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

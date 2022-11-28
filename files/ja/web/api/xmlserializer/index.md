@@ -34,10 +34,10 @@ original_slug: XMLSerializer
 
 この例は、{{domxref("Element.insertAdjacentHTML()")}} メソッドを使用して新しい DOM {{domxref("Node")}} を {{domxref("Document")}} の body に挿入します。これは、{{domxref("Element")}} オブジェクトをシリアライズすることにより作成された XML を基にしています。
 
-> **Note:** 実際は、{{domxref("Document.importNode", "importNode()")}} メソッドを呼び出して新しいノードを DOM に挿入する代わりに、以下のいずれかのメソッドを呼び出して DOM ツリーに追加することになるでしょう:
+> **メモ:** 実際は、{{domxref("Document.importNode", "importNode()")}} メソッドを呼び出して新しいノードを DOM に挿入する代わりに、以下のいずれかのメソッドを呼び出して DOM ツリーに追加することになるでしょう:
 >
-> - {{domxref("Document")}} および {{domxref("Element")}} メソッド {{domxref("ParentNode.append", "append()")}} および {{domxref("ParentNode.prepend", "prepend()")}}
-> - {{domxref("ChildNode.replaceWith", "Node.replaceWith()")}} メソッド (既存のノードを新しいノードと置き換えるため)
+> - {{domxref("Element.append()")}} / {{domxref("Element.prepend()")}} および {{domxref("Document.append()")}} / {{domxref("Document.prepend()")}} メソッド
+> - {{domxref("Element.replaceWith()")}} メソッド (既存のノードを新しいノードと置き換えるため)
 > - {{domxref("Document.insertAdjacentElement()")}} および {{domxref("Element.insertAdjacentElement()")}} メソッド
 
 `insertAdjacentHTML()` は文字列を受け入れるが、2 番目の引数として `Node` を受け入れないため、`XMLSerializer` を使用して先にノードを文字列に変換します。
@@ -57,9 +57,7 @@ document.body.insertAdjacentHTML('afterbegin', inp_xmls);
 
 ## 仕様
 
-| 仕様書                                                                                               | 策定状況                         | 備考 |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM Parsing', '#the-xmlserializer-interface', 'XMLSerializer')}} | {{Spec2('DOM Parsing')}} |      |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 
@@ -67,6 +65,6 @@ document.body.insertAdjacentHTML('afterbegin', inp_xmls);
 
 ## 関連項目
 
-- [Parsing and serializing XML](/ja/Parsing_and_serializing_XML)
+- [XML のパースとシリアライズ](/ja/docs/Web/Guide/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("DOMParser")}}

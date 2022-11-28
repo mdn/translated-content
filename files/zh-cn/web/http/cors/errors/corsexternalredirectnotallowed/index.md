@@ -8,7 +8,7 @@ slug: Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed
 ## 原因
 
 ```plain
-原因： CORS 不允许请求外部重定向
+原因：CORS 不允许请求外部重定向
 ```
 
 ## 哪里错了？

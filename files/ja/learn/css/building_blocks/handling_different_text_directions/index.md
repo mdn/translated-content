@@ -2,6 +2,7 @@
 title: テキスト方向の操作
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
 
 CSS の学習でこれまでに遭遇したプロパティと値の多くは、画面の物理的な大きさに関係しています。たとえば、ボックスの上下左右に border を作成します。これらの物理的大きさは、水平に表示されるコンテンツに非常にきちんとマッピングされ、デフォルトでは、ウェブは右から左への言語（アラビア語など）よりも左から右への言語（英語やフランス語など）をサポートする傾向があります。

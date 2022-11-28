@@ -1,14 +1,8 @@
 ---
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
-tags:
-  - JavaScript
-  - NeedsTranslation
-  - TopicStub
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
 ---
+
 {{JSRef}}
 
 A **_TypedArray_** object describes an array-like view of an underlying [binary data buffer](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). There is no global property named `TypedArray`, nor is there a directly visible `TypedArray` constructor. Instead, there are a number of different global properties, whose values are typed array constructors for specific element types, listed below. On the following pages you will find common properties and methods that can be used with any typed array containing elements of any type.
@@ -47,7 +41,7 @@ Float64Array();
 
 ## Description
 
-ECMAScript 2015 defines a _TypedArray_ constructor that serves as the `[[Prototype]]` of all _TypedArray_ constructors. This constructor is not directly exposed: there is no global `%TypedArray%` or `TypedArray` property. It is only directly accessible through `Object.getPrototypeOf(Int8Array)` and similar. All _TypedArray_s constructors inherit common properties from the `%TypedArray%` constructor function. Additionally, all typed array prototypes (\_TypedArray_`.prototype`) have `%TypedArray%.prototype` as their `[[Prototype]]`.
+ECMAScript 2015 defines a _TypedArray_ constructor that serves as the `[[Prototype]]` of all _TypedArray_ constructors. This constructor is not directly exposed: there is no global `%TypedArray%` or `TypedArray` property. It is only directly accessible through `Object.getPrototypeOf(Int8Array)` and similar. All _TypedArray_s constructors inherit common properties from the `%TypedArray%` constructor function. Additionally, all typed array prototypes (`TypedArray.prototype`) have `%TypedArray%.prototype` as their `[[Prototype]]`.
 
 The `%TypedArray%` constructor on its own is not particularly useful. Calling it or using it in a `new` expression will throw a `TypeError`, except when used during object creation in JS engines that support subclassing. There are at present no such engines, so `%TypedArray%` is only useful to polyfill functions or properties onto all _TypedArray_ constructors.
 
@@ -114,7 +108,7 @@ Int8Array.prototype.foo = 'bar';
 
 ## TypedArray prototype
 
-All \_TypedArray_s inherit from {{jsxref("TypedArray.prototype")}}.
+All _TypedArrays_ inherit from {{jsxref("TypedArray.prototype")}}.
 
 ### Properties
 

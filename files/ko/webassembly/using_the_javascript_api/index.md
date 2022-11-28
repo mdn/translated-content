@@ -2,6 +2,7 @@
 title: 웹어셈블리의 자바스크립트 API 사용하기
 slug: WebAssembly/Using_the_JavaScript_API
 ---
+
 {{WebAssemblySidebar}}
 
 [Emscripten과 같은 도구를 사용하여 다른 언어의 모듈을 컴파일](/ko/docs/WebAssembly/C_to_wasm)했거나 [코드를 직접로드하여 실행](/ko/docs/WebAssembly/Loading_and_running) 해봤다면 다음 단계에서는 WebAssembly JavaScript API의 다른 기능을 사용하는 방법에 대해 자세히 알아 봅니다.

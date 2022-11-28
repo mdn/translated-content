@@ -1,17 +1,9 @@
 ---
 title: <image>
 slug: Web/CSS/image
-tags:
-  - CSS
-  - CSS imagens
-  - Layout
-  - Referencia
-  - Tipo de data CSS
-  - Web
-  - graficos
-translation_of: Web/CSS/image
 original_slug: Web/CSS/imagem
 ---
+
 {{CSSRef}}
 
 O [tipo de data CSS](/pt-BR/docs/Web/CSS) **`<image>`** representa uma imagem bi-dimensional. Existem dois tipos de imagens: imagens planas, referenciada por um {{cssxref("&lt;url&gt;")}}, e imagens geradas dinamicamente, geradas por {{cssxref("&lt;gradient&gt;")}} ou {{cssxref("element()")}}. Imagens podem ser usadas em inumeras propriedades CSS, como {{cssxref("background-image")}}, {{cssxref("border-image")}}, {{cssxref("content")}}, {{cssxref("cursor")}}, e {{cssxref("list-style-image")}}.
@@ -78,7 +70,7 @@ element(#fakeid)  /* Um elemento ID deve ser um ID existente na página. */
 | Especificações                                                                       | Status                           | Comentário                                                                                                                                                                                                               |
 | ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | {{SpecName('CSS4 Images', '#typedef-image', '&lt;image&gt;')}} | {{Spec2('CSS4 Images')}} | Adiciona {{cssxref("element()")}}, {{cssxref("image()")}}, {{cssxref("conic-gradient()")}}, {{cssxref("repeating-conic-gradient()")}}, e {{cssxref("image-resolution")}}. |
-| {{SpecName('CSS3 Images', '#typedef-image', '&lt;image&gt;')}} | {{Spec2('CSS3 Images')}} | Definição inicial. Depois disso, não existe definição explicita do tipo de data `<image>.` Imagens podem ser somente definidas usando a notação funciona `url()` .                                                       |
+| {{SpecName('CSS3 Images', '#typedef-image', '&lt;image&gt;')}} | {{Spec2('CSS3 Images')}} | Definição inicial. Depois disso, não existe definição explicita do tipo de data `<image>`. Imagens podem ser somente definidas usando a notação funciona `url()` .                                                       |
 
 ## Compatibilidade do navegador
 

@@ -3,7 +3,7 @@ title: <body>：文档主体元素
 slug: Web/HTML/Element/body
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `body` 元素**表示文档的内容。{{domxref("document.body")}} 属性提供了可以轻松访问文档的 body 元素的脚本。
 
@@ -127,7 +127,7 @@ slug: Web/HTML/Element/body
 - {{htmlattrdef("topmargin")}} {{Deprecated_Inline}}
   - : `body` 的上外边距。此方法不符合规范，请使用 _CSS 的 {{cssxref("margin-top")}} 属性替代。_
 - {{htmlattrdef("vlink")}} {{Deprecated_Inline}}
-  - : 访问过的超链接的文本颜色。 此方法不符合规范，请使用 _CSS {{cssxref("color")}} 属性和 {{cssxref(":visited")}} 伪类替代。_
+  - : 访问过的超链接的文本颜色。此方法不符合规范，请使用 _CSS {{cssxref("color")}} 属性和 {{cssxref(":visited")}} 伪类替代。_
 
 ## 例子
 

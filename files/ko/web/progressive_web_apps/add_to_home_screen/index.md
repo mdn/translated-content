@@ -10,6 +10,7 @@ tags:
   - 홈 화면에 추가
 translation_of: Web/Progressive_web_apps/Add_to_home_screen
 ---
+
 Add to Home screen (or A2HS for short) is a feature available in modern smartphone browsers that allows developers to easily and conveniently add a shortcut to their Home screen representing their favorite web app (or site) so they can subsequently access it with a single tap. This guide explains how A2HS is used, and what you need to do as a developer to allow your users to take advantage of it.
 
 ## Why A2HS?

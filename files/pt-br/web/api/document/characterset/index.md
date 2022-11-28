@@ -1,12 +1,8 @@
 ---
 title: Document.characterSet
 slug: Web/API/Document/characterSet
-tags:
-  - Documento
-  - Propriedade
-  - Referencia
-translation_of: Web/API/Document/characterSet
 ---
+
 {{ ApiRef("DOM") }}A propriedade somente leitura Document.characterSet retorna a [character encoding](/pt-BR/docs/Glossary/character_encoding)(codificação de caracteres) do documento com o qual ele é renderizado atualmente. (Uma codificação de caracteres é um conjunto de caracteres e como interpretar bytes nesses caracteres.)
 
 > **Nota:** Um “character set”(conjunto de caracteres) e “character encoding”(codificação de caracteres) estão relacionados, mas diferentes. Apesar do nome dessa propriedade, ela retorna a codificação.

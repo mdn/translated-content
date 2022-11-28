@@ -94,14 +94,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                    | État                             | Commentaires                 |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------------------------- |
-| {{SpecName('CSS3 Images', '#gradients', '&lt;gradient&gt;')}} | {{Spec2('CSS3 Images')}} | Définition initiale.         |
-| {{SpecName('CSS4 Images', '#gradients', '&lt;gradient&gt;')}} | {{Spec2('CSS4 Images')}} | Ajout des dégradés coniques. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.image.gradient")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -114,4 +111,4 @@ div {
 - {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}
 - [Les types de donnée en CSS](/fr/docs/Web/CSS/Types_CSS)
 - [Les unités et valeurs en CSS](/fr/docs/Web/CSS/Valeurs_et_unités_CSS)
-- [Introduction à CSS : les unités et les valeurs](fr/docs/Apprendre/CSS/Introduction_à_CSS/Values_and_units)
+- [Introduction à CSS : les unités et les valeurs](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Values_and_units)

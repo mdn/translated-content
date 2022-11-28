@@ -1,9 +1,9 @@
 ---
 title: Usando XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 original_slug: Web/API/XMLHttpRequest/Usando_XMLHttpRequest
 ---
+
 [`XMLHttpRequest`](/pt-BR/docs/DOM/XMLHttpRequest) torna o envio de requisições HTTP muito fácil. Basta criar uma instância do objeto, abrir uma url e enviar uma requisição. O [status](/pt-BR/docs/HTTP/HTTP_response_codes) [HTTP](/pt-BR/docs/HTTP/HTTP_response_codes)do resultado assim como o seu conteúdo estarão disponíveis quando a transação for completada. Esta página descreve alguns casos comuns de uso desse poderoso objeto JavaScript.
 
 ```js
@@ -23,7 +23,7 @@ Uma requisição feita via XMLHttpRequest pode buscar dados de duas maneiras, s�
 
 ## Manipulando Respostas
 
-Existem vários tipos de [atributos de resposta](http://www.w3.org/TR/XMLHttpRequest2/#response) definidos pela especificação da W3C para o XMLHttpRequest. Eles informam ao cliente que efetuou a requisição XMLHttpRequest informações importantes sobre o status da resposta. Em alguns casos onde se lida com tipos de resposa de não-texto, os tipos de resposta podem envolver alguma manipulação e/ou análise conforme descrito nas seções seguintes.
+Existem vários tipos de [atributos de resposta](https://www.w3.org/TR/XMLHttpRequest2/#response) definidos pela especificação da W3C para o XMLHttpRequest. Eles informam ao cliente que efetuou a requisição XMLHttpRequest informações importantes sobre o status da resposta. Em alguns casos onde se lida com tipos de resposa de não-texto, os tipos de resposta podem envolver alguma manipulação e/ou análise conforme descrito nas seções seguintes.
 
 ### Analisando e manipulando a propriedade `responseXML`
 
@@ -59,7 +59,7 @@ oReq.overrideMimeType("text/plain; charset=x-user-defined");
 /* ... */
 ```
 
-A especificação XMLHttpRequest Level 2 adiciona novo [responseType attributes](http://www.w3.org/TR/XMLHttpRequest2/#the-responsetype-attribute) que tornam o envio e recebimento de dados muito mais fácil.
+A especificação XMLHttpRequest Level 2 adiciona novo [responseType attributes](https://www.w3.org/TR/XMLHttpRequest2/#the-responsetype-attribute) que tornam o envio e recebimento de dados muito mais fácil.
 
 ```js
 var oReq = new XMLHttpRequest();
@@ -240,7 +240,7 @@ All these things are done automatically by the web browser whenever you submit a
 |*|
 |*|  :: XMLHttpRequest.prototype.sendAsBinary() Polifyll ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
+|*|  https://developer.mozilla.org/pt-BR/docs/DOM/XMLHttpRequest#sendAsBinary()
 \*/
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
@@ -259,7 +259,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 |*|
 |*|  :: AJAX Form Submit Framework ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
+|*|  https://developer.mozilla.org/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
 |*|
 |*|  This framework is released under the GNU Public License, version 3 or later.
 |*|  http://www.gnu.org/licenses/gpl-3.0-standalone.html
@@ -654,7 +654,7 @@ oReq.send(null);
 
 ## Security
 
-{{fx_minversion_note(3, "Versions of Firefox prior to Firefox 3 allowed you to set the preference <code>capability.policy..XMLHttpRequest.open</code> to <code>allAccess</code> to give specific sites cross-site access.  This is no longer supported.")}}
+{{fx_minversion_note(3, "Versions of Firefox prior to Firefox 3 allowed you to set the preference <code>capability.policy..XMLHttpRequest.open</code> to <code>allAccess</code> to give specific sites cross-site access. This is no longer supported.")}}
 
 {{fx_minversion_note(5, "Versions of Firefox prior to Firefox 5 could use <code>netscape.security.PrivilegeManager.enablePrivilege(\"UniversalBrowserRead\");</code> to request cross-site access. This is no longer supported, even though it produces no warning and permission dialog is still presented.")}}
 
@@ -662,7 +662,7 @@ The recommended way to enable cross-site scripting is to use the `Access-Control
 
 ### XMLHttpRequests being stopped
 
-If you end up with an XMLHttpRequest having `status=0` and `statusText=null`, it means that the request was not allowed to be performed. It was [`UNSENT`](http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent). A likely cause for this is when the [`XMLHttpRequest` origin](http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin) (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest is then `open()`. This case can happen for example when one has an XMLHttpRequest that gets fired on an onunload event for a window: the XMLHttpRequest gets in fact created when the window to be closed is still there, and then the request is sent (ie `open()`) when this window has lost its focus and potentially different window has gained focus. The way to avoid this problem is to set a listener on the new window "activate" event that gets set when the old window has its "unload" event fired.
+If you end up with an XMLHttpRequest having `status=0` and `statusText=null`, it means that the request was not allowed to be performed. It was [`UNSENT`](https://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent). A likely cause for this is when the [`XMLHttpRequest` origin](https://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin) (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest is then `open()`. This case can happen for example when one has an XMLHttpRequest that gets fired on an onunload event for a window: the XMLHttpRequest gets in fact created when the window to be closed is still there, and then the request is sent (ie `open()`) when this window has lost its focus and potentially different window has gained focus. The way to avoid this problem is to set a listener on the new window "activate" event that gets set when the old window has its "unload" event fired.
 
 ## Using XMLHttpRequest from JavaScript modules / XPCOM components
 
@@ -691,5 +691,5 @@ var oReq = XMLHttpRequest();
 5. [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
 6. [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
 7. ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-8. [The XMLHttpRequest Object: W3C Specification](http://www.w3.org/TR/XMLHttpRequest/)
+8. [The XMLHttpRequest Object: W3C Specification](https://www.w3.org/TR/XMLHttpRequest/)
 9. [Web Progress Events specification](http://dev.w3.org/2006/webapi/progress/Progress.html)

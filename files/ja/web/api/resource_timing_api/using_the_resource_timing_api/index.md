@@ -193,7 +193,7 @@ function init() {
 
 When {{Glossary("CORS")}} is in effect, many of the timing properties' values are returned as zero unless the server's access policy permits these values to be shared. This requires the server providing the resource to send the {{httpheader("Timing-Allow-Origin")}} HTTP response header with a value specifying the origin or origins which are allowed to get the restricted timestamp values.
 
-> **Note:** The properties which are returned as 0 by default when loading a resource from a domain other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
+> **メモ:** The properties which are returned as 0 by default when loading a resource from a domain other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
 
 ## あわせて参照
 

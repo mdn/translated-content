@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 translation_of: Web/CSS/background-attachment
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/CSS) **`background-attachment`** 속성은 배경 이미지를 {{glossary("viewport", "뷰포트")}} 내에서 고정할지, 아니면 자신의 컨테이닝 블록과 함께 스크롤할지 지정합니다.

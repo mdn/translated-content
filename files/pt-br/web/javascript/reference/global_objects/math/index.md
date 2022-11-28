@@ -1,13 +1,8 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
-tags:
-  - JavaScript
-  - Math
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Math
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 **Math** é um objeto embutido que tem propriedades e métodos para constantes e funções matemáticas. Não é um objeto de função.
@@ -109,19 +104,19 @@ Ao contrário de outros objetos globais, `Math` não é um construtor. Todas as 
   - : Retorna o coseno hiperbólico de um número .
 - {{jsxref("Global_Objects/Math/exp", "Math.exp(x)")}}
 
-  - : Retorna&#x20;
+  - : Retorna
 
     <math><semantics><msup><mi>e</mi><mi>x</mi></msup><annotation encoding="TeX">e^x</annotation></semantics></math>
 
-    , onde _x_ é o argumento, e&#x20;
+    , onde _x_ é o argumento, e
 
     <math><semantics><mi>e</mi><annotation encoding="TeX">e</annotation></semantics></math>
 
-    &#x20;é a constante de Euler (2.718...), a base do logaritmo natural.
+    é a constante de Euler (2.718...), a base do logaritmo natural.
 
 - {{jsxref("Global_Objects/Math/expm1", "Math.expm1(x)")}} {{experimental_inline}}
 
-  - : Retorna&#x20;
+  - : Retorna
 
     <math><semantics><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow><annotation encoding="TeX">e^x-1</annotation></semantics></math>
 
@@ -147,7 +142,7 @@ Ao contrário de outros objetos globais, `Math` não é um construtor. Todas as 
 
     <math><semantics><mrow><msub><mo lspace="0em" rspace="0em">log</mo><mi>e</mi></msub><mi>x</mi></mrow><annotation encoding="TeX">\log_ex</annotation></semantics></math>
 
-    &#x20;ou&#x20;
+    ou
 
     <math><semantics><mrow><mo lspace="0em" rspace="0em">ln</mo><mi>x</mi></mrow><annotation encoding="TeX">\ln{x}</annotation></semantics></math>
 
@@ -159,7 +154,7 @@ Ao contrário de outros objetos globais, `Math` não é um construtor. Todas as 
 
     <math><semantics><mrow><msub><mo lspace="0em" rspace="0em">log</mo><mi>e</mi></msub><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\log_e(1+x)</annotation></semantics></math>
 
-    &#x20;ou&#x20;
+    ou
 
     <math><semantics><mrow><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\ln(1+x)</annotation></semantics></math>
 
@@ -187,7 +182,7 @@ Ao contrário de outros objetos globais, `Math` não é um construtor. Todas as 
   - : Retorna o menor dentre os parâmetros recebidos.
 - {{jsxref("Global_Objects/Math/pow", "Math.pow(x,y)")}}
 
-  - : Retorna a base `x` elevada à potência `y` do expoente, ou seja,&#x20;
+  - : Retorna a base `x` elevada à potência `y` do expoente, ou seja,
 
     <math><semantics><msup><mi>x</mi><mi>y</mi></msup><annotation encoding="TeX">x^y</annotation></semantics></math>
 

@@ -1,14 +1,8 @@
 ---
 title: Arrow functions
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-tags:
-  - ECMAScript 2015
-  - Funções
-  - Intermediário
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
+
 {{jsSidebar("Functions")}}
 
 Uma **expressão _arrow function_** possui uma sintaxe mais curta quando comparada a uma expressão de função (_[function expression](/pt-BR/docs/Web/JavaScript/Reference/Operators/function)_) e não tem seu próprio _[this](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)_, _[arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)_, _[super](/pt-BR/docs/Web/JavaScript/Reference/Operators/super)_ ou _[new.target](/pt-BR/docs/Web/JavaScript/Reference/Operators/new.target)_. Estas expressões de funções são melhor aplicadas para funções que não sejam métodos, e elas não podem ser usadas como construtoras (_constructors_).

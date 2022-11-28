@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Remainder
 browser-compat: javascript.operators.remainder
 ---
+
 {{jsSidebar("Operators")}}
 
 나머지 연산자(`%`)는 왼쪽 피연산자를 오른쪽 피연산자로 나눴을 때의 나머지를 구합니다. 부호는 항상 왼쪽 피연산자의 부호를 따릅니다.

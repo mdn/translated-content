@@ -4,7 +4,8 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+
+{{GamesSidebar}}
 
 {{Previous("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton")}}
 
@@ -58,7 +59,7 @@ Ahora, cuando la bola toca el fondo, restamos una vida. Si no queda ninguna, el 
 
 ### Sacar por pantalla el contador de vidas
 
-Tienes que añadir una llamada a `drawLives()` dentro de `draw()` debajo de la llamada a `drawScore():`
+Tienes que añadir una llamada a `drawLives()` dentro de `draw()` debajo de la llamada a `drawScore()`:
 
 ```js
 drawLives();

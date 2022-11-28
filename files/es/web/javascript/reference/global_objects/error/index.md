@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Error
 ---
+
 {{JSRef}}
 
 Los objetos `Error` se lanzan cuando ocurren errores en tiempo de ejecución. También puedes utilizar el objeto `Error` como objeto base para excepciones definidas por el usuario. Ve más adelante los tipos de errores estándar integrados.
@@ -17,7 +18,7 @@ Los errores en tiempo de ejecución dan como resultado la creación y lanzamient
 
 ### Tipos `Error`
 
-Además del constructor genérico `Error`, hay otros siete constructores de errores en el núcleo de JavaScript. Para conocer las excepciones de lado del cliente, consulta {{JSxRef("../Guide/Control_de_flujo_y_manejo_de_errores", "Declaraciones para el manejo de excepciones", "#Sentencias_de_manejo_de_excepciones", 1)}}.
+Además del constructor genérico `Error`, hay otros siete constructores de errores en el núcleo de JavaScript. Para conocer las excepciones de lado del cliente, consulta {{JSxRef("Guide/Control_de_flujo_y_manejo_de_errores", "Declaraciones para el manejo de excepciones", "#Sentencias_de_manejo_de_excepciones", 1)}}.
 
 - {{JSxRef("EvalError")}}
   - : Crea una instancia que representa un error que ocurre con respecto a la función global {{JSxRef("eval", "eval()")}}.

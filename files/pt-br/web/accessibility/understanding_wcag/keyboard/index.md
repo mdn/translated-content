@@ -1,16 +1,16 @@
 ---
 title: Keyboard
 slug: Web/Accessibility/Understanding_WCAG/Keyboard
-translation_of: Web/Accessibility/Understanding_WCAG/Keyboard
 original_slug: Web/Acessibilidade/Entendendo_WCAG/Keyboard
 ---
+
 To be fully accessible, a web page must be operable by someone using only a keyboard to access and control it. This includes users of screen readers, but can also include users who have trouble operating a pointing device such as a mouse or trackball, or whose mouse is not working at the moment, or who simply prefer to use a keyboard for input whenever possible.
 
 ## Focusable elements should have interactive semantics
 
 If an element can be focused using the keyboard, then it should be interactive; that is, the user should be able to do something to it and produce a change of some kind (for example, activating a link or changing an option).
 
-> **Nota:** One important exception to this rule is if the element has `role="document" `applied to it, **inside** an interactive context (such as `role="application"`). In such a case, focusing the nested document is the only way of returning assistive technology to a non-interactive state (often called "browse mode").
+> **Nota:** One important exception to this rule is if the element has `role="document"` applied to it, **inside** an interactive context (such as `role="application"`). In such a case, focusing the nested document is the only way of returning assistive technology to a non-interactive state (often called "browse mode").
 
 Most interactive elements are focusable by default; you can make an element focusable by adding a `tabindex=0` attribute value to it. However, you should only add `tabindex` if you have also made the element interactive, for example, by defining appropriate event handlers keyboard events.
 
@@ -63,7 +63,7 @@ If the user can interact with an element (for example, using touch or a pointing
 
 ## Focusable element must have focus styling
 
-Any element that can receive keyboard focus should have visible styling that indicates when the element is focused. You can do this with the [`:focus`](/en-US/docs/Web/CSS/:focus) CSS pseudo-class.
+Any element that can receive keyboard focus should have visible styling that indicates when the element is focused. You can do this with the [`:focus`](/pt-BR/docs/Web/CSS/:focus) CSS pseudo-class.
 
 Standard focusable elements such as links and input fields are given special styling by the browser by default, so you might not need to specify focus styling for such elements, unless you want the focus styling to be more distinctive.
 

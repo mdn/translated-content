@@ -2,6 +2,7 @@
 title: CountQueuingStrategy.CountQueuingStrategy()
 slug: Web/API/CountQueuingStrategy/CountQueuingStrategy
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 **`CountQueuingStrategy()`** コンストラクターは、`CountQueuingStrategy` オブジェクトのインスタンスを作成して返します。

@@ -2,6 +2,7 @@
 title: CSS 型付きオブジェクトモデル API
 slug: Web/API/CSS_Typed_OM_API
 ---
+
 {{DefaultAPISidebar("CSS Typed Object Model API")}}
 
 CSS 型付きオブジェクトモデル API (CSS Typed Object Model API) は、 CSS の値を文字列ではなく、型付き JavaScript オブジェクトとして提供することにより、CSS のプロパティ操作を簡略化するものです。これは CSS の操作を単純化するだけでなく、 {{domxref('HTMLElement.style')}} と比較して、パフォーマンスへの悪影響も軽減できます。
@@ -23,7 +24,7 @@ CSS 型付きオブジェクトモデルは、 CSS のプロパティに割り�
 
 ### `StylePropertyMap`
 
-{{domxref('StylePropertyMap')}} は CSS 型付きオブジェクトモデル API のインターフェイスで、  CSSStyleDeclaration の代替となる CSS 宣言ブロックの表現を提供します。
+{{domxref('StylePropertyMap')}} は CSS 型付きオブジェクトモデル API のインターフェイスで、 CSSStyleDeclaration の代替となる CSS 宣言ブロックの表現を提供します。
 
 - {{domxref('StylePropertyMap.set()')}}
   - : StylePropertyMap インターフェイスのメソッドで、指定されたプロパティを持つ CSS 宣言を指定された値に変更します。

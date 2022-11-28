@@ -33,7 +33,7 @@ Les classes de caractères permettent de distinguer différents ensembles de car
           un caractère de saut de ligne.
         </p>
         <p>
-          Ainsi, <code>/.n/</code> correspond à  'un' et 'en' dans "Un baobab
+          Ainsi, <code>/.n/</code> correspond à 'un' et 'en' dans "Un baobab
           nain en cours de croissance" mais pas à 'nain'.
         </p>
         <p>
@@ -251,13 +251,11 @@ Les classes de caractères permettent de distinguer différents ensembles de car
 
 ## Spécifications
 
-| Spécification            | État                 | Commentaires                                          |
-| ------------------------ | -------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}} | {{Spec2('ES3')}} | Définition initiale. Implémentée avec JavaScript 1.1. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.property_escapes")}}
+{{Compat}}
 
 ## Voir aussi
 

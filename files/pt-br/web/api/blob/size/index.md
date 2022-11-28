@@ -1,8 +1,8 @@
 ---
 title: Blob.size
 slug: Web/API/Blob/size
-translation_of: Web/API/Blob/size
 ---
+
 {{APIRef("File API")}}
 
 A propriedade **`Blob.size`** retorna o tamanho em bytes de {{domxref("Blob")}} ou um {{domxref("File")}}.

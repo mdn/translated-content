@@ -3,6 +3,7 @@ title: Window.showModalDialog()
 slug: Web/API/Window/showModalDialog
 translation_of: Web/API/Window/showModalDialog
 ---
+
 {{ deprecated_header() }}{{APIRef}}
 
 El método **`Window.showModalDialog()`** crea y visualiza una caja de diálogo modal, conteniendo el documento HTML especificado.
@@ -36,7 +37,7 @@ donde
 | `resizable: {on \| off \| yes \| no \| 1 \| 0 }` | Si el valor de este argumentoes `on`, `yes`, ó 1, la ventana de diálogo podrá ser redimensionada por el usuario; en caso controario su tamaño será fijo. El valor por defecto es `no`. |
 | `scroll: {on \| off \| yes \| no \| 1 \| 0 }`    | Si el valor de este argumento es `on`, `yes`, ó 1, la ventana de diálogo tendrá barras de desplazamiento; en caso contrario su tamaño será fijo. El valor por defecto es `no`.         |
 
-{{Note("Firefox no implementa los argumentos <code>dialogHide</code>, <code>edge</code>, <code>status</code>, ó <code>unadorned</code>.")}}
+> **Nota:** Firefox no implementa los argumentos `dialogHide`, `edge`, `status`, ó `unadorned`.
 
 ## Compatibilidad con navegadores
 

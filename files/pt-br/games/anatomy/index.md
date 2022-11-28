@@ -1,11 +1,9 @@
 ---
 title: Anatomia de um vídeo game
 slug: Games/Anatomy
-translation_of: Games/Anatomy
 ---
-{{GamesSidebar}}
 
-{{IncludeSubnav("/pt-BR/docs/Games")}}
+{{GamesSidebar}}
 
 Este artigo analisa a anatomia e o fluxo de trabalho do vídeo game médio de um ponto de vista técnico, em termos de como o loop principal deve ser executado. Isso ajuda os iniciantes da arena do desenvolvimento de jogos modernos a entender o que é necessário ao construir um jogo e como os padrões da web como o JavaScript se prestam como ferramentas. Os programadores de jogos experientes que são novos no desenvolvimento da web também podem se beneficiar.
 
@@ -27,7 +25,7 @@ JavaScript Moderno — como descrito nas próximas seções — felizmente, faci
 
 JavaScript trabalaha melhor com eventos e chamadas de funções. Navegadores modernos esforçam-se para chamar métodos à medida que são necessários e ociosos (ou fazem suas outras tarefas) nos intervalos. É uma excelente ideia ligar seu código aos momentos apropriados a eles. Pense se a sua função realmente precisa ser chamada em um estrito intervalo de tempo, a cada frame, ou somente após algo acontecer. Ser mais específico com o navegador sobre quando a sua função precisa ser chamada permite que o navegador otimize essa chamada. Também, isso facilitará o seu trabalho.
 
-Alguns códigos precisam ser rodados frame por frame, então por quê ligar essas funções a qualquer coisa que não seja a atualização de tela do navegador? Na web, `{{ domxref("window.requestAnimationFrame()") }} será a base da maioria dos mais bem programados loops principais do tipo frame por frame.` Uma chamada de função deve ser passada dentro da função anterior quando a mesma for chamada. Esta chamdada de função será executada em um tempo adequado antes da próxima atualização de tela. Eis um exemplo de um loop principal simples:
+Alguns códigos precisam ser rodados frame por frame, então por quê ligar essas funções a qualquer coisa que não seja a atualização de tela do navegador? Na web, {{ domxref("window.requestAnimationFrame()") }} será a base da maioria dos mais bem programados loops principais do tipo frame por frame. Uma chamada de função deve ser passada dentro da função anterior quando a mesma for chamada. Esta chamdada de função será executada em um tempo adequado antes da próxima atualização de tela. Eis um exemplo de um loop principal simples:
 
 ```
 window.main = function () {
@@ -109,7 +107,7 @@ A chave para programar loop principal, no JavaScript, é anexá-lo a qualquer ev
 
 ## Construindo um loop principal mais _otimizado_ no JavaScript
 
-Finalmente, no JavaScript, o browser está rodando o seu loop principal e o seu código existe em algum de seus estágios. As seções acima descrevem loops principais que tentam não eliminar o controle do navegador. Esses métodos principais anexam eles mesmos ao `window.requestAnimationFrame()`, que pergunta ao browser por controle sobre o próximo frame. É responsabilidade do browser saber como relacionar esses requests ao loop principal. A [especificação da W3C para o requestAnimationFrame](http://www.w3.org/TR/animation-timing/) não define realmente quando os browsers tem que executar os callbacks do requestAnimationFrame. Isto pode ser uma vantagem por que os fornecedores de browsers podem ter a liberdade de experimentar com as soluções que sintam que seja melhor e podem modifica-la com o passar do tempo.
+Finalmente, no JavaScript, o browser está rodando o seu loop principal e o seu código existe em algum de seus estágios. As seções acima descrevem loops principais que tentam não eliminar o controle do navegador. Esses métodos principais anexam eles mesmos ao `window.requestAnimationFrame()`, que pergunta ao browser por controle sobre o próximo frame. É responsabilidade do browser saber como relacionar esses requests ao loop principal. A [especificação da W3C para o requestAnimationFrame](https://www.w3.org/TR/animation-timing/) não define realmente quando os browsers tem que executar os callbacks do requestAnimationFrame. Isto pode ser uma vantagem por que os fornecedores de browsers podem ter a liberdade de experimentar com as soluções que sintam que seja melhor e podem modifica-la com o passar do tempo.
 
 Versões modernas do Firefox e Google Chrome (e provavelmente outros) tentam conectar os callbacks do `requestAnimationFramea` a sua thread principal no primeiro intervalo de tempo de um frame. A thread principal portanto tenta fazer o seguinte:
 

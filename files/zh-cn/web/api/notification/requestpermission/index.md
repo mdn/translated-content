@@ -5,7 +5,7 @@ slug: Web/API/notification/requestPermission
 
 {{APIRef("Web Notifications")}}
 
-{{domxref("Notification")}} 接口的 **`requestPermission()` **方法请求用户当前来源的权限以显示通知。
+{{domxref("Notification")}} 接口的 **`requestPermission()`** 方法请求用户当前来源的权限以显示通知。
 
 ## 语法
 
@@ -54,7 +54,7 @@ Notification.requestPermission().then(function(result) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Notification.requestPermission")}}
+{{Compat}}
 
 ## 参见
 

@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/input/image
 browser-compat: html.elements.input.type_image
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`image`** sont utilisés pour créer des boutons d'envoi de formulaire graphiques. Autrement dit, il s'agit de boutons d'envoi qui affichent une image plutôt qu'un texte.
 

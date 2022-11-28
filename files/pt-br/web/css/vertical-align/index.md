@@ -1,12 +1,8 @@
 ---
 title: vertical-align
 slug: Web/CSS/vertical-align
-tags:
-  - CSS
-  - Propriedades CSS
-  - Referencia
-translation_of: Web/CSS/vertical-align
 ---
+
 {{CSSRef}}
 
 A propriedade **`vertical-align`** do [CSS](/pt-BR/docs/Web/CSS) especifica o alinhamento vertical de um inline ou caixa table-cell.

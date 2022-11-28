@@ -1,8 +1,8 @@
 ---
 title: Element.scrollTop
 slug: Web/API/Element/scrollTop
-translation_of: Web/API/Element/scrollTop
 ---
+
 {{ APIRef("DOM") }}
 
 A propriedade Element.scrollTop obtém ou define o número de pixels quando o conteúdo de um elemento é rolado para baixo. O ScrollTop de um elemento é uma medida da distância do topo de um elemento para o seu conteúdo superior visível. Quando um conteúdo de elemento não gera uma barra de rolagem vertical, então o seu valor será padronizado scrollTop = 0.
@@ -21,7 +21,7 @@ Depois de executar este código, intElemScrollTop é um número inteiro correspo
 element.scrollTop = intValue;
 ```
 
-`scrollTop pode ser definido como qualquer valor inteiro, com algumas ressalvas:`
+`scrollTop` pode ser definido como qualquer valor inteiro, com algumas ressalvas:
 
 - Se o elemento não pode ser rolada (por exemplo, se o elemento é não-rolagem), scrollTop = 0.
 - Se for definido como um valor menor do que 0, scrollTop é definido = 0.

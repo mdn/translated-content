@@ -1,17 +1,8 @@
 ---
 title: BatteryManager.charging
 slug: Web/API/BatteryManager/charging
-tags:
-  - Apps
-  - Batería
-  - Battery
-  - Firefox OS
-  - Mobile
-  - Móvil
-  - WebAPI
-translation_of: Web/API/BatteryManager/charging
-browser-compat: api.BatteryManager.charging
 ---
+
 {{deprecated_header}}{{APIRef("Battery API")}}
 
 Un valor boleano indicando si está cargando o no la batería del dispositivo (está conectado el cargador).

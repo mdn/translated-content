@@ -1,8 +1,8 @@
 ---
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
+
 {{JSRef}}
 
 O objeto **Proxy** é usado para definir comportamentos customizados para operações fundamentais (por exemplo, pesquisa de propriedade, atribuição, enumeração, invocação de função, etc.).
@@ -38,7 +38,7 @@ var p = new Proxy(target, handler);
 
 O objeto manipulado é um objeto reservado que contém traps para `Proxy.`
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler', 'Methods') }}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler', 'Methods') }}
 
 ## Exemplos
 
@@ -304,7 +304,7 @@ Agora, para criar uma lista completa de amostra de `traps`, para fins didáticos
 ```js
 /*
   var docCookies = ... get the "docCookies" object here:
-  https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
+  https://developer.mozilla.org/pt-BR/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
 */
 
 var docCookies = new Proxy(docCookies, {

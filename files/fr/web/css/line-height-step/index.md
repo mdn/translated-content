@@ -27,9 +27,13 @@ La propriété `line-height-step` peut être définie avec une valeur de type [`
 - `<length>`
   - : La longueur indiquée est utilisée pour calculer le « pas » pour la hauteur de la boîte de chaque ligne. Voir {{cssxref("&lt;length&gt;")}} pour plus d'informations sur ce type de valeur.
 
-### Formal syntax
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -53,15 +57,11 @@ Voici le résultat obtenu avec une capture d'écran :
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS Rhythmic Sizing', '#line-height-step', 'line-height-step')}} | {{Spec2('CSS Rhythmic Sizing')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.line-height-step")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Replaced_element
 original_slug: Web/CSS/Замещаемый_элемент
 ---
+
 {{CSSRef}}
 
 В [CSS](/ru/docs/Web/CSS), **замещаемый элемент** — это элемент, чьё представление выходит за рамки CSS. Другими словами, это внешний объект, чьё представление независимо от модели форматирования CSS.
@@ -40,5 +41,5 @@ CSS обрабатывает замещаемые элементы особым 
 
 ## Смотрите также
 
-- Спецификация HTML https\://html.spec.whatwg.org/multipage/rendering.html#replaced-elements
+- [Спецификация HTML](https://html.spec.whatwg.org/multipage/rendering.html#replaced-elements)
 - {{CSS_key_concepts()}}

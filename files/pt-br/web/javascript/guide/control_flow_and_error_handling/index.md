@@ -1,15 +1,9 @@
 ---
 title: Controle de Fluxo e Manipulação de Erro
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Guia(2)
-  - Iniciante
-  - JavaScript
-  - declarações
-  - declarações de controle
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 original_slug: Web/JavaScript/Guide/Declarações
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 O JavaScript suporta um conjunto compacto de declarações, especificamente de fluxo de controle, que você pode utilizar para atribuir uma grande interatividade a páginas web. Este capítulo fornece uma visão geral destas declarações.
@@ -175,7 +169,7 @@ switch (expressao) {
 
 O programa primeiramente procura por uma cláusula `case` com um rótulo que corresponda ao valor da expressão e então transfere o controle para aquela cláusula, executando as declaracoes associadas. Se nenhum rótulo correspondente é encontrado, o programa procura pela cláusula opcional `default` e, se encontrada, transfere o controle àquela cláusula, executando as declarações associadas. Se nenhuma cláusula `default` é encontrada, o programa continua a execução a partir da declaracao seguinte ao `switch`. Por convenção, a cláusula `default` é a última, mas não é necessário que seja assim.
 
-A instrução `break` associada a cada cláusula `case,` garante que o programa sairá do `switch` assim que a declaração correspondente for executada e que continuará a execução a partir da declaração seguinte ao `switch`. Se a declaração `break` for omitida, o programa continua a execução a partir da próxima declaração dentro do `switch`.
+A instrução `break` associada a cada cláusula `case`, garante que o programa sairá do `switch` assim que a declaração correspondente for executada e que continuará a execução a partir da declaração seguinte ao `switch`. Se a declaração `break` for omitida, o programa continua a execução a partir da próxima declaração dentro do `switch`.
 
 #### Exemplo
 

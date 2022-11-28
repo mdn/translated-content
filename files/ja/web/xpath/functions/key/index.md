@@ -2,6 +2,7 @@
 title: key
 slug: Web/XPath/Functions/key
 ---
+
 {{ XsltRef() }}
 
 `key`関数は、与えられたキーに対して与えられた値を持つノードのノード集合を返します。

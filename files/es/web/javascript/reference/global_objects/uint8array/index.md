@@ -8,16 +8,19 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Uint8Array
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Uint8Array
 ---
+
 {{JSRef}}
 
 Los **`Uint8Array`** representan un array de enteros sin signo de 8 bits. El contenido se inicializa a 0. Una vez establecido, puedes hacer referencia a un elemento usando los métodos del objeto o usando la sintaxis de array estándar (esto es, usando la notación de corchetes).
 
 ## Sintaxis
 
-    new Uint8Array(tamaño);
-    new Uint8Array(typedArray);
-    new Uint8Array(objeto);
-    new Uint8Array(buffer [, byteOffset [, tamaño]]);
+```
+new Uint8Array(tamaño);
+new Uint8Array(typedArray);
+new Uint8Array(objeto);
+new Uint8Array(buffer [, byteOffset [, tamaño]]);
+```
 
 Para más información acerca de la sintaxis del constructor y sus parámetros, mire _[TypedArray](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
 
@@ -48,7 +51,7 @@ Todos los objetos `Uint8Array` son heredados de {{jsxref("TypedArray.prototype",
 - `Uint8Array.prototype.constructor`
   - : Retorna la función que crea una instancia del prototype. Éste es el constructor por defecto de `Uint8Array`.
 - {{jsxref("TypedArray.prototype.buffer", "Uint8Array.prototype.buffer")}} {{readonlyInline}}
-  - : Retorna el {{jsxref("ArrayBuffer")}} con la referencia del `Uint8Array. `Fijado en el tiempo de construcción y es de **sólo lectura**.
+  - : Retorna el {{jsxref("ArrayBuffer")}} con la referencia del `Uint8Array`. Fijado en el tiempo de construcción y es de **sólo lectura**.
 - {{jsxref("TypedArray.prototype.byteLength", "Uint8Array.prototype.byteLength")}} {{readonlyInline}}
   - : Retorna el tamaño (en bytes) del array `Uint8Array`. Fijado en el tiempo de construcción y es de **sólo lectura**.
 - {{jsxref("TypedArray.prototype.byteOffset", "Uint8Array.prototype.byteOffset")}} {{readonlyInline}}
@@ -139,11 +142,7 @@ var z = new Uint8Array(buffer, 1, 4);
 
 ## Especificaciones
 
-| Especificación                                                                       | Estatus                          | Comentario                                                                      |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Sustituida por ECMAScript 6.                                                    |
-| {{SpecName('ES6', '#table-49', 'TypedArray constructors')}}     | {{Spec2('ES6')}}             | Definición inicial en un ECMA standard. Se especificó que `new` es requirerido. |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     |                                                                                 |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

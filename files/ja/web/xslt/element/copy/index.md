@@ -2,6 +2,7 @@
 title: <xsl:copy>
 slug: Web/XSLT/Element/copy
 ---
+
 {{ XsltRef() }}
 
 `<xsl:copy>` 要素は、現在のノードの浅いコピー (ノードおよび関連する名前空間ノード) を出力ドキュメントに転送します。現在のノードの子または属性はコピーされません。

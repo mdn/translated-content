@@ -6,6 +6,7 @@ tags:
   - HTML
 translation_of: Glossary/HTML
 ---
+
 HTML (Lenguaje de marcado de hipertexto o HyperText Markup Language por sus siglas en inglés) es un lenguaje descriptivo que especifica la estructura de las páginas web.
 
 ## Breve historia
@@ -32,7 +33,7 @@ Un archivo HTML es normalmente guardado con una extensión `.htm` o `.html`, es 
 
 ### Aprendiendo HTML
 
-- [Nuestro tutorial de HTML](http://developer.mozilla.org/es/Learn/HTML)
+- [Nuestro tutorial de HTML](/es/Learn/HTML)
 - [Curso web en codecademy.com](http://www.codecademy.com/en/tracks/web) (sitio en inglés)
 
 ### Referencia técnica

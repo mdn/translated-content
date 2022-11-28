@@ -2,6 +2,7 @@
 title: '-webkit-mask-box-image'
 slug: Web/CSS/-webkit-mask-box-image
 ---
+
 {{ CSSRef() }} {{ Non-standard_header() }}
 
 `-webkit-mask-box-image` はマスク画像を要素の境界ボックスに設定します。

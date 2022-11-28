@@ -20,7 +20,7 @@ translation_of: Web/API/AudioBufferSourceNode
 
 ## Properties
 
-_\_\_{{domxref("AudioNode")}}_ 를 부모로 가지는 프로퍼티.
+_{{domxref("AudioNode")}}_ 를 부모로 가지는 프로퍼티.
 
 - {{domxref("AudioBufferSourceNode.buffer")}}
   - : {{domxref("AudioBuffer")}} 의 음원이 재생이 되거나 값이 NULL 이라면 채널하나을 무음으로 정의한다.

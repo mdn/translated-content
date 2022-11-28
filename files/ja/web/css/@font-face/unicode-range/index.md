@@ -2,6 +2,7 @@
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
 ---
+
 {{CSSRef}}
 
 **`unicode-range`** は CSS の記述子で、 {{cssxref("@font-face")}} で定義されたフォントから使用される特定の文字範囲を設定し、現在のページで使用できるようにします。ページがこの範囲内の文字を使用しない場合、フォントはダウンロードされません。少なくとも 1 つの文字を使用すると、フォント全体がダウンロードされます。

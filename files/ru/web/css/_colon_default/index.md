@@ -3,6 +3,7 @@ title: ':default'
 slug: Web/CSS/:default
 translation_of: Web/CSS/:default
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:default`** находит элемент формы, установленный по умолчанию для группы связанных элементов.
@@ -20,7 +21,9 @@ input:default {
 
 ## Синтаксис
 
-    :default
+```
+:default
+```
 
 ## Пример
 

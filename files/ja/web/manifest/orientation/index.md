@@ -2,13 +2,14 @@
 title: orientation
 slug: Web/Manifest/orientation
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">型</th>
-      <td>`String`</td>
+      <td><code>String</code></td>
     </tr>
     <tr>
       <th scope="row">必須</th>
@@ -19,9 +20,9 @@ slug: Web/Manifest/orientation
 
 `orientation` メンバーは、ウェブサイトの最上位の{{Glossary("Browsing context", "閲覧コンテキスト")}}すべてについて、既定の向きを定義します。
 
-> **Note:** ユーザーエージェントの表示モードによっては、 `orientation` やその中の特定の値に対応していないことがあります。これらに対応することが、特定のコンテキストでは意味がないからです。
+> **メモ:** ユーザーエージェントの表示モードによっては、 `orientation` やその中の特定の値に対応していないことがあります。これらに対応することが、特定のコンテキストでは意味がないからです。
 
-> **Note:** 実行時に画面の向きを変更するには、 [Screen Orientation API](/ja/docs/Web/API/Screen/orientation) を利用して実現することができます。
+> **メモ:** 実行時に画面の向きを変更するには、 [Screen Orientation API](/ja/docs/Web/API/Screen/orientation) を利用して実現することができます。
 
 ## 値
 

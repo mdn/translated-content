@@ -33,7 +33,7 @@ var result = url.hostname; // Returns:'developer.mozilla.org'
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.hostname")}}
+{{Compat}}
 
 ## 参考
 

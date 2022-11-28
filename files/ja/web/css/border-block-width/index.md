@@ -2,6 +2,7 @@
 title: border-block-width
 slug: Web/CSS/border-block-width
 ---
+
 {{CSSRef}}
 
 **`border-block-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロック方向の境界の幅を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界の幅に対応づけられます。これは {{cssxref("border-top-width")}} と {{cssxref("border-bottom-width")}}、または {{cssxref("border-left-width")}} と {{cssxref("border-right-width")}} のどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。

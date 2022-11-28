@@ -1,9 +1,9 @@
 ---
 title: Tabelas de compatibilidade
 slug: MDN/Writing_guidelines/Page_structures
-translation_of: MDN/Structures/Compatibility_tables
 original_slug: MDN/Structures/Compatibility_tables
 ---
+
 {{MDNSidebar}}
 
 A MDN possui um formato padrão para tabelas de compatibilidade para nossa documentação da Web aberta; isto é, documentação de tecnologias como DOM, HTML, CSS, JavaScript, SVG etc., compartilhadas em todos os navegadores. Este artigo é um guia de "introdução" sobre como adicionar, manter o banco de dados a partir do qual as tabelas de compatibilidade são geradas e como integrar as tabelas em artigos.
@@ -99,7 +99,7 @@ To add the data, you need to create a new file or files to store your compat dat
 - JS: One file per JS object, contained in [browser-compat-data/javascript/builtins](https://github.com/mdn/browser-compat-data/tree/master/javascript/builtins). The file should be called the exact name of the object, with the casing preserved, e.g. `Date.json` or `InternalError.json`.
 - APIs: One file per interface contained in the API, put in [browser-compat-data/api](https://github.com/mdn/browser-compat-data/tree/master/api). Each file should be called the exact name of the interface, with the casing preserved, e.g. The WebVR API has `VRDisplay.json`, `VRDisplayCapabilities.json`, etc.
 
-> **Nota:** You'll notice that the repo also contains data for [Browser Extensions](/en-US/Add-ons/WebExtensions) and [HTTP](/pt-BR/docs/Web/HTTP). These data sets are basically finished as they stand, but more features may need to be added in the future.
+> **Nota:** You'll notice that the repo also contains data for [Browser Extensions](/pt-BR/Add-ons/WebExtensions) and [HTTP](/pt-BR/docs/Web/HTTP). These data sets are basically finished as they stand, but more features may need to be added in the future.
 
 Each file you create has to follow the pattern defined in the schema contained within our repo; you can see the [detailed schema description here](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md).
 
@@ -137,18 +137,13 @@ In HTML, CSS, and JS pages, you'll normally only need one feature. API interface
 
 Inside a feature `__compat` member, you need to include the following members:
 
-- `mdn_url`: Contains the URL of the reference page for this feature on MDN. Note that this needs to be written without the locale directory inside, e.g. `/docs/...` not `/docs/en-US/...` (or whatever). This is added in by the macro when the data is put on the page, for localization purposes.
+- `mdn_url`: Contains the URL of the reference page for this feature on MDN. Note that this needs to be written without the locale directory inside, e.g. `/docs/...` not `/docs/pt-BR/...` (or whatever). This is added in by the macro when the data is put on the page, for localization purposes.
 - `support`: Contains members representing the browser support information for this feature in all the different browsers we want to report.
 - `status`: Contains members reporting the standards track status of this feature.
 
 The names of the browser members are defined in the schema (see [Browser identifiers](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#browser-identifiers)). You should use the full list of currently defined identifiers. If you wish to add another browser, talk to us first, as this could have a wide-ranging impact and should not be done without careful thought.
 
-In a basic browser compat data file, you'll only need to include "version_added" inside the browser identifier members (we'll cover [Advanced cases](#advanced_cases) later on). The different values you might want to include are as follows:
-
-- A version number: If you know the exact version in which a browser started to support your feature, use a string representing the number, e.g. "47".
-- `true`: If a browser supports a feature but you don't know the exact version number, use the value `true`. This equivalent to the `\{{CompatVersionUnknown}}` macro call in the old manual tables.
-- `false`: If a browser does not support a feature, use the value `false`. This is equivalent to the the `\{{CompatNo}}` macro call in the old manual tables.
-- `null`: If you don't know whether a browser supports a feature or not, use the value `null`. This is equivalent to the `\{{CompatUnknown}}` macro call in the old manual tables.
+In a basic browser compat data file, you'll only need to include "version_added" inside the browser identifier members (we'll cover [Advanced cases](#advanced_cases) later on).
 
 Inside the `status` member, you'll include three submembers:
 
@@ -209,7 +204,7 @@ The feature data for [border-width](/pt-BR/docs/Web/CSS/border-width#Browser_com
 
 #### Adicionando uma descrição
 
-There is a fourth, optional, member that can go inside the \_\_compat member — `description`. This can be used to include a human-readable description of the feature. You should only include this if it is hard to see what the feature is from glancing at the data. For example, it might not be that obvious what a constructor is from looking at the data structure, so you can include a description like so:
+There is a fourth, optional, member that can go inside the compat member — `description`. This can be used to include a human-readable description of the feature. You should only include this if it is hard to see what the feature is from glancing at the data. For example, it might not be that obvious what a constructor is from looking at the data structure, so you can include a description like so:
 
 ```json
 {

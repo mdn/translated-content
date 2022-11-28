@@ -84,4 +84,4 @@ first.onchange = () => {
 - [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [ウェブワーカーで使用可能な関数一覧](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
 - 他の種類のワーカー: {{domxref("SharedWorker")}}、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)
-- [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) インターフェイス
+- [`OffscreenCanvas`](/ja/docs/Web/API/OffscreenCanvas) インターフェイス

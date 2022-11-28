@@ -1,9 +1,9 @@
 ---
 title: Aplicando estilos e cores
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 original_slug: Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
 No capítulo sobre [desenhando formas com canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), usamos apenas os estilos padrões de preenchimento e linha. Aqui vamos explorar as opções do canvas que temos à nossa disposição para tornar nossos desenhos um pouco mais atraentes. Você aprenderá a adicionar cores diferentes, estilos de linhas, gradientes, padrões e sombras aos seus desenhos.
@@ -92,14 +92,17 @@ O resultado se parece com isto:
 
 {{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}
 
-##### Transparência<br>Além de desenhar formas opacas na tela, também podemos desenhar formas semi-transparentes (ou translúcidas). Isso é feito definindo a propriedade globalAlpha ou atribuindo uma cor semitransparente ao estilo de stroke e / ou fill style.
+## Transparência
 
-- ##### {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha = transparencyValue")}}
+Além de desenhar formas opacas na tela, também podemos desenhar formas semi-transparentes (ou translúcidas). Isso é feito definindo a propriedade globalAlpha ou atribuindo uma cor semitransparente ao estilo de stroke e / ou fill style.
+
+- {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha = transparencyValue")}}
 
   - : Aplica o valor de transparência especificado a todas as formas futuras desenhadas na tela. O valor deve estar entre 0,0 (totalmente transparente) e 1,0 (totalmente opaco). Este valor é 1.0 (totalmente opaco) por padrão.
-    A propriedade globalAlpha pode ser útil se você quiser desenhar muitas formas na tela com transparência semelhante, mas, caso contrário, geralmente é mais útil definir a transparência em formas individuais ao definir suas cores.
 
-    Como as propriedades strokeStyle e fillStyle aceitam os valores de cor CSS rgba, podemos usar a notação a seguir para atribuir uma cor transparente a eles.
+A propriedade globalAlpha pode ser útil se você quiser desenhar muitas formas na tela com transparência semelhante, mas, caso contrário, geralmente é mais útil definir a transparência em formas individuais ao definir suas cores.
+
+Como as propriedades strokeStyle e fillStyle aceitam os valores de cor CSS rgba, podemos usar a notação a seguir para atribuir uma cor transparente a eles.
 
 ```js
 // Assigning transparent colors to stroke and fill style
@@ -707,8 +710,10 @@ When using `fill` (or {{domxref("CanvasRenderingContext2D.clip", "clip")}} and {
 
 Two values are possible:
 
-- **`"nonzero`**": The [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule), which is the default rule.
-- **`"evenodd"`**: The [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+- `nonzero`
+  - : The [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule), which is the default rule.
+- `evenodd`
+  - : The [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 In this example we are using the `evenodd` rule.
 

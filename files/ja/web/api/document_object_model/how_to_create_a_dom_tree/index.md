@@ -2,6 +2,7 @@
 title: DOM ツリーの作成方法
 slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 このページでは JavaScript において [DOM コア](https://www.w3.org/TR/DOM-Level-3-Core/core.html) API を用いて DOM オブジェクトを作成したり変更したりする方法を解説します。これはすべての Gecko ベースのアプリケーション（Firefox など）で特権付きコード（拡張機能）でも特権なしコード（ウェブページ）でも利用できます。

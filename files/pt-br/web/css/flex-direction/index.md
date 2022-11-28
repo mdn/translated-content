@@ -1,20 +1,15 @@
 ---
 title: flex-direction
 slug: Web/CSS/flex-direction
-tags:
-  - CSS
-  - CSS Flexbox
-  - Documentação
-  - Propriedade CSS
-translation_of: Web/CSS/flex-direction
 ---
+
 {{CSSRef}}
 
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`flex-direction`** define como os itens flexíveis são colocados no contêiner flexível, definindo o eixo principal e a direção (normal ou invertido).
 
 {{EmbedInteractiveExample("pages/css/flex-direction.html")}}
 
-Observer que os valores `row` e `row-reverse` são afetados pela direcionalidade do contêiner flexível. Se seu atributo {{HTMLAttrxRef("dir")}} for **`ltr`**, **`row`** representa o eixo horizontal orientado da esquerda para a direita, e `row-reverse` está orientado da direita para esquerda; Se seu atributo **`rtl`**, **`row` **representa o eixo orientado da direita para a esquerda e `row-reverse` da esquerda para a direita.
+Observer que os valores `row` e `row-reverse` são afetados pela direcionalidade do contêiner flexível. Se seu atributo {{HTMLAttrxRef("dir")}} for **`ltr`**, **`row`** representa o eixo horizontal orientado da esquerda para a direita, e `row-reverse` está orientado da direita para esquerda; Se seu atributo **`rtl`**, **`row`** representa o eixo orientado da direita para a esquerda e `row-reverse` da esquerda para a direita.
 
 ## Syntax
 

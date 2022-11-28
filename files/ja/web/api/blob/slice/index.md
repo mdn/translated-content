@@ -2,6 +2,7 @@
 title: Blob.slice()
 slug: Web/API/Blob/slice
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}} インターフェイスの **`slice()`** メソッドは、呼び出された blob のサブセットのデータを含む新しい `Blob` オブジェクトを作成して返します。
@@ -38,4 +39,4 @@ var newBlob = blob.slice(start, end, contentType);
 ## あわせて参照
 
 - {{domxref("Blob")}}
-- [Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+- [Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)

@@ -47,9 +47,7 @@ console.log(uint8); // Uint8Array [ 1, 2, 3, 1, 2, 3, 0, 0 ]
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.copywithin', 'TypedArray.prototype.copyWithin')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

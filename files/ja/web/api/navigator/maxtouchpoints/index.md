@@ -1,16 +1,17 @@
 ---
 title: Navigator.maxTouchPoints
 slug: Web/API/Navigator/maxTouchPoints
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
+
 {{APIRef("HTML DOM")}}
 
-{{domxref("Navigator")}} インターフェイスの **`maxTouchPoints`** プロパティは読み取り専用で、現在の端末で対応している同時タッチコンタクト点の最大数を返します。
+**`maxTouchPoints`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、現在の端末で対応している同時タッチ接触点の最大数を返します。
 
-## 構文
+## 値
 
-```
-touchPoints = navigator.maxTouchPoints;
-```
+数値です。
 
 ## 例
 
@@ -22,11 +23,8 @@ if (navigator.maxTouchPoints > 1) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                                     | 備考               |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName('Pointer Events 2','#extensions-to-the-navigator-interface', 'maxTouchPoints')}} | {{Spec2('Pointer Events 2')}} | 非安定バージョン。 |
-| {{SpecName('Pointer Events', '#extensions-to-the-navigator-interface', 'maxTouchPoints')}} | {{Spec2('Pointer Events')}}     | 初回定義           |
+{{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.Navigator.maxTouchPoints")}}
+{{Compat}}

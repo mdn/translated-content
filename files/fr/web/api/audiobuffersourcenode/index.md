@@ -120,7 +120,7 @@ bouton.onclick = function() {
 }
 ```
 
-> **Note :** Pour un exemple de `decodeAudioData`(), voir la page {{domxref("AudioContext.decodeAudioData")}}.
+> **Note :** Pour un exemple de `decodeAudioData()`, voir la page {{domxref("AudioContext.decodeAudioData")}}.
 
 ## Spécifications
 

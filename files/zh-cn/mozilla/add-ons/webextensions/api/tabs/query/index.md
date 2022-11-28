@@ -119,7 +119,7 @@ let querying = browser.tabs.query({currentWindow: true, active: true});
 querying.then(logTabs, onError);
 ```
 
-Get tabs for all HTTP and HTTPS URLs under or any of its subdomains:`"mozilla.org"`
+Get tabs for all HTTP and HTTPS URLs under or any of its subdomains: `"mozilla.org"`
 
 ```js
 function logTabs(tabs) {

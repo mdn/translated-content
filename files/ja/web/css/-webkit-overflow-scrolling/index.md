@@ -2,6 +2,7 @@
 title: '-webkit-overflow-scrolling'
 slug: Web/CSS/-webkit-overflow-scrolling
 ---
+
 {{CSSRef}} {{Non-standard_header}}
 
 `-webkit-overflow-scrolling` は [CSS](/ja/docs/Web/CSS) のプロパティは、指定された要素で惰性付き (momentum-based) スクロールを使用するかどうかを制御します。

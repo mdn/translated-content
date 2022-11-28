@@ -166,7 +166,7 @@ quelconque gl.getTexParameter(cible, nomp);
           <td><code>gl.TEXTURE_WRAP_R</code></td>
           <td>{{domxref("GLenum")}}</td>
           <td>
-            Fonction d'emballage pour la coordonnée de texture  <code>r</code>
+            Fonction d'emballage pour la coordonnée de texture <code>r</code>
           </td>
           <td>
             <code>gl.REPEAT</code> (valeur par défaut),

@@ -1,16 +1,9 @@
 ---
 title: <body>
 slug: Web/HTML/Element/body
-tags:
-  - Elemento raiz
-  - Elemetos
-  - HTML
-  - Referências
-  - Seções
-  - Web
-translation_of: Web/HTML/Element/body
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 O **elemento** `<body>` do **HTML** representa o conteúdo de um documento HTML. è permitido apenas um `<body>` por documento.
 
@@ -25,7 +18,7 @@ O **elemento** `<body>` do **HTML** representa o conteúdo de um documento HTML.
       </th>
       <td>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
+          href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
           >Seção raiz</a
         >.
       </td>

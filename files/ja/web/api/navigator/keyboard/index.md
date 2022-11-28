@@ -2,6 +2,7 @@
 title: Navigator.keyboard
 slug: Web/API/Navigator/keyboard
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 **`keyboard`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、物理キーボードのキーボードレイアウトマップを受け取ったり、キー押下のキャプチャの切り替えたりするための {{domxref('Keyboard')}} オブジェクトを返します。
@@ -24,4 +25,4 @@ var keyboard = navigator.keyboard
 
 ## ブラウザーの互換性
 
-{{Compat("api.navigator.keyboard")}}
+{{Compat}}

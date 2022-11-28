@@ -20,7 +20,7 @@ _親インターフェイスである {{domxref("HTMLElement")}} からプロパ
 - {{domxref("HTMLLabelElement.htmlFor")}}
   - : 文字列で、ラベル付けしたコントロールの ID が入ります。これは {{htmlattrxref("for", "label")}} 属性を反映します。
 
-> **Note:** プログラムから `for` 属性を設定する場合は、 [`htmlFor`](/ja/docs/Web/API/HTMLLabelElement/htmlFor) を使用してください。
+> **メモ:** プログラムから `for` 属性を設定する場合は、 [`htmlFor`](/ja/docs/Web/API/HTMLLabelElement/htmlFor) を使用してください。
 
 ## メソッド
 

@@ -4,7 +4,7 @@ slug: Web/CSS/minmax
 original_slug: Web/CSS/minmax()
 ---
 
-[CSS](/zh-CN/docs/Web/CSS)函数 **`minmax()`** 定义了一个长宽范围的闭区间， 它与[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)一起使用。
+[CSS](/zh-CN/docs/Web/CSS)函数 **`minmax()`** 定义了一个长宽范围的闭区间，它与[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)一起使用。
 
 ```css
 /* <inflexible-breadth>, <track-breadth> values */
@@ -39,7 +39,7 @@ minmax(auto, 300px)
 
 每个参数分别是`<length>`、`<percentage>`、`<flex>`的一种，或者是`max-content`、`min-content`、或`auto`之一。
 
-如果 _最大值_ < _最小值_，则*最大值*被忽略并且`minmax(最小值,最大值)`被看成*最小值*。{{cssxref("flex_value","&lt;flex&gt;")}} 值作为最大值时设置网格轨道的弹性系数；作为最小值时无效。
+如果 _最大值_ < _最小值_，则*最大值*被忽略并且 `minmax(最小值, 最大值)` 被看成*最小值*。{{cssxref("flex_value","&lt;flex&gt;")}} 值作为最大值时设置网格轨道的弹性系数；作为最小值时无效。
 
 ### 取值
 

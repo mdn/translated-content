@@ -1,8 +1,8 @@
 ---
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 O método **`Object.values()`** retorna um array com os valores das propriedades de um dado objeto, na mesma ordem provida pelo {{jsxref("Statements/for...in", "for...in")}} laço (sendo a diferença que o laço for-in também enumera as propriedades na cadeia prototype).

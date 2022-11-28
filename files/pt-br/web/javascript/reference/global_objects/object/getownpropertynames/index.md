@@ -1,12 +1,8 @@
 ---
 title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
-tags:
-  - Objeto
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 ---
+
 {{JSRef}}
 
 O método **`Object.getOwnPropertyNames()`** retorna um vetor com todas as propriedades (enumeráveis ou não) encontradas diretamente em um dado objeto.

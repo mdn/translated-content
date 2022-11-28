@@ -3,6 +3,7 @@ title: XMLHttpRequest.upload
 slug: Web/API/XMLHttpRequest/upload
 translation_of: Web/API/XMLHttpRequest/upload
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} `upload` 프로퍼티는 업로드 진행 상황을 모니터링 할 수 있는 {{domxref("XMLHttpRequestUpload")}} 객체를 반환합니다. 불투명한 객체(opaque object)이지만 {{domxref("XMLHttpRequestEventTarget")}} 이기도 하기 때문에 이벤트 리스너를 연결하여 프로세스를 추적할 수 있습니다.

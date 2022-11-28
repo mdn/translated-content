@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 {{EmbedInteractiveExample("pages/js/string-indexof.html")}}
 
-> **Note:** **メモ:** 配列メソッドについては {{jsxref("Array.prototype.indexOf()")}} を参照してください。
+> **メモ:** 配列メソッドについては {{jsxref("Array.prototype.indexOf()")}} を参照してください。
 
 ## 構文
 
@@ -138,9 +138,7 @@ console.log(count)  // 4 を表示
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

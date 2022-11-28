@@ -72,7 +72,7 @@ Content-Security-Policy: default-src https:; report-uri /csp-violation-report-en
 
 ## 违规报告样例
 
-思考一下一个地址为`http://example.com/signup.html 的页面。它使用了下面的策略，禁止除了来自 cdn.example.com`的`样式表外的其他任何资源。`
+思考一下一个地址为 `http://example.com/signup.html` 的页面。它使用了下面的策略，禁止除了来自 `cdn.example.com` 的样式表外的其他任何资源。
 
 ```http
 Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports

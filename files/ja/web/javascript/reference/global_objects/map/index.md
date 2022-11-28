@@ -203,7 +203,7 @@ console.log(contacts.size) // 1
 ### 反復処理メソッド
 
 - {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-  - : 新しい**イテレーター**オブジェクトを返し、これには `Map`オブジェクト内の各要素の **`[key, value] の配列`**が挿入順で含まれます。
+  - : 新しい**イテレーター**オブジェクトを返し、これには `Map`オブジェクト内の各要素の **`[key, value] の配列`** が挿入順で含まれます。
 - {{jsxref("Map.prototype.keys()")}}
   - : 新しい**イテレーター**オブジェクトを返し、これには `Map`オブジェクト内の各要素の**キー**が挿入順で含まれます。
 - {{jsxref("Map.prototype.values()")}}
@@ -339,7 +339,7 @@ console.log(clone.get(1))       // one
 console.log(original === clone) // false (useful for shallow comparison)
 ```
 
-> **Note:** **重要:** *データ自身*は複製されないことに注意しておいてください。
+> **メモ:** *データ自身*は複製されないことに注意しておいてください。
 
 Map はキーの固有性を保持しながら混合可能です。
 
@@ -388,9 +388,7 @@ console.log(merged.get(3)) // three
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map-objects', 'Map')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

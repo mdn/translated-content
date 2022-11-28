@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/get
 ---
+
 {{JSRef}}
 
 El método **`get()`** devuelve un elemento específico del objeto `WeakMap`.
@@ -18,7 +19,9 @@ El método **`get()`** devuelve un elemento específico del objeto `WeakMap`.
 
 ## Sintaxis
 
-    wm.get(key);
+```
+wm.get(key);
+```
 
 ### Parámetros
 
@@ -43,10 +46,7 @@ wm.get('baz');  // Devuelve undefined.
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                       | Comentarios         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

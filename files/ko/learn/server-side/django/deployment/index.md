@@ -2,6 +2,7 @@
 title: 'Django 튜토리얼 파트 11: Django 웹사이트 공개하기'
 slug: Learn/Server-side/Django/Deployment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
 당신은 이제 놀라운 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 웹사이트를 (테스트도 마치고) 만들었으니, 도서관 스태프나 회원들이 인터넷을 통해 이용할 수 있도록 공개된 웹 서버에 설치하길 원할 것이다. 이번 장에서는 웹사이트를 배포할수 있는 호스트를 살펴보는 방법에 대한 개요와 사이트를 실제 운운영하기위해 필요한 것들에 대해 설명한다.
@@ -205,7 +206,7 @@ git 으로 작업하는 수많은 방법이 있지만, [Github](https://github.c
 
 4. " **Create repository"** 버튼을 누른다
 5. 신규 저장소 페이지에서 초록색의 "**Clone or download**" 버튼을 클릭한다.
-6. 아래와 같은 형태의 URL 값을 다이얼로그 박스내의 텍스트 필드에서 복사한다.(예시: **https\://github.com/_\<your_git_user_id>_/django_local_library.git**).
+6. 아래와 같은 형태의 URL 값을 다이얼로그 박스내의 텍스트 필드에서 복사한다.(예시: `https\://github.com/<your_git_user_id>/django_local_library.git`).
 
 이제 원격 저장소 ("repo")가 생성되었으니 로컬 컴퓨터에 복제(clone)하길 원할 것이다:
 
@@ -298,7 +299,7 @@ web: gunicorn locallibrary.wsgi --log-file -
 
 [Gunicorn](http://gunicorn.org/) 은 Django와 함께 사용되는 용도로 Heroku에서 추천되는 HTTP server 이다 (바로 위의 Procfile 에서 미리 본 바와 같다). 하나의 다이노에서 여러개의 Python 동시 프로세스를 실행할 수 있는 WSGI 어플리케이션을 위한 순수 Python으로 작성된 HTTP server 다. ( 추가 정보를 얻으려면 [Gunicorn으로 Python 어플리케이션 배포하기](https://devcenter.heroku.com/articles/python-gunicorn) ( Heroku 문서) 참고하라).
 
-개발기간중에는 LocalLibrary 어플리케이션을 서비스하기 위해 Gunicorn을 필요로 하진 않겠지만, Heroku에서 원격 서버를 셋업하기 위한 [요구조건](/ko/docs/Learn/Server-side/Django/Deployment$edit#requirements) 의 일부이므로 Gunicorn을 설치할 것이다.
+개발기간중에는 LocalLibrary 어플리케이션을 서비스하기 위해 Gunicorn을 필요로 하진 않겠지만, Heroku에서 원격 서버를 셋업하기 위한 [요구조건](#requirements) 의 일부이므로 Gunicorn을 설치할 것이다.
 
 아래와 같이 커맨드라인에서 pip를 이용하여 _Gunicorn_ 설치한다 (pip는 [개발 환경 구축하기](/ko/docs/Learn/Server-side/Django/development_environment) 단계에서 설치했다):
 
@@ -319,7 +320,7 @@ pip3 install gunicorn
 Heroku에서 원격 서버에 설치하기 위한 [요구조건](/ko/docs/Learn/Server-side/Django/Deploymentt#requirements)의 일부가 되었으니, _dj-database-url_ 를 로컬에 설치한다:
 
 ```
-$ pip3 install dj-database-url
+pip3 install dj-database-url
 ```
 
 ##### settings.py 수정하기
@@ -399,7 +400,7 @@ STATIC_URL = '/static/'
 아래 명령으로 whitenoise를 로컬에 설치한다 :
 
 ```
-$ pip3 install whitenoise
+pip3 install whitenoise
 ```
 
 ##### settings.py 수정하기

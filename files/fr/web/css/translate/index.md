@@ -42,9 +42,13 @@ translate: 50% 105px 5rem;
 - `none`
   - : Cette valeur indique qu'aucune translation ne devrait être appliquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -96,15 +100,11 @@ div:hover .translate {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS Transforms 2', '#individual-transforms', 'individual transforms')}} | {{Spec2('CSS Transforms 2')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.translate")}}
+{{Compat}}
 
 ## Voir aussi
 

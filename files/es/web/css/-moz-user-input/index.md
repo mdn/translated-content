@@ -1,11 +1,6 @@
 ---
 title: '-moz-user-input'
 slug: Web/CSS/-moz-user-input
-tags:
-  - CSS
-  - No estandar
-  - Referencia CSS
-translation_of: Web/CSS/-moz-user-input
 ---
 {{Non-standard_header}}{{CSSRef}}
 
@@ -40,7 +35,7 @@ Para elementos que normalmente son receptores de entrada por parte del usuario, 
 - enabled
   - : El elemento acepta entrada por parte del usuario. Para cajas de texto es el comportamiento por defecto.
 - disabled
-  - : El elemento no acepta datos del usuario. Sin embargo, no es lo mismo que establecer {{XULAttr("disabled")}} a true, en ese caso el elemento es dibujado normalmente.
+  - : El elemento no acepta datos del usuario. Sin embargo, no es lo mismo que establecer `disabled` a true, en ese caso el elemento es dibujado normalmente.
 
 ### Síntaxis Formal
 

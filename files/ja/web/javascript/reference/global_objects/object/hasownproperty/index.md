@@ -112,9 +112,7 @@ Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

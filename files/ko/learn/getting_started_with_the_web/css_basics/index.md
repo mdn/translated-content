@@ -3,6 +3,7 @@ title: CSS 기초
 slug: Learn/Getting_started_with_the_web/CSS_basics
 original_slug: Learn/Getting_started_with_the_web/CSS_기본
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 
 CSS (Cascading Style Sheets)는 웹페이지를 꾸미려고 작성하는 코드입니다. _CSS 기초_ 에서 여러분이 처음 시작하며 필요한 내용을 익히도록 도와드립니다. 저희는 다음과 같은 질문에 관한 답을 드리겠습니다. 어떻게 하면 글자색을 검정이나 빨갛게 할 수 있을까? 어떻게 하면 콘텐츠를 화면의 이런 저런 곳에 보이게 할 수 있을까? 어떻게 하면 배경 이미지와 색상들로 웹페이지를 꾸밀 수 있을까?
@@ -230,17 +231,17 @@ img {
 
 혹시 막히셨다면, 여러분의 코드와 Github에 있는 우리의 [예제 코드](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)와 항상 비교해보세요.
 
-여기서, 우리는 CSS의 겉만 살짝 맛봤습니다. 더 많은 것이 알고 싶으시면 [CSS 배우기](https://developer.mozilla.org/en-US/Learn/CSS) 페이지로 가보세요.
+여기서, 우리는 CSS의 겉만 살짝 맛봤습니다. 더 많은 것이 알고 싶으시면 [CSS 배우기](/en-US/Learn/CSS) 페이지로 가보세요.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 
 ## 이번 과목에서는
 
-- [기본 소프트웨어 설치 방법](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [파일 다루기](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 기본 사항](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 기본 사항](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 기본 사항](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [웹 사이트 출판](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [웹 작동 방식](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [기본 소프트웨어 설치 방법](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software)
+- [What will your website look like?](/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+- [파일 다루기](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)
+- [HTML 기본 사항](/en-US/Learn/Getting_started_with_the_web/HTML_basics)
+- [CSS 기본 사항](/en-US/Learn/Getting_started_with_the_web/CSS_basics)
+- [JavaScript 기본 사항](/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [웹 사이트 출판](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [웹 작동 방식](/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)

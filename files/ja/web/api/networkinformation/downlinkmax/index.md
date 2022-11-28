@@ -1,20 +1,19 @@
 ---
 title: NetworkInformation.downlinkMax
 slug: Web/API/NetworkInformation/downlinkMax
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
+
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-**`NetworkInformation.downlinkMax`** 読み取り専用プロパティは、メガビット毎秒（Mbps）単位で、基底の接続技術の最大下り速度を返します。
+**`NetworkInformation.downlinkMax`** は読み取り専用プロパティで、メガビット毎秒 (Mbps) 単位で、基盤となる接続技術の最大下り速度を返します。
 
-## 構文
+{{AvailableInWorkers}}
 
-```
-var max = NetworkInformation.downlinkMax
-```
+### 値
 
-### 戻り値
-
-- メガビット毎秒（Mbps）単位で、基底の接続技術の最大下り速度を表す`無制限のdouble`。
+基盤となる接続技術の最大下り速度をメガビット毎秒 (Mb/s) で表した `unrestricted double` です。
 
 ## 例
 
@@ -22,31 +21,28 @@ var max = NetworkInformation.downlinkMax
 
 ```js
 function logConnectionType() {
-  var connectionType = 'not supported';
-  var downlinkMax = 'not supported';
+  let connectionType = 'not supported';
+  let downlinkMax = 'not supported';
 
   if ('connection' in navigator) {
-    connectionType = navigator.connection.type;
+    connectionType = navigator.connection.effectiveType;
 
     if ('downlinkMax' in navigator.connection) {
       downlinkMax = navigator.connection.downlinkMax;
     }
   }
 
-  console.log('Current connection type: ' + connectionType +
-    ' (downlink max: ' + downlinkMax + ')');
+  console.log(`Current connection type: ${connectionType} (downlink max: ${downlinkMax})`);
 }
 
 logConnectionType();
 navigator.connection.addEventListener('change', logConnectionType);
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                     | ステータス                                   | コメント   |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------- |
-| {{SpecName('Network Information', '#widl-NetworkInformation-downlinkMax', 'downlinkMax')}} | {{Spec2('Network Information')}} | 最初の定義 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
-{{Compat("api.NetworkInformation.downlinkMax")}}
+{{Compat}}

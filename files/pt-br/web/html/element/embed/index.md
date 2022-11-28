@@ -1,22 +1,8 @@
 ---
 title: <embed>
 slug: Web/HTML/Element/embed
-tags:
-  - Conteúdo externo
-  - Elemento
-  - HTML
-  - HTML5
-  - Incorporação de conteúdo
-  - Incorporação de conteúdo HTML
-  - Internet
-  - Plugins
-  - Rede
-  - Referencia
-  - Web
-  - embutir
-  - incorporar
-translation_of: Web/HTML/Element/embed
 ---
+
 ## Sumário
 
 O **elemento HTML `<embed>` **incorpora conteúdo externo no ponto especificado no documento. Este conteúdo é fornecido por um aplicativo externo ou outra fonte de conteúdo interativo, como um plug-in de navegador.
@@ -29,9 +15,8 @@ Lembre-se de que a maioria dos navegadores modernos descontinuou e removeu o sup
 
 - _[Categoria de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), embedded content, interactive content, palpable content.
 - _Conteúdo permitido_ Nenhum, é um {{Glossary("empty element")}}.
-- \_Omissão de Tag_Deve iniciar com uma tag de início, mas não deve ter uma tag de fechamento.
-- \_Elementos pai (ancestral)
-  permitidos_Qualquer elemento que aceita incorporação de conteúdo.
+- _Omissão de Tag_ Deve iniciar com uma tag de início, mas não deve ter uma tag de fechamento.
+- _Elementos pai (ancestral) permitidos_ Qualquer elemento que aceita incorporação de conteúdo.
 - _Interface DOM_ {{domxref("HTMLEmbedElement")}}
 
 ## Atributos
@@ -71,4 +56,4 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - Outros elementos usados para incorporar conteúdo de vários tipos, incluem: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, and {{HTMLElement("video")}}.
 - Posicionamento e dimensionamento de conteúdos incorporados dentro da janela de exibição: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

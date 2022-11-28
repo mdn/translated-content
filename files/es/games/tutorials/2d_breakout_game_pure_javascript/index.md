@@ -7,7 +7,8 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro
 ---
-{{GamesSidebar}}{{IncludeSubnav("/es-ES/docs/Games")}}
+
+{{GamesSidebar}}
 
 {{Next("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it")}}
 

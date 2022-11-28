@@ -1,14 +1,8 @@
 ---
 title: ':-moz-window-inactive'
 slug: Web/CSS/:-moz-window-inactive
-tags:
-  - CSS
-  - CSS:Extensiones Mozilla
-  - NeedsMobileBrowserCompatibility
-  - No estándar(2)
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-window-inactive
 ---
+
 {{CSSRef}}
 
 ## Resumen

@@ -43,9 +43,13 @@ La valeur de cette propriété peut être le mot-clé `normal` ou un nombre (`<n
 - `<integer>`
   - : Cet argument définit le nombre de lignes dont s'enfoncera la lettrine vers le bas. La valeur utilisée doit être supérieure à 0. Si cet argument est absent, on dupliquera la valeur du premier argument, arrondi vers le bas à l'entier positif le plus proche.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -74,12 +78,8 @@ La valeur de cette propriété peut être le mot-clé `normal` ou un nombre (`<n
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Inline', '#sizing-drop-initials', 'initial-letter')}} | {{Spec2('CSS3 Inline')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.initial-letter")}}
+{{Compat}}

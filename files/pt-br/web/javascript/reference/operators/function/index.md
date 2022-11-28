@@ -1,16 +1,8 @@
 ---
 title: Expressão de função (function expression)
 slug: Web/JavaScript/Reference/Operators/function
-tags:
-  - Expressões Primárias
-  - Função
-  - Internet
-  - JavaScript
-  - Operador
-  - Rede
-  - Web
-translation_of: Web/JavaScript/Reference/Operators/function
 ---
+
 {{jsSidebar("Operators")}}
 
 A palavra-chave **`function`** pode ser usada para definir uma função dentro de uma expressão.
@@ -48,7 +40,7 @@ var x = function(y) {
 
 ### Expressão de função nomeada
 
-Se você quer se referir à função atual dentro do corpo da função, você terá que criar uma expressão de função nomeada. Este nome será local apenas para o corpo (escopo) da função. Isto ainda evita o uso da propriedade não-padronizada [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee).
+Se você quer se referir à função atual dentro do corpo da função, você terá que criar uma expressão de função nomeada. Este nome será local apenas para o corpo (escopo) da função. Isto ainda evita o uso da propriedade não-padronizada [`arguments.callee`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments/callee).
 
 ```js
 var math = {

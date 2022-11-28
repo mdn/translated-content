@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
 original_slug: Learn/CSS/Building_blocks/Manejando_diferentes_direcciones_de_texto
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
 
 Muchas de las propiedades y valores que hemos encontrado hasta ahora en nuestro aprendizaje de CSS han estado ligadas a las dimensiones físicas de nuestra pantalla. Creamos bordes arriba, a la derecha, abajo y a la izquierda de una caja, por ejemplo. Estas dimensiones físicas se ajustan adecuadamente al contenido que se visualiza de forma horizontal, y por defecto, la web tiende a apoyar lenguajes de izquierda a derecha, como el castellano o el francés, mejor que aquellos que se escriben de derecha a izquierda, como el árabe.

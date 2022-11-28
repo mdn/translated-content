@@ -1,8 +1,8 @@
 ---
 title: <wbr>
 slug: Web/HTML/Element/wbr
-translation_of: Web/HTML/Element/wbr
 ---
+
 ## Resumo
 
 O elemento HTML `<wbr>` representa uma posição no texto onde o navegador pode, opcionalmente, quebrar uma linha, embora suas regras de quebra de linha de outra forma não criar uma ruptura naquele local.
@@ -31,7 +31,7 @@ Este elemento implementa o [HTMLElement](/pt-BR/docs/DOM/HTMLElement) interface.
 
 ## Exemplo
 
-_[O Guia de Estilo Yahoo](https://styleguide.yahoo.com/) \_recomenda [quebrar uma URL \_antes de_ pontuação](https://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses) , para não deixar uma marca de pontuação no final da linha, o que o leitor pode confundir com o fim da URL.
+[O Guia de Estilo Yahoo](https://styleguide.yahoo.com/) recomenda [quebrar uma URL _antes de_ pontuação](https://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses) , para não deixar uma marca de pontuação no final da linha, o que o leitor pode confundir com o fim da URL.
 
 ```html
 <p>https://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>

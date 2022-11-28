@@ -1,19 +1,16 @@
 ---
 title: Entendendo as Diretrizes de Acessibilidade do Conteúdo Web
 slug: Web/Accessibility/Understanding_WCAG
-tags:
-  - WCAG
-  - Web Content Accessibility Guidelines
-translation_of: Web/Accessibility/Understanding_WCAG
 original_slug: Web/Acessibilidade/Entendendo_WCAG
 ---
+
 Este conjunto de artigos fornece explicações rápidas para ajudá-lo a entender as etapas que devem ser seguidas para estar em conformidade com as recomendações descritas nas Diretrizes de Acessibilidade para Conteúdo Web 2.0 ou 2.1 do W3C (ou apenas WCAG, para as finalidades deste artigo).
 
 O WCAG 2.0 e 2.1 fornece um conjunto detalhado de diretrizes para tornar o conteúdo web mais acessível para pessoas com uma ampla variedade de deficiências. Isso é compreensivo, porém incrivelmente detalhado e muito difícil de obter uma compreensão rápida disso. Por essa razão, nós fizemos uma sumário com os passos práticosque você precisa saber para satisfazer as diferentes recomendações, com mais alguns link para mais detalhes do que está sendo solicitado.
 
 ## Os quatro princípios
 
-WCAG is broadly broken down into four principles — major things that web content **must be** to be considered accessible (see [Understanding the Four Principles of Accessibility ](https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html#introduction-fourprincs-head)for the WCAG definitions).
+WCAG is broadly broken down into four principles — major things that web content **must be** to be considered accessible (see [Understanding the Four Principles of Accessibility](https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html#introduction-fourprincs-head)for the WCAG definitions).
 
 Each of the links below will take you to pages that further expand on these areas, giving you practical advice on how to write your web content so it conforms to the success criteria outlined in each of the WCAG 2.0 and 2.1 guidelines that further sub-divides each principle.
 

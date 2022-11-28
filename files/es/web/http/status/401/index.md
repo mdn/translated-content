@@ -1,8 +1,8 @@
 ---
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
-translation_of: Web/HTTP/Status/401
 ---
+
 {{HTTPSidebar}}
 
 El código de error HTTP 401 indica que la petición (request) no ha sido ejecutada porque carece de credenciales válidas de autenticación para el recurso solicitado.

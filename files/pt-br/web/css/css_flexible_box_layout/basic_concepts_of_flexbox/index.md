@@ -1,17 +1,9 @@
 ---
 title: Conceitos básicos de flexbox
 slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-tags:
-  - CSS
-  - Flex
-  - Tutorial
-  - conceitos
-  - conteiner
-  - eixos
-  - flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Conceitos_Basicos_do_Flexbox
 ---
+
 {{CSSRef}}
 
 O _Flexible Box Module_, geralmente chamado de _flexbox_, foi projetado tanto como um modelo de _layout_ unidimensional quanto como um método capaz de organizar espacialmente os elementos em uma interface, além de possuir capacidades avançadas de alinhamento. Este artigo fornece um resumo das principais funcionalidades do _flexbox_, as quais exploraremos com mais detalhes no restante deste guia.
@@ -20,7 +12,7 @@ Quando se descreve o flexbox como sendo unidimensional, enfatiza-se o fato de qu
 
 ## Os eixos do _flexbox_
 
-Ao se utilizar o _flexbox_, é preciso ter em mente que todas as operações realizadas relacionam-se a dois eixos: o eixo principal e o eixo transversal. O eixo principal é definido através da propriedade [`flex-direction`](https://developer.mozilla.org/pt-PT/docs/Web/CSS/flex-direction) e o eixo transversal encontra-se na direção perpendicular a ele. Como esses eixos são as engrenagens fundamentais do flexbox é necessário compreender minuciosamente o seu funcionamento.
+Ao se utilizar o _flexbox_, é preciso ter em mente que todas as operações realizadas relacionam-se a dois eixos: o eixo principal e o eixo transversal. O eixo principal é definido através da propriedade [`flex-direction`](/pt-PT/docs/Web/CSS/flex-direction) e o eixo transversal encontra-se na direção perpendicular a ele. Como esses eixos são as engrenagens fundamentais do flexbox é necessário compreender minuciosamente o seu funcionamento.
 
 ### Eixo principal
 

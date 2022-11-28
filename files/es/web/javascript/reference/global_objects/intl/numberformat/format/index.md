@@ -4,15 +4,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/NumberFormat/format
 ---
+
 {{JSRef}}
 
 El método **`Intl.NumberFormat.prototype.format()`** formatea un número de acuerdo con la configuración regional y las opciones de formato de este objeto {{jsxref("NumberFormat")}}.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html")}}
 
-## Syntax
+## Sintaxis
 
-    numberFormat.format(number)
+```
+numberFormat.format(number)
+```
 
 ### Parametros
 
@@ -50,11 +53,7 @@ console.log(formatted.join('; '));
 
 ## Especificaciones
 
-| Specification                                                                                                                                    | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('ES Int 1.0', '#sec-11.3.2', 'Intl.NumberFormat.prototype.format')}}                                         | {{Spec2('ES Int 1.0')}} | Initial definition. |
-| {{SpecName('ES Int 2.0', '#sec-11.3.2', 'Intl.NumberFormat.prototype.format')}}                                         | {{Spec2('ES Int 2.0')}} |                     |
-| {{SpecName('ES Int Draft', '#sec-intl.numberformat.prototype.format', 'Intl.NumberFormat.prototype.format')}} | {{Spec2('ES Int Draft')}} |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

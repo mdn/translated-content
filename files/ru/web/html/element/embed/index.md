@@ -14,6 +14,7 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/embed
 ---
+
 **HTML-элемент `<embed>` **вставляет расширенный контент в выбранное место документа. Этот контент может быть представлен от внешнего приложения или другого источника интерактивного контента, такого как плагин для браузера, например.
 
 {{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
@@ -68,4 +69,4 @@ translation_of: Web/HTML/Element/embed
 - Другие элементы, используемые для встраивания различного рода контента: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, and {{HTMLElement("video")}}.
 - Свойства, для позиционирования и определения размера внедрённого контента в его фрейме: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 
-{{ HTMLRef }}
+{{HTMLSidebar}}

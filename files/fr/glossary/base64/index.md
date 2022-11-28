@@ -53,7 +53,7 @@ Les deux méthodes, `atob()` et `btoa()`, fonctionnent sur des chaînes de carac
 
 ## Outils
 
-- [Réécrire `atob()`et `btoa()` en utilisant des `TypedArray`s et l'UTF-8](<#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8>)
+- [Réécrire `atob()` et `btoa()` en utilisant des `TypedArray`s et l'UTF-8](<#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8>)
 - [`StringView` – une représentation des chaînes de caractères semblable à celle du langage C, basée sur les tableaux typés.](/fr/docs/Web/JavaScript/Typed_arrays/StringView)
 
 ## Sujets connexes
@@ -76,7 +76,7 @@ Les objets [`DOMString`](/fr/docs/Web/API/DOMString) sont des chaînes de caract
 
 Voici ces deux méthodes :
 
-### Première solution  – échapper la chaîne avant de l'encoder
+### Première solution – échapper la chaîne avant de l'encoder
 
 ```js
 function utf8_to_b64( str ) {

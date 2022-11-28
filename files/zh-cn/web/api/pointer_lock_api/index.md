@@ -93,7 +93,7 @@ function lockPointer() {
   // -- 这在以后可能会发生改变。
   elem.requestFullscreen = elem.requestFullscreen    ||
                            elem.mozRequestFullscreen ||
-                           elem.mozRequestFullScreen || // 较旧的 API 把 ‘S’ 大写
+                           elem.mozRequestFullScreen || // 较旧的 API 把‘S’大写
                            elem.webkitRequestFullscreen;
   elem.requestFullscreen();
 }
@@ -163,7 +163,7 @@ document.exitPointerLock();
 
 ## pointerlockchange 事件
 
-当指针锁定状态改变时 - 例如，当调用 `requestPointerLock`, `exitPointerLock`，用户按下 ESC 键，等等。— `pointerlockchange` 事件被分发到 `document`。 这是一个简单事件所以不包含任何的额外数据。
+当指针锁定状态改变时 - 例如，当调用 `requestPointerLock`, `exitPointerLock`，用户按下 ESC 键，等等。— `pointerlockchange` 事件被分发到 `document`。这是一个简单事件所以不包含任何的额外数据。
 
 > **备注：** 该事件目前在 Firefox 中使用前缀的格式是 `mozpointerlockchange` ，在 Chrome 中是 `webkitpointerlockchange`。
 

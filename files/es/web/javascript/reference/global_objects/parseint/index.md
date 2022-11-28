@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/parseInt
 translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 original_slug: Web/JavaScript/Referencia/Objetos_globales/parseInt
 ---
+
 {{jsSidebar("Objects")}}
 
 ## Resumen
@@ -12,7 +13,9 @@ Convierte (parsea) un argumento de tipo cadena y devuelve un entero de la base e
 
 ## Sintaxis
 
-    parseInt(string, base);
+```
+parseInt(string, base);
+```
 
 ### Parámetros
 

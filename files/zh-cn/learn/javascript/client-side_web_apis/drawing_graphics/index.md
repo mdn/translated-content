@@ -99,7 +99,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 
     你还可以看到我们使用了多个等号为多个变量进行连续赋值，这在 JavaScript 中是允许的，很适合为多个变量同时赋一个相同的值。后文中你会发现，使用 `width` 和 `height` 变量可以更快捷地访问画布的长宽（比如在画布正中央绘制一条垂直线）。
 
-4. 如果现在保存文件，浏览器中什么也不会显示，这并没有问题，但是滚动条还是可见的，这就是问题了。原因是我们的“全窗尺寸画布”包含 {{htmlelement("body")}} 元素的外边距（{{cssxref("margin")}}），使得文档比窗口略宽。 为使滚动条消失，需要删除 {{htmlelement("body")}} 元素的 {{cssxref("margin")}} 并将 {{cssxref("overflow")}} 设置为 `hidden`。在文档的 {{htmlelement("head")}} 中添加以下代码即可：
+4. 如果现在保存文件，浏览器中什么也不会显示，这并没有问题，但是滚动条还是可见的，这就是问题了。原因是我们的“全窗尺寸画布”包含 {{htmlelement("body")}} 元素的外边距（{{cssxref("margin")}}），使得文档比窗口略宽。为使滚动条消失，需要删除 {{htmlelement("body")}} 元素的 {{cssxref("margin")}} 并将 {{cssxref("overflow")}} 设置为 `hidden`。在文档的 {{htmlelement("head")}} 中添加以下代码即可：
 
     ```html
     <style>
@@ -354,7 +354,7 @@ ctx.fillText('Canvas text', 50, 150);
 
 1. 同上，下载画布模板（[1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)）以绘制新的示例。这里还需要在同一目录下保存一个示例图片文件：[firefox.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/firefox.png)。
 
-    {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} 方法可将图片绘制在画布上。 最简单的版本需要三个参数：需要渲染的图片、图片左上角的 X、Y 坐标。
+    {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} 方法可将图片绘制在画布上。最简单的版本需要三个参数：需要渲染的图片、图片左上角的 X、Y 坐标。
 
 2. 将图片源嵌入画布中，代码如下：
 
@@ -597,7 +597,7 @@ loop();
 
     将整个功能块放置在 `if (posX % 13 === 0) { ... }` 内。用“模（`%`）运算符”（即 [求余运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)）来检测 `posX` 是否可以被 13 整除。如果整除，则通过增加 `sprite` 的值转至下一个精灵（到 5 号精灵时归零）。这实际上意味着每隔 13 帧才更新一次精灵，每秒大约更新 5 帧（`requestAnimationFrame()` 每秒最多调用 60 帧）。我们故意放慢了帧率，因为精灵图只有六个，且如果每秒显示 60 帧的话，这个角色就会快到起飞。
 
-    外部程序块中用一个 [`if ... else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句来检测 `sprite` 的值是否为 5（精灵序号在 0 - 5 间循环，因此 5 代表最后一个精灵）。 如果最后一个精灵已经显示，就把 `sprite` 重置为 0，否则加 1。
+    外部程序块中用一个 [`if ... else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句来检测 `sprite` 的值是否为 5（精灵序号在 0 - 5 间循环，因此 5 代表最后一个精灵）。如果最后一个精灵已经显示，就把 `sprite` 重置为 0，否则加 1。
 
 9. 下一步要算出每帧 `posX` 的值，在上文代码末尾添加以下内容：
 

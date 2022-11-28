@@ -116,7 +116,7 @@ Les valeurs valides sont :
 | `minimal-ui`     | L'application va ressembler et se comporter comme une application autonome, mais elle aura quelques élements d'interface permettant de contrôler la navigation. Les éléments varient en fonction du navigateur web.                                                                                                                                                                     | `browser`               |
 | `browser`        | L'application s'ouvre dans un nouvel onglet ou une nouvelle fenêtre du navigateur, en fonction du navigateur et de la plateforme. C'est la valeur par défaut.                                                                                                                                                                                                                           | (None)                  |
 
-> **Note :** Vous pouvez appliquer les CSS de manière séléctive pour votre application en fonction du mode d'affichage en utilisant la fonction [display-mode](/docs/Web/CSS/@media/display-mode). Cela peut être utilisé pour fournir une expérience utilisateur cohérente entre le lancement à partir d'une URL et le lancement à partir d'une icône de bureau.
+> **Note :** Vous pouvez appliquer les CSS de manière séléctive pour votre application en fonction du mode d'affichage en utilisant la fonction [display-mode](/fr/docs/Web/CSS/@media/display-mode). Cela peut être utilisé pour fournir une expérience utilisateur cohérente entre le lancement à partir d'une URL et le lancement à partir d'une icône de bureau.
 
 ### `icons`
 
@@ -285,7 +285,7 @@ Définit la couleur du thème par défaut pour une application. Cela affecte par
 
 ## Splash screens
 
-Dans Chrome 47 et supérieur, un écran de lancement (_splashscreen_) est affiché pour une appplication lancée depuis l'écran d'accueil. Cet écran est généré automatiquement en utilisant les propriétés du manifeste de l'application web, particulièrement: `name`, `background_color`, et l'icône du tableau \`icons\`qui est la plus proche de 128dp pour l'appareil.
+Dans Chrome 47 et supérieur, un écran de lancement (_splashscreen_) est affiché pour une appplication lancée depuis l'écran d'accueil. Cet écran est généré automatiquement en utilisant les propriétés du manifeste de l'application web, particulièrement: `name`, `background_color`, et l'icône du tableau `icons` qui est la plus proche de 128dp pour l'appareil.
 
 ## Mime type
 
@@ -293,13 +293,11 @@ Les manifestes doivent être servies en utilisant l'`application/manifest+json` 
 
 ## Spécifications
 
-| Spécification                    | Statut                       | Commentaire         |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Manifest')}} | {{Spec2('Manifest')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.manifest")}}
+{{Compat}}
 
 ## Voir aussi
 

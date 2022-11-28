@@ -15,7 +15,7 @@ translation_of: Web/CSS/CSS_Columns
 
 ## Exemple simple
 
-Dans l'exemple qui suit, on applique la propriété {{cssxref("column-count")}}  sur l'élément qui possède la classe `container`. La valeur de la propriété `column-count` est `3`, et le contenu est donc arrangé entre trois colonnes de tailles égales.
+Dans l'exemple qui suit, on applique la propriété {{cssxref("column-count")}} sur l'élément qui possède la classe `container`. La valeur de la propriété `column-count` est `3`, et le contenu est donc arrangé entre trois colonnes de tailles égales.
 
 {{EmbedGHLiveSample("css-examples/multicol/basics/column-count.html", '100%', 550)}}
 
@@ -61,9 +61,7 @@ La disposition en colonnes est fortement liée aux [média paginés](/fr/docs/We
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires         |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Multicol')}} | {{Spec2('CSS3 Multicol')}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

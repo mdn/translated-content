@@ -52,25 +52,25 @@ Cette propriété s'avère utile pour les pages qui contiennent de nombreux comp
 - `layout`
   - : Cette valeur indique qu'aucun élément en dehors de l'élément, ne peut impacter sa disposition interne et réciproquement.
 - `style`
-  - : Cette valeur indique que les propriétés ayant un effet sur un un élément et ses descendants voire plus sont bien limitées à l'élément englobant.
+  - : Cette valeur indique que les propriétés ayant un effet sur un élément et ses descendants voire plus sont bien limitées à l'élément englobant.
 - `paint`
   - : Cette valeur indique que les éléments descendants de l'élément ne sont pas affichés en dehors de ses limites. Si un élément est en dehors de l'écran ou n'est pas visible, cette valeur assure que les éléments descendants ne sont pas visibles non plus.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires         |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS Containment')}} | {{Spec2('CSS Containment')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.contain")}}
+{{Compat}}
 
 ## Voir aussi
 

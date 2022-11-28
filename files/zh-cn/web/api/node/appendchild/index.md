@@ -58,7 +58,7 @@ document.body.appendChild(p);
 
 ## 浏览器兼容性
 
-{{Compat("api.Node.appendChild")}}
+{{Compat}}
 
 ## 参见
 

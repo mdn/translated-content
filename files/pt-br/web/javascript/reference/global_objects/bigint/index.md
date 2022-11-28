@@ -1,11 +1,11 @@
 ---
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
+
 {{JSRef}}
 
-`BigInt` é um objeto nativo que fornece um modo de representar números inteiros maiores que 253, que é o maior número que o JavaScript consegue, com exatidão, representar com o tipo primitivo {{jsxref("Number")}}.
+`BigInt` é um objeto nativo que fornece um modo de representar números inteiros maiores que 2^53, que é o maior número que o JavaScript consegue, com exatidão, representar com o tipo primitivo {{jsxref("Number")}}.
 
 ## Sintaxe
 
@@ -63,7 +63,7 @@ typeof Object(1n) === 'object'; // true
 
 ### Operadores
 
-Os seguintes operadores podem ser usados com `BigInt`s (ou com `BigInt`s envolvidos em objetos): `+`, \``*`\`, \``-`\`, \``**`\`, \``%`\` .
+Os seguintes operadores podem ser usados com `BigInt`s (ou com `BigInt`s envolvidos em objetos): `+`, `*`, `-`, `**`, `%`.
 
 ```js
 const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
@@ -156,7 +156,7 @@ o === o // true
 
 ### Condicionais
 
-A `BigInt` comporta-se como {{jsxref("Global_Objects/Number", "Number")}} nos casos onde ele é convertido para um {{jsxref("Global_Objects/Boolean", "Boolean")}}: através da função {{jsxref("Global_Objects/Boolean", "Boolean")}}; quando usado com operadores lógicos {{jsxref("Operators/Logical_Operators", "Logical Operators")}} `||`, \``&&`\`, e `!`; ou dentro de um teste condicional como um {{jsxref("Statements/if...else", "if statement")}}.
+A `BigInt` comporta-se como {{jsxref("Global_Objects/Number", "Number")}} nos casos onde ele é convertido para um {{jsxref("Global_Objects/Boolean", "Boolean")}}: através da função {{jsxref("Global_Objects/Boolean", "Boolean")}}; quando usado com operadores lógicos {{jsxref("Operators/Logical_Operators", "Logical Operators")}} `||`, `&&`, e `!`; ou dentro de um teste condicional como um {{jsxref("Statements/if...else", "if statement")}}.
 
 ```js
 if (0n) {
@@ -204,7 +204,7 @@ Todas as instâncias `BigInt` são herdades de BigInt.prototype. O protótipo do
 
 ### Métodos
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/prototype', 'Methods')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/BigInt/prototype', 'Methods')}}
 
 ## Exemplos
 

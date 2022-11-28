@@ -1,18 +1,8 @@
 ---
 title: menus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - contextMenus
-  - menus
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus
 ---
+
 {{AddonSidebar}}
 
 Adicione itens ao sistema de menu do navegador.
@@ -23,7 +13,7 @@ Antes do Firefox 55, esta API foi também nomeada, originalmente, de `contextMen
 
 Para usar essa API, você precisa da [permissão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) de `menus`. Você também pode usar o alias `contextMenus` em vez de `menus`, mas se usar, a API deve ser acessada como `browser.contextMenus`.
 
-Exceto para [`menus.getTargetElement()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement), essa API não pode ser usada de scripts de conteúdo (content scripts).
+Exceto para [`menus.getTargetElement()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement), essa API não pode ser usada de scripts de conteúdo (content scripts).
 
 ## Criando itens de menu
 
@@ -46,7 +36,7 @@ Se você criou mais de um item de menu de contexto ou mais de um item de menu de
 
 ## Ícones
 
-Se você especificou ícones para sua extensão usando a [chave "icons" do manifest](/en-US/Add-ons/WebExtensions/manifest.json/icons), o item de menu exibirá o ícone especificado ao lado do rótulo. O navegador tentará escolher um ícone de 16x16 pixels para uma exibição normal ou um ícone de 32x32 pixels para uma exibição de alta densidade:
+Se você especificou ícones para sua extensão usando a [chave "icons" do manifest](/pt-BR/Add-ons/WebExtensions/manifest.json/icons), o item de menu exibirá o ícone especificado ao lado do rótulo. O navegador tentará escolher um ícone de 16x16 pixels para uma exibição normal ou um ícone de 32x32 pixels para uma exibição de alta densidade:
 
 ![](https://mdn.mozillademos.org/files/15433/menus-2.png)
 
@@ -162,19 +152,20 @@ browser.menus.create({
 
 > **Nota:** **Reconhecimentos**Esta API é baseada na API [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) do Chromium. Esta documentação é derivada do [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) do código do Chromium .
 
-<div class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
 //
-// * Redistributions of source code must retain the above copyright
+//    * Redistributions of source code must retain the above copyright
 // notice, this list of conditions and the following disclaimer.
-// * Redistributions in binary form must reproduce the above
+//    * Redistributions in binary form must reproduce the above
 // copyright notice, this list of conditions and the following disclaimer
 // in the documentation and/or other materials provided with the
 // distribution.
-// * Neither the name of Google Inc. nor the names of its
+//    * Neither the name of Google Inc. nor the names of its
 // contributors may be used to endorse or promote products derived from
 // this software without specific prior written permission.
 //
@@ -188,4 +179,5 @@ browser.menus.create({
 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</div>
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->

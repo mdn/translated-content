@@ -11,13 +11,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/return
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador/return
 ---
+
 {{JSRef}}
 
 El método **`return()`** regresa el valor dado y finaliza al generador.
 
 ## Sintaxis
 
-    gen.return(valor)
+```
+gen.return(valor)
+```
 
 ### Parámetros
 
@@ -68,10 +71,7 @@ g.return(1); // { value: 1, done: true }
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                       | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-generator.prototype.return', 'Generator.prototype.return')}} | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-generator.prototype.return', 'Generator.prototype.return')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

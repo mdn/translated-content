@@ -4,11 +4,12 @@ slug: Web/API/NamedNodeMap/getNamedItem
 l10n:
   sourceCommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
 ---
+
 {{APIRef("DOM")}}
 
 **`getNamedItem()`** は {{domxref("NamedNodeMap")}} インターフェイスのメソッドで、指定された名前に対応する {{domxref("Attr")}} を返します。対応する属性がない場合は `null` を返します。
 
-> **Note:** このメソッドは、 `[]` 演算子の構文を使用した場合にも呼び出されます。
+> **メモ:** このメソッドは、 `[]` 演算子の構文を使用した場合にも呼び出されます。
 > そのため `str` が文字列の場合、 `myMap[str]` は `myMap.getNamedItem(str)` と同じです。
 
 ## 構文

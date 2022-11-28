@@ -11,9 +11,10 @@ tags:
   - справочник
 translation_of: Web/CSS/margin-inline-start
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-Свойство **`margin-inline-start`** [CSS](/ru/docs/Web/CSS "CSS") задаёт логическое строковое (inline) значение start margin элемента, которое сопоставляется с физическим значением margin в зависимости от режима записи (writing_mode) элемента, направленности и ориентации текста. Это логическое свойство соответствует одному из свойств {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, or {{cssxref("margin-left")}} в зависимости от значений {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+Свойство **`margin-inline-start`** [CSS](/ru/docs/Web/CSS) задаёт логическое строковое (inline) значение start margin элемента, которое сопоставляется с физическим значением margin в зависимости от режима записи (writing_mode) элемента, направленности и ориентации текста. Это логическое свойство соответствует одному из свойств {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, or {{cssxref("margin-left")}} в зависимости от значений {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
 ```css
 /* <length> values */

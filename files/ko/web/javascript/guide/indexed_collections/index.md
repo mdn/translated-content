@@ -3,6 +3,7 @@ title: Indexed collections
 slug: Web/JavaScript/Guide/Indexed_collections
 translation_of: Web/JavaScript/Guide/Indexed_collections
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
 이번 장에서는 인덱스값에 의해 정렬이 되는 데이터 자료구조에 대해 소개합니다. 배열과 유사 배열 생성자인 {{jsxref("Array")}} 객체와 {{jsxref("TypedArray")}} 객체 같은 생성자들을 포함합니다.
@@ -159,7 +160,7 @@ for (var i = 0; i < colors.length; i++) {
 }
 ```
 
-배열이 아무런 요소를 포함하고 있지 않다면 반복문 조건에서 false로 평가됩니다. 배열의 요소가 [DOM](https://developer.mozilla.org/en-US/docs/DOM) node들을 포함한다면 보다 효율적인 코드 관용구를 사용할 수 있습니다.
+배열이 아무런 요소를 포함하고 있지 않다면 반복문 조건에서 false로 평가됩니다. 배열의 요소가 [DOM](/en-US/docs/DOM) node들을 포함한다면 보다 효율적인 코드 관용구를 사용할 수 있습니다.
 
 ```js
 var divs = document.getElementsByTagName('div');

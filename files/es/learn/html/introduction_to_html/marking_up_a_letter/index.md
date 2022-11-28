@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 original_slug: Learn/HTML/Introduccion_a_HTML/Marking_up_a_letter
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
 
 Todos aprendemos a escribir una carta más tarde o más temprano; es también práctico practicar con nuestras habilidades para dar forma a los textos. En esta prueba deberás demostrar tus habilidades para dar forma a textos, incluyendo enlaces, además pondremos a prueba tu familiaridad con algunos contenidos de encabezamiento `<head>` en HTML.

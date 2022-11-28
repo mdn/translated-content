@@ -4,6 +4,7 @@ slug: Web/API/Fullscreen_API
 translation_of: Web/API/Fullscreen_API
 original_slug: Web/Guide/DOM/Using_full_screen_mode
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 **Fullscreen API** 는 특정 요소{{DOMxRef("Element")}}(와 해당 자손들을)를 full-screen mode로 표시하고, 더 이상 필요하지 않으면 full-screen mode를 종료하는 메서드를 추가합니다. 이렇게 하면 사용자의 전체 화면을 사용하여, 온라인 게임과 같은 원하는 내용을 표시할 수 있습니다. full-screen mode가 종료될 때까지 화면에서 브라우저의 모든 유저 인터페이스 요소와 기타 응용 프로그램을 제거할 수 있습니다.

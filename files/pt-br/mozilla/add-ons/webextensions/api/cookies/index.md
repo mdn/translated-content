@@ -1,17 +1,17 @@
 ---
 title: cookies
 slug: Mozilla/Add-ons/WebExtensions/API/cookies
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
+
 {{AddonSidebar}}
 
 Habilita extensões a obter e atribuir cookies, e ser notificado quando eles mudam.
 
-Para usar esta API, você precisa incluir a [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "cookies" em seu arquivo [manifest.json](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json), bem como a [host permissions](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) para os sites cujos cookies você precisa acessar. Veja [cookie Permissions](/en-US/Add-ons/WebExtensions/API/cookies#Permissions).
+Para usar esta API, você precisa incluir a [API permission](/pt-BR/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "cookies" em seu arquivo [manifest.json](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json), bem como a [host permissions](/pt-BR/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) para os sites cujos cookies você precisa acessar. Veja [cookie Permissions](/pt-BR/Add-ons/WebExtensions/API/cookies#Permissions).
 
 ## Permissões
 
-Para usar esta API, uma extensão especificar a "cookies" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) em seu arquivo manifest, junto com a [host permissions](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) para qualquer site que deseja acessar os cookies. O add-on pode ler ou escrever qualquer cookie no qual poderia ser lido ou escrito pela URL correspondente nas permissões de host, por exemplo:
+Para usar esta API, uma extensão especificar a "cookies" [API permission](/pt-BR/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) em seu arquivo manifest, junto com a [host permissions](/pt-BR/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) para qualquer site que deseja acessar os cookies. O add-on pode ler ou escrever qualquer cookie no qual poderia ser lido ou escrito pela URL correspondente nas permissões de host, por exemplo:
 
 - `http://*.example.com/`
 
@@ -54,7 +54,7 @@ Cookies de terceiros são aquleles enviados por sites em que você está num dad
 
 Quando um isolamento de primeira parte está ativo, cookies são ainda qualificados pelo domínio da página original visitada pelo usuário (essencialmente, o domínio exibe o usuário na barra da URL, também conhecido como "domínio de primeira parte). Isto significa que não é possivel para um rastreador correlacionar o cookie da [bbc.com](http://bbc.com) com o cookie da [cnn.com](http://cnn.com), então o rastreador não pode monitorar um simples usuários através de ambos os sites.
 
-Isolamento de primera parte pode ser habilitado diretamente pelo usuário ajustando a configuração do navegador , e pode ser atribuia do extensões usando a configuração [`firstPartyIsolate`](/en-US/Add-ons/WebExtensions/API/privacy/websites#Properties) atribuida a API [`privacy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy). Observe que este isolamento de primeira parte está habilitado por padrão no navegador [Tor](https://www.torproject.org/).
+Isolamento de primera parte pode ser habilitado diretamente pelo usuário ajustando a configuração do navegador , e pode ser atribuia do extensões usando a configuração [`firstPartyIsolate`](/pt-BR/Add-ons/WebExtensions/API/privacy/websites#Properties) atribuida a API [`privacy`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/privacy). Observe que este isolamento de primeira parte está habilitado por padrão no navegador [Tor](https://www.torproject.org/).
 
 Na API `cookies`, o domínio de primeira parte é representado usando o atributo `firstPartyDomain`. Todos os cookies atribuidos enquanto o isolamento de primeira parte está habilitado terá este atributo atribuito para o domínio da página original. No exemplo acima, deveria ser "[bbc.com](http://bbc.com)" para um cookie e "[cnn.com](http://cnn.com)" para outro. Todos os cookies atribuidos pelos websites enquanto o isolamento de primeira parte estiver desabilitado terão sua propriedade atribuida a uma string vazia.
 
@@ -99,19 +99,20 @@ Quando o isolamento de primeira parte está desabilitado, o parâmetro `firstPar
 
 > **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.cookies`](https://developer.chrome.com/extensions/cookies) do Chromium. Esta documentação é derivada do [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) no código do Chromium.
 
-<div class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
 //
-// * Redistributions of source code must retain the above copyright
+//    * Redistributions of source code must retain the above copyright
 // notice, this list of conditions and the following disclaimer.
-// * Redistributions in binary form must reproduce the above
+//    * Redistributions in binary form must reproduce the above
 // copyright notice, this list of conditions and the following disclaimer
 // in the documentation and/or other materials provided with the
 // distribution.
-// * Neither the name of Google Inc. nor the names of its
+//    * Neither the name of Google Inc. nor the names of its
 // contributors may be used to endorse or promote products derived from
 // this software without specific prior written permission.
 //
@@ -125,4 +126,5 @@ Quando o isolamento de primeira parte está desabilitado, o parâmetro `firstPar
 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</div>
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->

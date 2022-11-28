@@ -1,15 +1,8 @@
 ---
 title: Expressões e operadores
 slug: Web/JavaScript/Guide/Expressions_and_Operators
-tags:
-  - Expressões
-  - Guia(2)
-  - Guía
-  - Iniciante
-  - JavaScript
-  - Operadores
-translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 
 Este artigo descreve expressões e operadores de JavaScript, incluindo operadores de atribuição, comparação, aritméticos, bit a bit, lógicos, de strings e especiais.
@@ -75,7 +68,7 @@ Os outros operadores de atribuição são encurtamentos de operadores padrão, c
 
 ### Operadores de comparação
 
-This seems to me kind of poorly explained, mostly the difference betwen "==" and "==="... Um operador de comparação compara seus operandos e retorna um valor lógico baseado em se a comparação é verdadeira. Os operandos podem ser numéricos, strings, lógicos ou objetos. Strings são comparadas com base em ordenação lexográfica utilizando valores Unicode. Na maioria dos casos, se dois operandos não são do mesmo tipo, o JavaScript tenta convertê-los para um tipo apropriado. Isto geralmente resulta na realização de uma comparação numérica. As únicas exceções a esta regra são os operadores `===` e o `!==`, que realizam comparações de igualdade e desigualdade "estritas". Estes operadores não tentam converter os operandos em tipos compatíveis antes de verificar a igualdade. A tabela a seguir descreve os operadores de comparação levando em conta o seguinte código:
+Um operador de comparação compara seus operandos e retorna um valor lógico baseado em se a comparação é verdadeira. Os operandos podem ser numéricos, strings, lógicos ou objetos. Strings são comparadas com base em ordenação lexográfica utilizando valores Unicode. Na maioria dos casos, se dois operandos não são do mesmo tipo, o JavaScript tenta convertê-los para um tipo apropriado. Isto geralmente resulta na realização de uma comparação numérica. As únicas exceções a esta regra são os operadores `===` e o `!==`, que realizam comparações de igualdade e desigualdade "estritas". Estes operadores não tentam converter os operandos em tipos compatíveis antes de verificar a igualdade. A tabela a seguir descreve os operadores de comparação levando em conta o seguinte código:
 
 ```js
 var var1 = 3;
@@ -84,7 +77,7 @@ var var2 = 4;
 
 | Operador                       | Descrição                                                                                                                                                                                                                   | Exemplos que retornam verdadeiro     |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| Igual (`==`)                   | Retorna verdadeiro caso os operandos sejam iguais.                                                                                                                                                                          | ` 3 == var1``"3" == var1``3 == '3' ` |
+| Igual (`==`)                   | Retorna verdadeiro caso os operandos sejam iguais.                                                                                                                                                                          | `3 == var1` `"3" == var1` `3 == '3'` |
 | Não igual (`!=`)               | Retorna verdadeiro caso os operandos não sejam iguais.                                                                                                                                                                      | `var1 != 4 var2 != "3"`              |
 | Estritamente igual (`===`)     | Retorna verdadeiro caso os operandos sejam iguais e do mesmo tipo. Veja também [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is) e [igualdade em JS](/pt-BR/docs/Web/JavaScript/Guide/Sameness). | `3 === var1`                         |
 | Estritamente não igual (`!==`) | Retorna verdadeiro caso os operandos não sejam iguais e/ou não sejam do mesmo tipo.                                                                                                                                         | `var1 !== "3" 3 !== '3'`             |
@@ -147,13 +140,13 @@ Depois:            10100000000000000110000000000001
 
 Por exemplo, a representação binária de nove é 1001 e a representação binária de quinze é 1111. Desta forma, quando operadores bit a bit são aplicados a estes valores, os resultados são como se segue:
 
-| Expressão | Resultado | Descrição binária                                                |
-| --------- | --------- | ---------------------------------------------------------------- |
-| `15 & 9`  | `9`       | `1111 & 1001 = 1001`                                             |
-| `15 \| 9` | `15`      | `1111 \| 1001 = 1111`                                            |
-| `15 ^ 9`  | `6`       | `1111 ^ 1001 = 0110`                                             |
-| `~15`     | `-16`     | ` ~``00000000...``00001111 = ``1111``1111``...``11110000 `       |
-| `~9`      | `-10`     | ` ~``00000000``...``0000``1001 = ``1111``1111``...``1111``0110 ` |
+| Expressão | Resultado | Descrição binária                                 |
+| --------- | --------- | ------------------------------------------------- |
+| `15 & 9`  | `9`       | `1111 & 1001 = 1001`                              |
+| `15 \| 9` | `15`      | `1111 \| 1001 = 1111`                             |
+| `15 ^ 9`  | `6`       | `1111 ^ 1001 = 0110`                              |
+| `~15`     | `-16`     | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
+| `~9`      | `-10`     | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
 > **Nota:** No quadro acima perceba que todos os 32 bits são invertidos quando usa-se o operador bit a bit NOT, e que os bits mais significativos (extrema esquerda) são definidos com 1 que representam valores negativos (representação complemento de dois).
 

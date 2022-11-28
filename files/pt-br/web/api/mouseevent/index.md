@@ -1,16 +1,8 @@
 ---
 title: MouseEvent
 slug: Web/API/MouseEvent
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Interface
-  - Precisa de Tradução
-  - Referencia
-  - TopicStub
-translation_of: Web/API/MouseEvent
 ---
+
 A interface **`MouseEvent`** representa eventos que ocorrem devido à interação do usuário com um dispositivo apontador (como um mouse). Eventos comuns usando esta interface incluem [`click`](/pt-BR/docs/Web/API/Element/click_event), [`dblclick`](/pt-BR/docs/Web/API/Element/dblclick_event), [`mouseup`](/pt-BR/docs/Web/API/Element/mouseup_event), [`mousedown`](/pt-BR/docs/Web/API/Element/mousedown_event).
 
 **`MouseEvent`** deriva de [`UIEvent`](/pt-BR/docs/Web/API/UIEvent), que por sua vez deriva de [`Event`](/pt-BR/docs/Web/API/Event). Embora o método [`MouseEvent.initMouseEvent()`](/pt-BR/docs/Web/API/MouseEvent/initMouseEvent) seja mantido para compatibilidade com versões anteriores, a criação de um objeto **`MouseEvent`** deve ser feita usando o construtor `MouseEvent()`.
@@ -30,11 +22,11 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
 
 - **[`MouseEvent.altKey`](/pt-BR/docs/Web/API/MouseEvent/altKey)** Read only
 
-  - : Retorna `true`se a tecla&#x20;
+  - : Retorna `true`se a tecla
 
     <kbd>alt</kbd>
 
-    &#x20;estava pressionada quando o evento do mouse foi disparado.
+    estava pressionada quando o evento do mouse foi disparado.
 
 - [`MouseEvent.button`](/pt-BR/docs/Web/API/MouseEvent/altKey) Read only
   - : O número do botão que foi pressionado (se aplicável) quando o evento do mouse foi disparado.
@@ -46,19 +38,19 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
   - : A coordenada Y do ponteiro do mouse em coordenadas locais (conteúdo **DOM**).
 - [`MouseEvent.ctrlKey`](/pt-BR/docs/Web/API/MouseEvent/ctrlKey) Read only
 
-  - : Retorna `true` se a tecla&#x20;
+  - : Retorna `true` se a tecla
 
     <kbd>control</kbd>
 
-    &#x20;estava pressionada quando o evento do mouse foi disparado.
+    estava pressionada quando o evento do mouse foi disparado.
 
 - [`MouseEvent.metaKey`](/pt-BR/docs/Web/API/MouseEvent/metaKey) Read only
 
-  - : Retorna `true` se a tecla&#x20;
+  - : Retorna `true` se a tecla
 
     <kbd>meta</kbd>
 
-    &#x20;estava pressionada quando o evento do mouse foi disparado.
+    estava pressionada quando o evento do mouse foi disparado.
 
 - [MouseEvent.movementX](/pt-BR/docs/Web/API/MouseEvent/movementX)Read only
   - : A coordenada X do ponteiro do mouse em relação à posição do último evento [`mousemove`](/pt-BR/docs/Web/API/Element/mousemove_event) .
@@ -82,11 +74,11 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
   - : A coordenada Y do ponteiro do mouse em coordenadas globais (tela).
 - [MouseEvent.shiftKey](/pt-BR/docs/Web/API/MouseEvent/shiftKey) Read only
 
-  - : Retorna `true` se a tecla&#x20;
+  - : Retorna `true` se a tecla
 
     <kbd>shift</kbd>
 
-    &#x20;estava pressionada quando o evento do mouse foi disparado.
+    estava pressionada quando o evento do mouse foi disparado.
 
 - [MouseEvent.which](/pt-BR/docs/Web/API/MouseEvent/which) Read only
   - : O botão sendo pressionado quando o evento do mouse foi disparado.
@@ -112,7 +104,7 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
 
 ## Método
 
-_Essa interface também herda métodos de seus pais\_\_, [`UIEvent`](/pt-BR/docs/Web/API/UIEvent) e [`Event`](/pt-BR/docs/Web/API/Event)._
+_Essa interface também herda métodos de seus pais, [`UIEvent`](/pt-BR/docs/Web/API/UIEvent) e [`Event`](/pt-BR/docs/Web/API/Event)._
 
 - [`MouseEvent.getModifierState()`](/pt-BR/docs/Web/API/MouseEvent/getModifierState)
   - : Retorna o estado tual da tecla modificadora especificada. Consulte [`KeyboardEvent.getModifierState`](/pt-BR/docs/Web/API/KeyboardEvent/getModifierState)[`()`](/pt-BR/docs/Web/API/KeyboardEvent/getModifierState) para obter detalhes.
@@ -157,9 +149,9 @@ Clique no botão para ver como funciona a amostra:
 | Specification                                                                                                    | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('CSSOM View','#extensions-to-the-mouseevent-interface', 'MouseEvent')}}     | Rascunho de trabalho             | Redefine **`MouseEvent`** de longo para duplo. Isto significa que um **`PointerEvent`** cuja **`pointerType`** é rato será uma de casal.                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| {{SpecName("HTML WHATWG", "#dom-mouseevent-region", "MouseEvent.region")}}             | {{Spec2('HTML WHATWG')}} | Do [Document Object Model (DOM) Nível 3 Events Specification](https://translate.googleusercontent.com/translate_c?depth=1&pto=aue&rurl=translate.google.com&sl=en&sp=nmt4&tl=pt&u=https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/&usg=ALkJrhgcVK660U2yEqol1korxl7KhBCvmA) , adicionado propriedades `movementX` e `movementY`.                                                                                                                                                                                       |
+| {{SpecName("HTML WHATWG", "#dom-mouseevent-region", "MouseEvent.region")}}             | {{Spec2('HTML WHATWG')}} | Do [Document Object Model (DOM) Nível 3 Events Specification](https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/) , adicionado propriedades `movementX` e `movementY`.                                                                                                                                                                                       |
 | {{SpecName('Pointer Lock','#extensions-to-the-mouseevent-interface','MouseEvent')}} | {{Spec2('Pointer Lock')}} |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| {{SpecName('CSSOM View', '#extensions-to-the-mouseevent-interface', 'MouseEvent')}} | {{Spec2('CSSOM View')}} | A partir [do documento de modelo de objeto (DOM) Nível 3 Especificação de eventos](https://translate.googleusercontent.com/translate_c?depth=1&pto=aue&rurl=translate.google.com&sl=en&sp=nmt4&tl=pt&u=https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/&usg=ALkJrhgcVK660U2yEqol1korxl7KhBCvmA) , adicionados **`offsetX`** e **`offsetY`**, **`pageX`** e **`pageY`**, **`x`**, e **`y`** propriedades. Propriedades redefinidas de tela, página, cliente e coordenadas (x e y) a partir **`double`** de **`long`**. |
+| {{SpecName('CSSOM View', '#extensions-to-the-mouseevent-interface', 'MouseEvent')}} | {{Spec2('CSSOM View')}} | A partir [do documento de modelo de objeto (DOM) Nível 3 Especificação de eventos](https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/) , adicionados **`offsetX`** e **`offsetY`**, **`pageX`** e **`pageY`**, **`x`**, e **`y`** propriedades. Propriedades redefinidas de tela, página, cliente e coordenadas (x e y) a partir **`double`** de **`long`**. |
 | {{SpecName('DOM3 Events','#events-mouseevents','MouseEvent')}}                             | {{Spec2('DOM3 Events')}} | Em Document Object Model (DOM) Nível 2, especificação de eventos, adicionado ao construtor **`MouseEvent ()`**, o método **`getModifierState()`** e a propriedade de **`buttons`**.                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | {{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent')}}                                 | {{Spec2('DOM2 Events')}} | Definição inicial.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 

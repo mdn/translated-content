@@ -1,20 +1,8 @@
 ---
 title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
-tags:
-  - API
-  - Draft
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerContainer
-  - TopicStub
-  - Workers
-translation_of: Web/API/ServiceWorkerContainer
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 O `ServiceWorkerContainer` é a interface de [ServiceWorker API](/pt-BR/docs/Web/API/ServiceWorker_API) provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations.
@@ -25,9 +13,6 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 
 - {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
   - : Returns a {{domxref("ServiceWorker")}} object if its state is `activated` (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns `null` during a force-refresh request (_Shift_ + refresh) or if there is no active worker.
-
-<!---->
-
 - {{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}
   - : Provides a way of delaying code execution until a service worker is active. It returns a {{jsxref("Promise")}} that will never reject, and which waits indefinitely until the {{domxref("ServiceWorkerRegistration")}} associated with the current page has an {{domxref("ServiceWorkerRegistration.active")}} worker. Once that condition is met, it resolves with the {{domxref("ServiceWorkerRegistration")}}.
 
@@ -61,7 +46,7 @@ if ('serviceWorker' in navigator) {
     console.log('Service worker registration succeeded:', registration);
 
     // At this point, you can optionally do something
-    // with registration. See https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration
+    // with registration. See https://developer.mozilla.org/pt-BR/docs/Web/API/ServiceWorkerRegistration
   }).catch(function(error) {
     console.log('Service worker registration failed:', error);
   });

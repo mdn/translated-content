@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 04e75ce1f83a591a576f52b143f195133bfcbe96
 ---
 
-**移譲可能オブジェクト** は、あるコンテキストから別のコンテキストへ _移譲_することができるリソースを自分自身で所有するオブジェクトで、そのリソースが一度に1つのコンテキストでのみ利用できることを保証するものです。
+**移譲可能オブジェクト** は、あるコンテキストから別のコンテキストへ _移譲_ することができるリソースを自分自身で所有するオブジェクトで、そのリソースが一度に1つのコンテキストでのみ利用できることを保証するものです。
 移譲が終わると、元のオブジェクトはもう使えません。移譲されたリソースをもう指しておらず、オブジェクトの読み書きをしようとすると例外が発生します。
 
 移譲可能なオブジェクトは一般的に、一度に単一のJavaScriptスレッドにしか安全に公開されないリソースを共有するために使用されます。
@@ -39,7 +39,7 @@ worker.postMessage(uInt8Array, [uInt8Array.buffer]);
 console.log(uInt8Array.byteLength); // 0
 ```
 
-> **Note:** [型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) {{jsxref("Int32Array")}} や {{jsxref("Uint8Array")}} は{{Glossary("serializable object", "シリアライズ可能")}}ですが、転送は行えません。
+> **メモ:** [型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) {{jsxref("Int32Array")}} や {{jsxref("Uint8Array")}} は{{Glossary("serializable object", "シリアライズ可能")}}ですが、転送は行えません。
 > しかし、その下にあるバッファーは {{jsxref("ArrayBuffer")}} であり、これは移譲可能なオブジェクトです。
 > data 引数に `uInt8Array.buffer` を設定しても、転送配列に `uInt8Array` を保有しなくても、送ることができます。
 
@@ -86,7 +86,7 @@ console.log(original.byteLength); // 0
 ブラウザーの対応は、それぞれのオブジェクトの互換性情報の `transferable` サブ機能で示す必要があります（例として [`RTCDataChannel`](/ja/docs/Web/API/RTCDataChannel#ブラウザーの互換性) を参照してください）。
 この記事を書いている時点では、すべての移譲可能なオブジェクトがこの情報に更新されているわけではありません。
 
-> **Note:** 移譲可能なオブジェクトは [Web IDL ファイル](https://github.com/w3c/webref/tree/main/ed/idl) の中で `[Transferable]` という属性でマークアップされます。
+> **メモ:** 移譲可能なオブジェクトは [Web IDL ファイル](https://github.com/w3c/webref/tree/main/ed/idl) の中で `[Transferable]` という属性でマークアップされます。
 
 ## 関連情報
 

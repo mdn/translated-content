@@ -1,11 +1,8 @@
 ---
 title: Instruções e declarações
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Statements
 ---
+
 {{jsSidebar("Instruções")}}
 
 Aplicações em JavaScript são realizadas através de instruções com uma sintaxe apropriada. Uma única instrução pode abranger multiplas linhas. Multiplas instruções podem estar contidas em uma única linha se cada instrução estiver separada por ponto e vírgula ( ; ).
@@ -78,9 +75,6 @@ Para visualizar em ordem alfabética use a barra de rolagem à esquerda.
   - : Usado para importar funções exportadas de um módulo externo, outro script.
 - {{jsxref("Statements/label", "label")}}
   - : Fornece uma instrução com um identificador que pode ser referido usando `break` ou `continue` instruções.
-
-<!---->
-
 - {{deprecated_inline}} {{jsxref("Statements/with", "with")}}
   - : Extende o alcance de uma instrução.
 

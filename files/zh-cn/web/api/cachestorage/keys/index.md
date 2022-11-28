@@ -25,7 +25,7 @@ caches.keys().then(function(keyList) {
 
 ## 示例
 
-在此代码片段中，我们监听{{domxref("ServiceWorkerGlobalScope.onactivate", "activate")}} 事件，然后运行一个 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} 方法，该方法在新的 service worker 被激活之前清除老的、无用的 cache。 这里我们设置一个包含缓存名称的白名单。 通过使用 `keys() 方法` 来返回{{domxref("CacheStorage")}} 对象中的 keys 集合，然后检查缓存 key 是否在白名单中，如果不存在，则使用 {{domxref("CacheStorage.delete")}} 方法来删除该缓存。
+在此代码片段中，我们监听{{domxref("ServiceWorkerGlobalScope.onactivate", "activate")}} 事件，然后运行一个 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} 方法，该方法在新的 service worker 被激活之前清除老的、无用的 cache。这里我们设置一个包含缓存名称的白名单。通过使用 `keys()` 方法来返回 {{domxref("CacheStorage")}} 对象中的 keys 集合，然后检查缓存 key 是否在白名单中，如果不存在，则使用 {{domxref("CacheStorage.delete")}} 方法来删除该缓存。
 
 ```js
 this.addEventListener('activate', function(event) {

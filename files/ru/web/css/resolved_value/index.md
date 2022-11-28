@@ -5,6 +5,7 @@ tags:
   - CSS
 translation_of: Web/CSS/resolved_value
 ---
+
 {{cssref}}
 
 **Решённое значение** CSS-свойства - значение, возвращаемое {{domxref("Window.getComputedStyle", "getComputedStyle()")}}. Для многих свойств, это {{cssxref("computed_value", "вычисленное значение") }}, но для старых свойств (включая {{cssxref("width")}} и {{cssxref("height")}}), это {{cssxref("used_value", "используемое значение")}}. Смотрите ссылку спецификации ниже для дополнительной информации.

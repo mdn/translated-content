@@ -1,14 +1,14 @@
 ---
 title: click
 slug: Web/API/Element/click_event
-translation_of: Web/API/Element/click_event
 ---
+
 O evento `click` event é disparado quando o botão de um dispositivo apontador (normalmente o botão de um mouse) é pressionado e solto logo em seguida em um mesmo elemento.
 
 ## Informações gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-click)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-click)
 - Interface
   - : {{domxref("MouseEvent")}}
 - Bubbles
@@ -25,7 +25,7 @@ O evento `click` event é disparado quando o botão de um dispositivo apontador 
 | Property                                 | Type                                                                                                                                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}        | [`EventTarget`](/pt-BR/docs/Web/API/EventTarget)  | O alvo do evento (o mais alto na arvore de DOM).                                                                                                                                                                                                                                                                                                                                                                        |
-| `type` {{readonlyInline}}          | [`DOMString`](/en-US/docs/Web/API/DOMString) | Tipo do evento.                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `type` {{readonlyInline}}          | [`DOMString`](/pt-BR/docs/Web/API/DOMString) | Tipo do evento.                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `bubbles` {{readonlyInline}}       | [`Boolean`](/pt-BR/docs/Web/API/Boolean)                                                         | Se o evento "bubbles" naturalmente ou não.                                                                                                                                                                                                                                                                                                                                                                              |
 | `cancelable` {{readonlyInline}}    | [`Boolean`](/pt-BR/docs/Web/API/Boolean)                                                         | Se o evento é cancelável ou não                                                                                                                                                                                                                                                                                                                                                                                         |
 | `view` {{readonlyInline}}          | [`WindowProxy`](/pt-BR/docs/Web/API/WindowProxy)                         | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView) (`window` do documento)                                                                                                                                                                                                      |

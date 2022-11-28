@@ -52,7 +52,7 @@ iterator.next();               // Object { value: undefined, done: true }
 iteraror.next().value;         // undefined
 ```
 
-> **Warning:** 一度だけの使用: 配列イテレーターオブジェクトは一度だけの使用または一時オブジェクトです
+> **警告:** 一度だけの使用: 配列イテレーターオブジェクトは一度だけの使用または一時オブジェクトです
 
 例:
 
@@ -80,17 +80,15 @@ arr[1]='n';
 iterator.next().value;        //  "n"
 ```
 
-> **Note:** 配列内の値が変化した場合は、配列の反復子オブジェクトの値も変化します。
+> **メモ:** 配列内の値が変化した場合は、配列の反復子オブジェクトの値も変化します。
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-array.prototype.values', 'Array.prototype.values')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Array.values")}}
+{{Compat}}
 
 ## 関連情報
 

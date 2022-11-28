@@ -5,7 +5,7 @@ slug: Web/API/Element/after
 
 {{APIRef("DOM")}}
 
-**`Element.after()` **方法会在其父节点的子节点列表中插入一些 {{domxref("Node")}} 或 {{domxref("DOMString")}} 对象。插入位置为该节点之后。{{domxref("DOMString")}} 对象会被以 {{domxref("Text")}} 的形式插入。
+**`Element.after()`** 方法会在其父节点的子节点列表中插入一些 {{domxref("Node")}} 或 {{domxref("DOMString")}} 对象。插入位置为该节点之后。{{domxref("DOMString")}} 对象会被以 {{domxref("Text")}} 的形式插入。
 
 ## 语法
 

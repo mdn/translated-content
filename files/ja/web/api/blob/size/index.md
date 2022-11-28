@@ -2,6 +2,7 @@
 title: Blob.size
 slug: Web/API/Blob/size
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}} インターフェイスの **`size`** プロパティは、{{domxref("Blob")}} または {{domxref("File")}} のサイズをバイト単位で返します。
@@ -45,4 +46,4 @@ for (var i = 0; i < files.length; i++) {
 ## あわせて参照
 
 - {{domxref("Blob")}}
-- [Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+- [Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)

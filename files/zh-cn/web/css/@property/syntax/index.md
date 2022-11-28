@@ -23,7 +23,7 @@ syntax: '*'; /* 任何有效字符 */
 
 ## 取值
 
-规范定义的、受语法支持的字符串。支持的语法是[CSS types](/zh-CN/docs/Web/CSS/CSS_Types)的子集。 这些可以单独使用，一些类型也可以结合使用。
+规范定义的、受语法支持的字符串。支持的语法是[CSS types](/zh-CN/docs/Web/CSS/CSS_Types)的子集。这些可以单独使用，一些类型也可以结合使用。
 
 - `"<length>"`
   - : 任何有效的 {{cssxref("&lt;length&gt;")}} 值。

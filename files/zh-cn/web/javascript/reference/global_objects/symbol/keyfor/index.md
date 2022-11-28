@@ -18,7 +18,7 @@ Symbol.keyFor(sym);
 ### 参数
 
 - sym
-  - : 必选参数，需要查找键值的某个 Symbol 。
+  - : 必选参数，需要查找键值的某个 Symbol。
 
 ### 返回值
 

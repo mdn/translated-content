@@ -3,6 +3,7 @@ title: 'HTML: 접근성을 위한 기초'
 slug: Learn/Accessibility/HTML
 original_slug: Learn/접근성/HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 HTML 요소가 늘 올바른 목적을 가지고 쓰이는지 확인하는 것만으로도, 수많은 웹 콘텐츠는 접근성이 향상됩니다. 이 문서에는 접근성을 최대한으로 보장하기 위해 HTML을 어떻게 사용해야 하는지 자세히 설명합니다.
@@ -346,7 +347,7 @@ document.onkeydown = function(e) {
 };
 ```
 
-Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [`keyCode`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode) property; if it is the keycode that matches Return/Enter, we run the function stored in the button's `onclick` handler using `document.activeElement.click()`. [`activeElement`](https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement) gives us the element that is currently focused on the page.
+Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [`keyCode`](/en-US/docs/Web/API/KeyboardEvent/keyCode) property; if it is the keycode that matches Return/Enter, we run the function stored in the button's `onclick` handler using `document.activeElement.click()`. [`activeElement`](/en-US/docs/Web/API/Document/activeElement) gives us the element that is currently focused on the page.
 
 This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. **Better to just use the right element for the right job in the first place.**
 

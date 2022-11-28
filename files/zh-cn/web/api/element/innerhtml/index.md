@@ -7,7 +7,7 @@ slug: Web/API/Element/innerHTML
 
 **`Element.innerHTML`** 属性设置或获取 HTML 语法表示的元素的后代。
 
-> **备注：** 如果一个 {{HTMLElement("div")}}, {{HTMLElement("span")}}, 或 {{HTMLElement("noembed")}} 节点有一个文本子节点，该节点包含字符 `(&),` `(<),` 或`(>)`, `innerHTML` 将这些字符分别返回为\&amp;, \&lt; 和 \&gt; 。使用{{domxref("Node.textContent")}} 可获取一个这些文本节点内容的正确副本。
+> **备注：** 如果一个 {{HTMLElement("div")}}, {{HTMLElement("span")}}, 或 {{HTMLElement("noembed")}} 节点有一个文本子节点，该节点包含字符 `(&)`, `(<)`, 或 `(>)`, `innerHTML` 将这些字符分别返回为 \&amp;, \&lt; 和 \&gt;。使用{{domxref("Node.textContent")}} 可获取一个这些文本节点内容的正确副本。
 
 如果要向一个元素中插入一段 HTML，而不是替换它的内容，那么请使用 {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}} 方法。
 
@@ -122,7 +122,7 @@ log("Logging mouse events inside this container...");
 
 log() 函数通过 {{jsxref("Date")}} 对象的 {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}} 方法获取当前时间，然后将消息文本和时间戳放一起构建一个字符串，最后将其追加到具有“log”类的框上。
 
-现在添加第二个方法：记录基于事件 (比如 {{event("mousedown")}}, {{event("click")}}, 和 {{event("mouseenter")}}) 的 {{domxref("MouseEvent")}} 的信息。
+现在添加第二个方法：记录基于事件 (比如 [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event), [`click`](/zh-CN/docs/Web/API/Element/click_event), 和 [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event)) 的 {{domxref("MouseEvent")}} 的信息。
 
 ```js
 function logEvent(event) {

@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.connectionState
 slug: Web/API/RTCPeerConnection/connectionState
-translation_of: Web/API/RTCPeerConnection/connectionState
 ---
+
 {{APIRef("WebRTC")}}
 
 A propriedade **`connectionState`** do tipo somente leitura da interface {{domxref("RTCPeerConnection")}} indica o estado atual da conexão em par, devolvendo um valor em string específicado por um enum {{domxref("RTCPeerConnection")}}.
@@ -19,7 +19,7 @@ var connectionState = RTCPeerConnection.connectionState;
 
 O estado atual da conexão, como um valor do enum [`RTCPeerConnectionState`](#RTCPeerConnectionState_enum).
 
-{{page("/en-US/docs/Web/API/RTCPeerConnection", "RTCPeerConnectionState enum", 0, 1)}}
+{{page("/pt-BR/docs/Web/API/RTCPeerConnection", "RTCPeerConnectionState enum", 0, 1)}}
 
 ## Example
 

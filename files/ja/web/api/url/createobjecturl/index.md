@@ -9,7 +9,7 @@ slug: Web/API/URL/createObjectURL
 
 {{AvailableInWorkers}}
 
-> **Note:** **メモ:** この機能はメモリリークを生み出す可能性があるため、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)内で利用することは*できません*。
+> **メモ:** この機能はメモリリークを生み出す可能性があるため、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)内で利用することは*できません*。
 
 ## 構文
 
@@ -28,7 +28,7 @@ objectURL = URL.createObjectURL(object);
 
 ## 例
 
-[オブジェクト URL で画像を表示](/ja/docs/Web/API/File/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)を参照してください。
+[オブジェクト URL で画像を表示](/ja/docs/Web/API/File_API/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)を参照してください。
 
 ## 使用上のメモ
 
@@ -42,7 +42,7 @@ objectURL = URL.createObjectURL(object);
 
 古いバージョンの Media Source 仕様書では、 {{HTMLElement("video")}} 要素にストリームを添付するには {{domxref("MediaStream")}} にオブジェクト URL を生成する必要があるとしてます。 これはもう必要なく、ブラウザーはこのようにする対応を削除してきています。
 
-> **Warning:** **重要:** もし {{domxref("URL.createObjectURL", "createObjectURL()")}} でメディア要素にストリームを割り当てるコードが残っているのであれば、単純に {{domxref("HTMLMediaElement.srcObject", "srcObject")}} を直接 `MediaStream` に設定するよう更新する必要があります。
+> **警告:** もし {{domxref("URL.createObjectURL", "createObjectURL()")}} でメディア要素にストリームを割り当てるコードが残っているのであれば、単純に {{domxref("HTMLMediaElement.srcObject", "srcObject")}} を直接 `MediaStream` に設定するよう更新する必要があります。
 
 ## 仕様書
 
@@ -57,8 +57,8 @@ objectURL = URL.createObjectURL(object);
 
 ## 関連情報
 
-- [Web アプリケーションからファイルを扱う](/ja/docs/Web/API/File/Using_files_from_web_applications)
-- [オブジェクト URL で画像を表示](/ja/docs/Web/API/File/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
+- [オブジェクト URL で画像を表示](/ja/docs/Web/API/File_API/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)
 - {{domxref("URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
 - {{domxref("FileReader.readAsDataURL()")}}

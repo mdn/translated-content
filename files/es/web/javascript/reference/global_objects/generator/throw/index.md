@@ -4,13 +4,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador/throw
 ---
+
 {{JSRef}}
 
 El método **`throw()`** reanuda la ejecución de un generador al lanzar un error en éste y regresar un objeto con las dos propiedades `done` y `value`.
 
 ## Sintaxis
 
-    gen.throw(excepción)
+```
+gen.throw(excepción)
+```
 
 ### Parámetros
 
@@ -53,12 +56,9 @@ g.throw(new Error('Something went wrong'));
 // { value: 42, done: false }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                        | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}}     | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

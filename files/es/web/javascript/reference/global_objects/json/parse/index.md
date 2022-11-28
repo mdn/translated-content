@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 original_slug: Web/JavaScript/Referencia/Objetos_globales/JSON/parse
 ---
+
 {{JSRef("Global_Objects", "JSON")}}
 
 ## Resumen
@@ -18,7 +19,9 @@ El método **`JSON.parse()`** analiza una cadena de texto como JSON, transforman
 
 ## Sintaxis
 
-    JSON.parse(text[, reviver])
+```
+JSON.parse(text[, reviver])
+```
 
 ### Parámetros
 
@@ -83,11 +86,7 @@ JSON.parse('{"foo" : 1, }');
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                       | Comentario                                          |
-| ---------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.12.2', 'JSON.parse')}}         | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.7. |
-| {{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}}         | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-json.parse', 'JSON.parse')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

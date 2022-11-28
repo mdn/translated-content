@@ -2,6 +2,7 @@
 title: 목록 스타일링
 slug: Learn/CSS/Styling_text/Styling_lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
 [목록](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) 은 대부분 다른 텍스트처럼 작동하지만, 알아야 할 목록과 관련된 몇 가지 CSS 속성과 고려해야 할 모범 사례가 있습니다. 이 기사는 모든 것을 설명합니다.
@@ -132,8 +133,6 @@ dd {
 - Rules 2 and 3 set relative font sizes for the headings, different list types (the children of the list elements inherit these), and paragraphs. This means that each paragraph and list will have the same font size and top and bottom spacing, helping to keep the vertical rhythm consistent.
 - Rule 4 sets the same {{cssxref("line-height")}} on the paragraphs and list items — so the paragraphs and each individual list item will have the same spacing between lines. This will also help to keep the vertical rhythm consistent.
 - Rules 5 and 6 apply to the description list — we set the same `line-height` on the description list terms and descriptions as we did with the paragraphs and list items. Again, consistency is good! We also make the description terms have bold font, so they visually stand out easier.
-
-  <span id="cke_bm_126E" class="hidden"></span>
 
 ## List-specific styles
 

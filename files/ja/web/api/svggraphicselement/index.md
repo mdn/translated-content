@@ -9,7 +9,7 @@ slug: Web/API/SVGGraphicsElement
 
 {{InheritanceDiagram(600, 120)}}
 
-> **Note:** **メモ:** このインターフェイスは SVG 2 で導入され、 SVG 1.1 で導入された {{domxref("SVGLocatable")}} および {{domxref("SVGTransformable")}} インターフェイスを置き換えています。
+> **メモ:** このインターフェイスは SVG 2 で導入され、 SVG 1.1 で導入された {{domxref("SVGLocatable")}} および {{domxref("SVGTransformable")}} インターフェイスを置き換えています。
 
 ## プロパティ
 

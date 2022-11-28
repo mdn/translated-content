@@ -34,7 +34,7 @@ text-emphasis-position: unset;
 
 ## Position privilégiée
 
-La position des marques d'emphase varie en fonction du langage. Par exemple, en japonais, on préfère les placer au dessus à droite. En revanche, pour le chinois, on préfèrera en bas à droite. Le tableau qui suit illustre les différences, notamment entre le chinois, le mongolien et le japonais  :
+La position des marques d'emphase varie en fonction du langage. Par exemple, en japonais, on préfère les placer au dessus à droite. En revanche, pour le chinois, on préfèrera en bas à droite. Le tableau qui suit illustre les différences, notamment entre le chinois, le mongolien et le japonais :
 
 <table>
   <caption>
@@ -104,9 +104,13 @@ La position des marques d'emphase varie en fonction du langage. Par exemple, en 
 - `left`
   - : Les marques sont dessinées à gauche du texte lorsqu'il est écrit en mode vertical.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -157,15 +161,11 @@ em {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                       | Commentaires        |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-emphasis-position-property', 'text-emphasis')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-emphasis-position")}}
+{{Compat}}
 
 ## Voir aussi
 

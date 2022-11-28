@@ -1,16 +1,8 @@
 ---
 title: String.prototype.repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
-tags:
-  - JavaScript
-  - Prototype
-  - Referencia
-  - Repetir
-  - String
-  - metodo
-  - repeat()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 ---
+
 {{JSRef}}
 
 O método **`repeat()`** constrói e retorna uma nova string com um determinado número de cópias concatenadas da string original.

@@ -2,6 +2,7 @@
 title: max-width
 slug: Web/CSS/max-width
 ---
+
 {{CSSRef}}
 
 **`max-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最大幅を設定します。これは {{Cssxref("width")}} プロパティの[使用値](/ja/docs/Web/CSS/used_value)が、 `max-width` で指定した値を上回ることを防ぎます。

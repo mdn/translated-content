@@ -59,13 +59,11 @@ Une valeur de ce type se compose d'un entier strictement positif (type {{cssxref
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Media Queries', '#values', '&lt;ratio&gt;')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.ratio")}}
+{{Compat}}
 
 ## Voir aussi
 

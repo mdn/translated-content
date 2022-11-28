@@ -1,15 +1,15 @@
 ---
 title: keydown
 slug: Web/API/Element/keydown_event
-translation_of: Web/API/Document/keydown_event
 original_slug: Web/API/Document/keydown_event
 ---
-O evento `keydown` é disparado quando uma tecla é pressionada. Diferente do evento [`keypress`](/en-US/docs/Web/Events/keypress), o `keydown` é disparado para teclas que produzem e que não produzem um caractere.
+
+O evento `keydown` é disparado quando uma tecla é pressionada. Diferente do evento [`keypress`](/pt-BR/docs/Web/Events/keypress), o `keydown` é disparado para teclas que produzem e que não produzem um caractere.
 
 ## Informações gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keydown)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-keydown)
 - Interface
   - : [KeyboardEvent](/pt-BR/docs/DOM/KeyboardEvent)
 - Burbulha
@@ -57,8 +57,7 @@ O evento `keydown` é disparado quando uma tecla é pressionada. Diferente do ev
       <td>WindowProxy</td>
       <td>
         <a
-          href="/en-US/docs/Web/API/Document/defaultView"
-          title="In browsers, document.defaultView returns the window object associated with a document, or null if none is available."
+          href="/pt-BR/docs/Web/API/Document/defaultView"
           ><code>document.defaultView</code></a
         >
         (<code>window</code> do documento)
@@ -85,7 +84,7 @@ O evento `keydown` é disparado quando uma tecla é pressionada. Diferente do ev
         caractere imprimível, este valor é uma string Unicode não vazia,
         contendo o caractere. Se a tecla não tem uma representação imprimível, o
         valor é uma string vazia. Veja
-        <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
+        <a href="/pt-BR/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
           >key names and char values</a
         >
         para detalhes.
@@ -104,10 +103,10 @@ O evento `keydown` é disparado quando uma tecla é pressionada. Diferente do ev
         imprimível, o valor deste atributo é o mesmo do atributo
         <code>char</code>. Caso contrário, é uma das strings key especificadas
         em
-        <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values">Key Values</a
+        <a href="/pt-BR/docs/Web/API/KeyboardEvent/key/Key_Values">Key Values</a
         >. Se a tecla não pode ser identificada, o valor do atributo é a string
         "Unidentified". Veja
-        <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
+        <a href="/pt-BR/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
           >key names and char values</a
         >
         para detalhes. Somente Leitura.
@@ -129,7 +128,7 @@ O evento `keydown` é disparado quando uma tecla é pressionada. Diferente do ev
       <td>
         O número de referência Unicode da tecla; este atributo é usado somente
         pelo evento
-        <a href="/en-US/docs/Mozilla_event_reference/keypress"
+        <a href="/pt-BR/docs/Mozilla_event_reference/keypress"
           ><code>keypress</code></a
         >. Para teclas cujo atributo <code>char</code> contém múltiplos
         caracteres, este é o valor Unicode do primeiro caractere daquele

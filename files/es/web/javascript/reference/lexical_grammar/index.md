@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Lexical_grammar
 original_slug: Web/JavaScript/Referencia/Gramatica_lexica
 ---
+
 {{JsSidebar("Más")}}
 
 Esta página describe la gramática léxica de JavaScript. El texto fuente de los scripts de ECMAScript se escanea de izquierda a derecha y se convierte en una secuencia de elementos de entrada que son segmentos, caracteres de control, terminadores de línea, comentarios o {{Glossary("Espacio en blanco")}}. ECMAScript también define ciertas palabras clave y literales y tiene reglas para la inserción automática del punto y coma en las declaraciones finales.
@@ -216,7 +217,7 @@ Además, los literales `null`, `true` y `false` no se pueden utilizar como ident
 
 ### Uso de palabras reservadas
 
-Las palabras reservadas en realidad solo se aplican a los _identificadores_ (frente a los _nombres de identificadores_). Como se describe en [es5.github.com/#A.1](http://es5.github.com/#A.1), todos estos son _IdentifierName_s que no excluyen \_Palabras reservadas_.
+Las palabras reservadas en realidad solo se aplican a los _identificadores_ (frente a los _nombres de identificadores_). Como se describe en [es5.github.com/#A.1](http://es5.github.com/#A.1), todos estos son _IdentifierNames_ que no excluyen _Palabras reservadas_.
 
 ```js
 a.import

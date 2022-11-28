@@ -1,8 +1,8 @@
 ---
 title: 505 HTTP Version Not Supported
 slug: Web/HTTP/Status/505
-translation_of: Web/HTTP/Status/505
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`505 HTTP Version Not Supported`** response status code indicates that the HTTP version used in the request is not supported by the server.

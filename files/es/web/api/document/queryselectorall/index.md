@@ -1,21 +1,8 @@
 ---
 title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
-tags:
-  - API
-  - Buscando Elementos
-  - DOM
-  - Document
-  - Encontrando Elementos
-  - Localizando Elementos
-  - Métodos
-  - Referencia
-  - Seleccionando Elementos
-  - Selectores
-  - Selectores CSS
-  - querySelectorAll
-translation_of: Web/API/Document/querySelectorAll
 ---
+
 {{ ApiRef("DOM") }}
 
 El método **`querySelectorAll()`** de un {{domxref("Element")}} devuelve una {{domxref("NodeList")}} estática (no viva) que representa una lista de elementos del documento que coinciden con el grupo de selectores indicados.
@@ -69,7 +56,7 @@ var container = document.querySelector('#test');
 var matches = container.querySelectorAll('div.highlighted > p');
 ```
 
-Este ejemplo usa un [selector de atributos](es/docs/Web/CSS/Selectores_atributo) para devolver una lista de elementos {{domxref("iframe")}} en el documento que contienen un atributo llamado `"data-src"`:
+Este ejemplo usa un [selector de atributos](/es/docs/Web/CSS/Selectores_atributo) para devolver una lista de elementos {{domxref("iframe")}} en el documento que contienen un atributo llamado `"data-src"`:
 
 ```js
 var matches = document.querySelectorAll('iframe[data-src]');

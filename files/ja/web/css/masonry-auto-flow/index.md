@@ -2,6 +2,7 @@
 title: masonry-auto-flow
 slug: Web/CSS/masonry-auto-flow
 ---
+
 {{CSSRef}}
 
 {{SeeCompatTable}}

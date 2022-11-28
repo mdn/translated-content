@@ -2,6 +2,7 @@
 title: r
 slug: Web/SVG/Attribute/r
 ---
+
 {{SVGRef}}
 
 **`r`** 属性は円の半径を定義します。
@@ -48,7 +49,7 @@ html,body,svg { height:100% }
 | デフォルト値         | `0`                                                                                                                    |
 | アニメーション可能か | Yes                                                                                                                    |
 
-> **Note:** SVG2 からは、`r` は _幾何属性 (Geometry Property)_ です。これが意味することは、`r` 属性を `circle` の CSS 属性としても使える、ということです。
+> **メモ:** SVG2 からは、`r` は _幾何属性 (Geometry Property)_ です。これが意味することは、`r` 属性を `circle` の CSS 属性としても使える、ということです。
 
 ## radialGradient
 

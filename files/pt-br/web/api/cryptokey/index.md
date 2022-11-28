@@ -1,14 +1,8 @@
 ---
 title: CryptoKey
 slug: Web/API/CryptoKey
-tags:
-  - API
-  - Chaves Criptografadas
-  - Interface
-  - Referencia
-  - Web Crypto API
-translation_of: Web/API/CryptoKey
 ---
+
 {{APIRef("Web Crypto API")}}
 
 A interface **`CryptoKey`** representa uma {{glossary("key")}} criptografada derivada de uma key de algoritmo definido.

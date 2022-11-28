@@ -1,13 +1,9 @@
 ---
 title: 개발 마무리
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
-tags:
-  - Canvas
-  - Games
-  - JavaScript
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Finishing_up
 ---
+
 {{GamesSidebar}}
 
 {{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}

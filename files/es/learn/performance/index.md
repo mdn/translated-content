@@ -3,6 +3,7 @@ title: Rendimiento web
 slug: Learn/Performance
 translation_of: Learn/Performance
 ---
+
 {{LearnSidebar}}
 
 La construcción de sitios web requiere HTML, CSS y JavaScript. Para crear sitios web y aplicaciones que la gente quiera usar, que atraigan y retengan a los usuarios, debe crear una buena experiencia de usuario. Parte de la buena experiencia del usuario es garantizar que el contenido se cargue rápidamente y responda a la interacción del usuario. Esto se conoce como rendimiento web, y en este módulo aprenderá todo lo que necesita para crear sitios web de rendimiento.
@@ -73,7 +74,6 @@ Este tema contiene los siguientes módulos, en un orden sugerido para trabajar a
   - : Sin duda, JavaScript es una gran parte del desarrollo web moderno. Si bien siempre debe esforzarse por reducir la cantidad de JavaScript que utiliza en sus aplicaciones, puede ser difícil saber dónde comenzar. En esta guía, le mostraremos cómo analizar los paquetes de scripts de su aplicación, para que sepa qué está utilizando y cómo detectar si hay scripts duplicados entre paquetes en su aplicación.
 - Lazy-loading JavaScript con importaciones dinámicas
   - : Cuando los desarrolladores escuchan el término "carga perezosa", inmediatamente piensan en imágenes que se cargan por la mitad inferior de la página cuando se desplaza hacia la ventana gráfica. ¿Pero sabías que también puedes cargar JavaScript de forma perezosa? En esta guía hablaremos sobre la declaración dinámica de importación (), que es una característica de los navegadores modernos que carga un módulo de JavaScript a pedido. Por supuesto, ya que esta función no está disponible en todas partes, también le mostraremos cómo puede configurar sus herramientas para usar esta función de una manera ampliamente compatible.
-
 - Controlar la entrega de recursos con sugerencias de recursos
   - : Los navegadores a menudo saben mejor que nosotros cuando se trata de la priorización y la entrega de recursos, pero están lejos de ser clarividentes. Las características nativas del navegador nos permiten sugerirle al navegador cuándo debe conectarse a otro servidor, o precargar un recurso antes de que el navegador sepa que lo necesita. Cuando se usa juiciosamente, esto puede hacer que la experiencia rápida parezca aún más rápida. En este artículo, cubrimos las características nativas del navegador como rel = preconnect, rel = dns-prefetch, rel = prefetch, y rel = precarga, y cómo usarlas para su ventaja.
 

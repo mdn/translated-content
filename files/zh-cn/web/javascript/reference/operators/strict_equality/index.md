@@ -1,11 +1,11 @@
 ---
-title: 严格相等运算符（===）
+title: 严格相等（===）
 slug: Web/JavaScript/Reference/Operators/Strict_equality
 ---
 
 {{jsSidebar("Operators")}}
 
-严格相等运算符（`===`）会检查它的两个操作数是否相等，并且返回一个布尔值结果。与[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)不同，严格相等运算符总是认为不同类型的操作数是不同的。
+严格相等运算符（`===`）会检查它的两个操作数是否相等，并且返回一个布尔值结果。与[相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)运算符不同，严格相等运算符总是认为不同类型的操作数是不同的。
 
 {{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}
 
@@ -29,48 +29,46 @@ x === y
   - 字符串类型必须拥有相同顺序的相同字符。
   - 布尔运算符必须同时为 `true` 或同时为 `false`。
 
-严格相等运算符与[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)（`==`）最显著的区别是，如果操作数的类型不同，`==` 运算符会在比较之前尝试将它们转换为相同的类型。
+严格相等运算符与[相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)（`==`）运算符最显著的区别是，如果操作数的类型不同，`==` 运算符会在比较之前尝试将它们转换为相同的类型。
 
 ## 示例
 
 ### 比较相同类型的操作数
 
 ```js
-console.log("hello" === "hello");   // true
-console.log("hello" === "hola");    // false
+"hello" === "hello"; // true
+"hello" === "hola"; // false
 
-console.log(3 === 3);               // true
-console.log(3 === 4);               // false
+3 === 3; // true
+3 === 4; // false
 
-console.log(true === true);         // true
-console.log(true === false);        // false
+true === true; // true
+true === false; // false
 
-console.log(null === null);         // true
+null === null; // true
 ```
 
 ### 比较不同类型的操作数
 
 ```js
-console.log("3" === 3);           // false
-
-console.log(true === 1);          // false
-
-console.log(null === undefined);  // false
+"3" === 3; // false
+true === 1; // false
+null === undefined; // false
 ```
 
 ### 比较对象
 
 ```js
 const object1 = {
-  name: "hello"
-}
+  key: "value",
+};
 
 const object2 = {
-  name: "hello"
-}
+  key: "value",
+};
 
-console.log(object1 === object2);  // false
-console.log(object1 === object1);  // true
+console.log(object1 === object2); // false
+console.log(object1 === object1); // true
 ```
 
 ## 规范

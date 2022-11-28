@@ -1,11 +1,11 @@
 ---
 title: setter
 slug: Web/JavaScript/Reference/Functions/set
-translation_of: Web/JavaScript/Reference/Functions/set
 ---
+
 {{jsSidebar("Functions")}}
 
-A sintaxe _**`set`**_ liga a propriedade da função para ser chamada quando existe uma tentativa de definir valor para essa propriedade.
+A sintaxe **`set`** liga a propriedade da função para ser chamada quando existe uma tentativa de definir valor para essa propriedade.
 
 ## Sintaxe
 
@@ -18,9 +18,6 @@ A sintaxe _**`set`**_ liga a propriedade da função para ser chamada quando exi
 
 - `prop`
   - : Nome da propriedade ligada a função.
-
-<!---->
-
 - `val`
   - : `Um apelido para variável que será atribuidada a prop.`
 - expression
@@ -58,7 +55,7 @@ Observe que _current_ não está definido e qualquer tentativa de acesso irá re
 
 ### Removendo um setter com o operador `delete`
 
-Se você deseja remover o _setter_, poderá usar somente o [`delete`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete):
+Se você deseja remover o _setter_, poderá usar somente o [`delete`](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete):
 
 ```js
 delete o.current;
@@ -116,6 +113,6 @@ console.log(obj.baz); // "baz"
 - [getter](/pt-BR/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) in JavaScript Guide

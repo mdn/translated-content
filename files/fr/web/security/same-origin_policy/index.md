@@ -65,9 +65,11 @@ Utiliser [CORS](/fr/docs/HTTP/Access_control_CORS) pour autoriser l'accès cross
 
 ## Accès script cross-origin
 
-Les APIs JavaScript comme [`iframe.contentWindow`](/fr/docs/DOM/HTMLIFrameElement), [`window.parent`](/fr/docs/DOM/window.parent), [`window.open`](/fr/docs/DOM/window.open) et [`window.opener`](/fr/docs/DOM/window.opener) autorisent les documents à se référencer directement entre eux. Quand deux documents n'ont pas la même origine, ces références fournissent des accès limités aux objets [Window](http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window) et [Location](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location).  Certains navigateurs [permettent l'accès à plus de propriétés](https://bugzilla.mozilla.org/show_bug.cgi?id=839867) que ce que les spécifications permettent. À la place, vous pouvez utiliser [`window.postMessage`](/fr/docs/DOM/window.postMessage) pour communiquer entre deux documents.
+Les APIs JavaScript comme [`iframe.contentWindow`](/fr/docs/DOM/HTMLIFrameElement), [`window.parent`](/fr/docs/DOM/window.parent), [`window.open`](/fr/docs/DOM/window.open) et [`window.opener`](/fr/docs/DOM/window.opener) autorisent les documents à se référencer directement entre eux. Quand deux documents n'ont pas la même origine, ces références fournissent des accès limités aux objets [Window](http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window) et [Location](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location). Certains navigateurs [permettent l'accès à plus de propriétés](https://bugzilla.mozilla.org/show_bug.cgi?id=839867) que ce que les spécifications permettent. À la place, vous pouvez utiliser [`window.postMessage`](/fr/docs/DOM/window.postMessage) pour communiquer entre deux documents.
 
 ## Voir aussi
 
-- [Same-origin policy for file: URIs](/en/Same-origin_policy_for_file:_URIs)
-- [Same-Origin Policy at W3C](http://www.w3.org/Security/wiki/Same_Origin_Policy)
+- [Same Origin Policy at W3C](https://www.w3.org/Security/wiki/Same_Origin_Policy)
+- [Same-origin policy at web.dev](https://web.dev/same-origin-policy/)
+- {{httpheader("Cross-Origin-Resource-Policy")}}
+- {{httpheader("Cross-Origin-Embedder-Policy")}}

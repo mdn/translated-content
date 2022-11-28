@@ -107,7 +107,7 @@ parseInt("4e2", 10);
 parseInt("4.7", 10);
 ```
 
-L'exemple suivant renvoie  **`224`** :
+L'exemple suivant renvoie **`224`** :
 
 ```js
 parseInt("0e0", 16);
@@ -161,16 +161,11 @@ console.log(filterInt('1.61803398875'));     // NaN
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                                 | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.2.2', 'parseInt')}}                     | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-parseint-string-radix', 'parseInt')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-parseint-string-radix', 'parseInt')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.parseInt")}}
+{{Compat}}
 
 ## Voir aussi
 

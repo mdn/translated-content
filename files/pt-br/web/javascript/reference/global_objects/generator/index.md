@@ -1,8 +1,8 @@
 ---
 title: Generator
 slug: Web/JavaScript/Reference/Global_Objects/Generator
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 ---
+
 {{JSRef}}
 
 O objeto **`Generator`** é retornado por {{jsxref("Statements/function*", "generator function", "", 1)}} e conforme [iterable protocol](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols#iterable) e o [iterator protocol](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols#iterator).

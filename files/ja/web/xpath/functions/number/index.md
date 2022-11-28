@@ -2,6 +2,7 @@
 title: number
 slug: Web/XPath/Functions/number
 ---
+
 {{ XsltRef() }}
 
 `number` 関数はオブジェクトを数値に変換し、その数値を返します。
@@ -14,7 +15,7 @@ number( [object] )
 
 ### 引数
 
-- _`object`_(省略可)
+- `object` (省略可)
   - : 数値に変換するオブジェクト。引数を省略すると、現在のコンテキストノードが使用されます。
 
 ### 返値

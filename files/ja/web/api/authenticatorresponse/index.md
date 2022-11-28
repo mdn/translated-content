@@ -2,6 +2,7 @@
 title: AuthenticatorResponse
 slug: Web/API/AuthenticatorResponse
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`AuthenticatorResponse`** は [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) のインターフェイスで、キーペアを信頼する暗号化ルートを提供するインターフェイスの基本インターフェイスです。子インターフェイスでは、チャレンジのオリジンなどのブラウザーからの情報を含み、 {{domxref("PublicKeyCredential.response")}} から返されることがあります。
@@ -79,7 +80,7 @@ navigator.credentials.create({ publicKey })
 
 ## ブラウザーの互換性
 
-{{Compat("api.PublicKeyCredentialRequestOptions")}}
+{{Compat}}
 
 ## 関連情報
 

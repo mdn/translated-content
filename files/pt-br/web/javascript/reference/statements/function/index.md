@@ -1,7 +1,6 @@
 ---
 title: Declaração de função
 slug: Web/JavaScript/Reference/Statements/function
-translation_of: Web/JavaScript/Reference/Statements/function
 ---
 {{jsSidebar("Statements")}}
 
@@ -19,14 +18,8 @@ function name([param,[, param,[..., param]]]) {
 
 - `name`
   - : O nome da função.
-
-<!---->
-
 - `param`
   - : O nome de um argumento a ser passado para a função. Uma função pode ter atè 255 argumentos.
-
-<!---->
-
 - `statements`
   - : As instruções que compõem o corpo da função.
 

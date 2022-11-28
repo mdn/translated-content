@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/POSITIVE_INFINITY
 ---
+
 {{JSRef("Objetos_globales", "Number")}}
 
 ## Resumen
@@ -39,22 +40,18 @@ Podrías utilizar la propiedad `Number.POSITIVE_INFINITY` para indicar una condi
 
 ## Ejemplo
 
-En el siguiente ejemplo, a la variable `bigNumber `se le asigna un valor mucho mayor al valor máximo. Cuando la sentencia `if` es ejecutada, `bigNumber `tiene el valor "`Infinity`", por lo cual a `bigNumber` le es asignado un valor mas manejable antes de continuar.
+En el siguiente ejemplo, a la variable `bigNumber` se le asigna un valor mucho mayor al valor máximo. Cuando la sentencia `if` es ejecutada, `bigNumber` tiene el valor "`Infinity`", por lo cual a `bigNumber` le es asignado un valor mas manejable antes de continuar.
 
 ```js
 var bigNumber = Number.MAX_VALUE * 2;
 if (bigNumber === Number.POSITIVE_INFINITY) {
- bigNumber = returnFinite();
+  bigNumber = returnFinite();
 }
 ```
 
 ## Especificaciones
 
-| Especificaciones                                                                                             | Estado                   | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| ECMAScript 1st Edition. Implemented in JavaScript 1.1                                                        | Estándar                 | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-15.7.3.6', 'Number.POSITIVE_INFINITY')}}                     | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-number.positive_infinity', 'Number.POSITIVE_INFINITY')}} | {{Spec2('ES6')}}     |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

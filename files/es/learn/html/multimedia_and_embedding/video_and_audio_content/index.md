@@ -3,6 +3,7 @@ title: Contenido de audio y video
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
 
 Ahora que estamos cómodos añadiendo imágenes simples a una página web, el siguiente paso será empezar a agregar reproductores de audio y video a tu documento HTML. En este artículo veremos cómo hacerlo con los elementos {{htmlelement("video")}} y {{htmlelement("audio")}}; luego terminaremos viendo como agregar subtítulos a nuestros videos.
@@ -96,7 +97,7 @@ Por ejemplo:
 
 Un reproductor de audio tenderá a reproducir directamente un track de audio. Por ejemplo un archivo MP3 u Ogg. No necesitan contenedores.
 
-> **Nota:** No es tan simple como se ve en nuestra [tabla de compatibilidad de codecs audio-video](https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats#Browser_compatibility). Además, muchos browsers de plataformas móviles pueden reproducir un formato no soportado entregándoselo al reproductor multimedia del sistema subyacente para que lo reproduzca. Pero esto servirá por ahora.
+> **Nota:** No es tan simple como se ve en nuestra [tabla de compatibilidad de codecs audio-video](/en-US/docs/Web/HTML/Supported_media_formats#Browser_compatibility). Además, muchos browsers de plataformas móviles pueden reproducir un formato no soportado entregándoselo al reproductor multimedia del sistema subyacente para que lo reproduzca. Pero esto servirá por ahora.
 
 Los formatos anteriores existen para comprimir los archivos de audio y video volviéndolos manejables (el tamaño sin comprimir es muy grande). Los browsers contienen diferentes **{{Glossary("Codec","Codecs")}}**, como Vorbis o H.264, los cuales son usados para convertir el sonido y video comprimidos en binario y viceversa. Pero desafortunadamente, como indicamos antes, no todos los browsers soportan los mismos codecs, por lo tanto, habrá que proveer varios archivos para cada producción multimedia. Si te falta el codec correcto para decodificar el medio, simplemente no se reproducirá.
 
@@ -137,7 +138,7 @@ Esto nos dará un resultado que se parece a esto:
 ![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](https://mdn.mozillademos.org/files/12796/extra-video-features.png)Las nuevas características son:
 
 - {{htmlattrxref("width","video")}} y {{htmlattrxref("height","video")}}
-  - : Puede controlar el tamanño con estos atributos o con [CSS](https://developer.mozilla.org/es/docs/Glossary/CSS). En ambos casos, los vídeos mantienen su relación **anchura - altura nativa**. Si la relación de aspecto no se mantiene con los tamañis establecidos, el vídeo crecerá para rellenar el espacio horizontalmente y el el espacio sin rellenar sólo recibirá un color de fondo sólido de forma predeterminada.
+  - : Puede controlar el tamanño con estos atributos o con [CSS](/es/docs/Glossary/CSS). En ambos casos, los vídeos mantienen su relación **anchura - altura nativa**. Si la relación de aspecto no se mantiene con los tamañis establecidos, el vídeo crecerá para rellenar el espacio horizontalmente y el el espacio sin rellenar sólo recibirá un color de fondo sólido de forma predeterminada.
 - {{htmlattrxref("autoplay","video")}}
   - : Hace que el audio o el vídeo empiece a reproducirse de inmediato, mientras se carga el resto de la página. Le aconsejamos que no utilice vídeo (o audio) de reproducción automática en sus sitios, ya que los usuarios pueden encontralo molesto.
 - {{htmlattrxref("loop","video")}}
@@ -192,7 +193,7 @@ mediaElem.load();
 
 ### Detecting track addition and removal
 
-You can monitor the track lists within a media element to detect when tracks are added to or removed from the element's media. For example, you can watch for the {{event("addtrack")}} event being fired on the associated {{domxref("AudioTrackList")}} object (retrieved via {{domxref("HTMLMediaElement.audioTracks")}}) to be informed when audio tracks are added to the media:
+You can monitor the track lists within a media element to detect when tracks are added to or removed from the element's media. For example, you can watch for the [`addtrack`](/es/docs/Web/Reference/Events/addtrack) event being fired on the associated {{domxref("AudioTrackList")}} object (retrieved via {{domxref("HTMLMediaElement.audioTracks")}}) to be informed when audio tracks are added to the media:
 
 ```js
 var mediaElem = document.querySelector("video");

@@ -46,7 +46,7 @@ Cette trappe permet d'intercepter les opérations suivantes :
 
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Reflect.getPrototypeOf()")}}
-- {{jsxref("Object/proto", "__proto__")}}
+- [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Opérateurs/instanceof", "instanceof")}}
 
@@ -116,14 +116,11 @@ Object.getPrototypeOf(p); // TypeError : on attend la même valeur pour le proto
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof', '[[GetPrototypeOf]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof', '[[GetPrototypeOf]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.getPrototypeOf")}}
+{{Compat}}
 
 ## Voir aussi
 

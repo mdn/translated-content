@@ -1,8 +1,8 @@
 ---
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 O objeto **`Atomics`** fornece operações atômicas como metodos estáticos. Eles são usados com objetos {{jsxref("SharedArrayBuffer")}}.
@@ -23,9 +23,6 @@ Quando a memória é compartilhada, multiplas threads podem ser lidas e escritas
   - : Armazena o valor recebido na posição recebida no array, se este foi igual ao valor recebido. Retorna o valor anterior nesta posição.
 - {{jsxref("Atomics.exchange()")}}
   - : Armazena o valor recebido na posição recebida no array. Retorna o valor anterior.
-
-<!---->
-
 - {{jsxref("Atomics.load()")}}
   - : Retorna o valor na posição recebida no array.
 - {{jsxref("Atomics.or()")}}

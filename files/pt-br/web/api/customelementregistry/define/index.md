@@ -1,8 +1,8 @@
 ---
 title: CustomElementRegistry.define()
 slug: Web/API/CustomElementRegistry/define
-translation_of: Web/API/CustomElementRegistry/define
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 O método **`define()`** da interface {{domxref("CustomElementRegistry")}} define um novo elemento personalizado.
@@ -198,8 +198,8 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ### Criando elemento que desativa a capacidade de utilizar attach no shadow root
 
-Se a classe usada para o elemento contém a propriedade estática \`disabledFeatures\` retornando a string "shadow" isso fará com que {{domxref("Element.attachShadow()")}} retorne um
-{{domxref("DOMException")}} \`NotSupportedError\`.
+Se a classe usada para o elemento contém a propriedade estática `disabledFeatures` retornando a string "shadow" isso fará com que {{domxref("Element.attachShadow()")}} retorne um
+{{domxref("DOMException")}} `NotSupportedError`.
 
 ```js
     class PopUpInfo extends HTMLElement {

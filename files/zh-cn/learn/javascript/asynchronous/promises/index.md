@@ -73,7 +73,7 @@ Promise { <state>: "pending" }
 
 ## 链式使用 Promise
 
-在你通过 `fetch()` API 得到一个 `Response` 对象的时候，你需要调用另一个函数来获取响应数据。这次，我们想获得JSON格式的响应数据，所以我们会调用 `Response` 对象的 {{domxref("Response/json", "json()")}} 方法。事实上，`json()` 也是异步的，因此我们必须连续调用两个异步函数。
+在你通过 `fetch()` API 得到一个 `Response` 对象的时候，你需要调用另一个函数来获取响应数据。这次，我们想获得 JSON 格式的响应数据，所以我们会调用 `Response` 对象的 {{domxref("Response/json", "json()")}} 方法。事实上，`json()` 也是异步的，因此我们必须连续调用两个异步函数。
 
 试试这个：
 
@@ -92,7 +92,7 @@ fetchPromise.then( response => {
 
 执行代码后应该会输出“baked beans”（“products.json”中第一个产品的名称）。
 
-等等! 还记得上一篇文章吗？我们好像说过，在回调中调用另一个回调会出现多层嵌套的情况？我们是不是还说过，这种“回调地狱”使我们的代码难以理解？这不是也一样吗，只不过变成了用 `then()` 调用而已？
+等等！还记得上一篇文章吗？我们好像说过，在回调中调用另一个回调会出现多层嵌套的情况？我们是不是还说过，这种“回调地狱”使我们的代码难以理解？这不是也一样吗，只不过变成了用 `then()` 调用而已？
 
 当然如此。但 Promise 的优雅之处在于 *`then()` 本身也会返回一个 Promise，这个 Promise 将指示 `then()` 中调用的异步函数的完成状态*。这意味着我们可以（当然也应该）把上面的代码改写成这样：
 
@@ -262,7 +262,7 @@ Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
 
 ## async 和 await
 
-{{jsxref("Statements/async_function", "async")}} 关键字为你提供了一种更简单的方法来处理基于异步 Promise 的代码。在一个函数的开头添加  `async`，就可以使其成为一个异步函数。
+{{jsxref("Statements/async_function", "async")}} 关键字为你提供了一种更简单的方法来处理基于异步 Promise 的代码。在一个函数的开头添加 `async`，就可以使其成为一个异步函数。
 
 ```js
 async function myFunction() {

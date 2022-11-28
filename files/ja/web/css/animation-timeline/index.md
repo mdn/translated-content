@@ -2,6 +2,7 @@
 title: animation-timeline
 slug: Web/CSS/animation-timeline
 ---
+
 {{CSSRef}}
 
 **`animation-timeline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、この要素に適用されるスクロールアニメーションを記述する 1 つ以上の {{cssxref("@scroll-timeline")}} アットルールの名前を指定します。

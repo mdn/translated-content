@@ -3,6 +3,7 @@ title: HTMLMediaElement.onerror
 slug: conflicting/Web/API/HTMLMediaElement/error_event
 original_slug: Web/API/HTMLMediaElement/onerror
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`onerror`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、 {{domxref("HTMLMediaElement/error_event", "error")}} イベントを処理するための[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)です。

@@ -8,6 +8,7 @@ tags:
   - Руководства
 translation_of: Web/CSS/Using_CSS_custom_properties
 ---
+
 {{SeeCompatTable}}
 
 **CSS переменные** (**пользовательские CSS-свойства**) это сущности, определяемые автором CSS, хранящие конкретные значения, которые можно повторно использовать в документе. Они устанавливаются с использованием custom property нотации (например. **`--main-color: black;`**) и доступны через функцию [var()](/ru/docs/Web/CSS/var) (например. `color: var(--main-color);`) .
@@ -180,17 +181,19 @@ element {
 
 Первый аргумент функции это имя [пользовательского свойства](https://www.w3.org/TR/css-variables/#custom-property). Второй аргумент функции, если имеется, это возвращаемое значение, который используется в качестве замещающего значения, когда [пользовательское свойство](https://www.w3.org/TR/css-variables/#custom-property) является не действительным. Например:
 
-    .two {
-      color: var(--my-var, red); /* red если --my-var не определена */
-    }
+```css
+.two {
+  color: var(--my-var, red); /* red если --my-var не определена */
+}
 
-    .three {
-      background-color: var(--my-var, var(--my-background, pink)); /* pink если --my-var и --my-background не определены */
-    }
+.three {
+  background-color: var(--my-var, var(--my-background, pink)); /* pink если --my-var и --my-background не определены */
+}
 
-    .three {
-      background-color: var(--my-var, --my-background, pink); /* "--my-background, pink" будет воспринят как значение в случае, если --my-var не определена */
-    }
+.three {
+  background-color: var(--my-var, --my-background, pink); /* "--my-background, pink" будет воспринят как значение в случае, если --my-var не определена */
+}
+```
 
 > **Примечание:** В замещаемых значениях можно использовать запятые по аналогии с [пользовательскими свойствами](https://www.w3.org/TR/css-variables/#custom-property). Например, var(--foo, red, blue) определить red, blue как замещающее значение (от первой запятой и до конца определения функции)
 

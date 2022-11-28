@@ -1,8 +1,8 @@
 ---
 title: DOMException
 slug: Web/API/DOMException
-translation_of: Web/API/DOMException
 ---
+
 {{ APIRef("DOM") }}
 
 A interface **DOMException** representa um evento anormal (denominado de **exceção**) durante a chamada ou a espera de um resultado do metodo ou uma solicitação a uma web API. Basicamente, falando, é o tratamento dos erros e condições, dos mesmos, nos processos web.
@@ -31,7 +31,7 @@ Common error names are listed here. Some APIs define their own sets of names, so
 
 - `IndexSizeError`
   - : The index is not in the allowed range. For example, this can be thrown by the {{ domxref("Range") }} object. (Legacy code value: `1` and legacy constant name: `INDEX_SIZE_ERR`)
-- [`HierarchyRequestError`]()
+- `HierarchyRequestError`
   - : The node tree hierarchy is not correct. (Legacy code value: `3` and legacy constant name: `HIERARCHY_REQUEST_ERR`)
 - `WrongDocumentError`
   - : The object is in the wrong {{ domxref("Document") }}. (Legacy code value: `4` and legacy constant name: `WRONG_DOCUMENT_ERR`)

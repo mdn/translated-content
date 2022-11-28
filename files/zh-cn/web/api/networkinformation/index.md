@@ -32,7 +32,7 @@ _这些属性接口继承自 {{domxref("EventTarget")}}._
 ### Event handlers
 
 - {{domxref("NetworkInformation.onchange")}}
-  - : 当连接信息更改并在此对象上触发更改时触发的 {{event("change")}} 。
+  - : 当连接信息更改并在此对象上触发更改时触发的 [`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 。
 
 ## Methods
 
@@ -44,7 +44,7 @@ _这些属性接口同样继承自 {{domxref("EventTarget")}}._
 
 ## Browser compatibility
 
-{{Compat("api.NetworkInformation")}}
+{{Compat}}
 
 ## See also
 

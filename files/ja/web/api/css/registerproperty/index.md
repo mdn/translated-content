@@ -2,6 +2,7 @@
 title: CSS.registerProperty()
 slug: Web/API/CSS/RegisterProperty
 ---
+
 {{SeeCompatTable}}
 
 **`CSS.registerProperty()`** メソッドは{{cssxref('--*', 'カスタムプロパティ')}}を登録し、プロパティ型のチェック、既定値、値の継承の有無の指定を行うことができます。

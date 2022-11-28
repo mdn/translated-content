@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/DOMTokenList
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMTokenList`** interface represents a set of space-separated tokens. Such a set is returned by {{domxref("Element.classList")}}, {{domxref("HTMLLinkElement.relList")}}, {{domxref("HTMLAnchorElement.relList")}}, {{domxref("HTMLAreaElement.relList")}}, {{domxref("HTMLIframeElement.sandbox")}}, or {{domxref("HTMLOutputElement.htmlFor")}}. It is indexed beginning with `0` as with JavaScript {{jsxref("Array")}} objects. `DOMTokenList` is always case-sensitive.

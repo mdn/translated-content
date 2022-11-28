@@ -3,6 +3,7 @@ title: HTML5 ゲーム開発入門
 slug: Games/Introduction_to_HTML5_Game_Development
 original_slug: Games/Introduction_to_HTML5_Game_Gevelopment_(summary)
 ---
+
 {{GamesSidebar}}
 
 ## 長所
@@ -27,7 +28,7 @@ original_slug: Games/Introduction_to_HTML5_Game_Gevelopment_(summary)
   <tbody>
     <tr>
       <td><strong>オーディオ</strong></td>
-      <td><a href="/ja/docs/Web/API/Web_Audio_API">ウェブ音声 API</a></td>
+      <td><a href="/ja/docs/Web/API/Web_Audio_API">ウェブオーディオ API</a></td>
     </tr>
     <tr>
    <td><strong>グラフィック</strong></td>
@@ -91,7 +92,7 @@ original_slug: Games/Introduction_to_HTML5_Game_Gevelopment_(summary)
   - : ユーザーの画面の大きさや解像度に関わらず、滑らかに拡大縮小できるベクターグラフィックを構築することができます。
 - [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
   - : JavaScript から生のバイナリーデータにアクセスし、GLテクスチャやゲームデータなど、あらゆるものを操作することができます。
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API)
+- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
   - : オーディオの再生、合成、操作をリアルタイムに制御します。
 - [WebGL](/ja/docs/Web/API/WebGL_API)
   - : 高性能でハードウェアアクセラレーションに優れた三次元（および二次元）グラフィックを作成することができます。[OpenGL ES](https://www.khronos.org/opengles/) 2.0。

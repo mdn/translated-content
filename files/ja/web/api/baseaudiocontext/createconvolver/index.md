@@ -3,11 +3,12 @@ title: BaseAudioContext.createConvolver()
 slug: Web/API/BaseAudioContext/createConvolver
 original_slug: Web/API/AudioContext/createConvolver
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createConvolver()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("ConvolverNode") }} を生成します。これは一般に音声にリバーブ効果を適用するために使用されます。詳しくは[畳み込み効果の仕様定義](https://webaudio.github.io/web-audio-api/#background-3) を参照してください。
 
-> **Note:** {{domxref("ConvolverNode.ConvolverNode", "ConvolverNode()")}} コンストラクターは {{domxref("ConvolverNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("ConvolverNode.ConvolverNode", "ConvolverNode()")}} コンストラクターは {{domxref("ConvolverNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
 ## 構文
 
@@ -69,4 +70,4 @@ convolver.buffer = concertHallBuffer;
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -1,11 +1,9 @@
 ---
 title: Herança e cadeia de protótipos (prototype chain)
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - herança intermediário JavaScript OOP
-translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 original_slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 ---
+
 {{jsSidebar("Advanced")}}
 
 JavaScript é um pouco confuso para desenvolvedores com experiência em linguagens baseadas em classes (como Java ou C++), porque é dinâmico e não dispõe de uma implementação de uma `class` (a palavra-chave `class` foi introduzida no ES2015, mas é syntax sugar, o JavaScript permanece baseado em `prototype`).
@@ -71,7 +69,7 @@ Atribuir uma propriedade a um objeto cria uma propriedade nele. A única exceç�
 
 JavaScript não tem "métodos" como os que conhecemos em linguagens baseadas em classes. Em JavaScript, qualquer função pode ser adicionada em um objeto em forma de propriedade. Uma herança de funções age como a herança de quaisquer outras propriedades que não sejam funções, e podemos inclusive realizar sobre-escrita de função (_method overriding_)!
 
-Quando uma herança de função é executada, o valor de [`this`](/en/JavaScript/Reference/Operators/this) aponta para o objeto que herdou as propriedades, não para o objeto prototype onde as propriedades foram escritas originalmente.
+Quando uma herança de função é executada, o valor de [`this`](/pt-BR/JavaScript/Reference/Operators/this) aponta para o objeto que herdou as propriedades, não para o objeto prototype onde as propriedades foram escritas originalmente.
 
 ```js
 var o = {
@@ -100,8 +98,8 @@ console.log(p.m()); // 13
 ```js
 var o = {a: 1};
 
-// O recém-criado objecto 'o' tem Object.prototype como o seu [[Prototype]]
-// 'o' não tem não tem uma propriedade chamada 'hasOwnProperty'
+// O recém-criado objeto 'o' tem Object.prototype como o seu [[Prototype]]
+// 'o' não tem uma propriedade chamada 'hasOwnProperty'
 // hasOwnProperty é uma propriedade própria de Object.prototype. Então 'o' herda hasOwnProperty de Object.prototype
 
 // Object.prototype tem null como seu protótipo.
@@ -123,7 +121,7 @@ function f(){
 
 ### Com um construtor
 
-Um "construtor" em JavaScript é "somente" uma função que passa a ser chamada com o operador [new](/en/JavaScript/Reference/Operators/new).
+Um "construtor" em JavaScript é "somente" uma função que passa a ser chamada com o operador [new](/pt-BR/JavaScript/Reference/Operators/new).
 
 ```js
 function Graph() {
@@ -144,7 +142,7 @@ var g = new Graph();
 
 ### Com Object.create
 
-ECMAScript 5 introduziu o novo método: [Object.create](/en/JavaScript/Reference/Global_Objects/Object/create). Invocando este método podemos criar novos objetos. O prototype destes novos objetos é o primeiro argumento do método:
+ECMAScript 5 introduziu o novo método: [Object.create](/pt-BR/JavaScript/Reference/Global_Objects/Object/create). Invocando este método podemos criar novos objetos. O prototype destes novos objetos é o primeiro argumento do método:
 
 ```js
 var a = {a: 1};
@@ -172,7 +170,7 @@ Para verificar se um objeto tem uma propriedade definida em si mesmo e não em a
 
 [`hasOwnProperty`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) é a única alternativa em JavaScript que lida com propriedades sem atravessar a cadeia de protótipos.
 
-> **Nota:** Observação: **Não** é suficiente apenas verificar se o valor da propriedade é [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) para saber se ela existe. A propriedade pode muito bem existir e não ter sido inicializada, sendo assim o seu valor undefined.
+> **Nota:** Observação: **Não** é suficiente apenas verificar se o valor da propriedade é [`undefined`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined) para saber se ela existe. A propriedade pode muito bem existir e não ter sido inicializada, sendo assim o seu valor undefined.
 
 ### Má Pratica: Estender protótipos nativos
 

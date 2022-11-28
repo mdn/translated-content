@@ -1,8 +1,8 @@
 ---
 title: Iteration protocols
 slug: Web/JavaScript/Reference/Iteration_protocols
-translation_of: Web/JavaScript/Reference/Iteration_protocols
 ---
+
 {{jsSidebar("More")}}Algumas adições do ECMAScript 2015 não são novos _built-ins_ ou uma nova sintaxe, mas protocolos. Estes protocolos podem ser implementados por qualquer objeto desde que respeitando algumas convenções.Existem dois protocolos: O _protocolo iterável_ ([iterable protocol](#The_iterable_protocol)) e o _protocolo iterador_ ([iterator protocol](#The_iterator_protocol)).
 
 ## O protocolo iterável (iterable protocol)
@@ -139,7 +139,7 @@ someString + '';                             // "hi"
 
 ### Iteráveis Built-in
 
-{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} and {{jsxref("Set")}} são todos iteráveis internos, porque cada um dos seus objetos protótipos implementa um método ` @@``iterator `.
+{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} and {{jsxref("Set")}} são todos iteráveis internos, porque cada um dos seus objetos protótipos implementa um método `@@iterator`.
 
 ### Iteráveis definidos pelo usuário
 
@@ -176,7 +176,7 @@ Veja também {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promi
 
 ### Sintaxe que espera iteráveis
 
-Some statements and expressions expect iterables, for example the [`for-of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops, [spread operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator), [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*), and [destructuring assignment](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+Some statements and expressions expect iterables, for example the [`for-of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) loops, [spread operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator), [`yield*`](/pt-BR/docs/Web/JavaScript/Reference/Operators/yield*), and [destructuring assignment](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
 
 ```
 for(let value of ['a', 'b', 'c']){

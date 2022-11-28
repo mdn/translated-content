@@ -2,6 +2,7 @@
 title: <msub>
 slug: Web/MathML/Element/msub
 ---
+
 {{MathMLRef()}}
 
 MathML の `<msub>` 要素は式に下付きを付けるために用います。

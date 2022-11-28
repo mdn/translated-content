@@ -54,17 +54,17 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 ### Seguridad
 
-- El atributo {{htmlattrxref("ping", "a")}} del elemento {{htmlelement("a")}} ahora se apega al [`connect-src`](https://developer.mozilla.org/es/docs/Web/Security/CSP/CSP_policy_directives#connect-src) [CSP 1.1 policy directive](/es/docs/Web/Security/CSP/CSP_policy_directives) ({{bug(1100181)}}).
-- Agregado soporte para la directiva [`sandbox`](https://developer.mozilla.org/es/docs/Web/Security/CSP/CSP_policy_directives#sandbox) [CSP](/es/docs/Web/Security/CSP) ({{bug(671389)}}).
+- El atributo {{htmlattrxref("ping", "a")}} del elemento {{htmlelement("a")}} ahora se apega al [`connect-src`](/es/docs/Web/Security/CSP/CSP_policy_directives#connect-src) [CSP 1.1 policy directive](/es/docs/Web/Security/CSP/CSP_policy_directives) ({{bug(1100181)}}).
+- Agregado soporte para la directiva [`sandbox`](/es/docs/Web/Security/CSP/CSP_policy_directives#sandbox) [CSP](/es/docs/Web/Security/CSP) ({{bug(671389)}}).
 - Ahora es posible indicar una política [content security policy for workers](/es/docs/Web/API/Web_Workers_API/Using_web_workers#Content_security_policy) ({{bug (959388)}}).
 - El método {{domxref("Navigator.sendBeacon()")}} ya no lanza una excepción si los datos de la baliza (Beacon Data) no pudieron ser enviados devido a una política de restricción consentimiento method [Content Security Policy](/es/docs/Web/Security/CSP); en su lugar, retorna `false` como es esperado ({{bug(1234813)}}).
 
 ### Redes
 
 - Cuando un error es encontrado durante una {{domxref("XMLHttpRequest")}} asíncrona, el método {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} ahora retorna un string vacio ({{bug(1286744)}}).
-- En lugar de retornar un `NetworkError`, ahora el asynchronous {{domxref("XMLHttpRequest")}} asíncrono que falla por CORS u otras restricciones de red, ahora lanza un {{event("error")}} que puede ser capturado como cualquier otro error ({{bug(709991)}}).
+- En lugar de retornar un `NetworkError`, ahora el asynchronous {{domxref("XMLHttpRequest")}} asíncrono que falla por CORS u otras restricciones de red, ahora lanza un [`error`](/es/docs/Web/Reference/Events/error) que puede ser capturado como cualquier otro error ({{bug(709991)}}).
 - {{domxref("XMLHttpRequest.getResponseHeader()")}} y {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} ahora también retornan encabezados vacíos por defecto. Esto puede ser controlado mediante la preferencia `network.http.keep_empty_response_headers_as_empty_string` ({{bug(918721)}}).
-- La opción `only-if-cached` fue agregada a [`Request.cache`](https://developer.mozilla.org/es/docs/Web/API/Request/cache) ({{bug(1272436)}}).
+- La opción `only-if-cached` fue agregada a [`Request.cache`](/es/docs/Web/API/Request/cache) ({{bug(1272436)}}).
 
 ### DOM
 
@@ -90,7 +90,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 ### IndexedDB
 
-- Ahora se envía un evento {{event("close")}} al objeto {{domxref("IDBDatabase")}} cuando la base de datos respectiva es cerrada de forma inesperada ({{bug(1151017)}}).
+- Ahora se envía un evento [`close`](/es/docs/Web/Reference/Events/close) al objeto {{domxref("IDBDatabase")}} cuando la base de datos respectiva es cerrada de forma inesperada ({{bug(1151017)}}).
 
 ### Service Workers
 
@@ -103,8 +103,8 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 ### WebRTC
 
-- Adding a track to a {{domxref("MediaStream")}} now generates the {{event("addtrack")}} event as described in the specification. The event is of type {{domxref("MediaStreamTrackEvent")}} and is fired on the stream to which the track was added. You can use either {{domxref("EventTarget.addEventListener", "MediaStream.addEventListener('addtrack', ...)")}} or the {{domxref("MediaStream.onaddtrack")}} property to handle `"addtrack"` events.
-- The {{domxref("MediaStreamTrack")}} interface now supports the {{event("ended")}} event and the {{domxref("MediaStreamTrack.onended")}} event handler.
+- Adding a track to a {{domxref("MediaStream")}} now generates the [`addtrack`](/es/docs/Web/Reference/Events/addtrack) event as described in the specification. The event is of type {{domxref("MediaStreamTrackEvent")}} and is fired on the stream to which the track was added. You can use either {{domxref("EventTarget.addEventListener", "MediaStream.addEventListener('addtrack', ...)")}} or the {{domxref("MediaStream.onaddtrack")}} property to handle `"addtrack"` events.
+- The {{domxref("MediaStreamTrack")}} interface now supports the [`ended`](/es/docs/Web/Reference/Events/ended) event and the {{domxref("MediaStreamTrack.onended")}} event handler.
 - Firefox now supports the {{domxref("MediaStreamTrack.readyState")}} property, which indicates whether the track is live or permanently ended.
 - The {{domxref("MediaStreamTrack")}} methods {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} and {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} have been implemented; these let you get the most recently applied set of customized property constraints and the actual values of all of the track's constrainable properties, respectively. The accompanying data types have been documented as well.
 - The {{domxref("RTCDataChannel.stream")}} property has been removed. This was replaced with {{domxref("RTCDataChannel.id")}} in [Firefox 24](/es/docs/Mozilla/Firefox/Releases/24), but was supported for backward compatibility. Please be sure to update your code to use the `id` property if you haven't done so yet.
@@ -112,7 +112,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 ### Web Audio API
 
 - The {{domxref("PannerNode")}} interface now supports the 3D Cartesian space properties for the position ({{domxref("PannerNode.positionX")}}, {{domxref("PannerNode.positionY")}}, and {{domxref("PannerNode.positionZ")}}) and directionality ({{domxref("PannerNode.orientationX")}}, {{domxref("PannerNode.orientationY")}}, {{domxref("PannerNode.orientationZ")}}) of an audio source.
-- The interface {{domxref("IIRFilterNode")}}, which implements a general {{interwiki("wikipedia", "infinite impulse response")}} (IIR) filter, has been implemented.
+- The interface {{domxref("IIRFilterNode")}}, which implements a general [infinite impulse response](https://es.wikipedia.org/wiki/infinite_impulse_response) (IIR) filter, has been implemented.
 - Throttling in background tabs of timers created by {{domxref("WindowTimers.setInterval", "Window.setInterval()")}} and {{domxref("WindowTimers.setTimeout", "Window.setTimeout()")}} no longer occurs if a [Web Audio API](/es/docs/Web/API/Web_Audio_API) {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ({{bug(1181073)}}).
 
 ### Audio/Video

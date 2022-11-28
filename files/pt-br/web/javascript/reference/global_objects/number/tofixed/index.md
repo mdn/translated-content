@@ -1,8 +1,8 @@
 ---
 title: Number.prototype.toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 ---
+
 {{JSRef}}
 
 O método **`toFixed()`** formata um número utilizando notação de ponto fixo.

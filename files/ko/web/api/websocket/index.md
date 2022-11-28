@@ -8,6 +8,7 @@ tags:
 browser-compat: api.WebSocket
 translation_of: Web/API/WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}
 
 `WebSocket` 객체는 [WebSocket](/ko/docs/Web/API/WebSockets_API) 서버 연결의 생성과 관리 및 연결을 통한 데이터 송수신 API를 제공합니다.

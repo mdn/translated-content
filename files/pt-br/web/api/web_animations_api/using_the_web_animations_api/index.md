@@ -1,27 +1,9 @@
 ---
 title: Usando a Web Animations API
 slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
-tags:
-  - Alice
-  - Animação
-  - CSS
-  - Guía
-  - Iniciante
-  - JavaScript
-  - Timing
-  - Tutorial
-  - animar
-  - duration
-  - keyframes
-  - pausar
-  - pause
-  - play
-  - quadro-chave
-  - reverse
-  - web animations api
-translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 original_slug: Web/API/Web_Animations_API/Usando_a_Web_Animations_API
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 A Web Animations API nos possibilita criar animações e controlar sua reprodução pelo JavaScript. Esse artigo vai te demonstrar esses conceitos com demonstrações e tutoriais com o temática de Alice no País das Maravilhas.
@@ -68,7 +50,7 @@ Perceba que o fundo se mexe, a Alice gira e sua cor muda em sincronia com o giro
 }
 ```
 
-Isso muda a cor da Alice e a rotação do \`transform\` por 3 segundos em um ritmo constante (linear) e se repete infinitamente. No bloco do [@keyframes](/pt-BR/docs/Web/CSS/@keyframes) podemos ver que em 30% de cada repetição (por volta dos 900ms), a cor da Alice muda de preto para um vinho, e volta para o preto no final do loop.
+Isso muda a cor da Alice e a rotação do `transform` por 3 segundos em um ritmo constante (linear) e se repete infinitamente. No bloco do [@keyframes](/pt-BR/docs/Web/CSS/@keyframes) podemos ver que em 30% de cada repetição (por volta dos 900ms), a cor da Alice muda de preto para um vinho, e volta para o preto no final do loop.
 
 ### Mudando para o JavaScript
 
@@ -363,8 +345,8 @@ var endGame = function() {
 
 Animações e Transições CSS tem seus event listeners próprios, que também são possíveis com a Web Animations API:
 
-- [`onfinish`](/en-US/docs/Web/API/Animation/onfinish) é o manipulador de eventos para o evento `finish` e pode ser disparado manualmente com [`finish()`](/en-US/docs/Web/API/Animation/finish).
-- [`oncancel`](/en-US/docs/Web/API/Animation/oncancel) é o manipulador de eventos para o evento `cancel` e pode ser disparado manualmente com [`cancel()`](/en-US/docs/Web/API/Animation/cancel).
+- [`onfinish`](/pt-BR/docs/Web/API/Animation/onfinish) é o manipulador de eventos para o evento `finish` e pode ser disparado manualmente com [`finish()`](/pt-BR/docs/Web/API/Animation/finish).
+- [`oncancel`](/pt-BR/docs/Web/API/Animation/oncancel) é o manipulador de eventos para o evento `cancel` e pode ser disparado manualmente com [`cancel()`](/pt-BR/docs/Web/API/Animation/cancel).
 
 Aqui nós definimos os callbacks para o bolinho, a garrafa e para Alice para disparar a função `endGame`:
 
@@ -377,7 +359,7 @@ drinking.onfinish = endGame;
 aliceChange.onfinish = endGame;
 ```
 
-Ainda melhor, a Web Animations API também fornece uma promise [`finished`](/en-US/docs/Web/API/Animation/finished) que será resolvida quando a animação é completada, e rejeitada se for cancelada.
+Ainda melhor, a Web Animations API também fornece uma promise [`finished`](/pt-BR/docs/Web/API/Animation/finished) que será resolvida quando a animação é completada, e rejeitada se for cancelada.
 
 ## Conclusão
 

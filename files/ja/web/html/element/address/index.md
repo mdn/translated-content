@@ -2,7 +2,8 @@
 title: '<address>: 連絡先要素'
 slug: Web/HTML/Element/address
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<address>` 要素**は、これを含んでいる HTML が個人、団体、組織の連絡先を提供していることを示します。
 

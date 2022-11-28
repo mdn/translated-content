@@ -4,7 +4,8 @@ slug: Web/JavaScript/Reference/Classes/Private_class_fields
 translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 original_slug: Web/JavaScript/Referencia/Classes/Private_class_fields
 ---
-Las propiedades de la clase son públicas de forma predeterminada y se pueden examinar o modificar fuera de la clase. Sin embargo, existe [una propuesta experimental](https://translate.googleusercontent.com/translate_c?depth=1&pto=aue&rurl=translate.google.com&sl=en&sp=nmt4&tl=es&u=https://github.com/tc39/proposal-class-fields&usg=ALkJrhgmG5nvuZjYd2YQRSuRJHti_gdXeQ) para permitir la definición de campos de clase privados utilizando un `#`prefijo hash .
+
+Las propiedades de la clase son públicas de forma predeterminada y se pueden examinar o modificar fuera de la clase. Sin embargo, existe [una propuesta experimental](https://github.com/tc39/proposal-class-fields) para permitir la definición de campos de clase privados utilizando un `#` prefijo hash .
 
 ## Syntax
 
@@ -72,9 +73,9 @@ console.assert(error instanceof TypeError)
 
 ### Campos de instancia privados
 
-Los campos de instancia privados se declaran con **# nombres** (pronunciados " _nombres hash_ "), que son identificadores con el prefijo `#`. El `#`es una parte del nombre propio. También se utiliza para la declaración y el acceso.
+Los campos de instancia privados se declaran con **# nombres** (pronunciados " _nombres hash_ "), que son identificadores con el prefijo `#`. El `#` es una parte del nombre propio. También se utiliza para la declaración y el acceso.
 
-La encapsulación es impuesta por el lenguaje. Es un error de sintaxis referirse a `#`nombres que están fuera del alcance.
+La encapsulación es impuesta por el lenguaje. Es un error de sintaxis referirse a `#` nombres que están fuera del alcance.
 
 ```js
 class ClassWithPrivateField {
@@ -117,7 +118,7 @@ console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
 console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
 ```
 
-Esto puede conducir a un comportamiento inesperado al usar **`this`**. En el siguiente ejemplo se `this`hace referencia a la `Derived`clase (no a la `Base`clase) cuando intentamos llamar `Derived.publicStaticMethod2()`, y por lo tanto exhibe la misma "restricción de procedencia" que se mencionó anteriormente:
+Esto puede conducir a un comportamiento inesperado al usar **`this`**. En el siguiente ejemplo se `this` hace referencia a la `Derived` clase (no a la `Base` clase) cuando intentamos llamar `Derived.publicStaticMethod2()`, y por lo tanto exhibe la misma "restricción de procedencia" que se mencionó anteriormente:
 
 ```js
 class Base {

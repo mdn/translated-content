@@ -1,13 +1,8 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
-tags:
-  - Instrução
-  - JavaScript
-  - Referência(2)
-  - Web
-translation_of: Web/JavaScript/Reference/Statements/switch
 ---
+
 {{jsSidebar("Statements")}}A condicional **switch** avalia uma [expressão](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators), combinando o valor da expressão para um cláusula **case**, e executa as [instruções](/pt-BR/docs/Web/JavaScript/Reference/Statements) associadas ao **case**.
 
 {{EmbedInteractiveExample("pages/js/statement-switch.html")}}
@@ -43,7 +38,7 @@ Se a condição for correspondida, o programa executa as instruções asssociada
 
 O programa primeiro procura por um caso o qual a expressão avalie como tendo o mesmo valor que o input da expressão (usando a [comparação de igualdade estrita](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), `===`) transferindo assim o controle para a cláusula encontrada e em seguida executando as instruções associadas. Caso nenhum caso seja correspondido, então o programa procura pela cláusula opcional `default`, que, se encontrado, tem o controle transferido a ele, executando suas instruções associadas. Se não houver uma cláusula `default`, o programa continua a execução da instrução seguindo para o final do `switch`. Por convenção, a cláusula default é a última, mas não é algo obrigatório.
 
-A instrução opcional [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) associada com cada `case` garante que o programa saia da condicional `switch` assim que a instrução correspondente for executada e executa a instrução que segue logo após o switch. Caso `break` seja omitido, o programa continua a execução para a próxima instrução dentro de `switch`.
+A instrução opcional [`break`](/pt-BR/docs/Web/JavaScript/Reference/Statements/break) associada com cada `case` garante que o programa saia da condicional `switch` assim que a instrução correspondente for executada e executa a instrução que segue logo após o switch. Caso `break` seja omitido, o programa continua a execução para a próxima instrução dentro de `switch`.
 
 ## Exemplos
 

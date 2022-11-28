@@ -28,7 +28,7 @@ void ctx.strokeText(texte, x, y [, largeurMax]);
 - `y`
   - : La coordonnée sur l'axe des y du point de départ du texte.
 - `largeurMax` {{optional_inline}}
-  - : La largeur maximum à dessiner.  Si spécifiée et si la chaîne est calculée comme étant plus large que cette largeur, la police est ajustée pour utiliser une police plus condensée horizontalement (si une est disponible ou si une raisonnablement lisible lisible peut être synthétisée en mettant à l'échelle horizontalement la police courante), ou une police plus petite.
+  - : La largeur maximum à dessiner. Si spécifiée et si la chaîne est calculée comme étant plus large que cette largeur, la police est ajustée pour utiliser une police plus condensée horizontalement (si une est disponible ou si une raisonnablement lisible lisible peut être synthétisée en mettant à l'échelle horizontalement la police courante), ou une police plus petite.
 
 ## Exemples
 

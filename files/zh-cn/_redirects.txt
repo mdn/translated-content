@@ -525,6 +525,8 @@
 /zh-CN/docs/Glossary/404	/zh-CN/docs/Web/HTTP/Status/404
 /zh-CN/docs/Glossary/502	/zh-CN/docs/Web/HTTP/Status/502
 /zh-CN/docs/Glossary/Bézier_curve	/zh-CN/docs/Glossary/Bezier_curve
+/zh-CN/docs/Glossary/Empty_element	/zh-CN/docs/Glossary/Void_element
+/zh-CN/docs/Glossary/Grid_Rows	/zh-CN/docs/Glossary/Grid_Row
 /zh-CN/docs/Glossary/Header	/zh-CN/docs/Glossary/HTTP_header
 /zh-CN/docs/Glossary/IP地址	/zh-CN/docs/Glossary/IP_Address
 /zh-CN/docs/Glossary/Serialize	/zh-CN/docs/Glossary/Serialization
@@ -554,7 +556,7 @@
 /zh-CN/docs/Glossary/渐进增强	/zh-CN/docs/Glossary/Progressive_Enhancement
 /zh-CN/docs/Glossary/源	/zh-CN/docs/Glossary/Origin
 /zh-CN/docs/Glossary/禁止修改的消息首部	/zh-CN/docs/Glossary/Forbidden_header_name
-/zh-CN/docs/Glossary/空元素	/zh-CN/docs/Glossary/Empty_element
+/zh-CN/docs/Glossary/空元素	/zh-CN/docs/Glossary/Void_element
 /zh-CN/docs/Glossary/立即执行函数表达式	/zh-CN/docs/Glossary/IIFE
 /zh-CN/docs/Glossary/第一字节时间	/zh-CN/docs/Glossary/time_to_first_byte
 /zh-CN/docs/Glossary/简单头部	/zh-CN/docs/Glossary/Simple_header
@@ -570,7 +572,7 @@
 /zh-CN/docs/HTML/Block-level_elements	/zh-CN/docs/Web/HTML/Block-level_elements
 /zh-CN/docs/HTML/Canvas	/zh-CN/docs/Web/API/Canvas_API
 /zh-CN/docs/HTML/Canvas/Tutorial	/zh-CN/docs/Web/API/Canvas_API/Tutorial
-/zh-CN/docs/HTML/Content_Editable	/zh-CN/docs/Web/Guide/HTML/Editable_content
+/zh-CN/docs/HTML/Content_Editable	/zh-CN/docs/Web/HTML/Global_attributes/contenteditable
 /zh-CN/docs/HTML/Element	/zh-CN/docs/Web/HTML/Element
 /zh-CN/docs/HTML/Element/Input	/zh-CN/docs/Web/HTML/Element/Input
 /zh-CN/docs/HTML/Element/Source	/zh-CN/docs/Web/HTML/Element/source
@@ -1013,7 +1015,7 @@
 /zh-CN/docs/JavaScript/Reference/rest_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters
 /zh-CN/docs/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
 /zh-CN/docs/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
-/zh-CN/docs/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/zh-CN/docs/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/JavaScript/Typed_arrays	/zh-CN/docs/Web/JavaScript/Typed_arrays
 /zh-CN/docs/JavaScript/内存管理	/zh-CN/docs/Web/JavaScript/Memory_Management
 /zh-CN/docs/JavaScript_1.5_核心参考	/zh-CN/docs/Web/JavaScript
@@ -1153,8 +1155,8 @@
 /zh-CN/docs/MDN/JavaScript/Reference/About_this_Reference	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
 /zh-CN/docs/MDN/JavaScript/Reference/Global_Objects	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 /zh-CN/docs/MDN/JavaScript/Reference/Global_Objects/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-/zh-CN/docs/MDN/Kuma	/zh-CN/docs/MDN/Yari
-/zh-CN/docs/MDN/MDN_Product_Advisory_Board/Members	/zh-CN/docs/conflicting/MDN/MDN_Product_Advisory_Board
+/zh-CN/docs/MDN/Kuma	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
+/zh-CN/docs/MDN/MDN_Product_Advisory_Board/Members	/zh-CN/docs/MDN/MDN_Product_Advisory_Board
 /zh-CN/docs/MDN/Structures	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
 /zh-CN/docs/MDN/Structures/Compatibility_tables	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
 /zh-CN/docs/MDN/Structures/Live_samples	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
@@ -1162,6 +1164,7 @@
 /zh-CN/docs/MDN/Structures/Macros/Commonly-used_macros	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /zh-CN/docs/MDN/Structures/Macros/Custom_macros	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /zh-CN/docs/MDN/Structures/Macros/Other	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
+/zh-CN/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /zh-CN/docs/MDN_at_ten	/zh-CN/docs/MDN/At_ten
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
@@ -1350,6 +1353,7 @@
 /zh-CN/docs/Web/API/DOMImplementation.hasFeature	/zh-CN/docs/Web/API/DOMImplementation/hasFeature
 /zh-CN/docs/Web/API/DOMString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
 /zh-CN/docs/Web/API/DOMString/Binary	/zh-CN/docs/Web/API/btoa
+/zh-CN/docs/Web/API/DOMTimeStamp	/zh-CN/docs/Glossary/Unix_time
 /zh-CN/docs/Web/API/DeviceAcceleration	/zh-CN/docs/Web/API/DeviceMotionEventAcceleration
 /zh-CN/docs/Web/API/Document.querySelectorAll	/zh-CN/docs/Web/API/Document/querySelectorAll
 /zh-CN/docs/Web/API/Document.releaseCapture	/zh-CN/docs/Web/API/Document/releaseCapture
@@ -1378,11 +1382,10 @@
 /zh-CN/docs/Web/API/Document/ononline	/zh-CN/docs/Web/API/Window/online_event
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /zh-CN/docs/Web/API/Document/onvisibilitychange	/zh-CN/docs/Web/API/Document/visibilitychange_event
-/zh-CN/docs/Web/API/Document/rouchmove_event	/zh-CN/docs/conflicting/Web/API/Element/touchmove_event
 /zh-CN/docs/Web/API/Document/selectstart_event	/zh-CN/docs/Web/API/Node/selectstart_event
-/zh-CN/docs/Web/API/Document/touchcancel_event	/zh-CN/docs/conflicting/Web/API/Element/touchcancel_event
+/zh-CN/docs/Web/API/Document/touchcancel_event	/zh-CN/docs/Web/API/Element/touchcancel_event
 /zh-CN/docs/Web/API/Document/touchend_event	/zh-CN/docs/Web/API/Element/touchend_event
-/zh-CN/docs/Web/API/Document/touchmove_event	/zh-CN/docs/conflicting/Web/API/Element/touchmove_event
+/zh-CN/docs/Web/API/Document/touchmove_event	/zh-CN/docs/Web/API/Element/touchmove_event
 /zh-CN/docs/Web/API/Document/touchstart_event	/zh-CN/docs/Web/API/Element/touchstart_event
 /zh-CN/docs/Web/API/Document/width	/zh-CN/docs/Web/API/Element/clientWidth
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/activeElement	/zh-CN/docs/Web/API/Document/activeElement
@@ -1971,6 +1974,7 @@
 /zh-CN/docs/Web/CSS/:blank空白伪类	/zh-CN/docs/Web/CSS/:blank
 /zh-CN/docs/Web/CSS/:host()	/zh-CN/docs/Web/CSS/:host_function
 /zh-CN/docs/Web/CSS/:matches	/zh-CN/docs/Web/CSS/:is
+/zh-CN/docs/Web/CSS/@viewport	/zh-CN/docs/Web/CSS
 /zh-CN/docs/Web/CSS/Adjacent_sibling_selectors	/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator
 /zh-CN/docs/Web/CSS/All_About_The_Containing_Block	/zh-CN/docs/Web/CSS/Containing_block
 /zh-CN/docs/Web/CSS/Block_formatting_context	/zh-CN/docs/Web/Guide/CSS/Block_formatting_context
@@ -2155,7 +2159,7 @@
 /zh-CN/docs/Web/Events/toggle	/zh-CN/docs/Web/API/HTMLDetailsElement/toggle_event
 /zh-CN/docs/Web/Events/touchcancel	/zh-CN/docs/Web/API/Element/touchcancel_event
 /zh-CN/docs/Web/Events/touchend	/zh-CN/docs/Web/API/Element/touchend_event
-/zh-CN/docs/Web/Events/touchmove	/zh-CN/docs/conflicting/Web/API/Element/touchmove_event
+/zh-CN/docs/Web/Events/touchmove	/zh-CN/docs/Web/API/Element/touchmove_event
 /zh-CN/docs/Web/Events/touchstart	/zh-CN/docs/Web/API/Element/touchstart_event
 /zh-CN/docs/Web/Events/transitionend	/zh-CN/docs/Web/API/Element/transitionend_event
 /zh-CN/docs/Web/Events/unhandledrejection	/zh-CN/docs/Web/API/Window/unhandledrejection_event
@@ -2209,7 +2213,8 @@
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Transformations	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images
-/zh-CN/docs/Web/Guide/HTML/Content_Editable	/zh-CN/docs/Web/Guide/HTML/Editable_content
+/zh-CN/docs/Web/Guide/HTML/Content_Editable	/zh-CN/docs/Web/HTML/Global_attributes/contenteditable
+/zh-CN/docs/Web/Guide/HTML/Editable_content	/zh-CN/docs/Web/HTML/Global_attributes/contenteditable
 /zh-CN/docs/Web/Guide/HTML/Forms	/zh-CN/docs/Learn/Forms
 /zh-CN/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets	/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls
 /zh-CN/docs/Web/Guide/HTML/Forms/My_first_HTML_form	/zh-CN/docs/Learn/Forms/Your_first_form
@@ -2227,7 +2232,7 @@
 /zh-CN/docs/Web/HTML/Canvas	/zh-CN/docs/Web/API/Canvas_API
 /zh-CN/docs/Web/HTML/Canvas/Canvas教程	/zh-CN/docs/Web/API/Canvas_API/Tutorial
 /zh-CN/docs/Web/HTML/Canvas/Tutorial	/zh-CN/docs/Web/API/Canvas_API/Tutorial
-/zh-CN/docs/Web/HTML/Content_Editable	/zh-CN/docs/Web/Guide/HTML/Editable_content
+/zh-CN/docs/Web/HTML/Content_Editable	/zh-CN/docs/Web/HTML/Global_attributes/contenteditable
 /zh-CN/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /zh-CN/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/zh-CN/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /zh-CN/docs/Web/HTML/Element/Input/datetime	/zh-CN/docs/Web/HTML/Element/input/datetime-local
@@ -2353,6 +2358,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Date/setTime	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setTime
 /zh-CN/docs/Web/JavaScript/Reference/Date/toJSON	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON
 /zh-CN/docs/Web/JavaScript/Reference/Date/valueOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
+/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/zh-CN/docs/Web/JavaScript/Reference/Errors/Unexpected_type
 /zh-CN/docs/Web/JavaScript/Reference/Errors/不能添加属性	/zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_assign_to_property
 /zh-CN/docs/Web/JavaScript/Reference/Function	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function
@@ -2388,6 +2394,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Locale	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/反双曲余弦值	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/acosh
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
@@ -2456,6 +2463,8 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/uneval	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 /zh-CN/docs/Web/JavaScript/Reference/Methods_Index	/zh-CN/docs/Web/JavaScript/Reference
+/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment	/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
+/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator	/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 /zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /zh-CN/docs/Web/JavaScript/Reference/Operators/async允许声明一个函数为一个包含异步操作的函数	/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function
 /zh-CN/docs/Web/JavaScript/Reference/Operators/取余	/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder
@@ -2474,6 +2483,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/Web/JavaScript/Reference/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /zh-CN/docs/Web/JavaScript/Reference/Statements/import.meta	/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta
+/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/Web/JavaScript/Reference/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
 /zh-CN/docs/Web/JavaScript/Reference/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 /zh-CN/docs/Web/JavaScript/Reference/String/TrimLeft	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
@@ -2500,7 +2510,7 @@
 /zh-CN/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
 /zh-CN/docs/Web/JavaScript/Shells	/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/Web/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
-/zh-CN/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+/zh-CN/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /zh-CN/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /zh-CN/docs/Web/JavaScript/重新认识js	/zh-CN/docs/Web/JavaScript/Language_Overview

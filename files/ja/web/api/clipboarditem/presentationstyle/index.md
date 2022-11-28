@@ -2,6 +2,7 @@
 title: ClipboardItem.presentationStyle
 slug: Web/API/ClipboardItem/presentationStyle
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 **`presentationStyle`** は {{domxref("ClipboardItem")}} インターフェイスの読み取り専用プロパティで、アイテムをどう表示すべきかを示す文字列を返します。

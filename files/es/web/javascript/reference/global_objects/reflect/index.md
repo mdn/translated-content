@@ -10,13 +10,14 @@ tags:
   - TopicStub
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
+
 {{JSRef}}
 
 **Reflect** es un objecto incorporado que proporciona metodos para interceptar operaciones de javascript. Los métodos son los mismos que los de [proxy handlers](/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler). `Reflect` no es un objeto de funciones y por lo tanto no puede ser construido.
 
 ## Descripción
 
-A diferencia de la mayoria de los objetos globales, `Reflect` no es un constructor. No puede ser instanciado con un [operador](/es/docs/Web/JavaScript/Reference/Operators/new) [`new` ](/es/docs/Web/JavaScript/Reference/Operators/new)o invocando el objecto `Reflect` como una función. Todas las propiedades y métodos de `Reflect` son estáticos (igual que los del objeto {{jsxref("Math")}}).
+A diferencia de la mayoria de los objetos globales, `Reflect` no es un constructor. No puede ser instanciado con un [operador](/es/docs/Web/JavaScript/Reference/Operators/new) [`new`](/es/docs/Web/JavaScript/Reference/Operators/new) o invocando el objecto `Reflect` como una función. Todas las propiedades y métodos de `Reflect` son estáticos (igual que los del objeto {{jsxref("Math")}}).
 
 ## Métodos
 
@@ -51,10 +52,7 @@ El objeto `Reflect` proporciona las siguientes funciones estáticas con los mism
 
 ## Especificaciones
 
-| Specification                                                                | Status                       | Comment                             |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------------- |
-| {{SpecName('ES2015', '#sec-reflect-object', 'Reflect')}} | {{Spec2('ES2015')}}     | Initial definition.                 |
-| {{SpecName('ESDraft', '#sec-reflect-object', 'Reflect')}} | {{Spec2('ESDraft')}} | Reflect.enumerate has been removed. |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

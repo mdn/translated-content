@@ -1,9 +1,9 @@
 ---
 title: Arrastar e soltar arquivos
 slug: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
-translation_of: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 original_slug: DragDrop/Drag_and_Drop/Arrastar_e_soltar_arquivos
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 As interfaces HTML Drag and Drop permitem que os aplicativos da Web arrastem e soltem arquivos em uma página da Web. Este documento descreve como um aplicativo pode aceitar um ou mais arquivos que são arrastados do _gerenciador de arquivos da plataforma subjacente_ e soltado s em uma página da Web.
@@ -91,5 +91,5 @@ function dragOverHandler(ev) {
 ## Veja também
 
 - [HTML Drag and Drop API](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](/Web/Guide/HTML/Drag_operations)
+- [Drag Operations](/pt-BR/docs/Web/Guide/HTML/Drag_operations)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

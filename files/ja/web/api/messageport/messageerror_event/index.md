@@ -3,6 +3,7 @@ title: MessagePort.onmessageerror
 slug: Web/API/MessagePort/messageerror_event
 original_slug: Web/API/MessagePort/onmessageerror
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessagePort")}} インターフェースの **`onmessageerror`** イベントハンドラーは、ポートで `messageerror` 型の {{domxref("MessageEvent")}} が発火すると呼び出されます。つまり、{{glossary("Deserialization", "deserialized")}} できないメッセージを受け取ったときです。
@@ -23,7 +24,7 @@ port.onmessageerror = function() { ... };
 
 ## ブラウザー実装状況
 
-{{Compat("api.MessagePort.onmessageerror")}}
+{{Compat}}
 
 ## 関連項目
 

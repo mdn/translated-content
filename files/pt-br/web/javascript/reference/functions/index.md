@@ -1,13 +1,8 @@
 ---
 title: Funções
 slug: Web/JavaScript/Reference/Functions
-tags:
-  - Funções
-  - JavaScript
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Functions
 ---
+
 {{jsSidebar("Functions")}}
 
 De modo geral, função é um "subprograma" que pode ser _chamado_ por código externo (ou interno no caso de recursão) à função. Assim como o programa em si, uma função é composta por uma sequência de instruções chamada _corpo da função_. Valores podem ser _passados_ para uma função e ela vai _retornar_ um valor.
@@ -74,14 +69,8 @@ function nome([param[, param[, ... param]]]) {
 
 - `nome`
   - : O nome da função.
-
-<!---->
-
 - `param`
   - : O nome de um argumento a ser passado para a função.
-
-<!---->
-
 - `instruções`
   - : As instruções que formam o corpo da função.
 
@@ -97,14 +86,8 @@ function [nome]([param] [, param] [..., param]) {
 
 - `nome`
   - : O nome da função. Pode ser omitido, e neste caso a função é conhecida como função anônima.
-
-<!---->
-
 - `param`
   - : O nome de um argumento a ser passado para a função.
-
-<!---->
-
 - `instruções`
   - : As instruções que formam o corpo da função.
 
@@ -139,9 +122,6 @@ new Function (arg1, arg2, ... argN, corpoDaFuncao)
 
 - `arg1, arg2, ... argN`
   - : Nenhum ou mais nomes para serem usados pela função como nomes formais de argumentos. Cada um deve ser uma string em conformidade com as regras para um identificador JavaScript válido ou uma lista com tais strings separadas por vírgula; por exemplo "x", "oValor", ou "a, b".
-
-<!---->
-
 - _corpoDaFuncao_
   - : Uma string contento as instruções JavaScript correspondendo a definição da função.
 
@@ -163,10 +143,10 @@ A sintaxe do parâmetro rest permite representar um número indefinido de argume
 
 Você pode referenciar aos argumentos da função dentro da função utilizando o objeto arguments. Veja [arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments).
 
-- [`arguments`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments): Um objeto array-like contendo os argumentos passados para a função atualmente em execução.
-- [`arguments.callee`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_inline}}: A função atualmente em execução.
-- [`arguments.caller`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller) {{Obsolete_inline}} : A função que invocou a função atualmente em execução.
-- [`arguments.length`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): O número de argumentos passados para a função.
+- [`arguments`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments): Um objeto array-like contendo os argumentos passados para a função atualmente em execução.
+- [`arguments.callee`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_inline}}: A função atualmente em execução.
+- [`arguments.caller`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller) {{Obsolete_inline}} : A função que invocou a função atualmente em execução.
+- [`arguments.length`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): O número de argumentos passados para a função.
 
 ## Definindo Métodos de Funções
 

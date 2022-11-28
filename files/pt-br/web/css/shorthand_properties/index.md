@@ -1,8 +1,8 @@
 ---
 title: Propriedades shorthand
 slug: Web/CSS/Shorthand_properties
-translation_of: Web/CSS/Shorthand_properties
 ---
+
 ## Definição
 
 _Propriedades shorthand (tradução literal: Propriedades abreviadas) são propriedades de CSS que deixam você setar os valores de outras propriedades de CSS simultaneamente. Usando shorthand property, um desenvolvedor web pode escrever folhas de estilo mais concisas e legíveis,economizando tempo e energia._
@@ -31,7 +31,7 @@ Mesmo sendo convenientes para se usar, existem alguns casos que precisam ser ana
         | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
         | ![border2.png](/files/3647/border2.png) | _As sintaxes de dois valores_: `border-width: 1em 2em` — O primeiro valor representa a vertical, isto é, as bordas superior e inferior, a segunda as horizontais, que é a esquerda e a direita.                                                                                                                                             |
         | ![border3.png](/files/3648/border3.png) | _As sintaxes de três valores_: `border-width: 1em 2em 3em` — O primeiro valor representa a borda superior, a segunda, a horizontal, que é esquerda e direita, e o terceiro valor a borda inferior                                                                                                                                           |
-        | ![border4.png](/files/3649/border4.png) | _As sintaxes de quatro valores_:`border-width: 1em 2em 3em 4em` — Os quatro valores representam as margens superior, direita, inferior e esquerda, respectivamente, sempre nessa ordem, que é no sentido horário começando pelo topo (a letra inicial de Top-Right-Bottom-Left corresponde à ordem da consoante da palavra _trouble_: TRBL) |
+        | ![border4.png](/files/3649/border4.png) | _As sintaxes de quatro valores_: `border-width: 1em 2em 3em 4em` — Os quatro valores representam as margens superior, direita, inferior e esquerda, respectivamente, sempre nessa ordem, que é no sentido horário começando pelo topo (a letra inicial de Top-Right-Bottom-Left corresponde à ordem da consoante da palavra _trouble_: TRBL) |
 
     2. Também parecido, shorthand que lidam com os cantos de um box {{cssxref("border-radius")}}, sempre usam 1-para-4-valor de sintaxe representando esses cantos:
 
@@ -116,5 +116,4 @@ margin: 10px 5px 10px 5px;
 ## Veja também
 
 - [CSS Reference](/pt-BR/docs/CSS/CSS_Reference)
-- {{css_key_concepts}}
 - Propriedades shorthand : {{cssxref("background")}}, {{cssxref("font")}}, {{cssxref("margin")}}, {{cssxref("border")}}, {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}}, {{cssxref("border-width")}}, {{cssxref("border-color")}}, {{cssxref("border-style")}}, {{cssxref("transition")}}, {{cssxref("animation")}}, {{cssxref("transform")}}, {{cssxref("padding")}}, {{cssxref("list-style")}}, {{cssxref("border-radius")}}.

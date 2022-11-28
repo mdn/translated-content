@@ -2,6 +2,7 @@
 title: format-number
 slug: Web/XPath/Functions/format-number
 ---
+
 {{ XsltRef() }}
 
 `format-number`関数は数値を評価し、与えられた形式の数値を表す文字列を返します。

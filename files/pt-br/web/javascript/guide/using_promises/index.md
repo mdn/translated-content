@@ -1,15 +1,9 @@
 ---
 title: Usando promises
 slug: Web/JavaScript/Guide/Using_promises
-tags:
-  - Guía
-  - Intermediário
-  - JavaScript
-  - Promise
-  - Promises
-translation_of: Web/JavaScript/Guide/Using_promises
 original_slug: Web/JavaScript/Guide/Usando_promises
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
 
 Uma {{jsxref("Promise")}} é um objeto que representa a eventual conclusão ou falha de uma operação assíncrona. Como a maioria das pessoas consomem promises já criadas, este guia explicará o consumo de promises devolvidas antes de explicar como criá-las.

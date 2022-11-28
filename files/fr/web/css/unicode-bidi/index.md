@@ -64,16 +64,13 @@ unicode-bidi: unset;
 }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                        | État                                     | Commentaires                                                      |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------- |
-| {{SpecName('CSS3 Writing Modes', '#unicode-bidi', 'unicode-bidi')}}             | {{Spec2('CSS3 Writing Modes')}} | Ajout des mots-clés `plaintext`, `isolate` et `isolate-override`. |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-unicode-bidi', 'unicode-bidi')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.unicode-bidi")}}
+{{Compat}}
 
 ## Voir aussi
 

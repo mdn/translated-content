@@ -9,7 +9,7 @@ slug: Web/API/ReadableStreamDefaultReader/cancel
 
 キャンセルは、ストリームを完全に終了し、読み取り待ちのチャンクがキューに入っている場合でも、それ以上データを必要としない場合に使用します。 キャンセルが呼び出された後、そのデータは失われ、ストリームは読み取り不能になります。 これらのチャンクをまだ読み取り、ストリームを完全に取り除くわけではない場合は、{{domxref("ReadableStreamDefaultController.close()")}} を使用します。
 
-> **Note:** リーダーがアクティブな場合、`cancel()` メソッドは、関連付けられたストリームの場合（{{domxref("ReadableStream.cancel()")}}）と同じように振る舞います。
+> **メモ:** リーダーがアクティブな場合、`cancel()` メソッドは、関連付けられたストリームの場合（{{domxref("ReadableStream.cancel()")}}）と同じように振る舞います。
 
 ## 構文
 

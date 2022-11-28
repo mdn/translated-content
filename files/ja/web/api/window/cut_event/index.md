@@ -46,7 +46,7 @@ window.addEventListener('cut', (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.cut_event")}}
+{{Compat}}
 
 ## 関連情報
 

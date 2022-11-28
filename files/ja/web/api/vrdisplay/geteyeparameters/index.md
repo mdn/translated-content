@@ -8,7 +8,7 @@ original_slug: Web/API/VRDevice/getEyeParameters
 
 **`getEyeParameters()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、指定された目の視線パラメーターを持つ {{domxref("VREyeParameters")}} オブジェクトを返します。
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ## 構文
 

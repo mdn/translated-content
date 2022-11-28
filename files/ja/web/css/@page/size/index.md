@@ -2,6 +2,7 @@
 title: size
 slug: Web/CSS/@page/size
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 [CSS](/ja/docs/Web/CSS) の **`size`** [アット規則](/ja/docs/Web/CSS/At-rule)記述子は、 {{cssxref("@page")}} アット規則で使用し、ページを表現するために使用するボックスの寸法と向きを定義します。多くの場合、この寸法は印刷ページの適用可能な対象の寸法に対応します。
@@ -45,7 +46,7 @@ size: A4 portrait;
   - : 何らかの長さの値 ({{cssxref("&lt;length&gt;")}} を参照)。最初の値はページボックスの幅に対応し、二番目の値は高さに対応します。一つしか値が提供されない場合は、幅と高さの両方に使用されます。
 - `<page-size>`
 
-  - :&#x20;
+  - : &#x20;
 
     - A5
       - : これは標準の ISO の寸法 148mm x 210mm に一致します。

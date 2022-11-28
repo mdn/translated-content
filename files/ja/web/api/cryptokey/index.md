@@ -2,9 +2,10 @@
 title: CryptoKey
 slug: Web/API/CryptoKey
 ---
+
 {{APIRef("Web Crypto API")}}
 
-**`CryptoKey`** インターフェイスは、特定の鍵アルゴリズムによりもたらされる暗号鍵 ({{glossary("key")}}) を表します。
+**`CryptoKey`** インターフェイスは、特定の鍵アルゴリズムによりもたらされる{{glossary("key", "暗号鍵")}}を表します。
 
 `CryptoKey` オブジェクトは、{{domxref("SubtleCrypto.generateKey()")}} または {{domxref("SubtleCrypto.deriveKey()")}}、{{domxref("SubtleCrypto.importKey()")}} を使用して取得できます。
 

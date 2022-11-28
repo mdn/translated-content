@@ -1,15 +1,9 @@
 ---
 title: Solucionando problemas de erros de KumaScript
 slug: MDN/Tools/KumaScript/Troubleshooting
-tags:
-  - Erros
-  - Ferramentas
-  - Guía
-  - KumaScript
-  - MDN Meta
-translation_of: MDN/Tools/KumaScript/Troubleshooting
 original_slug: MDN/Tools/KumaScript/Solucionando_problemas_de_erros_de_KumaScript
 ---
+
 {{MDNSidebar}}
 
 Erros de [KumaScript](/pt-BR/docs/MDN/Kuma/Introduction_to_KumaScript) aparecendo numa página podem ser muito desagradáveis aos leitores, mostrando grandes e medonhas caixas vermelhas, mas felizmente qualquer pessoa com uma conta MDN pode editar um documento e consertar tais tipos de erros. Quando uma página possui algum erro, ela é adicionada na lista de [documentos com erros](/docs/with-errors). Editores do site passam por essa lista regularmente para achar e consertar erros. Este artigo detalha os quatro tipos de erros de KumaScript, e alguns passos que você pode fazer para consertá-los.
@@ -29,8 +23,6 @@ Verifique:
 - Tags HTML aparecendo dentro de uma chamada de macro
   - : Se você aplicar estilos a uma macro, geralmente não irá funcionar, pois uma tag `</code>` pode aparecer dentro do código fonte da macro, causado erros de sintaxe na macro. Verifique a visão de código-fonte para ver o código que foi gerado, e remova qualquer estilo desnecessário.
 
-<!---->
-
 ## Erro tipo _TemplateLoadingError_
 
 `TemplateLoadingError` erros aparecendo quando um KumaScript tem problemas de encontrar qual [macro](/pt-BR/docs/MDN/Contribute/Content/Macros) incluir numa página.
@@ -40,7 +32,7 @@ Verifique:
 - Nomes com erro ortográfico ou macros renomeadas.
   - : Você pode ver a lista de macros conhecidas no [Repositório do Github](https://github.com/mdn/kumascript/tree/master/macros).
 
-> **Nota:** **Dica:** Você pode tornar mais rápido e fácil avançar para uma macro específica adicionando uma [busca por palavras-chave](http://kb.mozillazine.org/Using_keyword_searches) no Firefox. Veja {{SectionOnPage("/en-US/docs/MDN/Contribute/Tools/KumaScript", "Using search keywords to open template pages")}} para um guia passo-a-passo de criar uma busca para isso.
+> **Nota:** **Dica:** Você pode tornar mais rápido e fácil avançar para uma macro específica adicionando uma [busca por palavras-chave](http://kb.mozillazine.org/Using_keyword_searches) no Firefox. Veja {{SectionOnPage("/pt-BR/docs/MDN/Contribute/Tools/KumaScript", "Using search keywords to open template pages")}} para um guia passo-a-passo de criar uma busca para isso.
 
 ## Erro tipo _TemplateExecutionError_
 
