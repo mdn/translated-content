@@ -37,10 +37,10 @@ border-width: thick;
 /* Valeur de type <length> */
 border-width: 5px;
 
-/* largeur de la bordure horizontale puis verticale */
+/* côtés haut et bas | côtés gauche et droit */
 border-width: 2px 1.5em;
 
-/* haut | largeur verticale | bas */
+/* côté haut | côtés gauche et droit | côté bas */
 border-width: 1px 2em 1.5cm;
 
 /* haut | droite | bas | gauche */
