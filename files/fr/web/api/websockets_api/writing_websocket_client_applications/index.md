@@ -38,11 +38,9 @@ Le constructeur peut renvoyer des exceptions:
 - `SECURITY_ERR`
   - : Le port sur lequel on essaie d'établir la connexion est bloqué.
 
-<!---->
-
 ### Erreurs de connexion
 
-Si une erreur se produit lors de la tentative de connexion, un évènement nommé "error" est d'abord renvoyé à l'objet  [`WebSocket`](/fr/docs/Web/API/WebSockets/WebSockets_reference/WebSocket) (invoquant ainsi son gestionnaire d'évènement `onerror`) suivi d'un évènement [`CloseEvent`](/fr/docs/Web/API/WebSockets/WebSockets_reference/CloseEvent) (qui invoque alors son gestionnaire d'évènement `onclose`) indiquant la raison de la clôture.
+Si une erreur se produit lors de la tentative de connexion, un évènement nommé "error" est d'abord renvoyé à l'objet [`WebSocket`](/fr/docs/Web/API/WebSockets/WebSockets_reference/WebSocket) (invoquant ainsi son gestionnaire d'évènement `onerror`) suivi d'un évènement [`CloseEvent`](/fr/docs/Web/API/WebSockets/WebSockets_reference/CloseEvent) (qui invoque alors son gestionnaire d'évènement `onclose`) indiquant la raison de la clôture.
 
 A partir de Firefox 11, un message d'erreur descriptif est envoyé à la console de la plateforme Mozilla, et un code de fermeture tel que défini dans la [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) est envoyé à travers l'évènement [`CloseEvent`](/fr/docs/Web/API/WebSockets/WebSockets_reference/CloseEvent).
 
@@ -64,13 +62,13 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protoco
 
 Une fois la connexion établie (c'est-à-dire quand `readyState` a la valeur `OPEN`), la propriété `protocol` indique quel protocole le server a sélectionné.
 
-Dans les exemples ci-dessus on a remplacé  `http` par `ws`, et de la même façon on peut remplacer `https` par  `wss` . L'établissement d'une connexion WebSocket repose sur le méchanisme HTTP Upgrade, donc la requête pour l'upgrade de protocole est implicite lorsqu'on s'adresse au server HTTP avec `ws://www.example.com` ou `wss://www.example.com`.
+Dans les exemples ci-dessus on a remplacé `http` par `ws`, et de la même façon on peut remplacer `https` par `wss` . L'établissement d'une connexion WebSocket repose sur le méchanisme HTTP Upgrade, donc la requête pour l'upgrade de protocole est implicite lorsqu'on s'adresse au server HTTP avec `ws://www.example.com` ou `wss://www.example.com`.
 
 ## Envoi de données vers le serveur
 
-Une fois la connexion ouverte on peut commencer à tranférer des données vers le serveur en appelant la méthode  [`send()`](/fr/docs/Web/API/WebSockets/WebSockets_reference/WebSocket#send) de l'objet `WebSocket` pour chaque message que l'on veut envoyer :
+Une fois la connexion ouverte on peut commencer à tranférer des données vers le serveur en appelant la méthode [`send()`](/fr/docs/Web/API/WebSockets/WebSockets_reference/WebSocket#send) de l'objet `WebSocket` pour chaque message que l'on veut envoyer :
 
-Les données peuvent être envoyées sous forme de chaîne {{ domxref("Blob") }} ou de  [`ArrayBuffer`](/fr/docs/Web/API/JavaScript_typed_arrays/ArrayBuffer).
+Les données peuvent être envoyées sous forme de chaîne {{ domxref("Blob") }} ou de [`ArrayBuffer`](/fr/docs/Web/API/JavaScript_typed_arrays/ArrayBuffer).
 
 > **Note :** Avant la version 11, Firefox supportait l'envoi de données uniquement sous forme de chaîne.
 
