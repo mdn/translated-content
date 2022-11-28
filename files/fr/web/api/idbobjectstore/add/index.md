@@ -50,7 +50,7 @@ Cette méthode peut lever une exception {{domxref("DOMException")}} ayant l'un d
     <tr>
       <td><code>TransactionInactiveError</code></td>
       <td>
-        La transaction pour cet objet  {{domxref("IDBObjectStore")}}
+        La transaction pour cet objet {{domxref("IDBObjectStore")}}
         est inactive.
       </td>
     </tr>
