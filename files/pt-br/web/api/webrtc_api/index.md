@@ -9,11 +9,19 @@ slug: Web/API/WebRTC_API
 
 WebRTC consiste em diversas APIs e protocolos interrelacionados que trabalham juntos. A documentação que você encontrará aqui o ajudará a entender os fundamentos de WebRTC, como configurar e usar, tanto informação, quanto conexões de mídia e mais.
 
+## Interoperabilidade
+
+Como as implementações de WebRTC ainda estão evoluindo e como cada navegador tem [diferentes níveis de suporte para codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs) e recursos de WebRTC, você deve _fortemente_ considerar fazer uso da [biblioteca Adapter.js](https://github.com/webrtcHacks/adapter) fornecida pelo Google antes de começar a escrever seu código.
+
+Adapter.js usa shims e polyfills para suavizar as diferenças entre as implementações WebRTC nos ambientes que o suportam. O Adapter.js também lida com prefixos e outras diferenças de nomenclatura para facilitar todo o processo de desenvolvimento do WebRTC, com resultados mais amplamente compatíveis. A biblioteca também está [disponível como um pacote npm](https://www.npmjs.com/package/webrtc-adapter).
+
+Para saber mais sobre o Adapter.js, veja: [Improving compatibility using WebRTC adapter.js](/en-US/docs/Web/API/WebRTC_API/adapter.js).
+
 ## WebRTC conceitos e uso
 
-WebRTC serve à diversas propostas, e sobrepõe-se substancialmente com a API de Captura e Transmissão. Juntas, provém capacidades poderosas de multimídia para a Web, incluíndo suporte para conferência em áudio e vídeo, troca de arquivos, administração de identidade, e lidando com sistemas telefônicos legados enviando sinais {{Glossary("DTMF")}}.
+WebRTC serve à diversas propostas; junto com a [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API), eles fornecem poder multimídia para a Web, incluindo suporte para áudio e vídeo conferência, troca de arquivos, compartilhamento de tela, gerenciamento de identidade e interface com sistemas telefônicos legados, incluindo suporte para envio de sinais {{Glossary("DTMF")}} (touch-tone dialing). As conexões entre pares podem ser feitas sem a necessidade de drivers ou plug-ins especiais e, muitas vezes, sem servidores intermediários.
 
-Conexões entre dois _peers_ são criadas usando—e representadas por—uma interface {{DOMxRef("RTCPeerConnection")}}. Uma vez que a conexão tenha sido estabilizada e iniciada, media streams ({{DOMxRef("MediaStream")}}s) (transmissões de mídia) e/ou data channels ({{DOMxRef("RTCDataChannel")}}s) (canais de dados) podem ser adicionados à conexão.
+As conexões entre dois pares são representadas pela interface {{DOMxRef("RTCPeerConnection")}}. Uma vez que uma conexão foi estabelecida e aberta usando `RTCPeerConnection`, _streams_ de mídia ({{DOMxRef("MediaStream")}}s) e/ou canais de dados ({{DOMxRef("RTCDataChannel")}}s) podem ser adicionados à conexão.
 
 Dados de mídia podem consistir em qualquer número de _tracks_(faixas) de dados de mídia; _tracks_, que são representados por objetos baseados na interface {{DOMxRef("MediaStreamTrack")}} , que podem conter um número dentre tipos de dados de mídia, incluíndo áudio, vídeo e texto (como legendas ou até mesmo nomes de capítulos). A maioria das transmissões consiste de ao menos uma faixa de áudio e comumente também uma faixa de vídeo, e podem ser usadas para enviar e receber ambas as mídias ao vivo ou dados salvos de mídia (como um filme transmitido).
 
@@ -27,30 +35,91 @@ Porque WebRTC provê interfaces que trabalham em conjunto para realizar uma vari
 
 ### Conexão, configuração e gerenciamento
 
-Estas interfaces são usadas para configurar, abrir e gerenciar conexões WebRTC.
+Essas interfaces, dicionários e tipos são usados para configurar, abrir e gerenciar conexões WebRTC. Estão incluídas as interfaces que representam conexões de mídia de mesmo nível, canais de dados e interfaces usadas ao trocar informações sobre as capacidades de cada par para selecionar a melhor configuração possível para uma conexão de mídia bidirecional.
 
-- {{domxref("RTCPeerConnection")}}
-  - : Representa a conexão WebRTC entre o computador local e um peer remoto. É usado para lidar com um streaming eficiente de dados entre os dois peers.
-- {{domxref("RTCDataChannel")}}
-  - : Representa um canal de dados bidirecional entre dois peers de uma conexão
-- {{domxref("RTCDataChannelEvent")}}
-  - : Represents events that occur while attaching a {{domxref("RTCDataChannel")}} to a {{domxref("RTCPeerConnection")}}. The only event sent with this interface is {{event("datachannel")}}.
-- {{domxref("RTCSessionDescription")}}
-  - : Represents the parameters of a session. Each `RTCSessionDescription` consists of a description [`type`](/pt-BR/docs/Web/API/RTCSessionDescription/type) indicating which part of the offer/answer negotiation process it describes and of the [SDP](/pt-BR/docs/Glossary/SDP) descriptor of the session.
-- {{domxref("RTCStatsReport")}}
-  - : Provides information detailing statistics for a connection or for an individual track on the connection; the report can be obtained by calling {{domxref("RTCPeerConnection.getStats()")}}.
-- {{domxref("RTCIceCandidate")}}
-  - : Represents a candidate internet connectivity establishment (ICE) server for establishing an {{domxref("RTCPeerConnection")}}.
-- {{domxref("RTCIceTransport")}}
-  - : Represents information about an internet connectivity establishment (ICE) transport.
-- {{domxref("RTCPeerConnectionIceEvent")}}
-  - : Represents events that occurs in relation to ICE candidates with the target, usually an {{domxref("RTCPeerConnection")}}. Only one event is of this type: {{event("icecandidate")}}.
-- {{domxref("RTCRtpSender")}}
-  - : Manages the encoding and transmission of data for a {{domxref("MediaStreamTrack")}} on an {{domxref("RTCPeerConnection")}}.
-- {{domxref("RTCRtpReceiver")}}
-  - : Manages the reception and decoding of data for a {{domxref("MediaStreamTrack")}} on an {{domxref("RTCPeerConnection")}}.
-- {{domxref("RTCTrackEvent")}}
-  - : Indicates that a new incoming {{domxref("MediaStreamTrack")}} was created and an associated {{domxref("RTCRtpReceiver")}} object was added to the {{domxref("RTCPeerConnection")}} object.
+#### Interfaces
+
+- {{DOMxRef("RTCPeerConnection")}}
+  - : Representa uma conexão WebRTC entre o computador local e um ponto remoto. Ele é usado para lidar com o streaming eficiente de dados entre os dois pares.
+- {{DOMxRef("RTCDataChannel")}}
+  - : Representa um canal de dados bidirecional entre dois pares de uma conexão.
+- {{DOMxRef("RTCDataChannelEvent")}}
+  - : Representa eventos que ocorrem ao anexar um {{DOMxRef("RTCDataChannel")}} a um {{DOMxRef("RTCPeerConnection")}}. O único evento enviado com esta interface é {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}.
+- {{DOMxRef("RTCSessionDescription")}}
+  - : Representa os parâmetros de uma sessão. Cada `RTCSessionDescription` consiste em uma descrição {{DOMxRef("RTCSessionDescription.type", "type")}} indicando qual parte do processo de negociação de oferta/resposta ela descreve e do descritor {{Glossary("SDP")}} da sessão.
+- {{DOMxRef("RTCStatsReport")}}
+  - : Fornece estatísticas detalhadas de informações para uma conexão ou para uma _track_ individual na conexão; o relatório pode ser obtido chamando {{DOMxRef("RTCPeerConnection.getStats()")}}. Detalhes sobre o uso de estatísticas WebRTC podem ser encontrados em [WebRTC Statistics API](/en-US/docs/Web/API/WebRTC_Statistics_API).
+- {{DOMxRef("RTCIceCandidate")}}
+  - : Representa um servidor _Interactive Connectivity Establishment_ (Estabelecimento de Conectividade Interativa) candidato ({{Glossary("ICE")}}) para estabelecer um {{DOMxRef("RTCPeerConnection")}}.
+- {{DOMxRef("RTCIceTransport")}}
+  - : Representa informações sobre um transporte {{Glossary("ICE")}}.
+- {{DOMxRef("RTCPeerConnectionIceEvent")}}
+  - : Representa eventos que ocorrem em relação aos candidatos ICE com o destino, geralmente um {{DOMxRef("RTCPeerConnection")}}. Apenas um evento é deste tipo: {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}.
+- {{DOMxRef("RTCRtpSender")}}
+  - : Gerencia a codificação e a transmissão de dados para um {{DOMxRef("MediaStreamTrack")}} em um {{DOMxRef("RTCPeerConnection")}}.
+- {{DOMxRef("RTCRtpReceiver")}}
+  - : Gerencia a recepção e decodificação de dados para um {{DOMxRef("MediaStreamTrack")}} em um {{DOMxRef("RTCPeerConnection")}}.
+- {{DOMxRef("RTCTrackEvent")}}
+  - : A interface usada para representar um evento {{domxref("RTCPeerConnection.track_event", "track")}}, que indica que um objeto {{DOMxRef("RTCRtpReceiver")}} foi adicionado ao {{DOMxRef("RTCPeerConnection" )}}, indicando que um novo {{DOMxRef("MediaStreamTrack")}} de entrada foi criado e adicionado ao `RTCPeerConnection`.
+- {{DOMxRef("RTCSctpTransport")}}
+  - : Fornece informações que descrevem um transporte de _Stream Control Transmission Protocol_ (Protocolo de Transmissão de Controle de Fluxo / **{{Glossary("SCTP")}}**) e também fornece uma maneira de acessar a segurança da _Datagram Transport Layer Security_ (Camada de Transporte de Datagrama Subjacente / **{{Glossary("DTLS") }}**) através do qual os pacotes SCTP para todos os canais de dados de uma [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection) são enviados e recebidos.
+
+#### Dictionaries
+
+- {{DOMxRef("RTCIceServer")}}
+  - : Defines how to connect to a single {{Glossary("ICE")}} server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server).
+- {{DOMxRef("RTCRtpContributingSource")}}
+  - : Contains information about a given contributing source (CSRC) including the most recent time a packet that the source contributed was played out.
+
+#### Events
+
+- {{domxref("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}}
+  - : The amount of data currently buffered by the data channel—as indicated by its {{domxref("RTCDataChannel.bufferedAmount", "bufferedAmount")}} property—has decreased to be at or below the channel's minimum buffered data size, as specified by {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}.
+- {{domxref("RTCDataChannel.close_event", "close")}}
+  - : The data channel has completed the closing process and is now in the `closed` state. Its underlying data transport is completely closed at this point. You can be notified _before_ closing completes by watching for the `closing` event instead.
+- {{domxref("RTCDataChannel.closing_event", "closing")}}
+  - : The `RTCDataChannel` has transitioned to the `closing` state, indicating that it will be closed soon. You can detect the completion of the closing process by watching for the `close` event.
+- {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
+  - : The connection's state, which can be accessed in {{domxref("RTCPeerConnection.connectionState", "connectionState")}}, has changed.
+- {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}
+  - : A new {{domxref("RTCDataChannel")}} is available following the remote peer opening a new data channel. This event's type is {{domxref("RTCDataChannelEvent")}}.
+- {{domxref("RTCDataChannel.error_event", "error")}}
+  - : An {{domxref("RTCErrorEvent")}} indicating that an error occurred on the data channel.
+- {{domxref("RTCDtlsTransport.error_event", "error")}}
+  - : An {{domxref("RTCErrorEvent")}} indicating that an error occurred on the {{domxref("RTCDtlsTransport")}}. This error will be either `dtls-failure` or `fingerprint-failure`.
+- {{domxref("RTCIceTransport.gatheringstatechange_event", "gatheringstatechange")}}
+  - : The {{domxref("RTCIceTransport")}}'s gathering state has changed.
+- {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}
+  - : An {{domxref("RTCPeerConnectionIceEvent")}} which is sent whenever the local device has identified a new ICE candidate which needs to be added to the local peer by calling {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}.
+- {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
+  - : An {{domxref("RTCPeerConnectionIceErrorEvent")}} indicating that an error has occurred while gathering ICE candidates.
+- {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
+  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE connection's state—found in the {{domxref("RTCPeerConnection.iceconnectionstate", "iceconnectionstate")}} property—changes.
+- {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
+  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE gathering state—found in the {{domxref("RTCPeerConnection.icegatheringstate", "icegatheringstate")}} property—changes.
+- {{domxref("RTCDataChannel.message_event", "message")}}
+  - : A message has been received on the data channel. The event is of type {{domxref("MessageEvent")}}.
+- {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
+  - : Informs the `RTCPeerConnection` that it needs to perform session negotiation by calling {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} followed by {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}.
+- {{domxref("RTCDataChannel.open_event", "open")}}
+  - : The underlying data transport for the `RTCDataChannel` has been successfully opened or re-opened.
+- {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
+  - : The currently-selected pair of ICE candidates has changed for the `RTCIceTransport` on which the event is fired.
+- {{domxref("RTCPeerConnection.track_event", "track")}}
+  - : The `track` event, of type {{domxref("RTCTrackevent")}} is sent to an {{domxref("RTCPeerConnection")}} when a new track is added to the connection following the successful negotiation of the media's streaming.
+- {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
+  - : Sent to the peer connection when its {{domxref("RTCPeerConnection.signalingstate", "signalingstate")}} has changed. This happens as a result of a call to either {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} or {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.
+- {{domxref("RTCDtlsTransport.statechange_event", "statechange")}}
+  - : The state of the `RTCDtlsTransport` has changed.
+- {{domxref("RTCIceTransport.statechange_event", "statechange")}}
+  - : The state of the `RTCIceTransport` has changed.
+- {{domxref("RTCSctpTransport.statechange_event", "statechange")}}
+  - : The state of the `RTCSctpTransport` has changed.
+
+#### Types
+
+- {{DOMxRef("RTCSctpTransport.state")}}
+  - : Indicates the state of an {{DOMxRef("RTCSctpTransport")}} instance.
 
 ### Identity and security
 
