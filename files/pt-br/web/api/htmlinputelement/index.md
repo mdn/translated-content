@@ -205,7 +205,7 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
 
 - {{domxref("HTMLInputElement.readOnly", "readOnly")}}
 
-  - : `boolean`: **Retorna / Define** o atributo [`readonly`](/pt-BR/docs/Web/HTML/Element/Input#readonly) do elemento, indicando que o usuário não pode modificar o valor do ao controle. Isso é ignorado se o [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) for `hidden`, `range`, `color`, `checkbox`, `radio`, ` file`, ou um tipo de botão.
+  - : `boolean`: **Retorna / Define** o atributo [`readonly`](/pt-BR/docs/Web/HTML/Element/Input#readonly) do elemento, indicando que o usuário não pode modificar o valor do ao controle. Isso é ignorado se o [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) for `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, ou um tipo de botão.
 
 - {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}}
 
