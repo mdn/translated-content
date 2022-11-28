@@ -1,14 +1,6 @@
 ---
 title: SubtleCrypto.digest()
 slug: Web/HTTP/Headers/Digest
-tags:
-  - API
-  - Encriptación
-  - Referencia
-  - SubtleCrypto
-  - Web Crypto API
-  - encrypt
-translation_of: Web/HTTP/Headers/Digest
 original_slug: Web/API/SubtleCrypto/encrypt
 ---
 

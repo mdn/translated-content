@@ -62,9 +62,7 @@ navigator.getBattery().then(function(battery) {
 
 ## 仕様書
 
-| 仕様書                               | 状態                             | 備考     |
-| ------------------------------------ | -------------------------------- | -------- |
-| {{SpecName("Battery API")}} | {{Spec2("Battery API")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

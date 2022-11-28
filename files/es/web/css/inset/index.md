@@ -1,7 +1,6 @@
 ---
 title: inset
 slug: Web/CSS/inset
-translation_of: Web/CSS/inset
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

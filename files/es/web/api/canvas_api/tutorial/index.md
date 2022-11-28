@@ -1,11 +1,6 @@
 ---
 title: Tutorial Canvas
 slug: Web/API/Canvas_API/Tutorial
-tags:
-  - Canvas
-  - HTML5
-  - graficos
-translation_of: Web/API/Canvas_API/Tutorial
 original_slug: Web/Guide/HTML/Canvas_tutorial
 ---
 

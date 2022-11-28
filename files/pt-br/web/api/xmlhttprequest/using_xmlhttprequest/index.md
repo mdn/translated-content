@@ -654,7 +654,7 @@ oReq.send(null);
 
 ## Security
 
-{{fx_minversion_note(3, "Versions of Firefox prior to Firefox 3 allowed you to set the preference <code>capability.policy..XMLHttpRequest.open</code> to <code>allAccess</code> to give specific sites cross-site access.  This is no longer supported.")}}
+{{fx_minversion_note(3, "Versions of Firefox prior to Firefox 3 allowed you to set the preference <code>capability.policy..XMLHttpRequest.open</code> to <code>allAccess</code> to give specific sites cross-site access. This is no longer supported.")}}
 
 {{fx_minversion_note(5, "Versions of Firefox prior to Firefox 5 could use <code>netscape.security.PrivilegeManager.enablePrivilege(\"UniversalBrowserRead\");</code> to request cross-site access. This is no longer supported, even though it produces no warning and permission dialog is still presented.")}}
 

@@ -83,7 +83,7 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
     guessSubmit.addeventListener('click', checkGuess);
     ```
 
-4. Le message d'erreur dit "guessSubmit.addeventListener n'est pas une fonction", donc nous avons probablement mal orthographié quelque chose. Si vous n'êtes pas sûr de la bonne orthographe d'un élément syntaxique, il est fréquemment opportun de regarder dans MDN. Actuellement, la meilleure façon d'opérer consiste à faire une recherche pour  "mdn _nom-de-fonctionnalité_" avec votre moteur de recherche préféré. Voici un raccourci pour gagner un peu de temps dans le cas présent : [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener).
+4. Le message d'erreur dit "guessSubmit.addeventListener n'est pas une fonction", donc nous avons probablement mal orthographié quelque chose. Si vous n'êtes pas sûr de la bonne orthographe d'un élément syntaxique, il est fréquemment opportun de regarder dans MDN. Actuellement, la meilleure façon d'opérer consiste à faire une recherche pour "mdn _nom-de-fonctionnalité_" avec votre moteur de recherche préféré. Voici un raccourci pour gagner un peu de temps dans le cas présent : [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener).
 5. Donc, en regardant cette page, il apparaît que nous avions mal orthographié le nom de la fonction ! Souvenez-vous que JavaScript est sensible à la casse, et que la moindre différence dans l'orthographe ou la casse déclenchera une erreur. Remplacer `addeventListener` par `addEventListener` corrigera cela. Faisons‑le maintenant.
 
 > **Note :** Voyez la page relative à [TypeError: "x" is not a function](/fr/docs/Web/JavaScript/Reference/Errors/Not_a_function) pour plus de précisions à propos de cette erreur.
@@ -126,7 +126,7 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
     ```
 
 9. Donc, il nous faut un sélecteur de classe ici, précédé d'un point (.), alors que le sélecteur passé à la méthode `querySelector()` en ligne 48 n'en a pas. Ce pourrait être le problème&nbsp;! Changeons `lowOrHi` en `.lowOrHi` à la ligne 48.
-10. Enregistrons et actualisons à nouveau, et la directive `console.log()` renvoie bien l'élément  `<p>` attendu. Pfff&nbsp;! Une autre erreur corrigée&nbsp;! On peut enlever la ligne `console.log()` maintenant, ou bien la garder pour s'y reporter plus tard — comme vous l'entendez.
+10. Enregistrons et actualisons à nouveau, et la directive `console.log()` renvoie bien l'élément `<p>` attendu. Pfff&nbsp;! Une autre erreur corrigée&nbsp;! On peut enlever la ligne `console.log()` maintenant, ou bien la garder pour s'y reporter plus tard — comme vous l'entendez.
 
 > **Note :** Voyez la page relative à [TypeError: "x" is (not) "y"](/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_type) pour plus de précisions à propos de cette erreur.
 
@@ -208,7 +208,7 @@ en
 let userGuess === Number(guessField.value);
 ```
 
-cela déclenchera cette même erreur car le logiciel pense que vous êtes en train de faire quelque chose d'autre. Vous devez vous assurer que vous n'avez pas confondu l'opérateur d'assignation  (`=`) — qui fixe une valeur donnée à une variable — avec l'opérateur (`===`) qui teste la stricte égalité de deux valeurs, et renvoie un résultat  `true`/`false` (vrai/faux).
+cela déclenchera cette même erreur car le logiciel pense que vous êtes en train de faire quelque chose d'autre. Vous devez vous assurer que vous n'avez pas confondu l'opérateur d'assignation (`=`) — qui fixe une valeur donnée à une variable — avec l'opérateur (`===`) qui teste la stricte égalité de deux valeurs, et renvoie un résultat `true`/`false` (vrai/faux).
 
 > **Note :** Voyez la page relative à [SyntaxError: missing ; before statement](/fr/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) pour plus de précisions à propos de cette erreur.
 
@@ -260,7 +260,7 @@ Ces erreurs signalent généralement l'oubli de guillemets ouvrants ou fermants 
 
 Pour toutes ces erreurs, revoyez comment nous avons opéré dans les exemples de ce parcours. Quand une erreur survient, regardez le numéro de ligne indiqué, allez à cette ligne et voyez si vous remarquez ce qui ne va pas. N'oubliez pas que l'erreur n'est pas forcément sur la ligne indiquée, et qu'elle ne provient pas forcément d'un des problèmes évoqués plus haut&nbsp;!
 
-> **Note :** Voyez les pages relatives à  [SyntaxError: Unexpected token](/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_token) et [SyntaxError: unterminated string literal](/fr/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) pour plus de précisions à ce propos.
+> **Note :** Voyez les pages relatives à [SyntaxError: Unexpected token](/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_token) et [SyntaxError: unterminated string literal](/fr/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) pour plus de précisions à ce propos.
 
 ## Résumé
 
@@ -269,6 +269,6 @@ Voilà ce que nous pouvons dire à propos des erreurs basiques pour de simples p
 ## Voir aussi
 
 - Il y a nombre d'autres erreurs qui n'ont pas été listées ici&nbsp;; nous les avons récolées dans un référencement qui les explique en détail — voyez [JavaScript error reference](/fr/docs/Web/JavaScript/Reference/Errors).
-- Si dans votre code vous rencontrez une erreur, et même après avoir lu cet article, vous ne parvenez pas à la corriger, vous pouvez obtenir de l'aide&nbsp;! Demandez‑la sur le fil de discussion [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou par le canal IRC de [#mdn](irc://irc.mozilla.org/mdn) sur  [Mozilla IRC](https://wiki.mozilla.org/IRC). Dites‑nous quelle est cette erreur, et nous essayerons de vous aider. Un listing de votre code sera aussi utile.
+- Si dans votre code vous rencontrez une erreur, et même après avoir lu cet article, vous ne parvenez pas à la corriger, vous pouvez obtenir de l'aide&nbsp;! Demandez‑la sur le fil de discussion [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou par le canal IRC de [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Dites‑nous quelle est cette erreur, et nous essayerons de vous aider. Un listing de votre code sera aussi utile.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}

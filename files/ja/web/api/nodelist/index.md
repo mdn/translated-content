@@ -78,12 +78,7 @@ Array.prototype.forEach.call(list, function (checkbox) {
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}}             | {{ Spec2('DOM WHATWG') }} |          |
-| {{SpecName('DOM3 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM3 Core') }} |          |
-| {{SpecName('DOM2 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM2 Core') }} |          |
-| {{SpecName('DOM1', 'level-one-core.html#ID-536297177', 'NodeList')}} | {{ Spec2('DOM1') }}         | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

@@ -58,10 +58,7 @@ _親である {{domxref("Stylesheet")}} からメソッドを継承します。_
 
 ## 仕様
 
-| 仕様書                                                                                           | 策定状況                         | 備考     |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName("CSSOM", "#cssstylesheet", 'CSSStyleSheet')}}                     | {{Spec2("CSSOM")}}         |          |
-| {{SpecName("DOM2 Style", "css.html#CSS-CSSStyleSheet", "CSSStyleSheet")}} | {{Spec2("DOM2 Style")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 

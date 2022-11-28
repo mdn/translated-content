@@ -1,9 +1,6 @@
 ---
 title: element.clientTop
 slug: Web/API/Element/clientTop
-tags:
-  - Referencia_DOM_de_Gecko
-translation_of: Web/API/Element/clientTop
 ---
 
 {{ ApiRef }}

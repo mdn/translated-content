@@ -20,7 +20,7 @@ string unparsed-entity-url(chaîne)
 ### Arguments
 
 - `chaîne`
-  - : Le nom de l'entité non analysée. Si l'argument n'est pas une chaîne, il est converti suivant les règles de la fonction [`string()`](fr/XPath/Fonctions/string). Le nom doit être un nom XML.
+  - : Le nom de l'entité non analysée. Si l'argument n'est pas une chaîne, il est converti suivant les règles de la fonction [`string()`](/fr/XPath/Fonctions/string). Le nom doit être un nom XML.
 
 ### Retour
 

@@ -1,15 +1,6 @@
 ---
 title: Tutoriales
 slug: Web/Tutorials
-tags:
-  - Articulo Web
-  - Código
-  - Diseño Web
-  - Guía
-  - Principiante
-  - Programa Web
-  - Tutoriales
-translation_of: Web/Tutorials
 original_slug: Web/Tutoriales
 ---
 

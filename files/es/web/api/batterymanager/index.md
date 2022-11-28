@@ -1,15 +1,6 @@
 ---
 title: BatteryManager
 slug: Web/API/BatteryManager
-translation_of: Web/API/BatteryManager
-tags:
-  - API
-  - Batería API
-  - Dispositivo API
-  - Interface
-  - Obsoleto
-  - Referencia
-browser-compat: api.BatteryManager
 ---
 
 {{APIRef}}{{deprecated_header}}
@@ -34,7 +25,7 @@ La interfaz `BatteryManager` de la [API del Estado de la Batería](/en-US/docs/W
 - {{domxref("BatteryManager.onchargingtimechange")}}
   - : Controlador para el evento [`chargingtimechange`](/es/docs/Web/Reference/Events/chargingtimechange); Este evento se envía cuando se actualiza el tiempo de carga de la batería.
 - {{domxref("BatteryManager.ondischargingtimechange")}}
-  - :  Controlador para el evento[`dischargingtimechange`](/es/docs/Web/Reference/Events/dischargingtimechange); Este evento se envía cuando se actualiza el tiempo de descarga de la batería.
+  - : Controlador para el evento[`dischargingtimechange`](/es/docs/Web/Reference/Events/dischargingtimechange); Este evento se envía cuando se actualiza el tiempo de descarga de la batería.
 - {{domxref("BatteryManager.onlevelchange")}}
   - : Controlador para el evento [`levelchange`](/es/docs/Web/Reference/Events/levelchange); Este evento se envía cuando se actualizael nivel de la batería.
 

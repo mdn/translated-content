@@ -2,6 +2,7 @@
 title: 'Django Tutorial Part 4: Django admin site'
 slug: Learn/Server-side/Django/Admin_site
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 
 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) website의 모델을 만들었으므로, 우리는 Django Admin 을 이용해서 "실제" book data를 추가할 것입니다. 첫째로 우리는 당신에게 관리자 사이트에 모델들을 등록는 방법과, 이후 어떻게 로그인해서 데이터를 만들지를 보여줄 것입니다. 끝으로는 Admin site를 더 개선할 수 있는 방법들에 대해서 알아볼 것입니다.

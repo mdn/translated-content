@@ -43,6 +43,5 @@ L'utilisation de l'élément `<canvas>` n'a rien de très compliqué, mais néce
 
 - [Page du sujet canvas](/fr/docs/Web/HTML/Canvas)
 - [HTML5CanvasTutorials](http://www.html5canvastutorials.com/) (en)
-- [Exemples d'utilisation de canvas](/Special:Tags?tag=Exemples_d'utilisation_de_canvas&language=fr) (en)
 
 {{ Next("Tutoriel_canvas/Utilisation_de_base") }}

@@ -29,7 +29,7 @@ Content-Security-Policy: trusted-types <policyName> <policyName> 'allow-duplicat
 ```
 
 - \<nomRègle>
-  - : Un nom de règle est composé de caractères alphanumériques ou d'un ou plusieurs "`-#=_/@.%`".  Une astérisque (`*`) comme nom de règle informe l'agent utilisateur d'autoriser tout nom de règle unique (quoique la valeur `'allow-duplicates'` pourrait permettre d'être plus laxiste à l'avenir).
+  - : Un nom de règle est composé de caractères alphanumériques ou d'un ou plusieurs "`-#=_/@.%`". Une astérisque (`*`) comme nom de règle informe l'agent utilisateur d'autoriser tout nom de règle unique (quoique la valeur `'allow-duplicates'` pourrait permettre d'être plus laxiste à l'avenir).
 - `'none'`
   - : Interdit la création de toute règle de Trusted Type (identique au fait de ne renseigner aucun nom de règle).
 - `'allow-duplicates'`

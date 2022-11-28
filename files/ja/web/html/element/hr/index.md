@@ -103,11 +103,7 @@ slug: Web/HTML/Element/hr
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考                                                   |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-hr-element', '&lt;hr&gt;')}}     | {{Spec2('HTML WHATWG')}} | `<hr>` 要素の定義                                      |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-hr-element', '&lt;hr&gt;')}} | {{Spec2('HTML5 W3C')}}     |                                                        |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.3', '&lt;hr&gt;')}}             | {{Spec2('HTML4.01')}}     | `align`, `noshade`, `size`, `width` 属性を非推奨にする |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

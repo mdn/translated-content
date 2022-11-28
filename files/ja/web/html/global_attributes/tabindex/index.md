@@ -32,12 +32,7 @@ slug: Web/HTML/Global_attributes/tabindex
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                             | 備考                                                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "interaction.html#attr-tabindex", "tabindex")}} | {{Spec2('HTML WHATWG')}} | 最新のスナップショットである {{SpecName('HTML5.1')}} から変更なし。                                                                                                                                                |
-| {{SpecName('HTML5.1', "editing.html#attr-tabindex", "tabindex")}}         | {{Spec2('HTML5.1')}}     | {{SpecName('HTML WHATWG')}} のスナップショットであり、 {{SpecName('HTML5 W3C')}} から変更なし。                                                                                                             |
-| {{SpecName('HTML5 W3C', "editing.html#attr-tabindex", "tabindex")}}         | {{Spec2('HTML5 W3C')}}     | {{SpecName('HTML WHATWG')}} のスナップショット。 {{SpecName("HTML4.01")}} との違いは、すべての要素でこの属性に対応したこと (グローバル属性化)。                                                            |
-| {{SpecName('HTML4.01', 'interact/forms.html#adef-tabindex', 'tabindex')}} | {{Spec2('HTML4.01')}}     | {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素でのみ対応。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

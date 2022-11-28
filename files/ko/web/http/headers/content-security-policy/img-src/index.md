@@ -65,7 +65,7 @@ Content-Security-Policy: img-src https://example.com/
 
 ## Browser compatibility
 
-{{Compat("http.headers.csp.img-src")}}
+{{Compat}}
 
 ## See also
 

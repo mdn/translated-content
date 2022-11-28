@@ -1,13 +1,6 @@
 ---
 title: ':nth-last-of-type()'
 slug: Web/CSS/:nth-last-of-type
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:nth-last-of-type
 ---
 
 {{CSSRef}}

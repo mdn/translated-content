@@ -1,12 +1,6 @@
 ---
 title: '-moz-outline-radius-topright'
 slug: Web/CSS/-moz-outline-radius-topright
-tags:
-  - CSS
-  - No estandar
-  - Propiedad CSS
-  - Referencia CSS
-translation_of: Web/CSS/-moz-outline-radius-topright
 ---
 
 {{Non-standard_header}}{{CSSRef}}

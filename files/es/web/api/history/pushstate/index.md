@@ -1,19 +1,6 @@
 ---
 title: History.pushState()
 slug: Web/API/History/pushState
-tags:
-  - API
-  - DOM HTML
-  - Historial de navegación
-  - History
-  - History API
-  - Navegador
-  - Sesion
-  - URL
-  - Web
-  - historial
-  - pushState
-translation_of: Web/API/History/pushState
 ---
 
 {{APIRef("History API")}}

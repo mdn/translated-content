@@ -10,6 +10,7 @@ tags:
   - 인터페이스
 translation_of: Web/API/AbortSignal
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 **`AbortSignal`** 인터페이스는 DOM 요청(Fetch와 같은)과 통신하고 필요한 경우 {{domxref("AbortController")}} 객체를 통해 취소할 수 있게 해주는 신호 객체를 나타냅니다.

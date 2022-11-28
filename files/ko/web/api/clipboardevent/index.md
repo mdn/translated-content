@@ -13,6 +13,7 @@ tags:
   - paste
 browser-compat: api.ClipboardEvent
 ---
+
 {{APIRef("Clipboard API")}} {{SeeCompatTable}}
 
 **`ClipboardEvent`** 인터페이스는 {{event("cut")}}, {{event("copy")}}, {{event("paste")}} 이벤트처럼 클립보드 조작에 대한 정보를 제공하는 이벤트를 나타냅니다.

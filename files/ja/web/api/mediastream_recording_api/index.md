@@ -118,9 +118,7 @@ MediaStream Recording API の使用方法の詳細については、[MediaStream
 
 ## 仕様
 
-| 仕様                                                                         | 状態                                         | コメント |
-| ---------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName("MediaStream Recording", "#MediaRecorderAPI")}} | {{Spec2("MediaStream Recording")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

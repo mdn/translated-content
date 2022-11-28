@@ -1,13 +1,6 @@
 ---
 title: '-webkit-mask-image'
 slug: Web/CSS/mask-image
-tags:
-  - CSS
-  - No estándar(2)
-  - Propiedad CSS
-  - Referencia CSS
-translation_of: Web/CSS/mask-image
-translation_of_original: Web/CSS/-webkit-mask-image
 original_slug: Web/CSS/-webkit-mask-image
 ---
 

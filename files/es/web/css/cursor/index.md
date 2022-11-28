@@ -1,9 +1,6 @@
 ---
 title: cursor
 slug: Web/CSS/cursor
-tags:
-  - Referencia_CSS
-translation_of: Web/CSS/cursor
 ---
 
 {{ CSSRef() }}

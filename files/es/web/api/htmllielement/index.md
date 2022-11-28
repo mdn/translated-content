@@ -1,10 +1,6 @@
 ---
 title: HTMLLIElement
 slug: Web/API/HTMLLIElement
-tags:
-  - API
-  - HTML DOM
-translation_of: Web/API/HTMLLIElement
 ---
 
 {{ APIRef("HTML DOM") }}

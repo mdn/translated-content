@@ -347,7 +347,7 @@ Revenons à l'exemple que nous avons décrit plus haut — afficher les noms des
 
 4. En plus des lignes de code ci‑dessus, vous aurez aussi à convertir les prix de chaîne de caractères en chiffres. Si vous ne vous souvenez pas comment faire, revoyez le [premier article à propos des chaînes](/fr/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
 5. Il y a une variable nommée `total` créée et initialisée à la valeur de 0 en tête du code. Dans la boucle (sous `// number 4`) ajoutez une ligne qui ajoute à ce total le prix de l'article courant à chaque itération de la boucle, de sorte que à la fin du code le prix total soit correctement inscrit sur l'envoi. Vous pourriez avoir besoin d'un [opérateur d'assignation](/fr/docs/Learn/JavaScript/First_steps/Math#assignment_operators) pour faire cela ;-).
-6. Nous souhaitons que vous modifiez la ligne au‑dessous de  `// number 5` de sorte que la variable `itemText` soit égale à «&nbsp;nom actuel de l'élément — $prix actuel de l'élément&nbsp;», par exemple «&nbsp;Shoes — $23.99&nbsp;» dans chaque cas, de façon à ce qu'une information correcte soit affichée sur l'envoi. Il s'agit d'une simple concaténation de chaînes de caractères, chose qui doit vous être familière.
+6. Nous souhaitons que vous modifiez la ligne au‑dessous de `// number 5` de sorte que la variable `itemText` soit égale à «&nbsp;nom actuel de l'élément — $prix actuel de l'élément&nbsp;», par exemple «&nbsp;Shoes — $23.99&nbsp;» dans chaque cas, de façon à ce qu'une information correcte soit affichée sur l'envoi. Il s'agit d'une simple concaténation de chaînes de caractères, chose qui doit vous être familière.
 
 ```html hidden
 <div class="output" style="min-height: 150px;">

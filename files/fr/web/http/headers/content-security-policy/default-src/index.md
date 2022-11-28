@@ -144,6 +144,6 @@ Content-Security-Policy: connect-src 'self';
   - {{Glossary("Document directive")}}
   - {{Glossary("Navigation directive")}}
   - {{Glossary("Reporting directive")}}
-  - [`upgrade-insecure-requests`](/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
-  - [`block-all-mixed-content`](/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
-  - [`require-sri-for`](/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for) {{experimental_inline}}
+  - [`upgrade-insecure-requests`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
+  - [`block-all-mixed-content`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
+  - [`require-sri-for`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for) {{experimental_inline}}

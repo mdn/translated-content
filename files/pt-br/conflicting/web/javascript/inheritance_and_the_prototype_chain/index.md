@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 ---
+
 JavaScript é uma linguagem orientada a objetos com base em protótipos, em vez de ser baseada em classes. Devido a essa base diferente, pode ser menos evidente como o JavaScript permite criar hierarquias de objetos e ter herança de propriedades e seus valores. Este capítulo tenta esclarecer essa situação.
 
 Este capítulo assume que você já está um pouco familiarizado com JavaScript e que você já tenha usado funções JavaScript para criar simples objetos.

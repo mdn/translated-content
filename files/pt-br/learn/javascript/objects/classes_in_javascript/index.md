@@ -353,7 +353,7 @@ class Teacher extends Person {
 }
 ```
 
-Em nossa classe acima, temos um getter e setter para a propriedade `subject`. Usamos **`_` **para criar um valor separado no qual armazenar nossa propriedade de nome. Sem usar essa convenção, obteríamos erros toda vez que chamássemos get ou set. Neste ponto:
+Em nossa classe acima, temos um getter e setter para a propriedade `subject`. Usamos **`_`** para criar um valor separado no qual armazenar nossa propriedade de nome. Sem usar essa convenção, obteríamos erros toda vez que chamássemos get ou set. Neste ponto:
 
 - Para mostrar o valor atual da propriedade `_subject` do objeto `snape` , podemos usar o método getter `snape.subject`.
 - Para atribuir um novo valor à propriedade `_subject` , podemos usar o método setter `snape.subject="new value"`.

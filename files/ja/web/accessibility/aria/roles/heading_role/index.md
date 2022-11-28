@@ -79,9 +79,7 @@ slug: Web/Accessibility/ARIA/Roles/heading_role
 
 ## 仕様
 
-| 仕様                                                     | 状態                     |
-| -------------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#heading","heading")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## 優先順位
 
