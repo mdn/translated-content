@@ -96,6 +96,7 @@ Os valores de palavra-chave podem ser agrupados em seis categorias de valor.
 
 > **Nota:** Navegadores que suportam a sintaxe de dois valores, ao encontrar apenas o valor interno, como quando `display: flex` ou `display: grid` é especificado, definirão seu valor externo como `block`.
 > Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento como `display: grid`, você esperaria que a caixa criada no contêiner da grade fosse uma caixa de nível de bloco.
+
 ### Item de lista
 
 - {{CSSxRef("&lt;display-listitem&gt;")}}

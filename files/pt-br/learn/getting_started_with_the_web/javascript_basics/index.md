@@ -81,7 +81,7 @@ let myVariable;
 
 Um ponto e vírgula no final de uma linha indica onde uma instrução termina. Só é necessário quando você precisa separar instruções em uma única linha. No entanto, algumas pessoas acreditam que é uma boa prática colocar ponto-e-vírgula no final de cada instrução. Existem outras regras para quando você deve e não deve usar ponto-e-vírgula. Para obter mais detalhes, consulte [Your Guide to Semicolons in JavaScript](https://www.codecademy.com/resources/blog/your-guide-to-semicolons-in-javascript/).
 
-Você pode nomear uma variável para praticamente qualquer coisa, mas há algumas restrições. (Consulte [esta seção sobre regras de nomenclatura](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#variables).) Se não tiver certeza, você pode [verificar o nome da variável](https://mothereff.in /js-variables) para ver se é válido.
+Você pode nomear uma variável para praticamente qualquer coisa, mas há algumas restrições. (Consulte [esta seção sobre regras de nomenclatura](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#variables).) Se não tiver certeza, você pode [verificar o nome da variável](https://mothereff.in/js-variables) para ver se é válido.
 
 JavaScript diferencia maiúsculas de minúsculas. Isso significa que `minhaVariável` não é o mesmo que `minhavariável`. Se você tiver problemas em seu código, verifique o caso!
 
