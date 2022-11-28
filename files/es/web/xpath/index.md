@@ -1,10 +1,6 @@
 ---
 title: XPath
 slug: Web/XPath
-tags:
-  - Todas_las_Categorías
-  - XPath
-translation_of: Web/XPath
 ---
 
 El **Lenguaje de Caminos XML**

@@ -3,6 +3,7 @@ title: RTCPeerConnection.iceGatheringState
 slug: Web/API/RTCPeerConnection/iceGatheringState
 translation_of: Web/API/RTCPeerConnection/iceGatheringState
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 읽기 속성인 **`RTCPeerConnection.iceGatheringState`**는 연결 인터페이스의 ICE 수집 상태를 알려주는 `RTCIceGatheringState`타입의 Enum을 반환합니다. 이 속성을 활용하면, ICE candidate 수집 과정이 언제 종료되는지 감지 할 수 있습니다.

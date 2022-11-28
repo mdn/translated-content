@@ -1,8 +1,6 @@
 ---
 title: Element.animate()
 slug: Web/API/Element/animate
-translation_of: Web/API/Element/animate
-browser-compat: api.Element.animate
 ---
 
 {{APIRef}}

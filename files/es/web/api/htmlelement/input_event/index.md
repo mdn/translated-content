@@ -1,12 +1,6 @@
 ---
 title: Evento input
 slug: Web/API/HTMLElement/input_event
-tags:
-  - DOM
-  - Evento
-  - InputEvent
-  - Referencia
-translation_of: Web/API/HTMLElement/input_event
 ---
 
 {{APIRef}}

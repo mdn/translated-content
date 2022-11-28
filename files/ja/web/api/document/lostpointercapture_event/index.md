@@ -62,9 +62,7 @@ para.addEventListener('pointerdown', (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                                 |
-| ------------------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Pointer Events', '#the-lostpointercapture-event')}} | {{Spec2('Pointer Events')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

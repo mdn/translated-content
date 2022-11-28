@@ -3,6 +3,7 @@ title: 이전 브라우저 지원
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 original_slug: Learn/CSS/CSS_layout/이전_브라우저_지원
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}

@@ -18,18 +18,18 @@ substring(string ,start [,length] )
 
 ### 인수
 
-- _`string`_
+- `string`
   - : 평가할 문자열.
-- _`start`_
+- `start`
   - : 부분 문자열이 시작하는
-    _`string`_
+    `string`
     안 위치.
-- _`length`_
+- `length`
   (선택사항)
   - : 부분 문자열의 길이. 빼면, 반환되는 문자열은
-    _`start`_
+    `start`
     위치부터
-    _`string`_
+    `string`
     의 끝까지 모든 문자를 포함합니다.
 
 ### 반환

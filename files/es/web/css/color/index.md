@@ -1,20 +1,6 @@
 ---
 title: color
 slug: Web/CSS/color
-tags:
-  - CSS
-  - Colores CSS
-  - Colores HTML
-  - Diseño
-  - Estilo HTML
-  - Estilo Texto
-  - Estilos HTML
-  - Propiedad CSS
-  - Referencia
-  - Referencia_CSS
-  - Web
-  - color
-translation_of: Web/CSS/color
 ---
 
 {{CSSRef}}

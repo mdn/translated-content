@@ -16,9 +16,7 @@ slug: Web/API/PerformanceLongTaskTiming
 
 ## 仕様書
 
-| 仕様書                                                                                                                 | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Long Tasks','#sec-PerformanceLongTaskTiming','PerformanceLongTaskTiming')}} | {{Spec2('Long Tasks')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

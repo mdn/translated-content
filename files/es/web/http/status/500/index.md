@@ -1,11 +1,6 @@
 ---
 title: 500 Error Interno del Servidor
 slug: Web/HTTP/Status/500
-tags:
-  - Codigo de Estado
-  - Error del servidor
-  - HTTP
-translation_of: Web/HTTP/Status/500
 ---
 
 El código de respuesta **`500 Error Interno del Servidor`** del Protocolo de Transferencia de Hipertexto (HTTP) indica que el servidor encontró una condición inesperada que le impide completar la petición.

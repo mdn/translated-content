@@ -298,10 +298,7 @@ tbody > tr > th {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG','tables.html#the-tbody-element','tbody 要素')}}     | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C','tabular-data.html#the-tbody-element','tbody 要素')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

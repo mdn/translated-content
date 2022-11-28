@@ -1,7 +1,6 @@
 ---
 title: following-sibling
 slug: Web/XPath/Axes/following-sibling
-translation_of: Web/XPath/Axes/following-sibling
 original_slug: Web/XPath/Ejes/following-sibling
 ---
 

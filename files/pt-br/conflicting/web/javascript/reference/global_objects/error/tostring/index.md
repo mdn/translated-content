@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Error/toSource
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 O método **`toSource()`** retorna código que pode resultar no mesmo erro.

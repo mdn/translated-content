@@ -1,13 +1,6 @@
 ---
 title: IDBDatabase.transaction()
 slug: Web/API/IDBDatabase/transaction
-tags:
-  - Almacenamiento
-  - Base de datos
-  - Referencia
-  - metodo
-  - transacción
-translation_of: Web/API/IDBDatabase/transaction
 ---
 
 {{ APIRef("IndexedDB") }}

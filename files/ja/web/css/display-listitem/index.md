@@ -38,9 +38,7 @@ slug: Web/CSS/display-listitem
 
 ## 仕様書
 
-| 仕様書                                                                                            | 状態                           |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-listitem', 'display-listitem')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

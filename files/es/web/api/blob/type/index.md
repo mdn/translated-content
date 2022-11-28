@@ -1,14 +1,6 @@
 ---
 title: Blob.type
 slug: Web/API/Blob/type
-tags:
-  - API
-  - Archivo
-  - Archivos
-  - DOM
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Blob/type
 ---
 
 {{APIRef("File API")}}

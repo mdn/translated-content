@@ -1,8 +1,6 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
-browser-compat: http.headers.Cache-Control
-translation_of: Web/HTTP/Headers/Cache-Control
 ---
 
 {{HTTPSidebar}}

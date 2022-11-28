@@ -1,11 +1,6 @@
 ---
 title: PUT
 slug: Web/HTTP/Methods/PUT
-tags:
-  - HTTP
-  - Método HTTP
-  - Petición
-translation_of: Web/HTTP/Methods/PUT
 ---
 
 {{HTTPSidebar}}

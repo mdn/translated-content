@@ -1,15 +1,6 @@
 ---
 title: <script>
 slug: Web/SVG/Element/script
-tags:
-  - Elemento
-  - HTML
-  - HTML scripting
-  - Referencia
-  - Scripting
-  - Web
-  - etiqueta
-translation_of: Web/SVG/Element/script
 original_slug: Web/HTML/Elemento/script
 ---
 

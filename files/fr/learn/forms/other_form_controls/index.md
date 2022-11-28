@@ -19,7 +19,7 @@ Voyons maintenant les fonctionnalités des éléments de formulaire qui ne sont 
     <tr>
       <th scope="row">Objectifs&nbsp;:</th>
       <td>
-        Comprendre les fonctionnalités des formulaires en dehors des éléments <code>&lt;input&gt;</code> et comment les implémenter  l'aide de HTML.
+        Comprendre les fonctionnalités des formulaires en dehors des éléments <code>&lt;input&gt;</code> et comment les implémenter l'aide de HTML.
       </td>
     </tr>
   </tbody>

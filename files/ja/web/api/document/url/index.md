@@ -36,9 +36,7 @@ document.getElementById("url").textContent = document.URL;
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                             | 備考                                                                                           |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------- |
-| {{SpecName("DOM WHATWG", "#dom-document-url", "Document.URL")}} | {{Spec2("DOM WHATWG")}} | プロパティを {{domxref("DOMString")}} ではなく {{domxref("USVString")}} と定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

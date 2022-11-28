@@ -149,10 +149,7 @@ favDialog.addEventListener('close', function onClose() {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-dialog-element', '&lt;dialog&gt;')}}                 | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5.2', 'interactive-elements.html#the-dialog-element', '&lt;dialog&gt;')}} | {{Spec2('HTML5.2')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

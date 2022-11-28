@@ -1,7 +1,6 @@
 ---
 title: CssRule.selectorText
 slug: Web/API/CSSStyleRule/selectorText
-translation_of: Web/API/CSSStyleRule/selectorText
 ---
 
 {{ ApiRef() }}

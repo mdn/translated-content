@@ -1,13 +1,6 @@
 ---
 title: Element.setCapture()
 slug: Web/API/Element/setCapture
-tags:
-  - API
-  - DOM
-  - Element
-  - Método(2)
-  - Referencia
-translation_of: Web/API/Element/setCapture
 ---
 
 {{ APIRef }}

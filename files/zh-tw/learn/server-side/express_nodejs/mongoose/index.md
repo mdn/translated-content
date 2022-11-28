@@ -93,7 +93,7 @@ NPM 套件管理器站點上，有許多 ODM / ORM 解決方案（查看 [odm](h
 
 > **備註：** 正如我們在下面的**Mongoose 入門**中所討論的那樣，通常只需要在一個模型中定義文檔/模型之間關係的字段（通過在另一個模型中搜索相關的`_id`仍然可以找到反向關係）。下面我們選擇在書本綱要（Book schema）中定義 Book/Genre 和 Book/Author 之間的關係，以及書本實例綱要（BookInstance Schema）中 Book/BookInstance 之間的關係。這種選擇有點武斷—我們同樣可以在其他綱要中擁有該字段。
 
-![Mongoose Library Model  with correct cardinality](library_website_-_mongoose_express.png)
+![Mongoose Library Model with correct cardinality](library_website_-_mongoose_express.png)
 
 > **備註：** 下一節提供了一個基本的入門知識，解釋如何定義和使用模型。在您閱讀它時，請想想我們將如何構建上圖中的每個模型。
 

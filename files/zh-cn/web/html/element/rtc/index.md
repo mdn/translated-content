@@ -9,7 +9,7 @@ slug: Web/HTML/Element/rtc
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
-   <td>无  </td>
+   <td>无</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>

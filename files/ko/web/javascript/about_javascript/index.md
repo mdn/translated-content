@@ -18,7 +18,7 @@ original_slug: Web/JavaScript/About
 
 자바스크립트는 클라이언트 측 웹(브라우저)에서 실행 되고, 웹 페이지가 이벤트 발생 시 어떻게 작동하는 지 디자인 / 프로그래밍할 수 있다. 자바스크립트는 쉽게 배울 수 있고 강력한 스크립트 언어로 웹 페이지 동작을 제어하는 데 널리 사용된다.
 
-대중적인 오해와 달리, **Javascript는 "인터프리트 형태의 자바"가 아니다.** 간단히 말하면, Javascript는 [프로토타입 기반](/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages) 객체 생성을 지원하는 동적 스크립트 언어이다. 기본적인 문법은  언어 학습에 필요한 새로운 개념을 줄이기 위해 Java와 C++의 `if`문, `for`와 `while`문, `switch`문과 `try...catch` 구문을 사용하는 언어구조를 사용하며, 그와 같은 (거의 가까운) 동작을 한다.
+대중적인 오해와 달리, **Javascript는 "인터프리트 형태의 자바"가 아니다.** 간단히 말하면, Javascript는 [프로토타입 기반](/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages) 객체 생성을 지원하는 동적 스크립트 언어이다. 기본적인 문법은 언어 학습에 필요한 새로운 개념을 줄이기 위해 Java와 C++의 `if`문, `for`와 `while`문, `switch`문과 `try...catch` 구문을 사용하는 언어구조를 사용하며, 그와 같은 (거의 가까운) 동작을 한다.
 
 Javascript는 [절차지향 (procedural)](http://www.instantweb.com/%7Efoldoc/foldoc.cgi?query=procedural&#x26;action=Search) 언어와 [객체지향 (object oriented)](http://www.instantweb.com/%7Efoldoc/foldoc.cgi?query=object+oriented&#x26;action=Search) 언어 두가지 형태로 만들수 있다. 자바스크립트에서 객체는 **실행 시간에** 빈 객체를 오버라이딩하여 메소드와 프로퍼티를 연결하는 (프로그래밍)방식으로 생성된다. C++ 및 Java와 같은 컴파일 언어에서 공통적인 구문 클래스 정의와 반대되는 개념이다. 한번 객체가 생성하면, 비슷한 객체를 생성할 때 프로토타입으로 사용할 수 있다.
 

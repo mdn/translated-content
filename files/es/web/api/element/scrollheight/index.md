@@ -1,13 +1,6 @@
 ---
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
-tags:
-  - API
-  - Necesidad de Ejemplo de eliminación DHTML
-  - Propiedad
-  - Referencia
-  - Vista CSSOM
-translation_of: Web/API/Element/scrollHeight
 ---
 
 {{APIRef}}

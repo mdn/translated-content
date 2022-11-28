@@ -1,12 +1,6 @@
 ---
 title: MimeType
 slug: Web/API/MimeType
-tags:
-  - API
-  - Interface
-  - Plugins
-  - Referencia
-translation_of: Web/API/MimeType
 ---
 
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}

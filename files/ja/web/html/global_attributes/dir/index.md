@@ -26,12 +26,7 @@ slug: Web/HTML/Global_attributes/dir
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                             | 備考                                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#the-dir-attribute", "dir")}} | {{Spec2('HTML WHATWG')}} | 最新のスナップショットである {{SpecName('HTML5.1')}} から変更なし。                                                                                                                                                                                                                                                                                                        |
-| {{SpecName('HTML5.1', "dom.html#the-dir-attribute", "dir")}}     | {{Spec2('HTML5.1')}}     | {{SpecName('HTML WHATWG')}} のスナップショットであり、{{SpecName('HTML5 W3C')}} から変更はありません。                                                                                                                                                                                                                                                              |
-| {{SpecName('HTML5 W3C', "dom.html#the-dir-attribute", "dir")}} | {{Spec2('HTML5 W3C')}}     | {{SpecName('HTML WHATWG')}} のスナップショットであり、{{SpecName('HTML4.01')}} の仕様に値 `auto` を追加、および真にグローバルな属性になりました。                                                                                                                                                                                                                  |
-| {{SpecName('HTML4.01', "dirlang.html#h-8.2", "dir")}}             | {{Spec2('HTML4.01')}}     | {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("bdo")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}} を除くすべての要素で対応します。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

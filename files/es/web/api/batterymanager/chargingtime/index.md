@@ -1,8 +1,6 @@
 ---
 title: BatteryManager.chargingTime
 slug: Web/API/BatteryManager/chargingTime
-translation_of: Web/API/BatteryManager/chargingTime
-browser-compat: api.BatteryManager.chargingTime
 ---
 
 {{deprecated_header}}

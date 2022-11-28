@@ -10,6 +10,7 @@ tags:
   - 읽기 전용
 translation_of: Web/API/Element/classList
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.classList`**는 엘리먼트의 클래스 속성의 컬렉션인 활성 {{domxref("DOMTokenList")}}를 반환하는 읽기 전용 프로퍼티이다.

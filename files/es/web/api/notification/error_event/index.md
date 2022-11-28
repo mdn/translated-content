@@ -1,8 +1,6 @@
 ---
 title: 'Notification: evento error'
 slug: Web/API/Notification/error_event
-page-type: web-api-event
-browser-compat: api.Notification.error_event
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

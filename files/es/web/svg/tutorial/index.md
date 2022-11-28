@@ -1,16 +1,6 @@
 ---
 title: Tutorial de SVG
 slug: Web/SVG/Tutorial
-tags:
-  - Intermedio
-  - NeedsTranslation
-  - NesecitaActualizacion
-  - NesecitaAyuda
-  - NesecitaContenido
-  - SVG
-  - TopicStub
-  - Tutorial de SVG
-translation_of: Web/SVG/Tutorial
 ---
 
 Los graficos de vectores escalables, SVG , es un dialecto XML de W#C usado para describir graficos. Esta parcialente implementado en Firefox, Opera, WebKit , Internet Explorer y otros.

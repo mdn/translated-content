@@ -3,6 +3,7 @@ title: Selection.toString()
 slug: Web/API/Selection/toString
 translation_of: Web/API/Selection/toString
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 **`Selection.toString()`** 메소드는 selection 객체가 현재 나타내는 문자열을 반환합니다. 즉, 현재 선택된 텍스트의 문자열.

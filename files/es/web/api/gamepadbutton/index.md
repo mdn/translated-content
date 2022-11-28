@@ -1,12 +1,6 @@
 ---
 title: GamepadButton
 slug: Web/API/GamepadButton
-tags:
-  - API
-  - API Gamepad
-  - Referencia
-  - juegos
-translation_of: Web/API/GamepadButton
 ---
 
 {{APIRef("Gamepad API")}}

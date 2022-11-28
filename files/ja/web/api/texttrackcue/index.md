@@ -31,10 +31,7 @@ _このインターフェイスは {{domxref("EventTarget")}} からもプロパ
 
 ## 仕様
 
-| 仕様                                                                         | 状態                             | コメント |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG','#texttrackcue','TextTrackCue')}} | {{Spec2("HTML WHATWG")}} |          |
-| {{SpecName('HTML5 W3C','#texttrackcue','TextTrackCue')}} | {{Spec2("HTML5 W3C")}}     | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
