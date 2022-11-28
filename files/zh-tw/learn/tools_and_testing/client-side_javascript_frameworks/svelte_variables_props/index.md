@@ -68,13 +68,13 @@ npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior
 
 <https://svelte.dev/repl/c862d964d48d473ca63ab91709a0a5a0?version=3.23.2>
 
-## Working with to-dos
+## 處理待辦事項
 
-Our `Todos.svelte` component is currently just displaying static markup; let's start making it a bit more dynamic. We'll take the tasks information from the markup and store it in a `todos` array. We'll also create two variables to keep track of the total number of tasks and the completed tasks.
+目前我們的 `Todos.svelte` 元件只有顯示靜態標記語言，讓我們開始讓它變得更加動態。我們將從標記語言中取得任務資訊並將其儲存在 `todos` 陣列中。另外我們將建立兩個變數來持續追蹤任務總數及已完成的任務。
 
-The state of our component will be represented by these three top-level variables.
+我們元件的狀態將由這三個頂層變數代表。
 
-1. Create a `<script>` section at the top of `src/components/Todos.svelte` and give it some content, as follows:
+1. 在 `src/components/Todos.svelte` 的頂端建立一個 `<script>` 區塊並給它一些內容，如下所示：
 
    ```html
    <script>
@@ -88,16 +88,16 @@ The state of our component will be represented by these three top-level variable
    </script>
    ```
 
-   Now let's do something with that information.
+   現在讓我們用這些資訊做點什麼。
 
-2. Let's start by showing a status message. Find the `<h2>` heading with an `id` of `list-heading` and replace the hardcoded number of active and completed tasks with dynamic expressions:
+2. 讓我們從顯示狀態訊息開始。找到 `id` 為 `list-heading` 的 `<h2>` 標頭並用動態表達式替換已經寫死的現行任務及已完成任務數量：
 
    ```html
    <h2 id="list-heading">{completedTodos} out of {totalTodos} items completed</h2>
    ```
 
-3. Go to the app, and you should see the "2 out of 3 items completed" message as before, but this time the information is coming from the `todos` array.
-4. To prove it, go to that array, and try changing some of the to-do object's completed property values, and even add a new to-do object. Observe how the numbers in the message are updated appropriately.
+3. 回到應用程式，你應該會看到和以前一樣的「2 out of 3 items completed」訊息，但這次的資訊來自 `todos` 陣列。
+4. 為了證明這一點，回到陣列並嘗試改變一些待辦事項物件的已完成屬性值，甚至是新增一個新的待辦事項物件。觀察訊息中的數字是如何適當地被更新。
 
 ## Dynamically generating the to-dos from the data
 
