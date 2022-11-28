@@ -5,7 +5,7 @@ slug: Web/CSS/vertical-align
 
 {{CSSRef}}
 
-A propriedade **`vertical-align`** [CSS](/en-US/docs/Web/CSS) define o alinhamento vertical de uma caixa inline, inline-block ou table-cell.
+A propriedade **`vertical-align`** do [CSS](/pt-BR/docs/Web/CSS) define o alinhamento vertical de uma caixa inline, inline-block ou table-cell.
 
 {{EmbedInteractiveExample("pages/css/vertical-align.html")}}
 
@@ -14,7 +14,7 @@ A propriedade vertical-align pode ser usada em dois contextos:
 - Para alinhar verticalmente a caixa de um elemento inline dentro da caixa de linha que a contém. Por exemplo, pode ser usado para [posicionar verticalmente uma imagem em uma linha de texto](#vertical_alignment_in_a_line_box).
 - Para alinhar verticalmente [o conteúdo de uma célula em uma tabela](#vertical_alignment_in_a_table_cell).
 
-Observe que `vertical-align` só se aplica a elementos inline, inline-block e table-cell: você não pode usá-lo para alinhar verticalmente [elementos em nível de bloco](/en-US/docs/Web/HTML/Block-level_elements).
+Observe que `vertical-align` só se aplica a elementos inline, inline-block e table-cell: você não pode usá-lo para alinhar verticalmente [elementos em nível de bloco](/pt-BR/docs/Web/HTML/Block-level_elements).
 
 ## Sintaxe
 
@@ -53,7 +53,7 @@ A propriedade `vertical-align` é especificada como um dos valores listados abai
 Esses valores alinham verticalmente o elemento em relação ao seu elemento pai:
 
 - `baseline`
-  - : Alinha a linha de base do elemento com a linha de base de seu pai. A linha de base de alguns [elementos substituídos](/en-US/docs/Web/CSS/Replaced_element), como {{HTMLElement("textarea")}}, não é especificada pela especificação HTML, o que significa que seu comportamento com esta palavra-chave pode variar entre os navegadores.
+  - : Alinha a linha de base do elemento com a linha de base de seu pai. A linha de base de alguns [elementos substituídos](/pt-BR/docs/Web/CSS/Replaced_element), como {{HTMLElement("textarea")}}, não é especificada pela especificação HTML, o que significa que seu comportamento com esta palavra-chave pode variar entre os navegadores.
 - `sub`
   - : Alinha a linha de base do elemento com a linha de base subscrita de seu pai.
 - `super`
@@ -248,13 +248,13 @@ td {
 
 {{Specifications}}
 
-## Compatibilidade do navegador
+## Compatibilidade com navegadores
 
 {{Compat}}
 
 ## See also
 
-- [Casos de uso típicos do Flexbox, seção "Item central"](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#center_item)
+- [Casos de uso típicos do Flexbox, seção "Item central"](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#center_item)
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
-- [Entendendo `vertical-align`, ou "Como (não) centralizar o conteúdo verticalmente"](http://phrogz.net/css/vertical-align/index.html)
+- [Entendendo `vertical-align`, ou "Como (não) centralizar o conteúdo verticalmente"](https://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align: Tudo o que você precisa saber](https://christopheraue.net/design/vertical-align)
