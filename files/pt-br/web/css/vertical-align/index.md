@@ -256,5 +256,5 @@ td {
 
 - [Casos de uso típicos do Flexbox, seção "Item central"](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#center_item)
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
-- [Entendendo `vertical-align`, ou "Como (não) centralizar o conteúdo verticalmente"](https://phrogz.net/css/vertical-align/index.html)
+- [Entendendo `vertical-align`, ou "Como (não) centralizar o conteúdo verticalmente"](http://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align: Tudo o que você precisa saber](https://christopheraue.net/design/vertical-align)
