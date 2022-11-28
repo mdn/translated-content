@@ -59,7 +59,7 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 
 > **备注：** 不可能判断（例如，没有实际调用 `next()` 并验证返回的结果）一个特定的对象是否实现了迭代器协议。
 
-很容易使一个迭代器也可迭代：只需实现 `[@@iterator]()` 方法，返回它的 `this`。
+很容易使一个迭代器也可迭代：只需实现 `[@@iterator]()` 方法，并返回它的 `this`。
 
 ```js
 // Satisfies both the Iterator Protocol and Iterable
