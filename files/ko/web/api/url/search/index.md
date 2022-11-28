@@ -9,6 +9,7 @@ tags:
   - URL API
 translation_of: Web/API/URL/search
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} 인터페이스의 **`search`** 속성은 맨 앞의 `'?'`와 함께 URL의 쿼리 문자열, 즉 검색 매개변수를 나타내는 {{domxref("USVString")}}입니다.

@@ -1,9 +1,6 @@
 ---
 title: element.clientLeft
 slug: Web/API/Element/clientLeft
-tags:
-  - Referencia_DOM_de_Gecko
-translation_of: Web/API/Element/clientLeft
 ---
 
 {{ APIRef }}

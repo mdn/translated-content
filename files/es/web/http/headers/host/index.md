@@ -1,11 +1,6 @@
 ---
 title: Host
 slug: Web/HTTP/Headers/Host
-tags:
-  - Cabecera
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Headers/Host
 ---
 
 {{HTTPSidebar}}

@@ -50,9 +50,7 @@ document.addEventListener("visibilitychange", function() {
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                                         | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---- |
-| {{SpecName('Page Visibility API','#sec-visibilitychange-event','visibilitychange')}} | {{Spec2('Page Visibility API')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

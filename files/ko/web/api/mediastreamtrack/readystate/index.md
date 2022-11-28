@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/MediaStreamTrack/readyState
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStreamTrack.readyState`** 읽기 전용 속성은 트랙의 상태를 나타내는 열거형 값을 반환합니다.

@@ -51,11 +51,7 @@ window.addEventListener("gamepadconnected", function(e) {
 
 ## 仕様書
 
-| 仕様                                                                                                             | 状態                                     | コメント                                                                         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName("Gamepad", "#gamepad-interface", "Gamepad")}}                                     | {{Spec2("Gamepad")}}             | 初期定義                                                                         |
-| {{SpecName('WebVR 1.1', '#gamepad-getvrdisplays-attribute', 'displayId')}}             | {{Spec2("WebVR 1.1")}}             | {{domxref("Gamepad.displayId")}} プロパティの定義。                  |
-| {{SpecName("GamepadExtensions", "#partial-gamepad-interface", "Gamepad extensions")}} | {{Spec2("GamepadExtensions")}} | [Experimental extensions to Gamepad](#experimental_extensions_to_gamepad) の定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

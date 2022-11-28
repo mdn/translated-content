@@ -73,10 +73,7 @@ html,body,svg { height:100% }
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                     | 備考     |
-| ---------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('SVG2', 'text.html#TextElement', '&lt;tspan&gt;')}}     | {{Spec2('SVG2')}} |          |
-| {{SpecName('SVG1.1', 'text.html#TSpanElement', '&lt;tspan&gt;')}} | {{Spec2('SVG1.1')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

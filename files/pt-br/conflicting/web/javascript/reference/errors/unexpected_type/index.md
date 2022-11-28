@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Cant_access_property
 original_slug: Web/JavaScript/Reference/Errors/Cant_access_property
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem

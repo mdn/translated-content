@@ -43,9 +43,7 @@ var size = queueingStrategy.size(chunk);
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Streams','#blqs-class','ByteLengthQueuingStrategy')}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

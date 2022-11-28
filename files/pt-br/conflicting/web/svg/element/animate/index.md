@@ -9,6 +9,7 @@ tags:
 translation_of: Web/SVG/Element/animateColor
 original_slug: Web/SVG/Element/animateColor
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 > **Aviso:** Este elemento ficou obsoleto na Segunda Edição do SVG 1.1 e deverá ser removida das futuras versões do SVG. Este elemento fornece recursos ainda não disponíveis utilizando o elemento {{ SVGElement("animate") }} e não está implementado no Firefox e no Internet Explorer. Os autores devem utilizar o elemento {{ SVGElement("animate") }} em seu lugar.

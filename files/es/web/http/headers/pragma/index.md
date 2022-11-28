@@ -1,7 +1,6 @@
 ---
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
-translation_of: Web/HTTP/Headers/Pragma
 ---
 
 {{HTTPSidebar}}

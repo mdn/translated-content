@@ -1,9 +1,6 @@
 ---
 title: element.dispatchEvent
 slug: Web/API/EventTarget/dispatchEvent
-tags:
-  - Referencia_DOM_de_Gecko
-translation_of: Web/API/EventTarget/dispatchEvent
 ---
 
 {{ ApiRef("DOM Events")}}

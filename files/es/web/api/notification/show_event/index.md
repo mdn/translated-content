@@ -1,8 +1,6 @@
 ---
 title: 'Notification: evento show'
 slug: Web/API/Notification/show_event
-page-type: web-api-event
-browser-compat: api.Notification.show_event
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

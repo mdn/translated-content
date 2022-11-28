@@ -57,7 +57,7 @@ Construction de base :
 - Au préalable, créez un nouveau fichier dans le même répertoire que celui des fichiers HTML et image. Nommez‑le avec beaucoup d'imagination quelque chose comme `style.css`.
 - Liez la CSS à votre fichier HTML par l'intermédiaire d'un élément `<link>`.
 - Les deux premières règles du fichier de ressources de la CSS sont pour vous, GRATUITEMENT ! Après vous être réjoui de votre chance, copiez et collez-les au haut de votre nouveau fichier CSS. Utilisez-les comme un test pour vous assurer que la CSS sera correctement appliquée à votre HTML.
-- Au-dessus des deux règles, commentez la CSS d'un court texte pour indiquer qu'il s'agit de styles généraux pour l'ensemble de la page. « Styles généraux pour la page »  fait l'affaire. Ajoutez également trois autres commentaires au bas du fichier CSS pour indiquer les styles spécifiques à la configuration du conteneur de carte, les styles propres de l'en-tête et du pied de page et les styles dédiés au contenu principal de la carte de visite. A partir de maintenant, les styles ajoutés à la CSS devront être placés à l'endroit approprié.
+- Au-dessus des deux règles, commentez la CSS d'un court texte pour indiquer qu'il s'agit de styles généraux pour l'ensemble de la page. « Styles généraux pour la page » fait l'affaire. Ajoutez également trois autres commentaires au bas du fichier CSS pour indiquer les styles spécifiques à la configuration du conteneur de carte, les styles propres de l'en-tête et du pied de page et les styles dédiés au contenu principal de la carte de visite. A partir de maintenant, les styles ajoutés à la CSS devront être placés à l'endroit approprié.
 
 Considérations sur les sélecteurs et les jeux de règles founis dans le fichier des ressources CSS :
 
@@ -100,7 +100,7 @@ La capture d'écran suivante montre un exemple de ce à quoi devrait ressembler 
 
 ## Évaluation
 
-Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur  [le fil de discussion à propos de cet exercise](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abors, il n'y rien à gagner en trichant !
+Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur [le fil de discussion à propos de cet exercise](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abors, il n'y rien à gagner en trichant !
 
 {{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Apprendre/CSS/Introduction_à_CSS")}}
 

@@ -5,7 +5,6 @@ slug: Web/CSS/::first-letter
 
 {{CSSRef}}
 
-
 ## 概要
 
 `::first-letter` [CSS](/zh-TW/CSS) [虛擬元素](/zh-TW/CSS/Pseudo-elements)選取了一個區塊第一行的第一個字母，如果那一行前面沒有其他內容（例如圖片或是行內表格）。

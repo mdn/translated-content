@@ -1,10 +1,6 @@
 ---
 title: Teclado (Keyboard)
 slug: Web/Accessibility/Understanding_WCAG/Keyboard
-tags:
-  - Accesibilidad
-  - teclado
-translation_of: Web/Accessibility/Understanding_WCAG/Keyboard
 original_slug: Web/Accesibilidad/Understanding_WCAG/Teclado
 ---
 

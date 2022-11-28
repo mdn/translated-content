@@ -62,7 +62,7 @@ public class WebSocket {
 
 `write(byte[] b, int off, int len)`
 
-将从数组`b`中的下标*`off`*开始的*`len`*个字节写入此输出流。
+将从数组`b`中的下标`off`开始的`len`个字节写入此输出流。
 
 ### InputStream
 

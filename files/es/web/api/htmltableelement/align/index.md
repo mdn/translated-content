@@ -1,7 +1,6 @@
 ---
 title: HTMLTableElement.align
 slug: Web/API/HTMLTableElement/align
-translation_of: Web/API/HTMLTableElement/align
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header()}}

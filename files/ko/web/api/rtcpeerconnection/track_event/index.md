@@ -4,6 +4,7 @@ slug: Web/API/RTCPeerConnection/track_event
 translation_of: Web/API/RTCPeerConnection/ontrack
 original_slug: Web/API/RTCPeerConnection/ontrack
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("RTCPeerConnection")}} 속성인 **`ontrack`**은 {{domxref("RTCPeerConnection")}}에 트랙이 등록됨을 알려주는 {{event("track")}}가 발생하면 호출되는 함수를 지정하는 {{event("Event_handlers", "event handler")}}입니다.

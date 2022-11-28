@@ -22,8 +22,8 @@ localStorage.setItem('colorSetting', '#a4509b');
 
 Web Storage는 두 메커니즘을 가지고 있습니다.
 
-- **`sessionStorage`**는 페이지의 세션이 유지되는 동안 사용할 수 있는 각 origin별로 별도의 스토리지를 관리합니다. (페이지 리로딩 및 복원을 포함한, 브라우저가 열려있는 한 최대한 긴 시간 동안)
-- **`localStorage`**도 같은 일을 하지만, 브라우저가 닫히거나 다시 열리더라도 유지합니다.
+- `sessionStorage` 는 페이지의 세션이 유지되는 동안 사용할 수 있는 각 origin별로 별도의 스토리지를 관리합니다. (페이지 리로딩 및 복원을 포함한, 브라우저가 열려있는 한 최대한 긴 시간 동안)
+- `localStorage` 도 같은 일을 하지만, 브라우저가 닫히거나 다시 열리더라도 유지합니다.
 
 이 메커니즘들은 {{domxref("Window.sessionStorage")}}와 {{domxref("Window.localStorage")}} 속성(좀 더 정확히 말하자면, 지원하는 브라우저에서 `Window` 객체는 `localStorage` 및 `sessionStorage` 속성 사용이 중단되는 `WindowLocalStorage`과 `WindowSessionStorage`로 구현됩니다)으로 사용 가능합니다. 이 중 하나를 호출하면 데이터를 설정, 검색 및 제거할 수 있는 {{domxref("Storage")}} 객체의 인스턴스가 생성됩니다. 각 Storage 객체는 각 origin 별 `sessionStorage` 나 `localStorage`로 사용됩니다. 동작도 제각기 동작합니다.
 

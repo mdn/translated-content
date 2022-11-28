@@ -31,10 +31,7 @@ _なし_
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                     | コメント   |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ---------- |
-| {{SpecName('SVG2', 'struct.html#DescriptionAndTitleElements', '&lt;desc&gt;')}}     | {{Spec2('SVG2')}} |            |
-| {{SpecName('SVG1.1', 'struct.html#DescriptionAndTitleElements', '&lt;desc&gt;')}} | {{Spec2('SVG1.1')}} | 初期の定義 |
+{{Specifications}}
 
 ## ブラウザー互換性
 

@@ -1,11 +1,6 @@
 ---
 title: Valor inicial
 slug: Web/CSS/initial_value
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/initial_value
 original_slug: Web/CSS/Valor_inicial
 ---
 

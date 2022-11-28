@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLTitleElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLTitleElement`** 인터페이스는 문서의 제목을 담습니다. {{domxref("HTMLElement")}} 인터페이스의 속성과 메서드를 상속합니다,

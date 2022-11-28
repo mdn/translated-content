@@ -1,7 +1,6 @@
 ---
 title: Perceivable
 slug: Web/Accessibility/Understanding_WCAG/Perceivable
-translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
 original_slug: Web/Accesibilidad/Understanding_WCAG/Perceivable
 ---
 

@@ -24,9 +24,7 @@ CSSUnparsedValue.entries(obj)
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                     | 備考     |
-| ------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('CSSOM','#cssunparsedvalue','entries()')}} | {{Spec2('CSSOM')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

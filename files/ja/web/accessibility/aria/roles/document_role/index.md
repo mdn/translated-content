@@ -59,9 +59,7 @@ slug: Web/Accessibility/ARIA/Roles/Document_Role
 
 ## 仕様
 
-| 仕様                                                     | 状態                     |
-| -------------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#document","document")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

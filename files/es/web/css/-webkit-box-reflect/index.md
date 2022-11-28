@@ -1,12 +1,6 @@
 ---
 title: '-webkit-box-reflect'
 slug: Web/CSS/-webkit-box-reflect
-tags:
-  - CSS
-  - No estándar(2)
-  - Propiedad
-  - Referencia
-translation_of: Web/CSS/-webkit-box-reflect
 ---
 
 {{Non-standard_header}}{{CSSRef}}

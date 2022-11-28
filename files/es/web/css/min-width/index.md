@@ -1,9 +1,6 @@
 ---
 title: min-width
 slug: Web/CSS/min-width
-tags:
-  - Referencia_CSS
-translation_of: Web/CSS/min-width
 ---
 
 {{ CSSRef() }}
