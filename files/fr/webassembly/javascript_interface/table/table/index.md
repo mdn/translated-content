@@ -57,7 +57,7 @@ var importObj = {
 };
 ```
 
-Enfin, on charge et on instancie un module WASM (table2.wasm) en utilisant la méthode [`WebAssembly.instantiateStreaming()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming). Le module table2.wasm contient deux fonctions (une qui renvoie 42 et l'autre qui renvoie 83) et on stocke ces deux fonctions dans les éléments 0 et 1 de la table importée (voir [la représentation textuelle](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)).  Ainsi, après l'instanciation, la table a toujours une longueur qui vaut 2 et les éléments contiennent désormais [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Exported_functions) qu'on peut appeler depuis le code JavaScript.
+Enfin, on charge et on instancie un module WASM (table2.wasm) en utilisant la méthode [`WebAssembly.instantiateStreaming()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming). Le module table2.wasm contient deux fonctions (une qui renvoie 42 et l'autre qui renvoie 83) et on stocke ces deux fonctions dans les éléments 0 et 1 de la table importée (voir [la représentation textuelle](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)). Ainsi, après l'instanciation, la table a toujours une longueur qui vaut 2 et les éléments contiennent désormais [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Exported_functions) qu'on peut appeler depuis le code JavaScript.
 
 ```js
 WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
@@ -82,6 +82,6 @@ Dans cet exemple, on illustre la création et l'accès à la table depuis du cod
 
 ## Voir aussi
 
-- La page  [WebAssembly](/fr/docs/WebAssembly)
+- La page [WebAssembly](/fr/docs/WebAssembly)
 - [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
 - [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)

@@ -5,7 +5,7 @@ slug: Web/API/CSSStyleSheet/insertRule
 
 {{ APIRef("CSSOM") }}
 
-**`CSSStyleSheet.insertRule()` **方法用来给当前样式表插入新的样式规则（[CSS rule](/zh-CN/docs/Web/API/CSSRule)），并且包含一些[限制](#限制)。
+**`CSSStyleSheet.insertRule()`** 方法用来给当前样式表插入新的样式规则（[CSS rule](/zh-CN/docs/Web/API/CSSRule)），并且包含一些[限制](#限制)。
 
 > **备注：** 尽管 `insertRule()` 是 {{domxref("CSSStyleSheet")}} 的一个方法，但它实际插入的地方是 `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` 的内部 {{domxref("CSSRuleList")}}。
 
