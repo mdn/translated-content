@@ -153,7 +153,7 @@ p {
 
 ### Affecter des règles à des couches existantes
 
-Dans l'exemple qui suit, on crée deux couches sans leur affecter de règle puis les règles CSS sont appliquées aux deux couches. La couche `base` définit  des valeurs pour les propriétés `color`, `border`, `font-size`, et `padding`. La couche `special` définit une couleur différente. `special` arrivant en dernier lors de la définition des couches, c'est la couleur qu'elle fournit qui est utilisée et le texte est affiché avec la couleur `rebeccapurple`. Toutes les autres règles de `base` continuent de s'appliquer.
+Dans l'exemple qui suit, on crée deux couches sans leur affecter de règle puis les règles CSS sont appliquées aux deux couches. La couche `base` définit des valeurs pour les propriétés `color`, `border`, `font-size`, et `padding`. La couche `special` définit une couleur différente. `special` arrivant en dernier lors de la définition des couches, c'est la couleur qu'elle fournit qui est utilisée et le texte est affiché avec la couleur `rebeccapurple`. Toutes les autres règles de `base` continuent de s'appliquer.
 
 #### HTML
 

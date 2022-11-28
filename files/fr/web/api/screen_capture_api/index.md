@@ -52,7 +52,7 @@ L'API Screen Capture ajoute des propriétés au dictionnaire suivant définit pa
 ### MediaTrackConstraints
 
 - {{domxref("MediaTrackConstraints.cursor")}}
-  - : Un {{domxref("ConstrainDOMString")}}  indiquant si le curseur doit ou non être inclus dans le flux de la surface d'affichage capturée, et s'il doit toujours être visible ou s'il ne doit l'être que lorsque la souris est en mouvement.
+  - : Un {{domxref("ConstrainDOMString")}} indiquant si le curseur doit ou non être inclus dans le flux de la surface d'affichage capturée, et s'il doit toujours être visible ou s'il ne doit l'être que lorsque la souris est en mouvement.
 - {{domxref("MediaTrackConstraints.displaySurface")}}
   - : Un {{domxref("ConstrainDOMString")}} indiquant quel type de surface d'affichage doit être capturé. La valeur peut être `application`, `browser`, `monitor`, ou `window`.
 - {{domxref("MediaTrackConstraints.logicalSurface")}}
