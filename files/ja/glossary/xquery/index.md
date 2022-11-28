@@ -9,5 +9,5 @@ slug: Glossary/XQuery
 
 ### 一般知識
 
-- [公式ウェブサイト](http://www.w3.org/XML/Query/)
+- [公式ウェブサイト](https://www.w3.org/XML/Query/)
 - Wikipedia の [XQuery](https://ja.wikipedia.org/wiki/XQuery)
