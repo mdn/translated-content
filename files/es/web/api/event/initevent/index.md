@@ -7,7 +7,7 @@ slug: Web/API/Event/initEvent
 
 ### Resumen
 
-El método `initEvent` se usa para dar valor inicial a un [evento](es/DOM/event) creado mediante [document.createEvent](es/DOM/document.createEvent).
+El método `initEvent` se usa para dar valor inicial a un [evento](/es/DOM/event) creado mediante [document.createEvent](/es/DOM/document.createEvent).
 
 ### Sintaxis
 
@@ -34,7 +34,7 @@ event.initEvent("click", true, false);
 
 ### Notas
 
-Los eventos inicializados de esta forma, deben haber sido creados por el método [document.createEvent](es/DOM/document.createEvent). Debemos llamar a `initEvent` para inicializar el evento antes de que pueda ser lanzado con [dispatched](es/DOM/element.dispatchEvent).
+Los eventos inicializados de esta forma, deben haber sido creados por el método [document.createEvent](/es/DOM/document.createEvent). Debemos llamar a `initEvent` para inicializar el evento antes de que pueda ser lanzado con [dispatched](/es/DOM/element.dispatchEvent).
 
 ### Especificación
 

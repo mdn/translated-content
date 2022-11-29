@@ -74,7 +74,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 Cela va provoquer l'apparition dans la barre de navigation de `http://mozilla.org/bar.html`, mais ne provoquera pas le chargement effectif de `bar.html` ni même le test d'existence de `bar.html`.
 
-Supposons à présent que l'utilisateur accède à la page `http://google.com`, puis clique sur l'icône "Recul". La barre de navigation va alors afficher `http://mozilla.org/bar.html`, et si vous lisez l'`history.state`, vous obtiendrez le `stateObj`.  L'événement `popstate` ne sera pas lancé car la page a été rechargée. La page elle-même ressemblera à `bar.html`.
+Supposons à présent que l'utilisateur accède à la page `http://google.com`, puis clique sur l'icône "Recul". La barre de navigation va alors afficher `http://mozilla.org/bar.html`, et si vous lisez l'`history.state`, vous obtiendrez le `stateObj`. L'événement `popstate` ne sera pas lancé car la page a été rechargée. La page elle-même ressemblera à `bar.html`.
 
 Si on clique à nouveau sur Recul, l'URL de la barre de navigation va se changer en `http://mozilla.org/foo.html` et le document va recevoir un autre événement `popstate`, qui comportera, cette fois, un état null. Dans ce cas aussi, revenir en arrière ne modifie pas le contenu du document par rapport à ce qu'il était à l'étape précédente, cela bien qu'il ait pu être mis à jour manuellement sur réception de l'événement `popstate`.
 
@@ -136,7 +136,7 @@ Voir {{ domxref("window.onpopstate") }} pour un exemple d'utilisation.
 
 ### Lire l'état courant
 
-Quand votre page est chargée, il se pourrait qu'elle ait un objet état non nul. Cela peut se produire, par exemple, si la page fixe un objet état (avec  `pushState()` ou `replaceState()`) et qu'ensuite l'utilisateur redémarre le navigateur.  Quand votre page sera rechargée, elle recevra l'événement onload , mais pas l'événement popstate.  Néanmoins, si vous lisez la propriété history.state, vous récupèrerez l'objet état que vous auriez obtenu si un événement popstate avait été déclenché.
+Quand votre page est chargée, il se pourrait qu'elle ait un objet état non nul. Cela peut se produire, par exemple, si la page fixe un objet état (avec `pushState()` ou `replaceState()`) et qu'ensuite l'utilisateur redémarre le navigateur. Quand votre page sera rechargée, elle recevra l'événement onload , mais pas l'événement popstate. Néanmoins, si vous lisez la propriété history.state, vous récupèrerez l'objet état que vous auriez obtenu si un événement popstate avait été déclenché.
 
 Vous pouvez lire l'état de l'entrée courante de l'historique sans devoir attendre un événement `popstate` en utilisant la propriété `history.state` comme ceci :
 

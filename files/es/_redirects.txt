@@ -1880,6 +1880,7 @@
 /es/docs/Web/Guide/AJAX/Comunidad	/es/docs/Web/Guide/AJAX/Community
 /es/docs/Web/Guide/AJAX/Primeros_Pasos	/es/docs/Web/Guide/AJAX/Getting_Started
 /es/docs/Web/Guide/API/Vibration	/es/docs/Web/API/Vibration_API
+/es/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC	/es/docs/conflicting/Web/API/WebRTC_API
 /es/docs/Web/Guide/CSS	/es/docs/Learn/CSS
 /es/docs/Web/Guide/HTML	/es/docs/Learn/HTML
 /es/docs/Web/Guide/HTML/Canvas_tutorial	/es/docs/Web/API/Canvas_API/Tutorial
@@ -2730,7 +2731,7 @@
 /es/docs/WebGL	/es/docs/Web/API/WebGL_API
 /es/docs/WebRTC/Introduction	/es/docs/Web/API/WebRTC_API/Session_lifetime
 /es/docs/WebRTC/MediaStream_API	/es/docs/Web/API/Media_Capture_and_Streams_API
-/es/docs/WebRTC/Peer-to-peer_communications_with_WebRTC	/es/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
+/es/docs/WebRTC/Peer-to-peer_communications_with_WebRTC	/es/docs/conflicting/Web/API/WebRTC_API
 /es/docs/WebRTC/Taking_webcam_photos	/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /es/docs/WebSockets-840092-dup	/es/docs/Web/API/WebSockets_API
 /es/docs/WebSockets-840092-dup/Escribiendo_servidor_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_server

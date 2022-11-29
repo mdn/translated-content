@@ -92,7 +92,7 @@ console.log(monInstance instanceof MonConstructeur); // "true"
 console.log(monInstance.constructor); // "MonConstructeur"
 ```
 
-> **Note :** On pourrait également utiliser {{jsxref("Object/__proto__", "Object.__proto__")}}
+> **Note :** On pourrait également utiliser [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 >
 > ```js
 > Function.prototype.construct = function (aArgs) {

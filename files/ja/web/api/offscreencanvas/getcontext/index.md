@@ -91,9 +91,7 @@ gl.canvas; // OffscreenCanvas
 
 ## 仕様書
 
-| Specification                                                                                                                | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "#dom-offscreencanvas-getcontext", "OffscreenCanvas.getContext()")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## ブラウザの互換性
 

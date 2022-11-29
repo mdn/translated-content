@@ -19,9 +19,7 @@ const presentation = navigator.presentation
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("Presentation","#dom-navigator-presentation","Navigator.presentation")}} | {{Spec2('Presentation')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

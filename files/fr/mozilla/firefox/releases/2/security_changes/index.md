@@ -13,7 +13,7 @@ Cet article aborde les changements concernant la sécurité dans Firefox 2.
 
 ### Chiffrements faibles désactivés par défaut
 
-[Firefox 2](fr/Firefox_2) désactive par défaut le support de SSLv2 et les suites de chiffrement faible (celles ayant des longueurs de clefs inférieures à 64 bits) en faveur de SSLv3. Ce choix améliore la sécurité.
+[Firefox 2](/fr/Firefox_2) désactive par défaut le support de SSLv2 et les suites de chiffrement faible (celles ayant des longueurs de clefs inférieures à 64 bits) en faveur de SSLv3. Ce choix améliore la sécurité.
 
 Les méthodes privilégiées de chiffrage sont `TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA` et `TLS_RSA_WITH_3DES_EDE_CBC_SHA`. Certains serveurs y font référence en tant que `SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA` et `SSL_RSA_WITH_3DES_EDE_CBC_SHA`.
 

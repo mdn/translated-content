@@ -46,9 +46,7 @@ console.log(result);
 
 ## 仕様書
 
-| Specification                                                                                    |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-do-while-statement', 'do-while statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

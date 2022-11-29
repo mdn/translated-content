@@ -66,7 +66,7 @@ var couleur2 = "corail";
 
 ### Utilisation de l'opérateur `in` avec des propriétés supprimées ou indéfinies
 
-Si une propriété est supprimée avec l'opérateur [`delete`](fr/R%c3%a9f%c3%a9rence_de_JavaScript_1.5_Core/Op%c3%a9rateurs/Op%c3%a9rateurs_sp%c3%a9ciaux/L'op%c3%a9rateur_delete), l'opérateur `in` renvoie `false` pour cette propriété.
+Si une propriété est supprimée avec l'opérateur [`delete`](/fr/R%c3%a9f%c3%a9rence_de_JavaScript_1.5_Core/Op%c3%a9rateurs/Op%c3%a9rateurs_sp%c3%a9ciaux/L'op%c3%a9rateur_delete), l'opérateur `in` renvoie `false` pour cette propriété.
 
 ```js
 var voiture = {marque: "Honda", modèle: "Accord", année: 1998};

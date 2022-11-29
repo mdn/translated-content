@@ -94,13 +94,7 @@ slug: Web/API/DOMException
 
 ## 仕様
 
-| 仕様書                                                                                           | 策定状況                     | コメント                                                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WebIDL', '#es-DOMException-call', 'constructor')}}             | {{Spec2('WebIDL')}}     | `DOMException` クラスのコンストラクターを追加。値 `NotReadableError`, `UnknownError`, `ConstraintError`, `DataError`, `TransactionInactiveError`, `ReadOnlyError`, `VersionError`, `OperationError`, `NotAllowedError` を追加。 |
-| {{SpecName('DOM4', '#exception-domexception', 'DOMException')}}             | {{Spec2('DOM4')}}     | `SECURITY_ERR`, `NETWORK_ERR`, `ABORT_ERR`, `URL_MISMATCH_ERR`, `QUOTA_EXCEEDED_ERR`, `TIMEOUT_ERR`, `INVALID_NODE_TYPE_ERR`, `DATA_CLONE_ERR` を追加。例外値のプロパティ `code` を非推奨に変更。値 `EncodingError` を追加。    |
-| {{SpecName('DOM3 Core', 'core.html#ID-17189187', 'DOMException')}}         | {{Spec2('DOM3 Core')}} | `VALIDATION_ERR` および `TYPE_MISMATCH_ERR` を追加。                                                                                                                                                                            |
-| {{SpecName('DOM2 Core', 'core.html#ID-17189187', 'DOMException')}}         | {{Spec2('DOM2 Core')}} | `INVALID_STATE_ERR`, `SYNTAX_ERR`, `INVALID_MODIFICATION_ERR`, `NAMESPACE_ERR`, `INVALID_ACCESS_ERR` を追加。                                                                                                                   |
-| {{SpecName('DOM1', 'level-one-core.html#ID-17189187', 'DOMException')}} | {{Spec2('DOM1')}}     | 最初期の定義                                                                                                                                                                                                                    |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

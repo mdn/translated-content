@@ -57,9 +57,7 @@ let observer = new IntersectionObserver(myObserverCallback,
 
 ## 仕様
 
-| 仕様書                                                                                                                                                           | 策定状況                                     | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-intersectionobserver','IntersectionObserver constructor')}} | {{Spec2('IntersectionObserver')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

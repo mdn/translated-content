@@ -5,7 +5,7 @@ slug: Web/API/Document/readyState
 
 {{APIRef("DOM")}}
 
-**`Document.readyState` **属性描述了{{ domxref("document") }} 的加载状态。
+**`Document.readyState`** 属性描述了{{ domxref("document") }} 的加载状态。
 
 当该属性值发生变化时，会在 {{domxref("document")}} 对象上触发 [`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event) 事件。
 

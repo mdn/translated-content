@@ -40,7 +40,7 @@ ImageData ctx.getImageData(sx, sy, sw, sh);
 
 ### Valeur retournée
 
-Un objet {{domxref("ImageData")}}  contenant les données de l'image pour le rectangle donné du canevas.
+Un objet {{domxref("ImageData")}} contenant les données de l'image pour le rectangle donné du canevas.
 
 ### Erreurs renvoyées
 
@@ -51,7 +51,7 @@ Un objet {{domxref("ImageData")}}  contenant les données de l'image pour le rec
 
 ### Utilisation de la méthode `getImageData`
 
-Ceci est juste un petit exemple qui utilise la méthode getImageData. Pour plus d'informations, visitez  [Manipulation de pixels avec canvas](/fr/docs/Tutoriel_canvas/Pixel_manipulation_with_canvas) et l'objet {{domxref("ImageData")}}.
+Ceci est juste un petit exemple qui utilise la méthode getImageData. Pour plus d'informations, visitez [Manipulation de pixels avec canvas](/fr/docs/Tutoriel_canvas/Pixel_manipulation_with_canvas) et l'objet {{domxref("ImageData")}}.
 
 #### HTML
 

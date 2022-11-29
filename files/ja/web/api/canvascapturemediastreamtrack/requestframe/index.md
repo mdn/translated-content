@@ -38,9 +38,7 @@ stream.getVideoTracks()[0].requestFrame();
 
 ## 仕様
 
-| 仕様書                                                                                                                                                                               | ステータス                                           | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | -------- |
-| {{SpecName('Media Capture DOM Elements', '#dom-canvascapturemediastreamtrack-requestframe', 'CanvasCaptureMediaStream.requestFrame()')}} | {{Spec2('Media Capture DOM Elements')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

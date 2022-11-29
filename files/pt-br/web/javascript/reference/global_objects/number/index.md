@@ -48,8 +48,6 @@ Os principais usos para o objeto `Number` são:
 - {{jsxref("Number.prototype")}}
   - : Permite a adição de propriedades a um objeto Number.
 
-{{jsOverrides("Function", "properties", "MAX_VALUE", "MIN_VALUE", "NaN", "NEGATIVE_INFINITY", "POSITIVE_INFINITY", "protoype")}}
-
 ## Methods
 
 - {{jsxref("Number.isNaN()")}} {{experimental_inline}}
@@ -66,8 +64,6 @@ Os principais usos para o objeto `Number` são:
   - : O valor é o mesmo que {{jsxref("Global_Objects/parseFloat", "parseFloat")}} do objeto global.
 - {{jsxref("Number.parseInt()")}} {{experimental_inline}}
   - : O valor é o mesmo que {{jsxref("Global_Objects/parseInt", "parseInt")}} do objeto global.
-
-{{jsOverrides("Function", "methods", "isNaN")}}
 
 ## Instâncias `Number`
 

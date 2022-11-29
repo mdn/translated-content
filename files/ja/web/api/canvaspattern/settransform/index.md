@@ -104,9 +104,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 仕様
 
-| 仕様                                                                                                                                         | ステータス                       | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvaspattern-settransform", "CanvasPattern.setTransform")}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザ実装状況
 
