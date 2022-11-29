@@ -31,7 +31,7 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 只有实现了一个拥有以下语义（semantic）的 **`next()`** 方法，一个对象才能成为迭代器：
 
 - `next()`
-  - : 无参数或者接受一个参数，并返回符合 `IteratorResult` 接口的对象的函数（见下文）。如果在使用迭代器内置的语言特征（例如 `for...of`）时，得到一个非对象返回值（例如 `false` 或 `undefined`），将会抛出 {{jsxref("TypeError")}}（`"iterator.next() returned a non-object value"`。
+  - : 无参数或者接受一个参数，并返回符合 `IteratorResult` 接口的对象的函数（见下文）。如果在使用迭代器内置的语言特征（例如 `for...of`）时，得到一个非对象返回值（例如 `false` 或 `undefined`），将会抛出 {{jsxref("TypeError")}}（`"iterator.next() returned a non-object value"`）。
 
 所有迭代器协议的方法（`next()`、`return()` 和 `throw()`）都应返回实现 `IteratorResult` 接口的对象。它必须有以下属性：
 
