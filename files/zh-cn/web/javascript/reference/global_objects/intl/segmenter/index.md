@@ -30,7 +30,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
 
 ### 基础用法及与 String.prototype.split() 的区别
 
-如果我们使用 [`String.prototype.split(" ")`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 来将一段文本分割成词汇，如果这段文本的语言并不是使用空格来分割词汇的话，那我们就不能保证得到的是正确的结果（例如 Japanese、Chinese、Thai、Lao、Khmer、Myanmar 等语言）。
+如果我们使用 [`String.prototype.split(" ")`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 来将一段文本分割成词汇，如果这段文本的语言并不是使用空格来分割词汇的话，那我们就不能保证得到的是正确的结果（例如日语、中文、泰语、老挝语、高棉语、缅甸语等语言）。
 
 ```js example-bad
 const str = "吾輩は猫である。名前はたぬき。";
