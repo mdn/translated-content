@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 
 {{JSRef}}
 
-**`Promise.allSettled()`** 方法接受一个 promise 的可迭代类型作为输入，并且返回一个 {{jsxref("Promise")}} 实例。当输入的所有 promise 都已敲定时（包括传递空的可迭代类型），返回的 promise 使用一个带有描述每个 promsie 结果的对象数组兑现。
+**`Promise.allSettled()`** 方法以 promise 组成的可迭代对象作为输入，并且返回一个 {{jsxref("Promise")}} 实例。当输入的所有 promise 都已敲定时（包括传递空的可迭代类型），返回的 promise 将兑现，并带有描述每个 promsie 结果的对象数组。
 
 {{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}
 
