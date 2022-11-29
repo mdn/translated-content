@@ -1,14 +1,6 @@
 ---
 title: CSS 디버깅
 slug: Learn/CSS/Building_blocks/Debugging_CSS
-tags:
-  - Beginner
-  - CSS
-  - DOM
-  - Debugging
-  - DevTools
-  - Learn
-  - source
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}

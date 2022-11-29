@@ -2,15 +2,6 @@
 title: 상자 모델
 slug: Learn/CSS/Building_blocks/The_box_model
 original_slug: Learn/CSS/Building_blocks/상자_모델
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - border
-  - box model
-  - display
-  - margin
-  - padding
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
