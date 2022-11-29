@@ -79,7 +79,6 @@ Para elegir un tipo de letra:
 2. Copia las líneas de código que Google le proporciona en tu editor de texto para guardarlas más tarde.
 3. Para obtener más detalles sobre el uso de Google Fonts, consulta [esta página](https://developers.google.com/fonts/docs/getting_started)
 
-
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
 ## En este módulo
