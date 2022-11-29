@@ -23,4 +23,4 @@ Las expresiones regulares están incluidas en varios lenguages, pero las más co
 
 ### Referencia técnica
 
-- [Writing regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Writing regular expressions in JavaScript](/es/docs/Web/JavaScript/Guide/Regular_Expressions)

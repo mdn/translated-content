@@ -1,93 +1,81 @@
 ---
 title: 音声と動画の配信
 slug: Web/Guide/Audio_and_video_delivery
+l10n:
+  sourceCommit: 4b4bb8dea94f7264a841e0eecb0dcc919236459d
 ---
 
-「静的」メディアファイルからアダプティブライブストリームまで、さまざまな方法で Web 上にオーディオとビデオを配信できます。この記事は、Web ベースのメディアのさまざまな配信メカニズムおよび一般的なブラウザとの互換性を探るための出発点として意図されています。
+静的な」メディアファイルからアダプティブなライブストリームまで、さまざまな方法で音声と動画をウェブ上に配信することができます。この記事は、ウェブベースのメディアの様々な配信メカニズムや、一般的なブラウザーへの互換性を探るための出発点として意図されています。
 
-## The Audio and Video Elements
+## audio および video 要素
 
-Whether we are dealing with pre-recorded audio files or live streams, the mechanism for making them available through the browser's {{ htmlelement("audio")}} and {{ htmlelement("video")}} elements remains pretty much the same. Currently, to support all browsers we need to specify two formats, although with the adoption of MP3 and MP4 formats in Firefox and Opera, this is changing fast. You can find compatibility information in the following places:
+録音された音声ファイルを扱う場合でも、ライブストリームを扱う場合でも、ブラウザーの {{ htmlelement("audio")}} と {{ htmlelement("video")}} 要素を通じてそれらを利用できるようにする仕組みはほとんど変わりません。現在、すべてのブラウザーで対応するには、 2 つの形式を指定する必要がありますが、 MP3 と MP4 の形式が Firefox と Opera で採用されたため、この状況は急速に変化しています。互換性に関する情報は、[ウェブ上のメディアタイプと形式のガイド](/ja/docs/Web/Media/Formats)で探すことができます。
 
-- [Audio Codec Compatibility Table](/ja/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Audio_Codec_Support)
-- [Audio/Video Codec Compatibility Table](/ja/docs/Web/HTML/Supported_media_formats#Browser_compatibility)
+動画と音声を配信する場合、一般的なワークフローは通常次のようなものです。
 
-To deliver video and audio, the general workflow is usually something like this:
+1. ブラウザーの機能検出で対応している形式を調べる（通常は上記のように 2 つから選択することになります）。
+2. ブラウザーが指定された形式の再生にネイティブに対応していない場合は、静止画を表示するか、動画を表示するための代替技術を使用します。
+3. どのようにメディアを再生/インスタンス化するかを確認します（例えば {{ htmlelement("video") }} 要素か `document.createElement('video')` か）。
+4. メディアファイルをプレイヤーに配信する。
 
-1. Check what format the browser supports via feature detection (usually a choice of two, as stated above.)
-2. If the browser doesn't support playback of any of the provided formats natively, provide a fallback (such as a Flash movie.)
-3. Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
-4. Deliver the media file to the player.
-
-### HTML Audio
+### HTML の音声
 
 ```html
 <audio controls preload="auto">
-  <source src="audiofile.mp3" type="audio/mpeg">
+  <source src="audiofile.mp3" type="audio/mpeg" />
 
-  <!-- fallback for browsers that don't suppport mp3 -->
-  <source src="audiofile.ogg" type="audio/ogg">
+  <!-- mp3 に対応していないブラウザーのための代替 -->
+  <source src="audiofile.ogg" type="audio/ogg" />
 
-  <!-- fallback for browsers that don't support audio tag -->
-  <a href="audiofile.mp3">download audio</a>
+  <!-- audio タグに対応していないブラウザーのための代替 -->
+  <a href="audiofile.mp3">音声をダウンロード</a>
 </audio>
 ```
 
-The code above will create an audio player that attempts to preload as much audio as possible for smooth playback.
+上記のコードでは、スムーズな再生のために、できるだけ多くの音声を先読みさせようとする音声プレイヤーを作成しています。
 
-> **メモ:** The preload attribute may be ignored by some mobile browsers.
+> **メモ:** モバイルブラウザーによっては、 `preload` 属性が無視される場合があります。
 
-For further info see [Cross Browser Audio Basics (HTML5 Audio In Detail)](/ja/Apps/Build/Manipulating_media/Cross-browser_audio_basics#HTML5_audio_in_detail)
+詳しい情報は、[クロスブラウザーの音声の基本（HTML Audio の詳細）](/ja/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
 
-### HTML Video
+### HTML の動画
 
 ```html
-<video controls width="640" height="480" poster="initialimage.png" autoplay muted>
-  <source src="videofile.mp4" type="video/mp4">
+<video
+  controls
+  width="640"
+  height="480"
+  poster="initialimage.png"
+  autoplay
+  muted>
+  <source src="videofile.mp4" type="video/mp4" />
 
-  <!-- fallback for browsers that don't suppport mp4 -->
-  <source src="videofile.webm" type="video/webm">
+  <!-- mp4 に対応していないブラウザーのための代替 -->
+  <source src="videofile.webm" type="video/webm" />
 
-  <!-- specifying subtitle files -->
-  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
-  <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+  <!-- 字幕ファイルを指定 -->
+  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" />
+  <track
+    src="subtitles_no.vtt"
+    kind="subtitles"
+    srclang="no"
+    label="Norwegian" />
 
-  <!-- fallback for browsers that don't support video tag -->
+  <!-- video タグに対応していないブラウザーのための代替 -->
   <a href="videofile.mp4">download video</a>
 </video>
 ```
 
-The code above creates a video player of dimensions 640x480 pixels, displaying a poster image until the video is played. We instruct the video to autoplay but to be muted by default.
+上記のコードでは、寸法が 640x480 ピクセルの動画プレイヤーを作成し、動画が再生されるまではポスター画像を表示しています。動画は自動再生されますが、既定ではミュートされるように指示しています。
 
-> **メモ:** The autoplay attribute may be ignored by some mobile browsers.
+> **メモ:** `autoplay` 属性は、一部のモバイルブラウザーで無視される場合があります。また、自動再生機能は、使い方を誤ると物議をかもす可能性があります。自動再生の賢い使用方法を知るために、[メディアとウェブ音声 API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)を読むことを強くお勧めします。
 
-For further info see [\<video> element](/ja/docs/Web/HTML/Element/video) and [Creating a cross-browser video player](/ja/Apps/Build/Manipulating_media/cross_browser_video_player).
+詳しい情報は [\<video> 要素](/ja/docs/Web/HTML/Element/video)と[クロスブラウザーの動画プレイヤーの作成](/ja/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
 
-### Audio and Video Fallback
-
-You can create a more comprehensive Fallback using Flash. [Using flashmediaelement.swf](https://github.com/johndyer/mediaelement/blob/master/build/flashmediaelement.swf) is one way.
-
-```html
-<audio controls>
-  <source src="audiofile.mp3" type="audio/mpeg">
-  <source src="audiofile.ogg" type="audio/ogg">
-  <!-- fallback for non supporting browsers goes here -->
-  <a href="audiofile.mp3">download audio</a>
-  <object width="320" height="30" type="application/x-shockwave-flash" data="flashmediaelement.swf">
-    <param name="movie" value="flashmediaelement.swf" />
-    <param name="flashvars" value="controls=true&isvideo=false&file=audiofile.mp3" />
-  </object>
-</audio>
-```
-
-The process is very similar with video — just remember to set `isvideo=true` in the `flashvars value` parameters.
-
-[More options for Fallbacks](/ja/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Fallbacks).
-
-### JavaScript Audio
+### JavaScript の音声
 
 ```js
-var myAudio = document.createElement('audio');
+const myAudio = document.createElement('audio');
 
 if (myAudio.canPlayType('audio/mpeg')) {
   myAudio.setAttribute('src','audiofile.mp3');
@@ -99,22 +87,22 @@ myAudio.currentTime = 5;
 myAudio.play();
 ```
 
-We set the source of the audio depending on the type of audio file the browser supports, then set the play-head 5 seconds in and attempt to play it.
+ブラウザーで対応している音声ファイルの種類に応じて音声のソースを設定し、 5 秒後に再生ヘッドを設定して再生を試みます。
 
-> **メモ:** Play will be ignored by some mobile browsers unless issued by a user-initiated event.
+> **メモ:** 再生は、ユーザー主導のイベントによって発行されない限り、ほとんどのブラウザーで無視されます。
 
-It's also possible to feed an {{ htmlelement("audio") }} element a base64 encoded WAV file, allowing to generate audio on the fly:
+また、 {{ htmlelement("audio") }} 要素に base64 エンコードされた WAV ファイルを与えて、その場で音声を生成することも可能です。
 
 ```html
-<audio id="player" src="data:audio/x-wav;base64,UklGRvC..."></audio>
+<audio id="player" src="data:audio/x-wav;base64,UklGRvC…"></audio>
 ```
 
-[Speak.js](https://github.com/kripken/speak.js/) employs this technique. [Try the demo](http://speak-demo.herokuapp.com).
+[Speak.js](https://github.com/kripken/speak.js/) はこのテクニックを採用しています。[デモを試してみてください](https://speak-demo.herokuapp.com)。
 
-### JavaScript Video
+### JavaScript の動画
 
 ```js
-var myVideo = document.createElement('video');
+const myVideo = document.createElement('video');
 
 if (myVideo.canPlayType('video/mp4')) {
   myVideo.setAttribute('src','videofile.mp4');
@@ -126,94 +114,94 @@ myVideo.width = 480;
 myVideo.height = 320;
 ```
 
-We set the source of the video depending on the type of video file the browser supports we then set the width and height of the video.
+ブラウザーの対応している動画ファイルの種類に応じて動画のソースを設定し、動画の幅と高さを設定します。
 
-## Web Audio API
+## ウェブオーディオ API
 
 ```js
-  var context;
-  var request;
-  var source;
+let context;
+let request;
+let source;
 
-  try {
-    context = new AudioContext();
-    request = new XMLHttpRequest();
-    request.open("GET","http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",true);
-    request.responseType = "arraybuffer";
+try {
+  context = new AudioContext();
+  request = new XMLHttpRequest();
+  request.open("GET","http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",true);
+  request.responseType = "arraybuffer";
 
-    request.onload = function() {
-      context.decodeAudioData(request.response, function(buffer) {
-        source = context.createBufferSource();
-        source.buffer = buffer;
-        source.connect(context.destination);
-        // auto play
-        source.start(0); // start was previously noteOn
-      });
-    };
+  request.onload = () => {
+    context.decodeAudioData(request.response, (buffer) => {
+      source = context.createBufferSource();
+      source.buffer = buffer;
+      source.connect(context.destination);
+      // autoplay
+      source.start(0); // start was previously noteOn
+    });
+  };
 
-    request.send();
+  request.send();
 
-  } catch(e) {
-    alert('web audio api not supported');
-  }
+} catch (e) {
+  alert('web audio api not supported');
+}
 ```
 
-In this example we retrieve an MP3 file via XHR, load it into a source and play it ([Try it for yourself](https://jsbin.com/facutone/1/edit?js)). Find more about Web Audio API basics in [Using the Web Audio API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
+この例では、 XHR 経由で MP3 ファイルを取得し、それをソースに読み込んで再生しています（[自分で試してみてください](https://jsbin.com/facutone/1/edit?js)）。ウェブオーディオ API の基本的なことについては、[ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)を参照してください。
 
-## getUserMedia / Stream API
+## getUserMedia / ストリーム API
 
-It's also possible to retrieve a live stream from a webcam and/or microphone using `getUserMedia` and the Stream API. This makes up part of a wider technology known as WebRTC (Web Real-Time Communications) and is compatible with the latest versions of Chrome, Firefox and Opera.
+また、`getUserMedia` とストリーム API を使用して、ウェブカメラやマイクからライブストリームを取得することも可能です。これは WebRTC (Web Real-Time Communications) として知られる幅広い技術の一部であり、Chrome、Firefox、Opera の最新バージョンと互換性があります。
 
-To grab the stream from your webcam, first set up a {{htmlelement("video")}} element:
+ウェブカメラからストリームを取得するには、まず {{htmlelement("video")}} 要素を設定します。
 
 ```html
 <video id="webcam" width="480" height="360"></video>
 ```
 
-Next, if supported connect the webcam source to the video element:
+次に、対応している場合は、ウェブカメラのソースを動画要素に接続します。
 
 ```js
 if (navigator.mediaDevices) {
   navigator.mediaDevices.getUserMedia({ video: true, audio: false })
   .then(function onSuccess(stream) {
-    var video = document.getElementById('webcam');
+    const video = document.getElementById('webcam');
     video.autoplay = true;
     video.srcObject = stream;
   })
   .catch(function onError() {
-    alert('There has been a problem retreiving the streams - are you running on file:/// or did you disallow access?');
+    alert('There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?');
   });
 } else {
   alert('getUserMedia is not supported in this browser.');
 }
 ```
 
-To find out more, read our {{domxref("MediaDevices.getUserMedia")}} page.
+詳しくは、 {{domxref("MediaDevices.getUserMedia")}} のページを参照してください。
 
-## Mediastream Recording
+## メディアストリームの収録
 
-New standards are being rolled out to allow your browser to grab media from your mic or camera using `getUserMedia` and record it instantly using the new MediaRecorder API. You take the stream you receive from `getUserMedia`, pass it to a `MediaRecorder` object, take the resulting output and feed it to your audio or video source\*.
+ブラウザーが `getUserMedia` を使用してマイクやカメラからメディアを取得し、新しいメディアレコーダー API を使用して即座に記録できるようにするための新しい標準が展開されています。 `getUserMedia` から受け取ったストリームを `MediaRecorder` オブジェクトに渡して、結果の出力を受け取り、音声や動画のソースに渡します。
 
-The main mechanism is outlined below:
+主な仕組みは下記の通りです。
 
 ```js
 navigator.mediaDevices.getUserMedia({audio:true})
   .then(function onSuccess(stream) {
-    var recorder = new MediaRecorder(stream);
+    const recorder = new MediaRecorder(stream);
 
-    var data = [];
-    recorder.ondataavailable = function(e) {
+    const data = [];
+    recorder.ondataavailable = (e) => {
       data.push(e.data);
     };
     recorder.start();
-    recorder.onerror = function(e) {
+    recorder.onerror = (e) => {
       throw e.error || new Error(e.name); // e.name is FF non-spec
     }
-    recorder.onstop = function(e) {
-      var audio = document.createElement('audio');
+    recorder.onstop = (e) => {
+      const audio = document.createElement('audio');
       audio.src = window.URL.createObjectURL(new Blob(data));
     }
-    setTimeout(function() {
+    setTimeout(() => {
       rec.stop();
     }, 5000);
   })
@@ -222,143 +210,142 @@ navigator.mediaDevices.getUserMedia({audio:true})
   });
 ```
 
-See [MediaRecorder API](/ja/docs/Web/API/MediaRecorder_API) for more details.
+詳しくは[メディアレコーダー API](/ja/docs/Web/API/MediaStream_Recording_API)を参照してください。
 
-## Media Source Extensions (MSE)
+## メディアソース拡張 (MSE)
 
-[Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) is a W3C working draft that plans to extend {{domxref("HTMLMediaElement")}} to allow JavaScript to generate media streams for playback. Allowing JavaScript to generate streams facilitates a variety of use cases like adaptive streaming and time shifting live streams.
+[メディアソース](https://w3c.github.io/media-source/) は W3C の作業草案で、{{domxref("HTMLMediaElement")}} を拡張して JavaScript が再生用のメディアストリームを生成できるようにすることを計画しています。JavaScript でストリームを生成できるようにすることで、アダプティブストリーミングや時刻をずらしたライブストリームなど、様々な使用用途が容易になります。
 
-### Encrypted Media Extensions (EME)
+### 暗号化メディア拡張 (EME)
 
-[Encrypted Media Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/encrypted-media/encrypted-media.html) is a W3C proposal to extend `HTMLMediaElement`, providing APIs to control playback of protected content.
+[暗号化メディア拡張](https://w3c.github.io/encrypted-media/)は W3C による提案で、 `HTMLMediaElement` を拡張し、保護されたコンテンツの再生を制御するための API を提供するものです。
 
-The API supports use cases ranging from simple clear key decryption to high value video (given an appropriate user agent implementation). License/key exchange is controlled by the application, facilitating the development of robust playback applications supporting a range of content decryption and protection technologies.
+この API は、単純なクリアキーの復号から、（適切なユーザーエージェントが実装されたために）高価値の動画まで、使用用途に対応しています。ライセンスとキーの交換はアプリケーションによって制御されるため、さまざまなコンテンツの復号化および保護技術に対応した堅牢な再生アプリケーションを開発することが容易になります。
 
-One of the principle uses of EME is to allow browsers to implement DRM ([Digital Rights Management](http://en.wikipedia.org/wiki/Digital_rights_management)), which helps to prevent web-based content (especially video) from being copied.
+EME の主な使用方法の一つは、ブラウザーに DRM ([Digital Rights Management](https://en.wikipedia.org/wiki/Digital_rights_management)) を実装することです。 DRM は、ウェブ上のコンテンツ（特に動画）のコピーを防止するために役立ちます。
 
-### Adaptive Streaming
+### アダプティブストリーム
 
-New formats and protocols are being rolled out to facilitate adaptive streaming. Adaptive streaming media means that the bandwidth and typically quality of the stream can change in real-time in reaction to the user's available bandwidth. Adaptive streaming is often used in conjunction with live streaming where smooth delivery of audio or video is paramount.
+アダプティブストリーミングを促進するために、新しい書式化とプロトコルが展開されています。アダプティブストリーミングメディアとは、ユーザーが利用できる帯域幅に反応して、ストリームの帯域幅と一般的な品質をリアルタイムで変更できることを意味しています。アダプティブストリーミングは、音声や動画のスムーズな配信が最も重要であるライブストリーミングと組み合わせて使用されることが多い。
 
-The main formats used for adaptive streaming are [HLS](/ja/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#HLS) and [MPEG-DASH](/ja/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#MPEG-DASH). MSE has been designed with DASH in mind. MSE defines byte streams according to [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) and [M2TS](http://en.wikipedia.org/wiki/M2ts) (both supported in DASH, the latter supported in HLS). Generally speaking, if you are interested in standards, are looking for flexibility, or wish to support most modern browsers, you are probably better off with DASH.
+アダプティブストリーミングに使用される主な形式は、 [HLS](/ja/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video#hls) と [MPEG-DASH](/ja/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video#mpeg-dash) です。 MSE は DASH を保有することを念頭に置いて設計されています。 MSE は [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) と [M2TS](https://en.wikipedia.org/wiki/M2ts) に従ってバイトストリームを定義します（DASH はどちらにも対応しており、 HLS は後者に対応しています）。一般的に言って、標準規格に関心があり、柔軟性を求めている場合、あるいはほとんどの現代のブラウザーに対応したい場合は、DASH を使用した方がよいかもしれません。
 
-> **メモ:** Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.
+> **メモ:** 現在、Safari は DASH に対応していませんが、OSX Yosemite でリリースされる予定の新しいバージョンの Safari では dash.js が動作する予定です。
 
-DASH also provides a number of profiles including simple onDemand profiles that no preprocessing and splitting up of media files. There are also a number of cloud based services that will convert your media to both HLS and DASH.
+DASH も、メディアファイルの前処理や分割が不要な単純なオンデマンドプロファイルを含む、多くのプロファイルを提供しています。また、メディアを HLS と DASH の両方に変換してくれるクラウドベースのサービスも数多くあります。
 
-For further information see [Live streaming web audio and video](/ja/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video).
+詳しい情報は、[ウェブ音声と映像のライブストリーミング](/ja/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video)を参照してください。
 
-## Customising Your Media Player
+## メディアプレイヤーのカスタマイズ
 
-You may decide that you want your audio or video player to have a consistent look across browsers, or just wish to tweak it to match your site. The general technique for achieving this is to omit the `controls` attribute so that the default browser controls are not displayed, create custom controls using HTML and CSS, then use JavaScript to link your controls to the audio/video API.
+音声と動画のプレイヤーをブラウザー間で一貫した外見にしたいと考えたり、サイトに一致するように微調整したいと思ったりすることがあるかもしれません。これを実現する一般的な方法は、`controls` 属性を省略して既定のブラウザーコントロールを表示しないようにし、HTML と CSS を使用してカスタムコントロールを作成し、JavaScript でコントロールを音声/動画 API にリンクさせることです。
 
-If you need something extra, it's possible to add features that are not currently present in default players, such as playback rate, quality stream switches or even audio spectrums. You can also choose how to make your player responsive — for example you might remove the progress bar under certain conditions.
+もし何か追加する必要があれば、再生速度、品質ストリームスイッチ、あるいは音声スペクトルなど、既定のプレイヤーには現在存在しない機能を追加することが可能です。たとえば、特定の条件下でプログレス バーを削除することもできます。
 
-You may detect click, touch and/or keyboard events to trigger actions such as play, pause and scrubbing. It's often important to remember keyboard controls for user convenience and accessibility.
+クリック、タッチ、およびキーボード イベントを検出し、再生、一時停止、スクラブなどのアクションを発生させることができます。ユーザーの利便性とアクセシビリティのために、キーボード制御を覚えておくことは、多くの場合、重要なことです。
 
-A quick example — first set up your audio and custom controls in HTML:
+簡単な例です。まず、 HTML で音声とカスタムコントロールを設定します。
 
 ```html
-  <audio id="my-audio" src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
-  <button id="my-control">play</button>
+<audio
+  id="my-audio"
+  src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
+<button id="my-control">play</button>
 ```
 
-add a bit of JavaScript to detect events to play and pause the audio:
+音声を再生・一時停止するイベントを検出する JavaScript を少し追加します。
 
 ```js
-window.onload = function() {
-
-  var myAudio = document.getElementById('my-audio');
-  var myControl = document.getElementById('my-control');
+window.onload = () => {
+  const myAudio = document.getElementById('my-audio');
+  const myControl = document.getElementById('my-control');
 
   function switchState() {
-    if (myAudio.paused == true) {
+    if (myAudio.paused) {
       myAudio.play();
-      myControl.innerHTML = "pause";
+      myControl.textContent = "pause";
     } else {
       myAudio.pause();
-      myControl.innerHTML = "play";
+      myControl.textContent = "play";
     }
   }
 
   function checkKey(e) {
-    if (e.keycode == 32 ) { //spacebar
+    if (e.keycode === 32) { // space bar
       switchState();
     }
   }
 
-  myControl.addEventListener('click', function() {
+  myControl.addEventListener('click', () => {
     switchState();
   }, false);
 
-  window.addEventListener( "keypress", checkKey, false );
+  window.addEventListener("keypress", checkKey, false);
 }
 ```
 
-You can [try this example out here](https://jsbin.com/jujeladu/2/edit). For more information, see [Creating your own custom audio player](/ja/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Creating_your_own_custom_audio_player).
+[この例をここで試してみる](https://jsbin.com/jujeladu/2/edit)ことができます。より詳しい情報は、[自分自身でカスタム音声プレイヤーを作成する](/ja/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#creating_your_own_custom_audio_player)をご覧下さい。
 
-## Other tips for audio/video
+## 音声/動画のその他の豆知識
 
-### Stopping the download of media
+### メディアのダウンロードの中止
 
-While stopping the playback of media is as easy as calling the element's `pause()` method, the browser keeps downloading the media until the media element is disposed of through garbage collection.
+メディアの再生を止めるのは要素の `pause()` メソッドを呼び出すだけと簡単ですが、ブラウザーはメディア要素がガベージコレクションによって廃棄されるまで、メディアをダウンロードし続けます。
 
-Here's a trick that stops the download at once:
+ここでは、ダウンロードを一度に中止させるトリックを紹介します。
 
 ```js
-var mediaElement = document.querySelector("#myMediaElementID");
+const mediaElement = document.querySelector("#myMediaElementID");
 mediaElement.removeAttribute("src");
 mediaElement.load();
 ```
 
-By removing the media element's `src` attribute and invoking the load() method, you release the resources associated with the video, which stops the network download. You must call `load()` after removing the attribute, because just removing the `src` attribute does not invoke the load algorithm. If the `<video>` element also has `<source>` element descendants, those should also be removed before calling `load()`.
+メディア要素の `src` 属性を削除して load() メソッドを呼び出すと、動画に関連付けられたリソースが解放され、ネットワークからのダウンロードが中止されます。 `src` 属性を削除しただけでは load アルゴリズムを呼び出さないため、属性を削除した後に `load()` を呼び出す必要があります。もし `<video>` 要素が `<source>` 要素の子孫も保有している場合は、 `load()` を呼び出す前にそれらも削除する必要があります。
 
-Note that just setting the `src` attribute to an empty string will actually cause the browser to treat it as though you're setting a video source to a relative path. This causes the browser to attempt another download to something that is unlikely to be a valid video.
+`src` 属性に空文字列を設定するだけでは、実際にはブラウザーが動画のソースを相対パスで設定しているかのように扱うことに注意してください。これにより、ブラウザーは有効な動画である可能性が低いものを、再度ダウンロードしようとします。
 
-### Seeking through media
+### メディアのシーク
 
-Media elements provide support for moving the current playback position to specific points in the media's content. This is done by setting the value of the `currentTime` property on the element; see {{ domxref("HTMLMediaElement") }} for further details on the element's properties. Simply set the value to the time, in seconds, at which you want playback to continue.
+メディア要素は、現在の再生位置をメディアのコンテンツにおける特定の位置に移動するためのサポートを提供します。これは、要素の `currentTime` プロパティの値を設定することで行います。要素のプロパティの詳細については、{{ domxref("HTMLMediaElement") }} を参照してください。この値には、再生を継続させたい時刻を秒単位で設定します。
 
-You can use the element's `seekable` property to determine the ranges of the media that are currently available for seeking to. This returns a {{ domxref("TimeRanges") }} object listing the ranges of times that you can seek to.
+要素の `seekable` プロパティを使用して、現在シークするために使用できるメディアの範囲を決定することができます。これは、シーク可能な時刻の範囲をリストアップした {{ domxref("TimeRanges") }} オブジェクトを返します。
 
 ```js
-var mediaElement = document.querySelector('#mediaElementID');
-mediaElement.seekable.start(0);  // Returns the starting time (in seconds)
-mediaElement.seekable.end(0);    // Returns the ending time (in seconds)
-mediaElement.currentTime = 122; // Seek to 122 seconds
-mediaElement.played.end(0);      // Returns the number of seconds the browser has played
+const mediaElement = document.querySelector('#mediaElementID');
+mediaElement.seekable.start(0);  // 開始時刻を返す（秒単位）
+mediaElement.seekable.end(0);    // 終了時刻を返す（秒単位）
+mediaElement.currentTime = 122; // 122 秒目へシーク
+mediaElement.played.end(0);      // ブラウザーが再生した秒数を返す
 ```
 
-### Specifying playback range
+### 再生範囲の指定
 
-When specifying the URI of media for an {{ HTMLElement("audio") }} or {{ HTMLElement("video") }} element, you can optionally include additional information to specify the portion of the media to play. To do this, append a hash mark ("#") followed by the media fragment description.
+{{ HTMLElement("audio") }} または {{ HTMLElement("video") }} 要素に対してメディアの URI を指定するとき、オプションとして、再生するメディアの部分を指定するための追加情報を記述することができます。これを行うには、ハッシュマーク ("#") に続いてメディアフラグメントの記述を追加します。
 
-A time range is specified using the syntax:
+時刻の範囲は、構文を使用して指定します。
 
 ```
 #t=[starttime][,endtime]
 ```
 
-The time can be specified as a number of seconds (as a floating-point value) or as an hours/minutes/seconds time separated with colons (such as 2:05:01 for 2 hours, 5 minutes, and 1 second).
+時刻は、秒数（浮動小数点数）、またはコロンで区切られた時・分・秒数（2 時 5 分 1 秒なら 2:05:01 など）で指定します。
 
-A few examples:
+いくつか例を挙げます。
 
 - `http://example.com/video.ogv#t=10,20`
-  - : Specifies that the video should play the range 10 seconds through 20 seconds.
+  - : 動画を 10 秒目から 20 秒目の範囲で再生することを指定します。
 - `http://example.com/video.ogv#t=,10.5`
-  - : Specifies that the video should play from the beginning through 10.5 seconds.
+  - : 動画を先頭から 10.5 秒目まで再生することを指定します。
 - `http://example.com/video.ogv#t=,02:00:00`
-  - : Specifies that the video should play from the beginning through two hours.
+  - : 動画を先頭から2時間分を再生することを指定します。
 - `http://example.com/video.ogv#t=60`
-  - : Specifies that the video should start playing at 60 seconds and play through the end of the video.
+  - : 動画の再生を 60 秒目から始めて、動画の終わりまで再生することを指定します。
 
-> **メモ:** The playback range portion of the media element URI specification was added to Gecko 9.0 {{ geckoRelease("9.0") }}. At this time, this is the only part of the [Media Fragments URI specification](http://www.w3.org/TR/media-frags/) implemented by Gecko, and it can only be used when specifying the source for media elements, and not in the address bar.
+## エラー処理
 
-## Error handling
+エラーは、エラーが発生したソースに対応する子要素 {{ HTMLElement("source") }} に配信されます。
 
-Starting in Gecko 2.0 {{ geckoRelease("2.0") }}, error handling has been revised to match the latest version of the HTML5 specification. Instead of the `error` event being dispatched to the media element itself, it now gets delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.
-
-This lets you detect which sources failed to load, which may be useful. Consider this HTML:
+これによって、どのソースが読み込まれなかったかを検出することができ、有益な場合があります。次のような HTML を考えてみましょう。
 
 ```html
 <video>
@@ -377,26 +364,26 @@ This lets you detect which sources failed to load, which may be useful. Consider
 </video>
 ```
 
-Since Firefox doesn't support MP4 and 3GP on some platforms due to their patent-encumbered nature, the {{ HTMLElement("source") }} elements with the IDs "mp4_src" and "3gp_src" will receive `error` events before the Ogg resource is loaded. The sources are tried in the order in which they appear, and once one loads successfully, the remaining sources aren't tried at all.
+Firefox は特許の関係で一部のプラットフォームでは MP4 と 3GP に対応していないため、 {{ HTMLElement("source") }} 要素で ID が "mp4_src" と "3gp_src" のものは、 Ogg リソースを読み込む前にエラーイベントを受信します。ソースは現れた順に読み込まれ、一度読み込みに成功すると、残りのソースはすべて試されません。
 
-### Checking whether the browser supports the supplied formats
+### ブラウザーが提供された形式に対応しているかどうかのチェック
 
-Use the following verified sources within your audio and video elements to check support.
+以下の検証済みのソースを audo および video 要素内で使用して、対応を調べてください。
 
-- Audio MP3 (`type="audio/mpeg"`): <http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3> ([play the MP3 audio live](https://jsbin.com/gekatoge/1/edit).)
-- Audio MP4 (`type="audio/mp4"`): <http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a> ([play the MP4 audio live](https://jsbin.com/gekatoge/2/edit).)
-- Audio Ogg (`type="audio/ogg"`): <http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg> ([play the OGG audio live](https://jsbin.com/gekatoge/4/edit).)
-- Video MP4 (`type="video/mp4"`): <http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v> ([play the MP4 video live](https://jsbin.com/gekatoge/5/edit).)
-- Video WebM (`type="video/webm"`): <http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm> ([play the WebM video live](https://jsbin.com/gekatoge/6/edit).)
-- Video Ogg (`type="video/ogg"`): <http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv> ([play the OGG video live](https://jsbin.com/gekatoge/7/edit).)
+- Audio MP3 (`type="audio/mpeg"`): [http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3](https://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3) ([MP3 音声をライブで再生](https://jsbin.com/gekatoge/1/edit))
+- Audio MP4 (`type="audio/mp4"`): [http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a](https://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a) ([MP4 音声をライブで再生](https://jsbin.com/gekatoge/2/edit))
+- Audio Ogg (`type="audio/ogg"`): [http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg](https://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg) ([OGG 音声をライブで再生](https://jsbin.com/gekatoge/4/edit))
+- Video MP4 (`type="video/mp4"`): [http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v](https://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v) ([MP4 動画をライブで再生](https://jsbin.com/gekatoge/5/edit))
+- Video WebM (`type="video/webm"`): [http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm](https://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm) ([WebM 動画をライブで再生](https://jsbin.com/gekatoge/6/edit))
+- Video Ogg (`type="video/ogg"`): [http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv](https://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv) ([OGG 動画をライブで再生](https://jsbin.com/gekatoge/7/edit))
 
-If these don't play then the browser you are testing doesn't support the given format. Consider using a different format or using a fallback.
+これらが再生されない場合、テストしているブラウザーが指定された形式に対応していないことになります。異なる形式を使用するか、代替手段を使用することを検討してください。
 
-If these work but the files you are supplying don't, there are two possible issues:
+これがうまく動作するのに、提供しているファイルが動作しない場合、 2 つの可能性があります。
 
-#### 1. The media server is not delivering the correct mime types with the file
+#### 1. メディアサーバーが、ファイルと共に正しい MIME 型を配信していない
 
-Although this is usually supported, you may need to add the following to your media server's `.htaccess` file.
+通常これは対応していますが、メディアサーバーの `.htaccess` ファイルに以下のように追加する必要があるかもしれません。
 
 ```
 # AddType TYPE/SUBTYPE EXTENSION
@@ -413,28 +400,28 @@ AddType video/webm webm
 AddType video/webm webmv
 ```
 
-#### 2. Your files have been encoded incorrectly
+#### 2. ファイルが正しくエンコードされていない
 
-Your files may have been encoded incorrectly — try encoding using one of the following tools, which are proven to be pretty reliable:
+ファイルが正しくエンコードされていない可能性があります。以下のツールのいずれかを使用してエンコードしてみてください。これらのツールは、かなり有益であることが証明されています。
 
-- [Audacity](http://audacity.sourceforge.net/) — Free Audio Editor and Recorder
-- [Miro](http://www.getmiro.com/) — Free, open-source music and video player
-- [Handbrake](http://handbrake.fr/) — Open Source Video Transcoder
-- [Firefogg](http://firefogg.org/) — Video and Audio encoding for Firefox
-- [FFmpeg2](https://www.ffmpeg.org/) — Comprehensive command line encoder
-- [Libav](https://libav.org/) — Comprehensive command line encoder
-- [Vid.ly](http://m.vid.ly/) — Video player,transcoding and delivery
-- [Internet Archive](https://archive.org/) — Free transcoding and storage
+- [Audacity](https://sourceforge.net/projects/audacity/) — 無料音声エディター・レコーダー
+- [Miro](https://www.getmiro.com/) — 無料、オープンソースの音楽・動画プレイヤー
+- [Handbrake](https://handbrake.fr/) — オープンソースの動画変換
+- [Firefogg](http://www.firefogg.org/) — Firefox 用動画と音声のエンコーディング
+- [FFmpeg2](https://www.ffmpeg.org/) — 包括的なコマンドラインエンコーダー
+- [Libav](https://libav.org/) — 包括的なコマンドラインエンコーダー
+- [Vid.ly](https://m.vid.ly/) — 動画再生、変換、配信
+- [Internet Archive](https://archive.org/) — 無料の変換とストレージ
 
-### Detecting when no sources have loaded
+### 読み込めたソースがない場合の検出
 
-To detect that all child {{ HTMLElement("source") }} elements have failed to load, check the value of the media element's `networkState` attribute. If this is `HTMLMediaElement.NETWORK_NO_SOURCE`, you know that all the sources failed to load.
+すべての子要素　{{ HTMLElement("source") }}　の読み込みに失敗したことを検出するには、メディア要素の `networkState` 属性の値を調べてください。これが `HTMLMediaElement.NETWORK_NO_SOURCE` であれば、すべてのソースの読み込みに失敗したことが分かります。
 
-If at that point you add another source, by inserting a new {{ HTMLElement("source") }} element as a child of the media element, Gecko attempts to load the specified resource.
+この時点で別のソースを追加する場合、メディア要素の子として新しい {{ HTMLElement("source") }} 要素を挿入すると、 Gecko は指定したリソースの読み込みを試みます。
 
-### Showing fallback content when no source could be decoded
+### デコードしたソースがない場合、フォールバックコンテンツを表示する機能
 
-Another way to show the fallback content of a video, when none of the sources could be decoded in the current browser, is to add an error handler on the last source element. Then you can replace the video with its fallback content:
+現在のブラウザーでどのソースもデコードできなかった場合、動画の代替コンテンツを示すもう 1 つの方法は、最後の source 要素にエラーハンドラーを追加することです。そうすれば、動画を代替コンテンツに置き換えることができます。
 
 ```html
 <video controls>
@@ -447,85 +434,83 @@ Another way to show the fallback content of a video, when none of the sources co
 ```
 
 ```js
-var v = document.querySelector('video'),
-    sources = v.querySelectorAll('source'),
-    lastsource = sources[sources.length-1];
-lastsource.addEventListener('error', function(ev) {
-  var d = document.createElement('div');
+const v = document.querySelector('video');
+const sources = v.querySelectorAll('source');
+const lastsource = sources[sources.length - 1];
+lastsource.addEventListener('error', (ev) => {
+  const d = document.createElement('div');
   d.innerHTML = v.innerHTML;
   v.parentNode.replaceChild(d, v);
 }, false);
 ```
 
-## Audio/Video JavaScript Libraries
+## 音声と動画の JavaScript ライブラリー
 
-A number of audio and video JavaScript libaries exist. The most popular libraries allow you to choose a consistent player design over all browsers and provide a fallback for browsers that don't support audio and video natively. Fallbacks often use Adobe Flash or Microsoft Silverlight plugins. Other functionality such as the track element for subtitles can also be provided through media libraries.
+音声と動画の JavaScript ライブラリーは数多く存在します。最も人気のあるライブラリーでは、すべてのブラウザーで一貫したプレイヤーデザインを選ぶことができ、音声と動画をネイティブに対応していないブラウザー用の代替手段を提供します。代替手段は、歴史的には Adobe Flash や Microsoft Silverlight などの今では使われなくなったプラグインを使用して、非対応のブラウザーでメディアプレイヤーを提供してきましたが、これらは現代のコンピューターでは対応しなくなくなりました。他にも、字幕のための [`<track>`](/ja/docs/Web/HTML/Element/track) 要素のような機能も、メディアライブラリーを通して提供することができます。
 
-### Audio only
+### 音声のみ
 
 - [SoundManager](http://www.schillmania.com/projects/soundmanager2/)
 - [AmplitudeJS](https://521dimensions.com/open-source/amplitudejs)
 - [HowlerJS](https://howlerjs.com/)
 
-### Video only
+### 動画のみ
 
-- [flowplayer](https://flowplayer.org/): Gratis with a flowplayer logo watermark. Open source (GPL licensed.)
-- [JWPlayer](http://www.jwplayer.com): Requires registration to download. Open Source Edition (Creative Commons License.)
-- [SublimeVideo](http://www.sublimevideo.net/): Requires registration. Form based set up with domain specific link to CDN hosted library.
-- [Video.js](http://www.videojs.com/): Gratis and Open Source (Apache 2 Licensed.)
+- [flowplayer](https://flowplayer.com/): 無料版には flowplayer ロゴのウォーターマークが入ります。オープンソース（GPL ライセンス）。
+- [JWPlayer](https://www.jwplayer.com): ダウンロードするには登録が必要です。オープンソース版（クリエイティブ・コモンズ・ライセンス）。
+- [SublimeVideo](https://www.sublimevideo.net/): 登録が必要です。 CDN でホストされているライブラリーへのドメイン特定のリンクを持つ、形式という形で集合します。
+- [Video.js](https://videojs.com/): 無償かつオープンソース（Apache 2 ライセンス）。
 
-### Audio and Video
+### 音声と動画
 
-- [jPlayer](http://jPlayer.org): Gratis and Open Source (MIT Licensed.)
-- [mediaelement.js](http://mediaelementjs.com/): Gratis and Open Source (MIT Licensed.)
+- [jPlayer](https://jPlayer.org): 無償かつオープンソース（MIT ライセンス）。
+- [mediaelement.js](https://www.mediaelementjs.com/): 無償かつオープンソース（Apache 2 ライセンス）。
 
-### Web Audio API
+### ウェブオーディオ API
 
-- [AudioContext monkeypatch](https://github.com/cwilso/AudioContext-MonkeyPatch): A polyfill for older versions of the Web Audio API; Open Source (Apache 2 Licensed.)
+- [AudioContext monkeypatch](https://github.com/cwilso/AudioContext-MonkeyPatch): 古いバージョンのウェブオーディオ API のためのポリフィル。オープンソース (Apache 2 ライセンス)。
 
-## Basic tutorials
+## 基本的なチュートリアル
 
-- [Creating a cross-browser video player](/ja/Apps/Build/Manipulating_media/cross_browser_video_player)
-  - : A guide to creating a basic cross browser video player using the {{ htmlelement ("video") }} element.
-- [Video player styling basics](/ja/Apps/Build/Manipulating_media/Video_player_styling_basics)
-  - : With the cross-browser video player put in place in the previous article, this article now looks at providing some basic, reponsive styling for the player.
-- [Cross-browser audio basics](/ja/Apps/Build/Manipulating_media/Cross-browser_audio_basics)
-  - : This article provides a basic guide to creating an HTML5 audio player that works cross browser, with all the associated attributes, properties and events explained, and a quick guide to custom controls created using the Media API.
-- [Media buffering, seeking, and time ranges](/ja/Apps/Build/Manipulating_media/buffering_seeking_time_ranges)
-  - : Sometimes it's useful to know how much {{ htmlelement("audio") }} or {{ htmlelement("video") }} has downloaded or is playable without delay — a good example of this is the buffered progress bar of an audio or video player. This article discusses how to build a buffer/seek bar using [TimeRanges](/ja/docs/Web/API/TimeRanges), and other features of the media API.
-- [HTML5 playbackRate explained](/ja/Apps/Build/Manipulating_media/HTML5_playbackRate_explained)
-  - : The `playbackRate` property allows us to change the speed or rate at which a piece of web audio or video is playing. This article explains it in detail.
-- [Using the Web Audio API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-  - : Explains the basics of using the Web Audio API to grab, manipulate and play back an audio source.
+- [クロスブラウザー対応の動画プレイヤーの作成](/ja/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)
+  - : {{ htmlelement ("video") }} 要素を使用した、基本的なクロスブラウザー対応の動画プレーヤーを作成するためのガイドです。
+- [動画プレイヤーのスタイル付けの基本](/ja/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics)
+  - : 前回の記事でクロスブラウザーに対応した動画プレイヤーを作成したため、この記事では、プレイヤーに基本的なレスポンシブスタイルを提供することについて見ていきます。
+- [クロスブラウザー対応のオーディオの基本](/ja/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics)
+  - : この記事では、クロスブラウザーで動作する HTML 音声プレーヤーの作成に関する基本的なガイドと、関連するすべての属性、プロパティ、イベントの説明、およびメディア API を使用して作成するカスタム コントロールのクイック ガイドを提供します。
+- [メディアのバッファリング、シーク、再生範囲](/ja/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges)
+  - : 時には、{{ htmlelement("audio") }} や {{ htmlelement("video") }} がどれだけダウンロードされたか、あるいは遅延なく再生できるかを知ることは有益なことです。この良い例が、音声や 動画プレイヤーのバッファリング進捗バーです。この記事では、 [TimeRanges](/ja/docs/Web/API/TimeRanges) やメディア API の他の機能を使用して、バッファ/シークバーを構築する方法について説明します。
+- [HTML の playbackRate の説明](/ja/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
+  - : `playbackRate` プロパティを使うと、ウェブ音声や動画の再生速度や割合を変更することができます。この記事では、その詳細について説明します。
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+  - : ウェブオーディオ API を使用して、音声ソースを取得、操作、再生するための基本的な方法を説明します。
 
-## Streaming media tutorials
+## ストリーミングメディアのチュートリアル
 
-- [Live streaming web audio and video](/ja/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video)
-  - : Live streaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programmes that are output live. Often shortened to just streaming, live streaming is the process of transmitting media 'live' to computers and devices. This is a fairly complex and nascent subject with a lot of variables, so in this article we'll introduce you to the subject and let you know how you can get started.
-- [Setting up adaptive streaming media sources](/ja/Apps/Build/Manipulating_media/Setting_up_adaptive_streaming_media_sources)
-  - : Let's say you want to set up an adaptive streaming media source on a server, to be consumed inside an HTML5 media element. How would you do that? This article explains how, looking at two of the most common formats: MPEG-DASH and HLS (HTTP Live Streaming.)
-- [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video)
-  - : Details how to set up adaptive streaming using DASH and WebM.
+- [ウェブの音声や映像のライブストリーミング](/ja/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video)
+  - : ライブストリーミング技術は、スポーツやコンサートなどのライブイベントを中継するために多く採用されており、一般的にはテレビやラジオの番組がライブで出力されています。しばしば単にストリーミングと略され、ライブストリーミングは、コンピュータや機器にメディアを "ライブ "で送信するプロセスです。これは、変数が多く、かなり複雑で新しい主題であるので、この記事では、この主題に紹介し、どのように始めるかが分かるようにします。
+- [アダプティブストリーミングメディアソースの設定](/ja/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources)
+  - : 例えば、サーバー上にアダプティブストリーミングメディアソースを設定し、 HTML のメディア要素の中で利用したいとします。どのようにそれを行うのでしょうか？この記事では、最も一般的な 2 つの形式を見て、その方法を説明します。 MPEG-DASH と HLS (HTTP Live Streaming) です。
+- [HTML 5 動画の DASH アダプティブストリーミング](/ja/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
+  - : DASH と WebM を使用したアダプティブストリーミングを設定する方法について詳しく説明します。
 
-## Advanced tutorials
+## 高度なチュートリアル
 
-- [Adding captions and subtitles to HTML5 video](/ja/Apps/Build/Manipulating_media/Adding_captions_and_subtitles_to_HTML5_video)
-  - : This article explains how to add captions and subtitles to HTML5 {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/ja/docs/Web/API/Web_Video_Text_Tracks_Format) and the {{ htmlelement("track") }} element.
-- [Writing Web Audio API code that works in every browser](/ja/docs/Web/Apps/Developing/Manipulating_media/Web_Audio_API_cross_browser)
-  - : A guide to writing cross browser Web Audio API code.
-- [H.264 support in Firefox](/ja/Apps/Developing/Manipulating_media/H.264_support_in_Firefox)
-  - : This article explains the state of support for the H.264 video format in Firefox/Firefox OS, including code examples, tips and tricks.
-- [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
-  - : Explains the basics of using the MediaRecorder API to directly record a media stream.
+- [HTML 動画へのキャプションや字幕の追加](/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+  - : この記事では、 [Web_Video_Text_Tracks_Format](/ja/docs/Web/API/WebVTT_API) と {{ htmlelement("track") }} 要素を使って、 HTML でキャプションと字幕を追加する方法について説明します。
+- [あらゆるブラウザーで動作するウェブオーディオ API コードの作成](/ja/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser)
+  - : クロスブラウザー対応のウェブオーディオ API コードを書くためのガイドです。
+- [メディアレコーダー API で音声を簡単に取り込む](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
+  - : メディアレコーダー API を使用して、メディアストリームを直接収録する基本的な方法について説明します。
 
-> **メモ:** Firefox OS versions 1.3 and above support the [RTSP](http://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol) protocol for streaming video delivery. A fallback solution for older versions would be to use `<video>` along with a suitable format for Gecko (such as WebM) to serve fallback content. More information will be published on this in good time.
+> **メモ:** Firefox OS バージョン 1.3 以降では、ストリーミング動画配信のための [RTSP](https://ja.wikipedia.org/wiki/Real_Time_Streaming_Protocol) プロトコルに対応しています。古いバージョンのための代替手段は、代替コンテンツを提供するために Gecko に適した形式 (WebM など) とともに `<video>` を使用することでしょう。これに関するより多くの情報は、随時公開される予定です。
 
-## References
+## 関連情報
 
-- [The video element](/ja/docs/Web/HTML/Element/video)
-- [Media events API](/ja/docs/Web/Guide/Events/Media_events)
+- [video 要素](/ja/docs/Web/HTML/Element/video)
 - [HTMLVideoElement API](/ja/docs/Web/API/HTMLVideoElement)
 - [MediaSource API](/ja/docs/Web/API/MediaSource)
-- [Web Audio API](/ja/docs/Web/API/Web_Audio_API)
-- [MediaRecorder API](/ja/docs/Web/API/MediaRecorder_API)
+- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
+- [メディアレコーダー API](/ja/docs/Web/API/MediaStream_Recording_API)
 - [getUserMedia](/ja/docs/Web/API/MediaDevices/getUserMedia)
+- [イベントリファレンス > メディア](/ja/docs/Web/Events#media)

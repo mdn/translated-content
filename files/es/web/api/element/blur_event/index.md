@@ -6,7 +6,7 @@ original_slug: Web/Events/blur
 
 {{ APIRef }}
 
-El evento `blur` es disparado cuando un elemento ha perdido su foco. La diferencia principal entre este evento y [`focusout`](/en-US/docs/Mozilla_event_reference/focusout) es que sólo el último se propaga (bubbles).
+El evento `blur` es disparado cuando un elemento ha perdido su foco. La diferencia principal entre este evento y [`focusout`](/es/docs/Mozilla_event_reference/focusout) es que sólo el último se propaga (bubbles).
 
 ## Información General
 

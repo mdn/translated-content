@@ -53,7 +53,7 @@ addRow('TableA');
 
 Para ser válida en un documento HTML, una TR debe contener al menos un elemento TD.
 
-Observese que `insertRow` inserta la fila diréctamente en la tabla y retorna una referencia a la nueva fila. La fila no necesita ser añadida separadamente (p.e. con [`document.appendChild()`](/es/docs/DOM/document.appendChild)) tal sería el caso si se usase [`document.createElement()`](/en-US/docs/DOM/document.createElement) para crear el nuevo elemento TR.
+Observese que `insertRow` inserta la fila diréctamente en la tabla y retorna una referencia a la nueva fila. La fila no necesita ser añadida separadamente (p.e. con [`document.appendChild()`](/es/docs/DOM/document.appendChild)) tal sería el caso si se usase [`document.createElement()`](/es/docs/DOM/document.createElement) para crear el nuevo elemento TR.
 
 ## Especificaciones
 
