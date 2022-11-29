@@ -93,6 +93,6 @@ y = 2; // Inicializa y
 
 ### Referencia técnica
 
-- [JavaScript: Entendiendo las partes raras](https://www.udemy.com/understand-javascript/) - Curso de Udemy.com
-- [Sentencia var](/es/docs/Web/JavaScript/Reference/Statements/var) - MDN
-- [Sentencia function](/es/docs/Web/JavaScript/Reference/Statements/function) - MDN
+- [JavaScript: Understanding the Weird Parts](https://www.udemy.com/understand-javascript/) - Udemy.com Course
+- [var statement](/es/docs/Web/JavaScript/Reference/Statements/var) - MDN
+- [function statement](/es/docs/Web/JavaScript/Reference/Statements/function) - MDN

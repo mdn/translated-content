@@ -35,7 +35,7 @@ match(regexp)
 
 ### Valor devuelto
 
-Un {{jsxref('Array')}} cuyo contenido depende de la presencia de la bandera global (`g`), o [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) si no se encuentran coincidencias.
+Un {{jsxref('Array')}} cuyo contenido depende de la presencia de la bandera global (`g`), o [`null`](/es/docs/Web/JavaScript/Reference/Operators/null) si no se encuentran coincidencias.
 
 - Si se usa la bandera `g`, se devolverán todos los resultados que coincidan con la expresión regular completa, pero no se incluirán los grupos de captura.
 

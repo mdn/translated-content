@@ -87,13 +87,13 @@ Este artículo inicia el módulo con un buen vistazo a lo que realmente es el re
 
 ### Rendimiento de aplicaciones
 
-- [Fundamentos de rendimiento](/en-US/Apps/Developing/Performance/Performance_fundamentals)
+- [Fundamentos de rendimiento](/es/Apps/Developing/Performance/Performance_fundamentals)
   - : Una visión general del rendimiento de las aplicaciones web, qué es, cómo el navegador ayuda a mejorarlo, y qué herramientas y procesos puede utilizar para probar y mejorarlo aún más.
-- [Optimizando el rendimiento de inicio](/en-US/Apps/Developing/Performance/Optimizing_startup_performance)
+- [Optimizando el rendimiento de inicio](/es/Apps/Developing/Performance/Optimizing_startup_performance)
   - : Consejos y sugerencias para ayudarlo a mejorar el rendimiento de inicio, tanto al escribir una nueva aplicación como al migrar una aplicación de otra plataforma a la Web.
 - [Profiling con el profiler integrado](/es/docs/Performance/Profiling_with_the_Built-in_Profiler)
   - : Aprenda como rastrear el performance de las aplicaciones con el profiler integrado de Firefox.
-- [Rendimiento en animaciones con CSS y con JavaScript](/en-US/Apps/Build/Performance/CSS_JavaScript_animation_performance)
+- [Rendimiento en animaciones con CSS y con JavaScript](/es/Apps/Build/Performance/CSS_JavaScript_animation_performance)
   - : Las animaciones son críticas para una experiencia de usuario placentera. Este artículo analiza las diferencias de rendimiento entre las animaciones basadas en CSS y JavaScript.
 
 {{LandingPageListSubpages}}

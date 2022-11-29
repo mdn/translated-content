@@ -63,7 +63,7 @@ Si el usuario puede interactuar con un elemento (por ejemplo, usando el tacto o 
 
 ## Elementos enfocables deben tener un estilo al estar enfocados
 
-Cualquier elemento que pueda recibir el enfoque desde el teclado, debería tener un estilo visible que indique cuando el elemento esta enfocado. Se puede hacer esto con la pseudo-clase de CSS [`:focus`](/en-US/docs/Web/CSS/:focus).
+Cualquier elemento que pueda recibir el enfoque desde el teclado, debería tener un estilo visible que indique cuando el elemento esta enfocado. Se puede hacer esto con la pseudo-clase de CSS [`:focus`](/es/docs/Web/CSS/:focus).
 
 Elementos enfocables estándar como enlaces y los campos de entrada reciben un estilo especial por parte del navegador de forma predeterminada, por lo que podría no ser necesario especificar un estilo de enfoque para éstos, a menos que se quiera que el estilo de enfoque sea más distintivo.
 
