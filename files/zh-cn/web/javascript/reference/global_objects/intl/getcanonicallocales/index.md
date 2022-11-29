@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 
 ## 语法
 
-```plain
+```js-nolint
 Intl.getCanonicalLocales(locales)
 ```
 
