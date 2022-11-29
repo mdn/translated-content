@@ -29,7 +29,6 @@ l10n:
 
 {{ EmbedLiveSample('mtext_example', 700, 200, "", "") }}
 
-
 ## 仕様書
 
 {{Specifications}}
